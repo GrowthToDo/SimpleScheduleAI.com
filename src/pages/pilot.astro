@@ -1,0 +1,225 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+
+const pageTitle = "Pilot: Assisted Nurse Scheduling for Critical Access Hospitals";
+const pageDescription =
+  "A short, structured pilot for Critical Access Hospitals. Assisted nurse scheduling that reduces scheduling load while keeping full control and final approval with your team.";
+
+const ctaEmail =
+  "mailto:gauthamail@gmail.com?subject=Critical%20Access%20Hospital%20Pilot%20-%20Nurse%20Scheduling";
+---
+
+<BaseLayout
+  seo={{
+    title: pageTitle,
+    description: pageDescription,
+  }}
+>
+  <section class="relative overflow-hidden">
+    {/* Background */}
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute -top-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-teal-200/40 blur-3xl"></div>
+      <div class="absolute -bottom-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-sky-200/30 blur-3xl"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-6 py-14 sm:py-16">
+      {/* Top header card */}
+      <div class="rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-sm backdrop-blur sm:p-10">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold tracking-wide text-teal-700">
+            Limited pilot program
+          </p>
+          <h1 class="mt-3 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+            {pageTitle}
+          </h1>
+          <p class="mt-4 text-lg text-slate-700">
+            A practical way to reduce scheduling load without giving up control.
+          </p>
+
+          <p class="mt-6 text-slate-700">
+            This pilot is designed for nurse managers and hospital leadership who want relief from
+            scheduling stress without changing systems, tools, or authority.
+          </p>
+          <p class="mt-4 text-slate-700">
+            We work alongside your existing team to help build and validate nurse schedules under your
+            current rules and constraints. Your team remains in control. We handle the heavy lifting.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href={ctaEmail}
+              class="inline-flex items-center justify-center rounded-xl bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-600"
+            >
+              Book a call
+            </a>
+
+            <a
+              href="/how-it-works"
+              class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+            >
+              How it works
+            </a>
+
+            <p class="text-sm text-slate-500">
+              No obligation, no pressure to continue.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Content grid */}
+      <div class="mt-10 grid gap-8 lg:grid-cols-3">
+        {/* Left column */}
+        <div class="space-y-8 lg:col-span-2">
+          <section class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">
+              Who this pilot is for
+            </h2>
+            <p class="mt-3 text-slate-700">
+              This pilot is a good fit if your hospital:
+            </p>
+            <ul class="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+              <li>Manages nurse schedules primarily in Excel or similar tools</li>
+              <li>Spends significant time fixing conflicts, gaps, or overtime issues</li>
+              <li>Wants a more predictable and review ready scheduling process</li>
+              <li>Needs support without adding new software or training burden</li>
+            </ul>
+            <p class="mt-4 text-slate-700">
+              If scheduling already runs smoothly with minimal effort, this pilot may not be necessary.
+            </p>
+          </section>
+
+          <section class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">
+              What the pilot includes
+            </h2>
+            <p class="mt-3 text-slate-700">
+              During the pilot, we work with your scheduling team over a short, defined period to support
+              real schedules.
+            </p>
+
+            <div class="mt-6 grid gap-5 md:grid-cols-3">
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h3 class="text-sm font-semibold text-slate-900">You provide</h3>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Staff availability and coverage requirements</li>
+                  <li>Your existing scheduling rules and preferences</li>
+                  <li>Context around constraints and edge cases</li>
+                </ul>
+              </div>
+
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h3 class="text-sm font-semibold text-slate-900">We handle</h3>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Building the draft schedule</li>
+                  <li>Checking coverage, conflicts, and common failure points</li>
+                  <li>Preparing a clean, review ready version</li>
+                </ul>
+              </div>
+
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <h3 class="text-sm font-semibold text-slate-900">You retain</h3>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
+                  <li>Full authority</li>
+                  <li>Final approval</li>
+                  <li>The ability to modify or reject anything</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="mt-5 text-slate-700">
+              Nothing goes live without your sign off.
+            </p>
+          </section>
+
+          <section class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">
+              How the pilot works
+            </h2>
+
+            <ol class="mt-5 space-y-4">
+              <li class="rounded-2xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-semibold text-teal-700">Step 1</p>
+                <h3 class="mt-1 text-base font-semibold text-slate-900">Initial setup</h3>
+                <p class="mt-2 text-slate-700">
+                  We learn how scheduling currently works in your hospital, including rules, constraints, and pain points.
+                </p>
+              </li>
+
+              <li class="rounded-2xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-semibold text-teal-700">Step 2</p>
+                <h3 class="mt-1 text-base font-semibold text-slate-900">Assisted scheduling</h3>
+                <p class="mt-2 text-slate-700">
+                  For each scheduling cycle during the pilot, we support your team by building and validating the schedule based on your inputs.
+                </p>
+              </li>
+
+              <li class="rounded-2xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-semibold text-teal-700">Step 3</p>
+                <h3 class="mt-1 text-base font-semibold text-slate-900">Review and feedback</h3>
+                <p class="mt-2 text-slate-700">
+                  Your team reviews the schedule, makes changes if needed, and shares feedback so the process improves over time.
+                </p>
+              </li>
+            </ol>
+          </section>
+        </div>
+
+        {/* Right column */}
+        <aside class="space-y-6">
+          <section class="rounded-3xl border border-teal-200 bg-white p-6 shadow-sm">
+            <h2 class="text-lg font-semibold text-slate-900">Duration and scope</h2>
+            <ul class="mt-4 space-y-3 text-slate-700">
+              <li class="flex gap-3">
+                <span class="mt-1 inline-block size-2 rounded-full bg-teal-600"></span>
+                <span>Typical pilot duration: 2 to 4 weeks</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 inline-block size-2 rounded-full bg-teal-600"></span>
+                <span>Real schedules, not test data</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 inline-block size-2 rounded-full bg-teal-600"></span>
+                <span>Limited scope to ensure quality and attention</span>
+              </li>
+            </ul>
+            <p class="mt-4 text-sm text-slate-600">
+              We keep the pilot small so it stays useful and manageable.
+            </p>
+          </section>
+
+          <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 class="text-lg font-semibold text-slate-900">What this pilot is not</h2>
+            <ul class="mt-4 list-disc space-y-2 pl-6 text-slate-700">
+              <li>A software rollout</li>
+              <li>An automation experiment</li>
+              <li>A replacement for your staff</li>
+              <li>A long term commitment</li>
+            </ul>
+            <p class="mt-4 text-sm text-slate-600">
+              It is a structured collaboration to see whether assisted scheduling reduces effort and stress for your team.
+            </p>
+          </section>
+
+          <section class="rounded-3xl border border-slate-200 bg-slate-900 p-6 shadow-sm">
+            <h2 class="text-lg font-semibold text-white">Cost and obligation</h2>
+            <p class="mt-3 text-slate-200">There is no cost for the pilot.</p>
+            <p class="mt-3 text-slate-200">
+              If it does not deliver value, you walk away. No obligation, no pressure to continue.
+            </p>
+            <p class="mt-3 text-slate-200">
+              If it helps, we discuss next steps calmly and clearly.
+            </p>
+
+            <a
+              href={ctaEmail}
+              class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-100"
+            >
+              Book a call
+            </a>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

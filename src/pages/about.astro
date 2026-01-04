@@ -2,99 +2,126 @@
 import BaseLayout from "@layout/BaseLayout.astro";
 import type { WithContext, Thing } from "schema-dts";
 
-// Data describing the "About" section content
-const aboutData = {
-  title: "DataNova,",
-  description:
-    "founded in 2018, is a leading provider of powerful analytics tools that transform your Excel workspace into a comprehensive analytics powerhouse, making data analysis accessible and actionable for businesses worldwide.",
-  statistics: [
-    {
-      label: "Industry Sectors Served",
-      value: "15+",
-    },
-    {
-      label: "Data Points Processed",
-      value: "Billions",
-    },
-    {
-      label: "Custom Reports Generated",
-      value: "500,000+",
-    },
-  ],
-};
+const pageTitle = "About SimpleScheduleAI";
+const pageDescription =
+  "Assisted nurse scheduling for Critical Access Hospitals. We reduce scheduling load while your team keeps tools, control, and final approval.";
 
-// Data describing the expertise section
-const expertiseData = {
-  title: "Our Expertise:",
-  expertise: [
-    {
-      title: "AI-Powered Insights:",
-      description:
-        "Uncover deep insights and predict trends with advanced AI algorithms for proactive decision-making.",
-    },
-    {
-      title: "Real-Time Data Visualization:",
-      description:
-        "Transform data into interactive visuals, tracking key metrics in real-time for actionable insights.",
-    },
-    {
-      title: "Predictive Analytics Engine:",
-      description:
-        "Leverage machine learning to forecast trends and identify opportunities, staying ahead of the curve.",
-    },
-  ],
-};
-
-// SEO metadata for the page
 const seo = {
-  title: "About DataNova",
-  description: "Learn more about DataNova, the analytics platform that transforms your Excel data with advanced insights and predictive models.",
+  title: pageTitle,
+  description: pageDescription,
 };
 
-// Schema.org metadata for SEO
 const schema: WithContext<Thing> = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "inLanguage": "en-US",
+  inLanguage: "en-US",
   "@id": Astro.url.href,
-  "url": Astro.url.href,
-  "name": "About DataNova",
-  "description": "Get to know DataNova, the powerful analytics platform for Excel that enables businesses to make data-driven decisions quickly with no coding required.",
-  "isPartOf": {
+  url: Astro.url.href,
+  name: pageTitle,
+  description: pageDescription,
+  isPartOf: {
     "@type": "WebSite",
-    "url": `${Astro.site}`,
-    "name": "DataNova",
-    "description": "DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required."
-  }
+    url: `${Astro.site}`,
+    name: "SimpleScheduleAI",
+    description: pageDescription,
+  },
 };
+
+const stats = [
+  { label: "Built for", value: "Critical Access Hospitals" },
+  { label: "Works with", value: "Excel and your current format" },
+  { label: "Designed for", value: "Nurse managers and leadership" },
+  { label: "Approach", value: "Assisted, not replacement" },
+];
+
+const principles = [
+  {
+    title: "You keep control",
+    description:
+      "Your team owns the rules, the exceptions, and the final approval. We support the work, you decide what goes live.",
+  },
+  {
+    title: "Fits your current workflow",
+    description:
+      "No new software rollout. No training burden. We work with the format you already use, including Excel.",
+  },
+  {
+    title: "Clear handoffs",
+    description:
+      "You get a review ready schedule, notes on conflicts and assumptions, and a simple validation summary for quick sign off.",
+  },
+];
+
+const whatWeDo = [
+  "Build draft schedules based on your inputs and constraints",
+  "Validate coverage, gaps, conflicts, and common failure points",
+  "Return a clean, review ready version for your approval",
+];
+
+const whatWeDoNotDo = [
+  "We do not publish schedules without your approval",
+  "We do not change your policies or override your leadership",
+  "We do not replace your staff or act as your HR system",
+];
+
+const ctaEmail =
+  "mailto:gauthamail@gmail.com?subject=SimpleScheduleAI%20-%20About%20and%20Fit%20Check";
 ---
 
 <BaseLayout seo={seo} schema={schema}>
-  <section class="mx-auto max-w-[85rem] px-4 pb-12 pt-48 sm:px-6 lg:px-8">
-    <div class="max-w-7xl">
-      <div class="mx-auto max-w-2xl lg:mx-0">
-        <h1
-          class="text-balance text-4xl text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl"
-        >
-          {aboutData.title}
-        </h1>
-        <p
-          class="mt-8 text-pretty text-lg font-medium text-slate-700 sm:text-xl/8"
-        >
-          {aboutData.description}
+  {/* Hero */}
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute -top-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-teal-200/45 blur-3xl"></div>
+      <div class="absolute -bottom-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-sky-200/25 blur-3xl"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-[85rem] px-4 pb-12 pt-12 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-sm backdrop-blur sm:p-10">
+        <p class="text-sm font-semibold tracking-wide text-teal-700">
+          SimpleScheduleAI
         </p>
+
+        <h1 class="mt-3 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+          {pageTitle}
+        </h1>
+
+        <p class="mt-4 text-lg text-slate-700">
+          {pageDescription}
+        </p>
+
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a
+            href="/how-it-works"
+            class="inline-flex items-center justify-center rounded-xl bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-600"
+          >
+            See how it works
+          </a>
+
+          <a
+            href="/pilot"
+            class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            View the pilot
+          </a>
+
+          <a
+            href={ctaEmail}
+            class="text-sm font-semibold text-slate-700 hover:text-slate-900"
+          >
+            Ask a question
+          </a>
+        </div>
       </div>
 
-      {/* Statistics Section */}
-      <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-        <dl
-          class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4"
-        >
+      {/* Stats */}
+      <div class="mx-auto mt-10 max-w-6xl">
+        <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {
-            aboutData.statistics.map((stat) => (
-              <div class="flex flex-col-reverse gap-1">
-                <dt class="text-base/7 text-slate-700">{stat.label}</dt>
-                <dd class="text-4xl font-semibold tracking-tight text-slate-800">
+            stats.map((stat) => (
+              <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <dt class="text-sm text-slate-600">{stat.label}</dt>
+                <dd class="mt-2 text-lg font-semibold text-slate-900">
                   {stat.value}
                 </dd>
               </div>
@@ -105,56 +132,91 @@ const schema: WithContext<Thing> = {
     </div>
   </section>
 
-  {/* Expertise Section */}
-  <section class="mx-auto max-w-[85rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
-    <div
-      class="group relative isolate overflow-hidden rounded-3xl bg-teal-200 p-5 sm:p-11"
-    >
-      <div
-        class="group pointer-events-none absolute inset-0 -top-[10%] h-[120%] w-full rounded-xl bg-linear-to-r/oklch from-teal-200 to-off-white opacity-0 transition duration-1000 group-hover:opacity-100"
-      >
-      </div>
-      <div class="svgBlock mx-auto max-w-7xl">
-        <h2
-          class="relative text-balance pl-4 text-2xl font-semibold text-slate-800 md:text-3xl md:leading-tight"
-        >
-          {expertiseData.title}
+  {/* Principles */}
+  <section class="mx-auto max-w-[85rem] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <div class="mx-auto max-w-6xl">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <h2 class="text-balance text-2xl font-semibold text-slate-900 md:text-3xl">
+          Our operating principles
         </h2>
-        <dl
-          class="relative mt-10 grid max-w-xl grid-cols-1 items-start text-base/7 text-slate-600 sm:max-w-none lg:grid-flow-row-dense lg:auto-rows-fr lg:grid-cols-3"
-        >
-          {
-            expertiseData.expertise.map((item, index) => (
-              <div
-                class={`px-5 py-5 sm:px-10 lg:py-0 ${index === 1 ? "h-full border-y border-dashed border-slate-400 lg:border-x lg:border-y-0" : ""}`}
-              >
-                <dt class="text-balance text-lg font-semibold text-slate-600">
-                  {item.title}
-                </dt>
-                <dd class="mt-2 text-pretty text-slate-500">
-                  {item.description}
-                </dd>
-              </div>
-            ))
-          }
-        </dl>
+        <p class="mt-2 text-pretty text-slate-600">
+          This is a workflow support service, not a software rollout.
+        </p>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-3">
+        {
+          principles.map((p) => (
+            <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+              <h3 class="text-lg font-semibold text-slate-900">{p.title}</h3>
+              <p class="mt-3 text-slate-700">{p.description}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
 
-  <style>
-    .svgBlock::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url(/guilloche.svg);
-      background-repeat: repeat;
-      background-position: right top;
-      background-size: 20px, 20px;
-      opacity: 0.075;
-      background-clip: padding-box;
-      mask-image: linear-gradient(270deg, rgb(0, 0, 0), rgba(0, 0, 0, 0));
-      pointer-events: none;
-    }
-  </style>
+  {/* What we do / do not do */}
+  <section class="mx-auto max-w-[85rem] px-4 pb-14 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+          <h2 class="text-xl font-semibold text-slate-900">What we do</h2>
+          <ul class="mt-4 list-disc space-y-2 pl-6 text-slate-700 marker:text-teal-600">
+            {whatWeDo.map((item) => <li>{item}</li>)}
+          </ul>
+          <p class="mt-4 text-sm text-slate-600">
+            You review and approve. Nothing is final until your team signs off.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+          <h2 class="text-xl font-semibold text-slate-900">What we do not do</h2>
+          <ul class="mt-4 list-disc space-y-2 pl-6 text-slate-700 marker:text-teal-600">
+            {whatWeDoNotDo.map((item) => <li>{item}</li>)}
+          </ul>
+          <p class="mt-4 text-sm text-slate-600">
+            This clarity is intentional. It keeps expectations clean and risk low.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Teal band */}
+  <section class="mx-auto max-w-[85rem] px-4 pb-14 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <div class="relative isolate overflow-hidden rounded-3xl bg-teal-200 p-8 shadow-sm sm:p-10">
+        <div class="pointer-events-none absolute inset-0 opacity-20" style="background-image: url(/guilloche.svg); background-repeat: repeat;"></div>
+
+        <div class="relative">
+          <h2 class="text-balance text-2xl font-semibold text-slate-900">
+            Want to sanity check fit before anything else?
+          </h2>
+          <p class="mt-3 max-w-2xl text-slate-700">
+            If scheduling is draining time and attention, the pilot is a low risk way to test a better workflow.
+          </p>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href="/pilot"
+              class="inline-flex items-center justify-center rounded-xl bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-600"
+            >
+              View the pilot
+            </a>
+            <a
+              href={ctaEmail}
+              class="inline-flex items-center justify-center rounded-xl border border-teal-700 bg-white px-5 py-3 text-sm font-semibold text-teal-800 hover:bg-teal-50"
+            >
+              Email us
+            </a>
+            <span class="text-sm text-slate-600">
+              Simple process. Clear handoffs. Your final approval.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

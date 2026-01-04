@@ -4,166 +4,179 @@ import Icon from "@ui/icons/Icon.astro";
 import ContactForm from "@ui/forms/ContactForm.astro";
 import type { WithContext, Thing } from "schema-dts";
 
-const addressHeading = "Our address:";
-const emailHeading = "Contact us by email:";
-const knowledgeBaseHeading = "Knowledge base";
+const pageTitle = "Contact";
+const pageDescription =
+  "Talk to a human. We respond fast. If you want, we will send a one page pilot overview.";
 
 const contactDetails = {
-  addressLine1: "1234 1st Ave Ste 300",
-  addressLine2: "Seattle, WA 98104, USA",
-  phone: "1 (833) 328-2669",
-  email: "info@datanova.com",
+  location: "Remote, US",
+  email: "gauthamail@gmail.com",
+  website: "simplescheduleai.com",
 };
 
-const knowledgeBaseDetails = {
-  description: "Browse through all of our knowledge base articles.",
-  linkText: "Search the knowledge base",
-  linkUrl: "/support/knowledge-base",
-};
+const ctaEmail =
+  "mailto:gauthamail@gmail.com?subject=SimpleScheduleAI%20-%20Pilot%20Fit%20Check";
 
-// Content for the page title and subtitle
-const title = "Contact us";
-const subTitle = "Questions, Comments or Feedback.";
-
-// SEO metadata for the page
 const seo = {
-  title: "Contact DataNova",
-  description:
-    "Get in touch with DataNova for inquiries, support, and feedback. Reach out via email, phone, or visit our office.",
+  title: "Contact SimpleScheduleAI",
+  description: pageDescription,
 };
 
-// Schema.org metadata for SEO
 const schema: WithContext<Thing> = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   inLanguage: "en-US",
   "@id": Astro.url.href,
   url: Astro.url.href,
-  name: "Contact DataNova",
-  description:
-    "Reach out to DataNova for any questions, support, or business inquiries. Our team is ready to assist you.",
+  name: "Contact SimpleScheduleAI",
+  description: pageDescription,
   isPartOf: {
     "@type": "WebSite",
     url: `${Astro.site}`,
-    name: "DataNova",
+    name: "SimpleScheduleAI",
     description:
-      "DataNova Analytics Inc. provides advanced analytics for Excel to help businesses unlock actionable insights quickly with no coding required.",
+      "Assisted nurse scheduling for Critical Access Hospitals. Keep your tools, keep control, reduce scheduling load.",
   },
 };
 ---
 
 <BaseLayout seo={seo} schema={schema}>
-  <div class="mx-auto max-w-[85rem] px-4 pb-28 pt-48 sm:px-6 lg:px-8">
-    <div class="mb-10 max-w-3xl lg:mb-14">
-      <h2
-        class="text-balance text-4xl text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl"
-      >
-        {title}
-      </h2>
-      <p class="ml-1 mt-1 text-slate-600">{subTitle}</p>
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute -top-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-teal-200/40 blur-3xl"></div>
+      <div class="absolute -bottom-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-sky-200/25 blur-3xl"></div>
     </div>
 
-    <div class="grid grid-cols-1 gap-x-10 md:grid-cols-2 lg:gap-x-16">
-      <div
-        class="mb-10 rounded-xl bg-teal-400 pb-10 md:order-2 md:mb-0 md:pb-0"
-      >
-        <ContactForm />
+    <div class="relative mx-auto max-w-[85rem] px-4 pb-20 pt-12 sm:px-6 lg:px-8">
+      <div class="mb-10 max-w-3xl">
+        <p class="text-sm font-semibold tracking-wide text-teal-700">
+          SimpleScheduleAI
+        </p>
+        <h1 class="mt-3 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+          {pageTitle}
+        </h1>
+        <p class="mt-3 text-lg text-slate-700">
+          {pageDescription}
+        </p>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a
+            href="/how-it-works"
+            class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            How it works
+          </a>
+
+          <a
+            href="/pilot"
+            class="inline-flex items-center justify-center rounded-xl bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-600"
+          >
+            View the pilot
+          </a>
+
+          <a
+            href={ctaEmail}
+            class="text-sm font-semibold text-slate-700 hover:text-slate-900"
+          >
+            Email us directly
+          </a>
+        </div>
       </div>
 
-      <div class="space-y-14">
-        <div class="flex gap-x-5">
-          <Icon name="mapPin" />
-          <div class="grow">
-            <h4 class="font-semibold text-slate-600">{addressHeading}</h4>
-
-            <address class="mt-1 text-sm not-italic text-slate-500">
-              {contactDetails.addressLine1}
-              <br />
-              {contactDetails.addressLine2}
-            </address>
-          </div>
-        </div>
-
-        <div class="flex gap-x-5">
-          <Icon name="email" class="size-6 shrink-0 text-slate-600" />
-          <div class="grow">
-            <h4 class="font-semibold text-slate-600">{emailHeading}</h4>
-
-            <a
-              class="mt-1 text-sm text-slate-500 transition-colors duration-300 hover:text-slate-400 focus:text-slate-400 focus:outline-hidden"
-              href={`mailto:${contactDetails.email}`}
-            >
-              {contactDetails.email}
-            </a>
-          </div>
-        </div>
-
-        <div class="flex gap-x-5">
-          <Icon name="info" class="size-6 shrink-0 text-slate-600" />
-          <div class="grow">
-            <h4 class="font-semibold text-slate-600">{knowledgeBaseHeading}</h4>
-            <p class="mt-1 text-sm text-slate-500">
-              {knowledgeBaseDetails.description}
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
+        <div class="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm backdrop-blur sm:p-8">
+          <div class="mb-5">
+            <h2 class="text-xl font-semibold text-slate-900">
+              Get the pilot details
+            </h2>
+            <p class="mt-2 text-slate-700">
+              Leave your email and we will send a one page overview. If you are not a fit, we will tell you quickly.
             </p>
-            <p class="mt-2">
-              <a
-                class="group inline-flex items-center gap-x-2 text-sm font-medium text-slate-600 decoration-2 transition duration-300 hover:underline focus:underline focus:outline-hidden"
-                href={knowledgeBaseDetails.linkUrl}
-              >
-                {knowledgeBaseDetails.linkText}
-                <Icon name="chevronRight" />
-              </a>
+          </div>
+
+          <div class="rounded-2xl bg-teal-200/60 p-4 sm:p-5">
+            <ContactForm />
+          </div>
+
+          <p class="mt-4 text-sm text-slate-600">
+            No spam. No software rollout. Excel is fine.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <h2 class="text-xl font-semibold text-slate-900">Contact details</h2>
+          <p class="mt-2 text-slate-700">
+            If you prefer, email us and include a sample schedule format or a description of your constraints.
+          </p>
+
+          <div class="mt-6 space-y-5">
+            <div class="flex gap-x-4">
+              <Icon name="mapPin" class="mt-0.5 size-6 shrink-0 text-teal-700" />
+              <div class="grow">
+                <p class="font-semibold text-slate-900">Location</p>
+                <p class="text-sm text-slate-700">{contactDetails.location}</p>
+              </div>
+            </div>
+
+            <div class="flex gap-x-4">
+              <Icon name="email" class="mt-0.5 size-6 shrink-0 text-teal-700" />
+              <div class="grow">
+                <p class="font-semibold text-slate-900">Email</p>
+                <a
+                  class="text-sm text-slate-700 underline decoration-slate-300 underline-offset-4 transition-colors hover:text-slate-900"
+                  href={`mailto:${contactDetails.email}`}
+                >
+                  {contactDetails.email}
+                </a>
+              </div>
+            </div>
+
+            <div class="flex gap-x-4">
+              <Icon name="world" class="mt-0.5 size-6 shrink-0 text-teal-700" />
+              <div class="grow">
+                <p class="font-semibold text-slate-900">Website</p>
+                <a
+                  class="text-sm text-slate-700 underline decoration-slate-300 underline-offset-4 transition-colors hover:text-slate-900"
+                  href={`https://${contactDetails.website}`}
+                >
+                  {contactDetails.website}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-5">
+            <p class="text-sm font-semibold text-teal-800">
+              What to include in your message
+            </p>
+            <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-700 marker:text-teal-600">
+              <li>Unit size and shift pattern (12h, 8h, mixed)</li>
+              <li>How schedules are built today (Excel, paper, vendor tool)</li>
+              <li>Rules that cause the most pain (coverage, overtime, fairness, time off)</li>
+              <li>How often you publish schedules (weekly, biweekly, monthly)</li>
+            </ul>
+
+            <p class="mt-4 text-sm text-slate-600">
+              We will reply with a simple next step and a clear timeline for the pilot.
             </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <script>
-    // Automatically adjusting the height of the textarea
-    // based on its content. Triggers when the textarea content changes.
+  <script is:inline>
     document.addEventListener("astro:page-load", () => {
-      function textareaAutoHeight(
-        el: HTMLTextAreaElement,
-        offsetTop: number = 0,
-      ): void {
-        el.style.height = "auto";
-        el.style.height = `${el.scrollHeight + offsetTop}px`;
-      }
+      const textarea = document.querySelector("#input-message");
+      if (!textarea) return;
 
-      (() => {
-        const textareas: string[] = ["#input-message"];
+      const resize = (offsetTop = 0) => {
+        textarea.style.height = "auto";
+        textarea.style.height = `${textarea.scrollHeight + offsetTop}px`;
+      };
 
-        textareas.forEach((selector) => {
-          const textarea = document.querySelector(
-            selector,
-          ) as HTMLTextAreaElement;
-
-          if (!textarea) return;
-
-          const overlay = textarea.closest(".hs-overlay");
-
-          if (overlay) {
-            const instance = (window as any).HSOverlay.getInstance(
-              overlay,
-              true,
-            );
-
-            if (instance) {
-              instance.element.on("open", () =>
-                textareaAutoHeight(textarea, 3),
-              );
-            }
-          } else {
-            textareaAutoHeight(textarea, 3);
-          }
-
-          textarea.addEventListener("input", () => {
-            textareaAutoHeight(textarea, 3);
-          });
-        });
-      })();
+      resize(3);
+      textarea.addEventListener("input", () => resize(3));
     });
   </script>
 </BaseLayout>

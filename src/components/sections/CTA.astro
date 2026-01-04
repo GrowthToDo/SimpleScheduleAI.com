@@ -1,32 +1,69 @@
 ---
 import Button from "@ui/Button.astro";
 
-// Content for the section title and subtitle
-const title =
-  'Transform Your Business Today. <br /> Get started with <span class="font-medium text-teal-700">Data</span><span class="font-light text-slate-400">Nova</span>.';
-const subTitle =
-  "Begin your free trial and discover how DataNova's powerful analytics platform can revolutionize your data-driven decision making.";
+const title = "Prove it in one cycle";
 
-// Call-to-action configuration for the primary button
-const primaryCTA = { text: "Start Free Trial", href: "#" };
+const subTitle =
+  "Run a CAH pilot schedule for one unit. We track time-to-publish, overtime flags, and exception counts so you can see the results before committing.";
+
+const primaryCTA = {
+  text: "Run a CAH pilot schedule",
+  href: "/pilot",
+};
+
+const secondaryCTA = {
+  text: "Get a process walkthrough",
+  href: "/contact",
+};
+
+const tags = ["One Unit", "One Cycle", "End-to-End", "Risk-Free"];
+
+const pilotImage = "/pilot-timeline.png";
+const roiImage = "/roi-metrics.png";
 ---
 
-<section
-  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20"
->
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
   <div class="mx-auto mb-10 max-w-3xl text-center lg:mb-14">
-    <h2
-      class="text-balance text-4xl text-slate-800 sm:text-5xl"
-    >
+    <h2 class="text-balance text-4xl text-slate-800 sm:text-5xl">
       <Fragment set:html={title} />
     </h2>
-    <p class="text-lg\/8 mt-5 text-pretty text-slate-600">
+
+    <p class="mt-5 text-pretty text-lg/8 text-slate-600">
       {subTitle}
     </p>
-    <Button
-      href={primaryCTA.href}
-      variant="primary"
-      className="mt-7 inline-flex border-none px-3.5!">{primaryCTA.text}</Button
-    >
+
+    <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <Button href={primaryCTA.href} variant="primary" className="inline-flex border-none px-4!">
+        {primaryCTA.text}
+      </Button>
+
+      <Button href={secondaryCTA.href} variant="secondary" className="inline-flex px-4!">
+        {secondaryCTA.text}
+      </Button>
+    </div>
+
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-2">
+      {tags.map((tag) => (
+        <span class="inline-flex items-center gap-x-1.5 rounded-full bg-teal-100 px-3 py-1.5 text-xs font-medium text-teal-800">
+          {tag}
+        </span>
+      ))}
+    </div>
+
+    <div class="mt-12 max-w-2xl mx-auto">
+      <img
+        src={pilotImage}
+        alt="30-day pilot timeline: Week 1 rules capture, Week 2 first delivery, Weeks 3-4 cadence"
+        class="rounded-xl shadow-lg w-full h-auto"
+      />
+    </div>
+
+    <div class="mt-12 max-w-xl mx-auto">
+      <img
+        src={roiImage}
+        alt="CFO/CNO Shared ROI: +30 hours per month time returned, -$26,900 OT/agency cost reduced"
+        class="rounded-xl shadow-lg w-full h-auto"
+      />
+    </div>
   </div>
 </section>

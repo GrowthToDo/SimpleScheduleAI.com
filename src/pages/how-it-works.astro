@@ -1,0 +1,232 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+
+const pageTitle = "How it Works";
+const pageDescription =
+  "A simple, collaborative workflow for assisted nurse scheduling in Critical Access Hospitals. Your rules, your final approval, fewer headaches.";
+
+const ctaEmail =
+  "mailto:gauthamail@gmail.com?subject=How%20it%20Works%20-%20Assisted%20Nurse%20Scheduling";
+---
+
+<BaseLayout
+  seo={{
+    title: pageTitle,
+    description: pageDescription,
+  }}
+>
+  <section class="relative overflow-hidden">
+    {/* Green background system */}
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute -top-28 left-1/2 h-96 w-[60rem] -translate-x-1/2 rounded-full bg-teal-200/45 blur-3xl"></div>
+      <div class="absolute -bottom-32 left-1/2 h-96 w-[60rem] -translate-x-1/2 rounded-full bg-emerald-200/35 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.08]">
+        <div class="h-full w-full bg-[radial-gradient(circle_at_1px_1px,rgba(15,118,110,0.25)_1px,transparent_0)] [background-size:22px_22px]"></div>
+      </div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-6 py-14 sm:py-16">
+      {/* Top hero panel */}
+      <div class="rounded-3xl border border-slate-200 bg-white/85 p-8 shadow-sm backdrop-blur sm:p-10">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-teal-700">
+              Clear workflow. Predictable handoffs.
+            </p>
+            <h1 class="mt-3 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+              {pageTitle}
+            </h1>
+            <p class="mt-4 text-lg text-slate-700">
+              Assisted scheduling that fits into your current process.
+            </p>
+
+            <p class="mt-6 text-slate-700">
+              You keep control and final approval. We help reduce the load by building and validating
+              schedules based on your inputs and your existing rules.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="/pilot"
+                class="group inline-flex items-center justify-center rounded-xl bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm ring-1 ring-teal-700/20 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              >
+                <span class="text-white">View the Pilot</span>
+              </a>
+
+              <a
+                href={ctaEmail}
+                class="group inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-slate-900/5 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-teal-400"
+              >
+                <span class="text-slate-900">Ask a question</span>
+              </a>
+
+              <p class="text-sm text-slate-500">
+                We work with the format you already use. Excel is fine.
+              </p>
+            </div>
+          </div>
+
+          {/* Two stacked cards */}
+          <div class="space-y-6">
+            <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+              <h2 class="text-lg font-semibold text-slate-900">What you send us</h2>
+              <ul class="mt-4 space-y-3 text-slate-700">
+                <li class="flex gap-3">
+                  <span class="mt-1 inline-block size-2 rounded-full bg-teal-600"></span>
+                  <span>Availability, preferences, and time off</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-1 inline-block size-2 rounded-full bg-teal-600"></span>
+                  <span>Coverage requirements and minimum staffing rules</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-1 inline-block size-2 rounded-full bg-teal-600"></span>
+                  <span>Your constraints, edge cases, and local norms</span>
+                </li>
+              </ul>
+              <p class="mt-4 text-sm text-slate-600">
+                We adapt to your current templates. No new tool required.
+              </p>
+            </div>
+
+            <div class="rounded-3xl border border-teal-200 bg-white p-7 shadow-sm">
+              <h2 class="text-lg font-semibold text-slate-900">What you get back</h2>
+              <ul class="mt-4 space-y-3 text-slate-700">
+                <li class="flex gap-3">
+                  <span class="mt-1 inline-block size-2 rounded-full bg-emerald-600"></span>
+                  <span>A clean, review ready schedule</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-1 inline-block size-2 rounded-full bg-emerald-600"></span>
+                  <span>Notes on conflicts, gaps, and assumptions</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-1 inline-block size-2 rounded-full bg-emerald-600"></span>
+                  <span>A short validation summary for quick approval</span>
+                </li>
+              </ul>
+              <p class="mt-4 text-sm text-slate-600">
+                Nothing is final until your team signs off.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Workflow timeline */}
+      <div class="mt-10 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
+        <div class="max-w-3xl">
+          <h2 class="text-2xl font-semibold tracking-tight text-slate-900">
+            The workflow
+          </h2>
+          <p class="mt-3 text-slate-700">
+            A structured collaboration that respects your existing process.
+          </p>
+        </div>
+
+        <ol class="mt-8 grid gap-6 lg:grid-cols-4">
+          <li class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <p class="text-sm font-semibold text-teal-700">Step 1</p>
+            <h3 class="mt-2 text-base font-semibold text-slate-900">Kickoff and rules</h3>
+            <p class="mt-2 text-slate-700">
+              We document rules, constraints, and what a good schedule looks like for your unit.
+            </p>
+          </li>
+
+          <li class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <p class="text-sm font-semibold text-teal-700">Step 2</p>
+            <h3 class="mt-2 text-base font-semibold text-slate-900">Inputs and handoff</h3>
+            <p class="mt-2 text-slate-700">
+              Your team shares availability and coverage requirements in the format you already use.
+            </p>
+          </li>
+
+          <li class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <p class="text-sm font-semibold text-teal-700">Step 3</p>
+            <h3 class="mt-2 text-base font-semibold text-slate-900">Build and validation</h3>
+            <p class="mt-2 text-slate-700">
+              We build the schedule and check for gaps, conflicts, and common failure points.
+            </p>
+          </li>
+
+          <li class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <p class="text-sm font-semibold text-teal-700">Step 4</p>
+            <h3 class="mt-2 text-base font-semibold text-slate-900">Review and finalize</h3>
+            <p class="mt-2 text-slate-700">
+              Your team reviews, adjusts if needed, and approves. You stay in control.
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      {/* FAQ + Green CTA */}
+      <div class="mt-10 grid gap-8 lg:grid-cols-2">
+        <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+          <h2 class="text-2xl font-semibold tracking-tight text-slate-900">
+            Common questions
+          </h2>
+
+          <div class="mt-6 space-y-5">
+            <div>
+              <h3 class="text-base font-semibold text-slate-900">
+                Do we need to install new software
+              </h3>
+              <p class="mt-2 text-slate-700">
+                No. We work with the tools and formats you already use.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-base font-semibold text-slate-900">
+                Who has final approval
+              </h3>
+              <p class="mt-2 text-slate-700">
+                Your team. Nothing is final until you sign off.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-base font-semibold text-slate-900">
+                What if our rules change week to week
+              </h3>
+              <p class="mt-2 text-slate-700">
+                That is normal. We adjust based on the constraints you provide each cycle.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-slate-200 bg-white p-0 shadow-sm overflow-hidden">
+          <div class="bg-linear-to-br from-teal-100 via-white to-emerald-100 p-8 sm:p-10">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">
+              Ready to test this in your hospital
+            </h2>
+            <p class="mt-4 text-slate-700">
+              The pilot is a low risk way to see if assisted scheduling reduces effort and stress for your team.
+            </p>
+
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="/pilot"
+                class="inline-flex items-center justify-center rounded-xl bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-600"
+              >
+                View the Pilot
+              </a>
+
+              <a
+                href={ctaEmail}
+                class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-50"
+              >
+                Email us
+              </a>
+            </div>
+
+            <p class="mt-5 text-sm text-slate-600">
+              Simple process. Clear handoffs. Your final approval.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

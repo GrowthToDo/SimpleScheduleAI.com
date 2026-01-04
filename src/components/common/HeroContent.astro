@@ -1,11 +1,25 @@
 ---
 import Button from "@ui/Button.astro";
 
-const title = "Turn Excel® into Your Data Intelligence Powerhouse";
+const badge = "Built for Texas CAHs: 24/7 ED reality, real constraints";
+
+const title = "Stop patching holes in the schedule";
+
 const subTitle =
-  "Get instant insights from your spreadsheets with advanced analytics and stunning visualizations. No coding required. Make confident decisions backed by data in minutes, not days.";
-const secondaryCTA = { text: "Start Free Trial", href: "https://github.com/mearashadowfax/DataNova" };
-const primaryCTA = { text: "View Pricing", href: "/downloads/license-options" };
+  "We deliver a stable, post-ready schedule every week—and we run the call-out coverage workflow—using your rules, eligibility constraints, and a leadership-ready exceptions + decisions log.";
+
+const supportLine =
+  "Risk-free 30-day pilot for one unit. Built for Texas CAHs: lean teams, 24/7 ED reality, real constraints.";
+
+const primaryCTA = {
+  text: "Get a process walkthrough",
+  href: "/contact",
+};
+
+const secondaryCTA = {
+  text: "How it Works",
+  href: "/how-it-works",
+};
 ---
 
 {/* Hero Content */}
@@ -17,16 +31,25 @@ const primaryCTA = { text: "View Pricing", href: "/downloads/license-options" };
   </h1>
 </div>
 
-<div class="mx-auto max-w-3xl text-left sm:text-center">
+<div class="mx-auto mt-6 max-w-3xl text-left sm:text-center">
   <p class="text-pretty text-lg text-slate-700">
     {subTitle}
   </p>
 </div>
 
+<div class="mx-auto mt-4 max-w-2xl text-left sm:text-center">
+  <p class="text-pretty text-base text-slate-500">
+    {supportLine}
+  </p>
+</div>
+
 {/* CTA Buttons */}
-<div class="flex flex-col justify-center gap-5 sm:flex-row">
-  <Button href={secondaryCTA.href} variant="secondary" target="_blank"
-    >{secondaryCTA.text}</Button
-  >
-  <Button href={primaryCTA.href} variant="primary">{primaryCTA.text}</Button>
+<div class="mt-10 flex flex-col justify-center gap-5 sm:flex-row">
+  <Button href={primaryCTA.href} variant="primary">
+    {primaryCTA.text}
+  </Button>
+
+  <Button href={secondaryCTA.href} variant="secondary">
+    {secondaryCTA.text}
+  </Button>
 </div>
