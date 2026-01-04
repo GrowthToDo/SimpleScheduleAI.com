@@ -7,8 +7,7 @@ import svelte from "@astrojs/svelte";
 // https://astro.build/config
 export default defineConfig({
   // The `site` property specifies the base URL for your site.
-  site: "https://growthtodo.github.io",
-  base: "/ssai",
+  site: "https://starlit-brioche-92a3a9.netlify.app",
   prefetch: true,
   trailingSlash: "never",
   integrations: [

@@ -4,8 +4,8 @@ import Button from "@ui/Button.astro";
 const currentPath = Astro.url.pathname;
 
 const links = [
-  { label: "How it Works", href: "/how-it-works" },
-  { label: "Pilot", href: "/pilot" },
+  { label: "How it Works", href: `${import.meta.env.BASE_URL}how-it-works` },
+  { label: "Pilot", href: `${import.meta.env.BASE_URL}pilot` },
 ];
 
 const primaryCTA = {
@@ -25,7 +25,7 @@ const primaryCTA = {
     <div class="flex items-center gap-x-3">
       <a
         class="dm-sans flex-none text-xl font-semibold text-slate-900 focus:opacity-80 focus:outline-hidden"
-        href="/"
+        href={import.meta.env.BASE_URL}
         aria-label="SimpleScheduleAI"
         translate="no"
       >
