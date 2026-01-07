@@ -1,0 +1,113 @@
+---
+import BaseLayout from "@layout/BaseLayout.astro";
+import Button from "@ui/Button.astro";
+
+const pageTitle = "Scheduling Simulator (Coming Soon)";
+const pageDescription =
+  "Try our Excel-based scheduling simulator to understand the complexity of nurse scheduling firsthand.";
+
+const seo = {
+  title: "Scheduling Simulator - SimpleScheduleAI",
+  description: pageDescription,
+};
+---
+
+<BaseLayout seo={seo}>
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute -top-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-teal-200/40 blur-3xl"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-[85rem] px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <span class="inline-block rounded-full bg-teal-100 px-4 py-2 text-sm font-semibold text-teal-700">
+          Coming Soon
+        </span>
+
+        <h1 class="mt-6 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+          {pageTitle}
+        </h1>
+
+        <div class="mt-8 space-y-4 text-lg text-slate-700">
+          <p>
+            We built an Excel-based scheduling simulator to understand the complexity of nurse scheduling firsthand.
+          </p>
+          <p>
+            It includes patient census data, real-world compliance rules, PTO tracking, and skill-matching.
+          </p>
+          <p class="font-semibold">
+            Soon, you'll be able to try it yourself and see why "just use Excel" breaks down at scale.
+          </p>
+        </div>
+
+        {/* Email Capture Form */}
+        <div class="mx-auto mt-12 max-w-md">
+          <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <form
+              name="simulator-waitlist"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="simulator-waitlist" />
+              <div class="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </div>
+
+              <h3 class="text-xl font-semibold text-slate-900">Get notified when it launches</h3>
+
+              <div class="mt-6 space-y-4">
+                <div>
+                  <label for="email" class="block text-left text-sm font-medium text-slate-700">
+                    Email address <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    class="mt-2 block w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:border-teal-700 focus:outline-hidden focus:ring-2 focus:ring-teal-700/80"
+                    placeholder="you@hospital.org"
+                  />
+                </div>
+
+                <div>
+                  <label for="role" class="block text-left text-sm font-medium text-slate-700">
+                    Your role (optional)
+                  </label>
+                  <input
+                    id="role"
+                    name="role"
+                    type="text"
+                    class="mt-2 block w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:border-teal-700 focus:outline-hidden focus:ring-2 focus:ring-teal-700/80"
+                    placeholder="Nurse Manager, CNO, etc."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full rounded-lg bg-teal-700 px-6 py-3 font-semibold text-white shadow-sm transition-colors hover:bg-teal-600"
+                >
+                  Notify me
+                </button>
+
+                <p class="text-sm text-slate-600">
+                  We'll send you one email when the simulator is ready. No spam.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        {/* Back to Home */}
+        <div class="mt-12">
+          <Button href="/" variant="secondary">
+            ← Back to homepage
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

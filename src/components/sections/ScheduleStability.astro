@@ -1,0 +1,47 @@
+---
+const title = "Schedule stability that protects your nurses' valuable time and your budget";
+const subtitle = "We don't just fill slots; we manage the integrity of the unit.";
+
+const metrics = [
+  {
+    title: "On-Time",
+    description: "Schedule posted on time with significantly fewer revisions.",
+  },
+  {
+    title: "Fewer post-publish holes",
+    description: "We track and minimize holes after posting weekly.",
+  },
+  {
+    title: "Clean Escalation",
+    description: "Drastically reduced manager intervention in daily staffing.",
+  },
+  {
+    title: "OT Flags",
+    description: "Overtime risk surfaced and mitigated before posting.",
+  },
+  {
+    title: "Audit-Ready",
+    description: "Exception log ready for staffing committee review.",
+  },
+];
+---
+
+<section class="bg-slate-900 text-white">
+  <div class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+        {title}
+      </h2>
+      <p class="mt-4 text-lg text-slate-300">{subtitle}</p>
+    </div>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-5">
+      {metrics.map((metric) => (
+        <div class="text-center">
+          <h3 class="text-lg font-bold">{metric.title}</h3>
+          <p class="mt-2 text-sm text-slate-400">{metric.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

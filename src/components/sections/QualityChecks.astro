@@ -1,0 +1,64 @@
+---
+const title = "Quality checks before we deliver";
+const subtitle = 'We don\'t just "fill boxes." Every schedule package undergoes a six-point quality validation to ensure it meets the constraints of a high-stakes clinical environment.';
+
+const checks = [
+  {
+    number: "1",
+    title: "Skill mix check",
+    description: "Balanced experience across every shift to prevent 'junior-heavy' nights.",
+  },
+  {
+    number: "2",
+    title: "Charge coverage check",
+    description: "Verified charge-capable RNs assigned for 24/7 clinical leadership.",
+  },
+  {
+    number: "3",
+    title: "Rotation fairness check",
+    description: "Automated tracking of weekend/holiday equity across the team.",
+  },
+  {
+    number: "4",
+    title: "Overtime risk check",
+    description: "Proactive identification of shifts pushing into agency or OT territory.",
+  },
+  {
+    number: "5",
+    title: "Holes/open shifts risk",
+    description: "Immediate flagging of coverage gaps with suggested mitigation paths.",
+  },
+  {
+    number: "6",
+    title: "Exceptions logged",
+    description: "Every manual decision or rule deviation is recorded for your review.",
+  },
+];
+---
+
+<section class="bg-linear-to-b from-white via-slate-50 to-white">
+  <div class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+        {title}
+      </h2>
+      <p class="mt-4 text-lg text-slate-700">{subtitle}</p>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {checks.map((check) => (
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors hover:border-teal-700">
+          <div class="flex items-start gap-3">
+            <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-teal-700 font-bold text-white text-sm">
+              {check.number}
+            </span>
+            <div>
+              <h3 class="font-semibold text-slate-900">{check.title}</h3>
+              <p class="mt-2 text-sm text-slate-700">{check.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

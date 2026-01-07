@@ -1,0 +1,57 @@
+---
+const title = "Built for Critical Access Hospitals in Texas";
+
+const scenarios = [
+  {
+    title: "Lean Staffing Reality",
+    description: "Where a single call-out can break coverage for the entire unit.",
+  },
+  {
+    title: "24/7 Emergency Coverage",
+    description: 'Maintaining the ED "ready-state" while balancing small bed counts.',
+  },
+  {
+    title: "Rural Constraints",
+    description: "Distance makes \"just add staff\" unrealistic. We optimize what you have.",
+  },
+];
+
+const commonScenarios = {
+  title: "Common CAH Scenarios We Handle",
+  items: [
+    "7 PM call-out: hole on next shift",
+    "Two PTO overlaps plus an admission spike",
+    "Weekend rotation dispute and fairness complaints",
+    "Float pool too small to cover the hole; escalation path must be clean",
+  ],
+};
+---
+
+<section class="bg-white">
+  <div class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <h2 class="text-center text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+      {title}
+    </h2>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-3">
+      {scenarios.map((scenario) => (
+        <div class="text-center">
+          <h3 class="text-xl font-semibold text-slate-900">{scenario.title}</h3>
+          <p class="mt-3 text-slate-700">{scenario.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mx-auto mt-16 max-w-4xl rounded-2xl bg-teal-50 p-8">
+      <h3 class="text-xl font-semibold text-slate-900">{commonScenarios.title}</h3>
+      <ul class="mt-6 grid gap-4 md:grid-cols-2">
+        {commonScenarios.items.map((item) => (
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 size-1.5 shrink-0 rounded-full bg-teal-700"></span>
+            <span class="text-slate-700">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

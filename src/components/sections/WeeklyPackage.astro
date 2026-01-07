@@ -1,0 +1,47 @@
+---
+const title = "Your Weekly Schedule Package";
+const subtitle = 'Delivered every Thursday 3pm (or your chosen cadence). No more "CSV" headaches—just post and hand off.';
+
+const deliverables = [
+  {
+    title: "Schedule PDF",
+    description: "Post-ready, cleanly formatted for the unit board.",
+  },
+  {
+    title: "Excel Workbook",
+    description: "Final schedule + exceptions log + risk flags.",
+  },
+  {
+    title: "Manager Summary",
+    description: "What changed, what needs approval, and budget impact.",
+  },
+];
+---
+
+<section class="bg-white">
+  <div class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <h2 class="text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+          {title}
+        </h2>
+        <p class="mt-4 text-lg text-slate-700">{subtitle}</p>
+
+        <div class="mt-10 space-y-6">
+          {deliverables.map((item) => (
+            <div class="border-l-4 border-teal-700 pl-4">
+              <h3 class="font-semibold text-slate-900">{item.title}</h3>
+              <p class="mt-1 text-slate-700">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-slate-100 p-8 lg:p-12">
+        <div class="text-center text-slate-500">
+          [Schedule mockup placeholder]
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+---
+const title = "Call-out Workflow Example";
+
+const steps = [
+  {
+    step: "1",
+    description: "7 p.m. call-out received → Immediate system alert",
+  },
+  {
+    step: "2",
+    description: "Skills + Charge check → Auto-scanning qualified staff",
+  },
+  {
+    step: "3",
+    description: "Availability check → Cross-referencing PTO + block schedules",
+  },
+  {
+    step: "4",
+    description: "Float → Voluntary OT → Agency → Following your pre-set path",
+  },
+];
+
+const output = "Ranked list + Message templates + Updated schedule + Logged reason";
+---
+
+<section class="bg-linear-to-b from-slate-50 via-white to-white">
+  <div class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <h2 class="text-center text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+      {title}
+    </h2>
+
+    <div class="mx-auto mt-12 max-w-3xl">
+      <ol class="space-y-6">
+        {steps.map((item) => (
+          <li class="flex items-start gap-4">
+            <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-teal-700 font-bold text-white">
+              {item.step}
+            </span>
+            <p class="mt-2 text-slate-700">{item.description}</p>
+          </li>
+        ))}
+      </ol>
+
+      <div class="mt-10 rounded-2xl bg-teal-50 p-6">
+        <p class="text-sm font-semibold text-slate-900">Output:</p>
+        <p class="mt-2 text-slate-700">{output}</p>
+      </div>
+    </div>
+  </div>
+</section>

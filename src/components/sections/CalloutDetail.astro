@@ -1,0 +1,64 @@
+---
+import Icon from "@ui/icons/Icon.astro";
+
+const title = "Call-outs become a workflow, not a fire drill";
+const subtitle = 'We do the chasing: eligibility + availability + escalation. No more mass texts and "anyone available?" chaos.';
+
+const details = [
+  "We check eligible staff availability first (skills, role, charge)",
+  "We work your escalation order (float → voluntary OT → last resort)",
+  "Every change lands in the **Exceptions + Decisions Log** for later review",
+];
+
+const logExample = {
+  title: "Exceptions Log Entry Example",
+  event: "2AM CALL-OUT (MS UNIT)",
+  eligibility: "4 QUALIFIED",
+  escalation: "STEP 2 (VOLUNTARY OT)",
+  decision: "NURSE SMITH APPROVED (1.5X)",
+  reason: "PROTECT CHARGE MIX ON NEXT SHIFT",
+  note: "Defendable in a huddle, ready for staffing committee.",
+};
+---
+
+<section class="bg-linear-to-b from-slate-50 via-white to-white">
+  <div class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div class="rounded-2xl bg-slate-100 p-8 lg:p-12">
+        <div class="text-center text-slate-500">
+          [Call-out workflow diagram placeholder]
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+          {title}
+        </h2>
+        <p class="mt-4 text-lg text-slate-700">{subtitle}</p>
+
+        <ul class="mt-8 space-y-4">
+          {details.map((detail) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-teal-700">
+                <Icon name="check" class="size-5" />
+              </span>
+              <span class="text-slate-700">{detail}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="mt-10 rounded-2xl bg-slate-900 p-6 font-mono text-sm text-white">
+          <p class="font-bold">{logExample.title}</p>
+          <div class="mt-4 space-y-2">
+            <p><span class="text-teal-400">EVENT:</span> {logExample.event}</p>
+            <p><span class="text-teal-400">ELIGIBILITY CHECK:</span> {logExample.eligibility}</p>
+            <p><span class="text-teal-400">ESCALATION:</span> {logExample.escalation}</p>
+            <p><span class="text-teal-400">DECISION:</span> {logExample.decision}</p>
+            <p><span class="text-teal-400">REASON:</span> {logExample.reason}</p>
+          </div>
+          <p class="mt-4 text-xs italic text-slate-400">{logExample.note}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
