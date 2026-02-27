@@ -8,7 +8,7 @@ const steps = [
   },
   {
     step: "2",
-    description: "Checks availability, qualifications, hours worked, rest requirements, 60h limit",
+    description: "Checks availability, qualifications, hours worked, rest requirements, and your configured weekly hour limits",
   },
   {
     step: "3",
@@ -24,9 +24,8 @@ const candidateReasons = [
   "Float pool staff - designed for coverage",
   "Cross-trained for ICU",
   "PRN staff - marked available for this date",
-  "High reliability rating (5/5)",
-  "No overtime (within 40 hours)",
-  "Low flex hours YTD (fair distribution)",
+  "Not at risk for overtime",
+  "Hours distributed fairly across the team",
 ];
 
 const output = "Top 3 ranked candidates + Reasons for each + One-click approval → Assignment auto-created";
@@ -37,7 +36,7 @@ const output = "Top 3 ranked candidates + Reasons for each + One-click approval 
     <h2 class="text-center text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
       {title}
     </h2>
-    <p class="mt-4 text-center text-lg text-slate-600">When someone calls out or leave is approved, you don't hunt for replacements—the system does.</p>
+    <p class="mt-4 text-center text-lg text-slate-600">When someone calls out or leave is approved, you don't hunt for replacements. The system does.</p>
 
     <div class="mt-12 grid gap-8 lg:grid-cols-2">
       <div>
