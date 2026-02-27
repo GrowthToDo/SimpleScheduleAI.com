@@ -1,6 +1,6 @@
 ---
 const title = "21 scheduling rules, validated automatically";
-const subtitle = "Every schedule runs through 13 hard rules (must not violate) and 8 soft rules (optimized with penalties). No manual checking needed.";
+const subtitle = "13 compliance and safety rules are guaranteed. 8 more are actively optimized for fairness and cost. No manual checking needed.";
 
 const hardRules = [
   { title: "Minimum staff per shift", description: "Based on census bands" },
@@ -43,8 +43,8 @@ const softRules = [
       {/* Hard Rules */}
       <div class="rounded-2xl border-2 border-red-200 bg-white p-6 shadow-sm">
         <h3 class="text-lg font-semibold text-slate-900 mb-4">
-          <span class="inline-block px-2 py-1 bg-red-100 text-red-700 text-xs font-bold rounded mr-2">HARD</span>
-          13 rules that cannot be broken
+          <span class="inline-block px-2 py-1 bg-red-100 text-red-700 text-xs font-bold rounded mr-2">REQUIRED</span>
+          13 compliance &amp; safety rules
         </h3>
         <ul class="space-y-3">
           {hardRules.map((rule) => (
@@ -62,8 +62,8 @@ const softRules = [
       {/* Soft Rules */}
       <div class="rounded-2xl border-2 border-amber-200 bg-white p-6 shadow-sm">
         <h3 class="text-lg font-semibold text-slate-900 mb-4">
-          <span class="inline-block px-2 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded mr-2">SOFT</span>
-          8 rules optimized with penalties
+          <span class="inline-block px-2 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded mr-2">OPTIMIZED</span>
+          8 fairness &amp; preference goals
         </h3>
         <ul class="space-y-3">
           {softRules.map((rule) => (

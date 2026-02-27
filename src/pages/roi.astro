@@ -1,0 +1,32 @@
+---
+import BaseLayout from "@layout/BaseLayout.astro";
+import ROISection from "@sections/ROISection.astro";
+import Button from "@ui/Button.astro";
+
+const seo = {
+  title: "Scheduling Cost Calculator - SimpleScheduleAI",
+  description: "Calculate what nurse scheduling is really costing your Critical Access Hospital. Adjust sliders to match your hospital's size and see your hidden scheduling costs.",
+};
+---
+
+<BaseLayout seo={seo}>
+  <div class="pt-24">
+    <div class="mx-auto max-w-[85rem] px-4 pt-8 pb-2 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block rounded-full bg-teal-100 px-4 py-2 text-sm font-semibold text-teal-700">
+        Scheduling Cost Calculator
+      </span>
+      <p class="mt-4 text-base text-slate-500">
+        Based on interviews with 30+ nurse managers and published CAH benchmarks.
+      </p>
+    </div>
+
+    <ROISection />
+
+    <div class="pb-16 text-center">
+      <Button href="/contact" variant="primary" className="inline-flex px-6! py-3! text-base!">
+        Apply for a Pilot Spot
+      </Button>
+      <p class="mt-3 text-sm text-slate-500">Free 60-day pilot. No obligation.</p>
+    </div>
+  </div>
+</BaseLayout>

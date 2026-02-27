@@ -1,35 +1,22 @@
 ---
-const title = "ROI that a CFO and CNO both accept";
+import ROICalculatorWidget from "@sections/ROICalculatorWidget.svelte";
 
-const points = [
-  {
-    title: "Reduce Overtime",
-    description: "Stop using OT as a default response to openings. We surface flags before they cost you.",
-  },
-  {
-    title: "Lower Churn",
-    description: "Improve predictability and fairness. Nurses stay when the schedule is stable.",
-  },
-  {
-    title: "Return Leader Time",
-    description: "Get nurse leaders back to clinical work instead of hours spent patching schedules.",
-  },
-];
+// Replace this placeholder with the URL from your deployed Google Apps Script
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxP0OhrZPSdJgWpE8n08meo-5C6nSkSdbx-wKDHwovCEtAy7ZLhyJcwmOLIwFQOiYKZ/exec";
 ---
 
 <section class="bg-white">
   <div class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-    <h2 class="text-center text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-      {title}
-    </h2>
-
-    <div class="mt-12 grid gap-10 md:grid-cols-3">
-      {points.map((point) => (
-        <div class="text-center">
-          <h3 class="text-xl font-bold text-slate-900">{point.title}</h3>
-          <p class="mt-4 text-slate-700">{point.description}</p>
-        </div>
-      ))}
+    <div class="mx-auto max-w-3xl text-center mb-12">
+      <h2 class="text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+        What is scheduling really costing you?
+      </h2>
+      <p class="mt-4 text-lg text-slate-600">
+        Adjust the sliders to match your hospital. Costs are based on interviews
+        with 30+ nurse managers and published CAH benchmarks.
+      </p>
     </div>
+
+    <ROICalculatorWidget googleScriptUrl={GOOGLE_SCRIPT_URL} client:load />
   </div>
 </section>
