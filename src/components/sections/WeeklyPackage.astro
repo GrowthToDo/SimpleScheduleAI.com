@@ -45,9 +45,78 @@ const deliverables = [
         </div>
       </div>
 
-      <div class="rounded-2xl bg-slate-100 p-8 lg:p-12">
-        <div class="text-center text-slate-500">
-          [Schedule mockup placeholder]
+      {/* Schedule PDF mockup */}
+      <div class="rounded-2xl border border-slate-200 bg-white shadow-xl overflow-hidden">
+        {/* PDF header */}
+        <div class="bg-teal-700 px-5 py-4 flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold text-teal-200 uppercase tracking-wider">CAH Medical-Surgical Unit</p>
+            <p class="text-sm font-bold text-white mt-0.5">Week of Jun 2–8, 2025</p>
+          </div>
+          <span class="rounded-full bg-white/20 border border-white/30 px-3 py-1 text-xs font-semibold text-white">PDF Ready</span>
+        </div>
+
+        {/* Schedule grid */}
+        <div class="px-5 pt-4 pb-2">
+          <table class="w-full text-xs">
+            <thead>
+              <tr class="border-b-2 border-slate-200">
+                <th class="text-left pb-2 text-slate-500 font-semibold uppercase tracking-wide w-20">Date</th>
+                <th class="text-left pb-2 text-slate-500 font-semibold uppercase tracking-wide">Day 07–19</th>
+                <th class="text-left pb-2 text-slate-500 font-semibold uppercase tracking-wide">Night 19–07</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr>
+                <td class="py-2.5 font-semibold text-slate-700">Mon Jun 2</td>
+                <td class="py-2.5">
+                  <p class="text-slate-700">Maria G. <span class="text-teal-700 font-medium">Charge</span></p>
+                  <p class="text-slate-600">Emily D. · Lisa A.</p>
+                </td>
+                <td class="py-2.5">
+                  <p class="text-slate-700">James W. <span class="text-teal-700 font-medium">Charge</span></p>
+                  <p class="text-slate-600">Michael B.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-2.5 font-semibold text-slate-700">Tue Jun 3</td>
+                <td class="py-2.5">
+                  <p class="text-slate-700">Maria G. <span class="text-teal-700 font-medium">Charge</span></p>
+                  <p class="text-slate-600">Ashley J. · Amanda W.</p>
+                </td>
+                <td class="py-2.5">
+                  <p class="text-slate-700">James W. <span class="text-teal-700 font-medium">Charge</span></p>
+                  <p class="text-slate-600">Christopher A.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-2.5 font-semibold text-slate-700">Thu Jun 5</td>
+                <td class="py-2.5">
+                  <p class="text-slate-700">Maria G. <span class="text-teal-700 font-medium">Charge</span></p>
+                  <p class="text-slate-600">
+                    Ashley J. ·
+                    <span class="inline-flex items-center gap-0.5">
+                      Elizabeth M.
+                      <span class="rounded bg-red-100 px-1 text-[10px] font-bold text-red-600">OT</span>
+                    </span>
+                  </p>
+                </td>
+                <td class="py-2.5">
+                  <p class="text-slate-700">James W. <span class="text-teal-700 font-medium">Charge</span></p>
+                  <p class="text-slate-600">Jessica R. · Daniel H.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* Footer */}
+        <div class="flex items-center justify-between border-t border-slate-200 px-5 py-3 bg-slate-50">
+          <div class="flex items-center gap-1.5">
+            <span class="h-2 w-2 rounded-full bg-teal-500"></span>
+            <span class="text-xs text-slate-500">21 rules validated · 0 violations</span>
+          </div>
+          <span class="text-xs font-medium text-teal-700">Thu 8:04 AM</span>
         </div>
       </div>
     </div>
