@@ -30,29 +30,32 @@ const softRules = [
 ];
 ---
 
-<section class="bg-linear-to-b from-white via-slate-50 to-white">
-  <div class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+<section class="bg-slate-950">
+  <div class="mx-auto max-w-[85rem] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
     <div class="mx-auto max-w-3xl text-center">
-      <h2 class="text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-400">Built-in compliance</p>
+      {/* Big stat */}
+      <div class="mb-4 text-8xl font-black text-teal-400 sm:text-9xl leading-none">21</div>
+      <h2 class="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
         {title}
       </h2>
-      <p class="mt-4 text-lg text-slate-700">{subtitle}</p>
+      <p class="mt-5 text-lg leading-relaxed text-slate-400">{subtitle}</p>
     </div>
 
-    <div class="mt-12 grid gap-8 lg:grid-cols-2">
+    <div class="mt-14 grid gap-6 lg:grid-cols-2">
       {/* Hard Rules */}
-      <div class="rounded-2xl border-2 border-red-200 bg-white p-6 shadow-sm">
-        <h3 class="text-lg font-semibold text-slate-900 mb-4">
-          <span class="inline-block px-2 py-1 bg-red-100 text-red-700 text-xs font-bold rounded mr-2">REQUIRED</span>
+      <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-sm">
+        <h3 class="text-lg font-bold text-white mb-5 flex items-center gap-3">
+          <span class="inline-block px-2 py-1 bg-red-500/20 text-red-400 text-xs font-bold rounded tracking-wider">REQUIRED</span>
           13 compliance &amp; safety rules
         </h3>
         <ul class="space-y-3">
           {hardRules.map((rule) => (
             <li class="flex items-start gap-2 text-sm">
-              <span class="mt-1 text-red-500 shrink-0">&#10005;</span>
+              <span class="mt-1 text-red-400 shrink-0">&#10005;</span>
               <div>
-                <span class="font-medium text-slate-900">{rule.title}</span>
-                <span class="text-slate-500"> - {rule.description}</span>
+                <span class="font-medium text-slate-200">{rule.title}</span>
+                <span class="text-slate-500"> — {rule.description}</span>
               </div>
             </li>
           ))}
@@ -60,18 +63,18 @@ const softRules = [
       </div>
 
       {/* Soft Rules */}
-      <div class="rounded-2xl border-2 border-amber-200 bg-white p-6 shadow-sm">
-        <h3 class="text-lg font-semibold text-slate-900 mb-4">
-          <span class="inline-block px-2 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded mr-2">OPTIMIZED</span>
+      <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-sm">
+        <h3 class="text-lg font-bold text-white mb-5 flex items-center gap-3">
+          <span class="inline-block px-2 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded tracking-wider">OPTIMIZED</span>
           8 fairness &amp; preference goals
         </h3>
         <ul class="space-y-3">
           {softRules.map((rule) => (
             <li class="flex items-start gap-2 text-sm">
-              <span class="mt-1 text-amber-500 shrink-0">&#9679;</span>
+              <span class="mt-1 text-amber-400 shrink-0">&#9679;</span>
               <div>
-                <span class="font-medium text-slate-900">{rule.title}</span>
-                <span class="text-slate-500"> - {rule.description}</span>
+                <span class="font-medium text-slate-200">{rule.title}</span>
+                <span class="text-slate-500"> — {rule.description}</span>
               </div>
             </li>
           ))}
@@ -79,7 +82,7 @@ const softRules = [
       </div>
     </div>
 
-    <p class="mt-8 text-center text-slate-600">
+    <p class="mt-8 text-center text-slate-500">
       All rules are configurable per unit. Violations are logged in the audit trail.
     </p>
   </div>

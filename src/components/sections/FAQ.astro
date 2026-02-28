@@ -25,11 +25,14 @@ const questions = [
 ];
 ---
 
-<section class="bg-white">
-  <div class="mx-auto max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-    <h2 class="text-center text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-      {title}
-    </h2>
+<section class="bg-slate-50">
+  <div class="mx-auto max-w-[85rem] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <div class="text-center">
+      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-600">Common questions</p>
+      <h2 class="text-center text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        {title}
+      </h2>
+    </div>
 
     <div class="mx-auto mt-12 max-w-3xl divide-y divide-slate-200">
       {questions.map((item) => (

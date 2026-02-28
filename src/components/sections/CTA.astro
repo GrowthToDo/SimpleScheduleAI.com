@@ -19,33 +19,35 @@ const secondaryCTA = {
 const tags = ["Free for 60 Days", "3 Hospitals Only", "Full Managed Service", "No IT Setup"];
 ---
 
-<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20">
-  <div class="mx-auto mb-10 max-w-3xl text-center lg:mb-14">
-    <h2 class="text-balance text-4xl text-slate-800 sm:text-5xl">
-      <Fragment set:html={title} />
-    </h2>
+<section class="bg-slate-950">
+  <div class="mx-auto max-w-[85rem] px-4 py-20 sm:px-6 md:py-24 lg:px-8 lg:py-28">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-400">Limited availability</p>
+      <h2 class="text-balance text-4xl font-black text-white sm:text-5xl">
+        <Fragment set:html={title} />
+      </h2>
 
-    <p class="mt-5 text-pretty text-lg/8 text-slate-600">
-      {subTitle}
-    </p>
+      <p class="mt-6 text-pretty text-lg leading-relaxed text-slate-400">
+        {subTitle}
+      </p>
 
-    <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-      <Button href={primaryCTA.href} variant="primary" className="inline-flex border-none px-4!">
-        {primaryCTA.text}
-      </Button>
+      <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <Button href={primaryCTA.href} variant="primary" className="inline-flex border-none px-6!">
+          {primaryCTA.text}
+        </Button>
 
-      <Button href={secondaryCTA.href} variant="secondary" className="inline-flex px-4!">
-        {secondaryCTA.text}
-      </Button>
+        <a href={secondaryCTA.href} class="rounded-lg px-6 py-2.5 text-center font-medium transition-colors duration-300 border-2 border-slate-600 text-slate-300 hover:border-teal-600 hover:text-white">
+          {secondaryCTA.text}
+        </a>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
+        {tags.map((tag) => (
+          <span class="inline-flex items-center gap-x-1.5 rounded-full border border-teal-800/50 bg-teal-900/30 px-3 py-1.5 text-xs font-medium text-teal-300">
+            {tag}
+          </span>
+        ))}
+      </div>
     </div>
-
-    <div class="mt-6 flex flex-wrap items-center justify-center gap-2">
-      {tags.map((tag) => (
-        <span class="inline-flex items-center gap-x-1.5 rounded-full bg-teal-100 px-3 py-1.5 text-xs font-medium text-teal-800">
-          {tag}
-        </span>
-      ))}
-    </div>
-
   </div>
 </section>
