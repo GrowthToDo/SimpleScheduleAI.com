@@ -3,11 +3,17 @@ import Button from "@ui/Button.astro";
 
 const title = "3 pilot spots open.<br/>No cost. No obligation.";
 
-const subTitle =
-  "We're onboarding three Critical Access Hospitals in Texas for a free 60-day managed service. Every week, you get a compliant schedule, call-out replacement candidates, and a manager summary. At the end, we sit down for a strategic review: what changed, what the numbers show, and where you want to take it. If it's working and you want to continue, we'll build a plan together. You'll know within 6 weeks whether this is right for your unit.";
+const bullets = [
+  "A compliant, post-ready schedule delivered every week",
+  "Call-out replacement candidates, ready to approve in one click",
+  "A weekly manager summary: what changed, budget impact, pending approvals",
+];
+
+const postPilot =
+  "After 60 days, we sit down for a strategic review. If it is working and you want to continue, we build a plan together. The pilot costs you nothing.";
 
 const primaryCTA = {
-  text: "Get a Free Schedule Review",
+  text: "Claim a Pilot Spot",
   href: "/contact",
 };
 
@@ -27,8 +33,22 @@ const tags = ["Free for 60 Days", "3 Hospitals Only", "Full Managed Service", "N
         <Fragment set:html={title} />
       </h2>
 
-      <p class="mt-6 text-pretty text-lg leading-relaxed text-slate-400">
-        {subTitle}
+      <p class="mt-6 text-sm font-semibold uppercase tracking-widest text-slate-500">What you get for 60 days, free</p>
+      <ul class="mt-4 space-y-3 text-left">
+        {bullets.map((bullet) => (
+          <li class="flex items-start gap-3">
+            <span class="mt-1 shrink-0 text-teal-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            <span class="text-lg leading-relaxed text-slate-300">{bullet}</span>
+          </li>
+        ))}
+      </ul>
+
+      <p class="mt-6 text-pretty text-base leading-relaxed text-slate-500">
+        {postPilot}
       </p>
 
       <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
