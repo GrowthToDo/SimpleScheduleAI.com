@@ -1,93 +1,26 @@
 ---
-const title = "21 scheduling rules, validated automatically";
-const subtitle = "13 compliance and safety rules are guaranteed. 8 more are actively optimized for fairness and cost. No manual checking needed.";
-
-const hardRules = [
-  { title: "Minimum staff per shift", description: "Based on census bands" },
-  { title: "Charge nurse required", description: "24/7 clinical leadership" },
-  { title: "Patient-to-nurse ratio", description: "Census band limits enforced" },
-  { title: "10-hour rest between shifts", description: "Fatigue prevention" },
-  { title: "Max 5 consecutive days", description: "Mandatory day off" },
-  { title: "60-hour weekly limit", description: "Safety cap" },
-  { title: "Orientees need a preceptor", description: "New nurses paired with a dedicated senior nurse" },
-  { title: "ICU/ER requires senior nurse", description: "Experienced nurse must be present on every shift" },
-  { title: "No overlapping shifts", description: "One staff member, one shift at a time" },
-  { title: "PRN availability required", description: "Only schedule when available" },
-  { title: "Leave blocks scheduling", description: "Approved leave respected" },
-  { title: "On-call limits", description: "1/week, 1 weekend/month" },
-  { title: "ICU competency verified", description: "Only qualified staff assigned to critical care" },
-];
-
-const softRules = [
-  { title: "Overtime penalty", description: "Actual OT (>40h) penalized higher than extra hours" },
-  { title: "Weekend requirements", description: "3 weekends per 6-week period (configurable)" },
-  { title: "Consecutive weekends", description: "Penalty for >2 in a row" },
-  { title: "Annual holiday fairness", description: "Christmas Eve + Day count as one holiday" },
-  { title: "Preference matching", description: "Honor shift and day preferences" },
-  { title: "Skill mix diversity", description: "Prevent junior-heavy shifts" },
-  { title: "Float penalty", description: "Minimize cross-unit assignments" },
-  { title: "Charge distribution", description: "Spread charge duties fairly" },
-];
 ---
 
 <section class="bg-slate-950">
   <div class="mx-auto max-w-[85rem] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
     <div class="mx-auto max-w-3xl text-center">
       <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-400">Built-in compliance</p>
-      {/* Big stat */}
       <div class="mb-4 text-8xl font-black text-teal-400 sm:text-9xl leading-none">21</div>
       <h2 class="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
-        {title}
+        Scheduling rules validated automatically
       </h2>
-      <p class="mt-5 text-lg leading-relaxed text-slate-400">{subtitle}</p>
+      <p class="mt-5 text-lg leading-relaxed text-slate-400">
+        13 compliance and safety rules guaranteed on every schedule. 8 fairness goals actively optimized. No manual checking. No missed violations.
+      </p>
+      <a
+        href="/how-it-works"
+        class="mt-8 inline-flex items-center gap-2 text-teal-400 font-medium hover:text-teal-300 transition-colors duration-200"
+      >
+        See how the rules engine works
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
     </div>
-
-    <div class="mt-14 grid gap-6 lg:grid-cols-2">
-      {/* Hard Rules */}
-      <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-sm">
-        <h3 class="text-lg font-bold text-white mb-5 flex items-center gap-3">
-          <span class="inline-block px-2 py-1 bg-red-500/20 text-red-400 text-xs font-bold rounded tracking-wider">REQUIRED</span>
-          13 compliance &amp; safety rules
-        </h3>
-        <ul class="space-y-3">
-          {hardRules.map((rule) => (
-            <li class="flex items-start gap-3 text-sm">
-              <svg class="mt-0.5 shrink-0 h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 5L5 15M5 5l10 10"/>
-              </svg>
-              <div>
-                <span class="font-medium text-slate-200">{rule.title}</span>
-                <span class="text-slate-500"> — {rule.description}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Soft Rules */}
-      <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-sm">
-        <h3 class="text-lg font-bold text-white mb-5 flex items-center gap-3">
-          <span class="inline-block px-2 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded tracking-wider">OPTIMIZED</span>
-          8 fairness &amp; preference goals
-        </h3>
-        <ul class="space-y-3">
-          {softRules.map((rule) => (
-            <li class="flex items-start gap-3 text-sm">
-              <svg class="mt-0.5 shrink-0 h-5 w-5 text-amber-400" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2l2.5 5 5.5.8-4 3.9.94 5.5L10 14.5l-4.94 2.7.94-5.5L2 7.8l5.5-.8L10 2z"/>
-              </svg>
-              <div>
-                <span class="font-medium text-slate-200">{rule.title}</span>
-                <span class="text-slate-500"> — {rule.description}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-
-    <p class="mt-8 text-center text-slate-500">
-      All rules are configurable per unit. Violations are logged in the audit trail.
-    </p>
   </div>
 </section>
