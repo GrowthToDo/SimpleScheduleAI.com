@@ -1,5 +1,50 @@
 # Changelog
 
+## [Unreleased] — 2026-03-03 (session 2)
+
+### HeroContent (homepage hero)
+- H1: "You focus on patients. We handle the schedule." → "Your nurses shouldn't be leaving over a spreadsheet."
+- CTA button: "Apply for a Pilot Spot" → "Claim a Pilot Spot"
+
+### CTA section (homepage bottom)
+- CTA button: "Apply for a Pilot Spot" → "Claim a Pilot Spot"
+- Replaced 101-word paragraph with 3 scannable bullets under "What you get for 60 days, free"
+- Post-pilot framing moved to separate sentence below bullets
+
+### QualityChecks section
+- H2: "Scheduling rules validated automatically" → "Every schedule is compliant before it posts."
+- Full 21-rule grid removed; condensed to big stat + 2-sentence summary + link to /how-it-works
+
+### SoftwareVsService section
+- Service subtitle: "(We deliver validated schedules, you approve)" → "(We deliver post-ready schedules, you approve)"
+- Service bullet: added "to deliver compliant, fair schedules" to compliance rule count
+
+### WeeklyPackage section
+- Deliverable renamed: "Scenario Comparison" → "Schedule Options"
+- Description updated: "Pick the best fit." → "You pick the best fit."
+
+### FounderSection
+- Pradeep bio: "7 years in healthcare, including Apollo Hospitals. Watched scheduling break teams from the inside, and decided to fix it." → "7 years inside hospital operations. Watched scheduling break good nurses and decided to fix it before it happened to your unit."
+- Gautham bio: "3x founder with 15 years in tech. Building the systems that make this work at scale." → "3x founder, 15 years in tech. Built the system so it works without your nurses or staff touching any software."
+
+### ScheduleStability section
+- Metrics updated to outcome language:
+  - "On-Time" → "On-Time Every Week"
+  - "No coverage gaps" / "Coverage gaps caught before staff see the board." → "Zero Coverage Gaps" / "Gaps caught before staff see the board, not after."
+  - "Clean Escalation" / "Call-outs go through the system, not your phone." → "Call-Outs Handled" / "Replacements surface automatically. Call-outs stop coming to your phone."
+  - "OT Flags" → "OT Flagged Early"
+  - "Audit-Ready" description: added "always current"
+
+### ROISection
+- Removed duplicate heading and description (already present in the /roi page hero)
+
+### How It Works page
+- Delivery bullet: "Multiple variants to compare (coverage vs cost vs fairness)" → "Multiple schedule drafts showing different coverage, cost, and fairness trade-offs"
+- Delivery box description: removed "Excel workbook" from delivery list
+
+### index.astro
+- Removed CalloutWorkflow section (import and usage)
+
 ## [Unreleased] — 2026-03-03
 
 ### Email
