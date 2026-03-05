@@ -30,141 +30,166 @@ const schema: WithContext<Thing> = {
 ---
 
 <BaseLayout seo={seo} schema={schema}>
-  {/* Hero */}
-  <section class="relative overflow-hidden">
-    <div class="pointer-events-none absolute inset-0">
-      <div
-        class="absolute -top-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-teal-200/45 blur-3xl"
-      ></div>
-    </div>
-
-    <div class="relative mx-auto max-w-[85rem] px-4 pb-12 pt-12 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-sm backdrop-blur sm:p-10">
-        <p class="text-sm font-semibold tracking-wide text-teal-700">
-          SimpleScheduleAI
-        </p>
-        <h1
-          class="mt-3 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
-        >
-          {pageTitle}
-        </h1>
-        <p class="mt-4 text-base text-slate-600">
-          Effective date: {effectiveDate}
-        </p>
+  {/* Dark hero */}
+  <section class="relative overflow-hidden bg-slate-950 -mt-32 sm:-mt-36 lg:-mt-40">
+    <div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-teal-700/20 blur-3xl"></div>
+    <div class="mx-auto max-w-[85rem] px-4 pt-44 pb-16 sm:px-6 sm:pt-48 lg:px-8 lg:pt-52">
+      <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-700/40 bg-teal-900/40 px-4 py-1.5">
+        <span class="h-1.5 w-1.5 rounded-full bg-teal-400"></span>
+        <span class="text-xs font-semibold tracking-widest text-teal-300 uppercase">Legal</span>
       </div>
+      <h1 class="text-balance text-4xl font-black text-white sm:text-5xl lg:text-6xl">
+        {pageTitle}
+      </h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-400">
+        {pageDescription}
+      </p>
+      <p class="mt-4 text-sm text-slate-500">Effective date: {effectiveDate}</p>
     </div>
   </section>
 
   {/* Content */}
-  <section class="mx-auto max-w-[85rem] px-4 pb-20 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl space-y-10 text-slate-700">
+  <section class="bg-white">
+    <div class="mx-auto max-w-[85rem] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-3xl space-y-10 text-slate-700">
 
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Agreement to these terms</h2>
-        <p class="mt-3 leading-relaxed">
-          By using SimpleScheduleAI.com or engaging with our scheduling service, you agree to these Terms of Service. If you are using our service on behalf of a hospital or organization, you represent that you have authority to bind that organization to these terms.
-        </p>
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Agreement to these terms</h2>
+          <p class="mt-3 leading-relaxed">
+            By using SimpleScheduleAI.com or engaging with our scheduling service, you agree to these Terms of Service. If you are using our service on behalf of a hospital or organization, you represent that you have authority to bind that organization to these terms.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Who we are and what we do</h2>
+          <p class="mt-3 leading-relaxed">
+            SimpleScheduleAI provides an assisted nurse scheduling service for Critical Access Hospitals. We help build draft schedules based on your inputs and constraints, validate those drafts for coverage, gaps, and common failure points, and return a clean, review-ready version for your team's approval.
+          </p>
+          <p class="mt-3 leading-relaxed">
+            We are a scheduling support service. We are not a staffing agency, a healthcare provider, an HR system, or a software platform. We do not publish, implement, or finalize any schedule without your team's explicit approval.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">The pilot program</h2>
+          <p class="mt-3 leading-relaxed">
+            The free 60-day pilot is a managed service engagement. During the pilot:
+          </p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>There is no cost to your organization for the 60-day period</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>We work within your existing scheduling format and tools</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>Your team retains full authority to approve, modify, or reject any draft schedule we produce</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>Either party may end the engagement at any time</span>
+            </li>
+          </ul>
+          <p class="mt-4 leading-relaxed">
+            After the pilot period, we will conduct a strategic review together. If you want to continue, we will build a plan at that point. There is no automatic renewal, no surprise billing, and no obligation beyond the pilot itself.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Your responsibilities</h2>
+          <p class="mt-3 leading-relaxed">
+            You are responsible for:
+          </p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>Providing accurate scheduling inputs, constraints, and staff information</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>Reviewing all draft schedules before they are used operationally</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>Ensuring compliance with applicable labor laws, union agreements, licensing requirements, and internal policies</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>Making final decisions about your scheduling. Our drafts are inputs for your review, not final outputs</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Not medical, legal, or HR advice</h2>
+          <p class="mt-3 leading-relaxed">
+            Nothing we produce constitutes medical advice, legal advice, or human resources guidance. Our scheduling drafts are operational tools to reduce workload. Your clinical and administrative leadership is responsible for ensuring schedules meet patient care standards and regulatory requirements.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">No patient data</h2>
+          <p class="mt-3 leading-relaxed">
+            Do not share patient health information with us through this website or as part of the scheduling service. Our service is scoped to nurse scheduling data only. We are not set up to serve as a HIPAA Business Associate in the context of this website or the scheduling pilot.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Intellectual property</h2>
+          <p class="mt-3 leading-relaxed">
+            The content on this website, including copy, design, and tools, is owned by SimpleScheduleAI. You may not reproduce or redistribute it without our permission. Scheduling drafts we produce for your organization during the pilot are yours to use for your internal scheduling purposes.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Limitation of liability</h2>
+          <p class="mt-3 leading-relaxed">
+            SimpleScheduleAI provides scheduling assistance in good faith based on the information you provide. We are not liable for scheduling errors that result from inaccurate inputs, failure to review our drafts, or decisions made outside our recommendations. Our total liability in any circumstances is limited to the fees paid to us in the most recent 30 days, which during the free pilot period is zero.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">No warranties</h2>
+          <p class="mt-3 leading-relaxed">
+            This website and the scheduling service are provided as-is. We make no guarantees about uptime, error-free operation, or specific scheduling outcomes. We will work diligently to deliver high-quality drafts, but scheduling is complex and human judgment remains essential.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Governing law</h2>
+          <p class="mt-3 leading-relaxed">
+            These terms are governed by the laws of the State of Texas, without regard to conflict of law principles. Any disputes will be resolved in Texas.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Changes to these terms</h2>
+          <p class="mt-3 leading-relaxed">
+            We may update these terms as the service evolves. Material changes will be reflected in an updated effective date. Continued use of the service after changes are posted constitutes acceptance of the revised terms.
+          </p>
+        </div>
+
       </div>
+    </div>
+  </section>
 
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Who we are and what we do</h2>
-        <p class="mt-3 leading-relaxed">
-          SimpleScheduleAI provides an assisted nurse scheduling service for Critical Access Hospitals. We help build draft schedules based on your inputs and constraints, validate those drafts for coverage, gaps, and common failure points, and return a clean, review-ready version for your team's approval.
+  {/* Dark contact band */}
+  <section class="bg-slate-900">
+    <div class="mx-auto max-w-[85rem] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-3xl">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-400">Contact</p>
+        <h2 class="text-2xl font-bold text-white">Questions about these terms?</h2>
+        <p class="mt-4 text-slate-400">
+          If you have questions about these Terms of Service, reach out directly.
         </p>
-        <p class="mt-3 leading-relaxed">
-          We are a scheduling support service. We are not a staffing agency, a healthcare provider, an HR system, or a software platform. We do not publish, implement, or finalize any schedule without your team's explicit approval.
+        <p class="mt-6 text-lg font-medium text-teal-400">
+          <a href={`mailto:${contactEmail}`} class="hover:text-teal-300">{contactEmail}</a>
         </p>
+        <p class="mt-2 text-sm text-slate-500">SimpleScheduleAI, Remote, US</p>
       </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">The pilot program</h2>
-        <p class="mt-3 leading-relaxed">
-          The free 60-day pilot is a managed service engagement. During the pilot:
-        </p>
-        <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-teal-600">
-          <li>There is no cost to your organization for the 60-day period</li>
-          <li>We work within your existing scheduling format and tools</li>
-          <li>Your team retains full authority to approve, modify, or reject any draft schedule we produce</li>
-          <li>Either party may end the engagement at any time</li>
-        </ul>
-        <p class="mt-4 leading-relaxed">
-          After the pilot period, we will conduct a strategic review together. If you want to continue, we will build a plan at that point. There is no automatic renewal, no surprise billing, and no obligation beyond the pilot itself.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Your responsibilities</h2>
-        <p class="mt-3 leading-relaxed">
-          You are responsible for:
-        </p>
-        <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-teal-600">
-          <li>Providing accurate scheduling inputs, constraints, and staff information</li>
-          <li>Reviewing all draft schedules before they are used operationally</li>
-          <li>Ensuring compliance with applicable labor laws, union agreements, licensing requirements, and internal policies</li>
-          <li>Making final decisions about your scheduling. Our drafts are inputs for your review, not final outputs</li>
-        </ul>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Not medical, legal, or HR advice</h2>
-        <p class="mt-3 leading-relaxed">
-          Nothing we produce constitutes medical advice, legal advice, or human resources guidance. Our scheduling drafts are operational tools to reduce workload. Your clinical and administrative leadership is responsible for ensuring schedules meet patient care standards and regulatory requirements.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">No patient data</h2>
-        <p class="mt-3 leading-relaxed">
-          Do not share patient health information with us through this website or as part of the scheduling service. Our service is scoped to nurse scheduling data only. We are not set up to serve as a HIPAA Business Associate in the context of this website or the scheduling pilot.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Intellectual property</h2>
-        <p class="mt-3 leading-relaxed">
-          The content on this website, including copy, design, and tools, is owned by SimpleScheduleAI. You may not reproduce or redistribute it without our permission. Scheduling drafts we produce for your organization during the pilot are yours to use for your internal scheduling purposes.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Limitation of liability</h2>
-        <p class="mt-3 leading-relaxed">
-          SimpleScheduleAI provides scheduling assistance in good faith based on the information you provide. We are not liable for scheduling errors that result from inaccurate inputs, failure to review our drafts, or decisions made outside our recommendations. Our total liability in any circumstances is limited to the fees paid to us in the most recent 30 days, which during the free pilot period is zero.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">No warranties</h2>
-        <p class="mt-3 leading-relaxed">
-          This website and the scheduling service are provided as-is. We make no guarantees about uptime, error-free operation, or specific scheduling outcomes. We will work diligently to deliver high-quality drafts, but scheduling is complex and human judgment remains essential.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Governing law</h2>
-        <p class="mt-3 leading-relaxed">
-          These terms are governed by the laws of the State of Texas, without regard to conflict of law principles. Any disputes will be resolved in Texas.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Changes to these terms</h2>
-        <p class="mt-3 leading-relaxed">
-          We may update these terms as the service evolves. Material changes will be reflected in an updated effective date. Continued use of the service after changes are posted constitutes acceptance of the revised terms.
-        </p>
-      </div>
-
-      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-        <h2 class="text-lg font-semibold text-slate-900">Questions?</h2>
-        <p class="mt-2 leading-relaxed">
-          If you have questions about these Terms of Service, reach out:
-        </p>
-        <p class="mt-3 font-medium text-teal-700">
-          <a href={`mailto:${contactEmail}`} class="hover:text-teal-600">{contactEmail}</a>
-        </p>
-        <p class="mt-1 text-sm text-slate-600">SimpleScheduleAI, Remote, US</p>
-      </div>
-
     </div>
   </section>
 </BaseLayout>

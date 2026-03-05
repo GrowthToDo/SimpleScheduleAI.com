@@ -30,126 +30,148 @@ const schema: WithContext<Thing> = {
 ---
 
 <BaseLayout seo={seo} schema={schema}>
-  {/* Hero */}
-  <section class="relative overflow-hidden">
-    <div class="pointer-events-none absolute inset-0">
-      <div
-        class="absolute -top-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-teal-200/45 blur-3xl"
-      ></div>
-    </div>
-
-    <div class="relative mx-auto max-w-[85rem] px-4 pb-12 pt-12 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-sm backdrop-blur sm:p-10">
-        <p class="text-sm font-semibold tracking-wide text-teal-700">
-          SimpleScheduleAI
-        </p>
-        <h1
-          class="mt-3 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
-        >
-          {pageTitle}
-        </h1>
-        <p class="mt-4 text-base text-slate-600">
-          Effective date: {effectiveDate}
-        </p>
+  {/* Dark hero */}
+  <section class="relative overflow-hidden bg-slate-950 -mt-32 sm:-mt-36 lg:-mt-40">
+    <div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-teal-700/20 blur-3xl"></div>
+    <div class="mx-auto max-w-[85rem] px-4 pt-44 pb-16 sm:px-6 sm:pt-48 lg:px-8 lg:pt-52">
+      <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-700/40 bg-teal-900/40 px-4 py-1.5">
+        <span class="h-1.5 w-1.5 rounded-full bg-teal-400"></span>
+        <span class="text-xs font-semibold tracking-widest text-teal-300 uppercase">Legal</span>
       </div>
+      <h1 class="text-balance text-4xl font-black text-white sm:text-5xl lg:text-6xl">
+        {pageTitle}
+      </h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-400">
+        {pageDescription}
+      </p>
+      <p class="mt-4 text-sm text-slate-500">Effective date: {effectiveDate}</p>
     </div>
   </section>
 
   {/* Content */}
-  <section class="mx-auto max-w-[85rem] px-4 pb-20 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl space-y-10 text-slate-700">
+  <section class="bg-white">
+    <div class="mx-auto max-w-[85rem] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-3xl space-y-10 text-slate-700">
 
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Overview</h2>
-        <p class="mt-3 leading-relaxed">
-          SimpleScheduleAI ("we," "us," or "our") operates SimpleScheduleAI.com and provides an assisted nurse scheduling service for Critical Access Hospitals. This Privacy Policy describes what information we collect, why we collect it, and how we use it. We keep this simple because we are a small team and we handle your information carefully.
-        </p>
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Overview</h2>
+          <p class="mt-3 leading-relaxed">
+            SimpleScheduleAI ("we," "us," or "our") operates SimpleScheduleAI.com and provides an assisted nurse scheduling service for Critical Access Hospitals. This Privacy Policy describes what information we collect, why we collect it, and how we use it. We keep this simple because we are a small team and we handle your information carefully.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">What we collect</h2>
+          <p class="mt-3 leading-relaxed">
+            We collect information you give us directly when you:
+          </p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>Submit a contact form or pilot application (name, title, hospital name, email address)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>Use the scheduling cost calculator and choose to share your results (name, title, hospital name, email address, and the input values you entered)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>Email us directly</span>
+            </li>
+          </ul>
+          <p class="mt-4 leading-relaxed">
+            We may also collect standard technical data automatically when you visit our site, such as browser type, pages visited, and approximate location. This data is used only in aggregate to understand how visitors use the site.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">What we do not collect</h2>
+          <p class="mt-3 leading-relaxed">
+            We do not collect, process, or store any patient health information, medical records, or data covered by HIPAA. Our service is limited to nurse scheduling workflows. We do not act as a HIPAA Business Associate in the use of this website.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">How we use your information</h2>
+          <ul class="mt-3 space-y-2">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>To respond to your inquiry or follow up on a pilot application</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>To assess whether our service is a good fit for your hospital</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>To send relevant updates about the pilot or our service (you can opt out at any time)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+              <span>To improve how we explain and present our service</span>
+            </li>
+          </ul>
+          <p class="mt-4 leading-relaxed">
+            We do not sell your information. We do not rent it. We do not share it with advertisers.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Third-party services</h2>
+          <p class="mt-3 leading-relaxed">
+            Form submissions from this site are transmitted to Google Sheets via Google Apps Script, which we use as a lightweight internal tracking tool. Google's privacy practices apply to any data processed through their infrastructure. You can review Google's privacy policy at google.com/privacy.
+          </p>
+          <p class="mt-3 leading-relaxed">
+            Our site may also use third-party analytics tools to understand aggregate traffic patterns. These tools do not receive personally identifiable information from us.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Data retention</h2>
+          <p class="mt-3 leading-relaxed">
+            We retain contact information for as long as it is relevant to an active conversation or pilot engagement. If you ask us to delete your information, we will do so within a reasonable time unless we are required to retain it for legal purposes.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Your rights</h2>
+          <p class="mt-3 leading-relaxed">
+            You can request access to, correction of, or deletion of your personal information at any time by emailing us. We will respond promptly.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Security</h2>
+          <p class="mt-3 leading-relaxed">
+            We take reasonable precautions to protect information you share with us. However, no data transmission over the internet is fully guaranteed to be secure. Do not send sensitive clinical or patient data through this website.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Changes to this policy</h2>
+          <p class="mt-3 leading-relaxed">
+            If we make material changes to this Privacy Policy, we will update the effective date at the top of this page. We encourage you to review this page periodically.
+          </p>
+        </div>
+
       </div>
+    </div>
+  </section>
 
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">What we collect</h2>
-        <p class="mt-3 leading-relaxed">
-          We collect information you give us directly when you:
+  {/* Dark contact band */}
+  <section class="bg-slate-900">
+    <div class="mx-auto max-w-[85rem] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-3xl">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-400">Contact</p>
+        <h2 class="text-2xl font-bold text-white">Questions about this policy?</h2>
+        <p class="mt-4 text-slate-400">
+          If you have any questions about this Privacy Policy or how we handle your information, reach out directly.
         </p>
-        <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-teal-600">
-          <li>Submit a contact form or pilot application (name, title, hospital name, email address)</li>
-          <li>Use the scheduling cost calculator and choose to share your results (name, title, hospital name, email address, and the input values you entered)</li>
-          <li>Email us directly</li>
-        </ul>
-        <p class="mt-4 leading-relaxed">
-          We may also collect standard technical data automatically when you visit our site, such as browser type, pages visited, and approximate location. This data is used only in aggregate to understand how visitors use the site.
+        <p class="mt-6 text-lg font-medium text-teal-400">
+          <a href={`mailto:${contactEmail}`} class="hover:text-teal-300">{contactEmail}</a>
         </p>
+        <p class="mt-2 text-sm text-slate-500">SimpleScheduleAI, Remote, US</p>
       </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">What we do not collect</h2>
-        <p class="mt-3 leading-relaxed">
-          We do not collect, process, or store any patient health information, medical records, or data covered by HIPAA. Our service is limited to nurse scheduling workflows. We do not act as a HIPAA Business Associate in the use of this website.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">How we use your information</h2>
-        <ul class="mt-3 list-disc space-y-2 pl-6 marker:text-teal-600">
-          <li>To respond to your inquiry or follow up on a pilot application</li>
-          <li>To assess whether our service is a good fit for your hospital</li>
-          <li>To send relevant updates about the pilot or our service (you can opt out at any time)</li>
-          <li>To improve how we explain and present our service</li>
-        </ul>
-        <p class="mt-4 leading-relaxed">
-          We do not sell your information. We do not rent it. We do not share it with advertisers.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Third-party services</h2>
-        <p class="mt-3 leading-relaxed">
-          Form submissions from this site are transmitted to Google Sheets via Google Apps Script, which we use as a lightweight internal tracking tool. Google's privacy practices apply to any data processed through their infrastructure. You can review Google's privacy policy at google.com/privacy.
-        </p>
-        <p class="mt-3 leading-relaxed">
-          Our site may also use third-party analytics tools to understand aggregate traffic patterns. These tools do not receive personally identifiable information from us.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Data retention</h2>
-        <p class="mt-3 leading-relaxed">
-          We retain contact information for as long as it is relevant to an active conversation or pilot engagement. If you ask us to delete your information, we will do so within a reasonable time unless we are required to retain it for legal purposes.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Your rights</h2>
-        <p class="mt-3 leading-relaxed">
-          You can request access to, correction of, or deletion of your personal information at any time by emailing us. We will respond promptly.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Security</h2>
-        <p class="mt-3 leading-relaxed">
-          We take reasonable precautions to protect information you share with us. However, no data transmission over the internet is fully guaranteed to be secure. Do not send sensitive clinical or patient data through this website.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Changes to this policy</h2>
-        <p class="mt-3 leading-relaxed">
-          If we make material changes to this Privacy Policy, we will update the effective date at the top of this page. We encourage you to review this page periodically.
-        </p>
-      </div>
-
-      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-        <h2 class="text-lg font-semibold text-slate-900">Questions?</h2>
-        <p class="mt-2 leading-relaxed">
-          If you have any questions about this Privacy Policy or how we handle your information, reach out:
-        </p>
-        <p class="mt-3 font-medium text-teal-700">
-          <a href={`mailto:${contactEmail}`} class="hover:text-teal-600">{contactEmail}</a>
-        </p>
-        <p class="mt-1 text-sm text-slate-600">SimpleScheduleAI, Remote, US</p>
-      </div>
-
     </div>
   </section>
 </BaseLayout>

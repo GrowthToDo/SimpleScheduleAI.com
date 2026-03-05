@@ -1,5 +1,30 @@
 # Changelog
 
+## [Unreleased] — 2026-03-05 (session 3)
+
+### Privacy Policy page (/privacy) — new
+- Created full Privacy Policy page matching site dark theme
+- Sections: overview, what we collect, what we do not collect, how we use it, third-party services (Google Sheets), data retention, user rights, security, changes
+- Explicit HIPAA disclaimer: no patient data collected, not acting as a Business Associate
+- Dark slate-950 hero matching landing page; white content section; dark slate-900 contact band at bottom
+
+### Terms of Service page (/terms) — new
+- Created full Terms of Service page matching site dark theme
+- Sections: agreement, service description, pilot program terms, your responsibilities, no medical/legal/HR advice, no patient data, IP, liability limit (zero during pilot), no warranties, governing law (Texas), changes
+- Pilot terms explicitly spelled out: free 60 days, no auto-renewal, no surprise billing, either party can exit
+- Same layout pattern as Privacy page
+
+### About page (/about) — theme update
+- Converted from light card hero to dark slate-950 hero matching landing page and pilot page
+- Added eyebrow badge ("About Us"), white h1, slate-400 description, Book a Call CTA
+- Stats section: moved to white bg with teal uppercase labels
+- Principles section: moved to slate-50 bg with section eyebrow label
+- What we do / do not do: updated list items to use dot bullet pattern matching pilot page
+- New dark slate-900 CTA section at bottom replacing teal band
+
+### Footer
+- Added Privacy and Terms links to bottom bar alongside Contact and About
+
 ## [Unreleased] — 2026-03-03 (session 2)
 
 ### HeroContent (homepage hero)
