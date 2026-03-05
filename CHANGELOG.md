@@ -25,6 +25,21 @@
 ### Footer
 - Added Privacy and Terms links to bottom bar alongside Contact and About
 
+### Contact page (/contact) — theme update
+- Converted from light hero to dark slate-950 hero matching site pattern
+- Eyebrow badge "Talk to us", white h1, slate-400 description, secondary CTA links
+- Form and contact details moved into white bg section below
+
+### Articles index (/articles) — theme update
+- Converted from light hero to dark slate-950 hero matching site pattern
+- Eyebrow badge "From the team", white h1, slate-400 description
+- Article grid moved into white bg section below
+
+### Article detail (/articles/[slug]) — theme update
+- Converted from light hero to dark slate-950 hero matching site pattern
+- Back link in teal-400, date in slate-500, article title as white h1, description in slate-400
+- Prose content and CTA box moved into white bg section below
+
 ## [Unreleased] — 2026-03-03 (session 2)
 
 ### HeroContent (homepage hero)

@@ -40,50 +40,42 @@ const schema: WithContext<Thing> = {
 ---
 
 <BaseLayout seo={seo} schema={schema}>
-  <section class="relative overflow-hidden">
-    <div class="pointer-events-none absolute inset-0">
-      <div class="absolute -top-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-teal-200/40 blur-3xl"></div>
-      <div class="absolute -bottom-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-sky-200/25 blur-3xl"></div>
-    </div>
-
-    <div class="relative mx-auto max-w-[85rem] px-4 pb-20 pt-12 sm:px-6 lg:px-8">
-      <div class="mb-10 max-w-3xl">
-        <p class="text-sm font-semibold tracking-wide text-teal-700">
-          SimpleScheduleAI
-        </p>
-        <h1 class="mt-3 text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-          {pageTitle}
-        </h1>
-        <p class="mt-3 text-lg text-slate-700">
-          {pageDescription}
-        </p>
-
-        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <a
-            href="/how-it-works"
-            class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
-          >
-            How it works
-          </a>
-
-          <a
-            href="/pilot"
-            class="inline-flex items-center justify-center rounded-xl bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-600"
-          >
-            View the pilot
-          </a>
-
-          <a
-            href={`mailto:${contactDetails.email}`}
-            class="text-sm font-semibold text-slate-700 hover:text-slate-900"
-          >
-            Email us directly
-          </a>
-        </div>
+  {/* Dark hero */}
+  <section class="relative overflow-hidden bg-slate-950 -mt-32 sm:-mt-36 lg:-mt-40">
+    <div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-teal-700/20 blur-3xl"></div>
+    <div class="mx-auto max-w-[85rem] px-4 pt-44 pb-16 sm:px-6 sm:pt-48 lg:px-8 lg:pt-52">
+      <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-700/40 bg-teal-900/40 px-4 py-1.5">
+        <span class="h-1.5 w-1.5 rounded-full bg-teal-400"></span>
+        <span class="text-xs font-semibold tracking-widest text-teal-300 uppercase">Talk to us</span>
       </div>
+      <h1 class="text-balance text-4xl font-black text-white sm:text-5xl lg:text-6xl">
+        {pageTitle}
+      </h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-slate-400">
+        {pageDescription}
+      </p>
+      <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="/how-it-works"
+          class="rounded-lg px-6 py-2.5 text-center font-medium transition-colors duration-300 border-2 border-slate-600 text-slate-300 hover:border-teal-600 hover:text-white"
+        >
+          How it works
+        </a>
+        <a
+          href="/pilot"
+          class="rounded-lg px-6 py-2.5 text-center font-medium transition-colors duration-300 border-2 border-slate-600 text-slate-300 hover:border-teal-600 hover:text-white"
+        >
+          View the pilot
+        </a>
+      </div>
+    </div>
+  </section>
 
+  {/* Form + details */}
+  <section class="bg-white">
+    <div class="mx-auto max-w-[85rem] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
-        <div class="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm backdrop-blur sm:p-8">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
           <div class="mb-5">
             <h2 class="text-xl font-semibold text-slate-900">
               Get the pilot details
@@ -148,13 +140,19 @@ const schema: WithContext<Thing> = {
             <p class="text-sm font-semibold text-teal-800">
               What to include in your message
             </p>
-            <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-700 marker:text-teal-600">
-              <li>Unit size and shift pattern (12h, 8h, mixed)</li>
-              <li>How schedules are built today (Excel, paper, vendor tool)</li>
-              <li>Rules that cause the most pain (coverage, overtime, fairness, time off)</li>
-              <li>How often you publish schedules (weekly, biweekly, monthly)</li>
+            <ul class="mt-3 space-y-2">
+              {[
+                "Unit size and shift pattern (12h, 8h, mixed)",
+                "How schedules are built today (Excel, paper, vendor tool)",
+                "Rules that cause the most pain (coverage, overtime, fairness, time off)",
+                "How often you publish schedules (weekly, biweekly, monthly)",
+              ].map((item) => (
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 size-1.5 shrink-0 rounded-full bg-teal-600"></span>
+                  <span class="text-sm text-slate-700">{item}</span>
+                </li>
+              ))}
             </ul>
-
             <p class="mt-4 text-sm text-slate-600">
               We will reply with a simple next step and a clear timeline for the pilot.
             </p>
