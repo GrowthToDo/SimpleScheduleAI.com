@@ -29,7 +29,7 @@ export const footerData = {
       links: [
         { text: 'How It Works', href: getPermalink('/how-it-works') },
         { text: 'The Pilot', href: getPermalink('/pilot') },
-        { text: 'ROI Calculator', href: getPermalink('/roi') },
+        { text: 'Scheduling Cost Calculator', href: getPermalink('/roi') },
       ],
     },
     {
