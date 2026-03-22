@@ -2,6 +2,7 @@
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
 import { Icon } from 'astro-icon/components';
+import ShowcaseCalloutCoverage from './ShowcaseCalloutCoverage.svelte';
 import type { Widget } from '~/types';
 
 type Props = Widget;
@@ -10,7 +11,7 @@ const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } 
 
 const title = 'Call-outs become a workflow, not a fire drill';
 const subtitle =
-  'We do the chasing: eligibility + availability + escalation. No more mass texts and "anyone available?" chaos.';
+  'A nurse cancels at 9 PM. You\'re off the clock. The system logs the callout, finds charge-qualified replacements, flags overtime risks, and has a name ready for your approval before your shift starts.';
 
 const details = [
   'We check eligible staff availability first (skills, role, charge)',
@@ -20,10 +21,10 @@ const details = [
 
 const logExample = {
   title: 'Exceptions Log Entry Example',
-  event: '2AM CALL-OUT (MS UNIT)',
-  eligibility: '4 QUALIFIED',
-  escalation: 'STEP 2 (VOLUNTARY OT)',
-  decision: 'NURSE SMITH APPROVED (1.5X)',
+  event: '9PM CALL-OUT (MS UNIT) — Emma C.',
+  eligibility: '2 CHARGE-QUALIFIED',
+  escalation: 'STEP 1 (FLOAT POOL)',
+  decision: 'CAROL A. ASSIGNED (FLOAT POOL)',
   reason: 'PROTECT CHARGE MIX ON NEXT SHIFT',
   note: 'Defendable in a huddle, ready for staffing committee.',
 };
@@ -31,118 +32,8 @@ const logExample = {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
   <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
-    {/* Call-out workflow diagram */}
-    <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-6 shadow-sm">
-      <p class="mb-5 text-xs font-semibold uppercase tracking-widest text-muted">Call-out at 2AM: what happens next</p>
 
-      <div class="space-y-0">
-        {/* Step 1 */}
-        <div class="flex items-start gap-4">
-          <div class="flex flex-col items-center shrink-0">
-            <div
-              class="flex h-9 w-9 items-center justify-center rounded-full bg-red-100 border-2 border-red-300 text-red-600 font-bold text-sm dark:bg-red-950 dark:border-red-700"
-            >
-              !
-            </div>
-            <div class="w-0.5 h-8 bg-gray-200 dark:bg-gray-700 mt-1"></div>
-          </div>
-          <div class="pb-4 pt-1">
-            <p class="font-semibold text-sm">Call-out logged</p>
-            <p class="text-xs text-muted mt-0.5">James W., Night shift, MS Unit. Schedule gap flagged.</p>
-          </div>
-        </div>
-
-        {/* Step 2 */}
-        <div class="flex items-start gap-4">
-          <div class="flex flex-col items-center shrink-0">
-            <div
-              class="flex h-9 w-9 items-center justify-center rounded-full bg-amber-100 border-2 border-amber-300 text-amber-700 font-bold text-sm dark:bg-amber-950 dark:border-amber-700"
-            >
-              ?
-            </div>
-            <div class="w-0.5 h-8 bg-gray-200 dark:bg-gray-700 mt-1"></div>
-          </div>
-          <div class="pb-4 pt-1">
-            <p class="font-semibold text-sm">Eligibility check</p>
-            <p class="text-xs text-muted mt-0.5">
-              Skills, role, charge status, availability, hours. 4 qualified nurses found.
-            </p>
-          </div>
-        </div>
-
-        {/* Step 3 */}
-        <div class="flex items-start gap-4">
-          <div class="flex flex-col items-center shrink-0">
-            <div
-              class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 border-2 border-gray-300 text-gray-600 font-bold text-sm dark:bg-gray-800 dark:border-gray-600"
-            >
-              3
-            </div>
-            <div class="w-0.5 h-8 bg-gray-200 dark:bg-gray-700 mt-1"></div>
-          </div>
-          <div class="pb-4 pt-1">
-            <p class="font-semibold text-sm">Top candidates ranked</p>
-            <div class="mt-1.5 space-y-1">
-              <div class="flex items-center gap-2 text-xs">
-                <span
-                  class="rounded bg-green-50 border border-green-200 px-2 py-0.5 font-medium text-green-700 dark:bg-green-950 dark:border-green-700"
-                  >#1 PRN · No OT</span
-                >
-                <span class="text-muted">Rachel M.</span>
-              </div>
-              <div class="flex items-center gap-2 text-xs">
-                <span
-                  class="rounded bg-gray-50 border border-gray-200 px-2 py-0.5 font-medium text-gray-600 dark:bg-gray-800 dark:border-gray-700"
-                  >#2 Float · Low OT risk</span
-                >
-                <span class="text-muted">Paul W.</span>
-              </div>
-              <div class="flex items-center gap-2 text-xs">
-                <span
-                  class="rounded bg-amber-50 border border-amber-200 px-2 py-0.5 font-medium text-amber-700 dark:bg-amber-950 dark:border-amber-700"
-                  >#3 Voluntary OT</span
-                >
-                <span class="text-muted">Nurse Smith</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Step 4 */}
-        <div class="flex items-start gap-4">
-          <div class="flex flex-col items-center shrink-0">
-            <div
-              class="flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 border-2 border-blue-400 text-primary font-bold text-sm dark:bg-blue-950 dark:border-blue-600"
-            >
-              ✓
-            </div>
-            <div class="w-0.5 h-8 bg-gray-200 dark:bg-gray-700 mt-1"></div>
-          </div>
-          <div class="pb-4 pt-1">
-            <p class="font-semibold text-sm">Manager approves in 1 click</p>
-            <p class="text-xs text-muted mt-0.5">Nurse Smith confirmed at 1.5x. Charge mix protected on next shift.</p>
-          </div>
-        </div>
-
-        {/* Step 5 — no connector */}
-        <div class="flex items-start gap-4">
-          <div class="flex flex-col items-center shrink-0">
-            <div
-              class="flex h-9 w-9 items-center justify-center rounded-full bg-primary border-2 border-primary text-white font-bold text-sm"
-            >
-              ✓
-            </div>
-          </div>
-          <div class="pt-1">
-            <p class="font-semibold text-sm">Schedule updated + logged</p>
-            <p class="text-xs text-muted mt-0.5">
-              Exceptions log entry created. Audit trail complete. Ready for huddle.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <!-- Left: text + bullets + log box -->
     <div>
       <Headline
         title={title}
@@ -173,5 +64,9 @@ const logExample = {
         <p class="mt-4 text-xs italic text-gray-400">{logExample.note}</p>
       </div>
     </div>
+
+    <!-- Right: animated callout coverage widget -->
+    <ShowcaseCalloutCoverage client:visible />
+
   </div>
 </WidgetWrapper>

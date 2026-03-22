@@ -2,6 +2,7 @@
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
 import { Icon } from 'astro-icon/components';
+import ShowcaseShiftStatus from './ShowcaseShiftStatus.svelte';
 import type { Widget } from '~/types';
 
 type Props = Widget;
@@ -13,24 +14,34 @@ const subtitle =
   '13 compliance and safety rules guaranteed on every schedule. 8 fairness goals actively optimized. No manual checking. No missed violations.';
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-3xl ${classes?.container ?? ''}`} bg={bg}>
-  <div class="text-center">
-    <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400">Built-in compliance</p>
-    <div class="mb-4 text-8xl font-black text-primary sm:text-9xl leading-none">21</div>
-    <Headline
-      title={title}
-      subtitle={subtitle}
-      classes={{
-        title: 'text-3xl sm:text-4xl text-white',
-        subtitle: 'text-lg text-gray-400',
-      }}
-    />
-    <a
-      href="/how-it-works"
-      class="mt-8 inline-flex items-center gap-2 text-primary font-medium hover:text-secondary transition-colors duration-200"
-    >
-      See how the rules engine works
-      <Icon name="tabler:arrow-right" class="w-4 h-4" />
-    </a>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
+  <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+
+    <!-- Left: existing text content -->
+    <div class="text-center lg:text-center">
+      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400">Built-in compliance</p>
+      <div class="mb-4 text-8xl font-black text-primary sm:text-9xl leading-none">21</div>
+      <Headline
+        title={title}
+        subtitle={subtitle}
+        classes={{
+          title: 'text-3xl sm:text-4xl text-white',
+          subtitle: 'text-lg text-gray-400',
+        }}
+      />
+      <a
+        href="/how-it-works"
+        class="mt-8 inline-flex items-center gap-2 text-primary font-medium hover:text-secondary transition-colors duration-200"
+      >
+        See how the rules engine works
+        <Icon name="tabler:arrow-right" class="w-4 h-4" />
+      </a>
+    </div>
+
+    <!-- Right: animated shift status widget -->
+    <div class="relative">
+      <ShowcaseShiftStatus client:visible />
+    </div>
+
   </div>
 </WidgetWrapper>
