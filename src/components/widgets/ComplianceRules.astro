@@ -2,6 +2,7 @@
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
 import { Icon } from 'astro-icon/components';
+import ShowcaseComplianceCheck from './ShowcaseComplianceCheck.svelte';
 import type { Widget } from '~/types';
 
 type Props = Widget;
@@ -12,30 +13,101 @@ const title = '21 rules validated on every schedule';
 const subtitle = 'Every draft is automatically checked before it reaches you. No rule can be quietly skipped.';
 
 const complianceRules = [
-  'Charge nurse on every shift',
-  'Minimum RN-to-patient ratio met per shift',
-  'Minimum 2 rest days per 7-day period per nurse',
-  'Minimum rest between shifts: 11 hours standard, 12 hours after a night shift',
-  'No double-booking: a nurse cannot be assigned to overlapping shifts',
-  'No scheduling during approved PTO',
-  'PRN staff within contracted availability',
-  'Required certifications present per shift (BLS, ACLS)',
-  'Float staff within licensed scope of practice',
-  'OT threshold not exceeded without flag',
-  'Minimum total staff count per shift',
-  'Skill mix requirement satisfied per unit',
-  'All schedule changes are documented with the approver detail',
+  {
+    rule: 'Charge nurse on every shift',
+    why: 'State regulation — required on all inpatient units',
+  },
+  {
+    rule: 'Minimum RN-to-patient ratio met per shift',
+    why: 'CMS Conditions of Participation',
+  },
+  {
+    rule: 'Minimum rest between shifts (configurable, default 10 hours)',
+    why: 'Fatigue prevention; Joint Commission standard',
+  },
+  {
+    rule: 'Maximum 5 working days per 7-day period (configurable)',
+    why: 'Prevents chronic fatigue; labor law standard',
+  },
+  {
+    rule: 'No double-booking: a nurse cannot be assigned to overlapping shifts',
+    why: 'Basic scheduling integrity',
+  },
+  {
+    rule: 'No scheduling during approved PTO',
+    why: 'Contractual obligation',
+  },
+  {
+    rule: 'PRN staff scheduled only within their contracted availability',
+    why: 'Contract compliance',
+  },
+  {
+    rule: 'On-call shift limits enforced (max 1 per week, max 1 on-call weekend per month)',
+    why: 'Prevents chronic fatigue from repeated on-call duties',
+  },
+  {
+    rule: 'ICU and ER assignments require minimum Level 4+ competency',
+    why: 'State licensure and patient safety',
+  },
+  {
+    rule: 'Level 1 nurses require Level 5 preceptor supervision on every shift',
+    why: 'Patient safety — novice nurses require bedside supervision',
+  },
+  {
+    rule: 'Level 2 nurses in ICU/ER require Level 4+ supervision',
+    why: 'Patient safety in high-acuity settings',
+  },
+  {
+    rule: 'Minimum total staff count per shift',
+    why: 'Regulatory safe staffing floor',
+  },
+  {
+    rule: 'Maximum 60 hours in any 7-day rolling period',
+    why: 'OSHA safety standard',
+  },
 ];
 
 const fairnessGoals = [
-  'Weekend equity: no nurse should work more than 3 weekends in any 6-week period',
+  'Weekend equity: no nurse works more than 3 weekends in any 6-week period',
   'Holiday shifts distributed fairly across the team, tracked annually',
   'Charge duty distributed evenly across eligible staff',
-  'Night shift burden shared across the team',
+  'Consecutive weekends capped — no nurse works more than 2 weekends in a row',
   'Staff shift preferences honored when possible',
   'Overtime spread evenly when OT is unavoidable',
   'Extra hours above FTE minimized per nurse',
   'Float pool assignments rotated fairly',
+];
+
+const competencyLevels = [
+  {
+    level: '1',
+    label: 'Novice / Orientee',
+    description:
+      'Cannot take patients independently. Requires a Level 5 preceptor on every shift. Counts as 0 FTE toward staffing ratios.',
+  },
+  {
+    level: '2',
+    label: 'Advanced Beginner',
+    description:
+      'Can work Med-Surg and Swing Bed independently. ICU/ER assignments require a Level 4+ nurse on the same shift.',
+  },
+  {
+    level: '3',
+    label: 'Competent',
+    description: 'Fully independent. ACLS/PALS certified. Can take standard ICU/ER patient loads.',
+  },
+  {
+    level: '4',
+    label: 'Proficient (Trauma Ready)',
+    description:
+      'TNCC certified. Can handle codes and trauma alone until backup arrives. Can supervise Level 2 in ICU/ER.',
+  },
+  {
+    level: '5',
+    label: 'Expert / Charge / Preceptor',
+    description:
+      'Qualified for charge nurse role. Required as preceptor for Level 1 orientees. Takes the most complex patients.',
+  },
 ];
 ---
 
@@ -49,6 +121,12 @@ const fairnessGoals = [
     />
   </div>
 
+  <!-- Animated compliance scan widget -->
+  <div class="mb-12">
+    <ShowcaseComplianceCheck client:visible />
+  </div>
+
+  <!-- Rule detail cards -->
   <div class="grid gap-8 lg:grid-cols-2">
     {/* 13 Compliance and Safety Rules */}
     <div class="rounded-2xl border border-gray-700 bg-slate-900 dark:bg-black p-8">
@@ -66,14 +144,17 @@ const fairnessGoals = [
       <p class="text-sm text-gray-400 mb-6">
         These must pass on every schedule. If any fail, the draft is flagged before delivery.
       </p>
-      <ul class="space-y-3">
+      <ul class="space-y-4">
         {
-          complianceRules.map((rule) => (
+          complianceRules.map((item) => (
             <li class="flex items-start gap-3">
               <span class="mt-0.5 shrink-0 flex w-5 h-5 items-center justify-center rounded-full bg-red-500/20 border border-red-500/40">
                 <Icon name="tabler:check" class="w-3 h-3 text-red-400" />
               </span>
-              <span class="text-sm text-gray-300">{rule}</span>
+              <span>
+                <span class="text-sm text-gray-300">{item.rule}</span>
+                <span class="block text-xs text-gray-500 mt-0.5">{item.why}</span>
+              </span>
             </li>
           ))
         }
@@ -114,6 +195,33 @@ const fairnessGoals = [
           full context.
         </p>
       </div>
+    </div>
+  </div>
+
+  <!-- Competency level definitions -->
+  <div class="mt-10 rounded-2xl border border-gray-700 bg-slate-900 dark:bg-black p-8">
+    <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">How we define competency levels</p>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-gray-700">
+            <th class="pb-3 text-left font-semibold text-gray-400 w-16 pr-4">Level</th>
+            <th class="pb-3 text-left font-semibold text-gray-400 w-52 pr-4">Label</th>
+            <th class="pb-3 text-left font-semibold text-gray-400">What it means</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            competencyLevels.map((lvl) => (
+              <tr class="border-b border-gray-800 last:border-0">
+                <td class="py-3 pr-4 font-mono font-bold text-primary">{lvl.level}</td>
+                <td class="py-3 pr-4 text-white font-medium">{lvl.label}</td>
+                <td class="py-3 text-gray-400">{lvl.description}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
     </div>
   </div>
 </WidgetWrapper>
