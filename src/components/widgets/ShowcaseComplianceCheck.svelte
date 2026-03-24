@@ -70,7 +70,7 @@
 </script>
 
 <div
-  class="rounded-xl border border-gray-700 bg-slate-900 shadow-lg overflow-hidden font-mono text-sm"
+  class="rounded-xl border border-gray-700 bg-slate-900 shadow-lg overflow-hidden font-mono text-sm min-h-[660px]"
   class:ring-2={phase === 'done'}
   class:ring-green-400={phase === 'done'}
 >
