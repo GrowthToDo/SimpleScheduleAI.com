@@ -15,7 +15,7 @@ const subtitle = 'Every draft is automatically checked before it reaches you. No
 const complianceRules = [
   {
     rule: 'Charge nurse on every shift',
-    why: 'State regulation — required on all inpatient units',
+    why: 'State regulation: required on all inpatient units',
   },
   {
     rule: 'Minimum RN-to-patient ratio met per shift',
@@ -51,7 +51,7 @@ const complianceRules = [
   },
   {
     rule: 'Level 1 nurses require Level 5 preceptor supervision on every shift',
-    why: 'Patient safety — novice nurses require bedside supervision',
+    why: 'Patient safety: novice nurses require bedside supervision',
   },
   {
     rule: 'Level 2 nurses in ICU/ER require Level 4+ supervision',
@@ -71,7 +71,7 @@ const fairnessGoals = [
   'Weekend equity: no nurse works more than 3 weekends in any 6-week period',
   'Holiday shifts distributed fairly across the team, tracked annually',
   'Charge duty distributed evenly across eligible staff',
-  'Consecutive weekends capped — no nurse works more than 2 weekends in a row',
+  'Consecutive weekends capped: no nurse works more than 2 weekends in a row',
   'Staff shift preferences honored when possible',
   'Overtime spread evenly when OT is unavoidable',
   'Extra hours above FTE minimized per nurse',
@@ -113,7 +113,7 @@ const competencyLevels = [
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
   <div class="mx-auto max-w-3xl text-center mb-14">
-    <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400">Built-in compliance</p>
+    <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400">What we check every cycle</p>
     <Headline
       title={title}
       subtitle={subtitle}

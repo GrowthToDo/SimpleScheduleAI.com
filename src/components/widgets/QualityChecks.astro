@@ -11,7 +11,7 @@ const { id, isDark = true, classes = {}, bg = await Astro.slots.render('bg') } =
 
 const title = 'Every schedule is compliant before it posts.';
 const subtitle =
-  '13 compliance and safety rules guaranteed on every schedule. 8 fairness goals actively optimized. No manual checking. No missed violations.';
+  '13 rules protect safe staffing on every schedule. 8 more track fairness for your team. All checked automatically. Nothing slips through.';
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
@@ -19,8 +19,9 @@ const subtitle =
 
     <!-- Left: existing text content -->
     <div class="text-center lg:text-center">
-      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400">Built-in compliance</p>
-      <div class="mb-4 text-8xl font-black text-primary sm:text-9xl leading-none">21</div>
+      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400">What we check every cycle</p>
+      <div class="mb-2 text-8xl font-black text-primary sm:text-9xl leading-none">21</div>
+      <p class="text-sm font-medium text-gray-400 mb-4">rules checked on every schedule</p>
       <Headline
         title={title}
         subtitle={subtitle}
@@ -33,7 +34,7 @@ const subtitle =
         href="/how-it-works"
         class="mt-8 inline-flex items-center gap-2 text-primary font-medium hover:text-secondary transition-colors duration-200"
       >
-        See how the rules engine works
+        See every rule we check
         <Icon name="tabler:arrow-right" class="w-4 h-4" />
       </a>
     </div>

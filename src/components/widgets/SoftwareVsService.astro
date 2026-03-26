@@ -9,7 +9,8 @@ type Props = Widget;
 const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
 
 const title = 'This isn\'t "another scheduling tool"';
-const subtitle = 'Software is just a faster way to make mistakes. Our service removes the patching burden entirely.';
+const subtitle =
+  'Other tools still require you to build every draft, apply every rule, and find every callout replacement yourself. We do all of that. You approve.';
 
 const software = {
   title: 'Software',
@@ -27,7 +28,7 @@ const service = {
   subtitle: '(We deliver post-ready schedules, you approve)',
   points: [
     'Upload your data via Excel → we handle the rest',
-    '13 compliance rules + 8 fairness goals enforced automatically to deliver compliant, fair schedules',
+    '13 safety rules and 8 fairness goals checked automatically on every draft',
     'Call-out or leave? Top 3 replacements with reasons, one-click approve',
     'Fairness tracked automatically: weekends, holidays, overtime',
   ],
