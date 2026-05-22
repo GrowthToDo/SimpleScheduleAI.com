@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-05-19T00:00:00Z
-updateDate: 2026-05-16T00:00:00Z
+draft: false
+publishDate: 2026-05-22T00:00:00Z
+updateDate: 2026-05-22T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best NurseGrid Alternatives for Critical Access Hospitals (2026)'
 excerpt: >
@@ -25,7 +25,7 @@ metadata:
 ## Key Takeaways
 
 - NurseGrid's strength is the nurse-facing mobile experience: schedule viewing, availability, and shift-trade requests. Reviewers on Capterra report the manager-facing mobile app was removed in mid-2024 and that desktop login is now required for schedule edits.
-- For a Critical Access Hospital, the gap is not the nurse app. It is manager-side scheduling, FLSA overtime tracking before posting, CMS §485.635 documentation, and credential-filtered callout coverage, none of which a nurse-facing app is built to deliver.
+- For a Critical Access Hospital, the gap is not the nurse app. It is manager-side scheduling, FLSA overtime tracking before posting, CMS §485.635 documentation, and credential-filtered callout coverage, capabilities not documented on NurseGrid's product page as part of the nurse-facing app.
 - NurseGrid holds 4.2/5 on Capterra (13 reviews; small sample). Treat single-source ratings on a small sample as directional, not definitive, and probe the manager workflow specifically in any demo.
 - The six strongest alternatives reviewed here are SimpleScheduleAI, ShiftWizard, TCP Scheduling (Aladtec), Deputy, Homebase, and When I Work. The right pick depends on whether compliance automation, hospital-nursing fit, or cost reduction is the priority.
 - A hybrid is viable for CAHs that value nurse self-service: keep a communication tool for the staff-facing layer and run a compliance-focused service or platform for scheduling management and CMS documentation.
@@ -128,7 +128,7 @@ The table below covers customer focus, public ratings, and setup time across Nur
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">ShiftWizard</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Hospital nurse scheduling, self-serve</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5<br>Capterra: 4.4/5 (723 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (Spring 2026 Leader)<br>Capterra: 4.4/5 (723 reviews)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -238,7 +238,7 @@ For a CAH switching from NurseGrid specifically because of the manager-app remov
 
 **Verdict:** The strongest self-serve hospital-nursing replacement for a CAH that wants to keep a nurse-facing experience and gain manager-side depth. CAHs leaving NurseGrid because of mobile manager problems should test ShiftWizard's own mobile manager workflow first.
 
-**Ratings:** G2: 4.3/5. Capterra: 4.4/5 (723 reviews).
+**Ratings:** G2: 4.3/5 (Spring 2026 Leader). Capterra: 4.4/5 (723 reviews).
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 

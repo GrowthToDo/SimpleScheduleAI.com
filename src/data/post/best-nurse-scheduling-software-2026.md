@@ -378,7 +378,7 @@ NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample). NurseGrid 
 >
 > Administrator, Hospital & Health Care, June 17, 2024, Capterra
 
-**Verdict:** A useful add-on for shift communication and open-shift posting. Not a replacement for a scheduling platform and should not be the only scheduling tool in use.
+**Verdict:** A useful add-on for shift communication and open-shift posting. Not a replacement for a scheduling platform and should not be the only scheduling tool in use. For a CAH-specific deeper comparison, see our guide on the [best NurseGrid alternatives for Critical Access Hospitals](/blog/nursegrid-alternatives).
 
 **Cost:** Free for individual nurses. Manager tools via NurseGrid for Managers - pricing available on request.
 
