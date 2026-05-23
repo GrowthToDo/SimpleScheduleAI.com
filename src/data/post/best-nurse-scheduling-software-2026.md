@@ -384,6 +384,8 @@ NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample). NurseGrid 
 
 ### 6. [OnShift](https://www.onshift.com) (now part of Workday)
 
+_For a CAH-specific deeper comparison, see our guide on the [best OnShift alternatives for Critical Access Hospitals](/blog/onshift-alternatives)._
+
 <img src="/images/blog/best-nurse-scheduling-software-2026/Onshift.png" alt="OnShift workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is now positioned as a workforce management platform for post-acute care. If your facility is a skilled nursing facility or long-term care unit, OnShift's documented feature set is built for that context. For acute inpatient nursing units at a standalone small hospital, it is a less natural fit.

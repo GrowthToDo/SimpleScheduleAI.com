@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-05-21T00:00:00Z
-updateDate: 2026-05-16T00:00:00Z
+draft: false
+publishDate: 2026-05-23T00:00:00Z
+updateDate: 2026-05-23T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best OnShift Alternatives for Critical Access Hospitals'
 excerpt: >
@@ -241,7 +241,7 @@ Hospitals that leave OnShift because of compliance and payroll reconciliation ga
 
 - **Implementation Complexity.** Experience varies; some customers describe initial setup as more involved than expected.
 
-  > "Implementation was much more complex that expected and end result still was full of errors on first payroll. Some changes can only be made on the back end."
+  > "Implementation was much more complex that [sic] expected and end result still was full of errors on first payroll. Some changes can only be made on the back end."
   >
   > Daniel C., CFO, Hospital & Health Care, March 16, 2021, Capterra
 
@@ -307,7 +307,7 @@ For a hospital running OnShift for nursing and a separate system for physicians,
 
 NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample). It is a nurse-facing scheduling app with a manager tier, owned by HealthStream. Its strength is mobile schedule visibility, availability, and shift trades from the nurse's perspective, which is a narrower problem than OnShift's full LTC workforce model. It is best understood as a nurse-facing layer rather than a primary scheduling system for a hospital with active CMS obligations.
 
-For a CAH leaving OnShift because of acute care callout speed and CMS documentation, NurseGrid Manager addresses the visibility problem but not the compliance or credential-enforcement problem. Multiple reviewers describe the manager-facing mobile app being removed, with desktop login required for schedule edits.
+For a CAH leaving OnShift because of acute care callout speed and CMS documentation, NurseGrid Manager addresses the visibility problem but not the compliance or credential-enforcement problem. Some reviewers describe the manager-facing mobile app being removed, with desktop login required for schedule edits.
 
 **Best for:** Hospitals that primarily want nurse-facing schedule visibility and shift-trade workflows, and that handle CMS documentation and credential enforcement through separate processes.
 
