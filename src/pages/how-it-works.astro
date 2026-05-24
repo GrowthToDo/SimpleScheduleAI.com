@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import SchemaOrg from '~/components/common/SchemaOrg.astro';
 import DarkHero from '~/components/widgets/DarkHero.astro';
+import SchedulerDemoSection from '~/components/widgets/SchedulerDemoSection.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import ComplianceRules from '~/components/widgets/ComplianceRules.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -141,6 +142,9 @@ const howItWorksBreadcrumbSchema = {
       </div>
     </div>
   </section>
+
+  <!-- Scheduler Demo Widget (animated end-to-end demo) -->
+  <SchedulerDemoSection />
 
   <!-- 4-step workflow -->
   <Steps

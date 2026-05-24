@@ -2,7 +2,7 @@
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
 import { Icon } from 'astro-icon/components';
-import ShowcaseCalloutCoverage from './ShowcaseCalloutCoverage.svelte';
+import SchedulerDemo from './SchedulerDemo.svelte';
 import type { Widget } from '~/types';
 
 type Props = Widget;
@@ -64,7 +64,7 @@ const logExample = {
       </div>
     </div>
 
-    <!-- Right: animated callout coverage widget -->
-    <ShowcaseCalloutCoverage client:visible />
+    <!-- Right: animated end-to-end scheduler demo (build + validate + callout) -->
+    <SchedulerDemo client:visible />
   </div>
 </WidgetWrapper>

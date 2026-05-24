@@ -1,0 +1,31 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import SchedulerDemo from './SchedulerDemo.svelte';
+import type { Widget } from '~/types';
+
+type Props = Widget & {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+};
+
+const {
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+  title = 'See it run end-to-end',
+  subtitle = 'A live demo of the same workflow we run for your hospital each week — schedule built, 21 rules validated, callout covered. The animation loops every ~22 seconds.',
+  tagline = 'How it works in motion',
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+  <div class="mt-10 flex justify-center">
+    <div class="w-full max-w-[920px]">
+      <SchedulerDemo client:visible />
+    </div>
+  </div>
+</WidgetWrapper>
