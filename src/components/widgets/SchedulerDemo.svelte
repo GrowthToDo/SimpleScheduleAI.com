@@ -637,23 +637,26 @@
       </div>
     </div>
 
-    <!-- Validation bar -->
-    {#if phase === 2}
-      <div
-        class="fade-up"
-        style="padding:5px 14px;background:#eff6ff;border-bottom:1px solid #bfdbfe;display:flex;align-items:center;gap:9px;"
-      >
-        <span class="spin" style="color:{BLUE};font-size:12px;">⟳</span>
-        <span style="font-size:10px;color:#1d4ed8;font-weight:600;">Checking rules…</span>
-        <div style="flex:1;height:3px;border-radius:9999px;background:#dbeafe;overflow:hidden;">
-          <div
-            style="height:100%;background:{BLUE};border-radius:9999px;width:{(rules / 21) *
-              100}%;transition:width .08s linear;"
-          ></div>
-        </div>
-        <span style="font-size:10px;font-weight:700;color:{BLUE};min-width:34px;">{rules}/21</span>
+    <!-- Validation bar — always rendered to reserve space, visibility toggles -->
+    <div
+      style="padding:5px 14px;background:{phase === 2
+        ? '#eff6ff'
+        : 'transparent'};border-bottom:1px solid {phase === 2
+        ? '#bfdbfe'
+        : 'transparent'};display:flex;align-items:center;gap:9px;visibility:{phase === 2
+        ? 'visible'
+        : 'hidden'};transition:background .2s,border-color .2s;"
+    >
+      <span class="spin" style="color:{BLUE};font-size:12px;">⟳</span>
+      <span style="font-size:10px;color:#1d4ed8;font-weight:600;">Checking rules…</span>
+      <div style="flex:1;height:3px;border-radius:9999px;background:#dbeafe;overflow:hidden;">
+        <div
+          style="height:100%;background:{BLUE};border-radius:9999px;width:{(rules / 21) *
+            100}%;transition:width .08s linear;"
+        ></div>
       </div>
-    {/if}
+      <span style="font-size:10px;font-weight:700;color:{BLUE};min-width:34px;">{rules}/21</span>
+    </div>
 
     <!-- Column headers -->
     <div style="display:grid;grid-template-columns:86px 1fr 1fr;border-bottom:2px solid #e5e7eb;background:#fafafa;">
