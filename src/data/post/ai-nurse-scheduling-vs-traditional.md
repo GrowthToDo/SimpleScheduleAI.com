@@ -29,11 +29,11 @@ metadata:
 - The real AI advantage is not abstract "optimization." It is three concrete capabilities: consistent constraint enforcement, overtime-aware callout ranking, and continuous fairness tracking across the rotation.
 - AI scheduling does not replace clinical judgment. It removes the computational rule-checking so the manager spends her time on decisions that actually require nursing knowledge.
 - SimpleScheduleAI pairs constraint-aware AI scheduling with a managed service model, delivering three schedule options for a Critical Access Hospital within 48 hours of roster submission, with no software for the nurse manager to install or configure.
-- The switch pays back fastest at hospitals where the nurse manager also takes clinical shifts and cannot protect 6 or more administrative hours each week.
+- The switch pays back fastest at hospitals where the nurse manager also takes clinical shifts and has little or no protected administrative time each week.
 
 ## Table of Contents
 
-- [What Traditional Nurse Scheduling Actually Involves?](#what-traditional-nurse-scheduling-actually-involves)
+- [What Does Traditional Nurse Scheduling Actually Involve?](#what-does-traditional-nurse-scheduling-actually-involve)
 - [What Does AI Scheduling Change, and What Does It Leave Alone?](#what-does-ai-scheduling-change-and-what-does-it-leave-alone)
 - [Where Does AI Scheduling Have the Biggest Impact?](#where-does-ai-scheduling-have-the-biggest-impact)
 - [What Are the Real Limitations of AI Nurse Scheduling?](#what-are-the-real-limitations-of-ai-nurse-scheduling)
@@ -51,7 +51,7 @@ The answer depends heavily on what "traditional scheduling" means in your hospit
 
 AI scheduling externalizes those rules into a system that applies them the same way every cycle, regardless of who is running the process. The rest of this guide separates what genuinely changes from what marketing language only claims changes.
 
-## What Traditional Nurse Scheduling Actually Involves?
+## What Does Traditional Nurse Scheduling Actually Involve?
 
 Traditional nurse scheduling at a small hospital is a multi-constraint problem the nurse manager solves by hand, usually under time pressure. She balances minimum coverage, RN-to-patient ratios, charge nurse availability, weekend and holiday fairness, individual availability windows, certification requirements, FLSA overtime thresholds, time-off requests, and per diem availability, all at once, for every shift in the cycle.
 
@@ -84,6 +84,35 @@ AI scheduling changes who enforces the rules: the system applies every constrain
 What changes in the manager's week is concrete. Schedule construction shifts from manual rule-checking to reviewing pre-verified options. Callout replacement shifts from manual overtime math to reviewing a pre-ranked list. Fairness tracking shifts from informal memory to systematic logging of weekend and overnight distribution. Each of these is a measurable time recovery, not a vague efficiency claim.
 
 What does not change is everything that depends on context the system cannot see. AI scheduling does not know that two nurses have a conflict that affects floor dynamics. It does not know that one nurse is going through a hard stretch and needs easier shifts this month. It does not know that a particular aide works better with one charge nurse than another. These calls stay with the manager. The point of AI scheduling is to give her the time to make them deliberately instead of after eight hours of manual overtime checking. This is the same distinction explained in our piece on [whether nurses can trust an AI-generated schedule](/blog/can-nurses-trust-ai-generated-schedule): the algorithm enforces rules, the manager retains authority.
+
+<div class="not-prose my-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6">
+  <p class="text-center text-sm font-bold text-slate-900 dark:text-slate-100 mb-1">Where AI Handles the Work vs. Where the Nurse Manager Still Owns It</p>
+  <p class="text-center text-xs text-slate-500 dark:text-slate-400 mb-5">A clean division: computation moves to the system, judgment stays with the manager</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/30 p-4">
+      <p class="text-sm font-bold text-blue-900 dark:text-blue-200 mb-3">AI handles (computation)</p>
+      <ul class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 list-disc list-inside">
+        <li>Overtime threshold tracking (FLSA 8-and-80)</li>
+        <li>Credential and certification verification</li>
+        <li>Minimum coverage enforcement per shift</li>
+        <li>Callout replacement ranking</li>
+        <li>Weekend and overnight fairness logging</li>
+        <li>CMS staffing documentation trail</li>
+      </ul>
+    </div>
+    <div class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 p-4">
+      <p class="text-sm font-bold text-slate-900 dark:text-slate-100 mb-3">Nurse manager owns (judgment)</p>
+      <ul class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 list-disc list-inside">
+        <li>Nurse pairing and floor-dynamics calls</li>
+        <li>Lighter-month exceptions for staff in hard stretches</li>
+        <li>Aide and charge-nurse fit decisions</li>
+        <li>Clinical exceptions outside the rule set</li>
+        <li>Final approval on every published cycle</li>
+        <li>Sensitive conversations the system cannot have</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ## Where Does AI Scheduling Have the Biggest Impact?
 
