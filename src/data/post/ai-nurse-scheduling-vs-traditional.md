@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-05-17T00:00:00Z
-updateDate: 2026-05-16T00:00:00Z
+draft: false
+publishDate: 2026-05-24T00:00:00Z
+updateDate: 2026-05-24T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'AI vs. Traditional Scheduling for Critical Access Hospitals'
 excerpt: >
@@ -102,7 +102,7 @@ The largest impact is not schedule construction. It is callout replacement, wher
   </ol>
 </div>
 
-**Callout replacement ranking.** When a nurse calls out, an AI system generates a ranked list of available replacements cross-referenced against overtime thresholds and credential requirements in under two minutes. The manual equivalent forces the nurse manager to check hours for each available nurse, verify credentials, and mentally rank the list while managing a patient floor. At a 25-bed CAH with multiple callout events most weeks, this is the single largest time recovery in the manager's week. We cover the mechanics of this in [what automated nurse scheduling actually means](/blog/what-automated-nurse-scheduling-actually-means).
+**Callout replacement ranking.** When a nurse calls out, an AI system generates a ranked list of available replacements cross-referenced against overtime thresholds and credential requirements in under two minutes. The manual equivalent forces the nurse manager to check hours for each available nurse, verify credentials, and mentally rank the list while managing a patient floor. At a 25-bed CAH with multiple callout events most weeks, this is the single largest time recovery in the manager's week.
 
 **Consistent overtime enforcement.** Traditional scheduling produces overtime surprises because no one can reliably track cumulative hours across a 14-day pay period while also building the grid. AI scheduling treats the [FLSA 8-and-80 threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-hospital-residential-care) as a hard constraint in every schedule generation and every callout ranking, so the threshold is checked before an assignment is ever offered.
 
@@ -128,7 +128,7 @@ Start with the time number, because it is the easiest to defend in a budget conv
 
 ## How Do Traditional and AI Scheduling Compare at a 25-Bed Hospital?
 
-At a 25-bed hospital, traditional Excel scheduling costs the manager 8 to 12 hours a week with manual, error-prone overtime tracking. AI scheduling software cuts that to 4 to 6 hours but still requires her to operate the tool. An AI managed service reduces it to 1 to 2 hours of review and approval, with overtime and credential enforcement handled automatically in every cycle.
+At a 25-bed hospital, traditional Excel scheduling costs the manager 8 to 12 hours a week with manual, error-prone overtime tracking. AI scheduling software cuts that to 4 to 6 hours but still requires her to operate the tool. An AI managed service reduces it to 1 to 2 hours of review and approval, with overtime and credential enforcement handled automatically in every cycle. These figures, and the loaded-rate cost calculation below, are operational estimates from SimpleScheduleAI's work with Critical Access Hospitals, not vendor benchmarks or a survey dataset.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
