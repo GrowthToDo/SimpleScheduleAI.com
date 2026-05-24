@@ -17,7 +17,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'SimpleScheduleAI — Nurse Scheduling for Critical Access Hospitals',
   description:
-    'Scheduling stress drives your best nurses out and burns your budget. We deliver a compliant, post-ready schedule every week, with automatic callout coverage.',
+    'Scheduling stress drives your best nurses out and burns your budget. You get a compliant, post-ready schedule every week, callout coverage handled.',
   ignoreTitleTemplate: true,
 };
 
@@ -116,10 +116,44 @@ const faqSchema = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      No more Sunday evenings rebuilding the roster. No more hunting for a replacement when someone calls out. We
-      deliver a compliant, post-ready schedule every cycle, with automatic callout coverage.
+      A managed scheduling service. You send a roster, you get back a finished, compliant schedule. Not software to run.
+      No more Sunday evenings rebuilding the roster. No more hunting for a replacement when someone calls out. You get a
+      compliant, post-ready schedule every cycle, callout coverage already handled.
     </Fragment>
   </Hero>
+
+  <!-- Front-loaded credibility + offer strip -->
+  <section class="bg-page -mt-8 sm:-mt-12">
+    <div class="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center gap-3 text-center">
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <span
+            class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-200 dark:border-blue-800/50 bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300"
+            >Free for 60 Days</span
+          >
+          <span
+            class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-200 dark:border-blue-800/50 bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300"
+            >3 Hospitals Only</span
+          >
+          <span
+            class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-200 dark:border-blue-800/50 bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300"
+            >Full Managed Service</span
+          >
+          <span
+            class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-200 dark:border-blue-800/50 bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300"
+            >No IT Setup</span
+          >
+          <span
+            class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-200 dark:border-blue-800/50 bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300"
+            >First Schedule in Under 2 Weeks</span
+          >
+        </div>
+        <p class="text-sm text-muted">
+          Built after interviewing 30+ nurse managers before writing a single line of code.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- Product Interface Showcase -->
   <ProductShowcase />
@@ -205,7 +239,7 @@ const faqSchema = {
             </svg>
           </span>
           <span class="text-lg leading-relaxed text-gray-300"
-            >A compliant, post-ready schedule delivered every week</span
+            >Your Sunday nights back: the week's schedule arrives done</span
           >
         </li>
         <li class="flex items-start gap-3">
@@ -218,7 +252,7 @@ const faqSchema = {
             </svg>
           </span>
           <span class="text-lg leading-relaxed text-gray-300"
-            >Call-out replacement candidates, ready to approve in one click</span
+            >No 5 a.m. phone tree: approved replacement candidates in one click</span
           >
         </li>
         <li class="flex items-start gap-3">
@@ -231,7 +265,7 @@ const faqSchema = {
             </svg>
           </span>
           <span class="text-lg leading-relaxed text-gray-300"
-            >A weekly manager summary: what changed, budget impact, pending approvals</span
+            >Walk into Monday knowing what changed, the budget impact, and what needs your sign-off</span
           >
         </li>
       </ul>

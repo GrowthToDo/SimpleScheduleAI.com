@@ -35,9 +35,9 @@ const principles = [
 ];
 
 const whatWeDo = [
-  'Build draft schedules based on your inputs and constraints',
-  'Validate coverage, gaps, conflicts, and common failure points',
-  'Return a clean, review ready version for your approval',
+  'A draft schedule built to your rules, so you start from done not blank',
+  'Coverage, gaps, and conflicts caught before you ever see them',
+  'A clean, review-ready version you can approve in minutes',
 ];
 
 const whatWeDoNotDo = [
@@ -63,7 +63,7 @@ const aboutBreadcrumbSchema = {
   <!-- Dark Hero -->
   <DarkHero
     badge="About Us"
-    title="Built for hospitals where the schedule never stops"
+    title="Built for hospitals where the schedule never stops: a managed nurse-scheduling service for Critical Access Hospitals in Texas"
     subtitle={metadata.description}
     actions={[
       { text: 'See how it works', href: '/how-it-works', variant: 'primary' },
@@ -90,7 +90,7 @@ const aboutBreadcrumbSchema = {
   <!-- Why CAHs -->
   <section class="bg-page">
     <div class="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28 text-center">
-      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">Why we exist</p>
+      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">Why this is built for you</p>
       <h2 class="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
         Why Critical Access Hospitals specifically
       </h2>
@@ -98,7 +98,9 @@ const aboutBreadcrumbSchema = {
         Most scheduling software was built for 500-nurse hospital systems and scaled down. We started with the 20-bed
         hospital and built up. The nurse manager at a Critical Access Hospital is also the charge nurse, the compliance
         officer, and the person who picks up the phone at 5 AM when someone calls out. She does not have time to learn
-        enterprise software or wait on a support ticket queue. That is the operating reality we designed for.
+        enterprise software or wait on a support ticket queue. That is the operating reality we designed for. Every hour
+        she loses to the phone tree is an hour off the floor, and the nurses notice who landed nights again. That is how
+        good nurses start leaving.
       </p>
     </div>
   </section>
@@ -107,8 +109,8 @@ const aboutBreadcrumbSchema = {
   <section class="bg-gray-50 dark:bg-slate-900">
     <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
       <div class="mx-auto mb-12 max-w-2xl text-center">
-        <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">How we operate</p>
-        <h2 class="text-balance text-3xl font-bold tracking-tight sm:text-4xl">Our operating principles</h2>
+        <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">How this works</p>
+        <h2 class="text-balance text-3xl font-bold tracking-tight sm:text-4xl">How this works for you</h2>
         <p class="mt-4 text-lg text-muted">This is a workflow support service, not a software rollout.</p>
       </div>
 
@@ -134,7 +136,7 @@ const aboutBreadcrumbSchema = {
       </div>
       <div class="mx-auto max-w-6xl grid gap-6 lg:grid-cols-2">
         <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 p-7">
-          <h3 class="text-xl font-semibold">What we do</h3>
+          <h3 class="text-xl font-semibold">What you get</h3>
           <ul class="mt-4 space-y-3">
             {
               whatWeDo.map((item) => (
@@ -149,7 +151,7 @@ const aboutBreadcrumbSchema = {
         </div>
 
         <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 p-7">
-          <h3 class="text-xl font-semibold">What we do not do</h3>
+          <h3 class="text-xl font-semibold">What never happens without you</h3>
           <ul class="mt-4 space-y-3">
             {
               whatWeDoNotDo.map((item) => (
@@ -160,7 +162,9 @@ const aboutBreadcrumbSchema = {
               ))
             }
           </ul>
-          <p class="mt-5 text-sm text-muted">This clarity is intentional. It keeps expectations clean and risk low.</p>
+          <p class="mt-5 text-sm text-muted">
+            We say no to these on purpose. You should know exactly what you are getting, and what you are not.
+          </p>
         </div>
       </div>
     </div>
