@@ -8,6 +8,8 @@ type Props = Widget & {
   title?: string;
   subtitle?: string;
   tagline?: string;
+  ctaText?: string;
+  ctaHref?: string;
 };
 
 const {
@@ -15,14 +17,28 @@ const {
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
-  title = 'See it run end-to-end',
-  subtitle = 'A live demo of the same workflow we run for your hospital each week — schedule built, 21 rules validated, callout covered. The animation loops every ~22 seconds.',
-  tagline = 'How it works in motion',
+  title = 'From blank grid to full schedule in seconds.',
+  subtitle = 'The engine checks 13 safety rules and 8 fairness rules as it fills every slot, then ranks callout replacements the same way. Automatically.',
+  tagline = 'AI Scheduling Engine',
+  ctaText = 'Claim a Pilot Spot',
+  ctaHref = '/pilot',
 } = Astro.props;
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
+  {
+    ctaText && ctaHref && (
+      <div class="mt-6 flex justify-center">
+        <a
+          href={ctaHref}
+          class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-secondary"
+        >
+          {ctaText}
+        </a>
+      </div>
+    )
+  }
   <div class="mt-10 flex justify-center">
     <div class="w-full max-w-[920px] min-h-[560px] sm:min-h-[600px]">
       <SchedulerDemo client:visible />
