@@ -223,7 +223,7 @@ The tradeoff is that Aladtec has meaningful gaps compared to SmartLinx: no integ
 
 Time and attendance integration, automated CMS compliance documentation, and callout overtime automation are not included in the base Aladtec platform. Confirm current feature availability with Aladtec directly.
 
-**Verdict:** Aladtec is the right downgrade path from SmartLinx for hospitals that are paying for feature depth they do not use and want a simpler system with lower ongoing maintenance. The SmartLinx features that Aladtec lacks, CMS documentation, integrated T&A, must be handled manually or through other tools.
+**Verdict:** Aladtec is the right downgrade path from SmartLinx for hospitals that are paying for feature depth they do not use and want a simpler system with lower ongoing maintenance. The SmartLinx features that Aladtec lacks, CMS documentation, integrated T&A, must be handled manually or through other tools. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
 **Cost:** $200-450 per month depending on roster size. Pricing requires a quote.
 
@@ -281,7 +281,7 @@ NurseGrid Manager is not a full SmartLinx replacement but can supplement or part
 
 NurseGrid Manager includes schedule building and credential tracking. CMS compliance documentation and time and attendance integration are not listed on the NurseGrid product page. Confirm current capabilities with NurseGrid directly before evaluating as a primary SmartLinx replacement.
 
-**Verdict:** NurseGrid Manager can replace the communication portion of SmartLinx for hospitals that discover that is the primary usage pattern. All other SmartLinx functions require a separate tool if NurseGrid Manager is the replacement.
+**Verdict:** NurseGrid Manager can replace the communication portion of SmartLinx for hospitals that discover that is the primary usage pattern. All other SmartLinx functions require a separate tool if NurseGrid Manager is the replacement. See our deeper [NurseGrid alternatives guide for Critical Access Hospitals](/blog/nursegrid-alternatives).
 
 **Cost:** Approximately $150-300 per month. Pricing requires contact.
 
@@ -312,7 +312,7 @@ Deputy is a significant simplification from SmartLinx. If the reason for leaving
 
 **Healthcare feature scope.** Deputy does not market healthcare-specific compliance documentation or nurse credentialing features. Confirm current capability scope with Deputy directly before evaluating as a SmartLinx replacement.
 
-**Verdict:** Deputy is the right move from SmartLinx only for organizations that audited their actual SmartLinx usage and found that compliance features were going unused and the primary value was schedule publishing. For any hospital with active CMS obligations, the compliance gap is disqualifying.
+**Verdict:** Deputy is the right move from SmartLinx only for organizations that audited their actual SmartLinx usage and found that compliance features were going unused and the primary value was schedule publishing. For any hospital with active CMS obligations, the compliance gap is disqualifying. See our deeper [Deputy alternatives guide for healthcare](/blog/deputy-alternatives-healthcare).
 
 **Cost:** $4.50 per user per month.
 

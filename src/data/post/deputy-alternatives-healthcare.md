@@ -206,7 +206,7 @@ The migration from Deputy to Aladtec is straightforward: export your current sta
 
 CMS compliance documentation and initial credential configuration require setup time. Confirm current CMS documentation export capabilities with Aladtec directly.
 
-**Verdict:** The best self-serve upgrade from Deputy for small hospital nurse scheduling. Aladtec provides the healthcare credential and coverage logic that Deputy is missing, without the implementation complexity of SmartLinx or QGenda.
+**Verdict:** The best self-serve upgrade from Deputy for small hospital nurse scheduling. Aladtec provides the healthcare credential and coverage logic that Deputy is missing, without the implementation complexity of SmartLinx or QGenda. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
 **Ratings:** Capterra: 4.6/5 (17 reviews; small sample)
 

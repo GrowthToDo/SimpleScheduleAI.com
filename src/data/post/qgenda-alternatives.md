@@ -275,7 +275,7 @@ Ask the demo to walk through mobile workflows from both manager and staff perspe
 
 - Verify with ShiftWizard whether the manager-facing mobile app covers your required department-level visibility; request a CAH-scale reference who uses the shift swap workflow before deciding
 
-**Verdict:** The best self-serve alternative to QGenda for CAHs that specifically need a nursing-focused platform and prefer direct control. ShiftWizard's hospital-nursing design is a closer operational fit than QGenda's physician-scheduling heritage for a 25-bed CAH.
+**Verdict:** The best self-serve alternative to QGenda for CAHs that specifically need a nursing-focused platform and prefer direct control. ShiftWizard's hospital-nursing design is a closer operational fit than QGenda's physician-scheduling heritage for a 25-bed CAH. See our deeper [ShiftWizard alternatives guide for Critical Access Hospitals](/blog/shiftwizard-alternatives).
 
 **Cost:** Pricing not publicly listed. Contact HealthStream for a quote.
 
@@ -308,7 +308,7 @@ NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample). NurseGrid 
 
 - For CAHs with active CMS obligations, NurseGrid cannot be the sole scheduling tool
 
-**Verdict:** Appropriate as a staff communication layer, not as a QGenda replacement for hospitals with active compliance requirements. If the primary unmet need is nurse-facing schedule visibility, NurseGrid is worth evaluating alongside a separate managed service for the compliance layer.
+**Verdict:** Appropriate as a staff communication layer, not as a QGenda replacement for hospitals with active compliance requirements. If the primary unmet need is nurse-facing schedule visibility, NurseGrid is worth evaluating alongside a separate managed service for the compliance layer. See our deeper [NurseGrid alternatives guide for Critical Access Hospitals](/blog/nursegrid-alternatives).
 
 **Cost:** Approximately $150-300 per month. Pricing requires a quote.
 

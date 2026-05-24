@@ -203,7 +203,7 @@ A representative positive review from a public-safety user:
 
 - TCP/Aladtec's Capterra customer base skews toward fire, EMS, law enforcement, and security users rather than hospital nursing. The most recent hospital-context reviews are several years old; ask the vendor for a current hospital-nursing reference customer at CAH scale before deciding.
 
-**Verdict:** A reasonable self-serve alternative for a CAH that wants direct platform control and has the administrative bandwidth to configure and maintain the system. CAHs leaving ShiftWizard because of scheduling burden should weigh whether a different self-serve platform solves the underlying capacity problem.
+**Verdict:** A reasonable self-serve alternative for a CAH that wants direct platform control and has the administrative bandwidth to configure and maintain the system. CAHs leaving ShiftWizard because of scheduling burden should weigh whether a different self-serve platform solves the underlying capacity problem. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
 **Cost:** Pricing not listed publicly. Typically positions in the mid-market range.
 
@@ -253,7 +253,7 @@ A representative positive review:
   >
   > Administrator, Hospital & Health Care, June 17, 2024, Capterra
 
-**Verdict:** Strong nurse-facing mobile experience. For a CAH evaluating NurseGrid as a primary scheduling system, verify manager-side capabilities and clinical compliance features directly with the vendor before relying on it as a system of record. The loss of manager-side mobile functionality documented by reviewers is significant for a nurse manager who moves between the floor and her office.
+**Verdict:** Strong nurse-facing mobile experience. For a CAH evaluating NurseGrid as a primary scheduling system, verify manager-side capabilities and clinical compliance features directly with the vendor before relying on it as a system of record. The loss of manager-side mobile functionality documented by reviewers is significant for a nurse manager who moves between the floor and her office. See our deeper [NurseGrid alternatives guide for Critical Access Hospitals](/blog/nursegrid-alternatives).
 
 **Cost:** Freemium for individual nurses; organizational tier pricing on request.
 
@@ -301,7 +301,7 @@ A representative positive review:
   >
   > David S., President, Hospital & Health Care, May 7, 2024, Capterra
 
-**Verdict:** QGenda is positioned for physician groups and larger health systems rather than 25-bed CAH nursing rosters. For a CAH evaluating QGenda, ask the vendor for the smallest hospital they've implemented in the past 12 months and a reference contact at that facility before committing to an evaluation.
+**Verdict:** QGenda is positioned for physician groups and larger health systems rather than 25-bed CAH nursing rosters. For a CAH evaluating QGenda, ask the vendor for the smallest hospital they've implemented in the past 12 months and a reference contact at that facility before committing to an evaluation. See our deeper [QGenda alternatives guide for Critical Access Hospitals](/blog/qgenda-alternatives).
 
 **Cost:** Pricing not published. Quote-based; reviews indicate it sits at the higher end of the market.
 

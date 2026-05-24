@@ -212,7 +212,7 @@ The tradeoff is considerable. TCP Scheduling requires a longer implementation, I
 
 - TCP Scheduling is positioned by the vendor as enterprise-tier; CAHs should request a current reference customer under 50 beds and a documented onboarding timeline before deciding.
 
-**Verdict:** A reasonable upgrade path for hospitals growing toward 75-200 beds with IT capacity for a longer implementation. CAHs at 25-bed scale should weigh whether the configuration depth fits their administrative bandwidth.
+**Verdict:** A reasonable upgrade path for hospitals growing toward 75-200 beds with IT capacity for a longer implementation. CAHs at 25-bed scale should weigh whether the configuration depth fits their administrative bandwidth. See our deeper [SmartLinx alternatives guide for Critical Access Hospitals](/blog/smartlinx-alternatives).
 
 **Cost:** Pricing not listed. Contact TCP Software for a quote.
 
@@ -351,7 +351,7 @@ A representative review from a hospital nursing user:
   >
   > Portia A., Nurse, Hospital & Health Care, April 8, 2026, Capterra
 
-**Verdict:** Strong general workforce scheduling tool. Aladtec users leaving primarily because of configuration burden may find Deputy a simpler alternative; users leaving because they need stronger clinical compliance automation should verify Deputy's current healthcare-tier capabilities directly with the vendor.
+**Verdict:** Strong general workforce scheduling tool. Aladtec users leaving primarily because of configuration burden may find Deputy a simpler alternative; users leaving because they need stronger clinical compliance automation should verify Deputy's current healthcare-tier capabilities directly with the vendor. See our deeper [Deputy alternatives guide for healthcare](/blog/deputy-alternatives-healthcare).
 
 **Cost:** $4.50 per user per month.
 

@@ -229,7 +229,7 @@ If you are leaving UKG because it demands too much from one person, Aladtec is s
 - Since TCP acquired Aladtec in 2021, request current named support contacts and response-time SLAs before committing
 - Mobile app has limited functionality compared to desktop interface
 
-**Verdict:** The right fit for a CAH that wants to reduce UKG complexity without outsourcing scheduling decisions. Not the right fit if the core problem is that one person cannot sustain the weekly scheduling workload alongside clinical duties.
+**Verdict:** The right fit for a CAH that wants to reduce UKG complexity without outsourcing scheduling decisions. Not the right fit if the core problem is that one person cannot sustain the weekly scheduling workload alongside clinical duties. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
 **Cost:** Pricing not listed publicly. Contact for quote. Typically positions below SmartLinx and well below UKG in per-facility cost.
 
@@ -270,7 +270,7 @@ SmartLinx is most cited by skilled nursing and long-term care facilities, not ac
 - Verify setup complexity and configuration burden with a current SmartLinx reference at CAH or small hospital scale before deciding
 - Primary compliance coverage targets SNF/LTC regulatory requirements, not CAH-specific CMS §485.635
 
-**Verdict:** SmartLinx is a capable platform for the facility size it was built for. A 25-bed CAH without a dedicated IT resource and scheduling coordinator will not get the value the platform is priced for. If UKG felt over-engineered, SmartLinx is a smaller step down, not a different operating model.
+**Verdict:** SmartLinx is a capable platform for the facility size it was built for. A 25-bed CAH without a dedicated IT resource and scheduling coordinator will not get the value the platform is priced for. If UKG felt over-engineered, SmartLinx is a smaller step down, not a different operating model. See our deeper [SmartLinx alternatives guide for Critical Access Hospitals](/blog/smartlinx-alternatives).
 
 **Cost:** Pricing not publicly listed. Contact for quote. Mid-market pricing above Aladtec; typically requires annual contract commitment.
 
