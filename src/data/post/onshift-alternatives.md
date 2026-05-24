@@ -62,7 +62,7 @@ Hospitals switch away from OnShift because the platform was designed for long-te
 
 <img src="/images/blog/onshift-alternatives/Onshift.png" alt="OnShift workforce scheduling platform for long-term care and post-acute settings" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-OnShift does not publish a public G2 or Capterra rating that maps cleanly to a Critical Access Hospital nursing context, and no usable hospital-nursing reviewer quote was available within the verification window for this guide. Per our sourcing policy, the limitations below are framed as evaluation questions a CAH should probe directly with the vendor, not as asserted product gaps. The themes that matter cluster into three areas worth testing in any OnShift demo.
+OnShift does not publish a public G2 or Capterra rating that maps cleanly to a Critical Access Hospital nursing context, and no verified small-hospital nursing reviewer quote is available. The points below are framed as evaluation questions a CAH should probe in any OnShift demo, not as confirmed product gaps. The themes cluster into three areas worth testing.
 
 ### Is OnShift's Open-Shift Model Fast Enough for Acute Care Callouts?
 
@@ -211,7 +211,7 @@ Aladtec covers shift management, time and attendance, overtime tracking, certifi
 
 - The most recent hospital-context Capterra reviews are several years old and the recent reviewer base skews toward fire, EMS, and law enforcement. CAHs should request a current hospital-nursing reference customer at CAH scale and ask whether credential filtering during callout replacement is enforced or a manual step.
 
-**Verdict:** A reasonable self-serve alternative for hospitals leaving OnShift because of callout speed, where the direct-outreach model fits and the nurse manager has capacity for configuration maintenance. CMS documentation and overtime ranking still require manual effort.
+**Verdict:** A reasonable self-serve alternative for hospitals leaving OnShift because of callout speed, where the direct-outreach model fits and the nurse manager has capacity for configuration maintenance. CMS documentation and overtime ranking still require manual effort. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
 **Ratings:** G2: 4.3/5 (97 reviews); Capterra: 4.6/5 (17 reviews; small sample).
 
@@ -253,7 +253,7 @@ Hospitals that leave OnShift because of compliance and payroll reconciliation ga
 
 - The vendor's primary compliance coverage targets SNF and LTC regulatory requirements rather than CAH-specific §485.635. The Capterra sample is small (6 reviews); ratings on a single source are less reliable than larger samples. Request hospital-acute reference customers specifically.
 
-**Verdict:** The right upgrade from OnShift for hospitals that need compliance automation and labor analytics and can absorb a 3-4 month implementation. It is a more capable platform, not a simpler one. CAHs at 25-bed scale should weigh whether the implementation effort fits their administrative bandwidth.
+**Verdict:** The right upgrade from OnShift for hospitals that need compliance automation and labor analytics and can absorb a 3-4 month implementation. It is a more capable platform, not a simpler one. CAHs at 25-bed scale should weigh whether the implementation effort fits their administrative bandwidth. See our deeper [SmartLinx alternatives guide for Critical Access Hospitals](/blog/smartlinx-alternatives).
 
 **Ratings:** Capterra: 4.5/5 (6 reviews; small sample). No mapped G2 small-hospital listing.
 
@@ -295,7 +295,7 @@ For a hospital running OnShift for nursing and a separate system for physicians,
 
 - QGenda's pricing reflects a physician scheduling platform; a nursing-only hospital pays for capabilities it does not use. It does not target the LTC caregiver engagement use case OnShift was built around. CAHs should confirm a current §485.635 documentation export and a small-hospital reference customer with the vendor.
 
-**Verdict:** QGenda solves the scheduling fragmentation problem that OnShift creates for hospitals with both nursing and provider scheduling needs. For nursing-only CAHs, it is more expensive and not better matched to the acute care callout problem than a nursing-focused alternative.
+**Verdict:** QGenda solves the scheduling fragmentation problem that OnShift creates for hospitals with both nursing and provider scheduling needs. For nursing-only CAHs, it is more expensive and not better matched to the acute care callout problem than a nursing-focused alternative. See our deeper [QGenda alternatives guide for Critical Access Hospitals](/blog/qgenda-alternatives).
 
 **Ratings:** G2: 4.6/5 (164 reviews); Capterra: 4.2/5 (68 reviews).
 
@@ -338,7 +338,7 @@ For a CAH leaving OnShift because of acute care callout speed and CMS documentat
 
 - The Capterra sample is small (13 reviews). NurseGrid Manager is not positioned as a primary CMS-compliance scheduling system; CAHs with active §485.635 obligations should verify FLSA tracking, audit trail, and credential enforcement directly with HealthStream before relying on it.
 
-**Verdict:** A reasonable nurse-facing visibility layer, not a direct replacement for a hospital that leaves OnShift specifically because it needs compliance automation and credential-enforced callouts. CAHs should confirm primary-system fit with the vendor.
+**Verdict:** A reasonable nurse-facing visibility layer, not a direct replacement for a hospital that leaves OnShift specifically because it needs compliance automation and credential-enforced callouts. CAHs should confirm primary-system fit with the vendor. See our deeper [NurseGrid alternatives guide for Critical Access Hospitals](/blog/nursegrid-alternatives).
 
 **Ratings:** Capterra: 4.2/5 (13 reviews; small sample). No mapped G2 listing.
 
@@ -367,7 +367,7 @@ As a direct OnShift replacement at CAH scale, UKG is categorically wrong-sized. 
 - Ongoing configuration maintenance is higher than any other tool in this list, including SmartLinx
 - No verified small-hospital reviewer quotes are available; UKG does not maintain a public listing that maps to CAH-scale nursing. Verify scope and total cost directly with the vendor.
 
-**Verdict:** The right choice only when a health system mandate drives the UKG implementation and the CAH's scheduling is supported by the system's IT and HRIS infrastructure. As an independent decision for a standalone CAH, UKG is an order of magnitude too complex.
+**Verdict:** The right choice only when a health system mandate drives the UKG implementation and the CAH's scheduling is supported by the system's IT and HRIS infrastructure. As an independent decision for a standalone CAH, UKG is an order of magnitude too complex. See our deeper [UKG alternatives guide for small hospitals](/blog/ukg-alternatives-small-hospitals).
 
 **Ratings:** No public listing that maps to small-hospital nursing; verify with vendor.
 

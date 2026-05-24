@@ -236,7 +236,7 @@ For a CAH switching from NurseGrid specifically because of the manager-app remov
 
 - CMS §485.635 audit-trail export and FLSA 8-and-80 tracking are not described on the public product page in those specific terms; CAHs should confirm current compliance capabilities directly with the vendor before deciding.
 
-**Verdict:** The strongest self-serve hospital-nursing replacement for a CAH that wants to keep a nurse-facing experience and gain manager-side depth. CAHs leaving NurseGrid because of mobile manager problems should test ShiftWizard's own mobile manager workflow first.
+**Verdict:** The strongest self-serve hospital-nursing replacement for a CAH that wants to keep a nurse-facing experience and gain manager-side depth. CAHs leaving NurseGrid because of mobile manager problems should test ShiftWizard's own mobile manager workflow first. See our deeper [ShiftWizard alternatives guide for Critical Access Hospitals](/blog/shiftwizard-alternatives).
 
 **Ratings:** G2: 4.3/5 (Spring 2026 Leader). Capterra: 4.4/5 (723 reviews).
 
@@ -274,7 +274,7 @@ If you are switching from NurseGrid because you need manager-side scheduling and
 
 - The most recent hospital-context reviews on Capterra are several years old and the recent reviewer base skews to public safety; CAHs should request a current hospital-nursing reference customer at CAH scale before deciding.
 
-**Verdict:** A reasonable self-serve path for a CAH that needs manager-side scheduling capability NurseGrid does not provide and can absorb a 2-4 week setup. Probe the nurse-facing experience and a current hospital reference before committing.
+**Verdict:** A reasonable self-serve path for a CAH that needs manager-side scheduling capability NurseGrid does not provide and can absorb a 2-4 week setup. Probe the nurse-facing experience and a current hospital reference before committing. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
 **Ratings:** G2: 4.3/5 (97 reviews). Capterra: 4.6/5 (17 reviews).
 
@@ -317,7 +317,7 @@ For a CAH leaving NurseGrid because the manager workflow is now desktop-only, De
 
 - Deputy's healthcare page does not specifically document HIPAA, BAA, CMS §485.635 audit-trail support, or FLSA 8-and-80 tracking in the documented page content; CAHs with active CMS or HIPAA obligations should confirm directly with Deputy sales which compliance capabilities are covered in their tier and contract.
 
-**Verdict:** A strong general workforce tool that restores a mobile manager workflow NurseGrid removed. CAHs leaving NurseGrid for stronger clinical compliance automation should verify Deputy's current healthcare-tier capabilities directly with the vendor.
+**Verdict:** A strong general workforce tool that restores a mobile manager workflow NurseGrid removed. CAHs leaving NurseGrid for stronger clinical compliance automation should verify Deputy's current healthcare-tier capabilities directly with the vendor. See our deeper [Deputy alternatives guide for healthcare](/blog/deputy-alternatives-healthcare).
 
 **Ratings:** G2: 4.6/5 (1,400+ reviews). Capterra: 4.6/5 (765 reviews).
 
