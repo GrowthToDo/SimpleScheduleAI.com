@@ -35,14 +35,41 @@ metadata:
 - [Why do automated scheduling tools still require manual work?](#why-do-automated-scheduling-tools-still-require-manual-work)
 - [What does scheduling automation look like in real reviews?](#what-does-scheduling-automation-look-like-in-real-reviews)
 - [What should a CAH expect from genuinely automated scheduling?](#what-should-a-cah-expect-from-genuinely-automated-scheduling)
-- [How SimpleScheduleAI's automation is different](#how-simplescheduleais-automation-is-different)
+- [How is SimpleScheduleAI's automation different?](#how-is-simplescheduleais-automation-different)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 A hospital administrator in West Texas demoed three nurse scheduling platforms in the same week. All three described themselves as "AI-powered" and "automated." In the demos, each platform showed a schedule populating quickly, colors filling in, conflicts flagging. The demos looked similar.
 
 After implementation, she discovered that each tool required different amounts of ongoing manual work. One still had her nurse manager building the schedule manually with the software as a framework. Another automated shift-filling but produced overtime violations that required manual correction. The third was the closest to what the demo implied, but only after six weeks of setup to configure the automation rules correctly.
 
-The word "automated" had appeared in all three sales conversations. The actual automation was different in each case. Understanding the difference before buying is worth more than any feature comparison.
+The word "automated" had appeared in all three sales conversations. The actual automation was different in each case. Understanding the difference before buying is worth more than any feature comparison. This same evaluation pattern, where vendor automation looks identical in a demo but diverges sharply after deployment, is the subject of our companion analysis on [AI vs. traditional nurse scheduling for Critical Access Hospitals](/blog/ai-nurse-scheduling-vs-traditional).
+
+<div class="not-prose my-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6">
+  <p class="text-center text-sm font-bold text-slate-900 dark:text-slate-100 mb-1">Marketed Automation vs. Actual Automation</p>
+  <p class="text-center text-xs text-slate-500 dark:text-slate-400 mb-5">What the demo shows and what the nurse manager experiences after week 6</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 p-4">
+      <p class="text-sm font-bold text-slate-900 dark:text-slate-100 mb-3">What the demo shows</p>
+      <ul class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 list-disc list-inside">
+        <li>Schedule populates in seconds with color-coded shifts</li>
+        <li>Conflict warnings flag in real time</li>
+        <li>"AI-powered" recommendations appear automatically</li>
+        <li>Callout coverage runs as a clean one-click workflow</li>
+        <li>Reports and dashboards already populated</li>
+      </ul>
+    </div>
+    <div class="rounded-lg border-2 border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20 p-4">
+      <p class="text-sm font-bold text-blue-900 dark:text-blue-200 mb-3">What the nurse manager experiences</p>
+      <ul class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 list-disc list-inside">
+        <li>4 to 8 weeks of rules configuration before output is reliable</li>
+        <li>Overtime violations slip through and need manual correction</li>
+        <li>Every exception (returning leave, surge week, holiday) goes back to manual</li>
+        <li>Callout coverage still ends with the manager on the phone</li>
+        <li>Rule maintenance continues every time a nurse joins or changes role</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ## What Does "Automated Nurse Scheduling" Actually Mean?
 
@@ -99,7 +126,7 @@ A useful diagnostic question for any platform: after implementation, how many ho
   </table>
 </div>
 
-Most tools marketed as "automated" operate at Level 3. They significantly reduce scheduling time compared to pure spreadsheets, but the nurse manager is still in the scheduling business. Level 4 tools exist, but they require substantial configuration time to set up the rules correctly before the auto-generation is reliable. Level 5 is a service model, not a software model.
+Most tools marketed as "automated" operate at Level 3. They significantly reduce scheduling time compared to [pure spreadsheets](/blog/nurse-scheduling-software-vs-excel), but the nurse manager is still in the scheduling business. Level 4 tools exist, but they require substantial configuration time to set up the rules correctly before the auto-generation is reliable. Level 5 is a service model, not a software model, and the decision between software and a managed service for a small hospital is covered in depth in [managed service vs. scheduling software](/blog/managed-service-vs-scheduling-software).
 
 ## Why Do Automated Scheduling Tools Still Require Manual Work?
 
@@ -115,7 +142,7 @@ A Capterra reviewer of QGenda captures this precisely:
 >
 > Courtney D., Manager of Employee and Physician Relations, May 10, 2024, [Capterra](https://www.capterra.com/p/152937/QGenda-Advanced-Scheduling/reviews/)
 
-The automation exists. The gap is between what the automation can handle and what the real scheduling situation requires.
+The automation exists. The gap is between what the automation can handle and what the real scheduling situation requires. The broader pattern, and the platforms small hospitals tend to consider next, is covered in our roundup of [QGenda alternatives for small hospitals](/blog/qgenda-alternatives).
 
 ## What Does Scheduling Automation Look Like in Real Reviews?
 
@@ -123,7 +150,7 @@ Named reviewer accounts on the largest scheduling platforms point to the same ga
 
 On QGenda, Courtney D. (Manager of Employee and Physician Relations) wrote on [Capterra](https://www.capterra.com/p/152937/QGenda-Advanced-Scheduling/reviews/) on May 10, 2024 that she stopped using the automation because the rules setup had hiccups she could not get to stick.
 
-On ShiftWizard, Erika A. (Registered Nurse) wrote on [Capterra](https://www.capterra.com/p/178376/ShiftWizard/reviews/) on July 9, 2024 that the platform "can be slow and glitchy, making inputting schedule difficult and stressful." The platform reduces scheduling time meaningfully, but the nurse manager is still operating the tool and making decisions. The automation helps; it does not replace.
+On ShiftWizard, Erika A. (Registered Nurse) wrote on [Capterra](https://www.capterra.com/p/178376/ShiftWizard/reviews/) on July 9, 2024 that the platform "can be slow and glitchy, making inputting schedule difficult and stressful." The platform reduces scheduling time meaningfully, but the nurse manager is still operating the tool and making decisions. The automation helps; it does not replace. The trade-offs hospitals weigh against ShiftWizard at this same level of automation are laid out in our [ShiftWizard alternatives guide](/blog/shiftwizard-alternatives).
 
 The pattern in these accounts: tools that market automation at Level 3 are delivering what they promise. The mismatch is when buyers expect Level 4 or Level 5 based on the marketing and receive Level 3 in practice. The time savings are real. The claim that "the scheduling is done for you" is not.
 
@@ -131,17 +158,36 @@ The pattern in these accounts: tools that market automation at Level 3 are deliv
 
 A CAH with no dedicated scheduling coordinator should expect genuinely automated scheduling to mean: a complete draft schedule exists before the nurse manager starts her week, ready for review. Not a framework for building a schedule. Not a set of tools that makes building faster. A draft.
 
-The questions that reveal the actual level of automation:
+The four questions below reveal the actual level of automation behind any vendor pitch. Ask each one in a demo. The answers tell you which level the platform really operates at.
 
-**"Walk me through a Monday morning. What does the nurse manager do when the new schedule week starts?"** If the answer describes the manager opening the system and assigning shifts, the automation is Level 1-3. If the answer describes the manager reviewing a pre-built draft, the automation is Level 4-5.
+<div class="not-prose my-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-6">
+  <p class="text-center text-sm font-bold text-slate-900 dark:text-slate-100 mb-1">Four Demo Questions That Reveal True Automation Level</p>
+  <p class="text-center text-xs text-slate-500 dark:text-slate-400 mb-5">Ask each one. The answer maps directly to Level 1-3 (tool) or Level 4-5 (automated)</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 p-4">
+      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 1 — Monday morning</p>
+      <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"Walk me through what the nurse manager does on a Monday morning when the new schedule week starts."</p>
+      <p class="text-xs text-slate-600 dark:text-slate-400">If the answer describes the manager opening the system and assigning shifts, the automation is Level 1-3. If the answer describes the manager reviewing a pre-built draft, it is Level 4-5.</p>
+    </div>
+    <div class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 p-4">
+      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 2 — Callout coverage</p>
+      <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"If a nurse calls out Tuesday night, what is the process for finding a replacement?"</p>
+      <p class="text-xs text-slate-600 dark:text-slate-400">If the answer describes the manager checking the system manually, the automation is Level 1-3. If a ranked shortlist is already available, it is Level 4-5.</p>
+    </div>
+    <div class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 p-4">
+      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 3 — Calibration time</p>
+      <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"How long after implementation does it take before the auto-generated schedules require no correction?"</p>
+      <p class="text-xs text-slate-600 dark:text-slate-400">An honest answer reveals how much setup work the "automation" requires before it is actually reliable.</p>
+    </div>
+    <div class="rounded-lg border-2 border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20 p-4">
+      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 4 — Weekly hours (most diagnostic)</p>
+      <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"How many hours per week does a typical CAH nurse manager spend on scheduling after full implementation?"</p>
+      <p class="text-xs text-slate-600 dark:text-slate-400">The number tells you the actual automation level more directly than any feature description.</p>
+    </div>
+  </div>
+</div>
 
-**"If a nurse calls out Tuesday night, what is the process for finding a replacement?"** If the answer describes the manager checking the system manually, the automation is Level 1-3. If a ranked shortlist is already available, it is Level 4-5.
-
-**"How long after implementation does it take before the auto-generated schedules require no correction?"** An honest answer reveals how much setup work the "automation" requires before it is actually reliable.
-
-**"How many hours per week does a typical CAH nurse manager spend on scheduling after full implementation?"** The number tells you the actual automation level more directly than any feature description.
-
-## How SimpleScheduleAI's Automation Is Different
+## How Is SimpleScheduleAI's Automation Different?
 
 SimpleScheduleAI operates at Level 5: a managed service where a specialist builds the schedule draft, not a software tool that helps the nurse manager build it faster. The full delivery workflow is documented on the [how it works page](/how-it-works).
 
@@ -151,7 +197,7 @@ For callout coverage, a pre-ranked replacement list is maintained with certifica
 
 This is not a software tool with automation features. It is a different operating model. The scheduling function is handled by a specialist; the nurse manager retains clinical judgment and final approval authority.
 
-One honest limitation: the managed service model requires comfort delegating draft generation. For nurse managers who prefer direct control over every scheduling decision, or who have specific scheduling rules the specialist cannot easily replicate, a self-serve platform at Level 3 may be a better fit.
+One honest limitation: the managed service model requires comfort delegating draft generation. For nurse managers who prefer direct control over every scheduling decision, or who have specific scheduling rules the specialist cannot easily replicate, a self-serve platform at Level 3 may be a better fit. For a side-by-side look at the leading self-serve options for small hospitals, see our [best nurse scheduling software guide for 2026](/blog/best-nurse-scheduling-software-2026).
 
 For the broader context on [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) and what CAH-scale requirements look like, the feature guide covers each requirement. The operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), bed-count limits, CMS conditions of participation, and federal overtime calculation, are covered in the pillar guide.
 
