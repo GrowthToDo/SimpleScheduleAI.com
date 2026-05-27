@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-05-18T00:00:00Z
-updateDate: 2026-05-18T00:00:00Z
+draft: false
+publishDate: 2026-05-27T00:00:00Z
+updateDate: 2026-05-27T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Smart Square Alternatives for Small Rural Hospitals (2026)'
 excerpt: >
@@ -202,7 +202,7 @@ The tradeoff relative to a managed service is ownership. ShiftWizard is still a 
 - CMS §485.635 audit-trail handling and FLSA 8-and-80 tracking for Critical Access Hospitals are not documented on the product page; confirm directly with the vendor which compliance capabilities are covered in your tier
 - Public review counts on G2 and Capterra were not retrievable for verification this cycle; request current customer references and ratings directly from ShiftWizard
 
-**Verdict:** A reasonable self-serve alternative for a small hospital that wants a hospital-nursing tool at a scale below a health-system platform. CAHs with active CMS survey obligations should verify compliance handling directly with the vendor before deciding.
+**Verdict:** A reasonable self-serve alternative for a small hospital that wants a hospital-nursing tool at a scale below a health-system platform. CAHs with active CMS survey obligations should verify compliance handling directly with the vendor before deciding. Hospitals weighing ShiftWizard against its closest competitors at this tier can compare options in our [ShiftWizard alternatives guide](/blog/shiftwizard-alternatives).
 
 **Ratings:** Public G2 and Capterra figures not retrievable for verification this cycle. Verify current ratings directly with the vendor.
 
@@ -230,7 +230,7 @@ The tradeoff is depth. NurseGrid is focused on unit-level scheduling and staff c
 - CMS §485.635 documentation and FLSA 8-and-80 overtime tracking for Critical Access Hospitals are not documented on the product page; confirm directly with the vendor
 - Public review counts were not retrievable for verification this cycle; request current ratings and a hospital reference from the vendor
 
-**Verdict:** A practical fit for a small rural hospital that wants unit-level scheduling and a nurse-facing app rather than enterprise depth. CAHs that need automated compliance documentation should confirm what NurseGrid covers before relying on it.
+**Verdict:** A practical fit for a small rural hospital that wants unit-level scheduling and a nurse-facing app rather than enterprise depth. CAHs that need automated compliance documentation should confirm what NurseGrid covers before relying on it. For a direct head-to-head of NurseGrid and its closest peers at the unit-scheduling tier, see our [NurseGrid alternatives roundup](/blog/nursegrid-alternatives).
 
 **Ratings:** Public G2 and Capterra figures not retrievable for verification this cycle. Verify current ratings directly with the vendor.
 
@@ -259,7 +259,7 @@ The tradeoff is that Deputy is a general workforce scheduling tool rather than a
 - Credential tracking and clinical compliance documentation are not described as core features on Deputy's healthcare page; verify current capabilities directly with the vendor
 - Documented industry focus skews toward retail, hospitality, and food service rather than acute hospital nursing
 
-**Verdict:** A strong general workforce scheduling tool and a simple, low-cost option for small hospitals with low scheduling complexity. Hospitals that need clinical compliance automation should verify Deputy's current healthcare-tier capabilities directly with the vendor.
+**Verdict:** A strong general workforce scheduling tool and a simple, low-cost option for small hospitals with low scheduling complexity. Hospitals that need clinical compliance automation should verify Deputy's current healthcare-tier capabilities directly with the vendor. For a deeper look at Deputy specifically in healthcare contexts, see our [Deputy alternatives for healthcare guide](/blog/deputy-alternatives-healthcare).
 
 **Ratings:** Capterra: 4.6/5 (765 reviews).
 
@@ -327,7 +327,7 @@ For a small rural hospital this is a middle option: more healthcare compliance d
   >
   > Daniel C., CFO, Hospital & Health Care, March 16, 2021, Capterra
 
-- **CMS Reporting.** Some users report issues with PBJ reporting for CMS compliance.
+- **CMS Reporting.** A reviewer reports issues with PBJ reporting for CMS compliance.
 
   > "Not the best at calculating PBJ for CMS - had some issues that cost money and star ratings."
   >
@@ -335,7 +335,7 @@ For a small rural hospital this is a middle option: more healthcare compliance d
 
 - Vendor positioning skews toward post-acute care; hospital-acute reference customers should be requested directly. The Capterra sample is small (6 reviews); ratings on a single source with few reviews are less reliable than larger samples
 
-**Verdict:** A middle option for small hospitals growing toward 75-100 beds with capacity for a 3-4 month implementation. CAHs at 25-bed scale should weigh whether the implementation effort fits their administrative bandwidth.
+**Verdict:** A middle option for small hospitals growing toward 75-100 beds with capacity for a 3-4 month implementation. CAHs at 25-bed scale should weigh whether the implementation effort fits their administrative bandwidth. For peer platforms in the same post-acute and LTC-leaning category, see our [Smartlinx alternatives guide](/blog/smartlinx-alternatives).
 
 **Ratings:** Capterra: 4.5/5 (6 reviews; small sample).
 
