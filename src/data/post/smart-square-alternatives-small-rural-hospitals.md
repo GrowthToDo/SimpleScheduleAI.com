@@ -57,7 +57,7 @@ Here is how the alternatives compare before we go deeper.
 
 ## Why Small Hospitals Look for Smart Square Alternatives?
 
-Small rural hospitals look for Smart Square alternatives because the product is built for large health systems, not single-facility Critical Access Hospitals. symplr's own materials describe Smart Square as AI-driven workforce optimization for health systems, and Capterra reviewers hold large-system roles such as System Administrator, Labor Management Analyst, and Director of Labor Management. A 25-bed hospital rarely has those roles on staff, and symplr does not publicly document a Critical Access Hospital reference customer.
+Smart Square is built for large multi-facility health systems, and the documented customer base reflects that. symplr describes Smart Square as AI-driven workforce optimization for health systems, and Capterra reviewers hold large-system roles such as System Administrator, Labor Management Analyst, and Director of Labor Management. A 25-bed Critical Access Hospital rarely has those roles on staff, and symplr does not publicly document a CAH reference customer. The gap between what Smart Square is built for and what a single CAH operates at is structural, not a matter of feature differences.
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/SmartSquare.png" alt="symplr Smart Square enterprise nurse and staff scheduling platform for health systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
