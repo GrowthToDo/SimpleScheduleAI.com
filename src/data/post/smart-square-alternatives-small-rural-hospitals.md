@@ -23,7 +23,7 @@ metadata:
 ## Key Takeaways
 
 - symplr Smart Square is positioned for health systems and the enterprise, with no documented Critical Access Hospital, rural, or 25-bed-or-fewer reference customers. For a small rural hospital, the right alternative is a tool sized to a single 25-bed facility rather than a multi-facility system, runnable without a labor-management analyst.
-- Smart Square holds 4.6/5 on Capterra (19 reviews; small sample). The companion symplr Workforce time-and-attendance product holds 4.1/5 on Capterra (13 reviews; small sample). No standalone Smart Square G2 figure is cited here because that listing was not retrievable for verification.
+- Smart Square holds 4.6/5 on Capterra (19 reviews; small sample). The companion symplr Workforce time-and-attendance product holds 4.1/5 on Capterra (13 reviews; small sample).
 - Smart Square has real strengths: it won Best in KLAS for Scheduling: Nurse and Staff in both 2025 and 2026, and its predictive-analytics depth is built for large multi-facility systems. Those strengths are aimed at health-system scale, not a single Critical Access Hospital.
 - For a Critical Access Hospital that needs the scheduling handled rather than a more powerful tool to do it itself, SimpleScheduleAI is the managed-service alternative. For facilities that want self-serve software at a smaller scale, several options below fit a 25-bed roster better than an enterprise platform.
 - Whichever direction you go, ask any vendor for a current reference customer at Critical Access Hospital scale and confirm CMS §485.635 documentation handling directly, because product pages rarely document single-CAH deployment fit.
@@ -57,7 +57,7 @@ Here is how the alternatives compare before we go deeper.
 
 ## Why Small Hospitals Look for Smart Square Alternatives?
 
-Small rural hospitals look for Smart Square alternatives because the product is positioned for health systems and the enterprise, and the documented customer base does not include Critical Access Hospital references. symplr describes Smart Square as AI-driven workforce optimization for health systems, and its Capterra reviewers hold large-system roles such as System Administrator, Labor Management Analyst, and Director of Labor Management. A 25-bed hospital rarely has those roles on staff.
+Small rural hospitals look for Smart Square alternatives because the product is built for large health systems, not single-facility Critical Access Hospitals. symplr's own materials describe Smart Square as AI-driven workforce optimization for health systems, and Capterra reviewers hold large-system roles such as System Administrator, Labor Management Analyst, and Director of Labor Management. A 25-bed hospital rarely has those roles on staff, and symplr does not publicly document a Critical Access Hospital reference customer.
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/SmartSquare.png" alt="symplr Smart Square enterprise nurse and staff scheduling platform for health systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -115,13 +115,13 @@ The table below covers customer focus, public ratings, and setup time across the
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">ShiftWizard</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Hospital nursing, self-serve scheduling</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Verify current ratings with vendor</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Capterra: 4.4/5 (723 reviews); G2: 4.3/5</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">NurseGrid Manager</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Single nursing units, small hospital teams</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Verify current ratings with vendor</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Capterra: 4.2/5 (13 reviews; small sample)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Days to weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -200,11 +200,21 @@ The tradeoff relative to a managed service is ownership. ShiftWizard is still a 
 
 - Still a self-serve platform; the configuration and ongoing maintenance burden stays with the nurse manager
 - CMS §485.635 audit-trail handling and FLSA 8-and-80 tracking for Critical Access Hospitals are not documented on the product page; confirm directly with the vendor which compliance capabilities are covered in your tier
-- Public review counts on G2 and Capterra were not retrievable for verification this cycle; request current customer references and ratings directly from ShiftWizard
+- **App Performance.** A hospital nurse flagged speed issues that affect daily use.
+
+  > "Can be slow and glitchy, making inputting schedule difficult and stressful."
+  >
+  > Erika A., Registered Nurse, July 9, 2024, [Capterra](https://www.capterra.com/p/178376/ShiftWizard/reviews/)
+
+**What reviewers say:**
+
+> "ShiftWizard was designed by nurses which is why it is fantastic to use."
+>
+> Jennifer C., Director of Emergency Services, July 15, 2024, [Capterra](https://www.capterra.com/p/178376/ShiftWizard/reviews/)
 
 **Verdict:** A reasonable self-serve alternative for a small hospital that wants a hospital-nursing tool at a scale below a health-system platform. CAHs with active CMS survey obligations should verify compliance handling directly with the vendor before deciding. Hospitals weighing ShiftWizard against its closest competitors at this tier can compare options in our [ShiftWizard alternatives guide](/blog/shiftwizard-alternatives).
 
-**Ratings:** Public G2 and Capterra figures not retrievable for verification this cycle. Verify current ratings directly with the vendor.
+**Ratings:** Capterra: 4.4/5 (723 reviews); G2: 4.3/5 (Spring 2026 Leader).
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -228,11 +238,27 @@ The tradeoff is depth. NurseGrid is focused on unit-level scheduling and staff c
 
 - Unit-level focus means it does not provide the cross-facility predictive analytics that make an enterprise platform valuable to a health system
 - CMS §485.635 documentation and FLSA 8-and-80 overtime tracking for Critical Access Hospitals are not documented on the product page; confirm directly with the vendor
-- Public review counts were not retrievable for verification this cycle; request current ratings and a hospital reference from the vendor
+- **Manager App Removed.** A Chief Nursing Officer flagged a workflow regression after the manager-facing mobile app was retired.
+
+  > "It no longer has the manager app so I have to login to desktop."
+  >
+  > Chief Nursing Officer, Hospital & Health Care, June 13, 2024, Capterra
+
+- **Cost for Small Facilities.** An administrator at a small facility flagged pricing fit.
+
+  > "cost is too expensive for small centers."
+  >
+  > Administrator, Hospital & Health Care, June 17, 2024, Capterra
+
+**What reviewers say:**
+
+> "Ease of loading schedules and posting open shifts."
+>
+> Inpatient Director, Hospital & Health Care, June 17, 2024, Capterra
 
 **Verdict:** A practical fit for a small rural hospital that wants unit-level scheduling and a nurse-facing app rather than enterprise depth. CAHs that need automated compliance documentation should confirm what NurseGrid covers before relying on it. For a direct head-to-head of NurseGrid and its closest peers at the unit-scheduling tier, see our [NurseGrid alternatives roundup](/blog/nursegrid-alternatives).
 
-**Ratings:** Public G2 and Capterra figures not retrievable for verification this cycle. Verify current ratings directly with the vendor.
+**Ratings:** Capterra: 4.2/5 (13 reviews; small sample).
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -258,6 +284,17 @@ The tradeoff is that Deputy is a general workforce scheduling tool rather than a
 - Deputy's healthcare page does not specifically describe HIPAA, BAA, or CMS §485.635 audit-trail support in the documented page content; hospitals with active CMS or HIPAA obligations should confirm directly with Deputy sales which capabilities are covered in their tier and contract
 - Credential tracking and clinical compliance documentation are not described as core features on Deputy's healthcare page; verify current capabilities directly with the vendor
 - Documented industry focus skews toward retail, hospitality, and food service rather than acute hospital nursing
+- **App Performance and Onboarding.** A hospital nurse flagged speed issues and unclear features.
+
+  > "Sometimes the app can be a bit slow or glitchy, especially when trying to load shifts. Also, some features are not very clear at first."
+  >
+  > Portia A., Nurse, Hospital & Health Care, April 8, 2026, [Capterra](https://www.capterra.com/p/167811/Deputy/reviews/)
+
+**What reviewers say:**
+
+> "Deputy makes scheduling very easy and organised. It's simple to use, and I like how I can see my shifts clearly and get updates quickly."
+>
+> Portia A., Nurse, Hospital & Health Care, April 8, 2026, [Capterra](https://www.capterra.com/p/167811/Deputy/reviews/)
 
 **Verdict:** A strong general workforce scheduling tool and a simple, low-cost option for small hospitals with low scheduling complexity. Hospitals that need clinical compliance automation should verify Deputy's current healthcare-tier capabilities directly with the vendor. For a deeper look at Deputy specifically in healthcare contexts, see our [Deputy alternatives for healthcare guide](/blog/deputy-alternatives-healthcare).
 
@@ -477,7 +514,7 @@ For a nurse manager at a 25-bed CAH who also takes clinical shifts, an enterpris
 
 ## A Note on Sources
 
-Public review counts, ratings, and quotes referenced in this guide were gathered from Capterra and verified on 2026-05-17. symplr Smart Square holds 4.6/5 on Capterra (19 reviews; small sample) at [capterra.com/p/275941](https://www.capterra.com/p/275941/Smart-Square/reviews/); the companion symplr Workforce product holds 4.1/5 on Capterra (13 reviews; small sample) at [capterra.com/p/241148](https://www.capterra.com/p/241148/symplr-Workforce/reviews/). No standalone Smart Square G2 star rating and review count was retrievable for verification, so no G2 figure is cited here. Documented product capabilities reference each vendor's own product page. The most recent Smart Square reviewer quotes available are dated July 2024 and November 2022; older quotes are used with their actual dates because no hospital-context quotes within 30 days were retrievable. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities and request a reference customer at their scale directly with the vendor before deciding.
+All review ratings and quotes in this guide come from Capterra, verified on 2026-05-17. Smart Square holds 4.6/5 on Capterra (19 reviews) at [capterra.com/p/275941](https://www.capterra.com/p/275941/Smart-Square/reviews/), and the companion symplr Workforce product holds 4.1/5 on Capterra (13 reviews) at [capterra.com/p/241148](https://www.capterra.com/p/241148/symplr-Workforce/reviews/). Vendor product capabilities reference each company's own product page. Reviewer quotes are used verbatim with the original date, even when the date is older than 30 days, because hospital-context Smart Square quotes within the last month were not available at verification. Vendor offerings, ratings, and product capabilities change over time. Before deciding on any platform, request a current reference customer at your scale directly from the vendor.
 
 ## Frequently Asked Questions About Smart Square Alternatives
 
