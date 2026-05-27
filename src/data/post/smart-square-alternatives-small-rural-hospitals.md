@@ -22,7 +22,7 @@ metadata:
 
 ## Key Takeaways
 
-- symplr Smart Square is positioned for health systems and the enterprise, with no documented Critical Access Hospital, rural, or 25-bed-or-fewer reference customers. For a small rural hospital, the right alternative is a tool sized to a single 25-bed facility rather than a multi-facility system, runnable without a labor-management analyst.
+- symplr Smart Square is positioned for health systems and the enterprise, with no documented Critical Access Hospital, rural, or 25-bed-or-fewer reference customers. For a Critical Access Hospital, the right alternative is a tool sized to a single 25-bed facility rather than a multi-facility system, runnable without a labor-management analyst.
 - Smart Square holds 4.6/5 on Capterra (19 reviews; small sample). The companion symplr Workforce time-and-attendance product holds 4.1/5 on Capterra (13 reviews; small sample).
 - Smart Square has real strengths: it won Best in KLAS for Scheduling: Nurse and Staff in both 2025 and 2026, and its predictive-analytics depth is built for large multi-facility systems. Those strengths are aimed at health-system scale, not a single Critical Access Hospital.
 - For a Critical Access Hospital that needs the scheduling handled rather than a more powerful tool to do it itself, SimpleScheduleAI is the managed-service alternative. For facilities that want self-serve software at a smaller scale, several options below fit a 25-bed roster better than an enterprise platform.
@@ -45,7 +45,9 @@ metadata:
 - [A Note on Sources](#a-note-on-sources)
 - [Frequently Asked Questions About Smart Square Alternatives](#frequently-asked-questions-about-smart-square-alternatives)
 
-For a small rural hospital at 25 beds or fewer, the best Smart Square alternatives are scheduling tools sized to a single facility rather than a multi-hospital system, and runnable without a labor-management analyst on staff. SimpleScheduleAI is the managed-service option when the goal is removing the scheduling work entirely. ShiftWizard and NurseGrid Manager are the self-serve hospital-nursing options at a scale a Critical Access Hospital can actually staff.
+For a Critical Access Hospital, the best Smart Square alternatives are scheduling tools sized to a single 25-bed facility rather than a multi-hospital system, and runnable without a labor-management analyst on staff. SimpleScheduleAI is the managed-service option when the goal is removing the scheduling work entirely. ShiftWizard and NurseGrid Manager are the self-serve hospital-nursing options at a scale a CAH can actually staff.
+
+A note on scope: this guide uses "small rural hospital" as the broad SEO category, but the primary fit case is the Critical Access Hospital, the federally designated facility class with 25 inpatient beds or fewer, a rural location, and CMS §485.635 staffing documentation obligations. Where a section applies more broadly (Smartlinx targets 50-100 beds, for example), the bed-size range is named directly.
 
 symplr Smart Square is an AI-driven nurse and staff scheduling platform with predictive analytics, real-time staffing adjustments, and patented open-shift management ([symplr.com](https://www.symplr.com)). It was formerly Avantas Smart Square and was acquired by symplr from AMN Healthcare in July 2025. symplr describes the product as workforce optimization for health systems and states it is trusted in 9 of 10 U.S. hospitals ([symplr.com](https://www.symplr.com)). That positioning is the heart of the question for a small rural hospital.
 
