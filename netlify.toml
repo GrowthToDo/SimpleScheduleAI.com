@@ -30,13 +30,6 @@
   status = 301
   force = true
 
-# Draft post URL crawled from an old sitemap — redirect to closest live post
-[[redirects]]
-  from = "/blog/12-hour-hospital-shifts-scheduling"
-  to = "/blog/best-nurse-scheduling-software-2026"
-  status = 301
-  force = true
-
 # /warm-intro redirects to the canonical /ask page
 [[redirects]]
   from = "/warm-intro"
