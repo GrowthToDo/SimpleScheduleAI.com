@@ -77,12 +77,13 @@ team where each full-time nurse works 3 shifts per week (42 shifts over 14 days
 across the team), the arithmetic seems comfortable. It isn't: not every nurse is
 available every week, and weekends require equal coverage to weekdays.
 
-The weekend problem is where small-team 12-hour scheduling breaks down. With 6
-weekend days in a 14-day period, and typically 2-3 nurses needed per shift, you need
-12-18 weekend shifts covered. On a 15-nurse team where everyone is targeted at roughly
-equal weekend burden, each nurse should work 1-2 weekend shifts per 14-day period. If
-a few nurses consistently avoid weekends, the rest carry 3-4, which becomes a fairness
-and burnout issue quickly.
+The weekend problem is where small-team 12-hour scheduling breaks down. A 14-day
+period contains two weekends, or 4 weekend days, and each one still needs both a day
+and a night shift covered. At 2-3 nurses per shift, that is roughly 16-24 weekend
+nurse-shifts to fill every period. On a 15-nurse team where everyone is targeted at
+roughly equal weekend burden, each nurse should work 1-2 weekend shifts per 14-day
+period. If a few nurses consistently avoid weekends, the rest end up carrying 3-4
+weekend shifts each, which becomes a fairness and burnout issue quickly.
 
 **Rotation design for 12-hour shifts.** The most common 12-hour schedule patterns for
 small hospitals are: the 3-on/4-off/4-on/3-off rotating pattern, the straight
@@ -117,8 +118,10 @@ fatigue](https://www.nursingworld.org/practice-policy/nurse-staffing/) recommend
 on consecutive long shifts for patient safety reasons. At a CAH with limited
 staffing, this recommendation is frequently violated informally, a nurse agrees to
 cover one more shift "just this once," and it happens more than once. The downstream
-cost of that pattern, in overtime and turnover, is the same hidden burden we break down
-in [the healthcare scheduling crisis](/blog/healthcare-scheduling-crisis).
+cost of that pattern is real money and lost staff: premium overtime pay on the books,
+and a higher risk that a burned-out nurse leaves, which at a CAH can cost tens of
+thousands of dollars to replace. That hidden burden is the same one we break down in
+[the healthcare scheduling crisis](/blog/healthcare-scheduling-crisis).
 
 The night shift amplification effect is specific to rotating schedules. Nurses who
 rotate between day and night shifts experience circadian disruption that permanent
