@@ -168,7 +168,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 - CMS §485.635 documentation is automatic, not a manual export process before each survey
 - Callout shortlist is ranked by overtime risk without any manual calculation from the manager
 - Excel-based roster upload means the transition from Aladtec does not require IT involvement
-- Texas overtime compliance (FLSA 8-and-80 rule) and CMS CAH requirements are built in as defaults
+- Texas overtime compliance (FLSA overtime thresholds) and CMS CAH requirements are built in as defaults
 
 **Key limitations:**
 

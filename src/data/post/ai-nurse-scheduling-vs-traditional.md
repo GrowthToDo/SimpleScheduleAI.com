@@ -92,7 +92,7 @@ What does not change is everything that depends on context the system cannot see
     <div class="rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/30 p-4">
       <p class="text-sm font-bold text-blue-900 dark:text-blue-200 mb-3">AI handles (computation)</p>
       <ul class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 list-disc list-inside">
-        <li>Overtime threshold tracking (FLSA 8-and-80)</li>
+        <li>Overtime threshold tracking (FLSA)</li>
         <li>Credential and certification verification</li>
         <li>Minimum coverage enforcement per shift</li>
         <li>Callout replacement ranking</li>
@@ -133,7 +133,7 @@ The largest impact is not schedule construction. It is callout replacement, wher
 
 **Callout replacement ranking.** When a nurse calls out, an AI system generates a ranked list of available replacements cross-referenced against overtime thresholds and credential requirements in under two minutes. The manual equivalent forces the nurse manager to check hours for each available nurse, verify credentials, and mentally rank the list while managing a patient floor. At a 25-bed CAH with multiple callout events most weeks, this is the single largest time recovery in the manager's week.
 
-**Consistent overtime enforcement.** Traditional scheduling produces overtime surprises because no one can reliably track cumulative hours across a 14-day pay period while also building the grid. AI scheduling treats the [FLSA 8-and-80 threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-hospital-residential-care) as a hard constraint in every schedule generation and every callout ranking, so the threshold is checked before an assignment is ever offered.
+**Consistent overtime enforcement.** Traditional scheduling produces overtime surprises because no one can reliably track cumulative hours across a 14-day pay period while also building the grid. AI scheduling treats the [applicable FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-hospital-residential-care) as a hard constraint in every schedule generation and every callout ranking, so the threshold is checked before an assignment is ever offered.
 
 **Schedule construction time.** A 4-week schedule for a 20-nurse roster takes 6 to 10 hours to build by hand. AI scheduling reduces that to 1 to 2 hours of review and adjustment. The construction work is done by the system; the manager's time goes to judgment, not arithmetic.
 
@@ -280,7 +280,7 @@ For most small hospitals, yes, with one qualification. AI scheduling is better a
 
 **How does AI scheduling handle FLSA overtime for nurses?**
 
-AI scheduling built for healthcare applies the FLSA 8-and-80 rule, which lets overtime be calculated on an 80-hour, 14-day basis instead of the standard 40-hour week. The system tracks each nurse's running total in the current period and blocks any assignment or callout replacement that would cross the threshold, removing the end-of-period overtime surprise.
+AI scheduling built for healthcare tracks each nurse's running hours against the applicable FLSA overtime threshold and blocks any assignment or callout replacement that would cross it, removing the end-of-period overtime surprise. (The FLSA 8-and-80 method, which calculates overtime on an 80-hour, 14-day basis instead of the standard 40-hour week, is one such threshold a healthcare employer can adopt in writing.)
 
 **Can AI scheduling replace the nurse manager's judgment?**
 

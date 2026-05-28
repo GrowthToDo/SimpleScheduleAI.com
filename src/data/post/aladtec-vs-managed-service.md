@@ -89,7 +89,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Texas overtime compliance</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Manual configuration required</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Built-in default (FLSA 8-and-80 rule)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Built-in default (FLSA overtime thresholds)</td>
       </tr>
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Config maintenance as staff changes</td>
@@ -164,7 +164,7 @@ A managed scheduling service is not scheduling software with extra support. It i
 With SimpleScheduleAI, the process works like this:
 
 1. The nurse manager shares the staff roster with SimpleScheduleAI: names, credentials, availability, and any scheduling constraints. A standard Excel file is all that is needed to start.
-2. The SimpleScheduleAI team builds the first schedule within 48 hours, applying CMS documentation requirements, FLSA 8-and-80 overtime logic, and credential-based shift assignments.
+2. The SimpleScheduleAI team builds the first schedule within 48 hours, applying CMS documentation requirements, FLSA overtime thresholds, and credential-based shift assignments.
 3. The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff.
 4. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a credential gap. They call from the top of the list.
 5. As staff join or leave, credentials change, or availability patterns shift, the nurse manager sends the update and the SimpleScheduleAI team handles the rest. The nurse manager does not administer a system. They manage a roster.
@@ -240,7 +240,7 @@ Callout handling is the most time-sensitive scheduling task. When a nurse calls 
 
 With Aladtec, the nurse manager reviews the staff roster, identifies who is available and who has the right credentials, mentally calculates who is at risk of hitting overtime, and starts calling. Aladtec provides the scheduling calendar as a reference, but the OT calculation and credential check are the nurse manager's responsibility.
 
-With SimpleScheduleAI, the nurse manager opens the callout dashboard and sees a ranked list. The top candidates are sorted by: credential match, hours worked this pay period (to avoid triggering the FLSA 8-and-80 threshold), and historical response rate. The nurse manager calls from the top of the list.
+With SimpleScheduleAI, the nurse manager opens the callout dashboard and sees a ranked list. The top candidates are sorted by: credential match, hours worked this pay period (to avoid triggering the FLSA overtime threshold), and historical response rate. The nurse manager calls from the top of the list.
 
 The difference is about 20-30 minutes per callout event. For a CAH that averages 2-3 callouts per week, that is an hour per week, 50 hours per year.
 
@@ -440,9 +440,9 @@ The decision between self-serve scheduling software and a managed service become
 
 Aladtec can be configured to produce exports that are useful for CMS documentation. CMS §485.635 Conditions of Participation documentation templates are not documented as a built-in Aladtec feature; verify current capabilities with Aladtec directly. Creating compliant documentation typically requires building custom report templates or maintaining a parallel documentation system. For a Critical Access Hospital where the nurse manager would need to build and maintain that configuration, it adds to the implementation burden.
 
-**How does SimpleScheduleAI handle the FLSA 8-and-80 overtime rule for hospital employers?**
+**How does SimpleScheduleAI handle overtime for hospital employers?**
 
-SimpleScheduleAI applies the FLSA Section 7(j) 8-and-80 rule by default for healthcare employer configurations. This means a nurse triggering overtime is calculated against both the daily 8-hour threshold and the 80-hour bi-weekly threshold, whichever is higher, rather than the standard 40-hour workweek threshold. Based on Aladtec's documented configuration options, overtime thresholds are admin-configurable; whether the FLSA Section 7(j) 8-and-80 healthcare rule is a pre-configured option should be confirmed with Aladtec directly before deploying at a Texas CAH.
+SimpleScheduleAI applies FLSA overtime thresholds by default and tracks each nurse's running hours so a draft schedule does not silently cross an overtime line before the manager reviews it. If your facility has adopted the FLSA Section 7(j) 8-and-80 method (overtime after 8 hours in a day or 80 in a 14-day period rather than the standard 40-hour week), confirm the specific calculation basis with us during onboarding. Based on Aladtec's documented configuration options, overtime thresholds are admin-configurable; whether the FLSA Section 7(j) 8-and-80 healthcare rule is a pre-configured option should be confirmed with Aladtec directly before deploying at a Texas CAH.
 
 **Is it possible to switch from Aladtec to a managed service mid-contract?**
 

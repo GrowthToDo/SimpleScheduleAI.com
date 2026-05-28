@@ -189,7 +189,7 @@ Charge nurses at CAHs carry a heavier scheduling burden than staff nurses, not j
   <text x="220" y="138" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Equitable charge distribution</text>
   <text x="220" y="173" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Callout ranking by charge eligibility</text>
   <text x="220" y="208" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">CMS documentation</text>
-  <text x="220" y="243" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Overtime enforcement (8-and-80)</text>
+  <text x="220" y="243" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Overtime enforcement (FLSA thresholds)</text>
   <text x="220" y="278" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Staff self-service (mobile app)</text>
   <!-- Bars -->
   <rect x="228" y="54" width="430" height="20" fill="#1e40af" rx="3"/>

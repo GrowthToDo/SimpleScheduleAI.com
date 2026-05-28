@@ -177,7 +177,7 @@ SimpleScheduleAI is a managed scheduling service designed from the start for 25-
 - Three-option draft delivery (balanced, fair-rotation, overtime-minimized) so the manager can choose based on the week's priorities rather than building from scratch
 - Instant replacement list: when a nurse calls out, the system generates a ranked replacement list in under two minutes, sorted by overtime risk, availability, and competency match
 - CMS §485.635 audit documentation is maintained automatically, reducing survey prep time from a half-day to under 30 minutes
-- Texas overtime compliance (FLSA 8-and-80 rule) is built in as a default setting, not a configuration option
+- Texas overtime compliance (FLSA overtime thresholds) is built in as a default setting, not a configuration option
 - Excel-based roster upload means zero IT involvement at onboarding
 
 **Key limitations:**
@@ -432,7 +432,7 @@ The callout module generates a replacement shortlist in under two minutes, facto
 
 CMS §485.635 staffing documentation is logged automatically throughout each schedule cycle. Pre-survey prep that previously required assembling records from spreadsheets now takes under 30 minutes.
 
-For Texas CAHs specifically, Texas Labor Code Chapter 62 overtime provisions and the FLSA 8-and-80 rule for healthcare employers are both applied as default settings. No configuration is required.
+For Texas CAHs specifically, Texas Labor Code Chapter 62 overtime provisions and FLSA overtime thresholds for healthcare employers are both applied as default settings. No configuration is required.
 
 ## What to Do This Week?
 

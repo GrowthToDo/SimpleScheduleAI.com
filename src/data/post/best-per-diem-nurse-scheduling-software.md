@@ -154,7 +154,7 @@ Per diem scheduling has specific requirements that differ from full-time nurse s
 
   <!-- OT tracking for per diem -->
   <rect x="60" y="172" width="390" height="34" rx="4" fill="#60a5fa"/>
-  <text x="68" y="194" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Overtime tracking for per diem staff (FLSA 8-and-80 rule)</text>
+  <text x="68" y="194" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Overtime tracking for per diem staff (FLSA overtime thresholds)</text>
   <text x="458" y="194" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">High</text>
 
   <!-- Credential/competency -->
@@ -195,7 +195,7 @@ SimpleScheduleAI is a managed scheduling service designed for Critical Access Ho
 
 **Key advantages:**
 
-- Ranked replacement list generated in under two minutes, cross-referenced against FLSA 8-and-80 overtime accumulation for each per diem nurse
+- Ranked replacement list generated in under two minutes, cross-referenced against FLSA overtime accumulation for each per diem nurse
 - Per diem availability is maintained centrally, not through nurse self-reporting alone, reducing the lag between availability changes and scheduler visibility
 - CMS §485.635 documentation captures per diem shifts automatically alongside scheduled shifts, creating a single audit-ready record
 - Credential tracking flags assignment-competency mismatches before confirming a per diem placement
@@ -499,7 +499,7 @@ At a 25-bed CAH, these three problems interact every time there is a callout eve
 
 The structural problem with most scheduling tools is that per diem nurses are treated as a secondary input rather than a primary coverage mechanism. SimpleScheduleAI was built for CAHs where per diem staff fill 20-35% of weekly coverage, which means the system treats per diem availability with the same reliability requirements as full-time scheduling.
 
-Per diem availability is maintained centrally alongside full-time scheduling. When a callout event occurs, the system generates a ranked shortlist that includes both full-time and per diem nurses, sorted by current-week hours against the FLSA 8-and-80 threshold. The nurse manager sees who is available and who represents the lowest overtime risk, in order, without running a manual calculation.
+Per diem availability is maintained centrally alongside full-time scheduling. When a callout event occurs, the system generates a ranked shortlist that includes both full-time and per diem nurses, sorted by current-week hours against the FLSA overtime threshold. The nurse manager sees who is available and who represents the lowest overtime risk, in order, without running a manual calculation.
 
 Every per diem shift that is filled through the callout module is logged automatically against the CMS §485.635 staffing record. There is no separate documentation step for per diem coverage.
 
@@ -537,7 +537,7 @@ NurseGrid Manager handles the broadcast communication layer of per diem callouts
 
 **How do you track per diem nurse overtime with FLSA 8-and-80 rules?**
 
-The FLSA 8-and-80 rule allows healthcare employers to pay overtime only when a non-exempt employee works more than 8 hours in a single day or more than 80 hours in a 14-day period, rather than the standard 40-hour weekly threshold. Most scheduling software does not apply this rule by default. It must be manually configured. SimpleScheduleAI applies the 8-and-80 rule as a default for CAH environments. Aladtec and SmartLinx require configuration. Deputy, NurseGrid, and OnShift do not support it without custom development.
+The FLSA 8-and-80 rule allows healthcare employers to pay overtime only when a non-exempt employee works more than 8 hours in a single day or more than 80 hours in a 14-day period, rather than the standard 40-hour weekly threshold. Most scheduling software does not apply this rule by default. It must be manually configured. SimpleScheduleAI tracks FLSA overtime thresholds by default for CAH environments; if your facility has adopted the 8-and-80 method, confirm the calculation basis during onboarding. Aladtec and SmartLinx require configuration. Deputy, NurseGrid, and OnShift do not support it without custom development.
 
 **What is the cheapest per diem scheduling software for a small hospital?**
 

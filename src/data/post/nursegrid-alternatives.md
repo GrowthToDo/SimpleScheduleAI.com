@@ -179,7 +179,7 @@ Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers th
 - CMS §485.635 documentation is automatic, not a manual export process before each survey
 - Callout shortlist is ranked by overtime risk and filtered by credentials without any manual calculation
 - Excel-based roster upload means the transition from NurseGrid does not require IT involvement
-- Texas overtime compliance (FLSA 8-and-80 rule) and CMS CAH requirements are built in as defaults
+- Texas overtime compliance (FLSA overtime thresholds) and CMS CAH requirements are built in as defaults
 
 **Key limitations:**
 

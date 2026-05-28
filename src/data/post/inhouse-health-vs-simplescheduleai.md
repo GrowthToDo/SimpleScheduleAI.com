@@ -145,7 +145,7 @@ The clearest way to see the gap is across the operating model, not feature check
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200">Texas overtime handling</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Product page references "regulatory requirements" generally; confirm Texas FLSA specifics with vendor</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Texas FLSA rules applied by default, including 8-and-80</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Texas FLSA overtime rules applied by default</td>
       </tr>
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200">Setup and operation</td>

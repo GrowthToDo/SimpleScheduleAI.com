@@ -158,7 +158,7 @@ The managed service model means the hospital does not install software or mainta
 
 - Credential-filtered replacement list: replacements are filtered by unit credentials before the list is generated
 - [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation is maintained automatically, eliminating manual survey prep entirely
-- FLSA 8-and-80 healthcare overtime rule is the default calculation, not a configuration option
+- FLSA overtime threshold tracking is the default, not a configuration option
 - Managed service eliminates implementation cost and ongoing IT dependency
 - Texas-specific compliance (Texas Labor Code Chapter 62) is a built-in default for TX CAHs
 
@@ -355,7 +355,7 @@ SimpleScheduleAI is purpose-built for clinical nurse scheduling where Deputy is 
         <td class="py-3 text-blue-700 dark:text-blue-400">Yes, automatic</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">FLSA 8-and-80 healthcare overtime</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">FLSA overtime threshold tracking</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented; confirm with vendor</td>
         <td class="py-3 text-blue-700 dark:text-blue-400">Yes, default for CAHs</td>
       </tr>

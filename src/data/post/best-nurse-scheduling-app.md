@@ -167,7 +167,7 @@ The fourth layer is operational: callout handling at a CAH involves checking whi
   <text x="360" y="28" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">What Matters Most When Choosing a Nurse Scheduling App</text>
   <!-- Horizontal bars -->
   <text x="218" y="64" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Credential enforcement at shift level</text>
-  <text x="218" y="99" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">FLSA 8-and-80 overtime logic</text>
+  <text x="218" y="99" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">FLSA overtime threshold logic</text>
   <text x="218" y="134" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Callout ranking by OT risk + credentials</text>
   <text x="218" y="169" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">CMS §485.635 documentation</text>
   <text x="218" y="204" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Mobile access for nurses (view + request)</text>
@@ -202,9 +202,9 @@ SimpleScheduleAI operates as a managed scheduling service with a mobile interfac
 **Key advantages:**
 
 - Mobile review and approval interface allows the nurse manager to review proposed schedules, approve them, and handle callout coverage from a phone.
-- Callout coverage surface shows a ranked replacement list based on credential match, OT risk (FLSA 8-and-80), and historical availability. No calculation required.
+- Callout coverage surface shows a ranked replacement list based on credential match, OT risk (FLSA overtime threshold), and historical availability. No calculation required.
 - CMS §485.635 documentation is generated automatically from each published schedule.
-- FLSA 8-and-80 overtime enforcement is a default, not a configuration.
+- FLSA overtime threshold enforcement is a default, not a configuration.
 - First schedule delivered within 48 hours of staff roster submission.
 
 **Key limitations:**

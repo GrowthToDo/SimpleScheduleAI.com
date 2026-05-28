@@ -175,7 +175,7 @@ Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies
 - Setup in 3-5 days from Excel roster upload; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, not a configured module the manager maintains
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
-- Texas overtime compliance (FLSA 8-and-80 rule) and CMS CAH requirements are defaults, not configuration options
+- Texas overtime compliance (FLSA overtime thresholds) and CMS CAH requirements are defaults, not configuration options
 - Service maintains scheduling rules as staff and policies change; no manager-side configuration burden
 
 **Key limitations:**

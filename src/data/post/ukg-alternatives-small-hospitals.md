@@ -157,7 +157,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format and the first schedule is delivered within 48 hours. FLSA 8-and-80 overtime logic, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
+SimpleScheduleAI is a managed scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format and the first schedule is delivered within 48 hours. FLSA overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
 
 The nurse manager reviews and approves schedules and handles callout coverage using the automated ranked replacement list. Weekly scheduling time drops to 1-2 hours. No IT involvement. No implementation project. For a CAH coming off UKG, a managed service is typically the fastest path to operational simplicity.
 
@@ -168,7 +168,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 - Live in 48 hours from Excel roster upload; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, eliminating manual survey prep
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
-- Texas overtime compliance (FLSA 8-and-80 rule) and CMS CAH requirements are built-in defaults
+- Texas overtime compliance (FLSA overtime thresholds) and CMS CAH requirements are built-in defaults
 - Service maintains scheduling rules as staff and policies change; no ongoing configuration burden
 
 **Key limitations:**
@@ -315,7 +315,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
         <td class="py-3 text-blue-700 dark:text-blue-400">Yes, automatic default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA 8-and-80 overtime tracking</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime threshold tracking</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Yes, if configured correctly</td>
         <td class="py-3 text-blue-700 dark:text-blue-400">Yes, built-in default</td>
       </tr>
@@ -358,7 +358,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
 <div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
   <h2 class="mb-2 text-2xl font-bold text-white">Replace UKG with Something That Actually Fits a 25-Bed Hospital</h2>
   <p class="mb-6 text-blue-100">
-    SimpleScheduleAI goes live in 48 hours with zero IT involvement. FLSA 8-and-80 and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.
+    SimpleScheduleAI goes live in 48 hours with zero IT involvement. FLSA overtime tracking and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.
   </p>
   <a
     href="/pilot"

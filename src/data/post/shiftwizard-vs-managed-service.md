@@ -200,7 +200,7 @@ SimpleScheduleAI is a new service in active pilot phase, without public G2 or Ca
 - **A free 60-day pilot for qualifying CAHs in Texas.** No setup fee or commitment during the pilot. You evaluate on actual delivered schedules, not on demos.
 - **Direct customer references on request.** We can connect you with current pilot facilities for an unfiltered reference call.
 - **Founder-led service.** Pradeep Pandey, founder, has direct operations experience at Apollo Hospitals (Deputy GM, Operations) and an MBA from IIM Trichy. Service decisions go through him, not through a tier-3 support queue.
-- **CAH-specific design.** Excel roster onboarding, no IT integration required, 3-5 day go-live, Texas FLSA 8-and-80 compliance built in, CMS §485.635 audit trail logged automatically.
+- **CAH-specific design.** Excel roster onboarding, no IT integration required, 3-5 day go-live, Texas FLSA overtime compliance built in, CMS §485.635 audit trail logged automatically.
 
 SimpleScheduleAI is the right choice for a CAH where the nurse manager has concluded that the self-serve scheduling model takes more weekly time than her role can absorb, and where direct customer-reference validation matters more than aggregate vendor reviews.
 

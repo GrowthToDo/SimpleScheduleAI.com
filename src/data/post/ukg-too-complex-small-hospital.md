@@ -214,7 +214,7 @@ Best for: Hospitals (50-200 beds) with an IT team available to configure and mai
 
 SimpleScheduleAI is a managed scheduling service built specifically for critical access hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the first schedule is delivered within 48 hours, and ongoing configuration maintenance is handled by the service team.
 
-FLSA 8-and-80 overtime logic, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults. The nurse manager reviews and approves schedules. Weekly scheduling time drops to 1-2 hours.
+FLSA overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults. The nurse manager reviews and approves schedules. Weekly scheduling time drops to 1-2 hours.
 
 For a CAH coming off UKG, a managed service is typically the fastest path to operational simplicity. There is no implementation project, no configuration learning curve, and no ongoing IT maintenance burden.
 
@@ -251,11 +251,11 @@ The platform can be configured to use a subset of features, but the underlying c
 
 **What is the minimum viable scheduling tool for a 25-bed CAH?**
 
-At minimum, a 25-bed CAH needs: proactive FLSA 8-and-80 overtime tracking, credential-based shift enforcement, CMS §485.635 documentation, and a callout coverage process that applies clinical constraints. These requirements can be met by Aladtec or SmartLinx with proper configuration, or by SimpleScheduleAI with zero configuration. They cannot be met by generic scheduling tools.
+At minimum, a 25-bed CAH needs: proactive FLSA overtime threshold tracking, credential-based shift enforcement, CMS §485.635 documentation, and a callout coverage process that applies clinical constraints. These requirements can be met by Aladtec or SmartLinx with proper configuration, or by SimpleScheduleAI with zero configuration. They cannot be met by generic scheduling tools.
 
 **Does Aladtec handle FLSA 8-and-80 overtime correctly for healthcare employers?**
 
-Aladtec's default overtime threshold is the standard 40-hour workweek. Healthcare employers using the FLSA 8-and-80 rule need to configure the correct threshold in their Aladtec account. If this configuration is not completed, the system will calculate overtime incorrectly for a healthcare employer. SimpleScheduleAI applies the 8-and-80 rule as a default for healthcare configurations.
+Aladtec's default overtime threshold is the standard 40-hour workweek. Healthcare employers using the FLSA 8-and-80 rule need to configure the correct threshold in their Aladtec account. If this configuration is not completed, the system will calculate overtime incorrectly for a healthcare employer. SimpleScheduleAI applies healthcare-appropriate FLSA overtime thresholds as a default.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

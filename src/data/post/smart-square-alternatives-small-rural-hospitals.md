@@ -168,7 +168,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 - CMS §485.635 documentation is automatic, not a manual export process before each survey
 - Callout shortlist is ranked by overtime risk without any manual calculation from the manager
 - Excel-based roster upload means the transition does not require an IT department or HRIS team
-- Texas overtime compliance under the [FLSA 8-and-80 rule](https://www.dol.gov/agencies/whd/fact-sheets/54a-8and80-overtime) and CMS Critical Access Hospital requirements are built in as defaults
+- Texas overtime compliance ([FLSA overtime thresholds](https://www.dol.gov/agencies/whd/flsa)) and CMS Critical Access Hospital requirements are built in as defaults
 
 **Key limitations:**
 

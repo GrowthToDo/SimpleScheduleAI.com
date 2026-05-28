@@ -200,7 +200,7 @@ Preventable overtime, overtime that occurred because the wrong nurse was called 
 
 <img src="/images/blog/how-to-reduce-nurse-overtime/SimpleScheduleAI.png" alt="SimpleScheduleAI automated overtime tracking for CAH nurse scheduling" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI handles steps 1-6 above as part of the managed service: callout ranking is automated by OT risk and credentials, running hour totals are tracked continuously, and the FLSA 8-and-80 threshold is the default. The nurse manager reviews the callout ranking and makes the call. The calculation is already done.
+SimpleScheduleAI handles steps 1-6 above as part of the managed service: callout ranking is automated by OT risk and credentials, running hour totals are tracked continuously, and FLSA overtime thresholds are applied by default. The nurse manager reviews the callout ranking and makes the call. The calculation is already done.
 
 ## What to Do This Week?
 

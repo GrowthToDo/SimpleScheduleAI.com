@@ -195,7 +195,7 @@ A true no-IT scheduling solution must satisfy three conditions:
 
 2. **No ongoing IT maintenance.** When a nurse's credentials change, the nurse manager sends a notification (email or message). The system updates. The nurse manager does not log into a backend settings screen.
 
-3. **Healthcare compliance defaults included.** The system defaults to healthcare-appropriate overtime rules (FLSA 8-and-80), credential tracking for clinical roles, and CAH-specific documentation requirements. These are not optional configurations. They come on.
+3. **Healthcare compliance defaults included.** The system defaults to healthcare-appropriate FLSA overtime thresholds, credential tracking for clinical roles, and CAH-specific documentation requirements. These are not optional configurations. They come on.
 
 Most scheduling software meets condition 1 loosely (the sign-up is easy), fails condition 2 (ongoing configuration is still the customer's job), and fails condition 3 entirely (healthcare defaults must be manually configured).
 
@@ -213,7 +213,7 @@ SimpleScheduleAI is the only option on this list that eliminates IT dependency e
 
 - Zero configuration at launch. The nurse manager uploads a staff roster in Excel. The first schedule is built within 48 hours.
 - No ongoing IT tasks. Credential changes, new hires, and availability updates are communicated to the SimpleScheduleAI team. The nurse manager never touches a settings screen.
-- Healthcare compliance defaults are built in: FLSA 8-and-80 overtime rule, CMS §485.635 documentation, charge nurse designation enforcement, and Texas overtime provisions.
+- Healthcare compliance defaults are built in: FLSA overtime threshold tracking, CMS §485.635 documentation, charge nurse designation enforcement, and Texas overtime provisions.
 - Callout ranking is automated. When a nurse calls out, a replacement list appears sorted by credential match, OT risk, and availability. No calculation required.
 - If the roster is provided on Monday, the hospital can have a compliant, credential-enforced schedule by Wednesday.
 
