@@ -3,7 +3,7 @@
 - Publish under: Pradeep Pandey personal profile (https://www.linkedin.com/in/pradeep-pandeyji/)
 - One in-body link (per playbook §6.1 Article 3 spec): https://simplescheduleai.com/critical-access-hospital-scheduling
 - CTA: ask which enterprise tool they got stuck with
-- Status: draft, awaiting Pradeep approval before posting
+- Status: scheduled to publish 2026-06-11 (exactly 14 days after Article 1, which went live 2026-05-28)
 - Tone checked: no em/en-dashes, no AI-tone phrases
 - Title note: the playbook's Article-3 working title ("Why Rural Hospitals Keep Buying Software They Cannot Run") is nearly identical to the guest-post lead title. To avoid a duplicate-looking pair, this draft uses a distinct LinkedIn title below and keeps a different hook/structure from the guest post. Keep this title, or pick another, but do not run the exact guest-post title here.
 

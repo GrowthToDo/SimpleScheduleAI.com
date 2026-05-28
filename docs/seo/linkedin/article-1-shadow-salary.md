@@ -3,7 +3,7 @@
 - Publish under: Pradeep Pandey personal profile (https://www.linkedin.com/in/pradeep-pandeyji/)
 - One link, in-body: https://simplescheduleai.com/blog/healthcare-scheduling-crisis
 - CTA: invite 25-bed hospital operators to reply with their number
-- Status: draft, awaiting Pradeep approval before posting
+- Status: LIVE, published 2026-05-28 — https://www.linkedin.com/feed/update/urn:li:activity:7465643782106046464/
 - Tone checked: no em/en-dashes, no AI-tone phrases
 
 ---

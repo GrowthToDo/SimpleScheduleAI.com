@@ -5,7 +5,7 @@
   - https://simplescheduleai.com/ai-nurse-scheduling
   - https://simplescheduleai.com/blog/can-nurses-trust-ai-generated-schedule
 - CTA: invite nurse managers to share their #1 fairness concern
-- Status: draft, awaiting Pradeep approval before posting
+- Status: scheduled to publish 2026-06-04 (exactly 7 days after Article 1, which went live 2026-05-28)
 - Tone checked: no em/en-dashes, no AI-tone phrases
 - Publish timing: see "When to publish" note at the bottom of this file
 
