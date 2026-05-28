@@ -19,14 +19,13 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/12-hour-hospital-shifts-scheduling'
 ---
 
-## TL;DR
+## Key Takeaways
 
-12-hour hospital shifts simplify handoffs and give nurses longer blocks of consecutive
-days off, but they create specific scheduling math challenges at small hospitals.
-A 25-bed CAH operating with 12-hour shifts needs precise coverage arithmetic,
-fatigue-aware rotation rules, and a fairness system that distributes night and weekend
-shifts equitably. Without these, the efficiency gains of 12-hour shifts are offset by
-overtime accumulation and burnout.
+- 12-hour shifts reduce handoffs and improve nurse schedule satisfaction, but amplify the consequences of each coverage gap, one missed shift is half a day of nursing.
+- Weekend coverage is the primary fairness challenge: map weekend assignments first, before building the weekday schedule.
+- The most common burnout driver in 12-hour models is callout-driven consecutive shift stacking, nurses working 4 or more consecutive shifts informally.
+- Fatigue guards (max 3 consecutive shifts, min 36-hour night-to-day recovery) should be hard constraints in the scheduling process, not guidelines.
+- The 8-and-80 FLSA alternative can reduce overtime exposure in 12-hour shift settings but requires prior written employee agreements to be legally valid.
 
 ## Table of Contents
 
@@ -36,7 +35,6 @@ overtime accumulation and burnout.
 - [How do you build a fair 12-hour shift schedule for a 25-bed CAH?](#how-do-you-build-a-fair-12-hour-shift-schedule-for-a-25-bed-cah)
 - [How is SimpleScheduleAI's 12-hour scheduling different?](#how-is-simplescheduleais-12-hour-scheduling-different)
 - [Frequently Asked Questions](#frequently-asked-questions)
-- [Key Takeaways](#key-takeaways)
 
 ## Why do critical access hospitals use 12-hour nursing shifts?
 
@@ -221,19 +219,6 @@ Require a minimum of 36 hours between a nurse's final night shift and their firs
 day shift when rotating. For a nurse finishing a night shift at 7 AM on Thursday,
 the earliest permissible day shift start would be 7 PM Friday. Enforce this as a
 scheduling constraint, not a suggestion, violations compound over time.
-
-## Key Takeaways
-
-- 12-hour shifts reduce handoffs and improve nurse schedule satisfaction, but amplify
-  the consequences of each coverage gap, one missed shift is half a day of nursing
-- Weekend coverage is the primary fairness challenge: map weekend assignments first
-  before building the weekday schedule
-- The most common burnout driver in 12-hour models is callout-driven consecutive shift
-  stacking, nurses working 4+ consecutive shifts informally
-- Fatigue guards (max 3 consecutive shifts, min 36-hour night-to-day recovery) should
-  be hard constraints in the scheduling process, not guidelines
-- The 8-and-80 FLSA alternative can reduce overtime exposure in 12-hour shift settings
-  but requires prior written employee agreements to be legally valid
 
 ---
 
