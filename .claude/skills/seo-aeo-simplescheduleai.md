@@ -280,6 +280,18 @@ Never skip levels or use headings for visual styling.
 - Minimum 600 words for product/landing pages. Blog posts: see content-type word count targets in Part 7.
 - Each paragraph: 2–4 sentences max.
 
+### 3.2.1 SimpleScheduleAI Capability Claims (compliance-adjacent)
+
+Every sentence that attributes a capability to SimpleScheduleAI (advantage bullets, comparison-table SSAI cells, "How SimpleScheduleAI works" sections, CTAs, FAQ answers about SSAI, SVG diagram labels of SSAI features) must match shipped reality. Compliance-adjacent claims especially: a CAH administrator may rely on them.
+
+**Current rule: no FLSA 8-and-80 claim as an SSAI feature.** The scheduler tracks generic FLSA overtime thresholds; the 8-and-80 (80-hour/14-day) calculation method is not yet shipped.
+
+- USE: "FLSA overtime thresholds", "FLSA overtime threshold tracking", "tracks each nurse's running hours against the applicable FLSA threshold"
+- DO NOT WRITE (when attributed to SSAI): "FLSA 8-and-80 rule built in", "applies the 8-and-80 rule by default", "8-and-80 handled automatically", "Texas FLSA 8-and-80 compliance built in"
+- KEEP UNTOUCHED: generic educational descriptions of the rule (with DOL source), "ask your vendor whether they support 8-and-80" evaluation questions, competitor-confirm / competitor-gap lines ("X does not document 8-and-80 — confirm with vendor"), and the dedicated educational posts on FLSA/Texas overtime
+
+When 8-and-80 ships, this rule reverses. Update this section and revert the softened lines (commit eeefa9f softened the pattern across 19 posts; the same diff in reverse restores them).
+
 ### 3.3 Image Alt Text Rules
 
 ```html

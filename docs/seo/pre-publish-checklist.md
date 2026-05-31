@@ -76,6 +76,13 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] Key Limitations sections in alternatives posts use blockquote format: `**Bold Title.** Intro sentence.` then `> "Verbatim quote."` then `> Name, Role, Date, Source`
 - [ ] When no hospital-context reviewer quote exists within 30 days, use the most recent available quote with its actual date. When absolutely no usable quote exists on any platform, use neutral framing ("Verify with vendor" / "Not documented on product page") and document this in "A Note on Sources" — never volume language as a substitute
 
+## SimpleScheduleAI Capability Claims
+
+_Compliance-adjacent capability claims attributed to SimpleScheduleAI must match shipped reality. A CAH administrator may rely on the claim._
+
+- [ ] **No FLSA 8-and-80 claim as a SimpleScheduleAI feature.** The scheduler tracks generic FLSA overtime thresholds; the 8-and-80 (80-hour/14-day) calculation method is not yet shipped. Use "FLSA overtime thresholds" or "FLSA overtime threshold tracking" in SSAI-attributed copy. Do NOT write "FLSA 8-and-80 rule built in / applied by default / handled automatically" attributed to SimpleScheduleAI. Applies to advantage bullets, comparison-table SSAI cells, "How SSAI works" sections, CTAs, FAQ answers about SSAI, and SVG diagram labels.
+- [ ] **Generic 8-and-80 mentions stay untouched.** Educational descriptions of the rule (with DOL source), "ask the vendor whether they support 8-and-80" evaluation questions, competitor-confirm / competitor-gap lines, and the dedicated educational posts on FLSA/Texas overtime are fine. The rule only fires when the sentence attributes the capability to SimpleScheduleAI. When 8-and-80 ships, this rule reverses; see commit eeefa9f for the softening pattern to reverse.
+
 ## Comparison Tables (when comparing competitor products)
 
 - [ ] Table is fully visible on standard viewport with **no horizontal scrollbar**. Use `table-fixed` with explicit per-column `style="width:NN%"` rather than `overflow-x-auto` + `min-width`.

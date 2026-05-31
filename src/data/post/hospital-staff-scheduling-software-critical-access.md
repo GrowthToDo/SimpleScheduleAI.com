@@ -35,7 +35,6 @@ metadata:
 - [How Do Common Scheduling Options Compare for a Critical Access Hospital?](#how-do-common-scheduling-options-compare-for-a-critical-access-hospital)
 - [Is Self-Serve Software or a Managed Service Right for Your Hospital?](#is-self-serve-software-or-a-managed-service-right-for-your-hospital)
 - [How Does SimpleScheduleAI Fit a Critical Access Hospital?](#how-does-simplescheduleai-fit-a-critical-access-hospital)
-- [A Note on Sources](#a-note-on-sources)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -73,7 +72,7 @@ These three criteria filter out most of the market, which is the point. They are
 
 ## How Do Common Scheduling Options Compare for a Critical Access Hospital?
 
-The common options split into four groups: spreadsheets, consumer shift apps, hospital and enterprise scheduling platforms, and a managed scheduling service. The table below frames them on the criteria that decide fit at CAH scale. Capability cells reflect publicly documented positioning, not editorial verdicts. Ratings are from G2 and Capterra, verified per the dossier.
+The common options split into four groups: spreadsheets, consumer shift apps, hospital and enterprise scheduling platforms, and a managed scheduling service. The table below frames them on the criteria that decide fit at CAH scale. Capability cells reflect publicly documented positioning, not editorial verdicts. Ratings are from G2 and Capterra, verified 2026-05-15.
 
 <div class="not-prose my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -150,7 +149,7 @@ Where it fits is the specific case this guide describes: a 25-bed Texas CAH with
 
 ## A Note on Sources
 
-Competitor ratings and product positioning in this post are drawn from the SimpleScheduleAI competitor dossier, last verified against G2 and Capterra on 2026-05-15. Deputy: G2 4.6/5 (1,400+ reviews), Capterra 4.6/5 (765 reviews). ShiftWizard: G2 4.3/5, Capterra 4.4/5 (723 reviews). Aladtec (TCP): G2 4.3/5 (97 reviews), Capterra 4.6/5 (17 reviews, a small sample that skews toward public safety and EMS rather than hospital nursing).
+Competitor ratings and product positioning in this post were verified against [G2](https://www.g2.com) and [Capterra](https://www.capterra.com) on 2026-05-15. Deputy: G2 4.6/5 (1,400+ reviews), Capterra 4.6/5 (765 reviews). ShiftWizard: G2 4.3/5, Capterra 4.4/5 (723 reviews). Aladtec (TCP): G2 4.3/5 (97 reviews), Capterra 4.6/5 (17 reviews, a small sample that skews toward public safety and EMS rather than hospital nursing).
 
 No competitor capability is asserted as a feature absence. Where a tool's CMS §485.635 or FLSA 8-and-80 handling is not documented on its public product page, this post says to verify it with the vendor rather than claiming the capability is missing. Regulatory and scale claims link to CMS, the Department of Labor, and the Rural Health Information Hub as primary sources.
 
