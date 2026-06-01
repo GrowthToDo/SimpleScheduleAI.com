@@ -30,7 +30,7 @@ metadata:
 
 ## Table of Contents
 
-- [Why Is an After-Hours Nurse Callout the Hardest Coverage Problem at a Small Hospital?](#why-is-an-after-hours-nurse-callout-the-hardest-coverage-problem-at-a-small-hospital)
+- [Why Is an After-Hours Nurse Callout the Hardest Coverage Problem at a Critical Access Hospital?](#why-is-an-after-hours-nurse-callout-the-hardest-coverage-problem-at-a-critical-access-hospital)
 - [What Does an After-Hours Callout Actually Cost a Critical Access Hospital?](#what-does-an-after-hours-callout-actually-cost-a-critical-access-hospital)
 - [What Does a Workable After-Hours Callout Process Look Like?](#what-does-a-workable-after-hours-callout-process-look-like)
 - [How Do You Build a Ranked Callout Call List Before the Night Shift?](#how-do-you-build-a-ranked-callout-call-list-before-the-night-shift)
@@ -39,9 +39,9 @@ metadata:
 - [How Does SimpleScheduleAI Help with After-Hours Callouts?](#how-does-simplescheduleai-help-with-after-hours-callouts)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-A nurse calls in sick at 2:40 AM for a shift that starts at 6:45 AM. There is no float pool, no staffing coordinator on duty, and no agency desk that answers before business hours. The person solving this is usually the on-call charge nurse or the nurse manager, working a phone list from memory while the unit runs short. This post is the operational playbook for that exact moment, written for hospitals with 25 beds or fewer.
+A nurse calls in sick at 2:40 AM for a shift that starts at 6:45 AM. There is no float pool, no staffing coordinator on duty, and no agency desk that answers before business hours. The person solving this is usually the on-call charge nurse or the nurse manager, working a phone list from memory while the unit runs short. This post is the operational playbook for that exact moment, written for Critical Access Hospitals.
 
-## Why Is an After-Hours Nurse Callout the Hardest Coverage Problem at a Small Hospital?
+## Why Is an After-Hours Nurse Callout the Hardest Coverage Problem at a Critical Access Hospital?
 
 An after-hours callout is the hardest coverage problem at a small hospital because every buffer that a large facility relies on is absent. There is no float pool to pull from, no night staffing office, no internal agency desk, and often only one or two qualified replacements in the whole county. The callout has to be solved by one tired person making phone calls.
 
@@ -150,7 +150,7 @@ The three ranking factors are not interchangeable, and the order matters:
 
 [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) requires a Critical Access Hospital to provide nursing services that meet the needs of its patients and to have policies governing those services. In practice, that means a callout must leave a record showing the unit remained adequately staffed and the substitution followed hospital policy. The record, not the verbal handoff, is what survives a survey.
 
-The Conditions of Participation for CAHs require nursing services to be furnished in accordance with written policies and under the direction of a qualified nurse, as set out in the [CMS State Operations Manual, Appendix W](https://www.cms.gov/medicare/provider-enrollment-and-certification/guidanceforlawsandregulations/downloads/som107ap_w_cah.pdf). A surveyor reviewing a flagged shift will ask how the open position was covered and whether the covering nurse was qualified for the assignment. If the answer lives only in someone's memory, that is a documentation gap.
+The Conditions of Participation for CAHs require nursing services to be furnished in accordance with written policies and under the direction of a qualified nurse, as set out in the [CMS State Operations Manual, Appendix W](https://www.cms.gov/Regulations-and-Guidance/Guidance/Manuals/downloads/som107ap_w_cah.pdf). A surveyor reviewing a flagged shift will ask how the open position was covered and whether the covering nurse was qualified for the assignment. If the answer lives only in someone's memory, that is a documentation gap.
 
 The practical documentation set for one callout is short but must be consistent: the name and role of the nurse who called out, the time the callout was received, every person contacted and their response, the name and credentials of the nurse who covered, and the resulting unit staffing for the shift. Captured at the time, this is a five-minute log. Reconstructed weeks later before a survey, it is hours of guesswork and a compliance exposure. The goal is a callout process that produces this record as a byproduct, not as a separate chore.
 

@@ -156,7 +156,7 @@ The criteria for a 25-bed hospital are not a compressed version of what a 200-be
 
 **Callout response speed:** At 25 beds, a single unexpected callout typically cannot be absorbed by floating staff. There is no float pool. The manager needs a ranked shortlist of available replacements within two minutes, accounting for who is already at risk for overtime before they even pick up the phone.
 
-**CMS audit documentation:** [CMS Conditions of Participation for CAHs](https://www.cms.gov/Medicare/Provider-Enrollment-and-Certification/CertificationandComplianc/CAHs) (§485.635) require maintained staffing records and proof of appropriate coverage. Manually assembling this from spreadsheets before a survey is a half-day task. Software that logs automatically eliminates it.
+**CMS audit documentation:** [CMS Conditions of Participation for CAHs](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) (§485.635) require maintained staffing records and proof of appropriate coverage. Manually assembling this from spreadsheets before a survey is a half-day task. Software that logs automatically eliminates it.
 
 **Implementation burden:** A 25-bed CAH typically has one IT person shared across the hospital, or none at all. Any software requiring dedicated IT for setup or ongoing maintenance is disqualifying in practice.
 

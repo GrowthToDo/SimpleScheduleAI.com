@@ -55,7 +55,7 @@ PBJ submission deadlines are 45 days after the end of each calendar quarter: May
 
 ## Which Facilities Are Required to Submit PBJ Data?
 
-Certified skilled nursing facilities (SNFs) and nursing facilities participating in Medicare and Medicaid are required to submit PBJ data. The requirement does not apply to all Critical Access Hospitals directly, but it does apply to any CAH that operates certified swing beds under the [SNF swing bed program](https://www.cms.gov/Medicare/Provider-Enrollment-and-Certification/CertificationandComplianc/SwingBeds).
+Certified skilled nursing facilities (SNFs) and nursing facilities participating in Medicare and Medicaid are required to submit PBJ data. The requirement does not apply to all Critical Access Hospitals directly, but it does apply to any CAH that operates certified swing beds under the [SNF swing bed program](https://www.cms.gov/medicare/payment/prospective-payment-systems/skilled-nursing-facility-snf/swing-bed-providers).
 
 A swing-bed CAH using its acute care beds for skilled nursing level care is subject to PBJ reporting for the staffing associated with those swing-bed days. The practical implication: a CAH with swing beds has PBJ obligations that a purely acute-care CAH does not. Many rural Texas CAHs operate swing beds as a critical revenue and access component.
 

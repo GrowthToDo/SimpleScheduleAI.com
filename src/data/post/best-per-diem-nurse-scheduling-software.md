@@ -181,7 +181,7 @@ Per diem scheduling has specific requirements that differ from full-time nurse s
 
 **Credential and competency verification:** A per diem nurse filling a floor shift needs to be confirmed as meeting the credential and competency requirements for that unit, not just available. Tools that track credential expiration dates against assignments prevent scope-of-practice compliance gaps.
 
-**CMS audit documentation:** [CMS Conditions of Participation for CAHs](https://www.cms.gov/Medicare/Provider-Enrollment-and-Certification/CertificationandComplianc/CAHs) (§485.635) require staffing records that include per diem shifts. If per diem shift documentation is captured separately from scheduled shifts, survey preparation doubles the manual work.
+**CMS audit documentation:** [CMS Conditions of Participation for CAHs](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) (§485.635) require staffing records that include per diem shifts. If per diem shift documentation is captured separately from scheduled shifts, survey preparation doubles the manual work.
 
 ## What Is the 8 Best Options, Reviewed for Per Diem Nurse Scheduling?
 
