@@ -36,13 +36,12 @@ metadata:
 - [What Is the Core Difference Between the Two Models?](#what-is-the-core-difference-between-the-two-models)
 - [What Is Aladtec?](#what-is-aladtec)
 - [What Is a Managed Scheduling Service?](#what-is-a-managed-scheduling-service)
-- [How Does Head-to-Head Compare?](#how-does-head-to-head-compare)
-  - [How Does Implementation Speed Compare?](#how-does-implementation-speed-compare)
-  - [What Is the Weekly Time Burden on the Nurse Manager?](#what-is-the-weekly-time-burden-on-the-nurse-manager)
-  - [How Does Callout and Last-Minute Coverage Work?](#how-does-callout-and-last-minute-coverage-work)
-  - [How Does CMS Compliance Documentation Differ?](#how-does-cms-compliance-documentation-differ)
-  - [What Does Ongoing Configuration Maintenance Look Like?](#what-does-ongoing-configuration-maintenance-look-like)
-  - [How Does the Cost Structure Compare?](#how-does-the-cost-structure-compare)
+- [How Long Does Each Model Take to Implement?](#how-long-does-each-model-take-to-implement)
+- [What Weekly Time Does Each Model Cost the Nurse Manager?](#what-weekly-time-does-each-model-cost-the-nurse-manager)
+- [How Does Each Model Handle After-Hours Callouts?](#how-does-each-model-handle-after-hours-callouts)
+- [How Does Each Model Produce CMS §485.635 Documentation?](#how-does-each-model-produce-cms-485635-documentation)
+- [What Configuration Maintenance Does Each Model Require?](#what-configuration-maintenance-does-each-model-require)
+- [How Do the Cost Structures of the Two Models Compare?](#how-do-the-cost-structures-of-the-two-models-compare)
 - [When Is Aladtec the Right Choice?](#when-is-aladtec-the-right-choice)
 - [When Is a Managed Service the Right Choice?](#when-is-a-managed-service-the-right-choice)
 - [What Decision Framework Should You Use?](#what-decision-framework-should-you-use)
@@ -171,11 +170,9 @@ With SimpleScheduleAI, the process works like this:
 
 The weekly time commitment for the nurse manager drops from 4-6 hours (typical for software users actively managing scheduling) to 1-2 hours (review and approval only). That difference, across a 25-nurse staff on a rolling 4-week schedule, is 100-200 hours per year returned to clinical work.
 
-## How Does Head-to-Head Compare?
-
 The six most operationally significant differences between Aladtec and a managed scheduling service are implementation speed, weekly time burden, callout coverage workflow, CMS documentation, ongoing configuration maintenance, and total cost of ownership. Each one affects a different dimension of the nurse manager's weekly workload at a Critical Access Hospital.
 
-### How Does Implementation Speed Compare?
+## How Long Does Each Model Take to Implement?
 
 Getting Aladtec operational for a hospital requires configuring the system for the specific environment: shift patterns, unit structures, credential categories, overtime thresholds, and minimum staffing rules. For most CAHs, this configuration is done by the nurse manager, possibly with vendor support. The typical timeline is 4-6 weeks from contract signature to first live schedule.
 
@@ -185,7 +182,7 @@ SimpleScheduleAI starts with a roster handoff. Because the SimpleScheduleAI team
 
 For a CAH that has been managing on spreadsheets for years, the difference between "go live in 48 hours" and "go live in 6 weeks" is meaningful. Every week of parallel running with the old system is a week the nurse manager is managing two processes at once.
 
-### What Is the Weekly Time Burden on the Nurse Manager?
+## What Weekly Time Does Each Model Cost the Nurse Manager?
 
 The ongoing weekly time difference is the most operationally significant comparison point for a Critical Access Hospital nurse manager who is also covering clinical shifts. Aladtec users typically spend 4-6 hours per week on scheduling tasks. SimpleScheduleAI users spend 1-2 hours per week on review and approval only. The 3-4 hour gap equals approximately 150-200 hours per year.
 
@@ -234,7 +231,7 @@ The 3-4 hour weekly difference adds up to approximately 150-200 hours per year. 
   <p class="text-xs text-slate-500 dark:text-slate-400 mt-3 text-center">Based on SimpleScheduleAI pilot observations with Critical Access Hospital clients. 3+ hours/week saved = approximately 150 clinical hours/year returned to patient care.</p>
 </div>
 
-### How Does Callout and Last-Minute Coverage Work?
+## How Does Each Model Handle After-Hours Callouts?
 
 Callout handling is the most time-sensitive scheduling task. When a nurse calls out at 10 PM for a 7 AM shift, the nurse manager needs to find a qualified replacement without creating an overtime liability or a credential gap.
 
@@ -244,7 +241,7 @@ With SimpleScheduleAI, the nurse manager opens the callout dashboard and sees a 
 
 The difference is about 20-30 minutes per callout event. For a CAH that averages 2-3 callouts per week, that is an hour per week, 50 hours per year.
 
-### How Does CMS Compliance Documentation Differ?
+## How Does Each Model Produce CMS §485.635 Documentation?
 
 Critical Access Hospitals are required to maintain staffing documentation that demonstrates compliance with [CMS Conditions of Participation (§485.635)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). This includes records of qualified staff on duty at all times, credential verification, and minimum staffing coverage for each unit.
 
@@ -254,7 +251,7 @@ SimpleScheduleAI generates CMS-formatted staffing documentation automatically fr
 
 For a CAH that has had a CMS survey or that operates under a corrective action plan related to staffing documentation, this difference is significant.
 
-### What Does Ongoing Configuration Maintenance Look Like?
+## What Configuration Maintenance Does Each Model Require?
 
 Scheduling software is not a one-time setup. As staff join and leave, credentials expire and renew, availability patterns change, and unit structures evolve, the system configuration must stay current. With Aladtec, that maintenance is the nurse manager's responsibility. With SimpleScheduleAI, it is included in the service.
 
@@ -264,7 +261,7 @@ For a large hospital with a dedicated scheduling coordinator, this is manageable
 
 SimpleScheduleAI handles configuration maintenance as part of the service. The nurse manager sends an update (new hire, credential renewal, availability change) and it is processed by the SimpleScheduleAI team. The nurse manager never logs into a backend configuration screen. For a full walkthrough of how SimpleScheduleAI delivers nurse scheduling as a service, see [how it works](/how-it-works).
 
-### How Does the Cost Structure Compare?
+## How Do the Cost Structures of the Two Models Compare?
 
 Both Aladtec and SimpleScheduleAI have pricing that is not publicly listed; contact each vendor for a quote. The more useful comparison for a Critical Access Hospital is total cost of ownership: license fee plus implementation labor plus ongoing scheduling and maintenance labor, calculated at the nurse manager's hourly rate over twelve months.
 
