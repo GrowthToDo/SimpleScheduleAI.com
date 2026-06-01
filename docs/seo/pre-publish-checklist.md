@@ -144,6 +144,7 @@ _These apply whenever the filename matches the pattern `[tool]-alternatives.md`.
 - [ ] `public/robots.txt` still allows all AI crawlers (no accidental blocks added)
 - [ ] No PHI-capturing forms or HIPAA-violating tracking code introduced
 - [ ] Build passes locally: `npm run build` completes without errors
+- [ ] **AEO citability gate (claude-seo v2+): run `/seo geo <preview or staging URL>` after build, before push.** Back-edit any passages flagged under the citability threshold. Workflow: [docs/seo/aeo-publish-gate.md](./aeo-publish-gate.md). Most-likely-flagged section: the "How SimpleScheduleAI helps" block — least-citable because most-promotional.
 
 ## After Publishing
 
@@ -153,3 +154,4 @@ _These apply whenever the filename matches the pattern `[tool]-alternatives.md`.
 - [ ] Add to AEO tracking spreadsheet (monthly check schedule)
 - [ ] Post excerpt + link on LinkedIn company page
 - [ ] Update AI Share of Voice tracking if this targets a monitored query
+- [ ] **Drift baseline (new pillars or guides only): run `/seo drift baseline <live URL>`** so weekly `/seo drift compare` will surface silent regressions (meta, canonical, schema, title). The Monday drift-compare run pairs with the lychee link-check CI scheduled on the same cadence.
