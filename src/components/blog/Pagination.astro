@@ -1,36 +1,73 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { getPermalink } from '~/utils/permalinks';
-import Button from '~/components/ui/Button.astro';
 
 export interface Props {
   prevUrl?: string;
   nextUrl?: string;
-  prevText?: string;
-  nextText?: string;
+  currentPage?: number;
+  lastPage?: number;
+  firstUrl?: string;
 }
 
-const { prevUrl, nextUrl, prevText = 'Newer posts', nextText = 'Older posts' } = Astro.props;
+const { prevUrl, nextUrl, currentPage, lastPage, firstUrl } = Astro.props;
+
+const pageUrl = (n: number): string | undefined => {
+  if (!firstUrl) return undefined;
+  if (n === 1) return firstUrl;
+  const base = firstUrl.replace(/\/$/, '');
+  return `${base}/${n}/`;
+};
+
+const showNumbers =
+  typeof currentPage === 'number' && typeof lastPage === 'number' && firstUrl !== undefined && lastPage > 1;
+
+const pages: number[] = showNumbers ? Array.from({ length: lastPage as number }, (_, i) => i + 1) : [];
 ---
 
 {
-  (prevUrl || nextUrl) && (
-    <div class="container flex">
-      <div class="flex flex-row mx-auto container justify-between">
-        <Button
-          variant="tertiary"
-          class={`md:px-3 px-3 mr-2 ${!prevUrl ? 'invisible' : ''}`}
-          href={getPermalink(prevUrl)}
+  (prevUrl || nextUrl || showNumbers) && (
+    <nav class="container mx-auto" aria-label="Blog pagination">
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <a
+          href={prevUrl ? getPermalink(prevUrl) : '#'}
+          class={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium ${prevUrl ? 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800' : 'text-slate-400 dark:text-slate-600 pointer-events-none'}`}
+          aria-disabled={!prevUrl}
         >
-          <Icon name="tabler:chevron-left" class="w-6 h-6" />
-          <p class="ml-2">{prevText}</p>
-        </Button>
+          <Icon name="tabler:chevron-left" class="w-4 h-4 mr-1" />
+          <span>Prev</span>
+        </a>
 
-        <Button variant="tertiary" class={`md:px-3 px-3 ${!nextUrl ? 'invisible' : ''}`} href={getPermalink(nextUrl)}>
-          <span class="mr-2">{nextText}</span>
-          <Icon name="tabler:chevron-right" class="w-6 h-6" />
-        </Button>
+        {pages.map((n) => {
+          const isCurrent = n === currentPage;
+          const url = pageUrl(n);
+          return isCurrent ? (
+            <span
+              class="inline-flex items-center justify-center w-9 h-9 rounded-md bg-blue-600 text-white text-sm font-semibold"
+              aria-current="page"
+            >
+              {n}
+            </span>
+          ) : (
+            <a
+              href={url ? getPermalink(url) : '#'}
+              class="inline-flex items-center justify-center w-9 h-9 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium"
+              aria-label={`Page ${n}`}
+            >
+              {n}
+            </a>
+          );
+        })}
+
+        <a
+          href={nextUrl ? getPermalink(nextUrl) : '#'}
+          class={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium ${nextUrl ? 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800' : 'text-slate-400 dark:text-slate-600 pointer-events-none'}`}
+          aria-disabled={!nextUrl}
+        >
+          <span>Next</span>
+          <Icon name="tabler:chevron-right" class="w-4 h-4 ml-1" />
+        </a>
       </div>
-    </div>
+    </nav>
   )
 }
