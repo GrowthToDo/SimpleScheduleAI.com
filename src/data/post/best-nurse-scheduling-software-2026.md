@@ -32,15 +32,18 @@ metadata:
 
 - [Quick Comparison: All 8 Platforms](#quick-comparison-all-8-platforms)
 - [How to Evaluate Nurse Scheduling Software in 2026?](#how-to-evaluate-nurse-scheduling-software-in-2026)
+- [What Is Your Bed Count and Staff Size?](#what-is-your-bed-count-and-staff-size)
+- [Do You Want to Manage Scheduling Yourself or Hand It Off?](#do-you-want-to-manage-scheduling-yourself-or-hand-it-off)
+- [What Compliance Requirements Do You Actually Have?](#what-compliance-requirements-do-you-actually-have)
 - [What Are the 8 Best Nurse Scheduling Software Options in 2026?](#what-are-the-8-best-nurse-scheduling-software-options-in-2026)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. Aladtec](#2-aladtec)
-  - [3. SmartLinx](#3-smartlinx)
-  - [4. QGenda](#4-qgenda)
-  - [5. NurseGrid Manager](#5-nursegrid-manager)
-  - [6. OnShift (now part of Workday)](#6-onshift-now-part-of-workday)
-  - [7. Deputy](#7-deputy)
-  - [8. UKG (formerly Kronos)](#8-ukg-formerly-kronos)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. Aladtec](#2-aladtec)
+- [3. SmartLinx](#3-smartlinx)
+- [4. QGenda](#4-qgenda)
+- [5. NurseGrid Manager](#5-nursegrid-manager)
+- [6. OnShift (now part of Workday)](#6-onshift-now-part-of-workday)
+- [7. Deputy](#7-deputy)
+- [8. UKG (formerly Kronos)](#8-ukg-formerly-kronos)
 - [Which Software Is Right for Your Hospital Size?](#which-software-is-right-for-your-hospital-size)
 - [What Changed in Nurse Scheduling Software in 2026?](#what-changed-in-nurse-scheduling-software-in-2026)
 - [How Does SimpleScheduleAI Fit in This Landscape?](#how-does-simplescheduleai-fit-in-this-landscape)
@@ -135,7 +138,7 @@ Evaluating nurse scheduling software in 2026 means starting with three questions
 
 Before comparing platforms, it helps to know what questions actually matter for your situation. The vendor demos will emphasize features. The real evaluation should emphasize fit.
 
-### Question 1: What is your bed count and staff size?
+## What Is Your Bed Count and Staff Size?
 
 The nurse scheduling software market is not one market. It is three markets that happen to use similar terminology:
 
@@ -145,13 +148,13 @@ The nurse scheduling software market is not one market. It is three markets that
 
 Most small and rural hospitals end up over-buying. They purchase a platform sized for a 300-bed system and then spend six months trying to configure it down to their reality. That is a predictable failure mode.
 
-### Question 2: Do you want to manage scheduling yourself or hand it off?
+## Do You Want to Manage Scheduling Yourself or Hand It Off?
 
 Self-serve software assumes your nurse manager will log in, configure rules, build schedules, and maintain the system. For a manager who is also clinically active, this is often an unrealistic expectation.
 
 Managed scheduling services take a different approach: a scheduling team handles the weekly build, the manager approves. This model did not exist at scale five years ago. In 2026, it is a legitimate alternative to self-serve software for hospitals under 50 beds.
 
-### Question 3: What compliance requirements do you actually have?
+## What Compliance Requirements Do You Actually Have?
 
 [FLSA overtime rules](https://www.dol.gov/agencies/whd/flsa) apply to every hospital. Critical Access Hospitals also operate under [CMS Conditions of Participation §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals). Larger hospitals face JCAHO accreditation requirements and state-specific staffing ratios on top of that.
 
@@ -203,7 +206,7 @@ Any software that does not provide all four of these is a compliance liability f
 
 The eight platforms worth evaluating for nurse scheduling in 2026 are SimpleScheduleAI, Aladtec, SmartLinx, QGenda, NurseGrid Manager, OnShift, Deputy, and UKG. They span three tiers: managed service for small CAHs, self-serve platforms for community hospitals, and enterprise systems for large health systems. Matching the platform to hospital size and administrative capacity is more important than comparing individual features across tiers.
 
-### 1. [SimpleScheduleAI](/)
+## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
@@ -228,7 +231,7 @@ The model is built for small hospitals in Texas, with Texas overtime compliance,
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 2. [Aladtec](https://www.aladtec.com)
+## 2. [Aladtec](https://www.aladtec.com)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Aladtec.png" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
@@ -263,7 +266,7 @@ Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews)
 
 **Cost:** Approximately $200-$450/month for small hospital staff sizes.
 
-### 3. [SmartLinx](https://www.smartlinx.com)
+## 3. [SmartLinx](https://www.smartlinx.com)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Smartlinx.png" alt="SmartLinx workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
@@ -303,7 +306,7 @@ SmartLinx is well-suited to LTC, post-acute, and SNF facilities that want schedu
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 4. [QGenda](https://www.qgenda.com)
+## 4. [QGenda](https://www.qgenda.com)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/QGenda.png" alt="QGenda physician and nurse scheduling platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
@@ -345,7 +348,7 @@ QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It st
 
 **Cost:** Pricing not listed on website. Contact for a quote. Typically starts at $500+/month for small deployments.
 
-### 5. [NurseGrid Manager](https://nursegrid.com)
+## 5. [NurseGrid Manager](https://nursegrid.com)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Nursegrid.png" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
@@ -382,7 +385,7 @@ NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample). NurseGrid 
 
 **Cost:** Free for individual nurses. Manager tools via NurseGrid for Managers - pricing available on request.
 
-### 6. [OnShift](https://www.onshift.com) (now part of Workday)
+## 6. [OnShift](https://www.onshift.com) (now part of Workday)
 
 _For a CAH-specific deeper comparison, see our guide on the [best OnShift alternatives for Critical Access Hospitals](/blog/onshift-alternatives)._
 
@@ -425,7 +428,7 @@ OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is
 
 **Cost:** Pricing not listed on website. Enterprise pricing applies post-acquisition.
 
-### 7. [Deputy](https://www.deputy.com)
+## 7. [Deputy](https://www.deputy.com)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Deputy.png" alt="Deputy workforce scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
@@ -449,7 +452,7 @@ Deputy is a general workforce scheduling platform used across retail, hospitalit
 
 **Cost:** Approximately $4-$6/employee/month.
 
-### 8. [UKG](https://www.ukg.com) (formerly Kronos)
+## 8. [UKG](https://www.ukg.com) (formerly Kronos)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/UKG.png" alt="UKG workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 

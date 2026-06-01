@@ -34,11 +34,13 @@ metadata:
 ## Table of Contents
 
 - [What Does Traditional Nurse Scheduling Actually Involve?](#what-does-traditional-nurse-scheduling-actually-involve)
+- [What Compliance Overlay Makes Manual Scheduling Harder for CAHs?](#what-compliance-overlay-makes-manual-scheduling-harder-for-cahs)
 - [What Does AI Scheduling Change, and What Does It Leave Alone?](#what-does-ai-scheduling-change-and-what-does-it-leave-alone)
 - [Where Does AI Scheduling Have the Biggest Impact?](#where-does-ai-scheduling-have-the-biggest-impact)
 - [What Are the Real Limitations of AI Nurse Scheduling?](#what-are-the-real-limitations-of-ai-nurse-scheduling)
 - [How Do You Know If AI Scheduling Is Worth It for Your Hospital?](#how-do-you-know-if-ai-scheduling-is-worth-it-for-your-hospital)
 - [How Do Traditional and AI Scheduling Compare at a 25-Bed Hospital?](#how-do-traditional-and-ai-scheduling-compare-at-a-25-bed-hospital)
+- [What Does the Manual-to-AI Time Gap Cost a 25-Bed Hospital?](#what-does-the-manual-to-ai-time-gap-cost-a-25-bed-hospital)
 - [What Do Nurses Experience Differently Under AI Scheduling vs. Traditional Scheduling?](#what-do-nurses-experience-differently-under-ai-scheduling-vs-traditional-scheduling)
 - [Is AI Scheduling Software or an AI Managed Service Better for a Small Hospital?](#is-ai-scheduling-software-or-an-ai-managed-service-better-for-a-small-hospital)
 - [How Does SimpleScheduleAI Use AI for Critical Access Hospital Scheduling?](#how-does-simplescheduleai-use-ai-for-critical-access-hospital-scheduling)
@@ -56,6 +58,8 @@ AI scheduling externalizes those rules into a system that applies them the same 
 Traditional nurse scheduling at a small hospital is a multi-constraint problem the nurse manager solves by hand, usually under time pressure. She balances minimum coverage, RN-to-patient ratios, charge nurse availability, weekend and holiday fairness, individual availability windows, certification requirements, FLSA overtime thresholds, time-off requests, and per diem availability, all at once, for every shift in the cycle.
 
 Applying these constraints in Excel or on paper means checking each rule manually for every shift assignment. A 4-week schedule for a 20-nurse roster involves roughly 120 to 160 individual shift assignments, and each one can violate one or more constraints. There is no system flagging a conflict; the manager has to catch it herself before publishing.
+
+## What Compliance Overlay Makes Manual Scheduling Harder for CAHs?
 
 The federal overtime rules alone are not trivial. The [FLSA 8-and-80 provision](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) lets hospitals calculate overtime on an 80-hour, 14-day basis instead of the standard 40-hour week, but only if the agreement is set up correctly. Tracking each nurse's running total against that threshold while also building the grid is the kind of work that produces overtime surprises at the end of a pay period. For Critical Access Hospitals, the [CMS Conditions of Participation at 42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) also require documented staffing that holds up under survey, which adds a recordkeeping layer on top of the construction work.
 
@@ -223,6 +227,8 @@ At a 25-bed hospital, traditional Excel scheduling costs the manager 8 to 12 hou
 </div>
 
 The numbers above are operational estimates for a 25-bed roster of 15 to 25 nurses, not vendor benchmarks. The pattern holds regardless of the exact figures: the time and error reduction is small from Excel to software, and large from Excel to a managed service, because software still leaves construction with the manager while a service removes it. The [American Nurses Association](https://www.nursingworld.org/practice-policy/nurse-staffing/) ties safe staffing directly to documented, enforceable scheduling, which is exactly the layer manual Excel scheduling cannot guarantee under audit.
+
+## What Does the Manual-to-AI Time Gap Cost a 25-Bed Hospital?
 
 The cost difference is easier to see when you price the recovered hours. Take the gap between Excel and a managed service in the table: roughly 8 hours per week. Over a year that is about 416 hours. For a nurse manager who also takes clinical shifts, that time is not administrative overhead, it is clinical capacity the hospital is spending on spreadsheet maintenance. At a loaded rate in the $55 to $70 per hour range for a working manager, that is roughly $23,000 to $29,000 a year in capacity the hospital does not recover. The [HRSA-supported rural health workforce literature](https://www.hrsa.gov/rural-health) consistently identifies administrative load on clinical leaders as a retention risk at small and rural facilities, which makes the recovered hours a staffing-stability argument, not only a budget one. The error side carries its own cost: an unnoticed overtime breach or a credential mismatch discovered during a survey is far more expensive to remediate than to prevent, which is why consistent enforcement matters more than the raw hour count.
 
