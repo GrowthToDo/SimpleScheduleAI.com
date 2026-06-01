@@ -132,7 +132,7 @@ For most 25-bed critical access hospitals, the ROI calculation favors switching 
 
 Consider the numbers plainly. If your nurse manager spends 10 hours per week on scheduling and earns $50/hour, that's $26,000 per year in labor. A scheduling solution that cuts that time by 60% saves roughly $15,600 annually in direct manager time, before counting any reduction in overtime or agency spend.
 
-Agency nurse costs run [2-3× the standard hourly rate](https://www.aonl.org/resources/nursing-workforce-now). At a 25-bed hospital, a single unplanned agency shift might cost $800-$1,200. If better scheduling prevents even 10 such shifts per year, that's $8,000-$12,000 in avoidable spend. Our pilot data shows a 15-30% reduction in overtime after switching to automated scheduling, at a small CAH, that alone can offset the cost of any reasonable scheduling service.
+Agency nurse costs run [2-3× the standard hourly rate](https://www.aonl.org/resources/workforce). At a 25-bed hospital, a single unplanned agency shift might cost $800-$1,200. If better scheduling prevents even 10 such shifts per year, that's $8,000-$12,000 in avoidable spend. Our pilot data shows a 15-30% reduction in overtime after switching to automated scheduling, at a small CAH, that alone can offset the cost of any reasonable scheduling service.
 
 The comparison often framed as "software cost vs. Excel (free)" misses the point. The real comparison is "total cost of scheduling with software" versus "total cost of scheduling with Excel", which includes manager hours, overtime premiums, agency markups, and compliance risk. When that full picture is on the table, staying on Excel stops looking free.
 

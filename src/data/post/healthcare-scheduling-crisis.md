@@ -101,7 +101,7 @@ For a deeper look at the specific compliance and coverage requirements driving t
 
 Last-minute nurse callouts force a two-to-three hour coordination scramble that
 almost always ends at agency rates - typically 2-3x the standard hourly wage,
-[per AONL workforce data](https://www.aonl.org/resources/nursing-workforce-now).
+[per AONL workforce data](https://www.aonl.org/resources/workforce).
 For a CAH on Medicare-dependent margins, this premium compounds quickly. But the
 invoice is only part of the cost: agency staff unfamiliar with your unit's protocols,
 EMR workflows, and patient population carry an invisible orientation tax on every shift.
@@ -169,7 +169,7 @@ edits accumulate over a 6-week schedule cycle.
 
 Fair workload distribution is nearly impossible to enforce manually. Managers default
 to calling the nurses they trust. Those nurses say yes, until they stop.
-[AONL research on nurse manager burnout](https://www.aonl.org/resources/nurse-manager-competencies)
+[AONL research on nurse manager burnout](https://www.aonl.org/nurse-manager-competencies)
 links scheduling inequity directly to voluntary turnover among high-performing staff.
 
 When reliable nurses absorb disproportionate callout coverage and overtime, two

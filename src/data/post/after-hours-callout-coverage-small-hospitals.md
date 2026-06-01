@@ -140,7 +140,7 @@ You build a ranked callout call list by sorting every available nurse for the up
 
 The three ranking factors are not interchangeable, and the order matters:
 
-**Overtime exposure first.** A nurse who is already at 36 hours this FLSA week is one shift from time-and-a-half. A nurse at 12 hours is not. Ranking by remaining hours before the overtime threshold protects the budget on every callout. For hospitals on the [FLSA 8-and-80 healthcare overtime rule](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare), the threshold logic is per day and per 14-day period, which is harder to track in your head at 2 AM and is exactly why it must be pre-computed.
+**Overtime exposure first.** A nurse who is already at 36 hours this FLSA week is one shift from time-and-a-half. A nurse at 12 hours is not. Ranking by remaining hours before the overtime threshold protects the budget on every callout. For hospitals on the [FLSA 8-and-80 healthcare overtime rule](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), the threshold logic is per day and per 14-day period, which is harder to track in your head at 2 AM and is exactly why it must be pre-computed.
 
 **Credential and unit match second.** A nurse who cannot legally cover the open shift does not belong on the list, no matter how available she is. The list should already be filtered to nurses credentialed for that unit, so the on-call charge nurse never has to verify competency at 2 AM.
 
