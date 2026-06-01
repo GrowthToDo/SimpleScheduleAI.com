@@ -88,7 +88,7 @@ const faqSchema = {
       name: 'Is AI nurse scheduling compliant with Texas nursing rules?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI nurse scheduling can encode Texas overtime rules, FLSA thresholds, and the CMS requirement that a registered nurse is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these constraints during generation and logs an audit trail of every change for CMS surveys and Texas DSHS documentation.',
+        text: 'AI nurse scheduling can encode Texas overtime rules, FLSA thresholds, and the CMS requirement that a registered nurse is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these constraints during generation and logs an audit trail of every change for CMS surveys and Texas HHSC hospital licensing documentation.',
       },
     },
   ],
@@ -124,6 +124,12 @@ const breadcrumbSchema = {
 
   <section class="bg-page py-16 md:py-20">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 prose dark:prose-invert prose-lg max-w-none">
+      <p class="not-prose text-sm text-slate-600 dark:text-slate-400 mb-8">
+        By <a href="/about/pradeep-pandey" class="text-slate-700 dark:text-slate-300 underline decoration-dotted"
+          >Pradeep Pandey</a
+        > · Published March 31, 2026 · Updated June 1, 2026
+      </p>
+
       <h2>What Is AI Nurse Scheduling?</h2>
       <p>
         AI nurse scheduling uses constraint-solving algorithms to turn nurse availability, certifications, shift rules,
@@ -158,7 +164,11 @@ const breadcrumbSchema = {
       <ul>
         <li>
           <strong>Constraint solving:</strong> Hard rules that cannot be broken, including required coverage per shift, certification
-          match, mandatory rest between shifts, and the CMS requirement that an RN is on duty or on call at all times.
+          match, mandatory rest between shifts, and the <a
+            href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+            rel="noopener"
+            target="_blank">CMS §485.635</a
+          > requirement that an RN is on duty or on call at all times.
         </li>
         <li>
           <strong>Fairness optimization:</strong> Spreading nights, weekends, and holidays so the same nurses do not repeatedly
@@ -266,8 +276,13 @@ const breadcrumbSchema = {
         system produces a ranked replacement shortlist in seconds, and the manager makes the call.
       </p>
       <p>
-        The audit trail logs every AI suggestion and every human decision, which is the documentation CMS surveys and
-        Texas DSHS checks ask for. The full step-by-step is on <a href="/how-it-works">how it works</a>.
+        The audit trail logs every AI suggestion and every human decision, which is the documentation <a
+          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+          rel="noopener"
+          target="_blank">CMS surveys</a
+        > and Texas HHSC hospital licensing checks ask for. The full step-by-step is on <a href="/how-it-works"
+          >how it works</a
+        >.
       </p>
       <p>
         <strong>Not right for:</strong> Hospitals over 50 beds or those needing deep EHR integration. SimpleScheduleAI is
@@ -323,7 +338,7 @@ const breadcrumbSchema = {
       {
         title: 'Is AI nurse scheduling compliant with Texas nursing rules?',
         description:
-          'It can encode Texas overtime rules, FLSA thresholds, and the CMS requirement that an RN is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these during generation and logs an audit trail of every change for CMS surveys and Texas DSHS documentation.',
+          'It can encode Texas overtime rules, FLSA thresholds, and the CMS requirement that an RN is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these during generation and logs an audit trail of every change for CMS surveys and Texas HHSC hospital licensing documentation.',
       },
     ]}
   />
