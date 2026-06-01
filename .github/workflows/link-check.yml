@@ -1,0 +1,65 @@
+name: Link check (external URLs)
+
+# Runs lychee against the blog content + a few key page files.
+# - Weekly cron catches link rot in days, not on a manual sweep
+# - On-PR check catches a bad link before it ships
+# Broken links open / update a single rolling GitHub issue.
+
+on:
+  schedule:
+    # Mondays 09:00 UTC. Short turnaround into the week if anything broke over the weekend.
+    - cron: '0 9 * * 1'
+  pull_request:
+    paths:
+      - 'src/data/post/**.md'
+      - 'src/pages/**.astro'
+      - 'src/pages/**.mdx'
+      - 'docs/seo/**.md'
+      - 'lychee.toml'
+      - '.github/workflows/link-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  link-check:
+    name: lychee
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: lychee-${{ github.sha }}
+          restore-keys: lychee-
+
+      - name: Run lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Scope: blog posts + page sources. Skips node_modules and dist by default via lychee.toml.
+          args: >-
+            --config lychee.toml
+            --base 'https://simplescheduleai.com'
+            src/data/post/**/*.md
+            src/pages/**/*.astro
+            src/pages/**/*.mdx
+          # Don't fail the job — we want the issue to surface the report.
+          fail: false
+          format: markdown
+          output: lychee-report.md
+          jobSummary: true
+
+      - name: Open or update issue with broken links
+        if: env.lychee_exit_code != '0'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: 'Broken external links found by lychee'
+          content-filepath: lychee-report.md
+          labels: |
+            link-rot
+            automated

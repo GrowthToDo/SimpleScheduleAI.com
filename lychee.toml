@@ -1,0 +1,46 @@
+# Lychee link-checker config — used by .github/workflows/link-check.yml
+# Docs: https://lychee.cli.rs/usage/config/
+
+# Cache results 7 days; weekly cron picks up real changes without hammering sites every run.
+cache = true
+max_cache_age = "7d"
+
+# Be a polite client. Many corporate/govt sites block bot UAs.
+user_agent = "Mozilla/5.0 (compatible; SimpleScheduleAI-LinkCheck/1.0; +https://simplescheduleai.com)"
+
+# Network knobs.
+timeout = 20
+retry_wait_time = 5
+max_retries = 2
+max_concurrency = 8
+
+# What to crawl.
+include_verbatim = true
+include_fragments = false
+include_mail = false
+
+# What to skip — internal links, anchors, and known-flaky social hosts.
+# Internal /pages are validated by Astro at build, not here.
+exclude_path = [
+  "node_modules",
+  "dist",
+  ".astro",
+]
+
+exclude = [
+  # Internal site links (relative or absolute) — Astro/Netlify routing checks these.
+  '^https?://(www\.)?simplescheduleai\.com',
+  '^/',
+  # LinkedIn 999s any bot UA; not actionable.
+  '^https?://([a-z]+\.)?linkedin\.com',
+  # X/Twitter requires login for most pages.
+  '^https?://(x|twitter)\.com',
+  # Calendly + similar booking pages bounce non-browser clients.
+  '^https?://cal\.com',
+  '^https?://calendly\.com',
+  # localhost / 127.0.0.1 noise from any draft pastes.
+  '^https?://(localhost|127\.0\.0\.1)',
+]
+
+# Treat these as success — some servers return 999/403 to non-browser UAs even when live.
+accept = ["200", "204", "206", "301", "302", "307", "308", "403", "429", "999"]

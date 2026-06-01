@@ -152,7 +152,23 @@ The three ranking factors are not interchangeable, and the order matters:
 
 The Conditions of Participation for CAHs require nursing services to be furnished in accordance with written policies and under the direction of a qualified nurse, as set out in the [CMS State Operations Manual, Appendix W](https://www.cms.gov/Regulations-and-Guidance/Guidance/Manuals/downloads/som107ap_w_cah.pdf). A surveyor reviewing a flagged shift will ask how the open position was covered and whether the covering nurse was qualified for the assignment. If the answer lives only in someone's memory, that is a documentation gap.
 
-The practical documentation set for one callout is short but must be consistent: the name and role of the nurse who called out, the time the callout was received, every person contacted and their response, the name and credentials of the nurse who covered, and the resulting unit staffing for the shift. Captured at the time, this is a five-minute log. Reconstructed weeks later before a survey, it is hours of guesswork and a compliance exposure. The goal is a callout process that produces this record as a byproduct, not as a separate chore.
+The practical documentation set for one callout is short but must be consistent. Captured at the time, this is a 5-minute log. Reconstructed weeks later before a survey, it is hours of guesswork and a compliance exposure. The goal is a callout process that produces this record as a byproduct, not as a separate chore.
+
+<div class="not-prose my-8 rounded-xl border-2 border-purple-300 dark:border-purple-700 bg-white dark:bg-slate-800 overflow-hidden">
+  <div class="bg-purple-700 px-5 py-3">
+    <p class="text-sm font-bold text-white">CMS §485.635 Callout Documentation: 5-Item Log</p>
+  </div>
+  <div class="px-5 py-4">
+    <ol class="space-y-2 text-sm text-slate-700 dark:text-slate-300 list-decimal list-inside">
+      <li>Name and role of the nurse who called out</li>
+      <li>Time the callout was received</li>
+      <li>Every person contacted and their response</li>
+      <li>Name and credentials of the nurse who covered</li>
+      <li>Resulting unit staffing for the shift</li>
+    </ol>
+    <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">Logged in real time, this satisfies §485.635 review without separate survey prep.</p>
+  </div>
+</div>
 
 ## How Do You Prepare a Per-Diem Bench So You Are Not Calling an Agency?
 
