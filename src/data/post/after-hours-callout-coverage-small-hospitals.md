@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-05-18T00:00:00Z
-updateDate: 2026-05-18T00:00:00Z
+draft: false
+publishDate: 2026-06-01T00:00:00Z
+updateDate: 2026-06-01T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'After-Hours Callout Coverage for Critical Access Hospitals'
 excerpt: >
@@ -36,7 +36,7 @@ metadata:
 - [How Do You Build a Ranked Callout Call List Before the Night Shift?](#how-do-you-build-a-ranked-callout-call-list-before-the-night-shift)
 - [What Documentation Does CMS §485.635 Require After a Callout?](#what-documentation-does-cms-485635-require-after-a-callout)
 - [How Do You Prepare a Per-Diem Bench So You Are Not Calling an Agency?](#how-do-you-prepare-a-per-diem-bench-so-you-are-not-calling-an-agency)
-- [How SimpleScheduleAI Helps](#how-simplescheduleai-helps)
+- [How Does SimpleScheduleAI Help with After-Hours Callouts?](#how-does-simplescheduleai-help-with-after-hours-callouts)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 A nurse calls in sick at 2:40 AM for a shift that starts at 6:45 AM. There is no float pool, no staffing coordinator on duty, and no agency desk that answers before business hours. The person solving this is usually the on-call charge nurse or the nurse manager, working a phone list from memory while the unit runs short. This post is the operational playbook for that exact moment, written for hospitals with 25 beds or fewer.
@@ -89,7 +89,7 @@ The true cost is rarely captured because most CAHs only track the agency invoice
   </table>
 </div>
 
-The American Nurses Association links inadequate staffing directly to patient outcomes and nurse retention in its [staffing advocacy work](https://www.nursingworld.org/practice-policy/nurse-staffing/), which means an uncovered hole is not only a cost line, it is a safety and turnover driver. For a CAH operating on thin rural margins documented by [HRSA's rural health workforce research](https://www.hrsa.gov/rural-health), a recurring callout problem that quietly converts staff hours into overtime and agency hours can move the labor budget by several points over a year.
+The American Nurses Association links inadequate staffing directly to patient outcomes and nurse retention in its [staffing advocacy work](https://www.nursingworld.org/practice-policy/nurse-staffing/), which means an uncovered hole is not only a cost line, it is a safety and turnover driver. For a CAH operating on thin rural margins documented by [HRSA's rural health workforce research](https://www.hrsa.gov/rural-health), a recurring callout problem that quietly converts staff hours into overtime and agency hours can move the labor budget by several points over a year. The compounding manager-time portion of this cost is the same shadow burden we break down in [the healthcare scheduling crisis](/blog/healthcare-scheduling-crisis).
 
 ## What Does a Workable After-Hours Callout Process Look Like?
 
@@ -166,9 +166,9 @@ A per-diem bench only works if it is actively maintained, not assembled in a cri
 
 **Treat bench order as fairness, not convenience.** The same fairness logic that governs the staff call list governs the bench. Rotating who gets the first bench call keeps per-diem nurses engaged and prevents the two most agreeable ones from quietly burning out and leaving. Once the internal staff list and the bench are exhausted, agency coverage is the documented fallback, not the reflex.
 
-## How SimpleScheduleAI Helps
+## How Does SimpleScheduleAI Help with After-Hours Callouts?
 
-SimpleScheduleAI is a managed nurse scheduling service for Critical Access Hospitals in Texas. It removes the 2 AM phone tree by maintaining the ranked callout list and the per-diem bench as part of the service, so when a nurse calls out, the on-call charge nurse receives a replacement shortlist already sorted by overtime exposure, credential match, and rotation fairness, and makes calls instead of building the list. The callout record is captured in the same step for [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) review.
+SimpleScheduleAI is a managed nurse scheduling service for Critical Access Hospitals in Texas. It removes the 2 AM phone tree by maintaining the ranked callout list and the per-diem bench as part of the service, so when a nurse calls out, the on-call charge nurse receives a replacement shortlist already sorted by overtime exposure, credential match, and rotation fairness, and makes calls instead of building the list. The callout record is captured in the same step for [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) review. The pre-ranked shortlist pattern is the same one we cover in our broader piece on [AI nurse scheduling vs. traditional methods](/blog/ai-nurse-scheduling-vs-traditional).
 
 Honest limitation: the service prepares and ranks the list, but a human at the hospital still places the calls and confirms the replacement. SimpleScheduleAI does not auto-dial nurses or fill the shift without a person deciding. For a small hospital, that human confirmation step is intentional, because the on-call charge nurse knows context the data does not. What changes is that the thinking, ranking, and compliance logging are done before the phone rings, not at 2 AM.
 
