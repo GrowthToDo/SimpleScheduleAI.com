@@ -33,9 +33,13 @@ metadata:
 - [What Is TCP TimeClock+?](#what-is-tcp-timeclock)
 - [What Does TCP TimeClock+ Cover and What Does It Miss?](#what-does-tcp-timeclock-cover-and-what-does-it-miss)
 - [What Is the Best TCP Alternative for Each Scenario?](#what-is-the-best-tcp-alternative-for-each-scenario)
-  - [Scenario 1: Better Self-Serve Software](#scenario-1-better-self-serve-software)
-  - [Scenario 2: Scheduling Work Done for You](#scenario-2-scheduling-work-done-for-you)
+- [Scenario 1: Better Self-Serve Software](#scenario-1-better-self-serve-software)
+- [Scenario 2: Scheduling Work Done for You](#scenario-2-scheduling-work-done-for-you)
 - [How Do the Main TCP Alternatives Compare?](#how-do-the-main-tcp-alternatives-compare)
+- [ShiftWizard](#shiftwizard)
+- [Aladtec by TCP](#aladtec-by-tcp)
+- [NurseGrid](#nursegrid)
+- [SimpleScheduleAI](#simplescheduleai)
 - [What Are the Four Questions to Ask Any TCP Alternative?](#what-are-the-four-questions-to-ask-any-tcp-alternative)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -110,13 +114,13 @@ These gaps matter most at understaffed CAHs where the nurse manager has no sched
 
 The right TCP TimeClock+ alternative depends on which problem you are solving. Frustration with the scheduling interface and frustration with the total scheduling labor burden look similar from a distance but have different solutions. Identifying which one is driving the evaluation determines which alternative will actually help.
 
-### Scenario 1: Better Self-Serve Software
+## Scenario 1: Better Self-Serve Software
 
 If you want to keep building schedules yourself but with a platform designed for hospital nursing specifically, **ShiftWizard** is the strongest alternative to TCP TimeClock+. It is built for hospital scheduling rather than adapted from general workforce management, has a more modern interface, and covers hospital-specific credential fields and department-level workflows. Setup time is comparable, so the lift to switch is similar; the upside is a scheduling-first design instead of a time-and-attendance platform with scheduling added on.
 
 This switch makes sense when the complaint is interface, scheduling workflow depth, or click count. It does not reduce the hours your nurse manager spends building schedules each week. The operating model is the same.
 
-### Scenario 2: Scheduling Work Done for You
+## Scenario 2: Scheduling Work Done for You
 
 If the goal is structural burden reduction rather than a better tool, **SimpleScheduleAI** is the managed service alternative to TCP TimeClock+. It does not replace TCP with a different platform; it replaces the self-serve model entirely. A scheduling specialist handles configuration, roster maintenance, and weekly schedule generation; the nurse manager reviews drafts and approves.
 
@@ -165,7 +169,7 @@ The trade-off is the staff-facing experience: TCP TimeClock+ has a nurse-facing 
 
 Most Critical Access Hospital nurse managers evaluating TCP TimeClock+ alternatives are looking at three categories: hospital-specific self-serve scheduling platforms, a different TCP product designed specifically for healthcare scheduling, and managed services. Here is how the main options line up against each other and against TimeClock+.
 
-### ShiftWizard
+## ShiftWizard
 
 <img src="/images/blog/best-tcp-alternative-for-cah/Shiftwizard.png" alt="ShiftWizard hospital nurse scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -190,7 +194,7 @@ ShiftWizard holds 4.4/5 on Capterra from 723 reviews and is purpose-built for ho
 
 **Cost:** Pricing not listed publicly. Contact for a quote.
 
-### Aladtec by TCP
+## Aladtec by TCP
 
 <img src="/images/blog/best-tcp-alternative-for-cah/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -216,7 +220,7 @@ Aladtec by TCP is a separate TCP Software product designed specifically for heal
 
 See our full [Aladtec alternatives](/blog/aladtec-alternatives) post for a complete breakdown of Aladtec by TCP's feature set.
 
-### NurseGrid
+## NurseGrid
 
 <img src="/images/blog/best-tcp-alternative-for-cah/Nursegrid.png" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -240,7 +244,7 @@ NurseGrid is positioned as a mobile-first nurse-facing app for per diem and shif
 
 **Cost:** Pricing not listed publicly. Contact for a quote.
 
-### SimpleScheduleAI
+## SimpleScheduleAI
 
 <img src="/images/blog/best-tcp-alternative-for-cah/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

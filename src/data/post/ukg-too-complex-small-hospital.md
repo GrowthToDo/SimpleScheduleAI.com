@@ -34,9 +34,9 @@ metadata:
 - [What Does UKG Complexity Look Like in Practice at a Critical Access Hospital?](#what-does-ukg-complexity-look-like-in-practice-at-a-critical-access-hospital)
 - [What Is the Complexity-to-Value Gap?](#what-is-the-complexity-to-value-gap)
 - [What Works at Critical Access Hospital Scale?](#what-works-at-critical-access-hospital-scale)
-  - [Aladtec (TCP Scheduling)](#aladtec-tcp-scheduling)
-  - [SmartLinx](#smartlinx)
-  - [SimpleScheduleAI](#simplescheduleai)
+- [Aladtec (TCP Scheduling)](#aladtec-tcp-scheduling)
+- [SmartLinx](#smartlinx)
+- [SimpleScheduleAI](#simplescheduleai)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 UKG (formerly Kronos) is the most deployed workforce management system in large hospital networks. If your CAH is affiliated with a regional health system, you may have been included in an enterprise UKG contract and told the system is "already set up." In practice, what that usually means is: the system was configured for the health system's workflows, partially adapted for the CAH's context, and handed to the nurse manager to operate with minimal training.
@@ -196,7 +196,7 @@ These requirements can be met by purpose-built tools at a fraction of UKG's cost
   </table>
 </div>
 
-### Aladtec (TCP Scheduling)
+## Aladtec (TCP Scheduling)
 
 Aladtec (branded as TCP Scheduling Software by its parent company TCP) is a scheduling platform used at critical access hospitals and EMS settings. Setup runs 2-4 weeks with minimal IT involvement.
 
@@ -204,13 +204,13 @@ The trade-off: Aladtec is a self-serve platform. The nurse manager configures an
 
 Best for: CAHs where the nurse manager or administrator has time to configure and maintain the scheduling system. Not appropriate for a dual-role nurse manager with no scheduling bandwidth.
 
-### SmartLinx
+## SmartLinx
 
 SmartLinx is a workforce management platform designed for mid-size healthcare organizations. It has stronger credential enforcement and compliance logic than Aladtec but requires IT involvement for initial configuration. Implementation runs 3-4 months.
 
 Best for: Hospitals (50-200 beds) with an IT team available to configure and maintain scheduling rules. Not appropriate for a CAH without dedicated IT support.
 
-### SimpleScheduleAI
+## SimpleScheduleAI
 
 SimpleScheduleAI is a managed scheduling service built specifically for critical access hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the first schedule is delivered within 48 hours, and ongoing configuration maintenance is handled by the service team.
 

@@ -34,14 +34,17 @@ metadata:
 ## Table of Contents
 
 - [Why Hospitals Switch Away from OnShift?](#why-hospitals-switch-away-from-onshift)
+- [Is OnShift's Open-Shift Model Fast Enough for Acute Care Callouts?](#is-onshifts-open-shift-model-fast-enough-for-acute-care-callouts)
+- [Does OnShift Enforce Credentials at the Point of Shift Pickup?](#does-onshift-enforce-credentials-at-the-point-of-shift-pickup)
+- [Does OnShift Produce Survey-Ready CMS §485.635 Documentation?](#does-onshift-produce-survey-ready-cms-485635-documentation)
 - [Quick Comparison: OnShift vs. The Alternatives](#quick-comparison-onshift-vs-the-alternatives)
 - [What Are the 6 Best OnShift Alternatives for Critical Access Hospitals?](#what-are-the-6-best-onshift-alternatives-for-critical-access-hospitals)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. Aladtec](#2-aladtec)
-  - [3. SmartLinx](#3-smartlinx)
-  - [4. QGenda](#4-qgenda)
-  - [5. NurseGrid Manager](#5-nursegrid-manager)
-  - [6. UKG](#6-ukg)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. Aladtec](#2-aladtec)
+- [3. SmartLinx](#3-smartlinx)
+- [4. QGenda](#4-qgenda)
+- [5. NurseGrid Manager](#5-nursegrid-manager)
+- [6. UKG](#6-ukg)
 - [When to Stay with OnShift?](#when-to-stay-with-onshift)
 - [How SimpleScheduleAI Compares to OnShift?](#how-simplescheduleai-compares-to-onshift)
 - [What to Do This Week?](#what-to-do-this-week)
@@ -64,19 +67,19 @@ Hospitals switch away from OnShift because the platform was designed for long-te
 
 OnShift does not publish a public G2 or Capterra rating that maps cleanly to a Critical Access Hospital nursing context, and no verified small-hospital nursing reviewer quote is available. The points below are framed as evaluation questions a CAH should probe in any OnShift demo, not as confirmed product gaps. The themes cluster into three areas worth testing.
 
-### Is OnShift's Open-Shift Model Fast Enough for Acute Care Callouts?
+## Is OnShift's Open-Shift Model Fast Enough for Acute Care Callouts?
 
 OnShift's documented model posts open shifts and waits for caregivers to accept them. In long-term care, where census is stable and coverage gaps are often known days in advance, a post-and-wait model is workable. In acute care, an emergency callout needs a confirmed replacement within minutes, not a posted shift waiting on a response cycle.
 
 The question a CAH should ask in the demo is concrete: when a night-shift nurse calls out at 5am, what is the documented path from callout to a confirmed, correctly credentialed replacement, and is that path measured in minutes or hours? Ask the vendor to walk through a real acute care callout scenario rather than a planned open-shift example, and request a current hospital-acute reference customer who runs callouts this way.
 
-### Does OnShift Enforce Credentials at the Point of Shift Pickup?
+## Does OnShift Enforce Credentials at the Point of Shift Pickup?
 
 When an open shift is posted, the operational question is whether the platform enforces the credential requirement for that specific shift before an acceptance is confirmed, or whether credential checking is a manual step the manager performs after the fact. In acute care, an ED or ICU shift may require ACLS, TNCC, or CCRN certification, and a replacement who lacks it is not a valid replacement.
 
 Verify this directly with OnShift sales rather than assuming either way: ask whether unit-level credential constraints are enforced at the point of acceptance, whether expired credentials block pickup automatically, and whether the audit record shows who was eligible versus who accepted. If credential verification is manual, most of the time savings the broadcast model promises is consumed by the manual check, and that is a quantifiable reason to evaluate alternatives.
 
-### Does OnShift Produce Survey-Ready CMS §485.635 Documentation?
+## Does OnShift Produce Survey-Ready CMS §485.635 Documentation?
 
 [CMS Conditions of Participation for Critical Access Hospitals](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) under [42 CFR §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) require maintained nursing service and staffing records that a surveyor can review. The operational question is not whether OnShift stores schedule data, it does, but whether it produces survey-ready §485.635 documentation without the nurse manager assembling it manually before each survey.
 
@@ -147,7 +150,7 @@ The table below covers customer focus, public ratings, and setup time across the
 
 The six strongest OnShift alternatives for a Critical Access Hospital are SimpleScheduleAI, Aladtec, SmartLinx, QGenda, NurseGrid Manager, and UKG. The right choice depends on whether your primary need is removing the scheduling work entirely, faster callout outreach, stronger compliance automation, or unified physician and nurse scheduling. The comparison table above covers ratings and setup time; the profiles below cover fit by scenario, with honest limitations for each.
 
-### 1. [SimpleScheduleAI](/)
+## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/onshift-alternatives/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -179,7 +182,7 @@ This is a different operating model than OnShift, which is a self-serve platform
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 2. [Aladtec](https://www.aladtec.com)
+## 2. [Aladtec](https://www.aladtec.com)
 
 <img src="/images/blog/onshift-alternatives/Aladtec.png" alt="Aladtec by TCP scheduling software for small hospitals and emergency services" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -217,7 +220,7 @@ Aladtec covers shift management, time and attendance, overtime tracking, certifi
 
 **Cost:** Pricing not listed on website. Contact TCP Software for a quote.
 
-### 3. [SmartLinx](https://www.smartlinx.com)
+## 3. [SmartLinx](https://www.smartlinx.com)
 
 <img src="/images/blog/onshift-alternatives/Smartlinx.png" alt="SmartLinx workforce management platform with healthcare compliance features" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -259,7 +262,7 @@ Hospitals that leave OnShift because of compliance and payroll reconciliation ga
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 4. [QGenda](https://www.qgenda.com)
+## 4. [QGenda](https://www.qgenda.com)
 
 <img src="/images/blog/onshift-alternatives/QGenda.png" alt="QGenda provider and nurse scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -301,7 +304,7 @@ For a hospital running OnShift for nursing and a separate system for physicians,
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 5. [NurseGrid Manager](https://nursegrid.com)
+## 5. [NurseGrid Manager](https://nursegrid.com)
 
 <img src="/images/blog/onshift-alternatives/Nursegrid.png" alt="NurseGrid Manager nurse-facing scheduling app with manager tier" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -344,7 +347,7 @@ For a CAH leaving OnShift because of acute care callout speed and CMS documentat
 
 **Cost:** Pricing not listed on website. Contact HealthStream for a quote.
 
-### 6. [UKG](https://www.ukg.com)
+## 6. [UKG](https://www.ukg.com)
 
 <img src="/images/blog/onshift-alternatives/UKG.png" alt="UKG workforce management platform for large health systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

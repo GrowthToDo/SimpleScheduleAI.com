@@ -37,11 +37,11 @@ metadata:
 - [Why Hospitals Move Away from Deputy?](#why-hospitals-move-away-from-deputy)
 - [Quick Comparison: Deputy vs. The Alternatives](#quick-comparison-deputy-vs-the-alternatives)
 - [What Are the 5 Best Deputy Alternatives for Critical Access Hospitals?](#what-are-the-5-best-deputy-alternatives-for-critical-access-hospitals)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. Aladtec](#2-aladtec)
-  - [3. When I Work](#3-when-i-work)
-  - [4. Connecteam](#4-connecteam)
-  - [5. Homebase](#5-homebase)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. Aladtec](#2-aladtec)
+- [3. When I Work](#3-when-i-work)
+- [4. Connecteam](#4-connecteam)
+- [5. Homebase](#5-homebase)
 - [When Deputy Is Still Adequate for Healthcare?](#when-deputy-is-still-adequate-for-healthcare)
 - [How SimpleScheduleAI Compares to Deputy?](#how-simplescheduleai-compares-to-deputy)
 - [What to Do This Week?](#what-to-do-this-week)
@@ -144,7 +144,7 @@ SimpleScheduleAI and Aladtec are the only options in this list with documented h
 
 The five alternatives are ranked by clinical appropriateness for hospital nurse scheduling. SimpleScheduleAI and Aladtec address the compliance and credential gaps that cause hospitals to leave Deputy. When I Work, Connecteam, and Homebase are appropriate only for outpatient or non-clinical settings where the compliance requirements that matter in an inpatient hospital do not apply.
 
-### 1. [SimpleScheduleAI](/)
+## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/deputy-alternatives-healthcare/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -173,7 +173,7 @@ The managed service model means the hospital does not install software or mainta
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 2. [Aladtec](https://www.aladtec.com)
+## 2. [Aladtec](https://www.aladtec.com)
 
 <img src="/images/blog/deputy-alternatives-healthcare/Aladtec.png" alt="Aladtec scheduling software for small hospitals and healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -212,7 +212,7 @@ CMS compliance documentation and initial credential configuration require setup 
 
 **Cost:** $200-450 per month. Pricing requires a quote.
 
-### 3. [When I Work](https://wheniwork.com)
+## 3. [When I Work](https://wheniwork.com)
 
 <img src="/images/blog/deputy-alternatives-healthcare/WhenIWork.png" alt="When I Work scheduling and shift communication app for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -249,7 +249,7 @@ For healthcare organizations using Deputy primarily for schedule publishing and 
 
 **Cost:** $2.50 per user per month (Essentials) to $4.00 per user per month (Pro).
 
-### 4. [Connecteam](https://connecteam.com)
+## 4. [Connecteam](https://connecteam.com)
 
 <img src="/images/blog/deputy-alternatives-healthcare/Connecteam.png" alt="Connecteam workforce management and scheduling app for deskless teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -277,7 +277,7 @@ Like Deputy and When I Work, Connecteam does not document healthcare-specific co
 
 **Cost:** Free for up to 10 users; paid plans from $29-99 per month for the first 30 users.
 
-### 5. [Homebase](https://joinhomebase.com)
+## 5. [Homebase](https://joinhomebase.com)
 
 <img src="/images/blog/deputy-alternatives-healthcare/Homebase.png" alt="Homebase scheduling and time tracking platform for small teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

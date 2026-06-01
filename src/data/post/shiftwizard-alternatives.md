@@ -33,10 +33,10 @@ metadata:
 - [Why Hospitals Switch Away from ShiftWizard?](#why-hospitals-switch-away-from-shiftwizard)
 - [Quick Comparison: ShiftWizard vs. The Alternatives](#quick-comparison-shiftwizard-vs-the-alternatives)
 - [What Are the 4 Best ShiftWizard Alternatives for Hospital Scheduling?](#what-are-the-4-best-shiftwizard-alternatives-for-hospital-scheduling)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. TCP Scheduling (Aladtec)](#2-tcp-scheduling-aladtec)
-  - [3. NurseGrid](#3-nursegrid)
-  - [4. QGenda](#4-qgenda)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. TCP Scheduling (Aladtec)](#2-tcp-scheduling-aladtec)
+- [3. NurseGrid](#3-nursegrid)
+- [4. QGenda](#4-qgenda)
 - [When to Stay with ShiftWizard?](#when-to-stay-with-shiftwizard)
 - [How SimpleScheduleAI Compares to ShiftWizard?](#how-simplescheduleai-compares-to-shiftwizard)
 - [What to Do This Week](#what-to-do-this-week)
@@ -139,7 +139,7 @@ For a CAH evaluating ShiftWizard, ask the demo to walk through swap workflows fr
 
 The four alternatives below cover the range a CAH is likely to encounter: a managed service built specifically for 25-bed facilities, a self-serve platform with a hospital-nursing track record, a nurse-facing app with a manager tier, and a provider scheduling platform designed for larger organizations. Each is reviewed against the operational constraints of a CAH.
 
-### 1. [SimpleScheduleAI](/)
+## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/shiftwizard-alternatives/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -167,7 +167,7 @@ The service is a new offering in active pilot phase, without public G2 or Capter
 
 **Cost:** Pricing not listed publicly. Contact for a quote.
 
-### 2. [TCP Scheduling (Aladtec)](https://www.tcpsoftware.com)
+## 2. [TCP Scheduling (Aladtec)](https://www.tcpsoftware.com)
 
 <img src="/images/blog/shiftwizard-alternatives/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -207,7 +207,7 @@ A representative positive review from a public-safety user:
 
 **Cost:** Pricing not listed publicly. Typically positions in the mid-market range.
 
-### 3. [NurseGrid](https://www.nursegrid.com)
+## 3. [NurseGrid](https://www.nursegrid.com)
 
 <img src="/images/blog/shiftwizard-alternatives/Nursegrid.png" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -257,7 +257,7 @@ A representative positive review:
 
 **Cost:** Freemium for individual nurses; organizational tier pricing on request.
 
-### 4. [QGenda](https://www.qgenda.com)
+## 4. [QGenda](https://www.qgenda.com)
 
 <img src="/images/blog/shiftwizard-alternatives/QGenda.png" alt="QGenda provider and nurse scheduling platform for healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

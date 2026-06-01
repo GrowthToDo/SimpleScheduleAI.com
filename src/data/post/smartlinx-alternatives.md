@@ -36,11 +36,11 @@ metadata:
 - [Why Hospitals Switch Away from SmartLinx?](#why-hospitals-switch-away-from-smartlinx)
 - [Quick Comparison: SmartLinx vs. The Alternatives](#quick-comparison-smartlinx-vs-the-alternatives)
 - [What Are the 5 Best SmartLinx Alternatives for Critical Access Hospital Scheduling?](#what-are-the-5-best-smartlinx-alternatives-for-critical-access-hospital-scheduling)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. Aladtec](#2-aladtec)
-  - [3. TCP Scheduling](#3-tcp-scheduling)
-  - [4. NurseGrid Manager](#4-nursegrid-manager)
-  - [5. Deputy](#5-deputy)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. Aladtec](#2-aladtec)
+- [3. TCP Scheduling](#3-tcp-scheduling)
+- [4. NurseGrid Manager](#4-nursegrid-manager)
+- [5. Deputy](#5-deputy)
 - [When to Stay with SmartLinx?](#when-to-stay-with-smartlinx)
 - [How SimpleScheduleAI Compares to SmartLinx?](#how-simplescheduleai-compares-to-smartlinx)
 - [What to Do This Week?](#what-to-do-this-week)
@@ -165,7 +165,7 @@ SmartLinx competes in a different tier than most small hospital alternatives. Th
 
 The five strongest SmartLinx alternatives for a Critical Access Hospital are SimpleScheduleAI, Aladtec, TCP Scheduling, NurseGrid Manager, and Deputy. SimpleScheduleAI is the only managed service on the list and the only one purpose-built for CAH compliance requirements. The others are self-serve platforms at varying levels of complexity and cost. The right choice depends on whether your primary need is compliance automation, implementation simplicity, or cost reduction.
 
-### 1. [SimpleScheduleAI](/)
+## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/smartlinx-alternatives/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -190,7 +190,7 @@ SimpleScheduleAI delivers the compliance documentation, overtime tracking, and c
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 2. [Aladtec](https://www.aladtec.com)
+## 2. [Aladtec](https://www.aladtec.com)
 
 <img src="/images/blog/smartlinx-alternatives/Aladtec.png" alt="Aladtec scheduling software for small hospitals and emergency services" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -227,7 +227,7 @@ Time and attendance integration, automated CMS compliance documentation, and cal
 
 **Cost:** $200-450 per month depending on roster size. Pricing requires a quote.
 
-### 3. [TCP Scheduling](https://www.tcpsoftware.com)
+## 3. [TCP Scheduling](https://www.tcpsoftware.com)
 
 <img src="/images/blog/smartlinx-alternatives/TCP.png" alt="TCP Scheduling Software enterprise workforce management platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -253,7 +253,7 @@ TCP Scheduling is designed as an enterprise implementation requiring IT involvem
 
 **Cost:** Pricing not listed. Contact TCP Software for a quote.
 
-### 4. [NurseGrid Manager](https://nursegrid.com)
+## 4. [NurseGrid Manager](https://nursegrid.com)
 
 <img src="/images/blog/smartlinx-alternatives/Nursegrid.png" alt="NurseGrid Manager nurse communication and schedule visibility platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -285,7 +285,7 @@ NurseGrid Manager includes schedule building and credential tracking. CMS compli
 
 **Cost:** Approximately $150-300 per month. Pricing requires contact.
 
-### 5. [Deputy](https://www.deputy.com)
+## 5. [Deputy](https://www.deputy.com)
 
 <img src="/images/blog/smartlinx-alternatives/Deputy.png" alt="Deputy general-purpose workforce scheduling software" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

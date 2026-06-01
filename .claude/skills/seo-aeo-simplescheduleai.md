@@ -255,6 +255,27 @@ H1 → One per page. Contains primary keyword. States the outcome.
 
 Never skip levels or use headings for visual styling.
 
+### 2.6.1 AEO Capsule Structure (no nested sub-questions under a question H2)
+
+If a sub-section under an H2 is itself a standalone answer block (a sub-question + its own paragraph, or a profile of a distinct entity), **promote it to its own H2**. Do not nest it as H3.
+
+The rule:
+
+- **H2 = one AEO capsule = one extractable answer.** Each H2 section is what an AI engine (AI Overviews, ChatGPT, Perplexity) lifts as a citation. Length target: 100-200 words of self-contained answer.
+- **H3 only for true sub-detail within a single answer** — supporting bullets, examples, brief sub-points that do not stand alone.
+- **A "What are the N best X" question H2 followed by N H3 product profiles is the wrong shape.** Each platform profile is a standalone answer block. Promote each to H2. Keep the parent question H2 with its intro paragraph as a list-overview capsule.
+- **A "How do X and Y compare head-to-head?" H2 with H3 sub-questions for each comparison dimension is the wrong shape.** Each sub-question (implementation speed, cost, callout coverage, etc.) is a standalone answer. Promote each to H2. Rewrite the title as self-contained (e.g., "How Does Implementation Speed Compare?" only works when nested under the parent; promoted, write "How Long Does Each Model Take to Implement?" so the comparison subject is explicit).
+- **Use H3 sparingly**: only for "supporting detail under a single answer" patterns (e.g., a numbered list with labels, a side-note breakout). Never for items a reader could land on directly from a SERP.
+
+When promoting H3 → H2, also:
+
+- Update the TOC: flatten the indentation; the promoted siblings appear at the top level alongside the former parent H2.
+- Rewrite any title that depended on the parent for context to be self-contained.
+- Scan the surrounding prose for back-references ("the questions above", "as discussed below") that the promotion breaks.
+- Anchor slugs are auto-generated from heading text; if the title text changes, every TOC entry pointing at it must change too.
+
+Implementation example: aladtec-vs-managed-service post — six comparison sub-questions ("How Does Implementation Speed Compare?" etc.) were nested as H3 under a parent "How Does Head-to-Head Compare?" H2. Promoted all six to H2 and rewrote each with explicit "Each Model" / "Two Models" subject. Capsule pass jumped from 0% to 58%.
+
 ---
 
 ## PART 3 — ON-PAGE SEO RULES

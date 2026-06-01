@@ -36,12 +36,12 @@ metadata:
 - [Why Hospitals Switch Away from NurseGrid?](#why-hospitals-switch-away-from-nursegrid)
 - [Quick Comparison: NurseGrid vs. The Alternatives](#quick-comparison-nursegrid-vs-the-alternatives)
 - [What Are the 6 Best NurseGrid Alternatives for Critical Access Hospitals?](#what-are-the-6-best-nursegrid-alternatives-for-critical-access-hospitals)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. ShiftWizard](#2-shiftwizard)
-  - [3. TCP Scheduling (Aladtec)](#3-tcp-scheduling-aladtec)
-  - [4. Deputy](#4-deputy)
-  - [5. Homebase](#5-homebase)
-  - [6. When I Work](#6-when-i-work)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. ShiftWizard](#2-shiftwizard)
+- [3. TCP Scheduling (Aladtec)](#3-tcp-scheduling-aladtec)
+- [4. Deputy](#4-deputy)
+- [5. Homebase](#5-homebase)
+- [6. When I Work](#6-when-i-work)
 - [When to Stay with NurseGrid?](#when-to-stay-with-nursegrid)
 - [How SimpleScheduleAI Compares to NurseGrid?](#how-simplescheduleai-compares-to-nursegrid)
 - [What to Do This Week?](#what-to-do-this-week)
@@ -163,7 +163,7 @@ The table below covers customer focus, public ratings, and setup time across Nur
 
 The six strongest NurseGrid alternatives for a Critical Access Hospital are SimpleScheduleAI, ShiftWizard, TCP Scheduling (Aladtec), Deputy, Homebase, and When I Work. The right choice depends on whether your priority is compliance automation, hospital-nursing fit, or cost reduction. Each platform serves a different facility size and administrative capacity. The comparison table above covers ratings and setup; the profiles below cover fit by scenario, with honest limitations for each.
 
-### 1. [SimpleScheduleAI](/)
+## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/nursegrid-alternatives/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -193,7 +193,7 @@ Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers th
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 2. [ShiftWizard](https://www.shiftwizard.com)
+## 2. [ShiftWizard](https://www.shiftwizard.com)
 
 <img src="/images/blog/nursegrid-alternatives/ShiftWizard.png" alt="ShiftWizard hospital nurse scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -242,7 +242,7 @@ For a CAH switching from NurseGrid specifically because of the manager-app remov
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 3. [TCP Scheduling (Aladtec)](https://www.tcpsoftware.com)
+## 3. [TCP Scheduling (Aladtec)](https://www.tcpsoftware.com)
 
 <img src="/images/blog/nursegrid-alternatives/TCP.png" alt="TCP Scheduling Aladtec workforce management platform for healthcare and public safety" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -280,7 +280,7 @@ If you are switching from NurseGrid because you need manager-side scheduling and
 
 **Cost:** Pricing not listed. Contact TCP Software for a quote.
 
-### 4. [Deputy](https://www.deputy.com)
+## 4. [Deputy](https://www.deputy.com)
 
 <img src="/images/blog/nursegrid-alternatives/Deputy.png" alt="Deputy general workforce scheduling platform for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -323,7 +323,7 @@ For a CAH leaving NurseGrid because the manager workflow is now desktop-only, De
 
 **Cost:** $4.50 per user per month.
 
-### 5. [Homebase](https://joinhomebase.com)
+## 5. [Homebase](https://joinhomebase.com)
 
 <img src="/images/blog/nursegrid-alternatives/Homebase.png" alt="Homebase workforce scheduling and time tracking app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -361,7 +361,7 @@ For a CAH, Homebase is a cost play, not a compliance play. It is documented for 
 
 **Cost:** Free for one location; paid plans from $20-80 per month depending on features.
 
-### 6. [When I Work](https://wheniwork.com)
+## 6. [When I Work](https://wheniwork.com)
 
 <img src="/images/blog/nursegrid-alternatives/WhenIWork.png" alt="When I Work scheduling and shift management app for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

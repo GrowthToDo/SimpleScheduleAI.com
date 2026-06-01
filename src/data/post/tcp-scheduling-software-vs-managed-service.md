@@ -32,7 +32,10 @@ metadata:
 
 - [What Is TCP TimeClock+?](#what-is-tcp-timeclock)
 - [What Does a Managed Scheduling Service Do Differently?](#what-does-a-managed-scheduling-service-do-differently)
-- [How Does TCP TimeClock+ Compare to a Managed Service Head-to-Head?](#how-does-tcp-timeclock-compare-to-a-managed-service-head-to-head)
+- [How Long Does Each Model Take to Implement?](#how-long-does-each-model-take-to-implement)
+- [What Weekly Time Does Each Model Cost the Nurse Manager?](#what-weekly-time-does-each-model-cost-the-nurse-manager)
+- [How Does Each Model Handle After-Hours Callouts?](#how-does-each-model-handle-after-hours-callouts)
+- [How Does Each Model Produce CMS §485.635 Documentation?](#how-does-each-model-produce-cms-485635-documentation)
 - [Where Does TCP TimeClock+ Win?](#where-does-tcp-timeclock-win)
 - [Where Does a Managed Service Win?](#where-does-a-managed-service-win)
 - [How Does Time to Value Compare?](#how-does-time-to-value-compare)
@@ -147,25 +150,21 @@ With SimpleScheduleAI:
 
 The nurse manager's role shifts from operator to approver. She retains final authority over every scheduling decision; the upstream work is handled for her. For a full walkthrough of how SimpleScheduleAI delivers scheduling as a service, see [how it works](/how-it-works).
 
-## How Does TCP TimeClock+ Compare to a Managed Service Head-to-Head?
+TCP TimeClock+ and a managed scheduling service are not direct substitutes. TCP TimeClock+ is a self-serve platform that unifies time tracking, payroll, and scheduling in one system the nurse manager operates. A managed service offloads the scheduling work to a specialist, leaving time tracking and payroll to a separate system. The right fit depends on whether the hospital's primary problem is consolidating systems or reducing the nurse manager's weekly scheduling burden. The four operational dimensions where the two diverge most sharply are implementation speed, weekly time burden, callout coverage, and CMS documentation.
 
-TCP TimeClock+ and a managed scheduling service are not direct substitutes. TCP TimeClock+ is a self-serve platform that unifies time tracking, payroll, and scheduling in one system the nurse manager operates. A managed service offloads the scheduling work to a specialist, leaving time tracking and payroll to a separate system. The right fit depends on whether the hospital's primary problem is consolidating systems or reducing the nurse manager's weekly scheduling burden.
-
-TCP TimeClock+ and a managed scheduling service solve different problems. TCP TimeClock+ is a unified platform for time tracking, payroll, and basic scheduling: the nurse manager operates it, and the payroll and time tracking happen inside it. A managed scheduling service is focused entirely on scheduling: a specialist handles the scheduling work, but time tracking and payroll remain separate. The right fit depends on which problem the hospital is trying to solve.
-
-### How Does Implementation Speed Compare?
+## How Long Does Each Model Take to Implement?
 
 TCP TimeClock+ implementation timelines vary by configuration complexity and are not published. Contact TCP directly for a current estimate. Time-to-first-schedule includes setup calls, entering staff and payroll configurations, credential rules, and training on both the scheduling and time-tracking sides. A managed scheduling service takes 3-5 days because the specialist handles all configuration from the nurse manager's staff roster.
 
-### What Is the Weekly Time Burden on the Nurse Manager?
+## What Weekly Time Does Each Model Cost the Nurse Manager?
 
 With TCP TimeClock+, the nurse manager uses the platform for both time tracking approvals and schedule building. The scheduling component alone requires reviewing drafts, processing time-off requests, managing callout coverage, and maintaining configuration. A managed service reduces the scheduling portion to 1-2 hours of review and approval per week. The time tracking and payroll functions, if handled through TCP TimeClock+, remain separate from what a managed scheduling service covers.
 
-### How Does Callout Coverage Differ in Practice?
+## How Does Each Model Handle After-Hours Callouts?
 
 With TCP TimeClock+, the nurse manager reviews availability in the platform and makes replacement calls manually. The platform surfaces who is available; she applies the constraint logic for overtime and credentials. For hospitals that need automated callout backfill, TCP's advanced feature for this is in Humanity Scheduling, not TimeClock+. With a managed service, the replacement list is pre-ranked by credential match, overtime exposure, and historical availability before the nurse manager sees it.
 
-### How Does CMS Documentation Differ?
+## How Does Each Model Produce CMS §485.635 Documentation?
 
 CMS §485.635 requires Critical Access Hospitals to document qualified staffing on duty at all times. TCP TimeClock+ maintains event logs and audit trails for time and attendance records. Whether these logs produce CMS-formatted staffing documentation for CAH certification surveys is not documented as a product feature. Verify this specifically with TCP before relying on TimeClock+ for CMS compliance reporting. SimpleScheduleAI generates CMS-formatted documentation automatically from each published schedule.
 

@@ -34,12 +34,12 @@ metadata:
 - [Why Hospitals Switch Away from Aladtec?](#why-hospitals-switch-away-from-aladtec)
 - [Quick Comparison: Aladtec vs. The Alternatives](#quick-comparison-aladtec-vs-the-alternatives)
 - [What Are the 6 Best Aladtec Alternatives for Critical Access Hospitals?](#what-are-the-6-best-aladtec-alternatives-for-critical-access-hospitals)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. TCP Scheduling](#2-tcp-scheduling)
-  - [3. SmartLinx](#3-smartlinx)
-  - [4. When I Work](#4-when-i-work)
-  - [5. Homebase](#5-homebase)
-  - [6. Deputy](#6-deputy)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. TCP Scheduling](#2-tcp-scheduling)
+- [3. SmartLinx](#3-smartlinx)
+- [4. When I Work](#4-when-i-work)
+- [5. Homebase](#5-homebase)
+- [6. Deputy](#6-deputy)
 - [When to Stay with Aladtec?](#when-to-stay-with-aladtec)
 - [How SimpleScheduleAI Compares to Aladtec?](#how-simplescheduleai-compares-to-aladtec)
 - [What to Do This Week?](#what-to-do-this-week)
@@ -152,7 +152,7 @@ The table below covers setup time and public ratings across the six alternatives
 
 The six strongest Aladtec alternatives for a Critical Access Hospital are SimpleScheduleAI, TCP Scheduling, SmartLinx, When I Work, Homebase, and Deputy. The right choice depends on whether your primary need is compliance automation, configuration simplicity, or cost reduction. Each platform serves a different hospital size and administrative capacity. The comparison table above covers ratings and setup time; the profiles below cover fit by scenario.
 
-### 1. [SimpleScheduleAI](/)
+## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/aladtec-alternatives/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -180,7 +180,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 2. [TCP Scheduling](https://www.tcpsoftware.com)
+## 2. [TCP Scheduling](https://www.tcpsoftware.com)
 
 <img src="/images/blog/aladtec-alternatives/TCP.png" alt="TCP Scheduling Software workforce management platform for healthcare" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -216,7 +216,7 @@ The tradeoff is considerable. TCP Scheduling requires a longer implementation, I
 
 **Cost:** Pricing not listed. Contact TCP Software for a quote.
 
-### 3. [SmartLinx](https://www.smartlinx.com)
+## 3. [SmartLinx](https://www.smartlinx.com)
 
 <img src="/images/blog/aladtec-alternatives/Smartlinx.png" alt="SmartLinx workforce management platform with compliance and scheduling features" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -256,7 +256,7 @@ Hospitals that leave Aladtec because of configuration burden and then adopt Smar
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 4. [When I Work](https://wheniwork.com)
+## 4. [When I Work](https://wheniwork.com)
 
 <img src="/images/blog/aladtec-alternatives/WhenIWork.png" alt="When I Work scheduling and shift management app for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -292,7 +292,7 @@ When I Work is a scheduling app positioned across retail, hospitality, and small
 
 **Cost:** $2.50 per user per month (Essentials) to $4.00 per user per month (Pro).
 
-### 5. [Homebase](https://joinhomebase.com)
+## 5. [Homebase](https://joinhomebase.com)
 
 <img src="/images/blog/aladtec-alternatives/Homebase.png" alt="Homebase workforce scheduling and time tracking app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -320,7 +320,7 @@ Homebase is positioned primarily for retail, restaurant, and service industry sc
 
 **Cost:** Free for one location; paid plans from $20-80 per month depending on features.
 
-### 6. [Deputy](https://www.deputy.com)
+## 6. [Deputy](https://www.deputy.com)
 
 <img src="/images/blog/aladtec-alternatives/Deputy.png" alt="Deputy general workforce scheduling platform for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

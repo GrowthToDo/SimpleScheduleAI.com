@@ -33,12 +33,12 @@ metadata:
 - [Why Small Hospitals Look for Smart Square Alternatives?](#why-small-hospitals-look-for-smart-square-alternatives)
 - [Quick Comparison: Smart Square vs. The Alternatives](#quick-comparison-smart-square-vs-the-alternatives)
 - [What Are the 6 Best Smart Square Alternatives for Small Rural Hospitals?](#what-are-the-6-best-smart-square-alternatives-for-small-rural-hospitals)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. ShiftWizard](#2-shiftwizard)
-  - [3. NurseGrid Manager](#3-nursegrid-manager)
-  - [4. Deputy](#4-deputy)
-  - [5. When I Work](#5-when-i-work)
-  - [6. Smartlinx](#6-smartlinx)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. ShiftWizard](#2-shiftwizard)
+- [3. NurseGrid Manager](#3-nursegrid-manager)
+- [4. Deputy](#4-deputy)
+- [5. When I Work](#5-when-i-work)
+- [6. Smartlinx](#6-smartlinx)
 - [When to Stay with Smart Square?](#when-to-stay-with-smart-square)
 - [How SimpleScheduleAI Compares to Smart Square?](#how-simplescheduleai-compares-to-smart-square)
 - [What to Do This Week?](#what-to-do-this-week)
@@ -152,7 +152,7 @@ The table below covers customer focus, public ratings, and setup time across the
 
 The six strongest Smart Square alternatives for a Critical Access Hospital are SimpleScheduleAI, ShiftWizard, NurseGrid Manager, Deputy, When I Work, and Smartlinx. The right choice depends on whether your primary need is removing the scheduling work entirely, running self-serve hospital-nursing software at a smaller scale, or reducing cost. Each option fits a different hospital size and administrative capacity. The comparison table above covers ratings and setup; the profiles below cover fit by scenario.
 
-### 1. [SimpleScheduleAI](/)
+## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/SimpleScheduleAI.png" alt="SimpleScheduleAI managed nurse scheduling service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -182,7 +182,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 2. [ShiftWizard](https://www.shiftwizard.com)
+## 2. [ShiftWizard](https://www.shiftwizard.com)
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/ShiftWizard.png" alt="ShiftWizard hospital nurse scheduling software self-serve platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -220,7 +220,7 @@ The tradeoff relative to a managed service is ownership. ShiftWizard is still a 
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 3. [NurseGrid Manager](https://nursegrid.com)
+## 3. [NurseGrid Manager](https://nursegrid.com)
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/NurseGrid.png" alt="NurseGrid Manager nurse scheduling app for hospital units" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -264,7 +264,7 @@ The tradeoff is depth. NurseGrid is focused on unit-level scheduling and staff c
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 4. [Deputy](https://www.deputy.com)
+## 4. [Deputy](https://www.deputy.com)
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/Deputy.png" alt="Deputy general workforce scheduling platform with a healthcare segment" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -304,7 +304,7 @@ The tradeoff is that Deputy is a general workforce scheduling tool rather than a
 
 **Cost:** $4.50 per user per month.
 
-### 5. [When I Work](https://wheniwork.com)
+## 5. [When I Work](https://wheniwork.com)
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/WhenIWork.png" alt="When I Work scheduling and shift management app for small teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -338,7 +338,7 @@ The tradeoff is the same as Deputy's, with a stronger lean away from healthcare.
 
 **Cost:** $2.50 per user per month (Essentials) to $4.00 per user per month (Pro).
 
-### 6. [Smartlinx](https://www.smartlinx.com)
+## 6. [Smartlinx](https://www.smartlinx.com)
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/Smartlinx.png" alt="Smartlinx workforce management platform with compliance and scheduling features" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

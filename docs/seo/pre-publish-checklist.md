@@ -140,6 +140,7 @@ _These apply whenever the filename matches the pattern `[tool]-alternatives.md`.
 
 ## AEO / GEO
 
+- [ ] **Capsule structure rule (no nested sub-questions under a question H2).** If a sub-section is itself an extractable answer block (a sub-question with its own paragraph, or a profile of a distinct entity like a competitor product), it MUST be its own H2, not H3 nested under a question H2. Each H2 is one AEO capsule; each capsule should be a standalone answer 100-200 words. The classic offender: "What Are the N Best [Tool] Alternatives?" H2 with N platform reviews as H3 children. Each platform belongs at H2 level. Same for "Head-to-Head Compare?" H2 with H3 sub-dimensions. When promoting H3 to H2: flatten the TOC, rewrite the title so it stands alone (the original title only worked because the parent gave the comparison subject), and update any TOC anchors. Full rule: [.claude/skills/seo-aeo-simplescheduleai.md §2.6.1](../../.claude/skills/seo-aeo-simplescheduleai.md).
 - [ ] `public/llms.txt`: optional-harmless, not a gate or ranking lever (update only if trivially relevant — see Part 0 Reconciliation)
 - [ ] `public/robots.txt` still allows all AI crawlers (no accidental blocks added)
 - [ ] No PHI-capturing forms or HIPAA-violating tracking code introduced

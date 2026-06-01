@@ -34,10 +34,10 @@ metadata:
 - [What Does a Critical Access Hospital Actually Need in a QGenda Alternative?](#what-does-a-critical-access-hospital-actually-need-in-a-qgenda-alternative)
 - [Quick Comparison: QGenda vs. The Alternatives](#quick-comparison-qgenda-vs-the-alternatives)
 - [What Are the 4 Best QGenda Alternatives for Hospital Scheduling?](#what-are-the-4-best-qgenda-alternatives-for-hospital-scheduling)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. TCP Scheduling (Aladtec)](#2-tcp-scheduling-aladtec)
-  - [3. ShiftWizard](#3-shiftwizard)
-  - [4. NurseGrid Manager](#4-nursegrid-manager)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. TCP Scheduling (Aladtec)](#2-tcp-scheduling-aladtec)
+- [3. ShiftWizard](#3-shiftwizard)
+- [4. NurseGrid Manager](#4-nursegrid-manager)
 - [When to Stay with QGenda?](#when-to-stay-with-qgenda)
 - [How SimpleScheduleAI Compares to QGenda?](#how-simplescheduleai-compares-to-qgenda)
 - [What to Do This Week](#what-to-do-this-week)
@@ -160,7 +160,7 @@ For a critical access hospital, scheduling requirements differ from what QGenda 
 
 The four strongest QGenda alternatives for a Critical Access Hospital are SimpleScheduleAI, TCP Scheduling (Aladtec), ShiftWizard, and NurseGrid Manager. SimpleScheduleAI and ShiftWizard address nurse scheduling specifically. Aladtec covers healthcare and public safety scheduling at a lower cost and faster setup than QGenda. NurseGrid serves nurse-facing communication but is not a full scheduling platform replacement. The right fit depends on whether you need better nurse scheduling software or need the scheduling work done for you.
 
-### 1. SimpleScheduleAI
+## 1. SimpleScheduleAI
 
 <img src="/images/blog/qgenda-alternatives/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -188,7 +188,7 @@ Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-### 2. TCP Scheduling (Aladtec)
+## 2. TCP Scheduling (Aladtec)
 
 <img src="/images/blog/qgenda-alternatives/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -237,7 +237,7 @@ Ask the vendor for current named support contacts, response-time SLA, and a rece
 
 **Cost:** Approximately $200-450 per month. Pricing requires a quote.
 
-### 3. ShiftWizard
+## 3. ShiftWizard
 
 <img src="/images/blog/qgenda-alternatives/Shiftwizard.png" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -279,7 +279,7 @@ Ask the demo to walk through mobile workflows from both manager and staff perspe
 
 **Cost:** Pricing not publicly listed. Contact HealthStream for a quote.
 
-### 4. NurseGrid Manager
+## 4. NurseGrid Manager
 
 <img src="/images/blog/qgenda-alternatives/Nursegrid.png" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

@@ -35,9 +35,9 @@ metadata:
 - [What UKG Assumes You Have?](#what-ukg-assumes-you-have)
 - [What Is the Real Cost of Running UKG at a Small Hospital?](#what-is-the-real-cost-of-running-ukg-at-a-small-hospital)
 - [What Are the 3 Best UKG Alternatives for Critical Access Hospitals?](#what-are-the-3-best-ukg-alternatives-for-critical-access-hospitals)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. Aladtec (TCP Scheduling)](#2-aladtec-tcp-scheduling)
-  - [3. SmartLinx](#3-smartlinx)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. Aladtec (TCP Scheduling)](#2-aladtec-tcp-scheduling)
+- [3. SmartLinx](#3-smartlinx)
 - [When to Stay with UKG?](#when-to-stay-with-ukg)
 - [How SimpleScheduleAI Compares to UKG?](#how-simplescheduleai-compares-to-ukg)
 - [What to Do This Week](#what-to-do-this-week)
@@ -153,7 +153,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
   </table>
 </div>
 
-### 1. SimpleScheduleAI
+## 1. SimpleScheduleAI
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -181,7 +181,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 
 **Cost:** Pricing not listed publicly. Contact for a quote.
 
-### 2. Aladtec (TCP Scheduling)
+## 2. Aladtec (TCP Scheduling)
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -233,7 +233,7 @@ If you are leaving UKG because it demands too much from one person, Aladtec is s
 
 **Cost:** Pricing not listed publicly. Contact for quote. Typically positions below SmartLinx and well below UKG in per-facility cost.
 
-### 3. SmartLinx
+## 3. SmartLinx
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/Smartlinx.png" alt="SmartLinx workforce management platform for mid-size healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
