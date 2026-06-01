@@ -36,7 +36,7 @@ const articleSchema = {
     logo: { '@type': 'ImageObject', url: 'https://simplescheduleai.com/images/logo.png' },
   },
   datePublished: '2026-03-31T00:00:00Z',
-  dateModified: '2026-04-14T00:00:00Z',
+  dateModified: '2026-06-01T00:00:00Z',
 };
 
 const faqSchema = {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What are the staffing requirements for critical access hospitals?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Critical access hospitals must have a registered nurse on duty or on call at all times under CMS Conditions of Participation (42 CFR §485.635). Texas additionally requires CAHs to comply with DSHS staffing standards and FLSA overtime rules. CAHs with 25 or fewer beds must maintain adequate coverage without the budget of larger health systems.',
+        text: 'Critical access hospitals must have a registered nurse on duty or on call at all times under CMS Conditions of Participation (42 CFR §485.635). Texas additionally requires CAHs to comply with state hospital licensing rules (HHSC, 26 TAC Chapter 505) and FLSA overtime rules. CAHs with 25 or fewer beds must maintain adequate coverage without the budget of larger health systems.',
       },
     },
     {
@@ -116,7 +116,24 @@ const breadcrumbSchema = {
 
   <section class="bg-page py-16 md:py-20">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 prose dark:prose-invert prose-lg max-w-none">
+      <p class="not-prose text-sm text-slate-600 dark:text-slate-400 mb-8">
+        By <a href="/about/pradeep-pandey" class="text-slate-700 dark:text-slate-300 underline decoration-dotted"
+          >Pradeep Pandey</a
+        > · Published March 31, 2026 · Updated June 1, 2026
+      </p>
+
       <h2>What Makes Critical Access Hospital Scheduling Different?</h2>
+      <p>
+        Critical access hospital scheduling is the process by which Medicare-designated rural hospitals (25 or fewer
+        inpatient beds) build, post, and maintain nursing rosters under <a
+          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+          rel="noopener"
+          target="_blank">CMS §485.635 Conditions of Participation</a
+        >, <a href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime" rel="noopener" target="_blank"
+          >FLSA overtime thresholds</a
+        >, and Texas hospital licensing rules. It differs from large-system scheduling in one structural way: the roster
+        is small enough that a single callout can leave a unit uncovered.
+      </p>
       <p>
         If you have tried <a href="/nurse-scheduling-software">nurse scheduling software</a> before and walked away because
         nothing fit a 20-bed hospital, you are not alone. CAH scheduling is fundamentally different from large-system scheduling
@@ -124,10 +141,14 @@ const breadcrumbSchema = {
         There is no float pool, no agency desk on retainer, and no IT team to support scheduling software. The nurse manager
         handles everything, often on a personal phone at 5 AM on a Sunday.
       </p>
+      <h2>How Many Critical Access Hospitals Are There in the US and Texas?</h2>
       <p>
-        Critical access hospitals are federally designated rural facilities certified under CMS Conditions of
-        Participation (42 CFR §485.635). There are approximately 1,350 CAHs in the United States, with 84 in Texas
-        alone, serving rural communities where the nearest alternative hospital may be 30 to 60 miles away.
+        Critical access hospitals are federally designated rural facilities certified under <a
+          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+          rel="noopener"
+          target="_blank">CMS Conditions of Participation (42 CFR §485.635)</a
+        >. There are approximately 1,350 CAHs in the United States, with 84 in Texas alone, serving rural communities
+        where the nearest alternative hospital may be 30 to 60 miles away.
       </p>
       <p>
         The volume is small enough that spreadsheets feel manageable until they aren't. The coverage requirements are
@@ -159,23 +180,119 @@ const breadcrumbSchema = {
           shifts, including nights, weekends, and holidays, creating morale and retention problems.
         </li>
         <li>
-          <strong>Compliance documentation:</strong> Texas DSHS requirements and CMS CoPs require staffing documentation
-          that manual systems create inconsistently.
+          <strong>Compliance documentation:</strong> Texas hospital licensing rules and <a
+            href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+            rel="noopener"
+            target="_blank">CMS Conditions of Participation</a
+          > require staffing documentation that manual systems create inconsistently.
         </li>
       </ul>
 
       <h2>What Are the Texas Compliance Requirements for CAH Nurse Scheduling?</h2>
       <p>
-        Texas CAHs must comply with CMS Conditions of Participation (42 CFR §485.635), Texas DSHS nursing facility
-        standards, and FLSA overtime rules. At minimum: an RN on duty or on call at all times, documented shift ratios
-        for CMS cost reports, and overtime pay for all hours worked above 40 in a workweek for non-exempt staff.
+        Texas CAHs must comply with <a
+          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+          rel="noopener"
+          target="_blank">CMS Conditions of Participation (42 CFR §485.635)</a
+        >, Texas hospital licensing rules (administered by HHSC under 26 TAC Chapter 505), and <a
+          href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime"
+          rel="noopener"
+          target="_blank">FLSA overtime rules</a
+        >. At minimum: an RN on duty or on call at all times, documented shift ratios for CMS cost reports, and overtime
+        pay for all hours worked above 40 in a workweek for non-exempt staff.
       </p>
-      <ul>
-        <li>RN on duty or on call at all times (CMS CoP §485.635(c)(4))</li>
-        <li>FLSA overtime rules: 1.5x pay for hours over 40 in a workweek for non-exempt staff</li>
-        <li>Texas Payday Law requirements for shift premiums and overtime documentation</li>
-        <li>Staffing ratio documentation for CMS cost reports</li>
-      </ul>
+      <div class="not-prose my-6 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <thead class="bg-slate-100 dark:bg-slate-800">
+            <tr>
+              <th
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left text-slate-900 dark:text-slate-100"
+                >Rule</th
+              >
+              <th
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left text-slate-900 dark:text-slate-100"
+                >Primary Source</th
+              >
+              <th
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left text-slate-900 dark:text-slate-100"
+                >What It Requires</th
+              >
+            </tr>
+          </thead>
+          <tbody class="bg-white dark:bg-slate-900">
+            <tr>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >RN coverage</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">
+                <a
+                  href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+                  rel="noopener"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 underline">CMS CoP §485.635(c)(4)</a
+                >
+              </td>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Registered nurse on duty or on call at all times</td
+              >
+            </tr>
+            <tr>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Overtime pay</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">
+                <a
+                  href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime"
+                  rel="noopener"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 underline">DOL FLSA Fact Sheet #54</a
+                >
+              </td>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >1.5× pay for hours over 40 in a workweek for non-exempt staff</td
+              >
+            </tr>
+            <tr>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Shift premium documentation</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">
+                <a
+                  href="https://www.twc.texas.gov/programs/wage-and-hour/texas-payday-law"
+                  rel="noopener"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 underline">Texas Payday Law (TWC)</a
+                >
+              </td>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Written record of shift premiums and overtime calculations</td
+              >
+            </tr>
+            <tr>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Hospital licensing</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Texas HHSC, 26 TAC Chapter 505</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Staffing records and licensing compliance for general/special hospitals</td
+              >
+            </tr>
+            <tr>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Staffing ratio reporting</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >CMS cost reports</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Documented shift-by-shift staffing for annual cost report submission</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p>
         Every schedule change, callout, and replacement must be documented. Manual scheduling systems create
         documentation gaps that surface during CMS surveys. An automated scheduling system with an audit trail addresses
@@ -205,6 +322,7 @@ const breadcrumbSchema = {
         to 5 on nights, every day of the year. That is about 14 to 18 nurse shifts a day, or close to 110 to 125 shifts
         a week before a single callout.
       </p>
+      <h2>Why Does Overtime Creep Happen Structurally at Critical Access Hospitals?</h2>
       <p>
         Filling those shifts from a roster of 25 to 35 nurses leaves almost no slack. Each nurse works three 12-hour
         shifts a week to stay near 36 hours and avoid overtime. One vacation, one FMLA leave, and one resignation in the
@@ -232,6 +350,102 @@ const breadcrumbSchema = {
         still decides who to bring in. What changes is that the 1 to 3 hours of dialing becomes a 5-minute review, and
         the choice is informed by who is genuinely under 40 hours rather than who happened to pick up.
       </p>
+
+      <div class="not-prose my-6 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <thead class="bg-slate-100 dark:bg-slate-800">
+            <tr>
+              <th
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left text-slate-900 dark:text-slate-100"
+                >Dimension</th
+              >
+              <th
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left text-slate-900 dark:text-slate-100"
+                >Manual Phone Tree</th
+              >
+              <th
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left text-slate-900 dark:text-slate-100"
+                >Automated Callout Shortlist</th
+              >
+            </tr>
+          </thead>
+          <tbody class="bg-white dark:bg-slate-900">
+            <tr>
+              <td
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200"
+                >Time per callout</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >1 to 3 hours</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >~5 minutes (review only)</td
+              >
+            </tr>
+            <tr>
+              <td
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200"
+                >Who gets called</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Whoever is reachable first</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Ranked by overtime, certification, fairness</td
+              >
+            </tr>
+            <tr>
+              <td
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200"
+                >Overtime risk</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >High (first yes wins)</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Low (under-40 candidates surfaced first)</td
+              >
+            </tr>
+            <tr>
+              <td
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200"
+                >Charge nurse during callout</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Pulled away from patient care</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Stays at bedside</td
+              >
+            </tr>
+            <tr>
+              <td
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200"
+                >Documentation</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Manual, often skipped</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Automatic audit log</td
+              >
+            </tr>
+            <tr>
+              <td
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200"
+                >Annual cost (2 callouts/week)</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >100 to 300 charge-nurse hours on phone trees</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Near zero phone-tree time</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <p>
         Across a year, a hospital that averages two callouts a week spends 100 to 300 charge-nurse hours on phone trees
         alone. That is the hidden line item automated coverage removes, on top of the overtime it prevents by selecting
@@ -271,7 +485,7 @@ const breadcrumbSchema = {
       {
         title: 'What are the staffing requirements for critical access hospitals?',
         description:
-          'CMS requires CAHs to have an RN on duty or on call at all times (42 CFR §485.635). Texas additionally requires DSHS staffing compliance and FLSA overtime documentation. Staffing ratios must be documented for CMS cost reports.',
+          'CMS requires CAHs to have an RN on duty or on call at all times (42 CFR §485.635). Texas additionally requires HHSC hospital licensing compliance (26 TAC Chapter 505) and FLSA overtime documentation. Staffing ratios must be documented for CMS cost reports.',
       },
       {
         title: 'How do CAHs handle nurse callouts without a large float pool?',
@@ -291,7 +505,7 @@ const breadcrumbSchema = {
       {
         title: 'Can scheduling software help with Texas nursing compliance?',
         description:
-          'Yes. Automated scheduling software tracks overtime approaching thresholds, logs every schedule change with a timestamp, and generates documentation suitable for CMS surveys and Texas DSHS compliance checks.',
+          'Yes. Automated scheduling software tracks overtime approaching thresholds, logs every schedule change with a timestamp, and generates documentation suitable for CMS surveys and Texas HHSC hospital licensing compliance checks.',
       },
     ]}
   />
