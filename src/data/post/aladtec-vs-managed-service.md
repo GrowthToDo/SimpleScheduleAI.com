@@ -49,7 +49,7 @@ metadata:
 - [What to Do This Week?](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/critical-access-hospital-scheduling). But they answer fundamentally different questions. Aladtec answers: "How do I build better schedules?" SimpleScheduleAI answers: "How do I stop spending 5 hours a week on scheduling?" If you are a nurse manager at a CAH who is simultaneously covering clinical shifts, those two questions lead to very different buying decisions. For context on the full range of [nurse scheduling software](/nurse-scheduling-software) options at the CAH scale, see our dedicated guide.
+Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/critical-access-hospital-scheduling). For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). But they answer fundamentally different questions. Aladtec answers: "How do I build better schedules?" SimpleScheduleAI answers: "How do I stop spending 5 hours a week on scheduling?" If you are a nurse manager at a CAH who is simultaneously covering clinical shifts, those two questions lead to very different buying decisions. For context on the full range of [nurse scheduling software](/nurse-scheduling-software) options at the CAH scale, see our dedicated guide.
 
 <div class="not-prose my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">

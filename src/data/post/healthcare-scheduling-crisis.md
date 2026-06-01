@@ -61,7 +61,7 @@ burden. Here is where the 10 hours actually go each week:
 
 None of this requires clinical expertise. All of it is being done by your most expensive operational resource.
 
-For a deeper look at the specific compliance and coverage requirements driving these problems, see our guide to [critical access hospital scheduling](/critical-access-hospital-scheduling) and what purpose-built [nurse scheduling software for CAHs](/nurse-scheduling-software) actually needs to handle.
+For a deeper look at the specific compliance and coverage requirements driving these problems, see our guide to [critical access hospital scheduling](/critical-access-hospital-scheduling) and what purpose-built [nurse scheduling software for CAHs](/nurse-scheduling-software) actually needs to handle. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
 <div class="not-prose my-8 space-y-3">
   <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">The $26,000 Shadow Salary: Where the Hours Go</p>

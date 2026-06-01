@@ -204,7 +204,7 @@ SimpleScheduleAI is a new service in active pilot phase, without public G2 or Ca
 
 SimpleScheduleAI is the right choice for a CAH where the nurse manager has concluded that the self-serve scheduling model takes more weekly time than her role can absorb, and where direct customer-reference validation matters more than aggregate vendor reviews.
 
-It is not the right choice if staff-facing self-service mobile features are a hard requirement; we currently focus on the manager-facing scheduling workflow and do not have a staff-facing app. For more on the operating model, see [how SimpleScheduleAI works](/how-it-works), our [nurse scheduling software hub](/nurse-scheduling-software), and the compliance requirements that shape [critical access hospital scheduling](/critical-access-hospital-scheduling).
+It is not the right choice if staff-facing self-service mobile features are a hard requirement; we currently focus on the manager-facing scheduling workflow and do not have a staff-facing app. For more on the operating model, see [how SimpleScheduleAI works](/how-it-works), our [nurse scheduling software hub](/nurse-scheduling-software), and the compliance requirements that shape [critical access hospital scheduling](/critical-access-hospital-scheduling). For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
 <div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
   <h2 class="mb-2 text-2xl font-bold text-white">Want a Reference Call With a Pilot CAH?</h2>

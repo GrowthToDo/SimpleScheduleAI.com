@@ -51,7 +51,7 @@ Aladtec is a scheduling platform built for emergency services organizations and 
 
 The questions that matter when a hospital evaluates a switch are operational fit: how much weekly capacity does your nurse manager have for ongoing configuration; what compliance capabilities does your facility actually need for CMS surveys; and whether vendor-stated setup timelines hold at your specific scale.
 
-If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) compliance, CMS documentation, Texas overtime, credential-filtered callouts, review what those requirements actually demand before choosing a platform. Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that general scheduling tools do not provide.
+If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) compliance, CMS documentation, Texas overtime, credential-filtered callouts, review what those requirements actually demand before choosing a platform. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that general scheduling tools do not provide.
 
 Here is how the alternatives compare before we go deeper:
 

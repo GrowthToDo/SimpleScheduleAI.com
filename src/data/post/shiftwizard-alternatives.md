@@ -44,7 +44,7 @@ metadata:
 
 ShiftWizard is a hospital-specific scheduling platform designed for nursing workflows rather than adapted from a generic workforce-management tool. For a Critical Access Hospital evaluating alternatives, the decision comes down less to features than to operating model: which approach fits a facility where the nurse manager is also a charge nurse and the scheduling work competes directly with clinical responsibilities. This guide profiles four alternatives based on public review data and current vendor product information.
 
-If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) compliance and CMS documentation, review what those requirements actually demand before evaluating platforms. Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that general scheduling tools do not provide.
+If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) compliance and CMS documentation, review what those requirements actually demand before evaluating platforms. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that general scheduling tools do not provide.
 
 ## Why Hospitals Switch Away from ShiftWizard?
 

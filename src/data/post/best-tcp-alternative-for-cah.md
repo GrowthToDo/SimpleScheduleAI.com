@@ -39,7 +39,7 @@ metadata:
 - [What Are the Four Questions to Ask Any TCP Alternative?](#what-are-the-four-questions-to-ask-any-tcp-alternative)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-TCP TimeClock+ is a time and attendance platform that includes basic employee scheduling. For [critical access hospital scheduling](/critical-access-hospital-scheduling), it is often chosen by facilities that want a single platform for time tracking, payroll, and scheduling rather than managing separate systems. The problems arise when the scheduling side of the platform cannot keep pace with a nurse manager who also carries clinical responsibilities. For the full range of [nurse scheduling software](/nurse-scheduling-software) options at the CAH scale, see our dedicated guide.
+TCP TimeClock+ is a time and attendance platform that includes basic employee scheduling. For [critical access hospital scheduling](/critical-access-hospital-scheduling), it is often chosen by facilities that want a single platform for time tracking, payroll, and scheduling rather than managing separate systems. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). The problems arise when the scheduling side of the platform cannot keep pace with a nurse manager who also carries clinical responsibilities. For the full range of [nurse scheduling software](/nurse-scheduling-software) options at the CAH scale, see our dedicated guide.
 
 ## Why Do Critical Access Hospitals Look for TCP Alternatives?
 

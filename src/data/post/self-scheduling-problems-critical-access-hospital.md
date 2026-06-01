@@ -166,7 +166,7 @@ SimpleScheduleAI generates three schedule versions each cycle: balanced, overtim
 
 One honest limitation: nurses do not submit preferences directly into a self-service portal. The nurse manager collects preferences and inputs them during setup. If nurse self-service portal access is a hard requirement for your unit, a hybrid approach, using a communication tool for preference collection alongside managed scheduling for schedule generation, handles both without losing compliance coverage.
 
-For [critical access hospital scheduling](/critical-access-hospital-scheduling) at CAH scale, the managed service model addresses the enforcement problem that makes self-scheduling hard to sustain: the fairness rules are applied by the system before the manager reviews the schedule, not after she has already fielded three complaints from staff.
+For [critical access hospital scheduling](/critical-access-hospital-scheduling) at CAH scale, the managed service model addresses the enforcement problem that makes self-scheduling hard to sustain: the fairness rules are applied by the system before the manager reviews the schedule, not after she has already fielded three complaints from staff. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
 For a full look at what CAH-appropriate [nurse scheduling software](/nurse-scheduling-software) needs to handle beyond fairness, that guide covers the complete feature checklist. For more detail on the three-draft scoring model, see [how SimpleScheduleAI works](/how-it-works).
 

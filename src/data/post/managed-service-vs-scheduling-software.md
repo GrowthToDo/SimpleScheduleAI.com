@@ -33,14 +33,14 @@ metadata:
 ## Table of Contents
 
 - [What Is Scheduling Software vs. a Managed Scheduling Service?](#what-is-scheduling-software-vs-a-managed-scheduling-service)
-- [Why Scheduling Apps Fail Critical Access Hospitals](#why-scheduling-apps-fail-critical-access-hospitals)
-- [How Each Model Affects the Nurse Manager's Week](#how-each-model-affects-the-nurse-managers-week)
+- [Why Do Scheduling Apps Fail Critical Access Hospitals?](#why-do-scheduling-apps-fail-critical-access-hospitals)
+- [How Does Each Model Affect the Nurse Manager's Week?](#how-does-each-model-affect-the-nurse-managers-week)
 - [Feature Comparison: Software vs. Managed Service](#feature-comparison-software-vs-managed-service)
 - [Which Approach Fits Your Hospital?](#which-approach-fits-your-hospital)
-- [When Scheduling Software Is the Right Choice](#when-scheduling-software-is-the-right-choice)
-- [When a Managed Service Is the Right Choice](#when-a-managed-service-is-the-right-choice)
-- [What a Managed Service Cannot Do](#what-a-managed-service-cannot-do)
-- [How SimpleScheduleAI Works as a Managed Service](#how-simplescheduleai-works-as-a-managed-service)
+- [When Is Scheduling Software the Right Choice?](#when-is-scheduling-software-the-right-choice)
+- [When Is a Managed Service the Right Choice?](#when-is-a-managed-service-the-right-choice)
+- [What Can a Managed Service Not Do?](#what-can-a-managed-service-not-do)
+- [How Does SimpleScheduleAI Work as a Managed Service?](#how-does-simplescheduleai-work-as-a-managed-service)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -60,9 +60,9 @@ Scheduling software gives the nurse manager a tool she uses to build and manage 
 
 The distinction is not about quality of output. Both models can produce high-quality schedules. The distinction is about who does the work.
 
-The nurse manager retains decision authority in both models. She reviews and approves schedules, confirms callout replacements, and makes clinical exceptions. What changes is who prepares the inputs for those decisions.
+The nurse manager retains decision authority in both models. She reviews and approves schedules, confirms callout replacements, and makes clinical exceptions. What changes is who prepares the inputs for those decisions. Defining what "automated" actually delivers, beyond marketing language, is the subject of our companion piece on [what automated nurse scheduling actually means](/blog/what-automated-nurse-scheduling-actually-means).
 
-## Why Scheduling Apps Fail Critical Access Hospitals
+## Why Do Scheduling Apps Fail Critical Access Hospitals?
 
 Scheduling apps fail at Critical Access Hospitals for three structural reasons that most vendors do not mention in demos. CAHs have no IT department to configure the system, no dedicated scheduler to operate it week over week, and no compliance specialist to set up FLSA and CMS rules correctly at setup. Without all three, app configuration drifts as staff changes and the nurse manager stops having bandwidth to maintain it.
 
@@ -95,9 +95,9 @@ CAHs face three structural constraints that make the self-serve app model consis
   </div>
 </div>
 
-The practical result: CAHs that implement scheduling apps often see initial improvement followed by gradual drift back to spreadsheets as configuration erodes, staff turnover resets training, and the nurse manager stops having time to operate the system correctly.
+The practical result: CAHs that implement scheduling apps often see initial improvement followed by gradual drift back to spreadsheets as configuration erodes, staff turnover resets training, and the nurse manager stops having time to operate the system correctly. The exact cost of that spreadsheet drift, and what to count when measuring it, is broken down in [nurse scheduling software vs. Excel](/blog/nurse-scheduling-software-vs-excel).
 
-## How Each Model Affects the Nurse Manager's Week
+## How Does Each Model Affect the Nurse Manager's Week?
 
 Scheduling software reduces the nurse manager's weekly scheduling time by 30-50%, to approximately 4-6 hours per week. She still builds every schedule, handles callouts, and maintains the system. A managed scheduling service reduces that time by 80-90%, to 1-2 hours per week for review and approval only. The difference is not incremental. For a nurse manager who also takes clinical shifts, it determines whether scheduling is a manageable task or a persistent burnout driver.
 
@@ -262,7 +262,7 @@ A scheduling app fits when the hospital has a dedicated scheduler or an administ
 - Your primary pain point is callout coverage and overtime, not just schedule building
 - You are a Texas critical access hospital with 25 beds or fewer
 
-## When Scheduling Software Is the Right Choice
+## When Is Scheduling Software the Right Choice?
 
 Scheduling software is the right choice when the hospital has someone whose primary role is scheduling administration, when clinical and provider scheduling need to be managed in a single system, or when the nurse manager prefers direct control over individual scheduling decisions. Software also fits better when the hospital has IT resources to handle configuration and maintenance, or when staff self-service features for availability submission and shift swaps are a hard requirement.
 
@@ -276,7 +276,7 @@ Self-serve scheduling software is the better fit when:
 
 **The hospital has IT resources.** Healthcare scheduling software requires setup, configuration, and ongoing maintenance. If the hospital has IT staff who can manage that process, the configuration burden is manageable and the software model delivers more control.
 
-## When a Managed Service Is the Right Choice
+## When Is a Managed Service the Right Choice?
 
 A managed scheduling service is the right choice when the nurse manager also takes clinical shifts and cannot reliably protect 4-6 hours per week for scheduling construction. It also fits when prior scheduling software implementations drifted into disuse as configuration eroded, or when CMS compliance documentation is currently assembled manually before each survey. If any of these three conditions apply at a CAH, the managed service model almost always delivers a better time return than additional software.
 
@@ -290,7 +290,7 @@ A managed scheduling service is the better fit when:
 
 **CMS compliance documentation is a recurring manual burden.** If the nurse manager spends 4-8 hours before each survey manually assembling staffing records, a managed service that maintains that documentation automatically delivers a direct, measurable time return.
 
-## What a Managed Service Cannot Do
+## What Can a Managed Service Not Do?
 
 A managed scheduling service cannot perform real-time schedule edits on demand, handle idiosyncratic constraints that exist only as informal agreements never formalized in writing, or extend to physician and mid-level scheduling populations. When a nurse manager wants to swap two nurses mid-week, that change routes through the service rather than happening instantly in a self-service interface. For hospitals where direct schedule control and nurse self-service features are hard requirements, a self-serve platform is the better fit.
 
@@ -302,11 +302,11 @@ The managed service model has real limitations that are important to understand 
 
 **Multi-department and physician scheduling.** A managed nursing scheduling service handles nursing. If the hospital also needs to schedule physicians, mid-levels, or ancillary staff on the same system, a managed nursing service does not extend to those scheduling populations.
 
-## How SimpleScheduleAI Works as a Managed Service
+## How Does SimpleScheduleAI Work as a Managed Service?
 
 SimpleScheduleAI delivers nurse schedules as a managed service for Critical Access Hospitals in Texas. The nurse manager submits a staff roster in Excel, and within 48 hours receives three complete schedule drafts. She selects one, the service handles CMS documentation automatically, and callout coverage generates a ranked replacement list in under two minutes. The total weekly time commitment for review and approval is 1-2 hours. See [how the full process works](/how-it-works).
 
-SimpleScheduleAI is the scheduling service built specifically for Critical Access Hospitals where the nurse manager takes clinical shifts and cannot spend 8-12 hours per week on scheduling.
+SimpleScheduleAI is the scheduling service built specifically for Critical Access Hospitals where the nurse manager takes clinical shifts and cannot spend 8-12 hours per week on scheduling. For the broader category context on how AI-built schedules differ from traditional methods, see [AI nurse scheduling vs. traditional](/blog/ai-nurse-scheduling-vs-traditional).
 
 The workflow has four steps:
 

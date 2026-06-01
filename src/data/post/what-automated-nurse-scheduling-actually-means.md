@@ -165,22 +165,22 @@ The four questions below reveal the actual level of automation behind any vendor
   <p class="text-center text-xs text-slate-500 dark:text-slate-400 mb-5">Ask each one. The answer maps directly to Level 1-3 (tool) or Level 4-5 (automated)</p>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <div class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 p-4">
-      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 1 — Monday morning</p>
+      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 1: Monday morning</p>
       <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"Walk me through what the nurse manager does on a Monday morning when the new schedule week starts."</p>
       <p class="text-xs text-slate-600 dark:text-slate-400">If the answer describes the manager opening the system and assigning shifts, the automation is Level 1-3. If the answer describes the manager reviewing a pre-built draft, it is Level 4-5.</p>
     </div>
     <div class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 p-4">
-      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 2 — Callout coverage</p>
+      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 2: Callout coverage</p>
       <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"If a nurse calls out Tuesday night, what is the process for finding a replacement?"</p>
       <p class="text-xs text-slate-600 dark:text-slate-400">If the answer describes the manager checking the system manually, the automation is Level 1-3. If a ranked shortlist is already available, it is Level 4-5.</p>
     </div>
     <div class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 p-4">
-      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 3 — Calibration time</p>
+      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 3: Calibration time</p>
       <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"How long after implementation does it take before the auto-generated schedules require no correction?"</p>
       <p class="text-xs text-slate-600 dark:text-slate-400">An honest answer reveals how much setup work the "automation" requires before it is actually reliable.</p>
     </div>
     <div class="rounded-lg border-2 border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20 p-4">
-      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 4 — Weekly hours (most diagnostic)</p>
+      <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 4: Weekly hours (most diagnostic)</p>
       <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"How many hours per week does a typical CAH nurse manager spend on scheduling after full implementation?"</p>
       <p class="text-xs text-slate-600 dark:text-slate-400">The number tells you the actual automation level more directly than any feature description.</p>
     </div>
@@ -199,7 +199,7 @@ This is not a software tool with automation features. It is a different operatin
 
 One honest limitation: the managed service model requires comfort delegating draft generation. For nurse managers who prefer direct control over every scheduling decision, or who have specific scheduling rules the specialist cannot easily replicate, a self-serve platform at Level 3 may be a better fit. For a side-by-side look at the leading self-serve options for small hospitals, see our [best nurse scheduling software guide for 2026](/blog/best-nurse-scheduling-software-2026).
 
-For the broader context on [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) and what CAH-scale requirements look like, the feature guide covers each requirement. The operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), bed-count limits, CMS conditions of participation, and federal overtime calculation, are covered in the pillar guide.
+For the broader context on [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) and what CAH-scale requirements look like, the feature guide covers each requirement. The operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), bed-count limits, CMS conditions of participation, and federal overtime calculation, are covered in the pillar guide. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Want to see what Level 5 automation looks like for your facility?</p>

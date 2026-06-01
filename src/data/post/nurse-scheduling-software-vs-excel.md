@@ -146,7 +146,7 @@ One honest limitation: SimpleScheduleAI works best for hospitals that have reaso
 
 [See how SimpleScheduleAI works for critical access hospitals →](/how-it-works)
 
-For more context on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides.
+For more context on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
 ## Frequently Asked Questions
 
