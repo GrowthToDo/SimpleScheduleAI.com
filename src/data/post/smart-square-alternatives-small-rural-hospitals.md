@@ -26,7 +26,7 @@ metadata:
 - Smart Square holds 4.6/5 on Capterra (19 reviews; small sample). The companion symplr Workforce time-and-attendance product holds 4.1/5 on Capterra (13 reviews; small sample).
 - Smart Square has real strengths: it won Best in KLAS for Scheduling: Nurse and Staff in both 2025 and 2026, and its predictive-analytics depth is built for large multi-facility systems. Those strengths are aimed at health-system scale, not a single Critical Access Hospital.
 - For a Critical Access Hospital that needs the scheduling handled rather than a more powerful tool to do it itself, SimpleScheduleAI is the managed-service alternative. For facilities that want self-serve software at a smaller scale, several options below fit a 25-bed roster better than an enterprise platform.
-- Whichever direction you go, ask any vendor for a current reference customer at Critical Access Hospital scale and confirm CMS §485.635 documentation handling directly, because product pages rarely document single-CAH deployment fit.
+- Whichever direction you go, ask any vendor for a current reference customer at Critical Access Hospital scale and confirm CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation handling directly, because product pages rarely document single-CAH deployment fit.
 
 ## Table of Contents
 
@@ -158,7 +158,7 @@ The six strongest Smart Square alternatives for a Critical Access Hospital are S
 
 SimpleScheduleAI is a new service in active pilot phase, without public Capterra or G2 reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Where Smart Square is a self-serve enterprise platform configured and maintained by labor-management staff, SimpleScheduleAI requires no configuration work from the nurse manager: a scheduling specialist handles setup from an Excel roster upload, builds draft schedules each cycle, and maintains the system as the roster changes.
 
-The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and FLSA overtime thresholds. The [AI nurse scheduling](/ai-nurse-scheduling) engine produces three draft options each cycle: balanced, fairness-optimized, and cost-optimized.
+The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds. The [AI nurse scheduling](/ai-nurse-scheduling) engine produces three draft options each cycle: balanced, fairness-optimized, and cost-optimized.
 
 **Best for:** Critical Access Hospitals that hit Smart Square, found it sized for health systems rather than a single 25-bed facility, and want the scheduling handled rather than a more powerful tool to run themselves.
 

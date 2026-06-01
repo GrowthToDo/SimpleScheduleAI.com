@@ -62,7 +62,7 @@ Its named reference customers are Ochsner Health, which M7 says is rolling the p
 
 SimpleScheduleAI is a fully managed nurse scheduling service for a single Critical Access Hospital of 25 beds or fewer, in Texas, where the nurse manager also takes clinical shifts, there is no IT department, and there is no dedicated scheduler. It is a service, not software the hospital runs itself.
 
-The hospital sends a roster in Excel, and the service builds and maintains the schedule. The nurse manager receives schedule drafts for review and gets a ranked callout replacement list in under two minutes. FLSA and Texas compliance are built in rather than configured. A Critical Access Hospital is a federally designated facility capped at 25 inpatient beds under [CMS Conditions of Participation](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals), and [HRSA rural health workforce data](https://www.hrsa.gov/rural-health) shows these hospitals run lean, with no slack staffing and no back-office layer. See exactly [how the managed service works](/how-it-works). For the broader category context, compare [a managed service against scheduling software](/blog/managed-service-vs-scheduling-software).
+The hospital sends a roster in Excel, and the service builds and maintains the schedule. The nurse manager receives schedule drafts for review and gets a ranked callout replacement list in under two minutes. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and Texas compliance are built in rather than configured. A Critical Access Hospital is a federally designated facility capped at 25 inpatient beds under [CMS Conditions of Participation](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals), and [HRSA rural health workforce data](https://www.hrsa.gov/rural-health) shows these hospitals run lean, with no slack staffing and no back-office layer. See exactly [how the managed service works](/how-it-works). For the broader category context, compare [a managed service against scheduling software](/blog/managed-service-vs-scheduling-software).
 
 ## What Is the Core Difference Between M7 Health and SimpleScheduleAI?
 
@@ -159,7 +159,7 @@ The honest comparison is not feature by feature. It is model against model. M7 H
         <td class="py-3 text-slate-600 dark:text-slate-400">Built in: FLSA and Texas Labor Code defaults</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
+        <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Not documented on the product page</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Maintained automatically each cycle</td>
       </tr>

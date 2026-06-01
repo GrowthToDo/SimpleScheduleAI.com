@@ -134,7 +134,7 @@ Here is how all 8 platforms compare at a glance before we go deeper:
 
 ## How to Evaluate Nurse Scheduling Software in 2026?
 
-Evaluating nurse scheduling software in 2026 means starting with three questions before looking at feature lists: What is your bed count, because each tier requires a different tool? Do you want to manage scheduling yourself or hand it off? And what compliance requirements does your facility actually carry under FLSA, CMS, and any state-specific rules? The answers eliminate most platforms before you reach a demo.
+Evaluating nurse scheduling software in 2026 means starting with three questions before looking at feature lists: What is your bed count, because each tier requires a different tool? Do you want to manage scheduling yourself or hand it off? And what compliance requirements does your facility actually carry under [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), CMS, and any state-specific rules? The answers eliminate most platforms before you reach a demo.
 
 Before comparing platforms, it helps to know what questions actually matter for your situation. The vendor demos will emphasize features. The real evaluation should emphasize fit.
 
@@ -142,7 +142,7 @@ Before comparing platforms, it helps to know what questions actually matter for 
 
 The nurse scheduling software market is not one market. It is three markets that happen to use similar terminology:
 
-- **Under 50 beds (Small, Rural, including 25-bed Critical Access Hospitals):** Score on three things only: implementation burden (live in week one, no IT project), state overtime plus CMS §485.635 compliance built in by default, and callout coverage speed. A CAH should weight any enterprise feature outside those three at zero, because it is friction, not value.
+- **Under 50 beds (Small, Rural, including 25-bed Critical Access Hospitals):** Score on three things only: implementation burden (live in week one, no IT project), state overtime plus CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance built in by default, and callout coverage speed. A CAH should weight any enterprise feature outside those three at zero, because it is friction, not value.
 - **50-200 beds (Community Hospital):** You need solid rule-based scheduling, credential tracking, and overtime controls. Mid-market platforms are the right tier.
 - **200+ beds (Regional System):** You need integration with your HRIS, payroll, and EHR. Enterprise platforms with full API connectivity are worth the investment.
 

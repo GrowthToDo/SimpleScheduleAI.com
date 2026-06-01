@@ -181,7 +181,7 @@ Small hospitals exiting UKG often make the same mistake in selecting a replaceme
 The evaluation criteria that matter most for a CAH replacement:
 
 - **Setup time:** Measured in days, not weeks. Any system that requires IT involvement to deploy is wrong for a CAH without an IT department.
-- **Texas compliance built in:** Overtime rules, nursing board regulations, and CMS §485.635(c) staffing documentation requirements should be preconfigured, not customer-configured.
+- **Texas compliance built in:** Overtime rules, nursing board regulations, and CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)(c) staffing documentation requirements should be preconfigured, not customer-configured.
 - **Callout automation:** Ranked replacement shortlist available instantly when a callout occurs. This is the highest-value feature for reducing nurse manager time.
 - **No EHR integration requirement:** Systems that require connecting to your Epic or Cerner instance add 2-4 months and significant cost to the implementation. A CAH that schedules independently of the EHR does not need this.
 - **Trial before commitment:** The right vendor will let you run a pilot on real schedules before signing a multi-year contract. Any vendor who will not offer this is pricing the risk of the unknown onto you.

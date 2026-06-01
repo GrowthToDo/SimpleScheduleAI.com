@@ -66,7 +66,7 @@ The nurse manager retains final authority over every scheduling decision in eith
 
 ## What Are the Five Questions to Ask in Any Hospital Scheduling Demo?
 
-Five questions reveal operational fit in any hospital scheduling demo faster than feature walkthroughs: typical setup time for a 25-bed hospital without IT support, weekly nurse manager hours after go-live, how the CMS §485.635 audit trail export looks, what the manager can and cannot do from the mobile app, and the exact callout workflow step by step at 5am. The answers expose operating model constraints that vendor feature pages do not mention.
+Five questions reveal operational fit in any hospital scheduling demo faster than feature walkthroughs: typical setup time for a 25-bed hospital without IT support, weekly nurse manager hours after go-live, how the CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) audit trail export looks, what the manager can and cannot do from the mobile app, and the exact callout workflow step by step at 5am. The answers expose operating model constraints that vendor feature pages do not mention.
 
 These questions surface operational fit faster than feature checklists do. Use them in any demo, whether the vendor is selling a self-serve platform or a managed service.
 
@@ -81,7 +81,7 @@ These questions surface operational fit faster than feature checklists do. Use t
   </div>
   <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">
     <div class="mb-3 rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-bold text-white">3. Compliance</div>
-    <p class="text-sm text-slate-600 dark:text-slate-300">"Show me the audit-trail export for CMS §485.635. Show me the FLSA 8-and-80 overtime rule configuration."</p>
+    <p class="text-sm text-slate-600 dark:text-slate-300">"Show me the audit-trail export for CMS §485.635. Show me the [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) 8-and-80 overtime rule configuration."</p>
   </div>
   <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">
     <div class="mb-3 rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-bold text-white">4. Mobile Workflow</div>

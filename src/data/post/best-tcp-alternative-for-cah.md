@@ -76,7 +76,7 @@ TCP TimeClock+'s documented limitations for hospital scheduling fall into three 
     </div>
     <ul class="px-4 py-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
       <li>Proactive OT flagging before schedule publishes</li>
-      <li>CMS §485.635 audit trail documentation (not confirmed as built-in feature)</li>
+      <li>CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) audit trail documentation (not confirmed as built-in feature)</li>
       <li>Ranked replacement lists with constraint logic (requires Humanity Scheduling add-on)</li>
       <li>Hospital-specific scheduling templates for CAH compliance</li>
     </ul>
@@ -256,7 +256,7 @@ SimpleScheduleAI is a managed scheduling service, not a self-serve platform. A s
 
 - Live in 3-5 days from your staff roster
 - Weekly scheduling time drops to 1-2 hours of reviewing and approving
-- FLSA, Texas Labor Code, and CMS §485.635 audit trail included by default
+- [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), Texas Labor Code, and CMS §485.635 audit trail included by default
 - Callout coverage shortlists delivered pre-ranked with credential and overtime constraints applied
 
 **Key limitations:**

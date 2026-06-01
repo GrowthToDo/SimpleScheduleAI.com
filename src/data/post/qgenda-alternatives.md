@@ -95,7 +95,7 @@ For a CAH evaluating QGenda, ask the vendor for the smallest hospital they have 
 
 ## What Does a Critical Access Hospital Actually Need in a QGenda Alternative?
 
-A CAH needs five things from a QGenda alternative: nurse-specific credential enforcement that blocks unqualified assignments automatically, proactive FLSA overtime tracking before the schedule publishes, CMS §485.635 compliant audit trail maintained automatically, callout coverage logic that ranks replacements by credential and overtime status, and an implementation timeline measured in days rather than weeks. Most alternatives serve some of these needs. The right choice depends on which gaps are the priority.
+A CAH needs five things from a QGenda alternative: nurse-specific credential enforcement that blocks unqualified assignments automatically, proactive [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime tracking before the schedule publishes, CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliant audit trail maintained automatically, callout coverage logic that ranks replacements by credential and overtime status, and an implementation timeline measured in days rather than weeks. Most alternatives serve some of these needs. The right choice depends on which gaps are the priority.
 
 For a critical access hospital, scheduling requirements differ from what QGenda is optimized for:
 

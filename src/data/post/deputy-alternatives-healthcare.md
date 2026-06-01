@@ -25,7 +25,7 @@ metadata:
 
 ## Key Takeaways
 
-- Deputy is a well-designed general workforce scheduling tool. For hospital nurse scheduling, its gaps are significant: credential enforcement, CMS compliance documentation, FLSA healthcare overtime configuration, and callout ranking by credential or overtime status are not documented on its product page. Verify current capabilities with Deputy before evaluating for a clinical environment.
+- Deputy is a well-designed general workforce scheduling tool. For hospital nurse scheduling, its gaps are significant: credential enforcement, CMS compliance documentation, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) healthcare overtime configuration, and callout ranking by credential or overtime status are not documented on its product page. Verify current capabilities with Deputy before evaluating for a clinical environment.
 - Most hospitals using Deputy for nurse scheduling are doing so because they needed a scheduling tool quickly and Deputy was the easiest to deploy. The compliance and credential gaps accumulate as a hidden cost, manual work that someone is absorbing without it appearing in the scheduling software budget.
 - SimpleScheduleAI is the strongest alternative for Critical Access Hospitals (CAHs). It provides credential-filtered callout replacement, automated CMS §485.635 documentation, and Texas overtime compliance as defaults, none of which are documented on Deputy's product page.
 - For hospitals that want self-serve healthcare scheduling software, Aladtec provides the strongest small-roster alternative with meaningful credential and coverage tracking.

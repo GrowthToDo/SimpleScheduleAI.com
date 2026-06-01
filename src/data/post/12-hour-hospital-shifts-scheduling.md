@@ -25,7 +25,7 @@ metadata:
 - Weekend coverage is the primary fairness challenge: map weekend assignments first, before building the weekday schedule.
 - The most common burnout driver in 12-hour models is callout-driven consecutive shift stacking, nurses working 4 or more consecutive shifts informally.
 - Fatigue guards (max 3 consecutive shifts, min 36-hour night-to-day recovery) should be hard constraints in the scheduling process, not guidelines.
-- The 8-and-80 FLSA alternative can reduce overtime exposure in 12-hour shift settings but requires prior written employee agreements to be legally valid.
+- The 8-and-80 [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) alternative can reduce overtime exposure in 12-hour shift settings but requires prior written employee agreements to be legally valid.
 
 ## Table of Contents
 

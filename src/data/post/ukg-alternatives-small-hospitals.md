@@ -101,7 +101,7 @@ Beyond the purchase price, the operational cost of running UKG at CAH scale is s
 
 **Configuration errors.** Without dedicated HRIS staff, overtime rules, credential requirements, and unit staffing minimums get misconfigured. The result is scheduling errors that only surface at payroll, sometimes after overpaying nurses by thousands of dollars. At a 25-bed hospital where there is no HRIS analyst to own the configuration, this is the highest operational risk of the platform.
 
-**Compliance gaps.** UKG can produce CMS §485.635 documentation, but only if configured correctly. Misconfiguration means the audit trail has gaps, which creates survey exposure. At a large hospital with a workforce management team, someone is responsible for audit readiness. At a CAH, this falls to whoever has time.
+**Compliance gaps.** UKG can produce CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation, but only if configured correctly. Misconfiguration means the audit trail has gaps, which creates survey exposure. At a large hospital with a workforce management team, someone is responsible for audit readiness. At a CAH, this falls to whoever has time.
 
 **Support complexity.** UKG's support model is designed for enterprise customers with internal technical staff who can translate business problems into platform configuration requests. A nurse manager who needs a scheduling rule changed faces a support process built for IT professionals, not clinicians.
 
@@ -157,7 +157,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format and the first schedule is delivered within 48 hours. FLSA overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
+SimpleScheduleAI is a managed scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format and the first schedule is delivered within 48 hours. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
 
 The nurse manager reviews and approves schedules and handles callout coverage using the automated ranked replacement list. Weekly scheduling time drops to 1-2 hours. No IT involvement. No implementation project. For a CAH coming off UKG, a managed service is typically the fastest path to operational simplicity.
 

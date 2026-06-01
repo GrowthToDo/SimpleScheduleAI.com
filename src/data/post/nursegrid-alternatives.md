@@ -25,7 +25,7 @@ metadata:
 ## Key Takeaways
 
 - NurseGrid's strength is the nurse-facing mobile experience: schedule viewing, availability, and shift-trade requests. Reviewers on Capterra report the manager-facing mobile app was removed in mid-2024 and that desktop login is now required for schedule edits.
-- For a Critical Access Hospital, the gap is not the nurse app. It is manager-side scheduling, FLSA overtime tracking before posting, CMS §485.635 documentation, and credential-filtered callout coverage, capabilities not documented on NurseGrid's product page as part of the nurse-facing app.
+- For a Critical Access Hospital, the gap is not the nurse app. It is manager-side scheduling, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime tracking before posting, CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation, and credential-filtered callout coverage, capabilities not documented on NurseGrid's product page as part of the nurse-facing app.
 - NurseGrid holds 4.2/5 on Capterra (13 reviews; small sample). Treat single-source ratings on a small sample as directional, not definitive, and probe the manager workflow specifically in any demo.
 - The six strongest alternatives reviewed here are SimpleScheduleAI, ShiftWizard, TCP Scheduling (Aladtec), Deputy, Homebase, and When I Work. The right pick depends on whether compliance automation, hospital-nursing fit, or cost reduction is the priority.
 - A hybrid is viable for CAHs that value nurse self-service: keep a communication tool for the staff-facing layer and run a compliance-focused service or platform for scheduling management and CMS documentation.

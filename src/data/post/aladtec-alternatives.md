@@ -27,7 +27,7 @@ metadata:
 - Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). The platform's documented customer base on Capterra skews toward fire, EMS, law enforcement, and security users; the most recent hospital-context reviews on Capterra are several years old.
 - TCP Scheduling is the enterprise-tier product from the same parent company; data migration within the TCP ecosystem is simpler than switching vendors entirely, but configuration depth and implementation effort are higher.
 - SmartLinx, with documented focus on long-term care, post-acute, senior care, and behavioral health, is a self-serve option for hospitals at 50-100 beds with IT capacity for a longer implementation.
-- When I Work, Homebase, and Deputy are general workforce scheduling tools used across many industries; healthcare buyers should confirm with each vendor which clinical compliance capabilities (HIPAA, BAA, CMS §485.635 audit trail, credential constraints) are covered in their tier and contract.
+- When I Work, Homebase, and Deputy are general workforce scheduling tools used across many industries; healthcare buyers should confirm with each vendor which clinical compliance capabilities (HIPAA, BAA, CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) audit trail, credential constraints) are covered in their tier and contract.
 
 ## Table of Contents
 
@@ -158,7 +158,7 @@ The six strongest Aladtec alternatives for a Critical Access Hospital are Simple
 
 SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: a scheduling specialist handles setup from an Excel roster upload, builds draft schedules each cycle, and maintains the system as the roster changes.
 
-The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and FLSA overtime thresholds.
+The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds.
 
 **Best for:** Critical Access Hospitals that are leaving Aladtec because of configuration maintenance burden, CMS documentation prep time, or manual callout overtime calculations.
 

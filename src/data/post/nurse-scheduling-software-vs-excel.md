@@ -60,7 +60,7 @@ Nurse scheduling software automatically enforces staffing rules, tracks certific
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">Flagged before schedule posts</td>
       </tr>
       <tr class="bg-white dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 audit trail</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) audit trail</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">Reconstructed manually</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">Auto-logged per change</td>
       </tr>
@@ -114,7 +114,7 @@ Most CAH nurse managers don't switch away from Excel because they've heard a sal
   </div>
   <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">
     <div class="mb-3 rounded-lg bg-amber-600 px-3 py-2 text-center text-sm font-bold text-white">3. Overtime Surprise</div>
-    <p class="text-sm text-slate-600 dark:text-slate-300">Excel doesn't warn you when someone crosses 40 hours under <a class="underline" href="https://www.dol.gov/agencies/whd/flsa">FLSA</a> or Texas <a class="underline" href="https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm">Labor Code §62.002</a>. You catch it on the payroll report.</p>
+    <p class="text-sm text-slate-600 dark:text-slate-300">Excel doesn't warn you when someone crosses 40 hours under <a class="underline" href="https://www.dol.gov/agencies/whd/flsa">[FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)</a> or Texas <a class="underline" href="https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm">Labor Code §62.002</a>. You catch it on the payroll report.</p>
   </div>
   <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">
     <div class="mb-3 rounded-lg bg-violet-700 px-3 py-2 text-center text-sm font-bold text-white">4. Credential Silo</div>
