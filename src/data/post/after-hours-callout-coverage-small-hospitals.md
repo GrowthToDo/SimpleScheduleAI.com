@@ -213,7 +213,7 @@ To see the underlying scheduling model, compare [nurse scheduling software](/nur
   </p>
 </div>
 
-One honest limitation: a managed callout shortlist is not the right fit for hospitals with a robust full-time staffing office, on-site after-hours coordinators, or facilities where callout volume is low enough that the manual phone tree is operationally sustainable.
+One honest limitation: a managed callout shortlist is not the right fit for hospitals with a dedicated full-time staffing office, on-site after-hours coordinators, or facilities where callout volume is low enough that the manual phone tree is operationally sustainable.
 
 ## What to Do This Week
 

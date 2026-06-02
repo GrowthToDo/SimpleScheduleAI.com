@@ -20,6 +20,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/what-automated-nurse-scheduling-actually-means'
 ---
 
+The vendor demo shows "automated scheduling." Your nurse manager experiences "still 5 hours a week clicking through screens." Both can be true at the same time, because the word "automated" covers everything from auto-filling blank shift slots to full managed-service draft generation. The marketing language hides the difference deliberately.
+
+This guide names the five levels of scheduling automation and shows how to ask one diagnostic question that separates Level 2 from Level 5 before you sign anything.
+
 ## Key Takeaways
 
 - "Automated scheduling" in vendor marketing covers a wide range, from auto-populating blank shift slots to fully AI-generated draft schedules reviewed by the nurse manager. These are not equivalent.
