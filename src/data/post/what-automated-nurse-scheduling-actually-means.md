@@ -36,6 +36,7 @@ metadata:
 - [What does scheduling automation look like in real reviews?](#what-does-scheduling-automation-look-like-in-real-reviews)
 - [What should a CAH expect from genuinely automated scheduling?](#what-should-a-cah-expect-from-genuinely-automated-scheduling)
 - [How is SimpleScheduleAI's automation different?](#how-is-simplescheduleais-automation-different)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 A hospital administrator in West Texas demoed three nurse scheduling platforms in the same week. All three described themselves as "AI-powered" and "automated." In the demos, each platform showed a schedule populating quickly, colors filling in, conflicts flagging. The demos looked similar.
@@ -199,13 +200,21 @@ This is not a software tool with automation features. It is a different operatin
 
 One honest limitation: the managed service model requires comfort delegating draft generation. For nurse managers who prefer direct control over every scheduling decision, or who have specific scheduling rules the specialist cannot easily replicate, a self-serve platform at Level 3 may be a better fit. For a side-by-side look at the leading self-serve options for small hospitals, see our [best nurse scheduling software guide for 2026](/blog/best-nurse-scheduling-software-2026).
 
-For the broader context on [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) and what CAH-scale requirements look like, the feature guide covers each requirement. The operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), bed-count limits, CMS conditions of participation, and federal overtime calculation, are covered in the pillar guide. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
+For the broader context on [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) and what CAH-scale requirements look like, the feature guide covers each requirement. The operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), bed-count limits, [CMS Conditions of Participation §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), and [FLSA federal overtime calculation](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), are covered in the pillar guide. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Want to see what Level 5 automation looks like for your facility?</p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI builds the schedule for you. Your nurse manager reviews and approves. Free pilot, operational in 3-5 days.</p>
   <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
 </div>
+
+## What to Do This Week
+
+1. **Ask each scheduling vendor a single diagnostic question.** "Walk me through what the nurse manager does on a Monday morning when the new schedule week starts." Vendors operating at Level 2-3 will describe configuration screens and rule setup. Vendors operating at Level 4-5 will describe review and approval workflows.
+2. **Time-track your nurse manager's scheduling hours for one cycle.** Include schedule building, callout coverage, rule maintenance, and exception handling. Most managers underestimate the total by 30-40% because interruptions are not logged. The honest number is the baseline any tool needs to beat.
+3. **Audit your current "automated" tool against the 5 levels.** If the manager still spends 4-6 hours per week on scheduling, the tool is operating at Level 2-3 regardless of the marketing. Level 4 reduces it to 2-3 hours; Level 5 reduces it to 1-2 hours of review only.
+4. **Identify the specific tasks you want removed, not improved.** Schedule construction, callout phone tree, overtime checking, and CMS documentation are distinct work products. Level 3-4 software speeds them up; Level 5 service removes them. Decide which outcome you actually need.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot lets you compare what Level 5 automation actually delivers against the baseline you tracked in step 2. Start at [simplescheduleai.com/pilot](/pilot).
 
 ## Frequently Asked Questions
 
@@ -227,6 +236,5 @@ Most scheduling tools handle callout coverage at Level 2-3: they show you which 
 
 ---
 
-**Written by Pradeep Pandey**
-Co-founder, SimpleScheduleAI. Deputy General Manager of Operations at Apollo Hospitals. MBA from IIM Trichy (Operations & Marketing). Deep background in healthcare operations, workforce optimization, and hospital process design.
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

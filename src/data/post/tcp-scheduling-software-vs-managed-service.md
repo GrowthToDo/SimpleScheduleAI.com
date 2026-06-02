@@ -133,7 +133,7 @@ Verify current capabilities directly with TCP before making a purchasing decisio
 
 ## What Does a Managed Scheduling Service Do Differently?
 
-A managed scheduling service removes the scheduling function from the nurse manager's plate entirely. The hospital provides a staff roster and scheduling constraints; a specialist builds the schedule each cycle, monitors overtime thresholds, pre-ranks callout replacements, and logs every change for CMS documentation. The nurse manager reviews and approves. Her weekly scheduling time drops to 1-2 hours, and she never touches the configuration or the call list.
+A managed scheduling service removes the scheduling function from the nurse manager's plate entirely. The hospital provides a staff roster and scheduling constraints; a specialist builds the schedule each cycle, monitors [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), pre-ranks callout replacements, and logs every change for CMS documentation. The nurse manager reviews and approves. Her weekly scheduling time drops to 1-2 hours, and she never touches the configuration or the call list.
 
 <img src="/images/blog/tcp-scheduling-software-vs-managed-service/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

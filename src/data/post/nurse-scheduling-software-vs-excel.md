@@ -26,12 +26,13 @@ metadata:
 
 ## Table of Contents
 
-1. [What does nurse scheduling software do that Excel can't?](#what-does-nurse-scheduling-software-do-that-excel-cant)
-2. [How much time does Excel scheduling actually cost a nurse manager?](#how-much-time-does-excel-scheduling-actually-cost-a-nurse-manager)
-3. [What are the five signs a critical access hospital has outgrown Excel?](#what-are-the-five-signs-a-critical-access-hospital-has-outgrown-excel)
-4. [Is nurse scheduling software worth the cost for a 25-bed hospital?](#is-nurse-scheduling-software-worth-the-cost-for-a-25-bed-hospital)
-5. [How SimpleScheduleAI Helps?](#how-simplescheduleai-helps)
-6. [Frequently Asked Questions](#frequently-asked-questions)
+- [What does nurse scheduling software do that Excel can't?](#what-does-nurse-scheduling-software-do-that-excel-cant)
+- [How much time does Excel scheduling actually cost a nurse manager?](#how-much-time-does-excel-scheduling-actually-cost-a-nurse-manager)
+- [What are the five signs a critical access hospital has outgrown Excel?](#what-are-the-five-signs-a-critical-access-hospital-has-outgrown-excel)
+- [Is nurse scheduling software worth the cost for a 25-bed hospital?](#is-nurse-scheduling-software-worth-the-cost-for-a-25-bed-hospital)
+- [How SimpleScheduleAI Helps?](#how-simplescheduleai-helps)
+- [What to Do This Week](#what-to-do-this-week)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
 ## What does nurse scheduling software do that Excel can't?
 
@@ -147,6 +148,22 @@ One honest limitation: SimpleScheduleAI works best for hospitals that have reaso
 [See how SimpleScheduleAI works for critical access hospitals →](/how-it-works)
 
 For more context on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
+
+## What to Do This Week
+
+1. **Time-track every scheduling task for one week.** Schedule building, callout calls, time-off processing, payroll OT reconciliation, and credential checks. Most managers underestimate the total by 30-40% because interruptions are not logged. Use a sticky note and a stopwatch if needed.
+2. **Calculate your shadow salary.** Multiply your weekly scheduling hours by your loaded hourly rate, then by 50 weeks. For most CAH managers at 8-12 hours/week and $50/hr loaded, the number is around $26,000/year. That number is the ROI floor any scheduling tool must clear.
+3. **Run the [ROI calculator](/roi)** to model what reducing your scheduling time by 60% would return in dollars and clinical hours. The output is the budget conversation you take to your CFO.
+4. **Check your last 4 cycles for the five outgrown-Excel signs.** Repeated weekend inequity, slow callout response, after-the-fact overtime discovery, siloed credential tracking, and non-transferable scheduling knowledge. Two or more of these in 4 cycles means Excel is the constraint, not the workflow.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot lets you compare the actual time burden against your week-one baseline. Start at [simplescheduleai.com/pilot](/pilot).
+
+<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+  <div>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Done rebuilding the schedule every cycle?</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers a compliant, post-ready schedule every Thursday 3 PM Central. Your nurse manager reviews and approves. Free 60-day pilot for Texas CAHs.</p>
+  </div>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+</div>
 
 ## Frequently Asked Questions
 

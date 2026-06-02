@@ -36,6 +36,7 @@ metadata:
 - [What to Do With Your Data?](#what-to-do-with-your-data)
 - [How Do You Handle Staff Communication During the Transition?](#how-do-you-handle-staff-communication-during-the-transition)
 - [What to Look for in the Replacement System?](#what-to-look-for-in-the-replacement-system)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 ## Why Small Hospitals End Up on UKG in the First Place?
@@ -160,7 +161,7 @@ The two categories of UKG data worth extracting are the nurse roster and the his
 
 **Nurse roster:** Full name, contact information, employment type, certifications and expiration dates, seniority date, and any accommodation or restriction notes. This is the data your replacement system needs to function from day one. Request it in CSV or Excel format and verify that every field exported correctly; UKG exports sometimes truncate certification records or omit per-diem staff.
 
-**Historical schedule data:** The past 12 months of actual schedules, including callout records, overtime hours by nurse, and shift swap logs. This data is useful for two reasons: it provides the baseline for measuring whether your replacement system actually reduces overtime (without it, you cannot prove the improvement), and it provides the audit trail documentation you may need if a nurse disputes their historical scheduling fairness.
+**Historical schedule data:** The past 12 months of actual schedules, including callout records, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime hours by nurse, and shift swap logs. This data is useful for two reasons: it provides the baseline for measuring whether your replacement system actually reduces overtime (without it, you cannot prove the improvement), and it provides the audit trail documentation you may need if a nurse disputes their historical scheduling fairness.
 
 Data you do not need to migrate: most payroll integration configurations, UKG-specific report templates, and any module configurations that are specific to UKG's architecture and will not translate to a different system.
 
@@ -189,6 +190,14 @@ The evaluation criteria that matter most for a CAH replacement:
 For a detailed comparison of platforms appropriate for CAHs leaving enterprise tools, see our [nurse scheduling software](/nurse-scheduling-software) guide. For context on why enterprise platforms like UKG are specifically a poor fit at CAH scale, see the [dedicated UKG alternatives guide](/blog/ukg-too-complex-small-hospital).
 
 For [Critical Access Hospital administrators](/critical-access-hospital-scheduling) mid-contract and evaluating options: start the replacement research now, before the renewal window. The notice period clock starts at a specific date in your contract. Most administrators who missed that date and were auto-renewed wish they had started six months earlier.
+
+## What to Do This Week
+
+1. **Pull your UKG contract and find the termination notice clause.** Note the auto-renewal date and the notice deadline. Most administrators discover the notice deadline is 60-90 days earlier than the contract end date, and missing it auto-renews the contract for another full term.
+2. **Document your actual UKG usage hours per week.** Include the nurse manager's time, any HR or payroll touchpoints, and IT or vendor-support time. The total weekly cost in labor is usually 2-3× the subscription cost; that number is the ROI floor any replacement must clear.
+3. **Request a full data export from UKG while you are still under contract.** Roster with certifications, 12 months of schedule history, callout records, and overtime by nurse. UKG will provide it but the format is proprietary and requires cleaning. Plan 5-10 hours of data work.
+4. **Identify your three replacement candidates by operational fit, not feature list.** Score each on: setup time in days not weeks, Texas overtime and CMS §485.635 built in by default, callout shortlist generated automatically, no IT integration required, and willingness to pilot before contract.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot lets you run the actual scheduling workflow against your roster before submitting UKG notice. Start at [simplescheduleai.com/pilot](/pilot).
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">

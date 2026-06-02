@@ -34,6 +34,7 @@ metadata:
 - [What are the fatigue and burnout risks of 12-hour rotating shifts?](#what-are-the-fatigue-and-burnout-risks-of-12-hour-rotating-shifts)
 - [How do you build a fair 12-hour shift schedule for a 25-bed CAH?](#how-do-you-build-a-fair-12-hour-shift-schedule-for-a-25-bed-cah)
 - [How is SimpleScheduleAI's 12-hour scheduling different?](#how-is-simplescheduleais-12-hour-scheduling-different)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 ## Why do critical access hospitals use 12-hour nursing shifts?
@@ -150,7 +151,8 @@ tradeoff we cover in [nurse scheduling software vs. Excel](/blog/nurse-schedulin
 coverage requirement per shift depends on your census patterns. Most 25-bed facilities
 operate with 2-3 RNs per 12-hour shift as a floor. Document this minimum as a
 scheduling policy: no schedule is approved that posts fewer than X nurses for any shift.
-CMS survey readiness depends on being able to demonstrate that your staffing decisions
+[CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
+survey readiness depends on being able to demonstrate that your staffing decisions
 meet a defined adequacy standard.
 
 **Step 2: Assign permanent night and day positions where possible.** If you have nurses
@@ -229,6 +231,22 @@ initial setup and calibration requires more time. We surface this in onboarding.
 
 [See how the scheduling process works →](/how-it-works)
 
+## What to Do This Week
+
+1. **Audit your current 12-hour shift rotation pattern.** Identify whether your unit runs straight day/night assignments, 3-on/4-off rotating, or rotating day/night blocks. Each pattern has a different fatigue and fairness profile; you cannot fix problems you have not named.
+2. **Pull your last 14-day schedule and check weekend distribution.** Count how many weekend shifts each full-time nurse worked. If the spread is wider than 2 to 1 (most-loaded vs least-loaded nurse), weekend fairness needs a hard rule in the next cycle.
+3. **Document your current FLSA model in writing.** Decide whether your facility runs on the standard 40-hour workweek or the 8-and-80 healthcare alternative. Confirm with your CFO and HR that the written employee agreements are on file if you use 8-and-80.
+4. **Set a consecutive-shift cap as a hard rule.** No nurse works more than 3 consecutive 12-hour shifts without a day off. Add this to your scheduling policy and apply it before posting, not after.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot delivers a compliant 12-hour shift schedule each cycle with the fairness, fatigue, and overtime guards already applied. Start at [simplescheduleai.com/pilot](/pilot).
+
+<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+  <div>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Tired of rebuilding the 12-hour rotation every cycle?</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI applies coverage minimums, weekend distribution rules, fatigue constraints, and FLSA overtime logic before the schedule lands in your inbox. You review and approve. Free 60-day pilot for Texas CAHs.</p>
+  </div>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+</div>
+
 ## Frequently Asked Questions
 
 **Q: How many nurses does a 25-bed CAH need on a 12-hour shift rotation?**
@@ -254,14 +272,5 @@ scheduling constraint, not a suggestion, violations compound over time.
 
 ---
 
-Ready to reduce overtime and handle callouts without the Sunday evening scramble?
-[See how SimpleScheduleAI works for critical access hospitals →](/how-it-works) or
-[apply for a pilot spot](/pilot).
-
----
-
-**Written by Pradeep Pandey**
-Co-founder, SimpleScheduleAI. Deputy General Manager of Operations at Apollo Hospitals. MBA from IIM
-Trichy (Operations & Marketing). Deep background in healthcare operations, workforce
-optimization, and hospital process design.
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
