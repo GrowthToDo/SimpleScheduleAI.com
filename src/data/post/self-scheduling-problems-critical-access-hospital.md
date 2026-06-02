@@ -35,6 +35,7 @@ metadata:
 - [What Is a Simultaneous Submission Window?](#what-is-a-simultaneous-submission-window)
 - [How Do You Track Fairness Across Multiple Scheduling Cycles?](#how-do-you-track-fairness-across-multiple-scheduling-cycles)
 - [How Does SimpleScheduleAI Address Self-Scheduling Inequity?](#how-does-simplescheduleai-address-self-scheduling-inequity)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Self-scheduling is appealing in theory. Give nurses autonomy over their hours and they will be more engaged, more satisfied, and less likely to leave. That logic has enough truth in it that the model has spread widely in hospital nursing. The problem is that self-scheduling requires structural guardrails that most small hospitals do not have the infrastructure to enforce.
@@ -185,6 +186,22 @@ Public quotes referenced in this guide were gathered from Capterra and AllNurses
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     Self-scheduling at a CAH is not a participation problem. It is a fairness problem. When the most reliable nurses are also the ones who fill the open holes voluntarily, self-scheduling quietly punishes them. The fix is not more self-service. The fix is constraint-aware assignment with override, so the system distributes the unwanted shifts evenly before anyone has the chance to avoid them. Selfish scheduling is what happens when the platform optimizes for nurse preference but not for unit fairness.
   </p>
+</div>
+
+## What to Do This Week
+
+1. **Map the actual weekend and night-shift distribution from your last 8 weeks.** Who is working weekends and how often? Who is consistently avoiding them? If the spread between most-loaded and least-loaded full-time nurse is wider than 2 to 1, self-scheduling is quietly punishing your most reliable staff.
+2. **Set a hard cap on undesirable-shift volume per nurse per cycle.** No more than 2 weekend shifts per 14-day period. No more than 4 night shifts per 28-day block. Cap first, then let self-scheduling fill the rest. Caps prevent selfishness; preferences fill the remainder.
+3. **Move weekend and holiday assignment to manager-set rotation, not self-pick.** Self-scheduling works for weekday day shifts where preferences vary. It fails for weekends and holidays where most nurses prefer the same outcome. Assign those before opening the rest.
+4. **Audit the cost of self-scheduling silence.** Track which nurses absorb voluntary overtime each cycle. They are the retention risk most CAHs lose to burnout. Reliable nurses leaving is more expensive than fairness friction.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot applies constraint-aware fairness rules before nurses self-pick, so the system distributes the unwanted shifts evenly before anyone has the chance to avoid them. Start at [simplescheduleai.com/pilot](/pilot).
+
+<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+  <div>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">End selfish scheduling without losing self-service</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI distributes weekends, nights, and holidays before nurses self-pick, then opens the rest. Reliable nurses stop carrying the load. Free 60-day pilot for Texas CAHs.</p>
+  </div>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
 ## Frequently Asked Questions

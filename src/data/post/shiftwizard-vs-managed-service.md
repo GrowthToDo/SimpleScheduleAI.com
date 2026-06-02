@@ -38,6 +38,7 @@ metadata:
 - [Where Does a Managed Service Fit?](#where-does-a-managed-service-fit)
 - [Which Model Fits Your Critical Access Hospital?](#which-model-fits-your-critical-access-hospital)
 - [How SimpleScheduleAI Fits If You Need the Managed Service Model?](#how-simplescheduleai-fits-if-you-need-the-managed-service-model)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 For a Critical Access Hospital nurse manager evaluating hospital scheduling options, the most consequential decision is not which scheduling product to buy. It is which operating model the hospital is signing up for. A self-serve platform like ShiftWizard puts the operational layer on your nurse manager's calendar. A managed service moves that layer to a specialist outside the hospital. The feature-by-feature comparison matters less than this structural question.
@@ -228,6 +229,22 @@ Public review counts, ratings, and quotes referenced in this guide were gathered
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     ShiftWizard and a managed scheduling service answer different questions. ShiftWizard answers "how does the hospital build better schedules with a hospital-nursing tool?" - a real question for hospitals that can sustain a scheduling administrator. A managed service answers "how does the nurse manager stop being the scheduling administrator?" For a 25-bed Critical Access Hospital where the manager also covers clinical shifts, the second question is usually the one that decides the purchase.
   </p>
+</div>
+
+## What to Do This Week
+
+1. **Time-track your nurse manager's ShiftWizard hours for one cycle.** Schedule build, configuration edits, credential updates, callout coverage, and FLSA threshold checks. Compare the total to the 1 to 2 hours per week a managed service requires. The gap is the recovered-time number for an ROI calculation.
+2. **Audit which ShiftWizard configurations have drifted.** Credential expiration dates current for all staff? Minimum staffing rules reflect current per-diem and float policies? Overtime thresholds match your FLSA model? Configuration drift is the silent failure mode of any self-serve hospital scheduling platform.
+3. **Calculate total cost of ownership, not just license fee.** Subscription plus implementation labor plus ongoing maintenance labor plus the nurse manager's weekly scheduling hours at her loaded rate. Use the [SimpleScheduleAI ROI calculator](/roi) to compare the two models on dollar value.
+4. **Identify whether your nurse manager would rather operate a tool or approve a finished schedule.** ShiftWizard is the right answer for managers who want direct control of every cell. A managed service is the right answer for managers who want the construction work removed. Neither is universally better; the fit depends on the manager's preference and available time.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot delivers the scheduling outputs ShiftWizard was purchased to enable, without the configuration maintenance burden. Start at [simplescheduleai.com/pilot](/pilot).
+
+<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+  <div>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">ShiftWizard configuration without ShiftWizard configuration</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI provides ShiftWizard-grade compliance and fairness logic without requiring the nurse manager to maintain the system. Free 60-day pilot for Texas CAHs.</p>
+  </div>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
 ## Frequently Asked Questions

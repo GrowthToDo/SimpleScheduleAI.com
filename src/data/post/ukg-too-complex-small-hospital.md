@@ -37,6 +37,7 @@ metadata:
 - [Aladtec (TCP Scheduling)](#aladtec-tcp-scheduling)
 - [SmartLinx](#smartlinx)
 - [SimpleScheduleAI](#simplescheduleai)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 UKG (formerly Kronos) is the most deployed workforce management system in large hospital networks. If your CAH is affiliated with a regional health system, you may have been included in an enterprise UKG contract and told the system is "already set up." In practice, what that usually means is: the system was configured for the health system's workflows, partially adapted for the CAH's context, and handed to the nurse manager to operate with minimal training.
@@ -137,9 +138,9 @@ Three scheduling tools are actually suited to Critical Access Hospital scale: Al
 
 The scheduling requirements for a CAH are not simple. They are just different from enterprise requirements:
 
-- Proactive overtime tracking before schedules publish (FLSA 8-and-80 rule for healthcare employers)
+- Proactive overtime tracking before schedules publish ([FLSA 8-and-80 rule for healthcare employers](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime))
 - Certification-unit matching to prevent uncertified assignments
-- CMS §485.635 compliant documentation for CAH survey readiness
+- [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliant documentation for CAH survey readiness
 - Callout coverage logic that applies clinical credential requirements
 - Fast implementation without IT infrastructure
 
@@ -240,6 +241,22 @@ For a side-by-side comparison of the practical alternatives, see our [UKG altern
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     UKG is not too complex because the software is poorly designed. It is too complex because the operational assumptions it makes - dedicated HRIS staff, multi-month implementations, integrated payroll and scheduling teams - do not exist at a 25-bed Critical Access Hospital. The complexity is not a feature problem. It is a scale mismatch. Small hospitals that buy UKG are not buying a hard-to-use platform. They are buying a platform built for organizations five times their size.
   </p>
+</div>
+
+## What to Do This Week
+
+1. **Total up the true UKG cost for your facility.** License fee, per-module add-ons, IT support contract, HR coordinator time on UKG maintenance, and nurse manager hours on day-to-day operation. The total is typically 2 to 3 times the headline subscription. That number is the floor a replacement must clear.
+2. **Find the UKG contract termination notice clause.** Note the auto-renewal date and the notice deadline. Most administrators discover the notice deadline is 60 to 90 days earlier than the contract end date, and missing it auto-renews for another full term.
+3. **Audit which UKG modules you are actually using and which you are paying for.** Identify the gap between paid features and used features. Most CAHs on UKG use 20 to 30 percent of the platform capacity. The other 70 percent is paid complexity with no operational return.
+4. **Score three replacement candidates by operational fit.** Setup time in days not weeks. Texas overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot lets you run the actual scheduling workflow against your roster before submitting UKG notice. Start at [simplescheduleai.com/pilot](/pilot).
+
+<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+  <div>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Right-size your scheduling platform to a 25-bed reality</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI is built for the operational scale UKG ignores: 25 beds, no IT department, nurse manager also on clinical shifts. Free 60-day pilot for Texas CAHs.</p>
+  </div>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
 ## Frequently Asked Questions

@@ -37,6 +37,7 @@ metadata:
 - [What Documentation Does CMS §485.635 Require After a Callout?](#what-documentation-does-cms-485635-require-after-a-callout)
 - [How Do You Prepare a Per-Diem Bench So You Are Not Calling an Agency?](#how-do-you-prepare-a-per-diem-bench-so-you-are-not-calling-an-agency)
 - [How Does SimpleScheduleAI Help with After-Hours Callouts?](#how-does-simplescheduleai-help-with-after-hours-callouts)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 A nurse calls in sick at 2:40 AM for a shift that starts at 6:45 AM. There is no float pool, no staffing coordinator on duty, and no agency desk that answers before business hours. The person solving this is usually the on-call charge nurse or the nurse manager, working a phone list from memory while the unit runs short. This post is the operational playbook for that exact moment, written for Critical Access Hospitals.
@@ -210,6 +211,22 @@ To see the underlying scheduling model, compare [nurse scheduling software](/nur
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     After-hours callout coverage at a Critical Access Hospital is not a scheduling problem. It is an infrastructure problem solved at 2 AM by the one tired person who happened to be awake. The hospitals that have this under control are not the ones with better callout policies. They are the ones that pre-ranked the call list during business hours and built a standing per-diem bench. The work happens upstream, not in the middle of the night.
   </p>
+</div>
+
+## What to Do This Week
+
+1. **Build your ranked call list before the next night shift starts.** Pull your nursing roster, sort by overtime status this pay period, certification match, and rotation fairness. Print or share it with the on-call charge nurse before 7 PM. The 40-minute phone tree becomes a 3-call sequence when the ranking is done in advance.
+2. **Document your callout-coverage escalation order in writing.** Charge nurse → per-diem bench → cross-credentialed daytime staff → agency. Put it on one page, post it in the break room and in the charge nurse handoff binder. Verbal escalation orders fail at 3 AM.
+3. **Recruit and brief your per-diem bench this month.** Aim for 4 to 6 cross-credentialed nurses on a fixed weekly availability cadence. Confirm their certifications match your acute-coverage needs. A standing bench is the difference between paying agency premium and covering internally.
+4. **Audit your CMS §485.635 callout-documentation gaps.** Pull the last six months of callouts. For how many do you have a complete record of who was called, who declined or accepted, what time, and the credential match? Documentation gaps surface during CMS surveys, not when the callout happens.
+5. **Request a SimpleScheduleAI pilot if you are a Texas CAH.** A free 60-day managed pilot maintains the ranked call list, the per-diem bench, and the CMS-ready callout documentation so the on-call charge nurse makes calls instead of building the list at 2 AM. Start at [simplescheduleai.com/pilot](/pilot).
+
+<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+  <div>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Stop building the call list at 2 AM</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI maintains your ranked callout shortlist, per-diem bench, and CMS-ready audit trail so coverage gets handled without the charge nurse working a phone list. Free 60-day pilot for Texas CAHs.</p>
+  </div>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
 ## Frequently Asked Questions

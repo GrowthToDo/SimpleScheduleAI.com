@@ -21,7 +21,7 @@ metadata:
 
 - Manual scheduling costs Critical Access Hospitals approximately $26,000/year in misallocated leadership time (10 hrs/week x $50/hr)
 - Last-minute callouts routed through agency staff carry 2-3x rate premiums plus an invisible orientation cost per shift
-- Version drift across spreadsheets, whiteboards, and portal PDFs creates CMS-surveyable documentation gaps under §485.635
+- Version drift across spreadsheets, whiteboards, and portal PDFs creates CMS-surveyable documentation gaps under [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
 - Reliable nurses absorb disproportionate overtime under manual scheduling, driving turnover that costs $52,350 per RN departure (NSI 2024)
 - PRN availability coordination adds 2+ hours per scheduling cycle, a hidden cost rarely tracked in scheduling budgets
 - Fairness tracking and an automated replacement list are the two highest-impact interventions for CAH scheduling operations
@@ -35,6 +35,7 @@ metadata:
 - [What Does PRN Coordination Actually Cost?](#what-does-prn-coordination-actually-cost)
 - [Does Buying Scheduling Software Fix These Problems?](#does-buying-scheduling-software-fix-these-problems)
 - [How Does SimpleScheduleAI Address These Friction Points?](#how-does-simplescheduleai-address-these-friction-points)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 ## What Is the Real Cost of Manual Scheduling at a Critical Access Hospital?
@@ -297,6 +298,22 @@ Public quotes referenced in this guide were gathered from Capterra and AllNurses
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     The $26,000 scheduling burden is not a software-licensing problem. It is a labor-allocation problem. CAH nurse managers spend roughly a fifth of their week on tasks that do not require clinical judgment - spreadsheet maintenance, phone-tree callouts, overtime reconciliation, paper documentation. The fix is not a better tool to do the same work faster. The fix is removing the work from the wrong person. Every hour returned to clinical leadership is an hour the hospital does not pay twice.
   </p>
+</div>
+
+## What to Do This Week
+
+1. **Time-track every scheduling task for one week.** Schedule building, callout phone tree, overtime checking, time-off processing, credential updates, version reconciliation across spreadsheets and whiteboards. Most CAH nurse managers underestimate the total by 30 to 40 percent because interruptions are not logged.
+2. **Calculate your shadow administrative salary.** Multiply your weekly scheduling hours by your loaded hourly rate, then by 50 weeks. For most CAHs this lands at $22,000 to $30,000 per year. Use the [SimpleScheduleAI ROI calculator](/roi) to model what reducing it returns in dollars and clinical hours.
+3. **Audit which scheduling tasks actually need clinical judgment.** Schedule construction, version control, overtime arithmetic, and callout documentation are work products. Clinical judgment is who covers a complex patient assignment or who is precepting this week. Most of the 10 weekly hours is the former, not the latter.
+4. **Identify your two highest-impact friction points.** From the five we outlined (data entry, callout coordination, PRN reconciliation, conflict resolution, compliance documentation), pick the two that consume the most weekly time. Those are the highest-ROI targets for the next 90 days.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot removes the friction points without adding software for your team to learn. Start at [simplescheduleai.com/pilot](/pilot).
+
+<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+  <div>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Recover the $26,000 hidden in your schedule</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI removes the scheduling work from the wrong person, returning 8 to 10 hours per week to clinical leadership. Free 60-day pilot for Texas CAHs.</p>
+  </div>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
 ## Frequently Asked Questions

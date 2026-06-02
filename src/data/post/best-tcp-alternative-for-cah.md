@@ -41,6 +41,7 @@ metadata:
 - [NurseGrid](#nursegrid)
 - [SimpleScheduleAI](#simplescheduleai)
 - [What Are the Four Questions to Ask Any TCP Alternative?](#what-are-the-four-questions-to-ask-any-tcp-alternative)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 TCP TimeClock+ is a time and attendance platform that includes basic employee scheduling. For [critical access hospital scheduling](/critical-access-hospital-scheduling), it is often chosen by facilities that want a single platform for time tracking, payroll, and scheduling rather than managing separate systems. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). The problems arise when the scheduling side of the platform cannot keep pace with a nurse manager who also carries clinical responsibilities. For the full range of [nurse scheduling software](/nurse-scheduling-software) options at the CAH scale, see our dedicated guide.
@@ -305,6 +306,22 @@ Public review counts, ratings, and quotes referenced in this guide were gathered
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     The best TCP alternative for a 25-bed CAH is the one that matches the operational reality, not the one with the most checkboxes. TCP TimeClock+ is a competent unified-platform tool for hospitals with the staff to run unified platforms. For most Critical Access Hospitals, scheduling overhead is the problem, and the platform that removes it best is not the one with more modules. It is the one that does not need a scheduling administrator.
   </p>
+</div>
+
+## What to Do This Week
+
+1. **Clarify what TCP problem you are actually trying to solve.** Is it cost, configuration complexity, lack of CAH-specific compliance, or the absence of a managed delivery model? The right alternative depends on the actual gap, not on switching for the sake of switching.
+2. **Request a full data export from your current TCP product.** Roster with credentials, 12 months of schedule history, callout records, overtime calculations, and any custom rule configurations. The export format requires cleaning regardless of which alternative you choose.
+3. **Score three alternatives against your specific TCP gap.** Setup time in days not weeks. Texas overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
+4. **Calculate total cost of ownership, not just license fee.** Subscription plus implementation labor plus ongoing maintenance labor plus the nurse manager's weekly scheduling hours at her loaded rate. Most TCP buyers underestimate the labor side by 2 to 3 times. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot delivers a compliant schedule each cycle without configuration, IT setup, or TCP-style implementation overhead. Start at [simplescheduleai.com/pilot](/pilot).
+
+<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+  <div>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Switching off TCP at CAH scale</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers the scheduling outputs TCP buyers needed without the configuration burden. Free 60-day pilot. No IT integration. No commitment.</p>
+  </div>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
 ## Frequently Asked Questions

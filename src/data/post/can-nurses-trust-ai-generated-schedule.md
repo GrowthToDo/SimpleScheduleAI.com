@@ -36,6 +36,7 @@ metadata:
 - [How Do You Audit an AI-Generated Schedule Before Posting It?](#how-do-you-audit-an-ai-generated-schedule-before-posting-it)
 - [How Do You Address Staff Skepticism About AI Scheduling?](#how-do-you-address-staff-skepticism-about-ai-scheduling)
 - [How Does SimpleScheduleAI Handle Transparency and Manager Control?](#how-does-simplescheduleai-handle-transparency-and-manager-control)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Yes, nurses can trust an AI-generated schedule when it is auditable and a nurse manager approves it. [AI nurse scheduling](/ai-nurse-scheduling) optimizes measurable constraints: coverage, overtime limits, credential matching, and fair shift distribution. It cannot weigh personal circumstances or unit culture, so trust comes from verifying the draft and keeping human sign-off, not from the algorithm being right on its own.
@@ -181,6 +182,22 @@ For the broader context on [critical access hospital scheduling](/critical-acces
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     Trust in AI-generated schedules does not come from the algorithm's accuracy. It comes from auditability and human override. When nurses can see why each assignment was made, distribute appeals through the manager, and know that a human signed off, adoption follows. When the schedule arrives as a black box, it gets quietly reworked by hand. The trust pattern is structural: show the work, keep the override, and the math becomes acceptable.
   </p>
+</div>
+
+## What to Do This Week
+
+1. **Run an audit on your last AI-generated schedule.** Did anyone exceed overtime thresholds without flagging? Did the weekend distribution match the documented fairness rule? Did credential-restricted shifts go to qualified staff? Three yes-answers means the system is trustworthy. One no-answer means the rules need recalibration before nurses can rely on the output.
+2. **Ask three nurses what they want to see before trusting an AI schedule.** Likely answers: who decides exceptions, how appeals work, and whether the manager actually reviews each cycle. Document the answers and operationalize them. Trust follows from process clarity, not from algorithm accuracy.
+3. **Make the human-override workflow visible on every published schedule.** A footer line on each cycle: "Reviewed and approved by [manager name] on [date]. To request a change, contact [process]." When nurses see the human signature, the algorithm becomes a tool the manager uses, not a decision made elsewhere.
+4. **Track the four trust indicators monthly.** Coverage gaps surfaced, overtime breaches caught before payroll, fairness distribution within target ranges, and override requests resolved within 48 hours. Trends matter more than any single cycle.
+5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot delivers AI-generated schedules with the auditability, fairness tracking, and human-override workflow already wired in. Start at [simplescheduleai.com/pilot](/pilot).
+
+<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+  <div>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Build trust before the first AI schedule lands</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI pairs constraint-aware AI with full audit trail and manager approval at every step. Free 60-day pilot for Texas CAHs.</p>
+  </div>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
 ## Frequently Asked Questions

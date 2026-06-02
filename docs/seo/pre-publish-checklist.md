@@ -44,7 +44,7 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] **Excerpt re-read AFTER all body edits** — same rule: no "lacks X" or "no X" in excerpt if body uses "not documented" framing
 - [ ] No TL;DR section present — Key Takeaways replaces TL;DR (TL;DR is an AI-tell pattern)
 - [ ] No em-dashes (`—`) anywhere — prose, excerpts, table cells, TOC, blockquotes, CTA cards
-- [ ] No AI-tone phrases: "delve into", "dive into", "it's worth noting", "in conclusion", "robust", "leverage", "game-changing", "seamless", "comprehensive solution", "transformative", "at the end of the day", "unlock", "harness", "navigating", "streamline"
+- [ ] No AI-tone phrases in our voice: "delve into", "dive into", "it's worth noting", "in conclusion", "robust", "leverage", "game-changing", "seamless", "comprehensive solution", "transformative", "at the end of the day", "unlock", "harness", "navigating", "streamline". **Exception:** verbatim Capterra/G2 reviewer quotes are protected even if the reviewer used one of these words. Our paraphrasing of a reviewer must still avoid the phrase.
 - [ ] TOC anchor text exactly matches H2/H3 heading text, including trailing `?` on question headings
 - [ ] Every H2 has a 40–70 word direct answer capsule immediately below it — no preamble before capsule
 - [ ] Every H2 expansion section is 120–180 words (shorter = AI citation penalty)
