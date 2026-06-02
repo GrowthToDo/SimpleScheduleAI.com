@@ -183,7 +183,6 @@ At a 25-bed hospital, traditional Excel scheduling costs the manager 8 to 12 hou
         <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"><span class="w-5 h-5 rounded bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 font-bold flex items-center justify-center shrink-0">5</span><span>Export PDF + post to unit</span></li>
       </ol>
     </div>
-
     <div class="border border-emerald-300 dark:border-emerald-700 rounded-lg p-4 bg-white dark:bg-slate-900">
       <div class="flex items-center justify-between mb-3">
         <h4 class="text-sm font-semibold text-slate-900 dark:text-slate-100 m-0">AI Managed Service</h4>
@@ -198,7 +197,6 @@ At a 25-bed hospital, traditional Excel scheduling costs the manager 8 to 12 hou
         <li class="text-center text-slate-500 text-xs leading-none mt-3 pt-3 border-t border-slate-200 dark:border-slate-700 italic">Callouts: ranked shortlist surfaces in seconds</li>
       </ol>
     </div>
-
   </div>
   <p class="text-sm text-slate-600 dark:text-slate-400 italic mt-4">Traditional vs AI-assisted nurse scheduling workflow at a 25-bed CAH. Both end with a posted schedule. The inputs and the manager's time change; the clinical judgment does not.</p>
 </div>

@@ -179,7 +179,6 @@ period? If yes, revise before posting.
 
 <div class="not-prose my-10">
   <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">Two FLSA Overtime Threshold Options for 12-Hour Shift Schedules</h3>
-
   <div class="space-y-6">
     <div>
       <div class="flex flex-wrap justify-between gap-x-3 mb-2 text-sm">
