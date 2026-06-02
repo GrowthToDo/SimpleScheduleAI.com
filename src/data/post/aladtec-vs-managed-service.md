@@ -23,6 +23,10 @@ metadata:
   description: 'Aladtec vs. managed nurse scheduling for Critical Access Hospitals. Compare implementation speed, callout handling, CMS compliance, and weekly time burden.'
 ---
 
+The vendor demo shows you a scheduling platform with 12 features. Your nurse manager asks one question: "How many hours a week am I still spending on scheduling after this is installed?" Aladtec answers that question one way. A managed scheduling service answers it differently.
+
+This guide compares the two models on the operational dimensions that decide the answer: implementation speed, weekly time burden, callout handling, CMS documentation, configuration maintenance, and total cost of ownership at a 25-bed CAH.
+
 ## Key Takeaways
 
 - Aladtec is a scheduling software platform. The nurse manager still builds every schedule, checks every callout for overtime risk, and maintains all configuration as staff changes. The software makes those tasks faster, but the tasks do not go away.

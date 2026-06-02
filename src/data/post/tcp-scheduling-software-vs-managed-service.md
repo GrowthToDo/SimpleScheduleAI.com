@@ -20,6 +20,10 @@ metadata:
   description: 'TCP TimeClock+ vs. managed nurse scheduling for Critical Access Hospitals. Compare features, weekly burden, callout handling, and what each model requires from your nurse manager.'
 ---
 
+TCP TimeClock+ promises unified time tracking and scheduling on one platform. A managed scheduling service promises that your nurse manager stops being the scheduling administrator. Both are real products. They answer different questions, and at a 25-bed Critical Access Hospital where the nurse manager also covers clinical shifts, the second question usually decides the purchase.
+
+This guide compares the two on the operational dimensions that matter at CAH scale: who operates the platform, what the weekly time burden looks like, and how each model handles CMS §485.635 documentation and callout coverage.
+
 ## Key Takeaways
 
 - TCP TimeClock+ is a time and attendance platform with scheduling features built in. A managed scheduling service focuses on scheduling only. These are different operating models, not just different tools.

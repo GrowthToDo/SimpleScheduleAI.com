@@ -20,6 +20,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/best-nurse-scheduling-software-2026'
 ---
 
+Your CFO wants the platform with the longest feature list. Your nurse manager wants something she can actually run while covering 2-3 clinical shifts a week. At a 25-bed Critical Access Hospital, those two answers are different platforms entirely, and most buying processes pick the wrong one.
+
+This guide compares 8 platforms across the operational variables that actually decide adoption: hospital size, IT capacity, and what your nurse manager can sustain after week 6, not week 1.
+
 ## Key Takeaways
 
 - Enterprise platforms (UKG, API Healthcare) are built for 200+ bed systems with dedicated HR and IT teams. Small hospitals that buy them end up paying for features they cannot use.

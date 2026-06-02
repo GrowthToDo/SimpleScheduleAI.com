@@ -22,6 +22,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/ai-nurse-scheduling-vs-traditional'
 ---
 
+Your scheduling vendor's marketing says "AI-powered." Your nurse manager's actual workflow says "still 6 hours a week on the same spreadsheet." Both can be technically true at the same time, because what "AI scheduling" actually changes in a nurse manager's workflow depends entirely on what the AI is allowed to do and who reviews the output.
+
+This guide separates the genuine workflow changes from the marketing claims, written for a 25-bed Critical Access Hospital where the nurse manager is also covering clinical shifts.
+
 ## Key Takeaways
 
 - Traditional nurse scheduling (Excel, paper grids, manual rule-checking) requires the nurse manager to hold every scheduling rule in her head and apply it by hand. At a typical 25-bed hospital this consumes 8 to 12 hours per week.

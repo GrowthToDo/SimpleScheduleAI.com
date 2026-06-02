@@ -170,6 +170,7 @@ _Apply on every post. The audience is a Texas CAH Nurse Manager / DON / Administ
 - [ ] **Founder credibility surfaces at least once in body OR bio**: "Deputy General Manager of Operations at Apollo Hospitals" / "MBA from IIM Trichy" / "30+ nurse manager interviews before writing a line of code".
 - [ ] **"Our Take" or "Founder note" callout box** present in BOFU posts — 1 per post, after a major analysis section. 50-100 word editorial opinion clearly demarcated. Builds authority, signals position. Optional on MOFU/TOFU.
 - [ ] **No second-person sales tone in the body** ("you'll love...", "you'll never go back to..."). First-person plural ("we built this for...") or third-person operational ("the nurse manager...") only. Direct second-person is fine in the opener and CTAs only.
+- [ ] **Pre-Key-Takeaways narrative opener present on BOFU/comparison posts** (sellontube pattern). 2 short paragraphs between the frontmatter `---` close and the `## Key Takeaways` heading. Paragraph 1: contradiction-hook in 2-3 sentences ("Your X says Y. Your nurse manager actually deals with Z."). Paragraph 2: what the guide covers, framed as resolution. Skip on glossary/definition posts where direct definition is more useful. Pattern verified in commit d1b864c+follow-ups.
 
 ## After Publishing
 

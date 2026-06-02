@@ -22,6 +22,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/managed-service-vs-scheduling-software'
 ---
 
+Hospital administrators default to "which scheduling software should we buy?" - the familiar question. The more useful question is whether to use scheduling software at all, or to hand the scheduling function to a vendor entirely. For a Critical Access Hospital where the nurse manager is also a clinician, those two questions lead to different products, different costs, and different operational outcomes.
+
+This guide makes the labor-model distinction concrete: who builds the schedule, who carries the configuration burden, and what each model actually costs at a 25-bed CAH.
+
 ## Key Takeaways
 
 - Based on pilot data, scheduling software typically reduces weekly scheduling time by 30-50%: the nurse manager still builds every schedule. A managed service reduces it by 80-90%, to under 2 hours per week for review and approval.
