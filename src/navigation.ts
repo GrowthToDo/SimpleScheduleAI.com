@@ -28,7 +28,7 @@ export const headerData = {
       ],
     },
   ],
-  actions: [{ text: 'Book a Call', href: 'https://cal.com/gautham-8bdvdx/30min' }],
+  actions: [{ text: 'Book a call with our team', href: 'https://cal.com/gautham-8bdvdx/30min' }],
 };
 
 export const footerData = {

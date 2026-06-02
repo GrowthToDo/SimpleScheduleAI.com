@@ -31,6 +31,11 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] Author byline with real name, credentials, and LinkedIn link (NOT "SimpleScheduleAI Team")
 - [ ] Internal link to pillar page (`/how-it-works` or `/critical-access-hospital-scheduling`) with keyword anchor text
 - [ ] CTA at end linking to `/pilot` or `/how-it-works`
+- [ ] **Author bio uses canonical italic-linked format** at end of post: `_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._` followed on next line by `[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)`. Never use the older `**Written by Pradeep Pandey**` block format.
+- [ ] **"What to Do This Week" CTA section present** (5 numbered concrete actions) before the FAQ section. Required on BOFU, comparison, and operational guide posts. Optional on glossary/definition posts.
+- [ ] **CTA copy uses standardized 2-CTA pattern**: primary = `Apply for a Pilot Spot` → `/pilot`, secondary = `Book a call with our team` → canonical Calendly URL. Never use ad-hoc variants like "Claim a Pilot Spot", "View the Pilot", "Get a Free Schedule Review", or "Book a call" (the "with our team" framing pre-explains the booking page and prevents name-mismatch confusion).
+- [ ] **Founder role consistent**: post bio says "co-founder" only if `/about` page reflects both founders or the cal.com booking team is framed as "our team". Otherwise use "founder" until co-founder is publicly named on the site.
+- [ ] **"Texas" geographic framing**: posts that describe the SimpleScheduleAI service include the phrase "Texas Critical Access Hospitals" at least once in the body. Posts that are pure operational guides (not service descriptions) can omit Texas if topic-agnostic.
 
 ## Structure and Format
 
@@ -50,6 +55,9 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] Minimum visual elements: 3 for BOFU/how-to | 2 for vs-service MOFU | 1 for MOFU/TOFU | 0 for Glossary
 - [ ] Author bio present at end of every post (not optional): `_Pradeep Pandey is the founder of SimpleScheduleAI..._`
 - [ ] H2 headings never use "CAH" abbreviation — always "Critical Access Hospital" in headings
+- [ ] **TOC uses bulleted list format** (`-` markers), never numbered (`1.`, `2.`) markers. Numbered TOC creates ordering implication and breaks visual consistency with other posts.
+- [ ] **Numbered Sources section present at end of BOFU/comparison posts** — sits above the author bio, below FAQ. Each inline stat carries a numbered footnote (`[1]`, `[2]`, etc.) referenced in the Sources list. Format: `[1] Author/Organization, "Study Title", Date. [Link]`. Replaces or supplements the existing "A Note on Sources" prose paragraph. Optional on glossary/definition posts.
+- [ ] **Byline includes reading time and role** — auto-rendered by layout in format: `By Pradeep Pandey · Co-Founder · X min read · Updated [Month] [Year]`. Reading time = word count / 220 wpm rounded to nearest minute.
 
 ## Images
 
@@ -82,6 +90,7 @@ _Compliance-adjacent capability claims attributed to SimpleScheduleAI must match
 
 - [ ] **No FLSA 8-and-80 claim as a SimpleScheduleAI feature.** The scheduler tracks generic FLSA overtime thresholds; the 8-and-80 (80-hour/14-day) calculation method is not yet shipped. Use "FLSA overtime thresholds" or "FLSA overtime threshold tracking" in SSAI-attributed copy. Do NOT write "FLSA 8-and-80 rule built in / applied by default / handled automatically" attributed to SimpleScheduleAI. Applies to advantage bullets, comparison-table SSAI cells, "How SSAI works" sections, CTAs, FAQ answers about SSAI, and SVG diagram labels.
 - [ ] **Generic 8-and-80 mentions stay untouched.** Educational descriptions of the rule (with DOL source), "ask the vendor whether they support 8-and-80" evaluation questions, competitor-confirm / competitor-gap lines, and the dedicated educational posts on FLSA/Texas overtime are fine. The rule only fires when the sentence attributes the capability to SimpleScheduleAI. When 8-and-80 ships, this rule reverses; see commit eeefa9f for the softening pattern to reverse.
+- [ ] **Pricing line is consistent across all posts** — always write `**Cost:** Pricing not listed on website. Contact for a quote.` for the SimpleScheduleAI row/profile (or, once a pricing band is decided, the canonical pricing line). Never invent ad-hoc phrasings like "Contact for current rates", "uses flat-fee pricing", or "starts at $X" inline. If a pricing band is published, all posts use the same band wording verbatim.
 
 ## Comparison Tables (when comparing competitor products)
 
@@ -147,6 +156,20 @@ _These apply whenever the filename matches the pattern `[tool]-alternatives.md`.
 - [ ] Build passes locally: `npm run build` completes without errors
 - [ ] **AEO citability gate (claude-seo v2+): run `/seo geo <preview or staging URL>` after build, before push.** Back-edit any passages flagged under the citability threshold. Workflow: [docs/seo/aeo-publish-gate.md](./aeo-publish-gate.md). Most-likely-flagged section: the "How SimpleScheduleAI helps" block — least-citable because most-promotional.
 
+## ICP Voice and Trust Signals
+
+_Apply on every post. The audience is a Texas CAH Nurse Manager / DON / Administrator who is time-pressed, vendor-skeptical, and often reading at 8 PM on a phone. Soft trust rules, not hard publish gates, but every new post should pass at least 6 of 9._
+
+- [ ] **First 100 words include a specific scenario or number**, not category framing. Example: `A nurse calls out at 2:40 AM for a shift that starts at 6:45 AM...` > `Nurse scheduling is the process of...`
+- [ ] **Contradiction-hook opener when applicable**: state two opposing realities the ICP lives, then promise the resolution. Pattern: `Your [X] says [A]. Your [Y] says [B]. Here is the [gap/answer/playbook].` Skip on glossary/definition posts where direct definition is more useful.
+- [ ] **No vendor-speak**: avoid "platform", "solution", "transformation", "empower", "robust", "seamless". Use plain operational language ("tool", "service", "process change", "let the manager").
+- [ ] **"Not right for" disclaimer present somewhere in the post** — builds trust by acknowledging what the service doesn't do. Required on every BOFU/comparison post. Optional on TOFU.
+- [ ] **Every operational claim either has a hyperlinked primary source OR is explicitly framed as evidence-bound**: "from our pilot observations" / "based on 30+ nurse manager interviews". Never let a number stand without a source or evidence frame.
+- [ ] **Mobile scan check**: first 3 H2 sections each have a single 1-sentence quick-answer immediately under the H2, before the longer explanation. Lets time-pressed reader extract the answer in 10 seconds.
+- [ ] **Founder credibility surfaces at least once in body OR bio**: "Deputy General Manager of Operations at Apollo Hospitals" / "MBA from IIM Trichy" / "30+ nurse manager interviews before writing a line of code".
+- [ ] **"Our Take" or "Founder note" callout box** present in BOFU posts — 1 per post, after a major analysis section. 50-100 word editorial opinion clearly demarcated. Builds authority, signals position. Optional on MOFU/TOFU.
+- [ ] **No second-person sales tone in the body** ("you'll love...", "you'll never go back to..."). First-person plural ("we built this for...") or third-person operational ("the nurse manager...") only. Direct second-person is fine in the opener and CTAs only.
+
 ## After Publishing
 
 - [ ] Submit URL to Google Search Console → URL Inspection → Request Indexing
@@ -156,3 +179,5 @@ _These apply whenever the filename matches the pattern `[tool]-alternatives.md`.
 - [ ] Post excerpt + link on LinkedIn company page
 - [ ] Update AI Share of Voice tracking if this targets a monitored query
 - [ ] **Drift baseline (new pillars or guides only): run `/seo drift baseline <live URL>`** so weekly `/seo drift compare` will surface silent regressions (meta, canonical, schema, title). The Monday drift-compare run pairs with the lychee link-check CI scheduled on the same cadence.
+- [ ] **Cross-post link symmetry check**: confirm the new post is linked from at least 2 sibling posts of similar tier (so it doesn't become an orphan). Update the 2 sibling posts to reference the new one in the body or in their "Related guides" list.
+- [ ] **Internal tool surfacing**: if the post discusses pricing math, ROI, or weekly time cost, link to `/roi` from the relevant body section. Do not link `/simulator` while it is offline.
