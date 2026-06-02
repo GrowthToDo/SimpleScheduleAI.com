@@ -191,7 +191,6 @@ period? If yes, revise before posting.
       </div>
       <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Three 12-hour shifts in week one = 36 hr (under cap). Four 12-hour shifts = 48 hr (8 hr OT). Cap resets at the end of each workweek.</p>
     </div>
-
     <div>
       <div class="flex flex-wrap justify-between gap-x-3 mb-2 text-sm">
         <span class="font-medium text-slate-900 dark:text-slate-100">Option B: 8-and-80 Healthcare Alternative</span>
@@ -202,9 +201,7 @@ period? If yes, revise before posting.
       </div>
       <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Three 12-hour shifts/week = 72 hr/14 days (under cap). Each shift over 8 hr/day = OT for that day. Requires prior <a href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime" rel="noopener" target="_blank">written employee agreement</a> to be legally valid.</p>
     </div>
-
   </div>
-
   <p class="text-sm text-slate-600 dark:text-slate-400 italic mt-5">Standard FLSA 40-hour-per-week threshold vs the FLSA 8-and-80 healthcare alternative. The 8-and-80 rule requires a prior written employee agreement to be legally valid. Choose one or the other for your nurse roster - never mix them within the same pay period.</p>
 </div>
 
