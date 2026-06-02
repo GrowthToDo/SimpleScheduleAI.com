@@ -163,6 +163,46 @@ Start with the time number, because it is the easiest to defend in a budget conv
 
 At a 25-bed hospital, traditional Excel scheduling costs the manager 8 to 12 hours a week with manual, error-prone overtime tracking. AI scheduling software cuts that to 4 to 6 hours but still requires her to operate the tool. An AI managed service reduces it to 1 to 2 hours of review and approval, with overtime and credential enforcement handled automatically in every cycle. These figures, and the loaded-rate cost calculation below, are operational estimates from SimpleScheduleAI's work with Critical Access Hospitals, not vendor benchmarks or a survey dataset.
 
+<div class="not-prose my-10">
+  <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">Workflow Comparison: Same Posted Schedule, Different Path</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="border border-slate-300 dark:border-slate-700 rounded-lg p-4 bg-white dark:bg-slate-900">
+      <div class="flex items-center justify-between mb-3">
+        <h4 class="text-sm font-semibold text-slate-900 dark:text-slate-100 m-0">Traditional (Excel)</h4>
+        <span class="text-xs font-medium text-orange-700 dark:text-orange-300 bg-orange-100 dark:bg-orange-900/40 px-2 py-0.5 rounded">8-12 hr/week</span>
+      </div>
+      <ol class="m-0 p-0 list-none space-y-2">
+        <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"><span class="w-5 h-5 rounded bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 font-bold flex items-center justify-center shrink-0">1</span><span>Pull last cycle's schedule into Excel</span></li>
+        <li class="text-center text-slate-400 dark:text-slate-500 text-base leading-none">↓</li>
+        <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"><span class="w-5 h-5 rounded bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 font-bold flex items-center justify-center shrink-0">2</span><span>Manual roster + availability edits</span></li>
+        <li class="text-center text-slate-400 dark:text-slate-500 text-base leading-none">↓</li>
+        <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"><span class="w-5 h-5 rounded bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 font-bold flex items-center justify-center shrink-0">3</span><span>Overtime math by hand, cell by cell</span></li>
+        <li class="text-center text-slate-400 dark:text-slate-500 text-base leading-none">↓</li>
+        <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"><span class="w-5 h-5 rounded bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 font-bold flex items-center justify-center shrink-0">4</span><span>Phone-tree callout coverage (each event)</span></li>
+        <li class="text-center text-slate-400 dark:text-slate-500 text-base leading-none">↓</li>
+        <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"><span class="w-5 h-5 rounded bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 font-bold flex items-center justify-center shrink-0">5</span><span>Export PDF + post to unit</span></li>
+      </ol>
+    </div>
+
+    <div class="border border-emerald-300 dark:border-emerald-700 rounded-lg p-4 bg-white dark:bg-slate-900">
+      <div class="flex items-center justify-between mb-3">
+        <h4 class="text-sm font-semibold text-slate-900 dark:text-slate-100 m-0">AI Managed Service</h4>
+        <span class="text-xs font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/40 px-2 py-0.5 rounded">1-2 hr/week</span>
+      </div>
+      <ol class="m-0 p-0 list-none space-y-2">
+        <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"><span class="w-5 h-5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 font-bold flex items-center justify-center shrink-0">1</span><span>Upload roster (Excel, one-time setup)</span></li>
+        <li class="text-center text-slate-400 dark:text-slate-500 text-base leading-none">↓</li>
+        <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"><span class="w-5 h-5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 font-bold flex items-center justify-center shrink-0">2</span><span>AI generates 3 drafts (balanced / fair / cost)</span></li>
+        <li class="text-center text-slate-400 dark:text-slate-500 text-base leading-none">↓</li>
+        <li class="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300"><span class="w-5 h-5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 font-bold flex items-center justify-center shrink-0">3</span><span>Manager reviews + approves + posts</span></li>
+        <li class="text-center text-slate-500 text-xs leading-none mt-3 pt-3 border-t border-slate-200 dark:border-slate-700 italic">Callouts: ranked shortlist surfaces in seconds</li>
+      </ol>
+    </div>
+
+  </div>
+  <p class="text-sm text-slate-600 dark:text-slate-400 italic mt-4">Traditional vs AI-assisted nurse scheduling workflow at a 25-bed CAH. Both end with a posted schedule. The inputs and the manager's time change; the clinical judgment does not.</p>
+</div>
+
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>

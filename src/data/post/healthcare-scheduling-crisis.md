@@ -92,6 +92,28 @@ For a deeper look at the specific compliance and coverage requirements driving t
   <p class="text-sm font-bold text-slate-800 dark:text-slate-200 pt-2 border-t border-slate-200 dark:border-slate-700">Total: ~10 hrs/week × $50/hr × 52 weeks = $26,000/year</p>
 </div>
 
+<div class="not-prose my-10">
+  <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">License Cost vs Real Cost: What Buyers Anchor On Versus What They Pay</p>
+  <div class="flex items-end gap-6 h-64 border-b border-slate-300 dark:border-slate-700 pb-1">
+    <div class="flex flex-col items-center" style="min-width: 90px;">
+      <div class="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">$1,500</div>
+      <div class="bg-blue-600 dark:bg-blue-500 rounded-t-md w-full" style="height: 14px;" aria-label="Annual SaaS license cost: $1,500"></div>
+      <div class="mt-2 text-xs text-center text-slate-600 dark:text-slate-400 leading-tight">SaaS license<br/>(per-nurse/month avg)</div>
+    </div>
+    <div class="flex flex-col items-center" style="min-width: 90px;">
+      <div class="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">$26,000</div>
+      <div class="bg-orange-500 dark:bg-orange-600 rounded-t-md w-full" style="height: 240px;" aria-label="Annual hidden cost in nurse manager time: $26,000"></div>
+      <div class="mt-2 text-xs text-center text-slate-600 dark:text-slate-400 leading-tight">Nurse manager<br/>time on scheduling</div>
+    </div>
+    <div class="flex flex-col items-center" style="min-width: 90px;">
+      <div class="text-xs font-semibold text-red-700 dark:text-red-400 mb-1">$24,500</div>
+      <div class="border-2 border-dashed border-red-400 dark:border-red-500 rounded-t-md w-full bg-red-50/40 dark:bg-red-900/10" style="height: 226px;" aria-label="Hidden cost gap: $24,500 not visible to the buyer"></div>
+      <div class="mt-2 text-xs text-center text-red-700 dark:text-red-400 leading-tight font-medium">Hidden gap<br/>(invisible to buyer)</div>
+    </div>
+  </div>
+  <p class="text-sm text-slate-600 dark:text-slate-400 italic mt-4">The license-cost number most CAH buyers anchor on ($1,500/yr SaaS license at $2-8 per nurse per month) compared to the actual hidden cost of manual scheduling at a 25-bed CAH ($26,000/yr in nurse-manager time). The 17× gap is the buying decision the prose math hides.</p>
+</div>
+
 > "I spend more time fighting with spreadsheets than I do with my actual nursing
 > team. It's exhausting."
 >

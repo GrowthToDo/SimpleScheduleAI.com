@@ -175,6 +175,38 @@ does any full-time nurse have more than 2× the weekend shifts of the least-load
 full-time nurse? Does any nurse have more than 2 consecutive night blocks in the same
 period? If yes, revise before posting.
 
+<div class="not-prose my-10">
+  <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">Two FLSA Overtime Threshold Options for 12-Hour Shift Schedules</h3>
+
+  <div class="space-y-6">
+    <div>
+      <div class="flex flex-wrap justify-between gap-x-3 mb-2 text-sm">
+        <span class="font-medium text-slate-900 dark:text-slate-100">Option A: Standard FLSA (40 hr/week)</span>
+        <span class="text-slate-600 dark:text-slate-400">Default rule for most workplaces</span>
+      </div>
+      <div class="flex gap-0.5 mb-2" role="img" aria-label="14-day timeline split into two 7-day weeks at standard FLSA 40 hour threshold">
+        <div class="bg-blue-100 dark:bg-blue-900/40 text-xs text-center py-2 text-slate-700 dark:text-slate-300 flex-1 border-r-4 border-red-500 dark:border-red-400 font-medium">Week 1: 40 hr cap (OT after)</div>
+        <div class="bg-blue-100 dark:bg-blue-900/40 text-xs text-center py-2 text-slate-700 dark:text-slate-300 flex-1 font-medium">Week 2: 40 hr cap (OT after)</div>
+      </div>
+      <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Three 12-hour shifts in week one = 36 hr (under cap). Four 12-hour shifts = 48 hr (8 hr OT). Cap resets at the end of each workweek.</p>
+    </div>
+
+    <div>
+      <div class="flex flex-wrap justify-between gap-x-3 mb-2 text-sm">
+        <span class="font-medium text-slate-900 dark:text-slate-100">Option B: 8-and-80 Healthcare Alternative</span>
+        <span class="text-slate-600 dark:text-slate-400">Hospital opt-in (prior written agreement)</span>
+      </div>
+      <div class="flex mb-2" role="img" aria-label="14-day timeline showing 8-and-80 FLSA alternative: 8 hours per day OR 80 hours per 14-day period">
+        <div class="bg-emerald-100 dark:bg-emerald-900/40 text-xs text-center py-2 text-slate-700 dark:text-slate-300 w-full font-medium">14-day period: 80 hr cap (and 8 hr/day cap before OT)</div>
+      </div>
+      <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Three 12-hour shifts/week = 72 hr/14 days (under cap). Each shift over 8 hr/day = OT for that day. Requires prior <a href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime" rel="noopener" target="_blank">written employee agreement</a> to be legally valid.</p>
+    </div>
+
+  </div>
+
+  <p class="text-sm text-slate-600 dark:text-slate-400 italic mt-5">Standard FLSA 40-hour-per-week threshold vs the FLSA 8-and-80 healthcare alternative. The 8-and-80 rule requires a prior written employee agreement to be legally valid. Choose one or the other for your nurse roster - never mix them within the same pay period.</p>
+</div>
+
 ## How is SimpleScheduleAI's 12-hour scheduling different?
 
 SimpleScheduleAI is a managed scheduling service. We build 12-hour shift schedules
