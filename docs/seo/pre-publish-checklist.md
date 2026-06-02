@@ -51,6 +51,7 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] One stat or data point per 150–200 words of body text
 - [ ] Word count matches post type: BOFU 3,000–5,000 | vs-service MOFU 1,500–2,500 | MOFU 1,500–2,500 | TOFU narrative 1,000–1,500 | Glossary 600–1,000
 - [ ] No inline `<svg>` in `.md` files — all visuals are Tailwind `<div>` bar charts or `<table>` with `dark:` variants
+- [ ] **No blank lines inside raw HTML blocks in `.md` files.** Astro's markdown parser exits HTML mode on encountering a blank line; subsequent `<div>` tags are then escaped to `&lt;div` and rendered as visible text on the live site. This bit us once in `ai-nurse-scheduling-vs-traditional.md` (commit 016f7ba). Verify with `grep "&lt;div" dist/blog/<slug>/index.html` post-build — zero matches required before publish.
 - [ ] **Every data visualization (bar chart, ranked list with labels like "Most common", frequency table) cites a primary source** — if the frequency/ranking data was not derived from a named survey, research dataset, or cited reviewer analysis, the visual must be removed and replaced with sourced text. "Inferred from product review themes" is not a source.
 - [ ] Minimum visual elements: 3 for BOFU/how-to | 2 for vs-service MOFU | 1 for MOFU/TOFU | 0 for Glossary
 - [ ] Author bio present at end of every post (not optional): `_Pradeep Pandey is the founder of SimpleScheduleAI..._`
