@@ -318,47 +318,60 @@ const faqSchema = {
           Where 8 to 12 Nurse Manager Hours Per Week Actually Go
         </h3>
 
-        <div class="space-y-5">
+        <div class="space-y-6">
           <div>
-            <div class="flex justify-between mb-1.5 text-sm">
+            <div class="flex flex-wrap justify-between gap-x-3 mb-1.5 text-sm">
               <span class="font-medium text-slate-900 dark:text-slate-100">Manual scheduling cycle</span>
               <span class="text-slate-600 dark:text-slate-400">8 to 12 hours/week</span>
             </div>
             <div
-              class="flex h-10 rounded-md overflow-hidden border border-slate-300 dark:border-slate-700 text-white text-xs font-medium"
+              class="flex h-8 rounded-md overflow-hidden border border-slate-300 dark:border-slate-700"
+              role="img"
+              aria-label="Manual scheduling time breakdown: 50% Build, 22% Callouts, 14% Overtime tracking, 14% Fixes"
             >
-              <div class="bg-blue-600 dark:bg-blue-700 flex items-center justify-center px-2" style="width: 50%;">
-                Build 4-6 hr
-              </div>
-              <div class="bg-orange-500 dark:bg-orange-600 flex items-center justify-center px-2" style="width: 22%;">
-                Callouts 2-3 hr
-              </div>
-              <div class="bg-purple-600 dark:bg-purple-700 flex items-center justify-center px-2" style="width: 14%;">
-                OT 1-2 hr
-              </div>
-              <div class="bg-slate-500 dark:bg-slate-600 flex items-center justify-center px-2" style="width: 14%;">
-                Fixes 1 hr
-              </div>
+              <div class="bg-blue-600 dark:bg-blue-700" style="width: 50%;"></div>
+              <div class="bg-orange-500 dark:bg-orange-600" style="width: 22%;"></div>
+              <div class="bg-purple-600 dark:bg-purple-700" style="width: 14%;"></div>
+              <div class="bg-slate-500 dark:bg-slate-600" style="width: 14%;"></div>
+            </div>
+            <div class="flex flex-wrap gap-x-4 gap-y-1.5 mt-2 text-xs text-slate-700 dark:text-slate-300">
+              <span class="flex items-center gap-1.5"
+                ><span class="w-3 h-3 rounded-sm bg-blue-600 dark:bg-blue-700"></span>Build the schedule (4-6 hr)</span
+              >
+              <span class="flex items-center gap-1.5"
+                ><span class="w-3 h-3 rounded-sm bg-orange-500 dark:bg-orange-600"></span>Callout phone tree (2-3 hr)</span
+              >
+              <span class="flex items-center gap-1.5"
+                ><span class="w-3 h-3 rounded-sm bg-purple-600 dark:bg-purple-700"></span>Overtime tracking (1-2 hr)</span
+              >
+              <span class="flex items-center gap-1.5"
+                ><span class="w-3 h-3 rounded-sm bg-slate-500 dark:bg-slate-600"></span>Fixes and reposts (1 hr)</span
+              >
             </div>
           </div>
 
           <div>
-            <div class="flex justify-between mb-1.5 text-sm">
+            <div class="flex flex-wrap justify-between gap-x-3 mb-1.5 text-sm">
               <span class="font-medium text-slate-900 dark:text-slate-100">Managed service (SimpleScheduleAI)</span>
               <span class="text-slate-600 dark:text-slate-400">1 to 2 hours/week</span>
             </div>
             <div
-              class="flex h-10 rounded-md overflow-hidden border border-slate-300 dark:border-slate-700 text-white text-xs font-medium"
+              class="flex h-8 rounded-md overflow-hidden border border-slate-300 dark:border-slate-700"
+              role="img"
+              aria-label="Managed service time breakdown: 14% Review and approve, 86% time returned to clinical work"
             >
-              <div class="bg-emerald-600 dark:bg-emerald-700 flex items-center justify-center px-2" style="width: 14%;">
-                Review + approve
-              </div>
-              <div
-                class="bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 italic"
-                style="width: 86%;"
+              <div class="bg-emerald-600 dark:bg-emerald-700" style="width: 14%;"></div>
+              <div class="bg-slate-100 dark:bg-slate-800" style="width: 86%;"></div>
+            </div>
+            <div class="flex flex-wrap gap-x-4 gap-y-1.5 mt-2 text-xs text-slate-700 dark:text-slate-300">
+              <span class="flex items-center gap-1.5"
+                ><span class="w-3 h-3 rounded-sm bg-emerald-600 dark:bg-emerald-700"></span>Review + approve (1-2 hr)</span
               >
-                time returned to clinical work
-              </div>
+              <span class="flex items-center gap-1.5"
+                ><span
+                  class="w-3 h-3 rounded-sm bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700"
+                ></span><span class="italic">Time returned to clinical work</span></span
+              >
             </div>
           </div>
         </div>
