@@ -26,7 +26,7 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] Every H2/H3 has a 40–70 word direct answer capsule immediately below it
 - [ ] Sections are substantive (about 120–180 words is a thoroughness heuristic, NOT a citation lever — see Part 0 Reconciliation)
 - [ ] One stat or data point per 150–200 words
-- [ ] Every stat/regulatory claim hyperlinks to a primary source (CMS, HRSA, Texas DSHS, ANA)
+- [ ] Every stat/regulatory claim hyperlinks to a primary source. Canonical URLs: CMS §485.635 → eCFR (not cms.gov), FLSA → DOL Fact Sheet #54, Texas hospital licensing → HHSC (not DSHS — licensing transferred Jan 2025), Texas Payday Law → TWC, plus HRSA, ANA, AONL, Flex Monitoring Team where applicable.
 - [ ] FAQ section present (product/landing/blog pages) — minimum 3 Q&As
 - [ ] Author byline with real name, credentials, and LinkedIn link (NOT "SimpleScheduleAI Team")
 - [ ] Internal link to pillar page (`/how-it-works` or `/critical-access-hospital-scheduling`) with keyword anchor text

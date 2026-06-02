@@ -168,7 +168,7 @@ Lead angle: enterprise workforce platforms are sold into rural/critical-access h
 ### 5.4 Rules
 
 - 90% education, 10% (or less) product. One link in the bio, optionally one contextual link to a non-commercial resource page (`/critical-access-hospital-scheduling` is acceptable as it reads as a guide).
-- Every statistic must link to a primary source (CMS, HRSA, Texas DSHS, ANA). No unsourced claims — editors check.
+- Every statistic must link to a primary source. Canonical: CMS §485.635 → eCFR, FLSA → DOL Fact Sheet #54, Texas hospital licensing → HHSC (not DSHS — Jan 2025 transfer), plus HRSA, ANA, AONL, Flex Monitoring Team where applicable. No unsourced claims — editors check.
 - Match the §2 bio exactly so the author entity stays consistent across the web.
 
 ---

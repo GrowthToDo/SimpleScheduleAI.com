@@ -21,21 +21,69 @@ metadata:
 Good: healthcare-scheduling-crisis | Bad: 1-healthcare-scheduling-crisis _/}
 
 {/\*
-AUTHOR BIO — add this at the end of the post body:
+AUTHOR BIO — add this at the end of the post body (canonical italic-linked format,
+NEVER the old "Written by Pradeep Pandey" block format):
 
-**Written by Pradeep Pandey**
-Co-founder, SimpleScheduleAI. Deputy General Manager of Operations at Apollo Hospitals.
-MBA from IIM Trichy (Operations & Marketing). Deep background in healthcare
-operations, workforce optimization, and hospital process design.
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI,
+a managed nurse scheduling service built for Critical Access Hospitals in Texas.
+He serves as Deputy General Manager of Operations at Apollo Hospitals and holds
+an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
 \*/}
 
-{/_
+{/\_
 SOURCE CITATION REMINDER:
 Every statistic, regulatory reference, or operational claim must hyperlink
-to a primary source: CMS (cms.gov), HRSA (hrsa.gov), Texas DSHS (dshs.texas.gov),
-ANA (nursingworld.org), AONL (aonl.org), or Flex Monitoring Team (flexmonitoring.org)
-_/}
+to a primary source. Canonical URLs:
+
+- CMS §485.635: ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635 (use ecfr.gov, NOT cms.gov as the canonical reg link)
+- FLSA healthcare overtime: dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime
+- Texas hospital licensing: hhs.texas.gov/providers/health-care-facilities-regulation/hospitals-general-hospitals (HHSC, not DSHS — licensing transferred Jan 2025)
+- Texas Payday Law: twc.texas.gov/programs/wage-and-hour/texas-payday-law
+- HRSA rural workforce: hrsa.gov
+- ANA staffing position: nursingworld.org
+- AONL workforce: aonl.org
+- Flex Monitoring Team (CAH research): flexmonitoring.org
+- NSI Retention Report: nsinursingsolutions.com
+  \_/}
+
+{/\_
+NEW PATTERNS — required on BOFU/comparison posts (per checklist Pass 3+):
+
+1. PRE-KEY-TAKEAWAYS NARRATIVE OPENER (2 paragraphs between frontmatter
+   close and "## Key Takeaways"). Sellontube contradiction-hook pattern:
+   - Para 1: "Your [X] says [A]. Your [Y] says [B]." Name two opposing
+     realities the reader lives.
+   - Para 2: What the guide covers, framed as resolution.
+     Skip on operational guides and glossary/definitional posts.
+
+2. "OUR TAKE" CALLOUT after a major analysis section. 50-100 word
+   editorial position, amber-left-border styling:
+
+   <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+     <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+     <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+       [Editorial position - what we believe, not what the data shows]
+     </p>
+   </div>
+
+3. HONEST-LIMITATION DISCLAIMER at the end of the SimpleScheduleAI section.
+   Pattern: "One honest limitation: [SSAI/feature] is not the right fit
+   for [audience X], [audience Y], or [audience Z]."
+
+4. "WHAT TO DO THIS WEEK" section before FAQ with 5 numbered concrete
+   action steps. Last step typically a SimpleScheduleAI pilot CTA.
+
+5. /roi LINK in any pricing/time-math section. (/simulator is offline —
+   skip until back online.)
+
+6. NO BLANK LINES INSIDE not-prose HTML diagram blocks (markdown parser
+   escape trap — see commit 016f7ba). Verify post-build:
+   grep "&lt;div" dist/blog/<slug>/index.html — zero matches required.
+
+7. CTA copy uses "Book a call with our team" not "Book a call". Pre-explains
+   the Calendly booking page transition (see commit c792e04).
+   \_/}
 
 {/\*
 WORD COUNT TARGETS (by content type):
