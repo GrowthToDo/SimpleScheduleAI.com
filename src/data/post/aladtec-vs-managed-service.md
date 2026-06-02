@@ -343,6 +343,13 @@ Specifically, Aladtec fits well when:
 
 Aladtec is also a reasonable choice for organizations that tried a managed service and found that they preferred direct control over the schedule. Some nurse managers want to see every cell of the schedule before it goes to staff. A managed service model, where the vendor builds the draft and the nurse manager reviews, does not fit every management style.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Aladtec is a competent self-serve scheduler. The question is not whether it is good software. The question is whether a Critical Access Hospital nurse manager, who is also covering 2-3 clinical shifts a week, has the four to six hours per week the platform requires to be used well. For most CAHs we have spoken to, the honest answer is no - which is why scheduling software adoption at this scale routinely drifts back to spreadsheets within twelve months. The managed service model is not a feature claim. It is an admission that the constraint at a 25-bed hospital is staff time to operate software, not access to software.
+  </p>
+</div>
+
 ## When Is a Managed Service the Right Choice?
 
 A managed scheduling service is the right choice when the scheduling burden falls on someone who cannot afford the time it requires. For most Critical Access Hospitals, that person is the nurse manager: a clinician responsible for direct patient care, staff supervision, quality reporting, budget management, and hiring in addition to scheduling.
@@ -412,7 +419,7 @@ The decision between self-serve scheduling software and a managed service become
 
 2. **Ask SimpleScheduleAI for a CAH scheduling audit.** The audit covers your current OT patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or call to schedule.
 
-3. **Calculate your estimated labor cost for scheduling.** Multiply your hourly rate (or the hourly rate of whoever manages scheduling) by the weekly hours spent. Multiply by 50 weeks. Compare that number against the annual cost of a managed service. For most CAH nurse managers, the break-even is well inside year one.
+3. **Calculate your estimated labor cost for scheduling.** Multiply your hourly rate (or the hourly rate of whoever manages scheduling) by the weekly hours spent. Multiply by 50 weeks. Compare that number against the annual cost of a managed service. For most CAH nurse managers, the break-even is well inside year one. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison automatically.
 
 4. **Request a pricing comparison from Aladtec and SimpleScheduleAI.** Neither publishes pricing publicly. Get quotes from both and compare total cost (license fee plus estimated labor), not just subscription price.
 

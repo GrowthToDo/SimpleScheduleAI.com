@@ -1,11 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components';
-
 import Image from '~/components/common/Image.astro';
 import PostTags from '~/components/blog/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
 
-import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 import type { Post } from '~/types';
@@ -26,38 +23,38 @@ const { post, url } = Astro.props;
         : 'intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade'}
     >
       <div class="flex justify-between flex-col sm:flex-row max-w-3xl mx-auto mt-0 mb-2 px-4 sm:px-6 sm:items-center">
-        <p>
-          <Icon name="tabler:clock" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
-          <time datetime={String(post.publishDate)} class="inline-block">{getFormattedDate(post.publishDate)}</time>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
           {
             post.author && (
               <>
-                {' '}
-                · <Icon name="tabler:user" class="w-4 h-4 inline-block -mt-0.5 dark:text-gray-400" />
-                <a href="/about/pradeep-pandey" class="inline-block hover:underline" rel="author">
+                By{' '}
+                <a
+                  href="/about/pradeep-pandey"
+                  class="text-slate-700 dark:text-slate-300 underline decoration-dotted hover:decoration-solid"
+                  rel="author"
+                >
                   {post.author}
                 </a>
-              </>
-            )
-          }
-          {
-            post.category && (
-              <>
-                {' '}
-                ·{' '}
-                <a class="hover:underline inline-block" href={getPermalink(post.category.slug, 'category')}>
-                  {post.category.title}
-                </a>
+                {' · '}
+                <span>Co-Founder</span>
               </>
             )
           }
           {
             post.readingTime && (
               <>
-                &nbsp;· <span>{post.readingTime}</span> min read
+                {' · '}
+                <span>{post.readingTime} min read</span>
               </>
             )
           }
+          {' · '}
+          <span>
+            Updated{' '}
+            <time datetime={String(post.updateDate ?? post.publishDate)}>
+              {getFormattedDate(post.updateDate ?? post.publishDate)}
+            </time>
+          </span>
         </p>
       </div>
 

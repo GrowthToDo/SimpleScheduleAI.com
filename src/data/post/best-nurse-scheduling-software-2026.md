@@ -558,6 +558,13 @@ A full scheduling platform with credential management, EHR read access, and soli
 - **Also consider:** OnShift if you have significant post-acute or LTC volume.
 - **Less likely to fit at this scale:** SimpleScheduleAI (designed for smaller facilities under 50 beds), NurseGrid (positioned as a nurse-facing app rather than a primary scheduling platform).
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Most CAH buying processes start with a feature list and end with the platform that has the most checkboxes. The harder question is operational fit: does the platform's lowest-bandwidth daily use case match what your nurse manager can actually sustain after week 6 - especially if she also covers clinical shifts? Aladtec, SimpleScheduleAI, and SmartLinx pass that test for different bed-size ranges. Several highly-rated tools on this list are built for organizations with administrative bandwidth most Critical Access Hospitals do not have. Choose for the operational reality you live in on a normal Tuesday, not the demo on a perfect day.
+  </p>
+</div>
+
 ## What Changed in Nurse Scheduling Software in 2026?
 
 Three shifts in the nurse scheduling software market in 2026 affect CAH buying decisions. AI-assisted scheduling is now standard across major platforms, but quality varies and buyers should test what the AI actually optimizes for. Managed scheduling services emerged as a legitimate category for hospitals under 50 beds. And CMS survey activity has increased, making compliance documentation a real differentiator rather than a feature-sheet checkbox.
@@ -641,7 +648,7 @@ If you run a Critical Access Hospital specifically, we have a dedicated guide th
 2. If you are under 50 beds, put Aladtec and SimpleScheduleAI side by side. They serve the same segment with different models - one is self-serve software, the other builds the schedule for you.
 3. Request demos from your two or three shortlisted tools. Ask each vendor: how long does implementation take, who owns the configuration, and what does the audit trail look like during a CMS survey?
 4. Ask any vendor for a compliance documentation sample - specifically a staffing report formatted for a CMS §485.635 review.
-5. Calculate how many hours per week your nurse manager currently spends on scheduling. Multiply by their hourly rate. That is the baseline ROI any tool needs to beat.
+5. Calculate how many hours per week your nurse manager currently spends on scheduling. Multiply by their hourly rate. That is the baseline ROI any tool needs to beat. Run the [SimpleScheduleAI ROI calculator](/roi) to model what reducing weekly scheduling time by 60-80% returns in dollars and clinical hours.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>

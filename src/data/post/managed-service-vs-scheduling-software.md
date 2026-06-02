@@ -262,6 +262,15 @@ A scheduling app fits when the hospital has a dedicated scheduler or an administ
 - Your primary pain point is callout coverage and overtime, not just schedule building
 - You are a Texas critical access hospital with 25 beds or fewer
 
+Before you decide, run the comparison in the [SimpleScheduleAI ROI calculator](/roi). The output is the side-by-side dollar value of software-license cost plus operating labor versus a managed-service fee, calculated at your facility's actual numbers.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The choice is not between two products. It is between two labor models. Scheduling software assumes the hospital has a scheduling administrator. A managed service assumes the hospital does not. For most Critical Access Hospitals, the nurse manager is also a clinician, and the hospital does not have spare administrative capacity. In that operational reality, the choice is structural: a tool that adds work the manager cannot absorb, or a service that removes work she should not be doing. The license-fee comparison is a distraction. The labor model is the decision.
+  </p>
+</div>
+
 ## When Is Scheduling Software the Right Choice?
 
 Scheduling software is the right choice when the hospital has someone whose primary role is scheduling administration, when clinical and provider scheduling need to be managed in a single system, or when the nurse manager prefers direct control over individual scheduling decisions. Software also fits better when the hospital has IT resources to handle configuration and maintenance, or when staff self-service features for availability submission and shift swaps are a hard requirement.
