@@ -415,6 +415,8 @@ Two variables drive the decision: how much unprotected time the nurse manager cu
 
 The decision table above covers the two most common decision factors. In practice, the strongest predictor of which model is right is: how much unprotected time is the nurse manager spending on scheduling tasks that do not require their clinical or managerial judgment? If the answer is more than 3 hours per week, and those 3 hours are being taken from clinical work, a managed service almost always has a better return on investment than software, regardless of price.
 
+One honest limitation: a managed scheduling service is not the right fit for hospitals that have a dedicated scheduling administrator, want direct cell-by-cell control over every assignment, or specifically prefer self-serve software for governance or audit reasons.
+
 ## What to Do This Week?
 
 The decision between self-serve scheduling software and a managed service becomes clear once you have two data points: your actual weekly scheduling time and a total cost estimate. The five steps below produce both within one week.

@@ -20,6 +20,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/shiftwizard-vs-managed-service'
 ---
 
+ShiftWizard demos show a scheduling platform with the features your hospital needs. Your nurse manager asks one question: "After I am trained on this, how many hours a week am I still spending on scheduling?" ShiftWizard answers that question one way. A managed scheduling service answers it differently.
+
+This guide compares the two models on the operational dimensions that decide the answer for a 25-bed CAH: weekly time burden, configuration maintenance, callout coverage, and CMS §485.635 documentation.
+
 ## Key Takeaways
 
 - ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream. It holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews), with over 88% of Capterra reviews rating 4 stars or higher.

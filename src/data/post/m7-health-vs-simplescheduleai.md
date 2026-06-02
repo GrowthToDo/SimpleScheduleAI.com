@@ -21,6 +21,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/m7-health-vs-simplescheduleai'
 ---
 
+M7 Health's reference customers are Ochsner (47 hospitals) and ScionHealth. SimpleScheduleAI's reference customers are single Critical Access Hospitals at 25 beds or fewer. Both products use AI. They are designed for different operational realities, and the product fit at a CAH is decided by the reference scale, not the algorithm description.
+
+This guide compares the two on the four questions that decide a CAH purchase: who builds the schedule, who configures the system, who produces CMS documentation, and who the vendor's reference customers actually are.
+
 ## Key Takeaways
 
 - M7 Health describes itself as nurse scheduling and labor optimization for health systems, with enterprise reference customers including Ochsner Health (47 hospitals) and ScionHealth. M7 also publishes a CAH-specific page claiming low-lift implementation for small rural hospitals. Its integration model connects payroll, timekeeping, EHR, and ERP systems: at a CAH with no IT department, confirming what that integration actually requires is the first question to ask.

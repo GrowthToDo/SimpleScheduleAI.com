@@ -19,6 +19,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/ukg-migration-small-hospital'
 ---
 
+The UKG implementation team described a 6-month deployment to your CAH. The reality, two years in, is a system the nurse manager works around rather than through, and a contract notice deadline you have probably already missed once. Migrating off is a project. Staying on is a slow tax on clinical leadership time.
+
+This guide covers the UKG exit playbook for a 25-bed Critical Access Hospital: contract notice timing, data extraction, parallel-run windows, and what to look for in a replacement sized for the operational scale you actually have.
+
 ## Key Takeaways
 
 - Migrating off UKG (or any enterprise scheduling platform) at a small hospital requires 30-60 days of parallel operation: running the old system alongside the new one while staff transition. Cutting over cold is the most common migration mistake.

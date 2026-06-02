@@ -303,6 +303,8 @@ The system does not produce a single optimal schedule, because the right tradeof
 
 The callout module applies the same constraint logic in real time. When a nurse calls out, the algorithm generates a ranked replacement list that satisfies every active constraint, credentials, overtime thresholds, availability windows, and orders it by lowest disruption to the schedule's overtime balance. One honest limitation: SimpleScheduleAI is a nursing scheduling service and does not extend to physician or mid-level provider scheduling, so hospitals that need unified provider scheduling should evaluate a multi-discipline platform instead. For the full workflow from roster upload to published schedule, see [how it works](/how-it-works). For category context, see our guides on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals, how [AI nurse scheduling](/ai-nurse-scheduling) works as a managed service, and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling).
 
+One honest limitation: a managed AI scheduling service is not the right fit for hospitals over 50 beds, facilities with dedicated scheduling administrators, or organizations that specifically want to operate AI software under their own control rather than approve outputs.
+
 ## What to Do This Week
 
 1. **Measure your current scheduling time cost.** For the next two weeks, log time spent on schedule construction, callout handling, shift swap management, and CMS documentation. That total is the baseline any AI scheduling evaluation has to beat.

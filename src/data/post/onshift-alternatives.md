@@ -22,6 +22,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/onshift-alternatives'
 ---
 
+OnShift was acquired by Workday in 2022. The product is now positioned for post-acute care, SNF, and senior living. Your 25-bed acute Critical Access Hospital is not in any of those categories, but the OnShift sales conversation may have suggested otherwise. The fit gap is real and worth checking before signing.
+
+This guide compares 6 OnShift alternatives for a CAH that runs acute inpatient nursing, not skilled-nursing-facility scheduling.
+
 ## Key Takeaways
 
 - OnShift, now part of Workday, was designed for long-term care and assisted living workforce scheduling. Its caregiver engagement and shift-pickup model fits stable LTC census patterns, which is a different operational model than acute care hospital nursing.

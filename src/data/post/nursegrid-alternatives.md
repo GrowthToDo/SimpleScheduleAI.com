@@ -22,6 +22,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/nursegrid-alternatives'
 ---
 
+NurseGrid is the highest-adoption nurse-facing scheduling app. It is also the app the CAH nurse manager cannot use as her primary scheduling system, because the manager-side capability has been quietly narrowed across recent releases. Several Capterra reviewers describe losing the Manager App entirely.
+
+This guide compares 6 alternatives for a Critical Access Hospital that needs nurse-facing communication AND manager-side scheduling control AND CMS §485.635 documentation, not just one of the three.
+
 ## Key Takeaways
 
 - NurseGrid's strength is the nurse-facing mobile experience: schedule viewing, availability, and shift-trade requests. Reviewers on Capterra report the manager-facing mobile app was removed in mid-2024 and that desktop login is now required for schedule edits.

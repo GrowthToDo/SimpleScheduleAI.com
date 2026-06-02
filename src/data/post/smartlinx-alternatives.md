@@ -22,6 +22,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/smartlinx-alternatives'
 ---
 
+SmartLinx is purpose-built for long-term care, post-acute, senior care, and behavioral health. Your acute Critical Access Hospital is not in any of those categories, but the SmartLinx demo may have suggested broader fit. The product is healthcare-specific. That does not mean it is hospital-specific.
+
+This guide compares 6 SmartLinx alternatives for a 25-bed acute CAH, with the implementation effort and reference-customer questions that matter most for the evaluation.
+
 ## Key Takeaways
 
 - SmartLinx is a strong workforce management platform for long-term care facilities and community hospitals in the 50-150 bed range. Its primary misfit for smaller hospitals is implementation complexity: a full deployment takes 3-4 months, requires IT involvement, and demands ongoing configuration maintenance.

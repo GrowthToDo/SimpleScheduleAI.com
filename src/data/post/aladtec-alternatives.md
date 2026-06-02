@@ -21,6 +21,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/aladtec-alternatives'
 ---
 
+Your IT contractor configured Aladtec around the EMS dispatch workflow that came with the install. Your nurse manager actually deals with credential-filtered callout coverage at 2 AM and CMS §485.635 documentation at survey time. The platform's heritage is in public-safety scheduling, and the hospital-nursing fit gap shows up in the work the manager does that the configuration cannot help with.
+
+This guide compares 6 alternatives for a 25-bed CAH that needs hospital-nursing fit, not a better version of an EMS-shaped tool.
+
 ## Key Takeaways
 
 - For a Critical Access Hospital that needs a self-serve platform designed specifically for hospital nurse scheduling workflows, ShiftWizard is a stronger fit than Aladtec. For a facility staying within the TCP ecosystem, TCP Scheduling is the direct upgrade path with a longer implementation. For a hospital that needs the scheduling handled rather than a better tool to do it themselves, SimpleScheduleAI is the managed service alternative.

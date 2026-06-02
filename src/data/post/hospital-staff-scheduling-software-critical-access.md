@@ -19,6 +19,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/hospital-staff-scheduling-software-critical-access'
 ---
 
+Most hospital staff scheduling software is positioned for 200-bed health systems with HR analysts, scheduling coordinators, and an IT roadmap. Your CAH has none of those, and the platform you bought eight months ago is still being configured. The mismatch is not a feature problem. It is a structural assumption built into how the software is sold and deployed.
+
+This guide covers what hospital staff scheduling actually requires at 25-bed scale, written for the nurse manager who needs the work done, not a platform she has to operate.
+
 ## Key Takeaways
 
 - Most hospital staff scheduling software is built for facilities that have an IT department and a person whose job is scheduling. A 25-bed Critical Access Hospital has neither, so the evaluation criteria are different.

@@ -20,6 +20,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/ukg-too-complex-small-hospital'
 ---
 
+UKG is genuinely capable software. It is also designed for organizations five times larger than a Critical Access Hospital. Both things are true. The platform was not poorly engineered; it was engineered for operational assumptions that do not exist at 25-bed scale: dedicated HRIS staff, multi-month implementations, integrated payroll-and-scheduling teams.
+
+This guide covers what actually works at CAH scale, written for the administrator weighing whether to renew UKG or right-size scheduling to the facility's real operational capacity.
+
 ## Key Takeaways
 
 - UKG is a genuinely capable workforce management system. It is designed for large health systems with IT departments, dedicated HRIS staff, and 6-12 month implementation timelines. None of those resources exist at a typical Critical Access Hospital (CAH).

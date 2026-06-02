@@ -19,6 +19,10 @@ metadata:
   description: 'Best TCP TimeClock+ alternatives for Critical Access Hospitals. Compare ShiftWizard, Aladtec by TCP, NurseGrid, and SimpleScheduleAI managed service to find the right fit for your CAH.'
 ---
 
+TCP Software sells three products: TimeClock+, Humanity Scheduling, and Aladtec. Your CAH probably bought one of them and your nurse manager is operating it like all three. The right TCP alternative depends on which gap you are actually trying to close: unified time-and-attendance, advanced scheduling depth, or hospital-nursing fit at small scale.
+
+This guide compares the alternatives for a Critical Access Hospital that does not have a workforce-management analyst on staff and cannot run TCP-style configuration as a part-time responsibility.
+
 ## Key Takeaways
 
 - The best TCP TimeClock+ alternative depends on one question: do you want better scheduling software to build schedules yourself, or do you want the scheduling work done for you?

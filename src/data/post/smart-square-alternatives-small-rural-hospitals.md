@@ -20,6 +20,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/smart-square-alternatives-small-rural-hospitals'
 ---
 
+Smart Square won Best in KLAS for Scheduling: Nurse and Staff in both 2025 and 2026. It is also the platform with no documented Critical Access Hospital reference customers. Both facts are true. For a hospital-system buyer, the awards matter. For a 25-bed standalone CAH, the missing reference is the more important signal.
+
+This guide compares 6 Smart Square alternatives for a Critical Access Hospital, with the structural reasons enterprise health-system platforms do not size down cleanly to 25 beds.
+
 ## Key Takeaways
 
 - symplr Smart Square is positioned for health systems and the enterprise, with no documented Critical Access Hospital, rural, or 25-bed-or-fewer reference customers. For a Critical Access Hospital, the right alternative is a tool sized to a single 25-bed facility rather than a multi-facility system, runnable without a labor-management analyst.

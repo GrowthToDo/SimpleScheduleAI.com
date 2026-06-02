@@ -184,6 +184,8 @@ For the broader context on [critical access hospital scheduling](/critical-acces
   </p>
 </div>
 
+One honest limitation: AI-generated scheduling is not the right fit for hospitals where the constraint structure is simple enough that manual scheduling produces an acceptable result, where roster size is under 8-10 nurses, or where the manager prefers full discretionary control over every assignment.
+
 ## What to Do This Week
 
 1. **Run an audit on your last AI-generated schedule.** Did anyone exceed overtime thresholds without flagging? Did the weekend distribution match the documented fairness rule? Did credential-restricted shifts go to qualified staff? Three yes-answers means the system is trustworthy. One no-answer means the rules need recalibration before nurses can rely on the output.

@@ -21,6 +21,10 @@ metadata:
   description: 'In-House Health vs. SimpleScheduleAI for Critical Access Hospitals. Compare the operate-it-yourself AI platform model against a fully managed scheduling service.'
 ---
 
+In-House Health's product page describes a platform for acuity-driven inpatient units and union environments. Your 25-bed CAH has no acuity-driven units, no union, and no one on staff who can operate a self-managed AI platform. The product comparison is not about which AI is better. It is about which operational reality the product was designed for.
+
+This guide separates the run-it-yourself platform model from the managed service model, written for a Critical Access Hospital choosing between operating an AI tool and approving a finished schedule.
+
 ## Key Takeaways
 
 - In-House Health is an AI scheduling and workforce platform the hospital operates itself. Its [product page](https://www.inhouse.health/) positions it for larger nursing teams in bigger hospitals: acuity-driven inpatient units and union environments.

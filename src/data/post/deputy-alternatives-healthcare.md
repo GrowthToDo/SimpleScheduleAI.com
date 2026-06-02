@@ -23,6 +23,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/deputy-alternatives-healthcare'
 ---
 
+Deputy's product page describes shift scheduling and time tracking for healthcare. Your hospital's CMS surveyor describes staffing-record defensibility. Those two descriptions cover different work, and the gap shows up at week 8 when the audit binder does not assemble itself from the same data the staff app uses.
+
+This guide compares 6 Deputy alternatives for a Critical Access Hospital where general workforce scheduling is not enough and HIPAA, BAA, and §485.635 audit-trail requirements are not optional.
+
 ## Key Takeaways
 
 - Deputy is a well-designed general workforce scheduling tool. For hospital nurse scheduling, its gaps are significant: credential enforcement, CMS compliance documentation, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) healthcare overtime configuration, and callout ranking by credential or overtime status are not documented on its product page. Verify current capabilities with Deputy before evaluating for a clinical environment.
@@ -398,6 +402,8 @@ For hospitals where those features represent real operational risk and real manu
     Deputy is a well-rated general workforce tool. The Critical Access Hospital question is whether general workforce tooling fits a licensed clinical environment with active CMS survey obligations. The honest answer for most CAHs is no - not because Deputy is bad software, but because the compliance and credential logic a hospital needs is not what Deputy was built for. The right alternative depends on whether you need shift visibility or staffing-record defensibility.
   </p>
 </div>
+
+One honest limitation: SimpleScheduleAI is not the right fit for healthcare practices outside the acute hospital context, retail-style shift swapping use cases, or facilities that specifically need a low-cost general workforce tool rather than a managed nurse-scheduling service.
 
 ## What to Do This Week?
 

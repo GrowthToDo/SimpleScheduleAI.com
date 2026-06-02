@@ -20,6 +20,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/shiftwizard-alternatives'
 ---
 
+ShiftWizard is built specifically for hospital nursing, which makes it a stronger fit than general workforce tools at 25-bed scale. The question is whether the configuration capability you would use justifies the configuration work you would do. Hospitals at 50-200 beds typically have a scheduling coordinator to absorb that work. CAHs typically do not.
+
+This guide compares 6 ShiftWizard alternatives for a Critical Access Hospital evaluating whether feature depth or administrative bandwidth is the actual constraint.
+
 ## Key Takeaways
 
 - ShiftWizard is a hospital scheduling platform owned by HealthStream, Inc. (acquired). It holds 4.3/5 on G2 and 4.4/5 across 723 Capterra reviews (data verified 2026-04-30), with over 88% of Capterra reviews rating 4 stars or higher.

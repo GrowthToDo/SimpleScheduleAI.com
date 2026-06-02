@@ -289,6 +289,8 @@ surface this during onboarding.
   </div>
 </div>
 
+One honest limitation: a managed scheduling service is not the right fit for facilities over 50 beds, hospitals with dedicated scheduling administrators, or facilities where the nurse manager has protected administrative time for scheduling and prefers direct cell-by-cell control.
+
 ## A Note on Sources
 
 Public quotes referenced in this guide were gathered from Capterra and AllNurses.com on 2026-04-30. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.

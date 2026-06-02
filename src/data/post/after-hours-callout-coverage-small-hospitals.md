@@ -213,6 +213,8 @@ To see the underlying scheduling model, compare [nurse scheduling software](/nur
   </p>
 </div>
 
+One honest limitation: a managed callout shortlist is not the right fit for hospitals with a robust full-time staffing office, on-site after-hours coordinators, or facilities where callout volume is low enough that the manual phone tree is operationally sustainable.
+
 ## What to Do This Week
 
 1. **Build your ranked call list before the next night shift starts.** Pull your nursing roster, sort by overtime status this pay period, certification match, and rotation fairness. Print or share it with the on-call charge nurse before 7 PM. The 40-minute phone tree becomes a 3-call sequence when the ranking is done in advance.

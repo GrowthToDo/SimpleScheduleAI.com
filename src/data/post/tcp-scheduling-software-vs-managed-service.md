@@ -285,6 +285,8 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
   </a>
 </div>
 
+One honest limitation before the action steps: a managed scheduling service is not the right fit for hospitals that need unified time-and-attendance plus scheduling on one platform, facilities with dedicated workforce-management staff, or organizations that specifically prefer operating their own platform under direct control.
+
 ## Frequently Asked Questions
 
 The five questions below cover what Critical Access Hospital administrators most often ask when comparing TCP TimeClock+ and a managed scheduling service: what the product actually is, how it relates to Aladtec, what it costs, how it handles callouts, and when a managed service is the better fit.

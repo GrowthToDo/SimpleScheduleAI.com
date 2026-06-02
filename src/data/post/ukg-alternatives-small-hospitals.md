@@ -21,6 +21,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/ukg-alternatives-small-hospitals'
 ---
 
+UKG is excellent software for the 500-bed health systems it was designed for. Your 25-bed Critical Access Hospital was probably included in a health-system enterprise contract and told the system is "already set up." In practice that means the system was configured for a hospital five times your size, and the nurse manager is operating around the workflows that do not apply.
+
+This guide compares 6 UKG alternatives for a Critical Access Hospital that needs to right-size scheduling to the operational scale the facility actually has.
+
 ## Key Takeaways
 
 - [UKG serves over 3,500 healthcare organizations](https://www.ukg.com/industry-solutions/healthcare) in the US. Many Critical Access Hospitals (CAHs) are on UKG because a regional health system extended an enterprise contract to affiliated facilities, not because UKG was selected for CAH-scale needs.

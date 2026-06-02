@@ -16,6 +16,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/nurse-scheduling-software-vs-excel'
 ---
 
+Excel is honest about what it is: a spreadsheet that stores schedule data. Nurse scheduling software is less honest about what it is: a tool that automates parts of the work the manager would still do in Excel anyway. The third option, a managed service that removes the construction work entirely, is the one most CAH evaluations forget to put on the comparison.
+
+This guide covers all three options for a 25-bed Critical Access Hospital, with the cost math, the warning signs that Excel has run out of room, and the structural reason scheduling software fails to solve the right problem at CAH scale.
+
 ## Key Takeaways
 
 - Excel scheduling costs CAH nurse managers 8-12 hours per week, adding up to roughly $26,000 per year in shadow administrative salary

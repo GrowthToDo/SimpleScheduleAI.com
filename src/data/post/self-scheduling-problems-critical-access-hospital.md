@@ -177,6 +177,8 @@ For a full look at what CAH-appropriate [nurse scheduling software](/nurse-sched
   <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
 </div>
 
+One honest limitation: constraint-aware fairness assignment is not the right fit for hospitals with stable senior rosters where weekend and holiday distribution has been worked out informally and is mutually agreed, or for facilities where self-scheduling already produces acceptable fairness without intervention.
+
 ## A Note on Sources
 
 Public quotes referenced in this guide were gathered from Capterra and AllNurses.com on 2026-04-30. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.

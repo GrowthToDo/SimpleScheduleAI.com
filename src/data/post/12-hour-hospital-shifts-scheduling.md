@@ -234,6 +234,8 @@ initial setup and calibration requires more time. We surface this in onboarding.
   </p>
 </div>
 
+One honest limitation: SimpleScheduleAI is not the right fit for hospitals running 8-hour shift rotations, multi-unit complex scheduling across nursing and physician staff, or facilities with stable rosters under 10 nurses where Excel is operationally sufficient.
+
 ## What to Do This Week
 
 1. **Audit your current 12-hour shift rotation pattern.** Identify whether your unit runs straight day/night assignments, 3-on/4-off rotating, or rotating day/night blocks. Each pattern has a different fatigue and fairness profile; you cannot fix problems you have not named.

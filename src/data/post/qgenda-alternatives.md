@@ -19,6 +19,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/qgenda-alternatives'
 ---
 
+QGenda is the dominant physician scheduling platform that has expanded into nursing. Your CAH may need physician scheduling alongside nursing, in which case QGenda is a strong fit. Or your CAH may only need nursing scheduling, in which case the physician-scheduling overhead is paid complexity that delivers no operational return.
+
+This guide compares 6 QGenda alternatives for a Critical Access Hospital, with the decision tree for when to stay and when the click-heavy configuration is no longer worth the value.
+
 ## Key Takeaways
 
 - QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It is positioned primarily for physician scheduling at larger health systems and physician group practices.

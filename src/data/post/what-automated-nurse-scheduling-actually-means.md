@@ -215,6 +215,8 @@ For the broader context on [nurse scheduling software for critical access hospit
   </p>
 </div>
 
+One honest limitation: Level 5 managed automation is not the right fit for hospitals that prefer direct control over each scheduling decision, facilities with specific scheduling rules a specialist would have difficulty replicating, or organizations that want a self-serve platform at Level 3 rather than a managed delivery model.
+
 ## What to Do This Week
 
 1. **Ask each scheduling vendor a single diagnostic question.** "Walk me through what the nurse manager does on a Monday morning when the new schedule week starts." Vendors operating at Level 2-3 will describe configuration screens and rule setup. Vendors operating at Level 4-5 will describe review and approval workflows.
