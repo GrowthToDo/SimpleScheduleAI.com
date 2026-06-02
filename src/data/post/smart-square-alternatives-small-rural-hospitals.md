@@ -494,6 +494,13 @@ The core tradeoff between Smart Square and SimpleScheduleAI is scale fit, not fe
 
 For a nurse manager at a 25-bed CAH who also takes clinical shifts, an enterprise platform's value largely depends on capabilities a single facility does not use, while the operating overhead still applies. For a hospital inside a large health system, Smart Square's analytics depth is the point and a single-facility managed service would not fit.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Smart Square is well-rated and won Best in KLAS for two consecutive years. None of that addresses the specific question a Critical Access Hospital is asking: does the platform fit a single 25-bed facility without enterprise overhead? The answer for a multi-hospital system is yes. The answer for a single CAH is generally no - not because Smart Square is bad software, but because the value it delivers is cross-unit visibility a standalone hospital does not have.
+  </p>
+</div>
+
 ## What to Do This Week?
 
 1. **Confirm whether your hospital is a single facility or part of a system.** If you are one standalone Critical Access Hospital with one nursing department, an enterprise health-system platform is solving a problem you may not have. This single fact drives most of the decision.

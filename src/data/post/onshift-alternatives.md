@@ -484,6 +484,13 @@ The core tradeoff between OnShift and SimpleScheduleAI is not a feature count. I
 
 For a hospital that is primarily a CAH or acute care facility, that difference is the reason to evaluate alternatives, not a marginal feature gap but a fundamental difference in what each product was designed to do. For an organization that is primarily LTC, the same difference is the reason OnShift may still be the right tool.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    OnShift was built for post-acute and long-term care, and that focus shows in the product. For a Critical Access Hospital running acute inpatient nursing, the documented feature fit is narrower than vendor positioning suggests. The right OnShift alternative depends on the gap: if the issue is the Workday ecosystem dependency, a standalone tool wins. If the issue is the LTC-shaped product fit, an acute-focused tool wins. Conflating the two leads to choosing wrong.
+  </p>
+</div>
+
 ## What to Do This Week?
 
 1. **Audit your last 10 OnShift callout events.** For each, record how long it took from callout to confirmed replacement, whether any replacement lacked the correct credentials for the shift, and whether overtime was incurred that the manager did not know about before confirming. The answers tell you whether the callout model is working for your environment.

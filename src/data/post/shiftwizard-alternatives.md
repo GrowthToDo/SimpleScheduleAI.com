@@ -398,6 +398,13 @@ For a nurse manager at a 25-bed CAH who also takes clinical shifts, the self-ser
 
 For more context on nurse scheduling at CAH scale, see our [nurse scheduling software](/nurse-scheduling-software) hub and our [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    ShiftWizard is built for hospital nursing and that focus shows in the feature set. For a 25-bed CAH, the question is whether the configuration capability you would use justifies the configuration work you would do. Hospitals at 50-200 beds typically have a scheduling coordinator to absorb that work. CAHs typically do not. The right alternative depends on whether the scheduling problem is feature coverage or administrative bandwidth. They are different problems with different solutions.
+  </p>
+</div>
+
 ## What to Do This Week
 
 If you are currently evaluating hospital scheduling options for your CAH, these five steps will move you from research to a real decision.

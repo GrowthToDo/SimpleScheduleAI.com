@@ -232,6 +232,13 @@ Fourth, can the vendor name a reference customer that matches your facility: a s
 
 Write the answers down before any demo. A demo shows what the software can do. These four questions show who at your hospital has to do it, which is the part that decides whether the model actually fits.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    M7 Health was built for multi-hospital health systems with IT staff, scheduling coordinators, and a workforce-management function. SimpleScheduleAI was built for one Critical Access Hospital with none of those things. The product comparison is not about which AI engine is better. It is about which operational reality the product was designed for. A reference customer at 47 hospitals does not predict how a tool behaves at 25 beds. The staffing context is the variable.
+  </p>
+</div>
+
 ## What to Do This Week
 
 1. **Confirm your facility's designation and bed count.** If you are a [CMS-designated Critical Access Hospital](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) at 25 beds or fewer, software built for large health systems is a model mismatch. Write down the number before you take any vendor demo.

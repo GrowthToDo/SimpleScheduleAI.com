@@ -180,6 +180,13 @@ For a full look at what CAH-appropriate [nurse scheduling software](/nurse-sched
 
 Public quotes referenced in this guide were gathered from Capterra and AllNurses.com on 2026-04-30. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Self-scheduling at a CAH is not a participation problem. It is a fairness problem. When the most reliable nurses are also the ones who fill the open holes voluntarily, self-scheduling quietly punishes them. The fix is not more self-service. The fix is constraint-aware assignment with override, so the system distributes the unwanted shifts evenly before anyone has the chance to avoid them. Selfish scheduling is what happens when the platform optimizes for nurse preference but not for unit fairness.
+  </p>
+</div>
+
 ## Frequently Asked Questions
 
 **Q: Does self-scheduling work at a Critical Access Hospital?**

@@ -223,6 +223,13 @@ It is not the right choice if staff-facing self-service mobile features are a ha
 
 Public review counts, ratings, and quotes referenced in this guide were gathered from G2, Capterra, AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on 2026-04-30. Documented product capabilities reference each vendor's own product page, also verified on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    ShiftWizard and a managed scheduling service answer different questions. ShiftWizard answers "how does the hospital build better schedules with a hospital-nursing tool?" - a real question for hospitals that can sustain a scheduling administrator. A managed service answers "how does the nurse manager stop being the scheduling administrator?" For a 25-bed Critical Access Hospital where the manager also covers clinical shifts, the second question is usually the one that decides the purchase.
+  </p>
+</div>
+
 ## Frequently Asked Questions
 
 **Does ShiftWizard work for a 25-bed Critical Access Hospital?**

@@ -459,6 +459,13 @@ The core tradeoff between Aladtec and SimpleScheduleAI is control versus overhea
 
 For a nurse manager at a 25-bed CAH who takes clinical shifts, the overhead model typically fails over time because there is no spare capacity for configuration maintenance. For a nurse manager at a larger hospital with dedicated scheduling time and no CMS compliance obligations, Aladtec's control model may be preferable.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Most Aladtec evaluations at a 25-bed CAH start with feature comparisons against the next platform. The harder question is operational: can your nurse manager configure and maintain whichever platform you choose while also covering clinical shifts? Configuration drift is the real failure mode of small-hospital scheduling software, and the right alternative is not necessarily the one with the best features. It is the one your hospital can actually sustain after week 6.
+  </p>
+</div>
+
 ## What to Do This Week?
 
 1. **Identify the specific Aladtec gap driving the switch consideration.** Is it configuration maintenance burden, CMS documentation prep time, callout overtime checking, or something else? The right alternative depends on which gap is the priority, not all alternatives solve all gaps equally well.

@@ -205,6 +205,13 @@ To see the underlying scheduling model, compare [nurse scheduling software](/nur
   </a>
 </div>
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    After-hours callout coverage at a Critical Access Hospital is not a scheduling problem. It is an infrastructure problem solved at 2 AM by the one tired person who happened to be awake. The hospitals that have this under control are not the ones with better callout policies. They are the ones that pre-ranked the call list during business hours and built a standing per-diem bench. The work happens upstream, not in the middle of the night.
+  </p>
+</div>
+
 ## Frequently Asked Questions
 
 **How do small hospitals handle nurse callouts without a float pool or agency desk?**

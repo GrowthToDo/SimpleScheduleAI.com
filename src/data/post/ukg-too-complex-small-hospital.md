@@ -235,6 +235,13 @@ For a side-by-side comparison of the practical alternatives, see our [UKG altern
   </a>
 </div>
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    UKG is not too complex because the software is poorly designed. It is too complex because the operational assumptions it makes - dedicated HRIS staff, multi-month implementations, integrated payroll and scheduling teams - do not exist at a 25-bed Critical Access Hospital. The complexity is not a feature problem. It is a scale mismatch. Small hospitals that buy UKG are not buying a hard-to-use platform. They are buying a platform built for organizations five times their size.
+  </p>
+</div>
+
 ## Frequently Asked Questions
 
 **Is UKG actually used by Critical Access Hospitals?**

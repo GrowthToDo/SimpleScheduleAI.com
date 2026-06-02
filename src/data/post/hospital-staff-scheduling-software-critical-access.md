@@ -153,6 +153,13 @@ Competitor ratings and product positioning in this post were verified against [G
 
 No competitor capability is asserted as a feature absence. Where a tool's CMS §485.635 or FLSA 8-and-80 handling is not documented on its public product page, this post says to verify it with the vendor rather than claiming the capability is missing. Regulatory and scale claims link to CMS, the Department of Labor, and the Rural Health Information Hub as primary sources.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Hospital staff scheduling software at the CAH scale fails for the same reason every cycle: the platform assumes someone at the hospital has time to operate it. At a 25-bed Critical Access Hospital, that person usually does not exist. The nurse manager is also a clinician. The IT contact is part-time. The scheduling coordinator role does not exist. The platform that survives at CAH scale is not the one with the most features. It is the one that does not require a scheduling administrator to function.
+  </p>
+</div>
+
 ## What to Do This Week
 
 1. **Time your nurse manager's scheduling work for one week.** Count schedule building, callout handling, swap requests, and CMS prep separately. That total is the baseline any tool has to beat.

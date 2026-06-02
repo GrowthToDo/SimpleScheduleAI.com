@@ -208,6 +208,13 @@ For the broader context on [nurse scheduling software for critical access hospit
   <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
 </div>
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    "Automated" in scheduling vendor marketing covers a range that the marketing language deliberately obscures. Levels 2 and 3 (auto-fill and constraint enforcement) are technically automation. So is Level 5 (complete draft generation by a managed service). They are not the same product, and the labor outcome for the nurse manager is fundamentally different. The diagnostic question is not whether the platform uses AI. It is what the nurse manager does on Monday morning.
+  </p>
+</div>
+
 ## What to Do This Week
 
 1. **Ask each scheduling vendor a single diagnostic question.** "Walk me through what the nurse manager does on a Monday morning when the new schedule week starts." Vendors operating at Level 2-3 will describe configuration screens and rule setup. Vendors operating at Level 4-5 will describe review and approval workflows.

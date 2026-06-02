@@ -392,6 +392,13 @@ The key distinction is time and attendance integration. SmartLinx includes T&A a
 
 For hospitals where T&A is managed through payroll software independently of the scheduling system, SmartLinx's T&A advantage does not apply, and the implementation burden difference becomes the primary decision factor.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    SmartLinx is a healthcare-specific platform with strong compliance logic. The Critical Access Hospital question is whether the implementation effort it requires fits the administrative bandwidth a CAH actually has. The vendor's documented focus is post-acute and long-term care, not acute small hospitals. For hospitals at 50-100 beds with IT capacity for a 3-4 month implementation, SmartLinx works. For a 25-bed CAH, the implementation burden often exceeds the capacity available to run it.
+  </p>
+</div>
+
 ## What to Do This Week?
 
 1. **Audit your SmartLinx usage.** Log into SmartLinx and identify which features are actively used versus installed but dormant. If T&A integration, labor analytics, and compliance automation are all actively used and working, staying on SmartLinx is probably the right decision. If fewer than three major features are used regularly, the platform is oversized.

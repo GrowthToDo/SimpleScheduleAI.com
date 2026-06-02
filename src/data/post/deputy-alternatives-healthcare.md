@@ -392,6 +392,13 @@ The comparison above illustrates the category difference between Deputy and Simp
 
 For hospitals where those features represent real operational risk and real manual labor cost, the price difference between Deputy and SimpleScheduleAI is offset by what the hospital is currently paying in manual compliance work and credential management that lives outside the scheduling system.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Deputy is a well-rated general workforce tool. The Critical Access Hospital question is whether general workforce tooling fits a licensed clinical environment with active CMS survey obligations. The honest answer for most CAHs is no - not because Deputy is bad software, but because the compliance and credential logic a hospital needs is not what Deputy was built for. The right alternative depends on whether you need shift visibility or staffing-record defensibility.
+  </p>
+</div>
+
 ## What to Do This Week?
 
 Start by calculating the full cost of Deputy for your hospital. Add the monthly subscription to the staff time spent on manual CMS documentation, credential verification for each callout, and FLSA overtime calculation outside the system. That total is what Deputy actually costs. Use it as the baseline when evaluating whether a purpose-built clinical scheduling tool is cost-neutral.

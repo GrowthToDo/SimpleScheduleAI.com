@@ -508,6 +508,13 @@ The core tradeoff is scope versus self-service. NurseGrid gives nurses a clean m
 
 For a nurse manager at a 25-bed CAH who takes clinical shifts, the manager-side compliance burden is usually the binding constraint, not the nurse app. For a facility where nurse self-service is the entire reason NurseGrid is in place, a hybrid, keeping NurseGrid for staff communication and adding a compliance-focused service for scheduling management, is the more realistic path.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    NurseGrid is genuinely good at what it was built for: a staff-facing app for nurses to view shifts and trade. The CAH question is whether a staff-facing app can be the primary scheduling system. For most small hospitals the answer is no - the manager-side capability needed for compliance documentation, credential-filtered callouts, and FLSA overtime tracking is a different category of work. NurseGrid as a communication layer alongside a real scheduling system is fine. NurseGrid as the only scheduling tool is a coverage risk.
+  </p>
+</div>
+
 ## What to Do This Week?
 
 1. **Define what NurseGrid is actually doing for you today.** Separate the nurse-facing function (schedule viewing, trades) from the manager-side function (building schedules, callouts, compliance). Most CAHs find NurseGrid covers the first and not the second; that split tells you whether you need a replacement or an addition.

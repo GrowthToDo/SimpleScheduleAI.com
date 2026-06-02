@@ -176,6 +176,13 @@ For the broader context on [critical access hospital scheduling](/critical-acces
   </div>
 </div>
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Trust in AI-generated schedules does not come from the algorithm's accuracy. It comes from auditability and human override. When nurses can see why each assignment was made, distribute appeals through the manager, and know that a human signed off, adoption follows. When the schedule arrives as a black box, it gets quietly reworked by hand. The trust pattern is structural: show the work, keep the override, and the math becomes acceptable.
+  </p>
+</div>
+
 ## Frequently Asked Questions
 
 **Q: Can an AI scheduling system be biased against certain nurses?**

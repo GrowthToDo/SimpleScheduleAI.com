@@ -149,6 +149,13 @@ One honest limitation: SimpleScheduleAI works best for hospitals that have reaso
 
 For more context on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Excel does not fail Critical Access Hospitals because it is a bad spreadsheet. It fails because the work it does well - storing data and doing arithmetic - is not the work CAH scheduling actually requires. Constraint enforcement, audit trails, and callout-overtime ranking are not spreadsheet problems. The cost of staying on Excel is not the time spent in Excel. It is the cost of the things Excel does not catch: overtime surprises, credential gaps, and CMS survey findings that surface months after the schedule was posted.
+  </p>
+</div>
+
 ## What to Do This Week
 
 1. **Time-track every scheduling task for one week.** Schedule building, callout calls, time-off processing, payroll OT reconciliation, and credential checks. Most managers underestimate the total by 30-40% because interruptions are not logged. Use a sticky note and a stopwatch if needed.

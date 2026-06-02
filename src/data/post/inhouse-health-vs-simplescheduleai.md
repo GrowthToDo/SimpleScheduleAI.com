@@ -208,6 +208,13 @@ Fourth, can the vendor name a reference customer that matches your facility: a s
 
 Write the answers down before any demo. A demo shows what the software can do. These four questions show who at your hospital has to do it, which is what actually determines whether the model fits.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    In-House Health and SimpleScheduleAI both build nurse schedules with AI. The honest distinction is who operates the AI. A self-operated platform assumes the hospital has someone to own the configuration and data over time. A managed service assumes it does not. Neither is universally better. For a 25-bed CAH with no IT department and a nurse manager who covers clinical shifts, the operating model decides the purchase before the feature comparison even starts.
+  </p>
+</div>
+
 ## What to Do This Week
 
 1. Write down who at your hospital would own a scheduling platform day to day, by name and role. If that line is blank, a self-operated AI tool is the wrong starting point and a managed service is the better fit.

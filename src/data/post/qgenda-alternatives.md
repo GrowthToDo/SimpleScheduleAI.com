@@ -379,6 +379,13 @@ QGenda is worth keeping if:
   </table>
 </div>
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    QGenda is a strong physician-scheduling platform that has expanded into nursing. For a Critical Access Hospital that needs only nursing scheduling, the physician-scheduling overhead adds cost without proportional value, and the click-heavy configuration described by reviewers compounds at small administrative scale. The right alternative depends on whether the hospital actually needs physician scheduling. If it does, QGenda fits. If it does not, a nursing-focused tool removes the configuration burden the broader platform creates.
+  </p>
+</div>
+
 ## What to Do This Week
 
 1. **Know your contract terms.** QGenda contracts are typically multi-year enterprise agreements. Understand your renewal date and required notice period before starting any evaluation; the contract clock matters more than the technology evaluation clock.

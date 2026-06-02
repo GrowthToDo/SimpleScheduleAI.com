@@ -292,6 +292,13 @@ surface this during onboarding.
 
 Public quotes referenced in this guide were gathered from Capterra and AllNurses.com on 2026-04-30. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The $26,000 scheduling burden is not a software-licensing problem. It is a labor-allocation problem. CAH nurse managers spend roughly a fifth of their week on tasks that do not require clinical judgment - spreadsheet maintenance, phone-tree callouts, overtime reconciliation, paper documentation. The fix is not a better tool to do the same work faster. The fix is removing the work from the wrong person. Every hour returned to clinical leadership is an hour the hospital does not pay twice.
+  </p>
+</div>
+
 ## Frequently Asked Questions
 
 **Q: How many hours per week do nurse managers typically spend on scheduling?**
