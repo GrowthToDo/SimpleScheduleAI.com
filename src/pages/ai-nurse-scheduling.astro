@@ -179,6 +179,94 @@ const breadcrumbSchema = {
           certification, and recent undesirable-shift load, then surfacing the top candidates in seconds.
         </li>
       </ul>
+
+      <div class="not-prose my-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="border border-slate-300 dark:border-slate-700 rounded-lg p-4 bg-white dark:bg-slate-900">
+            <div class="flex items-center gap-2 mb-2">
+              <div
+                class="w-8 h-8 rounded bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-700 dark:text-blue-300 text-sm font-bold"
+              >
+                1
+              </div>
+              <h4 class="text-base font-semibold text-slate-900 dark:text-slate-100 m-0">Constraint solving</h4>
+            </div>
+            <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">Hard rules that cannot be broken:</p>
+            <ul class="text-xs text-slate-600 dark:text-slate-400 list-disc pl-4 space-y-1 m-0">
+              <li>RN coverage every shift</li>
+              <li>Certification match</li>
+              <li>Mandatory rest periods</li>
+              <li>CMS §485.635 RN on duty</li>
+            </ul>
+          </div>
+
+          <div class="border border-slate-300 dark:border-slate-700 rounded-lg p-4 bg-white dark:bg-slate-900">
+            <div class="flex items-center gap-2 mb-2">
+              <div
+                class="w-8 h-8 rounded bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center text-emerald-700 dark:text-emerald-300 text-sm font-bold"
+              >
+                2
+              </div>
+              <h4 class="text-base font-semibold text-slate-900 dark:text-slate-100 m-0">Fairness optimization</h4>
+            </div>
+            <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">Soft goals balanced across the block:</p>
+            <ul class="text-xs text-slate-600 dark:text-slate-400 list-disc pl-4 space-y-1 m-0">
+              <li>Night-shift distribution</li>
+              <li>Weekend rotation</li>
+              <li>Holiday assignment</li>
+              <li>Same-nurse repeat protection</li>
+            </ul>
+          </div>
+
+          <div class="border border-slate-300 dark:border-slate-700 rounded-lg p-4 bg-white dark:bg-slate-900">
+            <div class="flex items-center gap-2 mb-2">
+              <div
+                class="w-8 h-8 rounded bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center text-amber-700 dark:text-amber-300 text-sm font-bold"
+              >
+                3
+              </div>
+              <h4 class="text-base font-semibold text-slate-900 dark:text-slate-100 m-0">Callout ranking</h4>
+            </div>
+            <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">Real-time scoring at the moment of a callout:</p>
+            <ul class="text-xs text-slate-600 dark:text-slate-400 list-disc pl-4 space-y-1 m-0">
+              <li>Current-week OT status</li>
+              <li>Certification match</li>
+              <li>Recent bad-shift load</li>
+              <li>Cost per shift</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex justify-center my-4 text-slate-400 dark:text-slate-500 text-2xl leading-none">↓</div>
+
+        <div
+          class="bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg p-4 text-center"
+        >
+          <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3 m-0">
+            Three ranked schedule drafts produced
+          </p>
+          <div class="flex flex-wrap justify-center gap-2 text-xs">
+            <span
+              class="px-3 py-1.5 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-900 dark:text-blue-100 font-medium"
+              >Balanced</span
+            >
+            <span
+              class="px-3 py-1.5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-900 dark:text-emerald-100 font-medium"
+              >Fairness-optimized</span
+            >
+            <span
+              class="px-3 py-1.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-900 dark:text-amber-100 font-medium"
+              >Cost-optimized</span
+            >
+          </div>
+        </div>
+
+        <p class="text-sm text-slate-600 dark:text-slate-400 italic mt-3">
+          Three parallel computations produce three ranked schedule drafts. The nurse manager picks the tradeoff that
+          fits the cycle.
+        </p>
+      </div>
+
       <p>
         Because these goals compete, the system generates three drafts: balanced, fairness-optimized, and
         cost-optimized. The cost-optimized draft minimizes projected overtime. The fairness-optimized draft accepts a

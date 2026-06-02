@@ -322,6 +322,120 @@ const breadcrumbSchema = {
         to 5 on nights, every day of the year. That is about 14 to 18 nurse shifts a day, or close to 110 to 125 shifts
         a week before a single callout.
       </p>
+
+      <div class="not-prose my-10">
+        <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-3">
+          Sample 7-Day Nurse Schedule: 25-Bed CAH, June 2-8, 2026
+        </h3>
+        <div
+          class="overflow-x-auto rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"
+        >
+          <table class="w-full border-collapse text-xs sm:text-sm min-w-[760px]">
+            <thead class="bg-slate-100 dark:bg-slate-800">
+              <tr>
+                <th
+                  class="px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 border-r border-slate-300 dark:border-slate-700"
+                  >Shift</th
+                >
+                <th class="px-2 py-3 text-center font-semibold text-slate-900 dark:text-slate-100">Mon Jun 2</th>
+                <th class="px-2 py-3 text-center font-semibold text-slate-900 dark:text-slate-100">Tue Jun 3</th>
+                <th class="px-2 py-3 text-center font-semibold text-slate-900 dark:text-slate-100">Wed Jun 4</th>
+                <th class="px-2 py-3 text-center font-semibold text-slate-900 dark:text-slate-100">Thu Jun 5</th>
+                <th class="px-2 py-3 text-center font-semibold text-slate-900 dark:text-slate-100">Fri Jun 6</th>
+                <th
+                  class="px-2 py-3 text-center font-semibold text-blue-800 dark:text-blue-200 bg-blue-50 dark:bg-blue-900/30"
+                  >Sat Jun 7</th
+                >
+                <th
+                  class="px-2 py-3 text-center font-semibold text-blue-800 dark:text-blue-200 bg-blue-50 dark:bg-blue-900/30"
+                  >Sun Jun 8</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t border-slate-300 dark:border-slate-700">
+                <td
+                  class="px-3 py-3 font-medium text-slate-800 dark:text-slate-200 border-r border-slate-300 dark:border-slate-700"
+                >
+                  <div>Day</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">07:00-19:00</div>
+                </td>
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >5 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >5 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >6 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >5 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >5 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >4 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >4 RN</td
+                >
+              </tr>
+              <tr class="border-t border-slate-300 dark:border-slate-700">
+                <td
+                  class="px-3 py-3 font-medium text-slate-800 dark:text-slate-200 border-r border-slate-300 dark:border-slate-700"
+                >
+                  <div>Night</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">19:00-07:00</div>
+                </td>
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >3 RN</td
+                >
+                <td class="px-2 py-3 text-center bg-emerald-50 dark:bg-emerald-900/30">
+                  <div class="text-xs font-semibold text-red-700 dark:text-red-300 line-through">Emily D. sick</div>
+                  <div class="text-xs text-emerald-800 dark:text-emerald-200 font-semibold mt-1">→ Amanda W.</div>
+                  <div class="text-xs text-emerald-700 dark:text-emerald-300">3 RN covered</div>
+                </td>
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >3 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >3 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >4 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >3 RN</td
+                >
+                <td class="px-2 py-3 text-center text-blue-900 dark:text-blue-100 bg-blue-50/60 dark:bg-blue-900/20"
+                  >3 RN</td
+                >
+              </tr>
+              <tr class="border-t border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60">
+                <td
+                  class="px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 border-r border-slate-300 dark:border-slate-700"
+                  >Daily total</td
+                >
+                <td class="px-2 py-2 text-center text-xs text-slate-700 dark:text-slate-300">8 RN</td>
+                <td class="px-2 py-2 text-center text-xs text-slate-700 dark:text-slate-300">8 RN</td>
+                <td class="px-2 py-2 text-center text-xs text-slate-700 dark:text-slate-300">9 RN</td>
+                <td class="px-2 py-2 text-center text-xs text-slate-700 dark:text-slate-300">8 RN</td>
+                <td class="px-2 py-2 text-center text-xs text-slate-700 dark:text-slate-300">9 RN</td>
+                <td class="px-2 py-2 text-center text-xs text-slate-700 dark:text-slate-300">7 RN</td>
+                <td class="px-2 py-2 text-center text-xs text-slate-700 dark:text-slate-300">7 RN</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 italic mt-3">
+          Sample 7-day nurse schedule grid for a 25-bed CAH. Day shift needs 4 to 6 RNs, night shift 3 to 5. Tuesday
+          night shows a callout (Emily D. sick) and the system-generated replacement (Amanda W. confirmed). Weekend
+          columns highlighted in blue. Weekly total: 56 RN shifts before a second callout.
+        </p>
+      </div>
+
       <h2>Why Does Overtime Creep Happen Structurally at Critical Access Hospitals?</h2>
       <p>
         Filling those shifts from a roster of 25 to 35 nurses leaves almost no slack. Each nurse works three 12-hour
