@@ -311,7 +311,7 @@ The limitation at a CAH is compliance. When I Work does not have credential trac
 
 - When I Work's product page does not specifically document HIPAA, BAA, CMS §485.635 audit-trail support, FLSA 8-and-80 tracking, or credential-based constraint enforcement. Hospitals with active CMS or HIPAA obligations should confirm directly with When I Work sales which capabilities are covered in their tier and contract.
 
-**Verdict:** A reasonable budget option for non-CAH facilities. Not appropriate for a CMS-designated Critical Access Hospital where survey documentation is a compliance requirement. See the deeper [Aladtec alternatives](/blog/aladtec-alternatives) guide for the broader When I Work / Homebase / Deputy comparison context.
+**Verdict:** A reasonable budget option for non-CAH facilities. Not appropriate for a CMS-designated Critical Access Hospital where survey documentation is a compliance requirement. See the deeper [Aladtec alternatives](/blog/aladtec-alternatives) guide for the broader When I Work / Homebase / [Deputy](/blog/deputy-alternatives-healthcare) comparison context.
 
 **Ratings (May 2026):** Capterra: 4.5/5 (1,289 reviews).
 

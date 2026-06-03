@@ -189,7 +189,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec (the platform; TCP is the parent company after the 2021 acquisition) is a scheduling platform used at critical access hospitals and EMS organizations. Unlike UKG, it requires minimal IT involvement and can be operational in 2-4 weeks. For a CAH leaving UKG because of implementation complexity, Aladtec represents a meaningful reduction in setup overhead.
+Aladtec (the platform; [TCP](/blog/best-tcp-alternative-for-cah) is the parent company after the 2021 acquisition) is a scheduling platform used at critical access hospitals and EMS organizations. Unlike UKG, it requires minimal IT involvement and can be operational in 2-4 weeks. For a CAH leaving UKG because of implementation complexity, Aladtec represents a meaningful reduction in setup overhead.
 
 The trade-off is clear: Aladtec replaces UKG's complexity with a different kind of self-serve overhead. The nurse manager still configures credential tracking, FLSA overtime thresholds, and shift rules manually. CMS documentation requires the manager to structure and export records; the system does not generate them automatically.
 
@@ -403,7 +403,7 @@ Many do via spreadsheets. But without proactive overtime tracking, credential-un
 
 No. SimpleScheduleAI operates independently. During transition, you export your roster from UKG as an Excel file and upload it to SimpleScheduleAI. The two systems do not connect, which is also why there is no IT integration burden during the switch.
 
-**What about ShiftWizard, is it a good UKG alternative for a small hospital?**
+**What about [ShiftWizard](/blog/shiftwizard-alternatives), is it a good UKG alternative for a small hospital?**
 
 ShiftWizard is a hospital-specific scheduling platform used by more than 500 hospital facilities, owned by HealthStream. It holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews) and was named a G2 Spring 2026 Leader. It is simpler than UKG and designed for nursing workflows, and it is a reasonable option for a hospital that specifically wants a self-serve nursing scheduling tool. As with any self-serve platform, evaluate it on setup time at CAH scale, weekly burden after go-live, mobile feature parity, and 8-and-80 overtime rule support before deciding.
 

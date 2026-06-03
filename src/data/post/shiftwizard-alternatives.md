@@ -28,7 +28,7 @@ This guide compares 6 ShiftWizard alternatives for a Critical Access Hospital ev
 
 - ShiftWizard is a hospital scheduling platform owned by HealthStream, Inc. (acquired). It holds 4.3/5 on G2 and 4.4/5 across 723 Capterra reviews (data verified 2026-04-30), with over 88% of Capterra reviews rating 4 stars or higher.
 - For a Critical Access Hospital, the right comparison is not feature-by-feature. It is which operating model fits a 25-bed facility with no dedicated scheduling coordinator and a nurse manager who also takes clinical shifts.
-- The main platform alternatives are TCP Scheduling / Aladtec (self-serve, public-safety heritage with hospital expansion), NurseGrid (nurse-facing, manager tier available), and QGenda (physician scheduling, positioned for larger health systems). For facilities where the core issue is scheduling labor rather than platform fit, a managed service is a different operating model.
+- The main platform alternatives are [TCP](/blog/best-tcp-alternative-for-cah) Scheduling / Aladtec (self-serve, public-safety heritage with hospital expansion), NurseGrid (nurse-facing, manager tier available), and QGenda (physician scheduling, positioned for larger health systems). For facilities where the core issue is scheduling labor rather than platform fit, a managed service is a different operating model.
 - The critical question before any evaluation: does your nurse manager have 4-6 hours per week available for scheduling administration after go-live? If not, the operating model matters more than which platform you choose.
 - For a CAH staying on a self-serve platform, TCP/Aladtec is the closest healthcare-specific alternative at comparable cost and setup time. For a facility where the nurse manager cannot sustain weekly scheduling administration alongside clinical shifts, SimpleScheduleAI removes that work entirely rather than swapping one platform for another.
 
@@ -451,5 +451,5 @@ A self-serve platform gives the nurse manager direct control and requires her to
 
 [See how the managed service model works in practice →](/how-it-works)
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as [Deputy](/blog/deputy-alternatives-healthcare) General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

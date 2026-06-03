@@ -32,7 +32,7 @@ metadata:
 - [Why do critical access hospitals use 12-hour nursing shifts?](#why-do-critical-access-hospitals-use-12-hour-nursing-shifts)
 - [What scheduling challenges are unique to 12-hour shift hospitals?](#what-scheduling-challenges-are-unique-to-12-hour-shift-hospitals)
 - [What are the fatigue and burnout risks of 12-hour rotating shifts?](#what-are-the-fatigue-and-burnout-risks-of-12-hour-rotating-shifts)
-- [How do you build a fair 12-hour shift schedule for a 25-bed CAH?](#how-do-you-build-a-fair-12-hour-shift-schedule-for-a-25-bed-cah)
+- [How do you build a fair 12-hour shift schedule for a 25-bed Critical Access Hospital?](#how-do-you-build-a-fair-12-hour-shift-schedule-for-a-25-bed-critical-access-hospital)
 - [How is SimpleScheduleAI's 12-hour scheduling different?](#how-is-simplescheduleais-12-hour-scheduling-different)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -140,7 +140,7 @@ nursing errors and eventual turnover.
 - Charge nurses carrying clinical shift load while also managing unit admin, effectively
   working a cognitively extended shift
 
-## How do you build a fair 12-hour shift schedule for a 25-bed CAH?
+## How do you build a fair 12-hour shift schedule for a 25-bed Critical Access Hospital?
 
 Building a fair 12-hour shift schedule for a 25-bed CAH requires addressing coverage
 adequacy, weekend/night distribution, and fatigue guards simultaneously, in that order.

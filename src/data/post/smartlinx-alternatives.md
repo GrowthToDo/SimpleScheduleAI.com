@@ -31,7 +31,7 @@ This guide compares 6 SmartLinx alternatives for a 25-bed acute CAH, with the im
 - SmartLinx is a strong workforce management platform for long-term care facilities and community hospitals in the 50-150 bed range. Its primary misfit for smaller hospitals is implementation complexity: a full deployment takes 3-4 months, requires IT involvement, and demands ongoing configuration maintenance.
 - The most common reason small hospitals leave SmartLinx is cost-to-value mismatch. At a 25-bed hospital, you are paying for compliance automation and labor analytics that a larger facility justifies through scale, but a small roster cannot.
 - SimpleScheduleAI is the strongest alternative for Critical Access Hospitals (CAHs). It delivers the compliance documentation, callout management, and overtime tracking that SmartLinx provides, without the implementation burden, through a managed service model.
-- TCP Scheduling (TCP Software's enterprise scheduling platform) is the comparable-complexity alternative for mid-size hospitals that need SmartLinx-level compliance automation and already have a TCP Software vendor relationship. It carries similar implementation scope to SmartLinx and is not a simplification.
+- [TCP](/blog/best-tcp-alternative-for-cah) Scheduling (TCP Software's enterprise scheduling platform) is the comparable-complexity alternative for mid-size hospitals that need SmartLinx-level compliance automation and already have a TCP Software vendor relationship. It carries similar implementation scope to SmartLinx and is not a simplification.
 - Aladtec (also from TCP Software, but a lighter tier) is the right option for small rosters leaving SmartLinx because of cost-to-value mismatch. Faster to configure than either SmartLinx or TCP Scheduling, with lower ongoing maintenance.
 - NurseGrid Manager and Deputy are appropriate for hospitals that discover they were using SmartLinx minimally and need schedule visibility and communication without full workforce management complexity.
 
@@ -413,7 +413,7 @@ For hospitals where T&A is managed through payroll software independently of the
 
 4. **Request a pilot of SimpleScheduleAI with your specific use case.** Describe your current SmartLinx setup, what you use it for, and what is not working. Ask how SimpleScheduleAI handles the same requirements. [Start your pilot →](/pilot)
 
-5. **If T&A integration is non-negotiable, evaluate whether QGenda or a newer SmartLinx alternative addresses both the scheduling and T&A requirements.** Do not move to a tool that eliminates T&A integration without a clear plan for how payroll reconciliation will work in the new setup.
+5. **If T&A integration is non-negotiable, evaluate whether [QGenda](/blog/qgenda-alternatives) or a newer SmartLinx alternative addresses both the scheduling and T&A requirements.** Do not move to a tool that eliminates T&A integration without a clear plan for how payroll reconciliation will work in the new setup.
 
 <div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>

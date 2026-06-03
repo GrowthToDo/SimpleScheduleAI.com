@@ -181,7 +181,7 @@ The managed service model means the hospital does not install software or mainta
 
 <img src="/images/blog/deputy-alternatives-healthcare/Aladtec.png" alt="Aladtec scheduling software for small hospitals and healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec is the most natural upgrade path from Deputy for small hospitals that want to stay on self-serve software but need healthcare-specific credential tracking and coverage rules. It is more expensive than Deputy but significantly less expensive than SmartLinx or QGenda, and it offers a healthcare-oriented scheduling model that Deputy does not.
+Aladtec is the most natural upgrade path from Deputy for small hospitals that want to stay on self-serve software but need healthcare-specific credential tracking and coverage rules. It is more expensive than Deputy but significantly less expensive than [SmartLinx](/blog/smartlinx-alternatives) or [QGenda](/blog/qgenda-alternatives), and it offers a healthcare-oriented scheduling model that Deputy does not.
 
 The migration from Deputy to Aladtec is straightforward: export your current staff roster from Deputy, reconfigure in Aladtec with credential profiles and minimum staffing rules, and run a parallel period before switching fully.
 
@@ -447,7 +447,7 @@ Deputy has an employee profile system where credential information can be entere
 
 **What is the cost difference between Deputy and healthcare scheduling software?**
 
-At a 20-nurse roster, Deputy costs approximately $90 per month ($4.50 per user). Aladtec starts around $200-450 per month. NurseGrid Manager runs approximately $150-300 per month. SmartLinx and SimpleScheduleAI do not publish pricing and require a quote. For most hospitals, the labor cost of manual compliance work that Deputy requires exceeds the price difference between Deputy and a healthcare-specific tool, making the upgrade cost-neutral or positive when total cost is calculated.
+At a 20-nurse roster, Deputy costs approximately $90 per month ($4.50 per user). Aladtec starts around $200-450 per month. [NurseGrid](/blog/nursegrid-alternatives) Manager runs approximately $150-300 per month. SmartLinx and SimpleScheduleAI do not publish pricing and require a quote. For most hospitals, the labor cost of manual compliance work that Deputy requires exceeds the price difference between Deputy and a healthcare-specific tool, making the upgrade cost-neutral or positive when total cost is calculated.
 
 **Does Deputy work for hospital scheduling if I configure it correctly?**
 

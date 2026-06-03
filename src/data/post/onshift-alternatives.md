@@ -33,7 +33,7 @@ This guide compares 6 OnShift alternatives for a CAH that runs acute inpatient n
 - SimpleScheduleAI is the strongest alternative for a Critical Access Hospital that wants the scheduling handled rather than a better tool to do it itself. It delivers ranked, credential-filtered callout replacement lists, automatic CMS §485.635 documentation, and Texas overtime compliance as defaults.
 - For hospitals that want self-serve software, Aladtec is the smaller-roster option with direct-outreach callout management, and SmartLinx is the path for 50-100 bed facilities that need stronger compliance automation than OnShift and have IT capacity for a longer implementation.
 - QGenda is the right choice when the actual problem is consolidating physician and nursing scheduling onto one platform. UKG is the enterprise-tier option only when a parent health system mandates it and supplies the implementation resources.
-- General workforce tools such as Deputy and nurse-facing apps such as NurseGrid Manager solve narrower problems; CAHs with active CMS or HIPAA obligations should verify clinical compliance capabilities directly with each vendor before relying on either as a primary scheduling system.
+- General workforce tools such as [Deputy](/blog/deputy-alternatives-healthcare) and nurse-facing apps such as NurseGrid Manager solve narrower problems; CAHs with active CMS or HIPAA obligations should verify clinical compliance capabilities directly with each vendor before relying on either as a primary scheduling system.
 
 ## Table of Contents
 
@@ -117,7 +117,7 @@ The table below covers customer focus, public ratings, and setup time across the
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Aladtec by TCP</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Aladtec by [TCP](/blog/best-tcp-alternative-for-cah)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Public safety, EMS, small healthcare rosters</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews; small sample)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">2-4 weeks</td>

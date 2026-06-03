@@ -27,7 +27,7 @@ This guide compares 6 alternatives for a 25-bed CAH that needs hospital-nursing 
 
 ## Key Takeaways
 
-- For a Critical Access Hospital that needs a self-serve platform designed specifically for hospital nurse scheduling workflows, ShiftWizard is a stronger fit than Aladtec. For a facility staying within the TCP ecosystem, TCP Scheduling is the direct upgrade path with a longer implementation. For a hospital that needs the scheduling handled rather than a better tool to do it themselves, SimpleScheduleAI is the managed service alternative.
+- For a Critical Access Hospital that needs a self-serve platform designed specifically for hospital nurse scheduling workflows, [ShiftWizard](/blog/shiftwizard-alternatives) is a stronger fit than Aladtec. For a facility staying within the [TCP](/blog/best-tcp-alternative-for-cah) ecosystem, TCP Scheduling is the direct upgrade path with a longer implementation. For a hospital that needs the scheduling handled rather than a better tool to do it themselves, SimpleScheduleAI is the managed service alternative.
 - Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). The platform's documented customer base on Capterra skews toward fire, EMS, law enforcement, and security users; the most recent hospital-context reviews on Capterra are several years old.
 - TCP Scheduling is the enterprise-tier product from the same parent company; data migration within the TCP ecosystem is simpler than switching vendors entirely, but configuration depth and implementation effort are higher.
 - SmartLinx, with documented focus on long-term care, post-acute, senior care, and behavioral health, is a self-serve option for hospitals at 50-100 beds with IT capacity for a longer implementation.
@@ -510,7 +510,7 @@ Yes. TCP Software owns both Aladtec and TCP Scheduling. For hospitals that want 
 
 **What does Aladtec cost compared to its alternatives?**
 
-Aladtec costs approximately $200-450 per month for a typical small hospital roster. Deputy is significantly cheaper at $4.50 per user per month (roughly $90-110/month for a 20-25 nurse roster). NurseGrid Manager runs $150-300/month. SmartLinx and QGenda are both higher cost than Aladtec and require quotes. SimpleScheduleAI pricing is not listed publicly.
+Aladtec costs approximately $200-450 per month for a typical small hospital roster. Deputy is significantly cheaper at $4.50 per user per month (roughly $90-110/month for a 20-25 nurse roster). [NurseGrid](/blog/nursegrid-alternatives) Manager runs $150-300/month. SmartLinx and [QGenda](/blog/qgenda-alternatives) are both higher cost than Aladtec and require quotes. SimpleScheduleAI pricing is not listed publicly.
 
 **Is Aladtec HIPAA compliant?**
 

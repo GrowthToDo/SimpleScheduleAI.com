@@ -38,7 +38,7 @@ This guide names the five levels of scheduling automation and shows how to ask o
 - [What are the real levels of scheduling automation?](#what-are-the-real-levels-of-scheduling-automation)
 - [Why do automated scheduling tools still require manual work?](#why-do-automated-scheduling-tools-still-require-manual-work)
 - [What does scheduling automation look like in real reviews?](#what-does-scheduling-automation-look-like-in-real-reviews)
-- [What should a CAH expect from genuinely automated scheduling?](#what-should-a-cah-expect-from-genuinely-automated-scheduling)
+- [What should a Critical Access Hospital expect from genuinely automated scheduling?](#what-should-a-critical-access-hospital-expect-from-genuinely-automated-scheduling)
 - [How is SimpleScheduleAI's automation different?](#how-is-simplescheduleais-automation-different)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -159,7 +159,7 @@ On ShiftWizard, Erika A. (Registered Nurse) wrote on [Capterra](https://www.capt
 
 The pattern in these accounts: tools that market automation at Level 3 are delivering what they promise. The mismatch is when buyers expect Level 4 or Level 5 based on the marketing and receive Level 3 in practice. The time savings are real. The claim that "the scheduling is done for you" is not.
 
-## What Should a CAH Expect from Genuinely Automated Scheduling?
+## What Should a Critical Access Hospital Expect from Genuinely Automated Scheduling?
 
 A CAH with no dedicated scheduling coordinator should expect genuinely automated scheduling to mean: a complete draft schedule exists before the nurse manager starts her week, ready for review. Not a framework for building a schedule. Not a set of tools that makes building faster. A draft.
 

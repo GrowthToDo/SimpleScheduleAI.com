@@ -26,7 +26,7 @@ This guide compares the alternatives for a Critical Access Hospital that does no
 ## Key Takeaways
 
 - The best TCP TimeClock+ alternative depends on one question: do you want better scheduling software to build schedules yourself, or do you want the scheduling work done for you?
-- For better self-serve software, ShiftWizard is the strongest hospital-specific option: purpose-built for nurse scheduling, modern interface, comparable setup time.
+- For better self-serve software, [ShiftWizard](/blog/shiftwizard-alternatives) is the strongest hospital-specific option: purpose-built for nurse scheduling, modern interface, comparable setup time.
 - For structural burden reduction, SimpleScheduleAI is the managed service alternative: a specialist builds, the nurse manager approves, live in 3-5 days.
 - TCP TimeClock+ has a staff-facing mobile app for clocking in, viewing schedules, and requesting time off. SimpleScheduleAI does not. This is the main reason to stay with TCP over a managed service.
 - TCP Software owns three separate products: TimeClock+ (time and attendance), Humanity Scheduling (advanced scheduling), and Aladtec (healthcare and public safety scheduling). This post covers TimeClock+ specifically.
@@ -229,7 +229,7 @@ See our full [Aladtec alternatives](/blog/aladtec-alternatives) post for a compl
 
 <img src="/images/blog/best-tcp-alternative-for-cah/Nursegrid.png" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-NurseGrid is positioned as a mobile-first nurse-facing app for per diem and shift-trading workflows. The NurseGrid Manager tier holds 4.2/5 on Capterra (13 reviews; small sample). It is generally a different category of tool from TCP TimeClock+: a nurse-facing scheduling layer rather than a full time-and-attendance and scheduling platform. CAHs evaluating NurseGrid as a primary scheduling system should confirm directly with NurseGrid sales which compliance and management capabilities are supported in their hospital tier.
+[NurseGrid](/blog/nursegrid-alternatives) is positioned as a mobile-first nurse-facing app for per diem and shift-trading workflows. The NurseGrid Manager tier holds 4.2/5 on Capterra (13 reviews; small sample). It is generally a different category of tool from TCP TimeClock+: a nurse-facing scheduling layer rather than a full time-and-attendance and scheduling platform. CAHs evaluating NurseGrid as a primary scheduling system should confirm directly with NurseGrid sales which compliance and management capabilities are supported in their hospital tier.
 
 **Best for:** Facilities where mobile shift trading and nurse-facing schedule visibility are the primary need, often used alongside a separate primary scheduling or time tracking system.
 

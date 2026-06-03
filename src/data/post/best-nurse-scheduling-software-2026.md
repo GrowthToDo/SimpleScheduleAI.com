@@ -82,7 +82,7 @@ Here is how all 8 platforms compare at a glance before we go deeper:
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Aladtec by TCP</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Aladtec by [TCP](/blog/best-tcp-alternative-for-cah)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Public safety, EMS, fire, small healthcare</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">2-4 weeks</td>
