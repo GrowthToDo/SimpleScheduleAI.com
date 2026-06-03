@@ -42,6 +42,7 @@ This guide compares 5 scheduling platforms specifically on fit for the 25-bed ro
 - [Which Software Fits Your 25-Bed Hospital?](#which-software-fits-your-25-bed-hospital)
 - [How Does SimpleScheduleAI Fit the 25-Bed Model?](#how-does-simplescheduleai-fit-the-25-bed-model)
 - [What to Do This Week](#what-to-do-this-week)
+- [A Note on Sources](#a-note-on-sources)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 At 25 beds, a hospital is typically a [Critical Access Hospital](/critical-access-hospital-scheduling) (CAH). That designation brings federal CMS requirements around nurse-to-patient ratios, staffing documentation, and annual compliance reporting. It also brings a roster size that most scheduling vendors do not actually plan for. The math at 25 beds is unforgiving: one nurse calling out can trigger a compliance gap. One nurse manager spending 10 hours per week on scheduling instead of 2 loses 400 clinical hours per year. For the broader category of [nurse scheduling software](/nurse-scheduling-software) options at CAH scale, see our dedicated guide. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
@@ -191,10 +192,13 @@ SimpleScheduleAI is a managed scheduling service designed from the start for 25-
 
 **Key limitations:**
 
-- Managed service model means less direct control over schedule generation compared to self-serve tools
-- Not suited for hospitals with complex physician or multi-department scheduling that extends beyond nursing
+- Managed service model means the nurse manager receives draft schedules rather than building them directly; less real-time cell-by-cell control than self-serve software
+- Not designed for hospitals with complex multi-department or physician scheduling beyond nursing
+- No staff-facing mobile app: nurses do not view schedules or submit shift trades directly through SimpleScheduleAI. Pair with a separate communication tool if nurse-facing self-service is a priority
 
-**Verdict:** For a 25-bed CAH where the nurse manager takes shifts and scheduling is eating clinical hours, SimpleScheduleAI is the only tool on this list purpose-built for that exact constraint. Every other tool in this list is general-purpose software applied to a specialized problem.
+**Verdict:** For a 25-bed CAH where the nurse manager takes shifts and scheduling is eating clinical hours, SimpleScheduleAI is the only tool on this list purpose-built for that exact constraint. Every other tool in this list is general-purpose software applied to a specialized problem. See [how it works](/how-it-works) or the [managed service vs scheduling software](/blog/managed-service-vs-scheduling-software) comparison for the operating-model breakdown.
+
+**Ratings:** New service; in active pilot phase. No G2 or Capterra listing yet.
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -215,10 +219,23 @@ Aladtec was built for emergency services (EMS, fire, law enforcement) but has a 
 
 **Key limitations:**
 
-- Initial setup for a hospital environment requires configuring rules that Aladtec does not ship with by default; healthcare-specific defaults like charge nurse minimums require manual setup
-- No CMS-specific documentation templates
+- **Click-Heavy Workflow.** Some reviewers describe high click counts for routine schedule edits at hospital scale.
 
-**Verdict:** The strongest self-serve option for a 25-bed hospital that wants to own its scheduling process internally. Expect a 4-6 week ramp before the tool is working efficiently for your specific constraints.
+  > "When editing the schedule there are a lot of clicks involved."
+  >
+  > Amanda F., Nurse Manager, Hospital & Health Care, October 13, 2020, Capterra
+
+- **Setup Complexity.** Initial configuration for a hospital environment is described as harder than expected by some administrators; charge nurse minimums and other healthcare-specific defaults are not shipped out of the box.
+
+  > "It was a bit complicated to figure out from the administrator side."
+  >
+  > Jeanne C., Administrative Coordinator, May 7, 2019, Capterra
+
+- CMS §485.635 documentation templates are not documented on the Aladtec product page. Hospitals with active CMS survey obligations should confirm current capabilities directly with the vendor before deciding.
+
+**Verdict:** The strongest self-serve option for a 25-bed hospital that wants to own its scheduling process internally. Expect a 4-6 week ramp before the tool is working efficiently for your specific constraints. See the deeper [Aladtec alternatives for Critical Access Hospitals](/blog/aladtec-alternatives) guide for a fuller competitor analysis or the [Aladtec vs managed service](/blog/aladtec-vs-managed-service) comparison if the operating model is the decision point.
+
+**Ratings (May 2026):** G2: 4.3/5 (97 reviews). Capterra: 4.6/5 (17 reviews; small sample, reviewer base skews toward fire, EMS, and law enforcement; most recent hospital-context review is October 2020).
 
 **Cost:** $200-450 per month depending on roster size and modules. Pricing requires a quote.
 
@@ -238,11 +255,27 @@ NurseGrid Manager is a nurse communication and schedule visibility tool rather t
 
 **Key limitations:**
 
-- Does not build schedules; the manager still needs to create the schedule in another tool
-- No overtime tracking, CMS documentation, or compliance features
-- Callout coverage is broadcast-based, not ranked by availability or overtime risk
+- **Manager App Removed.** Multiple Capterra reviewers describe losing the manager-side mobile app in 2024, requiring desktop login for schedule edits. Verify current manager-app capability directly with the vendor.
 
-**Verdict:** A useful communication layer, not a scheduling replacement. If the underlying scheduling problem is that the manager spends too many hours building schedules and calculating compliance, NurseGrid Manager does not solve it.
+  > "It no longer has the manager app so I have to login to desktop."
+  >
+  > Chief Nursing Officer, Hospital & Health Care, June 13, 2024, Capterra
+
+  > "they took away the Manager App for your phone."
+  >
+  > Staffing Coordinator, Medical Practice, June 11, 2024, Capterra
+
+- **Cost for Small Facilities.** Some small-facility reviewers describe pricing as a barrier at CAH scale.
+
+  > "cost is too expensive for small centers."
+  >
+  > Administrator, Hospital & Health Care, June 17, 2024, Capterra
+
+- FLSA overtime tracking, CMS §485.635 audit trail, and credential-based callout filtering are not documented as core features for the manager tier. Hospitals with active CMS obligations should confirm current tier coverage directly with NurseGrid.
+
+**Verdict:** A useful communication layer, not a scheduling replacement. If the underlying scheduling problem is that the manager spends too many hours building schedules and calculating compliance, NurseGrid Manager does not solve it. See the deeper [NurseGrid alternatives for Critical Access Hospitals](/blog/nursegrid-alternatives) guide for the fuller competitor analysis.
+
+**Ratings (May 2026):** Capterra: 4.2/5 (13 reviews; small sample). Verify current ratings directly with the vendor.
 
 **Cost:** Approximately $150-300 per month for the manager tier. Exact pricing requires contact.
 
@@ -264,10 +297,23 @@ The limitation at a CAH is compliance. When I Work does not have credential trac
 
 **Key limitations:**
 
-- No credential tracking, no CMS-compliant audit documentation
-- Callout replacement is broadcast-based, not ranked by overtime risk or qualifications
+- **Audit Capability.** A hospital IT reviewer flagged the absence of audit logging for schedule changes.
 
-**Verdict:** A reasonable budget option for non-CAH facilities. Not appropriate for a CMS-designated Critical Access Hospital where survey documentation is a compliance requirement.
+  > "No Auditing capability to see if unauthorized changes were made, and does not work for complex workflows."
+  >
+  > Jonathan R., IT Admin, Hospital & Health Care, February 25, 2026, Capterra
+
+- **Time-off Visibility.** A clinical operations manager noted a workflow limitation around time-off coordination.
+
+  > "I don't like that when providers have time off requests, they cannot view shifts."
+  >
+  > Mallory S., Clinical Operations Manager, Hospital & Health Care, February 12, 2026, Capterra
+
+- When I Work's product page does not specifically document HIPAA, BAA, CMS §485.635 audit-trail support, FLSA 8-and-80 tracking, or credential-based constraint enforcement. Hospitals with active CMS or HIPAA obligations should confirm directly with When I Work sales which capabilities are covered in their tier and contract.
+
+**Verdict:** A reasonable budget option for non-CAH facilities. Not appropriate for a CMS-designated Critical Access Hospital where survey documentation is a compliance requirement. See the deeper [Aladtec alternatives](/blog/aladtec-alternatives) guide for the broader When I Work / Homebase / Deputy comparison context.
+
+**Ratings (May 2026):** Capterra: 4.5/5 (1,289 reviews).
 
 **Cost:** Approximately $2.50-$6 per user per month. At a 20-nurse roster, approximately $50-$120/month.
 
@@ -287,11 +333,23 @@ Homebase is a scheduling and time tracking tool built for very small businesses,
 
 **Key limitations:**
 
-- No clinical compliance features, credential tracking, or healthcare-specific documentation
-- Free tier staff limits are too low for most hospital nursing rosters
-- Not appropriate for any unit operating under CMS survey oversight
+- **Mobile Scheduling.** A hospital reviewer flagged a limitation around scheduling actions on the mobile app.
 
-**Verdict:** Below the functional requirements for a hospital nursing unit. Consider it for non-clinical support staff scheduling at the same facility, not for nursing operations.
+  > "I did not like that I could not do scheduling on the app"
+  >
+  > Amber B., Executive Director, Hospital & Health Care, March 26, 2025, Capterra
+
+- **Multi-Location Tracking.** A multi-site reviewer noted constraints around cross-location hour tracking and shift limits.
+
+  > "Homebase did not allow us to track hours across multiple locations unless we paid extra for it. It was not able to limit number of people on a shift, to our knowledge."
+  >
+  > Angela P., Director, Mental Health Care, September 10, 2025, Capterra
+
+- Homebase's product page does not specifically document HIPAA, BAA, CMS §485.635 audit-trail support, FLSA 8-and-80 tracking, or credential constraints. Free tier staff limits are documented as 20 staff per location. Hospitals with active CMS or HIPAA obligations should confirm directly with Homebase sales which capabilities are covered in their tier.
+
+**Verdict:** Below the functional requirements for a hospital nursing unit. Consider it for non-clinical support staff scheduling at the same facility, not for nursing operations. See the deeper [Aladtec alternatives](/blog/aladtec-alternatives) guide for broader Homebase / When I Work / Deputy positioning context.
+
+**Ratings (May 2026):** G2: 4.4/5 (271 reviews). Capterra: 4.6/5 (1,147 reviews).
 
 **Cost:** Free tier for one location with up to 20 staff. Paid plans from $24-$100/month per location.
 
@@ -407,6 +465,10 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 
   </div>
   <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
+
+## A Note on Sources
+
+Public review counts, ratings, and reviewer quotes referenced in this guide were gathered from Capterra and G2 with verification dates noted alongside each ratings line. The Aladtec Capterra quotes are several years old because the most recent hospital-context reviews on the platform are from 2019-2020; Aladtec reviewers since then skew toward fire, EMS, and law enforcement contexts. Quotes for NurseGrid (June 2024), When I Work (February 2026), and Homebase (March 2025 and September 2025) are within recent windows. Documented product capabilities reference each vendor's own product page, with the verification date noted in the vendor caveats. Vendor offerings, ratings, and product capabilities change over time; hospitals evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 ## Frequently Asked Questions
 
