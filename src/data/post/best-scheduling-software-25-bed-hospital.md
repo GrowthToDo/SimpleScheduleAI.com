@@ -1,7 +1,7 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-05-23T00:00:00Z
-updateDate: 2026-05-07T00:00:00Z
+updateDate: 2026-06-03T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Scheduling Software for 25-Bed Hospitals in 2026'
 excerpt: >
@@ -21,7 +21,9 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/best-scheduling-software-25-bed-hospital'
 ---
 
-For CAH-specific guidance, see our [critical access hospital scheduling guide](/critical-access-hospital-scheduling).
+Your software-vendor demo shows a scheduling platform built for a 200-bed system, compressed down for your facility. Your nurse manager, who also covers 2-3 clinical shifts a week, sees a tool she needs four to six weeks to configure before it returns any value. A 25-bed Critical Access Hospital is not a smaller version of a community hospital, and the right scheduling tool is not a smaller version of an enterprise platform.
+
+This guide compares 5 scheduling platforms specifically on fit for the 25-bed roster, the dual-role nurse manager, and the [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance obligations that a CAH carries on top of the scheduling work itself.
 
 ## Key Takeaways
 
@@ -31,138 +33,145 @@ For CAH-specific guidance, see our [critical access hospital scheduling guide](/
 - SimpleScheduleAI is purpose-built for 25-bed Critical Access Hospitals (CAHs). It handles three-option draft scheduling, instant replacement lists, and CMS audit documentation as default behavior, not optional add-ons.
 - For hospitals that prefer self-serve software, Aladtec and NurseGrid Manager are the strongest fits for 25-bed rosters. When I Work and Homebase are lower-cost options for non-CAH facilities where clinical compliance documentation is less critical.
 
-For CAH-specific guidance, see our [critical access hospital scheduling guide](/critical-access-hospital-scheduling).
-
 ## Table of Contents
 
 - [Quick Comparison: 5 Platforms for 25-Bed Hospitals](#quick-comparison-5-platforms-for-25-bed-hospitals)
-- [How to Evaluate Scheduling Software for a 25-Bed Hospital](#how-to-evaluate-scheduling-software-for-a-25-bed-hospital)
+- [How to Evaluate Scheduling Software for a 25-Bed Hospital?](#how-to-evaluate-scheduling-software-for-a-25-bed-hospital)
 - [The 5 Best Options, Reviewed for 25-Bed Hospitals](#the-5-best-options-reviewed-for-25-bed-hospitals)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. Aladtec](#2-aladtec)
-  - [3. NurseGrid Manager](#3-nursegrid-manager)
-  - [4. When I Work](#4-when-i-work)
-  - [5. Homebase](#5-homebase)
-- [What Makes 25-Bed Hospital Scheduling Uniquely Hard](#what-makes-25-bed-hospital-scheduling-uniquely-hard)
+- [What Makes 25-Bed Hospital Scheduling Uniquely Hard?](#what-makes-25-bed-hospital-scheduling-uniquely-hard)
 - [Which Software Fits Your 25-Bed Hospital?](#which-software-fits-your-25-bed-hospital)
-- [How SimpleScheduleAI Fits the 25-Bed Model](#how-simplescheduleai-fits-the-25-bed-model)
+- [How Does SimpleScheduleAI Fit the 25-Bed Model?](#how-does-simplescheduleai-fit-the-25-bed-model)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-At 25 beds, a hospital is typically a Critical Access Hospital (CAH). That designation brings federal CMS requirements around nurse-to-patient ratios, staffing documentation, and annual compliance reporting. It also brings a roster size that most scheduling vendors do not actually plan for. The math at 25 beds is unforgiving: one nurse calling out can trigger a compliance gap. One nurse manager spending 10 hours per week on scheduling instead of 2 loses 400 clinical hours per year.
+At 25 beds, a hospital is typically a [Critical Access Hospital](/critical-access-hospital-scheduling) (CAH). That designation brings federal CMS requirements around nurse-to-patient ratios, staffing documentation, and annual compliance reporting. It also brings a roster size that most scheduling vendors do not actually plan for. The math at 25 beds is unforgiving: one nurse calling out can trigger a compliance gap. One nurse manager spending 10 hours per week on scheduling instead of 2 loses 400 clinical hours per year. For the broader category of [nurse scheduling software](/nurse-scheduling-software) options at CAH scale, see our dedicated guide. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
 Here is how the five platforms most commonly evaluated at 25-bed scale compare before we go deeper:
 
-## How Does Quick Compare: 5 Platforms for 25-Bed Hospitals?
+## Quick Comparison: 5 Platforms for 25-Bed Hospitals
 
 <div class="not-prose overflow-x-auto my-8">
-<table class="w-full text-sm border-collapse" style="min-width:620px">
-<thead>
-<tr class="bg-slate-100">
-<th class="border border-slate-300 px-4 py-2 text-left">Platform</th>
-<th class="border border-slate-300 px-4 py-2 text-left">25-Bed Fit</th>
-<th class="border border-slate-300 px-4 py-2 text-left">CAH Ready</th>
-<th class="border border-slate-300 px-4 py-2 text-left">Callout Coverage</th>
-<th class="border border-slate-300 px-4 py-2 text-left">Cost/Month</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="border border-slate-300 px-4 py-2 font-medium">SimpleScheduleAI</td>
-<td class="border border-slate-300 px-4 py-2">Built for 25-bed CAHs</td>
-<td class="border border-slate-300 px-4 py-2">Yes, built in</td>
-<td class="border border-slate-300 px-4 py-2">Ranked shortlist in 2 min</td>
-<td class="border border-slate-300 px-4 py-2">Not listed</td>
-</tr>
-<tr class="bg-slate-50">
-<td class="border border-slate-300 px-4 py-2 font-medium">Aladtec</td>
-<td class="border border-slate-300 px-4 py-2">Good for small rosters</td>
-<td class="border border-slate-300 px-4 py-2">Adequate</td>
-<td class="border border-slate-300 px-4 py-2">Manual with alerts</td>
-<td class="border border-slate-300 px-4 py-2">$200-450</td>
-</tr>
-<tr>
-<td class="border border-slate-300 px-4 py-2 font-medium">NurseGrid Manager</td>
-<td class="border border-slate-300 px-4 py-2">Nurse comm add-on only</td>
-<td class="border border-slate-300 px-4 py-2">No</td>
-<td class="border border-slate-300 px-4 py-2">Broadcast only</td>
-<td class="border border-slate-300 px-4 py-2">~$150-300</td>
-</tr>
-<tr class="bg-slate-50">
-<td class="border border-slate-300 px-4 py-2 font-medium">When I Work</td>
-<td class="border border-slate-300 px-4 py-2">Budget option, limited compliance</td>
-<td class="border border-slate-300 px-4 py-2">No</td>
-<td class="border border-slate-300 px-4 py-2">Open-shift posting</td>
-<td class="border border-slate-300 px-4 py-2">$2.50-6/user</td>
-</tr>
-<tr>
-<td class="border border-slate-300 px-4 py-2 font-medium">Homebase</td>
-<td class="border border-slate-300 px-4 py-2">Under 20 staff only</td>
-<td class="border border-slate-300 px-4 py-2">No</td>
-<td class="border border-slate-300 px-4 py-2">Basic notifications</td>
-<td class="border border-slate-300 px-4 py-2">Free-$100</td>
-</tr>
-</tbody>
-</table>
+  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-800">
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Platform</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:24%">25-Bed Fit</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:14%">CAH Ready</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:26%">Callout Coverage</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Cost/Month</th>
+      </tr>
+    </thead>
+    <tbody class="bg-white dark:bg-slate-900">
+      <tr>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Built for 25-bed CAHs</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Yes, built in</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Ranked shortlist in 2 min</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Not listed</td>
+      </tr>
+      <tr class="bg-slate-50 dark:bg-slate-800/40">
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Good for small rosters</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Adequate</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Manual with alerts</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">$200-450</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">NurseGrid Manager</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Nurse comm add-on only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">No</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Broadcast only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">~$150-300</td>
+      </tr>
+      <tr class="bg-slate-50 dark:bg-slate-800/40">
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">When I Work</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Budget option, limited compliance</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">No</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Open-shift posting</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">$2.50-6/user</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Homebase</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Under 20 staff only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">No</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Basic notifications</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Free-$100</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ## How to Evaluate Scheduling Software for a 25-Bed Hospital?
 
 The criteria for a 25-bed hospital are not a compressed version of what a 200-bed system evaluates. The problems are structurally different.
 
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" class="w-full my-6" aria-label="Evaluation criteria for 25-bed hospital scheduling software, ranked by operational impact">
-  <rect width="800" height="420" fill="#f8fafc" rx="12"/>
-  <text x="400" y="34" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Evaluation Criteria for 25-Bed Hospital Scheduling Software</text>
-  <text x="400" y="54" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Weight each criterion by its impact at small-roster scale</text>
-
-  <!-- Criteria bars -->
-  <!-- Manager time savings -->
-  <rect x="60" y="80" width="490" height="34" rx="4" fill="#2563eb"/>
-  <text x="68" y="102" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff">Manager time savings (net hrs/week recovered)</text>
-  <text x="558" y="102" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Critical</text>
-
-  <!-- Callout response -->
-  <rect x="60" y="128" width="440" height="34" rx="4" fill="#3b82f6"/>
-  <text x="68" y="150" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff">Callout response speed (minutes to confirm replacement)</text>
-  <text x="508" y="150" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Critical</text>
-
-  <!-- CMS audit -->
-  <rect x="60" y="176" width="390" height="34" rx="4" fill="#60a5fa"/>
-  <text x="68" y="198" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">CMS §485.635 audit documentation (automated vs manual)</text>
-  <text x="458" y="198" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">High</text>
-
-  <!-- Implementation burden -->
-  <rect x="60" y="224" width="330" height="34" rx="4" fill="#93c5fd"/>
-  <text x="68" y="246" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Implementation burden (days to go live without IT)</text>
-  <text x="398" y="246" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">High</text>
-
-  <!-- Fairness/rotation -->
-  <rect x="60" y="272" width="270" height="34" rx="4" fill="#bfdbfe"/>
-  <text x="68" y="294" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Shift fairness (equitable rotation across 15-25 nurses)</text>
-  <text x="338" y="294" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Medium</text>
-
-  <!-- Cost per nurse -->
-  <rect x="60" y="320" width="210" height="34" rx="4" fill="#dbeafe"/>
-  <text x="68" y="342" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Total cost at 20-nurse roster</text>
-  <text x="278" y="342" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Medium</text>
-
-  <!-- Overtime tracking -->
-  <rect x="60" y="368" width="150" height="34" rx="4" fill="#eff6ff"/>
-  <text x="68" y="390" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Overtime alert accuracy</text>
-  <text x="218" y="390" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Medium</text>
-</svg>
+<div class="not-prose my-8 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 p-6">
+  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1">Evaluation Criteria for 25-Bed Hospital Scheduling Software</p>
+  <p class="text-xs text-slate-600 dark:text-slate-400 mb-5">Weight each criterion by its impact at small-roster scale</p>
+  <div class="space-y-3">
+    <div>
+      <div class="flex justify-between items-center mb-1 text-xs">
+        <span class="font-medium text-slate-800 dark:text-slate-200">Manager time savings (net hrs/week recovered)</span>
+        <span class="font-semibold text-red-700 dark:text-red-400">Critical</span>
+      </div>
+      <div class="h-6 rounded bg-blue-700 dark:bg-blue-600" style="width: 100%;"></div>
+    </div>
+    <div>
+      <div class="flex justify-between items-center mb-1 text-xs">
+        <span class="font-medium text-slate-800 dark:text-slate-200">Callout response speed (minutes to confirm replacement)</span>
+        <span class="font-semibold text-red-700 dark:text-red-400">Critical</span>
+      </div>
+      <div class="h-6 rounded bg-blue-600 dark:bg-blue-500" style="width: 90%;"></div>
+    </div>
+    <div>
+      <div class="flex justify-between items-center mb-1 text-xs">
+        <span class="font-medium text-slate-800 dark:text-slate-200">CMS §485.635 audit documentation (automated vs manual)</span>
+        <span class="font-semibold text-amber-700 dark:text-amber-400">High</span>
+      </div>
+      <div class="h-6 rounded bg-blue-500 dark:bg-blue-400" style="width: 80%;"></div>
+    </div>
+    <div>
+      <div class="flex justify-between items-center mb-1 text-xs">
+        <span class="font-medium text-slate-800 dark:text-slate-200">Implementation burden (days to go live without IT)</span>
+        <span class="font-semibold text-amber-700 dark:text-amber-400">High</span>
+      </div>
+      <div class="h-6 rounded bg-blue-400 dark:bg-blue-300" style="width: 67%;"></div>
+    </div>
+    <div>
+      <div class="flex justify-between items-center mb-1 text-xs">
+        <span class="font-medium text-slate-800 dark:text-slate-200">Shift fairness (equitable rotation across 15-25 nurses)</span>
+        <span class="font-semibold text-slate-700 dark:text-slate-300">Medium</span>
+      </div>
+      <div class="h-6 rounded bg-blue-300 dark:bg-blue-200" style="width: 55%;"></div>
+    </div>
+    <div>
+      <div class="flex justify-between items-center mb-1 text-xs">
+        <span class="font-medium text-slate-800 dark:text-slate-200">Total cost at 20-nurse roster</span>
+        <span class="font-semibold text-slate-700 dark:text-slate-300">Medium</span>
+      </div>
+      <div class="h-6 rounded bg-blue-200 dark:bg-blue-100/40" style="width: 43%;"></div>
+    </div>
+    <div>
+      <div class="flex justify-between items-center mb-1 text-xs">
+        <span class="font-medium text-slate-800 dark:text-slate-200">Overtime alert accuracy</span>
+        <span class="font-semibold text-slate-700 dark:text-slate-300">Medium</span>
+      </div>
+      <div class="h-6 rounded bg-blue-100 dark:bg-blue-100/20 border border-blue-200 dark:border-blue-800" style="width: 30%;"></div>
+    </div>
+  </div>
+</div>
 
 **Manager time savings:** A nurse manager at a 25-bed CAH who reclaims 8 hours per week from scheduling recovers 416 clinical hours per year. At a loaded rate of $55-70 per hour, that is $23,000-29,000 in recovered labor capacity annually. The scheduling tool needs to do this, not just assist with it.
 
 **Callout response speed:** At 25 beds, a single unexpected callout typically cannot be absorbed by floating staff. There is no float pool. The manager needs a ranked shortlist of available replacements within two minutes, accounting for who is already at risk for overtime before they even pick up the phone.
 
-**CMS audit documentation:** [CMS Conditions of Participation for CAHs](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) (§485.635) require maintained staffing records and proof of appropriate coverage. Manually assembling this from spreadsheets before a survey is a half-day task. Software that logs automatically eliminates it.
+**CMS audit documentation:** [CMS Conditions of Participation §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) requires CAHs to maintain staffing records and proof of appropriate coverage. Manually assembling this from spreadsheets before a survey is a half-day task. Software that logs automatically eliminates it.
 
 **Implementation burden:** A 25-bed CAH typically has one IT person shared across the hospital, or none at all. Any software requiring dedicated IT for setup or ongoing maintenance is disqualifying in practice.
 
 **Shift fairness:** With a roster of 15-25 nurses, perceived unfairness in weekend or overnight assignment distribution accelerates turnover. The [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com) puts registered nurse turnover at 18.4% nationally. At 25 beds, losing two nurses is losing 10% of the roster.
 
-## What Is the 5 Best Options, Reviewed for 25-Bed Hospitals?
+## The 5 Best Options, Reviewed for 25-Bed Hospitals
 
 ### 1. [SimpleScheduleAI](/)
 
@@ -177,7 +186,7 @@ SimpleScheduleAI is a managed scheduling service designed from the start for 25-
 - Three-option draft delivery (balanced, fair-rotation, overtime-minimized) so the manager can choose based on the week's priorities rather than building from scratch
 - Instant replacement list: when a nurse calls out, the system generates a ranked replacement list in under two minutes, sorted by overtime risk, availability, and competency match
 - CMS §485.635 audit documentation is maintained automatically, reducing survey prep time from a half-day to under 30 minutes
-- Texas overtime compliance (FLSA overtime thresholds) is built in as a default setting, not a configuration option
+- Texas [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) are built in as a default setting, not a configuration option
 - Excel-based roster upload means zero IT involvement at onboarding
 
 **Key limitations:**
@@ -288,143 +297,86 @@ Homebase is a scheduling and time tracking tool built for very small businesses,
 
 ## What Makes 25-Bed Hospital Scheduling Uniquely Hard?
 
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" class="w-full my-6" aria-label="Three core challenges unique to 25-bed hospital scheduling">
-  <rect width="800" height="380" fill="#f8fafc" rx="12"/>
-  <text x="400" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Three Scheduling Challenges Unique to 25-Bed Hospitals</text>
-
-  <!-- Challenge 1: Thin callout pool -->
-  <rect x="40" y="62" width="220" height="290" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="40" y="62" width="220" height="8" rx="4" fill="#2563eb"/>
-  <text x="150" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Thin Callout Pool</text>
-  <text x="55" y="126" font-family="system-ui, sans-serif" font-size="11" fill="#475569">With 15-25 nurses total,</text>
-  <text x="55" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#475569">each shift has 4-6 people</text>
-  <text x="55" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#475569">on it. One callout is a</text>
-  <text x="55" y="177" font-family="system-ui, sans-serif" font-size="11" fill="#475569">17-25% coverage gap,</text>
-  <text x="55" y="194" font-family="system-ui, sans-serif" font-size="11" fill="#475569">not a minor variance.</text>
-  <text x="55" y="222" font-family="system-ui, sans-serif" font-size="11" fill="#475569">The replacement pool is</text>
-  <text x="55" y="239" font-family="system-ui, sans-serif" font-size="11" fill="#475569">the same 15-25 nurses</text>
-  <text x="55" y="256" font-family="system-ui, sans-serif" font-size="11" fill="#475569">who are also at risk for</text>
-  <text x="55" y="273" font-family="system-ui, sans-serif" font-size="11" fill="#475569">overtime if called in on</text>
-  <text x="55" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#475569">a day off. Every callout</text>
-  <text x="55" y="307" font-family="system-ui, sans-serif" font-size="11" fill="#475569">requires overtime-aware</text>
-  <text x="55" y="324" font-family="system-ui, sans-serif" font-size="11" fill="#475569">triage, not just</text>
-  <text x="55" y="341" font-family="system-ui, sans-serif" font-size="11" fill="#475569">availability lookup.</text>
-
-  <!-- Challenge 2: Dual-role manager -->
-  <rect x="290" y="62" width="220" height="290" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="290" y="62" width="220" height="8" rx="4" fill="#2563eb"/>
-  <text x="400" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Dual-Role Nurse Manager</text>
-  <text x="305" y="126" font-family="system-ui, sans-serif" font-size="11" fill="#475569">At a 25-bed CAH, the</text>
-  <text x="305" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#475569">nurse manager almost</text>
-  <text x="305" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#475569">always takes clinical</text>
-  <text x="305" y="177" font-family="system-ui, sans-serif" font-size="11" fill="#475569">shifts alongside admin</text>
-  <text x="305" y="194" font-family="system-ui, sans-serif" font-size="11" fill="#475569">duties. Scheduling eats</text>
-  <text x="305" y="222" font-family="system-ui, sans-serif" font-size="11" fill="#475569">8-12 hours per week</text>
-  <text x="305" y="239" font-family="system-ui, sans-serif" font-size="11" fill="#475569">that would otherwise be</text>
-  <text x="305" y="256" font-family="system-ui, sans-serif" font-size="11" fill="#475569">spent at the bedside.</text>
-  <text x="305" y="284" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Any tool that demands</text>
-  <text x="305" y="301" font-family="system-ui, sans-serif" font-size="11" fill="#475569">significant configuration</text>
-  <text x="305" y="318" font-family="system-ui, sans-serif" font-size="11" fill="#475569">or daily management is</text>
-  <text x="305" y="335" font-family="system-ui, sans-serif" font-size="11" fill="#475569">trading one time sink</text>
-  <text x="305" y="352" font-family="system-ui, sans-serif" font-size="11" fill="#475569">for another.</text>
-
-  <!-- Challenge 3: CMS compliance -->
-  <rect x="540" y="62" width="220" height="290" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="540" y="62" width="220" height="8" rx="4" fill="#2563eb"/>
-  <text x="650" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">CMS Documentation</text>
-  <text x="555" y="126" font-family="system-ui, sans-serif" font-size="11" fill="#475569">CMS Conditions of</text>
-  <text x="555" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Participation (§485.635)</text>
-  <text x="555" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#475569">require CAHs to maintain</text>
-  <text x="555" y="177" font-family="system-ui, sans-serif" font-size="11" fill="#475569">staffing documentation</text>
-  <text x="555" y="194" font-family="system-ui, sans-serif" font-size="11" fill="#475569">proving adequate nurse</text>
-  <text x="555" y="211" font-family="system-ui, sans-serif" font-size="11" fill="#475569">coverage at all times.</text>
-  <text x="555" y="239" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Hospitals using Excel</text>
-  <text x="555" y="256" font-family="system-ui, sans-serif" font-size="11" fill="#475569">typically spend 4-8</text>
-  <text x="555" y="273" font-family="system-ui, sans-serif" font-size="11" fill="#475569">hours assembling docs</text>
-  <text x="555" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#475569">before each survey.</text>
-  <text x="555" y="318" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Automated logging</text>
-  <text x="555" y="335" font-family="system-ui, sans-serif" font-size="11" fill="#475569">reduces this to under</text>
-  <text x="555" y="352" font-family="system-ui, sans-serif" font-size="11" fill="#475569">30 minutes.</text>
-</svg>
+<div class="not-prose my-8">
+  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4 text-center">Three Scheduling Challenges Unique to 25-Bed Hospitals</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
+      <div class="bg-blue-600 dark:bg-blue-700 h-2"></div>
+      <div class="p-4">
+        <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-3 text-center">Thin Callout Pool</h3>
+        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">With 15-25 nurses total, each shift has 4-6 people on it. One callout is a 17-25% coverage gap, not a minor variance.</p>
+        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed mt-2">The replacement pool is the same 15-25 nurses who are also at risk for overtime if called in on a day off. Every callout requires overtime-aware triage, not just availability lookup.</p>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
+      <div class="bg-blue-600 dark:bg-blue-700 h-2"></div>
+      <div class="p-4">
+        <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-3 text-center">Dual-Role Nurse Manager</h3>
+        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">At a 25-bed CAH, the nurse manager almost always takes clinical shifts alongside admin duties. Scheduling eats 8-12 hours per week that would otherwise be spent at the bedside.</p>
+        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed mt-2">Any tool that demands significant configuration or daily management is trading one time sink for another.</p>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
+      <div class="bg-blue-600 dark:bg-blue-700 h-2"></div>
+      <div class="p-4">
+        <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-3 text-center">CMS Documentation</h3>
+        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">CMS Conditions of Participation (§485.635) require CAHs to maintain staffing documentation proving adequate nurse coverage at all times.</p>
+        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed mt-2">Hospitals using Excel typically spend 4-8 hours assembling docs before each survey. Automated logging reduces this to under 30 minutes.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 The three challenges above interact. A callout triggers a manual overtime calculation that the dual-role manager has to run while managing a patient floor, producing documentation that also needs to be CMS-compliant. At scale, that chain of manual work is sustainable with a dedicated scheduling coordinator. At 25 beds, there is no scheduling coordinator. The nurse manager holds every link in that chain.
 
 ## Which Software Fits Your 25-Bed Hospital?
 
-<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" class="w-full my-6" aria-label="Decision tree for selecting scheduling software at a 25-bed hospital">
-  <rect width="800" height="460" fill="#f8fafc" rx="12"/>
-  <text x="400" y="34" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Which Scheduling Software Fits Your 25-Bed Hospital?</text>
+The decision comes down to two operational questions: does the nurse manager also cover clinical shifts, and what is the primary constraint (compliance, cost, or control)? The decision table below maps the four common scenarios to the right tool.
 
-  <!-- Start node -->
-  <rect x="300" y="52" width="200" height="44" rx="6" fill="#2563eb"/>
-  <text x="400" y="69" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff">25-bed hospital</text>
-  <text x="400" y="87" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff">needs scheduling solution</text>
+<div class="not-prose my-8 overflow-x-auto">
+  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-800">
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:34%">Your Situation</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:34%">Primary Constraint</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:32%">Recommended Tool</th>
+      </tr>
+    </thead>
+    <tbody class="bg-white dark:bg-slate-900">
+      <tr>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Nurse manager also covers clinical shifts</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Managed service is acceptable</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI - best fit</td>
+      </tr>
+      <tr class="bg-slate-50 dark:bg-slate-800/40">
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Nurse manager also covers clinical shifts</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Self-serve software required</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100">Aladtec - self-serve, best small fit</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Manager is administrative only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Lowest cost, no CMS survey exposure</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100">When I Work</td>
+      </tr>
+      <tr class="bg-slate-50 dark:bg-slate-800/40">
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Manager is administrative only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Comm layer plus existing scheduler</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100">NurseGrid plus Aladtec</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-  <!-- Arrow down -->
-  <line x1="400" y1="96" x2="400" y2="126" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    At 25 beds, the binding constraint is not which tool has the best feature list. It is which tool the nurse manager can actually sustain while also covering clinical shifts. Aladtec is competent self-serve software for hospitals that can absorb the configuration burden. NurseGrid, When I Work, and Homebase are communication and visibility layers, not clinical scheduling systems. For a Critical Access Hospital where the manager has zero protected admin time, a managed service is the only model that removes scheduling work entirely. The platform with the most features is rarely the platform that survives at this scale.
+  </p>
+</div>
 
-  <!-- Q1: Manager takes shifts? -->
-  <rect x="260" y="126" width="280" height="44" rx="6" fill="#fff" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="400" y="143" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#0f172a">Does the nurse manager</text>
-  <text x="400" y="161" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#0f172a">also take clinical shifts?</text>
+## How Does SimpleScheduleAI Fit the 25-Bed Model?
 
-  <!-- Yes branch left -->
-  <line x1="260" y1="148" x2="160" y2="220" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="195" y="183" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#16a34a">Yes</text>
-
-  <!-- No branch right -->
-  <line x1="540" y1="148" x2="640" y2="220" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="607" y="183" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#dc2626">No</text>
-
-  <!-- Yes path: Q2 Managed service ok? -->
-  <rect x="50" y="220" width="220" height="44" rx="6" fill="#fff" stroke="#64748b" stroke-width="1.5"/>
-  <text x="160" y="237" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">Is a managed service</text>
-  <text x="160" y="253" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">acceptable?</text>
-
-  <!-- No path: Q2 Budget priority? -->
-  <rect x="530" y="220" width="220" height="44" rx="6" fill="#fff" stroke="#64748b" stroke-width="1.5"/>
-  <text x="640" y="237" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">Is lowest cost the</text>
-  <text x="640" y="253" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">primary priority?</text>
-
-  <!-- Yes managed service -->
-  <line x1="100" y1="264" x2="100" y2="320" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="78" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#16a34a">Yes</text>
-  <rect x="30" y="320" width="140" height="44" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="100" y="337" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1e40af">SimpleScheduleAI</text>
-  <text x="100" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1e40af">Best fit</text>
-
-  <!-- No managed service -->
-  <line x1="220" y1="264" x2="280" y2="320" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="265" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#dc2626">No</text>
-  <rect x="200" y="320" width="160" height="44" rx="6" fill="#f0f9ff" stroke="#64748b" stroke-width="1.5"/>
-  <text x="280" y="337" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Aladtec</text>
-  <text x="280" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Self-serve, best small fit</text>
-
-  <!-- Yes budget: When I Work -->
-  <line x1="640" y1="264" x2="640" y2="320" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="658" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#16a34a">Yes</text>
-  <rect x="560" y="320" width="160" height="44" rx="6" fill="#f0f9ff" stroke="#64748b" stroke-width="1.5"/>
-  <text x="640" y="337" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">When I Work</text>
-  <text x="640" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#475569">If no CMS survey exposure</text>
-
-  <!-- No budget: NurseGrid add-on -->
-  <line x1="530" y1="264" x2="440" y2="320" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="465" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#dc2626">No</text>
-  <rect x="380" y="320" width="160" height="44" rx="6" fill="#f0f9ff" stroke="#64748b" stroke-width="1.5"/>
-  <text x="460" y="337" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">NurseGrid + Aladtec</text>
-  <text x="460" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Comm layer + scheduling</text>
-
-  <!-- Arrow marker definition -->
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
-    </marker>
-  </defs>
-</svg>
-
-## How SimpleScheduleAI Fits the 25-Bed Model?
-
-Most scheduling software solves for roster size. SimpleScheduleAI solves for the specific operating reality of a 25-bed Critical Access Hospital (CAH): a dual-role nurse manager, a thin callout pool, and a federal compliance requirement that does not scale down with the hospital's size.
+Most scheduling software solves for roster size. SimpleScheduleAI solves for the specific operating reality of a 25-bed Critical Access Hospital (CAH): a dual-role nurse manager, a thin callout pool, and a federal compliance requirement that does not scale down with the hospital's size. The full delivery workflow is documented on [how it works](/how-it-works).
 
 The managed service model is the structural differentiator. Rather than configuring software and maintaining it, the nurse manager at a 25-bed CAH submits a roster and preferences, receives three draft schedules, selects one, and publishes it. The time cost per scheduling cycle drops from 8-12 hours to under two hours.
 
@@ -432,26 +384,28 @@ The callout module generates a replacement shortlist in under two minutes, facto
 
 CMS §485.635 staffing documentation is logged automatically throughout each schedule cycle. Pre-survey prep that previously required assembling records from spreadsheets now takes under 30 minutes.
 
-For Texas CAHs specifically, Texas Labor Code Chapter 62 overtime provisions and FLSA overtime thresholds for healthcare employers are both applied as default settings. No configuration is required.
+For Texas CAHs specifically, FLSA overtime thresholds for healthcare employers and Texas Payday Law shift premium documentation are both applied as default settings. No configuration is required.
 
-## What to Do This Week?
+One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 50 beds, facilities with dedicated scheduling coordinators, or organizations that specifically want to operate self-serve software under their own control rather than approve managed-service drafts.
+
+## What to Do This Week
 
 1. **Audit your current scheduling time cost.** Track how many hours your nurse manager spent on scheduling, callout management, and compliance documentation over the last full week. If the answer is more than three hours, that is the baseline you need to beat.
 
 2. **Identify your highest-cost scheduling problem.** Is it schedule construction time, callout coverage gaps, CMS documentation overhead, or overtime accumulation? The answer determines which tool solves the right problem.
 
-3. **Request a demo of SimpleScheduleAI.** Describe your current scheduling workflow and ask specifically how the three-draft model, replacement list, and CMS documentation features work for a roster your size. Contact via [simplescheduleai.com](/contact).
+3. **Request a SimpleScheduleAI pilot.** Describe your current scheduling workflow and ask specifically how the three-draft model, replacement list, and CMS documentation features work for a roster your size. A free 60-day managed pilot lets you compare actual time burden against your week-one baseline. Use the [ROI calculator](/roi) to model the dollar value first. Start at [simplescheduleai.com/pilot](/pilot).
 
 4. **If you want to self-evaluate Aladtec, request a trial.** Aladtec offers a trial period. Configure one week of your actual roster and measure how long initial setup takes. That time cost is the real onboarding cost, not the vendor's stated implementation timeline.
 
 5. **Document your CMS survey prep time from your last survey.** If it took more than two hours to assemble staffing documentation, that number justifies the cost of any tool that automates it. Attach a dollar figure to it before your next budget conversation.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 border border-blue-100 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900">Built specifically for 25-bed Critical Access Hospitals</p>
-    <p class="text-blue-800 mt-1">SimpleScheduleAI reduces nurse scheduling from 8-12 hours per week to under 2 hours. Three draft options delivered in 48 hours. Callout shortlists in under 2 minutes. CMS documentation maintained automatically.</p>
+    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Built specifically for 25-bed Critical Access Hospitals</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI reduces nurse scheduling from 8-12 hours per week to under 2 hours. Three draft options delivered in 48 hours. Callout shortlists in under 2 minutes. CMS documentation maintained automatically. Free 60-day pilot for Texas CAHs.</p>
   </div>
-  <a href="/contact" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Request a Demo</a>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
 ## Frequently Asked Questions
@@ -475,3 +429,8 @@ When I Work at $2.50-$6 per user per month is the lowest-cost option, totaling a
 **What is the difference between scheduling software and a managed scheduling service for a 25-bed hospital?**
 
 Scheduling software gives the nurse manager tools to build and manage schedules. A managed scheduling service builds the schedules for the nurse manager. At a 25-bed hospital where the manager takes clinical shifts, the distinction matters: software reduces scheduling time by 30-50%, while a managed service reduces it by 80-90%. SimpleScheduleAI is a managed service. Aladtec, NurseGrid, When I Work, and Homebase are all self-serve software platforms.
+
+---
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
