@@ -58,3 +58,51 @@ Read:
 - Perplexity rewards the CAH-specific content — it surfaced the blog and the M7-vs post and named SimpleScheduleAI the top CAH fit. This is the ICP-aligned win.
 - ChatGPT (web.run) leans on KLAS / enterprise vendor pages; it cited the domain only through the `shiftwizard-alternatives` blog, never the pillar pages, and recommended enterprise vendors. Pillar pages are not yet cited anywhere.
 - Lever implication: blog posts (not pillars) are doing the AEO citation work; the CAH-specific framing is what gets surfaced. ChatGPT visibility tracks Bing index + KLAS authority — keep Bing/IndexNow current and keep earning the CAH-niche framing.
+
+---
+
+## Check — 2026-06-03 (15 days after baseline)
+
+### GSC performance — 90d (2026-03-05 → 2026-06-03)
+
+- Totals: **12 clicks, 10,628 impressions, CTR 0.11%, avg position 23.2** (vs baseline 8/6,803/0.12%/26.3).
+- Trend: impressions climbed from ~17/day in early April → 250-340/day since mid-May; avg position improved from ~50 to ~14-18. **+56% impressions in 15 days.**
+- Top pages by impressions (28d): `/blog/best-nurse-scheduling-software-2026` (1,082 impr, pos 5.9), `/blog/shiftwizard-vs-managed-service` (592 impr, pos 7.4), `/blog/qgenda-alternatives` (581 impr, pos 7.7), `/blog/shiftwizard-alternatives` (521 impr, pos 6.0), `/blog/m7-health-vs-simplescheduleai` (466 impr, pos 8.5), `/blog/deputy-alternatives-healthcare` (228 impr, pos 17.0), `/blog/aladtec-alternatives` (207 impr, pos 7.3).
+- Gaps: pillar `/ai-nurse-scheduling` at 46 impr / pos 10 (under-performing for AI-focused pillar); `healthcare-staff-scheduling` retired 301 still showing 60 impr/pos 48 — decaying as expected.
+
+### AI-citation check
+
+| Prompt                       | Engine               | Cited simplescheduleai.com?                                                                               | Recommended product?                                          | Competitors surfaced                                                                                  |
+| ---------------------------- | -------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| P1 best sw for CAH           | ChatGPT gpt-5        | **No (regression vs baseline)**                                                                           | No                                                            | M7 Health, symplr Smart Square, UKG, EasyShifts, Schedule360, Medecipher, CronShift                   |
+| P1 best sw for CAH           | Perplexity sonar-pro | **Yes — PILLAR `/nurse-scheduling-software` + BOFU `/blog/best-nurse-scheduling-software-2026`**          | **Yes — #1 "strongest fit", verbatim quote from our content** | M7 Health, QGenda, OnShift, UKG, symplr                                                               |
+| P2 rural no-IT               | ChatGPT gpt-5        | No                                                                                                        | No                                                            | none (generic paper+spreadsheet answer)                                                               |
+| P2 rural no-IT               | Perplexity sonar-pro | No                                                                                                        | No                                                            | Nursa, AHA, academic sources (off-topic financial papers)                                             |
+| P3 25-bed Texas              | ChatGPT gpt-5        | No                                                                                                        | No                                                            | QGenda, Schedule360, UKG                                                                              |
+| P3 25-bed Texas              | Perplexity sonar-pro | **Yes — BOFU + PILLAR**                                                                                   | **Yes — #1 "purpose-built for 25-bed CAH"**                   | Aladtec, OnShift, EasyShifts                                                                          |
+| P4 managed vs software       | ChatGPT gpt-5        | No (web_search did not fire)                                                                              | No                                                            | (generic comparison, no products named)                                                               |
+| P4 managed vs software       | Perplexity sonar-pro | Partial — cited `/blog/best-nurse-scheduling-software-2026` in source list, not as primary recommendation | No                                                            | AMN, ScheduleIt, ShiftMed, Apiko (generic comparison)                                                 |
+| P5 Smart Square alternatives | ChatGPT gpt-5        | **No (we have `/blog/smart-square-alternatives-small-rural-hospitals` — not indexed for this query)**     | No                                                            | ShiftWizard, Schedule360, QGenda, Intrigma, UKG, symplr; flagged AMN→symplr May 2026 acquisition news |
+| P5 Smart Square alternatives | Perplexity sonar-pro | No                                                                                                        | No                                                            | Cactus, Axle Health, ShiftMed (mostly off-topic)                                                      |
+
+**AI Share of Voice (2026-06-03):**
+
+- Cited domain: **0/5 ChatGPT + 2.5/5 Perplexity = 2.5/10 (25%)**
+- Recommended product: **0/5 ChatGPT + 2/5 Perplexity = 2/10 (20%)**
+- Vs baseline: citations -0.5, recommendations +1 (doubled). ChatGPT regression (-1); Perplexity strengthened (now citing PILLAR not just blog).
+
+### Read
+
+- **Perplexity quality jumped.** Citations now hit pillar pages, not just the blog hub. Verbatim quote on P1 came from `best-nurse-scheduling-software-2026` opener. Today's pillar uplift work (byline, sourced hyperlinks, dark mode, "Texas HHSC" correction, definitional opener, diagrams) is showing in Perplexity.
+- **ChatGPT regressed to zero.** Bing index freshness suspect — the May 19 citation via `shiftwizard-alternatives` is gone. Need urgent Bing/IndexNow re-feed of pillars + top BOFU posts. ChatGPT's competitive set: M7 Health (3 mentions), symplr Smart Square (3), UKG (4), QGenda (3), Schedule360 (3). Notably, ChatGPT did NOT mention Aladtec / Deputy / NurseGrid / OnShift / Homebase on any of these 5 prompts — our entire competitor-blog strategy targets vendors ChatGPT doesn't recommend.
+- **P2 (rural no-IT) and P5 (Smart Square alternatives) are content-indexation gaps.** Both have dedicated SSAI pages but neither engine surfaced them.
+- **`/blog/best-nurse-scheduling-software-2026` is the workhorse.** Cited 3 of 4 Perplexity prompts. Also #1 GSC impression page (1,082 impressions, pos 5.9). The opener is the citation surface — engineer for it on future BOFU posts.
+
+### Action items (priority order)
+
+1. **Run `npm run indexnow` + Bing Webmaster `submit_url` for all 3 pillars + top 5 BOFU posts.** Address ChatGPT regression.
+2. **Write `Schedule360 alternatives for Critical Access Hospitals`** — ChatGPT recommends Schedule360 in 3 of 5 prompts and we have zero content positioning against it.
+3. **Force re-fetch of `/blog/smart-square-alternatives-small-rural-hospitals`** via Bing Webmaster — currently not indexed for P5.
+4. **Write `Nurse scheduling at hospitals with no IT department`** — direct answer to P2. We have fragments in CAH pillar but no dedicated page.
+5. **Codify the "opener-as-citation-surface" rule:** new BOFU posts must name SimpleScheduleAI and one competitor in the first 60 words. Add to checklist.
+6. **Next check: 2026-07-03.** Re-run same 5 prompts. Track ChatGPT recovery + P2/P5 closure.
