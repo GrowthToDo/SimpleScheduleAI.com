@@ -93,7 +93,7 @@ At a CAH without IT support, this configuration work falls to the nurse manager.
     </div>
     <ul class="px-4 py-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
       <li>Proactive OT flagging before schedule publishes</li>
-      <li>CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) audit trail documentation (not confirmed as built-in feature)</li>
+      <li>CMS <a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635" class="underline">§485.635</a> audit trail documentation (not confirmed as built-in feature)</li>
       <li>Ranked replacement lists with constraint logic (requires Humanity Scheduling add-on)</li>
       <li>Hospital-specific scheduling templates for CAH compliance</li>
     </ul>

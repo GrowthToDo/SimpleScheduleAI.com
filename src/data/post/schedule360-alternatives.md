@@ -26,8 +26,8 @@ This guide compares four Schedule360 alternatives for a Critical Access Hospital
 
 ## Key Takeaways
 
-- Schedule360 is marketed as a healthcare scheduling platform with a broad customer base across hospitals, urgent care, specialty clinics, pharmacies, and government agencies. Its homepage tagline reads "Healthcare Scheduling Software Configured For Specialty Clinics," with marquee customer logos including University of Michigan, Cleveland Clinic, and Kaiser.
-- Public independent review density on G2 and Capterra is thin. KLAS named Schedule360 a Best In KLAS category winner in 2022 in the nurse and staff scheduling category, the strongest independent signal available for a CAH evaluator.
+- Schedule360 is marketed as a healthcare scheduling platform with a broad customer base across hospitals, urgent care, specialty clinics, pharmacies, and government agencies. Its homepage tagline reads "Healthcare Scheduling Software Configured For Specialty Clinics," with marquee customer logos including University of Michigan, Cleveland Clinic, and Kaiser.[1]
+- Public independent review density on G2 and Capterra is thin. KLAS named Schedule360 a Best In KLAS category winner in 2022 in the nurse and staff scheduling category, the strongest independent signal available for a CAH evaluator.[2]
 - The trade-offs CAH demos should probe most carefully on Schedule360: CAH-specific compliance documentation, configuration burden for a single nurse manager, and the absence of public product-page coverage of CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) or [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime tracking specific to small hospitals.
 - The main CAH-appropriate alternatives include ShiftWizard (self-serve, hospital nursing focus), TCP/Aladtec (self-serve, healthcare and EMS focus), and NurseGrid Manager (nurse-facing communication layer). A managed service is a fourth option for facilities where the nurse manager cannot sustain platform administration alongside clinical duties.
 - For a CAH that needs the scheduling work done, not better tools to do it themselves, SimpleScheduleAI handles the schedule build, the callout coverage, and the CMS audit trail as part of a managed service for Texas Critical Access Hospitals.
@@ -81,8 +81,8 @@ What the product page does not cover, and what a CAH administrator should confir
       <p class="font-bold text-white text-sm">Schedule360 Product Page Does Not Document</p>
     </div>
     <ul class="px-4 py-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
-      <li>CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) audit trail as a default</li>
-      <li>[FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking (40-hour or 8-and-80)</li>
+      <li>CMS <a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635" class="underline">§485.635</a> audit trail as a default</li>
+      <li><a href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime" class="underline">FLSA</a> overtime threshold tracking (40-hour or 8-and-80)</li>
       <li>Texas Labor Code provisions</li>
       <li>Critical Access Hospital reference customers</li>
       <li>Pricing or contract terms</li>
@@ -94,7 +94,7 @@ What the product page does not cover, and what a CAH administrator should confir
 
 Hospitals switch away from Schedule360 when the broad multi-industry positioning does not translate into CAH-specific defaults, when the configuration burden falls back on a single nurse manager, or when the public documentation does not match the compliance evidence a small hospital needs at survey time. The platform's strengths are real at enterprise scale. The fit weakens as facility size and administrative bandwidth shrink.
 
-Schedule360's public review evidence on independent platforms is thin compared with peers. Capterra lists one review at 5.0/5 from a non-healthcare reviewer, and SelectHub aggregates two reviews at 100% user satisfaction. The KLAS 2022 recognition is the strongest independent signal available. For a CAH buyer trying to estimate hospital-nursing user experience from public sources, the public sample size is too small to draw confident conclusions, and a small-hospital reference call is the more reliable evaluation step.
+Schedule360's public review evidence on independent platforms is thin compared with peers. Capterra lists one review at 5.0/5 from a non-healthcare reviewer,[3] and SelectHub aggregates two reviews at 100% user satisfaction.[4] The KLAS 2022 recognition is the strongest independent signal available. For a CAH buyer trying to estimate hospital-nursing user experience from public sources, the public sample size is too small to draw confident conclusions, and a small-hospital reference call is the more reliable evaluation step.
 
 The recurring user-concern themes flagged in SelectHub's editorial review of Schedule360 (by Riddhiman Roy) are quoted verbatim below, with attribution. These are analyst-summarized concern themes, not individual reviewer quotes. Treat them as a starting list of questions to bring to the vendor demo.
 
@@ -226,7 +226,7 @@ Texas-specific compliance is built into the default service. [FLSA](https://www.
 
 <img src="/images/blog/schedule360-alternatives/Shiftwizard.png" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-ShiftWizard holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews) and was named a G2 Spring 2026 Leader. It is a hospital scheduling platform owned by HealthStream, Inc., designed specifically for hospital nursing scheduling and used by more than 500 hospital facilities ([healthstream.com](https://www.healthstream.com)).
+ShiftWizard holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews) and was named a G2 Spring 2026 Leader.[5] It is a hospital scheduling platform owned by HealthStream, Inc., designed specifically for hospital nursing scheduling and used by more than 500 hospital facilities ([healthstream.com](https://www.healthstream.com)).
 
 A representative positive review:
 
@@ -269,7 +269,7 @@ Ask the demo to walk through mobile workflows from both manager and staff perspe
 
 <img src="/images/blog/schedule360-alternatives/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews; small sample). The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
+Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews; small sample).[6] The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
 
 For a CAH coming off Schedule360, TCP/Aladtec's lower price point and faster setup may be a fit. Trade-offs CAH demos should probe:
 
@@ -318,7 +318,7 @@ Ask the vendor for current named support contacts, a response-time SLA, and a re
 
 <img src="/images/blog/schedule360-alternatives/Nursegrid.png" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample). NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability ([nursegrid.com](https://www.nursegrid.com)). The Manager tier extends this with unit-level oversight.
+NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[7] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability ([nursegrid.com](https://www.nursegrid.com)). The Manager tier extends this with unit-level oversight.
 
 **Best for:** CAHs discovering they primarily need nurse-facing schedule communication rather than a full scheduling platform, and evaluating Schedule360 because of broader feature breadth they do not actually use.
 
@@ -456,9 +456,23 @@ Schedule360 is worth keeping if:
 
 For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) options at the 25-bed CAH scale, the specific compliance requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), and the broader treatment of how [AI nurse scheduling](/ai-nurse-scheduling) works in practice, see our dedicated pillar guides before finalizing your evaluation. Related comparison posts: [best nurse scheduling software for 2026](/blog/best-nurse-scheduling-software-2026), [Smart Square alternatives for small rural hospitals](/blog/smart-square-alternatives-small-rural-hospitals), [ShiftWizard alternatives for Critical Access Hospitals](/blog/shiftwizard-alternatives), and [the $26,000 scheduling burden at Critical Access Hospitals](/blog/healthcare-scheduling-crisis).
 
-## A Note on Sources
+## Sources
 
-Public review counts, ratings, KLAS recognition, and Schedule360 product page details referenced in this guide were verified on 2026-06-03 from the following sources: Schedule360 vendor pages ([schedule360.us](https://schedule360.us/), [schedule360.us/solutions/nurse-scheduling](https://schedule360.us/solutions/nurse-scheduling/)), Capterra Schedule360 listing ([capterra.com](https://www.capterra.com/p/129471/Staffing-Angel-RN/)), and SelectHub Schedule360 aggregated analyst summary ([selecthub.com](https://www.selecthub.com/p/employee-scheduling-software/schedule360/)). ShiftWizard, Aladtec, and NurseGrid reviewer quotes were verified on the cited dates from Capterra. Schedule360 has limited independent review density on G2 and Capterra; the recurring user-experience themes referenced ("limited customization flexibility", "steep learning curve", "mobile app performance issues") are sourced from SelectHub's aggregated analyst summary, not from individual attributed reviewer quotes. CAHs evaluating Schedule360 should request a CAH-scale reference customer directly from the vendor before deciding. Vendor offerings, ratings, and product capabilities change over time; verify current capabilities directly with each vendor before deciding.
+[1] Schedule360 vendor homepage, including positioning tagline and named customer logos (University of Michigan, Cleveland Clinic, Kaiser, Target). [schedule360.us](https://schedule360.us/). Verified 2026-06-03.
+
+[2] Schedule360 nurse scheduling solutions page, citing KLAS Best In KLAS 2022 recognition in the nurse and staff scheduling category. [schedule360.us/solutions/nurse-scheduling](https://schedule360.us/solutions/nurse-scheduling/). Verified 2026-06-03.
+
+[3] Capterra Schedule360 product listing, one review at 5.0/5 from a non-healthcare reviewer (Kamilla S., Restaurants, May 22, 2023). [capterra.com](https://www.capterra.com/p/129471/Staffing-Angel-RN/). Verified 2026-06-03.
+
+[4] SelectHub Schedule360 editorial review by Riddhiman Roy. Aggregates 2 user reviews at 100% satisfaction. Analyst-summarized concern themes (customization flexibility, learning curve, mobile and integration). [selecthub.com](https://www.selecthub.com/p/employee-scheduling-software/schedule360/). Verified 2026-06-03.
+
+[5] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews), G2 Spring 2026 Leader. Vendor page: [healthstream.com](https://www.healthstream.com). Reviewer quotes (Jennifer C., Director of Emergency Services, July 15, 2024; Erika A., Registered Nurse, July 9, 2024) verified on Capterra 2026-04-30.
+
+[6] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Reviewer quotes (Amanda F., Nurse Manager, October 13, 2020; Jeanne C., Administrative Coordinator, May 7, 2019) verified on Capterra 2026-04-30.
+
+[7] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Reviewer quotes (Chief Nursing Officer, June 13, 2024; Staffing Coordinator, June 11, 2024) verified on Capterra 2026-04-30.
+
+**Methodology note:** Schedule360 has limited independent review density on G2 and Capterra. The recurring user-concern themes in source [4] are sourced from SelectHub's editorial review by Riddhiman Roy, attributed as an analyst summary, not as individual user reviews. CAHs evaluating Schedule360 should request a CAH-scale reference customer directly from the vendor before deciding. Vendor offerings, ratings, and product capabilities change over time; verify current capabilities directly with each vendor before deciding.
 
 ## Frequently Asked Questions
 

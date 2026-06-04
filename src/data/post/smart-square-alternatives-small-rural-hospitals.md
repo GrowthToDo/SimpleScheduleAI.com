@@ -525,6 +525,8 @@ For a nurse manager at a 25-bed CAH who also takes clinical shifts, an enterpris
   <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Start a Pilot</a>
 </div>
 
+Related comparison posts: [QGenda alternatives for Critical Access Hospitals](/blog/qgenda-alternatives), [Schedule360 alternatives for Critical Access Hospitals](/blog/schedule360-alternatives), [ShiftWizard alternatives for Critical Access Hospitals](/blog/shiftwizard-alternatives), and [best nurse scheduling software for 2026](/blog/best-nurse-scheduling-software-2026).
+
 ## A Note on Sources
 
 All review ratings and quotes in this guide come from Capterra, verified on 2026-05-17. Smart Square holds 4.6/5 on Capterra (19 reviews) at [capterra.com/p/275941](https://www.capterra.com/p/275941/Smart-Square/reviews/), and the companion symplr Workforce product holds 4.1/5 on Capterra (13 reviews) at [capterra.com/p/241148](https://www.capterra.com/p/241148/symplr-Workforce/reviews/). Vendor product capabilities reference each company's own product page. Reviewer quotes are used verbatim with the original date, even when the date is older than 30 days, because hospital-context Smart Square quotes within the last month were not available at verification. Vendor offerings, ratings, and product capabilities change over time. Before deciding on any platform, request a current reference customer at your scale directly from the vendor.
