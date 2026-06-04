@@ -3,7 +3,7 @@ draft: false
 publishDate: 2026-05-23T00:00:00Z
 updateDate: 2026-05-23T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Best OnShift Alternatives for Critical Access Hospitals'
+title: 'Best OnShift Alternatives for Critical Access Hospitals (2026)'
 excerpt: >
   OnShift was built for long-term care and assisted living, not acute care hospital nursing.
   Critical Access Hospitals evaluating it find the open-shift model and LTC-oriented design a

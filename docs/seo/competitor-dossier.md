@@ -291,6 +291,72 @@ and larger health systems.
 
 ---
 
+## Schedule360
+
+**Product:** Healthcare scheduling software. Broad target market across hospitals (nursing, ED, overflow), physician groups, pharmacies, urgent care, specialty clinics, call centers, and government agencies. Named enterprise customers include University of Michigan, Cleveland Clinic, Kaiser, and Target. Headquartered in Atlanta, GA. Homepage tagline: "Healthcare Scheduling Software Configured For Specialty Clinics."
+
+**Ratings (verified 2026-06-03):**
+
+- Capterra: 5.0/5 (1 review; non-healthcare, small sample)
+- SelectHub: 100% user satisfaction (2 reviews; small sample)
+- KLAS: Best In KLAS 2022 (Nurse and Staff Scheduling category)
+- G2: no listing with usable review density found 2026-06-03
+
+**Capterra URL:** https://www.capterra.com/p/129471/Staffing-Angel-RN/
+**SelectHub URL:** https://www.selecthub.com/p/employee-scheduling-software/schedule360/
+**Vendor URL:** https://schedule360.us/
+
+**Important caveat:** Independent review density is very low compared with peers. The single Capterra review is from a restaurant attendant in Brazil (May 22, 2023, 5.0/5) and is NOT representative of hospital-nursing user experience. The KLAS 2022 recognition is the strongest independent signal. For CAH posts, frame review evidence honestly: cite KLAS + the small Capterra/SelectHub samples explicitly; do NOT invent or paraphrase hospital reviewer quotes — none exist within standard review platforms as of 2026-06-03.
+
+### Verified Reviewer Quotes
+
+**Only Capterra review on record (non-healthcare, retained for transparency, do NOT use in hospital-context posts as if it were a healthcare user):**
+
+> "O Schedule360 auxílio bastante no controle dos funcionários"
+>
+> Kamilla S., Attendant, Restaurants, May 22, 2023, Capterra (translation: "Schedule360 helped greatly with employee management")
+
+### SelectHub Analyst-Summarized Themes (NOT individual reviewer quotes)
+
+Use these in posts only with the framing "SelectHub's aggregated analyst summary lists..." — never quote as if a named reviewer said it. Source: SelectHub Schedule360 page, verified 2026-06-03.
+
+**Pros (aggregated):**
+
+- Easy to use with intuitive interface
+- Time-saving automated features (shift scheduling, time-off requests)
+- Improved communication via notifications and messaging
+- Mobile accessibility for schedule management
+
+**Cons (aggregated):**
+
+- Limited customization flexibility for unique business needs
+- Steep learning curve for new users
+- Mobile app performance issues (slow loading, crashes)
+- Lack of seamless integration with payroll/time tracking systems
+- Poor customer support responsiveness
+
+### Product Page Compliance Coverage (verified 2026-06-03)
+
+Schedule360 product page does NOT publicly cover:
+
+- CMS §485.635 audit trail as a default
+- FLSA overtime threshold tracking (40-hour or 8-and-80) specific to small hospitals
+- Texas Labor Code provisions
+- CAH-specific compliance defaults
+
+Product page DOES cover:
+
+- Rules-based self-scheduling
+- Broadcast notifications (SMS, email, pager)
+- Web and mobile access, reporting
+- Free setup, free 24/7 support, free online training (vendor claim)
+
+**Pricing:** Not disclosed on vendor page. SelectHub aggregated listing references $5/user/month starting tier (third-party data, vendor-unconfirmed).
+
+**Note on QGenda relationship:** Schedule360 homepage shows "A QGenda Company" tagline (verified 2026-06-03). Treat as related but DISTINCT product per founder direction (user instruction 2026-06-03): "Q-Genda and Schedule 360 are different software, so please don't mix it up while writing the blog." In blog posts, write Schedule360 as standalone product; do NOT use the QGenda relationship as the framing angle.
+
+---
+
 ## ShiftWizard
 
 **Product:** Hospital nurse scheduling platform. Designed specifically for hospital nursing.

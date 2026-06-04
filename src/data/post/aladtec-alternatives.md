@@ -21,7 +21,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/aladtec-alternatives'
 ---
 
-Your IT contractor configured Aladtec around the EMS dispatch workflow that came with the install. Your nurse manager actually deals with credential-filtered callout coverage at 2 AM and CMS §485.635 documentation at survey time. The platform's heritage is in public-safety scheduling, and the hospital-nursing fit gap shows up in the work the manager does that the configuration cannot help with.
+Your IT contractor configured Aladtec around the EMS dispatch workflow that came with the install. Your nurse manager actually deals with credential-filtered callout coverage at 2 AM and CMS §485.635 documentation at survey time. Aladtec was built for fire and EMS dispatch. No amount of configuration turns it into hospital nursing software.
 
 This guide compares 6 alternatives for a 25-bed CAH that needs hospital-nursing fit, not a better version of an EMS-shaped tool.
 

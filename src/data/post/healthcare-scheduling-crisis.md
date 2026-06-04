@@ -95,7 +95,7 @@ For a deeper look at the specific compliance and coverage requirements driving t
 
 <div class="not-prose my-10">
   <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">License Cost vs Real Cost: What Buyers Anchor On Versus What They Pay</p>
-  <div class="flex items-end gap-6 h-64 border-b border-slate-300 dark:border-slate-700 pb-1">
+  <div class="flex items-end gap-6 h-80 pt-8 border-b border-slate-300 dark:border-slate-700 pb-1">
     <div class="flex flex-col items-center" style="min-width: 90px;">
       <div class="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">$1,500</div>
       <div class="bg-blue-600 dark:bg-blue-500 rounded-t-md w-full" style="height: 14px;" aria-label="Annual SaaS license cost: $1,500"></div>

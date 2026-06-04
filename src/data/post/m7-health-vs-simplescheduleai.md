@@ -3,7 +3,7 @@ draft: false
 publishDate: 2026-05-18T00:00:00Z
 updateDate: 2026-05-18T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'M7 Health vs. SimpleScheduleAI for Critical Access Hospitals'
+title: 'M7 Health vs. SimpleScheduleAI for Critical Access Hospitals (2026)'
 excerpt: >
   M7 Health is nurse scheduling software the hospital runs itself, built for large health
   systems with IT and dedicated scheduling staff. SimpleScheduleAI is a fully managed scheduling
@@ -158,9 +158,9 @@ The honest comparison is not feature by feature. It is model against model. M7 H
         <td class="py-3 text-slate-600 dark:text-slate-400">The service builds it; nurse manager reviews and approves</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">Texas and FLSA compliance</td>
+        <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">Texas and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) compliance</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Not documented on the product page</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Built in: FLSA and Texas Labor Code defaults</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Built in: [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) defaults</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation</td>

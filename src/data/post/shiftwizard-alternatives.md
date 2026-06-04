@@ -3,7 +3,7 @@ draft: false
 publishDate: 2026-04-26T00:00:00Z
 updateDate: 2026-05-07T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Best ShiftWizard Alternatives for Critical Access Hospitals'
+title: 'Best ShiftWizard Alternatives for Critical Access Hospitals (2026)'
 excerpt: >
   ShiftWizard is a hospital scheduling platform designed for nursing workflows, but for a
   Critical Access Hospital the choice is less about features than operating model. This guide

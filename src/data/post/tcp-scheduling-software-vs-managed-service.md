@@ -3,7 +3,7 @@ draft: false
 publishDate: 2026-05-12T00:00:00Z
 updateDate: 2026-05-14T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'TCP TimeClock+ vs. Managed Scheduling for Small Hospitals'
+title: 'TCP TimeClock+ vs. Managed Scheduling for Small Hospitals (2026)'
 excerpt: >
   TCP TimeClock+ is a time and attendance platform that also handles scheduling. A managed
   scheduling service focuses on scheduling only. For a Critical Access Hospital where the nurse

@@ -198,7 +198,7 @@ SimpleScheduleAI operates at Level 5: a managed service where a specialist build
 
 Each scheduling cycle, a specialist generates three draft schedule options (balanced, overtime-minimized, and fair-rotation) using the facility's roster, certification data, and coverage requirements. The drafts arrive for the nurse manager to review and approve. The nurse manager's scheduling work is reviewing output, requesting adjustments if needed, and approving the final schedule.
 
-For callout coverage, a pre-ranked replacement list is maintained with certification, overtime status, and availability constraints already applied. When a nurse calls out, the manager sees the ranked shortlist immediately rather than running the calculation herself.
+For callout coverage, a pre-ranked replacement list is maintained with certification, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime status, and availability constraints already applied. When a nurse calls out, the manager sees the ranked shortlist immediately rather than running the calculation herself.
 
 This is not a software tool with automation features. It is a different operating model. The scheduling function is handled by a specialist; the nurse manager retains clinical judgment and final approval authority.
 
@@ -226,7 +226,7 @@ One honest limitation: Level 5 managed automation is not the right fit for hospi
 1. **Ask each scheduling vendor a single diagnostic question.** "Walk me through what the nurse manager does on a Monday morning when the new schedule week starts." Vendors operating at Level 2-3 will describe configuration screens and rule setup. Vendors operating at Level 4-5 will describe review and approval workflows.
 2. **Time-track your nurse manager's scheduling hours for one cycle.** Include schedule building, callout coverage, rule maintenance, and exception handling. Most managers underestimate the total by 30-40% because interruptions are not logged. The honest number is the baseline any tool needs to beat.
 3. **Audit your current "automated" tool against the 5 levels.** If the manager still spends 4-6 hours per week on scheduling, the tool is operating at Level 2-3 regardless of the marketing. Level 4 reduces it to 2-3 hours; Level 5 reduces it to 1-2 hours of review only.
-4. **Identify the specific tasks you want removed, not improved.** Schedule construction, callout phone tree, overtime checking, and CMS documentation are distinct work products. Level 3-4 software speeds them up; Level 5 service removes them. Decide which outcome you actually need.
+4. **Identify the specific tasks you want removed, not improved.** Schedule construction, callout phone tree, overtime checking, and [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation are distinct work products. Level 3-4 software speeds them up; Level 5 service removes them. Decide which outcome you actually need.
 5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot lets you compare what Level 5 automation actually delivers against the baseline you tracked in step 2. Start at [simplescheduleai.com/pilot](/pilot).
 
 ## Frequently Asked Questions

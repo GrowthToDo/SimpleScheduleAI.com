@@ -3,7 +3,7 @@ draft: false
 publishDate: 2026-05-02T00:00:00Z
 updateDate: 2026-05-07T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'ShiftWizard vs. Managed Scheduling Service for Critical Access Hospitals'
+title: 'ShiftWizard vs. Managed Scheduling Service for Critical Access Hospitals (2026)'
 excerpt: >
   ShiftWizard and other hospital scheduling platforms are self-serve software: your team
   configures the system and your nurse manager operates it weekly. A managed service runs
@@ -22,7 +22,7 @@ metadata:
 
 ShiftWizard demos show a scheduling platform with the features your hospital needs. Your nurse manager asks one question: "After I am trained on this, how many hours a week am I still spending on scheduling?" ShiftWizard answers that question one way. A managed scheduling service answers it differently.
 
-This guide compares the two models on the operational dimensions that decide the answer for a 25-bed CAH: weekly time burden, configuration maintenance, callout coverage, and CMS §485.635 documentation.
+This guide compares the two models on the operational dimensions that decide the answer for a 25-bed CAH: weekly time burden, configuration maintenance, callout coverage, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime tracking, and [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation.
 
 ## Key Takeaways
 
