@@ -46,6 +46,7 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] No em-dashes (`—`) anywhere — prose, excerpts, table cells, TOC, blockquotes, CTA cards
 - [ ] No AI-tone phrases in our voice: "delve into", "dive into", "it's worth noting", "in conclusion", "robust", "leverage", "game-changing", "seamless", "comprehensive solution", "transformative", "at the end of the day", "unlock", "harness", "navigating", "streamline". **Exception:** verbatim Capterra/G2 reviewer quotes are protected even if the reviewer used one of these words. Our paraphrasing of a reviewer must still avoid the phrase.
 - [ ] TOC anchor text exactly matches H2/H3 heading text, including trailing `?` on question headings
+- [ ] **`## Sources` (or `## A Note on Sources`) is NOT listed in the TOC.** Sources is a supporting section, not a navigational one. Same applies to author bio and italic disclaimers. TOC lists the question-H2 spine + What to Do + FAQ, nothing else. Established on Schedule360 launch (commit 146a266) and re-confirmed on the no-IT-department post.
 - [ ] Every H2 has a 40–70 word direct answer capsule immediately below it — no preamble before capsule
 - [ ] Every H2 expansion section is 120–180 words (shorter = AI citation penalty)
 - [ ] One stat or data point per 150–200 words of body text

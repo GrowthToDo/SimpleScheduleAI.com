@@ -42,7 +42,6 @@ SimpleScheduleAI is a managed nurse scheduling service for Texas Critical Access
 - [How Does a Managed Scheduling Service Differ From Scheduling Software?](#how-does-a-managed-scheduling-service-differ-from-scheduling-software)
 - [How SimpleScheduleAI Fits This Model](#how-simplescheduleai-fits-this-model)
 - [What to Do This Week](#what-to-do-this-week)
-- [Sources](#sources)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 ## How Do Paper Schedules and Whiteboards Actually Work at a CAH?
@@ -88,6 +87,13 @@ SimpleScheduleAI is available to Critical Access Hospitals in Texas only, so the
 The service takes an [Excel roster upload](/how-it-works) rather than requiring the nurse manager to encode every rule in a portal. Go-live is 3 to 5 days from upload to first approved draft. The scheduler tracks each nurse's running hours against the applicable FLSA overtime threshold and references [FLSA Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) [3] for the healthcare-specific framework. Every draft, swap, and callout replacement is logged into a [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) [1] audit trail by default, so the surveyor-ready record is a byproduct of the workflow rather than a Saturday reconstruction. The service is built for Texas HHSC hospital licensing context [4], not for hospitals in states with different staffing-ratio statutes. For the underlying engine, see our [AI nurse scheduling](/ai-nurse-scheduling) overview, and for the CAH-specific framing, the [nurse scheduling software](/nurse-scheduling-software) and [Critical Access Hospital scheduling](/critical-access-hospital-scheduling) hubs.
 
 One honest limitation: SimpleScheduleAI is not the right fit for hospitals outside Texas, for facilities above 50 beds with their own dedicated HR scheduling team, or for nurse managers who specifically want their staff to self-schedule directly in a portal without manager review. For the self-scheduling tradeoff specifically, see [self-scheduling problems at a Critical Access Hospital](/blog/self-scheduling-problems-critical-access-hospital). For the broader CAH staffing software landscape, see [hospital staff scheduling software for Critical Access](/blog/hospital-staff-scheduling-software-critical-access).
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Five of the six models above are already in use at small rural hospitals without an IT department, and the nurse manager makes each one work through extra hours, not through tool quality. The honest question for an administrator is not which tool is best, it is which model lets the nurse manager spend Saturday on her family instead of rebuilding the cycle. A managed service is the only model where the build work itself leaves the hospital. The Texas boundary on SimpleScheduleAI is a real constraint, not a marketing line, and any rural hospital outside Texas should evaluate the other five mechanisms against the same Saturday test.
+  </p>
+</div>
 
 ## What to Do This Week
 
