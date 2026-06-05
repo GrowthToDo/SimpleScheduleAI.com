@@ -19,7 +19,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/qgenda-alternatives'
 ---
 
-QGenda is the dominant physician scheduling platform that has expanded into nursing. Your CAH may need physician scheduling alongside nursing, in which case QGenda is a strong fit. Or your CAH may only need nursing scheduling, in which case the physician-scheduling overhead is paid complexity that delivers no operational return.
+QGenda is the dominant physician scheduling platform that has expanded into nursing. For a 25-bed Critical Access Hospital that needs only nursing scheduling, the physician-scheduling overhead is paid complexity that delivers no operational return. SimpleScheduleAI is a managed nursing-only alternative built for Texas Critical Access Hospitals where the nurse manager cannot absorb QGenda's configuration burden alongside clinical duties.
 
 This guide compares 6 QGenda alternatives for a Critical Access Hospital, with the decision tree for when to stay and when the click-heavy configuration is no longer worth the value.
 

@@ -20,7 +20,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/shiftwizard-vs-managed-service'
 ---
 
-ShiftWizard demos show a scheduling platform with the features your hospital needs. Your nurse manager asks one question: "After I am trained on this, how many hours a week am I still spending on scheduling?" ShiftWizard answers that question one way. A managed scheduling service answers it differently.
+ShiftWizard demos show a scheduling platform with the features your hospital needs. Your nurse manager asks one question: "After I am trained on this, how many hours a week will I still spend on scheduling?" ShiftWizard answers that question with a self-serve software model. SimpleScheduleAI, a managed scheduling service built for Texas Critical Access Hospitals, answers it differently: the service builds the schedule, the nurse manager approves it.
 
 This guide compares the two models on the operational dimensions that decide the answer for a 25-bed CAH: weekly time burden, configuration maintenance, callout coverage, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime tracking, and [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation.
 
