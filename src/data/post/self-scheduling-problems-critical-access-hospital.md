@@ -179,6 +179,8 @@ For a full look at what CAH-appropriate [nurse scheduling software](/nurse-sched
 
 One honest limitation: constraint-aware fairness assignment is not the right fit for hospitals with stable senior rosters where weekend and holiday distribution has been worked out informally and is mutually agreed, or for facilities where self-scheduling already produces acceptable fairness without intervention.
 
+Related operational guides: [How Small Rural Hospitals Without an IT Department Manage Nurse Scheduling](/blog/nurse-scheduling-no-it-department-rural-hospital), [Hospital Staff Scheduling Software for Critical Access Hospitals](/blog/hospital-staff-scheduling-software-critical-access), and [The $26,000 Scheduling Burden at Critical Access Hospitals](/blog/healthcare-scheduling-crisis).
+
 ## Sources
 
 [1] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).

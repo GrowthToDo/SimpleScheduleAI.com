@@ -151,6 +151,8 @@ It is not the right fit for every hospital, and the limitation matters. SimpleSc
 
 Where it fits is the specific case this guide describes: a 25-bed Texas CAH with no IT department, no dedicated scheduler, and a nurse manager on clinical shifts who needs Texas overtime and CMS documentation handled without configuration work. For how the automation produces the drafts, see [AI nurse scheduling](/ai-nurse-scheduling).
 
+Related operational guides: [How Small Rural Hospitals Without an IT Department Manage Nurse Scheduling](/blog/nurse-scheduling-no-it-department-rural-hospital) and [Self-Scheduling Problems at a Critical Access Hospital](/blog/self-scheduling-problems-critical-access-hospital).
+
 ## Sources
 
 [1] Deputy ratings: G2 4.6/5 (1,400+ reviews), Capterra 4.6/5 (765 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-05-15.
