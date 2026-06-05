@@ -173,6 +173,60 @@ _Apply on every post. The audience is a Texas CAH Nurse Manager / DON / Administ
 - [ ] **No second-person sales tone in the body** ("you'll love...", "you'll never go back to..."). First-person plural ("we built this for...") or third-person operational ("the nurse manager...") only. Direct second-person is fine in the opener and CTAs only.
 - [ ] **Pre-Key-Takeaways narrative opener present on BOFU/comparison posts** (sellontube pattern). 2 short paragraphs between the frontmatter `---` close and the `## Key Takeaways` heading. Paragraph 1: contradiction-hook in 2-3 sentences ("Your X says Y. Your nurse manager actually deals with Z."). Paragraph 2: what the guide covers, framed as resolution. Skip on glossary/definition posts where direct definition is more useful. Pattern verified in commit d1b864c+follow-ups.
 
+## Pre-Publish Proofreading Agent (Final Gate)
+
+_Mandatory final gate before any post flips `draft: true` → `draft: false`. Catches violations of every rule in this checklist plus established conventions not yet codified here. This gate sits AFTER the Phase 3 Review agent in the 3-agent pipeline and BEFORE the human go-live decision. Run when the founder is about to authorize publish; the agent reports back, the main agent applies the flagged fixes, then the founder publishes._
+
+### How to spawn it
+
+```
+Main agent: spawn feature-dev:code-reviewer subagent with this prompt:
+
+"You are the Pre-Publish Proofreading Agent. The post at <PATH> is about to
+go live. Run every check in docs/seo/pre-publish-checklist.md mechanically.
+For each check, GREP/SCAN the file — no eyeballing, no assumptions.
+
+Mandatory first step: run `npm run check-blog <PATH>` and report the output
+verbatim. Treat every hard failure from the script as a publish blocker
+regardless of whether the founder asked you to be lenient.
+
+Mandatory second step: structurally diff the draft against these three
+canonical reference posts: schedule360-alternatives.md,
+best-nurse-scheduling-software-2026.md, qgenda-alternatives.md. Flag any
+deviation from the established convention (TOC entries, H2 sequence,
+callout placement, Sources/FAQ/bio order, italic-linked author bio
+format) EVEN IF this checklist is silent on it.
+
+Mandatory third step: run every numbered check in Part 0 Reconciliation
++ every hard gate listed in this checklist + every BOFU x-alternatives
+rule if the post matches `*-alternatives.md`.
+
+Return format:
+- Pass/fail table with one row per check
+- For each FAIL: line number, verbatim violating text, one-line proposed fix
+- Final verdict: READY-TO-PUBLISH or NEEDS-FIXES
+- If NEEDS-FIXES, count fixes by tier: Blocker / Quality / Polish
+
+Do not edit the file. The main agent applies fixes based on your report."
+```
+
+### What this gate prevents
+
+Established October 2026 (commit 840d3f0) after a live post slipped a TOC
+"Sources" entry past Phase 3 Review because the rule existed in
+git history but not in this checklist. Encoding the agent here ensures
+the gate runs on every publish regardless of who is driving the session,
+and the agent has the full ruleset every time.
+
+### Founder publish handshake
+
+After this agent returns READY-TO-PUBLISH, the main agent reports the
+verdict to the founder verbatim. Only the founder authorizes the
+`draft: true` → `false` flip (per the standing "Publish only on explicit
+instruction" rule). If the agent returns NEEDS-FIXES, the main agent
+applies the fixes, re-runs the agent, and only proceeds to founder
+handshake when the verdict is READY-TO-PUBLISH.
+
 ## After Publishing
 
 - [ ] Submit URL to Google Search Console → URL Inspection → Request Indexing
