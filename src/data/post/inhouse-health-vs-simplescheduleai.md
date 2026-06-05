@@ -29,7 +29,7 @@ This guide separates the run-it-yourself platform model from the managed service
 
 - In-House Health is an AI scheduling and workforce platform the hospital operates itself. Its [product page](https://www.inhouse.health/) positions it for larger nursing teams in bigger hospitals: acuity-driven inpatient units and union environments.
 - SimpleScheduleAI is a different category: a fully managed scheduling service for Texas Critical Access Hospitals. The vendor builds the schedule, maintains the CMS audit trail, and returns callout replacement lists. The nurse manager reviews and approves rather than operates a platform.
-- In-House Health publishes its own efficiency figures (over 50% fewer scheduling hours, 10% lower labor cost) for hospitals running its software with their own staff. These are vendor figures, not independent results, so confirm them against your own facility before relying on them.
+- In-House Health publishes its own efficiency figures (over 50% fewer scheduling hours, 10% lower labor cost) for hospitals running its software with their own staff.[2] These are vendor figures, not independent results, so confirm them against your own facility before relying on them.
 - No documented Critical Access Hospital or rural reference customers appear on the product page. See the note on sources for the full review and verification picture.
 - In-House Health is a reasonable choice for a larger nursing organization that wants to run its own AI scheduling platform. SimpleScheduleAI fits a 25-bed hospital that needs the scheduling work removed, not a platform to operate.
 

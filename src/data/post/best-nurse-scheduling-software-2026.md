@@ -356,7 +356,7 @@ QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It st
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Nursegrid.png" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample). NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability. The Manager tier adds unit-level oversight. CAHs evaluating NurseGrid as a primary scheduling platform should confirm hospital-tier capabilities directly with the vendor.
+NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability. The Manager tier adds unit-level oversight. CAHs evaluating NurseGrid as a primary scheduling platform should confirm hospital-tier capabilities directly with the vendor.
 
 **Best for:** Hospitals that want a staff-facing shift communication layer alongside a primary scheduling system.
 
@@ -436,7 +436,7 @@ OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Deputy.png" alt="Deputy workforce scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Deputy is a general workforce scheduling platform used across retail, hospitality, food service, and healthcare. It holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), a strong rating across a large general workforce sample. Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) that covers hospitals, clinics, private practice, and nursing facilities.
+Deputy is a general workforce scheduling platform used across retail, hospitality, food service, and healthcare. It holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), a strong rating across a large general workforce sample.[5] Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) that covers hospitals, clinics, private practice, and nursing facilities.
 
 **Best for:** Small to mid-sized healthcare practices and clinics with relatively simple shift scheduling needs and the tightest possible budgets.
 

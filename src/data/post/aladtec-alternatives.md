@@ -65,7 +65,7 @@ Hospitals switch away from Aladtec because the platform's heritage is in public-
 
 <img src="/images/blog/aladtec-alternatives/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). The overall ratings are strong, but the Capterra reviewers skew heavily toward fire, EMS, and law enforcement users. The minority of negative reviews from hospital users cluster around two recurring themes worth probing specifically during a CAH demo.
+Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews).[1] The overall ratings are strong, but the Capterra reviewers skew heavily toward fire, EMS, and law enforcement users. The minority of negative reviews from hospital users cluster around two recurring themes worth probing specifically during a CAH demo.
 
 ### Online User Complaints
 
@@ -73,13 +73,13 @@ Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews)
 
 > "When editing the schedule there are a lot of clicks involved."
 >
-> Amanda F., Nurse Manager (Hospital & Health Care), posted October 13, 2020 on Capterra
+> Amanda F., Nurse Manager (Hospital & Health Care), posted October 13, 2020 on Capterra [2]
 
 **Setup Complexity Complaints.** Some administrators describe the initial configuration as harder than expected.
 
 > "It was a bit complicated to figure out from the administrator side."
 >
-> Jeanne C., Administrative Coordinator, posted May 7, 2019 on Capterra
+> Jeanne C., Administrative Coordinator, posted May 7, 2019 on Capterra [3]
 
 A note on the Aladtec sample: the most recent hospital-context reviews on Capterra are several years old, and the recent Capterra reviews skew toward fire, EMS, and law-enforcement users. CAHs evaluating Aladtec should request a current hospital-nursing reference customer at CAH scale and ask the vendor for documented support response-time SLAs, especially given the post-TCP-acquisition timeline.
 
@@ -87,7 +87,7 @@ A representative positive review (from a public-safety user):
 
 > "Their customer support team is better than any other support team I have ever had to deal with."
 >
-> Jody S., Security Management, posted August 14, 2025 on Capterra
+> Jody S., Security Management, posted August 14, 2025 on Capterra [4]
 
 For a hospital nurse manager evaluating Aladtec, the operational questions worth probing in the demo include configuration maintenance ownership as the roster changes, the workflow for assembling CMS §485.635 documentation, and the callout workflow when overtime status needs to be verified before placing calls.
 
@@ -206,13 +206,13 @@ The tradeoff is considerable. TCP Scheduling requires a longer implementation, I
 
   > "When editing the schedule there are a lot of clicks involved."
   >
-  > Amanda F., Nurse Manager, Hospital & Health Care, October 13, 2020, Capterra
+  > Amanda F., Nurse Manager, Hospital & Health Care, October 13, 2020, Capterra [2]
 
 - **Setup Complexity.** Initial configuration takes longer than expected for some administrators.
 
   > "It was a bit complicated to figure out from the administrator side."
   >
-  > Jeanne C., Administrative Coordinator, May 7, 2019, Capterra
+  > Jeanne C., Administrative Coordinator, May 7, 2019, Capterra [3]
 
 - TCP Scheduling is positioned by the vendor as enterprise-tier; CAHs should request a current reference customer under 50 beds and a documented onboarding timeline before deciding.
 
@@ -328,7 +328,7 @@ Homebase is positioned primarily for retail, restaurant, and service industry sc
 
 <img src="/images/blog/aladtec-alternatives/Deputy.png" alt="Deputy general workforce scheduling platform for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Deputy holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), a strong overall rating across a large general workforce sample. Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) covering hospitals, clinics, and nursing facilities. Compared to Aladtec, Deputy is simpler to configure and lower in cost. The documented healthcare feature set is narrower than Aladtec's clinical-specific capability.
+Deputy holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), a strong overall rating across a large general workforce sample.[5] Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) covering hospitals, clinics, and nursing facilities. Compared to Aladtec, Deputy is simpler to configure and lower in cost. The documented healthcare feature set is narrower than Aladtec's clinical-specific capability.
 
 A representative review from a hospital nursing user:
 

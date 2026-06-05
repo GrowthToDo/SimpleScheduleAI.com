@@ -26,7 +26,7 @@ This guide compares the two models on the operational dimensions that decide the
 
 ## Key Takeaways
 
-- ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream. It holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews), with over 88% of Capterra reviews rating 4 stars or higher.
+- ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream. It holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews),[1] with over 88% of Capterra reviews rating 4 stars or higher.
 - Self-serve platforms and managed services are not feature-equivalent products at different price points. They are different operating models. The right framing for a CAH evaluation is "what operating model fits my facility?" not "which product is better?"
 - Self-serve platforms ask the nurse manager to configure and operate the scheduling system every week. Setup typically runs 2-4 weeks; weekly burden after go-live is typically 4-6 hours.
 - Managed services handle configuration and weekly schedule generation through a specialist outside the hospital. The nurse manager reviews and approves. Setup typically runs 3-5 days via Excel upload; weekly burden after go-live is typically 1-2 hours.
@@ -49,7 +49,7 @@ For a Critical Access Hospital nurse manager evaluating hospital scheduling opti
 
 ## What Is ShiftWizard?
 
-ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream, designed specifically for nursing workflows. It holds 4.3/5 on G2 and 4.4/5 on Capterra across 723 reviews. The defining characteristic from an operating model perspective: the nurse manager or a designated scheduler configures the system, builds every schedule, and operates the platform week to week. ShiftWizard provides the tools; the hospital provides the labor to use them.
+ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream, designed specifically for nursing workflows. It holds 4.3/5 on G2 and 4.4/5 on Capterra across 723 reviews.[1] The defining characteristic from an operating model perspective: the nurse manager or a designated scheduler configures the system, builds every schedule, and operates the platform week to week. ShiftWizard provides the tools; the hospital provides the labor to use them.
 
 <img src="/images/blog/shiftwizard-vs-managed-service/Shiftwizard.png" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

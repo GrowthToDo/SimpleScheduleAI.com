@@ -66,7 +66,7 @@ Hospitals switch away from NurseGrid because it is built for the nurse-facing co
 
 <img src="/images/blog/nursegrid-alternatives/NurseGrid.png" alt="NurseGrid nurse-facing scheduling app with manager and staff mobile features" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-NurseGrid holds 4.2/5 on Capterra (13 reviews; small sample). With a sample that small on a single source, the rating is directional rather than definitive. The hospital-context reviews cluster around two themes worth probing specifically during a CAH evaluation: the manager-app change and device compatibility.
+NurseGrid holds 4.2/5 on Capterra (13 reviews; small sample).[1] With a sample that small on a single source, the rating is directional rather than definitive. The hospital-context reviews cluster around two themes worth probing specifically during a CAH evaluation: the manager-app change and device compatibility.
 
 ### Manager App Removal
 
@@ -74,11 +74,11 @@ The most frequently raised hospital issue is the removal of the manager-facing m
 
 > "It no longer has the manager app so I have to login to desktop."
 >
-> Chief Nursing Officer, Hospital & Health Care, June 13, 2024, Capterra
+> Chief Nursing Officer, Hospital & Health Care, June 13, 2024, Capterra [6]
 
 > "they took away the Manager App for your phone."
 >
-> Staffing Coordinator, Medical Practice, June 11, 2024, Capterra
+> Staffing Coordinator, Medical Practice, June 11, 2024, Capterra [6]
 
 For a nurse manager who also takes clinical shifts, losing the phone-based manager workflow matters. Schedule edits and callout responses that previously happened on a phone between patient care tasks now require sitting at a desktop. At a CAH with no dedicated scheduler, that change in workflow location is not cosmetic, it changes when and how the manager can react to coverage gaps. Confirm the current manager workflow directly with the vendor before relying on NurseGrid as a primary scheduling system.
 
@@ -201,7 +201,7 @@ Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers th
 
 <img src="/images/blog/nursegrid-alternatives/ShiftWizard.png" alt="ShiftWizard hospital nurse scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-ShiftWizard holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews). It is a hospital nurse scheduling platform, owned by [HealthStream](https://www.healthstream.com), the same parent company as NurseGrid, and is designed specifically for hospital nursing rather than the nurse-facing app niche. It has a more developed manager-side workflow than NurseGrid and covers more hospital scheduling features in a single self-serve product.
+ShiftWizard holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews).[2] It is a hospital nurse scheduling platform, owned by [HealthStream](https://www.healthstream.com), the same parent company as NurseGrid, and is designed specifically for hospital nursing rather than the nurse-facing app niche. It has a more developed manager-side workflow than NurseGrid and covers more hospital scheduling features in a single self-serve product.
 
 For a CAH switching from NurseGrid specifically because of the manager-app removal, ShiftWizard keeps a nurse-facing experience while adding the manager-side depth NurseGrid does not provide. The tradeoff is a longer implementation than a lightweight app and a mobile manager experience that reviewers say is worth scrutinizing before committing.
 
@@ -250,7 +250,7 @@ For a CAH switching from NurseGrid specifically because of the manager-app remov
 
 <img src="/images/blog/nursegrid-alternatives/TCP.png" alt="TCP Scheduling Aladtec workforce management platform for healthcare and public safety" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). It covers manager-side scheduling functions that a nurse-facing app does not: shift management, certification tracking, overtime visibility, and basic reporting. The trade-off is a more configuration-heavy platform with a 2-4 week setup and ongoing operation by the nurse manager.
+Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews).[3] It covers manager-side scheduling functions that a nurse-facing app does not: shift management, certification tracking, overtime visibility, and basic reporting. The trade-off is a more configuration-heavy platform with a 2-4 week setup and ongoing operation by the nurse manager.
 
 If you are switching from NurseGrid because you need manager-side scheduling and compliance capability rather than a better nurse app, TCP Scheduling provides those functions while keeping a self-serve model. The documented customer base on Capterra skews toward fire, EMS, and law enforcement, so the nurse-facing experience is more limited than NurseGrid's, which may frustrate staff who adopted NurseGrid for its mobile app.
 
@@ -288,7 +288,7 @@ If you are switching from NurseGrid because you need manager-side scheduling and
 
 <img src="/images/blog/nursegrid-alternatives/Deputy.png" alt="Deputy general workforce scheduling platform for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Deputy holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), a strong overall rating across a large general workforce sample. Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) covering hospitals, clinics, and nursing facilities. Compared to NurseGrid, Deputy adds a manager-side scheduling workflow and a documented mobile app for both staff and managers.
+Deputy holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), a strong overall rating across a large general workforce sample.[4] Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) covering hospitals, clinics, and nursing facilities. Compared to NurseGrid, Deputy adds a manager-side scheduling workflow and a documented mobile app for both staff and managers.
 
 For a CAH leaving NurseGrid because the manager workflow is now desktop-only, Deputy's mobile manager experience is a relevant point of comparison. The documented healthcare feature set is narrower than a hospital-nursing-specific platform, so clinical constraint logic should be verified directly with the vendor.
 
@@ -331,7 +331,7 @@ For a CAH leaving NurseGrid because the manager workflow is now desktop-only, De
 
 <img src="/images/blog/nursegrid-alternatives/Homebase.png" alt="Homebase workforce scheduling and time tracking app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Homebase holds 4.4/5 on G2 (271 reviews) and 4.6/5 on Capterra (1,147 reviews). It is positioned primarily for retail, restaurant, and service industry scheduling ([joinhomebase.com](https://joinhomebase.com)). The free tier and low cost make it attractive as a pure cost-reduction option for very small care settings where NurseGrid's paid tier is hard to justify.
+Homebase holds 4.4/5 on G2 (271 reviews) and 4.6/5 on Capterra (1,147 reviews).[5] It is positioned primarily for retail, restaurant, and service industry scheduling ([joinhomebase.com](https://joinhomebase.com)). The free tier and low cost make it attractive as a pure cost-reduction option for very small care settings where NurseGrid's paid tier is hard to justify.
 
 For a CAH, Homebase is a cost play, not a compliance play. It is documented for simple rosters and basic schedule publishing, not for hospital-nursing clinical constraints or CMS documentation.
 

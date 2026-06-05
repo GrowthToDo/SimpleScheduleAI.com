@@ -235,7 +235,7 @@ Aladtec was built for emergency services (EMS, fire, law enforcement) but has a 
 
 **Verdict:** The strongest self-serve option for a 25-bed hospital that wants to own its scheduling process internally. Expect a 4-6 week ramp before the tool is working efficiently for your specific constraints. See the deeper [Aladtec alternatives for Critical Access Hospitals](/blog/aladtec-alternatives) guide for a fuller competitor analysis or the [Aladtec vs managed service](/blog/aladtec-vs-managed-service) comparison if the operating model is the decision point.
 
-**Ratings (May 2026):** G2: 4.3/5 (97 reviews). Capterra: 4.6/5 (17 reviews; small sample, reviewer base skews toward fire, EMS, and law enforcement; most recent hospital-context review is October 2020).
+**Ratings (May 2026):** G2: 4.3/5 (97 reviews). Capterra: 4.6/5 (17 reviews; small sample, reviewer base skews toward fire, EMS, and law enforcement; most recent hospital-context review is October 2020).[1]
 
 **Cost:** $200-450 per month depending on roster size and modules. Pricing requires a quote.
 
@@ -275,7 +275,7 @@ NurseGrid Manager is a nurse communication and schedule visibility tool rather t
 
 **Verdict:** A useful communication layer, not a scheduling replacement. If the underlying scheduling problem is that the manager spends too many hours building schedules and calculating compliance, NurseGrid Manager does not solve it. See the deeper [NurseGrid alternatives for Critical Access Hospitals](/blog/nursegrid-alternatives) guide for the fuller competitor analysis.
 
-**Ratings (May 2026):** Capterra: 4.2/5 (13 reviews; small sample). Verify current ratings directly with the vendor.
+**Ratings (May 2026):** Capterra: 4.2/5 (13 reviews; small sample). Verify current ratings directly with the vendor.[2]
 
 **Cost:** Approximately $150-300 per month for the manager tier. Exact pricing requires contact.
 
@@ -313,7 +313,7 @@ The limitation at a CAH is compliance. When I Work does not have credential trac
 
 **Verdict:** A reasonable budget option for non-CAH facilities. Not appropriate for a CMS-designated Critical Access Hospital where survey documentation is a compliance requirement. See the deeper [Aladtec alternatives](/blog/aladtec-alternatives) guide for the broader When I Work / Homebase / [Deputy](/blog/deputy-alternatives-healthcare) comparison context.
 
-**Ratings (May 2026):** Capterra: 4.5/5 (1,289 reviews).
+**Ratings (May 2026):** Capterra: 4.5/5 (1,289 reviews).[3]
 
 **Cost:** Approximately $2.50-$6 per user per month. At a 20-nurse roster, approximately $50-$120/month.
 
@@ -349,7 +349,7 @@ Homebase is a scheduling and time tracking tool built for very small businesses,
 
 **Verdict:** Below the functional requirements for a hospital nursing unit. Consider it for non-clinical support staff scheduling at the same facility, not for nursing operations. See the deeper [Aladtec alternatives](/blog/aladtec-alternatives) guide for broader Homebase / When I Work / Deputy positioning context.
 
-**Ratings (May 2026):** G2: 4.4/5 (271 reviews). Capterra: 4.6/5 (1,147 reviews).
+**Ratings (May 2026):** G2: 4.4/5 (271 reviews). Capterra: 4.6/5 (1,147 reviews).[4]
 
 **Cost:** Free tier for one location with up to 20 staff. Paid plans from $24-$100/month per location.
 

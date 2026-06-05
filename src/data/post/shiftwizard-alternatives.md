@@ -26,7 +26,7 @@ This guide compares 6 ShiftWizard alternatives for a Critical Access Hospital ev
 
 ## Key Takeaways
 
-- ShiftWizard is a hospital scheduling platform owned by HealthStream, Inc. (acquired). It holds 4.3/5 on G2 and 4.4/5 across 723 Capterra reviews (data verified 2026-04-30), with over 88% of Capterra reviews rating 4 stars or higher.
+- ShiftWizard is a hospital scheduling platform owned by HealthStream, Inc. (acquired). It holds 4.3/5 on G2 and 4.4/5 across 723 Capterra reviews,[1] with over 88% of Capterra reviews rating 4 stars or higher.
 - For a Critical Access Hospital, the right comparison is not feature-by-feature. It is which operating model fits a 25-bed facility with no dedicated scheduling coordinator and a nurse manager who also takes clinical shifts.
 - The main platform alternatives are [TCP](/blog/best-tcp-alternative-for-cah) Scheduling / Aladtec (self-serve, public-safety heritage with hospital expansion), NurseGrid (nurse-facing, manager tier available), and QGenda (physician scheduling, positioned for larger health systems). For facilities where the core issue is scheduling labor rather than platform fit, a managed service is a different operating model.
 - The critical question before any evaluation: does your nurse manager have 4-6 hours per week available for scheduling administration after go-live? If not, the operating model matters more than which platform you choose.
@@ -56,7 +56,7 @@ Hospitals switch away from ShiftWizard when the scheduling administration burden
 
 <img src="/images/blog/shiftwizard-alternatives/Shiftwizard.png" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-ShiftWizard's overall rating is high: 4.3/5 on G2 and 4.4/5 across 723 Capterra reviews (data verified 2026-04-30), with over 88% of Capterra reviewers rating 4 stars or higher. ShiftWizard is named a G2 Spring 2026 Leader and the product is positioned as designed by nurses for hospital nursing. A representative positive review:
+ShiftWizard's overall rating is high: 4.3/5 on G2 and 4.4/5 across 723 Capterra reviews,[1] with over 88% of Capterra reviewers rating 4 stars or higher. ShiftWizard is named a G2 Spring 2026 Leader and the product is positioned as designed by nurses for hospital nursing. A representative positive review:
 
 > "ShiftWizard was designed by nurses which is why it is fantastic to use."
 >
@@ -215,7 +215,7 @@ A representative positive review from a public-safety user:
 
 <img src="/images/blog/shiftwizard-alternatives/Nursegrid.png" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-NurseGrid Manager is the manager-tier product of NurseGrid, owned by HealthStream, Inc. It holds 4.2/5 across 13 Capterra reviews (verified 2026-04-30). The Capterra sample is small; reviews on the iOS App Store and Google Play are typically a more meaningful signal for a nurse-facing app.
+NurseGrid Manager is the manager-tier product of NurseGrid, owned by HealthStream, Inc. It holds 4.2/5 across 13 Capterra reviews.[3] The Capterra sample is small; reviews on the iOS App Store and Google Play are typically a more meaningful signal for a nurse-facing app.
 
 NurseGrid is built primarily for individual nurses managing their own schedules. The standard product covers mobile schedule visibility, shift trade requests, and availability management. A NurseGrid for Managers tier extends this with unit-level oversight. For CAHs evaluating NurseGrid as a primary scheduling system rather than a staff-facing layer, capabilities like CMS §485.635 audit-trail export, proactive FLSA overtime flagging, and credential-based callout filtering are critical; tier coverage of these features may differ from the standard product. Confirm directly with NurseGrid sales before relying on it as your primary system.
 

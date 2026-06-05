@@ -58,7 +58,7 @@ TCP TimeClock+'s documented limitations for hospital scheduling fall into three 
 
 > "The scheduling aspect leaves a bit to be desired."
 >
-> Karen L., Payroll, Hospital & Health Care, June 2025, Capterra
+> Karen L., Payroll, Hospital & Health Care, June 2025, Capterra [2]
 
 For a CAH nurse manager who needs credential-aware scheduling, overtime-optimized drafts, and compliance documentation built into the scheduling workflow, a time-and-attendance platform with scheduling as a secondary function may not be the right tool.
 
@@ -66,7 +66,7 @@ For a CAH nurse manager who needs credential-aware scheduling, overtime-optimize
 
 > "Because TCP is highly customizable, configuring features may be complicated and/or confusing."
 >
-> Donna L., April 2026, Capterra
+> Donna L., April 2026, Capterra [3]
 
 At a CAH without IT support, this configuration work falls to the nurse manager.
 
@@ -110,7 +110,7 @@ TCP TimeClock+ is a time and attendance platform made by TCP Software that inclu
 
 TCP TimeClock+ is a time and attendance platform made by TCP Software that includes employee scheduling as a secondary feature. Its primary strengths are time clock management, payroll integration, leave tracking, and overtime monitoring. Scheduling is part of the platform but not its primary design focus. TCP Software also owns two separate scheduling-focused products: Aladtec (designed for healthcare and public safety scheduling) and Humanity Scheduling (enterprise employee scheduling). A Critical Access Hospital evaluating any TCP product should confirm which one is being proposed and what it covers before committing.
 
-TCP TimeClock+ is a self-serve platform. That means a person at your facility, typically the nurse manager or a scheduling coordinator, configures it, maintains it, and uses it to build every schedule. The platform provides the structure; your staff provides the labor to operate it. It carries a 4.4/5 rating on Capterra from 271 reviews as of May 2026.
+TCP TimeClock+ is a self-serve platform. That means a person at your facility, typically the nurse manager or a scheduling coordinator, configures it, maintains it, and uses it to build every schedule. The platform provides the structure; your staff provides the labor to operate it. It carries a 4.4/5 rating on Capterra from 271 reviews as of May 2026.[1]
 
 If you are specifically looking for Aladtec by TCP alternatives, see our dedicated [Aladtec alternatives](/blog/aladtec-alternatives) post, which covers that product's specific feature set and limitations.
 

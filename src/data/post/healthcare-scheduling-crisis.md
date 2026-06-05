@@ -22,7 +22,7 @@ metadata:
 - Manual scheduling costs Critical Access Hospitals approximately $26,000/year in misallocated leadership time (10 hrs/week x $50/hr)
 - Last-minute callouts routed through agency staff carry 2-3x rate premiums plus an invisible orientation cost per shift
 - Version drift across spreadsheets, whiteboards, and portal PDFs creates CMS-surveyable documentation gaps under [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
-- Reliable nurses absorb disproportionate overtime under manual scheduling, driving turnover that costs $52,350 per RN departure (NSI 2024)
+- Reliable nurses absorb disproportionate overtime under manual scheduling, driving turnover that costs $52,350 per RN departure (NSI 2024)[1]
 - PRN availability coordination adds 2+ hours per scheduling cycle, a hidden cost rarely tracked in scheduling budgets
 - Fairness tracking and an automated replacement list are the two highest-impact interventions for CAH scheduling operations
 

@@ -27,7 +27,7 @@ This guide compares 6 Smart Square alternatives for a Critical Access Hospital, 
 ## Key Takeaways
 
 - symplr Smart Square is positioned for health systems and the enterprise, with no documented Critical Access Hospital, rural, or 25-bed-or-fewer reference customers. For a Critical Access Hospital, the right alternative is a tool sized to a single 25-bed facility rather than a multi-facility system, runnable without a labor-management analyst.
-- Smart Square holds 4.6/5 on Capterra (19 reviews; small sample). The companion symplr Workforce time-and-attendance product holds 4.1/5 on Capterra (13 reviews; small sample).
+- Smart Square holds 4.6/5 on Capterra (19 reviews; small sample).[1] The companion symplr Workforce time-and-attendance product holds 4.1/5 on Capterra (13 reviews; small sample).[2]
 - Smart Square has real strengths: it won Best in KLAS for Scheduling: Nurse and Staff in both 2025 and 2026, and its predictive-analytics depth is built for large multi-facility systems. Those strengths are aimed at health-system scale, not a single Critical Access Hospital.
 - For a Critical Access Hospital that needs the scheduling handled rather than a more powerful tool to do it itself, SimpleScheduleAI is the managed-service alternative. For facilities that want self-serve software at a smaller scale, several options below fit a 25-bed roster better than an enterprise platform.
 - Whichever direction you go, ask any vendor for a current reference customer at Critical Access Hospital scale and confirm CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation handling directly, because product pages rarely document single-CAH deployment fit.
@@ -67,7 +67,7 @@ Smart Square is built for large multi-facility health systems, and the documente
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/SmartSquare.png" alt="symplr Smart Square enterprise nurse and staff scheduling platform for health systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Smart Square holds 4.6/5 on Capterra (19 reviews; small sample). The overall rating is strong, and the product won Best in KLAS for Scheduling: Nurse and Staff in both 2025 and 2026. The fit question for a Critical Access Hospital is not whether the product is good. It is whether an enterprise platform sizes down to a single 25-bed facility without enterprise overhead, and the public reviewer base does not answer that.
+Smart Square holds 4.6/5 on Capterra (19 reviews; small sample).[1] The overall rating is strong, and the product won Best in KLAS for Scheduling: Nurse and Staff in both 2025 and 2026.[4] The fit question for a Critical Access Hospital is not whether the product is good. It is whether an enterprise platform sizes down to a single 25-bed facility without enterprise overhead, and the public reviewer base does not answer that.
 
 ### What Reviewers Report
 
@@ -346,7 +346,7 @@ The tradeoff is the same as Deputy's, with a stronger lean away from healthcare.
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/Smartlinx.png" alt="Smartlinx workforce management platform with compliance and scheduling features" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Smartlinx holds 4.5/5 on Capterra (6 reviews; small sample). The vendor describes the platform as purpose-built for the long-term care, post-acute care, senior care, and behavioral health industries ([smartlinx.com](https://www.smartlinx.com)). It carries stronger healthcare compliance logic and credential tracking than a general workforce tool, with integrated time and attendance. The tradeoff is a significantly longer and more complex implementation than a lightweight tool.
+Smartlinx holds 4.5/5 on Capterra (6 reviews; small sample).[9] The vendor describes the platform as purpose-built for the long-term care, post-acute care, senior care, and behavioral health industries ([smartlinx.com](https://www.smartlinx.com)). It carries stronger healthcare compliance logic and credential tracking than a general workforce tool, with integrated time and attendance. The tradeoff is a significantly longer and more complex implementation than a lightweight tool.
 
 For a small rural hospital this is a middle option: more healthcare compliance depth than a general scheduling app, but a heavier implementation than a unit-level product. It still requires an internal owner to run a multi-month implementation, which is a constraint at Critical Access Hospital scale.
 

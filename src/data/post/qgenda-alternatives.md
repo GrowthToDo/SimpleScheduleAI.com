@@ -25,7 +25,7 @@ This guide compares 6 QGenda alternatives for a Critical Access Hospital, with t
 
 ## Key Takeaways
 
-- QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It is positioned primarily for physician scheduling at larger health systems and physician group practices.
+- QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews).[1] It is positioned primarily for physician scheduling at larger health systems and physician group practices.
 - The trade-offs CAH demos should probe most carefully on QGenda: setup time, fit at small-hospital scale, and pricing for facilities that only need nursing scheduling.
 - The main CAH-appropriate self-serve alternatives include [TCP](/blog/best-tcp-alternative-for-cah)/Aladtec (self-serve, healthcare and EMS focus), ShiftWizard (self-serve, hospital nursing focus), and NurseGrid Manager (nurse-facing, communication layer). A managed service is a fourth option for facilities where the nurse manager cannot sustain platform administration alongside clinical duties.
 - For a CAH that needs a self-serve platform built specifically for hospital nurse scheduling, ShiftWizard is the strongest fit. For lower cost with healthcare scheduling depth and faster setup, TCP/Aladtec is the common starting point. For a 25-bed facility where the issue is scheduling labor rather than platform cost or design, SimpleScheduleAI handles the scheduling work rather than providing better tools to do it yourself.
@@ -196,7 +196,7 @@ Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies
 
 <img src="/images/blog/qgenda-alternatives/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
+Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews).[2] The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
 
 For a CAH coming off QGenda, TCP/Aladtec's pricing tier and faster setup may be a fit. Trade-offs CAH demos should probe:
 
@@ -245,7 +245,7 @@ Ask the vendor for current named support contacts, response-time SLA, and a rece
 
 <img src="/images/blog/qgenda-alternatives/Shiftwizard.png" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-ShiftWizard holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews) and was named a G2 Spring 2026 Leader. It is a hospital scheduling platform owned by HealthStream, Inc. (acquired), designed specifically for hospital nursing scheduling and used by more than 500 hospital facilities ([healthstream.com](https://www.healthstream.com)).
+ShiftWizard holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews) and was named a G2 Spring 2026 Leader.[3] It is a hospital scheduling platform owned by HealthStream, Inc. (acquired), designed specifically for hospital nursing scheduling and used by more than 500 hospital facilities ([healthstream.com](https://www.healthstream.com)).
 
 A representative positive review:
 
@@ -287,7 +287,7 @@ Ask the demo to walk through mobile workflows from both manager and staff perspe
 
 <img src="/images/blog/qgenda-alternatives/Nursegrid.png" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample). NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability ([nursegrid.com](https://www.nursegrid.com)). The Manager tier extends this with unit-level oversight.
+NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability ([nursegrid.com](https://www.nursegrid.com)). The Manager tier extends this with unit-level oversight.
 
 **Best for:** CAHs discovering they primarily need nurse-facing schedule communication rather than a full scheduling platform, and evaluating QGenda because of physician-scheduling mismatch rather than feature depth.
 

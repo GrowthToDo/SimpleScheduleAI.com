@@ -212,7 +212,7 @@ CMS compliance documentation and initial credential configuration require setup 
 
 **Verdict:** The best self-serve upgrade from Deputy for small hospital nurse scheduling. Aladtec provides the healthcare credential and coverage logic that Deputy is missing, without the implementation complexity of SmartLinx or QGenda. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
-**Ratings:** Capterra: 4.6/5 (17 reviews; small sample)
+**Ratings:** Capterra: 4.6/5 (17 reviews; small sample) [2]
 
 **Cost:** $200-450 per month. Pricing requires a quote.
 
@@ -249,7 +249,7 @@ For healthcare organizations using Deputy primarily for schedule publishing and 
 
 **Verdict:** A reasonable Deputy alternative for non-clinical healthcare settings where compliance is not the driver of the switch. For hospital nursing, it solves none of the problems that make Deputy inadequate.
 
-**Ratings:** G2: 4.4/5 (361 reviews) / Capterra: 4.5/5 (1,289 reviews)
+**Ratings:** G2: 4.4/5 (361 reviews) / Capterra: 4.5/5 (1,289 reviews) [3]
 
 **Cost:** $2.50 per user per month (Essentials) to $4.00 per user per month (Pro).
 
@@ -277,7 +277,7 @@ Like Deputy and When I Work, Connecteam does not document healthcare-specific co
 
 **Verdict:** A strong choice for administrative and operational deskless teams within a healthcare organization. Not a suitable replacement for hospital nurse scheduling regardless of the broader feature set.
 
-**Ratings:** Capterra: 4.6/5 (5,150 reviews)
+**Ratings:** Capterra: 4.6/5 (5,150 reviews) [4]
 
 **Cost:** Free for up to 10 users; paid plans from $29-99 per month for the first 30 users.
 
@@ -313,7 +313,7 @@ For any hospital nursing environment, Homebase is the wrong category of tool. He
 
 **Verdict:** A cost reduction move for the simplest possible scheduling environments. Any hospital nursing context requires a purpose-built tool, not a retail scheduling app.
 
-**Ratings:** G2: 4.4/5 (271 reviews) / Capterra: 4.6/5 (1,147 reviews)
+**Ratings:** G2: 4.4/5 (271 reviews) / Capterra: 4.6/5 (1,147 reviews) [5]
 
 **Cost:** Free for one location; paid plans from $24-80 per month depending on features.
 
