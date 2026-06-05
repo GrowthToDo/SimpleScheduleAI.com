@@ -21,7 +21,8 @@
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
-    "indexnow": "node scripts/indexnow-submit.mjs"
+    "indexnow": "node scripts/indexnow-submit.mjs",
+    "check-blog": "node scripts/check-blog.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
