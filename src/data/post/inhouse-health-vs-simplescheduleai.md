@@ -242,11 +242,23 @@ Write the answers down before any demo. A demo shows what the software can do. T
   </a>
 </div>
 
-## A Note on Sources
+## Sources
 
-Every In-House Health detail in this post, positioning, audience, stat claims, and company stage, comes from the company's own site and public sources, drawn from the [In-House Health product page](https://www.inhouse.health/) and verified on 2026-05-16. Vendor stat claims are labeled as vendor-stated and are not presented as independently verified. As of 2026-05-16, no third-party reviews exist for In-House Health: there is no G2 listing and no Capterra listing, and no usable independent reviews surfaced on Software Advice, GetApp, Gartner Peer Insights, Reddit, or Product Hunt. Because there is no reviewer signal, every evaluative statement uses neutral product-page framing only.
+[1] In-House Health vendor product page. [inhouse.health](https://www.inhouse.health/). Verified 2026-05-16.
 
-The only named external statement about In-House Health (James Kerridge, Associate Chief Nurse, Chicago VA Medical Center) appeared in [Fierce Healthcare's coverage of the company's seed funding announcement](https://www.fiercehealthcare.com/health-tech/house-health-nabs-4m-build-out-ai-enabled-scheduling-platform-nursing-teams). That is funding-announcement PR, not a product review, so this post does not rely on it as evaluative evidence. Regulatory and workforce claims are linked to primary sources: [CMS Conditions of Participation for Critical Access Hospitals](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F), [CMS §485.635](https://www.ecfr.gov/current/title-42/section-485.635), [U.S. Department of Labor FLSA overtime guidance](https://www.dol.gov/agencies/whd/overtime), and [HRSA rural health workforce data](https://www.hrsa.gov/rural-health).
+[2] In-House Health vendor stat claims (positioning, audience, company stage). In-House-stated, not independently verified.
+
+[3] In-House Health seed funding announcement coverage, including statement by James Kerridge, Associate Chief Nurse, Chicago VA Medical Center. [Fierce Healthcare](https://www.fiercehealthcare.com/health-tech/house-health-nabs-4m-build-out-ai-enabled-scheduling-platform-nursing-teams). Cited as funding-announcement PR, not as a product review.
+
+[4] CMS Conditions of Participation for Critical Access Hospitals. [eCFR, Title 42, Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F).
+
+[5] CMS §485.635 specific section. [eCFR](https://www.ecfr.gov/current/title-42/section-485.635).
+
+[6] FLSA overtime guidance. [U.S. Department of Labor — Wage and Hour Division](https://www.dol.gov/agencies/whd/overtime).
+
+[7] HRSA rural health workforce data. [hrsa.gov/rural-health](https://www.hrsa.gov/rural-health).
+
+**Methodology note:** As of 2026-05-16, no third-party reviews exist for In-House Health on G2, Capterra, Software Advice, GetApp, Gartner Peer Insights, Reddit, or Product Hunt. Because there is no reviewer signal, every evaluative statement uses neutral product-page framing only. The James Kerridge statement is treated as PR, not as evaluative evidence.
 
 ## Frequently Asked Questions
 

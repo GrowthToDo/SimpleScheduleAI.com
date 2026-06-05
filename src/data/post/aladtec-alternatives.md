@@ -28,7 +28,7 @@ This guide compares 6 alternatives for a 25-bed CAH that needs hospital-nursing 
 ## Key Takeaways
 
 - For a Critical Access Hospital that needs a self-serve platform designed specifically for hospital nurse scheduling workflows, [ShiftWizard](/blog/shiftwizard-alternatives) is a stronger fit than Aladtec. For a facility staying within the [TCP](/blog/best-tcp-alternative-for-cah) ecosystem, TCP Scheduling is the direct upgrade path with a longer implementation. For a hospital that needs the scheduling handled rather than a better tool to do it themselves, SimpleScheduleAI is the managed service alternative.
-- Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). The platform's documented customer base on Capterra skews toward fire, EMS, law enforcement, and security users; the most recent hospital-context reviews on Capterra are several years old.
+- Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews).[1] The platform's documented customer base on Capterra skews toward fire, EMS, law enforcement, and security users; the most recent hospital-context reviews on Capterra are several years old.
 - TCP Scheduling is the enterprise-tier product from the same parent company; data migration within the TCP ecosystem is simpler than switching vendors entirely, but configuration depth and implementation effort are higher.
 - SmartLinx, with documented focus on long-term care, post-acute, senior care, and behavioral health, is a self-serve option for hospitals at 50-100 beds with IT capacity for a longer implementation.
 - When I Work, Homebase, and Deputy are general workforce scheduling tools used across many industries; healthcare buyers should confirm with each vendor which clinical compliance capabilities (HIPAA, BAA, CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) audit trail, credential constraints) are covered in their tier and contract.
@@ -490,9 +490,21 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the overhead mode
   <a href="/contact" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Request a Demo</a>
 </div>
 
-## A Note on Sources
+## Sources
 
-Public review counts, ratings, and quotes referenced in this guide were gathered from G2, Capterra, AllNurses.com, and the iOS App Store on 2026-04-30. Documented product capabilities reference each vendor's own product page, also verified on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+[1] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+
+[2] Amanda F., Nurse Manager (Hospital & Health Care), Aladtec review. Capterra, October 13, 2020.
+
+[3] Jeanne C., Administrative Coordinator, Aladtec review. Capterra, May 7, 2019.
+
+[4] Jody S., Security Management, Aladtec review. Capterra, August 14, 2025.
+
+[5] Deputy ratings: 4.6/5 on G2 (1,400+ reviews), 4.6/5 on Capterra (765 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-04-30.
+
+[6] ShiftWizard, NurseGrid, and additional competitor ratings sourced from G2 and Capterra on 2026-04-30. Vendor capabilities cross-referenced against each vendor's product page on the same date. AllNurses.com and iOS App Store reviews referenced where cited inline.
+
+**Methodology note:** Vendor offerings, ratings, and product capabilities change over time. CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 ## Frequently Asked Questions About Aladtec Alternatives
 

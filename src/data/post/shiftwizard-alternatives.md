@@ -423,9 +423,21 @@ If you are currently evaluating hospital scheduling options for your CAH, these 
 
 5. **If the managed service operating model fits your constraints, request a pilot.** SimpleScheduleAI offers a free 60-day pilot for qualifying CAHs in Texas, with no setup fee and no contract commitment during the pilot. You can request a reference call with a current pilot facility before committing. [Request a pilot or reference call →](/pilot)
 
-## A Note on Sources
+## Sources
 
-Public review counts, ratings, and quotes in this guide were gathered from G2, Capterra, AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on 2026-04-30. Documented product capabilities reference each vendor's own product page, also verified on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+[1] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30.
+
+[2] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+
+[3] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-04-30.
+
+[4] Deputy ratings: 4.6/5 on G2 (1,400+ reviews), 4.6/5 on Capterra (765 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-04-30.
+
+[5] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[6] FLSA healthcare overtime guidance. [U.S. Department of Labor, Wage and Hour Division](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+**Methodology note:** Reviewer quotes were cross-checked against AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on the verification date. Documented product capabilities reference each vendor's own product page on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 ## Frequently Asked Questions
 

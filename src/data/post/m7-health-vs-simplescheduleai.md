@@ -265,9 +265,23 @@ Write the answers down before any demo. A demo shows what the software can do. T
 
 For more context, see how [AI nurse scheduling](/ai-nurse-scheduling) works as a managed service for small hospitals.
 
-## A Note on Sources
+## Sources
 
-All M7 Health details come only from M7's own website and public press, verified 2026-05-16. Figures such as more than 60% less administrative scheduling time are M7 vendor claims for large health-system deployments, not independently verified results. M7 has no user reviews on Capterra, G2, TrustRadius, Software Advice, GetApp, or Gartner Peer Insights; this post uses neutral product-page framing throughout, and says "not documented on the product page" where a capability is not explicitly stated. The Ochsner Health and ScionHealth statements are partnership PR cited only as evidence of enterprise deployment scale, not as product reviews.
+[1] M7 Health vendor product page. [m7health.com](https://www.m7health.com/). Verified 2026-05-16.
+
+[2] M7 Health vendor figures (13,000 healthcare professionals across 60+ hospitals; 60% reduction in administrative scheduling time). M7-stated, not independently verified.
+
+[3] M7 Health venture funding coverage. [Fierce Healthcare](https://www.fiercehealthcare.com). Cited as evidence of enterprise deployment scale.
+
+[4] Ochsner Health and ScionHealth M7 Health partnership PR. Cited as evidence of enterprise deployment scale, not as product reviews.
+
+[5] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[6] FLSA healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+[7] HRSA rural health workforce data. [hrsa.gov/rural-health](https://www.hrsa.gov/rural-health).
+
+**Methodology note:** M7 has no user reviews on Capterra, G2, TrustRadius, Software Advice, GetApp, or Gartner Peer Insights as of the verification date. This post uses neutral product-page framing throughout and says "not documented on the product page" where a capability is not explicitly stated.
 
 ## Frequently Asked Questions
 

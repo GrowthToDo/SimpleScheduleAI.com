@@ -660,9 +660,27 @@ If you run a Critical Access Hospital specifically, we have a dedicated guide th
   <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
 </div>
 
-## A Note on Sources
+## Sources
 
-Public review counts, ratings, and quotes referenced in this guide were gathered from G2, Capterra, AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on 2026-04-30. Documented product capabilities reference each vendor's own product page, also verified on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+[1] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews), G2 Spring 2026 Leader. Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30.
+
+[2] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+
+[3] QGenda ratings: 4.6/5 on G2 (164 reviews), 4.2/5 on Capterra (68 reviews). Vendor page: [qgenda.com](https://www.qgenda.com). Verified 2026-04-30.
+
+[4] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-04-30.
+
+[5] Deputy ratings: 4.6/5 on G2 (1,400+ reviews), 4.6/5 on Capterra (765 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-04-30.
+
+[6] Homebase ratings: 4.6/5 on Capterra (5,150 reviews). Vendor page: [joinhomebase.com](https://joinhomebase.com). Verified 2026-04-30.
+
+[7] When I Work ratings: 4.5/5 on Capterra (1,289 reviews). Vendor page: [wheniwork.com](https://wheniwork.com). Verified 2026-04-30.
+
+[8] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[9] FLSA healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+**Methodology note:** Reviewer quotes were cross-checked against AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on the verification date. Documented product capabilities reference each vendor's own product page on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 ## Frequently Asked Questions
 

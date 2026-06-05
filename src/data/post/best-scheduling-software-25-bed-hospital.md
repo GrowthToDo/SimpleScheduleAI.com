@@ -466,9 +466,23 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 
   <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
-## A Note on Sources
+## Sources
 
-Public review counts, ratings, and reviewer quotes referenced in this guide were gathered from Capterra and G2 with verification dates noted alongside each ratings line. The Aladtec Capterra quotes are several years old because the most recent hospital-context reviews on the platform are from 2019-2020; Aladtec reviewers since then skew toward fire, EMS, and law enforcement contexts. Quotes for NurseGrid (June 2024), When I Work (February 2026), and Homebase (March 2025 and September 2025) are within recent windows. Documented product capabilities reference each vendor's own product page, with the verification date noted in the vendor caveats. Vendor offerings, ratings, and product capabilities change over time; hospitals evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+[1] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified per inline dates. Hospital-context Capterra quotes (Amanda F., October 13, 2020; Jeanne C., May 7, 2019) are several years old; recent reviewers skew toward fire, EMS, and law enforcement.
+
+[2] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Quotes dated June 2024.
+
+[3] When I Work ratings: 4.5/5 on Capterra (1,289 reviews). Vendor page: [wheniwork.com](https://wheniwork.com). Quotes dated February 2026.
+
+[4] Homebase ratings: 4.6/5 on Capterra (5,150 reviews). Vendor page: [joinhomebase.com](https://joinhomebase.com). Quotes dated March 2025 and September 2025.
+
+[5] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com).
+
+[6] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[7] FLSA healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+**Methodology note:** Documented product capabilities reference each vendor's own product page, with the verification date noted in the vendor caveats. Vendor offerings, ratings, and product capabilities change over time; hospitals evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 ## Frequently Asked Questions
 

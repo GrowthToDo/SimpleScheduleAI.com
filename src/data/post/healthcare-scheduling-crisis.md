@@ -291,9 +291,23 @@ surface this during onboarding.
 
 One honest limitation: a managed scheduling service is not the right fit for facilities over 50 beds, hospitals with dedicated scheduling administrators, or facilities where the nurse manager has protected administrative time for scheduling and prefers direct cell-by-cell control.
 
-## A Note on Sources
+## Sources
 
-Public quotes referenced in this guide were gathered from Capterra and AllNurses.com on 2026-04-30. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+[1] NSI Nursing Solutions, 2024 National Health Care Retention & RN Staffing Report. Per-RN turnover cost figure ($52,350). [nsinursingsolutions.com](https://www.nsinursingsolutions.com).
+
+[2] AONL workforce data on agency staffing premiums in healthcare. [aonl.org/resources/workforce](https://www.aonl.org/resources/workforce).
+
+[3] HRSA rural workforce capacity data and shortage area framework. [data.hrsa.gov/topics/health-workforce/shortage-areas](https://data.hrsa.gov/topics/health-workforce/shortage-areas).
+
+[4] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [cms.gov](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) and [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[5] Texas Labor Code §62.002 overtime rules. [Texas Statutes](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
+
+[6] Pre-build CAH nurse-manager research interviews. Internal research conducted by SimpleScheduleAI; cited inline as "from our pre-build research interviews."
+
+[7] Reviewer quotes referenced in this guide gathered from Capterra and AllNurses.com on 2026-04-30.
+
+**Methodology note:** Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>

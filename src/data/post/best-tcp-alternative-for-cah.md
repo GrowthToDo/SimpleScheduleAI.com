@@ -331,9 +331,31 @@ Four questions separate the platforms that will actually improve a CAH nurse man
   </a>
 </div>
 
-## A Note on Sources
+## Sources
 
-Public review counts, ratings, and quotes referenced in this guide were gathered from G2 and Capterra on 2026-04-30 and verified again in May 2026. Documented product capabilities reference each vendor's own product page, also verified on those dates. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+[1] TCP TimeClock+ ratings: 4.4/5 on Capterra (271 reviews). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+
+[2] Karen L., Payroll (Hospital & Health Care), TCP TimeClock+ review. Capterra, June 2025.
+
+[3] Donna L., TCP TimeClock+ review. Capterra, April 2026.
+
+[4] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30.
+
+[5] Jennifer C., Director of Emergency Services, ShiftWizard review. Capterra, July 15, 2024.
+
+[6] Erika A., Registered Nurse, ShiftWizard review. Capterra, July 9, 2024.
+
+[7] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+
+[8] Jody S., Security Management, Aladtec review. Capterra, August 14, 2025.
+
+[9] Jeanne C., Administrative Coordinator, Aladtec review. Capterra, May 7, 2019.
+
+[10] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-04-30.
+
+[11] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+**Methodology note:** Vendor offerings, ratings, and product capabilities change over time. CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>

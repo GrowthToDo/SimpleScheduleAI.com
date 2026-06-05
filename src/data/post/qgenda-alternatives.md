@@ -417,9 +417,23 @@ QGenda is worth keeping if:
 
 For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) options at the 25-bed CAH scale, and the specific compliance requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides before finalizing your evaluation. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). Related comparison posts: [best nurse scheduling software for 2026](/blog/best-nurse-scheduling-software-2026), [Aladtec alternatives for hospitals](/blog/aladtec-alternatives), [Schedule360 alternatives for Critical Access Hospitals](/blog/schedule360-alternatives), and [the $26,000 hidden cost of manual scheduling](/blog/healthcare-scheduling-crisis).
 
-## A Note on Sources
+## Sources
 
-Public review counts, ratings, and quotes referenced in this guide were gathered from G2, Capterra, AllNurses.com, and the iOS App Store on 2026-04-30. Documented product capabilities reference each vendor's own product page, also verified on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+[1] QGenda ratings: 4.6/5 on G2 (164 reviews), 4.2/5 on Capterra (68 reviews). Vendor page: [qgenda.com](https://www.qgenda.com). Verified 2026-04-30.
+
+[2] TCP / Aladtec ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+
+[3] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews), G2 Spring 2026 Leader. Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30.
+
+[4] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-04-30.
+
+[5] QGenda reviewer quotes: Ari W. (Administrator, Hospital & Health Care, May 7, 2024); Brandi D. (Scheduling Coordinator, December 13, 2023); Roger S. (Practice Administrator, May 3, 2024); Courtney D. (Manager of Employee and Physician Relations, May 10, 2024); David S. (President, Hospital & Health Care, May 7, 2024). All Capterra, verified 2026-04-30.
+
+[6] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[7] FLSA healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+**Methodology note:** Reviewer quotes were cross-checked against AllNurses.com and the iOS App Store on the verification date. Documented product capabilities reference each vendor's own product page. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 ## Frequently Asked Questions
 

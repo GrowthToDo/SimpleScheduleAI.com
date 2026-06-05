@@ -30,7 +30,7 @@ This guide compares 6 alternatives for a Critical Access Hospital that needs nur
 
 - NurseGrid's strength is the nurse-facing mobile experience: schedule viewing, availability, and shift-trade requests. Reviewers on Capterra report the manager-facing mobile app was removed in mid-2024 and that desktop login is now required for schedule edits.
 - For a Critical Access Hospital, the gap is not the nurse app. It is manager-side scheduling, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime tracking before posting, CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation, and credential-filtered callout coverage, capabilities not documented on NurseGrid's product page as part of the nurse-facing app.
-- NurseGrid holds 4.2/5 on Capterra (13 reviews; small sample). Treat single-source ratings on a small sample as directional, not definitive, and probe the manager workflow specifically in any demo.
+- NurseGrid holds 4.2/5 on Capterra (13 reviews; small sample).[1] Treat single-source ratings on a small sample as directional, not definitive, and probe the manager workflow specifically in any demo.
 - The six strongest alternatives reviewed here are SimpleScheduleAI, ShiftWizard, [TCP](/blog/best-tcp-alternative-for-cah) Scheduling (Aladtec), Deputy, Homebase, and When I Work. The right pick depends on whether compliance automation, hospital-nursing fit, or cost reduction is the priority.
 - A hybrid is viable for CAHs that value nurse self-service: keep a communication tool for the staff-facing layer and run a compliance-focused service or platform for scheduling management and CMS documentation.
 - SimpleScheduleAI is the managed-service option: a specialist builds and maintains the schedule and the manager approves it. The honest tradeoff is no nurse-facing mobile app, so confirm whether staff self-service is a hard requirement before switching.
@@ -539,9 +539,21 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the manager-side 
   <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
 </div>
 
-## A Note on Sources
+## Sources
 
-Public review counts, ratings, and quotes referenced in this guide were gathered from G2 and Capterra and verified on 2026-04-30, with the ShiftWizard, Deputy, and Homebase quotes re-verified verbatim on 2026-05-15. NurseGrid's hospital-context Capterra reviews are dated June 2024, the most recent usable hospital reviews on that listing; older quotes are valid supporting evidence and their dates are shown inline. NurseGrid's Capterra sample is small (13 reviews), so its rating is directional. Documented product capabilities reference each vendor's own product page as of those dates. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+[1] NurseGrid Manager ratings: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-04-30.
+
+[2] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30; quotes re-verified 2026-05-15.
+
+[3] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+
+[4] Deputy ratings: 4.6/5 on G2 (1,400+ reviews), 4.6/5 on Capterra (765 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-04-30; quotes re-verified 2026-05-15.
+
+[5] Homebase ratings: 4.4/5 on G2 (271 reviews), 4.6/5 on Capterra (1,147 reviews). Vendor page: [joinhomebase.com](https://joinhomebase.com). Verified 2026-04-30; quotes re-verified 2026-05-15.
+
+[6] NurseGrid hospital-context Capterra reviews dated June 2024, the most recent usable hospital reviews on the Capterra NurseGrid listing.
+
+**Methodology note:** NurseGrid's Capterra sample is small (13 reviews), so its rating is directional rather than definitive. Documented product capabilities reference each vendor's own product page as of the verification dates. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 ## Frequently Asked Questions About NurseGrid Alternatives
 

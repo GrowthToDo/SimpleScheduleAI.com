@@ -78,7 +78,7 @@ Hospitals move away from Deputy when clinical compliance requirements exceed its
 
 > "Sometimes the app can be a bit slow or glitchy, especially when trying to load shifts."
 >
-> Portia A., Nurse, Hospital & Health Care, April 8, 2026, Capterra
+> Portia A., Nurse, Hospital & Health Care, April 8, 2026, Capterra [6]
 
 In retail scheduling, a slow shift-loading experience is an inconvenience. In an acute care setting where an uncovered shift creates a patient safety exposure, the same delay becomes an operational risk.
 
@@ -427,9 +427,25 @@ Start by calculating the full cost of Deputy for your hospital. Add the monthly 
   <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Request a Demo</a>
 </div>
 
-## A Note on Sources
+## Sources
 
-Capability descriptions for all platforms are based on publicly available product pages, verified May 2026. Ratings are sourced from [Capterra](https://www.capterra.com) and [G2](https://www.g2.com) as of May 2026. The reviewer quote from Portia A. is from Capterra, April 8, 2026. Compliance-specific limitations for Deputy (credential enforcement, FLSA 8-and-80, CMS documentation) are based on product page verification; no hospital-context reviewer complaints about these gaps were found on Capterra or G2 during research for this post. Features change; verify current capabilities with each vendor before finalizing an evaluation. The FLSA 8-and-80 rule reference links to the [DOL FLSA guidance](https://www.dol.gov/agencies/whd/flsa). CMS §485.635 references link to the [eCFR regulation text](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+[1] Deputy ratings: 4.6/5 on Capterra (772 reviews). Vendor page: [deputy.com](https://www.deputy.com) and [healthcare segment page](https://www.deputy.com/industry/healthcare). Verified May 2026.
+
+[2] Aladtec by TCP ratings: 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified May 2026.
+
+[3] When I Work ratings: 4.4/5 on G2 (361 reviews), 4.5/5 on Capterra (1,289 reviews). Vendor page: [wheniwork.com](https://wheniwork.com). Verified May 2026.
+
+[4] Homebase ratings: 4.6/5 on Capterra (5,150 reviews). Vendor page: [joinhomebase.com](https://joinhomebase.com). Verified May 2026.
+
+[5] TCP TimeClock+ ratings: 4.4/5 on G2 (271 reviews), 4.6/5 on Capterra (1,147 reviews). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified May 2026.
+
+[6] Portia A., Nurse (Hospital & Health Care), Deputy review. Capterra, April 8, 2026.
+
+[7] FLSA 8-and-80 healthcare overtime rule. [U.S. Department of Labor, Wage and Hour Division — FLSA guidance](https://www.dol.gov/agencies/whd/flsa).
+
+[8] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR, Title 42, Chapter IV, Subchapter G, Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+**Methodology note:** Capability descriptions for all platforms are based on publicly available product pages, verified May 2026. Compliance-specific limitations for Deputy (credential enforcement, FLSA 8-and-80, CMS documentation) are based on product page verification; no hospital-context reviewer complaints about these gaps were found on Capterra or G2 during research for this post. Features change; verify current capabilities with each vendor before finalizing an evaluation.
 
 ## Frequently Asked Questions
 

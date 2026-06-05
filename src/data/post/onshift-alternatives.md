@@ -517,9 +517,19 @@ For a hospital that is primarily a CAH or acute care facility, that difference i
 
 For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) options at the 25-bed CAH scale, how [AI nurse scheduling](/ai-nurse-scheduling) works as a managed service, and the specific compliance requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides before finalizing your evaluation.
 
-## A Note on Sources
+## Sources
 
-Public review counts, ratings, and quotes referenced in this guide were gathered from G2 and Capterra and verified on 2026-04-30, with Capterra product IDs and selected quotes re-verified on 2026-05-15. OnShift does not maintain a public G2 or Capterra listing that maps cleanly to a Critical Access Hospital nursing context, and no usable hospital-nursing reviewer quote was available within the verification window; OnShift limitations in this guide are framed as vendor-verification questions rather than asserted product gaps. Aladtec's most recent hospital-context Capterra reviews date to 2020 and its recent reviewer base skews toward public safety; this is noted in the Aladtec profile. Documented product capabilities reference each vendor's own product page as of the same dates. Vendor offerings, ratings, and capabilities change over time; CAHs evaluating any platform should verify current capabilities directly with the vendor before deciding.
+[1] OnShift product page. [onshift.com](https://www.onshift.com). Verified 2026-04-30. No usable hospital-nursing reviewer quote available on G2 or Capterra within the verification window; OnShift limitations are framed as vendor-verification questions rather than asserted product gaps.
+
+[2] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30; selected quotes re-verified 2026-05-15.
+
+[3] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30. Recent reviewer base skews toward public safety; most recent hospital-context reviews date to 2020.
+
+[4] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-04-30; selected quotes re-verified 2026-05-15.
+
+[5] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+**Methodology note:** Documented product capabilities reference each vendor's own product page as of the verification dates. Vendor offerings, ratings, and capabilities change over time; CAHs evaluating any platform should verify current capabilities directly with the vendor before deciding.
 
 ## Frequently Asked Questions About OnShift Alternatives
 

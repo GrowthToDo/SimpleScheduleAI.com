@@ -151,11 +151,21 @@ It is not the right fit for every hospital, and the limitation matters. SimpleSc
 
 Where it fits is the specific case this guide describes: a 25-bed Texas CAH with no IT department, no dedicated scheduler, and a nurse manager on clinical shifts who needs Texas overtime and CMS documentation handled without configuration work. For how the automation produces the drafts, see [AI nurse scheduling](/ai-nurse-scheduling).
 
-## A Note on Sources
+## Sources
 
-Competitor ratings and product positioning in this post were verified against [G2](https://www.g2.com) and [Capterra](https://www.capterra.com) on 2026-05-15. Deputy: G2 4.6/5 (1,400+ reviews), Capterra 4.6/5 (765 reviews). ShiftWizard: G2 4.3/5, Capterra 4.4/5 (723 reviews). Aladtec (TCP): G2 4.3/5 (97 reviews), Capterra 4.6/5 (17 reviews, a small sample that skews toward public safety and EMS rather than hospital nursing).
+[1] Deputy ratings: G2 4.6/5 (1,400+ reviews), Capterra 4.6/5 (765 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-05-15.
 
-No competitor capability is asserted as a feature absence. Where a tool's CMS §485.635 or FLSA 8-and-80 handling is not documented on its public product page, this post says to verify it with the vendor rather than claiming the capability is missing. Regulatory and scale claims link to CMS, the Department of Labor, and the Rural Health Information Hub as primary sources.
+[2] ShiftWizard ratings: G2 4.3/5, Capterra 4.4/5 (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-05-15.
+
+[3] Aladtec by TCP ratings: G2 4.3/5 (97 reviews), Capterra 4.6/5 (17 reviews; small sample that skews toward public safety and EMS rather than hospital nursing). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-05-15.
+
+[4] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[5] FLSA 8-and-80 rule and healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+[6] Rural Health Information Hub. [ruralhealthinfo.org](https://www.ruralhealthinfo.org).
+
+**Methodology note:** No competitor capability is asserted as a feature absence. Where a tool's CMS §485.635 or FLSA 8-and-80 handling is not documented on its public product page, this post says to verify it with the vendor rather than claiming the capability is missing.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>

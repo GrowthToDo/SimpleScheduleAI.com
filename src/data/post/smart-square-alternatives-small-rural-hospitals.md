@@ -527,9 +527,31 @@ For a nurse manager at a 25-bed CAH who also takes clinical shifts, an enterpris
 
 Related comparison posts: [QGenda alternatives for Critical Access Hospitals](/blog/qgenda-alternatives), [Schedule360 alternatives for Critical Access Hospitals](/blog/schedule360-alternatives), [ShiftWizard alternatives for Critical Access Hospitals](/blog/shiftwizard-alternatives), and [best nurse scheduling software for 2026](/blog/best-nurse-scheduling-software-2026).
 
-## A Note on Sources
+## Sources
 
-All review ratings and quotes in this guide come from Capterra, verified on 2026-05-17. Smart Square holds 4.6/5 on Capterra (19 reviews) at [capterra.com/p/275941](https://www.capterra.com/p/275941/Smart-Square/reviews/), and the companion symplr Workforce product holds 4.1/5 on Capterra (13 reviews) at [capterra.com/p/241148](https://www.capterra.com/p/241148/symplr-Workforce/reviews/). Vendor product capabilities reference each company's own product page. Reviewer quotes are used verbatim with the original date, even when the date is older than 30 days, because hospital-context Smart Square quotes within the last month were not available at verification. Vendor offerings, ratings, and product capabilities change over time. Before deciding on any platform, request a current reference customer at your scale directly from the vendor.
+[1] symplr Smart Square Capterra listing: 4.6/5 (19 reviews; small sample). [capterra.com/p/275941](https://www.capterra.com/p/275941/Smart-Square/reviews/). Verified 2026-05-17.
+
+[2] symplr Workforce Capterra listing: 4.1/5 (13 reviews; small sample). [capterra.com/p/241148](https://www.capterra.com/p/241148/symplr-Workforce/reviews/). Verified 2026-05-17.
+
+[3] symplr Smart Square vendor product page. [symplr.com](https://www.symplr.com). Verified 2026-05-17. No documented Critical Access Hospital, rural, or 25-bed-or-fewer reference customers on the product page.
+
+[4] KLAS Best in KLAS recognition for Scheduling: Nurse and Staff (2025 and 2026). KLAS Research.
+
+[5] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-05-17.
+
+[6] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-05-17.
+
+[7] Deputy ratings: 4.6/5 on G2, 4.6/5 on Capterra. Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-05-17.
+
+[8] When I Work ratings: 4.5/5 on Capterra (1,289 reviews). Vendor page: [wheniwork.com](https://wheniwork.com). Verified 2026-05-17.
+
+[9] Smartlinx product page. [smartlinxsolutions.com](https://www.smartlinxsolutions.com). Verified 2026-05-17.
+
+[10] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[11] FLSA healthcare overtime guidance, including 8-and-80 rule. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+**Methodology note:** Reviewer quotes are used verbatim with the original date, even when older than 30 days, because hospital-context Smart Square quotes within the last month were not available at verification. Vendor offerings, ratings, and product capabilities change over time. Before deciding on any platform, request a current reference customer at your scale directly from the vendor.
 
 ## Frequently Asked Questions About Smart Square Alternatives
 

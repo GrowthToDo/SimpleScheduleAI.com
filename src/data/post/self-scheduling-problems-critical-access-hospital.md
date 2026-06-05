@@ -179,9 +179,17 @@ For a full look at what CAH-appropriate [nurse scheduling software](/nurse-sched
 
 One honest limitation: constraint-aware fairness assignment is not the right fit for hospitals with stable senior rosters where weekend and holiday distribution has been worked out informally and is mutually agreed, or for facilities where self-scheduling already produces acceptable fairness without intervention.
 
-## A Note on Sources
+## Sources
 
-Public quotes referenced in this guide were gathered from Capterra and AllNurses.com on 2026-04-30. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+[1] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[2] FLSA healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+[3] HRSA rural workforce capacity data. [data.hrsa.gov/topics/health-workforce/shortage-areas](https://data.hrsa.gov/topics/health-workforce/shortage-areas).
+
+[4] Public reviewer quotes gathered from Capterra and AllNurses.com on 2026-04-30.
+
+**Methodology note:** Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>

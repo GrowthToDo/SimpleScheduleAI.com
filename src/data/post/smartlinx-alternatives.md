@@ -426,9 +426,21 @@ For hospitals where T&A is managed through payroll software independently of the
   </div>
 </div>
 
-## A Note on Sources
+## Sources
 
-Reviewer quotes for Aladtec and NurseGrid Manager are verbatim from Capterra, with reviewer name, role, and date as listed on the review at time of writing (May 2026). SmartLinx, TCP Scheduling, and Deputy capability descriptions are based on publicly available product pages. Feature availability changes; verify current details directly with each vendor before finalizing an evaluation.
+[1] SmartLinx workforce management product page. [smartlinxsolutions.com](https://www.smartlinxsolutions.com). Verified May 2026.
+
+[2] Aladtec by TCP ratings and reviewer quotes (verbatim with name, role, date). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Capterra, verified May 2026.
+
+[3] NurseGrid Manager ratings and reviewer quotes (verbatim with name, role, date). Vendor page: [nursegrid.com](https://www.nursegrid.com). Capterra, verified May 2026.
+
+[4] TCP Scheduling (enterprise tier, separate from TimeClock+ and Aladtec) product page. [tcpsoftware.com](https://www.tcpsoftware.com). Verified May 2026.
+
+[5] Deputy product page including healthcare segment. [deputy.com](https://www.deputy.com). Verified May 2026.
+
+[6] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+**Methodology note:** SmartLinx, TCP Scheduling, and Deputy capability descriptions are based on publicly available product pages. Feature availability changes; verify current details directly with each vendor before finalizing an evaluation.
 
 ## Frequently Asked Questions
 
