@@ -4,7 +4,7 @@ Verified quotes, ratings, and product notes for competitors covered across all b
 Use this file before fetching any live review data — only go online if a competitor is missing
 from this dossier or the verification date is older than 60 days.
 
-**Dossier last updated:** 2026-05-15
+**Dossier last updated:** 2026-06-06
 **Maintained by:** Pradeep Pandey / Claude (update each time new quotes are verified live)
 
 ---
@@ -57,6 +57,55 @@ Always note this when citing for hospital audiences.
 
 ---
 
+## AMiON (Amion)
+
+**Product:** Physician/clinician on-call and daily-work scheduling platform (stylized "Amion"; legacy name "OnCall"). Enterprise / health-system oriented. Not a nurse-scheduling product and not positioned for small or rural facilities.
+
+**Ownership:** Historically developed by Spiral Software (founder Stuart Karon). Acquired by Doximity, Inc. (announced Feb 8, 2022; ~$53.5M cash plus up to $24M earnout). Now marketed under Doximity Hospital Solutions.
+
+**Ratings (verified 2026-06-06):**
+
+- G2: No dedicated Amion product listing found (2026-06-06)
+- Capterra: 5.0/5 (1 review) — Product ID 9064 (URL slug is legacy "OnCall")
+- Apple App Store: 4.4/5 (~5.6K ratings), app id481079171
+
+**Capterra URL (verified 2026-06-06):** https://www.capterra.com/p/9064/OnCall/
+**App Store URL:** https://apps.apple.com/us/app/amion-clinician-scheduling/id481079171
+
+**Important caveat:** Quote inventory is very thin (1 Capterra review). Amion is enterprise physician on-call scheduling, a different category from AI nurse scheduling for CAHs. No CAH/rural/≤25-bed reference customers documented; named references are large systems (MedStar, NYU Langone, Northwell, Northwestern Medicine, UC Health). No CMS §485.635 audit trail, FLSA tracking, or credential enforcement documented on the product page (frame as "not documented on product page", never "lacks"). KLAS tracks Amion but scores are gated/proprietary, not quotable. No volume language permitted given the tiny verified sample.
+
+### Verified Reviewer Quotes
+
+**Capterra (only review on record; both lines are from the same single reviewer):**
+
+> "I liked how easy it was navigate to facility schedule and sort dayshift and nightshift."
+>
+> Christopher G., ER Tech, Hospital & Health Care, November 14, 2024, Capterra
+
+> "Generally it was a great app that was easy to use. Just needs to be more friendly on cell phone."
+>
+> Christopher G., ER Tech, Hospital & Health Care, November 14, 2024, Capterra
+
+**Apple App Store (review TITLES below are confirmed verbatim; review BODIES came back truncated and MUST be re-verified before any body text is quoted):**
+
+> "Convience without bells and whistles"
+>
+> Dr. Bubbala, App Store reviewer, June 28, 2020, Apple App Store
+
+Other App Store review titles safe to quote with attribution (bodies NOT yet verified, do not quote body text without re-fetching): "Horrible for large multi-assigned groups" (Eddie3486t1, Nov 3 2020); "Terrible design." (Ldm234, Jan 7 2025); "Horrible Update" (mlhartzell, Apr 21 2021).
+
+**Vendor positioning (verbatim, Doximity Hospital Solutions page, verified 2026-06-06):**
+
+- "Powerful, Simple Enterprise Scheduling"
+- "the trusted source of truth for physician on-call scheduling across entire health systems"
+- "An oncall and daily work physician scheduling software"
+- "the very first digital on-call scheduling platform"
+- Vendor scale claim (not a review): "used by over 350 health systems, 11,000 departments, and 200,000 providers and counting"
+
+**Pricing:** Not published; "Contact vendor" with a free trial available (Capterra). Quote-based enterprise model.
+
+---
+
 ## Deputy
 
 **Product:** General workforce scheduling platform. Retail, hospitality, food service, healthcare
@@ -98,6 +147,45 @@ before citing compliance capabilities.
 > "Setting up PTO and other time off requests is clunky and not easy to intuitively review."
 >
 > Jackie D., Practice Manager, Medical Practice, March 24, 2025, Capterra _(verified 2026-05-15)_
+
+---
+
+## EasyShifts
+
+**Product:** Healthcare staff shift-scheduling software, RN-founded (2008), EasyShifts LLC, Appleton WI. SOC 2 Type II (via Thoropass). Domain: easyshifts.com (NOT easyshifts.io). Serves hospitals, nursing homes, assisted living, memory care, CCRCs.
+
+**Ratings (verified 2026-06-06):**
+
+- Capterra: 4.6/5 (60 reviews) — Product ID 228499 (canonical; an older ID 241775 also appears in search — do not cite without re-verifying)
+- GetApp: 4.6/5 (60) — same Gartner review pool as Capterra; do not sum the counts
+- G2: rating unconfirmed (page returned 403); seller page references ~30 reviews — do not cite a G2 rating until verified by direct load
+
+**Capterra URL (verified 2026-06-06):** https://www.capterra.com/p/228499/EasyShifts/reviews/
+
+**Important caveat:** Healthcare-built but documented focus is general hospital + senior living, NOT CAH-specific. Product pages do NOT document CMS §485.635, FLSA/8-and-80, or nurse credential/license tracking (frame as "not documented on product page"). No named CAH/rural reference customers. Reviewer quote dates verified against Capterra (ID 228499) on 2026-06-06 — quotes are publish-ready.
+
+### Verified Reviewer Quotes (verbatim, Capterra ID 228499, dates verified 2026-06-06)
+
+> "Staff can pick up and trade shifts without having to contact scheduler every time."
+>
+> Jenafer J., Office Schedule Coordinator, Hospital & Health Care, January 16, 2024, Capterra
+
+> "It is frustrating not to be able to adjust shift times from the app"
+>
+> Johanna Y., Facility Manager, Hospital & Health Care, September 4, 2025, Capterra
+
+> "The one area that could be looked at improving would be the mobile usability for updating/changing shift times or adding a new open shift."
+>
+> Cindee A., Executive Director, Hospital & Health Care, October 8, 2025, Capterra
+
+_(Documented limitation theme: two reviewers independently flagged inability to edit shift times from the mobile app.)_
+
+**Vendor positioning (verbatim, easyshifts.com, verified 2026-06-06):**
+
+- "EasyShifts was originally started by an RN who was juggling schedules at three different hospitals in Wisconsin."
+- "Designed For Nursing" / "created by an RN specifically for nurse scheduling"
+
+**Pricing:** Official plans page lists "Contact us for Pricing"; third-party listings show ~$2.99–$3.99 per user/month (GetApp 2026-06-06); 90-day free trial, no credit card required. Cite pricing only with the conflict noted.
 
 ---
 
@@ -357,6 +445,74 @@ Product page DOES cover:
 
 ---
 
+## ScheduleAnywhere
+
+**Product:** Online employee/shift scheduling software with a dedicated nurse/healthcare sub-page. Historically by Atlas Business Solutions (ABS, Fargo ND, since 1991); now acquired by and branded under TCP Software ("ScheduleAnywhere by TCP"). scheduleanywhere.com 301-redirects into tcpsoftware.com.
+
+**Ratings (verified 2026-06-06):**
+
+- Capterra: 4.6/5 (61 reviews) — Product ID 134921
+- GetApp: 4.6/5 (61) — same Gartner pool as Capterra
+- G2 ("ScheduleAnywhere by TCP"): 4.3/5 (13) — from search snippet only; live G2 page 403-blocked. Verify before citing a G2 figure.
+
+**Capterra URL (verified 2026-06-06):** https://www.capterra.com/p/134921/ScheduleAnywhere/
+
+**Important caveat:** Documents a healthcare focus and a vendor claim of skills/certification/credential tracking with expiration alerts (not independently verified as a hard scheduling-enforcement gate). NOT documented on the product/healthcare page: CMS, Conditions of Participation, §485.635, audit trail, FLSA, Critical Access Hospital, 25-bed, rural (frame as "not documented on product page"). No CAH reference customers; named references are large (Atrium Health Carolinas Simulation Center, a VA system).
+
+### Verified Reviewer Quotes (Capterra, ID 134921; verbatim, with reviewer field labels)
+
+> "How easy it was to view and edit shifts!" [Pros]
+>
+> Alyssa M., RN, Hospital & Health Care, November 26, 2024, Capterra
+
+> "recently our facility blocked staff from viewing future information on the schedule...this has been a huge dissatifyer for staff because they can't view future trades, holiday/weekend assignments, details on who they can trade with or not." [Cons]
+>
+> Lisa T., RN, Hospital & Health Care, May 19, 2021, Capterra
+
+> "I wish that staff could see explanations beyond the self scheduling dates." [Cons]
+>
+> Laurie V., RN, Hospital & Health Care, July 22, 2021, Capterra
+
+**Pricing:** Basic plan from $25 per user/month (Capterra); free trial available.
+
+---
+
+## ScheduleForward
+
+**Product:** AI-powered healthcare staff scheduling software, originated in / marketed primarily to emergency departments (physicians + nurses). Real, distinct product at scheduleforward.com. (Founder names are NOT confirmable — a prior pass guessed "Tom Smallwood / Scott Lowry" but re-verification 2026-06-06 found no source tying those names to ScheduleForward; do NOT cite them.)
+
+**Important caveat (data limitation, re-checked 2026-06-06):** Vendor site still returns HTTP 502 on every direct fetch; all vendor wording is search-snippet only, NOT verbatim from a live page. The "$9/user/month" ED pricing is snippet-indicated only. The "1,000+ healthcare teams" claim is NOT confirmable. Confirm exact wording on a live page before quoting anything.
+
+**Ratings (verified 2026-06-06):**
+
+- NO listing on any third-party review platform. Capterra returns 404 (no product ID); no G2, Software Advice, GetApp, or TrustRadius listing.
+
+**No verified reviewer quotes exist.** No independent third-party reviews on any platform. Vendor-site testimonials are not third-party reviews and lacked full attribution — unusable. Per checklist L66, neutral product-page framing only; no quote substitution, no volume language.
+
+**CAH/rural fit:** No documented CAH or rural-hospital focus; positioning is emergency-department / general healthcare. No CMS §485.635, FLSA, or credential-tracking feature documented. No named reference customers (only an unverified "1,000+ healthcare teams" vendor claim).
+
+**Pricing:** ED scheduling "starts at $9/user/month" (vendor claim, snippet-sourced; confirm on live page).
+
+---
+
+## Shiftable
+
+**Product:** Generic AI shift-scheduling web app (shiftable.app, by "Plain Potato"). Markets to healthcare as one vertical among retail/food/hospitality — NOT a purpose-built nurse/CAH product.
+
+**Important caveat (data limitation, re-checked 2026-06-06):** The site is LIVE again at www.shiftable.app/en (the earlier Vercel DEPLOYMENT_NOT_FOUND has cleared), and now positions explicitly as "AI Nurse Scheduling for Healthcare Facilities" per search snippets. Direct fetches still 404 to tooling (client-side render / bot-block), so positioning is snippet-sourced and pricing is UNCONFIRMABLE — do NOT carry the 2025-08-20 Wayback pricing ($29/mo) forward as current. Name-collision warning: distinct from Shiftboard, ShiftApp, ShiftMed, Shiftbase — the relevant one is specifically shiftable.app by Plain Potato (operator low-confidence).
+
+**Ratings (verified 2026-06-06):**
+
+- No third-party review-platform listing on Capterra, G2, GetApp, Software Advice, or TrustRadius. No ratings exist.
+
+**No verified reviewer quotes exist.** Only vendor-published testimonials with placeholder employers ("Nurse Manager at Healthcare Facility") — fail attribution, unusable. Neutral product-page framing only.
+
+**CAH/rural fit:** No mention of Critical Access Hospitals, ≤25-bed, rural, or Texas. No CMS §485.635, no FLSA/8-and-80, no credential/license tracking, no HIPAA claims. Generic rule-based rostering only; example workplaces "hospital, hotel."
+
+**Pricing (2025-08-20 archive; re-verify):** $29/month or $290/year (the FAQ inconsistently says $250/year — flag both). No free version.
+
+---
+
 ## ShiftWizard
 
 **Product:** Hospital nurse scheduling platform. Designed specifically for hospital nursing.
@@ -401,6 +557,35 @@ _(Note: product ID 210972 seen in some older URLs is incorrect — live listing 
 > "Not being able to sign up for 4 hour increment shifts."
 >
 > Michalina W., RN, August 13, 2024, Capterra
+
+---
+
+## ShiftWorx (shiftworx.io)
+
+**CRITICAL disambiguation — two unrelated products share this name; never conflate them:**
+
+1. **ShiftWorx (healthcare)** — shiftworx.io. Healthcare workforce-management/scheduling. This is the competitor. **No third-party review listing exists.**
+2. **ShiftWorx (manufacturing)** — by FreePoint Technologies. A production-floor/MES analytics product. **ALL** Capterra/G2/GetApp/SoftwareAdvice/SourceForge listings under "ShiftWorx" belong to THIS product (Capterra p/188388, 4.4/5, 22 reviews). **Never borrow its rating or quotes for the healthcare product.**
+
+**Product (healthcare):** Workforce-management/scheduling platform for post-acute and long-term care. Documented care settings: Skilled Nursing; Assisted Living & Memory Care; Behavioral Health & Detox; Outpatient & Rehabilitation. Ownership/founder not disclosed on the site.
+
+**Ratings (verified 2026-06-06):**
+
+- Healthcare ShiftWorx (shiftworx.io): No Capterra, G2, GetApp, SoftwareAdvice, TrustRadius, or app-store listing found. **No third-party reviews exist.**
+
+**No verified reviewer quotes in dossier.** Per checklist L66, all blog content must use neutral product-page framing only: no quote substitution, no volume language. Do NOT use the FreePoint manufacturing rating/quotes.
+
+**CAH/rural fit (vendor site, verified 2026-06-06):** The words "nurse," "hospital," and "critical access" do not appear on the homepage. Documented focus is post-acute/long-term care (SNF, assisted living, behavioral health, outpatient/rehab), not acute-care hospitals. No CMS §485.635, FLSA, or specific credentialing-standard framework cited; credentialing described generically. No reference customers named. Factual differentiation point: ShiftWorx does not document hospital or CAH focus.
+
+**Pricing:** Not published; demo-request model ("Request a Demo").
+
+**Vendor positioning (verbatim, shiftworx.io, verified 2026-06-06):**
+
+- "Audit-proof. Budget-proof."
+- "The all-in-one workforce management platform that helps healthcare facilities reduce labor spend, automate credentialing compliance, and integrate with existing systems."
+- "Cut Labor Spend by 20%" and "100% credential compliance" (vendor claims, not verified outcomes)
+
+_(Note: some vendor copy contains em-dashes; reproduce only inside quoted vendor claims, never in our own blog prose.)_
 
 ---
 
@@ -583,6 +768,8 @@ The following appear in posts but have no verified quotes collected yet. Go onli
 - **TCP Scheduling** (enterprise tier, separate from Aladtec and TimeClock+)
 - **QGenda** — Capterra product ID not confirmed, verify before citing
 
+_(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as full sections on 2026-06-06.)_
+
 ---
 
 ## Maintenance Log
@@ -594,3 +781,6 @@ The following appear in posts but have no verified quotes collected yet. Go onli
 | 2026-05-16 | Added In-House Health and M7 Health sections (VC-funded AI nurse-scheduling startups). In-House Health: no G2 listing, no Capterra listing, zero third-party reviews (verified 2026-05-16). M7 Health: Capterra listing confirmed (product ID 10037829) but 0.0/5 with 0 reviews, no accessible G2 listing, zero third-party reviews (verified 2026-05-16). Both: no usable verbatim quotes, neutral product-page framing required per checklist L66. Positioning and vendor stat claims captured verbatim from own sites and public press.                                         |
 | 2026-05-16 | Secondary source pass (beyond G2/Capterra) for In-House Health + M7. Checked Software Advice, GetApp, Gartner Peer Insights, Apple App Store, Google Play, Reddit, LinkedIn, Product Hunt. In-House Health: iOS/Android apps exist (rating not retrievable, flagged for re-check); named PR quote (Kerridge, Chicago VA, via Fierce). M7: no consumer app; named partnership-PR quotes (Trainor/Ochsner, Jay/ScionHealth) on customer newsrooms. No independent third-party reviews found anywhere. Neutral product-page framing confirmed to stand for both.                       |
 | 2026-05-17 | Added symplr Smart Square section (formerly Avantas Smart Square; acquired by symplr from AMN Healthcare 2025-07-02, $75M). Verified verbatim: Hanna N., Wanda C., Stephanie T. (Smart Square, Capterra p/275941, 4.6/5, 19 reviews); Elisabeth C. (symplr Workforce, Capterra p/241148, 4.1/5, 13 reviews). G2 standalone Smart Square rating not retrievable (G2 blocks automated fetch); symplr brand aggregate 4.3/5 (356) noted, flagged for manual re-check. KLAS profile subscriber-gated. No CAH/rural reference customers; neutral product-page framing per checklist L66. |
+| 2026-06-06 | Added AMiON (Amion) and ShiftWorx (healthcare, shiftworx.io) sections from the 2026-06-05 DataForSEO LLM-citation gap pull. AMiON: Doximity-owned (acq. from Spiral Software 2022) enterprise physician on-call scheduling; Capterra ID 9064 (slug "OnCall"), 5.0/1 review; no G2; App Store id481079171, 4.4/~5.6K; 1 verbatim Capterra review (Christopher G.); App Store review bodies truncated, titles only confirmed. ShiftWorx: HARD name collision with FreePoint Technologies manufacturing product (which owns all directory listings incl. Capterra p/188388); healthcare shiftworx.io has ZERO third-party reviews, post-acute/LTC focus, no hospital/CAH language, neutral framing only. Research on ScheduleAnywhere, ScheduleForward, Shiftable, EasyShifts was attempted same day but interrupted by a session limit — still pending. |
+| 2026-06-06 | Re-verification pass (Playwright/web). EasyShifts: confirmed exact Capterra dates for all 3 quotes (Jenafer J. 2024-01-16; Johanna Y. 2025-09-04; Cindee A. 2025-10-08, all Capterra ID 228499) — quotes now publish-ready; corrected Cindee A. source from GetApp to Capterra and expanded her con verbatim. ScheduleForward: site still 502 to direct fetch; removed unconfirmable founder names (Tom Smallwood/Scott Lowry); "$9/user/mo" and "1,000+ teams" flagged snippet-only/unconfirmable; still zero third-party listings. Shiftable: site is LIVE again (Vercel error cleared), now positions as "AI Nurse Scheduling for Healthcare Facilities"; pricing unconfirmable, do not use Wayback $29/mo; still zero third-party listings. Separately, CFR cites for the CMS-compliance blog post were Playwright-verified against eCFR: 30-min rule is §485.618(d) emergency-care practitioner (not §485.635); RN/CNS/LPN on duty is §485.631(a)(5). |
+| 2026-06-06 | Completed the remaining 4 from the LLM-citation gap pull. ScheduleAnywhere: now TCP-owned (acq. from Atlas Business Solutions), Capterra 4.6/61 (ID 134921), GetApp 4.6/61, G2 4.3/13 (snippet only, 403-blocked, verify); 3 verbatim RN reviewer quotes; healthcare focus + vendor credential-tracking claim, no CMS/FLSA/CAH docs; Basic from $25/user/mo. ScheduleForward: real ED-origin AI scheduler, vendor site 502 (snippet-sourced only), ZERO third-party listings/reviews anywhere, no CAH/CMS/FLSA docs, ED pricing "$9/user/mo" vendor claim — neutral framing only. Shiftable (shiftable.app by Plain Potato): generic horizontal AI scheduler, live site DOWN (Vercel), Wayback 2025-08-20 sourced, ZERO third-party reviews, vendor testimonials use placeholder employers, no CAH/CMS/FLSA/HIPAA, $29/mo — neutral framing only. EasyShifts (easyshifts.com, RN-founded 2008, SOC 2 Type II): Capterra 4.6/60 (ID 228499; older 241775 exists, do not cite), GetApp 4.6/60 same pool, G2 403/unconfirmed; verbatim quotes captured but DATES must be re-verified before publishing; general hospital + senior-living focus, no CAH/CMS/FLSA/credential docs; pricing conflict (official "Contact us" vs third-party ~$2.99–3.99/user/mo), 90-day trial. |

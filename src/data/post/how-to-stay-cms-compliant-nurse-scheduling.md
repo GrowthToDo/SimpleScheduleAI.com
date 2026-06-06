@@ -3,7 +3,7 @@ draft: true
 publishDate: 2026-09-02T00:00:00Z
 updateDate: 2026-09-08T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Staying CMS Compliant with Nurse Scheduling at CAHs'
+title: 'How to Stay CMS Compliant with Nurse Scheduling at Critical Access Hospitals'
 excerpt: >
   CMS compliance in nurse scheduling is not about having perfect staffing. It is
   about being able to show that you had appropriate staffing when a surveyor asks.
@@ -23,6 +23,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/how-to-stay-cms-compliant-nurse-scheduling'
 ---
 
+Your staffing is compliant. Your documentation might not be able to prove it. At a Critical Access Hospital, those are two different problems, and the second one is what fails a CMS survey.
+
+This guide covers what CMS actually evaluates in CAH nurse staffing, the three records a surveyor asks for, the gaps that draw findings, and how to keep the documentation current without adding hours to the nurse manager's week.
+
 ## Key Takeaways
 
 - CMS Conditions of Participation for Critical Access Hospitals (§485.635) require that nursing services be "sufficient to meet the needs of patients." Surveyors evaluate this against your staffing records, not your policy statements.
@@ -33,58 +37,60 @@ metadata:
 
 ## Table of Contents
 
-- [What CMS §485.635 Actually Requires for Nurse Staffing](#what-cms-485635-actually-requires-for-nurse-staffing)
-- [The Three Documents CMS Surveyors Request](#the-three-documents-cms-surveyors-request)
-- [Common Compliance Gaps in CAH Nurse Scheduling](#common-compliance-gaps-in-cah-nurse-scheduling)
-- [Building a Compliant Documentation System](#building-a-compliant-documentation-system)
-- [What to Do When a Surveyor Arrives Unannounced](#what-to-do-when-a-surveyor-arrives-unannounced)
-- [How Scheduling Software Affects CMS Compliance](#how-scheduling-software-affects-cms-compliance)
+- [What CMS §485.635 Actually Requires for Nurse Staffing?](#what-cms-485635-actually-requires-for-nurse-staffing)
+- [What Are the Three Documents CMS Surveyors Request?](#what-are-the-three-documents-cms-surveyors-request)
+- [What Are the Common Compliance Gaps in CAH Nurse Scheduling?](#what-are-the-common-compliance-gaps-in-cah-nurse-scheduling)
+- [How Do You Build a Compliant Documentation System?](#how-do-you-build-a-compliant-documentation-system)
+- [What to Do When a Surveyor Arrives Unannounced?](#what-to-do-when-a-surveyor-arrives-unannounced)
+- [How Scheduling Software Affects CMS Compliance?](#how-scheduling-software-affects-cms-compliance)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-CMS surveyors do not expect perfection. They expect documentation. A CAH that has adequate nurses on every shift but cannot produce records showing who those nurses were, what their credentials were, and that a qualified registered nurse was available at all times is in a worse position during a survey than a hospital with slightly thinner coverage that has complete, accurate records.
+CMS surveyors do not expect perfection. They expect documentation. A CAH that has adequate nurses on every shift but cannot produce records showing who those nurses were, what their credentials were, and that the required emergency-care practitioner was available is in a worse position during a survey than a hospital with slightly thinner coverage that has complete, accurate records.
 
 The compliance work happens before the surveyor arrives, not when they walk through the door.
 
 ## What CMS §485.635 Actually Requires for Nurse Staffing?
 
-CMS Conditions of Participation for Critical Access Hospitals are codified at 42 CFR §485.635. The nursing services requirement states that a CAH must provide nursing services 24 hours a day, 7 days a week. Specifically:
+CMS Conditions of Participation for Critical Access Hospitals are codified at [42 CFR Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). Three sections govern who must be staffed and what you have to be able to show:
 
-**Nursing staff requirements:**
+**Nursing services, [§485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) [1]:** Nursing services must meet the needs of patients. A registered nurse must provide, or assign to other personnel, the nursing care of each patient, and a registered nurse (or, where state law permits, a physician assistant) must supervise and evaluate that care. A nursing care plan must be kept current for each inpatient.
 
-- The CAH must have a registered nurse on duty or on call at all times (available on-site within 30 minutes)
-- Nursing staff must be sufficient to meet the needs of patients, as defined by each patient's plan of care
-- A registered nurse must be responsible for the development and supervision of nursing care
+**On-duty nurse, [§485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) [2]:** A registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever the CAH has one or more inpatients. A licensed practical nurse (LVN in Texas) may be the on-duty nurse. The registered-nurse obligation is the provide-and-supervise role above, not a second nurse on every shift.
 
-**Documentation requirements:**
+**Emergency-care availability, [§485.618(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618) [3]:** A doctor of medicine or osteopathy, physician assistant, nurse practitioner, or clinical nurse specialist with emergency-care training must be on call and available on site within 30 minutes, or within 60 minutes if the CAH is in a designated frontier or remote area. This 30-minute standard is an emergency-services requirement. It is not a rule that a registered nurse must be on call to back up every licensed-practical-nurse shift, which is a common misreading.
 
-- Patient care assignments must be documented
-- The CAH must maintain records of nursing staff on duty sufficient to demonstrate compliance
-- Credential verification must support that staff delivering nursing care were appropriately qualified
+**What surveyors document against:**
 
-The standard does not specify a minimum nurse-to-patient ratio. CMS expects CAHs to determine adequate staffing based on patient census and acuity. What they do expect is that the hospital can demonstrate, through records, that qualified nursing staff were on duty at all times during any period under review.
+- Patient care assignments are documented
+- Records show the required nurse was on duty whenever inpatients were present
+- The on-call emergency-care practitioner and the response-time commitment are recorded
+- Credential verification supports that staff delivering care were appropriately qualified
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 290" role="img" aria-label="CMS 485.635 compliance documentation pyramid">
-  <title>CMS §485.635 CAH Staffing Compliance: What Surveyors Evaluate</title>
-  <rect width="720" height="290" fill="#f8fafc" rx="10"/>
-  <text x="360" y="28" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">CMS §485.635: What Surveyors Look for in Nursing Records</text>
-  <!-- Pyramid layers -->
-  <!-- Layer 1 (base): Staffing records -->
-  <polygon points="130,260 590,260 530,200 190,200" fill="#3b82f6" opacity="0.85"/>
-  <text x="360" y="238" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">Staffing Records (Who was on duty, when)</text>
-  <text x="360" y="254" font-family="system-ui,sans-serif" font-size="10" fill="#bfdbfe" text-anchor="middle">Published schedule + actual time and attendance + callout replacements</text>
-  <!-- Layer 2: Credential records -->
-  <polygon points="190,198 530,198 470,138 250,138" fill="#1e40af" opacity="0.85"/>
-  <text x="360" y="170" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">Credential Records (Qualifications at time of service)</text>
-  <text x="360" y="185" font-family="system-ui,sans-serif" font-size="10" fill="#bfdbfe" text-anchor="middle">License numbers, ACLS/BLS dates, charge designation sign-off</text>
-  <!-- Layer 3: RN availability -->
-  <polygon points="250,136 470,136 410,76 310,76" fill="#7c3aed" opacity="0.85"/>
-  <text x="360" y="106" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">RN Availability Documentation</text>
-  <text x="360" y="120" font-family="system-ui,sans-serif" font-size="10" fill="#e9d5ff" text-anchor="middle">On-duty or on-call within 30 min, every shift</text>
-  <!-- Top: Policy alignment -->
-  <polygon points="310,74 410,74 360,34" fill="#dc2626" opacity="0.85"/>
-  <text x="360" y="58" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">Policy</text>
-</svg>
+The standard does not specify a minimum nurse-to-patient ratio. CMS expects each CAH to set adequate staffing based on patient census and acuity, and to demonstrate through records that the required nurse was on duty and the required emergency-care practitioner was available during any period under review.
+
+<div class="not-prose my-8 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 p-5">
+  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4">CMS §485.635: what surveyors evaluate in CAH nursing records</p>
+  <div class="space-y-2">
+    <div class="rounded-lg bg-blue-600 dark:bg-blue-700 px-4 py-3">
+      <p class="font-semibold text-sm text-white m-0">Staffing records: who was on duty, when</p>
+      <p class="text-xs text-blue-100 m-0">Published schedule plus actual time and attendance plus callout replacements</p>
+    </div>
+    <div class="rounded-lg bg-blue-800 dark:bg-blue-900 px-4 py-3">
+      <p class="font-semibold text-sm text-white m-0">Credential records: qualifications at time of service</p>
+      <p class="text-xs text-blue-100 m-0">License numbers, ACLS and BLS dates, charge designation sign-off</p>
+    </div>
+    <div class="rounded-lg bg-violet-700 dark:bg-violet-800 px-4 py-3">
+      <p class="font-semibold text-sm text-white m-0">Nurse and emergency-provider availability</p>
+      <p class="text-xs text-violet-100 m-0">On-duty nurse per shift (485.631); emergency practitioner on call within 30 minutes (485.618)</p>
+    </div>
+    <div class="rounded-lg bg-slate-700 dark:bg-slate-600 px-4 py-3">
+      <p class="font-semibold text-sm text-white m-0">Policy alignment</p>
+      <p class="text-xs text-slate-200 m-0">Written patient care policies the records must match</p>
+    </div>
+  </div>
+  <p class="text-xs text-slate-500 dark:text-slate-400 mt-3 m-0">Source: CMS Conditions of Participation for Critical Access Hospitals, 42 CFR §485.635, §485.631, and §485.618 (eCFR).</p>
+</div>
 
 ## What Are the Three Documents CMS Surveyors Request?
 
@@ -118,11 +124,11 @@ A nurse's ACLS certification expired three months ago. The scheduling system sho
 
 Fix: Credential expiration dates should be tracked in the scheduling system. When a credential expires, the nurse's shift eligibility is updated immediately. Most scheduling software requires manual credential updates. A managed service like SimpleScheduleAI maintains credential records as part of the service.
 
-**Gap 3: No documented RN availability for nights**
+**Gap 3: No documented emergency-care availability**
 
-Night shifts are staffed with an LVN. The schedule does not document that a registered nurse was on-call and available within 30 minutes. The surveyor asks for on-call records showing RN availability. They do not exist.
+An overnight shift is covered by a licensed practical nurse on duty, which §485.631 permits. What is missing is the record showing that the required emergency-care practitioner, a physician, physician assistant, nurse practitioner, or clinical nurse specialist, was on call and available within the window §485.618 requires. The surveyor asks for that on-call record and it does not exist.
 
-Fix: For any shift where an LVN is the on-duty nurse, an on-call log entry must document which RN was on call, their contact information, and the expected response time. This documentation must exist for every such shift in the review period.
+Fix: For every shift, log the on-duty nurse and the on-call emergency-care practitioner: name, role, contact information, and the confirmed response-time commitment (30 minutes, or 60 in a designated frontier or remote area). This record must exist for every shift in the review period.
 
 **Gap 4: Documentation assembled during the survey**
 
@@ -144,40 +150,22 @@ A spreadsheet or folder with the following per nurse: RN/LVN license number and 
 
 **Component 3: An on-call log**
 
-For every shift where no RN is physically on duty (typically overnight shifts staffed by LVN), a log entry should record: which RN is on call, their contact number, the shift date and time, and the expected response time commitment. This log is a direct response to the CMS 30-minute RN availability requirement.
+For every shift, record the emergency-care practitioner on call (physician, physician assistant, nurse practitioner, or clinical nurse specialist), their contact number, the shift date and time, and the confirmed response-time commitment. This log responds to the §485.618 emergency-availability standard (on site within 30 minutes, or 60 in a designated frontier or remote area). Where a licensed practical nurse is the on-duty nurse, also note the registered nurse responsible for providing and supervising nursing care under §485.635(d).
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-label="Three-component CMS documentation system for a CAH">
-  <title>Three-Component CMS Documentation System for a CAH</title>
-  <rect width="720" height="260" fill="#f8fafc" rx="10"/>
-  <text x="360" y="28" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">Three-Component CAH CMS Documentation System</text>
-  <rect x="30" y="48" width="205" height="190" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="30" y="48" width="205" height="38" fill="#1e40af" rx="8"/>
-  <rect x="30" y="78" width="205" height="8" fill="#1e40af"/>
-  <text x="133" y="70" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">1. Schedule Binder</text>
-  <text x="133" y="104" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Published schedule per cycle</text>
-  <text x="133" y="120" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Callout replacements annotated</text>
-  <text x="133" y="136" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">in real-time</text>
-  <text x="133" y="160" font-family="system-ui,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Maintained: continuously</text>
-  <text x="133" y="176" font-family="system-ui,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Retained: 2 years minimum</text>
-  <rect x="258" y="48" width="205" height="190" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="258" y="48" width="205" height="38" fill="#7c3aed" rx="8"/>
-  <rect x="258" y="78" width="205" height="8" fill="#7c3aed"/>
-  <text x="361" y="70" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">2. Credential Master List</text>
-  <text x="361" y="104" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">License numbers + exp. dates</text>
-  <text x="361" y="120" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">ACLS/BLS certificates</text>
-  <text x="361" y="136" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Charge sign-off dates</text>
-  <text x="361" y="160" font-family="system-ui,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Updated: immediately on change</text>
-  <text x="361" y="176" font-family="system-ui,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Linked to schedule record</text>
-  <rect x="486" y="48" width="205" height="190" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="486" y="48" width="205" height="38" fill="#16a34a" rx="8"/>
-  <rect x="486" y="78" width="205" height="8" fill="#16a34a"/>
-  <text x="589" y="70" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">3. On-Call Log</text>
-  <text x="589" y="104" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">RN on-call per shift</text>
-  <text x="589" y="120" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Contact number</text>
-  <text x="589" y="136" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">30-min availability confirmed</text>
-  <text x="589" y="160" font-family="system-ui,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Required: any shift without</text>
-  <text x="589" y="176" font-family="system-ui,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">on-duty RN</text>
-</svg>
+<div class="not-prose my-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
+    <p class="font-semibold text-sm text-blue-800 dark:text-blue-300 mb-2">1. Schedule binder</p>
+    <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Published schedule per cycle, callout replacements annotated in real time. Maintained continuously, retained two years minimum.</p>
+  </div>
+  <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
+    <p class="font-semibold text-sm text-violet-800 dark:text-violet-300 mb-2">2. Credential master list</p>
+    <p class="text-xs text-slate-600 dark:text-slate-400 m-0">License numbers and expiration dates, ACLS and BLS certificates, charge sign-off dates. Updated immediately on change, linked to the schedule record.</p>
+  </div>
+  <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
+    <p class="font-semibold text-sm text-green-800 dark:text-green-300 mb-2">3. On-call log</p>
+    <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Emergency-care practitioner on call per shift, contact number, 30-minute response confirmed (60 in frontier or remote areas). Required by 485.618.</p>
+  </div>
+</div>
 
 ## What to Do When a Surveyor Arrives Unannounced?
 
@@ -207,35 +195,34 @@ Most general-purpose scheduling software (Deputy, When I Work, standard workforc
 
 Nursing-specific platforms (NurseGrid Manager, Aladtec) are better suited to healthcare but still require manual setup and maintenance to connect credential records to scheduling records in a format that satisfies CMS documentation requests.
 
-<img src="/images/blog/how-to-stay-cms-compliant-nurse-scheduling/SimpleScheduleAI.png" alt="SimpleScheduleAI automated CMS documentation for CAH nurse scheduling" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
-
-[SimpleScheduleAI](/) generates CMS §485.635-formatted staffing documentation automatically from each published schedule. When a callout replacement occurs, the replacement and their credentials are captured in the documentation record. When a CMS surveyor requests staffing records, the nurse manager pulls the pre-built report. There is no assembly required.
+[SimpleScheduleAI](/how-it-works) generates CMS §485.635-formatted staffing documentation automatically from each published schedule. When a callout replacement occurs, the replacement and their credentials are captured in the documentation record. When a CMS surveyor requests staffing records, the nurse manager pulls the pre-built report. There is no assembly required. For the wider category, see our [nurse scheduling software](/nurse-scheduling-software) overview and the [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
 
 For a CAH that has had a CMS finding related to staffing documentation, or that has an upcoming survey and knows its current documentation is not complete, this is the most direct path to survey readiness.
 
-## What to Do This Week?
+One honest limitation: SimpleScheduleAI is not the right fit for hospitals outside Texas, and it produces the documentation rather than making staffing decisions for you. The hospital still owns its staffing levels and its final compliance review.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Most CAH compliance findings are not staffing failures, they are documentation failures. The hospital had the right nurse on the floor and cannot prove it months later. The fix is boring and it works: capture the schedule, the worked record, and the credential status the day each shift happens, not the week the surveyor calls. A managed service earns its place here only if it produces that record as a byproduct of building the schedule, so the proof exists before anyone asks for it.</p>
+</div>
+
+## What to Do This Week
 
 1. **Pull your staffing records for the last 30 days.** Can you produce the schedule, time and attendance, and credential records for every shift in that period? If pulling those three documents would take more than 30 minutes, your documentation system is not survey-ready.
 
-2. **Check your on-call log.** For every overnight shift in the past 30 days where an LVN was on duty, do you have a written record showing which RN was on call and their contact information? If not, that is an active compliance gap.
+2. **Check your on-call log.** For every shift in the past 30 days, do you have a written record showing the emergency-care practitioner on call (physician, PA, NP, or CNS) and their confirmed response time? Under §485.618 that record is required, and a missing one is an active compliance gap.
 
 3. **Audit your credential master list for expirations.** Check ACLS and BLS expiration dates for all nurses currently on the schedule. Any nurse whose credentials have lapsed should be removed from eligible rotation for the shifts requiring those credentials.
 
-4. **Request a CMS documentation assessment from SimpleScheduleAI.** The assessment reviews your current documentation against §485.635 requirements and shows what automated documentation would look like for your hospital. Visit [SimpleScheduleAI.com](/) to schedule.
+4. **If you are a Texas Critical Access Hospital, [apply for a pilot spot](/pilot).** The 60-day pilot builds your schedule from an Excel roster upload and attaches the §485.635 documentation to each cycle, so you can compare it against your current records.
 
 5. **Verify your callout replacement documentation process.** When a nurse calls out and is replaced, is the replacement and their credentials added to the scheduling record that day? Or is it recorded only in payroll, leaving a schedule-vs-payroll discrepancy?
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
-  <h2 class="mb-2 text-2xl font-bold text-white">Be Survey-Ready Without Spending Hours on Documentation</h2>
-  <p class="mb-6 text-blue-100">
-    SimpleScheduleAI generates CMS §485.635 staffing documentation automatically from every published schedule. When a surveyor requests records, you pull a report. No binder assembly, no discrepancy scramble.
-  </p>
-  <a
-    href="/pilot"
-    class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
-  >
-    Request a Free CMS Documentation Assessment
-  </a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Free 60-day pilot. No IT setup. No commitment. We build the schedule, you approve it.</p>
+  <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4">Prefer to talk first? <a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team</a>.</p>
 </div>
 
 ## Frequently Asked Questions
@@ -254,8 +241,23 @@ CMS does not specify a minimum nurse-to-patient ratio for CAHs. The standard is 
 
 **Can a sole proprietor or administrator also serve as the charge nurse on the schedule for CMS documentation purposes?**
 
-CMS requires that nursing services be supervised by a registered nurse. A nurse who is both an administrator and a licensed RN can fulfill this requirement if they are actively providing oversight of nursing care. However, a non-nurse administrator or a nurse administrator who is not clinically active cannot be listed as the on-call RN for documentation purposes. The on-call RN must be a clinically active registered nurse who can realistically be on-site within 30 minutes.
+CMS requires that a registered nurse provide and supervise nursing care under §485.635(d). A nurse who is both an administrator and a licensed RN can fulfill that supervisory role if they are actively overseeing nursing care. A non-nurse administrator cannot. Keep this separate from the §485.618 emergency-care requirement, where the on-call practitioner available within 30 minutes is a physician, physician assistant, nurse practitioner, or clinical nurse specialist, not necessarily the supervising registered nurse.
 
 **How does SimpleScheduleAI handle CMS documentation when a nurse's credentials change mid-cycle?**
 
 When a nurse's credentials change (renewal, expiration, or new certification), the SimpleScheduleAI team updates the credential record in the system. Future schedule documentation reflects the updated credential status. For historical documentation, the credential record at the time of each shift is preserved, the documentation shows what credentials each nurse held at the time of each shift, which is what CMS requires for retrospective review.
+
+## Sources
+
+[1] Centers for Medicare & Medicaid Services. Conditions of Participation: Provision of services (nursing services), 42 CFR §485.635(d). [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). Verified 2026-06-06.
+
+[2] Centers for Medicare & Medicaid Services. Conditions of Participation: Staffing and staff responsibilities, 42 CFR §485.631(a)(5). [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631). Verified 2026-06-06.
+
+[3] Centers for Medicare & Medicaid Services. Conditions of Participation: Emergency services, 42 CFR §485.618(d). [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618). Verified 2026-06-06.
+
+[4] Rural Health Information Hub. Critical Access Hospitals topic guide. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/topics/critical-access-hospitals). Verified 2026-06-06.
+
+**Methodology note:** Regulatory claims reference the CMS Conditions of Participation for Critical Access Hospitals (42 CFR Part 485, Subpart F), verified against the current eCFR text on 2026-06-06. SimpleScheduleAI produces the staffing documentation; the hospital retains responsibility for staffing decisions and final compliance.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
