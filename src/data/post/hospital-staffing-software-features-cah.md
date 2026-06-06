@@ -234,3 +234,6 @@ It should. Per-diem nurses have different availability patterns, different overt
 
 **How much does hospital staffing software typically cost for a 25-bed hospital?**
 Enterprise platforms run $24,000 to $48,000 per year or more at per-seat pricing for 60 to 80 employees. Mid-market tools like Aladtec or NurseGrid range from $5,000 to $15,000 annually. Consumer apps (When I Work, Homebase) start under $3,000 but lack healthcare compliance features. A managed service like SimpleScheduleAI uses pilot-first pricing sized for CAH budgets, not enterprise minimums.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

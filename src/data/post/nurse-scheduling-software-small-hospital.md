@@ -9,7 +9,7 @@ excerpt: >
   departments, float pools, and HR teams. Critical access hospitals have none
   of these. The result is a market full of tools that technically work but
   practically don't fit.
-image: 'https://images.unsplash.com/photo-1586776977592-8a7e68f9c91e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+image: https://images.unsplash.com/photo-1586776977592-8a7e68f9c91e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 tags:
   - nurse-scheduling
@@ -124,6 +124,5 @@ SimpleScheduleAI onboards critical access hospitals in 3 to 5 business days via 
 
 ---
 
-**Written by Pradeep Pandey**
-Co-founder, SimpleScheduleAI. Deputy General Manager of Operations at Apollo Hospitals. MBA from IIM Trichy (Operations & Marketing). Deep background in healthcare operations, workforce optimization, and hospital process design.
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

@@ -9,7 +9,7 @@ excerpt: >
   feature set. It is what happens six months after go-live. For critical access
   hospitals with no IT staff, the vendor relationship after contract signature
   matters more than the demo.
-image: 'https://images.unsplash.com/photo-1646082275130-347d10885c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+image: https://images.unsplash.com/photo-1646082275130-347d10885c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 tags:
   - nurse-scheduling
@@ -155,6 +155,5 @@ Document specific incidents: tickets submitted, response times, issue resolution
 
 ---
 
-**Written by Pradeep Pandey**
-Co-founder, SimpleScheduleAI. Deputy General Manager of Operations at Apollo Hospitals. MBA from IIM Trichy (Operations & Marketing). Deep background in healthcare operations, workforce optimization, and hospital process design.
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

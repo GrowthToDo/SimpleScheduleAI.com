@@ -173,3 +173,6 @@ A managed service onboards in 3-5 business days via Excel roster upload, with no
 **What should a CAH ask vendors before purchasing healthcare staffing software?**
 
 Five questions: (1) How long until my first operational schedule, and who does the setup? (2) Walk me through a nurse calling out at 5am, what does the software do vs. what does the nurse manager do manually? (3) What CMS documentation does it produce automatically, can you show me a sample? (4) How is overtime tracked during schedule building, not after payroll? (5) What has changed about your product since your last major acquisition?
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

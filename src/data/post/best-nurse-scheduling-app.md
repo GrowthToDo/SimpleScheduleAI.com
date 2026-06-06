@@ -474,3 +474,6 @@ OnShift's app was designed for LTC workflows. The shift patterns, credential cat
 **What happens to scheduling app access if we transition from SimpleScheduleAI to a different system?**
 
 SimpleScheduleAI provides data export in standard formats at any time. Staff roster data, scheduling history, and credential records are available for export if the hospital transitions to a different system. The process is similar to transitioning from any scheduling platform: you export your data and import it into the new system. SimpleScheduleAI does not use proprietary data formats that would create a lock-in barrier.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

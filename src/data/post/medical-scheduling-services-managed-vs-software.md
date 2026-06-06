@@ -197,3 +197,6 @@ A managed service that onboards via Excel roster upload, without EHR integration
 **What if I am not comfortable delegating schedule building to a specialist?**
 
 Do not choose a managed service. Software is the better fit for nurse managers who want to build schedules themselves and retain direct visibility into every constraint and decision. A service model works best when the manager is comfortable reviewing and approving output rather than building from scratch. If that comfort level is not there, the service relationship becomes a source of friction rather than relief.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

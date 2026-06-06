@@ -203,3 +203,6 @@ When a nurse calls out, the AI system evaluates all available nurses against ava
 
 **Do you need IT infrastructure to use AI nurse scheduling?**
 Not with a managed service model. SimpleScheduleAI onboards via Excel roster upload in 3 to 5 business days with no EHR integration, API configuration, or IT vendor involvement. Enterprise AI scheduling platforms (UKG, API Healthcare AI modules) require IT infrastructure that most CAHs do not have.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

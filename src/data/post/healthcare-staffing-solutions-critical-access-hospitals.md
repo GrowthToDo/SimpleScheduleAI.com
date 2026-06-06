@@ -175,3 +175,6 @@ Through a managed scheduling service that generates automatic compliance documen
 **What is the biggest mistake CAHs make when implementing healthcare staffing solutions?**
 
 Choosing a solution designed for a larger organization. Enterprise platforms assume IT departments, dedicated schedulers, and training time that most CAHs do not have. The implementation stalls, the platform never gets configured correctly, and the nurse manager returns to spreadsheets. The right solution matches the operational capacity of the facility, not just the feature list.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

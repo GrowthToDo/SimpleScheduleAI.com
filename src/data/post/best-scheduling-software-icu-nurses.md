@@ -495,3 +495,6 @@ The widely accepted standard for ICU RN-to-patient ratios is 1:2, though some hi
 **What credentials are required to schedule an ICU nurse?**
 
 ICU nurse assignment credentials typically include: registered nurse (RN) licensure, Basic Life Support (BLS), Advanced Cardiovascular Life Support (ACLS), and Critical Care Registered Nurse (CCRN) certification for full ICU assignments. Some ICUs also require Pediatric Advanced Life Support (PALS) for combined adult/pediatric units. Charge nurses typically require additional charge nurse training or designation beyond the standard ICU credential set. Any scheduling tool used for ICU assignment should track all of these credential types and their expiration dates.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

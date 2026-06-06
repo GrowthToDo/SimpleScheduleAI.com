@@ -188,3 +188,6 @@ Medical scheduling software is a tool your team configures and operates. A manag
 **Does a CAH need an EHR integration for scheduling software to work?**
 
 No. Most mid-market scheduling platforms and managed services operate independently of the EHR. Scheduling data (who works when) and clinical data (patient records) are separate systems. For critical access hospitals, standalone scheduling without EHR integration is typically the more practical choice, it avoids IT complexity while still covering scheduling and compliance requirements.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

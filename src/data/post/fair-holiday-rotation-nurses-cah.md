@@ -234,8 +234,5 @@ No specific state law requires a written holiday rotation policy. However, [Texa
 
 ---
 
-**Written by Pradeep Pandey**
-Co-founder, SimpleScheduleAI. Deputy General Manager of Operations at Apollo Hospitals.
-MBA from IIM Trichy (Operations & Marketing). Deep background in healthcare
-operations, workforce optimization, and hospital process design.
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

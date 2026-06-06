@@ -224,3 +224,6 @@ Ask: Does my facility have CMS documentation requirements? Do I need certificati
 
 **Why can't a generic tool just add a healthcare compliance plugin?**
 Certification-aware scheduling requires the compliance logic to be integrated into the scheduling engine itself, not layered on top. If the scheduler assigns a non-certified nurse to a shift before checking the compliance layer, the error already happened. Healthcare scheduling requires the constraint check to run during assignment, not after. That is an architectural difference, not a missing feature.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

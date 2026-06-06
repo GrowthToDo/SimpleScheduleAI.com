@@ -147,3 +147,6 @@ Using one scheduling tool for both. The geographic routing and per-visit billing
 **How does patient continuity work differently in home health vs. hospital scheduling?**
 
 In hospital scheduling, nurses are assigned to shifts, not to specific patients, charge nurses manage patient assignments within a shift. In home health, the scheduling system must track and enforce visit-over-visit continuity: the same nurse or therapist seeing the same patient across an episode of care. Home health scheduling software builds this patient-clinician pairing logic in; hospital shift scheduling software does not track this dimension.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

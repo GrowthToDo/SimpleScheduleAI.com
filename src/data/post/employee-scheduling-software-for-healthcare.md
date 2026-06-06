@@ -197,3 +197,6 @@ Generic scheduling tools are designed for the common case, retail, restaurants, 
 **What is the hybrid approach for CAHs that want both nurse-facing features and healthcare compliance?**
 
 Use a generic tool for staff-facing communication, nurses view schedules, request time off, and propose swaps through the generic app's mobile interface, while using a healthcare-specific managed service for schedule building, overtime tracking, compliance documentation, and callout coverage logic. The two functions are clearly separated: the generic tool handles the nurse-facing communication layer, the managed service handles the compliance and operational layer.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

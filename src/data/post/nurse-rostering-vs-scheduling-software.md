@@ -174,3 +174,6 @@ At minimum: BLS certification (with expiry date), ACLS certification (with expir
 **If my rostering and scheduling are in separate tools, what is the biggest risk?**
 
 Data drift. When a nurse updates her availability in the rostering tool but the scheduling tool has not been updated, the next schedule is built on stale data. When a credential expires in the rostering tool but the scheduling tool still shows the nurse as certified, she may be assigned to shifts she is not qualified for. Manual synchronization between two tools is a compliance risk that grows as your nursing roster changes and as scheduling frequency increases.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

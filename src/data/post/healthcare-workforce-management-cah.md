@@ -241,3 +241,6 @@ Most EHRs used by CAHs (such as CPSI/TruBridge or Meditech Expanse) include basi
 
 **What is the first sign that a CAH has outgrown spreadsheet-based scheduling?**
 The clearest indicator is unplanned overtime appearing consistently on payroll reports. If your nurse manager cannot tell you on Wednesday whether any staff member is trending toward overtime by Friday, the manual process has a visibility gap that will keep costing money every pay period.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

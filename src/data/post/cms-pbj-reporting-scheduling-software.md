@@ -9,7 +9,7 @@ excerpt: >
   every quarter. Most nurse scheduling software leaves that reconciliation entirely to the
   nurse manager. Here is what automated PBJ support looks like, and how to tell if your
   current tool is actually producing it.
-image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+image: https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Compliance
 tags:
   - cms-compliance
@@ -163,6 +163,5 @@ CMS uses PBJ data to calculate RN hours per resident day and total staffing hour
 
 ---
 
-**Written by Pradeep Pandey**
-Co-founder, SimpleScheduleAI. Deputy General Manager of Operations at Apollo Hospitals. MBA from IIM Trichy (Operations & Marketing). Deep background in healthcare operations, workforce optimization, and hospital process design.
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

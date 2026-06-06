@@ -248,3 +248,6 @@ Scheduled overtime (overtime that appears in the published schedule, not from ca
 **How does SimpleScheduleAI prevent overtime during callout events?**
 
 When a callout event is entered into SimpleScheduleAI, the system generates a ranked replacement list that sorts candidates by: credential match (only nurses who can cover the specific shift requirements appear), hours worked in the current 14-day period (nurses further from the 80-hour threshold appear higher), and historical response rate. The nurse manager calls from the top of the list. The system does not allow a nurse at risk of overtime to appear at the top of the callout list, they are ranked lower until a nurse with lower hour exposure has been contacted first.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

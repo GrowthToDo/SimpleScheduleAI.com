@@ -240,3 +240,6 @@ Proactive FLSA overtime tracking (flags during schedule building, not after payr
 **How do I evaluate whether a managed service or self-serve platform is better for my hospital?**
 
 Ask your nurse manager one question: would you rather have better tools to build schedules yourself, or have the schedules built for you and review the output? If the answer is "I want to build them myself with better tools," evaluate Aladtec and ShiftWizard. If the answer is "I want someone to build them," evaluate managed services. Neither is universally better, they match different preferences and different levels of available time.
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

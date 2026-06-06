@@ -365,3 +365,6 @@ CMS §485.635 Conditions of Participation require CAHs to document that nursing 
 **Is it possible to schedule nurses at a CAH without scheduling software?**
 
 Yes, and many small hospitals still do it with spreadsheets. A well-maintained Excel roster with constraint documentation and a consistent build process can produce a workable schedule. The limitation is not quality, it is time. A spreadsheet-based process for a 20-nurse roster takes approximately 4-6 hours per scheduling cycle. Scheduling software reduces that to 2-4 hours. A managed service reduces it to 1-2 hours (review and approval only).
+
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
