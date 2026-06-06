@@ -110,6 +110,22 @@ Evidence that nurses on duty during the survey period held the licenses and cert
 
 The surveyor is comparing these three documents. A mismatch between the schedule and the time and attendance record without a documented callout explanation is a finding. A time and attendance record showing a nurse on duty without a credential record confirming their license status is a finding.
 
+<div class="not-prose my-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
+    <p class="font-semibold text-sm text-blue-800 dark:text-blue-300 mb-2">1. Published schedule</p>
+    <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Who was assigned to each shift, with role (RN, LVN, charge RN).</p>
+  </div>
+  <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
+    <p class="font-semibold text-sm text-violet-800 dark:text-violet-300 mb-2">2. Time and attendance</p>
+    <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Who actually worked each shift, matching the schedule except for documented callout replacements.</p>
+  </div>
+  <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
+    <p class="font-semibold text-sm text-green-800 dark:text-green-300 mb-2">3. Credential verification</p>
+    <p class="text-xs text-slate-600 dark:text-slate-400 m-0">License and certification status held at the time of each shift (RN/LVN license, ACLS/BLS, charge sign-off).</p>
+  </div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 m-0">The three records a CMS surveyor cross-checks under 42 CFR §485.635 (eCFR).</p>
+
 ## What Are the Common Compliance Gaps in CAH Nurse Scheduling?
 
 **Gap 1: Schedule and time and attendance discrepancies**
