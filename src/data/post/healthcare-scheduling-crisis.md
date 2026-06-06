@@ -151,8 +151,8 @@ staffing records must be accurate and available for review. A discrepancy betwee
 posted and actual schedules is a finding that surveyors can and do flag.
 
 Manual post-schedule edits also lack audit trails for overtime verification. Under
-[Texas Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm),
-overtime rules apply to healthcare employers. Documentation gaps leave facilities
+[federal FLSA overtime rules for healthcare](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime),
+overtime applies to healthcare employers (Texas has no separate state overtime statute, so the federal FLSA governs). Documentation gaps leave facilities
 unable to reconstruct who worked what shift if an audit question arises - an exposure
 that grows with every undocumented change.
 
@@ -301,7 +301,7 @@ One honest limitation: a managed scheduling service is not the right fit for fac
 
 [4] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [cms.gov](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) and [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[5] Texas Labor Code §62.002 overtime rules. [Texas Statutes](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
+[5] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 [6] Pre-build CAH nurse-manager research interviews. Internal research conducted by SimpleScheduleAI; cited inline as "from our pre-build research interviews."
 

@@ -46,7 +46,6 @@ This guide separates the run-it-yourself platform model from the managed service
 - [What Does This Mean for a 25-Bed Hospital Specifically?](#what-does-this-mean-for-a-25-bed-hospital-specifically)
 - [How Should a Critical Access Hospital Evaluate a Scheduling Vendor?](#how-should-a-critical-access-hospital-evaluate-a-scheduling-vendor)
 - [What to Do This Week](#what-to-do-this-week)
-- [A Note on Sources](#a-note-on-sources)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Both products use AI to build nurse schedules, so they show up in the same searches. They are not the same kind of purchase, and the difference is simpler than any feature list. In-House Health is a run-it-yourself platform: your hospital buys the software and someone on staff operates it. SimpleScheduleAI is a managed service: the work is done for you and you approve the result. If you run a [critical access hospital scheduling](/critical-access-hospital-scheduling) operation where the nurse manager also takes clinical shifts, that managed-service-versus-run-it-yourself distinction decides the purchase. For the full range of [nurse scheduling software](/nurse-scheduling-software) options at the CAH scale, see our dedicated guide. Because both tools are AI-driven, it also helps to read how [AI nurse scheduling](/ai-nurse-scheduling) behaves differently as a managed service versus a self-operated platform.

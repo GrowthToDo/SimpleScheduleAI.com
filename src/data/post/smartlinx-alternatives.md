@@ -48,7 +48,6 @@ This guide compares 6 SmartLinx alternatives for a 25-bed acute CAH, with the im
 - [When to Stay with SmartLinx?](#when-to-stay-with-smartlinx)
 - [How SimpleScheduleAI Compares to SmartLinx?](#how-simplescheduleai-compares-to-smartlinx)
 - [What to Do This Week?](#what-to-do-this-week)
-- [A Note on Sources](#a-note-on-sources)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 SmartLinx built its reputation in long-term care scheduling, where 24/7 coverage requirements, complex per diem pools, and integrated time and attendance create a workflow that general scheduling tools handle poorly. It is a genuinely capable platform for organizations with the staff and IT resources to implement it correctly.

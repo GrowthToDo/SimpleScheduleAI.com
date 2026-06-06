@@ -47,7 +47,6 @@ This guide compares the two on the four questions that decide a CAH purchase: wh
 - [Why Does Enterprise Scheduling Software Struggle at a Critical Access Hospital?](#why-does-enterprise-scheduling-software-struggle-at-a-critical-access-hospital)
 - [How Should a Critical Access Hospital Evaluate a Scheduling Vendor?](#how-should-a-critical-access-hospital-evaluate-a-scheduling-vendor)
 - [What to Do This Week](#what-to-do-this-week)
-- [A Note on Sources](#a-note-on-sources)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Most comparison posts pretend two products are interchangeable and then declare a winner. This one does not, because M7 Health and SimpleScheduleAI are not built for the same buyer.

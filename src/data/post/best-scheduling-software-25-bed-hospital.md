@@ -42,7 +42,6 @@ This guide compares 5 scheduling platforms specifically on fit for the 25-bed ro
 - [Which Software Fits Your 25-Bed Hospital?](#which-software-fits-your-25-bed-hospital)
 - [How Does SimpleScheduleAI Fit the 25-Bed Model?](#how-does-simplescheduleai-fit-the-25-bed-model)
 - [What to Do This Week](#what-to-do-this-week)
-- [A Note on Sources](#a-note-on-sources)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 At 25 beds, a hospital is typically a [Critical Access Hospital](/critical-access-hospital-scheduling) (CAH). That designation brings federal CMS requirements around nurse-to-patient ratios, staffing documentation, and annual compliance reporting. It also brings a roster size that most scheduling vendors do not actually plan for. The math at 25 beds is unforgiving: one nurse calling out can trigger a compliance gap. One nurse manager spending 10 hours per week on scheduling instead of 2 loses 400 clinical hours per year. For the broader category of [nurse scheduling software](/nurse-scheduling-software) options at CAH scale, see our dedicated guide. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).

@@ -49,7 +49,6 @@ This guide compares 6 Deputy alternatives for a Critical Access Hospital where g
 - [When Deputy Is Still Adequate for Healthcare?](#when-deputy-is-still-adequate-for-healthcare)
 - [How SimpleScheduleAI Compares to Deputy?](#how-simplescheduleai-compares-to-deputy)
 - [What to Do This Week?](#what-to-do-this-week)
-- [A Note on Sources](#a-note-on-sources)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Deputy is a general workforce scheduling platform used across retail, hospitality, and some healthcare settings. Its combination of fast deployment, clear interface, and per-user pricing makes it an accessible entry point for organizations that need scheduling software immediately. Many healthcare organizations, including small hospitals, deploy Deputy because it is easy, not because it is the right fit.

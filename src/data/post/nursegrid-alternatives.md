@@ -49,7 +49,6 @@ This guide compares 6 alternatives for a Critical Access Hospital that needs nur
 - [When to Stay with NurseGrid?](#when-to-stay-with-nursegrid)
 - [How SimpleScheduleAI Compares to NurseGrid?](#how-simplescheduleai-compares-to-nursegrid)
 - [What to Do This Week?](#what-to-do-this-week)
-- [A Note on Sources](#a-note-on-sources)
 - [Frequently Asked Questions About NurseGrid Alternatives](#frequently-asked-questions-about-nursegrid-alternatives)
 
 For a 25-bed Critical Access Hospital, the best NurseGrid alternatives are tools that cover the manager side of scheduling rather than only the nurse-facing app. ShiftWizard is the strongest self-serve hospital-nursing fit, TCP Scheduling is the more management-capable platform path, and SimpleScheduleAI is the managed-service option when the goal is removing the scheduling work rather than buying a better tool to do it yourself.

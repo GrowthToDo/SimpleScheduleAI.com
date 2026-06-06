@@ -46,7 +46,6 @@ This guide compares 6 Smart Square alternatives for a Critical Access Hospital, 
 - [When to Stay with Smart Square?](#when-to-stay-with-smart-square)
 - [How SimpleScheduleAI Compares to Smart Square?](#how-simplescheduleai-compares-to-smart-square)
 - [What to Do This Week?](#what-to-do-this-week)
-- [A Note on Sources](#a-note-on-sources)
 - [Frequently Asked Questions About Smart Square Alternatives](#frequently-asked-questions-about-smart-square-alternatives)
 
 For a Critical Access Hospital, the best Smart Square alternatives are scheduling tools sized to a single 25-bed facility rather than a multi-hospital system, and runnable without a labor-management analyst on staff. SimpleScheduleAI is the managed-service option when the goal is removing the scheduling work entirely. ShiftWizard and NurseGrid Manager are the self-serve hospital-nursing options at a scale a CAH can actually staff.
