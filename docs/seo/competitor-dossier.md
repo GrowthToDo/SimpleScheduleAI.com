@@ -447,7 +447,7 @@ Product page DOES cover:
 
 ## ScheduleAnywhere
 
-**Product:** Online employee/shift scheduling software with a dedicated nurse/healthcare sub-page. Historically by Atlas Business Solutions (ABS, Fargo ND, since 1991); now acquired by and branded under TCP Software ("ScheduleAnywhere by TCP"). scheduleanywhere.com 301-redirects into tcpsoftware.com.
+**Product:** Online employee/shift scheduling software with a dedicated nurse/healthcare sub-page. Historically by Atlas Business Solutions (ABS, Fargo ND, since 1991); now acquired by and branded under TCP Software ("ScheduleAnywhere by TCP"). **As of 2026-06-06, scheduleanywhere.com redirects to TCP Humanity Schedule** (founder-confirmed), indicating the standalone ScheduleAnywhere brand is being folded into TCP's Humanity product line. Confirm which product is actually being sold before citing ScheduleAnywhere as a distinct option; when used in a post, note the redirect so readers are not evaluating a brand that is being merged away.
 
 **Ratings (verified 2026-06-06):**
 

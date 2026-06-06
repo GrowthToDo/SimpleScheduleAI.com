@@ -210,6 +210,8 @@ One caveat matters for a hospital audience. The Capterra review base skews heavi
 
 ## 3. [ShiftWizard](https://www.healthstream.com)
 
+<img src="/images/blog/Shiftwizard.png" alt="ShiftWizard hospital nurse scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+
 ShiftWizard, owned by HealthStream, holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews), the largest hospital-nursing review base of any platform in this guide. It was designed specifically for hospital nursing, and one reviewer captured why that origin matters.
 
 > "ShiftWizard was designed by nurses which is why it is fantastic to use."
@@ -293,6 +295,8 @@ For a CAH evaluating NurseGrid as a primary scheduling system, two issues stand 
 **Cost:** Free for individual nurses. Manager tier pricing available on request.
 
 ## 5. [symplr Smart Square](https://www.symplr.com)
+
+<img src="/images/blog/smart-square.png" alt="symplr Smart Square nurse and staff scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 symplr Smart Square, formerly Avantas Smart Square and acquired by symplr from AMN Healthcare in July 2025, holds 4.6/5 on Capterra (19 reviews; small sample). It is an AI-driven nurse and staff scheduling platform with predictive analytics, real-time staffing adjustments, open-shift management, and nurse competency integration. It is a two-time Best in KLAS winner for Scheduling: Nurse and Staff (2025 and 2026), which is the strongest independent quality signal among the enterprise tools here.
 
@@ -401,7 +405,9 @@ UKG is engineered for 200-plus-bed facilities with dedicated IT departments and 
 
 ## 8. [ScheduleAnywhere](https://www.tcpsoftware.com)
 
-ScheduleAnywhere, now owned by TCP Software after its acquisition from Atlas Business Solutions, holds 4.6/5 on Capterra (61 reviews). It is an online employee and shift-scheduling tool with a dedicated nurse and healthcare sub-page, and the vendor claims skills, certification, and credential tracking with expiration alerts. RN reviewers describe straightforward shift viewing and editing.
+<img src="/images/blog/ScheduleAnywhere-TCPHumanitySchedule.png" alt="ScheduleAnywhere, now redirecting to TCP Humanity Schedule" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+
+ScheduleAnywhere, now owned by TCP Software after its acquisition from Atlas Business Solutions, holds 4.6/5 on Capterra (61 reviews). Its own site, scheduleanywhere.com, now redirects to TCP Humanity Schedule, so the standalone ScheduleAnywhere brand appears to be folding into TCP's Humanity product line. Confirm which product you would actually be buying before committing. It is an online employee and shift-scheduling tool with a dedicated nurse and healthcare sub-page, and the vendor claims skills, certification, and credential tracking with expiration alerts. RN reviewers describe straightforward shift viewing and editing.
 
 > "How easy it was to view and edit shifts!" [Pros]
 >
