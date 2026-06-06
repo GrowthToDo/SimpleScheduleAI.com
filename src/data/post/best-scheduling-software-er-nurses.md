@@ -185,7 +185,7 @@ ED scheduling evaluation requires four criteria that differ from general floor s
 
 ### 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/best-scheduling-software-er-nurses/SimpleScheduleAI.png" alt="SimpleScheduleAI emergency department nurse scheduling for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-er-nurses/SimpleScheduleAI.webp" alt="SimpleScheduleAI emergency department nurse scheduling for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SimpleScheduleAI handles ED scheduling as a separate credential track within the broader CAH nursing roster. ED nurses are tagged with their active certifications. Charge-credentialed ED nurses are tracked as a subset. When an ED callout occurs, the ranked replacement list is generated from ED-credentialed nurses only. If the callout is a charge shift, the list is further filtered to charge-designated ED nurses.
 
@@ -209,7 +209,7 @@ SimpleScheduleAI handles ED scheduling as a separate credential track within the
 
 ### 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-scheduling-software-er-nurses/Aladtec.png" alt="Aladtec scheduling software with qualification tracking for emergency services" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-er-nurses/Aladtec.webp" alt="Aladtec scheduling software with qualification tracking for emergency services" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec's origin in emergency services scheduling (EMS, fire, law enforcement) makes it more naturally suited for ED scheduling than most hospital-focused tools. The qualification tracking system was designed for environments where credential requirements are shift-specific and non-negotiable. With proper configuration for ED-specific certifications, Aladtec handles cross-unit credential separation well.
 
@@ -234,7 +234,7 @@ Aladtec's origin in emergency services scheduling (EMS, fire, law enforcement) m
 
 ### 3. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/best-scheduling-software-er-nurses/Smartlinx.png" alt="SmartLinx workforce management platform for healthcare staffing and scheduling" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-er-nurses/Smartlinx.webp" alt="SmartLinx workforce management platform for healthcare staffing and scheduling" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SmartLinx handles ED scheduling through its competency-based assignment module, which can prevent scheduling non-credentialed nurses in the ED through rules-based logic. The platform tracks credentials and competencies at the employee level and can be configured to enforce ED-specific requirements during schedule construction and callout replacement.
 
@@ -258,7 +258,7 @@ SmartLinx handles ED scheduling through its competency-based assignment module, 
 
 ### 4. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-scheduling-software-er-nurses/QGenda.png" alt="QGenda provider and nurse scheduling platform for hospital departments" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-er-nurses/QGenda.webp" alt="QGenda provider and nurse scheduling platform for hospital departments" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 QGenda's primary value for ED scheduling is in environments where the ED schedule must include emergency physicians, mid-level providers, and nurses on one platform. The provider scheduling logic handles complex rotation rules, on-call coverage, and credential requirements across disciplines. For nursing-only ED scheduling, the platform's depth is underutilized relative to its cost.
 
@@ -282,7 +282,7 @@ QGenda's primary value for ED scheduling is in environments where the ED schedul
 
 ### 5. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-scheduling-software-er-nurses/Nursegrid.png" alt="NurseGrid Manager communication and schedule visibility interface for nurses" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-er-nurses/Nursegrid.webp" alt="NurseGrid Manager communication and schedule visibility interface for nurses" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager does not support ED credential tracking, charge nurse enforcement, or any ED-specific scheduling logic. It is a nurse communication platform. Open-shift broadcasts go to the entire nursing pool, not just ED-credentialed nurses. The first nurse to respond gets the shift regardless of credential status.
 
@@ -306,7 +306,7 @@ NurseGrid Manager does not support ED credential tracking, charge nurse enforcem
 
 ### 6. [OnShift](https://www.onshift.com) (now part of Workday)
 
-<img src="/images/blog/best-scheduling-software-er-nurses/Onshift.png" alt="OnShift workforce management software for healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-er-nurses/Onshift.webp" alt="OnShift workforce management software for healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 OnShift is designed for long-term care scheduling, not emergency department environments. Its open-shift posting model is suitable for non-urgent coverage gaps in predictable care settings. ED callouts are neither non-urgent nor predictable, and OnShift's broadcast model does not enforce the credential requirements that ED scheduling requires.
 
@@ -329,7 +329,7 @@ OnShift is designed for long-term care scheduling, not emergency department envi
 
 ### 7. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/best-scheduling-software-er-nurses/Deputy.png" alt="Deputy general-purpose employee scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-er-nurses/Deputy.webp" alt="Deputy general-purpose employee scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Deputy has no ED-specific features. It handles ED nurses the same way it handles any other scheduled employee: availability tracking, shift assignment, and open-shift broadcast. ACLS, BLS, and TNCC credential requirements are not tracked, charge nurse logic does not exist, and callout replacement is a broadcast function with no credential filtering.
 
@@ -353,7 +353,7 @@ Deputy has no ED-specific features. It handles ED nurses the same way it handles
 
 ### 8. [UKG (formerly Kronos)](https://www.ukg.com)
 
-<img src="/images/blog/best-scheduling-software-er-nurses/UKG.png" alt="UKG enterprise workforce management software for large hospital systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-er-nurses/UKG.webp" alt="UKG enterprise workforce management software for large hospital systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 UKG has comprehensive ED scheduling capability within its enterprise workforce management suite. Credential management, charge nurse logic, ratio enforcement, FLSA overtime tracking, and CMS documentation are all available through configurable modules. The capability is extensive; the question is whether a small hospital ED can justify the cost and implementation investment.
 

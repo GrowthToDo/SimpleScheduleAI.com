@@ -137,7 +137,7 @@ For a 400-bed hospital with a dedicated scheduling department, the distinction m
 
 Aladtec is a web-based scheduling platform originally built for emergency services and expanded to healthcare. It handles shift scheduling, availability tracking, time-off requests, and basic overtime monitoring. Owned by TCP Software, Aladtec is a self-serve tool: the nurse manager or a designated scheduler configures the system, builds each schedule, and maintains the configuration as staff and policy changes occur.
 
-<img src="/images/blog/aladtec-vs-managed-service/Aladtec.png" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/aladtec-vs-managed-service/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 **What Aladtec does well:**
 
@@ -162,7 +162,7 @@ These considerations are not unique to Aladtec. Most general-purpose scheduling 
 
 A managed scheduling service is not scheduling software with extra support. It is a different delivery model where the vendor's team handles scheduling operations as an ongoing function. The hospital's nurse manager reviews and approves schedules rather than building them, reducing scheduling time from 4-6 hours per week to 1-2 hours.
 
-<img src="/images/blog/aladtec-vs-managed-service/SimpleScheduleAI.png" alt="SimpleScheduleAI managed scheduling service interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/aladtec-vs-managed-service/SimpleScheduleAI.webp" alt="SimpleScheduleAI managed scheduling service interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 With SimpleScheduleAI, the process works like this:
 

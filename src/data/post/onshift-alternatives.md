@@ -67,7 +67,7 @@ Here is how the alternatives compare before we go deeper:
 
 Hospitals switch away from OnShift because the platform was designed for long-term care scheduling rather than acute care hospital nursing. The open-shift posting model assumes coverage gaps are known in advance and that any available caregiver can fill them. Acute care callouts require a confirmed, correctly credentialed replacement within minutes, and Critical Access Hospitals carry CMS §485.635 documentation obligations that LTC-oriented platforms were not built around.
 
-<img src="/images/blog/onshift-alternatives/Onshift.png" alt="OnShift workforce scheduling platform for long-term care and post-acute settings" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/onshift-alternatives/Onshift.webp" alt="OnShift workforce scheduling platform for long-term care and post-acute settings" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 OnShift does not publish a public G2 or Capterra rating that maps cleanly to a Critical Access Hospital nursing context, and no verified small-hospital nursing reviewer quote is available. The points below are framed as evaluation questions a CAH should probe in any OnShift demo, not as confirmed product gaps. The themes cluster into three areas worth testing.
 
@@ -156,7 +156,7 @@ The six strongest OnShift alternatives for a Critical Access Hospital are Simple
 
 ## 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/onshift-alternatives/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/onshift-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike OnShift's self-serve LTC platform, SimpleScheduleAI requires no configuration work from the nurse manager: a scheduling specialist handles setup from an Excel roster upload, builds draft schedules each cycle, and maintains the system as the roster and policies change.
 
@@ -188,7 +188,7 @@ This is a different operating model than OnShift, which is a self-serve platform
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/onshift-alternatives/Aladtec.png" alt="Aladtec by TCP scheduling software for small hospitals and emergency services" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/onshift-alternatives/Aladtec.webp" alt="Aladtec by TCP scheduling software for small hospitals and emergency services" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). Its heritage is in 24/7 public-safety shift work, fire, EMS, and law enforcement, with a more recent expansion into small healthcare rosters. The callout model is direct-outreach oriented rather than post-and-wait, which is closer to how an acute care coverage gap actually gets filled than OnShift's open-shift posting model.
 
@@ -226,7 +226,7 @@ Aladtec covers shift management, time and attendance, overtime tracking, certifi
 
 ## 3. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/onshift-alternatives/Smartlinx.png" alt="SmartLinx workforce management platform with healthcare compliance features" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/onshift-alternatives/Smartlinx.webp" alt="SmartLinx workforce management platform with healthcare compliance features" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SmartLinx holds 4.5/5 on Capterra (6 reviews; small sample). The vendor describes the platform as purpose-built for the long-term care, post-acute care, senior care, and behavioral health industries ([smartlinx.com](https://www.smartlinx.com)). It serves a similar market tier to OnShift but with stronger compliance automation and integrated time and attendance, which makes it the natural upgrade path for hospitals outgrowing OnShift within the same market segment.
 
@@ -268,7 +268,7 @@ Hospitals that leave OnShift because of compliance and payroll reconciliation ga
 
 ## 4. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/onshift-alternatives/QGenda.png" alt="QGenda provider and nurse scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/onshift-alternatives/QGenda.webp" alt="QGenda provider and nurse scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It is a provider scheduling platform covering physician scheduling, on-call management, credentialing, time tracking, and analytics, with a customer base that skews toward physician group practices and larger health systems. OnShift does not handle provider scheduling, so QGenda is the right alternative when the actual problem is scheduling fragmentation between nursing and providers rather than nursing callout speed.
 
@@ -310,7 +310,7 @@ For a hospital running OnShift for nursing and a separate system for physicians,
 
 ## 5. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/onshift-alternatives/Nursegrid.png" alt="NurseGrid Manager nurse-facing scheduling app with manager tier" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/onshift-alternatives/Nursegrid.webp" alt="NurseGrid Manager nurse-facing scheduling app with manager tier" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample). It is a nurse-facing scheduling app with a manager tier, owned by HealthStream. Its strength is mobile schedule visibility, availability, and shift trades from the nurse's perspective, which is a narrower problem than OnShift's full LTC workforce model. It is best understood as a nurse-facing layer rather than a primary scheduling system for a hospital with active CMS obligations.
 
@@ -353,7 +353,7 @@ For a CAH leaving OnShift because of acute care callout speed and CMS documentat
 
 ## 6. [UKG](https://www.ukg.com)
 
-<img src="/images/blog/onshift-alternatives/UKG.png" alt="UKG workforce management platform for large health systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/onshift-alternatives/UKG.webp" alt="UKG workforce management platform for large health systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 UKG, formerly Kronos, is the dominant enterprise workforce management suite in large health systems, used by thousands of US hospitals. It is reviewed here because hospitals affiliated with regional health systems frequently encounter UKG as the system-wide workforce management mandate when the parent organization is consolidating away from point tools like OnShift.
 

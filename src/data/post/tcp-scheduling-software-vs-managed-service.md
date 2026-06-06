@@ -112,7 +112,7 @@ TCP TimeClock+ is a time and attendance platform made by TCP Software. It combin
 
 TCP TimeClock+ is a time and attendance platform made by TCP Software that includes employee scheduling as a secondary feature. Its core functions are time clock management, payroll integration, leave tracking, and overtime monitoring. Scheduling capabilities exist but are not the platform's primary design focus, and some healthcare users describe them as basic compared to dedicated scheduling tools. TCP Software also owns Aladtec and Humanity Scheduling as separate products; CAHs should confirm which product is being sold.
 
-<img src="/images/blog/tcp-scheduling-software-vs-managed-service/TCP.png" alt="TCP TimeClock+ time and attendance platform homepage" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/tcp-scheduling-software-vs-managed-service/TCP.webp" alt="TCP TimeClock+ time and attendance platform homepage" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 TCP TimeClock+ is a time and attendance platform made by TCP Software that includes employee scheduling as a secondary feature. Its core strengths are time clock management, payroll integration, leave and absence tracking, and overtime monitoring. Scheduling is part of the platform but is not its primary design focus. Some healthcare users on Capterra note the scheduling aspect is more basic than dedicated scheduling tools. The platform carries a 4.4/5 rating from 271 reviews on Capterra as of May 2026.
 
@@ -139,7 +139,7 @@ Verify current capabilities directly with TCP before making a purchasing decisio
 
 A managed scheduling service removes the scheduling function from the nurse manager's plate entirely. The hospital provides a staff roster and scheduling constraints; a specialist builds the schedule each cycle, monitors [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), pre-ranks callout replacements, and logs every change for CMS documentation. The nurse manager reviews and approves. Her weekly scheduling time drops to 1-2 hours, and she never touches the configuration or the call list.
 
-<img src="/images/blog/tcp-scheduling-software-vs-managed-service/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/tcp-scheduling-software-vs-managed-service/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 A managed scheduling service removes the scheduling function from the nurse manager's plate entirely. Instead of a platform she configures and operates, it is a service a specialist runs on her behalf. The nurse manager receives a draft schedule built around her constraints, reviews it, and approves. Weekly scheduling work, overtime monitoring, callout ranking, and roster maintenance happen outside her workload.
 

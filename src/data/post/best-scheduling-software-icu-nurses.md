@@ -184,7 +184,7 @@ ICU scheduling evaluation criteria differ from general nurse scheduling in two c
 
 ### 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/best-scheduling-software-icu-nurses/SimpleScheduleAI.png" alt="SimpleScheduleAI ICU nurse scheduling interface for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-icu-nurses/SimpleScheduleAI.webp" alt="SimpleScheduleAI ICU nurse scheduling interface for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SimpleScheduleAI is a managed scheduling service that handles ICU-specific credential tracking as part of the core replacement list logic. When a nurse calls out of an ICU shift, the ranked replacement list is generated using only nurses who hold the required certifications for that unit. A floor nurse without CCRN or ACLS credentials does not appear on the ICU callout list.
 
@@ -208,7 +208,7 @@ SimpleScheduleAI is a managed scheduling service that handles ICU-specific crede
 
 ### 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-scheduling-software-icu-nurses/Aladtec.png" alt="Aladtec scheduling software with staff qualification tracking" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-icu-nurses/Aladtec.webp" alt="Aladtec scheduling software with staff qualification tracking" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec supports credential and qualification tracking by employee profile, and can be configured to display credential status alongside availability in the scheduling view. The manager can filter available staff by certification type when looking for ICU callout replacements. This works when credentials are kept up to date in the system, which requires a manager who actively maintains the employee profiles.
 
@@ -232,7 +232,7 @@ Aladtec supports credential and qualification tracking by employee profile, and 
 
 ### 3. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/best-scheduling-software-icu-nurses/Smartlinx.png" alt="SmartLinx workforce management platform showing credential and competency tracking" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-icu-nurses/Smartlinx.webp" alt="SmartLinx workforce management platform showing credential and competency tracking" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SmartLinx has a more automated credential and competency management system than Aladtec, built for long-term care environments where competency-based assignment is a regulatory norm. The platform can be configured to prevent assignments that do not match the required competency profile for a unit, including ICU-specific credentials.
 
@@ -256,7 +256,7 @@ SmartLinx has a more automated credential and competency management system than 
 
 ### 4. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-scheduling-software-icu-nurses/QGenda.png" alt="QGenda provider scheduling platform for hospital scheduling" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-icu-nurses/QGenda.webp" alt="QGenda provider scheduling platform for hospital scheduling" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 QGenda handles ICU scheduling with configurable rules for credential requirements, minimum staffing ratios, and charge nurse coverage. Its strength is in environments where ICU scheduling must be unified with physician and intensivist scheduling, since QGenda was originally built for provider scheduling and has strong logic for managing complex rotation rules.
 
@@ -280,7 +280,7 @@ QGenda handles ICU scheduling with configurable rules for credential requirement
 
 ### 5. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-scheduling-software-icu-nurses/Nursegrid.png" alt="NurseGrid Manager nurse communication and scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-icu-nurses/Nursegrid.webp" alt="NurseGrid Manager nurse communication and scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager does not support credential tracking or ICU-specific scheduling constraints. It is a nurse communication and schedule visibility platform where nurses view shifts, request time off, and receive open-shift notifications. An open-shift broadcast for an ICU shift goes to the entire nursing pool regardless of credential status.
 
@@ -304,7 +304,7 @@ NurseGrid Manager does not support credential tracking or ICU-specific schedulin
 
 ### 6. [OnShift](https://www.onshift.com) (now part of Workday)
 
-<img src="/images/blog/best-scheduling-software-icu-nurses/Onshift.png" alt="OnShift workforce management software for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-icu-nurses/Onshift.webp" alt="OnShift workforce management software for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 OnShift is designed for long-term care and assisted living environments, not acute care ICU settings. Its open-shift model broadcasts available shifts to the caregiver pool without credential filtering. There is no ICU-specific logic, no charge nurse enforcement, and no acuity-based staffing support.
 
@@ -328,7 +328,7 @@ OnShift is designed for long-term care and assisted living environments, not acu
 
 ### 7. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/best-scheduling-software-icu-nurses/Deputy.png" alt="Deputy employee scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-icu-nurses/Deputy.webp" alt="Deputy employee scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Deputy is a general-purpose scheduling platform with no healthcare-specific features. There is no credential tracking, no charge nurse logic, no ratio enforcement, and no CMS documentation capability. It handles ICU nurses the same way it handles retail workers: availability, shift assignment, and open-shift broadcast.
 
@@ -352,7 +352,7 @@ Deputy is a general-purpose scheduling platform with no healthcare-specific feat
 
 ### 8. [UKG (formerly Kronos)](https://www.ukg.com)
 
-<img src="/images/blog/best-scheduling-software-icu-nurses/UKG.png" alt="UKG workforce management software for large healthcare systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-icu-nurses/UKG.webp" alt="UKG workforce management software for large healthcare systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 UKG has full ICU scheduling capability within its enterprise workforce management suite, including credential management, charge nurse logic, ratio enforcement, and CMS documentation. It is the most capable platform in this list for complex ICU scheduling. It is also the most expensive and the most implementation-intensive.
 

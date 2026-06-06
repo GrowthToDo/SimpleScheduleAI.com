@@ -220,7 +220,7 @@ Handling callouts well is reactive management. Reducing callout frequency is pro
 
 **Burnout indicators.** A nurse whose callout frequency has increased sharply is usually showing a burnout or engagement signal, not an attendance problem. Address root cause rather than managing the symptom.
 
-<img src="/images/blog/how-to-handle-nurse-callouts/SimpleScheduleAI.png" alt="SimpleScheduleAI automated callout ranking for CAH nurse managers" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/how-to-handle-nurse-callouts/SimpleScheduleAI.webp" alt="SimpleScheduleAI automated callout ranking for CAH nurse managers" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 [SimpleScheduleAI](/) automates the ranked callout list, maintains running hour totals, and surfaces the credential-filtered replacement list in real time. When a callout event is entered, the nurse manager sees the ranked list immediately, no calculation, no spreadsheet update, no manual OT check. The documentation is captured automatically.
 

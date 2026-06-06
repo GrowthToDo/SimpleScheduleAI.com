@@ -207,7 +207,7 @@ A nurse raising a fairness complaint about one assignment is usually a preferenc
 
 Do not dismiss fairness complaints as complaints. A nurse who feels chronically over-burdened on weekends or holidays is a retention risk. The cost of losing and replacing that nurse is far higher than the scheduling time it takes to investigate and respond to the complaint.
 
-<img src="/images/blog/how-to-build-fair-nurse-rotation/SimpleScheduleAI.png" alt="SimpleScheduleAI automated fair rotation distribution for CAH nurses" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/how-to-build-fair-nurse-rotation/SimpleScheduleAI.webp" alt="SimpleScheduleAI automated fair rotation distribution for CAH nurses" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 [SimpleScheduleAI](/) tracks weekend, holiday, and charge hour distribution automatically across each scheduling cycle. The nurse manager can pull a distribution summary at any time. When building the next cycle, the system weights assignments toward nurses with lower weekend and charge hour totals. The nurse manager reviews the proposed rotation and approves. Distribution data is available to share with staff as documentation.
 

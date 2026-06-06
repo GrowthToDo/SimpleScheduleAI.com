@@ -56,7 +56,7 @@ M7 Health is [nurse scheduling software](/nurse-scheduling-software) the hospita
 
 ## What Is M7 Health?
 
-<img src="/images/blog/m7-health.png" alt="M7 Health nurse scheduling and labor optimization platform interface" width="1280" height="602" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/m7-health.webp" alt="M7 Health nurse scheduling and labor optimization platform interface" width="1280" height="602" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 M7 Health is nurse scheduling and labor-optimization software that a health system licenses and runs with its own staff. It describes itself on its [product page](https://www.m7health.com/) as nurse scheduling and labor optimization for health systems, built for large hospital organizations from local community hospitals up to major academic medical centers.
 

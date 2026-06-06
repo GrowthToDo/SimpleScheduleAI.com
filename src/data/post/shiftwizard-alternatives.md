@@ -54,7 +54,7 @@ If your priority is [critical access hospital scheduling](/critical-access-hospi
 
 Hospitals switch away from ShiftWizard when the scheduling administration burden exceeds what one nurse manager can sustain alongside clinical duties. ShiftWizard is a capable hospital scheduling platform, but it is still self-serve: the nurse manager builds every schedule, handles callout coverage manually, and maintains configuration as staff changes. When the nurse manager is also covering clinical shifts, that weekly 4-6 hour scheduling overhead becomes unsustainable over time.
 
-<img src="/images/blog/shiftwizard-alternatives/Shiftwizard.png" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/shiftwizard-alternatives/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 ShiftWizard's overall rating is high: 4.3/5 on G2 and 4.4/5 across 723 Capterra reviews,[1] with over 88% of Capterra reviewers rating 4 stars or higher. ShiftWizard is named a G2 Spring 2026 Leader and the product is positioned as designed by nurses for hospital nursing. A representative positive review:
 
@@ -145,7 +145,7 @@ The four alternatives below cover the range a CAH is likely to encounter: a mana
 
 ## 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/shiftwizard-alternatives/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/shiftwizard-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SimpleScheduleAI is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: a scheduling specialist handles setup from an Excel roster upload, builds draft schedules each cycle, and maintains the system as the roster changes.
 
@@ -173,7 +173,7 @@ The service is a new offering in active pilot phase, without public G2 or Capter
 
 ## 2. [TCP Scheduling (Aladtec)](https://www.tcpsoftware.com)
 
-<img src="/images/blog/shiftwizard-alternatives/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/shiftwizard-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 TCP Scheduling Software (formerly Aladtec, acquired by TCP Software in 2021) holds 4.3/5 across 97 G2 reviews and 4.6/5 across 17 Capterra reviews (verified 2026-04-30); small Capterra sample, larger G2 sample. The platform covers shift management, time and attendance, overtime tracking, certification tracking, and reporting across fire, EMS, law enforcement, and hospital settings. The product's heritage is in 24/7 shift-work environments; its hospital-nursing deployment is a more recent expansion of the original use case.
 
@@ -213,7 +213,7 @@ A representative positive review from a public-safety user:
 
 ## 3. [NurseGrid](https://www.nursegrid.com)
 
-<img src="/images/blog/shiftwizard-alternatives/Nursegrid.png" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/shiftwizard-alternatives/Nursegrid.webp" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager is the manager-tier product of NurseGrid, owned by HealthStream, Inc. It holds 4.2/5 across 13 Capterra reviews.[3] The Capterra sample is small; reviews on the iOS App Store and Google Play are typically a more meaningful signal for a nurse-facing app.
 
@@ -263,7 +263,7 @@ A representative positive review:
 
 ## 4. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/shiftwizard-alternatives/QGenda.png" alt="QGenda provider and nurse scheduling platform for healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/shiftwizard-alternatives/QGenda.webp" alt="QGenda provider and nurse scheduling platform for healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 QGenda holds 4.6/5 across 164 G2 reviews and 4.2/5 across 68 Capterra reviews (verified 2026-04-30). The platform covers provider scheduling, on-call management, credentialing, time tracking, and analytics for healthcare organizations. QGenda's customer base skews toward physician group practices and larger health systems; reviews from smaller-scale customers and reviews from larger-scale customers describe meaningfully different experiences, which is typical of platforms serving multiple market segments.
 

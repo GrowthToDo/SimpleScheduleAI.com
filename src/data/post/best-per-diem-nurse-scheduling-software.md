@@ -187,7 +187,7 @@ Per diem scheduling has specific requirements that differ from full-time nurse s
 
 ### 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/SimpleScheduleAI.png" alt="SimpleScheduleAI per diem nurse scheduling dashboard for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/SimpleScheduleAI.webp" alt="SimpleScheduleAI per diem nurse scheduling dashboard for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SimpleScheduleAI is a managed scheduling service designed for Critical Access Hospitals where per diem nurses are a structural component of the roster, not an exception. The system maintains per diem availability alongside full-time scheduling and generates replacement call lists that cross-reference current-week hours against FLSA overtime thresholds before surfacing names. The nurse manager receives a list of available per diem nurses sorted by lowest overtime risk first.
 
@@ -211,7 +211,7 @@ SimpleScheduleAI is a managed scheduling service designed for Critical Access Ho
 
 ### 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Aladtec.png" alt="Aladtec scheduling software interface showing per diem staff availability" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Aladtec.webp" alt="Aladtec scheduling software interface showing per diem staff availability" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec handles per diem staff through a self-reporting availability system where nurses submit available shifts via the mobile app. The manager views availability alongside scheduled staff and can broadcast open shifts or directly assign per diem nurses to gaps. It works well when per diem nurses consistently update their availability windows.
 
@@ -236,7 +236,7 @@ Aladtec handles per diem staff through a self-reporting availability system wher
 
 ### 3. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Nursegrid.png" alt="NurseGrid Manager interface for nurse communication and shift management" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Nursegrid.webp" alt="NurseGrid Manager interface for nurse communication and shift management" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager is a nurse communication platform with a strong mobile app that per diem nurses adopt at high rates. Per diem nurses use it to indicate available days, pick up open shifts, and receive shift offers. The manager layer broadcasts open shifts to the per diem pool and tracks responses. It does not build schedules.
 
@@ -260,7 +260,7 @@ NurseGrid Manager is a nurse communication platform with a strong mobile app tha
 
 ### 4. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Smartlinx.png" alt="SmartLinx workforce management platform for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Smartlinx.webp" alt="SmartLinx workforce management platform for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SmartLinx has strong per diem and contingent worker management features designed for the long-term care environment where per diem staffing is similarly structural. The platform tracks availability, competency, and hours across contingent staff and integrates per diem coverage into the same scheduling and time-and-attendance system used for full-time staff.
 
@@ -284,7 +284,7 @@ SmartLinx has strong per diem and contingent worker management features designed
 
 ### 5. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/QGenda.png" alt="QGenda provider scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/QGenda.webp" alt="QGenda provider scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 QGenda supports per diem scheduling through its contingent staff management features, which are more sophisticated than most platforms. The platform can track per diem availability, enforce credential requirements, and generate callout lists filtered by availability and compliance rules. It is most effective in environments where per diem nurses also include advanced practice providers.
 
@@ -308,7 +308,7 @@ QGenda supports per diem scheduling through its contingent staff management feat
 
 ### 6. [OnShift](https://www.onshift.com) (now part of Workday)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Onshift.png" alt="OnShift workforce management software for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Onshift.webp" alt="OnShift workforce management software for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 OnShift's per diem model is built around open-shift posting and caregiver engagement features. Per diem nurses see available shifts in the app and pick up what they want. The manager can also directly offer shifts to specific per diem staff. This works well in long-term care environments where per diem nurses have predictable availability windows and shift pickup is routine.
 
@@ -332,7 +332,7 @@ OnShift's per diem model is built around open-shift posting and caregiver engage
 
 ### 7. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Deputy.png" alt="Deputy employee scheduling software showing shift management interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Deputy.webp" alt="Deputy employee scheduling software showing shift management interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Deputy's per diem model relies on availability blocks set by the nurse and open-shift broadcasting. The platform is general-purpose and has no healthcare-specific per diem features. It handles per diem nurses the same way it handles part-time retail staff: availability windows, open-shift notifications, and manager-initiated direct offers.
 
@@ -356,7 +356,7 @@ Deputy's per diem model relies on availability blocks set by the nurse and open-
 
 ### 8. [UKG (formerly Kronos)](https://www.ukg.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/UKG.png" alt="UKG workforce management software for large healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/UKG.webp" alt="UKG workforce management software for large healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 UKG has comprehensive contingent worker management capabilities within its enterprise workforce management suite. Per diem nurses can be managed as contingent workers with full FLSA tracking, credential management, and scheduling integration. The capability exists; the question is whether the implementation burden and cost are justified for a small per diem pool.
 

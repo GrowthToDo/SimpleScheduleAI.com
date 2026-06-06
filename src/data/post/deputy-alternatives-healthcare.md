@@ -64,7 +64,7 @@ Here is how the alternatives compare before we go deeper:
 
 Hospitals move away from Deputy when CMS compliance obligations grow beyond what a general workforce scheduling tool can support. Deputy does not document credential enforcement, FLSA 8-and-80 overtime configuration, or CMS §485.635 audit trail support on its product pages. For hospital nursing units where those features are required, every gap becomes a manual compliance process the nurse manager absorbs outside the scheduling system.
 
-<img src="/images/blog/deputy-alternatives-healthcare/Deputy.png" alt="Deputy general workforce scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/deputy-alternatives-healthcare/Deputy.webp" alt="Deputy general workforce scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Hospitals move away from Deputy when clinical compliance requirements exceed its general workforce scheduling model. The most common gaps are CMS staffing documentation that must be maintained manually outside the tool, credential enforcement that is not described on the product page, and FLSA 8-and-80 overtime configuration that Deputy does not document in its public materials.
 
@@ -150,7 +150,7 @@ The five alternatives are ranked by clinical appropriateness for hospital nurse 
 
 ## 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/deputy-alternatives-healthcare/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/deputy-alternatives-healthcare/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SimpleScheduleAI addresses every gap that causes hospitals to leave Deputy: credential enforcement in callout replacement, automated CMS documentation, FLSA healthcare overtime tracking, and a callout model built for acute care urgency rather than broadcast-and-wait.
 
@@ -179,7 +179,7 @@ The managed service model means the hospital does not install software or mainta
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/deputy-alternatives-healthcare/Aladtec.png" alt="Aladtec scheduling software for small hospitals and healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/deputy-alternatives-healthcare/Aladtec.webp" alt="Aladtec scheduling software for small hospitals and healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec is the most natural upgrade path from Deputy for small hospitals that want to stay on self-serve software but need healthcare-specific credential tracking and coverage rules. It is more expensive than Deputy but significantly less expensive than [SmartLinx](/blog/smartlinx-alternatives) or [QGenda](/blog/qgenda-alternatives), and it offers a healthcare-oriented scheduling model that Deputy does not.
 
@@ -218,7 +218,7 @@ CMS compliance documentation and initial credential configuration require setup 
 
 ## 3. [When I Work](https://wheniwork.com)
 
-<img src="/images/blog/deputy-alternatives-healthcare/WhenIWork.png" alt="When I Work scheduling and shift communication app for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/deputy-alternatives-healthcare/WhenIWork.webp" alt="When I Work scheduling and shift communication app for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 When I Work is the most direct like-for-like alternative to Deputy in the general workforce scheduling category. It shares Deputy's model: fast setup, per-user pricing, strong mobile app, and shift communication without healthcare compliance features. The distinction is interface design and specific features like scheduling templates and shift-pool management.
 
@@ -255,7 +255,7 @@ For healthcare organizations using Deputy primarily for schedule publishing and 
 
 ## 4. [Connecteam](https://connecteam.com)
 
-<img src="/images/blog/deputy-alternatives-healthcare/Connecteam.png" alt="Connecteam workforce management and scheduling app for deskless teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/deputy-alternatives-healthcare/Connecteam.webp" alt="Connecteam workforce management and scheduling app for deskless teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Connecteam is a mobile-first workforce management platform designed for deskless and distributed teams. It has a broader feature set than Deputy, including training and onboarding tools, internal communications, and task management alongside scheduling, at a comparable price. For healthcare organizations using Deputy primarily as a communication and coordination tool, Connecteam's broader feature surface may be useful.
 
@@ -283,7 +283,7 @@ Like Deputy and When I Work, Connecteam does not document healthcare-specific co
 
 ## 5. [Homebase](https://joinhomebase.com)
 
-<img src="/images/blog/deputy-alternatives-healthcare/Homebase.png" alt="Homebase scheduling and time tracking platform for small teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/deputy-alternatives-healthcare/Homebase.webp" alt="Homebase scheduling and time tracking platform for small teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Homebase is designed for retail and service industry scheduling but is used by some small clinics and outpatient settings as a lower-cost alternative to Deputy. It has fewer features than Deputy, a simpler interface, and a free tier that makes it the lowest-cost general scheduling option in this list.
 

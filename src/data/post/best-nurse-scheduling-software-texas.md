@@ -182,7 +182,7 @@ Texas CAHs are surveyed by [Texas DSHS](https://www.dshs.texas.gov) as well as C
 
 ### 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/best-nurse-scheduling-software-texas/SimpleScheduleAI.png" alt="SimpleScheduleAI scheduling service for Texas hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-texas/SimpleScheduleAI.webp" alt="SimpleScheduleAI scheduling service for Texas hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 SimpleScheduleAI is the only scheduling tool built specifically for Texas Critical Access Hospitals. Texas Labor Code Chapter 62 overtime provisions, FLSA healthcare worker exemptions, and CMS §485.635 audit documentation are default features, not configuration options. A scheduling specialist builds the weekly schedule from your Excel roster. The nurse manager reviews and approves.
 
@@ -207,7 +207,7 @@ Setup is 100% remote and takes 3-5 days. No IT involvement, no configuration bur
 
 ### 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-texas/Aladtec.png" alt="Aladtec scheduling software for Texas small hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-texas/Aladtec.webp" alt="Aladtec scheduling software for Texas small hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 Aladtec is the most widely used self-serve scheduling platform in small Texas hospitals and EMS agencies. It is fully cloud-based, sets up entirely remotely, and has a strong track record in the Texas rural healthcare segment. Credential tracking, shift coverage tools, and basic overtime monitoring are included.
 
@@ -232,7 +232,7 @@ Texas overtime rules can be configured within the platform's rule engine, though
 
 ### 3. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-texas/Smartlinx.png" alt="SmartLinx workforce management for Texas community hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-texas/Smartlinx.webp" alt="SmartLinx workforce management for Texas community hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 SmartLinx is a healthcare workforce management platform combining scheduling with time-and-attendance tracking and labor analytics. It is a solid choice for Texas community hospitals in the 50-200 bed range that want scheduling and time-and-attendance on one platform without moving to a full enterprise system.
 
@@ -257,7 +257,7 @@ Texas overtime rules are configurable within SmartLinx, and the platform has a h
 
 ### 4. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-texas/QGenda.png" alt="QGenda physician and nurse scheduling for Texas hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-texas/QGenda.webp" alt="QGenda physician and nurse scheduling for Texas hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 QGenda is a mid-market scheduling platform that started in physician scheduling. For Texas hospitals that need physician call schedule management alongside nursing scheduling, common at community hospitals with active medical staff, QGenda handles both on one platform.
 
@@ -280,7 +280,7 @@ QGenda is a mid-market scheduling platform that started in physician scheduling.
 
 ### 5. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-texas/Nursegrid.png" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-texas/Nursegrid.webp" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 NurseGrid is a nurse-facing mobile app for shift communication and open shift posting. It is not a scheduling engine. You still need a separate platform to build the actual schedule.
 
@@ -305,7 +305,7 @@ For Texas rural hospitals with staff spread across large geographic areas, Nurse
 
 ### 6. [OnShift](https://www.onshift.com) (now part of Workday)
 
-<img src="/images/blog/best-nurse-scheduling-software-texas/Onshift.png" alt="OnShift workforce management platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-texas/Onshift.webp" alt="OnShift workforce management platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 OnShift was acquired by Workday in 2022 and is now positioned as a post-acute care workforce platform. Texas has a significant skilled nursing and LTC sector, and OnShift has features relevant to that context. For Texas acute care hospitals, the product and pricing are both mismatched.
 
@@ -327,7 +327,7 @@ OnShift was acquired by Workday in 2022 and is now positioned as a post-acute ca
 
 ### 7. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-texas/Deputy.png" alt="Deputy workforce scheduling software" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-texas/Deputy.webp" alt="Deputy workforce scheduling software" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 Deputy is a general workforce scheduling tool for retail and hospitality. It has no clinical compliance features and no awareness of Texas Labor Code requirements or Texas DSHS licensing documentation standards.
 
@@ -348,7 +348,7 @@ Deputy is a general workforce scheduling tool for retail and hospitality. It has
 
 ### 8. [UKG](https://www.ukg.com) (formerly Kronos)
 
-<img src="/images/blog/best-nurse-scheduling-software-texas/UKG.png" alt="UKG workforce management platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-texas/UKG.webp" alt="UKG workforce management platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 UKG is the dominant workforce management platform for large Texas health systems, UT Health, Texas Health Resources, Baylor Scott and White, and similar organizations. At that scale, UKG's integration depth and enterprise analytics justify the implementation investment.
 

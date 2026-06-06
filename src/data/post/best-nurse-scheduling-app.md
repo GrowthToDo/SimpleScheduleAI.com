@@ -193,7 +193,7 @@ The fourth layer is operational: callout handling at a CAH involves checking whi
 
 ### 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/best-nurse-scheduling-app/SimpleScheduleAI.png" alt="SimpleScheduleAI scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/SimpleScheduleAI.webp" alt="SimpleScheduleAI scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SimpleScheduleAI operates as a managed scheduling service with a mobile interface for nurse manager review and approval. The distinction from a traditional app is deliberate: nurses do not build schedules in SimpleScheduleAI. Schedules are built for them and arrive for approval.
 
@@ -218,7 +218,7 @@ SimpleScheduleAI operates as a managed scheduling service with a mobile interfac
 
 ### 2. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/Nursegrid.png" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Nursegrid.webp" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager is a nurse-specific scheduling platform with one of the strongest mobile apps in the nurse scheduling category. The app is used by nurses to view schedules, pick up open shifts, request time off, and communicate with the scheduling team.
 
@@ -242,7 +242,7 @@ NurseGrid Manager is a nurse-specific scheduling platform with one of the strong
 
 ### 3. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/Aladtec.png" alt="Aladtec scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Aladtec.webp" alt="Aladtec scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec provides web and mobile access to scheduling across all devices. Its mobile app is functional and used by staff in emergency services and healthcare environments for schedule viewing, time-off requests, and shift trades.
 
@@ -264,7 +264,7 @@ Aladtec provides web and mobile access to scheduling across all devices. Its mob
 
 ### 4. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/Smartlinx.png" alt="SmartLinx scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Smartlinx.webp" alt="SmartLinx scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SmartLinx provides a full mobile suite alongside its web platform. The app supports schedule viewing, open shift response, time and attendance, and manager approval workflows.
 
@@ -287,7 +287,7 @@ SmartLinx provides a full mobile suite alongside its web platform. The app suppo
 
 ### 5. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/QGenda.png" alt="QGenda scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/QGenda.webp" alt="QGenda scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 QGenda offers a strong mobile app primarily designed for physician self-scheduling. The nursing module provides similar mobile access for nurse scheduling.
 
@@ -309,7 +309,7 @@ QGenda offers a strong mobile app primarily designed for physician self-scheduli
 
 ### 6. [OnShift](https://www.onshift.com) (now part of Workday)
 
-<img src="/images/blog/best-nurse-scheduling-app/Onshift.png" alt="OnShift scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Onshift.webp" alt="OnShift scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 OnShift has a strong mobile app in its target market (long-term care) with good shift pickup and open shift notification features. The app's design reflects LTC workflows, not acute care hospital nursing.
 
@@ -331,7 +331,7 @@ OnShift has a strong mobile app in its target market (long-term care) with good 
 
 ### 7. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/Deputy.png" alt="Deputy scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Deputy.webp" alt="Deputy scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Deputy has one of the best mobile apps in the workforce scheduling category. The nurse-facing interface is clean, shift trades work well, and the onboarding experience is faster than any other tool on this list.
 
@@ -356,7 +356,7 @@ Deputy has one of the best mobile apps in the workforce scheduling category. The
 
 ### 8. [UKG (formerly Kronos)](https://www.ukg.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/UKG.png" alt="UKG scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/UKG.webp" alt="UKG scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 UKG provides a full enterprise mobile workforce management app with scheduling, time and attendance, and compliance reporting. The app is feature-complete but reflects the complexity of the broader UKG platform.
 

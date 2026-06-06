@@ -212,7 +212,7 @@ The eight platforms worth evaluating for nurse scheduling in 2026 are SimpleSche
 
 ## 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/best-nurse-scheduling-software-2026/SimpleScheduleAI.png" alt="SimpleScheduleAI nurse scheduling managed service interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-2026/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It operates as a managed scheduling service rather than self-serve software: a scheduling specialist builds the weekly schedule using your staff roster, compliance rules, and fairness preferences. The nurse manager reviews and approves. When a nurse calls out, the team surfaces a ranked shortlist of qualified, available, non-overtime staff within minutes.
 
@@ -237,7 +237,7 @@ The model is built for small hospitals in Texas, with Texas overtime compliance,
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-2026/Aladtec.png" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-2026/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). The Capterra customer base skews toward fire, EMS, law enforcement, and security users; the most recent hospital-context reviews on Capterra are several years old. Aladtec offers credential tracking, shift coverage requests, availability management, and basic overtime monitoring. The interface is functional without requiring significant IT involvement to set up. For the operating-model comparison between a self-serve platform like Aladtec and a managed service, see our [Aladtec vs. managed scheduling service comparison](/blog/aladtec-vs-managed-service).
 
@@ -272,7 +272,7 @@ Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews)
 
 ## 3. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-2026/Smartlinx.png" alt="SmartLinx workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-2026/Smartlinx.webp" alt="SmartLinx workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 SmartLinx holds 4.5/5 on Capterra (6 reviews; small sample). The vendor describes the platform as "purpose-built for the long-term care, post-acute care, senior care, and behavioral health industries" ([smartlinx.com](https://www.smartlinx.com)). It combines scheduling, time and attendance, and staffing analytics on a single platform.
 
@@ -312,7 +312,7 @@ SmartLinx is well-suited to LTC, post-acute, and SNF facilities that want schedu
 
 ## 4. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-2026/QGenda.png" alt="QGenda physician and nurse scheduling platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-2026/QGenda.webp" alt="QGenda physician and nurse scheduling platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It started as physician scheduling software and has expanded into nursing, and is a strong platform for hospitals that need to manage complex physician call schedules alongside nursing rosters. Ari W., Administrator (Hospital & Health Care), wrote on Capterra (May 7, 2024): "Qgenda is easy to use and does a great job at automating." For a deeper look at QGenda specifically, see our [QGenda alternatives breakdown](/blog/qgenda-alternatives).
 
@@ -354,7 +354,7 @@ QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It st
 
 ## 5. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-2026/Nursegrid.png" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-2026/Nursegrid.webp" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability. The Manager tier adds unit-level oversight. CAHs evaluating NurseGrid as a primary scheduling platform should confirm hospital-tier capabilities directly with the vendor.
 
@@ -393,7 +393,7 @@ NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGr
 
 _For a CAH-specific deeper comparison, see our guide on the [best OnShift alternatives for Critical Access Hospitals](/blog/onshift-alternatives)._
 
-<img src="/images/blog/best-nurse-scheduling-software-2026/Onshift.png" alt="OnShift workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-2026/Onshift.webp" alt="OnShift workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is now positioned as a workforce management platform for post-acute care. If your facility is a skilled nursing facility or long-term care unit, OnShift's documented feature set is built for that context. For acute inpatient nursing units at a standalone small hospital, it is a less natural fit.
 
@@ -434,7 +434,7 @@ OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is
 
 ## 7. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-2026/Deputy.png" alt="Deputy workforce scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-2026/Deputy.webp" alt="Deputy workforce scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 Deputy is a general workforce scheduling platform used across retail, hospitality, food service, and healthcare. It holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), a strong rating across a large general workforce sample.[5] Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) that covers hospitals, clinics, private practice, and nursing facilities.
 
@@ -458,7 +458,7 @@ Deputy is a general workforce scheduling platform used across retail, hospitalit
 
 ## 8. [UKG](https://www.ukg.com) (formerly Kronos)
 
-<img src="/images/blog/best-nurse-scheduling-software-2026/UKG.png" alt="UKG workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-2026/UKG.webp" alt="UKG workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 UKG Pro holds 4.3/5 on Capterra (716 reviews) and 4.2/5 on G2. UKG is the dominant workforce management platform in large hospital systems and handles scheduling, time and attendance, payroll integration, and workforce analytics across many industries. It is built for the scale of organizations it was designed for.
 

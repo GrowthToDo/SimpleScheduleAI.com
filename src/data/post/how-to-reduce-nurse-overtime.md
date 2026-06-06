@@ -198,7 +198,7 @@ The goal is not zero overtime. It is predictable, defensible overtime: overtime 
 
 Preventable overtime, overtime that occurred because the wrong nurse was called first, or because a schedule was built without hour tracking, or because the overtime threshold was set incorrectly, is a different category. That is the target.
 
-<img src="/images/blog/how-to-reduce-nurse-overtime/SimpleScheduleAI.png" alt="SimpleScheduleAI automated overtime tracking for CAH nurse scheduling" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/how-to-reduce-nurse-overtime/SimpleScheduleAI.webp" alt="SimpleScheduleAI automated overtime tracking for CAH nurse scheduling" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SimpleScheduleAI handles steps 1-6 above as part of the managed service: callout ranking is automated by OT risk and credentials, running hour totals are tracked continuously, and FLSA overtime thresholds are applied by default. The nurse manager reviews the callout ranking and makes the call. The calculation is already done.
 

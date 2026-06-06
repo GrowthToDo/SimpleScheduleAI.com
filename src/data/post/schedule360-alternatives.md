@@ -56,7 +56,7 @@ Schedule360's documented customer base includes large health systems, specialty 
 
 Schedule360 is built as a broad healthcare scheduling platform. Its documented target market spans hospitals, physician groups, pharmacies, urgent care centers, specialty clinics, call centers, and government agencies. The platform's strongest documented use cases are large health systems and specialty-clinic chains, with named customers including University of Michigan, Cleveland Clinic, Kaiser, and Target ([schedule360.us](https://schedule360.us/)).
 
-<img src="/images/blog/schedule360-alternatives/Schedule360.png" alt="Schedule360 healthcare scheduling software homepage with specialty clinic positioning" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/schedule360-alternatives/Schedule360.webp" alt="Schedule360 healthcare scheduling software homepage with specialty clinic positioning" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Schedule360's product page covers rules-based self-scheduling, broadcast notifications via SMS, email, and pager, web and mobile access, and reporting. The vendor describes setup, 24/7 support, and online training as included at no additional cost. KLAS named Schedule360 a Best In KLAS winner in 2022 in the nurse and staff scheduling category, citing cost-effective labor cost reduction ([schedule360.us/solutions/nurse-scheduling](https://schedule360.us/solutions/nurse-scheduling/)).
 
@@ -195,7 +195,7 @@ The four strongest Schedule360 alternatives for a Critical Access Hospital are S
 
 ## 1. SimpleScheduleAI
 
-<img src="/images/blog/schedule360-alternatives/SimpleScheduleAI.png" alt="SimpleScheduleAI managed nurse scheduling service for Texas Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/schedule360-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI managed nurse scheduling service for Texas Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling software](/nurse-scheduling-software) service built specifically for Texas Critical Access Hospitals. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: a specialist handles setup from an Excel roster upload (3 to 5 days), builds draft schedules each cycle, and maintains the system as the roster and policies change. For the broader category framing, see our comparison of [managed service vs. scheduling software](/blog/managed-service-vs-scheduling-software).
 
@@ -224,7 +224,7 @@ Texas-specific compliance is built into the default service. [FLSA](https://www.
 
 ## 2. ShiftWizard
 
-<img src="/images/blog/schedule360-alternatives/Shiftwizard.png" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/schedule360-alternatives/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 ShiftWizard holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews) and was named a G2 Spring 2026 Leader.[5] It is a hospital scheduling platform owned by HealthStream, Inc., designed specifically for hospital nursing scheduling and used by more than 500 hospital facilities ([healthstream.com](https://www.healthstream.com)).
 
@@ -267,7 +267,7 @@ Ask the demo to walk through mobile workflows from both manager and staff perspe
 
 ## 3. TCP Scheduling (Aladtec)
 
-<img src="/images/blog/schedule360-alternatives/Aladtec.png" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/schedule360-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews; small sample).[6] The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
 
@@ -316,7 +316,7 @@ Ask the vendor for current named support contacts, a response-time SLA, and a re
 
 ## 4. NurseGrid Manager
 
-<img src="/images/blog/schedule360-alternatives/Nursegrid.png" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/schedule360-alternatives/Nursegrid.webp" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[7] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability ([nursegrid.com](https://www.nursegrid.com)). The Manager tier extends this with unit-level oversight.
 
