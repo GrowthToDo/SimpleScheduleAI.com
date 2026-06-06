@@ -678,7 +678,7 @@ If you run a Critical Access Hospital specifically, we have a dedicated guide th
 
 [8] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[9] FLSA healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[9] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 **Methodology note:** Reviewer quotes were cross-checked against AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on the verification date. Documented product capabilities reference each vendor's own product page on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 

@@ -254,7 +254,7 @@ Write the answers down before any demo. A demo shows what the software can do. T
 
 [5] CMS §485.635 specific section. [eCFR](https://www.ecfr.gov/current/title-42/section-485.635).
 
-[6] FLSA overtime guidance. [U.S. Department of Labor — Wage and Hour Division](https://www.dol.gov/agencies/whd/overtime).
+[6] FLSA overtime guidance. [U.S. Department of Labor, Wage and Hour Division](https://www.dol.gov/agencies/whd/overtime).
 
 [7] HRSA rural health workforce data. [hrsa.gov/rural-health](https://www.hrsa.gov/rural-health).
 

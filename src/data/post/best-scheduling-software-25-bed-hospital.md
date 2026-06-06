@@ -480,7 +480,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 
 
 [6] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[7] FLSA healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[7] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 **Methodology note:** Documented product capabilities reference each vendor's own product page, with the verification date noted in the vendor caveats. Vendor offerings, ratings, and product capabilities change over time; hospitals evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 

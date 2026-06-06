@@ -277,7 +277,7 @@ For more context, see how [AI nurse scheduling](/ai-nurse-scheduling) works as a
 
 [5] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[6] FLSA healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[6] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 [7] HRSA rural health workforce data. [hrsa.gov/rural-health](https://www.hrsa.gov/rural-health).
 

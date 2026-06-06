@@ -230,7 +230,7 @@ It is not the right choice if staff-facing self-service mobile features are a ha
 
 [2] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR, Title 42, Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[3] FLSA healthcare overtime guidance. [U.S. Department of Labor, Wage and Hour Division — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[3] FLSA healthcare overtime guidance. [U.S. Department of Labor, Wage and Hour Division, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 **Methodology note:** ShiftWizard reviewer quotes referenced in this comparison were cross-checked on G2, Capterra, AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on the verification date. Documented product capabilities reference each vendor's own product page on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 

@@ -163,7 +163,7 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 
 [4] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[5] FLSA 8-and-80 rule and healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[5] FLSA 8-and-80 rule and healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 [6] Rural Health Information Hub. [ruralhealthinfo.org](https://www.ruralhealthinfo.org).
 

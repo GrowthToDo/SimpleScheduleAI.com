@@ -185,7 +185,7 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 
 [1] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[2] FLSA healthcare overtime guidance. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[2] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 [3] HRSA rural workforce capacity data. [data.hrsa.gov/topics/health-workforce/shortage-areas](https://data.hrsa.gov/topics/health-workforce/shortage-areas).
 

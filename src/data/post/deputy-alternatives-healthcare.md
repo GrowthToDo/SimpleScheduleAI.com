@@ -441,7 +441,7 @@ Start by calculating the full cost of Deputy for your hospital. Add the monthly 
 
 [6] Portia A., Nurse (Hospital & Health Care), Deputy review. Capterra, April 8, 2026.
 
-[7] FLSA 8-and-80 healthcare overtime rule. [U.S. Department of Labor, Wage and Hour Division — FLSA guidance](https://www.dol.gov/agencies/whd/flsa).
+[7] FLSA 8-and-80 healthcare overtime rule. [U.S. Department of Labor, Wage and Hour Division, FLSA guidance](https://www.dol.gov/agencies/whd/flsa).
 
 [8] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR, Title 42, Chapter IV, Subchapter G, Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 

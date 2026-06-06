@@ -549,7 +549,7 @@ Related comparison posts: [QGenda alternatives for Critical Access Hospitals](/b
 
 [10] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[11] FLSA healthcare overtime guidance, including 8-and-80 rule. [U.S. Department of Labor — Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[11] FLSA healthcare overtime guidance, including 8-and-80 rule. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 **Methodology note:** Reviewer quotes are used verbatim with the original date, even when older than 30 days, because hospital-context Smart Square quotes within the last month were not available at verification. Vendor offerings, ratings, and product capabilities change over time. Before deciding on any platform, request a current reference customer at your scale directly from the vendor.
 
