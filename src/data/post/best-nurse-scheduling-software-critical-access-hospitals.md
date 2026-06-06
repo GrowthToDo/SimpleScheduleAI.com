@@ -35,14 +35,14 @@ This guide compares eight platforms on the only test that matters for a Critical
 
 - [How to Evaluate Nurse Scheduling Software for a Critical Access Hospital?](#how-to-evaluate-nurse-scheduling-software-for-a-critical-access-hospital)
 - [How Do All 8 Platforms Compare?](#how-do-all-8-platforms-compare)
-- [SimpleScheduleAI](#simplescheduleai)
-- [Aladtec](#aladtec)
-- [ShiftWizard](#shiftwizard)
-- [NurseGrid](#nursegrid)
-- [symplr Smart Square](#symplr-smart-square)
-- [QGenda](#qgenda)
-- [UKG (formerly Kronos)](#ukg-formerly-kronos)
-- [ScheduleAnywhere](#scheduleanywhere)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. Aladtec](#2-aladtec)
+- [3. ShiftWizard](#3-shiftwizard)
+- [4. NurseGrid](#4-nursegrid)
+- [5. symplr Smart Square](#5-symplr-smart-square)
+- [6. QGenda](#6-qgenda)
+- [7. UKG (formerly Kronos)](#7-ukg-formerly-kronos)
+- [8. ScheduleAnywhere](#8-scheduleanywhere)
 - [Which Is Right for Your Hospital?](#which-is-right-for-your-hospital)
 - [How Does SimpleScheduleAI Fit for a Critical Access Hospital?](#how-does-simplescheduleai-fit-for-a-critical-access-hospital)
 - [What to Do This Week](#what-to-do-this-week)
@@ -64,7 +64,7 @@ The constraints below decide adoption at a CAH long before any feature does.
 
 ## How Do All 8 Platforms Compare?
 
-Here is how all 8 platforms compare on CAH fit before we go deeper:
+Here is how all 8 platforms compare on CAH fit before we go deeper. This guide also covers the enterprise platforms a CAH is most often pitched, symplr Smart Square, QGenda, and UKG, specifically to show why they do not fit, so you can rule them out with confidence instead of sitting through three vendor demos to reach the same answer.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -140,7 +140,9 @@ Here is how all 8 platforms compare on CAH fit before we go deeper:
 
 <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 italic">Public Ratings show G2 and Capterra scores where available, with review counts in parentheses; "small sample" marks listings with fewer than 20 reviews. Best For reflects each vendor's own positioning. Setup Time reflects vendor-stated or industry-typical ranges. Pricing reflects publicly available figures only. Ratings and pricing verified 2026-06-06 and may have changed since.</p>
 
-## SimpleScheduleAI
+## 1. [SimpleScheduleAI](/how-it-works)
+
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/SimpleScheduleAI.png" alt="SimpleScheduleAI managed nurse scheduling service for Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed nurse scheduling service rather than self-serve software, which is the part that matters most for a Critical Access Hospital. You send your roster as an Excel file. A scheduling specialist builds the weekly schedule using your staff list, your fairness preferences, and your compliance rules. The nurse manager reviews and approves. There is no system for her to configure and no administrator role to fill.
 
@@ -160,12 +162,15 @@ The service is currently focused on Critical Access Hospitals in Texas, where th
 
 - Not self-serve software. A hospital that wants to own and configure scheduling internally will not find that here.
 - Currently focused on Texas CAHs. Facilities outside Texas should confirm fit before committing.
+- Preferences, swap requests, and time-off submissions route through the nurse manager rather than a self-service staff portal, which suits a CAH where the manager already knows every nurse but is a constraint if you want staff self-scheduling.
 
 **Verdict:** The right choice for a CAH where the dual-role nurse manager cannot realistically run a scheduling system alongside clinical work. If you want to manage scheduling in-house, or you are a larger multi-site system, look at Aladtec or one of the enterprise platforms below instead.
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-## Aladtec
+## 2. [Aladtec](https://www.aladtec.com)
+
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Aladtec.png" alt="Aladtec self-serve scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 Aladtec, now part of TCP Software, holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews; small sample). It is a self-serve scheduling platform with a long history in 24/7 shift-work environments: fire, EMS, law enforcement, and small healthcare. It includes credential expiration tracking, availability management, shift coverage requests, and overtime monitoring, and it does not require heavy IT involvement to stand up. For a CAH that wants to keep scheduling in-house and has a tech-comfortable administrator, it is the most proven self-serve option in this guide.
 
@@ -203,7 +208,7 @@ One caveat matters for a hospital audience. The Capterra review base skews heavi
 
 **Cost:** Approximately $200-$450/month for small hospital staff sizes.
 
-## ShiftWizard
+## 3. [ShiftWizard](https://www.healthstream.com)
 
 ShiftWizard, owned by HealthStream, holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews), the largest hospital-nursing review base of any platform in this guide. It was designed specifically for hospital nursing, and one reviewer captured why that origin matters.
 
@@ -245,7 +250,9 @@ For a CAH, the appeal is that ShiftWizard speaks hospital nursing natively rathe
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-## NurseGrid
+## 4. [NurseGrid](https://nursegrid.com)
+
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Nursegrid.png" alt="NurseGrid nurse-facing scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 NurseGrid, owned by HealthStream, holds 4.2/5 on Capterra (13 reviews; small sample). It is built primarily as a nurse-facing mobile app where individual nurses view schedules, set availability, and pick up open shifts, with a manager tier that adds unit-level oversight. Staff adoption tends to be high because nurses use the app on their own, and posting open shifts is fast.
 
@@ -285,7 +292,7 @@ For a CAH evaluating NurseGrid as a primary scheduling system, two issues stand 
 
 **Cost:** Free for individual nurses. Manager tier pricing available on request.
 
-## symplr Smart Square
+## 5. [symplr Smart Square](https://www.symplr.com)
 
 symplr Smart Square, formerly Avantas Smart Square and acquired by symplr from AMN Healthcare in July 2025, holds 4.6/5 on Capterra (19 reviews; small sample). It is an AI-driven nurse and staff scheduling platform with predictive analytics, real-time staffing adjustments, open-shift management, and nurse competency integration. It is a two-time Best in KLAS winner for Scheduling: Nurse and Staff (2025 and 2026), which is the strongest independent quality signal among the enterprise tools here.
 
@@ -322,7 +329,9 @@ The positioning is the differentiator for a CAH, and it points away from one. sy
 
 **Cost:** Pricing not listed on website. Enterprise quote-based via symplr sales.
 
-## QGenda
+## 6. [QGenda](https://www.qgenda.com)
+
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/QGenda.png" alt="QGenda provider scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It began as physician scheduling software and expanded into nursing, and its strength is managing complex physician call schedules alongside nursing rosters. A reviewer summed up the core experience.
 
@@ -364,7 +373,9 @@ For a CAH that does not need to coordinate physician on-call scheduling, much of
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
-## UKG (formerly Kronos)
+## 7. [UKG](https://www.ukg.com) (formerly Kronos)
+
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/UKG.png" alt="UKG workforce management platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 UKG, formerly Kronos, is the dominant enterprise workforce-management suite in large hospital systems, used by more than 3,500 hospitals in the US. It covers scheduling, time and attendance, payroll integration, and workforce analytics across many industries. We do not cite reviewer quotes for UKG here because the available reviews map to large multi-industry deployments rather than CAH-scale nurse scheduling; the evaluation below is operational and based on documented product positioning.
 
@@ -388,7 +399,7 @@ UKG is engineered for 200-plus-bed facilities with dedicated IT departments and 
 
 **Cost:** Pricing not listed on website. Enterprise pricing; not appropriate for under-50-bed facilities.
 
-## ScheduleAnywhere
+## 8. [ScheduleAnywhere](https://www.tcpsoftware.com)
 
 ScheduleAnywhere, now owned by TCP Software after its acquisition from Atlas Business Solutions, holds 4.6/5 on Capterra (61 reviews). It is an online employee and shift-scheduling tool with a dedicated nurse and healthcare sub-page, and the vendor claims skills, certification, and credential tracking with expiration alerts. RN reviewers describe straightforward shift viewing and editing.
 
