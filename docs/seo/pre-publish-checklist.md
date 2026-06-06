@@ -68,8 +68,8 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] Featured image ID is **unique** — not duplicated in any other live post or draft (run the duplicate check script before publishing)
 - [ ] Image URL uses **no quotes** in YAML frontmatter: `image: https://...` not `image: 'https://...'`
 - [ ] All images have descriptive alt text (not empty, not keyword-stuffed)
-- [ ] All images are WebP or AVIF format
-- [ ] Hero/featured image is compressed (< 200KB ideally)
+- [ ] **All in-body local images are WebP** (never commit PNG/JPG `<img>` into a post). Featured/Unsplash remote images are exempt (remote, already optimized). Convert with sharp at 1200px width / quality 80. Site-wide backfill was done 2026-06-06 (137 images, ~36.5 MB -> ~5.6 MB); the conversion pattern: for every `/images/**.(png|jpg)` referenced in `src/data/post`, generate a `.webp` sibling, swap all refs, then verify `grep -r "/images/.*\.png" src/data/post` returns zero and `dist` has no missing referenced images before commit. (Worth promoting to a permanent `scripts/` tool + a check-blog gate.)
+- [ ] Hero/featured image is compressed (< 200KB ideally); converted in-body WebP should each be < ~100KB
 - [ ] Any raw HTML `<table>` inside the post has `dark:` Tailwind variants on every bg, text, and border class (table is readable in dark mode — test the post in dark mode before publishing)
 - [ ] Table of Contents anchor text matches the H2/H3 heading text exactly (including trailing `?` on question headings)
 
