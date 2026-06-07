@@ -239,6 +239,7 @@ Write the answers down before any demo. A demo shows what the software can do. T
   >
     Apply for a Pilot Spot
   </a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Sources

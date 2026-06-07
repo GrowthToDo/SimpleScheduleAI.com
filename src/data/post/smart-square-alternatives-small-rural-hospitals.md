@@ -522,6 +522,7 @@ For a nurse manager at a 25-bed CAH who also takes clinical shifts, an enterpris
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI is a managed scheduling service for one 25-bed Critical Access Hospital. No labor-management analyst, no configuration burden, automatic CMS §485.635 documentation, and callout shortlists ranked by overtime risk. Built for CAH nurse managers who also take clinical shifts.</p>
   </div>
   <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 Related comparison posts: [QGenda alternatives for Critical Access Hospitals](/blog/qgenda-alternatives), [Schedule360 alternatives for Critical Access Hospitals](/blog/schedule360-alternatives), [ShiftWizard alternatives for Critical Access Hospitals](/blog/shiftwizard-alternatives), and [best nurse scheduling software for 2026](/blog/best-nurse-scheduling-software-2026).

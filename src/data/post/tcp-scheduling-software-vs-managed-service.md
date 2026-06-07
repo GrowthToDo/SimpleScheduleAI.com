@@ -283,6 +283,7 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
   >
     Apply for a Pilot Spot →
   </a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 One honest limitation before the action steps: a managed scheduling service is not the right fit for hospitals that need unified time-and-attendance plus scheduling on one platform, facilities with dedicated workforce-management staff, or organizations that specifically prefer operating their own platform under direct control.

@@ -174,6 +174,7 @@ For more context on [nurse scheduling software](/nurse-scheduling-software) opti
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers a compliant, post-ready schedule every Thursday 3 PM Central. Your nurse manager reviews and approves. Free 60-day pilot for Texas CAHs.</p>
   </div>
   <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

@@ -115,6 +115,7 @@ For more on what Texas-specific requirements apply to CAH nurse scheduling, see 
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Built specifically for the 84 Texas critical access hospitals.</p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Texas DSHS compliance built in. No IT setup. Free pilot, operational in 3-5 days.</p>
   <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

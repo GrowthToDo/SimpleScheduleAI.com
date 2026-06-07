@@ -112,6 +112,7 @@ For context on the broader pattern of support decline after contracts are signed
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Your scheduling specialist doesn't change when the business does.</p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI assigns a dedicated specialist to each facility. Free pilot for critical access hospitals in Texas. No IT setup required.</p>
   <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

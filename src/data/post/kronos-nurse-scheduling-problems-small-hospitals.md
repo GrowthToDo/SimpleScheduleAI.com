@@ -112,6 +112,7 @@ For more context on why UKG specifically is not the right fit for small hospital
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">A scheduling tool your nurses will actually use, not route around.</p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is purpose-built for CAH-scale facilities. Free pilot, no IT setup, operational in 3-5 days.</p>
   <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

@@ -442,6 +442,7 @@ The decision between self-serve scheduling software and a managed service become
   >
     Apply for a Pilot Spot →
   </a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

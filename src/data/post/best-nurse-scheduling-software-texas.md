@@ -452,6 +452,7 @@ The pilot is free for 60 days, with no contract commitment. No IT setup. We brin
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Texas Critical Access Hospital?</p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Free 60-day pilot. Texas compliance built in. We build the schedule, you approve it.</p>
   <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

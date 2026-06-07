@@ -323,6 +323,7 @@ One honest limitation: a managed AI scheduling service is not the right fit for 
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI applies constraint-aware scheduling to CAH nursing rosters, delivering three schedule options in 48 hours and ranked callout replacements in under 2 minutes. Built to remove the computational scheduling burden from nurse managers who also take clinical shifts.</p>
   </div>
   <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 px-6 py-3 text-white font-semibold transition-colors dark:bg-blue-600 dark:hover:bg-blue-500">Apply for a Pilot Spot</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
