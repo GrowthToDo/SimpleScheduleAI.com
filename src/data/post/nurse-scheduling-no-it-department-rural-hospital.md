@@ -104,7 +104,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals outsi
 
 ## What to Do This Week
 
-1. Write down which of the six models above your hospital actually uses today. Most CAHs use a blend of two: Excel plus agency, or Excel plus a system contract for nights. Naming the blend is the first step in costing it.
+1. Write down which of the six models above your hospital actually uses today. Many CAHs use a blend of two: Excel plus agency, or Excel plus a system contract for nights. Naming the blend is the first step in costing it.
 2. Add up your nurse manager's weekly scheduling time, including callout phone calls, swap approvals, and Saturday reconciliation. [AONL workforce data](https://www.aonl.org/resources/workforce) [5] consistently shows nurse manager administrative time as one of the largest unfunded costs in rural hospitals.
 3. Pull last cycle's agency invoice and last cycle's worked schedule. If you cannot tell which shifts went to agency because the base schedule was unfair versus understaffed, you have an internal-fairness problem masked as an agency-cost problem.
 4. If you are running standalone scheduling SaaS, audit the configuration. Specifically: are FLSA overtime thresholds enforced, are credential expirations alerting, and is the audit trail exportable for CMS surveyors? If two of those three are no, the configuration is not finished.

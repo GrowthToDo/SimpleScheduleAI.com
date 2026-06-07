@@ -264,7 +264,7 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
 
 1. **Clarify the primary problem.** Is the hospital's main need unified time and attendance plus scheduling in one platform, or is it specifically reducing the weekly scheduling workload on the nurse manager? These are different problems with different solutions. Mixing them up leads to choosing a tool that solves the wrong one.
 
-2. **Time-track your scheduling hours this week.** Keep a running note of every scheduling task: building the schedule draft, processing time-off, handling callout coverage, and maintaining system configuration. Most nurse managers underestimate their total scheduling time by 30-40% because callout handling is not mentally logged as scheduling work.
+2. **Time-track your scheduling hours this week.** Keep a running note of every scheduling task: building the schedule draft, processing time-off, handling callout coverage, and maintaining system configuration. Most nurse managers underestimate their total scheduling time, because callout handling is not mentally logged as scheduling work.
 
 3. **If you are evaluating TCP TimeClock+, ask two specific questions when you speak with their team.** First: does TimeClock+ produce CMS §485.635 staffing documentation reports for CAH certification surveys, or just event logs? Second: does the callout backfill feature come with TimeClock+ or does it require adding Humanity Scheduling? Both answers change the total cost and capability picture significantly.
 

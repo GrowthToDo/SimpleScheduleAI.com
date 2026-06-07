@@ -152,7 +152,7 @@ The practical test: if your nurse manager cannot currently tell you who is worki
 
 The right entry point for a CAH starting its WFM journey is almost always scheduling-first, service-if-possible.
 
-**Scheduling-first** means focusing initial investment and effort on building a reliable, low-burden process for producing and maintaining the weekly nurse schedule. This is where the 8 to 12 hours per week of manager time lives. It is where the $26,000 annual shadow salary sits. And it is where automation delivers immediate, measurable ROI. Data consistently shows a 15 to 30% reduction in overtime when scheduling moves from manual to automated processes.
+**Scheduling-first** means focusing initial investment and effort on building a reliable, low-burden process for producing and maintaining the weekly nurse schedule. This is where the 8 to 12 hours per week of manager time lives. It is where the $26,000 annual shadow salary sits. And it is where automation delivers immediate, measurable ROI. Automating scheduling can reduce overtime by closing the missed-coverage gaps that push hours to time-and-a-half.
 
 **Service-if-possible** means choosing a managed service over a self-serve software platform when the nurse manager cannot realistically absorb the configuration and maintenance burden of a new system. The core question is: does your nurse manager have 5 to 10 hours per week to spare for software setup and ongoing maintenance? If the answer is no, and at most CAHs it is no, a managed service that handles the scheduling work is a better entry point than any software platform.
 

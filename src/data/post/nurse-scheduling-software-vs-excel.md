@@ -26,7 +26,7 @@ This guide covers all three options for a 25-bed Critical Access Hospital, with 
 - Scheduling software adds compliance guardrails, real-time overtime tracking, and callout coverage logic that spreadsheets cannot replicate
 - The five warning signs that a CAH has outgrown Excel include repeated weekend inequity, slow callout response, after-the-fact overtime discovery, siloed credential tracking, and non-transferable schedule knowledge
 - For a 25-bed hospital, even a 60% reduction in manager scheduling time can generate $15,000+ in annual savings before counting overtime or agency reductions
-- A managed service is a better fit than self-serve software for most CAHs because it removes the configuration and maintenance burden
+- A managed service is a better fit than self-serve software for many CAHs because it removes the configuration and maintenance burden
 
 ## Table of Contents
 

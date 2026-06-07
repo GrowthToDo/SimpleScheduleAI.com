@@ -1,4 +1,4 @@
-Files: 29. Superlative-as-fact: 40. $/%/x no-source: 41. Soft hedges: 101.
+Files: 29. Superlative-as-fact: 22. $/%/x no-source: 40. Soft hedges: 102.
 
 # Credibility Audit (high-risk prose claims) — Live Blog Posts
 
@@ -6,18 +6,12 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
 
 ## 12-hour-hospital-shifts-scheduling.md
 **Superlative/frequency asserted as fact:**
-  - L26: - The most common burnout driver in 12-hour models is callout-driven consecutive shift stacking, nurses working 4 or more consecutive shifts informally.
   - L87: **Rotation design for 12-hour shifts.** The most common 12-hour schedule patterns for
-  - L108: documented, but CAHs manage them unevenly. The most common risk factor is
 **Number ($/%/x) with no source:**
   - L161: the remaining rotating staff. Aim to fill 50-60% of your night shifts with permanent
   - L162: night staff, leaving 40-50% covered by rotation.
 
 ## after-hours-callout-coverage-small-hospitals.md
-**Superlative/frequency asserted as fact:**
-  - L25: - A nurse calling out at 2 to 5 AM is the single most disruptive scheduling event at a Critical Access Hospital, because there is no float pool and no staffing office awake to
-  - L57: The true cost is rarely captured because most CAHs only track the agency invoice. The full picture has four components:
-  - L251: Most CAHs are well served by 4 to 6 cross-credentialed per-diem nurses with rolling weekly availability. The number matters less than two things: each bench member being crede
 **Soft hedge (usually/typically/often) — lower risk:**
   - L43: A nurse calls in sick at 2:40 AM for a shift that starts at 6:45 AM. There is no float pool, no staffing coordinator on duty, and no agency desk that answers before business h
   - L47: An after-hours callout is the hardest coverage problem at a small hospital because every buffer that a large facility relies on is absent. There is no float pool to pull from,
@@ -43,7 +37,6 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
   - L181: Getting Aladtec operational for a hospital requires configuring the system for the specific environment: shift patterns, unit structures, credential categories, overtime thres
   - L252: CMS CAH documentation templates are not documented as a built-in Aladtec feature. Schedules can be exported, but creating the specific documentation format CMS surveyors expec
   - L353: Aladtec is a competent self-serve scheduler. The question is not whether it is good software. The question is whether a Critical Access Hospital nurse manager, who is also cov
-  - L416: The decision table above covers the two most common decision factors. In practice, the strongest predictor of which model is right is: how much unprotected time is the nurse m
   - L424: 1. **Time-track your scheduling hours this week.** Keep a running note of every scheduling task and how long it takes. Most nurse managers underestimate their total scheduling
 **Soft hedge (usually/typically/often) — lower risk:**
   - L183: That timeline includes: initial setup calls, data entry of staff profiles, configuration of scheduling rules, parallel running with the existing system (usually Excel), and tr
@@ -85,7 +78,6 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
   - L279: **Cost:** Approximately $150-300 per month for the manager tier. Exact pricing requires contact.
   - L317: **Cost:** Approximately $2.50-$6 per user per month. At a 20-nurse roster, approximately $50-$120/month.
   - L353: **Cost:** Free tier for one location with up to 20 staff. Paid plans from $24-$100/month per location.
-  - L507: Scheduling software gives the nurse manager tools to build and manage schedules. A managed scheduling service builds the schedules for the nurse manager. At a 25-bed hospital 
 **Soft hedge (usually/typically/often) — lower risk:**
   - L30: - A 25-bed hospital typically employs 15-25 nurses across all units. Most enterprise scheduling software is engineered for rosters of 100-plus, which means the configuration b
   - L166: **Callout response speed:** At 25 beds, a single unexpected callout typically cannot be absorbed by floating staff. There is no float pool. The manager needs a ranked shortlis
@@ -100,12 +92,10 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
   - L386: The five questions below cover what Critical Access Hospital administrators most often ask when comparing TCP TimeClock+ and alternative scheduling solutions.
 
 ## deputy-alternatives-healthcare.md
-**Superlative/frequency asserted as fact:**
-  - L33: - Most hospitals using Deputy for nurse scheduling are doing so because they needed a scheduling tool quickly and Deputy was the easiest to deploy. The compliance and credenti
-  - L68: Hospitals move away from Deputy when clinical compliance requirements exceed its general workforce scheduling model. The most common gaps are CMS staffing documentation that m
 **Number ($/%/x) with no source:**
   - L216: **Cost:** $200-450 per month. Pricing requires a quote.
 **Soft hedge (usually/typically/often) — lower risk:**
+  - L33: - Hospitals often adopt Deputy for nurse scheduling because they needed a tool quickly and it was easy to deploy. The compliance and credential gaps accumulate as a hidden cos
   - L70: **CMS compliance documentation still entirely manual.** Hospitals using Deputy for scheduling must maintain CMS staffing documentation through a completely separate process, t
 
 ## hospital-staff-scheduling-software-critical-access.md
@@ -140,8 +130,6 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
   - L302: A 25-bed Critical Access Hospital usually has no IT department and no dedicated scheduler, and the nurse manager also takes clinical shifts. Software the hospital runs itself 
 
 ## managed-service-vs-scheduling-software.md
-**Superlative/frequency asserted as fact:**
-  - L51: The most common scheduling question hospital administrators ask is "which scheduling software should we use?" The more useful question is whether to use scheduling software at
 **Number ($/%/x) with no source:**
   - L31: - Based on pilot data, scheduling software typically reduces weekly scheduling time by 30-50%: the nurse manager still builds every schedule. A managed service reduces it by 8
   - L106: Scheduling software reduces the nurse manager's weekly scheduling time by 30-50%, to approximately 4-6 hours per week. She still builds every schedule, handles callouts, and m
@@ -158,7 +146,6 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
 ## nurse-scheduling-no-it-department-rural-hospital.md
 **Superlative/frequency asserted as fact:**
   - L56: Excel is the most common upgrade from paper. The nurse manager keeps a monthly grid in a workbook, shares it on a shared drive or by email, and prints copies for the station. 
-  - L107: 1. Write down which of the six models above your hospital actually uses today. Most CAHs use a blend of two: Excel plus agency, or Excel plus a system contract for nights. Nam
 **Soft hedge (usually/typically/often) — lower risk:**
   - L64: The hidden cost is configuration. Every credential rule, every FLSA overtime threshold, every minimum staffing-ratio guardrail, and every preference category still has to be e
   - L74: A regional or system-affiliate scheduling office builds the CAH's schedule centrally. The CAH submits the roster and the constraints, and the system office returns a finished 
@@ -166,7 +153,6 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
 
 ## nurse-scheduling-software-vs-excel.md
 **Superlative/frequency asserted as fact:**
-  - L29: - A managed service is a better fit than self-serve software for most CAHs because it removes the configuration and maintenance burden
   - L183: Yes, and most CAHs do. A managed service like SimpleScheduleAI typically runs parallel for 2-4 weeks during onboarding so the manager can verify accuracy before fully handing 
 **Number ($/%/x) with no source:**
   - L8: Nurse scheduling software automates shift coverage, compliance checks, and callout management, tasks that consume 8-12 hours of a nurse manager's week in Excel. For critical a
@@ -247,7 +233,6 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
 
 ## smartlinx-alternatives.md
 **Superlative/frequency asserted as fact:**
-  - L32: - The most common reason small hospitals leave SmartLinx is cost-to-value mismatch. At a 25-bed hospital, you are paying for compliance automation and labor analytics that a l
   - L59: Small hospitals switch away from SmartLinx when the implementation complexity and per-user pricing exceed what a 25-bed facility can justify. SmartLinx's 3-4 month implementat
   - L63: Small hospitals leave SmartLinx for predictable reasons. The platform's per-user pricing, IT-dependent configuration, and 3-4 month implementation timeline were designed for m
 **Number ($/%/x) with no source:**
@@ -270,11 +255,7 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
 
 ## ukg-alternatives-small-hospitals.md
 **Superlative/frequency asserted as fact:**
-  - L9: tools a 25-bed hospital can actually run with no IT team. Most CAHs on UKG use a fraction of
-  - L33: - For a CAH leaving UKG because of complexity, Aladtec goes live in 2-4 weeks with minimal IT involvement and is the most common replacement. For a hospital that needs more bu
-  - L50: For a critical access hospital leaving UKG, the best alternatives replace an enterprise suite with something a 25-bed hospital can actually run. Aladtec goes live in 2 to 4 we
   - L114: The three best UKG alternatives for a Critical Access Hospital are SimpleScheduleAI, Aladtec, and SmartLinx. SimpleScheduleAI is the only managed service and the only option t
-  - L365: 4. **Do not replicate UKG's complexity in the replacement.** The most common mistake when leaving UKG is trying to configure the same level of rules and integrations in the re
 **Number ($/%/x) with no source:**
   - L62: UKG was built for health systems with dedicated IT departments, HRIS analysts, and 6-12 month implementation budgets. At a 25-bed Critical Access Hospital, none of those resou
 **Soft hedge (usually/typically/often) — lower risk:**
@@ -287,9 +268,7 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
 
 ## ukg-migration-small-hospital.md
 **Superlative/frequency asserted as fact:**
-  - L48: Most small hospitals that end up on UKG did not select it for their own needs. They inherited it. The most common paths: a Critical Access Hospital joins a health system or ru
   - L56: Small hospitals leave UKG when one of four events makes the cost-to-value mismatch impossible to ignore: a contract renewal where the administrator finally totals the true cos
-  - L245: The most common reasons, in order: the system costs more than its value at small-hospital scale, the platform requires IT and HR infrastructure the hospital does not have, key
 **Soft hedge (usually/typically/often) — lower risk:**
   - L30: - UKG contracts typically include 30-90 day termination notice requirements and often auto-renew. Read the exit clause before giving notice; the notice letter is a legally tri
   - L58: The trigger is almost never a single event. It is typically a compound of:

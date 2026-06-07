@@ -45,7 +45,7 @@ This guide covers the UKG exit playbook for a 25-bed Critical Access Hospital: c
 
 ## Why Small Hospitals End Up on UKG in the First Place?
 
-Most small hospitals that end up on UKG did not select it for their own needs. They inherited it. The most common paths: a Critical Access Hospital joins a health system or rural health network that standardizes on UKG across all facilities, including the 25-bed rural members. Or a CAH administrator hired from a larger system brings the platform they used previously, assuming scale-down is straightforward.
+Many small hospitals that end up on UKG did not select it for their own needs. They inherited it. Common paths: a Critical Access Hospital joins a health system or rural health network that standardizes on UKG across all facilities, including the 25-bed rural members. Or a CAH administrator hired from a larger system brings the platform they used previously, assuming scale-down is straightforward.
 
 In both cases, the mismatch becomes apparent in the first six months. UKG's implementation process assumes a dedicated IT coordinator, an HR team that can configure and maintain the system, and staff comfortable with a training curriculum measured in hours. A 25-bed CAH with a nurse manager who handles scheduling alongside patient care, no internal IT department, and a part-time HR generalist does not match that profile. For a full overview of [nurse scheduling software](/nurse-scheduling-software) options suited to [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
@@ -242,7 +242,7 @@ Yes, UKG will provide a data export on request while you are still under contrac
 
 **Q: Why do small hospitals leave UKG?**
 
-The most common reasons, in order: the system costs more than its value at small-hospital scale, the platform requires IT and HR infrastructure the hospital does not have, key staff who understood the system left and no one could maintain it, and specific failure events (compliance errors, callout coverage failures) created a concrete case for change. Feature dissatisfaction is rarely the primary driver; structural mismatch is.
+Common reasons include: the system costs more than its value at small-hospital scale, the platform requires IT and HR infrastructure the hospital does not have, key staff who understood the system left and no one could maintain it, and specific failure events (compliance errors, callout coverage failures) created a concrete case for change. Feature dissatisfaction is rarely the primary driver; structural mismatch is.
 
 **Q: What should a 25-bed hospital use instead of UKG?**
 

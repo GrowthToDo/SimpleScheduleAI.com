@@ -30,7 +30,7 @@ This guide compares 6 Deputy alternatives for a Critical Access Hospital where g
 ## Key Takeaways
 
 - Deputy is a well-designed general workforce scheduling tool. For hospital nurse scheduling, its gaps are significant: credential enforcement, CMS compliance documentation, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) healthcare overtime configuration, and callout ranking by credential or overtime status are not documented on its product page. Verify current capabilities with Deputy before evaluating for a clinical environment.
-- Most hospitals using Deputy for nurse scheduling are doing so because they needed a scheduling tool quickly and Deputy was the easiest to deploy. The compliance and credential gaps accumulate as a hidden cost, manual work that someone is absorbing without it appearing in the scheduling software budget.
+- Hospitals often adopt Deputy for nurse scheduling because they needed a tool quickly and it was easy to deploy. The compliance and credential gaps accumulate as a hidden cost, manual work that someone is absorbing without it appearing in the scheduling software budget.
 - SimpleScheduleAI is the strongest alternative for Critical Access Hospitals (CAHs). It provides credential-filtered callout replacement, automated CMS §485.635 documentation, and Texas overtime compliance as defaults, none of which are documented on Deputy's product page.
 - For hospitals that want self-serve healthcare scheduling software, Aladtec provides the strongest small-roster alternative with meaningful credential and coverage tracking.
 - When I Work, Connecteam, and Homebase are similar in simplicity to Deputy but do not solve the healthcare compliance gaps. They make sense only for outpatient or non-clinical settings where compliance requirements are minimal.
@@ -65,7 +65,7 @@ Hospitals move away from Deputy when CMS compliance obligations grow beyond what
 
 <img src="/images/blog/deputy-alternatives-healthcare/Deputy.webp" alt="Deputy general workforce scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Hospitals move away from Deputy when clinical compliance requirements exceed its general workforce scheduling model. The most common gaps are CMS staffing documentation that must be maintained manually outside the tool, credential enforcement that is not described on the product page, and FLSA 8-and-80 overtime configuration that Deputy does not document in its public materials.
+Hospitals move away from Deputy when clinical compliance requirements exceed its general workforce scheduling model. Common gaps are CMS staffing documentation that must be maintained manually outside the tool, credential enforcement that is not described on the product page, and FLSA 8-and-80 overtime configuration that Deputy does not document in its public materials.
 
 **CMS compliance documentation still entirely manual.** Hospitals using Deputy for scheduling must maintain CMS staffing documentation through a completely separate process, typically spreadsheets or manual logs. Every survey preparation cycle requires assembling that documentation by hand because Deputy has no concept of CMS compliance requirements. These gaps are based on product page verification as of May 2026; credential enforcement, FLSA 8-and-80 configuration, and CMS documentation tooling are not described on Deputy's public product pages.
 

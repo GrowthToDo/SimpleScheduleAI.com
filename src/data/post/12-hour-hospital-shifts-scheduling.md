@@ -23,7 +23,7 @@ metadata:
 
 - 12-hour shifts reduce handoffs and improve nurse schedule satisfaction, but amplify the consequences of each coverage gap, one missed shift is half a day of nursing.
 - Weekend coverage is the primary fairness challenge: map weekend assignments first, before building the weekday schedule.
-- The most common burnout driver in 12-hour models is callout-driven consecutive shift stacking, nurses working 4 or more consecutive shifts informally.
+- A common burnout driver in 12-hour models is callout-driven consecutive shift stacking, nurses working 4 or more consecutive shifts informally.
 - Fatigue guards (max 3 consecutive shifts, min 36-hour night-to-day recovery) should be hard constraints in the scheduling process, not guidelines.
 - The 8-and-80 [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) alternative can reduce overtime exposure in 12-hour shift settings but requires prior written employee agreements to be legally valid.
 
@@ -105,7 +105,7 @@ flexibility for shift swaps without automatically triggering overtime.
 ## What are the fatigue and burnout risks of 12-hour rotating shifts?
 
 The fatigue and burnout risks associated with 12-hour rotating shifts are well
-documented, but CAHs manage them unevenly. The most common risk factor is
+documented, but CAHs manage them unevenly. A common risk factor is
 consecutive shift stacking: nurses working 3 consecutive 12-hour shifts, then
 immediately picking up a callout shift on day 4, effectively working 48 hours in
 4 days.

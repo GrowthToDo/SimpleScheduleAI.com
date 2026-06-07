@@ -413,7 +413,7 @@ Two variables drive the decision: how much unprotected time the nurse manager cu
   <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">The strongest predictor: how many unprotected hours per week does the nurse manager spend on scheduling tasks that do not require clinical judgment?</p>
 </div>
 
-The decision table above covers the two most common decision factors. In practice, the strongest predictor of which model is right is: how much unprotected time is the nurse manager spending on scheduling tasks that do not require their clinical or managerial judgment? If the answer is more than 3 hours per week, and those 3 hours are being taken from clinical work, a managed service almost always has a better return on investment than software, regardless of price.
+The decision table above covers the two main decision factors. In practice, the strongest predictor of which model is right is: how much unprotected time is the nurse manager spending on scheduling tasks that do not require their clinical or managerial judgment? If the answer is more than 3 hours per week, and those 3 hours are being taken from clinical work, a managed service almost always has a better return on investment than software, regardless of price.
 
 One honest limitation: a managed scheduling service is not the right fit for hospitals that have a dedicated scheduling administrator, want direct cell-by-cell control over every assignment, or specifically prefer self-serve software for governance or audit reasons.
 
@@ -421,7 +421,7 @@ One honest limitation: a managed scheduling service is not the right fit for hos
 
 The decision between self-serve scheduling software and a managed service becomes clear once you have two data points: your actual weekly scheduling time and a total cost estimate. The five steps below produce both within one week.
 
-1. **Time-track your scheduling hours this week.** Keep a running note of every scheduling task and how long it takes. Most nurse managers underestimate their total scheduling time by 30-40% because callout handling and configuration updates are not mentally logged as "scheduling time." The actual number, once tracked, usually makes the decision obvious.
+1. **Time-track your scheduling hours this week.** Keep a running note of every scheduling task and how long it takes. Most nurse managers underestimate their total scheduling time, because callout handling and configuration updates are not mentally logged as "scheduling time." The actual number, once tracked, usually makes the decision obvious.
 
 2. **Ask SimpleScheduleAI for a CAH scheduling audit.** The audit covers your current OT patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [apply for a pilot](/pilot).
 

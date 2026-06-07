@@ -22,7 +22,7 @@ metadata:
 
 ## Key Takeaways
 
-- A nurse calling out at 2 to 5 AM is the single most disruptive scheduling event at a Critical Access Hospital, because there is no float pool and no staffing office awake to absorb it.
+- A nurse calling out at 2 to 5 AM is one of the most disruptive scheduling events at a Critical Access Hospital, because there is no float pool and no staffing office awake to absorb it.
 - A workable callout process has four written parts: a pre-ranked call list, a fixed escalation order, a standing per-diem bench, and a documentation step that satisfies [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 - Ranking the call list by overtime exposure, credential match, and rotation fairness before the night shift starts converts a 40-minute phone tree into a 3-call sequence.
 - A per-diem bench of 4 to 6 cross-credentialed nurses, contacted on a fixed weekly cadence, is the difference between covering a 2 AM hole internally and paying agency premium rates.
@@ -54,7 +54,7 @@ The problem compounds at night specifically. Daytime callouts have a deep bench 
 
 A single uncovered or poorly covered after-hours callout costs a Critical Access Hospital in four ways: overtime premium, agency premium, manager time, and patient-safety risk. The cash cost of one agency-covered shift can exceed the nurse's own daily wage by a wide margin, and the manager time spent solving it is clinical capacity that disappears.
 
-The true cost is rarely captured because most CAHs only track the agency invoice. The full picture has four components:
+The true cost is rarely captured because many CAHs track only the agency invoice. The full picture has four components:
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -248,7 +248,7 @@ Yes. Under [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subc
 
 **How many nurses should a Critical Access Hospital keep on its per-diem bench?**
 
-Most CAHs are well served by 4 to 6 cross-credentialed per-diem nurses with rolling weekly availability. The number matters less than two things: each bench member being credentialed for more than one unit, and availability being refreshed on a fixed cadence so the bench is live rather than a stale list when a 2 AM callout happens.
+Many CAHs are well served by 4 to 6 cross-credentialed per-diem nurses with rolling weekly availability. The number matters less than two things: each bench member being credentialed for more than one unit, and availability being refreshed on a fixed cadence so the bench is live rather than a stale list when a 2 AM callout happens.
 
 **Can a managed scheduling service handle after-hours callouts for a small hospital?**
 

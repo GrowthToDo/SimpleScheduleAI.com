@@ -545,7 +545,7 @@ Deputy at $4.50 per user per month is the lowest-cost option. At a 15-nurse per 
 
 **What is the difference between per diem scheduling software and a managed scheduling service for per diem nurses?**
 
-Per diem scheduling software gives the nurse manager tools to track availability, manage callout replacements, and document per diem shifts. A managed scheduling service handles those tasks for the nurse manager. At a CAH where the nurse manager also takes clinical shifts, software reduces per diem scheduling time by 30-50%, while a managed service reduces it by 80-90%. SimpleScheduleAI is a managed service. All other tools in this list are software platforms.
+Per diem scheduling software gives the nurse manager tools to track availability, manage callout replacements, and document per diem shifts. A managed scheduling service handles those tasks for the nurse manager. At a CAH where the nurse manager also takes clinical shifts, software cuts only part of that time because the manager still builds the schedule, while a managed service removes the build entirely. SimpleScheduleAI is a managed service. All other tools in this list are software platforms.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

@@ -318,7 +318,7 @@ One honest limitation: a managed scheduling service is not the right fit for fac
 
 ## What to Do This Week
 
-1. **Time-track every scheduling task for one week.** Schedule building, callout phone tree, overtime checking, time-off processing, credential updates, version reconciliation across spreadsheets and whiteboards. Most CAH nurse managers underestimate the total by 30 to 40 percent because interruptions are not logged.
+1. **Time-track every scheduling task for one week.** Schedule building, callout phone tree, overtime checking, time-off processing, credential updates, version reconciliation across spreadsheets and whiteboards. Most CAH nurse managers underestimate the total because interruptions are not logged.
 2. **Calculate your shadow administrative salary.** Multiply your weekly scheduling hours by your loaded hourly rate, then by 50 weeks. For most CAHs this lands at $22,000 to $30,000 per year. Use the [SimpleScheduleAI ROI calculator](/roi) to model what reducing it returns in dollars and clinical hours.
 3. **Audit which scheduling tasks actually need clinical judgment.** Schedule construction, version control, overtime arithmetic, and callout documentation are work products. Clinical judgment is who covers a complex patient assignment or who is precepting this week. Most of the 10 weekly hours is the former, not the latter.
 4. **Identify your two highest-impact friction points.** From the five we outlined (data entry, callout coordination, PRN reconciliation, conflict resolution, compliance documentation), pick the two that consume the most weekly time. Those are the highest-ROI targets for the next 90 days.

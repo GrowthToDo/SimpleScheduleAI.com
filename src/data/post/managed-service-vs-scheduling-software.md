@@ -48,7 +48,7 @@ This guide makes the labor-model distinction concrete: who builds the schedule, 
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-The most common scheduling question hospital administrators ask is "which scheduling software should we use?" The more useful question is whether to use scheduling software at all, or to outsource the scheduling function entirely.
+A frequent scheduling question hospital administrators ask is "which scheduling software should we use?" The more useful question is whether to use scheduling software at all, or to outsource the scheduling function entirely.
 
 Most hospital scheduling decisions default to software because software is the familiar model. The managed service model, where a vendor builds and manages schedules on behalf of the hospital, is less familiar but often the better fit for small hospitals where the nurse manager is stretched across clinical and administrative duties.
 

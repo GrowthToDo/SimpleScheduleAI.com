@@ -504,7 +504,7 @@ When I Work at $2.50-$6 per user per month is the lowest-cost option, totaling a
 
 **What is the difference between scheduling software and a managed scheduling service for a 25-bed hospital?**
 
-Scheduling software gives the nurse manager tools to build and manage schedules. A managed scheduling service builds the schedules for the nurse manager. At a 25-bed hospital where the manager takes clinical shifts, the distinction matters: software reduces scheduling time by 30-50%, while a managed service reduces it by 80-90%. SimpleScheduleAI is a managed service. Aladtec, NurseGrid, When I Work, and Homebase are all self-serve software platforms.
+Scheduling software gives the nurse manager tools to build and manage schedules. A managed scheduling service builds the schedules for the nurse manager. At a 25-bed hospital where the manager takes clinical shifts, the distinction matters: software cuts only part of that time because the manager still builds every schedule, while a managed service removes the build entirely. SimpleScheduleAI is a managed service. Aladtec, NurseGrid, When I Work, and Homebase are all self-serve software platforms.
 
 ---
 
