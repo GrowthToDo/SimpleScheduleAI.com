@@ -21,7 +21,7 @@ metadata:
 
 ## TL;DR
 
-Most hospital shift schedule overtime is preventable, it's typically visible in the schedule before it happens but isn't caught because managers review coverage, not hours-to-date. The three root causes: untracked cumulative hours at schedule build time, callout replacement that ignores overtime proximity, and fairness patterns that concentrate coverage burden on a small nurse pool. Addressing all three with proactive scheduling practices can reduce overtime costs by 15-30%.
+Most hospital shift schedule overtime is preventable, it's typically visible in the schedule before it happens but isn't caught because managers review coverage, not hours-to-date. The three root causes: untracked cumulative hours at schedule build time, callout replacement that ignores overtime proximity, and fairness patterns that concentrate coverage burden on a small nurse pool. Addressing all three with proactive scheduling practices can cut a meaningful share of preventable overtime.
 
 ## What Are the Three Root Causes of Overtime in Hospital Shift Schedules?
 
@@ -109,7 +109,7 @@ The three root causes: scheduled overtime that isn't caught during schedule buil
 
 **Q: How much can better scheduling reduce hospital overtime?**
 
-Critical access hospitals with proactive scheduling practices typically reduce overtime by 15-30% within 2-3 scheduling cycles. The reduction is largest when the primary cause is scheduled overtime (caught before publishing) rather than emergency coverage overtime from genuine short-staffing.
+Critical access hospitals with proactive scheduling practices typically cut preventable overtime within a few scheduling cycles. The reduction is largest when the primary cause is scheduled overtime (caught before publishing) rather than emergency coverage overtime from genuine short-staffing.
 
 **Q: Does scheduling software prevent overtime?**
 
@@ -123,7 +123,7 @@ If the only available, certified nurses are all near the 40-hour threshold, over
 
 - Most hospital shift schedule overtime is preventable, it's typically schedulable in advance but not caught before publishing
 - Three root causes: untracked cumulative hours at schedule build time, callout replacement that ignores overtime proximity, fairness concentration on a small nurse pool
-- Proactive scheduling practices (weekly hours check pre-publish, overtime-aware callout ranking) reduce overtime by 15-30% without reducing coverage
+- Proactive scheduling practices (weekly hours check pre-publish, overtime-aware callout ranking) cut preventable overtime without reducing coverage
 - Scheduling software that monitors proactively outperforms manual payroll-based monitoring, prevention vs. reporting
 - Genuine short-staffing overtime (not enough nurses for required coverage) is a hiring problem, not a scheduling problem, distinguish between the two
 

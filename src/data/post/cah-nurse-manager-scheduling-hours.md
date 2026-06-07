@@ -136,7 +136,7 @@ Three specific process changes, implemented in sequence, reduce scheduling time 
 
 **Step 3: Implement a structured preference window.** Set a single submission deadline per cycle for preference requests. Nurses who submit after the deadline are accommodated only if the schedule permits, not by reworking completed assignments. Communicate this policy clearly before implementing it; it will generate pushback the first cycle and acceptance after that.
 
-These three steps require no software. They require written procedures and consistent enforcement. Most CAH nurse managers who implement all three reduce scheduling time by 50-60% within two cycles.
+These three steps require no software. They require written procedures and consistent enforcement. CAH nurse managers who implement all three typically see a meaningful drop in scheduling time within a couple of cycles.
 
 Software accelerates each step further: a scheduling system that generates a draft from the template and checks overtime automatically compresses schedule creation to under 30 minutes. A digital replacement list filtered by availability and certification reduces callout response to 5-10 minutes. But the process changes deliver the majority of the time savings; software is the multiplier, not the foundation.
 
@@ -178,7 +178,7 @@ At a loaded rate of $50/hour, 8 hours per week of excess scheduling time costs $
 
 **Q: How can nurse managers reduce time spent on scheduling?**
 
-Three process changes deliver the largest time reduction: building a schedule template with standing rules to eliminate blank-slate rebuilding, documenting an ordered callout replacement tree so charge nurses can fill shifts without manager involvement, and implementing a structured preference submission window with a hard deadline. These three changes alone typically reduce scheduling time by 50-60% without any software change.
+Three process changes deliver the largest time reduction: building a schedule template with standing rules to eliminate blank-slate rebuilding, documenting an ordered callout replacement tree so charge nurses can fill shifts without manager involvement, and implementing a structured preference submission window with a hard deadline. These three changes alone typically cut scheduling time meaningfully without any software change.
 
 **Q: Should a nurse manager be doing all the scheduling themselves?**
 

@@ -99,7 +99,7 @@ UKG was built for health systems with dedicated IT departments, HRIS analysts, a
 
 ## What Is the Real Cost of Running UKG at a Small Hospital?
 
-The real cost of UKG at a small hospital extends well beyond the subscription fee. Configuration errors caused by missing HRIS staff produce payroll overages that surface only at pay period close. Compliance gaps appear when audit trails have undocumented gaps because no one was responsible for maintaining the configuration. And the support model, built for enterprise IT teams, is nearly unusable for a nurse manager without a technical background. For a CAH, the total operational cost of UKG routinely exceeds the sticker price by 40-60%.
+The real cost of UKG at a small hospital extends well beyond the subscription fee. Configuration errors caused by missing HRIS staff produce payroll overages that surface only at pay period close. Compliance gaps appear when audit trails have undocumented gaps because no one was responsible for maintaining the configuration. And the support model, built for enterprise IT teams, is nearly unusable for a nurse manager without a technical background. For a CAH, the total operational cost of UKG routinely runs well beyond the sticker price.
 
 Beyond the purchase price, the operational cost of running UKG at CAH scale is significant:
 

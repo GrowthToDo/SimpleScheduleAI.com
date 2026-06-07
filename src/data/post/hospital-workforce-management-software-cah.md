@@ -79,7 +79,7 @@ A complete hospital WFM platform typically includes: scheduling engine with rule
   </g>
   <rect x="30" y="160" width="640" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="350" y="185" text-anchor="middle" font-size="12" font-weight="600" fill="#92400e">Total first-year cost for a mid-size hospital: $150,000-$500,000</text>
-  <text x="350" y="205" text-anchor="middle" font-size="10" fill="#92400e">Most CAHs solve 80% of labor management problems with scheduling alone.</text>
+  <text x="350" y="205" text-anchor="middle" font-size="10" fill="#92400e">Scheduling alone addresses much of a CAH's labor-management burden.</text>
 </svg>
 
 Pricing for enterprise WFM platforms is not publicly listed but consistent patterns emerge from industry reports. Licensing typically runs $30 to $60 per employee per month depending on module selection. For a CAH with 70 employees, that is $25,200 to $50,400 per year in licensing alone.
@@ -154,9 +154,9 @@ The right entry point for a CAH starting its WFM journey is almost always schedu
 
 **Scheduling-first** means focusing initial investment and effort on building a reliable, low-burden process for producing and maintaining the weekly nurse schedule. This is where the 8 to 12 hours per week of manager time lives. It is where the $26,000 annual shadow salary sits. And it is where automation delivers immediate, measurable ROI. Automating scheduling can reduce overtime by closing the missed-coverage gaps that push hours to time-and-a-half.
 
-**Service-if-possible** means choosing a managed service over a self-serve software platform when the nurse manager cannot realistically absorb the configuration and maintenance burden of a new system. The core question is: does your nurse manager have 5 to 10 hours per week to spare for software setup and ongoing maintenance? If the answer is no, and at most CAHs it is no, a managed service that handles the scheduling work is a better entry point than any software platform.
+**Service-if-possible** means choosing a managed service over a self-serve software platform when the nurse manager cannot realistically absorb the configuration and maintenance burden of a new system. The core question is: does your nurse manager have 5 to 10 hours per week to spare for software setup and ongoing maintenance? If the answer is no, as it often is at a CAH, a managed service that handles the scheduling work is a better entry point than any software platform.
 
-The WFM maturity model for a CAH looks like this: start with stable nursing scheduling (managed service or simple scheduling software), then add credential tracking and callout management, then add overtime monitoring, and only then consider whether time-and-attendance integration or labor analytics justify a full WFM platform. Most CAHs will find they have solved 80% of their labor management problems with the first two steps, without ever needing enterprise WFM.
+The WFM maturity model for a CAH looks like this: start with stable nursing scheduling (managed service or simple scheduling software), then add credential tracking and callout management, then add overtime monitoring, and only then consider whether time-and-attendance integration or labor analytics justify a full WFM platform. Many CAHs find the first two steps address the bulk of their labor management problems, without ever needing enterprise WFM.
 
 [CMS Conditions of Participation §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) compliance requirements can be met with well-structured scheduling and documentation processes. They do not require a $200,000 WFM implementation.
 

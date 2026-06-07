@@ -652,7 +652,7 @@ If you run a Critical Access Hospital specifically, we have a dedicated guide th
 2. If you are under 50 beds, put Aladtec and SimpleScheduleAI side by side. They serve the same segment with different models - one is self-serve software, the other builds the schedule for you.
 3. Request demos from your two or three shortlisted tools. Ask each vendor: how long does implementation take, who owns the configuration, and what does the audit trail look like during a CMS survey?
 4. Ask any vendor for a compliance documentation sample - specifically a staffing report formatted for a CMS §485.635 review.
-5. Calculate how many hours per week your nurse manager currently spends on scheduling. Multiply by their hourly rate. That is the baseline ROI any tool needs to beat. Run the [SimpleScheduleAI ROI calculator](/roi) to model what reducing weekly scheduling time by 60-80% returns in dollars and clinical hours.
+5. Calculate how many hours per week your nurse manager currently spends on scheduling. Multiply by their hourly rate. That is the baseline ROI any tool needs to beat. Run the [SimpleScheduleAI ROI calculator](/roi) to model what reducing weekly scheduling time returns in dollars and clinical hours.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>

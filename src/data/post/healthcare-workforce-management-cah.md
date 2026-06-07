@@ -152,7 +152,7 @@ If a CAH is starting from Excel schedules and phone-tree callout management, the
   <text x="350" y="265" text-anchor="middle" font-size="11" fill="#166534">A managed service delivers Steps 1 + 2 without requiring internal implementation.</text>
 </svg>
 
-**First: reliable shift scheduling.** Before any WFM sophistication is possible, a CAH needs a scheduling process that produces accurate, publishable schedules without consuming 10+ hours of manager time each week. This is the foundation. Automation research consistently shows a 15 to 30% reduction in overtime when scheduling moves from manual to automated. That alone often exceeds the cost of any scheduling solution.
+**First: reliable shift scheduling.** Before any WFM sophistication is possible, a CAH needs a scheduling process that produces accurate, publishable schedules without consuming 10+ hours of manager time each week. This is the foundation. Moving scheduling from manual to automated commonly reduces overtime by closing the missed-coverage gaps that push hours to time-and-a-half. That alone often exceeds the cost of any scheduling solution.
 
 **Second: callout coverage workflow.** Once the base schedule is stable, the next highest-impact capability is structured callout handling. A documented process (or software support) that surfaces ranked qualified replacements cuts the manager's callout response time from 45+ minutes to under 10, and reduces the likelihood of agency nurse use. [Agency nurses cost 2 to 3 times the standard hourly rate](https://www.aonl.org/resources/nursing-workforce-now), so even modest reduction in agency reliance pays for scheduling support quickly.
 

@@ -25,7 +25,7 @@ This guide covers all three options for a 25-bed Critical Access Hospital, with 
 - Excel scheduling costs CAH nurse managers 8-12 hours per week, adding up to roughly $26,000 per year in shadow administrative salary
 - Scheduling software adds compliance guardrails, real-time overtime tracking, and callout coverage logic that spreadsheets cannot replicate
 - The five warning signs that a CAH has outgrown Excel include repeated weekend inequity, slow callout response, after-the-fact overtime discovery, siloed credential tracking, and non-transferable schedule knowledge
-- For a 25-bed hospital, even a 60% reduction in manager scheduling time can generate $15,000+ in annual savings before counting overtime or agency reductions
+- For a 25-bed hospital, halving manager scheduling time can generate over $10,000 in annual savings before counting overtime or agency reductions
 - A managed service is a better fit than self-serve software for many CAHs because it removes the configuration and maintenance burden
 
 ## Table of Contents
@@ -135,9 +135,9 @@ Most CAH nurse managers don't switch away from Excel because they've heard a sal
 
 For most 25-bed critical access hospitals, the ROI calculation favors switching if even one of these conditions is true: manager time exceeds 8 hours/week on scheduling, the hospital has experienced an overtime surprise in the past quarter, or agency nurse usage is rising.
 
-Consider the numbers plainly. If your nurse manager spends 10 hours per week on scheduling and earns $50/hour, that's $26,000 per year in labor. A scheduling solution that cuts that time by 60% saves roughly $15,600 annually in direct manager time, before counting any reduction in overtime or agency spend.
+Consider the numbers plainly. If your nurse manager spends 10 hours per week on scheduling and earns $50/hour, that's $26,000 per year in labor. A scheduling solution that cuts that time in half saves roughly $13,000 annually in direct manager time, before counting any reduction in overtime or agency spend.
 
-Agency nurse costs run [2-3× the standard hourly rate](https://www.aonl.org/resources/workforce). At a 25-bed hospital, a single unplanned agency shift might cost $800-$1,200. If better scheduling prevents even 10 such shifts per year, that's $8,000-$12,000 in avoidable spend. Our pilot data shows a 15-30% reduction in overtime after switching to automated scheduling, at a small CAH, that alone can offset the cost of any reasonable scheduling service.
+Agency nurse costs run [2-3× the standard hourly rate](https://www.aonl.org/resources/workforce). At a 25-bed hospital, a single unplanned agency shift might cost $800-$1,200. If better scheduling prevents even 10 such shifts per year, that's $8,000-$12,000 in avoidable spend. In our pilots, automated scheduling has reduced overtime by closing the missed-coverage gaps that push hours to time-and-a-half, which at a small CAH can offset the cost of a scheduling service.
 
 The comparison often framed as "software cost vs. Excel (free)" misses the point. The real comparison is "total cost of scheduling with software" versus "total cost of scheduling with Excel", which includes manager hours, overtime premiums, agency markups, and compliance risk. When that full picture is on the table, staying on Excel stops looking free.
 
@@ -162,9 +162,9 @@ For more context on [nurse scheduling software](/nurse-scheduling-software) opti
 
 ## What to Do This Week
 
-1. **Time-track every scheduling task for one week.** Schedule building, callout calls, time-off processing, payroll OT reconciliation, and credential checks. Most managers underestimate the total by 30-40% because interruptions are not logged. Use a sticky note and a stopwatch if needed.
+1. **Time-track every scheduling task for one week.** Schedule building, callout calls, time-off processing, payroll OT reconciliation, and credential checks. Most managers underestimate the total because interruptions are not logged. Use a sticky note and a stopwatch if needed.
 2. **Calculate your shadow salary.** Multiply your weekly scheduling hours by your loaded hourly rate, then by 50 weeks. For most CAH managers at 8-12 hours/week and $50/hr loaded, the number is around $26,000/year. That number is the ROI floor any scheduling tool must clear.
-3. **Run the [ROI calculator](/roi)** to model what reducing your scheduling time by 60% would return in dollars and clinical hours. The output is the budget conversation you take to your CFO.
+3. **Run the [ROI calculator](/roi)** to model what reducing your scheduling time would return in dollars and clinical hours. The output is the budget conversation you take to your CFO.
 4. **Check your last 4 cycles for the five outgrown-Excel signs.** Repeated weekend inequity, slow callout response, after-the-fact overtime discovery, siloed credential tracking, and non-transferable scheduling knowledge. Two or more of these in 4 cycles means Excel is the constraint, not the workflow.
 5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot lets you compare the actual time burden against your week-one baseline. Start at [simplescheduleai.com/pilot](/pilot).
 

@@ -406,7 +406,7 @@ For hospitals where T&A is managed through payroll software independently of the
 
 1. **Audit your SmartLinx usage.** Log into SmartLinx and identify which features are actively used versus installed but dormant. If T&A integration, labor analytics, and compliance automation are all actively used and working, staying on SmartLinx is probably the right decision. If fewer than three major features are used regularly, the platform is oversized.
 
-2. **Calculate your total SmartLinx cost including IT.** Add SmartLinx licensing, implementation amortized over the contract term, and the estimated IT time spent on SmartLinx configuration maintenance per month. The real cost of SmartLinx for a small hospital frequently exceeds the sticker price by 30-50%.
+2. **Calculate your total SmartLinx cost including IT.** Add SmartLinx licensing, implementation amortized over the contract term, and the estimated IT time spent on SmartLinx configuration maintenance per month. The real cost of SmartLinx for a small hospital frequently runs well beyond the sticker price.
 
 3. **Identify the gap driving the switch.** Is it implementation cost that already happened, ongoing IT dependency, per-user pricing growth, or features that do not map to your workflows? Different gaps point to different alternatives.
 

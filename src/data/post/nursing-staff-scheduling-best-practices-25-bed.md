@@ -21,7 +21,7 @@ metadata:
 
 ## TL;DR
 
-Seven nursing staff scheduling best practices for 25-bed critical access hospitals: publish schedules 4 weeks out, track fairness measures per nurse, maintain a ranked per-diem callout list, enforce maximum consecutive shifts, document every change with a timestamp, review overtime thresholds before publishing, and conduct a post-schedule retrospective after every cycle. CAH nurse managers who implement these practices consistently reduce callout-driven overtime by 20-30%.
+Seven nursing staff scheduling best practices for 25-bed critical access hospitals: publish schedules 4 weeks out, track fairness measures per nurse, maintain a ranked per-diem callout list, enforce maximum consecutive shifts, document every change with a timestamp, review overtime thresholds before publishing, and conduct a post-schedule retrospective after every cycle. CAH nurse managers who implement these practices commonly reduce callout-driven overtime.
 
 ## What Are the Core Nursing Staff Scheduling Best Practices for Small Hospitals?
 

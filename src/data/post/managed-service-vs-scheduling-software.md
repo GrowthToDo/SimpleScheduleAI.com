@@ -28,7 +28,7 @@ This guide makes the labor-model distinction concrete: who builds the schedule, 
 
 ## Key Takeaways
 
-- Based on pilot data, scheduling software typically reduces weekly scheduling time by 30-50%: the nurse manager still builds every schedule. A managed service reduces it by 80-90%, to under 2 hours per week for review and approval.
+- Based on pilot data, scheduling software cuts only part of that time because the nurse manager still builds every schedule. A managed service removes the build entirely, to under 2 hours per week for review and approval.
 - The core question is whether your nurse manager has spare administrative capacity. At a 25-bed CAH where she also takes clinical shifts, she typically does not.
 - CAHs fail with scheduling apps for three structural reasons: no IT department to configure the system, no dedicated scheduler to operate it, and no compliance expertise to set up [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and CMS rules correctly.
 - SimpleScheduleAI is a managed scheduling service. Aladtec, SmartLinx, QGenda, NurseGrid, OnShift, Deputy, and UKG are all scheduling software platforms.
@@ -103,7 +103,7 @@ The practical result: CAHs that implement scheduling apps often see initial impr
 
 ## How Does Each Model Affect the Nurse Manager's Week?
 
-Scheduling software reduces the nurse manager's weekly scheduling time by 30-50%, to approximately 4-6 hours per week. She still builds every schedule, handles callouts, and maintains the system. A managed scheduling service reduces that time by 80-90%, to 1-2 hours per week for review and approval only. The difference is not incremental. For a nurse manager who also takes clinical shifts, it determines whether scheduling is a manageable task or a persistent burnout driver.
+Scheduling software reduces the nurse manager's weekly scheduling time to roughly 4-6 hours per week, but she still builds every schedule, handles callouts, and maintains the system. A managed scheduling service takes the build off her desk, to 1-2 hours per week for review and approval only. The difference is not incremental. For a nurse manager who also takes clinical shifts, it determines whether scheduling is a manageable task or a persistent burnout driver.
 
 At a 25-bed Critical Access Hospital (CAH), the average nurse manager currently spends 8-12 hours per week on scheduling-related tasks: building the next schedule, handling callout replacements, managing shift swap requests, updating the scheduling system as staff changes occur, and assembling CMS documentation before surveys.
 
@@ -360,7 +360,7 @@ For more context, see our guides on [nurse scheduling software](/nurse-schedulin
 
 **What is the difference between scheduling software and a managed scheduling service?**
 
-Scheduling software gives the nurse manager tools she uses to build and manage schedules herself. A managed scheduling service builds the schedules for her. The software model reduces scheduling time by 30-50%. The managed service model reduces it by 80-90%. At a 25-bed Critical Access Hospital where the nurse manager also takes clinical shifts, the managed service model typically produces a better time outcome.
+Scheduling software gives the nurse manager tools she uses to build and manage schedules herself. A managed scheduling service builds the schedules for her. The software model reduces scheduling time only partially. The managed service model removes the build entirely. At a 25-bed Critical Access Hospital where the nurse manager also takes clinical shifts, the managed service model typically produces a better time outcome.
 
 **Why do scheduling apps fail at critical access hospitals?**
 
