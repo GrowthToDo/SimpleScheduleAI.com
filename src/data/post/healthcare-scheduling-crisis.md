@@ -147,7 +147,7 @@ choice from a labor cost standpoint.
 Version drift (when the unit whiteboard, the Excel master file, and the portal PDF
 each show a different version of the schedule) creates a CMS-surveyable deficiency.
 Under [CMS Conditions of Participation for Critical Access Hospitals (§485.635)](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals),
-staffing records must be accurate and available for review. A discrepancy between
+staffing records must be accurate and available for review. For a full breakdown of what surveyors request, see [staying CMS compliant with nurse scheduling](/blog/how-to-stay-cms-compliant-nurse-scheduling). A discrepancy between
 posted and actual schedules is a finding that surveyors can and do flag.
 
 Manual post-schedule edits also lack audit trails for overtime verification. Under
