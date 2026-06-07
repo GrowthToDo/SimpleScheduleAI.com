@@ -350,7 +350,7 @@ The total nurse manager time investment per scheduling cycle is under two hours.
     <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Scheduling as a service for Critical Access Hospitals</p>
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, maintains CMS documentation, and delivers callout replacement lists in under 2 minutes. Designed for CAH nurse managers who also take clinical shifts and cannot afford 8-12 hours per week on scheduling administration.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Request a Free Scheduling Assessment</a>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Apply for a Pilot Spot →</a>
 </div>
 
 For more context, see our guides on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals, how [AI nurse scheduling](/ai-nurse-scheduling) works as a managed service, and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling).

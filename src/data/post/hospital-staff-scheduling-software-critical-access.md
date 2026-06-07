@@ -193,7 +193,7 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
     <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Hospital staff scheduling, run for you</p>
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, maintains CMS §485.635 documentation, and delivers ranked callout replacement lists in under 2 minutes. Built for Texas Critical Access Hospitals with no IT department and a nurse manager who also takes clinical shifts.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Request a Free Scheduling Assessment</a>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Apply for a Pilot Spot →</a>
 </div>
 
 ## Frequently Asked Questions

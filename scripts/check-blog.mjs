@@ -212,8 +212,11 @@ function check(file) {
     if (inBlockquote(line)) return;
     if (/8-and-80/.test(line)) {
       const ctx = line.toLowerCase();
-      const ssaiAttrib = /(simplescheduleai|ssai|the service|our (service|scheduler))\s+(builds?|tracks?|applies|enforces?|handles?|has?|includes?|covers?|uses?).*8-and-80/i.test(line);
-      const featurePhrasing = /8-and-80.*(built in|built-in|by default|automatic|applied automatically)/i.test(line);
+      // Only flag when the SSAI verb directly governs 8-and-80 within the same
+      // sentence (short gap, no period), so educational/"confirm with us" mentions
+      // in the same paragraph-line are not false-flagged.
+      const ssaiAttrib = /(simplescheduleai|ssai|the service|our (service|scheduler))\s+(builds?|tracks?|applies|enforces?|handles?|has?|includes?|covers?|uses?)[^.]{0,60}8-and-80/i.test(line);
+      const featurePhrasing = /8-and-80[^.]{0,40}(built in|built-in|by default|automatic|applied automatically)/i.test(line);
       if (ssaiAttrib || featurePhrasing) {
         fail('FLSA 8-and-80 attributed to SimpleScheduleAI as a feature (not yet shipped)', bodyOffset + i + 1, line.trim().slice(0, 120));
       }

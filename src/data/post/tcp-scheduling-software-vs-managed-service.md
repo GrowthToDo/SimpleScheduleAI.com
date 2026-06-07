@@ -268,7 +268,7 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
 
 3. **If you are evaluating TCP TimeClock+, ask two specific questions when you speak with their team.** First: does TimeClock+ produce CMS §485.635 staffing documentation reports for CAH certification surveys, or just event logs? Second: does the callout backfill feature come with TimeClock+ or does it require adding Humanity Scheduling? Both answers change the total cost and capability picture significantly.
 
-4. **Request a free scheduling assessment from SimpleScheduleAI.** The assessment covers your current overtime patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or call to schedule.
+4. **Request a free scheduling assessment from SimpleScheduleAI.** The assessment covers your current overtime patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [apply for a pilot](/pilot).
 
 5. **If you currently use TCP TimeClock+ and are considering whether it is meeting your scheduling needs,** review two things: are you spending more than 3-4 hours per week on scheduling tasks on top of your time tracking work, and are callout events regularly taking more than 20 minutes to resolve? If both answers are yes, the scheduling side of the platform is not keeping pace with what a dedicated service would provide.
 
@@ -281,7 +281,7 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
     href="/pilot"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    Request a Free Scheduling Assessment
+    Apply for a Pilot Spot →
   </a>
 </div>
 

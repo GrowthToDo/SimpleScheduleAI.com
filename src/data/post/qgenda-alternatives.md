@@ -411,7 +411,7 @@ QGenda is worth keeping if:
     href="/pilot"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    Request a Free Scheduling Assessment
+    Apply for a Pilot Spot →
   </a>
 </div>
 

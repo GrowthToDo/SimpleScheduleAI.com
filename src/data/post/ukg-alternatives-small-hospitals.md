@@ -375,7 +375,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
     href="/pilot"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    Request a Free Scheduling Assessment
+    Apply for a Pilot Spot →
   </a>
 </div>
 

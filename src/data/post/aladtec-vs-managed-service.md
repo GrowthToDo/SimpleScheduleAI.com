@@ -423,7 +423,7 @@ The decision between self-serve scheduling software and a managed service become
 
 1. **Time-track your scheduling hours this week.** Keep a running note of every scheduling task and how long it takes. Most nurse managers underestimate their total scheduling time by 30-40% because callout handling and configuration updates are not mentally logged as "scheduling time." The actual number, once tracked, usually makes the decision obvious.
 
-2. **Ask SimpleScheduleAI for a CAH scheduling audit.** The audit covers your current OT patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or call to schedule.
+2. **Ask SimpleScheduleAI for a CAH scheduling audit.** The audit covers your current OT patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [apply for a pilot](/pilot).
 
 3. **Calculate your estimated labor cost for scheduling.** Multiply your hourly rate (or the hourly rate of whoever manages scheduling) by the weekly hours spent. Multiply by 50 weeks. Compare that number against the annual cost of a managed service. For most CAH nurse managers, the break-even is well inside year one. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison automatically.
 
@@ -440,7 +440,7 @@ The decision between self-serve scheduling software and a managed service become
     href="/pilot"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    Request a Free Scheduling Audit
+    Apply for a Pilot Spot →
   </a>
 </div>
 

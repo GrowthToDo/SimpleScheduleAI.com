@@ -423,7 +423,7 @@ Start by calculating the full cost of Deputy for your hospital. Add the monthly 
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">The hospital scheduling upgrade from Deputy</p>
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI provides credential-filtered callout replacement, automatic CMS §485.635 documentation, and FLSA healthcare overtime tracking as defaults. Built for Critical Access Hospitals that need clinical scheduling compliance, not a general workforce scheduling tool applied to a clinical environment.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Request a Demo</a>
+  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot →</a>
 </div>
 
 ## Sources

@@ -231,7 +231,7 @@ The model is built for small hospitals in Texas, with Texas overtime compliance,
 - Not a self-serve tool. If your hospital wants to own and manage scheduling internally, this is not the right fit.
 - Designed for small facilities under 50 beds. Not built for larger hospitals or multi-site systems.
 
-**Verdict:** The right choice for a small hospital where the nurse manager cannot realistically own a scheduling system on top of clinical duties. If you want to manage scheduling yourself or have more than 50 beds, look at Aladtec or SmartLinx instead. [See how SimpleScheduleAI works](/how-it-works).
+**Verdict:** The right choice for a small hospital where the nurse manager cannot realistically own a scheduling system on top of clinical duties. If you want to manage scheduling yourself or have more than 50 beds, look at Aladtec or SmartLinx instead. [See how SimpleScheduleAI works](/how-it-works) or [apply for a pilot](/pilot).
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
