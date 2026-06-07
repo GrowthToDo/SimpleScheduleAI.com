@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-09-02T00:00:00Z
-updateDate: 2026-09-08T00:00:00Z
+draft: false
+publishDate: 2026-06-07T00:00:00Z
+updateDate: 2026-06-07T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'How to Stay CMS Compliant with Nurse Scheduling at Critical Access Hospitals'
 excerpt: >
@@ -230,7 +230,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals outsi
 
 3. **Audit your credential master list for expirations.** Check ACLS and BLS expiration dates for all nurses currently on the schedule. Any nurse whose credentials have lapsed should be removed from eligible rotation for the shifts requiring those credentials.
 
-4. **If you are a Texas Critical Access Hospital, [apply for a pilot spot](/pilot).** The 60-day pilot builds your schedule from an Excel roster upload and attaches the §485.635 documentation to each cycle, so you can compare it against your current records.
+4. **If you are a Texas Critical Access Hospital, [Apply for a Pilot Spot](/pilot).** The 60-day pilot builds your schedule from an Excel roster upload and attaches the §485.635 documentation to each cycle, so you can compare it against your current records.
 
 5. **Verify your callout replacement documentation process.** When a nurse calls out and is replaced, is the replacement and their credentials added to the scheduling record that day? Or is it recorded only in payroll, leaving a schedule-vs-payroll discrepancy?
 
@@ -270,8 +270,6 @@ When a nurse's credentials change (renewal, expiration, or new certification), t
 [2] Centers for Medicare & Medicaid Services. Conditions of Participation: Staffing and staff responsibilities, 42 CFR §485.631(a)(5). [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631). Verified 2026-06-06.
 
 [3] Centers for Medicare & Medicaid Services. Conditions of Participation: Emergency services, 42 CFR §485.618(d). [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618). Verified 2026-06-06.
-
-[4] Rural Health Information Hub. Critical Access Hospitals topic guide. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/topics/critical-access-hospitals). Verified 2026-06-06.
 
 **Methodology note:** Regulatory claims reference the CMS Conditions of Participation for Critical Access Hospitals (42 CFR Part 485, Subpart F), verified against the current eCFR text on 2026-06-06. SimpleScheduleAI produces the staffing documentation; the hospital retains responsibility for staffing decisions and final compliance.
 
