@@ -11,7 +11,7 @@ metadata:
   title:
     default: SimpleScheduleAI
     template: '%s — SimpleScheduleAI'
-  description: 'Assisted nurse scheduling for Critical Access Hospitals in Texas. Keep your tools, keep control, reduce scheduling load.'
+  description: 'AI-native nurse scheduling service for Critical Access Hospitals in Texas. We build a compliant schedule each cycle; you approve.'
   robots:
     index: true
     follow: true

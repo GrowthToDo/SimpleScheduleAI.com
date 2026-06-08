@@ -8,7 +8,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Nurse Scheduling Software for Critical Access Hospitals',
   description:
-    'AI-powered nurse scheduling software built for 25-bed critical access hospitals. Reduce overtime, automate callout coverage, stay Texas-compliant. Free 60-day pilot.',
+    'AI-powered nurse scheduling software built for 25-bed critical access hospitals. Reduce overtime, automate callout coverage, stay Texas-compliant. Flat monthly pricing.',
 };
 
 const softwareSchema = {
@@ -21,7 +21,7 @@ const softwareSchema = {
   operatingSystem: 'Web',
   url: 'https://simplescheduleai.com/nurse-scheduling-software',
   description:
-    'AI-powered nurse scheduling managed service for critical access hospitals. Reduces overtime, automates callout coverage, and tracks Texas nursing compliance.',
+    'AI-native nurse scheduling service for critical access hospitals. Reduces overtime, automates callout coverage, and tracks Texas nursing compliance.',
   author: {
     '@type': 'Person',
     '@id': 'https://simplescheduleai.com/about/pradeep-pandey#person',
@@ -52,7 +52,7 @@ const productSchema = {
   '@type': 'Product',
   name: 'SimpleScheduleAI',
   description:
-    'AI-powered nurse scheduling managed service for critical access hospitals in Texas. Delivers compliant, post-ready nurse schedules with automated callout coverage and Texas overtime compliance.',
+    'AI-native nurse scheduling service for critical access hospitals in Texas. Delivers compliant, post-ready nurse schedules with automated callout coverage and Texas overtime compliance.',
   brand: {
     '@type': 'Brand',
     name: 'SimpleScheduleAI',
@@ -65,10 +65,12 @@ const productSchema = {
     name: 'SimpleScheduleAI',
   },
   offers: {
-    '@type': 'Offer',
-    price: '0',
+    '@type': 'AggregateOffer',
     priceCurrency: 'USD',
-    description: 'Free 60-day pilot for critical access hospitals in Texas. No IT setup. No commitment required.',
+    lowPrice: '1000',
+    highPrice: '1500',
+    offerCount: '2',
+    description: 'Flat monthly price per facility, by roster size. No IT setup.',
     availability: 'https://schema.org/InStock',
     seller: {
       '@type': 'Organization',
@@ -125,7 +127,7 @@ const faqSchema = {
       name: 'How much does nurse scheduling software cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Nurse scheduling software for hospitals typically costs $2 to $8 per nurse per month for SaaS platforms. SimpleScheduleAI offers a free 60-day pilot for critical access hospitals before any paid commitment, so you can evaluate real overtime reduction and time savings before deciding.',
+        text: 'Nurse scheduling software for hospitals typically costs $2 to $8 per nurse per month for SaaS platforms. SimpleScheduleAI is a flat monthly price per facility instead: $1,000 per month for up to 20 nurses and $1,500 for 21 to 40, with no per-nurse or setup fees.',
       },
     },
     {
@@ -141,7 +143,7 @@ const faqSchema = {
       name: 'Is there a nurse scheduling app for small hospitals?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, but most nurse scheduling apps are built for phone-based shift swapping, not for building a compliant hospital schedule. A small hospital needs a nurse scheduler that handles certifications, Texas overtime rules, and ranked callout coverage, not just a calendar. SimpleScheduleAI delivers that as a managed service, so the nurse manager reviews a finished schedule instead of operating an app.',
+        text: 'Yes, but most nurse scheduling apps are built for phone-based shift swapping, not for building a compliant hospital schedule. A small hospital needs a nurse scheduler that handles certifications, Texas overtime rules, and ranked callout coverage, not just a calendar. SimpleScheduleAI delivers that as an AI-native nurse scheduling service, so the nurse manager reviews a finished schedule instead of operating an app.',
       },
     },
   ],
@@ -156,8 +158,8 @@ const faqSchema = {
     title="Nurse Scheduling Software Built for Critical Access Hospitals"
     subtitle="AI-generated schedules, automated callout coverage, and Texas compliance, purpose-built for 25-bed hospitals with no IT department required."
     actions={[
-      { text: 'Apply for a Pilot Spot', href: '/pilot', variant: 'primary' },
-      { text: 'See How It Works', href: '/how-it-works', variant: 'secondary' },
+      { text: 'Get your first schedule', href: '/contact', variant: 'primary' },
+      { text: 'Book a call with our team', href: 'https://cal.com/gautham-8bdvdx/30min', variant: 'secondary' },
     ]}
   />
 
@@ -177,9 +179,9 @@ const faqSchema = {
         </p>
         <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
           Nurse scheduling software builds rosters that respect credentials, overtime limits, and CMS staffing rules,
-          replacing spreadsheets and phone trees. SimpleScheduleAI delivers it as a managed service for Texas Critical
-          Access Hospitals, so a single nurse manager gets the schedule built and the audit trail kept, not another
-          platform to configure.
+          replacing spreadsheets and phone trees. SimpleScheduleAI delivers it as an AI-native nurse scheduling service
+          for Texas Critical Access Hospitals, so a single nurse manager gets the schedule built and the audit trail
+          kept, not another platform to configure.
         </p>
       </div>
 
@@ -257,8 +259,9 @@ const faqSchema = {
       <h2>How Do Nurse Scheduling Options Compare for a Small Hospital?</h2>
       <p>
         A 25-bed hospital realistically has three ways to build the nurse schedule: a manual spreadsheet, a generic
-        employee scheduling app, or purpose-built nurse scheduling software run as a managed service. They differ most
-        on callout coverage and compliance, the two places a small hospital actually gets hurt.
+        employee scheduling app, or purpose-built nurse scheduling software run as an AI-native nurse scheduling
+        service. They differ most on callout coverage and compliance, the two places a small hospital actually gets
+        hurt.
       </p>
       <div class="not-prose my-8 overflow-x-auto">
         <table class="w-full border-collapse text-sm">
@@ -295,11 +298,11 @@ const faqSchema = {
 
       <h2>How SimpleScheduleAI Works as Nurse Scheduling Software</h2>
       <p>
-        SimpleScheduleAI is a managed service, not just a software subscription. Your nurse manager uploads the existing
-        roster via Excel, our team configures your shift rules and compliance requirements, and the system generates
-        three <a href="/ai-nurse-scheduling">AI-drafted schedule options</a> (balanced, fairness-optimized, and cost-optimized)
-        for your review and final approval. When a nurse calls out, the system instantly surfaces a replacement shortlist
-        from available, qualified staff. The full workflow, from roster upload to posted schedule, is on <a
+        SimpleScheduleAI is an AI-native nurse scheduling service, not just a software subscription. Your nurse manager
+        uploads the existing roster via Excel, our team configures your shift rules and compliance requirements, and the
+        system generates three <a href="/ai-nurse-scheduling">AI-drafted schedule options</a> (balanced, fairness-optimized,
+        and cost-optimized) for your review and final approval. When a nurse calls out, the system instantly surfaces a replacement
+        shortlist from available, qualified staff. The full workflow, from roster upload to posted schedule, is on <a
           href="/how-it-works">how it works</a
         >.
       </p>
@@ -366,13 +369,13 @@ const faqSchema = {
 
           <div>
             <div class="flex flex-wrap justify-between gap-x-3 mb-1.5 text-sm">
-              <span class="font-medium text-slate-900 dark:text-slate-100">Managed service (SimpleScheduleAI)</span>
+              <span class="font-medium text-slate-900 dark:text-slate-100">AI-native service (SimpleScheduleAI)</span>
               <span class="text-slate-600 dark:text-slate-400">1 to 2 hours/week</span>
             </div>
             <div
               class="flex h-8 rounded-md overflow-hidden border border-slate-300 dark:border-slate-700"
               role="img"
-              aria-label="Managed service time breakdown: 14% Review and approve, 86% time returned to clinical work"
+              aria-label="AI-native service time breakdown: 14% Review and approve, 86% time returned to clinical work"
             >
               <div class="bg-emerald-600 dark:bg-emerald-700" style="width: 14%;"></div>
               <div class="bg-slate-100 dark:bg-slate-800" style="width: 86%;"></div>
@@ -392,7 +395,8 @@ const faqSchema = {
 
         <p class="text-sm text-slate-600 dark:text-slate-400 italic mt-4">
           Where 8 to 12 nurse manager hours per week go on a manual scheduling cycle, and where the same work lands with
-          a managed service. At a $50/hr loaded rate, the gap is roughly $26,000 a year in returned leadership time.
+          an AI-native nurse scheduling service. At a $50/hr loaded rate, the gap is roughly $26,000 a year in returned
+          leadership time.
         </p>
       </div>
 
@@ -403,7 +407,7 @@ const faqSchema = {
         nothing, regardless of list price.
       </p>
 
-      <h2>Managed Service vs Software License: Which Fits a CAH?</h2>
+      <h2>AI-Native Scheduling Service vs Software License: Which Fits a CAH?</h2>
       <p>
         A software license hands the hospital a tool and expects someone on staff to run it: configure the rules,
         maintain the roster, troubleshoot, and own the output. That model assumes a scheduling administrator or an IT
@@ -411,11 +415,11 @@ const faqSchema = {
         back to the spreadsheet.
       </p>
       <p>
-        A managed service inverts that. The vendor configures the rules, maintains the roster, and delivers the finished
-        schedule each cycle. The nurse manager reviews and approves rather than builds. For a hospital with no HR team
-        and no IT department, the managed model removes the exact bottleneck that kills software adoption at small
-        sites. SimpleScheduleAI runs as a managed service for this reason: the constraint at a CAH is staff time to
-        operate software, not access to software.
+        An AI-native nurse scheduling service inverts that. The vendor configures the rules, maintains the roster, and
+        delivers the finished schedule each cycle. The nurse manager reviews and approves rather than builds. For a
+        hospital with no HR team and no IT department, the service model removes the exact bottleneck that kills
+        software adoption at small sites. SimpleScheduleAI runs as an AI-native nurse scheduling service for this
+        reason: the constraint at a CAH is staff time to operate software, not access to software.
       </p>
       <p>
         The practical test is simple. If the schedule still depends on one person staying late to make the software
@@ -483,24 +487,24 @@ const faqSchema = {
       {
         title: 'Is there a nurse scheduling app for small hospitals?',
         description:
-          'Most nurse scheduling apps are built for phone-based shift swapping, not for building a compliant hospital schedule. A small hospital needs a nurse scheduler that handles certifications, Texas overtime rules, and ranked callout coverage. SimpleScheduleAI delivers that as a managed service: the nurse manager reviews a finished schedule instead of operating an app.',
+          'Most nurse scheduling apps are built for phone-based shift swapping, not for building a compliant hospital schedule. A small hospital needs a nurse scheduler that handles certifications, Texas overtime rules, and ranked callout coverage. SimpleScheduleAI delivers that as an AI-native nurse scheduling service: the nurse manager reviews a finished schedule instead of operating an app.',
       },
     ]}
   />
 
   <CallToAction
     title="See Nurse Scheduling Software in Action"
-    subtitle="Free 60-day pilot for critical access hospitals in Texas. No IT setup. No commitment."
+    subtitle="AI-native nurse scheduling for critical access hospitals in Texas. Flat monthly pricing. No IT setup."
     actions={[
       {
         variant: 'primary',
-        text: 'Apply for a Pilot Spot',
-        href: '/pilot',
+        text: 'Get your first schedule',
+        href: '/contact',
       },
       {
         variant: 'secondary',
-        text: 'See How It Works',
-        href: '/how-it-works',
+        text: 'Book a call with our team',
+        href: 'https://cal.com/gautham-8bdvdx/30min',
       },
     ]}
   />

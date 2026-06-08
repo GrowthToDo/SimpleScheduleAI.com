@@ -11,11 +11,15 @@ export const headerData = {
       href: getPermalink('/how-it-works'),
     },
     {
-      text: 'Pilot',
+      text: 'Get Started',
       href: getPermalink('/pilot'),
     },
     {
-      text: 'Scheduling Cost Calculator',
+      text: 'Pricing',
+      href: getPermalink('/pricing'),
+    },
+    {
+      text: 'Scheduling Cost<br />Calculator',
       href: getPermalink('/roi'),
     },
     {
@@ -28,7 +32,7 @@ export const headerData = {
       ],
     },
   ],
-  actions: [{ text: 'Book a call with our team', href: 'https://cal.com/gautham-8bdvdx/30min' }],
+  actions: [{ text: 'Get your first schedule', href: getPermalink('/contact') }],
 };
 
 export const footerData = {
@@ -37,7 +41,7 @@ export const footerData = {
       title: 'Product',
       links: [
         { text: 'How It Works', href: getPermalink('/how-it-works') },
-        { text: 'The Pilot', href: getPermalink('/pilot') },
+        { text: 'Get Started', href: getPermalink('/pilot') },
         { text: 'Scheduling Cost Calculator', href: getPermalink('/roi') },
       ],
     },

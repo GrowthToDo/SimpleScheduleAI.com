@@ -36,10 +36,12 @@ const softwareAppSchema = {
   applicationCategory: 'HealthcareApplication',
   operatingSystem: 'Web',
   offers: {
-    '@type': 'Offer',
-    price: '0',
+    '@type': 'AggregateOffer',
     priceCurrency: 'USD',
-    description: 'Free 60-day pilot for Critical Access Hospitals',
+    lowPrice: '1000',
+    highPrice: '1500',
+    offerCount: '2',
+    description: 'Flat monthly price per facility, by roster size',
   },
   provider: { '@id': 'https://simplescheduleai.com/#organization' },
 };
@@ -96,29 +98,24 @@ const faqSchema = {
   <SchemaOrg slot="head" schema={[webSiteSchema, softwareAppSchema, faqSchema]} />
   <!-- Hero Section -->
   <Hero
-    announcement="3 CAH pilot spots open. Full managed service, free for 60 days."
-    tagline="For Nurse Managers and DONs in Texas"
     actions={[
       {
         variant: 'primary',
-        text: 'Apply for a Pilot Spot',
-        href: '/pilot',
+        text: 'Get your first schedule',
+        href: '/contact',
       },
       {
         variant: 'secondary',
-        text: 'See How It Works',
-        href: '/how-it-works',
+        text: 'Book a call with our team',
+        href: 'https://cal.com/gautham-8bdvdx/30min',
       },
     ]}
   >
-    <Fragment slot="title">
-      Stop Losing Nurses to Scheduling Stress: Nurse Scheduling for Critical Access Hospitals
-    </Fragment>
+    <Fragment slot="title"> Stop Losing Nurses to Scheduling Stress </Fragment>
 
     <Fragment slot="subtitle">
-      A managed scheduling service. You send a roster, you get back a finished, compliant schedule. Not software to run.
-      No more Sunday evenings rebuilding the roster. No more hunting for a replacement when someone calls out. You get a
-      compliant, post-ready schedule every cycle, callout coverage already handled.
+      An AI-native nurse scheduling service for Texas Critical Access Hospitals. Send a roster, get back a finished,
+      compliant schedule. No IT.
     </Fragment>
   </Hero>
 
@@ -129,15 +126,15 @@ const faqSchema = {
         <div class="flex flex-wrap items-center justify-center gap-2">
           <span
             class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-200 dark:border-blue-800/50 bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300"
-            >Free for 60 Days</span
+            >Callout Coverage Handled</span
           >
           <span
             class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-200 dark:border-blue-800/50 bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300"
-            >3 Hospitals Only</span
+            >Texas Critical Access Hospitals</span
           >
           <span
             class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-200 dark:border-blue-800/50 bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300"
-            >Full Managed Service</span
+            >AI-Native Scheduling Service</span
           >
           <span
             class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-200 dark:border-blue-800/50 bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-700 dark:text-blue-300"
@@ -216,14 +213,14 @@ const faqSchema = {
 
   <!-- Call to Action -->
   <CallToAction
-    title="A compliant, post-ready schedule every cycle.<br/>Free for 60 days."
-    subtitle="3 pilot spots open. No IT setup. No strings attached."
-    tagline="Limited availability"
+    title="A compliant, post-ready schedule every cycle.<br/>Flat monthly pricing."
+    subtitle="$1,000 to $1,500 a month, by roster size. No IT setup. No per-nurse fees."
+    tagline="Simple pricing"
     actions={[
       {
         variant: 'primary',
-        text: 'Apply for a Pilot Spot',
-        href: '/pilot',
+        text: 'Get your first schedule',
+        href: '/contact',
       },
     ]}
   >
@@ -271,22 +268,22 @@ const faqSchema = {
       </ul>
 
       <p class="mt-6 text-pretty text-base leading-relaxed text-gray-400">
-        After 60 days, if your team did not save real scheduling time, we part ways. No invoice. No contract. The pilot
-        is entirely at our cost.
+        Month to month, flat by roster size. No long-term contract. If your team does not save real scheduling time, you
+        walk away.
       </p>
 
       <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
         <span
           class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-800/50 bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-300"
-          >Free for 60 Days</span
+          >Flat Monthly Price</span
         >
         <span
           class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-800/50 bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-300"
-          >3 Hospitals Only</span
+          >No Per-Nurse Fees</span
         >
         <span
           class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-800/50 bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-300"
-          >Full Managed Service</span
+          >AI-Native Scheduling Service</span
         >
         <span
           class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-800/50 bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-300"

@@ -8,7 +8,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'AI Nurse Scheduling: How It Works and How to Trust It',
   description:
-    'AI nurse scheduling explained for small hospitals: what the system computes, what it cannot judge, how to audit a draft before posting, and why a managed service beats configure-it-yourself tools.',
+    'AI nurse scheduling explained for small hospitals: what the system computes, what it cannot judge, how to audit a draft before posting, and why an AI-native nurse scheduling service beats configure-it-yourself tools.',
 };
 
 const softwareSchema = {
@@ -21,7 +21,7 @@ const softwareSchema = {
   operatingSystem: 'Web',
   url: 'https://simplescheduleai.com/ai-nurse-scheduling',
   description:
-    'AI nurse scheduling delivered as a managed service for critical access hospitals. Constraint-based schedule generation, fairness optimization, and ranked callout coverage with nurse manager approval.',
+    'AI nurse scheduling delivered as an AI-native service for critical access hospitals. Constraint-based schedule generation, fairness optimization, and ranked callout coverage with nurse manager approval.',
   author: {
     '@type': 'Person',
     '@id': 'https://simplescheduleai.com/about/pradeep-pandey#person',
@@ -72,7 +72,7 @@ const faqSchema = {
       name: 'How is AI nurse scheduling different from configure-it-yourself scheduling software?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Configure-it-yourself software hands the hospital an engine and expects staff to set up rules, maintain the roster, and operate it. AI nurse scheduling delivered as a managed service does the setup and the schedule generation for the hospital. For a critical access hospital with no IT department, the managed model removes the operating burden that stops self-serve tools from being used.',
+        text: 'Configure-it-yourself software hands the hospital an engine and expects staff to set up rules, maintain the roster, and operate it. AI nurse scheduling delivered as an AI-native service does the setup and the schedule generation for the hospital. For a critical access hospital with no IT department, the service model removes the operating burden that stops self-serve tools from being used.',
       },
     },
     {
@@ -117,8 +117,8 @@ const breadcrumbSchema = {
     title="AI Nurse Scheduling: How It Works, and How to Trust It"
     subtitle="What an AI scheduling system actually computes, what it cannot judge, and how a nurse manager at a 25-bed hospital keeps final control."
     actions={[
-      { text: 'Apply for a Pilot Spot', href: '/pilot', variant: 'primary' },
-      { text: 'See How It Works', href: '/how-it-works', variant: 'secondary' },
+      { text: 'Get your first schedule', href: '/contact', variant: 'primary' },
+      { text: 'Book a call with our team', href: 'https://cal.com/gautham-8bdvdx/30min', variant: 'secondary' },
     ]}
   />
 
@@ -138,8 +138,9 @@ const breadcrumbSchema = {
         </p>
         <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
           AI nurse scheduling uses constraint-solving algorithms to build draft schedules and rank callout replacements
-          for a nurse manager to approve. SimpleScheduleAI delivers it as a managed service for Texas Critical Access
-          Hospitals, so a single nurse manager with no IT department gets the schedule built, not a tool to operate.
+          for a nurse manager to approve. SimpleScheduleAI delivers it as an AI-native nurse scheduling service for
+          Texas Critical Access Hospitals, so a single nurse manager with no IT department gets the schedule built, not
+          a tool to operate.
         </p>
       </div>
 
@@ -159,7 +160,7 @@ const breadcrumbSchema = {
       </p>
       <p>
         This page is the trust and mechanics reference for that engine. It covers what the AI computes, what it
-        deliberately does not do, how to audit a draft before posting it, and how the managed model differs from
+        deliberately does not do, how to audit a draft before posting it, and how the service model differs from
         configure-it-yourself tools. The market for this category is growing quickly: US AI nurse scheduling software is
         projected to grow at a 28.4% compound annual rate through 2033 (<a
           href="https://www.grandviewresearch.com/industry-analysis/us-artificial-intelligence-ai-nurse-scheduling-software-market-report"
@@ -327,8 +328,8 @@ const breadcrumbSchema = {
       <p>
         Most AI scheduling products are sold as software the hospital configures and operates. A small hospital with no
         IT department and a nurse manager who also carries patients cannot operate them, so the engine sits unused. The
-        managed model delivers the schedule instead of delivering a tool, which is the difference that decides adoption
-        at a critical access hospital.
+        service delivers the schedule instead of a tool, which is the difference that decides adoption at a critical
+        access hospital.
       </p>
       <div class="not-prose my-8 overflow-x-auto">
         <table class="w-full border-collapse text-sm">
@@ -365,16 +366,18 @@ const breadcrumbSchema = {
       <p>
         The honest read: enterprise platforms are the right call for multi-site health systems with IT and scheduling
         staff. Configure-it-yourself AI products fit hospitals with a dedicated scheduler who has time to run them.
-        Neither describes a 25-bed critical access hospital, which is the gap a managed service is built for. See the
-        full buyer view in <a href="/critical-access-hospital-scheduling">critical access hospital scheduling</a>.
+        Neither describes a 25-bed critical access hospital, which is the gap an AI-native nurse scheduling service is
+        built for. See the full buyer view in <a href="/critical-access-hospital-scheduling"
+          >critical access hospital scheduling</a
+        >.
       </p>
 
-      <h2>How Does SimpleScheduleAI Deliver AI Nurse Scheduling as a Managed Service?</h2>
+      <h2>How Does SimpleScheduleAI Deliver AI Nurse Scheduling as a Service?</h2>
       <p>
-        SimpleScheduleAI is a managed AI scheduling service, not a software license. Your nurse manager uploads the
-        existing roster via Excel. Our team configures shift rules, Texas overtime constraints, and fairness weights.
-        You receive three AI-drafted schedule options each cycle to review and approve. When a nurse calls out, the
-        system produces a ranked replacement shortlist in seconds, and the manager makes the call.
+        SimpleScheduleAI is an AI-native nurse scheduling service, not a software license. Your nurse manager uploads
+        the existing roster via Excel. Our team configures shift rules, Texas overtime constraints, and fairness
+        weights. You receive three AI-drafted schedule options each cycle to review and approve. When a nurse calls out,
+        the system produces a ranked replacement shortlist in seconds, and the manager makes the call.
       </p>
       <p>
         The audit trail logs every AI suggestion and every human decision, which is the documentation <a
@@ -387,8 +390,8 @@ const breadcrumbSchema = {
       </p>
       <p>
         <strong>Not right for:</strong> Hospitals over 50 beds or those needing deep EHR integration. SimpleScheduleAI is
-        purpose-built for the critical access context: 25 or fewer beds, no IT department, Texas compliance, and a free 60-day
-        pilot so a hospital can verify the overtime and time savings before any commitment.
+        purpose-built for the critical access context: 25 or fewer beds, no IT department, Texas compliance, and flat monthly
+        pricing so a hospital can verify the overtime and time savings before committing long term.
       </p>
 
       <h2>AI Nurse Scheduling Guides</h2>
@@ -434,7 +437,7 @@ const breadcrumbSchema = {
       {
         title: 'How is AI nurse scheduling different from configure-it-yourself software?',
         description:
-          'Configure-it-yourself software hands the hospital an engine to set up and operate. A managed AI service does the setup and generation for the hospital. For a critical access hospital with no IT department, the managed model removes the operating burden that stops self-serve tools from being used.',
+          'Configure-it-yourself software hands the hospital an engine to set up and operate. An AI-native nurse scheduling service does the setup and generation for the hospital. For a critical access hospital with no IT department, the service model removes the operating burden that stops self-serve tools from being used.',
       },
       {
         title: 'Is AI nurse scheduling compliant with Texas nursing rules?',
@@ -446,17 +449,17 @@ const breadcrumbSchema = {
 
   <CallToAction
     title="See AI Nurse Scheduling Run at Your Hospital"
-    subtitle="Free 60-day managed pilot for critical access hospitals in Texas. No IT setup. No commitment."
+    subtitle="AI-native nurse scheduling for critical access hospitals in Texas. Flat monthly pricing. No IT setup."
     actions={[
       {
         variant: 'primary',
-        text: 'Apply for a Pilot Spot',
-        href: '/pilot',
+        text: 'Get your first schedule',
+        href: '/contact',
       },
       {
         variant: 'secondary',
-        text: 'See How It Works',
-        href: '/how-it-works',
+        text: 'Book a call with our team',
+        href: 'https://cal.com/gautham-8bdvdx/30min',
       },
     ]}
   />

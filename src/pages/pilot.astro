@@ -17,16 +17,17 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'SimpleScheduleAI Nurse Scheduling Pilot',
   description:
-    'Managed nurse scheduling service for Critical Access Hospitals in Texas. 60-day free pilot includes AI-generated schedules, callout coverage, and Texas compliance tracking.',
+    'AI-native nurse scheduling service for Critical Access Hospitals in Texas. A short pilot on your own roster, then a flat monthly price by roster size.',
   provider: { '@id': 'https://simplescheduleai.com/#organization' },
   serviceType: 'Nurse Scheduling',
   areaServed: { '@type': 'State', name: 'Texas' },
   offers: {
-    '@type': 'Offer',
-    price: '0',
+    '@type': 'AggregateOffer',
     priceCurrency: 'USD',
-    description: 'Free 60-day pilot for Critical Access Hospitals in Texas',
-    availability: 'https://schema.org/LimitedAvailability',
+    lowPrice: '1000',
+    highPrice: '1500',
+    offerCount: '2',
+    description: 'Flat monthly price per facility, by roster size',
   },
 };
 
@@ -45,26 +46,26 @@ const pilotFaqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What does the 60-day pilot include?',
+      name: 'What does the pilot include?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The 60-day pilot is a fully managed service at no cost. It includes complete onboarding support, AI-generated nurse schedules for every scheduling cycle, callout replacement shortlists, Texas compliance tracking, and a dedicated account contact throughout the pilot period.',
+        text: 'The pilot runs our AI-native nurse scheduling service on your own roster. It includes complete onboarding support, AI-generated nurse schedules for every scheduling cycle, callout replacement shortlists, Texas compliance tracking, and a dedicated account contact.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What happens after the pilot ends?',
+      name: 'What happens after the pilot?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "After the 60-day pilot, you can continue as a paid managed service customer. We review the pilot results together, including time saved, overtime reductions, and any compliance improvements, before discussing ongoing pricing tailored to your hospital's size and needs.",
+        text: 'You continue on a flat monthly plan set by roster size: $1,000 per month for up to 20 nurses, $1,500 for 21 to 40. We review the results together (time saved, overtime, compliance) before you decide.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How many pilot spots are available?',
+      name: 'How quickly can we start?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We currently have 3 pilot spots open for critical access hospitals in Texas. Spots are limited to ensure each pilot hospital receives dedicated onboarding support and hands-on account management during the trial period.',
+        text: 'Onboarding takes 3 to 5 business days. We onboard a limited number of hospitals at a time so each one gets hands-on setup and a first schedule within two weeks.',
       },
     },
     {
@@ -77,10 +78,10 @@ const pilotFaqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Is there any cost during the pilot?',
+      name: 'What does the service cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. The 60-day pilot is completely free. There are no setup fees, no subscription charges, and no commitment required. The pilot exists so you can evaluate real results, including overtime reduction, time saved, and coverage improvements, before making any financial decision.',
+        text: 'A flat monthly price per facility by roster size: $1,000 per month for up to 20 nurses, $1,500 for 21 to 40. No per-nurse fees, no setup fees, and no long-term contract to start.',
       },
     },
   ],
@@ -91,11 +92,11 @@ const pilotFaqSchema = {
   <SchemaOrg slot="head" schema={[serviceSchema, pilotBreadcrumbSchema, pilotFaqSchema]} />
   <!-- Dark Hero -->
   <DarkHero
-    badge="3 spots open. Free for 60 days."
-    title="The Pilot Program: a free 60-day managed schedule for your Critical Access Hospital"
-    subtitle="See what scheduling looks like when you are not building it from scratch. You keep full control. Free for 60 days. No IT setup. No obligation."
+    badge="Flat monthly price. No IT setup."
+    title="Start with a pilot on your own roster"
+    subtitle="See what scheduling looks like when you are not building it from scratch. You keep full control. No IT setup. Flat monthly pricing once you continue."
     actions={[
-      { text: 'Get a Free Schedule Review', href: '/contact', variant: 'primary' },
+      { text: 'Get your first schedule', href: '/contact', variant: 'primary' },
       { text: 'Book a call with our team', href: ctaLink, variant: 'secondary' },
     ]}
   />
@@ -207,7 +208,7 @@ const pilotFaqSchema = {
       <div class="mx-auto max-w-3xl text-center">
         <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">How it works</p>
         <h2 class="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
-          60 days. Three steps. Zero surprises.
+          Onboarding in days. Three steps. Zero surprises.
         </h2>
       </div>
 
@@ -247,7 +248,7 @@ const pilotFaqSchema = {
             <h3 class="text-xl font-semibold">Strategic review: Day 60</h3>
             <p class="mt-3 text-muted">
               We sit down for a strategic review: what changed, what the numbers show, and where you want to take it. If
-              it is working and you want to continue, we build a plan together. The pilot itself costs you nothing.
+              it is working and you want to continue, you move to a flat monthly plan by roster size.
             </p>
           </div>
         </div>
@@ -286,17 +287,20 @@ const pilotFaqSchema = {
         </div>
 
         <div class="rounded-2xl border border-gray-700 bg-slate-900 dark:bg-black p-8">
-          <h2 class="text-2xl font-bold text-white">Cost and obligation</h2>
-          <p class="mt-4 text-gray-300">There is no cost for the pilot. Free for 60 days.</p>
+          <h2 class="text-2xl font-bold text-white">Pricing and obligation</h2>
           <p class="mt-4 text-gray-300">
-            If it does not deliver value, you walk away. No obligation, no pressure to continue.
+            Flat monthly price by roster size: $1,000 up to 20 nurses, $1,500 for 21 to 40.
           </p>
           <p class="mt-4 text-gray-300">
-            If it helps, we discuss next steps calmly and clearly. You will know within 6 weeks whether this is right
-            for your unit.
+            No per-nurse fees, no setup fees, and no long-term contract to start. If it does not deliver value, you walk
+            away.
+          </p>
+          <p class="mt-4 text-gray-300">
+            See full pricing on the <a href="/pricing" class="text-blue-400 underline">pricing page</a>. You will know
+            within a few weeks whether this is right for your unit.
           </p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="/contact" class="btn btn-primary sm:mb-0"> Get a Free Schedule Review </a>
+            <a href="/pricing" class="btn btn-primary sm:mb-0"> See pricing </a>
             <a href={ctaLink} class="btn text-white border-white/30 hover:bg-white/10 hover:border-white">
               Book a call with our team
             </a>
@@ -304,11 +308,11 @@ const pilotFaqSchema = {
           <div class="mt-6 flex flex-wrap gap-2">
             <span
               class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-800/50 bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-300"
-              >Free for 60 Days</span
+              >Flat Monthly Price</span
             >
             <span
               class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-800/50 bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-300"
-              >3 Hospitals Only</span
+              >No Per-Nurse Fees</span
             >
             <span
               class="inline-flex items-center gap-x-1.5 rounded-full border border-blue-800/50 bg-blue-900/30 px-3 py-1.5 text-xs font-medium text-blue-300"

@@ -262,7 +262,7 @@
           href="/contact"
           class="inline-flex items-center rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-secondary"
         >
-          Apply for a Pilot Spot
+          Get your first schedule
         </a>
       </div>
     </div>

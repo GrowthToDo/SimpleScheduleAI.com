@@ -38,10 +38,12 @@ const softwareAppSchema = {
     'Audit trail logging',
   ],
   offers: {
-    '@type': 'Offer',
-    price: '0',
+    '@type': 'AggregateOffer',
     priceCurrency: 'USD',
-    description: 'Free 60-day pilot for Critical Access Hospitals',
+    lowPrice: '1000',
+    highPrice: '1500',
+    offerCount: '2',
+    description: 'Flat monthly price per facility, by roster size',
   },
 };
 
@@ -63,7 +65,7 @@ const howItWorksBreadcrumbSchema = {
     title="How it Works"
     subtitle="Assisted scheduling that fits into your current process. You keep control and final approval. Your scheduling workload drops from 8 to 12 hours a week to 1 to 2."
     actions={[
-      { text: 'Apply for a Pilot Spot', href: '/pilot', variant: 'primary' },
+      { text: 'Get your first schedule', href: '/contact', variant: 'primary' },
       { text: 'Book a call with our team', href: 'https://cal.com/gautham-8bdvdx/30min', variant: 'secondary' },
     ]}
   />
@@ -214,10 +216,10 @@ const howItWorksBreadcrumbSchema = {
   <!-- CTA -->
   <CallToAction
     title="Ready to test this in your hospital?"
-    subtitle="See if assisted scheduling reduces the workload on your team. Free for 60 days. No obligation."
-    tagline="3 spots open"
+    subtitle="See if assisted scheduling reduces the workload on your team. Flat monthly pricing by roster size."
+    tagline="Simple pricing"
     actions={[
-      { text: 'Apply for a Pilot Spot', href: '/pilot', variant: 'primary' },
+      { text: 'Get your first schedule', href: '/contact', variant: 'primary' },
       { text: 'Book a call with our team', href: 'https://cal.com/gautham-8bdvdx/30min', variant: 'secondary' },
     ]}
   />
