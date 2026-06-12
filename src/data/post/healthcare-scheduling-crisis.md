@@ -80,13 +80,13 @@ For a deeper look at the specific compliance and coverage requirements driving t
   </div>
   <div class="flex items-center gap-3">
     <span class="text-xs text-slate-600 dark:text-slate-400 w-44 shrink-0">PRN reconciliation</span>
-    <div class="bg-violet-500 dark:bg-violet-500 rounded h-6 flex items-center px-3" style="width:50%">
+    <div class="bg-[#1A2332] dark:bg-[#1A2332] rounded h-6 flex items-center px-3" style="width:50%">
       <span class="text-xs font-semibold text-white whitespace-nowrap">1-2 hrs/week</span>
     </div>
   </div>
   <div class="flex items-center gap-3">
     <span class="text-xs text-slate-600 dark:text-slate-400 w-44 shrink-0">Edits &amp; conflict resolution</span>
-    <div class="bg-purple-400 dark:bg-purple-400 rounded h-6 flex items-center px-3" style="width:50%">
+    <div class="bg-[#7BAF9B] dark:bg-[#7BAF9B] rounded h-6 flex items-center px-3" style="width:50%">
       <span class="text-xs font-semibold text-white whitespace-nowrap">1-2 hrs/week</span>
     </div>
   </div>
@@ -277,10 +277,10 @@ surface this during onboarding.
     <p class="text-3xl font-extrabold text-orange-700 dark:text-orange-400">§485</p>
     <p class="text-xs text-orange-600 dark:text-orange-500 mt-1">CMS compliance deficiency risk</p>
   </div>
-  <div class="rounded-lg bg-purple-50 dark:bg-purple-950 border border-purple-200 dark:border-purple-800 p-4 text-center">
-    <p class="font-bold text-purple-800 dark:text-purple-300 text-xs mb-1">Nurse Burnout</p>
-    <p class="text-3xl font-extrabold text-purple-700 dark:text-purple-400">$52K</p>
-    <p class="text-xs text-purple-600 dark:text-purple-500 mt-1">avg cost per RN departure (NSI 2024)</p>
+  <div class="rounded-lg bg-primary/5 dark:bg-[#1A2332] border border-primary/25 dark:border-[#1A2332] p-4 text-center">
+    <p class="font-bold text-primary dark:text-[#7BAF9B] text-xs mb-1">Nurse Burnout</p>
+    <p class="text-3xl font-extrabold text-primary dark:text-[#7BAF9B]">$52K</p>
+    <p class="text-xs text-primary dark:text-primary mt-1">avg cost per RN departure (NSI 2024)</p>
   </div>
   <div class="rounded-lg bg-rose-50 dark:bg-rose-950 border border-rose-200 dark:border-rose-800 p-4 text-center">
     <p class="font-bold text-rose-800 dark:text-rose-300 text-xs mb-1">PRN Overhead</p>

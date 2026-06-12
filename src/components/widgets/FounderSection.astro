@@ -33,7 +33,7 @@ const founders = [
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
   <div class="mx-auto max-w-3xl text-center mb-14">
-    <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">The team</p>
+    <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-primary">The team</p>
     <Headline title={title} subtitle={subtitle} classes={{ title: 'text-3xl sm:text-4xl', subtitle: 'text-lg' }} />
   </div>
 
@@ -44,7 +44,7 @@ const founders = [
           <img
             src={founder.imageSrc}
             alt={founder.imageAlt}
-            class="h-24 w-24 rounded-full object-cover ring-4 ring-blue-100 dark:ring-blue-900"
+            class="h-24 w-24 rounded-full object-cover ring-2 ring-primary/20"
             loading="lazy"
             decoding="async"
           />
@@ -64,10 +64,8 @@ const founders = [
     }
   </div>
 
-  <blockquote
-    class="mx-auto mt-16 max-w-2xl rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/30 px-8 py-6 text-center"
-  >
-    <p class="text-base italic leading-relaxed text-gray-700 dark:text-gray-300">
+  <blockquote class="mx-auto mt-16 max-w-2xl rounded-xl border border-hairline bg-white px-8 py-6 text-center">
+    <p class="text-base italic leading-relaxed text-default/80">
       "I spend my Sunday evenings rebuilding the schedule because someone called out on Friday. Every week. I just want
       to hand it off and know it is right."
     </p>

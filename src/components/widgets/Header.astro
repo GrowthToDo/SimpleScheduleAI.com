@@ -50,7 +50,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky, dark: isDark },
-    'top-0 z-40 flex-none mx-auto w-full border-b border-gray-200/50 dark:border-gray-800/50 transition-[opacity] ease-in-out bg-white/95 dark:bg-slate-900/95 backdrop-blur-md',
+    'top-0 z-40 flex-none mx-auto w-full border-b border-hairline transition-[opacity] ease-in-out bg-page',
   ]}
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
@@ -92,18 +92,18 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                 <>
                   <button
                     type="button"
-                    class="text-gray-900 dark:text-gray-200 hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap"
+                    class="text-default/70 hover:text-default transition-colors duration-200 px-3.5 py-3 flex items-center whitespace-nowrap text-[0.95rem]"
                   >
                     {text}{' '}
                     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   </button>
-                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                  <ul class="dropdown-menu rounded-lg md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white md:min-w-[210px] md:border md:border-hairline md:shadow-[0_12px_32px_-12px_rgb(26_35_50/0.25)]">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li>
                         <a
                           class:list={[
-                            'text-gray-900 dark:text-gray-200 first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
-                            { 'aw-link-active': href2 === currentPath },
+                            'text-default/80 first:rounded-t-lg last:rounded-b-lg md:hover:bg-ink/5 hover:text-default py-2.5 px-5 block whitespace-no-wrap transition-colors duration-150',
+                            { 'text-default font-semibold': href2 === currentPath },
                           ]}
                           href={href2}
                         >
@@ -116,8 +116,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
               ) : (
                 <a
                   class:list={[
-                    'text-gray-900 dark:text-gray-200 hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
-                    { 'aw-link-active': href === currentPath },
+                    'text-default/70 hover:text-default transition-colors duration-200 px-3.5 py-3 flex items-center whitespace-nowrap text-[0.95rem]',
+                    { 'text-default font-semibold': href === currentPath },
                   ]}
                   href={href}
                 >

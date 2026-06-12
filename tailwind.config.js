@@ -12,6 +12,8 @@ export default {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        ink: '#1A2332',
+        ivory: '#FAF7F2',
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
@@ -20,12 +22,12 @@ export default {
       },
 
       animation: {
-        fade: 'fadeInUp 1s both',
+        fade: 'fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both',
       },
 
       keyframes: {
         fadeInUp: {
-          '0%': { opacity: 0, transform: 'translateY(2rem)' },
+          '0%': { opacity: 0, transform: 'translateY(1.25rem)' },
           '100%': { opacity: 1, transform: 'translateY(0)' },
         },
       },

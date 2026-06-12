@@ -123,8 +123,8 @@ The failure mode at most small hospitals is that the process lives in the nurse 
       <p class="text-xs text-slate-700 dark:text-slate-300">4 to 6 cross-credentialed per-diem nurses on a known weekly availability cadence.</p>
     </div>
   </div>
-  <div class="rounded-lg border-2 border-purple-300 dark:border-purple-700 bg-white dark:bg-slate-800 overflow-hidden">
-    <div class="bg-purple-700 px-4 py-3">
+  <div class="rounded-lg border-2 border-primary/30 dark:border-[#1A2332] bg-white dark:bg-slate-800 overflow-hidden">
+    <div class="bg-[#1A2332] px-4 py-3">
       <p class="text-xs font-bold text-white">4. Documentation</p>
     </div>
     <div class="px-4 py-3">
@@ -155,8 +155,8 @@ The Conditions of Participation for CAHs require nursing services to be furnishe
 
 The practical documentation set for one callout is short but must be consistent. Captured at the time, this is a 5-minute log. Reconstructed weeks later before a survey, it is hours of guesswork and a compliance exposure. The goal is a callout process that produces this record as a byproduct, not as a separate chore.
 
-<div class="not-prose my-8 rounded-xl border-2 border-purple-300 dark:border-purple-700 bg-white dark:bg-slate-800 overflow-hidden">
-  <div class="bg-purple-700 px-5 py-3">
+<div class="not-prose my-8 rounded-xl border-2 border-primary/30 dark:border-[#1A2332] bg-white dark:bg-slate-800 overflow-hidden">
+  <div class="bg-[#1A2332] px-5 py-3">
     <p class="text-sm font-bold text-white">CMS §485.635 Callout Documentation: 5-Item Log</p>
   </div>
   <div class="px-5 py-4">

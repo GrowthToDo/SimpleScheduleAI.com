@@ -117,7 +117,7 @@ Auditing an AI-generated schedule before posting requires checking three things:
     <p class="px-4 pb-3 text-xs font-semibold text-blue-600 dark:text-blue-400">Must pass before review</p>
   </div>
   <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
-    <div class="bg-violet-600 dark:bg-violet-700 px-4 py-3">
+    <div class="bg-[#1A2332] dark:bg-[#1A2332] px-4 py-3">
       <p class="font-bold text-white text-sm">Step 2: Fairness Check</p>
     </div>
     <ul class="px-4 py-3 space-y-2 text-xs text-slate-700 dark:text-slate-300">
@@ -125,7 +125,7 @@ Auditing an AI-generated schedule before posting requires checking three things:
       <li>Holiday burden vs. prior cycles</li>
       <li>Night shift distribution</li>
     </ul>
-    <p class="px-4 pb-3 text-xs font-semibold text-violet-600 dark:text-violet-400">Adjust before posting if uneven</p>
+    <p class="px-4 pb-3 text-xs font-semibold text-primary dark:text-[#7BAF9B]">Adjust before posting if uneven</p>
   </div>
   <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
     <div class="bg-teal-700 dark:bg-teal-800 px-4 py-3">

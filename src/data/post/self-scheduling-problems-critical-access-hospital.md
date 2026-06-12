@@ -58,7 +58,7 @@ A 25-bed hospital running 24/7 nursing coverage needs a predictable distribution
     <p class="px-3 py-3 text-xs text-slate-600 dark:text-slate-400">Fast movers claim all day shifts within the first hour</p>
   </div>
   <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
-    <div class="bg-violet-600 dark:bg-violet-700 px-3 py-2">
+    <div class="bg-[#1A2332] dark:bg-[#1A2332] px-3 py-2">
       <p class="font-bold text-white text-xs">2. Coverage Gaps Appear</p>
     </div>
     <p class="px-3 py-3 text-xs text-slate-600 dark:text-slate-400">Nights, weekends, and holidays sit empty for days</p>

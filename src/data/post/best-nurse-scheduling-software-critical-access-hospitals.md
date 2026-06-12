@@ -1,13 +1,13 @@
 ---
 draft: false
 publishDate: 2026-06-06T00:00:00Z
-updateDate: 2026-06-06T00:00:00Z
+updateDate: 2026-06-12T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Critical Access Hospitals (2026)'
 excerpt: >
   The best nurse scheduling software for a Critical Access Hospital is the one a single dual-role
   nurse manager can run with no IT department, while producing CMS §485.635 staffing documentation
-  and covering callouts without a float pool. This guide compares eight platforms on that exact test.
+  and covering callouts without a float pool. This guide compares ten platforms on that exact test.
 image: https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 tags:
@@ -21,7 +21,7 @@ metadata:
 
 Your CMS surveyor expects a clean staffing record that proves every shift met [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). Your reality is a nurse manager who builds that record between her own clinical shifts, on a spreadsheet, with no IT department behind her and no float pool to pull from when someone calls in sick. Most scheduling software is sold to the surveyor's fantasy and handed to the manager's reality.
 
-This guide compares eight platforms on the only test that matters for a Critical Access Hospital: can one dual-role nurse manager run it without IT help, will it produce the documentation a CMS survey asks for, and does it cover a callout when there is no second nurse to spare. If you want the broader market split by hospital size, the [2026 best-of guide](/blog/best-nurse-scheduling-software-2026) covers that. If you want the math for a 25-bed roster, the [25-bed hospital guide](/blog/best-scheduling-software-25-bed-hospital) covers that. If your deciding constraint is having no IT department, see [nurse scheduling at a rural hospital with no IT department](/blog/nurse-scheduling-no-it-department-rural-hospital). This page stays inside the CAH.
+This guide compares ten platforms on the only test that matters for a Critical Access Hospital: can one dual-role nurse manager run it without IT help, will it produce the documentation a CMS survey asks for, and does it cover a callout when there is no second nurse to spare. If you want the broader market split by hospital size, the [2026 best-of guide](/blog/best-nurse-scheduling-software-2026) covers that. If you want the math for a 25-bed roster, the [25-bed hospital guide](/blog/best-scheduling-software-25-bed-hospital) covers that. If your deciding constraint is having no IT department, see [nurse scheduling at a rural hospital with no IT department](/blog/nurse-scheduling-no-it-department-rural-hospital). This page stays inside the CAH.
 
 ## Key Takeaways
 
@@ -29,12 +29,12 @@ This guide compares eight platforms on the only test that matters for a Critical
 - The CAH nurse manager is usually a dual-role manager who also takes clinical shifts. A tool that needs 8-12 hours a week of administration, per the [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com), is not viable no matter how good the feature list looks.
 - Most enterprise systems in this guide (symplr Smart Square, QGenda, UKG) are positioned for large health systems with dedicated IT and HRIS staff. A CAH has neither, which makes implementation burden the deciding variable, not feature count.
 - With no float pool, callout coverage is the highest-stakes daily task. A single callout can drop a unit below its §485.635 staffing plan. A ranked, compliance-aware replacement shortlist matters more than any analytics dashboard.
-- SimpleScheduleAI is a managed service built for this exact context: we build the schedule, you approve it. Of the eight options, it is the only one that removes the build burden from the manager entirely. The others are rated honestly for where they actually fit.
+- SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. Of the ten options, it is the only one that removes the build burden from the manager entirely. The others are rated honestly for where they actually fit.
 
 ## Table of Contents
 
 - [How to Evaluate Nurse Scheduling Software for a Critical Access Hospital?](#how-to-evaluate-nurse-scheduling-software-for-a-critical-access-hospital)
-- [How Do All 8 Tools Compare?](#how-do-all-8-tools-compare)
+- [How Do All 10 Tools Compare?](#how-do-all-10-tools-compare)
 - [1. SimpleScheduleAI](#1-simplescheduleai)
 - [2. Aladtec](#2-aladtec)
 - [3. ShiftWizard](#3-shiftwizard)
@@ -43,12 +43,14 @@ This guide compares eight platforms on the only test that matters for a Critical
 - [6. QGenda](#6-qgenda)
 - [7. UKG (formerly Kronos)](#7-ukg-formerly-kronos)
 - [8. ScheduleAnywhere](#8-scheduleanywhere)
+- [9. M7 Health](#9-m7-health)
+- [10. CronShift](#10-cronshift)
 - [Which Is Right for Your Hospital?](#which-is-right-for-your-hospital)
 - [How Does SimpleScheduleAI Fit for a Critical Access Hospital?](#how-does-simplescheduleai-fit-for-a-critical-access-hospital)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-For a Critical Access Hospital, the best [nurse scheduling software](/nurse-scheduling-software) is the one your nurse manager can run alone, that writes the [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) staffing record for you, and that covers a callout when there is no float pool behind you. That is a different test from the one a 200-bed system runs, which is why most of the platforms below are built for someone else. We dig into the CAH-specific version of this decision here and in our [critical access hospital scheduling guide](/critical-access-hospital-scheduling).
+For a Critical Access Hospital, the best [nurse scheduling software](/nurse-scheduling-software) is the one your nurse manager can run alone, that writes the [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) staffing record for you, and that covers a callout when there is no float pool behind you. That is a different test from the one a 200-bed system runs, which is why most of the platforms below are built for someone else. SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. We dig into the CAH-specific version of this decision here and in our [critical access hospital scheduling guide](/critical-access-hospital-scheduling).
 
 ## How to Evaluate Nurse Scheduling Software for a Critical Access Hospital?
 
@@ -62,9 +64,9 @@ The constraints below decide adoption at a CAH long before any feature does.
 
 **Does it cover a callout without a float pool?** A large hospital absorbs a callout by pulling from a float pool or a per diem bench. A CAH with 15 to 25 nurses on the roster usually has neither. When a nurse calls out, the manager needs to know, in minutes, which qualified nurses are available, who is not already in overtime, and who keeps the schedule fair. A ranked replacement shortlist that respects FLSA overtime thresholds and credential requirements is the single most valuable daily feature for a CAH. Rural workforce shortages, documented by [HRSA](https://www.hrsa.gov), make that gap harder to fill the more remote the facility is.
 
-## How Do All 8 Tools Compare?
+## How Do All 10 Tools Compare?
 
-Here is how all 8 tools compare on CAH fit before we go deeper. This guide also covers the enterprise systems a CAH is most often pitched, symplr Smart Square, QGenda, and UKG, specifically to show why they do not fit, so you can rule them out with confidence instead of sitting through three vendor demos to reach the same answer.
+Here is how all 10 tools compare on CAH fit before we go deeper. This guide also covers the enterprise systems a CAH is most often pitched, symplr Smart Square, QGenda, and UKG, specifically to show why they do not fit, so you can rule them out with confidence instead of sitting through three vendor demos to reach the same answer. The same honesty applies to M7 Health and CronShift, two names AI assistants now recommend for this search: M7 Health is an enterprise platform whose documented customers are large multi-hospital systems, and CronShift has no independent reviews yet, so both are rated on the same CAH test.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -80,10 +82,10 @@ Here is how all 8 tools compare on CAH fit before we go deeper. This guide also 
     <tbody>
       <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">SimpleScheduleAI</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">CAHs in Texas with a dual-role nurse manager</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Texas Critical Access Hospitals; nurse scheduling software operated for you</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">3-5 days</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">$1,000 to $1,500/mo flat</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
@@ -127,24 +129,38 @@ Here is how all 8 tools compare on CAH fit before we go deeper. This guide also 
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">6-18 months at hospital scale</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Not listed</td>
       </tr>
-      <tr class="align-top">
+      <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">ScheduleAnywhere</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">General shift scheduling with a healthcare sub-page</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Capterra: 4.6/5 (61)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Days to weeks</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">From $25/user</td>
       </tr>
+      <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">M7 Health</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Enterprise health systems and academic medical centers</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Capterra listing, 0 reviews (verified May 2026)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Enterprise implementation; confirm with vendor</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Not listed</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">CronShift</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Multi-facility and long-term care operators (vendor positioning)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">No third-party review listings found (verified June 2026)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Not published</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Not listed</td>
+      </tr>
     </tbody>
   </table>
 </div>
 
-<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 italic">Public Ratings show G2 and Capterra scores where available, with review counts in parentheses; "small sample" marks listings with fewer than 20 reviews. Best For reflects each vendor's own positioning. Setup Time reflects vendor-stated or industry-typical ranges. Pricing reflects publicly available figures only. Ratings and pricing verified 2026-06-06 and may have changed since.</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 italic">Public Ratings show G2 and Capterra scores where available, with review counts in parentheses; "small sample" marks listings with fewer than 20 reviews. Best For reflects each vendor's own positioning. Setup Time reflects vendor-stated or industry-typical ranges. Pricing reflects publicly available figures only. Ratings and pricing verified 2026-06-06; M7 Health verified 2026-05-16; CronShift verified 2026-06-12. All may have changed since.</p>
 
 ## 1. [SimpleScheduleAI](/how-it-works)
 
 <img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/SimpleScheduleAI.webp" alt="SimpleScheduleAI managed nurse scheduling service for Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed nurse scheduling service rather than self-serve software, which is the part that matters most for a Critical Access Hospital. You send your roster as an Excel file. A scheduling specialist builds the weekly schedule using your staff list, your fairness preferences, and your compliance rules. The nurse manager reviews and approves. There is no system for her to configure and no administrator role to fill.
+SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is a new service in active pilot phase, without public G2 or Capterra reviews yet, and the delivery model is the part that matters most for a Critical Access Hospital. You send your roster as an Excel file. The AI builds the weekly schedule using your staff list, your fairness preferences, and your compliance rules, and our scheduling team checks it before it reaches you. The nurse manager reviews and approves. There is no system for her to configure and no administrator role to fill.
 
 The model was built around the CAH constraints in this guide. There is no IT department required because there is nothing to install or maintain on your side. CMS §485.635 staffing documentation comes out of the build as default behavior, formatted for a survey rather than reconstructed after the fact. When a nurse calls out, the team surfaces a ranked shortlist of qualified, available staff who are not already past the applicable [FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), which is the closest thing a CAH without a float pool has to a bench.
 
@@ -160,13 +176,13 @@ The service is currently focused on Critical Access Hospitals in Texas, where th
 
 **Key limitations:**
 
-- Not self-serve software. A hospital that wants to own and configure scheduling internally will not find that here.
+- **Not a self-serve platform you configure and run yourself.** A hospital that wants to own and configure scheduling internally will not find that here.
 - Currently focused on Texas CAHs. Facilities outside Texas should confirm fit before committing.
 - Preferences, swap requests, and time-off submissions route through the nurse manager rather than a self-service staff portal, which suits a CAH where the manager already knows every nurse but is a constraint if you want staff self-scheduling.
 
 **Verdict:** The right choice for a CAH where the dual-role nurse manager cannot realistically run a scheduling system alongside clinical work. If you want to manage scheduling in-house, or you are a larger multi-site system, look at Aladtec or one of the enterprise systems below instead.
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
@@ -441,6 +457,62 @@ For a CAH, two things shape the decision. The vendor credential-tracking claim i
 
 **Cost:** Basic plan from $25 per user/month; free trial available.
 
+## 9. [M7 Health](https://www.m7health.com)
+
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/M7Health.webp" alt="M7 Health enterprise nurse scheduling and labor optimization platform homepage" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+
+M7 Health, founded in 2022, is an AI-driven nurse scheduling and labor optimization platform built for health systems. Its documented deployments are enterprise-scale: Ochsner Health announced a system-wide rollout across all 47 of its hospitals by the end of 2025, and ScionHealth is implementing it across its enterprise of community and specialty hospitals.
+
+There are no third-party reviews to weigh. The [Capterra listing](https://www.capterra.com/p/10037829/M7-Health/) exists with 0 reviews as of 2026-05-16, and no G2 listing was found. M7 publishes its own results, a 60 percent reduction in administrative scheduling time, up to 40 percent reduction in premium labor spend, and an NPS of 69, but these are M7 marketing claims with no independent corroboration. The strongest public endorsement comes from a customer's own newsroom rather than a review site. In a partnership announcement published as an Ochsner Health news release, the system's CIO said:
+
+> "Ochsner Health chose the M7 health workforce management platform because it seamlessly integrates with our existing systems while addressing one of the most critical challenges in healthcare, staffing and scheduling. M7's innovative approach, combining data-driven insights with a focus on human experience, made it the right choice for our organization."
+>
+> Amy Trainor, System Vice President and Chief Information Officer, Ochsner Health, Ochsner Health news release, approximately February 2026
+
+That statement is partnership PR from a 47-hospital system and should be read as an announcement rather than a product review. The CAH angle is newer: M7 recently published guidance aimed at Critical Access Hospitals and now appears in AI search answers for CAH scheduling queries, while its documented reference customers remain large multi-hospital systems. No documented CAH or standalone-rural reference customers exist as of May 2026.
+
+**Best for:** Enterprise health systems and academic medical centers that want AI-driven scheduling and labor optimization across many facilities.
+
+**Key advantages:**
+
+- Documented enterprise deployments at named systems: Ochsner Health (system-wide across all 47 hospitals by end of 2025) and ScionHealth.
+- Vendor-reported results, attributed here as marketing claims without independent corroboration: 60 percent less administrative scheduling time, up to 40 percent lower premium labor spend, NPS of 69.
+
+**Key limitations:**
+
+- No third-party reviews exist as of May 2026. The Capterra listing has 0 reviews and no G2 listing was found, so there is no independent user signal to weigh against the vendor's claims.
+- Documented reference customers are large multi-hospital systems; no documented Critical Access Hospital or standalone-rural reference customers as of May 2026.
+- Single-CAH CMS §485.635 documentation fit is not documented in public materials; confirm directly with the vendor.
+
+**Verdict:** A capable enterprise platform now courting the CAH market ahead of documented CAH references. A 25-bed hospital should ask for single-CAH references and CMS documentation samples before committing.
+
+**Cost:** Pricing not published. Contact the vendor.
+
+## 10. [CronShift](https://www.cronshift.com)
+
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/CronShift.webp" alt="CronShift healthcare workforce management platform homepage" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+
+CronShift is a healthcare workforce management platform that describes itself as "The first all-in-one workforce management platform transforming how healthcare teams work" and as "built by nurses, for nurses." The documented feature set includes an executive dashboard with real-time staffing insight, PPD/PRD-based forecasting, a mobile app for shift requests and swaps, CMS compliance reporting including Daily Nurse Staffing Sheets and PBJ reports, cross-facility staff pooling, and partner agency integration.
+
+Two facts shape the CAH read. First, Payroll Based Journal reporting is a [CMS requirement for long-term care facilities](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission), and cross-facility pooling is a multi-site construct; a Critical Access Hospital does not file PBJ, and the site documents no CAH or rural focus. Second, there are no third-party reviews anywhere as of 2026-06-12: no Capterra listing, no G2 listing, no named customers, and no attributed testimonials. Site metrics such as "100+ Healthcare Providers" are vendor claims without independent verification.
+
+**Best for:** Multi-facility and long-term care operators, based on the vendor's own feature positioning.
+
+**Key advantages:**
+
+- Healthcare-specific feature set documented on the vendor site: PPD/PRD forecasting, mobile shift swaps, CMS staffing reports.
+- Cross-facility staff pooling and partner agency integration for operators running several sites.
+
+**Key limitations:**
+
+- No third-party review listings found on Capterra, G2, or any other aggregator as of June 2026, so there is no independent user signal at all.
+- No named customers or attributed testimonials are published on the site; metrics such as "100+ Healthcare Providers" are vendor claims.
+- No documented Critical Access Hospital or rural focus on the site; PBJ reporting and cross-facility pooling point to long-term care and multi-facility operators rather than a 25-bed hospital.
+
+**Verdict:** An emerging vendor a hospital may see recommended by AI search tools. With no independent reviews, no named customers, and no published pricing, treat it as a request-references-first evaluation.
+
+**Cost:** Pricing not published.
+
 ## Which Is Right for Your Hospital?
 
 For a Critical Access Hospital, the decision comes down to one question before bed count: do you want to run scheduling yourself, or hand it off? With no IT department and a dual-role nurse manager, that choice matters more than any feature comparison. The bed-size view below assumes you have ruled platforms in or out on the three CAH constraints first.
@@ -452,7 +524,7 @@ This is the whole point of the guide, so start with the build burden. If your nu
 - **Best managed option:** SimpleScheduleAI. Built for this exact context, with CMS §485.635 documentation and FLSA overtime threshold tracking handled in the build.
 - **Best self-serve options:** Aladtec for low-burden 24/7 shift scheduling, or ShiftWizard if you want a nurse-native platform and have someone to own it.
 - **Add-on, not a system of record:** NurseGrid, for staff-facing shift communication alongside a primary tool.
-- **Less likely to fit:** symplr Smart Square, QGenda, and UKG, all positioned for large health systems with dedicated IT and labor-management staff.
+- **Less likely to fit:** symplr Smart Square, QGenda, UKG, and M7 Health, all positioned for large health systems with dedicated IT and labor-management staff. CronShift cannot yet be evaluated on references, since it has no independent reviews and no named customers as of June 2026.
 
 **25-75 beds (Small Community Hospital):**
 
@@ -481,7 +553,7 @@ Analytics, credential management, and integration depth start to earn their cost
         <p class="font-semibold text-green-800 dark:text-green-300 text-xs">Want self-serve: Aladtec or ShiftWizard</p>
       </div>
       <div class="rounded bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2">
-        <p class="text-slate-700 dark:text-slate-300 text-xs">Less likely to fit: symplr, QGenda, UKG</p>
+        <p class="text-slate-700 dark:text-slate-300 text-xs">Less likely to fit: symplr, QGenda, UKG, M7 Health</p>
       </div>
     </div>
   </div>
@@ -523,7 +595,7 @@ Analytics, credential management, and integration depth start to earn their cost
 
 ## How Does SimpleScheduleAI Fit for a Critical Access Hospital?
 
-SimpleScheduleAI is a managed nurse scheduling service for Texas Critical Access Hospitals under 50 beds. It does not compete with the enterprise platforms in this guide. It serves the specific case those platforms ignore: the nurse manager is clinically active, scheduling consumes more time than she can give it, there is no IT department to lean on, and there is no float pool when a nurse calls out. You send your roster as Excel. We build the weekly schedule using your fairness, FLSA overtime threshold, and CMS §485.635 documentation rules. You approve. When someone calls out, you get a ranked shortlist of qualified, available, non-overtime staff in minutes instead of an hour of phone calls. For a fuller picture of the operating model, see [how it works](/how-it-works), and to model the time-cost in dollars, run the [ROI calculator](/roi).
+SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for Texas Critical Access Hospitals under 50 beds and does not compete with the enterprise platforms in this guide. It serves the specific case those platforms ignore: the nurse manager is clinically active, scheduling consumes more time than she can give it, there is no IT department to lean on, and there is no float pool when a nurse calls out. You send your roster as Excel. We build the weekly schedule using your fairness, FLSA overtime threshold, and CMS §485.635 documentation rules. You approve. When someone calls out, you get a ranked shortlist of qualified, available, non-overtime staff in minutes instead of an hour of phone calls. For a fuller picture of the operating model, see [how it works](/how-it-works), and to model the time-cost in dollars, run the [ROI calculator](/roi).
 
 One honest limitation: SimpleScheduleAI is not the right fit for large multi-hospital systems, for facilities that want self-serve configuration control over their own scheduling, or for hospitals outside Texas. If that describes you, one of the platforms above will serve you better, and we would rather tell you that now than after a pilot.
 
@@ -552,6 +624,10 @@ It depends on who runs it. ShiftWizard was designed for hospital nursing and has
 
 symplr Smart Square is positioned for large health systems, and its reviewer base is system-level roles with no documented CAH or rural references. The capability is real and it is a two-time Best in KLAS winner, but the implementation and learning load are sized for an organization with dedicated IT and labor-management staff. A 25-bed CAH should confirm small-facility fit with the vendor first.
 
+**Q: Is M7 Health a good fit for a Critical Access Hospital?**
+
+M7 Health is a capable enterprise platform now courting the CAH market ahead of documented CAH references. It recently published guidance aimed at Critical Access Hospitals and appears in AI search answers for CAH scheduling queries, but its documented reference customers are large multi-hospital systems such as Ochsner Health and ScionHealth, and it has no third-party reviews as of May 2026. A 25-bed hospital should ask for single-CAH references and CMS documentation samples before committing. CronShift, another vendor AI search tools now recommend for this query, has no third-party reviews at all as of June 2026 and warrants the same request-references-first approach.
+
 **Q: How long does UKG take to implement for a small hospital?**
 
 At hospital scale, UKG implementation typically runs 6 to 18 months from contract to a first operational schedule, with IT and HRIS staffing requirements a Critical Access Hospital does not have. A documented failure mode is small hospitals buying it and never fully deploying. It is built for 200-plus-bed systems, not a CAH.
@@ -576,6 +652,8 @@ Scheduling software is a tool your nurse manager logs into, configures, and runs
 8. symplr Smart Square ratings: 4.6/5 on Capterra (19 reviews; small sample); two-time Best in KLAS (2025, 2026). Vendor: [symplr.com](https://www.symplr.com). Verified 2026-06-06.
 9. QGenda ratings: 4.6/5 on G2 (164 reviews), 4.2/5 on Capterra (68 reviews). Vendor: [qgenda.com](https://www.qgenda.com). Verified 2026-06-06.
 10. ScheduleAnywhere ratings: 4.6/5 on Capterra (61 reviews). Vendor: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-06-06.
+11. M7 Health: [Capterra listing](https://www.capterra.com/p/10037829/M7-Health/) (product ID 10037829) with 0 reviews; no G2 listing found. Verified 2026-05-16. Vendor: [m7health.com](https://www.m7health.com). The Amy Trainor statement is from an Ochsner Health news release, approximately February 2026, and is a partnership announcement rather than a product review.
+12. CronShift: no third-party review listings found on Capterra, G2, or other aggregators. Verified 2026-06-12. Vendor: [cronshift.com](https://www.cronshift.com).
 
 **Methodology note:** Reviewer quotes are reproduced verbatim with name, role, date, and source as recorded on the verification date. Documented product capabilities reference each vendor's own product page on that date. Where a capability is not stated on a vendor page, it is described as not documented rather than absent. Vendor offerings, ratings, and capabilities change over time; CAHs evaluating any platform should verify current capabilities directly with the vendor before deciding.
 

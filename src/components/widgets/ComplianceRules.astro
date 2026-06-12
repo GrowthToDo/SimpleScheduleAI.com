@@ -113,7 +113,7 @@ const competencyLevels = [
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
   <div class="mx-auto max-w-3xl text-center mb-14">
-    <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400">What we check every cycle</p>
+    <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-[#7BAF9B]">What we check every cycle</p>
     <Headline
       title={title}
       subtitle={subtitle}
@@ -129,7 +129,7 @@ const competencyLevels = [
   <!-- Rule detail cards -->
   <div class="grid gap-8 lg:grid-cols-2">
     {/* 13 Compliance and Safety Rules */}
-    <div class="rounded-2xl border border-gray-700 bg-slate-900 dark:bg-black p-8">
+    <div class="rounded-2xl border border-gray-700 bg-[#1A2332] p-8">
       <div class="flex items-center gap-3 mb-6">
         <span
           class="flex w-10 h-10 shrink-0 items-center justify-center rounded-lg bg-red-500/20 border border-red-500/30"
@@ -162,15 +162,15 @@ const competencyLevels = [
     </div>
 
     {/* 8 Fairness Goals */}
-    <div class="rounded-2xl border border-gray-700 bg-slate-900 dark:bg-black p-8">
+    <div class="rounded-2xl border border-gray-700 bg-[#1A2332] p-8">
       <div class="flex items-center gap-3 mb-6">
         <span
-          class="flex w-10 h-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/20 border border-blue-500/30"
+          class="flex w-10 h-10 shrink-0 items-center justify-center rounded-lg bg-[#7BAF9B]/15 border border-[#7BAF9B]/30"
         >
-          <Icon name="tabler:star" class="w-5 h-5 text-blue-400" />
+          <Icon name="tabler:star" class="w-5 h-5 text-[#7BAF9B]" />
         </span>
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-blue-400">Optimized</p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-[#7BAF9B]">Optimized</p>
           <h3 class="text-lg font-bold text-white">8 Fairness and Preference Goals</h3>
         </div>
       </div>
@@ -181,16 +181,16 @@ const competencyLevels = [
         {
           fairnessGoals.map((goal) => (
             <li class="flex items-start gap-3">
-              <span class="mt-0.5 shrink-0 flex w-5 h-5 items-center justify-center rounded-full bg-blue-500/20 border border-blue-500/40">
-                <Icon name="tabler:star-filled" class="w-3 h-3 text-blue-400" />
+              <span class="mt-0.5 shrink-0 flex w-5 h-5 items-center justify-center rounded-full bg-[#7BAF9B]/15 border border-[#7BAF9B]/40">
+                <Icon name="tabler:star-filled" class="w-3 h-3 text-[#7BAF9B]" />
               </span>
               <span class="text-sm text-gray-300">{goal}</span>
             </li>
           ))
         }
       </ul>
-      <div class="mt-6 rounded-xl border border-blue-700/40 bg-blue-900/20 p-4">
-        <p class="text-sm text-blue-300">
+      <div class="mt-6 rounded-xl border border-[#7BAF9B]/30 bg-[#7BAF9B]/10 p-4">
+        <p class="text-sm text-[#7BAF9B]">
           Every fairness flag is explained. You see which trade-off was made and why, so you can approve or adjust with
           full context.
         </p>
@@ -199,7 +199,7 @@ const competencyLevels = [
   </div>
 
   <!-- Competency level definitions -->
-  <div class="mt-10 rounded-2xl border border-gray-700 bg-slate-900 dark:bg-black p-8">
+  <div class="mt-10 rounded-2xl border border-gray-700 bg-[#1A2332] p-8">
     <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">How we define competency levels</p>
     <div class="overflow-x-auto">
       <table class="w-full text-sm">

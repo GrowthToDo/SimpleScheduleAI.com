@@ -40,7 +40,7 @@ const commonScenarios = {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
   <div class="text-center mb-14">
-    <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">Who we serve</p>
+    <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-primary">Who we serve</p>
     <Headline title={title} classes={{ title: 'text-3xl sm:text-4xl' }} />
   </div>
 
@@ -48,7 +48,7 @@ const commonScenarios = {
     {
       scenarios.map((scenario) => (
         <div class="text-center">
-          <div class="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 dark:bg-blue-950">
+          <div class="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
             <span class="h-2 w-2 rounded-full bg-primary" />
           </div>
           <h3 class="text-xl font-bold">{scenario.title}</h3>
@@ -58,16 +58,14 @@ const commonScenarios = {
     }
   </div>
 
-  <div
-    class="mx-auto max-w-4xl rounded-2xl border border-blue-100 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/30 p-8 md:p-10"
-  >
+  <div class="mx-auto max-w-4xl rounded-xl border border-hairline bg-white p-8 md:p-10">
     <h3 class="text-xl font-bold">{commonScenarios.title}</h3>
     <ul class="mt-6 grid gap-4 md:grid-cols-2">
       {
         commonScenarios.items.map((item) => (
           <li class="flex items-start gap-3">
             <span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-primary" />
-            <span class="text-gray-700 dark:text-gray-300">{item}</span>
+            <span class="text-default/80">{item}</span>
           </li>
         ))
       }

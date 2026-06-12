@@ -298,8 +298,8 @@ When the full labor cost is included, self-serve scheduling software is often mo
         <p class="text-xs font-semibold text-blue-700 dark:text-blue-400 pt-1">Best for dual-role CAH nurse manager: managed service</p>
       </div>
     </div>
-    <div class="rounded-lg border border-purple-200 dark:border-purple-800 overflow-hidden">
-      <div class="bg-purple-600 dark:bg-purple-700 px-4 py-3">
+    <div class="rounded-lg border border-primary/25 dark:border-[#1A2332] overflow-hidden">
+      <div class="bg-[#1A2332] dark:bg-[#1A2332] px-4 py-3">
         <p class="text-sm font-bold text-white">2. Callout Coverage</p>
       </div>
       <div class="p-4 space-y-3 bg-white dark:bg-slate-900">
@@ -311,7 +311,7 @@ When the full labor cost is included, self-serve scheduling software is often mo
           <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">SimpleScheduleAI</p>
           <p class="text-xs text-slate-600 dark:text-slate-400">Automated ranked list sorted by OT risk and credentials.</p>
         </div>
-        <p class="text-xs font-semibold text-purple-700 dark:text-purple-400 pt-1">CAH averages 2-3 callouts/week. 20-30 min each = 50 hrs/year.</p>
+        <p class="text-xs font-semibold text-primary dark:text-[#7BAF9B] pt-1">CAH averages 2-3 callouts/week. 20-30 min each = 50 hrs/year.</p>
       </div>
     </div>
     <div class="rounded-lg border border-green-200 dark:border-green-800 overflow-hidden">

@@ -18,20 +18,20 @@ const subtitle =
   <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
     <!-- Left: existing text content -->
     <div class="text-center lg:text-center">
-      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-blue-400">What we check every cycle</p>
-      <div class="mb-2 text-8xl font-black text-primary sm:text-9xl leading-none">21</div>
-      <p class="text-sm font-medium text-gray-400 mb-4">rules checked on every schedule</p>
+      <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-[#7BAF9B]">What we check every cycle</p>
+      <div class="mb-2 text-8xl font-semibold font-heading text-[#7BAF9B] sm:text-9xl leading-none">21</div>
+      <p class="text-sm font-medium text-[#FAF7F2]/60 mb-4">rules checked on every schedule</p>
       <Headline
         title={title}
         subtitle={subtitle}
         classes={{
-          title: 'text-3xl sm:text-4xl text-white',
-          subtitle: 'text-lg text-gray-400',
+          title: 'text-3xl sm:text-4xl text-[#FAF7F2]',
+          subtitle: 'text-lg text-[#FAF7F2]/60',
         }}
       />
       <a
         href="/how-it-works"
-        class="mt-8 inline-flex items-center gap-2 text-primary font-medium hover:text-secondary transition-colors duration-200"
+        class="mt-8 inline-flex items-center gap-2 text-[#7BAF9B] font-medium hover:text-[#FAF7F2] transition-colors duration-200"
       >
         See every rule we check
         <Icon name="tabler:arrow-right" class="w-4 h-4" />

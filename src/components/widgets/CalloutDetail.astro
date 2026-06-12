@@ -45,22 +45,22 @@ const logExample = {
           details.map((detail) => (
             <li class="flex items-start gap-3">
               <Icon name="tabler:check" class="w-5 h-5 text-primary mt-1" />
-              <span class="text-gray-700 dark:text-gray-300">{detail}</span>
+              <span class="text-default/80">{detail}</span>
             </li>
           ))
         }
       </ul>
 
-      <div class="mt-10 rounded-2xl bg-slate-900 dark:bg-black p-6 font-mono text-sm text-white">
+      <div class="mt-10 rounded-xl bg-[#1A2332] p-6 font-mono text-sm text-[#FAF7F2]">
         <p class="font-bold">{logExample.title}</p>
         <div class="mt-4 space-y-2">
-          <p><span class="text-blue-400">EVENT:</span> {logExample.event}</p>
-          <p><span class="text-blue-400">ELIGIBILITY CHECK:</span> {logExample.eligibility}</p>
-          <p><span class="text-blue-400">ESCALATION:</span> {logExample.escalation}</p>
-          <p><span class="text-blue-400">DECISION:</span> {logExample.decision}</p>
-          <p><span class="text-blue-400">REASON:</span> {logExample.reason}</p>
+          <p><span class="text-[#7BAF9B]">EVENT:</span> {logExample.event}</p>
+          <p><span class="text-[#7BAF9B]">ELIGIBILITY CHECK:</span> {logExample.eligibility}</p>
+          <p><span class="text-[#7BAF9B]">ESCALATION:</span> {logExample.escalation}</p>
+          <p><span class="text-[#7BAF9B]">DECISION:</span> {logExample.decision}</p>
+          <p><span class="text-[#7BAF9B]">REASON:</span> {logExample.reason}</p>
         </div>
-        <p class="mt-4 text-xs italic text-gray-400">{logExample.note}</p>
+        <p class="mt-4 text-xs italic text-[#FAF7F2]/60">{logExample.note}</p>
       </div>
     </div>
 

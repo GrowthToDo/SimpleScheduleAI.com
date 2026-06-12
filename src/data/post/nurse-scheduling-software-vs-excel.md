@@ -122,7 +122,7 @@ Most CAH nurse managers don't switch away from Excel because they've heard a sal
     <p class="text-sm text-slate-600 dark:text-slate-300">Excel doesn't warn you when someone crosses 40 hours under <a class="underline" href="https://www.dol.gov/agencies/whd/flsa">[FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)</a> or Texas <a class="underline" href="https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm">Labor Code §62.002</a>. You catch it on the payroll report.</p>
   </div>
   <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">
-    <div class="mb-3 rounded-lg bg-violet-700 px-3 py-2 text-center text-sm font-bold text-white">4. Credential Silo</div>
+    <div class="mb-3 rounded-lg bg-[#1A2332] px-3 py-2 text-center text-sm font-bold text-white">4. Credential Silo</div>
     <p class="text-sm text-slate-600 dark:text-slate-300">BLS/ACLS expiry lives in a separate file. During a CMS survey, you need that data immediately, not after a 20-minute search.</p>
   </div>
   <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">

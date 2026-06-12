@@ -84,7 +84,7 @@ const pricingBreadcrumbSchema = {
         {
           tiers.map((tier) => (
             <div
-              class={`rounded-2xl p-8 ${tier.featured ? 'border-2 border-primary bg-blue-50 dark:bg-blue-950/30' : 'border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800'}`}
+              class={`rounded-2xl p-8 ${tier.featured ? 'border-2 border-primary bg-primary/5' : 'border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800'}`}
             >
               <div class="flex items-center justify-between">
                 <h2 class="text-xl font-bold">{tier.name}</h2>
@@ -126,7 +126,7 @@ const pricingBreadcrumbSchema = {
       </div>
 
       <!-- ROI framing -->
-      <div class="mt-10 rounded-2xl border-2 border-primary bg-blue-50 dark:bg-blue-950/30 p-8 text-center">
+      <div class="mt-10 rounded-2xl border-2 border-primary bg-primary/5 p-8 text-center">
         <h2 class="text-2xl font-bold">What it replaces</h2>
         <p class="mx-auto mt-4 max-w-2xl text-muted dark:text-slate-300">
           A nurse manager who spends 8 to 12 hours a week building the schedule, working the callout phone tree, and

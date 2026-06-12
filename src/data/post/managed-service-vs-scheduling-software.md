@@ -89,8 +89,8 @@ CAHs face three structural constraints that make the self-serve app model consis
       <p class="text-xs text-slate-700 dark:text-slate-300">The nurse manager is also on clinical shifts. Adding "operate new software" rearranges the burden, not reduces it.</p>
     </div>
   </div>
-  <div class="rounded-lg border-2 border-purple-300 dark:border-purple-700 bg-white dark:bg-slate-800 overflow-hidden">
-    <div class="bg-purple-700 px-4 py-3">
+  <div class="rounded-lg border-2 border-primary/30 dark:border-[#1A2332] bg-white dark:bg-slate-800 overflow-hidden">
+    <div class="bg-[#1A2332] px-4 py-3">
       <p class="text-xs font-bold text-white">Compliance Config Complexity</p>
     </div>
     <div class="px-4 py-3">

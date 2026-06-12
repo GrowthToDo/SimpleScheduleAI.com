@@ -80,9 +80,9 @@ The standard does not specify a minimum nurse-to-patient ratio. CMS expects each
       <p class="font-semibold text-sm text-white m-0">Credential records: qualifications at time of service</p>
       <p class="text-xs text-blue-100 m-0">License numbers, ACLS and BLS dates, charge designation sign-off</p>
     </div>
-    <div class="rounded-lg bg-violet-700 dark:bg-violet-800 px-4 py-3">
+    <div class="rounded-lg bg-[#1A2332] dark:bg-[#1A2332] px-4 py-3">
       <p class="font-semibold text-sm text-white m-0">Nurse and emergency-provider availability</p>
-      <p class="text-xs text-violet-100 m-0">On-duty nurse per shift (485.631); emergency practitioner on call within 30 minutes (485.618)</p>
+      <p class="text-xs text-[#FAF7F2] m-0">On-duty nurse per shift (485.631); emergency practitioner on call within 30 minutes (485.618)</p>
     </div>
     <div class="rounded-lg bg-slate-700 dark:bg-slate-600 px-4 py-3">
       <p class="font-semibold text-sm text-white m-0">Policy alignment</p>
@@ -116,7 +116,7 @@ The surveyor is comparing these three documents. A mismatch between the schedule
     <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Who was assigned to each shift, with role (RN, LVN, charge RN).</p>
   </div>
   <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
-    <p class="font-semibold text-sm text-violet-800 dark:text-violet-300 mb-2">2. Time and attendance</p>
+    <p class="font-semibold text-sm text-primary dark:text-[#7BAF9B] mb-2">2. Time and attendance</p>
     <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Who actually worked each shift, matching the schedule except for documented callout replacements.</p>
   </div>
   <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
@@ -174,7 +174,7 @@ For every shift, record the emergency-care practitioner on call (physician, phys
     <p class="text-xs text-slate-600 dark:text-slate-400 m-0">Published schedule per cycle, callout replacements annotated in real time. Maintained continuously and retained per your facility's record-retention policy.</p>
   </div>
   <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">
-    <p class="font-semibold text-sm text-violet-800 dark:text-violet-300 mb-2">2. Credential master list</p>
+    <p class="font-semibold text-sm text-primary dark:text-[#7BAF9B] mb-2">2. Credential master list</p>
     <p class="text-xs text-slate-600 dark:text-slate-400 m-0">License numbers and expiration dates, ACLS and BLS certificates, charge sign-off dates. Updated immediately on change, linked to the schedule record.</p>
   </div>
   <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-4">

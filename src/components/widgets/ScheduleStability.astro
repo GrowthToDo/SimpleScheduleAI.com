@@ -36,15 +36,19 @@ const metrics = [
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
   <div class="mx-auto max-w-3xl text-center mb-12">
-    <Headline title={title} subtitle={subtitle} classes={{ title: 'text-3xl sm:text-4xl', subtitle: 'text-lg' }} />
+    <Headline
+      title={title}
+      subtitle={subtitle}
+      classes={{ title: 'text-3xl sm:text-4xl text-[#FAF7F2]', subtitle: 'text-lg text-[#FAF7F2]/70' }}
+    />
   </div>
 
   <div class="grid gap-8 md:grid-cols-5">
     {
       metrics.map((metric) => (
         <div class="text-center">
-          <h3 class="text-lg font-bold text-white">{metric.title}</h3>
-          <p class="mt-2 text-sm text-gray-400">{metric.description}</p>
+          <h3 class="text-lg font-bold text-[#FAF7F2]">{metric.title}</h3>
+          <p class="mt-2 text-sm text-[#FAF7F2]/60">{metric.description}</p>
         </div>
       ))
     }

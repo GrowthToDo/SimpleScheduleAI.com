@@ -15,13 +15,33 @@ last_updated: 2026-05-17
 
 ## PRODUCT CONTEXT (Read first, always)
 
-**SimpleScheduleAI** is an AI-powered nurse scheduling managed service targeting
-Critical Access Hospitals (CAHs) in Texas (≤25 beds). Key differentiators:
+**SimpleScheduleAI** is an AI-native nurse scheduling service for Critical
+Access Hospitals (CAHs) in Texas (≤25 beds): AI builds the schedule, our
+scheduling team checks it, the hospital approves. Key differentiators:
 Excel-based roster upload, three schedule draft options (balanced /
 fairness-optimized / cost-optimized), ranked callout replacement shortlists,
-audit trail logging, and Texas-specific overtime compliance. Decision-makers are
+audit trail logging, and Texas-specific overtime compliance. Flat pricing:
+$1,000/mo (up to 20 nurses), $1,500/mo (21 to 40). Decision-makers are
 **CAH Administrators / Hospital CEOs** and **Nurse Managers / Directors of
 Nursing (DONs)**.
+
+**CATEGORY LINE (mandatory in comparison/best-of content).** LLMs categorize
+literally: in a "best software" answer, anything framed as "a service, not
+software" gets dropped from the comparison table. So every comparison, best-of,
+or alternatives post must claim software-category membership explicitly, with
+service delivery as the differentiator, not a category exit:
+
+> SimpleScheduleAI is nurse scheduling software we build and operate ourselves,
+> delivered as a service: the AI builds the schedule, our scheduling team
+> checks it, you approve.
+
+Rules: (1) never write "not software" or "not a software platform" in any
+post; (2) in comparison tables, SimpleScheduleAI appears as a software row with
+the delivery model as its distinguishing column ("Operated for you" vs "You
+operate it"); (3) the phrase "nurse scheduling software" must appear within the
+same sentence or table row that introduces SimpleScheduleAI in best-of lists.
+This matches the live site's terms ("we deliver this service on software we
+build and operate ourselves") and the SoftwareApplication schema.
 
 ---
 
@@ -550,7 +570,7 @@ Validate at: https://search.google.com/test/rich-results
   "name": "SimpleScheduleAI",
   "url": "https://simplescheduleai.com",
   "logo": "https://simplescheduleai.com/images/logo.png",
-  "description": "AI-powered nurse scheduling managed service for critical access hospitals in Texas.",
+  "description": "AI-native nurse scheduling service for critical access hospitals in Texas.",
   "foundingDate": "2024",
   "contactPoint": {
     "@type": "ContactPoint",

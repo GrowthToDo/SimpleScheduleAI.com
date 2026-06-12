@@ -44,7 +44,18 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] **Excerpt re-read AFTER all body edits** — same rule: no "lacks X" or "no X" in excerpt if body uses "not documented" framing
 - [ ] No TL;DR section present — Key Takeaways replaces TL;DR (TL;DR is an AI-tell pattern)
 - [ ] No em-dashes (`—`) anywhere — prose, excerpts, table cells, TOC, blockquotes, CTA cards
-- [ ] No AI-tone phrases in our voice: "delve into", "dive into", "it's worth noting", "in conclusion", "robust", "leverage", "game-changing", "seamless", "comprehensive solution", "transformative", "at the end of the day", "unlock", "harness", "navigating", "streamline". **Exception:** verbatim Capterra/G2 reviewer quotes are protected even if the reviewer used one of these words. Our paraphrasing of a reviewer must still avoid the phrase.
+- [ ] No AI-tone phrases in our voice: "delve into", "dive into", "it's worth noting", "in conclusion", "in summary", "robust", "leverage", "game-changing", "seamless", "comprehensive solution", "transformative", "at the end of the day", "unlock", "harness", "navigating", "streamline", "serves as", "stands as", "marks a", "represents a". **Exception:** verbatim Capterra/G2 reviewer quotes are protected even if the reviewer used one of these words. Our paraphrasing of a reviewer must still avoid the phrase.
+- [ ] **No structural AI-tells** (source: tropes.fyi catalog, adopted 2026-06-12). These are sentence/paragraph patterns, not words — grep can flag candidates but each requires a human-read judgment on the flagged line:
+  - **Negative parallelism:** "It's not X, it's Y" / "This isn't about X. It's about Y." / "Not X. Not Y. Just Z." — zero instances in our voice
+  - **Self-posed rhetorical question + answer:** "The result? A schedule that..." / "The problem? Nobody..." — zero instances
+  - **Anaphora abuse:** 3+ consecutive sentences opening with the same word/phrase — rewrite
+  - **Tricolon abuse:** more than one rule-of-three list-sentence ("X, Y, and Z.") per section — vary rhythm
+  - **Vague attributions:** "experts say", "studies show", "many administrators report" without a named, linked source — already banned for stats; this extends the ban to ALL claims
+  - **Dead metaphor repetition:** the same metaphor (fire drill, juggling, tug-of-war, etc.) used 3+ times in one post — keep once, cut the rest
+  - **"Despite its challenges..." dismissal formula** in competitor Key Limitations sections — acknowledge-then-wave-away is banned; limitations stand on their own
+  - **Signposted conclusions:** no "In conclusion/In summary/To wrap up" section openers anywhere (Key Takeaways carries the summary role, once)
+  - **Invented concept labels:** no coined compound terms presented as established ("the coverage spiral", "the approval trap") unless the post explicitly owns the coinage
+  - **NOT banned (deliberate AEO choices, keep):** bold-first bullets in Key Takeaways, question-form H2s with answer capsules, word-count floors by post type. AEO scannability wins these trade-offs (decision: Pradeep, 2026-06-12).
 - [ ] TOC anchor text exactly matches H2/H3 heading text, including trailing `?` on question headings
 - [ ] **`## Sources` (or `## A Note on Sources`) is NOT listed in the TOC.** Sources is a supporting section, not a navigational one. Same applies to author bio and italic disclaimers. TOC lists the question-H2 spine + What to Do + FAQ, nothing else. Established on Schedule360 launch (commit 146a266) and re-confirmed on the no-IT-department post.
 - [ ] Every H2 has a 40–70 word direct answer capsule immediately below it — no preamble before capsule
@@ -92,7 +103,7 @@ _Compliance-adjacent capability claims attributed to SimpleScheduleAI must match
 
 - [ ] **No FLSA 8-and-80 claim as a SimpleScheduleAI feature.** The scheduler tracks generic FLSA overtime thresholds; the 8-and-80 (80-hour/14-day) calculation method is not yet shipped. Use "FLSA overtime thresholds" or "FLSA overtime threshold tracking" in SSAI-attributed copy. Do NOT write "FLSA 8-and-80 rule built in / applied by default / handled automatically" attributed to SimpleScheduleAI. Applies to advantage bullets, comparison-table SSAI cells, "How SSAI works" sections, CTAs, FAQ answers about SSAI, and SVG diagram labels.
 - [ ] **Generic 8-and-80 mentions stay untouched.** Educational descriptions of the rule (with DOL source), "ask the vendor whether they support 8-and-80" evaluation questions, competitor-confirm / competitor-gap lines, and the dedicated educational posts on FLSA/Texas overtime are fine. The rule only fires when the sentence attributes the capability to SimpleScheduleAI. When 8-and-80 ships, this rule reverses; see commit eeefa9f for the softening pattern to reverse.
-- [ ] **Pricing line is consistent across all posts** — always write `**Cost:** Pricing not listed on website. Contact for a quote.` for the SimpleScheduleAI row/profile (or, once a pricing band is decided, the canonical pricing line). Never invent ad-hoc phrasings like "Contact for current rates", "uses flat-fee pricing", or "starts at $X" inline. If a pricing band is published, all posts use the same band wording verbatim.
+- [ ] **Pricing line is consistent across all posts** — canonical SimpleScheduleAI pricing line (adopted 2026-06-12, matches the live /pricing page): `**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.` Use this verbatim in every SSAI row/profile. Comparison-table cell short form: `$1,000 to $1,500/mo flat`. Never invent ad-hoc phrasings like "Contact for current rates", "starts at $X", or the retired `Pricing not listed on website. Contact for a quote.` line. NOTE: live posts published before 2026-06-12 still carry the retired line; sweep them in the blog pricing pass before citing pricing consistency as done.
 
 ## Comparison Tables (when comparing competitor products)
 
@@ -233,6 +244,7 @@ handshake when the verdict is READY-TO-PUBLISH.
 - [ ] After deploy, run `npm run indexnow` to feed Bing/IndexNow (ChatGPT Search and Copilot lean on the Bing index)
 - [ ] Query the page's target keyword in Perplexity and ChatGPT to baseline AI visibility
 - [ ] Add to AEO tracking spreadsheet (monthly check schedule)
+- [ ] **Weekly money-lane citation check (adopted 2026-06-12, replaces monthly for these 3):** every week, run the ChatGPT scraper (`ai_optimization_chat_gpt_scraper`, ~$0.05/query, log cost) on: (1) "best nurse scheduling software for critical access hospitals", (2) "managed nurse scheduling service vs scheduling software", (3) "nurse scheduling software for small hospital with no IT department". Record cited domains in `docs/seo/aeo-tracking.md`. Trigger: if a new vendor appears cited, add to dossier within the week (this is how M7 took lane 1 between Jun 5 and Jun 12 unnoticed). All other queries stay on the monthly cadence.
 - [ ] Post excerpt + link on LinkedIn company page
 - [ ] Update AI Share of Voice tracking if this targets a monitored query
 - [ ] **Drift baseline (new pillars or guides only): run `/seo drift baseline <live URL>`** so weekly `/seo drift compare` will surface silent regressions (meta, canonical, schema, title). The Monday drift-compare run pairs with the lychee link-check CI scheduled on the same cadence.

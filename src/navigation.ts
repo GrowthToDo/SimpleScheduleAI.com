@@ -19,7 +19,7 @@ export const headerData = {
       href: getPermalink('/pricing'),
     },
     {
-      text: 'Scheduling Cost<br />Calculator',
+      text: 'Cost Calculator',
       href: getPermalink('/roi'),
     },
     {
@@ -32,7 +32,7 @@ export const headerData = {
       ],
     },
   ],
-  actions: [{ text: 'Get your first schedule', href: getPermalink('/contact') }],
+  actions: [{ text: 'Get your first schedule', href: getPermalink('/contact'), variant: 'primary' }],
 };
 
 export const footerData = {
