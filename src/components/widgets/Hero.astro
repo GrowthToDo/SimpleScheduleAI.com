@@ -40,7 +40,7 @@ const {
       <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
         {
           announcement && (
-            <div class="mb-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+            <div class="mb-4" data-reveal>
               <span class="inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-sm font-medium text-white">
                 {announcement}
               </span>
@@ -50,7 +50,8 @@ const {
         {
           tagline && (
             <p
-              class="text-base text-secondary dark:text-[#FAF7F2]/70 font-bold tracking-wide uppercase intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+              class="text-base text-secondary dark:text-[#FAF7F2]/70 font-bold tracking-wide uppercase"
+              data-reveal
               set:html={tagline}
             />
           )
@@ -58,7 +59,8 @@ const {
         {
           title && (
             <h1
-              class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight mb-6 font-heading intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+              class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight mb-6 font-heading reveal-delay-1"
+              data-reveal
               set:html={title}
             />
           )
@@ -67,14 +69,18 @@ const {
           {
             subtitle && (
               <p
-                class="text-lg md:text-xl leading-relaxed text-muted mb-8 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                class="text-lg md:text-xl leading-relaxed text-muted mb-8 reveal-delay-2"
+                data-reveal
                 set:html={subtitle}
               />
             )
           }
           {
             actions && (
-              <div class="max-w-xs sm:max-w-xl m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+              <div
+                class="max-w-xs sm:max-w-xl m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 reveal-delay-3"
+                data-reveal
+              >
                 {Array.isArray(actions) ? (
                   actions.map((action) => (
                     <div class="flex w-full sm:w-auto">

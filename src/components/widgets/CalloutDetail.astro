@@ -33,7 +33,7 @@ const logExample = {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
   <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
     <!-- Left: text + bullets + log box -->
-    <div>
+    <div data-reveal>
       <Headline
         title={title}
         subtitle={subtitle}
@@ -65,6 +65,8 @@ const logExample = {
     </div>
 
     <!-- Right: animated callout coverage widget -->
-    <ShowcaseCalloutCoverage client:visible />
+    <div data-reveal>
+      <ShowcaseCalloutCoverage client:visible />
+    </div>
   </div>
 </WidgetWrapper>

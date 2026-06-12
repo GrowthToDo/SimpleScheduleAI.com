@@ -1,6 +1,6 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import Headline from '~/components/ui/Headline.astro';
+import EditorialHeader from '~/components/ui/EditorialHeader.astro';
 import { Icon } from 'astro-icon/components';
 import type { Widget } from '~/types';
 
@@ -36,14 +36,11 @@ const service = {
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
-  <div class="mx-auto max-w-4xl text-center mb-12">
-    <p class="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-primary">The difference</p>
-    <Headline title={title} subtitle={subtitle} classes={{ title: 'text-3xl sm:text-4xl', subtitle: 'text-lg' }} />
-  </div>
+  <EditorialHeader number="01" tagline="The difference" title={title} subtitle={subtitle} />
 
-  <div class="grid gap-6 md:grid-cols-2 lg:gap-8">
+  <div class="grid gap-6 md:grid-cols-2 lg:gap-8" data-reveal-group>
     <!-- Software Card -->
-    <div class="rounded-xl border border-hairline bg-white p-8">
+    <div class="rounded-xl border border-hairline bg-white p-8 shadow-sm card-lift">
       <h3 class="text-xl font-semibold text-default">{software.title}</h3>
       <p class="mt-2 text-sm text-muted">{software.subtitle}</p>
       <ul class="mt-6 space-y-4">
@@ -59,7 +56,7 @@ const service = {
     </div>
 
     <!-- Service Card -->
-    <div class="rounded-xl border border-primary/40 bg-primary/5 p-8">
+    <div class="rounded-xl border border-primary/40 bg-primary/5 p-8 shadow-sm card-lift">
       <h3 class="text-xl font-semibold text-default">{service.title}</h3>
       <p class="mt-2 text-sm text-muted">{service.subtitle}</p>
       <ul class="mt-6 space-y-4">

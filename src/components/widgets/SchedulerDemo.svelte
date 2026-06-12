@@ -1,19 +1,19 @@
 <script>
   import { onMount } from 'svelte';
 
-  const BLUE = 'rgb(1 97 239)';
-  const BLUE_D = 'rgb(1 84 207)';
+  const BLUE = 'rgb(45 90 74)'; /* brand forest green */
+  const BLUE_D = 'rgb(35 71 57)';
 
   // Staff roster
   const S = {
-    mg: { name: 'Maria G.', role: 'RN', charge: true, bg: '#dbeafe', fg: '#1e40af' },
-    jw: { name: 'James W.', role: 'RN', charge: true, bg: '#dbeafe', fg: '#1e40af' },
-    ed: { name: 'Emily D.', role: 'RN', charge: false, bg: '#dbeafe', fg: '#1e40af' },
-    mb: { name: 'Michael B.', role: 'RN', charge: false, bg: '#dbeafe', fg: '#1e40af' },
-    sc: { name: 'Sarah C.', role: 'RN', charge: false, bg: '#dbeafe', fg: '#1e40af' },
+    mg: { name: 'Maria G.', role: 'RN', charge: true, bg: '#dfe9e4', fg: '#1f4538' },
+    jw: { name: 'James W.', role: 'RN', charge: true, bg: '#dfe9e4', fg: '#1f4538' },
+    ed: { name: 'Emily D.', role: 'RN', charge: false, bg: '#dfe9e4', fg: '#1f4538' },
+    mb: { name: 'Michael B.', role: 'RN', charge: false, bg: '#dfe9e4', fg: '#1f4538' },
+    sc: { name: 'Sarah C.', role: 'RN', charge: false, bg: '#dfe9e4', fg: '#1f4538' },
     jr: { name: 'Jessica R.', role: 'LPN', charge: false, bg: '#ede9fe', fg: '#5b21b6' },
-    jt: { name: 'Jennifer W.', role: 'CNA', charge: false, bg: '#dcfce7', fg: '#166534' },
-    aw: { name: 'Amanda W.', role: 'RN', charge: true, bg: '#dbeafe', fg: '#1e40af' },
+    jt: { name: 'Jennifer W.', role: 'CNA', charge: false, bg: '#e2e8f0', fg: '#334155' },
+    aw: { name: 'Amanda W.', role: 'RN', charge: true, bg: '#dfe9e4', fg: '#1f4538' },
   };
 
   // 7-day schedule (Mon Jun 2 – Sun Jun 8 2026)
@@ -44,8 +44,8 @@
       rank: 1,
       id: 'aw',
       type: 'Float Pool',
-      tBg: '#dbeafe',
-      tFg: '#1d4ed8',
+      tBg: '#dfe9e4',
+      tFg: '#1f4538',
       pros: ['Available · no conflicts', 'Charge qualified', '0h OT risk', '14h rest ✓'],
       flags: [],
     },
@@ -73,7 +73,7 @@
 
   const ANN = {
     1: { icon: '✦', text: 'AI filling shifts — 13 compliance rules enforced on every slot', bg: BLUE, fg: '#fff', spin: false },
-    2: { icon: '⟳', text: 'Validating 13 compliance + 8 fairness rules…', bg: '#7c3aed', fg: '#fff', spin: true },
+    2: { icon: '⟳', text: 'Validating 13 compliance + 8 fairness rules…', bg: '#1a2332', fg: '#fff', spin: true },
     3: { icon: '✓', text: 'Schedule complete · All 45 shifts staffed · Post-ready', bg: '#16a34a', fg: '#fff', spin: false },
     4: { icon: '⚠', text: 'Callout received · Scanning 33 staff for coverage', bg: '#ea580c', fg: '#fff', spin: false },
     5: { icon: '⚡', text: '3 candidates ranked by availability, OT risk & fairness', bg: BLUE, fg: '#fff', spin: false },
@@ -220,8 +220,24 @@
       at(loop, calloutAt + 7800);
     }
 
-    loop();
-    return clearAll;
+    // Start the demo only once it scrolls into view, so visitors see it from the beginning.
+    let started = false;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (started) return;
+        if (entries.some((e) => e.isIntersecting)) {
+          started = true;
+          io.disconnect();
+          loop();
+        }
+      },
+      { threshold: 0.35 }
+    );
+    io.observe(containerEl);
+    return () => {
+      io.disconnect();
+      clearAll();
+    };
   });
 
   function dismissPanel() {
@@ -232,13 +248,13 @@
 <style>
   @keyframes pulseRing {
     0% {
-      box-shadow: 0 0 0 0 rgba(1, 97, 239, 0.45);
+      box-shadow: 0 0 0 0 rgba(45, 90, 74, 0.45);
     }
     70% {
-      box-shadow: 0 0 0 11px rgba(1, 97, 239, 0);
+      box-shadow: 0 0 0 11px rgba(45, 90, 74, 0);
     }
     100% {
-      box-shadow: 0 0 0 0 rgba(1, 97, 239, 0);
+      box-shadow: 0 0 0 0 rgba(45, 90, 74, 0);
     }
   }
   @keyframes spin {
@@ -350,7 +366,7 @@
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: rgba(1, 97, 239, 0.35);
+    background: rgba(45, 90, 74, 0.35);
     animation: ringPulse 0.55s ease-out;
   }
   .sd-wrap {
@@ -640,16 +656,16 @@
     <!-- Validation bar — always rendered to reserve space, visibility toggles -->
     <div
       style="padding:5px 14px;background:{phase === 2
-        ? '#eff6ff'
+        ? '#eef4f1'
         : 'transparent'};border-bottom:1px solid {phase === 2
-        ? '#bfdbfe'
+        ? '#cfe0d9'
         : 'transparent'};display:flex;align-items:center;gap:9px;visibility:{phase === 2
         ? 'visible'
         : 'hidden'};transition:background .2s,border-color .2s;"
     >
       <span class="spin" style="color:{BLUE};font-size:12px;">⟳</span>
-      <span style="font-size:10px;color:#1d4ed8;font-weight:600;">Checking rules…</span>
-      <div style="flex:1;height:3px;border-radius:9999px;background:#dbeafe;overflow:hidden;">
+      <span style="font-size:10px;color:#2d5a4a;font-weight:600;">Checking rules…</span>
+      <div style="flex:1;height:3px;border-radius:9999px;background:#dce8e3;overflow:hidden;">
         <div
           style="height:100%;background:{BLUE};border-radius:9999px;width:{(rules / 21) *
             100}%;transition:width .08s linear;"
@@ -681,7 +697,7 @@
         <div
           style="display:grid;grid-template-columns:86px 1fr 1fr;border-bottom:{di < 6
             ? '1px solid #f3f4f6'
-            : 'none'};background:{d.wk ? '#fafbff' : '#fff'};"
+            : 'none'};background:{d.wk ? '#faf9f6' : '#fff'};"
         >
           <div style="padding:6px 10px;display:flex;flex-direction:column;justify-content:center;">
             <span style="font-size:12px;font-weight:700;color:{d.wk ? '#9ca3af' : '#111'};">{d.lbl}</span>

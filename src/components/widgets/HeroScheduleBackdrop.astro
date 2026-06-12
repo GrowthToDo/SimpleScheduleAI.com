@@ -1,0 +1,127 @@
+---
+// Decorative hero backdrop: a faint schedule grid whose cells fill themselves
+// on an infinite loop. Pure CSS, no hydration, aria-hidden. Desktop only;
+// static under prefers-reduced-motion.
+const rows = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+// chip widths per cell, deterministic variety
+const cells = rows.map((d, r) => ({
+  day: d,
+  left: [56 + ((r * 13) % 24), 44 + ((r * 7) % 20)],
+  right: [50 + ((r * 11) % 22), 60 + ((r * 5) % 16)],
+}));
+---
+
+<div class="hero-backdrop" aria-hidden="true">
+  <div class="hb-grid">
+    {
+      cells.map((c, r) => (
+        <div class="hb-row" style={`--r:${r}`}>
+          <span class="hb-day" />
+          <div class="hb-cell">
+            <span class="hb-chip hb-fill" style={`width:${c.left[0]}px;--d:${r * 0.9}s`} />
+            <span class="hb-chip hb-fill hb-green" style={`width:${c.left[1]}px;--d:${r * 0.9 + 0.45}s`} />
+          </div>
+          <div class="hb-cell">
+            <span class="hb-chip hb-fill hb-green" style={`width:${c.right[0]}px;--d:${r * 0.9 + 0.25}s`} />
+            <span class="hb-chip hb-fill" style={`width:${c.right[1]}px;--d:${r * 0.9 + 0.7}s`} />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .hero-backdrop {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: none;
+    pointer-events: none;
+    /* fade the whole grid toward the edges so text stays readable */
+    -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, rgb(0 0 0 / 0.9), transparent 78%);
+    mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, rgb(0 0 0 / 0.9), transparent 78%);
+  }
+  @media (min-width: 768px) {
+    .hero-backdrop {
+      display: block;
+    }
+  }
+  .hb-grid {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: min(1080px, 92vw);
+    transform: translate(-50%, -50%) rotate(-2deg);
+    filter: blur(1.5px);
+    opacity: 0.5;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hb-grid {
+      animation: hb-pan 70s linear infinite alternate;
+    }
+  }
+  @keyframes hb-pan {
+    from {
+      transform: translate(-52%, -51%) rotate(-2deg);
+    }
+    to {
+      transform: translate(-48%, -49%) rotate(-2deg);
+    }
+  }
+  .hb-row {
+    display: grid;
+    grid-template-columns: 64px 1fr 1fr;
+    gap: 14px;
+    padding: 11px 0;
+    border-bottom: 1px solid rgb(26 35 50 / 0.06);
+  }
+  .hb-day {
+    height: 9px;
+    width: 34px;
+    border-radius: 5px;
+    background: rgb(26 35 50 / 0.07);
+    align-self: center;
+  }
+  .hb-cell {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-left: 1px solid rgb(26 35 50 / 0.05);
+    padding-left: 14px;
+  }
+  .hb-chip {
+    height: 13px;
+    border-radius: 7px;
+    background: rgb(26 35 50 / 0.08);
+  }
+  .hb-green {
+    background: rgb(45 90 74 / 0.13);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hb-fill {
+      opacity: 0;
+      transform: scale(0.9);
+      animation: hb-pop 14s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+      animation-delay: var(--d, 0s);
+    }
+  }
+  @keyframes hb-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    4% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    78% {
+      opacity: 1;
+    }
+    88%,
+    100% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+  }
+</style>

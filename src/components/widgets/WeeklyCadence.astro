@@ -1,6 +1,6 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import Headline from '~/components/ui/Headline.astro';
+import EditorialHeader from '~/components/ui/EditorialHeader.astro';
 import type { Widget } from '~/types';
 
 type Props = Widget;
@@ -32,13 +32,13 @@ const steps = [
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
-  <Headline title={title} classes={{ title: 'text-3xl sm:text-4xl text-center' }} />
+  <EditorialHeader number="04" tagline="How a week runs" title={title} />
 
-  <div class="mx-auto mt-12 max-w-3xl space-y-10">
+  <div class="mx-auto max-w-4xl space-y-10" data-reveal-group>
     {
       steps.map((step, index) => (
-        <div class={`flex items-start gap-6 ${index < steps.length - 1 ? 'border-b border-hairline pb-10' : ''}`}>
-          <span class="flex w-16 h-16 shrink-0 items-center justify-center rounded-xl bg-primary text-2xl font-bold text-white">
+        <div class={`flex items-start gap-8 ${index < steps.length - 1 ? 'border-b border-hairline pb-10' : ''}`}>
+          <span class="shrink-0 font-heading text-5xl sm:text-6xl leading-none text-primary/30 select-none w-20">
             {step.number}
           </span>
           <div class="flex-1">

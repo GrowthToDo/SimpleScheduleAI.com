@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import SchemaOrg from '~/components/common/SchemaOrg.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import HeroScheduleBackdrop from '~/components/widgets/HeroScheduleBackdrop.astro';
 import SchedulerDemoSection from '~/components/widgets/SchedulerDemoSection.astro';
 import SoftwareVsService from '~/components/widgets/SoftwareVsService.astro';
 import BuiltForCAHs from '~/components/widgets/BuiltForCAHs.astro';
@@ -111,6 +112,14 @@ const faqSchema = {
       },
     ]}
   >
+    <Fragment slot="bg">
+      <HeroScheduleBackdrop />
+      <div
+        class="absolute inset-0"
+        style="background: radial-gradient(ellipse 80% 55% at 50% -10%, rgb(45 90 74 / 0.07), transparent 70%);"
+      >
+      </div>
+    </Fragment>
     <Fragment slot="title"> Stop Losing Nurses to <span class="italic">Scheduling Stress</span> </Fragment>
 
     <Fragment slot="subtitle">
@@ -122,7 +131,7 @@ const faqSchema = {
   <!-- Front-loaded credibility + offer strip -->
   <section class="bg-page -mt-8 sm:-mt-12">
     <div class="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
-      <div class="flex flex-col items-center gap-3 text-center">
+      <div class="flex flex-col items-center gap-3 text-center reveal-delay-4" data-reveal>
         <p class="text-xs font-medium uppercase tracking-[0.18em] text-primary">
           Texas Critical Access Hospitals · No IT Setup · First Schedule in Under 2 Weeks
         </p>

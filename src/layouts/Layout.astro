@@ -11,6 +11,7 @@ import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
+import MotionScripts from '~/components/common/MotionScripts.astro';
 
 // View Transitions disabled — caused 465ms forced reflow on mobile (TBT penalty)
 // import { ClientRouter } from 'astro:transitions';
@@ -90,10 +91,11 @@ const orgSchema = {
     <slot name="head" />
   </head>
 
-  <body class="antialiased text-default bg-page tracking-tight">
+  <body class="antialiased text-default bg-page tracking-tight bg-grain">
     <slot />
 
     <BasicScripts />
+    <MotionScripts />
     <script is:inline>
       document.addEventListener('astro:page-load', () => {
         window.dataLayer = window.dataLayer || [];
