@@ -13,7 +13,7 @@ const metadata = {
 const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
 
 const included = [
-  'AI-built schedule every cycle, you review and approve',
+  'AI-built schedule every cycle, checked by our scheduling team, approved by you',
   'All 21 scheduling rules checked automatically (safety, coverage, fairness)',
   'Ranked callout replacements when a nurse calls out or takes leave',
   'Texas overtime and CMS §485.635 documentation maintained for you',
@@ -26,7 +26,7 @@ const tiers = [
     name: 'Core',
     price: '$1,000',
     roster: 'Up to 20 nurses',
-    note: 'For most single-unit Critical Access Hospitals.',
+    note: 'For single-unit Critical Access Hospitals.',
     featured: false,
   },
   {
@@ -73,7 +73,7 @@ const pricingBreadcrumbSchema = {
   <DarkHero
     badge="Flat price. No per-nurse fees."
     title="Simple pricing for Critical Access Hospitals"
-    subtitle="One flat monthly price per facility, set by your roster size. The AI builds the schedule, your manager just approves. No IT setup, no contract to start."
+    subtitle="One flat monthly price per facility, set by your roster size. The AI builds the schedule, our scheduling team checks it, your manager approves. No IT setup, no long-term contract."
     actions={[{ text: 'Book a call with our team', href: ctaLink, variant: 'secondary' }]}
   />
 
@@ -88,9 +88,6 @@ const pricingBreadcrumbSchema = {
             >
               <div class="flex items-center justify-between">
                 <h2 class="text-xl font-bold">{tier.name}</h2>
-                {tier.featured && (
-                  <span class="rounded-full bg-primary px-3 py-1 text-xs font-medium text-white">Most common</span>
-                )}
               </div>
               <p class="mt-4 text-4xl font-bold">
                 {tier.price}
@@ -107,8 +104,10 @@ const pricingBreadcrumbSchema = {
       </div>
 
       <p class="mt-6 text-center text-sm text-muted">
-        Flat per-facility price, billed monthly. No per-nurse fees, no setup fees. Rosters above 40 nurses or
-        multi-facility groups, <a href={ctaLink} class="text-primary underline">talk to us</a>.
+        Flat per-facility price, billed monthly. Every engagement starts with a 60-day pilot on your own roster, billed
+        at the same rate from day one, cancel anytime. No per-nurse fees, no setup fees. If your roster size changes,
+        your plan adjusts at the next billing cycle. Rosters above 40 nurses or multi-facility groups,
+        <a href={ctaLink} class="text-primary underline">talk to us</a>.
       </p>
 
       <!-- What's included -->

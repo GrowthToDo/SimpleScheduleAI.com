@@ -7,7 +7,7 @@ import { Icon } from 'astro-icon/components';
 const metadata = {
   title: 'The Pilot',
   description:
-    'A short, structured pilot for Critical Access Hospitals in Texas. Assisted nurse scheduling that reduces scheduling load while keeping full control and final approval with your team.',
+    'A 60-day pilot of our AI-native nurse scheduling service for Critical Access Hospitals in Texas. AI builds, our scheduling team checks, you approve. Billed at the flat monthly rate from day one.',
 };
 
 const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
@@ -57,7 +57,7 @@ const pilotFaqSchema = {
       name: 'What happens after the pilot?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You continue on a flat monthly plan set by roster size: $1,000 per month for up to 20 nurses, $1,500 for 21 to 40. We review the results together (time saved, overtime, compliance) before you decide.',
+        text: 'At day 60 we review the results together: time saved, overtime, compliance. If it is working, nothing changes and you continue on the same plan. If not, you cancel and walk away. There is no conversion step and no price change.',
       },
     },
     {
@@ -73,7 +73,7 @@ const pilotFaqSchema = {
       name: 'What does onboarding look like?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Onboarding typically takes 3–5 business days. You upload your existing nurse roster via Excel, our team configures your shift rules and Texas compliance requirements, and we deliver your first AI-generated schedule for review. No IT integration or technical setup is required.',
+        text: 'Onboarding typically takes 3 to 5 business days. You upload your existing nurse roster via Excel, our team configures your shift rules and Texas compliance requirements, and we deliver your first AI-generated schedule for review. No IT integration or technical setup is required.',
       },
     },
     {
@@ -81,7 +81,7 @@ const pilotFaqSchema = {
       name: 'What does the service cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A flat monthly price per facility by roster size: $1,000 per month for up to 20 nurses, $1,500 for 21 to 40. No per-nurse fees, no setup fees, and no long-term contract to start.',
+        text: 'A flat monthly price per facility by roster size: $1,000 per month for up to 20 nurses, $1,500 for 21 to 40. The pilot is billed at the same rate from day one; there is no separate pilot fee, no per-nurse fees, no setup fees, and no long-term contract.',
       },
     },
   ],
@@ -94,7 +94,7 @@ const pilotFaqSchema = {
   <DarkHero
     badge="Flat monthly price. No IT setup."
     title="Start with a pilot on your own roster"
-    subtitle="See what scheduling looks like when you are not building it from scratch. You keep full control. No IT setup. Flat monthly pricing once you continue."
+    subtitle="See what scheduling looks like when you are not building it from scratch. You keep full control. No IT setup. Billed at the same flat monthly rate from day one, cancel anytime."
     actions={[
       { text: 'Get your first schedule', href: '/contact', variant: 'primary' },
       { text: 'Book a call with our team', href: ctaLink, variant: 'secondary' },
@@ -219,7 +219,7 @@ const pilotFaqSchema = {
             >01</span
           >
           <div>
-            <h3 class="text-xl font-semibold">Initial setup: Week 1</h3>
+            <h3 class="text-xl font-semibold">Initial setup: days 1 to 5</h3>
             <p class="mt-3 text-muted">
               We learn how scheduling currently works in your hospital, including rules, constraints, and pain points.
               You send us your staff roster and we configure everything.
@@ -232,7 +232,7 @@ const pilotFaqSchema = {
             >02</span
           >
           <div>
-            <h3 class="text-xl font-semibold">Weekly delivery cadence: Weeks 2 to 8</h3>
+            <h3 class="text-xl font-semibold">Weekly delivery: week 2 onward</h3>
             <p class="mt-3 text-muted">
               Spend 10 to 15 minutes sending your inputs. Get back a compliant, post-ready schedule every Thursday 3pm,
               nothing left for you to rebuild.
@@ -248,7 +248,7 @@ const pilotFaqSchema = {
             <h3 class="text-xl font-semibold">Strategic review: Day 60</h3>
             <p class="mt-3 text-muted">
               We sit down for a strategic review: what changed, what the numbers show, and where you want to take it. If
-              it is working and you want to continue, you move to a flat monthly plan by roster size.
+              it is working, nothing changes: you continue on the same flat monthly plan. If not, cancel and walk away.
             </p>
           </div>
         </div>
@@ -282,14 +282,15 @@ const pilotFaqSchema = {
             </li>
           </ul>
           <p class="mt-6 text-gray-400">
-            It is a structured collaboration to see whether assisted scheduling reduces effort and stress for your team.
+            It is a structured collaboration to see whether the service reduces effort and stress for your team.
           </p>
         </div>
 
         <div class="rounded-2xl border border-gray-700 bg-slate-900 dark:bg-black p-8">
           <h2 class="text-2xl font-bold text-white">Pricing and obligation</h2>
           <p class="mt-4 text-gray-300">
-            Flat monthly price by roster size: $1,000 up to 20 nurses, $1,500 for 21 to 40.
+            Flat monthly price by roster size: $1,000 up to 20 nurses, $1,500 for 21 to 40. The pilot is billed at the
+            same rate from day one.
           </p>
           <p class="mt-4 text-gray-300">
             No per-nurse fees, no setup fees, and no long-term contract to start. If it does not deliver value, you walk

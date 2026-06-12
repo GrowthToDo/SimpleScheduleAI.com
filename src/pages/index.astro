@@ -15,9 +15,9 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'SimpleScheduleAI — Nurse Scheduling for Critical Access Hospitals',
+  title: 'SimpleScheduleAI | Nurse Scheduling for Critical Access Hospitals',
   description:
-    'Scheduling stress drives your best nurses out and burns your budget. You get a compliant, post-ready schedule every week, callout coverage handled.',
+    'Scheduling stress drives your best nurses out and burns your budget. You get a compliant, post-ready schedule every cycle, callout coverage handled.',
   ignoreTitleTemplate: true,
 };
 
@@ -71,7 +71,7 @@ const faqSchema = {
       name: 'What if we already have a scheduling system?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Most of our pilots come from teams using spreadsheets or a basic tool that doesn't enforce rules. We don't replace your EMR. We deliver the schedule so you don't have to build it.",
+        text: "We are built to replace spreadsheets or a basic tool that doesn't enforce rules. We don't replace your EMR. We deliver the schedule so you don't have to build it.",
       },
     },
     {
@@ -87,7 +87,7 @@ const faqSchema = {
       name: "Who do we contact when there's a call-out at 2AM?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "The system auto-generates replacement candidates as soon as a call-out is logged. You get the top 3 with reasons. One click to approve. You don't have to call us, but we're reachable if something unusual comes up.",
+        text: "Log the callout with us and the system generates the top 3 replacement candidates with reasons, checked by our scheduling team. You pick, we update the schedule and send the corrected copy. No phone tree, and we're reachable if something unusual comes up.",
       },
     },
   ],
@@ -114,8 +114,8 @@ const faqSchema = {
     <Fragment slot="title"> Stop Losing Nurses to Scheduling Stress </Fragment>
 
     <Fragment slot="subtitle">
-      An AI-native nurse scheduling service for Texas Critical Access Hospitals. Send a roster, get back a finished,
-      compliant schedule. No IT.
+      An AI-native nurse scheduling service for Texas Critical Access Hospitals. AI builds your schedule, our scheduling
+      team checks it, you approve. No IT.
     </Fragment>
   </Hero>
 
@@ -196,7 +196,7 @@ const faqSchema = {
       {
         title: 'What if we already have a scheduling system?',
         description:
-          "Most of our pilots come from teams using spreadsheets or a basic tool that doesn't enforce rules. We don't replace your EMR. We deliver the schedule so you don't have to build it.",
+          "We are built to replace spreadsheets or a basic tool that doesn't enforce rules. We don't replace your EMR. We deliver the schedule so you don't have to build it.",
       },
       {
         title: 'How do you handle our unit-specific rules?',
@@ -206,7 +206,7 @@ const faqSchema = {
       {
         title: "Who do we contact when there's a call-out at 2AM?",
         description:
-          "The system auto-generates replacement candidates as soon as a call-out is logged. You get the top 3 with reasons. One click to approve. You don't have to call us, but we're reachable if something unusual comes up.",
+          "Log the callout with us and the system generates the top 3 replacement candidates with reasons, checked by our scheduling team. You pick, we update the schedule and send the corrected copy. No phone tree, and we're reachable if something unusual comes up.",
       },
     ]}
   />

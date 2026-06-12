@@ -34,15 +34,21 @@ const orgSchema = {
   logo: 'https://simplescheduleai.com/images/logo.png',
   description: 'AI-native nurse scheduling service for critical access hospitals in Texas.',
   foundingDate: '2024',
-  founder: {
-    '@type': 'Person',
-    '@id': 'https://simplescheduleai.com/about/pradeep-pandey#person',
-    name: 'Pradeep Pandey',
-  },
+  founder: [
+    {
+      '@type': 'Person',
+      '@id': 'https://simplescheduleai.com/about/pradeep-pandey#person',
+      name: 'Pradeep Pandey',
+    },
+    {
+      '@type': 'Person',
+      name: 'Gautham',
+    },
+  ],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
-    email: 'hello@simplescheduleai.com',
+    email: 'support@simplescheduleai.com',
   },
   sameAs: [
     'https://www.linkedin.com/company/simplescheduleai',
