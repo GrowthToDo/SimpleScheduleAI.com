@@ -1,7 +1,7 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-06-14T00:00:00Z
-updateDate: 2026-04-30T00:00:00Z
+updateDate: 2026-06-14T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Nurse Scheduling Software Pricing: 2026 Cost Guide'
 excerpt: >
@@ -19,6 +19,10 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/nurse-scheduling-software-pricing'
 ---
 
+The list price says $3 per nurse per month. The first invoice says $18,000. Somewhere between the demo and the contract, nurse scheduling software for a Critical Access Hospital stops being a per-unit line item and becomes implementation fees, integration charges, and support tiers the salesperson never mentioned.
+
+This guide breaks down how these platforms are actually priced, what a 25-bed CAH realistically pays in year one, the costs that never make it into the sales conversation, and how to run the only number that matters: total cost of ownership against the overtime it removes.
+
 ## Key Takeaways
 
 - Most enterprise nurse scheduling platforms do not publish pricing and require 12 to 24-month contracts, which makes vendor comparison difficult for administrators evaluating on a budget.
@@ -29,17 +33,17 @@ metadata:
 
 ## Table of Contents
 
-- [How Nurse Scheduling Software Is Typically Priced](#how-software-is-priced)
-- [What Does Nurse Scheduling Software Cost for a 25-Bed Hospital?](#cost-for-25-bed-hospital)
-- [What Enterprise Platforms Actually Cost](#what-enterprise-platforms-cost)
-- [Hidden Costs Most Vendors Do Not Advertise](#hidden-costs)
-- [How to Calculate Your ROI Before Buying](#how-to-calculate-roi)
-- [How SimpleScheduleAI Is Priced](#how-simplescheduleai-is-priced)
+- [How Nurse Scheduling Software Is Typically Priced?](#how-nurse-scheduling-software-is-typically-priced)
+- [What Does Nurse Scheduling Software Cost for a 25-Bed Hospital?](#what-does-nurse-scheduling-software-cost-for-a-25-bed-hospital)
+- [What Enterprise Platforms Actually Cost?](#what-enterprise-platforms-actually-cost)
+- [What Are the Hidden Costs Most Vendors Do Not Advertise?](#what-are-the-hidden-costs-most-vendors-do-not-advertise)
+- [How to Calculate Your ROI Before Buying?](#how-to-calculate-your-roi-before-buying)
+- [How SimpleScheduleAI Is Priced?](#how-simplescheduleai-is-priced)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 ## How Nurse Scheduling Software Is Typically Priced?
 
-Nurse scheduling software uses four main pricing models. Each model creates different total costs for a small hospital, and vendors frequently mix them.
+[Nurse scheduling software](/nurse-scheduling-software) uses four main pricing models. Each model creates different total costs for a small hospital, and vendors frequently mix them.
 
 **Per-nurse-per-month (PNPM):** The most common SaaS model. A hospital with 25 nurses at $5/nurse/month pays $125/month or $1,500/year before any add-ons. At $8/nurse/month, that is $200/month or $2,400/year. PNPM looks affordable at a per-unit level but scales with headcount, which means CAHs with unusually high per-diem or float staff may pay more than the base nurse count suggests.
 
@@ -49,47 +53,40 @@ Nurse scheduling software uses four main pricing models. Each model creates diff
 
 **Managed service pricing:** A managed service (like SimpleScheduleAI) includes scheduling software plus human support for configuration, schedule review, and callout management. Managed service pricing is typically higher per unit than pure SaaS but lower in total cost of ownership because implementation and ongoing support are included.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-label="Comparison of four nurse scheduling pricing models showing base cost, typical first-year total, and CAH fit">
-  <rect width="720" height="280" fill="#f8fafc" rx="8"/>
-  <text x="360" y="28" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle">Nurse Scheduling Software Pricing Models: What They Look Like at 25 Nurses</text>
-  <rect x="30" y="50" width="155" height="36" rx="4" fill="#e2e8f0"/>
-  <text x="108" y="72" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Pricing Model</text>
-  <rect x="192" y="50" width="118" height="36" rx="4" fill="#e2e8f0"/>
-  <text x="251" y="72" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Monthly Cost</text>
-  <rect x="317" y="50" width="118" height="36" rx="4" fill="#e2e8f0"/>
-  <text x="376" y="65" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">First-Year Total</text>
-  <text x="376" y="80" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">(with typical setup)</text>
-  <rect x="442" y="50" width="248" height="36" rx="4" fill="#e2e8f0"/>
-  <text x="566" y="72" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">CAH Fit</text>
-  <rect x="30" y="94" width="155" height="40" rx="3" fill="#f1f5f9"/>
-  <text x="108" y="119" font-family="system-ui, sans-serif" font-size="11" fill="#334155" text-anchor="middle">PNPM ($2-$8)</text>
-  <rect x="192" y="94" width="118" height="40" rx="3" fill="#f1f5f9"/>
-  <text x="251" y="119" font-family="system-ui, sans-serif" font-size="11" fill="#334155" text-anchor="middle">$50-$200</text>
-  <rect x="317" y="94" width="118" height="40" rx="3" fill="#f1f5f9"/>
-  <text x="376" y="119" font-family="system-ui, sans-serif" font-size="11" fill="#334155" text-anchor="middle">$600-$15,000</text>
-  <rect x="442" y="94" width="248" height="40" rx="3" fill="#f0fdf4"/>
-  <text x="566" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#15803d" text-anchor="middle">Good if setup is included;</text>
-  <text x="566" y="127" font-family="system-ui, sans-serif" font-size="10" fill="#15803d" text-anchor="middle">check implementation cost</text>
-  <rect x="30" y="142" width="155" height="40" rx="3" fill="#f1f5f9"/>
-  <text x="108" y="167" font-family="system-ui, sans-serif" font-size="11" fill="#334155" text-anchor="middle">Annual flat fee</text>
-  <rect x="192" y="142" width="118" height="40" rx="3" fill="#f1f5f9"/>
-  <text x="251" y="167" font-family="system-ui, sans-serif" font-size="11" fill="#334155" text-anchor="middle">$667-$2,500</text>
-  <rect x="317" y="142" width="118" height="40" rx="3" fill="#f1f5f9"/>
-  <text x="376" y="167" font-family="system-ui, sans-serif" font-size="11" fill="#334155" text-anchor="middle">$10,000-$35,000</text>
-  <rect x="442" y="142" width="248" height="40" rx="3" fill="#fef2f2"/>
-  <text x="566" y="160" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626" text-anchor="middle">Often priced for larger hospitals;</text>
-  <text x="566" y="175" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626" text-anchor="middle">CAHs subsidize enterprise buyers</text>
-  <rect x="30" y="190" width="155" height="40" rx="3" fill="#f1f5f9"/>
-  <text x="108" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#334155" text-anchor="middle">Per-module</text>
-  <rect x="192" y="190" width="118" height="40" rx="3" fill="#f1f5f9"/>
-  <text x="251" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#334155" text-anchor="middle">$300-$500</text>
-  <rect x="317" y="190" width="118" height="40" rx="3" fill="#f1f5f9"/>
-  <text x="376" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#334155" text-anchor="middle">$20,000-$50,000+</text>
-  <rect x="442" y="190" width="248" height="40" rx="3" fill="#fef2f2"/>
-  <text x="566" y="208" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626" text-anchor="middle">Enterprise platforms; requires IT</text>
-  <text x="566" y="223" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626" text-anchor="middle">team and HR department</text>
-  <text x="360" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Estimates based on published pricing where available and reported figures from CAH administrators. Actual costs vary by contract terms.</text>
-</svg>
+<figure class="not-prose my-8">
+  <figcaption class="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3 text-center">Nurse Scheduling Software Pricing Models: What They Look Like at 25 Nurses</figcaption>
+  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-800">
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:22%">Pricing Model</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Monthly Cost</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:22%">First-Year Total (with typical setup)</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:38%">Notes for a CAH</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">PNPM ($2-$8)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">$50-$200</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">$600-$15,000</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">Workable if setup is included; check the implementation cost first</td>
+      </tr>
+      <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Annual flat fee</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">$667-$2,500</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">$10,000-$35,000</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">Often priced for larger hospitals; a CAH pays the same rate as a 100-bed facility</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Per-module</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">$300-$500</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">$20,000-$50,000+</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">Enterprise platforms; assumes an IT team and HR department a CAH does not have</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 text-center">Estimates based on published pricing where available and reported figures from CAH administrators. Actual costs vary by contract terms.</p>
+</figure>
 
 ## What Does Nurse Scheduling Software Cost for a 25-Bed Hospital?
 
@@ -98,7 +95,7 @@ For a Critical Access Hospital with 20-30 nurses, the realistic software-only co
 The realistic total first-year cost including implementation:
 
 - **Entry-level tools (Deputy, When I Work):** $600-$2,500 total first year. These are general employee scheduling tools, not healthcare-specific. They do not handle nursing certifications, patient-to-nurse ratios, or Texas overtime compliance natively.
-- **Mid-tier healthcare scheduling platforms (Aladtec, OnShift):** $5,000-$15,000 total first year. Healthcare-specific but built for larger organizations. CAH administrators consistently report these tools are more complex than their workflows require.
+- **Mid-tier healthcare scheduling platforms (Aladtec, OnShift):** $5,000-$15,000 total first year. Healthcare-specific but built for larger organizations, with more configuration depth than a single dual-role CAH manager typically needs.
 - **Enterprise platforms (UKG, Infor, Kronos):** $20,000-$75,000+ total first year. Designed for 200+ bed hospitals with dedicated HR and IT teams. Not appropriate for CAHs without that infrastructure.
 - **SimpleScheduleAI (managed service):** Free 60-day pilot, then pricing based on hospital size. No implementation fee; setup included in the managed service.
 
@@ -134,47 +131,66 @@ The line items that rarely appear in the sales conversation:
 
 **Contract terms and exit costs:** Enterprise platforms frequently require 2-3 year contracts with automatic renewal clauses and penalties for early termination. Read the contract exit terms before signing. A platform that is wrong for your hospital is much more costly when leaving requires paying 6 months of remaining fees.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-label="True first-year cost breakdown showing software license plus implementation plus training plus integration versus the advertised price">
-  <rect width="720" height="240" fill="#f8fafc" rx="8"/>
-  <text x="360" y="28" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle">True First-Year Cost vs. Advertised Price (Mid-Tier Healthcare Platform, 25 Nurses)</text>
-  <rect x="50" y="50" width="120" height="140" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="110" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="middle">Software: $3,000</text>
-  <rect x="185" y="80" width="120" height="110" rx="6" fill="#fef9c3" stroke="#fde68a" stroke-width="1.5"/>
-  <text x="245" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#a16207" text-anchor="middle">Setup: $2,500</text>
-  <rect x="320" y="110" width="120" height="80" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
-  <text x="380" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#dc2626" text-anchor="middle">Training: $1,500</text>
-  <rect x="455" y="130" width="120" height="60" rx="6" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="1.5"/>
-  <text x="515" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#7c3aed" text-anchor="middle">Support: $1,000</text>
-  <line x1="50" y1="195" x2="615" y2="195" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="110" y="215" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Advertised</text>
-  <text x="245" y="215" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Implementation</text>
-  <text x="380" y="215" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Time cost</text>
-  <text x="515" y="215" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Support upgrade</text>
-  <text x="630" y="140" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e293b" text-anchor="middle">Total:</text>
-  <text x="630" y="160" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#dc2626" text-anchor="middle">$8,000</text>
-  <text x="630" y="178" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">vs. $3,000</text>
-  <text x="630" y="192" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">advertised</text>
-</svg>
+<figure class="not-prose my-8 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 px-6 py-6">
+  <figcaption class="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-4 text-center">True First-Year Cost vs. Advertised Price (Mid-Tier Healthcare Platform, 25 Nurses)</figcaption>
+  <div class="space-y-2">
+    <div class="flex items-center justify-between rounded-md bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 px-4 py-2">
+      <span class="text-sm font-medium text-blue-800 dark:text-blue-300">Software license (advertised)</span>
+      <span class="text-sm font-semibold text-blue-800 dark:text-blue-300">$3,000</span>
+    </div>
+    <div class="flex items-center justify-between rounded-md bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-800 px-4 py-2">
+      <span class="text-sm font-medium text-amber-800 dark:text-amber-300">Implementation / setup</span>
+      <span class="text-sm font-semibold text-amber-800 dark:text-amber-300">$2,500</span>
+    </div>
+    <div class="flex items-center justify-between rounded-md bg-rose-50 dark:bg-rose-900/30 border border-rose-200 dark:border-rose-800 px-4 py-2">
+      <span class="text-sm font-medium text-rose-800 dark:text-rose-300">Training (manager time cost)</span>
+      <span class="text-sm font-semibold text-rose-800 dark:text-rose-300">$1,500</span>
+    </div>
+    <div class="flex items-center justify-between rounded-md bg-purple-50 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-800 px-4 py-2">
+      <span class="text-sm font-medium text-purple-800 dark:text-purple-300">Support tier upgrade</span>
+      <span class="text-sm font-semibold text-purple-800 dark:text-purple-300">$1,000</span>
+    </div>
+    <div class="flex items-center justify-between rounded-md bg-slate-200 dark:bg-slate-700 px-4 py-3 mt-3">
+      <span class="text-sm font-bold text-slate-900 dark:text-slate-100">True first-year total</span>
+      <span class="text-base font-bold text-rose-700 dark:text-rose-400">$8,000 <span class="text-xs font-normal text-slate-500 dark:text-slate-400">vs. $3,000 advertised</span></span>
+    </div>
+  </div>
+</figure>
 
 ## How to Calculate Your ROI Before Buying?
 
 The calculation that matters is whether the total cost of software ownership is less than the overtime cost reduction. For a CAH, the overtime math is straightforward.
 
-According to [HRSA rural health research](https://www.hrsa.gov/rural-health/about-us/definition/index.html), CAHs typically employ 20-35 nurses at an average loaded rate (wage plus benefits) of $55-$70/hour. At $60/hour loaded, a nurse working 4 hours of unplanned overtime per week costs $240/week in premium pay (assuming the overtime premium is $20/hour above base). Across 5 nurses drawing regular overtime, that is $1,200/week or $62,400/year in overtime cost attributable to scheduling inefficiency.
+A [Critical Access Hospital](/critical-access-hospital-scheduling) typically employs 20-35 nurses. Using an illustrative loaded rate (wage plus benefits) of $55-$70/hour, a nurse working 4 hours of unplanned overtime per week at $60/hour loaded costs $240/week in premium pay (assuming the overtime premium is $20/hour above base). Across 5 nurses drawing regular overtime, that is $1,200/week or $62,400/year in overtime cost attributable to scheduling inefficiency.
 
 Scheduling software that reduces unplanned overtime by 20% saves approximately $12,500/year at that hospital. Software that costs $8,000/year has a marginal payback in that scenario. Software that costs $3,000/year has clear positive ROI.
 
-The baseline for your CAH: look at your last 6 months of payroll data and calculate how many overtime hours were attributable to last-minute callout coverage and scheduling gaps versus overtime driven by patient volume. The scheduling-attributable overtime is your target for reduction.
+The baseline for your CAH: look at your last 6 months of payroll data and calculate how many overtime hours were attributable to last-minute callout coverage and scheduling gaps versus overtime driven by patient volume. The scheduling-attributable overtime is your target for reduction. For a faster version of this math against your own payroll numbers, run the [ROI calculator](/roi).
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The cheapest license on the quote sheet is almost never the cheapest tool for a Critical Access Hospital. The number that decides whether a platform is worth it is total cost of ownership against the overtime it actually removes, and that number is dominated by two things vendors keep off the first call: implementation fees and the hours your dual-role manager spends configuring and babysitting the system. Ask for the all-in first-year figure including setup before you compare anything, and weigh it against your real scheduling-attributable overtime, not the per-nurse sticker price.
+  </p>
+</div>
 
 ## How SimpleScheduleAI Is Priced?
 
-SimpleScheduleAI offers a free 60-day pilot for critical access hospitals in Texas before any payment is required. The pilot includes full scheduling service, callout coverage shortlists, and Texas compliance tracking for your specific shift rules and nurse roster. No implementation fee. No IT integration required. Setup takes 3-5 business days via Excel roster upload.
+SimpleScheduleAI offers a free 60-day pilot for critical access hospitals in Texas before any payment is required. The pilot includes full scheduling service, callout coverage shortlists, and Texas compliance tracking for your specific shift rules and nurse roster. No implementation fee. No IT integration required. Setup takes 3-5 business days via Excel roster upload. See [how it works](/how-it-works) for the full build-and-approve flow.
 
-After the pilot, pricing is based on hospital size. Pricing is not published on the website because it varies by headcount and service tier; contact us for a quote if you want to evaluate cost against your current overtime spend before the pilot ends.
+After the pilot, pricing is flat by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. That structure means a CAH knows its full annual cost before the pilot ends, with no implementation invoice waiting on the other side.
 
 SimpleScheduleAI is not appropriate for large health systems, multi-site organizations, or hospitals requiring EHR integration. For [CAHs with 25 beds or fewer](/critical-access-hospital-scheduling) and no IT department, it is the only purpose-built managed scheduling service currently in pilot in Texas.
 
 For hospitals evaluating alternatives, the [nurse scheduling software comparison guide](/blog/best-nurse-scheduling-software-2026) covers 8 platforms with detailed breakdowns of pricing models, CAH suitability, and implementation timelines.
+
+## What to Do This Week
+
+1. Pull your last 6 months of payroll and separate scheduling-attributable overtime (callout coverage, last-minute gaps) from volume-driven overtime. That dollar figure is the budget any tool has to beat, and the baseline for the [ROI calculation](/roi).
+2. For every vendor on your shortlist, ask one direct question before the demo: what is the all-in first-year cost including implementation, training, and integration? Do not accept a per-nurse number alone.
+3. Ask each vendor for the contract exit terms in writing, specifically auto-renewal clauses and early-termination penalties, before you sit through a pitch.
+4. Rule out any platform that assumes an IT department or HR team to run it. For a CAH with no IT and a dual-role manager, that is a cost you cannot staff regardless of the license price.
+5. If the build-and-callout burden is the real drain, [apply for a SimpleScheduleAI pilot](/pilot) and compare a flat $1,000-$1,500/month managed cost against your actual overtime spend before signing anything.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
@@ -212,7 +228,15 @@ By monthly cost, entry-level general tools like Deputy or When I Work start belo
 
 **Q: Do nurse scheduling software vendors negotiate pricing?**
 
-Yes. Enterprise vendors expect negotiation, particularly on implementation fees, training packages, and contract length. For CAHs, the most effective leverage points are: requesting removal of implementation fees in exchange for a shorter trial period, negotiating a monthly billing option in place of an annual prepay, and requesting a 30-day exit clause in the first contract year. Do not sign multi-year contracts without a performance exit clause.
+Yes. Enterprise vendors expect negotiation, particularly on implementation fees, training packages, and contract length. For CAHs, the strongest negotiating positions are: requesting removal of implementation fees in exchange for a shorter trial period, negotiating a monthly billing option in place of an annual prepay, and requesting a 30-day exit clause in the first contract year. Do not sign multi-year contracts without a performance exit clause.
+
+## A Note on Sources
+
+1. FLSA healthcare overtime thresholds. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+2. CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+3. Rural health and CAH workforce context. [HRSA Rural Health](https://www.hrsa.gov/rural-health).
+
+**Methodology note:** Pricing figures for enterprise and mid-tier platforms are compiled from published pricing where vendors disclose it and from administrator-reported figures where they do not; most enterprise vendors do not publish rates. The loaded wage rate ($55-$70/hour), nurse headcount (20-35), overtime premium ($20/hour above base), and 20% overtime-reduction figure used in the ROI section are illustrative assumptions for modeling, not measured results. Run the math against your own payroll data before relying on it. Vendor pricing, contract terms, and capabilities change over time; confirm current figures directly with each vendor before deciding.
 
 ---
 

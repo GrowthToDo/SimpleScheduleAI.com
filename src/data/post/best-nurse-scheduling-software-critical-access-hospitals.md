@@ -54,7 +54,7 @@ For a Critical Access Hospital, the best [nurse scheduling software](/nurse-sche
 
 ## How to Evaluate Nurse Scheduling Software for a Critical Access Hospital?
 
-Evaluating scheduling software for a CAH starts with three constraints that a larger hospital does not share: there is no IT department to own the configuration, the nurse manager is clinically active and cannot absorb a full administrative system, and there is no float pool, so every callout is a coverage emergency. Score tools on those three first. Feature breadth comes later, if at all.
+Evaluating scheduling software for a CAH starts with three constraints that a larger hospital does not share: there is no IT department to own the configuration, the nurse manager is clinically active and cannot absorb a full administrative system, and there is no float pool, so a nurse calling out at 2 a.m. is not a staffing inconvenience, it is a coverage emergency that can drop the unit below the §485.635 staffing plan before morning rounds. Score tools on those three first. Feature breadth comes later, if at all.
 
 The constraints below decide adoption at a CAH long before any feature does.
 
@@ -192,7 +192,7 @@ Aladtec, now part of TCP Software, holds 4.3/5 on G2 (97 reviews) and 4.6/5 on C
 
 One caveat matters for a hospital audience. The Capterra review base skews heavily toward fire, EMS, and law enforcement users, and the most recent hospital-nursing context reviews are several years old, with the most recent dated October 2020. Treat the hospital-specific signal as thin and request CAH-scale nursing references from the vendor directly.
 
-**Best for:** Small hospitals and EMS agencies that want proven self-serve scheduling with a relatively low implementation burden.
+**Best for:** Small Critical Access Hospitals and rural healthcare facilities that want proven self-serve scheduling without heavy IT involvement. Strongest fit where a tech-comfortable administrator can own the configuration.
 
 **Key advantages:**
 
@@ -339,6 +339,8 @@ The positioning is the differentiator for a CAH, and it points away from one. sy
   >
   > Hanna N., RN, Hospital & Health Care, July 15, 2024, Capterra
 
+  That quote comes from an RN in a large hospital system, not a 25-bed CAH. The "empowers employees" framing reflects a setting where nurses log into the scheduling system themselves; at a Critical Access Hospital, that role usually belongs to the dual-role nurse manager who is also covering the shift.
+
 **Key limitations:**
 
 - Reviewer roles and references are enterprise and health-system oriented, with no documented CAH, rural, or single-25-bed reference customers.
@@ -423,7 +425,7 @@ UKG is engineered for 200-plus-bed facilities with dedicated IT departments and 
 
 <img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/ScheduleAnywhere-TCPHumanitySchedule.webp" alt="ScheduleAnywhere, now redirecting to TCP Humanity Schedule" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-ScheduleAnywhere, now owned by TCP Software after its acquisition from Atlas Business Solutions, holds 4.6/5 on Capterra (61 reviews). Its own site, scheduleanywhere.com, now redirects to TCP Humanity Schedule, so the standalone ScheduleAnywhere brand appears to be folding into TCP's Humanity product line. Confirm which product you would actually be buying before committing. It is an online employee and shift-scheduling tool with a dedicated nurse and healthcare sub-page, and the vendor claims skills, certification, and credential tracking with expiration alerts. RN reviewers describe straightforward shift viewing and editing.
+ScheduleAnywhere, now owned by TCP Software after its acquisition from Atlas Business Solutions, holds 4.6/5 on Capterra (61 reviews). Its own site, scheduleanywhere.com, now redirects to TCP Humanity Schedule, so the standalone ScheduleAnywhere brand appears to be folding into TCP's Humanity product line. Confirm which product you would actually be buying before committing. It is a general shift-scheduling tool for any industry with a dedicated nurse and healthcare sub-page, and the vendor claims skills, certification, and credential tracking with expiration alerts. RN reviewers describe straightforward shift viewing and editing.
 
 > "How easy it was to view and edit shifts!" [Pros]
 >
@@ -496,12 +498,12 @@ CronShift is a healthcare workforce management platform that describes itself as
 
 Two facts shape the CAH read. First, Payroll Based Journal reporting is a [CMS requirement for long-term care facilities](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission), and cross-facility pooling is a multi-site construct; a Critical Access Hospital does not file PBJ, and the site documents no CAH or rural focus. Second, there are no third-party reviews anywhere as of 2026-06-12: no Capterra listing, no G2 listing, no named customers, and no attributed testimonials. Site metrics such as "100+ Healthcare Providers" are vendor claims without independent verification.
 
-**Best for:** Multi-facility and long-term care operators, based on the vendor's own feature positioning.
+**Best for:** Multi-facility long-term care organizations and SNF operators, based on the vendor's own feature positioning, not a standalone Critical Access Hospital.
 
 **Key advantages:**
 
 - Healthcare-specific feature set documented on the vendor site: PPD/PRD forecasting, mobile shift swaps, CMS staffing reports.
-- Cross-facility staff pooling and partner agency integration for operators running several sites.
+- Cross-facility staff pooling and partner agency integration for organizations running several sites, constructs a 25-bed single-site CAH does not have.
 
 **Key limitations:**
 
@@ -528,7 +530,7 @@ This is the whole point of the guide, so start with the build burden. If your nu
 
 **25-75 beds (Small Community Hospital):**
 
-You have enough complexity to justify a dedicated platform and a bit more administrative capacity to run one.
+You are past the CAH threshold and the constraints shift. You likely have at least one dedicated administrative role, which opens self-serve platforms that would bury a dual-role CAH manager.
 
 - **Best options:** ShiftWizard for a nurse-native platform, or Aladtec if you want lower setup burden.
 - **Also consider:** QGenda if you need physician scheduling alongside nursing.
@@ -536,7 +538,7 @@ You have enough complexity to justify a dedicated platform and a bit more admini
 
 **75-200 beds (Community Hospital):**
 
-Analytics, credential management, and integration depth start to earn their cost at this scale.
+At this scale, the CAH guide is the wrong document. Analytics, credential management, and multi-unit integration start to earn their cost, and you have the IT capacity to deploy them.
 
 - **Best options:** symplr Smart Square or QGenda.
 - **Less likely to fit:** SimpleScheduleAI, which is built for CAHs under 50 beds, and NurseGrid as a primary platform.
@@ -601,7 +603,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for large multi-hos
 
 ## What to Do This Week
 
-1. Confirm your bed count and CAH status, then write down your three constraints: no IT department, a dual-role nurse manager, and no float pool. That list rules out the enterprise platforms in this guide on its own.
+1. Write down your three operating constraints: no IT department, a dual-role nurse manager who is also clinical, and no float pool. Those three facts rule out the enterprise platforms in this guide before you open a single demo.
 2. Pull your last CMS §485.635 staffing record and time how long it took to assemble. That number is the documentation burden any tool has to remove, and it is the baseline for the [ROI calculation](/roi).
 3. If you want to keep scheduling in-house, put Aladtec and ShiftWizard side by side and ask each vendor for CAH-scale nursing references and a §485.635 documentation sample.
 4. Ask any vendor on your shortlist one direct question: when a nurse calls out and we have no float pool, what does your system do in the next five minutes?
