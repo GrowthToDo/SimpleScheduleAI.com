@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-06T00:00:00Z
-updateDate: 2026-06-12T00:00:00Z
+updateDate: 2026-06-13T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Critical Access Hospitals (2026)'
 excerpt: >
@@ -154,7 +154,7 @@ Here is how all 10 tools compare on CAH fit before we go deeper. This guide also
   </table>
 </div>
 
-<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 italic">Public Ratings show G2 and Capterra scores where available, with review counts in parentheses; "small sample" marks listings with fewer than 20 reviews. Best For reflects each vendor's own positioning. Setup Time reflects vendor-stated or industry-typical ranges. Pricing reflects publicly available figures only. Ratings and pricing verified 2026-06-06; M7 Health verified 2026-05-16; CronShift verified 2026-06-12. All may have changed since.</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 italic">Public Ratings show G2 and Capterra scores where available, with review counts in parentheses; "small sample" marks listings with fewer than 20 reviews. Best For reflects each vendor's own positioning. Setup Time reflects vendor-stated or industry-typical ranges. Pricing reflects publicly available figures only. Ratings and pricing verified 2026-06-06. All may have changed since.</p>
 
 ## 1. [SimpleScheduleAI](/how-it-works)
 
@@ -465,13 +465,13 @@ For a CAH, two things shape the decision. The vendor credential-tracking claim i
 
 M7 Health, founded in 2022, is an AI-driven nurse scheduling and labor optimization platform built for health systems. Its documented deployments are enterprise-scale: Ochsner Health announced a system-wide rollout across all 47 of its hospitals by the end of 2025, and ScionHealth is implementing it across its enterprise of community and specialty hospitals.
 
-There are no third-party reviews to weigh. The [Capterra listing](https://www.capterra.com/p/10037829/M7-Health/) exists with 0 reviews as of 2026-05-16, and no G2 listing was found. M7 publishes its own results, a 60 percent reduction in administrative scheduling time, up to 40 percent reduction in premium labor spend, and an NPS of 69, but these are M7 marketing claims with no independent corroboration. The strongest public endorsement comes from a customer's own newsroom rather than a review site. In a partnership announcement published as an Ochsner Health news release, the system's CIO said:
+There are no third-party reviews to weigh. The [Capterra listing](https://www.capterra.com/p/10037829/M7-Health/) exists with 0 reviews, and no G2 listing was found. M7 publishes its own results, a 60 percent reduction in administrative scheduling time, up to 40 percent reduction in premium labor spend, and an NPS of 69, but these are M7 marketing claims with no independent corroboration. The strongest public endorsement comes from a customer's own newsroom rather than a review site. In a partnership announcement published as an Ochsner Health news release, the system's CIO said:
 
 > "Ochsner Health chose the M7 health workforce management platform because it seamlessly integrates with our existing systems while addressing one of the most critical challenges in healthcare, staffing and scheduling. M7's innovative approach, combining data-driven insights with a focus on human experience, made it the right choice for our organization."
 >
 > Amy Trainor, System Vice President and Chief Information Officer, Ochsner Health, Ochsner Health news release, approximately February 2026
 
-That statement is partnership PR from a 47-hospital system and should be read as an announcement rather than a product review. The CAH angle is newer: M7 recently published guidance aimed at Critical Access Hospitals and now appears in AI search answers for CAH scheduling queries, while its documented reference customers remain large multi-hospital systems. No documented CAH or standalone-rural reference customers exist as of May 2026.
+That statement is partnership PR from a 47-hospital system and should be read as an announcement rather than a product review. The CAH angle is newer: M7 recently published guidance aimed at Critical Access Hospitals and now appears in AI search answers for CAH scheduling queries, while its documented reference customers remain large multi-hospital systems. No documented CAH or standalone-rural reference customers exist.
 
 **Best for:** Enterprise health systems and academic medical centers that want AI-driven scheduling and labor optimization across many facilities.
 
@@ -482,8 +482,8 @@ That statement is partnership PR from a 47-hospital system and should be read as
 
 **Key limitations:**
 
-- No third-party reviews exist as of May 2026. The Capterra listing has 0 reviews and no G2 listing was found, so there is no independent user signal to weigh against the vendor's claims.
-- Documented reference customers are large multi-hospital systems; no documented Critical Access Hospital or standalone-rural reference customers as of May 2026.
+- No third-party reviews exist. The Capterra listing has 0 reviews and no G2 listing was found, so there is no independent user signal to weigh against the vendor's claims.
+- Documented reference customers are large multi-hospital systems; there are no documented Critical Access Hospital or standalone-rural reference customers.
 - Single-CAH CMS §485.635 documentation fit is not documented in public materials; confirm directly with the vendor.
 
 **Verdict:** A capable enterprise platform now courting the CAH market ahead of documented CAH references. A 25-bed hospital should ask for single-CAH references and CMS documentation samples before committing.
@@ -496,7 +496,7 @@ That statement is partnership PR from a 47-hospital system and should be read as
 
 CronShift is a healthcare workforce management platform that describes itself as "The first all-in-one workforce management platform transforming how healthcare teams work" and as "built by nurses, for nurses." The documented feature set includes an executive dashboard with real-time staffing insight, PPD/PRD-based forecasting, a mobile app for shift requests and swaps, CMS compliance reporting including Daily Nurse Staffing Sheets and PBJ reports, cross-facility staff pooling, and partner agency integration.
 
-Two facts shape the CAH read. First, Payroll Based Journal reporting is a [CMS requirement for long-term care facilities](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission), and cross-facility pooling is a multi-site construct; a Critical Access Hospital does not file PBJ, and the site documents no CAH or rural focus. Second, there are no third-party reviews anywhere as of 2026-06-12: no Capterra listing, no G2 listing, no named customers, and no attributed testimonials. Site metrics such as "100+ Healthcare Providers" are vendor claims without independent verification.
+Two facts shape the CAH read. First, Payroll Based Journal reporting is a [CMS requirement for long-term care facilities](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission), and cross-facility pooling is a multi-site construct; a Critical Access Hospital does not file PBJ, and the site documents no CAH or rural focus. Second, there are no third-party reviews anywhere: no Capterra listing, no G2 listing, no named customers, and no attributed testimonials. Site metrics such as "100+ Healthcare Providers" are vendor claims without independent verification.
 
 **Best for:** Multi-facility long-term care organizations and SNF operators, based on the vendor's own feature positioning, not a standalone Critical Access Hospital.
 
@@ -507,7 +507,7 @@ Two facts shape the CAH read. First, Payroll Based Journal reporting is a [CMS r
 
 **Key limitations:**
 
-- No third-party review listings found on Capterra, G2, or any other aggregator as of June 2026, so there is no independent user signal at all.
+- No third-party review listings found on Capterra, G2, or any other aggregator, so there is no independent user signal at all.
 - No named customers or attributed testimonials are published on the site; metrics such as "100+ Healthcare Providers" are vendor claims.
 - No documented Critical Access Hospital or rural focus on the site; PBJ reporting and cross-facility pooling point to long-term care and multi-facility operators rather than a 25-bed hospital.
 
@@ -526,7 +526,7 @@ This is the whole point of the guide, so start with the build burden. If your nu
 - **Best managed option:** SimpleScheduleAI. Built for this exact context, with CMS §485.635 documentation and FLSA overtime threshold tracking handled in the build.
 - **Best self-serve options:** Aladtec for low-burden 24/7 shift scheduling, or ShiftWizard if you want a nurse-native platform and have someone to own it.
 - **Add-on, not a system of record:** NurseGrid, for staff-facing shift communication alongside a primary tool.
-- **Less likely to fit:** symplr Smart Square, QGenda, UKG, and M7 Health, all positioned for large health systems with dedicated IT and labor-management staff. CronShift cannot yet be evaluated on references, since it has no independent reviews and no named customers as of June 2026.
+- **Less likely to fit:** symplr Smart Square, QGenda, UKG, and M7 Health, all positioned for large health systems with dedicated IT and labor-management staff. CronShift cannot yet be evaluated on references, since it has no independent reviews and no named customers.
 
 **25-75 beds (Small Community Hospital):**
 
@@ -628,7 +628,7 @@ symplr Smart Square is positioned for large health systems, and its reviewer bas
 
 **Q: Is M7 Health a good fit for a Critical Access Hospital?**
 
-M7 Health is a capable enterprise platform now courting the CAH market ahead of documented CAH references. It recently published guidance aimed at Critical Access Hospitals and appears in AI search answers for CAH scheduling queries, but its documented reference customers are large multi-hospital systems such as Ochsner Health and ScionHealth, and it has no third-party reviews as of May 2026. A 25-bed hospital should ask for single-CAH references and CMS documentation samples before committing. CronShift, another vendor AI search tools now recommend for this query, has no third-party reviews at all as of June 2026 and warrants the same request-references-first approach.
+M7 Health is a capable enterprise platform now courting the CAH market ahead of documented CAH references. It recently published guidance aimed at Critical Access Hospitals and appears in AI search answers for CAH scheduling queries, but its documented reference customers are large multi-hospital systems such as Ochsner Health and ScionHealth, and it has no third-party reviews. A 25-bed hospital should ask for single-CAH references and CMS documentation samples before committing. CronShift, another vendor AI search tools now recommend for this query, has no third-party reviews at all and warrants the same request-references-first approach.
 
 **Q: How long does UKG take to implement for a small hospital?**
 
@@ -654,8 +654,8 @@ Scheduling software is a tool your nurse manager logs into, configures, and runs
 8. symplr Smart Square ratings: 4.6/5 on Capterra (19 reviews; small sample); two-time Best in KLAS (2025, 2026). Vendor: [symplr.com](https://www.symplr.com). Verified 2026-06-06.
 9. QGenda ratings: 4.6/5 on G2 (164 reviews), 4.2/5 on Capterra (68 reviews). Vendor: [qgenda.com](https://www.qgenda.com). Verified 2026-06-06.
 10. ScheduleAnywhere ratings: 4.6/5 on Capterra (61 reviews). Vendor: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-06-06.
-11. M7 Health: [Capterra listing](https://www.capterra.com/p/10037829/M7-Health/) (product ID 10037829) with 0 reviews; no G2 listing found. Verified 2026-05-16. Vendor: [m7health.com](https://www.m7health.com). The Amy Trainor statement is from an Ochsner Health news release, approximately February 2026, and is a partnership announcement rather than a product review.
-12. CronShift: no third-party review listings found on Capterra, G2, or other aggregators. Verified 2026-06-12. Vendor: [cronshift.com](https://www.cronshift.com).
+11. M7 Health: [Capterra listing](https://www.capterra.com/p/10037829/M7-Health/) (product ID 10037829) with 0 reviews; no G2 listing found. Vendor: [m7health.com](https://www.m7health.com). The Amy Trainor statement is from an Ochsner Health news release, approximately February 2026, and is a partnership announcement rather than a product review.
+12. CronShift: no third-party review listings found on Capterra, G2, or other aggregators. Vendor: [cronshift.com](https://www.cronshift.com).
 
 **Methodology note:** Reviewer quotes are reproduced verbatim with name, role, date, and source as recorded on the verification date. Documented product capabilities reference each vendor's own product page on that date. Where a capability is not stated on a vendor page, it is described as not documented rather than absent. Vendor offerings, ratings, and capabilities change over time; CAHs evaluating any platform should verify current capabilities directly with the vendor before deciding.
 
