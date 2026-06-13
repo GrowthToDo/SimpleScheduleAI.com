@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import SchemaOrg from '~/components/common/SchemaOrg.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import HeroScheduleBackdrop from '~/components/widgets/HeroScheduleBackdrop.astro';
+import HeroStationBackdrop from '~/components/widgets/HeroStationBackdrop.astro';
 import SchedulerDemoSection from '~/components/widgets/SchedulerDemoSection.astro';
 import SoftwareVsService from '~/components/widgets/SoftwareVsService.astro';
 import BuiltForCAHs from '~/components/widgets/BuiltForCAHs.astro';
@@ -113,12 +113,7 @@ const faqSchema = {
     ]}
   >
     <Fragment slot="bg">
-      <HeroScheduleBackdrop />
-      <div
-        class="absolute inset-0"
-        style="background: radial-gradient(ellipse 80% 55% at 50% -10%, rgb(45 90 74 / 0.07), transparent 70%);"
-      >
-      </div>
+      <HeroStationBackdrop />
     </Fragment>
     <Fragment slot="title"> Stop Losing Nurses to <span class="italic">Scheduling Stress</span> </Fragment>
 
