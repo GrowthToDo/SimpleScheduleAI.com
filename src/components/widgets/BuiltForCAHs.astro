@@ -39,9 +39,9 @@ const commonScenarios = {
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
-  <EditorialHeader number="02" tagline="Who we serve" title={title} />
+  <EditorialHeader tagline="Who we serve" title={title} />
 
-  <div class="grid gap-10 md:grid-cols-3 mb-16" data-reveal-group>
+  <div class="mb-12 grid gap-10 md:grid-cols-3" data-reveal-group>
     {
       scenarios.map((scenario) => (
         <div class="border-t border-hairline pt-6">
@@ -52,22 +52,22 @@ const commonScenarios = {
     }
   </div>
 
-  <div class="rounded-xl border border-hairline bg-white p-8 md:p-10 shadow-sm" data-reveal>
-    <div class="grid gap-8 lg:grid-cols-5">
-      <div class="lg:col-span-2">
-        <h3 class="text-2xl font-heading font-semibold leading-snug lg:sticky lg:top-24">{commonScenarios.title}</h3>
+  <div class="grid gap-8 border-t border-hairline pt-12 lg:grid-cols-5 lg:gap-16" data-reveal>
+    <div class="lg:col-span-2">
+      <div class="lg:sticky lg:top-28">
+        <h3 class="font-heading text-2xl font-semibold leading-snug">{commonScenarios.title}</h3>
         <p class="mt-3 text-sm text-muted">The situations that eat a nurse manager's week, handled as defaults.</p>
       </div>
-      <ul class="lg:col-span-3 grid gap-4">
-        {
-          commonScenarios.items.map((item) => (
-            <li class="flex items-start gap-3 border-b border-hairline pb-4 last:border-b-0 last:pb-0">
-              <span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-primary" />
-              <span class="text-default/80">{item}</span>
-            </li>
-          ))
-        }
-      </ul>
     </div>
+    <ul class="lg:col-span-3">
+      {
+        commonScenarios.items.map((item) => (
+          <li class="flex items-start gap-3 border-b border-hairline py-4 first:pt-0 last:border-b-0 last:pb-0">
+            <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            <span class="text-default/80">{item}</span>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </WidgetWrapper>

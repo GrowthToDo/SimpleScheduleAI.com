@@ -7,7 +7,6 @@ import Steps from '~/components/widgets/Steps.astro';
 import ComplianceRules from '~/components/widgets/ComplianceRules.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'How it Works',
@@ -72,74 +71,49 @@ const howItWorksBreadcrumbSchema = {
 
   <!-- What you send / What you get -->
   <section class="bg-page">
-    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div class="grid gap-12 lg:grid-cols-2 lg:items-start">
-        <div>
-          <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">Simple handoff</p>
-          <h2 class="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
-            What you send us. What you get back.
-          </h2>
-          <p class="mt-5 text-lg text-muted">
-            We work with the format you already use. Excel is fine. No new software for your staff.
-          </p>
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="max-w-2xl" data-reveal>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Simple handoff</p>
+        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+          What you send us. What you get back.
+        </h2>
+        <p class="mt-4 text-lg text-muted">
+          We work with the format you already use. Excel is fine. No new software for your staff.
+        </p>
+      </div>
 
-          <div class="mt-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 p-7">
-            <h3 class="font-bold">What you send us</h3>
-            <ul class="mt-4 space-y-3">
-              <li class="flex items-start gap-3">
-                <span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-primary"></span>
-                <span class="text-muted">Staff roster via Excel (roles, competency levels, home units)</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-primary"></span>
-                <span class="text-muted">PRN availability submissions and leave requests</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-primary"></span>
-                <span class="text-muted">Unit rules: weekend requirements, escalation order, OT thresholds</span>
-              </li>
-            </ul>
-            <p class="mt-4 text-sm text-muted">Export your current data, edit in Excel, re-import. Simple.</p>
-          </div>
+      <div class="mt-10 grid gap-10 md:grid-cols-2 md:gap-0" data-reveal-group>
+        <div class="md:pr-12 lg:pr-16">
+          <h3 class="mb-5 text-sm font-semibold uppercase tracking-[0.14em] text-muted">What you send us</h3>
+          <ul class="divide-y divide-ink/10 border-t border-ink/10">
+            <li class="py-3.5 leading-relaxed text-default/80">
+              Staff roster via Excel (roles, competency levels, home units)
+            </li>
+            <li class="py-3.5 leading-relaxed text-default/80">PRN availability submissions and leave requests</li>
+            <li class="py-3.5 leading-relaxed text-default/80">
+              Unit rules: weekend requirements, escalation order, OT thresholds
+            </li>
+          </ul>
+          <p class="mt-4 text-sm text-muted">Export your current data, edit in Excel, re-import. Simple.</p>
         </div>
 
-        <div>
-          <div class="rounded-2xl border-2 border-primary bg-primary/5 p-7">
-            <h3 class="font-bold">What you get back</h3>
-            <ul class="mt-4 space-y-3">
-              <li class="flex items-start gap-3">
-                <Icon name="tabler:check" class="w-5 h-5 text-primary mt-1 shrink-0" />
-                <span class="text-gray-700 dark:text-gray-300"
-                  >Compliant, post-ready schedule (21 rules checked automatically)</span
-                >
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="tabler:check" class="w-5 h-5 text-primary mt-1 shrink-0" />
-                <span class="text-gray-700 dark:text-gray-300"
-                  >Multiple schedule drafts showing different coverage, cost, and fairness trade-offs</span
-                >
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="tabler:check" class="w-5 h-5 text-primary mt-1 shrink-0" />
-                <span class="text-gray-700 dark:text-gray-300"
-                  >Auto-recommended replacements when leave is approved</span
-                >
-              </li>
-              <li class="flex items-start gap-3">
-                <Icon name="tabler:check" class="w-5 h-5 text-primary mt-1 shrink-0" />
-                <span class="text-gray-700 dark:text-gray-300">Full audit trail of every change for compliance</span>
-              </li>
-            </ul>
-            <p class="mt-4 text-sm text-muted">Nothing is final until your team signs off.</p>
-          </div>
-
-          <div class="mt-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 p-6">
-            <p class="text-sm font-semibold">Delivered every Thursday, 3pm</p>
-            <p class="mt-2 text-sm text-muted">
-              PDF schedule, a manager summary with flagged items, and full data for your records. Ready for your review
-              before posting.
-            </p>
-          </div>
+        <div class="md:border-l md:border-ink/10 md:pl-12 lg:pl-16">
+          <h3 class="mb-5 text-sm font-semibold uppercase tracking-[0.14em] text-primary">What you get back</h3>
+          <ul class="divide-y divide-ink/10 border-t border-ink/10">
+            <li class="py-3.5 leading-relaxed text-default">
+              Compliant, post-ready schedule (21 rules checked automatically)
+            </li>
+            <li class="py-3.5 leading-relaxed text-default">
+              Multiple schedule drafts showing different coverage, cost, and fairness trade-offs
+            </li>
+            <li class="py-3.5 leading-relaxed text-default">Auto-recommended replacements when leave is approved</li>
+            <li class="py-3.5 leading-relaxed text-default">Full audit trail of every change for compliance</li>
+          </ul>
+          <p class="mt-4 text-sm text-muted">Nothing is final until your team signs off.</p>
+          <p class="mt-2 text-sm text-muted">
+            <span class="font-semibold text-default">Delivered every Thursday, 3pm.</span> PDF schedule, a manager summary
+            with flagged items, and full data for your records, ready for review before posting.
+          </p>
         </div>
       </div>
     </div>

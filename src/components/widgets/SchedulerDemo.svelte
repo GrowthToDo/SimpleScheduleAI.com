@@ -72,7 +72,7 @@
   ];
 
   const ANN = {
-    1: { icon: '✦', text: 'AI filling shifts — 13 compliance rules enforced on every slot', bg: BLUE, fg: '#fff', spin: false },
+    1: { icon: '✦', text: 'AI filling shifts. 13 compliance rules enforced on every slot', bg: BLUE, fg: '#fff', spin: false },
     2: { icon: '⟳', text: 'Validating 13 compliance + 8 fairness rules…', bg: '#1a2332', fg: '#fff', spin: true },
     3: { icon: '✓', text: 'Schedule complete · All 45 shifts staffed · Post-ready', bg: '#16a34a', fg: '#fff', spin: false },
     4: { icon: '⚠', text: 'Callout received · Scanning 33 staff for coverage', bg: '#ea580c', fg: '#fff', spin: false },
@@ -141,7 +141,9 @@
     const isCoCell = !dismissed && phase >= 4 && CO.di === di && CO.shift === shift;
     const isRpl = !dismissed && phase === 6 && CO.di === di && CO.shift === shift;
     const coId = isCoCell ? CO.id : null;
-    const active = visIds.length - (isCoCell && !isRpl && visIds.includes(coId) ? 1 : 0) + (isRpl ? 1 : 0);
+    // Called-out nurse is always subtracted from the filled count; a confirmed
+    // replacement (isRpl) adds one back. Callout: len-1. Replaced: len-1+1 = len.
+    const active = visIds.length - (isCoCell && visIds.includes(coId) ? 1 : 0) + (isRpl ? 1 : 0);
     const full = active >= req;
     const empty = visIds.length === 0;
     const brd = empty ? '#e5e7eb' : full ? '#86efac' : '#fde68a';
@@ -420,7 +422,7 @@
   >
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
       <span style="font-size:8px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:.04em;">
-        {shift === 'night' ? '19:00–07:00' : '07:00–19:00'}
+        {shift === 'night' ? '19:00-07:00' : '07:00-19:00'}
       </span>
       <span
         style="font-size:10px;font-weight:800;color:{c.full
@@ -441,7 +443,7 @@
       {#if phase === 1}
         <div class="skeleton"></div>
       {:else}
-        <span style="font-size:9px;color:#d1d5db;font-style:italic;">—</span>
+        <span style="font-size:9px;color:#d1d5db;font-style:italic;">-</span>
       {/if}
     {:else}
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
@@ -483,7 +485,7 @@
           ><circle cx="12" cy="12" r="10" /><path d="M12 8v4" /><path d="M12 16h.01" /></svg
         >
         <span style="font-size:11px;font-weight:700;color:#c2410c;"
-          >Callout — Emily Davis · Tue Jun 3 · Night Shift · Sick</span
+          >Callout: Emily Davis · Tue Jun 3 · Night Shift · Sick</span
         >
         <span style="margin-left:auto;font-size:9px;color:#9ca3af;">9:14 PM</span>
       {/if}
@@ -512,7 +514,7 @@
           <div
             style="margin-bottom:8px;padding:5px 9px;background:#fffbeb;border-radius:7px;border:1px solid #fcd34d;font-size:10px;color:#92400e;font-weight:500;"
           >
-            ⚠ Emily held charge — only charge-qualified nurses shown.
+            ⚠ Emily held charge. Only charge-qualified nurses shown.
           </div>
         {/if}
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:7px;">
@@ -597,7 +599,7 @@
         <div style="width:10px;height:10px;border-radius:50%;background:{c};"></div>
       {/each}
       <span style="margin-left:5px;font-size:10px;color:#6b7280;font-family:monospace;"
-        >ICU · Week of Jun 2–8, 2026</span
+        >ICU · Week of Jun 2-8, 2026</span
       >
       <div style="margin-left:auto;display:flex;gap:8px;align-items:center;">
         {#if phase === 3}
@@ -683,11 +685,11 @@
       </div>
       <div style="padding:7px 9px;border-left:1px solid #f0f0f0;">
         <div style="font-size:10px;font-weight:700;color:#374151;">Day Shift</div>
-        <div style="font-size:9px;color:#9ca3af;">07:00 – 19:00 · 4 staff</div>
+        <div style="font-size:9px;color:#9ca3af;">07:00-19:00 · 4 staff</div>
       </div>
       <div style="padding:7px 9px;border-left:1px solid #f0f0f0;">
         <div style="font-size:10px;font-weight:700;color:#374151;">Night Shift</div>
-        <div style="font-size:9px;color:#9ca3af;">19:00 – 07:00 · 3 staff</div>
+        <div style="font-size:9px;color:#9ca3af;">19:00-07:00 · 3 staff</div>
       </div>
     </div>
 

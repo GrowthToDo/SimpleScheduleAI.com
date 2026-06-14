@@ -111,15 +111,14 @@
   }
 }
 
-/* card hover micro-interaction */
+/* card hover micro-interaction: quiet border darkening, no lift/glow */
 .card-lift {
   transition:
-    transform 0.2s ease-out,
-    box-shadow 0.2s ease-out;
+    border-color 0.2s ease-out,
+    background-color 0.2s ease-out;
 }
 .card-lift:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px -12px rgb(26 35 50 / 0.18);
+  border-color: rgb(26 35 50 / 0.24);
 }
 
 /* subtle paper grain on ivory sections */

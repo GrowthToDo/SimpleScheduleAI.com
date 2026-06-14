@@ -115,18 +115,15 @@ const faqSchema = {
     <Fragment slot="bg">
       <HeroStationBackdrop />
     </Fragment>
-    <Fragment slot="title"> Stop Losing Nurses to <span class="italic">Scheduling Stress</span> </Fragment>
+    <Fragment slot="title"> Stop Losing Nurses to <span class="text-primary">Scheduling Stress</span> </Fragment>
 
     <Fragment slot="subtitle">
       An AI-native nurse scheduling service for Texas Critical Access Hospitals. AI builds your schedule, our scheduling
       team checks it, you approve. No IT.
     </Fragment>
-  </Hero>
 
-  <!-- Front-loaded credibility + offer strip -->
-  <section class="bg-page -mt-8 sm:-mt-12">
-    <div class="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
-      <div class="flex flex-col items-center gap-3 text-center reveal-delay-4" data-reveal>
+    <Fragment slot="content">
+      <div class="mt-9 flex flex-col items-center gap-2.5 text-center reveal-delay-4" data-reveal>
         <p class="text-xs font-medium uppercase tracking-[0.18em] text-primary">
           Texas Critical Access Hospitals · No IT Setup · First Schedule in Under 2 Weeks
         </p>
@@ -134,8 +131,8 @@ const faqSchema = {
           Built after interviewing 30+ nurse managers before writing a single line of code.
         </p>
       </div>
-    </div>
-  </section>
+    </Fragment>
+  </Hero>
 
   <!-- Scheduler Demo Widget (animated end-to-end demo + AI engine pitch) -->
   <SchedulerDemoSection />
@@ -212,40 +209,19 @@ const faqSchema = {
     <Fragment slot="content">
       <ul class="mt-4 space-y-3 text-left">
         <li class="flex items-start gap-3">
-          <span class="mt-1 shrink-0 text-[#7BAF9B]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </span>
+          <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7BAF9B]"></span>
           <span class="text-lg leading-relaxed text-[#FAF7F2]/85"
             >Your Sunday nights back: the week's schedule arrives done</span
           >
         </li>
         <li class="flex items-start gap-3">
-          <span class="mt-1 shrink-0 text-[#7BAF9B]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </span>
+          <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7BAF9B]"></span>
           <span class="text-lg leading-relaxed text-[#FAF7F2]/85"
             >No 5 a.m. phone tree: approved replacement candidates in one click</span
           >
         </li>
         <li class="flex items-start gap-3">
-          <span class="mt-1 shrink-0 text-[#7BAF9B]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </span>
+          <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7BAF9B]"></span>
           <span class="text-lg leading-relaxed text-[#FAF7F2]/85"
             >Walk into Monday knowing what changed, the budget impact, and what needs your sign-off</span
           >

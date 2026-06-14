@@ -11,7 +11,7 @@ export interface Props {
   class?: string;
 }
 
-const { number, tagline, title, subtitle, isDark = false, class: className = 'mb-12 md:mb-16' } = Astro.props;
+const { number, tagline, title, subtitle, isDark = false, class: className = 'mb-9 md:mb-11' } = Astro.props;
 ---
 
 <div class:list={['grid gap-5 lg:grid-cols-12 lg:items-end relative', className]} data-reveal>

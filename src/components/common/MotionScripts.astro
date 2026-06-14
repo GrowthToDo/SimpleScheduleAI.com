@@ -55,6 +55,26 @@
       document.querySelectorAll('[data-countup]').forEach((el) => {
         if (!el.closest('[data-reveal], [data-reveal-group]')) io.observe(el);
       });
+
+      // Failsafe: never leave content that is already in (or above) the viewport
+      // hidden if the observer's initial callback is flaky. Below-the-fold
+      // elements still animate on scroll via the observer above.
+      const revealInView = () => {
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        document
+          .querySelectorAll('[data-reveal]:not(.is-visible), [data-reveal-group]:not(.is-visible)')
+          .forEach((el) => {
+            const r = el.getBoundingClientRect();
+            if (r.top < vh * 0.95 && r.bottom > 0) {
+              el.classList.add('is-visible');
+              if (el.hasAttribute('data-countup')) runCountup(el);
+              el.querySelectorAll('[data-countup]').forEach((c) => runCountup(c));
+              io.unobserve(el);
+            }
+          });
+      };
+      requestAnimationFrame(revealInView);
+      window.addEventListener('load', revealInView, { once: true });
     }
 
     if (document.readyState === 'loading') {

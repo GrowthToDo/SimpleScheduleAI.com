@@ -1,7 +1,6 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
-import { Icon } from 'astro-icon/components';
 import ShowcaseComplianceCheck from './ShowcaseComplianceCheck.svelte';
 import type { Widget } from '~/types';
 
@@ -126,35 +125,21 @@ const competencyLevels = [
     <ShowcaseComplianceCheck client:visible />
   </div>
 
-  <!-- Rule detail cards -->
-  <div class="grid gap-8 lg:grid-cols-2">
+  <!-- Rule detail: two editorial columns, hairline-divided, no icons or boxes -->
+  <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
     {/* 13 Compliance and Safety Rules */}
-    <div class="rounded-2xl border border-gray-700 bg-[#1A2332] p-8">
-      <div class="flex items-center gap-3 mb-6">
-        <span
-          class="flex w-10 h-10 shrink-0 items-center justify-center rounded-lg bg-red-500/20 border border-red-500/30"
-        >
-          <Icon name="tabler:shield-check" class="w-5 h-5 text-red-400" />
-        </span>
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-red-400">Required</p>
-          <h3 class="text-lg font-bold text-white">13 Compliance and Safety Rules</h3>
-        </div>
-      </div>
-      <p class="text-sm text-gray-400 mb-6">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-red-400">Required</p>
+      <h3 class="mt-1 font-heading text-xl font-semibold text-white">13 Compliance and Safety Rules</h3>
+      <p class="mt-2 text-sm text-gray-400">
         These must pass on every schedule. If any fail, the draft is flagged before delivery.
       </p>
-      <ul class="space-y-4">
+      <ul class="mt-6 divide-y divide-white/10 border-t border-white/10">
         {
           complianceRules.map((item) => (
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 shrink-0 flex w-5 h-5 items-center justify-center rounded-full bg-red-500/20 border border-red-500/40">
-                <Icon name="tabler:check" class="w-3 h-3 text-red-400" />
-              </span>
-              <span>
-                <span class="text-sm text-gray-300">{item.rule}</span>
-                <span class="block text-xs text-gray-500 mt-0.5">{item.why}</span>
-              </span>
+            <li class="py-3">
+              <span class="text-sm text-gray-200">{item.rule}</span>
+              <span class="mt-0.5 block text-xs text-gray-500">{item.why}</span>
             </li>
           ))
         }
@@ -162,45 +147,25 @@ const competencyLevels = [
     </div>
 
     {/* 8 Fairness Goals */}
-    <div class="rounded-2xl border border-gray-700 bg-[#1A2332] p-8">
-      <div class="flex items-center gap-3 mb-6">
-        <span
-          class="flex w-10 h-10 shrink-0 items-center justify-center rounded-lg bg-[#7BAF9B]/15 border border-[#7BAF9B]/30"
-        >
-          <Icon name="tabler:star" class="w-5 h-5 text-[#7BAF9B]" />
-        </span>
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-[#7BAF9B]">Optimized</p>
-          <h3 class="text-lg font-bold text-white">8 Fairness and Preference Goals</h3>
-        </div>
-      </div>
-      <p class="text-sm text-gray-400 mb-6">
+    <div class="lg:border-l lg:border-white/10 lg:pl-16">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-[#7BAF9B]">Optimized</p>
+      <h3 class="mt-1 font-heading text-xl font-semibold text-white">8 Fairness and Preference Goals</h3>
+      <p class="mt-2 text-sm text-gray-400">
         These are actively optimized on every draft. Flags are surfaced so you can choose the best trade-off.
       </p>
-      <ul class="space-y-3">
-        {
-          fairnessGoals.map((goal) => (
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 shrink-0 flex w-5 h-5 items-center justify-center rounded-full bg-[#7BAF9B]/15 border border-[#7BAF9B]/40">
-                <Icon name="tabler:star-filled" class="w-3 h-3 text-[#7BAF9B]" />
-              </span>
-              <span class="text-sm text-gray-300">{goal}</span>
-            </li>
-          ))
-        }
+      <ul class="mt-6 divide-y divide-white/10 border-t border-white/10">
+        {fairnessGoals.map((goal) => <li class="py-3 text-sm text-gray-200">{goal}</li>)}
       </ul>
-      <div class="mt-6 rounded-xl border border-[#7BAF9B]/30 bg-[#7BAF9B]/10 p-4">
-        <p class="text-sm text-[#7BAF9B]">
-          Every fairness flag is explained. You see which trade-off was made and why, so you can approve or adjust with
-          full context.
-        </p>
-      </div>
+      <p class="mt-5 text-sm text-[#7BAF9B]">
+        Every fairness flag is explained. You see which trade-off was made and why, so you can approve or adjust with
+        full context.
+      </p>
     </div>
   </div>
 
   <!-- Competency level definitions -->
-  <div class="mt-10 rounded-2xl border border-gray-700 bg-[#1A2332] p-8">
-    <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">How we define competency levels</p>
+  <div class="mt-12 border-t border-white/10 pt-10">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gray-400 mb-6">How we define competency levels</p>
     <div class="overflow-x-auto">
       <table class="w-full text-sm">
         <thead>

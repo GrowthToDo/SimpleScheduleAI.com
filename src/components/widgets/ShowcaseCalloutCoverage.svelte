@@ -44,7 +44,7 @@
       {/each}
     </div>
     <p class="text-[11px] font-semibold text-primary uppercase tracking-widest">
-      Step {frame + 1} of 4 — {steps[frame].label}
+      Step {frame + 1} of 4: {steps[frame].label}
     </p>
   </div>
 
@@ -76,7 +76,7 @@
   <!-- Frame 1: Callout logged -->
   {:else if frame === 1}
     <div class="flex-1 p-5 flex flex-col justify-center min-h-[280px]">
-      <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-red-500">9:14 PM — Callout received</p>
+      <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-red-500">9:14 PM. Callout received</p>
       <div class="rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 p-4 mb-3">
         <div class="flex items-center justify-between">
           <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Wed Mar 4 · Day Shift</span>
@@ -130,7 +130,7 @@
         <ul class="space-y-0.5 mb-2 text-[11px]">
           <li class="flex items-center gap-1.5 text-green-700 dark:text-green-400"><span>✓</span> Available for this shift</li>
           <li class="flex items-center gap-1.5 text-green-700 dark:text-green-400"><span>✓</span> Charge nurse qualified</li>
-          <li class="flex items-center gap-1.5 text-yellow-600 dark:text-yellow-400"><span>⚠</span> 36h this week — OT if assigned</li>
+          <li class="flex items-center gap-1.5 text-yellow-600 dark:text-yellow-400"><span>⚠</span> 36h this week, OT if assigned</li>
           <li class="flex items-center gap-1.5 text-gray-400 dark:text-gray-500"><span>·</span> Rest before shift: 10h</li>
         </ul>
         <button class="w-full rounded-lg border border-gray-300 dark:border-slate-600 px-3 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300" disabled>Assign</button>

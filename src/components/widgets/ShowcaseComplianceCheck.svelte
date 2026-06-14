@@ -77,7 +77,7 @@
   <!-- Top bar -->
   <div class="flex items-center justify-between border-b border-gray-700 px-4 py-3 bg-slate-800/60">
     <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-400">
-      Compliance Scan — 09:47:22 PM
+      Compliance Scan · 09:47:22 PM
     </span>
     <span class="text-[11px] font-bold {checkedCount === 21 ? 'text-green-400' : 'text-gray-400'}">
       {checkedCount} / 21
@@ -96,7 +96,7 @@
     <!-- Checking / Done phase -->
     {:else}
       <!-- Compliance rules divider -->
-      <p class="mb-2 text-[10px] font-semibold uppercase tracking-widest text-red-400">— 13 Compliance Rules —</p>
+      <p class="mb-2 text-[10px] font-semibold uppercase tracking-widest text-red-400">13 Compliance Rules</p>
 
       <ul class="space-y-1 mb-4">
         {#each complianceRules as rule, i}
@@ -111,7 +111,7 @@
 
       <!-- Fairness goals divider — only show once we reach them -->
       {#if checkedCount > 13}
-        <p class="mb-2 text-[10px] font-semibold uppercase tracking-widest text-blue-400">— 8 Fairness Goals —</p>
+        <p class="mb-2 text-[10px] font-semibold uppercase tracking-widest text-blue-400">8 Fairness Goals</p>
         <ul class="space-y-1 mb-4">
           {#each fairnessGoals as goal, i}
             {#if checkedCount > 13 + i}
@@ -127,7 +127,7 @@
       <!-- Done banner -->
       {#if phase === 'done'}
         <div class="mt-2 rounded-lg bg-green-900/30 border border-green-700 px-4 py-3 text-center">
-          <span class="text-green-400 font-semibold text-sm">✓ 21 / 21 — Schedule is compliant. Ready for your review.</span>
+          <span class="text-green-400 font-semibold text-sm">✓ 21 / 21 · Schedule is compliant. Ready for your review.</span>
         </div>
       {/if}
     {/if}

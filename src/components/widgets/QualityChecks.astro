@@ -51,8 +51,9 @@ const subtitle =
       </a>
     </div>
 
-    <!-- Right: animated shift status widget -->
-    <div class="relative" data-reveal>
+    <!-- Right: animated shift status widget. pb reserves space for the mobile
+         popup (absolute, below the last cell) so it cannot bleed into the next section. -->
+    <div class="relative pb-20 lg:pb-0" data-reveal>
       <ShowcaseShiftStatus client:visible />
     </div>
   </div>

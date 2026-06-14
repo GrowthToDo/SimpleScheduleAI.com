@@ -2,7 +2,6 @@
 import Layout from '~/layouts/PageLayout.astro';
 import SchemaOrg from '~/components/common/SchemaOrg.astro';
 import DarkHero from '~/components/widgets/DarkHero.astro';
-import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'Pricing',
@@ -79,12 +78,12 @@ const pricingBreadcrumbSchema = {
 
   <!-- Pricing tiers -->
   <section class="bg-page">
-    <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div class="grid gap-8 md:grid-cols-2">
+    <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="grid gap-6 md:grid-cols-2">
         {
           tiers.map((tier) => (
             <div
-              class={`rounded-2xl p-8 ${tier.featured ? 'border-2 border-primary bg-primary/5' : 'border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800'}`}
+              class={`rounded-2xl border p-8 ${tier.featured ? 'border-primary/50 bg-primary/5' : 'border-hairline bg-white dark:bg-slate-800'}`}
             >
               <div class="flex items-center justify-between">
                 <h2 class="text-xl font-bold">{tier.name}</h2>
@@ -111,14 +110,14 @@ const pricingBreadcrumbSchema = {
       </p>
 
       <!-- What's included -->
-      <div class="mt-14 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 p-8">
-        <h2 class="text-2xl font-bold">Every plan includes</h2>
-        <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+      <div class="mt-14">
+        <h2 class="font-heading text-2xl font-semibold">Every plan includes</h2>
+        <ul class="mt-6 grid gap-x-10 sm:grid-cols-2">
           {
             included.map((item) => (
-              <li class="flex items-start gap-3">
-                <Icon name="tabler:check" class="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <span class="text-default dark:text-slate-300">{item}</span>
+              <li class="flex items-start gap-3 border-t border-ink/10 py-3.5">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                <span class="text-default/80">{item}</span>
               </li>
             ))
           }
@@ -126,9 +125,9 @@ const pricingBreadcrumbSchema = {
       </div>
 
       <!-- ROI framing -->
-      <div class="mt-10 rounded-2xl border-2 border-primary bg-primary/5 p-8 text-center">
-        <h2 class="text-2xl font-bold">What it replaces</h2>
-        <p class="mx-auto mt-4 max-w-2xl text-muted dark:text-slate-300">
+      <div class="mt-12 border-t border-ink/10 pt-10 text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-primary">What it replaces</p>
+        <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted dark:text-slate-300">
           A nurse manager who spends 8 to 12 hours a week building the schedule, working the callout phone tree, and
           tracking overtime is spending the equivalent of a part-time salary on work the AI now does. At a $50/hr loaded
           rate, that is roughly $26,000 a year in leadership time, most of it returned to patient care.

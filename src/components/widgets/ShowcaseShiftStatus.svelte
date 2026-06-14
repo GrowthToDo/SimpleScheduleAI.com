@@ -101,7 +101,7 @@
         <span class="ml-1 rounded bg-red-100 px-1 py-0.5 text-[10px] font-medium text-red-700 dark:bg-red-900 dark:text-red-300">OT</span>
       </li>
     </ul>
-    <p class="text-[11px] font-semibold text-yellow-700 dark:text-yellow-400">⚠ Dan already at 36h this week — overtime cost if assigned</p>
+    <p class="text-[11px] font-semibold text-yellow-700 dark:text-yellow-400">⚠ Dan already at 36h this week. Overtime cost if assigned.</p>
 
     <!-- Popup for B -->
     {#if highlight === 'B' && showPopup}
@@ -110,7 +110,7 @@
       >
         <p class="text-xs font-bold text-yellow-800 dark:text-yellow-300 mb-1">⚠ Shift Issues (1)</p>
         <p class="text-[11px] font-semibold text-yellow-700 dark:text-yellow-400 mb-0.5">Overtime Risk</p>
-        <p class="text-[11px] text-yellow-700 dark:text-yellow-400">Dan B. is at 36h — this shift adds OT cost.</p>
+        <p class="text-[11px] text-yellow-700 dark:text-yellow-400">Dan B. is at 36h. This shift adds OT cost.</p>
       </div>
     {/if}
   </div>
@@ -128,7 +128,7 @@
         <span class="text-gray-400 text-[10px]">RN</span>
       </li>
     </ul>
-    <p class="text-[11px] font-semibold text-red-700 dark:text-red-400">✕ Charge nurse required — must fix before publishing</p>
+    <p class="text-[11px] font-semibold text-red-700 dark:text-red-400">✕ Charge nurse required. Must fix before publishing.</p>
 
     <!-- Popup for C -->
     {#if highlight === 'C' && showPopup}

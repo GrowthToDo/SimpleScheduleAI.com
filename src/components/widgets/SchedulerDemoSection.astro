@@ -25,13 +25,15 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl pt-2 md:pt-4 ${classes?.container ?? ''}`} bg={bg}>
   <div data-reveal>
     <Headline title={title} subtitle={subtitle} tagline={tagline} />
   </div>
   <div class="mt-2 flex justify-center" data-reveal>
-    <div class="w-full max-w-[920px] min-h-[640px] sm:min-h-[660px]" style="contain: layout;">
-      <SchedulerDemo client:visible />
+    <div class="w-full max-w-[920px] overflow-x-auto overscroll-x-contain" style="contain: layout;">
+      <div class="min-w-[460px] sm:min-w-0 min-h-[640px] sm:min-h-[660px]">
+        <SchedulerDemo client:visible />
+      </div>
     </div>
   </div>
   {

@@ -1,74 +1,63 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import EditorialHeader from '~/components/ui/EditorialHeader.astro';
-import { Icon } from 'astro-icon/components';
 import type { Widget } from '~/types';
 
 type Props = Widget;
 
 const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
 
-const title = 'This isn\'t "another scheduling tool"';
-const subtitle =
-  'Other tools still require you to build every draft, apply every rule, and find every callout replacement yourself. Here, the AI builds every draft, our scheduling team checks it, and you approve.';
+const rows = [
+  { attr: 'Who builds the schedule', soft: 'You do, in the tool', serv: 'We do, and a human checks it' },
+  { attr: 'Where the rules live', soft: 'You configure and maintain them', serv: 'We map them to your unit, once' },
+  {
+    attr: 'When someone calls out',
+    soft: 'You work the phone tree',
+    serv: 'You get the top 3 candidates, with reasons',
+  },
+  {
+    attr: 'How fairness is tracked',
+    soft: 'By hand, in spreadsheets',
+    serv: 'Automatically: weekends, holidays, overtime',
+  },
+  { attr: 'What you do each week', soft: 'Build it, check it, chase it', serv: 'Review it, then approve' },
+];
 
-const software = {
-  title: 'Software',
-  subtitle: '(You do the work, the tool just hosts it)',
-  points: [
-    'You build drafts + train staff on the tool',
-    'You configure and maintain 21 scheduling rules',
-    'You manually find replacements when someone calls out',
-    'You track weekend/holiday fairness in spreadsheets',
-  ],
-};
-
-const service = {
-  title: 'Our AI-Native Service',
-  subtitle: '(You get post-ready schedules, you approve)',
-  points: [
-    'Upload your data via Excel → we handle the rest',
-    '13 safety rules and 8 fairness goals checked automatically on every draft',
-    'Call-out or leave? Top 3 replacements with reasons, one-click approve',
-    'Fairness tracked automatically: weekends, holidays, overtime',
-  ],
-};
+const cols = 'md:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)_minmax(0,1fr)]';
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
-  <EditorialHeader number="01" tagline="The difference" title={title} subtitle={subtitle} />
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl ${classes?.container ?? ''}`} bg={bg}>
+  <div class="max-w-2xl" data-reveal>
+    <p class="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-primary">Software vs service</p>
+    <h2 class="font-heading text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+      Most tools hand you the <span class="text-primary">work</span>.
+    </h2>
+    <p class="mt-4 text-lg leading-relaxed text-muted">
+      Scheduling software gives you a blank grid and rules to enforce yourself. We deliver the finished schedule.
+    </p>
+  </div>
 
-  <div class="grid gap-6 md:grid-cols-2 lg:gap-8" data-reveal-group>
-    <!-- Software Card -->
-    <div class="rounded-xl border border-hairline bg-white p-8 shadow-sm card-lift">
-      <h3 class="text-xl font-semibold text-default">{software.title}</h3>
-      <p class="mt-2 text-sm text-muted">{software.subtitle}</p>
-      <ul class="mt-6 space-y-4">
-        {
-          software.points.map((point) => (
-            <li class="flex items-start gap-3">
-              <Icon name="tabler:x" class="w-5 h-5 text-red-500 mt-1" />
-              <span class="text-default/80">{point}</span>
-            </li>
-          ))
-        }
-      </ul>
+  <div class="mt-10 md:mt-14" data-reveal>
+    <!-- Column headers (desktop) -->
+    <div class={`hidden md:grid ${cols} gap-x-8 pb-3`}>
+      <div></div>
+      <div class="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Scheduling software</div>
+      <div class="text-xs font-semibold uppercase tracking-[0.14em] text-primary">SimpleScheduleAI</div>
     </div>
 
-    <!-- Service Card -->
-    <div class="rounded-xl border border-primary/40 bg-primary/5 p-8 shadow-sm card-lift">
-      <h3 class="text-xl font-semibold text-default">{service.title}</h3>
-      <p class="mt-2 text-sm text-muted">{service.subtitle}</p>
-      <ul class="mt-6 space-y-4">
-        {
-          service.points.map((point) => (
-            <li class="flex items-start gap-3">
-              <Icon name="tabler:check" class="w-5 h-5 text-primary mt-1" />
-              <span class="text-default/80">{point}</span>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
+    {
+      rows.map((row) => (
+        <div class={`grid grid-cols-1 ${cols} gap-x-8 gap-y-1 border-t border-ink/10 py-5`}>
+          <div class="font-semibold text-default">{row.attr}</div>
+          <div class="text-default/70">
+            <span class="mr-1 text-xs uppercase tracking-wider text-muted md:hidden">Software:</span>
+            {row.soft}
+          </div>
+          <div class="text-default">
+            <span class="mr-1 text-xs uppercase tracking-wider text-primary md:hidden">SimpleScheduleAI:</span>
+            {row.serv}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </WidgetWrapper>
