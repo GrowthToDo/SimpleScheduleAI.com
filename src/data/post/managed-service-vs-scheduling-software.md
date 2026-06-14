@@ -73,7 +73,7 @@ Scheduling apps fail at Critical Access Hospitals for three structural reasons t
 CAHs face three structural constraints that make the self-serve app model consistently problematic:
 
 <div class="not-prose my-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-  <div class="rounded-lg border-2 border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
+  <div class="rounded-lg border border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
     <div class="bg-red-600 px-4 py-3">
       <p class="text-xs font-bold text-white">No IT Department</p>
     </div>
@@ -81,7 +81,7 @@ CAHs face three structural constraints that make the self-serve app model consis
       <p class="text-xs text-slate-700 dark:text-slate-300">Apps need IT for account setup, integrations, and troubleshooting. Most CAHs have no IT staff.</p>
     </div>
   </div>
-  <div class="rounded-lg border-2 border-orange-300 dark:border-orange-700 bg-white dark:bg-slate-800 overflow-hidden">
+  <div class="rounded-lg border border-orange-300 dark:border-orange-700 bg-white dark:bg-slate-800 overflow-hidden">
     <div class="bg-orange-600 px-4 py-3">
       <p class="text-xs font-bold text-white">No Dedicated Scheduler</p>
     </div>
@@ -89,7 +89,7 @@ CAHs face three structural constraints that make the self-serve app model consis
       <p class="text-xs text-slate-700 dark:text-slate-300">The nurse manager is also on clinical shifts. Adding "operate new software" rearranges the burden, not reduces it.</p>
     </div>
   </div>
-  <div class="rounded-lg border-2 border-primary/30 dark:border-[#1A2332] bg-white dark:bg-slate-800 overflow-hidden">
+  <div class="rounded-lg border border-primary/30 dark:border-[#1A2332] bg-white dark:bg-slate-800 overflow-hidden">
     <div class="bg-[#1A2332] px-4 py-3">
       <p class="text-xs font-bold text-white">Compliance Config Complexity</p>
     </div>

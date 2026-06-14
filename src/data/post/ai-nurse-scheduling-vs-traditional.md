@@ -79,7 +79,7 @@ The federal overtime rules alone are not trivial. The [FLSA 8-and-80 provision](
     <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-3 text-center text-xs font-medium text-slate-700 dark:text-slate-300">Charge nurse coverage</div>
     <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-3 text-center text-xs font-medium text-slate-700 dark:text-slate-300">Time-off requests</div>
     <div class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-3 text-center text-xs font-medium text-slate-700 dark:text-slate-300">Per diem availability</div>
-    <div class="rounded-lg border-2 border-blue-500 dark:border-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-3 text-center text-xs font-bold text-blue-800 dark:text-blue-200">All resolved into one schedule</div>
+    <div class="rounded-lg border border-blue-500 dark:border-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-3 text-center text-xs font-bold text-blue-800 dark:text-blue-200">All resolved into one schedule</div>
   </div>
 </div>
 

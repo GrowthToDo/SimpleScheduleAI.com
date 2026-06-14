@@ -63,7 +63,7 @@ Schedule360's product page covers rules-based self-scheduling, broadcast notific
 What the product page does not cover, and what a CAH administrator should confirm during a demo: CMS §485.635 audit trail documentation as a default rather than a configuration option, FLSA overtime threshold tracking against the 40-hour workweek (or the 80-hour, 14-day method under the 8-and-80 rule for hospitals that have adopted it), and Texas-specific labor code requirements. None of these appear in the public product copy.
 
 <div class="not-prose my-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <div class="rounded-lg border-2 border-green-300 dark:border-green-700 bg-white dark:bg-slate-800 overflow-hidden">
+  <div class="rounded-lg border border-green-300 dark:border-green-700 bg-white dark:bg-slate-800 overflow-hidden">
     <div class="bg-green-600 dark:bg-green-700 px-4 py-3">
       <p class="font-bold text-white text-sm">Schedule360 Product Page Documents</p>
     </div>
@@ -76,7 +76,7 @@ What the product page does not cover, and what a CAH administrator should confir
       <li>KLAS Best In KLAS 2022 recognition</li>
     </ul>
   </div>
-  <div class="rounded-lg border-2 border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
+  <div class="rounded-lg border border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
     <div class="bg-red-600 dark:bg-red-700 px-4 py-3">
       <p class="font-bold text-white text-sm">Schedule360 Product Page Does Not Document</p>
     </div>

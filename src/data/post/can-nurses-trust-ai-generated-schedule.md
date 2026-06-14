@@ -62,7 +62,7 @@ An AI scheduling system optimizes for measurable requirements applied consistent
 The output is a schedule that meets all coverage requirements and scores as well as possible on the softer measures. It does not produce a perfect schedule. It produces a schedule that is better on measurable fairness measures than what most manual processes produce, because it applies the same rules to every nurse without the informal shortcuts that accumulate in manually built schedules.
 
 <div class="not-prose my-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <div class="rounded-lg border-2 border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950 p-5">
+  <div class="rounded-lg border border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950 p-5">
     <p class="font-bold text-green-800 dark:text-green-300 text-sm mb-3">AI Optimizes (Measurable)</p>
     <ul class="space-y-2 text-sm text-green-800 dark:text-green-300">
       <li>Coverage requirements per shift</li>
@@ -72,7 +72,7 @@ The output is a schedule that meets all coverage requirements and scores as well
       <li>Stated shift preferences</li>
     </ul>
   </div>
-  <div class="rounded-lg border-2 border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-950 p-5">
+  <div class="rounded-lg border border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-950 p-5">
     <p class="font-bold text-red-800 dark:text-red-300 text-sm mb-3">Manager Judges (Contextual)</p>
     <ul class="space-y-2 text-sm text-red-800 dark:text-red-300">
       <li>Personal circumstances not in the system</li>

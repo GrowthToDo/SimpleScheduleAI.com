@@ -200,7 +200,7 @@ This is the same pattern across the category, and it is the central reason a man
   <p class="text-center text-sm font-bold text-slate-900 dark:text-slate-100 mb-1">Match the Model to the Facility</p>
   <p class="text-center text-xs text-slate-500 dark:text-slate-400 mb-5">Based on each product's own stated positioning</p>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <div class="rounded-lg border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 overflow-hidden">
+    <div class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 overflow-hidden">
       <div class="bg-slate-700 px-4 py-3">
         <p class="text-xs font-bold text-white">M7 Health: Large Health Systems</p>
       </div>
@@ -208,7 +208,7 @@ This is the same pattern across the category, and it is the central reason a man
         <p class="text-xs text-slate-700 dark:text-slate-300">Multi-hospital organizations with IT staff, scheduling coordinators, and a workforce management function. Reference customers: Ochsner (47 hospitals), ScionHealth.</p>
       </div>
     </div>
-    <div class="rounded-lg border-2 border-blue-300 dark:border-blue-700 bg-white dark:bg-slate-900 overflow-hidden">
+    <div class="rounded-lg border border-blue-300 dark:border-blue-700 bg-white dark:bg-slate-900 overflow-hidden">
       <div class="bg-blue-700 px-4 py-3">
         <p class="text-xs font-bold text-white">SimpleScheduleAI: One CAH</p>
       </div>

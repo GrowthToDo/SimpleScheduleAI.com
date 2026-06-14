@@ -108,7 +108,7 @@ For a deeper look at the specific compliance and coverage requirements driving t
     </div>
     <div class="flex flex-col items-center" style="min-width: 90px;">
       <div class="text-xs font-semibold text-red-700 dark:text-red-400 mb-1">$24,500</div>
-      <div class="border-2 border-dashed border-red-400 dark:border-red-500 rounded-t-md w-full bg-red-50/40 dark:bg-red-900/10" style="height: 226px;" aria-label="Hidden cost gap: $24,500 not visible to the buyer"></div>
+      <div class="border border-dashed border-red-400 dark:border-red-500 rounded-t-md w-full bg-red-50/40 dark:bg-red-900/10" style="height: 226px;" aria-label="Hidden cost gap: $24,500 not visible to the buyer"></div>
       <div class="mt-2 text-xs text-center text-red-700 dark:text-red-400 leading-tight font-medium">Hidden gap<br/>(invisible to buyer)</div>
     </div>
   </div>

@@ -63,7 +63,7 @@ The word "automated" had appeared in all three sales conversations. The actual a
         <li>Reports and dashboards already populated</li>
       </ul>
     </div>
-    <div class="rounded-lg border-2 border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20 p-4">
+    <div class="rounded-lg border border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20 p-4">
       <p class="text-sm font-bold text-blue-900 dark:text-blue-200 mb-3">What the nurse manager experiences</p>
       <ul class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 list-disc list-inside">
         <li>4 to 8 weeks of rules configuration before output is reliable</li>
@@ -184,7 +184,7 @@ The four questions below reveal the actual level of automation behind any vendor
       <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"How long after implementation does it take before the auto-generated schedules require no correction?"</p>
       <p class="text-xs text-slate-600 dark:text-slate-400">An honest answer reveals how much setup work the "automation" requires before it is actually reliable.</p>
     </div>
-    <div class="rounded-lg border-2 border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20 p-4">
+    <div class="rounded-lg border border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20 p-4">
       <p class="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2">Question 4: Weekly hours (most diagnostic)</p>
       <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">"How many hours per week does a typical CAH nurse manager spend on scheduling after full implementation?"</p>
       <p class="text-xs text-slate-600 dark:text-slate-400">The number tells you the actual automation level more directly than any feature description.</p>

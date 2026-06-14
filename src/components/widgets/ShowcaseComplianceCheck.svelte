@@ -102,7 +102,7 @@
         {#each complianceRules as rule, i}
           {#if checkedCount > i}
             <li class="flex items-center gap-2 text-green-400 text-[11px]">
-              <span class="shrink-0">✓</span>
+              <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-green-400"></span>
               <span>{rule}</span>
             </li>
           {/if}
@@ -116,7 +116,7 @@
           {#each fairnessGoals as goal, i}
             {#if checkedCount > 13 + i}
               <li class="flex items-center gap-2 text-green-400 text-[11px]">
-                <span class="shrink-0">✓</span>
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-green-400"></span>
                 <span>{goal}</span>
               </li>
             {/if}
@@ -127,7 +127,7 @@
       <!-- Done banner -->
       {#if phase === 'done'}
         <div class="mt-2 rounded-lg bg-green-900/30 border border-green-700 px-4 py-3 text-center">
-          <span class="text-green-400 font-semibold text-sm">✓ 21 / 21 · Schedule is compliant. Ready for your review.</span>
+          <span class="text-green-400 font-semibold text-sm">21 / 21 · Schedule is compliant. Ready for your review.</span>
         </div>
       {/if}
     {/if}

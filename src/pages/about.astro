@@ -73,13 +73,13 @@ const aboutBreadcrumbSchema = {
 
   <!-- Stats -->
   <section class="bg-page">
-    <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <dl class="grid grid-cols-1 gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
         {
           stats.map((stat) => (
-            <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 p-6">
-              <dt class="text-xs font-semibold uppercase tracking-widest text-primary">{stat.label}</dt>
-              <dd class="mt-3 text-lg font-semibold">{stat.value}</dd>
+            <div class="border-t border-hairline pt-5">
+              <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{stat.label}</dt>
+              <dd class="mt-2 text-lg font-semibold">{stat.value}</dd>
             </div>
           ))
         }
@@ -89,7 +89,7 @@ const aboutBreadcrumbSchema = {
 
   <!-- Why CAHs -->
   <section class="bg-page">
-    <div class="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28 text-center">
+    <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16 text-center">
       <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">Why this is built for you</p>
       <h2 class="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
         Why Critical Access Hospitals specifically
@@ -107,19 +107,19 @@ const aboutBreadcrumbSchema = {
 
   <!-- Principles -->
   <section class="bg-white">
-    <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div class="mx-auto mb-12 max-w-2xl text-center">
         <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">How this works</p>
         <h2 class="text-balance text-3xl font-bold tracking-tight sm:text-4xl">How this works for you</h2>
         <p class="mt-4 text-lg text-muted">This is an AI-native nurse scheduling service, not a software rollout.</p>
       </div>
 
-      <div class="grid gap-6 lg:grid-cols-3">
+      <div class="grid gap-10 lg:grid-cols-3">
         {
           principles.map((p) => (
-            <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-7 shadow-sm">
+            <div class="border-t border-hairline pt-6">
               <h3 class="text-lg font-semibold">{p.title}</h3>
-              <p class="mt-3 text-default">{p.description}</p>
+              <p class="mt-3 leading-relaxed text-muted">{p.description}</p>
             </div>
           ))
         }
@@ -129,40 +129,28 @@ const aboutBreadcrumbSchema = {
 
   <!-- What we do / do not do -->
   <section class="bg-page">
-    <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div class="mx-auto mb-12 max-w-2xl text-center">
         <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">Scope of service</p>
         <h2 class="text-balance text-3xl font-bold tracking-tight sm:text-4xl">Clear boundaries, by design</h2>
       </div>
-      <div class="mx-auto max-w-6xl grid gap-6 lg:grid-cols-2">
-        <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 p-7">
-          <h3 class="text-xl font-semibold">What you get</h3>
-          <ul class="mt-4 space-y-3">
-            {
-              whatWeDo.map((item) => (
-                <li class="flex items-start gap-3">
-                  <span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-primary" />
-                  <span class="text-default">{item}</span>
-                </li>
-              ))
-            }
+      <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:gap-0">
+        <div class="md:pr-12 lg:pr-16">
+          <h3 class="mb-5 text-sm font-semibold uppercase tracking-[0.14em] text-primary">What you get</h3>
+          <ul class="divide-y divide-ink/10 border-t border-ink/10">
+            {whatWeDo.map((item) => <li class="py-3.5 leading-relaxed text-default">{item}</li>)}
           </ul>
-          <p class="mt-5 text-sm text-muted">You review and approve. Nothing is final until your team signs off.</p>
+          <p class="mt-4 text-sm text-muted">You review and approve. Nothing is final until your team signs off.</p>
         </div>
 
-        <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 p-7">
-          <h3 class="text-xl font-semibold">What never happens without you</h3>
-          <ul class="mt-4 space-y-3">
-            {
-              whatWeDoNotDo.map((item) => (
-                <li class="flex items-start gap-3">
-                  <span class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-gray-400" />
-                  <span class="text-default">{item}</span>
-                </li>
-              ))
-            }
+        <div class="md:border-l md:border-ink/10 md:pl-12 lg:pl-16">
+          <h3 class="mb-5 text-sm font-semibold uppercase tracking-[0.14em] text-muted">
+            What never happens without you
+          </h3>
+          <ul class="divide-y divide-ink/10 border-t border-ink/10">
+            {whatWeDoNotDo.map((item) => <li class="py-3.5 leading-relaxed text-default/80">{item}</li>)}
           </ul>
-          <p class="mt-5 text-sm text-muted">
+          <p class="mt-4 text-sm text-muted">
             We say no to these on purpose. You should know exactly what you are getting, and what you are not.
           </p>
         </div>
@@ -172,7 +160,7 @@ const aboutBreadcrumbSchema = {
 
   <!-- Founders -->
   <section class="bg-white">
-    <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div class="mx-auto mb-12 max-w-2xl text-center">
         <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-primary">The team</p>
         <h2 class="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
@@ -186,7 +174,7 @@ const aboutBreadcrumbSchema = {
             <img
               src="/founders/pradeep.webp"
               alt="Pradeep Pandey, Co-founder of SimpleScheduleAI"
-              class="h-24 w-24 rounded-full object-cover ring-4 ring-primary/20"
+              class="h-24 w-24 rounded-full object-cover ring-1 ring-primary/25"
               loading="lazy"
               decoding="async"
               width="96"
@@ -206,7 +194,7 @@ const aboutBreadcrumbSchema = {
           <img
             src="/founders/gautham.png"
             alt="Gautham, Co-founder of SimpleScheduleAI"
-            class="h-24 w-24 rounded-full object-cover ring-4 ring-primary/20"
+            class="h-24 w-24 rounded-full object-cover ring-1 ring-primary/25"
             loading="lazy"
             decoding="async"
             width="96"
@@ -224,7 +212,7 @@ const aboutBreadcrumbSchema = {
 
   <!-- Dark CTA -->
   <section class="bg-[#1A2332] dark:bg-black">
-    <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div class="mx-auto max-w-3xl text-center">
         <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-[#7BAF9B]">
           Low risk. Flat monthly pricing.

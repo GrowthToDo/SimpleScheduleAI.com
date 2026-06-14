@@ -75,7 +75,7 @@ At a CAH without IT support, this configuration work falls to the nurse manager.
 **Advanced callout backfill.** TCP TimeClock+'s standard callout workflow requires the nurse manager to check availability and make replacement calls manually. The automated callout backfill feature is in TCP Humanity Scheduling, a separate product that costs extra. CAH evaluators should confirm which TCP product covers the workflows they need before signing a contract.
 
 <div class="not-prose my-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <div class="rounded-lg border-2 border-green-300 dark:border-green-700 bg-white dark:bg-slate-800 overflow-hidden">
+  <div class="rounded-lg border border-green-300 dark:border-green-700 bg-white dark:bg-slate-800 overflow-hidden">
     <div class="bg-green-600 dark:bg-green-700 px-4 py-3">
       <p class="font-bold text-white text-sm">TCP TimeClock+ Covers</p>
     </div>
@@ -87,7 +87,7 @@ At a CAH without IT support, this configuration work falls to the nurse manager.
       <li>Leave and absence management</li>
     </ul>
   </div>
-  <div class="rounded-lg border-2 border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
+  <div class="rounded-lg border border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
     <div class="bg-red-600 dark:bg-red-700 px-4 py-3">
       <p class="font-bold text-white text-sm">TCP TimeClock+ Misses</p>
     </div>

@@ -40,17 +40,15 @@ const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
   <SchemaOrg slot="head" schema={[contactPageSchema, contactBreadcrumbSchema]} />
   <!-- Form + details -->
   <section class="bg-page">
-    <div class="mx-auto max-w-7xl px-4 pt-28 pb-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
       <div class="mb-10">
         <p class="text-sm font-semibold uppercase tracking-widest text-primary mb-2">Talk to us</p>
         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-3">Contact</h1>
         <p class="text-lg text-muted max-w-2xl">{metadata.description}</p>
       </div>
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
-        <div
-          class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-6 shadow-sm sm:p-8"
-        >
-          <div class="mb-5">
+        <div class="rounded-2xl border border-hairline bg-white p-6 dark:bg-slate-800 sm:p-8">
+          <div class="mb-6">
             <h2 class="text-xl font-semibold">Get your first schedule</h2>
             <p class="mt-2 text-default">
               Tell us about your unit and we will reply within 24 hours with your onboarding plan and timeline. If you
@@ -58,16 +56,12 @@ const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
             </p>
           </div>
 
-          <div class="rounded-2xl bg-primary/10 dark:bg-[#7BAF9B]/10 p-4 sm:p-5">
-            <ContactForm />
-          </div>
+          <ContactForm />
 
           <p class="mt-4 text-sm text-muted">No spam. No software rollout. Excel is fine.</p>
         </div>
 
-        <div
-          class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-6 shadow-sm sm:p-8"
-        >
+        <div class="lg:pl-6">
           <h2 class="text-xl font-semibold">Contact details</h2>
           <p class="mt-2 text-default">
             If you prefer, email us and include a sample schedule format or a description of your constraints.
@@ -111,9 +105,11 @@ const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
             </div>
           </div>
 
-          <div class="mt-8 rounded-2xl border border-primary/25 bg-primary/5 p-5">
-            <p class="text-sm font-semibold text-primary">What to include in your message</p>
-            <ul class="mt-3 space-y-2">
+          <div class="mt-8 border-t border-hairline pt-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+              What to include in your message
+            </p>
+            <ul class="mt-4 space-y-2">
               {
                 [
                   'Unit size and shift pattern (12h, 8h, mixed)',
