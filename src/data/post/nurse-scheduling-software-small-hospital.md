@@ -92,6 +92,91 @@ The core requirements are simpler than enterprise software suggests:
 
 **A manager who approves, not builds from scratch.** The manager's job is not to build a schedule from zero. It is to review a draft that already incorporates the constraints she would have applied manually, adjust where needed, and approve. Most enterprise platforms put the build work on the manager.
 
+<figure class="not-prose my-8">
+  <figcaption class="mb-3 text-sm font-semibold text-slate-700 dark:text-slate-200">
+    Enterprise platform vs a tool built for a 20-bed CAH
+  </figcaption>
+  <table class="w-full table-fixed border-collapse break-words text-xs sm:text-sm">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-800">
+        <th
+          class="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100"
+          style="width: 22%"
+        ></th>
+        <th
+          class="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-500 dark:border-slate-700 dark:text-slate-400"
+          style="width: 39%"
+        >
+          Enterprise platform
+        </th>
+        <th
+          class="border border-slate-300 px-3 py-2 text-left font-semibold text-primary dark:border-slate-700"
+          style="width: 39%"
+        >
+          Built for a 20-bed CAH
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">
+          Designed for
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-600 dark:border-slate-700 dark:text-slate-400">
+          Health systems with 500-plus nurses
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
+          A single 20-nurse rural hospital
+        </td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">
+          Setup
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-600 dark:border-slate-700 dark:text-slate-400">
+          IT integration, weeks to months
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
+          Excel roster upload, 3 to 5 days
+        </td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">
+          Callout coverage
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-600 dark:border-slate-700 dark:text-slate-400">
+          Float pool or agency integration
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
+          Ranked replacement list, no float pool needed
+        </td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">
+          Who runs it
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-600 dark:border-slate-700 dark:text-slate-400">
+          A dedicated administrator
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
+          A nurse manager who also delivers care
+        </td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">
+          Compliance
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-600 dark:border-slate-700 dark:text-slate-400">
+          Generic, configured by the buyer
+        </td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
+          Texas FLSA thresholds and CMS §485.635 built in
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
 ## How SimpleScheduleAI Is Built for CAH-Scale Scheduling
 
 SimpleScheduleAI is a managed scheduling service designed specifically for Texas Critical Access Hospitals with 25 or fewer beds. The starting point was the 20-nurse CAH, not a scaled-down version of a large-system platform.
