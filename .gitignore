@@ -29,3 +29,12 @@ pnpm-debug.log*
 pnpm-lock.yaml
 
 .astro
+
+# local machine config + scratch (kept on disk, out of the repo)
+.tmp/
+.claude/settings.local.json
+.claude/*.lock
+
+# unused QA artifacts (kept on disk, out of the repo)
+public/qa-checklist.png
+public/quality-checks.png
