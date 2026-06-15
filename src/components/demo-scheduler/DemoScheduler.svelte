@@ -180,7 +180,8 @@
 
   function flash(msg: string) {
     toast = msg;
-    if (typeof window !== 'undefined') window.setTimeout(() => (toast = null), 3200);
+    const ms = Math.min(8000, 3500 + msg.length * 45); // keep longer messages on screen long enough to read
+    if (typeof window !== 'undefined') window.setTimeout(() => (toast = null), ms);
   }
 
   // ── 1. GENERATE ─────────────────────────────────────────────────────────────
@@ -425,6 +426,7 @@
 
 <svelte:window onkeydown={onKeydown} />
 
+<div class="ssa-root">
 <section class="ssa-demo" aria-labelledby="ssa-demo-title">
   <header class="ssa-head">
     <span class="ssa-badge"><span aria-hidden="true">●</span> Demo data — not a real hospital</span>
@@ -723,11 +725,14 @@
 {#if toast}
   <div class="ssa-toast" role="status">{toast}</div>
 {/if}
+</div>
 
 <style>
   /* Tokens: use the site's CSS variables where present, with safe fallbacks so the
      component also renders correctly when previewed standalone. */
-  .ssa-demo {
+  /* Vars live on the wrapper so the picker + toast (rendered as siblings of
+     .ssa-demo, e.g. position:fixed) resolve them too — not just the widget. */
+  .ssa-root {
     --green: var(--aw-color-primary, #2d5a4a);
     --green-2: var(--aw-color-secondary, #234739);
     --ink: #1a2332;
@@ -737,6 +742,8 @@
     --red: #b91c1c;
     font-family: var(--aw-font-sans, 'Inter Variable', Inter, system-ui, sans-serif);
     color: var(--ink);
+  }
+  .ssa-demo {
     max-width: 60rem;
     margin: 0 auto;
     padding: 1rem;
