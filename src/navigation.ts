@@ -11,6 +11,10 @@ export const headerData = {
       href: getPermalink('/how-it-works'),
     },
     {
+      text: 'Live Demo',
+      href: getPermalink('/simulator'),
+    },
+    {
       text: 'Get Started',
       href: getPermalink('/pilot'),
     },

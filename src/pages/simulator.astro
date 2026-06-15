@@ -1,10 +1,15 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import DemoScheduler from '~/components/demo-scheduler/DemoScheduler.svelte';
 
 const metadata = {
-  title: 'Scheduling Simulator',
-  description: 'Try our Excel-based scheduling simulator to understand the complexity of nurse scheduling firsthand.',
-  robots: { index: false, follow: false },
+  title: 'Try the Nurse Scheduling Demo',
+  description:
+    'Build a safe ICU week in under a minute. A free, no-signup interactive demo of explainable nurse scheduling — the same safety rules our scheduling team relies on.',
+  // Real conversion asset now (was a "coming soon" waitlist). Index it.
+  // NOTE: /simulator is currently excluded from the sitemap in astro.config.ts —
+  // remove that exclusion to make it discoverable (see README in the demo build).
+  robots: { index: true, follow: true },
 };
 ---
 
@@ -14,82 +19,9 @@ const metadata = {
       <div class="absolute -top-24 left-1/2 h-80 w-[52rem] -translate-x-1/2 rounded-full bg-primary/15 blur-3xl"></div>
     </div>
 
-    <div class="relative mx-auto max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-3xl text-center">
-        <span
-          class="inline-block rounded-full bg-primary/10 dark:bg-[#7BAF9B]/10 px-4 py-2 text-sm font-semibold text-primary"
-        >
-          Coming Soon
-        </span>
-
-        <h1 class="mt-6 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-          Scheduling Simulator (Coming Soon)
-        </h1>
-
-        <div class="mt-8 space-y-4 text-lg text-default">
-          <p>
-            We built an Excel-based scheduling simulator to understand the complexity of nurse scheduling firsthand.
-          </p>
-          <p>It includes patient census data, real-world compliance rules, PTO tracking, and skill-matching.</p>
-          <p class="font-semibold">
-            Soon, you'll be able to try it yourself and see why "just use Excel" breaks down at scale.
-          </p>
-        </div>
-
-        {/* Email Capture Form */}
-        <div class="mx-auto mt-12 max-w-md">
-          <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-8 shadow-sm">
-            <form name="simulator-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-              <input type="hidden" name="form-name" value="simulator-waitlist" />
-              <div class="hidden">
-                <label>
-                  Don't fill this out if you're human: <input name="bot-field" />
-                </label>
-              </div>
-
-              <h3 class="text-xl font-semibold">Get notified when it launches</h3>
-
-              <div class="mt-6 space-y-4">
-                <div>
-                  <label for="email" class="block text-left text-sm font-medium text-default">
-                    Email address <span class="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    class="mt-2 block w-full rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary bg-white dark:bg-gray-900"
-                    placeholder="you@hospital.org"
-                  />
-                </div>
-
-                <div>
-                  <label for="role" class="block text-left text-sm font-medium text-default">
-                    Your role (optional)
-                  </label>
-                  <input
-                    id="role"
-                    name="role"
-                    type="text"
-                    class="mt-2 block w-full rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-3 text-sm focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary bg-white dark:bg-gray-900"
-                    placeholder="Nurse Manager, CNO, etc."
-                  />
-                </div>
-
-                <button type="submit" class="btn btn-primary w-full"> Notify me </button>
-
-                <p class="text-sm text-muted">We'll send you one email when the simulator is ready. No spam.</p>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        {/* Back to Home */}
-        <div class="mt-12">
-          <a href="/" class="btn"> ← Back to homepage </a>
-        </div>
-      </div>
+    <div class="relative mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8">
+      {/* Lazy-hydrated island: engine + UI ship as JS only when scrolled into view. */}
+      <DemoScheduler client:visible />
     </div>
   </section>
 </Layout>
