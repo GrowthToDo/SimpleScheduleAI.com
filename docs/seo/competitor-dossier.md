@@ -788,9 +788,10 @@ FLSA 8-and-80 tracking, or credential constraints. Verify with vendor for hospit
 The following appear in posts but have no verified quotes collected yet. Go online for these:
 
 - **Connecteam** — mentioned in deputy-alternatives-healthcare.md
-- **OnShift** (now Workday) — onshift-alternatives.md (draft)
+- **OnShift** — Capterra ID 122212, 3.9/5 (verified 2026-06-15). Positioning: multi-facility senior care. "now Workday" UNCONFIRMED (sources suggest a ShiftKey merger; verify before stating). FABRICATED quote, do not cite: "Our site has 4 employees and the system was overkill" (exists on no source).
+- **Shiftboard** — Capterra product "ScheduleFlex" ID 81956, 4.4/5 (verified 2026-06-15). Markets to organizations of 25 to 100,000 employees. FABRICATED quote, do not cite: "Minimum 100 employees to be viable." The 100-employee figure traces only to a Connecteam author's account of a sales call (connecteam.com/reviews/shiftboard), not a documented policy or a customer review.
 - **TCP Scheduling** (enterprise tier, separate from Aladtec and TimeClock+)
-- **QGenda** — Capterra product ID not confirmed, verify before citing
+- **QGenda** — Capterra ID 90628, 4.2/5 (verified 2026-06-15). Positioning: large physician/provider groups. FABRICATED quote, do not cite: "Not designed for smaller practices" (third-party blog paraphrase only, not a real review).
 
 _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as full sections on 2026-06-06.)_
 
