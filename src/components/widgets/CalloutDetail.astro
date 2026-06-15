@@ -1,7 +1,6 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
-import { Icon } from 'astro-icon/components';
 import ShowcaseCalloutCoverage from './ShowcaseCalloutCoverage.svelte';
 import type { Widget } from '~/types';
 
@@ -44,7 +43,7 @@ const logExample = {
         {
           details.map((detail) => (
             <li class="flex items-start gap-3">
-              <Icon name="tabler:check" class="w-5 h-5 text-primary mt-1" />
+              <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7BAF9B]" />
               <span class="text-default/80">{detail}</span>
             </li>
           ))

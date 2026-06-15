@@ -66,6 +66,9 @@
   let undoStack = $state<Assignment[][]>([]);
   let toast = $state<string | null>(null);
   let stressNote = $state<string | null>(null); // explainer banner for the "try to break it" stress test
+  // Guided-tour progress — drives the pulsing "click here" dot through each step.
+  let didBreak = $state(false);
+  let didCallout = $state(false);
 
   // CTA form
   let email = $state('');
@@ -90,6 +93,19 @@
   });
   const pickerCandidates = $derived<Candidate[]>(
     picker ? eligibleCandidates(schedule, { day: picker.day, type: picker.type }, picker.kind, DATASET) : []
+  );
+  // The single control to pulse next, so a first-timer always knows where to click.
+  const guide = $derived.by(() => {
+    if (phase === 'intro') return 'fill';
+    if (picker) return picker.mode === 'breakit' ? 'pick-hl' : picker.mode === 'callout' ? 'pick-top' : null;
+    if (phase !== 'ready') return null;
+    if (!didBreak) return 'breakit';
+    if (!didCallout) return 'staffout';
+    return null;
+  });
+  // In a call-out, the recommended replacement is the top-ranked eligible candidate.
+  const topEligibleId = $derived(
+    picker?.mode === 'callout' ? (pickerCandidates.find((c) => c.eligible)?.nurse.id ?? null) : null
   );
 
   // Live checklist state: while generating, animate the tick; once ready, each item
@@ -176,6 +192,8 @@
     reveal = 0;
     ticked = 0;
     stressNote = null;
+    didBreak = false;
+    didCallout = false;
     phase = 'generating';
 
     const stepCell = () => {
@@ -320,6 +338,7 @@
         track('demo_callout_resolved', { nurse: c.nurse.name });
         flash(`${c.nurse.name} picked up the shift. Gap filled, still zero violations.`);
       }
+      didCallout = true; // tour: the call-out step is done
     }
     picker = null;
   }
@@ -343,6 +362,7 @@
       if (spare) base = schedule.filter((a) => a !== spare);
     }
     schedule = [...base, { nurseId: c.nurse.id, day: p.day, type: p.type }];
+    if (p.mode === 'breakit') didBreak = true; // tour: the "try to break a rule" step is done
     track('demo_force_violation', { nurse: c.nurse.name, rule: c.violations[0]?.rule });
     flash(`Forced — and flagged: ${reason}`);
     picker = null;
@@ -362,6 +382,8 @@
     picker = null;
     toast = null;
     stressNote = null;
+    didBreak = false;
+    didCallout = false;
     track('demo_reset');
   }
 
@@ -452,7 +474,7 @@
     <div class="ssa-cta-build">
       <span class="ssa-cta-wrap">
         <button class="ssa-btn ssa-btn-primary ssa-btn-lg ssa-pulse-cta" onclick={build}>Fill all the slots →</button>
-        <span class="ssa-cta-dot" aria-hidden="true"></span>
+        {#if guide === 'fill'}<span class="ssa-cta-dot" aria-hidden="true"></span>{/if}
       </span>
       <p class="ssa-hint">Every seat below is empty. <strong>Click to start</strong> — one click staffs the whole week, safely.</p>
     </div>
@@ -491,8 +513,12 @@
           {/if}
         </span>
         <div class="ssa-action-btns">
-          <button class="ssa-btn" onclick={tryToBreak}>Try to break a rule</button>
-          <button class="ssa-btn" onclick={callOut}>Staff calls out</button>
+          <button class="ssa-btn" onclick={tryToBreak}
+            >Try to break a rule{#if guide === 'breakit'}<span class="ssa-cta-dot" aria-hidden="true"></span>{/if}</button
+          >
+          <button class="ssa-btn" onclick={callOut}
+            >Staff calls out{#if guide === 'staffout'}<span class="ssa-cta-dot" aria-hidden="true"></span>{/if}</button
+          >
           <button class="ssa-btn" onclick={chargeCallOut}>Charge nurse calls out</button>
           <button class="ssa-btn" onclick={aideCallOut}>Aide calls out</button>
           <button class="ssa-btn ssa-btn-ghost" onclick={undo} disabled={!undoStack.length}>Undo</button>
@@ -673,9 +699,19 @@
           </div>
           <div class="ssa-cand-act">
             {#if c.eligible}
-              <button class="ssa-btn ssa-btn-sm ssa-btn-primary" onclick={() => assign(c)}>Assign</button>
+              <button class="ssa-btn ssa-btn-sm ssa-btn-primary" onclick={() => assign(c)}
+                >Assign{#if guide === 'pick-top' && c.nurse.id === topEligibleId}<span
+                    class="ssa-cta-dot ssa-cta-dot--left"
+                    aria-hidden="true"
+                  ></span>{/if}</button
+              >
             {:else if !c.already}
-              <button class="ssa-btn ssa-btn-sm ssa-btn-danger" onclick={() => forceAnyway(c)}>Force anyway</button>
+              <button class="ssa-btn ssa-btn-sm ssa-btn-danger" onclick={() => forceAnyway(c)}
+                >Force anyway{#if guide === 'pick-hl' && c.nurse.id === p.highlightId}<span
+                    class="ssa-cta-dot ssa-cta-dot--left"
+                    aria-hidden="true"
+                  ></span>{/if}</button
+              >
             {/if}
           </div>
         </li>
@@ -750,9 +786,14 @@
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: var(--red);
-    border: 2px solid var(--ivory);
+    background: #dc2626;
+    border: 2px solid #faf7f2;
     animation: ssa-cta-pulse 1.2s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .ssa-cta-dot--left {
+    right: auto;
+    left: -5px;
   }
   .ssa-pulse-cta {
     animation: ssa-cta-glow 1.5s ease-out infinite;
@@ -761,11 +802,11 @@
     0%,
     100% {
       transform: scale(1);
-      box-shadow: 0 0 0 0 color-mix(in srgb, var(--red) 50%, transparent);
+      box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5);
     }
     50% {
       transform: scale(1.4);
-      box-shadow: 0 0 0 7px color-mix(in srgb, var(--red) 0%, transparent);
+      box-shadow: 0 0 0 7px rgba(220, 38, 38, 0);
     }
   }
   @keyframes ssa-cta-glow {
@@ -805,6 +846,7 @@
 
   /* buttons */
   .ssa-btn {
+    position: relative;
     appearance: none;
     border: 1px solid var(--line);
     background: #fff;
@@ -1436,7 +1478,7 @@
     bottom: 1.25rem;
     transform: translateX(-50%);
     z-index: 70;
-    background: var(--ink);
+    background: #1a2332;
     color: #fff;
     padding: 0.65rem 1rem;
     border-radius: 0.6rem;
@@ -1452,6 +1494,30 @@
     }
     .ssa-roster {
       grid-template-columns: 1fr;
+    }
+    /* Roster row: keep name/bar/hours on the top line and drop badges to their own
+       wrapping line, so wide badges (PRN · weekends, on leave …) can't push the
+       widget past the viewport and clip the page. */
+    .ssa-rrow {
+      grid-template-columns: 1fr 2.5rem auto;
+      grid-template-areas:
+        'name bar hours'
+        'badges badges badges';
+      gap: 0.25rem 0.4rem;
+    }
+    .ssa-rname {
+      grid-area: name;
+      min-width: 0;
+    }
+    .ssa-rbadges {
+      grid-area: badges;
+    }
+    .ssa-rbar {
+      grid-area: bar;
+    }
+    .ssa-rhours {
+      grid-area: hours;
+      text-align: right;
     }
     .ssa-day-row {
       grid-template-columns: 1fr;
