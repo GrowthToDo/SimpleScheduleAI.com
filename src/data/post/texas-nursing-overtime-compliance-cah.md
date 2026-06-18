@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2099-01-01T00:00:00Z
-updateDate: 2026-04-01T00:00:00Z
+draft: false
+publishDate: 2026-06-18T00:00:00Z
+updateDate: 2026-06-18T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Texas Nursing Overtime Compliance: Guide for CAH Admins'
 excerpt: >
@@ -19,39 +19,54 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/texas-nursing-overtime-compliance-cah'
 ---
 
-## TL;DR
+Texas critical access hospitals operate under three simultaneous compliance frameworks for nursing staffing: federal FLSA overtime rules, CMS Conditions of Participation (§485.635), and Texas Labor Code Chapter 62. Each is audited by a different body, and each requires different documentation.
 
-Texas critical access hospitals operate under three simultaneous compliance frameworks
-for nursing staffing: federal FLSA overtime rules, CMS Conditions of Participation
-(§485.635), and Texas Labor Code Chapter 62. The most common enforcement exposure
-is not intentional violation, it is documentation failure. A facility may be
-scheduling correctly but cannot prove it during a CMS survey. Documentation is the
-compliance gap that matters most.
+The most common enforcement exposure is not intentional violation, it is documentation failure. A facility can be scheduling correctly and still be unable to prove it during a CMS survey. This guide breaks down the five most common compliance gaps and the records that protect a CAH against findings.
+
+## Key Takeaways
+
+- Texas CAHs face three overlapping compliance frameworks: FLSA, CMS CoP (§485.635), and Texas Labor Code Chapter 62, each with different documentation requirements.
+- The 8-and-80 FLSA alternative is widely used but frequently misapplied; it requires a prior written agreement with each nurse, not a retroactive policy decision, and it does not stop daily overtime on 12-hour shifts.
+- The five most common compliance gaps are: missing 8-and-80 agreements, no schedule change logs, untracked credential expirations, improper meal break auto-deductions, and incomplete on-call/callback records.
+- CMS compliance requires both the original posted schedule AND documentation of actual coverage; substitution events must be logged with credentials for the replacing nurse.
+- Texas Labor Code requires payroll and hours records for three years; CMS best practice suggests maintaining scheduling documentation for five years.
+
+## Table of Contents
+
+- [What are the FLSA overtime rules for hospital nurses in Texas?](#what-are-the-flsa-overtime-rules-for-hospital-nurses-in-texas)
+- [What Texas-specific requirements apply to CAH nurse scheduling?](#what-texas-specific-requirements-apply-to-cah-nurse-scheduling)
+- [What are the most common compliance gaps in CAH scheduling?](#what-are-the-most-common-compliance-gaps-in-cah-scheduling)
+- [What documentation must a Texas CAH maintain for CMS compliance?](#what-documentation-must-a-texas-cah-maintain-for-cms-compliance)
+- [How does SimpleScheduleAI help with compliance?](#how-does-simplescheduleai-help-with-compliance)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
 ## What are the FLSA overtime rules for hospital nurses in Texas?
 
-Under the [Fair Labor Standards Act](https://www.dol.gov/agencies/whd/flsa), hospital
+Under the [Fair Labor Standards Act](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), hospital
 nurses are entitled to overtime pay at 1.5× the regular rate for all hours worked over
 40 in a workweek. Texas follows federal FLSA standards with no state-level overtime
 exemptions for healthcare workers above the federal threshold.
 
 FLSA provides hospitals with a specific alternative: the Section 7(j) "8 and 80" rule,
-which allows employers to adopt a 14-day overtime period instead of a 7-day workweek
-for hospital employees. Under this arrangement, overtime is owed only for hours worked
-over 8 in a day OR over 80 in the 14-day period. For 12-hour shift hospitals, this
-distinction matters: a nurse working 12-hour shifts could work 84 hours in a 14-day
-period without overtime under the 8-and-80 rule, but only if the employer has a
-written agreement with the employee before work begins, not retroactively.
+which lets an employer adopt a 14-day overtime period instead of a 7-day workweek for
+hospital employees. Under this arrangement, overtime is owed for hours worked over 8 in
+a day OR over 80 in the 14-day period. The 8-and-80 rule removes the separate 40-hour
+weekly calculation; it does not create a 12-hour daily threshold. For a nurse on 12-hour
+shifts, each shift already exceeds the 8-hour daily threshold by 4 hours, so daily
+overtime accrues on every 12-hour shift regardless of the bi-weekly total. The rule
+mainly benefits facilities with 8-hour or variable shift patterns, not 12-hour-shift
+units.
 
-This is the most commonly misapplied FLSA provision at small hospitals. CAH
-administrators sometimes apply the 8-and-80 rule without having the required prior
-written agreement with each affected employee. That's an FLSA violation regardless
-of whether the total pay was fair.
+The rule also applies only if the employer has a written agreement with each employee
+before work begins, not retroactively. This is the most commonly misapplied FLSA
+provision at small hospitals: CAH administrators sometimes adopt the 8-and-80 method
+without the required prior written agreement with each affected employee. That is an
+FLSA violation regardless of whether the total pay was fair.
 
 Key FLSA requirements for Texas CAHs:
 
 - Overtime calculated on actual hours worked, not scheduled hours
-- On-call and callback time may count as hours worked depending on conditions -
+- On-call and callback time may count as hours worked depending on conditions;
   consult legal counsel for your specific on-call policy
 - Automatic deductions for meal breaks are only permissible if the employee is
   completely relieved of duties during that break (rare in CAH nursing)
@@ -61,7 +76,7 @@ Key FLSA requirements for Texas CAHs:
 ## What Texas-specific requirements apply to CAH nurse scheduling?
 
 Texas overlays two state-level frameworks on top of federal FLSA requirements:
-the Texas Labor Code and Texas DSHS nursing facility regulations.
+the Texas Labor Code and Texas HHSC nursing facility regulations.
 
 **Texas Labor Code Chapter 62** ([Tex. Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm))
 governs minimum wage and overtime for Texas employers. The code follows federal FLSA
@@ -70,7 +85,7 @@ employers must maintain payroll records sufficient to verify compliance with ove
 obligations, records must be kept for at least three years and be available for
 inspection by the Texas Workforce Commission.
 
-**Texas DSHS nursing regulations** apply to licensed hospital facilities. Texas DSHS
+**Texas HHSC nursing regulations** apply to licensed hospital facilities. Texas HHSC
 requires that licensed hospitals maintain sufficient nursing staff to meet patient care
 needs at all times. This is a staffing adequacy standard, not just a documentation
 standard, which means a CAH can be cited if patient volume consistently outpaces
@@ -79,10 +94,42 @@ available nursing staff, regardless of whether overtime rules were technically f
 For [critical access hospital scheduling](/critical-access-hospital-scheduling),
 the intersection of these requirements creates a compliance profile that looks like this:
 
-- Federal overtime rules govern when and how overtime is paid
-- Texas Labor Code governs recordkeeping and state audit exposure
-- CMS CoP (§485.635) governs staffing documentation and CMS survey exposure
-- Texas DSHS governs staffing adequacy and state licensure exposure
+<figure class="not-prose my-8">
+  <figcaption class="mb-3 text-sm font-semibold text-slate-700 dark:text-slate-200">
+    The four frameworks governing CAH nurse scheduling in Texas
+  </figcaption>
+  <table class="w-full table-fixed border-collapse break-words text-xs sm:text-sm">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-800">
+        <th class="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100" style="width: 28%">Framework</th>
+        <th class="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100" style="width: 44%">What it governs</th>
+        <th class="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100" style="width: 28%">Audited by</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">FLSA (federal)</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">When and how overtime is paid</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">U.S. Department of Labor</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Texas Labor Code Ch. 62</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Payroll recordkeeping and state audit exposure</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Texas Workforce Commission</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">CMS CoP §485.635</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Staffing documentation and CMS survey exposure</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">CMS surveyors</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Texas HHSC</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Staffing adequacy and state licensure exposure</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Texas HHSC</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 
 These frameworks don't conflict, but they require different documentation to satisfy
 different auditing bodies. A facility that documents adequately for FLSA purposes
@@ -91,10 +138,9 @@ may still have CMS documentation gaps, and vice versa.
 ## What are the most common compliance gaps in CAH scheduling?
 
 In conversations with 30+ nurse managers and CAH administrators across Texas, five
-compliance gaps appear most consistently. None of them require intentional misconduct
-
-- they all emerge from scheduling processes that prioritize getting coverage over
-  documenting it.
+compliance gaps appear repeatedly. None of them require intentional misconduct; they
+all emerge from scheduling processes that prioritize getting coverage over documenting
+it.
 
 **Gap 1: No written 8-and-80 agreements.** Facilities using the 8-and-80 FLSA
 alternative without documented prior written agreements with each employee are
@@ -108,7 +154,7 @@ matches what actually happened. Callout substitutions, voluntary shift swaps, an
 charge nurse adjustments happen constantly. If these changes aren't logged in a
 retrievable record, the facility cannot prove during a CMS survey that the shifts
 shown as worked were actually covered by a licensed, credentialed nurse. CMS
-[§485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals)
+[§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
 requires that staffing records be accurate and available for review.
 
 **Gap 3: Credential expiration not tracked in the scheduling system.** A nurse with
@@ -132,16 +178,10 @@ determination of whether callback time is compensable hours worked is unclear un
 your specific on-call policy, that ambiguity should be resolved by counsel before a
 DOL audit surfaces it.
 
-<div class="my-8 rounded-lg border border-blue-200 bg-blue-50 dark:bg-blue-900/20 p-6">
-  <p class="font-semibold text-blue-900 dark:text-blue-100">Free checklist</p>
-  <p class="mt-1 text-blue-800 dark:text-blue-200">Texas Nursing Compliance Checklist. PDF checklist of 21 compliance items for Texas CAH nurse scheduling.</p>
-  <a href="/resources/texas-nursing-compliance-checklist" class="mt-3 inline-block font-medium text-blue-700 dark:text-blue-300 underline">Download free →</a>
-</div>
-
 ## What documentation must a Texas CAH maintain for CMS compliance?
 
 CMS Conditions of Participation for Critical Access Hospitals
-([§485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals))
+([§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635))
 require that staffing records be accurate, complete, and available for surveyor review.
 In practice, this means the following documentation must exist and be retrievable:
 
@@ -170,20 +210,21 @@ These records must be available to the Texas Workforce Commission on request.
 
 **Callout and coverage logs.** Documentation of each callout event, the coverage
 solution implemented, and any agency nurse credentials used. For agency nurses in
-particular, the facility must document that the agency nurse held current credentials -
+particular, the facility must document that the agency nurse held current credentials;
 relying on the agency's assurance is not sufficient for CMS purposes.
 
-## How SimpleScheduleAI Helps?
+## How does SimpleScheduleAI help with compliance?
 
-SimpleScheduleAI is a managed scheduling service with built-in compliance documentation.
-Every schedule change is logged automatically, original assignment, substitution,
-who covered, and timestamps. This audit trail is maintained as part of the service
-and available for export if a CMS survey or TWC audit requires documentation.
+SimpleScheduleAI is [nurse scheduling software](/nurse-scheduling-software) delivered as
+a managed service, with built-in compliance documentation. Every schedule change is
+logged automatically: original assignment, substitution, who covered, and timestamps.
+This audit trail is maintained as part of the service and available for export if a CMS
+survey or TWC audit requires documentation.
 
-We build Texas-specific overtime rules into the scheduling logic, flagging nurses
-who are approaching the 40-hour threshold (or your 8-and-80 period threshold) before
-shifts are assigned, not after the payroll run. Credential expiration dates are tracked
-against each nurse's profile, and we alert you before a certification lapses.
+We build Texas overtime rules into the scheduling logic, flagging nurses who are
+approaching the FLSA overtime threshold before shifts are assigned, not after the
+payroll run. Credential expiration dates are tracked against each nurse's profile, and
+we alert you before a certification lapses.
 
 One honest limitation: we document what happens within the scheduling system. If
 callout events are handled outside the system, managed by text or verbal
@@ -192,6 +233,28 @@ trail. Consistent use of the system is required for the compliance documentation
 be complete.
 
 [See how the scheduling process works →](/how-it-works)
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The thing that gets a CAH cited is rarely a deliberate violation. It is a Tuesday where a nurse called out, someone covered, and nobody logged the swap or checked the replacement's credentials. The schedule was fine; the record was not. Build the documentation into the moment the change happens, not into a binder you assemble the week a surveyor calls. The hospitals that pass cleanly are the ones where the proof writes itself.
+  </p>
+</div>
+
+## What to Do This Week
+
+1. Confirm you have a signed 8-and-80 agreement on file for every nurse, dated before the work period it applies to. Using the 8-and-80 method without them is back-pay exposure today.
+2. Pull last month's posted schedule and compare it to who actually worked. Every callout substitution should have a logged replacement with the covering nurse's credentials. Gaps here are the most common CMS survey finding.
+3. Check that your scheduling or credentialing log flags license, BLS, and certification expirations before a nurse is assigned, not after.
+4. Review your meal-break policy. If nurses routinely work through auto-deducted breaks, that is FLSA back-pay exposure; document the interruptions or stop auto-deducting.
+5. If assembling this proof by hand is the real burden, [see how SimpleScheduleAI works](/how-it-works) or [book a call](https://cal.com/gautham-8bdvdx/30min) to have the audit trail maintained for you.
+
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI keeps the compliance audit trail automatically: every change logged, every credential checked. Flat monthly pricing, no IT setup.</p>
+  <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+</div>
 
 ## Frequently Asked Questions
 
@@ -217,24 +280,15 @@ CMS survey requirements effectively extend this: surveyors can review records fo
 any survey period, which may extend further back for facilities with prior deficiencies.
 Best practice is maintaining scheduling and payroll documentation for five years.
 
-## Key Takeaways
+## A Note on Sources
 
-- Texas CAHs face three overlapping compliance frameworks: FLSA, CMS CoP (§485.635),
-  and Texas Labor Code Chapter 62, each with different documentation requirements
-- The 8-and-80 FLSA alternative is widely used but frequently misapplied, it requires
-  a prior written agreement with each nurse, not a retroactive policy decision
-- The five most common compliance gaps are: missing 8-and-80 agreements, no schedule
-  change logs, untracked credential expirations, improper meal break auto-deductions,
-  and incomplete on-call/callback records
-- CMS compliance requires both the original posted schedule AND documentation of actual
-  coverage, substitution events must be logged with credentials for the replacing nurse
-- Texas Labor Code requires payroll/hours records for three years; CMS best practice
-  suggests maintaining scheduling documentation for five years
+1. FLSA healthcare overtime, including the Section 7(j) 8-and-80 rule. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+2. CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+3. Texas Labor Code Chapter 62, minimum wage, overtime, and recordkeeping. [Tex. Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
+4. Texas hospital licensing and staffing adequacy. [Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/).
+5. Payroll record retention and inspection. [Texas Workforce Commission](https://www.twc.texas.gov/).
 
----
-
-Ready to reduce overtime and handle callouts without the Sunday evening scramble?
-[See how SimpleScheduleAI works for critical access hospitals →](/how-it-works)
+**Methodology note:** This guide summarizes federal and Texas regulatory requirements as of the date shown and is not legal advice. On-call compensability, meal-break treatment, and the 8-and-80 method depend on facility-specific facts; confirm your policies with employment counsel before relying on them.
 
 ---
 
