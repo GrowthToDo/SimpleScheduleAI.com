@@ -11,10 +11,10 @@
       }
     },
     "google-search-console": {
-      "command": "C:/Users/Admin/AppData/Local/Programs/Python/Python312/Scripts/uvx.exe",
-      "args": ["--from", "git+https://github.com/AminForou/mcp-gsc", "mcp-gsc"],
+      "command": "C:/Users/<you>/.local/bin/mcp-gsc.exe",
+      "args": [],
       "env": {
-        "GSC_OAUTH_CLIENT_SECRETS_FILE": "C:/Users/Admin/gsc-credentials/__SET_LOCALLY__.json"
+        "GSC_OAUTH_CLIENT_SECRETS_FILE": "C:/Users/<you>/gsc-credentials/__SET_LOCALLY__.json"
       }
     },
     "microsoft-clarity": {
