@@ -3,7 +3,7 @@ draft: false
 publishDate: 2026-06-18T00:00:00Z
 updateDate: 2026-06-18T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Texas Nursing Overtime Compliance: Guide for CAH Admins'
+title: 'Texas Nursing Overtime Compliance: Guide for Critical Access Hospitals'
 excerpt: >
   Texas critical access hospitals face overlapping nursing staffing obligations under
   federal FLSA, CMS Conditions of Participation, and state labor rules. This guide
@@ -25,18 +25,18 @@ The most common enforcement exposure is not intentional violation, it is documen
 
 ## Key Takeaways
 
-- Texas CAHs face three overlapping compliance frameworks: FLSA, CMS CoP (§485.635), and Texas Labor Code Chapter 62, each with different documentation requirements.
+- Texas CAHs face three overlapping compliance frameworks, each with different documentation requirements: [FLSA overtime rules](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), [CMS Conditions of Participation §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), and [Texas Labor Code Chapter 62](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
 - The 8-and-80 FLSA alternative is widely used but frequently misapplied; it requires a prior written agreement with each nurse, not a retroactive policy decision, and it does not stop daily overtime on 12-hour shifts.
-- The five most common compliance gaps are: missing 8-and-80 agreements, no schedule change logs, untracked credential expirations, improper meal break auto-deductions, and incomplete on-call/callback records.
+- From conversations with 30+ Texas nurse managers, five compliance gaps recur most often: missing 8-and-80 agreements, no schedule change logs, untracked credential expirations, improper meal break auto-deductions, and incomplete on-call/callback records.
 - CMS compliance requires both the original posted schedule AND documentation of actual coverage; substitution events must be logged with credentials for the replacing nurse.
 - Texas Labor Code requires payroll and hours records for three years; CMS best practice suggests maintaining scheduling documentation for five years.
 
 ## Table of Contents
 
 - [What are the FLSA overtime rules for hospital nurses in Texas?](#what-are-the-flsa-overtime-rules-for-hospital-nurses-in-texas)
-- [What Texas-specific requirements apply to CAH nurse scheduling?](#what-texas-specific-requirements-apply-to-cah-nurse-scheduling)
-- [What are the most common compliance gaps in CAH scheduling?](#what-are-the-most-common-compliance-gaps-in-cah-scheduling)
-- [What documentation must a Texas CAH maintain for CMS compliance?](#what-documentation-must-a-texas-cah-maintain-for-cms-compliance)
+- [What Texas-specific requirements apply to Critical Access Hospital nurse scheduling?](#what-texas-specific-requirements-apply-to-critical-access-hospital-nurse-scheduling)
+- [What are the most common compliance gaps in Critical Access Hospital scheduling?](#what-are-the-most-common-compliance-gaps-in-critical-access-hospital-scheduling)
+- [What documentation must a Texas Critical Access Hospital maintain for CMS compliance?](#what-documentation-must-a-texas-critical-access-hospital-maintain-for-cms-compliance)
 - [How does SimpleScheduleAI help with compliance?](#how-does-simplescheduleai-help-with-compliance)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -73,7 +73,7 @@ Key FLSA requirements for Texas CAHs:
 - The 8-and-80 alternative requires a prior written agreement, verbal understanding
   is not sufficient
 
-## What Texas-specific requirements apply to CAH nurse scheduling?
+## What Texas-specific requirements apply to Critical Access Hospital nurse scheduling?
 
 Texas overlays two state-level frameworks on top of federal FLSA requirements:
 the Texas Labor Code and Texas HHSC nursing facility regulations.
@@ -135,7 +135,7 @@ These frameworks don't conflict, but they require different documentation to sat
 different auditing bodies. A facility that documents adequately for FLSA purposes
 may still have CMS documentation gaps, and vice versa.
 
-## What are the most common compliance gaps in CAH scheduling?
+## What are the most common compliance gaps in Critical Access Hospital scheduling?
 
 In conversations with 30+ nurse managers and CAH administrators across Texas, five
 compliance gaps appear repeatedly. None of them require intentional misconduct; they
@@ -178,7 +178,7 @@ determination of whether callback time is compensable hours worked is unclear un
 your specific on-call policy, that ambiguity should be resolved by counsel before a
 DOL audit surfaces it.
 
-## What documentation must a Texas CAH maintain for CMS compliance?
+## What documentation must a Texas Critical Access Hospital maintain for CMS compliance?
 
 CMS Conditions of Participation for Critical Access Hospitals
 ([§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635))
