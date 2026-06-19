@@ -10,7 +10,7 @@ excerpt: >
   previously took hours of manual effort per cycle. For critical access hospitals,
   AI-assisted scheduling offers the biggest gains at exactly the scale where
   scheduling complexity meets resource constraints.
-image: https://images.unsplash.com/photo-1668785737406-0129cb9554b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 tags:
   - nursing-scheduling-software
@@ -20,7 +20,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/nursing-scheduling-software-ai'
 ---
 
-AI-assisted nursing scheduling software generates draft schedules, ranks callout replacements, and flags overtime risk faster and more consistently than manual processes. The key word is "assisted": AI handles the mechanical optimization, but nurse managers keep final decision authority.
+AI-assisted nursing scheduling software generates draft schedules, ranks callout replacements, and flags overtime risk faster than manual processes can. The key word is "assisted": AI handles the mechanical optimization, but nurse managers keep final decision authority.
 
 For a critical access hospital spending 8 to 12 hours a week on scheduling, that shift cuts the work to 1 to 2 hours, without IT integration or technical expertise. This guide explains what AI actually does, where it falls short, and how it compares to manual and traditional software.
 
@@ -39,6 +39,7 @@ For a critical access hospital spending 8 to 12 hours a week on scheduling, that
 - [What Are the Limitations of AI Nursing Scheduling?](#what-are-the-limitations-of-ai-nursing-scheduling)
 - [Manual vs. Traditional Software vs. AI-Assisted Scheduling](#manual-vs-traditional-software-vs-ai-assisted-scheduling)
 - [How Does SimpleScheduleAI Use AI for Hospital Roster Management?](#how-does-simplescheduleai-use-ai-for-hospital-roster-management)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 ## What Is AI-Assisted Nursing Scheduling Software?
@@ -88,7 +89,7 @@ Being honest about AI limitations matters. CAH administrators need accurate expe
           <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Dimension</th>
           <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Manual (Excel/paper)</th>
           <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Traditional software</th>
-          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-primary dark:border-slate-700">AI-assisted (managed)</th>
+          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-primary dark:border-slate-700 dark:text-blue-400">AI-assisted (managed)</th>
         </tr>
       </thead>
       <tbody>
@@ -150,6 +151,8 @@ When a nurse calls out, the AI ranking system produces a replacement list within
 One honest limitation: the AI optimization improves over time as the system accumulates data about your facility's patterns, preferences, and exceptions. The first few scheduling cycles involve more human calibration than later cycles. We are transparent about this with pilot hospitals.
 
 Pricing is flat by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. See [how it works](/how-it-works) for the full build-and-approve flow.
+
+This is not the right fit for every hospital. If your CAH already has a scheduling coordinator with software that works, or you are over 50 beds or outside Texas, an enterprise platform is the better path. We will tell you that on the first call rather than after a pilot.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
