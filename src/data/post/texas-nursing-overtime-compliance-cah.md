@@ -19,13 +19,13 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/texas-nursing-overtime-compliance-cah'
 ---
 
-Texas critical access hospitals operate under three simultaneous compliance frameworks for nursing staffing: federal FLSA overtime rules, CMS Conditions of Participation (§485.635), and Texas Labor Code Chapter 62. Each is audited by a different body, and each requires different documentation.
+Texas critical access hospitals operate under three simultaneous compliance frameworks for nursing staffing: federal FLSA overtime rules, CMS Conditions of Participation (§485.631 and §485.635), and Texas Labor Code Chapter 62. Each is audited by a different body, and each requires different documentation.
 
 For a CAH, the compliance risk is less about breaking a rule than about being unable to prove, during a CMS survey, that it followed one. A facility can schedule correctly and still fall short on documentation. This guide breaks down five recurring compliance gaps and the records that protect a CAH against findings.
 
 ## Key Takeaways
 
-- Texas CAHs face three overlapping compliance frameworks, each with different documentation requirements: [FLSA overtime rules](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), [CMS Conditions of Participation §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), and [Texas Labor Code Chapter 62](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
+- Texas CAHs face three overlapping compliance frameworks, each with different documentation requirements: [FLSA overtime rules](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), [CMS Conditions of Participation (§485.631 staffing and §485.635 services)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), and the [Texas Minimum Wage Act (Labor Code Chapter 62)](https://www.twc.texas.gov/).
 - The 8-and-80 FLSA alternative requires a prior written agreement with each nurse before the work period, not a retroactive policy decision, and it does not stop daily overtime on 12-hour shifts.
 - Five recurring compliance gaps each map to a specific FLSA or CMS requirement: missing 8-and-80 agreements, no schedule change logs, untracked credential expirations, improper meal break auto-deductions, and incomplete on-call/callback records.
 - CMS compliance requires both the original posted schedule AND documentation of actual coverage; substitution events must be logged with credentials for the replacing nurse.
@@ -78,14 +78,14 @@ Key FLSA requirements for Texas CAHs:
 Texas overlays two state-level frameworks on top of federal FLSA requirements:
 the Texas Labor Code and Texas HHSC nursing facility regulations.
 
-**Texas Labor Code Chapter 62** ([Tex. Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm))
-is the Texas Minimum Wage Act. It adopts the federal wage floor and largely defers to
+**Texas Labor Code Chapter 62** is the Texas Minimum Wage Act. It adopts the federal wage floor and largely defers to
 FLSA; Texas does not impose a separate overtime standard, so overtime for hospital
 nurses is governed by federal FLSA. The payroll and hours records that prove overtime
 compliance must be retained for at least three years under FLSA, and Texas wage-payment
 complaints are handled by the [Texas Workforce Commission](https://www.twc.texas.gov/).
 
-**Texas HHSC nursing regulations** apply to licensed hospital facilities. Texas HHSC
+**Texas HHSC nursing regulations** apply to licensed hospital facilities. The
+[Texas Health and Human Services Commission](https://www.hhs.texas.gov/)
 requires that licensed hospitals maintain sufficient nursing staff to meet patient care
 needs at all times. This is a staffing adequacy standard that goes beyond documentation,
 which means a CAH can be cited if patient volume outpaces available nursing staff over
@@ -118,8 +118,8 @@ the intersection of these requirements creates a compliance profile that looks l
         <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Texas Workforce Commission</td>
       </tr>
       <tr class="align-top">
-        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">CMS CoP §485.635</td>
-        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Staffing documentation and CMS survey exposure</td>
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">CMS CoP §485.631 and §485.635</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Staffing levels and documentation</td>
         <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">CMS surveyors</td>
       </tr>
       <tr class="align-top">
@@ -153,8 +153,9 @@ matches what actually happened. Callout substitutions, voluntary shift swaps, an
 charge nurse adjustments are routine. If these changes aren't logged in a
 retrievable record, the facility cannot prove during a CMS survey that the shifts
 shown as worked were actually covered by a licensed, credentialed nurse. CMS
-[§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
-requires that staffing records be accurate and available for review.
+[§485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
+requires a registered nurse, clinical nurse specialist, or LPN on duty whenever the CAH
+has inpatients, and surveyors expect accurate, retrievable records that prove it.
 
 **Gap 3: Credential expiration not tracked in the scheduling system.** A nurse with
 an expired BLS or lapsed license renewal may appear eligible on the schedule when they
@@ -179,10 +180,12 @@ DOL audit surfaces it.
 
 ## What documentation must a Texas Critical Access Hospital maintain for CMS compliance?
 
-CMS Conditions of Participation for Critical Access Hospitals
-([§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635))
-require that staffing records be accurate, complete, and available for surveyor review.
-In practice, this means the following documentation must exist and be retrievable:
+Under the CMS Conditions of Participation, a CAH must be able to show with accurate,
+retrievable records that the staffing required by
+[§485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
+actually happened, and that it followed the patient-care policies under
+[§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+In practice, the following documentation must exist and be retrievable:
 
 **Master schedule (posted and actual).** CMS surveyors will ask to see the posted
 schedule alongside documentation of who actually worked. If a scheduled nurse was
@@ -190,10 +193,9 @@ replaced by a float or per diem nurse, the replacement must be documented, not j
 the original assignment. Facilities that post a schedule and never update it when
 substitutions occur create an immediate discrepancy that surveyors flag.
 
-**Daily staffing logs.** Many CAHs are required to maintain daily staffing logs showing
-nurse-to-patient ratios for each shift. While Texas does not have a statutory
-nurse-to-patient ratio requirement, CMS CoP requires evidence of adequate staffing
-for patient acuity. A daily log showing census and nurse coverage provides the
+**Daily staffing logs.** Neither CMS nor Texas sets a fixed nurse-to-patient ratio, but
+the CMS Conditions of Participation require evidence that staffing was adequate for
+patient acuity. A daily log showing census and nurse coverage provides the
 documented link between patient needs and staffing decisions.
 
 **Credential verification records.** Documentation that each nurse who worked a given
@@ -251,7 +253,7 @@ be complete.
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI keeps the compliance audit trail automatically: every change logged, every credential checked. Flat monthly pricing, no IT setup.</p>
-  <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
@@ -266,9 +268,10 @@ not sufficient. Without written agreements, overtime is calculated on the standa
 
 **Q: What does CMS look for in CAH staffing records during a survey?**
 
-CMS surveyors under §485.635 look for accurate, retrievable staffing records that
-show posted schedules, actual shifts worked, credential currency for each nurse on each
-shift, and documented coverage for any substitutions. Discrepancies between posted
+CMS surveyors check that the staffing required by §485.631 (a qualified nurse on duty
+whenever there are inpatients) actually happened, using the records and patient-care
+policies under §485.635: posted schedules, actual shifts worked, credential currency for
+each nurse on each shift, and documented coverage for any substitutions. Discrepancies between posted
 and actual schedules are a common finding and can escalate to a Condition-level
 deficiency if widespread.
 
@@ -282,8 +285,8 @@ Best practice is maintaining scheduling and payroll documentation for five years
 ## A Note on Sources
 
 1. FLSA healthcare overtime, including the Section 7(j) 8-and-80 rule. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
-2. CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
-3. Texas Labor Code Chapter 62 (Texas Minimum Wage Act). [Tex. Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
+2. CMS Conditions of Participation for Critical Access Hospitals: [§485.631 (staffing and staff responsibilities)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) and [§485.635 (provision of services)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+3. Texas Labor Code Chapter 62, the Texas Minimum Wage Act, administered by the [Texas Workforce Commission](https://www.twc.texas.gov/).
 4. Texas hospital licensing and staffing adequacy. [Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/).
 5. Payroll record retention and inspection. [Texas Workforce Commission](https://www.twc.texas.gov/).
 
