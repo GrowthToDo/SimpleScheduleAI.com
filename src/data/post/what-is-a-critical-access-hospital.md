@@ -5,7 +5,7 @@ updateDate: 2026-06-20T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Is a Critical Access Hospital? A Complete Guide'
 excerpt: >
-  A critical access hospital (CAH) is a CMS-designated rural hospital with 25 or fewer acute care beds, located at least 35 miles from the nearest hospital, providing 24-hour emergency care year-round. CAHs receive cost-based Medicare reimbursement, a significant financial benefit unavailable to standard hospitals. Approximately 1,350 CAHs exist across the US, including 84 in Texas.
+  A critical access hospital is a federally designated rural hospital, capped at 25 beds, that earns cost-based Medicare reimbursement in exchange for meeting strict distance and emergency-care rules. This guide breaks down how a hospital qualifies, how its payment model differs from a standard hospital, and what the designation means day to day for the nurse managers who staff one of the roughly 84 critical access hospitals in Texas.
 image: '~/assets/images/blog/what-is-a-critical-access-hospital.webp'
 category: Glossary
 tags:
@@ -21,10 +21,10 @@ A critical access hospital (CAH) is a CMS-designated rural hospital with 25 or f
 
 ## Key Takeaways
 
-- A critical access hospital has 25 or fewer acute care inpatient beds, the federal cap that defines the category.
+- The defining limit is 25 or fewer acute care inpatient beds. Cross it and the hospital no longer qualifies as a critical access hospital.
 - It must sit more than 35 miles from the nearest hospital, or more than 15 miles in mountainous terrain or where only secondary roads connect.
 - It must keep a 96-hour annual average length of stay for acute care across the facility, not a cap on any single patient.
-- It receives cost-based Medicare reimbursement instead of fixed prospective payment rates, the main financial reason hospitals pursue the status.
+- Payment is cost-based, not the fixed prospective rates standard hospitals receive. That model is the financial reason rural hospitals fight to keep the designation.
 - It must keep a registered nurse on duty or immediately on call at all times under 42 CFR Section 485.631.
 - Texas has roughly 84 critical access hospitals, among the states with the highest counts.
 
@@ -53,7 +53,51 @@ The Medicare Rural Hospital Flexibility (Flex) Program, run by [HRSA](https://ww
 
 ## How Is a Critical Access Hospital Different From a Community Hospital?
 
-The differences between CAHs and standard community hospitals extend well beyond bed count.
+The differences between CAHs and standard community hospitals extend well beyond bed count, as the comparison below shows.
+
+<figure class="not-prose my-8">
+  <figcaption class="mb-3 text-sm font-semibold text-slate-700 dark:text-slate-200">
+    Critical access hospital vs. community hospital at a glance
+  </figcaption>
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse text-sm" style="min-width: 600px">
+      <thead>
+        <tr class="bg-slate-100 dark:bg-slate-800">
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Dimension</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Critical Access Hospital</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Community Hospital</th>
+        </tr>
+      </thead>
+      <tbody class="text-slate-700 dark:text-slate-300">
+        <tr>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Medicare reimbursement</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">Cost-based, 101% of reasonable costs</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">Fixed prospective payment (PPS) rates</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Bed limit</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">25 or fewer acute care beds (federal cap)</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">No federal bed cap</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Location</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">Rural; 35+ miles (or 15 by secondary road in mountainous terrain) from the nearest hospital</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">Any setting; no distance requirement</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Average length of stay</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">96-hour annual average for acute care</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">No federal average-stay limit</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Nurse staffing rule</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">RN on duty or on call at all times (42 CFR 485.631)</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700">CMS Conditions of Participation, 42 CFR Part 482</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 
 **Reimbursement model:** Community hospitals receive fixed Medicare Prospective Payment System (PPS) rates; CAHs receive cost-based reimbursement at 101% of reasonable costs. Cost management is rewarded rather than penalized, and unnecessary staffing cost hits the margin directly.
 
