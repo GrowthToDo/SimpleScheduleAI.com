@@ -13,6 +13,8 @@ last_updated: 2026-05-17
 
 # SEO & GEO/AEO Skill — SimpleScheduleAI
 
+> To optimize an existing/ranking page (rank-rescue: SERP landscape, competitor eval, tiered fix checklist, internal linking), use the companion playbook `docs/seo/on-page-optimization-playbook.md`. It is subordinate to this skill and the pre-publish checklist.
+
 ## PRODUCT CONTEXT (Read first, always)
 
 **SimpleScheduleAI** is an AI-native nurse scheduling service for Critical
