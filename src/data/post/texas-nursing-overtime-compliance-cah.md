@@ -222,7 +222,7 @@ logged automatically: original assignment, substitution, who covered, and timest
 This audit trail is maintained as part of the service and available for export if a CMS
 survey or TWC audit requires documentation.
 
-We build Texas overtime rules into the scheduling logic, flagging nurses who are
+We build Texas overtime rules into the [AI nurse scheduling](/ai-nurse-scheduling) logic, flagging nurses who are
 approaching the FLSA overtime threshold before shifts are assigned, not after the
 payroll run. Credential expiration dates are tracked against each nurse's profile, and
 we alert you before a certification lapses.

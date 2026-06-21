@@ -46,7 +46,7 @@ For a critical access hospital spending 8 to 12 hours a week on scheduling, that
 
 [Nursing scheduling software](/nurse-scheduling-software) automates the creation and management of nurse shift schedules, replacing manual spreadsheets and phone trees. Traditional scheduling software provided tools that nurse managers operated: a digital interface for building schedules manually, with fewer errors than Excel.
 
-AI changes the workflow fundamentally. Instead of a tool the manager uses to build a schedule, AI-assisted scheduling generates the schedule itself, as a draft the manager reviews and approves.
+AI changes the workflow fundamentally. Instead of a tool the manager uses to build a schedule, [AI nurse scheduling](/ai-nurse-scheduling) generates the schedule itself, as a draft the manager reviews and approves.
 
 The practical difference: a nurse manager using traditional scheduling software still spends roughly 4 to 6 hours per cycle building the draft, enforcing constraints, and checking for overtime and coverage issues. With AI-assisted scheduling, the manager spends 20 to 30 minutes reviewing three AI-generated draft options and making final adjustments.
 

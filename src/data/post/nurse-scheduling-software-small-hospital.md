@@ -181,7 +181,7 @@ The core requirements are simpler than enterprise software suggests:
 
 SimpleScheduleAI is a managed scheduling service designed specifically for Texas Critical Access Hospitals with 25 or fewer beds. The starting point was the 20-nurse CAH, not a scaled-down version of a large-system platform.
 
-Setup starts with an Excel upload of the existing nurse roster. No IT integration, no EHR connection, no custom configuration project. The service is operational in 3 to 5 business days. Every schedule cycle, the nurse manager receives three AI-drafted options, reviews and approves the one that fits, and publishes. When a nurse calls out, the system surfaces a ranked replacement shortlist filtered by overtime status and certification. For the full build-and-approve flow, see [how it works](/how-it-works).
+Setup starts with an Excel upload of the existing nurse roster. No IT integration, no EHR connection, no custom configuration project. The service is operational in 3 to 5 business days. Every schedule cycle, the nurse manager receives three [AI-drafted schedule options](/ai-nurse-scheduling), reviews and approves the one that fits, and publishes. When a nurse calls out, the system surfaces a ranked replacement shortlist filtered by overtime status and certification. For the full build-and-approve flow, see [how it works](/how-it-works).
 
 Texas FLSA overtime thresholds are tracked automatically. Approaching-threshold alerts flag before a schedule is posted, not after the hours are worked. The audit trail required for [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance documentation is maintained automatically.
 

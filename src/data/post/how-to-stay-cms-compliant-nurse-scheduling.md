@@ -211,7 +211,7 @@ Most general-purpose scheduling software (Deputy, When I Work, standard workforc
 
 Nursing-specific platforms (NurseGrid Manager, Aladtec) are better suited to healthcare but still require manual setup and maintenance to connect credential records to scheduling records in a format that satisfies CMS documentation requests.
 
-[SimpleScheduleAI](/how-it-works) generates CMS §485.635-formatted staffing documentation automatically from each published schedule. When a callout replacement occurs, the replacement and their credentials are captured in the documentation record. When a CMS surveyor requests staffing records, the nurse manager pulls the pre-built report. There is no assembly required. For the wider category, see our [nurse scheduling software](/nurse-scheduling-software) overview and the [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
+[SimpleScheduleAI](/how-it-works) uses [AI nurse scheduling](/ai-nurse-scheduling) to build each schedule and generate CMS §485.635-formatted staffing documentation automatically from it. When a callout replacement occurs, the replacement and their credentials are captured in the documentation record. When a CMS surveyor requests staffing records, the nurse manager pulls the pre-built report. There is no assembly required. For the wider category, see our [nurse scheduling software](/nurse-scheduling-software) overview and the [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
 
 For a CAH that has had a CMS finding related to staffing documentation, or that has an upcoming survey and knows its current documentation is not complete, this is the most direct path to survey readiness.
 
