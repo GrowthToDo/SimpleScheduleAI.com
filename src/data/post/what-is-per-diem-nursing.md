@@ -1,11 +1,11 @@
 ---
-draft: true
-publishDate: 2099-01-01T00:00:00Z
-updateDate: 2026-04-01T00:00:00Z
+draft: false
+publishDate: 2026-06-21T00:00:00Z
+updateDate: 2026-06-21T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'What Is Per Diem Nursing? How It Works at Small Hospitals'
+title: 'What Is Per Diem Nursing? How It Works in Critical Access Hospitals'
 excerpt: >
-  Per diem nursing means working on an as-needed, day-by-day basis without a guaranteed schedule or benefits. Per diem nurses are called to cover shifts when full-time staff are unavailable. They earn a premium above standard base rates, typically 20-30%, in exchange for accepting shift-by-shift uncertainty. For critical access hospitals, a well-managed per diem pool is the primary alternative to expensive agency nurses.
+  Per diem nursing means working on an as-needed, day-by-day basis without a guaranteed schedule or benefits. Per diem nurses are called to cover shifts when full-time staff are unavailable. Per diem rates commonly run a premium over staff base pay, often estimated in the 20-30% range, in exchange for no benefits and no guaranteed hours. For critical access hospitals, a well-maintained per diem pool is the primary alternative to costly agency nurses.
 image: https://images.unsplash.com/photo-1669413453505-2582fb5083b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Glossary
 tags:
@@ -17,59 +17,108 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/what-is-per-diem-nursing'
 ---
 
-Per diem nursing means working on an as-needed, day-by-day basis without a guaranteed schedule. Per diem nurses are called to cover shifts when full-time staff are unavailable, due to callouts, vacations, or census spikes. They typically earn a premium above standard base rates, commonly 20-30% higher, in exchange for accepting shift-by-shift uncertainty. They receive no benefits such as health insurance or paid time off, and the hospital has no obligation to offer them a minimum number of hours. In critical access hospitals, per diem nurses are the most cost-effective flexible staffing mechanism available.
+Per diem nursing means working on an as-needed, day-by-day basis without a guaranteed schedule. Per diem nurses are called to cover shifts when full-time staff are unavailable, due to callouts, vacations, or census spikes. Per diem rates commonly run a premium over staff base pay, often estimated in the 20-30% range, in exchange for no benefits such as health insurance or paid time off and no guaranteed minimum hours. The term comes from the Latin "per diem," meaning "by the day." In critical access hospitals, per diem nurses are the primary flexible staffing mechanism for covering gaps without an agency.
 
-## How Per Diem Nursing Works in a Critical Access Hospital?
+## Key Takeaways
 
-Critical access hospitals face a structural staffing challenge: they must maintain 24-hour coverage with a small, fixed team, but patient census and callout patterns are unpredictable. Hiring additional full-time nurses is rarely feasible, a 20-bed CAH cannot justify the payroll for surplus FTEs that may be idle most days.
+- Per diem nursing is as-needed, day-by-day work. There is no guaranteed schedule, no minimum hours, and no benefits.
+- Per diem rates commonly run a premium over staff base pay, often estimated in the 20-30% range, paid in lieu of benefits and guaranteed hours.
+- "Per diem" describes an employment status (paid by the day). "PRN" is the clinical term for the same as-needed arrangement, and the two are often used interchangeably.
+- A maintained per diem pool is the main alternative to costly agency nurses, who add an agency margin on top of the nurse's pay.
+- For a critical access hospital, an up-to-date per diem availability list is the key to fast callout coverage and to meeting the staffing requirement under [42 CFR §485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631).
+- The same discipline that maintains the pool is what good [nurse scheduling software](/nurse-scheduling-software) automates: tracking who is available and ranking who to call first.
 
-The per diem pool is the standard solution. A functioning per diem pool at a CAH typically includes:
+## Table of Contents
+
+- [What Is the Difference Between Per Diem and PRN Nursing?](#what-is-the-difference-between-per-diem-and-prn-nursing)
+- [Why Do Per Diem Nurses Get Paid More?](#why-do-per-diem-nurses-get-paid-more)
+- [Is Per Diem Nursing Worth It for a Nurse?](#is-per-diem-nursing-worth-it-for-a-nurse)
+- [How Do You Become a Per Diem Nurse?](#how-do-you-become-a-per-diem-nurse)
+- [How Does Per Diem Nursing Work in a Critical Access Hospital?](#how-does-per-diem-nursing-work-in-a-critical-access-hospital)
+- [How Does Per Diem Nursing Differ from Agency Nursing?](#how-does-per-diem-nursing-differ-from-agency-nursing)
+- [Why Does Per Diem Availability Tracking Matter for Scheduling?](#why-does-per-diem-availability-tracking-matter-for-scheduling)
+- [How Does SimpleScheduleAI Help With Per Diem Coverage?](#how-does-simplescheduleai-help-with-per-diem-coverage)
+- [Frequently Asked Questions](#frequently-asked-questions)
+
+## What Is the Difference Between Per Diem and PRN Nursing?
+
+In practice, per diem and PRN describe the same arrangement from two angles. "PRN" stands for "pro re nata," the clinical Latin term meaning "as the situation requires." "Per diem" is the employment-status term, meaning "by the day." Both refer to a nurse who works on an as-needed basis with no guaranteed hours.
+
+The distinction matters mostly in how each word is used. PRN is the term you see on a unit's staffing plan or a shift assignment: it describes the work being as-needed. Per diem is the term used in payroll, recruiting, and benefits discussions: it describes the nurse's status as paid per day worked rather than salaried. Most facilities use the two interchangeably, and a nurse hired into a "PRN pool" and one hired "per diem" are generally the same role.
+
+## Why Do Per Diem Nurses Get Paid More?
+
+Per diem nurses are paid a premium over staff base pay because that premium stands in for everything they do not receive: health insurance, paid time off, retirement contributions, and a guaranteed number of hours. The hourly rate is higher, but the total compensation package is structured differently from a benefited staff role.
+
+How large is the premium? There is no single clean federal figure, and it varies by region, specialty, and facility. A common estimate is that per diem rates run in the 20-30% range above staff base pay for the same role. The [American Nurses Association](https://www.nursingworld.org/content-hub/resources/nursing-resources/per-diem-nursing/) frames the mechanism plainly: per diem pay is set higher to compensate for the absence of benefits and schedule security. Treat the specific percentage as an estimate, not a fixed rate, and confirm local numbers with the facility.
+
+## Is Per Diem Nursing Worth It for a Nurse?
+
+Whether per diem nursing is worth it depends on what a nurse values. The trade is flexibility and a higher hourly rate against the loss of benefits, guaranteed hours, and continuity. For a nurse who wants control over their calendar or supplemental income on top of another job, per diem can be a strong fit. For a nurse who needs predictable income and employer health coverage, it usually is not.
+
+The pros are real: per diem nurses choose when they work, often earn a higher hourly rate, and gain exposure to different units and facilities. The cons are equally real. There is no health insurance or paid time off, no guaranteed minimum hours, and less continuity with patients and teams. Per diem nurses are also frequently the first to be floated to a different unit or cancelled when census drops, since the facility has no obligation to provide hours. Many nurses pair per diem work with a benefited part-time or full-time role to balance the trade.
+
+## How Do You Become a Per Diem Nurse?
+
+To become a per diem nurse, you need an active, unencumbered nursing license for the state where you will work and, in most cases, some clinical experience in the relevant area. From there, you apply directly to a facility's per diem or PRN pool, or you join a staffing registry or agency that places nurses into per diem shifts.
+
+Facilities vary in what they require. Many hospitals ask per diem nurses for a minimum amount of recent experience, since the role offers limited orientation and assumes the nurse can work with light onboarding. Some require a minimum number of shifts per month or availability for specific windows to stay active in the pool. Applying directly to a local facility keeps the full pay rate with the nurse, while a registry or agency handles placement and scheduling in exchange for a share of the bill rate. For a critical access hospital, the direct route is also how the facility builds the pool it relies on for callout coverage.
+
+## How Does Per Diem Nursing Work in a Critical Access Hospital?
+
+In a critical access hospital, per diem nursing fills the gap between a small fixed staff and unpredictable demand. The hospital must hold 24-hour coverage with a limited team, but census and callouts swing day to day. Hiring surplus full-time nurses is rarely affordable for a 20-bed facility, so a maintained per diem pool becomes the standard way to cover shifts without an agency.
+
+A functioning per diem pool at a critical access hospital typically includes:
 
 - **Former full-time staff** who left for other positions, moved to part-time, or retired but remain available for occasional shifts
 - **Nurses from nearby hospitals** who want supplemental income and are willing to work at a familiar local facility
 - **New graduates** building hours while searching for permanent positions
 - **Nurses who prefer schedule flexibility** over employment security
 
-Managing a per diem pool requires active maintenance. Availability must be tracked, per diem nurses may be available on specific days only, may have blackout periods, or may be juggling availability across multiple employers. Nurse managers typically maintain this via text chains, informal agreements, or shared spreadsheets, none of which scale well when coverage gaps become urgent.
+Managing a per diem pool requires active maintenance. Availability must be tracked, since per diem nurses may be available on specific days only, may have blackout periods, or may be juggling availability across multiple employers. Nurse managers often maintain this via text chains, informal agreements, or shared spreadsheets, none of which scale well when coverage gaps become urgent.
 
-The most common failure mode in per diem management is availability list decay. A nurse added to the per diem pool 18 months ago may have since moved, taken a full-time position elsewhere, or changed their available days, but if the nurse manager's contact list has not been updated, they will be called for shifts they cannot accept, wasting time during an already stressful callout situation.
+One recurring problem is availability list decay. A nurse added to the pool 18 months ago may have moved, taken a full-time position elsewhere, or changed their available days. If the contact list has not been updated, they get called for shifts they cannot accept, wasting time during an already stressful callout. Hospitals that hold coverage most reliably treat the pool as something to maintain on a schedule, not something to rebuild during a crisis. Running a small rural unit without a dedicated IT team makes that discipline harder, which is why [no IT department](/blog/nurse-scheduling-no-it-department-rural-hospital) is a common constraint on how the pool gets tracked.
 
-Building a per diem pool requires proactive recruitment. CAHs that wait until they have a coverage gap to think about per diem are already behind. The nurse managers who manage coverage most reliably treat per diem pool size as an ongoing KPI: minimum viable pool size, average call acceptance rate, and hours available per week from the pool.
+## How Does Per Diem Nursing Differ from Agency Nursing?
 
-## How Per Diem Nursing Differs from Agency Nursing?
+Per diem and agency nurses both provide flexible, non-permanent coverage, but they differ in cost structure, familiarity with the unit, and operational fit for a critical access hospital. Per diem nurses are employed or contracted directly by the hospital and usually know the facility. Agency nurses come through a staffing company that adds its margin on top of the nurse's pay.
 
-Both per diem and agency nurses provide flexible, non-permanent coverage, but their cost structure, familiarity with the unit, and operational fit for CAHs differ significantly.
+**Per diem nurses** are employed directly by the hospital, or contracted individually. They know the facility, its EMR system, its protocols, and often its patients. Onboarding cost is minimal or zero for former staff. The premium above base rates, commonly estimated in the 20-30% range, is paid directly by the hospital.
 
-**Per diem nurses** are employed directly by the hospital (or contracted individually). They know the facility, its EMR system, its protocols, and often its patients. Onboarding cost is minimal or zero for former staff. The premium above base rates is typically 20-30%, which the hospital pays directly.
+**Agency nurses**, also called travel nurses on longer assignments, come through a staffing agency. The agency charges a bill rate that includes its margin on top of the nurse's pay, so the effective cost runs well above a direct per diem rate once agency margin, benefits load, and orientation time are factored in. For short-notice day coverage at a small rural hospital, that gap is the core reason CAHs prefer per diem when they can fill the shift internally.
 
-**Agency nurses** (also called travel nurses when placed for longer assignments) come through a staffing agency. The agency charges a bill rate that includes their margin on top of the nurse's pay. For short-notice day coverage at a small rural hospital, the effective cost is typically 2-3× the standard base rate for that role, when agency margin, benefits load, and orientation time are factored in.
+Beyond cost, agency nurses require facility orientation. Even experienced agency nurses need to be walked through EMR login, emergency codes, supply locations, and care protocols before their first shift. At a 20-bed critical access hospital where the only nurse on duty may be the person orienting them, that is not a trivial burden. The economic case for per diem is clear; the hard part is execution, since maintaining the pool is ongoing work that slips when managers are already at capacity.
 
-Beyond cost, agency nurses require facility orientation, even experienced agency nurses need to be walked through EMR login, emergency codes, supply locations, and care protocols before their first shift. At a 20-bed CAH where the only nurse on duty may be the person orienting them, this is not a trivial burden.
+## Why Does Per Diem Availability Tracking Matter for Scheduling?
 
-For CAHs, the economic case for per diem over agency is clear. The gap is execution: building and maintaining a per diem pool is ongoing work, and nurse managers already running at full capacity often let it slip until a crisis forces them to call an agency at the worst possible time.
+Per diem availability tracking matters because reliable coverage depends on knowing, before a shift goes unfilled, which per diem nurses are available, what their typical acceptance rate is, and who should be called first. Without that, a callout becomes a scramble through phone contacts under time pressure, exactly when mistakes and delays are most costly.
 
-## Why Per Diem Availability Tracking Matters for Scheduling?
+An unstructured callout process introduces delay and inconsistency. Under [42 CFR §485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a critical access hospital must have a registered nurse on duty or on call to furnish patient care whenever a patient is present. An unresolved gap is not only an operational problem, it is a documentation and compliance problem. A current availability list turns the callout into an executable checklist: the nurse manager knows who to call, in what order, and what the likely outcome is, before the shift becomes an emergency. This is the same discipline behind reliable [after-hours callout coverage](/blog/after-hours-callout-coverage-small-hospitals), and it is where [AI nurse scheduling](/ai-nurse-scheduling) earns its place.
 
-Reliable per diem coverage depends on knowing, before a shift goes unfilled, which per diem nurses are available, what their typical acceptance rate is, and who should be called first.
+## How Does SimpleScheduleAI Help With Per Diem Coverage?
 
-An unstructured callout process, working down a mental list or scrolling through phone contacts, introduces delay and inconsistency. In a CMS §485.635 compliance context, where a CAH must have an RN on duty or on call at all times, an unresolved gap is not just an operational problem. It is a documentation problem.
-
-A replacement call list, built from current per diem availability data, turns the callout process into an executable checklist rather than a judgment call under pressure. The nurse manager knows who to call, in what order, and what the likely acceptance outcomes are, before the shift becomes an emergency.
+SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, and you approve. For per diem coverage specifically, the service maintains the per diem availability list and, when a shift opens, produces a ranked callout shortlist of who to contact first, so gaps get filled fast instead of through a frantic phone tree. It is built for Texas Critical Access Hospitals, and the availability data and ranked shortlist are what make callouts an executable checklist rather than a judgment call. One honest limitation: SimpleScheduleAI is not the right fit for large multi-site health systems, hospitals outside Texas today, or facilities that want only a self-serve app with no managed help. To see [how SimpleScheduleAI works](/how-it-works) and how it fits [scheduling for Critical Access Hospitals](/critical-access-hospital-scheduling), start there, or [book a call with our team](https://cal.com/gautham-8bdvdx/30min).
 
 ## Frequently Asked Questions
 
 **Q: How does per diem nursing pay work?**
-Per diem nurses receive an hourly rate that is typically 20-30% above the standard base rate for that role, in lieu of benefits and schedule guarantees. They are not guaranteed any minimum hours. If called and they accept the shift, they are paid for hours worked only. Some CAHs also pay a small on-call fee if they require per diem nurses to remain available for specific windows, though this is less common.
+Per diem nurses are paid an hourly rate set above the standard base rate for the role, in lieu of benefits and schedule guarantees. The premium is commonly estimated in the 20-30% range, though it varies by region and specialty. They are not guaranteed minimum hours and are paid only for shifts they accept and work. Some facilities add a small on-call fee for held availability windows.
 
-**Q: How do critical access hospitals build a per diem pool?**
-Most successful CAH per diem pools start with former full-time staff and nurses from nearby facilities looking for supplemental income. Proactive recruitment at the community level, nursing programs, professional networks, word of mouth, is more reliable than waiting for applicants. The pool must be actively maintained: availability preferences updated, acceptance rates tracked, and minimum pool size monitored against anticipated demand.
+**Q: What is a typical per diem nurse salary range?**
+There is no single fixed figure. Per diem nurses are paid per shift at an hourly rate commonly estimated 20-30% above staff base pay for the same role, so annual earnings depend entirely on how many shifts the nurse accepts. Because there are no guaranteed hours, total income varies widely. Confirm current local rates with the hiring facility or registry.
 
 **Q: What is the difference between per diem and agency nursing?**
-Per diem nurses are directly employed (or individually contracted) by the hospital and typically know the facility. Agency nurses come through a staffing company at 2-3× the standard base cost, require facility orientation, and have no prior familiarity with the unit. Per diem is the preferred model for CAHs because it is far less expensive and operationally smoother, but it requires building and maintaining the pool before you need it.
+Per diem nurses are directly employed or individually contracted by the hospital and typically know the facility. Agency nurses come through a staffing company that adds its margin on top of the nurse's pay, so the effective cost runs higher, and they require facility orientation. Per diem is the preferred model for critical access hospitals because it is less expensive and operationally smoother once the pool exists.
 
----
+**Q: Is per diem the best scheduling option for a 25-bed hospital?**
+A maintained per diem pool is usually the most cost-effective first line for a small facility, ahead of agency staffing. The constraint is keeping the pool and its availability current. Pairing the pool with [scheduling software for a 25-bed hospital](/blog/best-scheduling-software-25-bed-hospital) that tracks availability and ranks callouts is what makes it dependable in practice.
 
-For more on how per diem pool management connects to scheduling reliability at critical access hospitals, see: [Critical Access Hospital Scheduling](/critical-access-hospital-scheduling).
+## Sources
+
+1. American Nurses Association, "Per Diem Nursing." [https://www.nursingworld.org/content-hub/resources/nursing-resources/per-diem-nursing/](https://www.nursingworld.org/content-hub/resources/nursing-resources/per-diem-nursing/)
+2. 42 CFR §485.631, "Condition of participation: Staffing and staff responsibilities" (Critical Access Hospitals), eCFR. [https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
+
+**Building a per diem pool for your critical access hospital?** See [how SimpleScheduleAI works](/how-it-works) or [book a call with our team](https://cal.com/gautham-8bdvdx/30min) to talk through callout coverage for your unit.
 
 ---
 
