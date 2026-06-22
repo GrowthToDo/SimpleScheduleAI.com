@@ -13,6 +13,22 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - **Hard gates that DO block publish:** no em-dashes/en-dashes; no AI-tone phrases; both pillar links + `/how-it-works`; every stat hyperlinked to a primary source; all competitor-content + comparison-table integrity rules; image load/relevance/uniqueness/no-quotes; dark-mode table variants; Key Takeaways/excerpt match body; no inline `<svg>`; no leaked tags; `npm run build` passes; robots allows AI crawlers; no PHI/HIPAA issues.
 - **After publishing:** deploy + `npm run indexnow` feeds Bing/IndexNow (ChatGPT Search and Copilot lean on Bing), plus GSC request-indexing and the monthly AI-citation log.
 
+## Recurring defects (verify each by hand — these repeatedly slip past mechanical and agent passes)
+
+Found again and again across posts. A generic checklist pass misses them; check each explicitly and quote the offending text.
+
+- [ ] **Excerpt is a DISTINCT hook, not a restatement.** Quote the excerpt's first sentence, the intro's first sentence, and each Key Takeaway bullet, then compare. The excerpt must not open on the same clause as the intro and must not restate any single KT bullet near-verbatim. ("Excerpt matches body" means consistent claims, NOT duplicated text.) Three different jobs: excerpt = hook, intro = definition or scenario, KTs = scannable bullets.
+- [ ] **Title does not overclaim or contradict the body.** No flat absolute the body walks back (e.g. a "(Most X Are Not Y)" parenthetical when the body softens to "does not advertise Y, confirm with the vendor"). No competitor "is not compliant" assertion in the title.
+- [ ] **No "CAH" abbreviation in any title, H1, H2/H3, table header, or figcaption.** Body prose may use CAH; every visible heading and column header spells out "Critical Access Hospital(s)".
+- [ ] **No observational/volume language unless cited.** Remove: "Based on what we see", "most managers/users/reviewers", "consistently", "studies show", "many facilities". Reframe as a principle or cite a primary source.
+- [ ] **No anecdote presented as a real event.** Any opening scenario is framed illustratively ("Consider a common scenario...") and stays conditional ("can", "may"); never narrate a specific case as fact.
+- [ ] **No phrase, metaphor, claim, or CTA repeated 3+ times** across sections (the same "3 a.m. phone tree", "lands on the manager's desk", vendor-walkthrough test, "one tool/workflow"). Vary or cut.
+- [ ] **No stray MDX in a `.md` file.** Grep `^import `, `astro:assets`, and `<Image` — these belong only in `.mdx`; in `.md` they render as literal text.
+- [ ] **`## Sources` is a NUMBERED list** (`1.`, `2.`), above the bio and below the FAQ, never bulleted. Compliance posts: every penalty, deadline, percentage, dollar figure, or "N periods" claim is hyperlinked to a primary source (CMS, eCFR, Federal Register, HHS, DOL, BLS, NSI) or explicitly estimate-framed.
+- [ ] **CFR sections correct:** CAH staffing/on-duty/supervision = **§485.631**; provision of services / RN nursing-care assignment = **§485.635**. Never cite §485.635 for the staffing-on-duty rule.
+- [ ] **Date sanity:** `publishDate` is not a placeholder (2099) and not an unintended future date; `updateDate` is not earlier than `publishDate`. Set the real publish date at go-live.
+- [ ] **Image needs a human eyeball.** An agent cannot see it: confirm the ID is in `scripts/image-pool.json`, unused by other posts, no YAML quotes, AND a person checks the rendered image for relevance and tone before publish. The pool description does not guarantee a good visual, and the pool is nearly exhausted.
+
 ## Content
 
 - [ ] Unique title tag (50–60 chars) containing primary keyword
@@ -30,10 +46,10 @@ This checklist predates Google's AI optimization guidance. See the skill's PART 
 - [ ] FAQ section present (product/landing/blog pages) — minimum 3 Q&As
 - [ ] Author byline with real name, credentials, and LinkedIn link (NOT "SimpleScheduleAI Team")
 - [ ] Internal link to pillar page (`/how-it-works` or `/critical-access-hospital-scheduling`) with keyword anchor text
-- [ ] CTA at end linking to `/pilot` or `/how-it-works`
+- [ ] CTA at end linking to `/how-it-works` or `/pricing`
 - [ ] **Author bio uses canonical italic-linked format** at end of post: `_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._` followed on next line by `[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)`. Never use the older `**Written by Pradeep Pandey**` block format.
 - [ ] **"What to Do This Week" CTA section present** (5 numbered concrete actions) before the FAQ section. Required on BOFU, comparison, and operational guide posts. Optional on glossary/definition posts.
-- [ ] **CTA copy uses standardized 2-CTA pattern**: primary = `Apply for a Pilot Spot` → `/pilot`, secondary = `Book a call with our team` → canonical Calendly URL. Never use ad-hoc variants like "Claim a Pilot Spot", "View the Pilot", "Get a Free Schedule Review", or "Book a call" (the "with our team" framing pre-explains the booking page and prevents name-mismatch confusion).
+- [ ] **CTA copy uses the standardized 2-CTA pattern**: primary = `See how it works` → `/how-it-works` (or `See pricing` → `/pricing`), secondary = `Book a call with our team` → canonical Calendly URL. The free pilot is RETIRED: never link `/pilot` or use "Apply for a Pilot Spot", "Claim a Pilot Spot", "free pilot", or "Get a Free Schedule Review". The "with our team" framing pre-explains the booking page and prevents name-mismatch confusion.
 - [ ] **Founder role consistent**: post bio says "co-founder" only if `/about` page reflects both founders or the cal.com booking team is framed as "our team". Otherwise use "founder" until co-founder is publicly named on the site.
 - [ ] **"Texas" geographic framing**: posts that describe the SimpleScheduleAI service include the phrase "Texas Critical Access Hospitals" at least once in the body. Posts that are pure operational guides (not service descriptions) can omit Texas if topic-agnostic.
 
@@ -115,7 +131,7 @@ _Compliance-adjacent capability claims attributed to SimpleScheduleAI must match
 - [ ] **When only one source has data**, show only that source (e.g., `Capterra: 4.5/5 (6 reviews; small sample)`). Never use placeholder text like "Not pulled", "N/A", or "—" in a rating cell.
 - [ ] **Small-sample disclosure**: when a vendor has fewer than 20 reviews on a source, append `; small sample` to the cell.
 - [ ] **Competitor capability cells**: never assert feature absence as fact ("None", "No", "Not built-in"). Use either the verified state ("Configurable", "Manual export", "Automatic") or `Confirm with vendor` / `Not documented` when the public product page does not explicitly cover it.
-- [ ] **SimpleScheduleAI in the table** uses Option C framing: `New service; in active pilot phase` for any rating cell. Never imply a rating we don't yet have.
+- [ ] **SimpleScheduleAI in the table** uses Option C framing: `New service; no public rating yet` for any rating cell. Never imply a rating we don't yet have.
 - [ ] **No editorial verdict columns**: avoid columns like "CAH Fit" or "Compliance" that resolve to "Good / Medium / Low / None" cells with red/green coloring. Use factual descriptors instead (Customer Focus, Setup Time, Pricing, public ratings).
 - [ ] **Methodology footnote** appears once below the table or in a single "A Note on Sources" section before FAQ, not repeated in each row.
 
@@ -177,7 +193,7 @@ _Apply on every post. The audience is a Texas CAH Nurse Manager / DON / Administ
 - [ ] **Contradiction-hook opener when applicable**: state two opposing realities the ICP lives, then promise the resolution. Pattern: `Your [X] says [A]. Your [Y] says [B]. Here is the [gap/answer/playbook].` Skip on glossary/definition posts where direct definition is more useful.
 - [ ] **No vendor-speak**: avoid "platform", "solution", "transformation", "empower", "robust", "seamless". Use plain operational language ("tool", "service", "process change", "let the manager").
 - [ ] **"Not right for" disclaimer present somewhere in the post** — builds trust by acknowledging what the service doesn't do. Required on every BOFU/comparison post. Optional on TOFU.
-- [ ] **Every operational claim either has a hyperlinked primary source OR is explicitly framed as evidence-bound**: "from our pilot observations" / "based on 30+ nurse manager interviews". Never let a number stand without a source or evidence frame.
+- [ ] **Every operational claim either has a hyperlinked primary source OR is explicitly framed as evidence-bound**: "from our nurse manager interviews" / "an estimate at a $50/hr loaded rate". Never let a number stand without a source or evidence frame.
 - [ ] **Mobile scan check**: first 3 H2 sections each have a single 1-sentence quick-answer immediately under the H2, before the longer explanation. Lets time-pressed reader extract the answer in 10 seconds.
 - [ ] **Founder credibility surfaces at least once in body OR bio**: "Deputy General Manager of Operations at Apollo Hospitals" / "MBA from IIM Trichy" / "30+ nurse manager interviews before writing a line of code".
 - [ ] **"Our Take" or "Founder note" callout box** present in BOFU posts — 1 per post, after a major analysis section. 50-100 word editorial opinion clearly demarcated. Builds authority, signals position. Optional on MOFU/TOFU.

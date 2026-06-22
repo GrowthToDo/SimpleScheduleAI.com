@@ -5,11 +5,10 @@ updateDate: 2026-06-22T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Night Shift Nurse Schedule: How to Ensure Adequate Coverage'
 excerpt: >
-  Two or three nurses end up carrying most of the nights at a 25-bed hospital,
-  and when one resigns the schedule collapses. This guide covers the night shift
-  patterns critical access hospitals actually use, the CMS rules that govern
-  overnight staffing, and how to spread night coverage without burning out the
-  few nurses who say yes.
+  A 25-bed hospital cannot staff nights the way a large hospital does, and copying the
+  big-hospital playbook is how night rotations break. This guide covers the night shift
+  patterns critical access hospitals actually use, the CMS rules that govern overnight
+  staffing, and how to spread coverage without burning out the few nurses who say yes.
 image: https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 tags:

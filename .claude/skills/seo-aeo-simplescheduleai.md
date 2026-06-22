@@ -14,6 +14,8 @@ last_updated: 2026-05-17
 # SEO & GEO/AEO Skill — SimpleScheduleAI
 
 > To optimize an existing/ranking page (rank-rescue: SERP landscape, competitor eval, tiered fix checklist, internal linking), use the companion playbook `docs/seo/on-page-optimization-playbook.md`. It is subordinate to this skill and the pre-publish checklist.
+>
+> **Before finishing ANY post, run the "Recurring defects" section of `docs/seo/pre-publish-checklist.md` by hand.** These keep shipping because mechanical review confirms structure, not editorial quality: (1) the excerpt must be a DISTINCT hook, never a restatement of the intro's opening sentence or a Key Takeaway; (2) the title must not overclaim or contradict the softened body; (3) no "CAH" in any heading or table header; (4) no uncited volume language ("Based on what we see", "most managers", "consistently", "studies show"); (5) no anecdote narrated as a real event; (6) no phrase or CTA repeated 3+ times; (7) no stray `import` / `<Image>` in a `.md` file; (8) Sources NUMBERED with every stat sourced or estimate-framed; (9) §485.631 for staffing, §485.635 for provision of services; (10) real, non-placeholder, non-future dates; (11) a HUMAN must eyeball the hero image (an agent cannot see it).
 
 ## PRODUCT CONTEXT (Read first, always)
 

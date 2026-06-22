@@ -5,10 +5,10 @@ updateDate: 2026-06-22T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'CMS Payroll-Based Journal Reporting: What Scheduling Software Hands Off to PBJ'
 excerpt: >
-  A swing-bed CAH can have plenty of staff on the floor and still fail a CMS Payroll-Based
-  Journal submission, because the records never reach the right format in time. This guide
-  maps the four steps between a scheduling record and a valid PBJ file, and gives you the
-  one question that tells you whether your tool covers them.
+  If your Critical Access Hospital runs swing beds, CMS Payroll-Based Journal reporting turns your
+  quarterly scheduling records into a public staffing rating with a hard deadline attached. This
+  guide maps the four steps between a scheduling record and a valid PBJ file, and gives you the one
+  question that tells you whether your tool covers them.
 image: https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Compliance
 tags:
@@ -52,7 +52,7 @@ CMS Payroll-Based Journal (PBJ) reporting is a federal requirement under [Sectio
 
 CMS uses PBJ data to calculate staffing metrics that appear publicly on [Nursing Home Compare](https://www.medicare.gov/care-compare/) and inform the Five-Star Quality Rating System. Facilities with low staffing hours per resident day or high agency reliance receive lower ratings, which directly affect Medicare referrals from discharge planners and families researching care options.
 
-PBJ submission deadlines are 45 days after the end of each calendar quarter: May 15 (Q1), August 14 (Q2), November 14 (Q3), and February 14 (Q4). Late or inaccurate submissions can trigger [CMS enforcement action](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission).
+PBJ submissions are due about 45 days after each quarter closes, on or about May 15 (Q1), August 14 (Q2), November 14 (Q3), and February 14 (Q4), per the [CMS staffing data submission schedule](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission). Late or inaccurate submissions affect the facility's public staffing rating and can prompt CMS follow-up.
 
 ## Which Facilities Are Required to Submit PBJ Data?
 
@@ -202,7 +202,7 @@ Not all CAHs. PBJ reporting applies to certified skilled nursing facilities and 
 
 **Q: What happens if a facility submits inaccurate PBJ data?**
 
-CMS can apply civil monetary penalties and in persistent cases initiate enforcement action including exclusion from Medicare. Beyond formal penalties, inaccurate PBJ data affects the facility's public staffing rating on Nursing Home Compare, which affects referral patterns from hospital discharge planners. A single error cycle can take two to three reporting periods to correct in the public record. The [CMS PBJ Policy Manual](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission) outlines the correction process.
+CMS can apply civil monetary penalties for noncompliance. The more common consequence is the public record: inaccurate or missing PBJ data lowers the facility's staffing rating on Nursing Home Compare, which affects referral patterns from hospital discharge planners, and a correction can take more than one reporting period to surface. The [CMS PBJ Policy Manual](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission) outlines the correction process.
 
 **Q: Can a scheduling tool alone produce a PBJ submission?**
 
