@@ -30,7 +30,7 @@ The nurse manager has not done anything wrong by intent. She has done something 
 ## Key Takeaways
 
 - HIPAA applies to scheduling software when it stores or transmits Protected Health Information, including patient assignment data and patient census records linked to identifiable patients.
-- Generic workforce tools (Deputy, When I Work, Homebase) do not advertise a standard Business Associate Agreement for healthcare use on their product pages. Confirm BAA availability with the vendor before storing patient-linked data.
+- Generic workforce scheduling tools, the kind built for retail, hospitality, and general business, typically do not advertise a standard Business Associate Agreement for healthcare use. Confirm BAA availability with any vendor before storing patient-linked data.
 - A Business Associate Agreement (BAA) is legally required from any vendor whose software handles PHI at your facility. Without one, your hospital bears full HIPAA liability for data processed in that tool.
 - The safest scheduling design keeps patient identifiers out of the scheduling system entirely. Staff coverage data (who works when, in which unit) does not require PHI. Patient-to-nurse assignment data does.
 - Ask every scheduling vendor one question before signing: "Will you sign a Business Associate Agreement with us?" A vendor who hesitates or says no cannot legally handle PHI at your facility.
@@ -104,23 +104,19 @@ A third trigger is EHR or payroll integration. A scheduling tool that pulls data
 
 ## What Is a Business Associate Agreement and Why Does It Matter?
 
-A Business Associate Agreement (BAA) is a contract required under the [HIPAA Privacy Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) between a covered entity and any vendor that handles PHI on the covered entity's behalf. The BAA specifies what the vendor can and cannot do with the data, how they protect it, how they report breaches, and what happens when the relationship ends.
+A Business Associate Agreement (BAA) is a contract required under the [HIPAA Privacy Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/index.html) between a covered entity and any vendor that handles PHI on the covered entity's behalf. The BAA specifies what the vendor can and cannot do with the data, how they protect it, how they report breaches, and what happens when the relationship ends.
 
 Without a BAA, your facility assumes full legal liability for any PHI handled in the vendor's system. The vendor is not legally accountable for HIPAA violations under that arrangement. If a breach occurs, the lack of a BAA is an aggravating factor in [HHS Office for Civil Rights](https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html) enforcement.
 
-HIPAA civil penalties run from a minimum of about $145 per violation up to an [annual cap](https://www.federalregister.gov/documents/2026/01/28/2026-01688/annual-civil-monetary-penalties-inflation-adjustment) of $2,190,294 per violation category, with the applicable tier set by the level of culpability. These amounts are adjusted for inflation each year (figures effective January 28, 2026). For a small hospital with limited legal resources, a single breach investigation is a significant operational event regardless of whether it results in the maximum fine.
+HIPAA civil penalties are [tiered by culpability](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/), from a minimum of about $145 per violation at the low end up to a maximum of $2,190,294 per violation category per year for uncorrected willful neglect (amounts effective January 28, 2026, adjusted annually for inflation). For a small hospital with limited legal resources, a single breach investigation is a significant operational event regardless of whether it results in the maximum fine.
 
 The BAA requirement is not negotiable and cannot be satisfied after the fact. The agreement must be in place before the vendor processes any PHI. A vendor who has been storing your PHI for six months without a BAA does not become compliant the day you sign one. The prior period remains an unaddressed exposure.
 
 ## Which Scheduling Tools Are Not Built for Healthcare Compliance?
 
-Generic workforce scheduling tools, including Deputy, When I Work, and Homebase, do not advertise a standard Business Associate Agreement for healthcare use on their product pages. A CAH should confirm BAA availability directly with any vendor before storing patient-linked data.
+Most general-purpose workforce scheduling apps are built for retail, hospitality, and other hourly-staffing businesses, not regulated healthcare. They tend not to document a standard Business Associate Agreement for healthcare use on their product pages, and BAAs, per-customer data isolation, and at-rest encryption are usually outside their scope. That is not a knock on the products; it is a mismatch for a hospital storing patient-linked data.
 
-**Deputy** markets to retail, hospitality, and general workforce segments. Its public product pages do not document a healthcare BAA, so a facility should confirm directly with the vendor before storing any patient-linked data. For a facility that has used Deputy for nurse scheduling and stored patient-linked data inside it, that is a gap worth checking and documenting.
-
-**When I Work** similarly targets small businesses and general workforce management, and its product pages do not document a healthcare BAA either. The product is well-designed for its target market, which is not regulated healthcare environments.
-
-**Homebase** is built for hourly workers in retail and food service, with no healthcare BAA documented on its product pages.
+The practical implication for a Critical Access Hospital: before you put any patient-linked data into a general-purpose workforce app, confirm BAA availability directly with the vendor in writing. If your facility has already run patient-linked data through one, treat it as a gap worth checking and documenting.
 
 **Generic cloud tools** (Google Sheets, Google Calendar, shared Microsoft OneDrive documents) used for scheduling present BAA challenges: Google and Microsoft offer BAAs for their enterprise products (Google Workspace for Healthcare, Microsoft 365 for healthcare organizations), but consumer tiers of the same products do not include BAA coverage. A nurse manager using a personal Gmail account with a Google Sheet for the schedule is not covered.
 
@@ -184,7 +180,7 @@ No patient identifiers enter the system. Patient-to-nurse assignments are made a
 
 This design means the HIPAA exposure from patient assignment data does not arise in the scheduling workflow. The scheduling record is workforce data, not PHI.
 
-SimpleScheduleAI will sign a Business Associate Agreement with any Texas Critical Access Hospital customer. The BAA is standard, not a negotiated exception. Facilities should request it as part of onboarding. Because the service is operated for you, a CAH with [no IT department](/blog/nurse-scheduling-no-it-department-rural-hospital) can run it without standing up new infrastructure or managing the compliance posture in-house.
+Because SimpleScheduleAI keeps patient identifiers out of the scheduling workflow, the scheduling record is workforce data, not PHI, so a Business Associate Agreement is not strictly required for it. Many hospitals keep a BAA on file with every vendor as a matter of policy; if yours does, SimpleScheduleAI will sign one. Either way, the service is operated for you, so a Texas Critical Access Hospital with [no IT department](/blog/nurse-scheduling-no-it-department-rural-hospital) does not have to stand up new infrastructure or manage a HIPAA posture for the scheduling tool in-house.
 
 One honest limitation: if a facility wants to build patient assignment tracking into the scheduling tool, for example recording which nurse is responsible for which patient as part of the scheduling workflow, SimpleScheduleAI does not support that use case. That function belongs in the EHR or a purpose-built patient assignment tool, not in the nurse scheduling managed service.
 
@@ -199,8 +195,8 @@ For more on how [critical access hospital scheduling](/critical-access-hospital-
 5. **If you find PHI in a tool with no BAA, document it and get advice.** Stop adding new PHI, record the corrective action, and consult a healthcare compliance attorney if the exposure looks significant.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Using a scheduling tool that can't sign a BAA?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI signs BAAs as standard, and no patient data enters the scheduling workflow.</p>
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Want scheduling that keeps patient data out of the workflow?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI runs on workforce data only, so patient identifiers never enter the scheduling system, and it will sign a BAA if your facility's policy requires one.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
@@ -235,6 +231,7 @@ HIPAA governs the privacy and security of Protected Health Information. [CMS §4
 4. HHS Office for Civil Rights, HIPAA Enforcement. https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html
 5. HHS, Breach Notification Rule. https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html
 6. eCFR, 42 CFR Section 485.631 (Condition of participation: Staffing and staff responsibilities, Critical Access Hospitals). https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631
+7. HIPAA Journal, Penalties for HIPAA Violations (2026 update). https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/
 
 ---
 
