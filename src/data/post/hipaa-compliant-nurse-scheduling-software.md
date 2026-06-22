@@ -1,14 +1,15 @@
 ---
-draft: true
-publishDate: 2026-06-18T00:00:00Z
-updateDate: 2026-04-25T00:00:00Z
+draft: false
+publishDate: 2026-06-22T00:00:00Z
+updateDate: 2026-06-22T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Is Your Nurse Scheduling Software HIPAA Compliant? (Most Generic Tools Are Not)'
+title: 'Is Your Nurse Scheduling Software HIPAA Compliant? What to Check Before You Store PHI'
 excerpt: >
-  Most generic workforce scheduling tools are not HIPAA compliant and will not sign a
-  Business Associate Agreement. For a CAH storing patient assignment data or census-linked
-  staffing records in scheduling software, that is a compliance exposure surveyors and
-  breach investigators look for specifically.
+  Workforce scheduling apps are easy to adopt and easy to get wrong on compliance. The moment a
+  nurse scheduling tool holds patient assignment or census data and the vendor has not signed a
+  Business Associate Agreement, a Critical Access Hospital has a HIPAA exposure that surveyors and
+  breach investigators look for. This guide covers when scheduling software becomes a HIPAA risk,
+  the BAA question to ask every vendor, and how to keep patient data out of the workflow.
 image: https://images.unsplash.com/photo-1517271023557-20d13b255594?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Compliance
 tags:
@@ -20,29 +21,30 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/hipaa-compliant-nurse-scheduling-software'
 ---
 
+Consider a common scenario at a small Critical Access Hospital: a nurse manager switches from paper schedules to a workforce app she finds through an app store search. The app works. Schedules go out faster. Nurses can see shifts on their phones.
+
+In this scenario, a compliance consultant later reviews the tool during a routine audit. The vendor does not sign BAAs. The app stores staff schedules in a shared cloud environment not segmented by customer. The facility has been logging patient census data, used to justify shift counts, inside the same tool. None of that data is encrypted at rest. The consultant's recommendation: stop using the tool, purge the records, and document the corrective action.
+
+The nurse manager has not done anything wrong by intent. She has done something common: picked a scheduling tool without asking whether it was built for healthcare compliance. The sections below walk through when scheduling software crosses into HIPAA territory and what to confirm before you store any patient-linked data in one.
+
 ## Key Takeaways
 
 - HIPAA applies to scheduling software when it stores or transmits Protected Health Information, including patient assignment data and patient census records linked to identifiable patients.
-- Generic workforce tools (Deputy, When I Work, Homebase) are not designed for healthcare regulatory compliance and do not offer Business Associate Agreements.
+- Generic workforce tools (Deputy, When I Work, Homebase) do not advertise a standard Business Associate Agreement for healthcare use on their product pages. Confirm BAA availability with the vendor before storing patient-linked data.
 - A Business Associate Agreement (BAA) is legally required from any vendor whose software handles PHI at your facility. Without one, your hospital bears full HIPAA liability for data processed in that tool.
 - The safest scheduling design keeps patient identifiers out of the scheduling system entirely. Staff coverage data (who works when, in which unit) does not require PHI. Patient-to-nurse assignment data does.
 - Ask every scheduling vendor one question before signing: "Will you sign a Business Associate Agreement with us?" A vendor who hesitates or says no cannot legally handle PHI at your facility.
 
 ## Table of Contents
 
-- [Does nurse scheduling software need to be HIPAA compliant?](#does-nurse-scheduling-software-need-to-be-hipaa-compliant)
-- [When does scheduling software touch Protected Health Information?](#when-does-scheduling-software-touch-protected-health-information)
-- [What is a Business Associate Agreement and why does it matter?](#what-is-a-business-associate-agreement-and-why-does-it-matter)
-- [Which scheduling tools are not HIPAA compliant?](#which-scheduling-tools-are-not-hipaa-compliant)
-- [What should a CAH look for in scheduling software to stay compliant?](#what-should-a-cah-look-for-in-scheduling-software-to-stay-compliant)
-- [How SimpleScheduleAI handles HIPAA compliance](#how-simplescheduleai-handles-hipaa-compliance)
+- [Does Nurse Scheduling Software Need to Be HIPAA Compliant?](#does-nurse-scheduling-software-need-to-be-hipaa-compliant)
+- [When Does Scheduling Software Touch Protected Health Information?](#when-does-scheduling-software-touch-protected-health-information)
+- [What Is a Business Associate Agreement and Why Does It Matter?](#what-is-a-business-associate-agreement-and-why-does-it-matter)
+- [Which Scheduling Tools Are Not Built for Healthcare Compliance?](#which-scheduling-tools-are-not-built-for-healthcare-compliance)
+- [What Should a Critical Access Hospital Look For in Scheduling Software to Stay Compliant?](#what-should-a-critical-access-hospital-look-for-in-scheduling-software-to-stay-compliant)
+- [How SimpleScheduleAI Handles HIPAA Compliance](#how-simplescheduleai-handles-hipaa-compliance)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
-
-A nurse manager at a 20-bed Critical Access Hospital in central Texas switched from paper schedules to a workforce app she found through an app store search. The app worked. Schedules went out faster. Nurses could see shifts on their phones.
-
-Six months later, a compliance consultant flagged the tool during a routine audit. The vendor did not sign BAAs. The app stored staff schedules in a shared cloud environment not segmented by customer. The facility had been logging patient census data, used to justify shift counts, inside the same tool. None of that data was encrypted at rest. The consultant's recommendation: stop using the tool, purge the records, and document the corrective action.
-
-The nurse manager had not done anything wrong by intent. She had done something common: picked a scheduling tool without asking whether it was built for healthcare compliance.
 
 ## Does Nurse Scheduling Software Need to Be HIPAA Compliant?
 
@@ -56,7 +58,41 @@ For a Critical Access Hospital, the safe practice is to ask whether any patient-
 
 ## When Does Scheduling Software Touch Protected Health Information?
 
-Scheduling software touches PHI when it connects shift assignments to specific patient identifiers, stores census data at a patient-identifiable level, or integrates with EHR or payroll systems that contain protected records.
+Scheduling software touches PHI when it connects shift assignments to specific patient identifiers, stores census data at a patient-identifiable level, or integrates with EHR or payroll systems that contain protected records. The line between safe workforce data and PHI is concrete:
+
+<figure class="not-prose my-8">
+  <figcaption class="mb-3 text-sm font-semibold text-slate-700 dark:text-slate-200">
+    What is workforce data and what is PHI inside a scheduling tool
+  </figcaption>
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse text-sm" style="min-width: 560px">
+      <thead>
+        <tr class="bg-slate-100 dark:bg-slate-800">
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100">Workforce data (generally not PHI)</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100">Patient-linked data (PHI)</th>
+        </tr>
+      </thead>
+      <tbody class="text-slate-700 dark:text-slate-300">
+        <tr>
+          <td class="border border-slate-300 p-3 dark:border-slate-600">Who works which shift, in which unit</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600">Which nurse is assigned to which patient</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 p-3 dark:border-slate-600">Nurse certifications, availability, and hours</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600">Patient census tied to identifiable records</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 p-3 dark:border-slate-600">Coverage counts and overtime totals</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600">Patient names, admission dates, room or bed by patient</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 p-3 dark:border-slate-600">Callout replacement (qualified and overtime-safe)</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600">Any field that can reasonably identify a patient</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 
 The most common trigger at a CAH is patient assignment tracking. Some scheduling tools allow nurse managers to record not just who is working, but which patients each nurse is responsible for. That assignment record, linking a specific nurse to a specific patient on a specific date, is PHI. It is a healthcare record that could be used to identify a patient's care history.
 
@@ -72,65 +108,65 @@ A Business Associate Agreement (BAA) is a contract required under the [HIPAA Pri
 
 Without a BAA, your facility assumes full legal liability for any PHI handled in the vendor's system. The vendor is not legally accountable for HIPAA violations under that arrangement. If a breach occurs, the lack of a BAA is an aggravating factor in [HHS Office for Civil Rights](https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html) enforcement.
 
-BAA violations carry civil penalties from $100 to $50,000 per violation per year, with annual caps up to $1.9 million per violation category. For a small hospital with limited legal resources, a single breach investigation is a significant operational event regardless of whether it results in the maximum fine.
+HIPAA civil penalties run from a minimum of about $145 per violation up to an [annual cap](https://www.federalregister.gov/documents/2026/01/28/2026-01688/annual-civil-monetary-penalties-inflation-adjustment) of $2,190,294 per violation category, with the applicable tier set by the level of culpability. These amounts are adjusted for inflation each year (figures effective January 28, 2026). For a small hospital with limited legal resources, a single breach investigation is a significant operational event regardless of whether it results in the maximum fine.
 
 The BAA requirement is not negotiable and cannot be satisfied after the fact. The agreement must be in place before the vendor processes any PHI. A vendor who has been storing your PHI for six months without a BAA does not become compliant the day you sign one. The prior period remains an unaddressed exposure.
 
-## Which Scheduling Tools Are Not HIPAA Compliant?
+## Which Scheduling Tools Are Not Built for Healthcare Compliance?
 
-Generic workforce scheduling tools, including Deputy, When I Work, and Homebase, are not HIPAA compliant and do not offer Business Associate Agreements as standard terms.
+Generic workforce scheduling tools, including Deputy, When I Work, and Homebase, do not advertise a standard Business Associate Agreement for healthcare use on their product pages. A CAH should confirm BAA availability directly with any vendor before storing patient-linked data.
 
-**Deputy** is marketed to retail, hospitality, and general workforce segments. Deputy's terms of service do not include HIPAA compliance commitments, and the vendor does not offer a BAA. Users in healthcare compliance forums and review platforms have documented this specifically: Deputy is a general-purpose workforce tool, not a healthcare-regulated platform. For a facility that has used Deputy for nurse scheduling and stored any patient-linked data inside it, that represents an unaddressed compliance gap.
+**Deputy** markets to retail, hospitality, and general workforce segments. Its public product pages do not document a healthcare BAA, so a facility should confirm directly with the vendor before storing any patient-linked data. For a facility that has used Deputy for nurse scheduling and stored patient-linked data inside it, that is a gap worth checking and documenting.
 
-**When I Work** similarly targets small businesses and general workforce management. It does not offer a BAA or HIPAA compliance framework. The product is well-designed for its target market, which is not regulated healthcare environments.
+**When I Work** similarly targets small businesses and general workforce management, and its product pages do not document a healthcare BAA either. The product is well-designed for its target market, which is not regulated healthcare environments.
 
-**Homebase** is designed for hourly workers in retail and food service. No healthcare compliance infrastructure exists in the product.
+**Homebase** is built for hourly workers in retail and food service, with no healthcare BAA documented on its product pages.
 
 **Generic cloud tools** (Google Sheets, Google Calendar, shared Microsoft OneDrive documents) used for scheduling present BAA challenges: Google and Microsoft offer BAAs for their enterprise products (Google Workspace for Healthcare, Microsoft 365 for healthcare organizations), but consumer tiers of the same products do not include BAA coverage. A nurse manager using a personal Gmail account with a Google Sheet for the schedule is not covered.
 
 The common pattern across all of these: the vendors are well-suited for their intended markets. Healthcare compliance is not their intended market, and they do not invest in the infrastructure required for it.
 
-## What Should a CAH Look For in Scheduling Software to Stay Compliant?
+## What Should a Critical Access Hospital Look For in Scheduling Software to Stay Compliant?
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-sm border-collapse" style="min-width:580px">
     <thead>
-      <tr class="bg-slate-100">
-        <th class="border border-slate-300 px-4 py-3 text-left font-semibold">Requirement</th>
-        <th class="border border-slate-300 px-4 py-3 text-left font-semibold">What to Ask the Vendor</th>
-        <th class="border border-slate-300 px-4 py-3 text-left font-semibold">Red Flag Answer</th>
+      <tr class="bg-slate-100 dark:bg-slate-800">
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold dark:text-slate-100">Requirement</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold dark:text-slate-100">What to Ask the Vendor</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold dark:text-slate-100">Red Flag Answer</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="border border-slate-300 px-4 py-2 font-medium">BAA availability</td>
-        <td class="border border-slate-300 px-4 py-2">Will you sign a Business Associate Agreement with us?</td>
-        <td class="border border-slate-300 px-4 py-2 text-red-700">No / We don't offer that / What's a BAA?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">BAA availability</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">Will you sign a Business Associate Agreement with us?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">No / We don't offer that / What's a BAA?</td>
       </tr>
-      <tr class="bg-slate-50">
-        <td class="border border-slate-300 px-4 py-2 font-medium">Data architecture</td>
-        <td class="border border-slate-300 px-4 py-2">Is customer data isolated per tenant or stored in a shared environment?</td>
-        <td class="border border-slate-300 px-4 py-2 text-red-700">Shared environment with no customer isolation</td>
-      </tr>
-      <tr>
-        <td class="border border-slate-300 px-4 py-2 font-medium">Encryption</td>
-        <td class="border border-slate-300 px-4 py-2">Is data encrypted at rest and in transit? What standard?</td>
-        <td class="border border-slate-300 px-4 py-2 text-red-700">Vague answer or "we use HTTPS" without confirming at-rest encryption</td>
-      </tr>
-      <tr class="bg-slate-50">
-        <td class="border border-slate-300 px-4 py-2 font-medium">Access controls</td>
-        <td class="border border-slate-300 px-4 py-2">Can we limit which staff see which data? Are access logs available?</td>
-        <td class="border border-slate-300 px-4 py-2 text-red-700">No role-based access or audit trail</td>
+      <tr class="bg-slate-50 dark:bg-slate-900">
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Data architecture</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">Is customer data isolated per tenant or stored in a shared environment?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">Shared environment with no customer isolation</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 px-4 py-2 font-medium">Breach notification</td>
-        <td class="border border-slate-300 px-4 py-2">What is your breach notification procedure and timeline?</td>
-        <td class="border border-slate-300 px-4 py-2 text-red-700">No defined procedure or timeline exceeds 60 days</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Encryption</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">Is data encrypted at rest and in transit? What standard?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">Vague answer or "we use HTTPS" without confirming at-rest encryption</td>
       </tr>
-      <tr class="bg-slate-50">
-        <td class="border border-slate-300 px-4 py-2 font-medium">Data on termination</td>
-        <td class="border border-slate-300 px-4 py-2">How is our data returned or destroyed when we cancel?</td>
-        <td class="border border-slate-300 px-4 py-2 text-red-700">Data retained indefinitely or no documented destruction process</td>
+      <tr class="bg-slate-50 dark:bg-slate-900">
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Access controls</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">Can we limit which staff see which data? Are access logs available?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">No role-based access or audit trail</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Breach notification</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">What is your breach notification procedure and timeline?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">No defined procedure or timeline exceeds 60 days</td>
+      </tr>
+      <tr class="bg-slate-50 dark:bg-slate-900">
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Data on termination</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">How is our data returned or destroyed when we cancel?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">Data retained indefinitely or no documented destruction process</td>
       </tr>
     </tbody>
   </table>
@@ -138,26 +174,34 @@ The common pattern across all of these: the vendors are well-suited for their in
 
 One practical approach that eliminates much of the compliance complexity: choose a scheduling tool that keeps patient data out of the system entirely. If the scheduling system handles only workforce data (who is qualified, available, and scheduled for which shift, with no patient identifiers), the HIPAA obligation on the scheduling tool is significantly reduced. Patient-to-nurse assignment decisions happen at the unit level by the charge nurse and are documented in the EHR, not in the scheduling system.
 
-This clean separation is simpler to audit, simpler to explain to a surveyor, and simpler to maintain as your roster changes.
+This clean separation is simpler to audit, simpler to explain to a surveyor, and simpler to maintain as your roster changes. If you are evaluating options, our guide to [scheduling software for a 25-bed hospital](/blog/best-scheduling-software-25-bed-hospital) walks through the same requirements alongside the other features a CAH should weigh.
 
 ## How SimpleScheduleAI Handles HIPAA Compliance
 
-SimpleScheduleAI is designed to keep patient data out of the scheduling workflow entirely. The managed service operates on workforce data: nurse roster records (names, certifications, availability, hours), shift coverage requirements (how many nurses of which credential type are needed per shift), and callout replacement logic (who is qualified and overtime-safe to cover a gap).
+SimpleScheduleAI is designed to keep patient data out of the scheduling workflow entirely. The managed service uses [AI nurse scheduling](/ai-nurse-scheduling) that operates on workforce data only: nurse roster records (names, certifications, availability, hours), shift coverage requirements (how many nurses of which credential type are needed per shift), and callout replacement logic (who is qualified and overtime-safe to cover a gap). For a closer look at [how the managed service works](/how-it-works), the process runs from Excel roster upload to an approved schedule without a patient identifier ever entering the system.
 
 No patient identifiers enter the system. Patient-to-nurse assignments are made at the unit level by the charge nurse and documented in the EHR. The scheduling system's output is the staffing roster for each shift, not patient assignments.
 
 This design means the HIPAA exposure from patient assignment data does not arise in the scheduling workflow. The scheduling record is workforce data, not PHI.
 
-SimpleScheduleAI will sign a Business Associate Agreement with any CAH customer. The BAA is standard, not a negotiated exception. Facilities should request it as part of onboarding.
+SimpleScheduleAI will sign a Business Associate Agreement with any Texas Critical Access Hospital customer. The BAA is standard, not a negotiated exception. Facilities should request it as part of onboarding. Because the service is operated for you, a CAH with [no IT department](/blog/nurse-scheduling-no-it-department-rural-hospital) can run it without standing up new infrastructure or managing the compliance posture in-house.
 
 One honest limitation: if a facility wants to build patient assignment tracking into the scheduling tool, for example recording which nurse is responsible for which patient as part of the scheduling workflow, SimpleScheduleAI does not support that use case. That function belongs in the EHR or a purpose-built patient assignment tool, not in the nurse scheduling managed service.
 
 For more on how [critical access hospital scheduling](/critical-access-hospital-scheduling) works and what compliance requirements CAHs face under CMS Conditions of Participation, that guide covers the regulatory context in full. For a broader look at what [nurse scheduling software for small hospitals](/nurse-scheduling-software) needs to handle, including compliance and callout coverage, see the feature overview.
 
+## What to Do This Week
+
+1. **List every tool that holds your schedule.** Include the workforce app, any spreadsheets, and shared calendars, and note where each one stores its data.
+2. **Ask each vendor, in writing, "Will you sign a Business Associate Agreement?"** Keep the answer on file. A no, a non-answer, or "what is a BAA?" is your signal.
+3. **Check what patient-linked data has gone into those tools.** Patient assignment records and patient-identifiable census counts are the common ways PHI ends up in a scheduling system.
+4. **Separate workforce data from patient data.** Keep who-works-when in the scheduling tool and patient-to-nurse assignments in the EHR, so the scheduling record stays free of PHI.
+5. **If you find PHI in a tool with no BAA, document it and get advice.** Stop adding new PHI, record the corrective action, and consult a healthcare compliance attorney if the exposure looks significant.
+
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Using a scheduling tool that can't sign a BAA?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI signs BAAs as standard. No patient data enters the scheduling workflow. Free pilot, no IT setup required.</p>
-  <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI signs BAAs as standard, and no patient data enters the scheduling workflow.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
@@ -171,17 +215,26 @@ Using generic scheduling software is not automatically a HIPAA violation. The vi
 
 You need a BAA from any vendor whose software handles Protected Health Information at your facility. If your scheduling tool stores patient assignment data, patient census tied to identifiable records, or integrates with systems that contain PHI, yes, you need a BAA. If the tool handles only workforce data with no patient linkage, the obligation is narrower, but it is still worth confirming with the vendor in writing.
 
-**Q: What happens if we have been using a non-HIPAA-compliant scheduling tool?**
+**Q: What happens if we have been using a scheduling tool that cannot sign a BAA?**
 
 Stop processing new PHI in the tool immediately. Document the corrective action. Conduct a risk assessment to determine whether any PHI was exposed, to whom, and for how long. The [HHS Breach Notification Rule](https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html) requires notification to affected individuals within 60 days of discovering a breach. Whether notification is required depends on the risk assessment. Engage a healthcare compliance attorney if the exposure was significant. Going forward, use a tool with a BAA or redesign the workflow to keep patient data out of the scheduling system.
 
 **Q: Does using Excel for nurse scheduling create a HIPAA risk?**
 
-Using Excel or Google Sheets for pure shift scheduling (who works which hours, no patient linkage) is lower risk. The risk increases when schedules stored in spreadsheets include patient assignment data, when files are stored in personal cloud accounts without enterprise BAA coverage, or when the spreadsheets are shared via unencrypted email. Microsoft 365 and Google Workspace offer BAA coverage under their enterprise healthcare agreements, but personal accounts of the same products do not.
+[Using Excel for nurse scheduling](/blog/nurse-scheduling-software-vs-excel) or Google Sheets for pure shift scheduling (who works which hours, no patient linkage) is lower risk. The risk increases when schedules stored in spreadsheets include patient assignment data, when files are stored in personal cloud accounts without enterprise BAA coverage, or when the spreadsheets are shared via unencrypted email. Microsoft 365 and Google Workspace offer BAA coverage under their enterprise healthcare agreements, but personal accounts of the same products do not.
 
-**Q: What is the difference between HIPAA compliance and CMS §485.635 documentation requirements?**
+**Q: What is the difference between HIPAA compliance and CMS §485.631 documentation requirements?**
 
-HIPAA governs the privacy and security of Protected Health Information. CMS §485.635 is a Conditions of Participation requirement specific to Critical Access Hospitals, mandating that CAHs maintain accurate staffing records and demonstrate appropriate clinical supervision at all times. They address different compliance dimensions. A scheduling tool can produce CMS-compliant staffing documentation without touching PHI at all, which is the design that minimizes compliance risk on both fronts.
+HIPAA governs the privacy and security of Protected Health Information. [CMS §485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) is a Conditions of Participation requirement specific to Critical Access Hospitals, covering staffing and clinical supervision: a CAH must have appropriate staff on duty and demonstrate physician or practitioner supervision of the services provided. They address different compliance dimensions. A scheduling tool can help you [stay CMS compliant with nurse scheduling](/blog/how-to-stay-cms-compliant-nurse-scheduling) and produce staffing documentation without touching PHI at all, which is the design that minimizes compliance risk on both fronts.
+
+## Sources
+
+1. HHS, Business Associates guidance. https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html
+2. HHS, Guidance Regarding Methods for De-identification of Protected Health Information. https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html
+3. Federal Register, Annual Civil Monetary Penalties Inflation Adjustment (effective January 28, 2026). https://www.federalregister.gov/documents/2026/01/28/2026-01688/annual-civil-monetary-penalties-inflation-adjustment
+4. HHS Office for Civil Rights, HIPAA Enforcement. https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/index.html
+5. HHS, Breach Notification Rule. https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html
+6. eCFR, 42 CFR Section 485.631 (Condition of participation: Staffing and staff responsibilities, Critical Access Hospitals). https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631
 
 ---
 
