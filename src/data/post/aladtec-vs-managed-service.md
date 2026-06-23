@@ -232,7 +232,7 @@ The 3-4 hour weekly difference adds up to approximately 150-200 hours per year. 
       </div>
     </div>
   </div>
-  <p class="text-xs text-slate-500 dark:text-slate-400 mt-3 text-center">Based on SimpleScheduleAI pilot observations with Critical Access Hospital clients. 3+ hours/week saved = approximately 150 clinical hours/year returned to patient care.</p>
+  <p class="text-xs text-slate-500 dark:text-slate-400 mt-3 text-center">Illustrative time-savings estimate based on the SimpleScheduleAI workflow, not audited client data. 3+ hours/week saved is approximately 150 clinical hours/year returned to patient care.</p>
 </div>
 
 ## How Does Each Model Handle After-Hours Callouts?

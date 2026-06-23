@@ -168,7 +168,7 @@ The clearest way to see the gap is across the operating model, not feature check
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200">Company stage</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Venture-funded, seed-stage startup</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Early-stage managed service; Texas CAH pilot cohort</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Early-stage managed service; no named customers yet</td>
       </tr>
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200">Pricing</td>

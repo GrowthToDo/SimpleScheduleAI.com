@@ -422,7 +422,7 @@ If you are currently evaluating hospital scheduling options for your CAH, these 
 
 4. **Build a full cost comparison, not just licensing.** Add setup fees, configuration services, and estimated internal staff time for onboarding to the annual licensing cost. Compare that aggregate figure across every option you are considering, including a managed service.
 
-5. **If the managed service operating model fits your constraints, see how it works.** SimpleScheduleAI runs on flat monthly pricing with no IT setup; the AI builds the schedule, our team checks it, and you approve it. You can request a reference call before committing. [See how it works →](/how-it-works)
+5. **If the managed service operating model fits your constraints, see how it works.** SimpleScheduleAI runs on flat monthly pricing with no IT setup; the AI builds the schedule, our team checks it, and you approve it. [See how it works →](/how-it-works)
 
 ## Sources
 

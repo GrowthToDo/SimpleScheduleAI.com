@@ -226,7 +226,7 @@ The time comparison between TCP TimeClock+ and a managed service depends on whic
       </div>
     </div>
   </div>
-  <p class="text-xs text-slate-500 dark:text-slate-400 mt-3 text-center">Based on SimpleScheduleAI pilot observations with Critical Access Hospital clients. TCP setup time: contact TCP directly.</p>
+  <p class="text-xs text-slate-500 dark:text-slate-400 mt-3 text-center">Illustrative time-savings estimate based on the SimpleScheduleAI workflow, not audited client data. TCP setup time: contact TCP directly.</p>
 </div>
 
 The right evaluation is to separate the two functions. If the hospital needs both time and attendance and scheduling, TCP TimeClock+ covers both. If the primary problem is scheduling burden and callout coverage, a managed scheduling service addresses that more directly.

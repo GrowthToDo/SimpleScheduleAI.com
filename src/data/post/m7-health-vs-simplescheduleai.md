@@ -144,7 +144,7 @@ The honest comparison is not feature by feature. It is model against model. M7 H
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">Named reference customers</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Ochsner Health (47-hospital system), ScionHealth (multi-hospital company)</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Texas CAH pilot cohort</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">None named yet (new service)</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">IT and setup burden</td>
@@ -179,7 +179,7 @@ The honest comparison is not feature by feature. It is model against model. M7 H
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">Vendor-stated outcomes</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">M7's own published figure: more than 60% less administrative scheduling time, measured on large health-system deployments (<a href="https://www.m7health.com/" class="text-blue-700 dark:text-blue-400 underline">m7health.com</a>); verify in a demo</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Pilot-cohort time targets; verified per facility</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Modeled time targets; not yet independently verified</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">Pricing</td>

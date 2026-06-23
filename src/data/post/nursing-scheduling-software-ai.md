@@ -148,7 +148,7 @@ Critically, SimpleScheduleAI is a managed service, not a self-serve AI tool. A s
 
 When a nurse calls out, the AI ranking system produces a replacement list within seconds. The nurse manager reviews the top-ranked candidates and makes the contact. The decision remains human; the research is automated. See the AI build the three drafts and rank a callout shortlist live in the [interactive simulator](/simulator).
 
-One honest limitation: the AI optimization improves over time as the system accumulates data about your facility's patterns, preferences, and exceptions. The first few scheduling cycles involve more human calibration than later cycles. We are transparent about this with pilot hospitals.
+One honest limitation: the AI optimization improves over time as the system accumulates data about your facility's patterns, preferences, and exceptions. The first few scheduling cycles involve more human calibration than later cycles. We say this upfront rather than after you have signed on.
 
 Pricing is flat by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. See [how it works](/how-it-works) for the full build-and-approve flow.
 
@@ -200,7 +200,7 @@ Not with a managed service model. SimpleScheduleAI onboards via Excel roster upl
 
 ## A Note on Sources
 
-**Methodology note:** The time figures in this guide (8 to 12 hours per week on scheduling, 4 to 6 hours per cycle to build a draft, callout-handling times, and the 2 to 4 week calibration window) are estimates drawn from interviews with 30+ nurse managers and SimpleScheduleAI pilot observations, not a published study. Actual times vary by facility size, shift pattern, and data quality. AI capabilities described reflect the SimpleScheduleAI managed service as currently delivered; confirm any specific feature with us before relying on it.
+**Methodology note:** The time figures in this guide (8 to 12 hours per week on scheduling, 4 to 6 hours per cycle to build a draft, callout-handling times, and the 2 to 4 week calibration window) are estimates drawn from interviews with nurse managers, not a published study. Actual times vary by facility size, shift pattern, and data quality. AI capabilities described reflect the SimpleScheduleAI managed service as currently delivered; confirm any specific feature with us before relying on it.
 
 ---
 

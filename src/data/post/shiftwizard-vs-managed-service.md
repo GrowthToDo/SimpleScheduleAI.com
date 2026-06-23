@@ -203,24 +203,23 @@ SimpleScheduleAI is a managed [nurse scheduling service](/how-it-works) for Crit
 SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. What we offer instead:
 
 - **Evaluation on real delivered schedules, not demos.** We build a real schedule against your roster so you judge the output, not a sales pitch.
-- **Direct customer references on request.** We can connect you with current pilot facilities for an unfiltered reference call.
 - **Founder-led service.** Pradeep Pandey, founder, has direct operations experience at Apollo Hospitals (Deputy GM, Operations) and an MBA from IIM Trichy. Service decisions go through him, not through a tier-3 support queue.
 - **CAH-specific design.** Excel roster onboarding, no IT integration required, 3-5 day go-live, Texas FLSA overtime compliance built in, CMS §485.635 audit trail logged automatically.
 
-SimpleScheduleAI is the right choice for a CAH where the nurse manager has concluded that the self-serve scheduling model takes more weekly time than her role can absorb, and where direct customer-reference validation matters more than aggregate vendor reviews.
+SimpleScheduleAI is the right choice for a CAH where the nurse manager has concluded that the self-serve scheduling model takes more weekly time than her role can absorb, and where seeing a real schedule built on her own roster matters more than aggregate vendor reviews.
 
 It is not the right choice if staff-facing self-service mobile features are a hard requirement; we currently focus on the manager-facing scheduling workflow and do not have a staff-facing app. For more on the operating model, see [how SimpleScheduleAI works](/how-it-works), our [nurse scheduling software hub](/nurse-scheduling-software), and the compliance requirements that shape [critical access hospital scheduling](/critical-access-hospital-scheduling). For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
 <div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
-  <h2 class="mb-2 text-2xl font-bold text-white">Want a Reference Call With a Pilot CAH?</h2>
+  <p class="mb-2 text-2xl font-bold text-white">Want to See It on Your Own Roster?</p>
   <p class="mb-6 text-blue-100">
-    Before you decide, we can connect you with a current SimpleScheduleAI pilot facility for an unfiltered conversation about the managed service model.
+    Send us your roster and we will build one real schedule, so you judge the output instead of a demo.
   </p>
   <a
     href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    See how it works Reference Call
+    See how it works
   </a>
 </div>
 
