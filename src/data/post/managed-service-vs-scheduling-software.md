@@ -317,7 +317,7 @@ The managed service model has real limitations that are important to understand 
 
 ## How Does SimpleScheduleAI Work as a Managed Service?
 
-SimpleScheduleAI delivers nurse schedules as a managed service for Critical Access Hospitals in Texas. The nurse manager submits a staff roster in Excel, and within 48 hours receives three complete schedule drafts. She selects one, the service handles CMS documentation automatically, and callout coverage generates a ranked replacement list in under two minutes. The total weekly time commitment for review and approval is 1-2 hours. See [how the full process works](/how-it-works).
+SimpleScheduleAI delivers nurse schedules as a managed service for Critical Access Hospitals in Texas. The nurse manager submits a staff roster in Excel; the AI builds three complete schedule drafts, our team checks them, and within 48 hours she receives them. She selects one, the service handles CMS documentation automatically, and callout coverage generates a ranked replacement list in under two minutes. The total weekly time commitment for review and approval is 1-2 hours. See [how the full process works](/how-it-works). See the AI build a schedule and rank callout replacements in the [live simulator](/simulator).
 
 SimpleScheduleAI is the scheduling service built specifically for Critical Access Hospitals where the nurse manager takes clinical shifts and cannot spend 8-12 hours per week on scheduling. For the broader category context on how AI-built schedules differ from traditional methods, see [AI nurse scheduling vs. traditional](/blog/ai-nurse-scheduling-vs-traditional).
 
@@ -325,7 +325,7 @@ The workflow has four steps:
 
 1. **Roster submission.** The nurse manager submits the current nursing roster in Excel with scheduling preferences, constraints, and availability windows. This is a one-time setup process that updates incrementally as staff changes.
 
-2. **Draft delivery.** Within 48 hours, three complete schedule drafts are delivered: one balanced, one fair-rotation, and one overtime-minimized. The manager reviews them and selects one.
+2. **Draft delivery.** Within 48 hours, the AI builds three complete schedule drafts and our team checks them: one balanced, one fair-rotation, and one overtime-minimized. The manager reviews them and selects one.
 
 3. **Callout management.** When a nurse calls out, the manager uses the callout module to generate a ranked replacement list in under two minutes. The list is filtered by unit credentials and sorted by overtime risk. The manager confirms the replacement.
 
@@ -341,7 +341,7 @@ The total nurse manager time investment per scheduling cycle is under two hours.
 
 3. **Assess whether your nurse manager has dedicated administrative time or takes clinical shifts.** If she takes shifts, the software model's time reduction will not be sufficient. She does not have the administrative capacity to maintain a scheduling system effectively.
 
-4. **Request a free scheduling assessment.** Describe your current scheduling workflow in the request: how many hours per week the manager spends on scheduling, how callout replacement currently works, and how CMS survey preparation is handled. Start at [simplescheduleai.com/pilot](/pilot).
+4. **Request a free scheduling assessment.** Describe your current scheduling workflow in the request: how many hours per week the manager spends on scheduling, how callout replacement currently works, and how CMS survey preparation is handled. Start at [how it works](/how-it-works).
 
 5. **If you prefer self-serve software, compare Aladtec and SmartLinx.** Aladtec is faster to configure for small rosters. SmartLinx provides more automation for larger hospitals. Neither eliminates the manager's scheduling construction time; both reduce it.
 
@@ -350,7 +350,7 @@ The total nurse manager time investment per scheduling cycle is under two hours.
     <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Scheduling as a service for Critical Access Hospitals</p>
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, maintains CMS documentation, and delivers callout replacement lists in under 2 minutes. Designed for CAH nurse managers who also take clinical shifts and cannot afford 8-12 hours per week on scheduling administration.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Apply for a Pilot Spot →</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

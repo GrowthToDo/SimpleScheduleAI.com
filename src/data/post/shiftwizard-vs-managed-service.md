@@ -20,7 +20,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/shiftwizard-vs-managed-service'
 ---
 
-ShiftWizard demos show a scheduling platform with the features your hospital needs. Your nurse manager asks one question: "After I am trained on this, how many hours a week will I still spend on scheduling?" ShiftWizard answers that question with a self-serve software model. SimpleScheduleAI, a managed scheduling service built for Texas Critical Access Hospitals, answers it differently: the service builds the schedule, the nurse manager approves it.
+ShiftWizard demos show a scheduling platform with the features your hospital needs. Your nurse manager asks one question: "After I am trained on this, how many hours a week will I still spend on scheduling?" ShiftWizard answers that question with a self-serve software model. SimpleScheduleAI, a managed scheduling service built for Texas Critical Access Hospitals, answers it differently: the AI builds the schedule, our team checks it, the nurse manager approves it.
 
 This guide compares the two models on the operational dimensions that decide the answer for a 25-bed CAH: weekly time burden, configuration maintenance, callout coverage, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime tracking, and [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation.
 
@@ -194,7 +194,7 @@ The honest answer for many CAHs is "items 1, 3, and 4 favor a managed service; i
 
 ## How SimpleScheduleAI Fits If You Need the Managed Service Model?
 
-SimpleScheduleAI is a managed scheduling service built for Critical Access Hospitals in Texas where the nurse manager takes clinical shifts and cannot sustain weekly scheduling construction. Setup takes 3-5 days from an Excel roster upload. CMS §485.635 documentation is automatic. Callout replacement lists are pre-ranked by credential and overtime status. The nurse manager approves schedules rather than building them. There is no staff-facing mobile app.
+SimpleScheduleAI is a managed scheduling service built for Critical Access Hospitals in Texas where the nurse manager takes clinical shifts and cannot sustain weekly scheduling construction. Setup takes 3-5 days from an Excel roster upload. CMS §485.635 documentation is automatic. Callout replacement lists are pre-ranked by credential and overtime status. The AI builds the schedule and our team checks it, so the nurse manager approves rather than builds. There is no staff-facing mobile app. See the AI build a schedule and rank callout replacements in the [live simulator](/simulator).
 
 <img src="/images/blog/shiftwizard-vs-managed-service/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -202,7 +202,7 @@ SimpleScheduleAI is a managed [nurse scheduling service](/how-it-works) for Crit
 
 SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. What we offer instead:
 
-- **A free 60-day pilot for qualifying CAHs in Texas.** No setup fee or commitment during the pilot. You evaluate on actual delivered schedules, not on demos.
+- **Evaluation on real delivered schedules, not demos.** We build a real schedule against your roster so you judge the output, not a sales pitch.
 - **Direct customer references on request.** We can connect you with current pilot facilities for an unfiltered reference call.
 - **Founder-led service.** Pradeep Pandey, founder, has direct operations experience at Apollo Hospitals (Deputy GM, Operations) and an MBA from IIM Trichy. Service decisions go through him, not through a tier-3 support queue.
 - **CAH-specific design.** Excel roster onboarding, no IT integration required, 3-5 day go-live, Texas FLSA overtime compliance built in, CMS §485.635 audit trail logged automatically.
@@ -214,13 +214,13 @@ It is not the right choice if staff-facing self-service mobile features are a ha
 <div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
   <h2 class="mb-2 text-2xl font-bold text-white">Want a Reference Call With a Pilot CAH?</h2>
   <p class="mb-6 text-blue-100">
-    Before you decide, we can connect you with a current SimpleScheduleAI pilot facility for an unfiltered conversation about the managed service model. Free 60-day pilot if you decide to proceed.
+    Before you decide, we can connect you with a current SimpleScheduleAI pilot facility for an unfiltered conversation about the managed service model.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    Request a Pilot Reference Call
+    See how it works Reference Call
   </a>
 </div>
 
@@ -247,14 +247,14 @@ It is not the right choice if staff-facing self-service mobile features are a ha
 2. **Audit which ShiftWizard configurations have drifted.** Credential expiration dates current for all staff? Minimum staffing rules reflect current per-diem and float policies? Overtime thresholds match your FLSA model? Configuration drift is the silent failure mode of any self-serve hospital scheduling platform.
 3. **Calculate total cost of ownership, not just license fee.** Subscription plus implementation labor plus ongoing maintenance labor plus the nurse manager's weekly scheduling hours at her loaded rate. Use the [SimpleScheduleAI ROI calculator](/roi) to compare the two models on dollar value.
 4. **Identify whether your nurse manager would rather operate a tool or approve a finished schedule.** ShiftWizard is the right answer for managers who want direct control of every cell. A managed service is the right answer for managers who want the construction work removed. Neither is universally better; the fit depends on the manager's preference and available time.
-5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot delivers the scheduling outputs ShiftWizard was purchased to enable, without the configuration maintenance burden. Start at [simplescheduleai.com/pilot](/pilot).
+5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service delivers the scheduling outputs ShiftWizard was purchased to enable, without the configuration maintenance burden. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">ShiftWizard configuration without ShiftWizard configuration</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI provides ShiftWizard-grade compliance and fairness logic without requiring the nurse manager to maintain the system. Free 60-day pilot for Texas CAHs.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI provides ShiftWizard-grade compliance and fairness logic without requiring the nurse manager to maintain the system.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

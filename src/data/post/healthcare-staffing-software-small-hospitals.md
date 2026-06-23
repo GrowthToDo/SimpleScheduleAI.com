@@ -143,14 +143,14 @@ The gap for small hospitals is in the middle: mid-market healthcare tools have t
     SimpleScheduleAI includes proactive overtime tracking, certification-matched callout coverage, and CMS audit trail documentation as defaults, not features to configure. It goes live in 3-5 days with no IT involvement.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment
   </a>
 </div>
 
-## What Should You Do This Week?List the three scheduling tasks that take your nurse manager the most time this week. If any of them could be handled by software that requires no IT setup, [explore how SimpleScheduleAI works](/how-it-works) or [request a free 60-day pilot](/pilot).?
+## What Should You Do This Week?List the three scheduling tasks that take your nurse manager the most time this week. If any of them could be handled by software that requires no IT setup, [explore how SimpleScheduleAI works](/how-it-works).?
 
 ## Frequently Asked Questions
 

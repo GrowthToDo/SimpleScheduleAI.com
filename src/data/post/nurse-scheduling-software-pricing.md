@@ -51,7 +51,7 @@ This guide breaks down how these platforms are actually priced, what a 25-bed CA
 
 **Per-module pricing:** Enterprise platforms frequently charge separately for scheduling, time and attendance, overtime tracking, analytics, and mobile access. The base scheduling module may appear cheap, but the functionality a CAH actually needs across multiple modules often brings the real cost to $12-$20/nurse/month.
 
-**Managed service pricing:** A managed service (like SimpleScheduleAI) includes scheduling software plus human support for configuration, schedule review, and callout management. Managed service pricing is typically higher per unit than pure SaaS but lower in total cost of ownership because implementation and ongoing support are included.
+**Managed service pricing:** A managed service (like SimpleScheduleAI) includes scheduling software where the AI builds the schedule and a human team checks it, plus support for configuration, schedule review, and callout management. Managed service pricing is typically higher per unit than pure SaaS but lower in total cost of ownership because implementation and ongoing support are included.
 
 <figure class="not-prose my-8">
   <figcaption class="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3 text-center">Nurse Scheduling Software Pricing Models: What They Look Like at 25 Nurses</figcaption>
@@ -176,7 +176,7 @@ The baseline for your CAH: look at your last 6 months of payroll data and calcul
 
 ## How SimpleScheduleAI Is Priced?
 
-SimpleScheduleAI is a managed scheduling service for critical access hospitals in Texas. It includes full [AI nurse scheduling](/ai-nurse-scheduling) that builds the schedule for you, callout coverage shortlists, and Texas compliance tracking for your specific shift rules and nurse roster. No implementation fee. No IT integration required. Setup takes 3-5 business days via Excel roster upload. See [how it works](/how-it-works) for the full build-and-approve flow.
+SimpleScheduleAI is a managed scheduling service for critical access hospitals in Texas. It includes full [AI nurse scheduling](/ai-nurse-scheduling) that builds the schedule for you, callout coverage shortlists, and Texas compliance tracking for your specific shift rules and nurse roster. No implementation fee. No IT integration required. Setup takes 3-5 business days via Excel roster upload. See [how it works](/how-it-works) for the full build-and-approve flow. Watch the AI build a compliant schedule and track overtime live in the [interactive simulator](/simulator).
 
 Pricing is flat by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. That structure means a CAH knows its full annual cost on day one, with no implementation invoice waiting on the other side.
 
@@ -197,7 +197,7 @@ For hospitals evaluating alternatives, the [nurse scheduling software comparison
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-    Flat monthly pricing. No per-nurse fees. No IT setup. We build the schedule, you approve it.
+    Flat monthly pricing. No per-nurse fees. No IT setup. Our AI builds the schedule, our team checks it, you approve it.
   </p>
   <a
     href="https://cal.com/gautham-8bdvdx/30min"

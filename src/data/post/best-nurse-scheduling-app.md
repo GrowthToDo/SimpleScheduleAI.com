@@ -446,7 +446,7 @@ UKG provides a full enterprise mobile workforce management app with scheduling, 
     SimpleScheduleAI handles coordination, credentials, compliance, and operational intelligence as defaults, not configurations. Your first schedule arrives within 48 hours of your roster upload.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment

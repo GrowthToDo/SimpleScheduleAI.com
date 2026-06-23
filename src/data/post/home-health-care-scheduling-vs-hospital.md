@@ -115,7 +115,7 @@ If you are a critical access hospital with 25 or fewer inpatient beds and your c
     SimpleScheduleAI is built for critical access hospital nursing shifts, not home health. It goes live in 3-5 days with zero IT involvement. Request a free assessment to see how it works for your inpatient nursing operation.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment
@@ -124,7 +124,7 @@ If you are a critical access hospital with 25 or fewer inpatient beds and your c
 
 For more context on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides.
 
-## What Should You Do This Week?If your hospital scheduling process still relies on spreadsheets or whiteboards, test one alternative this month. [See how SimpleScheduleAI works for hospital scheduling](/how-it-works) or [start a free 60-day pilot](/pilot).?
+## What Should You Do This Week?If your hospital scheduling process still relies on spreadsheets or whiteboards, test one alternative this month. [See how SimpleScheduleAI works for hospital scheduling](/how-it-works).?
 
 ## Frequently Asked Questions
 

@@ -147,7 +147,7 @@ The four alternatives below cover the range a CAH is likely to encounter: a mana
 
 <img src="/images/blog/shiftwizard-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: a scheduling specialist handles setup from an Excel roster upload, builds draft schedules each cycle, and maintains the system as the roster changes.
+SimpleScheduleAI is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
 
 The service is a new offering in active pilot phase, without public G2 or Capterra reviews yet. CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds. Texas overtime compliance is built in as a default.
 
@@ -159,7 +159,7 @@ The service is a new offering in active pilot phase, without public G2 or Capter
 - CMS §485.635 documentation is automatic, not a manual export before each survey
 - Callout shortlist is ranked by overtime risk without manual calculation from the manager
 - Excel-based roster upload means no IT involvement during transition
-- Free 60-day pilot for qualifying CAHs in Texas, with no setup fee and no contract commitment during the pilot
+- Flat monthly pricing with no IT setup; our AI builds the schedule, our team checks it, you approve it
 
 **Key limitations:**
 
@@ -167,7 +167,7 @@ The service is a new offering in active pilot phase, without public G2 or Capter
 - No staff-facing mobile app; nurses do not view schedules or submit shift trades directly through the system
 - Not designed for hospitals with complex multi-department or physician scheduling needs beyond nursing
 
-**Verdict:** The strongest alternative for a CAH nurse manager who leaves ShiftWizard primarily because the scheduling administration burden has exceeded what one person can manage while covering clinical shifts. SimpleScheduleAI eliminates that specific constraint by design. [See how it works](/how-it-works) or explore the [pilot program](/pilot).
+**Verdict:** The strongest alternative for a CAH nurse manager who leaves ShiftWizard primarily because the scheduling administration burden has exceeded what one person can manage while covering clinical shifts. SimpleScheduleAI eliminates that specific constraint by design. [See how it works](/how-it-works).
 
 **Cost:** Pricing not listed publicly. Contact for a quote.
 
@@ -337,7 +337,7 @@ If all of these conditions apply, the switch cost and learning curve of an alter
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Schedule construction</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Manager builds, platform assists</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">3 drafts delivered by specialist in 48 hrs</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400">3 drafts: AI builds, specialist-verified, in 48 hrs</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
@@ -397,7 +397,7 @@ For a nurse manager at a 25-bed CAH who also takes clinical shifts, the self-ser
     <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Leaving ShiftWizard? Built for what a CAH actually needs.</p>
     <p class="text-blue-800 dark:text-blue-300 mt-1">SimpleScheduleAI eliminates the configuration burden, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Apply for a Pilot Spot →</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
@@ -422,7 +422,7 @@ If you are currently evaluating hospital scheduling options for your CAH, these 
 
 4. **Build a full cost comparison, not just licensing.** Add setup fees, configuration services, and estimated internal staff time for onboarding to the annual licensing cost. Compare that aggregate figure across every option you are considering, including a managed service.
 
-5. **If the managed service operating model fits your constraints, request a pilot.** SimpleScheduleAI offers a free 60-day pilot for qualifying CAHs in Texas, with no setup fee and no contract commitment during the pilot. You can request a reference call with a current pilot facility before committing. [Request a pilot or reference call →](/pilot)
+5. **If the managed service operating model fits your constraints, see how it works.** SimpleScheduleAI runs on flat monthly pricing with no IT setup; the AI builds the schedule, our team checks it, and you approve it. You can request a reference call before committing. [See how it works →](/how-it-works)
 
 ## Sources
 

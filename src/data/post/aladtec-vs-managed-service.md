@@ -72,7 +72,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Who builds the schedule</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Nurse manager</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">SimpleScheduleAI team</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">AI builds, SimpleScheduleAI team checks</td>
       </tr>
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Implementation time</td>
@@ -167,7 +167,7 @@ A managed scheduling service is not scheduling software with extra support. It i
 With SimpleScheduleAI, the process works like this:
 
 1. The nurse manager shares the staff roster with SimpleScheduleAI: names, credentials, availability, and any scheduling constraints. A standard Excel file is all that is needed to start.
-2. The SimpleScheduleAI team builds the first schedule within 48 hours, applying CMS documentation requirements, FLSA overtime thresholds, and credential-based shift assignments.
+2. The AI builds the first schedule within 48 hours, applying CMS documentation requirements, FLSA overtime thresholds, and credential-based shift assignments; the SimpleScheduleAI team checks it before it reaches the nurse manager.
 3. The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff.
 4. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a credential gap. They call from the top of the list.
 5. As staff join or leave, credentials change, or availability patterns shift, the nurse manager sends the update and the SimpleScheduleAI team handles the rest. The nurse manager does not administer a system. They manage a roster.
@@ -423,7 +423,7 @@ The decision between self-serve scheduling software and a managed service become
 
 1. **Time-track your scheduling hours this week.** Keep a running note of every scheduling task and how long it takes. Most nurse managers underestimate their total scheduling time, because callout handling and configuration updates are not mentally logged as "scheduling time." The actual number, once tracked, usually makes the decision obvious.
 
-2. **Ask SimpleScheduleAI for a CAH scheduling audit.** The audit covers your current OT patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [apply for a pilot](/pilot).
+2. **Ask SimpleScheduleAI for a CAH scheduling audit.** The audit covers your current OT patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [see how it works](/how-it-works).
 
 3. **Calculate your estimated labor cost for scheduling.** Multiply your hourly rate (or the hourly rate of whoever manages scheduling) by the weekly hours spent. Multiply by 50 weeks. Compare that number against the annual cost of a managed service. For most CAH nurse managers, the break-even is well inside year one. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison automatically.
 
@@ -437,10 +437,10 @@ The decision between self-serve scheduling software and a managed service become
     SimpleScheduleAI builds your first schedule within 48 hours of your staff roster upload. No configuration. No training. No IT. Just a schedule that arrives ready to approve.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    Apply for a Pilot Spot →
+    See how it works →
   </a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

@@ -72,7 +72,7 @@ TCP TimeClock+ is a time and attendance platform made by TCP Software. It combin
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Scheduling focus</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Secondary feature; some users describe it as basic</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Core function; specialist builds the schedule each cycle</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Core function; AI builds the schedule each cycle, specialist checks it</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Staff-facing app</td>
@@ -146,13 +146,13 @@ A managed scheduling service removes the scheduling function from the nurse mana
 With SimpleScheduleAI:
 
 - A scheduling specialist completes initial setup from your staff roster within 3-5 days
-- The specialist builds draft schedules each cycle, checking overtime thresholds and credential requirements before presenting drafts
+- The AI builds draft schedules each cycle; a specialist checks overtime thresholds and credential requirements before presenting drafts
 - The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff
 - Callout coverage shortlists come pre-ranked by certification, overtime status, and availability
 - Every schedule change is automatically logged for [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance documentation
 - The specialist maintains the roster as staff join, leave, or change credentials
 
-The nurse manager's role shifts from operator to approver. She retains final authority over every scheduling decision; the upstream work is handled for her. For a full walkthrough of how SimpleScheduleAI delivers scheduling as a service, see [how it works](/how-it-works).
+The nurse manager's role shifts from operator to approver. She retains final authority over every scheduling decision; the upstream work is handled for her. For a full walkthrough of how SimpleScheduleAI delivers scheduling as a service, see [how it works](/how-it-works). Try building a schedule in the [interactive simulator](/simulator).
 
 TCP TimeClock+ and a managed scheduling service are not direct substitutes. TCP TimeClock+ is a self-serve platform that unifies time tracking, payroll, and scheduling in one system the nurse manager operates. A managed service offloads the scheduling work to a specialist, leaving time tracking and payroll to a separate system. The right fit depends on whether the hospital's primary problem is consolidating systems or reducing the nurse manager's weekly scheduling burden. The four operational dimensions where the two diverge most sharply are implementation speed, weekly time burden, callout coverage, and CMS documentation.
 
@@ -268,7 +268,7 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
 
 3. **If you are evaluating TCP TimeClock+, ask two specific questions when you speak with their team.** First: does TimeClock+ produce CMS §485.635 staffing documentation reports for CAH certification surveys, or just event logs? Second: does the callout backfill feature come with TimeClock+ or does it require adding Humanity Scheduling? Both answers change the total cost and capability picture significantly.
 
-4. **Request a free scheduling assessment from SimpleScheduleAI.** The assessment covers your current overtime patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [apply for a pilot](/pilot).
+4. **Request a free scheduling assessment from SimpleScheduleAI.** The assessment covers your current overtime patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [see how it works](/how-it-works).
 
 5. **If you currently use TCP TimeClock+ and are considering whether it is meeting your scheduling needs,** review two things: are you spending more than 3-4 hours per week on scheduling tasks on top of your time tracking work, and are callout events regularly taking more than 20 minutes to resolve? If both answers are yes, the scheduling side of the platform is not keeping pace with what a dedicated service would provide.
 
@@ -278,10 +278,10 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
     SimpleScheduleAI goes live in 3-5 days from your staff roster. Your nurse manager reviews and approves; the scheduling work is done. Schedule a free assessment to compare it to what you have now.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    Apply for a Pilot Spot →
+    See how it works →
   </a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

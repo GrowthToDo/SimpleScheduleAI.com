@@ -335,14 +335,14 @@ For a CAH where the nurse manager spends 3+ hours per week on scheduling tasks t
     SimpleScheduleAI builds your CAH nurse schedule with charge coverage enforced, overtime checked, and CMS documentation generated automatically. You review and approve. First schedule within 48 hours of your roster upload.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment
   </a>
 </div>
 
-## What Should You Do This Week?Pick one section of this guide and apply it this week. If you want to see what automated scheduling looks like for a 25-bed CAH, [explore how SimpleScheduleAI works](/how-it-works) or [start a free 60-day pilot](/pilot).?
+## What Should You Do This Week?Pick one section of this guide and apply it this week. If you want to see what automated scheduling looks like for a 25-bed CAH, [explore how SimpleScheduleAI works](/how-it-works).?
 
 ## Frequently Asked Questions
 

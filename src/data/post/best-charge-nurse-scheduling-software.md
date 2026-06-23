@@ -486,7 +486,7 @@ The scatter above illustrates the core tradeoff for CAH charge nurse scheduling.
     SimpleScheduleAI enforces charge nurse designation automatically, distributes charge hours equitably across your qualified bench, and flags coverage gaps before the schedule publishes. No configuration. No manual auditing.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment

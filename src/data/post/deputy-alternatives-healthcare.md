@@ -153,7 +153,7 @@ The five alternatives are ranked by clinical appropriateness for hospital nurse 
 
 SimpleScheduleAI addresses every gap that causes hospitals to leave Deputy: credential enforcement in callout replacement, automated CMS documentation, FLSA healthcare overtime tracking, and a callout model built for acute care urgency rather than broadcast-and-wait.
 
-The managed service model means the hospital does not install software or maintain configuration. The nurse manager uploads a roster in Excel, the service delivers three schedule drafts, she selects one, and the callout module handles coverage gaps with a ranked shortlist filtered by credentials and overtime status. See [how it works](/how-it-works) for the full service model.
+The AI-native, human-verified model means the hospital does not install software or maintain configuration. The nurse manager uploads a roster in Excel, the AI builds three schedule drafts and our scheduling team checks each one before delivery, she selects one, and the AI callout module handles coverage gaps with a ranked shortlist filtered by credentials and overtime status. See [how it works](/how-it-works) for the full service model. Watch the AI build a schedule and generate a credential-filtered callout replacement shortlist in the [interactive simulator](/simulator).
 
 **Best for:** Critical Access Hospitals that deployed Deputy as a quick scheduling solution and are now experiencing the compliance and credential gaps that accumulate as the hospital's CMS obligations increase.
 
@@ -414,7 +414,7 @@ Start by calculating the full cost of Deputy for your hospital. Add the monthly 
 
 3. **Check whether any credential mismatches have occurred under Deputy.** Pull your callout history from the last 90 days and verify that every replacement nurse held the credentials required for the shift they filled. If you cannot verify this from Deputy's records, the credential check did not happen systematically.
 
-4. **Request a demo of SimpleScheduleAI and frame it as a compliance gap assessment.** Describe your current Deputy setup, your CMS compliance obligations, and your credential requirements. Ask specifically how SimpleScheduleAI handles each gap. Start the pilot at [simplescheduleai.com/pilot](/pilot).
+4. **Request a demo of SimpleScheduleAI and frame it as a compliance gap assessment.** Describe your current Deputy setup, your CMS compliance obligations, and your credential requirements. Ask specifically how SimpleScheduleAI handles each gap. See [how it works](/how-it-works).
 
 5. **If you want to stay on self-serve software, request an Aladtec trial.** Deploy Aladtec in parallel with Deputy for one scheduling cycle. Compare the time investment required in Aladtec to configure credential tracking and coverage rules against the time you are currently spending on manual compliance outside of Deputy.
 
@@ -423,7 +423,7 @@ Start by calculating the full cost of Deputy for your hospital. Add the monthly 
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">The hospital scheduling upgrade from Deputy</p>
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI provides credential-filtered callout replacement, automatic CMS §485.635 documentation, and FLSA healthcare overtime tracking as defaults. Built for Critical Access Hospitals that need clinical scheduling compliance, not a general workforce scheduling tool applied to a clinical environment.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot →</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

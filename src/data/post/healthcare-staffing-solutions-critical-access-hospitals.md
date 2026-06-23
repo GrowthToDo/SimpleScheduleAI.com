@@ -145,14 +145,14 @@ At a CAH, the failure modes are consistent:
     SimpleScheduleAI is a managed scheduling service purpose-built for critical access hospitals, no IT involvement, Texas compliance by default, operational in 3-5 days. Request a free assessment to see how it fits your facility.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment
   </a>
 </div>
 
-## What Should You Do This Week?Identify your biggest staffing gap this month: overtime, callout coverage, or unfilled shifts. If manual processes are driving the cost, [see how SimpleScheduleAI handles it](/how-it-works) or [start a free 60-day pilot](/pilot).?
+## What Should You Do This Week?Identify your biggest staffing gap this month: overtime, callout coverage, or unfilled shifts. If manual processes are driving the cost, [see how SimpleScheduleAI handles it](/how-it-works).?
 
 ## Frequently Asked Questions
 

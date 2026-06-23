@@ -184,7 +184,7 @@ The honest comparison is not feature by feature. It is model against model. M7 H
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">Pricing</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Not listed publicly; contact vendor</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Free 60-day pilot, then managed-service pricing</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Flat monthly managed-service pricing</td>
       </tr>
     </tbody>
   </table>
@@ -252,14 +252,14 @@ Write the answers down before any demo. A demo shows what the software can do. T
 
 4. **Track your nurse manager's weekly scheduling hours for one week.** Include schedule building, callout coverage, swap requests, and pre-survey CMS documentation. That total is the number any model has to beat to be worth the change.
 
-5. **Request a SimpleScheduleAI pilot if you are a Texas CAH.** A free 60-day managed pilot lets you compare the actual time burden against your baseline before committing. Start at [simplescheduleai.com/pilot](/pilot).
+5. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service lets you compare the actual time burden against your baseline before committing. Start at [how it works](/how-it-works).
 
 <div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Built for one Critical Access Hospital, not a 47-hospital system</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, maintains CMS documentation, and delivers callout replacement lists in under 2 minutes. No IT, no configuration, no enterprise rollout. A free 60-day pilot for Texas CAHs.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, maintains CMS documentation, and delivers callout replacement lists in under 2 minutes. No IT, no configuration, no enterprise rollout.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Apply for a Pilot Spot →</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

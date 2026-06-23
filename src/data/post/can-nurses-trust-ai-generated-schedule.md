@@ -158,7 +158,7 @@ What does not work is asking nurses to trust a system they cannot see. Showing t
 
 SimpleScheduleAI generates three schedule versions each cycle, scored across coverage, fairness, cost, and preference match. The nurse manager selects a version to review, adjusts any assignments before posting, and approves the final schedule. Every change is logged with a timestamp. The system does not post anything without manager approval. Nurses can see which rules shaped their assignments, and the manager can walk through the scoring for any specific shift if the question arises.
 
-SimpleScheduleAI generates three schedule versions each cycle, each scored across coverage, fairness, cost, and preference match. The manager sees those scores before selecting a version to review. Every assignment is visible and adjustable before the schedule is posted. Every change after posting is logged in the event record with a timestamp and the identity of who made it. [See how the full process works](/how-it-works).
+SimpleScheduleAI generates three schedule versions each cycle, each scored across coverage, fairness, cost, and preference match. The manager sees those scores before selecting a version to review. Every assignment is visible and adjustable before the schedule is posted. Every change after posting is logged in the event record with a timestamp and the identity of who made it. [See how the full process works](/how-it-works). Watch the AI build a schedule and surface the fairness and coverage scoring you would audit in the [interactive simulator](/simulator).
 
 The nurse manager approves every schedule. The system does not post anything autonomously. If a generated draft has an assignment that does not reflect unit reality, the manager changes it. The log records the change.
 
@@ -170,9 +170,9 @@ For the broader context on [critical access hospital scheduling](/critical-acces
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Free 60-day pilot. No IT setup. No commitment. We build the schedule, you approve it.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
   <div class="flex flex-col sm:flex-row gap-3 justify-center">
-    <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+    <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
     <a href="/contact" class="inline-block bg-white hover:bg-slate-50 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 font-semibold px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-600 transition-colors duration-200">Ask a Question</a>
   </div>
@@ -193,14 +193,14 @@ One honest limitation: AI-generated scheduling is not the right fit for hospital
 2. **Ask three nurses what they want to see before trusting an AI schedule.** Likely answers: who decides exceptions, how appeals work, and whether the manager actually reviews each cycle. Document the answers and operationalize them. Trust follows from process clarity, not from algorithm accuracy.
 3. **Make the human-override workflow visible on every published schedule.** A footer line on each cycle: "Reviewed and approved by [manager name] on [date]. To request a change, contact [process]." When nurses see the human signature, the algorithm becomes a tool the manager uses, not a decision made elsewhere.
 4. **Track the four trust indicators monthly.** Coverage gaps surfaced, overtime breaches caught before payroll, fairness distribution within target ranges, and override requests resolved within 48 hours. Trends matter more than any single cycle.
-5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot delivers AI-generated schedules with the auditability, fairness tracking, and human-override workflow already wired in. Start at [simplescheduleai.com/pilot](/pilot).
+5. **Request a SimpleScheduleAI assessment if you are a Texas Critical Access Hospital.** The managed service delivers AI-generated schedules with the auditability, fairness tracking, and human-override workflow already wired in. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Build trust before the first AI schedule lands</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI pairs constraint-aware AI with full audit trail and manager approval at every step. Free 60-day pilot for Texas CAHs.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI pairs constraint-aware AI with full audit trail and manager approval at every step. Flat monthly pricing for Texas CAHs.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
 </div>
 
 ## Frequently Asked Questions

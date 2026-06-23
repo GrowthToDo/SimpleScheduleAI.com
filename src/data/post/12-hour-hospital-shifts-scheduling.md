@@ -207,10 +207,11 @@ period? If yes, revise before posting.
 
 ## How is SimpleScheduleAI's 12-hour scheduling different?
 
-SimpleScheduleAI is a managed scheduling service. We build 12-hour shift schedules
-for critical access hospitals, applying coverage minimums, weekend distribution rules,
-fatigue constraints, and FLSA overtime logic simultaneously, generating three draft
-options (balanced, overtime-minimized, fair-rotation) for your review. The
+SimpleScheduleAI is an AI-native, human-verified scheduling service. Our AI builds
+your 12-hour shift schedules for critical access hospitals, applying coverage minimums,
+weekend distribution rules, fatigue constraints, and FLSA overtime logic simultaneously,
+generating three draft options (balanced, overtime-minimized, fair-rotation), and our
+scheduling team checks every draft before it reaches you for review. The
 [AI nurse scheduling](/ai-nurse-scheduling) engine handles the constraint arithmetic;
 the nurse manager keeps the judgment calls.
 
@@ -220,6 +221,7 @@ violates the minimum recovery window. You see these flags before approving, not 
 a nurse raises a grievance. The manager keeps final say on every draft, which is the
 distinction that decides whether nurses trust the output, covered in
 [can nurses trust an AI-generated schedule](/blog/can-nurses-trust-ai-generated-schedule).
+Watch the AI apply these fatigue and coverage constraints to a live 12-hour roster in the [interactive simulator](/simulator).
 
 One honest limitation: our system works best with a stable roster. If your team
 composition changes frequently, high turnover, frequent new hires mid-cycle, the
@@ -242,14 +244,14 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals runni
 2. **Pull your last 14-day schedule and check weekend distribution.** Count how many weekend shifts each full-time nurse worked. If the spread is wider than 2 to 1 (most-loaded vs least-loaded nurse), weekend fairness needs a hard rule in the next cycle.
 3. **Document your current FLSA model in writing.** Decide whether your facility runs on the standard 40-hour workweek or the 8-and-80 healthcare alternative. Confirm with your CFO and HR that the written employee agreements are on file if you use 8-and-80.
 4. **Set a consecutive-shift cap as a hard rule.** No nurse works more than 3 consecutive 12-hour shifts without a day off. Add this to your scheduling policy and apply it before posting, not after.
-5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot delivers a compliant 12-hour shift schedule each cycle with the fairness, fatigue, and overtime guards already applied. Start at [simplescheduleai.com/pilot](/pilot).
+5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service delivers a compliant 12-hour shift schedule each cycle with the fairness, fatigue, and overtime guards already applied. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Tired of rebuilding the 12-hour rotation every cycle?</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI applies coverage minimums, weekend distribution rules, fatigue constraints, and FLSA overtime logic before the schedule lands in your inbox. You review and approve. Free 60-day pilot for Texas CAHs.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI applies coverage minimums, weekend distribution rules, fatigue constraints, and FLSA overtime logic before the schedule lands in your inbox. You review and approve.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

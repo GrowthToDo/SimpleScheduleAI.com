@@ -229,7 +229,7 @@ Do not dismiss fairness complaints as complaints. A nurse who feels chronically 
     SimpleScheduleAI tracks weekend, holiday, and charge hour distribution automatically and weights future assignments toward nurses who are behind. You review the distribution summary before approving each cycle.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment

@@ -64,7 +64,7 @@ There is no documented Critical Access Hospital or rural reference customer on t
 
 SimpleScheduleAI is a managed nurse scheduling service for Critical Access Hospitals in Texas. The hospital uploads its staff roster as an Excel file. The SimpleScheduleAI team produces the schedule using AI, applies Texas overtime and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) rules, maintains the CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) audit trail, and returns callout replacement shortlists ranked by overtime risk and credentials. The nurse manager reviews and approves. There is nothing to configure and no platform for the hospital to operate.
 
-The design assumption is a 25-bed hospital with no IT department and a nurse manager who also covers clinical shifts. [CMS regulations for Critical Access Hospitals](https://www.ecfr.gov/current/title-42/section-485.635) require documented staffing policies and records, and Texas hospitals must apply [federal FLSA overtime rules](https://www.dol.gov/agencies/whd/overtime) including the 8-and-80 option common in healthcare. SimpleScheduleAI handles that documentation as part of the service. It is honest to say what this is not: it is not a self-serve platform a hospital configures, it is currently focused on Texas CAHs, and it is a new service in active pilot phase rather than an enterprise tool with a long reference list. For the operating model in detail, see [how it works](/how-it-works), or [apply for a pilot](/pilot). For a broader category framing, our guide on [managed service versus scheduling software](/blog/managed-service-vs-scheduling-software) covers where each model fits.
+The design assumption is a 25-bed hospital with no IT department and a nurse manager who also covers clinical shifts. [CMS regulations for Critical Access Hospitals](https://www.ecfr.gov/current/title-42/section-485.635) require documented staffing policies and records, and Texas hospitals must apply [federal FLSA overtime rules](https://www.dol.gov/agencies/whd/overtime) including the 8-and-80 option common in healthcare. SimpleScheduleAI handles that documentation as part of the service. It is honest to say what this is not: it is not a self-serve platform a hospital configures, it is currently focused on Texas CAHs, and it is a new service in active pilot phase rather than an enterprise tool with a long reference list. For the operating model in detail, see [how it works](/how-it-works). For a broader category framing, our guide on [managed service versus scheduling software](/blog/managed-service-vs-scheduling-software) covers where each model fits.
 
 ## What Is the Core Difference Between These Two Models?
 
@@ -223,7 +223,7 @@ Write the answers down before any demo. A demo shows what the software can do. T
 1. Write down who at your hospital would own a scheduling platform day to day, by name and role. If that line is blank, a self-operated AI tool is the wrong starting point and a managed service is the better fit.
 2. Pull your current weekly scheduling hours and your nurse manager's clinical shift count. This number, not feature lists, decides whether operating a platform is realistic at your scale.
 3. If you are evaluating In-House Health, ask the vendor directly for any Critical Access Hospital or rural reference customers and how it handles Texas FLSA overtime, since neither is documented on the product page.
-4. If you run a 25-bed Texas CAH with no IT department, request a free 60-day SimpleScheduleAI pilot and have it build one real schedule against your roster so you can compare the output, not the sales pitch.
+4. If you run a 25-bed Texas CAH with no IT department, ask SimpleScheduleAI to build one real schedule against your roster so you can compare the output, not the sales pitch.
 5. Compare the two on the operating model: ask each vendor, in writing, who maintains configuration and CMS §485.635 documentation as your staff changes. The answer separates a platform you run from a service that runs for you.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
@@ -231,13 +231,13 @@ Write the answers down before any demo. A demo shows what the software can do. T
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-    Free 60-day pilot. No IT setup. No platform to operate. We build the schedule, you approve it.
+    Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
   >
-    Apply for a Pilot Spot
+    See how it works
   </a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

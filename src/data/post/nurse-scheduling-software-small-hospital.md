@@ -179,9 +179,9 @@ The core requirements are simpler than enterprise software suggests:
 
 ## How SimpleScheduleAI Is Built for CAH-Scale Scheduling
 
-SimpleScheduleAI is a managed scheduling service designed specifically for Texas Critical Access Hospitals with 25 or fewer beds. The starting point was the 20-nurse CAH, not a scaled-down version of a large-system platform.
+SimpleScheduleAI is a managed scheduling service designed specifically for Texas Critical Access Hospitals with 25 or fewer beds: the AI builds the schedule, our scheduling team checks it, and the nurse manager approves it. The starting point was the 20-nurse CAH, not a scaled-down version of a large-system platform.
 
-Setup starts with an Excel upload of the existing nurse roster. No IT integration, no EHR connection, no custom configuration project. The service is operational in 3 to 5 business days. Every schedule cycle, the nurse manager receives three [AI-drafted schedule options](/ai-nurse-scheduling), reviews and approves the one that fits, and publishes. When a nurse calls out, the system surfaces a ranked replacement shortlist filtered by overtime status and certification. For the full build-and-approve flow, see [how it works](/how-it-works).
+Setup starts with an Excel upload of the existing nurse roster. No IT integration, no EHR connection, no custom configuration project. The service is operational in 3 to 5 business days. Every schedule cycle, the nurse manager receives three [AI-drafted schedule options](/ai-nurse-scheduling), reviews and approves the one that fits, and publishes. When a nurse calls out, the system surfaces a ranked replacement shortlist filtered by overtime status and certification. For the full build-and-approve flow, see [how it works](/how-it-works). See the AI build a CAH-scale schedule and track overtime live in the [interactive simulator](/simulator).
 
 Texas FLSA overtime thresholds are tracked automatically. Approaching-threshold alerts flag before a schedule is posted, not after the hours are worked. The audit trail required for [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance documentation is maintained automatically.
 
@@ -200,12 +200,12 @@ The limitations are real and worth stating: SimpleScheduleAI is not built for ho
 2. Ask every vendor on your shortlist one direct question: does your pricing and support assume a large workforce, and is there a minimum organization size? If the honest answer is yes, the tool was not built for a 20-bed hospital.
 3. Ask what callout coverage looks like with no float pool. If the answer is an agency integration or a float-pool dashboard, it does not fit a CAH.
 4. Estimate the hours your nurse manager spends on the schedule each week and what they cost. The [ROI calculator](/roi) turns that into a dollar figure you can weigh against any tool.
-5. If building the schedule and chasing callouts is the real drain, [book a call](https://cal.com/gautham-8bdvdx/30min) or [apply for a pilot](/pilot) and have a CAH-scale schedule built against your own roster.
+5. If building the schedule and chasing callouts is the real drain, [book a call](https://cal.com/gautham-8bdvdx/30min) or [see how it works](/how-it-works) and have a CAH-scale schedule built against your own roster.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Built for 20-bed hospitals, not scaled down from 500-bed systems.</p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI onboards in 3-5 days via Excel upload. No IT team needed. Flat monthly pricing for Texas Critical Access Hospitals, no per-nurse fees.</p>
-  <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

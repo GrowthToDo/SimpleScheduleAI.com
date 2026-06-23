@@ -217,11 +217,11 @@ Best for: Hospitals (50-200 beds) with an IT team available to configure and mai
 
 ## SimpleScheduleAI
 
-SimpleScheduleAI is a managed scheduling service built specifically for critical access hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the first schedule is delivered within 48 hours, and ongoing configuration maintenance is handled by the service team.
+SimpleScheduleAI is a managed scheduling service built specifically for critical access hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it and delivers it within 48 hours, and ongoing configuration maintenance is handled by the service team.
 
 FLSA overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults. The nurse manager reviews and approves schedules. Weekly scheduling time drops to 1-2 hours.
 
-For a CAH coming off UKG, a managed service is typically the fastest path to operational simplicity. There is no implementation project, no configuration learning curve, and no ongoing IT maintenance burden.
+For a CAH coming off UKG, a managed service is typically the fastest path to operational simplicity. There is no implementation project, no configuration learning curve, and no ongoing IT maintenance burden. Watch the compliance checks tick off as the AI builds a schedule in the [interactive simulator](/simulator).
 
 [See how SimpleScheduleAI works for critical access hospitals](/how-it-works)
 
@@ -233,7 +233,7 @@ For a side-by-side comparison of the practical alternatives, see our [UKG altern
     SimpleScheduleAI delivers your first schedule within 48 hours of your staff roster upload. No IT team, no implementation project, no configuration burden. Schedule a free assessment to see what it looks like for your hospital.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment
@@ -253,14 +253,14 @@ For a side-by-side comparison of the practical alternatives, see our [UKG altern
 2. **Find the UKG contract termination notice clause.** Note the auto-renewal date and the notice deadline. Most administrators discover the notice deadline is 60 to 90 days earlier than the contract end date, and missing it auto-renews for another full term.
 3. **Audit which UKG modules you are actually using and which you are paying for.** Identify the gap between paid features and used features. Most CAHs on UKG use 20 to 30 percent of the platform capacity. The other 70 percent is paid complexity with no operational return.
 4. **Score three replacement candidates by operational fit.** Setup time in days not weeks. Texas overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
-5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot lets you run the actual scheduling workflow against your roster before submitting UKG notice. Start at [simplescheduleai.com/pilot](/pilot).
+5. **Ask SimpleScheduleAI to build a schedule if you are a Texas Critical Access Hospital.** Run the actual scheduling workflow against your roster before submitting UKG notice. Start at [simplescheduleai.com/how-it-works](/how-it-works).
 
 <div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Right-size your scheduling platform to a 25-bed reality</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI is built for the operational scale UKG ignores: 25 beds, no IT department, nurse manager also on clinical shifts. Free 60-day pilot for Texas CAHs.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI is built for the operational scale UKG ignores: 25 beds, no IT department, nurse manager also on clinical shifts. Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

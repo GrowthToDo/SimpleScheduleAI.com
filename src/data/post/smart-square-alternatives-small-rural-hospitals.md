@@ -159,9 +159,9 @@ The six strongest Smart Square alternatives for a Critical Access Hospital are S
 
 <img src="/images/blog/smart-square-alternatives-small-rural-hospitals/SimpleScheduleAI.webp" alt="SimpleScheduleAI managed nurse scheduling service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public Capterra or G2 reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Where Smart Square is a self-serve enterprise platform configured and maintained by labor-management staff, SimpleScheduleAI requires no configuration work from the nurse manager: a scheduling specialist handles setup from an Excel roster upload, builds draft schedules each cycle, and maintains the system as the roster changes.
+SimpleScheduleAI is a new service in active pilot phase, without public Capterra or G2 reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Where Smart Square is a self-serve enterprise platform configured and maintained by labor-management staff, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
 
-The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds. The [AI nurse scheduling](/ai-nurse-scheduling) engine produces three draft options each cycle: balanced, fairness-optimized, and cost-optimized.
+The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds. The [AI nurse scheduling](/ai-nurse-scheduling) engine produces three draft options each cycle: balanced, fairness-optimized, and cost-optimized. Watch the AI fill a weekly grid and rank callout replacements in the [live simulator](/simulator).
 
 **Best for:** Critical Access Hospitals that hit Smart Square, found it sized for health systems rather than a single 25-bed facility, and want the scheduling handled rather than a more powerful tool to run themselves.
 
@@ -179,7 +179,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 - No staff-facing mobile app; nurses do not view schedules or submit shift trades directly through SimpleScheduleAI. If nurse-facing mobile self-scheduling is a priority, evaluate a self-serve platform or pair SimpleScheduleAI with a separate staff communication tool
 - Not designed for multi-facility health systems or complex physician scheduling beyond nursing; this is the opposite end of the scale from Smart Square by design
 
-**Verdict:** The strongest alternative for a Critical Access Hospital that evaluated Smart Square and concluded it was built for health-system scale rather than a single 25-bed facility. SimpleScheduleAI removes the scheduling work entirely instead of providing a more configurable tool. [See how it works](/how-it-works) or explore the [pilot program](/pilot) for CAHs that want to test before committing.
+**Verdict:** The strongest alternative for a Critical Access Hospital that evaluated Smart Square and concluded it was built for health-system scale rather than a single 25-bed facility. SimpleScheduleAI removes the scheduling work entirely instead of providing a more configurable tool. [See how it works](/how-it-works) for CAHs that want to test before committing.
 
 **Ratings:** New service; in active pilot phase. No public Capterra or G2 reviews yet.
 
@@ -512,7 +512,7 @@ For a nurse manager at a 25-bed CAH who also takes clinical shifts, an enterpris
 
 3. **Calculate your current scheduling and CMS survey prep time.** Track how many hours per cycle the nurse manager spends building the schedule, chasing callout coverage, and assembling staffing documentation. If no one has spare capacity for that work, a self-serve platform of any size will not fix it.
 
-4. **Request a demo of SimpleScheduleAI and describe your facility honestly.** Explain your bed count, your nursing units, your callout volume, and your CMS survey cycle. Ask how a managed service would handle the same scenarios without adding work to the nurse manager. [See how it works](/how-it-works), start a [pilot program](/pilot), or [contact us](/contact) directly.
+4. **Request a demo of SimpleScheduleAI and describe your facility honestly.** Explain your bed count, your nursing units, your callout volume, and your CMS survey cycle. Ask how a managed service would handle the same scenarios without adding work to the nurse manager. [See how it works](/how-it-works) or [contact us](/contact) directly.
 
 5. **If you want self-serve software at the right scale, evaluate ShiftWizard or NurseGrid Manager.** Both operate at a smaller scale than an enterprise platform and focus on hospital nursing. Confirm CMS §485.635 and FLSA 8-and-80 handling directly with each vendor before deciding.
 
@@ -521,7 +521,7 @@ For a nurse manager at a 25-bed CAH who also takes clinical shifts, an enterpris
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Smart Square sized for a health system? Built for a single Critical Access Hospital.</p>
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI is a managed scheduling service for one 25-bed Critical Access Hospital. No labor-management analyst, no configuration burden, automatic CMS §485.635 documentation, and callout shortlists ranked by overtime risk. Built for CAH nurse managers who also take clinical shifts.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot →</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

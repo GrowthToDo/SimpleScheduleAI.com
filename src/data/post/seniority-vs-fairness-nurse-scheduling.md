@@ -155,13 +155,13 @@ SimpleScheduleAI is not a fit for hospitals that need EHR integration or complex
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-    Free 60-day pilot. No IT setup. No commitment. We build the schedule, you approve it.
+    Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
   >
-    Apply for a Pilot Spot →
+    See how it works →
   </a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

@@ -77,7 +77,7 @@ SimpleScheduleAI operates as a managed scheduling service for critical access ho
 
 When a nurse is unavailable, the system instantly produces a replacement call list from available, qualified staff, factoring in overtime exposure and fairness distribution. The nurse manager approves replacements; they don't have to run the phone tree.
 
-A free nurse schedule generator tool is available at [/tools/nurse-schedule-generator](/tools/nurse-schedule-generator) for basic roster creation. For hospitals needing compliance, callout coverage, and managed support, the pilot program starts with a 60-day free engagement.
+A free nurse schedule generator tool is available at [/tools/nurse-schedule-generator](/tools/nurse-schedule-generator) for basic roster creation. For hospitals needing compliance, callout coverage, and managed support, SimpleScheduleAI runs the schedule as a managed service.
 
 One honest note: SimpleScheduleAI is built specifically for critical access hospitals (25 beds or fewer). If your hospital has 50+ beds with a dedicated scheduling staff, the managed service model may not fit your workflow as well.
 

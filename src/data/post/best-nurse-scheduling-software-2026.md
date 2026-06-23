@@ -214,7 +214,7 @@ The eight platforms worth evaluating for nurse scheduling in 2026 are SimpleSche
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It operates as a managed scheduling service rather than self-serve software: a scheduling specialist builds the weekly schedule using your staff roster, compliance rules, and fairness preferences. The nurse manager reviews and approves. When a nurse calls out, the team surfaces a ranked shortlist of qualified, available, non-overtime staff within minutes.
+SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It operates as a managed scheduling service rather than self-serve software: the AI builds the weekly schedule using your staff roster, compliance rules, and fairness preferences, and a scheduling specialist checks it. The nurse manager reviews and approves. When a nurse calls out, the team surfaces a ranked shortlist of qualified, available, non-overtime staff within minutes.
 
 The model is built for small hospitals in Texas, with Texas overtime compliance, CMS §485.635 audit trail requirements, and charge nurse coverage rules built into the scheduling logic.
 
@@ -231,7 +231,7 @@ The model is built for small hospitals in Texas, with Texas overtime compliance,
 - Not a self-serve tool. If your hospital wants to own and manage scheduling internally, this is not the right fit.
 - Designed for small facilities under 50 beds. Not built for larger hospitals or multi-site systems.
 
-**Verdict:** The right choice for a small hospital where the nurse manager cannot realistically own a scheduling system on top of clinical duties. If you want to manage scheduling yourself or have more than 50 beds, look at Aladtec or SmartLinx instead. [See how SimpleScheduleAI works](/how-it-works) or [apply for a pilot](/pilot).
+**Verdict:** The right choice for a small hospital where the nurse manager cannot realistically own a scheduling system on top of clinical duties. If you want to manage scheduling yourself or have more than 50 beds, look at Aladtec or SmartLinx instead. [See how SimpleScheduleAI works](/how-it-works).
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -589,11 +589,11 @@ SimpleScheduleAI is a managed scheduling service for Critical Access Hospitals i
 
 SimpleScheduleAI is not competing with UKG or QGenda. It is built for small Critical Access Hospitals in Texas where the managed service model and state compliance requirements are most developed.
 
-The product is a managed scheduling service, not self-serve software. You send us your roster via Excel. We build the weekly schedule using fairness, overtime, and compliance rules. You approve. When a nurse calls out, you get a ranked shortlist of qualified, available, non-overtime staff within minutes instead of two hours of phone calls. If you're currently building schedules in a spreadsheet, our [nurse scheduling software vs. Excel breakdown](/blog/nurse-scheduling-software-vs-excel) walks through where Excel stops working at the CAH scale.
+The product is a managed scheduling service, not self-serve software. You send us your roster via Excel. Our AI builds the weekly schedule using fairness, overtime, and compliance rules, and our scheduling team checks it. You approve. When a nurse calls out, you get a ranked shortlist of qualified, available, non-overtime staff within minutes instead of two hours of phone calls. If you're currently building schedules in a spreadsheet, our [nurse scheduling software vs. Excel breakdown](/blog/nurse-scheduling-software-vs-excel) walks through where Excel stops working at the CAH scale.
 
 It is not the right fit for every hospital. If your facility has 75+ beds, a dedicated scheduling administrator, or needs deep EHR integration, one of the mid-market platforms will serve you better. If you are a small CAH in Texas where the nurse manager is also on the floor half the week, it is worth a conversation.
 
-The pilot is free for 60 days. No IT setup. No commitment.
+Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.
 
 If you run a Critical Access Hospital specifically, we have a dedicated guide that goes deeper on CAH compliance, Texas staffing rules, and callout coverage: [Critical Access Hospital Scheduling Guide](/critical-access-hospital-scheduling). For a complete feature-by-feature evaluation framework across all platforms, see our [nurse scheduling software hub](/nurse-scheduling-software).
 
@@ -656,8 +656,8 @@ If you run a Critical Access Hospital specifically, we have a dedicated guide th
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Free 60-day pilot. No IT setup. No commitment. We build the schedule, you approve it.</p>
-  <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

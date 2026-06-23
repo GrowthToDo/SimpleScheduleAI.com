@@ -177,7 +177,7 @@ The criteria for a 25-bed hospital are not a compressed version of what a 200-be
 
 <img src="/images/blog/best-scheduling-software-25-bed-hospital/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling dashboard for 25-bed critical access hospital" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service designed from the start for 25-bed Critical Access Hospitals. The managed service model means a nurse manager uploads the roster via Excel, defines preferences and constraints, and receives three complete schedule drafts within 48 hours. She selects one, approves it, and the schedule is published. The entire administrative cycle takes under two hours per month.
+SimpleScheduleAI is a managed scheduling service designed from the start for 25-bed Critical Access Hospitals. The managed service model means a nurse manager uploads the roster via Excel and defines preferences and constraints; the AI builds three complete schedule drafts, our team checks them, and they arrive within 48 hours. She selects one, approves it, and the schedule is published. The entire administrative cycle takes under two hours per month.
 
 **Best for:** Critical Access Hospitals at or below 25 beds with a nurse manager who also takes clinical shifts and cannot afford 8+ hours per week on scheduling overhead.
 
@@ -435,7 +435,7 @@ The decision comes down to two operational questions: does the nurse manager als
 
 Most scheduling software solves for roster size. SimpleScheduleAI solves for the specific operating reality of a 25-bed Critical Access Hospital (CAH): a dual-role nurse manager, a thin callout pool, and a federal compliance requirement that does not scale down with the hospital's size. The full delivery workflow is documented on [how it works](/how-it-works).
 
-The managed service model is the structural differentiator. Rather than configuring software and maintaining it, the nurse manager at a 25-bed CAH submits a roster and preferences, receives three draft schedules, selects one, and publishes it. The time cost per scheduling cycle drops from 8-12 hours to under two hours.
+The managed service model is the structural differentiator. Rather than configuring software and maintaining it, the nurse manager at a 25-bed CAH submits a roster and preferences; the AI builds three draft schedules and our team checks them, then she selects one and publishes it. The time cost per scheduling cycle drops from 8-12 hours to under two hours.
 
 The callout module generates a replacement shortlist in under two minutes, factoring in current-week hours, FLSA overtime threshold proximity, and shift competency requirements. A nurse manager can identify, call, and confirm a replacement before she leaves the nurses station.
 
@@ -451,7 +451,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 
 
 2. **Identify your highest-cost scheduling problem.** Is it schedule construction time, callout coverage gaps, CMS documentation overhead, or overtime accumulation? The answer determines which tool solves the right problem.
 
-3. **Request a SimpleScheduleAI pilot.** Describe your current scheduling workflow and ask specifically how the three-draft model, replacement list, and CMS documentation features work for a roster your size. A free 60-day managed pilot lets you compare actual time burden against your week-one baseline. Use the [ROI calculator](/roi) to model the dollar value first. Start at [simplescheduleai.com/pilot](/pilot).
+3. **See how SimpleScheduleAI works for your facility.** Describe your current scheduling workflow and ask specifically how the three-draft model, replacement list, and CMS documentation features work for a roster your size. The managed service lets you compare actual time burden against your week-one baseline. Use the [ROI calculator](/roi) to model the dollar value first. Start at [how it works](/how-it-works).
 
 4. **If you want to self-evaluate Aladtec, request a trial.** Aladtec offers a trial period. Configure one week of your actual roster and measure how long initial setup takes. That time cost is the real onboarding cost, not the vendor's stated implementation timeline.
 
@@ -460,9 +460,9 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 
 <div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Built specifically for 25-bed Critical Access Hospitals</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI reduces nurse scheduling from 8-12 hours per week to under 2 hours. Three draft options delivered in 48 hours. Callout shortlists in under 2 minutes. CMS documentation maintained automatically. Free 60-day pilot for Texas CAHs.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI reduces nurse scheduling from 8-12 hours per week to under 2 hours. Three draft options delivered in 48 hours. Callout shortlists in under 2 minutes. CMS documentation maintained automatically.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

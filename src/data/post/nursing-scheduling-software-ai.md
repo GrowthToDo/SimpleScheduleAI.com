@@ -146,7 +146,7 @@ SimpleScheduleAI uses AI to generate three draft schedule options per cycle (bal
 
 Critically, SimpleScheduleAI is a managed service, not a self-serve AI tool. A scheduling specialist handles the initial configuration and ongoing calibration; the nurse manager does not interact with the AI directly. The output is three human-readable draft schedules delivered for review, not an AI interface the manager has to learn.
 
-When a nurse calls out, the AI ranking system produces a replacement list within seconds. The nurse manager reviews the top-ranked candidates and makes the contact. The decision remains human; the research is automated.
+When a nurse calls out, the AI ranking system produces a replacement list within seconds. The nurse manager reviews the top-ranked candidates and makes the contact. The decision remains human; the research is automated. See the AI build the three drafts and rank a callout shortlist live in the [interactive simulator](/simulator).
 
 One honest limitation: the AI optimization improves over time as the system accumulates data about your facility's patterns, preferences, and exceptions. The first few scheduling cycles involve more human calibration than later cycles. We are transparent about this with pilot hospitals.
 

@@ -242,7 +242,7 @@ Handling callouts well is reactive management. Reducing callout frequency is pro
     SimpleScheduleAI ranks every replacement candidate by credential match and overtime risk automatically. The nurse manager calls from the ranked list. No calculation, no spreadsheet, no 2 AM OT surprise.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment

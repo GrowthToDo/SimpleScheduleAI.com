@@ -246,20 +246,23 @@ The $26,000 shadow salary does not disappear when you add software to the proces
 
 ## How Does SimpleScheduleAI Address These Friction Points?
 
-SimpleScheduleAI is a managed scheduling service built for Critical Access Hospitals.
-You keep your Excel roster; we handle the scheduling logic. The system generates
-three draft schedule options (balanced, overtime-minimized, and fair-rotation),
-builds a replacement call list when a nurse is unavailable, and maintains a full
-audit trail for every schedule change - so you have documentation if a surveyor asks.
+SimpleScheduleAI is an AI-native, human-verified scheduling service built for Critical
+Access Hospitals. You keep your Excel roster; our AI handles the scheduling logic. The
+AI generates three draft schedule options (balanced, overtime-minimized, and
+fair-rotation), builds a replacement call list when a nurse is unavailable, and maintains
+a full audit trail for every schedule change - so you have documentation if a surveyor
+asks.
 
-It is not a self-serve software tool. A scheduling specialist handles setup and
-ongoing support, which means there is no learning curve for your team.
+It is not a self-serve software tool. A scheduling specialist checks every draft and
+handles setup and ongoing support, which means there is no learning curve for your team.
 
 One honest limitation: if your facility has highly unusual union rules or a staffing
 mix we have not calibrated before, the initial setup period may take longer. We
 surface this during onboarding.
 
 [See how the scheduling process works →](/how-it-works)
+
+Watch the AI build a schedule and generate a callout replacement shortlist in the [interactive simulator](/simulator).
 
 <div class="not-prose my-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
   <div class="rounded-lg bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 p-4 text-center">
@@ -322,14 +325,14 @@ One honest limitation: a managed scheduling service is not the right fit for fac
 2. **Calculate your shadow administrative salary.** Multiply your weekly scheduling hours by your loaded hourly rate, then by 50 weeks. For most CAHs this lands at $22,000 to $30,000 per year. Use the [SimpleScheduleAI ROI calculator](/roi) to model what reducing it returns in dollars and clinical hours.
 3. **Audit which scheduling tasks actually need clinical judgment.** Schedule construction, version control, overtime arithmetic, and callout documentation are work products. Clinical judgment is who covers a complex patient assignment or who is precepting this week. Most of this time is the former, not the latter.
 4. **Identify your two highest-impact friction points.** From the five we outlined (data entry, callout coordination, PRN reconciliation, conflict resolution, compliance documentation), pick the two that consume the most weekly time. Those are the highest-ROI targets for the next 90 days.
-5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot removes the friction points without adding software for your team to learn. Start at [simplescheduleai.com/pilot](/pilot).
+5. **Request a SimpleScheduleAI assessment if you are a Texas Critical Access Hospital.** The managed service removes the friction points without adding software for your team to learn. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Recover the $26,000 hidden in your schedule</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI removes the scheduling work from the wrong person, returning 8 to 10 hours per week to clinical leadership. Free 60-day pilot for Texas CAHs.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI removes the scheduling work from the wrong person, returning 8 to 10 hours per week to clinical leadership. Flat monthly pricing for Texas CAHs.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
@@ -373,8 +376,8 @@ hour manual coordination process with a prioritized list you can act on in minut
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Ready to reduce overtime and handle callouts without the Sunday evening scramble?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Free 60-day pilot for Critical Access Hospitals in Texas. No IT setup. No commitment.</p>
-  <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Free 60-Day Pilot →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
 </div>
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._

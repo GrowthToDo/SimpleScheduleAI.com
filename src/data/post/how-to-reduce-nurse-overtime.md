@@ -220,7 +220,7 @@ SimpleScheduleAI handles steps 1-6 above as part of the managed service: callout
     SimpleScheduleAI ranks every callout replacement by overtime risk and credentials automatically. The nurse manager calls from the ranked list. No calculation. No defaults. First schedule within 48 hours.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Overtime Analysis

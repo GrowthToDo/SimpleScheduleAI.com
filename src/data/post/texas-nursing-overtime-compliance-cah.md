@@ -225,7 +225,7 @@ survey or TWC audit requires documentation.
 We build Texas overtime rules into the [AI nurse scheduling](/ai-nurse-scheduling) logic, flagging nurses who are
 approaching the FLSA overtime threshold before shifts are assigned, not after the
 payroll run. Credential expiration dates are tracked against each nurse's profile, and
-we alert you before a certification lapses.
+we alert you before a certification lapses. See the AI build a compliant schedule and flag overtime risk live in the [interactive simulator](/simulator).
 
 One honest limitation: we document what happens within the scheduling system. If
 callout events are handled outside the system, managed by text or verbal

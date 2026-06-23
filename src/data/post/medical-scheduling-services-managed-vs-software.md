@@ -165,7 +165,7 @@ Neither is the universally correct answer. The right choice depends on how your 
     SimpleScheduleAI goes live in 3-5 days from your Excel roster. FLSA, Texas Labor Code, and CMS documentation are built-in defaults. Request a free assessment to see how it compares to your current approach.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment
@@ -174,7 +174,7 @@ Neither is the universally correct answer. The right choice depends on how your 
 
 For more context on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides.
 
-## What Should You Do This Week?Calculate how many hours your nurse manager spends on scheduling each week. If the number is above 5, a managed service may save more than software alone. [See how SimpleScheduleAI works](/how-it-works) or [start a free 60-day pilot](/pilot).?
+## What Should You Do This Week?Calculate how many hours your nurse manager spends on scheduling each week. If the number is above 5, a managed service may save more than software alone. [See how SimpleScheduleAI works](/how-it-works).?
 
 ## Frequently Asked Questions
 

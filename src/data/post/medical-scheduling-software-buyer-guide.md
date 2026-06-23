@@ -158,14 +158,14 @@ Several patterns reliably indicate that a medical scheduling software vendor is 
     SimpleScheduleAI is a managed scheduling service built specifically for critical access hospitals. It goes live in 3-5 days with no IT involvement. Request a free assessment to see how it compares to self-serve platforms for your situation.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment
   </a>
 </div>
 
-## What Should You Do This Week?Before you request any vendor demo, write down your three non-negotiable requirements. If implementation simplicity and no-IT setup are on that list, [see how SimpleScheduleAI works](/how-it-works) or [start a free 60-day pilot](/pilot).?
+## What Should You Do This Week?Before you request any vendor demo, write down your three non-negotiable requirements. If implementation simplicity and no-IT setup are on that list, [see how SimpleScheduleAI works](/how-it-works).?
 
 ## Frequently Asked Questions
 

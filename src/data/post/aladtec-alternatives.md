@@ -160,7 +160,7 @@ The six strongest Aladtec alternatives for a Critical Access Hospital are Simple
 
 <img src="/images/blog/aladtec-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: a scheduling specialist handles setup from an Excel roster upload, builds draft schedules each cycle, and maintains the system as the roster changes.
+SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
 
 The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds.
 
@@ -180,7 +180,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 - No staff-facing mobile app; nurses do not view schedules or submit shift trades directly through SimpleScheduleAI. If nurse-facing mobile self-scheduling is a priority, evaluate a self-serve platform or pair SimpleScheduleAI with a separate staff communication tool
 - Not designed for hospitals with complex multi-department or physician scheduling needs beyond nursing
 
-**Verdict:** The strongest alternative for a CAH nurse manager who leaves Aladtec primarily because the configuration and compliance burden has exceeded what one person can manage while also taking clinical shifts. SimpleScheduleAI eliminates those specific pain points by design. [See how it works](/how-it-works) or explore the [pilot program](/pilot) for CAHs that want to test before committing.
+**Verdict:** The strongest alternative for a CAH nurse manager who leaves Aladtec primarily because the configuration and compliance burden has exceeded what one person can manage while also taking clinical shifts. SimpleScheduleAI eliminates those specific pain points by design. [See how it works](/how-it-works) for CAHs that want to test before committing.
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -478,7 +478,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the overhead mode
 
 3. **Calculate your current CMS survey prep time.** How long does it take to assemble staffing documentation from Aladtec before a survey? If the answer is more than two hours, that time cost is a quantifiable reason to consider an alternative with automated documentation.
 
-4. **Request a demo of SimpleScheduleAI and explain your current Aladtec setup.** Describe what you have configured in Aladtec, what is not working, and what your CMS survey cycle looks like. Ask how SimpleScheduleAI would handle the same scenarios. [See how it works](/how-it-works), start a [pilot program](/pilot), or [contact us](/contact) directly.
+4. **Request a demo of SimpleScheduleAI and explain your current Aladtec setup.** Describe what you have configured in Aladtec, what is not working, and what your CMS survey cycle looks like. Ask how SimpleScheduleAI would handle the same scenarios. [See how it works](/how-it-works) or [contact us](/contact) directly.
 
 5. **If you want to stay on self-serve software, request a SmartLinx evaluation.** SmartLinx requires more implementation investment than Aladtec, but ongoing maintenance is lower once configured because compliance logic is more automated. Alternatively, TCP Scheduling is worth evaluating if you want to stay within the TCP vendor ecosystem and have IT capacity for a longer implementation.
 
@@ -487,7 +487,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the overhead mode
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Leaving Aladtec? Built for what Aladtec doesn't cover.</p>
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI eliminates the configuration burden, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot afford to maintain a scheduling system while also taking clinical shifts.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot →</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

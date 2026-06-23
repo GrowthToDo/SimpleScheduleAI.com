@@ -185,24 +185,24 @@ A per-diem bench only works if it is actively maintained, not assembled in a cri
 
 ## How Does SimpleScheduleAI Help with After-Hours Callouts?
 
-SimpleScheduleAI is a managed nurse scheduling service for Critical Access Hospitals in Texas. It removes the 2 AM phone tree by maintaining the ranked callout list and the per-diem bench as part of the service, so when a nurse calls out, the on-call charge nurse receives a replacement shortlist already sorted by overtime exposure, credential match, and rotation fairness, and makes calls instead of building the list. The callout record is captured in the same step for [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) review. The pre-ranked shortlist pattern is the same one we cover in our broader piece on [AI nurse scheduling vs. traditional methods](/blog/ai-nurse-scheduling-vs-traditional).
+SimpleScheduleAI is an AI-native, human-verified nurse scheduling service for Critical Access Hospitals in Texas. It removes the 2 AM phone tree because the AI ranks the callout list and our scheduling team maintains the per-diem bench, so when a nurse calls out, the on-call charge nurse receives a replacement shortlist the AI has already sorted by overtime exposure, credential match, and rotation fairness, and makes calls instead of building the list. The callout record is captured in the same step for [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) review. The pre-ranked shortlist pattern is the same one we cover in our broader piece on [AI nurse scheduling vs. traditional methods](/blog/ai-nurse-scheduling-vs-traditional).
 
 Honest limitation: the service prepares and ranks the list, but a human at the hospital still places the calls and confirms the replacement. SimpleScheduleAI does not auto-dial nurses or fill the shift without a person deciding. For a small hospital, that human confirmation step is intentional, because the on-call charge nurse knows context the data does not. What changes is that the thinking, ranking, and compliance logging are done before the phone rings, not at 2 AM.
 
-To see the underlying scheduling model, compare [nurse scheduling software](/nurse-scheduling-software) options against the managed approach, review how [AI nurse scheduling](/ai-nurse-scheduling) produces the ranked shortlist, read the operational requirements behind [critical access hospital scheduling](/critical-access-hospital-scheduling), and see [how the managed service works](/how-it-works) end to end.
+To see the underlying scheduling model, compare [nurse scheduling software](/nurse-scheduling-software) options against the managed approach, review how [AI nurse scheduling](/ai-nurse-scheduling) produces the ranked shortlist, read the operational requirements behind [critical access hospital scheduling](/critical-access-hospital-scheduling), and see [how the managed service works](/how-it-works) end to end. Watch the AI build a schedule and generate a callout replacement shortlist in the [interactive simulator](/simulator).
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-    Free 60-day pilot. No IT setup. We maintain the ranked callout list and per-diem bench so your on-call charge nurse stops building it at 2 AM.
+    Flat monthly pricing. No IT setup. We maintain the ranked callout list and per-diem bench so your on-call charge nurse stops building it at 2 AM.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
   >
-    Apply for a Pilot Spot
+    See how it works
   </a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
@@ -222,14 +222,14 @@ One honest limitation: a managed callout shortlist is not the right fit for hosp
 2. **Document your callout-coverage escalation order in writing.** Charge nurse → per-diem bench → cross-credentialed daytime staff → agency. Put it on one page, post it in the break room and in the charge nurse handoff binder. Verbal escalation orders fail at 3 AM.
 3. **Recruit and brief your per-diem bench this month.** Aim for 4 to 6 cross-credentialed nurses on a fixed weekly availability cadence. Confirm their certifications match your acute-coverage needs. A standing bench is the difference between paying agency premium and covering internally.
 4. **Audit your CMS §485.635 callout-documentation gaps.** Pull the last six months of callouts. For how many do you have a complete record of who was called, who declined or accepted, what time, and the credential match? Documentation gaps surface during CMS surveys, not when the callout happens.
-5. **Request a SimpleScheduleAI pilot if you are a Texas CAH.** A free 60-day managed pilot maintains the ranked call list, the per-diem bench, and the CMS-ready callout documentation so the on-call charge nurse makes calls instead of building the list at 2 AM. Start at [simplescheduleai.com/pilot](/pilot).
+5. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service maintains the ranked call list, the per-diem bench, and the CMS-ready callout documentation so the on-call charge nurse makes calls instead of building the list at 2 AM. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Stop building the call list at 2 AM</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI maintains your ranked callout shortlist, per-diem bench, and CMS-ready audit trail so coverage gets handled without the charge nurse working a phone list. Free 60-day pilot for Texas CAHs.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI maintains your ranked callout shortlist, per-diem bench, and CMS-ready audit trail so coverage gets handled without the charge nurse working a phone list.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
 </div>
 
 ## Frequently Asked Questions

@@ -139,7 +139,7 @@ This switch makes sense when the complaint is interface, scheduling workflow dep
 
 ## Scenario 2: Scheduling Work Done for You
 
-If the goal is structural burden reduction rather than a better tool, **SimpleScheduleAI** is the managed service alternative to TCP TimeClock+. It does not replace TCP with a different platform; it replaces the self-serve model entirely. A scheduling specialist handles configuration, roster maintenance, and weekly schedule generation; the nurse manager reviews drafts and approves.
+If the goal is structural burden reduction rather than a better tool, **SimpleScheduleAI** is the managed service alternative to TCP TimeClock+. It does not replace TCP with a different platform; it replaces the self-serve model entirely. The AI generates the weekly schedule; a scheduling specialist handles configuration and roster maintenance and checks the schedule, and the nurse manager reviews drafts and approves.
 
 The trade-off is the staff-facing experience: TCP TimeClock+ has a nurse-facing mobile app for clocking in, schedule viewing, and time-off requests. SimpleScheduleAI does not. The full SimpleScheduleAI profile, including limitations, is in the comparison section below.
 
@@ -283,7 +283,7 @@ See our full [Aladtec alternatives](/blog/aladtec-alternatives) post for a compl
 
 <img src="/images/blog/best-tcp-alternative-for-cah/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service, not a self-serve platform. A scheduling specialist handles configuration, roster maintenance, and weekly schedule generation. The nurse manager reviews drafts and approves. This is the only option in this list that does not require the nurse manager to operate scheduling software on an ongoing basis.
+SimpleScheduleAI is a managed scheduling service, not a self-serve platform. The AI generates the weekly schedule; a scheduling specialist handles configuration and roster maintenance and checks the schedule. The nurse manager reviews drafts and approves. This is the only option in this list that does not require the nurse manager to operate scheduling software on an ongoing basis.
 
 **Best for:** CAH nurse managers who want the scheduling work handled rather than a better tool to do the work themselves.
 
@@ -302,7 +302,7 @@ SimpleScheduleAI is a managed scheduling service, not a self-serve platform. A s
 
 **Verdict:** Right choice if scheduling labor is the primary burden. Wrong choice if nurses using an app to view schedules or submit availability is a priority. [See how the managed service works](/how-it-works).
 
-**Cost:** Starting pricing available at [simplescheduleai.com/pilot](/pilot). Pilot available for qualifying CAHs.
+**Cost:** Starting pricing available at [how it works](/how-it-works).
 
 ## What Are the Four Questions to Ask Any TCP Alternative?
 
@@ -324,7 +324,7 @@ Four questions separate the platforms that will actually improve a CAH nurse man
     SimpleScheduleAI goes live in 3-5 days from your staff roster. FLSA, Texas Labor Code, and CMS documentation are included by default. Request a free assessment to see how it compares to what you have now.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
     Request a Free Scheduling Assessment
@@ -370,14 +370,14 @@ Four questions separate the platforms that will actually improve a CAH nurse man
 2. **Request a full data export from your current TCP product.** Roster with credentials, 12 months of schedule history, callout records, overtime calculations, and any custom rule configurations. The export format requires cleaning regardless of which alternative you choose.
 3. **Score three alternatives against your specific TCP gap.** Setup time in days not weeks. Texas overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
 4. **Calculate total cost of ownership, not just license fee.** Subscription plus implementation labor plus ongoing maintenance labor plus the nurse manager's weekly scheduling hours at her loaded rate. Most TCP buyers underestimate the labor side. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison.
-5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot delivers a compliant schedule each cycle without configuration, IT setup, or TCP-style implementation overhead. Start at [simplescheduleai.com/pilot](/pilot).
+5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service delivers a compliant schedule each cycle without configuration, IT setup, or TCP-style implementation overhead. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Switching off TCP at CAH scale</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers the scheduling outputs TCP buyers needed without the configuration burden. Free 60-day pilot. No IT integration. No commitment.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers the scheduling outputs TCP buyers needed without the configuration burden. Flat monthly pricing. No IT integration. No commitment.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

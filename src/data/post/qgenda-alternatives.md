@@ -168,9 +168,9 @@ The four strongest QGenda alternatives for a Critical Access Hospital are Simple
 
 <img src="/images/blog/qgenda-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [healthcare staff scheduling](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: a specialist handles setup from an Excel roster upload (3-5 days), builds draft schedules each cycle, and maintains the system as the roster changes.
+SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [healthcare staff scheduling](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a specialist handles setup from an Excel roster upload (3-5 days), checks each draft, and maintains the system as the roster changes.
 
-Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime rules, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) documentation are part of the standard service rather than configuration the nurse manager has to maintain.
+Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime rules, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
 **Best for:** CAHs where the nurse manager is already stretched and cannot absorb another implementation project, or where the core issue is scheduling labor rather than just platform cost.
 
@@ -188,7 +188,7 @@ Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies
 - No staff-facing mobile app; if nurse self-service features are a priority, a hybrid approach with a separate communication tool is worth evaluating
 - Not designed for physician on-call scheduling, resident scheduling, or the multi-specialty workflows QGenda specializes in
 
-**Verdict:** The strongest alternative for a CAH where the nurse manager is the only person managing scheduling and cannot sustain a platform configuration burden alongside clinical duties. SimpleScheduleAI eliminates both the implementation and ongoing overhead that makes QGenda difficult to operate at small-hospital scale. [See how it works](/how-it-works) or explore the [pilot program](/pilot).
+**Verdict:** The strongest alternative for a CAH where the nurse manager is the only person managing scheduling and cannot sustain a platform configuration burden alongside clinical duties. SimpleScheduleAI eliminates both the implementation and ongoing overhead that makes QGenda difficult to operate at small-hospital scale. [See how it works](/how-it-works).
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -408,10 +408,10 @@ QGenda is worth keeping if:
     SimpleScheduleAI is built specifically for critical access hospitals. It goes live in 3-5 days with zero IT involvement. FLSA, Texas Labor Code, and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    Apply for a Pilot Spot →
+    See how it works →
   </a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

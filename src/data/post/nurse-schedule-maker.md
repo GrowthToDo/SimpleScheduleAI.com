@@ -74,7 +74,7 @@ For burnout prevention specifically, we track shift distribution patterns across
 
 One honest caveat: we can optimize distribution within your available staff pool. If your hospital is already running at critical vacancy levels, fair distribution of an insufficient staff pool is still insufficient coverage. Scheduling optimization works best as a retention tool before a staffing crisis, not as a substitute for hiring.
 
-[See how SimpleScheduleAI works for critical access hospitals →](/pilot)
+[See how SimpleScheduleAI works for critical access hospitals →](/how-it-works)
 
 ## Frequently Asked Questions
 

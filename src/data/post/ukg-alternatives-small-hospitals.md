@@ -161,7 +161,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format and the first schedule is delivered within 48 hours. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
+SimpleScheduleAI is a managed scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it, and it is delivered within 48 hours. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
 
 The nurse manager reviews and approves schedules and handles callout coverage using the automated ranked replacement list. Weekly scheduling time drops to 1-2 hours. No IT involvement. No implementation project. For a CAH coming off UKG, a managed service is typically the fastest path to operational simplicity.
 
@@ -181,7 +181,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 - No staff-facing mobile app; if nurse self-service shift pickup is a priority, a hybrid approach is worth evaluating
 - Not designed for the enterprise-scale workforce analytics that UKG provides
 
-**Verdict:** The most direct path from UKG to operational simplicity for a 25-bed CAH. Where UKG requires IT infrastructure and HRIS staff to function correctly, SimpleScheduleAI requires only a current roster file and manager review time. [See how it works](/how-it-works) or explore the [pilot program](/pilot).
+**Verdict:** The most direct path from UKG to operational simplicity for a 25-bed CAH. Where UKG requires IT infrastructure and HRIS staff to function correctly, SimpleScheduleAI requires only a current roster file and manager review time. [See how it works](/how-it-works).
 
 **Cost:** Pricing not listed publicly. Contact for a quote.
 
@@ -372,10 +372,10 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
     SimpleScheduleAI goes live in 48 hours with zero IT involvement. FLSA overtime tracking and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.
   </p>
   <a
-    href="/pilot"
+    href="/how-it-works"
     class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
   >
-    Apply for a Pilot Spot →
+    See how it works →
   </a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

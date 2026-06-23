@@ -197,9 +197,9 @@ The four strongest Schedule360 alternatives for a Critical Access Hospital are S
 
 <img src="/images/blog/schedule360-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI managed nurse scheduling service for Texas Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling software](/nurse-scheduling-software) service built specifically for Texas Critical Access Hospitals. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: a specialist handles setup from an Excel roster upload (3 to 5 days), builds draft schedules each cycle, and maintains the system as the roster and policies change. For the broader category framing, see our comparison of [managed service vs. scheduling software](/blog/managed-service-vs-scheduling-software).
+SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling software](/nurse-scheduling-software) service built specifically for Texas Critical Access Hospitals. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a specialist handles setup from an Excel roster upload (3 to 5 days), checks each draft, and maintains the system as the roster and policies change. For the broader category framing, see our comparison of [managed service vs. scheduling software](/blog/managed-service-vs-scheduling-software).
 
-Texas-specific compliance is built into the default service. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See [how it works](/how-it-works) for the weekly cadence.
+Texas-specific compliance is built into the default service. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See [how it works](/how-it-works) for the weekly cadence. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
 **Best for:** Texas CAHs where the nurse manager is already stretched and cannot absorb another implementation project, or where the core issue is scheduling labor rather than just platform cost or platform design.
 
@@ -218,7 +218,7 @@ Texas-specific compliance is built into the default service. [FLSA](https://www.
 - Texas focus only; facilities outside Texas should expect a different timeline for state-specific labor rule coverage
 - Not designed for the multi-industry use cases (urgent care chains, specialty-clinic groups, pharmacy networks) that Schedule360 supports
 
-**Verdict:** The strongest alternative for a Texas Critical Access Hospital where the nurse manager is the only person managing scheduling and cannot sustain a platform configuration burden alongside clinical duties. SimpleScheduleAI eliminates both the implementation project and the ongoing configuration overhead that a broad healthcare-scheduling platform creates at small-hospital scale. See [how it works](/how-it-works) or apply to the [pilot program](/pilot).
+**Verdict:** The strongest alternative for a Texas Critical Access Hospital where the nurse manager is the only person managing scheduling and cannot sustain a platform configuration burden alongside clinical duties. SimpleScheduleAI eliminates both the implementation project and the ongoing configuration overhead that a broad healthcare-scheduling platform creates at small-hospital scale. See [how it works](/how-it-works).
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -378,7 +378,7 @@ Schedule360 is worth keeping if:
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Delivery model</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Self-serve software platform</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Managed service (scheduler does the build)</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400">Managed service (AI builds, scheduler checks)</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation timeline</td>
@@ -436,14 +436,14 @@ Schedule360 is worth keeping if:
 <div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
   <h2 class="mb-2 text-2xl font-bold text-white">Need a Scheduling System Built for a 25-Bed Hospital, Not a Specialty Clinic Chain?</h2>
   <p class="mb-6 text-blue-100">
-    SimpleScheduleAI is built specifically for Texas Critical Access Hospitals. It goes live in 3 to 5 days with zero IT involvement. FLSA overtime threshold tracking, Texas Labor Code provisions, and CMS §485.635 documentation are included by default. Apply for a pilot spot to see how the transition works for your facility.
+    SimpleScheduleAI is built specifically for Texas Critical Access Hospitals. It goes live in 3 to 5 days with zero IT involvement. FLSA overtime threshold tracking, Texas Labor Code provisions, and CMS §485.635 documentation are included by default. See how it works to understand how the transition works for your facility.
   </p>
   <div class="flex flex-col sm:flex-row gap-3">
     <a
-      href="/pilot"
+      href="/how-it-works"
       class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
     >
-      Apply for a Pilot Spot
+      See how it works
     </a>
     <a
       href="https://cal.com/gautham-8bdvdx/30min"

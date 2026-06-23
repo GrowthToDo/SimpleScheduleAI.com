@@ -597,7 +597,7 @@ At this scale, the CAH guide is the wrong document. Analytics, credential manage
 
 ## How Does SimpleScheduleAI Fit for a Critical Access Hospital?
 
-SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for Texas Critical Access Hospitals under 50 beds and does not compete with the enterprise platforms in this guide. It serves the specific case those platforms ignore: the nurse manager is clinically active, scheduling consumes more time than she can give it, there is no IT department to lean on, and there is no float pool when a nurse calls out. You send your roster as Excel. Our [AI nurse scheduling](/ai-nurse-scheduling) builds the weekly schedule using your fairness, FLSA overtime threshold, and CMS §485.635 documentation rules. You approve. When someone calls out, you get a ranked shortlist of qualified, available, non-overtime staff in minutes instead of an hour of phone calls. For a fuller picture of the operating model, see [how it works](/how-it-works), and to model the time-cost in dollars, run the [ROI calculator](/roi).
+SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for Texas Critical Access Hospitals under 50 beds and does not compete with the enterprise platforms in this guide. It serves the specific case those platforms ignore: the nurse manager is clinically active, scheduling consumes more time than she can give it, there is no IT department to lean on, and there is no float pool when a nurse calls out. You send your roster as Excel. Our [AI nurse scheduling](/ai-nurse-scheduling) builds the weekly schedule using your fairness, FLSA overtime threshold, and CMS §485.635 documentation rules. You approve. When someone calls out, you get a ranked shortlist of qualified, available, non-overtime staff in minutes instead of an hour of phone calls. For a fuller picture of the operating model, see [how it works](/how-it-works), and to model the time-cost in dollars, run the [ROI calculator](/roi). To see the §485.635 checklist tick off as the AI builds a schedule, try the [live scheduling simulator](/simulator).
 
 One honest limitation: SimpleScheduleAI is not the right fit for large multi-hospital systems, for facilities that want self-serve configuration control over their own scheduling, or for hospitals outside Texas. If that describes you, one of the platforms above will serve you better, and we would rather tell you that now than after a pilot.
 
@@ -607,12 +607,12 @@ One honest limitation: SimpleScheduleAI is not the right fit for large multi-hos
 2. Pull your last CMS §485.635 staffing record and time how long it took to assemble. That number is the documentation burden any tool has to remove, and it is the baseline for the [ROI calculation](/roi).
 3. If you want to keep scheduling in-house, put Aladtec and ShiftWizard side by side and ask each vendor for CAH-scale nursing references and a §485.635 documentation sample.
 4. Ask any vendor on your shortlist one direct question: when a nurse calls out and we have no float pool, what does your system do in the next five minutes?
-5. If the weekly build and callout coverage are the real drain, [apply for a SimpleScheduleAI pilot](/pilot) and let us build a schedule against your actual roster so you can compare it to what you do today.
+5. If the weekly build and callout coverage are the real drain, [see how SimpleScheduleAI works](/how-it-works) and let us build a schedule against your actual roster so you can compare it to what you do today.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Free 60-day pilot. No IT setup. No commitment. We build the schedule, you approve it.</p>
-  <a href="/pilot" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Apply for a Pilot Spot →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="text-sm text-slate-500 dark:text-slate-400 mt-4 mb-0"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

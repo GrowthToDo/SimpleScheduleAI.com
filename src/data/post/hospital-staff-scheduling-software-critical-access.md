@@ -123,7 +123,7 @@ The common options split into four groups: spreadsheets, consumer shift apps, ho
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Texas CAHs with no IT and no dedicated scheduler</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Managed; no IT, Excel roster in</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Pilot-based; contact for a quote</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Flat monthly; contact for a quote</td>
       </tr>
     </tbody>
   </table>
@@ -145,11 +145,11 @@ The honest version: if you have a dedicated scheduler or protected admin time an
 
 ## How Does SimpleScheduleAI Fit a Critical Access Hospital?
 
-SimpleScheduleAI is a managed nurse scheduling service built specifically for Texas Critical Access Hospitals. The nurse manager submits a roster in Excel, receives three complete schedule drafts within 48 hours, selects one, and gets a ranked callout replacement list in under two minutes when a nurse calls out. CMS §485.635 documentation is maintained automatically. See [how the process works](/how-it-works).
+SimpleScheduleAI is an AI-native, human-verified nurse scheduling service built specifically for Texas Critical Access Hospitals. The nurse manager submits a roster in Excel, the AI builds three complete schedule drafts and our scheduling team checks each one within 48 hours, she selects one, and the AI surfaces a ranked callout replacement list in under two minutes when a nurse calls out. CMS §485.635 documentation is maintained automatically. See [how the process works](/how-it-works).
 
 It is not the right fit for every hospital, and the limitation matters. SimpleScheduleAI does not include a nurse-facing self-service mobile app for shift swaps or availability submission by default, and real-time direct schedule edits route through the service rather than happening instantly in a self-service interface. A hospital that requires nurse self-service or instant manager-side edits should evaluate self-serve platforms first.
 
-Where it fits is the specific case this guide describes: a 25-bed Texas CAH with no IT department, no dedicated scheduler, and a nurse manager on clinical shifts who needs Texas overtime and CMS documentation handled without configuration work. For how the automation produces the drafts, see [AI nurse scheduling](/ai-nurse-scheduling).
+Where it fits is the specific case this guide describes: a 25-bed Texas CAH with no IT department, no dedicated scheduler, and a nurse manager on clinical shifts who needs Texas overtime and CMS documentation handled without configuration work. For how the automation produces the drafts, see [AI nurse scheduling](/ai-nurse-scheduling). Watch the AI build a schedule and generate a ranked callout replacement list in the [interactive simulator](/simulator).
 
 Related operational guides: [How Small Rural Hospitals Without an IT Department Manage Nurse Scheduling](/blog/nurse-scheduling-no-it-department-rural-hospital) and [Self-Scheduling Problems at a Critical Access Hospital](/blog/self-scheduling-problems-critical-access-hospital).
 
@@ -186,14 +186,14 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 
 4. **Request the compliance documentation in writing.** A vendor that cannot show how it handles CMS §485.635 staffing records at a CAH is not sized for a CAH.
 
-5. **Request a free SimpleScheduleAI scheduling assessment.** Describe your weekly scheduling hours, how callouts are handled now, and how survey prep works today. Start at [simplescheduleai.com/pilot](/pilot).
+5. **Request a free SimpleScheduleAI scheduling assessment.** Describe your weekly scheduling hours, how callouts are handled now, and how survey prep works today. Start at [how it works](/how-it-works).
 
 <div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Hospital staff scheduling, run for you</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, maintains CMS §485.635 documentation, and delivers ranked callout replacement lists in under 2 minutes. Built for Texas Critical Access Hospitals with no IT department and a nurse manager who also takes clinical shifts.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI's AI builds your nurse schedules and our team checks them, maintains CMS §485.635 documentation, and delivers ranked callout replacement lists in under 2 minutes. Built for Texas Critical Access Hospitals with no IT department and a nurse manager who also takes clinical shifts.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Apply for a Pilot Spot →</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

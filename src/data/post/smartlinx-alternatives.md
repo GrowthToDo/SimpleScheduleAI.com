@@ -172,7 +172,7 @@ The five strongest SmartLinx alternatives for a Critical Access Hospital are Sim
 
 <img src="/images/blog/smartlinx-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI delivers the compliance documentation, overtime tracking, and callout management that small hospitals typically buy SmartLinx to achieve, without the implementation burden or IT dependency. The managed service model means the hospital provides a roster and scheduling preferences, and the service handles everything else, including maintenance as staff and policies change.
+SimpleScheduleAI delivers the compliance documentation, overtime tracking, and callout management that small hospitals typically buy SmartLinx to achieve, without the implementation burden or IT dependency. The managed service model means the hospital provides a roster and scheduling preferences, the AI builds the schedule, and our scheduling team checks it and handles everything else, including maintenance as staff and policies change.
 
 **Best for:** Critical Access Hospitals that are over-invested in SmartLinx relative to their actual scheduling complexity, or that evaluated SmartLinx and chose not to implement it because of cost and implementation time.
 
@@ -410,7 +410,7 @@ For hospitals where T&A is managed through payroll software independently of the
 
 3. **Identify the gap driving the switch.** Is it implementation cost that already happened, ongoing IT dependency, per-user pricing growth, or features that do not map to your workflows? Different gaps point to different alternatives.
 
-4. **Request a pilot of SimpleScheduleAI with your specific use case.** Describe your current SmartLinx setup, what you use it for, and what is not working. Ask how SimpleScheduleAI handles the same requirements. [Start your pilot →](/pilot) or [see how it works](/how-it-works)
+4. **See how SimpleScheduleAI handles your specific use case.** Describe your current SmartLinx setup, what you use it for, and what is not working. Ask how SimpleScheduleAI handles the same requirements. [See how it works →](/how-it-works)
 
 5. **If T&A integration is non-negotiable, evaluate whether [QGenda](/blog/qgenda-alternatives) or a newer SmartLinx alternative addresses both the scheduling and T&A requirements.** Do not move to a tool that eliminates T&A integration without a clear plan for how payroll reconciliation will work in the new setup.
 
@@ -420,7 +420,7 @@ For hospitals where T&A is managed through payroll software independently of the
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers compliance documentation, callout overtime ranking, and CMS-ready staffing records without a 3-month implementation or ongoing IT dependency. Designed for 25-bed CAHs where SmartLinx's feature depth exceeds the operational complexity.</p>
   </div>
   <div class="flex flex-wrap gap-3">
-    <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot →</a>
+    <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
     <a href="/how-it-works" class="inline-block self-start rounded-lg border border-blue-600 dark:border-blue-400 text-blue-700 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-slate-700 px-6 py-3 font-semibold transition-colors">See How It Works</a>
   </div>

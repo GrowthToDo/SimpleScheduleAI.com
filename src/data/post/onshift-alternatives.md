@@ -157,11 +157,11 @@ The six strongest OnShift alternatives for a Critical Access Hospital are Simple
 
 <img src="/images/blog/onshift-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike OnShift's self-serve LTC platform, SimpleScheduleAI requires no configuration work from the nurse manager: a scheduling specialist handles setup from an Excel roster upload, builds draft schedules each cycle, and maintains the system as the roster and policies change.
+SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike OnShift's self-serve LTC platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster and policies change.
 
 The replacement list is ranked by overtime risk and filtered by credential requirements before it reaches the manager. A replacement for an ICU shift only shows ICU-credentialed nurses, and a replacement for a charge nurse shift only shows charge-designated nurses. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle, so survey preparation is not a manual assembly task.
 
-This is a different operating model than OnShift, which is a self-serve platform the manager configures and runs herself. SimpleScheduleAI moves the construction and maintenance work to the service and leaves the nurse manager with review and approval decisions. See [how the managed service works](/how-it-works) for the full workflow, and the [AI nurse scheduling](/ai-nurse-scheduling) approach behind the draft generation.
+This is a different operating model than OnShift, which is a self-serve platform the manager configures and runs herself. SimpleScheduleAI moves the construction and maintenance work to the service and leaves the nurse manager with review and approval decisions. See [how the managed service works](/how-it-works) for the full workflow, and the [AI nurse scheduling](/ai-nurse-scheduling) approach behind the draft generation. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
 **Best for:** Critical Access Hospitals evaluating OnShift alternatives because acute care callout speed, credential enforcement during coverage, and CMS documentation prep time are the primary unmet needs.
 
@@ -179,7 +179,7 @@ This is a different operating model than OnShift, which is a self-serve platform
 - No staff-facing mobile app; nurses do not view schedules or submit shift trades directly through SimpleScheduleAI. If nurse-facing self-scheduling is a priority, evaluate a self-serve platform or pair SimpleScheduleAI with a separate staff communication tool
 - Not designed for hospitals with a large long-term care component that need the caregiver engagement features OnShift was built around
 
-**Verdict:** The strongest OnShift alternative for a CAH where callout credential enforcement and CMS documentation are the primary unmet needs. The managed service model eliminates the configuration overhead that makes self-serve alternatives harder to maintain at 25-bed scale. [See how it works](/how-it-works) or explore the [pilot program](/pilot).
+**Verdict:** The strongest OnShift alternative for a CAH where callout credential enforcement and CMS documentation are the primary unmet needs. The managed service model eliminates the configuration overhead that makes self-serve alternatives harder to maintain at 25-bed scale. [See how it works](/how-it-works).
 
 **Ratings:** New service in active pilot phase; no public G2 or Capterra listing yet.
 
@@ -502,7 +502,7 @@ For a hospital that is primarily a CAH or acute care facility, that difference i
 
 3. **Calculate your CMS survey prep time under the current OnShift setup.** If your last [CMS survey](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) required manual assembly of staffing records, that recurring time cost is a direct, quantifiable cost of continuing with the current configuration.
 
-4. **Request a demo of SimpleScheduleAI with an acute care callout scenario.** Describe a recent callout event, unit, shift, credential requirements, and ask how the ranked shortlist would have handled it differently. [See how it works](/how-it-works), start a [pilot program](/pilot), or [contact us](/contact) directly.
+4. **Request a demo of SimpleScheduleAI with an acute care callout scenario.** Describe a recent callout event, unit, shift, credential requirements, and ask how the ranked shortlist would have handled it differently. [See how it works](/how-it-works) or [contact us](/contact) directly.
 
 5. **If long-term care is most of your volume, evaluate SmartLinx as an upgrade rather than an outright replacement.** SmartLinx improves on OnShift's compliance automation while staying in a similar market tier. SimpleScheduleAI is the right switch only if acute care nursing is your primary scheduling challenge.
 
@@ -511,7 +511,7 @@ For a hospital that is primarily a CAH or acute care facility, that difference i
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Built for what OnShift wasn't designed for</p>
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers ranked callout replacements with credential filtering, automatic CMS §485.635 documentation, and Texas overtime compliance. Designed for Critical Access Hospitals where acute care callout dynamics, not long-term care engagement features, are the scheduling priority.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

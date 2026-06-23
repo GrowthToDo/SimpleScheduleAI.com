@@ -7,7 +7,7 @@ type Props = Widget;
 const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
 
 const rows = [
-  { attr: 'Who builds the schedule', soft: 'You do, in the tool', serv: 'We do, and a human checks it' },
+  { attr: 'Who builds the schedule', soft: 'You do, in the tool', serv: 'Our AI builds it, our team checks it' },
   { attr: 'Where the rules live', soft: 'You configure and maintain them', serv: 'We map them to your unit, once' },
   {
     attr: 'When someone calls out',
@@ -32,7 +32,8 @@ const cols = 'md:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)_minmax(0,1fr)]';
       Most tools hand you the <span class="text-primary">work</span>.
     </h2>
     <p class="mt-4 text-lg leading-relaxed text-muted">
-      Scheduling software gives you a blank grid and rules to enforce yourself. We deliver the finished schedule.
+      Scheduling software gives you a blank grid and rules to enforce yourself. Our AI builds the finished schedule; our
+      team checks it.
     </p>
   </div>
 

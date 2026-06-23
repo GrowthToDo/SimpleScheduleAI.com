@@ -143,9 +143,9 @@ The comparison often framed as "software cost vs. Excel (free)" misses the point
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI is not a software platform you configure yourself, it's an AI-assisted managed scheduling service where our team handles the scheduling work, and your nurse manager approves the final schedule. That distinction matters for critical access hospitals that don't have an IT department, a workforce management specialist, or time to implement new software.
+SimpleScheduleAI is not a software platform you configure yourself, it's an AI-native managed scheduling service where our AI builds the schedule, our team checks it, and your nurse manager approves the final schedule. That distinction matters for critical access hospitals that don't have an IT department, a workforce management specialist, or time to implement new software.
 
-We handle the initial setup, the weekly schedule build, callout coverage logic, and compliance checks. The nurse manager stays in the loop at every approval point without carrying the 8-12 hour weekly burden. We also track overtime risk in real time and flag it before it hits payroll.
+Our AI builds the weekly schedule and our team checks it, handling the initial setup, callout coverage logic, and compliance checks. The nurse manager stays in the loop at every approval point without carrying the 8-12 hour weekly burden. We also track overtime risk in real time and flag it before it hits payroll. See the AI build a schedule and rank callout replacements in the [live simulator](/simulator).
 
 One honest limitation: SimpleScheduleAI works best for hospitals that have reasonably stable staffing structures. If you're in an active staffing crisis with 30%+ vacancy rates, the scheduling problem is downstream of a hiring problem, and we'll tell you that upfront.
 
@@ -166,14 +166,14 @@ For more context on [nurse scheduling software](/nurse-scheduling-software) opti
 2. **Calculate your shadow salary.** Multiply your weekly scheduling hours by your loaded hourly rate, then by 50 weeks. For most CAH managers at 8-12 hours/week and $50/hr loaded, the number is around $26,000/year. That number is the ROI floor any scheduling tool must clear.
 3. **Run the [ROI calculator](/roi)** to model what reducing your scheduling time would return in dollars and clinical hours. The output is the budget conversation you take to your CFO.
 4. **Check your last 4 cycles for the five outgrown-Excel signs.** Repeated weekend inequity, slow callout response, after-the-fact overtime discovery, siloed credential tracking, and non-transferable scheduling knowledge. Two or more of these in 4 cycles means Excel is the constraint, not the workflow.
-5. **Request a SimpleScheduleAI pilot if you are a Texas Critical Access Hospital.** A free 60-day managed pilot lets you compare the actual time burden against your week-one baseline. Start at [simplescheduleai.com/pilot](/pilot).
+5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service lets you compare the actual time burden against your week-one baseline. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Done rebuilding the schedule every cycle?</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers a compliant, post-ready schedule every Thursday 3 PM Central. Your nurse manager reviews and approves. Free 60-day pilot for Texas CAHs.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers a compliant, post-ready schedule every Thursday 3 PM Central. Your nurse manager reviews and approves.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
@@ -191,7 +191,7 @@ For a managed service, initial setup typically takes one to two weeks, primarily
 <div class="not-prose my-8 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 p-6 text-center">
   <p class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">Ready to cut scheduling time from 10 hours a week to under 2?</p>
   <p class="text-sm text-blue-700 dark:text-blue-300 mb-4">SimpleScheduleAI handles the weekly schedule build, callout coverage, and compliance checks for critical access hospitals. Your nurse manager approves. We do the rest.</p>
-  <a href="/pilot" class="inline-block rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">Request a Pilot →</a>
+  <a href="/how-it-works" class="inline-block rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">See how it works →</a>
 </div>
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._

@@ -33,7 +33,7 @@ This guide compares 6 alternatives for a Critical Access Hospital that needs nur
 - NurseGrid holds 4.2/5 on Capterra (13 reviews; small sample).[1] Treat single-source ratings on a small sample as directional, not definitive, and probe the manager workflow specifically in any demo.
 - The six strongest alternatives reviewed here are SimpleScheduleAI, ShiftWizard, [TCP](/blog/best-tcp-alternative-for-cah) Scheduling (Aladtec), Deputy, Homebase, and When I Work. The right pick depends on whether compliance automation, hospital-nursing fit, or cost reduction is the priority.
 - A hybrid is viable for CAHs that value nurse self-service: keep a communication tool for the staff-facing layer and run a compliance-focused service or platform for scheduling management and CMS documentation.
-- SimpleScheduleAI is the managed-service option: a specialist builds and maintains the schedule and the manager approves it. The honest tradeoff is no nurse-facing mobile app, so confirm whether staff self-service is a hard requirement before switching.
+- SimpleScheduleAI is the managed-service option: the AI builds the schedule, a specialist checks and maintains it, and the manager approves it. The honest tradeoff is no nurse-facing mobile app, so confirm whether staff self-service is a hard requirement before switching.
 
 ## Table of Contents
 
@@ -170,9 +170,9 @@ The six strongest NurseGrid alternatives for a Critical Access Hospital are Simp
 
 <img src="/images/blog/nursegrid-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling software](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a nurse-facing app, the work is on the manager side: a scheduling specialist handles setup from an Excel roster upload, builds draft schedules each cycle, and maintains the system as the roster changes.
+SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling software](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a nurse-facing app, the work is on the manager side: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
 
-Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers the manager-side scheduling and compliance layer that a CAH cannot leave uncovered. The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle, and callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime thresholds. See [how the managed service works](/how-it-works) and how [AI nurse scheduling](/ai-nurse-scheduling) is applied at CAH scale.
+Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers the manager-side scheduling and compliance layer that a CAH cannot leave uncovered. The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle, and callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime thresholds. See [how the managed service works](/how-it-works) and how [AI nurse scheduling](/ai-nurse-scheduling) is applied at CAH scale. Watch the AI fill a weekly grid and rank callout replacements in the [live simulator](/simulator).
 
 **Best for:** Critical Access Hospitals leaving NurseGrid because the manager-side workflow, compliance documentation, and callout overtime checks are not covered by a nurse-facing app.
 
@@ -190,7 +190,7 @@ Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers th
 - Managed service model means less real-time manager control than a self-serve tool; mid-week changes route through the service rather than being edited instantly
 - Not designed for hospitals with complex multi-department or physician scheduling needs beyond nursing
 
-**Verdict:** The strongest alternative for a CAH nurse manager who leaves NurseGrid because the manager-side scheduling and compliance burden has exceeded what one person can manage while also taking clinical shifts. The honest gap is the missing nurse app; weigh that against the compliance and time return. [See how it works](/how-it-works) or explore the [pilot program](/pilot).
+**Verdict:** The strongest alternative for a CAH nurse manager who leaves NurseGrid because the manager-side scheduling and compliance burden has exceeded what one person can manage while also taking clinical shifts. The honest gap is the missing nurse app; weigh that against the compliance and time return. [See how it works](/how-it-works).
 
 **Ratings:** New service; in active pilot phase. No public G2 or Capterra listing yet.
 
@@ -526,7 +526,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the manager-side 
 
 3. **Calculate your current CMS survey prep time.** Measure how long it takes to assemble [CMS §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) staffing documentation outside NurseGrid before a survey. If it exceeds two hours per cycle, that is a measurable reason to consider a system that maintains it automatically.
 
-4. **Request a demo of SimpleScheduleAI and describe your NurseGrid setup.** Explain what nurses use NurseGrid for, what the manager does outside it, and how callout and CMS documentation work today. Ask how SimpleScheduleAI would handle the same scenarios. [See how it works](/how-it-works) or start a [pilot program](/pilot).
+4. **Request a demo of SimpleScheduleAI and describe your NurseGrid setup.** Explain what nurses use NurseGrid for, what the manager does outside it, and how callout and CMS documentation work today. Ask how SimpleScheduleAI would handle the same scenarios. [See how it works](/how-it-works).
 
 5. **If you want to keep self-serve software, shortlist ShiftWizard and TCP Scheduling.** ShiftWizard is the hospital-nursing-specific path with a larger review base; TCP Scheduling adds manager-side scheduling capability with a 2-4 week setup. Test the mobile manager workflow in both before deciding.
 
@@ -535,7 +535,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the manager-side 
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Leaving NurseGrid? Built for the manager side NurseGrid doesn't cover.</p>
     <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts. Setup takes 3-5 days from your Excel roster.</p>
   </div>
-  <a href="/pilot" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">Apply for a Pilot Spot</a>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

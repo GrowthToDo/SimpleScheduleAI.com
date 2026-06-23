@@ -170,7 +170,7 @@ CAH-appropriate hospital staff scheduling software has a different specification
 <tr class="bg-slate-50">
 <td class="border border-slate-300 px-4 py-2 font-medium">Pricing model</td>
 <td class="border border-slate-300 px-4 py-2">Per-seat, large minimum</td>
-<td class="border border-slate-300 px-4 py-2">Pilot-first, CAH-specific</td>
+<td class="border border-slate-300 px-4 py-2">Flat monthly, CAH-specific</td>
 </tr>
 <tr>
 <td class="border border-slate-300 px-4 py-2 font-medium">Ongoing support</td>
@@ -198,7 +198,7 @@ The workflow: upload your existing Excel roster, our scheduling specialist confi
 
 When a nurse calls out, the replacement call list is available immediately. The nurse manager contacts the top-ranked available nurse rather than running a phone tree.
 
-One honest note: if your hospital has 50+ beds or needs staff self-service features (nurses submitting availability independently via mobile app), SimpleScheduleAI is not the right fit. We are explicit about the CAH-specific scope during the pilot conversation.
+One honest note: if your hospital has 50+ beds or needs staff self-service features (nurses submitting availability independently via mobile app), SimpleScheduleAI is not the right fit. We are explicit about the CAH-specific scope during the first conversation.
 
 <div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
   <p class="text-xl font-bold">Want to see how a managed scheduling service works for a 25-bed hospital?</p>
