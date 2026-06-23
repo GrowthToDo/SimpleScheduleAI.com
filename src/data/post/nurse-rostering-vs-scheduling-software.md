@@ -5,7 +5,7 @@ updateDate: 2026-06-23T00:00:00Z
 author: 'Pradeep Pandey'
 title: "Nurse Rostering vs. Scheduling Software: What's the Difference?"
 excerpt: >
-  At a Critical Access Hospital where one manager owns both jobs, a tool that nails scheduling
+  At a Critical Access Hospital where one manager owns both the roster and the schedule, a tool that nails scheduling
   but skips the roster is where expired-credential assignments and CMS survey findings start.
   Rostering and scheduling are two different jobs, and most tools do one well and the other
   barely. This guide shows what each actually delivers, plus the three vendor tests that expose
