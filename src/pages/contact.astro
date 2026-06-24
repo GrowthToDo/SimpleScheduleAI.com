@@ -29,7 +29,8 @@ const contactBreadcrumbSchema = {
 };
 
 const contactDetails = {
-  location: 'Remote, US',
+  address: '440 N Barranca Ave #3696, Covina, CA 91723',
+  phone: '+1 (415) 216-5224',
   email: 'support@simplescheduleai.com',
 };
 
@@ -71,8 +72,21 @@ const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
             <div class="flex gap-x-4">
               <Icon name="tabler:map-pin" class="mt-0.5 w-6 h-6 shrink-0 text-primary" />
               <div class="grow">
-                <p class="font-semibold">Location</p>
-                <p class="text-sm text-default">{contactDetails.location}</p>
+                <p class="font-semibold">Address</p>
+                <p class="text-sm text-default">{contactDetails.address}</p>
+              </div>
+            </div>
+
+            <div class="flex gap-x-4">
+              <Icon name="tabler:phone" class="mt-0.5 w-6 h-6 shrink-0 text-primary" />
+              <div class="grow">
+                <p class="font-semibold">Phone</p>
+                <a
+                  class="text-sm text-default underline decoration-gray-300 dark:decoration-gray-600 underline-offset-4 transition-colors hover:text-primary"
+                  href="tel:+14152165224"
+                >
+                  {contactDetails.phone}
+                </a>
               </div>
             </div>
 

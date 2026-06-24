@@ -35,6 +35,15 @@ const orgSchema = {
   logo: 'https://simplescheduleai.com/images/logo.png',
   description: 'AI-native nurse scheduling service for critical access hospitals in Texas.',
   foundingDate: '2024',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '440 N Barranca Ave #3696',
+    addressLocality: 'Covina',
+    addressRegion: 'CA',
+    postalCode: '91723',
+    addressCountry: 'US',
+  },
+  telephone: '+1-415-216-5224',
   founder: [
     {
       '@type': 'Person',
@@ -49,6 +58,7 @@ const orgSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
+    telephone: '+1-415-216-5224',
     email: 'support@simplescheduleai.com',
   },
   sameAs: [
