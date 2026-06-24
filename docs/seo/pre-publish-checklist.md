@@ -28,6 +28,7 @@ Found again and again across posts. A generic checklist pass misses them; check 
 - [ ] **CFR sections correct:** CAH staffing/on-duty/supervision = **§485.631**; provision of services / RN nursing-care assignment = **§485.635**. Never cite §485.635 for the staffing-on-duty rule.
 - [ ] **Date sanity:** `publishDate` is not a placeholder (2099) and not an unintended future date; `updateDate` is not earlier than `publishDate`. Set the real publish date at go-live.
 - [ ] **Image needs a human eyeball.** An agent cannot see it: confirm the ID is in `scripts/image-pool.json`, unused by other posts, no YAML quotes, AND a person checks the rendered image for relevance and tone before publish. The pool description does not guarantee a good visual, and the pool is nearly exhausted.
+- [ ] **No heading glued to its body, no stray trailing `?`.** Recurred across 6+ posts from copy-paste. Grep `^#{2,6} .+\?.` — a heading whose `?` is followed by more text on the SAME line (`## What Should You Do This Week?Pick one...`) is collapsed: the H2/H3 must sit alone on its line, then a blank line, then the paragraph. Separately grep `[.?!][?]$` — no line ends in `.?` / `?? ` (a body sentence with a question mark glued on, e.g. `...how-it-works).?`). A question heading SHOULD end in `?`; a body line never should.
 
 ## Content
 
