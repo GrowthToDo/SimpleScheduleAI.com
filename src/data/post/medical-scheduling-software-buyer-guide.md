@@ -159,7 +159,9 @@ Several patterns reliably indicate that a medical scheduling software vendor is 
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
-## What Should You Do This Week?Before you request any vendor demo, write down your three non-negotiable requirements. If implementation simplicity and no-IT setup are on that list, [see how SimpleScheduleAI works](/how-it-works).?
+## What Should You Do This Week?
+
+Before you request any vendor demo, write down your three non-negotiable requirements. If implementation simplicity and no-IT setup are on that list, [see how SimpleScheduleAI works](/how-it-works).
 
 ## Frequently Asked Questions
 

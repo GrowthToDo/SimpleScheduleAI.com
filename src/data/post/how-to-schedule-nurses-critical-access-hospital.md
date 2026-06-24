@@ -336,7 +336,9 @@ For a CAH where the nurse manager spends 3+ hours per week on scheduling tasks t
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
-## What Should You Do This Week?Pick one section of this guide and apply it this week. If you want to see what automated scheduling looks like for a 25-bed CAH, [explore how SimpleScheduleAI works](/how-it-works).?
+## What Should You Do This Week?
+
+Pick one section of this guide and apply it this week. If you want to see what automated scheduling looks like for a 25-bed CAH, [explore how SimpleScheduleAI works](/how-it-works).
 
 ## Frequently Asked Questions
 

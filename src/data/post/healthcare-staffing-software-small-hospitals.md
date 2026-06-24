@@ -144,7 +144,9 @@ The gap for small hospitals is in the middle: mid-market healthcare tools have t
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
-## What Should You Do This Week?List the three scheduling tasks that take your nurse manager the most time this week. If any of them could be handled by software that requires no IT setup, [explore how SimpleScheduleAI works](/how-it-works).?
+## What Should You Do This Week?
+
+List the three scheduling tasks that take your nurse manager the most time this week. If any of them could be handled by software that requires no IT setup, [explore how SimpleScheduleAI works](/how-it-works).
 
 ## Frequently Asked Questions
 

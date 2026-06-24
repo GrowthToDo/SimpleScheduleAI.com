@@ -168,7 +168,9 @@ Neither is the universally correct answer. The right choice depends on how your 
 
 For more context on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides.
 
-## What Should You Do This Week?Calculate how many hours your nurse manager spends on scheduling each week. If the number is above 5, a managed service may save more than software alone. [See how SimpleScheduleAI works](/how-it-works).?
+## What Should You Do This Week?
+
+Calculate how many hours your nurse manager spends on scheduling each week. If the number is above 5, a managed service may save more than software alone. [See how SimpleScheduleAI works](/how-it-works).
 
 ## Frequently Asked Questions
 
