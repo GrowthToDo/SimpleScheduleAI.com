@@ -8,16 +8,17 @@ Founder Pradeep. Frame suggestions: hospital ops perspective, not generic tech.
 
 ## Key File Locations
 
-| What | Where |
-|---|---|
-| Pages | `src/pages/` |
-| Blog posts | `src/data/post/` |
-| SEO/AEO skill | `.claude/skills/seo-aeo-simplescheduleai.md` |
-| Competitor review skill | `.claude/skills/competitor-reviews.md` |
-| Dev reference skill | `.claude/skills/project-dev.md` |
-| Blog post template | `docs/seo/blog-post-template.mdx` |
-| Pre-publish checklist | `docs/seo/pre-publish-checklist.md` |
-| **Competitor dossier** | **`docs/seo/competitor-dossier.md`** |
+| What                    | Where                                        |
+| ----------------------- | -------------------------------------------- |
+| Pages                   | `src/pages/`                                 |
+| Blog posts              | `src/data/post/`                             |
+| SEO/AEO skill           | `.claude/skills/seo-aeo-simplescheduleai.md` |
+| Competitor review skill | `.claude/skills/competitor-reviews.md`       |
+| Dev reference skill     | `.claude/skills/project-dev.md`              |
+| Launch video skill      | `.claude/skills/launch-video-remotion.md`    |
+| Blog post template      | `docs/seo/blog-post-template.mdx`            |
+| Pre-publish checklist   | `docs/seo/pre-publish-checklist.md`          |
+| **Competitor dossier**  | **`docs/seo/competitor-dossier.md`**         |
 
 ## Competitor Data Rule
 
@@ -34,6 +35,7 @@ After adding new verified data from a live fetch, always update the dossier main
 - **Blog posts:** Load `.claude/skills/seo-aeo-simplescheduleai.md` before writing/editing.
 - **Competitor content:** Load `.claude/skills/competitor-reviews.md` before Key Limitations, reviewer quotes, or feature comparisons. The skill will direct you to the dossier first.
 - **Code/dev work:** Load `.claude/skills/project-dev.md` for tech stack, pages, schema, coding standards.
+- **Launch/marketing video:** Load `.claude/skills/launch-video-remotion.md` before creating, re-timing, re-formatting, or QA-ing a product video. The Remotion project lives at `ssai-launch-video/` (separate from this repo).
 - **Checklist execution:** Every checklist item must be verified mechanically — no mental checks, no assumptions. If an item requires external data (web search, file read, live fetch), run that lookup. If blocked or uncertain, ask before skipping or guessing.
 
 ## Subagent Strategy
@@ -41,6 +43,7 @@ After adding new verified data from a live fetch, always update the dossier main
 Default: delegate. Main agent = orchestrator. Real work = subagents.
 
 ALWAYS delegate:
+
 - Bash >20 lines output → execute agent
 - Multi-file exploration → Explore agent
 - MCP calls w/ large payloads → mcp-fetch agent
@@ -58,6 +61,7 @@ Use this pipeline for every blog post — both writing new posts from scratch an
 Spawn a `general-purpose` agent with read-only instructions. It must return a research brief before any writing starts.
 
 The research agent must:
+
 1. Read `docs/seo/competitor-dossier.md` — extract any verbatim quotes, ratings, and product data relevant to this post's competitors
 2. Read `docs/seo/pre-publish-checklist.md` — note every item that requires external data (quotes, ratings, source links, product page verifications)
 3. Identify all required internal links: which pillar pages, related posts, and external sources (CMS, HRSA, Texas DSHS, ANA) the post must link to
@@ -69,6 +73,7 @@ The main agent reads this brief before spawning the writing agent. Do not skip P
 ### Phase 2 — Writing agent (draft production)
 
 Spawn a `general-purpose` agent with the research brief attached. It must:
+
 1. Load `.claude/skills/seo-aeo-simplescheduleai.md` before writing
 2. Read `docs/seo/blog-post-template.mdx` for structure
 3. **For posts with competitor content:** load `.claude/skills/competitor-reviews.md` — it will direct to the dossier first, then live fetch only if needed
@@ -83,6 +88,7 @@ Spawn a `general-purpose` agent with the research brief attached. It must:
 Spawn a `feature-dev:code-reviewer` agent with the draft and the checklist path. It must check every item in `docs/seo/pre-publish-checklist.md` mechanically — no assumptions, no skipped items.
 
 Mandatory checks the review agent must run:
+
 - Em-dashes (`—`) and en-dashes (`–`) anywhere in the file including frontmatter, table cells, blockquotes, CTA cards
 - AI-tone phrases (full list in the checklist)
 - No inline `<svg>` in `.md` files — all visuals must be Tailwind `<div>` or `<table>` elements
