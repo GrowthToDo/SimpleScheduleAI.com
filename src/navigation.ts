@@ -11,7 +11,7 @@ export const headerData = {
       href: getPermalink('/how-it-works'),
     },
     {
-      text: 'Live Demo',
+      text: 'Interactive Demo',
       href: getPermalink('/simulator'),
     },
     {
@@ -45,7 +45,7 @@ export const footerData = {
       title: 'Product',
       links: [
         { text: 'How It Works', href: getPermalink('/how-it-works') },
-        { text: 'Live Demo', href: getPermalink('/simulator') },
+        { text: 'Interactive Demo', href: getPermalink('/simulator') },
         { text: 'Get Started', href: getPermalink('/contact') },
         { text: 'Pricing', href: getPermalink('/pricing') },
         { text: 'Scheduling Cost Calculator', href: getPermalink('/roi') },
