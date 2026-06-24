@@ -8,17 +8,17 @@ Founder Pradeep. Frame suggestions: hospital ops perspective, not generic tech.
 
 ## Key File Locations
 
-| What                    | Where                                        |
-| ----------------------- | -------------------------------------------- |
-| Pages                   | `src/pages/`                                 |
-| Blog posts              | `src/data/post/`                             |
-| SEO/AEO skill           | `.claude/skills/seo-aeo-simplescheduleai.md` |
-| Competitor review skill | `.claude/skills/competitor-reviews.md`       |
-| Dev reference skill     | `.claude/skills/project-dev.md`              |
-| Launch video skill      | `.claude/skills/launch-video-remotion.md`    |
-| Blog post template      | `docs/seo/blog-post-template.mdx`            |
-| Pre-publish checklist   | `docs/seo/pre-publish-checklist.md`          |
-| **Competitor dossier**  | **`docs/seo/competitor-dossier.md`**         |
+| What                     | Where                                        |
+| ------------------------ | -------------------------------------------- |
+| Pages                    | `src/pages/`                                 |
+| Blog posts               | `src/data/post/`                             |
+| SEO/AEO skill            | `.claude/skills/seo-aeo-simplescheduleai.md` |
+| Competitor review skill  | `.claude/skills/competitor-reviews.md`       |
+| Dev reference skill      | `.claude/skills/project-dev.md`              |
+| Programmatic video skill | `.claude/skills/programmatic-brand-video.md` |
+| Blog post template       | `docs/seo/blog-post-template.mdx`            |
+| Pre-publish checklist    | `docs/seo/pre-publish-checklist.md`          |
+| **Competitor dossier**   | **`docs/seo/competitor-dossier.md`**         |
 
 ## Competitor Data Rule
 
@@ -35,7 +35,7 @@ After adding new verified data from a live fetch, always update the dossier main
 - **Blog posts:** Load `.claude/skills/seo-aeo-simplescheduleai.md` before writing/editing.
 - **Competitor content:** Load `.claude/skills/competitor-reviews.md` before Key Limitations, reviewer quotes, or feature comparisons. The skill will direct you to the dossier first.
 - **Code/dev work:** Load `.claude/skills/project-dev.md` for tech stack, pages, schema, coding standards.
-- **Launch/marketing video:** Load `.claude/skills/launch-video-remotion.md` before creating, re-timing, re-formatting, or QA-ing a product video. The Remotion project lives at `ssai-launch-video/` (separate from this repo).
+- **Launch/marketing video:** Load `.claude/skills/programmatic-brand-video.md` (a product-agnostic Remotion method, also installed globally) before creating, re-timing, re-formatting, or QA-ing a product video. SSAI's video project lives at `ssai-launch-video/` (separate from this repo); its specifics are in the skill's "Worked example" section.
 - **Checklist execution:** Every checklist item must be verified mechanically — no mental checks, no assumptions. If an item requires external data (web search, file read, live fetch), run that lookup. If blocked or uncertain, ask before skipping or guessing.
 
 ## Subagent Strategy
