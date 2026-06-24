@@ -223,17 +223,11 @@ Do not dismiss fairness complaints as complaints. A nurse who feels chronically 
 
 5. **Post a distribution summary with your next schedule.** Even a simple table showing weekends per nurse this cycle. Transparency about the data prevents the perception that distribution decisions are arbitrary.
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
-  <h2 class="mb-2 text-2xl font-bold text-white">Build a Rotation Nurses Trust</h2>
-  <p class="mb-6 text-blue-100">
-    SimpleScheduleAI tracks weekend, holiday, and charge hour distribution automatically and weights future assignments toward nurses who are behind. You review the distribution summary before approving each cycle.
-  </p>
-  <a
-    href="/how-it-works"
-    class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
-  >
-    Request a Free Scheduling Assessment
-  </a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Build a Rotation Nurses Trust</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI tracks weekend, holiday, and charge hour distribution automatically and weights future assignments toward nurses who are behind. You review the distribution summary before approving each cycle.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

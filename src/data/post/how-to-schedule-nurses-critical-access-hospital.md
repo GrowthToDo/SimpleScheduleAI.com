@@ -329,17 +329,11 @@ For a CAH where the nurse manager spends 3+ hours per week on scheduling tasks t
 
 5. **Time-track your scheduling hours this week.** Include all scheduling tasks: drafting, callout handling, responding to requests, updating records. Most nurse managers are surprised by the total. The actual number is the basis for any ROI calculation.
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
-  <h2 class="mb-2 text-2xl font-bold text-white">Stop Rebuilding Your Schedule Every Week</h2>
-  <p class="mb-6 text-blue-100">
-    SimpleScheduleAI builds your CAH nurse schedule with charge coverage enforced, overtime checked, and CMS documentation generated automatically. You review and approve. First schedule within 48 hours of your roster upload.
-  </p>
-  <a
-    href="/how-it-works"
-    class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
-  >
-    Request a Free Scheduling Assessment
-  </a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Stop Rebuilding Your Schedule Every Week</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI builds your CAH nurse schedule with charge coverage enforced, overtime checked, and CMS documentation generated automatically. You review and approve. First schedule within 48 hours of your roster upload.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## What Should You Do This Week?Pick one section of this guide and apply it this week. If you want to see what automated scheduling looks like for a 25-bed CAH, [explore how SimpleScheduleAI works](/how-it-works).?

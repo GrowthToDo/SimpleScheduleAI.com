@@ -272,17 +272,10 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
 
 5. **If you currently use TCP TimeClock+ and are considering whether it is meeting your scheduling needs,** review two things: are you spending more than 3-4 hours per week on scheduling tasks on top of your time tracking work, and are callout events regularly taking more than 20 minutes to resolve? If both answers are yes, the scheduling side of the platform is not keeping pace with what a dedicated service would provide.
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 dark:bg-blue-800 px-8 py-8 text-white">
-  <h2 class="mb-2 text-2xl font-bold text-white">See What a Managed Service Looks Like for Your Critical Access Hospital</h2>
-  <p class="mb-6 text-blue-100 dark:text-blue-200">
-    SimpleScheduleAI goes live in 3-5 days from your staff roster. Your nurse manager reviews and approves; the scheduling work is done. Schedule a free assessment to compare it to what you have now.
-  </p>
-  <a
-    href="/how-it-works"
-    class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
-  >
-    See how it works →
-  </a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See What a Managed Service Looks Like for Your Critical Access Hospital</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI goes live in 3-5 days from your staff roster. Your nurse manager reviews and approves; the scheduling work is done. Schedule a free assessment to compare it to what you have now.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

@@ -366,17 +366,10 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
 
 5. **Request a demo of SimpleScheduleAI framed as a UKG transition.** Describe your current UKG configuration, what you use it for, and what is not working at your scale. Ask how SimpleScheduleAI handles the same requirements. Contact via [simplescheduleai.com](/contact).
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
-  <h2 class="mb-2 text-2xl font-bold text-white">Replace UKG with Something That Actually Fits a 25-Bed Hospital</h2>
-  <p class="mb-6 text-blue-100">
-    SimpleScheduleAI goes live in 48 hours with zero IT involvement. FLSA overtime tracking and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.
-  </p>
-  <a
-    href="/how-it-works"
-    class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
-  >
-    See how it works →
-  </a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Replace UKG with Something That Actually Fits a 25-Bed Hospital</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI goes live in 48 hours with zero IT involvement. FLSA overtime tracking and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

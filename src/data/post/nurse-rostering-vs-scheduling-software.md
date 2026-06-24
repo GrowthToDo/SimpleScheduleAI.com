@@ -169,25 +169,11 @@ The tools that work best for critical access hospitals fold rostering and schedu
 
 One honest limitation: a single integrated workflow is not the right fit for every facility. Large systems with a dedicated workforce-management team, hospitals already standardized on an enterprise platform with a working integration, or facilities that need deep payroll and time-and-attendance features beyond scheduling may be better served keeping specialized tools. SimpleScheduleAI is built for Texas Critical Access Hospitals where one manager owns the whole cycle, not for that profile.
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 dark:bg-blue-800 px-8 py-8 text-white">
-  <p class="mb-2 text-2xl font-bold text-white">See How Rostering and Scheduling Work Together at a Critical Access Hospital</p>
-  <p class="mb-6 text-blue-100">
-    SimpleScheduleAI takes your staff roster and runs the full schedule as one managed service, with no separate tools to keep in sync. See the full cycle, then book a short call to talk through your facility.
-  </p>
-  <div class="flex flex-col sm:flex-row gap-3">
-    <a
-      href="/how-it-works"
-      class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
-    >
-      See how it works
-    </a>
-    <a
-      href="https://cal.com/gautham-8bdvdx/30min"
-      class="inline-block rounded-lg border border-white/70 px-6 py-3 font-semibold text-white hover:bg-blue-600"
-    >
-      Book a call with our team
-    </a>
-  </div>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See How Rostering and Scheduling Work Together at a Critical Access Hospital</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI takes your staff roster and runs the full schedule as one managed service, with no separate tools to keep in sync. See the full cycle, then book a short call to talk through your facility.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## What Should You Do This Week?

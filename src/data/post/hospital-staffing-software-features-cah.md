@@ -212,10 +212,11 @@ The managed service model means a scheduling specialist handles setup and ongoin
 
 One honest note: if your facility needs features outside these seven, specifically EHR integration, staff self-service portals, or multi-site management, SimpleScheduleAI is not the right tool. Those features exist in enterprise platforms like Aladtec or API Healthcare, which are designed for larger systems. We are explicit about who we are built for.
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
-  <p class="text-xl font-bold">Only need the 7 features that actually matter for a 25-bed hospital?</p>
-  <p class="mt-2 text-blue-100">SimpleScheduleAI delivers all 7 as a managed service. No IT, no configuration project.</p>
-  <a href="/how-it-works" class="mt-4 inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50">See How It Works</a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Only need the 7 features that actually matter for a 25-bed hospital?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI delivers all 7 as a managed service. No IT, no configuration project.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

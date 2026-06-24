@@ -200,10 +200,11 @@ As a managed service, it removes the operational burden from the nurse manager e
 
 One honest limitation: SimpleScheduleAI does not include a staff-facing mobile app for nurses to manage their availability and request swaps independently. If that staff self-service functionality is important, a hybrid approach (a generic communication tool for staff-facing features plus a managed service for scheduling management) may be worth evaluating.
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
-  <p class="text-xl font-bold">Stop managing compliance manually on top of a generic scheduling tool.</p>
-  <p class="mt-2 text-blue-100">SimpleScheduleAI covers all five healthcare-specific requirements out of the box.</p>
-  <a href="/how-it-works" class="mt-4 inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50">See How It Works</a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Stop managing compliance manually on top of a generic scheduling tool.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI covers all five healthcare-specific requirements out of the box.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 For more context on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides.

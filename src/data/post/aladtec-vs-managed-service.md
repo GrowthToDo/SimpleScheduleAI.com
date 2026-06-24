@@ -431,17 +431,10 @@ The decision between self-serve scheduling software and a managed service become
 
 5. **If you currently use Aladtec,** assess two things: How current is your system configuration? When did you last update credential records for staff changes? And: How much time did you spend on callout coverage last month? If configuration is drifting and callout handling is consuming unplanned hours, that is the case for evaluating a managed service.
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 dark:bg-blue-800 px-8 py-8 text-white">
-  <h2 class="mb-2 text-2xl font-bold text-white">See What a Managed Service Costs for Your Critical Access Hospital</h2>
-  <p class="mb-6 text-blue-100 dark:text-blue-200">
-    SimpleScheduleAI builds your first schedule within 48 hours of your staff roster upload. No configuration. No training. No IT. Just a schedule that arrives ready to approve.
-  </p>
-  <a
-    href="/how-it-works"
-    class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
-  >
-    See how it works →
-  </a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See What a Managed Service Costs for Your Critical Access Hospital</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI builds your first schedule within 48 hours of your staff roster upload. No configuration. No training. No IT. Just a schedule that arrives ready to approve.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 

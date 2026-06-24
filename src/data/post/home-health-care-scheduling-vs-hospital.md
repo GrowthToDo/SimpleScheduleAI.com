@@ -109,17 +109,11 @@ If you operate a home health agency and are looking for scheduling support, the 
 
 If you are a critical access hospital with 25 or fewer inpatient beds and your challenge is nurse shift scheduling, callout coverage, and overtime management, SimpleScheduleAI is designed specifically for that problem. The managed service handles the weekly schedule build, callout support, and compliance documentation without requiring your nurse manager to configure or maintain software.
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
-  <h2 class="mb-2 text-2xl font-bold text-white">Inpatient Hospital Shift Scheduling at Your CAH</h2>
-  <p class="mb-6 text-blue-100">
-    SimpleScheduleAI is built for critical access hospital nursing shifts, not home health. It goes live in 3-5 days with zero IT involvement. Request a free assessment to see how it works for your inpatient nursing operation.
-  </p>
-  <a
-    href="/how-it-works"
-    class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
-  >
-    Request a Free Scheduling Assessment
-  </a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Inpatient Hospital Shift Scheduling at Your CAH</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built for critical access hospital nursing shifts, not home health. It goes live in 3-5 days with zero IT involvement. Request a free assessment to see how it works for your inpatient nursing operation.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 For more context on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides.

@@ -402,17 +402,10 @@ QGenda is worth keeping if:
 
 5. **If you want to stay on self-serve software, request a ShiftWizard demo and specifically ask for a CAH reference.** ShiftWizard is the self-serve alternative with the strongest nursing-specific design. Ask for a current reference customer under 50 beds who completed onboarding within the past 12 months.
 
-<div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
-  <h2 class="mb-2 text-2xl font-bold text-white">Done Paying Enterprise Prices for a System Built for a 500-Bed Hospital?</h2>
-  <p class="mb-6 text-blue-100">
-    SimpleScheduleAI is built specifically for critical access hospitals. It goes live in 3-5 days with zero IT involvement. FLSA, Texas Labor Code, and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.
-  </p>
-  <a
-    href="/how-it-works"
-    class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
-  >
-    See how it works →
-  </a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Done Paying Enterprise Prices for a System Built for a 500-Bed Hospital?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for critical access hospitals. It goes live in 3-5 days with zero IT involvement. FLSA, Texas Labor Code, and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
