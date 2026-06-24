@@ -273,5 +273,5 @@ When a nurse's credentials change (renewal, expiration, or new certification), t
 
 **Methodology note:** Regulatory claims reference the CMS Conditions of Participation for Critical Access Hospitals (42 CFR Part 485, Subpart F), verified against the current eCFR text on 2026-06-06. SimpleScheduleAI produces the staffing documentation; the hospital retains responsibility for staffing decisions and final compliance.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

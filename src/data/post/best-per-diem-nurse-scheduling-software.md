@@ -189,7 +189,7 @@ Per diem scheduling has specific requirements that differ from full-time nurse s
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/SimpleScheduleAI.webp" alt="SimpleScheduleAI per diem nurse scheduling dashboard for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service designed for Critical Access Hospitals where per diem nurses are a structural component of the roster, not an exception. The system maintains per diem availability alongside full-time scheduling and generates replacement call lists that cross-reference current-week hours against FLSA overtime thresholds before surfacing names. The nurse manager receives a list of available per diem nurses sorted by lowest overtime risk first.
+SimpleScheduleAI is an AI-native nurse scheduling service designed for Critical Access Hospitals where per diem nurses are a structural component of the roster, not an exception. The system maintains per diem availability alongside full-time scheduling and generates replacement call lists that cross-reference current-week hours against FLSA overtime thresholds before surfacing names. The nurse manager receives a list of available per diem nurses sorted by lowest overtime risk first.
 
 **Best for:** Critical Access Hospitals where per diem nurses fill 20-35% of weekly shift coverage and the nurse manager needs callout replacements identified in under two minutes with no manual overtime calculation.
 
@@ -547,5 +547,5 @@ Deputy at $4.50 per user per month is the lowest-cost option. At a 15-nurse per 
 
 Per diem scheduling software gives the nurse manager tools to track availability, manage callout replacements, and document per diem shifts. A managed scheduling service handles those tasks for the nurse manager. At a CAH where the nurse manager also takes clinical shifts, software cuts only part of that time because the manager still builds the schedule, while a managed service removes the build entirely. SimpleScheduleAI is a managed service. All other tools in this list are software platforms.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

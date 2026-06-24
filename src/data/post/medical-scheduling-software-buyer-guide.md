@@ -155,7 +155,7 @@ Several patterns reliably indicate that a medical scheduling software vendor is 
 <div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
   <h2 class="mb-2 text-2xl font-bold text-white">Not Sure Which Category Fits Your CAH?</h2>
   <p class="mb-6 text-blue-100">
-    SimpleScheduleAI is a managed scheduling service built specifically for critical access hospitals. It goes live in 3-5 days with no IT involvement. Request a free assessment to see how it compares to self-serve platforms for your situation.
+    SimpleScheduleAI is an AI-native nurse scheduling service built specifically for critical access hospitals. It goes live in 3-5 days with no IT involvement. Request a free assessment to see how it compares to self-serve platforms for your situation.
   </p>
   <a
     href="/how-it-works"
@@ -189,5 +189,5 @@ Medical scheduling software is a tool your team configures and operates. A manag
 
 No. Most mid-market scheduling platforms and managed services operate independently of the EHR. Scheduling data (who works when) and clinical data (patient records) are separate systems. For critical access hospitals, standalone scheduling without EHR integration is typically the more practical choice, it avoids IT complexity while still covering scheduling and compliance requirements.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

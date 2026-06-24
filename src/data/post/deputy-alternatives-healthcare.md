@@ -107,7 +107,7 @@ SimpleScheduleAI and Aladtec are the only options in this list with documented h
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">CAHs, managed service</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, automatic</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
       </tr>
@@ -172,7 +172,7 @@ The AI-native, human-verified model means the hospital does not install software
 
 **Verdict:** The most complete hospital scheduling alternative to Deputy. The cost increase versus Deputy is offset by eliminating the hidden cost of manual compliance work that Deputy leaves to the manager.
 
-**Ratings:** New service; in active pilot phase.
+**Ratings:** New service; no public reviews yet.
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -469,5 +469,5 @@ At a 20-nurse roster, Deputy costs approximately $90 per month ($4.50 per user).
 
 Credential tracking enforcement, FLSA healthcare overtime configuration, CMS documentation, and charge nurse logic are not documented on Deputy's product page. Verify current capabilities with Deputy directly. For hospitals with clinical scheduling requirements, confirm whether Deputy's current feature set covers those needs before relying on it for compliance-sensitive scheduling.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

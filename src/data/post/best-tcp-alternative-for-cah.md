@@ -283,7 +283,7 @@ See our full [Aladtec alternatives](/blog/aladtec-alternatives) post for a compl
 
 <img src="/images/blog/best-tcp-alternative-for-cah/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service, not a self-serve platform. The AI generates the weekly schedule; a scheduling specialist handles configuration and roster maintenance and checks the schedule. The nurse manager reviews drafts and approves. This is the only option in this list that does not require the nurse manager to operate scheduling software on an ongoing basis.
+SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve platform. The AI generates the weekly schedule; a scheduling specialist handles configuration and roster maintenance and checks the schedule. The nurse manager reviews drafts and approves. This is the only option in this list that does not require the nurse manager to operate scheduling software on an ongoing basis.
 
 **Best for:** CAH nurse managers who want the scheduling work handled rather than a better tool to do the work themselves.
 
@@ -411,4 +411,4 @@ They serve different purposes. ShiftWizard is a general hospital scheduling plat
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service for Critical Access Hospitals in Texas. He writes about scheduling operations, CAH compliance, and workforce management for small hospitals._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service for Critical Access Hospitals in Texas. He writes about scheduling operations, CAH compliance, and workforce management for small hospitals._

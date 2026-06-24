@@ -200,9 +200,9 @@ Not with a managed service model. SimpleScheduleAI onboards via Excel roster upl
 
 ## A Note on Sources
 
-**Methodology note:** The time figures in this guide (8 to 12 hours per week on scheduling, 4 to 6 hours per cycle to build a draft, callout-handling times, and the 2 to 4 week calibration window) are estimates drawn from interviews with nurse managers, not a published study. Actual times vary by facility size, shift pattern, and data quality. AI capabilities described reflect the SimpleScheduleAI managed service as currently delivered; confirm any specific feature with us before relying on it.
+**Methodology note:** The time figures in this guide (8 to 12 hours per week on scheduling, 4 to 6 hours per cycle to build a draft, callout-handling times, and the 2 to 4 week calibration window) are estimates drawn from interviews with 30+ nurse managers, not a published study. Actual times vary by facility size, shift pattern, and data quality. AI capabilities described reflect the SimpleScheduleAI managed service as currently delivered; confirm any specific feature with us before relying on it.
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

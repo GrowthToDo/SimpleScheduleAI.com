@@ -122,7 +122,7 @@ For a broader comparison of what to look for when switching scheduling tools, se
 
 **Q: How long does it actually take to switch from Excel to scheduling software?**
 
-The honest answer varies by platform: 3 to 5 days for SimpleScheduleAI's managed service path, 2 to 4 weeks for simpler self-serve platforms with Excel import, and 6 to 12 weeks for enterprise platforms with formal implementation projects. The vendor's stated onboarding time is typically the technical setup time, not the time to reach operational fluency. Add 4 to 6 weeks to any vendor estimate to account for the learning curve, parallel-run period, and first full scheduling cycle on the new system.
+The honest answer varies by platform: 3 to 5 days for SimpleScheduleAI's AI-native service path, 2 to 4 weeks for simpler self-serve platforms with Excel import, and 6 to 12 weeks for enterprise platforms with formal implementation projects. The vendor's stated onboarding time is typically the technical setup time, not the time to reach operational fluency. Add 4 to 6 weeks to any vendor estimate to account for the learning curve, parallel-run period, and first full scheduling cycle on the new system.
 
 **Q: What happens to my existing Excel roster when I switch?**
 
@@ -134,5 +134,5 @@ Your Excel file is your data. It is not deleted or migrated away from during a s
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

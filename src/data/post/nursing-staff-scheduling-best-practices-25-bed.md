@@ -88,7 +88,7 @@ Manual systems produce this documentation inconsistently, it's generated as a re
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI is a managed scheduling service that implements these seven best practices as defaults for every critical access hospital we work with. Fairness tracking, overtime threshold review, and change logging are built into the scheduling process, not add-on configurations.
+SimpleScheduleAI is an AI-native nurse scheduling service that implements these seven best practices as defaults for every critical access hospital we work with. Fairness tracking, overtime threshold review, and change logging are built into the scheduling process, not add-on configurations.
 
 Onboarding includes an explicit conversation about your facility's fairness definitions: how many weekends per cycle, how consecutive nights are handled, how per-diem prioritization works for callouts. These parameters are configured before the first schedule is generated.
 
@@ -128,5 +128,5 @@ Ready to reduce overtime and handle callouts without the Sunday evening scramble
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

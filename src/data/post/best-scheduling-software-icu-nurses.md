@@ -186,7 +186,7 @@ ICU scheduling evaluation criteria differ from general nurse scheduling in two c
 
 <img src="/images/blog/best-scheduling-software-icu-nurses/SimpleScheduleAI.webp" alt="SimpleScheduleAI ICU nurse scheduling interface for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service that handles ICU-specific credential tracking as part of the core replacement list logic. When a nurse calls out of an ICU shift, the ranked replacement list is generated using only nurses who hold the required certifications for that unit. A floor nurse without CCRN or ACLS credentials does not appear on the ICU callout list.
+SimpleScheduleAI is an AI-native nurse scheduling service that handles ICU-specific credential tracking as part of the core replacement list logic. When a nurse calls out of an ICU shift, the ranked replacement list is generated using only nurses who hold the required certifications for that unit. A floor nurse without CCRN or ACLS credentials does not appear on the ICU callout list.
 
 **Best for:** Critical Access Hospitals with a combined ICU and medical/surgical floor where the nurse manager needs ICU-qualified replacements identified instantly without manually cross-checking a credentials database.
 
@@ -496,5 +496,5 @@ The widely accepted standard for ICU RN-to-patient ratios is 1:2, though some hi
 
 ICU nurse assignment credentials typically include: registered nurse (RN) licensure, Basic Life Support (BLS), Advanced Cardiovascular Life Support (ACLS), and Critical Care Registered Nurse (CCRN) certification for full ICU assignments. Some ICUs also require Pediatric Advanced Life Support (PALS) for combined adult/pediatric units. Charge nurses typically require additional charge nurse training or designation beyond the standard ICU credential set. Any scheduling tool used for ICU assignment should track all of these credential types and their expiration dates.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

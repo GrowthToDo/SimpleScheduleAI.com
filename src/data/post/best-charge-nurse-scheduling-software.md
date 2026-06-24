@@ -222,7 +222,7 @@ Charge nurses at CAHs carry a heavier scheduling burden than staff nurses, not j
 
 <img src="/images/blog/best-charge-nurse-scheduling-software/SimpleScheduleAI.webp" alt="SimpleScheduleAI charge nurse scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service built specifically for Critical Access Hospitals. It handles charge nurse scheduling as a built-in feature rather than a configuration project.
+SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Critical Access Hospitals. It handles charge nurse scheduling as a built-in feature rather than a configuration project.
 
 **Best for:** CAH nurse managers who need charge coverage enforced automatically without spending hours building and auditing schedules.
 
@@ -515,5 +515,5 @@ Tracking means the scheduling software records which nurses are charge-qualified
 
 UKG has more advanced charge scheduling capabilities than SimpleScheduleAI in terms of raw configurability for large systems. For a 25-bed CAH, UKG is overbuilt by orders of magnitude. Implementation takes 6-12 months and requires dedicated IT. The charge scheduling features that matter for a CAH (designation enforcement, equitable distribution, callout ranking) are fully covered by SimpleScheduleAI at a fraction of the complexity and cost.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

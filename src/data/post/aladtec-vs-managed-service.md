@@ -60,7 +60,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
       <tr class="bg-slate-100 dark:bg-slate-800">
         <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-800 dark:text-slate-200" style="width:33%">Dimension</th>
         <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-800 dark:text-slate-200" style="width:33%">Aladtec</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-blue-700 dark:text-blue-400" style="width:34%">SimpleScheduleAI (Managed Service)</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-blue-700 dark:text-blue-400" style="width:34%">SimpleScheduleAI (AI-native service)</th>
       </tr>
     </thead>
     <tbody>
@@ -117,7 +117,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Ratings (May 2026)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews; small sample)</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
       </tr>
     </tbody>
   </table>
@@ -467,5 +467,5 @@ This is a valid risk to evaluate for any vendor. The mitigation for managed serv
 
 Aladtec handles multi-department scheduling and can be configured for both nursing and physician schedules in separate views. SimpleScheduleAI is focused specifically on nursing staff scheduling for CAHs and does not currently include physician scheduling. If your primary need is physician scheduling or combined physician/nurse scheduling in one system, QGenda is the more appropriate option. If your primary need is nurse scheduling overhead reduction, SimpleScheduleAI is the more direct solution.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

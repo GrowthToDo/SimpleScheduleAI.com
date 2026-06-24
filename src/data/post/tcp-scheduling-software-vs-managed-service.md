@@ -102,7 +102,7 @@ TCP TimeClock+ is a time and attendance platform made by TCP Software. It combin
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Ratings (May 2026)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Capterra: 4.4/5 (271 reviews)</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
       </tr>
     </tbody>
   </table>
@@ -216,7 +216,7 @@ The time comparison between TCP TimeClock+ and a managed service depends on whic
     </div>
     <div class="rounded-lg border border-green-200 dark:border-green-800 overflow-hidden">
       <div class="bg-green-600 dark:bg-green-700 px-4 py-3">
-        <p class="text-sm font-bold text-white">SimpleScheduleAI (Managed Service)</p>
+        <p class="text-sm font-bold text-white">SimpleScheduleAI (AI-native service)</p>
       </div>
       <div class="p-4 space-y-3 bg-white dark:bg-slate-900">
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Setup time</span><span class="font-medium text-green-700 dark:text-green-400">3-5 days</span></div>
@@ -312,5 +312,5 @@ With TCP TimeClock+: the nurse manager checks the platform for availability, rev
 
 Two reasons. First, the staff-facing mobile app: nurses can clock in and out, view schedules, and request time off in one place. SimpleScheduleAI does not have a nurse-facing interface. Second, unified time and attendance: if your hospital uses TimeClock+ for payroll and time tracking, keeping scheduling in the same platform reduces reconciliation work between systems. A managed scheduling service covers scheduling only; it does not replace a time and attendance system. If a hospital-specific scheduling platform with a nurse-facing app is the goal, see how [ShiftWizard compares to a managed service](/blog/shiftwizard-vs-managed-service).
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

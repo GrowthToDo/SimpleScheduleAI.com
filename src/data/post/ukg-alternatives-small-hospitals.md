@@ -161,7 +161,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it, and it is delivered within 48 hours. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
+SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it, and it is delivered within 48 hours. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
 
 The nurse manager reviews and approves schedules and handles callout coverage using the automated ranked replacement list. Weekly scheduling time drops to 1-2 hours. No IT involvement. No implementation project. For a CAH coming off UKG, a managed service is typically the fastest path to operational simplicity.
 
@@ -422,4 +422,4 @@ ShiftWizard is a hospital-specific scheduling platform used by more than 500 hos
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service for Critical Access Hospitals in Texas. He writes about scheduling operations, CAH compliance, and workforce management for small hospitals._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service for Critical Access Hospitals in Texas. He writes about scheduling operations, CAH compliance, and workforce management for small hospitals._

@@ -166,7 +166,7 @@ unstructured phone trees. For a shift starting in 2 hours, the difference betwee
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI is a managed scheduling service. When a callout occurs, we generate
+SimpleScheduleAI is an AI-native nurse scheduling service. When a callout occurs, we generate
 a ranked shortlist immediately, based on current availability, pay-period hours,
 callout history, and shift requirements, and deliver it to the charge nurse or
 manager. You make the calls; we give you the prioritized list.
@@ -227,5 +227,5 @@ Ready to reduce overtime and handle callouts without the Sunday evening scramble
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

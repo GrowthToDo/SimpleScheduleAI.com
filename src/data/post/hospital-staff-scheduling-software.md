@@ -223,5 +223,5 @@ Texas CAH scheduling software must enforce FLSA overtime rules (1.5 times pay fo
 **What happens if the scheduling software vendor goes down or is unresponsive?**
 This is a real risk with any SaaS tool, but it is especially acute at a CAH with no backup scheduler. Look for vendors that provide a dedicated support contact (not a ticket queue), guarantee response times for callout coverage situations, and give you exportable data so you are never locked in. A managed service with a named scheduling specialist reduces this risk compared to a self-serve platform where you are on your own.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

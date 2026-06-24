@@ -142,7 +142,7 @@ Software accelerates each step further: a scheduling system that generates a dra
 
 ## How SimpleScheduleAI Changes the Time Math?
 
-[SimpleScheduleAI's managed scheduling service](/nurse-scheduling-software) handles schedule draft generation, replacement list creation, and Texas compliance flagging, which addresses the three largest time drivers described above. The nurse manager receives three draft schedule options (balanced, fair-rotation, overtime-minimized), reviews them, and approves or modifies one. The manager does not build the draft.
+[SimpleScheduleAI's AI-native nurse scheduling service](/nurse-scheduling-software) handles schedule draft generation, replacement list creation, and Texas compliance flagging, which addresses the three largest time drivers described above. The nurse manager receives three draft schedule options (balanced, fair-rotation, overtime-minimized), reviews them, and approves or modifies one. The manager does not build the draft.
 
 When a callout occurs, the system surfaces a ranked shortlist of available qualified nurses from the existing roster within seconds. The manager or charge nurse makes calls from the list rather than deciding who to contact.
 
@@ -190,5 +190,5 @@ The [American Organization for Nursing Leadership](https://www.aonl.org/resource
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

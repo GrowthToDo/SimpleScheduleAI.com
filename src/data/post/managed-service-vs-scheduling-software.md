@@ -31,7 +31,7 @@ This guide makes the labor-model distinction concrete: who builds the schedule, 
 - Scheduling software cuts only part of that time because the nurse manager still builds every schedule. A managed service removes the build entirely, to under 2 hours per week for review and approval.
 - The core question is whether your nurse manager has spare administrative capacity. At a 25-bed CAH where she also takes clinical shifts, she typically does not.
 - CAHs fail with scheduling apps for three structural reasons: no IT department to configure the system, no dedicated scheduler to operate it, and no compliance expertise to set up [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and CMS rules correctly.
-- SimpleScheduleAI is a managed scheduling service. Aladtec, SmartLinx, QGenda, NurseGrid, OnShift, Deputy, and UKG are all scheduling software platforms.
+- SimpleScheduleAI is an AI-native nurse scheduling service. Aladtec, SmartLinx, QGenda, NurseGrid, OnShift, Deputy, and UKG are all scheduling software platforms.
 - A managed service is not appropriate for every hospital. Facilities with a dedicated scheduler, IT support, or staff self-service requirements should evaluate self-serve software first.
 
 ## Table of Contents

@@ -258,5 +258,5 @@ Credential constraints are legitimate reasons for distribution differences, but 
 
 SimpleScheduleAI provides distribution summaries to the nurse manager that can be shared with staff. The nurse manager controls what information is shared with staff directly. The distribution data (weekend count, holiday count, charge hours) is visible in the nurse manager's dashboard at any time.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

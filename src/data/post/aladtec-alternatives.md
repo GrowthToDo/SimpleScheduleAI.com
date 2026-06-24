@@ -115,7 +115,7 @@ The table below covers setup time and public ratings across the six alternatives
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -160,7 +160,7 @@ The six strongest Aladtec alternatives for a Critical Access Hospital are Simple
 
 <img src="/images/blog/aladtec-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
+SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
 
 The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds.
 
@@ -531,5 +531,5 @@ Aladtec is designed to be HIPAA compliant for scheduling purposes. Its documenta
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

@@ -21,7 +21,7 @@ metadata:
 
 Your CFO says scheduling is a solved problem because the schedule got posted last cycle. Your nurse manager spent her Saturday rebuilding it after three callouts and a credential expiry no one caught. Both of those statements are true at the same time, and the gap between them is what this post is about.
 
-SimpleScheduleAI is a managed nurse scheduling service for Texas Critical Access Hospitals with no IT department. It accepts an Excel roster upload, returns drafts within a 3 to 5 day go-live window, and tracks FLSA overtime thresholds against a CMS §485.635 audit trail. The six models below are how rural hospitals actually do this today, with or without a vendor.
+SimpleScheduleAI is an AI-native nurse scheduling service for Texas Critical Access Hospitals with no IT department. It accepts an Excel roster upload, returns drafts within a 3 to 5 day go-live window, and tracks FLSA overtime thresholds against a CMS §485.635 audit trail. The six models below are how rural hospitals actually do this today, with or without a vendor.
 
 ## Key Takeaways
 
@@ -157,5 +157,5 @@ For SimpleScheduleAI specifically, go-live is 3 to 5 days from Excel roster uplo
 
 There is no single best tool, because the phrase hides the real variable: who configures and runs it. For a small hospital with no IT staff, self-configured software such as EasyShifts or ScheduleAnywhere still needs the nurse manager to set it up and maintain it, while a managed service moves the build off her desk entirely. Match the model to who actually has time to run it.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

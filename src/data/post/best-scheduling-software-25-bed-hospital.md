@@ -177,7 +177,7 @@ The criteria for a 25-bed hospital are not a compressed version of what a 200-be
 
 <img src="/images/blog/best-scheduling-software-25-bed-hospital/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling dashboard for 25-bed critical access hospital" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed scheduling service designed from the start for 25-bed Critical Access Hospitals. The managed service model means a nurse manager uploads the roster via Excel and defines preferences and constraints; the AI builds three complete schedule drafts, our team checks them, and they arrive within 48 hours. She selects one, approves it, and the schedule is published. The entire administrative cycle takes under two hours per month.
+SimpleScheduleAI is an AI-native nurse scheduling service designed from the start for 25-bed Critical Access Hospitals. The managed service model means a nurse manager uploads the roster via Excel and defines preferences and constraints; the AI builds three complete schedule drafts, our team checks them, and they arrive within 48 hours. She selects one, approves it, and the schedule is published. The entire administrative cycle takes under two hours per month.
 
 **Best for:** Critical Access Hospitals at or below 25 beds with a nurse manager who also takes clinical shifts and cannot afford 8+ hours per week on scheduling overhead.
 
@@ -197,7 +197,7 @@ SimpleScheduleAI is a managed scheduling service designed from the start for 25-
 
 **Verdict:** For a 25-bed CAH where the nurse manager takes shifts and scheduling is eating clinical hours, SimpleScheduleAI is the only tool on this list purpose-built for that exact constraint. Every other tool in this list is general-purpose software applied to a specialized problem. See [how it works](/how-it-works) or the [managed service vs scheduling software](/blog/managed-service-vs-scheduling-software) comparison for the operating-model breakdown.
 
-**Ratings:** New service; in active pilot phase. No G2 or Capterra listing yet.
+**Ratings:** New service; no public G2 or Capterra reviews yet.
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -508,5 +508,5 @@ Scheduling software gives the nurse manager tools to build and manage schedules.
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

@@ -142,7 +142,7 @@ At a CAH, the failure modes are consistent:
 <div class="not-prose my-10 rounded-xl bg-blue-700 px-8 py-8 text-white">
   <h2 class="mb-2 text-2xl font-bold text-white">Built for the CAH Context, Not Retrofitted From Enterprise</h2>
   <p class="mb-6 text-blue-100">
-    SimpleScheduleAI is a managed scheduling service purpose-built for critical access hospitals, no IT involvement, Texas compliance by default, operational in 3-5 days. Request a free assessment to see how it fits your facility.
+    SimpleScheduleAI is an AI-native nurse scheduling service purpose-built for critical access hospitals, no IT involvement, Texas compliance by default, operational in 3-5 days. Request a free assessment to see how it fits your facility.
   </p>
   <a
     href="/how-it-works"
@@ -176,5 +176,5 @@ Through a managed scheduling service that generates automatic compliance documen
 
 Choosing a solution designed for a larger organization. Enterprise platforms assume IT departments, dedicated schedulers, and training time that most CAHs do not have. The implementation stalls, the platform never gets configured correctly, and the nurse manager returns to spreadsheets. The right solution matches the operational capacity of the facility, not just the feature list.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

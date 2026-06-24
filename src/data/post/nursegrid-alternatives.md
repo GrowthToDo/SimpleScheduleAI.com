@@ -125,7 +125,7 @@ The table below covers customer focus, public ratings, and setup time across Nur
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -170,7 +170,7 @@ The six strongest NurseGrid alternatives for a Critical Access Hospital are Simp
 
 <img src="/images/blog/nursegrid-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling software](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a nurse-facing app, the work is on the manager side: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
+SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling software](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a nurse-facing app, the work is on the manager side: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
 
 Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers the manager-side scheduling and compliance layer that a CAH cannot leave uncovered. The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle, and callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime thresholds. See [how the managed service works](/how-it-works) and how [AI nurse scheduling](/ai-nurse-scheduling) is applied at CAH scale. Watch the AI fill a weekly grid and rank callout replacements in the [live simulator](/simulator).
 
@@ -192,7 +192,7 @@ Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers th
 
 **Verdict:** The strongest alternative for a CAH nurse manager who leaves NurseGrid because the manager-side scheduling and compliance burden has exceeded what one person can manage while also taking clinical shifts. The honest gap is the missing nurse app; weigh that against the compliance and time return. [See how it works](/how-it-works).
 
-**Ratings:** New service; in active pilot phase. No public G2 or Capterra listing yet.
+**Ratings:** New service; no public G2 or Capterra listing yet.
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -579,5 +579,5 @@ No. SimpleScheduleAI onboards from an Excel roster upload in 3-5 days with no IT
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

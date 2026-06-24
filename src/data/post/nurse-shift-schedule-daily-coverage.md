@@ -72,7 +72,7 @@ Consistent daily coverage at CAH scale is a scheduling precision problem: you do
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI is a managed scheduling service that handles the daily coverage problem at its source: we build the schedule and manage the callout coverage logic, and the nurse manager approves the output.
+SimpleScheduleAI is an AI-native nurse scheduling service that handles the daily coverage problem at its source: we build the schedule and manage the callout coverage logic, and the nurse manager approves the output.
 
 For each scheduling cycle, the service generates three draft schedule options, balanced, fair-rotation, and overtime-minimized, incorporating Texas overtime rules, per-diem availability, and coverage minimums. When a nurse calls out, the replacement shortlist is available immediately from available, qualified staff.
 
@@ -114,5 +114,5 @@ Ready to reduce overtime and handle callouts without the Sunday evening scramble
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

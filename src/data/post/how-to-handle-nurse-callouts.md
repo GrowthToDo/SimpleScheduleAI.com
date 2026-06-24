@@ -271,5 +271,5 @@ A charge nurse callout requires filtering the replacement list to charge-qualifi
 
 SimpleScheduleAI is accessible 24/7 through the mobile interface. When a callout occurs, the nurse manager enters the event in the app and the ranked replacement list is available immediately. For urgent situations outside standard support hours, the service includes an emergency contact protocol. The callout ranking logic runs continuously, the list is always current based on the latest hour tracking data.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

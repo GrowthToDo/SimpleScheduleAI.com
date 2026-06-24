@@ -106,7 +106,7 @@ For critical access hospitals, the audit trail requirement is not about sophisti
 
 ## How SimpleScheduleAI Handles Compliance Documentation
 
-SimpleScheduleAI is a managed scheduling service. Every schedule draft, every revision, every callout replacement, and every final published schedule is logged with a timestamp. The nurse manager's approval of each schedule cycle is part of the record. When something changes mid-cycle, the change is recorded against the prior version.
+SimpleScheduleAI is an AI-native nurse scheduling service. Every schedule draft, every revision, every callout replacement, and every final published schedule is logged with a timestamp. The nurse manager's approval of each schedule cycle is part of the record. When something changes mid-cycle, the change is recorded against the prior version.
 
 This audit trail exists as a byproduct of how the service operates, not as a feature someone has to turn on. The managed service model means the specialist maintains the scheduling record because the specialist is accountable for the output. There is no version of the service where the documentation does not exist.
 
@@ -145,5 +145,5 @@ HIPAA enforcement typically follows breach incidents, complaints, or compliance 
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

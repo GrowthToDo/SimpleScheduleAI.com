@@ -217,7 +217,7 @@ Best for: Hospitals (50-200 beds) with an IT team available to configure and mai
 
 ## SimpleScheduleAI
 
-SimpleScheduleAI is a managed scheduling service built specifically for critical access hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it and delivers it within 48 hours, and ongoing configuration maintenance is handled by the service team.
+SimpleScheduleAI is an AI-native nurse scheduling service built specifically for critical access hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it and delivers it within 48 hours, and ongoing configuration maintenance is handled by the service team.
 
 FLSA overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults. The nurse manager reviews and approves schedules. Weekly scheduling time drops to 1-2 hours.
 

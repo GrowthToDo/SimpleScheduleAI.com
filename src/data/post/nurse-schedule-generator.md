@@ -73,7 +73,7 @@ The distinction matters for CAHs specifically because the staffing constraint is
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI operates as a managed scheduling service for critical access hospitals. It generates three AI-drafted schedule options per cycle, balanced, fair-rotation, and overtime-minimized, incorporating Texas overtime rules, nurse certifications, and per-diem availability into every draft.
+SimpleScheduleAI operates as an AI-native nurse scheduling service for critical access hospitals. It generates three AI-drafted schedule options per cycle, balanced, fair-rotation, and overtime-minimized, incorporating Texas overtime rules, nurse certifications, and per-diem availability into every draft.
 
 When a nurse is unavailable, the system instantly produces a replacement call list from available, qualified staff, factoring in overtime exposure and fairness distribution. The nurse manager approves replacements; they don't have to run the phone tree.
 
@@ -119,5 +119,5 @@ Ready to reduce overtime and handle callouts without the Sunday evening scramble
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

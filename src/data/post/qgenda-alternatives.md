@@ -153,7 +153,7 @@ For a critical access hospital, scheduling requirements differ from what QGenda 
       <tr class="align-top">
         <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
       </tr>
     </tbody>
@@ -168,7 +168,7 @@ The four strongest QGenda alternatives for a Critical Access Hospital are Simple
 
 <img src="/images/blog/qgenda-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [healthcare staff scheduling](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a specialist handles setup from an Excel roster upload (3-5 days), checks each draft, and maintains the system as the roster changes.
+SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [healthcare staff scheduling](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a specialist handles setup from an Excel roster upload (3-5 days), checks each draft, and maintains the system as the roster changes.
 
 Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime rules, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
@@ -460,4 +460,4 @@ QGenda does not publish pricing publicly, but enterprise contracts are typically
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service for Critical Access Hospitals in Texas. He writes about scheduling operations, CAH compliance, and workforce management for small hospitals._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service for Critical Access Hospitals in Texas. He writes about scheduling operations, CAH compliance, and workforce management for small hospitals._

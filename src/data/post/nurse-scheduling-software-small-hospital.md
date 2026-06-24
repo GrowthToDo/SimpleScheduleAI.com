@@ -179,7 +179,7 @@ The core requirements are simpler than enterprise software suggests:
 
 ## How SimpleScheduleAI Is Built for CAH-Scale Scheduling
 
-SimpleScheduleAI is a managed scheduling service designed specifically for Texas Critical Access Hospitals with 25 or fewer beds: the AI builds the schedule, our scheduling team checks it, and the nurse manager approves it. The starting point was the 20-nurse CAH, not a scaled-down version of a large-system platform.
+SimpleScheduleAI is an AI-native nurse scheduling service designed specifically for Texas Critical Access Hospitals with 25 or fewer beds: the AI builds the schedule, our scheduling team checks it, and the nurse manager approves it. The starting point was the 20-nurse CAH, not a scaled-down version of a large-system platform.
 
 Setup starts with an Excel upload of the existing nurse roster. No IT integration, no EHR connection, no custom configuration project. The service is operational in 3 to 5 business days. Every schedule cycle, the nurse manager receives three [AI-drafted schedule options](/ai-nurse-scheduling), reviews and approves the one that fits, and publishes. When a nurse calls out, the system surfaces a ranked replacement shortlist filtered by overtime status and certification. For the full build-and-approve flow, see [how it works](/how-it-works). See the AI build a CAH-scale schedule and track overtime live in the [interactive simulator](/simulator).
 
@@ -236,5 +236,5 @@ SimpleScheduleAI onboards critical access hospitals in 3 to 5 business days via 
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

@@ -149,7 +149,7 @@ availability data collection process.
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI is a managed scheduling service, not self-serve software. We handle
+SimpleScheduleAI is an AI-native nurse scheduling service, not self-serve software. We handle
 the scheduling work; you approve the result. For fairness specifically, we build your
 equity rules into the scheduling logic at setup: weekend distribution targets, holiday
 rotation cycles, charge duty frequency, and night shift caps by FTE status.
@@ -208,5 +208,5 @@ Ready to reduce overtime and handle callouts without the Sunday evening scramble
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

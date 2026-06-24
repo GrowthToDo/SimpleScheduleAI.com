@@ -112,7 +112,7 @@ The table below covers customer focus, public ratings, and setup time across the
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -157,7 +157,7 @@ The six strongest OnShift alternatives for a Critical Access Hospital are Simple
 
 <img src="/images/blog/onshift-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike OnShift's self-serve LTC platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster and policies change.
+SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike OnShift's self-serve LTC platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster and policies change.
 
 The replacement list is ranked by overtime risk and filtered by credential requirements before it reaches the manager. A replacement for an ICU shift only shows ICU-credentialed nurses, and a replacement for a charge nurse shift only shows charge-designated nurses. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle, so survey preparation is not a manual assembly task.
 
@@ -181,7 +181,7 @@ This is a different operating model than OnShift, which is a self-serve platform
 
 **Verdict:** The strongest OnShift alternative for a CAH where callout credential enforcement and CMS documentation are the primary unmet needs. The managed service model eliminates the configuration overhead that makes self-serve alternatives harder to maintain at 25-bed scale. [See how it works](/how-it-works).
 
-**Ratings:** New service in active pilot phase; no public G2 or Capterra listing yet.
+**Ratings:** New service; no public G2 or Capterra listing yet.
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 
@@ -555,5 +555,5 @@ Healthcare scheduling platforms are generally designed to be HIPAA compliant for
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

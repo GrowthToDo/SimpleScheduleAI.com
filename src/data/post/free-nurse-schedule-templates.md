@@ -76,7 +76,7 @@ Any one of these scenarios is likely to cost more than a year of professional sc
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI replaces the template entirely, not with software you configure yourself, but with a managed scheduling service where our team builds the schedule and your nurse manager approves it. We handle the shift logic, rotation tracking, overtime monitoring, and callout coverage suggestions.
+SimpleScheduleAI replaces the template entirely, not with software you configure yourself, but with an AI-native nurse scheduling service where the AI builds the schedule, our team checks it, and your nurse manager approves it. We handle the shift logic, rotation tracking, overtime monitoring, and callout coverage suggestions.
 
 The practical effect for managers who have been using templates: you go from building the schedule to reviewing it. That's a meaningful reduction in weekly workload and a significant improvement in schedule quality. We also maintain the documentation trail that templates can't provide.
 
@@ -109,5 +109,5 @@ Ready to reduce overtime and handle callouts without the Sunday evening scramble
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

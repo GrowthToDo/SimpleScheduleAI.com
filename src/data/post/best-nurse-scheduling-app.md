@@ -26,7 +26,7 @@ metadata:
 
 - Most apps marketed as "nurse scheduling apps" are general-purpose workforce scheduling tools with healthcare branding. The underlying scheduling engine does not know the difference between a nurse and a barista.
 - The critical features for hospital nursing, credential enforcement, FLSA 8-and-80 overtime logic, charge nurse coverage, and CMS documentation, are absent from most apps and require manual configuration in others.
-- SimpleScheduleAI is not a traditional app. It is a managed scheduling service with a mobile review and approval interface. The distinction matters: the nurse manager does not build schedules in the app, they review and approve schedules that are built for them.
+- SimpleScheduleAI is not a traditional app. It is an AI-native nurse scheduling service with a mobile review and approval interface. The distinction matters: the nurse manager does not build schedules in the app, they review and approve schedules that are built for them.
 - For self-serve app users, NurseGrid Manager was built specifically for nurses and has the most relevant default feature set for small hospital nursing departments.
 - App cost comparisons should include per-user fees. An app at $5/user/month costs $1,500/year for a 25-nurse department, before accounting for the configuration time required to make healthcare rules work.
 
@@ -195,7 +195,7 @@ The fourth layer is operational: callout handling at a CAH involves checking whi
 
 <img src="/images/blog/best-nurse-scheduling-app/SimpleScheduleAI.webp" alt="SimpleScheduleAI scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI operates as a managed scheduling service with a mobile interface for nurse manager review and approval. The distinction from a traditional app is deliberate: nurses do not build schedules in SimpleScheduleAI. Schedules are built for them and arrive for approval.
+SimpleScheduleAI operates as an AI-native nurse scheduling service with a mobile interface for nurse manager review and approval. The distinction from a traditional app is deliberate: nurses do not build schedules in SimpleScheduleAI. Schedules are built for them and arrive for approval.
 
 **Best for:** CAH nurse managers who want a scheduling solution that handles all four layers (coordination, credentials, compliance, and operational intelligence) without requiring the nurse manager to configure or maintain anything in an app.
 
@@ -475,5 +475,5 @@ OnShift's app was designed for LTC workflows. The shift patterns, credential cat
 
 SimpleScheduleAI provides data export in standard formats at any time. Staff roster data, scheduling history, and credential records are available for export if the hospital transitions to a different system. The process is similar to transitioning from any scheduling platform: you export your data and import it into the new system. SimpleScheduleAI does not use proprietary data formats that would create a lock-in barrier.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

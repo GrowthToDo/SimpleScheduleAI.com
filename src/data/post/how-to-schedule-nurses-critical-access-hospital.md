@@ -313,7 +313,7 @@ If the honest assessment is that 4-6 hours per week is not available without pul
 
 A managed scheduling service like [SimpleScheduleAI](/) handles steps 1-7 on behalf of the nurse manager. The nurse manager provides the roster constraints (step 1 and 2 inputs), reviews the proposed schedule (step 4-5 output), and approves. The weekly time commitment shrinks to 1-2 hours.
 
-<img src="/images/blog/how-to-schedule-nurses-critical-access-hospital/SimpleScheduleAI.webp" alt="SimpleScheduleAI managed scheduling service for CAH nurses" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/how-to-schedule-nurses-critical-access-hospital/SimpleScheduleAI.webp" alt="SimpleScheduleAI AI-native nurse scheduling service for CAH nurses" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 For a CAH where the nurse manager spends 3+ hours per week on scheduling tasks that do not require clinical judgment, formatting, overtime checking, callout calculations, that time is recoverable.
 
@@ -366,5 +366,5 @@ CMS §485.635 Conditions of Participation require CAHs to document that nursing 
 
 Yes, and many small hospitals still do it with spreadsheets. A well-maintained Excel roster with constraint documentation and a consistent build process can produce a workable schedule. The limitation is not quality, it is time. A spreadsheet-based process for a 20-nurse roster takes approximately 4-6 hours per scheduling cycle. Scheduling software reduces that to 2-4 hours. A managed service reduces it to 1-2 hours (review and approval only).
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

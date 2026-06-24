@@ -73,7 +73,7 @@ According to research with 30+ Texas CAH nurse managers, this model reduces sche
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI is a managed scheduling service, not a self-serve app. There's no configuration phase where your team has to learn a new system. A scheduling specialist handles setup via Excel roster upload (typically 3-5 business days) and configures Texas overtime rules, shift patterns, and compliance requirements for your facility.
+SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve app. There's no configuration phase where your team has to learn a new system. A scheduling specialist handles setup via Excel roster upload (typically 3-5 business days) and configures Texas overtime rules, shift patterns, and compliance requirements for your facility.
 
 After that, your nurse manager receives three AI-drafted schedule options each cycle, balanced, fair-rotation, and overtime-minimized, and approves one. When a nurse calls out, the system surfaces a replacement shortlist in seconds.
 
@@ -117,5 +117,5 @@ Ready to reduce overtime and handle callouts without the Sunday evening scramble
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

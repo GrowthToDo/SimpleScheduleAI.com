@@ -83,7 +83,7 @@ Here is how all 10 tools compare on CAH fit before we go deeper. This guide also
       <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">SimpleScheduleAI</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Texas Critical Access Hospitals; nurse scheduling software operated for you</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">3-5 days</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">$1,000 to $1,500/mo flat</td>
       </tr>
@@ -158,9 +158,9 @@ Here is how all 10 tools compare on CAH fit before we go deeper. This guide also
 
 ## 1. [SimpleScheduleAI](/how-it-works)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/SimpleScheduleAI.webp" alt="SimpleScheduleAI managed nurse scheduling service for Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/SimpleScheduleAI.webp" alt="SimpleScheduleAI AI-native nurse scheduling service for Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is a new service in active pilot phase, without public G2 or Capterra reviews yet, and the delivery model is the part that matters most for a Critical Access Hospital. You send your roster as an Excel file. The AI builds the weekly schedule using your staff list, your fairness preferences, and your compliance rules, and our scheduling team checks it before it reaches you. The nurse manager reviews and approves. There is no system for her to configure and no administrator role to fill.
+SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is a new service, without public G2 or Capterra reviews yet, and the delivery model is the part that matters most for a Critical Access Hospital. You send your roster as an Excel file. The AI builds the weekly schedule using your staff list, your fairness preferences, and your compliance rules, and our scheduling team checks it before it reaches you. The nurse manager reviews and approves. There is no system for her to configure and no administrator role to fill.
 
 The model was built around the CAH constraints in this guide. There is no IT department required because there is nothing to install or maintain on your side. CMS §485.635 staffing documentation comes out of the build as default behavior, formatted for a survey rather than reconstructed after the fact. When a nurse calls out, the team surfaces a ranked shortlist of qualified, available staff who are not already past the applicable [FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), which is the closest thing a CAH without a float pool has to a bench.
 
@@ -659,5 +659,5 @@ Scheduling software is a tool your nurse manager logs into, configures, and runs
 
 **Methodology note:** Reviewer quotes are reproduced verbatim with name, role, date, and source as recorded on the verification date. Documented product capabilities reference each vendor's own product page on that date. Where a capability is not stated on a vendor page, it is described as not documented rather than absent. Vendor offerings, ratings, and capabilities change over time; CAHs evaluating any platform should verify current capabilities directly with the vendor before deciding.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

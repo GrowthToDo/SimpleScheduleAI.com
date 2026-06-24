@@ -176,7 +176,7 @@ The baseline for your CAH: look at your last 6 months of payroll data and calcul
 
 ## How SimpleScheduleAI Is Priced?
 
-SimpleScheduleAI is a managed scheduling service for critical access hospitals in Texas. It includes full [AI nurse scheduling](/ai-nurse-scheduling) that builds the schedule for you, callout coverage shortlists, and Texas compliance tracking for your specific shift rules and nurse roster. No implementation fee. No IT integration required. Setup takes 3-5 business days via Excel roster upload. See [how it works](/how-it-works) for the full build-and-approve flow. Watch the AI build a compliant schedule and track overtime live in the [interactive simulator](/simulator).
+SimpleScheduleAI is an AI-native nurse scheduling service for critical access hospitals in Texas. It includes full [AI nurse scheduling](/ai-nurse-scheduling) that builds the schedule for you, callout coverage shortlists, and Texas compliance tracking for your specific shift rules and nurse roster. No implementation fee. No IT integration required. Setup takes 3-5 business days via Excel roster upload. See [how it works](/how-it-works) for the full build-and-approve flow. Watch the AI build a compliant schedule and track overtime live in the [interactive simulator](/simulator).
 
 Pricing is flat by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. That structure means a CAH knows its full annual cost on day one, with no implementation invoice waiting on the other side.
 
@@ -240,5 +240,5 @@ Yes. Enterprise vendors expect negotiation, particularly on implementation fees,
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

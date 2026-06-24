@@ -77,7 +77,7 @@ Here is how all 8 platforms compare at a glance before we go deeper:
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; in active pilot phase</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">3-5 days</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
       </tr>
@@ -214,7 +214,7 @@ The eight platforms worth evaluating for nurse scheduling in 2026 are SimpleSche
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-SimpleScheduleAI is a new service in active pilot phase, without public G2 or Capterra reviews yet. It operates as a managed scheduling service rather than self-serve software: the AI builds the weekly schedule using your staff roster, compliance rules, and fairness preferences, and a scheduling specialist checks it. The nurse manager reviews and approves. When a nurse calls out, the team surfaces a ranked shortlist of qualified, available, non-overtime staff within minutes.
+SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It operates as an AI-native nurse scheduling service rather than self-serve software: the AI builds the weekly schedule using your staff roster, compliance rules, and fairness preferences, and a scheduling specialist checks it. The nurse manager reviews and approves. When a nurse calls out, the team surfaces a ranked shortlist of qualified, available, non-overtime staff within minutes.
 
 The model is built for small hospitals in Texas, with Texas overtime compliance, CMS §485.635 audit trail requirements, and charge nurse coverage rules built into the scheduling logic.
 
@@ -585,11 +585,11 @@ Several shifts in the market are worth knowing about before you buy:
 
 ## How Does SimpleScheduleAI Fit in This Landscape?
 
-SimpleScheduleAI is a managed scheduling service for Critical Access Hospitals in Texas under 50 beds. It does not compete with enterprise platforms: it serves the specific segment where the nurse manager is also clinically active, scheduling consumes more weekly time than she can afford, and the self-serve software model has not solved the problem. The nurse manager reviews and approves; the service handles configuration, schedule generation, and compliance documentation.
+SimpleScheduleAI is an AI-native nurse scheduling service for Critical Access Hospitals in Texas under 50 beds. It does not compete with enterprise platforms: it serves the specific segment where the nurse manager is also clinically active, scheduling consumes more weekly time than she can afford, and the self-serve software model has not solved the problem. The nurse manager reviews and approves; the service handles configuration, schedule generation, and compliance documentation.
 
 SimpleScheduleAI is not competing with UKG or QGenda. It is built for small Critical Access Hospitals in Texas where the managed service model and state compliance requirements are most developed.
 
-The product is a managed scheduling service, not self-serve software. You send us your roster via Excel. Our AI builds the weekly schedule using fairness, overtime, and compliance rules, and our scheduling team checks it. You approve. When a nurse calls out, you get a ranked shortlist of qualified, available, non-overtime staff within minutes instead of two hours of phone calls. If you're currently building schedules in a spreadsheet, our [nurse scheduling software vs. Excel breakdown](/blog/nurse-scheduling-software-vs-excel) walks through where Excel stops working at the CAH scale.
+The product is an AI-native nurse scheduling service, not self-serve software. You send us your roster via Excel. Our AI builds the weekly schedule using fairness, overtime, and compliance rules, and our scheduling team checks it. You approve. When a nurse calls out, you get a ranked shortlist of qualified, available, non-overtime staff within minutes instead of two hours of phone calls. If you're currently building schedules in a spreadsheet, our [nurse scheduling software vs. Excel breakdown](/blog/nurse-scheduling-software-vs-excel) walks through where Excel stops working at the CAH scale.
 
 It is not the right fit for every hospital. If your facility has 75+ beds, a dedicated scheduling administrator, or needs deep EHR integration, one of the mid-market platforms will serve you better. If you are a small CAH in Texas where the nurse manager is also on the floor half the week, it is worth a conversation.
 

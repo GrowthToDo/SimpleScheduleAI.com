@@ -191,5 +191,5 @@ Scheduling software handles shift creation, coverage tracking, and callout manag
 **How should a CAH administrator evaluate whether they need full WFM or just scheduling?**
 Ask three questions. Do you have 50+ beds or 100+ employees? Do you have a dedicated HR or workforce analytics function? Are your scheduling problems primarily about labor budget variance, not just coverage gaps? If the answer to all three is yes, evaluate full WFM. If any answer is no, start with scheduling and grow from there.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, a managed nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
