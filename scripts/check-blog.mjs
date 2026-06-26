@@ -789,17 +789,21 @@ function check(file) {
     }
   }
 
-  // Word count (informational — post type is not mechanically known).
+  // Word count — only WARN when clearly outside every post-type range (post
+  // type is not mechanically known, so a count within 600-6000 is not flagged;
+  // this avoids a noise warning on every single post).
   const wordCount = bodyText
     .replace(/<[^>]+>/g, ' ')
     .replace(/[#>*_`|]/g, ' ')
     .split(/\s+/)
     .filter(Boolean).length;
-  warn(
-    `Body word count: ${wordCount} (ranges: BOFU 3000-5000, vs-service 1500-2500, MOFU 1500-2500, TOFU 1000-1500, glossary 600-1000)`,
-    0,
-    ''
-  );
+  if (wordCount < 600 || wordCount > 6000) {
+    warn(
+      `Body word count ${wordCount} is outside all post-type ranges (glossary 600 to BOFU 5000): verify the post type / depth`,
+      0,
+      ''
+    );
+  }
 
   // Hyperlinks and references (internal links AND external source citations)
   // should appear EARLY — ideally within the first 2 content sections — so an
@@ -857,9 +861,12 @@ function check(file) {
     warn('Founder credibility signal (Apollo / IIM Trichy / interviews) not found', 0, '');
   }
 
-  // Author bio canonical "built for Critical Access Hospitals" phrasing.
-  if (/_\[Pradeep Pandey\]/.test(bodyText) && !/built for Critical Access Hospitals/.test(bodyText)) {
-    warn('Author bio missing canonical "built for Critical Access Hospitals" phrasing', 0, '');
+  // Author bio references Critical Access Hospitals (any phrasing). Checks the
+  // bio line itself, so valid variants like "built for Texas Critical Access
+  // Hospitals" pass; only a bio with no CAH reference at all warns.
+  const bioLine = body.find((l) => /_\[Pradeep Pandey\]\(\/about\/pradeep-pandey\)/.test(l));
+  if (bioLine && !/Critical Access Hospital/.test(bioLine)) {
+    warn('Author bio does not reference Critical Access Hospitals', 0, '');
   }
 
   return { file: path, draft: fm?.draft === 'true', failures, warnings };
