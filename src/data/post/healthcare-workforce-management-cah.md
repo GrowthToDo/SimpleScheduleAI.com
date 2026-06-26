@@ -55,29 +55,29 @@ For the [more than 1,350 critical access hospitals operating nationally](https:/
 Enterprise WFM platforms like Kronos (UKG), API Healthcare, and Workday Workforce Management are built around the assumption that the organization has dedicated HR staff, an IT department, and a workforce management specialist who can configure, maintain, and interpret the system. Most critical access hospitals operate with [no dedicated IT department](/blog/nurse-scheduling-no-it-department-rural-hospital) at all.
 
 <div class="not-prose my-8 overflow-x-auto">
-<table class="w-full text-sm border-collapse" style="min-width:600px">
+<table class="w-full text-sm border-collapse table-fixed break-words" style="min-width:600px">
 <thead>
 <tr class="bg-slate-100 dark:bg-slate-800">
-<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100">Enterprise WFM Assumption</th>
-<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100">Critical Access Hospital Reality</th>
+<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100 align-top">Enterprise WFM Assumption</th>
+<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100 align-top">Critical Access Hospital Reality</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Dedicated HR and IT departments</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Nurse manager wears all the hats</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Dedicated HR and IT departments</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Nurse manager wears all the hats</td>
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-900">
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">A WFM analyst maintains rules and configuration</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">No one owns the software long-term</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">A WFM analyst maintains rules and configuration</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">No one owns the software long-term</td>
 </tr>
 <tr>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Three to six month implementation project</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Manager needs results in days, not months</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Three to six month implementation project</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Manager needs results in days, not months</td>
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-900">
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Per-employee monthly licensing across the whole staff</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Budget is already stretched thin</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Per-employee monthly licensing across the whole staff</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Budget is already stretched thin</td>
 </tr>
 </tbody>
 </table>
@@ -110,34 +110,34 @@ These four are the practical WFM floor for a 25-bed critical access hospital: sc
 If a critical access hospital is starting from Excel schedules and manual callout management, the WFM capability build should follow a specific order based on operational impact. The sequence below moves from the highest-effort, highest-impact capability to the documentation that becomes a natural byproduct once the basics are stable.
 
 <div class="not-prose my-8 overflow-x-auto">
-<table class="w-full text-sm border-collapse" style="min-width:600px">
+<table class="w-full text-sm border-collapse table-fixed break-words" style="min-width:600px">
 <thead>
 <tr class="bg-slate-100 dark:bg-slate-800">
-<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100">Order</th>
-<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100">Capability</th>
-<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100">Why It Comes First</th>
+<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100 align-top">Order</th>
+<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100 align-top">Capability</th>
+<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100 align-top">Why It Comes First</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">1</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Shift scheduling</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Closes the missed-coverage gaps that push hours into time-and-a-half</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">1</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Shift scheduling</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Closes the missed-coverage gaps that push hours into time-and-a-half</td>
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-900">
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">2</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Callout coverage</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Turns a manual phone-tree scramble into a ranked, qualified shortlist</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">2</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Callout coverage</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Turns a manual phone-tree scramble into a ranked, qualified shortlist</td>
 </tr>
 <tr>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">3</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Overtime visibility</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Catches overtime in real time, before it lands on the payroll report</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">3</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Overtime visibility</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Catches overtime in real time, before it lands on the payroll report</td>
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-900">
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">4</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Compliance documentation</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Leaves the staffing and credential audit trail a CMS surveyor asks for</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">4</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Compliance documentation</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Leaves the staffing and credential audit trail a CMS surveyor asks for</td>
 </tr>
 </tbody>
 </table>
@@ -164,49 +164,49 @@ For a critical access hospital with 60 to 80 employees, the per-employee model m
 For a 25-bed hospital, a CAH-specific approach is almost always the better fit. Enterprise WFM is built for scale and breadth across thousands of employees. A critical access hospital needs depth on the two or three workforce functions that actually drive its labor cost and compliance risk, delivered without an IT project. The table below contrasts the two models on the dimensions that matter most to a nurse manager.
 
 <div class="not-prose overflow-x-auto my-8">
-<table class="w-full text-sm border-collapse" style="min-width:600px">
+<table class="w-full text-sm border-collapse table-fixed break-words" style="min-width:600px">
 <thead>
 <tr class="bg-slate-100 dark:bg-slate-800">
-<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100">Dimension</th>
-<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100">Enterprise WFM Platform</th>
-<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100">Critical Access Hospital Service</th>
+<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100 align-top">Dimension</th>
+<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100 align-top">Enterprise WFM Platform</th>
+<th class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-left text-slate-900 dark:text-slate-100 align-top">Critical Access Hospital Service</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Implementation time</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Three to six months</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Days to two weeks</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Implementation time</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Three to six months</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Days to two weeks</td>
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-900">
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">IT requirement</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Dedicated IT team for integration</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">None; uses existing Excel workflows</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">IT requirement</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Dedicated IT team for integration</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">None; uses existing Excel workflows</td>
 </tr>
 <tr>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Ongoing maintenance</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">WFM analyst required</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Service team handles updates</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Ongoing maintenance</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">WFM analyst required</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Service team handles updates</td>
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-900">
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Pricing model</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Per employee, per month, across full roster</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Flat monthly fee by nurses scheduled</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Pricing model</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Per employee, per month, across full roster</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Flat monthly fee by nurses scheduled</td>
 </tr>
 <tr>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Scheduling output</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Manager builds in platform</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Drafted by service; manager approves</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Scheduling output</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Manager builds in platform</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Drafted by service; manager approves</td>
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-900">
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Callout handling</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Manager runs process in software</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Ranked shortlist generated automatically</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Callout handling</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Manager runs process in software</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Ranked shortlist generated automatically</td>
 </tr>
 <tr>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">CMS audit trail</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Available if configured correctly</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Built into every scheduling cycle</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">CMS audit trail</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Available if configured correctly</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Built into every scheduling cycle</td>
 </tr>
 </tbody>
 </table>

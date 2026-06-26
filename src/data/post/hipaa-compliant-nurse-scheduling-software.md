@@ -65,29 +65,29 @@ Scheduling software touches PHI when it connects shift assignments to specific p
     What is workforce data and what is PHI inside a scheduling tool
   </figcaption>
   <div class="overflow-x-auto">
-    <table class="w-full border-collapse text-sm" style="min-width: 560px">
+    <table class="w-full border-collapse text-sm table-fixed break-words" style="min-width: 560px">
       <thead>
         <tr class="bg-slate-100 dark:bg-slate-800">
-          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100">Workforce data (generally not PHI)</th>
-          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100">Patient-linked data (PHI)</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100 align-top">Workforce data (generally not PHI)</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100 align-top">Patient-linked data (PHI)</th>
         </tr>
       </thead>
       <tbody class="text-slate-700 dark:text-slate-300">
         <tr>
-          <td class="border border-slate-300 p-3 dark:border-slate-600">Who works which shift, in which unit</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-600">Which nurse is assigned to which patient</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600 align-top">Who works which shift, in which unit</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600 align-top">Which nurse is assigned to which patient</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 dark:border-slate-600">Nurse certifications, availability, and hours</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-600">Patient census tied to identifiable records</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600 align-top">Nurse certifications, availability, and hours</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600 align-top">Patient census tied to identifiable records</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 dark:border-slate-600">Coverage counts and overtime totals</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-600">Patient names, admission dates, room or bed by patient</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600 align-top">Coverage counts and overtime totals</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600 align-top">Patient names, admission dates, room or bed by patient</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 dark:border-slate-600">Callout replacement (qualified and overtime-safe)</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-600">Any field that can reasonably identify a patient</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600 align-top">Callout replacement (qualified and overtime-safe)</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-600 align-top">Any field that can reasonably identify a patient</td>
         </tr>
       </tbody>
     </table>
@@ -125,44 +125,44 @@ The common pattern across all of these: the vendors are well-suited for their in
 ## What Should a Critical Access Hospital Look For in Scheduling Software to Stay Compliant?
 
 <div class="not-prose overflow-x-auto my-8">
-  <table class="w-full text-sm border-collapse" style="min-width:580px">
+  <table class="w-full text-sm border-collapse table-fixed break-words" style="min-width:580px">
     <thead>
       <tr class="bg-slate-100 dark:bg-slate-800">
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold dark:text-slate-100">Requirement</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold dark:text-slate-100">What to Ask the Vendor</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold dark:text-slate-100">Red Flag Answer</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold dark:text-slate-100 align-top">Requirement</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold dark:text-slate-100 align-top">What to Ask the Vendor</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold dark:text-slate-100 align-top">Red Flag Answer</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">BAA availability</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">Will you sign a Business Associate Agreement with us?</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">No / We don't offer that / What's a BAA?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100 align-top">BAA availability</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300 align-top">Will you sign a Business Associate Agreement with us?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400 align-top">No / We don't offer that / What's a BAA?</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-900">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Data architecture</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">Is customer data isolated per tenant or stored in a shared environment?</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">Shared environment with no customer isolation</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100 align-top">Data architecture</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300 align-top">Is customer data isolated per tenant or stored in a shared environment?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400 align-top">Shared environment with no customer isolation</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Encryption</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">Is data encrypted at rest and in transit? What standard?</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">Vague answer or "we use HTTPS" without confirming at-rest encryption</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100 align-top">Encryption</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300 align-top">Is data encrypted at rest and in transit? What standard?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400 align-top">Vague answer or "we use HTTPS" without confirming at-rest encryption</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-900">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Access controls</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">Can we limit which staff see which data? Are access logs available?</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">No role-based access or audit trail</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100 align-top">Access controls</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300 align-top">Can we limit which staff see which data? Are access logs available?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400 align-top">No role-based access or audit trail</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Breach notification</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">What is your breach notification procedure and timeline?</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">No defined procedure or timeline exceeds 60 days</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100 align-top">Breach notification</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300 align-top">What is your breach notification procedure and timeline?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400 align-top">No defined procedure or timeline exceeds 60 days</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-900">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100">Data on termination</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300">How is our data returned or destroyed when we cancel?</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">Data retained indefinitely or no documented destruction process</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium dark:text-slate-100 align-top">Data on termination</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 dark:text-slate-300 align-top">How is our data returned or destroyed when we cancel?</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400 align-top">Data retained indefinitely or no documented destruction process</td>
       </tr>
     </tbody>
   </table>

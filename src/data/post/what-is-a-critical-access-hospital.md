@@ -60,39 +60,39 @@ The differences between CAHs and standard community hospitals extend well beyond
     Critical access hospital vs. community hospital at a glance
   </figcaption>
   <div class="overflow-x-auto">
-    <table class="w-full border-collapse text-sm" style="min-width: 600px">
+    <table class="w-full border-collapse text-sm table-fixed break-words" style="min-width: 600px">
       <thead>
         <tr class="bg-slate-100 dark:bg-slate-800">
-          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Dimension</th>
-          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Critical Access Hospital</th>
-          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Community Hospital</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Dimension</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Critical Access Hospital</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Community Hospital</th>
         </tr>
       </thead>
       <tbody class="text-slate-700 dark:text-slate-300">
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Medicare reimbursement</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Cost-based, 101% of reasonable costs</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Fixed prospective payment (PPS) rates</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Medicare reimbursement</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Cost-based, 101% of reasonable costs</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Fixed prospective payment (PPS) rates</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Bed limit</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">25 or fewer acute care beds (federal cap)</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">No federal bed cap</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Bed limit</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">25 or fewer acute care beds (federal cap)</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">No federal bed cap</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Location</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Rural; 35+ miles (or 15 by secondary road in mountainous terrain) from the nearest hospital</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Any setting; no distance requirement</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Location</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Rural; 35+ miles (or 15 by secondary road in mountainous terrain) from the nearest hospital</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Any setting; no distance requirement</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Average length of stay</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">96-hour annual average for acute care</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">No federal average-stay limit</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Average length of stay</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">96-hour annual average for acute care</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">No federal average-stay limit</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Nurse staffing rule</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">RN on duty or on call at all times (42 CFR 485.631)</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">CMS Conditions of Participation, 42 CFR Part 482</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Nurse staffing rule</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">RN on duty or on call at all times (42 CFR 485.631)</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">CMS Conditions of Participation, 42 CFR Part 482</td>
         </tr>
       </tbody>
     </table>

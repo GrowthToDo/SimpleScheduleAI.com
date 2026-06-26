@@ -131,31 +131,31 @@ The data to build this system already exists in every hospital's timesheets. The
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr>
-        <th class="py-3 px-4 text-left font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Cycle</th>
-        <th class="py-3 px-4 text-left font-semibold bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-300 border border-slate-200 dark:border-slate-700">Nurse A (says yes)</th>
-        <th class="py-3 px-4 text-left font-semibold bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700">Nurse B (advocates loudly)</th>
+        <th class="py-3 px-4 text-left font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Cycle</th>
+        <th class="py-3 px-4 text-left font-semibold bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-300 border border-slate-200 dark:border-slate-700 align-top">Nurse A (says yes)</th>
+        <th class="py-3 px-4 text-left font-semibold bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">Nurse B (advocates loudly)</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-3 px-4 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-medium">Cycle 1</td>
-        <td class="py-3 px-4 bg-red-600 dark:bg-red-700 text-white font-semibold border border-slate-200 dark:border-slate-700">3 weekends, Thanksgiving</td>
-        <td class="py-3 px-4 bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700">1 weekend, no holidays</td>
+        <td class="py-3 px-4 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-medium align-top">Cycle 1</td>
+        <td class="py-3 px-4 bg-red-600 dark:bg-red-700 text-white font-semibold border border-slate-200 dark:border-slate-700 align-top">3 weekends, Thanksgiving</td>
+        <td class="py-3 px-4 bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">1 weekend, no holidays</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-3 px-4 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-medium">Cycle 2</td>
-        <td class="py-3 px-4 bg-red-600 dark:bg-red-700 text-white font-semibold border border-slate-200 dark:border-slate-700">3 weekends, Christmas</td>
-        <td class="py-3 px-4 bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700">1 weekend, no holidays</td>
+        <td class="py-3 px-4 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-medium align-top">Cycle 2</td>
+        <td class="py-3 px-4 bg-red-600 dark:bg-red-700 text-white font-semibold border border-slate-200 dark:border-slate-700 align-top">3 weekends, Christmas</td>
+        <td class="py-3 px-4 bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">1 weekend, no holidays</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-3 px-4 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-medium">Cycle 3</td>
-        <td class="py-3 px-4 bg-red-600 dark:bg-red-700 text-white font-semibold border border-slate-200 dark:border-slate-700">4 weekends, New Year's</td>
-        <td class="py-3 px-4 bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700">1 weekend, no holidays</td>
+        <td class="py-3 px-4 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-medium align-top">Cycle 3</td>
+        <td class="py-3 px-4 bg-red-600 dark:bg-red-700 text-white font-semibold border border-slate-200 dark:border-slate-700 align-top">4 weekends, New Year's</td>
+        <td class="py-3 px-4 bg-green-100 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">1 weekend, no holidays</td>
       </tr>
       <tr>
-        <td class="py-3 px-4 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-medium">Outcome</td>
-        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 font-semibold border border-slate-200 dark:border-slate-700">Resignation letter by month 9</td>
-        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 font-semibold border border-slate-200 dark:border-slate-700">No awareness of the imbalance</td>
+        <td class="py-3 px-4 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-medium align-top">Outcome</td>
+        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 font-semibold border border-slate-200 dark:border-slate-700 align-top">Resignation letter by month 9</td>
+        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 font-semibold border border-slate-200 dark:border-slate-700 align-top">No awareness of the imbalance</td>
       </tr>
     </tbody>
   </table>

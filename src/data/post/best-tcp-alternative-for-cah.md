@@ -147,36 +147,36 @@ The trade-off is the staff-facing experience: TCP TimeClock+ has a nurse-facing 
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="bg-slate-100 dark:bg-slate-700">
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">Dimension</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">TCP TimeClock+</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">SimpleScheduleAI</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">Dimension</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">TCP TimeClock+</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="bg-white dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Setup</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Nurse manager configures; timeline not published - contact TCP</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">3-5 days (specialist configures)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Setup</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Nurse manager configures; timeline not published - contact TCP</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">3-5 days (specialist configures)</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-700">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Weekly scheduling</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Nurse manager builds in platform</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">1-2 hrs (nurse manager reviews)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Weekly scheduling</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Nurse manager builds in platform</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">1-2 hrs (nurse manager reviews)</td>
       </tr>
       <tr class="bg-white dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Callout coverage</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Manager checks platform manually; advanced backfill requires Humanity add-on</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">Pre-ranked shortlist delivered</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Callout coverage</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Manager checks platform manually; advanced backfill requires Humanity add-on</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">Pre-ranked shortlist delivered</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-700">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Overtime tracking</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Configurable thresholds; manager checks manually</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">Proactive, before draft presented</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Overtime tracking</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Configurable thresholds; manager checks manually</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">Proactive, before draft presented</td>
       </tr>
       <tr class="bg-white dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Staff mobile app</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">Yes: clock in/out, schedules, time-off</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">No</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Staff mobile app</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">Yes: clock in/out, schedules, time-off</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400 align-top">No</td>
       </tr>
     </tbody>
   </table>

@@ -66,69 +66,69 @@ Here is how all 8 platforms compare at a glance before we go deeper:
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
-        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:14%">Platform</th>
-        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:30%">Customer Focus</th>
-        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:24%">Public Ratings</th>
-        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Setup Time</th>
-        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100" style="width:14%">Pricing</th>
+        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:14%">Platform</th>
+        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:30%">Customer Focus</th>
+        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:24%">Public Ratings</th>
+        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:18%">Setup Time</th>
+        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:14%">Pricing</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">SimpleScheduleAI</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">3-5 days</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">SimpleScheduleAI</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Critical Access Hospitals, Texas</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">New service; no public reviews yet</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">3-5 days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Aladtec by [TCP](/blog/best-tcp-alternative-for-cah)</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Public safety, EMS, fire, small healthcare</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">2-4 weeks</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">~$200-450</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Aladtec by [TCP](/blog/best-tcp-alternative-for-cah)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Public safety, EMS, fire, small healthcare</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">2-4 weeks</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">~$200-450</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">SmartLinx</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">LTC, post-acute, senior care, behavioral health</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Capterra: 4.5/5 (6 reviews; small sample)</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">3-4 months</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">SmartLinx</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">LTC, post-acute, senior care, behavioral health</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 4.5/5 (6 reviews; small sample)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">3-4 months</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">QGenda</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Physician scheduling, larger health systems</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.6/5 (164 reviews)<br>Capterra: 4.2/5 (68 reviews)</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">6-12 weeks</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">QGenda</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Physician scheduling, larger health systems</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.6/5 (164 reviews)<br>Capterra: 4.2/5 (68 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-12 weeks</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">NurseGrid Manager</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Nurse-facing app; staff coordination</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Capterra: 4.2/5 (13 reviews; small sample)</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Days</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">NurseGrid Manager</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Nurse-facing app; staff coordination</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 4.2/5 (13 reviews; small sample)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">OnShift</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Post-acute care, SNF, LTC, senior living</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Capterra: 3.9/5 (14 reviews)</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">4-8 weeks</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">OnShift</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Post-acute care, SNF, LTC, senior living</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 3.9/5 (14 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">4-8 weeks</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Deputy</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Retail, hospitality, food service, healthcare</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.6/5 (1,400+ reviews)<br>Capterra: 4.6/5 (765 reviews)</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Hours to days</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">$4-6 per user</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Deputy</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Retail, hospitality, food service, healthcare</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.6/5 (1,400+ reviews)<br>Capterra: 4.6/5 (765 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Hours to days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">$4-6 per user</td>
       </tr>
       <tr class="align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">UKG Pro</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Large enterprises and large health systems</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.2/5<br>Capterra: 4.3/5 (716 reviews)</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">6-18 months at hospital scale</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">UKG Pro</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Large enterprises and large health systems</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.2/5<br>Capterra: 4.3/5 (716 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-18 months at hospital scale</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
       </tr>
     </tbody>
   </table>
@@ -489,46 +489,46 @@ UKG Pro holds 4.3/5 on Capterra (716 reviews) and 4.2/5 on G2. UKG is the domina
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
-        <th class="py-3 px-4 text-left font-semibold text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800">Platform</th>
-        <th class="py-3 px-4 text-left font-semibold text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800">Documented Customer Focus</th>
-        <th class="py-3 px-4 text-left font-semibold text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800">Typical Setup Time</th>
+        <th class="py-3 px-4 text-left font-semibold text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 align-top">Platform</th>
+        <th class="py-3 px-4 text-left font-semibold text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 align-top">Documented Customer Focus</th>
+        <th class="py-3 px-4 text-left font-semibold text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 align-top">Typical Setup Time</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900">SimpleScheduleAI</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Critical Access Hospitals, Texas</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">3-5 days</td>
+        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">SimpleScheduleAI</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Critical Access Hospitals, Texas</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">3-5 days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900">Aladtec by TCP</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Public safety, EMS, fire, small healthcare</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">2-4 weeks</td>
+        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">Aladtec by TCP</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Public safety, EMS, fire, small healthcare</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">2-4 weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900">NurseGrid Manager</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Nurse-facing app; staff coordination</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Days</td>
+        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">NurseGrid Manager</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Nurse-facing app; staff coordination</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900">SmartLinx</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Long-term care, post-acute, senior care, behavioral health</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">3-4 months</td>
+        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">SmartLinx</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Long-term care, post-acute, senior care, behavioral health</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">3-4 months</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900">QGenda</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Physician scheduling, larger health systems</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">6-12 weeks</td>
+        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">QGenda</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Physician scheduling, larger health systems</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">6-12 weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900">Deputy</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Retail, hospitality, food service, healthcare</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Hours to days</td>
+        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">Deputy</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Retail, hospitality, food service, healthcare</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Hours to days</td>
       </tr>
       <tr>
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900">UKG Pro</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Large enterprises across many industries; large health systems</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300">6-18 months at hospital scale</td>
+        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">UKG Pro</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Large enterprises across many industries; large health systems</td>
+        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">6-18 months at hospital scale</td>
       </tr>
     </tbody>
   </table>

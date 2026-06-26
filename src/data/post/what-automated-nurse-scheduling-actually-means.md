@@ -87,45 +87,45 @@ A useful diagnostic question for any platform: after implementation, how many ho
 ## What Are the Real Levels of Scheduling Automation?
 
 <div class="not-prose overflow-x-auto my-8">
-  <table class="w-full text-sm border-collapse" style="min-width:580px">
+  <table class="w-full text-sm border-collapse table-fixed break-words" style="min-width:580px">
     <thead>
       <tr class="bg-slate-100 dark:bg-slate-800">
-        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">Level</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">What It Does</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">What the Nurse Manager Still Does</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">Typical Weekly Hours Saved</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">Level</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">What It Does</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">What the Nurse Manager Still Does</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">Typical Weekly Hours Saved</th>
       </tr>
     </thead>
     <tbody>
       <tr class="bg-white dark:bg-slate-900">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Level 1: Structured data entry</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Digital schedule grid with shift slots, drag-and-drop assignment</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">All scheduling decisions, manual overtime checks</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">1-2 hrs (vs. paper/spreadsheet)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Level 1: Structured data entry</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Digital schedule grid with shift slots, drag-and-drop assignment</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">All scheduling decisions, manual overtime checks</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">1-2 hrs (vs. paper/spreadsheet)</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/50">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Level 2: Constraint enforcement</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Flags overtime violations, credential mismatches, minimum staffing gaps as the manager builds</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">All scheduling decisions, but with visible warnings</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">1-2 hrs (catches errors that would need correction)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Level 2: Constraint enforcement</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Flags overtime violations, credential mismatches, minimum staffing gaps as the manager builds</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">All scheduling decisions, but with visible warnings</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">1-2 hrs (catches errors that would need correction)</td>
       </tr>
       <tr class="bg-white dark:bg-slate-900">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Level 3: Auto-fill suggestions</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Suggests nurses for open slots based on availability and constraints; manager accepts or overrides</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Reviewing and accepting/declining suggestions, resolving conflicts the tool cannot handle</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">2-4 hrs</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Level 3: Auto-fill suggestions</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Suggests nurses for open slots based on availability and constraints; manager accepts or overrides</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Reviewing and accepting/declining suggestions, resolving conflicts the tool cannot handle</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">2-4 hrs</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/50">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Level 4: AI-generated draft</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Produces a complete draft schedule from rules and roster data. Manager reviews the output, not the inputs</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Reviewing draft, requesting adjustments, approving</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">6-10 hrs</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Level 4: AI-generated draft</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Produces a complete draft schedule from rules and roster data. Manager reviews the output, not the inputs</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Reviewing draft, requesting adjustments, approving</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">6-10 hrs</td>
       </tr>
       <tr class="bg-white dark:bg-slate-900">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Level 5: Managed service</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">A specialist builds the schedule, handles callout coverage, maintains the roster. Manager approves output</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Final approval and clinical judgment calls</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">8-10 hrs</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Level 5: Managed service</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">A specialist builds the schedule, handles callout coverage, maintains the roster. Manager approves output</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Final approval and clinical judgment calls</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">8-10 hrs</td>
       </tr>
     </tbody>
   </table>

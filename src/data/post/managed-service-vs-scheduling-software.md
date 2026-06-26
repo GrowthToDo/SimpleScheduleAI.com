@@ -140,59 +140,59 @@ The 8.5-hour weekly difference between the current state and a managed service a
 The key differences between scheduling software and a managed service are who builds the schedule, how compliance is configured, and what happens during a callout at 5am. Software gives the manager full control with 4-6 hours of weekly construction time. The managed service delivers 1-2 hours of review time per week, but the nurse manager cannot edit assignments directly in real time. Neither model includes a nurse-facing self-service mobile app by default for the managed service.
 
 <div class="not-prose overflow-x-auto">
-  <table class="w-full text-sm border-collapse">
+  <table class="w-full text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Feature</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Scheduling Software</th>
-        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Managed Service</th>
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap align-top">Feature</th>
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap align-top">Scheduling Software</th>
+        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap align-top">Managed Service</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Schedule construction</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Manager builds using tool</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Service delivers 3 drafts</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Schedule construction</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400 align-top">Manager builds using tool</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Service delivers 3 drafts</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Compliance configuration</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Manager configures (with IT)</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Service implements and maintains</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Compliance configuration</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400 align-top">Manager configures (with IT)</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Service implements and maintains</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Varies by platform; often manual</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Automatic, always current</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">CMS §485.635 documentation</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400 align-top">Varies by platform; often manual</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Automatic, always current</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Callout replacement</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Tool assists, manager decides</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Ranked list delivered in 2 min</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Callout replacement</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400 align-top">Tool assists, manager decides</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Ranked list delivered in 2 min</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">FLSA overtime tracking</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Configurable (varies by platform)</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Built-in healthcare default</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">FLSA overtime tracking</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400 align-top">Configurable (varies by platform)</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Built-in healthcare default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Manager control</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Full, direct control</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Review and approval decisions</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Manager control</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400 align-top">Full, direct control</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Review and approval decisions</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">System maintenance</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Manager or IT responsibility</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Service responsibility</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">System maintenance</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400 align-top">Manager or IT responsibility</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Service responsibility</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Nurse self-service mobile</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Usually yes</td>
-        <td class="py-3 text-red-700 dark:text-red-400">No</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Nurse self-service mobile</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400 align-top">Usually yes</td>
+        <td class="py-3 text-red-700 dark:text-red-400 align-top">No</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Time reduction from baseline</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">30-50% (4-6 hrs/week)</td>
-        <td class="py-3 text-green-700 dark:text-green-400">80-90% (1-2 hrs/week)</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Time reduction from baseline</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400 align-top">30-50% (4-6 hrs/week)</td>
+        <td class="py-3 text-green-700 dark:text-green-400 align-top">80-90% (1-2 hrs/week)</td>
       </tr>
     </tbody>
   </table>
@@ -203,49 +203,49 @@ The key differences between scheduling software and a managed service are who bu
 A scheduling app fits when the hospital has a dedicated scheduler or an administratively-focused nurse manager with IT support and no pressing compliance automation gaps. A managed service fits when the nurse manager takes clinical shifts, the hospital has no IT department, and CMS documentation is currently a manual pre-survey burden. The single strongest predictor: how much unprotected administrative time does the nurse manager actually have each week?
 
 <div class="not-prose overflow-x-auto my-8">
-  <table class="w-full text-sm border-collapse" style="min-width:520px">
+  <table class="w-full text-sm border-collapse table-fixed break-words" style="min-width:520px">
     <thead>
       <tr class="bg-slate-100 dark:bg-slate-700">
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">Dimension</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">Scheduling App</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">Managed Service</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">Dimension</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">Scheduling App</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">Managed Service</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Who builds schedules</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400">Nurse manager</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">Specialist (nurse manager approves)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Who builds schedules</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400 align-top">Nurse manager</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">Specialist (nurse manager approves)</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">IT required</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400">Minimal to moderate</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">None</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">IT required</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400 align-top">Minimal to moderate</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">None</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Setup time</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400">2-4 weeks</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">3-5 days</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Setup time</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400 align-top">2-4 weeks</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">3-5 days</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Weekly scheduling time</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400">4-6 hours</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">1-2 hours</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Weekly scheduling time</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400 align-top">4-6 hours</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">1-2 hours</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Compliance configuration</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400">Manual (nurse manager configures)</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">Built-in defaults</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Compliance configuration</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400 align-top">Manual (nurse manager configures)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">Built-in defaults</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Nurse self-service mobile</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">Usually yes</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400">No</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Nurse self-service mobile</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">Usually yes</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-red-700 dark:text-red-400 align-top">No</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Best for</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400">Facilities with dedicated scheduling staff and IT support</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400">CAHs with no IT, no dedicated scheduler</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Best for</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400 align-top">Facilities with dedicated scheduling staff and IT support</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">CAHs with no IT, no dedicated scheduler</td>
       </tr>
     </tbody>
   </table>

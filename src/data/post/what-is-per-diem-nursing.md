@@ -88,45 +88,45 @@ Per diem and agency nurses both provide flexible, non-permanent coverage, but th
     Staff, per diem, and agency nurses compared
   </figcaption>
   <div class="overflow-x-auto">
-    <table class="w-full border-collapse text-sm" style="min-width: 640px">
+    <table class="w-full border-collapse text-sm table-fixed break-words" style="min-width: 640px">
       <thead>
         <tr class="bg-slate-100 dark:bg-slate-800">
-          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Dimension</th>
-          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Staff nurse</th>
-          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Per diem nurse</th>
-          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Agency nurse</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Dimension</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Staff nurse</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Per diem nurse</th>
+          <th class="border border-slate-300 p-3 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Agency nurse</th>
         </tr>
       </thead>
       <tbody class="text-slate-700 dark:text-slate-300">
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Employer</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Hospital employee</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Direct, paid by the day</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Staffing agency</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Employer</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Hospital employee</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Direct, paid by the day</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Staffing agency</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Cost to the hospital</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Base wage plus benefits</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Base wage plus a premium (est. 20-30%), no benefits</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Agency bill rate (nurse pay plus agency margin)</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Cost to the hospital</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Base wage plus benefits</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Base wage plus a premium (est. 20-30%), no benefits</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Agency bill rate (nurse pay plus agency margin)</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Knows the facility</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Yes</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Usually, often former staff</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">No, needs orientation</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Knows the facility</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Yes</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Usually, often former staff</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">No, needs orientation</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Hours commitment</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Set schedule</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">As needed, no guaranteed hours</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Contracted block</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Hours commitment</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Set schedule</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">As needed, no guaranteed hours</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Contracted block</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Best for</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Core day-to-day coverage</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Flexible gap and callout coverage</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700">Sustained gaps when no pool exists</td>
+          <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Best for</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Core day-to-day coverage</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Flexible gap and callout coverage</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">Sustained gaps when no pool exists</td>
         </tr>
       </tbody>
     </table>

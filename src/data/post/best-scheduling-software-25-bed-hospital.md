@@ -54,48 +54,48 @@ Here is how the five platforms most commonly evaluated at 25-bed scale compare b
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="bg-slate-100 dark:bg-slate-800">
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Platform</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:24%">25-Bed Fit</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:14%">Critical Access Hospital Ready</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:26%">Callout Coverage</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Cost/Month</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:18%">Platform</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:24%">25-Bed Fit</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:14%">Critical Access Hospital Ready</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:26%">Callout Coverage</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:18%">Cost/Month</th>
       </tr>
     </thead>
     <tbody class="bg-white dark:bg-slate-900">
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Built for 25-bed CAHs</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Yes, built in</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Ranked shortlist in 2 min</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Not listed</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-semibold text-blue-700 dark:text-blue-400 align-top">SimpleScheduleAI</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Built for 25-bed CAHs</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Yes, built in</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Ranked shortlist in 2 min</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Not listed</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/40">
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Good for small rosters</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Adequate</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Manual with alerts</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">$200-450</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Aladtec</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Good for small rosters</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Adequate</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Manual with alerts</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">$200-450</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">NurseGrid Manager</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Nurse comm add-on only</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">No</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Broadcast only</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">~$150-300</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">NurseGrid Manager</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Nurse comm add-on only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">No</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Broadcast only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">~$150-300</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/40">
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">When I Work</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Budget option, limited compliance</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">No</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Open-shift posting</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">$2.50-6/user</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">When I Work</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Budget option, limited compliance</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">No</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Open-shift posting</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">$2.50-6/user</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Homebase</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Under 20 staff only</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">No</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Basic notifications</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">Free-$100</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Homebase</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Under 20 staff only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">No</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Basic notifications</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Free-$100</td>
       </tr>
     </tbody>
   </table>
@@ -394,31 +394,31 @@ The decision comes down to two operational questions: does the nurse manager als
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="bg-slate-100 dark:bg-slate-800">
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:34%">Your Situation</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:34%">Primary Constraint</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:32%">Recommended Tool</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:34%">Your Situation</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:34%">Primary Constraint</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:32%">Recommended Tool</th>
       </tr>
     </thead>
     <tbody class="bg-white dark:bg-slate-900">
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Nurse manager also covers clinical shifts</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Managed service is acceptable</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI - best fit</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Nurse manager also covers clinical shifts</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Managed service is acceptable</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-semibold text-blue-700 dark:text-blue-400 align-top">SimpleScheduleAI - best fit</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/40">
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Nurse manager also covers clinical shifts</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Self-serve software required</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100">Aladtec - self-serve, best small fit</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Nurse manager also covers clinical shifts</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Self-serve software required</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100 align-top">Aladtec - self-serve, best small fit</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Manager is administrative only</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Lowest cost, no CMS survey exposure</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100">When I Work</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Manager is administrative only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Lowest cost, no CMS survey exposure</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100 align-top">When I Work</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/40">
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Manager is administrative only</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200">Comm layer plus existing scheduler</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100">NurseGrid plus Aladtec</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Manager is administrative only</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Comm layer plus existing scheduler</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100 align-top">NurseGrid plus Aladtec</td>
       </tr>
     </tbody>
   </table>

@@ -105,49 +105,49 @@ The answers to these five questions, not the feature pages, determine operationa
 The two operating models differ on who configures the system, who builds each schedule, who handles callouts, setup timeline, weekly nurse manager burden, whether a staff-facing mobile app exists, and how much direct control the nurse manager retains. Self-serve platforms deliver full control with 4-6 weekly hours of construction work. Managed services deliver 1-2 hours of review time per week and delegate construction to a specialist outside the hospital.
 
 <div class="not-prose overflow-x-auto my-8">
-  <table class="w-full text-sm border-collapse" style="min-width:680px">
+  <table class="w-full text-sm border-collapse table-fixed break-words" style="min-width:680px">
     <thead>
       <tr class="bg-slate-100 dark:bg-slate-700">
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">Dimension</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">Self-Serve Platform (e.g. ShiftWizard)</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">Managed Service</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">Dimension</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">Self-Serve Platform (e.g. ShiftWizard)</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100 align-top">Managed Service</th>
       </tr>
     </thead>
     <tbody>
       <tr class="bg-white dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Who configures the system</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Hospital team, with vendor onboarding support</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Service specialist, from Excel roster upload</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Who configures the system</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Hospital team, with vendor onboarding support</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Service specialist, from Excel roster upload</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-900">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Who builds each schedule</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Nurse manager, in the platform</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Service specialist, delivered for review</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Who builds each schedule</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Nurse manager, in the platform</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Service specialist, delivered for review</td>
       </tr>
       <tr class="bg-white dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Who handles a callout</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Nurse manager, using platform tools</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Service delivers ranked shortlist; nurse manager calls</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Who handles a callout</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Nurse manager, using platform tools</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Service delivers ranked shortlist; nurse manager calls</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-900">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Typical setup time</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">2-4 weeks</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">3-5 days</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Typical setup time</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">2-4 weeks</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">3-5 days</td>
       </tr>
       <tr class="bg-white dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Weekly nurse manager burden</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">~4-6 hours</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">~1-2 hours</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Weekly nurse manager burden</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">~4-6 hours</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">~1-2 hours</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-900">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Staff-facing mobile app</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Yes (varies by platform)</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Varies by service; SimpleScheduleAI does not have one</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Staff-facing mobile app</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Yes (varies by platform)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Varies by service; SimpleScheduleAI does not have one</td>
       </tr>
       <tr class="bg-white dark:bg-slate-800">
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Direct platform control</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Full</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300">Approval authority retained; configuration delegated</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Direct platform control</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Full</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Approval authority retained; configuration delegated</td>
       </tr>
     </tbody>
   </table>

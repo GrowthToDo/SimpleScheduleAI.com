@@ -154,48 +154,48 @@ These requirements can be met by purpose-built tools at a fraction of UKG's cost
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr>
-        <th class="py-3 px-3 text-left font-semibold bg-slate-700 dark:bg-slate-600 text-white border border-slate-600 dark:border-slate-500">Dimension</th>
-        <th class="py-3 px-3 text-left font-semibold bg-[#1A2332] dark:bg-[#1A2332] text-white border border-slate-300 dark:border-slate-600">Aladtec</th>
-        <th class="py-3 px-3 text-left font-semibold bg-orange-600 dark:bg-orange-700 text-white border border-slate-300 dark:border-slate-600">SmartLinx</th>
-        <th class="py-3 px-3 text-left font-semibold bg-blue-700 dark:bg-blue-800 text-white border border-slate-300 dark:border-slate-600">SimpleScheduleAI</th>
-        <th class="py-3 px-3 text-left font-semibold bg-slate-700 dark:bg-slate-600 text-white border border-slate-300 dark:border-slate-600">UKG</th>
+        <th class="py-3 px-3 text-left font-semibold bg-slate-700 dark:bg-slate-600 text-white border border-slate-600 dark:border-slate-500 align-top">Dimension</th>
+        <th class="py-3 px-3 text-left font-semibold bg-[#1A2332] dark:bg-[#1A2332] text-white border border-slate-300 dark:border-slate-600 align-top">Aladtec</th>
+        <th class="py-3 px-3 text-left font-semibold bg-orange-600 dark:bg-orange-700 text-white border border-slate-300 dark:border-slate-600 align-top">SmartLinx</th>
+        <th class="py-3 px-3 text-left font-semibold bg-blue-700 dark:bg-blue-800 text-white border border-slate-300 dark:border-slate-600 align-top">SimpleScheduleAI</th>
+        <th class="py-3 px-3 text-left font-semibold bg-slate-700 dark:bg-slate-600 text-white border border-slate-300 dark:border-slate-600 align-top">UKG</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Launch time</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">2-4 weeks</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">3-4 months</td>
-        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700">48 hours</td>
-        <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700">6-12 months</td>
+        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Launch time</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">2-4 weeks</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">3-4 months</td>
+        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">48 hours</td>
+        <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700 align-top">6-12 months</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">IT required</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Minimal</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Moderate</td>
-        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700">None</td>
-        <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700">Dedicated IT team</td>
+        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">IT required</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Minimal</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Moderate</td>
+        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">None</td>
+        <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700 align-top">Dedicated IT team</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">CMS docs</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Manual config</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Configurable</td>
-        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700">Auto-generated</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Configurable</td>
+        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">CMS docs</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Manual config</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Configurable</td>
+        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">Auto-generated</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Configurable</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Best for</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Multi-dept, self-serve CAH</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Mid-size hospital with IT support</td>
-        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700">CAH, no IT, NM on clinical shifts</td>
-        <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700">Large health systems (500+ staff)</td>
+        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Best for</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Multi-dept, self-serve CAH</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Mid-size hospital with IT support</td>
+        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">CAH, no IT, NM on clinical shifts</td>
+        <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700 align-top">Large health systems (500+ staff)</td>
       </tr>
       <tr>
-        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Pricing</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Contact for pricing</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Contact for pricing</td>
-        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Contact for pricing</td>
-        <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700">Enterprise pricing</td>
+        <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Pricing</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Contact for pricing</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Contact for pricing</td>
+        <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Contact for pricing</td>
+        <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700 align-top">Enterprise pricing</td>
       </tr>
     </tbody>
   </table>

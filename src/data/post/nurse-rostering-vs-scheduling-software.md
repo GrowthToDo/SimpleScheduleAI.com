@@ -62,39 +62,39 @@ So calling them synonyms is not wrong, just incomplete. Splitting the work into 
 Rostering answers "who is available and qualified?" Scheduling answers "who works which shift?" The two are sequential and dependent: you cannot build a reliable schedule without an accurate roster, but a roster on its own tells you nothing about coverage. The table below shows what each function owns.
 
 <div class="not-prose overflow-x-auto my-8">
-  <table class="w-full text-sm border-collapse">
+  <table class="w-full text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">What it owns</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Rostering: "Who do I have?"</th>
-        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100">Scheduling: "Who works when?"</th>
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 align-top">What it owns</th>
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 align-top">Rostering: "Who do I have?"</th>
+        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100 align-top">Scheduling: "Who works when?"</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Staff profiles</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Name, role, employment type, contact</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Reads profile to confirm eligibility</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Staff profiles</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Name, role, employment type, contact</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Reads profile to confirm eligibility</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Credentials</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Tracks BLS, ACLS, specialty certs and expiry dates</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Blocks an assignment if a cert is expired</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Credentials</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Tracks BLS, ACLS, specialty certs and expiry dates</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Blocks an assignment if a cert is expired</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Availability</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Hard blocks, preferences, restrictions</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Builds shifts around stated availability</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Availability</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Hard blocks, preferences, restrictions</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Builds shifts around stated availability</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Overtime</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Holds contract hour limits per nurse</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Flags running hours against <a href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime">FLSA thresholds</a></td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Overtime</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Holds contract hour limits per nurse</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Flags running hours against <a href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime">FLSA thresholds</a></td>
       </tr>
       <tr>
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Callout coverage</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Supplies the eligible replacement pool</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Ranks replacements and logs the change</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Callout coverage</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Supplies the eligible replacement pool</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Ranks replacements and logs the change</td>
       </tr>
     </tbody>
   </table>
@@ -121,45 +121,45 @@ When rostering and scheduling sit in separate tools, keeping them aligned is con
 For a CAH, the functions that matter most are the ones where a roster gap turns into a scheduling failure with a compliance cost. The table below maps each function to which side owns it and what breaks at a small hospital when it is missing.
 
 <div class="not-prose overflow-x-auto my-8">
-  <table class="w-full text-sm border-collapse" style="min-width:540px">
+  <table class="w-full text-sm border-collapse table-fixed break-words" style="min-width:540px">
     <thead>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Function</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Rostering</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Scheduling</th>
-        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100">Consequence if missing</th>
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 align-top">Function</th>
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 align-top">Rostering</th>
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 align-top">Scheduling</th>
+        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100 align-top">Consequence if missing</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Credential tracking</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Core function</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Uses it</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Expired-cert assignments; survey exposure</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Credential tracking</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Core function</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Uses it</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Expired-cert assignments; survey exposure</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Overtime tracking</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Holds hour limits</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Core function (proactive flagging)</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Overtime surprises at payroll</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Overtime tracking</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Holds hour limits</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Core function (proactive flagging)</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Overtime surprises at payroll</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Callout coverage</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Supplies pool data</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Core function (ranked list)</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Manual search; uncertified replacements</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Callout coverage</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Supplies pool data</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Core function (ranked list)</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Manual search; uncertified replacements</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Audit trail</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Supplies credential history</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Core function (logs schedule changes)</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Documentation gaps during a survey</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Audit trail</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Supplies credential history</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Core function (logs schedule changes)</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Documentation gaps during a survey</td>
       </tr>
       <tr>
-        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Availability management</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Core function</td>
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Uses it</td>
-        <td class="py-3 text-slate-700 dark:text-slate-300">Schedules built on stale availability</td>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100 align-top">Availability management</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Core function</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300 align-top">Uses it</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300 align-top">Schedules built on stale availability</td>
       </tr>
     </tbody>
   </table>

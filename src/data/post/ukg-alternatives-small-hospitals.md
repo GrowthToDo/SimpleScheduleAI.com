@@ -67,31 +67,31 @@ UKG was built for health systems with dedicated IT departments, HRIS analysts, a
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr>
-        <th class="py-3 px-4 text-left font-semibold bg-slate-700 dark:bg-slate-600 text-white border border-slate-600 dark:border-slate-500">UKG Assumption</th>
-        <th class="py-3 px-4 text-left font-semibold bg-red-600 dark:bg-red-700 text-white border border-red-500 dark:border-red-600">Reality at a 25-Bed Critical Access Hospital</th>
-        <th class="py-3 px-4 text-left font-semibold bg-green-600 dark:bg-green-700 text-white border border-green-500 dark:border-green-600">Critical Access Hospital-Appropriate Alternative</th>
+        <th class="py-3 px-4 text-left font-semibold bg-slate-700 dark:bg-slate-600 text-white border border-slate-600 dark:border-slate-500 align-top">UKG Assumption</th>
+        <th class="py-3 px-4 text-left font-semibold bg-red-600 dark:bg-red-700 text-white border border-red-500 dark:border-red-600 align-top">Reality at a 25-Bed Critical Access Hospital</th>
+        <th class="py-3 px-4 text-left font-semibold bg-green-600 dark:bg-green-700 text-white border border-green-500 dark:border-green-600 align-top">Critical Access Hospital-Appropriate Alternative</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Dedicated IT department</td>
-        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800">Part-time IT contractor (if any)</td>
-        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800">Managed service (zero IT needed)</td>
+        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Dedicated IT department</td>
+        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800 align-top">Part-time IT contractor (if any)</td>
+        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">Managed service (zero IT needed)</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Dedicated HRIS/WFM analyst</td>
-        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800">Nurse manager (also on clinical shifts)</td>
-        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800">Managed service handles config for you</td>
+        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Dedicated HRIS/WFM analyst</td>
+        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800 align-top">Nurse manager (also on clinical shifts)</td>
+        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">Managed service handles config for you</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">6-12 month implementation budget</td>
-        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800">$150K-$500K not in budget</td>
-        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800">Live in 48 hours, no project required</td>
+        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">6-12 month implementation budget</td>
+        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800 align-top">$150K-$500K not in budget</td>
+        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">Live in 48 hours, no project required</td>
       </tr>
       <tr>
-        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Enterprise HRIS/payroll integration</td>
-        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800">Excel payroll, regional HR vendor</td>
-        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800">No integration required</td>
+        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Enterprise HRIS/payroll integration</td>
+        <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800 align-top">Excel payroll, regional HR vendor</td>
+        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">No integration required</td>
       </tr>
     </tbody>
   </table>
@@ -117,41 +117,41 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
     <thead>
       <tr class="bg-slate-100 dark:bg-slate-800">
-        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold">Platform</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold">Type</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold">Setup Time</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold">IT Required</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold">Facility Scale</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold align-top">Platform</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold align-top">Type</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold align-top">Setup Time</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold align-top">IT Required</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-left font-semibold align-top">Facility Scale</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">UKG (Kronos)</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Enterprise WFM suite</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">6-12 months</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Yes, significant</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">200+ beds, health systems</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">UKG (Kronos)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Enterprise WFM suite</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">6-12 months</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Yes, significant</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">200+ beds, health systems</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Self-serve platform</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">2-4 weeks</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Minimal</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">25-200 beds, admin capacity needed</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Aladtec</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Self-serve platform</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">2-4 weeks</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Minimal</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">25-200 beds, admin capacity needed</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100">SmartLinx</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Mid-market WFM</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">3-4 months</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Moderate</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">50-200 beds, with IT support</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">SmartLinx</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Mid-market WFM</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">3-4 months</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Moderate</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">50-200 beds, with IT support</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">Managed service</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">48 hours</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">None</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300">CAH-native, up to 25 beds</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-semibold text-blue-700 dark:text-blue-400 align-top">SimpleScheduleAI</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Managed service</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">48 hours</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">None</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">CAH-native, up to 25 beds</td>
       </tr>
     </tbody>
   </table>
@@ -297,51 +297,51 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
-        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:30%">Feature</th>
-        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:35%">UKG</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:35%">SimpleScheduleAI</th>
+        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:30%">Feature</th>
+        <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:35%">UKG</th>
+        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400 align-top" style="width:35%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation timeline</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">6-12 months, dedicated IT required</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">48 hours, Excel upload</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Implementation timeline</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-12 months, dedicated IT required</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">48 hours, Excel upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">IT infrastructure required</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Yes, significant</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">None</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">IT infrastructure required</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Yes, significant</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">None</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Yes, if configured correctly</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Yes, automatic default</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">CMS §485.635 documentation</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Yes, if configured correctly</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">Yes, automatic default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime threshold tracking</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Yes, if configured correctly</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Yes, built-in default</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">FLSA overtime threshold tracking</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Yes, if configured correctly</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">Yes, built-in default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Ongoing configuration burden</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">High, requires HRIS/IT staff</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">None, service manages</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Ongoing configuration burden</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">High, requires HRIS/IT staff</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">None, service manages</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Weekly scheduling time</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">6-12 hours (manager + IT)</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">1-2 hours (review + approval)</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Weekly scheduling time</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-12 hours (manager + IT)</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">1-2 hours (review + approval)</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Enterprise workforce analytics</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Yes, comprehensive</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Reporting via service</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Enterprise workforce analytics</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Yes, comprehensive</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">Reporting via service</td>
       </tr>
       <tr class="align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Best fit facility size</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">200+ beds, large health systems</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Up to 25 beds (CAHs)</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Best fit facility size</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">200+ beds, large health systems</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">Up to 25 beds (CAHs)</td>
       </tr>
     </tbody>
   </table>

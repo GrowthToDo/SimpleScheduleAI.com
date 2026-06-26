@@ -83,57 +83,57 @@ Being honest about AI limitations matters. CAH administrators need accurate expe
     Manual, traditional software, and AI-assisted scheduling compared
   </figcaption>
   <div class="overflow-x-auto">
-    <table class="w-full border-collapse text-sm" style="min-width: 650px">
+    <table class="w-full border-collapse text-sm table-fixed break-words" style="min-width: 650px">
       <thead>
         <tr class="bg-slate-100 dark:bg-slate-800">
-          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Dimension</th>
-          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Manual (Excel/paper)</th>
-          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100">Traditional software</th>
-          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-primary dark:border-slate-700 dark:text-blue-400">AI-assisted (managed)</th>
+          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Dimension</th>
+          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Manual (Excel/paper)</th>
+          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Traditional software</th>
+          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-primary dark:border-slate-700 dark:text-blue-400 align-top">AI-assisted (managed)</th>
         </tr>
       </thead>
       <tbody>
         <tr class="align-top">
-          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Manager time per cycle</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">8 to 12 hours</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">4 to 6 hours</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">1 to 2 hours (review only)</td>
+          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Manager time per cycle</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">8 to 12 hours</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">4 to 6 hours</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">1 to 2 hours (review only)</td>
         </tr>
         <tr class="align-top bg-slate-50 dark:bg-slate-900">
-          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Draft options</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">1 (what the manager built)</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">1 (built faster)</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">3 (balanced, fair, overtime-minimized)</td>
+          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Draft options</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">1 (what the manager built)</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">1 (built faster)</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">3 (balanced, fair, overtime-minimized)</td>
         </tr>
         <tr class="align-top">
-          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Callout response time</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">30 to 60 min (phone tree)</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">15 to 30 min (filtered list)</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Minutes (ranked shortlist)</td>
+          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Callout response time</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">30 to 60 min (phone tree)</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">15 to 30 min (filtered list)</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">Minutes (ranked shortlist)</td>
         </tr>
         <tr class="align-top bg-slate-50 dark:bg-slate-900">
-          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Overtime detection</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">After payroll (too late)</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">During review (if checked)</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">During build (proactive)</td>
+          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Overtime detection</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">After payroll (too late)</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">During review (if checked)</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">During build (proactive)</td>
         </tr>
         <tr class="align-top">
-          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Fairness tracking</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Informal or none</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Available if configured</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Built into every draft</td>
+          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Fairness tracking</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">Informal or none</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">Available if configured</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">Built into every draft</td>
         </tr>
         <tr class="align-top bg-slate-50 dark:bg-slate-900">
-          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">IT requirement</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">None</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Moderate (config + training)</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">None (Excel upload)</td>
+          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">IT requirement</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">None</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">Moderate (config + training)</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">None (Excel upload)</td>
         </tr>
         <tr class="align-top">
-          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">CMS audit trail</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Manual documentation</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Built in on premium tiers</td>
-          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Automatic on every change</td>
+          <td class="border border-slate-300 px-4 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">CMS audit trail</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">Manual documentation</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">Built in on premium tiers</td>
+          <td class="border border-slate-300 px-4 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300 align-top">Automatic on every change</td>
         </tr>
       </tbody>
     </table>
