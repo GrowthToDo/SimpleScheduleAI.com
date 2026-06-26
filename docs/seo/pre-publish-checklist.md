@@ -2,6 +2,8 @@
 
 Run this before publishing any new page or blog post.
 
+**Mechanical items are enforced by `npm run check-blog src/data/post/<slug>.md` (`scripts/check-blog.mjs`), not by hand or by a review agent.** Run it and fix every HARD FAILURE first. It deterministically checks dashes, the full AI-tone list, both pillars + `/how-it-works`, canonical-matches-slug, TOC anchor/heading integrity, merged-heading + stray `?`, no-`CAH`-in-headings, stray MDX, image-pool membership + no-duplication, dark-mode table variants, Sources numbered + not-in-TOC, date sanity, Key-Takeaways-before-TOC, no-TL;DR, and the retired-pilot ban. The human/agent pass then handles ONLY the JUDGMENT items a script cannot see (excerpt-is-a-distinct-hook, title-overclaim, anecdote-as-real, KT/excerpt framing matches body, structural AI-tells, reviewer-quote accuracy, worked-math honesty, image relevance/tone). If a rule can be verified by a script, it belongs in the script, not in a manual re-read.
+
 ## Part 0 Reconciliation (read first — overrides any conflicting item below)
 
 This checklist predates Google's AI optimization guidance. See the skill's PART 0. Where an item below conflicts with this block, this block wins.

@@ -79,46 +79,46 @@ Spawn a `general-purpose` agent with the research brief attached. It must:
 3. **For posts with competitor content:** load `.claude/skills/competitor-reviews.md` — it will direct to the dossier first, then live fetch only if needed
 4. Write the complete post following all SEO/AEO skill rules
 5. Embed all internal links and source citations from the research brief
-6. Return the full draft as output — no partial drafts
+6. Obey the mechanical guardrails while writing (the `check-blog` gate enforces them, so authoring them in saves a fix round): no em-dashes or en-dashes; no AI-tone phrases; question-form H2s; the 2-CTA pattern (`See pricing`/`See how it works` plus `Book a call with our team`), never `/pilot`; both pillar links plus `/how-it-works`; no `CAH` inside any heading or table header; dark-mode variants on every table; Key Takeaways before the Table of Contents; TOC anchor text that exactly matches the heading
+7. Return the full draft as output — no partial drafts
 
 **For editing existing drafts** (not new posts): the writing agent reads the existing file and applies only the changes needed. It does not rewrite sections that are already correct.
 
-### Phase 3 — Review agent (mechanical checklist)
+### Phase 2.5 — Mechanical gate (deterministic, runs BEFORE human review)
 
-Spawn a `feature-dev:code-reviewer` agent with the draft and the checklist path. It must check every item in `docs/seo/pre-publish-checklist.md` mechanically — no assumptions, no skipped items.
+Mechanical, grep-able rules are not reviewed by hand or by an agent anymore. A confidence-filtered review agent is built to drop exactly the low-severity, high-frequency formatting defects the checklist treats as blockers, which is why those defects kept slipping through. They are now enforced by a script that never misses and (by design) never false-positives. After Phase 2, the main agent runs:
 
-Mandatory checks the review agent must run:
+```
+npm run check-blog src/data/post/<slug>.md
+```
 
-- Em-dashes (`—`) and en-dashes (`–`) anywhere in the file including frontmatter, table cells, blockquotes, CTA cards
-- AI-tone phrases (full list in the checklist)
-- No inline `<svg>` in `.md` files — all visuals must be Tailwind `<div>` or `<table>` elements
-- Every `<table>` has `dark:` variants on all `bg-*`, `text-*`, and `border-*` classes
-- Blockquote format: `> "Quote."` → blank `>` line → `> Name, Role, Date, Source` (missing blank line = C&D violation)
-- Key Takeaways language matches body exactly — if body says "not documented on product page", KTs cannot say "no X" or "lacks X"
-- Excerpt language matches body (same rule as KTs)
-- TOC anchor text matches H2/H3 heading text exactly, including trailing `?`
-- No heading ends with `?` only — headings must be complete questions, not nominalized phrases ("What a Healthcare Scheduling App Is" is wrong)
-- Both pillar pages linked: `/nurse-scheduling-software` AND `/critical-access-hospital-scheduling`
-- `/how-it-works` linked from any section describing the SimpleScheduleAI service
-- Every stat/regulatory claim has a hyperlink to a primary source
-- Image URL verified (no broken link, no placeholder, ID exists in `scripts/image-pool.json`)
-- Image ID not duplicated across other posts
-- Featured image YAML uses no quotes: `image: https://...` not `image: 'https://...'`
-- Canonical URL matches slug: `https://simplescheduleai.com/blog/[slug]`
-- No volume language near competitor names ("consistently", "many reviewers", "most users")
-- All reviewer quotes verbatim with name, role, date, source — no anonymous quotes
+`scripts/check-blog.mjs` is the single authoritative mechanical gate. It HARD-FAILS on every deterministic checklist rule: em/en-dashes, the full AI-tone list, inline `<svg>`, blank-line-in-`<div>`, the retired `/pilot` strings, the 2-CTA pattern, both pillars + `/how-it-works`, canonical-matches-slug, TOC anchor/heading integrity, merged-heading + stray `?`, no-`CAH`-in-headings, stray MDX, image-pool membership + no-duplication, dark-mode table variants, Sources numbered + not-in-TOC, date sanity, Key-Takeaways-before-TOC, no-TL;DR, links-to-drafts, DSHS/§62.002/8-and-80. Fix EVERY hard failure before review. Warnings are advisory (word count, `/ai-nurse-scheduling`, `.webp`, table classes, volume language) and a human judges those. If you find a new mechanical rule, add it to the script, not to a human's to-do list.
 
-The review agent returns a pass/fail list with file line numbers for every failure. The main agent applies only the specific fixes flagged — it does not re-run the writing agent.
+### Phase 3 — Review agent (JUDGMENT ONLY)
+
+Once `check-blog` is clean, spawn a `feature-dev:code-reviewer` agent for ONLY the items a script cannot judge. Do not ask it to re-check anything the gate already enforced.
+
+- **Excerpt is a distinct hook**, not a restatement of the intro or any Key Takeaway bullet
+- **Key Takeaways and excerpt framing match the body** (if body says "not documented on product page," KT/excerpt cannot say "no X"/"lacks X")
+- **Title does not overclaim or contradict the body**
+- **No anecdote presented as a real event**; opening scenarios stay illustrative and conditional
+- **No claim/metaphor/CTA repeated 3+ times**; structural AI-tells (negative parallelism, self-posed rhetorical question, anaphora/tricolon abuse, dead-metaphor repetition, "despite its challenges" dismissal, invented concept labels)
+- **Worked-math is honest** (assumption stated and labeled illustrative; never a customer result)
+- **Reviewer quotes are verbatim** with name, role, date, source; no volume language near competitor names
+- **Image relevance and tone** (a human eyeballs the rendered image; an agent cannot see it)
+
+The review agent returns a pass/fail list with line numbers. The main agent applies only the flagged fixes; it does not re-run the writing agent.
 
 ### Pipeline summary
 
 ```
 Main agent
   └─ spawn Research agent (read-only) → research brief
-  └─ spawn Writing agent (brief + skills) → full draft
-  └─ spawn Review agent (draft + checklist) → pass/fail list
+  └─ spawn Writing agent (brief + skills + guardrails) → full draft
+  └─ run `npm run check-blog <slug>` → fix EVERY hard failure (mechanical gate)
+  └─ spawn Review agent (judgment-only) → pass/fail list
   └─ apply fixes directly
-  └─ run Prettier, commit, push
+  └─ re-run `npm run check-blog` until clean, then Prettier, commit, push
 ```
 
-Skipping any phase is not permitted. A post that bypasses Phase 1 will miss competitor data. A post that bypasses Phase 3 will miss formatting and dark-mode violations that only show up on the live site.
+Skipping a phase is not permitted. The mechanical gate is what makes a post pass the checklist on the first human read: it deterministically catches the formatting, structure, link, and image defects that a confidence-filtered review agent is designed to drop.

@@ -291,8 +291,9 @@ const HUB_PAGES = [
   '/critical-access-hospital-scheduling',
   '/nurse-scheduling-software',
   '/how-it-works',
+  '/ai-nurse-scheduling',
   '/roi',
-  '/pilot',
+  '/pricing',
 ];
 
 function checkInternalLinks(content, fm) {

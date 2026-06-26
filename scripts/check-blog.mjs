@@ -2,6 +2,11 @@
 /**
  * Pre-publish mechanical checks for blog posts.
  *
+ * The single authoritative MECHANICAL pre-publish linter for blog posts.
+ * Every HARD FAIL here is a true, unambiguous, deterministic defect. Anything
+ * fuzzy or context-dependent is a WARN, so the gate passes cleanly on
+ * already-compliant posts. Trust over coverage.
+ *
  * Runs every greppable rule from docs/seo/pre-publish-checklist.md plus the
  * conventions we've established post-checklist (Sources not in TOC, no
  * §62.002 cite, no DSHS, no 8-and-80 SSAI attribution). Works on drafts and
@@ -19,12 +24,13 @@
  *   1  one or more files failed a hard gate
  *   2  invalid arguments / file not found
  */
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const POSTS_DIR = resolve(__dirname, '../src/data/post');
+const IMAGE_POOL_PATH = resolve(__dirname, 'image-pool.json');
 
 const COLOR = process.stdout.isTTY
   ? { red: '\x1b[31m', green: '\x1b[32m', yellow: '\x1b[33m', dim: '\x1b[90m', bold: '\x1b[1m', reset: '\x1b[0m' }
@@ -36,12 +42,14 @@ const WARN = `${COLOR.yellow}⚠${COLOR.reset}`;
 
 // AI-tone phrases that must not appear in our voice. Per checklist, verbatim
 // Capterra/G2 reviewer quotes are exempted. We detect blockquote regions and
-// skip them. Our paraphrasing must still avoid the phrase.
+// skip them. Our paraphrasing must still avoid the phrase. This is the FULL
+// checklist list.
 const AI_TONE_PHRASES = [
   'delve',
   'dive into',
   "it's worth noting",
   'in conclusion',
+  'in summary',
   'robust',
   'leverage',
   'game-changing',
@@ -53,6 +61,10 @@ const AI_TONE_PHRASES = [
   'harness',
   'navigating',
   'streamline',
+  'serves as',
+  'stands as',
+  'marks a',
+  'represents a',
 ];
 
 // Anything in this list is forbidden anywhere (including blockquotes — these
@@ -63,6 +75,20 @@ const FORBIDDEN_DASHES = [
   { char: '–', name: 'en-dash' },
 ];
 
+// Retired free-pilot language. The free pilot is RETIRED; any of these in the
+// body is a hard failure (the offer is now flat paid pricing + book-a-call).
+const RETIRED_PILOT_STRINGS = [
+  '/pilot',
+  'Apply for a Pilot Spot',
+  'Claim a Pilot Spot',
+  'free pilot',
+  '60-day pilot',
+  'Get a Free Schedule Review',
+];
+
+// Canonical booking host fragment for the secondary CTA.
+const BOOKING_URL_FRAGMENT = 'cal.com/gautham-8bdvdx';
+
 function readFile(path) {
   try {
     return readFileSync(path, 'utf8').split(/\r?\n/);
@@ -72,17 +98,56 @@ function readFile(path) {
   }
 }
 
+/**
+ * Parse YAML-ish frontmatter. Captures top-level `key: value` pairs AND one
+ * level of nested keys (e.g. `metadata:` followed by an indented `canonical:`),
+ * exposing the deepest nested leaf on `fm` directly (so `fm.canonical` resolves
+ * even though canonical is nested under `metadata:`). Top-level keys win over
+ * nested keys of the same name.
+ */
 function extractFrontmatter(lines) {
   if (lines[0] !== '---') return null;
   const end = lines.indexOf('---', 1);
   if (end === -1) return null;
   const fm = {};
+  const nested = {};
+  let currentParent = null;
+  let parentIndent = 0;
   for (let i = 1; i < end; i++) {
-    const m = lines[i].match(/^(\w+):\s*(.*)$/);
-    if (m) fm[m[1]] = m[2];
+    const raw = lines[i];
+    if (raw.trim() === '') continue;
+    const indentMatch = raw.match(/^(\s*)/);
+    const indent = indentMatch ? indentMatch[1].length : 0;
+    const kv = raw.match(/^(\s*)([\w-]+):\s*(.*)$/);
+    if (!kv) continue;
+    const key = kv[2];
+    const value = kv[3];
+    if (indent === 0) {
+      // Top-level key.
+      currentParent = value === '' ? key : null;
+      parentIndent = indent;
+      if (value !== '') fm[key] = value;
+    } else if (currentParent && indent > parentIndent) {
+      // One level of nesting under the most recent parent-with-no-value.
+      if (value !== '') nested[key] = value;
+    }
+  }
+  // Merge nested leaves without clobbering top-level keys of the same name.
+  for (const [k, v] of Object.entries(nested)) {
+    if (!(k in fm)) fm[k] = v;
   }
   fm._end = end;
   return fm;
+}
+
+// Strip surrounding single/double quotes from a frontmatter scalar.
+function unquote(v) {
+  if (!v) return v;
+  const t = v.trim();
+  if ((t.startsWith("'") && t.endsWith("'")) || (t.startsWith('"') && t.endsWith('"'))) {
+    return t.slice(1, -1);
+  }
+  return t;
 }
 
 function inBlockquote(line) {
@@ -102,6 +167,68 @@ function tocRange(lines) {
   return { start, end };
 }
 
+/**
+ * GitHub-style heading slug, matching Astro's auto-generated heading IDs:
+ * lowercase; drop any character that is not alphanumeric, space, or hyphen
+ * (so `?`, `.`, `:`, `&`, parentheses are removed); trim; spaces -> hyphens;
+ * collapse runs of hyphens. Markdown link syntax inside the heading is reduced
+ * to its visible text first.
+ */
+function slugify(text) {
+  return stripInlineMarkup(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9 -]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
+
+// Reduce inline markdown/HTML in a heading or TOC label to plain visible text:
+// [text](url) -> text, drop emphasis markers, strip stray tags.
+function stripInlineMarkup(text) {
+  return text
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1') // [text](url) -> text
+    .replace(/[*_`]+/g, '') // emphasis / code markers
+    .replace(/<[^>]+>/g, '') // stray inline HTML
+    .trim();
+}
+
+// Collect markdown ATX headings (level 2..6) from the body with their plain text.
+function collectHeadings(lines, fromOffset) {
+  const headings = [];
+  lines.forEach((line, i) => {
+    const m = line.match(/^(#{2,6})\s+(.*)$/);
+    if (m) {
+      const text = stripInlineMarkup(m[2]);
+      headings.push({ level: m[1].length, text, raw: m[2].trim(), slug: slugify(m[2]), lineNo: fromOffset + i + 1 });
+    }
+  });
+  return headings;
+}
+
+// Color-utility detector. Returns true only for genuine Tailwind COLOR
+// utilities (bg-/text-/border- followed by a palette color + shade, or a
+// named color). Layout utilities like text-left, text-xs, border-b,
+// border-collapse, border-2 are NOT colors and return false — this is what
+// keeps the dark-mode table check from false-positiving.
+const NAMED_COLORS = new Set(['white', 'black', 'transparent', 'current', 'inherit']);
+function colorPrefixOf(cls) {
+  // cls is a bare utility token, possibly with a variant prefix already stripped.
+  const m = cls.match(/^(bg|text|border)-(.+)$/);
+  if (!m) return null;
+  const prefix = m[1];
+  const rest = m[2];
+  // Named color, e.g. bg-white, text-black.
+  if (NAMED_COLORS.has(rest)) return prefix;
+  // Palette color + numeric shade, e.g. slate-100, blue-700, red-500.
+  // Also tolerate an opacity suffix (blue-700/50) and arbitrary values.
+  if (/^[a-z]+-\d{2,3}(\/\d{1,3})?$/.test(rest)) return prefix;
+  if (/^\[#?[0-9a-fA-F]{3,8}\]$/.test(rest)) return prefix; // arbitrary hex value
+  // Everything else (left, center, xs, sm, lg, b, b-2, t, collapse, 2, x, y...)
+  // is a layout/size/style utility, not a color.
+  return null;
+}
+
 function check(file) {
   const path = resolve(file);
   const lines = readFile(path);
@@ -114,6 +241,9 @@ function check(file) {
   const fail = (rule, lineNo, snippet) => failures.push({ rule, lineNo, snippet });
   const warn = (rule, lineNo, snippet) => warnings.push({ rule, lineNo, snippet });
 
+  const selfSlug = basename(path, '.md');
+  const bodyText = body.join('\n');
+
   // --- HARD GATES ---
 
   // 1. No em-dashes or en-dashes anywhere (including frontmatter and blockquotes).
@@ -124,9 +254,13 @@ function check(file) {
   });
 
   // 2. No AI-tone phrases in our voice (blockquotes exempt — verbatim quotes
-  //    can contain the word, our paraphrasing cannot).
+  //    can contain the word, our paraphrasing cannot). The canonical italic
+  //    author-bio line is also exempt: its exact wording ("He serves as Deputy
+  //    General Manager of Operations at Apollo Hospitals") is mandated verbatim
+  //    by the checklist, so "serves as" there is required, not AI-slop.
   body.forEach((line, i) => {
     if (inBlockquote(line)) return;
+    if (/_\[Pradeep Pandey\]\(\/about\/pradeep-pandey\)/.test(line)) return;
     const lower = line.toLowerCase();
     for (const phrase of AI_TONE_PHRASES) {
       if (lower.includes(phrase)) {
@@ -153,7 +287,11 @@ function check(file) {
     const opens = (line.match(/<div(\s|>)/g) || []).length;
     const closes = (line.match(/<\/div>/g) || []).length;
     if (inHtmlDiv > 0 && line.trim() === '') {
-      fail('Blank line inside <div> block (Astro escapes subsequent tags)', i + 1, `(block opened at line ${divStart + 1})`);
+      fail(
+        'Blank line inside <div> block (Astro escapes subsequent tags)',
+        i + 1,
+        `(block opened at line ${divStart + 1})`
+      );
     }
     if (inHtmlDiv === 0 && opens > 0) divStart = i;
     inHtmlDiv += opens - closes;
@@ -173,8 +311,8 @@ function check(file) {
   }
 
   // 6. No links to known draft posts. Dynamically scan draft slugs at runtime.
-  const draftSlugs = readdirSync(POSTS_DIR)
-    .filter((f) => f.endsWith('.md'))
+  const allPostFiles = readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'));
+  const draftSlugs = allPostFiles
     .map((f) => ({ slug: basename(f, '.md'), path: resolve(POSTS_DIR, f) }))
     .filter(({ path: p }) => {
       try {
@@ -184,7 +322,6 @@ function check(file) {
       }
     })
     .map(({ slug }) => slug);
-  const selfSlug = basename(path, '.md');
   body.forEach((line, i) => {
     for (const slug of draftSlugs) {
       if (slug === selfSlug) continue;
@@ -195,14 +332,19 @@ function check(file) {
 
   // 7. No DSHS for Texas hospital licensing (licensing moved to HHSC Jan 2025).
   body.forEach((line, i) => {
-    if (/\bDSHS\b/.test(line)) fail('DSHS — Texas hospital licensing is HHSC since Jan 2025', bodyOffset + i + 1, line.trim().slice(0, 100));
+    if (/\bDSHS\b/.test(line))
+      fail('DSHS — Texas hospital licensing is HHSC since Jan 2025', bodyOffset + i + 1, line.trim().slice(0, 100));
   });
 
   // 8. No Texas Labor Code §62.002 cite (wrong section — that is state
   //    minimum wage, not overtime).
   body.forEach((line, i) => {
     if (/§?\s*62\.002/.test(line) && /Texas Labor Code/i.test(line)) {
-      fail('Texas Labor Code §62.002 — wrong section (use FLSA Fact Sheet #54)', bodyOffset + i + 1, line.trim().slice(0, 120));
+      fail(
+        'Texas Labor Code §62.002 — wrong section (use FLSA Fact Sheet #54)',
+        bodyOffset + i + 1,
+        line.trim().slice(0, 120)
+      );
     }
   });
 
@@ -211,23 +353,43 @@ function check(file) {
   body.forEach((line, i) => {
     if (inBlockquote(line)) return;
     if (/8-and-80/.test(line)) {
-      const ctx = line.toLowerCase();
       // Only flag when the SSAI verb directly governs 8-and-80 within the same
       // sentence (short gap, no period), so educational/"confirm with us" mentions
       // in the same paragraph-line are not false-flagged.
-      const ssaiAttrib = /(simplescheduleai|ssai|the service|our (service|scheduler))\s+(builds?|tracks?|applies|enforces?|handles?|has?|includes?|covers?|uses?)[^.]{0,60}8-and-80/i.test(line);
-      const featurePhrasing = /8-and-80[^.]{0,40}(built in|built-in|by default|automatic|applied automatically)/i.test(line);
+      const ssaiAttrib =
+        /(simplescheduleai|ssai|the service|our (service|scheduler))\s+(builds?|tracks?|applies|enforces?|handles?|has?|includes?|covers?|uses?)[^.]{0,60}8-and-80/i.test(
+          line
+        );
+      const featurePhrasing = /8-and-80[^.]{0,40}(built in|built-in|by default|automatic|applied automatically)/i.test(
+        line
+      );
       if (ssaiAttrib || featurePhrasing) {
-        fail('FLSA 8-and-80 attributed to SimpleScheduleAI as a feature (not yet shipped)', bodyOffset + i + 1, line.trim().slice(0, 120));
+        fail(
+          'FLSA 8-and-80 attributed to SimpleScheduleAI as a feature (not yet shipped)',
+          bodyOffset + i + 1,
+          line.trim().slice(0, 120)
+        );
       }
     }
   });
 
-  // 10. Frontmatter: image URL must not be quoted, canonical must be present,
-  //     author must be Pradeep Pandey.
+  // 10. Frontmatter: image present and (for remote URLs) not quoted; author
+  //     canonical name. The checklist no-quotes rule targets remote `https://`
+  //     featured images. A quoted local `~/assets...` path is defensible YAML
+  //     (a bare leading `~` is significant in YAML), so it is a WARN, not a
+  //     hard fail — only quoted REMOTE URLs hard-fail.
   if (fm) {
     if (fm.image && (fm.image.startsWith("'") || fm.image.startsWith('"'))) {
-      fail("Frontmatter image: must not be quoted", 0, `image: ${fm.image.slice(0, 80)}`);
+      const inner = unquote(fm.image);
+      if (/^https?:\/\//i.test(inner)) {
+        fail('Frontmatter image: remote URL must not be quoted', 0, `image: ${fm.image.slice(0, 80)}`);
+      } else {
+        warn(
+          'Frontmatter image: local-asset path is quoted (acceptable, but unquoted preferred)',
+          0,
+          `image: ${fm.image.slice(0, 80)}`
+        );
+      }
     }
     if (!fm.image) fail('Frontmatter image: missing', 0, '');
     if (fm.author && !/Pradeep Pandey/.test(fm.author)) {
@@ -235,24 +397,47 @@ function check(file) {
     }
   }
 
-  // 11. Required internal hub links: both pillars + /how-it-works.
-  const bodyText = body.join('\n');
-  const required = [
+  // 11. Required internal hub links: both pillars + /how-it-works (HARD).
+  //     /ai-nurse-scheduling is a WARN-only third hub (handled below).
+  const requiredHubs = [
     { path: '/nurse-scheduling-software', label: 'pillar 1 (nurse scheduling software)' },
     { path: '/critical-access-hospital-scheduling', label: 'pillar 2 (critical access hospital scheduling)' },
     { path: '/how-it-works', label: '/how-it-works' },
-    { path: '/pilot', label: '/pilot CTA' },
   ];
-  for (const r of required) {
+  for (const r of requiredHubs) {
     if (!bodyText.includes(`(${r.path})`)) fail(`Required link missing: ${r.label}`, 0, '');
   }
 
-  // 12. CTA pattern: Apply for a Pilot Spot + Book a call (cal.com URL).
-  if (!bodyText.includes('Apply for a Pilot Spot')) fail('CTA missing: "Apply for a Pilot Spot"', 0, '');
-  if (!bodyText.includes('Book a call with our team') && !bodyText.includes('Book a call')) {
-    warn('Secondary CTA "Book a call with our team" not found', 0, '');
+  // 12a. Retired free-pilot language must not appear in the body (INVERTED from
+  //      the old "require /pilot" rule — the free pilot is retired).
+  RETIRED_PILOT_STRINGS.forEach((needle) => {
+    body.forEach((line, i) => {
+      if (line.includes(needle)) {
+        fail(
+          `Retired free-pilot reference "${needle}" (pilot is retired)`,
+          bodyOffset + i + 1,
+          line.trim().slice(0, 120)
+        );
+      }
+    });
+  });
+
+  // 12b. CTA requirement: a primary CTA (See pricing -> /pricing OR See how it
+  //      works -> /how-it-works) AND a secondary "Book a call with our team"
+  //      with the canonical cal.com URL.
+  const hasPricingCTA = /See pricing/i.test(bodyText) && /href=["']\/pricing/i.test(bodyText);
+  const hasHowItWorksCTA = /See how it works/i.test(bodyText) && /href=["']\/how-it-works/i.test(bodyText);
+  if (!hasPricingCTA && !hasHowItWorksCTA) {
+    fail('Primary CTA missing: "See pricing" -> /pricing OR "See how it works" -> /how-it-works', 0, '');
   }
-  if (!bodyText.includes('cal.com/gautham-8bdvdx')) warn('cal.com booking URL not found in body', 0, '');
+  const hasBookCall = /Book a call with our team/i.test(bodyText);
+  const hasBookingUrl = bodyText.includes(BOOKING_URL_FRAGMENT);
+  if (!hasBookCall || !hasBookingUrl) {
+    const missing = [];
+    if (!hasBookCall) missing.push('"Book a call with our team" text');
+    if (!hasBookingUrl) missing.push(`${BOOKING_URL_FRAGMENT} URL`);
+    fail(`Secondary CTA missing: ${missing.join(' + ')}`, 0, '');
+  }
 
   // 13. Author bio canonical italic-linked format (not the older block format).
   if (/\*\*Written by Pradeep Pandey\*\*/.test(bodyText)) {
@@ -262,12 +447,303 @@ function check(file) {
     fail('Italic-linked author bio not found at end', 0, '');
   }
 
-  // 14. "built for Critical Access Hospitals" in bio (canonical phrasing).
-  if (/_\[Pradeep Pandey\]/.test(bodyText) && !/built for Critical Access Hospitals/.test(bodyText)) {
-    warn('Author bio missing canonical "built for Critical Access Hospitals" phrasing', 0, '');
+  // A. Canonical matches slug.
+  if (fm && fm.canonical) {
+    const canon = unquote(fm.canonical);
+    const expected = `https://simplescheduleai.com/blog/${selfSlug}`;
+    if (canon !== expected) {
+      fail(`Canonical does not match slug (expected ${expected}, got ${canon})`, 0, '');
+    }
+  } else if (fm) {
+    warn('Canonical URL absent from frontmatter (expected under metadata:)', 0, '');
+  }
+
+  // B. Merged heading / stray glued `?`.
+  body.forEach((line, i) => {
+    const isHeading = /^#{1,6}\s/.test(line);
+    // Heading with text after the `?` on the same line.
+    if (/^#{2,6}\s.*\?.+$/.test(line)) {
+      fail(
+        'Merged heading: text after `?` on the same line (heading must sit alone)',
+        bodyOffset + i + 1,
+        line.trim().slice(0, 120)
+      );
+    }
+    // A body sentence then a glued `?` (e.g. "...how-it-works).?"). Headings
+    // legitimately end in `?`, so skip them. Also skip lowercase abbreviation
+    // dots (a.m.? / p.m.? / e.g.? / i.e.?) — that `.` is not a sentence end.
+    if (!isHeading && /[.?!]\?\s*$/.test(line) && !/\b([ap]\.m|e\.g|i\.e)\.\?\s*$/i.test(line)) {
+      fail('Stray glued `?` after sentence punctuation', bodyOffset + i + 1, line.trim().slice(0, 120));
+    }
+  });
+
+  // C. No "CAH" in headings / table headers / figcaptions (body prose is fine).
+  body.forEach((line, i) => {
+    if (/^#{1,6}\s/.test(line) && /\bCAH\b/.test(line)) {
+      fail(
+        '"CAH" abbreviation in a heading (spell out Critical Access Hospital)',
+        bodyOffset + i + 1,
+        line.trim().slice(0, 120)
+      );
+    }
+    if (/<th\b[^>]*>[^<]*\bCAH\b/i.test(line)) {
+      fail('"CAH" abbreviation in a table header <th>', bodyOffset + i + 1, line.trim().slice(0, 120));
+    }
+    if (/<figcaption\b[^>]*>[^<]*\bCAH\b/i.test(line)) {
+      fail('"CAH" abbreviation in a <figcaption>', bodyOffset + i + 1, line.trim().slice(0, 120));
+    }
+  });
+
+  // D. No stray MDX in a .md file.
+  body.forEach((line, i) => {
+    if (/^import\s/.test(line)) {
+      fail('Stray MDX `import` in a .md file (renders as literal text)', bodyOffset + i + 1, line.trim().slice(0, 120));
+    }
+    if (line.includes('astro:assets')) {
+      fail('Stray MDX `astro:assets` reference in a .md file', bodyOffset + i + 1, line.trim().slice(0, 120));
+    }
+    if (/<Image[\s/>]/.test(line)) {
+      fail(
+        'Stray MDX `<Image>` component in a .md file (use <img> or markdown image)',
+        bodyOffset + i + 1,
+        line.trim().slice(0, 120)
+      );
+    }
+  });
+
+  // E. TOC integrity — broken jump links + visible-text mismatch.
+  if (toc) {
+    const headings = collectHeadings(body, bodyOffset).filter((h) => h.level === 2 || h.level === 3);
+    const headingBySlug = new Map();
+    for (const h of headings) {
+      if (!headingBySlug.has(h.slug)) headingBySlug.set(h.slug, h);
+    }
+    for (let i = toc.start + 1; i < toc.end; i++) {
+      const line = lines[i];
+      // Skip entries the existing rules already handle (Sources/FAQ exclusion).
+      if (/\[Sources?\]|\[A Note on Sources\]|\[Frequently Asked Questions\]|\[FAQ\]/i.test(line)) continue;
+      const linkRe = /\[([^\]]+)\]\(#([^)]+)\)/g;
+      let m;
+      while ((m = linkRe.exec(line)) !== null) {
+        const visible = stripInlineMarkup(m[1]);
+        const anchor = m[2].trim().toLowerCase();
+        const target = headingBySlug.get(anchor);
+        if (!target) {
+          fail(`TOC broken jump link: #${anchor} matches no H2/H3 slug`, i + 1, line.trim().slice(0, 120));
+        } else if (visible !== target.text) {
+          fail(
+            `TOC text mismatch: link reads "${visible}" but heading is "${target.text}"`,
+            i + 1,
+            line.trim().slice(0, 140)
+          );
+        }
+      }
+    }
+  }
+
+  // F. Sources numbered, not bulleted.
+  const sourcesStart = body.findIndex((l) => /^##\s+(A Note on Sources|Sources)\b/i.test(l));
+  if (sourcesStart !== -1) {
+    let sourcesEnd = body.length;
+    for (let i = sourcesStart + 1; i < body.length; i++) {
+      if (/^##\s/.test(body[i])) {
+        sourcesEnd = i;
+        break;
+      }
+    }
+    for (let i = sourcesStart + 1; i < sourcesEnd; i++) {
+      // A reference list item rendered as a bullet (markdown `- ` or `* `).
+      if (/^\s*[-*]\s+\S/.test(body[i])) {
+        fail('Sources entry is bulleted (must be a numbered list)', bodyOffset + i + 1, body[i].trim().slice(0, 120));
+      }
+    }
+  }
+
+  // G. Date sanity.
+  if (fm) {
+    const pub = unquote(fm.publishDate || '');
+    const upd = unquote(fm.updateDate || '');
+    if (/^2099/.test(pub)) {
+      fail('publishDate year is 2099 (placeholder date)', 0, `publishDate: ${pub}`);
+    }
+    if (pub && upd) {
+      const pubD = new Date(pub);
+      const updD = new Date(upd);
+      if (!isNaN(pubD) && !isNaN(updD) && updD < pubD) {
+        fail(`updateDate (${upd}) is earlier than publishDate (${pub})`, 0, '');
+      }
+    }
+  }
+
+  // H. Key Takeaways present and before TOC.
+  const ktIdx = body.findIndex((l) => /^##\s+Key Takeaways\b/i.test(l));
+  const tocIdxInBody = body.findIndex((l) => /^##\s+Table of Contents\b/i.test(l));
+  if (ktIdx === -1) {
+    fail('## Key Takeaways heading missing', 0, '');
+  } else if (tocIdxInBody !== -1 && ktIdx > tocIdxInBody) {
+    fail('## Key Takeaways appears AFTER ## Table of Contents (must be before)', bodyOffset + ktIdx + 1, '');
+  }
+
+  // I. No TL;DR.
+  body.forEach((line, i) => {
+    if (/^#+\s*TL;DR/i.test(line)) {
+      fail('TL;DR heading present (Key Takeaways replaces TL;DR)', bodyOffset + i + 1, line.trim().slice(0, 100));
+    } else if (/\*\*TL;DR/i.test(line)) {
+      fail('**TL;DR label present (Key Takeaways replaces TL;DR)', bodyOffset + i + 1, line.trim().slice(0, 100));
+    }
+  });
+
+  // J. Image-pool cross-reference (Unsplash featured images only).
+  if (fm && fm.image) {
+    const imgVal = unquote(fm.image);
+    const photoMatch = imgVal.match(/photo-([a-zA-Z0-9_-]+)/);
+    const isUnsplash = /images\.unsplash\.com/.test(imgVal) || photoMatch;
+    if (isUnsplash && photoMatch) {
+      const id = photoMatch[1];
+      let pool;
+      try {
+        pool = JSON.parse(readFileSync(IMAGE_POOL_PATH, 'utf8'));
+      } catch (err) {
+        warn(`Cannot read image pool for cross-ref: ${err.message}`, 0, '');
+        pool = null;
+      }
+      if (Array.isArray(pool)) {
+        const inPool = pool.some((p) => p && p.id === id);
+        if (!inPool) {
+          fail(`Featured image id "${id}" not found in scripts/image-pool.json`, 0, '');
+        }
+        // Duplicate use across other posts.
+        const dupes = [];
+        for (const f of allPostFiles) {
+          if (basename(f, '.md') === selfSlug) continue;
+          try {
+            const otherFm = extractFrontmatter(readFileSync(resolve(POSTS_DIR, f), 'utf8').split(/\r?\n/));
+            const otherImg = otherFm && otherFm.image ? unquote(otherFm.image) : '';
+            const otherMatch = otherImg.match(/photo-([a-zA-Z0-9_-]+)/);
+            if (otherMatch && otherMatch[1] === id) dupes.push(basename(f, '.md'));
+          } catch {
+            /* ignore unreadable sibling */
+          }
+        }
+        if (dupes.length > 0) {
+          fail(`Featured image id "${id}" duplicated in: ${dupes.join(', ')}`, 0, '');
+        }
+      }
+    } else {
+      warn(
+        `Featured image is not an Unsplash /photo- URL — skipped image-pool cross-ref (${imgVal.slice(0, 70)})`,
+        0,
+        ''
+      );
+    }
+  }
+
+  // K. Dark-mode variants on tables. For each <table>...</table> region, if any
+  //    non-dark COLOR utility of a given prefix (bg-/text-/border-) appears, a
+  //    matching dark: utility of the same prefix must appear somewhere in that
+  //    same region. Layout/size/style utilities (text-left, border-b, etc.) are
+  //    ignored via colorPrefixOf, which only matches real color tokens.
+  const tableRegions = [];
+  {
+    const tableOpenRe = /<table\b/gi;
+    let searchFrom = 0;
+    while (true) {
+      const openIdx = bodyText.indexOf('<table', searchFrom);
+      if (openIdx === -1) break;
+      // Confirm it's a tag boundary (<table or <table ...>).
+      const after = bodyText[openIdx + 6];
+      if (after !== undefined && !/[\s>]/.test(after)) {
+        searchFrom = openIdx + 6;
+        continue;
+      }
+      const closeIdx = bodyText.indexOf('</table>', openIdx);
+      const end = closeIdx === -1 ? bodyText.length : closeIdx + '</table>'.length;
+      tableRegions.push(bodyText.slice(openIdx, end));
+      searchFrom = end;
+    }
+    void tableOpenRe;
+  }
+  for (let t = 0; t < tableRegions.length; t++) {
+    const region = tableRegions[t];
+    const classAttrRe = /class\s*=\s*["']([^"']*)["']/gi;
+    const nonDark = { bg: new Set(), text: new Set(), border: new Set() };
+    const darkPrefixes = new Set();
+    let cm;
+    while ((cm = classAttrRe.exec(region)) !== null) {
+      const tokens = cm[1].split(/\s+/).filter(Boolean);
+      for (const tok of tokens) {
+        if (tok.startsWith('dark:')) {
+          const inner = tok.slice('dark:'.length);
+          const p = colorPrefixOf(inner);
+          if (p) darkPrefixes.add(p);
+          continue;
+        }
+        // Skip any other variant-prefixed utility (sm:, hover:, etc.) for the
+        // "needs a dark variant" accounting — only bare color utilities require
+        // a dark counterpart.
+        if (tok.includes(':')) continue;
+        const p = colorPrefixOf(tok);
+        if (p) nonDark[p].add(tok);
+      }
+    }
+    for (const prefix of ['bg', 'text', 'border']) {
+      if (nonDark[prefix].size > 0 && !darkPrefixes.has(prefix)) {
+        fail(
+          `Table missing dark: variant for ${prefix}-* color utilities (table #${t + 1}): ${[...nonDark[prefix]].join(', ')}`,
+          0,
+          ''
+        );
+      }
+    }
   }
 
   // --- SOFT WARNINGS ---
+
+  // /ai-nurse-scheduling third hub — required only where the post discusses AI
+  // scheduling. WARN only.
+  const discussesAI = /\bAI\b/.test(bodyText) || /artificial intelligence/i.test(bodyText);
+  if (discussesAI && !bodyText.includes('(/ai-nurse-scheduling)')) {
+    warn('Third hub /ai-nurse-scheduling not linked (post discusses AI scheduling)', 0, '');
+  }
+
+  // In-body images whose src is neither .webp nor an Unsplash URL.
+  body.forEach((line, i) => {
+    // HTML <img src="...">
+    const htmlImg = line.match(/<img\b[^>]*\bsrc\s*=\s*["']([^"']+)["']/i);
+    // Markdown ![alt](src)
+    const mdImg = line.match(/!\[[^\]]*\]\(([^)]+)\)/);
+    const src = htmlImg ? htmlImg[1] : mdImg ? mdImg[1] : null;
+    if (src) {
+      const isWebp = /\.webp(\?|$)/i.test(src);
+      const isUnsplash = /images\.unsplash\.com|\/photo-/.test(src);
+      if (!isWebp && !isUnsplash) {
+        warn(`In-body image src is neither .webp nor Unsplash (${src.slice(0, 70)})`, bodyOffset + i + 1, '');
+      }
+    }
+  });
+
+  // <table> missing the standard layout classes table-fixed / break-words / align-top.
+  for (let t = 0; t < tableRegions.length; t++) {
+    const region = tableRegions[t];
+    const missingStd = ['table-fixed', 'break-words', 'align-top'].filter(
+      (c) => !new RegExp(`\\b${c}\\b`).test(region)
+    );
+    if (missingStd.length > 0) {
+      warn(`Table #${t + 1} missing standard class(es): ${missingStd.join(', ')}`, 0, '');
+    }
+  }
+
+  // Word count (informational — post type is not mechanically known).
+  const wordCount = bodyText
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/[#>*_`|]/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean).length;
+  warn(
+    `Body word count: ${wordCount} (ranges: BOFU 3000-5000, vs-service 1500-2500, MOFU 1500-2500, TOFU 1000-1500, glossary 600-1000)`,
+    0,
+    ''
+  );
 
   // No volume language near vendor names ("consistently", "widely", etc.).
   // Heuristic only — flag the line, human verifies.
@@ -291,6 +767,11 @@ function check(file) {
   // Founder credibility surfaces in body or bio.
   if (!/Apollo Hospitals|IIM Trichy|30\+ nurse manager interviews|Deputy General Manager/.test(bodyText)) {
     warn('Founder credibility signal (Apollo / IIM Trichy / interviews) not found', 0, '');
+  }
+
+  // Author bio canonical "built for Critical Access Hospitals" phrasing.
+  if (/_\[Pradeep Pandey\]/.test(bodyText) && !/built for Critical Access Hospitals/.test(bodyText)) {
+    warn('Author bio missing canonical "built for Critical Access Hospitals" phrasing', 0, '');
   }
 
   return { file: path, draft: fm?.draft === 'true', failures, warnings };
