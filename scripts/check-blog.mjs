@@ -439,6 +439,26 @@ function check(file) {
     fail(`Secondary CTA missing: ${missing.join(' + ')}`, 0, '');
   }
 
+  // 12c. CTA structure: one primary button + a "Book a call" text link below it.
+  //      The deprecated two-button row (flex flex-col sm:flex-row) is banned, and
+  //      there must be exactly ONE CTA box per post (one canonical booking link).
+  body.forEach((line, i) => {
+    if (line.includes('flex flex-col sm:flex-row')) {
+      fail(
+        'Two-button CTA row (flex flex-col sm:flex-row): use one primary button + a "Book a call with our team" text link below it',
+        bodyOffset + i + 1,
+        line.trim().slice(0, 120)
+      );
+    }
+  });
+  // Count actual CTA BOXES by the canonical box background, not booking links
+  // (a post may legitimately have an inline cal.com link in a "What to Do" step
+  // without that being a second CTA box).
+  const ctaBoxCount = (bodyText.match(/bg-blue-50 dark:bg-slate-800/g) || []).length;
+  if (ctaBoxCount > 1) {
+    fail(`More than one CTA box (${ctaBoxCount}): exactly one CTA box per post, after "What to Do This Week"`, 0, '');
+  }
+
   // 13. Author bio canonical italic-linked format (not the older block format).
   if (/\*\*Written by Pradeep Pandey\*\*/.test(bodyText)) {
     fail('Old "**Written by Pradeep Pandey**" bio format — use italic-linked', 0, '');
@@ -697,6 +717,42 @@ function check(file) {
     }
   }
 
+  // L. "Our Take" callout placement: one per post, immediately before the
+  //    "What to Do This Week" section (no H2 heading may separate them).
+  const ourTakeIdxs = [];
+  body.forEach((l, i) => {
+    if (/>\s*Our Take\s*</.test(l)) ourTakeIdxs.push(i);
+  });
+  const whatToDoIdx = body.findIndex((l) => /^##\s+What\b.*\bDo This Week/i.test(l));
+  if (ourTakeIdxs.length > 1) {
+    fail(`More than one "Our Take" callout (${ourTakeIdxs.length}): one per post`, bodyOffset + ourTakeIdxs[1] + 1, '');
+  }
+  if (ourTakeIdxs.length >= 1 && whatToDoIdx !== -1) {
+    const otIdx = ourTakeIdxs[0];
+    if (otIdx > whatToDoIdx) {
+      fail(
+        '"Our Take" callout is after "What to Do This Week" (must sit immediately before it)',
+        bodyOffset + otIdx + 1,
+        ''
+      );
+    } else {
+      let h2Between = false;
+      for (let j = otIdx + 1; j < whatToDoIdx; j++) {
+        if (/^##\s/.test(body[j])) {
+          h2Between = true;
+          break;
+        }
+      }
+      if (h2Between) {
+        fail(
+          '"Our Take" callout is not in the section immediately before "What to Do This Week" (an H2 heading separates them)',
+          bodyOffset + otIdx + 1,
+          ''
+        );
+      }
+    }
+  }
+
   // --- SOFT WARNINGS ---
 
   // /ai-nurse-scheduling third hub — required only where the post discusses AI
@@ -744,6 +800,38 @@ function check(file) {
     0,
     ''
   );
+
+  // Hyperlinks and references (internal links AND external source citations)
+  // should appear EARLY — ideally within the first 2 content sections — so an
+  // LLM sees the link/reference signal up front. Soft heuristic (not every post
+  // fits); WARN only when the post HAS hyperlinks but NONE land in the early
+  // zone (intro + Key Takeaways + first 2 content sections). TOC #-anchors and
+  // the boilerplate author-bio /about link are excluded.
+  {
+    const contentH2 = [];
+    body.forEach((l, i) => {
+      if (/^##\s/.test(l) && !/^##\s+(Key Takeaways|Table of Contents)\b/i.test(l)) contentH2.push(i);
+    });
+    const earlyEnd = contentH2.length >= 3 ? contentH2[2] : body.length;
+    let earlyLinks = 0;
+    let totalLinks = 0;
+    body.forEach((line, i) => {
+      const re = /\]\(((?!#)[^)]+)\)/g; // any markdown link whose href is not a #anchor
+      let m;
+      while ((m = re.exec(line)) !== null) {
+        if (m[1].includes('/about/pradeep-pandey')) continue;
+        totalLinks++;
+        if (i < earlyEnd) earlyLinks++;
+      }
+    });
+    if (totalLinks > 0 && earlyLinks === 0) {
+      warn(
+        `No hyperlink/reference in the first 2 sections (${totalLinks} link(s) total, all later). Front-load a link or source reference early for LLM signal.`,
+        0,
+        ''
+      );
+    }
+  }
 
   // No volume language near vendor names ("consistently", "widely", etc.).
   // Heuristic only — flag the line, human verifies.

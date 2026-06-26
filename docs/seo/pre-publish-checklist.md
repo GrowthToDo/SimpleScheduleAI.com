@@ -41,6 +41,7 @@ Found again and again across posts. A generic checklist pass misses them; check 
 - [ ] **Title/H1 audience matches content audience** — if the post is specifically about CAHs (mentions CMS §485.635, 25-bed scale, CAH designation), the title must say "Critical Access Hospital(s)", not "Small Hospitals" or "Small Hospital"
 - [ ] **Internal hub links: both pillar pages linked** — every post must link to `/nurse-scheduling-software` AND `/critical-access-hospital-scheduling` with keyword anchor text, plus `/how-it-works` in any section that describes the SimpleScheduleAI service, plus `/ai-nurse-scheduling` (third topical hub) wherever the post discusses AI scheduling, which is most posts
 - [ ] Primary keyword appears in first 100 words of body text
+- [ ] **Hyperlinks/references front-loaded (soft):** at least one hyperlink or source reference (an internal link OR an external citation) appears in the first 2 sections (intro + first 2 content sections), so LLMs get the link/reference signal early. The gate WARNs only when a post has links but none early. Not every post fits — do not force-fit.
 - [ ] All H2/H3 headings phrased as questions
 - [ ] Every H2/H3 has a 40–70 word direct answer capsule immediately below it
 - [ ] Sections are substantive (about 120–180 words is a thoroughness heuristic, NOT a citation lever — see Part 0 Reconciliation)
