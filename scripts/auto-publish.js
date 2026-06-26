@@ -3,18 +3,26 @@
  * auto-publish.js
  *
  * Finds blog posts due for publishing today (publishDate === today, draft: true),
- * runs automated pre-publish checks, and publishes posts that pass all checks.
+ * runs pre-publish checks, and (only with --publish) flips draft:false + commits + pushes.
+ *
+ * The authoritative MECHANICAL gate is scripts/check-blog.mjs. This script delegates every
+ * grep-able rule (dashes, AI-tone, canonical, links, dark-mode tables, image-pool, TOC, etc.)
+ * to it (single source of truth) and adds only what check-blog cannot do: image actually
+ * loads (HEAD), image is on-topic (Claude vision), prettier, plus a couple of niche static
+ * checks (duplicate brand headings, invalid Tailwind slate shades).
  *
  * Usage:
- *   node scripts/auto-publish.js          — normal run (publishes if checks pass)
- *   node scripts/auto-publish.js --dry-run — checks only, no file changes or git ops
+ *   node scripts/auto-publish.js                     — check only; report what WOULD publish (safe default, no git ops)
+ *   node scripts/auto-publish.js --publish           — flip draft, commit, and push posts that pass every check
+ *   node scripts/auto-publish.js --check-file <path> — run all checks on one file, no publish
+ *
+ * Publishing requires the explicit --publish flag (publish-only-on-explicit-instruction rule);
+ * a bare run, --dry-run, or a cron invocation never commits or pushes.
  *
  * Results are appended to PUBLISHING-LOG.md in the project root.
  *
- * Image relevance is checked automatically:
- *   1. If the image ID is in scripts/image-pool.json → approved, no further check needed.
- *   2. If ANTHROPIC_API_KEY is set → Claude vision API verifies the image against post title/tags.
- *   3. Otherwise → blocked with instructions to add the image ID to image-pool.json.
+ * Image relevance: ID in image-pool.json → approved; else ANTHROPIC_API_KEY → Claude vision;
+ * else blocked with instructions to add the ID to image-pool.json.
  */
 
 import { readFileSync, writeFileSync, readdirSync } from 'fs';
@@ -27,28 +35,12 @@ const ROOT = join(__dirname, '..');
 const POSTS_DIR = join(ROOT, 'src', 'data', 'post');
 const LOG_FILE = join(ROOT, 'PUBLISHING-LOG.md');
 const IMAGE_POOL_FILE = join(__dirname, 'image-pool.json');
+const CHECK_BLOG = join(__dirname, 'check-blog.mjs');
 
-const DRY_RUN = process.argv.includes('--dry-run');
+// Publishing is opt-in. A bare run (or --dry-run, or cron) only checks and reports.
+const PUBLISH = process.argv.includes('--publish');
 const CHECK_FILE_INDEX = process.argv.indexOf('--check-file');
 const CHECK_FILE = CHECK_FILE_INDEX >= 0 ? process.argv[CHECK_FILE_INDEX + 1] : null;
-
-// AI tone phrases — WARN only, do not block
-const AI_TONE_PHRASES = [
-  'delve',
-  'comprehensive',
-  'leverage',
-  'underscore',
-  "it's worth noting",
-  'importantly,',
-  'revolutionize',
-  'game-changing',
-  'seamlessly',
-  'robust solution',
-  'in conclusion,',
-  'in summary,',
-  'as we can see',
-  'it is important to note',
-];
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -122,35 +114,19 @@ function extractUnsplashPhotoId(url) {
 
 // ─── checks ─────────────────────────────────────────────────────────────────
 
-function checkEmDash(content) {
-  const failures = [];
-  const lines = content.split('\n');
-  lines.forEach((line, i) => {
-    if (line.includes('\u2014') || line.includes('\u2013')) {
-      failures.push(`  Line ${i + 1}: em-dash or en-dash found`);
-    }
-  });
-  return failures;
-}
-
-function checkDoubleDash(content) {
-  const failures = [];
-  const lines = content.split('\n');
-  lines.forEach((line, i) => {
-    if (line.includes(' -- ')) {
-      failures.push(`  Line ${i + 1}: double-dash ( -- ) found`);
-    }
-  });
-  return failures;
-}
-
-function checkCanonical(fm, slug) {
-  if (!fm.canonical) return ['  Canonical URL missing from frontmatter'];
-  const expectedEnd = `/blog/${slug}`;
-  if (!fm.canonical.endsWith(expectedEnd)) {
-    return [`  Canonical mismatch: expected to end with ${expectedEnd}, got ${fm.canonical}`];
+// Authoritative mechanical gate. Every grep-able rule (dashes, AI-tone, canonical,
+// pillar links, TOC integrity, merged headings, CAH-in-headings, image-pool membership
+// + dedupe, dark-mode tables, date sanity, Key-Takeaways-before-TOC, retired-pilot ban,
+// and the rest) lives in check-blog.mjs. We run it and surface its hard failures here so
+// there is a single source of truth, not a divergent second rule set.
+function runCheckBlog(filePath) {
+  try {
+    execSync(`node "${CHECK_BLOG}" "${filePath}"`, { cwd: ROOT, encoding: 'utf8', stdio: 'pipe' });
+    return [];
+  } catch (err) {
+    const out = `${err.stdout || ''}${err.stderr || ''}`.trim();
+    return [`  check-blog.mjs hard failures:\n${out}`];
   }
-  return [];
 }
 
 async function checkImageUrl(fm) {
@@ -158,6 +134,8 @@ async function checkImageUrl(fm) {
   if (fm.image.includes('placeholder') || fm.image === '') {
     return ['  Image URL appears to be a placeholder'];
   }
+  // Local / relative assets (e.g. ~/assets/...) are bundled and validated at build time, not fetchable.
+  if (!/^https?:\/\//i.test(fm.image)) return [];
   try {
     const res = await fetch(fm.image, { method: 'HEAD', signal: AbortSignal.timeout(8000) });
     if (res.status !== 200) {
@@ -232,26 +210,6 @@ async function checkImageRelevanceAuto(fm, pool) {
   ];
 }
 
-function checkImageNotDuplicated(currentFile, currentFm) {
-  const currentId = extractUnsplashPhotoId(currentFm.image);
-  if (!currentId) return [];
-  const files = readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md') && f !== currentFile);
-  const duplicates = [];
-  for (const filename of files) {
-    const c = readFileSync(join(POSTS_DIR, filename), 'utf8');
-    const fm = parseFrontmatter(c);
-    if (!fm || !fm.image) continue;
-    const id = extractUnsplashPhotoId(fm.image);
-    if (id === currentId) duplicates.push(filename);
-  }
-  if (duplicates.length > 0) {
-    return [
-      `  Image ID "${currentId}" already used in: ${duplicates.slice(0, 3).join(', ')}${duplicates.length > 3 ? ', ...' : ''}. Use a different image from scripts/image-pool.json.`,
-    ];
-  }
-  return [];
-}
-
 function checkPrettier(filePath) {
   try {
     execSync(`npx prettier --check "${filePath}"`, { cwd: ROOT, encoding: 'utf8', stdio: 'pipe' });
@@ -259,32 +217,6 @@ function checkPrettier(filePath) {
   } catch {
     return ['  Prettier check failed — run: npx prettier --write on this file'];
   }
-}
-
-function checkAiTone(content) {
-  const warnings = [];
-  const lower = content.toLowerCase();
-  for (const phrase of AI_TONE_PHRASES) {
-    if (lower.includes(phrase)) {
-      warnings.push(`  AI tone phrase found: "${phrase}"`);
-    }
-  }
-  return warnings;
-}
-
-function checkDarkModeOnTables(content) {
-  const failures = [];
-  const tableBlocks = content.match(/<table[\s\S]*?<\/table>/gi) || [];
-  for (const block of tableBlocks) {
-    const hasBgClass = /class="[^"]*bg-/.test(block) || /class="[^"]*border-/.test(block);
-    if (!hasBgClass) continue;
-    if (!block.includes('dark:')) {
-      failures.push(
-        '  HTML <table> found with bg/border classes but no dark: variants. Add dark:bg-*, dark:border-*, and dark:text-* classes to prevent unreadable table in dark mode.'
-      );
-    }
-  }
-  return failures;
 }
 
 const HUB_PAGES = [
@@ -390,7 +322,7 @@ function publishPost(filePath, title, today) {
   run(`git add "${filePath}"`);
   const commitMsg = `Publish: ${title} — ${today}`;
   run(
-    `git commit -m "${commitMsg}\n\nAuto-published by scripts/auto-publish.js\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"`
+    `git commit -m "${commitMsg}\n\nAuto-published by scripts/auto-publish.js\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"`
   );
   run('git push');
 }
@@ -400,18 +332,18 @@ function publishPost(filePath, title, today) {
 async function runChecks(filePath, fm, content, slug, pool) {
   const failures = [];
   const warnings = [];
-  failures.push(...checkEmDash(content));
-  failures.push(...checkDoubleDash(content));
-  failures.push(...checkCanonical(fm, slug));
-  failures.push(...(await checkImageUrl(fm)));
-  failures.push(...(await checkImageRelevanceAuto(fm, pool)));
-  failures.push(...checkImageNotDuplicated(basename(filePath), fm));
+
+  // Authoritative mechanical gate (single source of truth).
+  failures.push(...runCheckBlog(filePath));
+
+  // Supplementary checks check-blog cannot do (network / vision / format / niche static).
+  failures.push(...(await checkImageUrl(fm))); // image actually loads (HEAD request)
+  failures.push(...(await checkImageRelevanceAuto(fm, pool))); // image is on-topic (Claude vision)
   failures.push(...checkPrettier(filePath));
-  failures.push(...checkDarkModeOnTables(content));
-  failures.push(...checkBrokenInternalBlogLinks(content, slug));
+  failures.push(...checkBrokenInternalBlogLinks(content, slug)); // /blog link target missing on disk
   failures.push(...checkDuplicateBrandHeadings(content));
   failures.push(...checkInvalidTailwindSlate(content));
-  warnings.push(...checkAiTone(content));
+
   warnings.push(...checkInternalLinks(content, fm));
   return { failures, warnings };
 }
@@ -477,34 +409,33 @@ async function main() {
         `Title: ${fm.title || '(unknown)'}`,
         `Check failures:`,
         ...failures,
-        `Fix these issues — the cron will retry on the next matching run.`,
+        `Fix these issues before re-running.`,
       ].join('\n');
       appendLog(failureText);
+    } else if (!PUBLISH) {
+      appendLog(
+        `### CHECK ONLY — would publish: ${slug}\nTitle: ${fm.title || '(unknown)'}\nAll checks passed. Re-run with --publish to flip draft, commit, and push.`
+      );
     } else {
-      if (DRY_RUN) {
+      try {
+        publishPost(filePath, fm.title || slug, today);
         appendLog(
-          `### DRY RUN — would publish: ${slug}\nTitle: ${fm.title || '(unknown)'}\nAll checks passed. Run without --dry-run to publish.`
+          [
+            `### PUBLISHED: ${slug}`,
+            `Title: ${fm.title || '(unknown)'}`,
+            `Live at: https://simplescheduleai.com/blog/${slug}`,
+            warnings.length > 0 ? `Warnings (non-blocking): ${warnings.length}` : '',
+            '',
+            `Next steps (manual):`,
+            `- Submit URL to GSC: URL Inspection → Request Indexing`,
+            `- Run npm run indexnow`,
+            `- Post excerpt on LinkedIn`,
+          ]
+            .filter(Boolean)
+            .join('\n')
         );
-      } else {
-        try {
-          publishPost(filePath, fm.title || slug, today);
-          appendLog(
-            [
-              `### PUBLISHED: ${slug}`,
-              `Title: ${fm.title || '(unknown)'}`,
-              `Live at: https://simplescheduleai.com/blog/${slug}`,
-              warnings.length > 0 ? `Warnings (non-blocking): ${warnings.length}` : '',
-              '',
-              `Next steps (manual):`,
-              `- Submit URL to GSC: URL Inspection → Request Indexing`,
-              `- Post excerpt on LinkedIn`,
-            ]
-              .filter(Boolean)
-              .join('\n')
-          );
-        } catch (err) {
-          appendLog(`### ERROR publishing ${slug}\n${err.message}\nFile was modified — check git status.`);
-        }
+      } catch (err) {
+        appendLog(`### ERROR publishing ${slug}\n${err.message}\nFile was modified — check git status.`);
       }
     }
   }

@@ -98,6 +98,7 @@ npm run check-blog src/data/post/<slug>.md
 
 Once `check-blog` is clean, spawn a `feature-dev:code-reviewer` agent for ONLY the items a script cannot judge. Do not ask it to re-check anything the gate already enforced.
 
+- **ICP voice and framing**: the post speaks to the ICP (Critical Access Hospital Administrators/CEOs and Nurse Managers/DONs) from a hospital-operations perspective and in their language (coverage, callouts, overtime, scheduling time, compliance, small rural hospital constraints), not generic healthcare-tech copy. Value is framed in ICP terms (the nurse manager's hours, a CAH's staffing and budget realities, the Texas CAH context), and scenarios fit a 25-bed CAH, not a large health system
 - **Excerpt is a distinct hook**, not a restatement of the intro or any Key Takeaway bullet
 - **Key Takeaways and excerpt framing match the body** (if body says "not documented on product page," KT/excerpt cannot say "no X"/"lacks X")
 - **Title does not overclaim or contradict the body**

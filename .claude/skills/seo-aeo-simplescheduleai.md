@@ -1162,18 +1162,12 @@ A scannable list mapping "scenario -> recommended fit -> one-line why", organize
 
 ### 8.1 Mandatory E-E-A-T Elements
 
-**Author bylines on ALL blog posts:**
+**Author byline on ALL blog posts** uses the canonical italic-linked format at the END of the post (never the old `**Written by**` block, which the pre-publish checklist bans):
 
-```html
-<div class="author-bio">
-  <img src="/images/team/pradeep.jpg" alt="Pradeep [Last Name], Co-founder SimpleScheduleAI" />
-  <div>
-    <strong>Written by Pradeep [Last Name]</strong><br />
-    Co-founder, SimpleScheduleAI. Former DGM Operations at Apollo Hospitals. MBA from IIM Trichy. Deep background in
-    healthcare operations and workforce optimization.<br />
-    <a href="https://linkedin.com/in/pradeep-[profile]">LinkedIn →</a>
-  </div>
-</div>
+```md
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+
+[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
 ```
 
 **Trust signals to add site-wide:**
