@@ -274,13 +274,6 @@ The numbers above are operational estimates for a 25-bed roster of 15 to 25 nurs
 
 The cost difference is easier to see when you price the recovered hours. Take the gap between Excel and a managed service in the table: roughly 8 hours per week. Over a year that is about 416 hours. For a nurse manager who also takes clinical shifts, that time is not administrative overhead, it is clinical capacity the hospital is spending on spreadsheet maintenance. At a loaded rate in the $55 to $70 per hour range for a working manager, that is roughly $23,000 to $29,000 a year in capacity the hospital does not recover. Run your specific numbers in the [SimpleScheduleAI ROI calculator](/roi) to model the recovered hours and dollar value for your facility. The [HRSA-supported rural health workforce literature](https://www.hrsa.gov/rural-health) consistently identifies administrative load on clinical leaders as a retention risk at small and rural facilities, which makes the recovered hours a staffing-stability argument, not only a budget one. The error side carries its own cost: an unnoticed overtime breach or a credential mismatch discovered during a survey is far more expensive to remediate than to prevent, which is why consistent enforcement matters more than the raw hour count.
 
-<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
-  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    The honest distinction between traditional and AI scheduling is not about the algorithm. It is about who carries the constraint-enforcement work cycle after cycle. Traditional scheduling puts every overtime check, every credential match, and every fairness call in the nurse manager's head. AI scheduling externalizes those rules into a system that applies them the same way every time. That is the win - not "AI replaces clinical judgment", which it does not, but "AI removes the rule-checking so the manager's judgment stays where it matters: clinical readiness, team dynamics, and the calls a machine cannot make".
-  </p>
-</div>
-
 ## What Do Nurses Experience Differently Under AI Scheduling vs. Traditional Scheduling?
 
 From the bedside, the visible change is fewer late schedules, fewer last-minute "can you cover" calls, and a weekend rotation that feels even rather than arbitrary. Nurses rarely see the constraint engine. What they notice is that the published schedule is on time, overtime is not sprung on them at period end, and fairness is tracked rather than remembered.
@@ -304,6 +297,13 @@ The system does not produce a single optimal schedule, because the right tradeof
 The callout module applies the same constraint logic in real time. When a nurse calls out, the algorithm generates a ranked replacement list that satisfies every active constraint, credentials, overtime thresholds, availability windows, and orders it by lowest disruption to the schedule's overtime balance. One honest limitation: SimpleScheduleAI is a nursing scheduling service and does not extend to physician or mid-level provider scheduling, so hospitals that need unified provider scheduling should evaluate a multi-discipline platform instead. For the full workflow from roster upload to published schedule, see [how it works](/how-it-works). For category context, see our guides on [nurse scheduling software](/nurse-scheduling-software) options for small hospitals, how [AI nurse scheduling](/ai-nurse-scheduling) works as a managed service, and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling). See the AI generate three drafts and rank a callout replacement list in the [interactive simulator](/simulator).
 
 One honest limitation: a managed AI scheduling service is not the right fit for hospitals over 50 beds, facilities with dedicated scheduling administrators, or organizations that specifically want to operate AI software under their own control rather than approve outputs.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The honest distinction between traditional and AI scheduling is not about the algorithm. It is about who carries the constraint-enforcement work cycle after cycle. Traditional scheduling puts every overtime check, every credential match, and every fairness call in the nurse manager's head. AI scheduling externalizes those rules into a system that applies them the same way every time. That is the win - not "AI replaces clinical judgment", which it does not, but "AI removes the rule-checking so the manager's judgment stays where it matters: clinical readiness, team dynamics, and the calls a machine cannot make".
+  </p>
+</div>
 
 ## What to Do This Week
 

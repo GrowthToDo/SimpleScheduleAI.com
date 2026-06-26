@@ -167,13 +167,6 @@ Scheduling software that reduces unplanned overtime by 20% saves approximately $
 
 The baseline for your CAH: look at your last 6 months of payroll data and calculate how many overtime hours were attributable to last-minute callout coverage and scheduling gaps versus overtime driven by patient volume. The scheduling-attributable overtime is your target for reduction. For a faster version of this math against your own payroll numbers, run the [ROI calculator](/roi).
 
-<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
-  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    The cheapest license on the quote sheet is almost never the cheapest tool for a Critical Access Hospital. The number that decides whether a platform is worth it is total cost of ownership against the overtime it actually removes, and that number is dominated by two things vendors keep off the first call: implementation fees and the hours your dual-role manager spends configuring and babysitting the system. Ask for the all-in first-year figure including setup before you compare anything, and weigh it against your real scheduling-attributable overtime, not the per-nurse sticker price.
-  </p>
-</div>
-
 ## How SimpleScheduleAI Is Priced?
 
 SimpleScheduleAI is an AI-native nurse scheduling service for critical access hospitals in Texas. It includes full [AI nurse scheduling](/ai-nurse-scheduling) that builds the schedule for you, callout coverage shortlists, and Texas compliance tracking for your specific shift rules and nurse roster. No implementation fee. No IT integration required. Setup takes 3-5 business days via Excel roster upload. See [how it works](/how-it-works) for the full build-and-approve flow. Watch the AI build a compliant schedule and track overtime live in the [interactive simulator](/simulator).
@@ -183,6 +176,13 @@ Pricing is flat by roster size: $1,000/month for up to 20 nurses, $1,500/month f
 SimpleScheduleAI is not appropriate for large health systems, multi-site organizations, or hospitals requiring EHR integration. For [CAHs with 25 beds or fewer](/critical-access-hospital-scheduling) and no IT department, it is a purpose-built managed scheduling service for Texas.
 
 For hospitals evaluating alternatives, the [nurse scheduling software comparison guide](/blog/best-nurse-scheduling-software-2026) covers 8 platforms with detailed breakdowns of pricing models, CAH suitability, and implementation timelines.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The cheapest license on the quote sheet is almost never the cheapest tool for a Critical Access Hospital. The number that decides whether a platform is worth it is total cost of ownership against the overtime it actually removes, and that number is dominated by two things vendors keep off the first call: implementation fees and the hours your dual-role manager spends configuring and babysitting the system. Ask for the all-in first-year figure including setup before you compare anything, and weigh it against your real scheduling-attributable overtime, not the per-nurse sticker price.
+  </p>
+</div>
 
 ## What to Do This Week
 

@@ -347,13 +347,6 @@ Specifically, Aladtec fits well when:
 
 Aladtec is also a reasonable choice for organizations that tried a managed service and found that they preferred direct control over the schedule. Some nurse managers want to see every cell of the schedule before it goes to staff. A managed service model, where the vendor builds the draft and the nurse manager reviews, does not fit every management style.
 
-<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
-  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Aladtec is a competent self-serve scheduler. The question is not whether it is good software. The question is whether a Critical Access Hospital nurse manager, who is also covering 2-3 clinical shifts a week, has the four to six hours per week the platform requires to be used well. For most CAHs we have spoken to, the honest answer is no - which is why scheduling software adoption at this scale routinely drifts back to spreadsheets within twelve months. The managed service model is not a feature claim. It is an admission that the constraint at a 25-bed hospital is staff time to operate software, not access to software.
-  </p>
-</div>
-
 ## When Is a Managed Service the Right Choice?
 
 A managed scheduling service is the right choice when the scheduling burden falls on someone who cannot afford the time it requires. For most Critical Access Hospitals, that person is the nurse manager: a clinician responsible for direct patient care, staff supervision, quality reporting, budget management, and hiring in addition to scheduling.
@@ -416,6 +409,13 @@ Two variables drive the decision: how much unprotected time the nurse manager cu
 The decision table above covers the two main decision factors. In practice, the strongest predictor of which model is right is: how much unprotected time is the nurse manager spending on scheduling tasks that do not require their clinical or managerial judgment? If the answer is more than 3 hours per week, and those 3 hours are being taken from clinical work, a managed service almost always has a better return on investment than software, regardless of price.
 
 One honest limitation: a managed scheduling service is not the right fit for hospitals that have a dedicated scheduling administrator, want direct cell-by-cell control over every assignment, or specifically prefer self-serve software for governance or audit reasons.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Aladtec is a competent self-serve scheduler. The question is not whether it is good software. The question is whether a Critical Access Hospital nurse manager, who is also covering 2-3 clinical shifts a week, has the four to six hours per week the platform requires to be used well. For most CAHs we have spoken to, the honest answer is no - which is why scheduling software adoption at this scale routinely drifts back to spreadsheets within twelve months. The managed service model is not a feature claim. It is an admission that the constraint at a 25-bed hospital is staff time to operate software, not access to software.
+  </p>
+</div>
 
 ## What to Do This Week?
 

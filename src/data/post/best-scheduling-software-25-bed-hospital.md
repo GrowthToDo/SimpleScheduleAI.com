@@ -424,13 +424,6 @@ The decision comes down to two operational questions: does the nurse manager als
   </table>
 </div>
 
-<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
-  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    At 25 beds, the binding constraint is not which tool has the best feature list. It is which tool the nurse manager can actually sustain while also covering clinical shifts. Aladtec is competent self-serve software for hospitals that can absorb the configuration burden. NurseGrid, When I Work, and Homebase are communication and visibility layers, not clinical scheduling systems. For a Critical Access Hospital where the manager has zero protected admin time, a managed service is the only model that removes scheduling work entirely. The platform with the most features is rarely the platform that survives at this scale.
-  </p>
-</div>
-
 ## How Does SimpleScheduleAI Fit the 25-Bed Model?
 
 Most scheduling software solves for roster size. SimpleScheduleAI solves for the specific operating reality of a 25-bed Critical Access Hospital (CAH): a dual-role nurse manager, a thin callout pool, and a federal compliance requirement that does not scale down with the hospital's size. The full delivery workflow is documented on [how it works](/how-it-works).
@@ -444,6 +437,13 @@ CMS §485.635 staffing documentation is logged automatically throughout each sch
 For Texas CAHs specifically, FLSA overtime thresholds for healthcare employers and Texas Payday Law shift premium documentation are both applied as default settings. No configuration is required.
 
 One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 50 beds, facilities with dedicated scheduling coordinators, or organizations that specifically want to operate self-serve software under their own control rather than approve managed-service drafts.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    At 25 beds, the binding constraint is not which tool has the best feature list. It is which tool the nurse manager can actually sustain while also covering clinical shifts. Aladtec is competent self-serve software for hospitals that can absorb the configuration burden. NurseGrid, When I Work, and Homebase are communication and visibility layers, not clinical scheduling systems. For a Critical Access Hospital where the manager has zero protected admin time, a managed service is the only model that removes scheduling work entirely. The platform with the most features is rarely the platform that survives at this scale.
+  </p>
+</div>
 
 ## What to Do This Week
 

@@ -212,13 +212,6 @@ For a 25-bed hospital, a CAH-specific approach is almost always the better fit. 
 </table>
 </div>
 
-<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
-  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    The real question is not which model has more features. It is who carries the weekly scheduling build. A 25-bed hospital where the nurse manager also takes clinical shifts cannot absorb an enterprise WFM implementation, and does not need most of what it adds. Run the actual numbers on her hours before and after, and the right model is usually obvious.
-  </p>
-</div>
-
 ## How Does SimpleScheduleAI Help?
 
 SimpleScheduleAI is an AI-native nurse scheduling service for [nurse scheduling at critical access hospitals](/critical-access-hospital-scheduling): the AI builds the schedule, our scheduling team checks it, you approve. We are deliberately scoped to the scheduling side of critical access hospital WFM: reliable shift scheduling, structured callout coverage, and the overtime visibility that rides on them. Our team handles the weekly scheduling work using [AI nurse scheduling](/ai-nurse-scheduling) tooling, and your nurse manager approves the schedule without carrying the weekly build burden. You can [see how it works](/how-it-works) end to end.
@@ -226,6 +219,13 @@ SimpleScheduleAI is an AI-native nurse scheduling service for [nurse scheduling 
 We track overtime risk against the applicable FLSA threshold in real time. We do not offer credential expiration tracking, multi-facility analytics dashboards, or EHR-embedded time-and-attendance. Those capabilities require infrastructure most critical access hospitals do not have and do not need at this stage. The service is built specifically for Texas critical access hospitals, where overtime and staffing rules carry real audit weight.
 
 One honest limitation: if your WFM challenge is primarily a staffing shortage rather than a scheduling process problem, a managed scheduling service will not solve it. When a large share of your nurse positions are vacant, the scheduling problem is downstream of the hiring problem.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The real question is not which model has more features. It is who carries the weekly scheduling build. A 25-bed hospital where the nurse manager also takes clinical shifts cannot absorb an enterprise WFM implementation, and does not need most of what it adds. Run the actual numbers on her hours before and after, and the right model is usually obvious.
+  </p>
+</div>
 
 ## What to Do This Week
 

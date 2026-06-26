@@ -588,18 +588,18 @@ At this scale, the CAH guide is the wrong document. Analytics, credential manage
   </div>
 </div>
 
+## How Does SimpleScheduleAI Fit for a Critical Access Hospital?
+
+SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for Texas Critical Access Hospitals under 50 beds and does not compete with the enterprise platforms in this guide. It serves the specific case those platforms ignore: the nurse manager is clinically active, scheduling consumes more time than she can give it, there is no IT department to lean on, and there is no float pool when a nurse calls out. You send your roster as Excel. Our [AI nurse scheduling](/ai-nurse-scheduling) builds the weekly schedule using your fairness, FLSA overtime threshold, and CMS §485.635 documentation rules. You approve. When someone calls out, you get a ranked shortlist of qualified, available, non-overtime staff in minutes instead of an hour of phone calls. For a fuller picture of the operating model, see [how it works](/how-it-works), and to model the time-cost in dollars, run the [ROI calculator](/roi). To see the §485.635 checklist tick off as the AI builds a schedule, try the [live scheduling simulator](/simulator).
+
+One honest limitation: SimpleScheduleAI is not the right fit for large multi-hospital systems, for facilities that want self-serve configuration control over their own scheduling, or for hospitals outside Texas. If that describes you, one of the platforms above will serve you better, and we would rather tell you that now than after a pilot.
+
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     The honest answer for most Critical Access Hospitals is that the best tool is not the one with the most features, it is the one that survives contact with a normal Tuesday. A nurse calls out, the manager is mid-shift, and the surveyor visits in three weeks. The systems with the strongest enterprise capability in this guide are built for hospitals that have an IT team to absorb that day. A CAH does not. Pick for the resourcing you actually have, not the demo you watched, and treat implementation burden as the first filter, not the last.
   </p>
 </div>
-
-## How Does SimpleScheduleAI Fit for a Critical Access Hospital?
-
-SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for Texas Critical Access Hospitals under 50 beds and does not compete with the enterprise platforms in this guide. It serves the specific case those platforms ignore: the nurse manager is clinically active, scheduling consumes more time than she can give it, there is no IT department to lean on, and there is no float pool when a nurse calls out. You send your roster as Excel. Our [AI nurse scheduling](/ai-nurse-scheduling) builds the weekly schedule using your fairness, FLSA overtime threshold, and CMS §485.635 documentation rules. You approve. When someone calls out, you get a ranked shortlist of qualified, available, non-overtime staff in minutes instead of an hour of phone calls. For a fuller picture of the operating model, see [how it works](/how-it-works), and to model the time-cost in dollars, run the [ROI calculator](/roi). To see the §485.635 checklist tick off as the AI builds a schedule, try the [live scheduling simulator](/simulator).
-
-One honest limitation: SimpleScheduleAI is not the right fit for large multi-hospital systems, for facilities that want self-serve configuration control over their own scheduling, or for hospitals outside Texas. If that describes you, one of the platforms above will serve you better, and we would rather tell you that now than after a pilot.
 
 ## What to Do This Week
 

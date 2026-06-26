@@ -22,7 +22,7 @@ metadata:
 
 UKG is genuinely capable software. It is also designed for organizations five times larger than a Critical Access Hospital. Both things are true. The platform was not poorly engineered; it was engineered for operational assumptions that do not exist at 25-bed scale: dedicated HRIS staff, multi-month implementations, integrated payroll-and-scheduling teams.
 
-This guide covers what actually works at CAH scale, written for the administrator weighing whether to renew UKG or right-size scheduling to the facility's real operational capacity.
+This guide covers what actually works at CAH scale, written for the administrator weighing whether to renew UKG or right-size to the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling).
 
 ## Key Takeaways
 

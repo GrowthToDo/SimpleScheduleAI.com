@@ -562,13 +562,6 @@ A full scheduling platform with credential management, EHR read access, and soli
 - **Also consider:** OnShift if you have significant post-acute or LTC volume.
 - **Less likely to fit at this scale:** SimpleScheduleAI (designed for smaller facilities under 50 beds), NurseGrid (positioned as a nurse-facing app rather than a primary scheduling platform).
 
-<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
-  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Most CAH buying processes start with a feature list and end with the platform that has the most checkboxes. The harder question is operational fit: does the platform's lowest-bandwidth daily use case match what your nurse manager can actually sustain after week 6 - especially if she also covers clinical shifts? Aladtec, SimpleScheduleAI, and SmartLinx pass that test for different bed-size ranges. Several highly-rated tools on this list are built for organizations with administrative bandwidth most Critical Access Hospitals do not have. Choose for the operational reality you live in on a normal Tuesday, not the demo on a perfect day.
-  </p>
-</div>
-
 ## What Changed in Nurse Scheduling Software in 2026?
 
 Three shifts in the nurse scheduling software market in 2026 affect CAH buying decisions. AI-assisted scheduling is now standard across major platforms, but quality varies and buyers should test what the AI actually optimizes for. Managed scheduling services emerged as a legitimate category for hospitals under 50 beds. And CMS survey activity has increased, making compliance documentation a real differentiator rather than a feature-sheet checkbox.
@@ -644,6 +637,13 @@ If you run a Critical Access Hospital specifically, we have a dedicated guide th
 <div class="not-prose rounded-lg bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 px-5 py-4 my-4">
   <p class="font-semibold text-amber-800 dark:text-amber-300 text-sm">Enterprise WFM platforms (UKG, API Healthcare) are typically a poor scale fit under 75 beds.</p>
   <p class="text-amber-700 dark:text-amber-400 text-xs mt-1">Implementation takes 6 to 18 months at hospital scale, more than most small hospitals can manage internally.</p>
+</div>
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Most CAH buying processes start with a feature list and end with the platform that has the most checkboxes. The harder question is operational fit: does the platform's lowest-bandwidth daily use case match what your nurse manager can actually sustain after week 6 - especially if she also covers clinical shifts? Aladtec, SimpleScheduleAI, and SmartLinx pass that test for different bed-size ranges. Several highly-rated tools on this list are built for organizations with administrative bandwidth most Critical Access Hospitals do not have. Choose for the operational reality you live in on a normal Tuesday, not the demo on a perfect day.
+  </p>
 </div>
 
 ## What to Do This Week

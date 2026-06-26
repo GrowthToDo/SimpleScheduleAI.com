@@ -191,22 +191,6 @@ Honest limitation: the service prepares and ranks the list, but a human at the h
 
 To see the underlying scheduling model, compare [nurse scheduling software](/nurse-scheduling-software) options against the managed approach, review how [AI nurse scheduling](/ai-nurse-scheduling) produces the ranked shortlist, read the operational requirements behind [critical access hospital scheduling](/critical-access-hospital-scheduling), and see [how the managed service works](/how-it-works) end to end. Watch the AI build a schedule and generate a callout replacement shortlist in the [interactive simulator](/simulator).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
-    Running a Critical Access Hospital in Texas?
-  </p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-    Flat monthly pricing. No IT setup. We maintain the ranked callout list and per-diem bench so your on-call charge nurse stops building it at 2 AM.
-  </p>
-  <a
-    href="/how-it-works"
-    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
-  >
-    See how it works
-  </a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
-</div>
-
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
@@ -224,12 +208,11 @@ One honest limitation: a managed callout shortlist is not the right fit for hosp
 4. **Audit your CMS §485.635 callout-documentation gaps.** Pull the last six months of callouts. For how many do you have a complete record of who was called, who declined or accepted, what time, and the credential match? Documentation gaps surface during CMS surveys, not when the callout happens.
 5. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service maintains the ranked call list, the per-diem bench, and the CMS-ready callout documentation so the on-call charge nurse makes calls instead of building the list at 2 AM. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
-  <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Stop building the call list at 2 AM</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI maintains your ranked callout shortlist, per-diem bench, and CMS-ready audit trail so coverage gets handled without the charge nurse working a phone list.</p>
-  </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Stop building the call list at 2 AM</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI maintains your ranked callout shortlist, per-diem bench, and CMS-ready audit trail so coverage gets handled without the charge nurse working a phone list.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
