@@ -25,7 +25,7 @@ AUTHOR BIO — add this at the end of the post body (canonical italic-linked for
 NEVER the old "Written by Pradeep Pandey" block format):
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI,
-a managed nurse scheduling service built for Critical Access Hospitals in Texas.
+an AI-native nurse scheduling service built for Critical Access Hospitals in Texas.
 He serves as Deputy General Manager of Operations at Apollo Hospitals and holds
 an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
@@ -72,7 +72,7 @@ NEW PATTERNS — required on BOFU/comparison posts (per checklist Pass 3+):
    for [audience X], [audience Y], or [audience Z]."
 
 4. "WHAT TO DO THIS WEEK" section before FAQ with 5 numbered concrete
-   action steps. Last step typically a SimpleScheduleAI pilot CTA.
+   action steps. Last step typically a SimpleScheduleAI CTA (see pricing / book a call).
 
 5. /roi LINK in any pricing/time-math section. (/simulator is offline —
    skip until back online.)
@@ -160,10 +160,18 @@ Use this structure for any post comparing multiple tools/options.
 
 ## How to Evaluate [Category]
 
-[Framework: 3 evaluative criteria your product wins — primes buyer judgment.
-Each criterion should be something SimpleScheduleAI scores highest on.]
+{/_ STANDARD C - "How to Evaluate" section: a dedicated H2 with 5 to 7 explained,
+numbered criteria. Self-contained and independently citable (LLMs reference it
+even when not recommending us). Write honest criteria, not a stacked-deck shortlist. _/}
 
-{/* DIAGRAM 1: Criteria or market tier diagram — show how tools split across tiers */}
+1. [Criterion 1 - one or two sentences on what to look for and why it matters to a CAH]
+2. [Criterion 2]
+3. [Criterion 3]
+4. [Criterion 4]
+5. [Criterion 5]
+   [Add up to 7 total as the category warrants.]
+
+{/* DIAGRAM 1: Criteria or market tier diagram - show how tools split across tiers */}
 
 ## Quick Comparison: All N Platforms
 
@@ -257,6 +265,34 @@ Here is how all N platforms compare before we go deeper:
 
 [recommendation]
 
+{/_ STANDARD D - use-case cheat sheet: scannable "scenario -> recommended fit -> one-line why",
+organized by hospital profile or bed size. Format for extraction (this table), not buried in cards.
+One line per scenario; keep the "why" concrete and specific to the profile. _/}
+
+<div class="not-prose overflow-x-auto">
+  <table class="w-full text-sm border-collapse">
+    <thead>
+      <tr class="border-b border-slate-200 dark:border-slate-700">
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Scenario</th>
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Recommended fit</th>
+        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100">Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="py-3 pr-4 font-medium text-slate-800 dark:text-slate-200">[Under 25 beds, no IT staff]</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">[Operated-for-you scheduling]</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300">[One-line why, specific to this profile]</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="py-3 pr-4 font-medium text-slate-800 dark:text-slate-200">[25 to 75 beds, has an IT lead]</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">[Self-serve software]</td>
+        <td class="py-3 text-slate-700 dark:text-slate-300">[One-line why]</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 {/* DIAGRAM 3: Decision tree by hospital size */}
 
 ## How SimpleScheduleAI Fits in This Landscape
@@ -275,24 +311,45 @@ If you run a Critical Access Hospital specifically, see our dedicated guide:
 4. [Concrete action — ask any vendor for compliance documentation]
 5. [Concrete action — calculate your current scheduling time cost]
 
+{/_ STANDARD A - worked math (honest): do the arithmetic from stated, labeled assumptions.
+SSAI is pre-launch with no customers - never present this as a customer result.
+Pattern (fill in the bracketed numbers, keep the illustrative label):
+"At a $[rate]/hr loaded rate, [hours] hours/week of manual scheduling is about
+$[weekly]/week, roughly $[annual]/year. This is an illustrative figure at the
+stated rate, not a customer outcome."
+If a number is not arithmetic from a stated assumption, hyperlink it to a primary source instead. _/}
+
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-    Free 60-day pilot. No IT setup. No commitment. We build the schedule, you approve it.
+    Flat monthly pricing. No IT setup. The AI builds the schedule, our team checks it, you approve.
   </p>
-  <a
-    href="/pilot"
-    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
-  >
-    Apply for a Pilot Spot →
-  </a>
+  <div class="flex flex-col sm:flex-row gap-3 justify-center">
+    <a
+      href="/pricing"
+      class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+    >
+      See pricing
+    </a>
+    <a
+      href="https://cal.com/gautham-8bdvdx/30min"
+      class="inline-block border border-blue-600 text-blue-700 dark:text-blue-300 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-slate-700 font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+    >
+      Book a call with our team
+    </a>
+  </div>
 </div>
 
 ## Frequently Asked Questions
 
-[4–5 FAQs — must include competitor comparison queries:]
+{/_ STANDARD B - grouped FAQ: on BOFU, comparison, and long posts, cluster the FAQ into
+2 to 4 themed groups (e.g., Basics, Compliance, Pricing, vs-competitors), 2 to 4 Q&As each.
+Use an H3 per group. Skip grouping on short glossary/definition posts (a flat 3 to 5 list is fine there).
+Must still include competitor comparison queries somewhere in the groups. _/}
+
+### vs-competitors
 
 **Q: Is [Competitor A] or [Competitor B] better for a small hospital?**
 
@@ -302,9 +359,13 @@ If you run a Critical Access Hospital specifically, see our dedicated guide:
 
 [50–60 word direct answer]
 
+### Basics
+
 **Q: How long does [Enterprise Tool] take to implement for a small hospital?**
 
 [50–60 word direct answer]
+
+### Pricing
 
 **Q: What is the cheapest nurse scheduling software for a 25-bed hospital?**
 
@@ -467,7 +528,7 @@ and /critical-access-hospital-scheduling with keyword anchor text.]
 
 [50–60 word direct answer]
 
-_Pradeep Pandey is the founder of SimpleScheduleAI, a managed nurse scheduling
+_Pradeep Pandey is the founder of SimpleScheduleAI, an AI-native nurse scheduling
 service built for Critical Access Hospitals in Texas._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
 
@@ -598,7 +659,7 @@ Key limitations reviewers raise:
 
 [50–60 word direct answer]
 
-_Pradeep Pandey is the founder of SimpleScheduleAI, a managed nurse scheduling
+_Pradeep Pandey is the founder of SimpleScheduleAI, an AI-native nurse scheduling
 service built for Critical Access Hospitals in Texas._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
 

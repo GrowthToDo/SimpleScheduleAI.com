@@ -89,7 +89,7 @@ AI engines favor:
 
 - Content crawlable by Googlebot and all AI crawlers (see Part 2.1)
 - Concise, extractable answer blocks (40–70 words under a question-style heading)
-- Accurate, complete JSON-LD structured data (schema stacking = 1.8x citations)
+- Accurate, complete JSON-LD (auto-injected: Article + BreadcrumbList + conditional FAQPage; never hand-add or stack).
 - Strong entity signals (Organization, Product, Author with sameAs links)
 - Fresh, well-sourced, clearly attributed facts
 - Brand mentions across multiple authoritative platforms
@@ -111,23 +111,24 @@ concentration is far more extreme:
 | 3rd cited source     | 15%                  |
 | 4th+ cited sources   | < 5% each            |
 
-AI-referred sessions grew **+527% year-over-year** (Jan–May 2025). ChatGPT
-accounts for **87.4%** of all AI referral traffic. Being cited 3rd is nearly
-worthless. Every content and schema decision must optimize for being the FIRST
-cited source, not just appearing somewhere.
+AI-referred sessions are growing rapidly, and ChatGPT drives the large majority
+of AI referral traffic. Being cited 3rd is nearly worthless. Every content
+decision must optimize for being the FIRST cited source, not just appearing
+somewhere. (Treat any specific growth or share figure as directional unless you
+can hyperlink a primary source.)
 
 ### 1.3 AI Ranking Factor Weights (2026)
 
-| Ranking Factor                       | Weight | What it means for SimpleScheduleAI                                                                                                                              |
-| ------------------------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Entity Recognition & Knowledge Graph | 20%    | Build Crunchbase, LinkedIn, G2, Capterra profiles. Brand mentions correlate 3x more strongly with AI visibility than backlinks.                                 |
-| Schema Markup Completeness           | 18%    | Complete JSON-LD on every page. Triple-stacking (Article + FAQPage + ItemList) = 1.8x more citations. Pages without schema risk 60% AI visibility loss by 2026. |
-| Content Structure & Answerability    | 17%    | Question-format headings + 40–70 word answer blocks (Content Capsule Technique).                                                                                |
-| E-E-A-T Signals                      | 15%    | Author credentials, external citations, verifiable claims. Healthcare = high bar.                                                                               |
-| Content Freshness & Update Frequency | 12%    | Content older than 14 days shows 23% citation decline in AI engines. Publish ≥2 pieces/week.                                                                    |
-| Semantic Depth & Comprehensiveness   | 10%    | Anticipate follow-up questions. Cover adjacent topics (compliance, burnout, callouts).                                                                          |
-| User Engagement Signals              | 5%     | CTR and dwell time on traditional search indirectly inform AI confidence.                                                                                       |
-| Backlink Profile                     | 3%     | Still foundational, but semantic relevance now outweighs raw volume.                                                                                            |
+| Ranking Factor                       | Weight | What it means for SimpleScheduleAI                                                                                                                                                           |
+| ------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Entity Recognition & Knowledge Graph | 20%    | Build Crunchbase, LinkedIn, G2, Capterra profiles. Brand mentions correlate more strongly with AI visibility than backlinks.                                                                 |
+| Schema Markup Completeness           | 18%    | Complete, accurate JSON-LD on every page, auto-injected by the Astro layout (Article + BreadcrumbList + conditional FAQPage). Do not stack or hand-add; do not chase FAQ/HowTo rich results. |
+| Content Structure & Answerability    | 17%    | Question-format headings + 40–70 word answer blocks (Content Capsule Technique).                                                                                                             |
+| E-E-A-T Signals                      | 15%    | Author credentials, external citations, verifiable claims. Healthcare = high bar.                                                                                                            |
+| Content Freshness & Update Frequency | 12%    | Fresher content tends to be cited more often in AI engines. Publish ≥2 pieces/week.                                                                                                          |
+| Semantic Depth & Comprehensiveness   | 10%    | Anticipate follow-up questions. Cover adjacent topics (compliance, burnout, callouts).                                                                                                       |
+| User Engagement Signals              | 5%     | CTR and dwell time on traditional search indirectly inform AI confidence.                                                                                                                    |
+| Backlink Profile                     | 3%     | Still foundational, but semantic relevance now outweighs raw volume.                                                                                                                         |
 
 ### 1.4 Per-Engine Optimization (Enhanced — 2026 Research)
 
@@ -424,7 +425,7 @@ H2: What is the true cost of nurse overtime in a critical access hospital?
 
 ### 4.3 FAQ Section Template
 
-Add to every high-intent page (homepage, product, pilot signup).
+Add to every high-intent page (homepage, product, pricing).
 Mark with FAQPage schema (see Part 5.4).
 
 **Mandatory FAQs for SimpleScheduleAI pages:**
@@ -485,7 +486,7 @@ AI engines extract clearly structured comparison tables reliably.
 ### 4.5 Source-Backed Claims Mandate
 
 Content with unsupported claims is routinely discarded during AI generation.
-Source-backed content gets cited 115% more often than unsupported content.
+Source-backed content is far more likely to be cited than unsupported content.
 
 **RULE: Every statistic, regulatory reference, or operational claim must
 hyperlink to a primary source.**
@@ -514,12 +515,13 @@ Embed these throughout copy, tables, and schema:
 - Up to 30% reduction in overtime costs through predictive scheduling
 - Up to 25% reduction in appointment no-show rates via automated reminders
 
-Always attribute: "In our Texas CAH pilot cohort, [metric]..." or "Research shows [metric] [link to source]."
+Every number is EITHER hyperlinked to a primary source ("Research shows [metric] [link]") OR framed as a transparent, labeled illustrative assumption ("at a $50/hr loaded rate, [math] - an illustrative figure, not a customer result"). SSAI is pre-launch; never attribute metrics to customers or a cohort.
 
 ### 4.7 Multimodal Content Strategy
 
-Written blog posts with embedded YouTube videos are cited in Google AI Overviews
-156% more frequently than text-only pages.
+Optional: a short explainer video embedded in a written post can add a useful
+format for some readers. Treat it as a nice-to-have, not a citation lever, and
+make no quantified claim about its effect.
 
 **Content repurposing pipeline per pillar topic:**
 
@@ -544,15 +546,15 @@ Written blog posts with embedded YouTube videos are cited in Google AI Overviews
 | Full Article      | BOFU: 3,000–5,000 / How-to: 2,000–3,000 / MOFU: 1,500–2,500 / Glossary: 600–1,000 | Claude handles 5,000+                           |
 | Fact Frequency    | 1 stat per 150–200 words                                                          | Critical for Perplexity                         |
 
-**Note on TL;DR:** Do not use a separate TL;DR section. Key Takeaways serves both purposes — a TL;DR is redundant and adds AI-tell patterns. Key Takeaways must be placed BEFORE the TOC, not after it.
+**Note on TL;DR:** Do not use a separate TL;DR section. Key Takeaways serves both purposes; a TL;DR is redundant and adds AI-tell patterns. Key Takeaways must be placed BEFORE the TOC, not after it.
 
-**Schema stacking rule**: Article + FAQPage + ItemList = **1.8x more citations**
-than single schema. Valid structured data = **2.3x more likely** to appear in
-AI citations. Schema markup alone = **36%+ boost** in AI citation chances.
+**Schema rule**: Do not stack or hand-add JSON-LD. The Astro layout auto-injects
+Article + BreadcrumbList + conditional FAQPage. Keep on-page facts accurate and
+let the layout handle structured data; do not chase FAQ/HowTo rich results.
 
-**Content freshness**: Content older than 14 days shows **23% citation decline**
-in AI engines. Update time-sensitive content every 7–14 days and refresh the
-`dateModified` field in your Article/BlogPosting schema.
+**Content freshness**: stale content tends to be cited less in AI engines.
+Update time-sensitive content every week or two and refresh the `dateModified`
+field in your Article/BlogPosting schema.
 
 **Evidence density rule**: Replace marketing language with specific data points
 and third-party validation. AI systems are trust verification engines — vague
@@ -561,6 +563,8 @@ promotional content is discarded.
 ---
 
 ## PART 5 — STRUCTURED DATA (JSON-LD SCHEMA)
+
+SUPERSEDED: schema is auto-injected (Article + BreadcrumbList + conditional FAQPage). Never hand-add or stack JSON-LD. This library is background only.
 
 Implement ALL of these on the appropriate pages. Place JSON-LD in `<head>`.
 Validate at: https://search.google.com/test/rich-results
@@ -623,7 +627,7 @@ Validate at: https://search.google.com/test/rich-results
 }
 ```
 
-### 5.4 FAQPage Schema (FAQ sections on product/home/pilot pages)
+### 5.4 FAQPage Schema (FAQ sections on product/home pages)
 
 ```json
 {
@@ -685,7 +689,9 @@ Validate at: https://search.google.com/test/rich-results
 }
 ```
 
-### 5.7 HowTo Schema (How It Works page)
+### 5.7 HowTo Schema (DO NOT IMPLEMENT - reference only)
+
+Google removed HowTo rich results in 2023. Never add HowTo schema. Kept here for reference only.
 
 ```json
 {
@@ -807,7 +813,7 @@ can AI help with hospital nurse scheduling?
 | Product `/nurse-scheduling-software`                     | AI nurse scheduling software                   | Must-have           |
 | How It Works `/how-it-works`                             | how does AI nurse scheduling work              | Must-have           |
 | ROI Calculator `/roi`                                    | nurse scheduling ROI                           | Must-have           |
-| Pilot Signup `/pilot`                                    | CAH pilot program                              | Must-have           |
+| Pricing `/pricing`                                       | Flat pricing + book a call                     | Must-have           |
 | About `/about`                                           | SimpleScheduleAI team, founders                | Must-have (E-E-A-T) |
 | Blog Index `/blog`                                       | nurse scheduling tips                          | High                |
 | Texas Compliance `/blog/texas-nurse-staffing-compliance` | Texas nurse staffing regulations               | High                |
@@ -825,7 +831,7 @@ Cluster articles (in order of priority):
 5. Spreadsheet vs Software: Nurse Scheduling Options for Small Hospitals [Consideration]
 6. How AI-Assisted Scheduling Reduces Nurse Manager Burnout [Consideration]
 7. ROI of Automated Nurse Scheduling for Critical Access Hospitals [Consideration]
-8. SimpleScheduleAI Pilot Program: What to Expect in 90 Days [Decision]
+8. SimpleScheduleAI Onboarding: What to Expect in Your First 30 Days [Decision]
 9. Case Study: How [Hospital Name] Cut Overtime by X% [Decision]
 10. Nurse Self-Scheduling: Pros, Cons, and When It Works in CAHs [Awareness]
 
@@ -1057,10 +1063,10 @@ Use for tools at `/tools/[name]`. Ungated — SEO and link magnet, not lead capt
 3. The interactive tool itself (Astro island with `client:load`)
 4. H2: "How to Use the [Tool Name]" — 400 words, step-by-step
 5. 3–5 FAQ with FAQPage schema
-6. CTA block → `/pilot` or `/how-it-works`
+6. CTA block → `/pricing` or `/how-it-works`
 
-**Schema:** HowTo (for the how-to section) + FAQPage + SoftwareApplication (mark
-the tool itself as a SoftwareApplication with applicationCategory "Utility")
+**Schema:** Auto-injected (Article + BreadcrumbList + conditional FAQPage). Do
+not hand-add HowTo or stack JSON-LD.
 
 **SEO target:** "[thing] generator free", "[thing] calculator", "free [tool type]"
 
@@ -1097,7 +1103,7 @@ the tone, CTA, and publish priority.
 | ----------------- | --------------------------------------------- | ---------------------- | ------------------------------------- |
 | **Awareness**     | "I have a problem I'm starting to understand" | Educate, build trust   | "Learn how it works" → /how-it-works  |
 | **Consideration** | "I'm evaluating solutions"                    | Differentiate, compare | "See the ROI" → /roi or /how-it-works |
-| **Decision**      | "I'm ready to try something"                  | Remove friction        | "Apply for a pilot" → /pilot          |
+| **Decision**      | "I'm ready to try something"                  | Remove friction        | "See pricing" → /pricing              |
 
 **Publish order rule:** On a new domain, publish Awareness content first to
 build topical breadth. Then Consideration. Then Decision. Never lead a new
@@ -1110,7 +1116,45 @@ site with Decision-only content — it has no topical authority to stand on.
 "buyer's guide", "software for", "features", comparison language.
 
 **Signs a post is Decision:** title contains "compliance", "implementation",
-"how [specific software] handles", "ROI", "case study", pilot-specific content.
+"how [specific software] handles", "ROI", "case study", onboarding or pricing content.
+
+---
+
+## 2026-06 standards additions (worked math, grouped FAQ, evaluation section, use-case cheat sheet)
+
+Four patterns to apply on the post types noted. Keep them honest, scannable, and extractable.
+
+### A. Worked math (honest)
+
+Do the arithmetic for the reader using transparent, explicitly-labeled assumptions. Never present it as a customer result (SSAI is pre-launch, no customers).
+
+- Format: "At a $50/hr loaded rate, 8 hours/week of manual scheduling is about $400/week, roughly $20,800/year. This is an illustrative figure at the stated rate, not a customer outcome."
+- Always state the assumption (rate, hours, headcount) inline, and label the result illustrative.
+- Use it in any pricing, ROI, or time-cost section. If a number is not arithmetic from a stated assumption, it must hyperlink to a primary source instead.
+
+### B. Grouped FAQ
+
+On BOFU, comparison, and long posts, cluster the FAQ into 2 to 4 themed groups, 2 to 4 Q&As each.
+
+- Suggested groups: Basics, Compliance, Pricing, vs-competitors. Pick the groups that fit the post.
+- Use an H3 per group under the "Frequently Asked Questions" H2, with the Q&As beneath each.
+- Skip grouping on short glossary or definition posts. A flat 3 to 5 Q&A list is fine there.
+
+### C. Standalone "How to Evaluate a [Vendor/Category]" section
+
+Every comparison and buyer-guide post gets a dedicated H2 with 5 to 7 explained, numbered criteria.
+
+- It is independently citable: LLMs reference it even when they are not recommending us. Make it self-contained.
+- Each criterion is a short numbered item with one or two sentences explaining what to look for and why it matters to a CAH.
+- This replaces the older "3 criteria your product wins" framing for comparison posts: write 5 to 7 honest criteria, not a stacked-deck shortlist.
+
+### D. Use-case cheat sheet
+
+A scannable list mapping "scenario -> recommended fit -> one-line why", organized by hospital profile or bed size.
+
+- Format for extraction (a flat list or a simple table), not buried inside card components.
+- Example rows: "Under 25 beds, no IT staff -> operated-for-you scheduling -> the team builds and checks the schedule, you approve"; "25 to 75 beds, has an IT lead -> self-serve software -> in-house owner can run a platform".
+- One line per scenario. Keep the "why" concrete and specific to the profile.
 
 ---
 
@@ -1175,7 +1219,7 @@ site with Decision-only content — it has no topical authority to stand on.
 
 ### 9.3 Brand & Entity Monitoring (GEO Signal — 2026)
 
-**Brand mentions correlate 3x more strongly with AI visibility than backlinks.**
+**Brand mentions correlate more strongly with AI visibility than backlinks.**
 AI knowledge graphs recognize entities by consistent appearance across sources.
 Time-to-citation (speed at which content gets cited after publication) is an
 emerging signal.
@@ -1264,7 +1308,7 @@ Check: Google AI Overviews, Perplexity, ChatGPT with browsing, Claude.
 1. Use question-format H2/H3 headings mirroring natural language queries.
 2. Write a 40–70 word direct answer immediately after every question heading.
 3. Add FAQ sections with FAQPage schema to every high-intent page.
-4. Triple-stack schemas: Article + FAQPage + ItemList for blog posts.
+4. Let the Astro layout auto-inject JSON-LD (Article + BreadcrumbList + conditional FAQPage); never hand-add or stack schema.
 5. Allow ALL legitimate AI crawlers in robots.txt.
 6. Keep `dateModified` current in all Article/BlogPosting schemas.
 7. Build entity profiles on LinkedIn, Crunchbase, G2, Capterra.
@@ -1300,8 +1344,7 @@ Check: Google AI Overviews, Perplexity, ChatGPT with browsing, Claude.
 - [x] SchemaOrg.astro — reusable JSON-LD component
 - [x] Organization schema — global (every page)
 - [x] WebSite + FAQPage schemas — homepage
-- [x] SoftwareApplication + HowTo schemas — how-it-works
-- [x] FAQPage schema — pilot page
+- [x] Schema auto-injected by Astro layout: Article + BreadcrumbList + conditional FAQPage (never hand-add or stack; no HowTo)
 - [x] BlogPosting + BreadcrumbList schemas — all blog posts
 - [ ] Google Search Console setup + sitemap submission
 - [ ] Core Web Vitals audit (PageSpeed Insights)
@@ -1365,7 +1408,7 @@ the state name in identical copy — Google will deindex thin location pages.
 - H2: "Nurse Scheduling Challenges in Rural [State]" — state-specific data
 - H2: "How SimpleScheduleAI Helps [State] CAHs" — product section
 - FAQ: 3–5 questions (FAQPage schema)
-- CTA → /pilot
+- CTA → /pricing
 
 **Schema:** Article + FAQPage
 
@@ -1397,11 +1440,11 @@ Include "best for" and "not best for" for BOTH products.
 **Format A — You vs Competitor** (`/vs/[competitor]`):
 
 - H1: "SimpleScheduleAI vs [Competitor]: Which Is Right for Your Hospital?"
-- TL;DR: 2–3 sentence honest summary of key differences
+- Answer capsule: 2-3 sentence honest summary of key differences
 - Comparison table: Features, Pricing, Support, CAH-specific fit
 - "Who SimpleScheduleAI is best for" section
 - "Who [Competitor] is best for" section (be honest)
-- CTA → /pilot
+- CTA → /pricing
 
 **Format B — Competitor Alternatives** (`/alternatives/[competitor]`):
 
