@@ -8,7 +8,7 @@ excerpt: >
   Per diem nurses work shift by shift, with no set schedule and no benefits, in exchange for a higher hourly rate. For a critical access hospital, a ready pool of them is what stands between a 5 a.m. callout and an expensive agency invoice. This guide explains what per diem nursing is, how it compares to PRN and agency work, and how a small hospital builds a pool it can rely on.
 image: https://images.unsplash.com/photo-1606738132449-e3590ddb6793?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Glossary
-postType: glossary
+postType: mofu
 tags:
   - glossary
   - per-diem-nursing

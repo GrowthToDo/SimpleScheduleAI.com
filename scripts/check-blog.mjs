@@ -800,7 +800,7 @@ function check(file) {
     mofu: [1500, 2500],
     comparison: [1500, 4500], // single-competitor comparisons run deep (full profile + limitations + verdict)
     howto: [2000, 3000],
-    bofu: [3000, 5000],
+    bofu: [3000, 5500], // comprehensive 10-tool buyer guides with verbatim quotes earn the headroom
   };
   const wordCount = bodyText
     .replace(/<[^>]+>/g, ' ')

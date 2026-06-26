@@ -21,17 +21,17 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/best-nurse-scheduling-software-2026'
 ---
 
-The best nurse scheduling software for a 25-bed Critical Access Hospital is not the same as the best platform for a 200-bed system. ShiftWizard, QGenda, and UKG are built for the larger facility. SimpleScheduleAI is a managed service built for the CAH where the nurse manager also covers 2-3 clinical shifts a week. Your CFO wants the longest feature list. Your nurse manager wants something she can actually run after week 6. Those two answers are different platforms entirely.
+The best nurse scheduling software for a 25-bed Critical Access Hospital is not the same as the best platform for a 200-bed system. ShiftWizard, QGenda, and UKG are built for the larger facility. SimpleScheduleAI is built for the CAH where the nurse manager also covers 2-3 clinical shifts a week. Your CFO wants the longest feature list; your nurse manager wants something she can actually run after week 6. Those are different platforms entirely.
 
-This guide compares 8 platforms across the operational variables that actually decide adoption: hospital size, IT capacity, and what your nurse manager can sustain after week 6, not week 1.
+This guide compares 8 platforms across the operational variables that actually decide adoption: hospital size, IT capacity, and what your nurse manager can sustain.
 
 ## Key Takeaways
 
-- Enterprise platforms (UKG, API Healthcare) are built for 200+ bed systems with dedicated HR and IT teams. Small hospitals that buy them end up paying for features they cannot use.
+- Enterprise platforms (UKG, API Healthcare) are built for 200+ bed systems with dedicated HR and IT teams. Small hospitals that buy them pay for features they cannot use.
 - For hospitals under 50 beds, the right question is not "which software has the most features" but "which option your team will actually use without a full-time administrator."
-- The average nurse manager at a small or community hospital spends 8-12 hours per week on scheduling tasks, per the [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com). Software that reduces this to 2-3 hours pays for itself quickly.
-- Managed scheduling services (where a team builds the schedule for you) now compete directly with self-serve software. For hospitals where scheduling is the manager's biggest time drain, managed service often wins on ROI.
-- Implementation burden is the most underrated evaluation criterion. A platform that takes 6 months to configure is a worse choice for any hospital under 75 beds than a simpler tool that works in week one.
+- The average nurse manager at a small or community hospital spends 8-12 hours per week on scheduling, per the [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com). Software that cuts this to 2-3 hours pays for itself quickly.
+- Managed scheduling services now compete directly with self-serve software. Where scheduling is the manager's biggest time drain, managed service often wins on ROI.
+- Implementation burden is the most underrated evaluation criterion. A platform that takes 6 months to configure is a worse choice under 75 beds than a simpler tool that works in week one.
 
 ## Table of Contents
 
@@ -55,11 +55,9 @@ This guide compares 8 platforms across the operational variables that actually d
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-For a critical access hospital, the best [nurse scheduling software](/nurse-scheduling-software) is the option a one-person scheduling team can actually run: no IT project, Texas overtime rules built in, and fast callout coverage. Enterprise suites like UKG fit 200-plus-bed systems, not a 25-bed CAH. Of the eight platforms below, SimpleScheduleAI is the only one purpose-built for that context and delivered as [AI nurse scheduling](/ai-nurse-scheduling) on a managed service; the others are rated honestly for where they genuinely fit.
+For a critical access hospital, the best [nurse scheduling software](/nurse-scheduling-software) is the option a one-person scheduling team can actually run: no IT project, Texas overtime rules built in, and fast callout coverage. Enterprise suites like UKG fit 200-plus-bed systems, not a 25-bed CAH. Of the eight platforms below, SimpleScheduleAI is the only one purpose-built for that context and delivered as [AI nurse scheduling](/ai-nurse-scheduling) as a service; the others are rated honestly for where they genuinely fit.
 
-The nurse scheduling software market in 2026 splits cleanly into three tiers: enterprise platforms built for large health systems (UKG, Infor, API Healthcare), mid-market tools suited to community hospitals and clinics (SmartLinx, Aladtec, QGenda), and lightweight or managed options for small and critical access hospitals (SimpleScheduleAI, NurseGrid, Deputy). The right choice depends on your bed count, IT capacity, and whether your goal is to manage scheduling in-house or eliminate the administrative burden entirely.
-
-Here is how all 8 platforms compare at a glance before we go deeper:
+The market in 2026 splits cleanly into three tiers: enterprise platforms for large health systems (UKG, Infor, API Healthcare), mid-market tools for community hospitals and clinics (SmartLinx, Aladtec, QGenda), and lightweight or managed options for small and critical access hospitals (SimpleScheduleAI, NurseGrid, Deputy).
 
 ## Quick Comparison: All 8 Platforms
 
@@ -139,25 +137,23 @@ Here is how all 8 platforms compare at a glance before we go deeper:
 
 ## How to Evaluate Nurse Scheduling Software in 2026?
 
-Evaluating nurse scheduling software in 2026 means starting with three questions before looking at feature lists: What is your bed count, because each tier requires a different tool? Do you want to manage scheduling yourself or hand it off? And what compliance requirements does your facility actually carry under [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), CMS, and any state-specific rules? The answers eliminate most platforms before you reach a demo.
-
-Before comparing platforms, it helps to know what questions actually matter for your situation. The vendor demos will emphasize features. The real evaluation should emphasize fit.
+Evaluating nurse scheduling software in 2026 means starting with three questions before looking at feature lists: What is your bed count, because each tier requires a different tool? Do you want to manage scheduling yourself or hand it off? And what compliance requirements does your facility actually carry under [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), CMS, and any state-specific rules? The answers eliminate most platforms before you reach a demo. Vendor demos emphasize features; the real evaluation is fit.
 
 ## What Is Your Bed Count and Staff Size?
 
-The nurse scheduling software market is not one market. It is three markets that happen to use similar terminology:
+The nurse scheduling software market is not one market. It is three, using similar terminology:
 
-- **Under 50 beds (Small, Rural, including 25-bed Critical Access Hospitals):** Score on three things only: implementation burden (live in week one, no IT project), state overtime plus CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance built in by default, and callout coverage speed. A CAH should weight any enterprise feature outside those three at zero, because it is friction, not value.
+- **Under 50 beds (Small, Rural, including 25-bed Critical Access Hospitals):** Score on three things only: implementation burden (live in week one, no IT project), state overtime plus CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance built in by default, and callout coverage speed. Weight any enterprise feature outside those three at zero; it is friction, not value.
 - **50-200 beds (Community Hospital):** You need solid rule-based scheduling, credential tracking, and overtime controls. Mid-market platforms are the right tier.
 - **200+ beds (Regional System):** You need integration with your HRIS, payroll, and EHR. Enterprise platforms with full API connectivity are worth the investment.
 
-Most small and rural hospitals end up over-buying. They purchase a platform sized for a 300-bed system and then spend six months trying to configure it down to their reality. That is a predictable failure mode.
+Most small and rural hospitals end up over-buying: they purchase a platform sized for a 300-bed system, then spend six months trying to configure it down to their reality.
 
 ## Do You Want to Manage Scheduling Yourself or Hand It Off?
 
-Self-serve software assumes your nurse manager will log in, configure rules, build schedules, and maintain the system. For a manager who is also clinically active, this is often an unrealistic expectation.
+Self-serve software assumes your nurse manager will log in, configure rules, build schedules, and maintain the system. For a manager who is also clinically active, that is often unrealistic.
 
-Managed scheduling services take a different approach: a scheduling team handles the weekly build, the manager approves. This model did not exist at scale five years ago. In 2026, it is a legitimate alternative to self-serve software for hospitals under 50 beds.
+Managed scheduling services take a different approach: a scheduling team handles the weekly build and the manager approves. Barely available at scale five years ago, in 2026 it is a legitimate alternative to self-serve software for hospitals under 50 beds.
 
 ## What Compliance Requirements Do You Actually Have?
 
@@ -209,15 +205,13 @@ Any software that does not provide all four of these is a compliance liability f
 
 ## What Are the 8 Best Nurse Scheduling Software Options in 2026?
 
-The eight platforms worth evaluating for nurse scheduling in 2026 are SimpleScheduleAI, Aladtec, SmartLinx, QGenda, NurseGrid Manager, OnShift, Deputy, and UKG. They span three tiers: managed service for small CAHs, self-serve platforms for community hospitals, and enterprise systems for large health systems. Matching the platform to hospital size and administrative capacity is more important than comparing individual features across tiers.
+The eight platforms worth evaluating for nurse scheduling in 2026 are SimpleScheduleAI, Aladtec, SmartLinx, QGenda, NurseGrid Manager, OnShift, Deputy, and UKG. Matching the platform to hospital size and administrative capacity matters more than comparing individual features across tiers.
 
 ## 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/best-nurse-scheduling-software-2026/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-2026/SimpleScheduleAI.webp" alt="SimpleScheduleAI AI-native nurse scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It operates as an AI-native nurse scheduling service rather than self-serve software: the AI builds the weekly schedule using your staff roster, compliance rules, and fairness preferences, and a scheduling specialist checks it. The nurse manager reviews and approves. When a nurse calls out, the team surfaces a ranked shortlist of qualified, available, non-overtime staff within minutes.
-
-The model is built for small hospitals in Texas, with Texas overtime compliance, CMS §485.635 audit trail requirements, and charge nurse coverage rules built into the scheduling logic.
+SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is an AI-native nurse scheduling service rather than self-serve software: the AI builds the weekly schedule from your roster, a scheduling specialist checks it, and the nurse manager approves. Texas overtime compliance, CMS §485.635 audit trail requirements, and charge nurse coverage rules are built into the scheduling logic, and when a nurse calls out the team surfaces a ranked shortlist of qualified, available, non-overtime staff within minutes.
 
 **Best for:** Critical Access Hospitals where the nurse manager is also clinically active and scheduling is a weekly time drain.
 
@@ -240,7 +234,7 @@ The model is built for small hospitals in Texas, with Texas overtime compliance,
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). The Capterra customer base skews toward fire, EMS, law enforcement, and security users; the most recent hospital-context reviews on Capterra are several years old. Aladtec offers credential tracking, shift coverage requests, availability management, and basic overtime monitoring. The interface is functional without requiring significant IT involvement to set up. For the operating-model comparison between a self-serve platform like Aladtec and a managed service, see our [Aladtec vs. managed scheduling service comparison](/blog/aladtec-vs-managed-service).
+Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews); the most recent hospital-context reviews on Capterra are several years old. It offers credential tracking, shift coverage requests, availability management, and basic overtime monitoring, with an interface that sets up without significant IT involvement. For the operating-model comparison between a self-serve platform like Aladtec and a managed service, see our [Aladtec vs. managed scheduling service comparison](/blog/aladtec-vs-managed-service).
 
 **Best for:** Small hospitals and EMS agencies that want proven self-serve scheduling software with low implementation burden.
 
@@ -275,9 +269,7 @@ Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Smartlinx.webp" alt="SmartLinx workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-SmartLinx holds 4.5/5 on Capterra (6 reviews; small sample). The vendor describes the platform as "purpose-built for the long-term care, post-acute care, senior care, and behavioral health industries" ([smartlinx.com](https://www.smartlinx.com)). It combines scheduling, time and attendance, and staffing analytics on a single platform.
-
-SmartLinx is well-suited to LTC, post-acute, and SNF facilities that want scheduling and time-and-attendance integrated. CAHs evaluating it should ask the vendor for hospital-context reference customers, since the documented industry focus skews toward post-acute care.
+SmartLinx holds 4.5/5 on Capterra (6 reviews; small sample). The vendor describes the platform as "purpose-built for the long-term care, post-acute care, senior care, and behavioral health industries" ([smartlinx.com](https://www.smartlinx.com)), combining scheduling, time and attendance, and staffing analytics on one platform.
 
 **Best for:** Community hospitals (50-200 beds) and post-acute or LTC facilities that need scheduling and time-and-attendance on one platform.
 
@@ -315,7 +307,7 @@ SmartLinx is well-suited to LTC, post-acute, and SNF facilities that want schedu
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/QGenda.webp" alt="QGenda physician and nurse scheduling platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It started as physician scheduling software and has expanded into nursing, and is a strong platform for hospitals that need to manage complex physician call schedules alongside nursing rosters. Ari W., Administrator (Hospital & Health Care), wrote on Capterra (May 7, 2024): "Qgenda is easy to use and does a great job at automating." For a deeper look at QGenda specifically, see our [QGenda alternatives breakdown](/blog/qgenda-alternatives).
+QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It started as physician scheduling software and has expanded into nursing. Ari W., Administrator (Hospital & Health Care), wrote on Capterra (May 7, 2024): "Qgenda is easy to use and does a great job at automating." For a deeper look at QGenda specifically, see our [QGenda alternatives breakdown](/blog/qgenda-alternatives).
 
 **Best for:** Multi-specialty physician scheduling and hospitals that need physician and nursing scheduling on one platform.
 
@@ -357,7 +349,7 @@ QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It st
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Nursegrid.webp" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability. The Manager tier adds unit-level oversight. CAHs evaluating NurseGrid as a primary scheduling platform should confirm hospital-tier capabilities directly with the vendor.
+NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability. The Manager tier adds unit-level oversight.
 
 **Best for:** Hospitals that want a staff-facing shift communication layer alongside a primary scheduling system.
 
@@ -396,7 +388,7 @@ _For a CAH-specific deeper comparison, see our guide on the [best OnShift altern
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Onshift.webp" alt="OnShift workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is now positioned as a workforce management platform for post-acute care. If your facility is a skilled nursing facility or long-term care unit, OnShift's documented feature set is built for that context. For acute inpatient nursing units at a standalone small hospital, it is a less natural fit.
+OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is now positioned as a workforce management platform for post-acute care, with a documented feature set built for SNF and LTC contexts rather than acute inpatient nursing at a standalone small hospital.
 
 **Best for:** Post-acute and long-term care facilities, senior living organizations, and skilled nursing facilities.
 
@@ -427,9 +419,9 @@ OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is
 >
 > Mark G., RNAC, Hospital & Health Care, November 23, 2023, Capterra
 
-- Now part of the Workday ecosystem, which carries enterprise pricing and implementation expectations. Not a natural fit for standalone small hospitals without a broader Workday deployment.
+- Now part of the Workday ecosystem, which carries enterprise pricing and implementation expectations; not a natural fit for standalone small hospitals without a broader Workday deployment.
 
-**Verdict:** The right choice for facilities with significant post-acute or LTC volume. For a standalone acute small hospital, the Workday ecosystem dependency and pricing structure are hard to justify.
+**Verdict:** The right choice for facilities with significant post-acute or LTC volume. For a standalone acute small hospital, the Workday dependency and pricing are hard to justify.
 
 **Cost:** Pricing not listed on website. Enterprise pricing applies post-acquisition.
 
@@ -437,7 +429,7 @@ OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Deputy.webp" alt="Deputy workforce scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Deputy is a general workforce scheduling platform used across retail, hospitality, food service, and healthcare. It holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), a strong rating across a large general workforce sample.[5] Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) that covers hospitals, clinics, private practice, and nursing facilities.
+Deputy is a general workforce scheduling platform used across retail, hospitality, food service, and healthcare. It holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews) across a large general workforce sample,[5] and markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) covering hospitals, clinics, private practice, and nursing facilities.
 
 **Best for:** Small to mid-sized healthcare practices and clinics with relatively simple shift scheduling needs and the tightest possible budgets.
 
@@ -450,8 +442,8 @@ Deputy is a general workforce scheduling platform used across retail, hospitalit
 
 **Key limitations:**
 
-- Deputy's healthcare page (deputy.com/industry/healthcare) describes the platform as covering shift scheduling, time tracking, and labor law compliance for healthcare environments. It does not specifically mention HIPAA compliance, BAA terms, or CMS audit-trail features in the documented page content. Healthcare buyers who require HIPAA, BAA, or CMS §485.635 audit-trail support should confirm directly with Deputy sales whether these capabilities are covered in their tier and contract.
-- Credential tracking and clinical compliance documentation are not described as core features on the healthcare page. CAHs evaluating Deputy as a primary scheduling system for a licensed clinical environment should ask the vendor directly about these capabilities and request reference customers at similar scale.
+- Deputy's healthcare page (deputy.com/industry/healthcare) describes shift scheduling, time tracking, and labor law compliance, but does not specifically mention HIPAA compliance, BAA terms, or CMS audit-trail features. Buyers who require HIPAA, BAA, or CMS §485.635 audit-trail support should confirm tier and contract coverage directly with Deputy sales.
+- Credential tracking and clinical compliance documentation are not described as core features on the healthcare page. CAHs evaluating Deputy for a licensed clinical environment should ask the vendor about these capabilities and request reference customers at similar scale.
 
 **Verdict:** Strongly rated as a general workforce scheduling tool. CAHs evaluating Deputy as a primary scheduling system in a licensed clinical environment should specifically verify HIPAA, BAA, credential-tracking, and CMS audit-trail capabilities directly with the vendor before deciding. See our [Deputy alternatives for healthcare](/blog/deputy-alternatives-healthcare).
 
@@ -461,7 +453,7 @@ Deputy is a general workforce scheduling platform used across retail, hospitalit
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/UKG.webp" alt="UKG workforce management platform interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-UKG Pro holds 4.3/5 on Capterra (716 reviews) and 4.2/5 on G2. UKG is the dominant workforce management platform in large hospital systems and handles scheduling, time and attendance, payroll integration, and workforce analytics across many industries. It is built for the scale of organizations it was designed for.
+UKG Pro holds 4.3/5 on Capterra (716 reviews) and 4.2/5 on G2. UKG is the dominant workforce management platform in large hospital systems and handles scheduling, time and attendance, payroll integration, and workforce analytics across many industries.
 
 **Best for:** Large health systems with 200+ beds, dedicated HRIS and payroll teams, and existing UKG infrastructure.
 
@@ -486,110 +478,31 @@ UKG Pro holds 4.3/5 on Capterra (716 reviews) and 4.2/5 on G2. UKG is the domina
 
 **Cost:** Pricing not listed on website. Enterprise pricing. Not appropriate for under 50-bed facilities.
 
-<div class="not-prose my-8">
-  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
-    <thead>
-      <tr class="border-b-2 border-slate-200 dark:border-slate-700">
-        <th class="py-3 px-4 text-left font-semibold text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 align-top">Platform</th>
-        <th class="py-3 px-4 text-left font-semibold text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 align-top">Documented Customer Focus</th>
-        <th class="py-3 px-4 text-left font-semibold text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 align-top">Typical Setup Time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">SimpleScheduleAI</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Critical Access Hospitals, Texas</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">3-5 days</td>
-      </tr>
-      <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">Aladtec by TCP</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Public safety, EMS, fire, small healthcare</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">2-4 weeks</td>
-      </tr>
-      <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">NurseGrid Manager</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Nurse-facing app; staff coordination</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Days</td>
-      </tr>
-      <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">SmartLinx</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Long-term care, post-acute, senior care, behavioral health</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">3-4 months</td>
-      </tr>
-      <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">QGenda</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Physician scheduling, larger health systems</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">6-12 weeks</td>
-      </tr>
-      <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">Deputy</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Retail, hospitality, food service, healthcare</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Hours to days</td>
-      </tr>
-      <tr>
-        <td class="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 align-top">UKG Pro</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">Large enterprises across many industries; large health systems</td>
-        <td class="py-3 px-4 text-slate-700 dark:text-slate-300 align-top">6-18 months at hospital scale</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
 ## Which Software Is Right for Your Hospital Size?
 
-Hospital size determines the right scheduling platform more than any other variable. Hospitals under 25 beds need low implementation burden and a tool the nurse manager can run without IT support. Hospitals at 25-75 beds need solid compliance logic and credential tracking. Hospitals at 75-200 beds need analytics and integration depth. Enterprise platforms designed for 200+ beds are the wrong fit for small and critical access hospitals regardless of feature count.
+Hospital size determines the right scheduling platform more than any other variable. Enterprise platforms designed for 200+ beds are the wrong fit for small and critical access hospitals regardless of feature count. The tool-by-tier picks are summarized in the decision cards further down; the operative logic at each tier is below.
 
-**Under 25 beds:**
+**Under 25 beds:** First decide whether you want to manage scheduling yourself or eliminate it as a management task; if your nurse manager is clinically active, self-serve software may not solve the right problem.
 
-Your first question is whether you want to manage scheduling yourself or eliminate it as a management task. If your nurse manager is also clinically active and spends 8+ hours per week on scheduling, the administrative model of self-serve software may not solve the right problem.
+**25-75 beds (Small Community Hospital):** Enough complexity to justify a real platform, but not enough scale to absorb enterprise implementation costs.
 
-- **Best self-serve option:** Aladtec. Lower implementation burden than SmartLinx, includes credential tracking, built for small hospitals and EMS.
-- **Best managed option:** SimpleScheduleAI. Built specifically for this segment, handles scheduling and compliance for you.
-- **Less likely to fit at this scale:** UKG (typical implementation 6 to 18 months at hospital scale), QGenda (positioned for larger health systems and physician groups), Deputy (positioned across many industries; if HIPAA/CMS audit-trail support is required, confirm tier coverage with the vendor).
-
-**25-75 beds (Small Community Hospital):**
-
-You have enough complexity to justify a real scheduling platform, but not enough scale to absorb enterprise implementation costs.
-
-- **Best options:** SmartLinx or Aladtec. Both serve this size range without enterprise pricing.
-- **Also consider:** QGenda if you need physician scheduling alongside nursing.
-- **Less likely to fit at this scale:** UKG (typical implementation 6 to 18 months), NurseGrid (positioned as a nurse-facing app rather than a primary scheduling system; verify hospital-tier coverage with the vendor).
-
-**75-200 beds (Community Hospital):**
-
-A full scheduling platform with credential management, EHR read access, and solid reporting starts to make sense at this scale.
-
-- **Best options:** QGenda, SmartLinx.
-- **Also consider:** OnShift if you have significant post-acute or LTC volume.
-- **Less likely to fit at this scale:** SimpleScheduleAI (designed for smaller facilities under 50 beds), NurseGrid (positioned as a nurse-facing app rather than a primary scheduling platform).
+**75-200 beds (Community Hospital):** A full platform with credential management, EHR read access, and reporting makes sense at this scale.
 
 ## What Changed in Nurse Scheduling Software in 2026?
-
-Three shifts in the nurse scheduling software market in 2026 affect CAH buying decisions. AI-assisted scheduling is now standard across major platforms, but quality varies and buyers should test what the AI actually optimizes for. Managed scheduling services emerged as a legitimate category for hospitals under 50 beds. And CMS survey activity has increased, making compliance documentation a real differentiator rather than a feature-sheet checkbox.
-
-Several shifts in the market are worth knowing about before you buy:
 
 **AI-assisted scheduling is now table stakes, not a differentiator.** Every major platform has added AI-assisted scheduling in the last 18 months. The quality varies significantly. Ask specifically what the AI optimizes for (cost, fairness, compliance), whether it can explain its decisions, and what happens when the AI suggestion violates a rule.
 
 **Managed scheduling services emerged as a real category.** Five years ago, the only options were self-serve software or hiring a full-time scheduler. In 2026, managed scheduling services handle the weekly build for a flat fee. For small hospitals without a dedicated scheduling administrator, this is worth evaluating seriously.
 
-**Integration requirements are rising.** Hospital EHR vendors are publishing more workforce data APIs. Expect scheduling platforms to offer EHR read access for credential and licensure data within the next 18 months. If you are evaluating platforms now, ask about their EHR integration roadmap.
+**Integration requirements are rising.** Hospital EHR vendors are publishing more workforce data APIs. Expect scheduling platforms to offer EHR read access for credential and licensure data within the next 18 months; ask about each vendor's integration roadmap.
 
-**Compliance documentation is getting audited more.** [CMS Survey and Certification activity](https://www.cms.gov/medicare/health-safety-standards/certification-compliance) has increased at small hospital facilities. Facilities without auditable staffing documentation are getting findings. This is making compliance-ready documentation a real differentiator, not a feature-sheet checkbox.
+**Compliance documentation is getting audited more.** [CMS Survey and Certification activity](https://www.cms.gov/medicare/health-safety-standards/certification-compliance) has increased at small hospital facilities, and facilities without auditable staffing documentation are getting findings. That makes compliance-ready documentation a real differentiator, not a feature-sheet checkbox.
 
 ## How Does SimpleScheduleAI Fit in This Landscape?
 
-SimpleScheduleAI is an AI-native nurse scheduling service for Critical Access Hospitals in Texas under 50 beds. It does not compete with enterprise platforms: it serves the specific segment where the nurse manager is also clinically active, scheduling consumes more weekly time than she can afford, and the self-serve software model has not solved the problem. The nurse manager reviews and approves; the service handles configuration, schedule generation, and compliance documentation.
+SimpleScheduleAI is an AI-native nurse scheduling service for Critical Access Hospitals in Texas under 50 beds. It does not compete with UKG, QGenda, or the other enterprise platforms; it serves the specific segment where the nurse manager is also clinically active, scheduling consumes more weekly time than she can afford, and self-serve software has not solved the problem. You send us your roster via Excel. Our AI builds the weekly schedule using fairness, overtime, and compliance rules, our scheduling team checks it, and you approve. When a nurse calls out, you get a ranked shortlist of qualified, available, non-overtime staff within minutes instead of two hours of phone calls. If you're currently building schedules in a spreadsheet, our [nurse scheduling software vs. Excel breakdown](/blog/nurse-scheduling-software-vs-excel) walks through where Excel stops working at the CAH scale.
 
-SimpleScheduleAI is not competing with UKG or QGenda. It is built for small Critical Access Hospitals in Texas where the managed service model and state compliance requirements are most developed.
-
-The product is an AI-native nurse scheduling service, not self-serve software. You send us your roster via Excel. Our AI builds the weekly schedule using fairness, overtime, and compliance rules, and our scheduling team checks it. You approve. When a nurse calls out, you get a ranked shortlist of qualified, available, non-overtime staff within minutes instead of two hours of phone calls. If you're currently building schedules in a spreadsheet, our [nurse scheduling software vs. Excel breakdown](/blog/nurse-scheduling-software-vs-excel) walks through where Excel stops working at the CAH scale.
-
-It is not the right fit for every hospital. If your facility has 75+ beds, a dedicated scheduling administrator, or needs deep EHR integration, one of the mid-market platforms will serve you better. If you are a small CAH in Texas where the nurse manager is also on the floor half the week, it is worth a conversation.
-
-Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.
-
-If you run a Critical Access Hospital specifically, we have a dedicated guide that goes deeper on CAH compliance, Texas staffing rules, and callout coverage: [Critical Access Hospital Scheduling Guide](/critical-access-hospital-scheduling). For a complete feature-by-feature evaluation framework across all platforms, see our [nurse scheduling software hub](/nurse-scheduling-software).
+It is not the right fit for every hospital. If your facility has 75+ beds, a dedicated scheduling administrator, or needs deep EHR integration, one of the mid-market platforms will serve you better; if you are a small CAH in Texas where the nurse manager is also on the floor half the week, it is worth a conversation. For more on CAH compliance, Texas staffing rules, and callout coverage, see our [Critical Access Hospital Scheduling Guide](/critical-access-hospital-scheduling), and for a feature-by-feature evaluation framework across all platforms, our [nurse scheduling software hub](/nurse-scheduling-software).
 
 <div class="not-prose my-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
   <div class="rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950 p-5">
@@ -688,7 +601,7 @@ If you run a Critical Access Hospital specifically, we have a dedicated guide th
 
 **Q: Is Aladtec or SmartLinx better for a small hospital?**
 
-For hospitals under 50 beds, Aladtec is the better default. It has lower implementation burden, solid credential tracking, and a support team experienced with small healthcare organizations. SmartLinx has a more integrated scheduling-and-time-attendance platform but requires more admin capacity during setup - which pays off at 50-200 beds where you have someone dedicated to owning the configuration.
+For hospitals under 50 beds, Aladtec is the better default: lower implementation burden, solid credential tracking, and a support team experienced with small healthcare organizations. SmartLinx has a more integrated scheduling-and-time-attendance platform but requires more admin capacity during setup, which pays off at 50-200 beds where someone is dedicated to owning the configuration.
 
 **Q: Does Deputy work for hospital nurse scheduling?**
 
@@ -696,15 +609,15 @@ Not for a licensed acute care facility. Deputy handles basic shift scheduling an
 
 **Q: How long does UKG take to implement for a small hospital?**
 
-Typically 6-18 months for a full deployment, including configuration, training, and system integration. For a hospital under 50 beds without a dedicated IT or HR team, that timeline is operationally impossible. Several small hospital administrators we have spoken with purchased UKG and never fully deployed it. The platform is excellent for large health systems. It is not sized for small hospitals.
+Typically 6-18 months for a full deployment, including configuration, training, and system integration. For a hospital under 50 beds without a dedicated IT or HR team, that timeline is operationally impossible. The platform is excellent for large health systems but is not sized for small hospitals.
 
 **Q: What is the cheapest nurse scheduling software for a 25-bed hospital?**
 
-Deputy is the lowest-cost option at roughly $4-6 per employee per month, but it lacks the compliance features hospitals need. Aladtec runs $200-450 per month and covers most compliance requirements for small hospitals. NurseGrid Manager has a low-cost tier but is a shift coordination layer, not a full scheduling engine. SimpleScheduleAI uses flat-fee managed service pricing - contact for current rates.
+Deputy is the lowest-cost option at roughly $4-6 per employee per month, but it lacks the compliance features hospitals need. Aladtec runs $200-450 per month and covers most compliance requirements for small hospitals. NurseGrid Manager has a low-cost tier but is a shift coordination layer, not a full scheduling engine. SimpleScheduleAI uses flat-fee pricing - contact for current rates.
 
 **Q: What is the difference between scheduling software and a managed scheduling service?**
 
-Scheduling software is a tool your nurse manager logs into, configures, and uses to build schedules each week. A managed scheduling service provides a scheduling team that builds the schedule for you, using your rules and roster - your manager reviews and approves. For hospitals where the nurse manager is also clinically active, managed service often solves the real problem (the weekly time cost of scheduling) where software only shifts the work to a different tool.
+Scheduling software is a tool your nurse manager logs into, configures, and uses to build schedules each week. A managed scheduling service provides a scheduling team that builds the schedule for you, using your rules and roster, and your manager reviews and approves. Where the nurse manager is also clinically active, managed service often solves the real problem (the weekly time cost of scheduling) where software only shifts the work to a different tool.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

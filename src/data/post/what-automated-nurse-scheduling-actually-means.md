@@ -11,7 +11,7 @@ excerpt: >
   a demo and "automated" in daily use is the most important question to ask before buying.
 image: https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
-postType: glossary
+postType: mofu
 tags:
   - nurse-scheduling
   - automated-scheduling
