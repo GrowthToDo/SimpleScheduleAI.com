@@ -57,13 +57,6 @@ The practical takeaway is plain. If your hospital delivers its skilled nursing t
 
 Ask one question. Is your hospital listed on Nursing Home Care Compare with its own skilled nursing facility CMS Certification Number? If the answer is no, you do not file PBJ. PBJ obligation tracks SNF certification exactly, and SNF certification is what puts a provider on Care Compare with its own number.
 
-<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
-  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    The single most useful thing a rural hospital administrator can do with PBJ is confirm it does not apply. Searching your hospital on Nursing Home Care Compare takes two minutes and ends the question with a dated answer you can keep on file. Most administrators who think they have a PBJ problem do not have one, and the worst outcome is spending quarterly staff time preparing a filing no agency expects.
-  </p>
-</div>
-
 To run the check, search your hospital name and state at [Nursing Home Care Compare](https://www.medicare.gov/care-compare/). A swing-bed-only CAH will not return a nursing-home listing. A hospital that operates a separately certified skilled nursing unit will appear with a distinct SNF CMS Certification Number, a Five-Star rating, and staffing measures. That listing, or its absence, is the answer. If you want it in writing, your Medicare Administrative Contractor can confirm your certification status so you have a dated record.
 
 ## What Is the One Critical Access Hospital Case That Does Owe PBJ?
@@ -172,6 +165,13 @@ One honest limitation: SimpleScheduleAI does not produce a PBJ file, integrate t
 
 For the broader compliance picture at a Critical Access Hospital, including the CAH staffing and supervision requirements at [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) and Texas labor law, see the guide to [critical access hospital scheduling](/critical-access-hospital-scheduling). For what [nurse scheduling software for CAHs](/nurse-scheduling-software) needs to cover, the feature overview lists the requirements that matter for small rural hospitals specifically. To keep day-to-day scheduling itself audit-ready, see how to [stay CMS compliant with nurse scheduling](/blog/how-to-stay-cms-compliant-nurse-scheduling), and for swing-bed context, read [what a Critical Access Hospital is](/blog/what-is-a-critical-access-hospital).
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The single most useful thing a rural hospital administrator can do with PBJ is confirm it does not apply. Searching your hospital on Nursing Home Care Compare takes two minutes and ends the question with a dated answer you can keep on file. Most administrators who think they have a PBJ problem do not have one, and the worst outcome is spending quarterly staff time preparing a filing no agency expects.
+  </p>
+</div>
+
 ## What to Do This Week
 
 Whether or not you think PBJ applies, here is a short diagnostic that settles it before the next quarter closes.
@@ -185,10 +185,8 @@ Whether or not you think PBJ applies, here is a short diagnostic that settles it
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI keeps a complete audit trail for every schedule and change by default, so your staffing-assignment record is clean and dated. Built for Texas Critical Access Hospitals, with flat monthly pricing and no IT setup.</p>
-  <div class="flex flex-col sm:flex-row gap-3 justify-center">
-    <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works</a>
-    <a href="https://cal.com/gautham-8bdvdx/30min" class="inline-block border border-blue-600 text-blue-700 dark:text-blue-300 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-slate-700 font-semibold px-6 py-3 rounded-lg transition-colors duration-200">Book a call with our team</a>
-  </div>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
