@@ -359,6 +359,17 @@ When 8-and-80 ships, this rule reverses. Update this section and revert the soft
 - Use descriptive anchor text (NOT "click here" or "read more").
 - No orphan pages — every page linked from at least one other page.
 
+### 3.5 Recurring authoring guardrails (added 2026-06 after live-post defects)
+
+These shipped on a live post once and are now prevented. Some are gated by `check-blog` / `check-links`; author them in so you never see the flag.
+
+- **Define before you apply (structure).** In an explainer/definitional post, the "What is X?" H2 comes BEFORE the sections that apply X (who-owes-it, how-it-affects-you). A reader who lands cold needs the definition first. Lead with the verdict only when the post is deliberately answer-first — and even then, define the core term in the intro or first section, never four H2s down.
+- **Each section earns its place (no concept-level repetition).** State a definition, a test, or an exemption ONCE in the body. Key Takeaways, FAQ, "Our Take", and "What to Do This Week" are the only places a core point may recap. If section after section re-derives the same idea, you are padding — cut it (this also keeps the post in its post-type word range). This extends the "no phrase repeated 3+ times" rule to whole concepts.
+- **Tight excerpt (gated).** 1-3 short sentences, none over 40 words (`check-blog` WARNs past 40). It is a distinct hook, not a restatement of the intro or a KT bullet.
+- **Image must topic-match (eyeball, not just pool-membership).** A laptop/phone/app-screen image on a compliance, regulatory, or clinical-topic post reads as off-topic even though it is a valid unused pool image. Match the pool entry's `topics` to the post subject; prefer institutional/facility/paperwork imagery for compliance posts.
+- **Never self-label "managed service" (gated).** SSAI's self-label is "AI-native nurse scheduling service" (or "nurse scheduling software we build and operate, delivered as a service"). "SimpleScheduleAI is a managed service" trips `check-blog`. Category/comparison/title use ("managed service vs software") is fine.
+- **Every external source link must resolve (network gate).** Government URLs move silently (a CMS PDF on `/files/document/...` becomes `/downloads/...`). Run `npm run check-links <PATH>` before publish; the offline gate cannot see a dead citation.
+
 ---
 
 ## PART 4 — AEO CONTENT PATTERNS

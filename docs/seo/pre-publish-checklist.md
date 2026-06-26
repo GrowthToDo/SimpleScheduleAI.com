@@ -29,8 +29,13 @@ Found again and again across posts. A generic checklist pass misses them; check 
 - [ ] **`## Sources` is a NUMBERED list** (`1.`, `2.`), above the bio and below the FAQ, never bulleted. Compliance posts: every penalty, deadline, percentage, dollar figure, or "N periods" claim is hyperlinked to a primary source (CMS, eCFR, Federal Register, HHS, DOL, BLS, NSI) or explicitly estimate-framed.
 - [ ] **CFR sections correct:** CAH staffing/on-duty/supervision = **§485.631**; provision of services / RN nursing-care assignment = **§485.635**. Never cite §485.635 for the staffing-on-duty rule.
 - [ ] **Date sanity:** `publishDate` is not a placeholder (2099) and not an unintended future date; `updateDate` is not earlier than `publishDate`. Set the real publish date at go-live.
-- [ ] **Image needs a human eyeball.** An agent cannot see it: confirm the ID is in `scripts/image-pool.json`, unused by other posts, no YAML quotes, AND a person checks the rendered image for relevance and tone before publish. The pool description does not guarantee a good visual, and the pool is nearly exhausted.
+- [ ] **Image needs a human eyeball.** An agent cannot see it: confirm the ID is in `scripts/image-pool.json`, unused by other posts, no YAML quotes, AND a person checks the rendered image for relevance and tone before publish. The pool description does not guarantee a good visual, and the pool is nearly exhausted. **Topic-match the image to the post's subject:** a laptop/phone/app screen on a compliance, regulatory, or clinical-topic post (e.g. a PBJ/CMS post) reads as off-topic even though it is a valid, unused pool image. Prefer an institutional/facility/paperwork image for compliance topics; match the pool entry's `topics` to the post's subject.
 - [ ] **No heading glued to its body, no stray trailing `?`.** Recurred across 6+ posts from copy-paste. Grep `^#{2,6} .+\?.` — a heading whose `?` is followed by more text on the SAME line (`## What Should You Do This Week?Pick one...`) is collapsed: the H2/H3 must sit alone on its line, then a blank line, then the paragraph. Separately grep `[.?!][?]$` — no line ends in `.?` / `?? ` (a body sentence with a question mark glued on, e.g. `...how-it-works).?`). A question heading SHOULD end in `?`; a body line never should.
+- [ ] **Every EXTERNAL source link resolves (200) — not just the featured image.** Run `npm run check-links <PATH>` (or curl each external URL) before publish. Government pages move silently: a CMS PDF on `/files/document/...` 404s once CMS reshelves it under `/downloads/...`, and a dead citation guts the post's authority. The offline `check-blog` gate cannot see this (no network); `check-links` is the network pass. 403/429/timeouts are usually bot-blocks, not dead links — verify those by hand, do not assume broken.
+- [ ] **Each body section adds NEW information; no concept re-explained across 3+ body sections.** A definition, a one-question test, an exemption: state each once in the body. Key Takeaways, FAQ, "Our Take", and "What to Do This Week" are the ONLY places a core point may recap. If the body re-derives the same idea section after section, dedup — this also keeps the post inside its post-type word range. (Extends the "no phrase repeated 3+ times" rule to whole concepts, not just phrasings.)
+- [ ] **Definition before application (explainer/definitional posts).** The "What is X?" H2 comes BEFORE the sections that apply X (who-owes-it, how-it-works-for-you), so a cold reader gets the definition first. Lead with the verdict only when the post is deliberately answer-first — and even then, define the core term early (in the intro or first section), never bury it four H2s down.
+- [ ] **"managed service" is never a SELF-label (now gated — verify the reword reads naturally).** `check-blog` WARNs on "SimpleScheduleAI is a managed service" and "our managed ... service". The self-label is "AI-native nurse scheduling service"; category/comparison/title use ("managed service vs software") is fine. When you fix a flagged self-label, confirm the new sentence still reads well.
+- [ ] **Excerpt has no run-on sentence (now gated).** `check-blog` WARNs on any excerpt sentence over 40 words. Keep the excerpt to 1-3 short sentences; split anything long. (Pairs with the distinct-hook rule above.)
 
 ## Content
 
@@ -224,7 +229,15 @@ For each check, GREP/SCAN the file — no eyeballing, no assumptions.
 
 Mandatory first step: run `npm run check-blog <PATH>` and report the output
 verbatim. Treat every hard failure from the script as a publish blocker
-regardless of whether the founder asked you to be lenient.
+regardless of whether the founder asked you to be lenient. Then run
+`npm run check-links <PATH>` (network pass) and report any hard-broken (4xx)
+external source link as a blocker — the offline gate cannot see dead links.
+
+If a subagent trimmed or rewrote this post, do NOT trust its self-reported
+cut size or "nothing removed" claim. Ground-truth the actual change:
+`git diff --stat <PATH>`, a before/after body word count, and counts of
+preserved blockquotes / tool names / links. Subagents have under-reported
+their own cuts by ~7x; verify, then report the real delta.
 
 Mandatory second step: structurally diff the draft against these three
 canonical reference posts: schedule360-alternatives.md,

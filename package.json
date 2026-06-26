@@ -22,7 +22,8 @@
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
     "indexnow": "node scripts/indexnow-submit.mjs",
-    "check-blog": "node scripts/check-blog.mjs"
+    "check-blog": "node scripts/check-blog.mjs",
+    "check-links": "node scripts/check-links.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",

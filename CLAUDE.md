@@ -52,6 +52,8 @@ ALWAYS delegate:
 
 Main agent only: read known files, edit, write, compose answer, spawn subagents.
 
+**Verify subagent output before trusting it.** After any trim/edit subagent, ground-truth the actual change — `git diff --stat`, a before/after body word count, and counts of preserved blockquotes / tool names / links — instead of the agent's self-reported numbers. Trim agents have under-reported their own cuts by ~7x (claimed ~200 words removed, actually ~1500). A self-report is a hypothesis; the diff is the fact.
+
 ## Blog Writing Pipeline (3-Agent Process)
 
 Use this pipeline for every blog post — both writing new posts from scratch and editing existing drafts. Running all three phases in sequence catches errors that a single-agent pass misses.
@@ -79,7 +81,7 @@ Spawn a `general-purpose` agent with the research brief attached. It must:
 3. **For posts with competitor content:** load `.claude/skills/competitor-reviews.md` — it will direct to the dossier first, then live fetch only if needed
 4. Write the complete post following all SEO/AEO skill rules
 5. Embed all internal links and source citations from the research brief
-6. Obey the mechanical guardrails while writing (the `check-blog` gate enforces them, so authoring them in saves a fix round): no em-dashes or en-dashes; no AI-tone phrases; question-form H2s; the 2-CTA pattern (`See pricing`/`See how it works` plus `Book a call with our team`), never `/pilot`; both pillar links plus `/how-it-works`; no `CAH` inside any heading or table header; dark-mode variants on every table; Key Takeaways before the Table of Contents; TOC anchor text that exactly matches the heading
+6. Obey the mechanical guardrails while writing (the `check-blog` gate enforces them, so authoring them in saves a fix round): no em-dashes or en-dashes; no AI-tone phrases; question-form H2s; the 2-CTA pattern (`See pricing`/`See how it works` plus `Book a call with our team`), never `/pilot`; both pillar links plus `/how-it-works`; no `CAH` inside any heading or table header; dark-mode variants on every table; Key Takeaways before the Table of Contents; TOC anchor text that exactly matches the heading; for explainer/definitional posts, define the core term BEFORE the sections that apply it (do not bury "What is X?" four H2s down); each body section adds new information, so a concept is stated once in the body (Key Takeaways, FAQ, "Our Take", and "What to Do This Week" are the only recaps); a tight excerpt (1-3 short sentences, none over 40 words); the SSAI self-label is "AI-native nurse scheduling service", never "managed service"; every external source URL must resolve (verify with `check-links`)
 7. Return the full draft as output — no partial drafts
 
 **For editing existing drafts** (not new posts): the writing agent reads the existing file and applies only the changes needed. It does not rewrite sections that are already correct.
@@ -90,9 +92,10 @@ Mechanical, grep-able rules are not reviewed by hand or by an agent anymore. A c
 
 ```
 npm run check-blog src/data/post/<slug>.md
+npm run check-links src/data/post/<slug>.md   # network pass — every external source URL must resolve (200)
 ```
 
-`scripts/check-blog.mjs` is the single authoritative mechanical gate. It HARD-FAILS on every deterministic checklist rule: em/en-dashes, the full AI-tone list, inline `<svg>`, blank-line-in-`<div>`, the retired `/pilot` strings, the 2-CTA pattern, both pillars + `/how-it-works`, canonical-matches-slug, TOC anchor/heading integrity, merged-heading + stray `?`, no-`CAH`-in-headings, stray MDX, image-pool membership + no-duplication, dark-mode table variants, Sources numbered + not-in-TOC, date sanity, Key-Takeaways-before-TOC, no-TL;DR, links-to-drafts, DSHS/§62.002/8-and-80. Fix EVERY hard failure before review. Warnings are advisory (word count, `/ai-nurse-scheduling`, `.webp`, table classes, volume language) and a human judges those. If you find a new mechanical rule, add it to the script, not to a human's to-do list.
+`scripts/check-blog.mjs` is the single authoritative mechanical gate (offline/deterministic). It HARD-FAILS on every deterministic checklist rule: em/en-dashes, the full AI-tone list, inline `<svg>`, blank-line-in-`<div>`, the retired `/pilot` strings, the 2-CTA pattern, both pillars + `/how-it-works`, canonical-matches-slug, TOC anchor/heading integrity, merged-heading + stray `?`, no-`CAH`-in-headings, stray MDX, image-pool membership + no-duplication, dark-mode table variants, Sources numbered + not-in-TOC, date sanity, Key-Takeaways-before-TOC, no-TL;DR, links-to-drafts, DSHS/§62.002/8-and-80. Fix EVERY hard failure before review. Warnings are advisory and a human judges those: word count (post-type-aware ranges), `/ai-nurse-scheduling`, `.webp`, table classes, volume language, **excerpt run-on (>40-word sentence)**, and **a likely "managed service" self-label**. `scripts/check-links.mjs` is the separate NETWORK pass — the offline gate cannot see a dead source link (that is how a 404'd CMS PDF shipped once). If you find a new mechanical rule, add it to the script, not to a human's to-do list.
 
 ### Phase 3 — Review agent (JUDGMENT ONLY)
 

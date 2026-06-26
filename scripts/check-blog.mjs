@@ -150,6 +150,22 @@ function unquote(v) {
   return t;
 }
 
+// Extract excerpt text, handling single-line and YAML folded (`>`/`|`) blocks.
+// The frontmatter parser does not capture folded continuation lines, so read
+// them straight from the raw lines between `excerpt:` and the next top-level key.
+function getExcerptText(lines, fmEnd) {
+  const idx = lines.findIndex((l, i) => i < fmEnd && /^excerpt:/.test(l));
+  if (idx === -1) return '';
+  const inline = (lines[idx].match(/^excerpt:\s*(.*)$/)?.[1] || '').trim();
+  if (inline && !/^[>|][-+]?$/.test(inline)) return unquote(inline);
+  const parts = [];
+  for (let i = idx + 1; i < fmEnd; i++) {
+    if (/^\S/.test(lines[i])) break;
+    if (lines[i].trim()) parts.push(lines[i].trim());
+  }
+  return parts.join(' ');
+}
+
 function inBlockquote(line) {
   return /^\s*>/.test(line);
 }
@@ -879,6 +895,42 @@ function check(file) {
   const bioLine = body.find((l) => /_\[Pradeep Pandey\]\(\/about\/pradeep-pandey\)/.test(l));
   if (bioLine && !/Critical Access Hospital/.test(bioLine)) {
     warn('Author bio does not reference Critical Access Hospitals', 0, '');
+  }
+
+  // Excerpt readability: a meta-description sentence over 40 words reads as a
+  // run-on and gets truncated in SERPs. Flag the longest offending sentence.
+  const excerptText = fm ? getExcerptText(lines, fm._end) : '';
+  if (excerptText) {
+    for (const s of excerptText.split(/(?<=[.!?])\s+/)) {
+      const wc = s.split(/\s+/).filter(Boolean).length;
+      if (wc > 40) {
+        warn(
+          `Excerpt has a ${wc}-word sentence (>40) — split it; long run-ons read poorly and get truncated as a meta description`,
+          0,
+          s.slice(0, 90)
+        );
+        break;
+      }
+    }
+  }
+
+  // "managed service" as a SELF-label is banned (SSAI self-label = "AI-native
+  // nurse scheduling service"). Category/comparison/model-description uses are
+  // fine, so match only the two clearest self-label shapes to avoid false hits.
+  const managedSelfLabel = [
+    /SimpleScheduleAI\b[^.\n]{0,40}\bis an?\b[^.\n]{0,15}managed[- ]service/i,
+    /\bour\s+managed[- ][\w\s]{0,30}?service\b/i,
+  ];
+  for (const re of managedSelfLabel) {
+    const m = bodyText.match(re);
+    if (m) {
+      warn(
+        `Possible "managed service" SELF-label ("${m[0].trim().slice(0, 48)}") — use "AI-native nurse scheduling service"; category/comparison use is fine`,
+        0,
+        ''
+      );
+      break;
+    }
   }
 
   return { file: path, draft: fm?.draft === 'true', failures, warnings };
