@@ -37,9 +37,9 @@ She had evaluated the right products for the wrong market. This guide breaks dow
 
 - [Why Doesn't Standard Nurse Scheduling Software Work for Small Hospitals?](#why-doesnt-standard-nurse-scheduling-software-work-for-small-hospitals)
 - [What Does It Mean When a Platform Is Built for Hundreds of Employees?](#what-does-it-mean-when-a-platform-is-built-for-hundreds-of-employees)
-- [What Features Do Enterprise Scheduling Platforms Assume That CAHs Don't Have?](#what-features-do-enterprise-scheduling-platforms-assume-that-cahs-dont-have)
+- [What Features Do Enterprise Scheduling Platforms Assume That Critical Access Hospitals Don't Have?](#what-features-do-enterprise-scheduling-platforms-assume-that-critical-access-hospitals-dont-have)
 - [What Does a 20-Bed Hospital Actually Need From Scheduling Software?](#what-does-a-20-bed-hospital-actually-need-from-scheduling-software)
-- [How SimpleScheduleAI Is Built for CAH-Scale Scheduling](#how-simplescheduleai-is-built-for-cah-scale-scheduling)
+- [How SimpleScheduleAI Is Built for Critical Access Hospital-Scale Scheduling](#how-simplescheduleai-is-built-for-critical-access-hospital-scale-scheduling)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 ## Why Doesn't Standard Nurse Scheduling Software Work for Small Hospitals?
@@ -62,7 +62,7 @@ For a CAH administrator who finds platforms like this in a G2 or Capterra search
 
 A market built mostly of vendors scoped for hundreds or thousands of employees was not designed to serve CAHs. That is useful information when setting evaluation criteria.
 
-## What Features Do Enterprise Scheduling Platforms Assume That CAHs Don't Have?
+## What Features Do Enterprise Scheduling Platforms Assume That Critical Access Hospitals Don't Have?
 
 Enterprise scheduling platforms assume CAHs have five things most of them do not: a dedicated IT team, a float pool or agency relationships, a separate HR department, an EHR integration requirement, and nurse managers who are not also direct care nurses.
 
@@ -177,7 +177,7 @@ The core requirements are simpler than enterprise software suggests:
   </table>
 </figure>
 
-## How SimpleScheduleAI Is Built for CAH-Scale Scheduling
+## How SimpleScheduleAI Is Built for Critical Access Hospital-Scale Scheduling
 
 SimpleScheduleAI is an AI-native nurse scheduling service designed specifically for Texas Critical Access Hospitals with 25 or fewer beds: the AI builds the schedule, our scheduling team checks it, and the nurse manager approves it. The starting point was the 20-nurse CAH, not a scaled-down version of a large-system platform.
 

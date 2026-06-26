@@ -227,13 +227,6 @@ For a CAH coming off UKG, a managed service is typically the fastest path to ope
 
 For a side-by-side comparison of the practical alternatives, see our [UKG alternatives guide for Critical Access Hospitals](/blog/ukg-alternatives-small-hospitals). For the full compliance and operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), and a complete evaluation framework across [nurse scheduling software](/nurse-scheduling-software) options, those resources cover what every CAH alternative needs to deliver. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Ready to Replace UKG with Something That Fits Your CAH?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI delivers your first schedule within 48 hours of your staff roster upload. No IT team, no implementation project, no configuration burden. Schedule a free assessment to see what it looks like for your hospital.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
-</div>
-
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
@@ -249,13 +242,11 @@ For a side-by-side comparison of the practical alternatives, see our [UKG altern
 4. **Score three replacement candidates by operational fit.** Setup time in days not weeks. Texas overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
 5. **Ask SimpleScheduleAI to build a schedule if you are a Texas Critical Access Hospital.** Run the actual scheduling workflow against your roster before submitting UKG notice. Start at [simplescheduleai.com/how-it-works](/how-it-works).
 
-<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
-  <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Right-size your scheduling platform to a 25-bed reality</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI is built for the operational scale UKG ignores: 25 beds, no IT department, nurse manager also on clinical shifts. Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
-  </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Right-size your scheduling platform to a 25-bed reality</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built for the operational scale UKG ignores: 25 beds, no IT department, nurse manager also on clinical shifts. Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

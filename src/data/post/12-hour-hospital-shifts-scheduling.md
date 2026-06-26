@@ -61,7 +61,7 @@ From a [critical access hospital scheduling](/critical-access-hospital-schedulin
 perspective, the 12-hour model also simplifies the coverage matrix. Rather than
 managing three shifts across a 15-nurse team, you're managing two. That reduces
 the number of scheduling permutations, but it amplifies the consequences of each
-individual scheduling decision. In a 12-hour model, one coverage gap represents a
+individual scheduling decision. In a 12-hour model, one coverage gap costs you a
 full half of a day's nursing for an entire unit.
 
 ## What scheduling challenges are unique to 12-hour shift hospitals?

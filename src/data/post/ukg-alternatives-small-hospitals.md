@@ -68,8 +68,8 @@ UKG was built for health systems with dedicated IT departments, HRIS analysts, a
     <thead>
       <tr>
         <th class="py-3 px-4 text-left font-semibold bg-slate-700 dark:bg-slate-600 text-white border border-slate-600 dark:border-slate-500">UKG Assumption</th>
-        <th class="py-3 px-4 text-left font-semibold bg-red-600 dark:bg-red-700 text-white border border-red-500 dark:border-red-600">Reality at a 25-Bed CAH</th>
-        <th class="py-3 px-4 text-left font-semibold bg-green-600 dark:bg-green-700 text-white border border-green-500 dark:border-green-600">CAH-Appropriate Alternative</th>
+        <th class="py-3 px-4 text-left font-semibold bg-red-600 dark:bg-red-700 text-white border border-red-500 dark:border-red-600">Reality at a 25-Bed Critical Access Hospital</th>
+        <th class="py-3 px-4 text-left font-semibold bg-green-600 dark:bg-green-700 text-white border border-green-500 dark:border-green-600">Critical Access Hospital-Appropriate Alternative</th>
       </tr>
     </thead>
     <tbody>
@@ -189,7 +189,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec (the platform; [TCP](/blog/best-tcp-alternative-for-cah) is the parent company after the 2021 acquisition) is a scheduling platform used at critical access hospitals and EMS organizations. Unlike UKG, it requires minimal IT involvement and can be operational in 2-4 weeks. For a CAH leaving UKG because of implementation complexity, Aladtec represents a meaningful reduction in setup overhead.
+Aladtec (the platform; [TCP](/blog/best-tcp-alternative-for-cah) is the parent company after the 2021 acquisition) is a scheduling platform used at critical access hospitals and EMS organizations. Unlike UKG, it requires minimal IT involvement and can be operational in 2-4 weeks. For a CAH leaving UKG because of implementation complexity, Aladtec is a meaningful reduction in setup overhead.
 
 The trade-off is clear: Aladtec replaces UKG's complexity with a different kind of self-serve overhead. The nurse manager still configures credential tracking, FLSA overtime thresholds, and shift rules manually. CMS documentation requires the manager to structure and export records; the system does not generate them automatically.
 

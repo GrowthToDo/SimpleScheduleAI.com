@@ -61,7 +61,7 @@ This guide breaks down how these platforms are actually priced, what a 25-bed CA
         <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:22%">Pricing Model</th>
         <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Monthly Cost</th>
         <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:22%">First-Year Total (with typical setup)</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:38%">Notes for a CAH</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:38%">Notes for a Critical Access Hospital</th>
       </tr>
     </thead>
     <tbody>

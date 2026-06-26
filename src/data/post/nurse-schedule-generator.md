@@ -9,7 +9,7 @@ excerpt: >
   management: building the weekly roster. For critical access hospitals spending
   8-12 hours per week on manual scheduling, a generator, or better, a managed
   scheduling service, can reclaim that time without sacrificing compliance.
-image: https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 tags:
   - nurse-scheduling

@@ -133,7 +133,7 @@ The [NSI National Health Care Retention Report](https://www.nsinursingsolutions.
   </div>
 </div>
 
-The 8.5-hour weekly difference between the current state and a managed service represents approximately 442 hours per year for a nurse manager who also takes clinical shifts. At a fully-loaded labor rate of $55-70 per hour, that is $24,000-31,000 per year in recovered clinical capacity.
+The 8.5-hour weekly difference between the current state and a managed service adds up to approximately 442 hours per year for a nurse manager who also takes clinical shifts. At a fully-loaded labor rate of $55-70 per hour, that is $24,000-31,000 per year in recovered clinical capacity.
 
 ## Feature Comparison: Software vs. Managed Service
 

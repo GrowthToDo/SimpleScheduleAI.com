@@ -168,13 +168,11 @@ For more context on [nurse scheduling software](/nurse-scheduling-software) opti
 4. **Check your last 4 cycles for the five outgrown-Excel signs.** Repeated weekend inequity, slow callout response, after-the-fact overtime discovery, siloed credential tracking, and non-transferable scheduling knowledge. Two or more of these in 4 cycles means Excel is the constraint, not the workflow.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service lets you compare the actual time burden against your week-one baseline. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
-  <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Done rebuilding the schedule every cycle?</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers a compliant, post-ready schedule every Thursday 3 PM Central. Your nurse manager reviews and approves.</p>
-  </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Done rebuilding the schedule every cycle?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI delivers a compliant, post-ready schedule every Thursday 3 PM Central. Your nurse manager reviews and approves.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
@@ -187,12 +185,6 @@ Most scheduling platforms offer payroll exports in common formats (CSV, ADP, Pay
 
 **Q: How long does it take to set up nurse scheduling software for a 25-bed hospital?**
 For a managed service, initial setup typically takes one to two weeks, primarily gathering staff availability data, certifications, and your current scheduling rules. Self-serve software platforms can take longer because configuration is on the hospital side.
-
-<div class="not-prose my-8 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 p-6 text-center">
-  <p class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">Ready to cut scheduling time from 10 hours a week to under 2?</p>
-  <p class="text-sm text-blue-700 dark:text-blue-300 mb-4">SimpleScheduleAI handles the weekly schedule build, callout coverage, and compliance checks for critical access hospitals. Your nurse manager approves. We do the rest.</p>
-  <a href="/how-it-works" class="inline-block rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">See how it works →</a>
-</div>
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

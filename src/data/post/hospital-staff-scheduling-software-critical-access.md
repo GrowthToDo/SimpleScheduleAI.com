@@ -84,7 +84,7 @@ The common options split into four groups: spreadsheets, consumer shift apps, ho
       <tr class="border-b-2 border-slate-200 dark:border-slate-700 align-top">
         <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:20%">Option</th>
         <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:22%">Best For</th>
-        <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Setup at a CAH</th>
+        <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Setup at a Critical Access Hospital</th>
         <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:20%">Public Ratings</th>
         <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100" style="width:20%">Cost</th>
       </tr>

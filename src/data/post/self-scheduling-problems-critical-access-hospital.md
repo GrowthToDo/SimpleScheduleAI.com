@@ -8,7 +8,7 @@ excerpt: >
   nights or weekends. At a 25-bed Critical Access Hospital, that imbalance compounds every
   cycle. This guide explains why self-scheduling breaks down at CAH scale and what structural
   fixes actually hold.
-image: https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1593362417299-e0c94018e1b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 tags:
   - nurse-scheduling
@@ -171,13 +171,6 @@ For [critical access hospital scheduling](/critical-access-hospital-scheduling) 
 
 For a full look at what CAH-appropriate [nurse scheduling software](/nurse-scheduling-software) needs to handle beyond fairness, that guide covers the complete feature checklist. For more detail on the three-draft scoring model, see [how SimpleScheduleAI works](/how-it-works).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No per-nurse fees. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
-</div>
-
 One honest limitation: constraint-aware fairness assignment is not the right fit for hospitals with stable senior rosters where weekend and holiday distribution has been worked out informally and is mutually agreed, or for facilities where self-scheduling already produces acceptable fairness without intervention.
 
 Related operational guides: [How Small Rural Hospitals Without an IT Department Manage Nurse Scheduling](/blog/nurse-scheduling-no-it-department-rural-hospital), [Hospital Staff Scheduling Software for Critical Access Hospitals](/blog/hospital-staff-scheduling-software-critical-access), and [The $26,000 Scheduling Burden at Critical Access Hospitals](/blog/healthcare-scheduling-crisis).
@@ -209,12 +202,11 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 4. **Audit the cost of self-scheduling silence.** Track which nurses absorb voluntary overtime each cycle. They are the retention risk most CAHs lose to burnout. Reliable nurses leaving is more expensive than fairness friction.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service applies constraint-aware fairness rules before nurses self-pick, so the system distributes the unwanted shifts evenly before anyone has the chance to avoid them. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
-  <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">End selfish scheduling without losing self-service</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI distributes weekends, nights, and holidays before nurses self-pick, then opens the rest. Reliable nurses stop carrying the load. Built for Texas CAHs.</p>
-  </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">End selfish scheduling without losing self-service</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI distributes weekends, nights, and holidays before nurses self-pick, then opens the rest. Reliable nurses stop carrying the load. Built for Texas CAHs.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

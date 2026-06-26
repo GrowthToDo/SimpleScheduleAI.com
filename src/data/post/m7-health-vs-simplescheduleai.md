@@ -9,7 +9,7 @@ excerpt: >
   systems with IT and dedicated scheduling staff. SimpleScheduleAI is an AI-native nurse scheduling
   service built for the single Critical Access Hospital with no IT department. This guide compares
   both honestly so a 25-bed hospital can pick the right model.
-image: https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1668785737406-0129cb9554b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 tags:
   - nurse-scheduling-software

@@ -327,13 +327,11 @@ One honest limitation: a managed scheduling service is not the right fit for fac
 4. **Identify your two highest-impact friction points.** From the five we outlined (data entry, callout coordination, PRN reconciliation, conflict resolution, compliance documentation), pick the two that consume the most weekly time. Those are the highest-ROI targets for the next 90 days.
 5. **Request a SimpleScheduleAI assessment if you are a Texas Critical Access Hospital.** The managed service removes the friction points without adding software for your team to learn. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
-  <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Recover the $26,000 hidden in your schedule</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI removes the scheduling work from the wrong person, returning 8 to 10 hours per week to clinical leadership. Flat monthly pricing for Texas CAHs.</p>
-  </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Recover the $26,000 hidden in your schedule</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI removes the scheduling work from the wrong person, returning 8 to 10 hours per week to clinical leadership. Flat monthly pricing for Texas CAHs.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
@@ -373,12 +371,6 @@ scheduling budget discussions but is very real.
 When a nurse is unavailable, the system generates a replacement call list based on
 availability, overtime exposure, and fairness distribution. This replaces the 2-3
 hour manual coordination process with a prioritized list you can act on in minutes.
-
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Ready to reduce overtime and handle callouts without the Sunday evening scramble?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-</div>
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

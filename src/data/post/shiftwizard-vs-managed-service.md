@@ -210,13 +210,6 @@ SimpleScheduleAI is the right choice for a CAH where the nurse manager has concl
 
 It is not the right choice if staff-facing self-service mobile features are a hard requirement; we currently focus on the manager-facing scheduling workflow and do not have a staff-facing app. For more on the operating model, see [how SimpleScheduleAI works](/how-it-works), our [nurse scheduling software hub](/nurse-scheduling-software), and the compliance requirements that shape [critical access hospital scheduling](/critical-access-hospital-scheduling). For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Want to See It on Your Own Roster?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Send us your roster and we will build one real schedule, so you judge the output instead of a demo.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
-</div>
-
 ## Sources
 
 [1] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews), G2 Spring 2026 Leader. Vendor: [HealthStream, Inc.](https://www.healthstream.com) (NASDAQ: HSTM). Verified 2026-04-30.
@@ -242,13 +235,11 @@ It is not the right choice if staff-facing self-service mobile features are a ha
 4. **Identify whether your nurse manager would rather operate a tool or approve a finished schedule.** ShiftWizard is the right answer for managers who want direct control of every cell. A managed service is the right answer for managers who want the construction work removed. Neither is universally better; the fit depends on the manager's preference and available time.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service delivers the scheduling outputs ShiftWizard was purchased to enable, without the configuration maintenance burden. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
-  <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">ShiftWizard configuration without ShiftWizard configuration</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI provides ShiftWizard-grade compliance and fairness logic without requiring the nurse manager to maintain the system.</p>
-  </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">ShiftWizard configuration without ShiftWizard configuration</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI provides ShiftWizard-grade compliance and fairness logic without requiring the nurse manager to maintain the system.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

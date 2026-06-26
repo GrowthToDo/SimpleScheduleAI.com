@@ -34,12 +34,12 @@ This guide names the five levels of scheduling automation and shows how to ask o
 
 ## Table of Contents
 
-- [What does "automated nurse scheduling" actually mean?](#what-does-automated-nurse-scheduling-actually-mean)
-- [What are the real levels of scheduling automation?](#what-are-the-real-levels-of-scheduling-automation)
-- [Why do automated scheduling tools still require manual work?](#why-do-automated-scheduling-tools-still-require-manual-work)
-- [What does scheduling automation look like in real reviews?](#what-does-scheduling-automation-look-like-in-real-reviews)
-- [What should a Critical Access Hospital expect from genuinely automated scheduling?](#what-should-a-critical-access-hospital-expect-from-genuinely-automated-scheduling)
-- [How is SimpleScheduleAI's automation different?](#how-is-simplescheduleais-automation-different)
+- [What Does "Automated Nurse Scheduling" Actually Mean?](#what-does-automated-nurse-scheduling-actually-mean)
+- [What Are the Real Levels of Scheduling Automation?](#what-are-the-real-levels-of-scheduling-automation)
+- [Why Do Automated Scheduling Tools Still Require Manual Work?](#why-do-automated-scheduling-tools-still-require-manual-work)
+- [What Does Scheduling Automation Look Like in Real Reviews?](#what-does-scheduling-automation-look-like-in-real-reviews)
+- [What Should a Critical Access Hospital Expect from Genuinely Automated Scheduling?](#what-should-a-critical-access-hospital-expect-from-genuinely-automated-scheduling)
+- [How Is SimpleScheduleAI's Automation Different?](#how-is-simplescheduleais-automation-different)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 

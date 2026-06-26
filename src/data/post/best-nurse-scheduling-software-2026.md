@@ -9,7 +9,7 @@ excerpt: >
   and whether you want to manage scheduling yourself or hand it off. This guide compares eight
   platforms across cost, fit by hospital size, compliance tools, and real implementation burden - with honest
   limitations included for each.
-image: https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 tags:
   - nurse-scheduling-software

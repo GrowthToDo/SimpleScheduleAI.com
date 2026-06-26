@@ -34,7 +34,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service for Texas Critical Acc
 
 ## Table of Contents
 
-- [How Do Paper Schedules and Whiteboards Actually Work at a CAH?](#how-do-paper-schedules-and-whiteboards-actually-work-at-a-cah)
+- [How Do Paper Schedules and Whiteboards Actually Work at a Critical Access Hospital?](#how-do-paper-schedules-and-whiteboards-actually-work-at-a-critical-access-hospital)
 - [What Does Excel Scheduling Cost a Nurse Manager Each Cycle?](#what-does-excel-scheduling-cost-a-nurse-manager-each-cycle)
 - [Why Do Standalone Scheduling SaaS Tools Stall at Rural Hospitals?](#why-do-standalone-scheduling-saas-tools-stall-at-rural-hospitals)
 - [What Does Agency Reliance Really Mask in the Schedule?](#what-does-agency-reliance-really-mask-in-the-schedule)
@@ -45,7 +45,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service for Texas Critical Acc
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-## How Do Paper Schedules and Whiteboards Actually Work at a CAH?
+## How Do Paper Schedules and Whiteboards Actually Work at a Critical Access Hospital?
 
 A director of nursing or charge nurse writes the cycle by hand on a whiteboard, a printed grid, or a wall calendar in the nurses' station. There is zero software learning curve, zero subscription cost, and the schedule is visible to every nurse who walks past it. The model works until the first callout, and then it stops working.
 

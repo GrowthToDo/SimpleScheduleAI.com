@@ -39,7 +39,7 @@ This guide covers what CMS actually evaluates in CAH nurse staffing, the three r
 
 - [What CMS §485.635 Actually Requires for Nurse Staffing?](#what-cms-485635-actually-requires-for-nurse-staffing)
 - [What Are the Three Documents CMS Surveyors Request?](#what-are-the-three-documents-cms-surveyors-request)
-- [What Are the Common Compliance Gaps in CAH Nurse Scheduling?](#what-are-the-common-compliance-gaps-in-cah-nurse-scheduling)
+- [What Are the Common Compliance Gaps in Critical Access Hospital Nurse Scheduling?](#what-are-the-common-compliance-gaps-in-critical-access-hospital-nurse-scheduling)
 - [How Do You Build a Compliant Documentation System?](#how-do-you-build-a-compliant-documentation-system)
 - [What to Do When a Surveyor Arrives Unannounced?](#what-to-do-when-a-surveyor-arrives-unannounced)
 - [How Scheduling Software Affects CMS Compliance?](#how-scheduling-software-affects-cms-compliance)
@@ -126,7 +126,7 @@ The surveyor is comparing these three documents. A mismatch between the schedule
 </div>
 <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 m-0">The three records a CMS surveyor cross-checks under 42 CFR §485.635 (eCFR).</p>
 
-## What Are the Common Compliance Gaps in CAH Nurse Scheduling?
+## What Are the Common Compliance Gaps in Critical Access Hospital Nurse Scheduling?
 
 **Gap 1: Schedule and time and attendance discrepancies**
 

@@ -56,7 +56,7 @@ Here is how the five platforms most commonly evaluated at 25-bed scale compare b
       <tr class="bg-slate-100 dark:bg-slate-800">
         <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Platform</th>
         <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:24%">25-Bed Fit</th>
-        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:14%">CAH Ready</th>
+        <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:14%">Critical Access Hospital Ready</th>
         <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:26%">Callout Coverage</th>
         <th class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:18%">Cost/Month</th>
       </tr>

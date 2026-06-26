@@ -318,13 +318,6 @@ Four questions separate the platforms that will actually improve a CAH nurse man
 
 4. **What CMS documentation does it produce automatically?** Ask to see a sample audit trail output. "We have compliance features" is not the same as automatically logged, timestamped change documentation that a CMS surveyor can review under §485.635.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See Whether the Managed Service Model Fits Your Critical Access Hospital</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI goes live in 3-5 days from your staff roster. FLSA, Texas Labor Code, and CMS documentation are included by default. Request a free assessment to see how it compares to what you have now.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
-</div>
-
 ## Sources
 
 [1] TCP TimeClock+ ratings: 4.4/5 on Capterra (271 reviews). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
@@ -366,13 +359,11 @@ Four questions separate the platforms that will actually improve a CAH nurse man
 4. **Calculate total cost of ownership, not just license fee.** Subscription plus implementation labor plus ongoing maintenance labor plus the nurse manager's weekly scheduling hours at her loaded rate. Most TCP buyers underestimate the labor side. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service delivers a compliant schedule each cycle without configuration, IT setup, or TCP-style implementation overhead. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
-  <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Switching off TCP at CAH scale</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers the scheduling outputs TCP buyers needed without the configuration burden. Flat monthly pricing. No IT integration. No commitment.</p>
-  </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Switching off TCP at CAH scale</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI delivers the scheduling outputs TCP buyers needed without the configuration burden. Flat monthly pricing. No IT integration. No commitment.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

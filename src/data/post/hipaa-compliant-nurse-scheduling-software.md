@@ -186,6 +186,11 @@ One honest limitation: if a facility wants to build patient assignment tracking 
 
 For more on how [critical access hospital scheduling](/critical-access-hospital-scheduling) works and what compliance requirements CAHs face under CMS Conditions of Participation, that guide covers the regulatory context in full. For a broader look at what [nurse scheduling software for small hospitals](/nurse-scheduling-software) needs to handle, including compliance and callout coverage, see the feature overview.
 
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">For a small hospital, the real HIPAA risk in scheduling is rarely the vendor's certificate on a sales page. It is who can open the roster, whether their access is logged, and what happens when a nurse leaves and her login is not revoked. A compliance badge does not answer any of those. Least-privilege access, an audit trail, and a signed BAA when patient data is genuinely in play protect a roster far more than a logo. Ask who can see what, and how you would prove it to a surveyor.</p>
+</div>
+
 ## What to Do This Week
 
 1. **List every tool that holds your schedule.** Include the workforce app, any spreadsheets, and shared calendars, and note where each one stores its data.
