@@ -798,7 +798,7 @@ function check(file) {
     glossary: [600, 1000],
     tofu: [1000, 1500],
     mofu: [1500, 2500],
-    comparison: [1500, 2500],
+    comparison: [1500, 4500], // single-competitor comparisons run deep (full profile + limitations + verdict)
     howto: [2000, 3000],
     bofu: [3000, 5000],
   };
