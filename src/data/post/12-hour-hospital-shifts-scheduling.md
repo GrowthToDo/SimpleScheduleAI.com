@@ -11,6 +11,7 @@ excerpt: >
   25-bed CAH running 12-hour rotations.
 image: https://images.unsplash.com/photo-1495364141860-b0d03eccd065?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - hospital-shifts
   - 12-hour-shifts

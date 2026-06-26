@@ -11,6 +11,7 @@ excerpt: >
   right scheduling tool for their specific setting.
 image: https://images.unsplash.com/photo-1749065312519-1902cb8431ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - home-health-scheduling
   - hospital-scheduling

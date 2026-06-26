@@ -11,6 +11,7 @@ excerpt: >
   group draws the same holiday twice in a row.
 image: https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - critical-access-hospitals

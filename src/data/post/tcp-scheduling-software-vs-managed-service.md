@@ -10,6 +10,7 @@ excerpt: >
   manager is also responsible for clinical work, the distinction matters.
 image: https://images.unsplash.com/photo-1604480131833-5d7aea770e1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - tcp-scheduling-software
   - managed-scheduling-service

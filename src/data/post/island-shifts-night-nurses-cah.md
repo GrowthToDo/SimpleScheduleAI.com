@@ -11,6 +11,7 @@ excerpt: >
   of staff burnout.
 image: https://images.unsplash.com/photo-1513224502586-d1e602410265?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - critical-access-hospitals

@@ -8,6 +8,7 @@ excerpt: >
   The workforce management platforms pitched to Critical Access Hospitals were built for 1,500-employee health systems with an IT department and a dedicated WFM analyst. A 25-bed hospital has neither. This guide breaks down the four workforce capabilities a critical access hospital actually needs first, and the order to build them so the project does not stall.
 image: https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - healthcare-workforce-management
   - critical-access-hospitals

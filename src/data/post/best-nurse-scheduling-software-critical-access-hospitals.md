@@ -10,6 +10,7 @@ excerpt: >
   and covering callouts without a float pool. This guide compares ten platforms on that exact test.
 image: https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - nurse-scheduling-software
   - critical-access-hospitals

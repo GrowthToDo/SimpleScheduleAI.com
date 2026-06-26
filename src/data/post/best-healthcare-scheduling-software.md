@@ -11,6 +11,7 @@ excerpt: >
   weaknesses, and the specific hospital contexts each fits best.
 image: https://images.unsplash.com/photo-1580281657527-47f249e8f4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - best-healthcare-scheduling-software
   - best-scheduling-software-for-healthcare

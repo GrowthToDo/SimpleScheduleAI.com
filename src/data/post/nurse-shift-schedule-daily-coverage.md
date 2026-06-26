@@ -11,6 +11,7 @@ excerpt: >
   daily coverage without burning out the nurses who hold the schedule together.
 image: https://images.unsplash.com/photo-1585842378054-ee2e52f94ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-shift-schedule
   - daily-coverage

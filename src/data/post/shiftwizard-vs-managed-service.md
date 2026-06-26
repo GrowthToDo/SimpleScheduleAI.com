@@ -12,6 +12,7 @@ excerpt: >
   capacity, not feature lists. This guide explains the decision framework.
 image: https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - shiftwizard
   - managed-scheduling-service

@@ -12,6 +12,7 @@ excerpt: >
   cannot sustain weekly scheduling administration alongside clinical duties.
 image: https://images.unsplash.com/photo-1758653500481-a1b46b5b63d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - shiftwizard-alternatives
   - nurse-scheduling-software

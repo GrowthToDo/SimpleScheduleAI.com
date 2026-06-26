@@ -11,6 +11,7 @@ excerpt: >
   hour costs clinical capacity.
 image: https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - nurse-scheduling-software
   - small-hospitals

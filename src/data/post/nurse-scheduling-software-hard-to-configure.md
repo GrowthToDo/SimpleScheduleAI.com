@@ -8,6 +8,7 @@ excerpt: >
   Configuration complexity is the most common reason nurse scheduling software fails at small hospitals. Reviews of TCP, QGenda, SmartLinx, and Deputy show the same pattern: the software can handle the requirements, but the nurse manager cannot absorb the setup burden on top of clinical responsibilities. Here is what the configuration gap looks like and how to work around it.
 image: https://images.unsplash.com/photo-1625134673337-519d4d10b313?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling-software
   - scheduling-software-configuration

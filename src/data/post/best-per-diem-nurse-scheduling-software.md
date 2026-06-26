@@ -11,6 +11,7 @@ excerpt: >
   depend on per diem staff to maintain safe coverage.
 image: https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - nurse-scheduling-software
   - per-diem-nursing

@@ -12,6 +12,7 @@ excerpt: >
   the right model.
 image: https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - nurse-scheduling-software
   - managed-service

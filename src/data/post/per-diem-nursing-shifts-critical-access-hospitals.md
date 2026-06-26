@@ -11,6 +11,7 @@ excerpt: >
   stays available when you need it.
 image: https://images.unsplash.com/photo-1676286168358-9b4ce60384d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - per-diem-nursing
   - nurse-scheduling

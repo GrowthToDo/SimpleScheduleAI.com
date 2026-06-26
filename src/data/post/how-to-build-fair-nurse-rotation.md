@@ -12,6 +12,7 @@ excerpt: >
   document that it actually is.
 image: https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: howto
 tags:
   - nurse-scheduling
   - nurse-rotation

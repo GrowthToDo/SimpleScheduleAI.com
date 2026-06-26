@@ -11,6 +11,7 @@ excerpt: >
   This guide explains how to honor seniority without letting it override basic fairness.
 image: https://images.unsplash.com/photo-1758654860020-36fa3fd0dd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - critical-access-hospitals

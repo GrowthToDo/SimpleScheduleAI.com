@@ -12,6 +12,7 @@ excerpt: >
   the BAA question to ask every vendor, and how to keep patient data out of the workflow.
 image: https://images.unsplash.com/photo-1517271023557-20d13b255594?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Compliance
+postType: mofu
 tags:
   - nurse-scheduling
   - hipaa-compliance

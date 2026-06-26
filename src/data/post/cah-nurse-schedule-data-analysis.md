@@ -8,6 +8,7 @@ excerpt: >
   A data analysis of nurse schedules from Texas critical access hospitals revealing patterns in overtime rates by shift type, callout frequency, schedule fairness distribution, and the measurable cost impact of common scheduling decisions. Findings are drawn from anonymized scheduling data collected during the SimpleScheduleAI pilot program.
 image: https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - cah-data

@@ -11,6 +11,7 @@ excerpt: >
   platforms for hospitals that need to get charge coverage right every shift.
 image: https://images.unsplash.com/photo-1666214280557-f1b5022eb634?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - charge-nurse-scheduling
   - nurse-scheduling-software

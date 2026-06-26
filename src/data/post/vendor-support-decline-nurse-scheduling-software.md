@@ -11,6 +11,7 @@ excerpt: >
   matters more than the demo.
 image: https://images.unsplash.com/photo-1646082275130-347d10885c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - scheduling-software

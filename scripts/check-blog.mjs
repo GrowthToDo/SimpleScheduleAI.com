@@ -789,20 +789,32 @@ function check(file) {
     }
   }
 
-  // Word count — only WARN when clearly outside every post-type range (post
-  // type is not mechanically known, so a count within 600-6000 is not flagged;
-  // this avoids a noise warning on every single post).
+  // Word count vs the DECLARED post type. The funnel type is not inferable from
+  // the file, so it is declared in frontmatter (postType). We WARN only when the
+  // count is outside that type's range, so a TOFU at 5000 words is flagged while
+  // a BOFU at 5000 is not. If postType is absent, skip (dormant until the field
+  // is added); an unknown value is flagged so typos surface.
+  const WORD_RANGES = {
+    glossary: [600, 1000],
+    tofu: [1000, 1500],
+    mofu: [1500, 2500],
+    comparison: [1500, 2500],
+    howto: [2000, 3000],
+    bofu: [3000, 5000],
+  };
   const wordCount = bodyText
     .replace(/<[^>]+>/g, ' ')
     .replace(/[#>*_`|]/g, ' ')
     .split(/\s+/)
     .filter(Boolean).length;
-  if (wordCount < 600 || wordCount > 6000) {
-    warn(
-      `Body word count ${wordCount} is outside all post-type ranges (glossary 600 to BOFU 5000): verify the post type / depth`,
-      0,
-      ''
-    );
+  const postType = fm && fm.postType ? unquote(fm.postType).toLowerCase() : null;
+  if (postType && WORD_RANGES[postType]) {
+    const [lo, hi] = WORD_RANGES[postType];
+    if (wordCount < lo || wordCount > hi) {
+      warn(`Body word count ${wordCount} is outside the ${postType} range (${lo}-${hi})`, 0, '');
+    }
+  } else if (postType) {
+    warn(`Unknown postType "${postType}" (use glossary|tofu|mofu|comparison|howto|bofu)`, 0, '');
   }
 
   // Hyperlinks and references (internal links AND external source citations)

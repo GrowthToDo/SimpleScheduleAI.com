@@ -12,6 +12,7 @@ excerpt: >
   generic scheduling options for your facility.
 image: https://images.unsplash.com/photo-1740479050122-54a65ebc22f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - staff-scheduling-software
   - healthcare-vs-generic

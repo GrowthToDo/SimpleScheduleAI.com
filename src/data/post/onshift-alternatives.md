@@ -12,6 +12,7 @@ excerpt: >
   honest limitations for each.
 image: https://images.unsplash.com/photo-1629909615184-74f495363b67?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - nurse-scheduling-software
   - onshift-alternatives

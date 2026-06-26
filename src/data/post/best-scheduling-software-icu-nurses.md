@@ -11,6 +11,7 @@ excerpt: >
   on how well they handle ICU-specific scheduling constraints at small and community hospitals.
 image: https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - nurse-scheduling-software
   - icu-nurses

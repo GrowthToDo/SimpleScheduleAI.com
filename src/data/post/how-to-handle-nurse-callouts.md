@@ -12,6 +12,7 @@ excerpt: >
   prevents the same nurses from absorbing every unplanned shift.
 image: https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: howto
 tags:
   - nurse-callouts
   - nurse-scheduling

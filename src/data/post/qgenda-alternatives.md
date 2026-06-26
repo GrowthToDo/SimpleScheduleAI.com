@@ -11,6 +11,7 @@ excerpt: >
   setup, and small-hospital fit, with honest limitations for each.
 image: https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - qgenda-alternatives
   - nurse-scheduling-software

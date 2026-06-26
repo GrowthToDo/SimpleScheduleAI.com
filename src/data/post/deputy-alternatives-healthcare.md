@@ -13,6 +13,7 @@ excerpt: >
   organizations with clinical scheduling requirements.
 image: https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - nurse-scheduling-software
   - deputy-alternatives

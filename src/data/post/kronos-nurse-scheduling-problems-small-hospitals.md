@@ -11,6 +11,7 @@ excerpt: >
   reputation comes from and what it will mean for her implementation.
 image: https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - scheduling-software

@@ -11,6 +11,7 @@ excerpt: >
   with a pre-built, criteria-ranked list of available nurses.
 image: https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - callout-coverage
   - nurse-scheduling

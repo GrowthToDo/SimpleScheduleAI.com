@@ -8,6 +8,7 @@ excerpt: >
   The support model for nursing scheduling software matters most at the worst moment: a nurse calls out at 5am before a 7am shift and the scheduling system is not responding. Reviews of Deputy, TCP, and OnShift document slow response times, offshored chat-only support, and bugs that disrupt functionality. Here is what to expect from different support models.
 image: https://images.unsplash.com/photo-1618498082410-b4aa22193b38?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nursing-scheduling-software
   - scheduling-software-support

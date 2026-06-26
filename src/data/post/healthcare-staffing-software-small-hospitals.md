@@ -11,6 +11,7 @@ excerpt: >
   create complexity without value at the critical access hospital scale.
 image: https://images.unsplash.com/photo-1590105577767-e21a1067899f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - healthcare-staffing-software
   - small-hospitals

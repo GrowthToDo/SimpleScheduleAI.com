@@ -11,6 +11,7 @@ excerpt: >
   a UKG migration at a 25-bed Critical Access Hospital, and what to do differently.
 image: https://images.unsplash.com/photo-1676288507025-e0f001be9926?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - critical-access-hospitals

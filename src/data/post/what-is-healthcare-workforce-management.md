@@ -8,6 +8,7 @@ excerpt: >
   Healthcare workforce management (WFM) is the practice of planning, scheduling, tracking, and optimizing clinical and support staff across a healthcare organization. It encompasses scheduling, time and attendance, credential management, payroll integration, and predictive staffing analytics. For most critical access hospitals, full WFM platforms are overbuilt, the right entry point is nurse scheduling software or a managed scheduling service.
 image: https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Glossary
+postType: glossary
 tags:
   - glossary
   - healthcare-workforce-management

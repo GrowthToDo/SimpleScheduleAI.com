@@ -11,6 +11,7 @@ excerpt: >
   It is a market gap. Here is what the landscape actually looks like in 2026.
 image: https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - critical-access-hospitals

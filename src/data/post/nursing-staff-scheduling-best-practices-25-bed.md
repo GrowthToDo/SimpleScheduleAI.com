@@ -11,6 +11,7 @@ excerpt: >
   with stable schedules from those in constant callout crisis.
 image: https://images.unsplash.com/photo-1758575514487-0390fcacc339?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nursing-staff-scheduling
   - best-practices

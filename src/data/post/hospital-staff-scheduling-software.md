@@ -11,6 +11,7 @@ excerpt: >
   why purpose-built tools consistently outperform enterprise platforms at the 25-bed scale.
 image: https://images.unsplash.com/photo-1626315869436-d6781ba69d6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - hospital-staff-scheduling-software
   - critical-access-hospitals

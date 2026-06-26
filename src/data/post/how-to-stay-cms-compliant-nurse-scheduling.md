@@ -13,6 +13,7 @@ excerpt: >
   adding hours to your week.
 image: https://images.unsplash.com/photo-1530026405186-ed1f139313f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: howto
 tags:
   - cms-compliance
   - nurse-scheduling

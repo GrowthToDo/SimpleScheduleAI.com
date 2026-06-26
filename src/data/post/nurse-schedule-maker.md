@@ -8,6 +8,7 @@ excerpt: >
   A nurse schedule maker automates shift assignments and rotation patterns to distribute workload fairly across staff. At critical access hospitals, how you build a schedule directly determines whether nurses experience sustainable work patterns or the cumulative fatigue that leads to turnover costing an average of $52,350 per departing RN.
 image: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - nurse-schedule-maker

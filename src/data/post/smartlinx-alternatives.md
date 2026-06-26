@@ -12,6 +12,7 @@ excerpt: >
   their scheduling solution.
 image: https://images.unsplash.com/photo-1607368386669-d940ce438fba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - nurse-scheduling-software
   - smartlinx-alternatives

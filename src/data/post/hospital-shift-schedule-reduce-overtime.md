@@ -11,6 +11,7 @@ excerpt: >
   reporting it retroactively, is the highest-leverage single change for CAH cost reduction.
 image: https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - hospital-shift-schedule
   - overtime-reduction

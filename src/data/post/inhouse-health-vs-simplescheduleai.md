@@ -10,6 +10,7 @@ excerpt: >
   for Texas Critical Access Hospitals with no IT department.
 image: https://images.unsplash.com/photo-1592218698237-5bd1aef5e3e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - inhouse-health
   - ai-nurse-scheduling

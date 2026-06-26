@@ -8,6 +8,7 @@ excerpt: >
   Hospital shift scheduling is the process of assigning nursing staff to fixed time blocks, shifts, across a scheduling period of typically 4-6 weeks. Shifts run 8 or 12 hours and must ensure continuous patient coverage, comply with FLSA overtime rules, and distribute undesirable shifts equitably. For critical access hospitals with small teams, each scheduling decision affects every other nurse on the roster.
 image: https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Glossary
+postType: glossary
 tags:
   - glossary
   - hospital-shift-scheduling

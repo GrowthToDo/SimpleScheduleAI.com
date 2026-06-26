@@ -12,6 +12,7 @@ excerpt: >
   compliance.
 image: https://images.unsplash.com/photo-1758204054548-2d2bb32831c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - nursegrid-alternatives
   - nurse-scheduling-software

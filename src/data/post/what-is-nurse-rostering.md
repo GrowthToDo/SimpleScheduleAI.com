@@ -8,6 +8,7 @@ excerpt: >
   Nurse rostering is the process of managing and assigning nursing staff to shifts over a scheduling period, including tracking who is available, what certifications they hold, and how their workload compares to peers. It is broader than shift scheduling alone, rostering encompasses the ongoing management of the staff list, skill mix, and assignment equity across weeks or months.
 image: https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Glossary
+postType: glossary
 tags:
   - glossary
   - nurse-rostering

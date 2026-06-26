@@ -10,6 +10,7 @@ excerpt: >
   first thing to change. Here is what to watch for and what to do when it happens.
 image: https://images.unsplash.com/photo-1551836022-b06985bceb24?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - scheduling-software

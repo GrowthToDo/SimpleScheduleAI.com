@@ -8,6 +8,7 @@ excerpt: >
   Nursing software covers a broad category. EHR systems, nurse scheduling software, documentation tools, clinical decision support. For critical access hospitals, the nursing software gap that costs the most time and money is scheduling: nurse managers at 25-bed CAHs spend 8-12 hours per week on administrative scheduling work that purpose-built tools can reduce to 1-2 hours.
 image: https://images.unsplash.com/photo-1676046221681-ac05f7869d46?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nursing-software
   - nursing-software-programs

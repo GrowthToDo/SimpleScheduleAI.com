@@ -12,6 +12,7 @@ excerpt: >
   a tool covering only half the job.
 image: https://images.unsplash.com/photo-1587019705911-167800492489?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - nurse-rostering
   - nurse-scheduling

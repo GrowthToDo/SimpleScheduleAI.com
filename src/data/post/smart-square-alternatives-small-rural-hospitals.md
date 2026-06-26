@@ -10,6 +10,7 @@ excerpt: >
   25-bed rural hospital across fit, setup, and CAH compliance, with honest limitations for each.
 image: https://images.unsplash.com/photo-1691934310598-27528df21f9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - nurse-scheduling-software
   - smart-square-alternatives

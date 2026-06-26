@@ -11,6 +11,7 @@ excerpt: >
   service that requires no software installation.
 image: https://images.unsplash.com/photo-1670191247079-f9713ae06dcf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - critical-access-hospitals

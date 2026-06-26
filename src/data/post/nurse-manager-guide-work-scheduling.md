@@ -12,6 +12,7 @@ excerpt: >
   schedule quality.
 image: https://images.unsplash.com/photo-1758653500363-53bced03c683?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-manager
   - work-scheduling

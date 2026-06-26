@@ -11,6 +11,7 @@ excerpt: >
   how to reclaim those hours for patient care and staff leadership.
 image: https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - critical-access-hospitals

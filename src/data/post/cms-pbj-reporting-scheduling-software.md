@@ -11,6 +11,7 @@ excerpt: >
   hands off to the payroll or PBJ vendor for the rare distinct-part skilled nursing unit that does.
 image: https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Compliance
+postType: mofu
 tags:
   - cms-compliance
   - pbj-reporting

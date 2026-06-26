@@ -12,6 +12,7 @@ excerpt: >
   weekly time burden, callout handling, CMS documentation, and total cost of ownership.
 image: https://images.unsplash.com/photo-1758574437877-68a1ec5fafc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - aladtec
   - managed-service

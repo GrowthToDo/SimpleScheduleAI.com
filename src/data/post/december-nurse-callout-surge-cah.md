@@ -11,6 +11,7 @@ excerpt: >
   Thanksgiving. This guide explains the specific preparation steps for a 25-bed CAH.
 image: https://images.unsplash.com/photo-1512389142860-9c449e58a543?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - critical-access-hospitals

@@ -12,6 +12,7 @@ excerpt: >
   handling, using methods that hold up in practice.
 image: https://images.unsplash.com/photo-1623438787437-7bcc5637efeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: howto
 tags:
   - nurse-scheduling
   - critical-access-hospitals

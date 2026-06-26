@@ -12,6 +12,7 @@ excerpt: >
   what to do about it.
 image: https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: howto
 tags:
   - nurse-overtime
   - nurse-scheduling

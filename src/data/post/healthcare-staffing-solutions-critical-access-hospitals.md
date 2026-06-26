@@ -11,6 +11,7 @@ excerpt: >
   fail to transfer to the CAH context.
 image: https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - healthcare-staffing
   - critical-access-hospitals

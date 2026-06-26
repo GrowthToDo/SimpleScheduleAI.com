@@ -10,6 +10,7 @@ excerpt: >
   neither. This guide explains what to actually evaluate at CAH scale.
 image: https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - hospital-staff-scheduling-software
   - critical-access-hospitals

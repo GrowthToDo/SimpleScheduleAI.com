@@ -10,6 +10,7 @@ excerpt: >
   alternative is one that reduces operating burden, not just changes the interface.
 image: https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - tcp-scheduling-software
   - aladtec-alternatives

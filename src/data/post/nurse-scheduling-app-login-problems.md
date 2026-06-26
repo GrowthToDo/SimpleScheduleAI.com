@@ -11,6 +11,7 @@ excerpt: >
   40 minutes to a task that should take 30. Here is what causes it and what to do.
 image: https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - scheduling-software

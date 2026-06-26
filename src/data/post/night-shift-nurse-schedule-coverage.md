@@ -11,6 +11,7 @@ excerpt: >
   staffing, and how to spread coverage without burning out the few nurses who say yes.
 image: https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - night-shift
   - nurse-scheduling

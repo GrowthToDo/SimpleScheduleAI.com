@@ -11,6 +11,7 @@ excerpt: >
   at CAH scale.
 image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - ukg-alternatives
   - kronos-alternatives

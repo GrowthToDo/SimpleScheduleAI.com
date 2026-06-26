@@ -10,6 +10,7 @@ excerpt: >
   gaps free tools leave open, and what those gaps cost in unpaid overtime and survey risk.
 image: https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling-software
   - free-tools

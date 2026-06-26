@@ -8,6 +8,7 @@ excerpt: >
   Nurse scheduling software automates shift coverage, compliance checks, and callout management, tasks that consume 8-12 hours of a nurse manager's week in Excel. For critical access hospitals, the hidden cost of staying on spreadsheets often exceeds $26,000 per year in manager time alone.
 image: https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - nurse-scheduling
   - nurse-scheduling-software

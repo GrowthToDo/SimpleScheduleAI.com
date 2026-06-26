@@ -12,6 +12,7 @@ excerpt: >
   short, and which hospitals gain the most from the switch.
 image: https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - ai-nurse-scheduling
   - nurse-scheduling-software

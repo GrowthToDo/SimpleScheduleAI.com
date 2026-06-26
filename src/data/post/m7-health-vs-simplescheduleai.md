@@ -11,6 +11,7 @@ excerpt: >
   both honestly so a 25-bed hospital can pick the right model.
 image: https://images.unsplash.com/photo-1668785737406-0129cb9554b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - nurse-scheduling-software
   - managed-service

@@ -12,6 +12,7 @@ excerpt: >
   actually decreases.
 image: https://images.unsplash.com/photo-1559757175-5700dde675bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: comparison
 tags:
   - medical-scheduling-services
   - healthcare-scheduling-solution

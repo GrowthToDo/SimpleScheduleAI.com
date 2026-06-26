@@ -8,6 +8,7 @@ excerpt: >
   Free nurse schedule templates give small hospitals a starting point for building weekly rotations without specialized software. But most templates lack the compliance logic, callout handling, and overtime tracking that critical access hospitals need, gaps that become expensive when a survey or a staffing crisis hits.
 image: https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - schedule-template

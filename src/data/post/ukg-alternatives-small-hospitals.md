@@ -11,6 +11,7 @@ excerpt: >
   limitations for each.
 image: https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: bofu
 tags:
   - ukg-alternatives
   - kronos-alternatives

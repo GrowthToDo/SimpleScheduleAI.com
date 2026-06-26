@@ -11,6 +11,7 @@ excerpt: >
   a holiday weekend is not a minor inconvenience.
 image: https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - nurse-scheduling
   - scheduling-software

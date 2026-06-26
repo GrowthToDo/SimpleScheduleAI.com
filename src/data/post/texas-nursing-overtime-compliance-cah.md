@@ -11,6 +11,7 @@ excerpt: >
   requirements that protect against CMS survey findings.
 image: https://images.unsplash.com/photo-1568219557405-376e23e4f7cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
+postType: mofu
 tags:
   - texas-compliance
   - overtime
