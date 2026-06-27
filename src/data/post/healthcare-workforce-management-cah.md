@@ -17,7 +17,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/healthcare-workforce-management-cah'
 ---
 
-For the nurse manager at a 25-bed critical access hospital, building and patching the schedule each week swallows the better part of a workday she would rather spend with patients. The enterprise workforce management platforms in her search results were built for a 1,500-employee health system with a dedicated WFM analyst and an IT department. Neither exists at her hospital.
+For the nurse manager at a 25-bed critical access hospital, a Medicare designation explained in [what a Critical Access Hospital is](/blog/what-is-a-critical-access-hospital), building and patching the schedule each week swallows the better part of a workday she would rather spend with patients. The enterprise workforce management platforms in her search results were built for a 1,500-employee health system with a dedicated WFM analyst and an IT department. Neither exists at her hospital.
 
 Workforce management at a critical access hospital is not a smaller version of the enterprise playbook; it is a different set of priorities run by one or two people. This guide breaks down the four workforce capabilities a critical access hospital actually needs first, the order to build them, and how the right [nurse scheduling software](/nurse-scheduling-software) or [critical access hospital scheduling](/critical-access-hospital-scheduling) approach delivers them without an IT project.
 
