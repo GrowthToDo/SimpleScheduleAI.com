@@ -179,7 +179,7 @@ SimpleScheduleAI is designed to keep patient data out of the scheduling workflow
 
 No patient identifiers enter the system. Patient-to-nurse assignments are made at the unit level by the charge nurse and documented in the EHR. The scheduling system's output is the staffing roster for each shift, not patient assignments.
 
-This design means the HIPAA exposure from patient assignment data does not arise in the scheduling workflow. The scheduling record is workforce data, not PHI.
+This design means the HIPAA exposure from patient assignment data does not arise in the scheduling workflow. The scheduling record is workforce data, not PHI. You can watch that workforce-data-only workflow run in the [interactive simulator](/simulator), where the AI builds a compliant schedule and ranks a callout shortlist without a single patient identifier in play.
 
 Because SimpleScheduleAI keeps patient identifiers out of the scheduling workflow, the scheduling record is workforce data, not PHI, so a Business Associate Agreement is not strictly required for it. Many hospitals keep a BAA on file with every vendor as a matter of policy; if yours does, SimpleScheduleAI will sign one. Either way, the service is operated for you, so a Texas Critical Access Hospital with [no IT department](/blog/nurse-scheduling-no-it-department-rural-hospital) does not have to stand up new infrastructure or manage a HIPAA posture for the scheduling tool in-house.
 

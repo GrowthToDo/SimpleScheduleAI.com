@@ -173,7 +173,7 @@ With SimpleScheduleAI, the process works like this:
 4. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a credential gap. They call from the top of the list.
 5. As staff join or leave, credentials change, or availability patterns shift, the nurse manager sends the update and the SimpleScheduleAI team handles the rest. The nurse manager does not administer a system. They manage a roster.
 
-The weekly time commitment for the nurse manager drops from 4-6 hours (typical for software users actively managing scheduling) to 1-2 hours (review and approval only). That difference, across a 25-nurse staff on a rolling 4-week schedule, is 100-200 hours per year returned to clinical work.
+The weekly time commitment for the nurse manager drops from 4-6 hours (typical for software users actively managing scheduling) to 1-2 hours (review and approval only). That difference, across a 25-nurse staff on a rolling 4-week schedule, is 100-200 hours per year returned to clinical work. To see the build-and-rank step for yourself, watch the AI assemble a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator).
 
 The six most operationally significant differences between Aladtec and a managed scheduling service are implementation speed, weekly time burden, callout coverage workflow, CMS documentation, ongoing configuration maintenance, and total cost of ownership. Each one affects a different dimension of the nurse manager's weekly workload at a Critical Access Hospital.
 

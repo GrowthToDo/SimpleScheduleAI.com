@@ -190,7 +190,7 @@ SimpleScheduleAI delivers the compliance documentation, overtime tracking, and c
 - Managed service model means the nurse manager receives draft schedules rather than building them directly; less real-time control than SmartLinx's self-serve model
 - Not designed for multi-facility scheduling or complex departmental scheduling beyond nursing
 
-**Verdict:** The strongest right-sizing alternative for a CAH that has outgrown Excel but does not need SmartLinx's full feature depth. SimpleScheduleAI provides the outcomes SmartLinx was purchased to deliver, compliance documentation, callout management, overtime control, without the platform maintenance overhead.
+**Verdict:** The strongest right-sizing alternative for a CAH that has outgrown Excel but does not need SmartLinx's full feature depth. SimpleScheduleAI provides the outcomes SmartLinx was purchased to deliver, compliance documentation, callout management, overtime control, without the platform maintenance overhead. Watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator).
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 

@@ -301,7 +301,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve plat
 - Less direct platform control than self-serve tools; the nurse manager approves but does not build
 - Not appropriate if staff self-service features are a hard requirement
 
-**Verdict:** Right choice if scheduling labor is the primary burden. Wrong choice if nurses using an app to view schedules or submit availability is a priority. [See how the managed service works](/how-it-works).
+**Verdict:** Right choice if scheduling labor is the primary burden. Wrong choice if nurses using an app to view schedules or submit availability is a priority. Watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator), or [see how the managed service works](/how-it-works).
 
 **Cost:** Starting pricing available at [how it works](/how-it-works).
 

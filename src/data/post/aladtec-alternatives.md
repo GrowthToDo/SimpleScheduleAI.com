@@ -181,7 +181,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 - No staff-facing mobile app; nurses do not view schedules or submit shift trades directly through SimpleScheduleAI. If nurse-facing mobile self-scheduling is a priority, evaluate a self-serve platform or pair SimpleScheduleAI with a separate staff communication tool
 - Not designed for hospitals with complex multi-department or physician scheduling needs beyond nursing
 
-**Verdict:** The strongest alternative for a CAH nurse manager who leaves Aladtec primarily because the configuration and compliance burden has exceeded what one person can manage while also taking clinical shifts. SimpleScheduleAI eliminates those specific pain points by design. [See how it works](/how-it-works) for CAHs that want to test before committing.
+**Verdict:** The strongest alternative for a CAH nurse manager who leaves Aladtec primarily because the configuration and compliance burden has exceeded what one person can manage while also taking clinical shifts. SimpleScheduleAI eliminates those specific pain points by design. See the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator), or [see how it works](/how-it-works) for CAHs that want to test before committing.
 
 **Cost:** Pricing not listed on website. Contact for a quote.
 

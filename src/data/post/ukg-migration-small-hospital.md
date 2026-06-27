@@ -209,7 +209,7 @@ For [Critical Access Hospital administrators](/critical-access-hospital-scheduli
 2. **Document your actual UKG usage hours per week.** Include the nurse manager's time, any HR or payroll touchpoints, and IT or vendor-support time. The total weekly cost in labor is usually 2-3× the subscription cost; that number is the ROI floor any replacement must clear.
 3. **Request a full data export from UKG while you are still under contract.** Roster with certifications, 12 months of schedule history, callout records, and overtime by nurse. UKG will provide it but the format is proprietary and requires cleaning. Plan 5-10 hours of data work.
 4. **Identify your three replacement candidates by operational fit, not feature list.** Score each on: setup time in days not weeks, Texas overtime and CMS §485.635 built in by default, callout shortlist generated automatically, no IT integration required, and willingness to pilot before contract.
-5. **Ask SimpleScheduleAI to build a schedule if you are a Texas Critical Access Hospital.** Run the actual scheduling workflow against your roster before submitting UKG notice. Start at [simplescheduleai.com/how-it-works](/how-it-works).
+5. **Ask SimpleScheduleAI to build a schedule if you are a Texas Critical Access Hospital.** Run the actual scheduling workflow against your roster before submitting UKG notice, or watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator). Start at [simplescheduleai.com/how-it-works](/how-it-works).
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">

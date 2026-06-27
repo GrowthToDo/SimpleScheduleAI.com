@@ -168,7 +168,7 @@ The service is a new offering, without public G2 or Capterra reviews yet. CMS [Â
 - No staff-facing mobile app; nurses do not view schedules or submit shift trades directly through the system
 - Not designed for hospitals with complex multi-department or physician scheduling needs beyond nursing
 
-**Verdict:** The strongest alternative for a CAH nurse manager who leaves ShiftWizard primarily because the scheduling administration burden has exceeded what one person can manage while covering clinical shifts. SimpleScheduleAI eliminates that specific constraint by design. [See how it works](/how-it-works).
+**Verdict:** The strongest alternative for a CAH nurse manager who leaves ShiftWizard primarily because the scheduling administration burden has exceeded what one person can manage while covering clinical shifts. SimpleScheduleAI eliminates that specific constraint by design. Watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator), or [see how it works](/how-it-works).
 
 **Cost:** Pricing not listed publicly. Contact for a quote.
 

@@ -182,7 +182,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 - No staff-facing mobile app; if nurse self-service shift pickup is a priority, a hybrid approach is worth evaluating
 - Not designed for the enterprise-scale workforce analytics that UKG provides
 
-**Verdict:** The most direct path from UKG to operational simplicity for a 25-bed CAH. Where UKG requires IT infrastructure and HRIS staff to function correctly, SimpleScheduleAI requires only a current roster file and manager review time. [See how it works](/how-it-works).
+**Verdict:** The most direct path from UKG to operational simplicity for a 25-bed CAH. Where UKG requires IT infrastructure and HRIS staff to function correctly, SimpleScheduleAI requires only a current roster file and manager review time. Watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator), or [see how it works](/how-it-works).
 
 **Cost:** Pricing not listed publicly. Contact for a quote.
 
