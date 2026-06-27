@@ -66,7 +66,7 @@ Inaccurate rosters are one of the most common sources of downstream scheduling p
 The terms are often used interchangeably, and most software tools handle both. Technically, rostering refers to managing the staff list, who is on your team, their credentials, availability, and assignment history. Scheduling refers to building the specific shift timetable for a period. Rostering is the foundation that valid scheduling depends on.
 
 **Q: What software handles nurse rostering?**
-Most nurse scheduling platforms include rostering functions. Options used by small and mid-size hospitals include products from Shift Admin, NurseGrid, and similar vendors. SimpleScheduleAI is a managed service, we handle both rostering maintenance and schedule-building on behalf of CAH nurse managers, rather than handing them another system to learn.
+Most nurse scheduling platforms include rostering functions. Options used by small and mid-size hospitals include products from Shift Admin, NurseGrid, and similar vendors. SimpleScheduleAI is an AI-native nurse scheduling service, we handle both rostering maintenance and schedule-building on behalf of CAH nurse managers, rather than handing them another system to learn.
 
 **Q: How do CAHs manage nurse rostering without a dedicated HR system?**
 Most CAHs use a combination of spreadsheets and their payroll system to maintain roster data. The nurse manager typically owns the scheduling spreadsheet, while HR owns the employment record. Per diem availability is often tracked informally via text or phone. This fragmentation is the most common source of rostering errors at CAHs, and the gap that a managed scheduling service is well-positioned to close.

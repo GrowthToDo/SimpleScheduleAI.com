@@ -428,7 +428,7 @@ If all four conditions apply, the switch cost and learning curve of an alternati
 
 ## How SimpleScheduleAI Compares to Smart Square?
 
-The core difference is scale and operating model. Smart Square is a self-serve enterprise platform built for health systems and run by labor-management staff. SimpleScheduleAI is a managed service sized to a single Critical Access Hospital, where a scheduling specialist handles setup, rule maintenance, and draft generation. The table below maps that difference across what a 25-bed CAH actually cares about. For a deeper treatment of the model difference, see [managed scheduling service vs. scheduling software](/blog/managed-service-vs-scheduling-software).
+The core difference is scale and operating model. Smart Square is a self-serve enterprise platform built for health systems and run by labor-management staff. SimpleScheduleAI is an AI-native nurse scheduling service sized to a single Critical Access Hospital, where a scheduling specialist handles setup, rule maintenance, and draft generation. The table below maps that difference across what a 25-bed CAH actually cares about. For a deeper treatment of the model difference, see [managed scheduling service vs. scheduling software](/blog/managed-service-vs-scheduling-software).
 
 <div class="not-prose">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -558,7 +558,7 @@ Related comparison posts: [QGenda alternatives for Critical Access Hospitals](/b
 
 **Is Smart Square or SimpleScheduleAI better for a small or rural hospital?**
 
-It depends on whether the hospital is a single facility or part of a system. Smart Square is positioned for health systems and the enterprise, with no documented Critical Access Hospital or rural reference customers, and it won Best in KLAS for Scheduling: Nurse and Staff in 2025 and 2026 at that scale. SimpleScheduleAI is a managed service sized to a single 25-bed Critical Access Hospital and run by a scheduling specialist rather than the hospital. For one standalone rural CAH with no scheduling staff, SimpleScheduleAI fits the scale more directly. For a hospital inside a multi-facility system, Smart Square's analytics depth is the point. Confirm Smart Square's CAH fit directly with the vendor.
+It depends on whether the hospital is a single facility or part of a system. Smart Square is positioned for health systems and the enterprise, with no documented Critical Access Hospital or rural reference customers, and it won Best in KLAS for Scheduling: Nurse and Staff in 2025 and 2026 at that scale. SimpleScheduleAI is an AI-native nurse scheduling service sized to a single 25-bed Critical Access Hospital and run by a scheduling specialist rather than the hospital. For one standalone rural CAH with no scheduling staff, SimpleScheduleAI fits the scale more directly. For a hospital inside a multi-facility system, Smart Square's analytics depth is the point. Confirm Smart Square's CAH fit directly with the vendor.
 
 **Does Smart Square work for a 25-bed Critical Access Hospital?**
 

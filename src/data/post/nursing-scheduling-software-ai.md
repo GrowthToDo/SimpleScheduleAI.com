@@ -145,7 +145,7 @@ Being honest about AI limitations matters. CAH administrators need accurate expe
 
 SimpleScheduleAI uses AI to generate three draft schedule options per cycle (balanced, fair-rotation, and overtime-minimized) for Texas Critical Access Hospitals, incorporating Texas overtime rules, nurse certifications, per-diem availability, and fairness distribution metrics.
 
-Critically, SimpleScheduleAI is a managed service, not a self-serve AI tool. A scheduling specialist handles the initial configuration and ongoing calibration; the nurse manager does not interact with the AI directly. The output is three human-readable draft schedules delivered for review, not an AI interface the manager has to learn.
+Critically, SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve AI tool. A scheduling specialist handles the initial configuration and ongoing calibration; the nurse manager does not interact with the AI directly. The output is three human-readable draft schedules delivered for review, not an AI interface the manager has to learn.
 
 When a nurse calls out, the AI ranking system produces a replacement list within seconds. The nurse manager reviews the top-ranked candidates and makes the contact. The decision remains human; the research is automated. See the AI build the three drafts and rank a callout shortlist live in the [interactive simulator](/simulator).
 

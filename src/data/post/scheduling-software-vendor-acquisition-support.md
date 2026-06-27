@@ -101,11 +101,11 @@ One specific data point from the Aladtec case: customers described the support c
 
 ## How SimpleScheduleAI Approaches Vendor Stability
 
-SimpleScheduleAI is a managed service, not a venture-backed SaaS platform with an active acquisition pipeline. The service is built around long-term relationships with individual facilities, which means the support model is not a distinct cost center that can be consolidated away from the delivery model.
+SimpleScheduleAI is an AI-native nurse scheduling service, not a venture-backed SaaS platform with an active acquisition pipeline. The service is built around long-term relationships with individual facilities, which means the support model is not a distinct cost center that can be consolidated away from the delivery model.
 
 The specialist assigned to a facility is the person who builds the schedules. There is no separation between the service function and the support function. If something is wrong with a schedule, the specialist fixes it because the specialist is accountable for delivering a functional schedule. That structure cannot be preserved if the support function is consolidated into a central ticket queue, which means it creates a natural constraint against the kind of post-acquisition degradation that has affected platform-based vendors.
 
-One limitation worth naming: SimpleScheduleAI is an early-stage managed service, not a company with a 10-year track record. Vendor stability arguments based on business model apply to any vendor. The honest answer for CAH administrators evaluating long-term vendor relationships is that no vendor is acquisition-proof, and the most reliable protection is understanding specifically what would change if an acquisition occurred and whether your operating model can accommodate that change.
+One limitation worth naming: SimpleScheduleAI is an early-stage AI-native nurse scheduling service, not a company with a 10-year track record. Vendor stability arguments based on business model apply to any vendor. The honest answer for CAH administrators evaluating long-term vendor relationships is that no vendor is acquisition-proof, and the most reliable protection is understanding specifically what would change if an acquisition occurred and whether your operating model can accommodate that change.
 
 For context on the broader pattern of support decline after contracts are signed, see [Why Scheduling Software Vendors Stop Caring After You Sign the Contract](/blog/vendor-support-decline-nurse-scheduling-software).
 

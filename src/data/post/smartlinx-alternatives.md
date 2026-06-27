@@ -335,7 +335,7 @@ For hospitals that have fully implemented SmartLinx and have the IT resources to
 
 ## How SimpleScheduleAI Compares to SmartLinx?
 
-The most meaningful difference between SmartLinx and SimpleScheduleAI for a 25-bed hospital is not features. It is the implementation model. SmartLinx is a self-managed software platform. SimpleScheduleAI is a managed service. Here is how that plays out across the requirements most small hospitals care about:
+The most meaningful difference between SmartLinx and SimpleScheduleAI for a 25-bed hospital is not features. It is the implementation model. SmartLinx is a self-managed software platform. SimpleScheduleAI is an AI-native nurse scheduling service. Here is how that plays out across the requirements most small hospitals care about:
 
 <div class="not-prose my-6">
   <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3">SmartLinx vs. SimpleScheduleAI: Small Hospital Nurse Scheduling</p>

@@ -70,13 +70,13 @@ The hospital sends a roster in Excel, and the service builds and maintains the s
 
 ## What Is the Core Difference Between M7 Health and SimpleScheduleAI?
 
-M7 Health is software a health system runs itself, built for large hospital organizations. SimpleScheduleAI is a managed service that builds the schedule for a single small hospital. M7 assumes the buyer has IT staff, scheduling coordinators, and many facilities. SimpleScheduleAI assumes the buyer is one nurse manager at a 25-bed hospital who also takes clinical shifts.
+M7 Health is software a health system runs itself, built for large hospital organizations. SimpleScheduleAI is an AI-native nurse scheduling service that builds the schedule for a single small hospital. M7 assumes the buyer has IT staff, scheduling coordinators, and many facilities. SimpleScheduleAI assumes the buyer is one nurse manager at a 25-bed hospital who also takes clinical shifts.
 
 That difference runs through every part of the decision. As described above, M7 Health positions itself for large health systems and names enterprise reference customers like Ochsner and ScionHealth. SimpleScheduleAI does not compete for those accounts. It serves the facility that is too small to staff that kind of rollout: one Critical Access Hospital, designated under [CMS rules](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) at 25 inpatient beds or fewer, where the nurse manager is also on the floor. The rest of this comparison works through what that gap means in practice.
 
 ## Two Different Models: Managed Service vs. Software You Run Yourself
 
-These two products use opposite delivery models, and the model matters more than any feature. M7 Health is software the hospital runs itself: the organization licenses the platform, integrates it, and has its own staff operate it day to day. SimpleScheduleAI is a managed service: the hospital sends a roster and the service builds and maintains the schedule.
+These two products use opposite delivery models, and the model matters more than any feature. M7 Health is software the hospital runs itself: the organization licenses the platform, integrates it, and has its own staff operate it day to day. SimpleScheduleAI is an AI-native nurse scheduling service: the hospital sends a roster and the service builds and maintains the schedule.
 
 Software you run yourself fits an organization that has people to run it. A large health system has an IT department, scheduling coordinators, and a workforce office, so a platform its own staff operate is the right choice for that organization. A standalone Critical Access Hospital usually has none of that. The nurse manager is the whole back office and also takes clinical shifts. A managed service exists for exactly that situation: it removes setup, configuration, and weekly maintenance so the hospital reviews finished schedules instead of running a platform. Keep this distinction in mind through the rest of this comparison, because every row in the tables below comes back to it.
 
@@ -288,7 +288,7 @@ For more context, see how [AI nurse scheduling](/ai-nurse-scheduling) works as a
 
 **Is M7 Health or SimpleScheduleAI better for a critical access hospital?**
 
-For a standalone Critical Access Hospital of 25 beds or fewer, SimpleScheduleAI is the closer fit because it is a managed service that needs no IT, no scheduler, and no configuration. M7 Health positions itself for health systems and names enterprise reference customers like Ochsner and ScionHealth. Match the model to your facility's actual staffing.
+For a standalone Critical Access Hospital of 25 beds or fewer, SimpleScheduleAI is the closer fit because it is an AI-native nurse scheduling service that needs no IT, no scheduler, and no configuration. M7 Health positions itself for health systems and names enterprise reference customers like Ochsner and ScionHealth. Match the model to your facility's actual staffing.
 
 **Does M7 Health work for a small or rural hospital?**
 

@@ -108,7 +108,7 @@ Two things to check before committing to any scheduling platform: session manage
 
 ## How SimpleScheduleAI Approaches the Session Problem
 
-SimpleScheduleAI is a managed service. The nurse manager does not spend 45-minute sessions building drafts in the platform. She receives completed drafts, reviews them, requests adjustments, and approves. The review session is shorter, and there is no unsaved draft state to lose.
+SimpleScheduleAI is an AI-native nurse scheduling service. The nurse manager does not spend 45-minute sessions building drafts in the platform. She receives completed drafts, reviews them, requests adjustments, and approves. The review session is shorter, and there is no unsaved draft state to lose.
 
 The specialist building the schedule works in the system continuously and maintains the scheduling record. If the specialist's session expires during a build, that is the specialist's problem to manage, not the nurse manager's. The nurse manager's interaction with the system is the review-and-approve workflow, not the build workflow.
 

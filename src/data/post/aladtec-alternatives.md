@@ -404,7 +404,7 @@ If all four of these conditions apply, the switch cost and learning curve of an 
 
 ## How SimpleScheduleAI Compares to Aladtec?
 
-The core difference is the operating model. Aladtec is a self-serve platform where the manager configures and maintains the system. SimpleScheduleAI is a managed service where a scheduling specialist handles setup, rule maintenance, and draft generation. The table below maps that difference across the specific requirements a 25-bed CAH cares about.
+The core difference is the operating model. Aladtec is a self-serve platform where the manager configures and maintains the system. SimpleScheduleAI is an AI-native nurse scheduling service where a scheduling specialist handles setup, rule maintenance, and draft generation. The table below maps that difference across the specific requirements a 25-bed CAH cares about.
 
 <div class="not-prose">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -512,7 +512,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the overhead mode
 
 **Is SimpleScheduleAI better than Aladtec for a Critical Access Hospital?**
 
-For CAHs specifically, SimpleScheduleAI addresses the two gaps in Aladtec that are most operationally significant for small hospitals: CMS compliance documentation and automated overtime ranking during callouts. Aladtec requires manual work for both. SimpleScheduleAI automates both as defaults. The tradeoff is that SimpleScheduleAI is a managed service with less direct manager control than Aladtec's self-serve model. For a nurse manager who also takes clinical shifts, the managed service model typically produces a better time outcome than the self-serve model even at the cost of some control.
+For CAHs specifically, SimpleScheduleAI addresses the two gaps in Aladtec that are most operationally significant for small hospitals: CMS compliance documentation and automated overtime ranking during callouts. Aladtec requires manual work for both. SimpleScheduleAI automates both as defaults. The tradeoff is that SimpleScheduleAI is an AI-native nurse scheduling service with less direct manager control than Aladtec's self-serve model. For a nurse manager who also takes clinical shifts, the managed service model typically produces a better time outcome than the self-serve model even at the cost of some control.
 
 **How hard is it to migrate from Aladtec to a new platform?**
 

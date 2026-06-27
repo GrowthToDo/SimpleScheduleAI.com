@@ -423,7 +423,7 @@ If all three conditions apply, the switch cost and learning curve of an alternat
 
 ## How SimpleScheduleAI Compares to OnShift?
 
-The core difference is target environment and operating model. OnShift is a self-serve platform designed for long-term care, where caregiver engagement and predictable shift pickup are the primary model. SimpleScheduleAI is a managed service designed for Critical Access Hospitals, where acute care callout dynamics, CMS compliance, and credential enforcement are the primary requirements. The table below maps that difference across what a 25-bed CAH actually cares about.
+The core difference is target environment and operating model. OnShift is a self-serve platform designed for long-term care, where caregiver engagement and predictable shift pickup are the primary model. SimpleScheduleAI is an AI-native nurse scheduling service designed for Critical Access Hospitals, where acute care callout dynamics, CMS compliance, and credential enforcement are the primary requirements. The table below maps that difference across what a 25-bed CAH actually cares about.
 
 <div class="not-prose">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">

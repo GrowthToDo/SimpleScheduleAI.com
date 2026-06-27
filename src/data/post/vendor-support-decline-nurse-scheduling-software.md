@@ -120,7 +120,7 @@ Five questions that reveal the actual post-sale support model before any contrac
 
 ## How SimpleScheduleAI Handles Ongoing Support
 
-SimpleScheduleAI is a managed service. The specialist assigned to a facility at onboarding stays assigned. They know the facility's shift structure, its coverage requirements, the nurses on the roster, and the constraints that show up in every scheduling cycle.
+SimpleScheduleAI is an AI-native nurse scheduling service. The specialist assigned to a facility at onboarding stays assigned. They know the facility's shift structure, its coverage requirements, the nurses on the roster, and the constraints that show up in every scheduling cycle.
 
 When something goes wrong, the nurse manager contacts the specialist directly. There is no ticket queue for operational issues. The specialist is accountable for the schedule, which means they are accountable for fixing it.
 

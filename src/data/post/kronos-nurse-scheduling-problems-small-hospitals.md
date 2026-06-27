@@ -99,7 +99,7 @@ Tools that nurses respond well to in nursing community discussions, including si
 
 ## How SimpleScheduleAI Is Designed With the Nurse Experience in Mind
 
-SimpleScheduleAI is a managed service built for the CAH context, which means it was designed for the reality of a small nursing staff where the manager and the nurses have direct relationships and the scheduling tool should facilitate that relationship, not intermediate it with organizational complexity.
+SimpleScheduleAI is an AI-native nurse scheduling service built for the CAH context, which means it was designed for the reality of a small nursing staff where the manager and the nurses have direct relationships and the scheduling tool should facilitate that relationship, not intermediate it with organizational complexity.
 
 Nurses at facilities using SimpleScheduleAI interact with the schedule primarily through the published schedule output, not through a mobile app with multiple workflow layers. The schedule is clear, accessible, and communicated directly. The complexity of the scheduling system is on the specialist's side, not the nurse's side.
 

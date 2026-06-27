@@ -530,7 +530,7 @@ Credential tracking flags when a per diem nurse's certifications do not match th
 
 **Is Aladtec or SimpleScheduleAI better for per diem nurse scheduling?**
 
-Aladtec is a self-serve tool that gives the manager direct control over per diem scheduling once configured, but the per diem callout process still requires manual overtime checks before each placement. SimpleScheduleAI is a managed service that automates the overtime cross-check within the replacement call list, so the manager receives a prioritized list without doing the calculation herself. For a dual-role nurse manager at a CAH where per diem callouts happen multiple times per week, the automated ranking typically produces a better time ROI than the self-serve model.
+Aladtec is a self-serve tool that gives the manager direct control over per diem scheduling once configured, but the per diem callout process still requires manual overtime checks before each placement. SimpleScheduleAI is an AI-native nurse scheduling service that automates the overtime cross-check within the replacement call list, so the manager receives a prioritized list without doing the calculation herself. For a dual-role nurse manager at a CAH where per diem callouts happen multiple times per week, the automated ranking typically produces a better time ROI than the self-serve model.
 
 **Does NurseGrid Manager work for per diem callout coverage?**
 
@@ -546,7 +546,7 @@ Deputy at $4.50 per user per month is the lowest-cost option. At a 15-nurse per 
 
 **What is the difference between per diem scheduling software and a managed scheduling service for per diem nurses?**
 
-Per diem scheduling software gives the nurse manager tools to track availability, manage callout replacements, and document per diem shifts. A managed scheduling service handles those tasks for the nurse manager. At a CAH where the nurse manager also takes clinical shifts, software cuts only part of that time because the manager still builds the schedule, while a managed service removes the build entirely. SimpleScheduleAI is a managed service. All other tools in this list are software platforms.
+Per diem scheduling software gives the nurse manager tools to track availability, manage callout replacements, and document per diem shifts. A managed scheduling service handles those tasks for the nurse manager. At a CAH where the nurse manager also takes clinical shifts, software cuts only part of that time because the manager still builds the schedule, while a managed service removes the build entirely. SimpleScheduleAI is an AI-native nurse scheduling service. All other tools in this list are software platforms.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

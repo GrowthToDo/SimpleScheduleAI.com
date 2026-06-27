@@ -107,7 +107,7 @@ Four steps that reveal actual reliability before a contract is signed:
 
 ## How SimpleScheduleAI Handles Scheduling Continuity When Something Fails
 
-SimpleScheduleAI is a managed service. The specialist who builds and maintains the schedule is the single point of accountability when something is not working. There is no ticket queue standing between the nurse manager and the person responsible for the schedule.
+SimpleScheduleAI is an AI-native nurse scheduling service. The specialist who builds and maintains the schedule is the single point of accountability when something is not working. There is no ticket queue standing between the nurse manager and the person responsible for the schedule.
 
 Because the specialist maintains the scheduling record and the last-published version is always accessible outside the platform, a technical failure does not result in a nurse manager working from memory or a handwritten note. The specialist can export the current schedule in a PDF or Excel format and send it directly if platform access is disrupted.
 

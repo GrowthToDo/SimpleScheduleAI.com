@@ -447,7 +447,7 @@ If all four conditions hold, the switch cost and staff retraining of an alternat
 
 ## How SimpleScheduleAI Compares to NurseGrid?
 
-The core difference is scope and operating model. NurseGrid is a self-serve, nurse-facing app for the communication layer. SimpleScheduleAI is a managed service where a specialist handles manager-side setup, rule maintenance, draft generation, and compliance documentation. The table below maps that difference across the requirements a 25-bed CAH cares about.
+The core difference is scope and operating model. NurseGrid is a self-serve, nurse-facing app for the communication layer. SimpleScheduleAI is an AI-native nurse scheduling service where a specialist handles manager-side setup, rule maintenance, draft generation, and compliance documentation. The table below maps that difference across the requirements a 25-bed CAH cares about.
 
 <div class="not-prose">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">

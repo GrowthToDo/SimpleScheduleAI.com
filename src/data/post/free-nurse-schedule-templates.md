@@ -81,7 +81,7 @@ SimpleScheduleAI replaces the template entirely, not with software you configure
 
 The practical effect for managers who have been using templates: you go from building the schedule to reviewing it. That's a meaningful reduction in weekly workload and a significant improvement in schedule quality. We also maintain the documentation trail that templates can't provide.
 
-One honest limitation: we're not the right fit for hospitals that need a free solution. SimpleScheduleAI is a paid managed service. If budget is the primary constraint, our [free template](/resources/nurse-schedule-template) is a better starting point than a random download, it's designed specifically for 25-bed hospitals with the rotation and certification fields already in place.
+One honest limitation: we're not the right fit for hospitals that need a free solution. SimpleScheduleAI is a paid AI-native nurse scheduling service. If budget is the primary constraint, our [free template](/resources/nurse-schedule-template) is a better starting point than a random download, it's designed specifically for 25-bed hospitals with the rotation and certification fields already in place.
 
 [See how SimpleScheduleAI works for critical access hospitals →](/how-it-works)
 

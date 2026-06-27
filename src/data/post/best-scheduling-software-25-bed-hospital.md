@@ -489,7 +489,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 
 
 **Is Aladtec or SimpleScheduleAI better for a 25-bed hospital?**
 
-It depends on how much direct control the nurse manager wants over the scheduling process. Aladtec is a self-serve tool that gives the manager full control once it is configured, but the initial setup takes 4-6 weeks and ongoing use requires 4-6 hours per week. SimpleScheduleAI is a managed service: the manager submits preferences and receives finished draft schedules, reducing the weekly time investment to under two hours with no configuration burden. For a dual-role nurse manager who also takes clinical shifts, the managed service model typically produces a better time ROI.
+It depends on how much direct control the nurse manager wants over the scheduling process. Aladtec is a self-serve tool that gives the manager full control once it is configured, but the initial setup takes 4-6 weeks and ongoing use requires 4-6 hours per week. SimpleScheduleAI is an AI-native nurse scheduling service: the manager submits preferences and receives finished draft schedules, reducing the weekly time investment to under two hours with no configuration burden. For a dual-role nurse manager who also takes clinical shifts, the managed service model typically produces a better time ROI.
 
 **Does When I Work work for nurse scheduling at a 25-bed hospital?**
 
@@ -505,7 +505,7 @@ When I Work at $2.50-$6 per user per month is the lowest-cost option, totaling a
 
 **What is the difference between scheduling software and a managed scheduling service for a 25-bed hospital?**
 
-Scheduling software gives the nurse manager tools to build and manage schedules. A managed scheduling service builds the schedules for the nurse manager. At a 25-bed hospital where the manager takes clinical shifts, the distinction matters: software cuts only part of that time because the manager still builds every schedule, while a managed service removes the build entirely. SimpleScheduleAI is a managed service. Aladtec, NurseGrid, When I Work, and Homebase are all self-serve software platforms.
+Scheduling software gives the nurse manager tools to build and manage schedules. A managed scheduling service builds the schedules for the nurse manager. At a 25-bed hospital where the manager takes clinical shifts, the distinction matters: software cuts only part of that time because the manager still builds every schedule, while a managed service removes the build entirely. SimpleScheduleAI is an AI-native nurse scheduling service. Aladtec, NurseGrid, When I Work, and Homebase are all self-serve software platforms.
 
 ---
 
