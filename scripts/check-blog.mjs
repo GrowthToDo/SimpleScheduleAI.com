@@ -964,6 +964,30 @@ function report(results) {
   return totalFails;
 }
 
+// Count, for each post in the set, how many OTHER posts in the set link to it
+// via a /blog/<slug> internal link (distinct source posts; self-links ignored).
+function computeInboundCounts(files) {
+  const inbound = new Map();
+  const linkRe = /\/blog\/([a-z0-9-]+)/g;
+  const perFile = files.map((f) => {
+    const slug = basename(f, '.md');
+    const text = readFileSync(f, 'utf8');
+    const targets = new Set();
+    let m;
+    while ((m = linkRe.exec(text)) !== null) {
+      if (m[1] !== slug) targets.add(m[1]);
+    }
+    return { slug, targets };
+  });
+  for (const { slug } of perFile) inbound.set(slug, 0);
+  for (const { targets } of perFile) {
+    for (const t of targets) {
+      if (inbound.has(t)) inbound.set(t, inbound.get(t) + 1);
+    }
+  }
+  return inbound;
+}
+
 function collectFiles(args) {
   const flags = new Set(args.filter((a) => a.startsWith('--')));
   const paths = args.filter((a) => !a.startsWith('--'));
@@ -993,5 +1017,26 @@ function collectFiles(args) {
 const args = process.argv.slice(2);
 const files = collectFiles(args);
 const results = files.map(check);
+
+// Corpus-level orphan check: a per-file gate cannot see inbound links, so this
+// runs only when checking the whole set (--all/--live/--draft, >3 files). A
+// live post with <2 inbound internal links from sibling posts is an orphan:
+// crawlers get a weak or absent path to it, which strands it in GSC's
+// "Crawled/Discovered - currently not indexed" limbo. WARN, never fail.
+if (files.length > 3) {
+  const inbound = computeInboundCounts(files);
+  for (const r of results) {
+    if (r.draft) continue;
+    const n = inbound.get(basename(r.file, '.md')) || 0;
+    if (n < 2) {
+      r.warnings.push({
+        rule: `Internal-link orphan: ${n} inbound internal link(s) from sibling posts (need >=2). Link this post from >=2 related posts so crawlers and readers can reach it.`,
+        lineNo: 0,
+        snippet: '',
+      });
+    }
+  }
+}
+
 const fails = report(results);
 process.exit(fails > 0 ? 1 : 0);
