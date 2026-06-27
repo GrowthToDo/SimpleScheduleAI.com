@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-06-26T00:00:00Z
-updateDate: 2026-06-26T00:00:00Z
+draft: false
+publishDate: 2026-06-27T00:00:00Z
+updateDate: 2026-06-27T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Free Nurse Scheduling Software: When Free Falls Short'
 excerpt: >
@@ -127,13 +127,6 @@ Scheduling at a small hospital is not one task; it is two. There is the schedule
 
 So the $0 software line tells you what the license costs, not what scheduling costs. If the manual half still consumes a meaningful slice of a manager's week at a loaded nursing-leadership rate, the true cost of "free" is the salaried time spent doing by hand what the tool does not do. That number is almost always larger than any per-seat license fee a paid tool would charge. For a closer look at the math by facility size, see [scheduling software for a 25-bed hospital](/blog/best-scheduling-software-25-bed-hospital) and [nurse scheduling software for a small hospital](/blog/nurse-scheduling-software-small-hospital).
 
-<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
-  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Free is the right starting point for a clinic with predictable hours. For a CAH, treating "free software" as "free scheduling" is the trap. The license is the cheapest line item in the whole process; the expensive part is the manager hours that the free tool was never built to remove. Price the labor, not the software.
-  </p>
-</div>
-
 ## How Does SimpleScheduleAI Help a Critical Access Hospital?
 
 SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, and you approve. It is built specifically for Texas Critical Access Hospitals, and it covers the half of the job that free tools leave open, schedule generation, FLSA overtime threshold tracking, certification-aware assignment, ranked callout coverage shortlists, fairness tracking, and an audit trail for staffing records. This is the same approach behind our work in [AI nurse scheduling](/ai-nurse-scheduling) for small hospitals.
@@ -142,11 +135,11 @@ You start by uploading your existing roster from Excel. We turn that into three 
 
 One honest limitation: if your primary need is a staff-facing app where nurses log in to swap shifts and submit availability on their own, that is not what SimpleScheduleAI is. It is a management-side service for the nurse manager, not a self-service portal for staff. Tools like NurseGrid serve that staff-facing job well.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">See how the schedule gets built, checked, and approved, with overtime and callouts handled for you.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Free is the right starting point for a clinic with predictable hours. For a CAH, treating "free software" as "free scheduling" is the trap. The license is the cheapest line item in the whole process; the expensive part is the manager hours that the free tool was never built to remove. Price the labor, not the software.
+  </p>
 </div>
 
 ## What to Do This Week
@@ -156,6 +149,13 @@ One honest limitation: if your primary need is a staff-facing app where nurses l
 3. For the parts it does not cover, write down your current manual process for callout coverage and overtime tracking, and estimate the hours each takes per week.
 4. Multiply those hours by your nurse manager's loaded hourly rate to get the real annual cost of "free."
 5. If that number is meaningful, compare it against an AI-native option like SimpleScheduleAI by reviewing [how the SimpleScheduleAI process works](/how-it-works) or [booking a call with our team](https://cal.com/gautham-8bdvdx/30min).
+
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">See how the schedule gets built, checked, and approved, with overtime and callouts handled for you.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+</div>
 
 ## Frequently Asked Questions
 
