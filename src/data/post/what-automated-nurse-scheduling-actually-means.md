@@ -235,7 +235,7 @@ One honest limitation: Level 5 managed automation is not the right fit for hospi
 
 **Q: Does AI actually build nurse schedules automatically?**
 
-Some AI scheduling tools generate draft schedules from your roster and rules without requiring manual shift-by-shift assignment. Whether that draft requires significant correction depends on how well the system was configured for your specific facility. At most self-serve platforms, AI assistance is at Level 3 (suggestions and constraint enforcement) rather than Level 4 (complete draft generation). Managed services deliver Level 4-5 by using a specialist to handle what the AI cannot.
+Some AI scheduling tools generate draft schedules from your roster and rules without requiring manual shift-by-shift assignment. Whether that draft requires significant correction depends on how well the system was configured for your specific facility. The distinction between maintaining that roster and generating the schedule from it is covered in [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software). At most self-serve platforms, AI assistance is at Level 3 (suggestions and constraint enforcement) rather than Level 4 (complete draft generation). Managed services deliver Level 4-5 by using a specialist to handle what the AI cannot.
 
 **Q: How long does it take before automated scheduling is actually reliable?**
 
@@ -243,7 +243,7 @@ For self-serve platforms with AI-generated scheduling features, the configuratio
 
 **Q: What is the difference between AI scheduling and automated scheduling?**
 
-In practice, these terms are often used interchangeably in vendor marketing. AI scheduling typically refers to tools that use machine learning to optimize shift assignments based on historical patterns, predicted demand, and staff preferences. Automated scheduling is broader and includes any system that reduces manual shift assignment. A scheduling tool can be automated without using AI (rule-based auto-fill) and can use AI without being genuinely automated (AI-powered suggestions that still require manual scheduling).
+In practice, these terms are often used interchangeably in vendor marketing. AI scheduling typically refers to tools that use machine learning to optimize shift assignments based on historical patterns, predicted demand, and staff preferences; our guide to [AI nursing scheduling software](/blog/nursing-scheduling-software-ai) goes deeper on what that optimization actually does. Automated scheduling is broader and includes any system that reduces manual shift assignment. A scheduling tool can be automated without using AI (rule-based auto-fill) and can use AI without being genuinely automated (AI-powered suggestions that still require manual scheduling).
 
 **Q: Can automated scheduling handle last-minute callouts?**
 

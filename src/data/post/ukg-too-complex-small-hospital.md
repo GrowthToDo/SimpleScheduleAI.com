@@ -258,7 +258,7 @@ Yes, some CAHs are on UKG, usually because a regional health system extended an 
 
 **What does it cost to switch from UKG to a simpler tool?**
 
-The primary cost is contract termination. Most UKG contracts are multi-year with early termination fees. Check your specific contract terms before switching. The operational cost of transitioning (exporting data, configuring a new system) is modest for a CAH because the roster is small. Running parallel for one scheduling cycle reduces risk. A managed service handles most of the transition work from the new system's side.
+The primary cost is contract termination. Most UKG contracts are multi-year with early termination fees. Check your specific contract terms before switching. The operational cost of transitioning (exporting data, configuring a new system) is modest for a CAH because the roster is small. Running parallel for one scheduling cycle reduces risk. A managed service handles most of the transition work from the new system's side. Our step-by-step guide to [UKG migration at a small hospital](/blog/ukg-migration-small-hospital) walks through the export, parallel-run, and cutover sequence in detail.
 
 **Can UKG be simplified for a small hospital?**
 

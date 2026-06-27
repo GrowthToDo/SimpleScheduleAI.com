@@ -143,7 +143,7 @@ Being honest about AI limitations matters. CAH administrators need accurate expe
 
 ## How Does SimpleScheduleAI Use AI for Hospital Roster Management?
 
-SimpleScheduleAI uses AI to generate three draft schedule options per cycle (balanced, fair-rotation, and overtime-minimized) for Texas Critical Access Hospitals, incorporating Texas overtime rules, nurse certifications, per-diem availability, and fairness distribution metrics.
+SimpleScheduleAI uses AI to generate three draft schedule options per cycle (balanced, fair-rotation, and overtime-minimized) for Texas Critical Access Hospitals, incorporating Texas overtime rules, nurse certifications, per-diem availability, and fairness distribution metrics. If the terms feel interchangeable, our explainer on [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software) sorts out where building the roster ends and producing the weekly schedule begins.
 
 Critically, SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve AI tool. A scheduling specialist handles the initial configuration and ongoing calibration; the nurse manager does not interact with the AI directly. The output is three human-readable draft schedules delivered for review, not an AI interface the manager has to learn.
 
@@ -197,7 +197,7 @@ When a nurse calls out, the AI system evaluates all available nurses against ava
 
 **Q: Do you need IT infrastructure to use AI nurse scheduling?**
 
-Not with a managed service model. SimpleScheduleAI onboards via Excel roster upload in 3 to 5 business days with no EHR integration, API configuration, or IT vendor involvement. Enterprise AI scheduling platforms (UKG, API Healthcare AI modules) require IT infrastructure that most CAHs do not have.
+Not with a managed service model. SimpleScheduleAI onboards via Excel roster upload in 3 to 5 business days with no EHR integration, API configuration, or IT vendor involvement. Enterprise AI scheduling platforms require IT infrastructure that most CAHs do not have; self-operated AI tools such as the one covered in our [In-House Health vs. SimpleScheduleAI comparison](/blog/inhouse-health-vs-simplescheduleai), along with UKG and API Healthcare AI modules, all assume a team to run them.
 
 ## A Note on Sources
 

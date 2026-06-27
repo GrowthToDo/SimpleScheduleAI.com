@@ -211,7 +211,7 @@ no one is looking at it in aggregate because aggregating it manually takes hours
 
 PRN coordination adds two or more hours per 6-week scheduling cycle at a typical Critical Access Hospital. At eight to nine cycles per year, that is 16-18 hours annually in untracked leadership time managing per-diem availability submissions by text, voicemail, and paper, then cross-referencing them against open shifts. At a $50 loaded rate, the hidden PRN overhead runs $800-$900 per year on top of the primary scheduling burden, and most scheduling budgets never capture it.
 
-Per-diem nurses are essential to CAH flexibility, but their availability management
+[Per-diem nurses](/blog/what-is-per-diem-nursing) are essential to CAH flexibility, but their availability management
 adds a category of scheduling friction that rarely gets measured. In a typical 6-week
 scheduling cycle, a CAH scheduler will:
 

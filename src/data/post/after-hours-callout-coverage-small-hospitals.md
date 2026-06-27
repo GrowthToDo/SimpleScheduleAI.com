@@ -174,7 +174,7 @@ The practical documentation set for one callout is short but must be consistent.
 
 ## How Do You Prepare a Per-Diem Bench So You Are Not Calling an Agency?
 
-You prepare a per-diem bench by maintaining a standing roster of 4 to 6 cross-credentialed per-diem nurses, confirming their rolling availability on a fixed weekly cadence, and contacting them on the bench before any agency call. The bench exists to absorb the callout internally at internal rates, before the conversation ever turns to premium agency coverage.
+You prepare a per-diem bench by maintaining a standing roster of 4 to 6 cross-credentialed per-diem nurses, confirming their rolling availability on a fixed weekly cadence, and contacting them on the bench before any agency call. If you are still defining the staffing model, our explainer on [what per diem nursing is](/blog/what-is-per-diem-nursing) covers how these as-needed nurses are paid and scheduled. The bench exists to absorb the callout internally at internal rates, before the conversation ever turns to premium agency coverage.
 
 A per-diem bench only works if it is actively maintained, not assembled in a crisis. Three rules keep it functional:
 

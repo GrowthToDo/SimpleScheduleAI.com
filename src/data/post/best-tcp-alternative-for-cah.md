@@ -140,7 +140,7 @@ This switch makes sense when the complaint is interface, scheduling workflow dep
 
 ## Scenario 2: Scheduling Work Done for You
 
-If the goal is structural burden reduction rather than a better tool, **SimpleScheduleAI** is the managed service alternative to TCP TimeClock+. It does not replace TCP with a different platform; it replaces the self-serve model entirely. The AI generates the weekly schedule; a scheduling specialist handles configuration and roster maintenance and checks the schedule, and the nurse manager reviews drafts and approves.
+If the goal is structural burden reduction rather than a better tool, **SimpleScheduleAI** is the managed service alternative to TCP TimeClock+. It does not replace TCP with a different platform; it replaces the self-serve model entirely. The AI generates the weekly schedule; a scheduling specialist handles configuration and roster maintenance and checks the schedule, and the nurse manager reviews drafts and approves. Our breakdown of [TCP scheduling software versus a managed service](/blog/tcp-scheduling-software-vs-managed-service) lays out that model difference in full.
 
 The trade-off is the staff-facing experience: TCP TimeClock+ has a nurse-facing mobile app for clocking in, schedule viewing, and time-off requests. SimpleScheduleAI does not. The full SimpleScheduleAI profile, including limitations, is in the comparison section below.
 

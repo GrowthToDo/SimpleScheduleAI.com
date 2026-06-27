@@ -344,7 +344,7 @@ The total nurse manager time investment per scheduling cycle is under two hours.
 
 4. **Request a free scheduling assessment.** Describe your current scheduling workflow in the request: how many hours per week the manager spends on scheduling, how callout replacement currently works, and how CMS survey preparation is handled. Start at [how it works](/how-it-works).
 
-5. **If you prefer self-serve software, compare Aladtec and SmartLinx.** Aladtec is faster to configure for small rosters. SmartLinx provides more automation for larger hospitals. Neither eliminates the manager's scheduling construction time; both reduce it.
+5. **If you prefer self-serve software, compare Aladtec and SmartLinx.** Aladtec is faster to configure for small rosters. SmartLinx provides more automation for larger hospitals. Neither eliminates the manager's scheduling construction time; both reduce it. If your current tool is a time-and-attendance suite, our look at [TCP scheduling software versus a managed service](/blog/tcp-scheduling-software-vs-managed-service) applies the same comparison to that product.
 
 <div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>

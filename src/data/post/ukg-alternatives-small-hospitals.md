@@ -359,7 +359,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
 
 1. **Confirm your UKG contract terms.** UKG contracts typically run multi-year. Know your renewal date and notice requirements before starting any evaluation; the contract clock matters more than the technology evaluation timeline.
 
-2. **Export your roster data.** Get your current staff list, certifications, and scheduling rules in a usable format (ideally Excel) before any platform transition. This is also a useful audit of whether your current UKG configuration is accurate.
+2. **Export your roster data.** Get your current staff list, certifications, and scheduling rules in a usable format (ideally Excel) before any platform transition. This is also a useful audit of whether your current UKG configuration is accurate. Our guide to [UKG migration at a small hospital](/blog/ukg-migration-small-hospital) covers how to sequence that export, a parallel run, and the cutover with minimal risk.
 
 3. **Identify the specific UKG problem driving the switch.** Is it implementation cost, ongoing IT dependency, support complexity, or the self-serve model itself? A platform swap solves cost and interface issues. A managed service solves the labor and configuration burden.
 

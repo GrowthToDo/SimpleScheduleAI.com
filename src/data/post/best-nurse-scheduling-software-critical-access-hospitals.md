@@ -451,7 +451,7 @@ There are no third-party reviews to weigh; the [Capterra listing](https://www.ca
 >
 > Amy Trainor, System Vice President and Chief Information Officer, Ochsner Health, Ochsner Health news release, approximately February 2026
 
-That statement is partnership PR and should be read as an announcement, not a product review. The CAH angle is newer: M7 recently published guidance aimed at Critical Access Hospitals and now appears in AI search answers for CAH scheduling queries, while its documented reference customers remain large multi-hospital systems.
+That statement is partnership PR and should be read as an announcement, not a product review. The CAH angle is newer: M7 recently published guidance aimed at Critical Access Hospitals and now appears in AI search answers for CAH scheduling queries, while its documented reference customers remain large multi-hospital systems. For the head-to-head on the operating-model difference at CAH scale, see our [M7 Health vs. SimpleScheduleAI comparison](/blog/m7-health-vs-simplescheduleai).
 
 **Best for:** Enterprise health systems and academic medical centers that want AI-driven scheduling and labor optimization across many facilities.
 
@@ -476,7 +476,7 @@ That statement is partnership PR and should be read as an announcement, not a pr
 
 CronShift is a healthcare workforce management platform that describes itself as "The first all-in-one workforce management platform transforming how healthcare teams work" and as "built by nurses, for nurses." Its documented feature set centers on PPD/PRD forecasting, mobile shift swaps, CMS staffing reports, cross-facility staff pooling, and partner agency integration.
 
-Payroll Based Journal reporting is a [CMS requirement for long-term care facilities](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission), and cross-facility pooling is a multi-site construct; a Critical Access Hospital files neither, and the site documents no CAH or rural focus. There are also no third-party reviews anywhere, and site metrics such as "100+ Healthcare Providers" are vendor claims.
+Payroll Based Journal reporting is a [CMS requirement for long-term care facilities](https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission), and cross-facility pooling is a multi-site construct; a Critical Access Hospital files neither, and the site documents no CAH or rural focus. Our guide on [CMS PBJ reporting and nurse scheduling software](/blog/cms-pbj-reporting-scheduling-software) explains why swing beds leave most CAHs exempt from that filing. There are also no third-party reviews anywhere, and site metrics such as "100+ Healthcare Providers" are vendor claims.
 
 **Best for:** Multi-facility long-term care organizations and SNF operators, based on the vendor's own feature positioning, not a standalone Critical Access Hospital.
 

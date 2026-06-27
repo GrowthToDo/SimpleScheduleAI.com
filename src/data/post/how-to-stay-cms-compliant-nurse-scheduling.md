@@ -206,7 +206,7 @@ CMS surveys for CAHs can be unannounced. When a surveyor arrives, the compliance
 
 ## How Scheduling Software Affects CMS Compliance?
 
-The documentation burden described above is manual unless your scheduling system generates it automatically.
+The documentation burden described above is manual unless your scheduling system generates it automatically. This §485.635 staffing record is a separate obligation from CMS Payroll-Based Journal reporting, which most CAHs do not file at all; our guide to [CMS PBJ reporting and nurse scheduling software](/blog/cms-pbj-reporting-scheduling-software) gives the one-question test for whether your facility owes a filing.
 
 Most general-purpose scheduling software (Deputy, When I Work, standard workforce tools) produces schedules and time tracking. It does not generate CMS-formatted staffing documentation, does not maintain a credential log integrated with the schedule, and does not flag when a shift would have no qualified RN on duty or on call.
 

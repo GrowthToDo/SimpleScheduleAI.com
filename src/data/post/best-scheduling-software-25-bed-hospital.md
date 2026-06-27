@@ -24,7 +24,7 @@ metadata:
 
 Your software-vendor demo shows a scheduling platform built for a 200-bed system, compressed down for your facility. Your nurse manager, who also covers 2-3 clinical shifts a week, sees a tool she needs four to six weeks to configure before it returns any value. A 25-bed Critical Access Hospital is not a smaller version of a community hospital, and the right scheduling tool is not a smaller version of an enterprise platform.
 
-This guide compares 5 scheduling platforms specifically on fit for the 25-bed roster, the dual-role nurse manager, and the [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance obligations that a CAH carries on top of the scheduling work itself.
+This guide compares 5 scheduling platforms specifically on fit for the 25-bed roster, the dual-role nurse manager, and the [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance obligations that a CAH carries on top of the scheduling work itself. Maintaining that roster and producing each weekly schedule are two distinct jobs, a split our explainer on [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software) breaks down before you compare tools.
 
 ## Key Takeaways
 
@@ -385,7 +385,7 @@ Homebase is a scheduling and time tracking tool built for very small businesses,
   </div>
 </div>
 
-The three challenges above interact. A callout triggers a manual overtime calculation that the dual-role manager has to run while managing a patient floor, producing documentation that also needs to be CMS-compliant. At scale, that chain of manual work is sustainable with a dedicated scheduling coordinator. At 25 beds, there is no scheduling coordinator. The nurse manager holds every link in that chain.
+The three challenges above interact. A callout triggers a manual overtime calculation that the dual-role manager has to run while managing a patient floor, producing documentation that also needs to be CMS-compliant. At scale, that chain of manual work is sustainable with a dedicated scheduling coordinator. At 25 beds, there is no scheduling coordinator. The nurse manager holds every link in that chain, which is why [healthcare workforce management at a CAH](/blog/healthcare-workforce-management-cah) lands as one person's problem rather than a department's.
 
 ## Which Software Fits Your 25-Bed Hospital?
 

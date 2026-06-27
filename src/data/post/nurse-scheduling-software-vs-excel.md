@@ -140,7 +140,7 @@ Consider the numbers plainly. If your nurse manager spends 10 hours per week on 
 
 Agency nurse costs run [2-3× the standard hourly rate](https://www.aonl.org/resources/workforce). At a 25-bed hospital, a single unplanned agency shift might cost $800-$1,200. If better scheduling prevents even 10 such shifts per year, that's $8,000-$12,000 in avoidable spend. Closing the missed-coverage gaps that push hours to time-and-a-half is where automated scheduling offsets the cost of a scheduling service at a small CAH.
 
-The comparison often framed as "software cost vs. Excel (free)" misses the point. The real comparison is "total cost of scheduling with software" versus "total cost of scheduling with Excel", which includes manager hours, overtime premiums, agency markups, and compliance risk. When that full picture is on the table, staying on Excel stops looking free.
+The comparison often framed as "software cost vs. Excel (free)" misses the point. The same logic applies to the no-cost apps a manager might try next: our look at [free nurse scheduling software](/blog/free-nurse-scheduling-software) walks through what those tools still leave on her desk. The real comparison is "total cost of scheduling with software" versus "total cost of scheduling with Excel", which includes manager hours, overtime premiums, agency markups, and compliance risk. When that full picture is on the table, staying on Excel stops looking free.
 
 ## How SimpleScheduleAI Helps?
 

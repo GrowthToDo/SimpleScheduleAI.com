@@ -484,7 +484,7 @@ Hospital size determines the right scheduling platform more than any other varia
 
 **Under 25 beds:** First decide whether you want to manage scheduling yourself or eliminate it as a management task; if your nurse manager is clinically active, self-serve software may not solve the right problem.
 
-**25-75 beds (Small Community Hospital):** Enough complexity to justify a real platform, but not enough scale to absorb enterprise implementation costs.
+**25-75 beds (Small Community Hospital):** Enough complexity to justify a real platform, but not enough scale to absorb enterprise implementation costs. Before you shortlist, our [nurse scheduling software pricing](/blog/nurse-scheduling-software-pricing) guide shows how per-seat, flat-fee, and enterprise contracts compare at this size.
 
 **75-200 beds (Community Hospital):** A full platform with credential management, EHR read access, and reporting makes sense at this scale.
 
@@ -613,7 +613,7 @@ Typically 6-18 months for a full deployment, including configuration, training, 
 
 **Q: What is the cheapest nurse scheduling software for a 25-bed hospital?**
 
-Deputy is the lowest-cost option at roughly $4-6 per employee per month, but it lacks the compliance features hospitals need. Aladtec runs $200-450 per month and covers most compliance requirements for small hospitals. NurseGrid Manager has a low-cost tier but is a shift coordination layer, not a full scheduling engine. SimpleScheduleAI uses flat-fee pricing - contact for current rates.
+Deputy is the lowest-cost option at roughly $4-6 per employee per month, but it lacks the compliance features hospitals need. Aladtec runs $200-450 per month and covers most compliance requirements for small hospitals. NurseGrid Manager has a low-cost tier but is a shift coordination layer, not a full scheduling engine. If you are weighing the no-cost route first, our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) covers where the truly free tools stop. SimpleScheduleAI uses flat-fee pricing - contact for current rates.
 
 **Q: What is the difference between scheduling software and a managed scheduling service?**
 

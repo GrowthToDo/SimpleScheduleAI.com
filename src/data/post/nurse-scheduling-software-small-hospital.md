@@ -47,11 +47,11 @@ She had evaluated the right products for the wrong market. This guide breaks dow
 
 Standard nurse scheduling software does not work for small hospitals because the entire product architecture assumes organizational resources that critical access hospitals do not have: dedicated IT staff, a float pool, a separate HR function, and nurse managers who only manage and do not also deliver direct patient care.
 
-Scheduling software for large health systems is built around organizational complexity. Multi-site access controls, department-level approval chains, integration with enterprise EHR platforms, and staffing analytics dashboards all make sense for a 600-bed health system with a workforce of 2,000. They are either irrelevant or actively burdensome for a 20-bed facility where the director of nursing is also a charge nurse two shifts per week.
+Scheduling software for large health systems is built around organizational complexity. Multi-site access controls, department-level approval chains, integration with enterprise EHR platforms, and staffing analytics dashboards all make sense for a 600-bed health system with a workforce of 2,000. They are either irrelevant or actively burdensome for a 20-bed facility where the director of nursing is also a charge nurse two shifts per week, where [healthcare workforce management at a CAH](/blog/healthcare-workforce-management-cah) means a handful of practical jobs rather than an enterprise analytics suite.
 
 The vendors are explicit about who they serve. QGenda is built for large physician and provider groups; OnShift targets multi-facility senior-care operators. Neither markets to a 20-bed rural hospital, and the feature set reflects it. The products are not broken. They work correctly for their intended market and incorrectly for a CAH.
 
-The mismatch is not a flaw in those products. It is a category problem. Most enterprise scheduling tools were built for health system contracts and optimized for health system requirements. Small hospitals ended up evaluating the same tools because nothing purpose-built for their context existed at the time most of these vendors launched.
+The mismatch is not a flaw in those products. It is a category problem. Most enterprise scheduling tools were built for health system contracts and optimized for health system requirements. An AI labor-optimization platform like the one in our [M7 Health vs. SimpleScheduleAI comparison](/blog/m7-health-vs-simplescheduleai) shows the pattern clearly: it is funded and built to serve a 47-hospital system, not a 20-bed unit. Small hospitals ended up evaluating the same tools because nothing purpose-built for their context existed at the time most of these vendors launched.
 
 ## What Does It Mean When a Platform Is Built for Hundreds of Employees?
 
@@ -59,7 +59,7 @@ When a vendor designs for organizations of a certain scale, the product's value,
 
 Shiftboard markets its workforce-scheduling platform to organizations ranging from [25 to 100,000 employees](https://www.shiftboard.com/), and one review-site analysis [reported that a Shiftboard sales representative cited a 100-employee minimum](https://connecteam.com/reviews/shiftboard/) for its plans. Whether or not a hard floor applies on any given day, the point holds: the automation, analytics, and workforce-management features that justify the price are built to deliver value at a transaction volume a 20-nurse roster never reaches.
 
-For a CAH administrator who finds platforms like this in a G2 or Capterra search, the practical result is the same. The category is priced and scoped for organizations many times their size. Finding that most tools in a category assume a workforce you do not have is a common experience for small-hospital administrators.
+For a CAH administrator who finds platforms like this in a G2 or Capterra search, the practical result is the same. The category is priced and scoped for organizations many times their size, a pattern our [nurse scheduling software pricing](/blog/nurse-scheduling-software-pricing) guide walks through model by model. Finding that most tools in a category assume a workforce you do not have is a common experience for small-hospital administrators.
 
 A market built mostly of vendors scoped for hundreds or thousands of employees was not designed to serve CAHs. That is useful information when setting evaluation criteria.
 
@@ -69,7 +69,7 @@ Enterprise scheduling platforms assume CAHs have five things most of them do not
 
 **IT team for implementation and maintenance.** Most enterprise platforms require custom configuration during implementation and ongoing IT maintenance. For a CAH with no internal IT staff, this creates dependency on a vendor's implementation team that persists after go-live. When something needs to change, the nurse manager cannot change it herself.
 
-**A float pool or agency desk.** Enterprise platforms automate callout coverage against a float pool or approved agency list. CAHs do not have a float pool. When a nurse calls out, the manager calls available per-diem nurses directly. A callout management feature designed around an agency API is not useful in this context.
+**A float pool or agency desk.** Enterprise platforms automate callout coverage against a float pool or approved agency list. CAHs do not have a float pool. When a nurse calls out, the manager calls available [per-diem nurses](/blog/what-is-per-diem-nursing) directly. A callout management feature designed around an agency API is not useful in this context.
 
 **A separate HR department.** Features for credential tracking, license expiration alerts, and employee self-service workflows assume someone manages these systems who is not the nurse manager. In most CAHs, the nurse manager, the HR function, and the scheduling function are the same person.
 

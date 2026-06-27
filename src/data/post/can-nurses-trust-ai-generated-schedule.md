@@ -46,7 +46,7 @@ When a nurse manager at a 25-bed Critical Access Hospital first proposes switchi
 
 Those are legitimate questions. They deserve a direct answer, not reassurance.
 
-The answer starts with understanding what an AI scheduling system actually does, what it cannot do, and how a nurse manager can verify the output before it affects her staff.
+The answer starts with understanding what an AI scheduling system actually does, what it cannot do, and how a nurse manager can verify the output before it affects her staff. For the wider picture of how [AI nursing scheduling software](/blog/nursing-scheduling-software-ai) changes the way rosters are built, that guide covers the mechanics behind the draft.
 
 ## Why Are Nurses Skeptical of AI Scheduling?
 

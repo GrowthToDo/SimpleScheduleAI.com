@@ -19,7 +19,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/free-nurse-scheduling-software'
 ---
 
-Free nurse scheduling software is real, and for a stable roster with no compliance overhead it does the job. The catch is that the free tools ranking for this search, NurseGrid, Connecteam, Sling, and the spreadsheet templates, were built for personal shift calendars and small retail teams. None of them were built for a Critical Access Hospital that has to track Texas overtime exposure, cover a 2 a.m. callout, and produce staffing records a CMS surveyor will accept.
+Free nurse scheduling software is real, and for a stable roster with no compliance overhead it does the job. The catch is that the free tools ranking for this search, NurseGrid, Connecteam, Sling, and the spreadsheet templates, were built for personal shift calendars and small retail teams. None of them were built for a Critical Access Hospital that has to track [Texas overtime exposure](/blog/texas-nursing-overtime-compliance-cah), cover a 2 a.m. callout, and produce [staffing records a CMS surveyor will accept](/blog/how-to-stay-cms-compliant-nurse-scheduling).
 
 This guide is written for a Texas CAH nurse manager weighing whether free is good enough. It covers what these tools genuinely do well, where they stop, and the real cost of the work they leave on your desk.
 
@@ -109,7 +109,7 @@ The table sets the four hospital requirements against what a typical free tool d
   </table>
 </div>
 
-**No overtime threshold tracking.** Free tools do not track each nurse's running hours against the applicable FLSA overtime threshold and warn you before you assign the shift that tips them over. They assign it anyway. Under the [FLSA overtime rules for healthcare](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and the [Texas Payday Law](https://www.twc.texas.gov/programs/wage-and-hour/texas-payday-law), unplanned overtime is both a cost and a wage-compliance exposure. See our deeper look at [Texas overtime compliance](/blog/texas-nursing-overtime-compliance-cah) for a CAH.
+**No overtime threshold tracking.** Free tools do not track each nurse's running hours against the applicable FLSA overtime threshold and warn you before you assign the shift that tips them over. They assign it anyway. Under the [FLSA overtime rules for healthcare](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and the [Texas Payday Law](https://www.twc.texas.gov/programs/wage-and-hour/texas-payday-law), unplanned overtime is both a cost and a wage-compliance exposure.
 
 **No certification-aware assignment.** A free tool does not know that one nurse is ICU-certified and another is not. It will let you assign an uncertified nurse to a unit that requires the certification without raising a flag.
 
@@ -173,7 +173,7 @@ A CAH can use a free tool for the schedule-building step, but free tools do not 
 
 **Q: How much does paid nurse scheduling software cost for a small hospital?**
 
-Pricing varies by model. Per-seat tools like NurseGrid Manager charge a monthly fee for each team member; check the vendor's product page for the current rate. SimpleScheduleAI uses flat pricing instead: $1,000 per month for up to 20 nurses and $1,500 per month for 21 to 40, with no per-seat math. Confirm current pricing on the pricing page before budgeting.
+Pricing varies by model, and our [nurse scheduling software pricing](/blog/nurse-scheduling-software-pricing) guide breaks down per-seat, enterprise, and flat-fee structures side by side. Per-seat tools like NurseGrid Manager charge a monthly fee for each team member; check the vendor's product page for the current rate. SimpleScheduleAI uses flat pricing instead: $1,000 per month for up to 20 nurses and $1,500 per month for 21 to 40, with no per-seat math. Confirm current pricing on the pricing page before budgeting.
 
 **Q: What is the hidden cost of free nurse scheduling tools?**
 
