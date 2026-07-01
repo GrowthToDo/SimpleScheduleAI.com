@@ -33,6 +33,7 @@ After adding new verified data from a live fetch, always update the dossier main
 ## Rules
 
 - **Blog posts:** Load `.claude/skills/seo-aeo-simplescheduleai.md` before writing/editing.
+- **Newsroom / trendjacking articles:** Load `.claude/skills/trendjacking-articles.md` before writing, editing, re-timing, or QA-ing any `/articles` piece (`src/data/article/*`). It encodes the relevance gradient, the citable-hook rule, accuracy guardrails, and the draft-then-publish flow; it pairs with `docs/seo/articles-trendjacking-plan.md`.
 - **Competitor content:** Load `.claude/skills/competitor-reviews.md` before Key Limitations, reviewer quotes, or feature comparisons. The skill will direct you to the dossier first.
 - **Code/dev work:** Load `.claude/skills/project-dev.md` for tech stack, pages, schema, coding standards.
 - **Launch/marketing video:** Load `.claude/skills/programmatic-brand-video.md` (a product-agnostic Remotion method, also installed globally) before creating, re-timing, re-formatting, or QA-ing a product video. SSAI's video project lives at `ssai-launch-video/` (separate from this repo); its specifics are in the skill's "Worked example" section.

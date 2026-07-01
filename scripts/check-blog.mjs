@@ -486,7 +486,10 @@ function check(file) {
   // A. Canonical matches slug.
   if (fm && fm.canonical) {
     const canon = unquote(fm.canonical);
-    const expected = `https://simplescheduleai.com/blog/${selfSlug}`;
+    // Newsroom pieces live in src/data/article and canonicalize under /articles/;
+    // blog posts under /blog/. Pick the section from the file path.
+    const section = /[\\/]article[\\/]/.test(path) ? 'articles' : 'blog';
+    const expected = `https://simplescheduleai.com/${section}/${selfSlug}`;
     if (canon !== expected) {
       fail(`Canonical does not match slug (expected ${expected}, got ${canon})`, 0, '');
     }
