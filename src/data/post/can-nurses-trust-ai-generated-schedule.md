@@ -184,7 +184,7 @@ One honest limitation: AI-generated scheduling is not the right fit for hospital
 2. **Ask three nurses what they want to see before trusting an AI schedule.** Likely answers: who decides exceptions, how appeals work, and whether the manager actually reviews each cycle. Document the answers and operationalize them. Trust follows from process clarity, not from algorithm accuracy.
 3. **Make the human-override workflow visible on every published schedule.** A footer line on each cycle: "Reviewed and approved by [manager name] on [date]. To request a change, contact [process]." When nurses see the human signature, the algorithm becomes a tool the manager uses, not a decision made elsewhere.
 4. **Track the four trust indicators monthly.** Coverage gaps surfaced, overtime breaches caught before payroll, fairness distribution within target ranges, and override requests resolved within 48 hours. Trends matter more than any single cycle.
-5. **Request a SimpleScheduleAI assessment if you are a Texas Critical Access Hospital.** The managed service delivers AI-generated schedules with the auditability, fairness tracking, and human-override workflow already wired in. Start at [how it works](/how-it-works).
+5. **Request a SimpleScheduleAI assessment if you are a Texas Critical Access Hospital.** Our AI-native nurse scheduling service delivers AI-generated schedules with the auditability, fairness tracking, and human-override workflow already wired in. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Build trust before the first AI schedule lands</p>
