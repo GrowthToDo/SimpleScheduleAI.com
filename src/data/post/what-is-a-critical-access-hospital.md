@@ -5,7 +5,7 @@ updateDate: 2026-06-20T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Is a Critical Access Hospital? A Complete Guide'
 excerpt: >
-  A critical access hospital is a federally designated rural hospital, capped at 25 beds, that earns cost-based Medicare reimbursement in exchange for meeting strict distance and emergency-care rules. This guide breaks down how a hospital qualifies, how its payment model differs from a standard hospital, and what the designation means day to day for the nurse managers who staff one of the roughly 84 critical access hospitals in Texas.
+  A critical access hospital is a federally designated rural hospital, capped at 25 beds, that earns cost-based Medicare reimbursement in exchange for meeting strict distance and emergency-care rules. This guide breaks down how a hospital qualifies, how its payment model differs from a standard hospital, and what the designation means day to day for the nurse managers who staff one of the roughly 91 critical access hospitals in Texas.
 image: '~/assets/images/blog/what-is-a-critical-access-hospital.webp'
 category: Glossary
 postType: glossary

@@ -5,7 +5,7 @@ updateDate: 2026-09-08T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Rural Texas Hospitals Are Actually Using for Nurse Scheduling in 2026'
 excerpt: >
-  Texas has 84 critical access hospitals, most of them scheduling nurses the same
+  Texas has 91 critical access hospitals, most of them scheduling nurses the same
   way they did in 2015: Excel spreadsheets, manual phone trees, and a nurse
   manager who builds the schedule from memory. This is not a technology gap.
   It is a market gap. Here is what the landscape actually looks like in 2026.
@@ -24,7 +24,7 @@ metadata:
 
 ## Key Takeaways
 
-- Texas has [84 critical access hospitals](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), most concentrated in rural communities where the nearest alternative facility may be 30 to 60 miles away. The majority are still managing nurse scheduling manually.
+- Texas has [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), most concentrated in rural communities where the nearest alternative facility may be 30 to 60 miles away. The majority are still managing nurse scheduling manually.
 - The most common scheduling system at Texas CAHs in 2026 is Excel, followed by a personal phone, followed by a whiteboard. Enterprise scheduling software is present but rare, and almost always entered through a health system acquisition rather than independent adoption.
 - The software products used most often at Texas CAHs, Aladtec and simpler platforms, were chosen for ease of setup and direct support, not for feature breadth. The post-TCP acquisition support changes have led some Aladtec users to reconsider.
 - The gap between what Texas CAH administrators know exists in the scheduling software market and what they have actually evaluated is wide. Most have not run a structured software evaluation in the last three years.
@@ -48,7 +48,7 @@ This creates a market gap: a large number of facilities with a real scheduling p
 
 ## How Many Texas Critical Access Hospitals Are There, and What Are They Facing?
 
-Texas has 84 critical access hospitals, making it one of the largest CAH states in the country. They are distributed across rural communities throughout West Texas, the Panhandle, East Texas, and South Texas, often serving counties where the next closest hospital is a long drive away.
+Texas has 91 critical access hospitals, making it one of the largest CAH states in the country. They are distributed across rural communities throughout West Texas, the Panhandle, East Texas, and South Texas, often serving counties where the next closest hospital is a long drive away.
 
 [Critical access hospitals](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) are federally designated rural facilities with 25 or fewer acute care beds. In Texas, they are also subject to Texas Health and Human Services Commission (HHSC) hospital licensing and staffing standards, Texas Payday Law overtime provisions, and CMS Conditions of Participation, creating a specific compliance environment that generic scheduling software does not address.
 
