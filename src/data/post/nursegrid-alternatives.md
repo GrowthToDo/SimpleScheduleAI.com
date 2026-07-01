@@ -21,6 +21,7 @@ tags:
   - healthcare-operations
 metadata:
   canonical: 'https://simplescheduleai.com/blog/nursegrid-alternatives'
+  description: 'Six NurseGrid alternatives that cover manager-side scheduling, FLSA overtime, and CMS records, not just a nurse-facing app. Compared for 25-bed hospital fit.'
 ---
 
 NurseGrid is the highest-adoption nurse-facing scheduling app. It is also the app the CAH nurse manager cannot use as her primary scheduling system, because the manager-side capability has been quietly narrowed across recent releases. Several Capterra reviewers describe losing the Manager App entirely.

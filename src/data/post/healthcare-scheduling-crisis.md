@@ -203,7 +203,9 @@ puts average RN turnover cost at $52,350 per departure. For a 25-bed CAH with 15
 nurses, losing two or three to avoidable burnout is a six-figure operational event.
 
 A fairness flag system that tracks callout frequency and overtime distribution per
-nurse makes this invisible problem visible before it becomes a resignation letter.
+nurse makes this invisible problem visible before it becomes a resignation letter,
+the same drift that turns [nurse self-scheduling into a burden-concentration trap](/blog/self-scheduling-problems-critical-access-hospital)
+when the sign-up order goes unmanaged.
 The data to build this system already exists in your timesheets. The problem is that
 no one is looking at it in aggregate because aggregating it manually takes hours.
 

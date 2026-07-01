@@ -22,7 +22,7 @@ metadata:
 
 Your CMS surveyor expects a clean staffing record that proves every shift met [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). Your reality is a nurse manager who builds that record between her own clinical shifts, on a spreadsheet, with no IT department behind her and no float pool to pull from when someone calls in sick. Most scheduling software is sold to the surveyor's fantasy and handed to the manager's reality.
 
-This guide compares ten platforms on that exact test. For the broader market split by hospital size, see the [2026 best-of guide](/blog/best-nurse-scheduling-software-2026); for the math on a 25-bed roster, the [25-bed hospital guide](/blog/best-scheduling-software-25-bed-hospital); and if your deciding constraint is having no IT department, [nurse scheduling at a rural hospital with no IT department](/blog/nurse-scheduling-no-it-department-rural-hospital).
+This guide compares ten platforms on that exact test. For the broader market split by hospital size, see the [2026 best-of guide](/blog/best-nurse-scheduling-software-2026); for the math on a 25-bed roster, the [25-bed hospital guide](/blog/best-scheduling-software-25-bed-hospital); if your deciding constraint is having no IT department, [nurse scheduling at a rural hospital with no IT department](/blog/nurse-scheduling-no-it-department-rural-hospital); and if nurses sign up for their own shifts, why [self-scheduling needs structural guardrails at a CAH](/blog/self-scheduling-problems-critical-access-hospital).
 
 ## Key Takeaways
 
