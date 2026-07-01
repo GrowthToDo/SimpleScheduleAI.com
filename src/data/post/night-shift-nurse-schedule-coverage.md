@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-08-17T00:00:00Z
 updateDate: 2026-08-17T00:00:00Z
 author: 'Pradeep Pandey'
@@ -20,8 +20,6 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/night-shift-nurse-schedule-coverage'
 ---
 
-Night shift is the hardest shift to fill at a critical access hospital, and the most consequential gap when coverage fails. At a 25-bed facility, the pool of nurses who can or will work nights is small, so the burden concentrates on a handful of people until those people reach their limit. This guide walks through the shift patterns CAHs use to cover nights, the federal rules that govern overnight staffing, and the scheduling discipline that keeps your most reliable night nurses from resigning.
-
 ## Key Takeaways
 
 - Federal rules require a registered nurse to provide or supervise the nursing care of each patient under [42 CFR 485.635(d)(1)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), a qualified practitioner available at all times the CAH operates under [485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), and 24-hour emergency services under [485.618](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618)
@@ -40,6 +38,8 @@ Night shift is the hardest shift to fill at a critical access hospital, and the 
 - [How Does SimpleScheduleAI Help With Night Coverage?](#how-does-simplescheduleai-help-with-night-coverage)
 - [What Should You Do This Week?](#what-should-you-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
+
+Night shift is the hardest shift to fill at a critical access hospital, and the most consequential gap when coverage fails. At a 25-bed facility, the pool of nurses who can or will work nights is small, so the burden concentrates on a handful of people until those people reach their limit. This guide walks through the shift patterns CAHs use to cover nights, the federal rules that govern overnight staffing, and the scheduling discipline that keeps your most reliable night nurses from resigning.
 
 ## What Are the Night Shift Coverage Requirements for Critical Access Hospitals?
 
@@ -128,7 +128,7 @@ A system that manages night coverage well does four things:
 
 ## How Does SimpleScheduleAI Help With Night Coverage?
 
-SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. We build night coverage constraints directly into the scheduling logic for each facility. When the system generates a schedule draft, it distributes night assignments according to the fairness parameters set during onboarding, which prevents concentration on a small group without a manager having to intervene by hand.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. We build night coverage constraints directly into the scheduling logic for each facility. When the system generates a schedule draft, it distributes night assignments according to the fairness parameters set during onboarding, which prevents concentration on a small group without a manager having to intervene by hand.
 
 When a night nurse calls out, the replacement list is generated from night-eligible, available staff, not pulled from whoever is easiest to reach. For Texas Critical Access Hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so a night callout does not quietly push someone into unplanned overtime.
 
