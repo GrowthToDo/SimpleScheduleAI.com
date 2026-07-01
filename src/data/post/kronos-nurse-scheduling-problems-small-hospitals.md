@@ -3,12 +3,12 @@ draft: true
 publishDate: 2026-07-14T00:00:00Z
 updateDate: 2026-07-14T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'What Nurses Actually Say About Kronos (And Why CAH Administrators Should Know It Before Buying)'
+title: 'Why UKG (Kronos) Is Built for Enterprises, Not Critical Access Hospitals'
 excerpt: >
-  Nursing forums and Reddit's r/nursing community have a blunt shorthand
-  for UKG (formerly Kronos): "Kronos is garbage." Before proposing UKG to
-  her staff, a small-hospital administrator should know where that reputation
-  comes from. It changes what her implementation will actually look like.
+  UKG (formerly Kronos) is enterprise workforce software written for 200-bed
+  systems with their own IT and HRIS staff. A 25-bed hospital inherits the
+  same complexity without the people to run it. Here is what its own
+  documented positioning and reviewer complaints mean for a small hospital.
 image: https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
@@ -21,114 +21,164 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/kronos-nurse-scheduling-problems-small-hospitals'
 ---
 
+Your regional health system tells you UKG is "already set up" and ready for your hospital. Your nurse manager, who is also on clinical shifts and doubles as the closest thing you have to IT, has to make an enterprise workforce suite run with none of the staff it was designed around.
+
+This guide covers what UKG (formerly Kronos) is documented to be, why that design does not scale down to a 25-bed hospital, and how to evaluate whether the platform fits your facility before you inherit a system built for an organization five times your size.
+
 ## Key Takeaways
 
-- Nurses on Reddit r/nursing and AllNurses.com use a recurring shorthand for UKG (formerly Kronos): "Kronos is garbage." This phrase appears across threads, forums, and nursing communities as a shorthand for the ground-level nurse experience of the platform.
-- The administrator buying experience and the nurse using experience for Kronos are significantly different. Administrators evaluate features, implementation timelines, and compliance capabilities. Nurses encounter the daily interface, the self-service schedule view, and the time-off request workflow.
-- CAH administrators considering UKG should know that introducing it to clinical staff will encounter pre-formed negative opinions. That is not a reason to avoid the product, but it is a factor that affects the implementation success rate.
-- For a critical access hospital with 20 nurses and no IT department, the complexity concerns that generate nurse frustration with UKG are amplified by the lack of internal technical support to bridge the gap between what the platform does and what the nurse needs it to do.
-- The same research sources that document nurse frustration with Kronos also show strong preferences for tools that are simpler, more responsive to direct nurse input, and easier to use on a phone during a shift.
+- UKG (formerly Kronos) is an enterprise workforce management suite. Its Capterra listing for UKG Pro describes it as "the Workforce Operating Platform" for payroll, HR, and time, built primarily for enterprises, and UKG states it serves [more than 3,500 healthcare organizations](https://www.ukg.com/industry-solutions/healthcare) in the United States.
+- The administrator who buys UKG and the nurse who uses it evaluate different things. Administrators weigh analytics, compliance reporting, and payroll integration. A nurse wants to view her schedule, request time off, and confirm tomorrow's shift on a phone.
+- Reviewers on UKG's own platform, in HR, payroll, and operations roles, describe a steep learning curve, custom reporting that is "very complicated if not impossible," and a mobile app missing features. These are power users, not frontline nurses, and they still report friction.
+- A 25-bed hospital inherits the enterprise complexity without the dedicated IT department, HRIS analyst, or long implementation budget the platform assumes, so the same friction lands harder with no support layer to absorb it.
+- No independent Critical Access Hospital reviews of UKG are documented on the major review platforms, so a small hospital should verify small-facility fit directly with the vendor rather than assume the enterprise track record transfers.
 
 ## Table of Contents
 
-- [What Do Nurses Actually Say About Kronos on Reddit and Nursing Forums?](#what-do-nurses-actually-say-about-kronos-on-reddit-and-nursing-forums)
-- [Why Is There a Gap Between the Administrator Buying Experience and the Nurse Using Experience?](#why-is-there-a-gap-between-the-administrator-buying-experience-and-the-nurse-using-experience)
-- [What Specific Kronos Problems Are Most Common in Nursing Communities?](#what-specific-kronos-problems-are-most-common-in-nursing-communities)
+- [What Is UKG (Kronos) Built For?](#what-is-ukg-kronos-built-for)
+- [Why Is There a Gap Between the Buyer Experience and the Nurse Experience?](#why-is-there-a-gap-between-the-buyer-experience-and-the-nurse-experience)
+- [What Do UKG Reviewers Actually Report?](#what-do-ukg-reviewers-actually-report)
 - [Does This Matter for a Critical Access Hospital Specifically?](#does-this-matter-for-a-critical-access-hospital-specifically)
-- [What Do Nurses Say They Actually Want From a Scheduling Tool?](#what-do-nurses-say-they-actually-want-from-a-scheduling-tool)
-- [How SimpleScheduleAI Is Designed With the Nurse Experience in Mind](#how-simplescheduleai-is-designed-with-the-nurse-experience-in-mind)
+- [How Should a Small Hospital Evaluate UKG Before Buying?](#how-should-a-small-hospital-evaluate-ukg-before-buying)
+- [How Is SimpleScheduleAI Designed for the Small-Hospital Reality?](#how-is-simplescheduleai-designed-for-the-small-hospital-reality)
+- [What Should You Do This Week?](#what-should-you-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Nurse administrators and IT directors buy scheduling software. Nurses use it. These two perspectives do not always produce the same evaluation.
+Administrators and IT directors buy scheduling software. Nurses use it. For an enterprise product deployed at a small hospital, the gap between those two perspectives is where the operational problems live.
 
-The person who signed the UKG contract evaluated implementation requirements, compliance features, workforce analytics dashboards, and cost. The nurse who encounters UKG for the first time is trying to view her schedule for the next two weeks, request a day off, and confirm her shift for tomorrow. Her evaluation happens in real time, on a phone, at the start of a 12-hour shift.
+The person who signs the UKG contract evaluates implementation requirements, compliance features, workforce analytics, and cost. The nurse who opens UKG for the first time is trying to view her schedule, request a day off, and confirm tomorrow's shift, on a phone, at the start of a 12-hour shift. An administrator who wants to know what a UKG deployment will actually look like should weigh both experiences before signing, which is also a useful discipline before evaluating any [nurse scheduling software](/nurse-scheduling-software).
 
-The gap between these two experiences is documented in the conversations nurses have in their own communities: Reddit's r/nursing, AllNurses.com, and similar forums where nurses discuss their working conditions without vendor framing. A CAH administrator who wants to understand what UKG implementation will actually look like should spend 30 minutes reading those threads before signing a contract. That reading is also a useful step before evaluating any [nurse scheduling software](/nurse-scheduling-software), because the ground-level nurse experience is the part a demo never shows.
+## What Is UKG (Kronos) Built For?
 
-## What Do Nurses Actually Say About Kronos on Reddit and Nursing Forums?
+UKG is an enterprise workforce management suite covering scheduling, time and attendance, HR, payroll, and analytics. Its Capterra listing for the UKG Pro product describes it as "the Workforce Operating Platform" built primarily for enterprises, and the vendor states UKG serves more than 3,500 healthcare organizations across the United States. It is designed for large facilities with dedicated IT departments and HRIS staff.
 
-A characterization of UKG (Kronos) that recurs across Reddit r/nursing and nursing forum discussions is blunt: "Kronos is garbage." This phrase, or variations of it, appears repeatedly across nursing communities as a shorthand for frustration with the platform's complexity and usability at the frontline nurse level.
+The design target shapes every assumption the software makes. An enterprise suite is built to standardize scheduling, payroll, and labor analytics across many facilities and thousands of employees at once, and that scale justifies a long configuration project, a dedicated administrator to own the rules, and an IT team to maintain the integrations. Kronos, before the UKG rebrand, sold into hospital systems on exactly that promise.
 
-This is not a clinical finding or a formal survey result. It is a cultural data point: a shorthand that spreads in communities because it captures a shared experience. When a phrase circulates far enough that nurses who have never met share it across different hospitals and health systems, the phrase is doing real work as a signal.
+For a large health system, that is a reasonable trade: the organization has the staff to configure the platform correctly and the volume to make the analytics pay off, so the assumptions hold. The question for a small hospital is whether those same assumptions hold at 25 beds, and they usually do not.
 
-The community-level criticism of Kronos centers on two recurring themes: the interface is not designed for the nurse workflow, and the self-service functions that nurses need most (viewing schedules, requesting time off, confirming shift assignments) are buried in a system designed for HR and operations managers rather than frontline staff.
+## Why Is There a Gap Between the Buyer Experience and the Nurse Experience?
 
-This matters not just as cultural context but as an implementation reality. A CAH administrator proposing UKG to her nursing staff will encounter pre-formed opinions. How she addresses those opinions, with either evidence that the implementation will be different or an acknowledgment of the valid criticisms, affects whether the implementation achieves adoption or becomes a compliance exercise that nurses route around.
+The administrator and the nurse encounter different versions of the same software. The administrator sees UKG in a demo configured to show its strengths: clean dashboards, compliance reporting, workforce analytics. The nurse encounters it in a production environment configured for her hospital, on a mobile device, trying to complete a specific task under time pressure.
 
-## Why Is There a Gap Between the Administrator Buying Experience and the Nurse Using Experience?
+UKG optimizes for the concerns of the people who buy it: cost reporting, compliance documentation, workforce analytics, payroll integration. Those are legitimate organizational needs, and they are also invisible to the nurse looking for her schedule. She sees the front end of a system designed from the inside out, surfacing what the organization needs to collect rather than what she needs to access. A polished demo shows the buyer what she needs to approve a purchase; the nurse will not experience anything like that demo on day one.
 
-The administrator and the nurse encounter different versions of the same software. The administrator sees UKG in a demo environment configured to show its strengths: clean dashboards, compliance reporting, workforce analytics. The nurse encounters UKG in a production environment that has been configured for her hospital's specific requirements, on a mobile device, trying to accomplish a specific task under time pressure.
+This gap is not unique to UKG; it exists across most enterprise scheduling platforms. The relevant question for a small-hospital administrator is how large the gap is and how much capacity the facility has to bridge it through training and support during a deployment.
 
-UKG is built to optimize for the concerns of the people who buy it: cost reporting, compliance documentation, workforce analytics, payroll integration. These are legitimate organizational needs. They are also invisible to the nurse trying to find her schedule. What the nurse sees is the front end of a system that was designed from the inside out: it surfaces the information the organization needs to collect, not necessarily the information the nurse needs to access.
+## What Do UKG Reviewers Actually Report?
 
-The demo experience specifically optimizes for the buyer. A polished demo of a complex enterprise software product will show the administrator what she needs to see to make a purchase decision. The nurse will not experience anything like that demo on the first day of actual use.
+Public reviews of UKG on Capterra come mostly from HR, payroll, and operations roles rather than frontline nurses, and even those administrative users report a learning curve, difficult custom reporting, and mobile gaps. UKG Pro holds a rating of 4.3 out of 5 across 726 reviews on Capterra, so this is a capable platform with satisfied users, not a broadly panned one. The friction shows up in the specifics.
 
-This gap is not unique to UKG. It exists to varying degrees across most enterprise scheduling platforms. The relevant question for a CAH administrator is: how large is the gap, and how much organizational capacity do I have to bridge it through training and support during implementation?
+On reporting and complexity:
 
-## What Specific Kronos Problems Are Most Common in Nursing Communities?
+> "The reporting could be more user friendly. There are many standard reports available for your use, however trying to build a custom report on your own is very complicated if not impossible."
+>
+> Felicia W., Payroll Consultant, Automotive, April 8, 2026, Capterra
 
-Four categories of Kronos complaints recur in nursing community discussions: complex time-off request workflows, schedule visibility problems on mobile, forced re-authentication during shifts, and the perception that the system is designed for management surveillance rather than nurse convenience.
+> "Some areas of the platform can be complex for new users, and certain reports or customizations may require additional training or administrative expertise. System updates occasionally introduce workflow changes that require adjustment."
+>
+> Swaminathan S., HR Assistant, Hospitality, June 18, 2026, Capterra
 
-**Time-off request workflows.** Nurses describe the process of requesting time off in UKG as involving too many steps, unclear approval visibility, and unpredictable confirmation timelines. A nurse who requests a day off wants to know quickly whether it is approved. The workflow in UKG often routes through multiple approval levels with notification delays that leave the nurse uncertain about her schedule status.
+On usability and support:
 
-**Mobile schedule visibility.** Viewing the current schedule on a phone is a basic nurse need: she wants to check her schedule quickly, confirm tomorrow's shift, and see any changes since the last time she looked. Nursing forum posts describe UKG's mobile experience as requiring navigation through a desktop-optimized interface rather than a mobile-native schedule view.
+> "The software was difficult to use and not user friendly. Users couldn't locate benefit enrollment and had issues adjusting tax setup and other info."
+>
+> Patricia K., Senior HR Generalist, Plastics, April 2, 2026, Capterra
 
-**Forced re-authentication.** Session timeout problems documented in UKG's nursing forum discussions are consistent with the broader pattern across scheduling platforms: nurses who access the app during a shift to check scheduling information are logged out by security policies that do not account for the intermittent-use pattern of a nurse checking her phone between patient care tasks.
+On the mobile experience:
 
-**Management surveillance perception.** A recurring theme in nursing community discussions is that Kronos/UKG feels like it was designed to monitor nurses rather than help them. The time tracking granularity, punch-in enforcement, and real-time activity logging serve organizational compliance purposes. They produce a user experience that nurses often describe as surveillance-oriented rather than service-oriented.
+> "The mobile app needs to be updated to include more features, for example, document acknowledgment. There are many end users who primarily use their mobile phones and will not use a computer; it is critical for the mobile app to provide all of the same options as the online version."
+>
+> Jessica J., Senior Director, People and Culture, Staffing and Recruiting, April 21, 2026, Capterra
+
+These reviewers are administrative power users of UKG's own suite, not nurses. If people whose job is to run the platform describe reporting as "very complicated if not impossible" and the mobile app as missing features, a frontline nurse checking her schedule at the start of a shift is even further from the interface the product was optimized for.
 
 ## Does This Matter for a Critical Access Hospital Specifically?
 
-The nurse experience concerns that produce "Kronos is garbage" sentiment in large health system contexts are amplified at a CAH, for reasons specific to the CAH operating environment.
+The complexity that administrative reviewers describe at enterprise scale lands harder at a Critical Access Hospital, because the CAH inherits the platform without the support infrastructure the platform assumes. It is not that the software is different; it is that the people who make it work are missing.
 
-At a 500-nurse health system, a nurse who struggles with UKG has IT support she can call, a coworker who has figured out the workaround, and a trainer who ran an onboarding session. At a 20-nurse CAH, the nurse manager is the IT support, the trainer, and the implementation lead. She does not have time to troubleshoot UKG for five nurses who cannot figure out how to view their schedule on their phone.
+At a 500-nurse health system, a nurse who struggles with UKG has an IT help desk to call and a trainer who ran an onboarding session. At a 20-nurse CAH, the nurse manager is the IT support, the trainer, and the deployment lead, and she is also carrying clinical shifts. The support layer that large systems use to bridge the gap between UKG's complexity and frontline needs does not exist at that scale, so a configuration problem a large hospital routes to a WFM team becomes an operational barrier at a 25-bed facility.
 
-The training and support infrastructure that large health systems use to bridge the gap between UKG's complexity and frontline nurse needs does not exist at a CAH. The complexity problem that generates frustration at a 500-bed hospital becomes an operational barrier at a 25-bed facility.
+There is a second, documented gap: no independent Critical Access Hospital reviews of UKG surfaced on the major review platforms during our research. The enterprise track record is real, but it is an enterprise track record. A small hospital cannot assume it transfers to a 25-bed operation, which is the central problem any approach to [critical access hospital scheduling](/critical-access-hospital-scheduling) has to solve: the tool has to work without the support layer that large systems take for granted.
 
-This is part of why the scheduling software that makes sense for a large health system does not scale down to a CAH context. It is not just that the price is too high or the features are too many. It is that the organizational infrastructure required to make the platform work is as unavailable to a CAH as the IT department required to implement it. This is the central problem that any approach to [critical access hospital scheduling](/critical-access-hospital-scheduling) has to solve: the tool has to work without the support layer that large systems take for granted.
+## How Should a Small Hospital Evaluate UKG Before Buying?
 
-## What Do Nurses Say They Actually Want From a Scheduling Tool?
+Before adopting UKG at a small hospital, pressure-test the platform against the resources the facility actually has, not the resources an enterprise buyer assumes. Work through these questions with the vendor and get the answers in writing.
 
-From nursing community discussions, the features nurses consistently want from a scheduling tool are simpler and more specific than what enterprise platforms deliver: easy mobile schedule access, fast time-off requests with clear approval status, direct communication with the manager about schedule changes, and fairness in shift distribution.
+1. **Who configures and maintains the rules?** UKG assumes a dedicated administrator or HRIS analyst owns overtime rules, credential requirements, and unit minimums. Ask who does this at your facility and how many hours a week it takes once you are live.
 
-None of these are technically complex features. They are user experience priorities that get de-emphasized when a platform is designed around organizational reporting and compliance needs rather than frontline nurse workflows.
+2. **What does implementation actually require?** Ask for the realistic timeline, the IT involvement expected of your team, and the total cost including configuration, not just the license. Enterprise implementations run in months, not days.
 
-The pattern is: enterprise scheduling software gets built to satisfy the requirements checklist of the administrator or CFO who buys it. Nurses interact with the residual user experience that remains after those organizational requirements have been satisfied. For most enterprise platforms, the residual experience is not what nurses would design for themselves.
+3. **Can the vendor name a Critical Access Hospital reference?** Request a reference at 25 beds or fewer with no internal IT department. If every reference is a large system, treat small-facility suitability as unproven.
 
-Tools that nurses respond well to in nursing community discussions, including simpler platforms that prioritize mobile schedule access and clear communication, tend to be tools that were designed for the nurse experience first rather than the administrator experience first.
+4. **What does the nurse actually touch?** Ask to see the production mobile experience a nurse uses to view a schedule, request time off, and confirm a shift, not the administrator demo, and confirm the mobile app matches the desktop functions.
 
-## How SimpleScheduleAI Is Designed With the Nurse Experience in Mind
+5. **How are CMS and FLSA requirements handled?** Confirm whether CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation and FLSA overtime thresholds are configured for you or left to your team, and who keeps that configuration audit-ready.
 
-SimpleScheduleAI is an AI-native nurse scheduling service built for the CAH context, which means it was designed for the reality of a small nursing staff where the manager and the nurses have direct relationships and the scheduling tool should facilitate that relationship, not intermediate it with organizational complexity.
+6. **What is the exit path?** Enterprise contracts often carry multi-year terms and exit penalties. Know the renewal date, the notice window, and how you would export your roster data before you sign.
 
-Nurses at facilities using SimpleScheduleAI interact with the schedule primarily through the published schedule output, not through a mobile app with multiple workflow layers. The schedule is clear, accessible, and communicated directly. The complexity of the scheduling system is on the specialist's side, not the nurse's side. This is how the [AI-native scheduling model](/ai-nurse-scheduling) differs from a self-service enterprise platform: the algorithm and the human specialist absorb the hard work, and the nurse sees a finished schedule. The full workflow is described on the [how it works](/how-it-works) page.
+7. **Which UKG product is it, and how long is it supported?** If you are offered a legacy Kronos product, note that on-premise Workforce Central reaches end of life on [March 31, 2027](https://www.healthcareitleaders.com/blog/ukg-workforce-central-wfc-end-of-life/), and confirm the support horizon of whatever you are buying.
 
-On fairness: a specific concern from nursing community discussions is that schedules feel unfair when the same nurses consistently draw undesirable shifts. SimpleScheduleAI's fairness-optimized draft option explicitly addresses this by distributing weekend, overnight, and holiday assignments equitably across the roster. The fairness record is part of the scheduling documentation, which means the nurse manager can show a nurse who believes she is drawing too many nights exactly what the distribution has been across the cycle.
+## How Is SimpleScheduleAI Designed for the Small-Hospital Reality?
 
-For a nurse manager deciding between UKG and a smaller tool purpose-built for her facility's scale, the nursing community's existing opinion of UKG is useful context. She is not just choosing a feature set. She is choosing an implementation she will have to sell to her nurses, and the ground-level reputation of the tool matters to that outcome.
+SimpleScheduleAI is an AI-native nurse scheduling service built for the Critical Access Hospital context: a small nursing staff where the manager and the nurses have direct relationships and the scheduling tool should support that relationship rather than intermediate it with enterprise complexity. It is built for Texas Critical Access Hospitals specifically.
 
-For more context on why UKG specifically is not the right fit for small hospitals, see [UKG Is Too Complex for Small Hospitals: What to Use Instead](/blog/ukg-too-complex-small-hospital).
+Instead of handing a nurse manager a platform to configure, the AI builds the first schedule from an uploaded roster, our scheduling team checks it, and the manager reviews and approves. The scheduling logic sits on the specialist's side, not the nurse's side. This is how the [AI-native scheduling model](/ai-nurse-scheduling) differs from a self-service enterprise suite: the algorithm and the specialist absorb the hard work, and the nurse sees a finished schedule. You can watch the AI build a compliant schedule and rank a callout shortlist in the [interactive simulator](/simulator), and the full workflow is on the [how it works](/how-it-works) page.
+
+For Texas Critical Access Hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds and produces CMS §485.635 documentation by default, so survey preparation is not a separate manual project. The fairness-optimized draft distributes weekend, overnight, and holiday assignments across the roster, and the distribution record lets a manager show a nurse exactly how the cycle has been balanced.
+
+One honest limitation: SimpleScheduleAI is not the right fit if your facility wants a staff-facing self-service app where nurses pick up and swap shifts themselves, or if you need the enterprise workforce analytics UKG provides across a multi-hospital system. It is built for a single small hospital that wants the scheduling work handled, not a platform to operate.
+
+For a full comparison of practical replacements at CAH scale, see [UKG Alternatives for Critical Access Hospitals](/blog/ukg-alternatives-small-hospitals).
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">UKG is genuinely good software for the enterprises it was built for, and the reviewers who rate it well are not wrong. The mistake a small hospital makes is reading an enterprise track record as proof of small-facility fit. The long implementation, the dedicated IT and HRIS assumptions, and the analytics depth are not extras a vendor can trim for a 25-bed hospital; they are the operating model. The right tool for a Critical Access Hospital is not a lighter version of an enterprise suite. It is a tool sized for one small hospital that has no IT department and no spare administrator to run a platform.</p>
+</div>
+
+## What Should You Do This Week?
+
+1. **Confirm which UKG product is on the table and its support horizon.** If it is a legacy Kronos Workforce Central deployment, note the March 31, 2027 on-premise end-of-life date and ask the vendor what migration it implies.
+2. **Ask for a Critical Access Hospital reference customer.** Request a facility at 25 beds or fewer with no internal IT team. If every reference is a large system, treat small-hospital fit as unproven and document that gap.
+3. **See the nurse's actual mobile experience, not the admin demo.** Have the vendor show how a nurse views a schedule, requests time off, and confirms a shift on a phone, and confirm the mobile app matches the desktop functions.
+4. **Get the real total cost and implementation load in writing.** License, configuration, IT hours expected from your team, and timeline. Compare that against the staff you actually have, not the staff an enterprise assumes.
+5. **Map your exit path before you commit.** Find your renewal date, the notice window, and how you would export your roster data, so a future switch is a known quantity rather than a surprise.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">A scheduling tool your nurses will actually use, not route around.</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is purpose-built for CAH-scale facilities. No IT setup, operational in 3-5 days.</p>
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">A scheduling tool sized for a 25-bed hospital, not a 500-bed system.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is purpose-built for Texas Critical Access Hospitals. No IT setup, no platform to configure, operational in days.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
+For more context on why UKG specifically strains at small-hospital scale, and the practical replacements a 25-bed facility can actually run, see [UKG Is Too Complex for Small Hospitals: What to Use Instead](/blog/ukg-too-complex-small-hospital).
+
+## Sources
+
+1. UKG, [Healthcare workforce management](https://www.ukg.com/industry-solutions/healthcare) (vendor statement that UKG serves more than 3,500 healthcare organizations in the US). Verified 2026-07-01.
+2. Capterra, [UKG Pro reviews](https://www.capterra.com/p/480/UKG-Pro/reviews/) (product ID 480; 4.3/5 across 726 reviews; verbatim reviewer quotes from Felicia W., Swaminathan S., Patricia K., and Jessica J.). Verified 2026-07-01.
+3. Healthcare IT Leaders, [UKG Workforce Central End of Life: What Customers Should Know](https://www.healthcareitleaders.com/blog/ukg-workforce-central-wfc-end-of-life/) (on-premise Workforce Central end of life March 31, 2027). Verified 2026-07-01.
+4. CMS Conditions of Participation, [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), eCFR.
+5. U.S. Department of Labor, [Fact Sheet #54: Healthcare Overtime](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+**A note on sources:** Reviewer quotes are verbatim from Capterra and were verified on the dates shown. No independent Critical Access Hospital reviews of UKG were found on Capterra, G2, or nursing community forums during this research; small-hospital suitability should be verified directly with the vendor. Vendor offerings, ratings, and product capabilities change over time.
+
 ## Frequently Asked Questions
 
-**Q: Is the "Kronos is garbage" sentiment just online negativity, or does it reflect real problems?**
+**Q: Is UKG (Kronos) a good fit for a 25-bed Critical Access Hospital?**
 
-It reflects real and documented problems, though the intensity of the language reflects a nursing community culture of direct complaint rather than diplomatic review. The specific issues nurses describe in forums, complex mobile interfaces, opaque time-off workflows, session timeout frustration, and surveillance-oriented design, are consistent with what structured platform reviews on G2 and Capterra document for UKG. The Reddit shorthand is not an outlier opinion. It is a compressed summary of a complaint pattern that appears independently across many nurses in many facilities.
+UKG is documented as an enterprise workforce platform built for large organizations with dedicated IT and HRIS staff. A 25-bed CAH typically has neither, so it inherits the platform's complexity without the support structure the platform assumes. No independent Critical Access Hospital reviews of UKG surfaced during our research, so a small hospital should verify small-facility fit directly with the vendor rather than assume the enterprise record transfers.
 
-**Q: If my nurses already have opinions about Kronos, does that mean I should not consider it?**
+**Q: What do reviewers say is hard about UKG?**
 
-Not necessarily. Pre-formed opinions can be changed by a well-run implementation with genuine training support and a clear explanation of why the tool was chosen. The risk is that a poorly resourced implementation at a CAH with no IT support will confirm rather than correct the pre-formed negative opinion. If you are evaluating UKG for a small facility, the relevant question is whether you have the implementation and training resources to bridge the gap between the platform's complexity and the nurse experience it delivers without support. Most CAHs do not.
+On Capterra, administrative users in HR, payroll, and operations roles describe a learning curve, custom reporting that one reviewer called "very complicated if not impossible," and a mobile app that another reviewer said needs more features to match the desktop version. UKG Pro still holds 4.3 out of 5 across 726 Capterra reviews, so these are specific friction points within a generally capable platform, reported by power users rather than frontline nurses.
 
-**Q: What scheduling tools do nurses say they actually prefer?**
+**Q: My health system says UKG is "already set up." Should I still evaluate it?**
 
-In nursing community discussions, tools that receive positive mentions tend to share three characteristics: simple mobile schedule access, fast and clear time-off request and approval workflows, and schedule fairness. Specific tools mentioned positively vary by facility size and context. For CAHs specifically, simpler managed service models and tools with limited feature sets that prioritize core nurse use cases tend to generate better adoption outcomes than enterprise platforms with comprehensive feature sets that require significant training to navigate.
+Yes. "Already set up" usually means the platform was configured for the health system's scale, not your hospital's. Confirm who maintains the rules for your facility, what the nurse touches on a phone, and whether CMS and FLSA requirements are configured for you or left to your team. If those answers point to work your facility cannot sustain, the deployment is a cost even when the license is covered.
+
+**Q: Is Kronos being discontinued?**
+
+UKG has announced end-of-life timelines for legacy Kronos Workforce Central. On-premise Workforce Central reaches end of life on March 31, 2027, and the Kronos Private Cloud hosting reached end of life at the end of 2025. If you are offered a Kronos-branded product, confirm which UKG product you are actually buying and its supported lifespan before committing.
 
 ---
 

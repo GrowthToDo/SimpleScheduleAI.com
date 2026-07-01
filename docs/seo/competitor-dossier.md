@@ -4,7 +4,7 @@ Verified quotes, ratings, and product notes for competitors covered across all b
 Use this file before fetching any live review data — only go online if a competitor is missing
 from this dossier or the verification date is older than 60 days.
 
-**Dossier last updated:** 2026-06-12
+**Dossier last updated:** 2026-07-01
 **Maintained by:** Pradeep Pandey / Claude (update each time new quotes are verified live)
 
 ---
@@ -744,14 +744,71 @@ describe the scheduling features as basic. Do not conflate with TCP Aladtec (sep
 ## UKG (formerly Kronos)
 
 **Product:** Enterprise workforce management suite. Scheduling, time and attendance, HR, payroll,
-analytics. Used by 3,500+ hospitals in the US. Built for 200+ bed facilities with dedicated
-IT departments and HRIS staff.
+analytics. UKG states it serves more than 3,500 healthcare organizations in the US
+(ukg.com/industry-solutions/healthcare, verified 2026-07-01). Built for large facilities with
+dedicated IT departments and HRIS staff. Capterra positions UKG Pro as "the Workforce Operating
+Platform," built primarily for enterprises.
 
-**Ratings:** Not tracked — UKG does not list on Capterra for the Pro/Workforce Central product
-in a way that maps to small hospital reviews. Use vendor product page.
+**Ratings (verified 2026-07-01):**
 
-**No verified reviewer quotes in dossier** — UKG posts rely on product/operational analysis
-rather than reviewer quotes. Add verified quotes here when sourced.
+- Capterra (UKG Pro): 4.3/5 (726 reviews) — Product ID 480
+- Capterra (UKG Ready): 4.2/5 (1,143 reviews) — Product ID 198579
+- Capterra (Kronos Workforce Central): Product ID 212370 seen in SERP; reviews URL 404'd, rating not captured
+- G2 (Kronos Workforce Central): 3.9/5 (733 reviews) — snippet only, page 403-blocked, verify before citing
+
+**Capterra URL (verified 2026-07-01):** https://www.capterra.com/p/480/UKG-Pro/reviews/
+
+**Important caveat:** Reviewers on the major platforms are predominantly HR, payroll, and
+operations roles on the HCM/WFM suite, NOT self-identified frontline nurses. No independent
+Critical Access Hospital / rural / ≤25-bed reviews of UKG were found on Capterra, G2, or nursing
+community forums (allnurses/Reddit r/nursing) as of 2026-07-01. The nurse-community phrase
+"Kronos is garbage" has NO attributable r/nursing source (an exact-phrase search surfaced only a
+Glassdoor employee review, a Quora question, and a synth forum) — do NOT present it as sourced
+nurse sentiment. Frame small-hospital fit as "verify with vendor"; no volume language.
+
+**Product lifecycle fact (verified 2026-07-01):** Legacy Kronos Workforce Central is retiring.
+On-premise Workforce Central end of life = March 31, 2027; Kronos Private Cloud hosting reached
+end of life Dec 31, 2025; announced Oct 2022. Sources: Healthcare IT Leaders
+(healthcareitleaders.com/blog/ukg-workforce-central-wfc-end-of-life/), RSM US. Supports a
+"legacy/end-of-life, confirm which UKG product you are buying" framing.
+
+### Verified Reviewer Quotes (verbatim, Capterra UKG Pro p/480, verified 2026-07-01)
+
+_All four reviewers are administrative power users on UKG's own suite (HR / payroll / ops roles),
+NOT nurses. Use them for the "even admin power-users report complexity" angle, never as nurse voices._
+
+**Reporting / Complexity:**
+
+> "The reporting could be more user friendly. There are many standard reports available for your use, however trying to build a custom report on your own is very complicated if not impossible."
+>
+> Felicia W., Payroll Consultant, Automotive, April 8, 2026, Capterra
+
+> "Some areas of the platform can be complex for new users, and certain reports or customizations may require additional training or administrative expertise. System updates occasionally introduce workflow changes that require adjustment."
+>
+> Swaminathan S., HR Assistant, Hospitality, June 18, 2026, Capterra
+
+**Usability / Support:**
+
+> "The software was difficult to use and not user friendly. Users couldn't locate benefit enrollment and had issues adjusting tax setup and other info."
+>
+> Patricia K., Senior HR Generalist, Plastics, April 2, 2026, Capterra
+
+**Mobile:**
+
+> "The mobile app needs to be updated to include more features, for example, document acknowledgment. There are many end users who primarily use their mobile phones and will not use a computer; it is critical for the mobile app to provide all of the same options as the online version."
+>
+> Jessica J., Senior Director, People and Culture, Staffing and Recruiting, April 21, 2026, Capterra
+
+_(UKG Ready hospital-industry reviewers who commented were mild and do not support a complexity
+critique; one Hospital & Health Care reviewer, Mayted B., Mar 27 2026, noted "always having system
+issues as in minor bugs here and there" — verbatim, typos preserved — usable only as a minor
+"occasional bugs" note, not a complexity claim.)_
+
+**Unverified (snippet-only, do NOT quote as exact):** allnurses thread "Electronic scheduling -
+Need some advice (Kronos/Cerner)" (403-blocked, real nurse thread but wording unconfirmed);
+G2 UKG snippets on "steeper learning curve"; TrustRadius "Kronos Workforce Ready - Arguably the
+Worst Application You Could Choose" (403-blocked). A human must open these pages manually to
+promote any quote to verified.
 
 ---
 
@@ -810,3 +867,4 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 | 2026-06-06 | Re-verification pass (Playwright/web). EasyShifts: confirmed exact Capterra dates for all 3 quotes (Jenafer J. 2024-01-16; Johanna Y. 2025-09-04; Cindee A. 2025-10-08, all Capterra ID 228499) — quotes now publish-ready; corrected Cindee A. source from GetApp to Capterra and expanded her con verbatim. ScheduleForward: site still 502 to direct fetch; removed unconfirmable founder names (Tom Smallwood/Scott Lowry); "$9/user/mo" and "1,000+ teams" flagged snippet-only/unconfirmable; still zero third-party listings. Shiftable: site is LIVE again (Vercel error cleared), now positions as "AI Nurse Scheduling for Healthcare Facilities"; pricing unconfirmable, do not use Wayback $29/mo; still zero third-party listings. Separately, CFR cites for the CMS-compliance blog post were Playwright-verified against eCFR: 30-min rule is §485.618(d) emergency-care practitioner (not §485.635); RN/CNS/LPN on duty is §485.631(a)(5).                                                                                                                                                                                                                                                                                                               |
 | 2026-06-06 | Completed the remaining 4 from the LLM-citation gap pull. ScheduleAnywhere: now TCP-owned (acq. from Atlas Business Solutions), Capterra 4.6/61 (ID 134921), GetApp 4.6/61, G2 4.3/13 (snippet only, 403-blocked, verify); 3 verbatim RN reviewer quotes; healthcare focus + vendor credential-tracking claim, no CMS/FLSA/CAH docs; Basic from $25/user/mo. ScheduleForward: real ED-origin AI scheduler, vendor site 502 (snippet-sourced only), ZERO third-party listings/reviews anywhere, no CAH/CMS/FLSA docs, ED pricing "$9/user/mo" vendor claim — neutral framing only. Shiftable (shiftable.app by Plain Potato): generic horizontal AI scheduler, live site DOWN (Vercel), Wayback 2025-08-20 sourced, ZERO third-party reviews, vendor testimonials use placeholder employers, no CAH/CMS/FLSA/HIPAA, $29/mo — neutral framing only. EasyShifts (easyshifts.com, RN-founded 2008, SOC 2 Type II): Capterra 4.6/60 (ID 228499; older 241775 exists, do not cite), GetApp 4.6/60 same pool, G2 403/unconfirmed; verbatim quotes captured but DATES must be re-verified before publishing; general hospital + senior-living focus, no CAH/CMS/FLSA/credential docs; pricing conflict (official "Contact us" vs third-party ~$2.99–3.99/user/mo), 90-day trial. |
 | 2026-06-12 | Added CronShift (cronshift.com, healthcare WFM platform): no G2, no Capterra, zero third-party reviews anywhere; site metrics are vendor claims; no CAH/rural docs; neutral product-page framing required. Added AI-visibility notes to M7 Health + CronShift: ChatGPT now ranks M7 FIRST for _best nurse scheduling software for critical access hospitals_ (citing recently published M7 CAH guidance) with CronShift also recommended and cited — the formerly open AEO lane (Jun 5 gap pull) is now contested. M7 = most direct AEO competitor.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 2026-07-01 | Rebuilt the UKG (Kronos) section with live-verified data (was ratings-untracked, zero quotes). Verified verbatim on Capterra UKG Pro (p/480, 4.3/5, 726 reviews): Felicia W. (reporting "very complicated if not impossible"), Swaminathan S. ("complex for new users"), Patricia K. ("difficult to use and not user friendly"), Jessica J. (mobile app missing features) — all HR/payroll/ops roles, NOT nurses; flagged for "admin power-user" framing only. Captured UKG Ready (p/198579, 4.2/5, 1,143) + minor "system issues/bugs" note (Mayted B., Hospital & Health Care). Recorded Kronos Workforce Central end-of-life (on-prem Mar 31 2027; KPC Dec 31 2025; Healthcare IT Leaders + RSM sources). KEY finding: "Kronos is garbage" has NO attributable r/nursing source; allnurses/G2/TrustRadius nurse threads all 403-blocked (snippet-only, unverified). No independent CAH reviews of UKG exist. Used to pivot kronos-nurse-scheduling-problems-small-hospitals.md from unsourced "what nurses say" sentiment to a factual "built for enterprises, not CAHs" angle (still draft:true).                                                                                                                                                                    |
