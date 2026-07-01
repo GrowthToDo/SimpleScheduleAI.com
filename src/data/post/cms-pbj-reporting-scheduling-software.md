@@ -209,7 +209,7 @@ No. SimpleScheduleAI is nurse scheduling for acute-care staffing at Texas Critic
 1. eCFR, 42 CFR Part 483 Subpart B (Requirements for Long Term Care Facilities). https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B
 2. eCFR, 42 CFR 483.70 (Administration). https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.70
 3. eCFR, 42 CFR 482.58 (Special requirements for hospital providers of long-term care services, swing beds). https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-482/subpart-E/section-482.58
-4. CMS, Payroll-Based Journal (PBJ) Policy Manual. https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/nursinghomequalityinits/downloads/pbj-policy-manual-final-v25-11-19-2018.pdf
+4. CMS/QTSO, Payroll-Based Journal (PBJ) Reference and Manuals. https://qtso.cms.gov/vendors/payroll-based-journal-pbj-vendors/reference-manuals
 5. CMS, Staffing Data Submission (Payroll-Based Journal). https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission
 6. CMS, Care Compare. https://www.medicare.gov/care-compare/
 7. Rural Health Information Hub, Critical Access Hospitals (CAHMPAS skilled-nursing census data). https://www.ruralhealthinfo.org/topics/critical-access-hospitals
