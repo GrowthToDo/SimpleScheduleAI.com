@@ -1,7 +1,7 @@
 ---
 draft: false
-publishDate: 2026-08-17T00:00:00Z
-updateDate: 2026-08-17T00:00:00Z
+publishDate: 2026-07-01T00:00:00Z
+updateDate: 2026-07-01T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Night Shift Nurse Schedule: How to Ensure Adequate Coverage'
 excerpt: >
@@ -26,7 +26,7 @@ metadata:
 - Most CAH night coverage runs on 12-hour shifts (commonly 7 p.m. to 7 a.m.), with schedules posted at least two weeks ahead so nurses can plan sleep and family logistics
 - Night shift is hard to fill because of health effects, lifestyle disruption, and the small night-eligible pool at a rural 25-bed hospital
 - Rotating versus permanent nights is a real tradeoff: most CAHs run a hybrid, and either model needs explicit fairness tracking to prevent burden concentration
-- Losing two night-capable nurses in one quarter is an operational emergency, so proactive fairness monitoring is the prevention, not a phone tree at 3 a.m.
+- Losing two night-capable nurses in one quarter is an operational emergency for a roster that size, so the real prevention is spotting an overloaded nurse months ahead, not backfilling the gap after she resigns
 
 ## Table of Contents
 
