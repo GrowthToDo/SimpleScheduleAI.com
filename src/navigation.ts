@@ -33,6 +33,7 @@ export const headerData = {
         { text: 'AI Nurse Scheduling', href: getPermalink('/ai-nurse-scheduling') },
         { text: 'Critical Access Hospital Scheduling', href: getPermalink('/critical-access-hospital-scheduling') },
         { text: 'Blog', href: getBlogPermalink() },
+        { text: 'Articles', href: getPermalink('/articles') },
       ],
     },
   ],
@@ -58,6 +59,7 @@ export const footerData = {
         { text: 'AI Nurse Scheduling', href: getPermalink('/ai-nurse-scheduling') },
         { text: 'CAH Scheduling Guide', href: getPermalink('/critical-access-hospital-scheduling') },
         { text: 'Blog', href: getBlogPermalink() },
+        { text: 'Articles', href: getPermalink('/articles') },
       ],
     },
     {
