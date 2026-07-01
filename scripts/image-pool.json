@@ -528,5 +528,15 @@
     "id": "1512678080530-7760d81faba6",
     "description": "Empty single patient room in a small hospital with an unoccupied bed and vacant chair",
     "topics": ["rural hospital", "small hospital", "empty bed", "staffing gap", "nurse retention", "workforce"]
+  },
+  {
+    "id": "1612531385446-f7e6d131e1d0",
+    "description": "Physician in a white coat with a stethoscope, arms crossed, in a clinical portrait",
+    "topics": ["physician", "provider scheduling", "medical staff", "on-call", "hospital", "doctor"]
+  },
+  {
+    "id": "1506784983877-45594efa4cbe",
+    "description": "Open monthly planner showing a November calendar grid with a coffee cup resting on it",
+    "topics": ["calendar", "monthly rotation", "cyclical scheduling", "self-scheduling", "shift schedule", "planning"]
   }
 ]
