@@ -105,7 +105,11 @@ export const fetchArticles = async (): Promise<Array<Post>> => {
 export const getStaticPathsArticle = async () => {
   return (await fetchArticles()).flatMap((article) => ({
     params: {
-      slug: article.permalink,
+      // The [...slug] route already lives under /articles/, so the catch-all
+      // param must be the bare slug. Using article.permalink here (which is
+      // "articles/<slug>") would emit the page at /articles/articles/<slug>
+      // while every link/canonical points at /articles/<slug> -> 404.
+      slug: article.slug,
     },
     props: { article },
   }));
