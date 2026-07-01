@@ -811,7 +811,7 @@ function check(file) {
   // a BOFU at 5000 is not. If postType is absent, skip (dormant until the field
   // is added); an unknown value is flagged so typos surface.
   const WORD_RANGES = {
-    glossary: [600, 1000],
+    glossary: [600, 1600], // definitional + CoP/requirements references run 1000-1600 in this corpus; 600-1000 false-warned on every glossary post
     tofu: [1000, 1500],
     mofu: [1500, 2500],
     comparison: [1500, 4500], // single-competitor comparisons run deep (full profile + limitations + verdict)
