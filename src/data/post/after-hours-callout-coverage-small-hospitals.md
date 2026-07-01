@@ -134,7 +134,7 @@ The failure mode at most small hospitals is that the process lives in the nurse 
   </div>
 </div>
 
-The escalation order matters as much as the call list. Without a written order, the on-call charge nurse defaults to whoever is easiest to reach or hardest to say no to, which burns out the same two reliable nurses and erodes fairness. A fixed order, agreed in daylight and posted at the nursing station, removes that judgment call from a 2 AM decision.
+The escalation order matters as much as the call list. Without a written order, the on-call charge nurse defaults to whoever is easiest to reach or hardest to say no to, which burns out the same two reliable nurses and erodes fairness, the exact churn behind the [nurse shortage versus retention crisis](/articles/nurse-shortage-or-retention-crisis-rural-hospitals) debate as it lands on a small rural roster. A fixed order, agreed in daylight and posted at the nursing station, removes that judgment call from a 2 AM decision.
 
 ## How Do You Build a Ranked Callout Call List Before the Night Shift?
 

@@ -201,6 +201,7 @@ things happen: their overtime pay drives up labor costs, and their tolerance ero
 The [NSI 2024 report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)
 puts average RN turnover cost at $52,350 per departure. For a 25-bed CAH with 15-20
 nurses, losing two or three to avoidable burnout is a six-figure operational event.
+That is the local half of the [nurse shortage versus retention debate](/articles/nurse-shortage-or-retention-crisis-rural-hospitals): the licenses exist nationally, but a rural roster still loses the nurses it already has.
 
 A fairness flag system that tracks callout frequency and overtime distribution per
 nurse makes this invisible problem visible before it becomes a resignation letter,
