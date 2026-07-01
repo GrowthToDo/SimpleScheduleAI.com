@@ -523,5 +523,10 @@
     "id": "1504813184591-01572f98c85f",
     "description": "Open laptop on a desk with a notebook, ready for writing and analysis",
     "topics": ["newsroom", "news analysis", "writing", "workspace", "editorial"]
+  },
+  {
+    "id": "1512678080530-7760d81faba6",
+    "description": "Empty single patient room in a small hospital with an unoccupied bed and vacant chair",
+    "topics": ["rural hospital", "small hospital", "empty bed", "staffing gap", "nurse retention", "workforce"]
   }
 ]
