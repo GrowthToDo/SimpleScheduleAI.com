@@ -9,7 +9,7 @@ excerpt: >
   way they did in 2015: Excel spreadsheets, manual phone trees, and a nurse
   manager who builds the schedule from memory. This is not a technology gap.
   It is a market gap. Here is what the landscape actually looks like in 2026.
-image: https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:
@@ -24,20 +24,20 @@ metadata:
 
 ## Key Takeaways
 
-- Texas has [84 critical access hospitals](https://www.tdhca.state.tx.us/), most concentrated in rural communities where the nearest alternative facility may be 30 to 60 miles away. The majority are still managing nurse scheduling manually.
+- Texas has [84 critical access hospitals](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), most concentrated in rural communities where the nearest alternative facility may be 30 to 60 miles away. The majority are still managing nurse scheduling manually.
 - The most common scheduling system at Texas CAHs in 2026 is Excel, followed by a personal phone, followed by a whiteboard. Enterprise scheduling software is present but rare, and almost always entered through a health system acquisition rather than independent adoption.
 - The software products used most often at Texas CAHs, Aladtec and simpler platforms, were chosen for ease of setup and direct support, not for feature breadth. The post-TCP acquisition support changes have led some Aladtec users to reconsider.
 - The gap between what Texas CAH administrators know exists in the scheduling software market and what they have actually evaluated is wide. Most have not run a structured software evaluation in the last three years.
-- The market gap is real: no major scheduling software vendor has a Texas rural hospital-focused sales motion, and none has built a product specifically for the Texas CAH compliance environment (DSHS, FLSA, CMS CoP).
+- The market gap is real: no major scheduling software vendor has a Texas rural hospital-focused sales motion, and none has built a product specifically for the Texas CAH compliance environment (HHSC, FLSA, CMS CoP).
 
 ## Table of Contents
 
-- [How many Texas critical access hospitals are there, and what are they facing?](#how-many-texas-critical-access-hospitals-are-there-and-what-are-they-facing)
-- [What scheduling systems are most common at Texas CAHs?](#what-scheduling-systems-are-most-common-at-texas-cahs)
-- [Why haven't more Texas CAHs adopted scheduling software?](#why-havent-more-texas-cahs-adopted-scheduling-software)
-- [What scheduling software is being evaluated by Texas rural hospitals?](#what-scheduling-software-is-being-evaluated-by-texas-rural-hospitals)
-- [What does the Texas compliance environment require that most software ignores?](#what-does-the-texas-compliance-environment-require-that-most-software-ignores)
-- [What SimpleScheduleAI is building for the Texas CAH market](#what-simplescheduleai-is-building-for-the-texas-cah-market)
+- [How Many Texas Critical Access Hospitals Are There, and What Are They Facing?](#how-many-texas-critical-access-hospitals-are-there-and-what-are-they-facing)
+- [What Scheduling Systems Are Most Common at Texas CAHs?](#what-scheduling-systems-are-most-common-at-texas-cahs)
+- [Why Haven't More Texas CAHs Adopted Scheduling Software?](#why-havent-more-texas-cahs-adopted-scheduling-software)
+- [What Scheduling Software Is Being Evaluated by Texas Rural Hospitals?](#what-scheduling-software-is-being-evaluated-by-texas-rural-hospitals)
+- [What Does the Texas Compliance Environment Require That Most Software Ignores?](#what-does-the-texas-compliance-environment-require-that-most-software-ignores)
+- [What SimpleScheduleAI Is Building for the Texas Critical Access Hospital Market](#what-simplescheduleai-is-building-for-the-texas-critical-access-hospital-market)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Scheduling software companies focus their sales and marketing efforts on health systems, large hospital networks, and the long-term care sector. Rural Texas hospitals with 25 beds are not in anyone's primary market. They are not targeted by outbound sales, they do not appear in industry conference exhibit halls, and they are not included in the case studies on vendor websites.
@@ -50,7 +50,7 @@ This creates a market gap: a large number of facilities with a real scheduling p
 
 Texas has 84 critical access hospitals, making it one of the largest CAH states in the country. They are distributed across rural communities throughout West Texas, the Panhandle, East Texas, and South Texas, often serving counties where the next closest hospital is a long drive away.
 
-[Critical access hospitals](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) are federally designated rural facilities with 25 or fewer acute care beds. In Texas, they are also subject to Texas Department of State Health Services staffing standards, Texas Payday Law overtime provisions, and CMS Conditions of Participation, creating a specific compliance environment that generic scheduling software does not address.
+[Critical access hospitals](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) are federally designated rural facilities with 25 or fewer acute care beds. In Texas, they are also subject to Texas Health and Human Services Commission (HHSC) hospital licensing and staffing standards, Texas Payday Law overtime provisions, and CMS Conditions of Participation, creating a specific compliance environment that generic scheduling software does not address.
 
 Most Texas CAHs are operating under significant financial pressure. Medicare and Medicaid reimburse at cost-plus rates that provide a marginal operating cushion but not the budget for enterprise software implementations. The typical CAH has a nurse manager with a dual clinical and administrative role, no dedicated HR staff, and no IT department. Technology procurement decisions are made by the administrator or CEO, often without access to a structured evaluation framework.
 
@@ -92,29 +92,31 @@ SimpleScheduleAI has begun to appear in Texas CAH evaluations through direct out
 
 ## What Does the Texas Compliance Environment Require That Most Software Ignores?
 
-Texas critical access hospitals operate under a specific compliance stack that most scheduling software does not address: Texas DSHS staffing standards, FLSA overtime rules as applied to Texas nursing practice, Texas Payday Law provisions, and CMS Conditions of Participation for CAH designation.
+Texas critical access hospitals operate under a specific compliance stack that most [nurse scheduling software](/nurse-scheduling-software) does not address: Texas HHSC hospital licensing and staffing standards, FLSA overtime rules as applied to Texas nursing practice, Texas Payday Law provisions, and CMS Conditions of Participation for CAH designation.
 
 Most scheduling software is built for a generic healthcare compliance environment. It handles FLSA overtime generally but does not specifically track the Texas-specific provisions that apply to CAH operations. CMS CoP documentation requirements for CAHs, including the requirement for an RN on duty or on call at all times, are not specifically addressed in most scheduling platforms.
 
 Texas also has specific Payday Law requirements for how shift premiums and overtime are documented. A scheduling tool that logs shift data but does not generate documentation suitable for Texas Payday Law compliance reviews leaves a gap that the nurse manager has to fill manually.
 
-For a Texas CAH administrator evaluating scheduling tools, the compliance question should be explicit: does this platform know Texas DSHS requirements, and can it generate the documentation I would need for a CMS survey or a DSHS compliance review? If the vendor cannot answer that question specifically for Texas, the compliance feature set is built for a generic environment rather than the Texas CAH context.
+For a Texas CAH administrator evaluating scheduling tools, the compliance question should be explicit: does this platform know Texas HHSC requirements, and can it generate the documentation I would need for a CMS survey or a Texas HHSC compliance review? If the vendor cannot answer that question specifically for Texas, the compliance feature set is built for a generic environment rather than the Texas CAH context.
 
-## What SimpleScheduleAI Is Building for the Texas CAH Market
+## What SimpleScheduleAI Is Building for the Texas Critical Access Hospital Market
 
-SimpleScheduleAI is built specifically for the Texas critical access hospital context. Texas DSHS and FLSA overtime compliance is the default, not an add-on configuration. CMS CoP documentation requirements are addressed through the audit trail that the managed service maintains automatically.
+SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling) built specifically for the Texas critical access hospital context. Texas HHSC and FLSA overtime compliance is the default, not an add-on configuration. CMS CoP documentation requirements are addressed through the audit trail that the service maintains automatically.
 
-The service is designed for the operating reality of a Texas CAH: no IT staff, no dedicated HR function, a nurse manager with a dual clinical and administrative role, and a scheduling problem that needs to be solved without a 6-month implementation project or a $50,000 budget.
+The service is designed for the operating reality of a Texas CAH: no IT staff, no dedicated HR function, a nurse manager with a dual clinical and administrative role, and a scheduling problem that needs to be solved without a 6-month implementation project or a $50,000 budget. You can [see how it works](/how-it-works) end to end before you commit.
 
-The managed service model means that setup is handled by the specialist, not the nurse manager. The Texas compliance requirements are configured by someone who knows them, not translated from generic software documentation by an administrator without a compliance background.
+The service model means that setup is handled by the specialist, not the nurse manager. The Texas compliance requirements are configured by someone who knows them, not translated from generic software documentation by an administrator without a compliance background.
 
 The 84 Texas CAHs are the specific market SimpleScheduleAI was built to serve. The product is not a generic scheduling tool adapted for Texas. It is a Texas CAH scheduling service that was designed from that context.
+
+This focus is also a limitation, and it is worth naming plainly. SimpleScheduleAI is not the right fit for a large health system that wants to self-administer an enterprise platform across dozens of departments, or for a facility outside Texas that needs another state's compliance rules out of the box. If your hospital already runs a well-supported enterprise scheduler and has the IT staff to maintain it, a purpose-built Texas CAH service is not what you need. The fit is a small rural Texas hospital that wants the scheduling and compliance work handled, not another tool to administer.
 
 For more on what Texas-specific requirements apply to CAH nurse scheduling, see [The Complete Guide to Critical Access Hospital Scheduling](/critical-access-hospital-scheduling).
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Built specifically for the 84 Texas critical access hospitals.</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Texas DSHS compliance built in. No IT setup. Operational in 3-5 days.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Texas HHSC compliance built in. No IT setup. Operational in 3-5 days.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
@@ -123,7 +125,7 @@ For more on what Texas-specific requirements apply to CAH nurse scheduling, see 
 
 **Q: Are there any scheduling tools specifically designed for Texas rural hospitals?**
 
-SimpleScheduleAI is the only managed scheduling service we are aware of that was designed specifically for the Texas critical access hospital context, with Texas DSHS compliance and CMS CoP documentation built in by default. Most general scheduling platforms can be configured for Texas compliance requirements, but the configuration requires someone with the relevant compliance knowledge to set it up correctly. For a CAH with no IT or compliance staff, a service that builds this in by default reduces implementation risk.
+SimpleScheduleAI is the only AI-native nurse scheduling service we are aware of that was designed specifically for the Texas critical access hospital context, with Texas HHSC compliance and CMS CoP documentation built in by default. Most general scheduling platforms can be configured for Texas compliance requirements, but the configuration requires someone with the relevant compliance knowledge to set it up correctly. For a CAH with no IT or compliance staff, a service that builds this in by default reduces implementation risk.
 
 **Q: How do Texas rural hospital administrators find scheduling software?**
 
@@ -131,7 +133,7 @@ Word of mouth from peer hospitals is the most common discovery channel: a nurse 
 
 **Q: Do Texas CAHs have specific scheduling software requirements that other states don't?**
 
-Texas-specific requirements include Texas DSHS nursing facility staffing standards, Texas Payday Law provisions for overtime and shift premium documentation, and the specific CMS CoP requirements for CAH designation (which are federal, not state-specific). The Texas Payday Law provisions are meaningful: Texas has specific requirements for how overtime and premium pay must be calculated and documented that differ from some other states' implementations of FLSA. A scheduling tool that does not specifically account for Texas Payday Law may produce documentation that satisfies FLSA generally but is insufficient for Texas-specific compliance reviews.
+Texas-specific requirements include Texas HHSC hospital staffing standards, Texas Payday Law provisions for overtime and shift premium documentation, and the specific CMS CoP requirements for CAH designation (which are federal, not state-specific). The Texas Payday Law provisions are meaningful: Texas has specific requirements for how overtime and premium pay must be calculated and documented that differ from some other states' implementations of FLSA. A scheduling tool that does not specifically account for Texas Payday Law may produce documentation that satisfies FLSA generally but is insufficient for Texas-specific compliance reviews.
 
 ---
 

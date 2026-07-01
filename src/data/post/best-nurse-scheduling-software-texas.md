@@ -1,7 +1,7 @@
 ---
 draft: true
 publishDate: 2026-06-12T00:00:00Z
-updateDate: 2026-05-14T00:00:00Z
+updateDate: 2026-07-01T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Texas Hospitals in 2026'
 excerpt: >
@@ -31,38 +31,38 @@ metadata:
 
 ## Table of Contents
 
-- [Quick Comparison: All 8 Platforms for Texas Hospitals](#quick-comparison-all-8-platforms-for-texas-hospitals)
-- [How to Evaluate Scheduling Software for a Texas Hospital](#how-to-evaluate-scheduling-software-for-a-texas-hospital)
-- [The 8 Best Options, Reviewed for Texas Hospitals](#the-8-best-options-reviewed-for-texas-hospitals)
+- [How Do the 8 Platforms Compare for Texas Hospitals?](#how-do-the-8-platforms-compare-for-texas-hospitals)
+- [How to Evaluate Scheduling Software for a Texas Hospital?](#how-to-evaluate-scheduling-software-for-a-texas-hospital)
+- [Which Are the 8 Best Options, Reviewed for Texas Hospitals?](#which-are-the-8-best-options-reviewed-for-texas-hospitals)
   - [1. SimpleScheduleAI](#1-simplescheduleai)
   - [2. Aladtec](#2-aladtec)
   - [3. SmartLinx](#3-smartlinx)
   - [4. QGenda](#4-qgenda)
   - [5. NurseGrid Manager](#5-nursegrid-manager)
-  - [6. OnShift](#6-onshift-now-part-of-workday)
+  - [6. OnShift (now part of Workday)](#6-onshift-now-part-of-workday)
   - [7. Deputy](#7-deputy)
   - [8. UKG (formerly Kronos)](#8-ukg-formerly-kronos)
-- [Texas-Specific Scheduling Compliance Requirements](#texas-specific-scheduling-compliance-requirements)
+- [What Are the Texas-Specific Scheduling Compliance Requirements?](#what-are-the-texas-specific-scheduling-compliance-requirements)
 - [Which Software Fits Your Texas Hospital?](#which-software-fits-your-texas-hospital)
-- [How SimpleScheduleAI Was Built for Texas](#how-simplescheduleai-was-built-for-texas)
-- [What to Do This Week](#what-to-do-this-week)
+- [How SimpleScheduleAI Was Built for Texas?](#how-simplescheduleai-was-built-for-texas)
+- [What to Do This Week?](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Texas is the second-largest state by hospital count and has one of the highest concentrations of Critical Access Hospitals in the country. The state's geographic spread, from the Permian Basin to the Rio Grande Valley to the Panhandle, creates rural scheduling challenges that national scheduling software vendors rarely account for. Add a Texas-specific compliance layer on top of federal requirements, and the case for purpose-built tools gets stronger.
+Texas is the second-largest state by hospital count and has one of the highest concentrations of Critical Access Hospitals in the country. The state's geographic spread, from the Permian Basin to the Rio Grande Valley to the Panhandle, creates rural scheduling challenges that national [nurse scheduling software](/nurse-scheduling-software) vendors rarely account for. Add a Texas-specific compliance layer on top of federal requirements, and the case for purpose-built [Critical Access Hospital scheduling](/critical-access-hospital-scheduling) tools gets stronger.
 
 Here is how all 8 platforms compare for Texas hospitals before we go deeper:
 
-## How Does Quick Compare: All 8 Platforms for Texas Hospitals?
+## How Do the 8 Platforms Compare for Texas Hospitals?
 
-<div class="not-prose overflow-x-auto">
-  <table class="w-full text-sm border-collapse">
+<div class="not-prose overflow-x-auto my-8">
+  <table class="w-full text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Platform</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Texas Fit</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">TX Labor Code</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">CMS CAH Ready</th>
-        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Cost/Month</th>
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Platform</th>
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Texas Fit</th>
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">TX Labor Code</th>
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">CMS Critical Access Hospital Ready</th>
+        <th class="align-top text-left py-3 font-semibold text-slate-900 dark:text-slate-100">Cost/Month</th>
       </tr>
     </thead>
     <tbody>
@@ -148,46 +148,49 @@ Most Texas small hospitals that struggle with scheduling have purchased a tool f
 
 ### Criterion 3: Does it produce documentation that satisfies Texas regulatory surveys?
 
-Texas CAHs are surveyed by [Texas DSHS](https://www.dshs.texas.gov) as well as CMS. [DSHS licensing requirements](https://www.dshs.texas.gov/health-safety-licensing/hospitals-other-facilities/hospital-licensing) for hospital nursing staff documentation overlap with but are not identical to CMS requirements. The scheduling tool you use should produce documentation that satisfies both.
+Texas Critical Access Hospitals are surveyed by [Texas HHSC](https://www.hhs.texas.gov/) as well as CMS. [Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/) licensing requirements for hospital nursing staff documentation overlap with but are not identical to CMS requirements. The scheduling tool you use should produce documentation that satisfies both.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 240" role="img" aria-label="Three tiers of Texas hospital scheduling market">
-  <title>Texas Hospital Scheduling: Three Market Tiers</title>
-  <rect width="700" height="240" fill="#f8fafc" rx="12"/>
-  <text x="350" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Texas Hospital Scheduling Tiers</text>
-  <rect x="20" y="45" width="200" height="170" fill="#eff6ff" rx="10"/>
-  <text x="120" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">Texas CAH</text>
-  <text x="120" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#3b82f6">Under 25 beds, rural</text>
-  <text x="120" y="112" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1e40af">SimpleScheduleAI</text>
-  <text x="120" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1e40af">Aladtec</text>
-  <text x="120" y="196" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Priority: TX compliance,</text>
-  <text x="120" y="209" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">low burden, fast setup</text>
-  <rect x="250" y="45" width="200" height="170" fill="#f0fdf4" rx="10"/>
-  <text x="350" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#15803d">TX Community</text>
-  <text x="350" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#16a34a">25-200 beds</text>
-  <text x="350" y="112" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#166534">Aladtec</text>
-  <text x="350" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#166534">SmartLinx</text>
-  <text x="350" y="144" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#166534">QGenda</text>
-  <text x="350" y="196" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Priority: rule-based,</text>
-  <text x="350" y="209" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">credential tracking</text>
-  <rect x="480" y="45" width="200" height="170" fill="#fff7ed" rx="10"/>
-  <text x="580" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#c2410c">TX Regional System</text>
-  <text x="580" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#ea580c">200+ beds</text>
-  <text x="580" y="112" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#9a3412">UKG</text>
-  <text x="580" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#9a3412">API Healthcare</text>
-  <text x="580" y="144" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#9a3412">Infor WFM</text>
-  <text x="580" y="196" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Priority: EHR/HRIS</text>
-  <text x="580" y="209" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">integration, multi-site</text>
-</svg>
+<div class="not-prose my-8 grid gap-4 sm:grid-cols-3">
+  <div class="rounded-xl border border-blue-100 bg-blue-50 p-5 dark:border-slate-700 dark:bg-slate-800">
+    <p class="mb-1 text-sm font-bold text-blue-700 dark:text-blue-300">Texas Critical Access Hospital</p>
+    <p class="mb-3 text-xs text-slate-500 dark:text-slate-400">Under 25 beds, rural</p>
+    <ul class="mb-3 space-y-1 text-sm text-slate-800 dark:text-slate-200">
+      <li>SimpleScheduleAI</li>
+      <li>Aladtec</li>
+    </ul>
+    <p class="mb-0 text-xs text-slate-500 dark:text-slate-400">Priority: Texas compliance, low burden, fast setup</p>
+  </div>
+  <div class="rounded-xl border border-green-100 bg-green-50 p-5 dark:border-slate-700 dark:bg-slate-800">
+    <p class="mb-1 text-sm font-bold text-green-700 dark:text-green-300">Texas Community</p>
+    <p class="mb-3 text-xs text-slate-500 dark:text-slate-400">25 to 200 beds</p>
+    <ul class="mb-3 space-y-1 text-sm text-slate-800 dark:text-slate-200">
+      <li>Aladtec</li>
+      <li>SmartLinx</li>
+      <li>QGenda</li>
+    </ul>
+    <p class="mb-0 text-xs text-slate-500 dark:text-slate-400">Priority: rule-based scheduling, credential tracking</p>
+  </div>
+  <div class="rounded-xl border border-orange-100 bg-orange-50 p-5 dark:border-slate-700 dark:bg-slate-800">
+    <p class="mb-1 text-sm font-bold text-orange-700 dark:text-orange-300">Texas Regional System</p>
+    <p class="mb-3 text-xs text-slate-500 dark:text-slate-400">200+ beds</p>
+    <ul class="mb-3 space-y-1 text-sm text-slate-800 dark:text-slate-200">
+      <li>UKG</li>
+      <li>API Healthcare</li>
+      <li>Infor WFM</li>
+    </ul>
+    <p class="mb-0 text-xs text-slate-500 dark:text-slate-400">Priority: EHR and HRIS integration, multi-site</p>
+  </div>
+</div>
 
-## What Is the 8 Best Options, Reviewed for Texas Hospitals?
+## Which Are the 8 Best Options, Reviewed for Texas Hospitals?
 
 ### 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/best-nurse-scheduling-software-texas/SimpleScheduleAI.webp" alt="SimpleScheduleAI scheduling service for Texas hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-SimpleScheduleAI is the only scheduling tool built specifically for Texas Critical Access Hospitals. Texas Labor Code Chapter 62 overtime provisions, FLSA healthcare worker exemptions, and CMS §485.635 audit documentation are default features, not configuration options. A scheduling specialist builds the weekly schedule from your Excel roster. The nurse manager reviews and approves.
+SimpleScheduleAI is the only scheduling tool built specifically for Texas Critical Access Hospitals. Texas Labor Code Chapter 62 overtime provisions, FLSA healthcare worker exemptions, and CMS §485.635 audit documentation are default features, not configuration options. [AI nurse scheduling](/ai-nurse-scheduling) drafts the weekly schedule from your Excel roster, a scheduling specialist checks it, and the nurse manager reviews and approves.
 
-Setup is 100% remote and takes 3-5 days. No IT involvement, no configuration burden, no training period at the facility. For a Texas CAH in a rural county, the managed model eliminates the need for on-site vendor support entirely.
+Setup is 100% remote and takes 3-5 days. No IT involvement, no configuration burden, no training period at the facility. For a Texas Critical Access Hospital in a rural county, the fully remote model eliminates the need for on-site vendor support entirely.
 
 **Best for:** Texas Critical Access Hospitals where the nurse manager is clinically active and scheduling is consuming 8+ hours per week.
 
@@ -210,7 +213,7 @@ Setup is 100% remote and takes 3-5 days. No IT involvement, no configuration bur
 
 <img src="/images/blog/best-nurse-scheduling-software-texas/Aladtec.webp" alt="Aladtec scheduling software for Texas small hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Aladtec is the most widely used self-serve scheduling platform in small Texas hospitals and EMS agencies. It is fully cloud-based, sets up entirely remotely, and has a strong track record in the Texas rural healthcare segment. Credential tracking, shift coverage tools, and basic overtime monitoring are included.
+Aladtec is a well-established self-serve scheduling platform used by small Texas hospitals and EMS agencies. It is fully cloud-based, sets up entirely remotely, and has a track record in the Texas rural healthcare segment. Credential tracking, shift coverage tools, and basic overtime monitoring are included.
 
 Texas overtime rules can be configured within the platform's rule engine, though it requires setup time from whoever is managing the implementation.
 
@@ -330,7 +333,7 @@ OnShift was acquired by Workday in 2022 and is now positioned as a post-acute ca
 
 <img src="/images/blog/best-nurse-scheduling-software-texas/Deputy.webp" alt="Deputy workforce scheduling software" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Deputy is a general workforce scheduling tool for retail and hospitality. It has no clinical compliance features and no awareness of Texas Labor Code requirements or Texas DSHS licensing documentation standards.
+Deputy is a general workforce scheduling tool for retail and hospitality. It has no clinical compliance features and no awareness of Texas Labor Code requirements or Texas HHSC licensing documentation standards.
 
 **Best for:** Non-healthcare Texas businesses.
 
@@ -341,7 +344,7 @@ Deputy is a general workforce scheduling tool for retail and hospitality. It has
 **Key limitations:**
 
 - No clinical compliance documentation.
-- No Texas Labor Code or DSHS-compatible staffing records.
+- No Texas Labor Code or HHSC-compatible staffing records.
 
 **Verdict:** Not appropriate for any licensed Texas healthcare facility. The compliance gap is a direct regulatory risk.
 
@@ -371,35 +374,59 @@ For small and rural Texas hospitals, it is the wrong tool. Multiple Texas CAH ad
 
 **Cost:** Pricing not listed on website. Enterprise pricing.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 310" role="img" aria-label="Texas hospital fit vs implementation burden for scheduling platforms">
-  <title>Texas Hospital Fit vs Implementation Burden</title>
-  <rect width="700" height="310" fill="#f8fafc" rx="12"/>
-  <text x="350" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Texas Hospital Fit vs Implementation Burden</text>
-  <line x1="80" y1="260" x2="650" y2="260" stroke="#cbd5e1" stroke-width="1.5"/>
-  <line x1="80" y1="50" x2="80" y2="260" stroke="#cbd5e1" stroke-width="1.5"/>
-  <text x="365" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Implementation Burden (Low to High)</text>
-  <text x="20" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b" transform="rotate(-90, 20, 160)">TX Hospital Fit (Low to High)</text>
-  <line x1="80" y1="155" x2="650" y2="155" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="365" y1="50" x2="365" y2="260" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3"/>
-  <circle cx="120" cy="62" r="18" fill="#3b82f6" opacity="0.9"/>
-  <text x="120" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="white">SSAI</text>
-  <circle cx="230" cy="88" r="16" fill="#10b981" opacity="0.9"/>
-  <text x="230" y="92" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="white">Alad</text>
-  <circle cx="375" cy="100" r="16" fill="#8b5cf6" opacity="0.85"/>
-  <text x="375" y="104" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="white">SL</text>
-  <circle cx="470" cy="145" r="15" fill="#ec4899" opacity="0.85"/>
-  <text x="470" y="149" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="white">QG</text>
-  <circle cx="155" cy="180" r="14" fill="#f59e0b" opacity="0.85"/>
-  <text x="155" y="184" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="white">NG</text>
-  <circle cx="355" cy="210" r="13" fill="#6366f1" opacity="0.85"/>
-  <text x="355" y="214" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="white">OS</text>
-  <circle cx="145" cy="238" r="13" fill="#94a3b8" opacity="0.85"/>
-  <text x="145" y="242" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="white">Dep</text>
-  <circle cx="600" cy="220" r="17" fill="#ef4444" opacity="0.85"/>
-  <text x="600" y="224" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="white">UKG</text>
-  <text x="85" y="50" font-family="system-ui, sans-serif" font-size="10" fill="#475569">High TX Fit</text>
-  <text x="85" y="258" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Low TX Fit</text>
-</svg>
+<div class="not-prose overflow-x-auto my-8">
+  <table class="w-full text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="border-b-2 border-slate-200 dark:border-slate-700">
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Platform</th>
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Texas Hospital Fit</th>
+        <th class="align-top text-left py-3 font-semibold text-slate-900 dark:text-slate-100">Implementation Burden</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">SimpleScheduleAI</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">High</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Low</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">High</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Low to moderate</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">SmartLinx</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Moderate to high</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Moderate</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">QGenda</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Moderate</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Moderate to high</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">NurseGrid Manager</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Low (add-on only)</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Low</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">OnShift</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Low for acute care</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Moderate to high</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Deputy</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Low (no clinical compliance)</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Low</td>
+      </tr>
+      <tr>
+        <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">UKG</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Low for small hospitals</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">High</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## What Are the Texas-Specific Scheduling Compliance Requirements?
 
@@ -409,9 +436,9 @@ Texas hospitals operate under a layered compliance environment that generic sche
 
 **Texas Labor Code Chapter 62:** [Texas Labor Code Chapter 62](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) sets state-level minimum wage and overtime provisions. For most hospitals, federal FLSA is the higher standard and governs in practice, but Texas-specific pay period structures and exemption categories can affect how overtime is calculated for part-time and per-diem staff.
 
-**CMS §485.635 for Texas CAHs:** [CMS Conditions of Participation §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) requires Texas Critical Access Hospitals to maintain a staffing plan, document compliance with that plan on each shift, and keep records that can be reviewed during a CMS survey or DSHS licensing inspection.
+**CMS §485.635 for Texas Critical Access Hospitals:** [CMS Conditions of Participation §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) requires Texas Critical Access Hospitals to maintain a staffing plan, document compliance with that plan on each shift, and keep records that can be reviewed during a CMS survey or HHSC licensing inspection.
 
-**Texas DSHS hospital licensing:** [Texas DSHS](https://www.dshs.texas.gov/health-safety-licensing/hospitals-other-facilities/hospital-licensing) licensing requirements for nursing staff documentation add a state layer on top of CMS requirements. Scheduling documentation must satisfy both.
+**Texas HHSC hospital licensing:** [Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/) licensing requirements for nursing staff documentation add a state layer on top of CMS requirements. Scheduling documentation must satisfy both.
 
 ## Which Software Fits Your Texas Hospital?
 
@@ -435,7 +462,7 @@ Evaluate OnShift for the LTC unit alongside one of the above for the acute unit.
 
 SimpleScheduleAI was built specifically for Texas Critical Access Hospitals, not adapted from a general scheduling platform. The founders' background in hospital operations, including Apollo Hospitals and Texas healthcare operations, informed a product designed around what a 25-bed Texas CAH actually needs, not what a 300-bed suburban hospital needs.
 
-Texas overtime compliance, CMS §485.635 audit documentation, charge nurse coverage logic for the rural Texas nursing workforce, and 100% remote implementation are defaults, not features you configure. The managed service model was chosen specifically because Texas rural nurse managers cannot realistically maintain a self-serve platform on top of clinical duties.
+Texas overtime compliance, CMS §485.635 audit documentation, charge nurse coverage logic for the rural Texas nursing workforce, and 100% remote implementation are defaults, not features you configure. The AI-native, done-for-you service model was chosen specifically because Texas rural nurse managers cannot realistically maintain a self-serve platform on top of clinical duties.
 
 Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule to you.
 
@@ -444,9 +471,9 @@ Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule 
 ## What to Do This Week?
 
 1. Confirm your compliance baseline: does your current scheduling tool track the FLSA 8 and 80 healthcare worker overtime exemption correctly? If you are not sure, ask your payroll team.
-2. Pull your Texas DSHS licensing documentation requirements for nursing staff. Compare them against what your current scheduling tool actually produces.
+2. Pull your Texas HHSC licensing documentation requirements for nursing staff. Compare them against what your current scheduling tool actually produces.
 3. If you are a Texas CAH under 25 beds, request information from SimpleScheduleAI and Aladtec this week. Request the same information from both: how does the platform handle Texas Labor Code overtime, and what does CMS §485.635 audit output look like?
-4. If you are a Texas community hospital 50-200 beds, request demos from SmartLinx and QGenda. Ask each one specifically about Texas hospital customers and their compliance documentation for DSHS inspections.
+4. If you are a Texas community hospital 50-200 beds, request demos from SmartLinx and QGenda. Ask each one specifically about Texas hospital customers and their compliance documentation for HHSC inspections.
 5. Calculate the weekly scheduling cost at your facility: nurse manager hours on scheduling multiplied by their effective hourly rate. That is the baseline ROI any tool needs to clear.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
@@ -474,9 +501,9 @@ Texas has over 80 certified Critical Access Hospitals, making it one of the stat
 
 The FLSA healthcare worker exemption allows hospitals and residential care facilities to use a 14-day pay period for overtime calculation instead of the standard 7-day week. Overtime is owed after 8 hours in a day OR 80 hours in the 14-day period, whichever produces the greater overtime obligation. This requires a prior written agreement between employer and employee. Scheduling software that tracks only weekly FLSA overtime will miscalculate overtime for Texas nurses on the 8 and 80 plan.
 
-**Q: Does Texas DSHS require specific scheduling documentation from hospitals?**
+**Q: Does Texas HHSC require specific scheduling documentation from hospitals?**
 
-[Texas DSHS hospital licensing requirements](https://www.dshs.texas.gov/health-safety-licensing/hospitals-other-facilities/hospital-licensing) require hospitals to maintain staffing records that demonstrate adequate nursing coverage. These requirements overlap with CMS documentation requirements for CAHs but are not identical. Your scheduling tool should produce records that satisfy both federal CMS surveys and state DSHS licensing inspections. Ask any vendor for a sample output and compare it against the DSHS Hospital Licensing Standards for nursing staff.
+[Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/) hospital licensing requirements require hospitals to maintain staffing records that demonstrate adequate nursing coverage. These requirements overlap with CMS documentation requirements for Critical Access Hospitals but are not identical. Your scheduling tool should produce records that satisfy both federal CMS surveys and state HHSC licensing inspections. Ask any vendor for a sample output and compare it against the Texas HHSC hospital licensing standards for nursing staff.
 
 ---
 
