@@ -1,0 +1,129 @@
+---
+import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
+
+import merge from 'lodash.merge';
+import type { ImageMetadata } from 'astro';
+import { getEntry } from 'astro:content';
+import Layout from '~/layouts/PageLayout.astro';
+import SinglePost from '~/components/blog/SinglePost.astro';
+import SchemaOrg from '~/components/common/SchemaOrg.astro';
+
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import { getStaticPathsArticle } from '~/utils/articles';
+import { findImage } from '~/utils/images';
+import type { MetaData } from '~/types';
+
+export const prerender = true;
+
+export const getStaticPaths = (async () => {
+  return await getStaticPathsArticle();
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { article } = Astro.props as Props;
+
+const url = getCanonical(getPermalink(article.permalink, 'post'));
+const image = (await findImage(article.image)) as ImageMetadata | string | undefined;
+
+const metadata = merge(
+  {
+    title: article.title,
+    description: article.excerpt,
+    openGraph: {
+      type: 'article',
+      ...(image
+        ? { images: [{ url: image, width: (image as ImageMetadata)?.width, height: (image as ImageMetadata)?.height }] }
+        : {}),
+    },
+  },
+  { ...(article?.metadata ? { ...article.metadata, canonical: article.metadata?.canonical || url } : {}) }
+) as MetaData;
+
+const newsArticleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsArticle',
+  headline: article.title,
+  description: article.excerpt,
+  url: String(url),
+  datePublished: article.publishDate?.toISOString(),
+  dateModified: (article.updateDate ?? article.publishDate)?.toISOString(),
+  author: {
+    '@type': 'Person',
+    '@id': 'https://simplescheduleai.com/about/pradeep-pandey#person',
+    name: article.author ?? 'Pradeep Pandey',
+    url: 'https://simplescheduleai.com/about/pradeep-pandey',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://simplescheduleai.com/#organization',
+    name: 'SimpleScheduleAI',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://simplescheduleai.com/images/logo.png',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': String(url),
+  },
+  ...(article.image
+    ? { image: typeof image === 'string' ? image : ((image as ImageMetadata)?.src ?? String(article.image)) }
+    : {}),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://simplescheduleai.com' },
+    { '@type': 'ListItem', position: 2, name: 'Newsroom', item: 'https://simplescheduleai.com/articles' },
+    { '@type': 'ListItem', position: 3, name: article.title, item: String(url) },
+  ],
+};
+
+function extractFaqs(body: string): { question: string; answer: string }[] {
+  const faqs: { question: string; answer: string }[] = [];
+  const lines = body.split('\n');
+  for (let i = 0; i < lines.length; i++) {
+    const qMatch = lines[i].match(/^\*\*(?:Q:\s*)?(.*\?)\*\*\s*$/);
+    if (qMatch) {
+      const answerLines: string[] = [];
+      let j = i + 1;
+      while (j < lines.length && !lines[j].match(/^\*\*/)) {
+        if (lines[j].trim()) answerLines.push(lines[j].trim());
+        j++;
+      }
+      if (answerLines.length > 0) {
+        faqs.push({ question: qMatch[1].trim(), answer: answerLines.join(' ') });
+      }
+    }
+  }
+  return faqs;
+}
+
+const rawEntry = await getEntry('article', article.id as string);
+const faqs = extractFaqs(rawEntry?.body ?? '');
+const faqSchema =
+  faqs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer },
+        })),
+      }
+    : null;
+---
+
+<Layout metadata={metadata}>
+  <SchemaOrg slot="head" schema={[newsArticleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])]} />
+  <SinglePost post={{ ...article, image: image }} url={url}>
+    {article.Content ? <article.Content /> : <Fragment set:html={article.content || ''} />}
+  </SinglePost>
+  <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 mb-16">
+    <a class="text-primary dark:text-blue-400 hover:underline" href={getPermalink('/articles')}>&larr; Back to Newsroom</a>
+  </div>
+</Layout>

@@ -518,5 +518,10 @@
     "id": "1666214280391-8ff5bd3c0bf0",
     "description": "Team of clinicians looking at a computer screen together",
     "topics": ["clinical team", "screen review", "healthcare decision-making", "evaluation", "comparison"]
+  },
+  {
+    "id": "1504813184591-01572f98c85f",
+    "description": "Open laptop on a desk with a notebook, ready for writing and analysis",
+    "topics": ["newsroom", "news analysis", "writing", "workspace", "editorial"]
   }
 ]
