@@ -1,14 +1,17 @@
 ---
 draft: true
-publishDate: 2099-01-01T00:00:00Z
-updateDate: 2026-04-01T00:00:00Z
+publishDate: 2026-07-01T00:00:00Z
+updateDate: 2026-07-01T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Analyzing Nurse Schedules at Texas CAHs: Key Findings'
+title: 'Nurse Schedule Data: What a Small Hospital Should Track (and Why)'
 excerpt: >
-  A data analysis of nurse schedules from Texas critical access hospitals revealing patterns in overtime rates by shift type, callout frequency, schedule fairness distribution, and the measurable cost impact of common scheduling decisions. Findings are drawn from anonymized scheduling data collected during the SimpleScheduleAI pilot program.
+  Your scheduling spreadsheet and payroll export already hold the answers to why overtime
+  keeps climbing and who is quietly carrying the worst shifts. This guide shows a rural
+  hospital how to measure four things from data it already has, and what a healthy pattern
+  looks like.
 image: https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
-postType: mofu
+postType: howto
 tags:
   - nurse-scheduling
   - cah-data
@@ -18,148 +21,176 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/cah-nurse-schedule-data-analysis'
 ---
 
-<!-- Fill in with actual pilot data before publishing -->
+## Key Takeaways
 
-## TL;DR
+- A small hospital already holds the four datasets it needs to analyze its own schedule: the posted schedule, the payroll or timekeeping export, a callout log, and the shift-assignment history. No new software is required to start.
+- Overtime is a scheduling signal before it is a payroll line. Sorting overtime hours by shift type tells you where the schedule breaks, usually at unplanned callout coverage rather than planned shifts.
+- Callout frequency is predictable at the roster level even though any single callout is not. Counting callouts by day and shift lets you size an on-call pool around a real baseline instead of reacting each week.
+- Fairness is measurable. Counting weekend, night, and holiday shifts per nurse, then computing a coefficient of variation, turns a vague sense of favoritism into a number you can act on before it becomes a resignation.
+- Cost impact is the sum of the first three. Overtime dollars plus the gap between per diem and agency coverage rates show what the current schedule costs, and the [2025 NSI report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts one avoidable RN departure at $61,110.
 
-<!-- Placeholder: Summarize the single most important finding from the data once available. Example structure: "CAH nurses in our dataset worked an average of [X] overtime hours per month, [Y]% of which occurred in weeks where a per diem nurse covered a callout without real-time weekly-hours visibility." Replace with actual finding before publication. -->
+## Table of Contents
 
-[TO BE FILLED, replace with 3-4 sentence summary of key finding once pilot data is available]
+- [What Schedule Data Do You Already Have to Analyze?](#what-schedule-data-do-you-already-have-to-analyze)
+- [How Do You Measure Overtime by Shift Type?](#how-do-you-measure-overtime-by-shift-type)
+- [How Do You Find Callout Patterns in Your Data?](#how-do-you-find-callout-patterns-in-your-data)
+- [How Do You Measure Whether Your Schedule Is Fair?](#how-do-you-measure-whether-your-schedule-is-fair)
+- [How Do You Calculate the Cost Impact of Your Schedule?](#how-do-you-calculate-the-cost-impact-of-your-schedule)
+- [How Does SimpleScheduleAI Help You Analyze Your Schedule?](#how-does-simplescheduleai-help-you-analyze-your-schedule)
+- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
----
+Most rural hospitals run their nurse schedule on a spreadsheet and their hours on a payroll export, and both hold more insight than anyone has time to pull out. This guide is a practical measurement framework for a nurse manager or administrator at a 25-bed hospital analyzing their own scheduling data: the four things worth measuring, how to compute each from data you already have, and what separates a healthy pattern from a concerning one. Every method below works in a spreadsheet, and none of the numbers here are customer results, because we are pre-launch and have none.
 
-## What Is the Methodology?
+## What Schedule Data Do You Already Have to Analyze?
 
-<!-- Data will be updated when pilot hospital count reaches publication threshold. -->
+You already hold four datasets, and together they answer most questions about why your schedule strains. The posted schedule tells you who was assigned to each shift. The payroll or timekeeping export tells you the hours each nurse actually worked, including overtime. A callout log, even a running note in a shared document, tells you when coverage failed and how it was filled. The shift-assignment history, which is just the posted schedule read across several months, tells you who has carried weekends, nights, and holidays.
 
-This analysis draws on anonymized nurse scheduling data collected from [N] Texas critical access hospitals during [TIME PERIOD] as part of the SimpleScheduleAI pilot program. All data has been de-identified at the facility and individual nurse level. No patient data was collected or analyzed.
+None of this requires a purchase. A nurse manager who exports eight to twelve weeks of these four sources into a spreadsheet has enough to run every analysis in this guide. The value is not in collecting new data. It is in structuring what already lives in scattered files so a pattern becomes visible, which is the work most small hospitals skip because the schedule is rebuilt every cycle and no one stops to look backward.
 
-**What was analyzed:**
+One caution before you start: analyze roles that are comparable. A part-time nurse and a full-time nurse show different hour totals for reasons unrelated to the schedule's fairness, so segment by role and status (RN, LVN, full-time, per diem) first. For the operational context behind why this data matters at a small hospital, our overview of the [healthcare scheduling crisis](/blog/healthcare-scheduling-crisis) at Critical Access Hospitals frames the stakes.
 
-- Shift-level schedule data: assigned shift type (day/evening/night/weekend), planned vs. actual coverage, and callout events
-- Weekly hours per nurse, aggregated to identify overtime incidence and distribution
-- Weekend, night, and holiday assignment counts per nurse within each scheduling period
-- Schedule rebuild frequency, instances where the published schedule was materially changed after publication
+## How Do You Measure Overtime by Shift Type?
 
-**Scope:**
+Take your payroll export, tag each overtime hour with the shift it came from (day, evening, night, weekend), and total the overtime by tag. The point is not the grand total, which you already know from payroll. The point is the breakdown, because it tells you where in the schedule the overtime originates rather than just that it exists.
 
-- Facilities: [N] Texas CAHs with ≤25 acute care beds
-- Nurses: [N] individual nursing staff records (RN, LVN, per diem)
-- Scheduling periods: [N] monthly scheduling cycles (covering [TIME PERIOD])
-- Total shift-days analyzed: [TO BE FILLED]
+To compute it, join two sources: the payroll export (hours worked, including overtime flags) and the posted schedule (which shift each nurse was assigned). For each nurse, split the overtime hours across the shift types they worked, then sum across the roster by shift type. A sharper cut separates planned shift overruns from unplanned callout coverage: planned overtime is a nurse whose regular assignment pushed them past 40 hours, callout overtime is a nurse pulled in to cover a gap. If your callout log records who covered each gap, you can attribute that overtime directly.
 
-**Note:** Data will be updated when the pilot hospital count reaches our internal publication threshold. Until then, this post will remain in draft. Specific findings marked [TO BE FILLED] are structural placeholders for values that will be populated from actual data.
+A healthy pattern is overtime that is low and roughly proportional to the number of shifts each type represents. A concerning pattern concentrates in one shift type out of proportion to its share of the schedule, which almost always points to a structural coverage gap there. Night and weekend callout coverage is the usual culprit at a small hospital, because the pool willing to pick up those shifts is smallest. The [CDC NIOSH work-hour materials for nurses](https://www.cdc.gov/niosh/work-hour-training-for-nurses/) document that long hours and night work raise fatigue and error risk, so overtime clustered on nights is a safety signal, not only a budget one. The mechanics of tracking hours against thresholds are covered in [Texas nursing overtime compliance for critical access hospitals](/blog/texas-nursing-overtime-compliance-cah), where the applicable FLSA overtime thresholds are the ceiling you measure against.
 
----
+## How Do You Find Callout Patterns in Your Data?
 
-## Finding 1: Overtime Rates by Shift Type
+Read your callout log and tally each event three ways: by day of week, by shift, and by how much notice you got before the shift start. Any single callout is unpredictable. The frequency and shape of callouts across a quarter is not, and that distinction is the whole reason the analysis is worth doing.
 
-<!-- Note what will go here: average overtime hours per nurse per month, broken down by shift type (day, night, weekend). Cross-hospital comparison. Hypothesis: night shift and weekend callout coverage generates disproportionate overtime relative to the number of shifts it represents. -->
+To compute it, list every callout event with three fields: the date (from which you derive day of week), the shift it hit, and the notice time (the gap between the callout and the shift start). Then count. How many landed on each day of the week? How many hit nights versus days versus weekends? What was the typical notice time, and how many were same-day scrambles? Divide total callouts by the number of scheduling cycles to get an average callout rate per cycle, the single most useful number this produces.
 
-[TO BE FILLED]
+A healthy pattern is a callout rate you can plan around, spread across the week, with enough notice to fill most gaps from your own staff. A concerning pattern is callouts clustering on specific days or shifts, or a high share of same-day, no-notice callouts, both of which force overtime or agency coverage. Once you know your average rate, you can size an on-call or per diem pool against it instead of treating every callout as a fresh emergency. That is the core idea behind [after-hours callout coverage for small hospitals](/blog/after-hours-callout-coverage-small-hospitals): a baseline turns a 3 a.m. phone tree into a planned response.
 
-**What this section will include:**
+## How Do You Measure Whether Your Schedule Is Fair?
 
-- Average overtime hours per nurse per scheduling period, by shift type
-- Percentage of total overtime attributable to callout-coverage shifts vs. planned schedule overruns
-- Comparison across hospitals in the dataset to identify outlier patterns
-- Whether 12-hour shift facilities showed different overtime profiles than 8-hour shift facilities
+Count the weekend, night, and holiday shifts each nurse worked over the period, then measure the spread across the team with a coefficient of variation. Total hours can look balanced while the undesirable shifts pile onto three people, and that hidden concentration is the most common source of scheduling grievances on a small nursing team.
 
-<!-- Fill in with actual pilot data before publishing -->
+To compute it, build a table with one row per nurse and columns for weekend shifts, night shifts, and holiday shifts worked in the period. For each column, calculate the mean and the standard deviation across the roster, then divide the standard deviation by the mean. That ratio is the coefficient of variation (CV), a unitless fairness metric: a CV near zero means the burden is spread evenly, and a larger CV means a few nurses carry a disproportionate share. Comparing the CV of night shifts against the CV of day shifts often reveals that the day schedule is fair while the night schedule is not, which is exactly the imbalance a nurse manager feels but cannot always prove.
 
----
+<div class="not-prose overflow-x-auto my-8">
+  <table class="w-full text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="border-b border-slate-200 dark:border-slate-700">
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-800">Metric</th>
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-800">How to compute it</th>
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-800">Healthy pattern</th>
+        <th class="align-top text-left py-3 font-semibold text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-800">Concerning pattern</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="align-top py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Overtime by shift</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Tag OT hours by shift, sum by tag</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Low, proportional to shift share</td>
+        <td class="align-top py-3 text-slate-700 dark:text-slate-300">Clusters on one shift type</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="align-top py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Callout rate</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Callouts divided by cycles</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Steady, plannable baseline</td>
+        <td class="align-top py-3 text-slate-700 dark:text-slate-300">Spikes on set days or shifts</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="align-top py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Fairness (CV)</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Std dev divided by mean of shift counts</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Low spread across the team</td>
+        <td class="align-top py-3 text-slate-700 dark:text-slate-300">High spread, burden on a few</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800">
+        <td class="align-top py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Cost impact</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">OT dollars plus agency vs per diem gap</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Coverage mostly from own pool</td>
+        <td class="align-top py-3 text-slate-700 dark:text-slate-300">Heavy agency spend per gap</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-## Finding 2: Callout Patterns. Days, Times, and Frequency
+A concerning fairness pattern rarely comes from favoritism. It comes from build-order effects: whoever fills the schedule assigns the easy shifts first and backfills the hard ones onto whoever is left, cycle after cycle, so the same names accumulate the nights. Tracking assignment counts explicitly, not just hours, is what surfaces that drift. The same problem shows up when a hospital lets staff pick their own shifts, which is why [self-scheduling problems at a critical access hospital](/blog/self-scheduling-problems-critical-access-hospital) so often produce a fair-looking day schedule and an unfair night one.
 
-<!-- Note what will go here: most common callout days (hypothesis: Mondays and post-holiday), time of callout notification (how much advance notice), seasonal patterns if applicable. -->
+## How Do You Calculate the Cost Impact of Your Schedule?
 
-[TO BE FILLED]
+Cost impact is the first three measurements converted into dollars, and it has two parts: the overtime premium you paid and the price you paid to fill gaps. Both come straight from data you already have, and together they show what the current schedule costs beyond base wages.
 
-**What this section will include:**
+For overtime cost, take the overtime hours from the first analysis and multiply by your overtime rate for each affected role, then total across the period. For gap-coverage cost, compare what you spent filling callouts: coverage from your own per diem pool is paid at your internal rate, coverage from an agency at the agency's rate plus any fees. Multiply each gap event by the rate you used and separate the two, so you can see how much of your coverage spend went to agencies versus your own pool.
 
-- Distribution of callout events by day of week
-- Distribution of callout events by shift (day/night/weekend)
-- Average notice time before shift start (how late the callout notification arrived)
-- Callout frequency per scheduling period per facility
-- Whether callout rates varied by season or month
+Here is an illustrative example, and to be explicit, these are assumed round numbers to show the method, not a customer result, because we are pre-launch and have no customers. Assume a hospital fills a callout with agency coverage at $95 per hour for a 12-hour night shift ($1,140) when the same shift from an internal per diem pool would cost $55 per hour ($660). The gap on that one shift is $480. If your callout analysis showed several such agency-filled nights per cycle, the annualized figure is what makes the case for a structured per diem pool. Run the numbers with your own rates; the point is the comparison, not these placeholders.
 
-<!-- Fill in with actual pilot data before publishing -->
+The largest cost never appears on an invoice. When overtime clusters, callouts scramble, and the same nurses carry every hard shift, the people who keep the schedule standing eventually leave. The [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts the average cost to replace one staff RN at $61,110, and the [AHRQ patient-safety literature on nurse staffing](https://psnet.ahrq.gov/primer/nursing-and-patient-safety) links inadequate staffing to worse patient outcomes. A schedule that burns out a night nurse is a cost event before the resignation letter arrives. The same math sits behind [12-hour hospital shifts and scheduling](/blog/12-hour-hospital-shifts-scheduling): the pattern you choose determines the recovery time your staff get.
 
----
+## How Does SimpleScheduleAI Help You Analyze Your Schedule?
 
-## Finding 3: Schedule Fairness Distribution
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Because the schedule is built inside the system rather than a spreadsheet, the four measurements in this guide become a byproduct of the scheduling work rather than a separate project you have to carve out time for. Overtime exposure, callout frequency, and per-nurse weekend and night counts are tracked as the schedule is built, not reconstructed afterward from payroll.
 
-<!-- Note what will go here: weekend and night shift counts per nurse within each scheduling period. Distribution of "undesirable shift" assignments. Hypothesis: in spreadsheet-managed schedules, the same nurses tend to receive disproportionate night/weekend assignments due to build-order effects in the scheduling process. -->
+The practical difference is timing. A spreadsheet tells you a nurse crossed into overtime after payroll runs. A system that tracks running hours against the applicable FLSA overtime thresholds flags the risk while the schedule is still a draft, so a night callout does not quietly push someone past their limit. Fairness works the same way: instead of computing a coefficient of variation after the fact, the draft distributes weekend and night shifts against the fairness parameters set during onboarding, so concentration is prevented rather than discovered.
 
-[TO BE FILLED]
+One honest limitation: analysis does not create staff. If your data shows only four nurses can work nights, a report makes the risk precise, but it cannot manufacture a fifth nurse. We are direct about that during onboarding rather than promising a fix the roster cannot support. You can read the full process on our [nurse scheduling software](/nurse-scheduling-software) page, our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub, or [how the scheduling process works](/how-it-works) step by step, and the modeling behind the draft is described under [AI nurse scheduling](/ai-nurse-scheduling).
 
-**What this section will include:**
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The instinct is to treat scheduling data as something you look at only when the budget is already over. That is too late. The four measurements here are cheap to run and they all point the same direction: the cost, the compliance risk, and the retention pressure are downstream of scheduling decisions you can see coming if you look. You do not need our product to do this. You need eight weeks of your own data in a spreadsheet and an afternoon. The hospitals that run this analysis once tend to run it every quarter, because the first pass almost always finds one nurse quietly carrying too much.</p>
+</div>
 
-- Weekend shift assignments per nurse per scheduling period (mean, median, range)
-- Night shift assignments per nurse per scheduling period
-- Holiday assignments per nurse
-- Coefficient of variation as a fairness metric, how much spread exists in assignment counts across the team
-- Comparison between spreadsheet-managed schedules and SimpleScheduleAI-managed schedules for the same facilities
+## What Should You Do This Week?
 
-<!-- Fill in with actual pilot data before publishing -->
+1. Export eight to twelve weeks of four sources into one spreadsheet: the posted schedule, the payroll or timekeeping export, your callout log, and the shift-assignment history. Segment every row by role and status before you analyze.
+2. Run the overtime cut. Tag each overtime hour by shift type and separate planned overruns from callout coverage. Note which shift type carries a disproportionate share.
+3. Tally callouts by day, by shift, and by notice time, then divide by the number of cycles to get your average callout rate. That baseline is what you size an on-call pool against.
+4. Build the fairness table: weekend, night, and holiday counts per nurse, then compute a coefficient of variation for each. If the night CV is high, you have a concentration problem, not a coverage win.
+5. Book a call with our team to see how a schedule built inside the system produces these four measurements automatically, instead of reconstructing them from payroll each quarter.
 
----
-
-## Finding 4: Cost Impact of Scheduling Patterns
-
-<!-- Note what will go here: correlation between scheduling patterns and measurable costs. Overtime cost per scheduling period. Agency nurse spend in facilities without per diem pools vs. those with managed pools. Hypothesis: facilities without structured per diem pools spend significantly more on agency coverage per gap event. -->
-
-[TO BE FILLED]
-
-**What this section will include:**
-
-- Estimated overtime cost per scheduling period per facility (using Texas RN median hourly rate as a baseline)
-- Agency nurse spend in gap-coverage events vs. per diem nurse spend
-- Cost-per-callout-resolution across facilities with different coverage structures
-- Correlation between schedule fairness distribution and self-reported staff satisfaction scores
-
-<!-- Fill in with actual pilot data before publishing -->
-
----
-
-## What This Means for CAH Administrators?
-
-Even without the final dataset, the structural patterns that this analysis will document are consistent with what healthcare operations research has established about small-hospital scheduling:
-
-**Overtime is a scheduling problem before it is a payroll problem.** The overtime shows up in payroll, but it originates in scheduling decisions, often a callout coverage call made at 6 AM under time pressure without visibility into the covering nurse's weekly hours. A facility that tracks weekly hours in the scheduling tool rather than the payroll system will identify and prevent overtime accumulation before it occurs. A facility that tracks it in payroll will discover it after the cost has been incurred.
-
-**Callout patterns are predictable at the population level.** Individual callout events are unpredictable, but callout frequency is not. A facility that sees an average of four callout events per 4-week scheduling cycle can build its per diem pool size and on-call availability requirements around that baseline. Treating callouts as random surprises rather than statistically predictable events is the root cause of the frantic coverage scrambles that consume nurse manager time and generate overtime.
-
-**Schedule fairness is measurable, and worth measuring.** Weekend and night assignment equity is the most common source of scheduling-related grievances in small nursing teams. Facilities that track assignment counts explicitly, not just total hours, but undesirable shift distribution, are better positioned to prevent the perception of favoritism before it becomes a retention issue. [NSI 2024 data](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) consistently places scheduling fairness among the top non-compensation factors in nursing turnover decisions.
-
-**Per diem pool management is a capital allocation decision.** The cost of maintaining an active per diem pool, occasional shifts, relationship maintenance, availability tracking, is significantly lower than the cost of per-event agency staffing. CAHs that document this comparison with their own data can make the case for structured per diem investment as a cost-reduction initiative, not just an operational preference.
-
-For CAH administrators making scheduling infrastructure decisions, the practical takeaway is this: scheduling data that currently lives in spreadsheets and payroll systems contains a significant amount of insight about cost drivers, compliance risk, and retention pressure, but only if it is extracted, structured, and analyzed. That analysis is one of the outputs that a managed scheduling service can produce as a natural byproduct of the scheduling work itself.
-
----
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
+    Running a Critical Access Hospital in Texas?
+  </p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
+    See how SimpleScheduleAI tracks overtime, callouts, and shift fairness as it builds the schedule, so the numbers are there when you need them. We build the schedule, you approve it.
+  </p>
+  <a
+    href="/how-it-works"
+    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+  >
+    See how it works →
+  </a>
+  <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+    Or <a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-700 dark:text-blue-300 underline">book a call with our team</a>.
+  </p>
+</div>
 
 ## Frequently Asked Questions
 
-**Q: What data sources does this analysis use?**
-This analysis uses anonymized nurse scheduling data from Texas critical access hospitals enrolled in the SimpleScheduleAI pilot program. No patient data is included. Facility and individual nurse identifiers are removed before analysis. The dataset will be described in detail, including facility count, scheduling periods covered, and methodology for de-identification, in the final published version of this post.
+**Q: What data do I already have to analyze my nurse schedule?**
 
-**Q: When will this data post be published?**
-This post will be published once the pilot dataset reaches our internal publication threshold for statistical reliability. Specific thresholds will be defined before publication. The structural finding sections will be completed with actual data values and any required methodological caveats at that time.
+Four sources a small hospital already keeps: the posted schedule (who was assigned to each shift), the payroll or timekeeping export (hours worked and overtime), a callout log (when coverage failed and how it was filled), and the shift-assignment history (the posted schedule read across several months). Exporting eight to twelve weeks of these into one spreadsheet is enough to run every analysis in this guide.
 
-**Q: How can my CAH participate in the data collection?**
-CAHs currently enrolled in or evaluating the SimpleScheduleAI pilot program contribute scheduling data as part of the service engagement, with explicit consent and de-identification. If you are interested in the pilot and would like your scheduling data to be included in future analysis, the pilot inquiry page is the right starting point: [Critical Access Hospital Scheduling](/critical-access-hospital-scheduling).
+**Q: What is a coefficient of variation for schedule fairness?**
+
+It is the standard deviation of a set of numbers divided by their mean, a unitless measure of spread. For fairness, count the weekend or night shifts each nurse worked, then compute it across the team. A value near zero means the burden is spread evenly; a larger value means a few nurses carry a disproportionate share. It turns a vague sense of unfairness into a number you can track cycle over cycle.
+
+**Q: Do I need software to analyze my scheduling data?**
+
+No. Every measurement in this guide runs in a spreadsheet using data you already have. Software helps by producing these numbers as the schedule is built rather than reconstructed afterward, and by flagging overtime or fairness risk while the schedule is still a draft. But the analysis itself does not require a purchase, and a spreadsheet is the right first step.
+
+**Q: How much scheduling data do I need before the analysis is meaningful?**
+
+Eight to twelve weeks, or two to three scheduling cycles, is usually enough to see a pattern rather than noise. Callout rates and fairness distributions need a few cycles to stabilize, because any single week can be unusual.
+
+**Q: What is a healthy overtime pattern versus a concerning one?**
+
+Healthy overtime is low and roughly proportional to the share of the schedule each shift type represents. Concerning overtime clusters in one shift type out of proportion to its size, which points to a structural coverage gap there, most often night or weekend callout coverage. The breakdown by shift type matters more than the total, because it tells you where the schedule is breaking.
+
+## Sources
+
+1. NSI Nursing Solutions, [2025 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) (average cost to replace one staff RN: $61,110; national RN turnover: 16.4%)
+2. CDC NIOSH, [Work-Hour Training for Nurses](https://www.cdc.gov/niosh/work-hour-training-for-nurses/)
+3. AHRQ PSNet, [Nursing and Patient Safety](https://psnet.ahrq.gov/primer/nursing-and-patient-safety)
 
 ---
-
-## Key Takeaways
-
-- [TO BE FILLED, replace with actual finding once data is available: overtime rate per nurse per month across the dataset]
-- [TO BE FILLED, replace with actual finding: most common callout day and shift type]
-- [TO BE FILLED, replace with actual finding: fairness distribution spread across facilities]
-- [TO BE FILLED, replace with actual finding: per diem vs. agency cost comparison per gap event]
-- For CAH administrators, the most actionable insight from this dataset is that overtime and callout costs are downstream of scheduling decisions that can be identified and changed, they are not fixed costs of running a 24/7 facility.
-
-<!-- Fill in with actual pilot data before publishing -->
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
