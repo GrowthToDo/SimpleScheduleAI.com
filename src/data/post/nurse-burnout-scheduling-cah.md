@@ -8,7 +8,7 @@ excerpt: >
   You cannot fix nurse burnout with a wellness webinar at a 25-bed hospital. The
   schedule is the lever a nurse manager actually holds. This guide covers what
   scheduling design can control, and the pay and staffing realities it cannot.
-image: https://images.unsplash.com/photo-1669413453505-2582fb5083b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1599045118108-bf9954418b76?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:
@@ -115,7 +115,7 @@ Pay is set by budget and market, not by the roster. If nurses are leaving primar
 
 SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. On burnout specifically, the system distributes night and weekend assignments according to the fairness parameters set during onboarding, and it keeps a running per-nurse count so concentration on a few people surfaces while you can still act on it, not after the fact. When a nurse calls out, the replacement shortlist is drawn from available, qualified staff rather than defaulting to whoever is easiest to reach, which keeps a single callout from deepening one person's overload.
 
-For Texas Critical Access Hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so unplanned overtime does not quietly stack on the person already carrying the most. Because the schedule is modeled across the full period before anyone approves it, this is where [AI nurse scheduling](/ai-nurse-scheduling) earns its keep: it shows thin spots and lopsided loads during building, and if you are weighing whether to rely on that output, we address it directly in [can nurses trust an AI-generated schedule](/blog/can-nurses-trust-ai-generated-schedule).
+For Texas Critical Access Hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so unplanned overtime does not quietly stack on the person already carrying the most. Because the schedule is modeled across the full period before anyone approves it, this is where [AI nurse scheduling](/ai-nurse-scheduling) earns its keep: it shows thin spots and lopsided loads during building, which you can watch it do live in our [interactive simulator](/simulator), and if you are weighing whether to rely on that output, we address it directly in [can nurses trust an AI-generated schedule](/blog/can-nurses-trust-ai-generated-schedule).
 
 One honest limitation: the schedule is not a fix for pay, the nurse shortage, or acuity. If your night-eligible pool is genuinely too small, the system will flag the coverage risk accurately, but it cannot create availability that does not exist, and we say so during onboarding rather than promising a fix we cannot deliver.
 
