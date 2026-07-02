@@ -239,12 +239,24 @@ cut size or "nothing removed" claim. Ground-truth the actual change:
 preserved blockquotes / tool names / links. Subagents have under-reported
 their own cuts by ~7x; verify, then report the real delta.
 
-Mandatory second step: structurally diff the draft against these three
-canonical reference posts: schedule360-alternatives.md,
-best-nurse-scheduling-software-2026.md, qgenda-alternatives.md. Flag any
-deviation from the established convention (TOC entries, H2 sequence,
-callout placement, Sources/FAQ/bio order, italic-linked author bio
-format) EVEN IF this checklist is silent on it.
+Mandatory second step: structurally diff the draft against three canonical
+reference posts OF THE SAME post type (match the draft's `postType` /
+nature, since a MOFU explainer and a BOFU alternatives post have different
+section spines; diffing across types produces false deviations). Use this
+reference matrix:
+
+- BOFU / comparison / `*-alternatives.md`: schedule360-alternatives.md,
+  best-nurse-scheduling-software-2026.md, qgenda-alternatives.md
+- MOFU explainer / operational guide: self-scheduling-problems-critical-access-hospital.md,
+  after-hours-callout-coverage-small-hospitals.md, night-shift-nurse-schedule-coverage.md
+- TOFU / glossary / definitional: pick 3 LIVE posts of the same type
+  (e.g. what-is-per-diem-nursing.md) — do not diff a glossary post against
+  BOFU or MOFU refs.
+
+If the draft's type is ambiguous, pick the closest matrix row and note the
+choice. Flag any deviation from the established convention (TOC entries,
+H2 sequence, callout placement, Sources/FAQ/bio order, italic-linked
+author bio format) EVEN IF this checklist is silent on it.
 
 Mandatory third step: run every numbered check in Part 0 Reconciliation
 + every hard gate listed in this checklist + every BOFU x-alternatives
