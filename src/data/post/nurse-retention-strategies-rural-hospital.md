@@ -59,7 +59,7 @@ What a large system cannot easily replicate is the day-to-day experience of the 
 
 ## How Does the Schedule Drive Nurse Turnover in a Small Roster?
 
-In a small roster, nurse turnover is usually a fairness problem before it is a pay problem. When the same three or four people always draw nights, weekends, holidays, and last-minute callout coverage, they carry a disproportionate share of the misery and burn out first. The schedule, not the paycheck, is what breaks them.
+In a small roster, nurse turnover is usually a fairness problem before it is a pay problem. When the same three or four people always draw nights, weekends, holidays, and last-minute callout coverage, they carry a disproportionate share of the misery and burn out first. The schedule, not the paycheck, is what breaks them, the mechanism we unpack in [nurse burnout and the CAH schedule](/blog/nurse-burnout-scheduling-cah).
 
 Small rosters make unfairness easy to create and hard to see. A manager filling a gap reaches for the reliable people, so those people get asked again and again until the pattern hardens into a burden nobody planned. Self-scheduling does not fix this: desirable day shifts fill in the first hour while nights and weekends sit open, the failure mode we cover in [self-scheduling problems at a critical access hospital](/blog/self-scheduling-problems-critical-access-hospital). Chronic overtime is the other half of the trap, and tracking that exposure against [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah) is the same discipline as protecting retention. Nights concentrate the damage further, which is why fair distribution of overnight work is central to [night shift nurse schedule coverage](/blog/night-shift-nurse-schedule-coverage).
 

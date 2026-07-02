@@ -183,7 +183,7 @@ Both work, and most CAHs use a hybrid. Permanent night nurses are more reliable 
 
 **Q: How do you prevent night shift burnout at a 25-bed hospital?**
 
-Track night assignments per nurse over rolling six-week periods, set a maximum night threshold, and prioritize nurses who have not recently worked nights when filling callouts. Make night distribution visible to staff, since transparency reduces the perception of unfairness even when the data already shows it is balanced.
+Track night assignments per nurse over rolling six-week periods, set a maximum night threshold, and prioritize nurses who have not recently worked nights when filling callouts. Make night distribution visible to staff, since transparency reduces the perception of unfairness even when the data already shows it is balanced. That same distribution discipline is the core of [reducing nurse burnout through schedule design](/blog/nurse-burnout-scheduling-cah).
 
 **Q: What happens if a night shift nurse calls out at 3 a.m.?**
 
