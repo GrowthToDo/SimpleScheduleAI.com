@@ -1,0 +1,55 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import {
+  loadManifest,
+  saveManifest,
+  setMechanical,
+  setRecorded,
+  manifestStatus,
+  MECHANICAL_FIELDS,
+  BLOCKING_RECORDED,
+} from '../lib/manifest.mjs';
+
+test('round-trip and skeleton', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'mf-'));
+  const m = loadManifest('my-post', root);
+  assert.equal(m.schemaVersion, 1);
+  saveManifest(m, root);
+  assert.ok(fs.existsSync(path.join(root, '.publish', 'my-post.json')));
+});
+
+test('status: all green only when every blocking field is fresh PASS', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'mf-'));
+  const m = loadManifest('p', root);
+  const h = 'hash1';
+  for (const f of MECHANICAL_FIELDS) setMechanical(m, f, 'PASS', h);
+  assert.equal(manifestStatus(m, h).green, false); // recorded still missing
+  setRecorded(m, 'proofread', 'READY', 'code-reviewer', h);
+  setRecorded(m, 'factCheck', 'NOT_REQUIRED', 'orchestrator', h);
+  setRecorded(m, 'imageEyeball', 'OK', 'founder', h);
+  setRecorded(m, 'founderApproval', 'YES', 'founder', h);
+  assert.equal(manifestStatus(m, h).green, true);
+  // content change -> stale -> not green
+  assert.equal(manifestStatus(m, 'hash2').green, false);
+  const stale = manifestStatus(m, 'hash2').rows.find((r) => r.field === 'proofread');
+  assert.equal(stale.fresh, false);
+});
+
+test('non-blocking recorded fields do not affect green', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'mf-'));
+  const m = loadManifest('p', root);
+  const h = 'h';
+  for (const f of MECHANICAL_FIELDS) setMechanical(m, f, 'PASS', h);
+  for (const f of BLOCKING_RECORDED)
+    setRecorded(
+      m,
+      f,
+      f === 'proofread' ? 'READY' : f === 'factCheck' ? 'PASS' : f === 'imageEyeball' ? 'OK' : 'YES',
+      'x',
+      h
+    );
+  assert.equal(manifestStatus(m, h).green, true); // indexNow/gscSitemap unset, still green
+});
