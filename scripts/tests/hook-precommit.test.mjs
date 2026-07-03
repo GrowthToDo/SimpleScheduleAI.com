@@ -15,6 +15,10 @@ test('flip true->false detected', () => {
     flips.map((f) => f.slug),
     ['a']
   );
+  assert.deepEqual(
+    flips.map((f) => f.collection),
+    ['post']
+  );
 });
 
 test('new file with draft:false detected', () => {
@@ -26,6 +30,10 @@ test('new file with draft:false detected', () => {
   assert.deepEqual(
     flips.map((f) => f.slug),
     ['b']
+  );
+  assert.deepEqual(
+    flips.map((f) => f.collection),
+    ['article']
   );
 });
 
