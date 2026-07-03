@@ -165,7 +165,7 @@ Cover it from a standing per-diem bench and your cross-trained on-shift staff. W
 
 **Q: Does a critical access hospital need a registered nurse on duty at all times?**
 
-Under 42 CFR 485.631, a registered nurse must provide or supervise the nursing care of each patient, and a qualified practitioner must be available whenever the facility operates. In practice that means an RN on duty whenever there is one or more inpatients, so overnight and weekend coverage is a compliance requirement, not an optional staffing preference.
+Under 42 CFR 485.631, a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever the facility has one or more inpatients, and a qualified practitioner must be available whenever the facility operates. In practice that means overnight and weekend coverage is a compliance requirement, not an optional staffing preference.
 
 ## Sources
 
