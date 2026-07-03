@@ -21,11 +21,11 @@ metadata:
 
 ## Key Takeaways
 
-- Float pool nursing is a large-hospital instrument: it needs several units to float between, spare headcount to carry the bench, and a staffing office to deploy it, none of which a 25-bed hospital has
+- Float pool nursing is a large-hospital instrument. It needs several units to float nurses between, spare headcount to sit on the bench, and a staffing office to deploy them, and a 25-bed hospital has none of the three
 - A small rural hospital typically runs one floor with 15 to 25 nurses and a nurse manager who also carries patients, so there is nothing to pool and nowhere to float
 - The realistic substitutes are a standing per-diem or PRN bench for callouts, cross-training the nurses you already have across the few functions on site, and regional or shared-staffing arrangements with nearby facilities
-- Under [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse must be on duty whenever there is one or more inpatients, so coverage is a compliance floor, not a preference
-- The average cost to replace one staff RN is $61,110 per the [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf), so the goal of any small-hospital model is to cover gaps without burning out the few nurses who keep saying yes
+- Under [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever there is one or more inpatients, so coverage is a compliance floor, not a preference
+- The average cost to replace one staff RN is $61,110 per the [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf), so the goal of any small-hospital model is to cover gaps without burning out the few nurses who always agree to pick up the extra shifts
 
 ## Table of Contents
 
@@ -124,7 +124,7 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
 1. Write down your actual structure: one floor, your real nurse count, and which functions (emergency, swing bed, med-surg) each shift has to cover. Confirming there is no second unit to float to settles the float-pool question in five minutes.
 2. Build or refresh your per-diem bench. List every part-timer, willing retiree, and nearby nurse who is already credentialed, and note who has genuinely agreed to short-notice shifts. A longer uncredentialed list does not help at 3 a.m.
 3. Map your cross-training. For each nurse, mark which functions she is cleared for, then find the single-point-of-failure gaps where only one person can cover a given assignment.
-4. Confirm your coverage meets the floor: under 42 CFR 485.631, a registered nurse must be on duty whenever there is an inpatient. Check that every shift in your posted schedule clears that bar before you optimize anything else.
+4. Confirm your coverage meets the floor: under 42 CFR 485.631, a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever there is an inpatient. Check that every shift in your posted schedule clears that bar before you optimize anything else.
 5. Book a call with our team to see how a scheduling draft would hold your bench, respect your cross-training, and fill a callout from a ranked shortlist across your specific roster.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
