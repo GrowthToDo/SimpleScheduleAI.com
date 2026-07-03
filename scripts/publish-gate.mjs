@@ -75,10 +75,11 @@ function dateSanity(data) {
   return { ok: true };
 }
 
-function parseCheckLinksOutput(out, canonical) {
-  // PASS if every [BROKEN] line is the canonical self-URL (expected pre-deploy).
+export function parseCheckLinksOutput(out, canonical) {
+  // Tolerate ONLY the canonical self-URL 404 (expected pre-deploy).
+  // A non-zero exit with no [BROKEN] lines is a tool failure, not a pass.
   const broken = out.split(/\r?\n/).filter((l) => l.includes('[BROKEN]'));
-  return broken.every((l) => canonical && l.includes(canonical));
+  return broken.length > 0 && broken.every((l) => canonical && l.includes(canonical));
 }
 
 export async function runMechanical(slugOrPath, root, { network = true, externalTools = true } = {}) {

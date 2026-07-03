@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import { execFileSync } from 'node:child_process';
+import { parseCheckLinksOutput } from '../publish-gate.mjs';
 
 const GATE = path.resolve('scripts/publish-gate.mjs');
 
@@ -77,4 +78,10 @@ test('insufficient inbound links fails', () => {
   gate(root, ['subject']);
   const m = JSON.parse(fs.readFileSync(path.join(root, '.publish', 'subject.json'), 'utf8'));
   assert.equal(m.mechanical.inboundLinks.status, 'FAIL');
+});
+
+test('parseCheckLinksOutput: crash output (no BROKEN lines) is not a pass; canonical-only broken is', () => {
+  assert.equal(parseCheckLinksOutput('TypeError: boom', 'https://x.com/blog/s'), false);
+  assert.equal(parseCheckLinksOutput('  [BROKEN] 404  https://x.com/blog/s', 'https://x.com/blog/s'), true);
+  assert.equal(parseCheckLinksOutput('  [BROKEN] 404  https://other.com/dead', 'https://x.com/blog/s'), false);
 });
