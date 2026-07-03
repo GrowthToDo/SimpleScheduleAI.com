@@ -163,7 +163,7 @@ A float pool is spare staff a large hospital carries and moves between its units
 
 Cover it from a standing per-diem bench and your cross-trained on-shift staff. Work a pre-agreed shortlist of credentialed nurses rather than a cold phone tree, and let any nurse cleared for the open function absorb it. A scheduling system that keeps the bench and the competency map current turns a 3 a.m. scramble into a short set of targeted calls.
 
-**Q: Does a critical access hospital need a registered nurse on duty at all times?**
+**Q: Does a critical access hospital need a registered nurse on duty at all times?** <!-- facts-ok -->
 
 Under 42 CFR 485.631, a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever the facility has one or more inpatients, and a qualified practitioner must be available whenever the facility operates. In practice that means overnight and weekend coverage is a compliance requirement, not an optional staffing preference.
 

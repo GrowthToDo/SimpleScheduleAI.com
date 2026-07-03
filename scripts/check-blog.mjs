@@ -27,6 +27,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename } from 'node:path';
+import { checkFacts } from './lib/facts-rules.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const POSTS_DIR = resolve(__dirname, '../src/data/post');
@@ -388,6 +389,11 @@ function check(file) {
       }
     }
   });
+
+  // 9b. Facts drift: known stats/regs must match docs/seo/facts-dossier.md wording.
+  for (const v of checkFacts(bodyText)) {
+    fail(`Facts drift [${v.id}]: ${v.message} -> docs/seo/${v.anchor}`, bodyOffset + v.line, v.text);
+  }
 
   // 10. Frontmatter: image present and (for remote URLs) not quoted; author
   //     canonical name. The checklist no-quotes rule targets remote `https://`
