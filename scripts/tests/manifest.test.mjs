@@ -53,3 +53,10 @@ test('non-blocking recorded fields do not affect green', () => {
     );
   assert.equal(manifestStatus(m, h).green, true); // indexNow/gscSitemap unset, still green
 });
+
+test('setters throw on unknown field names', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'mf-'));
+  const m = loadManifest('p', root);
+  assert.throws(() => setMechanical(m, 'checkBlgo', 'PASS', 'h'), /Unknown mechanical field/);
+  assert.throws(() => setRecorded(m, 'founderAproval', 'YES', 'x', 'h'), /Unknown recorded field/);
+});

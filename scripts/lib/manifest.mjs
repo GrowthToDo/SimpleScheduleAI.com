@@ -37,10 +37,12 @@ export function saveManifest(manifest, root = process.cwd()) {
 }
 
 export function setMechanical(manifest, field, status, contentHash) {
+  if (!MECHANICAL_FIELDS.includes(field)) throw new Error(`Unknown mechanical field: ${field}`);
   manifest.mechanical[field] = { status, checkedAt: new Date().toISOString(), contentHash };
 }
 
 export function setRecorded(manifest, field, value, by, contentHash) {
+  if (!RECORDED_FIELDS.includes(field)) throw new Error(`Unknown recorded field: ${field}`);
   manifest.recorded[field] = { value, setBy: by || 'unknown', setAt: new Date().toISOString(), contentHash };
 }
 
