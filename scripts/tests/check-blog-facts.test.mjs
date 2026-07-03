@@ -12,10 +12,14 @@ function runGate(postBody) {
   const p = path.join(dir, rel, 'fixture.md');
   fs.writeFileSync(p, `---\ndraft: true\ntitle: F\n---\n${postBody}\n`);
   try {
-    execFileSync('node', [path.resolve('scripts/check-blog.mjs'), p], { encoding: 'utf8' });
-    return { code: 0 };
-  } catch (e) {
-    return { code: e.status, out: String(e.stdout) + String(e.stderr) };
+    try {
+      execFileSync('node', [path.resolve('scripts/check-blog.mjs'), p], { encoding: 'utf8' });
+      return { code: 0 };
+    } catch (e) {
+      return { code: e.status, out: String(e.stdout) + String(e.stderr) };
+    }
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
   }
 }
 
