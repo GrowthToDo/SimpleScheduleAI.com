@@ -128,6 +128,17 @@ Design/visual rules (checklist + pipeline skill, judgment stays human):
 - Hero must topic-match the post's subject class (staffing post -> staff/team imagery; compliance -> institutional/paperwork; never clinical-procedure or patient-distress imagery)
 - `imageEyeball` manifest field is the enforcement: a human looked at the rendered image
 
+## Component 5b — Site-health gate (beyond blog publishing)
+
+Founder directive (2026-07-03): the system must cover website handling broadly, not only the blog pipeline. `smoke-routes` therefore grows into a site-health gate with these additional deterministic checks (same script, same CI wiring):
+
+- **Redirect integrity:** every `netlify.toml` redirect `to` target (internal, non-splat) resolves to an emitted page in `dist/` (or is the 404 catch-all). A redirect landing on a missing page is a silent equity leak.
+- **Page meta assertions:** every emitted HTML page has exactly one `<title>`, exactly one `<link rel="canonical">`, a `<meta name="description">`, and exactly one `<h1>`. Catches template regressions on ANY page (pricing, pillars, articles), not just posts.
+- **Nav integrity:** every internal `href` in the emitted header/footer nav resolves to an emitted page.
+- **robots.txt:** still allows AI crawlers (no accidental `Disallow: /` or agent blocks).
+
+Non-mechanical site aspects stay in their existing homes and are NOT duplicated here: SEO drift monitoring (`/seo drift baseline|compare` skill, weekly), performance (CWV via the seo skills), design judgment (human eyeball + frontend-design skill), dependency/security (out of scope for this system). The coverage principle stands: if a site-handling rule can be made deterministic, it belongs in the site-health gate; if it needs judgment, it gets a recorded manifest-style step or a named skill.
+
 ## Component 6 — Fable burn-down plan (by 2026-07-07)
 
 - Day 1: Components 1-3 built; Fable live-verifies every dossier fact against primary sources.

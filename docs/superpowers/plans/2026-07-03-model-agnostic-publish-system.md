@@ -1668,6 +1668,176 @@ git push
 
 ---
 
+### Task 12: Site-health gate extensions (smoke-routes beyond blog)
+
+Founder directive (2026-07-03): cover website handling broadly, not only the blog pipeline. Extends `scripts/smoke-routes.mjs` (Task 8) with redirect integrity, page-meta assertions, and robots.txt checks. Runs in the same CI step. Spec: Component 5b.
+
+**Files:**
+
+- Modify: `scripts/smoke-routes.mjs`
+- Modify: `scripts/tests/smoke-routes.test.mjs` (add cases; update `makeSite()` fixture)
+
+**Interfaces:**
+
+- Consumes: existing `smokeRoutes(root, dist)` from Task 8.
+- Produces: same `smokeRoutes` signature; `problems` gains new categories. New exports for testability: `checkRedirects(root, dist) -> string[]`, `checkPageMeta(dist) -> string[]`, `checkRobots(root) -> string[]`.
+
+- [ ] **Step 1: Add failing tests to `scripts/tests/smoke-routes.test.mjs`**
+
+```js
+// append to the existing test file (reuse its imports and makeSite)
+import { checkRedirects, checkPageMeta, checkRobots } from '../smoke-routes.mjs';
+
+test('redirect to a missing internal target fails', () => {
+  const { root, dist } = makeSite();
+  fs.writeFileSync(
+    path.join(root, 'netlify.toml'),
+    `
+[[redirects]]
+  from = "/old-page"
+  to = "/nonexistent-target"
+  status = 301
+[[redirects]]
+  from = "/other"
+  to = "/pricing"
+  status = 301
+`
+  );
+  const probs = checkRedirects(root, dist);
+  assert.ok(probs.some((p) => p.includes('/nonexistent-target')));
+  assert.ok(!probs.some((p) => p.includes('/pricing')));
+});
+
+test('splat, external, and 404 redirect targets are ignored', () => {
+  const { root, dist } = makeSite();
+  fs.writeFileSync(
+    path.join(root, 'netlify.toml'),
+    `
+[[redirects]]
+  from = "https://www.x.com/*"
+  to = "https://x.com/:splat"
+  status = 301
+[[redirects]]
+  from = "/*"
+  to = "/404"
+  status = 404
+`
+  );
+  assert.equal(checkRedirects(root, dist).length, 0);
+});
+
+test('page missing canonical or with two h1 fails meta check', () => {
+  const { dist } = makeSite();
+  fs.writeFileSync(
+    path.join(dist, 'pricing', 'index.html'),
+    '<html><head><title>P</title><meta name="description" content="d"></head><body><h1>A</h1><h1>B</h1></body></html>'
+  );
+  const probs = checkPageMeta(dist);
+  assert.ok(probs.some((p) => p.includes('pricing') && p.includes('canonical')));
+  assert.ok(probs.some((p) => p.includes('pricing') && p.includes('h1')));
+});
+
+test('robots blanket disallow fails', () => {
+  const { root } = makeSite();
+  fs.writeFileSync(path.join(root, 'public', 'robots.txt'), 'User-agent: *\nDisallow: /\n');
+  assert.ok(checkRobots(root).length >= 1);
+});
+```
+
+Update `makeSite()` so the healthy fixture passes the new checks folded into `smokeRoutes`:
+
+- every fixture page's HTML becomes `<html><head><title>T</title><link rel="canonical" href="https://simplescheduleai.com/x"><meta name="description" content="d"></head><body><h1>H</h1></body></html>`
+- create `public/` in the fixture root with a permissive `robots.txt` (`User-agent: *\nAllow: /\n`)
+- write an empty `netlify.toml` in the fixture root
+
+The original 4 tests must still pass unchanged.
+
+- [ ] **Step 2: Run tests to verify the new ones fail**
+
+Run: `node --test scripts/tests/smoke-routes.test.mjs`
+Expected: 4 new tests FAIL (exports missing); original 4 may fail on fixture-meta until Step 3 lands — acceptable during RED.
+
+- [ ] **Step 3: Implement in `scripts/smoke-routes.mjs`**
+
+```js
+export function checkRedirects(root = process.cwd(), dist = path.join(root, 'dist')) {
+  const problems = [];
+  const tomlPath = path.join(root, 'netlify.toml');
+  if (!fs.existsSync(tomlPath)) return problems;
+  const toml = fs.readFileSync(tomlPath, 'utf8');
+  for (const m of toml.matchAll(/to\s*=\s*"([^"]+)"/g)) {
+    const to = m[1];
+    if (!to.startsWith('/')) continue; // external target
+    if (to.includes(':splat') || to === '/404') continue;
+    const clean = to.replace(/\/$/, '');
+    const target = clean === '' ? path.join(dist, 'index.html') : path.join(dist, clean, 'index.html');
+    if (!fs.existsSync(target)) problems.push(`redirect target missing in dist: ${to}`);
+  }
+  return problems;
+}
+
+function* walkHtml(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, entry.name);
+    if (entry.isDirectory()) yield* walkHtml(p);
+    else if (entry.name === 'index.html') yield p;
+  }
+}
+
+export function checkPageMeta(dist) {
+  const problems = [];
+  for (const page of walkHtml(dist)) {
+    const rel = path.relative(dist, page).replace(/\\/g, '/');
+    if (rel.startsWith('404')) continue;
+    const html = fs.readFileSync(page, 'utf8');
+    const count = (re) => (html.match(re) || []).length;
+    if (count(/<title[\s>]/g) !== 1) problems.push(`${rel}: expected exactly 1 <title>, got ${count(/<title[\s>]/g)}`);
+    if (count(/<link[^>]+rel="canonical"/g) !== 1)
+      problems.push(`${rel}: expected exactly 1 canonical, got ${count(/<link[^>]+rel="canonical"/g)}`);
+    if (count(/<meta[^>]+name="description"/g) < 1) problems.push(`${rel}: missing meta description`);
+    if (count(/<h1[\s>]/g) !== 1) problems.push(`${rel}: expected exactly 1 h1, got ${count(/<h1[\s>]/g)}`);
+  }
+  return problems;
+}
+
+export function checkRobots(root = process.cwd()) {
+  const problems = [];
+  const p = path.join(root, 'public', 'robots.txt');
+  if (!fs.existsSync(p)) return ['public/robots.txt missing'];
+  const txt = fs.readFileSync(p, 'utf8');
+  if (/^Disallow:\s*\/\s*$/m.test(txt)) problems.push('robots.txt has a blanket Disallow: /');
+  for (const agent of ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended']) {
+    const re = new RegExp(`User-agent:\\s*${agent}[\\s\\S]{0,80}?Disallow:\\s*\\/\\s*$`, 'mi');
+    if (re.test(txt)) problems.push(`robots.txt blocks AI crawler ${agent}`);
+  }
+  return problems;
+}
+```
+
+Inside `smokeRoutes(root, dist)`, before the final `return`, fold them in:
+
+```js
+problems.push(...checkRedirects(root, dist));
+problems.push(...checkPageMeta(dist));
+problems.push(...checkRobots(root));
+```
+
+- [ ] **Step 4: Run all smoke tests, then the real build**
+
+Run: `node --test scripts/tests/smoke-routes.test.mjs`
+Expected: PASS (all 8)
+Run: `node scripts/smoke-routes.mjs` against the repo's real `dist/` (rebuild with `npm run build` if stale)
+Expected: pass. If `checkPageMeta` fails on real pages: a single-page defect is a genuine finding (report it in your report file; do NOT loosen the check); a systematic false positive (e.g. a redirect stub page) gets a targeted, commented exclusion.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add scripts/smoke-routes.mjs scripts/tests/smoke-routes.test.mjs
+git commit -m "feat(ci): site-health gate — redirect targets, page meta, robots checks"
+```
+
+---
+
 ## After this plan (operational, separate sessions before 2026-07-07)
 
 1. **Dossier live-verification (Fable):** re-verify every facts-dossier entry against its primary source; update `Verified:` dates.
