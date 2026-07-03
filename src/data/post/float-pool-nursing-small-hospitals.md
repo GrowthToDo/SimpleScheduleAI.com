@@ -1,14 +1,14 @@
 ---
-draft: true
-publishDate: 2026-07-01T00:00:00Z
-updateDate: 2026-07-01T00:00:00Z
+draft: false
+publishDate: 2026-07-03T00:00:00Z
+updateDate: 2026-07-03T00:00:00Z
 author: 'Pradeep Pandey'
 title: "Float Pool Nursing: Why 25-Bed Hospitals Don't Have One, and What Works Instead"
 excerpt: >
   A float pool needs multiple units, spare headcount, and a staffing office. A 25-bed hospital
   has one floor and a dual-role nurse manager, so there is nothing to pool. This guide covers
   the three coverage models that actually fit a small rural hospital instead.
-image: https://images.unsplash.com/photo-1615631648086-325025c9e51e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1755189118414-14c8dacdb082?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:

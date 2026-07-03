@@ -59,7 +59,7 @@ The choice of pattern shapes fatigue. The [CDC NIOSH Work-Hour Training for Nurs
 
 Night shift carries three constraints at once: health effects, lifestyle disruption, and a small eligible pool, and at a CAH the roster size amplifies all three.
 
-**Health effects.** Night work is associated with disrupted circadian rhythms, higher rates of metabolic problems, and more fatigue-related errors, per [CDC NIOSH](https://www.cdc.gov/niosh/work-hour-training-for-nurses/). Many experienced nurses avoid permanent night assignments, which pushes night coverage toward newer or per-diem staff.
+**Health effects.** Night work is associated with disrupted circadian rhythms, higher rates of metabolic problems, and more fatigue-related errors, per [CDC NIOSH](https://www.cdc.gov/niosh/work-hour-training-for-nurses/). Many experienced nurses avoid permanent night assignments, which pushes night coverage toward newer or per-diem staff drawn from the [coverage models a small hospital runs instead of a float pool](/blog/float-pool-nursing-small-hospitals).
 
 **Lifestyle disruption.** Nurses with family responsibilities, caregiving duties, or second jobs are hard to schedule for nights. At a rural CAH where most of the nursing staff lives within a short radius and shares similar life circumstances, night availability is structurally limited.
 

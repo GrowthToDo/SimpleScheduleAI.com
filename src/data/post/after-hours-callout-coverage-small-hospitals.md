@@ -45,7 +45,7 @@ A nurse calls in sick at 2:40 AM for a shift that starts at 6:45 AM. There is no
 
 ## Why Is an After-Hours Nurse Callout the Hardest Coverage Problem at a Critical Access Hospital?
 
-An after-hours callout is the hardest coverage problem at a small hospital because every buffer that a large facility relies on is absent. There is no float pool to pull from, no night staffing office, no internal agency desk, and often only one or two qualified replacements in the whole county. The callout has to be solved by one tired person making phone calls.
+An after-hours callout is the hardest coverage problem at a small hospital because every buffer that a large facility relies on is absent. There is no float pool to pull from, no night staffing office, no internal agency desk, and often only one or two qualified replacements in the whole county, which is why a small hospital leans on [coverage models built for its size](/blog/float-pool-nursing-small-hospitals) rather than a float pool. The callout has to be solved by one tired person making phone calls.
 
 At a 200-bed hospital, a night callout routes to a staffing office that reassigns a float nurse in minutes. A Critical Access Hospital has none of that infrastructure. The [Flex Monitoring Team](https://www.flexmonitoring.org/) documents that CAHs operate with thin staffing margins by design, because they serve low-volume rural areas where a full float pool is not financially viable. When the one night nurse on a unit calls out, the replacement pool is not a department, it is a list of individual people who are asleep at home.
 
