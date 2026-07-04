@@ -53,7 +53,77 @@ export function smokeRoutes(root = process.cwd(), dist = path.join(root, 'dist')
     if (!fs.existsSync(path.join(dist, r, 'index.html'))) problems.push(`missing key route: /${r}`);
   }
 
+  problems.push(...checkRedirects(root, dist));
+  problems.push(...checkPageMeta(dist));
+  problems.push(...checkRobots(root));
+
   return { ok: problems.length === 0, problems };
+}
+
+export function checkRedirects(root = process.cwd(), dist = path.join(root, 'dist')) {
+  const problems = [];
+  const tomlPath = path.join(root, 'netlify.toml');
+  if (!fs.existsSync(tomlPath)) return problems;
+  const toml = fs.readFileSync(tomlPath, 'utf8');
+  for (const m of toml.matchAll(/to\s*=\s*"([^"]+)"/g)) {
+    const to = m[1];
+    if (!to.startsWith('/')) continue; // external target
+    if (to.includes(':splat') || to === '/404') continue;
+    const clean = to.replace(/\/$/, '');
+    const target = clean === '' ? path.join(dist, 'index.html') : path.join(dist, clean, 'index.html');
+    if (!fs.existsSync(target)) problems.push(`redirect target missing in dist: ${to}`);
+  }
+  return problems;
+}
+
+function* walkHtml(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, entry.name);
+    if (entry.isDirectory()) yield* walkHtml(p);
+    else if (entry.name === 'index.html') yield p;
+  }
+}
+
+// Non-content utility pages excluded from meta checks: static third-party admin
+// tools and internal noindex pitch-deck/preview pages, not indexable SEO content.
+// (Most noindex pages — e.g. /ask, /blog/2, /tag/* — DO carry valid canonical/
+// description/h1 and stay checked; this list is intentionally narrow.)
+const META_EXCLUDE = [
+  'decapcms/index.html',
+  'slide1/index.html',
+  'slide2/index.html',
+  'slides/index.html',
+  'slides-preview/index.html',
+];
+
+export function checkPageMeta(dist) {
+  const problems = [];
+  for (const page of walkHtml(dist)) {
+    const rel = path.relative(dist, page).replace(/\\/g, '/');
+    if (rel.startsWith('404')) continue;
+    if (META_EXCLUDE.includes(rel)) continue;
+    const html = fs.readFileSync(page, 'utf8');
+    const count = (re) => (html.match(re) || []).length;
+    if (count(/<title[\s>]/g) !== 1) problems.push(`${rel}: expected exactly 1 <title>, got ${count(/<title[\s>]/g)}`);
+    if (count(/<link[^>]+rel="canonical"/g) !== 1)
+      problems.push(`${rel}: expected exactly 1 canonical, got ${count(/<link[^>]+rel="canonical"/g)}`);
+    if (count(/<meta[^>]+name="description"/g) < 1) problems.push(`${rel}: missing meta description`);
+    if (count(/<h1[\s>]/g) !== 1) problems.push(`${rel}: expected exactly 1 h1, got ${count(/<h1[\s>]/g)}`);
+  }
+  return problems;
+}
+
+export function checkRobots(root = process.cwd()) {
+  const problems = [];
+  const p = path.join(root, 'public', 'robots.txt');
+  if (!fs.existsSync(p)) return ['public/robots.txt missing'];
+  const txt = fs.readFileSync(p, 'utf8');
+  if (/^Disallow:\s*\/\s*$/m.test(txt)) problems.push('robots.txt has a blanket Disallow: /');
+  for (const agent of ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended']) {
+    const re = new RegExp(`User-agent:\\s*${agent}[\\s\\S]{0,80}?Disallow:\\s*\\/\\s*$`, 'mi');
+    if (re.test(txt)) problems.push(`robots.txt blocks AI crawler ${agent}`);
+  }
+  return problems;
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
