@@ -286,8 +286,8 @@ Watch the AI build a schedule and generate a callout replacement shortlist in th
   </div>
   <div class="rounded-lg bg-primary/5 dark:bg-[#1A2332] border border-primary/25 dark:border-[#1A2332] p-4 text-center">
     <p class="font-bold text-primary dark:text-[#7BAF9B] text-xs mb-1">Nurse Burnout</p>
-    <p class="text-3xl font-extrabold text-primary dark:text-[#7BAF9B]">$52K</p>
-    <p class="text-xs text-primary dark:text-primary mt-1">avg cost per RN departure (NSI 2024)</p>
+    <p class="text-3xl font-extrabold text-primary dark:text-[#7BAF9B]">$61K</p>
+    <p class="text-xs text-primary dark:text-primary mt-1">avg cost per RN departure (NSI 2025)</p>
   </div>
   <div class="rounded-lg bg-rose-50 dark:bg-rose-950 border border-rose-200 dark:border-rose-800 p-4 text-center">
     <p class="font-bold text-rose-800 dark:text-rose-300 text-xs mb-1">PRN Overhead</p>

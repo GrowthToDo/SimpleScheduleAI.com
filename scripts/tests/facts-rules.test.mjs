@@ -28,7 +28,14 @@ test('485.631 must not carry the provide-or-supervise clause', () => {
 
 test('stale NSI figure is flagged', () => {
   bad('replacement cost of $52,350 per RN', 'nsi-2024-figure');
+  bad('avg cost per RN departure $52K (NSI 2024)', 'nsi-2024-figure');
   ok('replacement cost of $61,110 per RN');
+  ok('avg cost per RN departure $61K (NSI 2025)');
+});
+
+test('stale NSI turnover rate is flagged', () => {
+  bad('puts registered nurse turnover at 18.4% nationally', 'nsi-2024-turnover');
+  ok('puts registered nurse turnover at 16.4% nationally');
 });
 
 test('NNU secondary date flagged', () => {

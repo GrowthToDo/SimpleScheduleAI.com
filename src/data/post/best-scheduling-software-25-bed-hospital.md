@@ -170,7 +170,7 @@ The criteria for a 25-bed hospital are not a compressed version of what a 200-be
 
 **Implementation burden:** A 25-bed CAH typically has one IT person shared across the hospital, or none at all. Any software requiring dedicated IT for setup or ongoing maintenance is disqualifying in practice.
 
-**Shift fairness:** With a roster of 15-25 nurses, perceived unfairness in weekend or overnight assignment distribution accelerates turnover. The [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com) puts registered nurse turnover at 18.4% nationally. At 25 beds, losing two nurses is losing 10% of the roster.
+**Shift fairness:** With a roster of 15-25 nurses, perceived unfairness in weekend or overnight assignment distribution accelerates turnover. The [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts registered nurse turnover at 16.4% nationally. At 25 beds, losing two nurses is losing 10% of the roster.
 
 ## The 5 Best Options, Reviewed for 25-Bed Hospitals
 
@@ -214,7 +214,7 @@ Aladtec was built for emergency services (EMS, fire, law enforcement) but has a 
 
 - Built for 24/7 staffing with mandatory minimum coverage rules, which maps cleanly to hospital floors
 - Self-schedule and shift swap features reduce the manager's direct scheduling burden once rules are configured
-- Mobile app is consistently rated well for ease of use by floor nurses
+- Mobile app reviewers cite ease of use for floor nurses (verify current ratings on Capterra)
 - Compliance reporting exports are available for audit prep
 
 **Key limitations:**

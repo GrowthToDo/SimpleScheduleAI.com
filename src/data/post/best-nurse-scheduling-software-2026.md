@@ -614,7 +614,7 @@ Typically 6-18 months for a full deployment, including configuration, training, 
 
 **Q: What is the cheapest nurse scheduling software for a 25-bed hospital?**
 
-Deputy is the lowest-cost option at roughly $4-6 per employee per month, but it lacks the compliance features hospitals need. Aladtec runs $200-450 per month and covers most compliance requirements for small hospitals. NurseGrid Manager has a low-cost tier but is a shift coordination layer, not a full scheduling engine. If you are weighing the no-cost route first, our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) covers where the truly free tools stop. SimpleScheduleAI uses flat-fee pricing - contact for current rates.
+Deputy is the lowest-cost option at roughly $4-6 per employee per month, but it lacks the compliance features hospitals need. Aladtec runs $200-450 per month and covers most compliance requirements for small hospitals. NurseGrid Manager has a low-cost tier but is a shift coordination layer, not a full scheduling engine. If you are weighing the no-cost route first, our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) covers where the truly free tools stop. SimpleScheduleAI uses flat monthly pricing by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses, with no per-nurse fees and no setup fees.
 
 **Q: What is the difference between scheduling software and a managed scheduling service?**
 

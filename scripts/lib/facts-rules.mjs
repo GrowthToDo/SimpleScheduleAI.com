@@ -23,11 +23,19 @@ export const FACTS_RULES = [
   },
   {
     id: 'nsi-2024-figure',
-    trigger: /\$52,?350/,
-    bad: /\$52,?350/,
+    trigger: /\$52,?350|\$52K/i,
+    bad: /\$52,?350|\$52K/i,
     requires: null,
     anchor: 'facts-dossier.md#nsi-2025',
-    message: 'stale NSI figure; 2025 report = $61,110',
+    message: 'stale NSI figure; 2025 report = $61,110 ($61K short form)',
+  },
+  {
+    id: 'nsi-2024-turnover',
+    trigger: /18\.4\s?(%|percent)/,
+    bad: /18\.4\s?(%|percent)/,
+    requires: null,
+    anchor: 'facts-dossier.md#nsi-2025',
+    message: 'stale NSI turnover rate; 2025 report = 16.4% (facts-ok + explicit year label if citing an older edition deliberately)',
   },
   {
     id: 'nnu-date',

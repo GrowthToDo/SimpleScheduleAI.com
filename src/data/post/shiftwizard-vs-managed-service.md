@@ -200,7 +200,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service built for Critical Acc
 
 <img src="/images/blog/shiftwizard-vs-managed-service/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a managed [nurse scheduling service](/how-it-works) for Critical Access Hospitals in Texas. We are not a self-serve scheduling platform; we are not positioned as a head-to-head replacement for ShiftWizard.
+SimpleScheduleAI is an AI-native [nurse scheduling service](/how-it-works) for Critical Access Hospitals in Texas. We are not a self-serve scheduling platform; we are not positioned as a head-to-head replacement for ShiftWizard.
 
 SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. What we offer instead:
 

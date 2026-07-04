@@ -21,7 +21,7 @@ metadata:
   description: 'Four QGenda alternatives for a 25-bed critical access hospital, compared on cost, setup, and small-hospital fit. QGenda is built for large provider groups, not CAHs.'
 ---
 
-QGenda is the dominant physician scheduling platform that has expanded into nursing. For a 25-bed Critical Access Hospital that needs only nursing scheduling, the physician-scheduling overhead is paid complexity that delivers no operational return. SimpleScheduleAI is a managed nursing-only alternative built for Texas Critical Access Hospitals where the nurse manager cannot absorb QGenda's configuration burden alongside clinical duties.
+QGenda is the dominant physician scheduling platform that has expanded into nursing. For a 25-bed Critical Access Hospital that needs only nursing scheduling, the physician-scheduling overhead is paid complexity that delivers no operational return. SimpleScheduleAI is an AI-native, nursing-only alternative built for Texas Critical Access Hospitals where the nurse manager cannot absorb QGenda's configuration burden alongside clinical duties.
 
 This guide compares 6 QGenda alternatives for a Critical Access Hospital, with the decision tree for when to stay and when the click-heavy configuration is no longer worth the value.
 

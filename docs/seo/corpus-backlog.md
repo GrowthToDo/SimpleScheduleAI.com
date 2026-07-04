@@ -84,3 +84,33 @@ Recommend fixing today (all Tier 1, all Small, ~15 minutes total):
 2. **The 3 "SimpleScheduleAI is a managed service" self-labels** (`qgenda-alternatives.md` L24, `shiftwizard-alternatives.md` L152, `shiftwizard-vs-managed-service.md` L203) — direct violations of the standing founder-set self-label rule (`AI-native nurse scheduling service`, never "managed service" as a self-description).
 
 Everything else (Tier 2 structural gaps, Tier 3 polish, the eCFR source-label mismatches, the `/roi` noise) is fine to queue as backlog — none of it misrepresents SSAI's offer or pricing to a reader.
+
+## Addendum: structural + image audit (2026-07-04, second sweep)
+
+Correction to any earlier claim: posts using the "What Should You Do This Week?" heading VARIANT are NOT missing the section (float-pool, night-shift, nurse-burnout, staffing-ratios, retention article). Variant naming may be normalized in a later pass, not a defect.
+
+### Tier 2 (trust/UX)
+| File | Defect | Fix | Size |
+| --- | --- | --- | --- |
+| nurse-rostering-vs-scheduling-software.md | Missing BOTH Our Take and What-to-Do (comparison post) | Add both per canonical pattern | M |
+| float-pool-nursing-small-hospitals.md | Missing /simulator link | Weave into SSAI section | S |
+| night-shift-nurse-schedule-coverage.md | Missing /simulator link | Same | S |
+| nurse-staffing-ratios-critical-access-hospital.md | Missing /simulator link | Same | S |
+| ukg-too-complex-small-hospital.md | Cites $150k-500k implementation costs, no /roi link | Link /roi from cost section | S |
+| self-scheduling-problems-critical-access-hospital.md | Sources H2 sits before Our Take (order oddity) | Reorder | S |
+
+### Tier 3 (polish — image swaps need founder eyeball)
+| File | Defect |
+| --- | --- |
+| ukg-migration-small-hospital.md | Historic B&W surgical-team hero on a 2026 SaaS migration guide (clear tonal mismatch) |
+| nursegrid-alternatives.md | Historic B&W ward photo on a software-alternatives post |
+| shiftwizard-alternatives.md | Historic B&W nurse photo on a software-alternatives post |
+| texas-nursing-overtime-compliance-cah.md | Sticky-note wall on an FLSA-compliance post |
+| how-to-stay-cms-compliant-nurse-scheduling.md | Anatomical heart model on a compliance post (soft) |
+| nurse-rostering-vs + smartlinx-alternatives | Supplies flat-lay family, weak fit |
+| Cluster note | 5 image families over-used (laptop/typing x5, team-at-screen x4, flat-lay, arms-crossed portrait, historic B&W) — families now tagged in pool; gate warns at 3+ |
+
+### Notes
+- Glossary posts (what-is-a-CAH, what-is-per-diem) missing Our Take/WTDT: OPTIONAL per checklist, not defects.
+- Newsroom article exempt from /simulator by design (trendjacking template).
+- Sources heading label unstandardized ("Sources" vs "A Note on Sources") — both numbered, cosmetic only.
