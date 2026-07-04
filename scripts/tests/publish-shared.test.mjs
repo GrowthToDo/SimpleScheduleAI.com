@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import { fileURLToPath } from 'node:url';
-import { parseFrontmatter, contentHash, resolvePost, scanInboundLinks } from '../lib/publish-shared.mjs';
+import { parseFrontmatter, contentHash, verdictHash, resolvePost, scanInboundLinks } from '../lib/publish-shared.mjs';
 
 const FIX = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures');
 
@@ -21,6 +21,27 @@ test('contentHash is stable and changes with content', () => {
   assert.equal(contentHash('abc'), contentHash('abc'));
   assert.notEqual(contentHash('abc'), contentHash('abd'));
   assert.match(contentHash('abc'), /^[0-9a-f]{64}$/);
+});
+
+test('verdictHash ignores draft/publishDate/updateDate flips in frontmatter', () => {
+  const a = '---\ndraft: true\npublishDate: 2026-06-01T00:00:00Z\ntitle: T\n---\nBody text.\n';
+  const b = '---\ndraft: false\npublishDate: 2026-07-04T00:00:00Z\ntitle: T\n---\nBody text.\n';
+  assert.equal(verdictHash(a), verdictHash(b));
+  assert.notEqual(contentHash(a), contentHash(b));
+});
+
+test('verdictHash still changes when body or other frontmatter changes', () => {
+  const a = '---\ndraft: true\ntitle: T\n---\nBody text.\n';
+  const b = '---\ndraft: true\ntitle: T\n---\nEdited body.\n';
+  const c = '---\ndraft: true\ntitle: Other\n---\nBody text.\n';
+  assert.notEqual(verdictHash(a), verdictHash(b));
+  assert.notEqual(verdictHash(a), verdictHash(c));
+});
+
+test('verdictHash does not touch draft/publishDate/updateDate mentions in the body', () => {
+  const a = '---\ndraft: true\ntitle: T\n---\nWe removed the draft: true flag from publishDate: fields.\n';
+  const b = '---\ndraft: false\ntitle: T\n---\nWe removed the draft: true flag from publishDate: fields.\n';
+  assert.equal(verdictHash(a), verdictHash(b));
 });
 
 function makeRepo() {

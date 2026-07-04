@@ -60,3 +60,24 @@ test('setters throw on unknown field names', () => {
   assert.throws(() => setMechanical(m, 'checkBlgo', 'PASS', 'h'), /Unknown mechanical field/);
   assert.throws(() => setRecorded(m, 'founderAproval', 'YES', 'x', 'h'), /Unknown recorded field/);
 });
+
+test('manifestStatus accepts a {mechanicalHash, verdictHash} object: mechanical and recorded fields are checked against their own hash', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'mf-'));
+  const m = loadManifest('p', root);
+  const mHash = 'mech-hash-1';
+  const vHash = 'verdict-hash-1';
+  for (const f of MECHANICAL_FIELDS) setMechanical(m, f, 'PASS', mHash);
+  setRecorded(m, 'proofread', 'READY', 'code-reviewer', vHash);
+  setRecorded(m, 'factCheck', 'NOT_REQUIRED', 'orchestrator', vHash);
+  setRecorded(m, 'imageEyeball', 'OK', 'founder', vHash);
+  setRecorded(m, 'founderApproval', 'YES', 'founder', vHash);
+
+  // Both hashes match their respective fields -> green.
+  assert.equal(manifestStatus(m, { mechanicalHash: mHash, verdictHash: vHash }).green, true);
+
+  // Mechanical hash changed (e.g. content edit) -> mechanical fields stale -> not green.
+  assert.equal(manifestStatus(m, { mechanicalHash: 'mech-hash-2', verdictHash: vHash }).green, false);
+
+  // Verdict hash changed (e.g. reviewed content actually changed) -> recorded fields stale -> not green.
+  assert.equal(manifestStatus(m, { mechanicalHash: mHash, verdictHash: 'verdict-hash-2' }).green, false);
+});

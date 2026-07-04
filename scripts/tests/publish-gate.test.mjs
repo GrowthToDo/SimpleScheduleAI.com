@@ -85,3 +85,28 @@ test('parseCheckLinksOutput: crash output (no BROKEN lines) is not a pass; canon
   assert.equal(parseCheckLinksOutput('  [BROKEN] 404  https://x.com/blog/s', 'https://x.com/blog/s'), true);
   assert.equal(parseCheckLinksOutput('  [BROKEN] 404  https://other.com/dead', 'https://x.com/blog/s'), false);
 });
+
+test('recorded verdicts survive a draft/date flip: proofread stays FRESH, mechanical fields go STALE', () => {
+  const root = makeRepo();
+  gate(root, ['subject']);
+  gate(root, ['subject', '--set', 'proofread=READY', '--by', 'code-reviewer']);
+  gate(root, ['subject', '--set', 'factcheck=NOT_REQUIRED']);
+  gate(root, ['subject', '--set', 'image-eyeball=OK']);
+  gate(root, ['subject', '--set', 'founder-approval=YES']);
+
+  // Flip draft: false -> true and bump publishDate/updateDate — a process
+  // action, not a reviewed-content edit.
+  const p = path.join(root, 'src', 'data', 'post', 'subject.md');
+  let text = fs.readFileSync(p, 'utf8');
+  text = text.replace('draft: false', 'draft: true');
+  text = text.replace(/publishDate: [^\n]+/, 'publishDate: 2026-08-01T00:00:00Z');
+  text = text.replace(/updateDate: [^\n]+/, 'updateDate: 2026-08-01T00:00:00Z');
+  fs.writeFileSync(p, text);
+
+  const r = gate(root, ['subject', '--status']);
+  assert.equal(r.code, 1); // dateSanity must re-run on a real date change -> mechanical fields stale -> not green
+  assert.match(r.out, /\[PASS \] proofread/); // recorded verdict is FRESH (not STALE), no re-review needed
+  assert.doesNotMatch(r.out.match(/proofread[^\n]*/)[0], /STALE/);
+  // Mechanical fields ARE stale because contentHash changed (dateSanity must re-check the new dates).
+  assert.match(r.out, /dateSanity.*STALE|checkBlog.*STALE/s);
+});

@@ -37,6 +37,28 @@ export function contentHash(text) {
   return crypto.createHash('sha256').update(text).digest('hex');
 }
 
+/**
+ * Hash used for RECORDED verdicts (proofread, factCheck, imageEyeball,
+ * founderApproval, indexNow, gscSitemap). Flipping `draft:` or bumping
+ * `publishDate:`/`updateDate:` is a process action, not a content edit — it
+ * should not stale a human verdict that already reviewed the actual content.
+ * Strips lines matching those three keys from the frontmatter block only
+ * (the body, and any occurrence of those words in the body, is untouched),
+ * then hashes what remains. MECHANICAL fields (checkBlog, dateSanity, etc.)
+ * must keep using the full `contentHash` — dateSanity in particular has to
+ * re-run whenever publishDate/updateDate actually change.
+ */
+export function verdictHash(text) {
+  const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+  if (!m) return contentHash(text);
+  const fmBody = m[1]
+    .split(/\r?\n/)
+    .filter((line) => !/^(draft|publishDate|updateDate):.*$/.test(line))
+    .join('\n');
+  const rest = text.slice(m[0].length);
+  return contentHash(`---\n${fmBody}\n---\n${rest}`);
+}
+
 const COLLECTIONS = [
   { collection: 'post', dir: ['src', 'data', 'post'] },
   { collection: 'article', dir: ['src', 'data', 'article'] },

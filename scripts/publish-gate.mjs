@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { parseFrontmatter, contentHash, resolvePost, scanInboundLinks } from './lib/publish-shared.mjs';
+import { parseFrontmatter, contentHash, verdictHash, resolvePost, scanInboundLinks } from './lib/publish-shared.mjs';
 import { checkFacts } from './lib/facts-rules.mjs';
 import {
   loadManifest,
@@ -126,11 +126,11 @@ export async function runMechanical(slugOrPath, root, { network = true, external
   for (const v of facts) console.log(`  facts drift [${v.id}] L${v.line}: ${v.message}`);
 
   saveManifest(manifest, root);
-  return { manifest, hash };
+  return { manifest, hash, vHash: verdictHash(text) };
 }
 
-export function printStatus(manifest, currentHash) {
-  const { green, rows } = manifestStatus(manifest, currentHash);
+export function printStatus(manifest, hashes) {
+  const { green, rows } = manifestStatus(manifest, hashes);
   console.log(`\nPublish manifest: ${manifest.slug} (${manifest.collection})`);
   for (const r of rows) {
     const freshness = r.status === 'MISSING' ? '' : r.fresh ? '' : '  <- STALE (post edited since)';
@@ -171,7 +171,10 @@ async function main() {
   }
 
   const { slug, collection, filePath } = resolvePost(target, root);
-  const currentHash = contentHash(fs.readFileSync(filePath, 'utf8'));
+  const fileText = fs.readFileSync(filePath, 'utf8');
+  const currentHash = contentHash(fileText);
+  const currentVerdictHash = verdictHash(fileText);
+  const hashes = { mechanicalHash: currentHash, verdictHash: currentVerdictHash };
 
   if (setArgRaw) {
     const [rawField, value] = setArgRaw.split('=');
@@ -181,18 +184,18 @@ async function main() {
       process.exit(2);
     }
     const manifest = loadManifest(slug, root, collection);
-    setRecorded(manifest, field, value, byArg || 'unknown', currentHash);
+    setRecorded(manifest, field, value, byArg || 'unknown', currentVerdictHash);
     saveManifest(manifest, root);
-    process.exit(printStatus(manifest, currentHash) ? 0 : 1);
+    process.exit(printStatus(manifest, hashes) ? 0 : 1);
   }
 
   if (args.includes('--status')) {
     const manifest = loadManifest(slug, root, collection);
-    process.exit(printStatus(manifest, currentHash) ? 0 : 1);
+    process.exit(printStatus(manifest, hashes) ? 0 : 1);
   }
 
-  const { manifest, hash } = await runMechanical(target, root, { network, externalTools });
-  process.exit(printStatus(manifest, hash) ? 0 : 1);
+  const { manifest, hash, vHash } = await runMechanical(target, root, { network, externalTools });
+  process.exit(printStatus(manifest, { mechanicalHash: hash, verdictHash: vHash }) ? 0 : 1);
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
