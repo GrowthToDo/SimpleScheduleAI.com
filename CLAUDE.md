@@ -8,17 +8,19 @@ Founder Pradeep. Frame suggestions: hospital ops perspective, not generic tech.
 
 ## Key File Locations
 
-| What                     | Where                                        |
-| ------------------------ | -------------------------------------------- |
-| Pages                    | `src/pages/`                                 |
-| Blog posts               | `src/data/post/`                             |
-| SEO/AEO skill            | `.claude/skills/seo-aeo-simplescheduleai.md` |
-| Competitor review skill  | `.claude/skills/competitor-reviews.md`       |
-| Dev reference skill      | `.claude/skills/project-dev.md`              |
-| Programmatic video skill | `.claude/skills/programmatic-brand-video.md` |
-| Blog post template       | `docs/seo/blog-post-template.mdx`            |
-| Pre-publish checklist    | `docs/seo/pre-publish-checklist.md`          |
-| **Competitor dossier**   | **`docs/seo/competitor-dossier.md`**         |
+| What                         | Where                                        |
+| ---------------------------- | -------------------------------------------- |
+| Pages                        | `src/pages/`                                 |
+| Blog posts                   | `src/data/post/`                             |
+| SEO/AEO skill                | `.claude/skills/seo-aeo-simplescheduleai.md` |
+| Competitor review skill      | `.claude/skills/competitor-reviews.md`       |
+| Dev reference skill          | `.claude/skills/project-dev.md`              |
+| Programmatic video skill     | `.claude/skills/programmatic-brand-video.md` |
+| Blog post template           | `docs/seo/blog-post-template.mdx`            |
+| Pre-publish checklist        | `docs/seo/pre-publish-checklist.md`          |
+| **Governance authority map** | **`docs/seo/GOVERNANCE.md`**                 |
+| Facts dossier                | `docs/seo/facts-dossier.md`                  |
+| **Competitor dossier**       | **`docs/seo/competitor-dossier.md`**         |
 
 ## Competitor Data Rule
 
@@ -37,7 +39,7 @@ After adding new verified data from a live fetch, always update the dossier main
 - **Competitor content:** Load `.claude/skills/competitor-reviews.md` before Key Limitations, reviewer quotes, or feature comparisons. The skill will direct you to the dossier first.
 - **Code/dev work:** Load `.claude/skills/project-dev.md` for tech stack, pages, schema, coding standards.
 - **Launch/marketing video:** Load `.claude/skills/programmatic-brand-video.md` (a product-agnostic Remotion method, also installed globally) before creating, re-timing, re-formatting, or QA-ing a product video. SSAI's video project lives at `ssai-launch-video/` (separate from this repo); its specifics are in the skill's "Worked example" section.
-- **Checklist execution:** Every checklist item must be verified mechanically — no mental checks, no assumptions. If an item requires external data (web search, file read, live fetch), run that lookup. If blocked or uncertain, ask before skipping or guessing.
+- **Checklist execution:** Every checklist item must be verified with evidence — no mental checks, no assumptions. Mechanical rules are delegated to scripts (run the gate; never re-check a green row by hand); judgment items are verified by grep-quoting the text or running the required lookup (web search, file read, live fetch). If blocked or uncertain, ask before skipping or guessing. Doc authority and conflicts: `docs/seo/GOVERNANCE.md` (scripts > dossier > skill > checklist).
 
 ## Subagent Strategy
 

@@ -7,11 +7,11 @@
  * fuzzy or context-dependent is a WARN, so the gate passes cleanly on
  * already-compliant posts. Trust over coverage.
  *
- * Runs every greppable rule from docs/seo/pre-publish-checklist.md plus the
- * conventions we've established post-checklist (Sources not in TOC, no
- * §62.002 cite, no DSHS, no 8-and-80 SSAI attribution). Works on drafts and
- * live posts equally — frontmatter draft: status is reported but does not
- * affect rule application.
+ * Per docs/seo/GOVERNANCE.md this script (with check-links/publish-gate/smoke)
+ * is the single authoritative home of every mechanical rule — the checklist is
+ * judgment-only and points here. A new greppable rule gets added HERE (with a
+ * test), never to a doc. Works on drafts and live posts equally — frontmatter
+ * draft: status is reported but does not affect rule application.
  *
  * Usage:
  *   npm run check-blog src/data/post/<slug>.md   — check one file
