@@ -1,13 +1,13 @@
 ---
-draft: true
-publishDate: 2026-07-01T00:00:00Z
-updateDate: 2026-07-01T00:00:00Z
+draft: false
+publishDate: 2026-07-04T00:00:00Z
+updateDate: 2026-07-04T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Safe Staffing and Nurse-to-Patient Ratios at a Critical Access Hospital'
 excerpt: >
   Searchers want a number, but there is no federal nurse-to-patient ratio. This
-  guide explains what safe staffing law actually requires, why California is the
-  only state with mandated ratios, and how a 25-bed Texas hospital staffs to
+  guide explains what safe staffing law actually requires, why only California and
+  Oregon mandate broad ratios, and how a 25-bed Texas hospital staffs to
   acuity and a committee-approved plan instead.
 image: https://images.unsplash.com/photo-1603807008857-ad66b70431aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
@@ -23,10 +23,10 @@ metadata:
 ## Key Takeaways
 
 - There is no federal nurse-to-patient ratio. Federal law and the CMS Conditions of Participation require "adequate numbers" of nurses matched to patient acuity and coverage, not a fixed number, under [42 CFR 482.23](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-482/subpart-C/section-482.23) for general hospitals and [485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) plus [485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) for critical access hospitals
-- California is the only state with comprehensive mandated nurse-to-patient ratios: 1:5 on medical-surgical units, 1:2 in the ICU and critical care, and 1:4 in the emergency department, set by [22 CCR 70217](https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217)
-- Texas mandates a nurse staffing committee with at least 60 percent direct-care registered nurses and a written, adopted staffing plan under [Texas Health and Safety Code 257.004](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/), not a hard ratio
+- California has the longest-standing comprehensive nurse-to-patient ratios: 1:5 on medical-surgical units, 1:2 in the ICU and critical care, and 1:4 in the emergency department, set by [22 CCR 70217](https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217); Oregon's 2023 staffing law adds ratios across 12 unit types, fully in effect as of mid-2026
+- Texas mandates a nurse staffing committee with at least 60 percent direct-care registered nurses and a written, adopted staffing plan under [Texas Health and Safety Code 257.004](https://statutes.capitol.texas.gov/Docs/HS/htm/HS.257.htm), not a hard ratio
 - A 25-bed Texas hospital does not staff to a state number. It staffs to acuity and coverage and must be able to show that its committee-approved plan was followed
-- The safe-staffing evidence is strong: external research links each additional patient added to a nurse's load with roughly a 7 percent higher likelihood of patient death within 30 days, per [AHRQ](https://psnet.ahrq.gov/primer/nursing-and-patient-safety)
+- The safe-staffing evidence is strong: each additional patient added to a nurse's load is linked with roughly a 7 percent higher likelihood of patient death within 30 days, per [Aiken et al., JAMA 2002](https://pubmed.ncbi.nlm.nih.gov/12387650/), a body of research [AHRQ](https://psnet.ahrq.gov/primer/nursing-and-patient-safety) summarizes
 
 ## Table of Contents
 
@@ -51,9 +51,9 @@ That absence is deliberate. A federal ratio would have to fit a 700-bed academic
 
 ## Which States Mandate Nurse Staffing Ratios?
 
-Very few. California is the only state with comprehensive mandated nurse-to-patient ratios across unit types. A handful of other states regulate one unit, phase in limited ratios, or require a staffing committee and public disclosure instead of a hard number. Most states, including Texas, take the committee-and-plan route with no fixed ratio at all.
+Very few. California has the longest-standing comprehensive nurse-to-patient ratios, in force across unit types since 2004, and Oregon joined it in 2023 with a staffing law that sets ratios across 12 unit types, fully in effect as of mid-2026. A handful of other states regulate one unit or require a staffing committee and public disclosure instead of a hard number. Most states, including Texas, take the committee-and-plan route with no fixed ratio at all.
 
-California's ratios come from [22 CCR 70217](https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217): 1 nurse to 5 patients on medical-surgical units, 1 to 2 in the ICU and other critical care, and 1 to 4 in the emergency department, among others. These are floors, not targets, and they apply at all times including breaks. No other state matches that breadth. The table below shows who mandates what.
+California's ratios come from [22 CCR 70217](https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217): 1 nurse to 5 patients on medical-surgical units, 1 to 2 in the ICU and other critical care, and 1 to 4 in the emergency department, among others. These are floors, not targets, and they apply at all times including breaks. The table below shows who mandates what.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-sm border-collapse table-fixed break-words">
@@ -77,8 +77,8 @@ California's ratios come from [22 CCR 70217](https://www.law.cornell.edu/regulat
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="align-top py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Oregon</td>
-        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Phasing in ratios</td>
-        <td class="align-top py-3 text-slate-700 dark:text-slate-300">Staffing-law ratios being phased in on a set timeline</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Comprehensive ratios (2023 law)</td>
+        <td class="align-top py-3 text-slate-700 dark:text-slate-300">Ratios across 12 unit types, fully in effect as of mid-2026</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="align-top py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">New York</td>
@@ -94,11 +94,11 @@ California's ratios come from [22 CCR 70217](https://www.law.cornell.edu/regulat
   </table>
 </div>
 
-The takeaway for a rural administrator is that "nurse to patient ratio by state" is a real search because the answer genuinely differs by state. If you operate outside California, you almost certainly do not have a legal ratio, and building your schedule as if a 1:5 rule applied to you is a misread of the law.
+The takeaway for a rural administrator is that "nurse to patient ratio by state" is a real search because the answer genuinely differs by state. If you operate outside California and Oregon, you almost certainly do not have a legal ratio, and building your schedule as if a 1:5 rule applied to you is a misread of the law.
 
 ## What Does Texas Require for Safe Staffing?
 
-Texas requires a nurse staffing committee and a written staffing plan, not a ratio. Under [Texas Health and Safety Code 257.004](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/), a hospital must establish a committee where at least 60 percent of the members are registered nurses who provide direct patient care, and that committee develops and recommends a written nurse staffing plan the hospital adopts.
+Texas requires a nurse staffing committee and a written staffing plan, not a ratio. Under [Texas Health and Safety Code 257.004](https://statutes.capitol.texas.gov/Docs/HS/htm/HS.257.htm), a hospital must establish a committee where at least 60 percent of the members are registered nurses who provide direct patient care, and that committee develops and recommends a written nurse staffing plan the hospital adopts.
 
 The plan is where acuity lives. Rather than a statewide number, the committee sets staffing based on unit type, patient acuity and intensity, skill mix, the experience of the nursing staff, and the layout of the unit. The hospital then follows the plan and keeps records that show it did. In practice this means a Texas hospital is accountable to its own adopted plan, which a surveyor can ask to see, alongside the schedules and staffing records that demonstrate the plan was met on a given shift.
 
@@ -114,7 +114,7 @@ Three things make a plan defensible at a small hospital. First, the schedule mat
 
 ## What Does the Evidence Say About Nurse-to-Patient Ratios?
 
-The evidence for safe staffing is strong even though the federal rule is not a number. External research associates heavier nurse workloads with worse patient outcomes: studies summarized by [AHRQ](https://psnet.ahrq.gov/primer/nursing-and-patient-safety) find that each additional patient added to a nurse's workload is linked to roughly a 7 percent higher likelihood of a patient dying within 30 days of admission. That figure comes from published nursing research, not from SimpleScheduleAI, and it describes an association across large datasets, not a guarantee for any one shift.
+The evidence for safe staffing is strong even though the federal rule is not a number. External research associates heavier nurse workloads with worse patient outcomes: the landmark study, [Aiken et al. in JAMA (2002)](https://pubmed.ncbi.nlm.nih.gov/12387650/), found each additional patient added to a nurse's workload linked to roughly a 7 percent higher likelihood of a patient dying within 30 days of admission, an association the broader literature summarized by [AHRQ](https://psnet.ahrq.gov/primer/nursing-and-patient-safety) supports. That figure comes from published nursing research, not from SimpleScheduleAI, and it describes an association across large datasets, not a guarantee for any one shift.
 
 This is the reasoning behind both ratio laws and staffing committees. The [American Nurses Association](https://www.nursingworld.org/practice-policy/nurse-staffing/) supports safe staffing through both enforceable minimum nurse-to-patient ratios and nurse-led staffing committees that set staffing based on unit needs, treating the two as complementary tools rather than rivals. For a rural hospital the practical lesson is the same regardless of which mechanism your state uses: the number of qualified nurses on a shift is a patient-safety variable, and a plan that quietly runs thin is a plan that carries real clinical risk. Documenting to your plan is not paperwork for its own sake, it is the record that your staffing matched the acuity in front of you.
 
@@ -161,11 +161,11 @@ One honest limitation: SimpleScheduleAI does not set your staffing plan or inter
 
 **Q: Is there a legal nurse-to-patient ratio in the United States?**
 
-There is no federal nurse-to-patient ratio. Federal law and the CMS Conditions of Participation require "adequate numbers" of nurses matched to patient acuity, not a fixed count. California is the only state with comprehensive mandated ratios. Most states, including Texas, require a staffing committee and written plan instead.
+There is no federal nurse-to-patient ratio. Federal law and the CMS Conditions of Participation require "adequate numbers" of nurses matched to patient acuity, not a fixed count. California and Oregon are the only states with broad mandated ratios across unit types. Most states, including Texas, require a staffing committee and written plan instead.
 
 **Q: What is the safe nurse-to-patient ratio for a medical-surgical unit?**
 
-Only California sets one by law: 1 nurse to 5 patients on medical-surgical units, under 22 CCR 70217. Elsewhere there is no legal med-surg ratio. The safe number is whatever your hospital's nurse staffing committee sets in its written plan based on acuity, skill mix, and unit type.
+Two states set one by law: California requires 1 nurse to 5 patients on medical-surgical units under 22 CCR 70217, and Oregon's 2023 staffing law sets a med-surg ratio that tightened to 1:4 in mid-2026. Elsewhere there is no legal med-surg ratio. The safe number is whatever your hospital's nurse staffing committee sets in its written plan based on acuity, skill mix, and unit type.
 
 **Q: Does Texas have mandated nurse staffing ratios?**
 
@@ -181,9 +181,10 @@ By documenting to its plan. The staffing committee's written plan is the standar
 2. eCFR, [42 CFR 485.635, Condition of Participation: Provision of Services (Critical Access Hospitals)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
 3. eCFR, [42 CFR 485.631, Condition of Participation: Staffing and Staff Responsibilities (Critical Access Hospitals)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
 4. Cornell Law, [22 CCR 70217, California Nurse-to-Patient Ratios](https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217)
-5. FindLaw, [Texas Health and Safety Code 257.004, Nurse Staffing Committee](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/)
+5. Texas Legislature Online, [Texas Health and Safety Code 257.004, Nurse Staffing Committee](https://statutes.capitol.texas.gov/Docs/HS/htm/HS.257.htm)
 6. American Nurses Association, [Nurse Staffing](https://www.nursingworld.org/practice-policy/nurse-staffing/)
 7. AHRQ PSNet, [Nursing and Patient Safety](https://psnet.ahrq.gov/primer/nursing-and-patient-safety)
+8. Aiken LH et al., [Hospital nurse staffing and patient mortality, nurse burnout, and job dissatisfaction](https://pubmed.ncbi.nlm.nih.gov/12387650/), JAMA 2002;288(16):1987-1993
 
 ---
 

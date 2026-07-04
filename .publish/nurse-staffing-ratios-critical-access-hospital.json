@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-staffing-ratios-critical-access-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T05:50:48.849Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T05:50:51.246Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T05:51:02.673Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T05:51:02.696Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T05:51:02.816Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T05:51:02.816Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T05:51:02.817Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-04T05:50:47.652Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "fact-check-agent",
+      "setAt": "2026-07-04T05:50:47.865Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-07-04T05:50:48.078Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-04T05:50:48.308Z",
+      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+    }
+  },
+  "overrides": []
+}
