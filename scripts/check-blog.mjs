@@ -90,6 +90,32 @@ const RETIRED_PILOT_STRINGS = [
 // Canonical booking host fragment for the secondary CTA.
 const BOOKING_URL_FRAGMENT = 'cal.com/gautham-8bdvdx';
 
+// Sources-section brand -> expected domain map. Keys are lowercase and
+// word-boundary matched against the label text (before the first comma or
+// bracket) on a numbered Sources line. If the label mentions a brand but the
+// link's URL host does not end with the mapped domain, that is a hard fail.
+const SOURCE_BRAND_DOMAINS = {
+  findlaw: 'findlaw.com',
+  cornell: 'cornell.edu',
+  ecfr: 'ecfr.gov',
+  cms: 'cms.gov',
+  cdc: 'cdc.gov',
+  niosh: 'cdc.gov',
+  ahrq: 'ahrq.gov',
+  jama: 'jamanetwork.com',
+  'nsi nursing': 'nsinursingsolutions.com',
+  'american nurses association': 'nursingworld.org',
+  aonl: 'aonl.org',
+  rhihub: 'ruralhealthinfo.org',
+  'rural health information hub': 'ruralhealthinfo.org',
+  dol: 'dol.gov',
+  bls: 'bls.gov',
+  'texas legislature': 'statutes.capitol.texas.gov',
+  hrsa: 'hrsa.gov',
+  pubmed: 'nih.gov',
+  'national nurses united': 'nationalnursesunited.org',
+};
+
 function readFile(path) {
   try {
     return readFileSync(path, 'utf8').split(/\r?\n/);
@@ -600,6 +626,31 @@ function check(file) {
       // A reference list item rendered as a bullet (markdown `- ` or `* `).
       if (/^\s*[-*]\s+\S/.test(body[i])) {
         fail('Sources entry is bulleted (must be a numbered list)', bodyOffset + i + 1, body[i].trim().slice(0, 120));
+      }
+      // Sources label/URL domain mismatch: the label names a known brand but
+      // the link host does not belong to that brand's domain.
+      const srcMatch = body[i].match(/^\d+\.\s+([^,[]+),?\s*\[.*\]\((https?:[^)]+)\)/);
+      if (srcMatch) {
+        const label = srcMatch[1].trim().toLowerCase();
+        const url = srcMatch[2];
+        let host = '';
+        try {
+          host = new URL(url).host.toLowerCase();
+        } catch {
+          /* unparseable URL; skip domain check */
+        }
+        if (host) {
+          for (const [brand, domain] of Object.entries(SOURCE_BRAND_DOMAINS)) {
+            const brandRe = new RegExp(`\\b${brand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+            if (brandRe.test(label) && !host.endsWith(domain)) {
+              fail(
+                `Sources label/URL mismatch: label mentions "${brand}" but URL host is ${host}`,
+                bodyOffset + i + 1,
+                body[i].trim().slice(0, 140)
+              );
+            }
+          }
+        }
       }
     }
   }
