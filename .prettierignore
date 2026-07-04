@@ -2,3 +2,9 @@ dist
 node_modules
 .github
 .changeset
+# Non-source scratch and report directories
+docs/**
+.superpowers/**
+.claude/**
+# Publish log (operational log, not source)
+PUBLISHING-LOG.md

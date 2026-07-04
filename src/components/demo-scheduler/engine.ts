@@ -107,7 +107,13 @@ export const SEED = 20260614;
 
 const chargeable = (level: Level): boolean => level >= 4;
 
-function rnStaff(id: string, name: string, level: Level, employment: Employment = 'full-time', extra: Partial<Nurse> = {}): Nurse {
+function rnStaff(
+  id: string,
+  name: string,
+  level: Level,
+  employment: Employment = 'full-time',
+  extra: Partial<Nurse> = {}
+): Nurse {
   return { id, name, role: 'RN', level, chargeQualified: chargeable(level), employment, ...extra };
 }
 function support(id: string, name: string, role: 'LPN' | 'CNA'): Nurse {
@@ -233,13 +239,26 @@ function roleFitViolation(nurse: Nurse, kind: SlotKind, day: DayIndex, type: Shi
     return { rule: 'chargeCoverage', ...at, message };
   }
   if (kind === 'rn') {
-    return { rule: 'rnCoverage', ...at, message: `${nurse.name} is a ${nurse.role} — this is a registered-nurse seat.` };
+    return {
+      rule: 'rnCoverage',
+      ...at,
+      message: `${nurse.name} is a ${nurse.role} — this is a registered-nurse seat.`,
+    };
   }
-  return { rule: 'supportCoverage', ...at, message: `${nurse.name} is an RN — this seat is for a support aide (LPN/CNA).` };
+  return {
+    rule: 'supportCoverage',
+    ...at,
+    message: `${nurse.name} is an RN — this seat is for a support aide (LPN/CNA).`,
+  };
 }
 
 /** Count who currently fills each role-category on a given shift. */
-function countOnShift(schedule: Schedule, day: DayIndex, type: ShiftType, ds: Dataset): { charge: number; rn: number; support: number; total: number } {
+function countOnShift(
+  schedule: Schedule,
+  day: DayIndex,
+  type: ShiftType,
+  ds: Dataset
+): { charge: number; rn: number; support: number; total: number } {
   const here = schedule.filter((a) => a.day === day && a.type === type);
   let charge = 0;
   let rn = 0;
@@ -286,7 +305,11 @@ export function placementViolations(schedule: Schedule, cand: Assignment, ds: Da
 
   // ICU competency — RNs assigned to the unit must be Level ≥ 2. (Aides are governed by role, not level.)
   if (nurse.role === 'RN' && nurse.level < 2) {
-    v.push({ rule: 'icuCompetency', ...at, message: `${name} isn't checked off for ICU yet — ICU shifts need an ICU-competent RN.` });
+    v.push({
+      rule: 'icuCompetency',
+      ...at,
+      message: `${name} isn't checked off for ICU yet — ICU shifts need an ICU-competent RN.`,
+    });
   }
   // Approved leave — never scheduled during it.
   if (nurse.leaveDays?.includes(cand.day)) {
@@ -307,7 +330,11 @@ export function placementViolations(schedule: Schedule, cand: Assignment, ds: Da
       v.push({ rule: 'noOverlap', ...at, message: `${name} is already on another shift at that time.` });
       overlapFlagged = true;
     } else if (gap >= 0 && gap < 10 && !restFlagged) {
-      v.push({ rule: 'rest10h', ...at, message: `${name} would get only ${gap}h rest between shifts — under the 10-hour minimum.` });
+      v.push({
+        rule: 'rest10h',
+        ...at,
+        message: `${name} would get only ${gap}h rest between shifts — under the 10-hour minimum.`,
+      });
       restFlagged = true;
     }
   }
@@ -316,7 +343,11 @@ export function placementViolations(schedule: Schedule, cand: Assignment, ds: Da
   const workedDays = [...others.map((o) => o.day), cand.day];
   const run = longestConsecutiveRun(workedDays);
   if (run > 5) {
-    v.push({ rule: 'maxConsecutive5', ...at, message: `${name} would be on their ${run}th day in a row — that breaks the 5-day-in-a-row limit.` });
+    v.push({
+      rule: 'maxConsecutive5',
+      ...at,
+      message: `${name} would be on their ${run}th day in a row — that breaks the 5-day-in-a-row limit.`,
+    });
   }
 
   // ≤60h in any rolling 7-day window.
@@ -344,13 +375,28 @@ export function checkSchedule(schedule: Schedule, ds: Dataset = DATASET): Violat
     const c = countOnShift(schedule, shift.day, shift.type, ds);
     const where = `${DAY_NAMES[shift.day]} ${shift.type} shift`;
     if (c.charge < shift.charge) {
-      out.push({ rule: 'chargeCoverage', day: shift.day, type: shift.type, message: `${where} has no charge nurse — every shift needs a charge-qualified RN.` });
+      out.push({
+        rule: 'chargeCoverage',
+        day: shift.day,
+        type: shift.type,
+        message: `${where} has no charge nurse — every shift needs a charge-qualified RN.`,
+      });
     }
     if (c.rn < shift.charge + shift.rn) {
-      out.push({ rule: 'rnCoverage', day: shift.day, type: shift.type, message: `${where} is short ${shift.charge + shift.rn - c.rn} registered nurse(s).` });
+      out.push({
+        rule: 'rnCoverage',
+        day: shift.day,
+        type: shift.type,
+        message: `${where} is short ${shift.charge + shift.rn - c.rn} registered nurse(s).`,
+      });
     }
     if (c.support < shift.support) {
-      out.push({ rule: 'supportCoverage', day: shift.day, type: shift.type, message: `${where} needs a support aide (LPN/CNA).` });
+      out.push({
+        rule: 'supportCoverage',
+        day: shift.day,
+        type: shift.type,
+        message: `${where} needs a support aide (LPN/CNA).`,
+      });
     }
   }
 
@@ -471,7 +517,9 @@ export function generateSchedule(seed: number = SEED, ds: Dataset = DATASET): Sc
         const have = kind === 'charge' ? c.charge : kind === 'rn' ? c.rn : c.support;
         if (have >= target) break;
         const here = onShift(shift.day, shift.type);
-        let cands = eligibleCandidates(schedule, shift, kind, ds, seed).filter((cd) => cd.eligible && !here.has(cd.nurse.id));
+        let cands = eligibleCandidates(schedule, shift, kind, ds, seed).filter(
+          (cd) => cd.eligible && !here.has(cd.nurse.id)
+        );
         if (kind === 'rn') {
           // Prefer non-charge RNs for staff seats to preserve scarce charge capacity.
           cands = cands.sort((x, y) => {

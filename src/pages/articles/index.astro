@@ -26,7 +26,8 @@ const items = await Promise.all(
 
 const metadata = {
   title: 'Newsroom',
-  description: 'Time-sensitive news and analysis on nurse scheduling, staffing, and compliance for Critical Access Hospitals.',
+  description:
+    'Time-sensitive news and analysis on nurse scheduling, staffing, and compliance for Critical Access Hospitals.',
   openGraph: {
     type: 'website',
   },
@@ -50,9 +51,7 @@ const metadata = {
         <ul>
           {items.map(({ article, image, link }) => (
             <li class="mb-12 md:mb-20">
-              <article
-                class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${image ? 'md:grid-cols-2' : ''}`}
-              >
+              <article class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${image ? 'md:grid-cols-2' : ''}`}>
                 {image && (
                   <a class="relative block group" href={link}>
                     <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-72 lg:pb-[56.25%] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg">
@@ -97,9 +96,7 @@ const metadata = {
                     </h2>
                   </header>
 
-                  {article.excerpt && (
-                    <p class="flex-grow text-muted dark:text-slate-400 text-lg">{article.excerpt}</p>
-                  )}
+                  {article.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{article.excerpt}</p>}
                   {article.tags && Array.isArray(article.tags) && (
                     <footer class="mt-5">
                       <PostTags tags={article.tags} />
