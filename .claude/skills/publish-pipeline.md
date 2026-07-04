@@ -31,3 +31,4 @@ State lives in `.publish/<slug>.json`, not in this conversation. FIRST command o
 - Verify subagent output against the diff, never its self-report.
 - Newsroom articles follow `trendjacking-articles.md` for detection/scoring; this pipeline governs their gate + publish identically.
 - `npm run smoke` after any routing/template change; CI runs it on every push.
+- **Pages get a judgment review too (rule added 2026-07-04):** any NEW page or substantive copy rewrite under `src/pages/` gets a judgment review agent pass before ship (claims vs facts-dossier product truths, positioning-registry founder rules, ICP voice, internal consistency, AI-tells) — smoke only covers mechanics (title/canonical/description/h1). Pages have no manifest; the review verdict goes in the commit message.
