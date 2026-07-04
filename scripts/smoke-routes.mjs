@@ -65,6 +65,9 @@ export function checkRedirects(root = process.cwd(), dist = path.join(root, 'dis
   const tomlPath = path.join(root, 'netlify.toml');
   if (!fs.existsSync(tomlPath)) return problems;
   const toml = fs.readFileSync(tomlPath, 'utf8');
+  // ASSUMPTION (zero-dep regex, not a TOML parser): `to = "..."` keys appear ONLY
+  // inside [[redirects]] blocks in this repo's netlify.toml. If a future edit adds
+  // a `to` key under any other table, scope this parse to [[redirects]] sections.
   for (const m of toml.matchAll(/to\s*=\s*"([^"]+)"/g)) {
     const to = m[1];
     if (!to.startsWith('/')) continue; // external target
