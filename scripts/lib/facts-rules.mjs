@@ -35,7 +35,8 @@ export const FACTS_RULES = [
     bad: /18\.4\s?(%|percent)/,
     requires: null,
     anchor: 'facts-dossier.md#nsi-2025',
-    message: 'stale NSI turnover rate; 2025 report = 16.4% (facts-ok + explicit year label if citing an older edition deliberately)',
+    message:
+      'stale NSI turnover rate; 2025 report = 16.4% (facts-ok + explicit year label if citing an older edition deliberately)',
   },
   {
     id: 'nnu-date',
