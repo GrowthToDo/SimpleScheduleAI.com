@@ -166,3 +166,8 @@ Searched all 3 converted `.md` outputs (excluding this file) for: `managed servi
 | ai-nurse-scheduling-vs-traditional.md | (none) | — | — | Clean. |
 
 No instances of `our scheduling team`, bald `No IT.`, or `live demo` (all converted to "interactive demo/simulator" per founder rule) remain in any of the 3 outputs.
+
+## Founder review corrections (2026-07-04)
+- M7 post: "integration-heavy"/"Integrate Yourself" framing replaced with the factual runs-itself axis (M7's own positioning) grounded in ICP reality (a 25-bed hospital has no IT/scheduling staff to operate enterprise software). H2 + TOC anchor updated in pair. Competitor-inflation guardrail applied.
+- M7 excerpt: "pick the right fit" restored to "pick the right model" (the post's thesis word; founder-confirmed).
+- ShiftWizard title: options A/B/C presented to founder; pending pick. A = vendor-vs-vendor retitle + 301; B = category retitle, keep slug; C = keep title (category survives as market term).
