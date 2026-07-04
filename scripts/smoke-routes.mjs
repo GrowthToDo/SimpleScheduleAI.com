@@ -16,7 +16,7 @@ const KEY_ROUTES = [
 
 export function smokeRoutes(root = process.cwd(), dist = path.join(root, 'dist')) {
   const problems = [];
-  const live = listPosts(root).filter((p) => p.data.draft === false);
+  const live = listPosts(root).filter((p) => p.data.draft !== true);
 
   for (const p of live) {
     const base = p.collection === 'article' ? 'articles' : 'blog';
