@@ -2,556 +2,667 @@
   {
     "id": "1576091160550-2173dba999ef",
     "description": "Hands typing on laptop with stethoscope resting on desk",
+    "family": "desk-admin",
     "topics": ["scheduling", "healthcare admin", "software", "nurse manager"]
   },
   {
     "id": "1516549655169-df83a0774514",
     "description": "Empty hospital operating room with overhead surgical lights and equipment",
+    "family": "ward-clinical",
     "topics": ["hospital", "clinical", "facility", "CAH"]
   },
   {
     "id": "1582750433449-648ed127bb54",
     "description": "Doctor wearing surgical mask and stethoscope, outdoor background",
+    "family": "nurse-portrait",
     "topics": ["doctor", "healthcare professional", "medical staff", "hospital"]
   },
   {
     "id": "1623438787437-7bcc5637efeb",
     "description": "Nurse in scrubs and PPE at desk reviewing tablet in hospital ward",
+    "family": "desk-admin",
     "topics": ["nurse", "scheduling", "hospital ward", "clinical workflow", "nurse manager"]
   },
   {
     "id": "1517271023557-20d13b255594",
     "description": "Close-up of a stethoscope held up by a healthcare professional",
+    "family": "stethoscope-closeup",
     "topics": ["stethoscope", "healthcare", "medical equipment", "HIPAA", "compliance"]
   },
   {
     "id": "1646082275130-347d10885c5f",
     "description": "Patient in hospital gown in wheelchair in hospital corridor",
+    "family": "ward-clinical",
     "topics": ["hospital", "patient care", "facility", "CAH", "healthcare operations"]
   },
   {
     "id": "1592218698237-5bd1aef5e3e7",
     "description": "Surgical team in scrubs and masks performing an operation in an OR",
+    "family": "ward-clinical",
     "topics": ["OR", "surgical team", "hospital clinical", "staffing", "team coordination"]
   },
   {
     "id": "1551076805-e1869033e561",
     "description": "Healthcare professional reviewing data on a laptop screen",
+    "family": "desk-admin",
     "topics": ["scheduling software", "healthcare IT", "data review", "software"]
   },
   {
     "id": "1504439468489-c8920d796a29",
     "description": "Aerial view of a hospital building complex with parking",
+    "family": "facility-exterior",
     "topics": ["hospital facility", "CAH", "rural hospital", "critical access hospital"]
   },
   {
     "id": "1519494026892-80bbd2d6fd0d",
     "description": "Hospital corridor with staff walking in the background",
+    "family": "ward-clinical",
     "topics": ["hospital corridor", "staff", "facility", "healthcare operations"]
   },
   {
     "id": "1559757148-5c350d0d3c56",
     "description": "Nurse in scrubs working at a nursing station",
+    "family": "desk-admin",
     "topics": ["nurse", "nursing station", "scheduling", "nurse manager", "CAH"]
   },
   {
     "id": "1560472354-b33ff0c44a43",
     "description": "Healthcare worker in scrubs using a tablet at a hospital reception",
+    "family": "desk-admin",
     "topics": ["nurse manager", "scheduling software", "tablet", "admin", "front desk"]
   },
   {
     "id": "1601933470096-0e34634ffcde",
     "description": "Nurse reviewing paperwork at a desk in a hospital setting",
+    "family": "desk-admin",
     "topics": ["nurse manager", "compliance", "paperwork", "documentation", "CMS"]
   },
   {
     "id": "1622253692010-333f2da6031d",
     "description": "Nurse in blue scrubs working on a computer in a clinical setting",
+    "family": "desk-admin",
     "topics": ["nurse", "scheduling software", "EHR", "computer", "clinical workflow"]
   },
   {
     "id": "1584820927498-cfe5211fd8bf",
     "description": "Healthcare professional using medical software on a desktop computer",
+    "family": "desk-admin",
     "topics": ["scheduling software", "healthcare IT", "software", "EHR"]
   },
   {
     "id": "1579684385127-1ef15d508118",
     "description": "Nurse manager reviewing a schedule or chart on a clipboard",
+    "family": "desk-admin",
     "topics": ["nurse manager", "scheduling", "clipboard", "shift schedule", "roster"]
   },
   {
     "id": "1612349317150-e413f6a5b16d",
     "description": "On-call nurse answering a phone at a nursing station",
+    "family": "desk-admin",
     "topics": ["callout coverage", "nurse on-call", "phone", "nursing station", "CAH"]
   },
   {
     "id": "1629909615184-74f495363b67",
     "description": "Team of nurses huddled in discussion in a hospital hallway",
+    "family": "team-meeting",
     "topics": ["nursing team", "staff coordination", "shift handoff", "hospital staff"]
   },
   {
     "id": "1603398938378-e54eab446dde",
     "description": "Healthcare administrator working on a laptop reviewing reports",
+    "family": "desk-admin",
     "topics": ["healthcare admin", "scheduling software", "administrator", "CAH CEO"]
   },
   {
     "id": "1551884170-09fb70a3a2ed",
     "description": "Ambulance parked outside a small rural hospital",
+    "family": "facility-exterior",
     "topics": ["rural hospital", "CAH", "emergency", "small hospital", "ambulance"]
   },
   {
     "id": "1666214280557-f1b5022eb634",
     "description": "Clinician in white coat discussing imaging scan on monitor with colleague",
+    "family": "team-meeting",
     "topics": ["clinician", "charge nurse", "clinical review", "hospital", "software"]
   },
   {
     "id": "1580281657527-47f249e8f4df",
     "description": "Pharmacist in white coat organizing medication on pharmacy shelves",
+    "family": "ward-clinical",
     "topics": ["pharmacy", "healthcare", "hospital operations", "medication management"]
   },
   {
     "id": "1586773860418-d37222d8fce3",
     "description": "Exterior of a modern small hospital building with entrance canopy",
+    "family": "facility-exterior",
     "topics": ["small hospital", "hospital facility", "CAH", "building exterior"]
   },
   {
     "id": "1527613426441-4da17471b66d",
     "description": "Masked clinician in white coat and gloves in a clinical setting",
+    "family": "nurse-portrait",
     "topics": ["clinician", "per diem", "nurse", "clinical", "PPE"]
   },
   {
     "id": "1632833239869-a37e3a5806d2",
     "description": "Large red EMERGENCY sign outside a hospital with ambulance in background",
+    "family": "facility-exterior",
     "topics": ["emergency room", "ER nurse", "hospital", "emergency", "ambulance"]
   },
   {
     "id": "1563986768494-4dee2763ff3f",
     "description": "Close-up of hands on laptop keyboard with smartphone alongside",
+    "family": "desk-admin",
     "topics": ["laptop", "scheduling software", "app", "mobile"]
   },
   {
     "id": "1551190822-a9333d879b1f",
     "description": "Surgical team in blue scrubs and caps performing an operation",
+    "family": "ward-clinical",
     "topics": ["surgical team", "OR", "hospital clinical", "nurse", "staffing"]
   },
   {
     "id": "1551288049-bebda4e38f71",
     "description": "Laptop screen showing analytics charts and data dashboards",
+    "family": "data-analytics",
     "topics": ["data analysis", "analytics", "reporting", "scheduling data", "software"]
   },
   {
     "id": "1450101499163-c8848c66ca85",
     "description": "Person writing on documents at a desk with pen in hand",
+    "family": "desk-admin",
     "topics": ["compliance", "paperwork", "documentation", "CMS", "reporting"]
   },
   {
     "id": "1584515933487-779824d29309",
     "description": "Two hands clasped gently, conveying care and support",
+    "family": "misc",
     "topics": ["care", "nurse", "compassion", "staff wellbeing", "fair scheduling"]
   },
   {
     "id": "1526256262350-7da7584cf5eb",
     "description": "Stethoscope on folded white scrubs against a bed",
+    "family": "stethoscope-closeup",
     "topics": ["stethoscope", "nurse", "healthcare", "schedule template"]
   },
   {
     "id": "1590105577767-e21a1067899f",
     "description": "Three masked healthcare workers outdoors making heart shapes with hands",
+    "family": "nurse-portrait",
     "topics": ["nurses", "healthcare workers", "staffing", "morale", "hospital"]
   },
   {
     "id": "1587351021759-3e566b6af7cc",
     "description": "Modern hospital exterior with emergency entrance and parking signs",
+    "family": "facility-exterior",
     "topics": ["hospital", "CAH", "workforce management", "facility"]
   },
   {
     "id": "1505751172876-fa1923c5c528",
     "description": "Black and white stethoscope resting on hospital bedding",
+    "family": "stethoscope-closeup",
     "topics": ["stethoscope", "healthcare", "overtime", "nurse"]
   },
   {
     "id": "1626315869436-d6781ba69d6e",
     "description": "Modern hospital building exterior at dusk with flags in front",
+    "family": "facility-exterior",
     "topics": ["hospital", "staff scheduling", "facility", "enterprise hospital"]
   },
   {
     "id": "1530026405186-ed1f139313f8",
     "description": "Anatomical heart model on a desk, used for medical education",
+    "family": "misc",
     "topics": ["medical", "compliance", "CMS", "healthcare education"]
   },
   {
     "id": "1513224502586-d1e602410265",
     "description": "Patient monitor showing vital signs including heart rate and oxygen",
+    "family": "data-analytics",
     "topics": ["ICU", "night shift", "patient monitoring", "clinical", "critical care"]
   },
   {
     "id": "1504868584819-f8e8b4b6d7e3",
     "description": "Laptop on a couch displaying analytics dashboard with charts and maps",
+    "family": "data-analytics",
     "topics": ["scheduling software", "data", "analytics", "workforce"]
   },
   {
     "id": "1532938911079-1b06ac7ceec7",
     "description": "Doctor in white coat with red stethoscope, arms crossed",
+    "family": "nurse-portrait",
     "topics": ["doctor", "physician", "managed service", "healthcare professional"]
   },
   {
     "id": "1631815589968-fdb09a223b1e",
     "description": "Nurse in scrubs taking blood pressure reading on patient",
+    "family": "ward-clinical",
     "topics": ["nurse", "patient care", "overtime", "clinical workflow"]
   },
   {
     "id": "1434626881859-194d67b2b86f",
     "description": "Tablet and printed charts showing colorful data analytics on a wooden desk",
+    "family": "data-analytics",
     "topics": ["data", "analytics", "time tracking", "reporting", "scheduling"]
   },
   {
     "id": "1638202993928-7267aad84c31",
     "description": "Female clinician in white coat holding stethoscope up to camera",
+    "family": "nurse-portrait",
     "topics": ["nurse", "clinician", "healthcare professional", "schedule generation"]
   },
   {
     "id": "1559839734-2b71ea197ec2",
     "description": "Smiling female clinician in white coat outdoors among trees",
+    "family": "nurse-portrait",
     "topics": ["nurse", "clinician", "portrait", "healthcare professional"]
   },
   {
     "id": "1555774698-0b77e0d5fac6",
     "description": "Hand holding smartphone displaying colorful app icons",
+    "family": "misc",
     "topics": ["mobile app", "scheduling app", "smartphone", "login"]
   },
   {
     "id": "1625134673337-519d4d10b313",
     "description": "Wide banner of doctor in white coat holding stethoscope, arms crossed",
+    "family": "nurse-portrait",
     "topics": ["doctor", "scheduling software", "configuration", "healthcare"]
   },
   {
     "id": "1554224155-8d04cb21cd6c",
     "description": "Hand holding smartphone with calculator app over tax paperwork",
+    "family": "desk-admin",
     "topics": ["pricing", "cost", "budget", "finance", "calculator"]
   },
   {
     "id": "1538108149393-fbbd81895907",
     "description": "Empty hospital ward with row of beds and pink curtains",
+    "family": "ward-clinical",
     "topics": ["hospital ward", "beds", "hospital facility", "clinical"]
   },
   {
     "id": "1585842378054-ee2e52f94ba2",
     "description": "Nurse in dark top with stethoscope smiling at patient",
+    "family": "ward-clinical",
     "topics": ["nurse", "patient care", "shift coverage", "clinical"]
   },
   {
     "id": "1612277795421-9bc7706a4a34",
     "description": "Masked clinician applying bandage after giving vaccination to patient",
+    "family": "ward-clinical",
     "topics": ["clinician", "vaccination", "patient care", "clinical workflow"]
   },
   {
     "id": "1618498082410-b4aa22193b38",
     "description": "Masked surgeon in teal scrubs giving a thumbs up",
+    "family": "nurse-portrait",
     "topics": ["clinician", "surgeon", "support", "positive", "hospital"]
   },
   {
     "id": "1615631648086-325025c9e51e",
     "description": "Masked clinician in PPE administering injection to patient",
+    "family": "ward-clinical",
     "topics": ["clinician", "vaccination", "clinical care", "TCP", "scheduling"]
   },
   {
     "id": "1568219557405-376e23e4f7cf",
     "description": "Wall covered in colorful sticky notes used for planning",
+    "family": "misc",
     "topics": ["planning", "workflow", "compliance", "brainstorming", "admin"]
   },
   {
     "id": "1485827404703-89b55fcc595e",
     "description": "Friendly white humanoid robot with large eyes next to a tablet",
+    "family": "misc",
     "topics": ["automation", "AI", "robot", "automated scheduling"]
   },
   {
     "id": "1550831107-1553da8c8464",
     "description": "Surgeon in blue scrubs, cap and mask concentrating during operation",
+    "family": "ward-clinical",
     "topics": ["surgeon", "nurse manager", "OR", "clinical leadership"]
   },
   {
     "id": "1508780709619-79562169bc64",
     "description": "Close-up of hands typing on a laptop keyboard in low light",
+    "family": "desk-admin",
     "topics": ["typing", "software", "laptop", "scheduling work"]
   },
   {
     "id": "1584982751601-97dcc096659c",
     "description": "Stethoscope around scattered white pills on a clean surface",
+    "family": "supplies-flat-lay",
     "topics": ["healthcare", "medication", "workforce management", "clinical"]
   },
   {
     "id": "1631217868264-e5b90bb7e133",
     "description": "Smiling female clinician in white coat speaking with patient",
+    "family": "ward-clinical",
     "topics": ["clinician", "patient care", "scheduling", "consultation"]
   },
   {
     "id": "1576765608535-5f04d1e3f289",
     "description": "Female clinician administering vaccination to senior patient",
+    "family": "ward-clinical",
     "topics": ["nurse", "vaccination", "patient care", "rostering"]
   },
   {
     "id": "1554224155-6726b3ff858f",
     "description": "Tax forms and calculator on a desk showing financial paperwork",
+    "family": "desk-admin",
     "topics": ["cost", "compliance", "finance", "paperwork", "hidden cost"]
   },
   {
     "id": "1486312338219-ce68d2c6f44d",
     "description": "Close-up of hands typing on a laptop keyboard at a workstation",
+    "family": "desk-admin",
     "topics": ["typing", "software", "scheduling work", "nurse manager"]
   },
   {
     "id": "1495364141860-b0d03eccd065",
     "description": "Small white alarm clock held up in a hand against light background",
+    "family": "misc",
     "topics": ["time", "shifts", "hours", "scheduling time"]
   },
   {
     "id": "1565688534245-05d6b5be184a",
     "description": "Two people reviewing paperwork together at a desk",
+    "family": "team-meeting",
     "topics": ["admin review", "meeting", "nurse manager", "scheduling review"]
   },
   {
     "id": "1512389142860-9c449e58a543",
     "description": "Winter greenery and holly berries flat lay on white background",
+    "family": "misc",
     "topics": ["holiday", "december", "winter", "holiday coverage"]
   },
   {
     "id": "1454165804606-c3d57bc86b40",
     "description": "Two people reviewing a notebook with laptops open on a wooden desk",
+    "family": "team-meeting",
     "topics": ["admin", "software review", "planning", "nurse manager"]
   },
   {
     "id": "1576671081837-49000212a370",
     "description": "Black and white photograph of medical vials and pharmaceutical bottles",
+    "family": "supplies-flat-lay",
     "topics": ["pharmacy", "medication", "clinical", "healthcare"]
   },
   {
     "id": "1553877522-43269d4ea984",
     "description": "Two people working together on laptops in black and white",
+    "family": "team-meeting",
     "topics": ["admin", "software", "planning", "scheduling work"]
   },
   {
     "id": "1581595219315-a187dd40c322",
     "description": "Radiologist in white coat examining CT scan films against a lightbox",
+    "family": "ward-clinical",
     "topics": ["clinician", "physician", "radiology", "clinical review", "hospital"]
   },
   {
     "id": "1559757175-5700dde675bc",
     "description": "Anatomical brain model and neuron figure on a desk surface",
+    "family": "misc",
     "topics": ["medical education", "clinical", "healthcare", "anatomy"]
   },
   {
     "id": "1578496781985-452d4a934d50",
     "description": "Young patient in hospital bed smiling, showing resilience in care setting",
+    "family": "ward-clinical",
     "topics": ["patient care", "hospital", "pediatric", "nursing care"]
   },
   {
     "id": "1670191247079-f9713ae06dcf",
     "description": "Female healthcare worker in blue scrubs smiling at desk",
+    "family": "desk-admin",
     "topics": ["nurse manager", "admin", "managed service", "healthcare professional"]
   },
   {
     "id": "1687966208029-2ffe095ad14a",
     "description": "Nurse in purple scrubs with stethoscope holding a drink outdoors",
+    "family": "nurse-portrait",
     "topics": ["nurse", "break", "healthcare worker", "scheduling app"]
   },
   {
     "id": "1606738132449-e3590ddb6793",
     "description": "Nurse in blue scrubs standing in a corridor",
+    "family": "nurse-portrait",
     "topics": ["nurse", "professional", "software", "hospital"]
   },
   {
     "id": "1682706841478-88eb8995357b",
     "description": "Close-up of a black stethoscope chestpiece on white surface",
+    "family": "stethoscope-closeup",
     "topics": ["stethoscope", "healthcare", "medical", "clinical"]
   },
   {
     "id": "1603807008857-ad66b70431aa",
     "description": "Medical supplies flat lay with stethoscope, pill pack, and tape",
+    "family": "supplies-flat-lay",
     "topics": ["medical supplies", "clinical", "healthcare", "medication"]
   },
   {
     "id": "1749065312519-1902cb8431ae",
     "description": "Nurse in navy scrubs tending to a patient in a hospital bed",
+    "family": "ward-clinical",
     "topics": ["nurse", "patient care", "hospital", "clinical"]
   },
   {
     "id": "1691935152684-ea61702ec5c9",
     "description": "Healthcare worker in PPE gown and surgical mask in clinical setting",
+    "family": "nurse-portrait",
     "topics": ["healthcare worker", "PPE", "clinical", "hospital"]
   },
   {
     "id": "1600091474842-83bb9c05a723",
     "description": "First aid kit, stethoscope, and medication blister packs on blue surface",
+    "family": "supplies-flat-lay",
     "topics": ["first aid", "medical", "supplies", "clinical"]
   },
   {
     "id": "1593362417299-e0c94018e1b6",
     "description": "Healthcare worker in scrubs and mask resting in dim green-lit room",
+    "family": "nurse-portrait",
     "topics": ["night shift", "nurse fatigue", "rest", "scrubs"]
   },
   {
     "id": "1758653500363-53bced03c683",
     "description": "Historic black-and-white nurse caring for patient in hospital ward",
+    "family": "historic-bw",
     "topics": ["nurse", "patient care", "nursing history", "ward"]
   },
   {
     "id": "1587019705911-167800492489",
     "description": "Medical supplies flat lay with pills, gloves, stethoscope, and surgical mask",
+    "family": "supplies-flat-lay",
     "topics": ["medical supplies", "clinical", "rostering", "pharmacy"]
   },
   {
     "id": "1758204054548-2d2bb32831c7",
     "description": "Historic black-and-white image of nurse checking on patients in bunk beds",
+    "family": "historic-bw",
     "topics": ["nurse", "patient care", "ward", "nursing history"]
   },
   {
     "id": "1668785737406-0129cb9554b5",
     "description": "Neon medical cross symbol with heart on black background",
+    "family": "misc",
     "topics": ["healthcare symbol", "AI", "technology", "medical"]
   },
   {
     "id": "1676046221681-ac05f7869d46",
     "description": "Historic small hospital ward with nurse caring for children in cribs",
+    "family": "historic-bw",
     "topics": ["hospital", "small hospital", "CAH", "nursing history"]
   },
   {
     "id": "1758575514487-0390fcacc339",
     "description": "Large formal group photo of nurses in uniforms at a naval hospital",
+    "family": "historic-bw",
     "topics": ["nursing staff", "team", "staffing", "group"]
   },
   {
     "id": "1676286168358-9b4ce60384d4",
     "description": "Historic black-and-white nurses tending to newborns in a hospital nursery",
+    "family": "historic-bw",
     "topics": ["nursery", "nurse", "hospital", "per diem"]
   },
   {
     "id": "1758654860020-36fa3fd0dd35",
     "description": "Two historic nurses making a hospital bed together",
+    "family": "historic-bw",
     "topics": ["nurses", "nursing team", "ward", "fairness"]
   },
   {
     "id": "1758653500481-a1b46b5b63d4",
     "description": "Historic black-and-white nurse in uniform sitting with male patient",
+    "family": "historic-bw",
     "topics": ["nurse", "patient care", "nursing history", "shift"]
   },
   {
     "id": "1607368386669-d940ce438fba",
     "description": "Medical tools flat lay with stethoscope, pill packs, and scissors",
+    "family": "supplies-flat-lay",
     "topics": ["medical supplies", "clinical", "scheduling", "tools"]
   },
   {
     "id": "1740479050122-54a65ebc22f8",
     "description": "Wooden Scrabble tiles spelling HEALTHCARE on reflective surface",
+    "family": "misc",
     "topics": ["healthcare", "concept", "staff scheduling", "planning"]
   },
   {
     "id": "1604480131833-5d7aea770e1c",
     "description": "Scrabble tiles spelling HEALTHCARE next to a green fern leaf",
+    "family": "misc",
     "topics": ["healthcare", "concept", "managed service", "planning"]
   },
   {
     "id": "1676288507025-e0f001be9926",
     "description": "Historic black-and-white image of surgical team in operating room",
+    "family": "historic-bw",
     "topics": ["surgical team", "OR", "clinical", "hospital"]
   },
   {
     "id": "1758204054878-813a52406b7a",
     "description": "Historic black-and-white nurse administering injection to patient in bed",
+    "family": "historic-bw",
     "topics": ["nurse", "patient care", "hospital", "CAH"]
   },
   {
     "id": "1669413453894-db3901ffdbc1",
     "description": "Nurse in period uniform attending to patient in dimly lit ward",
+    "family": "historic-bw",
     "topics": ["nurse", "clinical", "patient care", "ward"]
   },
   {
     "id": "1700832082200-af7deeb63d9b",
     "description": "Stethoscope and aneroid blood pressure gauge on white fabric",
+    "family": "supplies-flat-lay",
     "topics": ["vitals", "nursing", "overtime", "clinical"]
   },
   {
     "id": "1669413453505-2582fb5083b3",
     "description": "Nurse leaning over patient in hospital bed with monitor in background",
+    "family": "ward-clinical",
     "topics": ["nurse", "per diem", "patient care", "hospital"]
   },
   {
     "id": "1516841273335-e39b37888115",
     "description": "Nurse in scrubs reviewing tablet at a nursing station",
+    "family": "desk-admin",
     "topics": ["nurse", "AI scheduling", "trust", "clinical workflow", "nurse manager"]
   },
   {
     "id": "1576091160399-112ba8d25d1d",
     "description": "Healthcare professional reviewing a document at a hospital desk",
+    "family": "desk-admin",
     "topics": ["healthcare admin", "scheduling crisis", "compliance", "nurse manager", "CAH"]
   },
   {
     "id": "1460925895917-afdab827c52f",
     "description": "Laptop displaying data analytics dashboard on desk",
+    "family": "data-analytics",
     "topics": ["scheduling software", "UKG", "complexity", "data", "healthcare IT"]
   },
   {
     "id": "1688565631550-ff8aa569f71a",
     "description": "Clinician in scrubs with stethoscope analyzing data on a monitor",
+    "family": "data-analytics",
     "topics": ["AI scheduling", "clinical data", "healthcare IT", "decision-making", "comparison"]
   },
   {
     "id": "1666886573264-38075cc56104",
     "description": "Multiracial doctors with modern gadgets examining an X-ray scan together",
+    "family": "team-meeting",
     "topics": ["clinical team", "healthcare technology", "AI in healthcare", "screen review", "comparison"]
   },
   {
     "id": "1758574437877-68a1ec5fafc3",
     "description": "Doctors reviewing X-rays on a backlit light board",
+    "family": "team-meeting",
     "topics": ["clinical team", "healthcare decision-making", "comparison", "hospital", "evaluation"]
   },
   {
     "id": "1691934310598-27528df21f9c",
     "description": "Healthcare worker at a desk using a computer in an office setting",
+    "family": "desk-admin",
     "topics": ["nurse manager", "scheduling software", "admin", "healthcare IT", "managed service"]
   },
   {
     "id": "1526628953301-3e589a6a8b74",
     "description": "Active patient-monitoring screen displaying clinical data",
+    "family": "data-analytics",
     "topics": ["healthcare data dashboard", "monitoring", "clinical", "software", "analytics"]
   },
   {
     "id": "1666214280391-8ff5bd3c0bf0",
     "description": "Team of clinicians looking at a computer screen together",
+    "family": "team-meeting",
     "topics": ["clinical team", "screen review", "healthcare decision-making", "evaluation", "comparison"]
   },
   {
     "id": "1504813184591-01572f98c85f",
     "description": "Open laptop on a desk with a notebook, ready for writing and analysis",
+    "family": "desk-admin",
     "topics": ["newsroom", "news analysis", "writing", "workspace", "editorial"]
   },
   {
     "id": "1512678080530-7760d81faba6",
     "description": "Empty single patient room in a small hospital with an unoccupied bed and vacant chair",
+    "family": "ward-clinical",
     "topics": ["rural hospital", "small hospital", "empty bed", "staffing gap", "nurse retention", "workforce"]
   },
   {
     "id": "1612531385446-f7e6d131e1d0",
     "description": "Physician in a white coat with a stethoscope, arms crossed, in a clinical portrait",
+    "family": "nurse-portrait",
     "topics": ["physician", "provider scheduling", "medical staff", "on-call", "hospital", "doctor"]
   },
   {
     "id": "1506784983877-45594efa4cbe",
     "description": "Open monthly planner showing a November calendar grid with a coffee cup resting on it",
+    "family": "desk-admin",
     "topics": ["calendar", "monthly rotation", "cyclical scheduling", "self-scheduling", "shift schedule", "planning"]
   },
   {
     "id": "1599045118108-bf9954418b76",
     "description": "Healthcare worker in scrubs at a desk workstation reviewing information",
+    "family": "desk-admin",
     "topics": ["nurse manager", "burnout", "workload", "scheduling", "night shift", "staff wellbeing"]
   },
   {
     "id": "1755189118414-14c8dacdb082",
     "description": "Three medical professionals standing together in a hospital hallway",
+    "family": "team-meeting",
     "topics": ["nursing staff", "coverage", "float pool", "staffing", "team", "cross-training"]
   },
   {
     "id": "1631039302217-5a6c56371e86",
     "description": "Medical team seated at a table in a planning meeting",
+    "family": "team-meeting",
     "topics": ["staffing committee", "nurse staffing", "planning", "team meeting", "safe staffing", "ratios"]
   }
 ]

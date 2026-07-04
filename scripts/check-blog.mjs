@@ -28,6 +28,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename } from 'node:path';
 import { checkFacts } from './lib/facts-rules.mjs';
+import { overusedFamily } from './lib/image-pool.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const POSTS_DIR = resolve(__dirname, '../src/data/post');
@@ -708,21 +709,41 @@ function check(file) {
         if (!inPool) {
           fail(`Featured image id "${id}" not found in scripts/image-pool.json`, 0, '');
         }
-        // Duplicate use across other posts.
+        // Duplicate use across other posts + family usage by live siblings.
         const dupes = [];
+        const siblingImages = [];
         for (const f of allPostFiles) {
           if (basename(f, '.md') === selfSlug) continue;
           try {
-            const otherFm = extractFrontmatter(readFileSync(resolve(POSTS_DIR, f), 'utf8').split(/\r?\n/));
+            const raw = readFileSync(resolve(POSTS_DIR, f), 'utf8');
+            const otherFm = extractFrontmatter(raw.split(/\r?\n/));
             const otherImg = otherFm && otherFm.image ? unquote(otherFm.image) : '';
             const otherMatch = otherImg.match(/photo-([a-zA-Z0-9_-]+)/);
             if (otherMatch && otherMatch[1] === id) dupes.push(basename(f, '.md'));
+            if (otherMatch) {
+              siblingImages.push({
+                slug: basename(f, '.md'),
+                imageId: otherMatch[1],
+                live: !raw.includes('draft: true'),
+              });
+            }
           } catch {
             /* ignore unreadable sibling */
           }
         }
         if (dupes.length > 0) {
           fail(`Featured image id "${id}" duplicated in: ${dupes.join(', ')}`, 0, '');
+        }
+        // Visually near-duplicate heroes pass the exact-ID check; the family
+        // field catches them. WARN (human judges) when the chosen image's
+        // family is already the hero family of 3+ LIVE posts.
+        const over = overusedFamily(pool, id, siblingImages, 3);
+        if (over) {
+          warn(
+            `Image family "${over.family}" already used by ${over.count} live posts (${over.slugs.slice(0, 6).join(', ')}${over.slugs.length > 6 ? ', ...' : ''}) — pick a different visual family`,
+            0,
+            ''
+          );
         }
       }
     } else {
