@@ -26,7 +26,7 @@ A critical access hospital (CAH) is a Medicare designation for a small rural hos
 - It must sit more than 35 miles from the nearest hospital, or 15 miles by secondary road in mountainous terrain.
 - The 96-hour length-of-stay rule is an annual average for acute care across the facility, not a cap on any single patient.
 - Payment is cost-based, not fixed prospective rates. That model is why rural hospitals work to keep the designation.
-- A registered nurse must be on duty or immediately on call at all times under 42 CFR Section 485.631.
+- A registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever the hospital has one or more inpatients under 42 CFR Section 485.631.
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ To earn the designation, a hospital must meet five rules: a rural location at le
 
 The financial benefit is why rural hospitals protect the status: where standard hospitals get fixed prospective rates, CAHs receive [101% of their reasonable Medicare costs](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals). Many also use the **swing-bed option**, billing one bed as acute care or skilled-nursing care as a patient's needs change. Because those swing beds are exempt, most CAHs do not file CMS Payroll-Based Journal data at all; our guide to [CMS PBJ reporting and nurse scheduling software](/blog/cms-pbj-reporting-scheduling-software) gives the one-question test for whether a facility owes a filing.
 
-Staffing is codified at [42 CFR Section 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631): a registered nurse must be on duty or on call at all times, and at least one nurse on duty whenever there is an inpatient. Compliance must be documented and surveyable, which shapes how the schedule is recorded.
+Staffing is codified at [42 CFR Section 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631): a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever there is an inpatient. Compliance must be documented and surveyable, which shapes how the schedule is recorded.
 
 ## How Is a Critical Access Hospital Different From a Community Hospital?
 

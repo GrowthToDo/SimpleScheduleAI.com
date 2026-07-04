@@ -25,8 +25,8 @@ metadata:
 Manual nurse scheduling at critical access hospitals defaults to calling the most
 reliable nurses first, creating a predictable pattern of disproportionate burden on
 a small subset of staff. According to the
-[NSI 2024 National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf),
-the average cost to replace a single RN is $52,350. Fairness isn't a morale issue; it
+[NSI 2025 National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf),
+the average cost to replace a single RN is $61,110. Fairness isn't a morale issue; it
 is a retention and cost-control strategy.
 
 ## What makes a nurse schedule "fair" in a hospital context?
@@ -44,7 +44,7 @@ shifts compared to peers with the same FTE classification.
 At a 25-bed critical access hospital with 15-20 nursing staff, this matters more than
 at a large system. You don't have the volume to absorb one nurse carrying 60% of all
 weekend callout coverage. When that nurse resigns, and they will, eventually, you
-have both a coverage gap and a $52,350 replacement cost.
+have both a coverage gap and a $61,110 replacement cost.
 
 Practically, fairness in [critical access hospital scheduling](/critical-access-hospital-scheduling)
 means tracking four dimensions simultaneously: weekend shift frequency, night shift
@@ -199,7 +199,7 @@ because the imbalances are often larger than they expected.
   any fairness enforcement, tool or otherwise
 - Tracking four dimensions (weekend frequency, night frequency, holiday rotation, charge
   duty) requires a mechanism beyond memory or informal notes
-- The NSI 2024 report puts average RN replacement cost at $52,350, making schedule
+- The NSI 2025 report puts average RN replacement cost at $61,110, making schedule
   fairness a direct cost-control strategy, not just a morale initiative
 
 ---

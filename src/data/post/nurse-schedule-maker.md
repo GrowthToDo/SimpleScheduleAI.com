@@ -5,7 +5,7 @@ updateDate: 2026-04-01T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Nurse Schedule Maker: Building Schedules That Reduce Burnout'
 excerpt: >
-  A nurse schedule maker automates shift assignments and rotation patterns to distribute workload fairly across staff. At critical access hospitals, how you build a schedule directly determines whether nurses experience sustainable work patterns or the cumulative fatigue that leads to turnover costing an average of $52,350 per departing RN.
+  A nurse schedule maker automates shift assignments and rotation patterns to distribute workload fairly across staff. At critical access hospitals, how you build a schedule directly determines whether nurses experience sustainable work patterns or the cumulative fatigue that leads to turnover costing an average of $61,110 per departing RN.
 image: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
@@ -19,7 +19,7 @@ metadata:
 
 ## TL;DR
 
-Nurse burnout isn't just a morale problem, it's a financial one. The [NSI 2024 National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts average RN turnover cost at $52,350. At critical access hospitals with lean staff and no margin for error, a nurse schedule maker that distributes shifts fairly is one of the most direct levers a manager has to protect retention.
+Nurse burnout isn't just a morale problem, it's a financial one. The [NSI 2025 National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts average RN turnover cost at $61,110. At critical access hospitals with lean staff and no margin for error, a nurse schedule maker that distributes shifts fairly is one of the most direct levers a manager has to protect retention.
 
 ## What is a nurse schedule maker?
 
@@ -39,7 +39,7 @@ Burnout in nursing has three recognized components: emotional exhaustion, depers
 
 At a critical access hospital, the margin is thin. You may have a nurse who has taken call 12 out of the last 14 weekends because they're the only one with the right certification. That nurse isn't going to announce burnout, they'll simply not renew, or they'll accept a travel contract that pays twice as much. By the time the departure happens, the scheduling pattern that caused it is three months old and forgotten.
 
-The direct cost of that departure is $52,350 in replacement cost, per NSI data. The indirect cost, the vacancy gap, the mandatory overtime to cover it, the effect on team morale, compounds that number significantly. A nurse schedule maker that enforces rotation fairness from the start is cheaper than dealing with the downstream consequences of inequitable scheduling.
+The direct cost of that departure is $61,110 in replacement cost, per 2025 NSI data. The indirect cost, the vacancy gap, the mandatory overtime to cover it, the effect on team morale, compounds that number significantly. A nurse schedule maker that enforces rotation fairness from the start is cheaper than dealing with the downstream consequences of inequitable scheduling.
 
 ## What schedule patterns increase burnout risk at 25-bed hospitals?
 
@@ -90,7 +90,7 @@ Not exactly. Fair scheduling means the distribution of desirable and undesirable
 
 ## Key Takeaways
 
-- RN turnover costs an average of $52,350 per departure; inequitable scheduling is one of the most controllable drivers of preventable turnover
+- RN turnover costs an average of $61,110 per departure; inequitable scheduling is one of the most controllable drivers of preventable turnover
 - The schedule patterns most associated with burnout at 25-bed hospitals include concentrated weekends, quick turnarounds, chronic call accumulation, and permanent night assignments
 - A nurse schedule maker adds value by enforcing rotation rules consistently, rules a human manager would apply if they had perfect recall and no social pressure
 - Automation removes the implicit negotiation bias where nurses who push back get better assignments, improving both fairness and manager morale

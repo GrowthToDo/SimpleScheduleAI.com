@@ -23,7 +23,7 @@ metadata:
 - Manual scheduling costs Critical Access Hospitals approximately $26,000/year in misallocated leadership time (10 hrs/week x $50/hr)
 - Last-minute callouts routed through agency staff carry 2-3x rate premiums plus an invisible orientation cost per shift
 - Version drift across spreadsheets, whiteboards, and portal PDFs creates CMS-surveyable documentation gaps under [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
-- Reliable nurses absorb disproportionate overtime under manual scheduling, driving turnover that costs $52,350 per RN departure (NSI 2024)[1]
+- Reliable nurses absorb disproportionate overtime under manual scheduling, driving turnover that costs $61,110 per RN departure (NSI 2025)[1]
 - PRN availability coordination adds 2+ hours per scheduling cycle, a hidden cost rarely tracked in scheduling budgets
 - Fairness tracking and an automated replacement list are the two highest-impact interventions for CAH scheduling operations
 
@@ -49,8 +49,8 @@ compliance.
 
 This figure excludes downstream costs: agency premiums during last-minute callout
 gaps, overtime accumulated by reliable nurses absorbing excess shifts, and the
-$52,350 average cost per nurse turnover reported by the
-[NSI 2024 National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf).
+$61,110 average cost per nurse turnover reported by the
+[NSI 2025 National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf).
 
 After two months of interviews with 30 nurse managers and schedulers at small Texas
 healthcare facilities, we identified five recurring friction points that drive this
@@ -198,8 +198,8 @@ links scheduling inequity directly to voluntary turnover among high-performing s
 
 When reliable nurses absorb disproportionate callout coverage and overtime, two
 things happen: their overtime pay drives up labor costs, and their tolerance erodes.
-The [NSI 2024 report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)
-puts average RN turnover cost at $52,350 per departure. For a 25-bed CAH with 15-20
+The [NSI 2025 report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)
+puts average RN turnover cost at $61,110 per departure. For a 25-bed CAH with 15-20
 nurses, losing two or three to avoidable burnout is a six-figure operational event.
 That is the local half of the [nurse shortage versus retention debate](/articles/nurse-shortage-or-retention-crisis-rural-hospitals): the licenses exist nationally, but a rural roster still loses the nurses it already has.
 
@@ -300,7 +300,7 @@ One honest limitation: a managed scheduling service is not the right fit for fac
 
 ## Sources
 
-[1] NSI Nursing Solutions, 2024 National Health Care Retention & RN Staffing Report. Per-RN turnover cost figure ($52,350). [nsinursingsolutions.com](https://www.nsinursingsolutions.com).
+[1] NSI Nursing Solutions, 2025 National Health Care Retention & RN Staffing Report. Per-RN turnover cost figure ($61,110). [nsinursingsolutions.com](https://www.nsinursingsolutions.com).
 
 [2] AONL workforce data on agency staffing premiums in healthcare. [aonl.org/resources/workforce](https://www.aonl.org/resources/workforce).
 
@@ -359,7 +359,7 @@ worked. An automated system with a full change log addresses this directly.
 
 Manual scheduling defaults to calling the most dependable nurses first. Over time,
 those nurses accumulate disproportionate overtime and callout coverage, driving
-voluntary turnover. NSI 2024 data puts average RN replacement cost at $52,350.
+voluntary turnover. NSI 2025 data puts average RN replacement cost at $61,110.
 Tracking fairness (who is being called and how often) requires data that
 manual spreadsheets typically do not capture.
 

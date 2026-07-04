@@ -71,7 +71,7 @@ A free template stops being enough when the cost of managing its limitations exc
 
 **Scenario 2: A callout cascade.** Three nurses call out in the same week, illness, a family emergency, and a no-show. The manager spends 4 hours rebuilding the schedule, calls six people to find coverage, and ends up bringing in agency staff at 2-3× the standard rate rather than discover a qualified internal staff member who had availability. The template couldn't surface that option.
 
-**Scenario 3: A resignation driven by inequity.** An experienced nurse leaves after three years of taking disproportionate weekend and holiday shifts. Replacing them costs an average of [$52,350](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) in recruitment, training, and productivity loss. The template never tracked the pattern that caused the departure.
+**Scenario 3: A resignation driven by inequity.** An experienced nurse leaves after three years of taking disproportionate weekend and holiday shifts. Replacing them costs an average of [$61,110](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) in recruitment, training, and productivity loss. The template never tracked the pattern that caused the departure.
 
 Any one of these scenarios is likely to cost more than a year of professional scheduling support. When a template forces 8-12 hours of manager time per week on scheduling work that should take two, the math favors switching. Explore [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) to understand what the alternatives actually cost.
 

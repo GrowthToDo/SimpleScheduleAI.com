@@ -22,7 +22,7 @@ metadata:
 
 ## Key Takeaways
 
-- Federal rules require a registered nurse to provide or supervise the nursing care of each patient under [42 CFR 485.635(d)(1)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), a qualified practitioner available at all times the CAH operates under [485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), and 24-hour emergency services under [485.618](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618)
+- Federal rules require a registered nurse to provide or supervise the nursing care of each patient under [42 CFR 485.635(d)(1)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), a qualified practitioner available at all times the CAH operates under [485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), and 24-hour emergency services under [485.618](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618) <!-- facts-ok -->
 - Most CAH night coverage runs on 12-hour shifts (commonly 7 p.m. to 7 a.m.), with schedules posted at least two weeks ahead so nurses can plan sleep and family logistics
 - Night shift is hard to fill because of health effects, lifestyle disruption, and the small night-eligible pool at a rural 25-bed hospital
 - Rotating versus permanent nights is a real tradeoff: most CAHs run a hybrid, and either model needs explicit fairness tracking to prevent burden concentration
@@ -171,7 +171,7 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
 
 **Q: What are the CMS requirements for night shift coverage at a critical access hospital?**
 
-Three federal conditions of participation apply overnight. Under 42 CFR 485.635(d)(1), an RN must provide or supervise each patient's nursing care. Under 485.631, a qualified practitioner must be available at all times the CAH operates. Under 485.618, emergency services must run 24 hours with personnel on call.
+Three federal conditions of participation apply overnight. Under 42 CFR 485.635(d)(1), an RN must provide or supervise each patient's nursing care. Under 485.631, a qualified practitioner must be available at all times the CAH operates. Under 485.618, emergency services must run 24 hours with personnel on call. <!-- facts-ok -->
 
 **Q: What is the most common night shift schedule for nurses?**
 

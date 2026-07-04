@@ -111,7 +111,7 @@ SimpleScheduleAI is early to this market and built specifically for the Texas Cr
 
 Texas critical access hospitals operate under a specific compliance stack that most [nurse scheduling software](/nurse-scheduling-software) does not address by default: Texas HHSC hospital licensing and staffing standards, FLSA overtime rules as applied to Texas nursing practice, Texas Payday Law provisions, and CMS Conditions of Participation for CAH designation.
 
-Most scheduling software is built for a generic healthcare compliance environment. It handles FLSA overtime thresholds generally but does not specifically track the Texas provisions that apply to CAH operations. CMS CoP documentation requirements for these facilities, including the requirement for a registered nurse on duty or on call at all times, are not specifically addressed in most scheduling platforms.
+Most scheduling software is built for a generic healthcare compliance environment. It handles FLSA overtime thresholds generally but does not specifically track the Texas provisions that apply to CAH operations. CMS CoP documentation requirements for these facilities, including the requirement for a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever the CAH has inpatients, are not specifically addressed in most scheduling platforms.
 
 Texas also has specific Payday Law requirements for how shift premiums and overtime are documented. A scheduling tool that logs shift data but does not generate documentation suitable for a Texas Payday Law review leaves a gap the nurse manager has to fill by hand.
 

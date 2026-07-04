@@ -155,8 +155,8 @@ charge nurse adjustments are routine. If these changes aren't logged in a
 retrievable record, the facility cannot prove during a CMS survey that the shifts
 shown as worked were actually covered by a licensed, credentialed nurse. CMS
 [§485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
-requires a registered nurse, clinical nurse specialist, or LPN on duty whenever the CAH
-has inpatients, and surveyors expect accurate, retrievable records that prove it.
+requires a registered nurse, clinical nurse specialist, or licensed practical nurse on
+duty whenever the CAH has inpatients, and surveyors expect accurate, retrievable records that prove it.
 
 **Gap 3: Credential expiration not tracked in the scheduling system.** A nurse with
 an expired BLS or lapsed license renewal may appear eligible on the schedule when they

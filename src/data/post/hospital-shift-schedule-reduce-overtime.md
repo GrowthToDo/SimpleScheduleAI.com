@@ -42,7 +42,7 @@ A replacement call list that explicitly deprioritizes nurses near the 40-hour th
 
 **Root Cause 3: Fairness patterns that concentrate burden on a small pool.**
 
-When the same 3-4 nurses absorb most callouts and most undesirable shifts, two things happen: those nurses accumulate overtime disproportionately, and they burn out faster. According to the [NSI 2024 Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf), average RN turnover costs $52,350 per departure. The nurses who accumulate the most overtime are often the most reliable and the hardest to replace.
+When the same 3-4 nurses absorb most callouts and most undesirable shifts, two things happen: those nurses accumulate overtime disproportionately, and they burn out faster. According to the [NSI 2025 Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf), average RN turnover costs $61,110 per departure. The nurses who accumulate the most overtime are often the most reliable and the hardest to replace.
 
 Distributing callout coverage and undesirable shift assignments equitably across the full nursing staff prevents overtime concentration and reduces turnover risk simultaneously.
 

@@ -89,7 +89,7 @@ Implementation costs add substantially to that figure. Enterprise WFM implementa
 
 Some vendors offer "lite" tiers designed for smaller facilities, but these typically strip out the features that make WFM software valuable in the first place (the analytics, the automation, the integration depth) while retaining the implementation complexity.
 
-The nursing staff cost at a CAH also matters here. [Average RN turnover runs $52,350 per nurse](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf), and retention is often directly tied to scheduling fairness. The ROI argument for any WFM investment needs to account for whether the tool actually improves scheduling fairness and reduces overtime, not just whether it has sophisticated analytics.
+The nursing staff cost at a CAH also matters here. [Average RN turnover runs $61,110 per nurse](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) (2025 NSI National Health Care Retention Report), and retention is often directly tied to scheduling fairness. The ROI argument for any WFM investment needs to account for whether the tool actually improves scheduling fairness and reduces overtime, not just whether it has sophisticated analytics.
 
 ## WFM Software vs. Scheduling Software: When Do CAHs Need Which?
 
