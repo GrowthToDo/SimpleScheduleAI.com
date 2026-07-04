@@ -212,7 +212,7 @@ The eight platforms worth evaluating for nurse scheduling in 2026 are SimpleSche
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/SimpleScheduleAI.webp" alt="SimpleScheduleAI AI-native nurse scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is an AI-native nurse scheduling service rather than self-serve software: the AI builds the weekly schedule from your roster, a scheduling specialist checks it, and the nurse manager approves. Texas overtime compliance, CMS §485.635 audit trail requirements, and charge nurse coverage rules are built into the scheduling logic, and when a nurse calls out the team surfaces a ranked shortlist of qualified, available, non-overtime staff within minutes.
+SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is an AI-native nurse scheduling service rather than self-serve software: the AI builds the weekly schedule from your roster, a scheduling specialist checks it, and the nurse manager approves. FLSA overtime threshold tracking, CMS §485.635 audit trail requirements, and charge nurse coverage rules are built into the scheduling logic, and when a nurse calls out the team surfaces a ranked shortlist of qualified, available, non-overtime staff within minutes.
 
 **Best for:** Critical Access Hospitals where the nurse manager is also clinically active and scheduling is a weekly time drain.
 

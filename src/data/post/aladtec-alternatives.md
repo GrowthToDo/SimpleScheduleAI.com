@@ -438,7 +438,7 @@ The core difference is the operating model. Aladtec is a self-serve platform whe
         <td class="py-3 text-blue-700 dark:text-blue-400">Service responsibility</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Texas overtime compliance</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime thresholds (Texas)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Configurable (requires setup)</td>
         <td class="py-3 text-blue-700 dark:text-blue-400">Built in as default</td>
       </tr>

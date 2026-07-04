@@ -207,7 +207,7 @@ The evaluation process for CAHs must prioritize deployment speed and independenc
 
 ## How SimpleScheduleAI Handles Hospital Staffing for CAHs?
 
-SimpleScheduleAI is a managed hospital staffing service that delivers all seven features above with no IT involvement. Onboarding takes 3 to 5 business days via Excel upload. Texas overtime compliance, callout coverage shortlists, and CMS audit trail are built in, not configured.
+SimpleScheduleAI is a managed hospital staffing service that delivers all seven features above with no IT involvement. Onboarding takes 3 to 5 business days via Excel upload. FLSA overtime threshold tracking, callout coverage shortlists, and CMS audit trail are built in, not configured.
 
 The managed service model means a scheduling specialist handles setup and ongoing support, not the nurse manager. The nurse manager reviews and approves schedule drafts; they do not operate the software.
 

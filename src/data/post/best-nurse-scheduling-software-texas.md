@@ -26,7 +26,7 @@ metadata:
 - Texas has 91 Critical Access Hospitals (CAHs), more than most states. The majority are in west Texas, the Panhandle, and south Texas border communities where rural isolation amplifies every scheduling challenge.
 - Texas hospitals must comply with both federal [FLSA overtime rules](https://www.dol.gov/agencies/whd/flsa) and [Texas Labor Code Chapter 62](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) overtime provisions. Not all scheduling software accounts for both.
 - A nurse manager at a Texas CAH can lose a meaningful slice of the week to scheduling, on the order of 8 to 12 hours by our own directional estimate (not a published figure). That time cost is the baseline any tool needs to beat before it provides positive ROI.
-- SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals. Texas overtime compliance, CMS §485.635 audit documentation, and charge nurse coverage logic are defaults, not configuration options.
+- SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals. FLSA overtime threshold tracking, CMS §485.635 audit documentation, and charge nurse coverage logic are defaults, not configuration options.
 - For larger Texas hospitals (50-200 beds), Aladtec and SmartLinx are the strongest self-serve options. For small community hospitals needing physician scheduling, QGenda enters the picture.
 
 ## Table of Contents
@@ -547,7 +547,7 @@ Evaluate OnShift for the LTC unit alongside one of the above for the acute unit.
 
 SimpleScheduleAI was built specifically for Texas Critical Access Hospitals, not adapted from a general scheduling platform. The founders' background in hospital operations, including Apollo Hospitals and Texas healthcare operations, informed a product designed around what a 25-bed Texas CAH actually needs, not what a 300-bed suburban hospital needs.
 
-Texas overtime compliance, CMS §485.635 audit documentation, charge nurse coverage logic for the rural Texas nursing workforce, and 100% remote implementation are defaults, not features you configure. The AI-native, done-for-you service model was chosen specifically because Texas rural nurse managers cannot realistically maintain a self-serve platform on top of clinical duties.
+FLSA overtime threshold tracking, CMS §485.635 audit documentation, charge nurse coverage logic for the rural Texas nursing workforce, and 100% remote implementation are defaults, not features you configure. The AI-native, done-for-you service model was chosen specifically because Texas rural nurse managers cannot realistically maintain a self-serve platform on top of clinical duties.
 
 Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule to you.
 

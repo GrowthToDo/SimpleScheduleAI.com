@@ -183,9 +183,9 @@ A medical scheduling service is a managed function where a scheduling specialist
 
 Not necessarily, when total cost is calculated. Software reduces the manager's time from 8-12 hours to 4-6 hours per week. A managed service reduces it to 1-2 hours. The value of 3-4 hours of recovered nurse manager time per week is real cost that software comparisons often exclude. At a $50/hour loaded rate, 3 recovered hours per week is approximately $7,800 annually in administrative cost reduction.
 
-**Can a medical scheduling service handle Texas overtime compliance?**
+**Can a medical scheduling service handle FLSA overtime threshold tracking?**
 
-Yes, if the service is built for Texas facilities. Texas overtime compliance requires applying both [FLSA](https://www.dol.gov/agencies/whd/flsa) rules (40-hour workweek threshold, 1.5x overtime pay) and [Texas Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions. A service built for Texas CAHs incorporates these rules as defaults; a generic scheduling service may not.
+Yes, if the service is built for healthcare facilities. FLSA overtime threshold tracking applies the [FLSA](https://www.dol.gov/agencies/whd/flsa) 40-hour workweek threshold and 1.5x overtime pay rule alongside [Texas Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) pay-timing provisions. A service built for Texas CAHs incorporates FLSA threshold tracking as a default; a generic scheduling service may not.
 
 **How quickly can a medical scheduling service be operational?**
 
