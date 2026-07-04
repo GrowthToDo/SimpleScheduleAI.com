@@ -5,10 +5,10 @@ updateDate: 2026-07-04T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Safe Staffing and Nurse-to-Patient Ratios at a Critical Access Hospital'
 excerpt: >
-  Searchers want a number, but there is no federal nurse-to-patient ratio. This
-  guide explains what safe staffing law actually requires, why only California and
-  Oregon mandate broad ratios, and how a 25-bed Texas hospital staffs to
-  acuity and a committee-approved plan instead.
+  Everyone asks for the required nurse-to-patient ratio. Federal law does not set
+  one. This guide explains what safe staffing law actually requires, why only
+  California and Oregon mandate broad ratios, and how a 25-bed Texas hospital
+  staffs to acuity and a committee-approved plan instead.
 image: https://images.unsplash.com/photo-1631039302217-5a6c56371e86?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
@@ -47,7 +47,7 @@ No. There is no federal nurse-to-patient ratio for hospitals. Federal law and th
 
 For a critical access hospital the rules are structured differently but land in the same place. Under [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), a registered nurse must provide or supervise the nursing care of each patient, and under [485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) a doctor, physician assistant, nurse practitioner, or clinical nurse specialist must be available to furnish patient care at all times the facility operates. None of these sets a number of patients per nurse. <!-- facts-ok -->
 
-That absence is deliberate. A federal ratio would have to fit a 700-bed academic medical center and a 12-patient rural hospital on the same night, and no single number does. So the standard is qualitative: staff to acuity, cover every hour you are open, and document that you did. For the documentation side of that obligation, see our guide to [CMS compliant nurse scheduling](/blog/how-to-stay-cms-compliant-nurse-scheduling).
+That absence is deliberate. No single number can fit a 700-bed academic medical center and a 12-patient rural hospital at the same time. So the standard is qualitative: staff to acuity, cover every hour you are open, and document that you did. For the documentation side of that obligation, see our guide to [CMS compliant nurse scheduling](/blog/how-to-stay-cms-compliant-nurse-scheduling).
 
 ## Which States Mandate Nurse Staffing Ratios?
 

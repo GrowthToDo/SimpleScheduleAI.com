@@ -5,76 +5,76 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T07:14:46.733Z",
-      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
+      "checkedAt": "2026-07-04T07:19:51.698Z",
+      "contentHash": "c9fc2feda5a1861bcd220109b4c8a18f697e2051630826101ab645de7357fcf0"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T07:14:48.425Z",
-      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
+      "checkedAt": "2026-07-04T07:19:54.764Z",
+      "contentHash": "c9fc2feda5a1861bcd220109b4c8a18f697e2051630826101ab645de7357fcf0"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T07:14:50.670Z",
-      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
+      "checkedAt": "2026-07-04T07:19:56.118Z",
+      "contentHash": "c9fc2feda5a1861bcd220109b4c8a18f697e2051630826101ab645de7357fcf0"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T07:14:50.698Z",
-      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
+      "checkedAt": "2026-07-04T07:19:56.183Z",
+      "contentHash": "c9fc2feda5a1861bcd220109b4c8a18f697e2051630826101ab645de7357fcf0"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T07:14:51.095Z",
-      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
+      "checkedAt": "2026-07-04T07:19:56.552Z",
+      "contentHash": "c9fc2feda5a1861bcd220109b4c8a18f697e2051630826101ab645de7357fcf0"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T07:14:51.095Z",
-      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
+      "checkedAt": "2026-07-04T07:19:56.552Z",
+      "contentHash": "c9fc2feda5a1861bcd220109b4c8a18f697e2051630826101ab645de7357fcf0"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T07:14:51.097Z",
-      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
+      "checkedAt": "2026-07-04T07:19:56.556Z",
+      "contentHash": "c9fc2feda5a1861bcd220109b4c8a18f697e2051630826101ab645de7357fcf0"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "controller-founder-fix-pass",
-      "setAt": "2026-07-04T07:15:15.996Z",
-      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
+      "setBy": "controller-founder-wording-pass",
+      "setAt": "2026-07-04T07:19:57.065Z",
+      "contentHash": "f3961d3bf586aa63b15a5ef544d3c068de63a6b2296f1365359e89d4e56fa21c"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "dossier-aligned",
-      "setAt": "2026-07-04T07:15:16.159Z",
-      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
+      "setBy": "no-facts-touched",
+      "setAt": "2026-07-04T07:19:57.510Z",
+      "contentHash": "f3961d3bf586aa63b15a5ef544d3c068de63a6b2296f1365359e89d4e56fa21c"
     },
     "imageEyeball": {
       "value": "OK",
       "setBy": "founder",
-      "setAt": "2026-07-04T05:50:48.078Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "setAt": "2026-07-04T07:19:57.899Z",
+      "contentHash": "f3961d3bf586aa63b15a5ef544d3c068de63a6b2296f1365359e89d4e56fa21c"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-07-04T07:15:16.303Z",
-      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
+      "setAt": "2026-07-04T07:19:58.371Z",
+      "contentHash": "f3961d3bf586aa63b15a5ef544d3c068de63a6b2296f1365359e89d4e56fa21c"
     },
     "indexNow": {
       "value": "DONE",
       "setBy": "controller",
-      "setAt": "2026-07-04T07:15:16.468Z",
-      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
+      "setAt": "2026-07-04T07:19:58.847Z",
+      "contentHash": "f3961d3bf586aa63b15a5ef544d3c068de63a6b2296f1365359e89d4e56fa21c"
     },
     "gscSitemap": {
       "value": "DONE",
       "setBy": "controller",
-      "setAt": "2026-07-04T07:15:16.599Z",
-      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
+      "setAt": "2026-07-04T07:19:59.202Z",
+      "contentHash": "f3961d3bf586aa63b15a5ef544d3c068de63a6b2296f1365359e89d4e56fa21c"
     }
   },
   "overrides": []
