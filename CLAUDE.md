@@ -60,3 +60,15 @@ Main agent only: read known files, edit, write, compose answer, spawn subagents.
 The pipeline is manifest-enforced. Load `.claude/skills/publish-pipeline.md` before writing, gating, or publishing any post/article — it maps every phase to the `.publish/<slug>.json` manifest field that `npm run publish-gate` must show green. The pre-commit hook blocks a `draft: false` flip whose manifest is not green. First command on any publish session: `npm run publish-gate <slug> -- --status`.
 
 Phase order (details in the skill): research brief -> draft (skills + facts dossier) -> mechanical gate -> inbound links -> proofread agent (post-type reference matrix) -> fact-check agent (new facts only) -> human image eyeball -> founder approval -> commit (hook verifies) -> push -> IndexNow/GSC.
+
+## Orchestration workflow (ACTIVE ONLY until 2026-07-07, Fable sessions only)
+
+Gate: if today is after 2026-07-07, OR the session model is not Fable (check the model line in your environment info), ignore this section entirely.
+
+You (Fable) are the orchestrator. Plan, decompose, synthesize — keep your own context lean; subagents return conclusions, not file dumps.
+
+- Reasoning-heavy phases (architecture, debugging complex issues, algorithm design) → spawn an Agent with `model: "opus"` ("deep-reasoner"). Ask it to think thoroughly but return a concise, actionable conclusion.
+- Mechanical work (boilerplate, tests, formatting, well-specified simple edits) → spawn an Agent with `model: "sonnet"` ("fast-worker") with precise specs.
+- Codex (`/codex:rescue --background`, if the plugin is installed) is a cracked senior engineer on par with deep-reasoner, from a different perspective. Treat as a peer, not a reviewer. If the plugin is absent, skip this lane.
+- High-stakes decisions: task Opus + Codex on the same problem in parallel and synthesize the best of both, without showing either the other's answer.
+- Always ground-truth subagent edits yourself (git diff, tests) — a subagent's self-report is a hypothesis, not a fact.
