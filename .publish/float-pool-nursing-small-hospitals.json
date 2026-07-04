@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "float-pool-nursing-small-hospitals",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:30.044Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:31.510Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:33.277Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:33.303Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:33.439Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:33.439Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:33.440Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:49.905Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:50.140Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:50.338Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:50.516Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:50.679Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:50.856Z",
+      "contentHash": "9ea9ba04f251e613bc3dc1f31adaa45a8fedb5bed46773a0a513f8eff64fa135"
+    }
+  },
+  "overrides": []
+}

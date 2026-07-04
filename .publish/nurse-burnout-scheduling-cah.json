@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-burnout-scheduling-cah",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:25.579Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:26.913Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:29.407Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:29.431Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:29.672Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:29.672Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-04T03:46:29.673Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:48.676Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:48.797Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:48.919Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:49.073Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:49.230Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "backfill",
+      "setAt": "2026-07-04T03:46:49.404Z",
+      "contentHash": "08e5ce285dbcafc828adfc19244d7482ab7478a3b5910286299c7201b802e00a"
+    }
+  },
+  "overrides": []
+}
