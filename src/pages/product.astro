@@ -1,0 +1,295 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import SchemaOrg from '~/components/common/SchemaOrg.astro';
+import DarkHero from '~/components/widgets/DarkHero.astro';
+import SchedulerDemoSection from '~/components/widgets/SchedulerDemoSection.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Product Tour | AI Nurse Scheduling Software',
+  description:
+    'AI-native nurse scheduling software for Texas Critical Access Hospitals: three schedule draft modes, 21 automated rule checks, callout replacement shortlists, PDF and Excel exports.',
+  robots: { index: false, follow: true },
+  canonical: 'https://simplescheduleai.com/product',
+};
+
+const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
+
+const features = [
+  {
+    title: 'AI schedule generation',
+    description:
+      'Three draft modes per cycle: balanced, fairness-optimized, and cost-optimized. Pick the trade-off that fits your unit.',
+  },
+  {
+    title: 'Fairness tracking',
+    description:
+      'Weekends, holidays, overtime, and charge duty distribution tracked automatically across the roster, so rotations stay defensible.',
+  },
+  {
+    title: 'FLSA overtime threshold tracking',
+    description:
+      'Scheduled hours are tracked against FLSA overtime thresholds as the grid fills, so overtime risk is flagged before the schedule posts.',
+  },
+  {
+    title: 'Callout replacement shortlist',
+    description:
+      'Log the callout and the system generates the top 3 replacement candidates with reasons: skills, role, charge coverage, overtime risk.',
+  },
+  {
+    title: 'PDF and Excel exports',
+    description:
+      'Export a post-ready PDF for the unit board and a full Excel workbook with the exceptions log and a complete audit trail.',
+  },
+  {
+    title: 'Guided setup from your Excel roster',
+    description:
+      'Load your staff list and shift structure from the Excel roster you already keep. A guided setup session maps your unit rules with you, once. After that the schedule cycle is yours to run, in the browser, with no installation or integration project.',
+  },
+];
+
+const tiers = [
+  {
+    name: 'Core',
+    price: '$1,000',
+    roster: 'Up to 20 nurses',
+    note: 'For single-unit Critical Access Hospitals.',
+    featured: false,
+  },
+  {
+    name: 'Plus',
+    price: '$1,500',
+    roster: '21 to 40 nurses',
+    note: 'For larger or multi-unit rosters.',
+    featured: true,
+  },
+];
+
+const softwareAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'SimpleScheduleAI',
+  applicationCategory: 'BusinessApplication',
+  applicationSubCategory: 'Healthcare Scheduling Software',
+  operatingSystem: 'Web',
+  url: 'https://simplescheduleai.com/product',
+  description:
+    'AI-native nurse scheduling software for critical access hospitals. Generates balanced, fairness-optimized, and cost-optimized schedule drafts, ranks callout replacements, tracks FLSA overtime thresholds, and exports post-ready PDF and Excel schedules.',
+  audience: {
+    '@type': 'Audience',
+    audienceType: 'Nurse Managers, Directors of Nursing, CAH Administrators',
+  },
+  featureList: [
+    'AI-generated nurse schedules',
+    'Three draft options: balanced, fairness-optimized, cost-optimized',
+    'Real-time callout replacement shortlist',
+    'Excel roster upload',
+    'Texas overtime compliance tracking',
+    'Audit trail logging',
+  ],
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    lowPrice: '1000',
+    highPrice: '1500',
+    offerCount: '2',
+    description: 'Flat monthly price per facility, by roster size',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <SchemaOrg slot="head" schema={[softwareAppSchema]} />
+
+  <!-- Product hero -->
+  <DarkHero
+    badge="Product tour"
+    title="The nurse schedule builds itself. You approve it."
+    subtitle="AI-native nurse scheduling software for Texas Critical Access Hospitals. The AI builds your schedule, 21 automated rule checks validate every draft, you approve. Runs in the browser, no installation, no IT department required."
+    actions={[
+      { text: 'Try the interactive demo', href: '/simulator', variant: 'primary' },
+      { text: 'Book a call with our team', href: ctaLink, variant: 'secondary' },
+    ]}
+  />
+
+  <!-- What the software does: editorial feature list + callout-shortlist mockup -->
+  <section class="bg-page">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="grid gap-12 lg:grid-cols-2 lg:items-start">
+        <div data-reveal>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">What the software does</p>
+          <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+            Six capabilities, one weekly schedule
+          </h2>
+          <p class="mt-4 text-lg text-muted">
+            Everything below runs in the product today. Watch the engine work in the interactive demo further down.
+          </p>
+
+          <div class="mt-10 space-y-6">
+            {
+              features.map((feature) => (
+                <div class="border-l-4 border-primary pl-4">
+                  <h3 class="font-semibold">{feature.title}</h3>
+                  <p class="mt-1 text-muted">{feature.description}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        {/* Callout shortlist mockup: what logging a 2 AM callout returns */}
+        <div class="lg:sticky lg:top-24" data-reveal>
+          <div
+            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden"
+          >
+            <div class="bg-primary px-5 py-4 flex items-center justify-between">
+              <div>
+                <p class="text-xs font-semibold text-white/70 uppercase tracking-wider">Callout logged · Night shift</p>
+                <p class="text-sm font-bold text-white mt-0.5">Tue 02:14 AM · Replacement shortlist</p>
+              </div>
+              <span class="rounded-full bg-white/20 border border-white/30 px-3 py-1 text-xs font-semibold text-white"
+                >3 candidates</span
+              >
+            </div>
+
+            <div class="divide-y divide-gray-100 px-5">
+              <div class="py-4">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold text-sm">1. Jessica R. <span class="text-muted font-normal">RN</span></p>
+                  <span class="rounded bg-green-100 px-1.5 py-0.5 text-[10px] font-bold text-green-700">Best fit</span>
+                </div>
+                <p class="mt-1 text-xs text-muted">
+                  Night-qualified · 24h this week, no overtime risk · 2 weekends below rotation average
+                </p>
+              </div>
+              <div class="py-4">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold text-sm">2. Michael B. <span class="text-muted font-normal">RN</span></p>
+                  <span class="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-bold text-amber-700"
+                    >Watch hours</span
+                  >
+                </div>
+                <p class="mt-1 text-xs text-muted">
+                  Night-qualified · 34h this week, overtime if extended · charge-eligible backup
+                </p>
+              </div>
+              <div class="py-4">
+                <div class="flex items-center justify-between">
+                  <p class="font-semibold text-sm">3. Amanda W. <span class="text-muted font-normal">LVN</span></p>
+                  <span class="rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-bold text-gray-600">Role check</span>
+                </div>
+                <p class="mt-1 text-xs text-muted">
+                  Available · skill mix holds only if paired with the on-shift RN · 18h this week
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between border-t border-hairline px-5 py-3 bg-[#FAF7F2]">
+              <div class="flex items-center gap-1.5">
+                <span class="h-2 w-2 rounded-full bg-green-500"></span>
+                <span class="text-xs text-muted">FLSA thresholds checked · charge coverage holds</span>
+              </div>
+              <span class="text-xs font-medium text-primary">Ranked in 4s</span>
+            </div>
+          </div>
+
+          <p class="mt-4 text-center text-xs text-muted">
+            Illustrative screen with sample data, matching the engine in the interactive demo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive demo (same engine as /simulator) -->
+  <SchedulerDemoSection
+    tagline="Interactive demo"
+    title="Watch it fill a week."
+    subtitle="The engine checks 13 safety rules and 8 fairness rules as it fills every slot, then ranks callout replacements the same way. The interactive demo runs in your browser, free, no signup."
+    ctaText="Try the interactive demo"
+    ctaHref="/simulator"
+  />
+
+  <!-- Pricing -->
+  <section class="bg-page">
+    <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="max-w-2xl" data-reveal>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Pricing</p>
+        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">One flat facility license</h2>
+        <p class="mt-4 text-lg text-muted">
+          Flat facility license by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No
+          per-nurse fees, no setup fees.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2" data-reveal-group>
+        {
+          tiers.map((tier) => (
+            <div
+              class={`rounded-2xl border p-8 ${tier.featured ? 'border-primary/50 bg-primary/5' : 'border-hairline bg-white dark:bg-slate-800'}`}
+            >
+              <h3 class="text-xl font-bold">{tier.name}</h3>
+              <p class="mt-4 text-4xl font-bold">
+                {tier.price}
+                <span class="text-base font-medium text-muted">/month</span>
+              </p>
+              <p class="mt-1 text-sm font-medium text-primary">{tier.roster}</p>
+              <p class="mt-2 text-sm text-muted">{tier.note}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <p class="mt-6 text-center text-sm text-muted">
+        Billed monthly, cancel anytime. If your roster size changes, your plan adjusts at the next billing cycle.
+        Rosters above 40 nurses or multi-facility groups,
+        <a href={ctaLink} class="text-primary underline">talk to us</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQs
+    title="Questions about the product"
+    tagline="Common questions"
+    items={[
+      {
+        title: 'How long does it take to get started?',
+        description:
+          'Under two weeks. You load your staff list and shift structure from the Excel roster you already keep, and a guided setup session maps your unit rules with you: charge coverage, skill mix, on-call limits. Then you run a test cycle and review your first draft. From that point the weekly cycle is yours alone; no installation, no integration project.',
+      },
+      {
+        title: 'Do my nurses need to create accounts or download anything?',
+        description:
+          'No. There is no nurse-facing app to roll out. The manager works in the schedule and exports a post-ready PDF and Excel file by Thursday. Staff see the posted schedule, nothing to download.',
+      },
+      {
+        title: 'What if we already have a scheduling system?',
+        description:
+          'It replaces spreadsheets or a basic tool that does not enforce rules. It does not replace your EMR. It builds the schedule so you do not have to.',
+      },
+      {
+        title: 'How do you handle our unit-specific rules?',
+        description:
+          'You set them once during onboarding. Charge nurse requirements, skill mix ratios, on-call limits: all mapped to your unit. Rule changes take effect the next cycle.',
+      },
+      {
+        title: "What happens when there's a call-out at 2AM?",
+        description:
+          'Log the callout and the system generates the top 3 replacement candidates with reasons: skills, role, charge coverage, overtime risk. You pick one, the schedule updates, and a corrected copy is ready to post. No phone tree.',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    title="See the schedule build itself.<br/>Flat facility license."
+    subtitle="$1,000 to $1,500 a month per facility license, by roster size. No per-nurse fees, no setup fees."
+    tagline="Simple pricing"
+    actions={[
+      { variant: 'primary', text: 'Try the interactive demo', href: '/simulator' },
+      { variant: 'secondary', text: 'Book a call with our team', href: ctaLink },
+    ]}
+  />
+</Layout>

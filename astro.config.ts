@@ -39,6 +39,10 @@ export default defineConfig({
         !page.includes('/category/') &&
         !page.includes('/ask') &&
         !page.includes('/simulator') &&
+        // Unlisted product-positioning page (noindex); remove this line together
+        // with the robots noindex in product.astro when the founder flips the
+        // positioning experiment live (see docs/seo/positioning-registry.md runbook).
+        !page.includes('/product') &&
         // Retired pillar (301s to /nurse-scheduling-software) and internal decks
         !page.includes('/healthcare-staff-scheduling') &&
         !page.includes('/slide') &&
