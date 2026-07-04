@@ -37,6 +37,18 @@ test('new file with draft:false detected', () => {
   );
 });
 
+test('new file with NO draft key is gated as live', () => {
+  const flips = detectDraftFlips(
+    [{ status: 'A', path: 'src/data/post/nokey.md' }],
+    show({ 'src/data/post/nokey.md': '---\ntitle: X\n---\nx' }),
+    diffOld({})
+  );
+  assert.deepEqual(
+    flips.map((f) => f.slug),
+    ['nokey']
+  );
+});
+
 test('already-live edit and unrelated files ignored', () => {
   const flips = detectDraftFlips(
     [

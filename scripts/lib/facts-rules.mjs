@@ -16,7 +16,7 @@ export const FACTS_RULES = [
   {
     id: 'cfr-631-scope',
     trigger: /485\.631/,
-    bad: /provide (or supervise|\(or assign)/i,
+    bad: /provide \(?or (assign|supervise)/i,
     requires: null,
     anchor: 'facts-dossier.md#42-cfr-485635d',
     message: 'provide-or-supervise is 485.635(d), not 485.631',

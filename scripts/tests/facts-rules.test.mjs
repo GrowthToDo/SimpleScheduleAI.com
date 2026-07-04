@@ -22,6 +22,8 @@ test('485.631 must not carry the provide-or-supervise clause', () => {
     'cfr-631-scope'
   );
   ok('Under 42 CFR 485.635, a registered nurse must provide or supervise the nursing care of each patient.');
+  bad('Under 42 CFR 485.631, a registered nurse must provide or assign the nursing care.', 'cfr-631-scope');
+  bad('Under 42 CFR 485.631, an RN must provide (or supervise) the nursing care.', 'cfr-631-scope');
 });
 
 test('stale NSI figure is flagged', () => {

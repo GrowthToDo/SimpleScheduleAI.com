@@ -17,12 +17,15 @@ export function detectDraftFlips(nameStatus, readStaged, readHead) {
     if (status === 'D') continue;
     const collection = match[1];
     const staged = parseFrontmatter(readStaged(norm)).data;
-    if (staged.draft !== false) continue;
+    if (staged.draft === true) continue; // explicit draft stays ungated — it can't publish
     const headText = readHead(norm);
     if (headText === undefined) {
+      // New file: any non-`draft: true` staged content is a flip — covers both
+      // `draft: false` AND a missing `draft:` key (smoke-routes/Astro treat
+      // missing-draft as LIVE, so a keyless new file must be gated too).
       flips.push({ path: norm, slug: slugOf(norm), collection });
       continue;
-    } // new file
+    }
     const head = parseFrontmatter(headText).data;
     if (head.draft === true) flips.push({ path: norm, slug: slugOf(norm), collection });
   }
