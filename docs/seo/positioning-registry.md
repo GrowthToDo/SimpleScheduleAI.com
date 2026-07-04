@@ -34,6 +34,8 @@ No em-dashes or en-dashes in either column. No check-blog AI-tone phrases.
 | `faq-unit-rules` (landing FAQ 4, "How do you handle our unit-specific rules?") | We configure them before your first cycle. Charge nurse requirements, skill mix ratios, on-call limits: all mapped to your unit. Changes take effect the next cycle. | You set them once during onboarding. Charge nurse requirements, skill mix ratios, on-call limits: all mapped to your unit. Rule changes take effect the next cycle. | index.astro FAQ + faqSchema |
 | `team-reference` | checked by our scheduling team / our scheduling team checks it (any "our scheduling team" construction) | validated by the built-in quality checks (21 automated rules) | index.astro, how-it-works.astro, pricing.astro |
 | `no-it` | No IT involvement required. / No IT Setup / No new software for your staff. | No installation, no integration project, no IT department required. Runs in the browser; nurses need no accounts. Founder rules (2026-07-04): in product mode NEVER use the bald service-style claim 'No IT.'; always name what is absent (installation/integration/IT department). AND never claim the manager configures rules solo: setup is 'guided setup session' (vendor maps unit rules with the manager, once); only the ONGOING weekly cycle is manager-alone. Claiming solo rule-configuration contradicts our own anti-UKG/QGenda thesis that CAH managers cannot absorb configuration burden. | index.astro eyebrow, how-it-works.astro |
+| `delivery-model-binary` | a managed service, not software the hospital runs itself | guided-setup software, not a self-configured platform the hospital integrates alone | THE most frequent migration conversion (dry-run 2026-07-04: needed 8+ times across 3 posts); use this exact pair, do not re-derive |
+| `guided-setup` | We configure your rules before your first cycle. | A guided setup session maps your unit rules with you, once. | CANONICAL STRING: always exactly 'guided setup session' (not 'guided onboarding session'/'one guided session'); load-bearing for the no-it founder rule |
 | `value-prop` | You get a compliant, post-ready schedule every cycle, callout coverage handled. | A compliant, post-ready schedule every cycle, with callout coverage built in. | index.astro meta description |
 | `weekly-inputs` | Send us PTO, known constraints, or ED spikes. We take the "messy" data and process it into a clean, logical draft. | Enter PTO, known constraints, and ED spikes. The engine turns messy inputs into a clean, logical draft. | WeeklyCadence.astro step 02 |
 
@@ -111,6 +113,19 @@ Build `scripts/lib/positioning-rules.mjs` modeled exactly on
 `npm run check-blog -- --all` clean, `npm run check-links` clean,
 `npm run build && npm run smoke` clean, then the standard judgment-only review pass
 on every rewritten post before any draft flips.
+
+### Dry-run lessons (2026-07-04, 3 vs-posts converted + adversarially reviewed)
+
+Measured: token hits 18, judgment calls 56, premise-collapse locations 18 across 3 posts. The vs-class is NOT mostly mechanical; budget a hand-rewrite tier for it.
+
+1. **Diff-grounded decision ledger is mandatory.** Every converted post gets a line-by-line ledger verified against `git diff`/file diff, never from the converter's self-report (Post 2's log under-reported: silent excerpt/tags/intro edits). Same rule as feedback_verify_subagent_edits.
+2. **Frontmatter is a positioning surface.** title, excerpt, description, tags are IN scope for conversion AND for the ledger; excerpt edits are SEO-visible.
+3. **Premise triage greps H2s and comparison-table headers, not just titles/slugs.** The worst premise collapse in the dry run lived in an internal H2 of a post whose title never says "managed service". Triage pattern: grep 'managed service|service, not software|run(s)? itself' across title+H2s+table headers+FAQ questions.
+4. **Competitor-inflation guardrail (product-mode edition).** Retiring "managed service" pulls conversions toward casting competitors as "integration-heavy". Never state a competitor's IT/integration lift beyond its own cited product page; reframe OUR model, not their burden.
+5. **H2 renames change anchor slugs.** Every premise-collapse H2 rename = a TOC anchor change + potential inbound-fragment break; the ledger must list old->new anchors.
+6. **Ship gates for real migration:** facts scan 0, check-blog corpus 0 hard failures, the leftover sweep (we build/we deliver/our team/hands it to you/done for you/Thursday-delivery framing/bald No IT), and the overcorrection sweep (solo-config implications, invented features, zero-touch setup).
+
+Dry-run artifacts: docs/seo/migration-dryrun/ (3 converted posts + DECISIONS.md; NOT for publication).
 
 ## Maintenance log
 
