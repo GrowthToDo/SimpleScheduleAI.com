@@ -37,7 +37,7 @@ export const headerData = {
       ],
     },
   ],
-  actions: [{ text: 'Get your first schedule', href: getPermalink('/contact'), variant: 'primary' }],
+  actions: [{ text: 'Get your first schedule', href: getPermalink('/contact'), variant: 'primary' as const }],
 };
 
 export const footerData = {
