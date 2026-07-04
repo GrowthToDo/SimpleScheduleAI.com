@@ -134,7 +134,7 @@ When a night nurse calls out, the replacement list is generated from night-eligi
 
 One honest limitation: the quality of night coverage scheduling depends on the size of your night-eligible pool. If a CAH has only four or five nurses who can work nights, the system flags coverage risk accurately, but it cannot create availability that does not exist. We are direct about this during onboarding rather than promising a fix we cannot deliver.
 
-You can read the full process on our [nurse scheduling software](/nurse-scheduling-software) page, our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub, or [how the scheduling process works](/how-it-works) step by step.
+You can read the full process on our [nurse scheduling software](/nurse-scheduling-software) page, our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub, or [how the scheduling process works](/how-it-works) step by step, or watch it build a night-covered week live in the [interactive simulator](/simulator).
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>

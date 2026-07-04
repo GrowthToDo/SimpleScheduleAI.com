@@ -53,7 +53,7 @@ One data point worth knowing before any internal conversation about UKG: the adm
 
 ## Why Does UKG Fail at Small Hospital Scale?
 
-UKG fails at a 25-bed hospital because every operational assumption the platform makes is wrong at that scale. The implementation requires dedicated IT and HRIS staff a CAH does not have. The 6-12 month timeline does not fit a facility in active scheduling distress. The $150,000-$500,000 implementation cost does not recover at a hospital with $400,000-$600,000 in annual nursing labor. And the ongoing configuration burden lands on the nurse manager, who is also managing clinical shifts.
+UKG fails at a 25-bed hospital because every operational assumption the platform makes is wrong at that scale. The implementation requires dedicated IT and HRIS staff a CAH does not have. The 6-12 month timeline does not fit a facility in active scheduling distress. The $150,000-$500,000 implementation cost does not recover at a hospital with $400,000-$600,000 in annual nursing labor; run your own numbers in the [scheduling cost calculator](/roi). And the ongoing configuration burden lands on the nurse manager, who is also managing clinical shifts.
 
 <div class="not-prose my-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
   <div class="rounded-lg border border-red-200 dark:border-red-800 bg-white dark:bg-slate-800 overflow-hidden">

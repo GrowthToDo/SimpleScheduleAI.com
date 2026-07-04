@@ -112,7 +112,7 @@ The same draft respects who is cross-trained for which function, so when it fill
 
 One honest limitation: the quality of any of these models depends on how many willing, credentialed nurses actually exist near you. If your local pool is genuinely five people, the system will surface coverage risk accurately, but it cannot manufacture availability that is not there. We are direct about that during onboarding rather than promising a bench we cannot fill. The same gap-spotting discipline is what keeps [night shift coverage](/blog/night-shift-nurse-schedule-coverage) from collapsing onto three people, and it is where [AI nurse scheduling](/ai-nurse-scheduling) earns its place: it models coverage across the full period before anyone approves it.
 
-You can read the full process on our [nurse scheduling software](/nurse-scheduling-software) page, our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub, or [how the scheduling process works](/how-it-works) step by step.
+You can read the full process on our [nurse scheduling software](/nurse-scheduling-software) page, our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub, or [how the scheduling process works](/how-it-works) step by step, or watch the AI build a compliant week and rank a callout shortlist live in the [interactive simulator](/simulator).
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>

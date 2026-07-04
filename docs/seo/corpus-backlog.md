@@ -85,6 +85,9 @@ Recommend fixing today (all Tier 1, all Small, ~15 minutes total):
 
 Everything else (Tier 2 structural gaps, Tier 3 polish, the eCFR source-label mismatches, the `/roi` noise) is fine to queue as backlog — none of it misrepresents SSAI's offer or pricing to a reader.
 
+## Tier 2 status: CLEARED 2026-07-04
+All Tier 2 rows below were fixed and pushed: /simulator wired into float-pool, night-shift, staffing-ratios; /roi into ukg-too-complex; Sources moved after FAQ in self-scheduling; Our Take added + CTA reordered in nurse-rostering-vs (its "missing WTDT" was a heading-variant false positive). Remaining open debt = Tier 3 image swaps (founder eyeball required).
+
 ## Addendum: structural + image audit (2026-07-04, second sweep)
 
 Correction to any earlier claim: posts using the "What Should You Do This Week?" heading VARIANT are NOT missing the section (float-pool, night-shift, nurse-burnout, staffing-ratios, retention article). Variant naming may be normalized in a later pass, not a defect.

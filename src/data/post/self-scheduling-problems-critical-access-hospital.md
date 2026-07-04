@@ -176,18 +176,6 @@ One honest limitation: constraint-aware fairness assignment is not the right fit
 
 Related operational guides: [How Small Rural Hospitals Without an IT Department Manage Nurse Scheduling](/blog/nurse-scheduling-no-it-department-rural-hospital), [Hospital Staff Scheduling Software for Critical Access Hospitals](/blog/hospital-staff-scheduling-software-critical-access), and [The $26,000 Scheduling Burden at Critical Access Hospitals](/blog/healthcare-scheduling-crisis).
 
-## Sources
-
-[1] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
-
-[2] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
-
-[3] HRSA rural workforce capacity data. [data.hrsa.gov/topics/health-workforce/shortage-areas](https://data.hrsa.gov/topics/health-workforce/shortage-areas).
-
-[4] Public reviewer quotes gathered from Capterra and AllNurses.com on 2026-04-30.
-
-**Methodology note:** Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
-
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
@@ -231,6 +219,18 @@ A fairness score measures how equitably undesirable shifts, nights, weekends, an
 **Q: Can you use self-scheduling and a managed service at the same time?**
 
 Yes. A hybrid model works: nurses submit preferences through whatever communication channel the unit already uses, and the scheduling service uses those preferences as inputs when generating the schedule. The difference is that preferences are applied subject to fair distribution rules and coverage requirements, not first-come-first-served. The nurse still has input. The manager still approves. The system enforces the rules that manual self-scheduling cannot consistently enforce.
+
+## Sources
+
+[1] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[2] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+[3] HRSA rural workforce capacity data. [data.hrsa.gov/topics/health-workforce/shortage-areas](https://data.hrsa.gov/topics/health-workforce/shortage-areas).
+
+[4] Public reviewer quotes gathered from Capterra and AllNurses.com on 2026-04-30.
+
+**Methodology note:** Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

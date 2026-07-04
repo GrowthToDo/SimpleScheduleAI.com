@@ -170,11 +170,9 @@ The tools that work best for critical access hospitals fold rostering and schedu
 
 One honest limitation: a single integrated workflow is not the right fit for every facility. Large systems with a dedicated workforce-management team, hospitals already standardized on an enterprise platform with a working integration, or facilities that need deep payroll and time-and-attendance features beyond scheduling may be better served keeping specialized tools. SimpleScheduleAI is built for Texas Critical Access Hospitals where one manager owns the whole cycle, not for that profile.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See How Rostering and Scheduling Work Together at a Critical Access Hospital</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI takes your staff roster and runs the full schedule as one managed service, with no separate tools to keep in sync. See the full cycle, then book a short call to talk through your facility.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The rostering-versus-scheduling debate is mostly vendor vocabulary, and treating it as a real buying decision is how a small hospital ends up with two tools and a weekly export between them. At a 25-bed facility one person owns the whole cycle, so the only question that matters is whether a roster change reaches the schedule without a human carrying it. Buy the workflow, not the word. Any tool that makes you reconcile two systems has already failed the test this post gives you.</p>
 </div>
 
 ## What Should You Do This Week?
@@ -186,6 +184,13 @@ Pin down which half of the cycle is actually breaking before you shop for a tool
 3. For any tool you are evaluating, ask the vendor to demo a shift assignment to a nurse whose required certification has expired. Watch whether the system blocks it.
 4. Ask any tool how a roster change reaches the schedule. If the answer is a manual export, treat it as two systems, not one.
 5. If one person owns the whole cycle at your hospital, [see how SimpleScheduleAI handles your staff roster and the schedule as one service](/how-it-works) and book a short call to map it to your facility.
+
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See How Rostering and Scheduling Work Together at a Critical Access Hospital</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI takes your staff roster and runs the full schedule as one managed service, with no separate tools to keep in sync. See the full cycle, then book a short call to talk through your facility.</p>
+  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+</div>
 
 ## Frequently Asked Questions
 
