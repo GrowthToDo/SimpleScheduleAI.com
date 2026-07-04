@@ -216,6 +216,8 @@ _Apply on every post. The audience is a Texas CAH Nurse Manager / DON / Administ
 
 ## Pre-Publish Proofreading Agent (Final Gate)
 
+> The operational flow (including the post-type reference matrix and the manifest fields each verdict must set) now lives in `.claude/skills/publish-pipeline.md`. This section stays as the check catalog; the skill is the runbook.
+
 _Mandatory final gate before any post flips `draft: true` → `draft: false`. Catches violations of every rule in this checklist plus established conventions not yet codified here. This gate sits AFTER the Phase 3 Review agent in the 3-agent pipeline and BEFORE the human go-live decision. Run when the founder is about to authorize publish; the agent reports back, the main agent applies the flagged fixes, then the founder publishes._
 
 ### How to spawn it
