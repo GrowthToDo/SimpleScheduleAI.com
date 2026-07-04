@@ -28,6 +28,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename } from 'node:path';
 import { checkFacts } from './lib/facts-rules.mjs';
+import { checkPositioning } from './lib/positioning-rules.mjs';
 import { overusedFamily } from './lib/image-pool.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -1012,6 +1013,14 @@ function check(file) {
       );
       break;
     }
+  }
+
+  // Positioning-registry drift (docs/seo/positioning-registry.md): product-mode
+  // phrase leaks into service-mode content, triad wording drift, novel
+  // we-do-X-for-you constructions, and retired "live demo" wording. All
+  // WARN-severity — judgment-adjacent phrasing, not deterministic defects.
+  for (const v of checkPositioning(bodyText)) {
+    warn(`Positioning drift [${v.id}]: ${v.message} -> docs/seo/${v.anchor}`, bodyOffset + v.line, v.text);
   }
 
   return { file: path, draft: fm?.draft === 'true', failures, warnings };

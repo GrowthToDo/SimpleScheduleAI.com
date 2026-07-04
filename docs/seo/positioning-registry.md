@@ -61,9 +61,12 @@ mode-neutral and identical in both modes, except FAQ 5 where product mode drops 
    post-specific detail AFTER the quoted sentence(s), never blended into them.
 5. The `pricing` row is the facts-dossier canonical line; it is already enforced
    mechanically. Never restate pricing in any other shape.
-6. Future enforcement (spec only, DO NOT build now): a check-blog WARN that flags
-   "we build/check/deliver/configure/send" constructions in `src/data/post/*` that do
-   not match a service-mode row, modeled on `scripts/lib/facts-rules.mjs`.
+6. Enforcement: built in `scripts/lib/positioning-rules.mjs` (`checkPositioning`),
+   wired into `scripts/check-blog.mjs` as a WARN over `src/data/post/*` bodies.
+   Covers product-mode phrase leaks, triad wording drift, novel
+   we-do-X-for-you constructions, and retired "live demo" wording. Honors a
+   `<!-- positioning-ok -->` per-line opt-out, mirroring `<!-- facts-ok -->`.
+   Tests: `scripts/tests/positioning-rules.test.mjs`.
 
 ## Migration-day runbook (service mode to product mode, future founder decision)
 
@@ -134,3 +137,4 @@ Dry-run artifacts: docs/seo/migration-dryrun/ (3 converted posts + DECISIONS.md;
 | Date       | Change                                              | By     |
 | ---------- | --------------------------------------------------- | ------ |
 | 2026-07-04 | Initial registry: 18 rows, authoring rules, runbook | Claude |
+| 2026-07-04 | Built `positioning-rules.mjs` + check-blog WARN wiring (authoring-rule enforcement, not the Pass-1 migration script) | Claude |
