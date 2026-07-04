@@ -9,7 +9,7 @@ excerpt: >
   guide explains what safe staffing law actually requires, why only California and
   Oregon mandate broad ratios, and how a 25-bed Texas hospital staffs to
   acuity and a committee-approved plan instead.
-image: https://images.unsplash.com/photo-1603807008857-ad66b70431aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1631039302217-5a6c56371e86?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:
@@ -24,7 +24,7 @@ metadata:
 
 - There is no federal nurse-to-patient ratio. Federal law and the CMS Conditions of Participation require "adequate numbers" of nurses matched to patient acuity and coverage, not a fixed number, under [42 CFR 482.23](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-482/subpart-C/section-482.23) for general hospitals and [485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) plus [485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) for critical access hospitals
 - California has the longest-standing comprehensive nurse-to-patient ratios: 1:5 on medical-surgical units, 1:2 in the ICU and critical care, and 1:4 in the emergency department, set by [22 CCR 70217](https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217); Oregon's 2023 staffing law adds ratios across 12 unit types, fully in effect as of mid-2026
-- Texas mandates a nurse staffing committee with at least 60 percent direct-care registered nurses and a written, adopted staffing plan under [Texas Health and Safety Code 257.004](https://statutes.capitol.texas.gov/Docs/HS/htm/HS.257.htm), not a hard ratio
+- Texas mandates a nurse staffing committee with at least 60 percent direct-care registered nurses and a written, adopted staffing plan under [Texas Health and Safety Code 257.004](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/), not a hard ratio
 - A 25-bed Texas hospital does not staff to a state number. It staffs to acuity and coverage and must be able to show that its committee-approved plan was followed
 - The safe-staffing evidence is strong: each additional patient added to a nurse's load is linked with roughly a 7 percent higher likelihood of patient death within 30 days, per [Aiken et al., JAMA 2002](https://pubmed.ncbi.nlm.nih.gov/12387650/), a body of research [AHRQ](https://psnet.ahrq.gov/primer/nursing-and-patient-safety) summarizes
 
@@ -98,7 +98,7 @@ The takeaway for a rural administrator is that "nurse to patient ratio by state"
 
 ## What Does Texas Require for Safe Staffing?
 
-Texas requires a nurse staffing committee and a written staffing plan, not a ratio. Under [Texas Health and Safety Code 257.004](https://statutes.capitol.texas.gov/Docs/HS/htm/HS.257.htm), a hospital must establish a committee where at least 60 percent of the members are registered nurses who provide direct patient care, and that committee develops and recommends a written nurse staffing plan the hospital adopts.
+Texas requires a nurse staffing committee and a written staffing plan, not a ratio. Under [Texas Health and Safety Code 257.004](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/), a hospital must establish a committee where at least 60 percent of the members are registered nurses who provide direct patient care, and that committee develops and recommends a written nurse staffing plan the hospital adopts.
 
 The plan is where acuity lives. Rather than a statewide number, the committee sets staffing based on unit type, patient acuity and intensity, skill mix, the experience of the nursing staff, and the layout of the unit. The hospital then follows the plan and keeps records that show it did. In practice this means a Texas hospital is accountable to its own adopted plan, which a surveyor can ask to see, alongside the schedules and staffing records that demonstrate the plan was met on a given shift.
 
@@ -122,7 +122,7 @@ This is the reasoning behind both ratio laws and staffing committees. The [Ameri
 
 SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. We build each facility's staffing plan into the scheduling logic, so a draft schedule reflects the skill mix and coverage the committee approved rather than raw headcount. When the system generates a draft, it checks each shift against those coverage parameters and surfaces the spots where a unit would fall below plan before anyone signs off.
 
-When a nurse calls out, the replacement shortlist is drawn from qualified, available staff who keep the unit at plan, not from whoever is easiest to reach. For Texas hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so meeting the plan does not quietly push someone into unplanned overtime. Every assignment, callout, and change is logged, which produces the staffing records a survey asks for. You can read the full process on our [nurse scheduling software](/nurse-scheduling-software) page, our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub, or [how the scheduling process works](/how-it-works) step by step, and more on the model at [AI nurse scheduling](/ai-nurse-scheduling).
+When a nurse calls out, the replacement shortlist is drawn from qualified, available staff who keep the unit at plan, not from whoever is easiest to reach. For Texas hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so meeting the plan does not quietly push someone into unplanned overtime. Every assignment, callout, and change is logged, which produces the staffing records a survey asks for. You can read the full process on our [nurse scheduling software](/nurse-scheduling-software) page, our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub, or [how the scheduling process works](/how-it-works) step by step. For how an AI-built schedule handles acuity and coverage in practice, see [AI nurse scheduling](/ai-nurse-scheduling).
 
 One honest limitation: SimpleScheduleAI does not set your staffing plan or interpret your state's law for you. Your nurse staffing committee decides what adequate staffing is, and we build the schedule that meets it. If a hospital has not adopted a plan yet, that committee work comes first, and no scheduling tool substitutes for it.
 
@@ -181,7 +181,7 @@ By documenting to its plan. The staffing committee's written plan is the standar
 2. eCFR, [42 CFR 485.635, Condition of Participation: Provision of Services (Critical Access Hospitals)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
 3. eCFR, [42 CFR 485.631, Condition of Participation: Staffing and Staff Responsibilities (Critical Access Hospitals)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
 4. Cornell Law, [22 CCR 70217, California Nurse-to-Patient Ratios](https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217)
-5. Texas Legislature Online, [Texas Health and Safety Code 257.004, Nurse Staffing Committee](https://statutes.capitol.texas.gov/Docs/HS/htm/HS.257.htm)
+5. FindLaw, [Texas Health and Safety Code 257.004, Nurse Staffing Committee](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/)
 6. American Nurses Association, [Nurse Staffing](https://www.nursingworld.org/practice-policy/nurse-staffing/)
 7. AHRQ PSNet, [Nursing and Patient Safety](https://psnet.ahrq.gov/primer/nursing-and-patient-safety)
 8. Aiken LH et al., [Hospital nurse staffing and patient mortality, nurse burnout, and job dissatisfaction](https://pubmed.ncbi.nlm.nih.gov/12387650/), JAMA 2002;288(16):1987-1993

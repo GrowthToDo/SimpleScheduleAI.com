@@ -5,52 +5,52 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T05:51:19.307Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "checkedAt": "2026-07-04T07:14:46.733Z",
+      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T05:51:21.567Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "checkedAt": "2026-07-04T07:14:48.425Z",
+      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T05:51:30.503Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "checkedAt": "2026-07-04T07:14:50.670Z",
+      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T05:51:30.536Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "checkedAt": "2026-07-04T07:14:50.698Z",
+      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T05:51:30.694Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "checkedAt": "2026-07-04T07:14:51.095Z",
+      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T05:51:30.694Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "checkedAt": "2026-07-04T07:14:51.095Z",
+      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-07-04T05:51:30.695Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "checkedAt": "2026-07-04T07:14:51.097Z",
+      "contentHash": "52cdf3e131a99e967445abe78cd3819058655d69738a5f711465e393e4469a4a"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-07-04T05:50:47.652Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "setBy": "controller-founder-fix-pass",
+      "setAt": "2026-07-04T07:15:15.996Z",
+      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "fact-check-agent",
-      "setAt": "2026-07-04T05:50:47.865Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "setBy": "dossier-aligned",
+      "setAt": "2026-07-04T07:15:16.159Z",
+      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
     },
     "imageEyeball": {
       "value": "OK",
@@ -61,20 +61,20 @@
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-07-04T05:50:48.308Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "setAt": "2026-07-04T07:15:16.303Z",
+      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
     },
     "indexNow": {
       "value": "DONE",
       "setBy": "controller",
-      "setAt": "2026-07-04T05:51:57.853Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "setAt": "2026-07-04T07:15:16.468Z",
+      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
     },
     "gscSitemap": {
       "value": "DONE",
       "setBy": "controller",
-      "setAt": "2026-07-04T05:51:58.175Z",
-      "contentHash": "ce5d719f2951a0f2c8839eb5d18615abc0caae30cd5328bac466873ac429861d"
+      "setAt": "2026-07-04T07:15:16.599Z",
+      "contentHash": "36572e88b9c7e73fc8dde5e4ae6984a84b4ed81facdfcaa110014c78a1d4f8ab"
     }
   },
   "overrides": []

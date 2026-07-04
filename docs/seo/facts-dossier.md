@@ -15,25 +15,27 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 ### 42 CFR 485.635(d)
 
 - Approved wording: a registered nurse must "provide (or assign to other personnel) the nursing care of each patient" and "supervise and evaluate the nursing care for each patient"
-- Wrong: attributing this clause to 485.631
-- Section covers: Provision of services.
+- Nuance: the supervise-and-evaluate clause is (d)(2), and its full text reads "A registered nurse or, where permitted by State law, a physician assistant, must supervise and evaluate the nursing care for each patient." Where the PA alternative matters (e.g., a compliance explainer), do not imply RN-only.
+- Wrong: attributing this clause to 485.631; implying only an RN may supervise and evaluate (the reg allows a PA where State law permits)
+- Section covers: Provision of services. Paragraph (d) heading: Standard: Nursing services.
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635
-- Verified: 2026-07-03
+- Verified: 2026-07-04 (via Cornell LII cross-check; eCFR bot-blocks automated fetches)
 
 ### NSI 2025
 
 - Approved figures: average cost to replace one staff RN = $61,110; national RN turnover = 16.4% (2025 report, CY2024 data)
 - Wrong: $52,350 (unverified prior-edition figure — do not assert)
-- Note: the NSI PDF URL is a rolling filename and now serves the 2026 edition; keep the citation label "2025 NSI National Health Care Retention and RN Staffing Report".
+- Note: the NSI PDF URL is a rolling filename and now serves the 2026 edition; keep the citation label "2025 NSI National Health Care Retention and RN Staffing Report". Do not mix editions: the 2026 edition (CY2025 data) reports 17.6% turnover and $60,090 per staff RN — those are NOT the 2025-report figures above.
 - URL: https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf
-- Verified: 2026-07-02
+- Verified: 2026-07-04 (URL resolves, now serving 2026 edition; 2025-report figures cross-verified via secondary citations since the 2025 PDF is no longer at this URL)
 
 ### NNU fact sheet
 
 - Approved: "roughly 1.15 million registered nurses hold active licenses but are not working as nurses"; NNU primary source dated May 26, 2026 (BLS data released May 15, 2026); NNU President Jamie Brown, RN; quote verbatim: "The data is clear that the U.S. nursing profession has a retention crisis, not a nurse shortage."
+- Source verbatim (for reference): "Nearly 1.15 million registered nurses (RNs) with active licenses are not working as nurses" — "roughly 1.15 million" is an acceptable paraphrase, "nearly" is the source's word.
 - Wrong: dating the fact sheet June 3, 2026 (that is a WNY Labor Today republication)
 - URL: https://www.nationalnursesunited.org/press/new-data-shows-there-is-a-nurse-retention-crisis-not-a-nurse-shortage
-- Verified: 2026-07-01
+- Verified: 2026-07-04
 
 ### JAMA Network Open (Feb 2026)
 
@@ -50,9 +52,10 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 
 ### FLSA overtime
 
-- Approved framing: "FLSA overtime thresholds" via DOL Fact Sheet #54. The 8-and-80 system is educational content only.
-- URL: https://www.dol.gov/agencies/whd/fact-sheets/54-flsa-hospitals
-- Verified: 2026-07-03
+- Approved framing: "FLSA overtime thresholds" via DOL Fact Sheet #54 ("The Health Care Industry and Calculating Overtime Pay"; the 7(j) 8-and-80 system pays overtime over 8 hours/workday and 80 hours/14-day period). The 8-and-80 system is educational content only.
+- Wrong: linking https://www.dol.gov/agencies/whd/fact-sheets/54-flsa-hospitals (stale URL held only by this dossier; every live post already uses the canonical URL below)
+- URL: https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime
+- Verified: 2026-07-04 (dol.gov 403-blocks automated fetches; canonical URL confirmed via search index, content cross-verified via DOL elaws FLSA Overtime Calculator Advisor, webapps.dol.gov)
 
 ### 42 CFR 482.23(b)
 
@@ -81,9 +84,9 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 
 - Approved wording (verbatim statute text): "At least 60 percent of the members of the committee must be registered nurses who: (1) provide direct patient care during at least 50 percent of their work time; and (2) are selected by their peers who provide direct patient care during at least 50 percent of their work time." The committee develops and recommends a nurse staffing plan to the hospital's governing body; the chapter sets no ratio.
 - Acceptable compression: "at least 60 percent direct-care registered nurses" (the 50-percent-of-work-time qualifier may be omitted in summary prose, but "registered nurses" is required — LVNs do not count toward the 60 percent).
-- Wrong: "60 percent nurses" without "registered"; citing FindLaw when the official statute URL exists.
-- URL: https://statutes.capitol.texas.gov/Docs/HS/htm/HS.257.htm
-- Verified: 2026-07-04 (via texas.public.law cross-check; statutes.capitol.texas.gov is the canonical citation)
+- Wrong: "60 percent nurses" without "registered".
+- URL (reader-facing links): https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/ — statutes.capitol.texas.gov is the canonical CITATION but the host fails DNS outside the US (founder-confirmed broken 2026-07-04, India); use FindLaw for hyperlinks, keep "Texas Health and Safety Code 257.004" as the visible citation text, and label the Sources entry "FindLaw".
+- Verified: 2026-07-04 (via texas.public.law cross-check)
 
 ### Aiken 2002 staffing-mortality figure (7 percent)
 
