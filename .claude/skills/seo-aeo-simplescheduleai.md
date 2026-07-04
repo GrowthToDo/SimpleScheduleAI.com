@@ -1623,3 +1623,69 @@ add schema, or review page content.
   (improves Claude/ChatGPT citation likelihood significantly)
 - **Never**: Publish AI-generated content without expert review and real author
   attribution (Google penalizes low-quality AI content; YMYL risk)
+
+## Hard-won rules (2026-07) — from this week's live-post defects
+
+Each rule below exists because a live post shipped with the defect. These are writing-time rules:
+obey them while drafting, do not rely on a later pass to catch them.
+
+### 17.1 Date-qualify any legal/landscape claim that can change
+
+A claim about the legal or competitive landscape is a snapshot, not a constant. "California is
+the only state with mandated ratios" was true when first written and false when Oregon's law took
+effect — and the sentence sat live, wrong, with no date to warn anyone.
+
+- Any claim of the form "the only state that...", "no federal law requires...", "N states
+  currently...", "the market leader is..." MUST either carry a date qualifier ("as of 2026") or
+  be reframed as durable ("the longest-standing broad-ratio mandate" instead of "the only ratio
+  mandate").
+- Prefer a `docs/seo/facts-dossier.md` entry for every such claim: use the approved wording, and
+  if no entry exists, verify against a primary source and ADD the entry in the same session. The
+  dossier's `Verified:` date is what makes future staleness detectable.
+- When editing an old post, treat every undated landscape claim as suspect until re-verified.
+
+### 17.2 Reader-facing source links must resolve GLOBALLY
+
+A .gov link that works from a US browser can still be dead for much of the audience and for every
+automated checker. Known offenders:
+
+- `statutes.capitol.texas.gov` — fails DNS outside the US (geo-blocked).
+- `dol.gov` deep links — 403 automated fetchers (bot-block); the page may be fine for humans, but
+  a US-only or bot-blocked host still fails readers and checkers abroad.
+- `ecfr.gov` — bot-blocks automated checks (fine for human readers; cross-verify via a mirror).
+
+Rule: for any host known to be geo-blocked or bot-blocked, link a globally-resolving mirror with
+a MATCHING label — FindLaw or Cornell LII for Texas statutes and CFR text. Never label a link
+"Texas Health & Safety Code §241 (Texas Legislature)" while the href points at FindLaw, and never
+the reverse: label and URL must name the same publisher. The facts dossier records the canonical
+URL choice per fact; follow it. `check-links` treats 403/429 as "verify by hand", so a bot-block
+is not proof the link works for readers — check the host against this list first.
+
+### 17.3 Hero image: pick a different visual FAMILY, not just a different ID
+
+The exact-ID uniqueness gate passed three visually near-identical medical-supplies flat-lays onto
+live posts. Unique ID does not mean visually distinct.
+
+- Every entry in `scripts/image-pool.json` carries a `family` field (supplies-flat-lay,
+  stethoscope-closeup, nurse-portrait, team-meeting, facility-exterior, ward-clinical,
+  desk-admin, historic-bw, data-analytics, misc).
+- When choosing a hero, check which families topically-adjacent live posts already use and pick a
+  DIFFERENT family unless the topic genuinely demands the same one. `check-blog` WARNs when the
+  chosen image's family already appears on 3+ live posts; treat the WARN as "justify or swap".
+- The human image eyeball (pipeline phase) still judges relevance and tone; the family check only
+  prevents the sea-of-samey-heroes problem.
+
+### 17.4 Excerpt hook: a claim or tension the ICP feels, never search-behavior meta
+
+The excerpt's first sentence must land as something a DON or administrator would feel or argue
+with. Writing about what "searchers" do is meta-commentary about the query, not a hook — the
+reader is not a searcher-watcher, they ARE the searcher.
+
+- BAD (shipped, then rewritten on founder feedback): "Searchers want a number, but there is no
+  federal nurse-to-patient ratio."
+- GOOD (the rewrite): "Everyone asks for the required nurse-to-patient ratio. Federal law does
+  not set one."
+- Test: does the first sentence state a claim or a tension in the ICP's own world (their unit,
+  their budget, their survey window)? Words like "searchers", "readers", "people googling",
+  "this guide" in the first sentence are automatic rewrites. (The distinct-hook and no-run-on
+  rules from the checklist and gate still apply.)
