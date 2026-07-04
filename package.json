@@ -23,7 +23,11 @@
     "fix:prettier": "prettier -w .",
     "indexnow": "node scripts/indexnow-submit.mjs",
     "check-blog": "node scripts/check-blog.mjs",
-    "check-links": "node scripts/check-links.mjs"
+    "check-links": "node scripts/check-links.mjs",
+    "publish-gate": "node scripts/publish-gate.mjs",
+    "smoke": "node scripts/smoke-routes.mjs",
+    "setup-hooks": "node scripts/install-hooks.mjs",
+    "test:scripts": "node --test scripts/tests/*.test.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",

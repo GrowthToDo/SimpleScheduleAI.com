@@ -71,6 +71,16 @@ file up **after stripping any plaintext secrets**. Note: it currently carries a
 DataForSEO MCP entry with an inline password. Do not copy that value into any
 shared or committed location.
 
+## 5. Publish gate hooks
+
+After cloning, install the pre-commit publish gate (blocks committing a `draft: false` flip whose publish manifest is not green):
+
+```
+npm run setup-hooks
+```
+
+Manifests live in `.publish/<slug>.json`. Check status: `npm run publish-gate <slug> -- --status`. Record verdicts: `npm run publish-gate <slug> -- --set proofread=READY --by <agent>`. Emergency bypass (recorded in the manifest, never silent): `PUBLISH_OVERRIDE=1 PUBLISH_OVERRIDE_REASON="why" git commit ...`
+
 ## Security notes
 
 - Never commit `.mcp.json` (it is gitignored). If a key is ever exposed, rotate it.
