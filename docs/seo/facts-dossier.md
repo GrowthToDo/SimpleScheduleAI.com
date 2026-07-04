@@ -54,6 +54,51 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - URL: https://www.dol.gov/agencies/whd/fact-sheets/54-flsa-hospitals
 - Verified: 2026-07-03
 
+### 42 CFR 482.23(b)
+
+- Approved wording (verbatim reg text): "The nursing service must have adequate numbers of licensed registered nurses, licensed practical (vocational) nurses, and other personnel to provide nursing care to all patients as needed."
+- No numeric nurse-to-patient ratio appears anywhere in 482.23. Pin-cite for the adequate-numbers clause: 482.23(b) (Standard: Staffing and delivery of care) — the lead sentence of (b), not (b)(1).
+- Wrong: claiming any federal numeric ratio exists.
+- Section covers: Condition of Participation: Nursing services (general hospitals).
+- URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-482/subpart-C/section-482.23
+- Verified: 2026-07-04 (via Cornell LII cross-check; eCFR bot-blocks automated fetches)
+
+### California 22 CCR 70217
+
+- Approved figures: licensed nurse-to-patient ratios of 1:5 on medical/surgical units (in effect since January 1, 2005), 1:2 in critical care units (ICU), and 1:4 in the emergency department; the regulation sets ratios for roughly 14 unit types and its operative language is "at all times."
+- Wrong: 1:6 med-surg (the pre-2005 initial figure); citing a court case for the breaks-coverage point (no case precisely holds it — the regulation's own "at all times" text plus relief-nurse coverage is the support).
+- URL: https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217
+- Verified: 2026-07-04
+
+### State ratio-law landscape (CA / OR / MA / NY)
+
+- Approved framing: California is the longest-standing comprehensive ratio state (22 CCR 70217, fully in effect since 2005). Oregon's HB 2697 (signed August 2023) sets minimum ratios across 12 hospital unit types, phased in through mid-2026 (med-surg 1:5 moving to 1:4 in June 2026; nurse-ratio enforcement began June 1, 2025) — a second broad multi-unit ratio state, not a narrow one. Massachusetts mandates a ratio in the ICU only (MGL c. 111, § 231; 1:1 or 1:2 by acuity). New York mandates an ICU/critical-care ratio plus staffing committees and disclosure (PHL § 2805-t, 2021).
+- Wrong: "California is the only state with comprehensive mandated ratios" (stale once Oregon's phase-in completed in June/July 2026); describing Oregon as regulating "one unit" or as "limited ratios"; citing the Massachusetts ICU law as § 227 (that section covers unlicensed personnel).
+- URL: https://www.oregon.gov/oha/PH/PROVIDERPARTNERRESOURCES/HOSPITALSTAFFING/Documents/HOSPITALStaffingFAQ.pdf
+- Verified: 2026-07-04
+
+### Texas Health and Safety Code 257.004
+
+- Approved wording (verbatim statute text): "At least 60 percent of the members of the committee must be registered nurses who: (1) provide direct patient care during at least 50 percent of their work time; and (2) are selected by their peers who provide direct patient care during at least 50 percent of their work time." The committee develops and recommends a nurse staffing plan to the hospital's governing body; the chapter sets no ratio.
+- Acceptable compression: "at least 60 percent direct-care registered nurses" (the 50-percent-of-work-time qualifier may be omitted in summary prose, but "registered nurses" is required — LVNs do not count toward the 60 percent).
+- Wrong: "60 percent nurses" without "registered"; citing FindLaw when the official statute URL exists.
+- URL: https://statutes.capitol.texas.gov/Docs/HS/htm/HS.257.htm
+- Verified: 2026-07-04 (via texas.public.law cross-check; statutes.capitol.texas.gov is the canonical citation)
+
+### Aiken 2002 staffing-mortality figure (7 percent)
+
+- Approved: each additional patient per nurse is associated with a 7% increase in the likelihood of dying within 30 days of admission (and a 7% increase in failure-to-rescue) — Aiken LH et al., "Hospital Nurse Staffing and Patient Mortality, Nurse Burnout, and Job Dissatisfaction," JAMA 2002;288(16):1987-1993. Cite the study directly for the number.
+- Wrong: attributing the 7% figure to the AHRQ PSNet primer — the primer states only a general association ("increased risk of patient safety events, morbidity, and even mortality as the number of patients per nurse increases") and never states the percentage or cites Aiken. AHRQ PSNet may be cited only for that general association.
+- URL: https://pubmed.ncbi.nlm.nih.gov/12387650/ (study); https://psnet.ahrq.gov/primer/nursing-and-patient-safety (general association only)
+- Verified: 2026-07-04
+
+### ANA staffing position
+
+- Approved framing: ANA "supports enforceable ratios as an essential approach to achieving appropriate nurse staffing" and treats multiple strategies (including nurse-driven staffing committees) as complementary: "Long-standing nurse staffing challenges will require multiple strategies."
+- Wrong: framing ANA as ratios-only or committees-only.
+- URL: https://www.nursingworld.org/practice-policy/nurse-staffing/
+- Verified: 2026-07-04
+
 ## Product truths
 
 - Self-label: "AI-native nurse scheduling service". Never "managed service" as a self-label (category/comparison use is fine).
@@ -67,3 +112,4 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 | Date       | Change                                                         | By     |
 | ---------- | -------------------------------------------------------------- | ------ |
 | 2026-07-03 | Initial population from 2026-06-30..07-03 verified fact-checks | Claude |
+| 2026-07-04 | Added staffing-ratio facts: 482.23(b), CA 70217, state ratio landscape (OR/MA/NY), TX 257.004, Aiken 2002/AHRQ, ANA position | Claude |
