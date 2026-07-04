@@ -64,7 +64,7 @@ At a critical access hospital, a scheduling gap is not an inconvenience, it is a
   </div>
   <div class="rounded-xl border-2 border-cyan-300 dark:border-cyan-700 bg-cyan-50 dark:bg-slate-800 p-5">
     <p class="text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300 mb-1">AI-native scheduling services</p>
-    <p class="text-sm text-slate-700 dark:text-slate-300 m-0">SimpleScheduleAI. The AI builds the schedule, a specialist checks it, you approve. 3 to 5 day setup, no IT. Small-hospital fit: strong, it removes the operational burden rather than relocating it.</p>
+    <p class="text-sm text-slate-700 dark:text-slate-300 m-0">SimpleScheduleAI. The AI builds the schedule, our scheduling team checks it, you approve. 3 to 5 day setup, no IT. Small-hospital fit: strong, it removes the operational burden rather than relocating it.</p>
   </div>
 </div>
 
@@ -74,7 +74,7 @@ At a critical access hospital, a scheduling gap is not an inconvenience, it is a
 
 **Healthcare-specific shift marketplaces** (ShiftMed, Clipboard Health) focus on filling open shifts with per-diem or agency nurses. They solve coverage gaps from external labor, not how to optimize scheduling your core staff. They can complement a scheduling platform but should not replace one.
 
-**AI-native scheduling services** (SimpleScheduleAI) are not software platforms the hospital operates. The AI builds the schedule, a specialist checks it, and the nurse manager approves the output. The service removes the operational burden entirely rather than relocating it.
+**AI-native scheduling services** (SimpleScheduleAI) are not software platforms the hospital operates. The AI builds the schedule, our scheduling team checks it, and the nurse manager approves the output. The service removes the operational burden entirely rather than relocating it.
 
 ## What Small Hospitals Should Prioritize When Evaluating?
 
@@ -187,7 +187,7 @@ Self-serve platforms typically take 3-6 weeks to fully configure if the nurse ma
 
 **What is the difference between medical scheduling software and an AI-native scheduling service?**
 
-Medical scheduling software is a tool your team configures and operates. An AI-native scheduling service handles the scheduling work for your team: the AI builds the schedule, a specialist checks it, and the nurse manager approves. Software reduces scheduling time from roughly 8-12 hours to 4-6 hours per week. A done-for-you service reduces it further, to 1-2 hours per week.
+Medical scheduling software is a tool your team configures and operates. An AI-native scheduling service handles the scheduling work for your team: the AI builds the schedule, our scheduling team checks it, and the nurse manager approves. Software reduces scheduling time from roughly 8-12 hours to 4-6 hours per week. A done-for-you service reduces it further, to 1-2 hours per week.
 
 **Does a CAH need an EHR integration for scheduling software to work?**
 

@@ -201,7 +201,7 @@ SimpleScheduleAI is not the right tool if your hospital needs to integrate holid
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-    Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.
+    Flat monthly pricing. No IT setup. Our AI builds the schedule, our scheduling team checks it, you approve it.
   </p>
   <a
     href="/how-it-works"

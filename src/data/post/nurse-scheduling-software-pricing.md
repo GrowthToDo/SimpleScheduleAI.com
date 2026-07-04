@@ -52,7 +52,7 @@ This guide breaks down how these platforms are actually priced, what a 25-bed CA
 
 **Per-module pricing:** Enterprise platforms frequently charge separately for scheduling, time and attendance, overtime tracking, analytics, and mobile access. The base scheduling module may appear cheap, but the functionality a CAH actually needs across multiple modules often brings the real cost to $12-$20/nurse/month.
 
-**Managed service pricing:** A managed service (like SimpleScheduleAI) includes scheduling software where the AI builds the schedule and a human team checks it, plus support for configuration, schedule review, and callout management. Managed service pricing is typically higher per unit than pure SaaS but lower in total cost of ownership because implementation and ongoing support are included.
+**Managed service pricing:** A managed service (like SimpleScheduleAI) includes scheduling software where the AI builds the schedule and our scheduling team checks it, plus support for configuration, schedule review, and callout management. Managed service pricing is typically higher per unit than pure SaaS but lower in total cost of ownership because implementation and ongoing support are included.
 
 <figure class="not-prose my-8">
   <figcaption class="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3 text-center">Nurse Scheduling Software Pricing Models: What They Look Like at 25 Nurses</figcaption>
@@ -198,7 +198,7 @@ For hospitals evaluating alternatives, the [nurse scheduling software comparison
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-    Flat monthly pricing. No per-nurse fees. No IT setup. Our AI builds the schedule, our team checks it, you approve it.
+    Flat monthly pricing. No per-nurse fees. No IT setup. Our AI builds the schedule, our scheduling team checks it, you approve it.
   </p>
   <a
     href="https://cal.com/gautham-8bdvdx/30min"

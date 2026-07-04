@@ -161,7 +161,7 @@ The service is a new offering, without public G2 or Capterra reviews yet. CMS [�
 - CMS §485.635 documentation is automatic, not a manual export before each survey
 - Callout shortlist is ranked by overtime risk without manual calculation from the manager
 - Excel-based roster upload means no IT involvement during transition
-- Flat monthly pricing with no IT setup; our AI builds the schedule, our team checks it, you approve it
+- Flat monthly pricing with no IT setup; our AI builds the schedule, our scheduling team checks it, you approve it
 
 **Key limitations:**
 
@@ -424,7 +424,7 @@ If you are currently evaluating hospital scheduling options for your CAH, these 
 
 4. **Build a full cost comparison, not just licensing.** Add setup fees, configuration services, and estimated internal staff time for onboarding to the annual licensing cost. Compare that aggregate figure across every option you are considering, including a managed service.
 
-5. **If the managed service operating model fits your constraints, see how it works.** SimpleScheduleAI runs on flat monthly pricing with no IT setup; the AI builds the schedule, our team checks it, and you approve it. [See how it works →](/how-it-works)
+5. **If the managed service operating model fits your constraints, see how it works.** SimpleScheduleAI runs on flat monthly pricing with no IT setup; the AI builds the schedule, our scheduling team checks it, and you approve it. [See how it works →](/how-it-works)
 
 ## Sources
 

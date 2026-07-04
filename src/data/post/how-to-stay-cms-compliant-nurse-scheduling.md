@@ -231,13 +231,13 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals outsi
 
 3. **Audit your credential master list for expirations.** Check ACLS and BLS expiration dates for all nurses currently on the schedule. Any nurse whose credentials have lapsed should be removed from eligible rotation for the shifts requiring those credentials.
 
-4. **If you are a Texas Critical Access Hospital, [See how it works](/how-it-works).** Our AI builds your schedule from an Excel roster upload and our team attaches the §485.635 documentation to each cycle, so you can compare it against your current records.
+4. **If you are a Texas Critical Access Hospital, [See how it works](/how-it-works).** Our AI builds your schedule from an Excel roster upload, our scheduling team checks it and attaches the §485.635 documentation to each cycle, so you can compare it against your current records.
 
 5. **Verify your callout replacement documentation process.** When a nurse calls out and is replaced, is the replacement and their credentials added to the scheduling record that day? Or is it recorded only in payroll, leaving a schedule-vs-payroll discrepancy?
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No IT setup. Our AI builds the schedule, our team checks it, you approve it.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No IT setup. Our AI builds the schedule, our scheduling team checks it, you approve it.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="text-slate-500 dark:text-slate-400 text-xs mt-4">Prefer to talk first? <a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team</a>.</p>
 </div>

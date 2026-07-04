@@ -35,7 +35,7 @@ This guide compares 6 alternatives for a Critical Access Hospital that needs nur
 - NurseGrid holds 4.2/5 on Capterra (13 reviews; small sample).[1] Treat single-source ratings on a small sample as directional, not definitive, and probe the manager workflow specifically in any demo.
 - The six strongest alternatives reviewed here are SimpleScheduleAI, ShiftWizard, [TCP](/blog/best-tcp-alternative-for-cah) Scheduling (Aladtec), Deputy, Homebase, and When I Work. The right pick depends on whether compliance automation, hospital-nursing fit, or cost reduction is the priority.
 - A hybrid is viable for CAHs that value nurse self-service: keep a communication tool for the staff-facing layer and run a compliance-focused service or platform for scheduling management and CMS documentation.
-- SimpleScheduleAI is the managed-service option: the AI builds the schedule, a specialist checks and maintains it, and the manager approves it. The honest tradeoff is no nurse-facing mobile app, so confirm whether staff self-service is a hard requirement before switching.
+- SimpleScheduleAI is the managed-service option: the AI builds the schedule, our scheduling team checks and maintains it, and the manager approves it. The honest tradeoff is no nurse-facing mobile app, so confirm whether staff self-service is a hard requirement before switching.
 
 ## Table of Contents
 

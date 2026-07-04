@@ -77,7 +77,7 @@ Any one of these scenarios is likely to cost more than a year of professional sc
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI replaces the template entirely, not with software you configure yourself, but with an AI-native nurse scheduling service where the AI builds the schedule, our team checks it, and your nurse manager approves it. We handle the shift logic, rotation tracking, overtime monitoring, and callout coverage suggestions.
+SimpleScheduleAI replaces the template entirely, not with software you configure yourself, but with an AI-native nurse scheduling service where the AI builds the schedule, our scheduling team checks it, and your nurse manager approves it. We handle the shift logic, rotation tracking, overtime monitoring, and callout coverage suggestions.
 
 The practical effect for managers who have been using templates: you go from building the schedule to reviewing it. That's a meaningful reduction in weekly workload and a significant improvement in schedule quality. We also maintain the documentation trail that templates can't provide.
 

@@ -144,9 +144,9 @@ The comparison often framed as "software cost vs. Excel (free)" misses the point
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI is not a software platform you configure yourself, it's an AI-native managed scheduling service where our AI builds the schedule, our team checks it, and your nurse manager approves the final schedule. That distinction matters for critical access hospitals that don't have an IT department, a workforce management specialist, or time to implement new software.
+SimpleScheduleAI is not a software platform you configure yourself, it's an AI-native managed scheduling service where our AI builds the schedule, our scheduling team checks it, and your nurse manager approves the final schedule. That distinction matters for critical access hospitals that don't have an IT department, a workforce management specialist, or time to implement new software.
 
-Our AI builds the weekly schedule and our team checks it, handling the initial setup, callout coverage logic, and compliance checks. The nurse manager stays in the loop at every approval point without carrying the 8-12 hour weekly burden. We also track overtime risk in real time and flag it before it hits payroll. See the AI build a schedule and rank callout replacements in the [live simulator](/simulator).
+Our AI builds the weekly schedule and our scheduling team checks it, handling the initial setup, callout coverage logic, and compliance checks. The nurse manager stays in the loop at every approval point without carrying the 8-12 hour weekly burden. We also track overtime risk in real time and flag it before it hits payroll. See the AI build a schedule and rank callout replacements in the [live simulator](/simulator).
 
 One honest limitation: SimpleScheduleAI works best for hospitals that have reasonably stable staffing structures. If you're in an active staffing crisis with 30%+ vacancy rates, the scheduling problem is downstream of a hiring problem, and we'll tell you that upfront.
 

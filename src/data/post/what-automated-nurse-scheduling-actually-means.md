@@ -195,13 +195,13 @@ The four questions below reveal the actual level of automation behind any vendor
 
 ## How Is SimpleScheduleAI's Automation Different?
 
-SimpleScheduleAI operates at Level 5: a managed service where our AI builds the schedule draft and a scheduling specialist checks it, not a software tool that helps the nurse manager build it faster. The full delivery workflow is documented on the [how it works page](/how-it-works).
+SimpleScheduleAI operates at Level 5: a managed service where our AI builds the schedule draft and our scheduling team checks it, not a software tool that helps the nurse manager build it faster. The full delivery workflow is documented on the [how it works page](/how-it-works).
 
-Each scheduling cycle, the AI generates three draft schedule options (balanced, overtime-minimized, and fair-rotation) using the facility's roster, certification data, and coverage requirements, and a specialist checks them. The drafts arrive for the nurse manager to review and approve. You can watch the compliance checklist tick off as the AI builds a draft in the [interactive simulator](/simulator). The nurse manager's scheduling work is reviewing output, requesting adjustments if needed, and approving the final schedule.
+Each scheduling cycle, the AI generates three draft schedule options (balanced, overtime-minimized, and fair-rotation) using the facility's roster, certification data, and coverage requirements, and our scheduling team checks them. The drafts arrive for the nurse manager to review and approve. You can watch the compliance checklist tick off as the AI builds a draft in the [interactive simulator](/simulator). The nurse manager's scheduling work is reviewing output, requesting adjustments if needed, and approving the final schedule.
 
 For callout coverage, a pre-ranked replacement list is maintained with certification, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime status, and availability constraints already applied. When a nurse calls out, the manager sees the ranked shortlist immediately rather than running the calculation herself.
 
-This is not a software tool with automation features. It is a different operating model. The AI handles the schedule build and a specialist checks it; the nurse manager retains clinical judgment and final approval authority.
+This is not a software tool with automation features. It is a different operating model. The AI handles the schedule build and our scheduling team checks it; the nurse manager retains clinical judgment and final approval authority.
 
 One honest limitation: the managed service model requires comfort delegating draft generation. For nurse managers who prefer direct control over every scheduling decision, or who have specific scheduling rules the specialist cannot easily replicate, a self-serve platform at Level 3 may be a better fit. For a side-by-side look at the leading self-serve options for small hospitals, see our [best nurse scheduling software guide for 2026](/blog/best-nurse-scheduling-software-2026).
 
@@ -209,7 +209,7 @@ For the broader context on [nurse scheduling software for critical access hospit
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Want to see what Level 5 automation looks like for your facility?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI's AI builds the schedule and our team checks it. Your nurse manager reviews and approves. Operational in 3-5 days.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI's AI builds the schedule and our scheduling team checks it. Your nurse manager reviews and approves. Operational in 3-5 days.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
