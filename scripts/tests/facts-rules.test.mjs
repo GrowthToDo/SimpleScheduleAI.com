@@ -44,3 +44,10 @@ test('JAMA 65% needs the nonretired qualifier', () => {
 test('facts-ok comment suppresses', () => {
   ok('the old $52,350 figure was superseded <!-- facts-ok -->');
 });
+
+test('California-only ratio claim is stale (Oregon also mandates broad ratios)', () => {
+  bad('California is the only state with mandated ratios', 'ca-only-ratio-state');
+  bad('California is the only state with comprehensive mandated ratios', 'ca-only-ratio-state');
+  bad('California remains the only state with a mandated nurse staffing ratio', 'ca-only-ratio-state');
+  ok('California and Oregon are the only states with broad mandated ratios across unit types');
+});

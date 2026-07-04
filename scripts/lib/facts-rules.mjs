@@ -45,6 +45,15 @@ export const FACTS_RULES = [
     anchor: 'facts-dossier.md#jama-network-open-feb-2026',
     message: 'the 65% is of the NONRETIRED subset; qualifier required',
   },
+  {
+    id: 'ca-only-ratio-state',
+    trigger: /only state\b[^.\n]{0,60}(ratio|staffing)|California is the only/i,
+    bad: /only state\b[^.\n]{0,60}(ratio|staffing)|California is the only/i,
+    requires: null,
+    anchor: 'facts-dossier.md#state-ratio-law-landscape-ca-or-ma-ny',
+    message:
+      'Oregon (2023 law, 12 unit types, in effect mid-2026) also mandates broad ratios — California is not the only state',
+  },
 ];
 
 export function checkFacts(body) {
