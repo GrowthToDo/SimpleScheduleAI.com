@@ -4,7 +4,7 @@ draft: false
 publishDate: 2026-05-02T00:00:00Z
 updateDate: 2026-05-07T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'ShiftWizard vs. Managed Scheduling Service for Critical Access Hospitals (2026)'
+title: 'ShiftWizard vs. SimpleScheduleAI: Which Nurse Scheduling Software Fits a Critical Access Hospital? (2026)'
 excerpt: >
   ShiftWizard and other hospital scheduling platforms are self-serve software: your team
   configures the system and your nurse manager operates it weekly. A managed service runs

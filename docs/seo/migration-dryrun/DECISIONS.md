@@ -171,3 +171,4 @@ No instances of `our scheduling team`, bald `No IT.`, or `live demo` (all conver
 - M7 post: "integration-heavy"/"Integrate Yourself" framing replaced with the factual runs-itself axis (M7's own positioning) grounded in ICP reality (a 25-bed hospital has no IT/scheduling staff to operate enterprise software). H2 + TOC anchor updated in pair. Competitor-inflation guardrail applied.
 - M7 excerpt: "pick the right fit" restored to "pick the right model" (the post's thesis word; founder-confirmed).
 - ShiftWizard title: options A/B/C presented to founder; pending pick. A = vendor-vs-vendor retitle + 301; B = category retitle, keep slug; C = keep title (category survives as market term).
+- ShiftWizard title: founder picked Option A (vendor-vs-vendor retitle + new slug + 301). Applied to the dry-run copy; codified in registry runbook lesson 7 as the vs-class pattern.

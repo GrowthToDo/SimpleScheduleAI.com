@@ -125,6 +125,8 @@ Measured: token hits 18, judgment calls 56, premise-collapse locations 18 across
 5. **H2 renames change anchor slugs.** Every premise-collapse H2 rename = a TOC anchor change + potential inbound-fragment break; the ledger must list old->new anchors.
 6. **Ship gates for real migration:** facts scan 0, check-blog corpus 0 hard failures, the leftover sweep (we build/we deliver/our team/hands it to you/done for you/Thursday-delivery framing/bald No IT), and the overcorrection sweep (solo-config implications, invented features, zero-touch setup).
 
+7. **vs-class retitle pattern (founder decision 2026-07-04, Option A):** on migration day, "X vs. Managed Service" posts retitle to vendor-vs-vendor: "X vs. SimpleScheduleAI: Which Nurse Scheduling Software Fits a Critical Access Hospital? (2026)", with a NEW slug (x-vs-simplescheduleai) and a 301 from the old managed-service slug in netlify.toml. Applied in the dry-run to shiftwizard-vs-managed-service.
+
 Dry-run artifacts: docs/seo/migration-dryrun/ (3 converted posts + DECISIONS.md; NOT for publication).
 
 ## Maintenance log
