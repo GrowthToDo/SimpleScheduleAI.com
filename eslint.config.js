@@ -54,6 +54,18 @@ export default [
     },
   },
   {
-    ignores: ['dist', 'node_modules', '.github', 'types.generated.d.ts', '.astro'],
+    // .cjs files are CommonJS by definition — require() is the correct import
+    // style there, not a violation. scripts/*.js is also CommonJS in practice:
+    // package.json has no "type": "module", so plain .js there resolves as CJS
+    // (unlike the .mjs scripts in the same folder, which use ESM import).
+    // Scope the exemption to these one-off utility scripts only; do not disable
+    // the rule globally — TS/ESM sources should still use import.
+    files: ['**/*.cjs', 'scripts/*.js'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
+  {
+    ignores: ['dist', 'node_modules', '.github', 'types.generated.d.ts', '.astro', '.tmp'],
   },
 ];

@@ -228,7 +228,7 @@ const HUB_PAGES = [
   '/pricing',
 ];
 
-function checkInternalLinks(content, fm) {
+function checkInternalLinks(content) {
   const warnings = [];
   const body = content.replace(/^---[\s\S]*?---/, '');
   const linkedHubs = HUB_PAGES.filter((hub) => body.includes(hub));
@@ -344,7 +344,7 @@ async function runChecks(filePath, fm, content, slug, pool) {
   failures.push(...checkDuplicateBrandHeadings(content));
   failures.push(...checkInvalidTailwindSlate(content));
 
-  warnings.push(...checkInternalLinks(content, fm));
+  warnings.push(...checkInternalLinks(content));
   return { failures, warnings };
 }
 

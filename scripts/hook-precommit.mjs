@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import path from 'node:path';
-import fs from 'node:fs';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { parseFrontmatter } from './lib/publish-shared.mjs';
@@ -62,7 +61,7 @@ function main() {
     if (!blocked) process.exit(0);
 
     if (process.env.PUBLISH_OVERRIDE === '1') {
-      for (const { path: p, slug, collection } of flips) {
+      for (const { slug, collection } of flips) {
         const m = loadManifest(slug, root, collection);
         m.overrides.push({
           override: true,
@@ -88,7 +87,9 @@ function main() {
     // (at which point the normal override path works again if still needed).
     console.log('\npre-commit publish gate: internal error — commit blocked (fail closed)');
     console.log(err.message);
-    console.log('Fix the git state or bypass once with PUBLISH_OVERRIDE=1 PUBLISH_OVERRIDE_REASON="why" git commit ...');
+    console.log(
+      'Fix the git state or bypass once with PUBLISH_OVERRIDE=1 PUBLISH_OVERRIDE_REASON="why" git commit ...'
+    );
     process.exit(1);
   }
 }

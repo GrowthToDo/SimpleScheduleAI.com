@@ -32,51 +32,66 @@ const AUTH = Buffer.from(`${LOGIN}:${PASSWORD}`).toString('base64');
 function dfsPost(endpoint, body) {
   return new Promise((resolve, reject) => {
     const data = JSON.stringify(body);
-    const req = https.request({
-      hostname: 'api.dataforseo.com',
-      path: endpoint,
-      method: 'POST',
-      headers: {
-        Authorization: `Basic ${AUTH}`,
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(data),
+    const req = https.request(
+      {
+        hostname: 'api.dataforseo.com',
+        path: endpoint,
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${AUTH}`,
+          'Content-Type': 'application/json',
+          'Content-Length': Buffer.byteLength(data),
+        },
       },
-    }, (res) => {
-      let raw = '';
-      res.on('data', (c) => { raw += c; });
-      res.on('end', () => {
-        if (res.statusCode !== 200) {
-          reject(new Error(`HTTP ${res.statusCode}: ${raw.slice(0, 200)}`));
-          return;
-        }
-        try {
-          const parsed = JSON.parse(raw);
-          if (parsed.status_code && parsed.status_code !== 20000) {
-            reject(new Error(`DataForSEO error ${parsed.status_code}: ${parsed.status_message}`));
-          } else {
-            resolve(parsed);
+      (res) => {
+        let raw = '';
+        res.on('data', (c) => {
+          raw += c;
+        });
+        res.on('end', () => {
+          if (res.statusCode !== 200) {
+            reject(new Error(`HTTP ${res.statusCode}: ${raw.slice(0, 200)}`));
+            return;
           }
-        } catch (e) { reject(new Error(`Parse error: ${raw.slice(0, 200)}`)); }
-      });
-    });
+          try {
+            const parsed = JSON.parse(raw);
+            if (parsed.status_code && parsed.status_code !== 20000) {
+              reject(new Error(`DataForSEO error ${parsed.status_code}: ${parsed.status_message}`));
+            } else {
+              resolve(parsed);
+            }
+          } catch {
+            reject(new Error(`Parse error: ${raw.slice(0, 200)}`));
+          }
+        });
+      }
+    );
     req.on('error', reject);
     req.write(data);
     req.end();
   });
 }
 
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
 
 async function getKeywordIdeas(seeds) {
-  const body = seeds.map(seed => ({
-    keyword: seed, language_code: 'en', location_code: 2840, limit: 30,
+  const body = seeds.map((seed) => ({
+    keyword: seed,
+    language_code: 'en',
+    location_code: 2840,
+    limit: 30,
   }));
   const res = await dfsPost('/v3/dataforseo_labs/google/keyword_ideas/live', body);
   const seen = new Set(seeds);
   const keywords = [...seeds];
   for (const task of res.tasks || []) {
-    for (const item of (task.result?.[0]?.items || [])) {
-      if (!seen.has(item.keyword)) { seen.add(item.keyword); keywords.push(item.keyword); }
+    for (const item of task.result?.[0]?.items || []) {
+      if (!seen.has(item.keyword)) {
+        seen.add(item.keyword);
+        keywords.push(item.keyword);
+      }
     }
   }
   return keywords;
@@ -89,8 +104,7 @@ async function getVolumes(keywords) {
       { keywords: keywords.slice(i, i + 1000), language_code: 'en', location_code: 2840 },
     ]);
     for (const task of res.tasks || [])
-      for (const item of (task.result || []))
-        results[item.keyword] = item.search_volume ?? 0;
+      for (const item of task.result || []) results[item.keyword] = item.search_volume ?? 0;
   }
   return results;
 }
@@ -102,8 +116,7 @@ async function getDifficulty(keywords) {
       { keywords: keywords.slice(i, i + 1000), language_code: 'en', location_code: 2840 },
     ]);
     for (const task of res.tasks || [])
-      for (const item of (task.result || []))
-        results[item.keyword] = item.keyword_difficulty ?? null;
+      for (const item of task.result || []) results[item.keyword] = item.keyword_difficulty ?? null;
   }
   return results;
 }
@@ -115,8 +128,7 @@ async function getIntent(keywords) {
       { keywords: keywords.slice(i, i + 1000), language_code: 'en', location_code: 2840 },
     ]);
     for (const task of res.tasks || [])
-      for (const item of (task.result || []))
-        results[item.keyword] = item.search_intent ?? 'unknown';
+      for (const item of task.result || []) results[item.keyword] = item.search_intent ?? 'unknown';
   }
   return results;
 }
@@ -127,11 +139,8 @@ async function getTop3DR(keywords) {
     const res = await dfsPost('/v3/serp/google/organic/live/advanced', [
       { keyword: kw, language_code: 'en', location_code: 2840, depth: 3 },
     ]);
-    const items = (res.tasks?.[0]?.result?.[0]?.items || [])
-      .filter(i => i.type === 'organic').slice(0, 3);
-    results[kw] = items.length
-      ? Math.round(items.reduce((s, i) => s + (i.domain_rank ?? 0), 0) / items.length)
-      : null;
+    const items = (res.tasks?.[0]?.result?.[0]?.items || []).filter((i) => i.type === 'organic').slice(0, 3);
+    results[kw] = items.length ? Math.round(items.reduce((s, i) => s + (i.domain_rank ?? 0), 0) / items.length) : null;
     await sleep(300);
   }
   return results;
@@ -145,9 +154,11 @@ function classifyBucket(intent) {
 }
 
 async function main() {
-  const seedArg = process.argv[2] ||
-    'nurse scheduling,critical access hospital scheduling,nurse scheduling software';
-  const seeds = seedArg.split(',').map(s => s.trim()).filter(Boolean);
+  const seedArg = process.argv[2] || 'nurse scheduling,critical access hospital scheduling,nurse scheduling software';
+  const seeds = seedArg
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean);
 
   console.log(`Seeds: ${seeds.join(', ')}`);
   process.stdout.write('Fetching keyword ideas... ');
@@ -156,15 +167,17 @@ async function main() {
 
   process.stdout.write('Fetching volumes + difficulty + intent... ');
   const [volumes, difficulty, intent] = await Promise.all([
-    getVolumes(keywords), getDifficulty(keywords), getIntent(keywords),
+    getVolumes(keywords),
+    getDifficulty(keywords),
+    getIntent(keywords),
   ]);
   console.log('done');
 
-  const worthFetching = keywords.filter(k => (volumes[k] ?? 0) > 10);
+  const worthFetching = keywords.filter((k) => (volumes[k] ?? 0) > 10);
   console.log(`Fetching SERP top-3 DR for ${worthFetching.length} keywords (volume > 10)...`);
   const top3DR = await getTop3DR(worthFetching);
 
-  const rows = keywords.map(kw => ({
+  const rows = keywords.map((kw) => ({
     keyword: kw,
     volume: volumes[kw] ?? 0,
     difficulty: difficulty[kw] ?? '',
@@ -174,9 +187,7 @@ async function main() {
     winnable: (volumes[kw] ?? 0) > 50 && top3DR[kw] != null && top3DR[kw] < 50,
   }));
 
-  rows.sort((a, b) =>
-    Number(b.winnable) - Number(a.winnable) || b.volume - a.volume
-  );
+  rows.sort((a, b) => Number(b.winnable) - Number(a.winnable) || b.volume - a.volume);
 
   const date = new Date().toISOString().slice(0, 10);
   const outDir = path.join(process.cwd(), 'docs', 'keywords');
@@ -185,15 +196,19 @@ async function main() {
 
   const lines = [
     'keyword,volume,difficulty,intent,bucket,avg_top3_dr,winnable',
-    ...rows.map(r =>
-      `"${r.keyword.replace(/"/g, '""')}",${r.volume},${r.difficulty},"${r.intent}","${r.bucket}",${r.avg_top3_dr},${r.winnable}`
+    ...rows.map(
+      (r) =>
+        `"${r.keyword.replace(/"/g, '""')}",${r.volume},${r.difficulty},"${r.intent}","${r.bucket}",${r.avg_top3_dr},${r.winnable}`
     ),
   ];
   fs.writeFileSync(outPath, lines.join('\n'), 'utf8');
 
-  const winnable = rows.filter(r => r.winnable).length;
+  const winnable = rows.filter((r) => r.winnable).length;
   console.log(`\nSaved ${rows.length} keywords → ${path.relative(process.cwd(), outPath)}`);
   console.log(`Winnable (vol>50 & avg_top3_dr<50): ${winnable}`);
 }
 
-main().catch(err => { console.error(err.message); process.exit(1); });
+main().catch((err) => {
+  console.error(err.message);
+  process.exit(1);
+});
