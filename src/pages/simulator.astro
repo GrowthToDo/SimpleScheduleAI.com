@@ -20,6 +20,15 @@ const metadata = {
     </div>
 
     <div class="relative mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8">
+      {/* Server-rendered heading: the island below hydrates lazily, so the page's h1 must ship in HTML. */}
+      <header class="mx-auto mb-8 max-w-3xl text-center">
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
+          Interactive Nurse Scheduling Demo
+        </h1>
+        <p class="mt-3 text-lg text-slate-600 dark:text-slate-400">
+          Watch the AI build a compliant ICU week and rank a callout shortlist. Free, in your browser, no signup.
+        </p>
+      </header>
       {/* Lazy-hydrated island: engine + UI ship as JS only when scrolled into view. */}
       <DemoScheduler client:visible />
     </div>
