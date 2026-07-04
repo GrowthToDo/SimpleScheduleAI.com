@@ -4,7 +4,10 @@ import SchemaOrg from '~/components/common/SchemaOrg.astro';
 import DarkHero from '~/components/widgets/DarkHero.astro';
 import SchedulerDemoSection from '~/components/widgets/SchedulerDemoSection.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import WeeklyCadence from '~/components/widgets/WeeklyCadence.astro';
+import QualityChecks from '~/components/widgets/QualityChecks.astro';
 import ComplianceRules from '~/components/widgets/ComplianceRules.astro';
+import CalloutDetail from '~/components/widgets/CalloutDetail.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -152,8 +155,17 @@ const howItWorksBreadcrumbSchema = {
     ]}
   />
 
+  <!-- Weekly cadence: how a week runs once the rules are locked -->
+  <WeeklyCadence />
+
+  <!-- 21 automated quality checks (dark band, leads into the full rule list) -->
+  <QualityChecks />
+
   <!-- 13 + 8 Rules Detail -->
-  <ComplianceRules />
+  <ComplianceRules id="compliance-rules" />
+
+  <!-- Callout workflow detail (the exception path) -->
+  <CalloutDetail />
 
   <!-- FAQ -->
   <FAQs

@@ -1,7 +1,6 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
-import { Icon } from 'astro-icon/components';
 import ShowcaseShiftStatus from './ShowcaseShiftStatus.svelte';
 import type { Widget } from '~/types';
 
@@ -42,13 +41,6 @@ const subtitle =
           subtitle: 'text-lg text-[#FAF7F2]/60',
         }}
       />
-      <a
-        href="/how-it-works"
-        class="mt-8 inline-flex items-center gap-2 text-[#7BAF9B] font-medium hover:text-[#FAF7F2] transition-colors duration-200"
-      >
-        See every rule we check
-        <Icon name="tabler:arrow-right" class="w-4 h-4" />
-      </a>
     </div>
 
     <!-- Right: animated shift status widget. pb reserves space for the mobile

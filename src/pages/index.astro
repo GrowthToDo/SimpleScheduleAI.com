@@ -3,14 +3,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import SchemaOrg from '~/components/common/SchemaOrg.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import HeroStationBackdrop from '~/components/widgets/HeroStationBackdrop.astro';
-import SchedulerDemoSection from '~/components/widgets/SchedulerDemoSection.astro';
 import SoftwareVsService from '~/components/widgets/SoftwareVsService.astro';
 import BuiltForCAHs from '~/components/widgets/BuiltForCAHs.astro';
-import ScheduleStability from '~/components/widgets/ScheduleStability.astro';
 import WeeklyPackage from '~/components/widgets/WeeklyPackage.astro';
-import QualityChecks from '~/components/widgets/QualityChecks.astro';
-import WeeklyCadence from '~/components/widgets/WeeklyCadence.astro';
-import CalloutDetail from '~/components/widgets/CalloutDetail.astro';
 import FounderSection from '~/components/widgets/FounderSection.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -123,6 +118,36 @@ const faqSchema = {
     </Fragment>
 
     <Fragment slot="content">
+      <div class="mx-auto mt-10 max-w-4xl reveal-delay-4" data-reveal>
+        <div
+          class="overflow-hidden rounded-2xl border border-hairline bg-[#1A2332] shadow-[0_14px_40px_-28px_rgb(26_35_50/0.35)]"
+        >
+          <video
+            id="hero-launch-video"
+            class="aspect-video w-full"
+            src="/videos/ssai-launch-landscape.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Product overview video: the AI fills a blank nurse schedule, validates 21 rules, and ranks callout replacements"
+          ></video>
+        </div>
+      </div>
+      <script is:inline>
+        // Respect prefers-reduced-motion: stop the hero video's autoplay loop.
+        (function () {
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const v = document.getElementById('hero-launch-video');
+            if (v) {
+              v.removeAttribute('autoplay');
+              v.removeAttribute('loop');
+              v.pause();
+            }
+          }
+        })();
+      </script>
       <div class="mt-9 flex flex-col items-center gap-2.5 text-center reveal-delay-4" data-reveal>
         <p class="text-xs font-medium uppercase tracking-[0.18em] text-primary">
           Texas Critical Access Hospitals · No IT Setup · First Schedule in Under 2 Weeks
@@ -134,29 +159,14 @@ const faqSchema = {
     </Fragment>
   </Hero>
 
-  <!-- Scheduler Demo Widget (animated end-to-end demo + AI engine pitch) -->
-  <SchedulerDemoSection />
-
   <!-- Software vs Service Comparison -->
   <SoftwareVsService />
 
   <!-- Built for CAHs -->
   <BuiltForCAHs />
 
-  <!-- Schedule Stability -->
-  <ScheduleStability />
-
   <!-- Weekly Package -->
   <WeeklyPackage />
-
-  <!-- Quality Checks -->
-  <QualityChecks />
-
-  <!-- Weekly Cadence -->
-  <WeeklyCadence />
-
-  <!-- Callout Detail -->
-  <CalloutDetail />
 
   <!-- Founder Section -->
   <FounderSection />

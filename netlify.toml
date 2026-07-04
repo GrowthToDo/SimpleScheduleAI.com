@@ -10,6 +10,13 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Self-hosted launch videos: long cache. If a video is ever re-rendered, rename the
+# file (e.g. ssai-launch-landscape-v2.mp4) so the immutable cache busts.
+[[headers]]
+  for = "/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # 301 from www subdomain to apex so Google consolidates signals on one host.
 [[redirects]]
   from = "https://www.simplescheduleai.com/*"
