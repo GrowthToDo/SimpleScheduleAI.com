@@ -113,6 +113,7 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - Self-label: "AI-native nurse scheduling service". Never "managed service" as a self-label (category/comparison use is fine).
 - Pricing (canonical line, verbatim): **Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.
 - NOT shipped (never claim as SSAI features): FLSA 8-and-80 calculation method; credential/license-expiry tracking.
+- Setup timeline SPLITS BY MODE (founder, 2026-07-05): SERVICE mode = first schedule in under two weeks (3 to 5 day onboarding) — true today, keep on service pages/posts. PRODUCT mode = setup takes ABOUT FOUR WEEKS from roster upload to first live schedule (guided setup session, rule mapping, test cycles). NEVER carry service timelines into product-mode copy. Consequence: speed-to-live is NOT a product-mode differentiator against competitors with 4-6 week implementations; product comparisons anchor on no-configuration-burden, no integration project, and flat pricing instead.
 - No customers, no pilots: SSAI is pre-launch. Never cite pilot observations, cohorts, facilities, or results. The free 60-day pilot offer is RETIRED; CTA = /how-it-works or /pricing + book-a-call.
 - CTA pattern: one primary button + "Book a call with our team" text link below. Never /pilot.
 
