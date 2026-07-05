@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-retention-strategies-rural-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-05T03:27:24.787Z",
+      "contentHash": "794297a3d6bb22fedc544e37a69573daee2d6f6bf39faacbe0571300b92cf4ec"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-05T03:27:26.917Z",
+      "contentHash": "794297a3d6bb22fedc544e37a69573daee2d6f6bf39faacbe0571300b92cf4ec"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-05T03:27:28.124Z",
+      "contentHash": "794297a3d6bb22fedc544e37a69573daee2d6f6bf39faacbe0571300b92cf4ec"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-05T03:27:28.148Z",
+      "contentHash": "794297a3d6bb22fedc544e37a69573daee2d6f6bf39faacbe0571300b92cf4ec"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-05T03:27:28.291Z",
+      "contentHash": "794297a3d6bb22fedc544e37a69573daee2d6f6bf39faacbe0571300b92cf4ec"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-05T03:27:28.291Z",
+      "contentHash": "794297a3d6bb22fedc544e37a69573daee2d6f6bf39faacbe0571300b92cf4ec"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-05T03:27:28.292Z",
+      "contentHash": "794297a3d6bb22fedc544e37a69573daee2d6f6bf39faacbe0571300b92cf4ec"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-05T03:27:28.677Z",
+      "contentHash": "5eac63150d9ee937b7bab0fa7bdb03eb1a54dba151a27062abdd1d7d5735dc1a"
+    },
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "all-facts-dossier-covered",
+      "setAt": "2026-07-05T03:27:28.856Z",
+      "contentHash": "5eac63150d9ee937b7bab0fa7bdb03eb1a54dba151a27062abdd1d7d5735dc1a"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-07-05T03:27:29.092Z",
+      "contentHash": "5eac63150d9ee937b7bab0fa7bdb03eb1a54dba151a27062abdd1d7d5735dc1a"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-05T03:27:29.308Z",
+      "contentHash": "5eac63150d9ee937b7bab0fa7bdb03eb1a54dba151a27062abdd1d7d5735dc1a"
+    }
+  },
+  "overrides": []
+}

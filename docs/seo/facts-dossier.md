@@ -50,6 +50,12 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - URL: https://www.ruralhealthinfo.org/topics/health-care-workforce
 - Verified: 2026-07-01
 
+### RHIhub rural RN density
+
+- Approved: roughly 65 registered nurses per 10,000 people in rural (nonmetro) areas versus about 99.5 in urban (metro) areas (RHIhub Healthcare Workforce page, 2024 BLS OES data; precise figures 65.1 / 99.5).
+- URL: https://www.ruralhealthinfo.org/topics/health-care-workforce
+- Verified: 2026-07-05 (proofread-agent live verification during nurse-retention-strategies publish)
+
 ### FLSA overtime
 
 - Approved framing: "FLSA overtime thresholds" via DOL Fact Sheet #54 ("The Health Care Industry and Calculating Overtime Pay"; the 7(j) 8-and-80 system pays overtime over 8 hours/workday and 80 hours/14-day period). The 8-and-80 system is educational content only.

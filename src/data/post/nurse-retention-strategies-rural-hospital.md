@@ -1,14 +1,13 @@
 ---
-draft: true
-publishDate: 2026-07-01T00:00:00Z
-updateDate: 2026-07-01T00:00:00Z
+draft: false
+publishDate: 2026-07-05T00:00:00Z
+updateDate: 2026-07-05T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Nurse Retention Strategies That Fit a Rural Critical Access Hospital'
 excerpt: >
-  A rural hospital cannot out-pay a metro system on bonuses or perks, so the nurse retention
-  strategies that actually work are the ones a manager controls week to week: fair, predictable
-  shifts and protection from chronic overtime. This guide covers the schedule-based retention
-  levers a small hospital owns and the ones it should stop chasing.
+  Losing one nurse from a 12-person roster leaves a hole every shift feels. This guide
+  covers the retention levers a rural nurse manager actually owns, and how to see who
+  is closest to leaving while there is still time to change it.
 image: https://images.unsplash.com/photo-1758204054878-813a52406b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
