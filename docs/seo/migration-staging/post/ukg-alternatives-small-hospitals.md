@@ -89,7 +89,7 @@ UKG was built for health systems with dedicated IT departments, HRIS analysts, a
       <tr class="border-b border-slate-200 dark:border-slate-700">
         <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">6-12 month implementation budget</td>
         <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800 align-top">$150K-$500K not in budget</td>
-        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">Live in 48 hours, no project required</td>
+        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">About 4 weeks, guided, no project required</td>
       </tr>
       <tr>
         <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Enterprise HRIS/payroll integration</td>
@@ -152,7 +152,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
       <tr>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-semibold text-blue-700 dark:text-blue-400 align-top">SimpleScheduleAI</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Guided-setup software</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">48 hours</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">About 4 weeks, guided; minimal manager time</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">None</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">CAH-native, up to 25 beds</td>
       </tr>
@@ -164,15 +164,15 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling software for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is AI-native nurse scheduling software built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, completes a guided setup session that maps unit rules once, and the AI builds the first schedule; 21 automated rule checks validate every draft, and it is delivered within 48 hours. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
+SimpleScheduleAI is AI-native nurse scheduling software built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format and completes a guided setup session that maps unit rules; setup takes about four weeks from roster upload to the first live schedule, including DON training and test cycles. After that, each scheduling cycle the AI builds the schedule; 21 automated rule checks validate every draft, and drafts are delivered within 48 hours. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
 
-The nurse manager reviews and approves schedules and handles callout coverage using the automated ranked replacement list. Weekly scheduling time drops to 1-2 hours. No installation. No implementation project. For a CAH coming off UKG, guided-setup software is typically the fastest path to operational simplicity.
+The nurse manager reviews and approves schedules and handles callout coverage using the automated ranked replacement list. Weekly scheduling time drops to 1-2 hours. No installation. No implementation project. For a CAH coming off UKG, guided-setup software is typically the path that asks the least of the nurse manager's own time to reach operational simplicity, even where the calendar timeline is comparable to a self-serve alternative.
 
 **Best for:** Critical Access Hospitals leaving UKG because the platform demands IT resources and implementation capacity the facility does not have, and where the nurse manager cannot sustain a weekly platform operation alongside clinical duties.
 
 **Key advantages:**
 
-- Live in 48 hours from Excel roster upload through a guided setup session; no installation and no IT department required
+- About four weeks from Excel roster upload to first live schedule through a guided setup session, asking almost nothing of the manager's time; no installation and no IT department required
 - CMS §485.635 documentation is automatic, eliminating manual survey prep
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
 - Texas overtime compliance (FLSA overtime thresholds) and CMS CAH requirements are built-in defaults
@@ -309,7 +309,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Implementation timeline</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-12 months, dedicated IT required</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">48 hours, Excel upload</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">About 4 weeks, guided, Excel upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">IT infrastructure required</td>
@@ -371,7 +371,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Replace UKG with Something That Actually Fits a 25-Bed Hospital</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI goes live in 48 hours through a guided setup session, with no installation and no IT department required. FLSA overtime tracking and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI goes live in about four weeks through a guided setup session, with no installation and no IT department required. FLSA overtime tracking and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
   <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

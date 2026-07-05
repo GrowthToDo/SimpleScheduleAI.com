@@ -148,7 +148,7 @@ SimpleScheduleAI removes the recurring scheduling build from the nurse manager's
 
 With SimpleScheduleAI:
 
-- A guided setup session maps your unit rules from your staff roster within 3-5 days
+- A guided setup session maps your unit rules from your staff roster over about four weeks, asking almost nothing of your time
 - The AI builds draft schedules each cycle; 21 automated rule checks validate overtime thresholds and credential requirements before presenting drafts
 - The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff
 - Callout coverage shortlists come pre-ranked by certification, overtime status, and availability
@@ -161,7 +161,7 @@ TCP TimeClock+ and SimpleScheduleAI are not direct substitutes. TCP TimeClock+ i
 
 ## How Long Does Each Model Take to Implement?
 
-TCP TimeClock+ implementation timelines vary by configuration complexity and are not published. Contact TCP directly for a current estimate. Time-to-first-schedule includes setup calls, entering staff and payroll configurations, credential rules, and training on both the scheduling and time-tracking sides. SimpleScheduleAI's guided setup session takes 3-5 days because the software handles all configuration automatically from the nurse manager's staff roster after that single session.
+TCP TimeClock+ implementation timelines vary by configuration complexity and are not published. Contact TCP directly for a current estimate. Time-to-first-schedule includes setup calls, entering staff and payroll configurations, credential rules, and training on both the scheduling and time-tracking sides. SimpleScheduleAI's guided setup takes about four weeks from roster upload to the first live schedule: a guided setup session maps unit rules, the DON is trained, and test cycles verify the setup before go-live. The software handles all configuration from the nurse manager's staff roster; she is not the one doing it.
 
 ## What Weekly Time Does Each Model Cost the Nurse Manager?
 
@@ -195,7 +195,7 @@ SimpleScheduleAI focuses entirely on scheduling. For a nurse manager already str
 
 **Weekly burden.** The nurse manager using SimpleScheduleAI spends 1-2 hours per week on review and approval. A nurse manager operating any scheduling platform, including TCP TimeClock+, spends additional time on schedule building, callout coverage, and system maintenance on top of her time tracking approvals.
 
-**Setup speed for scheduling.** SimpleScheduleAI's guided setup session goes live in 3-5 days from your staff roster. TCP TimeClock+ implementation covers both time tracking and scheduling configuration, and typical timelines are not published.
+**Setup effort for scheduling.** SimpleScheduleAI's guided setup session takes about four weeks from your staff roster to your first live schedule, and it asks almost nothing of the nurse manager's time along the way. TCP TimeClock+ implementation covers both time tracking and scheduling configuration, and typical timelines are not published, but that configuration work falls to the nurse manager or a team member.
 
 **CMS documentation.** SimpleScheduleAI generates CMS-formatted staffing documentation automatically from each published schedule. TCP TimeClock+'s event logs cover time and attendance records; CAH-specific CMS documentation is not confirmed as a built-in feature.
 
@@ -222,7 +222,7 @@ The time comparison between TCP TimeClock+ and SimpleScheduleAI depends on which
         <p class="text-sm font-bold text-white">SimpleScheduleAI (guided-setup software)</p>
       </div>
       <div class="p-4 space-y-3 bg-white dark:bg-slate-900">
-        <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Setup time</span><span class="font-medium text-green-700 dark:text-green-400">3-5 days</span></div>
+        <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Setup time</span><span class="font-medium text-green-700 dark:text-green-400">About 4 weeks, guided</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Scheduling focus</span><span class="font-medium text-green-700 dark:text-green-400">Core function</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Callout coverage</span><span class="font-medium text-green-700 dark:text-green-400">Pre-ranked shortlist, all constraints applied</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>CMS §485.635 docs</span><span class="font-medium text-green-700 dark:text-green-400">Automatic, every schedule</span></div>
@@ -277,7 +277,7 @@ The comparison between TCP TimeClock+ and SimpleScheduleAI becomes clear once yo
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See What Guided-Setup Scheduling Looks Like for Your Critical Access Hospital</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI goes live in 3-5 days from your staff roster. Your nurse manager reviews and approves; the scheduling work is automated. Schedule a free assessment to compare it to what you have now.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI goes live in about four weeks from your staff roster, guided. Your nurse manager reviews and approves; the scheduling work is automated. Schedule a free assessment to compare it to what you have now.</p>
   <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

@@ -87,7 +87,7 @@ The core requirements are simpler than enterprise software suggests:
 
 **Excel roster upload.** Most CAHs maintain their nurse roster in a spreadsheet. Software that requires a formatted data import or an IT-managed migration is a barrier, not an onboarding process.
 
-**Fast setup without IT involvement.** Going live in 3 to 5 days via a straightforward roster upload plus a guided setup session is achievable. Going live in 3 to 5 months with IT integration is not practical for a facility with no IT staff.
+**Guided setup without IT involvement.** Going live in about four weeks via a straightforward roster upload plus a guided setup session, with almost no manager configuration work, is achievable. A multi-month rollout that requires IT integration and ongoing configuration is not practical for a facility with no IT staff.
 
 **Callout coverage without a float pool.** When a nurse calls out, the manager needs a ranked list of available, qualified nurses who are not approaching overtime. Not an agency integration. Not a float pool dashboard. A phone list with context.
 
@@ -140,7 +140,7 @@ The core requirements are simpler than enterprise software suggests:
           IT integration, weeks to months
         </td>
         <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
-          Excel roster upload, 3 to 5 days
+          Excel roster upload, about 4 weeks guided, minimal manager time
         </td>
       </tr>
       <tr class="align-top">
@@ -207,7 +207,7 @@ The limitations are real and worth stating: SimpleScheduleAI is not built for ho
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Built for 20-bed hospitals, not scaled down from 500-bed systems.</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI onboards in 3-5 days via Excel upload and a guided setup session. No installation, no IT department required. Flat monthly pricing for Texas Critical Access Hospitals, no per-nurse fees.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI onboards in about four weeks via Excel upload and a guided setup session, asking almost nothing of your time. No installation, no IT department required. Flat monthly pricing for Texas Critical Access Hospitals, no per-nurse fees.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

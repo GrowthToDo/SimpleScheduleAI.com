@@ -186,7 +186,7 @@ For a critical access hospital, scheduling requirements differ from what a broad
         <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Texas Critical Access Hospitals</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New software; no public reviews yet</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">About 4 weeks, guided; minimal manager time</td>
       </tr>
     </tbody>
   </table>
@@ -200,7 +200,7 @@ The four strongest Schedule360 alternatives for a Critical Access Hospital are S
 
 <img src="/images/blog/schedule360-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI guided-setup nurse scheduling software for Texas Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is new software, without public G2 or Capterra reviews yet. It is guided-setup [nurse scheduling software](/nurse-scheduling-software), not a self-configured platform the hospital integrates alone, built specifically for Texas Critical Access Hospitals. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a guided setup session handles setup from an Excel roster upload (3 to 5 days), 21 automated rule checks validate each draft, and the software maintains the system as the roster and policies change. For the broader category framing, see our comparison of [guided-setup software vs. scheduling software](/blog/managed-service-vs-scheduling-software).
+SimpleScheduleAI is new software, without public G2 or Capterra reviews yet. It is guided-setup [nurse scheduling software](/nurse-scheduling-software), not a self-configured platform the hospital integrates alone, built specifically for Texas Critical Access Hospitals. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: a guided setup session handles setup from an Excel roster upload over about four weeks to the first live schedule, then each cycle the AI builds draft schedules, 21 automated rule checks validate each draft, and the software maintains the system as the roster and policies change. For the broader category framing, see our comparison of [guided-setup software vs. scheduling software](/blog/managed-service-vs-scheduling-software).
 
 Texas-specific compliance is built into the default configuration. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation are part of the standard software rather than configuration the nurse manager has to maintain. See [how it works](/how-it-works) for the weekly cadence. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
@@ -208,7 +208,7 @@ Texas-specific compliance is built into the default configuration. [FLSA](https:
 
 **Key advantages:**
 
-- Setup in 3 to 5 days from an Excel roster upload; no IT involvement or implementation project
+- About four weeks from an Excel roster upload to first live schedule, guided, asking almost nothing of the manager's time; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, not a configured module the nurse manager maintains
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager's phone
 - Texas overtime compliance (FLSA overtime threshold tracking) and CAH-specific CMS requirements are defaults, not configuration options
@@ -386,7 +386,7 @@ Schedule360 is worth keeping if:
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation timeline</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">3 to 5 days from Excel roster upload</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400">About 4 weeks, guided, from Excel roster upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
@@ -438,7 +438,7 @@ Schedule360 is worth keeping if:
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Need a Scheduling System Built for a 25-Bed Hospital, Not a Specialty Clinic Chain?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for Texas Critical Access Hospitals. It goes live in 3 to 5 days with zero IT involvement. FLSA overtime threshold tracking, Texas Labor Code provisions, and CMS §485.635 documentation are included by default. See how it works to understand how the transition works for your facility.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for Texas Critical Access Hospitals. It goes live in about four weeks, guided, with zero IT involvement. FLSA overtime threshold tracking, Texas Labor Code provisions, and CMS §485.635 documentation are included by default. See how it works to understand how the transition works for your facility.</p>
   <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
@@ -475,7 +475,7 @@ Public independent review density is limited. Capterra lists 1 review (5.0/5) fr
 
 **How long does it take to switch from Schedule360 to a simpler scheduling tool?**
 
-Switching to another self-serve platform (ShiftWizard, TCP/Aladtec) takes 2 to 4 weeks for setup plus a transition period running parallel. Switching to guided-setup software takes 3 to 5 days from an Excel roster upload. Check your Schedule360 contract terms before initiating any transition.
+Switching to another self-serve platform (ShiftWizard, TCP/Aladtec) takes 2 to 4 weeks for setup plus a transition period running parallel, with the nurse manager or a team member handling that configuration directly. Switching to guided-setup software takes a comparable calendar timeline, about four weeks from an Excel roster upload to the first live schedule, but a guided setup session does the configuration work instead of the nurse manager. Check your Schedule360 contract terms before initiating any transition.
 
 **Does SimpleScheduleAI handle physician or pharmacy scheduling like Schedule360 does?**
 

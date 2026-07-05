@@ -158,7 +158,7 @@ For a critical access hospital, scheduling requirements differ from what QGenda 
         <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New software; no public reviews yet</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">About 4 weeks, guided; minimal manager time</td>
       </tr>
     </tbody>
   </table>
@@ -172,7 +172,7 @@ The four strongest QGenda alternatives for a Critical Access Hospital are Simple
 
 <img src="/images/blog/qgenda-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling software for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is new software, without public G2 or Capterra reviews yet. It is a guided-setup [healthcare staff scheduling](/nurse-scheduling-software) software built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI does not require the nurse manager to configure and maintain rules every cycle: a guided setup session maps unit rules once from an Excel roster upload (3-5 days), 21 automated rule checks validate every draft, and the software keeps running as the roster changes.
+SimpleScheduleAI is new software, without public G2 or Capterra reviews yet. It is a guided-setup [healthcare staff scheduling](/nurse-scheduling-software) software built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI does not require the nurse manager to configure and maintain rules every cycle: a guided setup session maps unit rules from an Excel roster upload over about four weeks to the first live schedule, 21 automated rule checks validate every draft, and the software keeps running as the roster changes.
 
 Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime rules, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) documentation are part of the standard software rather than configuration the nurse manager has to maintain. See the AI build a schedule and the compliance checks run in the [interactive simulator](/simulator).
 
@@ -180,7 +180,7 @@ Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies
 
 **Key advantages:**
 
-- Setup in 3-5 days from Excel roster upload, through a guided setup session; no installation and no IT department required
+- About four weeks from Excel roster upload to first live schedule, through a guided setup session, asking almost nothing of the manager's time; no installation and no IT department required
 - CMS §485.635 documentation is automatic, not a configured module the manager maintains
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
 - Texas overtime compliance (FLSA overtime thresholds) and CMS CAH requirements are defaults, not configuration options
@@ -351,7 +351,7 @@ QGenda is worth keeping if:
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation timeline</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">6-12 weeks, needs IT</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">3-5 days, Excel upload</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400">About 4 weeks, guided, Excel upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
@@ -408,7 +408,7 @@ QGenda is worth keeping if:
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Done Paying Enterprise Prices for a System Built for a 500-Bed Hospital?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for critical access hospitals. It goes live in 3-5 days with no installation and no IT department required. FLSA, Texas Labor Code, and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for critical access hospitals. It goes live in about four weeks, guided, with no installation and no IT department required. FLSA, Texas Labor Code, and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
   <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
@@ -445,7 +445,7 @@ QGenda's overall rating is high (4.6/5 on G2 across 164 reviews; 4.2/5 on Capter
 
 **How long does it take to switch from QGenda to a simpler scheduling tool?**
 
-Switching to another self-serve platform (TCP, ShiftWizard) takes 2-4 weeks for setup plus a transition period running parallel. Switching to guided-setup software takes 3-5 days for the guided setup session to onboard from your roster file. Check your QGenda contract terms before initiating any transition.
+Switching to another self-serve platform (TCP, ShiftWizard) takes 2-4 weeks for setup plus a transition period running parallel, with the nurse manager or a team member handling that configuration directly. Switching to guided-setup software takes a comparable calendar timeline, about four weeks, but a guided setup session does the configuration work instead of the nurse manager. Check your QGenda contract terms before initiating any transition.
 
 **Does SimpleScheduleAI handle physician scheduling like QGenda does?**
 

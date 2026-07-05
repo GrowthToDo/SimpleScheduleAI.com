@@ -210,7 +210,7 @@ For the broader context on [nurse scheduling software for critical access hospit
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Want to see what Level 5 automation looks like for your facility?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI's AI builds the schedule and 21 automated rule checks validate it. Your nurse manager reviews and approves. Operational in 3-5 days.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI's AI builds the schedule and 21 automated rule checks validate it. Your nurse manager reviews and approves. About four weeks from roster upload to your first live schedule, guided.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

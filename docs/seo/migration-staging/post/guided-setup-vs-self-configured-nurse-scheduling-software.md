@@ -227,7 +227,7 @@ Self-configured scheduling software fits when the hospital has a dedicated sched
       <tr>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Setup time</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400 align-top">2-4 weeks</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">3-5 days</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">About 4 weeks, guided; minimal manager time</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800">
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Weekly scheduling time</td>
@@ -312,15 +312,15 @@ Guided-setup software has real limitations that are important to understand befo
 
 ## How Does SimpleScheduleAI Work as Guided-Setup Software?
 
-SimpleScheduleAI delivers nurse schedules as guided-setup software for Critical Access Hospitals in Texas. The nurse manager submits a staff roster in Excel; the AI builds three complete schedule drafts, 21 automated rule checks validate every draft, and within 48 hours she receives them. She selects one, the system handles CMS documentation automatically, and callout coverage generates a ranked replacement list in under two minutes. The total weekly time commitment for review and approval is 1-2 hours. See [how the full process works](/how-it-works). See the AI build a schedule and rank callout replacements in the [interactive simulator](/simulator).
+SimpleScheduleAI delivers nurse schedules as guided-setup software for Critical Access Hospitals in Texas. The nurse manager submits a staff roster in Excel, and a guided setup session maps unit rules over about four weeks before the first live schedule. After that, each scheduling cycle the AI builds three complete schedule drafts, 21 automated rule checks validate every draft, and drafts arrive within 48 hours. She selects one, the system handles CMS documentation automatically, and callout coverage generates a ranked replacement list in under two minutes. The total weekly time commitment for review and approval is 1-2 hours. See [how the full process works](/how-it-works). See the AI build a schedule and rank callout replacements in the [interactive simulator](/simulator).
 
 SimpleScheduleAI is guided-setup scheduling software built specifically for Critical Access Hospitals where the nurse manager takes clinical shifts and cannot spend 8-12 hours per week on scheduling. For the broader category context on how AI-built schedules differ from traditional methods, see [AI nurse scheduling vs. traditional](/blog/ai-nurse-scheduling-vs-traditional).
 
 The workflow has four steps:
 
-1. **Roster submission.** The nurse manager submits the current nursing roster in Excel with scheduling preferences, constraints, and availability windows. This is a one-time guided setup session that maps unit rules once and updates incrementally as staff changes.
+1. **Roster submission and guided setup.** The nurse manager submits the current nursing roster in Excel with scheduling preferences, constraints, and availability windows. Over about four weeks, a one-time guided setup session maps unit rules, the DON is trained, and test cycles verify the setup before go-live. After that, rule changes update incrementally as staff changes.
 
-2. **Draft delivery.** Within 48 hours, the AI builds three complete schedule drafts and 21 automated rule checks validate them: one balanced, one fair-rotation, and one overtime-minimized. The manager reviews them and selects one.
+2. **Draft delivery.** Once live, each scheduling cycle the AI builds three complete schedule drafts within 48 hours, and 21 automated rule checks validate them: one balanced, one fair-rotation, and one overtime-minimized. The manager reviews them and selects one.
 
 3. **Callout management.** When a nurse calls out, the manager uses the callout module to generate a ranked replacement list in under two minutes. The list is filtered by unit credentials and sorted by overtime risk. The manager confirms the replacement.
 

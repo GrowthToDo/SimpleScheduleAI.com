@@ -85,7 +85,7 @@ Here is how all 10 tools compare on CAH fit before we go deeper. This guide cove
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">SimpleScheduleAI</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Texas Critical Access Hospitals; guided-setup nurse scheduling software</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">New software; no public reviews yet</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">About 4 weeks, guided; minimal manager time</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">$1,000 to $1,500/mo flat</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
@@ -167,7 +167,7 @@ SimpleScheduleAI is AI-native nurse scheduling software: the AI builds your sche
 
 **Key advantages:**
 
-- Removes the weekly schedule build from the nurse manager entirely, with no IT department required and no configuration to maintain. Goes live in days, not months.
+- Removes the weekly schedule build from the nurse manager entirely, with no IT department required and no configuration to maintain. About four weeks from roster upload to first live schedule, guided, asking almost nothing of the manager's time.
 - CMS §485.635 staffing documentation produced by default, formatted for a surveyor, with FLSA overtime threshold tracking built into the build.
 
 **Key limitations:**

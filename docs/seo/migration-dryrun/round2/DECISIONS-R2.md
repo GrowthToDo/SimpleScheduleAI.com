@@ -337,4 +337,23 @@ beyond what facts-dossier already permits — logged as a weakness below, not a 
 ## Adversarial-review corrections (2026-07-04)
 - after-hours-callout L191: "21 automated rule checks maintain the per-diem bench" was a MAJOR misattribution (rule checks validate drafts; they do not maintain rosters). Fixed to "the software maintains the per-diem bench" (the honest generic-software subject, matching the per-diem post's own pattern). New registry token `system-maintains` covers this class.
 - qgenda L334: unlogged cosmetic hunk (div class my-8 added) — logged retroactively; ledger discipline extended to FULL diff including cosmetic hunks (runbook lesson 8).
+
+## Founder product-truth correction (2026-07-05): product-mode setup is about four weeks, not 3-5 days
+
+Founder update 2026-07-05: PRODUCT-mode setup timeline is ABOUT FOUR WEEKS from roster upload to first live schedule (collecting the staff Excel roster, setting up the workspace, importing the roster, a guided setup session that maps unit rules, DON training, and test cycles before go-live), not the "3-5 days" figure this round's `qgenda-alternatives.md` conversion carried over verbatim from `src/data/post/`. See `docs/seo/facts-dossier.md#product-truths` (setup-timeline split) and `docs/seo/positioning-registry.md` `setup-timeline` token, both updated same day.
+
+This ledger's "after" columns are stale in the rows below and are corrected here rather than edited in place, to preserve the historical record of what Round 2 actually produced:
+
+| Ledger row (original, this file) | Stale "after" text | Corrected text (now live in `docs/seo/migration-dryrun/round2/qgenda-alternatives.md`) |
+| --- | --- | --- |
+| Line 37 ("Body, '1. SimpleScheduleAI' section, para 1") | "...a guided setup session maps unit rules once from an Excel roster upload (3-5 days), 21 automated rule checks validate every draft..." | "...a guided setup session maps unit rules from an Excel roster upload over about four weeks to the first live schedule, 21 automated rule checks validate every draft..." |
+| Line 39 ("Key advantages bullet 1") | "Setup in 3-5 days from Excel roster upload, through a guided setup session; no installation and no IT department required" | "About four weeks from Excel roster upload to first live schedule, through a guided setup session, asking almost nothing of the manager's time; no installation and no IT department required" |
+| Line 45 ("CTA block subtitle") | "It goes live in 3-5 days with no installation and no IT department required." | "It goes live in about four weeks, guided, with no installation and no IT department required." |
+| Line 46 (FAQ 3, "How long does it take to switch...") | "Switching to guided-setup software takes 3-5 days for the guided setup session to onboard from your roster file." | "Switching to another self-serve platform (TCP, ShiftWizard) takes 2-4 weeks for setup plus a transition period running parallel, with the nurse manager or a team member handling that configuration directly. Switching to guided-setup software takes a comparable calendar timeline, about four weeks, but a guided setup session does the configuration work instead of the nurse manager." |
+
+Also fixed in the same pass, not previously itemized in this ledger by exact string: the Quick Comparison table's "Setup Time" cell for SimpleScheduleAI ("3-5 days" -> "About 4 weeks, guided; minimal manager time") and the second comparison table's "Implementation timeline" row ("3-5 days, Excel upload" -> "About 4 weeks, guided, Excel upload"; QGenda's own timeline of "6-12 weeks, needs IT" is unaffected, so SimpleScheduleAI genuinely remains faster here and the color coding/claim direction was left as-is).
+
+**No premise collapse for this post.** QGenda's own implementation timeline (6-12 weeks) is well above four weeks, so unlike the round-1 ShiftWizard post, this post's speed-related claims remain directionally true after the correction; only the specific numbers needed updating. The FAQ 3 rewrite additionally reframes the differentiator from raw speed to who-does-the-configuration-work, consistent with the corpus-wide re-anchoring pattern, even though a pure speed claim would have still been technically defensible here.
+
+Same correction applied in parallel to the live `docs/seo/migration-staging/post/` corpus (39 files) and to `docs/seo/migration-dryrun/DECISIONS.md` (round 1). `src/data/post/` (service mode) was NOT touched.
 - "we [verb]" first-person capability pattern: ADJUDICATED to the migration-day leftover sweep (not a live check-blog WARN) because first-person service claims are legitimate in service mode today; they only become residue after migration.

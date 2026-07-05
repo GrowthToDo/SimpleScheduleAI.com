@@ -116,7 +116,7 @@ The table below covers customer focus, public ratings, and setup time across the
         <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New software; no public reviews yet</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">About 4 weeks, guided; minimal manager time</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Aladtec by [TCP](/blog/best-tcp-alternative-for-cah)</td>

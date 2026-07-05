@@ -180,13 +180,13 @@ For more context on [nurse scheduling software](/nurse-scheduling-software) opti
 ## Frequently Asked Questions
 
 **Q: Can I keep using Excel alongside scheduling software during a transition?**
-Yes, and most CAHs do. Guided-setup software like SimpleScheduleAI typically runs parallel for 2-4 weeks during onboarding so the manager can verify accuracy before fully handing off. You don't have to flip a switch on day one.
+Yes, and most CAHs do. Guided-setup software like SimpleScheduleAI takes about four weeks to onboard, including test cycles that run before the first live schedule so the manager can verify accuracy before fully handing off. You don't have to flip a switch on day one.
 
 **Q: Does scheduling software integrate with our payroll system?**
 Most scheduling platforms offer payroll exports in common formats (CSV, ADP, Paylocity-compatible files). Guided-setup software should handle that export setup as part of the guided setup session rather than leaving it to your IT staff.
 
 **Q: How long does it take to set up nurse scheduling software for a 25-bed hospital?**
-For guided-setup software, the initial setup session typically takes one to two weeks, primarily gathering staff availability data, certifications, and your current scheduling rules. Self-configured software platforms can take longer because configuration is on the hospital side.
+For guided-setup software, setup typically takes about four weeks from roster upload to your first live schedule: collecting your staff Excel roster, a guided setup session that maps unit rules and gathers availability data and certifications, DON training, and test cycles before go-live. Self-configured software platforms can take a comparable calendar timeline, but the configuration work is on the hospital side throughout.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

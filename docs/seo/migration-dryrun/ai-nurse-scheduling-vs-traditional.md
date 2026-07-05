@@ -34,7 +34,7 @@ This guide separates the genuine workflow changes from the marketing claims, wri
 - AI scheduling software applies overtime, credential, and coverage rules automatically, generates constraint-aware schedule options, and produces callout replacement lists without manual calculation.
 - The real AI advantage is not abstract "optimization." It is three concrete capabilities: consistent constraint enforcement, overtime-aware callout ranking, and continuous fairness tracking across the rotation.
 - AI scheduling does not replace clinical judgment. It removes the computational rule-checking so the manager spends her time on decisions that actually require nursing knowledge.
-- SimpleScheduleAI pairs constraint-aware AI scheduling with a guided setup session, delivering three schedule options for a Critical Access Hospital within 48 hours of roster submission, with no installation and no IT department required.
+- SimpleScheduleAI pairs constraint-aware AI scheduling with a guided setup session: about four weeks from roster submission to the first live schedule, with no installation and no IT department required. After that, each cycle delivers three schedule options within 48 hours.
 - The switch pays back fastest at hospitals where the nurse manager also takes clinical shifts and has little or no protected administrative time each week.
 
 ## Table of Contents
@@ -348,7 +348,7 @@ No. AI scheduling handles the computational rule-checking. The nurse manager kee
 
 **How long does it take to implement AI nurse scheduling?**
 
-It depends on the model. Self-configured AI scheduling software typically needs 4 to 14 weeks of configuration before it accurately reflects the hospital's rules. A guided-setup software like SimpleScheduleAI needs only an Excel roster and one guided setup session, and usually delivers the first schedule within 48 hours of onboarding. The gap reflects who does the configuration work: hospital staff in the self-configured model, a single guided session in the other.
+It depends on the model. Self-configured AI scheduling software typically needs 4 to 14 weeks of configuration before it accurately reflects the hospital's rules, and that work falls to hospital staff. A guided-setup software like SimpleScheduleAI takes a comparable calendar timeline, about four weeks from an Excel roster upload to the first live schedule, but the configuration work happens in one guided setup session with the vendor rather than falling to the nurse manager. The gap that matters is not who goes live faster; it is who does the configuration work.
 
 ---
 

@@ -179,7 +179,7 @@ For a 25-bed hospital, a CAH-specific approach is almost always the better fit. 
 <tr>
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Implementation time</td>
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Three to six months</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Days to two weeks</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">About 4 weeks, guided; minimal manager time</td>
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-900">
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">IT requirement</td>

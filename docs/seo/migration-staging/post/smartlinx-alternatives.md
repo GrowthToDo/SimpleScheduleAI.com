@@ -180,7 +180,7 @@ SimpleScheduleAI delivers the compliance documentation, overtime tracking, and c
 
 **Key advantages:**
 
-- Days to first schedule draft via Excel roster upload, compared to 3-4 months for a SmartLinx implementation
+- About four weeks to first live schedule via Excel roster upload and a guided setup session, compared to 3-4 months for a SmartLinx implementation, and it asks far less of the nurse manager's time either way
 - CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation is automatic, not a configured module requiring IT setup
 - Callout overtime ranking is built into the shortlist generation, not a separately configured compliance rule
 - No ongoing IT dependency; the software maintains configuration as the hospital changes, after the initial guided setup session

@@ -32,7 +32,7 @@ This guide compares the two models on the operational dimensions that decide the
 - ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream. It holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews),[1] with over 88% of Capterra reviews rating 4 stars or higher.
 - Self-serve platforms and a guided-setup scheduling software are not feature-equivalent products at different price points. They are different operating models. The right framing for a CAH evaluation is "what operating model fits my facility?" not "which product is better?"
 - Self-serve platforms ask the nurse manager to configure and operate the scheduling system every week. Setup typically runs 2-4 weeks; weekly burden after go-live is typically 4-6 hours.
-- A guided-setup scheduling software maps unit rules with the nurse manager once, then runs the weekly schedule generation automatically. The nurse manager reviews and approves. Setup typically runs 3-5 days via Excel upload; weekly burden after go-live is typically 1-2 hours.
+- A guided-setup scheduling software maps unit rules with the nurse manager once, then runs the weekly schedule generation automatically. The nurse manager reviews and approves. Setup typically runs about four weeks via Excel upload and a guided setup session, asking almost nothing of the manager's time; weekly burden after go-live is typically 1-2 hours.
 - The right choice depends on whether your nurse manager has 4-6 weekly hours of capacity to dedicate to scheduling administration. If she does, a self-serve platform fits. If she does not, the operating model is the actual constraint, not the platform.
 
 ## Table of Contents
@@ -135,7 +135,7 @@ The two operating models differ on who configures the system, who builds each sc
       <tr class="bg-slate-50 dark:bg-slate-900">
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Typical setup time</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">2-4 weeks</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">3-5 days</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">About 4 weeks, guided; minimal manager time</td>
       </tr>
       <tr class="bg-white dark:bg-slate-800">
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Weekly nurse manager burden</td>
@@ -173,13 +173,13 @@ When these conditions hold, a self-serve platform like ShiftWizard, TCP/Aladtec,
 
 ## Where Does a Guided-Setup Software Fit?
 
-A guided-setup scheduling software fits when the nurse manager is also a clinical provider and cannot protect 4-6 weekly hours for scheduling construction, when the hospital has no IT capacity for implementation or maintenance, when time to first operational schedule matters more than staff self-service features, and when CMS compliance documentation is currently assembled manually before each survey. If any of these apply, the operating model is the actual constraint, not the platform.
+A guided-setup scheduling software fits when the nurse manager is also a clinical provider and cannot protect 4-6 weekly hours for scheduling construction, when the hospital has no IT capacity for implementation or maintenance, when the manager's own time during setup matters more than staff self-service features, and when CMS compliance documentation is currently assembled manually before each survey. If any of these apply, the operating model is the actual constraint, not the platform.
 
 A guided-setup software is the right model when:
 
 - **Your nurse manager is also a charge nurse, department head, or other clinical role.** Time on the floor cannot be substituted with platform time; the scheduling work needs to come off her calendar entirely, not be made faster.
 - **Your facility has no dedicated IT capacity.** Implementation that assumes IT support, for integrations, configuration, or troubleshooting, fails at facilities where the IT person is one part-time role.
-- **Time-to-operational matters more than mobile self-service.** When a current scheduling situation is unsustainable, a 3-5 day setup timeline matters more than a staff app that the previous platform also had.
+- **Manager time during setup matters more than mobile self-service.** When a current scheduling situation is unsustainable, a setup that asks almost nothing of the nurse manager's own time matters more than a staff app that the previous platform also had, even where the calendar timeline is comparable.
 - **Compliance documentation is a survey-relevant concern.** A guided-setup software typically delivers auto-logged audit trails for CMS §485.635 as part of the system, rather than requiring the nurse manager to maintain documentation through configuration.
 
 ## Which Model Fits Your Critical Access Hospital?
@@ -190,14 +190,14 @@ The decision tree:
 
 1. Does your nurse manager have 4-6 weekly hours of dedicated time for scheduling administration after go-live? If yes, evaluate self-serve platforms. If no, the operating model is the actual constraint.
 2. Is staff-facing mobile self-service (shift trades, schedule viewing on phones) a hard requirement for your facility's culture? If yes, a self-serve platform is the cleaner fit.
-3. Is implementation timeline urgent (current situation unsustainable in next 4 weeks)? If yes, a guided-setup software is the faster path.
+3. Is nurse manager time during setup the scarce resource, not calendar time? If yes, a guided-setup software asks far less of her, even though the calendar timeline runs comparable to a self-serve platform.
 4. Does your facility have any IT capacity for implementation? If no, a guided-setup software avoids the dependency.
 
 The honest answer for many CAHs is "items 1, 3, and 4 favor a guided-setup software; item 2 favors a platform." When this is the breakdown, a hybrid architecture (guided-setup scheduling software plus a separate communication tool for staff-facing features) can work.
 
 ## How SimpleScheduleAI Fits If You Need the Guided-Setup Model?
 
-SimpleScheduleAI is an AI-native nurse scheduling software built for Critical Access Hospitals in Texas where the nurse manager takes clinical shifts and cannot sustain weekly scheduling construction. Setup takes 3-5 days from an Excel roster upload, through a guided setup session that maps your unit rules once. CMS §485.635 documentation is automatic. Callout replacement lists are pre-ranked by credential and overtime status. The AI builds the schedule and 21 automated rule checks validate every draft, so the nurse manager approves rather than builds. There is no staff-facing mobile app. See the AI build a schedule and rank callout replacements in the [interactive simulator](/simulator).
+SimpleScheduleAI is an AI-native nurse scheduling software built for Critical Access Hospitals in Texas where the nurse manager takes clinical shifts and cannot sustain weekly scheduling construction. Setup takes about four weeks from an Excel roster upload to the first live schedule, through a guided setup session that maps your unit rules, with DON training and test cycles along the way. CMS §485.635 documentation is automatic. Callout replacement lists are pre-ranked by credential and overtime status. The AI builds the schedule and 21 automated rule checks validate every draft, so the nurse manager approves rather than builds. There is no staff-facing mobile app. See the AI build a schedule and rank callout replacements in the [interactive simulator](/simulator).
 
 <img src="/images/blog/shiftwizard-vs-managed-service/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling software for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -207,7 +207,7 @@ SimpleScheduleAI is new software, without public G2 or Capterra reviews yet. Wha
 
 - **Evaluation on real generated schedules, not demos.** We build a real schedule against your roster in the [interactive demo](/simulator) so you judge the output, not a sales pitch.
 - **Founder-led company.** Pradeep Pandey, founder, has direct operations experience at Apollo Hospitals (Deputy GM, Operations) and an MBA from IIM Trichy. Product decisions go through him, not through a tier-3 support queue.
-- **CAH-specific design.** Excel roster onboarding, no installation or IT integration required, 3-5 day go-live, Texas FLSA overtime compliance built in, CMS §485.635 audit trail logged automatically.
+- **CAH-specific design.** Excel roster onboarding, no installation or IT integration required, about a four-week guided go-live, Texas FLSA overtime compliance built in, CMS §485.635 audit trail logged automatically.
 
 SimpleScheduleAI is the right choice for a CAH where the nurse manager has concluded that the self-serve scheduling model takes more weekly time than her role can absorb, and where seeing a real schedule built on her own roster matters more than aggregate vendor reviews.
 

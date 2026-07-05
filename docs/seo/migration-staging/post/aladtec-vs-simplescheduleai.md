@@ -80,7 +80,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Implementation time</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">4-6 weeks (configuration + training)</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">48 hours from Excel staff roster upload</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">About 4 weeks, guided; minimal manager time</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Callout OT ranking</td>
@@ -170,10 +170,11 @@ SimpleScheduleAI is not self-configured software with extra support. It is a dif
 With SimpleScheduleAI, the process works like this:
 
 1. The nurse manager shares the staff roster with SimpleScheduleAI: names, credentials, availability, and any scheduling constraints. A standard Excel file is all that is needed to start.
-2. The AI builds the first schedule within 48 hours, applying CMS documentation requirements, FLSA overtime thresholds, and credential-based shift assignments; 21 automated rule checks validate it before it reaches the nurse manager.
-3. The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff.
-4. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a credential gap. They call from the top of the list.
-5. As staff join or leave, credentials change, or availability patterns shift, the nurse manager sends the update and the system applies it automatically. The nurse manager does not administer a system. They manage a roster.
+2. Over the next four weeks, SimpleScheduleAI sets up the workspace, imports the roster, and runs a guided setup session with the nurse manager to map unit rules, credential categories, and overtime thresholds. The DON is trained during this window.
+3. Test cycles verify the rule mapping before go-live. Once live, each scheduling cycle the AI builds the schedule, applying CMS documentation requirements, FLSA overtime thresholds, and credential-based shift assignments; 21 automated rule checks validate every draft before it reaches the nurse manager.
+4. The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff.
+5. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a credential gap. They call from the top of the list.
+6. As staff join or leave, credentials change, or availability patterns shift, the nurse manager sends the update and the system applies it automatically. The nurse manager does not administer a system. They manage a roster.
 
 The weekly time commitment for the nurse manager drops from 4-6 hours (typical for software users actively managing scheduling) to 1-2 hours (review and approval only). That difference, across a 25-nurse staff on a rolling 4-week schedule, is 100-200 hours per year returned to clinical work. To see the build-and-rank step for yourself, watch the AI assemble a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator).
 
@@ -185,9 +186,9 @@ Getting Aladtec operational for a hospital requires configuring the system for t
 
 That timeline includes: initial setup calls, data entry of staff profiles, configuration of scheduling rules, parallel running with the existing system (usually Excel), and training for staff who need to submit availability or request time off through the new system.
 
-SimpleScheduleAI starts with a roster handoff and one guided setup session. Because that session maps unit rules once and the system handles configuration from then on, the nurse manager does not need to learn a system before it becomes useful. The first schedule arrives within 48 hours.
+SimpleScheduleAI starts with a roster handoff and takes about four weeks to reach the first live schedule: collecting the staff Excel roster, setting up the workspace, importing the roster, mapping unit rules and credential categories in a guided setup session, training the DON, and running test cycles before go-live. Because that one session maps unit rules once and the system handles configuration from then on, the nurse manager does not need to learn a system before it becomes useful.
 
-For a CAH that has been managing on spreadsheets for years, the difference between "go live in 48 hours" and "go live in 6 weeks" is meaningful. Every week of parallel running with the old system is a week the nurse manager is managing two processes at once.
+Calendar time to go live is comparable between the two models: roughly four weeks either way. The difference is what those four weeks ask of the nurse manager. Aladtec's 4-6 weeks is spent configuring shift patterns, unit structures, and overtime rules herself, then maintaining that configuration indefinitely. SimpleScheduleAI's four weeks is a roster upload, one guided setup session, and reviewing test cycles; the vendor does the configuration work, and there is no ongoing configuration to maintain afterward. For a CAH that has been managing on spreadsheets for years, that difference in whose time gets spent, not who goes live faster, is what matters.
 
 ## What Weekly Time Does Each Model Cost the Nurse Manager?
 
@@ -393,7 +394,7 @@ Two variables drive the decision: how much unprotected time the nurse manager cu
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold text-green-700 dark:text-green-400">SimpleScheduleAI only (automated CMS docs required)</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Hospital is moving off spreadsheets and needs to go live in under one week</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Hospital is moving off spreadsheets and wants setup that asks almost nothing of the nurse manager's time</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold text-green-700 dark:text-green-400">SimpleScheduleAI</td>
       </tr>
       <tr class="align-top">
@@ -436,7 +437,7 @@ The decision between Aladtec and SimpleScheduleAI becomes clear once you have tw
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See What Guided-Setup Software Costs for Your Critical Access Hospital</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI builds your first schedule within 48 hours of your staff roster upload. No installation. No integration project. No IT department required. Just a schedule that arrives ready to approve.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI takes about four weeks from your staff roster upload to your first live schedule, through a guided setup session. No installation. No integration project. No IT department required. Just a schedule that arrives ready to approve.</p>
   <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

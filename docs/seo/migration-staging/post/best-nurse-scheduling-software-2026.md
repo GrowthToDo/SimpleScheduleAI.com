@@ -80,7 +80,7 @@ The market in 2026 splits cleanly into three tiers: enterprise platforms for lar
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">New software; no public reviews yet</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">3-5 days</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">About 4 weeks, guided; minimal manager time</td>
         <td class="py-3 text-slate-600 dark:text-slate-400 align-top">$1,000-1,500 flat</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -221,7 +221,7 @@ SimpleScheduleAI is new software, without public G2 or Capterra reviews yet. It 
 **Key advantages:**
 
 - Eliminates 8-12 hours per week of scheduling work from the nurse manager
-- No installation, no integration project, no ongoing configuration - goes live in days
+- No installation, no integration project, no ongoing configuration to maintain: about four weeks from roster upload to first live schedule, guided, with minimal manager time required
 - Full audit trail for every schedule change, formatted for CMS survey readiness
 
 **Key limitations:**

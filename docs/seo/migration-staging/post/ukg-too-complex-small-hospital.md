@@ -169,7 +169,7 @@ These requirements can be met by purpose-built tools at a fraction of UKG's cost
         <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Launch time</td>
         <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">2-4 weeks</td>
         <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">3-4 months</td>
-        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">48 hours</td>
+        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">About 4 weeks, guided; minimal manager time</td>
         <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700 align-top">6-12 months</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
@@ -220,7 +220,7 @@ Best for: Hospitals (50-200 beds) with an IT team available to configure and mai
 
 ## SimpleScheduleAI
 
-SimpleScheduleAI is AI-native nurse scheduling software built specifically for critical access hospitals. There is no platform to configure or maintain week to week. The nurse manager uploads a staff roster in Excel format, completes a guided setup session that maps unit rules with her once, and the AI builds the first schedule; 21 automated rule checks validate every draft, and it is delivered within 48 hours. Ongoing rule maintenance as staff and policies change is handled by the software after that initial session.
+SimpleScheduleAI is AI-native nurse scheduling software built specifically for critical access hospitals. There is no platform to configure or maintain week to week. The nurse manager uploads a staff roster in Excel format and completes a guided setup session that maps unit rules with her; setup takes about four weeks to the first live schedule, including DON training and test cycles. After that, each scheduling cycle the AI builds the schedule; 21 automated rule checks validate every draft, and drafts are delivered within 48 hours. Ongoing rule maintenance as staff and policies change is handled by the software after that initial setup.
 
 FLSA overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults. The nurse manager reviews and approves schedules. Weekly scheduling time drops to 1-2 hours.
 

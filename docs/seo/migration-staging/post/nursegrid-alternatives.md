@@ -130,7 +130,7 @@ The table below covers customer focus, public ratings, and setup time across Nur
         <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New software; no public reviews yet</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">About 4 weeks, guided; minimal manager time</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">ShiftWizard</td>
@@ -500,7 +500,7 @@ The core difference is scope and operating model. NurseGrid is a self-serve, nur
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation time</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Hours to days</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">3-5 days via Excel roster</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400">About 4 weeks, guided; minimal manager time</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Manager control</td>
@@ -537,7 +537,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the manager-side 
 <div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Leaving NurseGrid? Built for the manager side NurseGrid doesn't cover.</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts. Setup takes 3-5 days from your Excel roster and a guided setup session.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts. Setup takes about four weeks from your Excel roster, through a guided setup session, to your first live schedule.</p>
   </div>
   <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
@@ -579,7 +579,7 @@ FLSA 8-and-80 overtime tracking is not documented on NurseGrid's product page. N
 
 **Does switching from NurseGrid to guided-setup software require IT support?**
 
-No. SimpleScheduleAI onboards from an Excel roster upload and a guided setup session in 3-5 days with no IT involvement. There is no integration to configure and no system credentials to manage. The guided setup session handles the full configuration from the roster file, which is why a CAH with no IT department can switch without internal technical resources.
+No. SimpleScheduleAI onboards from an Excel roster upload with no IT involvement. Setup takes about four weeks: collecting the roster, a guided setup session that maps unit rules with the manager, DON training, and test cycles before go-live. There is no integration to configure and no system credentials to manage. The guided setup session handles the full configuration from the roster file, which is why a CAH with no IT department can switch without internal technical resources.
 
 ---
 
