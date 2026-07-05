@@ -46,7 +46,7 @@ At a small rural hospital, one resignation is a coverage emergency because there
 
 That replacement cost is only the accounting side, and the operational side is worse. A large hospital redistributes the load across a deep pool and posts the opening. When a rural hospital loses a nurse, the remaining staff absorb the extra shifts immediately, raising overtime and fatigue for the exact people you most need to keep. Rural nurse supply is thin to begin with, roughly 65 registered nurses per 10,000 people versus about 99.5 in urban areas, per [RHIhub](https://www.ruralhealthinfo.org/topics/health-care-workforce), so a posting can sit open for months.
 
-Here is the illustrative math. Assume a roster of about 12 RNs. One departure at the $61,110 average replacement cost is roughly $5,090 per remaining nurse if you spread it across the people who stay, on top of the shifts they personally cover. This is an illustrative figure at the stated roster size and the NSI average, not a customer result; SimpleScheduleAI is pre-launch. On a roster this size, retention is what keeps the schedule standing, and the wider cost of chronic short-staffing is the subject of our [healthcare scheduling crisis](/blog/healthcare-scheduling-crisis) breakdown.
+On a 12-nurse roster, one departure lands twice. The budget absorbs the $61,110 replacement cost whole, and the remaining eleven absorb every shift the departed nurse used to cover for as long as the posting sits open. On a roster this size, retention is what keeps the schedule standing, and the wider cost of chronic short-staffing is the subject of our [healthcare scheduling crisis](/blog/healthcare-scheduling-crisis) breakdown.
 
 ## Why Can't a Rural Hospital Win on Pay and Perks?
 
