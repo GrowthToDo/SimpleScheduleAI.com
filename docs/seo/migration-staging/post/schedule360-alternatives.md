@@ -185,7 +185,7 @@ For a critical access hospital, scheduling requirements differ from what a broad
       <tr class="align-top">
         <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Texas Critical Access Hospitals</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New software; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
       </tr>
     </tbody>
@@ -198,11 +198,11 @@ The four strongest Schedule360 alternatives for a Critical Access Hospital are S
 
 ## 1. SimpleScheduleAI
 
-<img src="/images/blog/schedule360-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI managed nurse scheduling service for Texas Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/schedule360-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI guided-setup nurse scheduling software for Texas Critical Access Hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is guided-setup [nurse scheduling software](/nurse-scheduling-software), not a self-configured platform the hospital integrates alone, built specifically for Texas Critical Access Hospitals. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a guided setup session handles setup from an Excel roster upload (3 to 5 days), 21 automated rule checks validate each draft, and the software maintains the system as the roster and policies change. For the broader category framing, see our comparison of [guided-setup software vs. scheduling software](/blog/managed-service-vs-scheduling-software).
+SimpleScheduleAI is new software, without public G2 or Capterra reviews yet. It is guided-setup [nurse scheduling software](/nurse-scheduling-software), not a self-configured platform the hospital integrates alone, built specifically for Texas Critical Access Hospitals. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a guided setup session handles setup from an Excel roster upload (3 to 5 days), 21 automated rule checks validate each draft, and the software maintains the system as the roster and policies change. For the broader category framing, see our comparison of [guided-setup software vs. scheduling software](/blog/managed-service-vs-scheduling-software).
 
-Texas-specific compliance is built into the default service. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See [how it works](/how-it-works) for the weekly cadence. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
+Texas-specific compliance is built into the default configuration. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation are part of the standard software rather than configuration the nurse manager has to maintain. See [how it works](/how-it-works) for the weekly cadence. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
 **Best for:** Texas CAHs where the nurse manager is already stretched and cannot absorb another implementation project, or where the core issue is scheduling labor rather than just platform cost or platform design.
 
@@ -391,7 +391,7 @@ Schedule360 is worth keeping if:
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Not documented on product page; confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Automatic default; included in weekly service</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400">Automatic default; included weekly</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime threshold tracking</td>
@@ -487,6 +487,6 @@ Schedule360 does not publish pricing on its vendor page; SelectHub's aggregated 
 
 ---
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling software company built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

@@ -249,3 +249,25 @@ Only one H2 rename in this batch changed a TOC anchor:
 None requiring founder input. No new registry rows needed (all recurring constructions in
 this batch were already covered by tokens added in the 2026-07-04 dry-run). No vs-class
 retitle candidates in this batch.
+
+## Correction (2026-07-05): SSAI self-referential "service" residue swept
+
+The leftover sweep above checked prose capability-claim verbs but did not check the author
+bio, a non-prose surface repeated across every batch. All 7 posts in this batch carried the
+same bio sentence describing SimpleScheduleAI as "an AI-native nurse scheduling service."
+Fixed in this session, file/line/old->new (all seven are the identical bio substitution):
+
+| File | Line | Old | New |
+| --- | --- | --- | --- |
+| nurse-scheduling-no-it-department-rural-hospital.md | 163 | "...is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas." | "...an AI-native nurse scheduling software company built for Critical Access Hospitals in Texas." |
+| nurse-scheduling-software-pricing.md | 246 | Same | Same substitution |
+| nurse-scheduling-software-small-hospital.md | 242 | Same | Same substitution |
+| nurse-staffing-ratios-critical-access-hospital.md | 193 | Same | Same substitution |
+| nursegrid-alternatives.md | 586 | Same | Same substitution |
+| nursing-scheduling-software-ai.md | 210 | Same | Same substitution |
+| onshift-alternatives.md | 561 | Longer bio variant, same "service" phrase mid-sentence, continues "...He serves as Deputy General Manager..." | Same "software company" substitution, rest of sentence unchanged |
+
+Verified: `checkFacts` still 0 across all 7 files; residual grep for `is an AI-native nurse
+scheduling service` and the bio phrase returns 0 hits in this batch after the fix. See
+`docs/seo/positioning-registry.md` lesson 11: author bios and other non-prose surfaces need
+their own grep, not just the body-prose leftover sweep.

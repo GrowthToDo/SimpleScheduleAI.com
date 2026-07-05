@@ -125,7 +125,7 @@ The common options split into four groups: spreadsheets, consumer shift apps, ho
         <td class="py-3 pr-3 font-medium text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Texas CAHs with no IT and no dedicated scheduler</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Guided setup session; no IT, Excel roster in</td>
-        <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
+        <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">New software; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">$1,000 to $1,500/mo flat</td>
       </tr>
     </tbody>
@@ -148,7 +148,7 @@ The honest version: if you have a dedicated scheduler or protected admin time an
 
 ## How Does SimpleScheduleAI Fit a Critical Access Hospital?
 
-SimpleScheduleAI is an AI-native, human-verified nurse scheduling service built specifically for Texas Critical Access Hospitals. The nurse manager submits a roster in Excel, the AI builds three complete schedule drafts and 21 automated rule checks validate each one within 48 hours, she selects one, and the AI surfaces a ranked callout replacement list in under two minutes when a nurse calls out. CMS §485.635 documentation is maintained automatically. See [how the process works](/how-it-works).
+SimpleScheduleAI is AI-native nurse scheduling software with 21 automated rule checks, built specifically for Texas Critical Access Hospitals. The nurse manager submits a roster in Excel, the AI builds three complete schedule drafts and 21 automated rule checks validate each one within 48 hours, she selects one, and the AI surfaces a ranked callout replacement list in under two minutes when a nurse calls out. CMS §485.635 documentation is maintained automatically. See [how the process works](/how-it-works).
 
 It is not the right fit for every hospital, and the limitation matters. SimpleScheduleAI does not include a nurse-facing self-service mobile app for shift swaps or availability submission by default, and real-time direct schedule edits route through the software rather than happening instantly in a self-service interface. A hospital that requires nurse self-service or instant manager-side edits should evaluate self-serve platforms first.
 

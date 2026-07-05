@@ -195,3 +195,44 @@ Facts/regulatory content: byte-identical (Smart Square/symplr KLAS and Capterra 
 2. **Post 3's NSI stat**: cites "2024 NSI... Retention Report" at $56,300, which is neither the facts-dossier's 2025-report figure ($61,110) nor its 2026-edition figure ($60,090). Not a positioning issue and out of scope for this batch's mandate, but flagged for a facts-accuracy pass.
 3. **Anchor slug change on Post 4**: the renamed H2 (`#is-self-serve-software-or-a-managed-service-right-for-your-hospital` -> `#is-self-serve-software-or-guided-setup-software-right-for-your-hospital`) had no inbound fragment references found in a corpus-wide grep this session, but that check was limited to `src/data/post` and `src/data/article`; it does not cover any external backlinks or bookmarked URLs pointing at the old fragment.
 4. **`managed-service-vs-scheduling-software` staged-but-not-live status**: see Dependency Map note — if the staged retitle (`guided-setup-vs-self-configured-nurse-scheduling-software.md`) ships with a new slug, all 6 href instances logged in this batch will need a follow-up URL-update pass in addition to the anchor-text work already done here.
+
+## Correction (2026-07-05): SSAI self-referential "service" residue swept
+
+The original batch left the product's own self-description as "service" in several
+non-prose surfaces that this batch's leftover sweep did not check (image alt text, rating
+table cells, author bios) plus a few body sentences that had been converted to "guided-setup
+software" everywhere except the noun itself. Fixed in this session, file/line/old->new:
+
+| File | Line | Old | New |
+| --- | --- | --- | --- |
+| best-scheduling-software-25-bed-hospital.md | 183 | "SimpleScheduleAI is an AI-native nurse scheduling service designed from the start for..." | "...an AI-native nurse scheduling software designed from the start for..." |
+| best-scheduling-software-25-bed-hospital.md | 203 | "**Ratings:** New service; no public G2 or Capterra reviews yet." | "**Ratings:** New software; no public G2 or Capterra reviews yet." |
+| best-scheduling-software-25-bed-hospital.md | 494 | "SimpleScheduleAI is an AI-native nurse scheduling service: the manager submits..." | "SimpleScheduleAI is AI-native nurse scheduling software: the manager submits..." |
+| best-scheduling-software-25-bed-hospital.md | 510 | "...SimpleScheduleAI is an AI-native nurse scheduling service. Aladtec, NurseGrid..." | "...SimpleScheduleAI is guided-setup software: the AI builds the drafts, not a human team behind a managed service. Aladtec, NurseGrid..." (FAQ question kept as-is: the category contrast between software and a managed service is legitimate; only the answer's SSAI self-placement was rewritten to the software side) |
+| best-scheduling-software-25-bed-hospital.md | 514 | Author bio: "...an AI-native nurse scheduling service built for Critical Access Hospitals in Texas." | "...an AI-native nurse scheduling software company built for Critical Access Hospitals in Texas." |
+| cms-pbj-reporting-scheduling-software.md | 155 | "The rest of the filing is not part of the service: SimpleScheduleAI does not produce a PBJ file..." | "...not part of the software: SimpleScheduleAI does not produce a PBJ file..." |
+| cms-pbj-reporting-scheduling-software.md | 220 | Author bio, same "service" phrase | Same "software company" substitution |
+| healthcare-workforce-management-cah.md | 163 | "A CAH-specific scheduling service is usually priced as a flat monthly fee..." | "CAH-specific scheduling software is usually priced as a flat monthly fee..." |
+| healthcare-workforce-management-cah.md | 220 | "SimpleScheduleAI is an AI-native nurse scheduling service for [nurse scheduling at critical access hospitals]..." | "SimpleScheduleAI is AI-native nurse scheduling software for [nurse scheduling at critical access hospitals]..." |
+| healthcare-workforce-management-cah.md | 222 | "The service is built specifically for Texas critical access hospitals..." | "The software is built specifically for Texas critical access hospitals..." |
+| healthcare-workforce-management-cah.md | 273 | Author bio, same "service" phrase | Same "software company" substitution |
+| hospital-staff-scheduling-software-critical-access.md | 128 | "New service; no public reviews yet" (table cell) | "New software; no public reviews yet" |
+| hospital-staff-scheduling-software-critical-access.md | 151 | "SimpleScheduleAI is an AI-native, human-verified nurse scheduling service built specifically for Texas Critical Access Hospitals." | "SimpleScheduleAI is AI-native nurse scheduling software with 21 automated rule checks, built specifically for Texas Critical Access Hospitals." (dropped "human-verified," which was service-model residue) |
+| schedule360-alternatives.md | 188 | "New service; no public reviews yet" (table cell) | "New software; no public reviews yet" |
+| schedule360-alternatives.md | 201 | Image alt: "SimpleScheduleAI managed nurse scheduling service for Texas Critical Access Hospitals" | "SimpleScheduleAI guided-setup nurse scheduling software for Texas Critical Access Hospitals" |
+| schedule360-alternatives.md | 203 | "SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet." | "SimpleScheduleAI is new software, without public G2 or Capterra reviews yet." |
+| schedule360-alternatives.md | 205 | "...built into the default service... part of the standard service rather than configuration..." | "...built into the default configuration... part of the standard software rather than configuration..." |
+| schedule360-alternatives.md | 394 | "Automatic default; included in weekly service" (table cell) | "Automatic default; included weekly" |
+| schedule360-alternatives.md | 490 | Author bio, same "service" phrase | Same "software company" substitution |
+| smart-square-alternatives-small-rural-hospitals.md | 120, 187 | "New service; no public reviews yet" / "**Ratings:** New service..." (table cell + prose, both instances) | "New software; no public reviews yet" (both) |
+| smart-square-alternatives-small-rural-hospitals.md | 163 | Image alt: "SimpleScheduleAI managed nurse scheduling service for critical access hospitals" | "SimpleScheduleAI guided-setup nurse scheduling software for critical access hospitals" |
+| smart-square-alternatives-small-rural-hospitals.md | 165 | "SimpleScheduleAI is a new service, without public Capterra or G2 reviews yet." | "SimpleScheduleAI is new software, without public Capterra or G2 reviews yet." |
+| smart-square-alternatives-small-rural-hospitals.md | 433 | "SimpleScheduleAI is an AI-native nurse scheduling service sized to a single Critical Access Hospital..." | "SimpleScheduleAI is AI-native nurse scheduling software sized to a single Critical Access Hospital..." |
+| smart-square-alternatives-small-rural-hospitals.md | 525 | "SimpleScheduleAI is an AI-native nurse scheduling service for one 25-bed Critical Access Hospital." | "SimpleScheduleAI is AI-native nurse scheduling software for one 25-bed Critical Access Hospital." |
+| smart-square-alternatives-small-rural-hospitals.md | 563 | "SimpleScheduleAI is an AI-native nurse scheduling service sized to a single 25-bed Critical Access Hospital..." | "SimpleScheduleAI is AI-native nurse scheduling software sized to a single 25-bed Critical Access Hospital..." |
+
+Verified: `checkFacts` still 0 hard failures on all 6 posts; `check-blog` hard-fail count
+unchanged at 0 for this batch's posts after the fix; the alt-text and "new/weekly/default/
+standard service" residual greps now return only legitimate hits (Aladtec's own "emergency
+services" industry description in unrelated posts). See `docs/seo/positioning-registry.md`
+lesson 11 for the standing rule this correction produced.

@@ -134,6 +134,12 @@ Measured: token hits 18, judgment calls 56, premise-collapse locations 18 across
 8. **Ledger reconciles to the FULL diff, including cosmetic/CSS hunks.** Round 2 leaked one unlogged class-attribute change; completeness claims require hunk-level reconciliation, not positioning-lines-only.
 9. **Link-graph check before migration day:** any internal link whose ANCHOR TEXT carries positioning ("managed scheduling service") must migrate its anchor AND have its target slug's migration status checked in the same pass; two rounds hit anchor-vs-target drift on /blog/managed-service-vs-scheduling-software. Build the slug dependency map before the corpus pass.
 10. **"we [verb]" sweep is migration-day-only.** First-person capability claims (we build/track/flag/alert/document/check) are legitimate service-mode copy today; add the verb list to the migration leftover sweep, NOT to live check-blog WARNs.
+11. **Non-prose positioning surfaces are first-class conversion targets.** Image alt text, rating/comparison table cells, and author bios carry the same "SimpleScheduleAI is a service" self-label as body prose, but every leftover sweep to date (H2, S3, and others) scoped its greps to prose capability-claim verbs and missed these surfaces entirely. The residue survived 6 batches uncaught: `alt="SimpleScheduleAI managed nurse scheduling service..."`, `New service; no public reviews yet` table cells, and the standing bio sentence "...an AI-native nurse scheduling service built for Critical Access Hospitals in Texas." across most staged files. Two greps are now a MANDATORY ship gate on every batch, run in addition to the leftover sweep, before a batch's gates can be marked clean:
+    ```
+    grep -niE 'alt="[^"]*(managed|service)' docs/seo/migration-staging/post/*.md
+    grep -niE 'new service|weekly service|default service|standard service|is an AI-native nurse scheduling service' docs/seo/migration-staging/post/*.md
+    ```
+    Any hit that is not a legitimate category/competitor reference (e.g. a competitor's own "emergency services" industry description, or the category contrast "software vs. a managed service") is residue and must be fixed before the batch ships.
 
 Dry-run artifacts: docs/seo/migration-dryrun/ (3 converted posts + DECISIONS.md; NOT for publication).
 
@@ -143,3 +149,4 @@ Dry-run artifacts: docs/seo/migration-dryrun/ (3 converted posts + DECISIONS.md;
 | ---------- | --------------------------------------------------- | ------ |
 | 2026-07-04 | Initial registry: 18 rows, authoring rules, runbook | Claude |
 | 2026-07-04 | Built `positioning-rules.mjs` + check-blog WARN wiring (authoring-rule enforcement, not the Pass-1 migration script) | Claude |
+| 2026-07-05 | Swept SSAI self-referential "service" residue from non-prose surfaces (alt text, table cells, author bios) across 13 staged files in batches H2 and S3; added runbook lesson 11 and the two mandatory ship-gate greps | Claude |

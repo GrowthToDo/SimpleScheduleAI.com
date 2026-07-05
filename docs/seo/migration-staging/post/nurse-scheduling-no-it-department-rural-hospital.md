@@ -160,5 +160,5 @@ For SimpleScheduleAI specifically, go-live is 3 to 5 days from Excel roster uplo
 
 There is no single best tool, because the phrase hides the real variable: who configures and runs it after go-live. For a small hospital with no IT staff, self-configured software such as EasyShifts or ScheduleAnywhere still needs the nurse manager to set it up and maintain it, while guided-setup software moves the recurring build off her desk after a one-time setup session. Match the model to who actually has time to run it.
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling software company built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
