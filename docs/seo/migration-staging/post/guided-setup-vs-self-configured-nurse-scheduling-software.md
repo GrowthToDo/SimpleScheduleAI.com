@@ -268,7 +268,7 @@ Self-configured scheduling software fits when the hospital has a dedicated sched
 - Your primary pain point is callout coverage and overtime, not just schedule building
 - You are a Texas critical access hospital with 25 beds or fewer
 
-Before you decide, run the comparison in the [SimpleScheduleAI ROI calculator](/roi). The output is the side-by-side dollar value of software-license cost plus operating labor versus a guided-setup facility license, calculated at your facility's actual numbers.
+Before you decide, run the comparison in the [SimpleScheduleAI ROI calculator](/roi). The output is the side-by-side dollar value of software-license cost plus operating labor versus SimpleScheduleAI's per-user pricing, calculated at your facility's actual numbers.
 
 ## When Is Self-Configured Software the Right Choice?
 

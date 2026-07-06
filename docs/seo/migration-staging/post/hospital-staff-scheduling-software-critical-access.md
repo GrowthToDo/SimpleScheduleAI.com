@@ -126,7 +126,7 @@ The common options split into four groups: spreadsheets, consumer shift apps, ho
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Texas CAHs with no IT and no dedicated scheduler</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Guided setup session; no IT, Excel roster in</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">New software; no public reviews yet</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">$1,000 to $1,500/mo flat</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">$10/user/month</td>
       </tr>
     </tbody>
   </table>

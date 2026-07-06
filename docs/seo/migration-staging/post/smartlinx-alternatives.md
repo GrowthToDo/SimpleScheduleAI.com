@@ -459,7 +459,7 @@ No. Aladtec is a leaner scheduling tool. What it lacks compared to SmartLinx: in
 
 **What does SmartLinx cost compared to its alternatives?**
 
-SmartLinx does not publish pricing and requires a quote. Industry comparisons suggest pricing in the $300-600+ per month range for small hospital rosters, exclusive of implementation costs. Aladtec is $200-450 per month with a faster and less expensive implementation. Deputy is $4.50 per user per month with minimal implementation cost. QGenda is $500+ per month. SimpleScheduleAI pricing is not listed publicly and requires contact.
+SmartLinx does not publish pricing and requires a quote. Industry comparisons suggest pricing in the $300-600+ per month range for small hospital rosters, exclusive of implementation costs. Aladtec is $200-450 per month with a faster and less expensive implementation. Deputy is $4.50 per user per month with minimal implementation cost. QGenda is $500+ per month. SimpleScheduleAI publishes its pricing: $10 per user per month, or $100 per user per year, with no setup fees.
 
 **Is SmartLinx HIPAA compliant?**
 

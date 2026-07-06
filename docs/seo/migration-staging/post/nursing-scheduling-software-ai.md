@@ -153,7 +153,7 @@ When a nurse calls out, the AI ranking system produces a replacement list within
 
 One honest limitation: the AI optimization improves over time as the system accumulates data about your facility's patterns, preferences, and exceptions. The first few scheduling cycles involve more human calibration than later cycles. We say this upfront rather than after you have signed on.
 
-Pricing is flat by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. See [how it works](/how-it-works) for the full build-and-approve flow.
+Pricing is $10 per user per month, or $100 per user per year. Every nurse and manager on the roster is a user. No setup fees. See [how it works](/how-it-works) for the full build-and-approve flow.
 
 This is not the right fit for every hospital. If your CAH already has a scheduling coordinator with software that works, or you are over 50 beds or outside Texas, an enterprise platform is the better path. We will tell you that on the first call rather than after a pilot.
 
@@ -174,7 +174,7 @@ This is not the right fit for every hospital. If your CAH already has a scheduli
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">AI builds three draft schedules. Your nurse manager picks the best one. Flat monthly pricing, no installation, no IT department required.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">AI builds three draft schedules. Your nurse manager picks the best one. $10 per user per month, or $100 per user per year. No installation, no IT department required.</p>
   <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

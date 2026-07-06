@@ -186,7 +186,7 @@ The software implements the hospital's rules, maintains them as staff changes oc
 
 **Verdict:** The strongest alternative for a CAH nurse manager who leaves Aladtec primarily because the configuration and compliance burden has exceeded what one person can manage while also taking clinical shifts. SimpleScheduleAI eliminates those specific pain points by design. See the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator), or [see how it works](/how-it-works) for CAHs that want to test before committing.
 
-**Cost:** Flat facility license by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.
+**Cost:** $10 per user per month, or $100 per user per year. Every nurse and manager on the roster is a user. No setup fees.
 
 ## 2. [TCP Scheduling](https://www.tcpsoftware.com)
 
@@ -452,7 +452,7 @@ The core difference is the operating model. Aladtec is a self-serve platform whe
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Pricing model</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">$200-450/month, per roster</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Flat facility license by roster size</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400">Per-user: $10/user/month or $100/user/year</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Manager control</td>
@@ -527,7 +527,7 @@ Yes. TCP Software owns both Aladtec and TCP Scheduling. For hospitals that want 
 
 **What does Aladtec cost compared to its alternatives?**
 
-Aladtec costs approximately $200-450 per month for a typical small hospital roster. Deputy is significantly cheaper at $4.50 per user per month (roughly $90-110/month for a 20-25 nurse roster). [NurseGrid](/blog/nursegrid-alternatives) Manager runs $150-300/month. SmartLinx and [QGenda](/blog/qgenda-alternatives) are both higher cost than Aladtec and require quotes. SimpleScheduleAI is $1,000 to $1,500 a month per facility license, by roster size. No per-nurse fees, no setup fees.
+Aladtec costs approximately $200-450 per month for a typical small hospital roster. Deputy is significantly cheaper at $4.50 per user per month (roughly $90-110/month for a 20-25 nurse roster). [NurseGrid](/blog/nursegrid-alternatives) Manager runs $150-300/month. SmartLinx and [QGenda](/blog/qgenda-alternatives) are both higher cost than Aladtec and require quotes. SimpleScheduleAI is $10 per user per month, or $100 per user per year. No setup fees.
 
 **Is Aladtec HIPAA compliant?**
 

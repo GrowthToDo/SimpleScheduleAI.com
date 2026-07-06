@@ -175,7 +175,7 @@ The clearest way to see the gap is across the operating model, not feature check
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-800 dark:text-slate-200">Pricing</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Not listed on the product page; contact vendor</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">$1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">$10 per user per month, or $100 per user per year. No setup fees.</td>
       </tr>
     </tbody>
   </table>
@@ -230,7 +230,7 @@ Write the answers down before any demo. A demo shows what the software can do. T
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No installation, no integration project, no IT department required. Our AI builds the schedule, 21 automated rule checks validate every draft, you approve it.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">$10 per user per month, or $100 per user per year. No setup fees. No installation, no integration project, no IT department required. Our AI builds the schedule, 21 automated rule checks validate every draft, you approve it.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>

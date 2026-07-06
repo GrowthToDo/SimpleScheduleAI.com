@@ -81,7 +81,7 @@ The market in 2026 splits cleanly into three tiers: enterprise platforms for lar
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">New software; no public reviews yet</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">About 4 weeks, guided; minimal manager time</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">$1,000-1,500 flat</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">$10/user/month</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Aladtec by [TCP](/blog/best-tcp-alternative-for-cah)</td>
@@ -231,7 +231,7 @@ SimpleScheduleAI is new software, without public G2 or Capterra reviews yet. It 
 
 **Verdict:** The right choice for a small hospital where the nurse manager cannot realistically own a scheduling system on top of clinical duties. If you want to configure and build schedules yourself or have more than 50 beds, look at Aladtec or SmartLinx instead. [See how SimpleScheduleAI works](/how-it-works).
 
-**Cost:** Flat facility license by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.
+**Cost:** $10 per user per month, or $100 per user per year. Every nurse and manager on the roster is a user. No setup fees.
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
@@ -573,7 +573,7 @@ It is not the right fit for every hospital. If your facility has 75+ beds, a ded
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No installation, no IT project. The AI builds the schedule, 21 automated rule checks validate every draft, you approve it.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">$10 per user per month, or $100 per user per year. No setup fees. No installation, no IT project. The AI builds the schedule, 21 automated rule checks validate every draft, you approve it.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
@@ -616,7 +616,7 @@ Typically 6-18 months for a full deployment, including configuration, training, 
 
 **Q: What is the cheapest nurse scheduling software for a 25-bed hospital?**
 
-Deputy is the lowest-cost option at roughly $4-6 per employee per month, but it lacks the compliance features hospitals need. Aladtec runs $200-450 per month and covers most compliance requirements for small hospitals. NurseGrid Manager has a low-cost tier but is a shift coordination layer, not a full scheduling engine. If you are weighing the no-cost route first, our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) covers where the truly free tools stop. SimpleScheduleAI uses a flat monthly facility license by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses, with no per-nurse fees and no setup fees.
+Deputy is the lowest-cost option at roughly $4-6 per employee per month, but it lacks the compliance features hospitals need. Aladtec runs $200-450 per month and covers most compliance requirements for small hospitals. NurseGrid Manager has a low-cost tier but is a shift coordination layer, not a full scheduling engine. If you are weighing the no-cost route first, our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) covers where the truly free tools stop. SimpleScheduleAI is $10 per user per month, or $100 per user per year, with no setup fees.
 
 **Q: What is the difference between self-serve scheduling software and guided-setup scheduling software?**
 

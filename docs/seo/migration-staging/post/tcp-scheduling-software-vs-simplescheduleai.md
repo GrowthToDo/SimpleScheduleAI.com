@@ -252,7 +252,7 @@ The decision comes down to what the hospital is trying to solve. TCP TimeClock+ 
 - Callout coverage is a recurring problem that manual constraint checking has not solved
 - You need to be operational in days, not weeks
 
-To model the cost comparison at your facility's actual numbers, run the [SimpleScheduleAI ROI calculator](/roi). It outputs annual labor cost recovered against SimpleScheduleAI's flat facility license fee, calculated at your nurse manager's loaded rate.
+To model the cost comparison at your facility's actual numbers, run the [SimpleScheduleAI ROI calculator](/roi). It outputs annual labor cost recovered against SimpleScheduleAI's per-user pricing, calculated at your nurse manager's loaded rate.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>

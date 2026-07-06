@@ -305,7 +305,7 @@ SimpleScheduleAI is AI-native nurse scheduling software, not a self-serve platfo
 
 **Verdict:** Right choice if scheduling labor is the primary burden. Wrong choice if nurses using an app to view schedules or submit availability is a priority. Watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator), or [see how the guided-setup software works](/how-it-works).
 
-**Cost:** Flat facility license by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.
+**Cost:** $10 per user per month, or $100 per user per year. Every nurse and manager on the roster is a user. No setup fees.
 
 ## What Are the Four Questions to Ask Any TCP Alternative?
 
@@ -364,7 +364,7 @@ Four questions separate the platforms that will actually improve a CAH nurse man
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Switching off TCP at CAH scale</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI delivers the scheduling outputs TCP buyers needed without the ongoing configuration burden. Flat monthly pricing. No IT integration. No commitment.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI delivers the scheduling outputs TCP buyers needed without the ongoing configuration burden. $10 per user per month, or $100 per user per year. No IT integration. No commitment.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>

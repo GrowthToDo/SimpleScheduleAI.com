@@ -162,7 +162,7 @@ The software is a new offering, without public G2 or Capterra reviews yet. CMS [
 - CMS §485.635 documentation is automatic, not a manual export before each survey
 - Callout shortlist is ranked by overtime risk without manual calculation from the manager
 - Excel-based roster upload plus a guided setup session means no IT involvement during transition
-- Flat monthly pricing with no setup fees; the AI builds the schedule, 21 automated rule checks validate every draft, you approve it
+- $10 per user per month, or $100 per user per year, no setup fees; the AI builds the schedule, 21 automated rule checks validate every draft, you approve it
 
 **Key limitations:**
 
@@ -425,7 +425,7 @@ If you are currently evaluating hospital scheduling options for your CAH, these 
 
 4. **Build a full cost comparison, not just licensing.** Add setup fees, configuration services, and estimated internal staff time for onboarding to the annual licensing cost. Compare that aggregate figure across every option you are considering, including guided-setup software.
 
-5. **If the guided-setup operating model fits your constraints, see how it works.** SimpleScheduleAI runs on flat monthly pricing with no setup fees; the AI builds the schedule, 21 automated rule checks validate every draft, and you approve it. [See how it works →](/how-it-works)
+5. **If the guided-setup operating model fits your constraints, see how it works.** SimpleScheduleAI runs on per-user pricing, $10 per user per month or $100 per user per year, with no setup fees; the AI builds the schedule, 21 automated rule checks validate every draft, and you approve it. [See how it works →](/how-it-works)
 
 ## Sources
 

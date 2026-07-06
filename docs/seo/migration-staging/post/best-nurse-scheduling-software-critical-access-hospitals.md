@@ -86,7 +86,7 @@ Here is how all 10 tools compare on CAH fit before we go deeper. This guide cove
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Texas Critical Access Hospitals; guided-setup nurse scheduling software</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">New software; no public reviews yet</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">About 4 weeks, guided; minimal manager time</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">$1,000 to $1,500/mo flat</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">$10/user/month</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
@@ -177,7 +177,7 @@ SimpleScheduleAI is AI-native nurse scheduling software: the AI builds your sche
 
 **Verdict:** The right choice for a CAH where the dual-role nurse manager cannot realistically run a scheduling system alongside clinical work. If you want to configure and run a scheduling platform yourself, or you are a larger multi-site system, look at Aladtec or one of the enterprise systems below instead.
 
-**Cost:** Flat facility license by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.
+**Cost:** $10 per user per month, or $100 per user per year. Every nurse and manager on the roster is a user. No setup fees.
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
@@ -568,7 +568,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for large multi-hos
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No installation, no IT project. The AI builds the schedule, 21 automated rule checks validate every draft, you approve it.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">$10 per user per month, or $100 per user per year. No setup fees. No installation, no IT project. The AI builds the schedule, 21 automated rule checks validate every draft, you approve it.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="text-sm text-slate-500 dark:text-slate-400 mt-4 mb-0"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>

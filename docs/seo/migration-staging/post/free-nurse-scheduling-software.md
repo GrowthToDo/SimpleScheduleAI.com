@@ -174,7 +174,7 @@ A CAH can use a free tool for the schedule-building step, but free tools do not 
 
 **Q: How much does paid nurse scheduling software cost for a small hospital?**
 
-Pricing varies by model, and our [nurse scheduling software pricing](/blog/nurse-scheduling-software-pricing) guide breaks down per-seat, enterprise, and flat-fee structures side by side. Per-seat tools like NurseGrid Manager charge a monthly fee for each team member; check the vendor's product page for the current rate. SimpleScheduleAI uses a flat facility license instead: $1,000 per month for up to 20 nurses and $1,500 per month for 21 to 40, with no per-seat math. Confirm current pricing on the pricing page before budgeting.
+Pricing varies by model, and our [nurse scheduling software pricing](/blog/nurse-scheduling-software-pricing) guide breaks down per-seat, enterprise, and flat-fee structures side by side. Per-seat tools like NurseGrid Manager charge a monthly fee for each team member; check the vendor's product page for the current rate. SimpleScheduleAI is $10 per user per month, or $100 per user per year, with no setup fees. Confirm current pricing on the pricing page before budgeting.
 
 **Q: What is the hidden cost of free nurse scheduling tools?**
 

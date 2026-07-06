@@ -32,7 +32,7 @@ This guide breaks down how these platforms are actually priced, what a 25-bed CA
 - Per-nurse-per-month pricing (typically $2-$8) looks cheap at the unit level: 25 nurses at $5/nurse/month is $125/month or $1,500/year for the license alone. The real cost hides in per-module add-ons and implementation fees, which can push the effective first-year total well past $8,000.
 - Implementation costs are frequently larger than the first year of licensing, especially for platforms that require EHR integration, data migration, or on-site training.
 - The right question is not "how much does the software cost?" but "how much does the total cost to get value compare to the overtime savings?" A tool that costs $15,000/year but saves $30,000 in overtime is worth evaluating. A tool that costs $8,000/year but requires a $20,000 IT implementation is not.
-- SimpleScheduleAI uses a flat facility license ($1,000-$1,500/month by roster size) with no per-nurse fees and no setup fee, so a CAH knows its full annual cost up front instead of negotiating an opaque enterprise quote.
+- SimpleScheduleAI is priced per user, $10 per user per month or $100 per user per year, with no setup fee, so a CAH knows its full annual cost up front instead of negotiating an opaque enterprise quote.
 
 ## Table of Contents
 
@@ -54,7 +54,7 @@ This guide breaks down how these platforms are actually priced, what a 25-bed CA
 
 **Per-module pricing:** Enterprise platforms frequently charge separately for scheduling, time and attendance, overtime tracking, analytics, and mobile access. The base scheduling module may appear cheap, but the functionality a CAH actually needs across multiple modules often brings the real cost to $12-$20/nurse/month.
 
-**Flat facility license:** A flat facility license (like SimpleScheduleAI's) includes scheduling software where the AI builds the schedule and 21 automated rule checks validate every draft, plus a guided setup session, schedule review, and callout management. This pricing model is typically higher per unit than pure SaaS but lower in total cost of ownership because setup and ongoing support are included.
+**Per-user pricing with setup included:** Some platforms (like SimpleScheduleAI's, at $10 per user per month or $100 per user per year) charge per user but bundle in scheduling software where the AI builds the schedule and 21 automated rule checks validate every draft, plus a guided setup session, schedule review, and callout management. This pricing model looks similar to PNPM at the unit level but is lower in total cost of ownership because setup and ongoing support are included rather than billed separately.
 
 <figure class="not-prose my-8">
   <figcaption class="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3 text-center">Nurse Scheduling Software Pricing Models: What They Look Like at 25 Nurses</figcaption>
@@ -100,7 +100,7 @@ The realistic total first-year cost including implementation:
 - **Entry-level tools (Deputy, When I Work):** $600-$2,500 total first year. These are general employee scheduling tools, not healthcare-specific. They do not handle nursing certifications, patient-to-nurse ratios, or Texas overtime compliance natively.
 - **Mid-tier healthcare scheduling platforms (Aladtec, OnShift):** $5,000-$15,000 total first year. Healthcare-specific but built for larger organizations, with more configuration depth than a single dual-role CAH manager typically needs.
 - **Enterprise platforms (UKG, Infor, Kronos):** $20,000-$75,000+ total first year. Designed for 200+ bed hospitals with dedicated HR and IT teams. Not appropriate for CAHs without that infrastructure.
-- **SimpleScheduleAI (flat facility license):** Flat $1,000-$1,500/month by roster size. No per-nurse fees, no implementation fee; setup is included in the license.
+- **SimpleScheduleAI:** $10 per user per month, or $100 per user per year. No implementation fee; setup is included.
 
 The cheapest option by list price is almost never the cheapest option by total cost of ownership. General scheduling tools require significant configuration time (often 40-80 hours of manager time), ongoing manual compliance checking, and lack callout automation that saves the actual hours. That configuration time has a real cost even if it is not invoiced.
 
@@ -174,7 +174,7 @@ The baseline for your CAH: look at your last 6 months of payroll data and calcul
 
 SimpleScheduleAI is AI-native nurse scheduling software for critical access hospitals in Texas. It includes full [AI nurse scheduling](/ai-nurse-scheduling) that builds the schedule for you, callout coverage shortlists, and Texas compliance tracking for your specific shift rules and nurse roster. No implementation fee. No installation or IT integration required. Setup takes 3-5 business days via Excel roster upload and a guided setup session. See [how it works](/how-it-works) for the full build-and-approve flow. Watch the AI build a compliant schedule and track overtime live in the [interactive simulator](/simulator).
 
-Pricing is a flat facility license by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. That structure means a CAH knows its full annual cost on day one, with no implementation invoice waiting on the other side.
+Pricing is per user: $10 per user per month, or $100 per user per year. Every nurse and manager on the roster is a user. No setup fees. That structure means a CAH knows its full annual cost on day one, with no implementation invoice waiting on the other side.
 
 SimpleScheduleAI is not appropriate for large health systems, multi-site organizations, or hospitals requiring EHR integration. For [CAHs with 25 beds or fewer](/critical-access-hospital-scheduling) and no IT department, it is purpose-built nurse scheduling software for Texas.
 
@@ -193,14 +193,14 @@ For hospitals evaluating alternatives, the [nurse scheduling software comparison
 2. For every vendor on your shortlist, ask one direct question before the demo: what is the all-in first-year cost including implementation, training, and integration? Do not accept a per-nurse number alone.
 3. Ask each vendor for the contract exit terms in writing, specifically auto-renewal clauses and early-termination penalties, before you sit through a pitch.
 4. Rule out any platform that assumes an IT department or HR team to run it. For a CAH with no IT and a dual-role manager, that is a cost you cannot staff regardless of the license price.
-5. If the build-and-callout burden is the real drain, [book a call with SimpleScheduleAI](https://cal.com/gautham-8bdvdx/30min) and compare a flat $1,000-$1,500/month facility license against your actual overtime spend before signing anything.
+5. If the build-and-callout burden is the real drain, [book a call with SimpleScheduleAI](https://cal.com/gautham-8bdvdx/30min) and compare $10-per-user-per-month pricing against your actual overtime spend before signing anything.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
-    Flat monthly pricing. No per-nurse fees. No installation, no integration project, no IT department required. The AI builds the schedule, 21 automated rule checks validate every draft, you approve it.
+    $10 per user per month, or $100 per user per year. No setup fees. No installation, no integration project, no IT department required. The AI builds the schedule, 21 automated rule checks validate every draft, you approve it.
   </p>
   <a
     href="https://cal.com/gautham-8bdvdx/30min"
@@ -219,7 +219,7 @@ Nurse scheduling software costs $2-$8 per nurse per month for SaaS platforms, tr
 
 **Q: Is there free nurse scheduling software for hospitals?**
 
-No scheduling software designed specifically for hospital nursing is fully free for ongoing use. General tools like Google Sheets or Excel templates are free but require manual compliance tracking and do not automate callout coverage. Our breakdown of [free nurse scheduling software](/blog/free-nurse-scheduling-software) shows which gaps the no-cost options leave on the nurse manager's desk. SimpleScheduleAI is paid AI-native nurse scheduling software, not free software, but its flat facility-license pricing ($1,000-$1,500/month by roster size) includes setup and ongoing support with no per-nurse fees.
+No scheduling software designed specifically for hospital nursing is fully free for ongoing use. General tools like Google Sheets or Excel templates are free but require manual compliance tracking and do not automate callout coverage. Our breakdown of [free nurse scheduling software](/blog/free-nurse-scheduling-software) shows which gaps the no-cost options leave on the nurse manager's desk. SimpleScheduleAI is paid AI-native nurse scheduling software, not free software, but its per-user pricing ($10 per user per month, or $100 per user per year) includes setup and ongoing support.
 
 **Q: How much does UKG cost for a small hospital?**
 
@@ -227,7 +227,7 @@ UKG (formerly Kronos) enterprise workforce management typically starts at $50,00
 
 **Q: What is the cheapest nurse scheduling software for a 25-bed hospital?**
 
-By monthly cost, entry-level general tools like Deputy or When I Work start below $100/month. However, these are not healthcare-specific: they require manual nursing certification tracking, do not handle Texas FLSA overtime rules, and lack callout coverage automation. Healthcare-specific platforms with the compliance features a CAH needs start at $1,500-$3,000/year for software alone. SimpleScheduleAI is AI-native nurse scheduling software at a flat facility license of $1,000-$1,500/month that includes setup and support, not a free tool.
+By monthly cost, entry-level general tools like Deputy or When I Work start below $100/month. However, these are not healthcare-specific: they require manual nursing certification tracking, do not handle Texas FLSA overtime rules, and lack callout coverage automation. Healthcare-specific platforms with the compliance features a CAH needs start at $1,500-$3,000/year for software alone. SimpleScheduleAI is AI-native nurse scheduling software at $10 per user per month, or $100 per user per year, that includes setup and support, not a free tool.
 
 **Q: Do nurse scheduling software vendors negotiate pricing?**
 

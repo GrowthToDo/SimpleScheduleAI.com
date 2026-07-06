@@ -115,7 +115,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Pricing</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Contact for pricing</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">$1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">$10 per user per month, or $100 per user per year. No setup fees.</td>
       </tr>
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Ratings (May 2026)</td>
@@ -271,7 +271,7 @@ SimpleScheduleAI handles configuration maintenance automatically after the guide
 
 ## How Do the Cost Structures of the Two Models Compare?
 
-Aladtec's pricing is not publicly listed; contact the vendor for a quote. SimpleScheduleAI is a flat monthly facility license: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses, with no per-nurse fees and no setup fees. The more useful comparison for a Critical Access Hospital is total cost of ownership: license fee plus implementation labor plus ongoing scheduling and maintenance labor, calculated at the nurse manager's hourly rate over twelve months.
+Aladtec's pricing is not publicly listed; contact the vendor for a quote. SimpleScheduleAI is $10 per user per month, or $100 per user per year, with no setup fees. The more useful comparison for a Critical Access Hospital is total cost of ownership: license fee plus implementation labor plus ongoing scheduling and maintenance labor, calculated at the nurse manager's hourly rate over twelve months.
 
 The cost comparison for a CAH should account for more than the monthly subscription. Total cost of ownership includes:
 
@@ -429,9 +429,9 @@ The decision between Aladtec and SimpleScheduleAI becomes clear once you have tw
 
 2. **Ask SimpleScheduleAI for a CAH scheduling audit.** The audit covers your current OT patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [see how it works](/how-it-works).
 
-3. **Calculate your estimated labor cost for scheduling.** Multiply your hourly rate (or the hourly rate of whoever manages scheduling) by the weekly hours spent. Multiply by 50 weeks. Compare that number against the annual cost of SimpleScheduleAI's flat facility license. For most CAH nurse managers, the break-even is well inside year one. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison automatically.
+3. **Calculate your estimated labor cost for scheduling.** Multiply your hourly rate (or the hourly rate of whoever manages scheduling) by the weekly hours spent. Multiply by 50 weeks. Compare that number against the annual cost of SimpleScheduleAI's per-user pricing. For most CAH nurse managers, the break-even is well inside year one. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison automatically.
 
-4. **Request a pricing comparison from Aladtec and SimpleScheduleAI.** Aladtec does not publish pricing publicly; SimpleScheduleAI's flat facility license is $1,000 to $1,500 a month by roster size, no per-nurse fees. Get a quote from Aladtec and compare total cost (license fee plus estimated labor), not just subscription price.
+4. **Request a pricing comparison from Aladtec and SimpleScheduleAI.** Aladtec does not publish pricing publicly; SimpleScheduleAI is $10 per user per month, or $100 per user per year. Get a quote from Aladtec and compare total cost (license fee plus estimated labor), not just subscription price.
 
 5. **If you currently use Aladtec,** assess two things: How current is your system configuration? When did you last update credential records for staff changes? And: How much time did you spend on callout coverage last month? If configuration is drifting and callout handling is consuming unplanned hours, that is the case for evaluating guided-setup software.
 

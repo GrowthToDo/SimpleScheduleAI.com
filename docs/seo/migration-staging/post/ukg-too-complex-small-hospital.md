@@ -247,7 +247,7 @@ For a side-by-side comparison of the practical alternatives, see our [UKG altern
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Right-size your scheduling platform to a 25-bed reality</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built for the operational scale UKG ignores: 25 beds, no IT department, nurse manager also on clinical shifts. Flat monthly pricing, no setup fees. A guided setup session maps your unit rules once, then the AI builds the schedule, 21 automated rule checks validate every draft, you approve it.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built for the operational scale UKG ignores: 25 beds, no IT department, nurse manager also on clinical shifts. $10 per user per month, or $100 per user per year, no setup fees. A guided setup session maps your unit rules once, then the AI builds the schedule, 21 automated rule checks validate every draft, you approve it.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>

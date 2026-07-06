@@ -160,7 +160,7 @@ Trying to implement all four at once is where most critical access hospital WFM 
 
 Enterprise healthcare workforce management software is typically priced per employee per month, billed across the entire staff roster, with implementation and integration fees on top. Most vendors do not publish a fixed price, so a 25-bed critical access hospital usually receives a custom quote that scales with headcount and module selection. Treat any quoted per-employee rate as a starting tier rather than the all-in cost.
 
-For a critical access hospital with 60 to 80 employees, the per-employee model means paying for the full roster before the platform produces value, plus a multi-month implementation. CAH-specific scheduling software is usually priced as a flat monthly fee tied to the number of nurses scheduled, not the whole organization, which makes the cost predictable and removes the implementation project. When you compare options, ask each vendor for the total annual cost including setup, not just the headline per-employee rate.
+For a critical access hospital with 60 to 80 employees, the per-employee model means paying for the full roster before the platform produces value, plus a multi-month implementation. CAH-specific scheduling software is usually priced per user among the nurses and managers actually scheduled, not the whole organization, which makes the cost predictable and removes the implementation project. When you compare options, ask each vendor for the total annual cost including setup, not just the headline per-employee rate.
 
 ## Which Is Better, Enterprise WFM or a Critical Access Hospital Approach?
 
@@ -194,7 +194,7 @@ For a 25-bed hospital, a CAH-specific approach is almost always the better fit. 
 <tr class="bg-slate-50 dark:bg-slate-900">
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Pricing model</td>
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Per employee, per month, across full roster</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Flat monthly fee by nurses scheduled</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Per user, among nurses and managers scheduled</td>
 </tr>
 <tr>
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Scheduling output</td>
