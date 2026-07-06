@@ -1,0 +1,202 @@
+---
+/**
+ * ServiceFlow — animated system-flow widget for the landing page (SERVICE mode).
+ * Same visual system as ProductFlow.astro, service copy: the AI builds, our
+ * scheduling team checks, the manager approves, Thursday delivery.
+ * CSS-only motion, honors prefers-reduced-motion.
+ */
+---
+
+<section class="bg-page">
+  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <div class="max-w-2xl" data-reveal>
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">How it works</p>
+      <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+        Roster in. Schedule out. Humans in the loop.
+      </h2>
+    </div>
+
+    <div class="service-flow mt-10 grid gap-4 lg:grid-cols-[1fr_auto_1.7fr_auto_1fr] lg:items-center" data-reveal>
+      <!-- Inputs -->
+      <div class="space-y-3">
+        <div class="sf-card sf-in-1 rounded-xl border border-hairline bg-white p-4 text-center">
+          <p class="text-sm font-semibold">Your roster</p>
+          <p class="mt-1 text-xs text-muted">The staff Excel you already keep</p>
+        </div>
+        <div class="sf-card sf-in-2 rounded-xl border border-hairline bg-white p-4 text-center">
+          <p class="text-sm font-semibold">Your rules</p>
+          <p class="mt-1 text-xs text-muted">Charge coverage, skill mix, on-call limits. We map them once</p>
+        </div>
+        <div class="sf-card sf-in-3 rounded-xl border border-hairline bg-white p-4 text-center">
+          <p class="text-sm font-semibold">Your callouts</p>
+          <p class="mt-1 text-xs text-muted">Log it with us, any hour. No phone tree</p>
+        </div>
+      </div>
+
+      <div class="sf-connector hidden lg:block" aria-hidden="true">
+        <span class="sf-dot"></span>
+      </div>
+
+      <!-- Engine + team -->
+      <div class="sf-card sf-engine rounded-2xl border-2 border-primary/40 bg-white p-5">
+        <p class="text-center text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+          SimpleScheduleAI engine
+        </p>
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+          <div class="sf-station sf-station-1 rounded-lg border border-primary/20 p-3 text-center">
+            <p class="text-sm font-semibold">Draft builder</p>
+            <p class="mt-1 text-xs text-muted">Complete schedule drafts, scored for coverage and fairness</p>
+          </div>
+          <div class="sf-station sf-station-2 rounded-lg border border-primary/20 p-3 text-center">
+            <p class="text-sm font-semibold">Rule checks</p>
+            <p class="mt-1 text-xs text-muted">Every draft validated against your unit's rules</p>
+          </div>
+          <div class="sf-station sf-station-3 rounded-lg border border-primary/20 p-3 text-center">
+            <p class="text-sm font-semibold">Callout ranker</p>
+            <p class="mt-1 text-xs text-muted">Top 3 replacements, with reasons</p>
+          </div>
+          <div class="sf-station sf-station-4 rounded-lg border border-primary/20 p-3 text-center">
+            <p class="text-sm font-semibold">Our scheduling team</p>
+            <p class="mt-1 text-xs text-muted">A human checks every draft before it reaches you</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-connector hidden lg:block" aria-hidden="true">
+        <span class="sf-dot sf-dot-late"></span>
+      </div>
+
+      <!-- Outputs -->
+      <div class="space-y-3">
+        <div class="sf-card sf-out-1 rounded-xl border-2 border-primary bg-primary/5 p-4 text-center">
+          <p class="text-sm font-semibold">You approve</p>
+          <p class="mt-1 text-xs text-muted">Nothing posts without your sign-off</p>
+        </div>
+        <div class="sf-card sf-out-2 rounded-xl border border-hairline bg-white p-4 text-center">
+          <p class="text-sm font-semibold">Thursday delivery</p>
+          <p class="mt-1 text-xs text-muted">Post-ready PDF and Excel workbook, every cycle</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sf-card {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: sf-rise 0.5s ease-out forwards;
+  }
+  .sf-in-1 {
+    animation-delay: 0.1s;
+  }
+  .sf-in-2 {
+    animation-delay: 0.25s;
+  }
+  .sf-in-3 {
+    animation-delay: 0.4s;
+  }
+  .sf-engine {
+    animation-delay: 0.5s;
+  }
+  .sf-out-1 {
+    animation-delay: 0.9s;
+  }
+  .sf-out-2 {
+    animation-delay: 1.05s;
+  }
+
+  @keyframes sf-rise {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .sf-connector {
+    position: relative;
+    width: 3.5rem;
+    height: 2px;
+    background: linear-gradient(90deg, rgb(26 35 50 / 0.15), rgb(26 35 50 / 0.35));
+  }
+  .sf-dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    margin-top: -3.5px;
+    border-radius: 9999px;
+    background: var(--aw-color-primary, #2d5a4a);
+    animation: sf-travel 2.4s ease-in-out infinite;
+  }
+  .sf-dot-late {
+    animation-delay: 1.2s;
+  }
+
+  @keyframes sf-travel {
+    0% {
+      left: -4px;
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      left: calc(100% - 3px);
+      opacity: 0;
+    }
+  }
+
+  .sf-station {
+    background: rgb(26 35 50 / 0.03);
+    transition: background 0.4s;
+  }
+  .sf-station-1 {
+    animation: sf-glow 5.4s ease-in-out infinite;
+  }
+  .sf-station-2 {
+    animation: sf-glow 5.4s ease-in-out infinite 1.35s;
+  }
+  .sf-station-3 {
+    animation: sf-glow 5.4s ease-in-out infinite 2.7s;
+  }
+  .sf-station-4 {
+    animation: sf-glow 5.4s ease-in-out infinite 4.05s;
+  }
+
+  @keyframes sf-glow {
+    0%,
+    30%,
+    100% {
+      background: rgb(26 35 50 / 0.03);
+      box-shadow: none;
+    }
+    12% {
+      background: rgb(123 175 155 / 0.18);
+      box-shadow: 0 0 0 1px rgb(123 175 155 / 0.45);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sf-card {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+    .sf-dot {
+      animation: none;
+      opacity: 0.6;
+      left: 50%;
+    }
+    .sf-station-1,
+    .sf-station-2,
+    .sf-station-3,
+    .sf-station-4 {
+      animation: none;
+    }
+  }
+</style>

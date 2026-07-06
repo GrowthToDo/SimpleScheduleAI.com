@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import SchemaOrg from '~/components/common/SchemaOrg.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import HeroStationBackdrop from '~/components/widgets/HeroStationBackdrop.astro';
+import ServiceFlow from '~/components/widgets/ServiceFlow.astro';
 import SoftwareVsService from '~/components/widgets/SoftwareVsService.astro';
 import BuiltForCAHs from '~/components/widgets/BuiltForCAHs.astro';
 import WeeklyPackage from '~/components/widgets/WeeklyPackage.astro';
@@ -148,16 +149,27 @@ const faqSchema = {
           }
         })();
       </script>
-      <div class="mt-9 flex flex-col items-center gap-2.5 text-center reveal-delay-4" data-reveal>
-        <p class="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-          Texas Critical Access Hospitals · No IT Setup · First Schedule in Under 2 Weeks
-        </p>
-        <p class="text-sm text-muted">
-          Built after interviewing 30+ nurse managers before writing a single line of code.
-        </p>
+      <div
+        class="mx-auto mt-9 flex max-w-4xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted reveal-delay-4"
+        data-reveal
+      >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Texas Critical Access Hospitals</span
+        >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>First schedule in under 2 weeks</span
+        >
+        <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>No IT setup</span
+        >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Built after 30+ nurse-manager interviews</span
+        >
       </div>
     </Fragment>
   </Hero>
+
+  <!-- System flow: how the service works end to end -->
+  <ServiceFlow />
 
   <!-- Software vs Service Comparison -->
   <SoftwareVsService />
@@ -179,7 +191,7 @@ const faqSchema = {
       {
         title: 'How long does it take to get started?',
         description:
-          'Under two weeks. You send us your staff list and shift structure via Excel. We configure the rules, run a test cycle, and hand you a draft schedule for review. No IT involvement required.',
+          'Under two weeks. You send us your staff list and shift structure via Excel.<br /><br />We configure the rules, run a test cycle, and hand you a draft schedule for review. No IT involvement required.',
       },
       {
         title: 'Do my nurses need to create accounts or download anything?',
@@ -198,7 +210,7 @@ const faqSchema = {
       {
         title: "Who do we contact when there's a call-out at 2AM?",
         description:
-          "Log the callout with us and the system generates the top 3 replacement candidates with reasons, checked by our scheduling team. You pick, we update the schedule and send the corrected copy. No phone tree, and we're reachable if something unusual comes up.",
+          "Log the callout with us and the system generates the top 3 replacement candidates with reasons, checked by our scheduling team.<br /><br />You pick, we update the schedule and send the corrected copy. No phone tree, and we're reachable if something unusual comes up.",
       },
     ]}
   />
@@ -246,10 +258,6 @@ const faqSchema = {
       <p class="mt-6 text-pretty text-base leading-relaxed text-[#FAF7F2]/65">
         Month to month, flat by roster size. No long-term contract. If your team does not save real scheduling time, you
         walk away.
-      </p>
-
-      <p class="mt-8 text-center text-xs font-medium uppercase tracking-[0.18em] text-[#7BAF9B]">
-        Flat Monthly Price · No Per-Nurse Fees · No IT Setup
       </p>
     </Fragment>
   </CallToAction>
