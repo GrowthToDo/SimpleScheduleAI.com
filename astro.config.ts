@@ -46,6 +46,8 @@ export default defineConfig({
         // Retired pillar (301s to /nurse-scheduling-software) and internal decks
         !page.includes('/healthcare-staff-scheduling') &&
         !page.includes('/slide') &&
+        // Unlisted investor evidence page (noindex in proof-of-work.astro)
+        !page.includes('/proof-of-work') &&
         // Dormant programmatic SEO surface: never list /alternatives/ pages
         // until an entry is flipped live per the switch-on contract.
         !page.includes('/alternatives/'),

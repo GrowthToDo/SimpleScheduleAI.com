@@ -1,0 +1,853 @@
+---
+// Proof of Work: standalone slide deck, no site layout.
+// Fixed 1280x720 canvas + viewport scaler, same architecture as /slides.
+// Unlisted: noindex + covered by the '/proof-of-work' sitemap exclusion.
+import '@fontsource-variable/fraunces';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proof of Work | SimpleScheduleAI</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #131c2b;
+        --bg-deep: #0d141f;
+        --surface: rgba(255, 255, 255, 0.035);
+        --border: rgba(123, 175, 155, 0.16);
+        --hairline: rgba(255, 255, 255, 0.08);
+        --accent: #7baf9b;
+        --accent-bright: #9ecfbb;
+        --amber: #d9a441;
+        --text: #f2f5f4;
+        --muted: #92a2b3;
+        --serif: 'Fraunces Variable', Georgia, serif;
+        --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        --slide-w: 1280px;
+        --slide-h: 720px;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background: #090e16;
+        font-family: var(--sans);
+        color: var(--text);
+        overflow: hidden;
+        user-select: none;
+      }
+
+      /* ── Viewport scaler ── */
+      #scaler {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #deck {
+        position: relative;
+        width: var(--slide-w);
+        height: var(--slide-h);
+        transform-origin: center center;
+        box-shadow: 0 40px 120px rgba(0, 0, 0, 0.55);
+      }
+
+      /* ── Slides ── */
+      .slide {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 72px 88px;
+        background:
+          radial-gradient(1000px 600px at 85% -10%, rgba(123, 175, 155, 0.1) 0%, transparent 55%),
+          radial-gradient(800px 500px at -10% 110%, rgba(123, 175, 155, 0.06) 0%, transparent 55%),
+          linear-gradient(160deg, var(--bg) 0%, var(--bg-deep) 100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+        overflow: hidden;
+      }
+      .slide.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      /* faint blueprint grid */
+      .slide::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 64px 64px;
+        pointer-events: none;
+      }
+
+      /* ghost section number */
+      .ghost {
+        position: absolute;
+        right: 40px;
+        bottom: -60px;
+        font-family: var(--serif);
+        font-weight: 300;
+        font-size: 380px;
+        line-height: 1;
+        color: rgba(123, 175, 155, 0.07);
+        pointer-events: none;
+        letter-spacing: -0.04em;
+      }
+
+      /* ── Slide furniture ── */
+      .brand {
+        position: absolute;
+        top: 36px;
+        left: 88px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+      .brand span {
+        color: var(--accent);
+      }
+      .section-label {
+        position: absolute;
+        top: 36px;
+        right: 88px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 24px;
+      }
+      .kicker::before {
+        content: '';
+        width: 28px;
+        height: 1px;
+        background: var(--accent);
+      }
+
+      h1 {
+        font-family: var(--serif);
+        font-weight: 470;
+        font-size: 84px;
+        line-height: 1.02;
+        letter-spacing: -0.015em;
+      }
+      h2 {
+        font-family: var(--serif);
+        font-weight: 460;
+        font-size: 56px;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        max-width: 20ch;
+      }
+      .accent {
+        color: var(--accent-bright);
+      }
+      em {
+        font-style: italic;
+      }
+
+      .lead {
+        font-size: 21px;
+        line-height: 1.6;
+        color: var(--muted);
+        max-width: 62ch;
+        margin-top: 22px;
+      }
+      .lead strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      /* stage line on title */
+      .stage {
+        position: absolute;
+        left: 88px;
+        right: 88px;
+        bottom: 56px;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        border-top: 1px solid var(--hairline);
+        padding-top: 20px;
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+      .stage b {
+        color: var(--text);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      /* ── Cards & grids ── */
+      .grid {
+        display: grid;
+        gap: 18px;
+        margin-top: 40px;
+      }
+      .grid.cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .card {
+        position: relative;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 26px 28px;
+        backdrop-filter: blur(2px);
+      }
+      .card h3 {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .card p {
+        font-size: 14.5px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+      .card .figure {
+        font-family: var(--serif);
+        font-weight: 430;
+        font-size: 46px;
+        line-height: 1.1;
+        color: var(--accent-bright);
+        margin-bottom: 6px;
+      }
+
+      /* stat tiles */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin-top: 44px;
+        border: 1px solid var(--hairline);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .stat {
+        padding: 30px 30px 26px;
+        border-right: 1px solid var(--hairline);
+        border-bottom: 1px solid var(--hairline);
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .stat:nth-child(3n) {
+        border-right: none;
+      }
+      .stat:nth-child(n + 4) {
+        border-bottom: none;
+      }
+      .stat .num {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: 58px;
+        line-height: 1;
+        color: var(--accent-bright);
+      }
+      .stat .num small {
+        font-size: 30px;
+      }
+      .stat p {
+        margin-top: 10px;
+        font-size: 13.5px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+
+      /* checklist */
+      ul.checks {
+        list-style: none;
+        margin-top: 36px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 40px;
+        max-width: 1000px;
+      }
+      ul.checks li {
+        position: relative;
+        padding-left: 34px;
+        font-size: 17px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+      ul.checks li b {
+        color: var(--text);
+        font-weight: 600;
+      }
+      ul.checks li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 3px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid var(--accent);
+        background:
+          linear-gradient(45deg, transparent 46%, var(--accent) 46%, var(--accent) 54%, transparent 54%) no-repeat 7px 9px / 5px 5px,
+          linear-gradient(-50deg, transparent 44%, var(--accent) 44%, var(--accent) 56%, transparent 56%) no-repeat 9.5px 7px / 8px 9px;
+      }
+
+      /* quote slides */
+      .quote-mark {
+        font-family: var(--serif);
+        font-size: 160px;
+        line-height: 0.6;
+        color: var(--accent);
+        opacity: 0.9;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 300;
+      }
+      blockquote {
+        font-family: var(--serif);
+        font-weight: 420;
+        font-style: italic;
+        font-size: 54px;
+        line-height: 1.22;
+        letter-spacing: -0.005em;
+        max-width: 24ch;
+      }
+      blockquote .hl {
+        color: var(--accent-bright);
+      }
+      .attribution {
+        margin-top: 42px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.5;
+        max-width: 70ch;
+      }
+      .attribution::before {
+        content: '';
+        width: 44px;
+        height: 1px;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+      .attribution b {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      /* pending chip */
+      .pending {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-top: 34px;
+        border: 1px dashed rgba(217, 164, 65, 0.5);
+        border-radius: 12px;
+        padding: 12px 18px;
+        max-width: 760px;
+      }
+      .pending .tag {
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--amber);
+        white-space: nowrap;
+      }
+      .pending p {
+        font-size: 13.5px;
+        line-height: 1.5;
+        color: rgba(217, 164, 65, 0.85);
+      }
+
+      /* validation setup slide */
+      .mono-date {
+        font-family: var(--serif);
+        font-size: 30px;
+        color: var(--accent-bright);
+        font-weight: 450;
+      }
+      .backers {
+        display: flex;
+        gap: 14px;
+        margin-top: 36px;
+      }
+      .backers span {
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 10px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text);
+        background: var(--surface);
+      }
+
+      /* CTA */
+      .cta {
+        margin-top: 46px;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .cta a {
+        display: inline-block;
+        padding: 15px 30px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        transition: all 0.2s;
+      }
+      .cta a.primary {
+        background: var(--accent);
+        color: #10251d;
+      }
+      .cta a.primary:hover {
+        background: var(--accent-bright);
+      }
+      .cta a.secondary {
+        border: 1px solid var(--border);
+        color: var(--text);
+      }
+      .cta a.secondary:hover {
+        border-color: var(--accent);
+        color: var(--accent-bright);
+      }
+
+      /* ── Reveal animation ── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .slide.active .reveal {
+        opacity: 1;
+        transform: none;
+      }
+      .slide.active .reveal:nth-child(1),
+      .slide.active .reveal.d1 {
+        transition-delay: 0.05s;
+      }
+      .slide.active .reveal.d2 {
+        transition-delay: 0.18s;
+      }
+      .slide.active .reveal.d3 {
+        transition-delay: 0.32s;
+      }
+      .slide.active .reveal.d4 {
+        transition-delay: 0.46s;
+      }
+
+      /* ── Chrome ── */
+      #progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--accent);
+        width: 0;
+        transition: width 0.35s ease;
+        z-index: 20;
+      }
+      #counter {
+        position: fixed;
+        bottom: 18px;
+        right: 22px;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        z-index: 20;
+      }
+      #hint {
+        position: fixed;
+        bottom: 18px;
+        left: 22px;
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        opacity: 0.7;
+        z-index: 20;
+      }
+
+      /* ── Print: one slide per page, light ── */
+      @media print {
+        html,
+        body {
+          overflow: visible;
+          background: #fff;
+        }
+        #scaler {
+          position: static;
+          display: block;
+        }
+        #deck {
+          width: auto;
+          height: auto;
+          transform: none !important;
+          box-shadow: none;
+        }
+        .slide {
+          position: relative;
+          opacity: 1;
+          pointer-events: auto;
+          page-break-after: always;
+          height: 720px;
+          width: 1280px;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+        #progress,
+        #counter,
+        #hint {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="progress"></div>
+    <div id="scaler">
+      <div id="deck">
+        <!-- 1 · Title -->
+        <section class="slide active">
+          <div class="brand reveal">SimpleSchedule<span>AI</span></div>
+          <div class="section-label reveal">Proof of Work · 6 July 2026</div>
+          <h1 class="reveal d1">The work<br />so far.</h1>
+          <p class="lead reveal d2" style="font-size: 24px; max-width: 56ch;">
+            We deliver <strong>finished nurse schedules</strong> to small US hospitals as an outcome. A nursing
+            director hands us a roster and constraints; they get back a compliant, fair, fully staffed schedule.
+          </p>
+          <div class="stage reveal d3">
+            <b>Where we are, plainly:</b>
+            <span>
+              Pre-revenue. No design partner signed yet. A live pursuit at a ~70-nurse hospital in North Carolina.
+              The rest of this deck is what has been done to date.
+            </span>
+          </div>
+        </section>
+
+        <!-- 2 · Demand -->
+        <section class="slide">
+          <div class="ghost">01</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">01 / How we arrived at the idea</div>
+          <p class="kicker reveal d1">Search data</p>
+          <h2 class="reveal d2">The idea came from <em class="accent">keyword research.</em></h2>
+          <p class="lead reveal d3">
+            In <strong>December 2025</strong> we saw real search volume for small-hospital nurse scheduling and for
+            alternatives to the incumbent platforms. Small US hospitals still build schedules by hand in Excel, and a
+            director of nursing can spend a <strong>full day every week</strong> on it.
+          </p>
+          <div class="pending reveal d4">
+            <span class="tag">Data pending</span>
+            <p>Keyword-volume snapshot from the Dec 2025 research: terms, volumes, incumbent-alternative searches.</p>
+          </div>
+        </section>
+
+        <!-- 3 · VoC -->
+        <section class="slide">
+          <div class="ghost">02</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">02 / Voice of customer</div>
+          <p class="kicker reveal d1">Discovery calls</p>
+          <h2 class="reveal d2">What we heard in <em class="accent">discovery calls.</em></h2>
+          <p class="lead reveal d2" style="margin-top: 14px;">
+            Conversations with nursing directors, nurse managers, and staffing agency owners across North Carolina,
+            Texas, New Jersey, and New Hampshire. Three pain points came up consistently. The product handles all
+            three, verified in a live demo.
+          </p>
+          <div class="grid cols-3 reveal d3">
+            <div class="card">
+              <div class="figure">1.5 hrs</div>
+              <h3>Per shift swap</h3>
+              <p>Manual Excel filtering just to validate a single swap request.</p>
+            </div>
+            <div class="card">
+              <div class="figure">1 day<span style="font-size:24px">/wk</span></div>
+              <h3>Building the schedule</h3>
+              <p>What a director of nursing spends, every single week.</p>
+            </div>
+            <div class="card">
+              <div class="figure">0</div>
+              <h3>Audit trail in Excel</h3>
+              <p>Every change must be documented and defensible. Excel can't.</p>
+            </div>
+          </div>
+          <div class="pending reveal d4">
+            <span class="tag">Data pending</span>
+            <p>Total discovery-call count and role breakdown.</p>
+          </div>
+        </section>
+
+        <!-- 4 · Sharmila quote -->
+        <section class="slide">
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">02 / Voice of customer</div>
+          <span class="quote-mark reveal d1">&ldquo;</span>
+          <blockquote class="reveal d2">It's a <span class="hl">complete thing</span> already.</blockquote>
+          <div class="attribution reveal d3">
+            <span>
+              <b>Sharmila Krishnaswamy</b> · nursing operations, Mantravya (North Carolina) · after a full live product
+              demo, 19 June 2026. She is now actively bringing us into her hospital network.
+            </span>
+          </div>
+        </section>
+
+        <!-- 5 · Product -->
+        <section class="slide">
+          <div class="ghost">03</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">03 / What we built</div>
+          <p class="kicker reveal d1">Product</p>
+          <h2 class="reveal d2">What we've <em class="accent">built.</em></h2>
+          <div class="stats reveal d3">
+            <div class="stat"><div class="num">22</div><p>Scheduling rule evaluators, hard and soft, each covered by tests</p></div>
+            <div class="stat"><div class="num">3</div><p>Schedule variants per run: balanced, fairness, cost</p></div>
+            <div class="stat"><div class="num">~200</div><p>Automated tests on the rules engine and optimizer</p></div>
+            <div class="stat"><div class="num">97</div><p>Shipped versions since 12 June 2026</p></div>
+            <div class="stat"><div class="num">50<small>k</small></div><p>Lines of TypeScript, Excel in to Excel out</p></div>
+            <div class="stat"><div class="num">1 <small>min</small></div><p>From Excel roster to a generated, compliant schedule</p></div>
+          </div>
+        </section>
+
+        <!-- 6 · Discipline -->
+        <section class="slide">
+          <div class="ghost">03</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">03 / What we built</div>
+          <p class="kicker reveal d1">Scope decisions</p>
+          <h2 class="reveal d2">What we chose <em class="accent">not</em> to build.</h2>
+          <p class="lead reveal d2" style="margin-top: 14px;">
+            Each of these was cut based on what buyers told us.
+          </p>
+          <div class="grid cols-3 reveal d3">
+            <div class="card">
+              <h3>Self-scheduling</h3>
+              <p>
+                Nurse managers want control. Their existing ERP self-scheduling causes problems. A buyer told us
+                directly: leave it out.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Epic / Cerner integration</h3>
+              <p>Small hospitals don't run these systems. Excel is the real interchange format, so Excel is what we built for.</p>
+            </div>
+            <div class="card">
+              <h3>Mobile app</h3>
+              <p>The buyer is 45 to 50+, desktop-first. We build for how they actually work.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7 · Distribution -->
+        <section class="slide">
+          <div class="ghost">04</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">04 / Distribution</div>
+          <p class="kicker reveal d1">SEO and content</p>
+          <h2 class="reveal d2">The website and <em class="accent">content work.</em></h2>
+          <p class="lead reveal d2" style="margin-top: 14px;">
+            SimpleScheduleAI.com is a content and search operation: quality gates enforced in the build pipeline,
+            structured data for AI answer engines, and interactive tools a buyer can try directly.
+          </p>
+          <div class="grid cols-3 reveal d3">
+            <div class="card">
+              <div class="figure">113</div>
+              <h3>Articles authored</h3>
+              <p>For the small-hospital scheduling niche. 50 live, 63 in the reviewed pipeline.</p>
+            </div>
+            <div class="card">
+              <div class="figure">2</div>
+              <h3>Interactive tools live</h3>
+              <p>A scheduling simulator that builds an ICU week in-browser, and an ROI calculator.</p>
+            </div>
+            <div class="card">
+              <div class="figure">1</div>
+              <h3>Hard content gate</h3>
+              <p>Comparison pages need sourced, dated quotes and minimum depth, or the build fails.</p>
+            </div>
+          </div>
+          <div class="pending reveal d4">
+            <span class="tag">Data pending</span>
+            <p>Search Console trend, Bing data, AI-engine visibility log (ChatGPT, Perplexity, AI Overviews, Copilot).</p>
+          </div>
+        </section>
+
+        <!-- 8 · Validation setup -->
+        <section class="slide">
+          <div class="ghost">05</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">05 / External validation</div>
+          <p class="kicker reveal d1">Inbound</p>
+          <h2 class="reveal d2">An unsolicited<br /><em class="accent">acquisition inquiry.</em></h2>
+          <p class="lead reveal d3">
+            <span class="mono-date">16 June 2026.</span><br />
+            The CEO of a vertical-software acquirer emailed us cold. He had spent the year building an acquisition
+            thesis on nurse scheduling software, and found SimpleScheduleAI inside it.
+          </p>
+          <div class="backers reveal d4">
+            <span>Backed by Accel</span>
+            <span>TCV</span>
+            <span>Prosus</span>
+          </div>
+        </section>
+
+        <!-- 9 · Quote 1 -->
+        <section class="slide">
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">05 / Verbatim · 16 June 2026</div>
+          <span class="quote-mark reveal d1">&ldquo;</span>
+          <blockquote class="reveal d2" style="font-size: 46px;">
+            I spent this year defining our thesis re nurse scheduling software and the value prop you've built at
+            SimpleScheduleAI <span class="hl">really resonated.</span>
+          </blockquote>
+          <div class="attribution reveal d3">
+            <span><b>CEO</b>, Accel / TCV / Prosus-backed software acquirer · sender identity shared on request.</span>
+          </div>
+        </section>
+
+        <!-- 10 · Quote 2 -->
+        <section class="slide">
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">05 / Same email</div>
+          <span class="quote-mark reveal d1">&ldquo;</span>
+          <blockquote class="reveal d2" style="font-size: 46px;">
+            Your AI-plus-human service model solves the
+            <span class="hl">Sunday night rebuild crisis</span> rural nurse managers face every week.
+          </blockquote>
+          <div class="attribution reveal d3">
+            <span>
+              He described our positioning back to us, unprompted. We are below their acquisition threshold today, so
+              we are treating this as validation and a relationship for later, not a deal.
+            </span>
+          </div>
+        </section>
+
+        <!-- 11 · Close -->
+        <section class="slide">
+          <div class="ghost">06</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">06 / What's next</div>
+          <p class="kicker reveal d1">Next</p>
+          <h2 class="reveal d2">Next: sign the first <em class="accent">design partner hospital.</em></h2>
+          <p class="lead reveal d3">
+            Run their schedules end to end, learn from it, then repeat. The pipeline for this is live. If you want the
+            deeper walkthrough or the numbers behind any claim in this deck, talk to us.
+          </p>
+          <div class="cta reveal d4">
+            <a class="primary" href="https://cal.com/gautham-8bdvdx/30min" target="_blank" rel="noopener noreferrer">
+              Book 30 minutes with Gautham
+            </a>
+            <a class="secondary" href="/proof-of-work">Full evidence page</a>
+            <a class="secondary" href="/ask">How you can help</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="counter">1 / 11</div>
+    <div id="hint">← → to navigate</div>
+
+    <script>
+      const slides = Array.from(document.querySelectorAll<HTMLElement>('.slide'));
+      const counter = document.getElementById('counter');
+      const progress = document.getElementById('progress');
+      let index = 0;
+
+      function show(i: number) {
+        index = Math.max(0, Math.min(slides.length - 1, i));
+        slides.forEach((s, j) => s.classList.toggle('active', j === index));
+        if (counter) counter.textContent = `${index + 1} / ${slides.length}`;
+        if (progress) progress.style.width = `${((index + 1) / slides.length) * 100}%`;
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (['ArrowRight', 'ArrowDown', ' ', 'PageDown', 'Enter'].includes(e.key)) {
+          e.preventDefault();
+          show(index + 1);
+        } else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) {
+          e.preventDefault();
+          show(index - 1);
+        } else if (e.key === 'Home') {
+          show(0);
+        } else if (e.key === 'End') {
+          show(slides.length - 1);
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.closest('a')) return;
+        show(e.clientX > window.innerWidth / 2 ? index + 1 : index - 1);
+      });
+
+      // wheel / trackpad
+      let wheelLock = false;
+      document.addEventListener(
+        'wheel',
+        (e) => {
+          if (wheelLock || Math.abs(e.deltaY) < 24) return;
+          wheelLock = true;
+          show(e.deltaY > 0 ? index + 1 : index - 1);
+          setTimeout(() => (wheelLock = false), 550);
+        },
+        { passive: true }
+      );
+
+      // touch swipe
+      let touchX = 0;
+      document.addEventListener('touchstart', (e) => (touchX = e.touches[0].clientX), { passive: true });
+      document.addEventListener(
+        'touchend',
+        (e) => {
+          const dx = e.changedTouches[0].clientX - touchX;
+          if (Math.abs(dx) > 50) show(dx < 0 ? index + 1 : index - 1);
+        },
+        { passive: true }
+      );
+
+      // viewport scaler
+      const deck = document.getElementById('deck');
+      function rescale() {
+        if (!deck) return;
+        const scale = Math.min(window.innerWidth / 1280, window.innerHeight / 720) * 0.96;
+        deck.style.transform = `scale(${scale})`;
+      }
+      window.addEventListener('resize', rescale);
+      rescale();
+      const fromHash = parseInt(location.hash.slice(1), 10);
+      show(Number.isFinite(fromHash) ? fromHash - 1 : 0);
+    </script>
+  </body>
+</html>
