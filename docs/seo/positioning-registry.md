@@ -11,7 +11,10 @@ the numbers and this registry wins on the mode framing.
 Hard guardrails that bind BOTH columns (facts-dossier.md#product-truths):
 never the FLSA calculation method (say "FLSA overtime thresholds"); never
 credential/license-expiry tracking; never customers, pilots, cohorts, or results;
-pricing numbers only ever $1,000 / $1,500 flat, no per-nurse fees, no setup fees.
+pricing numbers SPLIT BY MODE (founder 2026-07-06): SERVICE = $1,000 / $1,500 flat
+monthly by roster size, no per-nurse fees, no setup fees. PRODUCT = $10 per user
+per month or $100 per user per year, no setup fees; NEVER "no per-nurse fees" in
+product mode (product pricing IS per-user). Never mix the two models in one page.
 No em-dashes or en-dashes in either column. No check-blog AI-tone phrases.
 
 ## Mapping table
@@ -25,9 +28,9 @@ No em-dashes or en-dashes in either column. No check-blog AI-tone phrases.
 | `delivery` | You get a PDF and Excel file by Thursday. That's it. | You export a post-ready PDF and a full Excel workbook every cycle, ready by Thursday. | index.astro FAQ 2 (second sentence) |
 | `delivery-cadence` | Delivered every Thursday 3pm (or your chosen cadence). No more spreadsheet chaos. Just post and hand off. | Ready every Thursday 3pm (or your chosen cadence). No more spreadsheet chaos. Just post and hand off. | WeeklyPackage.astro subtitle |
 | `callout` (= landing FAQ 5, "Who do we contact when there's a call-out at 2AM?") | Log the callout with us and the system generates the top 3 replacement candidates with reasons, checked by our scheduling team. You pick, we update the schedule and send the corrected copy. No phone tree, and we're reachable if something unusual comes up. | Log the callout and the system generates the top 3 replacement candidates with reasons: skills, role, charge coverage, overtime risk. You pick one, the schedule updates, and a corrected copy is ready to post. No phone tree. | index.astro FAQ + faqSchema |
-| `pricing` | **Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. | **Cost:** Flat facility license by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. | facts-dossier.md#product-truths (canonical) |
-| `pricing-short` | $1,000 to $1,500 a month, by roster size. No IT setup. No per-nurse fees. | $1,000 to $1,500 a month per facility license, by roster size. No per-nurse fees, no setup fees. | index.astro CallToAction subtitle |
-| `cta-primary` | Get your first schedule (href /contact) | Try the live demo (href /simulator) | index.astro Hero action |
+| `pricing` | **Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. | **Cost:** $10 per user per month, or $100 per user per year. Every nurse and manager on the roster is a user. No setup fees. | facts-dossier.md#product-truths (canonical) |
+| `pricing-short` | $1,000 to $1,500 a month, by roster size. No IT setup. No per-nurse fees. | $10 per user per month, or $100 per user per year. No setup fees. | index.astro CallToAction subtitle |
+| `cta-primary` | Get your first schedule (href /contact) | Try the interactive demo (href /simulator) | index.astro Hero action |
 | `cta-secondary` | Book a call with our team (href https://cal.com/gautham-8bdvdx/30min) | Book a call with our team (href https://cal.com/gautham-8bdvdx/30min). Identical in both modes. | index.astro Hero action |
 | `faq-accounts` (landing FAQ 2, "Do my nurses need to create accounts or download anything?") | No. Your staff never touches the software. You get a PDF and Excel file by Thursday. That's it. | No. There is no nurse-facing app to roll out. The manager works in the schedule and exports a post-ready PDF and Excel file by Thursday. Staff see the posted schedule, nothing to download. | index.astro FAQ + faqSchema |
 | `faq-existing-system` (landing FAQ 3, "What if we already have a scheduling system?") | We are built to replace spreadsheets or a basic tool that doesn't enforce rules. We don't replace your EMR. We deliver the schedule so you don't have to build it. | It replaces spreadsheets or a basic tool that does not enforce rules. It does not replace your EMR. It builds the schedule so you do not have to. | index.astro FAQ + faqSchema |

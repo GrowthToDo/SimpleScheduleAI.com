@@ -19,17 +19,19 @@ const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
 
 const tiers = [
   {
-    name: 'Core',
-    price: '$1,000',
-    roster: 'Up to 20 nurses',
-    note: 'For single-unit Critical Access Hospitals.',
+    name: 'Monthly',
+    price: '$10',
+    cadence: 'per user / month',
+    roster: 'Every nurse and manager on the roster is a user',
+    note: 'Month to month, cancel anytime.',
     featured: false,
   },
   {
-    name: 'Plus',
-    price: '$1,500',
-    roster: '21 to 40 nurses',
-    note: 'For larger or multi-unit rosters.',
+    name: 'Annual',
+    price: '$100',
+    cadence: 'per user / year',
+    roster: 'Every nurse and manager on the roster is a user',
+    note: 'Two months free against monthly billing.',
     featured: true,
   },
 ];
@@ -59,10 +61,10 @@ const softwareAppSchema = {
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'USD',
-    lowPrice: '1000',
-    highPrice: '1500',
+    lowPrice: '10',
+    highPrice: '100',
     offerCount: '2',
-    description: 'Flat monthly price per facility, by roster size',
+    description: 'Per-user pricing: $10 per user per month, or $100 per user per year',
   },
 };
 ---
@@ -98,7 +100,7 @@ const softwareAppSchema = {
           ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Built for Texas Critical Access Hospitals</span
         >
         <span class="flex items-center gap-2"
-          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Flat facility license, no per-nurse fees</span
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>$10 per user per month, no setup fees</span
         >
       </div>
     </div>
@@ -421,10 +423,10 @@ const softwareAppSchema = {
     <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
       <div class="max-w-2xl" data-reveal>
         <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Pricing</p>
-        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">One flat facility license</h2>
+        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">Simple per-user pricing</h2>
         <p class="mt-4 text-lg text-muted">
-          Flat facility license by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No
-          per-nurse fees, no setup fees.
+          $10 per user per month, or $100 per user per year. Every nurse and manager on the roster is a user. No setup
+          fees.
         </p>
       </div>
 
@@ -437,7 +439,7 @@ const softwareAppSchema = {
               <h3 class="text-xl font-bold">{tier.name}</h3>
               <p class="mt-4 text-4xl font-bold">
                 {tier.price}
-                <span class="text-base font-medium text-muted">/month</span>
+                <span class="text-base font-medium text-muted">{tier.cadence}</span>
               </p>
               <p class="mt-1 text-sm font-medium text-primary">{tier.roster}</p>
               <p class="mt-2 text-sm text-muted">{tier.note}</p>
@@ -447,8 +449,8 @@ const softwareAppSchema = {
       </div>
 
       <p class="mt-6 text-center text-sm text-muted">
-        Billed monthly, cancel anytime. If your roster size changes, your plan adjusts at the next billing cycle.
-        Rosters above 40 nurses or multi-facility groups,
+        Billed to the facility, cancel anytime. Users are added or removed as your roster changes. Multi-facility
+        groups,
         <a href={ctaLink} class="text-primary underline">talk to us</a>.
       </p>
     </div>
@@ -480,8 +482,8 @@ const softwareAppSchema = {
 
   <!-- Call to Action -->
   <CallToAction
-    title="See the schedule build itself.<br/>Flat facility license."
-    subtitle="$1,000 to $1,500 a month per facility license, by roster size. No per-nurse fees, no setup fees."
+    title="See the schedule build itself.<br/>$10 per user per month."
+    subtitle="$10 per user per month, or $100 per user per year. No setup fees."
     tagline="Simple pricing"
     actions={[
       { variant: 'primary', text: 'Try the interactive demo', href: '/simulator' },
