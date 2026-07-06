@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import SchemaOrg from '~/components/common/SchemaOrg.astro';
 import DarkHero from '~/components/widgets/DarkHero.astro';
 import SchedulerDemoSection from '~/components/widgets/SchedulerDemoSection.astro';
+import ProductFlow from '~/components/widgets/ProductFlow.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -15,39 +16,6 @@ const metadata = {
 };
 
 const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
-
-const features = [
-  {
-    title: 'AI schedule generation',
-    description:
-      'Three draft modes per cycle: balanced, fairness-optimized, and cost-optimized. Pick the trade-off that fits your unit.',
-  },
-  {
-    title: 'Fairness tracking',
-    description:
-      'Weekends, holidays, overtime, and charge duty distribution tracked automatically across the roster, so rotations stay defensible.',
-  },
-  {
-    title: 'FLSA overtime threshold tracking',
-    description:
-      'Scheduled hours are tracked against FLSA overtime thresholds as the grid fills, so overtime risk is flagged before the schedule posts.',
-  },
-  {
-    title: 'Callout replacement shortlist',
-    description:
-      'Log the callout and the system generates the top 3 replacement candidates with reasons: skills, role, charge coverage, overtime risk.',
-  },
-  {
-    title: 'PDF and Excel exports',
-    description:
-      'Export a post-ready PDF for the unit board and a full Excel workbook with the exceptions log and a complete audit trail.',
-  },
-  {
-    title: 'Guided setup from your Excel roster',
-    description:
-      'Four weeks from staff Excel to go-live: workspace setup, roster import, units and rules configured with you in a guided setup session, and DON training. After that the schedule cycle is yours to run, in the browser, with no installation or integration project.',
-  },
-];
 
 const tiers = [
   {
@@ -106,40 +74,133 @@ const softwareAppSchema = {
   <DarkHero
     badge="Nurse scheduling software"
     title="The nurse schedule builds itself. You approve it."
-    subtitle="AI-native nurse scheduling software for Texas Critical Access Hospitals. The AI builds your schedule, 21 automated rule checks validate every draft, you approve. Runs in the browser, no installation, no IT department required."
+    subtitle="The AI builds it, 21 rule checks validate it, you approve it. In the browser, nothing to install."
     actions={[
       { text: 'Try the interactive demo', href: '/simulator', variant: 'primary' },
       { text: 'Book a call with our team', href: ctaLink, variant: 'secondary' },
     ]}
   />
 
-  <!-- What the software does: editorial feature list + callout-shortlist mockup -->
+  <!-- Trust row: pre-launch credibility via what it plugs into and what it checks -->
+  <section class="bg-page border-b border-hairline">
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted" data-reveal>
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Excel roster in, PDF + Excel out</span
+        >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>21 automated rule checks per draft</span
+        >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Runs in the browser, nothing to install</span
+        >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Built for Texas Critical Access Hospitals</span
+        >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Flat facility license, no per-nurse fees</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- System flow widget: how the product works end to end -->
+  <ProductFlow />
+
+  <!-- See it work: three product frames, sample data -->
   <section class="bg-page">
     <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <div class="grid gap-12 lg:grid-cols-2 lg:items-start">
-        <div data-reveal>
-          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">What the software does</p>
-          <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
-            Six capabilities, one weekly schedule
-          </h2>
-          <p class="mt-4 text-lg text-muted">
-            Everything below runs in the product today. Watch the engine work in the interactive demo further down.
-          </p>
+      <div class="max-w-2xl" data-reveal>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">The screens</p>
+        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">Three screens run your week</h2>
+      </div>
 
-          <div class="mt-10 space-y-6">
-            {
-              features.map((feature) => (
-                <div class="border-l-4 border-primary pl-4">
-                  <h3 class="font-semibold">{feature.title}</h3>
-                  <p class="mt-1 text-muted">{feature.description}</p>
+      <div class="mt-10 grid gap-6 lg:grid-cols-3" data-reveal-group>
+        {/* Frame 1: draft picker */}
+        <div>
+          <div
+            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden h-full flex flex-col"
+          >
+            <div class="bg-primary px-4 py-3">
+              <p class="text-xs font-semibold text-white/70 uppercase tracking-wider">Cycle drafts</p>
+              <p class="text-sm font-bold text-white mt-0.5">Week of Jul 13 · Pick one of three</p>
+            </div>
+            <div class="p-4 space-y-3 flex-1">
+              <div class="rounded-lg border-2 border-primary bg-primary/5 p-3">
+                <div class="flex items-center justify-between">
+                  <p class="text-sm font-semibold">Balanced</p>
+                  <span class="rounded bg-green-100 px-1.5 py-0.5 text-[10px] font-bold text-green-700">Selected</span>
                 </div>
-              ))
-            }
+                <p class="mt-1 text-xs text-muted">Coverage 100% · Fairness 92 · Overtime 0h</p>
+              </div>
+              <div class="rounded-lg border border-hairline p-3">
+                <p class="text-sm font-semibold">Fairness-optimized</p>
+                <p class="mt-1 text-xs text-muted">Coverage 100% · Fairness 97 · Overtime 4h</p>
+              </div>
+              <div class="rounded-lg border border-hairline p-3">
+                <p class="text-sm font-semibold">Cost-optimized</p>
+                <p class="mt-1 text-xs text-muted">Coverage 100% · Fairness 88 · Overtime 0h · Lowest premium hours</p>
+              </div>
+            </div>
+            <div class="border-t border-hairline px-4 py-2.5 bg-[#FAF7F2]">
+              <span class="text-xs text-muted">Every draft covers every shift. You pick the trade-off.</span>
+            </div>
           </div>
+          <p class="mt-3 text-center text-xs text-muted">The AI builds three complete drafts each cycle.</p>
         </div>
 
-        {/* Callout shortlist mockup: what logging a 2 AM callout returns */}
-        <div class="lg:sticky lg:top-24" data-reveal>
+        {/* Frame 2: rule check scan */}
+        <div>
+          <div
+            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden h-full flex flex-col"
+          >
+            <div class="bg-primary px-4 py-3 flex items-center justify-between">
+              <div>
+                <p class="text-xs font-semibold text-white/70 uppercase tracking-wider">Rule checks</p>
+                <p class="text-sm font-bold text-white mt-0.5">Draft validation</p>
+              </div>
+              <span class="rounded-full bg-white/20 border border-white/30 px-2.5 py-1 text-xs font-semibold text-white"
+                >21 / 21</span
+              >
+            </div>
+            <div class="p-4 space-y-2.5 text-xs flex-1">
+              <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-green-500 shrink-0"></span><span>Charge nurse on every shift</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-green-500 shrink-0"></span><span
+                  >Skill mix holds on nights and weekends</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-green-500 shrink-0"></span><span
+                  >FLSA overtime thresholds clear</span
+                >
+              </div>
+              <div class="rounded-lg bg-amber-50 border border-amber-200 p-2.5">
+                <p class="font-semibold text-amber-800">Caught before posting</p>
+                <p class="mt-0.5 text-amber-700">
+                  Dan B. was headed to 41h. Swapped Thursday night to Emma C., zero overtime.
+                </p>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-green-500 shrink-0"></span><span
+                  >Rest gaps between 12-hour stretches</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-green-500 shrink-0"></span><span>16 more checks, all passing</span>
+              </div>
+            </div>
+            <div class="border-t border-hairline px-4 py-2.5 bg-[#FAF7F2]">
+              <span class="text-xs text-muted">No rule can be quietly skipped.</span>
+            </div>
+          </div>
+          <p class="mt-3 text-center text-xs text-muted">21 automated checks validate every draft before you see it.</p>
+        </div>
+
+        {/* Frame 3: callout shortlist */}
+        <div data-reveal>
           <div
             class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden"
           >
@@ -194,22 +255,166 @@ const softwareAppSchema = {
             </div>
           </div>
 
-          <p class="mt-4 text-center text-xs text-muted">
-            Illustrative screen with sample data, matching the engine in the interactive demo.
-          </p>
+          <p class="mt-3 text-center text-xs text-muted">A 2 AM callout returns a ranked shortlist with reasons.</p>
         </div>
       </div>
+
+      <p class="mt-8 text-center text-xs text-muted" data-reveal>
+        Illustrative screens with sample data, matching the engine in the <a
+          href="/simulator"
+          class="text-primary underline">interactive demo</a
+        >.
+      </p>
     </div>
   </section>
 
   <!-- Interactive demo (same engine as /simulator) -->
   <SchedulerDemoSection
-    tagline="Interactive demo"
+    tagline="Try it yourself"
     title="Watch it fill a week."
-    subtitle="The engine checks 13 safety rules and 8 fairness rules as it fills every slot, then ranks callout replacements the same way. The interactive demo runs in your browser, free, no signup."
+    subtitle="The engine fills every slot against 21 rule checks, right in your browser. No signup."
     ctaText="Try the interactive demo"
     ctaHref="/simulator"
   />
+
+  <!-- Guided setup: four-week visual timeline -->
+  <section class="bg-page">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="max-w-2xl" data-reveal>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Guided setup</p>
+        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+          Four weeks to go-live. Most of it is ours.
+        </h2>
+      </div>
+
+      {/* Mobile/tablet: the four weeks stack vertically. Copy must mirror the desktop grid below. */}
+      <div class="mt-10 space-y-4 lg:hidden" data-reveal>
+        <div class="rounded-2xl border border-hairline bg-white overflow-hidden">
+          <div
+            class="border-b border-hairline bg-[#FAF7F2] px-4 py-3 text-xs font-semibold uppercase tracking-wider text-muted"
+          >
+            Week 1
+          </div>
+          <div class="px-4 py-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-muted">We do</p>
+            <p class="mt-1 text-sm">Set up your hospital's workspace, import the roster</p>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-primary">You do</p>
+            <p class="mt-1.5 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+              Send the staff Excel you already keep
+            </p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-hairline bg-white overflow-hidden">
+          <div
+            class="border-b border-hairline bg-[#FAF7F2] px-4 py-3 text-xs font-semibold uppercase tracking-wider text-muted"
+          >
+            Week 2
+          </div>
+          <div class="px-4 py-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-muted">We do</p>
+            <p class="mt-1 text-sm">Map your units and rules with you: charge coverage, skill mix, on-call limits</p>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-primary">You do</p>
+            <p class="mt-1.5 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+              One rules session
+            </p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-hairline bg-white overflow-hidden">
+          <div
+            class="border-b border-hairline bg-[#FAF7F2] px-4 py-3 text-xs font-semibold uppercase tracking-wider text-muted"
+          >
+            Week 3
+          </div>
+          <div class="px-4 py-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-muted">We do</p>
+            <p class="mt-1 text-sm">Run test cycles against your real roster until every rule holds</p>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-primary">You do</p>
+            <p class="mt-1 text-xs text-muted italic">Nothing. We are testing.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-primary/40 bg-white overflow-hidden">
+          <div
+            class="border-b border-hairline bg-[#FAF7F2] px-4 py-3 text-xs font-semibold uppercase tracking-wider text-primary"
+          >
+            Week 4 · Go live
+          </div>
+          <div class="px-4 py-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-muted">We do</p>
+            <p class="mt-1 text-sm">Train your Director of Nursing on a full live cycle</p>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-primary">You do</p>
+            <p class="mt-1.5 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+              One training session, then approve your first schedule
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop: two-swimlane week grid */}
+      <div class="mt-10 hidden overflow-x-auto lg:block" data-reveal>
+        <div class="min-w-[52rem] rounded-2xl border border-hairline bg-white overflow-hidden">
+          {/* Week rail */}
+          <div class="grid grid-cols-[7rem_repeat(4,1fr)] border-b border-hairline bg-[#FAF7F2]">
+            <div class="px-4 py-3"></div>
+            <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-muted border-l border-hairline">
+              Week 1
+            </div>
+            <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-muted border-l border-hairline">
+              Week 2
+            </div>
+            <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-muted border-l border-hairline">
+              Week 3
+            </div>
+            <div class="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-primary border-l border-hairline">
+              Week 4 · Go live
+            </div>
+          </div>
+
+          {/* Our lane: dense */}
+          <div class="grid grid-cols-[7rem_repeat(4,1fr)] border-b border-hairline">
+            <div class="px-4 py-5 text-sm font-semibold">We do</div>
+            <div class="px-4 py-5 border-l border-hairline">
+              <p class="text-sm">Set up your hospital's workspace, import the roster</p>
+            </div>
+            <div class="px-4 py-5 border-l border-hairline">
+              <p class="text-sm">Map your units and rules with you: charge coverage, skill mix, on-call limits</p>
+            </div>
+            <div class="px-4 py-5 border-l border-hairline">
+              <p class="text-sm">Run test cycles against your real roster until every rule holds</p>
+            </div>
+            <div class="px-4 py-5 border-l border-hairline">
+              <p class="text-sm">Train your Director of Nursing on a full live cycle</p>
+            </div>
+          </div>
+
+          {/* Your lane: deliberately sparse — that is the argument */}
+          <div class="grid grid-cols-[7rem_repeat(4,1fr)]">
+            <div class="px-4 py-5 text-sm font-semibold text-primary">You do</div>
+            <div class="px-4 py-5 border-l border-hairline">
+              <p class="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                Send the staff Excel you already keep
+              </p>
+            </div>
+            <div class="px-4 py-5 border-l border-hairline">
+              <p class="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                One rules session
+              </p>
+            </div>
+            <div class="px-4 py-5 border-l border-hairline">
+              <p class="text-xs text-muted italic">Nothing. We are testing.</p>
+            </div>
+            <div class="px-4 py-5 border-l border-hairline">
+              <p class="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                One training session, then approve your first schedule
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-6 text-center text-sm text-muted" data-reveal>
+        No installation, no integration project. After go-live, our support team stays a call away.
+      </p>
+    </div>
+  </section>
 
   <!-- Pricing -->
   <section class="bg-page">
@@ -257,27 +462,18 @@ const softwareAppSchema = {
       {
         title: 'How long does it take to get started?',
         description:
-          'About four weeks, and every step is accounted for: we collect your staff Excel, set up your workspace, import the roster, configure your units and rules with you in a guided setup session, train your DON, and go live. From that point the weekly cycle is yours alone; no installation, no integration project.',
+          'About four weeks, and every step is accounted for: we collect your staff Excel, set up your workspace, import the roster, configure your units and rules with you in a guided setup session, train your DON, and go live.<br /><br />From that point the weekly cycle is yours to run, and our support team stays a call away whenever you need us. No installation, no integration project.',
       },
       {
         title: 'Do my nurses need to create accounts or download anything?',
         description:
-          'No. There is no nurse-facing app to roll out. The manager works in the schedule and exports a post-ready PDF and Excel file by Thursday. Staff see the posted schedule, nothing to download.',
+          'Nothing to download. Nurses get a portal built primarily for their phone, in the browser: schedule calendar, log a callout, request leave or swaps, and, for per-diem staff, keep availability current.<br /><br />The manager approves everything from the schedule side and can still export a post-ready PDF and Excel for the unit board.',
       },
-      {
-        title: 'What if we already have a scheduling system?',
-        description:
-          'It replaces spreadsheets or a basic tool that does not enforce rules. It does not replace your EMR. It builds the schedule so you do not have to.',
-      },
-      {
-        title: 'How do you handle our unit-specific rules?',
-        description:
-          'You set them once during onboarding. Charge nurse requirements, skill mix ratios, on-call limits: all mapped to your unit. Rule changes take effect the next cycle.',
-      },
+
       {
         title: "What happens when there's a call-out at 2AM?",
         description:
-          'Log the callout and the system generates the top 3 replacement candidates with reasons: skills, role, charge coverage, overtime risk. You pick one, the schedule updates, and a corrected copy is ready to post. No phone tree.',
+          'Log the callout and the system ranks the top 3 replacement candidates with reasons: skills, role, charge coverage, overtime risk. You pick one and reach out to that nurse; once they accept, you record it in the schedule and a corrected copy is ready to post.<br /><br />Three targeted calls instead of working down the whole roster.',
       },
     ]}
   />
