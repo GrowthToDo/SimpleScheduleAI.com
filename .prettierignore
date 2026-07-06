@@ -8,3 +8,5 @@ docs/**
 .claude/**
 # Publish log (operational log, not source)
 PUBLISHING-LOG.md
+# Installed third-party skills (not our source)
+.agents/

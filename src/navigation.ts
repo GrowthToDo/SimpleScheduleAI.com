@@ -3,10 +3,6 @@ import { getPermalink, getBlogPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Home',
-      href: getPermalink('/'),
-    },
-    {
       text: 'How it Works',
       href: getPermalink('/how-it-works'),
     },
@@ -15,20 +11,13 @@ export const headerData = {
       href: getPermalink('/simulator'),
     },
     {
-      text: 'Get Started',
-      href: getPermalink('/contact'),
-    },
-    {
       text: 'Pricing',
       href: getPermalink('/pricing'),
     },
     {
-      text: 'Cost Calculator',
-      href: getPermalink('/roi'),
-    },
-    {
       text: 'Resources',
       links: [
+        { text: 'Cost Calculator', href: getPermalink('/roi') },
         { text: 'Nurse Scheduling Software', href: getPermalink('/nurse-scheduling-software') },
         { text: 'AI Nurse Scheduling', href: getPermalink('/ai-nurse-scheduling') },
         { text: 'Critical Access Hospital Scheduling', href: getPermalink('/critical-access-hospital-scheduling') },
