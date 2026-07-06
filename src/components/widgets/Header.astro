@@ -92,7 +92,10 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                 <>
                   <button
                     type="button"
-                    class="text-default/70 hover:text-default transition-colors duration-200 px-3.5 py-3 flex items-center whitespace-nowrap text-[0.95rem]"
+                    class:list={[
+                      'text-default/70 hover:text-primary transition-colors duration-200 px-3.5 py-3 flex items-center whitespace-nowrap text-[0.95rem]',
+                      { 'text-primary font-semibold': links?.some(({ href: href2 }) => href2 === currentPath) },
+                    ]}
                   >
                     {text}{' '}
                     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden xl:inline" />
@@ -102,10 +105,12 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                       <li>
                         <a
                           class:list={[
-                            'text-default/80 first:rounded-t-lg last:rounded-b-lg xl:hover:bg-ink/5 hover:text-default py-2.5 px-5 block whitespace-no-wrap transition-colors duration-150',
-                            { 'text-default font-semibold': href2 === currentPath },
+                            'relative text-default/80 first:rounded-t-lg last:rounded-b-lg xl:hover:bg-primary/5 hover:text-primary hover:pl-6 py-2.5 px-5 block whitespace-no-wrap transition-all duration-150',
+                            'before:absolute before:left-2.5 before:top-2.5 before:bottom-2.5 before:w-[2px] before:rounded-full before:bg-primary before:origin-center before:scale-y-0 before:transition-transform before:duration-150 hover:before:scale-y-100',
+                            { 'text-primary font-semibold pl-6 before:scale-y-100': href2 === currentPath },
                           ]}
                           href={href2}
+                          aria-current={href2 === currentPath ? 'page' : undefined}
                         >
                           {text2}
                         </a>
@@ -116,10 +121,12 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
               ) : (
                 <a
                   class:list={[
-                    'text-default/70 hover:text-default transition-colors duration-200 px-3.5 py-3 flex items-center whitespace-nowrap text-[0.95rem]',
-                    { 'text-default font-semibold': href === currentPath },
+                    'relative text-default/70 hover:text-primary transition-colors duration-200 px-3.5 py-3 flex items-center whitespace-nowrap text-[0.95rem]',
+                    'after:absolute after:left-3.5 after:right-3.5 after:bottom-1.5 after:h-[2px] after:rounded-full after:bg-primary after:origin-left after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100',
+                    { 'text-primary font-semibold after:scale-x-100': href === currentPath },
                   ]}
                   href={href}
+                  aria-current={href === currentPath ? 'page' : undefined}
                 >
                   <span class="text-center leading-tight" set:html={text} />
                 </a>
