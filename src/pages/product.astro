@@ -109,19 +109,19 @@ const softwareAppSchema = {
   <!-- System flow widget: how the product works end to end -->
   <ProductFlow />
 
-  <!-- See it work: three product frames, sample data -->
+  <!-- See it work: four product frames, sample data -->
   <section class="bg-page">
     <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
       <div class="max-w-2xl" data-reveal>
         <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">The screens</p>
-        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">Three screens run your week</h2>
+        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">Four screens run your week</h2>
       </div>
 
-      <div class="mt-10 grid gap-6 lg:grid-cols-3" data-reveal-group>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4" data-reveal-group>
         {/* Frame 1: draft picker */}
-        <div>
+        <div class="flex flex-col">
           <div
-            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden h-full flex flex-col"
+            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden flex-1 flex flex-col"
           >
             <div class="bg-primary px-4 py-3">
               <p class="text-xs font-semibold text-white/70 uppercase tracking-wider">Cycle drafts</p>
@@ -152,9 +152,9 @@ const softwareAppSchema = {
         </div>
 
         {/* Frame 2: rule check scan */}
-        <div>
+        <div class="flex flex-col">
           <div
-            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden h-full flex flex-col"
+            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden flex-1 flex flex-col"
           >
             <div class="bg-primary px-4 py-3 flex items-center justify-between">
               <div>
@@ -202,9 +202,9 @@ const softwareAppSchema = {
         </div>
 
         {/* Frame 3: callout shortlist */}
-        <div data-reveal>
+        <div class="flex flex-col">
           <div
-            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden"
+            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden flex-1 flex flex-col"
           >
             <div class="bg-primary px-5 py-4 flex items-center justify-between">
               <div>
@@ -216,7 +216,7 @@ const softwareAppSchema = {
               >
             </div>
 
-            <div class="divide-y divide-gray-100 px-5">
+            <div class="divide-y divide-gray-100 px-5 flex-1">
               <div class="py-4">
                 <div class="flex items-center justify-between">
                   <p class="font-semibold text-sm">1. Jessica R. <span class="text-muted font-normal">RN</span></p>
@@ -258,6 +258,52 @@ const softwareAppSchema = {
           </div>
 
           <p class="mt-3 text-center text-xs text-muted">A 2 AM callout returns a ranked shortlist with reasons.</p>
+        </div>
+
+        {/* Frame 4: swap approval */}
+        <div class="flex flex-col">
+          <div
+            class="rounded-xl border border-hairline bg-white shadow-[0_14px_40px_-28px_rgb(26_35_50/0.22)] overflow-hidden flex-1 flex flex-col"
+          >
+            <div class="bg-primary px-4 py-3 flex items-center justify-between">
+              <div>
+                <p class="text-xs font-semibold text-white/70 uppercase tracking-wider">Swap request</p>
+                <p class="text-sm font-bold text-white mt-0.5">Fri night · Awaiting your call</p>
+              </div>
+              <span class="rounded-full bg-white/20 border border-white/30 px-2.5 py-1 text-xs font-semibold text-white"
+                >Pre-checked</span
+              >
+            </div>
+            <div class="p-4 space-y-2.5 text-xs flex-1">
+              <div class="rounded-lg border border-hairline p-2.5">
+                <p class="text-sm font-semibold">
+                  Sarah C. gives away <span class="text-muted font-normal">Fri 19:00 to 07:00</span>
+                </p>
+                <p class="mt-0.5 text-muted">Requested from her phone, Tue 8:52 PM</p>
+              </div>
+              <div class="rounded-lg border border-hairline p-2.5">
+                <p class="text-sm font-semibold">
+                  Emily D. takes it <span class="text-muted font-normal">RN, night-qualified</span>
+                </p>
+                <p class="mt-0.5 text-muted">Accepted Wed 6:15 AM</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-green-500 shrink-0"></span><span
+                  >Skill mix holds on both shifts</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-green-500 shrink-0"></span><span>No overtime created</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-green-500 shrink-0"></span><span>Rest gaps preserved</span>
+              </div>
+            </div>
+            <div class="border-t border-hairline px-4 py-2.5 bg-[#FAF7F2]">
+              <span class="text-xs text-muted">One tap to approve; the schedule updates itself.</span>
+            </div>
+          </div>
+          <p class="mt-3 text-center text-xs text-muted">Swaps arrive pre-checked against the same rules.</p>
         </div>
       </div>
 

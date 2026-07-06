@@ -38,6 +38,9 @@
       <div class="pf-connector hidden lg:block" aria-hidden="true">
         <span class="pf-dot"></span>
       </div>
+      <div class="pf-vconnector justify-self-center lg:hidden" aria-hidden="true">
+        <span class="pf-vdot"></span>
+      </div>
 
       <!-- Engine -->
       <div class="pf-card pf-engine rounded-2xl border-2 border-primary/40 bg-white p-5">
@@ -66,6 +69,9 @@
 
       <div class="pf-connector hidden lg:block" aria-hidden="true">
         <span class="pf-dot pf-dot-late"></span>
+      </div>
+      <div class="pf-vconnector justify-self-center lg:hidden" aria-hidden="true">
+        <span class="pf-vdot pf-vdot-late"></span>
       </div>
 
       <!-- Outputs: the DON is the quality gate -->
@@ -138,6 +144,45 @@
     animation-delay: 1.2s;
   }
 
+  /* Mobile: the flow runs vertically between stacked blocks */
+  .pf-vconnector {
+    position: relative;
+    width: 2px;
+    height: 2.25rem;
+    background: linear-gradient(180deg, rgb(26 35 50 / 0.15), rgb(26 35 50 / 0.35));
+  }
+  .pf-vdot {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 7px;
+    height: 7px;
+    margin-left: -3.5px;
+    border-radius: 9999px;
+    background: var(--aw-color-primary, #2d5a4a);
+    animation: pf-travel-v 2.4s ease-in-out infinite;
+  }
+  .pf-vdot-late {
+    animation-delay: 1.2s;
+  }
+
+  @keyframes pf-travel-v {
+    0% {
+      top: -4px;
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      top: calc(100% - 3px);
+      opacity: 0;
+    }
+  }
+
   @keyframes pf-travel {
     0% {
       left: -4px;
@@ -197,9 +242,15 @@
       opacity: 0.6;
       left: 50%;
     }
+    .pf-vdot {
+      animation: none;
+      opacity: 0.6;
+      top: 50%;
+    }
     .pf-station-1,
     .pf-station-2,
-    .pf-station-3 {
+    .pf-station-3,
+    .pf-station-4 {
       animation: none;
     }
   }
