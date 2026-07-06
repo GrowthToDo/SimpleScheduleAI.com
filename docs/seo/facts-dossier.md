@@ -21,6 +21,29 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635
 - Verified: 2026-07-04 (via Cornell LII cross-check; eCFR bot-blocks automated fetches)
 
+### 42 CFR 485.610 (location / distance)
+
+- Approved wording: "more than a 35-mile drive on primary roads from the nearest hospital or CAH, or more than 15 miles in areas of mountainous terrain or where only secondary roads are available"
+- Necessary-provider path: closed to new entrants; only facilities certified by their state as a necessary provider BEFORE January 1, 2006 keep that designation (statutory sunset). A hospital seeking the designation today qualifies on the mileage test.
+- Wrong: listing "necessary provider designation" as a current qualifying requirement alongside the mileage test (it is a closed alternative path, not an AND requirement)
+- URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.610 (cross-check: https://www.ruralhealthinfo.org/topics/critical-access-hospitals)
+- Verified: 2026-07-06 (via Cornell LII + RHIhub; eCFR bot-blocks automated fetches)
+
+### 42 CFR 485.620 (bed cap / length of stay)
+
+- Approved wording: "no more than 25 inpatient beds" (a); acute inpatient care "does not exceed, on an annual average basis, 96 hours per patient" (b)
+- Nuance: the 96 hours is an ANNUAL AVERAGE across acute-care admissions, never a per-patient cap. Swing-bed days draw from the same 25-bed pool (485.620(a): "Inpatient beds may be used for either inpatient or swing-bed services") but sit outside the acute-care average, which is scoped to acute inpatient care.
+- Wrong: "patients can only stay 96 hours"; treating swing beds as exempt from the 25-bed cap
+- URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620
+- Verified: 2026-07-06 (via Cornell LII)
+
+### 42 CFR 485.618 (emergency services)
+
+- Approved wording: emergency services "available on a 24-hours a day basis"
+- Related: the on-call practitioner availability window lives in this section (used by the how-to-stay-cms-compliant post)
+- URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618
+- Verified: 2026-07-06 (via Cornell LII)
+
 ### NSI 2025
 
 - Approved figures: average cost to replace one staff RN = $61,110; national RN turnover = 16.4% (2025 report, CY2024 data)
@@ -125,3 +148,4 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 | ---------- | -------------------------------------------------------------- | ------ |
 | 2026-07-03 | Initial population from 2026-06-30..07-03 verified fact-checks | Claude |
 | 2026-07-04 | Added staffing-ratio facts: 482.23(b), CA 70217, state ratio landscape (OR/MA/NY), TX 257.004, Aiken 2002/AHRQ, ANA position | Claude |
+| 2026-07-06 | Added CAH CoP designation facts for requirements post: 485.610 (35/15 miles, necessary-provider sunset Jan 1 2006), 485.620 (25 beds, 96-hr annual average, swing-bed nuance), 485.618 (24-hr emergency); all verified via Cornell LII + RHIhub | Claude |

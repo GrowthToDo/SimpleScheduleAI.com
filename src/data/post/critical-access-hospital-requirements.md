@@ -1,14 +1,14 @@
 ---
-draft: true
-publishDate: 2026-07-01T00:00:00Z
-updateDate: 2026-07-01T00:00:00Z
+draft: false
+publishDate: 2026-07-06T00:00:00Z
+updateDate: 2026-07-06T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Critical Access Hospital Requirements: The CMS Conditions Explained'
 excerpt: >
-  The critical access hospital requirements are Medicare Conditions of Participation, not best
-  practices. This reference maps each one to its exact CFR section, including the staffing rule a
-  surveyor reads straight off your schedule.
-image: https://images.unsplash.com/photo-1682706841478-88eb8995357b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+  A surveyor does not cite best practices; they cite Conditions of Participation. This reference
+  maps every critical access hospital requirement to its exact CFR section, including the staffing
+  rule read straight off your schedule.
+image: https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: glossary
 tags:

@@ -53,7 +53,7 @@ The compliance work happens before the surveyor arrives, not when they walk thro
 
 ## What CMS §485.635 Actually Requires for Nurse Staffing?
 
-CMS Conditions of Participation for Critical Access Hospitals are codified at [42 CFR Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). Three sections govern who must be staffed and what you have to be able to show:
+CMS Conditions of Participation for Critical Access Hospitals are codified at [42 CFR Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635); the designation-wide set, from location to bed caps, is mapped in our [critical access hospital requirements](/blog/critical-access-hospital-requirements) reference. Three sections govern who must be staffed and what you have to be able to show:
 
 **Nursing services, [§485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) [1]:** Nursing services must meet the needs of patients. A registered nurse must provide, or assign to other personnel, the nursing care of each patient, and a registered nurse (or, where state law permits, a physician assistant) must supervise and evaluate that care. A nursing care plan must be kept current for each inpatient.
 

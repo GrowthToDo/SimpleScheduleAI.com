@@ -109,7 +109,7 @@ That is what SimpleScheduleAI was built for. Our [nurse scheduling software](/nu
 ## Frequently Asked Questions
 
 **Q: What qualifies a hospital as a critical access hospital?**
-It must be in a rural area at least 35 miles from the nearest hospital, hold 25 or fewer acute care beds, provide 24/7 emergency care, keep average inpatient stays under 96 hours, and hold state designation as a necessary provider. CMS administers it under 42 CFR Part 485, Subpart F.
+It must be in a rural area at least 35 miles from the nearest hospital, hold 25 or fewer acute care beds, provide 24/7 emergency care, and keep average inpatient stays under 96 hours. CMS administers it under 42 CFR Part 485, Subpart F; the condition-by-condition list, each with its CFR citation, is in our [critical access hospital requirements](/blog/critical-access-hospital-requirements) reference.
 
 **Q: What is the difference between a hospital and a critical access hospital?**
 A CAH is capped at 25 acute care beds, sits more than 35 miles from the nearest hospital, is reimbursed at 101% of its reasonable Medicare costs, and carries the [Section 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) always-on-duty nurse rule. Standard hospitals have no federal bed cap and are paid fixed prospective rates.
