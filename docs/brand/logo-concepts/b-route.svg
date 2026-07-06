@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="SimpleScheduleAI mark, concept B: the route">
+  <!--
+    Concept B — "The Route"
+    An S (SimpleScheduleAI) drawn as one continuous route through the schedule,
+    starting at an open shift (sage dot) and working through to done.
+    The monogram and the "AI finds the path" story in a single stroke.
+    Light-background variant: ink stroke + sage dot.
+  -->
+  <circle cx="83" cy="23" r="7" fill="#7BAF9B" />
+  <path
+    d="M 69 23 H 38 a 15 15 0 0 0 0 30 h 20 a 15 15 0 0 1 0 30 H 15"
+    fill="none"
+    stroke="#1A2332"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+</svg>

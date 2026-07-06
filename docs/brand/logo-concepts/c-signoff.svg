@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="SimpleScheduleAI mark, concept C: the sign-off">
+  <!--
+    Concept C — "The Sign-off"
+    A check built from two shift bars: the short ink bar is the roster handing up,
+    the long green bar is the DON's approval sweeping through.
+    "Nothing posts without your sign-off" as a mark. The safest, most conventional
+    of the four; earns its keep in two-tone and in the app-icon tile.
+    Light-background variant: ink short arm + forest green long arm.
+  -->
+  <path d="M 20 54 L 40 72" fill="none" stroke="#1A2332" stroke-width="16" stroke-linecap="round" />
+  <path d="M 40 72 L 78 26" fill="none" stroke="#2D5A4A" stroke-width="16" stroke-linecap="round" />
+</svg>

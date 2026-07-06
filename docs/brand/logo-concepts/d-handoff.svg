@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="SimpleScheduleAI mark, concept D: the handoff">
+  <!--
+    Concept D — "The Handoff"
+    Two shift bars interlocking: day hands to night, night hands back to day.
+    Continuity of coverage — the thing a 25-bed hospital actually buys.
+    The counterform hints at an S without spelling it.
+    Light-background variant: ink day bar + forest green night bar.
+  -->
+  <path
+    d="M 24 28 H 60 a 16 16 0 0 1 16 16 v 10"
+    fill="none"
+    stroke="#1A2332"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+  <path
+    d="M 72 68 H 36 a 16 16 0 0 1 -16 -16 v -10"
+    fill="none"
+    stroke="#2D5A4A"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+</svg>

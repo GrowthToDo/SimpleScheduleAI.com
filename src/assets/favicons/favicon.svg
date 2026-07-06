@@ -1,18 +1,14 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="128" height="128" rx="24" fill="#3b82f6"/>
-<rect x="65" y="52.5" width="35.5" height="22.8" fill="#dbeafe"/>
-<rect x="28" y="52.5" width="35.5" height="22.8" fill="#1e40af"/>
-<rect x="65" y="27.5" width="35.5" height="22.8" fill="#93c5fd"/>
-<rect x="27.8" y="77.3" width="35.5" height="22.8" fill="#60a5fa"/>
-<path d="M26.7 109.3C21.7 109.3 17.6 105.2 17.6 100.2C17.6 95.2 21.7 91.1 26.7 91.1C31.7 91.1 35.8 95.2 35.8 100.2C35.8 105.2 31.7 109.3 26.7 109.3Z" stroke="white" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M101.3 109.3C96.3 109.3 92.2 105.2 92.2 100.2C92.2 95.2 96.3 91.1 101.3 91.1C106.3 91.1 110.4 95.2 110.4 100.2C110.4 105.2 106.3 109.3 101.3 109.3Z" stroke="white" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M26.7 34.8C21.7 34.8 17.6 30.7 17.6 25.7C17.6 20.7 21.7 16.6 26.7 16.6C31.7 16.6 35.8 20.7 35.8 25.7C35.8 30.7 31.7 34.8 26.7 34.8Z" stroke="white" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M101.3 34.8C96.3 34.8 92.2 30.7 92.2 25.7C92.2 20.7 96.3 16.6 101.3 16.6C106.3 16.6 110.4 20.7 110.4 25.7C110.4 30.7 106.3 34.8 101.3 34.8Z" stroke="white" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M101.3 91.1V34.8" stroke="white" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M26.7 91.1V34.8" stroke="white" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M35.8 25.7H92.2" stroke="white" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M35.8 100.2H92.2" stroke="white" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M64 100.2C64 72 64 55.6 64 25.7" stroke="white" stroke-width="3.3"/>
-<path d="M26.7 51.4H101.3" stroke="white" stroke-width="3.3"/>
-<path d="M101.3 76.3H26.7" stroke="white" stroke-width="3.3"/>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- SimpleScheduleAI mark "The Route": an S drawn as one route through the schedule, from open shift (dot) to done -->
+  <rect width="128" height="128" rx="24" fill="#2D5A4A" />
+  <g transform="translate(16 16) scale(1)">
+    <circle cx="83" cy="23" r="7" fill="#7BAF9B" />
+    <path
+      d="M 69 23 H 38 a 15 15 0 0 0 0 30 h 20 a 15 15 0 0 1 0 30 H 15"
+      fill="none"
+      stroke="#FAF7F2"
+      stroke-width="14"
+      stroke-linecap="round"
+    />
+  </g>
 </svg>

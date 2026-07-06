@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SimpleScheduleAI — Logo concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560;9..144,620&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1a2332;
+    --green: #2d5a4a;
+    --sage: #7baf9b;
+    --ivory: #faf7f2;
+    --canvas: #14181f;
+    --hairline: rgba(26, 35, 50, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--canvas);
+    color: var(--ivory);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    padding: 56px 32px 96px;
+  }
+  .board { max-width: 1060px; margin: 0 auto; }
+  header { margin-bottom: 12px; }
+  .kicker {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 560;
+    font-size: 40px;
+    letter-spacing: -0.015em;
+  }
+  .intro { color: rgba(250, 247, 242, 0.6); max-width: 56ch; margin-top: 12px; }
+  .current {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 26px;
+    padding: 14px 22px;
+    border: 1px solid rgba(250, 247, 242, 0.14);
+    border-radius: 12px;
+    color: rgba(250, 247, 242, 0.75);
+  }
+  .current .label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,247,242,0.45); }
+  .current .wordmark { font-family: 'Fraunces', serif; font-weight: 560; font-size: 21px; color: var(--ivory); }
+  .current .wordmark .dot { color: var(--sage); }
+
+  section.concept {
+    margin-top: 64px;
+    border-top: 1px solid rgba(250, 247, 242, 0.12);
+    padding-top: 40px;
+  }
+  .concept-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .concept-num {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    color: var(--sage);
+    letter-spacing: 0.08em;
+  }
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 560;
+    font-size: 27px;
+    letter-spacing: -0.01em;
+  }
+  .story { color: rgba(250, 247, 242, 0.6); max-width: 64ch; margin-top: 10px; }
+  .story strong { color: rgba(250, 247, 242, 0.9); font-weight: 600; }
+
+  .panels {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 14px;
+    margin-top: 26px;
+  }
+  @media (max-width: 760px) { .panels { grid-template-columns: 1fr; } }
+  .panel { border-radius: 16px; padding: 36px; display: flex; align-items: center; justify-content: center; min-height: 230px; }
+  .panel.light { background: var(--ivory); }
+  .panel.dark { background: var(--ink); border: 1px solid rgba(250, 247, 242, 0.08); }
+  .panel svg { display: block; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 14px;
+    margin-top: 14px;
+  }
+  @media (max-width: 760px) { .row { grid-template-columns: 1fr; } }
+  .lockup {
+    background: var(--ivory);
+    border-radius: 16px;
+    padding: 30px 36px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .lockup .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 560;
+    font-size: 26px;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .lockup .name .dot { color: var(--green); }
+  .sizes {
+    background: var(--ivory);
+    border-radius: 16px;
+    padding: 26px 30px;
+    display: flex;
+    align-items: flex-end;
+    gap: 22px;
+  }
+  .sizes .step { display: flex; flex-direction: column; align-items: center; gap: 9px; }
+  .sizes .cap { font-size: 10px; color: rgba(26, 35, 50, 0.5); letter-spacing: 0.04em; }
+  .panel-cap {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(250, 247, 242, 0.38);
+    margin-top: 10px;
+  }
+
+  footer {
+    margin-top: 72px;
+    border-top: 1px solid rgba(250, 247, 242, 0.12);
+    padding-top: 32px;
+    color: rgba(250, 247, 242, 0.55);
+    font-size: 14px;
+    max-width: 70ch;
+  }
+  footer h3 { font-family: 'Fraunces', serif; font-weight: 560; font-size: 19px; color: var(--ivory); margin-bottom: 12px; }
+  footer li { margin: 6px 0 6px 18px; }
+</style>
+</head>
+<body>
+<div class="board">
+
+  <header>
+    <p class="kicker">SimpleScheduleAI · Brand</p>
+    <h1>Logo concepts</h1>
+    <p class="intro">
+      Four marks, four different ideas of what the brand stands for. All stay inside the site's
+      existing system: Fraunces wordmark, ink navy, forest green, sage, warm ivory. No medical
+      crosses, no pulse lines, no AI sparkles.
+    </p>
+    <div class="current">
+      <span class="label">Current</span>
+      <span class="wordmark">SimpleScheduleAI<span class="dot">.</span></span>
+    </div>
+  </header>
+
+  <!-- ============ CONCEPT A ============ -->
+  <section class="concept">
+    <div class="concept-head"><span class="concept-num">A</span><h2>The Coverage Mark</h2></div>
+    <p class="story">
+      A roster of staggered shift bars with one slot open in the middle — and the green cell fills it.
+      <strong>The product promise in one glance: the gap, covered.</strong>
+      Most literal of the four; reads as "schedule" instantly, even at favicon size.
+    </p>
+    <div class="panels">
+      <div>
+        <div class="panel light">
+          <svg width="150" height="150" viewBox="0 0 96 96"><g fill="#1A2332"><rect x="16" y="18" width="34" height="16" rx="8"/><rect x="54" y="18" width="26" height="16" rx="8"/><rect x="16" y="40" width="18" height="16" rx="8"/><rect x="62" y="40" width="18" height="16" rx="8"/><rect x="16" y="62" width="26" height="16" rx="8"/><rect x="46" y="62" width="34" height="16" rx="8"/></g><rect x="38" y="40" width="20" height="16" rx="8" fill="#2D5A4A"/></svg>
+        </div>
+        <p class="panel-cap">Primary · on ivory</p>
+      </div>
+      <div>
+        <div class="panel dark">
+          <svg width="150" height="150" viewBox="0 0 96 96"><g fill="#FAF7F2"><rect x="16" y="18" width="34" height="16" rx="8"/><rect x="54" y="18" width="26" height="16" rx="8"/><rect x="16" y="40" width="18" height="16" rx="8"/><rect x="62" y="40" width="18" height="16" rx="8"/><rect x="16" y="62" width="26" height="16" rx="8"/><rect x="46" y="62" width="34" height="16" rx="8"/></g><rect x="38" y="40" width="20" height="16" rx="8" fill="#7BAF9B"/></svg>
+        </div>
+        <p class="panel-cap">Reversed · on ink</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="lockup">
+        <svg width="38" height="38" viewBox="0 0 96 96"><g fill="#1A2332"><rect x="16" y="18" width="34" height="16" rx="8"/><rect x="54" y="18" width="26" height="16" rx="8"/><rect x="16" y="40" width="18" height="16" rx="8"/><rect x="62" y="40" width="18" height="16" rx="8"/><rect x="16" y="62" width="26" height="16" rx="8"/><rect x="46" y="62" width="34" height="16" rx="8"/></g><rect x="38" y="40" width="20" height="16" rx="8" fill="#2D5A4A"/></svg>
+        <span class="name">SimpleScheduleAI<span class="dot">.</span></span>
+      </div>
+      <div class="sizes">
+        <span class="step"><svg width="48" height="48" viewBox="0 0 96 96"><g fill="#1A2332"><rect x="16" y="18" width="34" height="16" rx="8"/><rect x="54" y="18" width="26" height="16" rx="8"/><rect x="16" y="40" width="18" height="16" rx="8"/><rect x="62" y="40" width="18" height="16" rx="8"/><rect x="16" y="62" width="26" height="16" rx="8"/><rect x="46" y="62" width="34" height="16" rx="8"/></g><rect x="38" y="40" width="20" height="16" rx="8" fill="#2D5A4A"/></svg><span class="cap">48</span></span>
+        <span class="step"><svg width="32" height="32" viewBox="0 0 96 96"><g fill="#1A2332"><rect x="16" y="18" width="34" height="16" rx="8"/><rect x="54" y="18" width="26" height="16" rx="8"/><rect x="16" y="40" width="18" height="16" rx="8"/><rect x="62" y="40" width="18" height="16" rx="8"/><rect x="16" y="62" width="26" height="16" rx="8"/><rect x="46" y="62" width="34" height="16" rx="8"/></g><rect x="38" y="40" width="20" height="16" rx="8" fill="#2D5A4A"/></svg><span class="cap">32</span></span>
+        <span class="step"><svg width="24" height="24" viewBox="0 0 96 96"><g fill="#1A2332"><rect x="16" y="18" width="34" height="16" rx="8"/><rect x="54" y="18" width="26" height="16" rx="8"/><rect x="16" y="40" width="18" height="16" rx="8"/><rect x="62" y="40" width="18" height="16" rx="8"/><rect x="16" y="62" width="26" height="16" rx="8"/><rect x="46" y="62" width="34" height="16" rx="8"/></g><rect x="38" y="40" width="20" height="16" rx="8" fill="#2D5A4A"/></svg><span class="cap">24</span></span>
+        <span class="step"><svg width="16" height="16" viewBox="0 0 96 96"><g fill="#1A2332"><rect x="16" y="18" width="34" height="16" rx="8"/><rect x="54" y="18" width="26" height="16" rx="8"/><rect x="16" y="40" width="18" height="16" rx="8"/><rect x="62" y="40" width="18" height="16" rx="8"/><rect x="16" y="62" width="26" height="16" rx="8"/><rect x="46" y="62" width="34" height="16" rx="8"/></g><rect x="38" y="40" width="20" height="16" rx="8" fill="#2D5A4A"/></svg><span class="cap">16 · favicon</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONCEPT B ============ -->
+  <section class="concept">
+    <div class="concept-head"><span class="concept-num">B</span><h2>The Route</h2></div>
+    <p class="story">
+      An S — the monogram — drawn as one continuous route through the schedule, starting at an open
+      shift (the sage dot) and working through to done.
+      <strong>"The AI finds the path" and the initial, in a single stroke.</strong>
+      The most distinctive silhouette of the four; least literal.
+    </p>
+    <div class="panels">
+      <div>
+        <div class="panel light">
+          <svg width="150" height="150" viewBox="0 0 96 96"><circle cx="83" cy="23" r="7" fill="#7BAF9B"/><path d="M 69 23 H 38 a 15 15 0 0 0 0 30 h 20 a 15 15 0 0 1 0 30 H 15" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/></svg>
+        </div>
+        <p class="panel-cap">Primary · on ivory</p>
+      </div>
+      <div>
+        <div class="panel dark">
+          <svg width="150" height="150" viewBox="0 0 96 96"><circle cx="83" cy="23" r="7" fill="#7BAF9B"/><path d="M 69 23 H 38 a 15 15 0 0 0 0 30 h 20 a 15 15 0 0 1 0 30 H 15" fill="none" stroke="#FAF7F2" stroke-width="14" stroke-linecap="round"/></svg>
+        </div>
+        <p class="panel-cap">Reversed · on ink</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="lockup">
+        <svg width="38" height="38" viewBox="0 0 96 96"><circle cx="83" cy="23" r="7" fill="#7BAF9B"/><path d="M 69 23 H 38 a 15 15 0 0 0 0 30 h 20 a 15 15 0 0 1 0 30 H 15" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/></svg>
+        <span class="name">SimpleScheduleAI<span class="dot">.</span></span>
+      </div>
+      <div class="sizes">
+        <span class="step"><svg width="48" height="48" viewBox="0 0 96 96"><circle cx="83" cy="23" r="7" fill="#7BAF9B"/><path d="M 69 23 H 38 a 15 15 0 0 0 0 30 h 20 a 15 15 0 0 1 0 30 H 15" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/></svg><span class="cap">48</span></span>
+        <span class="step"><svg width="32" height="32" viewBox="0 0 96 96"><circle cx="83" cy="23" r="7" fill="#7BAF9B"/><path d="M 69 23 H 38 a 15 15 0 0 0 0 30 h 20 a 15 15 0 0 1 0 30 H 15" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/></svg><span class="cap">32</span></span>
+        <span class="step"><svg width="24" height="24" viewBox="0 0 96 96"><circle cx="83" cy="23" r="7" fill="#7BAF9B"/><path d="M 69 23 H 38 a 15 15 0 0 0 0 30 h 20 a 15 15 0 0 1 0 30 H 15" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/></svg><span class="cap">24</span></span>
+        <span class="step"><svg width="16" height="16" viewBox="0 0 96 96"><circle cx="83" cy="23" r="7" fill="#7BAF9B"/><path d="M 69 23 H 38 a 15 15 0 0 0 0 30 h 20 a 15 15 0 0 1 0 30 H 15" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/></svg><span class="cap">16 · favicon</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONCEPT C ============ -->
+  <section class="concept">
+    <div class="concept-head"><span class="concept-num">C</span><h2>The Sign-off</h2></div>
+    <p class="story">
+      A check built from two shift bars: the short ink bar is the roster handing up, the long green
+      sweep is the approval. <strong>"Nothing posts without your sign-off" as a mark.</strong>
+      The safest and most conventional; strongest as an app-icon tile, weakest at being ownable.
+    </p>
+    <div class="panels">
+      <div>
+        <div class="panel light">
+          <svg width="150" height="150" viewBox="0 0 96 96"><path d="M 20 54 L 40 72" fill="none" stroke="#1A2332" stroke-width="16" stroke-linecap="round"/><path d="M 40 72 L 78 26" fill="none" stroke="#2D5A4A" stroke-width="16" stroke-linecap="round"/></svg>
+        </div>
+        <p class="panel-cap">Primary · on ivory</p>
+      </div>
+      <div>
+        <div class="panel dark">
+          <svg width="150" height="150" viewBox="0 0 96 96"><rect x="8" y="8" width="80" height="80" rx="20" fill="#2D5A4A"/><path d="M 26 54 L 42 68" fill="none" stroke="#FAF7F2" stroke-width="13" stroke-linecap="round"/><path d="M 42 68 L 72 30" fill="none" stroke="#FAF7F2" stroke-width="13" stroke-linecap="round"/></svg>
+        </div>
+        <p class="panel-cap">App-icon tile · green</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="lockup">
+        <svg width="38" height="38" viewBox="0 0 96 96"><path d="M 20 54 L 40 72" fill="none" stroke="#1A2332" stroke-width="16" stroke-linecap="round"/><path d="M 40 72 L 78 26" fill="none" stroke="#2D5A4A" stroke-width="16" stroke-linecap="round"/></svg>
+        <span class="name">SimpleScheduleAI<span class="dot">.</span></span>
+      </div>
+      <div class="sizes">
+        <span class="step"><svg width="48" height="48" viewBox="0 0 96 96"><path d="M 20 54 L 40 72" fill="none" stroke="#1A2332" stroke-width="16" stroke-linecap="round"/><path d="M 40 72 L 78 26" fill="none" stroke="#2D5A4A" stroke-width="16" stroke-linecap="round"/></svg><span class="cap">48</span></span>
+        <span class="step"><svg width="32" height="32" viewBox="0 0 96 96"><path d="M 20 54 L 40 72" fill="none" stroke="#1A2332" stroke-width="16" stroke-linecap="round"/><path d="M 40 72 L 78 26" fill="none" stroke="#2D5A4A" stroke-width="16" stroke-linecap="round"/></svg><span class="cap">32</span></span>
+        <span class="step"><svg width="24" height="24" viewBox="0 0 96 96"><path d="M 20 54 L 40 72" fill="none" stroke="#1A2332" stroke-width="16" stroke-linecap="round"/><path d="M 40 72 L 78 26" fill="none" stroke="#2D5A4A" stroke-width="16" stroke-linecap="round"/></svg><span class="cap">24</span></span>
+        <span class="step"><svg width="16" height="16" viewBox="0 0 96 96"><path d="M 20 54 L 40 72" fill="none" stroke="#1A2332" stroke-width="16" stroke-linecap="round"/><path d="M 40 72 L 78 26" fill="none" stroke="#2D5A4A" stroke-width="16" stroke-linecap="round"/></svg><span class="cap">16 · favicon</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONCEPT D ============ -->
+  <section class="concept">
+    <div class="concept-head"><span class="concept-num">D</span><h2>The Handoff</h2></div>
+    <p class="story">
+      Two shift bars interlocking: day hands to night, night hands back to day.
+      <strong>Continuity of coverage — the thing a 25-bed hospital actually buys.</strong>
+      The counterform hints at an S without spelling it. Quietest of the four.
+    </p>
+    <div class="panels">
+      <div>
+        <div class="panel light">
+          <svg width="150" height="150" viewBox="0 0 96 96"><path d="M 24 28 H 60 a 16 16 0 0 1 16 16 v 10" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/><path d="M 72 68 H 36 a 16 16 0 0 1 -16 -16 v -10" fill="none" stroke="#2D5A4A" stroke-width="14" stroke-linecap="round"/></svg>
+        </div>
+        <p class="panel-cap">Primary · on ivory</p>
+      </div>
+      <div>
+        <div class="panel dark">
+          <svg width="150" height="150" viewBox="0 0 96 96"><path d="M 24 28 H 60 a 16 16 0 0 1 16 16 v 10" fill="none" stroke="#FAF7F2" stroke-width="14" stroke-linecap="round"/><path d="M 72 68 H 36 a 16 16 0 0 1 -16 -16 v -10" fill="none" stroke="#7BAF9B" stroke-width="14" stroke-linecap="round"/></svg>
+        </div>
+        <p class="panel-cap">Reversed · on ink</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="lockup">
+        <svg width="38" height="38" viewBox="0 0 96 96"><path d="M 24 28 H 60 a 16 16 0 0 1 16 16 v 10" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/><path d="M 72 68 H 36 a 16 16 0 0 1 -16 -16 v -10" fill="none" stroke="#2D5A4A" stroke-width="14" stroke-linecap="round"/></svg>
+        <span class="name">SimpleScheduleAI<span class="dot">.</span></span>
+      </div>
+      <div class="sizes">
+        <span class="step"><svg width="48" height="48" viewBox="0 0 96 96"><path d="M 24 28 H 60 a 16 16 0 0 1 16 16 v 10" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/><path d="M 72 68 H 36 a 16 16 0 0 1 -16 -16 v -10" fill="none" stroke="#2D5A4A" stroke-width="14" stroke-linecap="round"/></svg><span class="cap">48</span></span>
+        <span class="step"><svg width="32" height="32" viewBox="0 0 96 96"><path d="M 24 28 H 60 a 16 16 0 0 1 16 16 v 10" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/><path d="M 72 68 H 36 a 16 16 0 0 1 -16 -16 v -10" fill="none" stroke="#2D5A4A" stroke-width="14" stroke-linecap="round"/></svg><span class="cap">32</span></span>
+        <span class="step"><svg width="24" height="24" viewBox="0 0 96 96"><path d="M 24 28 H 60 a 16 16 0 0 1 16 16 v 10" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/><path d="M 72 68 H 36 a 16 16 0 0 1 -16 -16 v -10" fill="none" stroke="#2D5A4A" stroke-width="14" stroke-linecap="round"/></svg><span class="cap">24</span></span>
+        <span class="step"><svg width="16" height="16" viewBox="0 0 96 96"><path d="M 24 28 H 60 a 16 16 0 0 1 16 16 v 10" fill="none" stroke="#1A2332" stroke-width="14" stroke-linecap="round"/><path d="M 72 68 H 36 a 16 16 0 0 1 -16 -16 v -10" fill="none" stroke="#2D5A4A" stroke-width="14" stroke-linecap="round"/></svg><span class="cap">16 · favicon</span></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h3>How to judge these</h3>
+    <ul>
+      <li><strong>Squint test:</strong> at the 16px step, can you still tell whose logo it is?</li>
+      <li><strong>Story test:</strong> would a DON get the idea without the caption?</li>
+      <li><strong>Company test:</strong> does it look at home next to the Fraunces wordmark, on ivory and on ink?</li>
+      <li><strong>Ownable test:</strong> could a competitor have shipped the same mark? (C is weakest here, B strongest.)</li>
+    </ul>
+    <p style="margin-top:18px">
+      All four are hand-drawn SVG — infinitely scalable, two colors max, no gradients.
+      Whichever wins gets a refinement pass (optical corrections, outlined wordmark, favicon/OG/app-icon exports, nav integration).
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
