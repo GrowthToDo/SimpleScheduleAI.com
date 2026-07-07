@@ -138,7 +138,7 @@ The market in 2026 splits cleanly into three tiers: enterprise platforms for lar
 
 ## How to Evaluate Nurse Scheduling Software in 2026?
 
-Evaluating nurse scheduling software in 2026 means starting with three questions before looking at feature lists: What is your bed count, because each tier requires a different tool? Do you want to manage scheduling yourself or hand it off? And what compliance requirements does your facility actually carry under [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), CMS, and any state-specific rules? The answers eliminate most platforms before you reach a demo. Vendor demos emphasize features; the real evaluation is fit.
+Evaluating nurse scheduling software in 2026 means starting with three questions before looking at feature lists: What is your bed count, because each tier requires a different tool? Do you want to manage scheduling yourself or hand it off? And what compliance requirements does your facility actually carry under [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), CMS, and any state-specific rules? The answers eliminate most platforms before you reach a demo. Vendor demos emphasize features; the real evaluation is fit. For the category-level version of that exercise, including the red flags that rule tools out before a shortlist, see our [medical scheduling software buyer guide](/blog/medical-scheduling-software-buyer-guide).
 
 ## What Is Your Bed Count and Staff Size?
 

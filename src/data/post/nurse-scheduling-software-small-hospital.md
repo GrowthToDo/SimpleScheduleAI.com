@@ -61,7 +61,7 @@ Shiftboard markets its workforce-scheduling platform to organizations ranging fr
 
 For a CAH administrator who finds platforms like this in a G2 or Capterra search, the practical result is the same. The category is priced and scoped for organizations many times their size, a pattern our [nurse scheduling software pricing](/blog/nurse-scheduling-software-pricing) guide walks through model by model. Finding that most tools in a category assume a workforce you do not have is a common experience for small-hospital administrators.
 
-A market built mostly of vendors scoped for hundreds or thousands of employees was not designed to serve CAHs. That is useful information when setting evaluation criteria.
+A market built mostly of vendors scoped for hundreds or thousands of employees was not designed to serve CAHs. That is useful information when setting evaluation criteria; our [medical scheduling software buyer guide](/blog/medical-scheduling-software-buyer-guide) turns it into a category map and a red-flag checklist you can run before any demo.
 
 ## What Features Do Enterprise Scheduling Platforms Assume That Critical Access Hospitals Don't Have?
 
