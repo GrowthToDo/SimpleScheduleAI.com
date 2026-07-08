@@ -196,6 +196,7 @@ No. Most mid-market scheduling platforms and managed services operate independen
 ## Sources
 
 1. CMS, Conditions of Participation: Critical Access Hospitals (42 CFR 485.635). https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals
+2. U.S. Department of Labor, Fact Sheet #54: The Health Care Industry and Calculating Overtime Pay. https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime
 
 ---
 
