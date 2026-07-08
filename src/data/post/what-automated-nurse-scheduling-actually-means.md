@@ -235,7 +235,7 @@ One honest limitation: Level 5 managed automation is not the right fit for hospi
 
 **Q: Does AI actually build nurse schedules automatically?**
 
-Some AI scheduling tools generate draft schedules from your roster and rules without requiring manual shift-by-shift assignment. Whether that draft requires significant correction depends on how well the system was configured for your specific facility. The distinction between maintaining that roster and generating the schedule from it is covered in [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software). At most self-serve platforms, AI assistance is at Level 3 (suggestions and constraint enforcement) rather than Level 4 (complete draft generation). Managed services deliver Level 4-5 by using a specialist to handle what the AI cannot.
+Some AI scheduling tools generate draft schedules from your [roster](/blog/what-is-nurse-rostering) and rules without requiring manual shift-by-shift assignment. Whether that draft requires significant correction depends on how well the system was configured for your specific facility. The distinction between maintaining that roster and generating the schedule from it is covered in [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software). At most self-serve platforms, AI assistance is at Level 3 (suggestions and constraint enforcement) rather than Level 4 (complete draft generation). Managed services deliver Level 4-5 by using a specialist to handle what the AI cannot.
 
 **Q: How long does it take before automated scheduling is actually reliable?**
 

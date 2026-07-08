@@ -23,7 +23,7 @@ metadata:
 
 Search "nurse rostering vs scheduling software" and almost every result tells you the two terms mean the same thing. In day-to-day vendor marketing, they often do: a tool sold as "nurse rostering software" and one sold as "nurse scheduling software" frequently describe overlapping feature sets. The operational reality underneath is less tidy.
 
-Rostering is the work of maintaining who you have, their roles, credentials, and availability. Scheduling is the work of assigning those people to specific shifts. At a 25-bed critical access hospital, one person usually does both the rostering and the scheduling, which is exactly why a tool that is strong on one and weak on the other can pass a demo and still fail you in the first month.
+[Rostering](/blog/what-is-nurse-rostering) is the work of maintaining who you have, their roles, credentials, and availability. Scheduling is the work of assigning those people to specific shifts. At a 25-bed critical access hospital, one person usually does both the rostering and the scheduling, which is exactly why a tool that is strong on one and weak on the other can pass a demo and still fail you in the first month.
 
 ## Key Takeaways
 

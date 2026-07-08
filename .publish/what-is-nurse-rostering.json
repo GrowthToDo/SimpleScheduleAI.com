@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-nurse-rostering",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-08T16:44:33.692Z",
+      "contentHash": "db5fd97f1fd025d1a626ff5026cd8aeec9cc8051dcff8da66914b6993479d509"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-08T16:44:34.998Z",
+      "contentHash": "db5fd97f1fd025d1a626ff5026cd8aeec9cc8051dcff8da66914b6993479d509"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-08T16:44:36.095Z",
+      "contentHash": "db5fd97f1fd025d1a626ff5026cd8aeec9cc8051dcff8da66914b6993479d509"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-08T16:44:36.179Z",
+      "contentHash": "db5fd97f1fd025d1a626ff5026cd8aeec9cc8051dcff8da66914b6993479d509"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-08T16:44:36.719Z",
+      "contentHash": "db5fd97f1fd025d1a626ff5026cd8aeec9cc8051dcff8da66914b6993479d509"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-08T16:44:36.719Z",
+      "contentHash": "db5fd97f1fd025d1a626ff5026cd8aeec9cc8051dcff8da66914b6993479d509"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-08T16:44:36.720Z",
+      "contentHash": "db5fd97f1fd025d1a626ff5026cd8aeec9cc8051dcff8da66914b6993479d509"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-08T16:45:13.846Z",
+      "contentHash": "a49b48f599b40e7642e1fc2dcd1137dadb647cf74677636b6d6bc184d22c75ea"
+    },
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "fable",
+      "setAt": "2026-07-08T16:45:14.458Z",
+      "contentHash": "a49b48f599b40e7642e1fc2dcd1137dadb647cf74677636b6d6bc184d22c75ea"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "fable-visual-check",
+      "setAt": "2026-07-08T16:45:15.184Z",
+      "contentHash": "a49b48f599b40e7642e1fc2dcd1137dadb647cf74677636b6d6bc184d22c75ea"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-08T16:45:15.826Z",
+      "contentHash": "a49b48f599b40e7642e1fc2dcd1137dadb647cf74677636b6d6bc184d22c75ea"
+    }
+  },
+  "overrides": []
+}
