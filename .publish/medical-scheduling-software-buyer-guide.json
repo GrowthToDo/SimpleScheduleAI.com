@@ -5,64 +5,64 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-07-07T16:32:53.746Z",
-      "contentHash": "9ecc7f38d96425ce61732144ff43ab14cd49da01f729ae4ed795ef17c7e826db"
+      "checkedAt": "2026-07-08T16:23:55.663Z",
+      "contentHash": "f56a96fb68411943189d2492540131205f390b180e3f34192d32b83cb8db7b11"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-07-07T16:32:59.255Z",
-      "contentHash": "9ecc7f38d96425ce61732144ff43ab14cd49da01f729ae4ed795ef17c7e826db"
+      "checkedAt": "2026-07-08T16:23:57.771Z",
+      "contentHash": "f56a96fb68411943189d2492540131205f390b180e3f34192d32b83cb8db7b11"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-07T16:33:00.826Z",
-      "contentHash": "9ecc7f38d96425ce61732144ff43ab14cd49da01f729ae4ed795ef17c7e826db"
+      "checkedAt": "2026-07-08T16:24:01.023Z",
+      "contentHash": "f56a96fb68411943189d2492540131205f390b180e3f34192d32b83cb8db7b11"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-07T16:33:01.036Z",
-      "contentHash": "9ecc7f38d96425ce61732144ff43ab14cd49da01f729ae4ed795ef17c7e826db"
+      "checkedAt": "2026-07-08T16:24:01.049Z",
+      "contentHash": "f56a96fb68411943189d2492540131205f390b180e3f34192d32b83cb8db7b11"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-07-07T16:33:01.594Z",
-      "contentHash": "9ecc7f38d96425ce61732144ff43ab14cd49da01f729ae4ed795ef17c7e826db"
+      "checkedAt": "2026-07-08T16:24:01.160Z",
+      "contentHash": "f56a96fb68411943189d2492540131205f390b180e3f34192d32b83cb8db7b11"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-07-07T16:33:01.595Z",
-      "contentHash": "9ecc7f38d96425ce61732144ff43ab14cd49da01f729ae4ed795ef17c7e826db"
+      "checkedAt": "2026-07-08T16:24:01.160Z",
+      "contentHash": "f56a96fb68411943189d2492540131205f390b180e3f34192d32b83cb8db7b11"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-07-07T16:33:01.600Z",
-      "contentHash": "9ecc7f38d96425ce61732144ff43ab14cd49da01f729ae4ed795ef17c7e826db"
+      "checkedAt": "2026-07-08T16:24:01.161Z",
+      "contentHash": "f56a96fb68411943189d2492540131205f390b180e3f34192d32b83cb8db7b11"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-07-07T16:32:07.286Z",
-      "contentHash": "ea0f1909ea8ae7a3d63f67392ba6fe543da0d23f863f91c3af53d81bf898efaa"
+      "setBy": "fable-reconfirm-founder-feedback-pass",
+      "setAt": "2026-07-08T16:24:20.778Z",
+      "contentHash": "025236c3e97f4391b4fb8596f34e2fa25891a11de905a541440442fae3ebf517"
     },
     "factCheck": {
       "value": "NOT_REQUIRED",
       "setBy": "fable",
-      "setAt": "2026-07-07T16:32:09.838Z",
-      "contentHash": "ea0f1909ea8ae7a3d63f67392ba6fe543da0d23f863f91c3af53d81bf898efaa"
+      "setAt": "2026-07-08T16:24:21.420Z",
+      "contentHash": "025236c3e97f4391b4fb8596f34e2fa25891a11de905a541440442fae3ebf517"
     },
     "imageEyeball": {
       "value": "OK",
       "setBy": "fable-visual-check",
-      "setAt": "2026-07-07T16:32:11.998Z",
-      "contentHash": "ea0f1909ea8ae7a3d63f67392ba6fe543da0d23f863f91c3af53d81bf898efaa"
+      "setAt": "2026-07-08T16:24:22.098Z",
+      "contentHash": "025236c3e97f4391b4fb8596f34e2fa25891a11de905a541440442fae3ebf517"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-07-07T16:32:13.603Z",
-      "contentHash": "ea0f1909ea8ae7a3d63f67392ba6fe543da0d23f863f91c3af53d81bf898efaa"
+      "setAt": "2026-07-08T16:24:22.800Z",
+      "contentHash": "025236c3e97f4391b4fb8596f34e2fa25891a11de905a541440442fae3ebf517"
     },
     "indexNow": {
       "value": "DONE",

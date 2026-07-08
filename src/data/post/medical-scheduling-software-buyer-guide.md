@@ -21,7 +21,7 @@ metadata:
 
 ## Key Takeaways
 
-- Medical scheduling software is purpose-built for clinical environments and handles compliance, credentials, and callout coverage that generic tools cannot.
+- Medical scheduling software is purpose-built for clinical environments and handles [compliance](/blog/how-to-stay-cms-compliant-nurse-scheduling), credentials, and [callout coverage](/blog/after-hours-callout-coverage-small-hospitals) that generic tools cannot.
 - Four main categories exist: self-serve platforms, enterprise WFM suites, shift marketplaces, and AI-native scheduling services, each solving a different problem at different facility scales.
 - Small hospitals should prioritize implementation burden, compliance coverage, and callout handling above feature count.
 - Red flags include IT-dependent onboarding, no role-qualification rules, enterprise-only pricing, and no callout workflow.
@@ -70,9 +70,9 @@ At a critical access hospital, a scheduling gap is not an inconvenience, it is a
 
 **Self-serve scheduling platforms** give a nurse manager a web interface to build schedules, track availability, and manage shift trades. The manager does the work; the software provides structure and guardrails. Appropriate for hospitals with a technically comfortable nurse manager who has 4-6 hours per week to operate the system.
 
-**Enterprise workforce management suites** (UKG, API Healthcare) go beyond scheduling into time-and-attendance, HR analytics, payroll integration, and predictive staffing models. Built for 200-bed health systems. Implementation often runs well into six figures before licensing fees. Categorically over-engineered for a 25-bed hospital.
+**Enterprise workforce management suites** ([UKG](/blog/ukg-alternatives-small-hospitals), API Healthcare) go beyond scheduling into time-and-attendance, HR analytics, payroll integration, and predictive staffing models. Built for 200-bed health systems. Implementation often runs well into six figures before licensing fees. Categorically over-engineered for a 25-bed hospital.
 
-**Healthcare-specific shift marketplaces** (ShiftMed, Clipboard Health) focus on filling open shifts with per-diem or agency nurses. They solve coverage gaps from external labor, not how to optimize scheduling your core staff. They can complement a scheduling platform but should not replace one.
+**Healthcare-specific shift marketplaces** (ShiftMed, Clipboard Health) focus on filling open shifts with [per-diem](/blog/what-is-per-diem-nursing) or agency nurses. They solve coverage gaps from external labor, not how to optimize scheduling your core staff. They can complement a scheduling platform but should not replace one.
 
 **AI-native scheduling services** (SimpleScheduleAI) are not software platforms the hospital operates. The AI builds the schedule, our scheduling team checks it, and the nurse manager approves the output. The hospital never runs a tool; it reviews finished schedules.
 
@@ -101,7 +101,7 @@ At a critical access hospital, a scheduling gap is not an inconvenience, it is a
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="align-top py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">3. Callout handling</td>
         <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Ask, "Walk me through a nurse calling out at 5am." What does the system do?</td>
-        <td class="align-top py-3 text-slate-700 dark:text-slate-300">Callout coverage consumes more manager time than any other scheduling task</td>
+        <td class="align-top py-3 text-slate-700 dark:text-slate-300">A callout is unplanned, off-hours, and has a deadline measured in hours; the software either helps in that moment or it does not</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="align-top py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">4. Overtime visibility</td>
@@ -121,7 +121,7 @@ At a critical access hospital, a scheduling gap is not an inconvenience, it is a
 
 Several patterns reliably indicate that a medical scheduling software vendor is targeting large health systems and has retrofitted small hospital pricing as an afterthought:
 
-**Pricing below 50 beds is not available.** Most enterprise WFM vendors do not publish pricing for facilities under 100 beds because they do not meaningfully serve them. If a vendor cannot give you a clear number for a 25-bed facility, their pricing model was not designed for you.
+**Pricing below 50 beds is not available.** Most enterprise WFM vendors [do not publish pricing](/blog/nurse-scheduling-software-pricing) for facilities under 100 beds because they do not meaningfully serve them. If a vendor cannot give you a clear number for a 25-bed facility, their pricing model was not designed for you.
 
 **Implementation requires an IT project.** If onboarding documentation mentions "EHR integration configuration," "SSO setup," or "server-side data migration," the platform was designed for health systems with IT departments. A CAH nurse manager should be able to start producing schedules within two weeks without involving any technical staff.
 
@@ -137,7 +137,7 @@ Most of the four categories ask a small hospital to buy a tool and then supply t
 
 For a critical access hospital, that distinction is the whole decision. A self-serve platform can be an excellent fit when a nurse manager is comfortable with software and has four to six hours a week to run it. When that time does not exist, the same platform becomes shelfware, a license nobody opens because the manager is already covering callouts by phone. The service model matters most precisely where scheduling bandwidth is thinnest, which is the common state at a 25-bed facility with no dedicated staffing coordinator.
 
-Coverage rules are built into the schedule logic per facility: minimum staffing per shift, credentialed roles where they are required, and each nurse's running hours checked against the applicable FLSA overtime thresholds so a callout does not quietly push someone into unplanned overtime. When a nurse calls out, the replacement shortlist is generated from eligible, available staff rather than from whoever is easiest to reach at 5am. You can walk the full sequence on our [how the scheduling process works](/how-it-works) page.
+Coverage rules are built into the schedule logic per facility: minimum staffing per shift, credentialed roles where they are required, and each nurse's running hours checked against the applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) so a callout does not quietly push someone into unplanned overtime. When a nurse calls out, the replacement shortlist is generated from eligible, available staff rather than from whoever is easiest to reach at 5am. You can walk the full sequence on our [how the scheduling process works](/how-it-works) page.
 
 One honest limitation: SimpleScheduleAI is built for Texas critical access hospitals, and it is not the right fit for a large multi-unit health system that already runs an enterprise WFM suite with a dedicated staffing office. If your facility has the IT staff and the workforce-management specialists to configure and maintain a UKG or Infor deployment, that infrastructure is a genuine advantage, and a managed service is solving a problem you may not have. We are direct about that during a call rather than selling into a poor fit.
 
@@ -147,7 +147,7 @@ Category labels only get you to a shortlist. To separate a tool that will actual
 
 1. **Score against the five priorities above, not the feature grid.** Rank implementation burden, compliance coverage, callout handling, overtime visibility, and support model in the order they matter to your facility, then judge each vendor on those five. A tool that wins on feature count but loses on implementation burden is the wrong tool for a short-staffed hospital.
 2. **Make the vendor run your worst Tuesday, not their best demo.** Hand them a real scenario: two nurses out, only one charge-qualified nurse left for nights, and a holiday weekend to cover. Watch what the system does. A canned demo hides exactly the friction you will live with daily.
-3. **Ask who does the setup work and get it in writing.** "Easy onboarding" from a vendor and 40 hours of data entry for your nurse manager are frequently the same sentence. Confirm who enters staff data, availability, and credentials, and how long it takes before the first live schedule.
+3. **Ask who does the setup work and get it in writing.** When a vendor promises easy onboarding, ask: easy for whom? The phrase often means the data entry has quietly moved to your nurse manager, one roster row at a time. Confirm who enters staff data, availability, and qualifications, and how long it takes before the first live schedule.
 4. **Total the real annual cost.** Add licensing, implementation, and the manager hours the tool still consumes each week. A cheaper license that leaves a manager spending six hours a week is often more expensive than a service that returns most of those hours.
 5. **Confirm the exit path.** Ask how you export your schedule history and staff data if you leave. A vendor confident in the product will answer plainly; a vendor that stalls is telling you something.
 
