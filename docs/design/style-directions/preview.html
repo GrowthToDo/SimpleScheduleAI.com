@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SimpleScheduleAI — 6 style directions</title>
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link href="https://api.fontshare.com/v2/css?f[]=sentient@600,700&f[]=general-sans@400,500,600&f[]=zodiak@700&f[]=supreme@400,500&f[]=clash-display@600&f[]=synonym@400,500&f[]=gambetta@600,700&f[]=ranade@400,500&f[]=erode@600&f[]=author@400,500&f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #101216; color: #e8e6df; font-family: 'Satoshi', system-ui, sans-serif; padding: 56px 24px 96px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .intro h1 { font-family: 'Sentient', Georgia, serif; font-weight: 600; font-size: 38px; letter-spacing: -0.01em; }
+  .intro p { color: rgba(232,230,223,0.6); max-width: 62ch; margin-top: 12px; line-height: 1.6; }
+  .intro .num { color: rgba(232,230,223,0.4); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+
+  .board { margin-top: 56px; border-radius: 18px; overflow: hidden; background: var(--bg); color: var(--ink); }
+  .board-head { padding: 26px 34px 0; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+  .board-head .tag { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  .board-head .meta { font-size: 12px; opacity: 0.55; }
+  .board-name { font-family: var(--display); font-size: 30px; padding: 6px 34px 0; font-weight: 600; }
+  .board-story { padding: 8px 34px 0; font-size: 14px; opacity: 0.7; max-width: 64ch; line-height: 1.55; }
+
+  .board-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 0; margin-top: 24px; border-top: 1px solid var(--line); }
+  @media (max-width: 800px) { .board-grid { grid-template-columns: 1fr; } }
+
+  .hero-cell { padding: 34px; border-right: 1px solid var(--line); }
+  @media (max-width: 800px) { .hero-cell { border-right: none; border-bottom: 1px solid var(--line); } }
+  .eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 600; display: flex; align-items: center; gap: 10px; }
+  .eyebrow::before { content: ''; width: 26px; height: 1px; background: var(--accent); }
+  .hero-cell h2 { font-family: var(--display); font-size: 34px; line-height: 1.12; font-weight: 600; margin-top: 14px; letter-spacing: -0.01em; }
+  .hero-cell .sub { font-family: var(--body); margin-top: 14px; font-size: 15.5px; line-height: 1.6; opacity: 0.78; max-width: 46ch; }
+  .btns { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-a { background: var(--accent); color: var(--bg); font-family: var(--body); font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: var(--radius); }
+  .btn-b { border: 1px solid var(--ink-40); color: var(--ink); font-family: var(--body); font-weight: 500; font-size: 14px; padding: 12px 22px; border-radius: var(--radius); }
+  .side-cell { display: flex; flex-direction: column; }
+  .swatches { display: flex; }
+  .swatch { flex: 1; height: 56px; position: relative; }
+  .swatch span { position: absolute; bottom: 5px; left: 7px; font-size: 9px; letter-spacing: 0.04em; opacity: 0.85; mix-blend-mode: difference; color: #fff; }
+  .fonts { padding: 18px 26px; border-top: 1px solid var(--line); font-size: 13px; line-height: 1.7; opacity: 0.85; }
+  .fonts b { font-family: var(--display); font-weight: 600; font-size: 16px; }
+  .fonts i { font-family: var(--body); font-style: normal; }
+
+  .callout { margin: 0 26px 22px; }
+  .blog-snip { padding: 0 26px 26px; margin-top: auto; }
+  .blog-snip h3 { font-family: var(--display); font-size: 17px; font-weight: 600; }
+  .blog-snip p { font-family: var(--body); font-size: 13.5px; line-height: 1.65; opacity: 0.75; margin-top: 6px; }
+  .blog-snip a { color: var(--accent); font-family: var(--body); font-size: 13.5px; font-weight: 500; }
+
+  .verdict { padding: 16px 34px 26px; font-size: 13px; opacity: 0.6; border-top: 1px solid var(--line); font-family: var(--body); }
+  .verdict b { opacity: 1; }
+
+  /* ---------- Direction tokens ---------- */
+  .d1 { --bg:#faf6ef; --ink:#232b36; --ink-40:rgba(35,43,54,.4); --line:rgba(35,43,54,.12); --accent:#2a5d57; --accent2:#c4694a; --display:'Sentient',serif; --body:'General Sans',sans-serif; --radius:10px; }
+  .d2 { --bg:#f5f0e6; --ink:#171a1e; --ink-40:rgba(23,26,30,.4); --line:rgba(23,26,30,.14); --accent:#7e3231; --accent2:#b98a3e; --display:'Zodiak',serif; --body:'Supreme',sans-serif; --radius:2px; }
+  .d3 { --bg:#eeebe4; --ink:#1c3654; --ink-40:rgba(28,54,84,.4); --line:rgba(28,54,84,.14); --accent:#1c3654; --accent2:#dfa038; --display:'Clash Display',sans-serif; --body:'Synonym',sans-serif; --radius:6px; }
+  .d4 { --bg:#efe6d4; --ink:#3c2f21; --ink-40:rgba(60,47,33,.4); --line:rgba(60,47,33,.14); --accent:#9a4b32; --accent2:#435c4f; --display:'Gambetta',serif; --body:'Ranade',sans-serif; --radius:8px; }
+  .d5 { --bg:#f2f5f5; --ink:#2a3138; --ink-40:rgba(42,49,56,.4); --line:rgba(42,49,56,.11); --accent:#34495c; --accent2:#8fb3a3; --display:'Erode',serif; --body:'Author',sans-serif; --radius:14px; }
+  .d6 { --bg:#161b22; --ink:#edede6; --ink-40:rgba(237,237,230,.35); --line:rgba(237,237,230,.12); --accent:#e2a93b; --accent2:#7fa98c; --display:'Cabinet Grotesk',sans-serif; --body:'Satoshi',sans-serif; --radius:8px; }
+  .d6 .btn-a { color: #161b22; }
+
+  /* per-direction callout idioms */
+  .co-rule { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 14px 2px; }
+  .co-rule .lab { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .co-rule p, .co-notice p, .co-tab p, .co-card p, .co-panel p, .co-term p { font-family: var(--body); font-size: 13px; line-height: 1.6; margin-top: 6px; opacity: 0.85; }
+  .co-notice { border-top: 3px double var(--ink); padding: 12px 2px 0; }
+  .co-notice .lab { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .co-tab { border: 1px solid var(--ink-40); display: flex; }
+  .co-tab .n { background: var(--accent); color: var(--bg); font-family: var(--display); padding: 12px 14px; font-size: 15px; }
+  .co-tab div:last-child { padding: 10px 14px; }
+  .co-tab .lab { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; }
+  .co-card { border: 1.5px dashed var(--accent2); border-radius: 8px; padding: 12px 16px; }
+  .co-card .lab { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .co-panel { background: rgba(143,179,163,.16); border-radius: 14px; padding: 14px 18px; }
+  .co-panel .lab { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .co-term { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .co-term .lab { display: block; background: rgba(226,169,59,.12); color: var(--accent); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; padding: 7px 14px; border-bottom: 1px solid var(--line); }
+  .co-term p { padding: 10px 14px 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="intro">
+    <p class="num">SimpleScheduleAI · Design directions · Pick one</p>
+    <h1>Six ways this site could look</h1>
+    <p>
+      Every board shows the same things in a different system: hero with the eyebrow-chip
+      replaced, the two-button CTA rule, a new callout idiom (no more amber boxes), and a blog
+      snippet. All fonts are from fontshare.com. Copy is placeholder-safe: nothing here changes
+      what we claim, only how it looks. Pick one; it becomes docs/design/DESIGN.md and every
+      page and blog post conforms to it.
+    </p>
+  </div>
+
+  <!-- 1 -->
+  <section class="board d1">
+    <div class="board-head"><span class="tag">Direction 1</span><span class="meta">Sentient + General Sans · refero archetype: editorial SaaS (Linear-calm, Stripe-clean)</span></div>
+    <p class="board-name">Warm Editorial II</p>
+    <p class="board-story">The evolution, not a revolution: keeps the warm paper feel you already have, swaps the Claude-tell fonts and shifts green toward petrol with a clay counterpoint. Least migration risk.</p>
+    <div class="board-grid">
+      <div class="hero-cell">
+        <p class="eyebrow">For 25-bed hospitals</p>
+        <h2>Stop losing nurses to scheduling stress</h2>
+        <p class="sub">The AI builds your schedule, our scheduling team checks it, you approve. No IT.</p>
+        <div class="btns"><span class="btn-a">Get your first schedule</span><span class="btn-b">Try the interactive demo</span></div>
+      </div>
+      <div class="side-cell">
+        <div class="swatches">
+          <div class="swatch" style="background:#232b36"><span>#232B36</span></div>
+          <div class="swatch" style="background:#2a5d57"><span>#2A5D57</span></div>
+          <div class="swatch" style="background:#c4694a"><span>#C4694A</span></div>
+          <div class="swatch" style="background:#9db8a6"><span>#9DB8A6</span></div>
+          <div class="swatch" style="background:#faf6ef; border:1px solid rgba(35,43,54,.15)"><span style="color:#232b36; mix-blend-mode:normal">#FAF6EF</span></div>
+        </div>
+        <p class="fonts"><b>Sentient</b> headings · <i>General Sans body, the quiet workhorse.</i></p>
+        <div class="callout co-rule"><span class="lab">Our take</span><p>The category a tool sits in matters less than one question: after you sign, who does the weekly work?</p></div>
+        <div class="blog-snip"><h3>What CMS §485.635 actually requires</h3><p>A registered nurse must provide or supervise the nursing care of each patient, and the schedule is the evidence a surveyor reads.</p><a>Read the compliance guide →</a></div>
+      </div>
+    </div>
+    <p class="verdict"><b>Risk: lowest.</b> Effort: token swap + font swap; layouts survive. If the current site is 70% right, this is the 100% version of it.</p>
+  </section>
+
+  <!-- 2 -->
+  <section class="board d2">
+    <div class="board-head"><span class="tag">Direction 2</span><span class="meta">Zodiak + Supreme · refero archetype: print record (FT / The Economist product pages)</span></div>
+    <p class="board-name">The Ledger</p>
+    <p class="board-story">A hospital schedule is a document of record; the site looks like one. Ruled lines instead of cards, oxblood and brass on cream, zero rounded-pill anything. Ages beautifully, impossible to mistake for a template.</p>
+    <div class="board-grid">
+      <div class="hero-cell">
+        <p class="eyebrow">Texas Critical Access Hospitals</p>
+        <h2>The schedule is done. You just approve it.</h2>
+        <p class="sub">The AI builds your schedule, our scheduling team checks it, you approve. No IT.</p>
+        <div class="btns"><span class="btn-a">Get your first schedule</span><span class="btn-b">Try the interactive demo</span></div>
+      </div>
+      <div class="side-cell">
+        <div class="swatches">
+          <div class="swatch" style="background:#171a1e"><span>#171A1E</span></div>
+          <div class="swatch" style="background:#7e3231"><span>#7E3231</span></div>
+          <div class="swatch" style="background:#b98a3e"><span>#B98A3E</span></div>
+          <div class="swatch" style="background:#4c5a63"><span>#4C5A63</span></div>
+          <div class="swatch" style="background:#f5f0e6; border:1px solid rgba(23,26,30,.15)"><span style="color:#171a1e; mix-blend-mode:normal">#F5F0E6</span></div>
+        </div>
+        <p class="fonts"><b>Zodiak</b> headings · <i>Supreme body, print-newsletter clarity.</i></p>
+        <div class="callout co-notice"><span class="lab">Notice · Our take</span><p>The category a tool sits in matters less than one question: after you sign, who does the weekly work?</p></div>
+        <div class="blog-snip"><h3>What CMS §485.635 actually requires</h3><p>A registered nurse must provide or supervise the nursing care of each patient, and the schedule is the evidence a surveyor reads.</p><a>Read the compliance guide →</a></div>
+      </div>
+    </div>
+    <p class="verdict"><b>Risk: medium.</b> Strong authority signal for compliance-heavy content; needs discipline so it doesn't feel old-fashioned on the interactive demo.</p>
+  </section>
+
+  <!-- 3 -->
+  <section class="board d3">
+    <div class="board-head"><span class="tag">Direction 3</span><span class="meta">Clash Display + Synonym · refero archetype: institutional modern (Mercury, Ramp)</span></div>
+    <p class="board-name">Civic Modern</p>
+    <p class="board-story">Confident, structured, public-institution navy with one marigold accent. Reads as infrastructure a CEO can defend to a board. Strong grids, numbered sections, flat surfaces.</p>
+    <div class="board-grid">
+      <div class="hero-cell">
+        <p class="eyebrow">Nurse scheduling, run for you</p>
+        <h2>Coverage holds. Rules hold. Every week.</h2>
+        <p class="sub">The AI builds your schedule, our scheduling team checks it, you approve. No IT.</p>
+        <div class="btns"><span class="btn-a">Get your first schedule</span><span class="btn-b">Try the interactive demo</span></div>
+      </div>
+      <div class="side-cell">
+        <div class="swatches">
+          <div class="swatch" style="background:#1c3654"><span>#1C3654</span></div>
+          <div class="swatch" style="background:#dfa038"><span>#DFA038</span></div>
+          <div class="swatch" style="background:#5e7a81"><span>#5E7A81</span></div>
+          <div class="swatch" style="background:#c9c3b6"><span>#C9C3B6</span></div>
+          <div class="swatch" style="background:#eeebe4; border:1px solid rgba(28,54,84,.15)"><span style="color:#1c3654; mix-blend-mode:normal">#EEEBE4</span></div>
+        </div>
+        <p class="fonts"><b>Clash Display</b> headings · <i>Synonym body, engineered neutrality.</i></p>
+        <div class="callout co-tab"><div class="n">§</div><div><span class="lab">Our take</span><p>The category a tool sits in matters less than one question: after you sign, who does the weekly work?</p></div></div>
+        <div class="blog-snip"><h3>What CMS §485.635 actually requires</h3><p>A registered nurse must provide or supervise the nursing care of each patient, and the schedule is the evidence a surveyor reads.</p><a>Read the compliance guide →</a></div>
+      </div>
+    </div>
+    <p class="verdict"><b>Risk: medium.</b> The most "enterprise-credible" of the six; watch that it doesn't drift cold — the marigold and photography carry the warmth.</p>
+  </section>
+
+  <!-- 4 -->
+  <section class="board d4">
+    <div class="board-head"><span class="tag">Direction 4</span><span class="meta">Gambetta + Ranade · refero archetype: crafted warmth (Basecamp, Wildbit)</span></div>
+    <p class="board-name">Field Notes</p>
+    <p class="board-story">Rural-warm and human: wheat paper, barn red, pine green, serif with personality. Built to carry the small hand-drawn illustrations you asked for. The furthest from big-tech SaaS.</p>
+    <div class="board-grid">
+      <div class="hero-cell">
+        <p class="eyebrow">Built after 30+ nurse-manager interviews</p>
+        <h2>Sunday nights are yours again</h2>
+        <p class="sub">The AI builds your schedule, our scheduling team checks it, you approve. No IT.</p>
+        <div class="btns"><span class="btn-a">Get your first schedule</span><span class="btn-b">Try the interactive demo</span></div>
+      </div>
+      <div class="side-cell">
+        <div class="swatches">
+          <div class="swatch" style="background:#3c2f21"><span>#3C2F21</span></div>
+          <div class="swatch" style="background:#9a4b32"><span>#9A4B32</span></div>
+          <div class="swatch" style="background:#435c4f"><span>#435C4F</span></div>
+          <div class="swatch" style="background:#d9a441"><span>#D9A441</span></div>
+          <div class="swatch" style="background:#efe6d4; border:1px solid rgba(60,47,33,.15)"><span style="color:#3c2f21; mix-blend-mode:normal">#EFE6D4</span></div>
+        </div>
+        <p class="fonts"><b>Gambetta</b> headings · <i>Ranade body, friendly and legible.</i></p>
+        <div class="callout co-card"><span class="lab">Our take</span><p>The category a tool sits in matters less than one question: after you sign, who does the weekly work?</p></div>
+        <div class="blog-snip"><h3>What CMS §485.635 actually requires</h3><p>A registered nurse must provide or supervise the nursing care of each patient, and the schedule is the evidence a surveyor reads.</p><a>Read the compliance guide →</a></div>
+      </div>
+    </div>
+    <p class="verdict"><b>Risk: medium-high.</b> Most differentiated and most human; requires investing in a consistent illustration set or it falls flat.</p>
+  </section>
+
+  <!-- 5 -->
+  <section class="board d5">
+    <div class="board-head"><span class="tag">Direction 5</span><span class="meta">Erode + Author · refero archetype: modern health (Oscar, Headway)</span></div>
+    <p class="board-name">Clinical Calm</p>
+    <p class="board-story">Healthcare-modern without the cliché: misty neutrals, slate blue, sage, soft geometry. Feels like a calm shift at 3 AM. The gentlest read for a burned-out DON.</p>
+    <div class="board-grid">
+      <div class="hero-cell">
+        <p class="eyebrow">First schedule in under 2 weeks</p>
+        <h2>A post-ready schedule, every cycle</h2>
+        <p class="sub">The AI builds your schedule, our scheduling team checks it, you approve. No IT.</p>
+        <div class="btns"><span class="btn-a">Get your first schedule</span><span class="btn-b">Try the interactive demo</span></div>
+      </div>
+      <div class="side-cell">
+        <div class="swatches">
+          <div class="swatch" style="background:#2a3138"><span>#2A3138</span></div>
+          <div class="swatch" style="background:#34495c"><span>#34495C</span></div>
+          <div class="swatch" style="background:#8fb3a3"><span>#8FB3A3</span></div>
+          <div class="swatch" style="background:#c9dae3"><span>#C9DAE3</span></div>
+          <div class="swatch" style="background:#f2f5f5; border:1px solid rgba(42,49,56,.12)"><span style="color:#2a3138; mix-blend-mode:normal">#F2F5F5</span></div>
+        </div>
+        <p class="fonts"><b>Erode</b> headings · <i>Author body, soft-spoken and clear.</i></p>
+        <div class="callout co-panel"><span class="lab">Our take</span><p>The category a tool sits in matters less than one question: after you sign, who does the weekly work?</p></div>
+        <div class="blog-snip"><h3>What CMS §485.635 actually requires</h3><p>A registered nurse must provide or supervise the nursing care of each patient, and the schedule is the evidence a surveyor reads.</p><a>Read the compliance guide →</a></div>
+      </div>
+    </div>
+    <p class="verdict"><b>Risk: low-medium.</b> On-category and soothing; the risk is blandness — the Erode serif and photography choices have to carry the character.</p>
+  </section>
+
+  <!-- 6 -->
+  <section class="board d6">
+    <div class="board-head"><span class="tag">Direction 6</span><span class="meta">Cabinet Grotesk + Satoshi · refero archetype: dark product (Linear, Vercel)</span></div>
+    <p class="board-name">Slate &amp; Signal</p>
+    <p class="board-story">Dark-first, product-forward: the site looks like the software. Charcoal slate, one amber signal, moss support. Strongest fit if /product becomes the main story after launch.</p>
+    <div class="board-grid">
+      <div class="hero-cell">
+        <p class="eyebrow">21 rule checks · 3 drafts · browser only</p>
+        <h2>The nurse schedule builds itself</h2>
+        <p class="sub">The AI builds it, 21 rule checks validate it, you approve it. In the browser, nothing to install.</p>
+        <div class="btns"><span class="btn-a">Try the interactive demo</span><span class="btn-b">Book a call with our team</span></div>
+      </div>
+      <div class="side-cell">
+        <div class="swatches">
+          <div class="swatch" style="background:#161b22; border:1px solid rgba(237,237,230,.15)"><span>#161B22</span></div>
+          <div class="swatch" style="background:#e2a93b"><span>#E2A93B</span></div>
+          <div class="swatch" style="background:#7fa98c"><span>#7FA98C</span></div>
+          <div class="swatch" style="background:#3a4453"><span>#3A4453</span></div>
+          <div class="swatch" style="background:#edede6"><span style="color:#161b22; mix-blend-mode:normal">#EDEDE6</span></div>
+        </div>
+        <p class="fonts"><b>Cabinet Grotesk</b> headings · <i>Satoshi body, crisp on dark.</i></p>
+        <div class="callout co-term"><span class="lab">Our take</span><p>The category a tool sits in matters less than one question: after you sign, who does the weekly work?</p></div>
+        <div class="blog-snip"><h3>What CMS §485.635 actually requires</h3><p>A registered nurse must provide or supervise the nursing care of each patient, and the schedule is the evidence a surveyor reads.</p><a>Read the compliance guide →</a></div>
+      </div>
+    </div>
+    <p class="verdict"><b>Risk: high for THIS audience.</b> Beautiful for product-led SaaS, but a 60-year-old CAH CEO reads dark sites as "startup." Blog readability on dark needs care. Consider only if the product motion takes over.</p>
+  </section>
+
+  <p style="margin-top:48px; font-size:13px; opacity:.55; line-height:1.7;">
+    How to choose: open this on your phone too. The winner should pass three tests —
+    (1) would a DON trust it at 2 AM, (2) does it look like nobody else in the nurse-scheduling SERP,
+    (3) can 50 blog posts live in it without restyling every table. My recommendation:
+    <b>1 (Warm Editorial II)</b> if you want the safest strong move, <b>4 (Field Notes)</b> if you
+    want to be unmistakable and are willing to invest in illustrations.
+  </p>
+</div>
+</body>
+</html>
