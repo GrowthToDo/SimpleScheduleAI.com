@@ -7,7 +7,7 @@ title: 'What Is Nurse Rostering? How It Differs from Scheduling'
 excerpt: >
   Rostering and scheduling get used as synonyms until something breaks: a stale roster quietly
   builds a schedule that fails a survey. This glossary entry draws the line between the two and
-  shows why the roster is the record your schedule is only as good as.
+  shows why every schedule is only as good as the roster behind it.
 image: https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Glossary
 postType: glossary
@@ -69,11 +69,11 @@ Most scheduling software products sold to hospitals include both rostering and s
 
 Inaccurate rosters are one of the most common sources of downstream scheduling problems at small hospitals. The consequences are operational and regulatory.
 
-**Compliance gaps:** If the roster does not accurately reflect which nurses hold current RN licensure, a schedule built from it can leave shifts without the coverage the nursing-services condition at [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) requires: a registered nurse must provide, or assign to other personnel, the nursing care of each patient. During a CMS survey, the scheduling record, including who was rostered for each shift, is reviewed against personnel records.
+**Compliance gaps:** If the roster does not accurately reflect which nurses hold current RN licensure, a schedule built from it can leave shifts without the coverage the nursing-services condition at [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) requires: a registered nurse must provide, or assign to other personnel, the nursing care of each patient. During a CMS survey, the scheduling record, including who was rostered for each shift, is reviewed against personnel records; our guide to [CMS compliant nurse scheduling](/blog/how-to-stay-cms-compliant-nurse-scheduling) walks through what surveyors ask for.
 
-**Overtime risk:** Without cumulative hours tracking in the roster, nurse managers cannot see who is approaching the applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) until overtime has already been triggered. Roster-level hour tracking enables proactive load balancing before overtime costs accumulate.
+**Overtime risk:** Without cumulative hours tracking in the roster, nurse managers cannot see who is approaching the applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) until overtime has already been triggered. Roster-level hour tracking enables proactive load balancing before overtime costs accumulate; for Texas facilities the stakes are covered in our [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah) guide.
 
-**Fairness and retention:** When nurses who had left hospital jobs were asked what would bring them back, adequate staffing topped the list: 65% of the nonretired nurses surveyed in a [JAMA Network Open research letter](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2844818) named it. Fair distribution is the part of staffing a roster can prove: one that tracks cumulative weekend, night, and holiday assignments makes fairness visible and defensible, both to staff and in retention conversations.
+**Fairness and retention:** When nurses who had left hospital jobs were asked what would bring them back, adequate staffing topped the list: 65% of the nonretired nurses surveyed in a [JAMA Network Open research letter](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2844818) named it. Fair distribution is the part of staffing a roster can prove: one that tracks cumulative weekend, night, and holiday assignments makes fairness visible and defensible, both to staff and in the retention conversations our [rural nurse retention strategies](/blog/nurse-retention-strategies-rural-hospital) post covers.
 
 **Per diem pool management:** For CAHs that rely on per diem nurses as their primary flexible coverage mechanism, the roster is where that pool lives. Maintaining accurate availability records, tracking per diem call acceptance rates, and ensuring the pool is large enough to cover anticipated gaps are rostering functions with direct scheduling consequences.
 
@@ -86,7 +86,7 @@ The terms are often used interchangeably, and most software tools handle both. T
 Most nurse scheduling platforms include rostering functions. Options used by small and mid-size hospitals include products from Shift Admin, NurseGrid, and similar vendors. SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling): we maintain the working roster your schedule is built from, the staff list, roles, availability windows, and running hours, and build the schedule from it, rather than handing your manager another system to learn. Licensure and certification verification stays with your HR records; the roster reflects what your facility confirms. One honest boundary: it is built for Texas critical access hospitals, and a large system with a dedicated staffing office needs a different class of tool.
 
 **Q: How do CAHs manage nurse rostering without a dedicated HR system?**
-Most CAHs use a combination of spreadsheets and their payroll system to maintain roster data. The nurse manager typically owns the scheduling spreadsheet, while HR owns the employment record. Per diem availability is often tracked informally via text or phone. This fragmentation is a frequent source of rostering errors at CAHs, and the gap that a done-for-you scheduling service is positioned to close.
+Most CAHs use a combination of [spreadsheets](/blog/nurse-scheduling-software-vs-excel) and their payroll system to maintain roster data. The nurse manager typically owns the scheduling spreadsheet, while HR owns the employment record. Per diem availability is often tracked informally via text or phone. This fragmentation is a frequent source of rostering errors at CAHs, and the gap that a done-for-you scheduling service is positioned to close.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Want the roster to become a posted schedule without the spreadsheet session?</p>
