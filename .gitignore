@@ -38,3 +38,5 @@ pnpm-lock.yaml
 # unused QA artifacts (kept on disk, out of the repo)
 public/qa-checklist.png
 public/quality-checks.png
+# Local-only style-board preview (served by dev server, never deployed)
+public/design-preview.html

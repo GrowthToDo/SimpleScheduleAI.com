@@ -12,6 +12,8 @@ import '@fontsource-variable/fraunces';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proof of Work | SimpleScheduleAI</title>
     <meta name="robots" content="noindex" />
+    <meta name="description" content="Proof-of-work slide deck: what SimpleScheduleAI has built and shipped." />
+    <link rel="canonical" href="https://simplescheduleai.com/proof-of-work/slides" />
     <style>
       *,
       *::before,
@@ -313,8 +315,10 @@ import '@fontsource-variable/fraunces';
         border-radius: 50%;
         border: 1px solid var(--accent);
         background:
-          linear-gradient(45deg, transparent 46%, var(--accent) 46%, var(--accent) 54%, transparent 54%) no-repeat 7px 9px / 5px 5px,
-          linear-gradient(-50deg, transparent 44%, var(--accent) 44%, var(--accent) 56%, transparent 56%) no-repeat 9.5px 7px / 8px 9px;
+          linear-gradient(45deg, transparent 46%, var(--accent) 46%, var(--accent) 54%, transparent 54%) no-repeat 7px
+            9px / 5px 5px,
+          linear-gradient(-50deg, transparent 44%, var(--accent) 44%, var(--accent) 56%, transparent 56%) no-repeat
+            9.5px 7px / 8px 9px;
       }
 
       /* quote slides */
@@ -545,14 +549,14 @@ import '@fontsource-variable/fraunces';
           <div class="section-label reveal">Proof of Work · 6 July 2026</div>
           <h1 class="reveal d1">The work<br />so far.</h1>
           <p class="lead reveal d2" style="font-size: 24px; max-width: 56ch;">
-            We deliver <strong>finished nurse schedules</strong> to small US hospitals as an outcome. A nursing
-            director hands us a roster and constraints; they get back a compliant, fair, fully staffed schedule.
+            We deliver <strong>finished nurse schedules</strong> to small US hospitals as an outcome. A nursing director
+            hands us a roster and constraints; they get back a compliant, fair, fully staffed schedule.
           </p>
           <div class="stage reveal d3">
             <b>Where we are, plainly:</b>
             <span>
-              Pre-revenue. No design partner signed yet. A live pursuit at a ~70-nurse hospital in North Carolina.
-              The rest of this deck is what has been done to date.
+              Pre-revenue. No design partner signed yet. A live pursuit at a ~70-nurse hospital in North Carolina. The
+              rest of this deck is what has been done to date.
             </span>
           </div>
         </section>
@@ -565,9 +569,9 @@ import '@fontsource-variable/fraunces';
           <p class="kicker reveal d1">Search data</p>
           <h2 class="reveal d2">The idea came from <em class="accent">keyword research.</em></h2>
           <p class="lead reveal d3">
-            In <strong>December 2025</strong> we saw real search volume for small-hospital nurse scheduling and for
-            alternatives to the incumbent platforms. Small US hospitals still build schedules by hand in Excel, and a
-            director of nursing can spend a <strong>full day every week</strong> on it.
+            In <strong>December 2025</strong> we saw real search volume for small-hospital nurse scheduling and for alternatives
+            to the incumbent platforms. Small US hospitals still build schedules by hand in Excel, and a director of nursing
+            can spend a <strong>full day every week</strong> on it.
           </p>
           <div class="pending reveal d4">
             <span class="tag">Data pending</span>
@@ -584,8 +588,8 @@ import '@fontsource-variable/fraunces';
           <h2 class="reveal d2">What we heard in <em class="accent">discovery calls.</em></h2>
           <p class="lead reveal d2" style="margin-top: 14px;">
             Conversations with nursing directors, nurse managers, and staffing agency owners across North Carolina,
-            Texas, New Jersey, and New Hampshire. Three pain points came up consistently. The product handles all
-            three, verified in a live demo.
+            Texas, New Jersey, and New Hampshire. Three pain points came up consistently. The product handles all three,
+            verified in a live demo.
           </p>
           <div class="grid cols-3 reveal d3">
             <div class="card">
@@ -618,8 +622,8 @@ import '@fontsource-variable/fraunces';
           <blockquote class="reveal d2">It's a <span class="hl">complete thing</span> already.</blockquote>
           <div class="attribution reveal d3">
             <span>
-              <b>Sharmila Krishnaswamy</b> · nursing operations, Mantravya (North Carolina) · after a full live product
-              demo, 19 June 2026. She is now actively bringing us into her hospital network.
+              <b>Sharmila Krishnaswamy</b> · nursing operations, Mantravya (North Carolina) · after a full live product demo,
+              19 June 2026. She is now actively bringing us into her hospital network.
             </span>
           </div>
         </section>
@@ -632,12 +636,18 @@ import '@fontsource-variable/fraunces';
           <p class="kicker reveal d1">Product</p>
           <h2 class="reveal d2">What we've <em class="accent">built.</em></h2>
           <div class="stats reveal d3">
-            <div class="stat"><div class="num">22</div><p>Scheduling rule evaluators, hard and soft, each covered by tests</p></div>
+            <div class="stat">
+              <div class="num">22</div><p>Scheduling rule evaluators, hard and soft, each covered by tests</p>
+            </div>
             <div class="stat"><div class="num">3</div><p>Schedule variants per run: balanced, fairness, cost</p></div>
             <div class="stat"><div class="num">~200</div><p>Automated tests on the rules engine and optimizer</p></div>
             <div class="stat"><div class="num">97</div><p>Shipped versions since 12 June 2026</p></div>
-            <div class="stat"><div class="num">50<small>k</small></div><p>Lines of TypeScript, Excel in to Excel out</p></div>
-            <div class="stat"><div class="num">1 <small>min</small></div><p>From Excel roster to a generated, compliant schedule</p></div>
+            <div class="stat">
+              <div class="num">50<small>k</small></div><p>Lines of TypeScript, Excel in to Excel out</p>
+            </div>
+            <div class="stat">
+              <div class="num">1 <small>min</small></div><p>From Excel roster to a generated, compliant schedule</p>
+            </div>
           </div>
         </section>
 
@@ -648,9 +658,7 @@ import '@fontsource-variable/fraunces';
           <div class="section-label">03 / What we built</div>
           <p class="kicker reveal d1">Scope decisions</p>
           <h2 class="reveal d2">What we chose <em class="accent">not</em> to build.</h2>
-          <p class="lead reveal d2" style="margin-top: 14px;">
-            Each of these was cut based on what buyers told us.
-          </p>
+          <p class="lead reveal d2" style="margin-top: 14px;">Each of these was cut based on what buyers told us.</p>
           <div class="grid cols-3 reveal d3">
             <div class="card">
               <h3>Self-scheduling</h3>
@@ -661,7 +669,10 @@ import '@fontsource-variable/fraunces';
             </div>
             <div class="card">
               <h3>Epic / Cerner integration</h3>
-              <p>Small hospitals don't run these systems. Excel is the real interchange format, so Excel is what we built for.</p>
+              <p>
+                Small hospitals don't run these systems. Excel is the real interchange format, so Excel is what we built
+                for.
+              </p>
             </div>
             <div class="card">
               <h3>Mobile app</h3>
@@ -700,7 +711,9 @@ import '@fontsource-variable/fraunces';
           </div>
           <div class="pending reveal d4">
             <span class="tag">Data pending</span>
-            <p>Search Console trend, Bing data, AI-engine visibility log (ChatGPT, Perplexity, AI Overviews, Copilot).</p>
+            <p>
+              Search Console trend, Bing data, AI-engine visibility log (ChatGPT, Perplexity, AI Overviews, Copilot).
+            </p>
           </div>
         </section>
 
@@ -713,8 +726,8 @@ import '@fontsource-variable/fraunces';
           <h2 class="reveal d2">An unsolicited<br /><em class="accent">acquisition inquiry.</em></h2>
           <p class="lead reveal d3">
             <span class="mono-date">16 June 2026.</span><br />
-            The CEO of a vertical-software acquirer emailed us cold. He had spent the year building an acquisition
-            thesis on nurse scheduling software, and found SimpleScheduleAI inside it.
+            The CEO of a vertical-software acquirer emailed us cold. He had spent the year building an acquisition thesis
+            on nurse scheduling software, and found SimpleScheduleAI inside it.
           </p>
           <div class="backers reveal d4">
             <span>Backed by Accel</span>
@@ -748,8 +761,8 @@ import '@fontsource-variable/fraunces';
           </blockquote>
           <div class="attribution reveal d3">
             <span>
-              He described our positioning back to us, unprompted. We are below their acquisition threshold today, so
-              we are treating this as validation and a relationship for later, not a deal.
+              He described our positioning back to us, unprompted. We are below their acquisition threshold today, so we
+              are treating this as validation and a relationship for later, not a deal.
             </span>
           </div>
         </section>

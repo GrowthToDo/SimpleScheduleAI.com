@@ -44,8 +44,11 @@
   }
 }
 
-/* ---- Motion system (see MotionScripts.astro for the markup contract) ---- */
-@media (prefers-reduced-motion: no-preference) {
+/* ---- Motion system (see MotionScripts.astro for the markup contract) ----
+   Desktop-only (min-width 1024px): on phones the hide-then-reveal pattern reads
+   as scroll lag (founder feedback 2026-07-07 item 6), so mobile renders
+   everything visible immediately. */
+@media (prefers-reduced-motion: no-preference) and (min-width: 1024px) {
   [data-reveal] {
     opacity: 0;
     transform: translateY(20px);

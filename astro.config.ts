@@ -25,6 +25,13 @@ export default defineConfig({
   site: 'https://simplescheduleai.com',
   output: 'static',
 
+  // Founder feedback 2026-07-07 item 5: pages should feel preloaded on click.
+  // 'viewport' fetches a page as soon as its link scrolls into view.
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'viewport',
+  },
+
   build: {
     inlineStylesheets: 'always',
   },
