@@ -120,7 +120,7 @@ Overtime checking, which threads through building, cover, and adjustments rather
 
 ## How SimpleScheduleAI Reduces Scheduling Time by Activity
 
-SimpleScheduleAI addresses the reducible activities directly.
+SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling) that addresses the reducible activities directly.
 
 **Schedule building:** The AI generates draft schedule options each cycle based on the facility's shift rules and compliance requirements, and our scheduling team checks every draft. The nurse manager's role becomes review and approval instead of a 4 to 6 hour construction session.
 
