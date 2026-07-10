@@ -147,6 +147,13 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11057102/ (DOI 10.1186/s12912-024-01949-2)
 - Verified: 2026-07-10 (full text fetched via PMC)
 
+### Florence admin-burden survey 2023 (Nursing in Practice)
+
+- Approved: snapshot survey of 222 NHS and social care managers across the UK, run by healthcare app Florence, September 2023, reported by Nursing in Practice (Jerome Smail, Oct 6, 2023). Most-cited time-consuming admin tasks: rota scheduling (43%), documentation and record-keeping (30%), speaking to agencies to secure cover staff (21%). 20% of respondents spent 7-8 hours a day on admin.
+- Wrong: reading the percentages as shares of TIME (they are shares of respondents citing the task); presenting it as independent academic research (vendor-run survey, attribute to Florence); applying UK agency-cover specifics to US CAHs beyond "securing cover is a major named admin task".
+- URL: https://www.nursinginpractice.com/latest-news/survey-uncovers-extent-of-healthcare-admin-burden/ (403-blocks non-browser fetches, use a browser UA)
+- Verified: 2026-07-10 (full text extracted)
+
 ### July 2026 nurse strikes (Nurse.org)
 
 - Approved facts (all from the single Nurse.org report, attribute to it, do not upgrade to independent verification): five actions July 3-13, 2026 across MI/MD/KS/MA/NY. MyMichigan Medical Center Alma (~178 nurses, Michigan Nurses Association, ULP strike July 3-6, pay offer 0%/1%/1%, 98% strike authorization); Ascension Saint Agnes Baltimore (~600, NNU, one-day July 6, cut staffing hours + unsafe floating, e.g. med-surg nurses assigned to newborns); Ascension Via Christi St. Francis + St. Joseph Wichita (~1,200, NNU, one-day July 6, workplace-violence protection central + safe staffing); Brigham and Women's + MGB Home Care Boston (~4,000 + ~450, Massachusetts Nurses Association, July 8, union calls it largest nurse/HCW strike in MA history, home-care arm 7 days); St. Charles Hospital Port Jefferson NY (~300, NYSNA, from July 13, >99% authorization, staffing ratios; Catholic Health denies).
