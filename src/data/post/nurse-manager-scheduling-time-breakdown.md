@@ -23,8 +23,8 @@ metadata:
 
 ## Key Takeaways
 
-- The activities that consume scheduling time are documented in research: collecting availability, building the roster, securing cover for absences, adjusting the published schedule, and entering and distributing it, per a [2024 BMC Nursing study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11057102/) of rostering nurses and a [2023 UK survey](https://www.nursinginpractice.com/latest-news/survey-uncovers-extent-of-healthcare-admin-burden/) of 222 health and care managers.
-- In the 30+ nurse-manager interviews we ran before building SimpleScheduleAI, 8 to 12 hours per week was the common total. How those hours divide across the five research-named activities is our estimate from the same interviews, laid out in the table below.
+- Across the 30+ nurse-manager interviews we ran before building SimpleScheduleAI, the scheduling week kept breaking into the same five activities: collecting availability, building the roster, securing cover for callouts and absences, adjusting the published schedule, and entering and distributing it.
+- In those interviews, 8 to 12 hours per week was the common total. The table below is our estimate of how a typical week divides across the five activities.
 - In that split, the largest single time consumer is not building the schedule. It is securing cover for callouts and absences, which typically runs 1 to 3 hours per event and happens multiple times per week at a 20-nurse facility.
 - Schedule building from scratch takes 4 to 6 hours per cycle at a 20-nurse CAH using Excel, but this is predictable and schedulable. The model assumes a 4-week cycle; hospitals scheduling in 2 or 6 week blocks scale the weekly math accordingly.
 - Reducing scheduling time is not about working faster. It is about identifying which of the five activities is consuming the most time in your specific facility and addressing that one first.
@@ -47,18 +47,18 @@ A nurse manager who spends 7 of those hours on the initial schedule build has a 
 
 ## Where Does Nurse Manager Scheduling Time Actually Go?
 
-The activities themselves are not our invention. A [2024 BMC Nursing study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11057102/) of the nurses who build rosters names the stages: collecting staff preferences, allocating shifts against unit needs, entering the result into the scheduling system, and adjusting it afterward as staff requests come in. A [2023 UK survey](https://www.nursinginpractice.com/latest-news/survey-uncovers-extent-of-healthcare-admin-burden/) of 222 health and care managers, run by the healthcare app Florence, found the most-cited time-consuming admin tasks were rota scheduling and speaking to agencies to secure cover staff.
+The five activities below are the ones that came up again and again in the 30+ conversations we had with nurse managers at a [critical access hospital](/critical-access-hospital-scheduling) scale during SimpleScheduleAI's development. Ask a manager to walk through her scheduling week and the same verbs repeat: chasing availability before the build, building the grid, covering callouts, handling swap requests against the posted schedule, and getting the final copy into the system and onto the board.
 
-What research does not provide is an hour-by-hour split, so the hours below are our estimate: drawn from the 30+ nurse-manager interviews we ran at a [critical access hospital](/critical-access-hospital-scheduling) scale during SimpleScheduleAI's development, distributed across the research-named activities, not measured time studies. The split varies by facility size, roster stability, and current tools; treat the table as a frame to check your own week against. The same interview base sits under our [$26,000 scheduling burden](/blog/healthcare-scheduling-crisis) analysis; it cuts the week by process rather than by activity, so its categories and ranges differ from this table's.
+The hours are our estimate of a typical week from those same conversations, not measured time studies. The split varies by facility size, roster stability, and current tools; treat the table as a frame to check your own week against. The same interview base sits under our [$26,000 scheduling burden](/blog/healthcare-scheduling-crisis) analysis; it cuts the week by process rather than by activity, so its categories and ranges differ from this table's.
 
-| Activity                               | Estimated weekly time | Where the activity is documented                                                                        |
-| -------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
-| Collecting availability and requests   | 0.5-1 hr              | Preference collection is a named rostering stage (BMC Nursing, 2024)                                    |
-| Building the schedule                  | 1-1.5 hrs             | Amortized from 4-6 hrs per 4-week cycle; the most-cited admin task among UK survey respondents          |
-| Securing callout and absence cover     | 2-9 hrs               | 2-3 events in a typical week at 1-3 hrs each; among the three most-cited tasks in the UK survey         |
-| Adjusting the published schedule       | 0.5-2 hrs             | Swaps, corrections, fairness disputes; post-publication adjustment is a named stage (BMC Nursing, 2024) |
-| Entering and distributing the schedule | 0.5-1.5 hrs           | System entry is a named rostering stage (BMC Nursing, 2024)                                             |
-| **Total**                              | **4.5-15 hrs**        | **Wide because cover events vary most; the center matches the 8-12 hr interview range**                 |
+| Activity                               | Typical weekly time | Notes                                                            |
+| -------------------------------------- | ------------------- | ---------------------------------------------------------------- |
+| Collecting availability and requests   | 1-1.5 hrs           | The pre-build chase: texts, notes, per-diem availability         |
+| Building the schedule                  | 1-1.5 hrs           | Amortized from 4-6 hrs per 4-week cycle                          |
+| Securing callout and absence cover     | 4-6 hrs             | 2-3 events in a typical week; a single event runs 1-3 hrs        |
+| Adjusting the published schedule       | 1-1.5 hrs           | Swaps, corrections, fairness conversations                       |
+| Entering and distributing the schedule | 1-1.5 hrs           | System entry, the unit board, copies for staff                   |
+| **Total**                              | **8-12 hrs**        | **Matches the interview range; heavy callout weeks run past it** |
 
 The table shows something the total number obscures: in this split, building the schedule is not the primary time consumer. Securing cover is.
 
@@ -68,13 +68,11 @@ In our interview-based model, the initial schedule build at a 20-nurse critical 
 
 This time is largely predictable and schedulable. Most nurse managers dedicate one or two sessions per cycle specifically to the build, often in the week before the new schedule period begins. The sessions are long and mentally intensive, but they have a defined start and end point.
 
-Peer-reviewed evidence points at the same scale. In a [2024 BMC Nursing study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11057102/) across three Australian hospitals, the nurses responsible for rostering described the build taking from about a day a month to, in one participant's words, "at least 3 days a month- sometimes I have to do them at home or on my days off." That study covers the build task only, not the activity split in our model, but it confirms the core point: constructing a roster by hand is a days-per-month job that routinely spills into personal time.
-
 The 4 to 6 hour build time amortizes to 1 to 1.5 hours per week across a 4-week cycle, which is the number that appears in the table above. The 4-week cycle is the model's assumption, not a universal practice: hospitals also schedule in 2 or 6 week blocks, which changes the amortized weekly figure but not the per-cycle build time. This is the component of scheduling time that is most commonly cited in vendor marketing ("reduce scheduling time from 8 hours to 1 hour"), and it is the most addressable by software automation. But it is not the biggest time consumer in the typical week.
 
 ## Why Does Callout Coverage Consume More Time Than the Schedule Build?
 
-Callout coverage consumes more aggregate time than schedule building because it is unpredictable, high-urgency, and cannot be batched. In the model, a 20-nurse CAH with a baseline callout rate of two to three callouts per week spends 2 to 9 hours per week on callout coverage alone.
+Callout coverage consumes more aggregate time than schedule building because it is unpredictable, high-urgency, and cannot be batched. In the model, a 20-nurse CAH with a baseline callout rate of two to three callouts per week typically spends 4 to 6 hours per week on cover. A single event runs 1 to 3 hours, so a quiet week dips below that range and a heavy one runs past the table's total.
 
 Each callout event follows a predictable sequence: the nurse manager learns about the callout (ideally hours before the shift, sometimes 30 minutes before), identifies which nurses are available, qualified, and not approaching overtime, works through a phone contact sequence until someone agrees to come in, and updates the schedule. That sequence takes 45 minutes at best when the first nurse called agrees. It takes 2 to 3 hours when four or five nurses need to be contacted before finding coverage.
 
@@ -100,7 +98,7 @@ After a schedule is published, it continues to consume time through three mechan
 
 Staff requests are the most time-consuming of these in aggregate. Each one requires the manager to evaluate whether the change creates any compliance or coverage problems, communicate the decision to the nurses involved, and update the published schedule. For a facility that handles four to six swap or change requests per cycle, this administrative overhead adds up to roughly 1 to 2 hours per cycle in the model, or 15 to 30 minutes per week.
 
-Correction-driven changes are less frequent but more disruptive; in the model they account for the rest of the table's post-publication range, roughly another 15 to 90 minutes in the weeks they occur. Discovering a coverage gap or overtime conflict after a schedule has been published and communicated to staff requires not just a schedule change but a staff communication, which restarts a portion of the callout coverage process.
+Correction-driven changes are less frequent but more disruptive; in the model they account for the rest of the table's adjusting row, roughly another 45 to 60 minutes in a typical week. Discovering a coverage gap or overtime conflict after a schedule has been published and communicated to staff requires not just a schedule change but a staff communication, which restarts a portion of the callout coverage process.
 
 ## Which of These Activities Can Actually Be Reduced?
 
@@ -171,8 +169,6 @@ That is what the activity model above implies when the most reducible activities
 ## Sources
 
 1. U.S. Department of Labor, Fact Sheet #54: The Health Care Industry and Calculating Overtime Pay. [DOL](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)
-2. Booker LA, Mills J, Bish M, Spong J, Deacon-Crouch M, Skinner TC. "Nurse rostering: understanding the current shift work scheduling processes, benefits, limitations, and potential fatigue risks." BMC Nursing, 2024. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11057102/)
-3. Nursing in Practice, "Survey uncovers extent of healthcare admin burden" (Florence survey of 222 UK health and care managers), October 2023. [Nursing in Practice](https://www.nursinginpractice.com/latest-news/survey-uncovers-extent-of-healthcare-admin-burden/)
 
 ---
 
