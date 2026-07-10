@@ -49,19 +49,19 @@ Here is what happened, what the wave looks like in total, and the detail most co
 
 All details below are from [Nurse.org's July 6, 2026 report](https://nurse.org/news/july-2026-nurse-strikes/), which tracked the five actions.
 
-| Hospital / system                                | Location           | Nurses | Dates                      | Core issues                                        |
-| ------------------------------------------------ | ------------------ | ------ | -------------------------- | -------------------------------------------------- |
-| MyMichigan Medical Center Alma                   | Alma, MI           | ~178   | July 3 to 6 (concluded)    | Unfair labor practice charges; pay offer of 0/1/1% |
-| Ascension Saint Agnes                            | Baltimore, MD      | ~600   | July 6, one day            | Cut staffing hours; unsafe floating between units  |
-| Ascension Via Christi St. Francis and St. Joseph | Wichita, KS        | ~1,200 | July 6, one day            | Workplace violence protection; safe staffing       |
-| Brigham and Women's Hospital + MGB Home Care     | Boston, MA         | ~4,450 | July 8 (home care: 7 days) | Staffing and patient care; wages; insurance costs  |
-| St. Charles Hospital (Catholic Health)           | Port Jefferson, NY | ~300   | From July 13               | Nurse-to-patient staffing; ratios not followed     |
+| Hospital / system                                | Location           | Nurses | Dates                      | Core issues                                                               |
+| ------------------------------------------------ | ------------------ | ------ | -------------------------- | ------------------------------------------------------------------------- |
+| MyMichigan Medical Center Alma                   | Alma, MI           | ~178   | July 3 to 6 (concluded)    | Unfair labor practice charges; no first-year raise in the final pay offer |
+| Ascension Saint Agnes                            | Baltimore, MD      | ~600   | July 6, one day            | Cut staffing hours; unsafe floating between units                         |
+| Ascension Via Christi St. Francis and St. Joseph | Wichita, KS        | ~1,200 | July 6, one day            | Workplace violence protection; safe staffing                              |
+| Brigham and Women's Hospital + MGB Home Care     | Boston, MA         | ~4,450 | July 8 (home care: 7 days) | Staffing and patient care; wages; insurance costs                         |
+| St. Charles Hospital (Catholic Health)           | Port Jefferson, NY | ~300   | From July 13               | Nurse-to-patient staffing; ratios not followed                            |
 
 The details differ. Alma was an unfair labor practice strike with National Labor Relations Board charges attached. Baltimore nurses described being floated into units they were not trained for, such as medical-surgical nurses assigned to newborns and new mothers. Wichita's central demand was protection from workplace violence. Boston is a contract fight at the largest scale. Port Jefferson nurses say required staffing ratios are routinely not followed, which the hospital denies.
 
 ## How Big Is the July Strike Wave in Total?
 
-Roughly 6,700 nurses and clinicians in ten days. That figure is our tally of the approximate counts in the Nurse.org report: about 178 in Alma, 600 in Baltimore, 1,200 in Wichita, 4,000 at Brigham and Women's plus about 450 MGB Home Care clinicians, and 300 in Port Jefferson. No single outlet headlined the combined number, but it is the figure that turns five local labor stories into one national staffing story.
+Roughly 6,700 nurses and clinicians in ten days. That figure is our tally of the approximate counts in the Nurse.org report: about 178 in Alma, 600 in Baltimore, 1,200 in Wichita, 4,000 at Brigham and Women's plus about 450 MGB Home Care clinicians, and 300 in Port Jefferson. Combined, it is the figure that turns five local labor stories into one national staffing story.
 
 The composition is as telling as the size. Three of the five actions are one-day strikes, the format designed to demonstrate resolve without abandoning patients, and the two Ascension walkouts happened at hospitals 1,100 miles apart on the same day. One action, Alma, was an unfair labor practice strike rather than a contract strike, with a 98 percent authorization vote behind it. St. Charles authorized at more than 99 percent. Whatever else these numbers say, they do not describe close votes or reluctant walkouts.
 
@@ -69,7 +69,7 @@ The composition is as telling as the size. Three of the five actions are one-day
 
 No, and that is the detail worth sitting with. Two of the five strikes are in states that already legislated nurse staffing. Massachusetts mandates a nurse-to-patient ratio in the ICU. New York's 2021 law requires hospital staffing committees and sets critical-care requirements. Yet Boston is facing what the union calls the largest nurse and health care worker strike in state history with staffing at the core, and the Port Jefferson nurses' central claim is that required ratios are routinely not followed.
 
-Staffing laws still matter, but July shows their limit. Legislation moved the fight without ending it: from whether staffing rules should exist to whether hospitals actually meet them shift by shift. A ratio on paper and a ratio at 3 a.m. on a Tuesday are different things, and the gap between them is where both the strikes and the lawsuits now live. Our [nurse staffing ratios analysis](/blog/nurse-staffing-ratios-critical-access-hospital) maps the full state-by-state landscape, including the committee-and-disclosure model Texas uses instead of ratios.
+Staffing laws still matter, but July shows their limit. Legislation moved the fight without ending it: from whether staffing rules should exist to whether hospitals actually meet them shift by shift. A ratio on paper and a ratio at 3 a.m. on a Tuesday are different things, and the gap between them is where both the strikes and the lawsuits now live. Our [nurse staffing ratios analysis](/blog/nurse-staffing-ratios-critical-access-hospital) maps the state-by-state landscape.
 
 For hospital leaders, the practical reading is that compliance is now an operational problem, not a legislative one. The schedule, not the statute, is where a staffing commitment is kept or broken.
 
@@ -131,10 +131,10 @@ Each had its own specifics: unfair labor practice charges in Michigan, unsafe fl
 
 ## Sources
 
-1. Nurse.org, "Five Nurse Strikes Are Set for July: Why Thousands of Nurses Are Walking Out," Jay Wiley, July 6, 2026. https://nurse.org/news/july-2026-nurse-strikes/
-2. National Nurses United, "New data shows there is a nurse retention crisis, not a nurse shortage," May 26, 2026. https://www.nationalnursesunited.org/press/new-data-shows-there-is-a-nurse-retention-crisis-not-a-nurse-shortage
-3. Lasater, McHugh, Muir. "Organizational Factors to Reattract Nurses to Hospital Employment." JAMA Network Open, February 2026. https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2844818
-4. 2025 NSI National Health Care Retention and RN Staffing Report. https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf
+1. Nurse.org, "Five Nurse Strikes Are Set for July: Why Thousands of Nurses Are Walking Out," Jay Wiley, July 6, 2026. [Nurse.org](https://nurse.org/news/july-2026-nurse-strikes/)
+2. National Nurses United, "New data shows there is a nurse retention crisis, not a nurse shortage," May 26, 2026. [NNU press release](https://www.nationalnursesunited.org/press/new-data-shows-there-is-a-nurse-retention-crisis-not-a-nurse-shortage)
+3. Lasater, McHugh, Muir. "Organizational Factors to Reattract Nurses to Hospital Employment." JAMA Network Open, February 2026. [JAMA Network](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2844818)
+4. 2025 NSI National Health Care Retention and RN Staffing Report. [NSI (PDF)](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)
 
 ---
 
