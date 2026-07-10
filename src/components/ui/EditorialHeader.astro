@@ -20,7 +20,7 @@ const { number, tagline, title, subtitle, isDark = false, class: className = 'mb
       <span
         class:list={[
           'hidden lg:block absolute -top-[5.25rem] left-0 font-heading text-[5.5rem] leading-none select-none pointer-events-none',
-          isDark ? 'text-[#7BAF9B]/15' : 'text-primary/10',
+          isDark ? 'text-[#8FB3A3]/15' : 'text-primary/10',
         ]}
         aria-hidden="true"
       >
@@ -34,7 +34,7 @@ const { number, tagline, title, subtitle, isDark = false, class: className = 'mb
         <p
           class:list={[
             'mb-3 text-xs font-medium uppercase tracking-[0.18em]',
-            isDark ? 'text-[#7BAF9B]' : 'text-primary',
+            isDark ? 'text-[#8FB3A3]' : 'text-primary',
           ]}
           set:html={tagline}
         />
@@ -43,7 +43,7 @@ const { number, tagline, title, subtitle, isDark = false, class: className = 'mb
     <h2
       class:list={[
         'font-semibold leading-tight tracking-tight font-heading text-3xl sm:text-4xl text-left',
-        isDark ? 'text-[#FAF7F2]' : 'text-default',
+        isDark ? 'text-[#F2F5F5]' : 'text-default',
       ]}
       set:html={title}
     />
@@ -52,7 +52,7 @@ const { number, tagline, title, subtitle, isDark = false, class: className = 'mb
     subtitle && (
       <div class="lg:col-span-5">
         <p
-          class:list={['text-lg leading-relaxed lg:pb-1', isDark ? 'text-[#FAF7F2]/60' : 'text-muted']}
+          class:list={['text-lg leading-relaxed lg:pb-1', isDark ? 'text-[#F2F5F5]/60' : 'text-muted']}
           set:html={subtitle}
         />
       </div>

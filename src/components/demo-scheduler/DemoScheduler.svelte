@@ -733,14 +733,14 @@
   /* Vars live on the wrapper so the picker + toast (rendered as siblings of
      .ssa-demo, e.g. position:fixed) resolve them too — not just the widget. */
   .ssa-root {
-    --green: var(--aw-color-primary, #2d5a4a);
-    --green-2: var(--aw-color-secondary, #234739);
-    --ink: #1a2332;
-    --ivory: var(--aw-color-bg-page, #faf7f2);
-    --line: rgb(26 35 50 / 12%);
+    --green: var(--aw-color-primary, #34495c);
+    --green-2: var(--aw-color-secondary, #2A3B4C);
+    --ink: #2a3138;
+    --ivory: var(--aw-color-bg-page, #f2f5f5);
+    --line: rgb(42 49 56 / 12%);
     --amber: #b45309;
     --red: #b91c1c;
-    font-family: var(--aw-font-sans, 'Inter Variable', Inter, system-ui, sans-serif);
+    font-family: var(--aw-font-sans, 'Author-Variable', Inter, system-ui, sans-serif);
     color: var(--ink);
   }
   .ssa-demo {
@@ -767,13 +767,13 @@
     color: var(--amber);
   }
   .ssa-head h2 {
-    font-family: var(--aw-font-heading, 'Fraunces Variable', Fraunces, Georgia, serif);
+    font-family: var(--aw-font-heading, 'Erode-Variable', Fraunces, Georgia, serif);
     font-size: clamp(1.5rem, 4vw, 2.1rem);
     line-height: 1.15;
     margin: 0.75rem 0 0.5rem;
   }
   .ssa-sub {
-    color: rgb(26 35 50 / 70%);
+    color: rgb(42 49 56 / 70%);
     max-width: 40rem;
     margin: 0 auto;
     font-size: 0.95rem;
@@ -794,7 +794,7 @@
     height: 13px;
     border-radius: 50%;
     background: #dc2626;
-    border: 2px solid #faf7f2;
+    border: 2px solid #f2f5f5;
     animation: ssa-cta-pulse 1.2s ease-in-out infinite;
     pointer-events: none;
   }
@@ -846,7 +846,7 @@
     }
   }
   .ssa-hint {
-    color: rgb(26 35 50 / 60%);
+    color: rgb(42 49 56 / 60%);
     font-size: 0.85rem;
     margin-top: 0.75rem;
   }
@@ -867,7 +867,7 @@
     transition: background 0.15s, border-color 0.15s, transform 0.05s;
   }
   .ssa-btn:hover {
-    background: rgb(26 35 50 / 4%);
+    background: rgb(42 49 56 / 4%);
   }
   .ssa-btn:active {
     transform: translateY(1px);
@@ -922,7 +922,7 @@
     align-items: center;
     gap: 0.35rem;
     font-size: 0.82rem;
-    color: rgb(26 35 50 / 45%);
+    color: rgb(42 49 56 / 45%);
     transition: color 0.3s;
   }
   .ssa-checklist li.done {
@@ -989,7 +989,7 @@
     flex: 1;
   }
   .ssa-alert span {
-    color: rgb(26 35 50 / 75%);
+    color: rgb(42 49 56 / 75%);
   }
   .ssa-alert.ssa-warn {
     background: color-mix(in srgb, var(--amber) 8%, #fff);
@@ -1015,7 +1015,7 @@
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.02em;
-    color: rgb(26 35 50 / 60%);
+    color: rgb(42 49 56 / 60%);
     text-transform: uppercase;
   }
   .ssa-col-head span {
@@ -1061,7 +1061,7 @@
     border-right: 0;
   }
   .ssa-cell:hover:not(:disabled) {
-    background: rgb(45 90 74 / 4%);
+    background: rgb(52 73 92 / 4%);
   }
   .ssa-cell:focus-visible {
     outline: 2px solid var(--green);
@@ -1086,7 +1086,7 @@
     font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: rgb(26 35 50 / 50%);
+    color: rgb(42 49 56 / 50%);
   }
   .ssa-chips {
     display: flex;
@@ -1104,8 +1104,8 @@
     line-height: 1.3;
   }
   .tone-charge {
-    background: #dfe9e4;
-    color: #1f4538;
+    background: #dfe7ec;
+    color: #30455a;
   }
   .tone-rn {
     background: #eef2ff;
@@ -1122,7 +1122,7 @@
   .ssa-empty {
     background: transparent;
     border: 1px dashed var(--line);
-    color: rgb(26 35 50 / 45%);
+    color: rgb(42 49 56 / 45%);
     font-weight: 500;
   }
   .ssa-chip-lvl {
@@ -1177,7 +1177,7 @@
   }
   .ssa-team-head h3 {
     margin: 0;
-    font-family: var(--aw-font-heading, 'Fraunces Variable', Fraunces, Georgia, serif);
+    font-family: var(--aw-font-heading, 'Erode-Variable', Fraunces, Georgia, serif);
     font-size: 1.05rem;
   }
   .ssa-fair {
@@ -1224,8 +1224,8 @@
     white-space: nowrap;
   }
   .ssa-badge2.charge {
-    background: #dfe9e4;
-    color: #1f4538;
+    background: #dfe7ec;
+    color: #30455a;
   }
   .ssa-badge2.lpn {
     background: #fef3c7;
@@ -1246,7 +1246,7 @@
   .ssa-rbar {
     height: 7px;
     border-radius: 999px;
-    background: rgb(26 35 50 / 8%);
+    background: rgb(42 49 56 / 8%);
     overflow: hidden;
   }
   .ssa-rfill {
@@ -1259,12 +1259,12 @@
     text-align: right;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
-    color: rgb(26 35 50 / 70%);
+    color: rgb(42 49 56 / 70%);
   }
   .ssa-team-foot {
     margin: 0.6rem 0 0;
     font-size: 0.72rem;
-    color: rgb(26 35 50 / 50%);
+    color: rgb(42 49 56 / 50%);
   }
 
   /* what you'd actually get — bridge to the managed service */
@@ -1285,7 +1285,7 @@
     padding: 0.8rem 0.9rem;
     font-size: 0.88rem;
     line-height: 1.45;
-    color: rgb(26 35 50 / 80%);
+    color: rgb(42 49 56 / 80%);
   }
   .ssa-deliver-item strong {
     color: var(--ink);
@@ -1310,12 +1310,12 @@
     padding: 1.5rem;
   }
   .ssa-convert h3 {
-    font-family: var(--aw-font-heading, 'Fraunces Variable', Fraunces, Georgia, serif);
+    font-family: var(--aw-font-heading, 'Erode-Variable', Fraunces, Georgia, serif);
     font-size: 1.25rem;
     margin: 0 0 0.4rem;
   }
   .ssa-convert p {
-    color: rgb(26 35 50 / 70%);
+    color: rgb(42 49 56 / 70%);
     font-size: 0.92rem;
     margin: 0 auto 1rem;
     max-width: 34rem;
@@ -1357,7 +1357,7 @@
   .ssa-backdrop {
     position: fixed;
     inset: 0;
-    background: rgb(26 35 50 / 45%);
+    background: rgb(42 49 56 / 45%);
     z-index: 60;
   }
   .ssa-sheet {
@@ -1371,7 +1371,7 @@
     overflow: auto;
     background: #fff;
     border-radius: 0.9rem;
-    box-shadow: 0 24px 60px rgb(26 35 50 / 25%);
+    box-shadow: 0 24px 60px rgb(42 49 56 / 25%);
     padding: 1rem 1.1rem 1.2rem;
   }
   .ssa-sheet-head {
@@ -1384,14 +1384,14 @@
   .ssa-sheet-head h3 {
     font-size: 1.05rem;
     margin: 0;
-    font-family: var(--aw-font-heading, 'Fraunces Variable', Fraunces, Georgia, serif);
+    font-family: var(--aw-font-heading, 'Erode-Variable', Fraunces, Georgia, serif);
   }
   .ssa-x {
     border: 0;
     background: transparent;
     font-size: 1.1rem;
     cursor: pointer;
-    color: rgb(26 35 50 / 55%);
+    color: rgb(42 49 56 / 55%);
     padding: 0.2rem 0.4rem;
   }
   .ssa-x:focus-visible {
@@ -1399,7 +1399,7 @@
   }
   .ssa-tip {
     font-size: 0.82rem;
-    color: rgb(26 35 50 / 70%);
+    color: rgb(42 49 56 / 70%);
     background: var(--ivory);
     border-radius: 0.5rem;
     padding: 0.5rem 0.7rem;
@@ -1463,7 +1463,7 @@
     padding-left: 1.4rem;
   }
   .ssa-ok-reason {
-    color: rgb(26 35 50 / 65%);
+    color: rgb(42 49 56 / 65%);
   }
   .ssa-bad-reason {
     display: block;
@@ -1473,7 +1473,7 @@
     margin-top: 0.15rem;
   }
   .ssa-muted {
-    color: rgb(26 35 50 / 45%);
+    color: rgb(42 49 56 / 45%);
   }
   .ssa-cand-act {
     grid-area: act;
@@ -1485,13 +1485,13 @@
     bottom: 1.25rem;
     transform: translateX(-50%);
     z-index: 70;
-    background: #1a2332;
+    background: #2a3138;
     color: #fff;
     padding: 0.65rem 1rem;
     border-radius: 0.6rem;
     font-size: 0.85rem;
     max-width: calc(100vw - 2rem);
-    box-shadow: 0 12px 30px rgb(26 35 50 / 30%);
+    box-shadow: 0 12px 30px rgb(42 49 56 / 30%);
   }
 
   /* ── Mobile: stack the week into day cards ─────────────────────────────── */

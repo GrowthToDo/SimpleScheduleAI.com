@@ -1,19 +1,19 @@
 <script>
   import { onMount } from 'svelte';
 
-  const BLUE = 'rgb(45 90 74)'; /* brand forest green */
-  const BLUE_D = 'rgb(35 71 57)';
+  const BLUE = 'rgb(52 73 92)'; /* brand forest green */
+  const BLUE_D = 'rgb(42 59 76)';
 
   // Staff roster
   const S = {
-    mg: { name: 'Maria G.', role: 'RN', charge: true, bg: '#dfe9e4', fg: '#1f4538' },
-    jw: { name: 'James W.', role: 'RN', charge: true, bg: '#dfe9e4', fg: '#1f4538' },
-    ed: { name: 'Emily D.', role: 'RN', charge: false, bg: '#dfe9e4', fg: '#1f4538' },
-    mb: { name: 'Michael B.', role: 'RN', charge: false, bg: '#dfe9e4', fg: '#1f4538' },
-    sc: { name: 'Sarah C.', role: 'RN', charge: false, bg: '#dfe9e4', fg: '#1f4538' },
+    mg: { name: 'Maria G.', role: 'RN', charge: true, bg: '#dfe7ec', fg: '#30455a' },
+    jw: { name: 'James W.', role: 'RN', charge: true, bg: '#dfe7ec', fg: '#30455a' },
+    ed: { name: 'Emily D.', role: 'RN', charge: false, bg: '#dfe7ec', fg: '#30455a' },
+    mb: { name: 'Michael B.', role: 'RN', charge: false, bg: '#dfe7ec', fg: '#30455a' },
+    sc: { name: 'Sarah C.', role: 'RN', charge: false, bg: '#dfe7ec', fg: '#30455a' },
     jr: { name: 'Jessica R.', role: 'LPN', charge: false, bg: '#ede9fe', fg: '#5b21b6' },
     jt: { name: 'Jennifer W.', role: 'CNA', charge: false, bg: '#e2e8f0', fg: '#334155' },
-    aw: { name: 'Amanda W.', role: 'RN', charge: true, bg: '#dfe9e4', fg: '#1f4538' },
+    aw: { name: 'Amanda W.', role: 'RN', charge: true, bg: '#dfe7ec', fg: '#30455a' },
   };
 
   // 7-day schedule (Mon Jun 2 – Sun Jun 8 2026)
@@ -44,8 +44,8 @@
       rank: 1,
       id: 'aw',
       type: 'Float Pool',
-      tBg: '#dfe9e4',
-      tFg: '#1f4538',
+      tBg: '#dfe7ec',
+      tFg: '#30455a',
       pros: ['Available · no conflicts', 'Charge qualified', '0h OT risk', '14h rest ✓'],
       flags: [],
     },
@@ -73,7 +73,7 @@
 
   const ANN = {
     1: { icon: '✦', text: 'AI filling shifts. 13 compliance rules enforced on every slot', bg: BLUE, fg: '#fff', spin: false },
-    2: { icon: '⟳', text: 'Validating 13 compliance + 8 fairness rules…', bg: '#1a2332', fg: '#fff', spin: true },
+    2: { icon: '⟳', text: 'Validating 13 compliance + 8 fairness rules…', bg: '#2a3138', fg: '#fff', spin: true },
     3: { icon: '✓', text: 'Schedule complete · All 45 shifts staffed · Post-ready', bg: '#16a34a', fg: '#fff', spin: false },
     4: { icon: '⚠', text: 'Callout received · Scanning 33 staff for coverage', bg: '#ea580c', fg: '#fff', spin: false },
     5: { icon: '⚡', text: '3 candidates ranked by availability, OT risk & fairness', bg: BLUE, fg: '#fff', spin: false },
@@ -250,13 +250,13 @@
 <style>
   @keyframes pulseRing {
     0% {
-      box-shadow: 0 0 0 0 rgba(45, 90, 74, 0.45);
+      box-shadow: 0 0 0 0 rgba(52, 73, 92, 0.45);
     }
     70% {
-      box-shadow: 0 0 0 11px rgba(45, 90, 74, 0);
+      box-shadow: 0 0 0 11px rgba(52, 73, 92, 0);
     }
     100% {
-      box-shadow: 0 0 0 0 rgba(45, 90, 74, 0);
+      box-shadow: 0 0 0 0 rgba(52, 73, 92, 0);
     }
   }
   @keyframes spin {
@@ -368,7 +368,7 @@
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: rgba(45, 90, 74, 0.35);
+    background: rgba(52, 73, 92, 0.35);
     animation: ringPulse 0.55s ease-out;
   }
   .sd-wrap {
@@ -666,7 +666,7 @@
         : 'hidden'};transition:background .2s,border-color .2s;"
     >
       <span class="spin" style="color:{BLUE};font-size:12px;">⟳</span>
-      <span style="font-size:10px;color:#2d5a4a;font-weight:600;">Checking rules…</span>
+      <span style="font-size:10px;color:#34495c;font-weight:600;">Checking rules…</span>
       <div style="flex:1;height:3px;border-radius:9999px;background:#dce8e3;overflow:hidden;">
         <div
           style="height:100%;background:{BLUE};border-radius:9999px;width:{(rules / 21) *
