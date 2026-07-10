@@ -54,7 +54,8 @@ $61,110 average cost per nurse turnover reported by the
 
 After two months of interviews with 30 nurse managers and schedulers at small Texas
 healthcare facilities, we identified five recurring friction points that drive this
-burden. Here is where the 10 hours actually go each week:
+burden. Our [nurse manager scheduling time breakdown](/blog/nurse-manager-scheduling-time-breakdown)
+maps them activity by activity; here is where the 10 hours actually go each week:
 
 - **Data entry and version management (3-4 hrs):** Copying shift assignments into Excel, updating the unit whiteboard, exporting PDFs for the staff portal.
 - **Callout coordination (2-3 hrs):** Phone calls to find coverage, negotiating with nurses who are already at overtime risk, documenting who declined and why.

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-manager-scheduling-time-breakdown",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T04:45:43.883Z",
+      "contentHash": "f91862c429ac180bd90ab162a737198b7cce949d711e4fad35dbc8d375c86f43"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T04:45:45.206Z",
+      "contentHash": "f91862c429ac180bd90ab162a737198b7cce949d711e4fad35dbc8d375c86f43"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T04:45:46.057Z",
+      "contentHash": "f91862c429ac180bd90ab162a737198b7cce949d711e4fad35dbc8d375c86f43"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T04:45:46.078Z",
+      "contentHash": "f91862c429ac180bd90ab162a737198b7cce949d711e4fad35dbc8d375c86f43"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T04:45:46.201Z",
+      "contentHash": "f91862c429ac180bd90ab162a737198b7cce949d711e4fad35dbc8d375c86f43"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T04:45:46.201Z",
+      "contentHash": "f91862c429ac180bd90ab162a737198b7cce949d711e4fad35dbc8d375c86f43"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T04:45:46.202Z",
+      "contentHash": "f91862c429ac180bd90ab162a737198b7cce949d711e4fad35dbc8d375c86f43"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-10T04:49:16.532Z",
+      "contentHash": "eacc8a38c49a1fee0b1f2baf36b941b4cb233b8c5e8d80a9bfc442107b7e36b5"
+    },
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "fable",
+      "setAt": "2026-07-10T04:49:17.258Z",
+      "contentHash": "eacc8a38c49a1fee0b1f2baf36b941b4cb233b8c5e8d80a9bfc442107b7e36b5"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "fable-visual-check",
+      "setAt": "2026-07-10T04:49:18.144Z",
+      "contentHash": "eacc8a38c49a1fee0b1f2baf36b941b4cb233b8c5e8d80a9bfc442107b7e36b5"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-10T04:49:18.909Z",
+      "contentHash": "eacc8a38c49a1fee0b1f2baf36b941b4cb233b8c5e8d80a9bfc442107b7e36b5"
+    }
+  },
+  "overrides": []
+}
