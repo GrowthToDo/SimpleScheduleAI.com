@@ -24,7 +24,7 @@ metadata:
 ## Key Takeaways
 
 - Across the 30+ nurse-manager interviews we ran before building SimpleScheduleAI, the scheduling week kept breaking into the same five activities: collecting availability, building the roster, securing cover for callouts and absences, adjusting the published schedule, and entering and distributing it.
-- In those interviews, 8 to 12 hours per week was the common total. The table below is our estimate of how a typical week divides across the five activities.
+- In those interviews, 8 to 12 hours per week was the common total, as an average across the scheduling cycle. The rhythm is lumpy: the build lands once per cycle in one heavy week, while callouts and adjustments repeat every week. The table below is our estimate of how the average week divides.
 - In that split, the largest single time consumer is not building the schedule. It is securing cover for callouts and absences, which typically runs 1 to 3 hours per event and happens multiple times per week at a 20-nurse facility.
 - Schedule building from scratch takes 4 to 6 hours per cycle at a 20-nurse CAH using Excel, but this is predictable and schedulable. The model assumes a 4-week cycle; hospitals scheduling in 2 or 6 week blocks scale the weekly math accordingly.
 - Reducing scheduling time is not about working faster. It is about identifying which of the five activities is consuming the most time in your specific facility and addressing that one first.
@@ -51,16 +51,18 @@ The five activities below are the ones that came up again and again in the 30+ c
 
 The hours are our estimate of a typical week from those same conversations, not measured time studies. The split varies by facility size, roster stability, and current tools; treat the table as a frame to check your own week against. The same interview base sits under our [$26,000 scheduling burden](/blog/healthcare-scheduling-crisis) analysis; it cuts the week by process rather than by activity, so its categories and ranges differ from this table's.
 
-| Activity                               | Typical weekly time | Notes                                                            |
-| -------------------------------------- | ------------------- | ---------------------------------------------------------------- |
-| Collecting availability and requests   | 1-1.5 hrs           | The pre-build chase: texts, notes, per-diem availability         |
-| Building the schedule                  | 1-1.5 hrs           | Amortized from 4-6 hrs per 4-week cycle                          |
-| Securing callout and absence cover     | 4-6 hrs             | 2-3 events in a typical week; a single event runs 1-3 hrs        |
-| Adjusting the published schedule       | 1-1.5 hrs           | Swaps, corrections, fairness conversations                       |
-| Entering and distributing the schedule | 1-1.5 hrs           | System entry, the unit board, copies for staff                   |
-| **Total**                              | **8-12 hrs**        | **Matches the interview range; heavy callout weeks run past it** |
+| Activity                               | Weekly time (cycle average) | When it happens                                                  |
+| -------------------------------------- | --------------------------- | ---------------------------------------------------------------- |
+| Collecting availability and requests   | 1-1.5 hrs                   | Clusters in the days before each build                           |
+| Building the schedule                  | 1-1.5 hrs                   | Once per cycle: 4-6 hrs in one or two sittings, averaged here    |
+| Securing callout and absence cover     | 4-6 hrs                     | Any week, any hour; 2-3 events at 1-3 hrs each                   |
+| Adjusting the published schedule       | 1-1.5 hrs                   | Steady, from the day the schedule posts                          |
+| Entering and distributing the schedule | 1-1.5 hrs                   | Clusters at publication, then again after each change            |
+| **Total**                              | **8-12 hrs**                | **Matches the interview range; heavy callout weeks run past it** |
 
-The table shows something the total number obscures: in this split, building the schedule is not the primary time consumer. Securing cover is.
+The 8 to 12 hours is a weekly average across the cycle, not a promise that every week looks the same. In a real 4-week cycle, the rhythm is lumpy: the build clusters into one heavy week, which carries the 4 to 6 construction hours plus the normal interruption load, while the other three weeks are mostly cover, adjustments, and the odd correction. Callouts repeat every week; the build does not.
+
+The table also shows something the total number obscures: in this split, building the schedule is not the primary time consumer. Securing cover is.
 
 ## How Long Does Schedule Building Actually Take?
 

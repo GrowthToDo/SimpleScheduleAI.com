@@ -43,38 +43,38 @@
     "proofread": {
       "value": "READY",
       "setBy": "fable-reconfirm-founder-feedback-pass",
-      "setAt": "2026-07-10T16:33:06.909Z",
-      "contentHash": "3fe90e98ea755c5a555d485f3de2e18f1eb00400bac209ba6e8a9e2f1ddb0bb6"
+      "setAt": "2026-07-10T16:44:39.534Z",
+      "contentHash": "309e9664266568bcc89b64076dcd418f2122c9159a8e0f2c960af342e3b67164"
     },
     "factCheck": {
       "value": "NOT_REQUIRED",
       "setBy": "fable",
-      "setAt": "2026-07-10T16:33:08.337Z",
-      "contentHash": "3fe90e98ea755c5a555d485f3de2e18f1eb00400bac209ba6e8a9e2f1ddb0bb6"
+      "setAt": "2026-07-10T16:44:40.710Z",
+      "contentHash": "309e9664266568bcc89b64076dcd418f2122c9159a8e0f2c960af342e3b67164"
     },
     "imageEyeball": {
       "value": "OK",
       "setBy": "fable-visual-check",
-      "setAt": "2026-07-10T16:33:10.631Z",
-      "contentHash": "3fe90e98ea755c5a555d485f3de2e18f1eb00400bac209ba6e8a9e2f1ddb0bb6"
+      "setAt": "2026-07-10T16:44:41.919Z",
+      "contentHash": "309e9664266568bcc89b64076dcd418f2122c9159a8e0f2c960af342e3b67164"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-07-10T16:33:12.366Z",
-      "contentHash": "3fe90e98ea755c5a555d485f3de2e18f1eb00400bac209ba6e8a9e2f1ddb0bb6"
+      "setAt": "2026-07-10T16:44:43.105Z",
+      "contentHash": "309e9664266568bcc89b64076dcd418f2122c9159a8e0f2c960af342e3b67164"
     },
     "indexNow": {
       "value": "DONE",
       "setBy": "bing-webmaster",
-      "setAt": "2026-07-10T16:33:13.800Z",
-      "contentHash": "3fe90e98ea755c5a555d485f3de2e18f1eb00400bac209ba6e8a9e2f1ddb0bb6"
+      "setAt": "2026-07-10T16:44:44.302Z",
+      "contentHash": "309e9664266568bcc89b64076dcd418f2122c9159a8e0f2c960af342e3b67164"
     },
     "gscSitemap": {
       "value": "DONE",
       "setBy": "gsc-mcp",
-      "setAt": "2026-07-10T16:33:15.366Z",
-      "contentHash": "3fe90e98ea755c5a555d485f3de2e18f1eb00400bac209ba6e8a9e2f1ddb0bb6"
+      "setAt": "2026-07-10T16:44:45.665Z",
+      "contentHash": "309e9664266568bcc89b64076dcd418f2122c9159a8e0f2c960af342e3b67164"
     }
   },
   "overrides": []
