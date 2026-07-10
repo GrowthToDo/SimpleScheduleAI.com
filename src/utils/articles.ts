@@ -85,7 +85,9 @@ const load = async function (): Promise<Array<Post>> {
 
   const results = (await Promise.all(normalizedArticles))
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
-    .filter((article) => !article.draft);
+    // Drafts render on the dev server so the founder can preview them at the
+    // real URL; production builds still exclude them.
+    .filter((article) => !article.draft || import.meta.env.DEV);
 
   return results;
 };
