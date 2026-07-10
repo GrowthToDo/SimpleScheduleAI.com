@@ -1,28 +1,23 @@
 ---
-// Clinical Calm hero backdrop (docs/design/DESIGN.md): clean mist field with
-// soft sage and sky radial glows and the paper grain. Replaces the washed
-// warm nurse-station photograph, which fought the palette and kept the hero
-// reading as the old design.
+// Full-bleed calm nurse-station photograph behind the hero, washed with an
+// ivory gradient so the ink-navy headline stays dominant. Counter and warm
+// lamp emerge toward the bottom of the hero.
 ---
 
-<div class="absolute inset-0 overflow-hidden bg-[#F2F5F5]" aria-hidden="true">
+<div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+  <img
+    src="/images/hero/nurse-station-2000.webp"
+    srcset="/images/hero/nurse-station-1100.webp 1100w, /images/hero/nurse-station-2000.webp 2000w"
+    sizes="100vw"
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover object-[center_60%]"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+  />
   <div
     class="absolute inset-0"
-    style="background:
-      radial-gradient(1400px 800px at 85% -15%, rgb(143 179 163 / 0.75) 0%, rgb(143 179 163 / 0.25) 45%, transparent 68%),
-      radial-gradient(1200px 700px at 0% 115%, rgb(178 203 216 / 0.9) 0%, rgb(178 203 216 / 0.3) 48%, transparent 70%),
-      radial-gradient(900px 520px at 60% 125%, rgb(52 73 92 / 0.18) 0%, transparent 62%),
-      linear-gradient(160deg, rgb(226 236 234 / 1) 0%, rgb(242 245 245 / 1) 55%);"
-  >
-  </div>
-  <div
-    class="absolute inset-0 opacity-[0.03]"
-    style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27160%27 height=%27160%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.9%27 numOctaves=%272%27/%3E%3C/filter%3E%3Crect width=%27160%27 height=%27160%27 filter=%27url(%23n)%27/%3E%3C/svg%3E');"
-  >
-  </div>
-  <div
-    class="absolute inset-x-0 bottom-0 h-24"
-    style="background: linear-gradient(to bottom, transparent, rgb(242 245 245 / 1));"
+    style="background: linear-gradient(to bottom, rgb(250 247 242 / 0.9) 0%, rgb(250 247 242 / 0.72) 30%, rgb(250 247 242 / 0.55) 55%, rgb(250 247 242 / 0.82) 84%, rgb(250 247 242 / 1) 100%);"
   >
   </div>
 </div>

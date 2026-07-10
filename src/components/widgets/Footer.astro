@@ -25,22 +25,22 @@ export interface Props {
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Astro.props;
 ---
 
-<footer class="relative not-prose bg-[#2A3138] text-[#F2F5F5]">
+<footer class="relative not-prose bg-[#1A2332] text-[#FAF7F2]">
   <div
     class="relative max-w-7xl mx-auto px-4 sm:px-6 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
   >
     {/* Brand Section with CTA Buttons */}
-    <div class="border-b border-[#F2F5F5]/15 py-8 md:py-12">
+    <div class="border-b border-[#FAF7F2]/15 py-8 md:py-12">
       <div class="max-w-3xl">
         <a
           href={getHomePermalink()}
           class="inline-block text-2xl font-heading font-semibold tracking-tight mb-4"
           translate="no"
         >
-          SimpleScheduleAI<span class="text-[#8FB3A3]">.</span>
+          SimpleScheduleAI<span class="text-[#7BAF9B]">.</span>
         </a>
 
-        <p class="text-[#F2F5F5]/70 mb-6 text-base leading-relaxed">
+        <p class="text-[#FAF7F2]/70 mb-6 text-base leading-relaxed">
           An AI-native nurse scheduling service for Critical Access Hospitals in Texas. AI builds the schedule, our
           scheduling team checks it, you approve.
         </p>
@@ -48,25 +48,20 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Ast
         <div class="flex flex-wrap gap-3">
           <a
             href="/how-it-works"
-            class="btn-secondary text-[#F2F5F5] border-[#F2F5F5]/25 hover:bg-[#F2F5F5]/10 hover:border-[#F2F5F5]"
+            class="btn-secondary text-[#FAF7F2] border-[#FAF7F2]/25 hover:bg-[#FAF7F2]/10 hover:border-[#FAF7F2]"
           >
             How it Works
           </a>
           <a
             href="/contact"
-            class="btn-secondary text-[#F2F5F5] border-[#F2F5F5]/25 hover:bg-[#F2F5F5]/10 hover:border-[#F2F5F5]"
+            class="btn-secondary text-[#FAF7F2] border-[#FAF7F2]/25 hover:bg-[#FAF7F2]/10 hover:border-[#FAF7F2]"
           >
             Get Started
           </a>
-          <a
-            href="https://cal.com/gautham-8bdvdx/30min"
-            class="btn-primary bg-[#8FB3A3] border-[#8FB3A3] text-[#212930] hover:bg-[#A9C8BA] hover:border-[#A9C8BA] hover:text-[#212930]"
-          >
-            Book a call with our team
-          </a>
+          <a href="https://cal.com/gautham-8bdvdx/30min" class="btn-primary"> Book a call with our team </a>
         </div>
 
-        <address class="mt-6 text-sm not-italic leading-relaxed text-[#F2F5F5]/55">
+        <address class="mt-6 text-sm not-italic leading-relaxed text-[#FAF7F2]/55">
           440 N Barranca Ave #3696, Covina, CA 91723
         </address>
       </div>
@@ -74,13 +69,13 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Ast
 
     <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
-        <div class="text-sm text-[#F2F5F5]/60 flex gap-1">
+        <div class="text-sm text-[#FAF7F2]/60 flex gap-1">
           {
             secondaryLinks.map(({ text, href }, index) => (
               <>
                 {index !== 0 ? ' · ' : ''}
                 <a
-                  class="text-[#F2F5F5]/60 hover:text-[#F2F5F5] hover:underline transition duration-150 ease-in-out"
+                  class="text-[#FAF7F2]/60 hover:text-[#FAF7F2] hover:underline transition duration-150 ease-in-out"
                   href={href}
                   set:html={text}
                 />
@@ -92,13 +87,13 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Ast
       {
         links.map(({ title, links }) => (
           <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="font-heading font-medium mb-2 text-[#F2F5F5]">{title}</div>
+            <div class="font-heading font-medium mb-2 text-[#FAF7F2]">{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
                 {links.map(({ text, href, ariaLabel }) => (
                   <li class="mb-2">
                     <a
-                      class="text-[#F2F5F5]/60 hover:text-[#F2F5F5] hover:underline transition duration-150 ease-in-out"
+                      class="text-[#FAF7F2]/60 hover:text-[#FAF7F2] hover:underline transition duration-150 ease-in-out"
                       href={href}
                       aria-label={ariaLabel}
                     >
@@ -112,14 +107,14 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Ast
         ))
       }
     </div>
-    <div class="md:flex md:items-center md:justify-between py-6 md:py-8 border-t border-[#F2F5F5]/15">
+    <div class="md:flex md:items-center md:justify-between py-6 md:py-8 border-t border-[#FAF7F2]/15">
       {
         socialLinks?.length ? (
           <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
             {socialLinks.map(({ ariaLabel, href, text, icon }) => (
               <li>
                 <a
-                  class="text-[#F2F5F5]/60 hover:text-[#F2F5F5] hover:bg-[#F2F5F5]/10 focus:outline-none rounded-lg text-sm p-2.5 inline-flex items-center"
+                  class="text-[#FAF7F2]/60 hover:text-[#FAF7F2] hover:bg-[#FAF7F2]/10 focus:outline-none rounded-lg text-sm p-2.5 inline-flex items-center"
                   aria-label={ariaLabel}
                   href={href}
                 >
@@ -134,7 +129,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '' } = Ast
         )
       }
 
-      <div class="text-sm mr-4 text-[#F2F5F5]/60">
+      <div class="text-sm mr-4 text-[#FAF7F2]/60">
         <Fragment set:html={footNote} />
       </div>
     </div>

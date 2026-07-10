@@ -12,8 +12,8 @@ export default {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
-        ink: '#2A3138',
-        ivory: '#F2F5F5',
+        ink: '#1A2332',
+        ivory: '#FAF7F2',
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
