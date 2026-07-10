@@ -25,8 +25,8 @@ metadata:
 
 - In the 30+ nurse-manager interviews we ran before building SimpleScheduleAI, 8 to 12 hours of scheduling-related work per week was the common range. The time distributes across five activities: schedule building, callout coverage, overtime tracking, staff conflict resolution, and schedule changes after publication.
 - In that model, the largest single time consumer is not schedule building itself. It is callout coverage, which typically runs 1 to 3 hours per callout event and happens multiple times per week at a 20-nurse facility.
-- Schedule building from scratch each 4-week cycle takes 4 to 6 hours at a 20-nurse CAH using Excel, but this is predictable and schedulable. Callout coverage is unpredictable, high-urgency, and interrupts everything else.
-- The 8 to 12 hour estimate describes a week where everything is working normally. In weeks with multiple callouts, holiday coverage problems, or staff schedule change requests, the total can exceed 15 hours.
+- Schedule building from scratch takes 4 to 6 hours per cycle at a 20-nurse CAH using Excel, but this is predictable and schedulable. The model assumes a 4-week cycle; hospitals scheduling in 2 or 6 week blocks scale the weekly math accordingly. Callout coverage is unpredictable, high-urgency, and interrupts everything else.
+- The 8 to 12 hour estimate describes a week where everything is working normally. In weeks with multiple callouts, holiday coverage problems, or staff schedule change requests, the model's own arithmetic runs toward the top of its range: callout coverage alone can reach 9 hours.
 - Reducing scheduling time is not about working faster. It is about identifying which of the five activities is consuming the most time in your specific facility and addressing that one first.
 
 ## Table of Contents
@@ -66,7 +66,7 @@ In our interview-based model, the initial schedule build at a 20-nurse critical 
 
 This time is largely predictable and schedulable. Most nurse managers dedicate one or two sessions per cycle specifically to the build, often in the week before the new schedule period begins. The sessions are long and mentally intensive, but they have a defined start and end point.
 
-The 4 to 6 hour build time amortizes to 1 to 1.5 hours per week across a 4-week cycle, which is the number that appears in the table above. This is the component of scheduling time that is most commonly cited in vendor marketing ("reduce scheduling time from 8 hours to 1 hour"), and it is the most addressable by software automation. But it is not the biggest time consumer in the typical week.
+The 4 to 6 hour build time amortizes to 1 to 1.5 hours per week across a 4-week cycle, which is the number that appears in the table above. The 4-week cycle is the model's assumption, not a universal practice: hospitals also schedule in 2 or 6 week blocks, which changes the amortized weekly figure but not the per-cycle build time. This is the component of scheduling time that is most commonly cited in vendor marketing ("reduce scheduling time from 8 hours to 1 hour"), and it is the most addressable by software automation. But it is not the biggest time consumer in the typical week.
 
 ## Why Does Callout Coverage Consume More Time Than the Schedule Build?
 
