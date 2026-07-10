@@ -7,12 +7,44 @@ import { Icon } from 'astro-icon/components';
 // Placeholder blocks marked "DATA PENDING" must be filled before this URL is shared.
 const metadata = {
   title: 'Proof of Work | SimpleScheduleAI',
-  description: 'The evidence behind SimpleScheduleAI: demand data, user research, product, distribution, and unsolicited market validation.',
+  description:
+    'The evidence behind SimpleScheduleAI: demand data, user research, product, distribution, and unsolicited market validation.',
   robots: { index: false, follow: false },
 };
 
 const calLink = 'https://cal.com/gautham-8bdvdx/30min';
-const asOf = '6 July 2026';
+const asOf = '10 July 2026';
+
+// Search traction data, pulled directly from Google Search Console and Bing
+// Webmaster Tools APIs on 10 July 2026. Positions are the averages those
+// tools report; queries shown are a buyer-intent sample (scraper noise excluded).
+const searchStats = [
+  { value: '18,946', label: 'Google impressions in the 90 days to 10 July 2026, with 38 clicks' },
+  { value: '~14', label: 'Average Google position in early July, up from the 40s and 50s in mid-April' },
+  {
+    value: '3 → 16',
+    label: 'Monthly Google clicks: 3 in April, 9 in May, 16 in June, 10 in the first nine days of July',
+  },
+];
+
+const googleQueries = [
+  { q: 'best aladtec alternatives', pos: '2.5' },
+  { q: 'alternatives to aladtec', pos: '4.8' },
+  { q: 'best nurse scheduling software 2026', pos: '6.7' },
+  { q: 'alternatives to smartlinx software', pos: '7.5' },
+  { q: 'best alternatives to qgenda for ambulatory practice', pos: '8.7' },
+  { q: 'alternatives to shiftwizard software', pos: '9.9' },
+  { q: 'what is the best alternative to qgenda', pos: '10.4' },
+  { q: 'nurse scheduling software pricing', pos: '11.2' },
+];
+
+const bingQueries = [
+  { q: 'best software for nurse scheduling', pos: '1', when: 'week of 22 May' },
+  { q: 'ai healthcare scheduling tool not ukg not qgenda', pos: '1', when: 'week of 12 June' },
+  { q: 'replacements for qgenda', pos: '1', when: 'week of 19 June' },
+  { q: 'best nurse scheduling software for small hospitals', pos: '2', when: 'week of 5 June' },
+  { q: 'nurse scheduling software', pos: '3', when: '84 impressions, week of 5 June' },
+];
 
 const productStats = [
   { value: '22', label: 'Scheduling rule evaluators, hard and soft, each covered by tests' },
@@ -33,8 +65,14 @@ const builtFeatures = [
 ];
 
 const descoped = [
-  { what: 'Self-scheduling', why: 'Nurse managers want to keep control. Their existing ERP self-scheduling causes problems. A buyer told us directly to leave it out.' },
-  { what: 'Epic / Cerner integration', why: 'Small hospitals do not run these systems. Excel is the real interchange format, so Excel is what we built for.' },
+  {
+    what: 'Self-scheduling',
+    why: 'Nurse managers want to keep control. Their existing ERP self-scheduling causes problems. A buyer told us directly to leave it out.',
+  },
+  {
+    what: 'Epic / Cerner integration',
+    why: 'Small hospitals do not run these systems. Excel is the real interchange format, so Excel is what we built for.',
+  },
   { what: 'Mobile app', why: 'The buyer is 45 to 50+, desktop-first. We build for how they actually work.' },
 ];
 
@@ -47,21 +85,21 @@ const distribution = [
 
 <Layout metadata={metadata}>
   <!-- Hero -->
-  <section class="bg-[#1A2332] dark:bg-black">
-    <div class="mx-auto max-w-4xl px-4 pt-16 pb-14 sm:px-6 lg:px-8 text-center">
+  <section class="bg-page">
+    <div class="mx-auto max-w-4xl px-4 pt-14 pb-10 sm:px-6 lg:px-8 text-center">
       <span
-        class="inline-block mb-5 rounded-full border border-[#7BAF9B]/40 bg-[#7BAF9B]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#7BAF9B]"
+        class="inline-block mb-5 rounded-full border border-primary/25 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary"
       >
         Proof of Work · as of {asOf}
       </span>
-      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
         The work behind SimpleScheduleAI
       </h1>
-      <p class="mt-5 text-lg text-gray-300 max-w-2xl mx-auto">
+      <p class="mt-5 text-lg text-muted max-w-2xl mx-auto">
         We deliver finished nurse schedules to small US hospitals as an outcome. A nursing director hands us a roster
         and constraints; they get back a compliant, fair, fully staffed schedule.
       </p>
-      <p class="mt-6 text-sm text-gray-400 max-w-2xl mx-auto">
+      <p class="mt-6 text-sm text-muted max-w-2xl mx-auto">
         Where we are, stated plainly: pre-revenue, no design partner signed yet, with a live pursuit at a ~70-nurse
         hospital in North Carolina. Everything below is what has been done to date.
       </p>
@@ -76,12 +114,12 @@ const distribution = [
         The idea came from keyword research
       </h2>
       <p class="mt-4 text-muted">
-        We found this problem in search data, in December 2025. Keyword volume showed people already searching for
-        nurse scheduling help for small and Critical Access Hospitals, and for alternatives to the incumbent platforms.
+        We found this problem in search data, in December 2025. Keyword volume showed people already searching for nurse
+        scheduling help for small and Critical Access Hospitals, and for alternatives to the incumbent platforms.
       </p>
       <p class="mt-4 text-muted">
-        What the data pointed to: small US hospitals still build nurse schedules by hand in Excel. A director of
-        nursing can spend a full day every week on it, on top of compliance risk, overtime, and agency-nurse spend.
+        What the data pointed to: small US hospitals still build nurse schedules by hand in Excel. A director of nursing
+        can spend a full day every week on it, on top of compliance risk, overtime, and agency-nurse spend.
       </p>
       <div class="mt-6 rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700 p-5">
         <p class="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-1">Data pending</p>
@@ -97,14 +135,11 @@ const distribution = [
   <section class="bg-page">
     <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
       <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-3">02 · Voice of customer</p>
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-        What we heard in discovery calls
-      </h2>
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">What we heard in discovery calls</h2>
       <p class="mt-4 text-muted">
         Conversations with nursing directors, nurse managers, and staffing agency owners across North Carolina, Texas,
-        New Jersey, and New Hampshire. The buyer: directors of nursing, 45 to 50+, working in desktop and Excel, put
-        off by AI jargon. They want to own an in-house tool with heavy setup and training support, so that is what we
-        sell.
+        New Jersey, and New Hampshire. The buyer: directors of nursing, 45 to 50+, working in desktop and Excel, put off
+        by AI jargon. They want to own an in-house tool with heavy setup and training support, so that is what we sell.
       </p>
 
       <div class="mt-8 grid gap-4 sm:grid-cols-3">
@@ -114,11 +149,15 @@ const distribution = [
         </div>
         <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5 shadow-sm">
           <p class="text-sm font-bold text-gray-900 dark:text-white">Schedule building</p>
-          <p class="mt-2 text-sm text-muted">A director of nursing spending a full day every week building the schedule.</p>
+          <p class="mt-2 text-sm text-muted">
+            A director of nursing spending a full day every week building the schedule.
+          </p>
         </div>
         <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5 shadow-sm">
           <p class="text-sm font-bold text-gray-900 dark:text-white">Audit trail</p>
-          <p class="mt-2 text-sm text-muted">Every schedule change must be documented and defensible. Excel cannot do this.</p>
+          <p class="mt-2 text-sm text-muted">
+            Every schedule change must be documented and defensible. Excel cannot do this.
+          </p>
         </div>
       </div>
       <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
@@ -147,9 +186,7 @@ const distribution = [
   <section class="bg-white">
     <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
       <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-3">03 · What we built</p>
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-        What we've built
-      </h2>
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">What we've built</h2>
       <p class="mt-4 text-muted">
         The scheduler is a full working application, built and iterated against feedback from nursing professionals
         since December 2025, and demoed live on 19 June 2026.
@@ -178,9 +215,7 @@ const distribution = [
       </ul>
 
       <h3 class="mt-10 text-xl font-bold text-gray-900 dark:text-white">What we chose not to build</h3>
-      <p class="mt-2 text-sm text-muted">
-        Each of these was cut based on what buyers told us.
-      </p>
+      <p class="mt-2 text-sm text-muted">Each of these was cut based on what buyers told us.</p>
       <div class="mt-4 grid gap-4 sm:grid-cols-3">
         {
           descoped.map((d) => (
@@ -198,9 +233,7 @@ const distribution = [
   <section class="bg-page">
     <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
       <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-3">04 · Distribution</p>
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-        The website and content work
-      </h2>
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">The website and content work</h2>
       <p class="mt-4 text-muted">
         This site is a content and search operation with its own quality gates: every comparison page requires sourced,
         dated review quotes and a minimum depth of niche-specific analysis, enforced in the build pipeline. Content that
@@ -220,16 +253,109 @@ const distribution = [
 
       <p class="mt-6 text-sm text-muted">
         Both tools are live: the <a href="/simulator" class="text-primary underline">scheduling simulator</a>
-        builds a compliant ICU week in your browser, and the <a href="/roi" class="text-primary underline">ROI calculator</a>
+        builds a compliant ICU week in your browser, and the <a href="/roi" class="text-primary underline"
+          >ROI calculator</a
+        >
         estimates what manual scheduling currently costs a facility.
+      </p>
+
+      <h3 class="mt-12 text-xl font-bold text-gray-900 dark:text-white">Search traction</h3>
+      <p class="mt-2 text-sm text-muted">
+        Numbers pulled directly from the Google Search Console and Bing Webmaster Tools APIs on 10 July 2026. This is an
+        early trend, stated plainly: impressions and position are moving fast, clicks are still small.
+      </p>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-3">
+        {
+          searchStats.map((s) => (
+            <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5 text-center">
+              <p class="text-3xl font-bold text-primary">{s.value}</p>
+              <p class="mt-2 text-xs text-muted">{s.label}</p>
+            </div>
+          ))
+        }
+      </div>
+      <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+        Daily Google impressions grew from roughly 110 a day in mid-April to roughly 270 a day in early July.
+      </p>
+
+      <h4 class="mt-8 text-base font-bold text-gray-900 dark:text-white">
+        Where buyer-intent searches find us on Google
+      </h4>
+      <div
+        class="mt-3 overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800"
+      >
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200 dark:border-gray-700 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white">Query</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white whitespace-nowrap">Avg. position</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              googleQueries.map((r) => (
+                <tr class="border-b border-gray-100 dark:border-gray-700/50 last:border-0">
+                  <td class="px-4 py-2.5 text-muted">{r.q}</td>
+                  <td class="px-4 py-2.5 font-semibold text-gray-900 dark:text-white">{r.pos}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+        Google Search Console, 28 days to 10 July 2026. For contrast, the head term "nurse scheduling software" drew 258
+        impressions at average position 40 in the same window, and "best nurse scheduling software" sat at 19. Long-tail
+        buyer queries rank first; head terms need more domain authority and are still climbing.
+      </p>
+
+      <h4 class="mt-8 text-base font-bold text-gray-900 dark:text-white">Bing: small volume, top placements</h4>
+      <p class="mt-2 text-sm text-muted">
+        Bing traffic is still single-digit clicks, so what matters at this stage is placement. Where the site shows up
+        for buyer queries, it shows up near the top:
+      </p>
+      <div
+        class="mt-3 overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800"
+      >
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200 dark:border-gray-700 text-left">
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white">Query</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white whitespace-nowrap">Position</th>
+              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white whitespace-nowrap">When (2026)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              bingQueries.map((r) => (
+                <tr class="border-b border-gray-100 dark:border-gray-700/50 last:border-0">
+                  <td class="px-4 py-2.5 text-muted">{r.q}</td>
+                  <td class="px-4 py-2.5 font-semibold text-gray-900 dark:text-white">{r.pos}</td>
+                  <td class="px-4 py-2.5 text-muted whitespace-nowrap">{r.when}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="mt-8 text-base font-bold text-gray-900 dark:text-white">AI answer engines</h4>
+      <p class="mt-2 text-sm text-muted">
+        Two things are measurable today. First, people are already reaching this site with full-sentence,
+        assistant-style questions: Bing logged the site at position 1 for "what are the best nurse scheduling shift
+        tools out there with ai?" and position 2 for "can co pilot gernerate a nurses schedule" (query verbatim, week of
+        15 May), and Google shows it at positions 6 to 8 on full-question searches such as "is qgenda a good fit for
+        physicians and clinical staff needing mobile scheduling access and notification?". Second, Microsoft Copilot
+        grounds its web answers in the Bing index, so the position 1 to 3 Bing rankings above are the mechanism by which
+        Copilot can cite us.
       </p>
 
       <div class="mt-6 rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700 p-5">
         <p class="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-1">Data pending</p>
         <p class="text-sm text-amber-800 dark:text-amber-300">
-          Search Console trend (clicks, impressions, buyer-intent rankings, 3 to 6 months), Bing Webmaster data, and the
-          AI-engine visibility log (which prompts surface SimpleScheduleAI on ChatGPT, Perplexity, Google AI Overviews,
-          and Bing Copilot, with dates).
+          A dated per-engine prompt log: which prompts surface SimpleScheduleAI on ChatGPT, Perplexity, Google AI
+          Overviews, and Bing Copilot.
         </p>
       </div>
     </div>
@@ -243,16 +369,16 @@ const distribution = [
         An unsolicited acquisition inquiry
       </h2>
       <p class="mt-4 text-muted">
-        On 16 June 2026 the CEO of a software acquirer backed by Accel, TCV, and Prosus sent us an unsolicited email.
-        He had spent the year building an acquisition thesis on nurse scheduling software, found SimpleScheduleAI
-        inside it, and asked to start a dialogue. His words:
+        On 16 June 2026 the CEO of a software acquirer backed by Accel, TCV, and Prosus sent us an unsolicited email. He
+        had spent the year building an acquisition thesis on nurse scheduling software, found SimpleScheduleAI inside
+        it, and asked to start a dialogue. His words:
       </p>
 
       <div class="mt-6 space-y-4">
         <blockquote class="rounded-2xl border-l-4 border-primary bg-page dark:bg-slate-800 p-6 shadow-sm">
           <p class="text-lg text-gray-900 dark:text-white">
-            &ldquo;I spent this year defining our thesis re nurse scheduling software and the value prop you've built
-            at SimpleScheduleAI really resonated.&rdquo;
+            &ldquo;I spent this year defining our thesis re nurse scheduling software and the value prop you've built at
+            SimpleScheduleAI really resonated.&rdquo;
           </p>
         </blockquote>
         <blockquote class="rounded-2xl border-l-4 border-primary bg-page dark:bg-slate-800 p-6 shadow-sm">
