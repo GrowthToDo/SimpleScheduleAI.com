@@ -140,6 +140,13 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - **Wrong:** citing "Black et al. 2026" or "Bedi, Welch, et al. 2026" as if independently verified against the primary paper; implying this report covers rural, critical access, or small-hospital settings — it does not (searched, zero mentions of "rural," "critical access," "shortage," "turnover").
 - Verified: 2026-07-06 (source: local PDF; full title "Healthcare AI Industry Report," ARISE-AI.ORG watermark on figures)
 
+### Booker 2024 rostering time (BMC Nursing)
+
+- Approved: Booker LA, Mills J, Bish M, Spong J, Deacon-Crouch M, Skinner TC. "Nurse rostering: understanding the current shift work scheduling processes, benefits, limitations, and potential fatigue risks." BMC Nursing 2024;23:295. Qualitative case study, 24 nurses responsible for rostering, three Australian hospitals (one ~900-bed metro, two regional/rural ~700 and ~200 beds). Participants described the roster build taking from about a day a month to "at least 3 days a month- sometimes I have to do them at home or on my days off" (verbatim participant quote). Rosters built 6-8 weeks ahead; done by unit managers/ANUMs or backfill.
+- Use for: external grounding that manual roster-building is a substantial, days-per-month task that spills into personal time. NOT usable for: any activity-level time split (the study has no per-activity breakdown), US/CAH-specific figures, or the 8-12 hrs/week total (different scope: build task only, Australian setting).
+- URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11057102/ (DOI 10.1186/s12912-024-01949-2)
+- Verified: 2026-07-10 (full text fetched via PMC)
+
 ### July 2026 nurse strikes (Nurse.org)
 
 - Approved facts (all from the single Nurse.org report, attribute to it, do not upgrade to independent verification): five actions July 3-13, 2026 across MI/MD/KS/MA/NY. MyMichigan Medical Center Alma (~178 nurses, Michigan Nurses Association, ULP strike July 3-6, pay offer 0%/1%/1%, 98% strike authorization); Ascension Saint Agnes Baltimore (~600, NNU, one-day July 6, cut staffing hours + unsafe floating, e.g. med-surg nurses assigned to newborns); Ascension Via Christi St. Francis + St. Joseph Wichita (~1,200, NNU, one-day July 6, workplace-violence protection central + safe staffing); Brigham and Women's + MGB Home Care Boston (~4,000 + ~450, Massachusetts Nurses Association, July 8, union calls it largest nurse/HCW strike in MA history, home-care arm 7 days); St. Charles Hospital Port Jefferson NY (~300, NYSNA, from July 13, >99% authorization, staffing ratios; Catholic Health denies).

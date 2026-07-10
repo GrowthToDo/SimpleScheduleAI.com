@@ -66,6 +66,8 @@ In our interview-based model, the initial schedule build at a 20-nurse critical 
 
 This time is largely predictable and schedulable. Most nurse managers dedicate one or two sessions per cycle specifically to the build, often in the week before the new schedule period begins. The sessions are long and mentally intensive, but they have a defined start and end point.
 
+Peer-reviewed evidence points at the same scale. In a [2024 BMC Nursing study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11057102/) across three Australian hospitals, the nurses responsible for rostering described the build taking from about a day a month to, in one participant's words, "at least 3 days a month- sometimes I have to do them at home or on my days off." That study covers the build task only, not the activity split in our model, but it confirms the core point: constructing a roster by hand is a days-per-month job that routinely spills into personal time.
+
 The 4 to 6 hour build time amortizes to 1 to 1.5 hours per week across a 4-week cycle, which is the number that appears in the table above. The 4-week cycle is the model's assumption, not a universal practice: hospitals also schedule in 2 or 6 week blocks, which changes the amortized weekly figure but not the per-cycle build time. This is the component of scheduling time that is most commonly cited in vendor marketing ("reduce scheduling time from 8 hours to 1 hour"), and it is the most addressable by software automation. But it is not the biggest time consumer in the typical week.
 
 ## Why Does Callout Coverage Consume More Time Than the Schedule Build?
@@ -161,6 +163,7 @@ That is what the activity model above implies when the three most reducible acti
 ## Sources
 
 1. U.S. Department of Labor, Fact Sheet #54: The Health Care Industry and Calculating Overtime Pay. [DOL](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)
+2. Booker LA, Mills J, Bish M, Spong J, Deacon-Crouch M, Skinner TC. "Nurse rostering: understanding the current shift work scheduling processes, benefits, limitations, and potential fatigue risks." BMC Nursing, 2024. [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11057102/)
 
 ---
 
