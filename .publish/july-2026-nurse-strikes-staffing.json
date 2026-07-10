@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "july-2026-nurse-strikes-staffing",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T08:15:59.915Z",
+      "contentHash": "3a27fa0556c5b9aea4b6c2f31873cb9c8538fc60130488ee364a5391715def4d"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T08:16:01.218Z",
+      "contentHash": "3a27fa0556c5b9aea4b6c2f31873cb9c8538fc60130488ee364a5391715def4d"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T08:16:02.505Z",
+      "contentHash": "3a27fa0556c5b9aea4b6c2f31873cb9c8538fc60130488ee364a5391715def4d"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T08:16:02.526Z",
+      "contentHash": "3a27fa0556c5b9aea4b6c2f31873cb9c8538fc60130488ee364a5391715def4d"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T08:16:02.623Z",
+      "contentHash": "3a27fa0556c5b9aea4b6c2f31873cb9c8538fc60130488ee364a5391715def4d"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T08:16:02.623Z",
+      "contentHash": "3a27fa0556c5b9aea4b6c2f31873cb9c8538fc60130488ee364a5391715def4d"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-10T08:16:02.623Z",
+      "contentHash": "3a27fa0556c5b9aea4b6c2f31873cb9c8538fc60130488ee364a5391715def4d"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-10T08:16:03.303Z",
+      "contentHash": "16b90194c64e7594ea198bfa54dcecac224515c6b3919571ac4141122cb6ae3a"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "fable-source-extraction",
+      "setAt": "2026-07-10T08:16:04.092Z",
+      "contentHash": "16b90194c64e7594ea198bfa54dcecac224515c6b3919571ac4141122cb6ae3a"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "fable-visual-check",
+      "setAt": "2026-07-10T08:16:04.873Z",
+      "contentHash": "16b90194c64e7594ea198bfa54dcecac224515c6b3919571ac4141122cb6ae3a"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-10T08:16:06.231Z",
+      "contentHash": "16b90194c64e7594ea198bfa54dcecac224515c6b3919571ac4141122cb6ae3a"
+    }
+  },
+  "overrides": []
+}
