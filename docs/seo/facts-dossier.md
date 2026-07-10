@@ -140,6 +140,14 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - **Wrong:** citing "Black et al. 2026" or "Bedi, Welch, et al. 2026" as if independently verified against the primary paper; implying this report covers rural, critical access, or small-hospital settings — it does not (searched, zero mentions of "rural," "critical access," "shortage," "turnover").
 - Verified: 2026-07-06 (source: local PDF; full title "Healthcare AI Industry Report," ARISE-AI.ORG watermark on figures)
 
+### July 2026 nurse strikes (Nurse.org)
+
+- Approved facts (all from the single Nurse.org report, attribute to it, do not upgrade to independent verification): five actions July 3-13, 2026 across MI/MD/KS/MA/NY. MyMichigan Medical Center Alma (~178 nurses, Michigan Nurses Association, ULP strike July 3-6, pay offer 0%/1%/1%, 98% strike authorization); Ascension Saint Agnes Baltimore (~600, NNU, one-day July 6, cut staffing hours + unsafe floating, e.g. med-surg nurses assigned to newborns); Ascension Via Christi St. Francis + St. Joseph Wichita (~1,200, NNU, one-day July 6, workplace-violence protection central + safe staffing); Brigham and Women's + MGB Home Care Boston (~4,000 + ~450, Massachusetts Nurses Association, July 8, union calls it largest nurse/HCW strike in MA history, home-care arm 7 days); St. Charles Hospital Port Jefferson NY (~300, NYSNA, from July 13, >99% authorization, staffing ratios; Catholic Health denies).
+- Common-thread framing (source's own): safe staffing at or near the top of every list; "there are not enough of them at the bedside to keep patients safe."
+- Wrong: "the Wichita strike ended July 10" (it was a one-day strike July 6); "five strikes between July 6 and 13" (first ran July 3-6); treating union claims (e.g. ratio violations at St. Charles) as adjudicated fact — the hospital denies them.
+- URL: https://nurse.org/news/july-2026-nurse-strikes/ (Jay Wiley, July 6, 2026; page 403-blocks non-browser fetches, use a browser UA)
+- Verified: 2026-07-10 (full body extracted and read)
+
 ## Product truths
 
 - Self-label: "AI-native nurse scheduling service". Never "managed service" as a self-label (category/comparison use is fine).
