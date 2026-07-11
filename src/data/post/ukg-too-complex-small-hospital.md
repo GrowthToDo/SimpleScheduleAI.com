@@ -141,7 +141,7 @@ The complexity required to access the three features you use is the same as the 
 
 Three scheduling tools are actually suited to Critical Access Hospital scale: Aladtec for self-serve CAHs with a nurse manager who has time to configure and maintain the system, SmartLinx for hospitals in the 50-200 bed range with IT support available, and SimpleScheduleAI for CAHs where the nurse manager needs the scheduling work handled entirely without a platform to operate. All three deliver the compliance and coverage requirements a CAH needs at a fraction of UKG's complexity and cost.
 
-The scheduling requirements for a CAH are not simple. They are just different from enterprise requirements:
+The scheduling requirements for a CAH are not simple. They are just different from enterprise requirements (the full list is in our [seven features CAHs need in staffing software](/blog/hospital-staffing-software-features-cah)):
 
 - Proactive overtime tracking before schedules publish ([FLSA 8-and-80 rule for healthcare employers](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime))
 - Certification-unit matching to prevent uncertified assignments

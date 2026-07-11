@@ -86,6 +86,16 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - URL: https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime
 - Verified: 2026-07-04 (dol.gov 403-blocks automated fetches; canonical URL confirmed via search index, content cross-verified via DOL elaws FLSA Overtime Calculator Advisor, webapps.dol.gov)
 
+### Texas overtime law (none; FLSA governs)
+
+- Approved wording: "Texas adds no state overtime layer on top of the federal rule" / "hospital overtime is generally due after 40 hours in a workweek, at 1.5 times the regular rate" (the "generally" is load-bearing, see nuances)
+- Nuance 1: Texas Labor Code chapter 62 is a minimum-wage statute only; it contains NO overtime provision, and §62.151 exempts FLSA-covered persons from the chapter entirely. Chapter 62 also preempts municipal wage ordinances (no local overtime layer either).
+- Nuance 2: hospitals may elect the FLSA §7(j) 8-and-80 system instead of the 40-hour workweek (educational content only, never an SSAI feature claim).
+- Nuance 3: public-agency hospital employers (e.g., hospital-district CAHs) may lawfully provide comp time at 1.5 hours per OT hour under FLSA §207(o) instead of cash overtime — avoid a flat "requires 1.5x pay" without "generally".
+- Wrong: citing Texas Labor Code §62.002 as an overtime provision (it is the minimum-wage section; check-blog now blocks it); "Texas overtime law requires..."
+- URL: https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime ; https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm
+- Verified: 2026-07-11 (TWC FLSA guidance + §62.151 via Justia mirror + FS#54 quotes via compliance-vendor mirror; dol.gov and statutes.capitol.texas.gov bot-block direct fetches)
+
 ### 42 CFR 482.23(b)
 
 - Approved wording (verbatim reg text): "The nursing service must have adequate numbers of licensed registered nurses, licensed practical (vocational) nurses, and other personnel to provide nursing care to all patients as needed."
@@ -181,3 +191,4 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 | 2026-07-04 | Added staffing-ratio facts: 482.23(b), CA 70217, state ratio landscape (OR/MA/NY), TX 257.004, Aiken 2002/AHRQ, ANA position | Claude |
 | 2026-07-06 | Added CAH CoP designation facts for requirements post: 485.610 (35/15 miles, necessary-provider sunset Jan 1 2006), 485.620 (25 beds, 96-hr annual average, swing-bed nuance), 485.618 (24-hr emergency); all verified via Cornell LII + RHIhub | Claude |
 | 2026-07-06 | Added ARISE Healthcare AI Industry Report (July 2026) facts: staffing/scheduling as a named AI taxonomy category, nurse AI-adoption gap (41% vs 57%), HealthAdminBench agentic-AI reliability gap (36.3%/19.3% vs 82.8%). Source is a founder-supplied local PDF; underlying primary studies (Black et al., Bedi/Welch et al.) not independently re-verified — cite the ARISE report, not the primary studies. Confirmed report has zero rural/CAH/shortage content. | Claude |
+| 2026-07-11 | Added "Texas overtime law (none; FLSA governs)" for hospital-staffing-software-features-cah: ch. 62 is minimum-wage only, §62.151 exempts FLSA-covered persons, §7(j) 8-and-80 optional, §207(o) public-agency comp-time nuance. Verified via TWC + Justia §62.151 mirror + FS#54 compliance mirror. | Claude |

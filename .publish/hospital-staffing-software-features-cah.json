@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "hospital-staffing-software-features-cah",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-11T03:38:40.073Z",
+      "contentHash": "c32a305f4fcef994225867fe2ecc2cef5b0033c085f4a612f84b0504fc611b30"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-11T03:38:41.285Z",
+      "contentHash": "c32a305f4fcef994225867fe2ecc2cef5b0033c085f4a612f84b0504fc611b30"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-11T03:38:42.423Z",
+      "contentHash": "c32a305f4fcef994225867fe2ecc2cef5b0033c085f4a612f84b0504fc611b30"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-11T03:38:42.445Z",
+      "contentHash": "c32a305f4fcef994225867fe2ecc2cef5b0033c085f4a612f84b0504fc611b30"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-11T03:38:42.542Z",
+      "contentHash": "c32a305f4fcef994225867fe2ecc2cef5b0033c085f4a612f84b0504fc611b30"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-11T03:38:42.542Z",
+      "contentHash": "c32a305f4fcef994225867fe2ecc2cef5b0033c085f4a612f84b0504fc611b30"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-11T03:38:42.544Z",
+      "contentHash": "c32a305f4fcef994225867fe2ecc2cef5b0033c085f4a612f84b0504fc611b30"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-11T03:39:05.580Z",
+      "contentHash": "593a76c0c77877c845161a70b5f8c8cbb08513929c6c3fff4e1b1ea2b2480206"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-sonnet",
+      "setAt": "2026-07-11T03:39:06.330Z",
+      "contentHash": "593a76c0c77877c845161a70b5f8c8cbb08513929c6c3fff4e1b1ea2b2480206"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "claude-visual-eyeball",
+      "setAt": "2026-07-11T03:39:07.077Z",
+      "contentHash": "593a76c0c77877c845161a70b5f8c8cbb08513929c6c3fff4e1b1ea2b2480206"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-11T03:39:07.828Z",
+      "contentHash": "593a76c0c77877c845161a70b5f8c8cbb08513929c6c3fff4e1b1ea2b2480206"
+    }
+  },
+  "overrides": []
+}
