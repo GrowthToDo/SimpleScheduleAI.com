@@ -22,8 +22,8 @@ metadata:
 ## Key Takeaways
 
 - Critical Access Hospitals (CAHs) need seven specific features in staffing software: Excel roster import, FLSA overtime compliance, replacement call list, fairness controls, CMS audit trail, no-IT setup, and cost optimization options.
-- Enterprise features CAHs do not need: EHR integration, payroll integration, staff mobile apps, advanced analytics, multi-site management.
-- Evaluation criteria for CAH administrators: Can we be live in a week without IT? What does compliance documentation look like? How are callouts automated?
+- Enterprise features a standalone CAH can skip in its scheduling tool: EHR integration, payroll feeds, staff mobile apps, advanced analytics, multi-site management. The scheduling function runs without them.
+- Evaluation criteria for CAH administrators: Can we have a posted schedule within two weeks without IT? What does compliance documentation look like? How are callouts automated?
 - A managed service model removes operational burden from the nurse manager entirely, which is more impactful than a feature-rich app the manager has to operate.
 - The right hospital staffing software for a CAH does less than enterprise platforms but does it without requiring IT infrastructure.
 
@@ -37,7 +37,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Critical access hospitals need seven features in hospital staffing software: Excel roster import, FLSA overtime compliance, ranked callout replacement shortlist, fairness distribution controls, CMS audit trail, no-IT setup, and cost optimization across schedule options. Everything else (EHR integration, payroll automation, mobile staff portals) is either unnecessary at CAH scale or a barrier that delays implementation.
+Critical access hospitals need seven features in hospital staffing software: Excel roster import, FLSA overtime compliance, ranked callout replacement shortlist, fairness distribution controls, CMS audit trail, no-IT setup, and cost optimization across schedule options. At the standalone hospitals we build for, everything else (EHR-integrated scheduling, payroll automation, mobile staff portals) is either unnecessary or a barrier that delays implementation.
 
 ## What Features Does Hospital Staffing Software Need for a Critical Access Hospital?
 
@@ -63,21 +63,21 @@ Here is the list, in rough priority order:
 
 Understanding what to deprioritize is as important as knowing what is required. Enterprise staffing platforms that are wrong fits for CAHs commonly lead with these features:
 
-**EHR integration.** Bidirectional data exchange with Epic, Cerner, or MEDITECH is valuable for large health systems that want scheduling data to flow into patient assignment and clinical documentation. For a CAH managing a 20-nurse roster via Excel, an EHR integration project delays implementation by months and adds ongoing IT maintenance.
+**EHR integration.** CAHs run EHRs; the question is whether the scheduling tool has to talk to one. For the schedule itself, it does not. Bidirectional exchange with Epic, Cerner, or MEDITECH is valuable for large health systems that want scheduling data flowing into patient assignment and clinical documentation. For a CAH managing a 20-nurse roster, requiring that integration turns a scheduling deployment into an IT project with ongoing maintenance.
 
-**Payroll system integration.** Automated time-and-attendance to payroll feeds make sense at scale. At a 25-bed CAH with a 15 to 25 person nursing staff, the payroll administrator can manually reconcile scheduling data in under an hour. Integration is not worth the implementation complexity.
+**Payroll system integration.** Automated time-and-attendance to payroll feeds make sense at scale. At a 25-bed CAH with a 15 to 25 person nursing staff, the reconciliation is small enough to handle manually. Integration is not worth the implementation complexity.
 
 **Staff self-service mobile app.** Nurses using an app to submit availability, request swaps, and view schedules on their phones is a convenience feature for staff. It is not what reduces nurse manager scheduling time. A manager-side service that generates and manages schedules is more impactful than a staff-side app that improves how nurses interact with a schedule the manager still built manually.
 
-**Advanced analytics and workforce planning.** Predictive staffing models, turnover probability scoring, and enterprise workforce planning dashboards are designed for health system HR teams analyzing hundreds of employees. At a CAH, the nurse manager knows every staff member by name. The analytics add no operational value.
+**Advanced analytics and workforce planning.** Predictive staffing models, turnover probability scoring, and enterprise workforce planning dashboards are designed for health system HR teams analyzing hundreds of employees. At a CAH, the nurse manager knows every staff member by name; dashboards rarely change a decision at that scale.
 
-**Multi-site management.** If you have one facility with 25 beds, you do not need multi-site management. This feature exists for health systems and is not relevant to stand-alone CAHs.
+**Multi-site management.** If you have one facility with 25 beds, you do not need multi-site management. This feature exists for health systems and is not relevant to standalone CAHs.
 
 ## How to Evaluate Staffing Software Without an IT Department
 
 The evaluation process for CAHs must prioritize deployment speed and independence from IT support. For the broader vendor landscape beyond this list, our [nurse scheduling software](/nurse-scheduling-software) guide covers the market end to end.
 
-**Ask: Can we be operational in under a week without IT involvement?** If the answer involves API keys, network configuration, EHR credentials, or an IT vendor kickoff meeting, eliminate that option.
+**Ask: Can we have a posted schedule within two weeks without IT involvement?** If the answer involves API keys, network configuration, EHR credentials, or an IT vendor kickoff meeting, eliminate that option.
 
 **Ask: What happens when a nurse manager changes?** Software that requires institutional knowledge to operate will break every time a nurse manager transitions. The onboarding process must be repeatable without the outgoing manager's involvement.
 
