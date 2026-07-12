@@ -27,7 +27,10 @@
     "publish-gate": "node scripts/publish-gate.mjs",
     "smoke": "node scripts/smoke-routes.mjs",
     "setup-hooks": "node scripts/install-hooks.mjs",
-    "test:scripts": "node --test scripts/tests/*.test.mjs"
+    "test:scripts": "node --test scripts/tests/*.test.mjs",
+    "sitemap-diff": "node scripts/competitor-sitemap-diff.mjs",
+    "llm-citations": "node scripts/llm-citation-check.mjs",
+    "keyword-check": "node scripts/check-keyword-registry.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",

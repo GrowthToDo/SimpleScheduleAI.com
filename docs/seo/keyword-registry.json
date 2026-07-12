@@ -1,0 +1,444 @@
+[
+  {
+    "slug": "12-hour-hospital-shifts-scheduling",
+    "type": "post",
+    "url": "/blog/12-hour-hospital-shifts-scheduling",
+    "primaryKeyword": "12-hour hospital shifts",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "after-hours-callout-coverage-small-hospitals",
+    "type": "post",
+    "url": "/blog/after-hours-callout-coverage-small-hospitals",
+    "primaryKeyword": "after-hours callout coverage",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "ai-nurse-scheduling",
+    "type": "pillar",
+    "url": "/ai-nurse-scheduling",
+    "primaryKeyword": "ai nurse scheduling",
+    "pillar": null
+  },
+  {
+    "slug": "ai-nurse-scheduling-vs-traditional",
+    "type": "post",
+    "url": "/blog/ai-nurse-scheduling-vs-traditional",
+    "primaryKeyword": "ai vs traditional nurse scheduling",
+    "pillar": "/ai-nurse-scheduling"
+  },
+  {
+    "slug": "aladtec-alternatives",
+    "type": "post",
+    "url": "/blog/aladtec-alternatives",
+    "primaryKeyword": "aladtec alternatives",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "aladtec-vs-managed-service",
+    "type": "post",
+    "url": "/blog/aladtec-vs-managed-service",
+    "primaryKeyword": "aladtec vs managed service",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "best-nurse-scheduling-software-2026",
+    "type": "post",
+    "url": "/blog/best-nurse-scheduling-software-2026",
+    "primaryKeyword": "best nurse scheduling software",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Near-collision with best-nurse-scheduling-software-critical-access-hospitals (\"best nurse scheduling software for critical access hospitals\"). This post is the general/unqualified head term, the other is CAH-qualified; keep distinct in internal linking."
+  },
+  {
+    "slug": "best-nurse-scheduling-software-critical-access-hospitals",
+    "type": "post",
+    "url": "/blog/best-nurse-scheduling-software-critical-access-hospitals",
+    "primaryKeyword": "best nurse scheduling software for critical access hospitals",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Near-collision with best-nurse-scheduling-software-2026 (\"best nurse scheduling software\"). This post is CAH-qualified; the other is the general head term. Verify differentiated content, not near-duplicate posts."
+  },
+  {
+    "slug": "best-scheduling-software-25-bed-hospital",
+    "type": "post",
+    "url": "/blog/best-scheduling-software-25-bed-hospital",
+    "primaryKeyword": "best scheduling software for 25-bed hospitals",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "best-tcp-alternative-for-cah",
+    "type": "post",
+    "url": "/blog/best-tcp-alternative-for-cah",
+    "primaryKeyword": "tcp scheduling alternative",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "can-nurses-trust-ai-generated-schedule",
+    "type": "post",
+    "url": "/blog/can-nurses-trust-ai-generated-schedule",
+    "primaryKeyword": "can nurses trust ai generated schedule",
+    "pillar": "/ai-nurse-scheduling"
+  },
+  {
+    "slug": "cms-pbj-reporting-scheduling-software",
+    "type": "post",
+    "url": "/blog/cms-pbj-reporting-scheduling-software",
+    "primaryKeyword": "cms pbj reporting",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "critical-access-hospital-requirements",
+    "type": "post",
+    "url": "/blog/critical-access-hospital-requirements",
+    "primaryKeyword": "critical access hospital requirements",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "critical-access-hospital-scheduling",
+    "type": "pillar",
+    "url": "/critical-access-hospital-scheduling",
+    "primaryKeyword": "critical access hospital scheduling",
+    "pillar": null
+  },
+  {
+    "slug": "deputy-alternatives-healthcare",
+    "type": "post",
+    "url": "/blog/deputy-alternatives-healthcare",
+    "primaryKeyword": "deputy alternatives healthcare",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "float-pool-nursing-small-hospitals",
+    "type": "post",
+    "url": "/blog/float-pool-nursing-small-hospitals",
+    "primaryKeyword": "float pool nursing",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "free-nurse-scheduling-software",
+    "type": "post",
+    "url": "/blog/free-nurse-scheduling-software",
+    "primaryKeyword": "free nurse scheduling software",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "healthcare-scheduling-crisis",
+    "type": "post",
+    "url": "/blog/healthcare-scheduling-crisis",
+    "primaryKeyword": "healthcare scheduling crisis",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "healthcare-workforce-management-cah",
+    "type": "post",
+    "url": "/blog/healthcare-workforce-management-cah",
+    "primaryKeyword": "healthcare workforce management",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "hipaa-compliant-nurse-scheduling-software",
+    "type": "post",
+    "url": "/blog/hipaa-compliant-nurse-scheduling-software",
+    "primaryKeyword": "hipaa compliant nurse scheduling software",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "hospital-staff-scheduling-software-critical-access",
+    "type": "post",
+    "url": "/blog/hospital-staff-scheduling-software-critical-access",
+    "primaryKeyword": "hospital staff scheduling software",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "hospital-staffing-software-features-cah",
+    "type": "post",
+    "url": "/blog/hospital-staffing-software-features-cah",
+    "primaryKeyword": "hospital staffing software features",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "how-it-works",
+    "type": "page",
+    "url": "/how-it-works",
+    "primaryKeyword": "how nurse scheduling works",
+    "pillar": "/ai-nurse-scheduling"
+  },
+  {
+    "slug": "how-to-stay-cms-compliant-nurse-scheduling",
+    "type": "post",
+    "url": "/blog/how-to-stay-cms-compliant-nurse-scheduling",
+    "primaryKeyword": "cms compliant nurse scheduling",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "index",
+    "type": "page",
+    "url": "/",
+    "primaryKeyword": "nurse scheduling for critical access hospitals",
+    "pillar": null
+  },
+  {
+    "slug": "inhouse-health-vs-simplescheduleai",
+    "type": "post",
+    "url": "/blog/inhouse-health-vs-simplescheduleai",
+    "primaryKeyword": "inhouse health vs simplescheduleai",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "july-2026-nurse-strikes-staffing",
+    "type": "article",
+    "url": "/articles/july-2026-nurse-strikes-staffing",
+    "primaryKeyword": "nurse strikes 2026",
+    "pillar": null
+  },
+  {
+    "slug": "m7-health-vs-simplescheduleai",
+    "type": "post",
+    "url": "/blog/m7-health-vs-simplescheduleai",
+    "primaryKeyword": "m7 health vs simplescheduleai",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "managed-service-vs-scheduling-software",
+    "type": "post",
+    "url": "/blog/managed-service-vs-scheduling-software",
+    "primaryKeyword": "scheduling software vs managed service",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "medical-scheduling-software-buyer-guide",
+    "type": "post",
+    "url": "/blog/medical-scheduling-software-buyer-guide",
+    "primaryKeyword": "medical scheduling software",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "night-shift-nurse-schedule-coverage",
+    "type": "post",
+    "url": "/blog/night-shift-nurse-schedule-coverage",
+    "primaryKeyword": "night shift nurse schedule",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "nurse-burnout-scheduling-cah",
+    "type": "post",
+    "url": "/blog/nurse-burnout-scheduling-cah",
+    "primaryKeyword": "nurse burnout scheduling",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "nurse-manager-scheduling-time-breakdown",
+    "type": "post",
+    "url": "/blog/nurse-manager-scheduling-time-breakdown",
+    "primaryKeyword": "nurse manager scheduling time",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "nurse-retention-strategies-rural-hospital",
+    "type": "post",
+    "url": "/blog/nurse-retention-strategies-rural-hospital",
+    "primaryKeyword": "nurse retention strategies rural hospital",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "nurse-rostering-vs-scheduling-software",
+    "type": "post",
+    "url": "/blog/nurse-rostering-vs-scheduling-software",
+    "primaryKeyword": "nurse rostering vs scheduling software",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Near-collision with what-is-nurse-rostering (\"what is nurse rostering\"). Same topic cluster (nurse rostering); this post is the comparison-intent query, the other is the definitional query."
+  },
+  {
+    "slug": "nurse-scheduling-no-it-department-rural-hospital",
+    "type": "post",
+    "url": "/blog/nurse-scheduling-no-it-department-rural-hospital",
+    "primaryKeyword": "nurse scheduling no it department",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "nurse-scheduling-software",
+    "type": "pillar",
+    "url": "/nurse-scheduling-software",
+    "primaryKeyword": "nurse scheduling software",
+    "pillar": null
+  },
+  {
+    "slug": "nurse-scheduling-software-pricing",
+    "type": "post",
+    "url": "/blog/nurse-scheduling-software-pricing",
+    "primaryKeyword": "nurse scheduling software pricing",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Near-collision with the /pricing page (\"nurse scheduling service pricing\"). This post is the category cost-guide intent; the page targets SSAI service pricing intent. Verify no cannibalization."
+  },
+  {
+    "slug": "nurse-scheduling-software-small-hospital",
+    "type": "post",
+    "url": "/blog/nurse-scheduling-software-small-hospital",
+    "primaryKeyword": "nurse scheduling software for small hospitals",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "nurse-scheduling-software-vs-excel",
+    "type": "post",
+    "url": "/blog/nurse-scheduling-software-vs-excel",
+    "primaryKeyword": "nurse scheduling software vs excel",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "nurse-shortage-or-retention-crisis-rural-hospitals",
+    "type": "article",
+    "url": "/articles/nurse-shortage-or-retention-crisis-rural-hospitals",
+    "primaryKeyword": "nurse shortage vs retention crisis",
+    "pillar": null
+  },
+  {
+    "slug": "nurse-staffing-ratios-critical-access-hospital",
+    "type": "post",
+    "url": "/blog/nurse-staffing-ratios-critical-access-hospital",
+    "primaryKeyword": "nurse-to-patient ratios critical access hospital",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "nursegrid-alternatives",
+    "type": "post",
+    "url": "/blog/nursegrid-alternatives",
+    "primaryKeyword": "nursegrid alternatives",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "nursing-scheduling-software-ai",
+    "type": "post",
+    "url": "/blog/nursing-scheduling-software-ai",
+    "primaryKeyword": "ai nursing scheduling software",
+    "pillar": "/ai-nurse-scheduling"
+  },
+  {
+    "slug": "onshift-alternatives",
+    "type": "post",
+    "url": "/blog/onshift-alternatives",
+    "primaryKeyword": "onshift alternatives",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "pricing",
+    "type": "page",
+    "url": "/pricing",
+    "primaryKeyword": "nurse scheduling service pricing",
+    "pillar": null,
+    "note": "Near-collision with blog post nurse-scheduling-software-pricing (\"nurse scheduling software pricing\"). Page targets SSAI service pricing intent; post targets category cost-guide intent. Verify no cannibalization."
+  },
+  {
+    "slug": "qgenda-alternatives",
+    "type": "post",
+    "url": "/blog/qgenda-alternatives",
+    "primaryKeyword": "qgenda alternatives",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "schedule360-alternatives",
+    "type": "post",
+    "url": "/blog/schedule360-alternatives",
+    "primaryKeyword": "schedule360 alternatives",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "self-scheduling-problems-critical-access-hospital",
+    "type": "post",
+    "url": "/blog/self-scheduling-problems-critical-access-hospital",
+    "primaryKeyword": "self-scheduling problems",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "shiftwizard-alternatives",
+    "type": "post",
+    "url": "/blog/shiftwizard-alternatives",
+    "primaryKeyword": "shiftwizard alternatives",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "shiftwizard-vs-managed-service",
+    "type": "post",
+    "url": "/blog/shiftwizard-vs-managed-service",
+    "primaryKeyword": "shiftwizard vs managed service",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "smart-square-alternatives-small-rural-hospitals",
+    "type": "post",
+    "url": "/blog/smart-square-alternatives-small-rural-hospitals",
+    "primaryKeyword": "smart square alternatives",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "smartlinx-alternatives",
+    "type": "post",
+    "url": "/blog/smartlinx-alternatives",
+    "primaryKeyword": "smartlinx alternatives",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "tcp-scheduling-software-vs-managed-service",
+    "type": "post",
+    "url": "/blog/tcp-scheduling-software-vs-managed-service",
+    "primaryKeyword": "tcp timeclock+ vs managed scheduling",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "texas-nursing-overtime-compliance-cah",
+    "type": "post",
+    "url": "/blog/texas-nursing-overtime-compliance-cah",
+    "primaryKeyword": "texas nursing overtime compliance",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "ukg-alternatives-small-hospitals",
+    "type": "post",
+    "url": "/blog/ukg-alternatives-small-hospitals",
+    "primaryKeyword": "ukg alternatives",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Near-collision with ukg-too-complex-small-hospital (both target UKG-switcher intent for small hospitals). This post is the direct \"alternatives\" query; the other is the problem-framed \"too complex\" query."
+  },
+  {
+    "slug": "ukg-migration-small-hospital",
+    "type": "post",
+    "url": "/blog/ukg-migration-small-hospital",
+    "primaryKeyword": "ukg migration guide",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
+    "slug": "ukg-too-complex-small-hospital",
+    "type": "post",
+    "url": "/blog/ukg-too-complex-small-hospital",
+    "primaryKeyword": "ukg too complex for small hospitals",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Near-collision with ukg-alternatives-small-hospitals (both target UKG-switcher intent for small hospitals). This post is the problem-framed query; the other is the direct \"alternatives\" query."
+  },
+  {
+    "slug": "what-automated-nurse-scheduling-actually-means",
+    "type": "post",
+    "url": "/blog/what-automated-nurse-scheduling-actually-means",
+    "primaryKeyword": "automated nurse scheduling",
+    "pillar": "/ai-nurse-scheduling"
+  },
+  {
+    "slug": "what-is-a-critical-access-hospital",
+    "type": "post",
+    "url": "/blog/what-is-a-critical-access-hospital",
+    "primaryKeyword": "what is a critical access hospital",
+    "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "what-is-nurse-rostering",
+    "type": "post",
+    "url": "/blog/what-is-nurse-rostering",
+    "primaryKeyword": "what is nurse rostering",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Near-collision with nurse-rostering-vs-scheduling-software (\"nurse rostering vs scheduling software\"). Same topic cluster (nurse rostering); this post is the definitional query, the other is the comparison-intent query."
+  },
+  {
+    "slug": "what-is-per-diem-nursing",
+    "type": "post",
+    "url": "/blog/what-is-per-diem-nursing",
+    "primaryKeyword": "what is per diem nursing",
+    "pillar": "/critical-access-hospital-scheduling"
+  }
+]

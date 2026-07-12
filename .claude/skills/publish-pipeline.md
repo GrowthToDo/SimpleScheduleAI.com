@@ -15,7 +15,7 @@ State lives in `.publish/<slug>.json`, not in this conversation. FIRST command o
 
 ## Phases -> manifest fields
 
-1. **Research brief** (read-only agent; competitor dossier + facts dossier + checklist externals). No field; the brief feeds phase 2.
+1. **Research brief** (read-only agent; competitor dossier + facts dossier + checklist externals). No field; the brief feeds phase 2. BEFORE the brief: run `npm run keyword-check -- "<proposed primary keyword>"` against `docs/seo/keyword-registry.json` — an exact collision means update the existing piece instead of writing a new one; containment warns must be differentiated explicitly in the brief. When the piece goes LIVE, add its registry entry in the same session. Also worth a glance for topic ideas/urgency: `docs/seo/sitemap-snapshots/DIFFLOG.md` (competitor new pages, `npm run sitemap-diff`) and `docs/seo/llm-citation-log.md` (which domains LLMs cite for our queries, `npm run llm-citations`).
 2. **Draft** (writing agent): load `.claude/skills/seo-aeo-simplescheduleai.md` (+ `trendjacking-articles.md` for /articles, `competitor-reviews.md` for competitor content). EVERY fact with a `docs/seo/facts-dossier.md` entry uses dossier wording; new facts get verified + ADDED to the dossier in the same session. Fields this phase must leave green after step 3: `factsDossier`.
 3. **Mechanical gate**: `npm run publish-gate <slug>` — fills `checkBlog`, `checkLinks`, `inboundLinks`, `image`, `prettier`, `dateSanity`, `factsDossier`. Fix every FAIL and re-run; never hand-wave a red row.
 4. **Inbound links**: wire >= 2 links from LIVE sibling posts (natural in-prose anchors); re-run the gate (`inboundLinks`).
