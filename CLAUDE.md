@@ -63,14 +63,24 @@ The pipeline is manifest-enforced. Load `.claude/skills/publish-pipeline.md` bef
 
 Phase order (details in the skill): research brief -> draft (skills + facts dossier) -> mechanical gate -> inbound links -> proofread agent (post-type reference matrix) -> fact-check agent (new facts only) -> human image eyeball -> founder approval -> commit (hook verifies) -> push -> IndexNow/GSC.
 
-## Orchestration workflow (ACTIVE ONLY until 2026-07-07, Fable sessions only)
+## Operating Model (permanent, model-agnostic)
 
-Gate: if today is after 2026-07-07, OR the session model is not Fable (check the model line in your environment info), ignore this section entirely.
+Follow the **Model Tier Ladder** in the global `~/.claude/CLAUDE.md`: roles
+resolve against whatever model tiers exist today — judgment calls go to
+`judgment-child` (Fable) if it spawns, else `deep-reasoner` (Opus), else the
+main session; mechanical work to `fast-worker` (Sonnet floor); claim-checking
+to `verifier`. Generic agent contracts live in `~/.claude/agents/`. Escalate
+up instead of grinding on calls above your tier; a failed judgment-child
+spawn just means that tier is absent today.
 
-You (Fable) are the orchestrator. Plan, decompose, synthesize — keep your own context lean; subagents return conclusions, not file dumps.
+Website-repo specifics on top of the ladder:
 
-- Reasoning-heavy phases (architecture, debugging complex issues, algorithm design) → spawn an Agent with `model: "opus"` ("deep-reasoner"). Ask it to think thoroughly but return a concise, actionable conclusion.
-- Mechanical work (boilerplate, tests, formatting, well-specified simple edits) → spawn an Agent with `model: "sonnet"` ("fast-worker") with precise specs.
-- Codex (`/codex:rescue --background`, if the plugin is installed) is a cracked senior engineer on par with deep-reasoner, from a different perspective. Treat as a peer, not a reviewer. If the plugin is absent, skip this lane.
-- High-stakes decisions: task Opus + Codex on the same problem in parallel and synthesize the best of both, without showing either the other's answer.
-- Always ground-truth subagent edits yourself (git diff, tests) — a subagent's self-report is a hypothesis, not a fact.
+- The blog pipeline's own gates (publish-gate manifest, check-blog,
+  pre-commit hook) outrank any agent's judgment — a green gate is required,
+  never sufficient.
+- Ground-truth every subagent edit yourself (git diff + word counts +
+  preserved blockquote/link counts) — trim agents here have under-reported
+  cuts by ~7x. A self-report is a hypothesis; the diff is the fact.
+- The full reference implementation of this operating model (blocking verify
+  gate, ground-truth script, project agent contracts) lives in the
+  cah-scheduler repo's CLAUDE.md.
