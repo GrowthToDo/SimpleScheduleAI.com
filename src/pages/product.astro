@@ -75,13 +75,15 @@ const softwareAppSchema = {
   <!-- Product hero -->
   <DarkHero
     badge="Nurse scheduling software"
-    title="The nurse schedule builds itself. You approve it."
+    title='Stop Building the Nurse Schedule by Hand. <span class="text-[#7BAF9B]">Approve It Instead.</span>'
     subtitle="The AI builds it, 21 rule checks validate it, you approve it. In the browser, nothing to install."
     actions={[
       { text: 'Try the interactive demo', href: '/simulator', variant: 'primary' },
       { text: 'Book a call with our team', href: ctaLink, variant: 'secondary' },
     ]}
-  />
+  >
+    <p class="text-sm text-[#FAF7F2]/50">The demo runs in your browser. No signup, no sales call first.</p>
+  </DarkHero>
 
   <!-- Trust row: pre-launch credibility via what it plugs into and what it checks -->
   <section class="bg-page border-b border-hairline">
@@ -117,7 +119,7 @@ const softwareAppSchema = {
         <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">Four screens run your week</h2>
       </div>
 
-      <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4" data-reveal-group>
+      <div class="mx-auto mt-10 grid max-w-5xl gap-6 sm:grid-cols-2" data-reveal-group>
         {/* Frame 1: draft picker */}
         <div class="flex flex-col">
           <div
@@ -529,7 +531,7 @@ const softwareAppSchema = {
   <!-- Call to Action -->
   <CallToAction
     title="See the schedule build itself.<br/>$10 per user per month."
-    subtitle="$10 per user per month, or $100 per user per year. No setup fees."
+    subtitle="Or $100 per user per year. Billed to the facility, cancel anytime. No setup fees."
     tagline="Simple pricing"
     actions={[
       { variant: 'primary', text: 'Try the interactive demo', href: '/simulator' },

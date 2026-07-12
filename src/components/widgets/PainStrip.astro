@@ -1,0 +1,98 @@
+---
+/**
+ * PainStrip — the "why this service exists" section, directly under the hero.
+ * Interview-grounded pain framing (8-12 hours = the interview-derived weekly
+ * range, same model as the time-breakdown post). No fabricated stats; the
+ * week card is labeled as a composite from interviews, not a real log.
+ */
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
+
+type Props = Widget;
+
+const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
+
+const pains = [
+  {
+    num: '01',
+    title: 'The Sunday-night rebuild',
+    description:
+      "The next cycle's schedule gets built after hours, cell by cell, around requests, skill mix, and on-call limits.",
+  },
+  {
+    num: '02',
+    title: 'The 5 AM phone tree',
+    description:
+      'A callout starts a phone list: who is rested, who is qualified, who picks up. One no at a time, before sunrise.',
+  },
+  {
+    num: '03',
+    title: 'The fairness ledger',
+    description: 'Weekends, nights, and holidays tracked from memory, and disputed at the nurses&rsquo; station.',
+  },
+];
+
+const weekMoments = [
+  { when: 'SUN · 9:40 PM', what: "Next cycle's draft, rebuilt at the kitchen table", tone: 'bad' },
+  { when: 'TUE · 5:04 AM', what: 'Callout. Working the phone list, one no at a time', tone: 'bad' },
+  { when: 'THU · 2:15 PM', what: 'PTO request lands. Ripple edits across two weekends', tone: 'warn' },
+  { when: 'FRI · 4:50 PM', what: 'Weekend fairness dispute at the nurses&rsquo; station', tone: 'warn' },
+];
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
+  <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+    <div data-reveal>
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">The problem</p>
+      <h2 class="font-heading text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+        Scheduling eats <span class="text-primary">8 to 12 hours</span> of a nurse manager&rsquo;s week
+      </h2>
+      <p class="mt-4 text-lg leading-relaxed text-muted">
+        That range comes from our interviews with nurse managers, and the hours cluster in three places.
+      </p>
+
+      <div class="mt-8 space-y-6">
+        {
+          pains.map((pain) => (
+            <div class="flex items-start gap-5 border-t border-hairline pt-6">
+              <span class="font-heading text-3xl font-semibold text-primary/40">{pain.num}</span>
+              <div>
+                <h3 class="text-lg font-bold">{pain.title}</h3>
+                <p class="mt-1.5 leading-relaxed text-muted" set:html={pain.description} />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div data-reveal>
+      <div class="rounded-2xl border border-hairline bg-white p-6 shadow-[0_14px_40px_-28px_rgb(26_35_50/0.35)]">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">One week, before</p>
+        <div class="mt-4 space-y-3">
+          {
+            weekMoments.map((m) => (
+              <div class="flex items-start gap-3 rounded-xl border border-hairline p-3.5">
+                <span
+                  class={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${m.tone === 'bad' ? 'bg-red-400' : 'bg-amber-400'}`}
+                />
+                <div>
+                  <p class="font-mono text-[0.7rem] font-semibold tracking-wide text-muted">{m.when}</p>
+                  <p class="mt-0.5 text-sm font-medium" set:html={m.what} />
+                </div>
+              </div>
+            ))
+          }
+          <div class="flex items-start gap-3 rounded-xl border-2 border-primary bg-primary/5 p-3.5">
+            <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary"></span>
+            <div>
+              <p class="font-mono text-[0.7rem] font-semibold tracking-wide text-primary">WITH SIMPLESCHEDULEAI</p>
+              <p class="mt-0.5 text-sm font-medium">The schedule arrives checked. You review and approve.</p>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-xs text-muted">A composite week, drawn from our nurse-manager interviews.</p>
+      </div>
+    </div>
+  </div>
+</WidgetWrapper>

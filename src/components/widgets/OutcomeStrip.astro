@@ -1,0 +1,112 @@
+---
+/**
+ * OutcomeStrip — the closing "strategic outcome" beat of the landing narrative.
+ * Mechanism-framed only: states what the deliverables enable, never customer
+ * outcomes (SSAI is pre-launch; no outcome claims). The summary card is
+ * explicitly labeled sample data.
+ */
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
+
+type Props = Widget;
+
+const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
+
+const outcomes = [
+  {
+    num: '01',
+    title: 'Fairness complaints get answered with data',
+    description: 'Weekend, night, and holiday counts per nurse are on paper, not in memory.',
+  },
+  {
+    num: '02',
+    title: 'Overtime becomes a decision',
+    description:
+      'Draft options show the cost before you publish, so the budget conversation happens before the money is spent.',
+  },
+  {
+    num: '03',
+    title: 'Survey prep becomes a lookup',
+    description: 'The audit trail is already written: who changed what, and when.',
+  },
+];
+
+const fairnessRows = [
+  { name: 'Carol A.', weekends: '2', nights: '4', holidays: '1' },
+  { name: 'Dan B.', weekends: '3', nights: '3', holidays: '1' },
+  { name: 'Emma C.', weekends: '2', nights: '4', holidays: '2' },
+];
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
+  <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+    <div data-reveal>
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">After the first month</p>
+      <h2 class="font-heading text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+        By the second cycle, the conversation changes
+      </h2>
+
+      <div class="mt-8 space-y-6">
+        {
+          outcomes.map((o) => (
+            <div class="flex items-start gap-5 border-t border-hairline pt-6">
+              <span class="font-heading text-3xl font-semibold text-primary/40">{o.num}</span>
+              <div>
+                <h3 class="text-lg font-bold">{o.title}</h3>
+                <p class="mt-1.5 leading-relaxed text-muted">{o.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div data-reveal>
+      <div class="rounded-2xl border border-hairline bg-white p-6 shadow-[0_14px_40px_-28px_rgb(26_35_50/0.35)]">
+        <div class="flex items-center justify-between">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Manager summary · Cycle 6</p>
+          <span
+            class="rounded-full border border-hairline px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-muted"
+            >Sample data</span
+          >
+        </div>
+
+        <div class="mt-5 overflow-hidden rounded-xl border border-hairline">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-hairline bg-page text-left">
+                <th class="px-3.5 py-2 text-xs font-semibold uppercase tracking-wider text-muted">Nurse</th>
+                <th class="px-3.5 py-2 text-xs font-semibold uppercase tracking-wider text-muted">Weekends</th>
+                <th class="px-3.5 py-2 text-xs font-semibold uppercase tracking-wider text-muted">Nights</th>
+                <th class="px-3.5 py-2 text-xs font-semibold uppercase tracking-wider text-muted">Holidays</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                fairnessRows.map((r) => (
+                  <tr class="border-b border-hairline last:border-0">
+                    <td class="px-3.5 py-2 font-medium">{r.name}</td>
+                    <td class="px-3.5 py-2 text-muted">{r.weekends}</td>
+                    <td class="px-3.5 py-2 text-muted">{r.nights}</td>
+                    <td class="px-3.5 py-2 text-muted">{r.holidays}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-3 space-y-2">
+          <div class="flex items-start gap-2.5 rounded-xl border border-amber-300/70 bg-amber-50 p-3">
+            <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-amber-400"></span>
+            <p class="text-sm text-slate-800">Dan B. at 36h this week. Overtime cost if assigned Friday.</p>
+          </div>
+          <div class="flex items-start gap-2.5 rounded-xl border border-hairline p-3">
+            <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary"></span>
+            <p class="text-sm text-muted">14 changes this cycle, all logged: who, what, when.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</WidgetWrapper>

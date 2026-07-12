@@ -3,10 +3,13 @@ import Layout from '~/layouts/PageLayout.astro';
 import SchemaOrg from '~/components/common/SchemaOrg.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import HeroStationBackdrop from '~/components/widgets/HeroStationBackdrop.astro';
+import PainStrip from '~/components/widgets/PainStrip.astro';
 import ServiceFlow from '~/components/widgets/ServiceFlow.astro';
 import SoftwareVsService from '~/components/widgets/SoftwareVsService.astro';
+import OnboardingStrip from '~/components/widgets/OnboardingStrip.astro';
 import BuiltForCAHs from '~/components/widgets/BuiltForCAHs.astro';
 import WeeklyPackage from '~/components/widgets/WeeklyPackage.astro';
+import OutcomeStrip from '~/components/widgets/OutcomeStrip.astro';
 import FounderSection from '~/components/widgets/FounderSection.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -95,6 +98,7 @@ const faqSchema = {
   <SchemaOrg slot="head" schema={[webSiteSchema, softwareAppSchema, faqSchema]} />
   <!-- Hero Section -->
   <Hero
+    tagline="AI-native nurse scheduling service · Texas Critical Access Hospitals"
     actions={[
       {
         variant: 'primary',
@@ -111,16 +115,21 @@ const faqSchema = {
     <Fragment slot="bg">
       <HeroStationBackdrop />
     </Fragment>
-    <Fragment slot="title"> Stop Losing Nurses to <span class="text-primary">Scheduling Stress</span> </Fragment>
+    <Fragment slot="title">
+      Stop Rebuilding the Nurse Schedule <span class="text-primary">Every Sunday Night</span>
+    </Fragment>
 
     <Fragment slot="subtitle">
-      An AI-native nurse scheduling service for Texas Critical Access Hospitals. AI builds your schedule, our scheduling
-      team checks it, you approve. No IT.
+      It arrives done instead: AI builds your schedule, our scheduling team checks it, you approve. No IT setup, nothing
+      for your nurses to log into.
     </Fragment>
 
     <Fragment slot="content">
-      <p class="mt-5 text-center text-sm text-muted reveal-delay-3" data-reveal>
-        Or see it fill a schedule yourself:
+      <p class="mt-4 text-center text-sm text-muted reveal-delay-3" data-reveal>
+        Excel roster in, first schedule in under two weeks. Month to month, no long-term contract.
+      </p>
+      <p class="mt-3 text-center text-sm text-muted reveal-delay-3" data-reveal>
+        Or watch the AI fill a week's schedule in front of you:
         <a href="/simulator" class="font-medium text-primary underline underline-offset-4 hover:text-secondary"
           >try the interactive demo</a
         >
@@ -160,19 +169,23 @@ const faqSchema = {
         data-reveal
       >
         <span class="flex items-center gap-2"
-          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Texas Critical Access Hospitals</span
-        >
-        <span class="flex items-center gap-2"
-          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>First schedule in under 2 weeks</span
-        >
-        <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>No IT setup</span
-        >
-        <span class="flex items-center gap-2"
           ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Built after 30+ nurse-manager interviews</span
+        >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>A human checks every schedule</span
+        >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Full audit trail on every change</span
+        >
+        <span class="flex items-center gap-2"
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Flat monthly pricing</span
         >
       </div>
     </Fragment>
   </Hero>
+
+  <!-- Pain: why this service exists -->
+  <PainStrip />
 
   <!-- System flow: how the service works end to end -->
   <ServiceFlow />
@@ -180,11 +193,17 @@ const faqSchema = {
   <!-- Software vs Service Comparison -->
   <SoftwareVsService />
 
+  <!-- Getting started: onboarding chapter -->
+  <OnboardingStrip />
+
   <!-- Built for CAHs -->
   <BuiltForCAHs />
 
   <!-- Weekly Package -->
   <WeeklyPackage />
+
+  <!-- Strategic outcome: what the deliverables enable -->
+  <OutcomeStrip />
 
   <!-- Founder Section -->
   <FounderSection />
