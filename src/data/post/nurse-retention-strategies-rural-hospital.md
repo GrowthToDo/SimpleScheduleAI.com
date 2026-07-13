@@ -21,7 +21,7 @@ metadata:
 
 ## Key Takeaways
 
-- At a 25-bed rural hospital the whole nursing staff is a handful of people, so a single resignation is a coverage emergency, not a line item; the [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts the average cost to replace one staff RN at $61,110
+- At a 25-bed rural hospital the whole nursing staff is a handful of people, so a single resignation is a coverage emergency, not a line item; the [2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) puts the average cost to replace one staff RN at $60,090
 - A small rural hospital cannot out-pay or out-perk a metro employer, so the nurse retention strategies a manager truly controls are schedule-based: fair rotation of nights, weekends, and holidays, plus protection from chronic overtime
 - Rural nurse supply is thin, roughly 65 RNs per 10,000 people versus about 99.5 in urban areas per [RHIhub](https://www.ruralhealthinfo.org/topics/health-care-workforce), so replacing a nurse who leaves can take months
 - Nurse turnover in a small roster is often a fairness problem in disguise: when the same few people always draw the bad shifts and the extra overtime, they burn out and resign first
@@ -42,15 +42,15 @@ The most useful nurse retention strategies for a rural Critical Access Hospital 
 
 ## Why Is Nurse Retention a Coverage Emergency at a Small Rural Hospital?
 
-At a small rural hospital, one resignation is a coverage emergency because there is no bench. A 25-bed Critical Access Hospital may run its entire nursing operation on 15 to 25 people, so losing one experienced nurse removes a meaningful share of the schedule overnight. The [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts the average cost to replace one staff RN at $61,110.
+At a small rural hospital, one resignation is a coverage emergency because there is no bench. A 25-bed Critical Access Hospital may run its entire nursing operation on 15 to 25 people, so losing one experienced nurse removes a meaningful share of the schedule overnight. The [2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) puts the average cost to replace one staff RN at $60,090.
 
 That replacement cost is only the accounting side, and the operational side is worse. At large systems the same staffing strain now erupts as labor action, as the [July 2026 nurse strike wave](/articles/july-2026-nurse-strikes-staffing) showed; at a small hospital it arrives as a quiet resignation instead. A large hospital redistributes the load across a deep pool and posts the opening. When a rural hospital loses a nurse, the remaining staff absorb the extra shifts immediately, raising overtime and fatigue for the exact people you most need to keep. Rural nurse supply is thin to begin with, roughly 65 registered nurses per 10,000 people versus about 99.5 in urban areas, per [RHIhub](https://www.ruralhealthinfo.org/topics/health-care-workforce), so a posting can sit open for months.
 
-On a 12-nurse roster, one departure lands twice. The budget absorbs the $61,110 replacement cost whole, and the remaining eleven absorb every shift the departed nurse used to cover for as long as the posting sits open. On a roster this size, retention is what keeps the schedule standing, and the wider cost of chronic short-staffing is the subject of our [healthcare scheduling crisis](/blog/healthcare-scheduling-crisis) breakdown.
+On a 12-nurse roster, one departure lands twice. The budget absorbs the $60,090 replacement cost whole, and the remaining eleven absorb every shift the departed nurse used to cover for as long as the posting sits open. On a roster this size, retention is what keeps the schedule standing, and the wider cost of chronic short-staffing is the subject of our [healthcare scheduling crisis](/blog/healthcare-scheduling-crisis) breakdown.
 
 ## Why Can't a Rural Hospital Win on Pay and Perks?
 
-A rural hospital cannot win a bidding war on compensation because a larger system has a bigger budget, a bigger recruiting engine, and a labor market that favors it. National staff RN turnover sat at 16.4% in the [2025 NSI report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf), and the [BLS Occupational Outlook Handbook for Registered Nurses](https://www.bls.gov/ooh/healthcare/registered-nurses.htm) describes ongoing demand that keeps experienced nurses in a strong bargaining position. A metro employer will usually outspend you.
+A rural hospital cannot win a bidding war on compensation because a larger system has a bigger budget, a bigger recruiting engine, and a labor market that favors it. National staff RN turnover sat at 17.6% in the [2026 NSI report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf), and the [BLS Occupational Outlook Handbook for Registered Nurses](https://www.bls.gov/ooh/healthcare/registered-nurses.htm) describes ongoing demand that keeps experienced nurses in a strong bargaining position. A metro employer will usually outspend you.
 
 Look at the perks a large system offers and the fight is clearly uneven. A metro hospital can post a five-figure sign-on bonus, fund tuition reimbursement, run a wellness suite, and staff a dedicated float pool that absorbs callouts. A Critical Access Hospital rarely has the margin for any of those, so competing perk-for-perk means spending money you do not have to lose a race you cannot win.
 
@@ -131,11 +131,11 @@ The most effective levers are schedule-based: rotate nights, weekends, and holid
 
 **Q: How much does nurse turnover cost a critical access hospital?**
 
-The 2025 NSI National Health Care Retention Report puts the average cost to replace one staff RN at $61,110. On a roster of roughly a dozen nurses, one departure is a large share of the team, and the vacancy can sit open for months given thin rural supply, so the operational cost often exceeds the dollar figure.
+The 2026 NSI National Health Care Retention Report puts the average cost to replace one staff RN at $60,090. On a roster of roughly a dozen nurses, one departure is a large share of the team, and the vacancy can sit open for months given thin rural supply, so the operational cost often exceeds the dollar figure.
 
 **Q: Why can't a rural hospital just pay nurses more to keep them?**
 
-A larger system almost always has a bigger budget and recruiting engine, so a rural hospital rarely wins a compensation bidding war. National RN turnover was 16.4% in the 2025 NSI report, and demand keeps experienced nurses in a strong position. Competing on schedule fairness and predictability is where a small hospital can win.
+A larger system almost always has a bigger budget and recruiting engine, so a rural hospital rarely wins a compensation bidding war. National RN turnover was 17.6% in the 2026 NSI report, and demand keeps experienced nurses in a strong position. Competing on schedule fairness and predictability is where a small hospital can win.
 
 **Q: How do you spot a nurse who is about to quit?**
 
@@ -147,7 +147,7 @@ It helps by making fairness and overtime tracked numbers instead of a manager's 
 
 ## Sources
 
-1. NSI Nursing Solutions, [2025 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) (average cost to replace one staff RN $61,110; national staff RN turnover 16.4%; each 1-point change in RN turnover about $289,000 per year to the average hospital)
+1. NSI Nursing Solutions, [2026 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) (average cost to replace one staff RN $60,090; national staff RN turnover 17.6%; each 1-point change in RN turnover about $295,000 per year to the average hospital)
 2. Rural Health Information Hub, [Healthcare Workforce](https://www.ruralhealthinfo.org/topics/health-care-workforce) (rural RN supply about 65 per 10,000 versus about 99.5 urban)
 3. AONL, [Nurse Manager Retention](https://www.aonl.org/resources/Nurse-Leadership-Workforce-Compendium/Nurse-Manager-Retention) (nurse-manager departures linked to lower nurse retention; staffing a top nurse-leader challenge)
 4. U.S. Bureau of Labor Statistics, [Occupational Outlook Handbook: Registered Nurses](https://www.bls.gov/ooh/healthcare/registered-nurses.htm) (labor-market demand for registered nurses)

@@ -252,7 +252,7 @@ Most critical access hospitals need the scheduling function first: shift coverag
 Most track it manually, with a combination of spreadsheets, paper files, and institutional knowledge held by one nurse manager. This creates single-point-of-failure risk. A structured scheduling process or managed service that maintains an audit trail is a significant improvement over informal tracking.
 
 **What is the average RN turnover cost, and how does WFM affect it?**
-The 2024 [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts the average cost of turnover for a staff RN at $56,300. Scheduling fairness, equitable weekend distribution, and predictable shift patterns affect nurse satisfaction and retention, so WFM processes that make scheduling more equitable reduce turnover pressure.
+The 2026 [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) puts the average cost of turnover for a staff RN at $60,090. Scheduling fairness, equitable weekend distribution, and predictable shift patterns affect nurse satisfaction and retention, so WFM processes that make scheduling more equitable reduce turnover pressure.
 
 **Can a critical access hospital use its existing EHR for workforce management?**
 Most EHRs used by critical access hospitals, such as CPSI/TruBridge or Meditech Expanse, include basic time-tracking modules but were not designed for scheduling optimization, callout workflow, or overtime forecasting. The EHR handles clinical documentation; workforce management generally needs a separate process or tool built for scheduling.
@@ -266,7 +266,7 @@ The clearest indicator is unplanned overtime appearing consistently on payroll r
 2. CMS Condition of Participation, staffing and personnel, 42 CFR 485.631, eCFR: [ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
 3. U.S. Department of Labor, Fact Sheet #54, the health care industry and calculating overtime pay: [dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)
 4. Rural Health Information Hub, Critical Access Hospitals overview: [ruralhealthinfo.org/topics/critical-access-hospitals](https://www.ruralhealthinfo.org/topics/critical-access-hospitals)
-5. NSI Nursing Solutions, 2024 National Health Care Retention and RN Staffing Report: [nsinursingsolutions.com](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)
+5. NSI Nursing Solutions, 2026 National Health Care Retention and RN Staffing Report: [nsinursingsolutions.com](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf)
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

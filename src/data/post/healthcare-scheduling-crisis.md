@@ -1,6 +1,6 @@
 ---
 publishDate: 2025-01-07T00:00:00Z
-updateDate: 2026-05-07T00:00:00Z
+updateDate: 2026-07-13T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'The $26,000 Scheduling Burden at Critical Access Hospitals'
 excerpt: >
@@ -23,7 +23,7 @@ metadata:
 - Manual scheduling costs Critical Access Hospitals approximately $26,000/year in misallocated leadership time (10 hrs/week x $50/hr)
 - Last-minute callouts routed through agency staff carry 2-3x rate premiums plus an invisible orientation cost per shift
 - Version drift across spreadsheets, whiteboards, and portal PDFs creates CMS-surveyable documentation gaps under [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
-- Reliable nurses absorb disproportionate overtime under manual scheduling, driving turnover that costs $61,110 per RN departure (NSI 2025)[1]
+- Reliable nurses absorb disproportionate overtime under manual scheduling, driving turnover that costs $60,090 per RN departure (2026 NSI report)[1]
 - PRN availability coordination adds 2+ hours per scheduling cycle, a hidden cost rarely tracked in scheduling budgets
 - Fairness tracking and an automated replacement list are the two highest-impact interventions for CAH scheduling operations
 
@@ -49,8 +49,8 @@ compliance.
 
 This figure excludes downstream costs: agency premiums during last-minute callout
 gaps, overtime accumulated by reliable nurses absorbing excess shifts, and the
-$61,110 average cost per nurse turnover reported by the
-[NSI 2025 National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf).
+$60,090 average cost per nurse turnover reported by the
+[2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf).
 
 After two months of interviews with 30 nurse managers and schedulers at small Texas
 healthcare facilities, we identified five recurring friction points that drive this
@@ -125,8 +125,8 @@ For a deeper look at the specific compliance and coverage requirements driving t
 ## Why Do Last-Minute Callouts Cost So Much More Than the Agency Invoice?
 
 Last-minute nurse callouts force a two-to-three hour coordination scramble that
-almost always ends at agency rates - typically 2-3x the standard hourly wage,
-[per AONL workforce data](https://www.aonl.org/resources/workforce).
+almost always ends at agency rates, commonly two to three times the standard hourly
+wage once premiums and fees are included.
 For a CAH on Medicare-dependent margins, this premium compounds quickly. But the
 invoice is only part of the cost: agency staff unfamiliar with your unit's protocols,
 EMR workflows, and patient population carry an invisible orientation tax on every shift.
@@ -193,14 +193,14 @@ edits accumulate over a 6-week schedule cycle.
 ## Why Do Your Most Reliable Nurses Burn Out First?
 
 Fair workload distribution is nearly impossible to enforce manually. Managers default
-to calling the nurses they trust. Those nurses say yes, until they stop.
-[AONL research on nurse manager burnout](https://www.aonl.org/nurse-manager-competencies)
-links scheduling inequity directly to voluntary turnover among high-performing staff.
+to calling the nurses they trust. Those nurses say yes, until they stop. When the same
+names absorb the callouts and the overtime week after week, the fairness gap widens
+quietly, and it usually surfaces as a resignation rather than a complaint.
 
 When reliable nurses absorb disproportionate callout coverage and overtime, two
 things happen: their overtime pay drives up labor costs, and their tolerance erodes.
-The [NSI 2025 report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)
-puts average RN turnover cost at $61,110 per departure. For a 25-bed CAH with 15-20
+The [2026 NSI report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf)
+puts average RN turnover cost at $60,090 per departure. For a 25-bed CAH with 15-20
 nurses, losing two or three to avoidable burnout is a six-figure operational event.
 That is the local half of the [nurse shortage versus retention debate](/articles/nurse-shortage-or-retention-crisis-rural-hospitals): the licenses exist nationally, but a rural roster still loses the nurses it already has.
 
@@ -287,8 +287,8 @@ Watch the AI build a schedule and generate a callout replacement shortlist in th
   </div>
   <div class="rounded-lg bg-primary/5 dark:bg-[#1A2332] border border-primary/25 dark:border-[#1A2332] p-4 text-center">
     <p class="font-bold text-primary dark:text-[#7BAF9B] text-xs mb-1">Nurse Burnout</p>
-    <p class="text-3xl font-extrabold text-primary dark:text-[#7BAF9B]">$61K</p>
-    <p class="text-xs text-primary dark:text-primary mt-1">avg cost per RN departure (NSI 2025)</p>
+    <p class="text-3xl font-extrabold text-primary dark:text-[#7BAF9B]">$60K</p>
+    <p class="text-xs text-primary dark:text-primary mt-1">avg cost per RN departure (2026 NSI)</p>
   </div>
   <div class="rounded-lg bg-rose-50 dark:bg-rose-950 border border-rose-200 dark:border-rose-800 p-4 text-center">
     <p class="font-bold text-rose-800 dark:text-rose-300 text-xs mb-1">PRN Overhead</p>
@@ -301,19 +301,17 @@ One honest limitation: a managed scheduling service is not the right fit for fac
 
 ## Sources
 
-[1] NSI Nursing Solutions, 2025 National Health Care Retention & RN Staffing Report. Per-RN turnover cost figure ($61,110). [nsinursingsolutions.com](https://www.nsinursingsolutions.com).
+[1] NSI Nursing Solutions, 2026 National Health Care Retention & RN Staffing Report (CY2025 data). Per-RN turnover cost figure ($60,090). [nsinursingsolutions.com](https://www.nsinursingsolutions.com).
 
-[2] AONL workforce data on agency staffing premiums in healthcare. [aonl.org/resources/workforce](https://www.aonl.org/resources/workforce).
+[2] HRSA rural workforce capacity data and shortage area framework. [data.hrsa.gov/topics/health-workforce/shortage-areas](https://data.hrsa.gov/topics/health-workforce/shortage-areas).
 
-[3] HRSA rural workforce capacity data and shortage area framework. [data.hrsa.gov/topics/health-workforce/shortage-areas](https://data.hrsa.gov/topics/health-workforce/shortage-areas).
+[3] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [cms.gov](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) and [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[4] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [cms.gov](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) and [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+[4] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
-[5] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[5] Pre-build CAH nurse-manager research interviews. Internal research conducted by SimpleScheduleAI; cited inline as "from our pre-build research interviews."
 
-[6] Pre-build CAH nurse-manager research interviews. Internal research conducted by SimpleScheduleAI; cited inline as "from our pre-build research interviews."
-
-[7] Reviewer quotes referenced in this guide gathered from Capterra and AllNurses.com on 2026-04-30.
+[6] Reviewer quotes referenced in this guide gathered from Capterra and AllNurses.com on 2026-04-30.
 
 **Methodology note:** Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
@@ -330,7 +328,7 @@ One honest limitation: a managed scheduling service is not the right fit for fac
 2. **Calculate your shadow administrative salary.** Multiply your weekly scheduling hours by your loaded hourly rate, then by 50 weeks. For most CAHs this lands at $22,000 to $30,000 per year. Use the [SimpleScheduleAI ROI calculator](/roi) to model what reducing it returns in dollars and clinical hours.
 3. **Audit which scheduling tasks actually need clinical judgment.** Schedule construction, version control, overtime arithmetic, and callout documentation are work products. Clinical judgment is who covers a complex patient assignment or who is precepting this week. Most of this time is the former, not the latter.
 4. **Identify your two highest-impact friction points.** From the five we outlined (data entry, callout coordination, PRN reconciliation, conflict resolution, compliance documentation), pick the two that consume the most weekly time. Those are the highest-ROI targets for the next 90 days.
-5. **Request a SimpleScheduleAI assessment if you are a Texas Critical Access Hospital.** The managed service removes the friction points without adding software for your team to learn. Start at [how it works](/how-it-works).
+5. **Request a SimpleScheduleAI assessment if you are a Texas Critical Access Hospital.** The service removes the friction points without adding software for your team to learn. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Recover the $26,000 hidden in your schedule</p>
@@ -360,7 +358,7 @@ worked. An automated system with a full change log addresses this directly.
 
 Manual scheduling defaults to calling the most dependable nurses first. Over time,
 those nurses accumulate disproportionate overtime and callout coverage, driving
-voluntary turnover. NSI 2025 data puts average RN replacement cost at $61,110.
+voluntary turnover. The 2026 NSI report puts average RN replacement cost at $60,090.
 Tracking fairness (who is being called and how often) requires data that
 manual spreadsheets typically do not capture.
 

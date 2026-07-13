@@ -170,7 +170,7 @@ The criteria for a 25-bed hospital are not a compressed version of what a 200-be
 
 **Implementation burden:** A 25-bed CAH typically has one IT person shared across the hospital, or none at all. Any software requiring dedicated IT for setup or ongoing maintenance is disqualifying in practice.
 
-**Shift fairness:** With a roster of 15-25 nurses, perceived unfairness in weekend or overnight assignment distribution accelerates turnover. The [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts registered nurse turnover at 16.4% nationally. At 25 beds, losing two nurses is losing 10% of the roster.
+**Shift fairness:** With a roster of 15-25 nurses, perceived unfairness in weekend or overnight assignment distribution accelerates turnover. The [2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) puts registered nurse turnover at 17.6% nationally. At 25 beds, losing two nurses is losing 10% of the roster.
 
 ## The 5 Best Options, Reviewed for 25-Bed Hospitals
 

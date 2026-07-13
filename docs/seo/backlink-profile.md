@@ -24,3 +24,16 @@ Cross-checks DataForSEO backlink endpoints (which bill per call). Feeds outreach
   placements, listicle outreach (solguruz proves the listicle path works — it produced both
   a real link AND an LLM citation source).
 - Re-snapshot cadence: monthly, alongside `npm run sitemap-diff`.
+
+### Site Audit (2026-07-13, Ahrefs crawl of 10 Jul)
+
+- **Health Score 98/100 (Excellent).** 254 internal URLs crawled; 250 success (2xx),
+  3 redirects, 1 client 4xx. Most "URLs with errors" are the expected noindex pages (72),
+  long titles (52), and long meta descriptions (57) — the same cosmetic items our own
+  `npm run site-hygiene` classifies as non-SEO; no action.
+- **Actionable:** 10 **external 4XX** (dead outbound links in posts) — these get caught and
+  fixed per-post by `npm run check-links` during the content refresh, no separate pass
+  needed. 1 **"Page dropped from Top 10"** (a ranking regression) and 1 H1 change flagged —
+  worth a look but low urgency at this traffic level.
+- No crawlability, indexability, or redirect-chain problems. The site is technically clean;
+  the gap remains authority/citations, not hygiene.

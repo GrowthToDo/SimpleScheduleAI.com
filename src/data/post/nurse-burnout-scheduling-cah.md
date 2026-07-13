@@ -23,7 +23,7 @@ metadata:
 
 - Nurse burnout at a 25-bed hospital is driven less by wellness gaps than by how the schedule distributes night, weekend, and overtime load across a small roster of 15 to 20 nurses
 - With no float pool, the burden concentrates on the few night-and-weekend-eligible nurses, so one overloaded person quietly absorbing overtime is both the burnout mechanism and a turnover event the roster cannot survive
-- The [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts national RN turnover at 16.4% and the average cost to replace one staff RN at $61,110, so losing one overloaded nurse is a real budget event, not just a coverage gap
+- The [2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) puts national RN turnover at 17.6% and the average cost to replace one staff RN at $60,090, so losing one overloaded nurse is a real budget event, not just a coverage gap
 - Four scheduling controls are inside a nurse manager's reach: predictable advance posting, capped consecutive shifts, equitable night and weekend distribution, and spotting overload months before the nurse resigns
 - Be honest about the ceiling: the schedule cannot raise pay, end the national shortage, or lower patient acuity, and pretending otherwise is how staff stop trusting the fix
 
@@ -52,7 +52,7 @@ At a 25-bed hospital, burnout concentrates because the roster is small and there
 
 A large hospital spreads night and weekend burden across dozens of nurses and calls a float pool when a gap opens. A Critical Access Hospital has neither cushion. The same names surface every time a weekend needs filling or a shift goes uncovered, and the manager, reaching for whoever reliably says yes, deepens the exact concentration that is burning that nurse out. This is the trap behind [after-hours callout coverage at small hospitals](/blog/after-hours-callout-coverage-small-hospitals): the callout gets filled tonight by the person already carrying the most, and the short-term save compounds the long-term risk.
 
-The stakes are not only human. The [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts national RN turnover at 16.4% and the average cost to replace one staff RN at $61,110. For a roster of 18, one overloaded nurse quietly absorbing overtime until she resigns is both the burnout mechanism and a turnover event the schedule cannot easily recover from. The full playbook for keeping those nurses is in our [rural hospital nurse retention strategies](/blog/nurse-retention-strategies-rural-hospital) guide. Tracking overtime exposure for that small group is the same discipline as [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah): watch the running hours on the few, not the average across the many.
+The stakes are not only human. The [2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) puts national RN turnover at 17.6% and the average cost to replace one staff RN at $60,090. For a roster of 18, one overloaded nurse quietly absorbing overtime until she resigns is both the burnout mechanism and a turnover event the schedule cannot easily recover from. The full playbook for keeping those nurses is in our [rural hospital nurse retention strategies](/blog/nurse-retention-strategies-rural-hospital) guide. Tracking overtime exposure for that small group is the same discipline as [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah): watch the running hours on the few, not the average across the many.
 
 ## How Do You Reduce Nurse Burnout Through Schedule Design?
 
@@ -164,7 +164,7 @@ Post the schedule two to four weeks ahead, cap consecutive shifts and per-nurse 
 
 **Q: How much does it cost to replace a burned-out nurse who quits?**
 
-The 2025 NSI National Health Care Retention Report puts the average cost to replace one staff RN at $61,110, with national RN turnover at 16.4%. For an 18-nurse roster, losing one overloaded night-capable nurse is both a budget event and a coverage crisis, since the remaining night pool absorbs her load and inherits her risk.
+The 2026 NSI National Health Care Retention Report puts the average cost to replace one staff RN at $60,090, with national RN turnover at 17.6%. For an 18-nurse roster, losing one overloaded night-capable nurse is both a budget event and a coverage crisis, since the remaining night pool absorbs her load and inherits her risk.
 
 **Q: Can better scheduling fix nurse burnout on its own?**
 
@@ -177,7 +177,7 @@ Count, do not wait for a complaint. Tally night shifts, weekend shifts, and over
 ## Sources
 
 1. CDC NIOSH, [Work-Hour Training for Nurses](https://www.cdc.gov/niosh/work-hour-training-for-nurses/)
-2. NSI Nursing Solutions, [2025 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)
+2. NSI Nursing Solutions, [2026 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf)
 3. American Nurses Association, [Nurse Staffing](https://www.nursingworld.org/practice-policy/nurse-staffing/)
 4. AONL, [Nursing Leadership COVID-19 Survey](https://www.aonl.org/resources/nursing-leadership-covid-19-survey)
 

@@ -63,7 +63,7 @@ Night shift carries three constraints at once: health effects, lifestyle disrupt
 
 **Lifestyle disruption.** Nurses with family responsibilities, caregiving duties, or second jobs are hard to schedule for nights. At a rural CAH where most of the nursing staff lives within a short radius and shares similar life circumstances, night availability is structurally limited.
 
-**Small roster amplification.** A large hospital spreads night burden across a broad pool. At a 25-bed CAH with 18 nurses, removing those who genuinely cannot work nights for health, family, or per-diem reasons may leave five to seven who can. If two or three of those carry most of the load, voluntary turnover in that group becomes a near-term risk. The [2025 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf) puts the average cost to replace one staff RN at $61,110. For a CAH, losing two night-capable nurses in one quarter is an operational emergency. Tracking overtime exposure for that small group matters too, which is why [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah) and night coverage are the same scheduling problem viewed from two angles.
+**Small roster amplification.** A large hospital spreads night burden across a broad pool. At a 25-bed CAH with 18 nurses, removing those who genuinely cannot work nights for health, family, or per-diem reasons may leave five to seven who can. If two or three of those carry most of the load, voluntary turnover in that group becomes a near-term risk. The [2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) puts the average cost to replace one staff RN at $60,090. For a CAH, losing two night-capable nurses in one quarter is an operational emergency. Tracking overtime exposure for that small group matters too, which is why [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah) and night coverage are the same scheduling problem viewed from two angles.
 
 ## Should Critical Access Hospitals Use Rotating or Permanent Night Shift Nurses?
 
@@ -193,7 +193,7 @@ Without a system, the charge nurse or manager works a manual phone tree, which c
 
 1. eCFR, [42 CFR Part 485 Subpart F, Conditions of Participation: Critical Access Hospitals](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F) (sections 485.618, 485.631, 485.635)
 2. CDC NIOSH, [Work-Hour Training for Nurses](https://www.cdc.gov/niosh/work-hour-training-for-nurses/)
-3. NSI Nursing Solutions, [2025 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)
+3. NSI Nursing Solutions, [2026 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf)
 
 ---
 
