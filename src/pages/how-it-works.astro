@@ -8,6 +8,7 @@ import WeeklyCadence from '~/components/widgets/WeeklyCadence.astro';
 import QualityChecks from '~/components/widgets/QualityChecks.astro';
 import ComplianceRules from '~/components/widgets/ComplianceRules.astro';
 import CalloutDetail from '~/components/widgets/CalloutDetail.astro';
+import EscalationPromise from '~/components/widgets/EscalationPromise.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -166,6 +167,9 @@ const howItWorksBreadcrumbSchema = {
 
   <!-- Callout workflow detail (the exception path) -->
   <CalloutDetail />
+
+  <!-- Escalation protocol: what happens when something goes wrong on our side -->
+  <EscalationPromise />
 
   <!-- FAQ -->
   <FAQs

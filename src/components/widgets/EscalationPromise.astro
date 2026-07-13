@@ -1,0 +1,70 @@
+---
+/**
+ * EscalationPromise — SERVICE-mode escalation protocol, published in writing.
+ * Shaped like a callout chain because that is the reader's native format.
+ * Response-time commitments are founder commitments (Pradeep, 2026-07):
+ * coverage-blocking within 1 hour in business hours / 3 hours after hours,
+ * same business day otherwise, corrected draft same day. The direct number
+ * is shared at onboarding, never published on the page.
+ */
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
+
+type Props = Widget;
+
+const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
+
+const steps = [
+  {
+    title: 'You reach a person, not a ticket queue',
+    description:
+      'Call or text your named contact: Pradeep, co-founder. You get the direct number at onboarding, and it does not change.',
+  },
+  {
+    title: 'Coverage-blocking: within 1 hour in business hours, 3 hours after',
+    description: 'An uncovered shift or a schedule that cannot post jumps everything else in our queue.',
+  },
+  {
+    title: 'Everything else: same business day',
+    description: 'Rule questions, roster updates, a report you need: answered before the day ends.',
+  },
+  {
+    title: 'A wrong draft gets a corrected copy the same day',
+    description: 'You never sit on a schedule you know is wrong while we investigate.',
+  },
+];
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl ${classes?.container ?? ''}`} bg={bg}>
+  <div class="grid gap-12 lg:grid-cols-2 lg:items-start">
+    <div data-reveal>
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">When something goes wrong</p>
+      <h2 class="font-heading text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+        Our escalation protocol, in writing
+      </h2>
+      <p class="mt-4 text-lg leading-relaxed text-muted">
+        You run a callout chain on your unit. This is ours. Most vendors do not publish one; we would rather you hold us
+        to it.
+      </p>
+      <p class="mt-4 text-muted">
+        And if something slips on our side, you hear it from us first, with what happened and what we changed.
+      </p>
+    </div>
+
+    <ol class="space-y-0" data-reveal>
+      {
+        steps.map((s, i) => (
+          <li class="relative flex items-start gap-5 border-t border-hairline py-6 first:border-t-0 first:pt-0">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary font-heading text-base font-semibold text-primary">
+              {i + 1}
+            </span>
+            <div class="pt-1">
+              <h3 class="text-lg font-bold">{s.title}</h3>
+              <p class="mt-1 leading-relaxed text-muted">{s.description}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</WidgetWrapper>

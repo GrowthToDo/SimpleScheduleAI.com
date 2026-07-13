@@ -11,13 +11,39 @@ const metadata = {
 
 const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
 
-const included = [
-  'AI-built schedule every cycle, checked by our scheduling team, approved by you',
-  'All 21 scheduling rules checked automatically (safety, coverage, fairness)',
-  'Ranked callout replacements when a nurse calls out or takes leave',
-  'Texas overtime and CMS §485.635 documentation maintained for you',
-  'Excel in, post-ready PDF and Excel out, no software for your staff',
-  'Onboarding in 3 to 5 business days, no IT setup',
+// Retainer itemization: what the month buys, grouped so an administrator can
+// defend the renewal to their board. Groups: cycle runs / accountability /
+// changes included / paper trail.
+const monthBuys = [
+  {
+    title: 'The cycle runs',
+    items: [
+      'AI-built schedule every cycle, checked by our scheduling team, approved by you',
+      'All 21 scheduling rules checked automatically (safety, coverage, fairness)',
+      'Excel in, post-ready PDF and Excel out, no software for your staff',
+    ],
+  },
+  {
+    title: 'Someone is accountable',
+    items: [
+      'Ranked callout replacements when a nurse calls out or takes leave, any hour',
+      'A named contact with a written escalation protocol: coverage-blocking issues get a response within 1 hour in business hours, 3 hours after',
+    ],
+  },
+  {
+    title: 'Changes are included',
+    items: [
+      'Unit rule updates (charge coverage, skill mix, on-call limits) applied for the next cycle',
+      'Roster changes adjust your plan at the next billing cycle, not your workflow',
+    ],
+  },
+  {
+    title: 'The paper trail',
+    items: [
+      'A manager summary of what we did each cycle: drafts built, callouts covered, changes applied',
+      'Texas overtime and CMS §485.635 documentation maintained for you, with the full audit trail',
+    ],
+  },
 ];
 
 const tiers = [
@@ -108,19 +134,31 @@ const pricingBreadcrumbSchema = {
         <a href={ctaLink} class="text-primary underline">talk to us</a>.
       </p>
 
-      <!-- What's included -->
+      <!-- What the month buys: retainer itemization -->
       <div class="mt-14">
-        <h2 class="font-heading text-2xl font-semibold">Every plan includes</h2>
-        <ul class="mt-6 grid gap-x-10 sm:grid-cols-2">
+        <h2 class="font-heading text-2xl font-semibold">What the month buys</h2>
+        <p class="mt-2 text-muted">The checklist your administrator can put in front of the board at renewal.</p>
+        <div class="mt-6 grid gap-x-10 gap-y-8 sm:grid-cols-2">
           {
-            included.map((item) => (
-              <li class="flex items-start gap-3 border-t border-ink/10 py-3.5">
-                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span class="text-default/80">{item}</span>
-              </li>
+            monthBuys.map((group) => (
+              <div class="border-t border-ink/10 pt-5">
+                <h3 class="text-lg font-bold">{group.title}</h3>
+                <ul class="mt-3 space-y-2.5">
+                  {group.items.map((item) => (
+                    <li class="flex items-start gap-3">
+                      <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span class="text-default/80">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))
           }
-        </ul>
+        </div>
+        <p class="mt-8 text-sm text-muted">
+          Onboarding in 3 to 5 business days, no IT setup. The full escalation protocol, response times included, is
+          published on <a href="/how-it-works" class="text-primary underline">how it works</a>.
+        </p>
       </div>
 
       <!-- ROI framing -->
