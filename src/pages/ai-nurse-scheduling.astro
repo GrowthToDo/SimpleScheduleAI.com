@@ -88,7 +88,7 @@ const faqSchema = {
       name: 'Is AI nurse scheduling compliant with Texas nursing rules?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI nurse scheduling can encode Texas overtime rules, FLSA thresholds, and the CMS requirement that a registered nurse is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these constraints during generation and logs an audit trail of every change for CMS surveys and Texas HHSC hospital licensing documentation.',
+        text: 'AI nurse scheduling can encode FLSA overtime thresholds, and the CMS requirement that a registered nurse is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these constraints during generation and logs an audit trail of every change for CMS surveys and Texas HHSC hospital licensing documentation.',
       },
     },
   ],
@@ -368,9 +368,9 @@ const breadcrumbSchema = {
       <h2>How Does SimpleScheduleAI Deliver AI Nurse Scheduling as a Service?</h2>
       <p>
         SimpleScheduleAI is an AI-native nurse scheduling service, not a software license. Your nurse manager uploads
-        the existing roster via Excel. Our team configures shift rules, Texas overtime constraints, and fairness
-        weights. You receive three AI-drafted schedule options each cycle to review and approve. When a nurse calls out,
-        the system produces a ranked replacement shortlist in seconds, and the manager makes the call.
+        the existing roster via Excel. Our team configures shift rules, FLSA overtime thresholds, and fairness weights.
+        You receive three AI-drafted schedule options each cycle to review and approve. When a nurse calls out, the
+        system produces a ranked replacement shortlist in seconds, and the manager makes the call.
       </p>
       <p>
         The audit trail logs every AI suggestion and every human decision, which is the documentation <a
@@ -435,7 +435,7 @@ const breadcrumbSchema = {
       {
         title: 'Is AI nurse scheduling compliant with Texas nursing rules?',
         description:
-          'It can encode Texas overtime rules, FLSA thresholds, and the CMS requirement that an RN is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these during generation and logs an audit trail of every change for CMS surveys and Texas HHSC hospital licensing documentation.',
+          'It can encode FLSA overtime thresholds, and the CMS requirement that an RN is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these during generation and logs an audit trail of every change for CMS surveys and Texas HHSC hospital licensing documentation.',
       },
     ]}
   />

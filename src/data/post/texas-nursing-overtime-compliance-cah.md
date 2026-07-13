@@ -247,7 +247,7 @@ be complete.
 
 1. Confirm you have a signed 8-and-80 agreement on file for every nurse, dated before the work period it applies to. Using the 8-and-80 method without them is back-pay exposure today.
 2. Pull last month's posted schedule and compare it to who actually worked. Every callout substitution should have a logged replacement with the covering nurse's credentials. Gaps here are a common CMS survey finding.
-3. Check that your scheduling or credentialing log flags license, BLS, and certification expirations before a nurse is assigned, not after.
+3. Check that your scheduling or credentialing log flags license, BLS, and certification expirations before a nurse is assigned, not after. If you are shopping for a tool, our guide to the [best nurse scheduling software for Texas hospitals](/blog/best-nurse-scheduling-software-texas) compares eight platforms on exactly this kind of compliance handling.
 4. Review your meal-break policy. If nurses work through auto-deducted breaks, that is FLSA back-pay exposure; document the interruptions or stop auto-deducting.
 5. If assembling this proof by hand is the real burden, [see how SimpleScheduleAI works](/how-it-works) or [book a call](https://cal.com/gautham-8bdvdx/30min) to have the audit trail maintained for you.
 

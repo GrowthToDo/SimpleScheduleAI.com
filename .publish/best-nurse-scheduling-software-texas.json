@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "best-nurse-scheduling-software-texas",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-13T18:20:17.057Z",
+      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-13T18:20:18.633Z",
+      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-13T18:20:28.927Z",
+      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-13T18:20:28.947Z",
+      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-13T18:20:29.047Z",
+      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-13T18:20:29.047Z",
+      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-13T18:20:29.048Z",
+      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-13T18:20:29.891Z",
+      "contentHash": "be4ba4b927686132bd75d55b470e12f99b5839f032c1c3ba243aa9d1b8f9e449"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "claude-dossier-verified",
+      "setAt": "2026-07-13T18:20:30.821Z",
+      "contentHash": "be4ba4b927686132bd75d55b470e12f99b5839f032c1c3ba243aa9d1b8f9e449"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder-take-it-live",
+      "setAt": "2026-07-13T18:20:31.789Z",
+      "contentHash": "be4ba4b927686132bd75d55b470e12f99b5839f032c1c3ba243aa9d1b8f9e449"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-13T18:20:32.681Z",
+      "contentHash": "be4ba4b927686132bd75d55b470e12f99b5839f032c1c3ba243aa9d1b8f9e449"
+    }
+  },
+  "overrides": []
+}

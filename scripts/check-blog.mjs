@@ -375,9 +375,12 @@ function check(file) {
     }
   });
 
-  // 7. No DSHS for Texas hospital licensing (licensing moved to HHSC Jan 2025).
+  // 7. No DSHS for Texas hospital LICENSING (licensing moved to HHSC Jan 2025).
+  //    DSHS remains a valid source for health statistics (e.g. the Texas Center
+  //    for Nursing Workforce Studies / Hospital Nurse Staffing Study), so only
+  //    flag DSHS when it co-occurs with licensing language on the same line.
   body.forEach((line, i) => {
-    if (/\bDSHS\b/.test(line))
+    if (/\bDSHS\b/.test(line) && /licens/i.test(line))
       fail('DSHS — Texas hospital licensing is HHSC since Jan 2025', bodyOffset + i + 1, line.trim().slice(0, 100));
   });
 

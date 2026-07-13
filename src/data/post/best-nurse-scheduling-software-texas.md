@@ -1,14 +1,13 @@
 ---
-draft: true
-publishDate: 2026-06-12T00:00:00Z
-updateDate: 2026-07-01T00:00:00Z
+draft: false
+publishDate: 2026-07-13T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Texas Hospitals in 2026'
 excerpt: >
-  Texas hospitals face a specific compliance environment: FLSA overtime, Texas Labor Code Chapter 62
-  overtime provisions, and CMS §485.635 requirements for the state's 91 Critical Access Hospitals.
-  This guide compares eight scheduling platforms on Texas compliance fit, implementation burden, and
-  operational match for small and mid-size hospitals across the state.
+  Texas hospitals face a specific compliance environment: FLSA overtime including the healthcare
+  8-and-80 option, Texas HHSC licensing, and CMS §485.635 requirements for the state's 86 Critical
+  Access Hospitals. This guide compares eight scheduling platforms on Texas compliance fit,
+  implementation burden, and operational match for small and mid-size hospitals across the state.
 image: https://images.unsplash.com/photo-1578496781985-452d4a934d50?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: bofu
@@ -23,8 +22,8 @@ metadata:
 
 ## Key Takeaways
 
-- Texas has 91 Critical Access Hospitals (CAHs), more than most states. The majority are in west Texas, the Panhandle, and south Texas border communities where rural isolation amplifies every scheduling challenge.
-- Texas hospitals must comply with both federal [FLSA overtime rules](https://www.dol.gov/agencies/whd/flsa) and [Texas Labor Code Chapter 62](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) overtime provisions. Not all scheduling software accounts for both.
+- Texas has 86 Critical Access Hospitals (CAHs), among the most of any state, spread across 78 counties in west Texas, the Panhandle, and south Texas border communities where rural isolation amplifies every scheduling challenge.
+- Texas has no separate state overtime law; the federal [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) governs, including the healthcare "8-and-80" option many hospitals elect. The scheduling question that matters is whether a tool tracks that 8-and-80 calculation, not a Texas-specific overtime layer, because there isn't one.
 - A nurse manager at a Texas CAH can lose a meaningful slice of the week to scheduling, on the order of 8 to 12 hours by our own directional estimate (not a published figure). That time cost is the baseline any tool needs to beat before it provides positive ROI.
 - SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals. FLSA overtime threshold tracking, CMS §485.635 audit documentation, and charge nurse coverage logic are defaults, not configuration options.
 - For larger Texas hospitals (50-200 beds), Aladtec and SmartLinx are the strongest self-serve options. For small community hospitals needing physician scheduling, QGenda enters the picture.
@@ -60,8 +59,7 @@ Here is how all 8 platforms compare for Texas hospitals before we go deeper:
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Platform</th>
         <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">Texas Fit</th>
-        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">TX Labor Code</th>
-        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">CMS Critical Access Hospital Ready</th>
+        <th class="align-top text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100">CMS §485.635 Ready</th>
         <th class="align-top text-left py-3 font-semibold text-slate-900 dark:text-slate-100">Cost/Month</th>
       </tr>
     </thead>
@@ -70,27 +68,23 @@ Here is how all 8 platforms compare for Texas hospitals before we go deeper:
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">SimpleScheduleAI</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Built for TX CAHs</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, built in</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, built in</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">$1,000-1,500 flat</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Good for TX small hospitals</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Configurable</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Adequate</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">$200-450</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">SmartLinx</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Good for TX community</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Configurable</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Good</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">QGenda</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Mid-market TX hospitals</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Configurable</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Moderate</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">$500+</td>
       </tr>
@@ -98,13 +92,11 @@ Here is how all 8 platforms compare for Texas hospitals before we go deeper:
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">NurseGrid Manager</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Add-on layer only</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">No</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">No</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Low</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">OnShift</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">TX post-acute only</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">No</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Post-acute only</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
       </tr>
@@ -112,13 +104,11 @@ Here is how all 8 platforms compare for Texas hospitals before we go deeper:
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Deputy</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not for TX hospitals</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">No</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">No</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">$4-6/user</td>
       </tr>
       <tr>
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">UKG</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">TX large systems only</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Configurable</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes (overkill)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
       </tr>
@@ -130,11 +120,11 @@ Here is how all 8 platforms compare for Texas hospitals before we go deeper:
 
 Texas hospitals have a distinct evaluation context that national buyers' guides miss.
 
-### Criterion 1: Does it handle Texas-specific overtime compliance?
+### Criterion 1: Does it handle the healthcare overtime calculation your hospital uses?
 
-Texas employers must comply with both federal [FLSA overtime rules](https://www.dol.gov/agencies/whd/flsa) (time-and-a-half after 40 hours in a workweek) and [Texas Labor Code Chapter 62](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions. Most scheduling software configures FLSA compliance out of the box. Texas-specific rules, including how overtime interacts with state-mandated pay periods and the exemptions applicable to healthcare workers under the [FLSA 8 and 80 rule](https://www.dol.gov/agencies/whd/flsa), require either specific platform support or careful manual configuration.
+Texas has no separate state overtime statute; the federal [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) governs overtime for Texas hospitals. ([Texas Labor Code Chapter 62](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) is a minimum-wage statute and exempts FLSA-covered workers, so it adds no overtime layer.) Most scheduling software handles standard FLSA (time-and-a-half after 40 hours in a workweek) out of the box. The real nuance is the healthcare "8-and-80" option, an alternative calculation many hospitals elect that pays overtime after 8 hours in a day or 80 in a 14-day period; a tool that tracks only the weekly rule will miscalculate for staff on 8-and-80.
 
-Ask any vendor: "How does your platform handle the healthcare worker FLSA 8 and 80 overtime exemption, and can it be configured for Texas pay period structures?"
+Ask any vendor: "Can your platform track the healthcare 8-and-80 overtime calculation at the shift level, not just the weekly 40-hour rule?"
 
 ### Criterion 2: Is it realistic for your hospital tier?
 
@@ -187,7 +177,7 @@ Texas Critical Access Hospitals are surveyed by [Texas HHSC](https://www.hhs.tex
 
 <img src="/images/blog/best-nurse-scheduling-software-texas/SimpleScheduleAI.webp" alt="SimpleScheduleAI scheduling service for Texas hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals. It is a new service without public G2 or Capterra reviews yet. Texas Labor Code Chapter 62 overtime provisions, FLSA healthcare worker exemptions, and CMS §485.635 audit documentation are built into the scheduling logic, not configuration options. [AI nurse scheduling](/ai-nurse-scheduling) drafts the weekly schedule from your Excel roster, a scheduling specialist checks it, and the nurse manager reviews and approves.
+SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals. It is a new service without public G2 or Capterra reviews yet. FLSA overtime threshold tracking, charge nurse coverage logic, and CMS §485.635 audit documentation are built into the scheduling logic, not configuration options. [AI nurse scheduling](/ai-nurse-scheduling) drafts the weekly schedule from your Excel roster, a scheduling specialist checks it, and the nurse manager reviews and approves.
 
 Setup is 100% remote and takes 3-5 days. No IT involvement, no configuration burden, no training period at the facility. For a Texas Critical Access Hospital in a rural county, the fully remote model eliminates the need for on-site vendor support entirely.
 
@@ -207,7 +197,7 @@ Setup is 100% remote and takes 3-5 days. No IT involvement, no configuration bur
 
 **Verdict:** The strongest operational fit for a Texas CAH. For self-serve scheduling at this size, Aladtec is the right alternative. For larger Texas community hospitals, SmartLinx or QGenda are the better fit.
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** Flat $1,000/month for up to 20 nurses, $1,500/month for 21-40 nurses. No per-nurse fees, no setup fees.
 
 ### 2. [Aladtec](https://www.aladtec.com)
 
@@ -215,7 +205,7 @@ Setup is 100% remote and takes 3-5 days. No IT involvement, no configuration bur
 
 Aladtec by TCP is a self-serve scheduling platform built for 24/7 shift-work environments. It holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews), as of April 2026. It is fully cloud-based and sets up entirely remotely. Credential expiration tracking, shift coverage tools, and basic overtime monitoring are included.
 
-Texas overtime rules can be configured within the platform's rule engine, though it requires setup time from whoever is managing the implementation.
+FLSA overtime rules, including the healthcare 8-and-80 calculation, can be configured within the platform's rule engine, though it requires setup time from whoever is managing the implementation.
 
 **Best for:** Texas small hospitals under 75 beds that want to manage scheduling in-house with a proven, low-complexity self-serve platform.
 
@@ -227,7 +217,7 @@ Texas overtime rules can be configured within the platform's rule engine, though
 
 **Key limitations:**
 
-- Texas Labor Code overtime rules require manual configuration, they are not a default.
+- Overtime rules, including the healthcare 8-and-80 calculation, require manual configuration; they are not a default.
 - The credential-tracking advantage carries a caveat for nursing: the Capterra reviewer base skews toward fire, EMS, and law enforcement, and the most recent hospital-nursing reviews are several years old, so nurse-specific rules such as charge nurse requirements may need workarounds. Request hospital-nursing reference customers at CAH scale directly from the vendor.
 - Some reviewers describe click-heavy workflows for routine schedule edits.
 
@@ -241,7 +231,7 @@ Texas overtime rules can be configured within the platform's rule engine, though
 >
 > Jeanne C., Administrative Coordinator, May 7, 2019, Capterra
 
-**Verdict:** The best self-serve option for Texas small hospitals. If you want Texas overtime handled automatically without configuration, SimpleScheduleAI is the alternative.
+**Verdict:** The best self-serve option for Texas small hospitals. If you want FLSA overtime thresholds tracked without a configuration project, SimpleScheduleAI is the alternative.
 
 **Cost:** Approximately $200-$450/month for small hospital staff sizes.
 
@@ -251,7 +241,7 @@ Texas overtime rules can be configured within the platform's rule engine, though
 
 SmartLinx is a healthcare workforce management platform combining scheduling with time-and-attendance tracking and labor analytics. It holds 4.5/5 on Capterra (6 reviews; small sample), as of April 2026. The vendor's documented focus is long-term care, post-acute care, senior care, and behavioral health, so a Texas community hospital should confirm acute-hospital fit before committing.
 
-Texas overtime rules are configurable within SmartLinx.
+FLSA overtime rules are configurable within SmartLinx.
 
 **Best for:** Texas community hospitals in the 50-200 bed range, and Texas LTC or SNF facilities.
 
@@ -399,7 +389,7 @@ OnShift is positioned as a workforce management platform for post-acute care, wi
 
 <img src="/images/blog/best-nurse-scheduling-software-texas/Deputy.webp" alt="Deputy workforce scheduling software" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Deputy is a general workforce scheduling platform used across retail, hospitality, food service, and healthcare. It holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), as of April 2026, across a large general workforce sample, and markets a healthcare segment page. Its healthcare page does not document CMS §485.635 audit-trail, FLSA overtime tracking, Texas Labor Code handling, or credential constraints, so a licensed Texas facility should verify those directly with the vendor.
+Deputy is a general workforce scheduling platform used across retail, hospitality, food service, and healthcare. It holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), as of April 2026, across a large general workforce sample, and markets a healthcare segment page. Its healthcare page does not document CMS §485.635 audit-trail, FLSA overtime tracking including the healthcare 8-and-80 calculation, or credential constraints, so a licensed Texas facility should verify those directly with the vendor.
 
 **Best for:** Texas healthcare practices and clinics with simple shift scheduling needs and the tightest budgets.
 
@@ -414,7 +404,7 @@ Deputy is a general workforce scheduling platform used across retail, hospitalit
 
 **Key limitations:**
 
-- CMS §485.635 audit-trail, FLSA overtime tracking, Texas Labor Code handling, and credential tracking are not documented on the healthcare page. A Texas CAH evaluating Deputy as a primary scheduling system should confirm each capability and request reference customers at similar scale.
+- CMS §485.635 audit-trail, FLSA overtime tracking including the healthcare 8-and-80 calculation, and credential tracking are not documented on the healthcare page. A Texas CAH evaluating Deputy as a primary scheduling system should confirm each capability and request reference customers at similar scale.
 - Some reviewers report the app can be slow when loading shifts.
 
 > "Sometimes the app can be a bit slow or glitchy, especially when trying to load shifts. Also, some features are not very clear at first."
@@ -433,7 +423,7 @@ Deputy is a general workforce scheduling platform used across retail, hospitalit
 >
 > Jackie D., Practice Manager, Medical Practice, March 24, 2025, Capterra
 
-**Verdict:** Strongly rated as a general workforce scheduling tool. For a licensed Texas clinical environment, verify HIPAA, credential-tracking, Texas Labor Code, and CMS audit-trail capabilities with the vendor before deciding.
+**Verdict:** Strongly rated as a general workforce scheduling tool. For a licensed Texas clinical environment, verify HIPAA, credential-tracking, FLSA 8-and-80 handling, and CMS audit-trail capabilities with the vendor before deciding.
 
 **Cost:** Approximately $4-$6/employee/month.
 
@@ -517,9 +507,9 @@ UKG is an enterprise workforce management suite covering scheduling, time and at
 
 Texas hospitals operate under a layered compliance environment that generic scheduling software vendors rarely address explicitly.
 
-**Federal FLSA overtime:** The [Fair Labor Standards Act](https://www.dol.gov/agencies/whd/flsa) requires time-and-a-half after 40 hours in a workweek. The healthcare worker exemption (the "8 and 80" rule) allows an alternative overtime calculation: time-and-a-half after 8 hours in a day OR 80 hours in a 14-day period. This exemption requires a written agreement and must be tracked at the individual shift level. Most scheduling software supports standard FLSA but requires specific configuration for the 8 and 80 healthcare exemption.
+**Federal FLSA overtime (there is no Texas state overtime law):** Overtime for Texas hospitals is governed entirely by the federal [Fair Labor Standards Act](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), which requires time-and-a-half after 40 hours in a workweek. The healthcare "8-and-80" option allows an alternative calculation: time-and-a-half after 8 hours in a day OR 80 hours in a 14-day period. It requires a written agreement and must be tracked at the individual shift level. Most scheduling software supports standard FLSA but requires specific configuration for the 8-and-80 calculation.
 
-**Texas Labor Code Chapter 62:** [Texas Labor Code Chapter 62](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) sets state-level minimum wage and overtime provisions. For most hospitals, federal FLSA is the higher standard and governs in practice, but Texas-specific pay period structures and exemption categories can affect how overtime is calculated for part-time and per-diem staff.
+**Texas Labor Code Chapter 62 (minimum wage, not overtime):** [Texas Labor Code Chapter 62](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) is a state minimum-wage statute; it contains no overtime provision, and §62.151 exempts employees already covered by the FLSA. In other words, Texas adds no state overtime layer on top of the federal rule, so a "Texas overtime" configuration is not a real requirement to shop for.
 
 **CMS §485.635 for Texas Critical Access Hospitals:** [CMS Conditions of Participation §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) requires Texas Critical Access Hospitals to maintain a staffing plan, document compliance with that plan on each shift, and keep records that can be reviewed during a CMS survey or HHSC licensing inspection.
 
@@ -556,7 +546,7 @@ Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Most Texas hospital buying processes start with a feature list, but the number that actually decides fit is your bed count. A 25-bed Critical Access Hospital in the Panhandle and a 200-bed regional system do not belong on the same shortlist. For a CAH where the nurse manager also covers clinical shifts, the win is not the longest feature list, it is Texas overtime and CMS §485.635 documentation handled without a configuration project she has no time to run. The enterprise suites are real platforms for the systems they were built for, and a poor scale fit below 75 beds. Choose for the hospital you actually run on a normal Tuesday, and verify every compliance claim against your own surveyor before you sign.
+    Most Texas hospital buying processes start with a feature list, but the number that actually decides fit is your bed count. A 25-bed Critical Access Hospital in the Panhandle and a 200-bed regional system do not belong on the same shortlist. For a CAH where the nurse manager also covers clinical shifts, the win is not the longest feature list, it is FLSA overtime and CMS §485.635 documentation handled without a configuration project she has no time to run. The enterprise suites are real platforms for the systems they were built for, and a poor scale fit below 75 beds. Choose for the hospital you actually run on a normal Tuesday, and verify every compliance claim against your own surveyor before you sign.
   </p>
 </div>
 
@@ -564,7 +554,7 @@ Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule 
 
 1. Confirm your compliance baseline: does your current scheduling tool track the FLSA 8 and 80 healthcare worker overtime exemption correctly? If you are not sure, ask your payroll team.
 2. Pull your Texas HHSC licensing documentation requirements for nursing staff. Compare them against what your current scheduling tool actually produces.
-3. If you are a Texas CAH under 25 beds, request information from SimpleScheduleAI and Aladtec this week. Request the same information from both: how does the platform handle Texas Labor Code overtime, and what does CMS §485.635 audit output look like?
+3. If you are a Texas CAH under 25 beds, request information from SimpleScheduleAI and Aladtec this week. Request the same information from both: how does the platform track the healthcare 8-and-80 overtime calculation, and what does CMS §485.635 audit output look like?
 4. If you are a Texas community hospital 50-200 beds, request demos from SmartLinx and QGenda. Ask each one specifically about Texas hospital customers and their compliance documentation for HHSC inspections.
 5. Calculate the weekly scheduling cost at your facility: nurse manager hours on scheduling multiplied by their effective hourly rate. That is the baseline ROI any tool needs to clear.
 
@@ -579,15 +569,15 @@ Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule 
 
 **Q: Is Aladtec or SimpleScheduleAI better for a Texas Critical Access Hospital?**
 
-It depends on whether your nurse manager can own a scheduling platform. Aladtec is the right self-serve choice: proven in Texas rural hospitals, fully remote setup, and solid compliance tools. Texas Labor Code overtime rules require configuration, but the platform supports them. SimpleScheduleAI handles Texas compliance automatically with no configuration at the facility, the better fit when the nurse manager is clinically active and cannot maintain a software platform.
+It depends on whether your nurse manager can own a scheduling platform. Aladtec is the right self-serve choice: proven in Texas rural hospitals, fully remote setup, and solid compliance tools. FLSA overtime rules, including the healthcare 8-and-80 calculation, require configuration, but the platform supports them. SimpleScheduleAI handles FLSA overtime thresholds and CMS §485.635 documentation automatically with no configuration at the facility, the better fit when the nurse manager is clinically active and cannot maintain a software platform.
 
-**Q: Does scheduling software need to handle Texas Labor Code overtime separately from FLSA?**
+**Q: Is there a separate Texas state overtime law scheduling software has to handle?**
 
-For most Texas hospitals, FLSA sets the higher standard and governs in practice. However, the Texas Labor Code affects how overtime interacts with Texas-mandated pay periods and certain part-time and per-diem exemption categories. Ask any vendor you are evaluating whether they have Texas hospital customers and how they handle the interaction between FLSA 8-and-80 and Texas Labor Code provisions.
+No. Texas has no state overtime statute; overtime for Texas hospitals is governed by the federal FLSA. Texas Labor Code Chapter 62 is a minimum-wage law that exempts FLSA-covered workers, so there is no "Texas overtime" layer to configure. The overtime nuance that does matter is the federal healthcare 8-and-80 calculation, an option many hospitals elect. Ask any vendor whether they have Texas hospital customers and whether the platform tracks the 8-and-80 calculation at the shift level.
 
 **Q: How many Critical Access Hospitals are in Texas?**
 
-Texas has 91 certified Critical Access Hospitals, making it one of the states with the highest CAH concentration. Most are in rural west Texas, the Panhandle, south Texas, and east Texas. For scheduling purposes, this means a large segment of the Texas hospital market has CAH-specific compliance requirements that most national scheduling software vendors do not address explicitly.
+Texas has 86 certified Critical Access Hospitals across 78 counties (Texas DSHS, 2024), making it one of the states with the highest CAH concentration. Most are in rural west Texas, the Panhandle, south Texas, and east Texas. For scheduling purposes, this means a large segment of the Texas hospital market has CAH-specific compliance requirements that most national scheduling software vendors do not address explicitly.
 
 **Q: What is the FLSA 8 and 80 rule for Texas hospital nurses?**
 
@@ -606,10 +596,11 @@ The FLSA healthcare worker exemption allows hospitals and residential care facil
 5. OnShift rating: 3.9/5 on Capterra. Vendor page: [onshift.com](https://www.onshift.com). Verified 2026-06-15.
 6. Deputy ratings: 4.6/5 on G2 (1,400+ reviews), 4.6/5 on Capterra (765 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-04-30.
 7. UKG (formerly Kronos): enterprise workforce management suite; no independent small-hospital reviews documented. Vendor page: [ukg.com](https://www.ukg.com). Verified 2026-04-30.
-8. FLSA overtime rules and the healthcare-worker exemption. [U.S. Department of Labor](https://www.dol.gov/agencies/whd/flsa).
-9. Texas Labor Code Chapter 62. [Texas Statutes](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
+8. FLSA overtime rules and the healthcare 8-and-80 calculation. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+9. Texas Labor Code Chapter 62 (minimum wage; §62.151 exempts FLSA-covered workers; no state overtime provision). [Texas Statutes](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
 10. CMS Conditions of Participation for Critical Access Hospitals (§485.635). [CMS](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals).
 11. Texas Health and Human Services Commission hospital licensing. [Texas HHSC](https://www.hhs.texas.gov/).
+12. Texas CAH count (86 CAHs across 78 counties): Texas DSHS / Texas Center for Nursing Workforce Studies, 2024 Hospital Nurse Staffing Study (Rural & CAH factsheet, published Feb 2025). [dshs.texas.gov](https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf).
 
 **Methodology note:** Reviewer quotes are reproduced verbatim from Capterra with the reviewer's name or role, date, and source shown. Ratings reflect the figures captured on the verification dates above and may have changed since. Documented product capabilities reference each vendor's own product page. Texas hospitals evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 

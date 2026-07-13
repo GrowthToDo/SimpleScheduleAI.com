@@ -172,7 +172,7 @@ The four strongest QGenda alternatives for a Critical Access Hospital are Simple
 
 SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [healthcare staff scheduling](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a specialist handles setup from an Excel roster upload (3-5 days), checks each draft, and maintains the system as the roster changes.
 
-Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime rules, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
+Texas compliance is built in as the default: [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
 **Best for:** CAHs where the nurse manager is already stretched and cannot absorb another implementation project, or where the core issue is scheduling labor rather than just platform cost.
 
@@ -181,7 +181,7 @@ Texas compliance is built in as the default: [FLSA](https://www.dol.gov/agencies
 - Setup in 3-5 days from Excel roster upload; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, not a configured module the manager maintains
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
-- Texas overtime compliance (FLSA overtime thresholds) and CMS CAH requirements are defaults, not configuration options
+- FLSA overtime threshold tracking and CMS CAH requirements are defaults, not configuration options
 - Service maintains scheduling rules as staff and policies change; no manager-side configuration burden
 
 **Key limitations:**
