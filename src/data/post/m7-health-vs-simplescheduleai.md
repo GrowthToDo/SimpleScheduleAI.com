@@ -20,6 +20,7 @@ tags:
   - healthcare-operations
 metadata:
   canonical: 'https://simplescheduleai.com/blog/m7-health-vs-simplescheduleai'
+  description: 'What M7 Health is, who it fits (large health systems with IT and scheduling staff), and how it compares to an AI-native scheduling service built for standalone CAHs.'
 ---
 
 M7 Health's reference customers are Ochsner (47 hospitals) and ScionHealth, both large health systems. SimpleScheduleAI is built for the opposite end: the single Critical Access Hospital at 25 beds or fewer. Both products use AI. They are designed for different operational realities, and the product fit at a CAH is decided by that design target, not the algorithm description.

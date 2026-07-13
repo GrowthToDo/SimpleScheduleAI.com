@@ -99,7 +99,7 @@ const metadata = {
                   {article.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{article.excerpt}</p>}
                   {article.tags && Array.isArray(article.tags) && (
                     <footer class="mt-5">
-                      <PostTags tags={article.tags} />
+                      <PostTags tags={article.tags} linked={false} />
                     </footer>
                   )}
                 </div>

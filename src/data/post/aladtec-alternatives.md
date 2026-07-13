@@ -20,7 +20,7 @@ tags:
   - healthcare-operations
 metadata:
   canonical: 'https://simplescheduleai.com/blog/aladtec-alternatives'
-  description: 'Six Aladtec alternatives built for hospital nursing rather than fire and EMS, and runnable with no IT team. Compared on fit, setup, and CAH compliance.'
+  description: "Aladtec's reviewed base skews fire and EMS. If you run a small hospital, these six alternatives fit better: compared on setup, compliance, and who operates them."
 ---
 
 Your IT contractor configured Aladtec around the EMS dispatch workflow that came with the install. Your nurse manager actually deals with credential-filtered callout coverage at 2 AM and CMS §485.635 documentation at survey time. Aladtec was built for fire and EMS dispatch. No amount of configuration turns it into hospital nursing software.

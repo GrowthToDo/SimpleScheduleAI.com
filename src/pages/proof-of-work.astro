@@ -342,7 +342,7 @@ const distribution = [
 
       <h4 class="mt-8 text-base font-bold text-gray-900 dark:text-white">AI answer engines</h4>
       <p class="mt-2 text-sm text-muted">
-        Two things are measurable today. First, people are already reaching this site with full-sentence,
+        Three things are measurable today. First, people are already reaching this site with full-sentence,
         assistant-style questions: Bing logged the site at position 1 for "what are the best nurse scheduling shift
         tools out there with ai?" and position 2 for "can co pilot gernerate a nurses schedule" (query verbatim, week of
         15 May), and Google shows it at positions 6 to 8 on full-question searches such as "is qgenda a good fit for
@@ -351,11 +351,44 @@ const distribution = [
         Copilot can cite us.
       </p>
 
-      <div class="mt-6 rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700 p-5">
+      <p class="mt-4 text-sm text-muted">
+        Third, we run dated engine probes with one buyer prompt: "What is the best nurse scheduling software for a small
+        critical access hospital in Texas?"
+      </p>
+
+      <div class="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5">
+        <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">
+          Logged probe · Google AI Overview · 13 July 2026
+        </p>
+        <p class="text-sm text-gray-800 dark:text-gray-200">
+          Google's AI Overview named SimpleScheduleAI the <strong>first</strong> of its three picks and cited this site:
+          "Best AI-Native Service (Managed): SimpleScheduleAI is purpose-built for Texas Critical Access Hospitals. It eliminates
+          complex self-serve software setups by acting as an AI service that handles scheduling, callouts, and Texas compliance
+          audit trails automatically." Aladtec and ShiftWizard were listed second and third.
+        </p>
+      </div>
+
+      <div class="mt-3 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5">
+        <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">
+          Logged probe · ChatGPT · 12 July 2026
+        </p>
+        <p class="text-sm text-gray-800 dark:text-gray-200">
+          ChatGPT (GPT-5.5, web search on) named SimpleScheduleAI its best "small CAH-specific emerging option",
+          shortlisted it alongside QGenda and Aladtec, and cited this site's nurse-scheduling-software comparison page
+          as a source. It also repeated our own caveat back: newer vendor, limited public review history.
+        </p>
+      </div>
+
+      <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+        Each is one response, a sample and not a ranking. Probes run monthly; raw output retained with model, prompt,
+        and timestamp.
+      </p>
+
+      <div class="mt-4 rounded-2xl border border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700 p-5">
         <p class="text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-1">Data pending</p>
         <p class="text-sm text-amber-800 dark:text-amber-300">
-          A dated per-engine prompt log: which prompts surface SimpleScheduleAI on ChatGPT, Perplexity, Google AI
-          Overviews, and Bing Copilot.
+          Dated prompt logs for Perplexity and Bing Copilot (ChatGPT and Google AI Overview logging started 12 to 13
+          July 2026).
         </p>
       </div>
     </div>

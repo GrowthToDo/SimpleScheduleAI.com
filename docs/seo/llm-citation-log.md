@@ -52,6 +52,15 @@ Implication: aggregators/directories (f6s, Capterra, GetApp) and vendor blogs ea
 citations; Reddit is a first-class source. Supports the directories (item 7) and
 third-party-mentions (item 8) plans.
 
+## 2026-07-13 — multi-engine browser probes (same prompt)
+
+Prompt (all engines): "What is the best nurse scheduling software for a small critical access hospital in Texas?" Run live via browser (Playwright).
+
+- **Google AI Overview — FEATURED #1 + CITED.** Named SimpleScheduleAI the first of three picks, cited simplescheduleai.com. Verbatim: "Best AI-Native Service (Managed): SimpleScheduleAI is purpose-built for Texas Critical Access Hospitals. It eliminates complex self-serve software setups by acting as an AI service that handles scheduling, callouts, and Texas compliance audit trails automatically." Aladtec (2nd), ShiftWizard (3rd). Screenshot saved this session. ADDED to /proof-of-work.
+- **Perplexity — NOT featured.** Recommended ShiftWizard (1st), Deputy, and "Scheduling Wizard" (schedulingwiz.com). Notable: it surfaced the managed-service CONCEPT but attributed it to schedulingwiz.com, not us — a positioning gap to close. Cited only schedulingwiz.com. NOT added to the public box (founder rule: only feature engines where we appear). Re-probe monthly.
+- **Bing Copilot — NOT featured** (probed by founder after clearing a human-verification CAPTCHA). Verbatim: "the best nurse scheduling software options are Thrive, When I Work, and ShiftWizard. Thrive excels at compliance and audit readiness, When I Work is highly user-friendly for shift swaps and communication, and ShiftWizard offers strong automation for recurring shifts." No SimpleScheduleAI. NOT added to the public box (founder rule). Notable gap: Copilot grounds on the Bing index where we rank #1-2 organically for this query, yet its generated answer picked other vendors — organic rank does not guarantee the citation. Re-probe monthly.
+- **Bing organic (not an AI answer):** we hold organic position 1 for this exact query ("Best Nurse Scheduling Software for Critical Access Hospitals (2026)") — already covered in the proof-of-work Bing table, logged here for completeness.
+
 ### Live probe #1 — ChatGPT
 
 - Prompt: "What is the best nurse scheduling software for a small critical access hospital in Texas?"

@@ -120,7 +120,7 @@ const faqSchema =
 
 <Layout metadata={metadata}>
   <SchemaOrg slot="head" schema={[newsArticleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])]} />
-  <SinglePost post={{ ...article, image: image }} url={url}>
+  <SinglePost post={{ ...article, image: image }} url={url} linkTags={false}>
     {article.Content ? <article.Content /> : <Fragment set:html={article.content || ''} />}
   </SinglePost>
   <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 mb-16">

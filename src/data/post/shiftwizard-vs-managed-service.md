@@ -3,7 +3,7 @@ draft: false
 publishDate: 2026-05-02T00:00:00Z
 updateDate: 2026-05-07T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'ShiftWizard vs. Managed Scheduling Service for Critical Access Hospitals (2026)'
+title: 'ShiftWizard vs. Managed Service: Overtime, Compliance, Self-Service (2026)'
 excerpt: >
   ShiftWizard and other hospital scheduling platforms are self-serve software: your team
   configures the system and your nurse manager operates it weekly. A managed service runs
@@ -19,7 +19,7 @@ tags:
   - nurse-scheduling-software
 metadata:
   canonical: 'https://simplescheduleai.com/blog/shiftwizard-vs-managed-service'
-  description: 'ShiftWizard vs a managed scheduling service for a critical access hospital: self-serve software you run weekly, or hand scheduling off. Decide by weekly capacity.'
+  description: 'Does ShiftWizard control overtime, track certifications, and give staff mobile self-service? What the software does, and what a managed service does for you.'
 ---
 
 ShiftWizard demos show a scheduling platform with the features your hospital needs. Your nurse manager asks one question: "After I am trained on this, how many hours a week will I still spend on scheduling?" ShiftWizard answers that question with a self-serve software model. SimpleScheduleAI, an AI-native nurse scheduling service built for Texas Critical Access Hospitals, answers it differently: the AI builds the schedule, our scheduling team checks it, the nurse manager approves it.

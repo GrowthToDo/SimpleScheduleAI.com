@@ -25,6 +25,7 @@ const currentPage = page.currentPage ?? 1;
 
 const metadata = {
   title: `Blog${currentPage > 1 ? `: Page ${currentPage}` : ''}`,
+  description: `SimpleScheduleAI blog archive${currentPage > 1 ? `, page ${currentPage}` : ''}: nurse scheduling, staffing, and compliance for Critical Access Hospitals.`,
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,

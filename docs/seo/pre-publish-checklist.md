@@ -51,6 +51,19 @@ block a publish on them, and never cite "AI citation probability" as their reaso
   restricted/removed by Google in 2023. Error-free if spot-checked; not a gate.
 - `public/llms.txt`: optional-harmless, never a gate or lever.
 
+### Title and copy craft (added 2026-07-12; heuristics, not gates)
+
+- Headline formula check: a strong title carries an action verb or specific outcome plus a
+  timeframe or contrast; write FIVE title options before picking one (keep the rejects in the
+  brief — the queue for A/B swaps if GSC CTR underperforms).
+- Read-aloud test: read the excerpt and any new section opener aloud; if it sounds like a
+  textbook, rewrite it. Same-length paragraphs in a row read as machine rhythm — vary them.
+- So-what chain: for the piece's core claim, go three levels deep ("fast draft" -> "posted on
+  time" -> "no Sunday night rebuild") and write from the bottom level, the one that is
+  emotional or financial for a DON.
+- Pain quantification: prefer arithmetic the reader can check ("2-3 callout events at 1-3
+  hours each") over adjectives ("time-consuming") — only with dossier/interview-backed numbers.
+
 ## Recurring judgment defects (verify each by hand and quote the offending text)
 
 These repeatedly slip past agent passes. Check each explicitly.

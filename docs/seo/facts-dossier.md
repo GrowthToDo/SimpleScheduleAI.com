@@ -96,6 +96,37 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - URL: https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime ; https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm
 - Verified: 2026-07-11 (TWC FLSA guidance + §62.151 via Justia mirror + FS#54 quotes via compliance-vendor mirror; dol.gov and statutes.capitol.texas.gov bot-block direct fetches)
 
+### CAH staffing statistics pack (collected 2026-07-13 for the statistics hub)
+
+All verified from loaded primary pages/PDFs on 2026-07-13; collected for the planned "Rural Hospital & CAH Nurse Staffing Statistics" hub. Any post may use them with the wording below.
+
+**CAH landscape**
+
+- 1,383 certified CAHs in the US (April 2026) — Flex Monitoring Team, Historical CAH Data. URL: https://www.flexmonitoring.org/historical-cah-data-0 (prior data point: 1,381 in January 2026)
+- 197 rural hospital closures/conversions since January 2005 (109 complete + 88 converted); 154 since 2010 — UNC Sheps Center rural closures tracker, page updated 12/4/25. URL: https://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/ — Wrong: 195 (stale snippet); NO per-state Texas total is stated (never hand-count the table).
+- 94% of CAH CEOs reported nursing staff difficult to recruit; 86% reported retention challenges — Flex Monitoring policy brief (Feb 2023; survey of CAH CEOs Mar-May 2022, n=155 of 404, 38% response). URL: https://www.flexmonitoring.org/sites/flexmonitoring.umn.edu/files/media/CAH_workforce_during_COVID_Barriers_and_facilitators_for_recruiting_and_retaining_staff_2025.pdf — always carry the 2022-survey date.
+
+**National staffing & turnover (2026 NSI report, CY2025 data — do NOT mix with the 2025-edition figures elsewhere in this dossier)**
+
+- Hospital RN turnover 17.6% average / 18.6% median (range 5.6%-40.0% by bed size); overall hospital turnover 18.5%; RN vacancy 8.6% (33.1% of hospitals at 10%+); 78 days to recruit an experienced RN; NSI-estimated national RN shortage 158,600 (avg 43 unfilled RN FTEs/hospital); cost per bedside RN departure $60,090 (average hospital loses $4.2M-$6.2M/yr; each 1% turnover change = ~$295,000/yr) — 2026 NSI National Health Care Retention & RN Staffing Report (527 hospitals, 40 states; 262,405 RNs covered). URL: https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf
+- Rural vs urban RN density 65.1 vs 99.5 per 10,000 (2024 BLS OES via RHIhub) — re-confirmed unchanged 2026-07-13. URL: https://www.ruralhealthinfo.org/topics/health-care-workforce
+- HRSA/NCHWA projections (released Dec 2025, horizon 2038): 108,960 RN FTE national shortage by 2038; nonmetro RN shortage projected 11% vs 2% metro. URL: https://bhw.hrsa.gov/data-research/projecting-health-workforce-supply-demand (bot-blocks direct fetch; verified via reader proxy of that URL)
+
+**Wages (BLS May 2025 OEWS via O*NET — mean/median caveat)**
+
+- RN wages: national $46.90/hr, $97,550/yr; Texas $46.14/hr, $95,970/yr — O*NET OnLine local-wages page for 29-1141.00 republishing BLS May 2025 wage data. URL: https://www.onetonline.org/link/localwages/29-1141.00?st=TX — CAUTION: O*NET labels these "average" but they sit at the median position; write "median (BLS May 2025, via O*NET)" or leave unlabeled. Do not claim "mean" until bls.gov is directly verifiable (bls.gov 403s automated fetches).
+
+**Texas cut (Texas DSHS / TCNWS 2024 Hospital Nurse Staffing Study, published Feb 2025; spring-2024 survey, 297 of 739 hospitals, 40.2% response)**
+
+- Texas has 86 CAHs across 78 counties; 50 of 86 (58.1%) responded. Rural/CAH factsheet #25-16864: https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf
+- Texas CAH RN vacancy 11.6% (rural non-CAH 14.3%; non-rural 16.5%) — CAHs LOWER than non-rural on vacancy.
+- Texas CAH RN median turnover 18.2% — highest of the three hospital groups (rural non-CAH 15.4%; non-rural 17.4%).
+- CAH staff mix: RNs are 61.0% of nursing staff (vs 80.5% non-rural); LVNs 16.4% (vs 3.6%) — the LVN-heavy mix claim.
+- 74.0% of Texas CAHs reported NO change in budgeted RN FTEs (vs 36.3% non-rural); only 24.0% increased.
+- Statewide: RN vacancy 16.4% (down from 17.6% in 2022); 8,575.0 of 52,369.8 RN FTEs vacant; RN median facility turnover 23.2% (down from 28.3% in 2022). Highlights factsheet #25-16865: https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_Highlights_accessible.pdf — Wrong: do not cite the factsheet's LVN vacancy line (contains a source typo "21.5% in 2022", should read 2024).
+
+- Verified: 2026-07-13 (all loaded directly except HRSA/BLS noted above; dshs.texas.gov needed Google DNS to resolve)
+
 ### 42 CFR 482.23(b)
 
 - Approved wording (verbatim reg text): "The nursing service must have adequate numbers of licensed registered nurses, licensed practical (vocational) nurses, and other personnel to provide nursing care to all patients as needed."
@@ -193,3 +224,4 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 | 2026-07-06 | Added CAH CoP designation facts for requirements post: 485.610 (35/15 miles, necessary-provider sunset Jan 1 2006), 485.620 (25 beds, 96-hr annual average, swing-bed nuance), 485.618 (24-hr emergency); all verified via Cornell LII + RHIhub | Claude |
 | 2026-07-06 | Added ARISE Healthcare AI Industry Report (July 2026) facts: staffing/scheduling as a named AI taxonomy category, nurse AI-adoption gap (41% vs 57%), HealthAdminBench agentic-AI reliability gap (36.3%/19.3% vs 82.8%). Source is a founder-supplied local PDF; underlying primary studies (Black et al., Bedi/Welch et al.) not independently re-verified — cite the ARISE report, not the primary studies. Confirmed report has zero rural/CAH/shortage content. | Claude |
 | 2026-07-11 | Added "Texas overtime law (none; FLSA governs)" for hospital-staffing-software-features-cah: ch. 62 is minimum-wage only, §62.151 exempts FLSA-covered persons, §7(j) 8-and-80 optional, §207(o) public-agency comp-time nuance. Verified via TWC + Justia §62.151 mirror + FS#54 compliance mirror. | Claude |
+| 2026-07-13 | Added "CAH staffing statistics pack" (21 stats) for the planned statistics hub: Flex Monitoring CAH count (1,383) + CEO recruiting survey, Sheps closures (197/154), 2026 NSI edition figures (17.6%/8.6%/$60,090/158,600 — CY2025 data, distinct from 2025 edition), RHIhub density re-confirmed, HRSA 2038 projections, BLS-via-O*NET wages (median caveat), full Texas DSHS 2024 HNSS cut (86 CAHs, 11.6% vacancy, 18.2% turnover, 61% RN mix, statewide 16.4%/23.2%). NOT VERIFIED list preserved in collection notes: bls.gov direct, HRSA HPSA counts, Sheps TX aggregate. | Claude |

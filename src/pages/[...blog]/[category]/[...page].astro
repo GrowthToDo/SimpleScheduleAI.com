@@ -21,6 +21,7 @@ const currentPage = page.currentPage ?? 1;
 
 const metadata = {
   title: `Category '${category.title}' ${currentPage > 1 ? `: Page ${currentPage}` : ''}`,
+  description: `Posts in the ${category.title} category from the SimpleScheduleAI blog: nurse scheduling, staffing, and compliance for Critical Access Hospitals.`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,
