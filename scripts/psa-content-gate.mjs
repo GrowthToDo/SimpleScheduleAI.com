@@ -114,19 +114,24 @@ for (const c of competitors) {
     }
   }
 
-  // 5: dossier freshness
-  if (!c.dossierVerifiedDate) {
-    errors.push(`${tag} missing dossierVerifiedDate.`);
-  } else {
-    const d = new Date(c.dossierVerifiedDate);
-    if (Number.isNaN(d.getTime())) {
-      errors.push(`${tag} dossierVerifiedDate is not a valid date: ${c.dossierVerifiedDate}.`);
+  // 5: dossier freshness — a publish-time concern. A draft entry ships no
+  //    /alternatives page, so its data is re-verified when it flips to 'live',
+  //    not on every unrelated site build. Enforce freshness on live entries
+  //    only; a stale draft must never block an unrelated deploy.
+  if (c.status === 'live') {
+    if (!c.dossierVerifiedDate) {
+      errors.push(`${tag} missing dossierVerifiedDate.`);
     } else {
-      const ageDays = (now - d.getTime()) / 86400000;
-      if (ageDays > MAX_DOSSIER_AGE_DAYS) {
-        errors.push(
-          `${tag} dossier data is ${Math.round(ageDays)} days old (max ${MAX_DOSSIER_AGE_DAYS}). Re-verify before publish.`
-        );
+      const d = new Date(c.dossierVerifiedDate);
+      if (Number.isNaN(d.getTime())) {
+        errors.push(`${tag} dossierVerifiedDate is not a valid date: ${c.dossierVerifiedDate}.`);
+      } else {
+        const ageDays = (now - d.getTime()) / 86400000;
+        if (ageDays > MAX_DOSSIER_AGE_DAYS) {
+          errors.push(
+            `${tag} dossier data is ${Math.round(ageDays)} days old (max ${MAX_DOSSIER_AGE_DAYS}). Re-verify before publish.`
+          );
+        }
       }
     }
   }
