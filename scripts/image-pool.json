@@ -694,5 +694,11 @@
     "description": "Medical team seated at a table in a planning meeting",
     "family": "team-meeting",
     "topics": ["staffing committee", "nurse staffing", "planning", "team meeting", "safe staffing", "ratios"]
+  },
+  {
+    "id": "1755995083683-50d08cd83d09",
+    "description": "Well-lit hospital corridor with doors at the end",
+    "family": "facility-exterior",
+    "topics": ["hospital", "facility", "institutional", "corridor"]
   }
 ]

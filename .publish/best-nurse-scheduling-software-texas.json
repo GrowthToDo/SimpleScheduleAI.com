@@ -5,64 +5,76 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-07-13T18:20:17.057Z",
-      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+      "checkedAt": "2026-07-14T02:29:24.687Z",
+      "contentHash": "1f7c3a9b0bcbbad1c5e9c24d865a3ca5e3322f7f08418601a8f3fd7a12db57d9"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-07-13T18:20:18.633Z",
-      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+      "checkedAt": "2026-07-14T02:29:26.350Z",
+      "contentHash": "1f7c3a9b0bcbbad1c5e9c24d865a3ca5e3322f7f08418601a8f3fd7a12db57d9"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-13T18:20:28.927Z",
-      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+      "checkedAt": "2026-07-14T02:29:37.742Z",
+      "contentHash": "1f7c3a9b0bcbbad1c5e9c24d865a3ca5e3322f7f08418601a8f3fd7a12db57d9"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-13T18:20:28.947Z",
-      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+      "checkedAt": "2026-07-14T02:29:37.761Z",
+      "contentHash": "1f7c3a9b0bcbbad1c5e9c24d865a3ca5e3322f7f08418601a8f3fd7a12db57d9"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-07-13T18:20:29.047Z",
-      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+      "checkedAt": "2026-07-14T02:29:38.642Z",
+      "contentHash": "1f7c3a9b0bcbbad1c5e9c24d865a3ca5e3322f7f08418601a8f3fd7a12db57d9"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-07-13T18:20:29.047Z",
-      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+      "checkedAt": "2026-07-14T02:29:38.642Z",
+      "contentHash": "1f7c3a9b0bcbbad1c5e9c24d865a3ca5e3322f7f08418601a8f3fd7a12db57d9"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-07-13T18:20:29.048Z",
-      "contentHash": "48549bbcda93aba220072f42cd710c264235717dfa2990b064401f8928fe17a8"
+      "checkedAt": "2026-07-14T02:29:38.643Z",
+      "contentHash": "1f7c3a9b0bcbbad1c5e9c24d865a3ca5e3322f7f08418601a8f3fd7a12db57d9"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
       "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-07-13T18:20:29.891Z",
-      "contentHash": "be4ba4b927686132bd75d55b470e12f99b5839f032c1c3ba243aa9d1b8f9e449"
+      "setAt": "2026-07-14T02:30:00.480Z",
+      "contentHash": "bc97ada262086125d165f2d4a7af88e7abc4056e2103e0699f5ad605e51d1516"
     },
     "factCheck": {
       "value": "PASS",
       "setBy": "claude-dossier-verified",
-      "setAt": "2026-07-13T18:20:30.821Z",
-      "contentHash": "be4ba4b927686132bd75d55b470e12f99b5839f032c1c3ba243aa9d1b8f9e449"
+      "setAt": "2026-07-14T02:30:01.411Z",
+      "contentHash": "bc97ada262086125d165f2d4a7af88e7abc4056e2103e0699f5ad605e51d1516"
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "founder-take-it-live",
-      "setAt": "2026-07-13T18:20:31.789Z",
-      "contentHash": "be4ba4b927686132bd75d55b470e12f99b5839f032c1c3ba243aa9d1b8f9e449"
+      "setBy": "claude-visual-eyeball",
+      "setAt": "2026-07-14T02:30:02.314Z",
+      "contentHash": "bc97ada262086125d165f2d4a7af88e7abc4056e2103e0699f5ad605e51d1516"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-07-13T18:20:32.681Z",
-      "contentHash": "be4ba4b927686132bd75d55b470e12f99b5839f032c1c3ba243aa9d1b8f9e449"
+      "setAt": "2026-07-14T02:30:03.178Z",
+      "contentHash": "bc97ada262086125d165f2d4a7af88e7abc4056e2103e0699f5ad605e51d1516"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "unknown",
+      "setAt": "2026-07-14T02:30:04.066Z",
+      "contentHash": "bc97ada262086125d165f2d4a7af88e7abc4056e2103e0699f5ad605e51d1516"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "unknown",
+      "setAt": "2026-07-14T02:30:04.934Z",
+      "contentHash": "bc97ada262086125d165f2d4a7af88e7abc4056e2103e0699f5ad605e51d1516"
     }
   },
   "overrides": []

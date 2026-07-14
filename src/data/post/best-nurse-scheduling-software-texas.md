@@ -8,7 +8,7 @@ excerpt: >
   8-and-80 option, Texas HHSC licensing, and CMS §485.635 requirements for the state's 86 Critical
   Access Hospitals. This guide compares eight scheduling platforms on Texas compliance fit,
   implementation burden, and operational match for small and mid-size hospitals across the state.
-image: https://images.unsplash.com/photo-1578496781985-452d4a934d50?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1755995083683-50d08cd83d09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: bofu
 tags:
@@ -136,10 +136,6 @@ Texas has three distinct hospital tiers that map to different scheduling needs:
 
 Most Texas small hospitals that struggle with scheduling have purchased a tool from the wrong tier.
 
-### Criterion 3: Does it produce documentation that satisfies Texas regulatory surveys?
-
-Texas Critical Access Hospitals are surveyed by [Texas HHSC](https://www.hhs.texas.gov/) as well as CMS. State licensing documentation for hospital nursing staff and federal CMS requirements are not necessarily the same, so the scheduling tool you use should produce documentation that satisfies both. Confirm the exact overlap with your state surveyor rather than assuming one output covers the other.
-
 <div class="not-prose my-8 grid gap-4 sm:grid-cols-3">
   <div class="rounded-xl border border-blue-100 bg-blue-50 p-5 dark:border-slate-700 dark:bg-slate-800">
     <p class="mb-1 text-sm font-bold text-blue-700 dark:text-blue-300">Texas Critical Access Hospital</p>
@@ -170,6 +166,10 @@ Texas Critical Access Hospitals are surveyed by [Texas HHSC](https://www.hhs.tex
     <p class="mb-0 text-xs text-slate-500 dark:text-slate-400">Priority: EHR and HRIS integration, multi-site</p>
   </div>
 </div>
+
+### Criterion 3: Does it produce documentation that satisfies Texas regulatory surveys?
+
+Texas Critical Access Hospitals are surveyed by [Texas HHSC](https://www.hhs.texas.gov/providers/health-care-facilities-regulation/hospitals-general-hospitals) as well as CMS. State licensing documentation for hospital nursing staff and federal CMS requirements are not necessarily the same, so the scheduling tool you use should produce documentation that satisfies both. Confirm the exact overlap with your state surveyor rather than assuming one output covers the other.
 
 ## Which Are the 8 Best Options, Reviewed for Texas Hospitals?
 
@@ -513,7 +513,7 @@ Texas hospitals operate under a layered compliance environment that generic sche
 
 **CMS §485.635 for Texas Critical Access Hospitals:** [CMS Conditions of Participation §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) requires Texas Critical Access Hospitals to maintain a staffing plan, document compliance with that plan on each shift, and keep records that can be reviewed during a CMS survey or HHSC licensing inspection.
 
-**Texas HHSC hospital licensing:** [Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/) licensing requirements for nursing staff documentation add a state layer on top of CMS requirements. Scheduling documentation must satisfy both.
+**Texas HHSC hospital licensing:** [Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/providers/health-care-facilities-regulation/hospitals-general-hospitals) licensing requirements for nursing staff documentation add a state layer on top of CMS requirements. Scheduling documentation must satisfy both.
 
 ## Which Software Fits Your Texas Hospital?
 
@@ -535,7 +535,7 @@ Evaluate OnShift for the LTC unit alongside one of the above for the acute unit.
 
 ## How SimpleScheduleAI Was Built for Texas?
 
-SimpleScheduleAI was built specifically for Texas Critical Access Hospitals, not adapted from a general scheduling platform. The founders' background in hospital operations, including Apollo Hospitals and Texas healthcare operations, informed a product designed around what a 25-bed Texas CAH actually needs, not what a 300-bed suburban hospital needs.
+SimpleScheduleAI was built specifically for Texas Critical Access Hospitals, not adapted from a general scheduling platform. The founders' background in hospital operations, including Apollo Hospitals, informed a product designed around what a 25-bed Texas CAH actually needs, not what a 300-bed suburban hospital needs.
 
 FLSA overtime threshold tracking, CMS §485.635 audit documentation, charge nurse coverage logic for the rural Texas nursing workforce, and 100% remote implementation are defaults, not features you configure. The AI-native, done-for-you service model was chosen specifically because Texas rural nurse managers cannot realistically maintain a self-serve platform on top of clinical duties.
 
@@ -585,7 +585,7 @@ The FLSA healthcare worker exemption allows hospitals and residential care facil
 
 **Q: Does Texas HHSC require specific scheduling documentation from hospitals?**
 
-[Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/) hospital licensing requires hospitals to maintain staffing records that demonstrate adequate nursing coverage. State licensing documentation and federal CMS documentation for Critical Access Hospitals are not necessarily identical, so confirm the specifics with your surveyor. Your scheduling tool should produce records that satisfy both federal CMS surveys and state HHSC licensing inspections. Ask any vendor for a sample output and compare it against the Texas HHSC hospital licensing standards for nursing staff.
+[Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/providers/health-care-facilities-regulation/hospitals-general-hospitals) hospital licensing requires hospitals to maintain staffing records that demonstrate adequate nursing coverage. State licensing documentation and federal CMS documentation for Critical Access Hospitals are not necessarily identical, so confirm the specifics with your surveyor. Your scheduling tool should produce records that satisfy both federal CMS surveys and state HHSC licensing inspections. Ask any vendor for a sample output and compare it against the Texas HHSC hospital licensing standards for nursing staff.
 
 ## Sources
 
@@ -599,7 +599,7 @@ The FLSA healthcare worker exemption allows hospitals and residential care facil
 8. FLSA overtime rules and the healthcare 8-and-80 calculation. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 9. Texas Labor Code Chapter 62 (minimum wage; §62.151 exempts FLSA-covered workers; no state overtime provision). [Texas Statutes](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
 10. CMS Conditions of Participation for Critical Access Hospitals (§485.635). [CMS](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals).
-11. Texas Health and Human Services Commission hospital licensing. [Texas HHSC](https://www.hhs.texas.gov/).
+11. Texas Health and Human Services Commission hospital licensing. [Texas HHSC](https://www.hhs.texas.gov/providers/health-care-facilities-regulation/hospitals-general-hospitals).
 12. Texas CAH count (86 CAHs across 78 counties): Texas DSHS / Texas Center for Nursing Workforce Studies, 2024 Hospital Nurse Staffing Study (Rural & CAH factsheet, published Feb 2025). [dshs.texas.gov](https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf).
 
 **Methodology note:** Reviewer quotes are reproduced verbatim from Capterra with the reviewer's name or role, date, and source shown. Ratings reflect the figures captured on the verification dates above and may have changed since. Documented product capabilities reference each vendor's own product page. Texas hospitals evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
