@@ -1,4 +1,13 @@
-# "CAHs have no IT" Overstatement — Sitewide Audit (pending sweep)
+# "CAHs have no IT" Overstatement — Sitewide Audit (COMPLETE 2026-07-14)
+
+> **STATUS: DONE — commit 289e00e** (same commit as the Texas-overtime sweep). Factual
+> assertions ("CAHs have no IT department", "a facility with no IT staff") softened to
+> "limited IT (typically one person or a contracted service, no dedicated HRIS/WFM staff)".
+> All product-capability claims kept ("no IT setup required", "runs with no IT team", "no IT
+> integration required"). The dedicated /nurse-scheduling-no-it-department-rural-hospital post
+> was left CONSERVATIVE per founder — its whole premise is the no-IT angle, so its market-fit
+> framing stands untouched.
+
 
 **The error:** many live posts assert as fact that a Critical Access Hospital has **no IT
 department / no IT team / no IT staff**. That overstates. Per HealthIT.gov / rural-health
