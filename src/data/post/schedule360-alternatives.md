@@ -51,7 +51,7 @@ This guide compares four Schedule360 alternatives for a Critical Access Hospital
 
 For a 25-bed Critical Access Hospital, the best Schedule360 alternatives drop the broad multi-industry positioning and fit nurse scheduling that a single nurse manager can run. ShiftWizard is the strongest self-serve hospital-nursing fit. TCP/Aladtec is the lower-cost faster-setup starting point. SimpleScheduleAI handles the scheduling work as a managed service when platform administration is the real constraint.
 
-Schedule360's documented customer base includes large health systems, specialty clinics, urgent care, pharmacies, and call centers. For a 25-bed CAH evaluating it, often because a vendor demo positioned the rules engine as flexible enough to fit any environment, the question is whether the broader healthcare-scheduling platform is configured for a facility with one nurse manager, no IT department, and an active CMS §485.635 audit obligation.
+Schedule360's documented customer base includes large health systems, specialty clinics, urgent care, pharmacies, and call centers. For a 25-bed CAH evaluating it, often because a vendor demo positioned the rules engine as flexible enough to fit any environment, the question is whether the broader healthcare-scheduling platform is configured for a facility with one nurse manager, limited IT, and an active CMS §485.635 audit obligation.
 
 ## What Schedule360 Is Built For?
 
@@ -61,7 +61,7 @@ Schedule360 is built as a broad healthcare scheduling platform. Its documented t
 
 Schedule360's product page covers rules-based self-scheduling, broadcast notifications via SMS, email, and pager, web and mobile access, and reporting. The vendor describes setup, 24/7 support, and online training as included at no additional cost. KLAS named Schedule360 a Best In KLAS winner in 2022 in the nurse and staff scheduling category, citing cost-effective labor cost reduction ([schedule360.us/solutions/nurse-scheduling](https://schedule360.us/solutions/nurse-scheduling/)).
 
-What the product page does not cover, and what a CAH administrator should confirm during a demo: CMS §485.635 audit trail documentation as a default rather than a configuration option, FLSA overtime threshold tracking against the 40-hour workweek (or the 80-hour, 14-day method under the 8-and-80 rule for hospitals that have adopted it), and Texas-specific labor code requirements. None of these appear in the public product copy.
+What the product page does not cover, and what a CAH administrator should confirm during a demo: CMS §485.635 audit trail documentation as a default rather than a configuration option, FLSA overtime threshold tracking against the 40-hour workweek (or the 80-hour, 14-day method under the 8-and-80 rule for hospitals that have adopted it). None of these appear in the public product copy.
 
 <div class="not-prose my-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
   <div class="rounded-lg border border-green-300 dark:border-green-700 bg-white dark:bg-slate-800 overflow-hidden">
@@ -84,7 +84,6 @@ What the product page does not cover, and what a CAH administrator should confir
     <ul class="px-4 py-3 space-y-2 text-sm text-slate-700 dark:text-slate-300">
       <li>CMS <a href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635" class="underline">§485.635</a> audit trail as a default</li>
       <li><a href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime" class="underline">FLSA</a> overtime threshold tracking (40-hour or 8-and-80)</li>
-      <li>Texas Labor Code provisions</li>
       <li>Critical Access Hospital reference customers</li>
       <li>Pricing or contract terms</li>
     </ul>
@@ -200,7 +199,7 @@ The four strongest Schedule360 alternatives for a Critical Access Hospital are S
 
 SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling software](/nurse-scheduling-software) service built specifically for Texas Critical Access Hospitals. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a specialist handles setup from an Excel roster upload (3 to 5 days), checks each draft, and maintains the system as the roster and policies change. For the broader category framing, see our comparison of [managed service vs. scheduling software](/blog/managed-service-vs-scheduling-software).
 
-Texas-specific compliance is built into the default service. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) provisions, and [CMS CoP §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See [how it works](/how-it-works) for the weekly cadence. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
+[FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking and [CMS CoP §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation are built into the default service rather than configuration the nurse manager has to maintain. See [how it works](/how-it-works) for the weekly cadence. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
 **Best for:** Texas CAHs where the nurse manager is already stretched and cannot absorb another implementation project, or where the core issue is scheduling labor rather than just platform cost or platform design.
 
@@ -209,7 +208,7 @@ Texas-specific compliance is built into the default service. [FLSA](https://www.
 - Setup in 3 to 5 days from an Excel roster upload; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, not a configured module the nurse manager maintains
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager's phone
-- Texas overtime compliance (FLSA overtime threshold tracking) and CAH-specific CMS requirements are defaults, not configuration options
+- FLSA overtime threshold tracking and CAH-specific CMS requirements are defaults, not configuration options
 - Service maintains scheduling rules as staff and policies change; no manager-side configuration burden between releases
 
 **Key limitations:**
@@ -418,7 +417,7 @@ Schedule360 is worth keeping if:
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Schedule360 is a credible healthcare scheduling platform with a real KLAS 2022 recognition and marquee enterprise customers. The mismatch for a 25-bed Critical Access Hospital is positioning, not quality. A platform configured for specialty clinics, urgent care chains, and Cleveland Clinic does not surface CMS §485.635 audit defaults, FLSA overtime guardrails, or Texas-specific labor code rules on its product page. A CAH evaluating Schedule360 should ask the vendor for a CAH-scale reference and written confirmation of how each compliance requirement is produced from within the platform before signing a multi-year contract.
+    Schedule360 is a credible healthcare scheduling platform with a real KLAS 2022 recognition and marquee enterprise customers. The mismatch for a 25-bed Critical Access Hospital is positioning, not quality. A platform configured for specialty clinics, urgent care chains, and Cleveland Clinic does not surface CMS §485.635 audit defaults or FLSA overtime guardrails on its product page. A CAH evaluating Schedule360 should ask the vendor for a CAH-scale reference and written confirmation of how each compliance requirement is produced from within the platform before signing a multi-year contract.
   </p>
 </div>
 
@@ -436,7 +435,7 @@ Schedule360 is worth keeping if:
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Need a Scheduling System Built for a 25-Bed Hospital, Not a Specialty Clinic Chain?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for Texas Critical Access Hospitals. It goes live in 3 to 5 days with zero IT involvement. FLSA overtime threshold tracking, Texas Labor Code provisions, and CMS §485.635 documentation are included by default. See how it works to understand how the transition works for your facility.</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for Texas Critical Access Hospitals. It goes live in 3 to 5 days with zero IT involvement. FLSA overtime threshold tracking and CMS §485.635 documentation are included by default. See how it works to understand how the transition works for your facility.</p>
   <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
@@ -465,7 +464,7 @@ For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) 
 
 **Is Schedule360 appropriate for a Critical Access Hospital?**
 
-Schedule360 is positioned as a broad healthcare scheduling platform across hospitals, specialty clinics, urgent care, pharmacies, and government agencies, with named enterprise customers like University of Michigan and Cleveland Clinic. Its product page does not surface CAH-specific compliance defaults (CMS §485.635 audit trail, FLSA overtime threshold tracking, Texas Labor Code provisions). A CAH evaluating it should confirm these capabilities directly with the vendor and request a hospital reference under 50 beds before signing.
+Schedule360 is positioned as a broad healthcare scheduling platform across hospitals, specialty clinics, urgent care, pharmacies, and government agencies, with named enterprise customers like University of Michigan and Cleveland Clinic. Its product page does not surface CAH-specific compliance defaults (CMS §485.635 audit trail, FLSA overtime threshold tracking). A CAH evaluating it should confirm these capabilities directly with the vendor and request a hospital reference under 50 beds before signing.
 
 **What review evidence is available for Schedule360 on independent platforms?**
 

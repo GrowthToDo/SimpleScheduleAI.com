@@ -31,7 +31,7 @@ For a critical access hospital spending 8 to 12 hours a week on scheduling, that
 - "AI-assisted" means humans keep final authority: AI handles constraint optimization, not clinical judgment.
 - AI advantages: multi-constraint optimization, multiple draft options, instant callout ranking, and proactive overtime-risk flags.
 - AI limitations: it does not know what humans know about individual circumstances, it depends on data quality, and it cannot generate nurse availability that does not exist.
-- A managed AI scheduling service is faster to implement than enterprise platforms and better suited to Critical Access Hospitals (CAHs) without IT departments.
+- A managed AI scheduling service is faster to implement than enterprise platforms and better suited to Critical Access Hospitals (CAHs) with limited IT (often one person or a contracted service) and no dedicated HRIS or workforce-management staff.
 
 ## Table of Contents
 
@@ -143,7 +143,7 @@ Being honest about AI limitations matters. CAH administrators need accurate expe
 
 ## How Does SimpleScheduleAI Use AI for Hospital Roster Management?
 
-SimpleScheduleAI uses AI to generate three draft schedule options per cycle (balanced, fair-rotation, and overtime-minimized) for Texas Critical Access Hospitals, incorporating Texas overtime rules, nurse certifications, per-diem availability, and fairness distribution metrics. If the terms feel interchangeable, our explainer on [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software) sorts out where building the roster ends and producing the weekly schedule begins.
+SimpleScheduleAI uses AI to generate three draft schedule options per cycle (balanced, fair-rotation, and overtime-minimized) for Texas Critical Access Hospitals, incorporating FLSA overtime thresholds, nurse certifications, per-diem availability, and fairness distribution metrics. If the terms feel interchangeable, our explainer on [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software) sorts out where building the roster ends and producing the weekly schedule begins.
 
 Critically, SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve AI tool. A scheduling specialist handles the initial configuration and ongoing calibration; the nurse manager does not interact with the AI directly. The output is three human-readable draft schedules delivered for review, not an AI interface the manager has to learn.
 
@@ -158,7 +158,7 @@ This is not the right fit for every hospital. If your CAH already has a scheduli
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    AI is not magic, and it is not a replacement for a nurse manager. What it removes is the part of the job that never should have been manual: the hours of constraint-juggling, the phone tree at 9 p.m., the overtime you only find on the payroll report. The judgment stays with the person who knows the unit. The math moves to the machine. For a CAH with no IT department, the version worth buying is the one delivered as a service, not another login to learn.
+    AI is not magic, and it is not a replacement for a nurse manager. What it removes is the part of the job that never should have been manual: the hours of constraint-juggling, the phone tree at 9 p.m., the overtime you only find on the payroll report. The judgment stays with the person who knows the unit. The math moves to the machine. For a CAH with limited IT and no dedicated HRIS staff, the version worth buying is the one delivered as a service, not another login to learn.
   </p>
 </div>
 
@@ -167,7 +167,7 @@ This is not the right fit for every hospital. If your CAH already has a scheduli
 1. Time one full scheduling cycle honestly: building the draft, checking overtime, and working the last callout. That number is your baseline.
 2. List the constraints you juggle by hand, including coverage, certifications, overtime limits, and weekend and holiday fairness. Those are exactly what an AI optimizer handles at once.
 3. Check your roster data: certifications, expirations, per-diem contacts, availability. AI scheduling is only as good as that data, so clean it before you evaluate anything.
-4. Ask any AI vendor the honest question: is this a tool my manager has to learn and run, or a service that delivers reviewed drafts? For a CAH with no IT, the second is the one that sticks.
+4. Ask any AI vendor the honest question: is this a tool my manager has to learn and run, or a service that delivers reviewed drafts? For a CAH with limited IT, the second is the one that sticks.
 5. If the build-and-callout hours are the real drain, [see how SimpleScheduleAI works](/how-it-works) or [book a call](https://cal.com/gautham-8bdvdx/30min) to compare a reviewed draft against what you do today.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">

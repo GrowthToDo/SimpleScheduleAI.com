@@ -154,7 +154,7 @@ The provider group is small, so the provider tool can be light: it just has to g
         <td class="align-top py-3 text-slate-700 dark:text-slate-300">Volume, running hours, and audit records live here</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
-        <td class="align-top py-3 pr-4 font-medium text-slate-800 dark:text-slate-200">Both are painful, no IT staff for either</td>
+        <td class="align-top py-3 pr-4 font-medium text-slate-800 dark:text-slate-200">Both are painful, limited IT for either</td>
         <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Provider tool plus an operated-for-you nurse service</td>
         <td class="align-top py-3 text-slate-700 dark:text-slate-300">Two right-sized tools beat one stretched tool</td>
       </tr>

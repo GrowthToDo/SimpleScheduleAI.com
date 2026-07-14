@@ -59,7 +59,7 @@ NurseGrid is a scheduling tool built primarily for nurses. Its strongest feature
 
 The questions that matter when a Critical Access Hospital evaluates a switch are operational fit: how much weekly capacity does your nurse manager have to build and maintain schedules; what compliance capabilities does your facility actually need for CMS surveys; and whether the manager-side workflow holds up at your specific scale and on the devices your staff carry.
 
-If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) compliance, CMS documentation, Texas overtime, and credential-filtered callouts, review what those requirements actually demand before choosing a platform. Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that a nurse-facing app does not provide.
+If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) compliance, CMS documentation, FLSA overtime, and credential-filtered callouts, review what those requirements actually demand before choosing a platform. Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that a nurse-facing app does not provide.
 
 ## Why Hospitals Switch Away from NurseGrid?
 
@@ -184,7 +184,7 @@ Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers th
 - CMS §485.635 documentation is automatic, not a manual export process before each survey
 - Callout shortlist is ranked by overtime risk and filtered by credentials without any manual calculation
 - Excel-based roster upload means the transition from NurseGrid does not require IT involvement
-- Texas overtime compliance (FLSA overtime thresholds) and CMS CAH requirements are built in as defaults
+- FLSA overtime threshold tracking and CMS CAH requirements are built in as defaults
 
 **Key limitations:**
 
@@ -577,7 +577,7 @@ FLSA 8-and-80 overtime tracking is not documented on NurseGrid's product page. N
 
 **Does switching from NurseGrid to a managed service require IT support?**
 
-No. SimpleScheduleAI onboards from an Excel roster upload in 3-5 days with no IT involvement. There is no integration to configure and no system credentials to manage. The specialist handles the full setup from the roster file, which is why a CAH with no IT department can switch without internal technical resources.
+No. SimpleScheduleAI onboards from an Excel roster upload in 3-5 days with no IT involvement. There is no integration to configure and no system credentials to manage. The specialist handles the full setup from the roster file, which is why a CAH with limited IT can switch without internal technical resources.
 
 ---
 

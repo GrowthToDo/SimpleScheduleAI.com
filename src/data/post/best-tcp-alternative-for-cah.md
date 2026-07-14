@@ -292,7 +292,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve plat
 
 - Live in 3-5 days from your staff roster
 - Weekly scheduling time drops to 1-2 hours of reviewing and approving
-- [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), Texas Labor Code, and CMS §485.635 audit trail included by default
+- [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds and CMS §485.635 audit trail included by default
 - Callout coverage shortlists delivered pre-ranked with credential and overtime constraints applied
 
 **Key limitations:**
@@ -356,7 +356,7 @@ Four questions separate the platforms that will actually improve a CAH nurse man
 
 1. **Clarify what TCP problem you are actually trying to solve.** Is it cost, configuration complexity, lack of CAH-specific compliance, or the absence of a managed delivery model? The right alternative depends on the actual gap, not on switching for the sake of switching.
 2. **Request a full data export from your current TCP product.** Roster with credentials, 12 months of schedule history, callout records, overtime calculations, and any custom rule configurations. The export format requires cleaning regardless of which alternative you choose.
-3. **Score three alternatives against your specific TCP gap.** Setup time in days not weeks. Texas overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
+3. **Score three alternatives against your specific TCP gap.** Setup time in days not weeks. FLSA overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
 4. **Calculate total cost of ownership, not just license fee.** Subscription plus implementation labor plus ongoing maintenance labor plus the nurse manager's weekly scheduling hours at her loaded rate. Most TCP buyers underestimate the labor side. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service delivers a compliant schedule each cycle without configuration, IT setup, or TCP-style implementation overhead. Start at [how it works](/how-it-works).
 

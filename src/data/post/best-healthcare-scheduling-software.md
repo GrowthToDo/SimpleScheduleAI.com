@@ -142,7 +142,7 @@ Before comparing options, define what "best" means for your facility. Four quest
 
 **Weaknesses:** No nurse-facing mobile app, nurses do not interact with the system directly. Managed service model requires comfort delegating draft generation. Focused on Texas CAHs; may not fit facilities outside that context.
 
-**Best for:** Texas critical access hospitals where the nurse manager needs structural scheduling burden reduction (not just better tools), has no IT support, and wants to be operational quickly.
+**Best for:** Texas critical access hospitals where the nurse manager needs structural scheduling burden reduction (not just better tools), has limited IT support, and wants to be operational quickly.
 
 **Not for:** Nurse managers who want direct, hands-on control of every scheduling decision, or facilities where staff self-service is a top priority.
 

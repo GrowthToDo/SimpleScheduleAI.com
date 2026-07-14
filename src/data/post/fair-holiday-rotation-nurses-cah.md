@@ -194,7 +194,7 @@ Document every contact attempt and outcome. If you ever face a CMS survey or a n
 
 The audit trail logs every schedule change, including the reason code when a nurse from the wrong group is manually added to a holiday shift (typically because a nurse in the correct group has a documented medical leave). This record is what protects the manager when a nurse later disputes whether the rotation was followed.
 
-SimpleScheduleAI is not the right tool if your hospital needs to integrate holiday rotation tracking with a payroll system or an EHR. It is built for [Critical Access Hospital scheduling](/critical-access-hospital-scheduling) specifically: 25 beds or fewer, no IT department, and a nurse manager who needs to go from current Excel roster to a working rotation system in under a week.
+SimpleScheduleAI is not the right tool if your hospital needs to integrate holiday rotation tracking with a payroll system or an EHR. It is built for [Critical Access Hospital scheduling](/critical-access-hospital-scheduling) specifically: 25 beds or fewer, limited IT, and a nurse manager who needs to go from current Excel roster to a working rotation system in under a week.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">

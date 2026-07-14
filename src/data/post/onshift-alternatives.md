@@ -59,7 +59,7 @@ For a 25-bed Critical Access Hospital, the best OnShift alternatives are tools b
 
 OnShift built its scheduling product around the operational reality of long-term care: relatively stable patient census, predictable caregiver availability patterns, and a workforce that responds well to engagement-first tools. Its acquisition by Workday has shifted development priorities toward larger enterprise customers and deeper Workday integration.
 
-For hospitals, particularly small acute care hospitals and Critical Access Hospitals, the questions that matter are operational fit, not a feature checklist. If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) with CMS documentation, Texas overtime, and credential-filtered callouts, review what those requirements actually demand before choosing a platform. Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that LTC-oriented tools were not designed to provide.
+For hospitals, particularly small acute care hospitals and Critical Access Hospitals, the questions that matter are operational fit, not a feature checklist. If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) with CMS documentation, FLSA overtime, and credential-filtered callouts, review what those requirements actually demand before choosing a platform. Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that LTC-oriented tools were not designed to provide.
 
 Here is how the alternatives compare before we go deeper:
 
@@ -172,7 +172,7 @@ This is a different operating model than OnShift, which is a self-serve platform
 - CMS §485.635 staffing documentation maintained automatically, eliminating manual survey prep
 - Charge nurse and unit-specific credential tracking prevents unqualified replacements from appearing on callout lists
 - Managed service model means no implementation burden and no ongoing IT dependency
-- Texas overtime compliance ([FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds) and CMS CAH requirements are defaults, not configuration options
+- FLSA overtime threshold tracking and CMS CAH requirements are defaults, not configuration options
 
 **Key limitations:**
 

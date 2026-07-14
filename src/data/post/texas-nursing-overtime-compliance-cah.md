@@ -223,7 +223,7 @@ logged automatically: original assignment, substitution, who covered, and timest
 This audit trail is maintained as part of the service and available for export if a CMS
 survey or TWC audit requires documentation.
 
-We build Texas overtime rules into the [AI nurse scheduling](/ai-nurse-scheduling) logic, flagging nurses who are
+We build FLSA overtime thresholds into the [AI nurse scheduling](/ai-nurse-scheduling) logic, flagging nurses who are
 approaching the FLSA overtime threshold before shifts are assigned, not after the
 payroll run. Credential expiration dates are tracked against each nurse's profile, and
 we alert you before a certification lapses. See the AI build a compliant schedule and flag overtime risk live in the [interactive simulator](/simulator).
@@ -286,7 +286,7 @@ Best practice is maintaining scheduling and payroll documentation for five years
 ## A Note on Sources
 
 1. FLSA healthcare overtime, including the Section 7(j) 8-and-80 rule. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
-2. CMS Conditions of Participation for Critical Access Hospitals: [§485.631 (staffing and staff responsibilities)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) and [§485.635 (provision of services)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+2. Critical Access Hospital Conditions of Participation, 42 CFR Part 485: [§485.631 (staffing and staff responsibilities)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) and [§485.635 (provision of services)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 3. Texas Labor Code Chapter 62, the Texas Minimum Wage Act, administered by the [Texas Workforce Commission](https://www.twc.texas.gov/).
 4. Texas hospital licensing and staffing adequacy. [Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/).
 5. Payroll record retention and inspection. [Texas Workforce Commission](https://www.twc.texas.gov/).

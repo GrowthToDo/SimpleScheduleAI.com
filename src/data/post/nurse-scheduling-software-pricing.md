@@ -82,7 +82,7 @@ This guide breaks down how these platforms are actually priced, what a 25-bed CA
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Per-module</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">$300-$500</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">$20,000-$50,000+</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">Enterprise platforms; assumes an IT team and HR department a CAH does not have</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-700 dark:text-slate-300">Enterprise platforms; assumes an IT team and HR department beyond what a CAH typically has</td>
       </tr>
     </tbody>
   </table>
@@ -95,7 +95,7 @@ For a Critical Access Hospital with 20-30 nurses, the realistic software-only co
 
 The realistic total first-year cost including implementation:
 
-- **Entry-level tools (Deputy, When I Work):** $600-$2,500 total first year. These are general employee scheduling tools, not healthcare-specific. They do not handle nursing certifications, patient-to-nurse ratios, or Texas overtime compliance natively.
+- **Entry-level tools (Deputy, When I Work):** $600-$2,500 total first year. These are general employee scheduling tools, not healthcare-specific. They do not handle nursing certifications, patient-to-nurse ratios, or FLSA overtime threshold tracking natively.
 - **Mid-tier healthcare scheduling platforms (Aladtec, OnShift):** $5,000-$15,000 total first year. Healthcare-specific but built for larger organizations, with more configuration depth than a single dual-role CAH manager typically needs.
 - **Enterprise platforms (UKG, Infor, Kronos):** $20,000-$75,000+ total first year. Designed for 200+ bed hospitals with dedicated HR and IT teams. Not appropriate for CAHs without that infrastructure.
 - **SimpleScheduleAI (managed service):** Flat $1,000-$1,500/month by roster size. No per-nurse fees, no implementation fee; setup is included in the managed service.
@@ -174,7 +174,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service for critical access ho
 
 Pricing is flat by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. That structure means a CAH knows its full annual cost on day one, with no implementation invoice waiting on the other side.
 
-SimpleScheduleAI is not appropriate for large health systems, multi-site organizations, or hospitals requiring EHR integration. For [CAHs with 25 beds or fewer](/critical-access-hospital-scheduling) and no IT department, it is a purpose-built managed scheduling service for Texas.
+SimpleScheduleAI is not appropriate for large health systems, multi-site organizations, or hospitals requiring EHR integration. For [CAHs with 25 beds or fewer](/critical-access-hospital-scheduling) and limited IT, it is a purpose-built managed scheduling service for Texas.
 
 For hospitals evaluating alternatives, the [nurse scheduling software comparison guide](/blog/best-nurse-scheduling-software-2026) covers 8 platforms with detailed breakdowns of pricing models, CAH suitability, and implementation timelines.
 
@@ -190,7 +190,7 @@ For hospitals evaluating alternatives, the [nurse scheduling software comparison
 1. Pull your last 6 months of payroll and separate scheduling-attributable overtime (callout coverage, last-minute gaps) from volume-driven overtime. That dollar figure is the budget any tool has to beat, and the baseline for the [ROI calculation](/roi).
 2. For every vendor on your shortlist, ask one direct question before the demo: what is the all-in first-year cost including implementation, training, and integration? Do not accept a per-nurse number alone.
 3. Ask each vendor for the contract exit terms in writing, specifically auto-renewal clauses and early-termination penalties, before you sit through a pitch.
-4. Rule out any platform that assumes an IT department or HR team to run it. For a CAH with no IT and a dual-role manager, that is a cost you cannot staff regardless of the license price.
+4. Rule out any platform that assumes an IT department or HR team to run it. For a CAH with limited IT and a dual-role manager, that is a cost you cannot staff regardless of the license price.
 5. If the build-and-callout burden is the real drain, [book a call with SimpleScheduleAI](https://cal.com/gautham-8bdvdx/30min) and compare a flat $1,000-$1,500/month managed cost against your actual overtime spend before signing anything.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
@@ -225,7 +225,7 @@ UKG (formerly Kronos) enterprise workforce management typically starts at $50,00
 
 **Q: What is the cheapest nurse scheduling software for a 25-bed hospital?**
 
-By monthly cost, entry-level general tools like Deputy or When I Work start below $100/month. However, these are not healthcare-specific: they require manual nursing certification tracking, do not handle Texas FLSA overtime rules, and lack callout coverage automation. Healthcare-specific platforms with the compliance features a CAH needs start at $1,500-$3,000/year for software alone. SimpleScheduleAI is an AI-native nurse scheduling service at a flat $1,000-$1,500/month that includes setup and support, not a free tool.
+By monthly cost, entry-level general tools like Deputy or When I Work start below $100/month. However, these are not healthcare-specific: they require manual nursing certification tracking, do not handle FLSA overtime rules, and lack callout coverage automation. Healthcare-specific platforms with the compliance features a CAH needs start at $1,500-$3,000/year for software alone. SimpleScheduleAI is an AI-native nurse scheduling service at a flat $1,000-$1,500/month that includes setup and support, not a free tool.
 
 **Q: Do nurse scheduling software vendors negotiate pricing?**
 
@@ -234,7 +234,7 @@ Yes. Enterprise vendors expect negotiation, particularly on implementation fees,
 ## A Note on Sources
 
 1. FLSA healthcare overtime thresholds. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
-2. CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+2. Critical Access Hospital Conditions of Participation, 42 CFR §485.635. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 3. Rural health and CAH workforce context. [HRSA Rural Health](https://www.hrsa.gov/rural-health).
 
 **Methodology note:** Pricing figures for enterprise and mid-tier platforms are compiled from published pricing where vendors disclose it and from administrator-reported figures where they do not; most enterprise vendors do not publish rates. The loaded wage rate ($55-$70/hour), nurse headcount (20-35), overtime premium ($20/hour above base), and 20% overtime-reduction figure used in the ROI section are illustrative assumptions for modeling, not measured results. Run the math against your own payroll data before relying on it. Vendor pricing, contract terms, and capabilities change over time; confirm current figures directly with each vendor before deciding.

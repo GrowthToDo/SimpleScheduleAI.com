@@ -29,7 +29,7 @@ import { Image } from 'astro:assets';
 - The gap is not a feature to add. It is a fundamental design difference. Healthcare scheduling software is built for clinical staffing constraints that generic tools do not model.
 - Generic tools are appropriate for clinics and small practices; hospitals with CMS requirements need healthcare-specific tools.
 - A managed scheduling service goes further than a healthcare-specific app. It removes operational burden from the nurse manager, not just provides better tools.
-- For Texas Critical Access Hospitals (CAHs), the compliance requirements alone (CMS §485.635, FLSA, TX Labor Code) make generic tools insufficient.
+- For Texas Critical Access Hospitals (CAHs), the compliance requirements alone (CMS §485.635, FLSA) make generic tools insufficient.
 
 ## Table of Contents
 
@@ -40,7 +40,7 @@ import { Image } from 'astro:assets';
 - [How SimpleScheduleAI Helps](#how-simplescheduleai-helps)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Generic staff scheduling software (Homebase, When I Work, Deputy) handles shift assignment and availability management efficiently. Healthcare scheduling adds five requirements that generic tools do not cover: nursing certification matching, FLSA and state-specific overtime compliance, CMS audit trail documentation, clinical callout coverage logic, and per-diem pool management. For a critical access hospital, using a generic tool means manually managing the compliance and coverage work that scheduling software should automate.
+Generic staff scheduling software (Homebase, When I Work, Deputy) handles shift assignment and availability management efficiently. Healthcare scheduling adds five requirements that generic tools do not cover: nursing certification matching, FLSA overtime compliance, CMS audit trail documentation, clinical callout coverage logic, and per-diem pool management. For a critical access hospital, using a generic tool means manually managing the compliance and coverage work that scheduling software should automate.
 
 ## What Does Generic Scheduling Software Miss in Healthcare?
 
@@ -62,7 +62,7 @@ Healthcare scheduling is structurally different in five ways that generic tools 
   </g>
   <g transform="translate(238,44)">
     <rect width="204" height="80" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
-    <text x="102" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#991b1b">2. FLSA + TX Overtime</text>
+    <text x="102" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#991b1b">2. FLSA Overtime</text>
     <text x="102" y="40" text-anchor="middle" font-size="9" fill="#7f1d1d">Generic: reports OT after</text>
     <text x="102" y="52" text-anchor="middle" font-size="9" fill="#7f1d1d">payroll. Healthcare needs</text>
     <text x="102" y="64" text-anchor="middle" font-size="9" fill="#7f1d1d">proactive alerts during build.</text>
@@ -99,7 +99,7 @@ Healthcare scheduling is structurally different in five ways that generic tools 
 
 **1. Certification-aware assignment.** A nurse cannot be scheduled for a unit they are not certified to staff. A generic scheduling tool does not know the difference between an ICU-certified RN and a med-surg nurse. It will assign whoever is available. For a critical access hospital, this creates a clinical staffing error, not just an operational inefficiency.
 
-**2. FLSA and Texas overtime compliance.** Under [FLSA](https://www.dol.gov/agencies/whd/flsa) and [Texas Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm), hours over 40 in a workweek require 1.5 times pay. Generic tools do not track cumulative hours per workweek and flag upcoming overtime before it is scheduled. They process whatever schedule you build and report what happened after payroll.
+**2. FLSA overtime thresholds.** Under the [FLSA](https://www.dol.gov/agencies/whd/flsa), hours over 40 in a workweek require 1.5 times pay; Texas has no separate state overtime law. Generic tools do not track cumulative hours per workweek and flag upcoming overtime before it is scheduled. They process whatever schedule you build and report what happened after payroll.
 
 **3. CMS audit trail documentation.** [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) requires critical access hospitals to maintain accurate, reviewable staffing records. Every schedule change (who changed what, when) must be documented. Generic tools do not produce this documentation in the format or completeness required for CMS survey response.
 
@@ -133,7 +133,7 @@ Healthcare scheduling is structurally different in five ways that generic tools 
 <td class="border border-slate-300 px-4 py-2 text-yellow-600">Basic (post-fact)</td>
 <td class="border border-slate-300 px-4 py-2 text-yellow-600">Basic (post-fact)</td>
 <td class="border border-slate-300 px-4 py-2 text-green-700">Proactive alerts</td>
-<td class="border border-slate-300 px-4 py-2 text-green-700">Proactive, TX-specific</td>
+<td class="border border-slate-300 px-4 py-2 text-green-700">Proactive, FLSA-compliant</td>
 </tr>
 <tr>
 <td class="border border-slate-300 px-4 py-2 font-medium">CMS audit trail</td>
@@ -216,7 +216,7 @@ For more context on [nurse scheduling software](/nurse-scheduling-software) opti
 Yes, for facilities with simple scheduling requirements: clinics, small practices, and home health agencies without complex compliance needs. For hospitals with CMS documentation requirements, certification-specific staffing, and clinical callout coverage needs, generic tools are insufficient as the primary scheduling system.
 
 **What features separate healthcare scheduling software from generic tools?**
-Healthcare scheduling software adds: certification-aware staff assignment, FLSA and state-specific overtime compliance, CMS-compliant audit trail documentation, clinical callout coverage logic with certified replacement lists, and per-diem pool management. Generic tools do not include these features.
+Healthcare scheduling software adds: certification-aware staff assignment, FLSA overtime compliance, CMS-compliant audit trail documentation, clinical callout coverage logic with certified replacement lists, and per-diem pool management. Generic tools do not include these features.
 
 **Is there healthcare scheduling software that does not require IT setup?**
 Yes. SimpleScheduleAI onboards via Excel roster upload in 3 to 5 business days with no IT integration required. Enterprise healthcare platforms like Aladtec require IT involvement for initial setup.

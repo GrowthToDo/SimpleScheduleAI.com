@@ -19,7 +19,7 @@ metadata:
 
 ## TL;DR
 
-Nurse scheduling software is hard to configure because it requires encoding hospital-specific knowledge, unit rules, credential requirements, overtime policies, and shift patterns, into a platform interface before the first schedule can be built. At a critical access hospital with no IT department and a nurse manager already at capacity, this setup burden is a real barrier. The practical alternatives are platforms with minimal configuration requirements or a managed service where the specialist handles configuration entirely.
+Nurse scheduling software is hard to configure because it requires encoding hospital-specific knowledge, unit rules, credential requirements, overtime policies, and shift patterns, into a platform interface before the first schedule can be built. At a critical access hospital with limited IT and a nurse manager already at capacity, this setup burden is a real barrier. The practical alternatives are platforms with minimal configuration requirements or a managed service where the specialist handles configuration entirely.
 
 ## Why Scheduling Software Configuration Is Different from Other Software?
 

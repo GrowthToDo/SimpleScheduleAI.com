@@ -283,7 +283,7 @@ Under traditional scheduling, the schedule is only as fair as the manager's memo
 
 ## Is AI Scheduling Software or an AI Managed Service Better for a Small Hospital?
 
-For a hospital with a dedicated scheduler and IT support, [AI nursing scheduling software](/blog/nursing-scheduling-software-ai) gives the most direct control. For a Critical Access Hospital where the nurse manager also takes clinical shifts and there is no IT department, an AI managed service almost always produces a better time outcome, because software still requires someone with capacity to operate and maintain it.
+For a hospital with a dedicated scheduler and IT support, [AI nursing scheduling software](/blog/nursing-scheduling-software-ai) gives the most direct control. For a Critical Access Hospital where the nurse manager also takes clinical shifts and IT is limited to one person or a contracted service, an AI managed service almost always produces a better time outcome, because software still requires someone with capacity to operate and maintain it.
 
 Software and a managed service both apply AI to the same constraint problem. The difference is who runs the system. With software, the AI lives in a tool the nurse manager has to learn, configure, and operate every cycle. The configuration has to be maintained as staff turn over and policies change. At a hospital with a scheduling coordinator or protected administrative time, that works well and keeps construction control in-house.
 
@@ -291,7 +291,7 @@ At a 25-bed CAH it usually does not, because the nurse manager has no protected 
 
 ## How Does SimpleScheduleAI Use AI for Critical Access Hospital Scheduling?
 
-SimpleScheduleAI applies constraint-aware AI scheduling to the specific operating reality of a 25-bed Critical Access Hospital, then delivers it as a managed service so the nurse manager never has to operate the system. Constraints are drawn from the hospital's own roster, CMS requirements for CAHs, and Texas overtime rules for Texas hospitals. The output is three schedule options, not one hidden "optimal" answer.
+SimpleScheduleAI applies constraint-aware AI scheduling to the specific operating reality of a 25-bed Critical Access Hospital, then delivers it as a managed service so the nurse manager never has to operate the system. Constraints are drawn from the hospital's own roster, CMS requirements for CAHs, and FLSA overtime thresholds. The output is three schedule options, not one hidden "optimal" answer.
 
 The system does not produce a single optimal schedule, because the right tradeoff changes week to week. It generates three variants, balanced, fair-rotation, and overtime-minimized, so the manager can choose based on the week's priority. Some weeks the priority is holding down overtime cost. Other weeks it is distributing weekend shifts more evenly after a stretch of imbalance. Three explicit options make that choice visible instead of burying it inside one objective function.
 

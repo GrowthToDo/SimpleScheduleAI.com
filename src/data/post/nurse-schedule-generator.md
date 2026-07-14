@@ -28,7 +28,7 @@ A nurse schedule generator automates roster creation by processing staff availab
 
 A nurse schedule generator is a tool, software, spreadsheet, or service, that takes inputs (staff roster, availability, shift rules, compliance requirements) and produces a complete nurse shift schedule as output. It automates the mechanical work of schedule building: matching nurses to shifts, enforcing minimum rest periods, distributing weekends and nights equitably, and flagging overtime risk before the schedule publishes.
 
-The category spans a wide range. At the simple end: an Excel template with formulas that assigns shifts based on availability data you enter manually. At the sophisticated end: an AI-assisted service that generates multiple draft schedule options (balanced, fair-rotation, overtime-minimized), enforces Texas overtime rules automatically, and produces a callout coverage shortlist when a nurse is unavailable.
+The category spans a wide range. At the simple end: an Excel template with formulas that assigns shifts based on availability data you enter manually. At the sophisticated end: an AI-assisted service that generates multiple draft schedule options (balanced, fair-rotation, overtime-minimized), enforces FLSA overtime thresholds automatically, and produces a callout coverage shortlist when a nurse is unavailable.
 
 For critical access hospitals currently spending 8-12 hours per week on manual scheduling at a $50/hr loaded rate, $26,000 per year in misallocated nurse manager time, the right generator can reclaim most of that time.
 
@@ -52,9 +52,9 @@ These gaps are why the [nurse scheduling software vs Excel](/nurse-scheduling-so
 
 ## What Makes an Automated Schedule Generator Reliable for a 25-Bed Hospital?
 
-A reliable nurse schedule generator for a critical access hospital needs to understand three things that general tools don't: Texas compliance rules, clinical certification requirements, and per-diem management.
+A reliable nurse schedule generator for a critical access hospital needs to understand three things that general tools don't: FLSA compliance rules, clinical certification requirements, and per-diem management.
 
-**Texas compliance.** Under [FLSA](https://www.dol.gov/agencies/whd/flsa) and [Texas Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm), overtime rules apply to all healthcare employers. A generator that doesn't track hours against the 40-hour weekly threshold and alert before the schedule publishes is creating compliance risk, not reducing it.
+**FLSA compliance.** Under the [FLSA](https://www.dol.gov/agencies/whd/flsa), overtime rules apply to all healthcare employers; Texas has no separate state overtime law. A generator that doesn't track hours against the 40-hour weekly threshold and alert before the schedule publishes is creating compliance risk, not reducing it.
 
 **Clinical certification matching.** In a 25-bed CAH, the roster is small enough that certification gaps are frequent, there may be only 2-3 nurses certified for a particular unit on any given shift. The generator must know which nurses can cover which units and enforce this constraint automatically.
 
@@ -74,7 +74,7 @@ The distinction matters for CAHs specifically because the staffing constraint is
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI operates as an AI-native nurse scheduling service for critical access hospitals. It generates three AI-drafted schedule options per cycle, balanced, fair-rotation, and overtime-minimized, incorporating Texas overtime rules, nurse certifications, and per-diem availability into every draft.
+SimpleScheduleAI operates as an AI-native nurse scheduling service for critical access hospitals. It generates three AI-drafted schedule options per cycle, balanced, fair-rotation, and overtime-minimized, incorporating FLSA overtime thresholds, nurse certifications, and per-diem availability into every draft.
 
 When a nurse is unavailable, the system instantly produces a replacement call list from available, qualified staff, factoring in overtime exposure and fairness distribution. The nurse manager approves replacements; they don't have to run the phone tree.
 
@@ -104,13 +104,13 @@ Basic generators don't, they build the initial schedule but leave callout manage
 
 **Q: What compliance requirements must a nurse schedule generator meet for Texas hospitals?**
 
-Texas CAH nurse scheduling must comply with FLSA overtime rules (1.5× for hours over 40/week), Texas Labor Code §62.002 overtime documentation requirements, and CMS Conditions of Participation §485.635 staffing record requirements. A generator that doesn't enforce and log these requirements creates compliance risk.
+Texas CAH nurse scheduling must comply with FLSA overtime rules (1.5× for hours over 40/week) and CMS Conditions of Participation §485.635 staffing record requirements. Texas has no separate state overtime law. A generator that doesn't enforce and log these requirements creates compliance risk.
 
 ## Key Takeaways
 
 - Nurse schedule generators automate roster creation from availability and rules, ranging from free Excel templates to AI-assisted managed services
 - Free tools miss hospital-grade requirements: overtime compliance, certification matching, callout coverage, CMS audit trail
-- A reliable hospital-grade generator needs Texas compliance, certification-aware assignment, fairness tracking, and multiple draft options
+- A reliable hospital-grade generator needs FLSA compliance, certification-aware assignment, fairness tracking, and multiple draft options
 - A managed scheduling service goes beyond generation, it delivers ready-to-approve drafts, replacement lists, and compliance documentation
 - CAH nurse managers currently spend 8-12 hours/week on scheduling; a managed service reduces this to 1-2 hours by removing operational burden, not just automating schedule building
 

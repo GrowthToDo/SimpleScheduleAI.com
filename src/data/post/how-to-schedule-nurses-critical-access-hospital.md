@@ -83,7 +83,7 @@ A Critical Access Hospital (CAH) operates under a specific set of constraints th
   <text x="438" y="70" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">Labor Law</text>
   <text x="438" y="104" font-family="system-ui,sans-serif" font-size="10" fill="#374151" text-anchor="middle">FLSA 8-and-80 rule</text>
   <text x="438" y="119" font-family="system-ui,sans-serif" font-size="10" fill="#374151" text-anchor="middle">14-day OT window</text>
-  <text x="438" y="134" font-family="system-ui,sans-serif" font-size="10" fill="#374151" text-anchor="middle">Texas Labor Code Ch. 62</text>
+  <text x="438" y="134" font-family="system-ui,sans-serif" font-size="10" fill="#374151" text-anchor="middle">No separate TX overtime law</text>
   <text x="438" y="149" font-family="system-ui,sans-serif" font-size="10" fill="#374151" text-anchor="middle">Shift diff documentation</text>
   <rect x="525" y="48" width="165" height="225" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
   <rect x="525" y="48" width="165" height="38" fill="#16a34a" rx="8"/>
@@ -106,7 +106,7 @@ Before touching a spreadsheet or scheduling system, write down every constraint 
 - RN on-call available within 30 minutes at all times (CMS requirement)
 - Credential requirements for specific units (ACLS for monitored beds, specific certifications for procedures)
 - Maximum consecutive shifts per policy (example: no more than 3 consecutive 12-hour shifts)
-- Texas overtime rules under Labor Code Chapter 62
+- The FLSA 8-and-80 overtime calculation
 
 **Soft constraints (preferences that the schedule tries to honor but may override):**
 

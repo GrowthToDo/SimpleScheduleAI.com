@@ -185,7 +185,7 @@ Not necessarily, when total cost is calculated. Software reduces the manager's t
 
 **Can a medical scheduling service handle FLSA overtime threshold tracking?**
 
-Yes, if the service is built for healthcare facilities. FLSA overtime threshold tracking applies the [FLSA](https://www.dol.gov/agencies/whd/flsa) 40-hour workweek threshold and 1.5x overtime pay rule alongside [Texas Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) pay-timing provisions. A service built for Texas CAHs incorporates FLSA threshold tracking as a default; a generic scheduling service may not.
+Yes, if the service is built for healthcare facilities. FLSA overtime threshold tracking applies the [FLSA](https://www.dol.gov/agencies/whd/flsa) 40-hour workweek threshold and 1.5x overtime pay rule. Texas has no separate state overtime law, so the federal FLSA governs. A service built for Texas CAHs incorporates FLSA threshold tracking as a default; a generic scheduling service may not.
 
 **How quickly can a medical scheduling service be operational?**
 

@@ -39,7 +39,7 @@ import { Image } from 'astro:assets';
 - [How SimpleScheduleAI Helps](#how-simplescheduleai-helps)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Hospital staff scheduling software for enterprise health systems is the wrong tool for critical access hospitals. Enterprise tools require IT integration, dedicated schedulers, and weeks of configuration, none of which exists at a 25-bed CAH. Purpose-built CAH scheduling software or a managed service addresses the actual constraints: no IT department, Texas overtime compliance, callout coverage without an agency pool, and CMS audit trail requirements.
+Hospital staff scheduling software for enterprise health systems is the wrong tool for critical access hospitals. Enterprise tools require IT integration, dedicated schedulers, and weeks of configuration, none of which exists at a 25-bed CAH. Purpose-built CAH scheduling software or a managed service addresses the actual constraints: limited IT (typically one person or a contracted service, and no dedicated HRIS or workforce-management staff), FLSA overtime threshold tracking, callout coverage without an agency pool, and CMS audit trail requirements.
 
 ## What Is Hospital Staff Scheduling Software?
 
@@ -107,9 +107,9 @@ Enterprise hospital staff scheduling software fails at CAHs for four structural 
   </g>
 </svg>
 
-**Implementation requires IT resources that CAHs don't have.** Platforms like UKG/Kronos or API Healthcare are designed for health systems with IT departments that can manage API integrations, SSO configurations, and system-to-system data flows. At a 25-bed CAH where IT support is a part-time contractor who also manages the EHR, these integrations simply do not get completed. The software never gets properly implemented.
+**Implementation requires more IT capacity than most CAHs have.** Platforms like UKG/Kronos or API Healthcare are designed for health systems with IT departments that can manage API integrations, SSO configurations, and system-to-system data flows. At a 25-bed CAH where IT support is a part-time contractor who also manages the EHR, these integrations simply do not get completed. The software never gets properly implemented.
 
-**Configuration requires compliance expertise.** Enterprise scheduling software can enforce Texas overtime rules, CMS documentation requirements, and nursing board regulations, but only if configured correctly. That configuration requires someone who understands the rules in detail. At a CAH, that person does not exist. The result: the software runs with incomplete configuration and produces non-compliant schedules.
+**Configuration requires compliance expertise.** Enterprise scheduling software can enforce FLSA overtime thresholds, CMS documentation requirements, and nursing board regulations, but only if configured correctly. That configuration requires someone who understands the rules in detail. At a CAH, that person does not exist. The result: the software runs with incomplete configuration and produces non-compliant schedules.
 
 **Training takes longer than the nurse manager has.** Enterprise platforms require 20 to 40 hours of training for administrators. A nurse manager who provides patient care for half their shifts does not have 40 hours to spend learning software. Platforms that are not learned do not get used consistently.
 
@@ -121,7 +121,7 @@ CAH-appropriate hospital staff scheduling software has a different specification
 
 **No-IT implementation.** Setup via Excel roster upload, no API credentials, no EHR integration, no IT vendor involvement. Operational in days, not weeks.
 
-**Texas overtime compliance built in.** [FLSA](https://www.dol.gov/agencies/whd/flsa) and [Texas Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) overtime rules should be enforced automatically during schedule building, not after payroll processes overtime charges.
+**FLSA overtime threshold tracking built in.** [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime rules should be enforced automatically during schedule building, not after payroll processes overtime charges.
 
 **Ranked callout coverage.** When a nurse calls out, the software should instantly produce a ranked list of available, qualified replacements, factoring in overtime status, certifications, and fairness history. Without this, callout coverage remains a 2 to 3 hour manual process regardless of what other features the software has.
 
@@ -181,13 +181,13 @@ CAH-appropriate hospital staff scheduling software has a different specification
 <tr class="bg-slate-50">
 <td class="border border-slate-300 px-4 py-2 font-medium">Best for</td>
 <td class="border border-slate-300 px-4 py-2">50-500+ bed systems with IT</td>
-<td class="border border-slate-300 px-4 py-2">25-bed CAHs without IT</td>
+<td class="border border-slate-300 px-4 py-2">25-bed CAHs with limited IT</td>
 </tr>
 </tbody>
 </table>
 </div>
 
-Enterprise tools (Aladtec, SmartLinx, API Healthcare) are genuinely good products for the organizations they are built for. The mismatch is not product quality, it is deployment context. A tool that works well at a 200-bed regional hospital with a staffing coordinator and IT team is not wrong; it is just wrong for a 25-bed CAH with neither.
+Enterprise tools (Aladtec, SmartLinx, API Healthcare) are genuinely good products for the organizations they are built for. The mismatch is not product quality, it is deployment context. A tool that works well at a 200-bed regional hospital with a staffing coordinator and IT team is not wrong; it is just wrong for a 25-bed CAH with limited IT and no dedicated staffing coordinator.
 
 The comparison matters because CAH administrators often evaluate enterprise platforms first (they appear in search results, they have recognizable brand names) and only discover the implementation mismatch during a months-long procurement process.
 
@@ -217,7 +217,7 @@ For critical access hospitals (25 beds or fewer), purpose-built solutions with n
 Enterprise platforms: 4 to 12 weeks including IT integration, configuration, and training. SimpleScheduleAI managed service: 3 to 5 business days via Excel roster upload. The difference is whether IT integration is required.
 
 **Does hospital scheduling software need to connect to our EHR?**
-Not for the scheduling function itself. EHR integration is valuable for patient assignment and clinical documentation, but nurse schedule management can operate independently of the EHR. For CAHs without IT support, avoiding EHR integration reduces implementation time from months to days.
+Not for the scheduling function itself. EHR integration is valuable for patient assignment and clinical documentation, but nurse schedule management can operate independently of the EHR. For CAHs with limited IT support, avoiding EHR integration reduces implementation time from months to days.
 
 **What compliance features must hospital scheduling software have for Texas CAHs?**
 Texas CAH scheduling software must enforce FLSA overtime rules (1.5 times pay for hours over 40/week), log every schedule change with timestamp for CMS survey readiness under §485.635, and handle Texas Payday Law documentation requirements. These should be built-in defaults, not optional configurations.

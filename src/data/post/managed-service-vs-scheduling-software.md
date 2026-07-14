@@ -31,7 +31,7 @@ This guide makes the labor-model distinction concrete: who builds the schedule, 
 
 - Scheduling software cuts only part of that time because the nurse manager still builds every schedule. A managed service removes the build entirely, to under 2 hours per week for review and approval.
 - The core question is whether your nurse manager has spare administrative capacity. At a 25-bed CAH where she also takes clinical shifts, she typically does not.
-- CAHs fail with scheduling apps for three structural reasons: no IT department to configure the system, no dedicated scheduler to operate it, and no compliance expertise to set up [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and CMS rules correctly.
+- CAHs fail with scheduling apps for three structural reasons: limited IT to configure the system, no dedicated scheduler to operate it, and no compliance expertise to set up [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and CMS rules correctly.
 - SimpleScheduleAI is an AI-native nurse scheduling service. Aladtec, SmartLinx, QGenda, NurseGrid, OnShift, Deputy, and UKG are all scheduling software platforms.
 - A managed service is not appropriate for every hospital. Facilities with a dedicated scheduler, IT support, or staff self-service requirements should evaluate self-serve software first.
 
@@ -69,7 +69,7 @@ The nurse manager retains decision authority in both models. She reviews and app
 
 ## Why Do Scheduling Apps Fail Critical Access Hospitals?
 
-Scheduling apps fail at Critical Access Hospitals for three structural reasons that most vendors do not mention in demos. CAHs have no IT department to configure the system, no dedicated scheduler to operate it week over week, and no compliance specialist to set up FLSA and CMS rules correctly at setup. Without all three, app configuration drifts as staff changes and the nurse manager stops having bandwidth to maintain it.
+Scheduling apps fail at Critical Access Hospitals for three structural reasons that most vendors do not mention in demos. CAHs have limited IT to configure the system, no dedicated scheduler to operate it week over week, and no compliance specialist to set up FLSA and CMS rules correctly at setup. Without all three, app configuration drifts as staff changes and the nurse manager stops having bandwidth to maintain it.
 
 CAHs face three structural constraints that make the self-serve app model consistently problematic:
 
@@ -79,7 +79,7 @@ CAHs face three structural constraints that make the self-serve app model consis
       <p class="text-xs font-bold text-white">No IT Department</p>
     </div>
     <div class="px-4 py-3">
-      <p class="text-xs text-slate-700 dark:text-slate-300">Apps need IT for account setup, integrations, and troubleshooting. Most CAHs have no IT staff.</p>
+      <p class="text-xs text-slate-700 dark:text-slate-300">Apps need IT for account setup, integrations, and troubleshooting. Most CAHs have only limited IT staff.</p>
     </div>
   </div>
   <div class="rounded-lg border border-orange-300 dark:border-orange-700 bg-white dark:bg-slate-800 overflow-hidden">
@@ -201,7 +201,7 @@ The key differences between scheduling software and a managed service are who bu
 
 ## Which Approach Fits Your Hospital?
 
-A scheduling app fits when the hospital has a dedicated scheduler or an administratively-focused nurse manager with IT support and no pressing compliance automation gaps. A managed service fits when the nurse manager takes clinical shifts, the hospital has no IT department, and CMS documentation is currently a manual pre-survey burden. The single strongest predictor: how much unprotected administrative time does the nurse manager actually have each week?
+A scheduling app fits when the hospital has a dedicated scheduler or an administratively-focused nurse manager with IT support and no pressing compliance automation gaps. A managed service fits when the nurse manager takes clinical shifts, the hospital has limited IT, and CMS documentation is currently a manual pre-survey burden. The single strongest predictor: how much unprotected administrative time does the nurse manager actually have each week?
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-sm border-collapse table-fixed break-words" style="min-width:520px">
@@ -246,7 +246,7 @@ A scheduling app fits when the hospital has a dedicated scheduler or an administ
       <tr>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Best for</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-400 align-top">Facilities with dedicated scheduling staff and IT support</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">CAHs with no IT, no dedicated scheduler</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">CAHs with limited IT, no dedicated scheduler</td>
       </tr>
     </tbody>
   </table>
@@ -262,7 +262,7 @@ A scheduling app fits when the hospital has a dedicated scheduler or an administ
 **A managed scheduling service fits better when:**
 
 - Your nurse manager is doing the scheduling alongside clinical duties
-- You have no IT department and need to be operational in days, not weeks
+- You have limited IT and need to be operational in days, not weeks
 - You need [FLSA](https://www.dol.gov/agencies/whd/flsa) and [Texas Labor Code](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm) compliance built in without manual configuration
 - Your primary pain point is callout coverage and overtime, not just schedule building
 - You are a Texas critical access hospital with 25 beds or fewer

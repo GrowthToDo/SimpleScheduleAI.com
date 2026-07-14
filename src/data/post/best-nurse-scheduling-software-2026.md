@@ -56,7 +56,7 @@ This guide compares 8 platforms across the operational variables that actually d
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-For a critical access hospital, the best [nurse scheduling software](/nurse-scheduling-software) is the option a one-person scheduling team can actually run: no IT project, Texas overtime rules built in, and fast callout coverage. Enterprise suites like UKG fit 200-plus-bed systems, not a 25-bed CAH. Of the eight platforms below, SimpleScheduleAI is the only one purpose-built for that context and delivered as [AI nurse scheduling](/ai-nurse-scheduling) as a service; the others are rated honestly for where they genuinely fit.
+For a critical access hospital, the best [nurse scheduling software](/nurse-scheduling-software) is the option a one-person scheduling team can actually run: no IT project, FLSA overtime thresholds built in, and fast callout coverage. Enterprise suites like UKG fit 200-plus-bed systems, not a 25-bed CAH. Of the eight platforms below, SimpleScheduleAI is the only one purpose-built for that context and delivered as [AI nurse scheduling](/ai-nurse-scheduling) as a service; the others are rated honestly for where they genuinely fit.
 
 The market in 2026 splits cleanly into three tiers: enterprise platforms for large health systems (UKG, Infor, API Healthcare), mid-market tools for community hospitals and clinics (SmartLinx, Aladtec, QGenda), and lightweight or managed options for small and critical access hospitals (SimpleScheduleAI, NurseGrid, Deputy).
 
@@ -144,7 +144,7 @@ Evaluating nurse scheduling software in 2026 means starting with three questions
 
 The nurse scheduling software market is not one market. It is three, using similar terminology:
 
-- **Under 50 beds (Small, Rural, including 25-bed Critical Access Hospitals):** Score on three things only: implementation burden (live in week one, no IT project), state overtime plus CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance built in by default, and callout coverage speed. Weight any enterprise feature outside those three at zero; it is friction, not value.
+- **Under 50 beds (Small, Rural, including 25-bed Critical Access Hospitals):** Score on three things only: implementation burden (live in week one, no IT project), FLSA overtime plus CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance built in by default, and callout coverage speed. Weight any enterprise feature outside those three at zero; it is friction, not value.
 - **50-200 beds (Community Hospital):** You need solid rule-based scheduling, credential tracking, and overtime controls. Mid-market platforms are the right tier.
 - **200+ beds (Regional System):** You need integration with your HRIS, payroll, and EHR. Enterprise platforms with full API connectivity are worth the investment.
 

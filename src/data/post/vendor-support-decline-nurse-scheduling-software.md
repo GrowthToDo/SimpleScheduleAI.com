@@ -7,7 +7,7 @@ title: 'Why Scheduling Software Vendors Stop Caring After You Sign the Contract'
 excerpt: >
   The most common complaint across nurse scheduling software reviews is not the
   feature set. It is what happens six months after go-live. For critical access
-  hospitals with no IT staff, the vendor relationship after contract signature
+  hospitals with limited IT, the vendor relationship after contract signature
   matters more than the demo.
 image: https://images.unsplash.com/photo-1646082275130-347d10885c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
@@ -26,7 +26,7 @@ metadata:
 
 - The most documented post-purchase complaint across QGenda, Aladtec, OnShift, and NurseGrid is not feature limitations. It is support quality declining after the contract is signed.
 - Acquisition-driven support decline is a specific, recurring pattern: after TCP Software acquired Aladtec, multiple Capterra reviewers noted that the support quality that drove their original purchase decision was no longer available.
-- At a critical access hospital with no IT staff, a support ticket unanswered for 24 to 48 hours is not an inconvenience. It is an operational risk when it falls inside an active scheduling cycle.
+- At a critical access hospital with limited IT, a support ticket unanswered for 24 to 48 hours is not an inconvenience. It is an operational risk when it falls inside an active scheduling cycle.
 - The per-seat SaaS business model creates no financial incentive to invest in post-sale support for small accounts. Managed services have the opposite incentive: ongoing service delivery depends on the relationship staying functional.
 - Before signing any scheduling software contract, ask: "Who is our dedicated point of contact after go-live, and what is the documented SLA for urgent issues?"
 

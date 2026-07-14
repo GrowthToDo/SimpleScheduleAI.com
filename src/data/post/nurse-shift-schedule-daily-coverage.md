@@ -75,7 +75,7 @@ Consistent daily coverage at CAH scale is a scheduling precision problem: you do
 
 SimpleScheduleAI is an AI-native nurse scheduling service that handles the daily coverage problem at its source: we build the schedule and manage the callout coverage logic, and the nurse manager approves the output.
 
-For each scheduling cycle, the service generates three draft schedule options, balanced, fair-rotation, and overtime-minimized, incorporating Texas overtime rules, per-diem availability, and coverage minimums. When a nurse calls out, the replacement shortlist is available immediately from available, qualified staff.
+For each scheduling cycle, the service generates three draft schedule options, balanced, fair-rotation, and overtime-minimized, incorporating FLSA overtime thresholds, per-diem availability, and coverage minimums. When a nurse calls out, the replacement shortlist is available immediately from available, qualified staff.
 
 Fairness tracking is automatic: the system monitors weekend assignments, night shifts, callout coverage, and overtime per nurse across rolling 6-week periods and flags concentration patterns before they become retention risks.
 

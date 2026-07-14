@@ -4,9 +4,9 @@ publishDate: 2026-07-11T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Hospital Staffing Software: 7 Features That CAHs Need'
 excerpt: >
-  Enterprise staffing platforms assume an IT department, a payroll integration,
+  Enterprise staffing platforms assume a full IT department, a payroll integration,
   and someone whose whole job is running the system. A Critical Access Hospital
-  has none of those. Here is the short feature list that works at 25 beds, and
+  has only limited IT and none of the rest. Here is the short feature list that works at 25 beds, and
   the enterprise checklist you can safely ignore.
 image: https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
@@ -41,11 +41,11 @@ Critical access hospitals need seven features in hospital staffing software: Exc
 
 ## What Features Does Hospital Staffing Software Need for a Critical Access Hospital?
 
-Hospital staffing software built for large health systems includes dozens of features. For a 25-bed [Critical Access Hospital](/critical-access-hospital-scheduling) with no dedicated scheduler and no IT department, most of those features are irrelevant at best and implementation barriers at worst.
+Hospital staffing software built for large health systems includes dozens of features. For a 25-bed [Critical Access Hospital](/critical-access-hospital-scheduling) with no dedicated scheduler and only limited IT, most of those features are irrelevant at best and implementation barriers at worst.
 
 Here is the list, in rough priority order:
 
-**Feature 1: Excel roster import.** Every CAH already has staff data in Excel or a spreadsheet-equivalent. Software that requires a clean data import from an EHR, payroll system, or custom format will not get implemented in a facility with no IT team. Excel-first onboarding is not a technical compromise. It is a deployment reality.
+**Feature 1: Excel roster import.** Every CAH already has staff data in Excel or a spreadsheet-equivalent. Software that requires a clean data import from an EHR, payroll system, or custom format will not get implemented in a facility with only limited IT. Excel-first onboarding is not a technical compromise. It is a deployment reality.
 
 **Feature 2: FLSA overtime compliance.** Under the [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), hospital overtime is generally due after 40 hours in a workweek, at 1.5 times the regular rate. Texas adds no state overtime layer on top of the federal rule. Software that does not track hours-to-date per nurse and alert before a shift assignment would create overtime does not solve the compliance problem. It just moves it to payroll.
 

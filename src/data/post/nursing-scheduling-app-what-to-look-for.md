@@ -34,9 +34,9 @@ Critical access hospitals, rural facilities with 25 or fewer beds, fit none of t
 
 ## What Features Should a Nursing Scheduling App Have for Hospital Use?
 
-A nursing scheduling app for hospital use must handle five categories that general scheduling tools ignore: licensing and certification tracking, overtime compliance by state, callout coverage logic, an audit trail for CMS surveys, and integration-free setup.
+A nursing scheduling app for hospital use must handle five categories that general scheduling tools ignore: licensing and certification tracking, FLSA overtime compliance, callout coverage logic, an audit trail for CMS surveys, and integration-free setup.
 
-**1. Texas overtime compliance.** Under the FLSA and [Texas Labor Code §62.002](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm), overtime rules apply to all healthcare employers. An app that doesn't flag approaching overtime thresholds before the schedule publishes creates liability exposure. Most generic apps don't know Texas-specific rules.
+**1. FLSA overtime thresholds.** Under the [FLSA](https://www.dol.gov/agencies/whd/flsa), overtime rules apply to all healthcare employers; Texas has no separate state overtime law. An app that doesn't flag approaching overtime thresholds before the schedule publishes creates liability exposure. Most generic apps don't track cumulative overtime hours proactively.
 
 **2. Certification-aware scheduling.** Not every nurse can cover every unit. An app must know which nurses hold which certifications and prevent scheduling errors that put uncertified nurses on units they can't legally staff.
 
@@ -44,7 +44,7 @@ A nursing scheduling app for hospital use must handle five categories that gener
 
 **4. Audit trail.** [CMS Conditions of Participation for CAHs (§485.635)](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) require staffing records to be accurate and available for review. Every schedule change, callout, and replacement must be logged with a timestamp. Apps that allow silent edits create compliance gaps.
 
-**5. No-IT setup.** Most CAHs have no dedicated IT department. An app that requires EHR integration, API configuration, or IT vendor involvement will not get implemented. Look for Excel-import onboarding and web-only access.
+**5. No-IT setup.** Most CAHs have limited IT (typically one person or a contracted service), and no dedicated HRIS or workforce-management staff. An app that requires EHR integration, API configuration, or IT vendor involvement will not get implemented. Look for Excel-import onboarding and web-only access.
 
 For a nurse scheduling app for critical access hospitals in Texas, these are not nice-to-haves, they are pass/fail criteria.
 
@@ -52,7 +52,7 @@ For a nurse scheduling app for critical access hospitals in Texas, these are not
 
 Several patterns in nursing scheduling apps consistently cause problems for small hospitals.
 
-**"Starts at $X/user/month" pricing with no mention of onboarding support.** Self-serve pricing models assume you'll configure the system yourself. At a 25-bed CAH with no scheduler and no IT team, this means the nurse manager spends 20+ hours configuring the app instead of scheduling nurses.
+**"Starts at $X/user/month" pricing with no mention of onboarding support.** Self-serve pricing models assume you'll configure the system yourself. At a 25-bed CAH with no dedicated scheduler and only limited IT support, this means the nurse manager spends 20+ hours configuring the app instead of scheduling nurses.
 
 **Mobile-first design without web parity.** An app optimized for nurses checking their shifts on a phone is not the same as a scheduling management tool. Make sure the management interface, where schedules are built and callouts are handled, works fully on a desktop browser.
 
@@ -74,7 +74,7 @@ According to research with 30+ Texas CAH nurse managers, this model reduces sche
 
 ## How SimpleScheduleAI Helps?
 
-SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve app. There's no configuration phase where your team has to learn a new system. A scheduling specialist handles setup via Excel roster upload (typically 3-5 business days) and configures Texas overtime rules, shift patterns, and compliance requirements for your facility.
+SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve app. There's no configuration phase where your team has to learn a new system. A scheduling specialist handles setup via Excel roster upload (typically 3-5 business days) and configures FLSA overtime thresholds, shift patterns, and compliance requirements for your facility.
 
 After that, your nurse manager receives three AI-drafted schedule options each cycle, balanced, fair-rotation, and overtime-minimized, and approves one. When a nurse calls out, the system surfaces a replacement shortlist in seconds.
 
@@ -90,11 +90,11 @@ A nursing scheduling app is software that automates nurse shift schedule creatio
 
 **Q: What features should a nurse scheduling app have for a critical access hospital?**
 
-At minimum: Texas overtime compliance, certification-aware scheduling, callout coverage logic with ranked replacement lists, a full audit trail for CMS surveys, and setup that doesn't require IT integration. Most consumer-grade scheduling apps lack at least two of these.
+At minimum: FLSA overtime threshold tracking, certification-aware scheduling, callout coverage logic with ranked replacement lists, a full audit trail for CMS surveys, and setup that doesn't require IT integration. Most consumer-grade scheduling apps lack at least two of these.
 
 **Q: Why might a managed service work better than a nursing scheduling app for a small hospital?**
 
-A managed service handles configuration, ongoing support, and schedule generation, reducing the operational burden on the nurse manager. For CAHs with no dedicated IT or scheduling staff, the hands-on support model reduces scheduling time more effectively than a self-serve app.
+A managed service handles configuration, ongoing support, and schedule generation, reducing the operational burden on the nurse manager. For CAHs with limited IT and no dedicated scheduling staff, the hands-on support model reduces scheduling time more effectively than a self-serve app.
 
 **Q: How long does it take to implement a nurse scheduling app?**
 

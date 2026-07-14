@@ -418,7 +418,7 @@ If you are currently evaluating hospital scheduling options for your CAH, these 
 
 1. **Log your nurse manager's actual scheduling hours this week.** Ask her to track real time spent: building the schedule, handling callouts, managing swap requests, and doing any manual reconciliation. If the total is more than four hours in a typical week, switching to another self-serve platform adds tool administration to that load, not in place of it.
 
-2. **Run three specific questions in your next vendor demo.** Ask: "What is your typical setup timeline for a 25-bed hospital with no IT department?" Ask: "How many hours per week does the nurse manager spend operating this platform after go-live?" Ask: "Can you show me a reference hospital at 25-bed scale who completed onboarding in the past 12 months?" The answers tell you more about operational fit than any feature overview.
+2. **Run three specific questions in your next vendor demo.** Ask: "What is your typical setup timeline for a 25-bed hospital with limited IT?" Ask: "How many hours per week does the nurse manager spend operating this platform after go-live?" Ask: "Can you show me a reference hospital at 25-bed scale who completed onboarding in the past 12 months?" The answers tell you more about operational fit than any feature overview.
 
 3. **Ask for a current hospital nursing reference customer at your size.** Any platform you are seriously evaluating should be able to name a current 25-bed hospital nursing customer within 48 hours of your request. If they cannot, treat that as a signal about market fit.
 

@@ -30,8 +30,8 @@ This guide compares 6 UKG alternatives for a Critical Access Hospital that needs
 
 - [UKG serves over 3,500 healthcare organizations](https://www.ukg.com/industry-solutions/healthcare) in the US. Many Critical Access Hospitals (CAHs) are on UKG because a regional health system extended an enterprise contract to affiliated facilities, not because UKG was selected for CAH-scale needs.
 - Based on our interviews with CAH nurse managers, most facilities on UKG use only a fraction of the platform's features while carrying the full operational overhead: IT configuration, ongoing rule maintenance, and a support model designed for enterprise IT staff.
-- The practical self-serve alternatives for a Critical Access Hospital leaving UKG are Aladtec (minimal IT, 2-4 weeks; 4.3/5 on G2 with 97 reviews, 4.6/5 on Capterra with 17 reviews, though Capterra reviewers skew toward EMS and public safety rather than hospital nursing) and SmartLinx (mid-market, healthcare-specific, 3-4 months with IT capacity). A managed service is the third path for CAHs with no IT and no ongoing scheduling administration bandwidth.
-- For a CAH leaving UKG because of complexity, Aladtec goes live in 2-4 weeks with minimal IT involvement and is a common replacement. For a hospital that needs more built-in compliance logic and has IT capacity for a 3-4 month implementation, SmartLinx is the step-down option. For zero IT and no ongoing scheduling administration on the nurse manager's plate, SimpleScheduleAI handles both the setup and the weekly scheduling work.
+- The practical self-serve alternatives for a Critical Access Hospital leaving UKG are Aladtec (minimal IT, 2-4 weeks; 4.3/5 on G2 with 97 reviews, 4.6/5 on Capterra with 17 reviews, though Capterra reviewers skew toward EMS and public safety rather than hospital nursing) and SmartLinx (mid-market, healthcare-specific, 3-4 months with IT capacity). A managed service is the third path for CAHs with limited IT and no ongoing scheduling administration bandwidth.
+- For a CAH leaving UKG because of complexity, Aladtec goes live in 2-4 weeks with minimal IT involvement and is a common replacement. For a hospital that needs more built-in compliance logic and has IT capacity for a 3-4 month implementation, SmartLinx is the step-down option. For limited IT and no ongoing scheduling administration on the nurse manager's plate, SimpleScheduleAI handles both the setup and the weekly scheduling work.
 - Switching requires checking contract terms, exporting roster data, and running parallel for one scheduling cycle. A managed service handles most of the transition logistics on its end.
 
 ## Table of Contents
@@ -173,7 +173,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 - Live in 48 hours from Excel roster upload; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, eliminating manual survey prep
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
-- Texas overtime compliance (FLSA overtime thresholds) and CMS CAH requirements are built-in defaults
+- FLSA overtime threshold tracking and CMS CAH requirements are built-in defaults
 - Service maintains scheduling rules as staff and policies change; no ongoing configuration burden
 
 **Key limitations:**
@@ -396,7 +396,7 @@ For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) 
 
 **Is UKG overkill for a 25-bed Critical Access Hospital?**
 
-Yes, almost always. UKG's value proposition is workforce intelligence across large, multi-facility health systems with complex payroll integrations and dedicated HR infrastructure. A 25-bed CAH with one nurse manager and no IT department gets a fraction of that value while carrying the full implementation and operational burden.
+Yes, almost always. UKG's value proposition is workforce intelligence across large, multi-facility health systems with complex payroll integrations and dedicated HR infrastructure. A 25-bed CAH with one nurse manager and limited IT gets a fraction of that value while carrying the full implementation and operational burden.
 
 **What does it cost to switch from UKG to a simpler tool?**
 

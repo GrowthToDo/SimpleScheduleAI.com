@@ -80,7 +80,7 @@ These questions surface operational fit faster than feature checklists do. Use t
 <div class="not-prose my-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
   <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">
     <div class="mb-3 rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-bold text-white">1. Setup Time</div>
-    <p class="text-sm text-slate-600 dark:text-slate-300">"What is your typical setup timeline for a 25-bed hospital with no IT department? Show me a sample onboarding schedule."</p>
+    <p class="text-sm text-slate-600 dark:text-slate-300">"What is your typical setup timeline for a 25-bed hospital with limited IT? Show me a sample onboarding schedule."</p>
   </div>
   <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">
     <div class="mb-3 rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-bold text-white">2. Weekly Burden</div>
@@ -172,7 +172,7 @@ When these conditions hold, a self-serve platform like ShiftWizard, TCP/Aladtec,
 
 ## Where Does a Managed Service Fit?
 
-A managed scheduling service fits when the nurse manager is also a clinical provider and cannot protect 4-6 weekly hours for scheduling construction, when the hospital has no IT capacity for implementation or maintenance, when time to first operational schedule matters more than staff self-service features, and when CMS compliance documentation is currently assembled manually before each survey. If any of these apply, the operating model is the actual constraint, not the platform.
+A managed scheduling service fits when the nurse manager is also a clinical provider and cannot protect 4-6 weekly hours for scheduling construction, when the hospital has limited IT capacity for implementation or maintenance, when time to first operational schedule matters more than staff self-service features, and when CMS compliance documentation is currently assembled manually before each survey. If any of these apply, the operating model is the actual constraint, not the platform.
 
 A managed service is the right model when:
 
@@ -206,7 +206,7 @@ SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. Wh
 
 - **Evaluation on real delivered schedules, not demos.** We build a real schedule against your roster so you judge the output, not a sales pitch.
 - **Founder-led service.** Pradeep Pandey, founder, has direct operations experience at Apollo Hospitals (Deputy GM, Operations) and an MBA from IIM Trichy. Service decisions go through him, not through a tier-3 support queue.
-- **CAH-specific design.** Excel roster onboarding, no IT integration required, 3-5 day go-live, Texas FLSA overtime compliance built in, CMS §485.635 audit trail logged automatically.
+- **CAH-specific design.** Excel roster onboarding, no IT integration required, 3-5 day go-live, FLSA overtime compliance built in, CMS §485.635 audit trail logged automatically.
 
 SimpleScheduleAI is the right choice for a CAH where the nurse manager has concluded that the self-serve scheduling model takes more weekly time than her role can absorb, and where seeing a real schedule built on her own roster matters more than aggregate vendor reviews.
 

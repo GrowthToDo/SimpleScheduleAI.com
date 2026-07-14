@@ -57,7 +57,7 @@ symplr Smart Square is an AI-driven nurse and staff scheduling platform with pre
 
 The questions that matter when a Critical Access Hospital evaluates a switch are operational fit, not feature count: does the platform fit a single 25-bed roster rather than a multi-facility system; how much weekly capacity does your nurse manager have for ongoing configuration; and whether the vendor can show a reference customer at your specific scale.
 
-If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) compliance, CMS §485.635 documentation, Texas overtime, and credential-filtered callouts, review what those requirements actually demand before choosing a platform. Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that enterprise health-system platforms do not size down to.
+If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) compliance, CMS §485.635 documentation, FLSA overtime, and credential-filtered callouts, review what those requirements actually demand before choosing a platform. Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that enterprise health-system platforms do not size down to.
 
 Here is how the alternatives compare before we go deeper.
 
@@ -172,7 +172,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 - CMS §485.635 documentation is automatic, not a manual export process before each survey
 - Callout shortlist is ranked by overtime risk without any manual calculation from the manager
 - Excel-based roster upload means the transition does not require an IT department or HRIS team
-- Texas overtime compliance ([FLSA overtime thresholds](https://www.dol.gov/agencies/whd/flsa)) and CMS Critical Access Hospital requirements are built in as defaults
+- FLSA overtime threshold tracking and CMS Critical Access Hospital requirements are built in as defaults
 
 **Key limitations:**
 

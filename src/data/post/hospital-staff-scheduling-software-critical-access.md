@@ -26,8 +26,8 @@ This guide covers what hospital staff scheduling actually requires at 25-bed sca
 
 ## Key Takeaways
 
-- Most hospital staff scheduling software is built for facilities that have an IT department and a person whose job is scheduling. A 25-bed Critical Access Hospital has neither, so the evaluation criteria are different.
-- The three criteria that decide fit at CAH scale are setup without IT, Texas overtime handling under the FLSA 8-and-80 rule, and CMS §485.635 staffing documentation that survives a survey.
+- Most hospital staff scheduling software is built for facilities that have a full IT department and a person whose job is scheduling. A 25-bed Critical Access Hospital usually has only limited IT and no dedicated scheduler, so the evaluation criteria are different.
+- The three criteria that decide fit at CAH scale are setup without IT, the FLSA 8-and-80 overtime calculation, and CMS §485.635 staffing documentation that survives a survey.
 - Callout coverage matters more than schedule building at a CAH because there is no agency pool to backfill a 3am sick call.
 - The structural problem is not which tool is best. It is that the nurse manager who would operate any tool also takes clinical shifts and has no protected scheduling hours.
 - A managed scheduling service removes the operate-the-software burden entirely. Self-serve software keeps it. The right choice depends on whether your nurse manager has spare administrative capacity.
@@ -43,13 +43,13 @@ This guide covers what hospital staff scheduling actually requires at 25-bed sca
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-If you administer a Critical Access Hospital, the demo you sit through for hospital staff scheduling software was almost certainly built for a facility ten times your size. The features look impressive. The configuration assumptions do not match a 25-bed building with no IT department and a nurse manager who is on the floor three shifts a week.
+If you administer a Critical Access Hospital, the demo you sit through for hospital staff scheduling software was almost certainly built for a facility ten times your size. The features look impressive. The configuration assumptions do not match a 25-bed building with only limited IT and a nurse manager who is on the floor three shifts a week.
 
 This guide is written from the operations side, not the vendor side. The goal is to give you an evaluation framework that holds up at Critical Access Hospital scale, and to be honest about where a self-serve tool fits and where it does not. For the underlying product category, see our overview of [nurse scheduling software](/nurse-scheduling-software) and the operational requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling).
 
 ## What Is Hospital Staff Scheduling Software for a Critical Access Hospital?
 
-Hospital staff scheduling software is workforce technology that builds, publishes, and maintains clinical shift schedules and enforces rules around overtime, credentials, and coverage. Scheduling is one piece of the broader [healthcare workforce management for a CAH](/blog/healthcare-workforce-management-cah) picture, which also spans credential tracking, overtime control, and coverage planning. For a Critical Access Hospital, the relevant version is one a single nurse manager can run without IT support, that handles Texas overtime correctly, and that produces staffing documentation a CMS surveyor will accept.
+Hospital staff scheduling software is workforce technology that builds, publishes, and maintains clinical shift schedules and enforces rules around overtime, credentials, and coverage. Scheduling is one piece of the broader [healthcare workforce management for a CAH](/blog/healthcare-workforce-management-cah) picture, which also spans credential tracking, overtime control, and coverage planning. For a Critical Access Hospital, the relevant version is one a single nurse manager can run without IT support, that handles FLSA overtime correctly, and that produces staffing documentation a CMS surveyor will accept.
 
 The category is broad. It ranges from consumer shift apps adapted for clinics, to hospital nurse scheduling platforms, to enterprise workforce suites used by multi-hospital systems. A [Critical Access Hospital](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) is a Medicare designation for a facility with 25 or fewer inpatient beds, and that scale changes the buying calculus entirely, which is why [nurse scheduling software for a small hospital](/blog/nurse-scheduling-software-small-hospital) is evaluated on different terms than an enterprise suite.
 
@@ -57,7 +57,7 @@ At a large hospital, scheduling software is one tool used by a scheduling team. 
 
 ## Why Does Generic Hospital Scheduling Software Fail at a 25-Bed Hospital?
 
-Generic hospital scheduling software fails at a 25-bed hospital for three structural reasons, not feature gaps. There is no IT department to configure and maintain it, no dedicated scheduler to operate it weekly, and no compliance specialist to set up FLSA and CMS rules correctly. Without all three, configuration erodes and the tool is abandoned.
+Generic hospital scheduling software fails at a 25-bed hospital for three structural reasons, not feature gaps. There is only limited IT to configure and maintain it, no dedicated scheduler to operate it weekly, and no compliance specialist to set up FLSA and CMS rules correctly. Without all three, configuration erodes and the tool is abandoned.
 
 The Rural Health Information Hub documents that [Critical Access Hospitals operate with thin staffing and limited administrative infrastructure](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), which is the entire point of the designation. A platform sold on its configurability assumes someone is available to do the configuring. At a CAH, that someone is the nurse manager, and she is covering a clinical assignment.
 
@@ -65,13 +65,13 @@ The failure pattern is consistent. The hospital implements the software, sees an
 
 ## What Should a Critical Access Hospital Evaluate Before Buying?
 
-A Critical Access Hospital should evaluate three things before buying any hospital staff scheduling software: whether it can be set up and maintained without an IT department, whether it handles Texas overtime under the FLSA 8-and-80 rule, and whether it produces CMS §485.635 staffing documentation automatically. Everything else is secondary at this scale.
+A Critical Access Hospital should evaluate three things before buying any hospital staff scheduling software: whether it can be set up and maintained without an IT department, whether it handles the FLSA 8-and-80 overtime calculation, and whether it produces CMS §485.635 staffing documentation automatically. Everything else is secondary at this scale.
 
 These three criteria filter out most of the market, which is the point. They are also the criteria most vendor demos skip, because the demo is optimized for buyers who have IT and dedicated schedulers.
 
 **Setup and maintenance without IT.** Ask the vendor exactly who configures the system, who maintains it when a policy changes, and what happens when the one trained person leaves. If the answer assumes an IT contact, that is a problem at a CAH. The realistic operating model is a single nurse manager with no backup.
 
-**Texas overtime under the 8-and-80 rule.** Hospitals can use the [FLSA 8-and-80 overtime system](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), which pays overtime after 8 hours in a day or 80 in a 14-day period rather than the standard 40-hour week. Generic scheduling tools default to the 40-hour rule. If the tool cannot model 8-and-80 without custom configuration, overtime miscalculations are baked in from day one.
+**FLSA overtime under the 8-and-80 rule.** Hospitals can use the [FLSA 8-and-80 overtime system](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), which pays overtime after 8 hours in a day or 80 in a 14-day period rather than the standard 40-hour week. Generic scheduling tools default to the 40-hour rule. If the tool cannot model 8-and-80 without custom configuration, overtime miscalculations are baked in from day one.
 
 **CMS §485.635 documentation.** [CMS Condition of Participation §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) requires CAHs to maintain staffing records that demonstrate appropriate nursing coverage. Ask whether the tool produces this on demand or whether the nurse manager assembles it manually before each survey. Manual assembly is hours of work the software was supposed to remove.
 
@@ -121,7 +121,7 @@ The common options split into four groups: spreadsheets, consumer shift apps, ho
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-3 font-medium text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
-        <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Texas CAHs with no IT and no dedicated scheduler</td>
+        <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Texas CAHs with limited IT and no dedicated scheduler</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Managed; no IT, Excel roster in</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">$1,000 to $1,500/mo flat</td>
@@ -136,7 +136,7 @@ For deeper coverage of any one option in the table, see our roundups on [nurse s
 
 ## Is Self-Serve Software or a Managed Service Right for Your Hospital?
 
-Self-serve software is right when the hospital has a dedicated scheduler or a nurse manager with protected administrative hours and IT support. A managed service is right when the nurse manager takes clinical shifts, the hospital has no IT department, and CMS documentation is a manual pre-survey burden. The deciding variable is the operator's available time, not the feature list.
+Self-serve software is right when the hospital has a dedicated scheduler or a nurse manager with protected administrative hours and IT support. A managed service is right when the nurse manager takes clinical shifts, the hospital has only limited IT, and CMS documentation is a manual pre-survey burden. The deciding variable is the operator's available time, not the feature list.
 
 This is the question that should be settled before any demo. Self-serve software, including the platforms in the table, reduces scheduling time but does not remove the work. The nurse manager still builds the schedule, still runs the overtime check during a callout, and still maintains the configuration as staff and policy change.
 
@@ -150,7 +150,7 @@ SimpleScheduleAI is an AI-native, human-verified nurse scheduling service built 
 
 It is not the right fit for every hospital, and the limitation matters. SimpleScheduleAI does not include a nurse-facing self-service mobile app for shift swaps or availability submission by default, and real-time direct schedule edits route through the service rather than happening instantly in a self-service interface. A hospital that requires nurse self-service or instant manager-side edits should evaluate self-serve platforms first.
 
-Where it fits is the specific case this guide describes: a 25-bed Texas CAH with no IT department, no dedicated scheduler, and a nurse manager on clinical shifts who needs Texas overtime and CMS documentation handled without configuration work. For how the automation produces the drafts, see [AI nurse scheduling](/ai-nurse-scheduling). Watch the AI build a schedule and generate a ranked callout replacement list in the [interactive simulator](/simulator).
+Where it fits is the specific case this guide describes: a 25-bed Texas CAH with only limited IT, no dedicated scheduler, and a nurse manager on clinical shifts who needs FLSA overtime and CMS documentation handled without configuration work. For how the automation produces the drafts, see [AI nurse scheduling](/ai-nurse-scheduling). Watch the AI build a schedule and generate a ranked callout replacement list in the [interactive simulator](/simulator).
 
 Related operational guides: [How Small Rural Hospitals Without an IT Department Manage Nurse Scheduling](/blog/nurse-scheduling-no-it-department-rural-hospital) and [Self-Scheduling Problems at a Critical Access Hospital](/blog/self-scheduling-problems-critical-access-hospital).
 
@@ -192,7 +192,7 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 <div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Hospital staff scheduling, run for you</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI's AI builds your nurse schedules and our team checks them, maintains CMS §485.635 documentation, and delivers ranked callout replacement lists in under 2 minutes. Built for Texas Critical Access Hospitals with no IT department and a nurse manager who also takes clinical shifts.</p>
+    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI's AI builds your nurse schedules and our team checks them, maintains CMS §485.635 documentation, and delivers ranked callout replacement lists in under 2 minutes. Built for Texas Critical Access Hospitals with only limited IT and a nurse manager who also takes clinical shifts.</p>
   </div>
   <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
@@ -202,15 +202,15 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 
 **What is the best hospital staff scheduling software for a 25-bed hospital?**
 
-There is no single best tool, because the deciding factor at 25 beds is the operating model, not the feature list. A 25-bed Critical Access Hospital with no IT and a nurse manager on clinical shifts is usually better served by a managed scheduling service than by self-serve software. A hospital with a dedicated scheduler should evaluate self-serve platforms first.
+There is no single best tool, because the deciding factor at 25 beds is the operating model, not the feature list. A 25-bed Critical Access Hospital with only limited IT and a nurse manager on clinical shifts is usually better served by a managed scheduling service than by self-serve software. A hospital with a dedicated scheduler should evaluate self-serve platforms first.
 
-**Does generic scheduling software handle Texas hospital overtime correctly?**
+**Does generic scheduling software handle FLSA overtime correctly for Texas hospitals?**
 
 Not by default. Hospitals can use the FLSA 8-and-80 overtime system, which differs from the standard 40-hour week. Most general scheduling tools default to the 40-hour rule and require custom configuration to model 8-and-80. Confirm with the vendor that the tool supports the 8-and-80 method before relying on its overtime calculations.
 
 **Why do scheduling tools fail at Critical Access Hospitals?**
 
-Critical Access Hospitals typically lack the three things self-serve scheduling tools assume: an IT department to configure the system, a dedicated scheduler to operate it weekly, and compliance expertise to set up FLSA and CMS rules. Without all three, configuration drifts as staff change and the tool is abandoned within a few quarters.
+Critical Access Hospitals typically lack the three things self-serve scheduling tools assume: dedicated IT staff to configure the system, a dedicated scheduler to operate it weekly, and compliance expertise to set up FLSA and CMS rules. Without all three, configuration drifts as staff change and the tool is abandoned within a few quarters.
 
 **How is a managed scheduling service different from scheduling software?**
 

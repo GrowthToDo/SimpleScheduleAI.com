@@ -42,7 +42,7 @@ metadata:
 
 A critical access hospital administrator searching for nurse scheduling software runs into a version of the same problem repeatedly. She finds a product with strong reviews, strong features, and a vendor who sounds helpful on the phone. Then she mentions she has 18 nurses.
 
-The conversation changes. The product either has a minimum that excludes her, or the sales rep is honest: "Our platform is really designed for larger organizations." Or the rep is not honest, she buys it, and discovers six months later that the feature set she was sold requires an IT team she does not have and an employee count that generates the statistical patterns the platform is designed to optimize.
+The conversation changes. The product either has a minimum that excludes her, or the sales rep is honest: "Our platform is really designed for larger organizations." Or the rep is not honest, she buys it, and discovers six months later that the feature set she was sold requires an IT team that goes well beyond her facility's limited IT support and an employee count that generates the statistical patterns the platform is designed to optimize.
 
 The scheduling software market has a small hospital problem. Most of the products in the market were not designed for the smallest facilities. Understanding why, and what to do about it, changes how a CAH administrator evaluates her options.
 
@@ -74,11 +74,11 @@ Beyond explicit minimums, several categories of scheduling platforms are effecti
 
 **Enterprise workforce management platforms (UKG/Kronos, Infor, Ceridian Dayforce)** require 6 to 12 month implementations, dedicated IT and HRIS staff, and implementation budgets in the range of $150,000 to $500,000. These requirements are not negotiable features of the product. They exist because the platforms are designed for large, complex organizations. A 20-nurse CAH has neither the budget nor the staff to implement them.
 
-**Platforms requiring EHR integration for full functionality.** Some scheduling platforms tie their core compliance and census-based staffing features to EHR data feeds. For a CAH without an IT team to manage an EHR integration, these features are unavailable, which reduces the platform to a basic shift management tool at enterprise pricing.
+**Platforms requiring EHR integration for full functionality.** Some scheduling platforms tie their core compliance and census-based staffing features to EHR data feeds. For a CAH with limited IT to manage an EHR integration, these features are unavailable, which reduces the platform to a basic shift management tool at enterprise pricing.
 
 **Platforms with per-module pricing.** Some vendors offer a base scheduling module at an accessible price point but require add-on modules for callout coverage, compliance tracking, or analytics. The full feature set that makes the platform competitive costs substantially more than the base price. At a 20-nurse CAH, paying enterprise module pricing for 20 seats produces a poor cost-per-value outcome.
 
-**Generic workforce scheduling tools without healthcare compliance.** Deputy, When I Work, and Homebase are designed for retail and restaurant workforce management. They are accessible in price and simple in setup but lack healthcare-specific compliance features: no Texas overtime rules, no CMS documentation support, and HIPAA compliance concerns documented by healthcare reviewers.
+**Generic workforce scheduling tools without healthcare compliance.** Deputy, When I Work, and Homebase are designed for retail and restaurant workforce management. They are accessible in price and simple in setup but lack healthcare-specific compliance features: no FLSA overtime tracking, no CMS documentation support, and HIPAA compliance concerns documented by healthcare reviewers.
 
 ## What Does a 20-Nurse Hospital Actually Have to Work With?
 
@@ -96,9 +96,9 @@ When evaluating scheduling software for a small facility, four criteria matter m
 
 **Setup speed.** A platform that goes live in 3 to 5 days via Excel roster upload is appropriate for a CAH. A platform with a 6-week implementation project is not, regardless of features.
 
-**No IT requirement.** Any platform that requires IT staff for implementation, maintenance, or configuration changes is a poor fit for a facility with no IT department. This requirement eliminates most enterprise platforms from consideration.
+**No IT requirement.** Any platform that requires IT staff for implementation, maintenance, or configuration changes is a poor fit for a facility with limited IT (typically one person or a contracted service, and no dedicated HRIS or workforce-management staff). This requirement eliminates most enterprise platforms from consideration.
 
-**Healthcare-specific compliance.** Texas overtime rules and FLSA compliance should be built in, not manually tracked. HIPAA coverage (BAA in place) should be a prerequisite, not a negotiation point.
+**Healthcare-specific compliance.** FLSA overtime compliance should be built in, not manually tracked. HIPAA coverage (BAA in place) should be a prerequisite, not a negotiation point.
 
 **Callout coverage without a float pool.** The callout replacement shortlist should surface available, qualified nurses from the existing roster, filtered by overtime status and certification. Float pool integration is irrelevant; direct roster-based replacement is essential.
 
@@ -112,7 +112,7 @@ Setup is an Excel roster upload and a configuration call. No IT integration, no 
 
 Callout replacement is roster-based: the system surfaces a shortlist from the existing 20-nurse roster, filtered by overtime status, certification, and availability. No float pool required.
 
-Texas FLSA overtime compliance is built in. HIPAA coverage is part of the service agreement. CMS documentation is maintained automatically through the scheduling record.
+FLSA overtime compliance is built in. HIPAA coverage is part of the service agreement. CMS documentation is maintained automatically through the scheduling record.
 
 The limitation is the same as any purpose-built small-facility tool: SimpleScheduleAI is not designed to scale to 50 or 100 beds, does not offer complex analytics dashboards, and does not provide direct payroll integration with specific systems. For a 20-nurse CAH, these limitations are not relevant constraints. For a facility growing beyond 50 beds or acquiring a health system EHR integration requirement, the evaluation criteria change.
 

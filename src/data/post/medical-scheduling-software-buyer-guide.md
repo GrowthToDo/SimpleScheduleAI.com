@@ -111,7 +111,7 @@ At a critical access hospital, a scheduling gap is not an inconvenience, it is a
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="align-top py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">5. Support model</td>
         <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Who do you call Sunday night before a Monday schedule, a ticket queue or a person?</td>
-        <td class="align-top py-3 text-slate-700 dark:text-slate-300">With no IT department, a person who knows your setup is often the deciding factor</td>
+        <td class="align-top py-3 text-slate-700 dark:text-slate-300">With limited IT, a person who knows your setup is often the deciding factor</td>
       </tr>
     </tbody>
   </table>

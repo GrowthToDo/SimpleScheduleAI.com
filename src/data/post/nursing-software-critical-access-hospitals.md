@@ -82,11 +82,11 @@ The specific scheduling capabilities that matter for critical access hospitals:
 
 When evaluating nursing scheduling software options, ask four questions:
 
-**1. Does it require IT implementation support?** Most CAHs don't have dedicated IT staff. Any nursing software that requires IT integration, vendor setup, or ongoing IT maintenance should be evaluated against your IT capacity. Look for tools that onboard via data upload without integration requirements.
+**1. Does it require IT implementation support?** Most CAHs have limited IT (typically one person or a contracted service), and no dedicated HRIS or workforce-management staff. Any nursing software that requires IT integration, vendor setup, or ongoing IT maintenance should be evaluated against your IT capacity. Look for tools that onboard via data upload without integration requirements.
 
 **2. How long until first operational schedule?** Enterprise platforms take months. Mid-market tools take weeks. Managed services take days. If scheduling burden is acute, time to value is a meaningful evaluation criterion.
 
-**3. Does it cover your compliance requirements explicitly?** Ask specifically about CMS §485.635 audit trail documentation, FLSA overtime compliance, and Texas Labor Code provisions. Generic tools often claim "compliance features" that don't cover healthcare-specific requirements.
+**3. Does it cover your compliance requirements explicitly?** Ask specifically about CMS §485.635 audit trail documentation and FLSA overtime compliance. Generic tools often claim "compliance features" that don't cover healthcare-specific requirements.
 
 **4. Does it reduce burden or just change where the work happens?** Some scheduling software moves work from spreadsheets to a new interface, the same hours, different tool. Purpose-built nursing scheduling software or a managed service should reduce total scheduling hours, not just change the format.
 
@@ -110,7 +110,7 @@ Nursing software is a broad category that includes EHR/clinical documentation sy
 
 **Q: What is the best nursing scheduling software for a 25-bed hospital?**
 
-The right choice depends on whether you want to build schedules yourself (self-serve platform) or delegate schedule building to a specialist (managed service). For CAHs without IT support that need healthcare-specific compliance coverage and fast implementation, a managed service is typically the best fit. See our [full comparison of healthcare scheduling software options](/blog/best-healthcare-scheduling-software) for a detailed evaluation.
+The right choice depends on whether you want to build schedules yourself (self-serve platform) or delegate schedule building to a specialist (managed service). For CAHs with limited IT support that need healthcare-specific compliance coverage and fast implementation, a managed service is typically the best fit. See our [full comparison of healthcare scheduling software options](/blog/best-healthcare-scheduling-software) for a detailed evaluation.
 
 **Q: Does nursing scheduling software integrate with EHR systems?**
 
