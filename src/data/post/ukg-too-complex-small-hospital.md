@@ -49,7 +49,7 @@ UKG (formerly Kronos) is the most deployed workforce management system in large 
 
 The result is a tool with enterprise complexity and CAH-scale support.
 
-One data point worth knowing before any internal conversation about UKG: the administrator buying the platform and the nurses using it often have different assessments of it. UKG Pro holds 4.3/5 on Capterra (716 reviews) and 4.2/5 on G2 across many industries; for a CAH-specific evaluation, ask the vendor for hospital reference customers under 50 beds and verify the nurse-side perception independently at your facility before deciding. For a small hospital where nurse buy-in directly affects retention, that gap matters before implementation begins.
+One data point worth knowing before any internal conversation about UKG: the administrator buying the platform and the nurses using it often have different assessments of it, a split we break down in [why UKG (Kronos) is built for enterprises, not Critical Access Hospitals](/blog/kronos-nurse-scheduling-problems-small-hospitals). UKG Pro holds 4.3/5 on Capterra (716 reviews) and 4.2/5 on G2 across many industries; for a CAH-specific evaluation, ask the vendor for hospital reference customers under 50 beds and verify the nurse-side perception independently at your facility before deciding. For a small hospital where nurse buy-in directly affects retention, that gap matters before implementation begins.
 
 ## Why Does UKG Fail at Small Hospital Scale?
 

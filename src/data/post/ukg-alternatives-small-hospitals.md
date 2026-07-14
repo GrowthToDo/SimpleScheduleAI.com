@@ -56,7 +56,7 @@ UKG is used at CAHs in two ways. The first is a health system enterprise contrac
 
 UKG's market presence comes from large health system deployments. When a regional system purchases UKG enterprise-wide, affiliated CAHs are often included in the contract and expected to adopt the same platform. The implementation is managed at the system level. The CAH nurse manager is trained on the interface during a one-day session and handed a platform configured for a 500-bed hospital's workflows.
 
-The alternative path is direct purchase. A hospital administrator, seeing that UKG is the platform used at major health systems and wanting a "serious" solution, signs an enterprise contract. The implementation begins. Within 90 days, the nurse manager is managing configuration problems she does not have the technical background to resolve.
+The alternative path is direct purchase. A hospital administrator, seeing that UKG is the platform used at major health systems and wanting a "serious" solution, signs an enterprise contract. The implementation begins. Within 90 days, the nurse manager is managing configuration problems she does not have the technical background to resolve. For why that enterprise design does not scale down, see [why UKG (Kronos) is built for enterprises, not Critical Access Hospitals](/blog/kronos-nurse-scheduling-problems-small-hospitals).
 
 ## What UKG Assumes You Have?
 

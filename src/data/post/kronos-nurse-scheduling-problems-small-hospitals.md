@@ -1,7 +1,6 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-07-14T00:00:00Z
-updateDate: 2026-07-14T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Why UKG (Kronos) Is Built for Enterprises, Not Critical Access Hospitals'
 excerpt: >
@@ -86,7 +85,7 @@ If people whose job is to run the platform describe reporting as "very complicat
 
 ## Does This Matter for a Critical Access Hospital Specifically?
 
-The complexity that administrative reviewers describe at enterprise scale lands harder at a Critical Access Hospital, because the CAH inherits the platform without the support infrastructure it assumes. The software is no different; the people who make it work are missing. At a 500-nurse health system, a nurse who struggles with UKG has an IT help desk to call and a trainer who ran an onboarding session. At a 20-nurse CAH, the nurse manager is the IT support, the trainer, and the deployment lead, and she is also carrying clinical shifts. A configuration problem a large hospital routes to a workforce-management team has no such owner at a 25-bed facility.
+The complexity that administrative reviewers describe at enterprise scale lands harder at a Critical Access Hospital, because the CAH inherits the platform without the support infrastructure it assumes. The software is no different; the people who make it work are missing. At a 200-bed health system, a nurse who struggles with UKG has an IT help desk to call and a trainer who ran an onboarding session. At a 20-nurse CAH, the nurse manager is the IT support, the trainer, and the deployment lead, and she is also carrying clinical shifts. A configuration problem a large hospital routes to a workforce-management team has no such owner at a 25-bed facility.
 
 There is a second, documented gap: no independent Critical Access Hospital reviews of UKG surfaced on the major review platforms during our research. The enterprise track record is real, but a small hospital cannot assume it transfers to a 25-bed operation. That is the central problem any approach to [critical access hospital scheduling](/critical-access-hospital-scheduling) has to solve.
 
@@ -114,7 +113,7 @@ The same draft tracks each nurse's running hours against the applicable FLSA ove
 
 One honest limitation: SimpleScheduleAI is not the right fit if your facility wants a staff-facing self-service app where nurses pick up and swap shifts themselves, or if you need the enterprise workforce analytics UKG provides across a multi-hospital system.
 
-For a full comparison of practical replacements at CAH scale, see [UKG Alternatives for Critical Access Hospitals](/blog/ukg-alternatives-small-hospitals).
+For practical replacements at CAH scale, see [UKG Alternatives for Critical Access Hospitals](/blog/ukg-alternatives-small-hospitals) and [why UKG is too complex for small hospitals](/blog/ukg-too-complex-small-hospital).
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -130,29 +129,17 @@ For a full comparison of practical replacements at CAH scale, see [UKG Alternati
 5. **Map your exit path before you commit:** your renewal date, the notice window, and how you would export your roster data.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">A scheduling tool sized for a 25-bed hospital, not a 500-bed system.</p>
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">A scheduling tool sized for a 25-bed hospital, not a 200-bed system.</p>
   <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is purpose-built for Texas Critical Access Hospitals. No IT setup, no platform to configure, operational in days.</p>
   <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
-For the practical replacements a 25-bed facility can actually run, see [UKG Is Too Complex for Small Hospitals: What to Use Instead](/blog/ukg-too-complex-small-hospital).
-
-## Sources
-
-1. UKG, [Healthcare workforce management](https://www.ukg.com/industry-solutions/healthcare) (vendor statement that UKG serves more than 3,500 healthcare organizations in the US). Verified 2026-07-01.
-2. Capterra, [UKG Pro reviews](https://www.capterra.com/p/480/UKG-Pro/reviews/) (product ID 480; 4.3/5 across 726 reviews; verbatim reviewer quotes from Felicia W., Swaminathan S., Patricia K., and Jessica J.). Verified 2026-07-01.
-3. Healthcare IT Leaders, [UKG Workforce Central End of Life: What Customers Should Know](https://www.healthcareitleaders.com/blog/ukg-workforce-central-wfc-end-of-life/) (on-premise Workforce Central end of life March 31, 2027). Verified 2026-07-01.
-4. CMS Conditions of Participation, [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), eCFR.
-5. U.S. Department of Labor, [Fact Sheet #54: Healthcare Overtime](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
-
-**A note on sources:** Reviewer quotes are verbatim from Capterra and were verified on the dates shown. No independent Critical Access Hospital reviews of UKG were found on Capterra, G2, or nursing community forums during this research; small-hospital suitability should be verified directly with the vendor. Vendor offerings, ratings, and product capabilities change over time.
-
 ## Frequently Asked Questions
 
 **Q: Is UKG (Kronos) a good fit for a 25-bed Critical Access Hospital?**
 
-UKG is documented as an enterprise workforce platform built for large organizations with dedicated IT and HRIS staff. A 25-bed CAH typically has neither, so it inherits the complexity without the support structure the platform assumes. No independent Critical Access Hospital reviews of UKG surfaced during our research, so a small hospital should verify small-facility fit directly with the vendor rather than assume the enterprise record transfers.
+UKG is documented as an enterprise workforce platform built for large organizations with dedicated IT and HRIS staff. A 25-bed CAH typically has neither, so it inherits the complexity without the support structure the platform assumes. Because no independent CAH reviews of UKG are documented anywhere we looked, the honest move is to make the vendor prove small-facility fit with a reference at your scale before you sign, not to lean on its enterprise reputation.
 
 **Q: What do reviewers say is hard about UKG?**
 
@@ -165,6 +152,16 @@ Yes. "Already set up" usually means the platform was configured for the health s
 **Q: Is Kronos being discontinued?**
 
 UKG has announced end-of-life timelines for legacy Kronos Workforce Central: on-premise Workforce Central reaches end of life on March 31, 2027, and the Kronos Private Cloud hosting reached end of life at the end of 2025. If you are offered a Kronos-branded product, confirm which UKG product you are actually buying and its supported lifespan before committing.
+
+## Sources
+
+1. UKG, [Healthcare workforce management](https://www.ukg.com/industry-solutions/healthcare) (vendor statement that UKG serves more than 3,500 healthcare organizations in the US). Verified 2026-07-01.
+2. Capterra, [UKG Pro reviews](https://www.capterra.com/p/480/UKG-Pro/reviews/) (product ID 480; 4.3/5 across 726 reviews; verbatim reviewer quotes from Felicia W., Swaminathan S., Patricia K., and Jessica J.). Verified 2026-07-01.
+3. Healthcare IT Leaders, [UKG Workforce Central End of Life: What Customers Should Know](https://www.healthcareitleaders.com/blog/ukg-workforce-central-wfc-end-of-life/) (on-premise Workforce Central end of life March 31, 2027). Verified 2026-07-01.
+4. CMS Conditions of Participation §485.635 for Critical Access Hospitals. [cms.gov](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals).
+5. U.S. Department of Labor, [Fact Sheet #54: Healthcare Overtime](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+**A note on sources:** Reviewer quotes are verbatim from Capterra and were verified on the dates shown. No independent Critical Access Hospital reviews of UKG were found on Capterra, G2, or nursing community forums during this research; small-hospital suitability should be verified directly with the vendor. Vendor offerings, ratings, and product capabilities change over time.
 
 ---
 

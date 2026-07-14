@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "kronos-nurse-scheduling-problems-small-hospitals",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-14T02:43:40.737Z",
+      "contentHash": "2f5c0bff638a979ec42ffb3008c75a5d4db4f859621192ee5c5c461e9aa0dcca"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-14T02:43:42.429Z",
+      "contentHash": "2f5c0bff638a979ec42ffb3008c75a5d4db4f859621192ee5c5c461e9aa0dcca"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-14T02:43:43.865Z",
+      "contentHash": "2f5c0bff638a979ec42ffb3008c75a5d4db4f859621192ee5c5c461e9aa0dcca"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-14T02:43:43.913Z",
+      "contentHash": "2f5c0bff638a979ec42ffb3008c75a5d4db4f859621192ee5c5c461e9aa0dcca"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-14T02:43:44.134Z",
+      "contentHash": "2f5c0bff638a979ec42ffb3008c75a5d4db4f859621192ee5c5c461e9aa0dcca"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-14T02:43:44.134Z",
+      "contentHash": "2f5c0bff638a979ec42ffb3008c75a5d4db4f859621192ee5c5c461e9aa0dcca"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-14T02:43:44.137Z",
+      "contentHash": "2f5c0bff638a979ec42ffb3008c75a5d4db4f859621192ee5c5c461e9aa0dcca"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-14T02:43:45.374Z",
+      "contentHash": "337760566437622a6980ceb4b1069cd22e8a56b0538045561303810cd4a1941f"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "claude-eol-verified",
+      "setAt": "2026-07-14T02:43:46.611Z",
+      "contentHash": "337760566437622a6980ceb4b1069cd22e8a56b0538045561303810cd4a1941f"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "claude-visual-eyeball",
+      "setAt": "2026-07-14T02:43:47.893Z",
+      "contentHash": "337760566437622a6980ceb4b1069cd22e8a56b0538045561303810cd4a1941f"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-14T02:43:49.189Z",
+      "contentHash": "337760566437622a6980ceb4b1069cd22e8a56b0538045561303810cd4a1941f"
+    }
+  },
+  "overrides": []
+}
