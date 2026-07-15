@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-07-15T00:00:00Z
 updateDate: 2026-07-15T00:00:00Z
 author: 'Pradeep Pandey'
@@ -77,7 +77,7 @@ So the detection lag that ran to 18 months at a well-resourced, closely-watched 
 
 ## How Does SimpleScheduleAI Help?
 
-The only real-time detector a small hospital reliably has is its own schedule, so that is where the warning has to live. [SimpleScheduleAI](/ai-nurse-scheduling) is an AI-native nurse scheduling service built for Texas Critical Access Hospitals: the AI builds each schedule against your unit coverage minimums and required skill mix, our scheduling team checks every draft, and your manager approves before anything posts. A shift that would fall below your own coverage or skill-mix rule is surfaced while it can still be fixed, not discovered on a complaint filed after it was worked.
+The only real-time detector a small hospital reliably has is its own schedule, so that is where the warning has to live. SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling) built for Texas Critical Access Hospitals: the AI builds each schedule against your unit coverage minimums and required skill mix, our scheduling team checks every draft, and your manager approves before anything posts. A shift that would fall below your own coverage or skill-mix rule is surfaced while it can still be fixed, not discovered on a complaint filed after it was worked.
 
 The same discipline runs through the rest of the cycle. Nights, weekends, and holidays are distributed and tracked so no single nurse quietly becomes the coverage of last resort. Callouts return a ranked shortlist of qualified replacements instead of a phone tree. Each nurse's running hours are checked against the applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) before an assignment is made, the piece of staffing discipline that generic [nurse scheduling software](/nurse-scheduling-software) leaves on the manager's desk. You can walk the full cycle on [how the scheduling process works](/how-it-works).
 

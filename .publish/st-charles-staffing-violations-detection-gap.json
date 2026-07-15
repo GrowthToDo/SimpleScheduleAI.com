@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "st-charles-staffing-violations-detection-gap",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:01:38.162Z",
+      "contentHash": "92f9f6dccacd9f39908c71a2fc3fb03b13e66bc89bf5d4c828a73ff5241afe61"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:01:39.843Z",
+      "contentHash": "92f9f6dccacd9f39908c71a2fc3fb03b13e66bc89bf5d4c828a73ff5241afe61"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:01:41.653Z",
+      "contentHash": "92f9f6dccacd9f39908c71a2fc3fb03b13e66bc89bf5d4c828a73ff5241afe61"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:01:41.676Z",
+      "contentHash": "92f9f6dccacd9f39908c71a2fc3fb03b13e66bc89bf5d4c828a73ff5241afe61"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:01:41.769Z",
+      "contentHash": "92f9f6dccacd9f39908c71a2fc3fb03b13e66bc89bf5d4c828a73ff5241afe61"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:01:41.769Z",
+      "contentHash": "92f9f6dccacd9f39908c71a2fc3fb03b13e66bc89bf5d4c828a73ff5241afe61"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:01:41.770Z",
+      "contentHash": "92f9f6dccacd9f39908c71a2fc3fb03b13e66bc89bf5d4c828a73ff5241afe61"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "claude",
+      "setAt": "2026-07-15T18:02:13.583Z",
+      "contentHash": "d8d1f4860bed55ebc97097e9d2b1b8fdde75f2987f2eb7b6fb868e303d4778c0"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "claude",
+      "setAt": "2026-07-15T18:02:14.466Z",
+      "contentHash": "d8d1f4860bed55ebc97097e9d2b1b8fdde75f2987f2eb7b6fb868e303d4778c0"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "claude",
+      "setAt": "2026-07-15T18:02:15.355Z",
+      "contentHash": "d8d1f4860bed55ebc97097e9d2b1b8fdde75f2987f2eb7b6fb868e303d4778c0"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-15T18:02:16.547Z",
+      "contentHash": "d8d1f4860bed55ebc97097e9d2b1b8fdde75f2987f2eb7b6fb868e303d4778c0"
+    }
+  },
+  "overrides": []
+}

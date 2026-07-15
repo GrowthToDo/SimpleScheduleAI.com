@@ -68,7 +68,7 @@ CMS Conditions of Participation for Critical Access Hospitals are codified at [4
 - The on-call emergency-care practitioner and the response-time commitment are recorded
 - Credential verification supports that staff delivering care were appropriately qualified
 
-The standard does not specify a minimum nurse-to-patient ratio, a gap we unpack fully in [safe staffing and nurse-to-patient ratios at a Critical Access Hospital](/blog/nurse-staffing-ratios-critical-access-hospital). CMS expects each CAH to set adequate staffing based on patient census and acuity, and to demonstrate through records that the required nurse was on duty and the required emergency-care practitioner was available during any period under review.
+The standard does not specify a minimum nurse-to-patient ratio, a gap we unpack fully in [safe staffing and nurse-to-patient ratios at a Critical Access Hospital](/blog/nurse-staffing-ratios-critical-access-hospital). CMS expects each CAH to set adequate staffing based on patient census and acuity, and to demonstrate through records that the required nurse was on duty and the required emergency-care practitioner was available during any period under review. For how long undetected understaffing can persist even under active oversight, see our analysis of the [St. Charles Hospital staffing violations](/articles/st-charles-staffing-violations-detection-gap).
 
 <div class="not-prose my-8 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 p-5">
   <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4">CMS §485.635: what surveyors evaluate in CAH nursing records</p>
