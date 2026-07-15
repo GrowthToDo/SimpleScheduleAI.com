@@ -448,5 +448,13 @@
     "primaryKeyword": "best per diem nurse scheduling software",
     "pillar": "/nurse-scheduling-software",
     "note": "Per-diem-specific BOFU comparison; differentiated from best-nurse-scheduling-software-2026 (general best) and nurse-scheduling-software-pricing by the per diem callout and overtime-ranking angle."
+  },
+  {
+    "slug": "healthcare-staffing-software-small-hospitals",
+    "type": "post",
+    "url": "/blog/healthcare-staffing-software-small-hospitals",
+    "primaryKeyword": "healthcare staffing software small hospitals",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Small-hospital feature-priority guide; differentiated from hospital-staffing-software-features-cah (feature checklist) by the buyer/options-comparison angle."
   }
 ]
