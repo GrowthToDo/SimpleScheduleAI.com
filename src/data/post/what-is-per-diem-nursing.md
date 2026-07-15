@@ -67,7 +67,7 @@ Facilities vary in what they require. Many hospitals ask per diem nurses for a m
 
 ## How Does Per Diem Nursing Work in a Critical Access Hospital?
 
-In a critical access hospital, per diem nursing fills the gap between a small fixed staff and unpredictable demand. The hospital must hold 24-hour coverage with a limited team, but census and callouts swing day to day. Hiring surplus full-time nurses is rarely affordable for a 20-bed facility, so a maintained per diem pool becomes the standard way to cover shifts without an agency, and it is the small-hospital substitute for the [float pool a big system relies on](/blog/float-pool-nursing-small-hospitals).
+In a critical access hospital, per diem nursing fills the gap between a small fixed staff and unpredictable demand. The hospital must hold 24-hour coverage with a limited team, but census and callouts swing day to day. Hiring surplus full-time nurses is rarely affordable for a 20-bed facility, so a maintained per diem pool becomes the standard way to cover shifts without an agency, and it is the small-hospital substitute for the [float pool a big system relies on](/blog/float-pool-nursing-small-hospitals). Choosing software to schedule that pool is a separate decision, one we work through in our [per diem nurse scheduling software guide](/blog/best-per-diem-nurse-scheduling-software).
 
 A functioning per diem pool at a critical access hospital typically includes:
 

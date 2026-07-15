@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "best-per-diem-nurse-scheduling-software",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T10:55:58.704Z",
+      "contentHash": "3e9c63d28c54828e0816d166cad2f53aae30a8b74efccddf7c1c38a0760b82c4"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T10:56:00.775Z",
+      "contentHash": "3e9c63d28c54828e0816d166cad2f53aae30a8b74efccddf7c1c38a0760b82c4"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T10:56:04.556Z",
+      "contentHash": "3e9c63d28c54828e0816d166cad2f53aae30a8b74efccddf7c1c38a0760b82c4"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T10:56:04.617Z",
+      "contentHash": "3e9c63d28c54828e0816d166cad2f53aae30a8b74efccddf7c1c38a0760b82c4"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T10:56:05.464Z",
+      "contentHash": "3e9c63d28c54828e0816d166cad2f53aae30a8b74efccddf7c1c38a0760b82c4"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T10:56:05.474Z",
+      "contentHash": "3e9c63d28c54828e0816d166cad2f53aae30a8b74efccddf7c1c38a0760b82c4"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T10:56:05.478Z",
+      "contentHash": "3e9c63d28c54828e0816d166cad2f53aae30a8b74efccddf7c1c38a0760b82c4"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose",
+      "setAt": "2026-07-15T10:56:41.209Z",
+      "contentHash": "cf917493f5aea77c5850eba79951bd9407728a8c6c57e905c12e9a0541c61bfb"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-15T10:56:42.164Z",
+      "contentHash": "cf917493f5aea77c5850eba79951bd9407728a8c6c57e905c12e9a0541c61bfb"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "claude",
+      "setAt": "2026-07-15T10:56:43.095Z",
+      "contentHash": "cf917493f5aea77c5850eba79951bd9407728a8c6c57e905c12e9a0541c61bfb"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-15T10:56:44.028Z",
+      "contentHash": "cf917493f5aea77c5850eba79951bd9407728a8c6c57e905c12e9a0541c61bfb"
+    }
+  },
+  "overrides": []
+}

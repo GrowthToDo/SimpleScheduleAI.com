@@ -700,5 +700,11 @@
     "description": "Well-lit hospital corridor with doors at the end",
     "family": "facility-exterior",
     "topics": ["hospital", "facility", "institutional", "corridor"]
+  },
+  {
+    "id": "1741707041492-dd5835cc6da7",
+    "description": "Smiling healthcare administrative worker in uniform working at a desktop computer",
+    "family": "desk-admin",
+    "topics": ["scheduling", "healthcare admin", "software", "front desk"]
   }
 ]

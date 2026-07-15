@@ -24,10 +24,10 @@ from this dossier or the verification date is older than 60 days.
 **Product:** Self-serve scheduling platform. Public safety, EMS, fire, law enforcement, and small
 healthcare. Parent company: TCP Software (acquired Aladtec 2021).
 
-**Ratings (verified 2026-04-30):**
+**Ratings (verified 2026-07-15):**
 
-- G2: 4.3/5 (97 reviews)
-- Capterra: 4.6/5 (17 reviews)
+- G2: 4.5/5 (94 reviews) — search-indicated (G2 blocks automated fetch)
+- Capterra: 4.6/5 (17 reviews; small sample) — page-verified, Product ID 248403
 
 **Capterra URL:** https://www.capterra.com/p/210972/Aladtec/ _(verify ID is current — TCP has rebranded some pages)_
 
@@ -133,10 +133,10 @@ Other App Store review titles safe to quote with attribution (bodies NOT yet ver
 **Product:** General workforce scheduling platform. Retail, hospitality, food service, healthcare
 segment. Healthcare page: deputy.com/industry/healthcare.
 
-**Ratings (verified 2026-04-30):**
+**Ratings (verified 2026-07-15):**
 
-- G2: 4.6/5 (1,400+ reviews)
-- Capterra: 4.6/5 (765 reviews)
+- G2: 4.6/5 (666 reviews) — search-indicated (G2 blocks automated fetch)
+- Capterra: 4.6/5 (773 reviews) — page-verified, Product ID 167811
 
 **Capterra URL (verified 2026-05-15):** https://www.capterra.com/p/167811/Deputy/reviews/
 
@@ -326,9 +326,10 @@ These confirm M7's enterprise/multi-hospital deployment footprint (a factual CAH
 **Product:** Nurse-facing scheduling app with manager tier. Mobile schedule viewing, availability,
 shift trades. Manager tier extends to unit-level oversight. Owned by HealthStream.
 
-**Ratings (verified 2026-04-30):**
+**Ratings (verified 2026-07-15):**
 
-- Capterra: 4.2/5 (13 reviews; small sample — check iOS App Store for broader signal)
+- G2: 4.6/5 (5 reviews; small sample) — search-indicated
+- Capterra: 4.2/5 (13 reviews; small sample), Product ID 254829 — page-verified
 
 **Capterra URL:** https://www.capterra.com/p/[verify-ID]/NurseGrid/
 
@@ -374,10 +375,10 @@ active CMS obligations — missing FLSA tracking, CMS audit trail, credential en
 credentialing, time tracking, analytics. Customer base skews toward physician group practices
 and larger health systems.
 
-**Ratings (verified 2026-04-30):**
+**Ratings (verified 2026-07-15):**
 
-- G2: 4.6/5 (164 reviews)
-- Capterra: 4.2/5 (68 reviews)
+- G2: 4.6/5 (164 reviews) — search-indicated
+- Capterra: 4.2/5 (68 reviews) — page-verified, Product ID 90628
 
 **Capterra URL:** https://www.capterra.com/p/[verify-ID]/QGenda/
 
@@ -909,6 +910,7 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 | 2026-05-16 | Added In-House Health and M7 Health sections (VC-funded AI nurse-scheduling startups). In-House Health: no G2 listing, no Capterra listing, zero third-party reviews (verified 2026-05-16). M7 Health: Capterra listing confirmed (product ID 10037829) but 0.0/5 with 0 reviews, no accessible G2 listing, zero third-party reviews (verified 2026-05-16). Both: no usable verbatim quotes, neutral product-page framing required per checklist L66. Positioning and vendor stat claims captured verbatim from own sites and public press.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | 2026-05-16 | Secondary source pass (beyond G2/Capterra) for In-House Health + M7. Checked Software Advice, GetApp, Gartner Peer Insights, Apple App Store, Google Play, Reddit, LinkedIn, Product Hunt. In-House Health: iOS/Android apps exist (rating not retrievable, flagged for re-check); named PR quote (Kerridge, Chicago VA, via Fierce). M7: no consumer app; named partnership-PR quotes (Trainor/Ochsner, Jay/ScionHealth) on customer newsrooms. No independent third-party reviews found anywhere. Neutral product-page framing confirmed to stand for both.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | 2026-05-17 | Added symplr Smart Square section (formerly Avantas Smart Square; acquired by symplr from AMN Healthcare 2025-07-02, $75M). Verified verbatim: Hanna N., Wanda C., Stephanie T. (Smart Square, Capterra p/275941, 4.6/5, 19 reviews); Elisabeth C. (symplr Workforce, Capterra p/241148, 4.1/5, 13 reviews). G2 standalone Smart Square rating not retrievable (G2 blocks automated fetch); symplr brand aggregate 4.3/5 (356) noted, flagged for manual re-check. KLAS profile subscriber-gated. No CAH/rural reference customers; neutral product-page framing per checklist L66.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 2026-07-15 | Re-verified 7 vendors' ratings for the best-per-diem-nurse-scheduling-software post (Capterra page-verified, G2 search-indicated). Aladtec Capterra 4.6/17 (ID 248403) / G2 4.5/94; NurseGrid Capterra 4.2/13 (ID 254829) / G2 4.6/5; SmartLinx Capterra 4.5/6 (ID 154002) / G2 3.8/11; QGenda Capterra 4.2/68 (ID 90628) / G2 4.6/164; OnShift Capterra 3.9/14 (ID 122212) / G2 4.5/40; Deputy Capterra 4.6/773 (ID 167811) / G2 4.6/666; UKG Pro Capterra 4.3/727 (ID 480) / G2 4.3/2,167. Existing sections (Aladtec, NurseGrid, QGenda, Deputy) updated inline; SmartLinx/OnShift/UKG used in-post with verbatim quotes from their Capterra pages (SmartLinx Daniel C.; UKG Swaminathan S.; OnShift ratings-only, no dossier quote) — full standalone sections for those three are a TODO. G2 counts approximate (403 on fetch); watch seller-aggregate vs product-page figures (Aladtec/UKG). |
 | 2026-07-15 | Refreshed Homebase ratings (dossier had tipped to 61 days). Capterra page-verified 4.6/5, 1,151 reviews (was 1,147; rating unchanged) via live product-page fetch. G2 could not be page-verified (403 on all g2.com fetches); its public listing now shows 539 reviews (title-confirmed) and a 4.6/5 rating (search summary), up from the 2026-04-30 page reading of 4.4/5 (271) — flagged as search-indicated in the section. Bumped dossierVerifiedDate in competitors.json to 2026-07-15. The two Amber B. + Angela P. Capterra quotes carried forward from the 2026-05-15 verbatim check (Capterra reviews persist; not re-fetched from pagination). |
 | 2026-06-06 | Added AMiON (Amion) and ShiftWorx (healthcare, shiftworx.io) sections from the 2026-06-05 DataForSEO LLM-citation gap pull. AMiON: Doximity-owned (acq. from Spiral Software 2022) enterprise physician on-call scheduling; Capterra ID 9064 (slug "OnCall"), 5.0/1 review; no G2; App Store id481079171, 4.4/~5.6K; 1 verbatim Capterra review (Christopher G.); App Store review bodies truncated, titles only confirmed. ShiftWorx: HARD name collision with FreePoint Technologies manufacturing product (which owns all directory listings incl. Capterra p/188388); healthcare shiftworx.io has ZERO third-party reviews, post-acute/LTC focus, no hospital/CAH language, neutral framing only. Research on ScheduleAnywhere, ScheduleForward, Shiftable, EasyShifts was attempted same day but interrupted by a session limit — still pending.                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | 2026-06-06 | Re-verification pass (Playwright/web). EasyShifts: confirmed exact Capterra dates for all 3 quotes (Jenafer J. 2024-01-16; Johanna Y. 2025-09-04; Cindee A. 2025-10-08, all Capterra ID 228499) — quotes now publish-ready; corrected Cindee A. source from GetApp to Capterra and expanded her con verbatim. ScheduleForward: site still 502 to direct fetch; removed unconfirmable founder names (Tom Smallwood/Scott Lowry); "$9/user/mo" and "1,000+ teams" flagged snippet-only/unconfirmable; still zero third-party listings. Shiftable: site is LIVE again (Vercel error cleared), now positions as "AI Nurse Scheduling for Healthcare Facilities"; pricing unconfirmable, do not use Wayback $29/mo; still zero third-party listings. Separately, CFR cites for the CMS-compliance blog post were Playwright-verified against eCFR: 30-min rule is §485.618(d) emergency-care practitioner (not §485.635); RN/CNS/LPN on duty is §485.631(a)(5).                                                                                                                                                                                                                                                                                                               |

@@ -1,7 +1,6 @@
 ---
-draft: true
-publishDate: 2026-05-29T00:00:00Z
-updateDate: 2026-05-12T00:00:00Z
+draft: false
+publishDate: 2026-07-15T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Per Diem Nurse Scheduling Software: 2026 Guide'
 excerpt: >
@@ -9,7 +8,7 @@ excerpt: >
   them as an afterthought. This guide reviews eight platforms on how well they handle per diem
   availability, callout coverage, overtime tracking, and credential verification for hospitals that
   depend on per diem staff to maintain safe coverage.
-image: https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1741707041492-dd5835cc6da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: bofu
 tags:
@@ -22,12 +21,9 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/best-per-diem-nurse-scheduling-software'
 ---
 
-For a broader comparison of scheduling platforms, see our [nurse scheduling software guide](/nurse-scheduling-software).
-For a broader comparison of scheduling platforms, see our [nurse scheduling software guide](/nurse-scheduling-software).
-
 ## Key Takeaways
 
-- Per diem nurses are a primary coverage mechanism at small and rural hospitals, not a supplemental one. At Critical Access Hospitals (CAHs), per diem staff often represent 20-35% of the effective nursing roster.
+- Per diem nurses are a primary coverage mechanism at small and rural hospitals, not a supplemental one. At Critical Access Hospitals (CAHs), per diem staff often make up a large share of the effective nursing roster.
 - Most scheduling software handles per diem staff through availability calendars, which require per diem nurses to self-report available days. This works poorly when call-in decisions are last-minute.
 - The highest-value feature for per diem scheduling is a replacement call list that cross-references per diem availability with current-week overtime accumulation. Most tools do not provide this.
 - SimpleScheduleAI includes per diem availability tracking and ranked callout replacement as defaults, with automatic CMS §485.635 documentation for every shift filled. This is the only tool in this list purpose-built for a CAH per diem model.
@@ -38,39 +34,39 @@ For a broader comparison of scheduling platforms, see our [nurse scheduling soft
 ## Table of Contents
 
 - [Quick Comparison: All 8 Platforms for Per Diem Scheduling](#quick-comparison-all-8-platforms-for-per-diem-scheduling)
-- [How to Evaluate Per Diem Scheduling Software](#how-to-evaluate-per-diem-scheduling-software)
+- [How to Evaluate Per Diem Scheduling Software?](#how-to-evaluate-per-diem-scheduling-software)
 - [The 8 Best Options, Reviewed for Per Diem Nurse Scheduling](#the-8-best-options-reviewed-for-per-diem-nurse-scheduling)
   - [1. SimpleScheduleAI](#1-simplescheduleai)
   - [2. Aladtec](#2-aladtec)
   - [3. NurseGrid Manager](#3-nursegrid-manager)
   - [4. SmartLinx](#4-smartlinx)
   - [5. QGenda](#5-qgenda)
-  - [6. OnShift](#6-onshift-now-part-of-workday)
+  - [6. OnShift](#6-onshift)
   - [7. Deputy](#7-deputy)
   - [8. UKG (formerly Kronos)](#8-ukg-formerly-kronos)
-- [What Makes Per Diem Scheduling Uniquely Difficult](#what-makes-per-diem-scheduling-uniquely-difficult)
+- [What Makes Per Diem Scheduling Uniquely Difficult?](#what-makes-per-diem-scheduling-uniquely-difficult)
 - [Which Software Fits Your Per Diem Model?](#which-software-fits-your-per-diem-model)
-- [How SimpleScheduleAI Handles Per Diem Nurses](#how-simplescheduleai-handles-per-diem-nurses)
-- [What to Do This Week](#what-to-do-this-week)
+- [How SimpleScheduleAI Handles Per Diem Nurses?](#how-simplescheduleai-handles-per-diem-nurses)
+- [What to Do This Week?](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Per diem nursing is how small hospitals stay staffed without carrying a full-time roster that exceeds patient volume. At a Critical Access Hospital (CAH), the per diem pool is not a backup plan, it is a structural part of the staffing model. The per diem nurses who work two to four days per month are the same nurses who fill the Saturday night callout and the holiday shift that no full-timer wanted.
+Per diem nursing is how small hospitals stay staffed without carrying a full-time roster that exceeds patient volume. At a [Critical Access Hospital (CAH)](/critical-access-hospital-scheduling), the per diem pool is not a backup plan, it is a structural part of the staffing model. The per diem nurses who work two to four days per month are the same nurses who fill the Saturday night callout and the holiday shift that no full-timer wanted.
 
 The scheduling challenge is that per diem availability is fluid. It changes week to week, sometimes day to day. A tool that handles per diem staff poorly creates two problems simultaneously: it misses available per diem nurses during callout events, and it surfaces nurses who are already at overtime risk because the system did not track their current-week hours.
 
 Here is how all 8 platforms compare before we go deeper:
 
-## How Does Quick Compare: All 8 Platforms for Per Diem Scheduling?
+## Quick Comparison: All 8 Platforms for Per Diem Scheduling
 
 <div class="not-prose overflow-x-auto">
-  <table class="w-full text-sm border-collapse">
+  <table class="w-full table-fixed border-collapse break-words text-sm" style="min-width: 680px">
     <thead>
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Platform</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Per Diem Fit</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Availability Tracking</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Callout Ranking</th>
-        <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100 whitespace-nowrap">Cost/Month</th>
+        <th class="py-3 pr-4 text-left align-top font-semibold text-slate-900 dark:text-slate-100" style="width: 22%">Platform</th>
+        <th class="py-3 pr-4 text-left align-top font-semibold text-slate-900 dark:text-slate-100" style="width: 22%">Per Diem Fit</th>
+        <th class="py-3 pr-4 text-left align-top font-semibold text-slate-900 dark:text-slate-100" style="width: 22%">Availability Tracking</th>
+        <th class="py-3 pr-4 text-left align-top font-semibold text-slate-900 dark:text-slate-100" style="width: 20%">Callout Ranking</th>
+        <th class="py-3 text-left align-top font-semibold text-slate-900 dark:text-slate-100" style="width: 14%">Cost/Month</th>
       </tr>
     </thead>
     <tbody>
@@ -138,45 +134,70 @@ Here is how all 8 platforms compare before we go deeper:
 
 Per diem scheduling has specific requirements that differ from full-time nurse scheduling. The evaluation criteria reflect those differences.
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" class="w-full my-6" aria-label="Evaluation criteria for per diem nurse scheduling software, ranked by operational impact">
-  <rect width="800" height="400" fill="#f8fafc" rx="12"/>
-  <text x="400" y="34" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Evaluation Criteria for Per Diem Nurse Scheduling Software</text>
-  <text x="400" y="54" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Weighted for small-hospital per diem model</text>
-
-  <!-- Callout ranking -->
-  <rect x="60" y="76" width="490" height="34" rx="4" fill="#2563eb"/>
-  <text x="68" y="98" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff">Ranked replacement list with overtime cross-check</text>
-  <text x="558" y="98" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Critical</text>
-
-  <!-- Availability accuracy -->
-  <rect x="60" y="124" width="440" height="34" rx="4" fill="#3b82f6"/>
-  <text x="68" y="146" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff">Per diem availability accuracy (real-time vs self-reported lag)</text>
-  <text x="508" y="146" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Critical</text>
-
-  <!-- OT tracking for per diem -->
-  <rect x="60" y="172" width="390" height="34" rx="4" fill="#60a5fa"/>
-  <text x="68" y="194" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Overtime tracking for per diem staff (FLSA overtime thresholds)</text>
-  <text x="458" y="194" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">High</text>
-
-  <!-- Credential/competency -->
-  <rect x="60" y="220" width="330" height="34" rx="4" fill="#93c5fd"/>
-  <text x="68" y="242" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Credential and competency verification per assignment</text>
-  <text x="398" y="242" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">High</text>
-
-  <!-- CMS documentation -->
-  <rect x="60" y="268" width="280" height="34" rx="4" fill="#bfdbfe"/>
-  <text x="68" y="290" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">CMS audit documentation for per diem shifts</text>
-  <text x="348" y="290" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Medium</text>
-
-  <!-- Cost -->
-  <rect x="60" y="316" width="200" height="34" rx="4" fill="#dbeafe"/>
-  <text x="68" y="338" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Cost per per diem nurse added</text>
-  <text x="268" y="338" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Medium</text>
-</svg>
+<div class="not-prose my-6 rounded-xl border border-slate-200 p-5 dark:border-slate-700 dark:bg-slate-900/40">
+  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">Evaluation Criteria for Per Diem Nurse Scheduling Software</p>
+  <p class="mb-4 text-xs text-slate-500 dark:text-slate-400">Ordered by weight for the small-hospital per diem model</p>
+  <div class="space-y-3">
+      <div>
+        <div class="mb-1 flex items-center justify-between gap-3 text-sm">
+          <span class="text-slate-700 dark:text-slate-300">Ranked replacement list with overtime cross-check</span>
+          <span class="whitespace-nowrap text-xs font-bold text-blue-700 dark:text-blue-300">Critical</span>
+        </div>
+        <div class="h-2 w-full rounded bg-slate-200 dark:bg-slate-700">
+          <div class="h-2 rounded bg-blue-600" style="width: 100%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="mb-1 flex items-center justify-between gap-3 text-sm">
+          <span class="text-slate-700 dark:text-slate-300">Per diem availability accuracy (real-time vs self-reported lag)</span>
+          <span class="whitespace-nowrap text-xs font-bold text-blue-700 dark:text-blue-300">Critical</span>
+        </div>
+        <div class="h-2 w-full rounded bg-slate-200 dark:bg-slate-700">
+          <div class="h-2 rounded bg-blue-600" style="width: 88%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="mb-1 flex items-center justify-between gap-3 text-sm">
+          <span class="text-slate-700 dark:text-slate-300">Overtime tracking for per diem staff (FLSA overtime thresholds)</span>
+          <span class="whitespace-nowrap text-xs font-bold text-blue-700 dark:text-blue-300">High</span>
+        </div>
+        <div class="h-2 w-full rounded bg-slate-200 dark:bg-slate-700">
+          <div class="h-2 rounded bg-blue-600" style="width: 72%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="mb-1 flex items-center justify-between gap-3 text-sm">
+          <span class="text-slate-700 dark:text-slate-300">Credential and competency verification per assignment</span>
+          <span class="whitespace-nowrap text-xs font-bold text-blue-700 dark:text-blue-300">High</span>
+        </div>
+        <div class="h-2 w-full rounded bg-slate-200 dark:bg-slate-700">
+          <div class="h-2 rounded bg-blue-600" style="width: 60%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="mb-1 flex items-center justify-between gap-3 text-sm">
+          <span class="text-slate-700 dark:text-slate-300">CMS audit documentation for per diem shifts</span>
+          <span class="whitespace-nowrap text-xs font-bold text-blue-700 dark:text-blue-300">Medium</span>
+        </div>
+        <div class="h-2 w-full rounded bg-slate-200 dark:bg-slate-700">
+          <div class="h-2 rounded bg-blue-600" style="width: 46%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="mb-1 flex items-center justify-between gap-3 text-sm">
+          <span class="text-slate-700 dark:text-slate-300">Cost per per diem nurse added</span>
+          <span class="whitespace-nowrap text-xs font-bold text-blue-700 dark:text-blue-300">Medium</span>
+        </div>
+        <div class="h-2 w-full rounded bg-slate-200 dark:bg-slate-700">
+          <div class="h-2 rounded bg-blue-600" style="width: 34%"></div>
+        </div>
+      </div>
+  </div>
+</div>
 
 **Ranked replacement list with overtime cross-check:** The critical gap in most scheduling software is that the callout replacement list is sorted by availability only, not by overtime risk. At a small hospital, the first available per diem nurse may be the one who will tip into overtime if she takes the shift. A ranked list that surfaces nurses in order of lowest overtime risk eliminates that calculation from the manager's plate at 5:45 a.m.
 
-**Per diem availability accuracy:** Self-reported availability works when per diem nurses update their calendars consistently. In practice, most per diem nurses update availability weekly at best and sometimes not at all between availability windows. The best tools surface this discrepancy by showing when availability was last updated.
+**Per diem availability accuracy:** Self-reported availability works when per diem nurses keep their calendars current. In practice, most per diem nurses update availability weekly at best and sometimes not at all between availability windows. The best tools surface this discrepancy by showing when availability was last updated.
 
 **Overtime tracking for per diem staff:** The [FLSA 8-and-80 rule](https://www.dol.gov/agencies/whd/flsa) for healthcare employers allows hospitals to use an 80-hour bi-weekly overtime threshold rather than the standard 40-hour weekly threshold. Per diem nurses who work across multiple short shifts in a pay period can cross the overtime threshold without the manager realizing it unless the system tracks cumulative hours against the chosen FLSA model.
 
@@ -184,15 +205,15 @@ Per diem scheduling has specific requirements that differ from full-time nurse s
 
 **CMS audit documentation:** [CMS Conditions of Participation for CAHs](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) (§485.635) require staffing records that include per diem shifts. If per diem shift documentation is captured separately from scheduled shifts, survey preparation doubles the manual work.
 
-## What Is the 8 Best Options, Reviewed for Per Diem Nurse Scheduling?
+## The 8 Best Options, Reviewed for Per Diem Nurse Scheduling
 
 ### 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/SimpleScheduleAI.webp" alt="SimpleScheduleAI per diem nurse scheduling dashboard for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is an AI-native nurse scheduling service designed for Critical Access Hospitals where per diem nurses are a structural component of the roster, not an exception. The system maintains per diem availability alongside full-time scheduling and generates replacement call lists that cross-reference current-week hours against FLSA overtime thresholds before surfacing names. The nurse manager receives a list of available per diem nurses sorted by lowest overtime risk first.
+SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling) designed for Critical Access Hospitals where per diem nurses are a structural component of the roster, not an exception. The system maintains per diem availability alongside full-time scheduling and generates replacement call lists that cross-reference current-week hours against FLSA overtime thresholds before surfacing names. The nurse manager receives a list of available per diem nurses sorted by lowest overtime risk first.
 
-**Best for:** Critical Access Hospitals where per diem nurses fill 20-35% of weekly shift coverage and the nurse manager needs callout replacements identified in under two minutes with no manual overtime calculation.
+**Best for:** Critical Access Hospitals where per diem nurses fill a large share of weekly shift coverage and the nurse manager needs callout replacements identified in under two minutes with no manual overtime calculation.
 
 **Key advantages:**
 
@@ -206,6 +227,8 @@ SimpleScheduleAI is an AI-native nurse scheduling service designed for Critical 
 - Managed service model means less direct manager control over individual per diem scheduling decisions compared to self-serve platforms
 - Not designed for hospitals with a large agency or travel nurse component requiring external credentialing workflows
 
+**Not right for:** A larger hospital or health system that wants to operate its own scheduling platform in-house, or a facility whose per diem coverage is mostly agency and travel staff rather than a local per diem pool. Those needs are a better match for a self-operated enterprise tool.
+
 **Verdict:** The strongest fit for a CAH where per diem nurses are essential to daily coverage and the nurse manager cannot spend 30 minutes per callout event doing manual overtime math. The managed service model handles the operational overhead that self-serve tools push back to the manager.
 
 **Cost:** Pricing not listed on website. Contact for a quote.
@@ -214,7 +237,13 @@ SimpleScheduleAI is an AI-native nurse scheduling service designed for Critical 
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/Aladtec.webp" alt="Aladtec scheduling software interface showing per diem staff availability" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec handles per diem staff through a self-reporting availability system where nurses submit available shifts via the mobile app. The manager views availability alongside scheduled staff and can broadcast open shifts or directly assign per diem nurses to gaps. It works well when per diem nurses consistently update their availability windows.
+**Ratings:** Capterra 4.6/5 (17 reviews, small sample); G2 4.5/5 (94 reviews).
+
+> "When editing the schedule there are a lot of clicks involved."
+>
+> Amanda F., Nurse Manager, Hospital & Health Care, October 13, 2020, Capterra
+
+Aladtec handles per diem staff through a self-reporting availability system where nurses submit available shifts via the mobile app. The manager views availability alongside scheduled staff and can broadcast open shifts or directly assign per diem nurses to gaps. It works well when per diem nurses keep their availability windows current.
 
 **Best for:** Small hospitals that want a self-serve tool for managing a per diem pool of 5-15 nurses and have a nurse manager willing to actively maintain availability data for per diem staff who do not update their own.
 
@@ -229,7 +258,7 @@ Aladtec handles per diem staff through a self-reporting availability system wher
 
 - Callout ranking is not automated; the manager sees availability but must manually assess overtime risk before calling
 - No built-in FLSA tracking specific to the 8-and-80 rule; overtime rules require manual configuration
-- Per diem nurses who do not consistently update their availability create blind spots in the manager's callout options
+- Per diem nurses who rarely update their availability create blind spots in the manager's callout options
 
 **Verdict:** The strongest self-serve option for per diem management at a small hospital. The main limitation is that callout decisions still require the manager to manually check overtime status, which costs time at the worst possible moment.
 
@@ -238,6 +267,12 @@ Aladtec handles per diem staff through a self-reporting availability system wher
 ### 3. [NurseGrid Manager](https://nursegrid.com)
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/Nursegrid.webp" alt="NurseGrid Manager interface for nurse communication and shift management" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+
+**Ratings:** Capterra 4.2/5 (13 reviews, small sample); G2 4.6/5 (5 reviews, small sample).
+
+> "Ease of loading schedules and posting open shifts."
+>
+> Inpatient Director, Hospital & Health Care, June 17, 2024, Capterra
 
 NurseGrid Manager is a nurse communication platform with a strong mobile app that per diem nurses adopt at high rates. Per diem nurses use it to indicate available days, pick up open shifts, and receive shift offers. The manager layer broadcasts open shifts to the per diem pool and tracks responses. It does not build schedules.
 
@@ -263,6 +298,12 @@ NurseGrid Manager is a nurse communication platform with a strong mobile app tha
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/Smartlinx.webp" alt="SmartLinx workforce management platform for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
+**Ratings:** Capterra 4.5/5 (6 reviews, small sample); G2 3.8/5 (11 reviews).
+
+> "Some changes can only be made on the back end."
+>
+> Daniel C., CFO, Hospital & Health Care, March 16, 2021, Capterra
+
 SmartLinx has strong per diem and contingent worker management features designed for the long-term care environment where per diem staffing is similarly structural. The platform tracks availability, competency, and hours across contingent staff and integrates per diem coverage into the same scheduling and time-and-attendance system used for full-time staff.
 
 **Best for:** Hospitals in the 50-100 bed range with a larger per diem pool (15-30 nurses) and an IT resource who can manage configuration and ongoing maintenance.
@@ -275,7 +316,7 @@ SmartLinx has strong per diem and contingent worker management features designed
 
 **Key limitations:**
 
-- Implementation for a hospital with a complex per diem model typically takes 8-14 weeks; not a quick-start tool
+- Implementation for a hospital with a complex per diem model is a multi-week project, not a quick start
 - Configuration of FLSA overtime rules and credential tracking requires IT or vendor support involvement
 - Cost and configuration depth are better matched to hospitals larger than 25 beds
 
@@ -286,6 +327,12 @@ SmartLinx has strong per diem and contingent worker management features designed
 ### 5. [QGenda](https://www.qgenda.com)
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/QGenda.webp" alt="QGenda provider scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+
+**Ratings:** Capterra 4.2/5 (68 reviews); G2 4.6/5 (164 reviews).
+
+> "Doing the initial set up of new providers is a little complicated."
+>
+> Brandi D., Scheduling Coordinator, Hospital & Health Care, December 13, 2023, Capterra
 
 QGenda supports per diem scheduling through its contingent staff management features, which are more sophisticated than most platforms. The platform can track per diem availability, enforce credential requirements, and generate callout lists filtered by availability and compliance rules. It is most effective in environments where per diem nurses also include advanced practice providers.
 
@@ -307,11 +354,13 @@ QGenda supports per diem scheduling through its contingent staff management feat
 
 **Cost:** $500 or more per month. Pricing requires a quote.
 
-### 6. [OnShift](https://www.onshift.com) (now part of Workday)
+### 6. [OnShift](https://www.onshift.com)
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/Onshift.webp" alt="OnShift workforce management software for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-OnShift's per diem model is built around open-shift posting and caregiver engagement features. Per diem nurses see available shifts in the app and pick up what they want. The manager can also directly offer shifts to specific per diem staff. This works well in long-term care environments where per diem nurses have predictable availability windows and shift pickup is routine.
+**Ratings:** Capterra 3.9/5 (14 reviews, small sample); G2 4.5/5 (40 reviews).
+
+OnShift is a workforce management platform for post-acute and senior-care settings, which received a strategic investment from the staffing marketplace ShiftKey in 2022 (the two operate independently and share an integration). Its per diem model is built around open-shift posting and caregiver engagement features. Per diem nurses see available shifts in the app and pick up what they want. The manager can also directly offer shifts to specific per diem staff. This works well in long-term care environments where per diem nurses have predictable availability windows and shift pickup is routine.
 
 **Best for:** Hospitals or long-term care facilities where per diem nurses are accustomed to self-directed shift pickup, and the manager's role is posting available shifts rather than actively building a per diem roster.
 
@@ -325,7 +374,7 @@ OnShift's per diem model is built around open-shift posting and caregiver engage
 
 - No callout ranking by overtime status; the first per diem nurse to accept the shift gets it regardless of hours worked
 - Healthcare compliance for CAH environments requires custom configuration; not shipped as a default
-- Post-Workday acquisition, support prioritization for smaller independent customers has declined
+- Designed for post-acute and senior-care operators; hospital and CAH-specific per diem workflows are not the primary design target
 
 **Verdict:** OnShift works well when per diem nurses reliably self-select shifts. It works poorly for urgent callout events where the manager needs to confirm a specific replacement quickly and cannot wait for shift-pickup responses.
 
@@ -334,6 +383,12 @@ OnShift's per diem model is built around open-shift posting and caregiver engage
 ### 7. [Deputy](https://www.deputy.com)
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/Deputy.webp" alt="Deputy employee scheduling software showing shift management interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+
+**Ratings:** Capterra 4.6/5 (773 reviews); G2 4.6/5 (666 reviews).
+
+> "Deputy makes scheduling very easy and organised. It's simple to use, and I like how I can see my shifts clearly and get updates quickly."
+>
+> Portia A., Nurse, Hospital & Health Care, April 8, 2026, Capterra
 
 Deputy's per diem model relies on availability blocks set by the nurse and open-shift broadcasting. The platform is general-purpose and has no healthcare-specific per diem features. It handles per diem nurses the same way it handles part-time retail staff: availability windows, open-shift notifications, and manager-initiated direct offers.
 
@@ -359,6 +414,12 @@ Deputy's per diem model relies on availability blocks set by the nurse and open-
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/UKG.webp" alt="UKG workforce management software for large healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
+**Ratings:** Capterra 4.3/5 (727 reviews); G2 4.3/5 (2,167 reviews).
+
+> "Some areas of the platform can be complex for new users, and certain reports or customizations may require additional training or administrative expertise."
+>
+> Swaminathan S., HR Assistant, Hospitality, June 18, 2026, Capterra
+
 UKG has comprehensive contingent worker management capabilities within its enterprise workforce management suite. Per diem nurses can be managed as contingent workers with full FLSA tracking, credential management, and scheduling integration. The capability exists; the question is whether the implementation burden and cost are justified for a small per diem pool.
 
 **Best for:** Hospitals that are part of a larger health system already running UKG, where per diem management is one module in a system-wide workforce management implementation.
@@ -371,7 +432,7 @@ UKG has comprehensive contingent worker management capabilities within its enter
 
 **Key limitations:**
 
-- Implementation at a small hospital typically requires 6-18 months and dedicated IT resources
+- Implementation at a small hospital is a lengthy enterprise project measured in many months and requires dedicated IT resources
 - Per diem-specific module configuration requires specialist knowledge; not a self-serve setup
 - Total cost is prohibitive for standalone small hospitals managing a per diem pool of 5-15 nurses
 
@@ -381,55 +442,26 @@ UKG has comprehensive contingent worker management capabilities within its enter
 
 ## What Makes Per Diem Scheduling Uniquely Difficult?
 
-<svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" class="w-full my-6" aria-label="The per diem scheduling challenge triangle showing three intersecting problems">
-  <rect width="800" height="340" fill="#f8fafc" rx="12"/>
-  <text x="400" y="34" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a">The Per Diem Scheduling Challenge at Small Hospitals</text>
-
-  <!-- Three challenge boxes -->
-  <rect x="40" y="60" width="220" height="240" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="40" y="60" width="220" height="8" rx="4" fill="#2563eb"/>
-  <text x="150" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Availability Volatility</text>
-  <text x="55" y="118" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Per diem availability</text>
-  <text x="55" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#475569">changes faster than</text>
-  <text x="55" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#475569">weekly update cycles.</text>
-  <text x="55" y="180" font-family="system-ui, sans-serif" font-size="11" fill="#475569">A nurse who marked</text>
-  <text x="55" y="197" font-family="system-ui, sans-serif" font-size="11" fill="#475569">herself available on</text>
-  <text x="55" y="214" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Monday may have taken</text>
-  <text x="55" y="231" font-family="system-ui, sans-serif" font-size="11" fill="#475569">a shift elsewhere by</text>
-  <text x="55" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Wednesday. Stale</text>
-  <text x="55" y="265" font-family="system-ui, sans-serif" font-size="11" fill="#475569">availability data means</text>
-  <text x="55" y="282" font-family="system-ui, sans-serif" font-size="11" fill="#475569">failed callout calls.</text>
-
-  <rect x="290" y="60" width="220" height="240" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="290" y="60" width="220" height="8" rx="4" fill="#2563eb"/>
-  <text x="400" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Hidden Overtime Risk</text>
-  <text x="305" y="118" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Per diem nurses who</text>
-  <text x="305" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#475569">work short shifts across</text>
-  <text x="305" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#475569">a bi-weekly period can</text>
-  <text x="305" y="169" font-family="system-ui, sans-serif" font-size="11" fill="#475569">cross FLSA overtime</text>
-  <text x="305" y="186" font-family="system-ui, sans-serif" font-size="11" fill="#475569">thresholds unexpectedly.</text>
-  <text x="305" y="214" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Without real-time hour</text>
-  <text x="305" y="231" font-family="system-ui, sans-serif" font-size="11" fill="#475569">tracking, a callout fill</text>
-  <text x="305" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#475569">becomes an unplanned</text>
-  <text x="305" y="265" font-family="system-ui, sans-serif" font-size="11" fill="#475569">overtime expense the</text>
-  <text x="305" y="282" font-family="system-ui, sans-serif" font-size="11" fill="#475569">manager approved without</text>
-  <text x="305" y="299" font-family="system-ui, sans-serif" font-size="11" fill="#475569">knowing it.</text>
-
-  <rect x="540" y="60" width="220" height="240" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="540" y="60" width="220" height="8" rx="4" fill="#2563eb"/>
-  <text x="650" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Documentation Gap</text>
-  <text x="555" y="118" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Per diem shifts filled</text>
-  <text x="555" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#475569">outside the normal</text>
-  <text x="555" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#475569">schedule often do not</text>
-  <text x="555" y="169" font-family="system-ui, sans-serif" font-size="11" fill="#475569">make it into the</text>
-  <text x="555" y="186" font-family="system-ui, sans-serif" font-size="11" fill="#475569">scheduling system at all.</text>
-  <text x="555" y="214" font-family="system-ui, sans-serif" font-size="11" fill="#475569">When CMS surveyors</text>
-  <text x="555" y="231" font-family="system-ui, sans-serif" font-size="11" fill="#475569">ask for staffing records,</text>
-  <text x="555" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#475569">the per diem coverage</text>
-  <text x="555" y="265" font-family="system-ui, sans-serif" font-size="11" fill="#475569">that kept the floor</text>
-  <text x="555" y="282" font-family="system-ui, sans-serif" font-size="11" fill="#475569">staffed is invisible in</text>
-  <text x="555" y="299" font-family="system-ui, sans-serif" font-size="11" fill="#475569">the official record.</text>
-</svg>
+<div class="not-prose my-6">
+  <p class="mb-4 text-sm font-semibold text-slate-900 dark:text-slate-100">The Per Diem Scheduling Challenge at Small Hospitals</p>
+  <div class="grid gap-4 sm:grid-cols-3">
+    <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900/60">
+      <div class="mb-3 h-1 w-10 rounded bg-blue-600"></div>
+      <p class="mb-2 text-sm font-semibold text-slate-900 dark:text-slate-100">Availability Volatility</p>
+      <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Per diem availability changes faster than weekly update cycles. A nurse who marked herself available on Monday may have taken a shift elsewhere by Wednesday. Stale availability data means failed callout calls.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900/60">
+      <div class="mb-3 h-1 w-10 rounded bg-blue-600"></div>
+      <p class="mb-2 text-sm font-semibold text-slate-900 dark:text-slate-100">Hidden Overtime Risk</p>
+      <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Per diem nurses who work short shifts across a bi-weekly period can cross FLSA overtime thresholds unexpectedly. Without real-time hour tracking, a callout fill becomes an unplanned overtime expense the manager approved without knowing it.</p>
+    </div>
+    <div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900/60">
+      <div class="mb-3 h-1 w-10 rounded bg-blue-600"></div>
+      <p class="mb-2 text-sm font-semibold text-slate-900 dark:text-slate-100">Documentation Gap</p>
+      <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">Per diem shifts filled outside the normal schedule often do not make it into the scheduling system at all. When CMS surveyors ask for staffing records, the per diem coverage that kept the floor staffed is invisible in the official record.</p>
+    </div>
+  </div>
+</div>
 
 The three challenges compound each other. Volatile per diem availability makes the callout list unreliable. Hidden overtime risk means the manager cannot safely call the first available name without checking hours. And undocumented per diem shifts create CMS compliance gaps that only surface during a survey, not during day-to-day operations.
 
@@ -437,74 +469,86 @@ At a 25-bed CAH, these three problems interact every time there is a callout eve
 
 ## Which Software Fits Your Per Diem Model?
 
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" class="w-full my-6" aria-label="Scatter chart comparing eight scheduling tools on per diem management capability versus implementation complexity">
-  <rect width="800" height="420" fill="#f8fafc" rx="12"/>
-  <text x="400" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Per Diem Capability vs. Implementation Complexity</text>
-  <text x="400" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Ideal tools are top-left: high per diem capability, low complexity</text>
-
-  <!-- Axes -->
-  <line x1="80" y1="360" x2="760" y2="360" stroke="#94a3b8" stroke-width="1.5"/>
-  <line x1="80" y1="70" x2="80" y2="360" stroke="#94a3b8" stroke-width="1.5"/>
-
-  <!-- Axis labels -->
-
-<text x="420" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Implementation Complexity (Low to High)</text>
-<text x="24" y="220" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b" transform="rotate(-90, 24, 220)">Per Diem Capability</text>
-
-  <!-- Grid lines -->
-  <line x1="80" y1="215" x2="760" y2="215" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="420" y1="70" x2="420" y2="360" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
-
-  <!-- Quadrant labels -->
-
-<text x="240" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#16a34a" font-weight="600">Best fit</text>
-<text x="600" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#dc2626" font-weight="600">High capability, high complexity</text>
-<text x="240" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#92400e" font-weight="600">Low capability, low complexity</text>
-<text x="600" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#dc2626" font-weight="600">Worst fit</text>
-
-  <!-- Tool dots -->
-  <!-- SimpleScheduleAI: high capability, low-medium complexity -->
-  <circle cx="190" cy="100" r="10" fill="#2563eb"/>
-  <text x="205" y="96" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#0f172a">SimpleScheduleAI</text>
-
-  <!-- Aladtec: good capability, low-medium complexity -->
-  <circle cx="230" cy="165" r="8" fill="#3b82f6"/>
-  <text x="245" y="161" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">Aladtec</text>
-
-  <!-- NurseGrid: low-medium capability, low complexity -->
-  <circle cx="160" cy="290" r="8" fill="#60a5fa"/>
-  <text x="175" y="286" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">NurseGrid</text>
-
-  <!-- SmartLinx: high capability, high complexity -->
-  <circle cx="540" cy="130" r="8" fill="#93c5fd"/>
-  <text x="555" y="126" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">SmartLinx</text>
-
-  <!-- QGenda: high capability, high complexity -->
-  <circle cx="590" cy="160" r="8" fill="#bfdbfe"/>
-  <text x="605" y="156" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">QGenda</text>
-
-  <!-- OnShift: medium capability, medium complexity -->
-  <circle cx="370" cy="240" r="8" fill="#dbeafe"/>
-  <text x="385" y="236" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">OnShift</text>
-
-  <!-- Deputy: low capability, low complexity -->
-  <circle cx="130" cy="320" r="8" fill="#e2e8f0"/>
-  <text x="145" y="316" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Deputy</text>
-
-  <!-- UKG: highest capability, highest complexity -->
-  <circle cx="700" cy="110" r="8" fill="#cbd5e1"/>
-  <text x="715" y="106" font-family="system-ui, sans-serif" font-size="11" fill="#475569">UKG</text>
-</svg>
+<figure class="not-prose my-6">
+  <figcaption class="mb-3 text-sm font-semibold text-slate-900 dark:text-slate-100">Per Diem Capability vs. Implementation Complexity</figcaption>
+  <div class="overflow-x-auto">
+    <table class="w-full table-fixed break-words border-collapse text-sm" style="min-width: 640px">
+      <thead>
+        <tr class="bg-slate-100 dark:bg-slate-800">
+          <th class="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100 align-top" style="width: 20%">Tool</th>
+          <th class="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100 align-top" style="width: 26%">Per Diem Capability</th>
+          <th class="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100 align-top" style="width: 27%">Implementation Complexity</th>
+          <th class="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-100 align-top" style="width: 27%">Best Fit</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top font-medium text-slate-900 dark:text-slate-100">SimpleScheduleAI</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">High</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Low to medium</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Best fit: CAH per diem-heavy roster</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Good</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Low to medium</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Self-serve small-hospital per diem pool</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top font-medium text-slate-900 dark:text-slate-100">NurseGrid Manager</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Low to medium</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Low</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Callout communication only</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top font-medium text-slate-900 dark:text-slate-100">SmartLinx</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">High</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">High</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Hospitals of 50+ beds</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top font-medium text-slate-900 dark:text-slate-100">QGenda</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">High</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">High</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Provider plus nurse per diem, credential-heavy</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top font-medium text-slate-900 dark:text-slate-100">OnShift</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Medium</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Medium</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Post-acute and senior-care operators</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top font-medium text-slate-900 dark:text-slate-100">Deputy</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Low</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Low</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Low-cost basic availability tracking</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top font-medium text-slate-900 dark:text-slate-100">UKG</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">High</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">High</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-600 dark:text-slate-300 align-top">Large health systems already on UKG</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 
 ## How SimpleScheduleAI Handles Per Diem Nurses?
 
-The structural problem with most scheduling tools is that per diem nurses are treated as a secondary input rather than a primary coverage mechanism. SimpleScheduleAI was built for CAHs where per diem staff fill 20-35% of weekly coverage, which means the system treats per diem availability with the same reliability requirements as full-time scheduling.
+The structural problem with most scheduling tools is that per diem nurses are treated as a secondary input rather than a primary coverage mechanism. SimpleScheduleAI was built for CAHs where per diem staff are a large share of weekly coverage, which means the system treats per diem availability with the same reliability requirements as full-time scheduling.
 
 Per diem availability is maintained centrally alongside full-time scheduling. When a callout event occurs, the system generates a ranked shortlist that includes both full-time and per diem nurses, sorted by current-week hours against the FLSA overtime threshold. The nurse manager sees who is available and who represents the lowest overtime risk, in order, without running a manual calculation.
 
 Every per diem shift that is filled through the callout module is logged automatically against the CMS §485.635 staffing record. There is no separate documentation step for per diem coverage.
 
 Credential tracking flags when a per diem nurse's certifications do not match the unit requirements for the shift being filled, before the confirmation is made.
+
+<div class="not-prose my-8 rounded-r-lg border-l-4 border-amber-500 bg-amber-50 px-6 py-5 dark:bg-amber-950/20">
+  <p class="mb-2 text-sm font-bold uppercase tracking-wide text-amber-700 dark:text-amber-400">Our Take</p>
+  <p class="text-slate-800 dark:text-slate-200">Per diem coverage at a Critical Access Hospital is structural, not supplemental, so the feature that decides fit is a callout list ranked by overtime risk, not just an availability calendar. That ranking, plus automatic CMS documentation of every per diem shift, is why SimpleScheduleAI is our pick for a per diem-heavy CAH roster. The self-serve tools here are not wrong choices, though: if your nurse manager has the protected time to keep availability data current and check overtime by hand, Aladtec covers similar ground at a lower price. The honest deciding question is not which tool has the most features, it is how much unprotected admin time the manager actually has each week.</p>
+</div>
 
 ## What to Do This Week?
 
@@ -514,16 +558,19 @@ Credential tracking flags when a per diem nurse's certifications do not match th
 
 3. **Calculate your per diem overtime spend last quarter.** Pull payroll data for per diem nurses and flag any shift that triggered overtime pay. If the pattern shows managers approving overtime without knowing the nurse was at risk, the callout process is the cause.
 
-4. **Request a demo of SimpleScheduleAI and ask specifically about per diem management.** Ask how the replacement list handles mixed full-time and per diem rosters, how overtime thresholds are tracked per nurse, and how per diem shifts are documented for CMS. Contact via [simplescheduleai.com](/contact).
+4. **Request a demo of SimpleScheduleAI and ask specifically about per diem management.** Ask how the replacement list handles mixed full-time and per diem rosters, how overtime thresholds are tracked per nurse, and how per diem shifts are documented for CMS. See [how the service works](/how-it-works), or get in touch via the [contact page](/contact).
 
-5. **If you want a self-serve tool, request an Aladtec trial.** Use your actual per diem roster of 5-15 nurses and configure the availability and open-shift notification settings. Measure whether your per diem nurses update their own availability consistently enough for the tool to be reliable.
+5. **If you want a self-serve tool, request an Aladtec trial.** Use your actual per diem roster of 5-15 nurses and configure the availability and open-shift notification settings. Measure whether your per diem nurses update their own availability often enough for the tool to be reliable.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 border border-blue-100 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 flex flex-col gap-4 rounded-xl border border-blue-100 bg-blue-50 px-8 py-7 dark:border-blue-900/50 dark:bg-blue-950/30">
   <div>
-    <p class="text-lg font-bold text-blue-900">Per diem scheduling built for Critical Access Hospitals</p>
-    <p class="text-blue-800 mt-1">SimpleScheduleAI generates replacement call lists that cross-reference per diem availability with real-time overtime tracking. CMS documentation captures every per diem shift automatically. Built for rosters where per diem nurses are essential, not supplemental.</p>
+    <p class="text-lg font-bold text-blue-900 dark:text-blue-100">Per diem scheduling built for Critical Access Hospitals</p>
+    <p class="mt-1 text-blue-800 dark:text-blue-200">SimpleScheduleAI generates replacement call lists that cross-reference per diem availability with real-time overtime tracking. CMS documentation captures every per diem shift automatically. Built for rosters where per diem nurses are essential, not supplemental.</p>
   </div>
-  <a href="/contact" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Request a Demo</a>
+  <div class="flex flex-col items-start gap-2">
+    <a href="/how-it-works" class="inline-block rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">See how it works</a>
+    <a href="https://cal.com/gautham-8bdvdx/30min" class="text-sm font-medium text-blue-700 underline dark:text-blue-300">Book a call with our team</a>
+  </div>
 </div>
 
 ## Frequently Asked Questions
@@ -547,6 +594,20 @@ Deputy at $4.50 per user per month is the lowest-cost option. At a 15-nurse per 
 **What is the difference between per diem scheduling software and a managed scheduling service for per diem nurses?**
 
 Per diem scheduling software gives the nurse manager tools to track availability, manage callout replacements, and document per diem shifts. A managed scheduling service handles those tasks for the nurse manager. At a CAH where the nurse manager also takes clinical shifts, software cuts only part of that time because the manager still builds the schedule, while a managed service removes the build entirely. SimpleScheduleAI is an AI-native nurse scheduling service. All other tools in this list are software platforms.
+
+## Sources
+
+Vendor ratings reflect each product's current public review listings. Capterra figures were verified directly from each product's reviews page on July 15, 2026; G2 figures are from each product's public G2 listing, which blocks automated retrieval, so those counts are approximate and shift week to week. Ratings are general-audience rather than specific to Critical Access Hospitals, and small-sample scores (fewer than 20 reviews) are directional only. Reviewer quotes are verbatim from the cited Capterra reviews.
+
+1. Aladtec, Capterra reviews. [Capterra](https://www.capterra.com/p/248403/Aladtec/reviews/).
+2. NurseGrid, Capterra reviews. [Capterra](https://www.capterra.com/p/254829/NurseGrid/reviews/).
+3. SmartLinx, Capterra reviews. [Capterra](https://www.capterra.com/p/154002/SmartLinx/reviews/).
+4. QGenda, Capterra reviews. [Capterra](https://www.capterra.com/p/90628/QGenda/reviews/).
+5. OnShift, Capterra reviews. [Capterra](https://www.capterra.com/p/122212/OnShift/reviews/).
+6. Deputy, Capterra reviews. [Capterra](https://www.capterra.com/p/167811/Deputy/reviews/).
+7. UKG Pro, Capterra reviews. [Capterra](https://www.capterra.com/p/480/UKG-Pro/reviews/).
+8. FLSA healthcare overtime and the 8-and-80 rule. [U.S. Department of Labor](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+9. Critical Access Hospital Conditions of Participation, 42 CFR 485.635. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

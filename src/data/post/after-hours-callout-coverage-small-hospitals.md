@@ -95,7 +95,7 @@ The American Nurses Association links inadequate staffing directly to patient ou
 
 ## What Does a Workable After-Hours Callout Process Look Like?
 
-A workable after-hours callout process has four written, pre-built parts: a pre-ranked call list, a fixed escalation order, a standing per-diem bench, and a documentation step. The defining feature is that all four exist before the phone rings. The 2 AM task becomes "call down the list" instead of "figure out who to call."
+A workable after-hours callout process has four written, pre-built parts: a pre-ranked call list, a fixed escalation order, a standing per-diem bench, and a documentation step. The defining feature is that all four exist before the phone rings. The 2 AM task becomes "call down the list" instead of "figure out who to call." The scheduling tools that build and rank that per diem call list are compared in our [per diem nurse scheduling software guide](/blog/best-per-diem-nurse-scheduling-software).
 
 The failure mode at most small hospitals is that the process lives in the nurse manager's head. When she is off, asleep, or on a clinical shift, the institutional knowledge is unavailable and the on-call charge nurse improvises. A workable process is written down and survives the manager being unreachable.
 
