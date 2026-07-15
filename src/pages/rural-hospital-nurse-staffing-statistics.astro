@@ -1,0 +1,534 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import SchemaOrg from '~/components/common/SchemaOrg.astro';
+import DarkHero from '~/components/widgets/DarkHero.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const PAGE_URL = 'https://simplescheduleai.com/rural-hospital-nurse-staffing-statistics';
+
+const metadata = {
+  title: 'Rural Hospital & CAH Nurse Staffing Statistics (2026)',
+  description:
+    'Sourced 2026 statistics on rural and Critical Access Hospital nurse staffing: RN turnover, vacancy, cost of turnover, rural density, wages, and the Texas CAH picture. Each figure is citable and embeddable.',
+};
+
+// Each stat is a self-contained, citable card. `embed` is the exact HTML a
+// third party copies to their site; it links back to this hub (the point of
+// an embeddable-statistics page). All figures are verified primaries — see the
+// facts dossier and the Sources section below.
+const sections = [
+  {
+    id: 'cah-landscape',
+    heading: 'Critical Access Hospital Landscape',
+    intro:
+      'Critical Access Hospitals (CAHs) are federally designated rural hospitals of 25 or fewer acute-care beds. For how scheduling actually works at that scale, see our guide to <a href="/critical-access-hospital-scheduling">critical access hospital scheduling</a>.',
+    stats: [
+      {
+        anchor: 'us-cah-count',
+        value: '1,383',
+        label: 'Certified Critical Access Hospitals in the U.S.',
+        context: 'Rural hospitals of 25 or fewer acute-care beds, as of April 2026.',
+        source: 'Flex Monitoring Team, Historical CAH Data',
+        url: 'https://www.flexmonitoring.org/historical-cah-data-0',
+      },
+      {
+        anchor: 'rural-closures',
+        value: '197',
+        label: 'Rural hospital closures and conversions since 2005',
+        context: '109 fully closed and 88 converted to another care model; 154 of them since 2010.',
+        source: 'UNC Sheps Center Rural Hospital Closures Tracker',
+        url: 'https://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/',
+      },
+      {
+        anchor: 'cah-ceo-recruiting',
+        value: '94%',
+        label: 'CAH CEOs who found nursing staff hard to recruit',
+        context: '86% also reported retention challenges (survey of 155 CAH CEOs, March–May 2022).',
+        source: 'Flex Monitoring Team policy brief, February 2023',
+        url: 'https://www.flexmonitoring.org/sites/flexmonitoring.umn.edu/files/media/CAH_workforce_during_COVID_Barriers_and_facilitators_for_recruiting_and_retaining_staff_2025.pdf',
+      },
+    ],
+  },
+  {
+    id: 'national-staffing',
+    heading: 'National Nurse Staffing & Turnover',
+    intro:
+      'The national figures below come from the 2026 NSI report (calendar-year 2025 data, 527 hospitals across 40 states). They set the backdrop small hospitals staff against; the <a href="/nurse-scheduling-software">nurse scheduling software</a> that fits a CAH has to move these numbers with far fewer resources.',
+    stats: [
+      {
+        anchor: 'rn-turnover',
+        value: '17.6%',
+        label: 'Average hospital RN turnover',
+        context: '18.6% median, ranging from 5.6% to 40.0% depending on hospital size.',
+        source: '2026 NSI National Health Care Retention & RN Staffing Report',
+        url: 'https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf',
+      },
+      {
+        anchor: 'rn-vacancy',
+        value: '8.6%',
+        label: 'National RN vacancy rate',
+        context: 'One in three hospitals (33.1%) reports an RN vacancy rate above 10%.',
+        source: '2026 NSI National Health Care Retention & RN Staffing Report',
+        url: 'https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf',
+      },
+      {
+        anchor: 'cost-per-rn',
+        value: '$60,090',
+        label: 'Cost of turning over one bedside RN',
+        context:
+          'The average hospital loses $4.2M–$6.2M a year to RN turnover; each 1% change is worth about $295,000 a year.',
+        source: '2026 NSI National Health Care Retention & RN Staffing Report',
+        url: 'https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf',
+      },
+      {
+        anchor: 'rn-shortage',
+        value: '158,600',
+        label: 'NSI-estimated national RN shortage',
+        context: 'About 43 unfilled RN positions at the average hospital; 78 days to recruit an experienced RN.',
+        source: '2026 NSI National Health Care Retention & RN Staffing Report',
+        url: 'https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf',
+      },
+    ],
+  },
+  {
+    id: 'rural-access',
+    heading: 'Rural Access & Workforce Projections',
+    intro:
+      'Rural facilities do not just have fewer nurses; they draw from a thinner pool that is projected to thin further. This is the structural reason a single callout can leave a CAH unit uncovered.',
+    stats: [
+      {
+        anchor: 'rn-density',
+        value: '65.1 vs 99.5',
+        label: 'RNs per 10,000 people, rural vs urban',
+        context: 'Rural areas have roughly two-thirds the RN density of urban areas (2024 BLS OES data).',
+        source: 'Rural Health Information Hub, Health Care Workforce',
+        url: 'https://www.ruralhealthinfo.org/topics/health-care-workforce',
+      },
+      {
+        anchor: 'rn-projection-2038',
+        value: '108,960',
+        label: 'Projected national RN FTE shortage by 2038',
+        context: 'The nonmetro RN shortage is projected at 11%, versus 2% in metro areas.',
+        source: 'HRSA / National Center for Health Workforce Analysis (December 2025)',
+        url: 'https://bhw.hrsa.gov/data-research/projecting-health-workforce-supply-demand',
+      },
+    ],
+  },
+  {
+    id: 'nurse-wages',
+    heading: 'Registered Nurse Wages',
+    intro:
+      'Wage figures matter because overtime is charged at 1.5 times these rates. Catching overtime before a schedule posts is a direct cost lever; see <a href="/ai-nurse-scheduling">how AI nurse scheduling</a> flags approaching thresholds.',
+    stats: [
+      {
+        anchor: 'rn-wage-national',
+        value: '$97,550',
+        label: 'Median RN annual wage, national',
+        context: 'About $46.90 per hour (BLS May 2025 OEWS wage data, via O*NET).',
+        source: 'O*NET OnLine, 29-1141.00 (BLS May 2025 OEWS)',
+        url: 'https://www.onetonline.org/link/localwages/29-1141.00?st=TX',
+      },
+      {
+        anchor: 'rn-wage-texas',
+        value: '$95,970',
+        label: 'Median RN annual wage, Texas',
+        context: 'About $46.14 per hour (BLS May 2025 OEWS wage data, via O*NET).',
+        source: 'O*NET OnLine, 29-1141.00 (BLS May 2025 OEWS)',
+        url: 'https://www.onetonline.org/link/localwages/29-1141.00?st=TX',
+      },
+    ],
+  },
+  {
+    id: 'texas-cah',
+    heading: 'The Texas Critical Access Hospital Picture',
+    intro:
+      'Texas runs its own hospital nurse-staffing study, which lets us separate CAHs from other rural and non-rural hospitals. The figures below are from the Texas DSHS 2024 study (spring-2024 survey, published February 2025). For the compliance layer these facilities operate under, see <a href="/blog/texas-nursing-overtime-compliance-cah">Texas nursing overtime compliance</a>.',
+    stats: [
+      {
+        anchor: 'texas-cah-count',
+        value: '86',
+        label: 'Critical Access Hospitals in Texas',
+        context: 'Spread across 78 counties; 50 of them responded to the 2024 state nurse-staffing survey.',
+        source: 'Texas DSHS 2024 Hospital Nurse Staffing Study, Rural/CAH factsheet',
+        url: 'https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf',
+      },
+      {
+        anchor: 'texas-cah-vacancy',
+        value: '11.6%',
+        label: 'Texas CAH RN vacancy rate',
+        context: 'Lower than rural non-CAH hospitals (14.3%) and non-rural hospitals (16.5%).',
+        source: 'Texas DSHS 2024 Hospital Nurse Staffing Study, Rural/CAH factsheet',
+        url: 'https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf',
+      },
+      {
+        anchor: 'texas-cah-turnover',
+        value: '18.2%',
+        label: 'Texas CAH RN median turnover',
+        context: 'The highest of the three groups (rural non-CAH 15.4%, non-rural 17.4%).',
+        source: 'Texas DSHS 2024 Hospital Nurse Staffing Study, Rural/CAH factsheet',
+        url: 'https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf',
+      },
+      {
+        anchor: 'texas-cah-rn-mix',
+        value: '61%',
+        label: 'Share of Texas CAH nursing staff who are RNs',
+        context: 'Versus 80.5% at non-rural hospitals; LVNs make up 16.4% of CAH nursing staff (vs 3.6%).',
+        source: 'Texas DSHS 2024 Hospital Nurse Staffing Study, Rural/CAH factsheet',
+        url: 'https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf',
+      },
+      {
+        anchor: 'texas-cah-fte',
+        value: '74%',
+        label: 'Texas CAHs reporting no change in budgeted RN FTEs',
+        context: 'Only 24% increased their budgeted RN FTEs, versus 36.3% no-change at non-rural hospitals.',
+        source: 'Texas DSHS 2024 Hospital Nurse Staffing Study, Rural/CAH factsheet',
+        url: 'https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf',
+      },
+      {
+        anchor: 'texas-statewide-vacancy',
+        value: '16.4%',
+        label: 'Texas statewide hospital RN vacancy (2024)',
+        context: 'Down from 17.6% in 2022; 8,575 of 52,369.8 RN FTEs statewide were vacant.',
+        source: 'Texas DSHS 2024 Hospital Nurse Staffing Study, Highlights factsheet',
+        url: 'https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_Highlights_accessible.pdf',
+      },
+      {
+        anchor: 'texas-statewide-turnover',
+        value: '23.2%',
+        label: 'Texas statewide RN median facility turnover (2024)',
+        context: 'Down from 28.3% in 2022.',
+        source: 'Texas DSHS 2024 Hospital Nurse Staffing Study, Highlights factsheet',
+        url: 'https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_Highlights_accessible.pdf',
+      },
+    ],
+  },
+];
+
+// Build the copy-to-clipboard embed HTML for each stat once, at build time.
+const embedFor = (stat) =>
+  `<blockquote style="font-family:system-ui,-apple-system,sans-serif;border-left:4px solid #1A2332;margin:16px 0;padding:8px 16px;">` +
+  `<span style="font-size:1.6em;font-weight:700;color:#1A2332;">${stat.value}</span> ` +
+  `&mdash; ${stat.label}. ` +
+  `<span style="font-size:.85em;color:#555;">Source: <a href="${PAGE_URL}#${stat.anchor}">SimpleScheduleAI</a>, via ${stat.source}.</span>` +
+  `</blockquote>`;
+
+const allStats = sections.flatMap((s) => s.stats);
+
+const datasetSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  '@id': `${PAGE_URL}#dataset`,
+  name: 'Rural Hospital and Critical Access Hospital Nurse Staffing Statistics (2026)',
+  description:
+    'A sourced collection of 2026 nurse staffing statistics for rural and Critical Access Hospitals: RN turnover, vacancy, cost of turnover, rural workforce density, registered-nurse wages, and Texas-specific CAH figures.',
+  url: PAGE_URL,
+  keywords: [
+    'critical access hospital',
+    'rural hospital',
+    'nurse staffing',
+    'RN turnover',
+    'RN vacancy',
+    'nurse shortage',
+    'Texas',
+  ],
+  creator: {
+    '@type': 'Organization',
+    '@id': 'https://simplescheduleai.com/#organization',
+    name: 'SimpleScheduleAI',
+  },
+  isAccessibleForFree: true,
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  dateModified: '2026-07-14',
+};
+
+const faqItems = [
+  {
+    title: 'How many Critical Access Hospitals are there in the United States?',
+    description:
+      'There were 1,383 certified Critical Access Hospitals as of April 2026, per the Flex Monitoring Team. These are rural hospitals of 25 or fewer acute-care beds.',
+  },
+  {
+    title: 'What is the average hospital RN turnover rate?',
+    description:
+      'Average hospital RN turnover was 17.6% (18.6% median) in the 2026 NSI report, which covers calendar-year 2025 data from 527 hospitals across 40 states.',
+  },
+  {
+    title: 'How much does it cost to replace a hospital nurse?',
+    description:
+      'The 2026 NSI report puts the cost of turning over one bedside RN at $60,090. At that rate, the average hospital loses $4.2M to $6.2M a year to RN turnover.',
+  },
+  {
+    title: 'How many Critical Access Hospitals does Texas have?',
+    description:
+      'Texas has 86 Critical Access Hospitals across 78 counties. In the 2024 Texas DSHS study, CAH RN vacancy (11.6%) was lower than at other hospital types, but CAH RN turnover (18.2%) was the highest.',
+  },
+  {
+    title: 'Can I reuse these statistics?',
+    description:
+      'Yes. Every figure is licensed CC BY 4.0. Use the "Copy embed" button on any card to grab a ready-made snippet, or cite the primary source listed on the card and link back to this page.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.title,
+    acceptedAnswer: { '@type': 'Answer', text: f.description },
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://simplescheduleai.com' },
+    { '@type': 'ListItem', position: 2, name: 'Rural Hospital & CAH Nurse Staffing Statistics', item: PAGE_URL },
+  ],
+};
+---
+
+<Layout metadata={metadata}>
+  <SchemaOrg slot="head" schema={[datasetSchema, faqSchema, breadcrumbSchema]} />
+
+  <DarkHero
+    badge="Nurse Staffing Statistics"
+    title="Rural Hospital & Critical Access Hospital Nurse Staffing Statistics"
+    subtitle="A sourced 2026 reference on RN turnover, vacancy, cost of turnover, rural workforce density, wages, and the Texas CAH picture. Every figure is citable and embeddable."
+    actions={[
+      { text: 'Explore the statistics', href: '#cah-landscape', variant: 'primary' },
+      { text: 'Book a call with our team', href: 'https://cal.com/gautham-8bdvdx/30min', variant: 'secondary' },
+    ]}
+  />
+
+  <section class="bg-page py-10 md:py-14">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <p class="text-sm text-slate-600 dark:text-slate-400 mb-8">
+        Compiled by <a href="/about/pradeep-pandey" class="underline decoration-dotted">Pradeep Pandey</a> · Updated July
+        14, 2026 · Figures verified against primary sources (listed on each card and in
+        <a href="#sources" class="underline decoration-dotted">Sources</a>).
+      </p>
+
+      <div class="not-prose mb-10 rounded-xl border border-hairline bg-white/60 dark:bg-slate-900/40 p-5">
+        <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-2">The short version</p>
+        <p class="text-sm leading-relaxed text-slate-800 dark:text-slate-200 m-0">
+          Rural and Critical Access Hospitals staff against the same national shortage as everyone else, from a thinner
+          workforce and with almost no back office. There are 1,383 CAHs in the U.S.; average hospital RN turnover is
+          17.6% and each departure costs about $60,090. In Texas specifically, CAHs run a lower RN vacancy (11.6%) but
+          the highest RN turnover (18.2%) of any hospital type, staffed by a nurse workforce that is only 61% RN. The
+          cards below are individually sourced and embeddable.
+        </p>
+      </div>
+
+      {
+        sections.map((section) => (
+          <div class="mb-14 scroll-mt-24" id={section.id}>
+            <h2 class="text-2xl md:text-3xl font-heading font-semibold tracking-tight text-slate-900 dark:text-slate-100 mb-3">
+              {section.heading}
+            </h2>
+            <p
+              class="text-slate-600 dark:text-slate-300 mb-6 max-w-3xl [&_a]:text-primary [&_a]:underline"
+              set:html={section.intro}
+            />
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {section.stats.map((stat) => (
+                <figure
+                  id={stat.anchor}
+                  class="scroll-mt-24 flex flex-col rounded-xl border border-hairline bg-white dark:bg-slate-900/60 p-5 shadow-sm"
+                >
+                  <div class="font-heading text-3xl md:text-4xl font-bold tracking-tight text-primary">
+                    {stat.value}
+                  </div>
+                  <figcaption class="mt-2 text-sm font-semibold text-slate-900 dark:text-slate-100">
+                    {stat.label}
+                  </figcaption>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400 grow">{stat.context}</p>
+                  <div class="mt-4 flex items-center justify-between gap-3 border-t border-hairline pt-3">
+                    <a
+                      href={stat.url}
+                      rel="noopener nofollow"
+                      target="_blank"
+                      class="text-xs text-slate-500 dark:text-slate-400 underline decoration-dotted hover:text-primary"
+                    >
+                      {stat.source}
+                    </a>
+                    <button
+                      type="button"
+                      class="stat-embed-btn shrink-0 rounded-md border border-hairline px-2.5 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-colors"
+                      data-embed={embedFor(stat)}
+                    >
+                      Copy embed
+                    </button>
+                  </div>
+                </figure>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+
+      <div class="not-prose rounded-xl border border-hairline bg-slate-50 dark:bg-slate-900/40 p-6 mb-14">
+        <h2 class="text-xl font-heading font-semibold text-slate-900 dark:text-slate-100 mb-2">
+          How to cite and embed these statistics
+        </h2>
+        <p class="text-sm leading-relaxed text-slate-700 dark:text-slate-300 m-0">
+          Every figure on this page is released under a
+          <a
+            href="https://creativecommons.org/licenses/by/4.0/"
+            rel="noopener"
+            target="_blank"
+            class="text-primary underline">Creative Commons BY 4.0</a
+          >
+          license. Press <strong>Copy embed</strong> on any card to copy a ready-made HTML snippet you can paste into your
+          own page; it carries the number, its plain-language label, and a link back here. Prefer to write your own? Cite
+          the primary source shown on the card and link to this page as the collection.
+        </p>
+      </div>
+
+      <div class="not-prose rounded-xl border border-hairline p-6 mb-4">
+        <h2 class="text-xl font-heading font-semibold text-slate-900 dark:text-slate-100 mb-3">Related guides</h2>
+        <ul class="grid gap-2 sm:grid-cols-2 text-sm">
+          <li>
+            <a href="/critical-access-hospital-scheduling" class="text-primary underline"
+              >Critical Access Hospital scheduling: the complete guide</a
+            >
+          </li>
+          <li>
+            <a href="/nurse-scheduling-software" class="text-primary underline"
+              >Nurse scheduling software for small hospitals</a
+            >
+          </li>
+          <li><a href="/ai-nurse-scheduling" class="text-primary underline">AI nurse scheduling: how it works</a></li>
+          <li>
+            <a href="/blog/nurse-staffing-ratios-critical-access-hospital" class="text-primary underline"
+              >Nurse staffing ratios at a CAH</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <FAQs title="Frequently Asked Questions" subtitle="Rural and CAH nurse staffing, in numbers." items={faqItems} />
+
+  <section class="bg-page pb-14" id="sources">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl font-heading font-semibold text-slate-900 dark:text-slate-100 mb-3">Sources</h2>
+      <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 max-w-3xl">
+        National figures use the 2026 NSI report (calendar-year 2025 data). Texas figures use the Texas DSHS 2024
+        Hospital Nurse Staffing Study (spring-2024 survey, published February 2025). Wage figures reflect BLS May 2025
+        OEWS data republished by O*NET and sit at the median position. The CAH CEO recruiting figures are from a
+        March–May 2022 survey.
+      </p>
+      <ol
+        class="list-decimal space-y-1.5 pl-5 text-sm text-slate-600 dark:text-slate-400 [&_a]:text-primary [&_a]:underline [&_a]:decoration-dotted"
+      >
+        <li>
+          Flex Monitoring Team, Historical CAH Data. <a
+            href="https://www.flexmonitoring.org/historical-cah-data-0"
+            rel="noopener"
+            target="_blank">flexmonitoring.org</a
+          >.
+        </li>
+        <li>
+          UNC Sheps Center, Rural Hospital Closures Tracker. <a
+            href="https://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/"
+            rel="noopener"
+            target="_blank">shepscenter.unc.edu</a
+          >.
+        </li>
+        <li>
+          Flex Monitoring Team, CAH workforce policy brief (February 2023). <a
+            href="https://www.flexmonitoring.org/sites/flexmonitoring.umn.edu/files/media/CAH_workforce_during_COVID_Barriers_and_facilitators_for_recruiting_and_retaining_staff_2025.pdf"
+            rel="noopener"
+            target="_blank">flexmonitoring.org (PDF)</a
+          >.
+        </li>
+        <li>
+          2026 NSI National Health Care Retention &amp; RN Staffing Report. <a
+            href="https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf"
+            rel="noopener"
+            target="_blank">nsinursingsolutions.com (PDF)</a
+          >.
+        </li>
+        <li>
+          Rural Health Information Hub, Health Care Workforce. <a
+            href="https://www.ruralhealthinfo.org/topics/health-care-workforce"
+            rel="noopener"
+            target="_blank">ruralhealthinfo.org</a
+          >.
+        </li>
+        <li>
+          HRSA / National Center for Health Workforce Analysis, workforce projections (December 2025). <a
+            href="https://bhw.hrsa.gov/data-research/projecting-health-workforce-supply-demand"
+            rel="noopener"
+            target="_blank">bhw.hrsa.gov</a
+          >.
+        </li>
+        <li>
+          O*NET OnLine, 29-1141.00 local wages (BLS May 2025 OEWS). <a
+            href="https://www.onetonline.org/link/localwages/29-1141.00?st=TX"
+            rel="noopener"
+            target="_blank">onetonline.org</a
+          >.
+        </li>
+        <li>
+          Texas DSHS 2024 Hospital Nurse Staffing Study, Rural/CAH factsheet. <a
+            href="https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf"
+            rel="noopener"
+            target="_blank">dshs.texas.gov (PDF)</a
+          >.
+        </li>
+        <li>
+          Texas DSHS 2024 Hospital Nurse Staffing Study, Highlights factsheet. <a
+            href="https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_Highlights_accessible.pdf"
+            rel="noopener"
+            target="_blank">dshs.texas.gov (PDF)</a
+          >.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <CallToAction
+    title="Staffing a rural hospital against these numbers?"
+    subtitle="SimpleScheduleAI is an AI-native nurse scheduling service built for Texas Critical Access Hospitals: the schedule built, callouts ranked, and CMS documentation maintained, so the nurse manager gets time back."
+    actions={[
+      { text: 'See how it works', href: '/how-it-works', variant: 'primary' },
+      { text: 'Book a call with our team', href: 'https://cal.com/gautham-8bdvdx/30min', variant: 'secondary' },
+    ]}
+  />
+</Layout>
+
+<script>
+  document.querySelectorAll('.stat-embed-btn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const snippet = btn.getAttribute('data-embed') || '';
+      const original = btn.textContent;
+      try {
+        await navigator.clipboard.writeText(snippet);
+        btn.textContent = 'Copied ✓';
+      } catch {
+        // Clipboard API unavailable (e.g. insecure context): fall back to a textarea select.
+        const ta = document.createElement('textarea');
+        ta.value = snippet;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+          btn.textContent = 'Copied ✓';
+        } catch {
+          btn.textContent = 'Copy failed';
+        }
+        ta.remove();
+      }
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1800);
+    });
+  });
+</script>
