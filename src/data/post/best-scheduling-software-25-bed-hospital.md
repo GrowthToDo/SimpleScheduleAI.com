@@ -104,7 +104,7 @@ Here is how the five platforms most commonly evaluated at 25-bed scale compare b
 
 ## How to Evaluate Scheduling Software for a 25-Bed Hospital?
 
-The criteria for a 25-bed hospital are not a compressed version of what a 200-bed system evaluates. The problems are structurally different.
+The criteria for a 25-bed hospital are not a compressed version of what a 200-bed system evaluates. The problems are structurally different. Our [healthcare staffing software guide for small hospitals](/blog/healthcare-staffing-software-small-hospitals) covers those small-hospital priorities in depth.
 
 <div class="not-prose my-8 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 p-6">
   <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1">Evaluation Criteria for 25-Bed Hospital Scheduling Software</p>

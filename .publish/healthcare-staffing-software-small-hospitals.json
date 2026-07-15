@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "healthcare-staffing-software-small-hospitals",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:48:24.924Z",
+      "contentHash": "059582a85538683d3b7194182ddcbfdc7e085510625f7f58d72be03418b5489a"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:48:26.472Z",
+      "contentHash": "059582a85538683d3b7194182ddcbfdc7e085510625f7f58d72be03418b5489a"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:48:27.491Z",
+      "contentHash": "059582a85538683d3b7194182ddcbfdc7e085510625f7f58d72be03418b5489a"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:48:27.513Z",
+      "contentHash": "059582a85538683d3b7194182ddcbfdc7e085510625f7f58d72be03418b5489a"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:48:27.607Z",
+      "contentHash": "059582a85538683d3b7194182ddcbfdc7e085510625f7f58d72be03418b5489a"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:48:27.608Z",
+      "contentHash": "059582a85538683d3b7194182ddcbfdc7e085510625f7f58d72be03418b5489a"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-15T18:48:27.608Z",
+      "contentHash": "059582a85538683d3b7194182ddcbfdc7e085510625f7f58d72be03418b5489a"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "claude",
+      "setAt": "2026-07-15T18:48:44.911Z",
+      "contentHash": "747d08e05dd77824f0a3b9fbbde8baa6bc1f0e14c482d4b41a870bb991946f9b"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "claude",
+      "setAt": "2026-07-15T18:48:46.054Z",
+      "contentHash": "747d08e05dd77824f0a3b9fbbde8baa6bc1f0e14c482d4b41a870bb991946f9b"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "claude",
+      "setAt": "2026-07-15T18:48:47.274Z",
+      "contentHash": "747d08e05dd77824f0a3b9fbbde8baa6bc1f0e14c482d4b41a870bb991946f9b"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-15T18:48:48.442Z",
+      "contentHash": "747d08e05dd77824f0a3b9fbbde8baa6bc1f0e14c482d4b41a870bb991946f9b"
+    }
+  },
+  "overrides": []
+}
