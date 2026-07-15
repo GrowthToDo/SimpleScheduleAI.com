@@ -268,7 +268,7 @@ SimpleScheduleAI handles configuration maintenance as part of the service. The n
 
 ## How Do the Cost Structures of the Two Models Compare?
 
-Both Aladtec and SimpleScheduleAI have pricing that is not publicly listed; contact each vendor for a quote. The more useful comparison for a Critical Access Hospital is total cost of ownership: license fee plus implementation labor plus ongoing scheduling and maintenance labor, calculated at the nurse manager's hourly rate over twelve months.
+Aladtec's pricing is not publicly listed, so contact them for a quote; SimpleScheduleAI uses flat monthly pricing, $1,000 for up to 20 nurses and $1,500 for 21 to 40 nurses, with no per-nurse or setup fees. The more useful comparison for a Critical Access Hospital is total cost of ownership: license fee plus implementation labor plus ongoing scheduling and maintenance labor, calculated at the nurse manager's hourly rate over twelve months.
 
 The cost comparison for a CAH should account for more than the monthly subscription. Total cost of ownership includes:
 

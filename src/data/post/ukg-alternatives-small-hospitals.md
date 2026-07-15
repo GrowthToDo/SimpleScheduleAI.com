@@ -184,7 +184,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 
 **Verdict:** The most direct path from UKG to operational simplicity for a 25-bed CAH. Where UKG requires IT infrastructure and HRIS staff to function correctly, SimpleScheduleAI requires only a current roster file and manager review time. Watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator), or [see how it works](/how-it-works).
 
-**Cost:** Pricing not listed publicly. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
 ## 2. Aladtec (TCP Scheduling)
 

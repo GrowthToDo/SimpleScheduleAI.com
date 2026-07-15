@@ -75,7 +75,7 @@ Here is how all 8 platforms compare before we go deeper:
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Built for CAH per diem model</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, with OT cross-check</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, ranked by OT risk</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">$1,000-1,500 flat</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
@@ -231,7 +231,7 @@ SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling
 
 **Verdict:** The strongest fit for a CAH where per diem nurses are essential to daily coverage and the nurse manager cannot spend 30 minutes per callout event doing manual overtime math. The managed service model handles the operational overhead that self-serve tools push back to the manager.
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
 ### 2. [Aladtec](https://www.aladtec.com)
 

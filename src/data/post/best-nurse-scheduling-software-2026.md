@@ -229,7 +229,7 @@ SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It
 
 **Verdict:** The right choice for a small hospital where the nurse manager cannot realistically own a scheduling system on top of clinical duties. If you want to manage scheduling yourself or have more than 50 beds, look at Aladtec or SmartLinx instead. [See how SimpleScheduleAI works](/how-it-works).
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
 ## 2. [Aladtec](https://www.aladtec.com)
 

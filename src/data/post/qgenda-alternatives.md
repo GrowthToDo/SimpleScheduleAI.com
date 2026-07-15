@@ -192,7 +192,7 @@ Texas compliance is built in as the default: [FLSA overtime thresholds](https://
 
 **Verdict:** The strongest alternative for a CAH where the nurse manager is the only person managing scheduling and cannot sustain a platform configuration burden alongside clinical duties. SimpleScheduleAI eliminates both the implementation and ongoing overhead that makes QGenda difficult to operate at small-hospital scale. [See how it works](/how-it-works).
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
 ## 2. TCP Scheduling (Aladtec)
 

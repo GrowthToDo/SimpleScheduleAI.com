@@ -175,7 +175,7 @@ The AI-native, human-verified model means the hospital does not install software
 
 **Ratings:** New service; no public reviews yet.
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
@@ -464,7 +464,7 @@ Deputy has an employee profile system where credential information can be entere
 
 **What is the cost difference between Deputy and healthcare scheduling software?**
 
-At a 20-nurse roster, Deputy costs approximately $90 per month ($4.50 per user). Aladtec starts around $200-450 per month. [NurseGrid](/blog/nursegrid-alternatives) Manager runs approximately $150-300 per month. SmartLinx and SimpleScheduleAI do not publish pricing and require a quote. For most hospitals, the labor cost of manual compliance work that Deputy requires exceeds the price difference between Deputy and a healthcare-specific tool, making the upgrade cost-neutral or positive when total cost is calculated.
+At a 20-nurse roster, Deputy costs approximately $90 per month ($4.50 per user). Aladtec starts around $200-450 per month. [NurseGrid](/blog/nursegrid-alternatives) Manager runs approximately $150-300 per month. SmartLinx does not publish pricing and requires a quote; SimpleScheduleAI uses flat monthly pricing, $1,000 for up to 20 nurses and $1,500 for 21 to 40 nurses. For most hospitals, the labor cost of manual compliance work that Deputy requires exceeds the price difference between Deputy and a healthcare-specific tool, making the upgrade cost-neutral or positive when total cost is calculated.
 
 **Does Deputy work for hospital scheduling if I configure it correctly?**
 

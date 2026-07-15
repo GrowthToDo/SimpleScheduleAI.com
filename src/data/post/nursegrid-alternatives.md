@@ -196,7 +196,7 @@ Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers th
 
 **Ratings:** New service; no public G2 or Capterra listing yet.
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
 ## 2. [ShiftWizard](https://www.shiftwizard.com)
 

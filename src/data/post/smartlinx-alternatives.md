@@ -192,7 +192,7 @@ SimpleScheduleAI delivers the compliance documentation, overtime tracking, and c
 
 **Verdict:** The strongest right-sizing alternative for a CAH that has outgrown Excel but does not need SmartLinx's full feature depth. SimpleScheduleAI provides the outcomes SmartLinx was purchased to deliver, compliance documentation, callout management, overtime control, without the platform maintenance overhead. Watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator).
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
@@ -458,7 +458,7 @@ No. Aladtec is a leaner scheduling tool. What it lacks compared to SmartLinx: in
 
 **What does SmartLinx cost compared to its alternatives?**
 
-SmartLinx does not publish pricing and requires a quote. Industry comparisons suggest pricing in the $300-600+ per month range for small hospital rosters, exclusive of implementation costs. Aladtec is $200-450 per month with a faster and less expensive implementation. Deputy is $4.50 per user per month with minimal implementation cost. QGenda is $500+ per month. SimpleScheduleAI pricing is not listed publicly and requires contact.
+SmartLinx does not publish pricing and requires a quote. Industry comparisons suggest pricing in the $300-600+ per month range for small hospital rosters, exclusive of implementation costs. Aladtec is $200-450 per month with a faster and less expensive implementation. Deputy is $4.50 per user per month with minimal implementation cost. QGenda is $500+ per month. SimpleScheduleAI uses flat monthly pricing: $1,000 for up to 20 nurses and $1,500 for 21 to 40 nurses, with no per-nurse or setup fees.
 
 **Is SmartLinx HIPAA compliant?**
 

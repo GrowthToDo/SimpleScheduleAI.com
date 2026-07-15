@@ -184,7 +184,7 @@ This is a different operating model than OnShift, which is a self-serve platform
 
 **Ratings:** New service; no public G2 or Capterra listing yet.
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
@@ -548,7 +548,7 @@ Workday acquired OnShift to extend its human capital management platform into he
 
 **What does OnShift cost compared to alternatives?**
 
-OnShift does not publish pricing publicly, so confirm current pricing directly with the vendor. Among the alternatives, Aladtec, SmartLinx, QGenda, NurseGrid Manager, and UKG also require quotes rather than listing public pricing for a hospital nursing roster. SimpleScheduleAI pricing is not listed publicly either. Compare on total operating model, not list price alone, because managed service and self-serve software costs are not directly comparable.
+OnShift does not publish pricing publicly, so confirm current pricing directly with the vendor. Among the alternatives, Aladtec, SmartLinx, QGenda, NurseGrid Manager, and UKG also require quotes rather than listing public pricing for a hospital nursing roster. SimpleScheduleAI, by contrast, uses flat monthly pricing: $1,000 for up to 20 nurses and $1,500 for 21 to 40 nurses, with no per-nurse or setup fees. Compare on total operating model, not list price alone, because managed service and self-serve software costs are not directly comparable.
 
 **Is OnShift HIPAA compliant?**
 

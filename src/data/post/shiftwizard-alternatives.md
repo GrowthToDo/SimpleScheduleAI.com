@@ -171,7 +171,7 @@ The service is a new offering, without public G2 or Capterra reviews yet. CMS [Â
 
 **Verdict:** The strongest alternative for a CAH nurse manager who leaves ShiftWizard primarily because the scheduling administration burden has exceeded what one person can manage while covering clinical shifts. SimpleScheduleAI eliminates that specific constraint by design. Watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator), or [see how it works](/how-it-works).
 
-**Cost:** Pricing not listed publicly. Contact for a quote.
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
 ## 2. [TCP Scheduling (Aladtec)](https://www.tcpsoftware.com)
 
@@ -384,7 +384,7 @@ If all of these conditions apply, the switch cost and learning curve of an alter
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Pricing</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Not listed publicly, contact vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Not listed publicly, contact for quote</td>
+        <td class="py-3 text-blue-700 dark:text-blue-400">Flat monthly, $1,000-1,500 by roster size</td>
       </tr>
     </tbody>
   </table>
