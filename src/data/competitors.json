@@ -21,9 +21,9 @@
       "name": "Homebase",
       "category": "General workforce scheduling platform with a retail, restaurant, and service-industry focus",
       "positioning": "Homebase is a general employee scheduling and time-tracking platform with a free tier for a single location, built for hourly shift coverage across retail, restaurant, and service businesses.",
-      "dossierVerifiedDate": "2026-05-15",
+      "dossierVerifiedDate": "2026-07-15",
       "cahAngle": [
-        "Homebase is a capable general workforce scheduling platform. It carries a 4.4 out of 5 rating on G2 across 271 reviews and a 4.6 out of 5 on Capterra across 1,147 reviews, and it offers a free tier for a single location. Those are strong, well-sampled numbers. For a retail store, a restaurant group, or a service business managing hourly shift coverage, Homebase is a reasonable choice and the ratings reflect that.",
+        "Homebase is a capable general workforce scheduling platform. It carries a 4.6 out of 5 rating on G2 across 539 reviews and a 4.6 out of 5 on Capterra across 1,151 reviews, and it offers a free tier for a single location. Those are strong, well-sampled numbers. For a retail store, a restaurant group, or a service business managing hourly shift coverage, Homebase is a reasonable choice and the ratings reflect that.",
         "For a Critical Access Hospital, the deciding question is not whether Homebase is a good product. It is whether a tool built for hourly retail and restaurant scheduling fits the compliance and staffing reality of a 25-bed hospital. That is a domain-fit question, not a quality question, and it is the honest place to start.",
         "A Critical Access Hospital is a federally designated facility capped at 25 inpatient beds under the CMS Conditions of Participation. Its nurse scheduling is governed by rules a general scheduling app is not built around: the 24/7 registered-nurse coverage requirement, credential verification at the time of each shift, FLSA overtime including the 8-and-80 option common in healthcare, and the documentation a state surveyor expects to see under 42 CFR 485.635. These are not preferences. They are conditions of participation.",
         "Homebase's public product page does not document HIPAA handling, a Business Associate Agreement, CMS 485.635 audit-trail support, FLSA 8-and-80 tracking, or nurse credential constraints. This is not a criticism of the product. A retail and restaurant scheduling tool has no reason to advertise hospital compliance features. It does mean a CAH cannot assume those capabilities are present, and should confirm each one directly with the vendor before relying on the tool for a clinical schedule.",
@@ -40,8 +40,8 @@
         "Track the real number before any tool decision. For one week, log the nurse manager's scheduling hours: schedule building, callout coverage, swap requests, and pre-survey documentation. That total is the number any model has to beat to be worth the change. A general scheduling app that the manager still has to operate does not move that number much. Removing the operating role entirely is what moves it.",
         "The honest summary: Homebase is a well-rated general workforce platform that fits hourly, multi-industry shift scheduling. A Critical Access Hospital is a different problem defined by clinical compliance and a staffing structure with no back office. The right comparison for a CAH is not Homebase versus another app. It is software the hospital must operate versus a managed service that removes the operating burden and carries the compliance documentation as part of the work."
       ],
-      "g2": { "rating": 4.4, "count": 271 },
-      "capterra": { "rating": 4.6, "count": 1147, "id": "153076" },
+      "g2": { "rating": 4.6, "count": 539 },
+      "capterra": { "rating": 4.6, "count": 1151, "id": "153076" },
       "verbatimQuotes": [
         {
           "text": "I did not like that I could not do scheduling on the app",
@@ -91,7 +91,7 @@
         },
         {
           "dimension": "Public ratings",
-          "competitor": "G2 4.4/5 (271); Capterra 4.6/5 (1,147)",
+          "competitor": "G2 4.6/5 (539); Capterra 4.6/5 (1,151)",
           "simplescheduleai": "New managed service; in active Texas CAH pilot phase"
         },
         {
