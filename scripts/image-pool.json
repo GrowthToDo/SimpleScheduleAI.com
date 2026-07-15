@@ -706,5 +706,11 @@
     "description": "Smiling healthcare administrative worker in uniform working at a desktop computer",
     "family": "desk-admin",
     "topics": ["scheduling", "healthcare admin", "software", "front desk"]
+  },
+  {
+    "id": "1777269749032-d8d458ae594d",
+    "description": "Empty hospital corridor with waiting chairs and room signage",
+    "family": "misc",
+    "topics": ["hospital", "corridor", "facility", "understaffing", "staffing gap"]
   }
 ]
