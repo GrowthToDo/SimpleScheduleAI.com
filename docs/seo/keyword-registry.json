@@ -440,5 +440,13 @@
     "url": "/blog/what-is-per-diem-nursing",
     "primaryKeyword": "what is per diem nursing",
     "pillar": "/critical-access-hospital-scheduling"
+  },
+  {
+    "slug": "best-per-diem-nurse-scheduling-software",
+    "type": "post",
+    "url": "/blog/best-per-diem-nurse-scheduling-software",
+    "primaryKeyword": "best per diem nurse scheduling software",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Per-diem-specific BOFU comparison; differentiated from best-nurse-scheduling-software-2026 (general best) and nurse-scheduling-software-pricing by the per diem callout and overtime-ranking angle."
   }
 ]
