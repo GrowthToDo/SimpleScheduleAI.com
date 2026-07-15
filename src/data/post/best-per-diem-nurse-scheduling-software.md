@@ -27,7 +27,7 @@ metadata:
 - Most scheduling software handles per diem staff through availability calendars, which require per diem nurses to self-report available days. This works poorly when call-in decisions are last-minute.
 - The highest-value feature for per diem scheduling is a replacement call list that cross-references per diem availability with current-week overtime accumulation. Most tools do not provide this.
 - SimpleScheduleAI includes per diem availability tracking and ranked callout replacement as defaults, with automatic CMS §485.635 documentation for every shift filled. This is the only tool in this list purpose-built for a CAH per diem model.
-- Aladtec handles per diem tracking well for self-serve environments. NurseGrid Manager excels at per diem communication but does not build schedules. Deputy is the lowest-cost entry point but lacks healthcare compliance features.
+- [Aladtec](/blog/aladtec-alternatives) handles per diem tracking well for self-serve environments. [NurseGrid](/blog/nursegrid-alternatives) Manager excels at per diem communication but does not build schedules. [Deputy](/blog/deputy-alternatives-healthcare) is the lowest-cost entry point but lacks healthcare compliance features.
 
 For a broader comparison of scheduling platforms, see our [nurse scheduling software guide](/nurse-scheduling-software).
 
@@ -304,7 +304,7 @@ NurseGrid Manager is a nurse communication platform with a strong mobile app tha
 >
 > Daniel C., CFO, Hospital & Health Care, March 16, 2021, Capterra
 
-SmartLinx has strong per diem and contingent worker management features designed for the long-term care environment where per diem staffing is similarly structural. The platform tracks availability, competency, and hours across contingent staff and integrates per diem coverage into the same scheduling and time-and-attendance system used for full-time staff.
+[SmartLinx](/blog/smartlinx-alternatives) has strong per diem and contingent worker management features designed for the long-term care environment where per diem staffing is similarly structural. The platform tracks availability, competency, and hours across contingent staff and integrates per diem coverage into the same scheduling and time-and-attendance system used for full-time staff.
 
 **Best for:** Hospitals in the 50-100 bed range with a larger per diem pool (15-30 nurses) and an IT resource who can manage configuration and ongoing maintenance.
 
@@ -334,7 +334,7 @@ SmartLinx has strong per diem and contingent worker management features designed
 >
 > Brandi D., Scheduling Coordinator, Hospital & Health Care, December 13, 2023, Capterra
 
-QGenda supports per diem scheduling through its contingent staff management features, which are more sophisticated than most platforms. The platform can track per diem availability, enforce credential requirements, and generate callout lists filtered by availability and compliance rules. It is most effective in environments where per diem nurses also include advanced practice providers.
+[QGenda](/blog/qgenda-alternatives) supports per diem scheduling through its contingent staff management features, which are more sophisticated than most platforms. The platform can track per diem availability, enforce credential requirements, and generate callout lists filtered by availability and compliance rules. It is most effective in environments where per diem nurses also include advanced practice providers.
 
 **Best for:** Hospitals that need unified scheduling of both per diem nurses and per diem physicians or advanced practice providers, where credential management is a primary concern.
 
@@ -360,7 +360,7 @@ QGenda supports per diem scheduling through its contingent staff management feat
 
 **Ratings:** Capterra 3.9/5 (14 reviews, small sample); G2 4.5/5 (40 reviews).
 
-OnShift is a workforce management platform for post-acute and senior-care settings, which received a strategic investment from the staffing marketplace ShiftKey in 2022 (the two operate independently and share an integration). Its per diem model is built around open-shift posting and caregiver engagement features. Per diem nurses see available shifts in the app and pick up what they want. The manager can also directly offer shifts to specific per diem staff. This works well in long-term care environments where per diem nurses have predictable availability windows and shift pickup is routine.
+[OnShift](/blog/onshift-alternatives) is a workforce management platform for post-acute and senior-care settings, which received a strategic investment from the staffing marketplace ShiftKey in 2022 (the two operate independently and share an integration). Its per diem model is built around open-shift posting and caregiver engagement features. Per diem nurses see available shifts in the app and pick up what they want. The manager can also directly offer shifts to specific per diem staff. This works well in long-term care environments where per diem nurses have predictable availability windows and shift pickup is routine.
 
 **Best for:** Hospitals or long-term care facilities where per diem nurses are accustomed to self-directed shift pickup, and the manager's role is posting available shifts rather than actively building a per diem roster.
 
@@ -420,7 +420,7 @@ Deputy's per diem model relies on availability blocks set by the nurse and open-
 >
 > Swaminathan S., HR Assistant, Hospitality, June 18, 2026, Capterra
 
-UKG has comprehensive contingent worker management capabilities within its enterprise workforce management suite. Per diem nurses can be managed as contingent workers with full FLSA tracking, credential management, and scheduling integration. The capability exists; the question is whether the implementation burden and cost are justified for a small per diem pool.
+[UKG](/blog/ukg-alternatives-small-hospitals) has comprehensive contingent worker management capabilities within its enterprise workforce management suite. Per diem nurses can be managed as contingent workers with full FLSA tracking, credential management, and scheduling integration. The capability exists; the question is whether the implementation burden and cost are justified for a small per diem pool.
 
 **Best for:** Hospitals that are part of a larger health system already running UKG, where per diem management is one module in a system-wide workforce management implementation.
 
@@ -545,9 +545,9 @@ Every per diem shift that is filled through the callout module is logged automat
 
 Credential tracking flags when a per diem nurse's certifications do not match the unit requirements for the shift being filled, before the confirmation is made.
 
-<div class="not-prose my-8 rounded-r-lg border-l-4 border-amber-500 bg-amber-50 px-6 py-5 dark:bg-amber-950/20">
-  <p class="mb-2 text-sm font-bold uppercase tracking-wide text-amber-700 dark:text-amber-400">Our Take</p>
-  <p class="text-slate-800 dark:text-slate-200">Per diem coverage at a Critical Access Hospital is structural, not supplemental, so the feature that decides fit is a callout list ranked by overtime risk, not just an availability calendar. That ranking, plus automatic CMS documentation of every per diem shift, is why SimpleScheduleAI is our pick for a per diem-heavy CAH roster. The self-serve tools here are not wrong choices, though: if your nurse manager has the protected time to keep availability data current and check overtime by hand, Aladtec covers similar ground at a lower price. The honest deciding question is not which tool has the most features, it is how much unprotected admin time the manager actually has each week.</p>
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Per diem coverage at a Critical Access Hospital is structural, not supplemental, so the feature that decides fit is a callout list ranked by overtime risk, not just an availability calendar. That ranking, plus automatic CMS documentation of every per diem shift, is why SimpleScheduleAI is our pick for a per diem-heavy CAH roster. The self-serve tools here are not wrong choices, though: if your nurse manager has the protected time to keep availability data current and check overtime by hand, Aladtec covers similar ground at a lower price. The honest deciding question is not which tool has the most features, it is how much unprotected admin time the manager actually has each week.</p>
 </div>
 
 ## What to Do This Week?
@@ -562,15 +562,11 @@ Credential tracking flags when a per diem nurse's certifications do not match th
 
 5. **If you want a self-serve tool, request an Aladtec trial.** Use your actual per diem roster of 5-15 nurses and configure the availability and open-shift notification settings. Measure whether your per diem nurses update their own availability often enough for the tool to be reliable.
 
-<div class="not-prose mt-10 flex flex-col gap-4 rounded-xl border border-blue-100 bg-blue-50 px-8 py-7 dark:border-blue-900/50 dark:bg-blue-950/30">
-  <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-blue-100">Per diem scheduling built for Critical Access Hospitals</p>
-    <p class="mt-1 text-blue-800 dark:text-blue-200">SimpleScheduleAI generates replacement call lists that cross-reference per diem availability with real-time overtime tracking. CMS documentation captures every per diem shift automatically. Built for rosters where per diem nurses are essential, not supplemental.</p>
-  </div>
-  <div class="flex flex-col items-start gap-2">
-    <a href="/how-it-works" class="inline-block rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">See how it works</a>
-    <a href="https://cal.com/gautham-8bdvdx/30min" class="text-sm font-medium text-blue-700 underline dark:text-blue-300">Book a call with our team</a>
-  </div>
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Per diem scheduling built for Critical Access Hospitals</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI generates replacement call lists that cross-reference per diem availability with real-time overtime tracking. CMS documentation captures every per diem shift automatically. Built for rosters where per diem nurses are essential, not supplemental.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
