@@ -56,7 +56,7 @@ Enterprise staffing software typically requires: IT department involvement for i
       <tbody>
         <tr>
           <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-700 dark:text-slate-300">IT department available</td>
-          <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-700 dark:text-slate-300">No IT staff at most small hospitals</td>
+          <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-700 dark:text-slate-300">Limited IT at most small hospitals</td>
           <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-700 dark:text-slate-300">Runs with no IT involvement</td>
         </tr>
         <tr>
