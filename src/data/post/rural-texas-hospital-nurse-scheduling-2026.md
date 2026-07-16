@@ -1,7 +1,6 @@
 ---
 draft: true
-publishDate: 2026-09-04T00:00:00Z
-updateDate: 2026-09-08T00:00:00Z
+publishDate: 2026-07-17T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Rural Texas Hospitals Are Actually Using for Nurse Scheduling in 2026'
 excerpt: >

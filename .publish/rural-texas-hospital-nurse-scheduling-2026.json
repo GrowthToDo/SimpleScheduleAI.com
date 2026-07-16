@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "rural-texas-hospital-nurse-scheduling-2026",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-16T16:39:12.061Z",
+      "contentHash": "8f2fc6c261deb63dd72a54de49ff37ecf6e97476baf5523fc8f37528a0afba16"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-16T16:39:16.018Z",
+      "contentHash": "8f2fc6c261deb63dd72a54de49ff37ecf6e97476baf5523fc8f37528a0afba16"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-16T16:39:17.700Z",
+      "contentHash": "8f2fc6c261deb63dd72a54de49ff37ecf6e97476baf5523fc8f37528a0afba16"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-16T16:39:17.787Z",
+      "contentHash": "8f2fc6c261deb63dd72a54de49ff37ecf6e97476baf5523fc8f37528a0afba16"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-16T16:39:18.160Z",
+      "contentHash": "8f2fc6c261deb63dd72a54de49ff37ecf6e97476baf5523fc8f37528a0afba16"
+    },
+    "dateSanity": {
+      "status": "FAIL",
+      "checkedAt": "2026-07-16T16:39:18.161Z",
+      "contentHash": "8f2fc6c261deb63dd72a54de49ff37ecf6e97476baf5523fc8f37528a0afba16"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-16T16:39:18.166Z",
+      "contentHash": "8f2fc6c261deb63dd72a54de49ff37ecf6e97476baf5523fc8f37528a0afba16"
+    }
+  },
+  "recorded": {},
+  "overrides": []
+}
