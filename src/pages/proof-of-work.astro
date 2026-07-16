@@ -27,25 +27,6 @@ const searchStats = [
   },
 ];
 
-const googleQueries = [
-  { q: 'best aladtec alternatives', pos: '2.5' },
-  { q: 'alternatives to aladtec', pos: '4.8' },
-  { q: 'best nurse scheduling software 2026', pos: '6.7' },
-  { q: 'alternatives to smartlinx software', pos: '7.5' },
-  { q: 'best alternatives to qgenda for ambulatory practice', pos: '8.7' },
-  { q: 'alternatives to shiftwizard software', pos: '9.9' },
-  { q: 'what is the best alternative to qgenda', pos: '10.4' },
-  { q: 'nurse scheduling software pricing', pos: '11.2' },
-];
-
-const bingQueries = [
-  { q: 'best software for nurse scheduling', pos: '1', when: 'week of 22 May' },
-  { q: 'ai healthcare scheduling tool not ukg not qgenda', pos: '1', when: 'week of 12 June' },
-  { q: 'replacements for qgenda', pos: '1', when: 'week of 19 June' },
-  { q: 'best nurse scheduling software for small hospitals', pos: '2', when: 'week of 5 June' },
-  { q: 'nurse scheduling software', pos: '3', when: '84 impressions, week of 5 June' },
-];
-
 // --- Chart data ---------------------------------------------------------
 // Weekly Google Search Console series (impressions summed, average position
 // as the mean of the week's daily averages), 16 Apr - 15 Jul 2026, pulled
@@ -65,27 +46,40 @@ const momentum = [
   { wk: 'Jul 2', imp: 1841, pos: 13.8 },
   { wk: 'Jul 9', imp: 2053, pos: 14.7 },
 ];
+// Two stacked panels share one x-axis (weeks). Every point is labelled with its
+// value, so neither panel needs a y-axis, and the two series never collide.
 const mN = momentum.length;
-const mLeft = 34,
-  mRight = 700,
-  mTop = 22,
-  mBot = 205;
-const mImpMax = 2200,
-  mPosMin = 12,
-  mPosMax = 52;
-const mXAt = (i: number) => mLeft + (i * (mRight - mLeft)) / (mN - 1);
-const mImpY = (v: number) => mBot - (v / mImpMax) * (mBot - mTop);
-const mPosY = (v: number) => mTop + ((v - mPosMin) / (mPosMax - mPosMin)) * (mBot - mTop);
-const mBarW = 22;
-const mBars = momentum.map((d, i) => ({ x: mXAt(i) - mBarW / 2, y: mImpY(d.imp), h: mBot - mImpY(d.imp) }));
-const mLine = momentum.map((d, i) => `${mXAt(i).toFixed(1)},${mPosY(d.pos).toFixed(1)}`).join(' ');
-const mDots = momentum.map((d, i) => ({ x: mXAt(i), y: mPosY(d.pos) }));
-const mGrid = [0, 0.25, 0.5, 0.75, 1];
+const chartPlotL = 32,
+  chartPlotR = 728;
+const mXAt = (i: number) => chartPlotL + (i * (chartPlotR - chartPlotL)) / (mN - 1);
+const mBarW = 26;
+const mFmt = (n: number) => (n >= 1000 ? `${Math.floor(n / 1000)},${String(n % 1000).padStart(3, '0')}` : String(n));
+// Impressions panel (bars, value labelled above each bar).
+const iTop = 30,
+  iBot = 140,
+  iMax = 2300;
+const iY = (v: number) => iBot - (v / iMax) * (iBot - iTop);
+const iBars = momentum.map((d, i) => ({
+  x: mXAt(i) - mBarW / 2,
+  y: iY(d.imp),
+  h: iBot - iY(d.imp),
+  cx: mXAt(i),
+  val: d.imp,
+}));
+// Position panel (line, value labelled above each dot; drawn on an inverted
+// scale so a rising line means an improving rank).
+const pTop = 34,
+  pBot = 150,
+  pMin = 10,
+  pMax = 52;
+const pY = (v: number) => pTop + ((v - pMin) / (pMax - pMin)) * (pBot - pTop);
+const pLine = momentum.map((d, i) => `${mXAt(i).toFixed(1)},${pY(d.pos).toFixed(1)}`).join(' ');
+const pDots = momentum.map((d, i) => ({ x: mXAt(i), y: pY(d.pos), pos: d.pos }));
 const mLabels = momentum.map((d, i) => ({ x: mXAt(i), wk: d.wk, show: i % 2 === 0 }));
 
 // Combined buyer-intent ranking snapshot for the lollipop chart. Position 1
 // (best) sits at the left edge; the number at the right of each row is the
-// reported average position from the tables below.
+// reported average Google or Bing position for that query.
 const rankData = [
   { q: 'best software for nurse scheduling', pos: 1, engine: 'Bing' },
   { q: 'ai healthcare scheduling tool not ukg not qgenda', pos: 1, engine: 'Bing' },
@@ -351,78 +345,106 @@ const distribution = [
         Daily Google impressions grew from roughly 110 a day in mid-April to roughly 270 a day in early July.
       </p>
 
-      <div class="mt-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <p class="text-sm font-bold text-gray-900 dark:text-white">
-            Momentum: impressions up, average position improving
-          </p>
-          <div class="flex items-center gap-4 text-xs text-gray-600 dark:text-gray-300">
-            <span class="flex items-center gap-1.5">
-              <span class="inline-block h-2.5 w-2.5 rounded-sm bg-primary dark:bg-emerald-700"></span>
-              Weekly impressions
-            </span>
-            <span class="flex items-center gap-1.5">
-              <span class="inline-block h-0.5 w-4 rounded bg-emerald-500"></span>
-              Avg. Google position
-            </span>
-          </div>
+      <div class="mt-8 space-y-4">
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5">
+          <p class="text-sm font-bold text-gray-900 dark:text-white">Weekly Google impressions</p>
+          <svg
+            viewBox="0 0 760 175"
+            class="mt-3 w-full"
+            role="img"
+            aria-label="Weekly Google impressions rising from about 750 to about 2,050 a week between April and July 2026"
+          >
+            {
+              iBars.map((b) => (
+                <rect x={b.x} y={b.y} width={mBarW} height={b.h} rx="2" class="fill-primary dark:fill-emerald-700" />
+              ))
+            }
+            {
+              iBars.map((b) => (
+                <text
+                  x={b.cx}
+                  y={b.y - 6}
+                  text-anchor="middle"
+                  font-size="10"
+                  class="fill-gray-600 font-semibold dark:fill-gray-200"
+                >
+                  {mFmt(b.val)}
+                </text>
+              ))
+            }
+            {
+              mLabels.map(
+                (l) =>
+                  l.show && (
+                    <text x={l.x} y="165" text-anchor="middle" font-size="11" class="fill-gray-500 dark:fill-gray-400">
+                      {l.wk}
+                    </text>
+                  )
+              )
+            }
+          </svg>
         </div>
-        <svg
-          viewBox="0 0 720 240"
-          class="mt-4 w-full"
-          role="img"
-          aria-label="Weekly Google impressions rising and average search position improving from April to July 2026"
-        >
-          {
-            mGrid.map((t) => (
-              <line
-                x1={mLeft}
-                x2={mRight}
-                y1={mTop + t * (mBot - mTop)}
-                y2={mTop + t * (mBot - mTop)}
-                class="stroke-gray-100 dark:stroke-gray-700/60"
-                stroke-width="1"
-              />
-            ))
-          }
-          {
-            mBars.map((b) => (
-              <rect x={b.x} y={b.y} width={mBarW} height={b.h} rx="2" class="fill-primary dark:fill-emerald-700" />
-            ))
-          }
-          <polyline
-            points={mLine}
-            fill="none"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="stroke-emerald-500"></polyline>
-          {
-            mDots.map((d) => (
-              <circle
-                cx={d.x}
-                cy={d.y}
-                r="3.5"
-                class="fill-emerald-500 stroke-white dark:stroke-slate-800"
-                stroke-width="1.5"
-              />
-            ))
-          }
-          {
-            mLabels.map(
-              (l) =>
-                l.show && (
-                  <text x={l.x} y="228" text-anchor="middle" font-size="11" class="fill-gray-500 dark:fill-gray-400">
-                    {l.wk}
-                  </text>
-                )
-            )
-          }
-        </svg>
-        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
-          Google Search Console, weekly, 16 Apr &ndash; 15 Jul 2026. Weekly impressions roughly tripled (about 750 to
-          about 2,050); average position lifted from the low 50s to the mid-teens. The position line uses an inverted
-          scale, so upward means a better rank.
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5">
+          <div class="flex items-center justify-between gap-2">
+            <p class="text-sm font-bold text-gray-900 dark:text-white">Average Google position</p>
+            <span class="text-xs text-gray-600 dark:text-gray-300">Lower is better, so a rising line is improving</span>
+          </div>
+          <svg
+            viewBox="0 0 760 185"
+            class="mt-3 w-full"
+            role="img"
+            aria-label="Average Google search position improving from around 50 to around 14 between April and July 2026"
+          >
+            <polyline
+              points={pLine}
+              fill="none"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="stroke-emerald-500"></polyline>
+            {
+              pDots.map((d) => (
+                <circle
+                  cx={d.x}
+                  cy={d.y}
+                  r="3.5"
+                  class="fill-emerald-500 stroke-white dark:stroke-slate-800"
+                  stroke-width="1.5"
+                />
+              ))
+            }
+            {
+              pDots.map((d) => (
+                <text
+                  x={d.x}
+                  y={d.y - 10}
+                  text-anchor="middle"
+                  font-size="10"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                  style="paint-order: stroke"
+                  class="fill-emerald-700 stroke-white font-semibold dark:fill-emerald-300 dark:stroke-slate-800"
+                >
+                  {d.pos}
+                </text>
+              ))
+            }
+            {
+              mLabels.map(
+                (l) =>
+                  l.show && (
+                    <text x={l.x} y="177" text-anchor="middle" font-size="11" class="fill-gray-500 dark:fill-gray-400">
+                      {l.wk}
+                    </text>
+                  )
+              )
+            }
+          </svg>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+          Google Search Console, weekly, 16 Apr &ndash; 15 Jul 2026. Impressions roughly tripled, from about 750 to
+          about 2,050 a week, while average Google position improved from around 50 to around 14 (a lower number is a
+          better rank).
         </p>
       </div>
 
@@ -465,68 +487,14 @@ const distribution = [
         </div>
       </div>
 
-      <h4 class="mt-10 text-base font-bold text-gray-900 dark:text-white">
-        Where buyer-intent searches find us on Google
-      </h4>
-      <div
-        class="mt-3 overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800"
-      >
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-gray-200 dark:border-gray-700 text-left">
-              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white">Query</th>
-              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white whitespace-nowrap">Avg. position</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              googleQueries.map((r) => (
-                <tr class="border-b border-gray-100 dark:border-gray-700/50 last:border-0">
-                  <td class="px-4 py-2.5 text-muted">{r.q}</td>
-                  <td class="px-4 py-2.5 font-semibold text-gray-900 dark:text-white">{r.pos}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
       <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
-        Google Search Console, 28 days to 10 July 2026. For contrast, the head term "nurse scheduling software" drew 258
-        impressions at average position 40 in the same window, and "best nurse scheduling software" sat at 19. Long-tail
-        buyer queries rank first; head terms need more domain authority and are still climbing.
+        Google Search Console and Bing Webmaster Tools, 28 days to 10 July 2026. Clicks are still single-digit at this
+        stage, so placement is what matters. For contrast, the head term "nurse scheduling software" drew 258
+        impressions at average Google position 40 in the same window, and "best nurse scheduling software" sat at 19:
+        long-tail buyer queries rank first, while head terms need more domain authority and are still climbing.
       </p>
 
-      <h4 class="mt-8 text-base font-bold text-gray-900 dark:text-white">Bing: small volume, top placements</h4>
-      <p class="mt-2 text-sm text-muted">
-        Bing traffic is still single-digit clicks, so what matters at this stage is placement. Where the site shows up
-        for buyer queries, it shows up near the top:
-      </p>
-      <div
-        class="mt-3 overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800"
-      >
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-gray-200 dark:border-gray-700 text-left">
-              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white">Query</th>
-              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white whitespace-nowrap">Position</th>
-              <th class="px-4 py-3 font-semibold text-gray-900 dark:text-white whitespace-nowrap">When (2026)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              bingQueries.map((r) => (
-                <tr class="border-b border-gray-100 dark:border-gray-700/50 last:border-0">
-                  <td class="px-4 py-2.5 text-muted">{r.q}</td>
-                  <td class="px-4 py-2.5 font-semibold text-gray-900 dark:text-white">{r.pos}</td>
-                  <td class="px-4 py-2.5 text-muted whitespace-nowrap">{r.when}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-
-      <h4 class="mt-8 text-base font-bold text-gray-900 dark:text-white">AI answer engines</h4>
+      <h4 class="mt-10 text-base font-bold text-gray-900 dark:text-white">AI answer engines</h4>
       <p class="mt-2 text-sm text-muted">
         On our core buyer prompt, two answer engines currently name and cite the site:
       </p>
