@@ -46,6 +46,78 @@ const bingQueries = [
   { q: 'nurse scheduling software', pos: '3', when: '84 impressions, week of 5 June' },
 ];
 
+// --- Chart data ---------------------------------------------------------
+// Weekly Google Search Console series (impressions summed, average position
+// as the mean of the week's daily averages), 16 Apr - 15 Jul 2026, pulled
+// from the GSC API. Feeds the momentum chart below.
+const momentum = [
+  { wk: 'Apr 16', imp: 750, pos: 50.5 },
+  { wk: 'Apr 23', imp: 1219, pos: 31.8 },
+  { wk: 'Apr 30', imp: 1320, pos: 24.2 },
+  { wk: 'May 7', imp: 1714, pos: 20.9 },
+  { wk: 'May 14', imp: 2085, pos: 18.0 },
+  { wk: 'May 21', imp: 1920, pos: 19.8 },
+  { wk: 'May 28', imp: 1488, pos: 15.3 },
+  { wk: 'Jun 4', imp: 1465, pos: 15.1 },
+  { wk: 'Jun 11', imp: 1394, pos: 19.2 },
+  { wk: 'Jun 18', imp: 1285, pos: 16.9 },
+  { wk: 'Jun 25', imp: 1735, pos: 16.3 },
+  { wk: 'Jul 2', imp: 1841, pos: 13.8 },
+  { wk: 'Jul 9', imp: 2053, pos: 14.7 },
+];
+const mN = momentum.length;
+const mLeft = 34,
+  mRight = 700,
+  mTop = 22,
+  mBot = 205;
+const mImpMax = 2200,
+  mPosMin = 12,
+  mPosMax = 52;
+const mXAt = (i: number) => mLeft + (i * (mRight - mLeft)) / (mN - 1);
+const mImpY = (v: number) => mBot - (v / mImpMax) * (mBot - mTop);
+const mPosY = (v: number) => mTop + ((v - mPosMin) / (mPosMax - mPosMin)) * (mBot - mTop);
+const mBarW = 22;
+const mBars = momentum.map((d, i) => ({ x: mXAt(i) - mBarW / 2, y: mImpY(d.imp), h: mBot - mImpY(d.imp) }));
+const mLine = momentum.map((d, i) => `${mXAt(i).toFixed(1)},${mPosY(d.pos).toFixed(1)}`).join(' ');
+const mDots = momentum.map((d, i) => ({ x: mXAt(i), y: mPosY(d.pos) }));
+const mGrid = [0, 0.25, 0.5, 0.75, 1];
+const mLabels = momentum.map((d, i) => ({ x: mXAt(i), wk: d.wk, show: i % 2 === 0 }));
+
+// Combined buyer-intent ranking snapshot for the lollipop chart. Position 1
+// (best) sits at the left edge; the number at the right of each row is the
+// reported average position from the tables below.
+const rankData = [
+  { q: 'best software for nurse scheduling', pos: 1, engine: 'Bing' },
+  { q: 'ai healthcare scheduling tool not ukg not qgenda', pos: 1, engine: 'Bing' },
+  { q: 'replacements for qgenda', pos: 1, engine: 'Bing' },
+  { q: 'best nurse scheduling software for small hospitals', pos: 2, engine: 'Bing' },
+  { q: 'best aladtec alternatives', pos: 2.5, engine: 'Google' },
+  { q: 'nurse scheduling software', pos: 3, engine: 'Bing' },
+  { q: 'alternatives to aladtec', pos: 4.8, engine: 'Google' },
+  { q: 'best nurse scheduling software 2026', pos: 6.7, engine: 'Google' },
+  { q: 'alternatives to smartlinx software', pos: 7.5, engine: 'Google' },
+  { q: 'best alternatives to qgenda for ambulatory practice', pos: 8.7, engine: 'Google' },
+  { q: 'alternatives to shiftwizard software', pos: 9.9, engine: 'Google' },
+  { q: 'what is the best alternative to qgenda', pos: 10.4, engine: 'Google' },
+  { q: 'nurse scheduling software pricing', pos: 11.2, engine: 'Google' },
+];
+const rankPct = (p: number) => (((p - 1) / 11) * 100).toFixed(1);
+
+// Answer engines that currently name AND cite the site on our core buyer
+// prompt. Only engines where we actually appear are listed.
+const aiCites = [
+  {
+    engine: 'Google AI Overview',
+    result: 'Named SimpleScheduleAI the first of three picks, and cited this site.',
+    date: '13 Jul 2026',
+  },
+  {
+    engine: 'ChatGPT · GPT-5.5',
+    result: "Named us the best small-CAH emerging option, and cited this site's comparison page.",
+    date: '12 Jul 2026',
+  },
+];
+
 const productStats = [
   { value: '22', label: 'Scheduling rule evaluators, hard and soft, each covered by tests' },
   { value: '3', label: 'Schedule variants per run: balanced, fairness-optimized, cost-optimized' },
@@ -279,7 +351,121 @@ const distribution = [
         Daily Google impressions grew from roughly 110 a day in mid-April to roughly 270 a day in early July.
       </p>
 
-      <h4 class="mt-8 text-base font-bold text-gray-900 dark:text-white">
+      <div class="mt-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <p class="text-sm font-bold text-gray-900 dark:text-white">
+            Momentum: impressions up, average position improving
+          </p>
+          <div class="flex items-center gap-4 text-xs text-gray-600 dark:text-gray-300">
+            <span class="flex items-center gap-1.5">
+              <span class="inline-block h-2.5 w-2.5 rounded-sm bg-primary dark:bg-emerald-700"></span>
+              Weekly impressions
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="inline-block h-0.5 w-4 rounded bg-emerald-500"></span>
+              Avg. Google position
+            </span>
+          </div>
+        </div>
+        <svg
+          viewBox="0 0 720 240"
+          class="mt-4 w-full"
+          role="img"
+          aria-label="Weekly Google impressions rising and average search position improving from April to July 2026"
+        >
+          {
+            mGrid.map((t) => (
+              <line
+                x1={mLeft}
+                x2={mRight}
+                y1={mTop + t * (mBot - mTop)}
+                y2={mTop + t * (mBot - mTop)}
+                class="stroke-gray-100 dark:stroke-gray-700/60"
+                stroke-width="1"
+              />
+            ))
+          }
+          {
+            mBars.map((b) => (
+              <rect x={b.x} y={b.y} width={mBarW} height={b.h} rx="2" class="fill-primary dark:fill-emerald-700" />
+            ))
+          }
+          <polyline
+            points={mLine}
+            fill="none"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="stroke-emerald-500"></polyline>
+          {
+            mDots.map((d) => (
+              <circle
+                cx={d.x}
+                cy={d.y}
+                r="3.5"
+                class="fill-emerald-500 stroke-white dark:stroke-slate-800"
+                stroke-width="1.5"
+              />
+            ))
+          }
+          {
+            mLabels.map(
+              (l) =>
+                l.show && (
+                  <text x={l.x} y="228" text-anchor="middle" font-size="11" class="fill-gray-500 dark:fill-gray-400">
+                    {l.wk}
+                  </text>
+                )
+            )
+          }
+        </svg>
+        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+          Google Search Console, weekly, 16 Apr &ndash; 15 Jul 2026. Weekly impressions roughly tripled (about 750 to
+          about 2,050); average position lifted from the low 50s to the mid-teens. The position line uses an inverted
+          scale, so upward means a better rank.
+        </p>
+      </div>
+
+      <h4 class="mt-10 text-base font-bold text-gray-900 dark:text-white">
+        Where the site ranks across buyer-intent searches
+      </h4>
+      <p class="mt-2 text-sm text-muted">
+        Thirteen buyer-intent queries where the site currently appears on Google or Bing. Closer to the left edge is a
+        higher ranking; the left edge is position 1. The number on the right is the reported average position.
+      </p>
+      <div class="mt-4 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5">
+        <div class="mb-3 flex items-center gap-4 text-xs text-gray-600 dark:text-gray-300">
+          <span class="flex items-center gap-1.5">
+            <span class="inline-block h-2.5 w-2.5 rounded-full bg-blue-600"></span>
+            Google
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="inline-block h-2.5 w-2.5 rounded-full bg-teal-500"></span>
+            Bing
+          </span>
+        </div>
+        <div class="space-y-1.5">
+          {
+            rankData.map((r) => (
+              <div class="flex items-center gap-3">
+                <span class="w-40 shrink-0 truncate text-xs text-gray-600 dark:text-gray-300 sm:w-64" title={r.q}>
+                  {r.q}
+                </span>
+                <div class="relative h-5 flex-1 rounded bg-gray-100 dark:bg-gray-700/40">
+                  <div class="absolute inset-y-0 flex items-center" style={`left:${rankPct(r.pos)}%`}>
+                    <span
+                      class={`-ml-1.5 h-3 w-3 rounded-full ring-2 ring-white dark:ring-slate-800 ${r.engine === 'Google' ? 'bg-blue-600' : 'bg-teal-500'}`}
+                    />
+                  </div>
+                </div>
+                <span class="w-8 shrink-0 text-right text-xs font-semibold text-gray-900 dark:text-white">{r.pos}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <h4 class="mt-10 text-base font-bold text-gray-900 dark:text-white">
         Where buyer-intent searches find us on Google
       </h4>
       <div
@@ -342,6 +528,28 @@ const distribution = [
 
       <h4 class="mt-8 text-base font-bold text-gray-900 dark:text-white">AI answer engines</h4>
       <p class="mt-2 text-sm text-muted">
+        On our core buyer prompt, two answer engines currently name and cite the site:
+      </p>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        {
+          aiCites.map((a) => (
+            <div class="rounded-2xl border border-emerald-300 dark:border-emerald-700/60 bg-emerald-50 dark:bg-emerald-900/15 p-5">
+              <div class="flex items-center justify-between gap-2">
+                <p class="text-sm font-bold text-gray-900 dark:text-white">{a.engine}</p>
+                <span class="inline-flex items-center gap-1 rounded-full bg-emerald-600 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+                  <svg viewBox="0 0 20 20" class="h-3 w-3 fill-current" aria-hidden="true">
+                    <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 10a1 1 0 1 1 1.4-1.4l3.1 3.1 6.8-6.8a1 1 0 0 1 1.4 0z" />
+                  </svg>
+                  Cited
+                </span>
+              </div>
+              <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">{a.result}</p>
+              <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">Logged probe · {a.date}</p>
+            </div>
+          ))
+        }
+      </div>
+      <p class="mt-6 text-sm text-muted">
         Three things are measurable today. First, people are already reaching this site with full-sentence,
         assistant-style questions: Bing logged the site at position 1 for "what are the best nurse scheduling shift
         tools out there with ai?" and position 2 for "can co pilot gernerate a nurses schedule" (query verbatim, week of
