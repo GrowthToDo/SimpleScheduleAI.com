@@ -98,7 +98,7 @@ That distinction matters more than a headline accuracy percentage. A rule engine
 
 AI scheduling does not change what CMS requires, and it does not assume the facility's compliance responsibility. The schedule still has to satisfy the Conditions of Participation. Under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever the hospital has one or more inpatients. AI can build a schedule that meets that rule. It cannot be the party responsible for meeting it.
 
-The useful role AI plays is enforcement of the rules you give it, plus a record of what happened. A rules engine can treat the on-duty requirement and applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) as hard constraints, so a draft that would violate one gets flagged rather than posted. An audit trail logs every schedule change with a timestamp, which supports the documentation and nursing-service requirements in [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). None of that transfers accountability. The manager and the facility still own compliance; the tool makes the rules easier to hold to and easier to prove after the fact. Treat any vendor claim of automatic compliance with skepticism, and confirm which specific rules a system actually enforces.
+The useful role AI plays is enforcement of the rules you give it, plus a record of what happened. A rules engine can treat the on-duty requirement and applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) as hard constraints, so a draft that would violate one gets flagged rather than posted. An audit trail logs every schedule change with a timestamp, so the facility can show after the fact what the schedule was and that the required staffing was in place. None of that transfers accountability. The manager and the facility still own compliance; the tool makes the rules easier to hold to and easier to prove after the fact. Treat any vendor claim of automatic compliance with skepticism, and confirm which specific rules a system actually enforces.
 
 ## When Is AI Nurse Scheduling NOT the Right Call?
 
@@ -164,15 +164,13 @@ Scheduling does not require heavy patient health information. The system works f
 
 **Q: What does the audit trail actually record?**
 
-Every schedule change with a timestamp, so you can see what changed and when. That record supports the documentation expectations behind the CMS nursing-service requirements and gives a manager a clear history for review. It is a control that helps prove compliance after the fact, not a substitute for the human approval that happens before a schedule posts.
+Every schedule change with a timestamp, so you can see what changed and when. That record gives a manager a clear history for review and helps the facility show a surveyor that the required staffing was in place. It is a control that helps prove compliance after the fact, not a substitute for the human approval that happens before a schedule posts.
 
 ## Sources
 
 [1] CMS Conditions of Participation for Critical Access Hospitals, staffing and staff responsibilities. [eCFR, 42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631).
 
-[2] CMS Conditions of Participation for Critical Access Hospitals, provision of services and nursing services. [eCFR, 42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
-
-[3] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[2] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

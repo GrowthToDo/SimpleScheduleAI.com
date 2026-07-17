@@ -70,7 +70,7 @@ A single callout can drop a unit below its staffing plan, so this is the highest
 
 Ask whether the tool tracks each nurse's running hours against the FLSA overtime threshold that applies to your hospital, and whether it can hand a CMS or Texas surveyor a staffing record without a week of rebuilding. The overtime method is not one-size-fits-all. Some hospitals run the standard 40-hour workweek; others elect the FLSA 8-and-80 system for healthcare. Confirm the vendor supports the one you use rather than assuming it does.
 
-Compliance documentation is where cheap tools quietly fail. If you are a Critical Access Hospital, [CMS Conditions of Participation §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) require a written staffing plan and a record of who was scheduled and who actually worked, and [FLSA overtime rules for healthcare](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) apply on top of that. The real question is whether that auditable record comes out of the system formatted for a surveyor by default, or whether someone reconstructs it by hand the week the survey notice lands. Ask for a sample of the exact document the tool produces, then ask whether it is generated automatically or assembled on request.
+Compliance documentation is where cheap tools quietly fail. During a CMS survey, a Critical Access Hospital has to be able to show it met its staffing requirements, including that a registered nurse, clinical nurse specialist, or licensed practical nurse was on duty whenever it had one or more inpatients ([CMS Conditions of Participation §485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)), and [FLSA overtime rules for healthcare](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) apply on top of that. A clean record of who was scheduled and who actually worked is how you prove it. The real question is whether that auditable record comes out of the system formatted for a surveyor by default, or whether someone reconstructs it by hand the week the survey notice lands. Ask for a sample of the exact document the tool produces, then ask whether it is generated automatically or assembled on request.
 
 ## Who Actually Runs It Week to Week, Your Nurse Manager or a Dedicated Admin?
 
@@ -128,7 +128,7 @@ Once you strip the market down, a small hospital is really choosing between thre
         <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">Excel roster upload; live in days</td>
         <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">Ranked, overtime-aware replacement shortlist</td>
         <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">The service builds it; your manager approves</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">FLSA threshold tracking and §485.635 record by default</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">FLSA threshold tracking and survey-ready staffing records by default</td>
         <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">Flat published monthly price</td>
       </tr>
     </tbody>
@@ -181,7 +181,7 @@ Scheduling software is a tool your nurse manager logs into, configures, and runs
 
 **Q: What compliance documentation should nurse scheduling software produce?**
 
-At minimum, a staffing record showing who was scheduled and who actually worked, plus overtime tracking against the threshold your hospital uses. A Critical Access Hospital operates under CMS §485.635, which requires a written staffing plan and that record. Ask for a sample of the exact document the tool generates, and confirm it comes out automatically rather than on request.
+At minimum, a staffing record showing who was scheduled and who actually worked, plus overtime tracking against the threshold your hospital uses. A Critical Access Hospital has to be able to show a surveyor it kept a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever it had inpatients (§485.631(a)(5)), and clean scheduling records are how you prove it. Ask for a sample of the exact document the tool generates, and confirm it comes out automatically rather than on request.
 
 **Q: Does scheduling software handle FLSA overtime for hospitals?**
 
@@ -199,7 +199,7 @@ Not automatically, but it shifts risk onto you. Quote-only pricing often carries
 
 ## Sources
 
-1. Critical Access Hospital Conditions of Participation, 42 CFR §485.635. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+1. Critical Access Hospital staffing (a licensed nurse on duty whenever there are inpatients), 42 CFR §485.631(a)(5). [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631).
 2. FLSA healthcare overtime guidance, including the 8-and-80 system. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 3. Manual nurse rostering described as a substantial, days-per-month task that spills into personal time. Booker LA et al., BMC Nursing (2024), via [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11057102/).
 4. Texas critical access hospital count. [RHIhub Texas state guide](https://www.ruralhealthinfo.org/states/texas).
