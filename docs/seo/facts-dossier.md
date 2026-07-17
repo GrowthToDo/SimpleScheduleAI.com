@@ -4,6 +4,14 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 
 ## External facts
 
+### Texas critical access hospital count
+
+- Approved wording: "Texas has 91 critical access hospitals" (or "the state's 91 critical access hospitals")
+- Source: RHIhub Texas state guide, "Rural Healthcare Facilities" section, shows 91 Critical Access Hospitals; corroborated by Flex Monitoring Team / RHIhub CAH locator.
+- URL: https://www.ruralhealthinfo.org/states/texas
+- Note: CAH counts drift slowly as facilities convert or close; re-verify if the entry is older than 60 days at time of use.
+- Verified: 2026-07-17 (fact-check agent, live fetch + cross-check)
+
 ### 42 CFR 485.631(a)(5)
 
 - Approved wording: "a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients"

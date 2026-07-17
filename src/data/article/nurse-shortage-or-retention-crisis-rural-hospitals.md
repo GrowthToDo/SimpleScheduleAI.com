@@ -8,7 +8,7 @@ excerpt: >
   A May 2026 fact sheet reignited the argument that the country has a nurse retention crisis,
   not a shortage. For a 25-bed rural hospital, both are true at once, and only one of them is
   a lever the hospital actually controls.
-image: https://images.unsplash.com/photo-1512678080530-7760d81faba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1682706841478-88eb8995357b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:

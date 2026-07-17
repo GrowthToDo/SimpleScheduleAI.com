@@ -20,7 +20,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/texas-nursing-overtime-compliance-cah'
 ---
 
-Texas critical access hospitals operate under three simultaneous compliance frameworks for nursing staffing: federal FLSA overtime rules, CMS Conditions of Participation (§485.631 and §485.635), and Texas Labor Code Chapter 62. Each is audited by a different body, and each requires different documentation.
+Texas critical access hospitals operate under three simultaneous compliance frameworks for nursing staffing: federal FLSA overtime rules, CMS Conditions of Participation (§485.631 and §485.635), and Texas Labor Code Chapter 62. Each is audited by a different body, and each requires different documentation. For a market view of what rural Texas facilities actually run day to day, see [what rural Texas hospitals use for nurse scheduling in 2026](/blog/rural-texas-hospital-nurse-scheduling-2026).
 
 For a CAH, the compliance risk is less about breaking a rule than about being unable to prove, during a CMS survey, that it followed one. A facility can schedule correctly and still fall short on documentation. This guide breaks down five recurring compliance gaps and the records that protect a CAH against findings.
 

@@ -326,7 +326,7 @@ QGenda is a mid-market scheduling platform that started in physician scheduling 
 
 NurseGrid is a nurse-facing mobile app for shift communication and open shift posting, with a Manager tier that adds unit-level oversight. It holds 4.2/5 on Capterra (13 reviews; small sample), as of April 2026. It is not a full scheduling engine, so you still need a separate platform to build the actual schedule.
 
-For Texas rural hospitals with staff spread across large geographic areas, NurseGrid's mobile-first approach to open shift communication has practical value as an add-on layer.
+For [Texas rural hospitals](/blog/rural-texas-hospital-nurse-scheduling-2026) with staff spread across large geographic areas, NurseGrid's mobile-first approach to open shift communication has practical value as an add-on layer.
 
 **Best for:** Texas hospitals that already have a scheduling platform and want a staff-facing communication layer.
 
