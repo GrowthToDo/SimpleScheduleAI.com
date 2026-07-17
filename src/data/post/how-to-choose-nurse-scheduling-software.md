@@ -25,7 +25,7 @@ This is a decision framework, not a product ranking. It gives a small hospital a
 
 ## Key Takeaways
 
-- The deciding variable for a small hospital is not feature count. It is whether one nurse manager who is also clinical can run the tool without standing up an IT project.
+- For a small hospital, the deciding variable is whether one nurse manager who is also clinical can run the tool without standing up an IT project. Feature count matters far less than fit and operating burden.
 - Score every vendor on seven questions: right-sizing, setup without an IT project, callout replacement speed, FLSA overtime documentation, who operates it each week, cost transparency, and a defensible audit trail.
 - There are three realistic paths, not ten: a spreadsheet plus a phone tree, self-serve software your manager configures and runs, or an operated-for-you service that builds the schedule and hands it back for approval.
 - Callout coverage is the highest-stakes daily test at a hospital with no float pool. Ask each vendor exactly what happens in the next five minutes when a nurse calls out.
@@ -50,7 +50,7 @@ Before you compare features, settle the one question that decides everything els
 
 ## Does It Fit a Single-Unit, 25-Bed Reality, or Is It Enterprise Software Scaled Down?
 
-The first question is whether the product was designed for a single nursing unit or sold down to you from an enterprise suite. A tool built for a 300-bed system carries multi-campus roles, cross-department labor pools, and HRIS integrations a 25-bed hospital will never use. That unused depth is not free. It becomes setup you pay for and complexity your manager maintains.
+The first question is whether the product was designed for a single nursing unit or sold down to you from an enterprise suite. A tool built for a 300-bed system carries multi-campus roles, cross-department labor pools, and HRIS integrations a 25-bed hospital will never use. That unused depth still costs you: it becomes setup you pay for and complexity your manager maintains.
 
 Enterprise platforms are genuinely capable for the organizations they target. The mismatch is scale, not quality. A small hospital runs one unit and needs a tool that starts there, not one that assumes a workforce-management analyst is sitting behind it. When a vendor answers the fit question with a list of modules you would switch off, that is a signal the product is scaled down rather than right-sized. For the version of this test written specifically for a 25-bed facility, see the [best nurse scheduling software for a Critical Access Hospital](/blog/best-nurse-scheduling-software-critical-access-hospitals) and the broader [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
 
@@ -82,7 +82,7 @@ The weekly build has a measurable cost. Manual roster building has been document
 
 Ask for the actual monthly price in writing before you invest time in a demo. Transparent vendors publish flat or per-unit pricing you can budget against. Quote-only vendors gate the number behind a sales call, and the figure that comes back often carries per-seat minimums, annual commitments, and setup fees that were not visible up front. For a small hospital on a fixed budget, an unpredictable price is its own risk.
 
-Cheapest is not the same as lowest true cost. A low license price that leaves your manager rebuilding compliance records by hand costs more in staff time than a higher flat fee that produces those records automatically. Work out the fully loaded number: license, setup, integration effort, and the staff hours to operate it each week. For a fuller breakdown of the pricing models in this category and where the hidden costs sit, see [what nurse scheduling software actually costs](/blog/nurse-scheduling-software-pricing).
+Cheapest is not the same as lowest true cost. A low license price that leaves your manager rebuilding compliance records by hand costs more in staff time than a higher flat fee that produces those records automatically. Work out the fully loaded number: license, setup, integration effort, and the staff hours to operate it each week. Our [ROI calculator](/roi) turns those inputs into a facility-specific figure, and for a fuller breakdown of the pricing models in this category and where the hidden costs sit, see [what nurse scheduling software actually costs](/blog/nurse-scheduling-software-pricing).
 
 ## Is There Real Support and an Audit Trail of Every Schedule Change?
 
@@ -139,7 +139,7 @@ Once you strip the market down, a small hospital is really choosing between thre
 
 ## How SimpleScheduleAI Fits This Checklist
 
-SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for the operated-for-you path above, and for the small-hospital reality this checklist scores against. You send your roster as an Excel file, you are live in days, and when a nurse calls out the team surfaces a ranked shortlist of qualified staff who are not already past their applicable FLSA overtime threshold. The service is currently focused on Texas, home to [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas). See [how it works](/how-it-works) for the full flow.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for the operated-for-you path above, and for the small-hospital reality this checklist scores against. You send your roster as an Excel file, you are live in days, and when a nurse calls out the team surfaces a ranked shortlist of qualified staff who are not already past their applicable FLSA overtime threshold. The service is currently focused on Texas, home to [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas). See [how it works](/how-it-works) for the full flow, or watch the AI build a schedule and a callout shortlist live in the [interactive simulator](/simulator).
 
 One honest limitation: SimpleScheduleAI is not the right fit for a hospital that wants to configure and run scheduling in-house, for a large multi-site system, or for facilities outside Texas. If that describes you, a self-serve platform or an enterprise suite will serve you better, and we would rather say so up front.
 

@@ -128,7 +128,7 @@ To be clear about the limits of this claim: no scheduling method reduces turnove
 
 ## How Does SimpleScheduleAI Help Rural Hospitals Keep Nurses?
 
-SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. For Texas Critical Access Hospitals, that means the fairness rules for nights, weekends, and holidays are applied before the manager reviews the schedule, so the load is distributed evenly instead of concentrating on the two or three nurses who always say yes. When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, credential match, and rotation fairness, which keeps the coverage gap from quietly turning into burnout.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. For Texas Critical Access Hospitals, that means the fairness rules for nights, weekends, and holidays are applied before the manager reviews the schedule, so the load is distributed evenly instead of concentrating on the two or three nurses who always say yes. When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, credential match, and rotation fairness, which keeps the coverage gap from quietly turning into burnout.
 
 You can see how the pieces connect across our [nurse scheduling software](/nurse-scheduling-software) overview, the way [AI nurse scheduling](/ai-nurse-scheduling) builds the ranked drafts, the operational requirements behind [critical access hospital scheduling](/critical-access-hospital-scheduling), and the end-to-end walkthrough of [how the service works](/how-it-works).
 
@@ -143,7 +143,7 @@ One honest limitation: SimpleScheduleAI does not recruit nurses and it does not 
 
 ## What to Do This Week
 
-1. **Put a real number on your last departure.** Start with the $60,090 replacement anchor, then add your own overtime and agency spend for the weeks the line sat open. Most rural hospitals track only the agency invoice and miss the rest.
+1. **Put a real number on your last departure.** Start with the $60,090 replacement anchor as your floor, then look at your own overtime and agency spend for the weeks the line sat open, remembering the two overlap rather than stacking cleanly. Our [ROI calculator](/roi) helps translate those inputs into a facility-specific figure. Most rural hospitals track only the agency invoice and miss the rest.
 2. **Map who covered the gap.** Pull the last vacancy and list which nurses picked up the open shifts. If the same two or three names carry it, you have a retention risk, not just a coverage one.
 3. **Set a fairness floor before the next cycle.** Cap undesirable-shift load per nurse per cycle, and distribute weekends and holidays before anyone self-picks. This is a policy change you can make without software.
 4. **Check your recruiting clock against 78 days.** If your average time-to-fill is longer, the coverage-premium math above is understating your cost. Plan the coverage for a quarter, not a week.
@@ -162,7 +162,7 @@ One honest limitation: SimpleScheduleAI does not recruit nurses and it does not 
 
 **Q: How much does it cost to replace one nurse?**
 
-The 2026 NSI National Health Care Retention & RN Staffing Report puts the average cost to turn over one bedside RN at $60,090, covering separation, vacancy coverage, orientation, and onboarding. At a rural hospital, add your own overtime and agency premiums for the roughly 11-week window the line sits open, which is an illustrative $10,000 or so on top at a $75 per hour premium rate.
+The 2026 NSI National Health Care Retention & RN Staffing Report puts the average cost to turn over one bedside RN at $60,090, covering separation, vacancy coverage, orientation, and onboarding. Because that figure already bundles vacancy coverage, a rural hospital's own overtime and agency spend for the roughly 11-week window the line sits open, an illustrative $10,000 or so at a $75 per hour premium rate, largely overlaps the anchor rather than stacking cleanly on top of it.
 
 **Q: Why does one nurse leaving hurt a small hospital more?**
 
