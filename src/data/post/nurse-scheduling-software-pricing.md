@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-14T00:00:00Z
-updateDate: 2026-06-14T00:00:00Z
+updateDate: 2026-07-18T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Nurse Scheduling Software Pricing: 2026 Cost Guide'
 excerpt: >
@@ -30,7 +30,7 @@ This guide breaks down how these platforms are actually priced, what a 25-bed CA
 - Per-nurse-per-month pricing (typically $2-$8) looks cheap at the unit level: 25 nurses at $5/nurse/month is $125/month or $1,500/year for the license alone. The real cost hides in per-module add-ons and implementation fees, which can push the effective first-year total well past $8,000.
 - Implementation costs are frequently larger than the first year of licensing, especially for platforms that require EHR integration, data migration, or on-site training.
 - The right question is not "how much does the software cost?" but "how much does the total cost to get value compare to the overtime savings?" A tool that costs $15,000/year but saves $30,000 in overtime is worth evaluating. A tool that costs $8,000/year but requires a $20,000 IT implementation is not.
-- SimpleScheduleAI uses flat managed-service pricing ($1,000-$1,500/month by roster size) with no per-nurse fees and no setup fee, so a CAH knows its full annual cost up front instead of negotiating an opaque enterprise quote.
+- SimpleScheduleAI uses flat pricing ($1,000-$1,500/month by roster size) with no per-nurse fees and no setup fee, so a CAH knows its full annual cost up front instead of negotiating an opaque enterprise quote.
 
 ## Table of Contents
 
@@ -52,7 +52,7 @@ This guide breaks down how these platforms are actually priced, what a 25-bed CA
 
 **Per-module pricing:** Enterprise platforms frequently charge separately for scheduling, time and attendance, overtime tracking, analytics, and mobile access. The base scheduling module may appear cheap, but the functionality a CAH actually needs across multiple modules often brings the real cost to $12-$20/nurse/month.
 
-**Managed service pricing:** A managed service (like SimpleScheduleAI) includes scheduling software where the AI builds the schedule and our scheduling team checks it, plus support for configuration, schedule review, and callout management. Managed service pricing is typically higher per unit than pure SaaS but lower in total cost of ownership because implementation and ongoing support are included.
+**Managed-service pricing:** This model, which SimpleScheduleAI uses, bundles the scheduling software (the AI builds the schedule and our scheduling team checks it) with support for configuration, schedule review, and callout management. It is typically higher per unit than pure SaaS but lower in total cost of ownership because implementation and ongoing support are included.
 
 <figure class="not-prose my-8">
   <figcaption class="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3 text-center">Nurse Scheduling Software Pricing Models: What They Look Like at 25 Nurses</figcaption>
@@ -98,7 +98,7 @@ The realistic total first-year cost including implementation:
 - **Entry-level tools (Deputy, When I Work):** $600-$2,500 total first year. These are general employee scheduling tools, not healthcare-specific. They do not handle nursing certifications, patient-to-nurse ratios, or FLSA overtime threshold tracking natively.
 - **Mid-tier healthcare scheduling platforms (Aladtec, OnShift):** $5,000-$15,000 total first year. Healthcare-specific but built for larger organizations, with more configuration depth than a single dual-role CAH manager typically needs.
 - **Enterprise platforms (UKG, Infor, Kronos):** $20,000-$75,000+ total first year. Designed for 200+ bed hospitals with dedicated HR and IT teams. Not appropriate for CAHs without that infrastructure.
-- **SimpleScheduleAI (managed service):** Flat $1,000-$1,500/month by roster size. No per-nurse fees, no implementation fee; setup is included in the managed service.
+- **SimpleScheduleAI:** Flat $1,000-$1,500/month by roster size. No per-nurse fees, no implementation fee; setup is included.
 
 The cheapest option by list price is almost never the cheapest option by total cost of ownership. General scheduling tools require significant configuration time (often 40-80 hours of manager time), ongoing manual compliance checking, and lack callout automation that saves the actual hours. That configuration time has a real cost even if it is not invoiced.
 
