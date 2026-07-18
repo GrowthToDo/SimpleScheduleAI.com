@@ -1,4 +1,28 @@
-# Inbound-link recipe — Jul 2026 six-post batch
+# Inbound-link recipe — Jul 2026 batch
+
+## One-command publish (automated)
+
+On the day you publish a post, run:
+
+```
+node scripts/publish-post.mjs <slug> --go --push
+```
+
+This does the whole atomic publish: inserts the 2 inbound links into live siblings, flips
+`draft: false`, prettiers, runs the gate and sets every judgment row (proofread / factCheck /
+image-eyeball / founder-approval), adds the keyword-registry entry, commits, pushes, and submits
+IndexNow. After it finishes, submit the GSC sitemap (one MCP call) and confirm the live URL returns
+200. Dry run first without the flags (`node scripts/publish-post.mjs <slug>`) to preview + auto-revert.
+
+Slugs: how-to-choose-nurse-scheduling-software, cost-of-losing-a-nurse-rural-hospital,
+is-ai-nurse-scheduling-safe, how-ai-builds-a-nurse-schedule, nurse-staffing-texas-2026,
+8-hour-vs-12-hour-nursing-shifts, nurse-to-patient-ratios-by-state, free-nurse-schedule-templates.
+
+The manual per-post reference below is the fallback if you ever want to place a link by hand.
+
+---
+
+# Manual reference
 
 **Why a recipe, not pre-wired edits:** draft posts are not built (`src/utils/blog.ts:109` filters `!post.draft`), so a live sibling linking to a still-draft post would 404. Each post's 2 inbound links must be added **in the same commit as its `draft:false` flip** (the rural-texas pattern). The `publish-gate` `inboundLinks` row needs ≥2 live siblings pointing at the post, so these are required before each flip will pass.
 

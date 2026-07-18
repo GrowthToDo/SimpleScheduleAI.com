@@ -42,8 +42,16 @@ function runTool(cmd, args, cwd) {
 
 async function imageCheck(data, root, network) {
   const url = String(data.image || '');
+  // Local asset hero (e.g. ~/assets/images/blog/heroes/<slug>.webp): unique + generated,
+  // so verify the file exists on disk and pass (skip the unsplash pool/uniqueness/network checks).
+  if (url.startsWith('~/assets/')) {
+    const rel = url.replace(/^~\//, '').split('?')[0];
+    const abs = path.join(root, 'src', rel);
+    if (!fs.existsSync(abs)) return { ok: false, why: `local hero image not found on disk: src/${rel}` };
+    return { ok: true };
+  }
   const idMatch = url.match(/photo-([0-9]+-[0-9a-f]+)/);
-  if (!idMatch) return { ok: false, why: 'no unsplash photo id in frontmatter image' };
+  if (!idMatch) return { ok: false, why: 'image is neither a local ~/assets path nor an unsplash photo id' };
   const id = idMatch[1];
   const pool = JSON.parse(fs.readFileSync(path.join(root, 'scripts', 'image-pool.json'), 'utf8'));
   if (!pool.some((p) => p.id === id)) return { ok: false, why: `image id ${id} not in image-pool.json` };
