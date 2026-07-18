@@ -4,7 +4,8 @@
  *
  * "Upstream" = whether AI engines actually MENTION/CITE us and who wins the citation
  * instead. This is the signal that matters pre-launch (GA4 AI-referral clicks are still
- * ~0). The downstream half (did a citation drive a click) lives in scripts/ga4-ai-referrals.mjs.
+ * ~0). The downstream half (did a citation drive a click) — a GA4 AI-referral pull —
+ * is not built yet; it needs a GA4 property id + read-only credentials.
  *
  * Each run:
  *   1. Own-domain mentions — is simplescheduleai.com in the tracked LLM-mention dataset,
