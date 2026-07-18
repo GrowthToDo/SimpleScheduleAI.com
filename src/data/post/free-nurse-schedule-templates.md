@@ -1,7 +1,7 @@
 ---
 draft: true
 publishDate: 2099-01-01T00:00:00Z
-updateDate: 2026-04-01T00:00:00Z
+updateDate: 2026-07-18T00:00:00Z
 author: 'Pradeep Pandey'
 title: "Free Nurse Schedule Templates: What Works and What Doesn't"
 excerpt: >
@@ -30,6 +30,53 @@ The structural basics are the same whether a template is a Google Sheet, an Exce
 For a 25-bed critical access hospital, a template should also include role distinctions: RN versus LVN versus CNA, and which positions require specific certifications like ACLS, PALS, or charge nurse qualification. A shift staffed by someone without the required credential is a compliance problem, not just a coverage gap. CMS Conditions of Participation under [§485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) require CAHs to maintain appropriate staffing at all times, and "appropriate" includes credential requirements.
 
 A good template also makes the rotation history visible. Not just who is working next week, but who worked last weekend and the one before that. Without that context, a manager building a new schedule has no way to enforce fairness systematically, they're working from memory, which introduces bias even when the manager is trying to be fair.
+
+## What do 8-, 10-, and 12-hour nurse shift patterns look like?
+
+The three common nurse shift patterns are 8-hour (three back-to-back shifts cover the day), 10-hour (staggered starts that build in midday overlap), and 12-hour (two shifts cover the day). A full-time 8-hour nurse usually works five shifts a week, a 10-hour nurse works four, and a 12-hour nurse works three. Each pattern trades handoff frequency against how many consecutive days off a nurse gets.
+
+Before you drop names into any template, decide which pattern the unit runs, because it sets the columns, the shift times, and the overtime math. Here is how the three compare:
+
+<div class="not-prose overflow-x-auto my-8">
+  <table class="w-full text-sm text-left border-collapse">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100">
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-semibold">Shift length</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-semibold">Coverage model</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-semibold">Example shift times</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-semibold">Typical shifts per nurse each week</th>
+      </tr>
+    </thead>
+    <tbody class="text-slate-800 dark:text-slate-200">
+      <tr>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">8-hour</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">Three back-to-back shifts</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">Day 7a&ndash;3p, Evening 3p&ndash;11p, Night 11p&ndash;7a</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">Five (about 40 hours)</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">10-hour</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">Staggered starts, built-in overlap</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">7a&ndash;5p, 1p&ndash;11p, 9p&ndash;7a</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">Four (about 40 hours)</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">12-hour</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">Two back-to-back shifts</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">Day 7a&ndash;7p, Night 7p&ndash;7a</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2">Three (about 36 hours)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+An 8-hour rotation gives the tightest handoff control: three defined shifts, clean start and end times, and the simplest overtime math, since a full-time nurse reaches 40 hours at five shifts. The cost is more handoffs per day and more slots to fill.
+
+A 10-hour pattern staggers start times so two or three nurses overlap during the busiest midday hours. A nurse typically works four 10-hour shifts for 40 hours and earns a third day off, but the overlap makes the grid harder to balance by hand.
+
+Twelve-hour shifts are the most common pattern in hospital nursing. Two shifts cover the full day, a nurse works three shifts for 36 hours, and staff get four days off most weeks. The tradeoff is fatigue risk late in a long shift and a coverage hole that is costly to fill when someone calls out. Our guide to [12-hour hospital shifts](/blog/12-hour-hospital-shifts-scheduling) walks through the rotation math and the fatigue tradeoffs in detail.
+
+Whatever the shift length, the overnight slots are the hardest to keep covered, and templates give no help finding a qualified backfill at 3 AM. Our guide to [night shift nurse coverage](/blog/night-shift-nurse-schedule-coverage) covers the staffing tactics that reduce the scramble.
 
 ## What are the limitations of free nurse schedule templates?
 
