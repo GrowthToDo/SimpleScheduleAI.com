@@ -36,6 +36,16 @@ For each post below: when publishing it, add the two in-prose links to the named
 - `12-hour-hospital-shifts-scheduling.md` — near the shift-length discussion: "...weighing 8s against 12s? See [8-hour vs 12-hour nursing shifts for a 25-bed hospital](/blog/8-hour-vs-12-hour-nursing-shifts)."
 - `night-shift-nurse-schedule-coverage.md` — near a shift-pattern mention: "...[8-hour vs 12-hour nursing shifts](/blog/8-hour-vs-12-hour-nursing-shifts) works the tradeoff for a thin roster."
 
+### nurse-to-patient-ratios-by-state
+
+- `nurse-staffing-ratios-critical-access-hospital.md` — near the ratio discussion: "...for the state-by-state legal picture of which states mandate ratios, see [nurse-to-patient ratios by state](/blog/nurse-to-patient-ratios-by-state)."
+- `texas-nursing-overtime-compliance-cah.md` — near a Texas-rules mention: "...and [nurse-to-patient ratios by state](/blog/nurse-to-patient-ratios-by-state) shows Texas sets no fixed ratio at all."
+
+### free-nurse-schedule-templates
+
+- `nurse-scheduling-software-small-hospital.md` — near a "getting started" point: "...many small hospitals start from a [free nurse schedule template](/blog/free-nurse-schedule-templates) before moving to software."
+- `best-scheduling-software-25-bed-hospital.md` — near a low-cost-option mention: "...if budget is the constraint, [free nurse schedule templates](/blog/free-nurse-schedule-templates) are the honest starting point."
+
 ---
 
-All six source siblings verified live (`draft:false`) on 2026-07-18. Cross-links among the six new posts can be added once both endpoints are live.
+All source siblings verified live (`draft:false`) on 2026-07-18. Cross-links among the new posts can be added once both endpoints are live.
