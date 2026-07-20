@@ -181,6 +181,14 @@ These repeatedly slip past agent passes. Check each explicitly.
       competitor product), it MUST be its own H2, not an H3 child. Each H2 is one standalone
       100-200 word capsule. When promoting H3 to H2: flatten the TOC, rewrite the title to stand
       alone, update anchors. Full rule: seo-aeo skill §2.6.1.
+- [ ] **Every question-H2 stands alone as a query a person or LLM would actually type** (founder
+      default, 2026-07-20). Read each H2 out of context: is it a clear, self-contained question?
+      Reject (a) clever/literary headings ("Does It Fit a Single-Unit, 25-Bed Reality...?"),
+      (b) an ambiguous "It/This" whose antecedent lives only in the body, and (c) compound
+      double-interrogatives ("How fast does it produce X, and how?"). Rewrite to natural query
+      phrasing so answer engines can match and extract the capsule; then update the TOC anchor to
+      match. Example fix: → "Was It Built for a Small Hospital, or Is It Enterprise Software Scaled
+      Down?" and → "How Does It Find a Qualified Callout Replacement, and How Fast?".
 
 ## Images (human judgment — an agent cannot see the render)
 
