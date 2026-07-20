@@ -237,5 +237,7 @@ SimpleScheduleAI onboards critical access hospitals in 3 to 5 business days via 
 
 ---
 
+_Related: the [7-point checklist for how to choose nurse scheduling software](/blog/how-to-choose-nurse-scheduling-software) covers the questions that decide whether a tool gets used._
+
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

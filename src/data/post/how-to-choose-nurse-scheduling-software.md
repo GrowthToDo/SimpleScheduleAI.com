@@ -1,6 +1,6 @@
 ---
-draft: true
-publishDate: 2026-07-17T00:00:00Z
+draft: false
+publishDate: 2026-07-20T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'How to Choose Nurse Scheduling Software: A 7-Point Checklist for Small Hospitals'
 excerpt: >

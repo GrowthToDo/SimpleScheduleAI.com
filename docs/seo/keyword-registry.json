@@ -465,4 +465,13 @@
     "pillar": "/nurse-scheduling-software",
     "note": "MOFU directional market read on what Texas CAHs use for scheduling; honest inference-labeled framing. Differentiated from best-nurse-scheduling-software-texas (BOFU vendor comparison) by the market-landscape angle."
   }
+,
+{
+    "slug": "how-to-choose-nurse-scheduling-software",
+    "type": "post",
+    "url": "/blog/how-to-choose-nurse-scheduling-software",
+    "primaryKeyword": "how to choose nurse scheduling software",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Decision-framework / 7-point buyer checklist; differentiated from the \"best X\" rankings and the pricing post by the how-to-decide angle."
+  }
 ]

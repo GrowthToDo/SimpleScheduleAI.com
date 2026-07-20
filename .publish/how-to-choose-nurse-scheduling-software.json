@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "how-to-choose-nurse-scheduling-software",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-20T04:56:18.990Z",
+      "contentHash": "c8842c267a73615da4c2a59ea9951a6be24aeb60309704381962f2bf253a6e78"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-20T04:56:20.445Z",
+      "contentHash": "c8842c267a73615da4c2a59ea9951a6be24aeb60309704381962f2bf253a6e78"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-20T04:56:22.049Z",
+      "contentHash": "c8842c267a73615da4c2a59ea9951a6be24aeb60309704381962f2bf253a6e78"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-20T04:56:22.097Z",
+      "contentHash": "c8842c267a73615da4c2a59ea9951a6be24aeb60309704381962f2bf253a6e78"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-20T04:56:22.097Z",
+      "contentHash": "c8842c267a73615da4c2a59ea9951a6be24aeb60309704381962f2bf253a6e78"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-20T04:56:22.097Z",
+      "contentHash": "c8842c267a73615da4c2a59ea9951a6be24aeb60309704381962f2bf253a6e78"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-20T04:56:22.100Z",
+      "contentHash": "c8842c267a73615da4c2a59ea9951a6be24aeb60309704381962f2bf253a6e78"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev-code-reviewer",
+      "setAt": "2026-07-20T04:56:18.086Z",
+      "contentHash": "afa1c8c9fd766c106c20abf1a4b59518d2196d9e02e9423568fa9e322c171ff6"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "main-session",
+      "setAt": "2026-07-20T04:56:18.217Z",
+      "contentHash": "afa1c8c9fd766c106c20abf1a4b59518d2196d9e02e9423568fa9e322c171ff6"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unknown",
+      "setAt": "2026-07-20T04:56:18.381Z",
+      "contentHash": "afa1c8c9fd766c106c20abf1a4b59518d2196d9e02e9423568fa9e322c171ff6"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-20T04:56:18.610Z",
+      "contentHash": "afa1c8c9fd766c106c20abf1a4b59518d2196d9e02e9423568fa9e322c171ff6"
+    }
+  },
+  "overrides": []
+}
