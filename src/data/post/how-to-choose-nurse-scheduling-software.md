@@ -25,7 +25,7 @@ This is a decision framework, not a product ranking. It gives a small hospital a
 
 ## Key Takeaways
 
-- For a small hospital, the deciding variable is whether one nurse manager who is also clinical can run the tool without standing up an IT project. Feature count matters far less than fit and operating burden.
+- For a small hospital, the deciding variable is simple: can one nurse manager, who also works clinical shifts, run the tool without standing up an IT project? Feature count matters far less than fit and operating burden.
 - Score every vendor on seven questions: right-sizing, setup without an IT project, callout replacement speed, FLSA overtime documentation, who operates it each week, cost transparency, and a defensible audit trail.
 - There are three realistic paths, not ten: a spreadsheet plus a phone tree, self-serve software your manager configures and runs, or an operated-for-you service that builds the schedule and hands it back for approval.
 - Callout coverage is the highest-stakes daily test at a hospital with no float pool. Ask each vendor exactly what happens in the next five minutes when a nurse calls out.
@@ -34,9 +34,9 @@ This is a decision framework, not a product ranking. It gives a small hospital a
 
 ## Table of Contents
 
-- [Does It Fit a Single-Unit, 25-Bed Reality, or Is It Enterprise Software Scaled Down?](#does-it-fit-a-single-unit-25-bed-reality-or-is-it-enterprise-software-scaled-down)
+- [Was It Built for a Small Hospital, or Is It Enterprise Software Scaled Down?](#was-it-built-for-a-small-hospital-or-is-it-enterprise-software-scaled-down)
 - [Can It Go Live Without an IT Project?](#can-it-go-live-without-an-it-project)
-- [How Fast Does It Produce a Qualified Callout Replacement, and How?](#how-fast-does-it-produce-a-qualified-callout-replacement-and-how)
+- [How Does It Find a Qualified Callout Replacement, and How Fast?](#how-does-it-find-a-qualified-callout-replacement-and-how-fast)
 - [Does It Track the FLSA Overtime Thresholds That Apply to You, With Survey-Ready Documentation?](#does-it-track-the-flsa-overtime-thresholds-that-apply-to-you-with-survey-ready-documentation)
 - [Who Actually Runs It Week to Week, Your Nurse Manager or a Dedicated Admin?](#who-actually-runs-it-week-to-week-your-nurse-manager-or-a-dedicated-admin)
 - [Is the True Cost Transparent, or Quote-Only?](#is-the-true-cost-transparent-or-quote-only)
@@ -48,9 +48,9 @@ This is a decision framework, not a product ranking. It gives a small hospital a
 
 Before you compare features, settle the one question that decides everything else at a small hospital: can the tool survive a normal week with the staff you actually have? The right [nurse scheduling software](/nurse-scheduling-software) is the one your team will use on a bad Tuesday, not the one with the longest feature list.
 
-## Does It Fit a Single-Unit, 25-Bed Reality, or Is It Enterprise Software Scaled Down?
+## Was It Built for a Small Hospital, or Is It Enterprise Software Scaled Down?
 
-The first question is whether the product was designed for a single nursing unit or sold down to you from an enterprise suite. A tool built for a 300-bed system carries multi-campus roles, cross-department labor pools, and HRIS integrations a 25-bed hospital will never use. That unused depth still costs you: it becomes setup you pay for and complexity your manager maintains.
+The first question is whether the product was designed for a single nursing unit or sold down to you from an enterprise suite. A tool built for a 300-bed system carries multi-campus roles, cross-department labor pools, and deep HRIS integrations, most of which a single-unit hospital rarely needs. That largely unused depth still costs you: it becomes setup you pay for and complexity your manager maintains.
 
 Enterprise platforms are genuinely capable for the organizations they target. The mismatch is scale, not quality. A small hospital runs one unit and needs a tool that starts there, not one that assumes a workforce-management analyst is sitting behind it. When a vendor answers the fit question with a list of modules you would switch off, that is a signal the product is scaled down rather than right-sized. For the version of this test written specifically for a 25-bed facility, see the [best nurse scheduling software for a Critical Access Hospital](/blog/best-nurse-scheduling-software-critical-access-hospitals) and the broader [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
 
@@ -60,7 +60,7 @@ Ask whether you can be live from an Excel roster upload in days, or whether goin
 
 Implementation burden is often the variable that decides adoption long before any feature does. A product that is live in days and needs no ongoing configuration beats one that can do more but takes three months to stand up, because the three-month tool frequently never gets fully deployed. Ask the vendor two direct questions: what is the fastest a hospital our size has gone live, and what work do we have to do ourselves to get there? If the honest answer involves mapping data feeds and scheduling IT time, price that effort in as part of the true cost.
 
-## How Fast Does It Produce a Qualified Callout Replacement, and How?
+## How Does It Find a Qualified Callout Replacement, and How Fast?
 
 When a nurse calls out, a small hospital with no float pool needs a qualified replacement fast, and the method matters as much as the speed. Ask whether the tool produces a ranked shortlist of available, qualified staff who are not already past their overtime threshold, or whether it just opens a shift and leaves your manager working down the roster by phone. One is a five-minute task. The other is the phone tree you already run.
 
@@ -82,7 +82,7 @@ The weekly build has a measurable cost. Manual roster building has been document
 
 Ask for the actual monthly price in writing before you invest time in a demo. Transparent vendors publish flat or per-unit pricing you can budget against. Quote-only vendors gate the number behind a sales call, and the figure that comes back often carries per-seat minimums, annual commitments, and setup fees that were not visible up front. For a small hospital on a fixed budget, an unpredictable price is its own risk.
 
-Cheapest is not the same as lowest true cost. A low license price that leaves your manager rebuilding compliance records by hand costs more in staff time than a higher flat fee that produces those records automatically. Work out the fully loaded number: license, setup, integration effort, and the staff hours to operate it each week. Our [ROI calculator](/roi) turns those inputs into a facility-specific figure, and for a fuller breakdown of the pricing models in this category and where the hidden costs sit, see [what nurse scheduling software actually costs](/blog/nurse-scheduling-software-pricing).
+Cheapest is not the same as lowest true cost. A low license price that leaves your manager rebuilding compliance records by hand costs more in staff time than a higher flat fee that produces those records automatically. Work out the fully loaded number: license, setup, integration effort, and the staff hours to operate it each week. Our [ROI calculator](/roi) turns those inputs into a facility-specific figure, and for a more detailed breakdown of the pricing models in this category and where the hidden costs sit, see [what nurse scheduling software actually costs](/blog/nurse-scheduling-software-pricing).
 
 ## Is There Real Support and an Audit Trail of Every Schedule Change?
 
