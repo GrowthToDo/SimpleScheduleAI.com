@@ -16,3 +16,14 @@ Appended by `npm run sitemap-diff`. New competitor URLs feed the trendjacking ra
 ## 2026-07-12
 
 - shiftwizard.com: unreachable (not an XML sitemap)
+
+## 2026-07-16
+
+- m7health.com: +0 / -0 since 2026-07-12
+- youshift.com: unreachable (fetch failed)
+- qgenda.com: +0 / -0 since 2026-07-12
+- aladtec.com: unreachable (HTTP 403)
+- smartlinx.com: +0 / -0 since 2026-07-12
+- onshift.com: +0 / -0 since 2026-07-12
+- shiftwizard.com: unreachable (not an XML sitemap)
+- nursegrid.com: +0 / -0 since 2026-07-12
