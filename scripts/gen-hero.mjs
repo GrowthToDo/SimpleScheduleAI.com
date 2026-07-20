@@ -21,13 +21,13 @@ html,body{width:1200px;height:630px}
 .dot{width:13px;height:13px;border-radius:50%;background:#7BAF9B}
 .dot.ring{background:transparent;border:3px solid #2D5A4A;width:15px;height:15px}
 .grid{position:absolute;inset:0;background-image:linear-gradient(#1A233208 1px,transparent 1px),linear-gradient(90deg,#1A233208 1px,transparent 1px);background-size:48px 48px}
-.pad{position:absolute;inset:0;padding:64px 72px;display:flex;flex-direction:column;justify-content:space-between}
+.pad{position:absolute;inset:0;padding:64px 110px;display:flex;flex-direction:column;justify-content:space-between}
 .top{display:flex;align-items:center;gap:12px}
 .wm{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:30px;letter-spacing:-.5px;color:#1A2332}
 .wm .d{color:#2D5A4A}
 .eyebrow{display:inline-block;align-self:flex-start;margin-bottom:22px;padding:8px 16px;border-radius:999px;
   background:rgba(45,90,74,.09);color:#2D5A4A;font-weight:600;font-size:15px;letter-spacing:.14em;text-transform:uppercase}
-.title{font-family:'Fraunces',Georgia,serif;font-weight:600;color:#1A2332;font-size:64px;line-height:1.06;letter-spacing:-1px;max-width:820px}
+.title{font-family:'Fraunces',Georgia,serif;font-weight:600;color:#1A2332;font-size:64px;line-height:1.06;letter-spacing:-1px;max-width:760px}
 .rule{width:96px;height:6px;border-radius:6px;background:#2D5A4A;margin-top:28px}
 .mid{display:flex;flex-direction:column;justify-content:center;flex:1;padding-top:8px}
 .foot{display:flex;align-items:center;justify-content:space-between}
