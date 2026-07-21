@@ -32,6 +32,15 @@
   status = 301
   force = true
 
+# 301 from the raw Netlify subdomain: it was indexed and ranking for the brand
+# (found in the Tier-0 unlinked-mention sweep, 2026-07-22), splitting brand
+# signals and serving stale-cache copies to search engines.
+[[redirects]]
+  from = "https://simplescheduleai.netlify.app/*"
+  to = "https://simplescheduleai.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/blog/healthcare-scheduling-crisis-26000-administrative-burden"
   to = "/blog/healthcare-scheduling-crisis"
