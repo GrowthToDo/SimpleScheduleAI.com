@@ -124,8 +124,6 @@ const faqSchema =
     {article.Content ? <article.Content /> : <Fragment set:html={article.content || ''} />}
   </SinglePost>
   <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 mb-16">
-    <a class="text-primary dark:text-blue-400 hover:underline" href={getPermalink('/articles')}
-      >&larr; Back to Newsroom</a
-    >
+    <a class="text-primary hover:underline" href={getPermalink('/articles')}>&larr; Back to Newsroom</a>
   </div>
 </Layout>

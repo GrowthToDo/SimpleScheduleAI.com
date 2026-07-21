@@ -23,6 +23,14 @@ import '@fontsource-variable/fraunces';
 
     --aw-color-hairline: rgb(26 35 50 / 12%);
 
+    /* Single source of truth for named brand hues previously magic-hexed across
+       widgets (theme audit 2026-07-21). Bare RGB channels so Tailwind opacity
+       modifiers (border-ink/25, bg-ivory/10) keep working. */
+    --aw-rgb-ink: 26 35 50; /* = #1A2332 */
+    --aw-rgb-ivory: 250 247 242; /* = #FAF7F2 */
+    --aw-rgb-sage: 123 175 155; /* = #7BAF9B light-green accent */
+    --aw-rgb-green-deep: 35 71 57; /* = #234739 dark green */
+
     ::selection {
       background-color: rgb(45 90 74 / 18%);
     }

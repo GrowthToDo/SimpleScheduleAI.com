@@ -61,7 +61,7 @@ const {
               actions.map((action) => (
                 <Button
                   {...(action || {})}
-                  class={`${action.class || ''} ${action.variant === 'secondary' ? 'text-white border-white/30 hover:bg-white/10 hover:border-white' : ''}`}
+                  class={`${action.class || ''} ${action.variant === 'secondary' ? 'btn-secondary-dark' : ''}`}
                 />
               ))
             ) : (

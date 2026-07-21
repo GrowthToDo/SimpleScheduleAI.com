@@ -42,6 +42,12 @@
   .btn-tertiary {
     @apply btn border-none shadow-none text-muted hover:text-gray-900;
   }
+
+  /* Secondary button on dark surfaces (footer band, DarkHero, CallToAction).
+     Replaces three ad-hoc raw-hex re-implementations (theme audit 2026-07-21). */
+  .btn-secondary-dark {
+    @apply btn text-ivory border-ivory/25 hover:bg-ivory/10 hover:border-ivory/60 hover:text-ivory;
+  }
 }
 
 /* ---- Motion system (see MotionScripts.astro for the markup contract) ----

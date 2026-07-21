@@ -12,8 +12,13 @@ export default {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
-        ink: '#1A2332',
-        ivory: '#FAF7F2',
+        // Single source of truth lives in CustomStyles.astro channel vars
+        // (theme audit 2026-07-21): editing the var moves every usage, and the
+        // <alpha-value> form keeps opacity modifiers (border-ink/25) working.
+        ink: 'rgb(var(--aw-rgb-ink) / <alpha-value>)',
+        ivory: 'rgb(var(--aw-rgb-ivory) / <alpha-value>)',
+        sage: 'rgb(var(--aw-rgb-sage) / <alpha-value>)',
+        'green-deep': 'rgb(var(--aw-rgb-green-deep) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
