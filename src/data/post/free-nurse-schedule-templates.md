@@ -135,11 +135,11 @@ A free template stops being enough when the cost of managing its limitations exc
 
 **Scenario 3: A resignation driven by inequity.** An experienced nurse leaves after three years of taking disproportionate weekend and holiday shifts. Replacing one bedside RN costs an average of [$60,090](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) in separation, vacancy coverage, orientation, and onboarding, per the 2026 NSI report. The template never tracked the pattern that caused the departure.
 
-Any one of these scenarios is likely to cost more than a year of professional scheduling support. When a template forces 8-12 hours of manager time per week on scheduling work that should take two, the math favors switching. Explore [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) to understand what the alternatives actually cost.
+Any one of these scenarios is likely to cost more than a year of professional scheduling support. When a template forces 8-12 hours of manager time per week on scheduling work that should take two, the math favors switching. Explore [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) to understand what the alternatives actually cost, and work through the [7-point checklist for choosing nurse scheduling software](/blog/how-to-choose-nurse-scheduling-software) before you sit through a single demo.
 
 ## How SimpleScheduleAI Helps
 
-SimpleScheduleAI replaces the template entirely with an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, and your nurse manager approves it. We handle the shift logic, rotation tracking, overtime monitoring, and callout coverage suggestions.
+SimpleScheduleAI replaces the template entirely with an [AI-native nurse scheduling](/ai-nurse-scheduling) service: the AI builds the schedule, our scheduling team checks it, and your nurse manager approves it. We handle the shift logic, rotation tracking, overtime monitoring, and callout coverage suggestions.
 
 The practical effect for managers who have been using templates: you go from building the schedule to reviewing it. That's a meaningful reduction in weekly workload and a significant improvement in schedule quality. We also maintain the documentation trail that templates can't provide.
 

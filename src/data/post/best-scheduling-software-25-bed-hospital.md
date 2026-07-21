@@ -509,5 +509,7 @@ Scheduling software gives the nurse manager tools to build and manage schedules.
 
 ---
 
+_Related: if budget is the constraint, our [free nurse schedule templates guide](/blog/free-nurse-schedule-templates) covers the honest starting point before any software purchase._
+
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
