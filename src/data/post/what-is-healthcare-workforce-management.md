@@ -69,12 +69,15 @@ Enterprise platforms include UKG (formerly Kronos), Workday, Infor Workforce, an
 **Q: Do small hospitals need full workforce management software?**
 Most critical access hospitals do not need enterprise WFM. The complexity and implementation cost exceed what small organizations can absorb. The more practical approach is addressing the highest-friction WFM function, typically nurse scheduling, with a purpose-built tool or managed service, and deferring full WFM integration until the hospital has the administrative capacity to support it.
 
----
-
 For CAH-specific scheduling guidance, see our [critical access hospital scheduling guide](/critical-access-hospital-scheduling).
 For more on practical staff scheduling solutions for critical access and rural hospitals, see: [Nurse Scheduling Software](/nurse-scheduling-software).
 
----
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Ready to see this in practice at your hospital?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. The AI builds the schedule, our scheduling team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-sm text-slate-500 dark:text-slate-400 mt-4 mb-0"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+</div>
 
 For CAH-specific scheduling guidance, see our [critical access hospital scheduling guide](/critical-access-hospital-scheduling).
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._

@@ -118,11 +118,12 @@ Yes, because generic tools do not support credential requirements, CMS documenta
 - Misconfiguration causes overtime calculation errors, certification matching failures, and CMS documentation gaps
 - The options for reducing configuration burden are platforms with minimal requirements (generic tools, less compliance coverage), vendor implementation services (paid, offloads setup), or managed services (specialist handles configuration as part of the service)
 
----
-
-Ready to see what zero-configuration scheduling looks like? [See how SimpleScheduleAI works →](/how-it-works)
-
----
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Ready to see what zero-configuration scheduling looks like?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. The AI builds the schedule, our scheduling team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-sm text-slate-500 dark:text-slate-400 mt-4 mb-0"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+</div>
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

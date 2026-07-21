@@ -1,5 +1,7 @@
 ---
 // Standalone pitch deck — no site layout
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/inter';
 ---
 
 <!doctype html>
@@ -19,14 +21,16 @@
       }
 
       :root {
-        --bg: #07071a;
-        --surface: #0e0e26;
-        --border: rgba(99, 120, 255, 0.18);
-        --accent: #5c7cfa;
-        --accent2: #a78bfa;
-        --green: #34d399;
-        --text: #eef0ff;
-        --muted: #8892c4;
+        --bg: #1a2332;
+        --surface: #1c2636;
+        --border: rgba(123, 175, 155, 0.18);
+        --accent: #7baf9b;
+        --accent2: #3f7a63;
+        --green: #7baf9b;
+        --text: #f2f5f4;
+        --muted: rgba(250, 247, 242, 0.65);
+        --serif: 'Fraunces Variable', Georgia, serif;
+        --sans: 'Inter Variable', system-ui, sans-serif;
         --slide-w: 1280px;
         --slide-h: 720px;
       }
@@ -35,8 +39,8 @@
       body {
         width: 100%;
         height: 100%;
-        background: #03030f;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        background: #10161f;
+        font-family: var(--sans);
         color: var(--text);
         overflow: hidden;
         user-select: none;
@@ -80,8 +84,8 @@
         position: absolute;
         inset: 0;
         background-image:
-          radial-gradient(circle at 20% 80%, rgba(92, 124, 250, 0.07) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.07) 0%, transparent 50%);
+          radial-gradient(circle at 20% 80%, rgba(123, 175, 155, 0.07) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(63, 122, 99, 0.07) 0%, transparent 50%);
         pointer-events: none;
       }
 
@@ -106,12 +110,14 @@
       }
 
       h1 {
+        font-family: var(--serif);
         font-size: 72px;
         font-weight: 800;
         line-height: 1.05;
         letter-spacing: -0.02em;
       }
       h2 {
+        font-family: var(--serif);
         font-size: 52px;
         font-weight: 800;
         line-height: 1.1;
@@ -159,6 +165,7 @@
 
       /* number stat */
       .stat-num {
+        font-family: var(--serif);
         font-size: 64px;
         font-weight: 800;
         letter-spacing: -0.03em;
@@ -211,7 +218,7 @@
         width: 24px;
         height: 24px;
         border-radius: 50%;
-        background: rgba(52, 211, 153, 0.15);
+        background: rgba(123, 175, 155, 0.15);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -255,8 +262,8 @@
       .vs-col.right {
         border-radius: 0 16px 16px 0;
         border-left: none;
-        background: rgba(92, 124, 250, 0.08);
-        border-color: rgba(92, 124, 250, 0.35);
+        background: rgba(123, 175, 155, 0.08);
+        border-color: rgba(123, 175, 155, 0.35);
       }
       .vs-badge {
         display: flex;
@@ -287,7 +294,7 @@
         margin-bottom: 10px;
       }
       .vs-x {
-        color: #f87171;
+        color: #d9a441;
         font-size: 16px;
       }
       .vs-check {
@@ -304,8 +311,8 @@
         border-radius: 999px;
         font-size: 14px;
         font-weight: 600;
-        background: rgba(92, 124, 250, 0.12);
-        border: 1px solid rgba(92, 124, 250, 0.3);
+        background: rgba(123, 175, 155, 0.12);
+        border: 1px solid rgba(123, 175, 155, 0.3);
         color: var(--accent);
       }
 
@@ -318,7 +325,7 @@
         display: flex;
         align-items: center;
         gap: 16px;
-        background: rgba(14, 14, 38, 0.9);
+        background: rgba(20, 27, 40, 0.9);
         backdrop-filter: blur(12px);
         border: 1px solid var(--border);
         border-radius: 999px;
@@ -481,7 +488,7 @@
       }
       #s9 .cta-card {
         background: var(--surface);
-        border: 1px solid rgba(92, 124, 250, 0.4);
+        border: 1px solid rgba(123, 175, 155, 0.4);
         border-radius: 24px;
         padding: 52px 72px;
         margin-top: 40px;
@@ -495,7 +502,7 @@
         color: var(--accent);
         font-weight: 600;
         text-decoration: none;
-        border-bottom: 1px solid rgba(92, 124, 250, 0.4);
+        border-bottom: 1px solid rgba(123, 175, 155, 0.4);
         padding-bottom: 2px;
       }
       #s9 .url {
@@ -512,8 +519,8 @@
         width: 320px;
         height: 320px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(92, 124, 250, 0.12) 0%, transparent 70%);
-        border: 1px solid rgba(92, 124, 250, 0.15);
+        background: radial-gradient(circle, rgba(123, 175, 155, 0.12) 0%, transparent 70%);
+        border: 1px solid rgba(123, 175, 155, 0.15);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -522,6 +529,7 @@
         gap: 8px;
       }
       .glow-ring .ring-stat {
+        font-family: var(--serif);
         font-size: 48px;
         font-weight: 800;
         color: var(--accent);
@@ -647,7 +655,7 @@
                 </li>
               </ul>
             </div>
-            <div class="card" style="background: rgba(92,124,250,0.06); border-color: rgba(92,124,250,0.3);">
+            <div class="card" style="background: rgba(123,175,155,0.06); border-color: rgba(123,175,155,0.3);">
               <p
                 style="font-size: 15px; color: var(--muted); margin-bottom: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;"
               >
@@ -831,7 +839,7 @@
             </div>
             <div
               class="card"
-              style="background: rgba(52,211,153,0.04); border-color: rgba(52,211,153,0.25); display: flex; flex-direction: column; gap: 14px;"
+              style="background: rgba(123,175,155,0.04); border-color: rgba(123,175,155,0.25); display: flex; flex-direction: column; gap: 14px;"
             >
               <div>
                 <div class="stat-num" style="font-size: 48px;">60-Day</div>

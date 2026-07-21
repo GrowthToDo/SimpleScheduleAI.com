@@ -809,8 +809,11 @@ function check(file) {
     }
     for (const prefix of ['bg', 'text', 'border']) {
       if (nonDark[prefix].size > 0 && !darkPrefixes.has(prefix)) {
-        fail(
-          `Table missing dark: variant for ${prefix}-* color utilities (table #${t + 1}): ${[...nonDark[prefix]].join(', ')}`,
+        // Demoted from fail to warn 2026-07-21: site is light:only (founder
+        // decision), so dark: variants are unreachable. Kept as a warn so the
+        // signal survives if dark mode is ever re-enabled.
+        warn(
+          `Table has no dark: variant for ${prefix}-* colors (table #${t + 1}) — fine while the site is light:only`,
           0,
           ''
         );

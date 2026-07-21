@@ -465,14 +465,6 @@ Credential expiration dates are tracked and flagged 30 days before expiration, s
 
 5. **If you evaluate Aladtec, configure the ED credential tracking during the trial period.** The default Aladtec configuration is not ED-ready. Configure ACLS, TNCC, and charge nurse designation as employee qualifications and test whether the scheduling view correctly filters the ED callout list to credentialed nurses only.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 border border-blue-100 px-8 py-7 flex flex-col gap-4">
-  <div>
-    <p class="text-lg font-bold text-blue-900">ED scheduling built for Critical Access Hospitals</p>
-    <p class="text-blue-800 mt-1">SimpleScheduleAI filters ED callout replacements by credential before generating the shortlist. Charge nurse coverage is guaranteed per shift. CMS documentation is automatic. Built for CAH emergency departments where the credentialed nurse pool is small and every callout matters.</p>
-  </div>
-  <a href="/contact" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">Request a Demo</a>
-</div>
-
 ## Frequently Asked Questions
 
 **Is Aladtec or SimpleScheduleAI better for ED nurse scheduling?**
@@ -494,6 +486,13 @@ Aladtec's base implementation for a small hospital typically takes 2-4 weeks. Co
 **What is the difference between an ED scheduling managed service and ED scheduling software?**
 
 ED scheduling software gives the nurse manager tools to build and manage ED schedules, track credentials, and handle callout replacement. A managed scheduling service builds the schedules, maintains the credential tracking, and generates the replacement list for the manager. At a CAH where the nurse manager also takes ED shifts and cannot spend 6-10 hours per week on scheduling, the managed service model reduces the administrative burden significantly more than software alone. SimpleScheduleAI is an AI-native nurse scheduling service. All other tools in this list are software platforms.
+
+<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Ready to see ED-credentialed callout coverage in action?</p>
+  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. The AI builds the schedule, our scheduling team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-sm text-slate-500 dark:text-slate-400 mt-4 mb-0"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+</div>
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

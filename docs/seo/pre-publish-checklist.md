@@ -17,8 +17,8 @@ Run these; fix every HARD FAILURE; a human never re-verifies a green row by hand
   italic-linked author bio format; both pillar links + `/how-it-works`; canonical-matches-slug;
   TOC anchor/heading integrity + broken jump links; merged heading + stray glued `?`; no "CAH" in
   headings, table headers, or figcaptions; stray MDX (`import`, `astro:assets`) in `.md`;
-  image-pool membership + exact-ID duplication + unquoted image URL; dark-mode variants on every
-  table class; Sources numbered + not listed in TOC; date sanity (placeholder 2099,
+  image-pool membership + exact-ID duplication + unquoted image URL; dark-mode table variants
+  (WARN only since 2026-07-21: site is light:only, so dark: classes are optional); Sources numbered + not listed in TOC; date sanity (placeholder 2099,
   updateDate >= publishDate); Key-Takeaways-before-TOC; no TL;DR; links-to-drafts; one "Our Take"
   max; facts drift via `scripts/lib/facts-rules.mjs` (CFR pin-cites §485.631 vs §485.635,
   DSHS-vs-HHSC, §62.002, no 8-and-80 attributed to SimpleScheduleAI).
@@ -172,8 +172,9 @@ These repeatedly slip past agent passes. Check each explicitly.
       BOFU 3,000-5,000 | vs-service MOFU 1,500-2,500 | MOFU 1,500-2,500 | TOFU narrative
       1,000-1,500 | Glossary 600-1,000.
 - [ ] Minimum visual elements: 3 for BOFU/how-to | 2 for vs-service MOFU | 1 for MOFU/TOFU | 0 for
-      Glossary. All visuals are Tailwind `<div>` bar charts or `<table>` (the no-`<svg>` and
-      dark-variant rules are gated).
+      Glossary. All visuals are Tailwind `<div>` bar charts or `<table>` (the no-`<svg>` rule is gated;
+      dark-variant coverage is a gate WARN only — the site is light:only per founder decision
+      2026-07-21, so dark: classes on new visuals are optional).
 - [ ] **Numbered Sources section present on BOFU/comparison posts** (above bio, below FAQ), each
       inline stat carrying a numbered footnote referenced in the list. Optional on glossary posts.
 - [ ] **AEO capsule structure (no nested sub-questions under a question H2).** If a sub-section is
