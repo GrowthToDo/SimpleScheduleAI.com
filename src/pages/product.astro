@@ -108,6 +108,48 @@ const softwareAppSchema = {
     </div>
   </section>
 
+  <!-- PAS-lite: the spreadsheet this product replaces (problem/agitate, product voice) -->
+  <section class="bg-page border-b border-hairline">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="max-w-2xl" data-reveal>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">The spreadsheet you replace</p>
+        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">The grid was never the hard part</h2>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-3" data-reveal-group>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <h3 class="font-bold">Version drift</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-muted">
+            The board, the file, and the printout disagree by Wednesday, and nobody knows which one is real.
+          </p>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <h3 class="font-bold">The hours recount</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-muted">
+            Every edit means re-checking someone&rsquo;s week by hand, or finding the overtime on the payroll report.
+          </p>
+        </div>
+        <div class="rounded-xl border border-hairline bg-white p-5">
+          <h3 class="font-bold">The ripple rebuild</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-muted">
+            One PTO request reopens the whole month: swaps, fairness, coverage, all re-balanced cell by cell.
+          </p>
+        </div>
+      </div>
+      <p class="mt-8 max-w-2xl leading-relaxed text-default/90" data-reveal>
+        The fix is not a better grid. It is not filling the grid at all: watch the engine do it below.
+      </p>
+    </div>
+  </section>
+
+  <!-- Solve: interactive demo moved up — on a self-serve page, the demo IS the argument -->
+  <SchedulerDemoSection
+    tagline="Try it yourself"
+    title="Watch it fill a week."
+    subtitle="The engine fills every slot against 21 rule checks, right in your browser. No signup."
+    ctaText="Try the interactive demo"
+    ctaHref="/simulator"
+  />
+
   <!-- System flow widget: how the product works end to end -->
   <ProductFlow />
 
@@ -317,15 +359,6 @@ const softwareAppSchema = {
       </p>
     </div>
   </section>
-
-  <!-- Interactive demo (same engine as /simulator) -->
-  <SchedulerDemoSection
-    tagline="Try it yourself"
-    title="Watch it fill a week."
-    subtitle="The engine fills every slot against 21 rule checks, right in your browser. No signup."
-    ctaText="Try the interactive demo"
-    ctaHref="/simulator"
-  />
 
   <!-- Guided setup: four-week visual timeline -->
   <section class="bg-page">
