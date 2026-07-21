@@ -17,6 +17,14 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Downloadable assets (the free schedule template): short cache so updates
+# propagate in minutes; the landing page also versions the link (?v=) to
+# bypass Cloudflare's 4h edge cache entirely on updates.
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
 # 301 from www subdomain to apex so Google consolidates signals on one host.
 [[redirects]]
   from = "https://www.simplescheduleai.com/*"

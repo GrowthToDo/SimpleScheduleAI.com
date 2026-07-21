@@ -11,7 +11,9 @@ const metadata = {
     'Download a free Excel nurse schedule template built for small hospitals: census-based staffing targets, 8/10/12-hour shift codes, overtime and rest-hour flags, and a coverage check. No email required.',
 };
 
-const fileUrl = '/downloads/SimpleScheduleAI-Nurse-Schedule-Template.xlsx';
+// Versioned query so download links bypass every cache layer (Cloudflare edge
+// caches /downloads/* for 4h); bump the v= value whenever the template updates.
+const fileUrl = '/downloads/SimpleScheduleAI-Nurse-Schedule-Template.xlsx?v=20260721';
 
 const outputs = [
   [
