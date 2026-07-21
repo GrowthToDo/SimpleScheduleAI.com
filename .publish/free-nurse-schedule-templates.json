@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "free-nurse-schedule-templates",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-21T05:34:25.214Z",
+      "contentHash": "a555c05dc959b2944941a50b4c088d3b5a41a671f5cba8a4bdf5a35f9f07203e"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-21T05:34:26.674Z",
+      "contentHash": "a555c05dc959b2944941a50b4c088d3b5a41a671f5cba8a4bdf5a35f9f07203e"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-21T05:34:27.665Z",
+      "contentHash": "a555c05dc959b2944941a50b4c088d3b5a41a671f5cba8a4bdf5a35f9f07203e"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-21T05:34:27.690Z",
+      "contentHash": "a555c05dc959b2944941a50b4c088d3b5a41a671f5cba8a4bdf5a35f9f07203e"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-21T05:34:27.690Z",
+      "contentHash": "a555c05dc959b2944941a50b4c088d3b5a41a671f5cba8a4bdf5a35f9f07203e"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-21T05:34:27.690Z",
+      "contentHash": "a555c05dc959b2944941a50b4c088d3b5a41a671f5cba8a4bdf5a35f9f07203e"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-21T05:34:27.691Z",
+      "contentHash": "a555c05dc959b2944941a50b4c088d3b5a41a671f5cba8a4bdf5a35f9f07203e"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev-code-reviewer",
+      "setAt": "2026-07-21T05:34:23.868Z",
+      "contentHash": "5240c44deca227035a685e3d209e5d7202eda78c7ed0c134f4501059c75a512c"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "main-session",
+      "setAt": "2026-07-21T05:34:24.205Z",
+      "contentHash": "5240c44deca227035a685e3d209e5d7202eda78c7ed0c134f4501059c75a512c"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unknown",
+      "setAt": "2026-07-21T05:34:24.491Z",
+      "contentHash": "5240c44deca227035a685e3d209e5d7202eda78c7ed0c134f4501059c75a512c"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-21T05:34:24.748Z",
+      "contentHash": "5240c44deca227035a685e3d209e5d7202eda78c7ed0c134f4501059c75a512c"
+    }
+  },
+  "overrides": []
+}

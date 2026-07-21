@@ -281,5 +281,7 @@ scheduling constraint, not a suggestion, violations compound over time.
 
 ---
 
+_Related: [free nurse schedule templates](/blog/free-nurse-schedule-templates) and the 8, 10, and 12-hour patterns behind them._
+
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

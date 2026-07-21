@@ -474,4 +474,13 @@
     "pillar": "/nurse-scheduling-software",
     "note": "Decision-framework / 7-point buyer checklist; differentiated from the \"best X\" rankings and the pricing post by the how-to-decide angle."
   }
+,
+{
+    "slug": "free-nurse-schedule-templates",
+    "type": "post",
+    "url": "/blog/free-nurse-schedule-templates",
+    "primaryKeyword": "free nurse schedule templates",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Refreshed/finished parked draft; shift-pattern templates (8/10/12hr); differentiated from the 12-hour scheduling post."
+  }
 ]

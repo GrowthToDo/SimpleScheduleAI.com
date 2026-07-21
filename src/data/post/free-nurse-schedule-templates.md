@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-07-18T00:00:00Z
-updateDate: 2026-07-18T00:00:00Z
+draft: false
+publishDate: 2026-07-21T00:00:00Z
+updateDate: 2026-07-21T00:00:00Z
 author: 'Pradeep Pandey'
 title: "Free Nurse Schedule Templates: What Works and What Doesn't"
 excerpt: >
