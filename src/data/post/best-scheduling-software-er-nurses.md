@@ -485,7 +485,7 @@ Aladtec's base implementation for a small hospital typically takes 2-4 weeks. Co
 
 **What is the difference between an ED scheduling managed service and ED scheduling software?**
 
-ED scheduling software gives the nurse manager tools to build and manage ED schedules, track credentials, and handle callout replacement. A managed scheduling service builds the schedules, maintains the credential tracking, and generates the replacement list for the manager. At a CAH where the nurse manager also takes ED shifts and cannot spend 6-10 hours per week on scheduling, the managed service model reduces the administrative burden significantly more than software alone. SimpleScheduleAI is an AI-native nurse scheduling service. All other tools in this list are software platforms.
+ED scheduling software gives the nurse manager tools to build and manage ED schedules, track credentials, and handle callout replacement. A managed scheduling service builds the schedules and generates the replacement list for the manager. At a CAH where the nurse manager also takes ED shifts and cannot spend 6-10 hours per week on scheduling, the managed service model reduces the administrative burden significantly more than software alone. SimpleScheduleAI is an AI-native nurse scheduling service. All other tools in this list are software platforms.
 
 <div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Ready to see ED-credentialed callout coverage in action?</p>
