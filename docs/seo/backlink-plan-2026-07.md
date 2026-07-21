@@ -23,21 +23,37 @@ YMYL-adjacent site = zero gray-hat tolerance. Log every ask/placement in
 
 ## Tier 0 — self-serve, free, no permission needed (~1 session)
 
-- [ ] **Directory profiles** (backlink + the exact aggregator surface ChatGPT cites):
-      Capterra, GetApp, Software Advice (one Gartner intake form), G2, Crunchbase, F6S.
-      Prep: submission kit (logo, 3-4 product screenshots from /product/simulator,
-      registry-verbatim short + long descriptions, category "Medical Scheduling /
-      Nurse Scheduling Software", flat pricing). Claude drafts kit -> founder approves ->
-      submit. Free tiers only.
+**Baseline correction (GSC Links export, 2026-07-21):** Google already counts 5
+referring domains — G2 (seller profile exists), Crunchbase (org page exists),
+AlternativeTo (listing exists), one organic Reddit r/healthcare thread mention, and
+growthtodo.com (founder-owned). Bing still reports 0 (its graph lags). So Tier 0
+splits into audit-existing vs submit-new:
+
+- [ ] **Audit + claim the 3 existing profiles** (G2 seller page, Crunchbase org,
+      AlternativeTo listing): confirm ownership/claimed status, refresh copy to
+      registry-verbatim positioning + flat pricing, add screenshots and the correct
+      site links. Note honestly: review solicitation is POST-launch only (no
+      customers = no reviews; never seed fake ones).
+- [ ] **Submit the missing directories** — exactly the aggregators ChatGPT cites that
+      we are NOT on: Capterra + GetApp + Software Advice (one Gartner Digital Markets
+      intake covers all three) and F6S. Prep: submission kit (logo, 3-4 product
+      screenshots from /product/simulator, registry-verbatim short + long
+      descriptions, category "Medical Scheduling / Nurse Scheduling Software", flat
+      pricing). Claude drafts kit -> founder approves -> submit. Free tiers only.
+- [ ] **Reddit (carefully):** verify the existing r/healthcare mention's context (who
+      posted, what it says) — it may be the exact thread ChatGPT cites for our head
+      keyword. Standing rule stays: NO mass posting, no astroturf (memory: mass
+      Reddit rejected). Permitted: founder participating authentically under his own
+      flair where he has real expertise, at most occasionally. This item is monitor +
+      understand, not a growth channel.
 - [ ] **TORCH free surfaces**: resource-library submission (free template + statistics
       page), any free vendor/community listing. No membership purchase.
 - [ ] **Unlinked-mention sweep** (tactic 8): Bing/Google/Brave queries for
       "SimpleScheduleAI" -site:simplescheduleai.com, founder name + product name.
       Any mention without a link -> polite attribution ask from pradeep@.
-- [ ] **GSC Links export** (founder, 5 min, UI-only data): Search Console -> Links ->
-      Export. Gives Google's view of the (currently empty) profile as baseline.
-- [ ] **Baseline snapshot recorded in ledger**: Bing links = 0 (2026-07-22), GSC export,
-      CC referring-domains lookup (webgraph.metehan.ai Referring Domains checker).
+- [ ] **Baseline snapshot recorded in ledger**: GSC = 5 referring domains
+      (2026-07-21 export, received); Bing = 0 (lags); CC referring-domains lookup
+      (webgraph.metehan.ai Referring Domains checker) still pending.
 
 ## Tier 1 — asset-powered outreach, free (weeks 1-3)
 
@@ -114,8 +130,8 @@ bio line, not the quote body; decline queries outside real expertise.
 ---
 
 ## Prerequisites / open items
-- [ ] pradeep@ mailbox or alias created (founder/hosting).
-- [ ] Founder GSC Links UI export (once).
+- [x] pradeep@ mailbox — EXISTS (founder confirmed 2026-07-22).
+- [x] GSC Links export — received 2026-07-22 (5 referring domains).
 - [ ] DataForSEO top-up whenever ready -> unparks T2.3 + richer Moving-Man data + AEO snapshots.
 
 ## Measurement (monthly, alongside the AEO snapshot)
