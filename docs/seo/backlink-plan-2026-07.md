@@ -46,6 +46,20 @@ splits into audit-existing vs submit-new:
       Reddit rejected). Permitted: founder participating authentically under his own
       flair where he has real expertise, at most occasionally. This item is monitor +
       understand, not a growth channel.
+**Product-vs-service doctrine for directories (founder question, 2026-07-22):** most
+of these platforms list software products only. We list legitimately as SOFTWARE per
+the governance category line ("nurse scheduling software we build and operate
+ourselves, delivered as a service"): category = software, operated-for-you = the
+differentiating feature, never a category exit. Assets that satisfy product intakes:
+the public no-signup simulator (= demo link), product screenshots, registry feature
+list. PRICING RULE: directory listings always show the canonical public offer (flat
+$1,000/$1,500 per facility, matching /pricing) — NEVER the unlisted product-mode
+$10/user from the noindex /product page (would publish a price contradiction AI
+engines would ingest). Fallback if an intake reviewer rejects the software framing:
+use the platform's professional-services category if one exists, else skip — a
+miscategorized listing is worse than none. G2 already accepted us; its audit includes
+checking which category the existing profile sits in.
+
 - [ ] **TORCH free surfaces**: resource-library submission (free template + statistics
       page), any free vendor/community listing. No membership purchase.
 - [ ] **Unlinked-mention sweep** (tactic 8): Bing/Google/Brave queries for
