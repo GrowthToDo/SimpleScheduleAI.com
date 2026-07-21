@@ -55,3 +55,26 @@ Pulled 2026-07-12, GSC window 2026-06-14 to 2026-07-12 (last 28 days, default). 
 3. **`/blog/m7-health-vs-simplescheduleai`** (44 impressions, position 15.6, 0% CTR) — brand-name query ("m7 health") landing page-2; front-load "M7 Health" earlier in the title tag so it matches the exact brand search, and sharpen the meta description toward comparison/pricing intent.
 4. **`/nurse-scheduling-software`** (35 impressions on "best nurse scheduling software", position 18.9, 0% CTR) — the flagship money page is being read by Google as a vendor homepage, not a "best of" roundup; test a title that leads with "Best Nurse Scheduling Software" framing to match listicle-style searcher intent.
 5. **`/blog/nurse-rostering-vs-scheduling-software`** (30 impressions, position 14.5, 0% CTR) — query is a direct category/product search ("nurse rostering software") but the page is framed as a definitional rostering-vs-scheduling explainer; lead the title with the product-category match before the vs-angle.
+
+---
+
+## Refresh 2026-07-22 — page-2 goldmine run (90-day window Apr 23 to Jul 21)
+
+764 query/page rows pulled. Bands: A = position 11-20 with >=30 impressions (page-2
+goldmine); B = position 4-10.9 with >=50 impressions (near-top CTR). Per-query clicks
+are privacy-suppressed at our volume — never read 0 clicks literally.
+
+### Queue (drafted rewrites, AWAITING FOUNDER REVIEW — nothing shipped)
+
+| # | Page | Target queries (impr, pos) | Change |
+|---|---|---|---|
+| R1 | /blog/m7-health-vs-simplescheduleai | m7 health ochsner (150, 11.0) · m7 health (96, 15.8) | Title + excerpt: add the Ochsner semantic |
+| R2 | /blog/free-nurse-scheduling-software | free nurse scheduling software (38, 11.9) + 2 variants (~105 combined) | Title + excerpt: promise real options + our free template |
+| R3 | /blog/shiftwizard-vs-managed-service | what is shiftwizard (114, 9.2) · 2 long eval questions (271 combined, 7-8) | Title: claim the what-is intent; owns eval questions |
+| R4 | /blog/shiftwizard-alternatives | same eval questions split here (223 combined, 4.5-6.7) | Excerpt only: de-emphasize self-service/eval language -> pure switching intent (cannibalization split) |
+| R5 | /blog/hospital-staff-scheduling-software-critical-access | hospital staff scheduling (35, 14.6) | Excerpt only |
+| R6 (low) | /blog/nurse-rostering-vs-scheduling-software | nurse rostering software (30, 14.5) | Optional excerpt sharpen |
+
+Drafted copy lives in the session review table (2026-07-22); on approval each edit
+ships as title/meta(excerpt)-only diffs, one commit, then re-measure in 28 days.
+
