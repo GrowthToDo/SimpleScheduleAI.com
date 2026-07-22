@@ -167,11 +167,11 @@ One honest note: if your facility needs features outside these seven, specifical
 4. **Ask for the callout walkthrough.** "A nurse calls out at 5 AM before a 7 AM shift. Show me exactly what your software does." A ranked, credential-checked replacement list is the right answer; "the manager checks availability in the system" is not.
 5. **If you run a Texas Critical Access Hospital, see the service version.** SimpleScheduleAI delivers the capabilities above as a service. [How it works](/how-it-works) shows the weekly rhythm from roster upload to posted schedule.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Need the short list, not the enterprise platform?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI delivers all seven capabilities, with no IT involvement and no configuration project.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Need the short list, not the enterprise platform?</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI delivers all seven capabilities, with no IT involvement and no configuration project.</p>
+  <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

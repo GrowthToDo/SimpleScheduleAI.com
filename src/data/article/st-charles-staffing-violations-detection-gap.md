@@ -96,11 +96,11 @@ One honest boundary: SimpleScheduleAI does not do labor relations, and it is not
 4. Ask one question about your process: would a below-minimum shift be flagged before it runs, or discovered after? If the answer is after, that is the gap to close.
 5. Stop relying on an outcome or a survey to be your detector. Put the coverage rule into the schedule so a gap is visible the day it appears, not the year it is investigated.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See the staffing gap before it becomes the violation.</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI enforces your coverage and skill-mix rules on every shift, tracks fairness, and turns callouts into a ranked shortlist.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">See the staffing gap before it becomes the violation.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI enforces your coverage and skill-mix rules on every shift, tracks fairness, and turns callouts into a ranked shortlist.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

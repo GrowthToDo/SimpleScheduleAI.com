@@ -148,11 +148,11 @@ One honest limitation: if your primary need is a staff-facing app where nurses l
 4. Multiply those hours by your nurse manager's loaded hourly rate to get the real annual cost of "free."
 5. If that number is meaningful, compare it against an AI-native option like SimpleScheduleAI by reviewing [how the SimpleScheduleAI process works](/how-it-works) or [booking a call with our team](https://cal.com/gautham-8bdvdx/30min).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">See how the schedule gets built, checked, and approved, with overtime and callouts handled for you.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Running a Critical Access Hospital in Texas?</p>
+  <p class="text-muted text-sm mb-6">See how the schedule gets built, checked, and approved, with overtime and callouts handled for you.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

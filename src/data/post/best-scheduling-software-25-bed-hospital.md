@@ -458,13 +458,13 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 
 
 5. **Document your CMS survey prep time from your last survey.** If it took more than two hours to assemble staffing documentation, that number justifies the cost of any tool that automates it. Attach a dollar figure to it before your next budget conversation.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Built specifically for 25-bed Critical Access Hospitals</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI reduces nurse scheduling from 8-12 hours per week to under 2 hours. Three draft options delivered in 48 hours. Callout shortlists in under 2 minutes. CMS documentation maintained automatically.</p>
+    <p class="text-lg font-bold text-default dark:text-slate-100">Built specifically for 25-bed Critical Access Hospitals</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI reduces nurse scheduling from 8-12 hours per week to under 2 hours. Three draft options delivered in 48 hours. Callout shortlists in under 2 minutes. CMS documentation maintained automatically.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Sources

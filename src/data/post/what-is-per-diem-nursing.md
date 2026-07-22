@@ -150,11 +150,11 @@ An unstructured callout process introduces delay and inconsistency. Under [42 CF
 
 SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, and you approve. For per diem coverage specifically, the service maintains the per diem availability list and, when a shift opens, produces a ranked callout shortlist of who to contact first, so gaps get filled fast instead of through a frantic phone tree. See the AI rank a per diem callout shortlist and build a compliant schedule live in the [interactive simulator](/simulator). It is built for Texas Critical Access Hospitals, and the availability data and ranked shortlist are what make callouts an executable checklist rather than a judgment call. One honest limitation: SimpleScheduleAI is not the right fit for large multi-site health systems, hospitals outside Texas today, or facilities that want only a self-serve app with no managed help. To see [how SimpleScheduleAI works](/how-it-works) and how it fits [scheduling for Critical Access Hospitals](/critical-access-hospital-scheduling), start there, or [book a call with our team](https://cal.com/gautham-8bdvdx/30min).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI builds the schedule and ranks per-diem callout coverage for you, our scheduling team checks it, you approve. Flat monthly pricing, no IT setup.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Running a Critical Access Hospital in Texas?</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds the schedule and ranks per-diem callout coverage for you, our scheduling team checks it, you approve. Flat monthly pricing, no IT setup.</p>
+  <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

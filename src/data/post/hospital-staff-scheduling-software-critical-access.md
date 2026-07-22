@@ -187,13 +187,13 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 
 5. **Request a free SimpleScheduleAI scheduling assessment.** Describe your weekly scheduling hours, how callouts are handled now, and how survey prep works today. Start at [how it works](/how-it-works).
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Hospital staff scheduling, run for you</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI's AI builds your nurse schedules and our team checks them, maintains CMS §485.635 documentation, and delivers ranked callout replacement lists in under 2 minutes. Built for Texas Critical Access Hospitals with only limited IT and a nurse manager who also takes clinical shifts.</p>
+    <p class="text-lg font-bold text-default dark:text-blue-200">Hospital staff scheduling, run for you</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI's AI builds your nurse schedules and our team checks them, maintains CMS §485.635 documentation, and delivers ranked callout replacement lists in under 2 minutes. Built for Texas Critical Access Hospitals with only limited IT and a nurse manager who also takes clinical shifts.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary px-6 py-3 text-white font-semibold hover:bg-secondary transition-colors">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

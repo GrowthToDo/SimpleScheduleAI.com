@@ -404,11 +404,11 @@ QGenda is worth keeping if:
 
 5. **If you want to stay on self-serve software, request a ShiftWizard demo and specifically ask for a CAH reference.** ShiftWizard is the self-serve alternative with the strongest nursing-specific design. Ask for a current reference customer under 50 beds who completed onboarding within the past 12 months.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Done Paying Enterprise Prices for a System Built for a 500-Bed Hospital?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for critical access hospitals. It goes live in 3-5 days with zero IT involvement. FLSA, Texas Labor Code, and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Done Paying Enterprise Prices for a System Built for a 500-Bed Hospital?</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI is built specifically for critical access hospitals. It goes live in 3-5 days with zero IT involvement. FLSA, Texas Labor Code, and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
+  <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) options at the 25-bed CAH scale, and the specific compliance requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides before finalizing your evaluation. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). Related comparison posts: [best nurse scheduling software for 2026](/blog/best-nurse-scheduling-software-2026), [Aladtec alternatives for hospitals](/blog/aladtec-alternatives), [Schedule360 alternatives for Critical Access Hospitals](/blog/schedule360-alternatives), and [the $26,000 hidden cost of manual scheduling](/blog/healthcare-scheduling-crisis).

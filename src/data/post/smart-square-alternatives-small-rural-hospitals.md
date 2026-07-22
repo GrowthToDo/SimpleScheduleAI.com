@@ -517,13 +517,13 @@ For a nurse manager at a 25-bed CAH who also takes clinical shifts, an enterpris
 
 5. **If you want self-serve software at the right scale, evaluate ShiftWizard or NurseGrid Manager.** Both operate at a smaller scale than an enterprise platform and focus on hospital nursing. Confirm CMS §485.635 and FLSA 8-and-80 handling directly with each vendor before deciding.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Smart Square sized for a health system? Built for a single Critical Access Hospital.</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI is an AI-native nurse scheduling service for one 25-bed Critical Access Hospital. No labor-management analyst, no configuration burden, automatic CMS §485.635 documentation, and callout shortlists ranked by overtime risk. Built for CAH nurse managers who also take clinical shifts.</p>
+    <p class="text-lg font-bold text-default dark:text-slate-100">Smart Square sized for a health system? Built for a single Critical Access Hospital.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI is an AI-native nurse scheduling service for one 25-bed Critical Access Hospital. No labor-management analyst, no configuration burden, automatic CMS §485.635 documentation, and callout shortlists ranked by overtime risk. Built for CAH nurse managers who also take clinical shifts.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 Related comparison posts: [QGenda alternatives for Critical Access Hospitals](/blog/qgenda-alternatives), [Schedule360 alternatives for Critical Access Hospitals](/blog/schedule360-alternatives), [ShiftWizard alternatives for Critical Access Hospitals](/blog/shiftwizard-alternatives), and [best nurse scheduling software for 2026](/blog/best-nurse-scheduling-software-2026).

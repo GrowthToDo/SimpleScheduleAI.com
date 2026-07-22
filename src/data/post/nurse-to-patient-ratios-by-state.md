@@ -122,21 +122,21 @@ One honest limitation: SimpleScheduleAI does not set your staffing plan or inter
 4. Check that your callout process keeps a unit at plan rather than filling a warm body, and that every change is recorded somewhere retrievable.
 5. See how an automated draft would flag below-plan shifts across your specific roster before you publish. Book a call with our team to walk through it.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
+  <p class="text-muted text-sm mb-6">
     See how SimpleScheduleAI builds your committee-approved staffing plan into every draft and flags below-plan shifts before you publish. AI builds your schedule, our scheduling team checks it, you approve.
   </p>
   <a
     href="/how-it-works"
-    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+    class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
   >
     See how it works →
   </a>
-  <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
-    Or <a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-700 dark:text-blue-300 underline">book a call with our team</a>.
+  <p class="mt-4 text-sm text-muted">
+    Or <a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">book a call with our team</a>.
   </p>
 </div>
 

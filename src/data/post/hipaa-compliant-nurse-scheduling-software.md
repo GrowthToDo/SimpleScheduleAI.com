@@ -200,11 +200,11 @@ For more on how [critical access hospital scheduling](/critical-access-hospital-
 4. **Separate workforce data from patient data.** Keep who-works-when in the scheduling tool and patient-to-nurse assignments in the EHR, so the scheduling record stays free of PHI.
 5. **If you find PHI in a tool with no BAA, document it and get advice.** Stop adding new PHI, record the corrective action, and consult a healthcare compliance attorney if the exposure looks significant.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Want scheduling that keeps patient data out of the workflow?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI runs on workforce data only, so patient identifiers never enter the scheduling system, and it will sign a BAA if your facility's policy requires one.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Want scheduling that keeps patient data out of the workflow?</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI runs on workforce data only, so patient identifiers never enter the scheduling system, and it will sign a BAA if your facility's policy requires one.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

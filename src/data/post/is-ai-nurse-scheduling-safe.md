@@ -127,11 +127,11 @@ On data protection, scheduling does not require heavy patient health information
 4. **Ask to see the audit trail and the data it stores.** A timestamped log of every change supports your CMS documentation, and knowing what data is held answers the protection question honestly. Do not accept a vague compliance claim in place of specifics.
 5. **Book a call to see the review-and-approve workflow for a Texas Critical Access Hospital.** Walk through how a draft is checked and approved before it posts, and where your sign-off sits. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See where your sign-off sits in the workflow</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI builds the draft, our team checks it, and your hospital approves before anything reaches nurses. Audit trail on every change. Built for Texas Critical Access Hospitals.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">See where your sign-off sits in the workflow</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds the draft, our team checks it, and your hospital approves before anything reaches nurses. Audit trail on every change. Built for Texas Critical Access Hospitals.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

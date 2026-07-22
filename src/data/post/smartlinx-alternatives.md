@@ -415,14 +415,14 @@ For hospitals where T&A is managed through payroll software independently of the
 
 5. **If T&A integration is non-negotiable, evaluate whether [QGenda](/blog/qgenda-alternatives) or a newer SmartLinx alternative addresses both the scheduling and T&A requirements.** Do not move to a tool that eliminates T&A integration without a clear plan for how payroll reconciliation will work in the new setup.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Right-sizing from SmartLinx? Built for what small hospitals actually need.</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers compliance documentation, callout overtime ranking, and CMS-ready staffing records without a 3-month implementation or ongoing IT dependency. Designed for 25-bed CAHs where SmartLinx's feature depth exceeds the operational complexity.</p>
+    <p class="text-lg font-bold text-default dark:text-slate-100">Right-sizing from SmartLinx? Built for what small hospitals actually need.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI delivers compliance documentation, callout overtime ranking, and CMS-ready staffing records without a 3-month implementation or ongoing IT dependency. Designed for 25-bed CAHs where SmartLinx's feature depth exceeds the operational complexity.</p>
   </div>
   <div class="flex flex-wrap gap-3">
-    <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+    <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
   </div>
 </div>
 

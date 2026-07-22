@@ -419,13 +419,13 @@ Start by calculating the full cost of Deputy for your hospital. Add the monthly 
 
 5. **If you want to stay on self-serve software, request an Aladtec trial.** Deploy Aladtec in parallel with Deputy for one scheduling cycle. Compare the time investment required in Aladtec to configure credential tracking and coverage rules against the time you are currently spending on manual compliance outside of Deputy.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">The hospital scheduling upgrade from Deputy</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI provides credential-filtered callout replacement, automatic CMS §485.635 documentation, and FLSA healthcare overtime tracking as defaults. Built for Critical Access Hospitals that need clinical scheduling compliance, not a general workforce scheduling tool applied to a clinical environment.</p>
+    <p class="text-lg font-bold text-default dark:text-slate-100">The hospital scheduling upgrade from Deputy</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI provides credential-filtered callout replacement, automatic CMS §485.635 documentation, and FLSA healthcare overtime tracking as defaults. Built for Critical Access Hospitals that need clinical scheduling compliance, not a general workforce scheduling tool applied to a clinical environment.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Sources

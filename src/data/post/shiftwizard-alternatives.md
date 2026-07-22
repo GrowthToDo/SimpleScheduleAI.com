@@ -390,13 +390,13 @@ The core tradeoff is control versus overhead. ShiftWizard gives the nurse manage
 
 For a nurse manager at a 25-bed CAH who also takes clinical shifts, the self-serve overhead model typically accumulates over time because there is no spare capacity for configuration maintenance. For a nurse manager with dedicated scheduling time and a preference for direct platform control, ShiftWizard's self-serve model is the stronger fit.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-blue-900 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 dark:border-blue-900 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Leaving ShiftWizard? Built for what a CAH actually needs.</p>
-    <p class="text-blue-800 dark:text-blue-300 mt-1">SimpleScheduleAI eliminates the configuration burden, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts.</p>
+    <p class="text-lg font-bold text-default dark:text-blue-200">Leaving ShiftWizard? Built for what a CAH actually needs.</p>
+    <p class="text-muted dark:text-blue-300 mt-1">SimpleScheduleAI eliminates the configuration burden, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary px-6 py-3 text-white font-semibold hover:bg-secondary transition-colors">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 For more context on nurse scheduling at CAH scale, see our [nurse scheduling software](/nurse-scheduling-software) hub and our [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.

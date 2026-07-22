@@ -179,11 +179,11 @@ For more on what Texas-specific requirements apply to CAH nurse scheduling, see 
 4. Ask peer facilities through a rural health network, such as the Texas Organization of Rural and Community Hospitals (TORCH) or the Texas Rural Health Association, what they evaluated and what they would do differently.
 5. Book a call with our team to see how a service built for the Texas CAH context would handle your roster and your compliance documentation.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Built specifically for the 91 Texas critical access hospitals.</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Texas HHSC compliance built in. No IT setup. Operational in 3-5 days.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Built specifically for the 91 Texas critical access hospitals.</p>
+  <p class="text-muted text-sm mb-6">Texas HHSC compliance built in. No IT setup. Operational in 3-5 days.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

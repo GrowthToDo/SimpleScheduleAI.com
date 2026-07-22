@@ -52,10 +52,12 @@ unreachable; never required (check-blog WARNs only). Existing dark: code may rem
 
 ## 4. Blog/article in-post idioms (checklist-governed)
 
-- **CTA box:** exactly one per post: `bg-blue-50 dark:bg-slate-800 border-blue-100` box,
-  one `bg-blue-600` button -> /how-it-works, cal.com text link under it. (The blue idiom
-  is the sanctioned legacy accent for in-post CTAs; a future recolor is a deliberate
-  Phase-D decision, not drift.)
+- **CTA box:** exactly one per post: `not-prose my-12 rounded-xl bg-primary/5 border
+  border-primary/20 px-8 py-10 text-center` box, `text-default` headline, `text-muted`
+  subtext, one `bg-primary hover:bg-secondary` button -> /how-it-works, and a `text-primary`
+  cal.com text link under it. (Recolored blue -> brand green site-wide 2026-07-22; the gate
+  counts CTA boxes by `rounded-xl bg-primary/5`.) The mid-post free-template callout uses the
+  same brand tint at `my-8 rounded-lg`.
 - **Our Take:** amber `bg-amber-50 border-l-4 border-amber-500`, immediately before
   What-to-Do.
 - **Tables:** slate borders (`border-slate-300`); dark: variants optional (light-only).

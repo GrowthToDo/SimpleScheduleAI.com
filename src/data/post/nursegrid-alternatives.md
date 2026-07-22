@@ -532,13 +532,13 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the manager-side 
 
 5. **If you want to keep self-serve software, shortlist ShiftWizard and TCP Scheduling.** ShiftWizard is the hospital-nursing-specific path with a larger review base; TCP Scheduling adds manager-side scheduling capability with a 2-4 week setup. Test the mobile manager workflow in both before deciding.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Leaving NurseGrid? Built for the manager side NurseGrid doesn't cover.</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts. Setup takes 3-5 days from your Excel roster.</p>
+    <p class="text-lg font-bold text-default dark:text-slate-100">Leaving NurseGrid? Built for the manager side NurseGrid doesn't cover.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts. Setup takes 3-5 days from your Excel roster.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Sources

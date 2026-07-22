@@ -196,20 +196,20 @@ The audit trail logs every schedule change, including the reason code when a nur
 
 SimpleScheduleAI is not the right tool if your hospital needs to integrate holiday rotation tracking with a payroll system or an EHR. It is built for [Critical Access Hospital scheduling](/critical-access-hospital-scheduling) specifically: 25 beds or fewer, limited IT, and a nurse manager who needs to go from current Excel roster to a working rotation system in under a week.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
+  <p class="text-muted text-sm mb-6">
     Flat monthly pricing. No IT setup. Our AI builds the schedule, our scheduling team checks it, you approve it.
   </p>
   <a
     href="/how-it-works"
-    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+    class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
   >
     See how it works →
   </a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

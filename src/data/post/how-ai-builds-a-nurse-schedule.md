@@ -186,11 +186,11 @@ If you run a small facility with limited IT, the service model is the difference
 4. **Ask any vendor to show you the audit trail and the approval step.** If a schedule can post without a person signing off, treat that as a red flag for a hospital, not a convenience.
 5. **If you run a Texas Critical Access Hospital, see how SimpleScheduleAI turns that Excel file into three drafts,** and book a call to walk through your rules with our team.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">See the seven steps run on your own roster</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Send us the Excel file you already keep. The AI builds three drafts, our team checks each one, and your manager approves before anything posts. Built for Texas Critical Access Hospitals.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">See the seven steps run on your own roster</p>
+  <p class="text-muted text-sm mb-6">Send us the Excel file you already keep. The AI builds three drafts, our team checks each one, and your manager approves before anything posts. Built for Texas Critical Access Hospitals.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

@@ -169,11 +169,11 @@ For more context on [nurse scheduling software](/nurse-scheduling-software) opti
 4. **Check your last 4 cycles for the five outgrown-Excel signs.** Repeated weekend inequity, slow callout response, after-the-fact overtime discovery, siloed credential tracking, and non-transferable scheduling knowledge. Two or more of these in 4 cycles means Excel is the constraint, not the workflow.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service lets you compare the actual time burden against your week-one baseline. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Done rebuilding the schedule every cycle?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI delivers a compliant, post-ready schedule every Thursday 3 PM Central. Your nurse manager reviews and approves.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Done rebuilding the schedule every cycle?</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI delivers a compliant, post-ready schedule every Thursday 3 PM Central. Your nurse manager reviews and approves.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

@@ -484,13 +484,13 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the overhead mode
 
 5. **If you want to stay on self-serve software, request a SmartLinx evaluation.** SmartLinx requires more implementation investment than Aladtec, but ongoing maintenance is lower once configured because compliance logic is more automated. Alternatively, TCP Scheduling is worth evaluating if you want to stay within the TCP vendor ecosystem and have IT capacity for a longer implementation.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Leaving Aladtec? Built for what Aladtec doesn't cover.</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI eliminates the configuration burden, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot afford to maintain a scheduling system while also taking clinical shifts.</p>
+    <p class="text-lg font-bold text-default dark:text-slate-100">Leaving Aladtec? Built for what Aladtec doesn't cover.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI eliminates the configuration burden, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot afford to maintain a scheduling system while also taking clinical shifts.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Sources

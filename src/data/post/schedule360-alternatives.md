@@ -433,11 +433,11 @@ Schedule360 is worth keeping if:
 
 5. **Request a SimpleScheduleAI assessment with your specific Schedule360 setup as context.** Describe what you are using Schedule360 for at your CAH, what you are not using, and what the nurse manager's weekly scheduling time looks like. Ask how SimpleScheduleAI would handle the same requirements without the configuration overhead.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Need a Scheduling System Built for a 25-Bed Hospital, Not a Specialty Clinic Chain?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for Texas Critical Access Hospitals. It goes live in 3 to 5 days with zero IT involvement. FLSA overtime threshold tracking and CMS §485.635 documentation are included by default. See how it works to understand how the transition works for your facility.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Need a Scheduling System Built for a 25-Bed Hospital, Not a Specialty Clinic Chain?</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI is built specifically for Texas Critical Access Hospitals. It goes live in 3 to 5 days with zero IT involvement. FLSA overtime threshold tracking and CMS §485.635 documentation are included by default. See how it works to understand how the transition works for your facility.</p>
+  <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) options at the 25-bed CAH scale, the specific compliance requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), and the broader treatment of how [AI nurse scheduling](/ai-nurse-scheduling) works in practice, see our dedicated pillar guides before finalizing your evaluation. Related comparison posts: [best nurse scheduling software for 2026](/blog/best-nurse-scheduling-software-2026), [Smart Square alternatives for small rural hospitals](/blog/smart-square-alternatives-small-rural-hospitals), [ShiftWizard alternatives for Critical Access Hospitals](/blog/shiftwizard-alternatives), and [the $26,000 scheduling burden at Critical Access Hospitals](/blog/healthcare-scheduling-crisis).

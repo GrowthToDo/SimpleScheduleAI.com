@@ -134,21 +134,21 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
 4. Set a written cap on consecutive shifts and per-nurse overtime, and decide in advance how you will hold it when a callout tempts you to break it for the person already carrying the most.
 5. Book a call with our team to see how an automated draft would distribute nights, weekends, and overtime across your specific roster and flag concentration before it hardens into turnover.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
+  <p class="text-muted text-sm mb-6">
     See how SimpleScheduleAI spreads nights, weekends, and overtime fairly and flags an overloaded nurse before it forces someone out. We build the schedule, you approve it.
   </p>
   <a
     href="/how-it-works"
-    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+    class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
   >
     See how it works →
   </a>
-  <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
-    Or <a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-700 dark:text-blue-300 underline">book a call with our team</a>.
+  <p class="mt-4 text-sm text-muted">
+    Or <a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">book a call with our team</a>.
   </p>
 </div>
 

@@ -507,13 +507,13 @@ For a hospital that is primarily a CAH or acute care facility, that difference i
 
 5. **If long-term care is most of your volume, evaluate SmartLinx as an upgrade rather than an outright replacement.** SmartLinx improves on OnShift's compliance automation while staying in a similar market tier. SimpleScheduleAI is the right switch only if acute care nursing is your primary scheduling challenge.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Built for what OnShift wasn't designed for</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI delivers ranked callout replacements with credential filtering, automatic CMS §485.635 documentation, and FLSA overtime threshold tracking. Designed for Critical Access Hospitals where acute care callout dynamics, not long-term care engagement features, are the scheduling priority.</p>
+    <p class="text-lg font-bold text-default dark:text-slate-100">Built for what OnShift wasn't designed for</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI delivers ranked callout replacements with credential filtering, automatic CMS §485.635 documentation, and FLSA overtime threshold tracking. Designed for Critical Access Hospitals where acute care callout dynamics, not long-term care engagement features, are the scheduling priority.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) options at the 25-bed CAH scale, how [AI nurse scheduling](/ai-nurse-scheduling) works as a managed service, and the specific compliance requirements that define [critical access hospital scheduling](/critical-access-hospital-scheduling), see our dedicated guides before finalizing your evaluation.

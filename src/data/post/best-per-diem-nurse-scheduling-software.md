@@ -562,11 +562,11 @@ Credential tracking flags when a per diem nurse's certifications do not match th
 
 5. **If you want a self-serve tool, request an Aladtec trial.** Use your actual per diem roster of 5-15 nurses and configure the availability and open-shift notification settings. Measure whether your per diem nurses update their own availability often enough for the tool to be reliable.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Per diem scheduling built for Critical Access Hospitals</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI generates replacement call lists that cross-reference per diem availability with real-time overtime tracking. CMS documentation captures every per diem shift automatically. Built for rosters where per diem nurses are essential, not supplemental.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Per diem scheduling built for Critical Access Hospitals</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI generates replacement call lists that cross-reference per diem availability with real-time overtime tracking. CMS documentation captures every per diem shift automatically. Built for rosters where per diem nurses are essential, not supplemental.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

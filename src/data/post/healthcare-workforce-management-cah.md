@@ -236,11 +236,11 @@ One honest limitation: if your WFM challenge is primarily a staffing shortage ra
 4. Time one real callout from first phone call to confirmed replacement, so you have a baseline to measure any new process against.
 5. [Book a call with our team](https://cal.com/gautham-8bdvdx/30min) to see whether a managed scheduling service fits your hospital, or [see how it works](/how-it-works) first.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Ready to reduce overtime and handle callouts without the Sunday evening scramble?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI handles the weekly schedule build so your nurse manager does not have to.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Ready to reduce overtime and handle callouts without the Sunday evening scramble?</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI handles the weekly schedule build so your nurse manager does not have to.</p>
+  <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

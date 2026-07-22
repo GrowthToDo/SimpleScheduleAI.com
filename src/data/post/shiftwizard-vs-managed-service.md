@@ -237,11 +237,11 @@ It is not the right choice if staff-facing self-service mobile features are a ha
 4. **Identify whether your nurse manager would rather operate a tool or approve a finished schedule.** ShiftWizard is the right answer for managers who want direct control of every cell. A managed service is the right answer for managers who want the construction work removed. Neither is universally better; the fit depends on the manager's preference and available time.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service delivers the scheduling outputs ShiftWizard was purchased to enable, without the configuration maintenance burden. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">ShiftWizard configuration without ShiftWizard configuration</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI provides ShiftWizard-grade compliance and fairness logic without requiring the nurse manager to maintain the system.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">ShiftWizard configuration without ShiftWizard configuration</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI provides ShiftWizard-grade compliance and fairness logic without requiring the nurse manager to maintain the system.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

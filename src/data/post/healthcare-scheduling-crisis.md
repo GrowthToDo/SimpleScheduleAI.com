@@ -333,11 +333,11 @@ One honest limitation: a managed scheduling service is not the right fit for fac
 4. **Identify your two highest-impact friction points.** From the five we outlined (data entry, callout coordination, PRN reconciliation, conflict resolution, compliance documentation), pick the two that consume the most weekly time. Those are the highest-ROI targets for the next 90 days.
 5. **Request a SimpleScheduleAI assessment if you are a Texas Critical Access Hospital.** The service removes the friction points without adding software for your team to learn. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Recover the $26,000 hidden in your schedule</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI removes the scheduling work from the wrong person, returning 8 to 10 hours per week to clinical leadership. Flat monthly pricing for Texas CAHs.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Recover the $26,000 hidden in your schedule</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI removes the scheduling work from the wrong person, returning 8 to 10 hours per week to clinical leadership. Flat monthly pricing for Texas CAHs.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

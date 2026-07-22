@@ -253,13 +253,13 @@ Write the answers down before any demo. A demo shows what the software can do. T
 
 5. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service lets you compare the actual time burden against your baseline before committing. Start at [how it works](/how-it-works).
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-blue-200">Built for one Critical Access Hospital, not a 47-hospital system</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, maintains CMS documentation, and delivers callout replacement lists in under 2 minutes. No IT, no configuration, no enterprise rollout.</p>
+    <p class="text-lg font-bold text-default dark:text-blue-200">Built for one Critical Access Hospital, not a 47-hospital system</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, maintains CMS documentation, and delivers callout replacement lists in under 2 minutes. No IT, no configuration, no enterprise rollout.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary px-6 py-3 text-white font-semibold hover:bg-secondary transition-colors">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 For more context, see how [AI nurse scheduling](/ai-nurse-scheduling) works as a managed service for small hospitals.

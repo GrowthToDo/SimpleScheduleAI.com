@@ -119,10 +119,10 @@ Several reliable sources offer free nurse schedule templates suitable for small 
 
 When downloading any free template, verify that it includes: separate columns for shift type and certification requirement, a visible rotation history section, and fields for on-call assignment. If it doesn't have these, you'll be adding them manually before it's useful.
 
-<div class="my-8 rounded-lg border border-blue-200 bg-blue-50 dark:bg-blue-900/20 p-6">
-  <p class="font-semibold text-blue-900 dark:text-blue-100">Free template</p>
-  <p class="mt-1 text-blue-800 dark:text-blue-200">Nurse Weekly Schedule Template, pre-filled for a 25-bed hospital with 3 shifts and weekend rotation tracking.</p>
-  <a href="/resources/nurse-schedule-template" class="mt-3 inline-block font-medium text-blue-700 dark:text-blue-300 underline">Download free →</a>
+<div class="my-8 rounded-lg border border-primary/20 bg-primary/5 p-6">
+  <p class="font-semibold text-default dark:text-blue-100">Free template</p>
+  <p class="mt-1 text-muted dark:text-blue-200">Nurse Weekly Schedule Template, pre-filled for a 25-bed hospital with 3 shifts and weekend rotation tracking.</p>
+  <a href="/resources/nurse-schedule-template" class="mt-3 inline-block font-medium text-primary underline">Download free →</a>
 </div>
 
 ## When does a template stop being enough?
@@ -158,11 +158,11 @@ For shared access, Google Sheets has an advantage, multiple people can view and 
 **Q: How often should I update my nurse schedule template?**
 Review the template structure every 6-12 months, or after significant staff changes. The columns, rotation periods, and certification fields should reflect your current staffing model, a template built for a different team size or shift configuration quietly causes errors.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Ready to retire the Sunday-evening scramble?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. The AI builds the schedule, our scheduling team checks it, you approve it.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-sm text-slate-500 dark:text-slate-400 mt-4 mb-0"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Ready to retire the Sunday-evening scramble?</p>
+  <p class="text-muted text-sm mb-6">Flat monthly pricing. The AI builds the schedule, our scheduling team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-sm text-muted mt-4 mb-0"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._

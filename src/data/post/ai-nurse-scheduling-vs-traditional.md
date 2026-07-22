@@ -318,13 +318,13 @@ One honest limitation: a managed AI scheduling service is not the right fit for 
 
 5. **If you are evaluating software platforms, ask each vendor how constraint conflicts are resolved.** What happens when overtime avoidance and minimum coverage requirements collide? How is that tradeoff surfaced to the nurse manager? The answer separates genuine constraint optimization from sequential rule-checking with a new label.
 
-<div class="not-prose mt-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-blue-200">AI scheduling built for Critical Access Hospitals</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI applies constraint-aware scheduling to CAH nursing rosters, delivering three schedule options in 48 hours and ranked callout replacements in under 2 minutes. Built to remove the computational scheduling burden from nurse managers who also take clinical shifts.</p>
+    <p class="text-lg font-bold text-default dark:text-blue-200">AI scheduling built for Critical Access Hospitals</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI applies constraint-aware scheduling to CAH nursing rosters, delivering three schedule options in 48 hours and ranked callout replacements in under 2 minutes. Built to remove the computational scheduling burden from nurse managers who also take clinical shifts.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 px-6 py-3 text-white font-semibold transition-colors dark:bg-blue-600 dark:hover:bg-blue-500">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary px-6 py-3 text-white font-semibold transition-colors dark:bg-primary dark:hover:bg-primary/50">See how it works</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

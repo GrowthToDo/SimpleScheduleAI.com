@@ -144,21 +144,21 @@ One honest limitation: analysis does not create staff. If your data shows only f
 4. Build the fairness table: weekend, night, and holiday counts per nurse, then compute a coefficient of variation for each. If the night CV is high, you have a concentration problem, not a coverage win.
 5. Book a call with our team to see how a schedule built inside the system produces these four measurements automatically, instead of reconstructing them from payroll each quarter.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">
+  <p class="text-muted text-sm mb-6">
     See how SimpleScheduleAI tracks overtime, callouts, and shift fairness as it builds the schedule, so the numbers are there when you need them. We build the schedule, you approve it.
   </p>
   <a
     href="/how-it-works"
-    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+    class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
   >
     See how it works →
   </a>
-  <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
-    Or <a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-700 dark:text-blue-300 underline">book a call with our team</a>.
+  <p class="mt-4 text-sm text-muted">
+    Or <a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">book a call with our team</a>.
   </p>
 </div>
 

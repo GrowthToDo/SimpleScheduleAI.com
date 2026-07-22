@@ -111,11 +111,11 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals outsi
 4. If you are running standalone scheduling SaaS, audit the configuration. Specifically: are FLSA overtime thresholds enforced, are credential expirations alerting, and is the audit trail exportable for CMS surveyors? If two of those three are no, the configuration is not finished.
 5. If you are a Texas Critical Access Hospital and a managed scheduling service is on the table, [see how it works](/how-it-works). The onboarding includes the Excel roster upload, the 3 to 5 day go-live, and the first two cycles of drafts with the audit trail attached.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No per-nurse fees. No IT setup. Our AI builds the schedule, our scheduling team checks it, you approve it.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4">Prefer to talk first? <a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team</a>.</p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Running a Critical Access Hospital in Texas?</p>
+  <p class="text-muted text-sm mb-6">Flat monthly pricing. No per-nurse fees. No IT setup. Our AI builds the schedule, our scheduling team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4">Prefer to talk first? <a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team</a>.</p>
 </div>
 
 ## Sources

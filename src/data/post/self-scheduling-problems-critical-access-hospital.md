@@ -191,11 +191,11 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 4. **Audit the cost of self-scheduling silence.** Track which nurses absorb voluntary overtime each cycle. They are the retention risk most CAHs lose to burnout, the concentration mechanism we detail in [nurse burnout and the CAH schedule](/blog/nurse-burnout-scheduling-cah). Reliable nurses leaving is more expensive than fairness friction.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service applies constraint-aware fairness rules before nurses self-pick, so the system distributes the unwanted shifts evenly before anyone has the chance to avoid them. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">End selfish scheduling without losing self-service</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI distributes weekends, nights, and holidays before nurses self-pick, then opens the rest. Reliable nurses stop carrying the load. Built for Texas CAHs.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">End selfish scheduling without losing self-service</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI distributes weekends, nights, and holidays before nurses self-pick, then opens the rest. Reliable nurses stop carrying the load. Built for Texas CAHs.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

@@ -227,11 +227,11 @@ Write the answers down before any demo. A demo shows what the software can do. T
 4. If you run a 25-bed Texas CAH with limited IT, ask SimpleScheduleAI to build one real schedule against your roster so you can compare the output, not the sales pitch.
 5. Compare the two on the operating model: ask each vendor, in writing, who maintains configuration and CMS §485.635 documentation as your staff changes. The answer separates a platform you run from a service that runs for you.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Flat monthly pricing. No IT setup. Our AI builds the schedule, our scheduling team checks it, you approve it.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-slate-500 dark:text-slate-400 text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Running a Critical Access Hospital in Texas?</p>
+  <p class="text-muted text-sm mb-6">Flat monthly pricing. No IT setup. Our AI builds the schedule, our scheduling team checks it, you approve it.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
 
 ## Sources

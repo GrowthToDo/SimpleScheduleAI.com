@@ -207,11 +207,11 @@ Before comparing options, define what "best" means for your facility. Four quest
 
 The best healthcare scheduling software for a small hospital is the one that correctly matches your facility's IT capacity, implementation timeline, and whether you want to build schedules or delegate building. A CAH nurse manager spending 8-12 hours per week on scheduling who needs structural relief should evaluate managed service options first. A nurse manager who wants better tools and direct control should evaluate self-serve healthcare scheduling platforms. A clinic with simple scheduling needs may be fine with a generic tool.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Want to See the CAH-Native Option in Practice?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is built specifically for critical access hospitals. It goes live in 3-5 days with zero IT involvement. FLSA, Texas Labor Code, and CMS documentation are defaults. Request a free assessment to see how it compares to what you have now.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Want to See the CAH-Native Option in Practice?</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI is built specifically for critical access hospitals. It goes live in 3-5 days with zero IT involvement. FLSA, Texas Labor Code, and CMS documentation are defaults. Request a free assessment to see how it compares to what you have now.</p>
+  <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

@@ -203,11 +203,11 @@ The limitations are real and worth stating: SimpleScheduleAI is not built for ho
 4. Estimate the hours your nurse manager spends on the schedule each week and what they cost. The [ROI calculator](/roi) turns that into a dollar figure you can weigh against any tool.
 5. If building the schedule and chasing callouts is the real drain, [book a call](https://cal.com/gautham-8bdvdx/30min) or [see how it works](/how-it-works) and have a CAH-scale schedule built against your own roster.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Built for 20-bed hospitals, not scaled down from 500-bed systems.</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI onboards in 3-5 days via Excel upload. No IT team needed. Flat monthly pricing for Texas Critical Access Hospitals, no per-nurse fees.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Built for 20-bed hospitals, not scaled down from 500-bed systems.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI onboards in 3-5 days via Excel upload. No IT team needed. Flat monthly pricing for Texas Critical Access Hospitals, no per-nurse fees.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

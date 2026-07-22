@@ -247,13 +247,13 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals runni
 4. **Set a consecutive-shift cap as a hard rule.** No nurse works more than 3 consecutive 12-hour shifts without a day off. Add this to your scheduling policy and apply it before posting, not after.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service delivers a compliant 12-hour shift schedule each cycle with the fairness, fatigue, and overtime guards already applied. Start at [how it works](/how-it-works).
 
-<div class="not-prose my-10 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-7 flex flex-col gap-4">
+<div class="not-prose my-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
-    <p class="text-lg font-bold text-blue-900 dark:text-slate-100">Tired of rebuilding the 12-hour rotation every cycle?</p>
-    <p class="text-blue-800 dark:text-slate-300 mt-1">SimpleScheduleAI applies coverage minimums, weekend distribution rules, fatigue constraints, and FLSA overtime logic before the schedule lands in your inbox. You review and approve.</p>
+    <p class="text-lg font-bold text-default dark:text-slate-100">Tired of rebuilding the 12-hour rotation every cycle?</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI applies coverage minimums, weekend distribution rules, fatigue constraints, and FLSA overtime logic before the schedule lands in your inbox. You review and approve.</p>
   </div>
-  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+  <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

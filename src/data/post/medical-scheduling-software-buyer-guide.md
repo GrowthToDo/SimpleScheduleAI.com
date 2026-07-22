@@ -164,11 +164,11 @@ Category labels only get you to a shortlist. To separate a tool that will actual
 4. Total the real annual cost: license plus implementation plus the manager hours the tool still consumes each week.
 5. If a done-for-you service fits your facility better than another tool to operate, [see how SimpleScheduleAI works](/how-it-works).
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">Not sure which category fits your hospital?</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI is an AI-native nurse scheduling service built specifically for critical access hospitals. It goes live in 3 to 5 days with no IT involvement. Book a call to see how it compares to a self-serve platform for your roster.</p>
-  <a href="/pricing" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Not sure which category fits your hospital?</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI is an AI-native nurse scheduling service built specifically for critical access hospitals. It goes live in 3 to 5 days with no IT involvement. Book a call to see how it compares to a self-serve platform for your roster.</p>
+  <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

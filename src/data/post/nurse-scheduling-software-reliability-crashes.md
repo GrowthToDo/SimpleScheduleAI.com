@@ -113,11 +113,11 @@ Because the specialist maintains the scheduling record and the last-published ve
 
 One honest limitation: SimpleScheduleAI does not have a 24/7 support line with rotating coverage. If an issue arises at 3am, the specialist will address it during business hours. For facilities where middle-of-the-night real-time access to the scheduling system is a regular operational need, a platform with round-the-clock support staff may be a better fit. For facilities where the primary reliability concern is a scheduling failure during a business-hours scheduling cycle, the managed service model addresses the most common risk scenario.
 
-<div class="not-prose my-12 rounded-xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">When something goes wrong, your specialist answers, not a ticket queue.</p>
-  <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">SimpleScheduleAI assigns a dedicated specialist to each facility. No IT setup required.</p>
-  <a href="/how-it-works" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-blue-600 dark:text-blue-400 underline">Book a call with our team →</a></p>
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">When something goes wrong, your specialist answers, not a ticket queue.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI assigns a dedicated specialist to each facility. No IT setup required.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions

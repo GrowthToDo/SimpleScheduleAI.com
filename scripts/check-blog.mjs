@@ -507,7 +507,7 @@ function check(file) {
   // Count actual CTA BOXES by the canonical box background, not booking links
   // (a post may legitimately have an inline cal.com link in a "What to Do" step
   // without that being a second CTA box).
-  const ctaBoxCount = (bodyText.match(/bg-blue-50 dark:bg-slate-800/g) || []).length;
+  const ctaBoxCount = (bodyText.match(/rounded-xl bg-primary\/5/g) || []).length;
   if (ctaBoxCount > 1) {
     fail(`More than one CTA box (${ctaBoxCount}): exactly one CTA box per post, after "What to Do This Week"`, 0, '');
   }
