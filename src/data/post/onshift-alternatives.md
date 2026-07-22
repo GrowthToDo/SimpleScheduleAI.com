@@ -111,7 +111,7 @@ The table below covers customer focus, public ratings, and setup time across the
         <td class="py-3 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
@@ -431,54 +431,54 @@ The core difference is target environment and operating model. OnShift is a self
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:30%">Feature</th>
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:35%">OnShift</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:35%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:35%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Target environment</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Long-term care, assisted living, SNF</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Critical Access Hospitals, acute care nursing</td>
+        <td class="py-3 text-primary">Critical Access Hospitals, acute care nursing</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Operating model</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Self-serve platform, manager runs it</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Managed service, specialist runs it</td>
+        <td class="py-3 text-primary">Managed service, specialist runs it</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Callout model</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor; documented as open-shift posting</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Ranked shortlist delivered in under 2 min</td>
+        <td class="py-3 text-primary">Ranked shortlist delivered in under 2 min</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Credential enforcement in callout</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Filtered by unit credentials before list reaches manager</td>
+        <td class="py-3 text-primary">Filtered by unit credentials before list reaches manager</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm survey-ready export with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Maintained automatically, always current</td>
+        <td class="py-3 text-primary">Maintained automatically, always current</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Overtime ranking in callout</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Built into the shortlist by default</td>
+        <td class="py-3 text-primary">Built into the shortlist by default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">LTC caregiver engagement</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Documented core feature</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Not applicable; not an LTC product</td>
+        <td class="py-3 text-primary">Not applicable; not an LTC product</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation time</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Excel upload, days to first draft</td>
+        <td class="py-3 text-primary">Excel upload, days to first draft</td>
       </tr>
       <tr class="align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Manager control</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Full, direct control</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">High-level, via draft selection</td>
+        <td class="py-3 text-primary">High-level, via draft selection</td>
       </tr>
     </tbody>
   </table>

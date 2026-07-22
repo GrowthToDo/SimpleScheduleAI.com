@@ -120,7 +120,7 @@ Enterprise staffing software typically requires: IT department involvement for i
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-red-700 dark:text-red-400">No</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top font-semibold text-blue-700 dark:text-blue-400">Managed service (SimpleScheduleAI)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top font-semibold text-primary">Managed service (SimpleScheduleAI)</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-green-700 dark:text-green-400">3-5 days</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-green-700 dark:text-green-400">No</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-green-700 dark:text-green-400">Yes, built-in</td>

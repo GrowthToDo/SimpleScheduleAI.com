@@ -118,7 +118,7 @@ The common options split into four groups: spreadsheets, consumer shift apps, ho
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed; contact vendor</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-3 font-medium text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="py-3 pr-3 font-medium text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Texas CAHs with limited IT and no dedicated scheduler</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Managed; no IT, Excel roster in</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>

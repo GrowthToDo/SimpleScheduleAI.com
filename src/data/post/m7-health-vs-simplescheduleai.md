@@ -126,7 +126,7 @@ The honest comparison is not feature by feature. It is model against model. M7 H
       <tr class="border-b-2 border-slate-200 dark:border-slate-700 align-top">
         <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:24%">Dimension</th>
         <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:38%">M7 Health</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:38%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:38%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>

@@ -113,7 +113,7 @@ The table below covers customer focus, public ratings, and setup time across the
         <td class="py-3 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
@@ -436,59 +436,59 @@ The core difference is scale and operating model. Smart Square is a self-serve e
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:30%">Feature</th>
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:35%">symplr Smart Square</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:35%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:35%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Target scale</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Health systems, multi-facility</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Single 25-bed Critical Access Hospital</td>
+        <td class="py-3 text-primary">Single 25-bed Critical Access Hospital</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Operating model</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Self-serve platform, customer-run</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Managed service, specialist-run</td>
+        <td class="py-3 text-primary">Managed service, specialist-run</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Staff needed to run it</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Labor-management or HRIS staff</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">None; service handles it</td>
+        <td class="py-3 text-primary">None; service handles it</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm CAH workflow with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Automatic, always current</td>
+        <td class="py-3 text-primary">Automatic, always current</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Callout overtime ranking</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Automated, built into shortlist</td>
+        <td class="py-3 text-primary">Automated, built into shortlist</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Configuration maintenance</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Customer responsibility</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Service responsibility</td>
+        <td class="py-3 text-primary">Service responsibility</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime thresholds (Texas)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm configuration with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Built in as default</td>
+        <td class="py-3 text-primary">Built in as default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Predictive analytics across facilities</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Core strength at system scale</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Not applicable at single-CAH scale</td>
+        <td class="py-3 text-primary">Not applicable at single-CAH scale</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation time</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Excel upload, days to first draft</td>
+        <td class="py-3 text-primary">Excel upload, days to first draft</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Pricing model</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Enterprise quote-based, not public</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Not listed, contact for quote</td>
+        <td class="py-3 text-primary">Not listed, contact for quote</td>
       </tr>
     </tbody>
   </table>

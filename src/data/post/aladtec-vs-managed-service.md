@@ -61,7 +61,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
       <tr class="bg-slate-100 dark:bg-slate-800">
         <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-800 dark:text-slate-200" style="width:33%">Dimension</th>
         <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-800 dark:text-slate-200" style="width:33%">Aladtec</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-blue-700 dark:text-blue-400" style="width:34%">SimpleScheduleAI (AI-native service)</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-primary" style="width:34%">SimpleScheduleAI (AI-native service)</th>
       </tr>
     </thead>
     <tbody>

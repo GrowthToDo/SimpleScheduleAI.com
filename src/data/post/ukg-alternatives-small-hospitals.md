@@ -148,7 +148,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">50-200 beds, with IT support</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-semibold text-blue-700 dark:text-blue-400 align-top">SimpleScheduleAI</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-semibold text-primary align-top">SimpleScheduleAI</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Managed service</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">48 hours</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">None</td>
@@ -300,49 +300,49 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:30%">Feature</th>
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100 align-top" style="width:35%">UKG</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400 align-top" style="width:35%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary align-top" style="width:35%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Implementation timeline</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-12 months, dedicated IT required</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">48 hours, Excel upload</td>
+        <td class="py-3 text-primary align-top">48 hours, Excel upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">IT infrastructure required</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Yes, significant</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">None</td>
+        <td class="py-3 text-primary align-top">None</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">CMS §485.635 documentation</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Yes, if configured correctly</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">Yes, automatic default</td>
+        <td class="py-3 text-primary align-top">Yes, automatic default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">FLSA overtime threshold tracking</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Yes, if configured correctly</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">Yes, built-in default</td>
+        <td class="py-3 text-primary align-top">Yes, built-in default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Ongoing configuration burden</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">High, requires HRIS/IT staff</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">None, service manages</td>
+        <td class="py-3 text-primary align-top">None, service manages</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Weekly scheduling time</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-12 hours (manager + IT)</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">1-2 hours (review + approval)</td>
+        <td class="py-3 text-primary align-top">1-2 hours (review + approval)</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Enterprise workforce analytics</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Yes, comprehensive</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">Reporting via service</td>
+        <td class="py-3 text-primary align-top">Reporting via service</td>
       </tr>
       <tr class="align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Best fit facility size</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">200+ beds, large health systems</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400 align-top">Up to 25 beds (CAHs)</td>
+        <td class="py-3 text-primary align-top">Up to 25 beds (CAHs)</td>
       </tr>
     </tbody>
   </table>

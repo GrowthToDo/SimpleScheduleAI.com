@@ -140,7 +140,7 @@ A successful UKG migration at a 25-bed hospital follows a 60-day parallel operat
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
     <thead>
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
-        <th class="text-left py-2 pr-3 font-semibold text-blue-700 dark:text-blue-400" style="width:25%">Day -60 to -45</th>
+        <th class="text-left py-2 pr-3 font-semibold text-primary" style="width:25%">Day -60 to -45</th>
         <th class="text-left py-2 pr-3 font-semibold text-green-700 dark:text-green-400" style="width:25%">Day -45 to -30</th>
         <th class="text-left py-2 pr-3 font-semibold text-yellow-700 dark:text-yellow-400" style="width:25%">Day -30 to 0</th>
         <th class="text-left py-2 font-semibold text-red-700 dark:text-red-400" style="width:25%">Day 0 to +30</th>

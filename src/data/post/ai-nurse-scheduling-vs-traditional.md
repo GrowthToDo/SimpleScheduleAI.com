@@ -213,7 +213,7 @@ At a 25-bed hospital, traditional Excel scheduling costs the manager 8 to 12 hou
         <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:25%">Task</th>
         <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:25%">Traditional (Excel)</th>
         <th class="text-left py-3 pr-3 font-semibold text-slate-900 dark:text-slate-100" style="width:25%">Scheduling Software (AI)</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:25%">Managed Service (AI)</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:25%">Managed Service (AI)</th>
       </tr>
     </thead>
     <tbody>

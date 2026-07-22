@@ -84,7 +84,7 @@ UKG fails at a 25-bed hospital because every operational assumption the platform
     </div>
   </div>
   <div class="rounded-lg border border-red-200 dark:border-red-800 bg-white dark:bg-slate-800 overflow-hidden">
-    <div class="bg-blue-700 dark:bg-blue-800 px-3 py-2">
+    <div class="bg-primary px-3 py-2">
       <p class="font-bold text-white text-xs">Ongoing Overhead</p>
     </div>
     <div class="px-3 py-3 space-y-2">
@@ -158,7 +158,7 @@ These requirements can be met by purpose-built tools at a fraction of UKG's cost
         <th class="py-3 px-3 text-left font-semibold bg-slate-700 dark:bg-slate-600 text-white border border-slate-600 dark:border-slate-500 align-top">Dimension</th>
         <th class="py-3 px-3 text-left font-semibold bg-[#1A2332] dark:bg-[#1A2332] text-white border border-slate-300 dark:border-slate-600 align-top">Aladtec</th>
         <th class="py-3 px-3 text-left font-semibold bg-orange-600 dark:bg-orange-700 text-white border border-slate-300 dark:border-slate-600 align-top">SmartLinx</th>
-        <th class="py-3 px-3 text-left font-semibold bg-blue-700 dark:bg-blue-800 text-white border border-slate-300 dark:border-slate-600 align-top">SimpleScheduleAI</th>
+        <th class="py-3 px-3 text-left font-semibold bg-primary text-white border border-slate-300 dark:border-slate-600 align-top">SimpleScheduleAI</th>
         <th class="py-3 px-3 text-left font-semibold bg-slate-700 dark:bg-slate-600 text-white border border-slate-300 dark:border-slate-600 align-top">UKG</th>
       </tr>
     </thead>

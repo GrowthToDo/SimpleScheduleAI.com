@@ -64,7 +64,7 @@ The phrase "nurse scheduling app" covers a wide range of products. Some are purp
     </thead>
     <tbody>
       <tr>
-        <td class="border border-slate-300 px-4 py-2 font-semibold text-blue-700">SimpleScheduleAI</td>
+        <td class="border border-slate-300 px-4 py-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="border border-slate-300 px-4 py-2">CAH managed service + mobile review</td>
         <td class="border border-slate-300 px-4 py-2">Yes, CAH-specific</td>
         <td class="border border-slate-300 px-4 py-2">Review and approval</td>

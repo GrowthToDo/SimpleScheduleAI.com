@@ -153,7 +153,7 @@ For a critical access hospital, scheduling requirements differ from what QGenda 
         <td class="py-3 text-slate-600 dark:text-slate-400">Days</td>
       </tr>
       <tr class="align-top">
-        <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
@@ -337,49 +337,49 @@ QGenda is worth keeping if:
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:30%">Feature</th>
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:35%">QGenda</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:35%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:35%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Target scheduling type</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Physician + nurse, large systems</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Nurse scheduling, CAH-specific</td>
+        <td class="py-3 text-primary">Nurse scheduling, CAH-specific</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation timeline</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">6-12 weeks, needs IT</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">3-5 days, Excel upload</td>
+        <td class="py-3 text-primary">3-5 days, Excel upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Yes, configured module</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Yes, automatic default</td>
+        <td class="py-3 text-primary">Yes, automatic default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Callout replacement ranking</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Configurable</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Built in, credentialed + OT-ranked</td>
+        <td class="py-3 text-primary">Built in, credentialed + OT-ranked</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Ongoing configuration burden</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">High, requires dedicated admin</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">None, service manages</td>
+        <td class="py-3 text-primary">None, service manages</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime thresholds (Texas)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Configurable</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Built in as default</td>
+        <td class="py-3 text-primary">Built in as default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Physician scheduling</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Yes, core feature</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Not included</td>
+        <td class="py-3 text-primary">Not included</td>
       </tr>
       <tr class="align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Best fit facility size</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">100+ beds, large health systems</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Up to 25 beds (CAHs)</td>
+        <td class="py-3 text-primary">Up to 25 beds (CAHs)</td>
       </tr>
     </tbody>
   </table>

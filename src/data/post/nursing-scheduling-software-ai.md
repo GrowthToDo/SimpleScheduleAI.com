@@ -90,7 +90,7 @@ Being honest about AI limitations matters. CAH administrators need accurate expe
           <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Dimension</th>
           <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Manual (Excel/paper)</th>
           <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Traditional software</th>
-          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-primary dark:border-slate-700 dark:text-blue-400 align-top">AI-assisted (managed)</th>
+          <th class="border border-slate-300 px-4 py-2 text-left font-semibold text-primary dark:border-slate-700 align-top">AI-assisted (managed)</th>
         </tr>
       </thead>
       <tbody>

@@ -194,7 +194,7 @@ Before comparing options, define what "best" means for your facility. Four quest
         <td class="border border-slate-300 px-4 py-2">Nurse manager</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 px-4 py-2 font-semibold text-blue-700">SimpleScheduleAI</td>
+        <td class="border border-slate-300 px-4 py-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="border border-slate-300 px-4 py-2 text-green-700">3-5 days</td>
         <td class="border border-slate-300 px-4 py-2 text-green-700">None</td>
         <td class="border border-slate-300 px-4 py-2 text-green-700">Yes, built-in</td>

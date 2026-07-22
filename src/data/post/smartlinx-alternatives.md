@@ -127,7 +127,7 @@ SmartLinx competes in a different tier than most small hospital alternatives. Th
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="py-3 pr-4 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">CAHs, managed service</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Days, no IT needed</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, automatic</td>
@@ -344,49 +344,49 @@ The most meaningful difference between SmartLinx and SimpleScheduleAI for a 25-b
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="text-left py-3 pr-4 font-semibold text-slate-700 dark:text-slate-300" style="width:40%">Feature</th>
         <th class="text-left py-3 pr-4 font-semibold text-slate-700 dark:text-slate-300" style="width:30%">SmartLinx</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:30%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:30%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Implementation timeline</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">3-4 months, needs IT</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Days, Excel upload</td>
+        <td class="py-3 text-primary">Days, Excel upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">CMS §485.635 documentation</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, configured module</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Yes, automatic default</td>
+        <td class="py-3 text-primary">Yes, automatic default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Callout overtime ranking</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, configurable rules</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Yes, built in</td>
+        <td class="py-3 text-primary">Yes, built in</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Time and attendance integration</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, integrated</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Not included</td>
+        <td class="py-3 text-primary">Not included</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Ongoing IT dependency</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">High, required for changes</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">None, service manages</td>
+        <td class="py-3 text-primary">None, service manages</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Labor analytics dashboards</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, full analytics</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Reporting via service</td>
+        <td class="py-3 text-primary">Reporting via service</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Best fit roster size</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">50-150 beds</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Up to 25 beds (CAHs)</td>
+        <td class="py-3 text-primary">Up to 25 beds (CAHs)</td>
       </tr>
       <tr class="align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Pricing model</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Per-user, not listed</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Not listed, contact for quote</td>
+        <td class="py-3 text-primary">Not listed, contact for quote</td>
       </tr>
     </tbody>
   </table>

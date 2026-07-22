@@ -117,7 +117,7 @@ The clearest way to see the gap is across the operating model, not feature check
       <tr class="bg-slate-100 dark:bg-slate-800">
         <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-800 dark:text-slate-200" style="width:24%">Dimension</th>
         <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-800 dark:text-slate-200" style="width:38%">In-House Health</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-blue-700 dark:text-blue-400" style="width:38%">SimpleScheduleAI</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-primary" style="width:38%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>

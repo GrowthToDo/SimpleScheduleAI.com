@@ -106,7 +106,7 @@ SimpleScheduleAI and Aladtec are the only options in this list with documented h
         <td class="py-3 text-slate-600 dark:text-slate-400">$4.50/user</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="py-3 pr-4 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">CAHs, managed service</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, automatic</td>
@@ -344,49 +344,49 @@ SimpleScheduleAI is purpose-built for clinical nurse scheduling where Deputy is 
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="text-left py-3 pr-4 font-semibold text-slate-700 dark:text-slate-300" style="width:40%">Feature</th>
         <th class="text-left py-3 pr-4 font-semibold text-slate-700 dark:text-slate-300" style="width:30%">Deputy</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:30%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:30%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Healthcare credential enforcement</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Yes, in replacement list</td>
+        <td class="py-3 text-primary">Yes, in replacement list</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">CMS §485.635 documentation</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Yes, automatic</td>
+        <td class="py-3 text-primary">Yes, automatic</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">FLSA overtime threshold tracking</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented; confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Yes, default for CAHs</td>
+        <td class="py-3 text-primary">Yes, default for CAHs</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Callout replacement model</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Broadcast open shift</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Ranked shortlist, 2 min</td>
+        <td class="py-3 text-primary">Ranked shortlist, 2 min</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Implementation burden</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Minimal, days to deploy</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Low, Excel upload, days</td>
+        <td class="py-3 text-primary">Low, Excel upload, days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Target environment</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">General workforce</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">CAH, acute care nursing</td>
+        <td class="py-3 text-primary">CAH, acute care nursing</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Texas Labor Code compliance</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Yes, built-in default for TX CAHs</td>
+        <td class="py-3 text-primary">Yes, built-in default for TX CAHs</td>
       </tr>
       <tr class="align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Pricing</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">$4.50/user/month</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Not listed, contact for quote</td>
+        <td class="py-3 text-primary">Not listed, contact for quote</td>
       </tr>
     </tbody>
   </table>

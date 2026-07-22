@@ -63,7 +63,7 @@ Charge nurses at CAHs carry a heavier scheduling burden than staff nurses, not j
     </thead>
     <tbody>
       <tr>
-        <td class="border border-slate-300 px-4 py-2 font-semibold text-blue-700">SimpleScheduleAI</td>
+        <td class="border border-slate-300 px-4 py-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="border border-slate-300 px-4 py-2">CAH charge nurse scheduling</td>
         <td class="border border-slate-300 px-4 py-2">Automated</td>
         <td class="border border-slate-300 px-4 py-2">Automated</td>

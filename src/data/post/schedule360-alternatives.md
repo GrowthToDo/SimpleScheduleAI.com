@@ -180,7 +180,7 @@ For a critical access hospital, scheduling requirements differ from what a broad
         <td class="py-3 text-slate-600 dark:text-slate-400">Days</td>
       </tr>
       <tr class="align-top">
-        <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Texas Critical Access Hospitals</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
@@ -366,49 +366,49 @@ Schedule360 is worth keeping if:
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:30%">Feature</th>
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:35%">Schedule360</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:35%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:35%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Target customer</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Specialty clinics, hospitals, urgent care, pharmacies, govt agencies</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Texas Critical Access Hospitals (up to 25 beds)</td>
+        <td class="py-3 text-primary">Texas Critical Access Hospitals (up to 25 beds)</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Delivery model</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Self-serve software platform</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Managed service (AI builds, scheduler checks)</td>
+        <td class="py-3 text-primary">Managed service (AI builds, scheduler checks)</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation timeline</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">3 to 5 days from Excel roster upload</td>
+        <td class="py-3 text-primary">3 to 5 days from Excel roster upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Not documented on product page; confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Automatic default; included in weekly service</td>
+        <td class="py-3 text-primary">Automatic default; included in weekly service</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime threshold tracking</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Built in as default before publish</td>
+        <td class="py-3 text-primary">Built in as default before publish</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Callout coverage logic</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Broadcast SMS, email, pager (first-come-first-serve)</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Ranked replacement list filtered by credentials and OT risk</td>
+        <td class="py-3 text-primary">Ranked replacement list filtered by credentials and OT risk</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Ongoing configuration burden</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Nurse manager maintains rules engine</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">None; service maintains rules between releases</td>
+        <td class="py-3 text-primary">None; service maintains rules between releases</td>
       </tr>
       <tr class="align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Best fit facility size</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Large health systems, specialty-clinic chains</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Up to 25 beds (CAHs)</td>
+        <td class="py-3 text-primary">Up to 25 beds (CAHs)</td>
       </tr>
     </tbody>
   </table>

@@ -56,7 +56,7 @@ TCP TimeClock+ is a time and attendance platform made by TCP Software. It combin
       <tr class="bg-slate-100 dark:bg-slate-800">
         <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-800 dark:text-slate-200" style="width:28%">Dimension</th>
         <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-slate-800 dark:text-slate-200" style="width:36%">TCP TimeClock+</th>
-        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-blue-700 dark:text-blue-400" style="width:36%">Managed Service (SimpleScheduleAI)</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-4 py-3 text-left font-semibold text-primary" style="width:36%">Managed Service (SimpleScheduleAI)</th>
       </tr>
     </thead>
     <tbody>

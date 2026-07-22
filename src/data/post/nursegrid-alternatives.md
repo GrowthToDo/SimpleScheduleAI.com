@@ -125,7 +125,7 @@ The table below covers customer focus, public ratings, and setup time across Nur
         <td class="py-3 text-slate-600 dark:text-slate-400">Hours to days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
@@ -456,54 +456,54 @@ The core difference is scope and operating model. NurseGrid is a self-serve, nur
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:30%">Feature</th>
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:35%">NurseGrid</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:35%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:35%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Primary scope</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Nurse-facing communication layer</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Manager-side scheduling and compliance</td>
+        <td class="py-3 text-primary">Manager-side scheduling and compliance</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Schedule construction</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Manager builds (desktop login)</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">3 drafts delivered in 48 hrs</td>
+        <td class="py-3 text-primary">3 drafts delivered in 48 hrs</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Not documented on product page</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Automatic, always current</td>
+        <td class="py-3 text-primary">Automatic, always current</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime tracking</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Built in as default</td>
+        <td class="py-3 text-primary">Built in as default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Callout overtime ranking</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Not documented on product page</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Automated, built into shortlist</td>
+        <td class="py-3 text-primary">Automated, built into shortlist</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Nurse-facing mobile app</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Yes, core strength (iOS-focused)</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">No nurse-facing app</td>
+        <td class="py-3 text-primary">No nurse-facing app</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Configuration maintenance</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Manager responsibility</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Service responsibility</td>
+        <td class="py-3 text-primary">Service responsibility</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation time</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Hours to days</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">3-5 days via Excel roster</td>
+        <td class="py-3 text-primary">3-5 days via Excel roster</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Manager control</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Full, direct control</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">High-level, via draft selection</td>
+        <td class="py-3 text-primary">High-level, via draft selection</td>
       </tr>
     </tbody>
   </table>

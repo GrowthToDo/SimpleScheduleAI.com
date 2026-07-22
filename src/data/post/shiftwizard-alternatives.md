@@ -110,7 +110,7 @@ For a CAH evaluating ShiftWizard, ask the demo to walk through swap workflows fr
         <td class="py-3 text-slate-600 dark:text-slate-400">2-4 weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-semibold text-blue-700 dark:text-blue-400">SimpleScheduleAI</td>
+        <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">CAHs, no IT, NM on clinical shifts</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
@@ -328,59 +328,59 @@ If all of these conditions apply, the switch cost and learning curve of an alter
       <tr class="border-b-2 border-slate-200 dark:border-slate-700">
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:30%">Feature</th>
         <th class="text-left py-3 pr-2 font-semibold text-slate-900 dark:text-slate-100" style="width:35%">ShiftWizard</th>
-        <th class="text-left py-3 font-semibold text-blue-700 dark:text-blue-400" style="width:35%">SimpleScheduleAI</th>
+        <th class="text-left py-3 font-semibold text-primary" style="width:35%">SimpleScheduleAI</th>
       </tr>
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Schedule construction</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Manager builds, platform assists</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">3 drafts: AI builds, specialist-verified, in 48 hrs</td>
+        <td class="py-3 text-primary">3 drafts: AI builds, specialist-verified, in 48 hrs</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Platform-assisted, manager-driven export</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Automatic, always current</td>
+        <td class="py-3 text-primary">Automatic, always current</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Callout overtime ranking</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Manual check by manager</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Automated, built into shortlist</td>
+        <td class="py-3 text-primary">Automated, built into shortlist</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Configuration maintenance</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Manager / IT responsibility</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Service responsibility</td>
+        <td class="py-3 text-primary">Service responsibility</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime thresholds (Texas)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Configurable (requires setup)</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Built in as default</td>
+        <td class="py-3 text-primary">Built in as default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation time</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">2-4 weeks typical</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Excel upload, 3-5 days to first draft</td>
+        <td class="py-3 text-primary">Excel upload, 3-5 days to first draft</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">IT requirement</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Minimal</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">None</td>
+        <td class="py-3 text-primary">None</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Staff-facing mobile app</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Yes</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">No</td>
+        <td class="py-3 text-primary">No</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Manager direct schedule control</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Full, real-time</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">High-level, via draft approval</td>
+        <td class="py-3 text-primary">High-level, via draft approval</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Pricing</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Not listed publicly, contact vendor</td>
-        <td class="py-3 text-blue-700 dark:text-blue-400">Flat monthly, $1,000-1,500 by roster size</td>
+        <td class="py-3 text-primary">Flat monthly, $1,000-1,500 by roster size</td>
       </tr>
     </tbody>
   </table>

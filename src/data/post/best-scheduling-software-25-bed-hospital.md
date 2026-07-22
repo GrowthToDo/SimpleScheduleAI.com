@@ -64,7 +64,7 @@ Here is how the five platforms most commonly evaluated at 25-bed scale compare b
     </thead>
     <tbody class="bg-white dark:bg-slate-900">
       <tr>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-semibold text-blue-700 dark:text-blue-400 align-top">SimpleScheduleAI</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-semibold text-primary align-top">SimpleScheduleAI</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Built for 25-bed CAHs</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Yes, built in</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Ranked shortlist in 2 min</td>
@@ -404,7 +404,7 @@ The decision comes down to two operational questions: does the nurse manager als
       <tr>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Nurse manager also covers clinical shifts</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Managed service is acceptable</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-semibold text-blue-700 dark:text-blue-400 align-top">SimpleScheduleAI - best fit</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-semibold text-primary align-top">SimpleScheduleAI - best fit</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/40">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Nurse manager also covers clinical shifts</td>
