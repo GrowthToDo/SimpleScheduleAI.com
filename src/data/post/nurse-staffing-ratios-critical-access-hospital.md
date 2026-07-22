@@ -188,5 +188,7 @@ By documenting to its plan. The staffing committee's written plan is the standar
 
 ---
 
+_Related: for the state-by-state legal picture, see [nurse-to-patient ratios by state](/blog/nurse-to-patient-ratios-by-state)._
+
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

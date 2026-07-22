@@ -295,5 +295,7 @@ Best practice is maintaining scheduling and payroll documentation for five years
 
 ---
 
+_Related: [nurse-to-patient ratios by state](/blog/nurse-to-patient-ratios-by-state) shows Texas sets no fixed ratio at all._
+
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

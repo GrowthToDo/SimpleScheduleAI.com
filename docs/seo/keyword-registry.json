@@ -513,4 +513,13 @@
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Trendjack newsroom article; news-entity keyword, no evergreen collision."
   }
+,
+{
+    "slug": "nurse-to-patient-ratios-by-state",
+    "type": "post",
+    "url": "/blog/nurse-to-patient-ratios-by-state",
+    "primaryKeyword": "nurse to patient ratios by state",
+    "pillar": "/nurse-scheduling-software",
+    "note": "State-by-state legal map (only CA/OR/MA have ratio laws); differentiated from the CAH-internal ratios post."
+  }
 ]

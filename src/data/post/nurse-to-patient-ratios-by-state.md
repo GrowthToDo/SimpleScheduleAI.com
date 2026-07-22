@@ -1,6 +1,6 @@
 ---
-draft: true
-publishDate: 2026-07-18T00:00:00Z
+draft: false
+publishDate: 2026-07-22T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Nurse-to-Patient Ratios by State: The 2026 Map'
 excerpt: >
