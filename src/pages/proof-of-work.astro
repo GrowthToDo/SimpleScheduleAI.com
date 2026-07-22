@@ -13,7 +13,7 @@ const metadata = {
 };
 
 const calLink = 'https://cal.com/gautham-8bdvdx/30min';
-const asOf = '10 July 2026';
+const asOf = '22 July 2026';
 
 // Search traction data, pulled directly from Google Search Console and Bing
 // Webmaster Tools APIs on 10 July 2026. Positions are the averages those
@@ -97,18 +97,28 @@ const rankData = [
 ];
 const rankPct = (p: number) => (((p - 1) / 11) * 100).toFixed(1);
 
-// Answer engines that currently name AND cite the site on our core buyer
-// prompt. Only engines where we actually appear are listed.
+// Answer engines that name AND cite the site on our core buyer prompts.
+// Only engines where we actually appear are listed.
 const aiCites = [
+  {
+    engine: 'Perplexity · Sonar Pro',
+    result: 'Named us on all three buyer prompts, citing four pages on the CAH-in-Texas question.',
+    date: '22 Jul 2026',
+  },
+  {
+    engine: 'ChatGPT · GPT-5.5',
+    result: 'Named us the best fit for a small CAH in Texas, and cited our comparison page.',
+    date: '22 Jul 2026',
+  },
+  {
+    engine: 'Gemini · 2.5 Flash',
+    result: 'Named us on two of three buyer prompts.',
+    date: '22 Jul 2026',
+  },
   {
     engine: 'Google AI Overview',
     result: 'Named SimpleScheduleAI the first of three picks, and cited this site.',
     date: '13 Jul 2026',
-  },
-  {
-    engine: 'ChatGPT · GPT-5.5',
-    result: "Named us the best small-CAH emerging option, and cited this site's comparison page.",
-    date: '12 Jul 2026',
   },
 ];
 
@@ -528,9 +538,7 @@ const distribution = [
       </p>
 
       <h4 class="mt-10 text-base font-bold text-gray-900 dark:text-white">AI answer engines</h4>
-      <p class="mt-2 text-sm text-muted">
-        On our core buyer prompt, two answer engines currently name and cite the site:
-      </p>
+      <p class="mt-2 text-sm text-muted">On our core buyer prompts, four answer engines now name and cite the site:</p>
       <div class="mt-4 grid gap-3 sm:grid-cols-2">
         {
           aiCites.map((a) => (
@@ -561,11 +569,27 @@ const distribution = [
       </p>
 
       <p class="mt-4 text-sm text-muted">
-        Third, we run dated engine probes with one buyer prompt: "What is the best nurse scheduling software for a small
-        critical access hospital in Texas?"
+        Third, we run dated engine probes with real buyer prompts, starting with: "What is the best nurse scheduling
+        software for a small critical access hospital in Texas?"
       </p>
 
-      <div class="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5">
+      <div
+        class="mt-4 rounded-2xl border-2 border-emerald-300 dark:border-emerald-700/60 bg-emerald-50 dark:bg-emerald-900/15 p-5"
+      >
+        <p class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-300 mb-2">
+          Logged probe · three engines, three prompts · 22 July 2026
+        </p>
+        <p class="text-sm text-gray-800 dark:text-gray-200">
+          A wider run: three buyer prompts across ChatGPT, Perplexity, and Gemini, nine probes in all. SimpleScheduleAI
+          was named in <strong>six of the nine</strong>. The standout is Perplexity, which named us on <strong
+            >all three</strong
+          > prompts, up from zero on 13 July, calling us and Aladtec "the most specialized options" for a Critical Access
+          Hospital in Texas and citing four of our pages. Across every engine, the pages doing the work are our comparison
+          guides.
+        </p>
+      </div>
+
+      <div class="mt-3 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5">
         <p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">
           Logged probe · Google AI Overview · 13 July 2026
         </p>
