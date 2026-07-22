@@ -81,3 +81,15 @@ Prompt (all engines): "What is the best nurse scheduling software for a small cr
 - Note: the engine echoed our own comparison page's honesty note ("newer service with
   limited public reviews") back as its caveat. Honest limitations get quoted; they read
   as credibility, not weakness.
+
+## 2026-07-22 — live multi-engine probes (DataForSEO, post top-up)
+
+Fresh read (dataset was stale at 07-12; these are live-query answers). **6 of 9 mentions across 3 engines**, up sharply from July: Perplexity went 0 -> 3/3.
+
+**Prompts:** (1) best nurse scheduling software for a small CAH in Texas; (2) good QGenda alternatives for a 25-bed rural hospital; (3) can AI build a compliant nurse schedule for a CAH.
+
+- **ChatGPT gpt-5.5 — 1/3.** Prompt 1 YES: named "Best fit: SimpleScheduleAI" for a small CAH in Texas, cited /blog/best-nurse-scheduling-software-critical-access-hospitals (utm_source=openai). Prompts 2, 3: not named.
+- **Perplexity sonar-pro — 3/3 (breakthrough; was NOT featured on 2026-07-13).** Prompt 1: named SimpleScheduleAI + Aladtec as "the most specialized options" for a CAH in Texas, cited 4 URLs (/nurse-scheduling-software, /blog, /blog/best-nurse-scheduling-software-texas, /blog/nursegrid-alternatives). Prompt 2 YES: cited /blog/qgenda-alternatives. Prompt 3 YES.
+- **Gemini 2.5-flash — 2/3.** Prompts 1 and 2 YES; prompt 3 no.
+
+**Read:** the comparison/alternatives blog posts (best-for-CAH, best-texas, qgenda-alternatives, nursegrid-alternatives) are the workhorses getting cited across engines. Retrieval-layer visibility is strong and improving; parametric (training) layer still blocked (Common Crawl 0 pages, Cloudflare AI-crawler block pending). Run cost: dataset $0.607 + 9 probes ~$1.0.
