@@ -1,6 +1,6 @@
 ---
-draft: true
-publishDate: 2026-07-17T00:00:00Z
+draft: false
+publishDate: 2026-07-23T00:00:00Z
 author: 'Pradeep Pandey'
 title: '8-Hour vs 12-Hour Nursing Shifts: Which Fits a 25-Bed Hospital?'
 excerpt: >
@@ -100,7 +100,7 @@ That difference cascades. Two shifts a day means fewer slots to fill and a simpl
 
 A thin roster flips which pattern is easier to staff. With fewer nurses, the 12-hour model wins on raw coverage: only two slots a day instead of three. The 8-hour model needs a deeper bench for three coverage windows, and most small hospitals lack that depth.
 
-Here is the arithmetic. To cover one unit around the clock for a week at two nurses per shift, the 12-hour pattern needs two shifts a day, roughly 28 nurse-shifts; the 8-hour pattern needs three, roughly 42. That is illustrative arithmetic at two nurses per shift, not a staffing minimum, but the ratio holds: an 8-hour grid asks for about half again as many filled slots. On a roster of 15 to 20 nurses, that decides whether the schedule closes, the coverage-density problem we cover in our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub.
+Here is the math. To cover one unit around the clock for a week at two nurses per shift, the 12-hour pattern needs two shifts a day, roughly 28 nurse-shifts; the 8-hour pattern needs three, roughly 42. That is an illustrative count at two nurses per shift, not a staffing minimum, but the ratio holds: an 8-hour grid asks for about half again as many filled slots. On a roster of 15 to 20 nurses, that decides whether the schedule closes, the coverage-density problem we cover in our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub.
 
 ## Which shift length is safer for patients and nurses?
 

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "8-hour-vs-12-hour-nursing-shifts",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-23T02:15:20.198Z",
+      "contentHash": "42dcd5ef232454fa1f3dc2af21ac4aec53803d087ee1f31e8d366ec2102352a5"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-23T02:15:22.351Z",
+      "contentHash": "42dcd5ef232454fa1f3dc2af21ac4aec53803d087ee1f31e8d366ec2102352a5"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-23T02:15:23.480Z",
+      "contentHash": "42dcd5ef232454fa1f3dc2af21ac4aec53803d087ee1f31e8d366ec2102352a5"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-23T02:15:23.505Z",
+      "contentHash": "42dcd5ef232454fa1f3dc2af21ac4aec53803d087ee1f31e8d366ec2102352a5"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-23T02:15:23.505Z",
+      "contentHash": "42dcd5ef232454fa1f3dc2af21ac4aec53803d087ee1f31e8d366ec2102352a5"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-23T02:15:23.505Z",
+      "contentHash": "42dcd5ef232454fa1f3dc2af21ac4aec53803d087ee1f31e8d366ec2102352a5"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-23T02:15:23.506Z",
+      "contentHash": "42dcd5ef232454fa1f3dc2af21ac4aec53803d087ee1f31e8d366ec2102352a5"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev-code-reviewer",
+      "setAt": "2026-07-23T02:15:19.194Z",
+      "contentHash": "7fd9375a4dfc9c96874d9d8b3ef05ecd46ba5aefe820fcfb2fab6cf3c5352b17"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "main-session",
+      "setAt": "2026-07-23T02:15:19.426Z",
+      "contentHash": "7fd9375a4dfc9c96874d9d8b3ef05ecd46ba5aefe820fcfb2fab6cf3c5352b17"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unknown",
+      "setAt": "2026-07-23T02:15:19.603Z",
+      "contentHash": "7fd9375a4dfc9c96874d9d8b3ef05ecd46ba5aefe820fcfb2fab6cf3c5352b17"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-23T02:15:19.842Z",
+      "contentHash": "7fd9375a4dfc9c96874d9d8b3ef05ecd46ba5aefe820fcfb2fab6cf3c5352b17"
+    }
+  },
+  "overrides": []
+}

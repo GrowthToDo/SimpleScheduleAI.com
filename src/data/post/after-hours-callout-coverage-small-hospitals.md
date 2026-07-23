@@ -238,5 +238,7 @@ Many CAHs are well served by 4 to 6 cross-credentialed per-diem nurses with roll
 
 A managed service does not place the calls, but it removes the hardest part of the after-hours callout: building and ranking the list under pressure. The service maintains the ranked shortlist and per-diem bench in advance and captures the compliance record, so the on-call charge nurse spends the 2 AM window calling and confirming, not deciding who is eligible.
 
+_Related: [8-hour vs 12-hour nursing shifts](/blog/8-hour-vs-12-hour-nursing-shifts) shows how shift length changes callout exposure._
+
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
