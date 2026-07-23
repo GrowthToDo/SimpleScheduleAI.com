@@ -180,7 +180,7 @@ const distribution = [
 
 // Section table of contents, used by both the desktop dot-nav and the mobile pill bar below.
 const navItems = [
-  { id: 'idea', num: '01', label: 'Idea' },
+  { id: 'problem-statement', num: '01', label: 'Problem statement' },
   { id: 'voice-of-customer', num: '02', label: 'Voice of customer' },
   { id: 'what-we-built', num: '03', label: 'What we built' },
   { id: 'distribution', num: '04', label: 'Distribution' },
@@ -212,18 +212,20 @@ const navItems = [
     </div>
   </section>
 
-  <!-- Section navigation: dot nav on desktop, sticky pill bar on mobile -->
+  <!-- Section navigation: always-visible pill list on desktop (left rail), sticky pill bar on mobile -->
   <nav
     aria-label="Section navigation"
-    class="toc-nav hidden lg:flex fixed left-6 top-1/2 z-40 -translate-y-1/2 flex-col gap-5"
+    class="toc-nav hidden lg:flex fixed left-6 top-1/2 z-40 -translate-y-1/2 flex-col items-start gap-2"
   >
     {
       navItems.map((item) => (
-        <a href={`#${item.id}`} data-toc-link data-target={item.id} class="toc-link group flex items-center gap-3">
-          <span class="toc-dot h-2.5 w-2.5 shrink-0 rounded-full border-2 border-gray-300 dark:border-gray-600 transition-colors" />
-          <span class="toc-label whitespace-nowrap rounded-md bg-white dark:bg-slate-800 px-2.5 py-1 text-xs font-semibold text-gray-700 dark:text-gray-200 opacity-0 shadow-sm transition-opacity group-hover:opacity-100">
-            {item.num} &middot; {item.label}
-          </span>
+        <a
+          href={`#${item.id}`}
+          data-toc-link
+          data-target={item.id}
+          class="toc-link toc-pill whitespace-nowrap rounded-full border border-gray-300 dark:border-gray-600 bg-white/90 dark:bg-slate-800/90 px-3.5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 shadow-sm backdrop-blur transition-colors"
+        >
+          {item.num} &middot; {item.label}
         </a>
       ))
     }
@@ -238,7 +240,7 @@ const navItems = [
               href={`#${item.id}`}
               data-toc-link
               data-target={item.id}
-              class="toc-link toc-pill shrink-0 whitespace-nowrap rounded-full border border-gray-300 dark:border-gray-600 px-3 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 transition-colors"
+              class="toc-link toc-pill toc-mobile-pill shrink-0 whitespace-nowrap rounded-full border border-gray-300 dark:border-gray-600 px-3 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 transition-colors"
             >
               {item.num} &middot; {item.label}
             </a>
@@ -249,11 +251,11 @@ const navItems = [
   </div>
 
   <!-- 1. Demand existed first -->
-  <section id="idea" data-toc-section class="bg-white">
+  <section id="problem-statement" data-toc-section class="bg-white">
     <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
-      <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-3">01 · How we arrived at the idea</p>
+      <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-3">01 · Problem statement</p>
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-        The idea came from keyword research
+        We identified the problem statement through keyword research
       </h2>
       <p class="mt-4 text-muted">
         We found this problem in search data. In early September 2025 we ran keyword research across the
@@ -746,24 +748,8 @@ const navItems = [
       links.forEach((link) => {
         const isActive = link.dataset.target === id;
         link.classList.toggle('is-active', isActive);
-
-        const dot = link.querySelector<HTMLElement>('.toc-dot');
-        if (dot) {
-          dot.classList.toggle('bg-primary', isActive);
-          dot.classList.toggle('border-primary', isActive);
-          dot.classList.toggle('border-gray-300', !isActive);
-          dot.classList.toggle('dark:border-gray-600', !isActive);
-        }
-
-        const label = link.querySelector<HTMLElement>('.toc-label');
-        if (label) label.style.opacity = isActive ? '1' : '';
-
-        if (link.classList.contains('toc-pill')) {
-          link.classList.toggle('border-gray-300', !isActive);
-          link.classList.toggle('dark:border-gray-600', !isActive);
-          link.classList.toggle('text-gray-600', !isActive);
-          link.classList.toggle('dark:text-gray-300', !isActive);
-          if (isActive) link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        if (isActive && link.classList.contains('toc-mobile-pill')) {
+          link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
         }
       });
     }
