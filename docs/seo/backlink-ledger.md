@@ -27,4 +27,7 @@ Format: `| date | target | tier/tactic | asset pitched | status | link URL |`
 | 2026-07-23 | F6S | T0 submit | kit B | LIVE (pause resolved same day): company page with website link, LinkedIn, kit description, demo video, HR/Nurse Scheduling tags. Cosmetic TODO: rename member account "SimpleScheduleAI"->"Pradeep Pandey"; location says "Texas City, TX" (a real town — change if unintended) | https://www.f6s.com/company/simplescheduleai1 |
 | 2026-07-22 | TORCH (free email) | T0 | kit D | DRAFT READY — founder sends from pradeep@ | — |
 | 2026-07-22 | RHIhub resource submission | T0 | kit E | DRAFT READY — founder submits | — |
+| 2026-07-23 | G2 + Crunchbase + AlternativeTo refresh | T0 claim | kit C copy | DONE by founder — profiles claimed/refreshed with kit copy (verify rendered copy + link on each in ~1wk) | see baseline URLs |
+| 2026-07-23 | TORCH (free email) | T0 | kit D | SENT from pradeep@ — awaiting reply | — |
+| 2026-07-23 | RHIhub resource submission | T0 | kit E | SUBMITTED from pradeep@ — stats page pitched with vendor disclosure; if accepted, template page = second submission a few weeks later | pitched: /rural-hospital-nurse-staffing-statistics |
 
