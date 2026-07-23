@@ -24,7 +24,7 @@ Format: `| date | target | tier/tactic | asset pitched | status | link URL |`
 | 2026-07-22 | Gartner intake (Capterra/GetApp/SoftwareAdvice) | T0 submit | kit A | KIT READY — awaiting founder approval + submission | — |
 | 2026-07-23 | G2 Digital Markets intake (Capterra family) | T0 submit | kit A + 4 screenshots | SUBMITTED by founder via app.g2digitalmarkets.com (product listing, small-business/healthcare target, flat pricing) — awaiting review; check each cabinet (Capterra/GetApp/SoftwareAdvice) separately once approved | — |
 | 2026-07-22 | F6S | T0 submit | kit B | KIT READY — awaiting founder | — |
-| 2026-07-23 | F6S | T0 submit | kit B | BLOCKED: registration paused (used simplescheduleai@gmail.com — free-mail flagged); retry with pradeep@simplescheduleai.com, else email support@f6s.com from the gmail | — |
+| 2026-07-23 | F6S | T0 submit | kit B | LIVE (pause resolved same day): company page with website link, LinkedIn, kit description, demo video, HR/Nurse Scheduling tags. Cosmetic TODO: rename member account "SimpleScheduleAI"->"Pradeep Pandey"; location says "Texas City, TX" (a real town — change if unintended) | https://www.f6s.com/company/simplescheduleai1 |
 | 2026-07-22 | TORCH (free email) | T0 | kit D | DRAFT READY — founder sends from pradeep@ | — |
 | 2026-07-22 | RHIhub resource submission | T0 | kit E | DRAFT READY — founder submits | — |
 
