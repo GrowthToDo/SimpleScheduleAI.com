@@ -22,7 +22,9 @@ Format: `| date | target | tier/tactic | asset pitched | status | link URL |`
 | 2026-07-22 | Reddit r/healthcare thread | T0 audit | — | Mention NOT visible in rendered thread (possibly deleted since GSC crawl); monitor only | https://www.reddit.com/r/healthcare/comments/1jvbviv/ |
 | 2026-07-22 | Unlinked-mention sweep | T0 | — | No third-party unlinked mentions found; FOUND simplescheduleai.netlify.app duplicate ranking for brand -> 301 added to netlify.toml | — |
 | 2026-07-22 | Gartner intake (Capterra/GetApp/SoftwareAdvice) | T0 submit | kit A | KIT READY — awaiting founder approval + submission | — |
+| 2026-07-23 | G2 Digital Markets intake (Capterra family) | T0 submit | kit A + 4 screenshots | SUBMITTED by founder via app.g2digitalmarkets.com (product listing, small-business/healthcare target, flat pricing) — awaiting review; check each cabinet (Capterra/GetApp/SoftwareAdvice) separately once approved | — |
 | 2026-07-22 | F6S | T0 submit | kit B | KIT READY — awaiting founder | — |
+| 2026-07-23 | F6S | T0 submit | kit B | BLOCKED: registration paused (used simplescheduleai@gmail.com — free-mail flagged); retry with pradeep@simplescheduleai.com, else email support@f6s.com from the gmail | — |
 | 2026-07-22 | TORCH (free email) | T0 | kit D | DRAFT READY — founder sends from pradeep@ | — |
 | 2026-07-22 | RHIhub resource submission | T0 | kit E | DRAFT READY — founder submits | — |
 
