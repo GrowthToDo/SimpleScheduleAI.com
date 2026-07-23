@@ -21,12 +21,12 @@ metadata:
 
 Your nurses want 12-hour shifts. Your patient-safety data quietly argues for shorter ones. Both can be true at the same facility, and at a 25-bed hospital you cannot split the difference the way a 300-bed system can.
 
-This guide works through the 8 hour vs 12 hour nursing shifts question for a small, single-unit hospital, where a thin roster changes the math, and closes with the factors that settle it.
+This guide works through the 8 hour vs 12 hour nursing shifts question for a small, single-unit hospital, where a thin roster changes the math, and ends with the things that actually decide it.
 
 ## Key Takeaways
 
 - 12-hour shifts cut daily handoffs from three to two and give nurses longer stretches off, which is why most 25-bed hospitals default to them.
-- The catch is concentration: on a thin roster, one 12-hour callout costs a full half-day of coverage and lands on a smaller backfill bench.
+- The catch: on a thin roster, one 12-hour callout costs a full half-day of coverage, and it lands on a smaller group of people who can cover it.
 - Longer shifts carry a documented safety cost. AHRQ ties shifts over 12.5 hours to higher medication-error risk, and error risk rises significantly once shifts pass 12 hours.
 - 12-hour patterns cross FLSA overtime thresholds faster, since one extra half-shift pushes a nurse past 40 hours. The FLSA 8-and-80 option exists but is a vendor-evaluation question, not a default.
 - 8-hour patterns spread fatigue and overtime risk but demand a deeper bench and a third daily handoff, which small hospitals rarely have the headcount to staff.
@@ -118,7 +118,7 @@ That difference compounds on a thin roster, where the same few people absorb mos
 
 Nurses often prefer 12-hour shifts because three shifts buy four days off, and at a 25-bed hospital that preference doubles as a recruiting tool against larger systems and travel agencies. The counterweight is fatigue: the long shifts nurses ask for are the ones research ties to higher burnout and intent to leave.
 
-That tension has a price tag. Replacing one staff RN runs about $60,090, per the [2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf), so a pattern that wins a nurse at hire but burns her out in a year is a false economy for a hospital that cannot easily backfill. The 8-hour pattern trades some of that appeal for shorter, less fatiguing days, which can matter more for an older or long-tenured team.
+That tension has a price tag. Replacing one staff RN runs about $60,090, per the [2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf), so a pattern that helps you hire a nurse but burns her out within a year costs more than it saves, especially at a hospital that cannot easily backfill. The 8-hour pattern trades some of that appeal for shorter, less fatiguing days, which can matter more for an older or long-tenured team.
 
 ## What happens to callout coverage on a thin bench?
 
@@ -130,11 +130,11 @@ The 12-hour model is simpler day to day, then punishes you when someone calls ou
 
 A hybrid is often the most honest answer for a small hospital. Many facilities run 12-hour shifts as the backbone for nurses who want block time off, then add 8-hour shifts to plug specific gaps: a short day shift for a predictable afternoon census bump, or an 8-hour slot for a nurse with childcare constraints.
 
-The advantage is fit: a hybrid matches shift length to the nurse and the coverage window instead of forcing one pattern on a mixed roster. The cost is complexity, since two shift lengths mean more handoff timing and more overtime-threshold combinations to watch, harder to build and audit by hand. A hybrid is worth it when your roster genuinely splits on preference or constraint, not when one pattern would cover everyone.
+The advantage is fit: a hybrid matches shift length to the nurse and the coverage window instead of forcing one pattern on a mixed roster. The downside is that it gets more complicated: two shift lengths mean more handoff times and more overtime thresholds to watch, which is harder to build and check by hand. A hybrid is worth it when your roster genuinely splits on preference or constraint, not when one pattern would cover everyone.
 
 ## So which shift length actually fits a 25-bed hospital?
 
-It depends, and the deciding variable is usually roster depth, not preference. A deep roster can run either pattern well and follow what nurses want. A thin roster magnifies whatever weakness the pattern carries, so it must choose defensively. Weigh these factors against your numbers.
+It depends, and the deciding variable is usually roster depth, not preference. A deep roster can run either pattern well and follow what nurses want. A thin roster makes whatever weakness the pattern has worse, so it has to choose carefully. Weigh these factors against your numbers.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -186,7 +186,7 @@ For most 25-bed hospitals the honest reading is 12-hour shifts as the backbone, 
 
 SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. It builds schedules for whichever pattern you choose, 8-hour, 12-hour, or a hybrid, and applies your coverage minimums, weekend and night distribution, and fatigue caps as hard rules before a draft reaches you. For Texas Critical Access Hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so a callout pickup does not quietly tip someone into unplanned overtime.
 
-The [AI nurse scheduling](/ai-nurse-scheduling) engine handles the constraint arithmetic while the nurse manager keeps the judgment calls. See the full process on our [nurse scheduling software](/nurse-scheduling-software) page, read [how the scheduling process works](/how-it-works), or watch the AI apply fatigue and coverage constraints to a live roster in the [interactive simulator](/simulator). One honest limitation: the tool does not pick your shift length for you, and it is not the right fit for a facility whose roster is too thin to staff either pattern safely. In that case it surfaces the coverage risk honestly, but it cannot create nurses who are not there.
+The [AI nurse scheduling](/ai-nurse-scheduling) engine handles the constraint arithmetic while the nurse manager keeps the judgment calls. See the full process on our [nurse scheduling software](/nurse-scheduling-software) page, read [how the scheduling process works](/how-it-works), or watch the AI apply fatigue and coverage constraints to a live roster in the [interactive simulator](/simulator). One honest limitation: the tool does not pick your shift length for you, and it is not the right fit for a facility whose roster is too thin to staff either pattern safely. In that case it shows you the coverage risk honestly, but it cannot create nurses who are not there.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
