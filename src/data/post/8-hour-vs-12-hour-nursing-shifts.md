@@ -27,7 +27,7 @@ This guide works through the 8 hour vs 12 hour nursing shifts question for a sma
 
 - 12-hour shifts cut daily handoffs from three to two and give nurses longer stretches off, which is why most 25-bed hospitals default to them.
 - The catch: on a thin roster, one 12-hour callout costs a full half-day of coverage, and it lands on a smaller group of people who can cover it.
-- Longer shifts carry a documented safety cost. AHRQ ties shifts over 12.5 hours to higher medication-error risk, and error risk rises significantly once shifts pass 12 hours.
+- Longer shifts carry a documented safety cost. [AHRQ](https://psnet.ahrq.gov/primer/nursing-and-patient-safety) ties shifts over 12.5 hours to higher medication-error risk, and [error risk rises significantly once shifts pass 12 hours](https://pubmed.ncbi.nlm.nih.gov/15318582/).
 - 12-hour patterns cross FLSA overtime thresholds faster, since one extra half-shift pushes a nurse past 40 hours. The FLSA 8-and-80 option exists but is a vendor-evaluation question, not a default.
 - 8-hour patterns spread fatigue and overtime risk but demand a deeper bench and a third daily handoff, which small hospitals rarely have the headcount to staff.
 - There is no universal answer. The right pattern depends on roster depth, night-nurse supply, and how often you run short, so many small hospitals settle on a hybrid.
@@ -100,11 +100,11 @@ That difference cascades. Two shifts a day means fewer slots to fill and a simpl
 
 A thin roster flips which pattern is easier to staff. With fewer nurses, the 12-hour model wins on raw coverage: only two slots a day instead of three. The 8-hour model needs a deeper bench for three coverage windows, and most small hospitals lack that depth.
 
-Here is the math. To cover one unit around the clock for a week at two nurses per shift, the 12-hour pattern needs two shifts a day, roughly 28 nurse-shifts; the 8-hour pattern needs three, roughly 42. That is an illustrative count at two nurses per shift, not a staffing minimum, but the ratio holds: an 8-hour grid asks for about half again as many filled slots. On a roster of 15 to 20 nurses, that decides whether the schedule closes, the coverage-density problem we cover in our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub.
+Here is the math. To cover one unit around the clock for a week at two nurses per shift, the 12-hour pattern needs two shifts a day, roughly 28 nurse-shifts; the 8-hour pattern needs three, roughly 42. That is an illustrative count at two nurses per shift, not a staffing minimum, but the ratio holds: the 8-hour pattern needs about 50 percent more shifts filled. On a roster of 15 to 20 nurses, that decides whether the schedule closes, the coverage-density problem we cover in our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub.
 
 ## Which shift length is safer for patients and nurses?
 
-The evidence leans against very long shifts. AHRQ's patient-safety primer reports that medication errors are about three times more likely when a nurse works shifts longer than 12.5 hours on more than two consecutive days, and it links longer shifts and overtime to higher error risk generally.
+The evidence leans against very long shifts. AHRQ's [patient-safety primer](https://psnet.ahrq.gov/primer/nursing-and-patient-safety) reports that medication errors are about three times more likely when a nurse works shifts longer than 12.5 hours on more than two consecutive days, and it links longer shifts and overtime to higher error risk generally.
 
 A [Health Affairs study](https://pubmed.ncbi.nlm.nih.gov/15318582/) found the risk of making an error rose significantly once work shifts passed 12 hours, when nurses worked overtime, or when they exceeded 40 hours in a week. A [later Health Affairs analysis](https://pubmed.ncbi.nlm.nih.gov/23129681/) found nurses working shifts of 10 hours or longer were up to two and a half times more likely to report burnout and to intend to leave. The [American Nurses Association's position on nurse fatigue](https://www.nursingworld.org/practice-policy/nursing-excellence/official-position-statements/id/addressing-nurse-fatigue-to-promote-safety-and-health/) recommends work hours of no more than 40 a week and cautions against extended shift lengths. That does not make 12s unsafe by default, but recovery gaps and consecutive-shift caps are the controls that keep them safe.
 
@@ -112,7 +112,7 @@ A [Health Affairs study](https://pubmed.ncbi.nlm.nih.gov/15318582/) found the ri
 
 12-hour patterns hit overtime faster. A nurse on three 12-hour shifts sits at 36 hours, under the standard 40-hour FLSA threshold. Pick up one extra half-shift for a callout and they cross 40, so overtime applies. An 8-hour pattern reaches 40 at five shifts, with more room to add a partial shift first.
 
-That difference compounds on a thin roster, where the same few people absorb most callout pickups. Hospitals can elect the FLSA 8-and-80 system, which owes overtime for hours over 8 in a day or over 80 in a 14-day period rather than over 40 in a week, per [DOL Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime); it requires a prior written agreement. Whether a scheduling vendor supports 8-and-80 is an evaluation question, not something to assume. To put a dollar figure on the overtime each pattern costs, our [ROI calculator](/roi) walks through the inputs.
+That difference compounds on a thin roster, where the same few people absorb most callout pickups. Hospitals can elect the [FLSA 8-and-80 system](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), which pays overtime for hours over 8 in a day or over 80 in a 14-day period instead of over 40 in a week; it requires a prior written agreement. Whether a scheduling vendor supports 8-and-80 is an evaluation question, not something to assume. To put a dollar figure on the overtime each pattern costs, our [ROI calculator](/roi) walks through the inputs.
 
 ## Which pattern do nurses prefer, and what does it mean for retention?
 
