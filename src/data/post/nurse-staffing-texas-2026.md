@@ -1,12 +1,12 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-07-17T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Nurse Staffing in Texas: The 2026 Numbers Every Small Hospital Should Know'
+title: 'Nurse Staffing in Texas: The 2026 Numbers Every Critical Access Hospital Should Know'
 excerpt: >
-  The 2026 Texas nurse staffing numbers hold a surprise for small hospitals: critical access
-  facilities post the lowest RN vacancy of any hospital group in the state, yet the highest
-  turnover. Here is what that split means for a 25-bed unit and the schedule you build against it.
+  For a 25-bed hospital in Texas, the 2026 numbers show one hard truth: these hospitals fill their
+  nursing jobs well, then lose those nurses faster than anyone in the state. Here is what that means
+  for your schedule.
 image: ~/assets/images/blog/heroes/nurse-staffing-texas-2026.webp
 category: Healthcare Operations
 postType: mofu
@@ -31,7 +31,7 @@ metadata:
 ## Table of Contents
 
 - [What Do the 2026 Numbers Say About Texas Nurse Staffing?](#what-do-the-2026-numbers-say-about-texas-nurse-staffing)
-- [How Does Vacancy and Turnover at Small Texas Hospitals Compare?](#how-does-vacancy-and-turnover-at-small-texas-hospitals-compare)
+- [How Do Vacancy and Turnover at Small Texas Hospitals Compare?](#how-do-vacancy-and-turnover-at-small-texas-hospitals-compare)
 - [Why Is Turnover the Number That Should Worry You Most?](#why-is-turnover-the-number-that-should-worry-you-most)
 - [What Does the LVN-Heavy Staff Mix Mean for Scheduling?](#what-does-the-lvn-heavy-staff-mix-mean-for-scheduling)
 - [What Does the Compliance Layer Add on Top of the Staffing Math?](#what-does-the-compliance-layer-add-on-top-of-the-staffing-math)
@@ -51,7 +51,7 @@ The study surveyed a frame of 86 critical access hospitals across 78 counties, o
 
 The DSHS study splits results into three groups, critical access hospitals, other rural hospitals, and non-rural hospitals, so you can see where small facilities land rather than reading one statewide average. Statewide, RN vacancy was 16.4% in 2024 (down from 17.6% in 2022) and RN median facility turnover was 23.2% (down from 28.3% in 2022). Those figures improved, but the small-hospital picture underneath is not uniform.
 
-## How Does Vacancy and Turnover at Small Texas Hospitals Compare?
+## How Do Vacancy and Turnover at Small Texas Hospitals Compare?
 
 Critical access hospitals in Texas had the lowest RN vacancy rate of the three hospital groups (11.6%) but the highest RN median turnover (18.2%), per the 2024 DSHS study. Small Texas hospitals are filling their budgeted positions better than larger peers, but they are losing and replacing the nurses in those positions faster.
 
@@ -93,19 +93,19 @@ Low vacancy at a small hospital is not the same as a healthy staffing position. 
 
 Turnover is expensive in ways vacancy is not, because each exit carries a replacement cost and a coverage gap. The 2026 NSI report puts the cost of turning over one bedside RN at [$60,090](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) and the time to recruit an experienced RN at 78 days. On a small roster, one departure is a much larger share of your team than at a 300-bed hospital.
 
-Play that out at critical access scale. A 20-nurse unit at 18.2% turnover is losing and replacing roughly three or four RNs a year. Each one is about two and a half months of recruiting before a replacement starts, and the remaining nurses absorb the open shifts in the meantime, often at overtime rates. The national turnover average across all hospitals was 17.6% in the same 2026 NSI report, so the Texas small-hospital figure is not an outlier, it is the shortage everyone faces landing on the roster least able to absorb it. That is why [nurse scheduling software](/nurse-scheduling-software) that spreads load fairly and catches overtime before it posts is one of the few levers that keeps the nurses you have from becoming next year's turnover line.
+Play that out at critical access scale. A 20-nurse unit at 18.2% turnover is losing and replacing roughly three or four RNs a year. Each one is about two and a half months of recruiting before a replacement starts, and the remaining nurses absorb the open shifts in the meantime, often at overtime rates. The national turnover average across all hospitals was 17.6% in the same 2026 NSI report, so the Texas small-hospital figure sits right about there. It is the same shortage everyone faces, landing on the roster that can least afford it. That is why [nurse scheduling software](/nurse-scheduling-software) that spreads load fairly and catches overtime before it posts is one of the few levers that keeps the nurses you have from becoming next year's turnover line.
 
 ## What Does the LVN-Heavy Staff Mix Mean for Scheduling?
 
 A Texas critical access hospital does not staff the same skill mix as a larger facility. In the 2024 DSHS study, registered nurses made up 61.0% of critical access nursing staff and LVNs 16.4%, versus 80.5% RN and 3.6% LVN at non-rural hospitals. Scheduling is a skill-mix problem here, not just a headcount problem.
 
-That mix changes how a schedule has to be built. You cannot treat every licensed nurse as interchangeable when nearly a fifth of the team is an LVN whose scope differs from an RN's, and a single shift may need a specific RN present for tasks an LVN cannot cover. A charge nurse requirement, or a callout that removes the only RN on a night rotation, becomes a real constraint rather than an edge case. A larger unit's deep RN bench hides these gaps; on a 20-person roster with an LVN-heavy mix, the person building the schedule is solving a tighter puzzle every cycle, and a spreadsheet does not flag when a swap has quietly left a shift without the RN coverage it needs.
+That mix changes how a schedule has to be built. You cannot treat every licensed nurse as interchangeable when nearly a fifth of the team is an LVN whose scope differs from an RN's, and a single shift may need a specific RN present for tasks an LVN cannot cover. A charge nurse requirement, or a callout that removes the only RN on a night rotation, becomes a real constraint rather than an edge case. A larger unit's deep RN bench hides these gaps. On a 20-person roster with an LVN-heavy mix, the person building the schedule is solving a tighter puzzle every week, and a spreadsheet will not warn you when a swap has quietly left a shift without the RN coverage it needs.
 
 ## What Does the Compliance Layer Add on Top of the Staffing Math?
 
 The staffing numbers sit under a compliance layer that a schedule has to satisfy at the same time. For a critical access hospital, CMS Conditions of Participation require that [a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631). Overtime runs on the federal Fair Labor Standards Act, because Texas adds no separate state overtime layer.
 
-That combination makes small-hospital scheduling more than a coverage exercise. The [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) sets the overtime thresholds a schedule has to track for each nurse, and Texas adds no state overtime statute on top of it, so the federal rule governs. The CMS on-duty requirement means a schedule that covers the hours can still fall short if it does not put the right licensed nurse on the floor at the right time. A schedule built by hand can satisfy all of this, but it depends on one person holding the rules in their head while also working a clinical assignment. For more, our guide to [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah) covers the FLSA rules for a critical access hospital, and our [critical access hospital scheduling](/critical-access-hospital-scheduling) guide covers the CMS documentation side.
+That combination makes small-hospital scheduling more than a coverage exercise. The [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) sets the overtime thresholds a schedule has to track for each nurse. The CMS on-duty rule means a schedule that covers the hours can still fall short if it does not put the right licensed nurse on the floor at the right time. A schedule built by hand can satisfy all of this, but it depends on one person holding the rules in their head while also working a clinical assignment. For more, our guide to [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah) covers the FLSA rules for a critical access hospital, and our [critical access hospital scheduling](/critical-access-hospital-scheduling) guide covers the CMS documentation side.
 
 ## How SimpleScheduleAI Helps
 
@@ -117,7 +117,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for a large Texas h
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The statewide numbers tell you the shortage is real but easing. The small-hospital numbers tell you something more useful: your problem is not filling positions, it is keeping the people in them, because critical access hospitals run the lowest vacancy and the highest turnover in the state at the same time. Chasing more recruiting misreads the data. The lever that fits the numbers is a schedule that distributes load fairly, respects the skill mix, and catches overtime before it posts, so the nurses you already have do not become next year's turnover line.</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The statewide numbers tell you the shortage is real but easing. The small-hospital numbers tell you something more useful: critical access hospitals run the lowest vacancy and the highest turnover in the state at the same time. You are filling the jobs. The struggle is keeping the people in them, and chasing more recruiting misreads the data. The lever that fits the numbers is a schedule that distributes load fairly, respects the skill mix, and catches overtime before it posts, so the nurses you already have do not become next year's turnover line.</p>
 </div>
 
 ## What to Do This Week

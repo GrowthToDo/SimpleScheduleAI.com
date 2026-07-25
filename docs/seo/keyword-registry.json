@@ -531,4 +531,13 @@
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Head-to-head 8-vs-12 for a 25-bed hospital; differentiated from the general 12-hour post; AHRQ/Rogers claims verified."
   }
+,
+{
+    "slug": "nurse-staffing-texas-2026",
+    "type": "post",
+    "url": "/blog/nurse-staffing-texas-2026",
+    "primaryKeyword": "texas nurse staffing",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Texas staffing-numbers/data post (uses 91 current count, 86 only in DSHS-2024 context); differentiated from the rural-texas market-read post."
+  }
 ]

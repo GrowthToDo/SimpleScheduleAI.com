@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-staffing-texas-2026",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-25T04:51:39.511Z",
+      "contentHash": "7eeb97898e37aef459771bba7f66be7470a0a8ed7dbaf35059d146f2da25dd6a"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-25T04:51:40.960Z",
+      "contentHash": "7eeb97898e37aef459771bba7f66be7470a0a8ed7dbaf35059d146f2da25dd6a"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-25T04:51:46.509Z",
+      "contentHash": "7eeb97898e37aef459771bba7f66be7470a0a8ed7dbaf35059d146f2da25dd6a"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-25T04:51:46.556Z",
+      "contentHash": "7eeb97898e37aef459771bba7f66be7470a0a8ed7dbaf35059d146f2da25dd6a"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-25T04:51:46.558Z",
+      "contentHash": "7eeb97898e37aef459771bba7f66be7470a0a8ed7dbaf35059d146f2da25dd6a"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-25T04:51:46.558Z",
+      "contentHash": "7eeb97898e37aef459771bba7f66be7470a0a8ed7dbaf35059d146f2da25dd6a"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-25T04:51:46.562Z",
+      "contentHash": "7eeb97898e37aef459771bba7f66be7470a0a8ed7dbaf35059d146f2da25dd6a"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "main-session",
+      "setAt": "2026-07-25T04:51:38.894Z",
+      "contentHash": "e2ff59b3e269962c50eee579acc28db45f44da4e96961692e540f46aea3ccdaa"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev-code-reviewer",
+      "setAt": "2026-07-25T04:51:38.763Z",
+      "contentHash": "e2ff59b3e269962c50eee579acc28db45f44da4e96961692e540f46aea3ccdaa"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unknown",
+      "setAt": "2026-07-25T04:51:39.030Z",
+      "contentHash": "e2ff59b3e269962c50eee579acc28db45f44da4e96961692e540f46aea3ccdaa"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-25T04:51:39.159Z",
+      "contentHash": "e2ff59b3e269962c50eee579acc28db45f44da4e96961692e540f46aea3ccdaa"
+    }
+  },
+  "overrides": []
+}

@@ -606,5 +606,7 @@ The FLSA healthcare worker exemption allows hospitals and residential care facil
 
 ---
 
+_Related: the [2026 Texas nurse staffing numbers](/blog/nurse-staffing-texas-2026) show why small hospitals need a tighter tool._
+
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
