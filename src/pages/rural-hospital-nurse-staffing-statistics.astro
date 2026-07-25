@@ -23,6 +23,8 @@ const sections = [
     heading: 'Critical Access Hospital Landscape',
     intro:
       'Critical Access Hospitals (CAHs) are federally designated rural hospitals of 25 or fewer acute-care beds. For how scheduling actually works at that scale, see our guide to <a href="/critical-access-hospital-scheduling">critical access hospital scheduling</a>.',
+    takeaway:
+      'Nearly every Critical Access Hospital CEO calls nursing staff hard to recruit (94%), and there are 1,383 of these hospitals across the country.',
     stats: [
       {
         anchor: 'us-cah-count',
@@ -55,6 +57,8 @@ const sections = [
     heading: 'National Nurse Staffing & Turnover',
     intro:
       'The national figures below come from the 2026 NSI report (calendar-year 2025 data, 527 hospitals across 40 states). They set the backdrop small hospitals staff against; the <a href="/nurse-scheduling-software">nurse scheduling software</a> that fits a CAH has to move these numbers with far fewer resources.',
+    takeaway:
+      'Each nurse who leaves a hospital costs about $60,090 to replace, and the average hospital is already short 43 of them.',
     stats: [
       {
         anchor: 'rn-turnover',
@@ -96,6 +100,8 @@ const sections = [
     heading: 'Rural Access & Workforce Projections',
     intro:
       'Rural facilities do not just have fewer nurses; they draw from a thinner pool that is projected to thin further. This is the structural reason a single callout can leave a CAH unit uncovered.',
+    takeaway:
+      'A rural county has about two-thirds the nurse density of a city, and by 2038 the rural nurse shortage is projected to reach 11%, versus 2% in metro areas.',
     stats: [
       {
         anchor: 'rn-density',
@@ -120,6 +126,8 @@ const sections = [
     heading: 'Registered Nurse Wages',
     intro:
       'Wage figures matter because overtime is charged at 1.5 times these rates. Catching overtime before a schedule posts is a direct cost lever; see <a href="/ai-nurse-scheduling">how AI nurse scheduling</a> flags approaching thresholds.',
+    takeaway:
+      'The median American nurse earns $97,550 a year ($95,970 in Texas), the wage base that every overtime hour is charged against.',
     stats: [
       {
         anchor: 'rn-wage-national',
@@ -144,6 +152,8 @@ const sections = [
     heading: 'The Texas Critical Access Hospital Picture',
     intro:
       'Texas has 91 Critical Access Hospitals today (Rural Health Information Hub, 2026), and it runs its own hospital nurse-staffing study, which lets us separate CAHs from other rural and non-rural hospitals. The figures below are from the Texas DSHS 2024 study (spring-2024 survey, published February 2025), which counted 86 CAHs in its survey frame at the time. For the compliance layer these facilities operate under, see <a href="/blog/texas-nursing-overtime-compliance-cah">Texas nursing overtime compliance</a>.',
+    takeaway:
+      'Texas Critical Access Hospitals fill their nursing jobs better than any other hospital type in the state, then lose those nurses faster than any of them.',
     stats: [
       {
         anchor: 'texas-cah-count',
@@ -216,6 +226,11 @@ const embedFor = (stat) =>
 
 const allStats = sections.flatMap((s) => s.stats);
 
+// Single source of truth for the freshness stamp: update BOTH values whenever a
+// figure is re-verified. Wired to the visible "Updated" line and schema dateModified.
+const lastUpdated = 'July 25, 2026';
+const lastUpdatedISO = '2026-07-25';
+
 const datasetSchema = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
@@ -240,7 +255,7 @@ const datasetSchema = {
   },
   isAccessibleForFree: true,
   license: 'https://creativecommons.org/licenses/by/4.0/',
-  dateModified: '2026-07-14',
+  dateModified: lastUpdatedISO,
 };
 
 const faqItems = [
@@ -307,8 +322,10 @@ const breadcrumbSchema = {
   <section class="bg-page py-10 md:py-14">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <p class="text-sm text-slate-600 dark:text-slate-400 mb-8">
-        Compiled by <a href="/about/pradeep-pandey" class="underline decoration-dotted">Pradeep Pandey</a> · Updated July
-        14, 2026 · Figures verified against primary sources (listed on each card and in
+        Compiled by <a href="/about/pradeep-pandey" class="underline decoration-dotted">Pradeep Pandey</a> · Updated{
+          ' '
+        }
+        {lastUpdated} · Figures verified against primary sources (listed on each card and in
         <a href="#sources" class="underline decoration-dotted">Sources</a>).
       </p>
 
@@ -330,9 +347,12 @@ const breadcrumbSchema = {
               {section.heading}
             </h2>
             <p
-              class="text-slate-600 dark:text-slate-300 mb-6 max-w-3xl [&_a]:text-primary [&_a]:underline"
+              class="text-slate-600 dark:text-slate-300 mb-4 max-w-3xl [&_a]:text-primary [&_a]:underline"
               set:html={section.intro}
             />
+            <blockquote class="not-prose mb-6 max-w-3xl border-l-4 border-primary pl-4 font-heading text-lg md:text-xl font-medium leading-snug text-slate-900 dark:text-slate-100">
+              {section.takeaway}
+            </blockquote>
             <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {section.stats.map((stat) => (
                 <figure
