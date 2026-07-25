@@ -117,7 +117,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for a large Texas h
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The statewide numbers tell you the shortage is real but easing. The small-hospital numbers tell you something more useful: critical access hospitals run the lowest vacancy and the highest turnover in the state at the same time. You are filling the jobs. The struggle is keeping the people in them, and chasing more recruiting misreads the data. The lever that fits the numbers is a schedule that distributes load fairly, respects the skill mix, and catches overtime before it posts, so the nurses you already have do not become next year's turnover line.</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The statewide numbers tell you the shortage is real but easing. The critical access numbers tell you something more useful: these hospitals run the lowest vacancy and the highest turnover in the state at the same time. You are filling the jobs. The struggle is keeping the people in them, and chasing more recruiting misreads the data. The lever that fits the numbers is a schedule that distributes load fairly, respects the skill mix, and catches overtime before it posts, so the nurses you already have do not become next year's turnover line.</p>
 </div>
 
 ## What to Do This Week
@@ -147,7 +147,7 @@ Texas has 91 critical access hospitals today, per the Rural Health Information H
 
 RN median turnover at Texas critical access hospitals was 18.2% in the 2024 DSHS study, the highest of the three hospital groups (other rural hospitals 15.4%, non-rural 17.4%). Vacancy told the opposite story: at 11.6%, critical access hospitals had the lowest RN vacancy of the three groups.
 
-**Q: Why do small Texas hospitals have low vacancy but high turnover?**
+**Q: Why do Texas critical access hospitals have low vacancy but high turnover?**
 
 Low vacancy means budgeted positions are getting filled; high turnover means the nurses in them leave and are replaced more often. On a small roster, each departure is a large share of the team, so churn shows up as turnover even when the position does not stay open long. The two numbers measure different problems.
 
