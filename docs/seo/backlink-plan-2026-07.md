@@ -118,7 +118,10 @@ checking which category the existing profile sits in.
 
 **Setup (once, ~30 min):**
 1. Create pradeep@simplescheduleai.com (prerequisite for all outreach).
-2. Register free accounts: HARO (helpareporter), Qwoted, Help a B2B Writer.
+2. Register free accounts: HARO (now at featured.com — Cision's Connectively
+   shut down 2024-12-09; Featured.com acquired + revived HARO Apr 2025 as the
+   free email digest; sign up "as an Expert"), Qwoted (qwoted.com, sign up "as a
+   source"), Help a B2B Writer (helpab2bwriter.com, "sign up as a source").
    Profile bio (honest, verifiable): "Pradeep Pandey — co-founder of SimpleScheduleAI
    (AI-native nurse scheduling service for rural US hospitals) and Deputy General
    Manager of Operations at Apollo Hospitals; 7 years in hospital operations across
