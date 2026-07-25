@@ -92,14 +92,26 @@ checking which category the existing profile sits in.
 ## Tier 2 — ongoing engines (week 2 onward)
 
 - [ ] **T2.1 HARO/journalist pipeline** (founder-powered; full playbook below).
-- [ ] **T2.2 Moving Man** (tactic 7) with FREE data: our competitor set has three
-      rebrand/acquisition events with existing replacement content live on our blog —
-      Kronos->UKG (kronos-nurse-scheduling-problems post), Aladtec->TCP
-      (best-tcp-alternative post), OnShift->Workday (onshift-alternatives post).
-      Prospecting via Common Crawl web-graph referring-domains (metehan tool) +
-      seo-backlinks agent (Moz free tier + CC graphs) to find pages linking to
-      dead/redirected old-brand URLs. Pitch: "that resource moved/changed; here is a
-      current comparison" — only where our page genuinely serves the link's purpose.
+- [ ] **T2.2 Moving Man** (tactic 7). CORRECTED 2026-07-25 after verifying the
+      transitions and old-URL status (the earlier premise was partly wrong):
+      - **Kronos -> UKG: STRONGEST.** kronos.com 301-redirects to ukg.com (brand
+        renamed 2022). This is a brand-rename/"outdated info" play, not a hard 404:
+        pages still saying "Kronos" for healthcare scheduling are outdated. Rich
+        legacy link base. Replacements: `kronos-nurse-scheduling-problems-small-hospitals`,
+        `ukg-alternatives-small-hospitals`, `ukg-too-complex-small-hospital`.
+      - **Aladtec -> TCP: WEAK.** aladtec.com 308-redirects to a LIVE Aladtec-branded
+        page on tcpsoftware.com — content preserved, links still resolve, so the
+        "broken/moved" hook is thin. Only deep old aladtec.com URLs that now 404 are
+        worth it. Replacements: `aladtec-alternatives`, `best-tcp-alternative-for-cah`.
+      - **OnShift -> ~~Workday~~ ShiftKey: DROP.** The plan's "OnShift->Workday" was
+        WRONG. OnShift was acquired by **ShiftKey** (2022, fully integrated 2023), and
+        **onshift.com is still live (HTTP 200)** — no broken-URL opportunity. `onshift-alternatives`
+        stays useful for other plays, just not Moving Man.
+      Prospecting via Common Crawl web-graph + seo-backlinks agent (Moz free tier),
+      free-first, small capped DataForSEO pull only if needed. Pitch: "the Kronos
+      resource you reference is now UKG's enterprise suite; here is a current,
+      independent comparison for small hospitals" — only where our page genuinely
+      serves the link's purpose.
 - [ ] **T2.3 Competitor backlink reverse-engineering** (tactic 2): PARKED until
       DataForSEO top-up (its backlinks endpoints are the affordable source). On
       unpark: monthly gap report (domains linking to 2+ of M7/QGenda/ShiftWizard/
