@@ -1,6 +1,6 @@
 ---
 draft: false
-publishDate: 2026-07-17T00:00:00Z
+publishDate: 2026-07-25T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Nurse Staffing in Texas: The 2026 Numbers Every Critical Access Hospital Should Know'
 excerpt: >
@@ -31,7 +31,7 @@ metadata:
 ## Table of Contents
 
 - [What Do the 2026 Numbers Say About Texas Nurse Staffing?](#what-do-the-2026-numbers-say-about-texas-nurse-staffing)
-- [How Do Vacancy and Turnover at Small Texas Hospitals Compare?](#how-do-vacancy-and-turnover-at-small-texas-hospitals-compare)
+- [How Do Vacancy and Turnover at Texas Critical Access Hospitals Compare?](#how-do-vacancy-and-turnover-at-texas-critical-access-hospitals-compare)
 - [Why Is Turnover the Number That Should Worry You Most?](#why-is-turnover-the-number-that-should-worry-you-most)
 - [What Does the LVN-Heavy Staff Mix Mean for Scheduling?](#what-does-the-lvn-heavy-staff-mix-mean-for-scheduling)
 - [What Does the Compliance Layer Add on Top of the Staffing Math?](#what-does-the-compliance-layer-add-on-top-of-the-staffing-math)
@@ -41,17 +41,17 @@ metadata:
 
 Texas nurse staffing looks different depending on which hospital you stand in. A 300-bed system in Dallas and a 20-bed critical access hospital in the Panhandle draw from the same nursing labor market, but the numbers they live with are not the same. The state now runs its own hospital nurse staffing study, which lets you separate critical access hospitals from other rural and non-rural facilities.
 
-For an administrator or director of nursing at a small Texas hospital, that separation matters, because the statewide headline number is rarely the number you schedule against. This post pulls the 2026 figures that describe your facility, explains what each means on a normal week, and names the compliance layer underneath. If you want the raw, embeddable figures with their sources, our [rural hospital nurse staffing statistics](/rural-hospital-nurse-staffing-statistics) hub collects them.
+For an administrator or director of nursing at a Texas critical access hospital, that separation matters, because the statewide headline number is rarely the number you schedule against. This post pulls the 2026 figures that describe your facility, explains what each means on a normal week, and names the compliance layer underneath. If you want the raw, embeddable figures with their sources, our [rural hospital nurse staffing statistics](/rural-hospital-nurse-staffing-statistics) hub collects them.
 
 ## What Do the 2026 Numbers Say About Texas Nurse Staffing?
 
 Texas has [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), among the most of any state, concentrated in West Texas, the Panhandle, East Texas, and the border counties. That is the current federal count. The state also publishes the [Texas DSHS 2024 Hospital Nurse Staffing Study](https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf), a spring-2024 survey released in February 2025, which is the best facility-level read available.
 
-The study surveyed a frame of 86 critical access hospitals across 78 counties, of which 50 responded. That 86 is the study's survey universe at the time, not the present-day total, so its rates are computed on those responding facilities. The current statewide count is 91.
+The study surveyed a frame of 86 critical access hospitals across 78 counties, of which 50 responded. That 86 was how many the study started with back then, not how many Texas has now. Its vacancy and turnover rates come from the 50 that answered. The current statewide count is 91.
 
 The DSHS study splits results into three groups, critical access hospitals, other rural hospitals, and non-rural hospitals, so you can see where small facilities land rather than reading one statewide average. Statewide, RN vacancy was 16.4% in 2024 (down from 17.6% in 2022) and RN median facility turnover was 23.2% (down from 28.3% in 2022). Those figures improved, but the small-hospital picture underneath is not uniform.
 
-## How Do Vacancy and Turnover at Small Texas Hospitals Compare?
+## How Do Vacancy and Turnover at Texas Critical Access Hospitals Compare?
 
 Critical access hospitals in Texas had the lowest RN vacancy rate of the three hospital groups (11.6%) but the highest RN median turnover (18.2%), per the 2024 DSHS study. Small Texas hospitals are filling their budgeted positions better than larger peers, but they are losing and replacing the nurses in those positions faster.
 
@@ -93,7 +93,7 @@ Low vacancy at a small hospital is not the same as a healthy staffing position. 
 
 Turnover is expensive in ways vacancy is not, because each exit carries a replacement cost and a coverage gap. The 2026 NSI report puts the cost of turning over one bedside RN at [$60,090](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) and the time to recruit an experienced RN at 78 days. On a small roster, one departure is a much larger share of your team than at a 300-bed hospital.
 
-Play that out at critical access scale. A 20-nurse unit at 18.2% turnover is losing and replacing roughly three or four RNs a year. Each one is about two and a half months of recruiting before a replacement starts, and the remaining nurses absorb the open shifts in the meantime, often at overtime rates. The national turnover average across all hospitals was 17.6% in the same 2026 NSI report, so the Texas small-hospital figure sits right about there. It is the same shortage everyone faces, landing on the roster that can least afford it. That is why [nurse scheduling software](/nurse-scheduling-software) that spreads load fairly and catches overtime before it posts is one of the few levers that keeps the nurses you have from becoming next year's turnover line.
+Play that out at critical access scale. A 20-nurse unit at 18.2% turnover is losing and replacing roughly three or four RNs a year. Each one is about two and a half months of recruiting before a replacement starts, and the remaining nurses absorb the open shifts in the meantime, often at overtime rates. The national turnover average across all hospitals was 17.6% in the same 2026 NSI report, so the Texas critical access figure sits right about there. It is the same shortage everyone faces, landing on the roster that can least afford it. That is why [nurse scheduling software](/nurse-scheduling-software) that spreads load fairly and catches overtime before it posts is one of the few levers that keeps the nurses you have from becoming next year's turnover line.
 
 ## What Does the LVN-Heavy Staff Mix Mean for Scheduling?
 
