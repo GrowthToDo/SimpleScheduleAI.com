@@ -3,12 +3,12 @@ draft: false
 publishDate: 2026-05-28T00:00:00Z
 updateDate: 2026-05-28T00:00:00Z
 author: 'Pradeep Pandey'
-title: '12-Hour Hospital Shifts: Scheduling Challenges and Solutions'
+title: '12-Hour Nurse Schedule: Shift Patterns, Coverage, and Fairness'
 excerpt: >
-  12-hour hospital shifts are standard at most critical access hospitals, but building
-  a schedule around them is more complex than it looks. This guide covers the coverage
-  math, fatigue risks, fairness challenges, and practical scheduling approaches for a
-  25-bed CAH running 12-hour rotations.
+  A 12-hour nurse schedule is standard at most critical access hospitals, but building
+  one is harder than it looks. This guide covers the common 12-hour shift patterns, the
+  coverage math, fatigue risks, and fairness challenges for a 25-bed CAH running 12-hour
+  rotations.
 image: https://images.unsplash.com/photo-1495364141860-b0d03eccd065?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
@@ -31,6 +31,7 @@ metadata:
 ## Table of Contents
 
 - [Why do critical access hospitals use 12-hour nursing shifts?](#why-do-critical-access-hospitals-use-12-hour-nursing-shifts)
+- [What are the common 12-hour nurse shift patterns?](#what-are-the-common-12-hour-nurse-shift-patterns)
 - [What scheduling challenges are unique to 12-hour shift hospitals?](#what-scheduling-challenges-are-unique-to-12-hour-shift-hospitals)
 - [What are the fatigue and burnout risks of 12-hour rotating shifts?](#what-are-the-fatigue-and-burnout-risks-of-12-hour-rotating-shifts)
 - [How do you build a fair 12-hour shift schedule for a 25-bed Critical Access Hospital?](#how-do-you-build-a-fair-12-hour-shift-schedule-for-a-25-bed-critical-access-hospital)
@@ -64,6 +65,23 @@ managing three shifts across a 15-nurse team, you're managing two. That reduces
 the number of scheduling permutations, but it amplifies the consequences of each
 individual scheduling decision. In a 12-hour model, one coverage gap costs you a
 full half of a day's nursing for an entire unit.
+
+## What are the common 12-hour nurse shift patterns?
+
+A 12-hour nurse schedule is usually built on one of a few repeating patterns. The pattern sets how
+weekends fall, how much rest sits between shifts, and how fair the rotation feels. These are the ones
+small hospitals use most:
+
+| Pattern            | How it runs                                                            | Weekend effect                    | Best for                                         |
+| ------------------ | ---------------------------------------------------------------------- | --------------------------------- | ------------------------------------------------ |
+| Fixed 3 × 12       | The same three 12-hour days every week (say Mon, Tue, Wed)             | Weekends need a separate rotation | Predictability and simple planning               |
+| 2-2-3 (Pitman)     | 2 on, 2 off, 3 on, then 2 off, 3 on, 2 off, on a repeating 14-day loop | Every other weekend off, built in | Fairness without hand-tracking weekends          |
+| 4 on, 4 off        | Four 12-hour shifts in a row, then four days off                       | Weekends rotate through the cycle | Long blocks of time off (watch fatigue by day 4) |
+| Day/night rotation | Alternating day and night 12s across the cycle                         | Varies by cycle                   | Covering both when the night pool is small       |
+
+Most 25-bed hospitals run a fixed 3 × 12 for its simplicity, then layer a 2-2-3 or a separate weekend
+rotation on top to keep weekends fair. Whatever the shape, the fatigue guards below matter more than the
+pattern: cap consecutive shifts and protect the night-to-day recovery gap.
 
 ## What scheduling challenges are unique to 12-hour shift hospitals?
 
