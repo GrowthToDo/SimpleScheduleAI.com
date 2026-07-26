@@ -1,4 +1,5 @@
 ---
+# CANNIBALIZATION (2026-07-26): do NOT publish — duplicate of employee-scheduling-software-for-healthcare. Consolidate into it. See docs/seo/draft-consolidation-plan.md
 draft: true
 publishDate: 2026-06-30T00:00:00Z
 updateDate: 2026-06-04T00:00:00Z
