@@ -820,9 +820,9 @@ const warnCells = [
           opacity: 1;
           pointer-events: auto;
           height: auto;
-          padding: 88px 22px 48px !important;
+          padding: 36px 22px 48px !important;
           justify-content: flex-start;
-          overflow: visible;
+          overflow: hidden;
           border-bottom: 1px solid var(--hairline);
         }
         .reveal {
@@ -835,14 +835,15 @@ const warnCells = [
           right: 8px;
           bottom: -24px;
         }
+        /* headers flow in-line instead of colliding in the absolute top strip */
         .brand {
-          left: 22px;
-          top: 28px;
+          position: static;
+          margin-bottom: 4px;
         }
         .section-label {
-          right: 22px;
-          top: 28px;
+          position: static;
           font-size: 10px;
+          margin-bottom: 22px;
         }
         h1 {
           font-size: 50px;
