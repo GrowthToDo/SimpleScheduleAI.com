@@ -1,5 +1,5 @@
 ---
-# CANNIBALIZATION (2026-07-26): do NOT publish — duplicate of what-is-clinical-scheduling. Consolidate into it. See docs/seo/draft-consolidation-plan.md
+# CANNIBALIZATION (2026-07-26): do NOT publish — duplicate of what-is-clinical-scheduling. Content salvaged into it 2026-07-26; safe to delete. See docs/seo/draft-consolidation-plan.md
 draft: true
 publishDate: 2099-01-01T00:00:00Z
 updateDate: 2026-04-01T00:00:00Z

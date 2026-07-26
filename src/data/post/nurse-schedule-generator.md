@@ -62,6 +62,24 @@ A reliable nurse schedule generator for a critical access hospital needs to unde
 
 **Multiple draft options.** No single scheduling algorithm produces the right answer for every situation. A useful generator produces 2-3 draft options (e.g., cost-minimized, fair-rotation, coverage-maximized) and lets the nurse manager choose. This preserves clinical judgment while eliminating the mechanical work.
 
+## What Scheduling Patterns Burn Out Nurses at a 25-Bed Hospital?
+
+The way a schedule is built is one of the most controllable drivers of nurse burnout, and at a critical access hospital the margin is thin. With only 10-15 floor nurses, a few recurring patterns quietly accumulate until an experienced nurse stops renewing or accepts a travel contract that pays twice as much. By the time the departure happens, the scheduling pattern that caused it is months old and forgotten. A nurse schedule maker that tracks these patterns over time, not just this week's grid, is what keeps them from forming.
+
+The high-burnout patterns to watch for:
+
+**Concentrated weekend burden.** Some nurses cover weekends disproportionately because they said yes once and became the path of least resistance. It looks fine in any single week and stark in a quarterly view.
+
+**Quick turnarounds between shifts.** A closing evening shift followed by an opening day shift the next morning leaves fewer than nine hours of recovery. This usually shows up when someone is manually patching a coverage gap rather than building from a rotation.
+
+**Chronic call accumulation.** On-call weight is heavier at a CAH because fewer staff share it. When call isn't tracked systematically, it defaults to whoever answered last time, creating an imbalance that's invisible in any single week.
+
+**Back-to-back holiday coverage.** Holiday shifts are low-preference for almost everyone. Without holiday rotation logic, the same nurses who miss Thanksgiving also miss Christmas.
+
+**Permanent nights without rotation relief.** Nurses who chose nights are fine; the burnout risk is the ones stuck there because the unit is short on night-certified staff.
+
+Automating rotation also removes the social pressure problem. When a manager assigns shifts by hand, there's an implicit negotiation: nurses who push back get accommodated, and the ones who don't absorb the hard slots. A generator applies the same rules to everyone, which improves fairness and takes the emotional labor of those decisions off the manager. The capability that makes this stick is the rolling history view, tracking weekends, nights, and call over a four-week window rather than judging each schedule in isolation.
+
 ## When Should a CAH Move Beyond a Generator to a Managed Service?
 
 A generator, even a good one, still requires someone to operate it: enter the roster, configure the rules, review the output, publish the schedule, and manage callouts manually. For a large hospital with a dedicated scheduler, this is manageable.
@@ -106,6 +124,10 @@ Basic generators don't, they build the initial schedule but leave callout manage
 
 Texas CAH nurse scheduling must comply with FLSA overtime rules (1.5× for hours over 40/week) and CMS Conditions of Participation §485.635 staffing record requirements. Texas has no separate state overtime law. A generator that doesn't enforce and log these requirements creates compliance risk.
 
+**Q: Can a nurse schedule generator handle shift swap requests?**
+
+Hospital-grade tools include a swap workflow: a nurse submits a request and the system validates it for coverage, certification, and overtime compliance before the manager approves. This replaces the informal text-chain swaps that are easy to lose track of.
+
 ## Key Takeaways
 
 - Nurse schedule generators automate roster creation from availability and rules, ranging from free Excel templates to AI-assisted managed services
@@ -113,6 +135,7 @@ Texas CAH nurse scheduling must comply with FLSA overtime rules (1.5× for hours
 - A reliable hospital-grade generator needs FLSA compliance, certification-aware assignment, fairness tracking, and multiple draft options
 - A managed scheduling service goes beyond generation, it delivers ready-to-approve drafts, replacement lists, and compliance documentation
 - CAH nurse managers currently spend 8-12 hours/week on scheduling; a managed service reduces this to 1-2 hours by removing operational burden, not just automating schedule building
+- Certain schedule patterns quietly drive burnout at small hospitals (concentrated weekends, sub-nine-hour turnarounds, chronic call, permanent nights); a rolling multi-week history view is what catches them before a resignation
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Ready to reduce overtime and handle callouts without the Sunday evening scramble?</p>

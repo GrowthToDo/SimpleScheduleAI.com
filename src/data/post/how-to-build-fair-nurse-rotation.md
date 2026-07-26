@@ -1,5 +1,5 @@
 ---
-# CANNIBALIZATION (2026-07-26): do NOT publish — duplicate of fair-nurse-schedule-critical-access-hospital. SALVAGE this draft's richer rotation-building detail into that keeper, then abandon this. See docs/seo/draft-consolidation-plan.md
+# CANNIBALIZATION (2026-07-26): do NOT publish — duplicate of fair-nurse-schedule-critical-access-hospital. Content salvaged into that keeper 2026-07-26 (8-step method, constraints, transparency sections, weekend chart, FAQs); safe to delete. See docs/seo/draft-consolidation-plan.md
 draft: true
 publishDate: 2026-08-31T00:00:00Z
 updateDate: 2026-09-01T00:00:00Z

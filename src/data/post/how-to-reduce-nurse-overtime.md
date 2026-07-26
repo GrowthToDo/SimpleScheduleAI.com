@@ -38,6 +38,7 @@ metadata:
 - [Root Cause 2: Scheduled Hour Blind Spots](#root-cause-2-scheduled-hour-blind-spots)
 - [Root Cause 3: Roster Thinness](#root-cause-3-roster-thinness)
 - [The FLSA 8-and-80 Rule: Are You Using It Correctly?](#the-flsa-8-and-80-rule-are-you-using-it-correctly)
+- [How Does Shift Schedule Design Itself Reduce Overtime?](#how-does-shift-schedule-design-itself-reduce-overtime)
 - [A Step-by-Step Overtime Reduction Process](#a-step-by-step-overtime-reduction-process)
 - [When Overtime Cannot Be Eliminated](#when-overtime-cannot-be-eliminated)
 - [What to Do This Week](#what-to-do-this-week)
@@ -176,6 +177,14 @@ Many CAHs believe they are using the 8-and-80 rule when they are actually using 
 If you have not adopted the 8-and-80 rule, consult an employment attorney or HR advisor before implementing it. Retroactive adoption is not allowed, and errors in implementation create wage and hour liability.
 
 For CAHs that have properly adopted the 8-and-80 rule, the scheduling implication is clear: you can schedule a nurse for four 12-hour shifts in a week (48 hours) without triggering overtime, as long as their total in the 14-day period stays at or below 80 hours. That flexibility is not available under the standard 40-hour rule.
+
+## How Does Shift Schedule Design Itself Reduce Overtime?
+
+The three root causes above are about who gets called and whether hours are tracked. But the structure of the schedule itself is a lever too. Two design choices remove overtime that a coverage-only schedule leaves in place by default.
+
+**Build an overtime-minimized draft, not just a coverage-complete one.** A schedule built by hand is usually optimized for a single goal: every shift filled and minimum staffing met. It is rarely checked against a second version that meets the same coverage at lower projected overtime. When you build the schedule, look at the running 14-day hour totals and ask whether the same shifts could be covered with fewer nurses pushed toward the threshold. Producing that alternative, then choosing the tradeoff on purpose, removes overtime that a coverage-only schedule never surfaces.
+
+**Use on-call coverage for predictably low-census windows.** On-call hours, where a nurse is available but not on-site unless called in, typically cost less than scheduled on-site hours. Placing on-call assignments on windows that are predictably quiet, such as weekend nights or mid-week overnights at a low-census CAH, holds coverage available while lowering scheduled hours in the period. Many CAHs underuse on-call because building on-call rotations takes more configuration than a standard shift grid, but the hours it saves come straight off the overtime base.
 
 ## What Is a Step-by-Step Overtime Reduction Process?
 

@@ -93,7 +93,7 @@ In a restaurant, any server can cover any section. In a hospital, a nurse certif
 
 **1. Nursing certification-unit matching.** A nurse certified for med-surg may not be certified for ICU or labor and delivery. Assigning an uncertified nurse to a unit creates a clinical staffing error. Generic tools assign whoever is available. Healthcare-specific tools prevent uncertified assignments automatically.
 
-**2. Proactive FLSA overtime compliance.** Under [FLSA](https://www.dol.gov/agencies/whd/flsa), any hours over 40 in a workweek require 1.5x pay. A nurse scheduled for three 12-hour shifts plus a 4-hour on-call appearance is at 40 hours before any callout occurs. Generic tools process whatever schedule you build. Healthcare-specific tools flag any nurse approaching the 40-hour threshold during schedule building, converting overtime from a payroll surprise into a preventable scheduling decision.
+**2. Proactive FLSA overtime compliance.** Under [FLSA](https://www.dol.gov/agencies/whd/flsa), any hours over 40 in a workweek require 1.5x pay, and Texas has no separate state overtime law, so the federal 40-hour threshold is the one that governs. A nurse scheduled for three 12-hour shifts plus a 4-hour on-call appearance is at 40 hours before any callout occurs. Generic tools process whatever schedule you build. Healthcare-specific tools flag any nurse approaching the 40-hour threshold during schedule building, converting overtime from a payroll surprise into a preventable scheduling decision.
 
 **3. CMS-compliant audit trail documentation.** [CMS Conditions of Participation §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) requires critical access hospitals to maintain accurate, reviewable staffing records. Every schedule change must be documented, who changed what, when. Generic tools do not produce change documentation in the format required for CMS survey response. Healthcare-specific tools auto-log every schedule change with timestamp and user information.
 
@@ -106,6 +106,8 @@ In a restaurant, any server can cover any section. In a hospital, a nurse certif
 Generic employee scheduling software does some things well, even in healthcare contexts:
 
 **Clinics and medical practices** with predictable, non-rotating hours and no inpatient CMS requirements can use generic tools effectively. The certification and compliance features are not required; shift assignment and availability management are the primary needs.
+
+**Home health agencies** are another good fit, because their scheduling challenge is geographic rather than clinical. The constraint is travel time and visit availability, not unit certification, so a generic tool covers the core need.
 
 **Staff communication** is an area where generic tools often outperform purpose-built healthcare scheduling systems. If nurses need to view their schedules on their phones, request time off, or propose shift swaps through an app, generic tools typically have better UX for that function.
 
@@ -192,6 +194,14 @@ Generic scheduling tools are designed for the common case, retail, restaurants, 
 **What is the hybrid approach for CAHs that want both nurse-facing features and healthcare compliance?**
 
 Use a generic tool for staff-facing communication, nurses view schedules, request time off, and propose swaps through the generic app's mobile interface, while using a healthcare-specific managed service for schedule building, overtime tracking, compliance documentation, and callout coverage logic. The two functions are clearly separated: the generic tool handles the nurse-facing communication layer, the managed service handles the compliance and operational layer.
+
+**How do I know if generic scheduling software is enough for my facility?**
+
+Ask four questions: Does my facility have CMS documentation requirements? Do I need certification-specific staffing by unit? Do I have per-diem nurses with different scheduling rules than full-time staff? Do I need automated callout coverage from a certified pool? If the answer is yes to any of them, you need healthcare-specific scheduling software, not a generic tool. Every CAH has CMS documentation requirements, so for a critical access hospital the answer is effectively always yes.
+
+**Why can't a generic tool just add a healthcare compliance plugin?**
+
+Certification-aware scheduling has to run inside the assignment step, not as a layer bolted on top. If the scheduler assigns a non-certified nurse to a shift and only checks compliance afterward, the error has already happened. The constraint has to be enforced during assignment, which is why this is an architectural difference, not a missing feature a plugin can patch in later.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

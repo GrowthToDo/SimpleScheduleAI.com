@@ -43,7 +43,7 @@ Tools marketed as "nurse scheduling software" typically handle only the nursing 
 
 ## What types of clinical scheduling do critical access hospitals manage?
 
-A typical CAH manages at least five distinct scheduling streams simultaneously:
+A typical CAH manages at least five distinct scheduling streams simultaneously. With no float pool from a larger health system to draw on, every gap in any of these streams has to be solved locally, whether through per diem staff, a shift swap, or an on-call activation:
 
 **Nursing shift scheduling** is the core. This covers all floor nurses, charge nurses, and CNAs across day, evening, and night shifts seven days a week. Most scheduling software focuses here because it is the largest and most visible scheduling challenge. Per [HRSA data](https://data.hrsa.gov/topics/health-workforce/shortage-areas), there are approximately 1,350 CAHs nationally, and virtually all of them face nursing schedule complexity with minimal administrative support.
 
@@ -57,7 +57,9 @@ A typical CAH manages at least five distinct scheduling streams simultaneously:
 
 ## What software is used for clinical scheduling at small hospitals?
 
-Clinical scheduling software for small hospitals divides into three practical categories, each with different scope and overhead.
+Before comparing dedicated products, it helps to name the real baseline: most small hospitals still run clinical scheduling in Microsoft Excel or Google Sheets. Spreadsheets are free, customizable, and familiar to a nurse manager who has used them for years. The tradeoff is that a spreadsheet does not track overtime as it accumulates, does not flag a coverage gap before it becomes critical, and does not keep an auditable compliance record without a lot of manual effort.
+
+Beyond spreadsheets, dedicated clinical scheduling software for small hospitals divides into three practical categories, each with different scope and overhead.
 
 **Nurse-focused scheduling platforms**. Aladtec, NurseGrid, OnShift, handle nursing shift scheduling well but have limited functionality for physician on-call or multi-department coordination. They are the most common starting point for CAHs because nursing represents the majority of scheduling volume. Setup and ongoing maintenance require the nurse manager to configure and operate the system.
 
@@ -80,7 +82,7 @@ One limitation to name directly: if your clinical scheduling challenge is primar
 ## Frequently Asked Questions
 
 **Q: Is clinical scheduling the same as patient scheduling?**
-No, they are different functions. Patient scheduling coordinates when patients receive care (appointments, procedures, admissions). Clinical scheduling coordinates when clinical staff are available to deliver that care. Both are essential, but they require different tools and processes.
+No, they are different functions. Patient scheduling coordinates when patients receive care (appointments, procedures, admissions). Clinical scheduling coordinates when clinical staff are available to deliver that care. The two serve different audiences: clinical scheduling is a workforce and compliance function owned by the nurse manager, while patient scheduling is a patient access and revenue function owned by front desk and billing staff. They use different tools, which is why a hospital that buys an EHR upgrade hoping to fix nurse scheduling often finds the EHR's patient scheduling module does not solve the staffing problem at all.
 
 **Q: Who is responsible for clinical scheduling at a critical access hospital?**
 Typically the nurse manager or Director of Nursing owns nursing scheduling, while physician on-call is often managed by the medical director or administrator. In practice at smaller CAHs, one person may carry both responsibilities.
