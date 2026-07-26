@@ -13,7 +13,7 @@ const metadata = {
 };
 
 const calLink = 'https://cal.com/gautham-8bdvdx/30min';
-const asOf = '22 July 2026';
+const asOf = '26 July 2026';
 
 // Search traction data, pulled directly from Google Search Console and Bing
 // Webmaster Tools APIs on 10 July 2026. Positions are the averages those
@@ -125,8 +125,8 @@ const aiCites = [
 const productStats = [
   { value: '22', label: 'Scheduling rule evaluators, hard and soft, each covered by tests' },
   { value: '3', label: 'Schedule variants per run: balanced, fairness-optimized, cost-optimized' },
-  { value: '~200', label: 'Automated tests on the rules engine and optimizer' },
-  { value: '97', label: 'Shipped versions since 12 June 2026' },
+  { value: '~590', label: 'Automated tests across the product' },
+  { value: '78', label: 'Shipped versions since 12 June 2026' },
   { value: '~50,000', label: 'Lines of TypeScript across the product' },
   { value: '1 min', label: 'From Excel roster to a generated, compliant schedule' },
 ];
@@ -149,7 +149,10 @@ const descoped = [
     what: 'Epic / Cerner integration',
     why: 'Small hospitals do not run these systems. Excel is the real interchange format, so Excel is what we built for.',
   },
-  { what: 'Mobile app', why: 'The buyer is 45 to 50+, desktop-first. We build for how they actually work.' },
+  {
+    what: 'Mobile app',
+    why: 'Not a priority yet. The buyer and approver work on desktop, so that came first. A nurse-facing mobile view is on the roadmap if design partners want it.',
+  },
 ];
 
 // Founding keyword research, pulled from Google Keyword Planner 1-3 Sep 2025.
@@ -172,10 +175,22 @@ const keywordStats = [
   },
 ];
 
+// Live content counts, computed at build so these proof numbers never go stale.
+const pMods = import.meta.glob('../data/post/*.md', { eager: true });
+const aMods = import.meta.glob('../data/article/*.md', { eager: true });
+const allDocs: any[] = [...Object.values(pMods), ...Object.values(aMods)];
+const liveCount = allDocs.filter((m) => m.frontmatter?.draft === false).length;
+const draftCount = allDocs.filter((m) => m.frontmatter?.draft === true).length;
+const authoredCount = liveCount + draftCount;
+
 const distribution = [
-  { value: '113', label: 'Articles authored for the small-hospital scheduling niche' },
-  { value: '50', label: 'Published today, with 63 more in the reviewed pipeline' },
-  { value: '2', label: 'Interactive tools on the site: a live scheduling simulator and an ROI calculator' },
+  { value: String(authoredCount), label: 'Articles authored for the small-hospital scheduling niche' },
+  { value: String(liveCount), label: `Published live, with ${draftCount} more in the reviewed pipeline` },
+  {
+    value: '3',
+    label:
+      'Self-serve assets a buyer can use: a live scheduling simulator, an ROI calculator, and a free Excel scheduling template',
+  },
 ];
 
 // Section table of contents, used by both the desktop dot-nav and the mobile pill bar below.
@@ -231,7 +246,9 @@ const navItems = [
     }
   </nav>
 
-  <div class="toc-nav lg:hidden sticky top-16 z-30 border-b border-hairline bg-page/95 backdrop-blur dark:bg-slate-900/95">
+  <div
+    class="toc-nav lg:hidden sticky top-16 z-30 border-b border-hairline bg-page/95 backdrop-blur dark:bg-slate-900/95"
+  >
     <div class="mx-auto max-w-4xl overflow-x-auto px-4 py-2 sm:px-6">
       <div class="flex w-max gap-2" role="tablist" aria-label="Section navigation">
         {
@@ -282,8 +299,8 @@ const navItems = [
       </p>
 
       <p class="mt-6 text-muted">
-        What the data pointed to: small US hospitals still build nurse schedules by hand in Excel. A director of nursing
-        can spend a full day every week on it, on top of compliance risk, overtime, and agency-nurse spend.
+        What the data pointed to: small US hospitals still build nurse schedules by hand in Excel. A nurse manager can
+        spend a full day every week on it, on top of compliance risk, overtime, and agency-nurse spend.
       </p>
     </div>
   </section>
@@ -306,9 +323,7 @@ const navItems = [
         </div>
         <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5 shadow-sm">
           <p class="text-sm font-bold text-gray-900 dark:text-white">Schedule building</p>
-          <p class="mt-2 text-sm text-muted">
-            A director of nursing spending a full day every week building the schedule.
-          </p>
+          <p class="mt-2 text-sm text-muted">A nurse manager spending a full day every week building the schedule.</p>
         </div>
         <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-5 shadow-sm">
           <p class="text-sm font-bold text-gray-900 dark:text-white">Audit trail</p>
@@ -413,11 +428,12 @@ const navItems = [
       </div>
 
       <p class="mt-6 text-sm text-muted">
-        Both tools are live: the <a href="/simulator" class="text-primary underline">scheduling simulator</a>
-        builds a compliant ICU week in your browser, and the <a href="/roi" class="text-primary underline"
-          >ROI calculator</a
+        All three are live: the <a href="/simulator" class="text-primary underline">scheduling simulator</a>
+        builds a compliant ICU week in your browser, the <a href="/roi" class="text-primary underline">ROI calculator</a
         >
-        estimates what manual scheduling currently costs a facility.
+        estimates what manual scheduling currently costs a facility, and the
+        <a href="/resources/nurse-schedule-template" class="text-primary underline">free Excel scheduling template</a>
+        ships with built-in overtime, rest-hour, and coverage checks.
       </p>
 
       <h3 class="mt-12 text-xl font-bold text-gray-900 dark:text-white">Search traction</h3>
