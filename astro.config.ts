@@ -57,7 +57,9 @@ export default defineConfig({
         !page.includes('/proof-of-work') &&
         // Dormant programmatic SEO surface: never list /alternatives/ pages
         // until an entry is flipped live per the switch-on contract.
-        !page.includes('/alternatives/'),
+        !page.includes('/alternatives/') &&
+        // Private directory of all unlisted pages (noindex in unlisted.astro)
+        !page.includes('/unlisted'),
     }),
     mdx(),
     svelte(),
