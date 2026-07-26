@@ -2,7 +2,100 @@
 // Proof of Work: standalone slide deck, no site layout.
 // Fixed 1280x720 canvas + viewport scaler, same architecture as /slides.
 // Unlisted: noindex + covered by the '/proof-of-work' sitemap exclusion.
+// Visual-first build (26 Jul 2026): the GSC momentum chart and buyer-intent
+// lollipop are ported from /proof-of-work and restyled for the dark canvas;
+// slide text is stripped to captions.
 import '@fontsource-variable/fraunces';
+
+// --- Momentum chart data (same series as /proof-of-work, GSC API, weekly) ---
+const momentum = [
+  { wk: 'Apr 16', imp: 750, pos: 50.5 },
+  { wk: 'Apr 23', imp: 1219, pos: 31.8 },
+  { wk: 'Apr 30', imp: 1320, pos: 24.2 },
+  { wk: 'May 7', imp: 1714, pos: 20.9 },
+  { wk: 'May 14', imp: 2085, pos: 18.0 },
+  { wk: 'May 21', imp: 1920, pos: 19.8 },
+  { wk: 'May 28', imp: 1488, pos: 15.3 },
+  { wk: 'Jun 4', imp: 1465, pos: 15.1 },
+  { wk: 'Jun 11', imp: 1394, pos: 19.2 },
+  { wk: 'Jun 18', imp: 1285, pos: 16.9 },
+  { wk: 'Jun 25', imp: 1735, pos: 16.3 },
+  { wk: 'Jul 2', imp: 1841, pos: 13.8 },
+  { wk: 'Jul 9', imp: 2053, pos: 14.7 },
+];
+const mN = momentum.length;
+const plotL = 40,
+  plotR = 1064;
+const xAt = (i: number) => plotL + (i * (plotR - plotL)) / (mN - 1);
+const barW = 42;
+const fmtK = (n: number) => (n >= 1000 ? `${Math.floor(n / 1000)},${String(n % 1000).padStart(3, '0')}` : String(n));
+// Impressions panel (bars, labelled above each bar).
+const iTop = 26,
+  iBot = 148,
+  iMax = 2300;
+const iY = (v: number) => iBot - (v / iMax) * (iBot - iTop);
+const iBars = momentum.map((d, i) => ({
+  x: xAt(i) - barW / 2,
+  y: iY(d.imp),
+  h: iBot - iY(d.imp),
+  cx: xAt(i),
+  val: d.imp,
+}));
+// Position panel (inverted scale: a rising line is an improving rank).
+const pTop = 30,
+  pBot = 138,
+  pMin = 10,
+  pMax = 52;
+const pY = (v: number) => pTop + ((v - pMin) / (pMax - pMin)) * (pBot - pTop);
+const pLine = momentum.map((d, i) => `${xAt(i).toFixed(1)},${pY(d.pos).toFixed(1)}`).join(' ');
+const pDots = momentum.map((d, i) => ({ x: xAt(i), y: pY(d.pos), pos: d.pos }));
+const mLabels = momentum.map((d, i) => ({ x: xAt(i), wk: d.wk, show: i % 2 === 0 }));
+
+// --- Buyer-intent ranking lollipop (Google + Bing, 28 days to 10 Jul 2026) ---
+const rankData = [
+  { q: 'best software for nurse scheduling', pos: 1, engine: 'Bing' },
+  { q: 'ai healthcare scheduling tool not ukg not qgenda', pos: 1, engine: 'Bing' },
+  { q: 'replacements for qgenda', pos: 1, engine: 'Bing' },
+  { q: 'best nurse scheduling software for small hospitals', pos: 2, engine: 'Bing' },
+  { q: 'best aladtec alternatives', pos: 2.5, engine: 'Google' },
+  { q: 'nurse scheduling software', pos: 3, engine: 'Bing' },
+  { q: 'alternatives to aladtec', pos: 4.8, engine: 'Google' },
+  { q: 'best nurse scheduling software 2026', pos: 6.7, engine: 'Google' },
+  { q: 'alternatives to smartlinx software', pos: 7.5, engine: 'Google' },
+  { q: 'best alternatives to qgenda for ambulatory practice', pos: 8.7, engine: 'Google' },
+  { q: 'alternatives to shiftwizard software', pos: 9.9, engine: 'Google' },
+  { q: 'what is the best alternative to qgenda', pos: 10.4, engine: 'Google' },
+  { q: 'nurse scheduling software pricing', pos: 11.2, engine: 'Google' },
+];
+const rankPct = (p: number) => (((p - 1) / 11) * 100).toFixed(1);
+
+// --- AI answer engine verdicts (logged probes, 22 Jul 2026) ---
+const aiCites = [
+  { engine: 'Perplexity', model: 'Sonar Pro', result: 'Named us on all three buyer prompts, citing four pages.' },
+  { engine: 'ChatGPT', model: 'GPT-5.5', result: 'Named us the best fit for a small CAH in Texas.' },
+  { engine: 'Google AI Overview', model: '', result: 'Named SimpleScheduleAI the first of three picks.' },
+  { engine: 'Gemini', model: '2.5 Flash', result: 'Named us on two of three buyer prompts.' },
+];
+
+// --- Problem slide: stylized Excel grid with conflicts ---
+const gridCols = 8,
+  gridRows = 7,
+  cellW = 62,
+  cellH = 40,
+  gridX = 10,
+  gridY = 34;
+const conflictCells = [
+  { c: 2, r: 1 },
+  { c: 5, r: 2 },
+  { c: 3, r: 4 },
+  { c: 6, r: 5 },
+];
+const warnCells = [
+  { c: 1, r: 3 },
+  { c: 4, r: 0 },
+  { c: 7, r: 3 },
+  { c: 0, r: 5 },
+];
 ---
 
 <!doctype html>
@@ -32,6 +125,7 @@ import '@fontsource-variable/fraunces';
         --accent: #7baf9b;
         --accent-bright: #9ecfbb;
         --amber: #d9a441;
+        --red: #d96a5a;
         --text: #f2f5f4;
         --muted: #92a2b3;
         --serif: 'Fraunces Variable', Georgia, serif;
@@ -170,6 +264,9 @@ import '@fontsource-variable/fraunces';
         letter-spacing: -0.01em;
         max-width: 20ch;
       }
+      h2.compact {
+        font-size: 44px;
+      }
       .accent {
         color: var(--accent-bright);
       }
@@ -178,13 +275,25 @@ import '@fontsource-variable/fraunces';
       }
 
       .lead {
-        font-size: 21px;
+        font-size: 23px;
         line-height: 1.6;
         color: var(--muted);
         max-width: 62ch;
         margin-top: 22px;
       }
       .lead strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      /* caption under a chart */
+      .caption {
+        margin-top: 18px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+      .caption b {
         color: var(--text);
         font-weight: 600;
       }
@@ -200,7 +309,7 @@ import '@fontsource-variable/fraunces';
         align-items: flex-start;
         border-top: 1px solid var(--hairline);
         padding-top: 20px;
-        font-size: 15px;
+        font-size: 17px;
         line-height: 1.55;
         color: var(--muted);
       }
@@ -219,6 +328,9 @@ import '@fontsource-variable/fraunces';
       .grid.cols-3 {
         grid-template-columns: repeat(3, 1fr);
       }
+      .grid.cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .card {
         position: relative;
         background: var(--surface);
@@ -228,19 +340,19 @@ import '@fontsource-variable/fraunces';
         backdrop-filter: blur(2px);
       }
       .card h3 {
-        font-size: 17px;
+        font-size: 20px;
         font-weight: 700;
         margin-bottom: 8px;
       }
       .card p {
-        font-size: 14.5px;
+        font-size: 16.5px;
         line-height: 1.55;
         color: var(--muted);
       }
       .card .figure {
         font-family: var(--serif);
         font-weight: 430;
-        font-size: 46px;
+        font-size: 54px;
         line-height: 1.1;
         color: var(--accent-bright);
         margin-bottom: 6px;
@@ -271,54 +383,229 @@ import '@fontsource-variable/fraunces';
       .stat .num {
         font-family: var(--serif);
         font-weight: 400;
-        font-size: 58px;
+        font-size: 64px;
         line-height: 1;
         color: var(--accent-bright);
       }
       .stat .num small {
-        font-size: 30px;
+        font-size: 32px;
       }
       .stat p {
         margin-top: 10px;
-        font-size: 13.5px;
+        font-size: 15.5px;
         line-height: 1.5;
         color: var(--muted);
       }
 
-      /* checklist */
-      ul.checks {
-        list-style: none;
-        margin-top: 36px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 14px 40px;
-        max-width: 1000px;
+      /* ── Chart panels ── */
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 20px 24px 14px;
+        margin-top: 20px;
       }
-      ul.checks li {
-        position: relative;
-        padding-left: 34px;
-        font-size: 17px;
-        line-height: 1.5;
+      .panel .panel-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .panel .panel-title span {
+        font-size: 14px;
+        font-weight: 500;
         color: var(--muted);
       }
-      ul.checks li b {
+      .panel svg {
+        width: 100%;
+        display: block;
+      }
+      .chart-bar {
+        fill: rgba(123, 175, 155, 0.55);
+      }
+      .chart-bar-label {
+        fill: var(--muted);
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .chart-axis {
+        fill: rgba(146, 162, 179, 0.7);
+        font-size: 14px;
+      }
+      .chart-line {
+        stroke: var(--accent-bright);
+        stroke-width: 3;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .chart-dot {
+        fill: var(--accent-bright);
+        stroke: var(--bg);
+        stroke-width: 2;
+      }
+      .chart-dot-label {
+        fill: var(--accent-bright);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      /* lollipop ranking rows */
+      .ranks {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .rank-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .rank-row .q {
+        width: 420px;
+        flex-shrink: 0;
+        font-size: 15.5px;
+        color: var(--muted);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: right;
+      }
+      .rank-row .q b {
         color: var(--text);
         font-weight: 600;
       }
-      ul.checks li::before {
-        content: '';
+      .rank-row .track {
+        position: relative;
+        flex: 1;
+        height: 18px;
+        border-radius: 9px;
+        background: rgba(255, 255, 255, 0.045);
+      }
+      .rank-row .dot {
         position: absolute;
-        left: 0;
-        top: 3px;
-        width: 20px;
-        height: 20px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 13px;
+        height: 13px;
         border-radius: 50%;
-        border: 1px solid var(--accent);
-        background:
-          linear-gradient(45deg, transparent 46%, var(--accent) 46%, var(--accent) 54%, transparent 54%) no-repeat 7px
-            9px / 5px 5px,
-          linear-gradient(-50deg, transparent 44%, var(--accent) 44%, var(--accent) 56%, transparent 56%) no-repeat
-            9.5px 7px / 8px 9px;
+        background: var(--accent-bright);
+        box-shadow: 0 0 10px rgba(158, 207, 187, 0.45);
+      }
+      .rank-row .dot.bing {
+        background: var(--amber);
+        box-shadow: 0 0 10px rgba(217, 164, 65, 0.4);
+      }
+      .rank-row .pos {
+        width: 48px;
+        flex-shrink: 0;
+        font-family: var(--serif);
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--text);
+        text-align: right;
+      }
+      .rank-legend {
+        display: flex;
+        gap: 22px;
+        margin-top: 20px;
+        font-size: 15px;
+        color: var(--muted);
+        align-items: center;
+      }
+      .rank-legend i {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 7px;
+      }
+
+      /* AI engine cards */
+      .cited {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border-radius: 999px;
+        background: rgba(123, 175, 155, 0.16);
+        border: 1px solid var(--border);
+        color: var(--accent-bright);
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+      }
+      .ai-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .ai-head h3 {
+        font-size: 22px;
+      }
+      .ai-head h3 small {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--muted);
+        margin-left: 8px;
+      }
+
+      /* problem slide: excel grid */
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        gap: 48px;
+        align-items: center;
+        margin-top: 12px;
+      }
+      .mini-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 34px;
+      }
+      .mini-stat {
+        display: flex;
+        align-items: baseline;
+        gap: 18px;
+      }
+      .mini-stat .num {
+        font-family: var(--serif);
+        font-weight: 420;
+        font-size: 58px;
+        line-height: 1;
+        color: var(--accent-bright);
+        min-width: 185px;
+      }
+      .mini-stat .num small {
+        font-size: 28px;
+      }
+      .mini-stat p {
+        font-size: 17px;
+        line-height: 1.45;
+        color: var(--muted);
+        max-width: 34ch;
+      }
+      .excel-frame {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .excel-frame svg {
+        width: 100%;
+        display: block;
+      }
+      .excel-caption {
+        margin-top: 12px;
+        font-size: 15px;
+        color: var(--muted);
+        text-align: center;
       }
 
       /* quote slides */
@@ -349,7 +636,7 @@ import '@fontsource-variable/fraunces';
         display: flex;
         align-items: center;
         gap: 16px;
-        font-size: 15px;
+        font-size: 17px;
         color: var(--muted);
         line-height: 1.5;
         max-width: 70ch;
@@ -364,31 +651,6 @@ import '@fontsource-variable/fraunces';
       .attribution b {
         color: var(--text);
         font-weight: 600;
-      }
-
-      /* pending chip */
-      .pending {
-        display: inline-flex;
-        align-items: baseline;
-        gap: 12px;
-        margin-top: 34px;
-        border: 1px dashed rgba(217, 164, 65, 0.5);
-        border-radius: 12px;
-        padding: 12px 18px;
-        max-width: 760px;
-      }
-      .pending .tag {
-        font-size: 10.5px;
-        font-weight: 800;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--amber);
-        white-space: nowrap;
-      }
-      .pending p {
-        font-size: 13.5px;
-        line-height: 1.5;
-        color: rgba(217, 164, 65, 0.85);
       }
 
       /* validation setup slide */
@@ -407,7 +669,7 @@ import '@fontsource-variable/fraunces';
         border: 1px solid var(--border);
         border-radius: 999px;
         padding: 10px 22px;
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 600;
         color: var(--text);
         background: var(--surface);
@@ -445,13 +707,13 @@ import '@fontsource-variable/fraunces';
         color: var(--accent-bright);
       }
 
-      /* ── Reveal animation ── */
+      /* ── Reveal animation (kept fast: this deck is for skimming) ── */
       .reveal {
         opacity: 0;
         transform: translateY(18px);
         transition:
-          opacity 0.6s ease,
-          transform 0.6s ease;
+          opacity 0.35s ease,
+          transform 0.35s ease;
       }
       .slide.active .reveal {
         opacity: 1;
@@ -459,16 +721,40 @@ import '@fontsource-variable/fraunces';
       }
       .slide.active .reveal:nth-child(1),
       .slide.active .reveal.d1 {
-        transition-delay: 0.05s;
+        transition-delay: 0.03s;
       }
       .slide.active .reveal.d2 {
-        transition-delay: 0.18s;
+        transition-delay: 0.1s;
       }
       .slide.active .reveal.d3 {
-        transition-delay: 0.32s;
+        transition-delay: 0.18s;
       }
       .slide.active .reveal.d4 {
-        transition-delay: 0.46s;
+        transition-delay: 0.26s;
+      }
+
+      /* rankings callout */
+      .rank-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .rank-callout {
+        text-align: right;
+      }
+      .rank-callout .num {
+        font-family: var(--serif);
+        font-weight: 420;
+        font-size: 58px;
+        line-height: 1;
+        color: var(--accent-bright);
+      }
+      .rank-callout p {
+        font-size: 14px;
+        color: var(--muted);
+        margin-top: 6px;
       }
 
       /* ── Chrome ── */
@@ -500,6 +786,201 @@ import '@fontsource-variable/fraunces';
         color: var(--muted);
         opacity: 0.7;
         z-index: 20;
+      }
+
+      /* ── Mobile: vertical scroll mode, slides stack as full-width cards ── */
+      @media (max-width: 820px) {
+        html,
+        body {
+          overflow: auto;
+          height: auto;
+          user-select: text;
+        }
+        #scaler {
+          position: static;
+          display: block;
+        }
+        #deck {
+          width: 100%;
+          height: auto;
+          transform: none !important;
+          box-shadow: none;
+        }
+        .slide {
+          position: relative;
+          inset: auto;
+          opacity: 1;
+          pointer-events: auto;
+          height: auto;
+          padding: 88px 22px 48px !important;
+          justify-content: flex-start;
+          overflow: visible;
+          border-bottom: 1px solid var(--hairline);
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        .ghost {
+          font-size: 170px;
+          right: 8px;
+          bottom: -24px;
+        }
+        .brand {
+          left: 22px;
+          top: 28px;
+        }
+        .section-label {
+          right: 22px;
+          top: 28px;
+          font-size: 10px;
+        }
+        h1 {
+          font-size: 50px;
+        }
+        h2 {
+          font-size: 34px;
+          max-width: none;
+        }
+        h2.compact {
+          font-size: 29px;
+        }
+        .lead {
+          font-size: 17px !important;
+          max-width: none !important;
+        }
+        .kicker {
+          font-size: 12px;
+          margin-bottom: 16px;
+        }
+        .stage {
+          position: static;
+          margin-top: 30px;
+          flex-direction: column;
+          gap: 6px;
+          font-size: 15px;
+        }
+        .grid.cols-3,
+        .grid.cols-2 {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-top: 26px;
+        }
+        .card {
+          padding: 20px 22px;
+        }
+        .stats {
+          grid-template-columns: 1fr 1fr;
+          margin-top: 28px;
+        }
+        .stat {
+          border-right: none !important;
+          border-bottom: 1px solid var(--hairline) !important;
+          padding: 20px 18px;
+        }
+        .stat:nth-last-child(-n + 2) {
+          border-bottom: none !important;
+        }
+        .stat .num {
+          font-size: 42px;
+        }
+        .stat .num small {
+          font-size: 22px;
+        }
+        .stat p {
+          font-size: 13.5px;
+        }
+        .split {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .mini-stat .num {
+          font-size: 42px;
+          min-width: 132px;
+        }
+        .mini-stat p {
+          font-size: 15px;
+        }
+        .panel {
+          padding: 14px 14px 10px;
+        }
+        .panel .panel-title {
+          font-size: 14px;
+          flex-wrap: wrap;
+          gap: 4px;
+        }
+        /* value labels are illegible at phone scale; the panel title carries
+           the summary numbers and the bar/line shape carries the story */
+        .chart-bar-label,
+        .chart-axis,
+        .chart-dot-label {
+          display: none;
+        }
+        .ranks {
+          gap: 13px;
+          margin-top: 22px;
+        }
+        .rank-row {
+          flex-wrap: wrap;
+          gap: 5px 12px;
+        }
+        .rank-row .q {
+          width: 100%;
+          text-align: left;
+          font-size: 13.5px;
+        }
+        .rank-row .track {
+          height: 14px;
+        }
+        .rank-row .pos {
+          font-size: 16px;
+          width: 34px;
+        }
+        .rank-legend {
+          font-size: 12.5px;
+          flex-wrap: wrap;
+        }
+        .rank-callout {
+          text-align: left;
+        }
+        .rank-callout .num {
+          font-size: 44px;
+        }
+        blockquote {
+          font-size: 30px !important;
+          max-width: none;
+        }
+        .quote-mark {
+          font-size: 100px;
+        }
+        .attribution {
+          font-size: 14.5px;
+          margin-top: 26px;
+        }
+        .backers {
+          flex-wrap: wrap;
+          margin-top: 24px;
+        }
+        .backers span {
+          font-size: 14.5px;
+          padding: 8px 16px;
+        }
+        .ai-head h3 {
+          font-size: 19px;
+        }
+        .cta {
+          margin-top: 30px;
+        }
+        .cta a {
+          padding: 13px 22px;
+          font-size: 15px;
+        }
+        #counter,
+        #hint,
+        #progress {
+          display: none;
+        }
       }
 
       /* ── Print: one slide per page, light ── */
@@ -546,51 +1027,344 @@ import '@fontsource-variable/fraunces';
         <!-- 1 · Title -->
         <section class="slide active">
           <div class="brand reveal">SimpleSchedule<span>AI</span></div>
-          <div class="section-label reveal">Proof of Work · 6 July 2026</div>
+          <div class="section-label reveal">Proof of Work · 26 July 2026</div>
           <h1 class="reveal d1">The work<br />so far.</h1>
           <p class="lead reveal d2" style="font-size: 24px; max-width: 56ch;">
-            We deliver <strong>finished nurse schedules</strong> to small US hospitals as an outcome. A nursing director
-            hands us a roster and constraints; they get back a compliant, fair, fully staffed schedule.
+            We deliver <strong>finished nurse schedules</strong> to small US hospitals as an outcome. Roster and
+            constraints in, a compliant, fair, fully staffed schedule out.
           </p>
           <div class="stage reveal d3">
             <b>Where we are, plainly:</b>
             <span>
-              Pre-revenue. No design partner signed yet. A live pursuit at a ~70-nurse hospital in North Carolina. The
-              rest of this deck is what has been done to date.
+              Pre-revenue. No design partner signed yet. A live pursuit at a ~70-nurse hospital in North Carolina.
             </span>
           </div>
         </section>
 
-        <!-- 2 · Demand -->
+        <!-- 2 · Thesis -->
         <section class="slide">
           <div class="ghost">01</div>
           <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">01 / How we arrived at the idea</div>
-          <p class="kicker reveal d1">Search data</p>
-          <h2 class="reveal d2">The idea came from <em class="accent">keyword research.</em></h2>
-          <p class="lead reveal d3">
-            In <strong>December 2025</strong> we saw real search volume for small-hospital nurse scheduling and for alternatives
-            to the incumbent platforms. Small US hospitals still build schedules by hand in Excel, and a director of nursing
-            can spend a <strong>full day every week</strong> on it.
+          <div class="section-label">01 / The thesis</div>
+          <p class="kicker reveal d1">How we operate</p>
+          <h2 class="reveal d2" style="max-width: 17ch;">Distribution first.<br /><em class="accent">On purpose.</em></h2>
+          <p class="lead reveal d3" style="font-size: 23px;">
+            We proved the demand and built the path to buyers <strong>before</strong> the product. Every slide that
+            follows comes from that order.
           </p>
-          <div class="pending reveal d4">
-            <span class="tag">Data pending</span>
-            <p>Keyword-volume snapshot from the Dec 2025 research: terms, volumes, incumbent-alternative searches.</p>
-          </div>
         </section>
 
-        <!-- 3 · VoC -->
+        <!-- 3 · Problem via keyword research -->
         <section class="slide">
           <div class="ghost">02</div>
           <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">02 / Voice of customer</div>
-          <p class="kicker reveal d1">Discovery calls</p>
-          <h2 class="reveal d2">What we heard in <em class="accent">discovery calls.</em></h2>
-          <p class="lead reveal d2" style="margin-top: 14px;">
-            Conversations with nursing directors, nurse managers, and staffing agency owners across North Carolina,
-            Texas, New Jersey, and New Hampshire. Three pain points came up consistently. The product handles all three,
-            verified in a live demo.
-          </p>
+          <div class="section-label">02 / The problem</div>
+          <p class="kicker reveal d1">Search data · Dec 2025</p>
+          <div class="split">
+            <div>
+              <h2 class="compact reveal d2">Found in <em class="accent">keyword research.</em></h2>
+              <div class="mini-stats reveal d3">
+                <div class="mini-stat">
+                  <div class="num">500<small>k</small></div>
+                  <p>Monthly US searches for employee scheduling software</p>
+                </div>
+                <div class="mini-stat">
+                  <div class="num">$40</div>
+                  <p>Per click, what incumbents pay on sales-led funnels</p>
+                </div>
+                <div class="mini-stat">
+                  <div class="num">1 <small>day/wk</small></div>
+                  <p>A director of nursing loses to Excel, worth $20 to 30K a year</p>
+                </div>
+              </div>
+            </div>
+            <div class="excel-frame reveal d4">
+              <svg viewBox="0 0 520 330" role="img" aria-label="A stylized Excel schedule full of conflicts">
+                <!-- sheet chrome -->
+                <rect x="10" y="8" width="500" height="20" rx="4" fill="rgba(255,255,255,0.06)"></rect>
+                <circle cx="22" cy="18" r="3.5" fill="#d96a5a" opacity="0.8"></circle>
+                <circle cx="34" cy="18" r="3.5" fill="#d9a441" opacity="0.8"></circle>
+                <circle cx="46" cy="18" r="3.5" fill="#7baf9b" opacity="0.8"></circle>
+                <text x="260" y="22" text-anchor="middle" font-size="10" fill="rgba(146,162,179,0.8)" font-family="monospace">
+                  ICU_Schedule_FINAL_v7_REALLYFINAL.xlsx
+                </text>
+                <!-- grid -->
+                {
+                  Array.from({ length: gridRows + 1 }, (_, r) => (
+                    <line
+                      x1={gridX}
+                      y1={gridY + r * cellH}
+                      x2={gridX + gridCols * cellW}
+                      y2={gridY + r * cellH}
+                      stroke="rgba(255,255,255,0.09)"
+                      stroke-width="1"
+                    />
+                  ))
+                }
+                {
+                  Array.from({ length: gridCols + 1 }, (_, c) => (
+                    <line
+                      x1={gridX + c * cellW}
+                      y1={gridY}
+                      x2={gridX + c * cellW}
+                      y2={gridY + gridRows * cellH}
+                      stroke="rgba(255,255,255,0.09)"
+                      stroke-width="1"
+                    />
+                  ))
+                }
+                <!-- header row tint -->
+                <rect
+                  x={gridX}
+                  y={gridY}
+                  width={gridCols * cellW}
+                  height={cellH}
+                  fill="rgba(123,175,155,0.1)"></rect>
+                <!-- filled cells: faint shift blocks -->
+                {
+                  [
+                    [0, 1], [1, 1], [3, 1], [6, 1], [7, 1],
+                    [0, 2], [2, 2], [4, 2], [6, 2],
+                    [1, 3], [2, 3], [5, 3], [6, 3],
+                    [0, 4], [1, 4], [4, 4], [7, 4],
+                    [2, 5], [3, 5], [5, 5],
+                    [0, 6], [3, 6], [4, 6], [6, 6], [7, 6],
+                  ].map(([c, r]) => (
+                    <rect
+                      x={gridX + c * cellW + 5}
+                      y={gridY + r * cellH + 8}
+                      width={cellW - 10}
+                      height={cellH - 16}
+                      rx="3"
+                      fill="rgba(146,162,179,0.18)"
+                    />
+                  ))
+                }
+                <!-- conflict cells -->
+                {
+                  conflictCells.map(({ c, r }) => (
+                    <>
+                      <rect
+                        x={gridX + c * cellW + 3}
+                        y={gridY + r * cellH + 5}
+                        width={cellW - 6}
+                        height={cellH - 10}
+                        rx="4"
+                        fill="rgba(217,106,90,0.22)"
+                        stroke="#d96a5a"
+                        stroke-width="1.5"
+                      />
+                      <text
+                        x={gridX + c * cellW + cellW / 2}
+                        y={gridY + r * cellH + cellH / 2 + 5}
+                        text-anchor="middle"
+                        font-size="15"
+                        font-weight="800"
+                        fill="#d96a5a"
+                      >
+                        !
+                      </text>
+                    </>
+                  ))
+                }
+                <!-- warning cells -->
+                {
+                  warnCells.map(({ c, r }) => (
+                    <rect
+                      x={gridX + c * cellW + 3}
+                      y={gridY + r * cellH + 5}
+                      width={cellW - 6}
+                      height={cellH - 10}
+                      rx="4"
+                      fill="rgba(217,164,65,0.16)"
+                      stroke="rgba(217,164,65,0.7)"
+                      stroke-width="1.2"
+                      stroke-dasharray="4 3"
+                    />
+                  ))
+                }
+                <!-- annotations -->
+                <text x="418" y="322" text-anchor="end" font-size="11" fill="#d9a441" font-family="monospace">
+                  Sunday · 11:47 PM
+                </text>
+                <text x="102" y="322" font-size="11" fill="rgba(146,162,179,0.9)" font-family="monospace">
+                  4 conflicts · 3 callouts open
+                </text>
+              </svg>
+              <p class="excel-caption">Rebuilt by hand, every week, in every small hospital.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4 · Distribution: the operation -->
+        <section class="slide">
+          <div class="ghost">03</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">03 / Distribution</div>
+          <p class="kicker reveal d1">The operation</p>
+          <h2 class="reveal d2">So we built the <em class="accent">distribution engine</em> first.</h2>
+          <div class="grid cols-3 reveal d3">
+            <div class="card">
+              <div class="figure">113</div>
+              <h3>Articles authored</h3>
+              <p>For the small-hospital scheduling niche. 50 live, 63 in the reviewed pipeline.</p>
+            </div>
+            <div class="card">
+              <div class="figure">2</div>
+              <h3>Interactive tools live</h3>
+              <p>A scheduling simulator that builds an ICU week in-browser, and an ROI calculator.</p>
+            </div>
+            <div class="card">
+              <div class="figure">1</div>
+              <h3>Hard content gate</h3>
+              <p>Comparison pages need sourced, dated quotes and minimum depth, or the build fails.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5 · Momentum chart -->
+        <section class="slide" style="justify-content: flex-start; padding-top: 96px;">
+          <div class="ghost">03</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">03 / Distribution</div>
+          <h2 class="compact reveal d1">90 days of <em class="accent">compounding search.</em></h2>
+          <div class="panel reveal d2">
+            <div class="panel-title">Weekly Google impressions <span>~750 &rarr; ~2,050</span></div>
+            <svg viewBox="0 0 1104 180" role="img" aria-label="Weekly Google impressions rising from about 750 to about 2,050 between April and July 2026">
+              {iBars.map((b) => <rect class="chart-bar" x={b.x} y={b.y} width={barW} height={b.h} rx="3" />)}
+              {
+                iBars.map((b) => (
+                  <text class="chart-bar-label" x={b.cx} y={b.y - 8} text-anchor="middle">
+                    {fmtK(b.val)}
+                  </text>
+                ))
+              }
+              {
+                mLabels.map(
+                  (l) =>
+                    l.show && (
+                      <text class="chart-axis" x={l.x} y="172" text-anchor="middle">
+                        {l.wk}
+                      </text>
+                    )
+                )
+              }
+            </svg>
+          </div>
+          <div class="panel reveal d3">
+            <div class="panel-title">Average Google position <span>rising line = better rank · 50 &rarr; ~14</span></div>
+            <svg viewBox="0 0 1104 170" role="img" aria-label="Average Google position improving from around 50 to around 14 between April and July 2026">
+              <polyline class="chart-line" points={pLine}></polyline>
+              {pDots.map((d) => <circle class="chart-dot" cx={d.x} cy={d.y} r="4.5" />)}
+              {
+                pDots.map((d) => (
+                  <text class="chart-dot-label" x={d.x} y={d.y - 12} text-anchor="middle">
+                    {d.pos}
+                  </text>
+                ))
+              }
+              {
+                mLabels.map(
+                  (l) =>
+                    l.show && (
+                      <text class="chart-axis" x={l.x} y="164" text-anchor="middle">
+                        {l.wk}
+                      </text>
+                    )
+                )
+              }
+            </svg>
+          </div>
+          <p class="caption reveal d4">Google Search Console, weekly, 16 Apr to 15 Jul 2026.</p>
+        </section>
+
+        <!-- 6 · Buyer-intent rankings -->
+        <section class="slide" style="justify-content: flex-start; padding-top: 96px;">
+          <div class="ghost">03</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">03 / Distribution</div>
+          <div class="rank-head reveal d1">
+            <h2 class="compact">Ranked where <em class="accent">buyers search.</em></h2>
+            <div class="rank-callout">
+              <div class="num">3 &times; #1</div>
+              <p>buyer queries where we rank number one</p>
+            </div>
+          </div>
+          <div class="ranks reveal d2">
+            {
+              rankData.map((r) => (
+                <div class="rank-row">
+                  <span class="q">{r.pos <= 3 ? <b>{r.q}</b> : r.q}</span>
+                  <div class="track">
+                    <span class={`dot ${r.engine === 'Bing' ? 'bing' : ''}`} style={`left:${rankPct(r.pos)}%`} />
+                  </div>
+                  <span class="pos">{r.pos}</span>
+                </div>
+              ))
+            }
+          </div>
+          <div class="rank-legend reveal d3">
+            <span><i style="background: var(--accent-bright);"></i>Google</span>
+            <span><i style="background: var(--amber);"></i>Bing</span>
+            <span style="margin-left: auto;">Left edge is position 1 · 28 days to 10 Jul 2026</span>
+          </div>
+        </section>
+
+        <!-- 7 · AI answer engines -->
+        <section class="slide">
+          <div class="ghost">03</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">03 / Distribution</div>
+          <p class="kicker reveal d1">Answer engines · logged probes, 22 Jul 2026</p>
+          <h2 class="compact reveal d2">The AI engines already <em class="accent">answer with us.</em></h2>
+          <div class="grid cols-2 reveal d3" style="margin-top: 32px;">
+            {
+              aiCites.map((a) => (
+                <div class="card">
+                  <div class="ai-head">
+                    <h3>
+                      {a.engine}
+                      {a.model && <small>{a.model}</small>}
+                    </h3>
+                    <span class="cited">&#10003; Cited</span>
+                  </div>
+                  <p style="font-size: 18px;">{a.result}</p>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+
+        <!-- 8 · Product -->
+        <section class="slide">
+          <div class="ghost">04</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">04 / Product</div>
+          <p class="kicker reveal d1">Built behind proven demand</p>
+          <h2 class="reveal d2">Then we <em class="accent">built.</em></h2>
+          <div class="stats reveal d3">
+            <div class="stat">
+              <div class="num">22</div><p>Scheduling rule evaluators, hard and soft, each covered by tests</p>
+            </div>
+            <div class="stat"><div class="num">3</div><p>Schedule variants per run: balanced, fairness, cost</p></div>
+            <div class="stat"><div class="num">~200</div><p>Automated tests on the rules engine and optimizer</p></div>
+            <div class="stat"><div class="num">97</div><p>Shipped versions since 12 June 2026</p></div>
+            <div class="stat">
+              <div class="num">50<small>k</small></div><p>Lines of TypeScript, Excel in to Excel out</p>
+            </div>
+            <div class="stat">
+              <div class="num">1 <small>min</small></div><p>From Excel roster to a generated, compliant schedule</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9 · VoC -->
+        <section class="slide">
+          <div class="ghost">05</div>
+          <div class="brand">SimpleSchedule<span>AI</span></div>
+          <div class="section-label">05 / Voice of customer</div>
+          <p class="kicker reveal d1">Discovery calls · NC, TX, NJ, NH</p>
+          <h2 class="reveal d2">Shaped by what buyers <em class="accent">told us.</em></h2>
           <div class="grid cols-3 reveal d3">
             <div class="card">
               <div class="figure">1.5 hrs</div>
@@ -608,57 +1382,29 @@ import '@fontsource-variable/fraunces';
               <p>Every change must be documented and defensible. Excel can't.</p>
             </div>
           </div>
-          <div class="pending reveal d4">
-            <span class="tag">Data pending</span>
-            <p>Total discovery-call count and role breakdown.</p>
-          </div>
         </section>
 
-        <!-- 4 · Sharmila quote -->
+        <!-- 10 · Sharmila quote -->
         <section class="slide">
           <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">02 / Voice of customer</div>
+          <div class="section-label">05 / Voice of customer</div>
           <span class="quote-mark reveal d1">&ldquo;</span>
           <blockquote class="reveal d2">It's a <span class="hl">complete thing</span> already.</blockquote>
           <div class="attribution reveal d3">
             <span>
-              <b>Sharmila Krishnaswamy</b> · nursing operations, Mantravya (North Carolina) · after a full live product demo,
-              19 June 2026. She is now actively bringing us into her hospital network.
+              <b>Sharmila Krishnaswamy</b> · nursing operations, Mantravya (North Carolina) · after a full live demo,
+              19 June 2026. Now actively bringing us into her hospital network.
             </span>
           </div>
         </section>
 
-        <!-- 5 · Product -->
+        <!-- 11 · Discipline -->
         <section class="slide">
-          <div class="ghost">03</div>
+          <div class="ghost">05</div>
           <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">03 / What we built</div>
-          <p class="kicker reveal d1">Product</p>
-          <h2 class="reveal d2">What we've <em class="accent">built.</em></h2>
-          <div class="stats reveal d3">
-            <div class="stat">
-              <div class="num">22</div><p>Scheduling rule evaluators, hard and soft, each covered by tests</p>
-            </div>
-            <div class="stat"><div class="num">3</div><p>Schedule variants per run: balanced, fairness, cost</p></div>
-            <div class="stat"><div class="num">~200</div><p>Automated tests on the rules engine and optimizer</p></div>
-            <div class="stat"><div class="num">97</div><p>Shipped versions since 12 June 2026</p></div>
-            <div class="stat">
-              <div class="num">50<small>k</small></div><p>Lines of TypeScript, Excel in to Excel out</p>
-            </div>
-            <div class="stat">
-              <div class="num">1 <small>min</small></div><p>From Excel roster to a generated, compliant schedule</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- 6 · Discipline -->
-        <section class="slide">
-          <div class="ghost">03</div>
-          <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">03 / What we built</div>
+          <div class="section-label">05 / Voice of customer</div>
           <p class="kicker reveal d1">Scope decisions</p>
           <h2 class="reveal d2">What we chose <em class="accent">not</em> to build.</h2>
-          <p class="lead reveal d2" style="margin-top: 14px;">Each of these was cut based on what buyers told us.</p>
           <div class="grid cols-3 reveal d3">
             <div class="card">
               <h3>Self-scheduling</h3>
@@ -681,53 +1427,17 @@ import '@fontsource-variable/fraunces';
           </div>
         </section>
 
-        <!-- 7 · Distribution -->
+        <!-- 12 · Validation setup -->
         <section class="slide">
-          <div class="ghost">04</div>
+          <div class="ghost">06</div>
           <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">04 / Distribution</div>
-          <p class="kicker reveal d1">SEO and content</p>
-          <h2 class="reveal d2">The website and <em class="accent">content work.</em></h2>
-          <p class="lead reveal d2" style="margin-top: 14px;">
-            SimpleScheduleAI.com is a content and search operation: quality gates enforced in the build pipeline,
-            structured data for AI answer engines, and interactive tools a buyer can try directly.
-          </p>
-          <div class="grid cols-3 reveal d3">
-            <div class="card">
-              <div class="figure">113</div>
-              <h3>Articles authored</h3>
-              <p>For the small-hospital scheduling niche. 50 live, 63 in the reviewed pipeline.</p>
-            </div>
-            <div class="card">
-              <div class="figure">2</div>
-              <h3>Interactive tools live</h3>
-              <p>A scheduling simulator that builds an ICU week in-browser, and an ROI calculator.</p>
-            </div>
-            <div class="card">
-              <div class="figure">1</div>
-              <h3>Hard content gate</h3>
-              <p>Comparison pages need sourced, dated quotes and minimum depth, or the build fails.</p>
-            </div>
-          </div>
-          <div class="pending reveal d4">
-            <span class="tag">Data pending</span>
-            <p>
-              Search Console trend, Bing data, AI-engine visibility log (ChatGPT, Perplexity, AI Overviews, Copilot).
-            </p>
-          </div>
-        </section>
-
-        <!-- 8 · Validation setup -->
-        <section class="slide">
-          <div class="ghost">05</div>
-          <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">05 / External validation</div>
+          <div class="section-label">06 / External validation</div>
           <p class="kicker reveal d1">Inbound</p>
           <h2 class="reveal d2">An unsolicited<br /><em class="accent">acquisition inquiry.</em></h2>
           <p class="lead reveal d3">
             <span class="mono-date">16 June 2026.</span><br />
-            The CEO of a vertical-software acquirer emailed us cold. He had spent the year building an acquisition thesis
-            on nurse scheduling software, and found SimpleScheduleAI inside it.
+            The CEO of a vertical-software acquirer emailed us cold, a year into building an acquisition thesis on nurse
+            scheduling. Distribution-first is why he found us before we had revenue.
           </p>
           <div class="backers reveal d4">
             <span>Backed by Accel</span>
@@ -736,24 +1446,10 @@ import '@fontsource-variable/fraunces';
           </div>
         </section>
 
-        <!-- 9 · Quote 1 -->
+        <!-- 13 · Acquirer quote -->
         <section class="slide">
           <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">05 / Verbatim · 16 June 2026</div>
-          <span class="quote-mark reveal d1">&ldquo;</span>
-          <blockquote class="reveal d2" style="font-size: 46px;">
-            I spent this year defining our thesis re nurse scheduling software and the value prop you've built at
-            SimpleScheduleAI <span class="hl">really resonated.</span>
-          </blockquote>
-          <div class="attribution reveal d3">
-            <span><b>CEO</b>, Accel / TCV / Prosus-backed software acquirer · sender identity shared on request.</span>
-          </div>
-        </section>
-
-        <!-- 10 · Quote 2 -->
-        <section class="slide">
-          <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">05 / Same email</div>
+          <div class="section-label">06 / Verbatim · 16 June 2026</div>
           <span class="quote-mark reveal d1">&ldquo;</span>
           <blockquote class="reveal d2" style="font-size: 46px;">
             Your AI-plus-human service model solves the
@@ -761,22 +1457,22 @@ import '@fontsource-variable/fraunces';
           </blockquote>
           <div class="attribution reveal d3">
             <span>
-              He described our positioning back to us, unprompted. We are below their acquisition threshold today, so we
-              are treating this as validation and a relationship for later, not a deal.
+              <b>CEO</b>, Accel / TCV / Prosus-backed software acquirer · identity shared on request. Below their
+              threshold today, so this is validation and a relationship, not a deal.
             </span>
           </div>
         </section>
 
-        <!-- 11 · Close -->
+        <!-- 14 · Close -->
         <section class="slide">
-          <div class="ghost">06</div>
+          <div class="ghost">07</div>
           <div class="brand">SimpleSchedule<span>AI</span></div>
-          <div class="section-label">06 / What's next</div>
+          <div class="section-label">07 / What's next</div>
           <p class="kicker reveal d1">Next</p>
           <h2 class="reveal d2">Next: sign the first <em class="accent">design partner hospital.</em></h2>
           <p class="lead reveal d3">
-            Run their schedules end to end, learn from it, then repeat. The pipeline for this is live. If you want the
-            deeper walkthrough or the numbers behind any claim in this deck, talk to us.
+            Run their schedules end to end, learn, repeat. If this looks like a team worth backing, or you know the
+            hospital or the person we should be talking to, we want to hear from you.
           </p>
           <div class="cta reveal d4">
             <a class="primary" href="https://cal.com/gautham-8bdvdx/30min" target="_blank" rel="noopener noreferrer">
@@ -789,7 +1485,7 @@ import '@fontsource-variable/fraunces';
       </div>
     </div>
 
-    <div id="counter">1 / 11</div>
+    <div id="counter">1 / 14</div>
     <div id="hint">← → to navigate</div>
 
     <script>
@@ -798,6 +1494,10 @@ import '@fontsource-variable/fraunces';
       const progress = document.getElementById('progress');
       let index = 0;
 
+      // Below 820px the CSS switches to a stacked scroll layout; slide
+      // navigation and the canvas scaler must stay out of the way there.
+      const isMobile = window.matchMedia('(max-width: 820px)').matches;
+
       function show(i: number) {
         index = Math.max(0, Math.min(slides.length - 1, i));
         slides.forEach((s, j) => s.classList.toggle('active', j === index));
@@ -805,6 +1505,7 @@ import '@fontsource-variable/fraunces';
         if (progress) progress.style.width = `${((index + 1) / slides.length) * 100}%`;
       }
 
+      if (!isMobile) {
       document.addEventListener('keydown', (e) => {
         if (['ArrowRight', 'ArrowDown', ' ', 'PageDown', 'Enter'].includes(e.key)) {
           e.preventDefault();
@@ -861,6 +1562,7 @@ import '@fontsource-variable/fraunces';
       rescale();
       const fromHash = parseInt(location.hash.slice(1), 10);
       show(Number.isFinite(fromHash) ? fromHash - 1 : 0);
+      } // end !isMobile
     </script>
   </body>
 </html>
