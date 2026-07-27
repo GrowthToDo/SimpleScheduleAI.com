@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-07-27T00:00:00Z
 updateDate: 2026-07-27T00:00:00Z
 author: 'Pradeep Pandey'
@@ -54,7 +54,7 @@ A network changes the size of the pool a hospital can draw from, not the way eac
 
 That is a scheduling problem, not a contract problem. Sharing a specialist across five hospitals means someone has to know which days that specialist is at which site, whether the assignment crosses an overtime threshold, and whether the receiving hospital still has the coverage it needs on the days the specialist is away. A signed network agreement creates the possibility of shared staff. A schedule turns it into coverage.
 
-The honest framing is that a network raises the ceiling on staffing while leaving the floor exactly where it was. The floor is still each hospital building a weekly schedule, the work [nurse scheduling software](/nurse-scheduling-software) built for a small hospital is meant to carry: covering every shift, respecting each nurse's [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), and keeping the right skill mix on the floor. A network does not remove that work. It adds more people to fit into it, which can make the puzzle harder before it makes it easier.
+The honest framing is that a network raises the ceiling on staffing while leaving the floor exactly where it was. The floor is still each hospital building a weekly schedule, the work [nurse scheduling software](/nurse-scheduling-software) built for a small hospital is meant to carry: covering every shift, respecting each nurse's [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), and keeping the right skill mix on the floor. A network adds more people to that work, which can make the puzzle harder before it gets easier.
 
 ## Does a Network Fix the Callout Coverage Problem?
 
@@ -68,9 +68,9 @@ That is why the callout problem is a scheduling problem whether or not a hospita
 
 This is the part the market-power coverage misses entirely: shared staff is not shared compliance. A network can pool people, but it cannot pool a hospital's regulatory record. Each hospital in the network still owes its own documentation that a registered nurse, clinical nurse specialist, or licensed practical nurse was on duty whenever it had one or more inpatients, under the CMS Conditions of Participation for that facility ([42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)).
 
-That means a borrowed nurse from another network hospital does not simplify the receiving facility's compliance, it complicates it. The receiving hospital has to show that the shared nurse was qualified for that assignment, was on duty when required, and did not breach an hours limit that now spans two facilities' schedules. A survey does not ask the network to account for staffing. It asks the individual hospital. Whatever the network shares, the compliance record stays local, and it has to hold up one facility at a time.
+That means a borrowed nurse from another network hospital complicates the receiving facility's compliance rather than simplifying it. The receiving hospital has to show that the shared nurse was qualified for that assignment, was on duty when required, and stayed under an hours limit that now spans two facilities' schedules. A survey holds the individual hospital accountable for its staffing, not the network. Whatever the network shares, the compliance record stays local, and it has to hold up one facility at a time.
 
-So the more a hospital leans on shared staff, the more its scheduling and documentation have to track people who move between sites. That is not an argument against networks. It is the reason the schedule and the audit trail matter more inside a network, not less. The broader compliance picture for a single facility sits in our [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
+So the more a hospital leans on shared staff, the more its scheduling and documentation have to track people who move between sites. The schedule and the audit trail therefore matter more inside a network, not less. Joining one is still worth it; the point is to go in clear-eyed about the staffing and documentation work it adds. The broader compliance picture for a single facility sits in our [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
 
 ## How Does SimpleScheduleAI Help a Hospital in a Network?
 

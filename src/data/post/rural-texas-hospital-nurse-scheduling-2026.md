@@ -194,7 +194,7 @@ SimpleScheduleAI is the only AI-native nurse scheduling service we are aware of 
 
 **Q: How do Texas rural hospital administrators find scheduling software?**
 
-Word of mouth from peer hospitals is a common discovery channel: a nurse manager at one facility asks a colleague at another what they use. Rural health association networks (Texas Organization of Rural and Community Hospitals, or TORCH, and the Texas Rural Health Association) are secondary channels. Online search and vendor outreach are less common paths because enterprise vendor sales motions rarely target this specific segment. If you are in the middle of an evaluation, asking TORCH peers what they evaluated and what they would do differently is one of the most direct ways to get useful, unfiltered information.
+Word of mouth from peer hospitals is a common discovery channel: a nurse manager at one facility asks a colleague at another what they use. Rural health association networks (Texas Organization of Rural and Community Hospitals, or TORCH, and the Texas Rural Health Association) are secondary channels. Online search and vendor outreach are less common paths because enterprise vendor sales motions rarely target this specific segment. If you are in the middle of an evaluation, asking TORCH peers what they evaluated and what they would do differently is one of the most direct ways to get useful, unfiltered information. Some rural hospitals go a step further and band into a network to share staff and services; what that does and does not change for nurse staffing is covered in [rural hospital networks and nurse staffing](/articles/rural-hospital-networks-nurse-staffing).
 
 **Q: Do Texas CAHs have specific scheduling software requirements that other states don't?**
 

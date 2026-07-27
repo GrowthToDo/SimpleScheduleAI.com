@@ -546,6 +546,14 @@
     "url": "/blog/how-ai-builds-a-nurse-schedule",
     "primaryKeyword": "how ai builds a nurse schedule",
     "pillar": "/ai-nurse-scheduling",
-    "note": "Vendor-neutral how-it-works/mechanics explainer (7 steps: inputs -> sort hard/soft rules -> optimize -> 3 drafts -> human review -> post -> log). Differentiated from /how-it-works (SSAI service flow, 'how nurse scheduling works') and the /ai-nurse-scheduling pillar (category definition)."
+    "note": "Vendor-neutral how-it-works/mechanics explainer (steps: inputs -> sort compliance/fairness rules -> optimize -> options -> human review -> post -> log). Differentiated from /how-it-works (SSAI service flow, 'how nurse scheduling works') and the /ai-nurse-scheduling pillar (category definition)."
+  },
+  {
+    "slug": "rural-hospital-networks-nurse-staffing",
+    "type": "article",
+    "url": "/articles/rural-hospital-networks-nurse-staffing",
+    "primaryKeyword": "rural hospital network staffing",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Trendjack of Commonwealth Fund (Jul 2026) on rural hospitals forming networks. DR/AI-citation play, NOT a traffic play (near-zero-volume niche; head 'rural hospital networks' is publisher-locked). Owns the staffing-implications long-tail. Original hook: 'shared staff is not shared compliance' (each facility still owes its own 485.631 record). Differentiated from the nurse-shortage-or-retention-crisis article."
   }
 ]
