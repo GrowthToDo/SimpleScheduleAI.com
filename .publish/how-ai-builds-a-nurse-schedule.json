@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "how-ai-builds-a-nurse-schedule",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-27T05:30:58.321Z",
+      "contentHash": "742a521c85059f809272884a4bc8e51a69b3c746f078df1ad3bf7040a5b39796"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-27T05:31:00.660Z",
+      "contentHash": "742a521c85059f809272884a4bc8e51a69b3c746f078df1ad3bf7040a5b39796"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-27T05:31:03.165Z",
+      "contentHash": "742a521c85059f809272884a4bc8e51a69b3c746f078df1ad3bf7040a5b39796"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-27T05:31:03.196Z",
+      "contentHash": "742a521c85059f809272884a4bc8e51a69b3c746f078df1ad3bf7040a5b39796"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-27T05:31:03.197Z",
+      "contentHash": "742a521c85059f809272884a4bc8e51a69b3c746f078df1ad3bf7040a5b39796"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-27T05:31:03.197Z",
+      "contentHash": "742a521c85059f809272884a4bc8e51a69b3c746f078df1ad3bf7040a5b39796"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-27T05:31:03.198Z",
+      "contentHash": "742a521c85059f809272884a4bc8e51a69b3c746f078df1ad3bf7040a5b39796"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "opus-dossier-match",
+      "setAt": "2026-07-27T05:31:04.387Z",
+      "contentHash": "3c777b2408cf6f0ec1cf34d5ba66f922457005af7831706b829c6b5e15a5b8c6"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-27T05:40:24.845Z",
+      "contentHash": "8c581c625c9d36bcc9ffbf0d03a8f8479356fc5b742576aba371e450f9ca4f31"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-07-27T05:40:26.129Z",
+      "contentHash": "8c581c625c9d36bcc9ffbf0d03a8f8479356fc5b742576aba371e450f9ca4f31"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-27T05:40:27.454Z",
+      "contentHash": "8c581c625c9d36bcc9ffbf0d03a8f8479356fc5b742576aba371e450f9ca4f31"
+    }
+  },
+  "overrides": []
+}

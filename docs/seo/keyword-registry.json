@@ -539,5 +539,13 @@
     "primaryKeyword": "texas nurse staffing",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Texas staffing-numbers/data post (uses 91 current count, 86 only in DSHS-2024 context); differentiated from the rural-texas market-read post."
+  },
+  {
+    "slug": "how-ai-builds-a-nurse-schedule",
+    "type": "post",
+    "url": "/blog/how-ai-builds-a-nurse-schedule",
+    "primaryKeyword": "how ai builds a nurse schedule",
+    "pillar": "/ai-nurse-scheduling",
+    "note": "Vendor-neutral how-it-works/mechanics explainer (7 steps: inputs -> sort hard/soft rules -> optimize -> 3 drafts -> human review -> post -> log). Differentiated from /how-it-works (SSAI service flow, 'how nurse scheduling works') and the /ai-nurse-scheduling pillar (category definition)."
   }
 ]
