@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T08:05:12.232Z",
+      "checkedAt": "2026-07-27T08:06:56.609Z",
       "contentHash": "de9d3e0d5f83eae110835518a7ba228fedcc187397039443d40f3e3f5aa19952"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T08:05:13.782Z",
+      "checkedAt": "2026-07-27T08:06:58.392Z",
       "contentHash": "de9d3e0d5f83eae110835518a7ba228fedcc187397039443d40f3e3f5aa19952"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T08:05:25.950Z",
+      "checkedAt": "2026-07-27T08:06:59.685Z",
       "contentHash": "de9d3e0d5f83eae110835518a7ba228fedcc187397039443d40f3e3f5aa19952"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T08:05:26.030Z",
+      "checkedAt": "2026-07-27T08:06:59.743Z",
       "contentHash": "de9d3e0d5f83eae110835518a7ba228fedcc187397039443d40f3e3f5aa19952"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T08:05:26.482Z",
+      "checkedAt": "2026-07-27T08:06:59.976Z",
       "contentHash": "de9d3e0d5f83eae110835518a7ba228fedcc187397039443d40f3e3f5aa19952"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T08:05:26.482Z",
+      "checkedAt": "2026-07-27T08:06:59.977Z",
       "contentHash": "de9d3e0d5f83eae110835518a7ba228fedcc187397039443d40f3e3f5aa19952"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T08:05:26.484Z",
+      "checkedAt": "2026-07-27T08:06:59.981Z",
       "contentHash": "de9d3e0d5f83eae110835518a7ba228fedcc187397039443d40f3e3f5aa19952"
     }
   },
@@ -62,6 +62,18 @@
       "value": "READY",
       "setBy": "feature-dev:code-reviewer",
       "setAt": "2026-07-27T08:04:42.164Z",
+      "contentHash": "8857228df26fb85e2295e689906e9c22338bf8d2a9914ea123054134bf3182ef"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "founder",
+      "setAt": "2026-07-27T08:08:58.039Z",
+      "contentHash": "8857228df26fb85e2295e689906e9c22338bf8d2a9914ea123054134bf3182ef"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "founder",
+      "setAt": "2026-07-27T08:08:59.255Z",
       "contentHash": "8857228df26fb85e2295e689906e9c22338bf8d2a9914ea123054134bf3182ef"
     }
   },
