@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T05:41:43.558Z",
+      "checkedAt": "2026-07-27T05:41:57.855Z",
       "contentHash": "4809e96dfbd716cc2aa84ba0b0bb70b3533e653e74e7344272788dac6e4f95dc"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T05:41:45.477Z",
+      "checkedAt": "2026-07-27T05:41:59.916Z",
       "contentHash": "4809e96dfbd716cc2aa84ba0b0bb70b3533e653e74e7344272788dac6e4f95dc"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T05:41:56.392Z",
+      "checkedAt": "2026-07-27T05:42:00.735Z",
       "contentHash": "4809e96dfbd716cc2aa84ba0b0bb70b3533e653e74e7344272788dac6e4f95dc"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T05:41:56.467Z",
+      "checkedAt": "2026-07-27T05:42:00.801Z",
       "contentHash": "4809e96dfbd716cc2aa84ba0b0bb70b3533e653e74e7344272788dac6e4f95dc"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T05:41:56.468Z",
+      "checkedAt": "2026-07-27T05:42:00.802Z",
       "contentHash": "4809e96dfbd716cc2aa84ba0b0bb70b3533e653e74e7344272788dac6e4f95dc"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T05:41:56.469Z",
+      "checkedAt": "2026-07-27T05:42:00.802Z",
       "contentHash": "4809e96dfbd716cc2aa84ba0b0bb70b3533e653e74e7344272788dac6e4f95dc"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-07-27T05:41:56.472Z",
+      "checkedAt": "2026-07-27T05:42:00.808Z",
       "contentHash": "4809e96dfbd716cc2aa84ba0b0bb70b3533e653e74e7344272788dac6e4f95dc"
     }
   },
@@ -62,6 +62,18 @@
       "value": "YES",
       "setBy": "founder",
       "setAt": "2026-07-27T05:41:43.160Z",
+      "contentHash": "8c581c625c9d36bcc9ffbf0d03a8f8479356fc5b742576aba371e450f9ca4f31"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "founder",
+      "setAt": "2026-07-27T05:42:31.759Z",
+      "contentHash": "8c581c625c9d36bcc9ffbf0d03a8f8479356fc5b742576aba371e450f9ca4f31"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "founder",
+      "setAt": "2026-07-27T05:42:32.945Z",
       "contentHash": "8c581c625c9d36bcc9ffbf0d03a8f8479356fc5b742576aba371e450f9ca4f31"
     }
   },
