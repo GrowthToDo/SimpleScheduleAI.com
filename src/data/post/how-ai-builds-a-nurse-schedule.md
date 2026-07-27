@@ -7,7 +7,7 @@ excerpt: >
   must-never-break and nice-to-have, then scores many possible schedules to find one
   that holds. Here is what happens between the roster going in and the schedule coming out.
 image: ~/assets/images/blog/heroes/how-ai-builds-a-nurse-schedule.webp
-draft: true
+draft: false
 category: Healthcare Operations
 postType: mofu
 tags:
