@@ -555,5 +555,13 @@
     "primaryKeyword": "rural hospital network staffing",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Trendjack of Commonwealth Fund (Jul 2026) on rural hospitals forming networks. DR/AI-citation play, NOT a traffic play (near-zero-volume niche; head 'rural hospital networks' is publisher-locked). Owns the staffing-implications long-tail. Original hook: 'shared staff is not shared compliance' (each facility still owes its own 485.631 record). Differentiated from the nurse-shortage-or-retention-crisis article."
+  },
+  {
+    "slug": "cost-of-losing-a-nurse-rural-hospital",
+    "type": "post",
+    "url": "/blog/cost-of-losing-a-nurse-rural-hospital",
+    "primaryKeyword": "cost of nurse turnover rural hospital",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "MOFU worked-math post: builds the cost of one RN departure from the NSI $60,090 anchor, then layers the rural-specific coverage premium (illustrative, overlap-disclaimed against the anchor) and ties fair scheduling to retention. Differentiated from nurse-burnout-scheduling-cah (burnout mechanism) and after-hours-callout-coverage-small-hospitals (per-callout cost)."
   }
 ]

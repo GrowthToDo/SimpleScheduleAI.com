@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "cost-of-losing-a-nurse-rural-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-28T01:36:05.571Z",
+      "contentHash": "b189e83e43f380781900bc4f148c5f111a7e5f519a1d73d99d62f59079dcd995"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-28T01:36:07.665Z",
+      "contentHash": "b189e83e43f380781900bc4f148c5f111a7e5f519a1d73d99d62f59079dcd995"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-28T01:36:09.145Z",
+      "contentHash": "b189e83e43f380781900bc4f148c5f111a7e5f519a1d73d99d62f59079dcd995"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-28T01:36:09.421Z",
+      "contentHash": "b189e83e43f380781900bc4f148c5f111a7e5f519a1d73d99d62f59079dcd995"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-28T01:36:09.422Z",
+      "contentHash": "b189e83e43f380781900bc4f148c5f111a7e5f519a1d73d99d62f59079dcd995"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-28T01:36:09.426Z",
+      "contentHash": "b189e83e43f380781900bc4f148c5f111a7e5f519a1d73d99d62f59079dcd995"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-28T01:36:09.431Z",
+      "contentHash": "b189e83e43f380781900bc4f148c5f111a7e5f519a1d73d99d62f59079dcd995"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-28T01:36:55.827Z",
+      "contentHash": "fbda656409a3f1ce9dd69ae46758cc8154358d6023fd29208004fb1b9ca9ac64"
+    },
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "opus-dossier-verified",
+      "setAt": "2026-07-28T01:36:57.129Z",
+      "contentHash": "fbda656409a3f1ce9dd69ae46758cc8154358d6023fd29208004fb1b9ca9ac64"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "opus-topic-match",
+      "setAt": "2026-07-28T01:36:58.329Z",
+      "contentHash": "fbda656409a3f1ce9dd69ae46758cc8154358d6023fd29208004fb1b9ca9ac64"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-28T01:36:59.598Z",
+      "contentHash": "fbda656409a3f1ce9dd69ae46758cc8154358d6023fd29208004fb1b9ca9ac64"
+    }
+  },
+  "overrides": []
+}
