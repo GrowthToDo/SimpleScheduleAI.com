@@ -39,7 +39,7 @@ metadata:
 
 The cost of nurse turnover usually gets quoted as one national figure, somewhere around sixty thousand dollars per departure. That number is real, but it hides what a rural hospital actually lives through when one nurse leaves. At a 25-bed hospital, one RN is a far larger share of the nursing staff than at a 300-bed system, and there is no float pool to absorb the gap.
 
-The math below builds the cost of losing one nurse from the sourced national figure, then layers on the parts a small rural hospital feels most. Every number is either linked to a primary source or labeled as an illustrative estimate at a stated rate. None of it is a customer result, because SimpleScheduleAI is pre-launch.
+The math below builds the cost of losing one nurse from the sourced national figure, then layers on the parts a small rural hospital feels most. Every number is either linked to a primary source or labeled as an illustrative estimate at a stated rate.
 
 ## Why Does Losing One Nurse Cost a Rural Hospital More Than a Large System?
 
@@ -108,7 +108,7 @@ For a rural hospital, the anchor is only where the accounting starts. The parts 
   </table>
 </div>
 
-One honest note on the arithmetic: the NSI $60,090 already includes some vacancy coverage, so the coverage row overlaps with the anchor rather than stacking cleanly on top of it. Read the added rows as where a rural hospital feels the departure most, rather than a second invoice to sum.
+One honest note on the arithmetic: the NSI $60,090 already includes some vacancy coverage, so the coverage row overlaps with the anchor rather than stacking cleanly on top of it. The added rows show where a small rural hospital feels that one departure most sharply. They mostly sit inside the $60,090 already, so treat them as detail on the anchor rather than extra dollars to add up.
 
 ## What Does the Open Role Cost While You Recruit?
 
