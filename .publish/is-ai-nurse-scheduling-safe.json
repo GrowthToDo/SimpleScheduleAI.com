@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "is-ai-nurse-scheduling-safe",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-29T03:26:48.340Z",
+      "contentHash": "7d4415c1258df7a156278f55979888ade855031eb8dc95d50f8dd5374202934e"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-29T03:26:50.397Z",
+      "contentHash": "7d4415c1258df7a156278f55979888ade855031eb8dc95d50f8dd5374202934e"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-29T03:26:51.446Z",
+      "contentHash": "7d4415c1258df7a156278f55979888ade855031eb8dc95d50f8dd5374202934e"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-29T03:26:51.505Z",
+      "contentHash": "7d4415c1258df7a156278f55979888ade855031eb8dc95d50f8dd5374202934e"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-29T03:26:51.506Z",
+      "contentHash": "7d4415c1258df7a156278f55979888ade855031eb8dc95d50f8dd5374202934e"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-29T03:26:51.506Z",
+      "contentHash": "7d4415c1258df7a156278f55979888ade855031eb8dc95d50f8dd5374202934e"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-29T03:26:51.508Z",
+      "contentHash": "7d4415c1258df7a156278f55979888ade855031eb8dc95d50f8dd5374202934e"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-29T03:27:39.319Z",
+      "contentHash": "27e2ac42e5fa4a7559dcc0bbd3c8dc831f619c3f4f6808b969f662a201e65435"
+    },
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "opus-dossier-verified",
+      "setAt": "2026-07-29T03:27:40.726Z",
+      "contentHash": "27e2ac42e5fa4a7559dcc0bbd3c8dc831f619c3f4f6808b969f662a201e65435"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "opus-topic-match",
+      "setAt": "2026-07-29T03:27:42.044Z",
+      "contentHash": "27e2ac42e5fa4a7559dcc0bbd3c8dc831f619c3f4f6808b969f662a201e65435"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-29T03:27:43.494Z",
+      "contentHash": "27e2ac42e5fa4a7559dcc0bbd3c8dc831f619c3f4f6808b969f662a201e65435"
+    }
+  },
+  "overrides": []
+}

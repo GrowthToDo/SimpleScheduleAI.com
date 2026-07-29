@@ -563,5 +563,13 @@
     "primaryKeyword": "cost of nurse turnover rural hospital",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "MOFU worked-math post: builds the cost of one RN departure from the NSI $60,090 anchor, then layers the rural-specific coverage premium (illustrative, overlap-disclaimed against the anchor) and ties fair scheduling to retention. Differentiated from nurse-burnout-scheduling-cah (burnout mechanism) and after-hours-callout-coverage-small-hospitals (per-callout cost)."
+  },
+  {
+    "slug": "is-ai-nurse-scheduling-safe",
+    "type": "post",
+    "url": "/blog/is-ai-nurse-scheduling-safe",
+    "primaryKeyword": "is ai nurse scheduling safe",
+    "pillar": "/ai-nurse-scheduling",
+    "note": "MOFU trust/safety post: oversight (draft-and-approve), accuracy (visible flagged violations), and the CMS/audit record. Containment overlap with the /ai-nurse-scheduling pillar ('ai nurse scheduling') is differentiated by intent: this is the is-it-safe question, the pillar is category definition. Three-drafts attributed to SSAI specifically. Differentiated from can-nurses-trust-ai-generated-schedule (nurse-facing trust/audit) and how-ai-builds-a-nurse-schedule (mechanics)."
   }
 ]

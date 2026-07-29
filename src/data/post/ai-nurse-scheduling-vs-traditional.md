@@ -23,7 +23,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/ai-nurse-scheduling-vs-traditional'
 ---
 
-Your scheduling vendor's marketing says "AI-powered." Your nurse manager's actual workflow says "still 6 hours a week on the same spreadsheet." Both can be technically true at the same time, because what "AI scheduling" actually changes in a nurse manager's workflow depends entirely on what the AI is allowed to do and who reviews the output.
+Your scheduling vendor's marketing says "AI-powered." Your nurse manager's actual workflow says "still 6 hours a week on the same spreadsheet." Both can be technically true at the same time, because what "AI scheduling" actually changes in a nurse manager's workflow depends entirely on what the AI is allowed to do and who reviews the output, which is the same thing that determines [whether AI nurse scheduling is safe](/blog/is-ai-nurse-scheduling-safe).
 
 This guide separates the genuine workflow changes from the marketing claims, written for a 25-bed Critical Access Hospital where the nurse manager is also covering clinical shifts.
 
