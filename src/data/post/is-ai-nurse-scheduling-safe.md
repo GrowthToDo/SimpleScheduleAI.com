@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-07-17T00:00:00Z
+publishDate: 2026-07-29T00:00:00Z
 draft: false
 author: 'Pradeep Pandey'
 title: 'Is AI Nurse Scheduling Safe? Oversight, Accuracy, and the CMS Record'
