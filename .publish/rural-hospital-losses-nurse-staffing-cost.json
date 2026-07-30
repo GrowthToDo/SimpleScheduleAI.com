@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T09:36:24.304Z",
+      "checkedAt": "2026-07-30T09:39:55.905Z",
       "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T09:36:30.681Z",
+      "checkedAt": "2026-07-30T09:39:59.700Z",
       "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T09:36:35.267Z",
+      "checkedAt": "2026-07-30T09:40:11.296Z",
       "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T09:36:35.320Z",
+      "checkedAt": "2026-07-30T09:40:11.340Z",
       "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T09:36:35.539Z",
+      "checkedAt": "2026-07-30T09:40:11.522Z",
       "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T09:36:35.539Z",
+      "checkedAt": "2026-07-30T09:40:11.522Z",
       "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T09:36:35.542Z",
+      "checkedAt": "2026-07-30T09:40:11.524Z",
       "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
     }
   },
@@ -62,6 +62,18 @@
       "value": "PASS",
       "setBy": "opus-primary-source-verified",
       "setAt": "2026-07-30T09:36:14.726Z",
+      "contentHash": "5bea7e9a7354b3ad37767936503be946f6c5645b368496e0ea2af26c72b6f9c0"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "founder",
+      "setAt": "2026-07-30T09:39:51.511Z",
+      "contentHash": "5bea7e9a7354b3ad37767936503be946f6c5645b368496e0ea2af26c72b6f9c0"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "founder",
+      "setAt": "2026-07-30T09:39:53.864Z",
       "contentHash": "5bea7e9a7354b3ad37767936503be946f6c5645b368496e0ea2af26c72b6f9c0"
     }
   },
