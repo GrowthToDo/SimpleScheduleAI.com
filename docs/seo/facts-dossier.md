@@ -53,6 +53,22 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618
 - Verified: 2026-07-06 (via Cornell LII)
 
+### Chartis 2026 Rural Health State of the State
+
+- Approved figures: 41.2% of rural hospitals operating in the red nationally; split by Medicaid expansion status 34.9% (expansion states) vs 52.2% (non-expansion states); 417 rural hospitals vulnerable to closure; state vulnerable counts Texas 50 (highest), Kansas 44, Tennessee 27, Georgia 25, Mississippi 24; 331 rural hospitals stopped offering OB between 2011 and 2024; 448 stopped offering chemotherapy between 2014 and 2024; human capital = 56% of healthcare costs
+- Wrong: rounding 448 chemotherapy up to "450+" (it is 448, so "nearly 450" is the honest phrasing); calling the report a "Rural Health Snapshot" (the title is "Rural Health State of the State"); applying the 41.2% national figure to a Texas hospital (Texas is a NON-EXPANSION state, so 52.2% is the applicable cohort figure)
+- Report published February 10, 2026. Always attribute the year and the report name.
+- URL: https://www.chartis.com/insights/2026-rural-health-state-state
+- Verified: 2026-07-30 (primary-source fetch of the Chartis report page)
+
+### Texas Rural Health Transformation Program (RHTP)
+
+- Approved figures: Texas first-year (Budget Period 1) award = $281,319,360.67, 100% federally funded by CMS/HHS, administered by Texas HHSC under the "Rural Texas Strong" state plan; workforce share = $99 million announced April 29, 2026 (Initiative 4, "The Next Generation of the Small Town Doctor and Team"); permitted uses are scholarships for local students, relocation or signing bonuses, and new residency training programs
+- Wrong: claiming Texas funds temporary/shared/rotational STAFFING POOLS (it does not; the Texas workforce money is recruitment-and-training pipeline money). Claiming Critical Access Hospitals are named eligible (NOT VERIFIED; the Initiative 4 RFA could not be retrieved, and Initiative 1 was limited to rural hospital districts with a publicly owned and operated hospital). Using the $322M figure seen in some search summaries (unreconciled; use $99M with the April 29 2026 date). Treating the ~$1.4B five-year number as awarded (it is a state projection; only Budget Period 1 is awarded).
+- Contrast fact: West Virginia announced $1.8M on July 14, 2026 for "regional, rotational staffing pools" (physicians, nurses, advanced practice providers). Say "the only state we could confirm," never "the only state in the country" (the Bipartisan Policy Center's May 19 2026 workforce roundup covers ~17 states and names no staffing pools, but predates the WV announcement).
+- URLs: https://content.govdelivery.com/accounts/TXHHSC/bulletins/4143d1c (award + administrator) | https://gov.texas.gov/news/post/governor-abbott-hhsc-announce-99-million-in-federal-funding-for-rural-hospitals-to-recruit-workers ($99M workforce) | https://governor.wv.gov/article/governor-morrisey-announces-18m-investment-address-critical-healthcare-workforce-shortages (WV contrast)
+- Verified: 2026-07-30 (HHSC GovDelivery bulletin fetched directly; $99M corroborated across four independent outlets. NOTE: gov.texas.gov and other texas.gov domains bot-block/fail DNS from our tooling, so re-confirm that link opens before citing it again.)
+
 ### NSI 2025
 
 - Approved figures: average cost to replace one staff RN = $61,110; national RN turnover = 16.4% (2025 report, CY2024 data)

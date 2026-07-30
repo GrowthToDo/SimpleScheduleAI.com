@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "rural-hospital-losses-nurse-staffing-cost",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:24.304Z",
+      "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:30.681Z",
+      "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:35.267Z",
+      "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:35.320Z",
+      "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:35.539Z",
+      "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:35.539Z",
+      "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:35.542Z",
+      "contentHash": "ebd288be6a503574537d0c2a7c31b1ba140199cd49206b2f765d0b685dd8ae35"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-30T09:35:59.487Z",
+      "contentHash": "5bea7e9a7354b3ad37767936503be946f6c5645b368496e0ea2af26c72b6f9c0"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "opus-topic-match",
+      "setAt": "2026-07-30T09:36:02.406Z",
+      "contentHash": "5bea7e9a7354b3ad37767936503be946f6c5645b368496e0ea2af26c72b6f9c0"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-30T09:36:04.919Z",
+      "contentHash": "5bea7e9a7354b3ad37767936503be946f6c5645b368496e0ea2af26c72b6f9c0"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "opus-primary-source-verified",
+      "setAt": "2026-07-30T09:36:14.726Z",
+      "contentHash": "5bea7e9a7354b3ad37767936503be946f6c5645b368496e0ea2af26c72b6f9c0"
+    }
+  },
+  "overrides": []
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-schedule-generator",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:38.653Z",
+      "contentHash": "60724cf106f064b96cc793a71c587eb889bc80409b9f423db5b7ccf12ceff402"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:41.583Z",
+      "contentHash": "60724cf106f064b96cc793a71c587eb889bc80409b9f423db5b7ccf12ceff402"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:43.092Z",
+      "contentHash": "60724cf106f064b96cc793a71c587eb889bc80409b9f423db5b7ccf12ceff402"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:43.149Z",
+      "contentHash": "60724cf106f064b96cc793a71c587eb889bc80409b9f423db5b7ccf12ceff402"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:43.410Z",
+      "contentHash": "60724cf106f064b96cc793a71c587eb889bc80409b9f423db5b7ccf12ceff402"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:43.410Z",
+      "contentHash": "60724cf106f064b96cc793a71c587eb889bc80409b9f423db5b7ccf12ceff402"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-30T09:36:43.413Z",
+      "contentHash": "60724cf106f064b96cc793a71c587eb889bc80409b9f423db5b7ccf12ceff402"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-30T09:36:08.078Z",
+      "contentHash": "e0800e14d02283b2881ab42925a08988687a1ce4f562313d0aace630b5410f49"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "opus-topic-match",
+      "setAt": "2026-07-30T09:36:10.186Z",
+      "contentHash": "e0800e14d02283b2881ab42925a08988687a1ce4f562313d0aace630b5410f49"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-30T09:36:12.434Z",
+      "contentHash": "e0800e14d02283b2881ab42925a08988687a1ce4f562313d0aace630b5410f49"
+    },
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "opus-dossier-verified",
+      "setAt": "2026-07-30T09:36:19.919Z",
+      "contentHash": "e0800e14d02283b2881ab42925a08988687a1ce4f562313d0aace630b5410f49"
+    }
+  },
+  "overrides": []
+}

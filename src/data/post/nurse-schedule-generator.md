@@ -1,148 +1,172 @@
 ---
-draft: true
-publishDate: 2099-01-01T00:00:00Z
-updateDate: 2026-04-01T00:00:00Z
+draft: false
+publishDate: 2026-07-30T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Nurse Schedule Generator: How to Automate Your Weekly Roster'
 excerpt: >
-  A nurse schedule generator automates the most time-consuming part of nurse
-  management: building the weekly roster. For critical access hospitals spending
-  8-12 hours per week on manual scheduling, a generator, or better, a managed
-  scheduling service, can reclaim that time without sacrificing compliance.
-image: https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+  Building the grid is the visible work, so it is the work most tools automate first. What
+  decides whether a schedule generator helps a small hospital is what happens after the grid
+  exists: overtime thresholds, credential matching, and the first callout.
+image: https://images.unsplash.com/photo-1603807008857-ad66b70431aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:
   - nurse-scheduling
   - schedule-generator
   - automation
+  - critical-access-hospitals
 metadata:
   canonical: 'https://simplescheduleai.com/blog/nurse-schedule-generator'
 ---
 
-## TL;DR
+## Key Takeaways
 
-A nurse schedule generator automates roster creation by processing staff availability, shift rules, and compliance requirements to produce a publishable schedule. Free generators handle basic patterns; hospital-grade tools add overtime compliance, callout coverage, and audit trails. Critical access hospitals spending 8-12 hours/week on manual scheduling can reduce this to 1-2 hours with the right tool, but the tool needs to understand healthcare rules, not just shift patterns.
+- The category runs from an Excel template with formulas to an AI-assisted service that scores several drafts against the same rules. Both get sold as generators, and the distance between them is most of what this decision turns on.
+- Free generators solve the distribution problem, meaning who fills which shift. They generally do not track hours against overtime thresholds, match credentials to units, help you cover a callout, or leave an audit trail.
+- For a small hospital the test that matters is whether the tool understands compliance rules, credential matching, and the callout problem that follows publication. Build speed is the easiest thing to demo and the least useful thing to compare.
+- Certain schedule patterns quietly drive burnout at a small hospital: concentrated weekends, sub-nine-hour turnarounds, chronic call, and permanent nights. A rolling multi-week view catches them; a single-week grid does not.
+- A generator still needs someone to operate it. At a Critical Access Hospital, where the nurse manager is often also covering charge duties and callouts, the operating burden is the constraint worth pricing.
+
+## Table of Contents
+
+- [What Is a Nurse Schedule Generator?](#what-is-a-nurse-schedule-generator)
+- [How Do Free Nurse Schedule Generators Work, and What Do They Miss?](#how-do-free-nurse-schedule-generators-work-and-what-do-they-miss)
+- [What Makes an Automated Schedule Generator Reliable for a 25-Bed Hospital?](#what-makes-an-automated-schedule-generator-reliable-for-a-25-bed-hospital)
+- [What Scheduling Patterns Burn Out Nurses at a 25-Bed Hospital?](#what-scheduling-patterns-burn-out-nurses-at-a-25-bed-hospital)
+- [When Should a Small Hospital Move Beyond a Generator?](#when-should-a-small-hospital-move-beyond-a-generator)
+- [How Does SimpleScheduleAI Handle Schedule Generation?](#how-does-simplescheduleai-handle-schedule-generation)
+- [What to Do This Week](#what-to-do-this-week)
+- [Frequently Asked Questions](#frequently-asked-questions)
+
+Most nurse managers looking for a schedule generator are trying to get a weekend back. The building of the grid is the visible work, so it is the work people try to automate first. The part that decides whether a tool actually helps is what happens after the grid exists: whether the hours survive a payroll review, whether the right nurse is on the right unit, and who solves the first callout.
+
+This guide covers what a generator does, where free tools stop, and what a small hospital should require before trusting one with a published schedule.
 
 ## What Is a Nurse Schedule Generator?
 
-A nurse schedule generator is a tool, software, spreadsheet, or service, that takes inputs (staff roster, availability, shift rules, compliance requirements) and produces a complete nurse shift schedule as output. It automates the mechanical work of schedule building: matching nurses to shifts, enforcing minimum rest periods, distributing weekends and nights equitably, and flagging overtime risk before the schedule publishes.
+A nurse schedule generator is a tool that takes inputs, meaning a staff roster, availability, shift rules, and compliance requirements, and produces a complete nurse shift schedule as output. It automates the mechanical work of schedule building: matching nurses to shifts, enforcing minimum rest periods, distributing weekends and nights evenly, and flagging overtime risk before the schedule publishes.
 
-The category spans a wide range. At the simple end: an Excel template with formulas that assigns shifts based on availability data you enter manually. At the sophisticated end: an AI-assisted service that generates multiple draft schedule options (balanced, fair-rotation, overtime-minimized), enforces FLSA overtime thresholds automatically, and produces a callout coverage shortlist when a nurse is unavailable.
-
-For critical access hospitals currently spending 8-12 hours per week on manual scheduling at a $50/hr loaded rate, $26,000 per year in misallocated nurse manager time, the right generator can reclaim most of that time.
+The category spans a wide range. At the simple end sits an Excel template with formulas that assigns shifts from availability data you enter by hand. At the sophisticated end sits an AI-assisted service that generates several draft options, applies overtime thresholds automatically, and produces a ranked callout replacement list when a nurse becomes unavailable. Both are called generators, and the difference between them is the subject of this guide. If you want the mechanics of how the drafts get built, our explainer on [how AI builds a nurse schedule](/blog/how-ai-builds-a-nurse-schedule) walks through the steps.
 
 ## How Do Free Nurse Schedule Generators Work, and What Do They Miss?
 
-Free nurse schedule generators typically handle the mechanical distribution problem: given N nurses and M shifts, assign staff to fill coverage. They work well for simple, predictable patterns, a stable roster with no per-diem staff, no certification requirements, and no compliance variables.
+Free nurse schedule generators handle the mechanical distribution problem: given a set of nurses and a set of shifts, assign staff to fill coverage. They work well for simple, predictable patterns, meaning a stable roster with no per-diem staff, no credential requirements, and no compliance variables.
 
-What free generators almost universally miss for hospital use:
+What free generators commonly miss for hospital use:
 
-**Overtime compliance.** Free tools don't track whether a nurse has already worked 36 hours this week and is approaching the 40-hour FLSA threshold. They'll assign the shift anyway, creating overtime liability.
+**Overtime thresholds.** A free tool generally does not know that a nurse has already worked 36 hours this week. It assigns the shift anyway, and the overtime surfaces at payroll instead of at the draft stage.
 
-**Certification-aware assignment.** A generator that doesn't know that Nurse A is ICU-certified and Nurse B is not will happily assign Nurse B to the ICU. At a critical access hospital, this isn't just an inefficiency, it's a compliance issue.
+**Credential-aware assignment.** A generator that does not know which nurses are signed off for which units will fill a slot with whoever is available. On a small roster where only two or three nurses cover a given unit, that assumption breaks quickly.
 
-**Callout coverage logic.** Free generators build the schedule; they don't help you cover it when someone calls out. The 2-3 hour manual phone tree problem remains completely unsolved.
+**Callout coverage.** Free generators build the schedule. They do not help cover it when someone calls out at 2 a.m., which is the part of the job that actually interrupts a manager's week. We break that problem down in [after-hours callout coverage at small hospitals](/blog/after-hours-callout-coverage-small-hospitals).
 
-**Audit trail.** CMS Conditions of Participation for CAHs (§485.635) require accurate, reviewable staffing records. A free generator produces a printable schedule; it doesn't log who changed what and when.
+**An audit trail.** A free generator produces a printable grid. It does not log who changed what and when, which is the record a facility needs when it has to show how staffing decisions were made.
 
-**Per-diem and on-call management.** CAHs depend on per-diem staff to fill coverage gaps. A free generator doesn't track per-diem availability or prioritize per-diem over overtime when filling a callout.
+**Per-diem and on-call tracking.** Small hospitals lean on per-diem staff to fill gaps. A free generator does not track per-diem availability or weigh it against overtime exposure when a shift opens.
 
-These gaps are why the [nurse scheduling software vs Excel](/nurse-scheduling-software) question matters, it's not just about automation, it's about what the automation understands.
+These gaps show why the [nurse scheduling software](/nurse-scheduling-software) question comes down to what the automation actually understands.
 
 ## What Makes an Automated Schedule Generator Reliable for a 25-Bed Hospital?
 
-A reliable nurse schedule generator for a critical access hospital needs to understand three things that general tools don't: FLSA compliance rules, clinical certification requirements, and per-diem management.
+A reliable generator for a small hospital needs to understand three things that general-purpose tools do not: compliance rules, credential requirements, and per-diem management.
 
-**FLSA compliance.** Under the [FLSA](https://www.dol.gov/agencies/whd/flsa), overtime rules apply to all healthcare employers; Texas has no separate state overtime law. A generator that doesn't track hours against the 40-hour weekly threshold and alert before the schedule publishes is creating compliance risk, not reducing it.
+**Compliance rules.** Under the [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), overtime rules apply to healthcare employers, and Texas has no separate state overtime law. A generator that tracks running hours against the applicable threshold and flags a draft before it publishes is doing compliance work. One that assigns shifts without checking is creating exposure. Coverage rules matter alongside pay rules: under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever a Critical Access Hospital has one or more inpatients.
 
-**Clinical certification matching.** In a 25-bed CAH, the roster is small enough that certification gaps are frequent, there may be only 2-3 nurses certified for a particular unit on any given shift. The generator must know which nurses can cover which units and enforce this constraint automatically.
+**Credential matching.** On a 25-bed unit the roster is small enough that credential gaps are frequent, and there may be only two or three nurses signed off for a particular unit on a given shift. The generator has to know who can cover what and treat it as a hard, non-negotiable constraint.
 
-**Fairness distribution.** Manual scheduling defaults to convenience: the nurse manager calls whoever is most likely to say yes. Over time, reliable nurses accumulate disproportionate overtime and undesirable shifts, driving the turnover that costs an average of $61,110 per RN departure ([NSI 2025 Report](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)). A generator that tracks fairness measures, weekend assignments, night shifts, holiday coverage, prevents this pattern from forming.
+**Fairness distribution.** Manual scheduling drifts toward convenience, meaning the manager calls whoever is most likely to say yes. Over time the reliable nurses accumulate the nights, weekends, and overtime, which is the pattern that produces a resignation and the [$60,090 average cost of replacing one staff RN](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) reported in the 2026 NSI National Health Care Retention and RN Staffing Report. A generator that keeps a running per-nurse count of weekends, nights, and holidays stops that pattern from forming quietly.
 
-**Multiple draft options.** No single scheduling algorithm produces the right answer for every situation. A useful generator produces 2-3 draft options (e.g., cost-minimized, fair-rotation, coverage-maximized) and lets the nurse manager choose. This preserves clinical judgment while eliminating the mechanical work.
+**More than one draft.** No single scoring rule is right for every cycle. A useful generator produces several options scored against the same rules so the manager compares tradeoffs and applies judgment across the drafts.
 
 ## What Scheduling Patterns Burn Out Nurses at a 25-Bed Hospital?
 
-The way a schedule is built is one of the most controllable drivers of nurse burnout, and at a critical access hospital the margin is thin. With only 10-15 floor nurses, a few recurring patterns quietly accumulate until an experienced nurse stops renewing or accepts a travel contract that pays twice as much. By the time the departure happens, the scheduling pattern that caused it is months old and forgotten. A nurse schedule maker that tracks these patterns over time, not just this week's grid, is what keeps them from forming.
+The way a schedule is built is one of the most controllable drivers of nurse burnout, and at a small hospital the margin is thin. With only 10 to 15 floor nurses, a few recurring patterns accumulate until an experienced nurse leaves. By then the pattern that caused it is months old. A generator that tracks patterns across several weeks is what keeps them from forming.
 
-The high-burnout patterns to watch for:
+The patterns worth watching:
 
 **Concentrated weekend burden.** Some nurses cover weekends disproportionately because they said yes once and became the path of least resistance. It looks fine in any single week and stark in a quarterly view.
 
-**Quick turnarounds between shifts.** A closing evening shift followed by an opening day shift the next morning leaves fewer than nine hours of recovery. This usually shows up when someone is manually patching a coverage gap rather than building from a rotation.
+**Quick turnarounds.** A closing evening shift followed by an opening day shift leaves fewer than nine hours of recovery. This usually appears when someone patches a gap by hand outside the built rotation.
 
-**Chronic call accumulation.** On-call weight is heavier at a CAH because fewer staff share it. When call isn't tracked systematically, it defaults to whoever answered last time, creating an imbalance that's invisible in any single week.
+**Chronic call accumulation.** On-call weight is heavier at a small hospital because fewer people share it. Untracked, it defaults to whoever answered last time.
 
-**Back-to-back holiday coverage.** Holiday shifts are low-preference for almost everyone. Without holiday rotation logic, the same nurses who miss Thanksgiving also miss Christmas.
+**Back-to-back holiday coverage.** Without holiday rotation logic, the same nurses who miss Thanksgiving also miss Christmas. Our [fair holiday rotation](/blog/nurse-burnout-scheduling-cah) guidance covers how the load gets distributed deliberately.
 
-**Permanent nights without rotation relief.** Nurses who chose nights are fine; the burnout risk is the ones stuck there because the unit is short on night-certified staff.
+**Permanent nights without relief.** Nurses who chose nights are fine. The risk sits with the ones stuck there because the unit is short on night-eligible staff.
 
-Automating rotation also removes the social pressure problem. When a manager assigns shifts by hand, there's an implicit negotiation: nurses who push back get accommodated, and the ones who don't absorb the hard slots. A generator applies the same rules to everyone, which improves fairness and takes the emotional labor of those decisions off the manager. The capability that makes this stick is the rolling history view, tracking weekends, nights, and call over a four-week window rather than judging each schedule in isolation.
+Automating rotation also addresses a social problem. When a manager assigns shifts by hand there is an implicit negotiation, and the nurses who push back get accommodated while the ones who do not absorb the hard slots. A generator applies the same rules to everyone, which improves fairness and takes the emotional weight of those decisions off one person. The capability that makes it stick is the rolling history view across a four-week window.
 
-## When Should a CAH Move Beyond a Generator to a Managed Service?
+## When Should a Small Hospital Move Beyond a Generator?
 
-A generator, even a good one, still requires someone to operate it: enter the roster, configure the rules, review the output, publish the schedule, and manage callouts manually. For a large hospital with a dedicated scheduler, this is manageable.
+A generator, even a good one, still needs someone to operate it: enter the roster, configure the rules, review the output, publish the schedule, and work the callouts by hand. At a hospital with a dedicated scheduler, that is a reasonable division of labor.
 
-At a critical access hospital, the nurse manager is typically also scheduling, handling callouts, tracking overtime, covering charge duties, and often providing direct patient care. A generator that automates schedule creation still leaves callout coverage, overtime monitoring, and compliance documentation as manual tasks.
+At a Critical Access Hospital the nurse manager is often also handling callouts, tracking overtime, covering charge duties, and sometimes providing direct patient care. A tool that automates schedule creation leaves callout coverage, overtime monitoring, and documentation on the same person's desk. At this size the constraint is usually the absence of a person free to operate the software, which is the distinction we draw in [critical access hospital scheduling](/critical-access-hospital-scheduling).
 
-A managed scheduling service handles all of it. Rather than giving the nurse manager a better tool, a service does the scheduling work, draft generation, callout coverage lists, overtime monitoring, audit trail maintenance, and delivers a ready-to-approve output. The nurse manager reviews the draft schedule, approves changes, and acts on callout coverage recommendations. The 8-12 hours per week drops to 1-2 hours.
+That is the honest decision point. If someone at your facility has the hours to run a tool properly, a good generator is a real improvement over a spreadsheet. If nobody does, better software alone tends to become another system nobody maintains.
 
-The distinction matters for CAHs specifically because the staffing constraint isn't just time, it's the absence of a dedicated person to operate scheduling software.
+## How Does SimpleScheduleAI Handle Schedule Generation?
 
-## How SimpleScheduleAI Helps?
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Each cycle the AI generates three scored draft options, balanced, fairness-optimized, and cost-optimized, applying coverage requirements, credential matching, rest rules, and applicable FLSA overtime thresholds to every draft. Our scheduling team resolves the flagged items before your manager sees the schedule.
 
-SimpleScheduleAI operates as an AI-native nurse scheduling service for critical access hospitals. It generates three AI-drafted schedule options per cycle, balanced, fair-rotation, and overtime-minimized, incorporating FLSA overtime thresholds, nurse certifications, and per-diem availability into every draft.
+When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, credential match, and rotation fairness. A person at the hospital still places the call and confirms the replacement, because the on-call charge nurse knows context the data does not. Every schedule change is logged with a timestamp.
 
-When a nurse is unavailable, the system instantly produces a replacement call list from available, qualified staff, factoring in overtime exposure and fairness distribution. The nurse manager approves replacements; they don't have to run the phone tree.
+One honest limitation: this is an operated service for Texas Critical Access Hospitals of 25 beds and under. If your facility has a dedicated scheduling staff and wants to run the tool in-house, a self-serve generator fits that workflow better than we do. For how the drafts get built underneath, see [AI nurse scheduling](/ai-nurse-scheduling), and for the end-to-end walkthrough see [how it works](/how-it-works).
 
-A free nurse schedule generator tool is available at [/tools/nurse-schedule-generator](/tools/nurse-schedule-generator) for basic roster creation. For hospitals needing compliance, callout coverage, and managed support, SimpleScheduleAI runs the schedule as a managed service.
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Most generator comparisons focus on how quickly a tool fills a grid, which is the easiest part of the job to automate and the least valuable to get right. The schedule is published in an hour and lived in for a month. Ask instead what happens at 2 a.m. on the first callout, what the tool does when a nurse crosses an overtime threshold, and what record exists afterward. A tool that builds a grid fast and answers none of those has automated the visible work and left the hard work where it was. The second question is quieter and decides more: who at your facility has the hours to actually run it.
+  </p>
+</div>
 
-One honest note: SimpleScheduleAI is built specifically for critical access hospitals (25 beds or fewer). If your hospital has 50+ beds with a dedicated scheduling staff, the managed service model may not fit your workflow as well.
+## What to Do This Week
 
-[See how the scheduling process works →](/how-it-works)
+1. **Time one full scheduling cycle.** Note the hours spent building the grid separately from the hours spent on callouts and overtime checks. Most tools address the first number and leave the second untouched, so knowing the split tells you what to shop for.
+2. **List the rules your schedule must never break.** The on-duty licensed-nurse requirement, overtime thresholds, credential matching, minimum rest. This list is what you ask a vendor to enforce as hard constraints.
+3. **Pull a four-week fairness view.** Count weekends, nights, and call per nurse over the last month. If two or three names carry the load, that is a retention risk forming, and it is the exact pattern a rolling history view exists to catch.
+4. **Ask any generator vendor the callout question.** When a nurse calls out at 2 a.m., what does the tool actually do? The answer separates a grid builder from a scheduling system.
+5. **See how the review-and-approve cycle works for a Texas Critical Access Hospital.** Walk through it at [how it works](/how-it-works), or book a call to talk through your roster.
+
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">Automate the grid, and the callout that follows it</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds scored draft schedules, applies overtime and credential rules to every one, and ranks callout replacements. Built for Texas Critical Access Hospitals.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
+</div>
 
 ## Frequently Asked Questions
 
+### The Basics
+
 **Q: What is a nurse schedule generator?**
 
-A nurse schedule generator is a tool that automates nurse shift roster creation, processing staff availability, shift rules, and compliance requirements to produce a publishable schedule. They range from free Excel templates to AI-assisted managed services with compliance enforcement and callout coverage logic.
+A nurse schedule generator is a tool that automates nurse roster creation, processing staff availability, shift rules, and compliance requirements to produce a publishable schedule. The category ranges from free Excel templates to AI-assisted services that score several drafts and produce callout replacement lists.
 
 **Q: Are free nurse schedule generators sufficient for hospitals?**
 
-Free generators handle basic shift distribution but typically miss hospital-grade requirements: overtime compliance, certification-aware assignment, callout coverage logic, and CMS audit trail documentation. For critical access hospitals, these gaps represent compliance risk and unresolved operational workload.
+Free generators handle basic shift distribution. They typically miss the hospital-grade requirements: tracking hours against overtime thresholds, credential-aware assignment, callout coverage, and a timestamped record of changes. For a small hospital those gaps are the difference between a grid and a schedule you can defend.
 
-**Q: How much time can a nurse schedule generator save?**
-
-Manual nurse scheduling at a critical access hospital takes 8-12 hours per week. A generator that handles schedule creation reduces this to 2-4 hours. A managed scheduling service that also handles callout coverage and compliance documentation can reduce it to 1-2 hours.
+### Compliance and Coverage
 
 **Q: Does a nurse schedule generator handle callout coverage?**
 
-Basic generators don't, they build the initial schedule but leave callout management manual. Hospital-grade tools and managed services include callout coverage logic: when a nurse is unavailable, the system surfaces a ranked list of available, qualified replacements.
+Basic generators do not. They build the initial schedule and leave callout management manual. Hospital-grade tools and operated services include callout logic: when a nurse becomes unavailable, the system surfaces a ranked list of available, qualified replacements, and a person at the hospital makes the call.
 
-**Q: What compliance requirements must a nurse schedule generator meet for Texas hospitals?**
+**Q: What compliance requirements should a generator meet for a Texas hospital?**
 
-Texas CAH nurse scheduling must comply with FLSA overtime rules (1.5× for hours over 40/week) and CMS Conditions of Participation §485.635 staffing record requirements. Texas has no separate state overtime law. A generator that doesn't enforce and log these requirements creates compliance risk.
+Two categories. Pay rules: applicable FLSA overtime thresholds, with no separate Texas state overtime law. Coverage rules: under 42 CFR 485.631(a)(5), a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever a Critical Access Hospital has one or more inpatients. A generator that enforces both and logs what happened is doing useful compliance work, though the facility still owns the obligation.
 
 **Q: Can a nurse schedule generator handle shift swap requests?**
 
-Hospital-grade tools include a swap workflow: a nurse submits a request and the system validates it for coverage, certification, and overtime compliance before the manager approves. This replaces the informal text-chain swaps that are easy to lose track of.
+Hospital-grade tools include a swap workflow: a nurse submits a request, the system validates it against coverage, credentials, and overtime exposure, and the manager approves. That replaces the informal text chains that are easy to lose track of.
 
-## Key Takeaways
+## Sources
 
-- Nurse schedule generators automate roster creation from availability and rules, ranging from free Excel templates to AI-assisted managed services
-- Free tools miss hospital-grade requirements: overtime compliance, certification matching, callout coverage, CMS audit trail
-- A reliable hospital-grade generator needs FLSA compliance, certification-aware assignment, fairness tracking, and multiple draft options
-- A managed scheduling service goes beyond generation, it delivers ready-to-approve drafts, replacement lists, and compliance documentation
-- CAH nurse managers currently spend 8-12 hours/week on scheduling; a managed service reduces this to 1-2 hours by removing operational burden, not just automating schedule building
-- Certain schedule patterns quietly drive burnout at small hospitals (concentrated weekends, sub-nine-hour turnarounds, chronic call, permanent nights); a rolling multi-week history view is what catches them before a resignation
+1. FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
-<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-default mb-2">Ready to reduce overtime and handle callouts without the Sunday evening scramble?</p>
-  <p class="text-muted text-sm mb-6">Flat monthly pricing. The AI builds the schedule, our scheduling team checks it, you approve it.</p>
-  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-sm text-muted mt-4 mb-0"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
-</div>
+2. CMS Conditions of Participation for Critical Access Hospitals, staffing and staff responsibilities (on-duty licensed nurse requirement). [eCFR, 42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631).
+
+3. Average cost to replace one staff RN ($60,090). [NSI Nursing Solutions, 2026 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf).
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

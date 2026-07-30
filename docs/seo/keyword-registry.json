@@ -512,27 +512,24 @@
     "primaryKeyword": "st charles staffing violations",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Trendjack newsroom article; news-entity keyword, no evergreen collision."
-  }
-,
-{
+  },
+  {
     "slug": "nurse-to-patient-ratios-by-state",
     "type": "post",
     "url": "/blog/nurse-to-patient-ratios-by-state",
     "primaryKeyword": "nurse to patient ratios by state",
     "pillar": "/nurse-scheduling-software",
     "note": "State-by-state legal map (only CA/OR/MA have ratio laws); differentiated from the CAH-internal ratios post."
-  }
-,
-{
+  },
+  {
     "slug": "8-hour-vs-12-hour-nursing-shifts",
     "type": "post",
     "url": "/blog/8-hour-vs-12-hour-nursing-shifts",
     "primaryKeyword": "8 hour vs 12 hour nursing shifts",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Head-to-head 8-vs-12 for a 25-bed hospital; differentiated from the general 12-hour post; AHRQ/Rogers claims verified."
-  }
-,
-{
+  },
+  {
     "slug": "nurse-staffing-texas-2026",
     "type": "post",
     "url": "/blog/nurse-staffing-texas-2026",
@@ -571,5 +568,21 @@
     "primaryKeyword": "is ai nurse scheduling safe",
     "pillar": "/ai-nurse-scheduling",
     "note": "MOFU trust/safety post: oversight (draft-and-approve), accuracy (visible flagged violations), and the CMS/audit record. Containment overlap with the /ai-nurse-scheduling pillar ('ai nurse scheduling') is differentiated by intent: this is the is-it-safe question, the pillar is category definition. Three-drafts attributed to SSAI specifically. Differentiated from can-nurses-trust-ai-generated-schedule (nurse-facing trust/audit) and how-ai-builds-a-nurse-schedule (mechanics)."
+  },
+  {
+    "slug": "rural-hospital-losses-nurse-staffing-cost",
+    "type": "article",
+    "url": "/articles/rural-hospital-losses-nurse-staffing-cost",
+    "primaryKeyword": "texas rural hospitals at risk of closing",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Newsroom analysis of the Chartis 2026 Rural Health State of the State (Feb 10 2026). Original hook = the 41.2 national vs 52.2 non-expansion reframe applied to Texas (50 vulnerable hospitals, most of any state) plus a CAH-scaled coverage-premium calc (~45k/yr, illustrative). DR/citation play, not a traffic play."
+  },
+  {
+    "slug": "nurse-schedule-generator",
+    "type": "post",
+    "url": "/blog/nurse-schedule-generator",
+    "primaryKeyword": "nurse schedule generator",
+    "pillar": "/nurse-scheduling-software",
+    "note": "MOFU explainer on what a generator does and where free tools stop (overtime thresholds, credential matching, callout coverage, audit trail). Differentiated from nurse-scheduling-software-vs-excel (tool-vs-spreadsheet) and how-ai-builds-a-nurse-schedule (mechanics). KD 10, ~$26 CPC."
   }
 ]

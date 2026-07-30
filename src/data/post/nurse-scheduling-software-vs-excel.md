@@ -43,7 +43,7 @@ This guide covers all three options for a 25-bed Critical Access Hospital, with 
 
 Nurse scheduling software enforces staffing rules automatically, tracks credential expirations, flags overtime before the schedule publishes, and logs every change for CMS audit purposes. Excel does none of these automatically. A manager using Excel builds the schedule manually, checks credentials in a separate file, discovers overtime on the payroll report, and reconstructs the audit trail when a surveyor asks. The gap is not convenience but compliance and safety.
 
-Nurse scheduling software automatically enforces staffing rules, tracks certifications, flags overtime risks, and generates coverage reports, all in real time. Excel requires a manager to do all of that manually, cell by cell, every single week.
+Nurse scheduling software automatically enforces staffing rules, tracks certifications, flags overtime risks, and generates coverage reports, all in real time. Excel requires a manager to do all of that manually, cell by cell, every single week. If you are weighing the automation step on its own, our guide to what a [nurse schedule generator](/blog/nurse-schedule-generator) does and misses covers where the free tools stop.
 
 <div class="not-prose my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
