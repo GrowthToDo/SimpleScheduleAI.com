@@ -58,8 +58,9 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - Approved figures: 41.2% of rural hospitals operating in the red nationally; split by Medicaid expansion status 34.9% (expansion states) vs 52.2% (non-expansion states); 417 rural hospitals vulnerable to closure; state vulnerable counts Texas 50 (highest), Kansas 44, Tennessee 27, Georgia 25, Mississippi 24; 331 rural hospitals stopped offering OB between 2011 and 2024; 448 stopped offering chemotherapy between 2014 and 2024; human capital = 56% of healthcare costs
 - Wrong: rounding 448 chemotherapy up to "450+" (it is 448, so "nearly 450" is the honest phrasing); calling the report a "Rural Health Snapshot" (the title is "Rural Health State of the State"); applying the 41.2% national figure to a Texas hospital (Texas is a NON-EXPANSION state, so 52.2% is the applicable cohort figure)
 - Report published February 10, 2026. Always attribute the year and the report name.
+- Texas non-expansion status source: use [KFF State Health Facts](https://www.kff.org/affordable-care-act/state-indicator/state-activity-around-expanding-medicaid-under-the-affordable-care-act/), which lists Texas as "Not Adopted" (10 non-adopting states: AL, FL, GA, KS, MS, SC, TN, TX, WI, WY). Do NOT cite healthinsurance.org for this; it returns 403 and renders as a blocked link.
 - URL: https://www.chartis.com/insights/2026-rural-health-state-state
-- Verified: 2026-07-30 (primary-source fetch of the Chartis report page)
+- Verified: 2026-07-30 (primary-source fetch of the Chartis report page; KFF expansion status re-verified 2026-07-30)
 
 ### Texas Rural Health Transformation Program (RHTP)
 
