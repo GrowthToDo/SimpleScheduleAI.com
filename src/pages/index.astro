@@ -98,12 +98,11 @@ const faqSchema = {
   <SchemaOrg slot="head" schema={[webSiteSchema, softwareAppSchema, faqSchema]} />
   <!-- Hero Section -->
   <Hero
-    tagline="AI-native nurse scheduling service · Texas Critical Access Hospitals"
     actions={[
       {
         variant: 'primary',
-        text: 'Get your first schedule',
-        href: '/contact',
+        text: 'Try the interactive demo',
+        href: '/simulator',
       },
       {
         variant: 'secondary',
@@ -120,19 +119,12 @@ const faqSchema = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      It arrives done instead: AI builds your schedule, our scheduling team checks it, you approve. No IT setup, nothing
-      for your nurses to log into.
+      AI builds the schedule, our scheduling team checks it, you approve.
     </Fragment>
 
     <Fragment slot="content">
       <p class="mt-4 text-center text-sm text-muted reveal-delay-3" data-reveal>
-        Excel roster in, first schedule in under two weeks. Month to month, no long-term contract.
-      </p>
-      <p class="mt-3 text-center text-sm text-muted reveal-delay-3" data-reveal>
-        Or watch the AI fill a week's schedule in front of you:
-        <a href="/simulator" class="font-medium text-primary underline underline-offset-4 hover:text-secondary"
-          >try the interactive demo</a
-        >
+        Your nurse manager spends a day and a half every week building the schedule. We give it back.
       </p>
       <div class="mx-auto mt-10 max-w-4xl reveal-delay-4" data-reveal>
         <div
@@ -168,9 +160,6 @@ const faqSchema = {
         class="mx-auto mt-9 flex max-w-4xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted reveal-delay-4"
         data-reveal
       >
-        <span class="flex items-center gap-2"
-          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Built after 30+ nurse-manager interviews</span
-        >
         <span class="flex items-center gap-2"
           ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>A human checks every schedule</span
         >
