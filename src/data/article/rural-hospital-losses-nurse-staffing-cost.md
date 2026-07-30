@@ -49,7 +49,7 @@ The service line findings show what financial pressure does to a rural community
 
 ## Why Is the Texas Number Worse Than the National Headline?
 
-The Texas number is worse because the national average blends two very different groups. Chartis splits the in-the-red finding by Medicaid expansion status: 34.9% of rural hospitals in expansion states against 52.2% in states that did not expand. Texas [has not expanded Medicaid](https://www.healthinsurance.org/medicaid/expansion/), so the 52.2% figure is the one that describes the environment a Texas rural hospital operates in.
+The Texas number is worse because the national average blends two very different groups. Chartis splits the in-the-red finding by Medicaid expansion status: 34.9% of rural hospitals in expansion states against 52.2% in states that did not expand. Texas is listed as [Not Adopted](https://www.kff.org/affordable-care-act/state-indicator/state-activity-around-expanding-medicaid-under-the-affordable-care-act/) in KFF's tracker of state expansion decisions, so the 52.2% figure is the one that describes the environment a Texas rural hospital operates in.
 
 That gap, roughly 17 percentage points, is the single most useful thing in the report for a Texas reader, and it is the part the national coverage flattens. Texas also carries the largest absolute count of vulnerable hospitals at 50, ahead of Kansas at 44, Tennessee at 27, Georgia at 25, and Mississippi at 24. Texas has [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas) according to the Rural Health Information Hub, so this is a large population of small facilities inside the worse half of the split.
 
@@ -61,7 +61,7 @@ This is worth stating carefully, because the accurate version is narrower than t
 
 ## What Does the Coverage Premium Cost a 25-Bed Hospital in a Year?
 
-Here is the arithmetic at Critical Access Hospital scale, with every assumption stated. This is an illustrative calculation at stated rates, not a customer result, because SimpleScheduleAI is pre-launch.
+Here is the math at Critical Access Hospital scale, with every assumption stated. These are illustrative figures at the stated rates, not measured results from any facility.
 
 Start with one departure. It takes about [78 days to recruit an experienced RN](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) per the 2026 NSI National Health Care Retention and RN Staffing Report, roughly 11 weeks. A full-time RN line runs about 36 hours a week, so that vacancy leaves about 400 shift-hours to backfill. At a $50 per hour loaded rate, covering those hours at straight time would run about $20,000. Covered on overtime or agency at a $75 per hour premium rate, it runs closer to $30,000. The premium, meaning the extra cost of covering the gap rather than having a nurse in the seat, is about $10,000 per vacancy.
 
@@ -136,7 +136,7 @@ Chartis puts human capital at 56% of healthcare costs. At a Critical Access Hosp
 
 1. Rural hospitals operating in the red (41.2% national, 34.9% expansion states, 52.2% non-expansion states), 417 vulnerable to closure, state-level vulnerable counts including Texas at 50, obstetrics discontinued at 331 rural hospitals between 2011 and 2024, chemotherapy discontinued at 448 between 2014 and 2024, and human capital at 56% of healthcare costs. [Chartis, 2026 Rural Health State of the State](https://www.chartis.com/insights/2026-rural-health-state-state), published February 10, 2026.
 
-2. Texas Medicaid expansion status (non-expansion). [healthinsurance.org, state-by-state Medicaid expansion guide](https://www.healthinsurance.org/medicaid/expansion/), accessed July 2026.
+2. Texas Medicaid expansion status (listed as Not Adopted). [KFF State Health Facts, Status of State Action on the Medicaid Expansion Decision](https://www.kff.org/affordable-care-act/state-indicator/state-activity-around-expanding-medicaid-under-the-affordable-care-act/), accessed July 2026.
 
 3. Time to recruit an experienced RN (78 days). [NSI Nursing Solutions, 2026 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf).
 

@@ -21,7 +21,7 @@ metadata:
 
 ## Key Takeaways
 
-- The category runs from an Excel template with formulas to an AI-assisted service that scores several drafts against the same rules. Both get sold as generators, and the distance between them is most of what this decision turns on.
+- The category runs from an Excel template with formulas to an AI-assisted service that applies compliance rules automatically. Both get called generators, so the label tells you very little about what a given tool actually does.
 - Free generators solve the distribution problem, meaning who fills which shift. They generally do not track hours against overtime thresholds, match credentials to units, help you cover a callout, or leave an audit trail.
 - For a small hospital the test that matters is whether the tool understands compliance rules, credential matching, and the callout problem that follows publication. Build speed is the easiest thing to demo and the least useful thing to compare.
 - Certain schedule patterns quietly drive burnout at a small hospital: concentrated weekends, sub-nine-hour turnarounds, chronic call, and permanent nights. A rolling multi-week view catches them; a single-week grid does not.
@@ -44,9 +44,11 @@ This guide covers what a generator does, where free tools stop, and what a small
 
 ## What Is a Nurse Schedule Generator?
 
-A nurse schedule generator is a tool that takes inputs, meaning a staff roster, availability, shift rules, and compliance requirements, and produces a complete nurse shift schedule as output. It automates the mechanical work of schedule building: matching nurses to shifts, enforcing minimum rest periods, distributing weekends and nights evenly, and flagging overtime risk before the schedule publishes.
+A nurse schedule generator is any tool that takes a staff roster and a set of shifts and produces a filled schedule. That is the whole of the shared definition. Everything past it, meaning whether the tool checks hours, knows credentials, or helps when someone calls out, varies enormously from one product to the next.
 
-The category spans a wide range. At the simple end sits an Excel template with formulas that assigns shifts from availability data you enter by hand. At the sophisticated end sits an AI-assisted service that generates several draft options, applies overtime thresholds automatically, and produces a ranked callout replacement list when a nurse becomes unavailable. Both are called generators, and the difference between them is the subject of this guide. If you want the mechanics of how the drafts get built, our explainer on [how AI builds a nurse schedule](/blog/how-ai-builds-a-nurse-schedule) walks through the steps.
+The category spans a wide range. At the simple end sits an Excel template with formulas, which is still what a great many hospitals use, and it will lay out a grid and total hours while leaving every judgment call to the person filling it in. In the middle sit dedicated scheduling products that apply rules as they build. At the far end sit services that generate the schedule and operate it for you. All three get marketed as generators.
+
+That range is the reason a feature list is worth reading closely. A tool can honestly call itself a nurse schedule generator while doing nothing more than arranging names in a grid, which is fine if a grid is what you need and a problem if you assumed the compliance checking came with it. If you want the mechanics of how an automated draft actually gets built, our explainer on [how AI builds a nurse schedule](/blog/how-ai-builds-a-nurse-schedule) walks through the steps.
 
 ## How Do Free Nurse Schedule Generators Work, and What Do They Miss?
 
@@ -64,11 +66,64 @@ What free generators commonly miss for hospital use:
 
 **Per-diem and on-call tracking.** Small hospitals lean on per-diem staff to fill gaps. A free generator does not track per-diem availability or weigh it against overtime exposure when a shift opens.
 
-These gaps show why the [nurse scheduling software](/nurse-scheduling-software) question comes down to what the automation actually understands.
+These gaps show why the [nurse scheduling software](/nurse-scheduling-software) question comes down to what the automation actually understands. The table below sets out where each tier of the category typically stops.
+
+<div class="not-prose overflow-x-auto my-8">
+  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-700">
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:28%">Capability</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:24%">Excel or free template</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:24%">Hospital-grade tool</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:24%">Operated service</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Builds the grid</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Yes, with manual entry</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Yes, automatically</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Yes, automatically</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Tracks hours against overtime thresholds</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Only if you build the formula</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Usually, verify per vendor</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Yes, before the draft is shown</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Matches credentials to units</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">No, held in the manager's head</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Usually</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Yes</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Helps cover a callout</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">No</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Sometimes, ask directly</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Yes, ranked replacement list</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Leaves a timestamped record</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">No, versions overwrite</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Usually</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Yes</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Who operates it each cycle</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">The nurse manager</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">The nurse manager</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">The vendor, you approve</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+Treat the middle column as a prompt for questions rather than a promise. Capabilities vary widely between products sold at the same tier, so confirm each one against the specific tool you are evaluating.
 
 ## What Makes an Automated Schedule Generator Reliable for a 25-Bed Hospital?
 
-A reliable generator for a small hospital needs to understand three things that general-purpose tools do not: compliance rules, credential requirements, and per-diem management.
+A reliable generator for a small hospital needs to understand four things that general-purpose tools often do not: compliance rules, credential requirements, fairness across time, and per-diem management.
 
 **Compliance rules.** Under the [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), overtime rules apply to healthcare employers, and Texas has no separate state overtime law. A generator that tracks running hours against the applicable threshold and flags a draft before it publishes is doing compliance work. One that assigns shifts without checking is creating exposure. Coverage rules matter alongside pay rules: under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever a Critical Access Hospital has one or more inpatients.
 
@@ -76,7 +131,7 @@ A reliable generator for a small hospital needs to understand three things that 
 
 **Fairness distribution.** Manual scheduling drifts toward convenience, meaning the manager calls whoever is most likely to say yes. Over time the reliable nurses accumulate the nights, weekends, and overtime, which is the pattern that produces a resignation and the [$60,090 average cost of replacing one staff RN](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) reported in the 2026 NSI National Health Care Retention and RN Staffing Report. A generator that keeps a running per-nurse count of weekends, nights, and holidays stops that pattern from forming quietly.
 
-**More than one draft.** No single scoring rule is right for every cycle. A useful generator produces several options scored against the same rules so the manager compares tradeoffs and applies judgment across the drafts.
+**Per-diem and on-call management.** Small hospitals close coverage gaps with per-diem staff and an on-call rotation, so a generator that only knows the core roster is missing the group that fills the holes. It needs current per-diem availability, and it needs to weigh a per-diem call against putting a full-time nurse into overtime. On-call assignment deserves the same running count as nights and weekends, since it concentrates on a few people just as quickly.
 
 ## What Scheduling Patterns Burn Out Nurses at a 25-Bed Hospital?
 
@@ -90,7 +145,7 @@ The patterns worth watching:
 
 **Chronic call accumulation.** On-call weight is heavier at a small hospital because fewer people share it. Untracked, it defaults to whoever answered last time.
 
-**Back-to-back holiday coverage.** Without holiday rotation logic, the same nurses who miss Thanksgiving also miss Christmas. Our [fair holiday rotation](/blog/nurse-burnout-scheduling-cah) guidance covers how the load gets distributed deliberately.
+**Back-to-back holiday coverage.** Without holiday rotation logic, the same nurses who miss Thanksgiving also miss Christmas. How that load concentrates on a few willing people is the subject of our guide to [nurse burnout and the small-hospital schedule](/blog/nurse-burnout-scheduling-cah).
 
 **Permanent nights without relief.** Nurses who chose nights are fine. The risk sits with the ones stuck there because the unit is short on night-eligible staff.
 
