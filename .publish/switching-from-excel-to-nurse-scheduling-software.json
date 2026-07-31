@@ -5,76 +5,76 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-07-31T04:44:33.559Z",
-      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+      "checkedAt": "2026-07-31T05:15:25.931Z",
+      "contentHash": "89cdbbba59938e5432fc24063fec4fe48d3ed01afe6c74eb73cf211bb9728384"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-07-31T04:44:35.733Z",
-      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+      "checkedAt": "2026-07-31T05:15:28.431Z",
+      "contentHash": "89cdbbba59938e5432fc24063fec4fe48d3ed01afe6c74eb73cf211bb9728384"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-31T04:44:36.559Z",
-      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+      "checkedAt": "2026-07-31T05:15:29.275Z",
+      "contentHash": "89cdbbba59938e5432fc24063fec4fe48d3ed01afe6c74eb73cf211bb9728384"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-31T04:44:36.651Z",
-      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+      "checkedAt": "2026-07-31T05:15:29.320Z",
+      "contentHash": "89cdbbba59938e5432fc24063fec4fe48d3ed01afe6c74eb73cf211bb9728384"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-07-31T04:44:36.938Z",
-      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+      "checkedAt": "2026-07-31T05:15:29.500Z",
+      "contentHash": "89cdbbba59938e5432fc24063fec4fe48d3ed01afe6c74eb73cf211bb9728384"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-07-31T04:44:36.939Z",
-      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+      "checkedAt": "2026-07-31T05:15:29.500Z",
+      "contentHash": "89cdbbba59938e5432fc24063fec4fe48d3ed01afe6c74eb73cf211bb9728384"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-07-31T04:44:36.942Z",
-      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+      "checkedAt": "2026-07-31T05:15:29.501Z",
+      "contentHash": "89cdbbba59938e5432fc24063fec4fe48d3ed01afe6c74eb73cf211bb9728384"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-07-31T04:43:39.700Z",
-      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+      "setBy": "opus-founder-edit",
+      "setAt": "2026-07-31T05:15:07.071Z",
+      "contentHash": "4b39e62dd86b14971a7d071822728107d64a13b7311d651d9dc91857677aab19"
     },
     "factCheck": {
       "value": "PASS",
       "setBy": "opus-dossier-verified",
-      "setAt": "2026-07-31T04:43:41.970Z",
-      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+      "setAt": "2026-07-31T05:15:09.815Z",
+      "contentHash": "4b39e62dd86b14971a7d071822728107d64a13b7311d651d9dc91857677aab19"
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "opus-topic-match",
-      "setAt": "2026-07-31T04:43:44.219Z",
-      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+      "setBy": "founder",
+      "setAt": "2026-07-31T05:15:15.197Z",
+      "contentHash": "4b39e62dd86b14971a7d071822728107d64a13b7311d651d9dc91857677aab19"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-07-31T04:43:46.451Z",
-      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+      "setAt": "2026-07-31T05:15:18.094Z",
+      "contentHash": "4b39e62dd86b14971a7d071822728107d64a13b7311d651d9dc91857677aab19"
     },
     "indexNow": {
       "value": "DONE",
       "setBy": "founder",
-      "setAt": "2026-07-31T04:47:20.902Z",
-      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+      "setAt": "2026-07-31T05:15:20.356Z",
+      "contentHash": "4b39e62dd86b14971a7d071822728107d64a13b7311d651d9dc91857677aab19"
     },
     "gscSitemap": {
       "value": "DONE",
       "setBy": "founder",
-      "setAt": "2026-07-31T04:47:23.319Z",
-      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+      "setAt": "2026-07-31T05:15:23.306Z",
+      "contentHash": "4b39e62dd86b14971a7d071822728107d64a13b7311d651d9dc91857677aab19"
     }
   },
   "overrides": []

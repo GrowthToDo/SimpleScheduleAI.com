@@ -46,7 +46,7 @@ This guide is about the transition itself. If you are still deciding whether to 
 
 Hospitals leave Excel when the manual process becomes too time-intensive, too error-prone, or too hard to defend in a compliance review. The trigger is usually the scheduling burden growing past what the manager can absorb alongside clinical duties, a callout coverage problem that becomes a safety concern, or a survey finding that exposes documentation gaps a spreadsheet cannot fill after the fact.
 
-Excel is a reasonable tool for a small roster with simple constraints. A facility running two shift types without complex credential requirements can manage in a spreadsheet for years. The limits appear as the roster grows, constraints multiply, and documentation expectations rise.
+Excel is a reasonable tool for a small roster with simple constraints. A facility running two shift types without complex credential requirements can manage in a spreadsheet for years. The limits appear as the roster grows, constraints multiply, and documentation expectations rise. The tiers of tooling available above a spreadsheet, and where each one stops, are laid out in our guide to the [nurse schedule generator](/blog/nurse-schedule-generator) category.
 
 At the point where the spreadsheet produces consistent problems, meaning overtime surprises, uneven shift distribution that generates complaints, and callouts that take hours to resolve, the manager already knows the process is failing. The open question is whether the alternative is genuinely better or simply complex in a different way.
 
@@ -58,9 +58,58 @@ The cost has four components, and a vendor quote typically covers only the first
 
 **The nurse manager's own hours.** Even with vendor support, the manager supplies the inputs: roster data, shift rules, compliance requirements, and the facility-specific constraints nobody has written down. For someone carrying a clinical schedule, finding time for a structured configuration project is itself the obstacle.
 
-**The parallel-run period.** Experienced managers do not abandon the spreadsheet the day the new system goes live. They run both for a cycle or two to confirm the outputs are correct before trusting a published schedule to it. That doubles scheduling time for those cycles.
+**The parallel-run period.** Experienced managers do not abandon the spreadsheet the day the new system goes live. They run both for a cycle or two to confirm the outputs are correct before trusting a published schedule to it. That adds meaningful time to those cycles, since the spreadsheet still gets built and the new output has to be checked against it, though the second pass is usually faster than the first because it is a comparison rather than a fresh build.
 
 **The learning-curve dip.** Early cycles on a new platform usually run slower than the Excel baseline, even when the long-term result is faster. The manager is learning the tool while still owning the real schedule. This dip is predictable, so plan for it at the start.
+
+The table below sets out where each cost lands and who absorbs it, which is the part a quote tends to leave out.
+
+<div class="not-prose overflow-x-auto my-8">
+  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-700">
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:24%">Cost component</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:22%">Who absorbs it</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:26%">Usually in the quote?</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:28%">Question to ask the vendor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Vendor implementation</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">The vendor, billed to you</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Sometimes, often as a separate setup or services line</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Is implementation included, and what does it cover?</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Manager setup hours</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Your nurse manager</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">No</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Which configuration steps does my staff perform?</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Parallel run</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Your nurse manager</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">No</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">How many cycles do your customers typically run in parallel?</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Learning-curve dip</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Your nurse manager</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">No</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">What is the median time from upload to first published schedule?</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Ongoing rule changes</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Varies by product</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Rarely discussed at all</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Can my manager change a shift rule without a support ticket?</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+The last row is the one that decides whether a switch holds, and it is the one least likely to come up before a contract is signed. For how these costs compare against what the software itself lists for, see our breakdown of [nurse scheduling software pricing](/blog/nurse-scheduling-software-pricing).
 
 ## Why Do Some Hospitals Switch Back to Excel?
 
@@ -70,7 +119,7 @@ Facilities that return to spreadsheets usually hit one of three failure modes.
 
 **A learning curve longer than the available time.** A manager with under an hour a week to invest in a new tool does not experience a six-week learning curve as six weeks. It functions as a permanent barrier, because the time to climb it never appears.
 
-**A product built for a different size of organization.** This is the quiet one. The software works exactly as designed; it was simply designed for a customer with a scheduling department. Depth of configuration is an asset to an organization with someone to own it and a liability to a manager who does not have that person.
+**A product built for a different size of organization.** This is the quiet one. The software works exactly as designed; it was simply designed for a customer with a scheduling department. Depth of configuration is an asset to an organization with someone to own it and a liability to a manager who does not have that person. That structural mismatch is the subject of our comparison of [a managed service against scheduling software](/blog/managed-service-vs-scheduling-software).
 
 Worth naming plainly: an abandoned implementation costs more than the hours it consumed. It also produces internal skepticism about scheduling tools generally, which makes the next attempt harder to authorize.
 
