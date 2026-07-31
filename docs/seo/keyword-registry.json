@@ -584,5 +584,13 @@
     "primaryKeyword": "nurse schedule generator",
     "pillar": "/nurse-scheduling-software",
     "note": "MOFU explainer on what a generator does and where free tools stop (overtime thresholds, credential matching, callout coverage, audit trail). Differentiated from nurse-scheduling-software-vs-excel (tool-vs-spreadsheet) and how-ai-builds-a-nurse-schedule (mechanics). KD 10, ~$26 CPC."
+  },
+  {
+    "slug": "switching-from-excel-to-nurse-scheduling-software",
+    "type": "post",
+    "url": "/blog/switching-from-excel-to-nurse-scheduling-software",
+    "primaryKeyword": "switching from excel to nurse scheduling software",
+    "pillar": "/nurse-scheduling-software",
+    "note": "INTENT-DIFFERENTIATED from the live nurse-scheduling-software-vs-excel post: that one is the DECISION (should I switch, ROI, signs you have outgrown Excel); this one is the EXECUTION (what the transition costs, why some hospitals revert to spreadsheets). Reciprocal cross-links in place. Competitor quotes are dossier-verified only (QGenda Brandi D/Roger S/Courtney D; Aladtec Jeanne C with the public-safety-skew caveat) after a prior draft was found carrying two dossier-flagged FABRICATED quotes."
   }
 ]

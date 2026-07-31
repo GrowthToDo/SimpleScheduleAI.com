@@ -119,7 +119,7 @@ These gaps show why the [nurse scheduling software](/nurse-scheduling-software) 
   </table>
 </div>
 
-Treat the middle column as a prompt for questions rather than a promise. Capabilities vary widely between products sold at the same tier, so confirm each one against the specific tool you are evaluating.
+Treat the middle column as a prompt for questions rather than a promise. Capabilities vary widely between products sold at the same tier, so confirm each one against the specific tool you are evaluating. Moving between tiers has its own price, which we break down in [the real cost of switching from Excel](/blog/switching-from-excel-to-nurse-scheduling-software).
 
 ## What Makes an Automated Schedule Generator Reliable for a 25-Bed Hospital?
 

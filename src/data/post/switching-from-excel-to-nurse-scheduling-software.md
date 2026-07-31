@@ -1,16 +1,13 @@
 ---
-draft: true
-publishDate: 2026-08-03T00:00:00Z
-updateDate: 2026-08-04T00:00:00Z
+draft: false
+publishDate: 2026-07-31T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'The Real Cost of Switching From Excel to Scheduling Software, and Why Some Hospitals Switch Back'
 excerpt: >
-  Switching from Excel to nurse scheduling software is not free. There is
-  configuration time, a learning curve, and an organizational transition that
-  takes longer than vendors admit in demos. Some critical access hospitals
-  attempt the switch and return to spreadsheets. Here is what the real
-  transition looks like.
-image: https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+  Switching off Excel has a price the demo does not cover: configuration time, a learning
+  curve, and weeks of running both systems. Some hospitals make the switch and go back.
+  Here is what the transition actually costs and what separates the ones that stick.
+image: https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:
@@ -24,116 +21,158 @@ metadata:
 
 ## Key Takeaways
 
-- The switch from Excel to scheduling software is not a one-time migration. It is a reconfiguration of how the entire scheduling function operates, which takes 4 to 12 weeks to stabilize depending on the platform and the facility.
-- Facilities that abandon scheduling software and return to Excel typically cite one of three failure modes: the configuration was too complex to maintain without IT support, the platform's learning curve exceeded the manager's available training time, or the product was built for a larger organization and the nurse manager could not make it fit her workflow.
-- The switch cost is not just vendor time. The nurse manager's time during the transition is real: building the initial configuration, learning the platform, re-entering the roster, and running dual systems during the overlap period.
-- A failed software implementation that returns to Excel does not just cost the transition time. It also produces organizational skepticism about scheduling tools that makes future adoption harder.
-- The fastest and most durable switches happen when the new tool has a shorter setup path than the one being replaced, not an equal or longer one.
+- The switch is a reconfiguration of how the scheduling function works, not a file migration, and it takes several weeks to stabilize depending on the platform and the facility.
+- The real cost has four parts that rarely appear in a quote: vendor implementation time, the nurse manager's own setup hours, a parallel-run period where both systems operate, and a productivity dip while the platform is being learned.
+- Hospitals that go back to spreadsheets usually hit one of three things: configuration that needed IT support the facility did not have, a learning curve longer than the manager's available training time, or a product built for a much larger organization.
+- Named reviewers on two platforms describe initial setup as complicated and time-consuming, and one kept the software while abandoning its automation. Ask about setup burden specifically before signing.
+- The switches that stick tend to have a shorter setup path than the process being replaced. A transition that asks more of the manager than Excel did is the one most likely to be abandoned.
 
 ## Table of Contents
 
-- [Why do hospitals switch from Excel to scheduling software?](#why-do-hospitals-switch-from-excel-to-scheduling-software)
-- [What does the actual transition cost look like?](#what-does-the-actual-transition-cost-look-like)
-- [Why do some hospitals switch back to Excel?](#why-do-some-hospitals-switch-back-to-excel)
-- [What is the learning curve on major scheduling platforms?](#what-is-the-learning-curve-on-major-scheduling-platforms)
-- [What makes a scheduling software transition succeed?](#what-makes-a-scheduling-software-transition-succeed)
-- [How SimpleScheduleAI handles the Excel-to-managed-service transition](#how-simplescheduleai-handles-the-excel-to-managed-service-transition)
+- [Why Do Hospitals Switch From Excel to Scheduling Software?](#why-do-hospitals-switch-from-excel-to-scheduling-software)
+- [What Does the Actual Transition Cost Look Like?](#what-does-the-actual-transition-cost-look-like)
+- [Why Do Some Hospitals Switch Back to Excel?](#why-do-some-hospitals-switch-back-to-excel)
+- [What Does Setup Look Like on Named Platforms?](#what-does-setup-look-like-on-named-platforms)
+- [What Makes a Scheduling Software Transition Succeed?](#what-makes-a-scheduling-software-transition-succeed)
+- [How Does SimpleScheduleAI Handle the Excel Transition?](#how-does-simplescheduleai-handle-the-excel-transition)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-There is an honest thing that scheduling software vendors rarely say in demos: switching from Excel is work. Not just a few hours of importing data, but a real process of configuration, learning, and organizational change that takes several weeks to complete and longer to stabilize.
+Scheduling vendors rarely say this in a demo: switching off Excel is work. It is configuration, learning, and a change in how the manager works every cycle, spread across several weeks, well past the few hours a data import suggests.
 
-The nurse manager who has been building schedules in Excel for three years has an implicit system: a set of rules she has internalized, a roster she can navigate by memory, and a process that fits her specific hospital's constraints even if it is inefficient. Replacing that system with software requires translating the implicit rules into explicit configuration, teaching the platform her hospital's specific requirements, and then changing the way she works every two to four weeks when a new scheduling cycle begins.
-
-That transition is worthwhile if it results in a faster, more reliable process. It is not worthwhile if it adds complexity without proportional benefit. The difference between those two outcomes often comes down to choices made before the migration begins.
+This guide is about the transition itself. If you are still deciding whether to leave the spreadsheet at all, our comparison of [nurse scheduling software versus Excel](/blog/nurse-scheduling-software-vs-excel) covers that decision, including the signs a small hospital has outgrown the spreadsheet. What follows assumes the decision is made and asks a narrower question: what does the switch actually cost, and why do some facilities end up back where they started?
 
 ## Why Do Hospitals Switch From Excel to Scheduling Software?
 
-Hospitals switch from Excel to scheduling software when the manual process becomes too time-intensive, too error-prone, or too difficult to defend in a compliance review. The trigger is usually one of three things: the scheduling burden exceeds 10 hours per week and the manager cannot absorb it alongside her clinical duties; a callout coverage problem becomes a patient safety concern; or a CMS survey finding exposes documentation gaps that Excel cannot retroactively fill.
+Hospitals leave Excel when the manual process becomes too time-intensive, too error-prone, or too hard to defend in a compliance review. The trigger is usually the scheduling burden growing past what the manager can absorb alongside clinical duties, a callout coverage problem that becomes a safety concern, or a survey finding that exposes documentation gaps a spreadsheet cannot fill after the fact.
 
-Excel is not a bad scheduling tool for very small rosters with simple constraints. A 10-nurse facility running two shift types without complex certification requirements can manage reasonably well in a spreadsheet. The limitations emerge as roster size grows, constraints multiply, and compliance documentation requirements increase.
+Excel is a reasonable tool for a small roster with simple constraints. A facility running two shift types without complex credential requirements can manage in a spreadsheet for years. The limits appear as the roster grows, constraints multiply, and documentation expectations rise.
 
-At the point where the Excel-based process produces consistent problems, including overtime surprises, unfair shift distributions that create staff complaints, and callout coverage that takes hours to resolve, the manager knows the process is not working. The question is whether the software alternative is actually better or just differently complex.
+At the point where the spreadsheet produces consistent problems, meaning overtime surprises, uneven shift distribution that generates complaints, and callouts that take hours to resolve, the manager already knows the process is failing. The open question is whether the alternative is genuinely better or simply complex in a different way.
 
 ## What Does the Actual Transition Cost Look Like?
 
-The actual cost of switching from Excel to scheduling software has four components: vendor implementation time, nurse manager time during setup, the overlap period where both systems run simultaneously, and the productivity dip during the learning curve period.
+The cost has four components, and a vendor quote typically covers only the first.
 
-**Vendor implementation time.** Most enterprise scheduling platforms have a formal implementation phase ranging from 2 to 12 weeks. Implementation typically involves data migration, configuration of shift rules and compliance settings, user account setup, and staff onboarding. This time is often not counted in the "price" of the software because it is either bundled into setup fees or provided as professional services billed separately.
+**Vendor implementation time.** Platforms aimed at larger organizations carry a formal implementation phase covering data migration, configuration of shift and compliance rules, account setup, and staff onboarding. This often sits outside the software price, bundled into setup fees or billed as professional services.
 
-**Nurse manager time during setup.** Even with vendor-provided implementation support, the nurse manager provides the inputs: the roster data, the shift rules, the compliance requirements, the facility-specific constraints. For a nurse manager with a full clinical schedule, finding the time to work through a structured configuration project is itself a barrier. Multiple reviewers on G2 and Capterra described implementation as taking longer than expected specifically because the person responsible for providing configuration inputs was not available to do it.
+**The nurse manager's own hours.** Even with vendor support, the manager supplies the inputs: roster data, shift rules, compliance requirements, and the facility-specific constraints nobody has written down. For someone carrying a clinical schedule, finding time for a structured configuration project is itself the obstacle.
 
-One Aladtec reviewer on G2 noted: "Takes a lot of time to set up." A QGenda reviewer described the onboarding process as requiring significant administrative involvement that the organization had not fully budgeted.
+**The parallel-run period.** Experienced managers do not abandon the spreadsheet the day the new system goes live. They run both for a cycle or two to confirm the outputs are correct before trusting a published schedule to it. That doubles scheduling time for those cycles.
 
-**The overlap period.** Most experienced managers do not abandon Excel the moment a new system goes live. They run both in parallel for one or two scheduling cycles to verify the new system produces correct outputs before trusting it with the published schedule. This overlap period costs double the scheduling time for those cycles.
-
-**The learning curve dip.** The first 4 to 8 weeks on a new scheduling platform typically produce slower scheduling cycles than the Excel baseline, even if the long-term outcome is faster. The manager is learning the platform's logic, configuration options, and interface while simultaneously managing her actual scheduling responsibilities. This dip is real and should be planned for.
+**The learning-curve dip.** Early cycles on a new platform usually run slower than the Excel baseline, even when the long-term result is faster. The manager is learning the tool while still owning the real schedule. This dip is predictable, so plan for it at the start.
 
 ## Why Do Some Hospitals Switch Back to Excel?
 
-Hospitals that switch back to Excel from scheduling software typically encounter one of three failure modes: the platform required ongoing IT maintenance the facility could not provide, the learning curve exceeded the time available for training, or the platform's feature set was built for a larger organization and did not fit the CAH's actual workflow.
+Facilities that return to spreadsheets usually hit one of three failure modes.
 
-The IT maintenance failure mode is the most structurally predictable. A platform that requires custom configuration changes for shift rule adjustments, seasonal schedule changes, or roster updates creates an ongoing dependency on vendor support or internal IT expertise. At a facility with limited IT staff, every configuration change that requires a support ticket introduces friction into routine scheduling operations. After several months of waiting days for configuration help that used to take 15 minutes in Excel, the manager often returns to the spreadsheet.
+**Ongoing IT dependency.** A platform that needs vendor or IT involvement for routine changes, meaning shift rule adjustments, seasonal changes, or roster updates, creates friction in ordinary work. Where a change took fifteen minutes in Excel and now takes a support ticket and a wait, the spreadsheet starts looking reasonable again.
 
-The learning curve failure mode is specific to platforms built for complex organizations. QGenda's reviewer-documented issue: "Very difficult to navigate." Another: "Steep learning curve to learn all the features." For a nurse manager who has 45 minutes per week to invest in learning a new tool, a platform with a six-week learning curve is not a six-week problem. It is a permanent barrier.
+**A learning curve longer than the available time.** A manager with under an hour a week to invest in a new tool does not experience a six-week learning curve as six weeks. It functions as a permanent barrier, because the time to climb it never appears.
 
-The fit failure mode is documented by reviewers in direct terms. A QGenda Director of Operations wrote: "Not designed for smaller practices." An OnShift reviewer described their facility's experience: "Our site has 4 employees and the system was overkill." These reviewers were not describing software that failed to function. They were describing software that worked correctly for its target market and incorrectly for theirs.
+**A product built for a different size of organization.** This is the quiet one. The software works exactly as designed; it was simply designed for a customer with a scheduling department. Depth of configuration is an asset to an organization with someone to own it and a liability to a manager who does not have that person.
 
-## What Is the Learning Curve on Major Scheduling Platforms?
+Worth naming plainly: an abandoned implementation costs more than the hours it consumed. It also produces internal skepticism about scheduling tools generally, which makes the next attempt harder to authorize.
 
-Learning curves on major scheduling platforms vary significantly, but reviewers across multiple platforms consistently report that the initial learning period is longer than the demo suggested and longer than the vendor's onboarding documentation implies.
+## What Does Setup Look Like on Named Platforms?
 
-On **QGenda**, multiple reviewers described a steep learning curve and a complex navigation structure that required significant time investment to master. Several noted that the depth of features, while valuable for large organizations, created unnecessary complexity for smaller teams.
+Setup difficulty shows up in named reviews on two different platforms, and the shape of it is specific: the tools work, and getting them configured is the hard part.
 
-On **Aladtec**, the learning curve was described as more manageable than enterprise alternatives, which is part of why small agencies and facilities chose it. However, reviewers noted that post-acquisition, the documentation and onboarding support that made the learning curve accessible changed along with the support model.
+On **QGenda**, a provider scheduling platform whose customer base skews toward physician groups and larger health systems (Capterra 4.2/5 from 68 reviews, verified July 2026), reviewers describe the setup phase directly:
 
-On **OnShift**, reviewers in small facilities described a mismatch between the platform's complexity and their actual use case. The features that made the platform powerful for large long-term care networks were not useful for a small hospital with a 20-person roster.
+> "Doing the initial set up of new providers is a little complicated."
+>
+> Brandi D., Scheduling Coordinator, Hospital & Health Care, December 13, 2023, Capterra
 
-No platform has a zero-learning-curve implementation. The relevant question before any transition is: how long will it take this specific nurse manager, with this specific time availability, to reach the point where the new platform is faster than her current Excel process? If the answer is more than 4 to 6 weeks, the transition plan needs to account for an extended parallel-run period.
+> "The initial setup was time-consuming...collating...digitize documents."
+>
+> Roger S., Practice Administrator, May 3, 2024, Capterra
+
+The most instructive one for this topic is a reviewer who kept the platform and gave up on the part that was supposed to save the time:
+
+> "automated scheduling and rules set up seem to have hiccups...I just stopped using the automation."
+>
+> Courtney D., Manager of Employee and Physician Relations, May 10, 2024, Capterra
+
+That is the partial version of switching back. The software stays in place, the automation goes unused, and the manual work returns without anyone recording the loss.
+
+On **Aladtec**, a self-serve platform now owned by TCP Software, an administrator described the same theme:
+
+> "It was a bit complicated to figure out from the administrator side."
+>
+> Jeanne C., Administrative Coordinator, May 7, 2019, Capterra
+
+One caveat on that quote: Aladtec's Capterra reviews skew heavily toward fire, EMS, and law enforcement, its hospital-nursing reviews are several years old, and the sample is small at 17 reviews. Read it as a signal about administrator-side setup in general, not as hospital-nursing evidence.
+
+Ask any vendor what their median time to a first published schedule is, and ask what portion of the configuration work lands on your staff. Those two answers tell you more than a feature list will.
 
 ## What Makes a Scheduling Software Transition Succeed?
 
-Three factors correlate with successful transitions from Excel to scheduling software at small hospitals: a simple initial setup path, a configuration model that fits the nurse manager's available time, and a product that does not require ongoing IT support for routine changes.
+Three things separate the transitions that hold from the ones that unwind.
 
-**Simple initial setup.** A transition that starts with an Excel roster upload and requires no data reformatting or custom configuration project is far more likely to succeed than one that requires a 4-week implementation project. The reason is practical: the nurse manager who drives the transition is also managing her clinical schedule. She has two to four hours per week for the project, not 40. A product that fits into those two to four hours each week reaches productive use faster.
+**A setup path shorter than the process being replaced.** A transition that begins with uploading the roster you already keep, with no reformatting project, survives contact with a working week. One that opens with a multi-week configuration project competes against clinical duties and usually loses.
 
-**Accessible configuration.** Every scheduling facility has rules that change: a nurse goes on FMLA, a shift type is added, a compliance requirement changes. If updating the configuration requires submitting a vendor support ticket and waiting 48 hours, every routine change produces friction. Transitions succeed when the nurse manager can maintain the configuration herself without IT support.
+**Configuration the manager can maintain.** Rules change constantly: someone goes on leave, a shift type is added, a requirement moves. If each change is a support ticket, the friction compounds until the spreadsheet wins. Transitions hold when routine changes stay in the manager's hands.
 
-**Realistic timeline planning.** The transitions that fail fastest are the ones where the nurse manager was told "you'll be live in a week" and discovered the actual onboarding process took three months. Setting a realistic transition timeline, with explicit milestones for what "done" means at each stage, prevents the kind of frustration that drives the return to Excel before the new system has had time to prove itself.
+**A timeline stated honestly at the start.** The fastest failures follow a promise of going live in a week against an onboarding that runs for months. Explicit milestones for what "done" means at each stage prevent the frustration that ends an implementation before the system has had a chance to prove itself.
 
-## How SimpleScheduleAI Handles the Excel-to-Managed-Service Transition
+## How Does SimpleScheduleAI Handle the Excel Transition?
 
-SimpleScheduleAI's transition path is designed specifically for the reality of a dual-role nurse manager with limited time for a migration project. Setup starts with an Excel upload of the existing roster. The specialist configures the shift rules, compliance requirements, and scheduling constraints based on a structured intake call. The nurse manager does not do the configuration work herself.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. The transition is built around a manager who does not have a configuration project's worth of free hours. You send us your staff list and shift structure via Excel. We configure the rules, run a test cycle, and hand you a draft schedule for review. No IT involvement required, and the first schedule lands in under two weeks.
 
-The first complete draft schedule is delivered within 3 to 5 business days of the roster upload. The nurse manager reviews it, requests adjustments, and approves. She does not need to learn a new platform interface to begin getting value from the service. The review-and-approve workflow is the whole workflow.
+There is no platform for the manager to master, which removes the learning curve as a category of risk. The job is to read the draft, ask for changes, and approve, in the first cycle and every cycle after.
 
-This means the transition does not have a learning curve in the traditional sense. There is no platform to master. The nurse manager's job is to evaluate the draft, provide feedback, and approve or reject. She does this in the first cycle, and every cycle after that, without a multi-week onboarding period.
+One honest limitation: a facility that wants direct control over every variable through its own platform interface will find this model constraining, and a self-serve tool is the better fit for that preference. This trades interface control for a shorter setup path and less ongoing maintenance. For what the drafts are built against, see [AI nurse scheduling](/ai-nurse-scheduling); for the coverage rules behind a small hospital's schedule, see [critical access hospital scheduling](/critical-access-hospital-scheduling); and for the feature picture, the [nurse scheduling software](/nurse-scheduling-software) guide covers what a system at this size handles.
 
-One limitation: facilities that want direct control over every scheduling variable through a self-managed platform interface will find this model constraining. The managed service model trades interface control for transition simplicity and ongoing maintenance simplicity. For nurse managers whose primary concern is getting more scheduling time back, not building a scheduling competency in a new software tool, the trade-off is straightforward.
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The failure mode worth watching is a quiet one: the reviewer who said the automation had hiccups and simply stopped using it. The license stays paid, the tool stays installed, and the manual work comes back without ever being recorded as a failure. When you evaluate a switch, ask what week six looks like rather than what the demo looks like: who maintains the rules, who fixes a bad draft, and what the manager does when the automation produces something wrong on a Sunday. A transition that has good answers there will hold. One that does not will end up as a paid subscription running alongside a spreadsheet.
+  </p>
+</div>
 
-For a broader comparison of what to look for when switching scheduling tools, see [What to Look for in Nurse Scheduling Software for a 25-Bed Hospital](/nurse-scheduling-software).
+## What to Do This Week
+
+1. **Write down the rules that live only in your head.** Charge coverage, who can float where, the standing arrangements nobody entered anywhere. This list is the actual configuration work, and its length is the best available estimate of your setup burden.
+2. **Ask every vendor two specific questions.** What is the median time from roster upload to first published schedule, and which parts of configuration does your staff perform? Vague answers here predict long implementations.
+3. **Plan the parallel run before you start.** Decide up front how many cycles you will run both systems and what "correct" looks like before you retire the spreadsheet. Two full cycles is the conservative and sensible standard.
+4. **Keep the spreadsheet until the new system has proven itself.** Your Excel file is your data and costs nothing to retain. Keeping it removes the continuity risk if the transition stalls.
+5. **See what a transition looks like without a platform to learn.** Walk through the setup path at [how it works](/how-it-works), or book a call to talk through your roster.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-default mb-2">Upload your Excel roster. We handle the rest.</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI is operational in 3-5 days with no platform to learn.</p>
+  <p class="text-lg font-semibold text-default mb-2">Send the Excel file you already keep</p>
+  <p class="text-muted text-sm mb-6">We configure the rules, run a test cycle, and hand back a draft schedule for review. No platform to learn, no IT project. Built for Texas Critical Access Hospitals.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
 
+### Timing and Cost
+
 **Q: How long does it actually take to switch from Excel to scheduling software?**
 
-The honest answer varies by platform: 3 to 5 days for SimpleScheduleAI's AI-native service path, 2 to 4 weeks for simpler self-serve platforms with Excel import, and 6 to 12 weeks for enterprise platforms with formal implementation projects. The vendor's stated onboarding time is typically the technical setup time, not the time to reach operational fluency. Add 4 to 6 weeks to any vendor estimate to account for the learning curve, parallel-run period, and first full scheduling cycle on the new system.
+It depends on the platform, and the number a vendor quotes usually measures technical setup, not the point where the manager is fluent. Add the parallel-run period and the first full cycle on the new system to any estimate. Ask for a median time from roster upload to first published schedule, which is harder to answer optimistically than a generic onboarding figure.
 
 **Q: What happens to my existing Excel roster when I switch?**
 
-Most modern scheduling platforms accept an Excel or CSV upload for initial roster setup. The specific format requirements vary. Before committing to any platform, ask for their exact roster import template and test whether your current spreadsheet can be reformatted to match it without significant manual effort. Roster import failures during implementation are a common cause of delayed go-live timelines and early abandonment.
+Most platforms accept an Excel or CSV upload for initial setup, though format requirements vary. Before committing, ask for the exact import template and check whether your current spreadsheet can match it without heavy manual reformatting. Import problems are a common source of delayed go-live dates.
+
+### Risk
 
 **Q: Is there a risk of losing scheduling data if the transition fails?**
 
-Your Excel file is your data. It is not deleted or migrated away from during a software transition: you keep it regardless of what happens with the new platform. The risk in a failed transition is not data loss. It is the time invested in the failed implementation, the organizational disruption of introducing and then withdrawing a new process, and the scheduling continuity risk if the parallel-run period was not long enough and the old process was not maintained cleanly. Keeping Excel as your fallback until the new system has completed at least two full scheduling cycles successfully is the conservative and correct approach.
+Your Excel file remains yours throughout, so the exposure is not the data. It is the time spent on a failed implementation, the disruption of introducing and withdrawing a process, and continuity problems if the parallel run ended too early. Keeping the spreadsheet until the new system completes at least two clean cycles is the conservative approach.
 
----
+**Q: What is the most common reason a hospital goes back to Excel?**
+
+Ongoing dependency for routine changes. A platform that needs a support ticket to adjust a shift rule adds friction to work that used to take minutes, and that friction accumulates every cycle. The related pattern is quieter: the tool stays in place while its automation goes unused, as one reviewer described when they stopped using the automated scheduling entirely.
+
+## Sources
+
+1. QGenda ratings (Capterra 4.2/5, 68 reviews, Product ID 90628) and verified reviewer quotes from Brandi D. (December 13, 2023), Roger S. (May 3, 2024), and Courtney D. (May 10, 2024). [QGenda on Capterra](https://www.capterra.com/p/90628/QGenda/), ratings verified July 2026.
+
+2. Aladtec ratings (Capterra 4.6/5, 17 reviews) and the verified reviewer quote from Jeanne C. (May 7, 2019). Reviewer base skews toward public safety, with older hospital-nursing reviews. [Aladtec on Capterra](https://www.capterra.com/p/210972/Aladtec/), ratings verified July 2026.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "switching-from-excel-to-nurse-scheduling-software",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-07-31T04:44:04.936Z",
+      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-31T04:44:06.732Z",
+      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-31T04:44:07.514Z",
+      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-07-31T04:44:07.560Z",
+      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-07-31T04:44:07.779Z",
+      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-07-31T04:44:07.779Z",
+      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-07-31T04:44:07.784Z",
+      "contentHash": "eea6a1cabb06c3bd0ea1316c499120ae59637a77a41c2021b43c312bdfe6ff5f"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-07-31T04:43:39.700Z",
+      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "opus-dossier-verified",
+      "setAt": "2026-07-31T04:43:41.970Z",
+      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "opus-topic-match",
+      "setAt": "2026-07-31T04:43:44.219Z",
+      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-07-31T04:43:46.451Z",
+      "contentHash": "44f7e54a6e3fccfb493515489227e1332620fd4f53f3045934d94586819ae1f8"
+    }
+  },
+  "overrides": []
+}
