@@ -7,22 +7,24 @@ verbatim. Screenshots: `docs/seo/outreach/assets/01-04.png`. Logo: Route mark fr
 the site header / favicons. Submit from pradeep@. Log every submission in
 `../backlink-ledger.md`.
 
-## READ FIRST: two open decisions
+## READ FIRST
 
-**1. PRICING — founder decision required, do not guess.**
-There is an unresolved conflict between two governance sources:
+**1. PRICING — RESOLVED (founder ruling 2026-08-01).**
+The rule is the pitch mode, not the channel:
 
-- `backlink-plan-2026-07.md` (line 55) says directory listings must show the flat
-  **$1,000 / $1,500 per facility** price matching the public `/pricing` page, and
-  explicitly forbids the $10/user figure, on the grounds that publishing both
-  creates a price contradiction that AI engines will ingest.
-- The positioning registry's product column, and the founder's product-mode
-  instruction, point to **$10 per user per month / $100 per user per year**.
+- **Pitched as a PRODUCT (software directories: SaaSHub, SoftwareWorld,
+  TechnologyCounter, TopBestAlternatives, ITQlick, Elion, G2, Capterra/Gartner,
+  AlternativeTo, Crunchbase):** publish **$10 per user per month, or $100 per user
+  per year. No setup fees.** Every nurse and manager on the roster is a user.
+- **Pitched as a SERVICE (associations, RHIhub/TORCH resource lists, editorial and
+  HARO placements, anything referencing `/pricing`):** keep the service offer, flat
+  **$1,000/month up to 20 nurses, $1,500/month for 21 to 40 nurses, no per-nurse
+  fees, no setup fees.**
 
-Both are defensible. The risk is real in one direction (contradictory public
-prices) and the inconsistency is real in the other (a software listing quoting a
-service retainer). **Until the founder rules, leave the pricing field BLANK or
-select "Contact us" on any intake.** Never publish both models anywhere.
+This supersedes the PRICING RULE in `backlink-plan-2026-07.md` (Tier 0 section),
+which previously mandated service pricing on directories. Never publish both models
+in the same listing, and never carry a service phrase ("no per-nurse fees") into a
+product listing, where pricing IS per-user.
 
 **2. Website URL field = `https://simplescheduleai.com` (the homepage).**
 Do NOT submit `https://simplescheduleai.com/product`. That page is `noindex`, so a
@@ -105,7 +107,9 @@ ranking work lives in the dofollow lane (see `backlink-plan-2026-07.md`).
 - **Demo / trial field:** No free trial. Public **interactive demo**, no signup:
   https://simplescheduleai.com/simulator
   (Say "interactive demo". Never "live demo", never "free trial".)
-- **Pricing field:** SEE OPEN DECISION 1. Leave blank or "Contact us" until ruled.
+- **Pricing field (product mode):** $10 per user per month, or $100 per user per
+  year. Every nurse and manager on the roster is a user. No setup fees.
+  Never write "no per-nurse fees" here; product pricing is per-user.
 - **Support:** support@simplescheduleai.com · **Contact:** pradeep@simplescheduleai.com
 - **Founded / stage:** Pre-launch. Founder: Pradeep Pandey.
 - **Location (use identically everywhere, NAP consistency):**
@@ -170,6 +174,10 @@ LLM-retrieval surface.
 ## E. Not in scope
 
 Paid premium/featured tiers (SaaSHub's included) · paid directories · review
-solicitation · any listing publishing both pricing models · Gartner Digital Markets
-(Capterra/GetApp/Software Advice) until the pricing decision is made, since its intake
-requires a pricing field.
+solicitation · any listing publishing both pricing models.
+
+**Now unblocked by the 2026-08-01 pricing ruling:** Gartner Digital Markets
+(one intake covers Capterra + GetApp + Software Advice) and F6S. Both are
+product-mode listings, so both take the $10/user figure. Gartner is the highest-value
+remaining directory because ChatGPT cites Capterra for our keywords; do it in the
+same batch as section C.

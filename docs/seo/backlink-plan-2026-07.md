@@ -103,10 +103,14 @@ the governance category line ("nurse scheduling software we build and operate
 ourselves, delivered as a service"): category = software, operated-for-you = the
 differentiating feature, never a category exit. Assets that satisfy product intakes:
 the public no-signup simulator (= demo link), product screenshots, registry feature
-list. PRICING RULE: directory listings always show the canonical public offer (flat
-$1,000/$1,500 per facility, matching /pricing) — NEVER the unlisted product-mode
-$10/user from the noindex /product page (would publish a price contradiction AI
-engines would ingest). Fallback if an intake reviewer rejects the software framing:
+list. PRICING RULE — SUPERSEDED 2026-08-01 by founder ruling; see
+`outreach/tier0-submission-kit.md`. The rule is now the PITCH MODE, not the channel:
+software directories are product-mode pitches and publish **$10 per user per month /
+$100 per user per year**; anything pitched as a service (associations, RHIhub/TORCH,
+editorial, HARO) keeps the flat **$1,000/$1,500 per facility** offer matching
+/pricing. Never both models in one listing. (The prior rule mandated service pricing
+everywhere on the price-contradiction argument; the founder's call is that the mode
+we pitch in governs.) Fallback if an intake reviewer rejects the software framing:
 use the platform's professional-services category if one exists, else skip — a
 miscategorized listing is worse than none. G2 already accepted us; its audit includes
 checking which category the existing profile sits in.
