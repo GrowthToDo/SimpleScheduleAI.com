@@ -21,6 +21,57 @@ YMYL-adjacent site = zero gray-hat tolerance. Log every ask/placement in
 
 ---
 
+## PRIORITY OVERRIDE — dofollow first (founder instruction 2026-08-01)
+
+Founder: "for rest of the plan, focus on dofollow stuff more, prioritize it."
+This section reorders the tiers below; it does not delete them. The plan's own
+reality check already pointed here ("one TORCH/.edu/news link is worth fifty
+directory scraps") — this makes it the operating order.
+
+**Measured link types (2026-08-01, live pages inspected, not assumed):**
+
+| Target | Link type | Basis |
+| --- | --- | --- |
+| SaaSHub | 1 dofollow (hero CTA) + 9 nofollow | our own live listing |
+| ITQlick | nofollow | 5/5 external nofollow |
+| TopBestAlternatives | nofollow | 3/3 external nofollow |
+| Elion | nofollow (weak sample) | 429 rate-limit, 1 link seen |
+| SoftwareWorld / TechnologyCounter | UNVERIFIED | 403 / JS-rendered |
+
+Software directories are therefore an **entity + AI-retrieval play, not a ranking
+play**. They stay in the plan, capped at one batched session, no paid tiers.
+
+**Do in this order:**
+
+1. **P1 — Association + .gov-adjacent resource pages (highest dofollow odds, best
+   topical fit).** TORCH free surfaces, RHIhub "suggest a resource", NRHA, state
+   Offices of Rural Health. These are .org/.edu-class editorial pages that almost
+   always link followed, and our free ungated assets (Excel template + statistics
+   page) are exactly what their resource lists carry. This is T1.2 promoted to the
+   top of the plan.
+2. **P2 — .edu nursing-school resource pages.** Same pitch, same assets. Highest
+   per-link value available to us and reliably dofollow. Prospect nursing student /
+   career resource pages and clinical-toolkit pages.
+3. **P3 — Editorial placements (HARO / Qwoted / Featured / Help a B2B Writer).**
+   Trade and news placements are usually followed and carry DR the directories
+   cannot. Keep the existing weekly loop and the hard rules below. Triage bar:
+   answer only nurse staffing / scheduling / rural hospital / CMS-FLSA / healthcare-AI
+   / hospital-operations queries. Decline off-domain queries (a thin answer costs
+   future standing) — see the ledger for the 2026-07-31 Qwoted learning-tech decline.
+4. **P4 — Listicle-gap pitches (T1.3) and Moving Man (T2.2).** Editorial pages,
+   normally followed, but lower hit-rate and more effort per link than P1-P3.
+5. **P5 — Software directories (the six).** One batched session using the
+   product-mode kit. Do not iterate, do not pay, do not chase.
+
+**Two housekeeping items that gate P1-P3 value:**
+- Fix the SaaSHub URL so our one confirmed dofollow link stops pointing at the
+  `noindex` `/product` page (re-verification pending as of 2026-08-01).
+- Clear the Connectively/Featured profile verification (needs the SimpleScheduleAI
+  Experience entry on the founder's public LinkedIn) — until it is verified, P3
+  pitches carry less weight.
+
+---
+
 ## Tier 0 — self-serve, free, no permission needed (~1 session)
 
 **Baseline correction (GSC Links export, 2026-07-21):** Google already counts 5
