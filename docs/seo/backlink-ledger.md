@@ -12,6 +12,35 @@ Format: `| date | target | tier/tactic | asset pitched | status | link URL |`
 - Bing link API: 0 known inbound links (Bing's graph lags Google's)
 - Common Crawl index presence: 0 pages (AI-visibility audit 2026-07-21; Cloudflare unblock pending)
 
+### Baseline re-check 2026-08-02
+
+**The 5-referring-domain GSC figure REMAINS the working baseline.** Do not replace it
+with a Bing number (see the anomaly below).
+
+- **Cloudflare crawler blocking: RESOLVED (verified 2026-08-02).** All seven crawler
+  user-agents return HTTP 200 with real content: Googlebot, bingbot, CCBot
+  (Common Crawl), GPTBot, ClaudeBot, AhrefsBot, and desktop Chrome. Googlebot receives
+  ~208KB with the correct `<title>` and zero challenge markers (no "just a moment",
+  no Turnstile). Cloudflare still fronts the site but is passing bots through.
+  robots.txt explicitly Allows every AI crawler. The "Cloudflare unblock pending"
+  note above is therefore CLOSED.
+- **Bing crawl health (Bing Webmaster API, 2026-04-14 to 2026-08-01):**
+  `BlockedByRobotsTxt = 0` on EVERY day of the series. Pages in Bing's index grew
+  9 -> 79; URLs returning 2xx grew 7 -> 119; recent daily crawl 20-66 pages with
+  0-2 errors and no 5xx. Crawling is healthy and accelerating.
+- **Bing `InLinks` anomaly — DO NOT RECORD AS BACKLINKS.** `CrawlStats.InLinks`
+  reads 8 (series: 0 -> 1 on May 18 -> 6 on Jun 29 -> 9 on Jul 18 -> 8 from Jul 21,
+  flat since). But three separate Bing endpoints return EMPTY and cannot enumerate
+  a single link: `get_link_counts` -> `{"Links":[],"TotalPages":0}`,
+  `get_url_links` (homepage) -> `{"Details":[],"TotalPages":0}`,
+  `get_connected_pages` -> `[]`. The field's meaning is also unconfirmed (it sits
+  beside `InIndex` as a per-day site counter and may not mean external referring
+  domains at all). Treat 8 as UNVERIFIED. Cross-check via the free Moz / Common
+  Crawl web-graph route before any figure enters reporting.
+- **Index coverage gap to watch:** 79 pages in Bing's index against ~93 URLs
+  submitted via IndexNow. Trend is upward (73 -> 79 in the five days to Aug 1 as the
+  week's posts landed). Watch coverage, not crawl volume.
+
 ## Log
 
 | Date | Target | Tier | Asset | Status | Link |
@@ -30,4 +59,8 @@ Format: `| date | target | tier/tactic | asset pitched | status | link URL |`
 | 2026-07-23 | G2 + Crunchbase + AlternativeTo refresh | T0 claim | kit C copy | DONE by founder — profiles claimed/refreshed with kit copy (verify rendered copy + link on each in ~1wk) | see baseline URLs |
 | 2026-07-23 | TORCH (free email) | T0 | kit D | SENT from pradeep@ — awaiting reply | — |
 | 2026-07-23 | RHIhub resource submission | T0 | kit E | SUBMITTED from pradeep@ — stats page pitched with vendor disclosure; if accepted, template page = second submission a few weeks later | pitched: /rural-hospital-nurse-staffing-statistics |
+| 2026-08-01 | SaaSHub | T0 submit | product-mode kit | LIVE + APPROVED. Link audit: 1 DOFOLLOW (hero CTA, empty rel) + 9 nofollow — our only confirmed dofollow directory link. PROBLEM: it points at /product (noindex,follow), so equity only passes through. URL change to homepage submitted, PENDING SaaSHub re-verification. Listing carries pre-ruling SERVICE-mode copy; refresh to product mode when the URL edit clears. Premium tier declined. | https://www.saashub.com/simplescheduleai |
+| 2026-08-01 | Capterra (via Gartner intake) | T0 submit | kit A | LIVE but on **capterra.in (India)**, NOT capterra.com — verified capterra.com/p/1108519 returns 404 and site search does not find us. Shows "LOCAL PRODUCT" India badge, name misspelled "SimplescheduleAI", and service pricing ($1,000 flat) instead of product $10/user. Region likely follows the vendor account country. FIX ORDER: name + URL (Product Details) -> pricing -> Capterra > International Markets for the region, else Gartner support ticket. | https://www.capterra.in/software/1108519/SimplescheduleAI |
+| 2026-08-01 | Software Advice + GetApp (same Gartner listing) | T0 submit | kit A | UNPUBLISHED — both blocked only on missing descriptions. These are US .com properties, so completing them sidesteps the capterra.in problem entirely. SA/GetApp long + short descriptions and target market drafted 2026-08-01, ready to paste. | — |
+| 2026-08-02 | Link-type audit (6 directories) | P5 measurement | — | MEASURED on live pages: SaaSHub 1 dofollow + 9 nofollow; ITQlick nofollow (5/5); TopBestAlternatives nofollow (3/3); Elion nofollow (weak sample, 429); SoftwareWorld + TechnologyCounter UNVERIFIED (403 / JS-rendered). Directories reclassified as entity/AI-retrieval signal, not a ranking play. | — |
 
