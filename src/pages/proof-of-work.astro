@@ -13,23 +13,27 @@ const metadata = {
 };
 
 const calLink = 'https://cal.com/gautham-8bdvdx/30min';
-const asOf = '26 July 2026';
+const asOf = '2 August 2026';
 
 // Search traction data, pulled directly from Google Search Console and Bing
-// Webmaster Tools APIs on 10 July 2026. Positions are the averages those
+// Webmaster Tools APIs on 2 August 2026. Positions are the averages those
 // tools report; queries shown are a buyer-intent sample (scraper noise excluded).
+// Bing's query list carries a large volume of synthetic/bot queries ("4nurse
+// alternatives" and similar); those are excluded here. Several Bing positions
+// rest on 1-2 impressions in a single week, so they are point-in-time
+// observations rather than stable rankings — hence the visible as-of date.
 const searchStats = [
-  { value: '18,946', label: 'Google impressions in the 90 days to 10 July 2026, with 38 clicks' },
-  { value: '~14', label: 'Average Google position in early July, up from the 40s and 50s in mid-April' },
+  { value: '22,145', label: 'Google impressions in the 90 days to 1 August 2026, with 74 clicks' },
+  { value: '~13', label: 'Average Google position in late July, up from the 40s and 50s in mid-April' },
   {
-    value: '3 → 16',
-    label: 'Monthly Google clicks: 3 in April, 9 in May, 16 in June, 10 in the first nine days of July',
+    value: '3 → 47',
+    label: 'Monthly Google clicks: 3 in April, 9 in May, 16 in June, 47 in July',
   },
 ];
 
 // --- Chart data ---------------------------------------------------------
 // Weekly Google Search Console series (impressions summed, average position
-// as the mean of the week's daily averages), 16 Apr - 15 Jul 2026, pulled
+// as the mean of the week's daily averages), 16 Apr - 29 Jul 2026, pulled
 // from the GSC API. Feeds the momentum chart below.
 const momentum = [
   { wk: 'Apr 16', imp: 750, pos: 50.5 },
@@ -45,6 +49,8 @@ const momentum = [
   { wk: 'Jun 25', imp: 1735, pos: 16.3 },
   { wk: 'Jul 2', imp: 1841, pos: 13.8 },
   { wk: 'Jul 9', imp: 2053, pos: 14.7 },
+  { wk: 'Jul 16', imp: 1406, pos: 14.9 },
+  { wk: 'Jul 23', imp: 2210, pos: 14.1 },
 ];
 // Two stacked panels share one x-axis (weeks). Every point is labelled with its
 // value, so neither panel needs a y-axis, and the two series never collide.
@@ -85,17 +91,21 @@ const rankData = [
   { q: 'ai healthcare scheduling tool not ukg not qgenda', pos: 1, engine: 'Bing' },
   { q: 'replacements for qgenda', pos: 1, engine: 'Bing' },
   { q: 'best nurse scheduling software for small hospitals', pos: 2, engine: 'Bing' },
+  { q: 'best nurse scheduling software for a small critical access hospital in texas', pos: 2, engine: 'Bing' },
   { q: 'best aladtec alternatives', pos: 2.5, engine: 'Google' },
-  { q: 'nurse scheduling software', pos: 3, engine: 'Bing' },
-  { q: 'alternatives to aladtec', pos: 4.8, engine: 'Google' },
-  { q: 'best nurse scheduling software 2026', pos: 6.7, engine: 'Google' },
-  { q: 'alternatives to smartlinx software', pos: 7.5, engine: 'Google' },
-  { q: 'best alternatives to qgenda for ambulatory practice', pos: 8.7, engine: 'Google' },
-  { q: 'alternatives to shiftwizard software', pos: 9.9, engine: 'Google' },
+  { q: 'nurse scheduling software', pos: 5, engine: 'Bing' },
+  { q: 'alternatives to aladtec', pos: 5.7, engine: 'Google' },
+  { q: 'alternatives to shiftwizard software', pos: 8.0, engine: 'Google' },
+  { q: 'alternatives to smartlinx software', pos: 8.5, engine: 'Google' },
+  { q: 'best alternatives to qgenda for ambulatory practice', pos: 8.8, engine: 'Google' },
+  { q: 'best nurse scheduling software 2026', pos: 9.9, engine: 'Google' },
   { q: 'what is the best alternative to qgenda', pos: 10.4, engine: 'Google' },
-  { q: 'nurse scheduling software pricing', pos: 11.2, engine: 'Google' },
+  { q: 'nurse scheduling software pricing', pos: 13.1, engine: 'Google' },
 ];
-const rankPct = (p: number) => (((p - 1) / 11) * 100).toFixed(1);
+// Derived from the data so a newly-added or drifted position can never overflow
+// the bar (a hard-coded divisor of 11 broke when the worst position passed 12).
+const rankMax = Math.max(...rankData.map((r) => r.pos));
+const rankPct = (p: number) => (((p - 1) / (rankMax - 1)) * 100).toFixed(1);
 
 // Answer engines that name AND cite the site on our core buyer prompts.
 // Only engines where we actually appear are listed.
@@ -438,8 +448,8 @@ const navItems = [
 
       <h3 class="mt-12 text-xl font-bold text-gray-900 dark:text-white">Search traction</h3>
       <p class="mt-2 text-sm text-muted">
-        Numbers pulled directly from the Google Search Console and Bing Webmaster Tools APIs on 10 July 2026. This is an
-        early trend, stated plainly: impressions and position are moving fast, clicks are still small.
+        Numbers pulled directly from the Google Search Console and Bing Webmaster Tools APIs on 2 August 2026. This is
+        an early trend, stated plainly: impressions and position are moving fast, clicks are still small.
       </p>
 
       <div class="mt-6 grid gap-4 sm:grid-cols-3">
@@ -463,7 +473,7 @@ const navItems = [
             viewBox="0 0 760 175"
             class="mt-3 w-full"
             role="img"
-            aria-label="Weekly Google impressions rising from about 750 to about 2,050 a week between April and July 2026"
+            aria-label="Weekly Google impressions rising from about 750 to about 2,210 a week between April and July 2026"
           >
             {
               iBars.map((b) => (
@@ -504,7 +514,7 @@ const navItems = [
             viewBox="0 0 760 185"
             class="mt-3 w-full"
             role="img"
-            aria-label="Average Google search position improving from around 50 to around 14 between April and July 2026"
+            aria-label="Average Google search position improving from around 50 to around 13 between April and July 2026"
           >
             <polyline
               points={pLine}
