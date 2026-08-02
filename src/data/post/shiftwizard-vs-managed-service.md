@@ -47,7 +47,7 @@ This guide compares the two models on the operational dimensions that decide the
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-For a Critical Access Hospital nurse manager evaluating hospital scheduling options, the most consequential decision is not which scheduling product to buy. It is which operating model the hospital is signing up for. A self-serve platform like ShiftWizard puts the operational layer on your nurse manager's calendar. A managed service moves that layer to a specialist outside the hospital. The feature-by-feature comparison matters less than this structural question.
+For a Critical Access Hospital nurse manager evaluating hospital scheduling options, the most consequential decision is not which scheduling product to buy. It is which operating model the hospital is signing up for. A self-serve platform like ShiftWizard puts the operational layer on your nurse manager's calendar. A managed service moves that layer to a specialist outside the hospital. The feature-by-feature comparison matters less than this structural question. This guide covers what ShiftWizard is, how the self-serve model works in practice, and who it fits. If you have already ruled it out and want a shortlist of what else a small hospital can move to, our guide to [ShiftWizard alternatives for Critical Access Hospitals](/blog/shiftwizard-alternatives) does that job.
 
 ## What Is ShiftWizard?
 

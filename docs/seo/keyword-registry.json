@@ -352,14 +352,16 @@
     "type": "post",
     "url": "/blog/shiftwizard-alternatives",
     "primaryKeyword": "shiftwizard alternatives",
-    "pillar": "/nurse-scheduling-software"
+    "pillar": "/nurse-scheduling-software",
+    "note": "CANNIBALIZATION PAIR with shiftwizard-vs-managed-service (2026-08 audit: both ranked for the same 2 queries, 539 impressions split). RESOLVED 2026-08-02 by explicit intent differentiation + reciprocal cross-links, NOT consolidation (one page held pos 4.5 and consolidating risked losing it). THIS post = REPLACEMENT intent: reader has already decided to leave ShiftWizard and wants a shortlist."
   },
   {
     "slug": "shiftwizard-vs-managed-service",
     "type": "post",
     "url": "/blog/shiftwizard-vs-managed-service",
     "primaryKeyword": "shiftwizard vs managed service",
-    "pillar": "/nurse-scheduling-software"
+    "pillar": "/nurse-scheduling-software",
+    "note": "CANNIBALIZATION PAIR with shiftwizard-alternatives (see that entry). THIS post = EVALUATION intent: what ShiftWizard is, how the self-serve operating model works, who it fits. Owns the ShiftWizard capability and review queries. NOTE: also on the positioning-migration vs-class retitle list."
   },
   {
     "slug": "smart-square-alternatives-small-rural-hospitals",
