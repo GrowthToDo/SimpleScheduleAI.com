@@ -34,7 +34,7 @@ metadata:
 - [How Does the A/B/C Block Method Work?](#how-does-the-abc-block-method-work)
 - [How Do You Set Up the Rotation at a 25-Bed Hospital?](#how-do-you-set-up-the-rotation-at-a-25-bed-hospital)
 - [How Do You Handle New Hires, Per-Diem Staff, and Callouts?](#how-do-you-handle-new-hires-per-diem-staff-and-callouts)
-- [How Does SimpleScheduleAI Enforce the Rotation?](#how-does-simplescheduleai-enforce-the-rotation)
+- [How Does SimpleScheduleAI Help With a Holiday Rotation?](#how-does-simplescheduleai-help-with-a-holiday-rotation)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -167,16 +167,16 @@ Holiday callouts need a defined response protocol written before the holiday arr
       <div class="px-3 py-3"><p class="text-xs text-slate-700 dark:text-slate-300 m-0">Mandatory overtime, only as far as needed to hold the on-duty requirement.</p></div>
     </li>
   </ol>
-  <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 mb-0">Work the list in order and record every contact attempt and outcome in the audit trail. A per-diem nurse who declines moves to the bottom of the roster for that cycle year.</p>
+  <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 mb-0">Work the list in order and record every contact attempt and outcome in your schedule documentation. A per-diem nurse who declines moves to the bottom of the roster for that cycle year.</p>
 </div>
 
 Document every contact attempt and outcome. If you ever face a CMS survey or a nurse grievance, the record of who was contacted in what order is your evidence that the process was followed correctly.
 
-## How Does SimpleScheduleAI Enforce the Rotation?
+## How Does SimpleScheduleAI Help With a Holiday Rotation?
 
-[SimpleScheduleAI's nurse scheduling system](/nurse-scheduling-software) stores the A/B/C group assignments for each nurse and automatically applies rotation rules when generating holiday schedules. The system surfaces which group covers which holiday for the upcoming cycle, flags if a nurse in the off-group is being scheduled on a holiday they are not supposed to cover, and generates the per-diem coverage shortlist in seniority order when a callout occurs.
+[SimpleScheduleAI](/nurse-scheduling-software) is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. To be clear about what that means for a rotation: the service does not store your A/B/C groups or track the cycle position as a feature. The rotation chart, meaning who sits in which group and which year the cycle is in, lives in your written policy document, and the review step is where you hold the draft against it.
 
-The audit trail logs every schedule change, including the reason code when a nurse from the wrong group is manually added to a holiday shift (typically because a nurse in the correct group has a documented medical leave). This record is what protects the manager when a nurse later disputes whether the rotation was followed.
+What the service does contribute sits underneath the rotation. Fairness rules distribute nights, weekends, and holidays evenly when drafts are built, with a running per-nurse count, so holiday load cannot quietly concentrate on the same few people between rotation years. When a holiday callout occurs, the system ranks the top replacement candidates with reasons: skills, role, charge coverage, and overtime risk. And every schedule change is logged with a timestamp, so when a nurse later disputes whether the rotation was followed, you have the record of what each holiday schedule was and when it changed. The log records changes and timestamps; the reasoning behind a manual substitution is yours to note in the policy file.
 
 One honest limitation: SimpleScheduleAI is not the right tool if your hospital needs holiday rotation tracking wired into a payroll system or an EHR. It is built for [critical access hospital scheduling](/critical-access-hospital-scheduling) specifically, meaning 25 beds or fewer and a nurse manager without an IT department behind her. You send us your staff list and shift structure via Excel, we configure the rules, run a test cycle, and hand you a draft schedule for review, with the first schedule in under two weeks. For how the drafts are built against your rules, see [AI nurse scheduling](/ai-nurse-scheduling), and for the end-to-end cycle see [how it works](/how-it-works).
 
