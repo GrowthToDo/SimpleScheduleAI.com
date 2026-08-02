@@ -73,34 +73,42 @@ continues, drop it and revisit after launch.
 > Co-founder, SimpleScheduleAI
 > pradeep@simplescheduleai.com
 
-## 2. RHIhub follow-up
+## 2. RHIhub — FIRST pitch (not a follow-up)
 
-Original submitted 2026-07-23 via the "Suggest a resource" form; the statistics
-page was pitched with a vendor disclosure. Silent 10 days. RHIhub is HRSA-funded
-and one of the highest-authority targets on the list, so this one is worth a
-careful follow-up rather than a nudge.
+**Ledger correction 2026-08-02:** the ledger previously recorded this as
+"SUBMITTED 2026-07-23". The founder confirmed only the TORCH email actually went
+out. RHIhub has never been contacted, so this is a first pitch. Ledger corrected
+in the same session.
 
-Where: ruralhealthinfo.org contact form, or reply to any acknowledgement email.
+RHIhub is HRSA-funded and among the highest-authority targets available to us.
+Lead with the statistics page: it fits their "resources and tools" format better
+than a template does, and we already cite RHIhub as a source, which is worth
+mentioning because it is true.
 
-> Subject: Follow-up on a resource submission (rural nurse staffing statistics)
+Where: ruralhealthinfo.org "Suggest a resource" form (or their contact form).
+
+> Subject: Resource suggestion: sourced rural nurse staffing statistics
 >
 > Hello,
 >
-> I submitted a resource through your form on July 23 and wanted to check whether
-> anything further is needed from me.
+> I would like to suggest a free resource for your collection.
 >
-> The submission was a sourced statistics page on rural hospital and Critical
-> Access Hospital nurse staffing, with each figure linked to its primary source
-> and the year attributed: NSI's retention report, the Texas DSHS 2024 Hospital
-> Nurse Staffing Study, HRSA projections, and RHIhub's own state data, which we
-> cite for the Texas critical access hospital count.
+> It is a statistics page on rural hospital and Critical Access Hospital nurse
+> staffing, where every figure is linked to its primary source with the year
+> attributed: NSI's retention report, the Texas DSHS 2024 Hospital Nurse Staffing
+> Study, HRSA projections, and RHIhub's own state data, which we cite for the
+> Texas critical access hospital count.
 > https://simplescheduleai.com/rural-hospital-nurse-staffing-statistics
 >
-> As disclosed in the original submission, I run a nurse scheduling service for
-> rural hospitals. The page is free, ungated, and carries no lead capture.
+> We also publish a free Excel nurse schedule template for small-hospital units,
+> if a practical tool is a better fit than a data page:
+> https://simplescheduleai.com/resources/nurse-schedule-template
 >
-> If it does not fit your collection, that is a completely fine answer and I will
-> not follow up again.
+> Both are ungated, with no signup and no email capture. To be transparent about
+> my interest: I run a nurse scheduling service for rural hospitals, so I benefit
+> if this audience finds our work useful. The resources are free regardless.
+>
+> Happy to provide whatever you need to evaluate them.
 >
 > Pradeep Pandey
 > Co-founder, SimpleScheduleAI
