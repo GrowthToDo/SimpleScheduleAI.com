@@ -107,6 +107,18 @@ These repeatedly slip past agent passes. Check each explicitly.
 - [ ] **"managed service" self-label reword reads naturally.** The gate WARNs; the self-label is
       "AI-native nurse scheduling service" (category/comparison/title use of "managed service" is
       fine). After fixing a flagged line, confirm the sentence still reads well.
+- [ ] **Method-post product-claim trap (3rd founder catch, 2026-08-02).** When the post TEACHES an
+      editorial method (A/B/C holiday blocks, a worked framework, a decision protocol), the
+      SimpleScheduleAI section must NOT claim the product stores or automates that exact method
+      ("stores the group assignments", "automatically applies rotation rules", audit-trail
+      "reason codes", shortlist "in seniority order" — all inventions caught on live posts).
+      Claimable product truths ONLY: (a) fairness distribution of nights/weekends/holidays with a
+      running per-nurse count; (b) ranked callout replacement candidates with reasons = skills,
+      role, charge coverage, overtime risk (never seniority); (c) every schedule change logged
+      with a timestamp (NO reason codes); (d) rules configured during onboarding per the
+      positioning registry. Frame the section as "what sits underneath your method", never
+      "we run your method". Ask explicitly: does this SSAI section claim the product implements
+      the method the post just taught?
 
 ## Content judgment
 
