@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "fair-holiday-rotation-nurses-cah",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-02T10:42:17.163Z",
+      "contentHash": "36c0aa925f66131725927746fcaba57447ab6a5e044f5d853268bbc6251dddfa"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-02T10:42:19.937Z",
+      "contentHash": "36c0aa925f66131725927746fcaba57447ab6a5e044f5d853268bbc6251dddfa"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-02T10:42:21.069Z",
+      "contentHash": "36c0aa925f66131725927746fcaba57447ab6a5e044f5d853268bbc6251dddfa"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-02T10:42:21.100Z",
+      "contentHash": "36c0aa925f66131725927746fcaba57447ab6a5e044f5d853268bbc6251dddfa"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-02T10:42:21.262Z",
+      "contentHash": "36c0aa925f66131725927746fcaba57447ab6a5e044f5d853268bbc6251dddfa"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-02T10:42:21.262Z",
+      "contentHash": "36c0aa925f66131725927746fcaba57447ab6a5e044f5d853268bbc6251dddfa"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-02T10:42:21.264Z",
+      "contentHash": "36c0aa925f66131725927746fcaba57447ab6a5e044f5d853268bbc6251dddfa"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-08-02T10:42:09.074Z",
+      "contentHash": "e24acbac92d18effd590907e7d078b08b1e89619be4e569feb2d200dac1b5853"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "opus-cfr-corrected",
+      "setAt": "2026-08-02T10:42:10.811Z",
+      "contentHash": "e24acbac92d18effd590907e7d078b08b1e89619be4e569feb2d200dac1b5853"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "opus-topic-match",
+      "setAt": "2026-08-02T10:42:12.429Z",
+      "contentHash": "e24acbac92d18effd590907e7d078b08b1e89619be4e569feb2d200dac1b5853"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-02T10:42:14.983Z",
+      "contentHash": "e24acbac92d18effd590907e7d078b08b1e89619be4e569feb2d200dac1b5853"
+    }
+  },
+  "overrides": []
+}

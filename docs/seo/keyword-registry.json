@@ -594,5 +594,13 @@
     "primaryKeyword": "switching from excel to nurse scheduling software",
     "pillar": "/nurse-scheduling-software",
     "note": "INTENT-DIFFERENTIATED from the live nurse-scheduling-software-vs-excel post: that one is the DECISION (should I switch, ROI, signs you have outgrown Excel); this one is the EXECUTION (what the transition costs, why some hospitals revert to spreadsheets). Reciprocal cross-links in place. Competitor quotes are dossier-verified only (QGenda Brandi D/Roger S/Courtney D; Aladtec Jeanne C with the public-safety-skew caveat) after a prior draft was found carrying two dossier-flagged FABRICATED quotes."
+  },
+  {
+    "slug": "fair-holiday-rotation-nurses-cah",
+    "type": "post",
+    "url": "/blog/fair-holiday-rotation-nurses-cah",
+    "primaryKeyword": "fair holiday rotation for nurses",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "MOFU seasonal: A/B/C three-year block method for holiday rotation. Published 2026-08-02 deliberately early so it indexes before the Nov-Dec scheduling season. Pre-publish repair removed a WRONG CFR cite (485.635(c) was cited 3x as safe-staffing rules; it is actually Services provided through agreements or arrangements) and a non-resolving DSHS URL; now cites only 485.631(a)(5) and 485.635(d). Three inline SVGs converted to Tailwind divs/table per the no-inline-svg rule."
   }
 ]

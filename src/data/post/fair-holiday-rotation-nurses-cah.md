@@ -1,7 +1,6 @@
 ---
-draft: true
-publishDate: 2026-07-20T00:00:00Z
-updateDate: 2026-04-25T00:00:00Z
+draft: false
+publishDate: 2026-08-02T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Fair Holiday Rotation for Nurses: A/B/C Block Method'
 excerpt: >
@@ -22,64 +21,60 @@ metadata:
 
 ## Key Takeaways
 
-- Holiday shift fairness is one of the top sources of nurse dissatisfaction at small hospitals, and it is almost always caused by the absence of a documented rotation system rather than manager favoritism.
+- Holiday shift fairness is a recurring flashpoint at small hospitals, and the usual cause is the absence of a documented rotation system rather than any actual favoritism by the manager.
 - The A/B/C block method assigns nurses to one of three groups that rotate through major holidays on a fixed three-year cycle, so no group works the same holiday two years in a row.
 - At a 25-bed CAH with 20-30 nurses, three groups of 7-10 nurses each provide enough coverage for a holiday skeleton crew without requiring agency staff.
 - The method requires two setup decisions before it runs: which holidays are in rotation, and how many nurses constitute minimum safe coverage per shift.
-- New hires and per-diem nurses are handled by a defined integration rule, not ad hoc manager judgment.
+- New hires and per-diem nurses enter through a defined integration rule, which removes the ad hoc manager judgment that creates most of the grievances.
 
 ## Table of Contents
 
-- [Why Holiday Scheduling Breaks Down at Small Hospitals](#why-holiday-scheduling-breaks-down)
+- [Why Does Holiday Scheduling Break Down at Small Hospitals?](#why-does-holiday-scheduling-break-down-at-small-hospitals)
 - [What Is a Fair Holiday Rotation?](#what-is-a-fair-holiday-rotation)
-- [How the A/B/C Block Method Works](#how-the-abc-block-method-works)
-- [Setting Up the Rotation at a 25-Bed CAH](#setting-up-at-a-25-bed-cah)
-- [Handling New Hires, Per-Diem Staff, and Callouts](#new-hires-per-diem-callouts)
-- [How SimpleScheduleAI Enforces the Rotation](#how-simplescheduleai-helps)
+- [How Does the A/B/C Block Method Work?](#how-does-the-abc-block-method-work)
+- [How Do You Set Up the Rotation at a 25-Bed Hospital?](#how-do-you-set-up-the-rotation-at-a-25-bed-hospital)
+- [How Do You Handle New Hires, Per-Diem Staff, and Callouts?](#how-do-you-handle-new-hires-per-diem-staff-and-callouts)
+- [How Does SimpleScheduleAI Enforce the Rotation?](#how-does-simplescheduleai-enforce-the-rotation)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-## Why Holiday Scheduling Breaks Down at Small Hospitals?
+## Why Does Holiday Scheduling Break Down at Small Hospitals?
 
 Every nurse manager at a Critical Access Hospital has had this conversation: a nurse pulls up last year's schedule to prove they worked Christmas when someone else had it off. The accusation might be accurate or it might be misremembered, but the manager has no clean way to verify it. Without a written rotation system, the manager must either defend a judgment call or negotiate a swap in real time, both of which signal that holiday fairness is negotiable.
 
-The root cause is structural, not behavioral. Most CAHs assign holidays through a combination of seniority priority, manager discretion, and voluntary swaps. That combination consistently produces the same outcome: nurses who assert preferences early or have social capital with the manager get preferred dates, and nurses who say nothing or are new end up with the unfilled shifts.
+The root cause is structural. Most CAHs assign holidays through a combination of seniority priority, manager discretion, and voluntary swaps. That combination consistently produces the same outcome: nurses who assert preferences early or have social capital with the manager get preferred dates, and nurses who say nothing or are new end up with the unfilled shifts.
 
 At a 25-bed hospital, the problem is magnified because there is no float pool. You have 20-30 nurses covering all inpatient shifts, and the holiday skeleton crew is typically 3-5 nurses per shift. Every holiday, you need roughly the same number of bodies, which means the same distribution of sacrifice regardless of who is asking.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-label="Holiday scheduling failure modes at CAHs: seniority-first creates the same winners every year, discretion-based creates perception of favoritism, voluntary-swap-only leaves night and weekend shifts uncovered">
-  <rect width="720" height="280" fill="#f8fafc" rx="8"/>
-  <text x="360" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle">Holiday Scheduling Without a Rotation System</text>
-  <rect x="30" y="55" width="195" height="160" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
-  <text x="128" y="80" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#dc2626" text-anchor="middle">Seniority-First</text>
-  <text x="128" y="100" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">Senior nurses claim</text>
-  <text x="128" y="114" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">preferred dates first</text>
-  <text x="128" y="138" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">Result: Same nurses</text>
-  <text x="128" y="152" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">get Christmas off</text>
-  <text x="128" y="166" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">every year</text>
-  <text x="128" y="186" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">New hires always</text>
-  <text x="128" y="200" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">draw the hard dates</text>
-  <rect x="262" y="55" width="195" height="160" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
-  <text x="360" y="80" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#dc2626" text-anchor="middle">Manager Discretion</text>
-  <text x="360" y="100" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">Manager assigns based</text>
-  <text x="360" y="114" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">on personal knowledge</text>
-  <text x="360" y="138" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">Result: Perception of</text>
-  <text x="360" y="152" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">favoritism even when</text>
-  <text x="360" y="166" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">decisions are fair</text>
-  <text x="360" y="186" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">No audit trail; cannot</text>
-  <text x="360" y="200" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">verify past decisions</text>
-  <rect x="494" y="55" width="195" height="160" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
-  <text x="592" y="80" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#dc2626" text-anchor="middle">Voluntary Swaps</text>
-  <text x="592" y="100" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">Nurses self-organize</text>
-  <text x="592" y="114" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">coverage via swaps</text>
-  <text x="592" y="138" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">Result: Night and</text>
-  <text x="592" y="152" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">weekend holiday shifts</text>
-  <text x="592" y="166" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">go unfilled</text>
-  <text x="592" y="186" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">Manager fills gaps at</text>
-  <text x="592" y="200" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d" text-anchor="middle">the last minute</text>
-  <text x="360" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">All three methods share the same flaw: no documented rotation, no baseline of fairness.</text>
-</svg>
+<div class="not-prose my-8">
+  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Holiday scheduling without a rotation system</p>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div class="rounded-lg border border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
+      <div class="bg-red-600 dark:bg-red-700 px-4 py-2"><p class="text-xs font-bold text-white m-0">Seniority-first</p></div>
+      <div class="px-4 py-3">
+        <p class="text-xs text-slate-700 dark:text-slate-300 m-0">Senior nurses claim preferred dates first.</p>
+        <p class="text-xs font-semibold text-red-800 dark:text-red-300 mt-2 mb-0">Result: the same nurses get Christmas off every year, and new hires always draw the hard dates.</p>
+      </div>
+    </div>
+    <div class="rounded-lg border border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
+      <div class="bg-red-600 dark:bg-red-700 px-4 py-2"><p class="text-xs font-bold text-white m-0">Manager discretion</p></div>
+      <div class="px-4 py-3">
+        <p class="text-xs text-slate-700 dark:text-slate-300 m-0">The manager assigns from personal knowledge of the staff.</p>
+        <p class="text-xs font-semibold text-red-800 dark:text-red-300 mt-2 mb-0">Result: a perception of favoritism even when every decision was fair, with no audit trail to check past years against.</p>
+      </div>
+    </div>
+    <div class="rounded-lg border border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
+      <div class="bg-red-600 dark:bg-red-700 px-4 py-2"><p class="text-xs font-bold text-white m-0">Voluntary swaps only</p></div>
+      <div class="px-4 py-3">
+        <p class="text-xs text-slate-700 dark:text-slate-300 m-0">Nurses self-organize coverage between themselves.</p>
+        <p class="text-xs font-semibold text-red-800 dark:text-red-300 mt-2 mb-0">Result: night and weekend holiday shifts go unfilled, and the manager closes the gaps at the last minute.</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 mb-0">All three share one flaw: no documented rotation, so there is no baseline of fairness to check against.</p>
+</div>
 
-The solution is not a better discretion process. It is replacing discretion with a rule-based rotation system that nurses can verify themselves.
+The solution replaces discretion with a rule-based rotation system that nurses can verify for themselves. A better discretion process does not fix it, because the verification problem remains.
 
 ## What Is a Fair Holiday Rotation?
 
@@ -89,59 +84,56 @@ The key word is documented. A rotation that exists only in the manager's memory 
 
 For it to qualify as fair by most nursing staff standards, the rotation should satisfy three conditions: equal frequency of holiday coverage across all staff, equal distribution of high-demand dates (Christmas Eve/Christmas Day versus lower-demand holidays like Columbus Day), and a mechanism for new hires to enter the rotation without permanently disadvantaging existing staff.
 
-## How the A/B/C Block Method Works?
+## How Does the A/B/C Block Method Work?
 
 The A/B/C block method divides your nursing staff into three groups that rotate through major holidays on a fixed three-year cycle. In Year 1, Group A works Thanksgiving, Group B works Christmas, and Group C works New Year's. In Year 2, the groups advance: Group B works Thanksgiving, Group C works Christmas, and Group A works New Year's. In Year 3, Group C works Thanksgiving, Group A works Christmas, and Group B works New Year's. After Year 3, the cycle resets.
 
-The result is that no group works the same high-demand holiday two years in a row. Group A works Christmas in Year 1, then does not work Christmas again until Year 4.
+The result is that no group works the same high-demand holiday two years in a row. Group B works Christmas in Year 1, then does not work Christmas again until Year 4.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-label="A/B/C block rotation cycle showing which nurse group works each major holiday across three years">
-  <rect width="720" height="320" fill="#f8fafc" rx="8"/>
-  <text x="360" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle">A/B/C Block Holiday Rotation: Three-Year Cycle</text>
-  <rect x="30" y="50" width="155" height="40" rx="4" fill="#e2e8f0"/>
-  <text x="108" y="75" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Holiday</text>
-  <rect x="190" y="50" width="155" height="40" rx="4" fill="#dbeafe"/>
-  <text x="268" y="75" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1d4ed8" text-anchor="middle">Year 1</text>
-  <rect x="350" y="50" width="155" height="40" rx="4" fill="#dcfce7"/>
-  <text x="428" y="75" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#15803d" text-anchor="middle">Year 2</text>
-  <rect x="510" y="50" width="155" height="40" rx="4" fill="#fef9c3"/>
-  <text x="588" y="75" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#a16207" text-anchor="middle">Year 3</text>
-  <rect x="30" y="100" width="155" height="45" rx="4" fill="#f1f5f9"/>
-  <text x="108" y="128" font-family="system-ui, sans-serif" font-size="12" fill="#334155" text-anchor="middle">Thanksgiving</text>
-  <rect x="190" y="100" width="155" height="45" rx="4" fill="#eff6ff"/>
-  <text x="268" y="128" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1d4ed8" text-anchor="middle">Group A</text>
-  <rect x="350" y="100" width="155" height="45" rx="4" fill="#f0fdf4"/>
-  <text x="428" y="128" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#15803d" text-anchor="middle">Group B</text>
-  <rect x="510" y="100" width="155" height="45" rx="4" fill="#fefce8"/>
-  <text x="588" y="128" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#a16207" text-anchor="middle">Group C</text>
-  <rect x="30" y="155" width="155" height="45" rx="4" fill="#f1f5f9"/>
-  <text x="108" y="183" font-family="system-ui, sans-serif" font-size="12" fill="#334155" text-anchor="middle">Christmas</text>
-  <rect x="190" y="155" width="155" height="45" rx="4" fill="#eff6ff"/>
-  <text x="268" y="183" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1d4ed8" text-anchor="middle">Group B</text>
-  <rect x="350" y="155" width="155" height="45" rx="4" fill="#f0fdf4"/>
-  <text x="428" y="183" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#15803d" text-anchor="middle">Group C</text>
-  <rect x="510" y="155" width="155" height="45" rx="4" fill="#fefce8"/>
-  <text x="588" y="183" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#a16207" text-anchor="middle">Group A</text>
-  <rect x="30" y="210" width="155" height="45" rx="4" fill="#f1f5f9"/>
-  <text x="108" y="238" font-family="system-ui, sans-serif" font-size="12" fill="#334155" text-anchor="middle">New Year's</text>
-  <rect x="190" y="210" width="155" height="45" rx="4" fill="#eff6ff"/>
-  <text x="268" y="238" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1d4ed8" text-anchor="middle">Group C</text>
-  <rect x="350" y="210" width="155" height="45" rx="4" fill="#f0fdf4"/>
-  <text x="428" y="238" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#15803d" text-anchor="middle">Group A</text>
-  <rect x="510" y="210" width="155" height="45" rx="4" fill="#fefce8"/>
-  <text x="588" y="238" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#a16207" text-anchor="middle">Group B</text>
-  <text x="360" y="285" font-family="system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">After Year 3, the cycle resets. No group works the same holiday two consecutive years.</text>
-</svg>
+<div class="not-prose overflow-x-auto my-8">
+  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">A/B/C block holiday rotation: the three-year cycle</p>
+  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-700">
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:25%">Holiday</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:25%">Year 1</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:25%">Year 2</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:25%">Year 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Thanksgiving</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Group A</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Group B</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Group C</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Christmas</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Group B</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Group C</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Group A</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">New Year&rsquo;s</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Group C</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Group A</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Group B</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 mb-0">After Year 3 the cycle resets. No group works the same holiday two years running.</p>
+</div>
 
 The method works with any mix of full-time, part-time, and per-diem nurses, but the initial group assignment must be randomized or agreed upon to prevent the starting point from becoming a new source of grievance.
 
-## How Do You Set Up the Rotation at a 25-Bed CAH?
+## How Do You Set Up the Rotation at a 25-Bed Hospital?
 
 Setup requires four decisions before you launch the rotation. Make these decisions with your charge nurses present, document the outcome, and distribute it to all nursing staff before the rotation begins.
 
-**Decision 1: Which holidays are in rotation.** Most CAHs include Thanksgiving, Christmas Eve, Christmas Day, New Year's Eve, and New Year's Day as mandatory rotation holidays. Some also include the Fourth of July, Memorial Day, and Labor Day as secondary rotation holidays. Secondary holidays can use the same A/B/C cycle offset by one position (Group B in Year 1 covers secondary holidays while Group A covers primary) or can be handled through a voluntary preference list with manager override.
+**Decision 1: Which holidays are in rotation.** Typical mandatory rotation holidays are Thanksgiving, Christmas Eve, Christmas Day, New Year's Eve, and New Year's Day. Some also include the Fourth of July, Memorial Day, and Labor Day as secondary rotation holidays. Secondary holidays can use the same A/B/C cycle offset by one position (Group B in Year 1 covers secondary holidays while Group A covers primary) or can be handled through a voluntary preference list with manager override.
 
-**Decision 2: Minimum staffing for a holiday skeleton crew.** Determine the minimum number of RNs and CNAs required for each shift on a holiday. A typical 25-bed CAH runs 2 RNs and 2 CNAs per shift on major holidays. This is your floor; the rotation assigns people above that floor, not below it.
+**Decision 2: Minimum staffing for a holiday skeleton crew.** Determine the minimum number of RNs and aides required for each shift on a holiday. As an illustration, a 25-bed hospital might set 2 RNs and 2 aides per shift as its holiday floor, though your number will be specific to your unit and census. This is a floor the rotation always staffs at or above.
 
 **Decision 3: Initial group assignment.** Divide your nursing staff into three equal groups. The fairest method is to assign nurses alphabetically by last name and divide into thirds, then conduct a one-time draw to determine which alphabetical third becomes Group A, B, or C. Nurses hired within the same quarter can be assigned together.
 
@@ -151,50 +143,57 @@ Setup requires four decisions before you launch the rotation. Make these decisio
 
 New hires are assigned to the group with the smallest current headcount at the time of hire. If all three groups are equal in size, the new hire is assigned to the group that has not had the most recent addition. The new hire participates in the full rotation for whatever year they join, even if they are hired mid-cycle. This means a nurse hired in October may work a major holiday within two months; communicate this during hiring to prevent surprises.
 
-Per-diem nurses do not occupy a group slot in the mandatory rotation. They are listed on a separate holiday coverage roster, sorted by seniority. When the holiday skeleton crew needs additional staff above the mandatory minimum, the per-diem roster is worked from the top down. Per-diem nurses who decline a holiday call are moved to the bottom of the roster. This is not a penalty; it is a queue that resets annually.
+Per-diem nurses do not occupy a group slot in the mandatory rotation. They are listed on a separate holiday coverage roster, sorted by seniority. When the holiday skeleton crew needs additional staff above the mandatory minimum, the per-diem roster is worked from the top down. Per-diem nurses who decline a holiday call move to the bottom of the roster. The queue resets annually, so a decline carries no lasting penalty.
 
-Holiday callouts require a defined response protocol, not improvisation. When a nurse in the mandatory rotation calls out of a holiday shift, the replacement sequence is: (1) per-diem nurses on the holiday coverage roster, (2) nurses from the off-holiday group who have volunteered for holiday overtime, (3) nurses from the other off-holiday group. The on-call nurse manager does not personally contact nurses in random order; they work the list.
+Holiday callouts need a defined response protocol written before the holiday arrives. When a nurse in the mandatory rotation calls out of a holiday shift, the replacement sequence is: (1) per-diem nurses on the holiday coverage roster, (2) nurses from the off-holiday group who have volunteered for holiday overtime, (3) nurses from the other off-holiday group. The on-call nurse manager does not personally contact nurses in random order; they work the list.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-label="Holiday callout replacement sequence showing per-diem roster first, then voluntary overtime group, then second off-group">
-  <rect width="720" height="260" fill="#f8fafc" rx="8"/>
-  <text x="360" y="28" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle">Holiday Callout Replacement Sequence</text>
-  <rect x="30" y="50" width="140" height="80" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1d4ed8" text-anchor="middle">Step 1</text>
-  <text x="100" y="96" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">Per-diem nurses</text>
-  <text x="100" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">on holiday roster</text>
-  <text x="100" y="124" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">(seniority order)</text>
-  <text x="175" y="95" font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">&#8594;</text>
-  <rect x="190" y="50" width="140" height="80" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
-  <text x="260" y="80" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#15803d" text-anchor="middle">Step 2</text>
-  <text x="260" y="96" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">Nurses from</text>
-  <text x="260" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">off-group who</text>
-  <text x="260" y="124" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">volunteered OT</text>
-  <text x="335" y="95" font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">&#8594;</text>
-  <rect x="350" y="50" width="140" height="80" rx="8" fill="#fef9c3" stroke="#fde68a" stroke-width="1.5"/>
-  <text x="420" y="80" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#a16207" text-anchor="middle">Step 3</text>
-  <text x="420" y="96" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">Second off-group</text>
-  <text x="420" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">nurses (rotation</text>
-  <text x="420" y="124" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">seniority order)</text>
-  <text x="495" y="95" font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">&#8594;</text>
-  <rect x="510" y="50" width="175" height="80" rx="8" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.5"/>
-  <text x="597" y="80" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#dc2626" text-anchor="middle">Escalation</text>
-  <text x="597" y="96" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">Mandatory OT per</text>
-  <text x="597" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">CMS §485.635(c)</text>
-  <text x="597" y="124" font-family="system-ui, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">safe staffing rules</text>
-  <text x="360" y="180" font-family="system-ui, sans-serif" font-size="11" fill="#334155" font-weight="600" text-anchor="middle">Key rule: work the list in order. Do not contact nurses at random.</text>
-  <text x="360" y="198" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Document every contact attempt and outcome in the schedule audit trail.</text>
-  <text x="360" y="220" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Per-diem nurses who decline are moved to the bottom of the holiday roster for that cycle year.</text>
-</svg>
+<div class="not-prose my-8">
+  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Holiday callout replacement sequence</p>
+  <ol class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+    <li class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 overflow-hidden">
+      <div class="bg-slate-700 dark:bg-slate-600 px-3 py-2"><p class="text-xs font-bold text-white m-0">Step 1</p></div>
+      <div class="px-3 py-3"><p class="text-xs text-slate-700 dark:text-slate-300 m-0">Per-diem nurses on the holiday roster, in seniority order.</p></div>
+    </li>
+    <li class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 overflow-hidden">
+      <div class="bg-slate-700 dark:bg-slate-600 px-3 py-2"><p class="text-xs font-bold text-white m-0">Step 2</p></div>
+      <div class="px-3 py-3"><p class="text-xs text-slate-700 dark:text-slate-300 m-0">Nurses from an off-group who pre-volunteered for holiday overtime.</p></div>
+    </li>
+    <li class="rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 overflow-hidden">
+      <div class="bg-slate-700 dark:bg-slate-600 px-3 py-2"><p class="text-xs font-bold text-white m-0">Step 3</p></div>
+      <div class="px-3 py-3"><p class="text-xs text-slate-700 dark:text-slate-300 m-0">The second off-group, in rotation seniority order.</p></div>
+    </li>
+    <li class="rounded-lg border border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
+      <div class="bg-red-600 dark:bg-red-700 px-3 py-2"><p class="text-xs font-bold text-white m-0">Escalation</p></div>
+      <div class="px-3 py-3"><p class="text-xs text-slate-700 dark:text-slate-300 m-0">Mandatory overtime, only as far as needed to hold the on-duty requirement.</p></div>
+    </li>
+  </ol>
+  <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 mb-0">Work the list in order and record every contact attempt and outcome in the audit trail. A per-diem nurse who declines moves to the bottom of the roster for that cycle year.</p>
+</div>
 
 Document every contact attempt and outcome. If you ever face a CMS survey or a nurse grievance, the record of who was contacted in what order is your evidence that the process was followed correctly.
 
-## How SimpleScheduleAI Enforces the Rotation?
+## How Does SimpleScheduleAI Enforce the Rotation?
 
 [SimpleScheduleAI's nurse scheduling system](/nurse-scheduling-software) stores the A/B/C group assignments for each nurse and automatically applies rotation rules when generating holiday schedules. The system surfaces which group covers which holiday for the upcoming cycle, flags if a nurse in the off-group is being scheduled on a holiday they are not supposed to cover, and generates the per-diem coverage shortlist in seniority order when a callout occurs.
 
 The audit trail logs every schedule change, including the reason code when a nurse from the wrong group is manually added to a holiday shift (typically because a nurse in the correct group has a documented medical leave). This record is what protects the manager when a nurse later disputes whether the rotation was followed.
 
-SimpleScheduleAI is not the right tool if your hospital needs to integrate holiday rotation tracking with a payroll system or an EHR. It is built for [Critical Access Hospital scheduling](/critical-access-hospital-scheduling) specifically: 25 beds or fewer, limited IT, and a nurse manager who needs to go from current Excel roster to a working rotation system in under a week.
+One honest limitation: SimpleScheduleAI is not the right tool if your hospital needs holiday rotation tracking wired into a payroll system or an EHR. It is built for [critical access hospital scheduling](/critical-access-hospital-scheduling) specifically, meaning 25 beds or fewer and a nurse manager without an IT department behind her. You send us your staff list and shift structure via Excel, we configure the rules, run a test cycle, and hand you a draft schedule for review, with the first schedule in under two weeks. For how the drafts are built against your rules, see [AI nurse scheduling](/ai-nurse-scheduling), and for the end-to-end cycle see [how it works](/how-it-works).
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The argument about holiday fairness is almost never really about one Christmas. It is about a nurse having no way to check whether the last three years were even, and a manager having no way to prove they were. A written rotation ends that argument by making the answer lookupable by anyone, which is why the documentation matters more than the particular method you choose. Set it up in August or September, when nobody is emotional about it. Trying to introduce a rotation in mid-November, with the assignments already visible, turns a policy decision into a negotiation about specific people and specific dates.
+  </p>
+</div>
+
+## What to Do This Week
+
+1. **Pull the last two years of holiday schedules.** Count, per nurse, how many of Thanksgiving, Christmas, and New Year's they worked. If two or three names carry a clearly heavier load, you have the evidence that a rotation is needed, and the starting point for who goes in which group.
+2. **Write down your holiday skeleton crew number.** The minimum RNs and aides per shift on a holiday. Everything else in the rotation sits on top of this floor, and the floor has to satisfy the on-duty requirement.
+3. **Decide which holidays are in rotation before you assign anyone.** Deciding the holiday list after people see their assignments guarantees an argument about the list.
+4. **Draw the groups by an objective method and record the draw.** Alphabetical thirds with a one-time randomized draw for which third becomes A, B, or C. The record of the draw is what makes it defensible later.
+5. **Distribute the rotation in writing before October.** Nurses need to plan family travel. A rotation published after Halloween solves next year's problem instead of this one.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">
@@ -216,7 +215,7 @@ SimpleScheduleAI is not the right tool if your hospital needs to integrate holid
 
 **Q: What is a fair holiday rotation system for nurses?**
 
-A fair holiday rotation assigns nurses to holiday shifts on a predetermined, documented cycle so no nurse works the same high-demand holiday two years in a row. It must be written, distributed to all staff, and applied consistently. The A/B/C block method is one of the most common approaches for hospitals with 15-40 nursing staff, because it requires no software and can be verified by any nurse who reads the rotation chart.
+A fair holiday rotation assigns nurses to holiday shifts on a predetermined, documented cycle so no nurse works the same high-demand holiday two years in a row. It must be written, distributed to all staff, and applied consistently. The A/B/C block method is a common approach at small hospitals because it requires no software and can be verified by any nurse who reads the rotation chart.
 
 **Q: How do you divide nurses into groups for a holiday rotation?**
 
@@ -224,17 +223,21 @@ Divide nursing staff into three equal groups by an objective method, typically a
 
 **Q: What happens when a nurse calls out of a mandatory holiday shift?**
 
-Work a defined replacement sequence: first contact per-diem nurses on the holiday coverage roster (by seniority), then contact nurses from an off-group who have pre-volunteered for holiday overtime, then contact nurses from the second off-group. Document every contact attempt. Mandatory overtime under CMS §485.635(c) safe staffing rules is the last resort, not the first call.
+Work a defined replacement sequence: first contact per-diem nurses on the holiday coverage roster (by seniority), then contact nurses from an off-group who have pre-volunteered for holiday overtime, then contact nurses from the second off-group. Document every contact attempt. Mandatory overtime is the last resort rather than the first call. The floor you cannot drop below is the CMS on-duty requirement at [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631): a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever the hospital has one or more inpatients.
 
 **Q: How do you handle new hires in an existing holiday rotation?**
 
 Assign new hires to the group with the smallest headcount at the time of hire. The new hire participates in that group's rotation for the current cycle year, even if they are hired mid-cycle. Communicate this expectation during the hiring process. New hires who are hired within 60 days of a major holiday they are assigned to cover can request a one-time swap with another new hire in a different group, subject to manager approval.
 
-**Q: Is a written holiday rotation policy legally required for Texas CAHs?**
+**Q: Is a written holiday rotation policy legally required for a Texas Critical Access Hospital?**
 
-No specific state law requires a written holiday rotation policy. However, [Texas DSHS nurse staffing rules](https://www.dshs.texas.gov/acute-settlement-agreement) require CAHs to maintain staffing documentation sufficient to demonstrate CMS §485.635(c) compliance at all times, including holidays. A documented rotation policy supports that compliance record and also reduces nurse grievances that could escalate to the Texas Board of Nursing.
+No. No federal or Texas rule requires a written holiday rotation policy specifically. What CMS does require is continuous coverage: under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever the hospital has one or more inpatients, and holidays are no exception. A documented rotation is not itself the requirement; it is how a small hospital reliably meets the requirement on the days coverage is hardest to fill, and it gives you a record of how each holiday was staffed.
 
----
+## Sources
+
+1. CMS Conditions of Participation for Critical Access Hospitals, on-duty licensed nurse requirement: a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever the hospital has one or more inpatients. [eCFR, 42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631).
+
+2. Nursing services standard for Critical Access Hospitals under the Conditions of Participation. [eCFR, 42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

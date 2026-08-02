@@ -145,7 +145,7 @@ The patterns worth watching:
 
 **Chronic call accumulation.** On-call weight is heavier at a small hospital because fewer people share it. Untracked, it defaults to whoever answered last time.
 
-**Back-to-back holiday coverage.** Without holiday rotation logic, the same nurses who miss Thanksgiving also miss Christmas. How that load concentrates on a few willing people is the subject of our guide to [nurse burnout and the small-hospital schedule](/blog/nurse-burnout-scheduling-cah).
+**Back-to-back holiday coverage.** Without holiday rotation logic, the same nurses who miss Thanksgiving also miss Christmas. The fix is a documented cycle, which we lay out in [fair holiday rotation for nurses](/blog/fair-holiday-rotation-nurses-cah). How that load concentrates on a few willing people is the subject of our guide to [nurse burnout and the small-hospital schedule](/blog/nurse-burnout-scheduling-cah).
 
 **Permanent nights without relief.** Nurses who chose nights are fine. The risk sits with the ones stuck there because the unit is short on night-eligible staff.
 

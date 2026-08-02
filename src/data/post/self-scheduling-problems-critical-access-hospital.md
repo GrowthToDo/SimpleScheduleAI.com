@@ -80,7 +80,7 @@ Scheduling inequity is a primary driver of charge nurse and staff nurse burnout 
 
 ## What Does Selfish Scheduling Actually Look Like?
 
-Selfish scheduling appears as three repeating patterns at a CAH: first-mover advantage where fast-acting nurses claim all desirable shifts before slower colleagues can respond, holiday stacking where the same nurses end up on Christmas and Thanksgiving every year because there is no cross-cycle record to enforce rotation, and night-and-weekend avoidance where some nurses claim only day shifts on weekdays cycle after cycle without any minimum floor enforced by policy.
+Selfish scheduling appears as three repeating patterns at a CAH: first-mover advantage where fast-acting nurses claim all desirable shifts before slower colleagues can respond, holiday stacking where the same nurses end up on Christmas and Thanksgiving every year because there is no cross-cycle record to enforce rotation, which is what [a documented A/B/C holiday rotation](/blog/fair-holiday-rotation-nurses-cah) exists to prevent, and night-and-weekend avoidance where some nurses claim only day shifts on weekdays cycle after cycle without any minimum floor enforced by policy.
 
 In practice, selfish scheduling is not nurses behaving badly. It is the predictable outcome of a system with no guardrails on what any individual nurse can claim relative to the unit's coverage needs. A nurse who logs in at 8 AM when the window opens and claims three consecutive day shifts on weekdays is following the rules as written. The problem is that those rules allow the coverage gap her choices create.
 
