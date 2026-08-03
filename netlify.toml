@@ -41,6 +41,16 @@
   status = 301
   force = true
 
+# Second brand mirror found ranking in search 2026-08-03 (ssai-temp.netlify.app,
+# serving index,follow). This rule only takes effect if that Netlify site deploys
+# from this repo; if it is a stale manual deploy, it must be deleted or
+# password-protected in the Netlify dashboard (founder action).
+[[redirects]]
+  from = "https://ssai-temp.netlify.app/*"
+  to = "https://simplescheduleai.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/blog/healthcare-scheduling-crisis-26000-administrative-burden"
   to = "/blog/healthcare-scheduling-crisis"
