@@ -1002,6 +1002,46 @@ function check(file) {
     }
   }
 
+  // Body-prose readability: simple declarative sentences (founder directive
+  // 2026-08-03, from the AEO structure rules — BLUF / atomic / simple). A body
+  // sentence over 35 words usually carries two ideas and reads badly both to a
+  // nurse manager and to an AI chunker. WARN only, capped at 5 per file.
+  // Prose lines only: skip HTML, tables, headings, blockquotes, code, the bio.
+  {
+    let longSentenceWarns = 0;
+    let inFence = false;
+    body.forEach((line, i) => {
+      if (/^```/.test(line.trim())) {
+        inFence = !inFence;
+        return;
+      }
+      if (inFence || longSentenceWarns >= 5) return;
+      const t = line.trim();
+      if (!t || t.startsWith('<') || t.startsWith('#') || t.startsWith('|') || inBlockquote(line)) return;
+      if (/_\[Pradeep Pandey\]\(\/about\/pradeep-pandey\)/.test(line)) return;
+      // Strip URLs, markdown link targets, inline code, and residual tags so
+      // punctuation inside them cannot distort the word counts.
+      const prose = t
+        .replace(/https?:\/\/\S+/g, '')
+        .replace(/\]\([^)]*\)/g, ']')
+        .replace(/`[^`]*`/g, '')
+        .replace(/<[^>]+>/g, '')
+        .replace(/^[-*\d.]+\s+/, '');
+      for (const s of prose.split(/(?<=[.!?])\s+/)) {
+        const wc = s.split(/\s+/).filter(Boolean).length;
+        if (wc > 35) {
+          warn(
+            `Body sentence has ${wc} words (>35) — split it; one idea per sentence, subject-verb-object`,
+            bodyOffset + i + 1,
+            s.slice(0, 90)
+          );
+          longSentenceWarns++;
+          break;
+        }
+      }
+    });
+  }
+
   // "managed service" as a SELF-label is banned (SSAI self-label = "AI-native
   // nurse scheduling service"). Category/comparison/model-description uses are
   // fine, so match only the two clearest self-label shapes to avoid false hits.

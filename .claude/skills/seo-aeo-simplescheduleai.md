@@ -325,6 +325,13 @@ Implementation example: aladtec-vs-managed-service post — six comparison sub-q
   management", "shift scheduling for nurses", "CAH scheduling".
 - Minimum 600 words for product/landing pages. Blog posts: see content-type word count targets in Part 7.
 - Each paragraph: 2–4 sentences max.
+- **Simple declarative sentences (founder directive 2026-08-03, gate-backed).** One idea per
+  sentence, subject-verb-object. A body sentence over ~35 words almost always carries two ideas;
+  split it WHILE WRITING, not in review. `check-blog` now WARNs on every body sentence over 35
+  words (capped at 5 per file), so a draft arriving at the gate with those warnings was written
+  against this rule. Litmus test from the AEO structure rules: if a sentence takes two reads to
+  parse, it is too complex. This also serves AI chunking: engines weigh passage starts heavily
+  and chunk mid-paragraph, so a long multi-clause sentence can lose its subject in the split.
 
 ### 3.2.1 SimpleScheduleAI Capability Claims (compliance-adjacent)
 
