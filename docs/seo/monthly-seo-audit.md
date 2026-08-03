@@ -15,7 +15,15 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
    their target queries -> log outcome in ctr-rewrite-queue.md.
 2. **AEO snapshot**: `npm run llm-citations` (dataset endpoints; ~$0.30-0.60 —
    SKIP with a note if DataForSEO balance is empty). Appends docs/seo/aeo-trend.jsonl.
-3. **Competitor content radar**: `npm run sitemap-diff` -> commit DIFFLOG delta.
+2b. **GA4 AI-referral pull** (google-analytics MCP, wired 2026-08-03): `run_report` on
+   property 528589584, dims `sessionSource`, metrics `sessions,totalUsers`, trailing 90
+   days, dimension_filter = country "United States" AND sessionSource regex
+   `chatgpt|openai|perplexity|claude|copilot|gemini`. **Baseline 2026-08-03: 0 US
+   sessions.** NEVER report the unfiltered number: founder verification clicks from
+   Hyderabad/Bengaluru produced 168 chatgpt.com sessions from ~1 user in the same
+   window and would fake a "#2 channel" story. Directional metric only (paid-ChatGPT
+   in-content links pass no referrer). Structural fix pending: GA4 internal-traffic
+   IP filter (founder-side); the US-only proxy breaks if founders browse from the US.
 4. **Backlink pulse**: Bing `get_link_counts` + GSC Links UI export ask (founder,
    quarterly is enough) -> update backlink-ledger.md baseline block; review ledger
    asks-vs-placements; nudge stalled founder-side items.
