@@ -39,7 +39,7 @@ metadata:
 
 A nurse manager evaluating an AI scheduling tool cares less about whether the math is clever and more about whether a bad draft can reach her staff without anyone catching it, and whether she is still the one accountable for coverage and compliance when it does. Those are the right questions, and they deserve direct, specific answers.
 
-This guide stays on the trust and safety question: oversight, accuracy, and the compliance record. It does not re-explain the mechanics of how a schedule gets built. For that, the [AI nurse scheduling](/ai-nurse-scheduling) explainer covers what the system computes and how the drafts are generated. Here the focus is narrower and more important for a decision maker: what keeps an AI-built schedule from doing harm.
+This guide stays on the trust and safety question: oversight, accuracy, and the compliance record. It does not re-explain the mechanics of how a schedule gets built. For that, the [AI nurse scheduling](/ai-nurse-scheduling) explainer covers what the system computes and how the drafts are generated. The separate question of AI and nursing jobs, raised by the July 2026 Montefiore layoffs, is covered in [will AI replace nurses](/articles/will-ai-replace-nurses-montefiore-layoffs). Here the focus is narrower and more important for a decision maker: what keeps an AI-built schedule from doing harm.
 
 ## Is It Safe to Let AI Build a Nurse Schedule?
 

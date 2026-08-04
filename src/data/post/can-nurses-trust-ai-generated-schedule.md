@@ -50,7 +50,7 @@ The answer starts with understanding what an AI scheduling system actually does,
 
 ## Why Are Nurses Skeptical of AI Scheduling?
 
-Nurse skepticism about AI scheduling comes from a reasonable concern: that a system operating on rules and data will miss the human context that makes a schedule workable on an actual nursing floor. That concern is partially correct, which is why dismissing it does not help.
+Nurse skepticism about AI scheduling comes from a reasonable concern: that a system operating on rules and data will miss the human context that makes a schedule workable on an actual nursing floor. That concern is partially correct, which is why dismissing it does not help. News stories feed it too: when a hospital eliminates nursing positions and moves the work to software, as in the [Montefiore utilization review layoffs](/articles/will-ai-replace-nurses-montefiore-layoffs), every AI tool in the building inherits the suspicion.
 
 What nurses are really asking is whether the person responsible for the schedule is still making the decisions, or whether an algorithm has taken over. The honest answer is that the manager is still making every final decision. What the algorithm does is the construction work: generating draft options that satisfy coverage requirements, compliance rules, and fairness goals. The manager reviews those options and approves one. If something in the draft does not reflect unit reality, she adjusts it before posting.
 

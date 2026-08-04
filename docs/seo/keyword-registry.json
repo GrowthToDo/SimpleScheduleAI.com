@@ -610,5 +610,13 @@
     "primaryKeyword": "nurse scheduling software minimum employees",
     "pillar": "/nurse-scheduling-software",
     "note": "MOFU: vendor size-floor signals for small rosters. PREMISE INVERTED before publish: the prior draft asserted a fabricated Shiftboard 100-employee minimum with an invented Capterra attribution (dossier-flagged do-not-cite). Rewrite treats the claim as unverifiable and teaches signal-reading (Shiftboard own-site 25-100,000 range, implementation models, pricing floors). Containment vs the pillar differentiated by intent: this is the size-fit question, not the category. CTA line 18-vs-180 intentional."
+  },
+  {
+    "slug": "will-ai-replace-nurses-montefiore-layoffs",
+    "type": "article",
+    "url": "/articles/will-ai-replace-nurses-montefiore-layoffs",
+    "primaryKeyword": "will ai replace nurses",
+    "pillar": "/ai-nurse-scheduling",
+    "note": "Newsroom trendjack (Montefiore July 2026 utilization review layoffs, Datavant). Targets the evergreen question query (590/mo US, LOW comp) as analysis long-tail, not the news head SERP. Citable hook = job-class taxonomy + bedside legal floor (42 CFR 485.631(a)(5), 1,383 CAHs). Dispute never adjudicated; strike duration unverified (never say 41-day). Inbound: is-ai-nurse-scheduling-safe + can-nurses-trust-ai-generated-schedule."
   }
 ]
