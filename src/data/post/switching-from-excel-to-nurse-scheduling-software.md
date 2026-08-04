@@ -119,7 +119,7 @@ Facilities that return to spreadsheets usually hit one of three failure modes.
 
 **A learning curve longer than the available time.** A manager with under an hour a week to invest in a new tool does not experience a six-week learning curve as six weeks. It functions as a permanent barrier, because the time to climb it never appears.
 
-**A product built for a different size of organization.** This is the quiet one. The software works exactly as designed; it was simply designed for a customer with a scheduling department. Depth of configuration is an asset to an organization with someone to own it and a liability to a manager who does not have that person. That structural mismatch is the subject of our comparison of [a managed service against scheduling software](/blog/managed-service-vs-scheduling-software).
+**A product built for a different size of organization.** This is the quiet one. The software works exactly as designed; it was simply designed for a customer with a scheduling department. Depth of configuration is an asset to an organization with someone to own it and a liability to a manager who does not have that person. That structural mismatch is the subject of our comparison of [a managed service against scheduling software](/blog/managed-service-vs-scheduling-software), and the size signals that predict it are laid out in [nurse scheduling software employee minimums](/blog/nurse-scheduling-software-minimum-employees).
 
 Worth naming plainly: an abandoned implementation costs more than the hours it consumed. It also produces internal skepticism about scheduling tools generally, which makes the next attempt harder to authorize.
 

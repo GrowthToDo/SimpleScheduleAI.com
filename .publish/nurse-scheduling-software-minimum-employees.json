@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-scheduling-software-minimum-employees",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T08:29:17.559Z",
+      "contentHash": "7744e6092d32366477b6fccd52f6585eae8d5ecf116392fab87ea4086bce42e4"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T08:29:19.070Z",
+      "contentHash": "7744e6092d32366477b6fccd52f6585eae8d5ecf116392fab87ea4086bce42e4"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T08:29:20.402Z",
+      "contentHash": "7744e6092d32366477b6fccd52f6585eae8d5ecf116392fab87ea4086bce42e4"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T08:29:20.427Z",
+      "contentHash": "7744e6092d32366477b6fccd52f6585eae8d5ecf116392fab87ea4086bce42e4"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T08:29:20.539Z",
+      "contentHash": "7744e6092d32366477b6fccd52f6585eae8d5ecf116392fab87ea4086bce42e4"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T08:29:20.539Z",
+      "contentHash": "7744e6092d32366477b6fccd52f6585eae8d5ecf116392fab87ea4086bce42e4"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T08:29:20.540Z",
+      "contentHash": "7744e6092d32366477b6fccd52f6585eae8d5ecf116392fab87ea4086bce42e4"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "code-reviewer",
+      "setAt": "2026-08-04T08:29:11.912Z",
+      "contentHash": "959748f47a0e922cd0d5e53173930290d14482dae45b6c787eed869e1e3854f1"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "fable-dossier-verified",
+      "setAt": "2026-08-04T08:29:13.387Z",
+      "contentHash": "959748f47a0e922cd0d5e53173930290d14482dae45b6c787eed869e1e3854f1"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "fable-topic-match",
+      "setAt": "2026-08-04T08:29:14.679Z",
+      "contentHash": "959748f47a0e922cd0d5e53173930290d14482dae45b6c787eed869e1e3854f1"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-04T08:29:15.909Z",
+      "contentHash": "959748f47a0e922cd0d5e53173930290d14482dae45b6c787eed869e1e3854f1"
+    }
+  },
+  "overrides": []
+}
