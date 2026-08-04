@@ -247,3 +247,79 @@ The rural-health institute class above is the .edu lane worth the emails.
   than the remaining generic P5 directories. Check listing terms (free tier?).
 - casestudies.com, intuitionlabs.ai — minor aggregators, low priority.
 
+---
+
+# Quotable-asset drafts (2026-08-05): Montefiore article
+
+Asset: https://simplescheduleai.com/articles/will-ai-replace-nurses-montefiore-layoffs
+Lane rules live in `../backlink-plan-2026-07.md` ("Quotable-asset lane"). One
+news-tip email maximum, one soft journalist share, one founder LinkedIn post.
+Never into nursing/labor community threads, never to union or labor press.
+
+## 1. HIStalk news tip (USE 3)
+
+Where: the Contact / news-tip form on the HIStalk site. Do not guess an email
+address. Send once, never chase.
+
+> Subject: Tip: which hospital AI can legally replace nurses, and which cannot
+>
+> Hello,
+>
+> A tip in case it fits a roundup. After NYSNA went public over Montefiore
+> moving 12 utilization review nurse positions to software from Datavant, I
+> published a short analysis sorting hospital AI by the job class it touches:
+> administrative chart work, where displacement is now real; bedside care,
+> where 42 CFR 485.631 requires a licensed nurse on duty at every Critical
+> Access Hospital with an inpatient; and scheduling. Both the union's and
+> Montefiore's positions are quoted, and the piece adjudicates neither.
+>
+> https://simplescheduleai.com/articles/will-ai-replace-nurses-montefiore-layoffs
+>
+> Disclosure: I co-founded SimpleScheduleAI, an AI-native nurse scheduling
+> service, so I am an interested party on the scheduling row. No ask beyond
+> passing it along if useful.
+>
+> Pradeep Pandey
+> Co-founder, SimpleScheduleAI
+> pradeep@simplescheduleai.com
+
+## 2. Soft share to David Barry, Reworked (relationship, NO ask)
+
+Where: LinkedIn message (he is already connected through the frontline piece).
+
+> Hi David, thanks again for including my comments in the frontline software
+> piece. Sharing something adjacent to your beat in case it is ever useful
+> background: I wrote up the Montefiore nurse layoffs, sorting hospital AI by
+> which job class it can actually reach and which the law keeps it out of.
+> Both sides quoted, neither adjudicated. No ask, just thought the taxonomy
+> might be handy the next time frontline AI adoption comes up.
+> https://simplescheduleai.com/articles/will-ai-replace-nurses-montefiore-layoffs
+
+## 3. Founder LinkedIn post (USE 2)
+
+> Nurses at Montefiore say AI took their jobs. I build AI for nurse
+> scheduling, so I read every story like this carefully, and this one is
+> worth reading precisely.
+>
+> The verified facts: 12 utilization review nurse positions across
+> Montefiore's Bronx campuses ended July 12, with the chart-review work
+> moving to software from Datavant. NYSNA calls it replacing nurses with AI
+> and says it violates their contract. Montefiore calls the claims
+> inaccurate and misleading. The dispute is live, and I am not the referee.
+>
+> What the viral version misses: not one of those positions was at a
+> bedside. Utilization review is chart work, licensed clinical judgment
+> applied to insurance coverage. That distinction separates the AI risk
+> that is real today, in administrative chart-facing roles, from the one
+> that is not. At every Critical Access Hospital in the country, federal
+> law requires a licensed nurse on duty whenever there is an inpatient. No
+> software satisfies that clause.
+>
+> So the useful question for any nurse or hospital leader is not "will AI
+> replace nurses". It is: which job class is this tool aimed at, and who
+> keeps the final call?
+>
+> Full analysis, with both sides quoted: [link]
+
+Log each send in `../backlink-ledger.md` on the day it happens.
+

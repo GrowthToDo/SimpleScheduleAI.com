@@ -63,6 +63,30 @@ play**. They stay in the plan, capped at one batched session, no paid tiers.
 5. **P5 — Software directories (the six).** One batched session using the
    product-mode kit. Do not iterate, do not pay, do not chase.
 
+**Quotable-asset lane (added 2026-08-05, first asset: the Montefiore article).**
+Newsroom analysis pieces are a different asset class from the template and the
+statistics page: they state a sourced position on a live story, which is what
+journalists and newsletters cite. The lane stays rank-and-wait at its core (no
+cold outreach for links to news pieces), with exactly three sanctioned uses per
+asset and two standing prohibitions:
+
+- USE 1 — journalist queries (P3 amplifier): when a Qwoted/Connectively query
+  touches the story the asset covers, answer on-spec as usual and close with the
+  published analysis link. The asset upgrades the answer; it is not a substitute
+  for answering the actual question.
+- USE 2 — founder LinkedIn post, framed exactly as the article is framed
+  (concerns legitimate, sorting rule, no product sell). Zero risk, free reach.
+- USE 3 — at most ONE news-tip email per asset to a confirmed vendor-linking
+  editorial outlet (HIStalk-class). Two lines, no ask beyond "may be useful".
+  Optional soft share to a journalist who has already quoted the founder
+  (relationship building, never a link request).
+- NEVER: post the link into nursing/labor community threads (r/nursing etc.) —
+  a vendor link in a thread about AI-driven layoffs reads as ambulance-chasing
+  and violates most subs' vendor rules. NEVER pitch union or labor press on a
+  story where we are an interested vendor.
+- Downstream: citations or LLM pickups earned by an asset become credibility
+  lines in later ASHHRA/HFMA-class editorial pitches. Log pickups in the ledger.
+
 **Two housekeeping items that gate P1-P3 value:**
 - Fix the SaaSHub URL so our one confirmed dofollow link stops pointing at the
   `noindex` `/product` page (re-verification pending as of 2026-08-01).
