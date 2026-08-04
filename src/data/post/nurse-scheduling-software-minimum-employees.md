@@ -4,9 +4,10 @@ publishDate: 2026-08-04T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Nurse Scheduling Software Employee Minimums: What to Do With 18 Nurses'
 excerpt: >
-  You may have read that some scheduling platforms require 100 employees. That specific
-  figure does not hold up to sourcing. The real barrier is quieter: vendors whose own
-  marketing, pricing, and implementation models start above your roster size.
+  You may have read that some scheduling platforms require 100 employees. We could not
+  verify that number anywhere. The real barrier is simpler: most scheduling products are
+  built and priced for hospitals much larger than yours, and the vendors say so on their
+  own websites.
 image: https://images.unsplash.com/photo-1600091474842-83bb9c05a723?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
@@ -49,7 +50,7 @@ This guide covers what is actually verifiable about employee minimums, how to re
 
 Not verifiably. A "minimum 100 employees" claim about Shiftboard circulates in software roundups, but the only public trace we could find is a [competitor's review article](https://connecteam.com/reviews/shiftboard) recounting what its author was told in a sales conversation. That is one secondhand account. It is not a published policy, and it does not appear in Shiftboard's own materials or in customer reviews.
 
-What Shiftboard's own site does say is instructive in a different way. It [markets its platform to organizations of 25 to 100,000 employees](https://www.shiftboard.com/). Read that range from the perspective of an 18-nurse hospital: your roster sits below the bottom of it. No one has to refuse your business for the message to be clear about who the product was designed for.
+What Shiftboard's own site does say is more useful. It [markets its platform to organizations of 25 to 100,000 employees](https://www.shiftboard.com/). An 18-nurse hospital sits below the bottom of that range. Shiftboard never has to turn you away; the range on its own website already tells you the product was built for bigger teams.
 
 That distinction matters for how you evaluate everything in this category. Published hard minimums are rare. Soft floors, expressed through marketing ranges, pricing structures, and implementation assumptions, are everywhere. The rest of this guide is about reading them.
 
@@ -91,7 +92,7 @@ Vendors signal their intended customer size in four places, none of which is lab
   </table>
 </div>
 
-The pattern holds across the enterprise tier. QGenda's customer base skews toward physician groups and larger health systems. UKG positions its workforce suite at enterprise scale, which is why we cover it separately in [why UKG is too complex for a small hospital](/blog/ukg-too-complex-small-hospital). None of these vendors publishes a minimum. All of them communicate one.
+The pattern holds across the enterprise tier. QGenda's customer base skews toward physician groups and larger health systems, which is why small facilities end up searching for [QGenda alternatives](/blog/qgenda-alternatives). UKG positions its workforce suite at enterprise scale, which is why we cover it separately in [why UKG is too complex for a small hospital](/blog/ukg-too-complex-small-hospital). These vendors do not publish employee minimums. Their marketing, pricing, and setup requirements still make the intended customer size clear.
 
 ## Why Do Scheduling Platforms Underperform on Small Rosters?
 
@@ -107,9 +108,9 @@ None of this makes the platforms bad. It makes them built for someone else, whic
 
 The realistic field at this size falls into three groups.
 
-**Simple self-serve platforms.** Tools like Aladtec serve smaller operations with simpler setup than the enterprise tier. The trade: the nurse manager configures and operates the system herself, and healthcare-specific compliance coverage varies by product. Verify what each tool actually enforces.
+**Simple self-serve platforms.** Tools like [Aladtec](/blog/aladtec-vs-managed-service) serve smaller operations with simpler setup than the enterprise tier. The trade: the nurse manager configures and operates the system herself, and healthcare-specific compliance coverage varies by product. Verify what each tool actually enforces.
 
-**Generic scheduling tools.** Deputy, When I Work, and similar products are affordable and easy to start. They were built for retail and hospitality, so hospital requirements arrive as open questions. Overtime tracking against FLSA thresholds, staffing-record documentation, and credential matching are not documented on their product pages, and a business-associate agreement may not be advertised. Verify each directly with the vendor before trusting a schedule to one; our guide to [Deputy alternatives for healthcare](/blog/deputy-alternatives-healthcare) covers the category.
+**Generic scheduling tools.** Deputy, When I Work, and similar products are affordable and easy to start. They were built for retail and hospitality, so hospital requirements arrive as open questions. Overtime tracking against FLSA thresholds, staffing-record documentation, and credential matching are not documented on their product pages, and a business-associate agreement may not be advertised, a distinction we unpack in [HIPAA-compliant nurse scheduling software](/blog/hipaa-compliant-nurse-scheduling-software). Verify each directly with the vendor before trusting a schedule to one; our guide to [Deputy alternatives for healthcare](/blog/deputy-alternatives-healthcare) covers the category.
 
 **Operated scheduling services.** The model shifts from buying a platform to receiving a schedule. Setup is faster because there is no configuration project on your side, and the operating burden the enterprise tier assumes you can absorb is exactly what the service takes over. The trade is less direct control over every variable, which we compare honestly in [managed service versus scheduling software](/blog/managed-service-vs-scheduling-software).
 
