@@ -195,3 +195,55 @@ Use the contact route listed on that page (do not guess an email address).
 - If any of them accept, check the resulting link's `rel` attribute and record it
   in the ledger; that is how we learn which association lane actually passes
   followed links.
+
+---
+
+# P2/P4 additions (2026-08-04): .edu + editorial prospects from the QGenda linker pull
+
+Sources: DataForSEO referring-domains pull on qgenda.com (60 domains, spam-filtered)
++ targeted .edu prospecting. Same guardrails as P1: SERVICE mode, vendor disclosure,
+no reciprocity ask, one follow-up max.
+
+## Strategic finding first (changes the long game)
+
+QGenda's dominant link engine is NOT editorial: it is CUSTOMER SITES. Hundreds of
+.edu links (duke, ucsf, wisc, ufl, uic, ucsd) and dozens of practice sites are NAV
+links to their QGenda login from departments that USE it. That entire link class is
+unavailable to us pre-launch and automatic after: every hospital we sign that links
+a portal/login page replicates it. POST-LAUNCH PLAYBOOK NOTE: give customers a clean
+linkable portal URL. Launch beats link-building in this niche.
+
+## P2 targets (rural-health academic + association, best-first)
+
+1. **Texas A&M ARCHI (Rural and Community Health Institute)** — architexas.org.
+   Texas rural hospital support institute; Rural Engagement Program TA coordinators
+   travel to rural facilities statewide; runs an MBQIP portal with a literal
+   resource-organizations list (mbqipportal.rchitexas.org). THE best-fit .edu-class
+   target we have: Texas + rural + hospital operations. Pitch: template + stats page
+   for their TA toolkit; contact via architexas.org.
+2. **Texas Tech F. Marie Hall Institute for Rural & Community Health** (ttuhsc.edu) —
+   West Texas rural health outreach; same pitch.
+3. **National Rural Health Resource Center** (ruralcenter.org) — HRSA-funded TASC
+   resource library; they already profile the Texas SORH.
+4. **NOSORH** (nosorh.org) — national association of State Offices of Rural Health;
+   resource lists reach every state office at once.
+5. **ASHHRA** (ashhra.org) — healthcare HR association; CONFIRMED links scheduling
+   vendors from blog/articles (QGenda pull, rank 62). Nurse scheduling is HR-adjacent;
+   pitch the turnover/retention math content or template.
+6. **HFMA** (hfma.org, rank 208) — healthcare finance association; links vendors.
+   Harder, editorial-grade; our cost-of-losing-a-nurse worked-math content is the fit.
+
+Note on generic .edu nursing pages: prospecting found mostly student time-management
+blog posts (weak fit for a manager-facing template) and marketing-run ABSN blogs.
+The rural-health institute class above is the .edu lane worth the emails.
+
+## P4 editorial targets confirmed as vendor-linkers (QGenda pull)
+
+- **HIStalk** (histalk.com, rank 61) — healthcare IT news; links vendors in posts. NEW.
+- **HIT Consultant** (hitconsultant.net, rank 76) — already on the editorial list;
+  the pull confirms they article-link scheduling vendors.
+- **AVIA Health marketplace** (aviahealth.com, rank 205) — healthcare innovation
+  marketplace with vendor listings; healthcare-specific directory-class, better fit
+  than the remaining generic P5 directories. Check listing terms (free tier?).
+- casestudies.com, intuitionlabs.ai — minor aggregators, low priority.
+
