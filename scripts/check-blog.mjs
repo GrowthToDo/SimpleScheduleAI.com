@@ -698,9 +698,12 @@ function check(file) {
   if (fm && fm.image) {
     const imgVal = unquote(fm.image);
     const photoMatch = imgVal.match(/photo-([a-zA-Z0-9_-]+)/);
-    const isUnsplash = /images\.unsplash\.com/.test(imgVal) || photoMatch;
-    if (isUnsplash && photoMatch) {
-      const id = photoMatch[1];
+    // Self-hosted pool images (AI-generated set) live at /images/pool/<id>.webp
+    // and are registered in image-pool.json by filename stem, same as Unsplash ids.
+    const localMatch = imgVal.match(/\/images\/pool\/([a-z0-9-]+)\.(?:webp|jpg|png)/);
+    const poolMatch = photoMatch || localMatch;
+    if (poolMatch) {
+      const id = poolMatch[1];
       let pool;
       try {
         pool = JSON.parse(readFileSync(IMAGE_POOL_PATH, 'utf8'));
@@ -722,7 +725,9 @@ function check(file) {
             const raw = readFileSync(resolve(POSTS_DIR, f), 'utf8');
             const otherFm = extractFrontmatter(raw.split(/\r?\n/));
             const otherImg = otherFm && otherFm.image ? unquote(otherFm.image) : '';
-            const otherMatch = otherImg.match(/photo-([a-zA-Z0-9_-]+)/);
+            const otherMatch =
+              otherImg.match(/photo-([a-zA-Z0-9_-]+)/) ||
+              otherImg.match(/\/images\/pool\/([a-z0-9-]+)\.(?:webp|jpg|png)/);
             if (otherMatch && otherMatch[1] === id) dupes.push(basename(f, '.md'));
             if (otherMatch) {
               siblingImages.push({

@@ -8,7 +8,7 @@ excerpt: >
   A callout at a small rural hospital lands on a bench of four to six people and a manager
   who may be taking the call at 2 AM. This guide gives you the policy, the ranked call list,
   and the documentation habit, plus the Texas overtime statute most callout guides miss.
-image: https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: /images/pool/callout-night-01.webp
 category: Healthcare Operations
 postType: howto
 tags:
