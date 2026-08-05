@@ -136,7 +136,7 @@ If nobody on the unit list accepts, escalate in the order the policy sets: PRN n
 
 CMS surveyors can ask for staffing records, and surveys can be unannounced. A [critical access hospital](/critical-access-hospital-scheduling) also has a specific floor to evidence: under [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a licensed nurse must be on duty whenever there is an inpatient, so the record for a callout shift must show who actually covered and with what qualifications.
 
-For each event, the log should hold:
+No regulation prescribes a log format; these five fields are the minimum that makes the record defensible. For each event, the log should hold:
 
 - Date and time of the callout notification
 - Name of the nurse who called out and the shift affected
