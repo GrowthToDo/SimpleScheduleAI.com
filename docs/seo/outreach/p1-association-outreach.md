@@ -153,7 +153,15 @@ hospitals directly, which is the exact ICP. Housed at the Texas Department of
 Agriculture since October 2011.
 
 Where: https://texasagriculture.gov/Grants-Services/Rural-Economic-Development/State-Office-of-Rural-Health
-Use the contact route listed on that page (do not guess an email address).
+NOTE (2026-08-05): texasagriculture.gov does not resolve from India (geo-blocked
+DNS; NXDOMAIN for founder and for Claude's network). The site is live from the US.
+Contacts pulled from the site's own indexed Contact-Us page, cross-checked against
+ruralcenter.org (whose roster appears stale, listing a prior director):
+
+- To: Albert.Ruiz@TexasAgriculture.gov (Albert Ruiz, SORH Program Coordinator, 512-936-6730)
+- Cc: Shann.Turner@TexasAgriculture.gov (Shann Turner, Director, 512-463-7616)
+- If either bounces: fall back to the ruralcenter.org roster (Trenton.Engledow@TexasAgriculture.gov,
+  eva.cruz@TexasAgriculture.gov who is the Flex/CAH coordinator on that older list).
 
 > Subject: Free nurse scheduling template for Texas rural hospitals
 >
