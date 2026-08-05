@@ -44,20 +44,17 @@ async function imageCheck(data, root, network) {
   const url = String(data.image || '');
   // Local asset hero (e.g. ~/assets/images/blog/heroes/<slug>.webp): unique + generated,
   // so verify the file exists on disk and pass (skip the unsplash pool/uniqueness/network checks).
-  if (url.startsWith('~/assets/')) {
-    const rel = url.replace(/^~\//, '').split('?')[0];
-    const abs = path.join(root, 'src', rel);
-    if (!fs.existsSync(abs)) return { ok: false, why: `local hero image not found on disk: src/${rel}` };
-    return { ok: true };
-  }
-  // Self-hosted pool image (AI-generated set): /images/pool/<id>.webp, registered
-  // in image-pool.json by filename stem. Same pool + uniqueness rules as unsplash,
-  // existence checked on disk instead of over the network.
-  const localPool = url.match(/^\/images\/pool\/([a-z0-9-]+)\.(?:webp|jpg|png)$/);
+  // Self-hosted pool image (AI-generated set): ~/assets/images/pool/<id>.webp,
+  // registered in image-pool.json by filename stem. Same pool + uniqueness rules
+  // as unsplash, existence checked on disk instead of over the network. This
+  // branch must run BEFORE the generic ~/assets early-pass so pool images do not
+  // skip the pool cross-ref.
+  const localPool = url.match(/\/images\/pool\/([a-z0-9-]+)\.(?:webp|jpg|png)$/);
   if (localPool) {
     const id = localPool[1];
-    const abs = path.join(root, 'public', 'images', 'pool', path.basename(url));
-    if (!fs.existsSync(abs)) return { ok: false, why: `pool image not found on disk: public${url}` };
+    const abs = path.join(root, 'src', 'assets', 'images', 'pool', path.basename(url));
+    if (!fs.existsSync(abs))
+      return { ok: false, why: `pool image not found on disk: src/assets/images/pool/${path.basename(url)}` };
     const pool = JSON.parse(fs.readFileSync(path.join(root, 'scripts', 'image-pool.json'), 'utf8'));
     if (!pool.some((p) => p.id === id)) return { ok: false, why: `pool image id ${id} not in image-pool.json` };
     let uses = 0;
@@ -69,6 +66,14 @@ async function imageCheck(data, root, network) {
       }
     }
     if (uses > 1) return { ok: false, why: `pool image id ${id} used by ${uses} files (must be unique)` };
+    return { ok: true };
+  }
+  // Generic local asset hero (e.g. ~/assets/images/blog/heroes/<slug>.webp): unique +
+  // generated, so verify the file exists on disk and pass (skip pool/network checks).
+  if (url.startsWith('~/assets/')) {
+    const rel = url.replace(/^~\//, '').split('?')[0];
+    const abs = path.join(root, 'src', rel);
+    if (!fs.existsSync(abs)) return { ok: false, why: `local hero image not found on disk: src/${rel}` };
     return { ok: true };
   }
   const idMatch = url.match(/photo-([0-9]+-[0-9a-f]+)/);

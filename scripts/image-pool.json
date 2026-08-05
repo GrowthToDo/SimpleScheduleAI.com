@@ -715,7 +715,7 @@
   },
   {
     "id": "callout-night-01",
-    "src": "/images/pool/callout-night-01.webp",
+    "src": "~/assets/images/pool/callout-night-01.webp",
     "source": "ai-generated (nano banana), added 2026-08-05",
     "description": "Nurse manager on a desk phone in a dark hospital office at night, staffing grid glowing on the monitor, whiteboard with agency call list behind him",
     "family": "callout-night",
@@ -723,7 +723,7 @@
   },
   {
     "id": "callout-night-02",
-    "src": "/images/pool/callout-night-02.webp",
+    "src": "~/assets/images/pool/callout-night-02.webp",
     "source": "ai-generated (nano banana), added 2026-08-05",
     "description": "Nurse manager taking a late-night callout call at her desk, staffing spreadsheet on the monitor, notes and desk phone in the lamplight",
     "family": "callout-night",
@@ -731,7 +731,7 @@
   },
   {
     "id": "callout-night-03",
-    "src": "/images/pool/callout-night-03.webp",
+    "src": "~/assets/images/pool/callout-night-03.webp",
     "source": "ai-generated (nano banana), added 2026-08-05",
     "description": "Worried nurse manager on the phone at night, unit schedule with open shifts on screen, emergency sign through the window; emotionally heavy, use for burnout or short-staffing topics only",
     "family": "callout-night",
@@ -739,7 +739,7 @@
   },
   {
     "id": "scheduling-board-01",
-    "src": "/images/pool/scheduling-board-01.webp",
+    "src": "~/assets/images/pool/scheduling-board-01.webp",
     "source": "ai-generated (nano banana), added 2026-08-05",
     "description": "Hand moving a magnetic shift label on a whiteboard nursing schedule with color-coded day and night assignments and open-shift markers",
     "family": "scheduling-board",
