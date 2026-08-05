@@ -9,6 +9,7 @@ excerpt: >
   who may be taking the call at 2 AM. This guide gives you the policy, the ranked call list,
   and the documentation habit, plus the Texas overtime statute most callout guides miss.
 image: '~/assets/images/pool/callout-night-01.webp'
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: howto
 tags:

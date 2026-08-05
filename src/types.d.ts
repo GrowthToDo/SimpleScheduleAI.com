@@ -22,6 +22,8 @@ export interface Post {
   excerpt?: string;
   /**  */
   image?: ImageMetadata | string;
+  /** Optional credit/disclosure line rendered under the hero (e.g. AI-generated illustration). */
+  imageCredit?: string;
 
   /**  */
   category?: Taxonomy;

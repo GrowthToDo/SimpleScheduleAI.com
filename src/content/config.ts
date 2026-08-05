@@ -56,6 +56,7 @@ const contentSchema = z.object({
   title: z.string(),
   excerpt: z.string().optional(),
   image: z.string().optional(),
+  imageCredit: z.string().optional(),
 
   category: z.string().optional(),
   tags: z.array(z.string()).optional(),

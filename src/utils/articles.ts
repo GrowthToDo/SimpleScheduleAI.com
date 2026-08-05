@@ -30,6 +30,7 @@ const getNormalizedArticle = async (article: CollectionEntry<'article'>): Promis
     title,
     excerpt,
     image,
+    imageCredit,
     tags: rawTags = [],
     category: rawCategory,
     author,
@@ -64,6 +65,7 @@ const getNormalizedArticle = async (article: CollectionEntry<'article'>): Promis
     title: title,
     excerpt: excerpt,
     image: image,
+    imageCredit: imageCredit,
 
     category: category,
     tags: tags,

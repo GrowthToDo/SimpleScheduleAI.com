@@ -744,5 +744,21 @@
     "description": "Hand moving a magnetic shift label on a whiteboard nursing schedule with color-coded day and night assignments and open-shift markers",
     "family": "scheduling-board",
     "topics": ["rostering", "schedule building", "whiteboard", "manual scheduling", "coverage gaps", "shift swaps"]
+  },
+  {
+    "id": "facility-exterior-ai-01",
+    "src": "~/assets/images/pool/facility-exterior-ai-01.webp",
+    "source": "ai-generated (nano banana), regenerated without signage 2026-08-05",
+    "description": "Small rural hospital exterior at dawn with US and Texas flags, empty parking lot, wide plains sky, no signage",
+    "family": "facility-exterior",
+    "topics": ["rural hospital", "facility", "Texas", "dawn", "critical access"]
+  },
+  {
+    "id": "facility-exterior-ai-02",
+    "src": "~/assets/images/pool/facility-exterior-ai-02.webp",
+    "source": "ai-generated (nano banana), regenerated without signage 2026-08-05",
+    "description": "Small rural hospital entrance at sunset with flags, clinician walking out, van in parking lot, no signage",
+    "family": "facility-exterior",
+    "topics": ["rural hospital", "facility", "Texas", "sunset", "entrance"]
   }
 ]
