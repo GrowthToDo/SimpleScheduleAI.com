@@ -40,7 +40,7 @@ metadata:
 - [How SimpleScheduleAI Handles Island Shift Prevention](#how-simplescheduleai-handles-island-shift-prevention)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Night nurses at small hospitals talk about island shifts the way day nurses talk about mandatory overtime: a pattern that is technically legal, operationally common, and quietly corrosive to the people on the receiving end of it.
+Night nurses at small hospitals talk about island shifts the way day nurses talk about mandatory overtime. The island shift is technically legal, operationally common, and quietly corrosive to the people on the receiving end of it.
 
 The conversation shows up consistently in nursing forums and Reddit threads. A night nurse describes her schedule: three nights off, one night on, two nights off, two nights on. The single night in the middle is the island shift. She has spent two or three days off trying to recover a normal sleep pattern. Then the island shift pulls her back to nights. Then she has two days off to recover again before her real block starts.
 

@@ -164,7 +164,7 @@ Holiday callouts need a defined response protocol written before the holiday arr
     </li>
     <li class="rounded-lg border border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
       <div class="bg-red-600 dark:bg-red-700 px-3 py-2"><p class="text-xs font-bold text-white m-0">Escalation</p></div>
-      <div class="px-3 py-3"><p class="text-xs text-slate-700 dark:text-slate-300 m-0">Mandatory overtime, only as far as needed to hold the on-duty requirement.</p></div>
+      <div class="px-3 py-3"><p class="text-xs text-slate-700 dark:text-slate-300 m-0">Mandatory overtime only if a Texas HSC ch. 258 emergency exception applies, and only as far as needed to hold the on-duty requirement.</p></div>
     </li>
   </ol>
   <p class="text-xs text-slate-600 dark:text-slate-400 mt-3 mb-0">Work the list in order and record every contact attempt and outcome in your schedule documentation. A per-diem nurse who declines moves to the bottom of the roster for that cycle year.</p>
@@ -223,7 +223,7 @@ Divide nursing staff into three equal groups by an objective method, typically a
 
 **Q: What happens when a nurse calls out of a mandatory holiday shift?**
 
-Work a defined replacement sequence: first contact per-diem nurses on the holiday coverage roster (by seniority), then contact nurses from an off-group who have pre-volunteered for holiday overtime, then contact nurses from the second off-group. Document every contact attempt. Mandatory overtime is the last resort rather than the first call. The floor you cannot drop below is the CMS on-duty requirement at [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631): a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever the hospital has one or more inpatients.
+Work a defined replacement sequence: first contact per-diem nurses on the holiday coverage roster (by seniority), then contact nurses from an off-group who have pre-volunteered for holiday overtime, then contact nurses from the second off-group. Document every contact attempt. In Texas, mandatory overtime is not a routine last resort: [Texas Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits it outside narrow emergency exceptions, and even then voluntary options must be attempted first. The full replacement process is in [how to handle nurse callouts](/blog/how-to-handle-nurse-callouts). The floor you cannot drop below is the CMS on-duty requirement at [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631): a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever the hospital has one or more inpatients.
 
 **Q: How do you handle new hires in an existing holiday rotation?**
 

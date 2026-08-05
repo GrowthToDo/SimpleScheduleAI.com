@@ -618,5 +618,13 @@
     "primaryKeyword": "will ai replace nurses",
     "pillar": "/ai-nurse-scheduling",
     "note": "Newsroom trendjack (Montefiore July 2026 utilization review layoffs, Datavant). Targets the evergreen question query (590/mo US, LOW comp) as analysis long-tail, not the news head SERP. Citable hook = job-class taxonomy + bedside legal floor (42 CFR 485.631(a)(5), 1,383 CAHs). Dispute never adjudicated; strike duration unverified (never say 41-day). Inbound: is-ai-nurse-scheduling-safe + can-nurses-trust-ai-generated-schedule."
+  },
+  {
+    "slug": "how-to-handle-nurse-callouts",
+    "type": "post",
+    "url": "/blog/how-to-handle-nurse-callouts",
+    "primaryKeyword": "how to handle nurse callouts",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Howto MOFU: policy + ranked call list + workflow + documentation. Differentiated from after-hours-callout-coverage-small-hospitals by intent: this is the general handling process; that post owns after-hours design, per-diem bench and cost math (cross-linked both ways). Differentiator = Texas HSC ch. 258 mandatory-OT prohibition (dossier entry 2026-08-05); the pre-rewrite draft claimed the OPPOSITE. Hero swapped from radiologist (topic mismatch) to laptop+phone desk-admin."
   }
 ]

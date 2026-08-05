@@ -187,7 +187,7 @@ Track night assignments per nurse over rolling six-week periods, set a maximum n
 
 **Q: What happens if a night shift nurse calls out at 3 a.m.?**
 
-Without a system, the charge nurse or manager works a manual phone tree, which can run a long time and often ends in mandatory overtime for a day-shift nurse. With a ranked replacement shortlist, the manager checks the list and calls the top-ranked night-eligible available nurse, which shortens the process considerably.
+Without a system, the charge nurse or manager works a manual phone tree, which can run a long time and often ends with a day-shift nurse pressured into extra hours, a practice Texas law restricts. With a ranked replacement shortlist, the manager checks the list and calls the top-ranked night-eligible available nurse, which shortens the process considerably. The full playbook, including the Texas mandatory overtime statute, is in [how to handle nurse callouts](/blog/how-to-handle-nurse-callouts).
 
 ## Sources
 
