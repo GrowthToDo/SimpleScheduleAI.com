@@ -249,6 +249,47 @@ Note on generic .edu nursing pages: prospecting found mostly student time-manage
 blog posts (weak fit for a manager-facing template) and marketing-run ABSN blogs.
 The rural-health institute class above is the .edu lane worth the emails.
 
+## P2 SEND-READY: Texas A&M ARCHI (drafted 2026-08-06)
+
+Route verified 2026-08-06 on architexas.org/programs: Rural Engagement Program
+technical assistance = Melissa Lackey, lackeyrn@tamu.edu, 979-436-0409. General
+inbox rchi@tamu.edu (fallback if bounce). Their MBQIP program assists Texas CAHs
+directly, and the MBQIP portal carries a resource-organizations list.
+
+- To: lackeyrn@tamu.edu (send from pradeep@, morning recipient-local, Tue to Thu)
+- If bounce: rchi@tamu.edu
+- One follow-up max, not before two weeks.
+
+> Subject: Two free nurse staffing resources for your Rural Engagement Program toolkit
+>
+> Hello Melissa,
+>
+> I work with Texas Critical Access Hospitals on nurse scheduling and publish two
+> free resources that may be useful to the facilities your Rural Engagement
+> Program supports.
+>
+> The first is an Excel nurse schedule template built for small-hospital units,
+> with census-based staffing targets and overtime and rest-hour checks:
+> https://simplescheduleai.com/resources/nurse-schedule-template
+>
+> The second is a sourced statistics page on rural and Critical Access Hospital
+> nurse staffing, including the Texas DSHS 2024 Hospital Nurse Staffing Study
+> figures, with every number linked to its primary source:
+> https://simplescheduleai.com/rural-hospital-nurse-staffing-statistics
+>
+> Both are free and ungated, with no signup and no email capture. To be
+> transparent about my interest: I run a nurse scheduling service for Texas
+> Critical Access Hospitals, so I benefit if this audience finds them useful.
+> There is no cost or obligation attached to either.
+>
+> If ARCHI maintains a resource list for the hospitals you assist, on the MBQIP
+> portal or elsewhere, I would be glad to have either included. Happy to provide
+> anything you need to evaluate them.
+>
+> Pradeep Pandey
+> Co-founder, SimpleScheduleAI
+> pradeep@simplescheduleai.com
+
 ## P4 editorial targets confirmed as vendor-linkers (QGenda pull)
 
 - **HIStalk** (histalk.com, rank 61) — healthcare IT news; links vendors in posts. NEW.
