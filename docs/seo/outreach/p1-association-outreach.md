@@ -116,8 +116,12 @@ Where: ruralhealthinfo.org "Suggest a resource" form (or their contact form).
 
 ## 3. NRHA (National Rural Health Association) — first pitch
 
-Where: ruralhealthweb.org contact form or member-resources contact. FREE channels
-only; no membership purchase (founder rule).
+Where (verified 2026-08-06; the old ruralhealthweb.org domain is outdated):
+- Email: mail@ruralhealth.us (NRHA general inbox, preferred — links render better in email than in a form)
+- Or the contact form at https://www.ruralhealth.us/contact-us
+- Main office: 7015 College Blvd., Suite 150, Overland Park, KS 66211, 816-756-3140
+FREE channels only; no membership purchase (founder rule). Do NOT use
+advocacy@ruralhealth.us (their DC policy office, wrong audience).
 
 > Subject: Two free rural nurse staffing resources, no signup
 >
