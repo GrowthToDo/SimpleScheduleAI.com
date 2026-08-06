@@ -25,15 +25,15 @@ metadata:
 
 ## Key Takeaways
 
-- Most products marketed as nurse scheduling apps are general workforce tools with a healthcare landing page. The scheduling engine underneath does not know the difference between a nurse and a barista
-- The features hospital nursing actually needs, credential checks at the shift level, healthcare overtime logic, charge coverage, and survey-ready documentation, are missing or manual in most apps
-- SimpleScheduleAI is not a self-serve app. It is an AI-native nurse scheduling service: schedules are built for the manager, who reviews and approves from any device, including a phone
-- Among self-serve options, NurseGrid was built specifically for nurses and has the strongest staff-facing app; reviewers report manager-side schedule edits now require a desktop login
-- Per-user pricing compounds: an app at $5 per user per month costs $1,500 a year for a 25-nurse roster, before counting the manual work the app leaves behind. That math is illustrative, not a quote
+- The word "app" hides two different purchases: a staff-facing app nurses use to view and swap shifts, and a full scheduling engine that happens to have a mobile layer. Decide which one you are buying before comparing anything
+- Only two of the eight platforms publish pricing: Deputy at $5 to $9 per user per month, and SimpleScheduleAI at a flat $1,000 to $1,500 per month by roster size. The other six are quote-only, which is itself a sizing signal
+- For staff-facing use at a small hospital, NurseGrid is the strongest nurse-built app, with one reviewer-flagged caveat: manager-side schedule edits now require a desktop login
+- A polished general app like Deputy still leaves credential checks, healthcare overtime logic, and survey documentation on the manager's desk. Enterprise suites like UKG bury a 25-nurse department in configuration instead
+- SimpleScheduleAI takes the no-app route: an AI-native nurse scheduling service that delivers each schedule for the manager to approve from any device, with compliance handled at the service layer
 
 ## Table of Contents
 
-- [Is This the Guide You Need?](#is-this-the-guide-you-need)
+- [Do You Need a Scheduling App or Full Scheduling Software?](#do-you-need-a-scheduling-app-or-full-scheduling-software)
 - [What Makes a Nurse Scheduling App Different From a General Scheduling App?](#what-makes-a-nurse-scheduling-app-different-from-a-general-scheduling-app)
 - [What Should You Look For in a Nurse Scheduling App?](#what-should-you-look-for-in-a-nurse-scheduling-app)
 - [What Are the 8 Best Nurse Scheduling Apps?](#what-are-the-8-best-nurse-scheduling-apps)
@@ -43,7 +43,7 @@ metadata:
 
 The phrase "nurse scheduling app" covers a wide range of products. Some are purpose-built for nursing departments. Others are generic workforce tools with a healthcare landing page. The difference is not visible on a feature list. It shows up when a nurse calls out at midnight and someone has to find a qualified replacement, on a phone, without triggering overtime.
 
-## Is This the Guide You Need?
+## Do You Need a Scheduling App or Full Scheduling Software?
 
 Two buying intents get tangled under this keyword, and they lead to different shortlists. If you are choosing a full scheduling system for the hospital, desktop-first, with implementation and configuration, read our [best nurse scheduling software guide](/blog/best-nurse-scheduling-software-2026) instead. This guide covers the app intent: what nurses and managers actually use on a phone, which nurse-facing apps are genuinely good, and when an app alone is enough for a small hospital. There is real overlap in the vendor list, but the evaluation lens here is mobile-first.
 
@@ -114,7 +114,7 @@ Two buying intents get tangled under this keyword, and they lead to different sh
         <td class="border border-slate-300 px-4 py-2">No (general workforce)</td>
         <td class="border border-slate-300 px-4 py-2">Polished general app</td>
         <td class="border border-slate-300 px-4 py-2">Broadcast model</td>
-        <td class="border border-slate-300 px-4 py-2">Low per-user pricing</td>
+        <td class="border border-slate-300 px-4 py-2">$5 to $9/user/mo (published)</td>
       </tr>
       <tr class="bg-slate-50">
         <td class="border border-slate-300 px-4 py-2 font-medium">UKG (Kronos)</td>
@@ -127,6 +127,8 @@ Two buying intents get tangled under this keyword, and they lead to different sh
     </tbody>
   </table>
 </div>
+
+One note on the pricing column. Only two of the eight publish their rates: Deputy lists $5 to $9 per user per month depending on plan, and SimpleScheduleAI publishes flat monthly pricing. The other six quote per deployment. An unpublished price is not a red flag by itself, but it usually signals an enterprise sales process sized for bigger buyers, the same [vendor size signals](/blog/nurse-scheduling-software-minimum-employees) that tell a small hospital whether a product was built with it in mind. For per-user apps, do the arithmetic before the demo: $5 per user per month across a 25-nurse roster is $1,500 a year, an illustrative figure, before counting the manual work the app leaves behind.
 
 ## What Makes a Nurse Scheduling App Different From a General Scheduling App?
 
@@ -153,7 +155,7 @@ A general scheduling app solves a coordination problem: who works when. For most
 
 The clinical layer means the right credentials on the right shift: a nurse without the required certification cannot staff a monitored bed, and a nurse without charge sign-off cannot be designated charge.
 
-The compliance layer has two halves. A [critical access hospital](/critical-access-hospital-scheduling) must keep a licensed nurse on duty whenever it has an inpatient under [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), and its records need to show that. On pay, hospitals owe overtime past 40 hours a workweek by default, or past 8 hours a day and 80 per 14 days if they adopted the optional 8-and-80 system under [FLSA rules for healthcare](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime). Texas adds no state overtime pay layer, but [Texas Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits mandatory nurse overtime outside narrow emergencies, which makes callout math even more important. General apps know none of this out of the box.
+The compliance layer covers two things: staffing records and overtime rules. Staffing records first. A [critical access hospital](/critical-access-hospital-scheduling) must have a licensed nurse on duty whenever a patient is admitted, under [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631). Its schedule records must be able to prove that to a surveyor. Overtime second. The default federal rule is simple: overtime is owed after 40 hours in a week. A hospital that has formally adopted the optional [8-and-80 system](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) owes it after 8 hours in a day or 80 in two weeks instead. Texas adds one more rule that surprises people: under [Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/), a hospital cannot force a nurse to work overtime except in narrow emergencies. So when a shift opens up, the schedule has to find a willing, qualified nurse. General apps know none of this out of the box.
 
 The operational layer is where the midnight test lives. A [callout](/blog/how-to-handle-nurse-callouts) at a small hospital means finding who is qualified, available, and safely below the overtime threshold, in that order. An app whose answer is "broadcast to all available staff" hands that entire calculation back to the manager.
 
@@ -214,7 +216,7 @@ NurseGrid Manager is a scheduling platform designed specifically for nurses. The
 - Credential enforcement at the shift level is not automatic; the manager verifies coverage during review
 - Healthcare overtime configuration should be verified against your FLSA setup, and survey documentation stays manual
 
-**Verdict:** The strongest nurse-facing app in this list. The manager side now lives on desktop, and the compliance and credential layers remain the manager's job.
+**Verdict:** The strongest nurse-facing app in this list. The manager side now lives on desktop, and the compliance and credential layers remain the manager's job. For a deeper comparison, see [NurseGrid alternatives](/blog/nursegrid-alternatives).
 
 **Cost:** Contact for pricing.
 
@@ -259,7 +261,7 @@ SmartLinx pairs its workforce platform with a full mobile suite: schedule viewin
 - Implementation is a project measured in months, not days
 - Ongoing IT involvement is assumed
 
-**Verdict:** A strong platform for hospitals with technical staff. Heavy for a small facility with limited IT.
+**Verdict:** A strong platform for hospitals with technical staff. Heavy for a small facility with limited IT; see [SmartLinx alternatives](/blog/smartlinx-alternatives) for lighter options.
 
 **Cost:** Contact for pricing.
 
@@ -303,7 +305,7 @@ OnShift, acquired by ShiftKey and fully integrated into its platform in 2023, is
 - Shift patterns, roles, and assumptions reflect long-term care, not acute hospital nursing
 - Acute-care needs like charge designation and hospital survey documentation are outside its lane
 
-**Verdict:** A good app for its intended market. A small acute-care hospital is not that market.
+**Verdict:** A good app for its intended market. A small acute-care hospital is not that market; see [OnShift alternatives](/blog/onshift-alternatives).
 
 **Cost:** Contact for pricing.
 
@@ -325,11 +327,10 @@ Deputy is a general workforce scheduling platform with one of the most polished 
 
 - Its healthcare page does not describe credential tracking or CMS audit-trail features as core capabilities; a hospital should verify both directly with Deputy before relying on them
 - Overtime configuration for healthcare setups, including the optional 8-and-80 system, should be confirmed with the vendor
-- Per-user pricing compounds: at $5 per user per month, a 25-nurse roster costs $1,500 a year, an illustrative figure, before the manual compliance work the app leaves behind
 
 **Verdict:** Possibly the best general-purpose scheduling app, and the weakest fit on this list for licensed clinical scheduling. See [Deputy alternatives for healthcare](/blog/deputy-alternatives-healthcare).
 
-**Cost:** Low per-user pricing; confirm current rates with Deputy.
+**Cost:** Published: Lite $5, Core $6.50, Pro $9 per user per month (verified on Deputy's pricing page, August 2026).
 
 ### 8. [UKG](https://www.ukg.com) (formerly Kronos)
 
@@ -349,7 +350,7 @@ UKG offers a full enterprise mobile workforce app spanning scheduling, time and 
 - Enterprise implementation; not built for a standalone small hospital
 - The app's complexity reflects a multi-thousand-employee platform, not a 25-nurse department
 
-**Verdict:** The most capable enterprise option and the least applicable to a small hospital's app question.
+**Verdict:** The most capable enterprise option and the least applicable to a small hospital's app question. If you are on UKG and it fits badly, see [UKG alternatives for small hospitals](/blog/ukg-alternatives-small-hospitals).
 
 **Cost:** Enterprise pricing. Contact for a quote.
 
@@ -418,6 +419,7 @@ The engine. Nurses touch the app a few minutes a day; the engine's decisions, wh
 3. Texas Health and Safety Code, Chapter 258: Mandatory Overtime for Nurses Prohibited. [Justia](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/)
 4. ShiftKey, "ShiftKey fully integrates OnShift into core marketplace," 2023. [ShiftKey](https://www.shiftkey.com/resources/news/shiftkey-fully-integrates-onshift)
 5. Deputy healthcare industry page. [Deputy](https://www.deputy.com/industry/healthcare)
+6. Deputy pricing page (Lite $5, Core $6.50, Pro $9 per user per month, verified August 2026). [Deputy pricing](https://www.deputy.com/pricing)
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
