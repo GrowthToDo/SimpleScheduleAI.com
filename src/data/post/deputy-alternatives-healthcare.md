@@ -74,7 +74,7 @@ Hospitals move away from Deputy when clinical compliance requirements exceed its
 
 **FLSA healthcare overtime configuration not documented.** The [FLSA 8-and-80 rule](https://www.dol.gov/agencies/whd/flsa) for healthcare employers allows a different overtime calculation threshold than the standard 40-hour weekly rule. Deputy does not document FLSA 8-and-80 configuration on its product page. Verify current overtime tracking capabilities with Deputy directly before relying on it for healthcare FLSA compliance.
 
-**App reliability in acute care settings.** For hospitals relying on Deputy to fill shift coverage gaps, app performance determines how quickly a callout can be resolved. One hospital nurse using Deputy noted:
+**App reliability in acute care settings.** For hospitals relying on Deputy to fill shift coverage gaps, app performance determines how quickly a callout can be resolved. How the app category compares for nursing specifically is covered in our [best nurse scheduling app guide](/blog/best-nurse-scheduling-app). One hospital nurse using Deputy noted:
 
 > "Sometimes the app can be a bit slow or glitchy, especially when trying to load shifts."
 >

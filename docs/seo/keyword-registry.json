@@ -626,5 +626,13 @@
     "primaryKeyword": "how to handle nurse callouts",
     "pillar": "/nurse-scheduling-software",
     "note": "Howto MOFU: policy + ranked call list + workflow + documentation. Differentiated from after-hours-callout-coverage-small-hospitals by intent: this is the general handling process; that post owns after-hours design, per-diem bench and cost math (cross-linked both ways). Differentiator = Texas HSC ch. 258 mandatory-OT prohibition (dossier entry 2026-08-05); the pre-rewrite draft claimed the OPPOSITE. Hero swapped from radiologist (topic mismatch) to laptop+phone desk-admin."
+  },
+  {
+    "slug": "best-nurse-scheduling-app",
+    "type": "post",
+    "url": "/blog/best-nurse-scheduling-app",
+    "primaryKeyword": "best nurse scheduling app",
+    "pillar": "/nurse-scheduling-software",
+    "note": "BOFU listicle, APP/MOBILE intent, explicitly differentiated from best-nurse-scheduling-software-2026 (system intent) via the Is-This-the-Guide-You-Need section + reciprocal cross-links. 8 entries mirror the software listicle vendor set through a mobile lens. OnShift = ShiftKey (never Workday, dossier 2026-08-06); NurseGrid manager-app-removal disclosed (Capterra Jun 2024); Deputy claims verify-with-vendor framed. SSAI entry: no mobile-app claim (web-based any-device review), flat service pricing."
   }
 ]

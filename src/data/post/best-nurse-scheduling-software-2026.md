@@ -58,7 +58,7 @@ This guide compares 8 platforms across the operational variables that actually d
 
 For a critical access hospital, the best [nurse scheduling software](/nurse-scheduling-software) is the option a one-person scheduling team can actually run: no IT project, FLSA overtime thresholds built in, and fast callout coverage. Enterprise suites like UKG fit 200-plus-bed systems, not a 25-bed CAH. Of the eight platforms below, SimpleScheduleAI is the only one purpose-built for that context and delivered as [AI nurse scheduling](/ai-nurse-scheduling) as a service; the others are rated honestly for where they genuinely fit.
 
-The market in 2026 splits cleanly into three tiers: enterprise platforms for large health systems (UKG, Infor, API Healthcare), mid-market tools for community hospitals and clinics (SmartLinx, Aladtec, QGenda), and lightweight or managed options for small and critical access hospitals (SimpleScheduleAI, NurseGrid, Deputy).
+The market in 2026 splits cleanly into three tiers: enterprise platforms for large health systems (UKG, Infor, API Healthcare), mid-market tools for community hospitals and clinics (SmartLinx, Aladtec, QGenda), and lightweight or managed options for small and critical access hospitals (SimpleScheduleAI, NurseGrid, Deputy). This guide evaluates full scheduling systems; if your question is really about the mobile app your nurses and manager will touch daily, the [best nurse scheduling app guide](/blog/best-nurse-scheduling-app) applies that lens to the same market.
 
 ## Quick Comparison: All 8 Platforms
 
