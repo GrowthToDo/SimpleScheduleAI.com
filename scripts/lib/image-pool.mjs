@@ -22,6 +22,8 @@ export const IMAGE_FAMILIES = [
   // AI-generated (nano banana) families, self-hosted under /images/pool/
   'callout-night',
   'scheduling-board',
+  'night-shift',
+  'ward-team',
 ];
 
 /** Family of a pool image id, or null when unknown / untagged. */

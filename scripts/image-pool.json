@@ -760,5 +760,53 @@
     "description": "Small rural hospital entrance at sunset with flags, clinician walking out, van in parking lot, no signage",
     "family": "facility-exterior",
     "topics": ["rural hospital", "facility", "Texas", "sunset", "entrance"]
+  },
+  {
+    "id": "night-shift-01",
+    "src": "~/assets/images/pool/night-shift-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-06",
+    "description": "Nurse with clipboard walking away down a dim hospital corridor at night, pools of ceiling light",
+    "family": "night-shift",
+    "topics": ["night shift", "corridor", "solo nurse", "island shifts", "coverage"]
+  },
+  {
+    "id": "night-shift-02",
+    "src": "~/assets/images/pool/night-shift-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-06",
+    "description": "Nurse walking past empty gurneys in a cool-lit hospital corridor at night",
+    "family": "night-shift",
+    "topics": ["night shift", "quiet hospital", "low census", "rounds"]
+  },
+  {
+    "id": "night-shift-03",
+    "src": "~/assets/images/pool/night-shift-03.webp",
+    "source": "ai-generated (nano banana), added 2026-08-06",
+    "description": "Nurse pushing a supply cart toward exit doors at dusk, warm corridor light",
+    "family": "night-shift",
+    "topics": ["shift end", "handoff", "night shift", "supplies"]
+  },
+  {
+    "id": "ward-team-01",
+    "src": "~/assets/images/pool/ward-team-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-06",
+    "description": "Two nurses in scrubs talking at a nurses station, one with tablet and clipboard, busy unit behind",
+    "family": "ward-team",
+    "topics": ["handoff", "team", "nurses station", "communication", "shift change"]
+  },
+  {
+    "id": "ward-team-02",
+    "src": "~/assets/images/pool/ward-team-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-06",
+    "description": "Close-up of two nurses reviewing a scheduling dashboard on a tablet, warm window light",
+    "family": "ward-team",
+    "topics": ["scheduling app", "tablet", "mobile", "schedule review", "technology adoption"]
+  },
+  {
+    "id": "ward-team-03",
+    "src": "~/assets/images/pool/ward-team-03.webp",
+    "source": "ai-generated (nano banana), added 2026-08-06",
+    "description": "Nurse at a workstation-on-wheels laptop talking with a colleague holding charts at a nurses station",
+    "family": "ward-team",
+    "topics": ["charting", "admin work", "workstation", "collaboration", "documentation"]
   }
 ]

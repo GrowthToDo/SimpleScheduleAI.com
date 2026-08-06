@@ -9,7 +9,8 @@ excerpt: >
   shows the moment you need credential checks or healthcare overtime logic. This guide
   reviews 8 nurse scheduling apps for small hospitals by what each one actually handles
   on a phone at midnight.
-image: https://images.unsplash.com/photo-1687966208029-2ffe095ad14a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: '~/assets/images/pool/ward-team-02.webp'
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: bofu
 tags:
