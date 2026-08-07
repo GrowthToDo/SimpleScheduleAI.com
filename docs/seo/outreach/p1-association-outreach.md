@@ -290,6 +290,111 @@ directly, and the MBQIP portal carries a resource-organizations list.
 > Co-founder, SimpleScheduleAI
 > pradeep@simplescheduleai.com
 
+## P2 QUEUE: next three pitches (drafted 2026-08-07; VERIFY each contact route on send day)
+
+Same guardrails: service mode, disclosure, no reciprocity ask, under ~200 words,
+one follow-up max. Send order below; space sends across different days.
+
+### P2 #2 — Texas Tech F. Marie Hall Institute for Rural and Community Health
+
+Where: ttuhsc.edu, F. Marie Hall Institute pages. VERIFY contact route on send
+day (institute contact form or published program email; do not guess).
+
+> Subject: Two free nurse staffing resources for West Texas rural hospitals
+>
+> Hello,
+>
+> I work with Texas Critical Access Hospitals on nurse scheduling and publish two
+> free resources that may be useful to the rural facilities the F. Marie Hall
+> Institute serves.
+>
+> The first is an Excel nurse schedule template built for small-hospital units,
+> with census-based staffing targets and overtime and rest-hour checks:
+> https://simplescheduleai.com/resources/nurse-schedule-template
+>
+> The second is a sourced statistics page on rural and Critical Access Hospital
+> nurse staffing, including the Texas DSHS 2024 Hospital Nurse Staffing Study
+> figures, with every number linked to its primary source:
+> https://simplescheduleai.com/rural-hospital-nurse-staffing-statistics
+>
+> Both are free and ungated, with no signup and no email capture. To be
+> transparent about my interest: I run a nurse scheduling service for Texas
+> Critical Access Hospitals, so I benefit if this audience finds them useful.
+>
+> If the institute maintains a resource list for the hospitals it supports, I
+> would be glad to have either included. Happy to provide anything you need.
+>
+> Pradeep Pandey
+> Co-founder, SimpleScheduleAI
+> pradeep@simplescheduleai.com
+
+### P2 #3 — National Rural Health Resource Center (ruralcenter.org)
+
+Where: ruralcenter.org, TASC resource library. VERIFY on send day whether they
+take resource suggestions via a form or email. NOTE: their Texas SORH roster was
+stale (2026-08-05 finding), so expect some listing lag either way.
+
+> Subject: Resource suggestion: sourced rural nurse staffing statistics
+>
+> Hello,
+>
+> I would like to suggest a free resource for your library, if suggestions are
+> accepted.
+>
+> It is a statistics page on rural hospital and Critical Access Hospital nurse
+> staffing, where every figure links to its primary source with the year
+> attributed: NSI's retention report, the Texas DSHS 2024 Hospital Nurse Staffing
+> Study, HRSA projections, and RHIhub state data.
+> https://simplescheduleai.com/rural-hospital-nurse-staffing-statistics
+>
+> We also publish a free, ungated Excel nurse schedule template for
+> small-hospital units, if practical tools fit your collection better:
+> https://simplescheduleai.com/resources/nurse-schedule-template
+>
+> To be transparent about my interest: I run a nurse scheduling service for
+> rural hospitals, so I benefit if this audience finds our work useful. The
+> resources are free regardless, with no signup and no email capture.
+>
+> Pradeep Pandey
+> Co-founder, SimpleScheduleAI
+> pradeep@simplescheduleai.com
+
+### P2 #4 — NOSORH (nosorh.org)
+
+Where: nosorh.org contact route. VERIFY on send day. The prize here is reach:
+their resources surface to every State Office of Rural Health at once.
+
+> Subject: Two free nurse staffing resources for State Offices of Rural Health
+>
+> Hello,
+>
+> I publish two free resources on rural hospital nurse staffing that may be
+> useful to share with State Offices of Rural Health, if NOSORH maintains a
+> resource collection.
+>
+> The first is a sourced statistics page on rural and Critical Access Hospital
+> nurse staffing, with every figure linked to its primary source and year:
+> https://simplescheduleai.com/rural-hospital-nurse-staffing-statistics
+>
+> The second is a free Excel nurse schedule template built for small-hospital
+> units, with census-based staffing targets and overtime and rest-hour checks:
+> https://simplescheduleai.com/resources/nurse-schedule-template
+>
+> Both are ungated, with no signup and no email capture. To be transparent about
+> my interest: I run a nurse scheduling service for Texas Critical Access
+> Hospitals, so I benefit if rural hospital teams find these useful. They are
+> free regardless.
+>
+> Happy to provide anything needed to evaluate them.
+>
+> Pradeep Pandey
+> Co-founder, SimpleScheduleAI
+> pradeep@simplescheduleai.com
+
+After these three: ASHHRA and HFMA move up, but they are editorial-grade pitches
+built on the cost-of-losing-a-nurse worked math, not the resource assets. Draft
+separately when their turn comes.
+
 ## P4 editorial targets confirmed as vendor-linkers (QGenda pull)
 
 - **HIStalk** (histalk.com, rank 61) — healthcare IT news; links vendors in posts. NEW.
