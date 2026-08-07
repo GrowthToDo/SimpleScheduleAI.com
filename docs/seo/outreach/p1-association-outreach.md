@@ -297,8 +297,9 @@ one follow-up max. Send order below; space sends across different days.
 
 ### P2 #2 — Texas Tech F. Marie Hall Institute for Rural and Community Health
 
-Where: ttuhsc.edu, F. Marie Hall Institute pages. VERIFY contact route on send
-day (institute contact form or published program email; do not guess).
+Where (VERIFIED 2026-08-07 via ttuhsc.edu/rural-affairs/staff.aspx):
+- To: tamara.alexander@ttuhsc.edu (Tamara Alexander, Director Rural Initiatives)
+- Cc: carson.scott@ttuhsc.edu (Carson Scott, Managing Director, F. Marie Hall Institute)
 
 > Subject: Two free nurse staffing resources for West Texas rural hospitals
 >
@@ -330,9 +331,10 @@ day (institute contact form or published program email; do not guess).
 
 ### P2 #3 — National Rural Health Resource Center (ruralcenter.org)
 
-Where: ruralcenter.org, TASC resource library. VERIFY on send day whether they
-take resource suggestions via a form or email. NOTE: their Texas SORH roster was
-stale (2026-08-05 finding), so expect some listing lag either way.
+Where (VERIFIED 2026-08-07): contact form at https://www.ruralcenter.org/contact
+(name, email, subject, message fields; no public email published). Phone
+1-800-997-6685. NOTE: their Texas SORH roster was stale (2026-08-05 finding),
+so expect some listing lag either way.
 
 > Subject: Resource suggestion: sourced rural nurse staffing statistics
 >
@@ -361,8 +363,9 @@ stale (2026-08-05 finding), so expect some listing lag either way.
 
 ### P2 #4 — NOSORH (nosorh.org)
 
-Where: nosorh.org contact route. VERIFY on send day. The prize here is reach:
-their resources surface to every State Office of Rural Health at once.
+Where (VERIFIED 2026-08-07): support@nosorh.org, phone (888) 391-7258. The
+prize here is reach: their resources surface to every State Office of Rural
+Health at once.
 
 > Subject: Two free nurse staffing resources for State Offices of Rural Health
 >
@@ -416,8 +419,10 @@ Never into nursing/labor community threads, never to union or labor press.
 
 ## 1. HIStalk news tip (USE 3)
 
-Where: the Contact / news-tip form on the HIStalk site. Do not guess an email
-address. Send once, never chase.
+Where (UPDATED 2026-08-07; the old histalk.com/rumor_report.html form is
+broken): email the editor directly at mr_histalk@histalk.com (founder/editor;
+news and tips). lorre@histalk.com is business/sponsorship only, wrong lane.
+Send once, never chase. HIStalk does not publish real names unless you allow it.
 
 > Subject: Tip: which hospital AI can legally replace nurses, and which cannot
 >
