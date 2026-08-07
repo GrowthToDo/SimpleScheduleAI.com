@@ -103,7 +103,7 @@ The ranked callout list is the operational tool that makes the policy work. It i
 | Contact preference       | Cell number, best time to call                                     |
 | Response history         | Notes on who consistently declines, so expectations stay realistic |
 
-One clarification on the hours column, because it is where callout lists go wrong. Under the FLSA, hospitals owe overtime past 40 hours in a workweek by default. A hospital that has formally adopted the optional 8-and-80 system instead owes overtime past 8 hours in a day or 80 hours in a 14-day period, per [DOL Fact Sheet 54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime). Track hours against whichever threshold your hospital actually uses, not against a number remembered from a previous employer.
+One clarification on the hours column, because it is where callout lists go wrong. Under the FLSA, hospitals owe overtime past 40 hours in a workweek by default. A hospital that has formally adopted the optional 8-and-80 system instead owes overtime past 8 hours in a day or 80 hours in a 14-day period, per [DOL Fact Sheet 54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime). Track hours against whichever threshold your hospital actually uses, not against a number remembered from a previous employer. The wider program this column belongs to is in [how to reduce nurse overtime](/blog/how-to-reduce-nurse-overtime).
 
 **Ranking logic, in order:**
 

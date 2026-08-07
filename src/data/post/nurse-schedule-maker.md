@@ -40,7 +40,7 @@ Burnout in nursing has three recognized components: emotional exhaustion, depers
 
 At a critical access hospital, the margin is thin. You may have a nurse who has taken call 12 out of the last 14 weekends because they're the only one with the right certification. That nurse isn't going to announce burnout, they'll simply not renew, or they'll accept a travel contract that pays twice as much. By the time the departure happens, the scheduling pattern that caused it is three months old and forgotten.
 
-The direct cost of that departure is $61,110 in replacement cost, per 2025 NSI data. The indirect cost, the vacancy gap, the mandatory overtime to cover it, the effect on team morale, compounds that number significantly. A nurse schedule maker that enforces rotation fairness from the start is cheaper than dealing with the downstream consequences of inequitable scheduling.
+The direct cost of that departure is $61,110 in replacement cost, per 2025 NSI data. The indirect cost, the vacancy gap, the [overtime to cover it](/blog/how-to-reduce-nurse-overtime), the effect on team morale, compounds that number significantly. A nurse schedule maker that enforces rotation fairness from the start is cheaper than dealing with the downstream consequences of inequitable scheduling.
 
 ## What schedule patterns increase burnout risk at 25-bed hospitals?
 

@@ -49,7 +49,7 @@ An after-hours callout is the hardest coverage problem at a small hospital becau
 
 At a 200-bed hospital, a night callout routes to a staffing office that reassigns a float nurse in minutes. A Critical Access Hospital has none of that infrastructure. The [Flex Monitoring Team](https://www.flexmonitoring.org/) documents that CAHs operate with thin staffing margins by design, because they serve low-volume rural areas where a full float pool is not financially viable. When the one night nurse on a unit calls out, the replacement pool is not a department, it is a list of individual people who are asleep at home.
 
-The problem compounds at night specifically. Daytime callouts have a deep bench of available staff and a manager at her desk. A 2 AM callout has the smallest possible candidate pool, the highest chance of pushing someone into overtime, and the least decision support. This is why after-hours callout coverage, not schedule building, is the operational pain that CAH nurse managers report first.
+The problem compounds at night specifically. Daytime callouts have a deep bench of available staff and a manager at her desk. A 2 AM callout has the smallest possible candidate pool, the highest chance of [pushing someone into overtime](/blog/how-to-reduce-nurse-overtime), and the least decision support. This is why after-hours callout coverage, not schedule building, is the operational pain that CAH nurse managers report first.
 
 ## What Does an After-Hours Callout Actually Cost a Critical Access Hospital?
 

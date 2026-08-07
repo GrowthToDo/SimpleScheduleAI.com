@@ -1,16 +1,16 @@
 ---
-draft: true
-publishDate: 2026-08-25T00:00:00Z
-updateDate: 2026-08-18T00:00:00Z
+draft: false
+publishDate: 2026-08-07T00:00:00Z
+updateDate: 2026-08-07T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'How to Reduce Nurse Overtime at a Critical Access Hospital'
 excerpt: >
-  Nurse overtime at a Critical Access Hospital is not random. It comes from three
-  predictable sources: callout coverage that defaults to the same willing nurses,
-  schedules built without real-time hour tracking, and a thin roster that makes
-  saying no to overtime feel clinically unsafe. This guide covers each source and
-  what to do about it.
-image: https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+  Nurse overtime at a small hospital is not random. It comes from three predictable
+  sources: callout coverage that defaults to the same willing nurses, schedules built
+  without running hour totals, and a roster too thin to say no. This guide works
+  through each source, plus the overtime rule most hospitals get wrong.
+image: '~/assets/images/pool/callout-night-02.webp'
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: howto
 tags:
@@ -25,233 +25,178 @@ metadata:
 
 ## Key Takeaways
 
-- Nurse overtime at a Critical Access Hospital (CAH) is almost always structural, not behavioral. It is not that nurses are working overtime because they want the pay. It is that the scheduling process creates overtime conditions that are difficult to avoid.
-- The three root causes of CAH nurse overtime are: callout defaults (the same nurses always get called first), scheduled hour blind spots (the schedule is built without tracking hours in the current 14-day pay period), and roster thinness (there are not enough nurses to cover callouts without someone going over threshold).
-- Fixing callout defaults is the fastest lever. Changing who gets called first during a callout event, based on overtime risk, not availability or familiarity, immediately reduces unplanned overtime without changing the schedule.
-- The FLSA 8-and-80 rule for healthcare employers is not automatic. CAHs must adopt it in writing. Hospitals that are still calculating overtime on a standard 40-hour workweek threshold are both overpaying on overtime and using the wrong legal standard.
-- Overtime is not eliminated by having enough nurses. It is managed by having enough nurses and a scheduling process that tracks hours accurately, distributes callout burden equitably, and raises a flag before a nurse crosses the threshold.
+- Most preventable nurse overtime is structural, not behavioral. The scheduling process creates overtime conditions; the nurses just work inside them
+- The three root causes are callout defaults (the same nurses always get called first), hour-tracking blind spots (schedules built without running totals), and roster thinness (no one to call who is not already near the threshold)
+- The fastest lever is the callout call order. Ranking replacement candidates by overtime risk instead of familiarity cuts unplanned overtime without changing the schedule at all
+- The FLSA 8-and-80 system is optional, requires written adoption, and is not automatically cheaper. Its daily 8-hour trigger usually makes it more expensive for 12-hour-shift hospitals, not less
+- In Texas, mandatory overtime is not a lawful fallback for coverage gaps. Chapter 258 prohibits it outside narrow emergencies, which makes voluntary, well-ranked callout coverage the whole game
 
 ## Table of Contents
 
-- [Why CAH Nurse Overtime Is Structural, Not Random](#why-cah-nurse-overtime-is-structural-not-random)
-- [Root Cause 1: Callout Defaults](#root-cause-1-callout-defaults)
-- [Root Cause 2: Scheduled Hour Blind Spots](#root-cause-2-scheduled-hour-blind-spots)
-- [Root Cause 3: Roster Thinness](#root-cause-3-roster-thinness)
-- [The FLSA 8-and-80 Rule: Are You Using It Correctly?](#the-flsa-8-and-80-rule-are-you-using-it-correctly)
-- [How Does Shift Schedule Design Itself Reduce Overtime?](#how-does-shift-schedule-design-itself-reduce-overtime)
-- [A Step-by-Step Overtime Reduction Process](#a-step-by-step-overtime-reduction-process)
-- [When Overtime Cannot Be Eliminated](#when-overtime-cannot-be-eliminated)
+- [Why Is Nurse Overtime Structural at a Small Hospital?](#why-is-nurse-overtime-structural-at-a-small-hospital)
+- [What Is the Fastest Way to Reduce Callout Overtime?](#what-is-the-fastest-way-to-reduce-callout-overtime)
+- [How Do Hour-Tracking Blind Spots Create Overtime?](#how-do-hour-tracking-blind-spots-create-overtime)
+- [When Is the Roster Itself the Overtime Problem?](#when-is-the-roster-itself-the-overtime-problem)
+- [Are You Using the FLSA 8-and-80 Rule Correctly?](#are-you-using-the-flsa-8-and-80-rule-correctly)
+- [How Does Schedule Design Itself Reduce Overtime?](#how-does-schedule-design-itself-reduce-overtime)
+- [What Is a Step-by-Step Overtime Reduction Process?](#what-is-a-step-by-step-overtime-reduction-process)
+- [What About Overtime You Cannot Eliminate?](#what-about-overtime-you-cannot-eliminate)
+- [How Does SimpleScheduleAI Help Reduce Overtime?](#how-does-simplescheduleai-help-reduce-overtime)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Nurse overtime at a small hospital does not feel like a system problem. It feels like a staffing problem. When a nurse calls out at 11 PM and the only available replacement is already at 70 hours this pay period, the immediate response is: call them anyway, pay the overtime, and move on. Multiply that response by 2-3 callouts per week for 52 weeks and the overtime bill becomes a line item that leadership notices but no one has a clear plan to reduce.
+Nurse overtime at a small hospital does not feel like a system problem. It feels like a staffing problem. A nurse calls out at 11 PM, the only replacement who answers is already at 70 hours this period, and the manager pays the overtime and moves on. Repeat that two or three times a week for a year, and overtime becomes a line item leadership notices but nobody has a plan to reduce.
 
-The structural fix is not hiring more nurses, though that helps. It is building a scheduling and callout process that tracks hours accurately and distributes the callout burden across the full roster rather than defaulting to the same people.
+The structural fix is not hiring more nurses, though that helps. It is a scheduling and callout process that tracks hours accurately and spreads the callout burden across the whole roster instead of defaulting to the same people.
 
-## Why CAH Nurse Overtime Is Structural, Not Random?
+## Why Is Nurse Overtime Structural at a Small Hospital?
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-label="Three structural overtime sources at a Critical Access Hospital">
-  <title>Three Structural Sources of CAH Nurse Overtime</title>
-  <rect width="720" height="280" fill="#f8fafc" rx="10"/>
-  <text x="360" y="28" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">Three Structural Sources of CAH Nurse Overtime</text>
-  <rect x="30" y="48" width="205" height="210" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="30" y="48" width="205" height="40" fill="#dc2626" rx="8"/>
-  <rect x="30" y="79" width="205" height="9" fill="#dc2626"/>
-  <text x="133" y="72" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">Callout Defaults</text>
-  <text x="133" y="110" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">The nurse manager calls</text>
-  <text x="133" y="126" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">whoever answers fastest.</text>
-  <text x="133" y="142" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">The same 2-3 nurses absorb</text>
-  <text x="133" y="158" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">most callout shifts.</text>
-  <text x="133" y="184" font-family="system-ui,sans-serif" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="600">Fix: rank by OT risk first,</text>
-  <text x="133" y="198" font-family="system-ui,sans-serif" font-size="10" fill="#dc2626" text-anchor="middle">availability second</text>
-  <rect x="258" y="48" width="205" height="210" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="258" y="48" width="205" height="40" fill="#d97706" rx="8"/>
-  <rect x="258" y="79" width="205" height="9" fill="#d97706"/>
-  <text x="361" y="72" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">Hour Blind Spots</text>
-  <text x="361" y="110" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Schedule built without</text>
-  <text x="361" y="126" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">checking current hours.</text>
-  <text x="361" y="142" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Nurse already at 68 hrs</text>
-  <text x="361" y="158" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">gets a 12-hr callout shift.</text>
-  <text x="361" y="184" font-family="system-ui,sans-serif" font-size="10" fill="#d97706" text-anchor="middle" font-weight="600">Fix: display running hours</text>
-  <text x="361" y="198" font-family="system-ui,sans-serif" font-size="10" fill="#d97706" text-anchor="middle">before every assignment</text>
-  <rect x="486" y="48" width="205" height="210" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="486" y="48" width="205" height="40" fill="#7c3aed" rx="8"/>
-  <rect x="486" y="79" width="205" height="9" fill="#7c3aed"/>
-  <text x="589" y="72" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">Roster Thinness</text>
-  <text x="589" y="110" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Not enough nurses to</text>
-  <text x="589" y="126" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">cover callouts without</text>
-  <text x="589" y="142" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">someone going over</text>
-  <text x="589" y="158" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">the 80-hr threshold.</text>
-  <text x="589" y="184" font-family="system-ui,sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="600">Fix: PRN pool + cross-train</text>
-  <text x="589" y="198" font-family="system-ui,sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">to expand the available pool</text>
-</svg>
+Three failure patterns generate most preventable overtime, and none of them is about nurses wanting extra hours.
 
-## Root Cause 1: Callout Defaults
+<div class="not-prose my-8 grid gap-4 md:grid-cols-3">
+  <div class="rounded-xl border border-slate-200 bg-white overflow-hidden">
+    <div class="bg-red-600 px-4 py-3"><p class="text-sm font-bold text-white m-0">Callout defaults</p></div>
+    <div class="px-4 py-4">
+      <p class="text-sm text-slate-700 m-0">The manager calls whoever answers fastest. The same two or three nurses absorb most callout shifts and pile hours on top of full schedules.</p>
+      <p class="text-xs font-semibold text-red-600 mt-3 mb-0">Fix: rank by overtime risk first, familiarity never</p>
+    </div>
+  </div>
+  <div class="rounded-xl border border-slate-200 bg-white overflow-hidden">
+    <div class="bg-amber-600 px-4 py-3"><p class="text-sm font-bold text-white m-0">Hour blind spots</p></div>
+    <div class="px-4 py-4">
+      <p class="text-sm text-slate-700 m-0">The schedule is built from availability, not hours. A nurse already heavy in the period gets one more shift, and the overtime was created before any callout happened.</p>
+      <p class="text-xs font-semibold text-amber-600 mt-3 mb-0">Fix: running totals visible at every assignment</p>
+    </div>
+  </div>
+  <div class="rounded-xl border border-slate-200 bg-white overflow-hidden">
+    <div class="bg-violet-600 px-4 py-3"><p class="text-sm font-bold text-white m-0">Roster thinness</p></div>
+    <div class="px-4 py-4">
+      <p class="text-sm text-slate-700 m-0">After credentials, availability, and charge coverage are applied, the real callout pool is a handful of people, all already working close to their limit.</p>
+      <p class="text-xs font-semibold text-violet-600 mt-3 mb-0">Fix: PRN bench depth and cross-training</p>
+    </div>
+  </div>
+</div>
 
-The most common driver of preventable overtime at a CAH is callout default behavior. When a nurse calls out, the nurse manager calls whoever comes to mind first, usually the nurse who always answers, the one who lives closest, or the one who was last scheduled.
+The sections below take each cause in order of speed: the first is fixable this week, the second this schedule cycle, the third this quarter.
 
-That approach distributes callout burden based on familiarity and availability, not overtime risk. The result is predictable: the same nurses accumulate callout hours on top of their scheduled hours, cross the 80-hour threshold in a 14-day period, and generate overtime liability that could have been avoided if someone had called a different nurse first.
+## What Is the Fastest Way to Reduce Callout Overtime?
 
-**The fix is a ranked callout list.**
+Change who gets called first. When a nurse calls out, most managers call whoever comes to mind: the nurse who always says yes, the one who lives closest, the one who covered last time. That distributes callout burden by familiarity, and the familiar nurses cross the overtime threshold first.
 
-Before any callout call is made, the nurse manager should be looking at a list that shows:
+The fix is the ranked callout list from our [callout handling guide](/blog/how-to-handle-nurse-callouts): before any call, look at a list showing each nurse's hours in the current period, their credentials against the open shift, and their availability. Sort by overtime risk, lowest first. Call from the top and log each attempt.
 
-1. Hours worked in the current 14-day period (FLSA 8-and-80 reference)
-2. Whether the nurse has the credentials the open shift requires
-3. Whether the nurse is available (not already scheduled that day)
+A spreadsheet with running hour totals serves the purpose. The hard part is not building it; it is keeping it current and actually consulting it at midnight, which is exactly when nobody wants to do arithmetic. Some scheduling systems automate the ranking; done by hand, the discipline still pays for itself in avoided premium hours.
 
-The list should be sorted by overtime risk ascending, the nurse with the fewest current-period hours who meets credential requirements gets called first.
+## How Do Hour-Tracking Blind Spots Create Overtime?
 
-This is not complicated to build manually. A spreadsheet with running hour totals updated after each shift can serve this purpose. The difficulty is maintaining it consistently under the time pressure of a midnight callout.
+The second source is overtime that was scheduled, not caused by any callout. A manager building a rotation in a spreadsheet works from availability: who is free, who is not already on that day. Hours accumulate invisibly. A nurse heavy in the first stretch of a pay period picks up one more shift, and the schedule itself created the overtime.
 
-Scheduling software with callout management features can automate this ranking. A managed scheduling service like [SimpleScheduleAI](/) surfaces this ranked list automatically. But even without software, establishing the habit of checking hours before calling reduces overtime meaningfully.
+The fix is visible running totals against the threshold your hospital actually uses. If you pay overtime on the standard 40-hour workweek, track weekly totals. If your hospital has formally adopted the 8-and-80 system, track both the daily 8-hour trigger and the running 14-day total. Either way, the rule is the same: no schedule gets published with a nurse already close enough to the threshold that a single callout pushes them over. Leave headroom for one unplanned shift.
 
-## Root Cause 2: Scheduled Hour Blind Spots
+In Excel, that is one column per nurse. In [nurse scheduling software](/nurse-scheduling-software), verify the overtime threshold matches your actual FLSA setup before trusting any flag it raises, because a mismatch in either direction produces quiet errors.
 
-The second cause of overtime is schedule construction without hour tracking. A nurse manager building a 4-week rotation in a spreadsheet typically works from availability, who is not already scheduled, not from hours. If a nurse was scheduled for 72 hours in the first 10 days of a 14-day period and an extra callout shift is added on day 11, that nurse is now over the FLSA 8-and-80 threshold.
+## When Is the Roster Itself the Overtime Problem?
 
-This type of overtime is not a callout surprise. It is a schedule construction error. The nurse was assigned too many hours in the same 14-day window before the callout even occurred.
+Sometimes process cannot fix it. On paper a [critical access hospital's](/critical-access-hospital-scheduling) roster looks adequate. In practice, once you apply credentials, charge coverage, availability, and who is already scheduled, the real pool for any given callout is often two to four people. If all of them are already deep into their hours, every callout becomes an overtime event no matter how well you rank the list.
 
-**The fix is visible running hour totals.**
+Two structural moves widen the pool:
 
-When building or modifying a schedule, the nurse manager should be able to see, for each nurse, the running total of scheduled hours in the current and next 14-day period. Any nurse approaching 72 hours scheduled should be flagged as overtime risk before additional shifts are assigned.
+**PRN bench depth.** Even two or three additional PRN nurses meaningfully expand callout coverage. PRN nurses are paid for hours worked, and a callout shift they take is a shift that does not land on a full-time nurse's hour total. Weigh the cost of maintaining the bench directly against the overtime it displaces; the comparison is usually not close.
 
-If you are scheduling in Excel, add a column per nurse tracking hours in the current 14-day window. If you are using scheduling software, verify that the overtime threshold is set to the 8-and-80 rule and that flagging occurs when a nurse approaches 72-80 hours in a period.
+**Cross-training.** A nurse cross-trained for a second unit, or signed off for charge, effectively counts twice in the eligible pool. When the [charge nurse is the one calling out](/blog/how-to-handle-nurse-callouts), the difference between four charge-qualified nurses and six is the difference between a covered shift and a premium one.
 
-## Root Cause 3: Roster Thinness
+## Are You Using the FLSA 8-and-80 Rule Correctly?
 
-The third cause is structural and cannot be solved by process alone: a roster that is too thin to absorb callouts without someone going over the overtime threshold.
+This is the section where hospitals lose money in both directions, so the rule needs stating precisely. Under the FLSA, the default is simple: overtime is owed past 40 hours in a workweek. [Section 7(j)](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) lets hospitals adopt an alternative, the 8-and-80 system, with overtime owed past 8 hours in a day or 80 hours in a fixed 14-day period, whichever produces more overtime pay.
 
-A 25-bed CAH with 18 nurses running 21 shifts per week has approximately 60-70% roster utilization. On paper, there is capacity. In practice, once scheduled hours, credential constraints, availability constraints, and charge nurse requirements are applied, the available pool for any given callout is often 2-4 people. If those 2-4 people are already at 64+ hours in the period, every callout generates overtime.
+| System                     | Overtime trigger                                    | Example: one week of 4 x 12-hour shifts                 |
+| -------------------------- | --------------------------------------------------- | ------------------------------------------------------- |
+| 40-hour workweek (default) | Past 40 hours in a workweek                         | 48 hours worked, 8 overtime hours owed                  |
+| 8-and-80 (optional)        | Past 8 hours in a day OR 80 in 14 days, the greater | Each 12-hour shift owes 4 daily overtime hours: 16 owed |
 
-**The fix is PRN pool depth and cross-training.**
+Notice what the example shows: for 12-hour shifts, 8-and-80 is usually the more expensive system, because every 12-hour shift crosses the daily trigger. The 8-and-80 system tends to fit facilities running 8-hour shifts with alternating heavy and light weeks. Neither system is "the right one" for all hospitals, and the 40-hour default is not a mistake; it is the standard rule.
 
-Increasing the PRN bench, even by 2-3 nurses, meaningfully expands the callout pool. PRN nurses are typically paid only for hours worked and can be called for specific shifts without affecting full-time employees' hour totals.
+Three requirements if you do adopt 8-and-80: a written agreement with employees before the work period it covers, a fixed 14-day period that does not float, and payroll configured to test both triggers. Adoption cannot be retroactive, so ask payroll one precise question: which threshold is our system using, and does it match what we have adopted in writing? A mismatch in either direction, paying 40-hour overtime under an adopted 8-and-80 or the reverse, is a wage-and-hour liability. If the answer is unclear, involve an employment attorney before changing anything.
 
-Cross-training staff nurses for additional units (or for charge designation) also expands the eligible pool. A nurse who can cover both the medical-surgical unit and the emergency department provides twice the scheduling flexibility during callout events.
+## How Does Schedule Design Itself Reduce Overtime?
 
-Hiring is a real constraint. But targeted additions to the PRN bench, specifically for callout coverage, typically show ROI within one quarter when measured against the overtime cost they displace.
+Beyond who gets called and what gets tracked, the schedule's own structure is a lever.
 
-## The FLSA 8-and-80 Rule: Are You Using It Correctly?
+**Build an overtime-minimized draft, not just a coverage-complete one.** A hand-built schedule optimizes for one goal: every shift filled. It is rarely compared against an alternative that meets the same coverage with fewer nurses pushed toward the threshold. Producing that second draft, then choosing deliberately, surfaces overtime the first draft locked in silently.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-label="Comparison of standard 40-hour overtime versus FLSA 8-and-80 rule for healthcare employers">
-  <title>Standard vs. FLSA 8-and-80 Overtime: Side-by-Side Comparison</title>
-  <rect width="720" height="300" fill="#f8fafc" rx="10"/>
-  <text x="360" y="28" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">Standard Overtime vs. FLSA 8-and-80 Rule</text>
-  <!-- Left column: standard -->
-  <rect x="40" y="48" width="290" height="230" fill="white" rx="8" stroke="#fca5a5" stroke-width="1.5"/>
-  <rect x="40" y="48" width="290" height="40" fill="#dc2626" rx="8"/>
-  <rect x="40" y="79" width="290" height="9" fill="#dc2626"/>
-  <text x="185" y="72" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">Standard 40-Hour Rule (Default)</text>
-  <text x="185" y="110" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Overtime owed after 40 hrs/week</text>
-  <text x="185" y="130" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Example: nurse works 4 x 12-hr shifts</text>
-  <text x="185" y="146" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">= 48 hrs this week = 8 hrs OT owed</text>
-  <text x="185" y="170" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Even if nurse only works 32 hrs</text>
-  <text x="185" y="186" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">the following week (total 80 hrs)</text>
-  <text x="185" y="202" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">OT was still owed in Week 1</text>
-  <text x="185" y="232" font-family="system-ui,sans-serif" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="600">Less flexible for 12-hr shift scheduling</text>
-  <text x="185" y="248" font-family="system-ui,sans-serif" font-size="10" fill="#dc2626" text-anchor="middle">Higher OT cost when nurses work 3x12</text>
-  <!-- Right column: 8-and-80 -->
-  <rect x="390" y="48" width="290" height="230" fill="white" rx="8" stroke="#86efac" stroke-width="1.5"/>
-  <rect x="390" y="48" width="290" height="40" fill="#16a34a" rx="8"/>
-  <rect x="390" y="79" width="290" height="9" fill="#16a34a"/>
-  <text x="535" y="72" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">FLSA 8-and-80 Rule (Healthcare)</text>
-  <text x="535" y="110" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">OT owed after 8 hrs/day OR 80 hrs in</text>
-  <text x="535" y="126" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">14-day period, whichever is higher</text>
-  <text x="535" y="146" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Example: nurse works 4 x 12-hr shifts</text>
-  <text x="535" y="162" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">= 48 hrs this week = 0 OT owed yet</text>
-  <text x="535" y="178" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">(only 8-hr daily threshold exceeded,</text>
-  <text x="535" y="194" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">not 80-hr bi-weekly threshold)</text>
-  <text x="535" y="232" font-family="system-ui,sans-serif" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="600">Requires written agreement with employees</text>
-  <text x="535" y="248" font-family="system-ui,sans-serif" font-size="10" fill="#16a34a" text-anchor="middle">Must be adopted before first pay period</text>
-</svg>
+**Use on-call coverage for predictably quiet windows.** On-call hours generally cost less than scheduled on-site hours. Placed on windows that are reliably low-census, on-call holds coverage available without loading scheduled hours into the period. It takes more configuration than a standard grid, which is why thin-staffed hospitals underuse it.
 
-The FLSA 8-and-80 rule is available to "hospitals and residential care establishments" under FLSA Section 7(j). It is not automatic. To use it legally, a CAH must:
-
-1. Enter a written agreement with employees (individual or collective bargaining agreement) before the work period begins
-2. Designate a fixed 14-day work period (it cannot change from period to period)
-3. Calculate overtime against both the daily 8-hour threshold and the 80-hour bi-weekly threshold, paying at the higher rate
-
-Many CAHs believe they are using the 8-and-80 rule when they are actually using a standard 40-hour calculation. Ask your HR department or payroll vendor specifically: what is the overtime threshold in your payroll system? If the answer is 40 hours per workweek, you may not have the 8-and-80 rule in place.
-
-If you have not adopted the 8-and-80 rule, consult an employment attorney or HR advisor before implementing it. Retroactive adoption is not allowed, and errors in implementation create wage and hour liability.
-
-For CAHs that have properly adopted the 8-and-80 rule, the scheduling implication is clear: you can schedule a nurse for four 12-hour shifts in a week (48 hours) without triggering overtime, as long as their total in the 14-day period stays at or below 80 hours. That flexibility is not available under the standard 40-hour rule.
-
-## How Does Shift Schedule Design Itself Reduce Overtime?
-
-The three root causes above are about who gets called and whether hours are tracked. But the structure of the schedule itself is a lever too. Two design choices remove overtime that a coverage-only schedule leaves in place by default.
-
-**Build an overtime-minimized draft, not just a coverage-complete one.** A schedule built by hand is usually optimized for a single goal: every shift filled and minimum staffing met. It is rarely checked against a second version that meets the same coverage at lower projected overtime. When you build the schedule, look at the running 14-day hour totals and ask whether the same shifts could be covered with fewer nurses pushed toward the threshold. Producing that alternative, then choosing the tradeoff on purpose, removes overtime that a coverage-only schedule never surfaces.
-
-**Use on-call coverage for predictably low-census windows.** On-call hours, where a nurse is available but not on-site unless called in, typically cost less than scheduled on-site hours. Placing on-call assignments on windows that are predictably quiet, such as weekend nights or mid-week overnights at a low-census CAH, holds coverage available while lowering scheduled hours in the period. Many CAHs underuse on-call because building on-call rotations takes more configuration than a standard shift grid, but the hours it saves come straight off the overtime base.
+**Distribute the burden visibly.** Nurses who can see that callout shifts and heavy stretches fall evenly protect the system; nurses who suspect the schedule leans on them protect themselves. The fairness mechanics are the same ones in our [fair holiday rotation guide](/blog/fair-holiday-rotation-nurses-cah), applied year-round.
 
 ## What Is a Step-by-Step Overtime Reduction Process?
 
-**Step 1: Audit the last 90 days of overtime.** Pull payroll records and identify which nurses generated overtime, how many overtime hours each accumulated, and whether the overtime was planned (scheduled) or unplanned (callout coverage). This identifies whether your problem is schedule construction or callout defaults.
+1. **Audit the last 90 days of overtime.** From payroll: which nurses, how many hours, and was each occurrence scheduled or callout-driven? This one split tells you whether your problem is schedule construction or call order.
+2. **Review the last 30 days of callouts.** Who was called first, who covered, and what were their hours at that moment? If the same few nurses covered most events regardless of hours, defaults are the problem.
+3. **Build the ranked callout list.** Names, credentials, current-period hours, availability. Sort by hours ascending. Use it on every callout.
+4. **Verify the payroll threshold.** Confirm the system's overtime rule matches what your hospital has actually adopted, 40-hour default or written 8-and-80.
+5. **Add the headroom check to schedule builds.** Before publishing, confirm no nurse is close enough to the threshold that one callout shift tips them over.
+6. **Measure the coverage-without-overtime rate.** If callouts end in overtime more often than not, the pool is too thin, and the fix is the PRN bench, not more discipline.
 
-**Step 2: Identify your callout default pattern.** Review the last 30 days of callout events. For each event: who was called first, who actually covered, and what their hours were at the time. If the same 3 nurses covered most callouts regardless of their hour totals, callout defaults are your primary problem.
+## What About Overtime You Cannot Eliminate?
 
-**Step 3: Build a ranked callout list.** Create a simple spreadsheet with columns: nurse name, credentials, running hours in current 14-day period, availability flag. Sort by hours ascending. Before every callout call, consult this list. Call from the top.
+Some overtime is legitimate. Census surges, simultaneous callouts, and the [on-duty requirement](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) mean some weeks end in premium hours no process would have avoided. The goal is not zero. It is overtime that is documented, assigned to the willing nurse with the lowest exposure, and calculated under the correct threshold.
 
-**Step 4: Verify your overtime threshold.** Confirm with payroll that you are calculating overtime under the correct rule for your adoption status. If you have adopted 8-and-80, confirm the system reflects it. If you have not, evaluate whether adoption makes sense for your staffing model.
+One boundary Texas hospitals must design around: mandatory overtime is not a lawful backstop. [Texas Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits requiring a nurse to work beyond scheduled hours outside four narrow emergency exceptions, and even then only after voluntary options are exhausted. A coverage strategy that quietly assumes "someone can be made to stay" is both a retention problem and a compliance one. The full escalation ladder that stays inside the statute is in the [callout handling guide](/blog/how-to-handle-nurse-callouts).
 
-**Step 5: Add a running hour check to your schedule build process.** Before publishing any schedule, verify that no nurse is scheduled for more than 72 hours in any 14-day window (leaving room for one unplanned callout shift without overtime). Adjust before publishing.
+## How Does SimpleScheduleAI Help Reduce Overtime?
 
-**Step 6: Evaluate PRN bench depth.** Compare your callout coverage success rate (how often did you cover the shift without overtime?) against your PRN roster size. If coverage required overtime more than 40% of the time, your PRN bench is insufficient and expansion is the structural fix.
+SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling) for Texas Critical Access Hospitals, and overtime is where its mechanics point. The AI builds each schedule against compliance and fairness rules configured at onboarding, which includes checking every nurse's running hours against the applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) before an assignment is proposed. When a callout comes in, the manager gets a ranked shortlist of qualified replacements with the reasons visible: skills, role, charge coverage, and overtime risk. Every change lands in a timestamped log, and nothing posts without the manager's approval. You can walk the full cycle on [how the scheduling process works](/how-it-works).
 
-## When Overtime Cannot Be Eliminated?
+<img src="/images/blog/how-to-reduce-nurse-overtime/SimpleScheduleAI.webp" alt="SimpleScheduleAI overtime-aware callout ranking for a nurse manager" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Some overtime at a CAH is not eliminable. Census surges, multiple simultaneous callouts, and mandatory coverage requirements mean that there will be weeks where overtime happens despite a sound process.
+One honest boundary: the service ranks and flags; it does not do payroll, and it cannot fix a threshold configured wrong in your payroll system or substitute for the written 8-and-80 adoption. Steps 1, 4, and 6 above are audits only your payroll data can answer, whatever scheduling tool you use.
 
-The goal is not zero overtime. It is predictable, defensible overtime: overtime that occurs because the situation genuinely required it, that was documented, that was assigned to the nurse with the lowest overtime exposure among those available, and that was calculated correctly.
+<div class="not-prose my-10 rounded-xl bg-amber-50 border-l-4 border-amber-500 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 leading-relaxed m-0">Overtime reduction programs fail when they treat overtime as a discipline problem and lecture the roster. The nurses working the extra hours are usually the ones saving the schedule. Fix the call order, make the hour totals visible, and give the willing nurses a bench behind them, and most of the "overtime problem" dissolves into what it always was: a process that kept billing its gaps to the same few people.</p>
+</div>
 
-Preventable overtime, overtime that occurred because the wrong nurse was called first, or because a schedule was built without hour tracking, or because the overtime threshold was set incorrectly, is a different category. That is the target.
+## What to Do This Week
 
-<img src="/images/blog/how-to-reduce-nurse-overtime/SimpleScheduleAI.webp" alt="SimpleScheduleAI automated overtime tracking for CAH nurse scheduling" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
-
-SimpleScheduleAI handles steps 1-6 above as part of the managed service: callout ranking is automated by OT risk and credentials, running hour totals are tracked continuously, and FLSA overtime thresholds are applied by default. The nurse manager reviews the callout ranking and makes the call. The calculation is already done.
-
-## What to Do This Week?
-
-1. **Pull your last 90-day overtime report from payroll.** Identify the top 3 nurses by overtime hours. If those same nurses are also your most frequent callout responders, callout defaults are your primary problem.
-
-2. **Check your payroll overtime threshold.** Ask your payroll vendor or HR: is overtime calculated at 40 hours per workweek or under the FLSA 8-and-80 rule? If you do not know, that is a gap worth closing.
-
-3. **Create a ranked callout list today.** Even in Excel: names, credentials, hours this pay period, available or not. Use it for every callout this week. See if the nurse called first is actually the one with the lowest overtime risk.
-
-4. **Request a free overtime analysis from SimpleScheduleAI.** The analysis reviews your current OT patterns, callout process, and threshold configuration. Visit [SimpleScheduleAI.com](/) to schedule.
-
-5. **Identify one cross-training candidate.** Which staff nurse, if cross-trained for an additional unit or for charge designation, would most expand your callout coverage pool? Cross-training one nurse adds more scheduling flexibility than most other interventions.
+1. **Pull the last 90 days of overtime from payroll.** Split it into scheduled versus callout-driven. The bigger pile is your first target.
+2. **Ask payroll one question.** Which overtime threshold is configured, and does it match what the hospital has adopted in writing? Close the gap before optimizing anything else.
+3. **Build the ranked callout list.** Names, credentials, hours this period, availability, sorted by hours. Use it on the next callout and note whether the first call changes.
+4. **Name one cross-training candidate.** The nurse whose second-unit or charge sign-off would most widen the callout pool. One sign-off is often worth more than a hire.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-default mb-2">Reduce Overtime Without Adding Staff</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI ranks every callout replacement by overtime risk and credentials automatically. The nurse manager calls from the ranked list. No calculation. No defaults. First schedule within 48 hours.</p>
-  <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
+  <p class="text-lg font-semibold text-default mb-2">Overtime risk checked before every assignment, not after</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI ranks callout replacements by credentials and overtime risk, tracks running hours continuously, and leaves the final call with your manager.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
 
-**How much nurse overtime is typical at a 25-bed Critical Access Hospital?**
+**Q: How much nurse overtime is normal at a small hospital?**
 
-There is no published benchmark specifically for 25-bed CAH nursing overtime. Based on industry survey data from NSI Nursing Solutions and AONL, small hospitals (under 100 beds) typically run nursing overtime costs of 5-12% of total nursing labor cost. For a CAH, the range can be wider because the thin roster provides less buffer against callout-driven overtime. A hospital where overtime exceeds 15% of nursing labor cost likely has a structural scheduling problem, not just a staffing shortage.
+There is no published benchmark specific to 25-bed hospital nursing overtime, and any precise industry percentage you see quoted deserves a source check. The more useful internal measure is the split between scheduled and callout-driven overtime, and the trend of each. A hospital whose overtime is mostly callout-driven has a process problem with a fast fix; one whose overtime is mostly scheduled has a roster or schedule-construction problem, which is slower to fix but just as solvable.
 
-**Does the FLSA 8-and-80 rule apply to all nurses at our CAH?**
+**Q: Does the 8-and-80 rule apply to every nurse once adopted?**
 
-The 8-and-80 rule applies to all non-exempt employees at a hospital or residential care establishment, if the employer has properly adopted it through a written agreement. RNs and LVNs are generally non-exempt (unless they meet the FLSA professional exemption threshold for highly compensated employees). Before applying the 8-and-80 rule to any category of employees, verify their classification and confirm the written agreement requirement is met.
+It applies to the non-exempt employees covered by the written agreement at a hospital or residential care establishment. Most staff RNs and LVNs paid hourly are non-exempt. The agreement must exist before the work period it covers, and the 14-day period must be fixed. If your hospital cannot produce the written agreement, assume the 40-hour default governs and verify with counsel before relying on 8-and-80 math.
 
-**Can we require nurses to take callout shifts to prevent overtime gaps?**
+**Q: Can we require a nurse to stay and cover a shift to avoid an overtime gap?**
 
-Texas does not have a mandatory overtime law prohibiting nurse managers from requiring nurses to cover shifts. Some hospitals have mandatory overtime policies for emergency coverage situations. However, relying on mandatory overtime as a regular coverage strategy is both a recruitment/retention problem and an indication that the scheduling process is not managing coverage proactively. Mandatory overtime that exceeds safe working hours (typically more than 12-16 consecutive hours) also creates patient safety concerns.
+In Texas, generally no. Chapter 258 prohibits mandatory nurse overtime and protects a nurse who refuses it. The exceptions are narrow: disasters, declared emergencies, an unforeseeable emergency the hospital could not have anticipated, or a procedure in progress, and even then voluntary overtime, agency staff, and off-duty volunteers must be attempted first. A routine coverage gap does not qualify, which is why the ranked, voluntary callout process carries the load.
 
-**Our overtime is primarily from scheduled shifts, not callouts. What does that mean?**
+**Q: Our overtime comes from the published schedule, not callouts. What does that mean?**
 
-Scheduled overtime (overtime that appears in the published schedule, not from callouts) indicates a schedule construction problem. Either the schedule is being built without checking 14-day hour totals, or the roster is too thin to fill all required shifts without assigning overtime hours to full-time nurses. If this is the pattern, the fixes are: verify overtime threshold settings in your scheduling system, add hour tracking to your schedule build process, and evaluate whether PRN bench expansion can absorb the hours that are currently assigned to full-time staff.
+It means the overtime is being created at build time: the schedule assigns hours past the threshold before the period even starts. Either running totals are not visible during construction, or the roster genuinely cannot fill required shifts within threshold, in which case the fix is bench depth, not tracking. Check the totals first; it is the cheaper explanation.
 
-**How does SimpleScheduleAI prevent overtime during callout events?**
+**Q: How does SimpleScheduleAI decide who appears first on a callout shortlist?**
 
-When a callout event is entered into SimpleScheduleAI, the system generates a ranked replacement list that sorts candidates by: credential match (only nurses who can cover the specific shift requirements appear), hours worked in the current 14-day period (nurses further from the 80-hour threshold appear higher), and historical response rate. The nurse manager calls from the top of the list. The system does not allow a nurse at risk of overtime to appear at the top of the callout list, they are ranked lower until a nurse with lower hour exposure has been contacted first.
+The shortlist ranks qualified replacement candidates with the reasons shown: skills, role, charge coverage, and overtime risk, drawing on each nurse's running hours against your hospital's applicable FLSA threshold. The manager sees why each candidate is ranked where they are and makes the call. Nothing is assigned automatically, and the manager can always choose differently than the ranking suggests.
+
+## Sources
+
+1. U.S. Department of Labor, Fact Sheet #54: The Health Care Industry and Calculating Overtime Pay (FLSA §7(j) 8-and-80 system). [DOL](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)
+2. Texas Health and Safety Code, Chapter 258: Mandatory Overtime for Nurses Prohibited. [Justia](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/)
+3. 42 CFR 485.631, Conditions of Participation: Staffing and staff responsibilities. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
