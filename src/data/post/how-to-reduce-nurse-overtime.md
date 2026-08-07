@@ -27,9 +27,9 @@ metadata:
 
 - Most preventable nurse overtime is structural, not behavioral. The scheduling process creates overtime conditions; the nurses just work inside them
 - The three root causes are callout defaults (the same nurses always get called first), hour-tracking blind spots (schedules built without running totals), and roster thinness (no one to call who is not already near the threshold)
-- The fastest lever is the callout call order. Ranking replacement candidates by overtime risk instead of familiarity cuts unplanned overtime without changing the schedule at all
-- The FLSA 8-and-80 system is optional, requires written adoption, and is not automatically cheaper. Its daily 8-hour trigger usually makes it more expensive for 12-hour-shift hospitals, not less
-- In Texas, mandatory overtime is not a lawful fallback for coverage gaps. Chapter 258 prohibits it outside narrow emergencies, which makes voluntary, well-ranked callout coverage the whole game
+- The fastest lever is the callout call order. Ranking replacement candidates by overtime risk instead of familiarity, per our [callout handling guide](/blog/how-to-handle-nurse-callouts), cuts unplanned overtime without changing the schedule at all
+- The [FLSA 8-and-80 system](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) is optional, requires written adoption, and is not automatically cheaper. Its daily 8-hour trigger usually makes it more expensive for 12-hour-shift hospitals, not less
+- In Texas, mandatory overtime is not a lawful fallback for coverage gaps. [Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits it outside narrow emergencies, which makes voluntary, well-ranked callout coverage the whole game
 
 ## Table of Contents
 
@@ -45,7 +45,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Nurse overtime at a small hospital does not feel like a system problem. It feels like a staffing problem. A nurse calls out at 11 PM, the only replacement who answers is already at 70 hours this period, and the manager pays the overtime and moves on. Repeat that two or three times a week for a year, and overtime becomes a line item leadership notices but nobody has a plan to reduce.
+Nurse overtime at a small hospital does not feel like a system problem. It feels like a staffing problem. A nurse calls out at 11 PM, the only replacement who answers is already close to her overtime threshold for the period, and the manager pays the overtime and moves on. Repeat that two or three times a week for a year, and overtime becomes a line item leadership notices but nobody has a plan to reduce.
 
 The structural fix is not hiring more nurses, though that helps. It is a scheduling and callout process that tracks hours accurately and spreads the callout burden across the whole roster instead of defaulting to the same people.
 
@@ -93,7 +93,7 @@ The second source is overtime that was scheduled, not caused by any callout. A m
 
 The fix is visible running totals against the threshold your hospital actually uses. If you pay overtime on the standard 40-hour workweek, track weekly totals. If your hospital has formally adopted the 8-and-80 system, track both the daily 8-hour trigger and the running 14-day total. Either way, the rule is the same: no schedule gets published with a nurse already close enough to the threshold that a single callout pushes them over. Leave headroom for one unplanned shift.
 
-In Excel, that is one column per nurse. In [nurse scheduling software](/nurse-scheduling-software), verify the overtime threshold matches your actual FLSA setup before trusting any flag it raises, because a mismatch in either direction produces quiet errors.
+In Excel, that is one column per nurse. If you already use [nurse scheduling software](/nurse-scheduling-software), check which overtime threshold it is configured with before trusting any flag it raises. If the setting does not match your hospital's actual FLSA setup, the flags will be quietly wrong in one direction or the other.
 
 ## When Is the Roster Itself the Overtime Problem?
 
@@ -103,7 +103,7 @@ Two structural moves widen the pool:
 
 **PRN bench depth.** Even two or three additional PRN nurses meaningfully expand callout coverage. PRN nurses are paid for hours worked, and a callout shift they take is a shift that does not land on a full-time nurse's hour total. Weigh the cost of maintaining the bench directly against the overtime it displaces; the comparison is usually not close.
 
-**Cross-training.** A nurse cross-trained for a second unit, or signed off for charge, effectively counts twice in the eligible pool. When the [charge nurse is the one calling out](/blog/how-to-handle-nurse-callouts), the difference between four charge-qualified nurses and six is the difference between a covered shift and a premium one.
+**Cross-training.** A nurse cross-trained for a second unit, or signed off for charge, effectively counts twice in the eligible pool. When the [charge nurse is the one calling out](/blog/how-to-handle-nurse-callouts), the difference between four charge-qualified nurses and six is often the difference between covering the shift at regular pay and covering it at overtime rates.
 
 ## Are You Using the FLSA 8-and-80 Rule Correctly?
 
