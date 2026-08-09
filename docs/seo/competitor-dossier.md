@@ -158,6 +158,14 @@ before citing compliance capabilities.
 >
 > Portia A., Nurse, Hospital & Health Care, April 8, 2026, Capterra _(verified 2026-05-15)_
 
+**Negative — Billing / 12-Month Lock-In (Trustpilot):**
+
+> "You are charged around $57 in a way that presents exactly like a normal monthly subscription. There is no clear or prominent point where it is made obvious that you are entering a fixed 12 month commitment with a large cancellation liability. Only when you cancel do you find out you are expected to pay $572 for the remaining term for services that will not be used."
+>
+> "Paul", reviewer from Australia, 1-star review titled "Avoid Deputy !!!!", dated April 8, 2026, Trustpilot (uk.trustpilot.com/review/deputy.com; PAGE-VERIFIED via Playwright 2026-08-09). Dollar figures are the reviewer's (AUD context likely); quote them only inside this attributed quote, never as our own claim.
+
+- Context stat (verified same day): Deputy's Trustpilot aggregate = 2.8/5 across 124 reviews, with 24% 1-star. Counts drift; re-verify if older than 60 days at use.
+
 **Negative — Feature Consultation (CEO/DON):**
 
 > "...the time clock system is an important part of any rostering system - and they have just issued a new feature where staff can clock in and out from home, without any consultation or ability to turn off this feature. While this may suit some businesses it does not suit mine and I am sure I am not alone."
@@ -355,6 +363,10 @@ active CMS obligations — missing FLSA tracking, CMS audit trail, credential en
 >
 > Staffing Coordinator, Medical Practice, June 11, 2024, Capterra
 
+> "I really like it. It is easy to use. Please Bring back the mobile app"
+>
+> Nika S., Inpatient Director, Hospital & Health Care, June 17, 2024, Capterra (5.0-star review titled "HRRMC- Inpatient"; same reviewer as the Android quote below, name PAGE-VERIFIED via Playwright 2026-08-09; capitalization "Bring" is the original)
+
 **Negative — Android Compatibility:**
 
 > "Does not work well with androids. The texting function doesn't work."
@@ -411,6 +423,20 @@ and larger health systems.
 > "They outsourced customer service...you have generic people who respond."
 >
 > David S., President, Hospital & Health Care, May 7, 2024, Capterra
+
+> "Also do not like how hard it is to find someone that can step in and help troubleshoot issues. I feel like I talk to 3 people before I get an actual answer"
+>
+> Wilmer R., Practice Administrator, Medical Practice, March 19, 2026, Capterra (3.0-star review titled "Year 3 with Qgenda"; PAGE-VERIFIED via Playwright 2026-08-09)
+
+**Negative — Pricing / Hidden Costs:**
+
+> "Its a good software but the price does not match all that is should and could do. There are other softwares that do the same for less."
+>
+> Wilmer R., Practice Administrator, Medical Practice, March 19, 2026, Capterra ("Its" and "all that is should" are the original phrasing, keep as written)
+
+> "Cost. Seems there are hidden costs behind every door now."
+>
+> Wilmer R., Practice Administrator, Medical Practice, March 19, 2026, Capterra (Cons field of the same review)
 
 ---
 
@@ -574,6 +600,10 @@ _(Note: product ID 210972 seen in some older URLs is incorrect — live listing 
 > "Can be slow and glitchy, making inputting schedule difficult and stressful."
 >
 > Erika A., Registered Nurse, July 9, 2024, Capterra
+
+> "Everything is slow and difficult to use. The app does not work well. The website is slow and takes forever to click on any options. Everything about it is a negative experience."
+>
+> Jacob G., Registered Nurse, Hospital & Health Care, July 18, 2024, Capterra (1.0-star review titled "Terrible system"; PAGE-VERIFIED via Playwright 2026-08-09. Same review's Pros field, usable as a sarcasm quote: "Does the job in the most bare minimum way. If you're looking to manage time with as little convenience as possible. This is for you")
 
 **Negative — Mobile Login / Messaging:**
 
@@ -910,6 +940,7 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 | 2026-05-16 | Added In-House Health and M7 Health sections (VC-funded AI nurse-scheduling startups). In-House Health: no G2 listing, no Capterra listing, zero third-party reviews (verified 2026-05-16). M7 Health: Capterra listing confirmed (product ID 10037829) but 0.0/5 with 0 reviews, no accessible G2 listing, zero third-party reviews (verified 2026-05-16). Both: no usable verbatim quotes, neutral product-page framing required per checklist L66. Positioning and vendor stat claims captured verbatim from own sites and public press.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | 2026-05-16 | Secondary source pass (beyond G2/Capterra) for In-House Health + M7. Checked Software Advice, GetApp, Gartner Peer Insights, Apple App Store, Google Play, Reddit, LinkedIn, Product Hunt. In-House Health: iOS/Android apps exist (rating not retrievable, flagged for re-check); named PR quote (Kerridge, Chicago VA, via Fierce). M7: no consumer app; named partnership-PR quotes (Trainor/Ochsner, Jay/ScionHealth) on customer newsrooms. No independent third-party reviews found anywhere. Neutral product-page framing confirmed to stand for both.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | 2026-05-17 | Added symplr Smart Square section (formerly Avantas Smart Square; acquired by symplr from AMN Healthcare 2025-07-02, $75M). Verified verbatim: Hanna N., Wanda C., Stephanie T. (Smart Square, Capterra p/275941, 4.6/5, 19 reviews); Elisabeth C. (symplr Workforce, Capterra p/241148, 4.1/5, 13 reviews). G2 standalone Smart Square rating not retrievable (G2 blocks automated fetch); symplr brand aggregate 4.3/5 (356) noted, flagged for manual re-check. KLAS profile subscriber-gated. No CAH/rural reference customers; neutral product-page framing per checklist L66.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 2026-08-09 | PAGE-VERIFIED 4 of the 5 review-mining quote candidates via Playwright (real-browser pass beat the HTTP 403s): NurseGrid "Please Bring back the mobile app" = Nika S., Inpatient Director, Jun 17 2024 (same reviewer as the Android quote, name now known); QGenda pricing + hidden-costs + talk-to-3-people support quotes = Wilmer R., Practice Administrator, Mar 19 2026; ShiftWizard "website is slow and takes forever" = Jacob G., RN, Jul 18 2024, 1-star "Terrible system"; Deputy 12-month lock-in ($57/$572) = "Paul", AU, Trustpilot Apr 8 2026 + aggregate 2.8/5, 124 reviews, 24% 1-star. REMAINING: G2 ShiftWizard implementation-time field — G2 hard-blocks by device fingerprint; founder to open g2.com/products/shiftwizard/reviews manually. | Claude |
 | 2026-08-06 | OnShift ownership RESOLVED for best-nurse-scheduling-app publish: ShiftKey acquired OnShift (2022 investment, full integration July 2023, shiftkey.com news + Mergr/PitchBook cross-check). Approved: "now part of ShiftKey"; the draft had claimed "now part of Workday" (wrong, removed). | Claude |
 | 2026-07-15 | Re-verified 7 vendors' ratings for the best-per-diem-nurse-scheduling-software post (Capterra page-verified, G2 search-indicated). Aladtec Capterra 4.6/17 (ID 248403) / G2 4.5/94; NurseGrid Capterra 4.2/13 (ID 254829) / G2 4.6/5; SmartLinx Capterra 4.5/6 (ID 154002) / G2 3.8/11; QGenda Capterra 4.2/68 (ID 90628) / G2 4.6/164; OnShift Capterra 3.9/14 (ID 122212) / G2 4.5/40; Deputy Capterra 4.6/773 (ID 167811) / G2 4.6/666; UKG Pro Capterra 4.3/727 (ID 480) / G2 4.3/2,167. Existing sections (Aladtec, NurseGrid, QGenda, Deputy) updated inline; SmartLinx/OnShift/UKG used in-post with verbatim quotes from their Capterra pages (SmartLinx Daniel C.; UKG Swaminathan S.; OnShift ratings-only, no dossier quote) — full standalone sections for those three are a TODO. G2 counts approximate (403 on fetch); watch seller-aggregate vs product-page figures (Aladtec/UKG). |
 | 2026-07-15 | Refreshed Homebase ratings (dossier had tipped to 61 days). Capterra page-verified 4.6/5, 1,151 reviews (was 1,147; rating unchanged) via live product-page fetch. G2 could not be page-verified (403 on all g2.com fetches); its public listing now shows 539 reviews (title-confirmed) and a 4.6/5 rating (search summary), up from the 2026-04-30 page reading of 4.4/5 (271) — flagged as search-indicated in the section. Bumped dossierVerifiedDate in competitors.json to 2026-07-15. The two Amber B. + Angela P. Capterra quotes carried forward from the 2026-05-15 verbatim check (Capterra reviews persist; not re-fetched from pagination). |
