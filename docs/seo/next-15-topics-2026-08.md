@@ -60,6 +60,58 @@ NEVER USE (fabricated, per dossier): OnShift "4 employees...overkill"; Shiftboar
 - 5 quote candidates need a manual page-open to become dossier-grade (Capterra/Trustpilot block tooling): NurseGrid "Please Bring back the mobile app" (p/254829), QGenda pricing quote (p/90628), ShiftWizard slowness (p/178376), Deputy 12-month-commitment complaints (Trustpilot), ShiftWizard "3 months" G2 data point. ~15 min total; unlocks #1, #2, and the lock-in bench topic.
 - OnShift Capterra sub-score discrepancy (3.6 customer-service vs dossier 3.9 overall) — reconcile at next OnShift touch.
 
+## Process adoptions (2026-08-09, from founder-shared playbooks)
+
+Assessed against the existing stack; only genuine deltas listed. Already-running
+pieces (BOFU keyword classes, alternatives/vs pages, CMS-API publishing via git,
+IndexNow+GSC on publish, citation-gap list as content calendar, review mining)
+are not re-adopted.
+
+1. **AI-phrasing search volumes in research briefs.** Size question-form topics
+   with DataForSEO `ai_keyword_data/keywords_search_volume` (how people phrase
+   queries INSIDE AI tools) alongside Google volumes. Apply to charge-nurse,
+   automation-abandonment, and acuity topics before drafting.
+2. **Founder voice-memo POV bank.** Pradeep records 20-30 min of unscripted
+   talking per theme (category opinions, differentiation, what CAH admins get
+   wrong, Apollo ops observations); transcribe; writers quote from it. This is
+   the cheapest attack on our commodity-framework weakness (firsthand + POV
+   dimensions) and produces quotes no competitor can imitate. Suggested first
+   three themes: why scheduling breaks at small hospitals, what vendors get
+   wrong about rural buyers, what "AI scheduling" should never do.
+3. **Citation-shape autopsy** (from the PromptWatch thread): pull live
+   llm_responses for the 4 gap prompts where competitors are cited and we are
+   absent; fetch the cited URLs; diff their shape against our money pages;
+   produce an edit list for /nurse-scheduling-software + qgenda-alternatives.
+   One session, ~$1-2 API spend. PromptWatch itself NOT adopted (DataForSEO
+   covers it); crawler analytics via founder's paid Cloudflare instead.
+4. **GA4 lead-event attribution.** Mark the cal.com book-a-call click as a GA4
+   key event, then report landing page vs lead event to learn which posts
+   produce calls, not just sessions. Founder: ~10 min in GA4 UI (event
+   creation is not exposed via our read MCP).
+5. **30-day content refresh loop** — already accepted-in-principle for Sept
+   (refresh rotation, real updates only); the added mechanic worth keeping:
+   refresh decisions driven by page-1 content-gap diff + GSC query data, never
+   date-bumping.
+6. **CTA placement experiment (founder-gated).** The 25/50/75% CTA-injection
+   pattern conflicts with our one-CTA house style; if tested at all, test a
+   single mid-article contextual CTA on 2 high-traffic posts and compare
+   Clarity + GA4 lead events. Not adopted by default.
+7. **Review-to-FEATURE loop (product-side, not content).** The 1-star theme
+   bank above doubles as feature validation: manager-app-removed, no-audit-trail,
+   and implementation-months are product positioning ammunition already shipped;
+   forward the theme bank to the product owner for roadmap weighing.
+8. **Reddit/X/LinkedIn sharing** — LinkedIn/X distribution stays founder cadence;
+   the no-vendor-link-drops-in-nursing-communities rule stands.
+9. **X article (borjafat, "10 Claude SEO Link-Building Tactics", Aug 2026)** —
+   body is login-walled; NOT yet line-by-line assessed. Revisit with Playwright
+   or founder-pasted text; genre overlaps our quotable-asset + unlinked-mention
+   lanes, so expect partial coverage already.
+
+**Bench additions from the "X for Y" audit:** the pattern is mostly covered
+(small hospitals, Texas, per diem, CAHs all live). One unsized candidate:
+"nurse scheduling software for rural hospitals" (distinct phrasing from the
+small-hospital post; size with AI-phrasing volumes before committing).
+
 ## Standing notes
 
 - Reddit/r/nursing has no attributable threads for QGenda, Smart Square, or Kronos (third consecutive null pass) — stop budgeting research time there for these vendors.
