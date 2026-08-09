@@ -24,6 +24,15 @@ export const IMAGE_FAMILIES = [
   'scheduling-board',
   'night-shift',
   'ward-team',
+  'compliance',
+  'manual-scheduling',
+  'one-on-one',
+  'payroll-desk',
+  'phone-tree',
+  'rural-texas',
+  'swap-calendar',
+  'team-huddle',
+  'ward-quiet',
 ];
 
 /** Family of a pool image id, or null when unknown / untagged. */

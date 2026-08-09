@@ -808,5 +808,213 @@
     "description": "Nurse at a workstation-on-wheels laptop talking with a colleague holding charts at a nurses station",
     "family": "ward-team",
     "topics": ["charting", "admin work", "workstation", "collaboration", "documentation"]
+  },
+  {
+    "id": "compliance-01",
+    "src": "~/assets/images/pool/compliance-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Official policy and procedures binder on a desk with reading glasses and stethoscope",
+    "family": "compliance",
+    "topics": ["compliance", "policy", "CMS", "documentation"]
+  },
+  {
+    "id": "compliance-02",
+    "src": "~/assets/images/pool/compliance-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Senior physician reviewing a policy binder at a desk; small invented name badge visible, prefer 01 or 03",
+    "family": "compliance",
+    "topics": ["compliance", "policy", "review", "leadership"]
+  },
+  {
+    "id": "compliance-03",
+    "src": "~/assets/images/pool/compliance-03.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Close-up of a hand with fountain pen annotating a policy and procedures binder",
+    "family": "compliance",
+    "topics": ["compliance", "policy", "annotation", "audit"]
+  },
+  {
+    "id": "manual-scheduling-01",
+    "src": "~/assets/images/pool/manual-scheduling-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Hand with highlighter marking a printed nurse shift schedule on a clipboard in a corridor; invented roster names and a 2024 date visible",
+    "family": "manual-scheduling",
+    "topics": ["manual scheduling", "spreadsheet era", "paper schedule", "highlighter"]
+  },
+  {
+    "id": "manual-scheduling-02",
+    "src": "~/assets/images/pool/manual-scheduling-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Over-the-shoulder view of a manager highlighting a printed nurse shift schedule at a desk; invented names visible",
+    "family": "manual-scheduling",
+    "topics": ["manual scheduling", "paper schedule", "nurse manager", "desk work"]
+  },
+  {
+    "id": "one-on-one-01",
+    "src": "~/assets/images/pool/one-on-one-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Nurse and administrator in a one-on-one conversation in a small office",
+    "family": "one-on-one",
+    "topics": ["retention", "feedback", "difficult conversation", "management"]
+  },
+  {
+    "id": "one-on-one-02",
+    "src": "~/assets/images/pool/one-on-one-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Manager and nurse talking across a desk, warm office light",
+    "family": "one-on-one",
+    "topics": ["one-on-one", "check-in", "burnout conversation"]
+  },
+  {
+    "id": "one-on-one-03",
+    "src": "~/assets/images/pool/one-on-one-03.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Nurse and colleague talking at a table by a brick wall and window",
+    "family": "one-on-one",
+    "topics": ["mentoring", "conversation", "informal meeting"]
+  },
+  {
+    "id": "payroll-desk-01",
+    "src": "~/assets/images/pool/payroll-desk-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Color-coded printed staffing grid with calculator on a desk, overhead shot",
+    "family": "payroll-desk",
+    "topics": ["payroll", "overtime", "staffing grid", "cost math"]
+  },
+  {
+    "id": "payroll-desk-02",
+    "src": "~/assets/images/pool/payroll-desk-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Handwritten nurse shift log on clipboard with calculator by a window; invented names and 2024 date visible",
+    "family": "payroll-desk",
+    "topics": ["timesheets", "hours tracking", "overtime", "payroll"]
+  },
+  {
+    "id": "payroll-desk-03",
+    "src": "~/assets/images/pool/payroll-desk-03.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Nurse shift log and calculator on a wooden desk with office supplies; invented names visible",
+    "family": "payroll-desk",
+    "topics": ["timesheets", "payroll", "hours", "audit"]
+  },
+  {
+    "id": "phone-tree-01",
+    "src": "~/assets/images/pool/phone-tree-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Desk phone beside a printed nurse contact list at dusk",
+    "family": "phone-tree",
+    "topics": ["callout", "phone tree", "contact list", "after hours"]
+  },
+  {
+    "id": "phone-tree-02",
+    "src": "~/assets/images/pool/phone-tree-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Desk phone off the hook with nurse scheduling contact list, stethoscope, clock and coffee",
+    "family": "phone-tree",
+    "topics": ["callout", "escalation", "contact list", "night"]
+  },
+  {
+    "id": "phone-tree-03",
+    "src": "~/assets/images/pool/phone-tree-03.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Dark office at night with desk phone and contact list under a lamp",
+    "family": "phone-tree",
+    "topics": ["callout", "2 AM", "night", "phone tree"]
+  },
+  {
+    "id": "rural-texas-01",
+    "src": "~/assets/images/pool/rural-texas-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Rural two-lane road toward a small town water tower at sunset, wide sky",
+    "family": "rural-texas",
+    "topics": ["rural", "Texas", "small town", "access"]
+  },
+  {
+    "id": "rural-texas-02",
+    "src": "~/assets/images/pool/rural-texas-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Rural road with pickup truck and water tower under big clouds",
+    "family": "rural-texas",
+    "topics": ["rural", "Texas", "small town", "distance"]
+  },
+  {
+    "id": "swap-calendar-01",
+    "src": "~/assets/images/pool/swap-calendar-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Hand moving a sticky note on a paper wall calendar dense with handwritten personal items; 2024 date visible",
+    "family": "swap-calendar",
+    "topics": ["PTO", "requests", "calendar", "personal schedule"]
+  },
+  {
+    "id": "swap-calendar-02",
+    "src": "~/assets/images/pool/swap-calendar-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Nurse placing color-coded sticky notes on a whiteboard month grid with an RN LPN CNA legend",
+    "family": "swap-calendar",
+    "topics": ["shift swap", "self-scheduling", "whiteboard", "month view"]
+  },
+  {
+    "id": "team-huddle-01",
+    "src": "~/assets/images/pool/team-huddle-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Four staff in scrubs having coffee around a break-room table at dusk",
+    "family": "team-huddle",
+    "topics": ["huddle", "break room", "team", "shift change"]
+  },
+  {
+    "id": "team-huddle-02",
+    "src": "~/assets/images/pool/team-huddle-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Physician talking with three nurses around a conference table with books and mugs",
+    "family": "team-huddle",
+    "topics": ["education", "huddle", "meeting", "interdisciplinary"]
+  },
+  {
+    "id": "team-huddle-03",
+    "src": "~/assets/images/pool/team-huddle-03.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Evening boardroom meeting with city skyline view",
+    "family": "team-huddle",
+    "topics": ["leadership", "board", "meeting", "administration"]
+  },
+  {
+    "id": "team-huddle-04",
+    "src": "~/assets/images/pool/team-huddle-04.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Care team around a courtyard table reviewing a dashboard on a laptop",
+    "family": "team-huddle",
+    "topics": ["team", "dashboard", "collaboration", "outdoors"]
+  },
+  {
+    "id": "ward-quiet-01",
+    "src": "~/assets/images/pool/ward-quiet-01.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Empty patient room with made bed, armchair and garden window, morning light",
+    "family": "ward-quiet",
+    "topics": ["low census", "patient room", "quiet ward", "capacity"]
+  },
+  {
+    "id": "ward-quiet-02",
+    "src": "~/assets/images/pool/ward-quiet-02.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Bright empty patient room in pale blue with orchid and armchair",
+    "family": "ward-quiet",
+    "topics": ["patient room", "empty bed", "census", "calm"]
+  },
+  {
+    "id": "ward-quiet-03",
+    "src": "~/assets/images/pool/ward-quiet-03.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Warm-toned empty patient room with wood paneling and evening light",
+    "family": "ward-quiet",
+    "topics": ["patient room", "quiet", "evening", "bed capacity"]
+  },
+  {
+    "id": "ward-quiet-04",
+    "src": "~/assets/images/pool/ward-quiet-04.webp",
+    "source": "ai-generated (nano banana), added 2026-08-09",
+    "description": "Empty corner patient room with wingback chair and flowers",
+    "family": "ward-quiet",
+    "topics": ["patient room", "swing bed", "quiet ward"]
   }
 ]
