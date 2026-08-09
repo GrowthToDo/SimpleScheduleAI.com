@@ -102,10 +102,38 @@ are not re-adopted.
    forward the theme bank to the product owner for roadmap weighing.
 8. **Reddit/X/LinkedIn sharing** — LinkedIn/X distribution stays founder cadence;
    the no-vendor-link-drops-in-nursing-communities rule stands.
-9. **X article (borjafat, "10 Claude SEO Link-Building Tactics", Aug 2026)** —
-   body is login-walled; NOT yet line-by-line assessed. Revisit with Playwright
-   or founder-pasted text; genre overlaps our quotable-asset + unlinked-mention
-   lanes, so expect partial coverage already.
+9. **X article (borjafat, "10 Claude SEO Link-Building Tactics", Aug 2026) —
+   READ IN FULL via Playwright 2026-08-09.** Scorecard vs our stack:
+   - Already running (5 of 10): reverse-engineering competitor backlinks with
+     earned-pattern classification (our T2.3 + QGenda pull), the journalist
+     statistics-page magnet (our stats page is exactly his tactic 5 format),
+     HARO/journalist answering with the stats page as evidence (tactics 5+8
+     combo = our Qwoted/Connectively loop), listicle-gap pitches (P4 T1.3).
+   - ADOPT (3 new mechanics):
+     a. **AI-cited listicle targeting.** Before pitching listicles, check which
+        ones LLMs actually cite. We already HAVE this data: our citation-gap
+        run shows the exact domains cited for "nurse scheduling software"
+        (snapschedule.com, shiftboard.com, reddit) — those cited pages ARE the
+        priority outreach targets, worth 10x a random listicle. Wire the
+        llm-citations output into the P4 target list.
+     b. **Dead/outdated competitor-page replacement play.** We have a live
+        trigger in our own sitemap data: onshift.com dropped 35 pages after
+        the ShiftKey integration, and Aladtec was absorbed into TCP. Pages
+        that linked to those dead/moved resources are replacement-pitch
+        targets. Method: DataForSEO backlinks on the dead URLs, build the
+        "what happened to OnShift / where Aladtec lives now" replacement
+        resource, contact linkers. First genuinely new backlink play since P2.
+     c. **Unlinked-mention monitoring** in the monthly audit: search for brand
+        + founder-name + proprietary-stat mentions lacking links, ask for
+        attribution (the completion-of-citation framing, never link-begging).
+   - Bench (creative-heavy, optional): the 60-second article-trailer video for
+     an AI-cited listicle author (we have the Remotion pipeline), and the
+     ask-first missing-visual infographic (nano banana + one-email cost).
+   - REJECT: tactic 1, the Distribb "Exchange Only" reciprocal-credit link
+     network — an automated link exchange scheme; the article itself concedes
+     Google warns against exactly this. Violates our no-reciprocity guardrail.
+     The article is ultimately a funnel for that product; the other 9 tactics
+     are sound mechanics independent of it.
 
 **Bench additions from the "X for Y" audit:** the pattern is mostly covered
 (small hospitals, Texas, per diem, CAHs all live). One unsized candidate:
