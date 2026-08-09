@@ -27,6 +27,25 @@ State lives in `.publish/<slug>.json`, not in this conversation. FIRST command o
 9. **Commit + push**: flip `draft: false`, prettier the changed files, commit. The pre-commit hook re-runs the gate and blocks if anything is red or stale. Push (deploy is Netlify-on-push).
 10. **Post-publish**: submit IndexNow (Bing) + GSC sitemap; record `--set indexnow=DONE` and `--set gsc-sitemap=DONE` (non-blocking). Verify the live URL returns 200.
 
+## Queue replenishment ritual (standing, founder 2026-08-09)
+
+When the draft queue empties, the next topic lot is identified by re-running the
+citation-shape loop, not by brainstorming:
+
+1. Re-run live `llm_responses` probes (DataForSEO, ~$0.12/probe) on the tracked
+   money prompts across ChatGPT/Perplexity/Gemini/Claude, plus the citation-gap
+   instrument (`npm run llm-citations`).
+2. Diff against the PRIOR probe run first: did our URLs enter any citations
+   array since the last content lot? The citations array, not rankings, is the
+   scoreboard for the previous lot.
+3. Prompts where competitors are cited and we are absent, plus the shape diff of
+   the newly cited pages, seed the next topic lot. Method reference:
+   `docs/seo/citation-shape-autopsy-2026-08.md`; first output of this loop:
+   `docs/seo/next-15-topics-2026-08.md`.
+4. Pair with the standard inputs (keyword expansion, GSC impressions, review
+   mining themes, competitor sitemap DIFFLOG) and present the lot to the founder
+   as a list only; publishes remain one-at-a-time on explicit instruction.
+
 ## Ground rules carried over
 
 - Verify subagent output against the diff, never its self-report.
