@@ -275,7 +275,14 @@ checking which category the existing profile sits in.
         .edu links pointing at M7's homepage are the only lead worth a second
         look next quarter (identify which universities and why).
 
-- [ ] **T2.4 Founder podcast circuit** (added 2026-08-10, founder-powered, free).
+- [ ] **T2.4 Founder podcast circuit** — **PARKED 2026-08-10 (founder): not until
+      we have more clients/users.** The reasoning is sound: a founder with no
+      customers has no story a nurse-audience show wants, and burning a first
+      appearance on "we are pre-launch" spends the introduction for nothing.
+      Unpark trigger: first named customer willing to be referenced, or first
+      cycle of real scheduling data we are allowed to talk about. Everything
+      below stays as written for that day.
+      (added 2026-08-10, founder-powered, free).
       Copied from In-House Health, where it visibly works: three of their
       "blog posts" are podcast appearances (Nurse Converse — a Nurse.org property,
       Nurse Rosa's Insights, The Beat at HLTH), and their LLM citations trace to
@@ -293,7 +300,13 @@ checking which category the existing profile sits in.
         HIStalk-adjacent health-IT shows.
       - Sequencing: this outranks further content-shape work. Our shape advantage
         is already real; the gap the autopsy measured is distribution.
-- [ ] **T2.5 Nurse-leader interview series** (added 2026-08-10, founder-powered).
+- [ ] **T2.5 Nurse-leader interview series** — **PARKED 2026-08-10 (founder):
+      same trigger as T2.4, not until we have more clients/users.** Note for the
+      unpark: this one is arguably reachable earlier than the podcast lane, since
+      inviting a nurse leader to talk about their own scheduling reality does not
+      require us to have customers. Worth re-raising once the first customer
+      conversation is underway rather than waiting for a signed one.
+      (added 2026-08-10, founder-powered).
       Also copied from In-House Health ("Insightful Talks with…", "Tech Talks
       with…"). Named external nurse leaders, published as a recurring series.
       Solves three problems at once: it is the only realistic source of firsthand
