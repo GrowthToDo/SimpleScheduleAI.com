@@ -7,7 +7,7 @@ title: 'What Is Clinical Scheduling? How It Differs From Nurse Scheduling'
 excerpt: >
   Clinical scheduling covers every licensed and allied health role a hospital has to staff,
   not just nursing. A small rural hospital runs five of these staffing streams at once, under
-  two federal rules that never pause, and usually with one person accountable for all of it.
+  two federal rules that never pause, with no float pool to absorb a gap in any of them.
 image: '~/assets/images/pool/team-huddle-02.webp'
 imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
@@ -25,7 +25,7 @@ metadata:
 
 - Clinical scheduling is the whole job: assigning qualified clinical staff, nurses, providers, and allied health, to the shifts and on-call rotations that keep a hospital covered. Nurse scheduling is one part of it
 - The distinction is operational, not academic. Each staff category carries its own coverage rules, credential requirements, and on-call structure, so a tool built for one does not transfer to the others
-- A small rural hospital typically runs five scheduling streams at once, and usually one person owns all five
+- A small rural hospital runs five scheduling streams at once with overlapping owners and no float pool, so a gap in one stream lands on someone already covering another
 - Two federal requirements sit underneath the whole thing: a licensed nurse on duty whenever there is an inpatient, and emergency services available 24 hours a day
 - The workable sequence is to stabilize nursing first, then layer on provider and ancillary coordination. Trying to solve all five streams with one new system at once is how implementations fail
 
@@ -42,7 +42,7 @@ metadata:
 
 Clinical scheduling is the process of assigning qualified clinical staff to the shifts and on-call rotations that keep patient care covered. It spans nurses, providers, and allied health roles. Nurse scheduling is the part of that job covering nursing staff only.
 
-The distinction sounds academic until you sit at the desk where it lands. At a [critical access hospital](/critical-access-hospital-scheduling), one nurse manager often builds the nursing grid, coordinates provider on-call, keeps lab and radiology covered, and solves every callout across all of it. The software she was sold usually handles the first of those four.
+The distinction sounds academic until you sit at the desk where it lands. At a [critical access hospital](/critical-access-hospital-scheduling), the nurse manager owns the nursing grid and every nursing callout that follows it. Provider on-call usually belongs to the medical director or an administrator, and the ancillary departments have their own leads. What makes it hard is that the pools are small, the roles overlap, and no float pool exists to absorb a gap in any of them. The scheduling system the hospital bought typically covers one of the five streams.
 
 ## What Is Clinical Scheduling?
 
@@ -67,7 +67,7 @@ The reason the distinction matters is that the rules differ by category.
 
 Each column carries its own compliance framework and its own coverage logic. A system that models nursing shifts well may have no concept of a contracted provider's on-call week. That is why hospitals often end up with a scheduling tool and a separate spreadsheet, and why the person who owns both is usually the nurse manager.
 
-The overlap is also where the hours go. When a nurse manager says scheduling takes 8 to 12 hours a week, that time is rarely just building the nursing grid. It includes chasing the on-call provider list and covering a lab tech absence, as our [breakdown of where those hours actually go](/blog/nurse-manager-scheduling-time-breakdown) shows.
+The overlap is also where the hours go. When a nurse manager says scheduling takes 8 to 12 hours a week, that time is rarely just building the nursing grid. Most of it is the work around the grid: swaps, callout calls, and whatever coordination spills over when another stream comes up short. Our [breakdown of where those hours actually go](/blog/nurse-manager-scheduling-time-breakdown) splits them out.
 
 ## What Scheduling Streams Does a Small Hospital Actually Run?
 
