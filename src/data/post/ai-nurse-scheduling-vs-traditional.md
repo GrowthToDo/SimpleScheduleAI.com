@@ -33,7 +33,7 @@ This guide separates the genuine workflow changes from the marketing claims, wri
 - AI scheduling, whether delivered as software or as a managed service, applies overtime, credential, and coverage rules automatically, generates constraint-aware schedule options, and produces callout replacement lists without manual calculation.
 - The real AI advantage is not abstract "optimization." It is three concrete capabilities: consistent constraint enforcement, overtime-aware callout ranking, and continuous fairness tracking across the rotation.
 - AI scheduling does not replace clinical judgment. It removes the computational rule-checking so the manager spends her time on decisions that actually require nursing knowledge.
-- SimpleScheduleAI pairs constraint-aware AI scheduling with a managed service model, delivering three schedule options for a Critical Access Hospital within 48 hours of roster submission, with no software for the nurse manager to install or configure.
+- SimpleScheduleAI pairs constraint-aware AI scheduling with a managed service model, delivering three schedule options for a Critical Access Hospital inside two weeks of roster submission, with no software for the nurse manager to install or configure.
 - The switch pays back fastest at hospitals where the nurse manager also takes clinical shifts and has little or no protected administrative time each week.
 
 ## Table of Contents
@@ -321,7 +321,7 @@ One honest limitation: a managed AI scheduling service is not the right fit for 
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-default dark:text-blue-200">AI scheduling built for Critical Access Hospitals</p>
-    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI applies constraint-aware scheduling to CAH nursing rosters, delivering three schedule options in 48 hours and ranked callout replacements in under 2 minutes. Built to remove the computational scheduling burden from nurse managers who also take clinical shifts.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI applies constraint-aware scheduling to CAH nursing rosters, delivering three schedule options inside two weeks and ranked callout replacements in under 2 minutes. Built to remove the computational scheduling burden from nurse managers who also take clinical shifts.</p>
   </div>
   <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary px-6 py-3 text-white font-semibold transition-colors dark:bg-primary dark:hover:bg-primary/50">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
@@ -347,7 +347,7 @@ No. AI scheduling handles the computational rule-checking. The nurse manager kee
 
 **How long does it take to implement AI nurse scheduling?**
 
-It depends on the model. AI scheduling software typically needs 4 to 14 weeks of configuration before it accurately reflects the hospital's rules. A managed service like SimpleScheduleAI needs only an Excel roster and usually delivers the first schedule within 48 hours of onboarding. The gap reflects who does the configuration work: hospital staff in the software model, the service in the managed model.
+It depends on the model. AI scheduling software typically needs 4 to 14 weeks of configuration before it accurately reflects the hospital's rules. A managed service like SimpleScheduleAI needs only an Excel roster and usually delivers the first schedule inside two weeks, after 3 to 5 business days of onboarding. The gap reflects who does the configuration work: hospital staff in the software model, the service in the managed model.
 
 ---
 

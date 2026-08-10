@@ -167,7 +167,7 @@ These requirements can be met by purpose-built tools at a fraction of UKG's cost
         <td class="py-2 px-3 font-semibold bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Launch time</td>
         <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">2-4 weeks</td>
         <td class="py-2 px-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">3-4 months</td>
-        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">48 hours</td>
+        <td class="py-2 px-3 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-slate-200 dark:border-slate-700 align-top">Inside two weeks</td>
         <td class="py-2 px-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 border border-slate-200 dark:border-slate-700 align-top">6-12 months</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
@@ -218,7 +218,7 @@ Best for: Hospitals (50-200 beds) with an IT team available to configure and mai
 
 ## SimpleScheduleAI
 
-SimpleScheduleAI is an AI-native nurse scheduling service built specifically for critical access hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it and delivers it within 48 hours, and ongoing configuration maintenance is handled by the service team.
+SimpleScheduleAI is an AI-native nurse scheduling service built specifically for critical access hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it and delivers it inside two weeks, and ongoing configuration maintenance is handled by the service team.
 
 FLSA overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults. The nurse manager reviews and approves schedules. Weekly scheduling time drops to 1-2 hours.
 
@@ -240,7 +240,7 @@ For a side-by-side comparison of the practical alternatives, see our [UKG altern
 1. **Total up the true UKG cost for your facility.** License fee, per-module add-ons, IT support contract, HR coordinator time on UKG maintenance, and nurse manager hours on day-to-day operation. The total is typically 2 to 3 times the headline subscription. That number is the floor a replacement must clear.
 2. **Find the UKG contract termination notice clause.** Note the auto-renewal date and the notice deadline. Most administrators discover the notice deadline is 60 to 90 days earlier than the contract end date, and missing it auto-renews for another full term.
 3. **Audit which UKG modules you are actually using and which you are paying for.** Identify the gap between paid features and used features. Most CAHs on UKG use 20 to 30 percent of the platform capacity. The other 70 percent is paid complexity with no operational return.
-4. **Score three replacement candidates by operational fit.** Setup time in days not weeks. FLSA overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
+4. **Score three replacement candidates by operational fit.** Setup time in weeks, not months. FLSA overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
 5. **Ask SimpleScheduleAI to build a schedule if you are a Texas Critical Access Hospital.** Run the actual scheduling workflow against your roster before submitting UKG notice. Start at [simplescheduleai.com/how-it-works](/how-it-works).
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">

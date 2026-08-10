@@ -186,7 +186,7 @@ Small hospitals exiting UKG often make the same mistake in selecting a replaceme
 
 The evaluation criteria that matter most for a CAH replacement:
 
-- **Setup time:** Measured in days, not weeks. Any system that requires IT involvement to deploy is wrong for a CAH without an IT department.
+- **Setup time:** Measured in weeks, not months. Any system that requires IT involvement to deploy is wrong for a CAH without an IT department.
 - **Texas compliance built in:** Overtime rules, nursing board regulations, and CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)(c) staffing documentation requirements should be preconfigured, not customer-configured.
 - **Callout automation:** Ranked replacement shortlist available instantly when a callout occurs. This is the highest-value feature for reducing nurse manager time.
 - **No EHR integration requirement:** Systems that require connecting to your Epic or Cerner instance add 2-4 months and significant cost to the implementation. A CAH that schedules independently of the EHR does not need this.
@@ -208,7 +208,7 @@ For [Critical Access Hospital administrators](/critical-access-hospital-scheduli
 1. **Pull your UKG contract and find the termination notice clause.** Note the auto-renewal date and the notice deadline. Most administrators discover the notice deadline is 60-90 days earlier than the contract end date, and missing it auto-renews the contract for another full term.
 2. **Document your actual UKG usage hours per week.** Include the nurse manager's time, any HR or payroll touchpoints, and IT or vendor-support time. The total weekly cost in labor is usually 2-3× the subscription cost; that number is the ROI floor any replacement must clear.
 3. **Request a full data export from UKG while you are still under contract.** Roster with certifications, 12 months of schedule history, callout records, and overtime by nurse. UKG will provide it but the format is proprietary and requires cleaning. Plan 5-10 hours of data work.
-4. **Identify your three replacement candidates by operational fit, not feature list.** Score each on: setup time in days not weeks, FLSA overtime and CMS §485.635 built in by default, callout shortlist generated automatically, no IT integration required, and willingness to pilot before contract.
+4. **Identify your three replacement candidates by operational fit, not feature list.** Score each on: setup time in weeks, not months, FLSA overtime and CMS §485.635 built in by default, callout shortlist generated automatically, no IT integration required, and willingness to pilot before contract.
 5. **Ask SimpleScheduleAI to build a schedule if you are a Texas Critical Access Hospital.** Run the actual scheduling workflow against your roster before submitting UKG notice, or watch the AI build a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator). Start at [simplescheduleai.com/how-it-works](/how-it-works).
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">

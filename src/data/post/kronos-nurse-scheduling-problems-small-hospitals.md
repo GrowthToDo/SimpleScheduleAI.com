@@ -130,7 +130,7 @@ For practical replacements at CAH scale, see [UKG Alternatives for Critical Acce
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">A scheduling tool sized for a 25-bed hospital, not a 200-bed system.</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI is purpose-built for Texas Critical Access Hospitals. No IT setup, no platform to configure, operational in days.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI is purpose-built for Texas Critical Access Hospitals. No IT setup, no platform to configure, operational inside two weeks.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

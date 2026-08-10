@@ -78,7 +78,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Implementation time</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">4-6 weeks (configuration + training)</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">48 hours from Excel staff roster upload</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Inside two weeks from Excel staff roster upload (3 to 5 business days of onboarding)</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Callout OT ranking</td>
@@ -168,7 +168,7 @@ A managed scheduling service is not scheduling software with extra support. It i
 With SimpleScheduleAI, the process works like this:
 
 1. The nurse manager shares the staff roster with SimpleScheduleAI: names, credentials, availability, and any scheduling constraints. A standard Excel file is all that is needed to start.
-2. The AI builds the first schedule within 48 hours, applying CMS documentation requirements, FLSA overtime thresholds, and credential-based shift assignments; the SimpleScheduleAI team checks it before it reaches the nurse manager.
+2. The AI builds the first schedule inside two weeks, applying CMS documentation requirements, FLSA overtime thresholds, and credential-based shift assignments; the SimpleScheduleAI team checks it before it reaches the nurse manager.
 3. The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff.
 4. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a credential gap. They call from the top of the list.
 5. As staff join or leave, credentials change, or availability patterns shift, the nurse manager sends the update and the SimpleScheduleAI team handles the rest. The nurse manager does not administer a system. They manage a roster.
@@ -183,9 +183,9 @@ Getting Aladtec operational for a hospital requires configuring the system for t
 
 That timeline includes: initial setup calls, data entry of staff profiles, configuration of scheduling rules, parallel running with the existing system (usually Excel), and training for staff who need to submit availability or request time off through the new system.
 
-SimpleScheduleAI starts with a roster handoff. Because the SimpleScheduleAI team handles all configuration, the nurse manager does not need to learn a system before it becomes useful. The first schedule arrives within 48 hours.
+SimpleScheduleAI starts with a roster handoff. Because the SimpleScheduleAI team handles all configuration, the nurse manager does not need to learn a system before it becomes useful. The first schedule arrives inside two weeks.
 
-For a CAH that has been managing on spreadsheets for years, the difference between "go live in 48 hours" and "go live in 6 weeks" is meaningful. Every week of parallel running with the old system is a week the nurse manager is managing two processes at once.
+For a CAH that has been managing on spreadsheets for years, the difference between "first schedule inside two weeks" and "go live in 6 weeks" is meaningful. Every week of parallel running with the old system is a week the nurse manager is managing two processes at once.
 
 ## What Weekly Time Does Each Model Cost the Nurse Manager?
 
@@ -434,7 +434,7 @@ The decision between self-serve scheduling software and a managed service become
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">See What a Managed Service Costs for Your Critical Access Hospital</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds your first schedule within 48 hours of your staff roster upload. No configuration. No training. No IT. Just a schedule that arrives ready to approve.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds your first schedule inside two weeks of your staff roster upload, with onboarding taking 3 to 5 business days. No configuration. No training. No IT. Just a schedule that arrives ready to approve.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

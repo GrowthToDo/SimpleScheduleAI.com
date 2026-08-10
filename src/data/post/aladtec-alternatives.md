@@ -118,7 +118,7 @@ The table below covers setup time and public ratings across the six alternatives
         <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">3 to 5 business days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">TCP Scheduling</td>

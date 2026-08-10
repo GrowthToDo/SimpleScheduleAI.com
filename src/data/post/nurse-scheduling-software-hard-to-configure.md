@@ -96,7 +96,7 @@ With SimpleScheduleAI, the onboarding process is an Excel roster upload. The spe
 
 **Q: How long does it take to configure nurse scheduling software for a 25-bed hospital?**
 
-Mid-market healthcare platforms (TCP, ShiftWizard) typically take 2 to 4 weeks from contract to first operational schedule when the nurse manager handles configuration, assuming she can dedicate 5 to 10 hours per week to setup. Enterprise platforms (UKG, QGenda) run 4 to 12 weeks. Managed services take 3 to 5 days because the specialist handles configuration.
+Mid-market healthcare platforms (TCP, ShiftWizard) typically take 2 to 4 weeks from contract to first operational schedule when the nurse manager handles configuration, assuming she can dedicate 5 to 10 hours per week to setup. Enterprise platforms (UKG, QGenda) run 4 to 12 weeks. Managed services take 3 to 5 business days because the specialist handles configuration.
 
 **Q: Can we just import our existing schedule into scheduling software to skip the setup?**
 
@@ -113,7 +113,7 @@ Yes, because generic tools do not support credential requirements, CMS documenta
 ## Key Takeaways
 
 - Nurse scheduling software is hard to configure not because the interface is complex but because translating hospital-specific rules into software requires significant time and operational knowledge that the nurse manager must provide
-- Configuration typically requires 2 to 4 weeks for mid-market platforms and 4 to 12 weeks for enterprise platforms; managed services take 3 to 5 days because the specialist handles it
+- Configuration typically requires 2 to 4 weeks for mid-market platforms and 4 to 12 weeks for enterprise platforms; managed services take 3 to 5 business days because the specialist handles it
 - Configuration problems cluster in three phases: initial setup (incomplete rules), calibration (uncaptured edge cases), and ongoing maintenance (drifting data)
 - Misconfiguration causes overtime calculation errors, certification matching failures, and CMS documentation gaps
 - The options for reducing configuration burden are platforms with minimal requirements (generic tools, less compliance coverage), vendor implementation services (paid, offloads setup), or managed services (specialist handles configuration as part of the service)

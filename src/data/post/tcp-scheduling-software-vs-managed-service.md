@@ -146,7 +146,7 @@ A managed scheduling service removes the scheduling function from the nurse mana
 
 With SimpleScheduleAI:
 
-- A scheduling specialist completes initial setup from your staff roster within 3-5 days
+- A scheduling specialist completes initial setup from your staff roster within 3 to 5 business days
 - The AI builds draft schedules each cycle; a specialist checks overtime thresholds and credential requirements before presenting drafts
 - The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff
 - Callout coverage shortlists come pre-ranked by certification, overtime status, and availability
@@ -159,7 +159,7 @@ TCP TimeClock+ and a managed scheduling service are not direct substitutes. TCP 
 
 ## How Long Does Each Model Take to Implement?
 
-TCP TimeClock+ implementation timelines vary by configuration complexity and are not published. Contact TCP directly for a current estimate. Time-to-first-schedule includes setup calls, entering staff and payroll configurations, credential rules, and training on both the scheduling and time-tracking sides. A managed scheduling service takes 3-5 days because the specialist handles all configuration from the nurse manager's staff roster.
+TCP TimeClock+ implementation timelines vary by configuration complexity and are not published. Contact TCP directly for a current estimate. Time-to-first-schedule includes setup calls, entering staff and payroll configurations, credential rules, and training on both the scheduling and time-tracking sides. A managed scheduling service takes 3 to 5 business days because the specialist handles all configuration from the nurse manager's staff roster.
 
 ## What Weekly Time Does Each Model Cost the Nurse Manager?
 
@@ -193,7 +193,7 @@ A managed service focuses entirely on scheduling. For a nurse manager already st
 
 **Weekly burden.** The nurse manager using a managed service spends 1-2 hours per week on review and approval. A nurse manager operating any scheduling platform, including TCP TimeClock+, spends additional time on schedule building, callout coverage, and system maintenance on top of her time tracking approvals.
 
-**Setup speed for scheduling.** A managed scheduling service goes live in 3-5 days from your staff roster. TCP TimeClock+ implementation covers both time tracking and scheduling configuration, and typical timelines are not published.
+**Setup speed for scheduling.** A managed scheduling service onboards in 3 to 5 business days and delivers your first schedule inside two weeks from your staff roster. TCP TimeClock+ implementation covers both time tracking and scheduling configuration, and typical timelines are not published.
 
 **CMS documentation.** SimpleScheduleAI generates CMS-formatted staffing documentation automatically from each published schedule. TCP TimeClock+'s event logs cover time and attendance records; CAH-specific CMS documentation is not confirmed as a built-in feature.
 
@@ -220,7 +220,7 @@ The time comparison between TCP TimeClock+ and a managed service depends on whic
         <p class="text-sm font-bold text-white">SimpleScheduleAI (AI-native service)</p>
       </div>
       <div class="p-4 space-y-3 bg-white dark:bg-slate-900">
-        <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Setup time</span><span class="font-medium text-green-700 dark:text-green-400">3-5 days</span></div>
+        <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Setup time</span><span class="font-medium text-green-700 dark:text-green-400">3 to 5 business days</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Scheduling focus</span><span class="font-medium text-green-700 dark:text-green-400">Core function</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Callout coverage</span><span class="font-medium text-green-700 dark:text-green-400">Pre-ranked shortlist, all constraints applied</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>CMS §485.635 docs</span><span class="font-medium text-green-700 dark:text-green-400">Automatic, every schedule</span></div>
@@ -248,7 +248,7 @@ The decision comes down to what the hospital is trying to solve. TCP TimeClock+ 
 - Reducing the nurse manager's weekly scheduling burden is the primary goal
 - Your hospital needs CMS §485.635 compliance documentation generated automatically each cycle
 - Callout coverage is a recurring problem that manual constraint checking has not solved
-- You need to be operational in days, not weeks
+- You need to be operational in weeks, not months
 
 To model the cost comparison at your facility's actual numbers, run the [SimpleScheduleAI ROI calculator](/roi). It outputs annual labor cost recovered against managed-service fee, calculated at your nurse manager's loaded rate.
 
@@ -275,7 +275,7 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">See What a Managed Service Looks Like for Your Critical Access Hospital</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI goes live in 3-5 days from your staff roster. Your nurse manager reviews and approves; the scheduling work is done. Schedule a free assessment to compare it to what you have now.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI onboards in 3 to 5 business days and delivers your first schedule inside two weeks from your staff roster. Your nurse manager reviews and approves; the scheduling work is done. Schedule a free assessment to compare it to what you have now.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

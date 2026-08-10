@@ -158,7 +158,7 @@ For a critical access hospital, scheduling requirements differ from what QGenda 
         <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">3 to 5 business days</td>
       </tr>
     </tbody>
   </table>
@@ -172,7 +172,7 @@ The four strongest QGenda alternatives for a Critical Access Hospital are Simple
 
 <img src="/images/blog/qgenda-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [healthcare staff scheduling](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a specialist handles setup from an Excel roster upload (3-5 days), checks each draft, and maintains the system as the roster changes.
+SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [healthcare staff scheduling](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a specialist handles setup from an Excel roster upload (3 to 5 business days), checks each draft, and maintains the system as the roster changes.
 
 Texas compliance is built in as the default: [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
@@ -180,7 +180,7 @@ Texas compliance is built in as the default: [FLSA overtime thresholds](https://
 
 **Key advantages:**
 
-- Setup in 3-5 days from Excel roster upload; no IT involvement or implementation project
+- Setup in 3 to 5 business days from Excel roster upload; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, not a configured module the manager maintains
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
 - FLSA overtime threshold tracking and CMS CAH requirements are defaults, not configuration options
@@ -351,7 +351,7 @@ QGenda is worth keeping if:
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation timeline</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">6-12 weeks, needs IT</td>
-        <td class="py-3 text-primary">3-5 days, Excel upload</td>
+        <td class="py-3 text-primary">3 to 5 business days, Excel upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
@@ -408,7 +408,7 @@ QGenda is worth keeping if:
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Done Paying Enterprise Prices for a System Built for a 500-Bed Hospital?</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI is built specifically for critical access hospitals. It goes live in 3-5 days with zero IT involvement. FLSA, Texas Labor Code, and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI is built specifically for critical access hospitals. It onboards in 3 to 5 business days and delivers your first schedule inside two weeks with zero IT involvement. FLSA, Texas Labor Code, and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
@@ -449,7 +449,7 @@ QGenda's overall rating is high (4.6/5 on G2 across 164 reviews; 4.2/5 on Capter
 
 **How long does it take to switch from QGenda to a simpler scheduling tool?**
 
-Switching to another self-serve platform (TCP, ShiftWizard) takes 2-4 weeks for setup plus a transition period running parallel. Switching to a managed service takes 3-5 days for the specialist to onboard from your roster file. Check your QGenda contract terms before initiating any transition.
+Switching to another self-serve platform (TCP, ShiftWizard) takes 2-4 weeks for setup plus a transition period running parallel. Switching to a managed service takes 3 to 5 business days for the specialist to onboard from your roster file. Check your QGenda contract terms before initiating any transition.
 
 **Does SimpleScheduleAI handle physician scheduling like QGenda does?**
 

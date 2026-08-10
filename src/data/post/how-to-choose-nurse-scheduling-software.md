@@ -58,7 +58,7 @@ Enterprise platforms are genuinely capable for the organizations they target. Th
 
 Ask whether you can be live from an Excel roster upload in days, or whether going live means weeks of configuration, integrations, and a project plan. A small rural hospital rarely has a dedicated IT team. It usually has one person, or a contracted service, covering everything from the EHR to the printers. A tool that assumes a project team behind it will stall at that facility.
 
-Implementation burden is often the variable that decides adoption long before any feature does. A product that is live in days and needs no ongoing configuration beats one that can do more but takes three months to stand up, because the three-month tool frequently never gets fully deployed. Ask the vendor two direct questions: what is the fastest a hospital our size has gone live, and what work do we have to do ourselves to get there? If the honest answer involves mapping data feeds and scheduling IT time, price that effort in as part of the true cost.
+Implementation burden is often the variable that decides adoption long before any feature does. A product that is live in weeks and needs no ongoing configuration beats one that can do more but takes three months to stand up, because the three-month tool frequently never gets fully deployed. Ask the vendor two direct questions: what is the fastest a hospital our size has gone live, and what work do we have to do ourselves to get there? If the honest answer involves mapping data feeds and scheduling IT time, price that effort in as part of the true cost.
 
 ## How Does It Find a Qualified Callout Replacement, and How Fast?
 
@@ -125,7 +125,7 @@ Once you strip the market down, a small hospital is really choosing between thre
       </tr>
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Operated-for-you service (e.g., SimpleScheduleAI)</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">Excel roster upload; live in days</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">Excel roster upload; first schedule inside two weeks</td>
         <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">Ranked, overtime-aware replacement shortlist</td>
         <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">The service builds it; your manager approves</td>
         <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-600 dark:text-slate-300">FLSA threshold tracking and survey-ready staffing records by default</td>
@@ -139,7 +139,7 @@ Once you strip the market down, a small hospital is really choosing between thre
 
 ## How SimpleScheduleAI Fits This Checklist
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for the operated-for-you path above, and for the small-hospital reality this checklist scores against. You send your roster as an Excel file, you are live in days, and when a nurse calls out the team surfaces a ranked shortlist of qualified staff who are not already past their applicable FLSA overtime threshold. The service is currently focused on Texas, home to [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas). See [how it works](/how-it-works) for the full flow, or watch the AI build a schedule and a callout shortlist live in the [interactive simulator](/simulator).
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for the operated-for-you path above, and for the small-hospital reality this checklist scores against. You send your roster as an Excel file, your first schedule arrives inside two weeks, and when a nurse calls out the team surfaces a ranked shortlist of qualified staff who are not already past their applicable FLSA overtime threshold. The service is currently focused on Texas, home to [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas). See [how it works](/how-it-works) for the full flow, or watch the AI build a schedule and a callout shortlist live in the [interactive simulator](/simulator).
 
 One honest limitation: SimpleScheduleAI is not the right fit for a hospital that wants to configure and run scheduling in-house, for a large multi-site system, or for facilities outside Texas. If that describes you, a self-serve platform or an enterprise suite will serve you better, and we would rather say so up front.
 

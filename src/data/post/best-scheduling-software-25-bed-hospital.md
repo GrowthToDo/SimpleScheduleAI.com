@@ -178,7 +178,7 @@ The criteria for a 25-bed hospital are not a compressed version of what a 200-be
 
 <img src="/images/blog/best-scheduling-software-25-bed-hospital/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling dashboard for 25-bed critical access hospital" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is an AI-native nurse scheduling service designed from the start for 25-bed Critical Access Hospitals. The managed service model means a nurse manager uploads the roster via Excel and defines preferences and constraints; the AI builds three complete schedule drafts, our team checks them, and they arrive within 48 hours. She selects one, approves it, and the schedule is published. The entire administrative cycle takes under two hours per month.
+SimpleScheduleAI is an AI-native nurse scheduling service designed from the start for 25-bed Critical Access Hospitals. The managed service model means a nurse manager uploads the roster via Excel and defines preferences and constraints; the AI builds three complete schedule drafts, our team checks them, and they arrive inside two weeks. She selects one, approves it, and the schedule is published. The entire administrative cycle takes under two hours per month.
 
 **Best for:** Critical Access Hospitals at or below 25 beds with a nurse manager who also takes clinical shifts and cannot afford 8+ hours per week on scheduling overhead.
 
@@ -461,7 +461,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-default dark:text-slate-100">Built specifically for 25-bed Critical Access Hospitals</p>
-    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI reduces nurse scheduling from 8-12 hours per week to under 2 hours. Three draft options delivered in 48 hours. Callout shortlists in under 2 minutes. CMS documentation maintained automatically.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI reduces nurse scheduling from 8-12 hours per week to under 2 hours. Three draft options delivered inside two weeks. Callout shortlists in under 2 minutes. CMS documentation maintained automatically.</p>
   </div>
   <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>

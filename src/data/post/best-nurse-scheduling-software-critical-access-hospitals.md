@@ -57,7 +57,7 @@ For a Critical Access Hospital, the best [nurse scheduling software](/nurse-sche
 
 Evaluating scheduling software for a CAH starts with three constraints a larger hospital does not share. Score tools on these three first; feature breadth comes later, if at all, and they decide adoption long before any feature does.
 
-**Can one person run it with no IT department?** A CAH has no workforce-management analyst or HRIS team; the nurse manager, or an administrator wearing several hats, owns the tool while also covering clinical shifts. Implementation time and ongoing administrative load are the two numbers that matter most, and a tool live in days beats one that takes three months to configure regardless of what the longer tool can eventually do.
+**Can one person run it with no IT department?** A CAH has no workforce-management analyst or HRIS team; the nurse manager, or an administrator wearing several hats, owns the tool while also covering clinical shifts. Implementation time and ongoing administrative load are the two numbers that matter most, and a tool live in weeks beats one that takes three months to configure regardless of what the longer tool can eventually do.
 
 **Does it produce CMS §485.635 documentation by default?** If you are new to the designation, start with [what a Critical Access Hospital is](/blog/what-is-a-critical-access-hospital). Critical Access Hospitals operate under [CMS Conditions of Participation §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), which require a written staffing plan and a record of who was scheduled and who actually worked, and [FLSA overtime rules for healthcare](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) apply on top of that. The question is whether that auditable record comes out of the system by default, formatted for a surveyor, rather than rebuilt by hand the week the survey notice arrives. For the full survey-documentation playbook, see [staying CMS compliant with nurse scheduling](/blog/how-to-stay-cms-compliant-nurse-scheduling).
 
@@ -83,7 +83,7 @@ Here is how all 10 tools compare on CAH fit before we go deeper. This guide cove
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">SimpleScheduleAI</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Texas Critical Access Hospitals; nurse scheduling software operated for you</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">3 to 5 business days</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">$1,000 to $1,500/mo flat</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
@@ -165,7 +165,7 @@ SimpleScheduleAI is nurse scheduling software we build and operate ourselves, de
 
 **Key advantages:**
 
-- Removes the weekly schedule build from the nurse manager entirely, with no IT department required and no configuration to maintain. Goes live in days, not months.
+- Removes the weekly schedule build from the nurse manager entirely, with no IT department required and no configuration to maintain. Goes live inside two weeks.
 - CMS §485.635 staffing documentation produced by default, formatted for a surveyor, with FLSA overtime threshold tracking built into the build.
 
 **Key limitations:**

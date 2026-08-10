@@ -182,7 +182,7 @@ SimpleScheduleAI is not a traditional app, and the distinction is deliberate. It
 
 **Key advantages:**
 
-- Nothing to configure or maintain: rules are set up with you at onboarding, and the service goes live in days
+- Nothing to configure or maintain: rules are set up with you at onboarding, and your first schedule arrives inside two weeks
 - When a nurse calls out, a ranked shortlist of qualified replacements arrives with the reasons visible: skills, role, charge coverage, and overtime risk
 - Every schedule change lands in a timestamped audit trail, formatted for CMS survey readiness
 - Applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) are checked before an assignment is proposed, not after
@@ -385,7 +385,7 @@ The pattern to notice: a great app that knows nothing about nursing moves the co
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">All four layers handled. No app to run.</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds compliant, fair schedules for your manager to approve from any device. Flat pricing, live in days.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds compliant, fair schedules for your manager to approve from any device. Flat pricing, first schedule inside two weeks.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

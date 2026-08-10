@@ -113,7 +113,7 @@ For a CAH evaluating ShiftWizard, ask the demo to walk through swap workflows fr
         <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">CAHs, no IT, NM on clinical shifts</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">3 to 5 business days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">TCP Scheduling (Aladtec)</td>
@@ -360,7 +360,7 @@ If all of these conditions apply, the switch cost and learning curve of an alter
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation time</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">2-4 weeks typical</td>
-        <td class="py-3 text-primary">Excel upload, 3-5 days to first draft</td>
+        <td class="py-3 text-primary">Excel upload, first draft inside two weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">IT requirement</td>

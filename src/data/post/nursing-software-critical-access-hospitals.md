@@ -96,7 +96,7 @@ SimpleScheduleAI is a managed [nurse scheduling software](/nurse-scheduling-soft
 
 For nurse managers who've looked at enterprise nursing software platforms and found them either too expensive or too complex for a 25-bed setting, a managed service offers the compliance and coverage features of healthcare-specific platforms with the simplicity and implementation speed of a lightweight tool.
 
-Setup takes 3-5 business days via Excel roster upload, no IT integration, no EHR connection, no vendor implementation project.
+Setup takes 3 to 5 business days via Excel roster upload, no IT integration, no EHR connection, no vendor implementation project.
 
 One honest note: SimpleScheduleAI is scheduling-specific. It doesn't address EHR documentation, clinical decision support, or staff communication tools. For those needs, your EHR vendor and communication platform are the right resources. We do one thing, scheduling management for critical access hospitals, and we do it as a managed service.
 

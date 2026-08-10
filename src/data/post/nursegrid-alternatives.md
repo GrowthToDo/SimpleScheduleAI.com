@@ -128,7 +128,7 @@ The table below covers customer focus, public ratings, and setup time across Nur
         <td class="py-3 pr-2 font-semibold text-primary">SimpleScheduleAI</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">3-5 days</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">3 to 5 business days</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">ShiftWizard</td>
@@ -498,7 +498,7 @@ The core difference is scope and operating model. NurseGrid is a self-serve, nur
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation time</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Hours to days</td>
-        <td class="py-3 text-primary">3-5 days via Excel roster</td>
+        <td class="py-3 text-primary">3 to 5 business days via Excel roster</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Manager control</td>
@@ -535,7 +535,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the manager-side 
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-default dark:text-slate-100">Leaving NurseGrid? Built for the manager side NurseGrid doesn't cover.</p>
-    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts. Setup takes 3-5 days from your Excel roster.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI builds your nurse schedules, automates CMS §485.635 documentation, and ranks callout replacements by overtime risk. Designed for CAH nurse managers who cannot maintain a scheduling system while also taking clinical shifts. Setup takes 3 to 5 business days from your Excel roster.</p>
   </div>
   <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
@@ -577,7 +577,7 @@ FLSA 8-and-80 overtime tracking is not documented on NurseGrid's product page. N
 
 **Does switching from NurseGrid to a managed service require IT support?**
 
-No. SimpleScheduleAI onboards from an Excel roster upload in 3-5 days with no IT involvement. There is no integration to configure and no system credentials to manage. The specialist handles the full setup from the roster file, which is why a CAH with limited IT can switch without internal technical resources.
+No. SimpleScheduleAI onboards from an Excel roster upload in 3 to 5 business days with no IT involvement. There is no integration to configure and no system credentials to manage. The specialist handles the full setup from the roster file, which is why a CAH with limited IT can switch without internal technical resources.
 
 ---
 

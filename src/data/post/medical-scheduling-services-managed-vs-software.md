@@ -115,7 +115,7 @@ Scheduling software gives you control that a managed service does not. For nurse
 - No operational burden: no platform to learn, operate, or troubleshoot
 - No IT requirements: onboards via Excel roster, no API integration or EHR connection
 - Calibration expertise: a scheduling specialist knows the clinical constraints and builds them in; software requires the manager to configure them correctly
-- Faster time to value: 3-5 days to operational vs. 2-4 weeks of software configuration
+- Faster time to value: 3 to 5 business days of onboarding and a first schedule inside two weeks, against 2-4 weeks of software configuration you run yourself
 
 ## How to Choose Between a Service and Software?
 
@@ -162,7 +162,7 @@ Neither is the universally correct answer. The right choice depends on how your 
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">See Whether the Service Model Delivers the Relief You Need</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI goes live in 3-5 days from your Excel roster. FLSA, Texas Labor Code, and CMS documentation are built-in defaults. Request a free assessment to see how it compares to your current approach.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI onboards in 3 to 5 business days and delivers your first schedule inside two weeks from your Excel roster. FLSA, Texas Labor Code, and CMS documentation are built-in defaults. Request a free assessment to see how it compares to your current approach.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
@@ -189,7 +189,7 @@ Yes, if the service is built for healthcare facilities. FLSA overtime threshold 
 
 **How quickly can a medical scheduling service be operational?**
 
-A managed service that onboards via Excel roster upload, without EHR integration or IT involvement, can be operational in 3-5 business days. The first 1-2 scheduling cycles involve calibration as the specialist learns facility-specific rules; subsequent cycles require less adjustment.
+A managed service that onboards via Excel roster upload, without EHR integration or IT involvement, can be operational in 3 to 5 business days. The first 1-2 scheduling cycles involve calibration as the specialist learns facility-specific rules; subsequent cycles require less adjustment.
 
 **What if I am not comfortable delegating schedule building to a specialist?**
 

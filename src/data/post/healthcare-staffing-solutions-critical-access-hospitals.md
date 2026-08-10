@@ -142,7 +142,7 @@ At a CAH, the failure modes are consistent:
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Built for the CAH Context, Not Retrofitted From Enterprise</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI is an AI-native nurse scheduling service purpose-built for critical access hospitals, no IT involvement, Texas compliance by default, operational in 3-5 days. Request a free assessment to see how it fits your facility.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI is an AI-native nurse scheduling service purpose-built for critical access hospitals, no IT involvement, Texas compliance by default, operational in 3 to 5 business days. Request a free assessment to see how it fits your facility.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

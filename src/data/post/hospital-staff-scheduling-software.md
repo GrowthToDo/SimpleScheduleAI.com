@@ -28,7 +28,7 @@ import { Image } from 'astro:assets';
 - CAH-appropriate scheduling software needs no-IT setup, Texas compliance built in, ranked callout coverage, automatic CMS audit trail, and multiple draft options.
 - Enterprise tools (Aladtec, SmartLinx, API Healthcare) are strong products for 50 to 500 bed systems with IT departments and dedicated schedulers. They are not sized for a 25-bed CAH.
 - A managed scheduling service eliminates the software-operation burden entirely, which is more impactful at CAH scale than a better self-serve tool.
-- Implementation speed matters: enterprise tools take months; CAH-appropriate tools should be operational in days.
+- Implementation speed matters: enterprise tools take months; CAH-appropriate tools should be operational in weeks, not months.
 
 ## Table of Contents
 
@@ -119,7 +119,7 @@ Enterprise hospital staff scheduling software fails at CAHs for four structural 
 
 CAH-appropriate hospital staff scheduling software has a different specification than enterprise tools:
 
-**No-IT implementation.** Setup via Excel roster upload, no API credentials, no EHR integration, no IT vendor involvement. Operational in days, not weeks.
+**No-IT implementation.** Setup via Excel roster upload, no API credentials, no EHR integration, no IT vendor involvement. Operational inside two weeks.
 
 **FLSA overtime threshold tracking built in.** [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime rules should be enforced automatically during schedule building, not after payroll processes overtime charges.
 
@@ -146,7 +146,7 @@ CAH-appropriate hospital staff scheduling software has a different specification
 <tr>
 <td class="border border-slate-300 px-4 py-2 font-medium">Implementation time</td>
 <td class="border border-slate-300 px-4 py-2">4-12 weeks</td>
-<td class="border border-slate-300 px-4 py-2">3-5 business days</td>
+<td class="border border-slate-300 px-4 py-2">3 to 5 business days</td>
 </tr>
 <tr class="bg-slate-50">
 <td class="border border-slate-300 px-4 py-2 font-medium">IT requirement</td>
@@ -203,7 +203,7 @@ One honest note: if your hospital has 50+ beds or needs staff self-service featu
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Want to see how a managed scheduling service works for a 25-bed hospital?</p>
-  <p class="text-muted text-sm mb-6">No IT integration, no configuration project. Operational in days.</p>
+  <p class="text-muted text-sm mb-6">No IT integration, no configuration project. Operational inside two weeks.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

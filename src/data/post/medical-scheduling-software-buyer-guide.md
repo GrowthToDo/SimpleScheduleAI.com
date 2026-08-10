@@ -166,7 +166,7 @@ Category labels only get you to a shortlist. To separate a tool that will actual
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Not sure which category fits your hospital?</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI is an AI-native nurse scheduling service built specifically for critical access hospitals. It goes live in 3 to 5 days with no IT involvement. Book a call to see how it compares to a self-serve platform for your roster.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI is an AI-native nurse scheduling service built specifically for critical access hospitals. It onboards in 3 to 5 business days and delivers your first schedule inside two weeks with no IT involvement. Book a call to see how it compares to a self-serve platform for your roster.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
@@ -183,7 +183,7 @@ Most mature platforms offer CSV exports and integration with common payroll syst
 
 **How long does it take to implement medical scheduling software at a 25-bed CAH?**
 
-Self-serve platforms typically take 3-6 weeks to fully configure if the nurse manager can dedicate 5-10 hours to setup. A managed service typically produces the first schedule within 3-5 business days because the service team handles configuration.
+Self-serve platforms typically take 3-6 weeks to fully configure if the nurse manager can dedicate 5-10 hours to setup. A managed service typically produces the first schedule within 3 to 5 business days because the service team handles configuration.
 
 **What is the difference between medical scheduling software and an AI-native scheduling service?**
 

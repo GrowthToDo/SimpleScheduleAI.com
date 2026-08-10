@@ -66,8 +66,8 @@ Enterprise staffing software typically requires: IT department involvement for i
         </tr>
         <tr>
           <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-700 dark:text-slate-300">Months for implementation</td>
-          <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-700 dark:text-slate-300">Needs to be operational in days</td>
-          <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-700 dark:text-slate-300">3 to 5 day onboarding</td>
+          <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-700 dark:text-slate-300">Needs to be operational in weeks, not months</td>
+          <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 align-top text-slate-700 dark:text-slate-300">3 to 5 business days of onboarding</td>
         </tr>
       </tbody>
     </table>
@@ -121,7 +121,7 @@ Enterprise staffing software typically requires: IT department involvement for i
       </tr>
       <tr>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top font-semibold text-primary">Managed service (SimpleScheduleAI)</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-green-700 dark:text-green-400">3-5 days</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-green-700 dark:text-green-400">3 to 5 business days</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-green-700 dark:text-green-400">No</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-green-700 dark:text-green-400">Yes, built-in</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-green-700 dark:text-green-400">Yes</td>
@@ -153,7 +153,7 @@ List the three scheduling tasks that take your nurse manager the most time this 
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Three Priority Features, Built-In by Default</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI includes proactive overtime tracking, certification-matched callout coverage, and CMS audit trail documentation as defaults, not features to configure. It goes live in 3-5 days with no IT involvement.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI includes proactive overtime tracking, certification-matched callout coverage, and CMS audit trail documentation as defaults, not features to configure. It onboards in 3 to 5 business days and delivers your first schedule inside two weeks with no IT involvement.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
@@ -174,7 +174,7 @@ Enterprise platforms typically run in the tens of thousands of dollars a year; m
 
 **What is the fastest way to implement healthcare staffing software at a small hospital?**
 
-A managed service onboards in 3-5 business days via Excel roster upload, with no IT integration required. Mid-market self-serve tools typically take 2-4 weeks to configure. For a CAH nurse manager who needs relief from scheduling burden quickly, a managed service is the fastest path from decision to outcome.
+A managed service onboards in 3 to 5 business days via Excel roster upload, with no IT integration required. Mid-market self-serve tools typically take 2-4 weeks to configure. For a CAH nurse manager who needs relief from scheduling burden quickly, a managed service is the fastest path from decision to outcome.
 
 **What should a CAH ask vendors before purchasing healthcare staffing software?**
 

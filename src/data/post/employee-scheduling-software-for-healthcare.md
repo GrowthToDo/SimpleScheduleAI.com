@@ -168,7 +168,7 @@ A CAH nurse manager using generic employee scheduling software is not just using
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Stop Doing Compliance Documentation That Should Be Automatic</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI covers all five healthcare-specific scheduling requirements as built-in defaults. It goes live in 3-5 days with zero IT involvement. Request a free assessment to see how it compares to what you have now.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI covers all five healthcare-specific scheduling requirements as built-in defaults. It onboards in 3 to 5 business days and delivers your first schedule inside two weeks with zero IT involvement. Request a free assessment to see how it compares to what you have now.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
@@ -185,7 +185,7 @@ Healthcare-specific employee scheduling software adds five capabilities over gen
 
 **Is there healthcare employee scheduling software that does not require IT setup?**
 
-Yes. SimpleScheduleAI onboards via Excel roster upload in 3-5 business days with no IT integration, no EHR connection, and no IT vendor involvement. Enterprise healthcare staffing platforms (UKG, API Healthcare) require IT infrastructure that most critical access hospitals do not have.
+Yes. SimpleScheduleAI onboards via Excel roster upload in 3 to 5 business days with no IT integration, no EHR connection, and no IT vendor involvement. Enterprise healthcare staffing platforms (UKG, API Healthcare) require IT infrastructure that most critical access hospitals do not have.
 
 **Why do generic scheduling tools miss healthcare compliance features?**
 

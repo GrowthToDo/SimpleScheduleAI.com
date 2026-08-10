@@ -179,14 +179,14 @@ Texas Critical Access Hospitals are surveyed by [Texas HHSC](https://www.hhs.tex
 
 SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals. It is a new service without public G2 or Capterra reviews yet. FLSA overtime threshold tracking, charge nurse coverage logic, and CMS §485.635 audit documentation are built into the scheduling logic, not configuration options. [AI nurse scheduling](/ai-nurse-scheduling) drafts the weekly schedule from your Excel roster, a scheduling specialist checks it, and the nurse manager reviews and approves.
 
-Setup is 100% remote and takes 3-5 days. No IT involvement, no configuration burden, no training period at the facility. For a Texas Critical Access Hospital in a rural county, the fully remote model eliminates the need for on-site vendor support entirely.
+Setup is 100% remote and takes 3 to 5 business days. No IT involvement, no configuration burden, no training period at the facility. For a Texas Critical Access Hospital in a rural county, the fully remote model eliminates the need for on-site vendor support entirely.
 
 **Best for:** Texas Critical Access Hospitals where the nurse manager is clinically active and scheduling is consuming a large share of the week.
 
 **Key advantages:**
 
 - Texas-specific compliance built into the scheduling logic from day one, no configuration required
-- 100% remote setup in 3-5 days from an Excel roster upload
+- 100% remote setup in 3 to 5 business days from an Excel roster upload
 - Callout coverage handled with a ranked, compliance-checked shortlist within minutes
 
 **Key limitations:**

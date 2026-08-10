@@ -31,7 +31,7 @@ This guide compares the two models on the operational dimensions that decide the
 - ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream. It holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews),[1] with over 88% of Capterra reviews rating 4 stars or higher.
 - Self-serve platforms and managed services are not feature-equivalent products at different price points. They are different operating models. The right framing for a CAH evaluation is "what operating model fits my facility?" not "which product is better?"
 - Self-serve platforms ask the nurse manager to configure and operate the scheduling system every week. Setup typically runs 2-4 weeks; weekly burden after go-live is typically 4-6 hours.
-- Managed services handle configuration and weekly schedule generation through a specialist outside the hospital. The nurse manager reviews and approves. Setup typically runs 3-5 days via Excel upload; weekly burden after go-live is typically 1-2 hours.
+- Managed services handle configuration and weekly schedule generation through a specialist outside the hospital. The nurse manager reviews and approves. Setup typically runs 3 to 5 business days via Excel upload; weekly burden after go-live is typically 1-2 hours.
 - The right choice depends on whether your nurse manager has 4-6 weekly hours of capacity to dedicate to scheduling administration. If she does, a self-serve platform fits. If she does not, the operating model is the actual constraint, not the platform.
 
 ## Table of Contents
@@ -134,7 +134,7 @@ The two operating models differ on who configures the system, who builds each sc
       <tr class="bg-slate-50 dark:bg-slate-900">
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Typical setup time</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">2-4 weeks</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">3-5 days</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">3 to 5 business days</td>
       </tr>
       <tr class="bg-white dark:bg-slate-800">
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Weekly nurse manager burden</td>
@@ -196,7 +196,7 @@ The honest answer for many CAHs is "items 1, 3, and 4 favor a managed service; i
 
 ## How SimpleScheduleAI Fits If You Need the Managed Service Model?
 
-SimpleScheduleAI is an AI-native nurse scheduling service built for Critical Access Hospitals in Texas where the nurse manager takes clinical shifts and cannot sustain weekly scheduling construction. Setup takes 3-5 days from an Excel roster upload. CMS §485.635 documentation is automatic. Callout replacement lists are pre-ranked by credential and overtime status. The AI builds the schedule and our scheduling team checks it, so the nurse manager approves rather than builds. There is no staff-facing mobile app. See the AI build a schedule and rank callout replacements in the [live simulator](/simulator).
+SimpleScheduleAI is an AI-native nurse scheduling service built for Critical Access Hospitals in Texas where the nurse manager takes clinical shifts and cannot sustain weekly scheduling construction. Setup takes 3 to 5 business days from an Excel roster upload. CMS §485.635 documentation is automatic. Callout replacement lists are pre-ranked by credential and overtime status. The AI builds the schedule and our scheduling team checks it, so the nurse manager approves rather than builds. There is no staff-facing mobile app. See the AI build a schedule and rank callout replacements in the [live simulator](/simulator).
 
 <img src="/images/blog/shiftwizard-vs-managed-service/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

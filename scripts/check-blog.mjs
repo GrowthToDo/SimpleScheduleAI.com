@@ -132,6 +132,25 @@ const RETIRED_PILOT_STRINGS = [
   'Get a Free Schedule Review',
 ];
 
+// Setup-timeline canon violations (HARD). SERVICE mode carries exactly two
+// numbers and they are never interchangeable: onboarding is 3 to 5 BUSINESS
+// days, the first schedule arrives INSIDE TWO WEEKS. Every pattern below is a
+// way the two got collapsed into one, all of them found live on 2026-08-10.
+const SETUP_TIMELINE_VIOLATIONS = [
+  {
+    re: /(first schedule|drafts?|schedules?|delivered|delivers|arrives?|go(es)? live|live)[^.]{0,40}\b48 hours\b/i,
+    why: 'a 48-hour delivery claim',
+  },
+  { re: /\b48 hours\b[^.]{0,40}(from|of)\s+(your\s+)?(excel\s+)?(staff\s+)?roster/i, why: 'a 48-hour delivery claim' },
+  { re: /\b(live|operational|running)\s+in\s+days\b/i, why: 'an unquantified "in days" delivery claim' },
+  { re: /\bgoes?\s+live\s+in\s+days\b/i, why: 'an unquantified "in days" delivery claim' },
+  { re: /\b3\s*(-|–|to)\s*5\s*days\b/i, why: 'onboarding stated in calendar days rather than business days' },
+  {
+    re: /(go-?live|goes live)[^.]{0,25}3 to 5 business days/i,
+    why: 'the onboarding number used as the go-live number',
+  },
+];
+
 // Canonical booking host fragment for the secondary CTA.
 const BOOKING_URL_FRAGMENT = 'cal.com/gautham-8bdvdx';
 
@@ -525,6 +544,28 @@ function check(file) {
       if (line.includes(needle)) {
         fail(
           `Retired free-pilot reference "${needle}" (pilot is retired)`,
+          bodyOffset + i + 1,
+          line.trim().slice(0, 120)
+        );
+      }
+    });
+  });
+
+  // 12a2. Setup-timeline canon (HARD). The service claim is TWO numbers that are
+  //       not interchangeable: onboarding = 3 to 5 business days, first schedule
+  //       = inside two weeks. Collapsing them ("live in 48 hours", "goes live in
+  //       days", "3 to 5 days to first draft") had drifted across 40 live files
+  //       before the 2026-08-10 sweep. Source of truth: positioning-registry
+  //       `setup-timeline`, facts-dossier "Setup timeline SPLITS BY MODE".
+  SETUP_TIMELINE_VIOLATIONS.forEach(({ re, why }) => {
+    body.forEach((line, i) => {
+      // Shift arithmetic legitimately says "48 hours"; only our delivery claims fail.
+      if (/48 hours worked|hits 48 hours|working 48|picks up|response time|48-hour queue|24 to 48 hours/i.test(line))
+        return;
+      const m = line.match(re);
+      if (m) {
+        fail(
+          `Setup-timeline canon: ${why} (found "${m[0].trim()}"; canon = 3 to 5 business days onboarding, first schedule inside two weeks)`,
           bodyOffset + i + 1,
           line.trim().slice(0, 120)
         );

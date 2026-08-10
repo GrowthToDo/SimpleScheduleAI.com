@@ -74,7 +74,7 @@ Enterprise WFM platforms like Kronos (UKG), API Healthcare, and Workday Workforc
 </tr>
 <tr>
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Three to six month implementation project</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Manager needs results in days, not months</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Manager needs results in weeks, not months</td>
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-900">
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Per-employee monthly licensing across the whole staff</td>

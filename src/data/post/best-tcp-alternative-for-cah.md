@@ -28,7 +28,7 @@ This guide compares the alternatives for a Critical Access Hospital that does no
 
 - The best TCP TimeClock+ alternative depends on one question: do you want better scheduling software to build schedules yourself, or do you want the scheduling work done for you?
 - For better self-serve software, [ShiftWizard](/blog/shiftwizard-alternatives) is the strongest hospital-specific option: purpose-built for nurse scheduling, modern interface, comparable setup time.
-- For structural burden reduction, SimpleScheduleAI is the managed service alternative: a specialist builds, the nurse manager approves, live in 3-5 days.
+- For structural burden reduction, SimpleScheduleAI is the managed service alternative: a specialist builds, the nurse manager approves, and the first schedule arrives inside two weeks.
 - TCP TimeClock+ has a staff-facing mobile app for clocking in, viewing schedules, and requesting time off. SimpleScheduleAI does not. This is the main reason to stay with TCP over a managed service.
 - TCP Software owns three separate products: TimeClock+ (time and attendance), Humanity Scheduling (advanced scheduling), and Aladtec (healthcare and public safety scheduling). This post covers TimeClock+ specifically.
 
@@ -157,7 +157,7 @@ The trade-off is the staff-facing experience: TCP TimeClock+ has a nurse-facing 
       <tr class="bg-white dark:bg-slate-800">
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Setup</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Nurse manager configures; timeline not published - contact TCP</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">3-5 days (specialist configures)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 text-green-700 dark:text-green-400 align-top">3 to 5 business days (specialist configures)</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-700">
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">Weekly scheduling</td>
@@ -290,7 +290,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve plat
 
 **Key advantages:**
 
-- Live in 3-5 days from your staff roster
+- Onboarding in 3 to 5 business days from your staff roster, first schedule inside two weeks
 - Weekly scheduling time drops to 1-2 hours of reviewing and approving
 - [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds and CMS §485.635 audit trail included by default
 - Callout coverage shortlists delivered pre-ranked with credential and overtime constraints applied
@@ -356,7 +356,7 @@ Four questions separate the platforms that will actually improve a CAH nurse man
 
 1. **Clarify what TCP problem you are actually trying to solve.** Is it cost, configuration complexity, lack of CAH-specific compliance, or the absence of a managed delivery model? The right alternative depends on the actual gap, not on switching for the sake of switching.
 2. **Request a full data export from your current TCP product.** Roster with credentials, 12 months of schedule history, callout records, overtime calculations, and any custom rule configurations. The export format requires cleaning regardless of which alternative you choose.
-3. **Score three alternatives against your specific TCP gap.** Setup time in days not weeks. FLSA overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
+3. **Score three alternatives against your specific TCP gap.** Setup time in weeks, not months. FLSA overtime and CMS §485.635 built in by default. Callout shortlist generated automatically. No IT integration required. Willingness to pilot before contract.
 4. **Calculate total cost of ownership, not just license fee.** Subscription plus implementation labor plus ongoing maintenance labor plus the nurse manager's weekly scheduling hours at her loaded rate. Most TCP buyers underestimate the labor side. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison.
 5. **See how SimpleScheduleAI works if you are a Texas Critical Access Hospital.** The managed service delivers a compliant schedule each cycle without configuration, IT setup, or TCP-style implementation overhead. Start at [how it works](/how-it-works).
 
@@ -377,7 +377,7 @@ No. TCP Software owns both products, but they are separate tools with different 
 
 **What is the fastest way to switch from TCP TimeClock+ to a new scheduling solution?**
 
-Switching to a managed service is the fastest path: 3-5 days from roster upload to first draft schedule, with the service team handling configuration. Switching to another self-serve platform runs longer because the nurse manager or a team member must handle the new platform's setup and training. Confirm TCP contract terms and renewal dates before starting any transition.
+Switching to a managed service is the fastest path: 3 to 5 business days of onboarding from roster upload and a first schedule inside two weeks, with the service team handling configuration. Switching to another self-serve platform runs longer because the nurse manager or a team member must handle the new platform's setup and training. Confirm TCP contract terms and renewal dates before starting any transition.
 
 **Does SimpleScheduleAI replace TCP TimeClock+'s staff-facing features?**
 

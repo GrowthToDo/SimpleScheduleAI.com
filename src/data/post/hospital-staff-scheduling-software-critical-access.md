@@ -144,7 +144,7 @@ The honest version: if you have a dedicated scheduler or protected admin time an
 
 ## How Does SimpleScheduleAI Fit a Critical Access Hospital?
 
-SimpleScheduleAI is an AI-native, human-verified nurse scheduling service built specifically for Texas Critical Access Hospitals. The nurse manager submits a roster in Excel, the AI builds three complete schedule drafts and our scheduling team checks each one within 48 hours, she selects one, and the AI surfaces a ranked callout replacement list in under two minutes when a nurse calls out. CMS §485.635 documentation is maintained automatically. See [how the process works](/how-it-works).
+SimpleScheduleAI is an AI-native, human-verified nurse scheduling service built specifically for Texas Critical Access Hospitals. The nurse manager submits a roster in Excel, the AI builds three complete schedule drafts and our scheduling team checks each one inside two weeks, she selects one, and the AI surfaces a ranked callout replacement list in under two minutes when a nurse calls out. CMS §485.635 documentation is maintained automatically. See [how the process works](/how-it-works).
 
 It is not the right fit for every hospital, and the limitation matters. SimpleScheduleAI does not include a nurse-facing self-service mobile app for shift swaps or availability submission by default, and real-time direct schedule edits route through the service rather than happening instantly in a self-service interface. A hospital that requires nurse self-service or instant manager-side edits should evaluate self-serve platforms first.
 
@@ -216,7 +216,7 @@ Scheduling software gives the nurse manager tools to build schedules herself. A 
 
 **Does SimpleScheduleAI replace our scheduling spreadsheets?**
 
-Yes. The nurse manager submits the current roster in Excel once, then receives three complete schedule drafts within 48 hours and selects one. The spreadsheet becomes the input, not the working tool. Callout replacement and CMS §485.635 documentation are handled by the service rather than in the spreadsheet.
+Yes. The nurse manager submits the current roster in Excel once, then receives three complete schedule drafts inside two weeks and selects one. The spreadsheet becomes the input, not the working tool. Callout replacement and CMS §485.635 documentation are handled by the service rather than in the spreadsheet.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

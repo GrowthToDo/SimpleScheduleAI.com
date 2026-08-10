@@ -87,7 +87,7 @@ UKG was built for health systems with dedicated IT departments, HRIS analysts, a
       <tr class="border-b border-slate-200 dark:border-slate-700">
         <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">6-12 month implementation budget</td>
         <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800 align-top">$150K-$500K not in budget</td>
-        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">Live in 48 hours, no project required</td>
+        <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">First schedule inside two weeks, no project required</td>
       </tr>
       <tr>
         <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Enterprise HRIS/payroll integration</td>
@@ -150,7 +150,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
       <tr>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-semibold text-primary align-top">SimpleScheduleAI</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Managed service</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">48 hours</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Inside two weeks</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">None</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">CAH-native, up to 25 beds</td>
       </tr>
@@ -162,7 +162,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it, and it is delivered within 48 hours. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
+SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Critical Access Hospitals. There is no platform to configure or maintain. The nurse manager uploads a staff roster in Excel format, the AI builds the first schedule, our team checks it, and it is delivered inside two weeks, after 3 to 5 business days of onboarding. [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold tracking, CMS §485.635 documentation, and charge nurse designation enforcement are built-in defaults, not configuration options.
 
 The nurse manager reviews and approves schedules and handles callout coverage using the automated ranked replacement list. Weekly scheduling time drops to 1-2 hours. No IT involvement. No implementation project. For a CAH coming off UKG, a managed service is typically the fastest path to operational simplicity.
 
@@ -170,7 +170,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 
 **Key advantages:**
 
-- Live in 48 hours from Excel roster upload; no IT involvement or implementation project
+- First schedule inside two weeks from Excel roster upload, after 3 to 5 business days of onboarding; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, eliminating manual survey prep
 - Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
 - FLSA overtime threshold tracking and CMS CAH requirements are built-in defaults
@@ -307,7 +307,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Implementation timeline</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-12 months, dedicated IT required</td>
-        <td class="py-3 text-primary align-top">48 hours, Excel upload</td>
+        <td class="py-3 text-primary align-top">Inside two weeks, Excel upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">IT infrastructure required</td>
@@ -369,7 +369,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Replace UKG with Something That Actually Fits a 25-Bed Hospital</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI goes live in 48 hours with zero IT involvement. FLSA overtime tracking and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI onboards in 3 to 5 business days and delivers your first schedule inside two weeks, with zero IT involvement. FLSA overtime tracking and CMS documentation are included by default. Schedule a free assessment to see how the transition works for your facility.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

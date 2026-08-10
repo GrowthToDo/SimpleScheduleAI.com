@@ -130,9 +130,9 @@ The evaluation process for CAHs must prioritize deployment speed and independenc
 </tr>
 <tr class="bg-slate-50 dark:bg-slate-800/50">
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium align-top">No-IT setup</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top">Operational in days</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top">Operational inside two weeks</td>
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top">IT-led implementation project</td>
-<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top">3-5 business days</td>
+<td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top">3 to 5 business days</td>
 </tr>
 <tr>
 <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 font-medium align-top">Cost optimization</td>
