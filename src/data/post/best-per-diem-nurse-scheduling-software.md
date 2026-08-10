@@ -211,7 +211,7 @@ Per diem scheduling has specific requirements that differ from full-time nurse s
 
 <img src="/images/blog/best-per-diem-nurse-scheduling-software/SimpleScheduleAI.webp" alt="SimpleScheduleAI per diem nurse scheduling dashboard for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling) designed for Critical Access Hospitals where per diem nurses are a structural component of the roster, not an exception. The system maintains per diem availability alongside full-time scheduling and generates replacement call lists that cross-reference current-week hours against FLSA overtime thresholds before surfacing names. The nurse manager receives a list of available per diem nurses sorted by lowest overtime risk first.
+SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling) designed for Critical Access Hospitals where per diem nurses are a structural component of the roster, not an exception. Employment type sits in the roster alongside full-time staff, so the system schedules and ranks against it, and generates replacement call lists that cross-reference current-period hours against the applicable FLSA overtime thresholds before surfacing names. The nurse manager receives a list of available per diem nurses sorted by lowest overtime risk first.
 
 **Best for:** Critical Access Hospitals where per diem nurses fill a large share of weekly shift coverage and the nurse manager needs callout replacements identified in under two minutes with no manual overtime calculation.
 
