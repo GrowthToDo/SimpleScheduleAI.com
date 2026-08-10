@@ -473,7 +473,7 @@ The scatter above illustrates the core tradeoff for CAH charge nurse scheduling.
 
 1. **Audit your current charge coverage gaps.** Pull the last 4 weeks of published schedules and count how many shifts went live without a charge-designated nurse assigned. If your scheduling system cannot show you this number, that is itself the problem.
 
-2. **Contact SimpleScheduleAI for a charge nurse scheduling assessment.** The assessment covers your current charge bench size, distribution patterns, and callout coverage history. Visit [SimpleScheduleAI.com](/) to schedule.
+2. **Count your charge-qualified nurses and check the distribution.** How many are signed off, and how evenly did charge duty fall across them last quarter? If two names carry most of it, that is your coverage risk and your retention risk in one number.
 
 3. **Map your charge-qualified nurses and their recent charge hour counts.** If you find that 2-3 nurses are carrying 70%+ of charge hours while 2-3 other qualified nurses carry very few, you have an equity problem that manual scheduling is not solving. That is an automated distribution problem.
 

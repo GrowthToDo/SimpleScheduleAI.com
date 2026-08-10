@@ -211,7 +211,7 @@ One honest limitation: a managed callout shortlist is not the right fit for hosp
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Stop building the call list at 2 AM</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI maintains your ranked callout shortlist, per-diem bench, and CMS-ready audit trail so coverage gets handled without the charge nurse working a phone list.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI produces the ranked callout shortlist and the timestamped record, so coverage gets handled without the charge nurse building a phone list at 2 AM.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
@@ -236,7 +236,7 @@ Many CAHs are well served by 4 to 6 cross-credentialed per-diem nurses with roll
 
 **Can a managed scheduling service handle after-hours callouts for a small hospital?**
 
-A managed service does not place the calls, but it removes the hardest part of the after-hours callout: building and ranking the list under pressure. The service maintains the ranked shortlist and per-diem bench in advance and captures the compliance record, so the on-call charge nurse spends the 2 AM window calling and confirming, not deciding who is eligible.
+A managed service does not place the calls, but it removes the hardest part of the after-hours callout: building and ranking the list under pressure. The service ranks the list from your roster and current availability, and captures the compliance record, so the on-call charge nurse spends the 2 AM window calling and confirming, not deciding who is eligible.
 
 _Related: [8-hour vs 12-hour nursing shifts](/blog/8-hour-vs-12-hour-nursing-shifts) shows how shift length changes callout exposure._
 

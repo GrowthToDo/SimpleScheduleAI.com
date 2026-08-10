@@ -106,11 +106,11 @@ The idea is straightforward: if three nearby hospitals each keep a handful of nu
 
 ## How Does SimpleScheduleAI Help Small Hospitals Cover Gaps?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. We do not try to give a small hospital a float pool it cannot staff. Instead, the scheduling logic is built around the three models that fit: it holds your per-diem bench as a defined group, so a callout generates a ranked shortlist drawn from pre-credentialed, available nurses rather than a manual phone tree.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. We do not try to give a small hospital a float pool it cannot staff. Instead, the scheduling logic is built around the three models that fit. Each nurse's employment type sits on the roster we configure at onboarding, and per-diem availability is tracked as it comes in, so a callout returns a ranked shortlist of nurses who are actually credentialed and available rather than a manual phone tree.
 
-The same draft respects who is cross-trained for which function, so when it fills an open emergency, swing bed, or med-surg assignment, it only offers the shift to nurses cleared for it. For Texas hospitals, the draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so covering a gap does not quietly push someone into unplanned overtime. If you take part in a shared-staffing arrangement, nurses credentialed at your facility can sit on that bench too.
+The same draft respects who is cross-trained for which function, so when it fills an open emergency, swing bed, or med-surg assignment, it only offers the shift to nurses cleared for it. For Texas hospitals, the draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so covering a gap does not quietly push someone into unplanned overtime. If you take part in a shared-staffing arrangement, nurses credentialed at your facility can sit on the same roster.
 
-One honest limitation: the quality of any of these models depends on how many willing, credentialed nurses actually exist near you. If your local pool is genuinely five people, the system will surface coverage risk accurately, but it cannot manufacture availability that is not there. We are direct about that during onboarding rather than promising a bench we cannot fill. The same gap-spotting discipline is what keeps [night shift coverage](/blog/night-shift-nurse-schedule-coverage) from collapsing onto three people, and it is where [AI nurse scheduling](/ai-nurse-scheduling) earns its place: it models coverage across the full period before anyone approves it.
+One honest limitation: the quality of any of these models depends on how many willing, credentialed nurses actually exist near you. If your local pool is genuinely five people, the system will surface coverage risk accurately, but it cannot manufacture availability that is not there. We are direct about that during onboarding rather than promising coverage we cannot produce. The same gap-spotting discipline is what keeps [night shift coverage](/blog/night-shift-nurse-schedule-coverage) from collapsing onto three people, and it is where [AI nurse scheduling](/ai-nurse-scheduling) earns its place: it models coverage across the full period before anyone approves it.
 
 You can read the full process on our [nurse scheduling software](/nurse-scheduling-software) page, our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub, or [how the scheduling process works](/how-it-works) step by step, or watch the AI build a compliant week and rank a callout shortlist live in the [interactive simulator](/simulator).
 
@@ -125,14 +125,14 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
 2. Build or refresh your per-diem bench. List every part-timer, willing retiree, and nearby nurse who is already credentialed, and note who has genuinely agreed to short-notice shifts. A longer uncredentialed list does not help at 3 a.m.
 3. Map your cross-training. For each nurse, mark which functions she is cleared for, then find the single-point-of-failure gaps where only one person can cover a given assignment.
 4. Confirm your coverage meets the floor: under 42 CFR 485.631, a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever there is an inpatient. Check that every shift in your posted schedule clears that bar before you optimize anything else.
-5. Book a call with our team to see how a scheduling draft would hold your bench, respect your cross-training, and fill a callout from a ranked shortlist across your specific roster.
+5. Book a call with our team to see how a scheduling draft would use your roster, respect your cross-training, and fill a callout from a ranked shortlist across your specific staff.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-muted text-sm mb-6">
-    See how SimpleScheduleAI covers callouts from a pre-credentialed bench and respects who is cross-trained for what. We build the schedule, you approve it.
+    See how SimpleScheduleAI covers callouts from your credentialed, available roster and respects who is cross-trained for what. We build the schedule, you approve it.
   </p>
   <a
     href="/how-it-works"
@@ -161,7 +161,7 @@ A float pool is spare staff a large hospital carries and moves between its units
 
 **Q: How do you cover a nurse callout without a float pool?**
 
-Cover it from a standing per-diem bench and your cross-trained on-shift staff. Work a pre-agreed shortlist of credentialed nurses rather than a cold phone tree, and let any nurse cleared for the open function absorb it. A scheduling system that keeps the bench and the competency map current turns a 3 a.m. scramble into a short set of targeted calls.
+Cover it from a standing per-diem bench and your cross-trained on-shift staff. Work a pre-agreed shortlist of credentialed nurses rather than a cold phone tree, and let any nurse cleared for the open function absorb it. A scheduling system that keeps availability and the competency map current turns a 3 a.m. scramble into a short set of targeted calls.
 
 **Q: Does a critical access hospital need a registered nurse on duty at all times?** <!-- facts-ok -->
 
