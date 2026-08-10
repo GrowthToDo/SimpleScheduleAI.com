@@ -27,3 +27,10 @@ Appended by `npm run competitor-watch`. Positioning, pricing and CTA moves on wa
 - inhouse.health__pricing: unreachable (HTTP 404)
 - inhouse.health__product: baseline stored — h1 "Our Solutions"
 - inhouse.health__skilled-nursing: baseline stored — h1 "Our Solutions"
+
+## 2026-08-10
+
+- inhouse.health__about: baseline stored — h1 "Proven Clinical and Technical Leaders"
+- inhouse.health__pr-blog: baseline stored — h1 "PR & Blog"
+- inhouse.health__case-studies-the-center-at-lowry: baseline stored — h1 "Automating Staff Scheduling to &lt;purple&gt;Improve&lt;/purple&gt; Labor Outcomes"
+- inhouse.health__pricing: unreachable (HTTP 404)

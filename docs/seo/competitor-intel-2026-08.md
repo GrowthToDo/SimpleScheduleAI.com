@@ -12,6 +12,9 @@ and what they charge (or refuse to publish).
 - **Scope note:** this covers the *modern* cohort we actually collide with in AI
   answers and small-hospital shortlists. The enterprise incumbents (QGenda,
   symplr, UKG) are covered in the dossier and are not the subject here.
+- **Priority (founder, 2026-08-10): In-House Health is the competitor to watch,
+  not M7.** They are the more active one. Section 7 is the deep read; M7 stays on
+  the watchlist for positioning moves, not as the benchmark.
 
 ---
 
@@ -215,7 +218,86 @@ a vendor actually states, never inferred.
 
 ---
 
-## 7. How this gets re-run
+## 7. In-House Health, read closely (founder directive 2026-08-10: watch them, not M7)
+
+They are the most active competitor in our space, so they get the deeper read.
+The conclusion is counterintuitive and worth stating plainly: **their content is
+worse than ours by every standard we have codified, it earns them almost nothing
+in Google, and LLMs cite them anyway.**
+
+### What their content actually earns
+
+42 ranked keywords. Their **top organic page is `/baa`** — a Business Associate
+Agreement legal page — ranking position 6 for `baa definition` (260/mo), plus
+`baa abbreviation`, `what does baa stand for`, `baa law`, `baa legal term`. That
+one accidental page is roughly two-thirds of their non-brand organic traffic.
+
+Their ~35 blog posts earn essentially nothing. The best performer is
+`/blog-post/the-shift-dilemma` at position 29 for `how long are nursing shifts`
+(390/mo). Their homepage sits at position 50 for `healthcare staff scheduling
+software` (1,000/mo), 23 for `scheduling software for nurses` (320/mo), 41 for
+`hospital staffing software`, 39 for `healthcare workforce scheduling software`.
+Everything else in their top-25 is the generic phrase "in house" and their own
+brand, which they rank for because of the domain name.
+
+### What their content looks like
+
+Two representative posts, structure verified 2026-08-10:
+
+| | `great-clinical-scheduling-system` | `the-future-of-ai-agents-in-nurse-scheduling` |
+| --- | --- | --- |
+| Length | ~450-500 words | ~1,200 words |
+| H2s | 2 real ones | "The Challenge", "Why Current Systems Fail", "Enter the AI Agent", "The Vision", "Embracing the Future" |
+| Opens with | rhetorical question | rhetorical question |
+| Answer-first | no | no |
+| Tables / FAQ | none | none |
+| Sourced numbers | none | one (Indeed "Pulse of Healthcare 2025") |
+| Named author | Ari Brenner | Dr. Beth Meyers |
+
+Vague non-question headings, no answer-first openings, no tables, no FAQ blocks,
+almost no sourced numbers. Our own posts beat this on every dimension in the
+AEO standards.
+
+### So why do LLMs cite them and not us?
+
+Because citation is not being decided by page shape. It is being decided by how
+well-attested the **entity** is across the rest of the web. They have Fierce
+Healthcare and Businesswire coverage, an HLTH panel, three podcast appearances
+(Nurse Converse, Nurse Rosa's Insights, The Beat), a named case study
+(`/case-studies/the-center-at-lowry`), a founder who was a critical care nurse,
+and 92 referring domains. We have four referring domains and no press.
+
+This is the same conclusion the citation-shape autopsy reached from the other
+direction — 7 of our 10 non-present cells are **distribution gaps** — and it now
+has a control group. Improving our page shape further has diminishing returns.
+Getting the entity attested does not.
+
+### The three things worth copying
+
+1. **The founder podcast circuit.** Three of their "blog posts" are podcast
+   appearances. Nurse-audience podcasts book founders readily, it costs nothing
+   but Pradeep's hour, and every appearance is a third-party page that names the
+   company next to the category. This is the single most copyable item here and
+   it belongs in the backlink plan as a founder-powered lane alongside HARO.
+2. **An interview series with named external nurse leaders** ("Insightful Talks
+   with...", "Tech Talks with..."). It produces firsthand voice we do not have,
+   it builds a relationship with every interviewee, and it is the direct antidote
+   to the commodity-content problem (our compliance post scored 14/100 on the
+   proprietary-evidence framework). Every episode is also a person who might
+   later give a quote, a review, or an introduction.
+3. **Definitional pages punch far above their effort.** Their `/baa` page was
+   never meant to rank and it out-earns their entire blog. We already have a
+   glossary post type; building definitional pages deliberately for the terms
+   adjacent to our category is cheap, ranks easily, and is exactly the shape LLMs
+   lift as a standalone passage.
+
+### What not to copy
+
+Their publishing cadence and their content shape. Thirty-five posts producing
+about two organic visits a month is not a model to follow. Volume is not what is
+working for them; attestation is.
+
+## 8. How this gets re-run
 
 Monthly, as part of the 1st-of-month audit:
 

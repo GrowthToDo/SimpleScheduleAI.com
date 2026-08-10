@@ -33,7 +33,16 @@ const WATCHLOG = join(SNAP_DIR, 'WATCHLOG.md');
 // Watched pages. Keep in sync with docs/seo/competitor-dossier.md.
 // A 404 here is information too: YouShift ships no sitemap and no robots.txt,
 // and several vendors have no pricing page at all (every funnel is a demo form).
+//
+// Priority (founder, 2026-08-10): In-House Health is the competitor to watch —
+// they are the most active. They get the deepest page coverage below.
 const WATCHLIST = [
+  'https://www.inhouse.health/',
+  'https://www.inhouse.health/product',
+  'https://www.inhouse.health/skilled-nursing',
+  'https://www.inhouse.health/about',
+  'https://www.inhouse.health/pr-blog',
+  'https://www.inhouse.health/case-studies/the-center-at-lowry',
   'https://www.m7health.com/',
   'https://www.m7health.com/platform',
   'https://www.m7health.com/implementation',
@@ -44,9 +53,6 @@ const WATCHLIST = [
   // The day one of them returns a page, a competitor has published a price.
   'https://www.m7health.com/pricing',
   'https://www.inhouse.health/pricing',
-  'https://www.inhouse.health/',
-  'https://www.inhouse.health/product',
-  'https://www.inhouse.health/skilled-nursing',
   'https://www.youshift.com/',
   'https://www.qgenda.com/',
   'https://www.nursegrid.com/',

@@ -57,3 +57,7 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
 - All rewrites founder-gated; everything else here is read-only or already-sanctioned.
 - If a data source is unavailable (DFS empty, GSC auth), note it and continue — a
   partial audit that runs beats a complete one that doesn't.
+- **DataForSEO spend (founder, 2026-08-10): no fixed ceiling, but be frugal — and
+  never skip something that needs a cadence in order to save credits.** Prefer
+  small `limit` values, filter server-side, and reuse a pull rather than
+  re-requesting it. Cadence beats completeness.

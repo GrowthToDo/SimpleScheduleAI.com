@@ -275,6 +275,34 @@ checking which category the existing profile sits in.
         .edu links pointing at M7's homepage are the only lead worth a second
         look next quarter (identify which universities and why).
 
+- [ ] **T2.4 Founder podcast circuit** (added 2026-08-10, founder-powered, free).
+      Copied from In-House Health, where it visibly works: three of their
+      "blog posts" are podcast appearances (Nurse Converse — a Nurse.org property,
+      Nurse Rosa's Insights, The Beat at HLTH), and their LLM citations trace to
+      that kind of third-party attestation rather than to their page structure
+      (their content is weaker than ours and ranks nowhere; see
+      `competitor-intel-2026-08.md` §7). Nurse-audience and rural-health podcasts
+      book founders readily. Each appearance is a third-party page that names the
+      company next to the category, plus a show-notes link, plus a relationship.
+      Cost is an hour of the founder's time per episode.
+      - Pitch angle: the CAH scheduling reality (one manager, no scheduler, no IT),
+        not the product. Same rule as the quotable-asset lane — the appearance
+        earns the mention, we never ask for a link.
+      - Targets to research on unpark: Nurse Converse (Nurse.org), Nurse Rosa's
+        Insights, The Handoff, Rural Health Leadership Radio (directly on-ICP),
+        HIStalk-adjacent health-IT shows.
+      - Sequencing: this outranks further content-shape work. Our shape advantage
+        is already real; the gap the autopsy measured is distribution.
+- [ ] **T2.5 Nurse-leader interview series** (added 2026-08-10, founder-powered).
+      Also copied from In-House Health ("Insightful Talks with…", "Tech Talks
+      with…"). Named external nurse leaders, published as a recurring series.
+      Solves three problems at once: it is the only realistic source of firsthand
+      voice while we are pre-launch, it is the direct fix for the commodity-content
+      score (our compliance post graded 14/100 on proprietary evidence), and every
+      interviewee becomes a person who may later give a quote, a review, or an
+      introduction. Founder-gated on cadence; a series that stops after two
+      episodes is worse than none.
+
 ## Explicitly skipped
 
 - Paid placements and paid directories (founder decision).
