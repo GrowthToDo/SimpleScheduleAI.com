@@ -111,12 +111,37 @@ so a missing button is not a missing capability.
   actually will. Example: low-census release has config and suggestions in code
   but no execution workflow, yet the founder confirms we do change the census
   band and release excess staff. That is a real service capability.
-- **PRODUCT mode:** only what the software does unassisted is claimable. The
-  same low-census example is NOT a product claim until the workflow ships.
+- **PRODUCT mode:** only what the software does unassisted is claimable. For the
+  low-census example that means the ACTION is not claimable — but do not swing
+  into under-claiming either: the software genuinely does detect and surface the
+  situation. Honest product line: "flags overstaffed shifts and suggests who to
+  flex." Dishonest product line: "handles low census" / "adjusts staffing".
 
 When you use a PARTIAL or STUB line for service copy, say what the SERVICE
 delivers, never what the screen shows, and get founder confirmation that the
 manual step is genuinely part of the operating routine.
+
+**The written-routine test (added 2026-08-11).** "Our team does it" is only a
+capability once the routine is WRITTEN DOWN in the onboarding/ops runbook —
+who tells us, what we do, what the hospital gets back, how fast. Without that,
+the rule above becomes a loophole in which any code gap is waved away as "we'll
+handle it manually", and the claim collapses the first time a buyer asks "how
+does that actually work?" or the first time someone other than the founder has
+to deliver it. Until the routine is written: treat it as an intention, not a
+capability, and keep it out of published copy.
+
+Applied to low census today: the SERVICE claim is sound in principle (the
+founder confirms we change the band and release excess staff) but its runbook
+entry is still unwritten — so it is safe in a live sales conversation, and NOT
+yet safe as published site copy. Writing that runbook step is part of P4 in
+`../../../Nurse-scheduling new/docs/superpowers/specs/2026-07-04-production-saas-design.md`.
+
+**Audit-trail note (2026-08-11):** the software now records the staffing
+consequence of a census change and of an assignment removal — the entry names
+the resulting position and says "excess staff" explicitly when a shift goes
+over requirement. So even while the send-home ACTION is manual, the trail shows
+the census decision, the resulting excess, and the removal that followed. That
+is claimable in both modes as visibility (never as automation).
 
 ## 2. Route map
 
