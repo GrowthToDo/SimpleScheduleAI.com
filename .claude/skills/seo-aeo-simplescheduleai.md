@@ -341,12 +341,20 @@ no-ai-slop pattern list (github.com/petergyang/no-ai-slop) against all 81 live
 files. Everything below scored zero live hits except the first, so treat them as
 prevention, not cleanup.
 
-- **Binary contrast, "X is not A, it is B" (the one real tic: 27 of 81 live
-  files).** Keep it ONLY where the reader genuinely arrives believing A, which is
-  legitimate reframing ("After-hours callout coverage is not a scheduling
-  problem. It is an infrastructure problem"). Cut it when nobody believed A, and
-  state B directly. Hard cap ONE per post; `check-blog` WARNs at two or more,
-  because past that it reads as a verbal tic regardless of each instance's merit.
+- **Binary contrast, "X is not A, it is B" — DO NOT WRITE IT (founder ruling
+  2026-08-10).** This was our one real tic: 34 instances across 27 of 81 live
+  files, all swept the same day. The first pass argued that a contrast correcting
+  a belief the reader holds is legitimate. The founder overruled that, correctly:
+  if a construction is a prominent AI tell, being individually defensible does
+  not save it, and the claim can always be made another way. State the positive
+  claim directly. "After-hours callout coverage is not a scheduling problem. It
+  is an infrastructure problem" became "After-hours callout coverage at a
+  Critical Access Hospital is an infrastructure problem, solved at 2 AM by the
+  one tired person who happened to be awake" — shorter and more confident, since
+  the negated half was only setting up rhythm. Where the negated half carries
+  real information (fairness to a competitor, pre-empting an objection), demote
+  it to a trailing clause: "a category problem rather than a flaw in those
+  products". `check-blog` WARNs on every occurrence.
 - **Never write:** throat-clearing openers ("Here's the thing", "Let me be
   clear"), faux-insight setups ("What nobody tells you", "The part everyone
   misses" — one live H2 still carries this), rhetorical setups ("What if I told

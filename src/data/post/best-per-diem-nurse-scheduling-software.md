@@ -50,7 +50,7 @@ For a broader comparison of scheduling platforms, see our [nurse scheduling soft
 - [What to Do This Week?](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Per diem nursing is how small hospitals stay staffed without carrying a full-time roster that exceeds patient volume. At a [Critical Access Hospital (CAH)](/critical-access-hospital-scheduling), the per diem pool is not a backup plan, it is a structural part of the staffing model. The per diem nurses who work two to four days per month are the same nurses who fill the Saturday night callout and the holiday shift that no full-timer wanted.
+Per diem nursing is how small hospitals stay staffed without carrying a full-time roster that exceeds patient volume. At a [Critical Access Hospital (CAH)](/critical-access-hospital-scheduling), the per diem pool is a structural part of the staffing model. The per diem nurses who work two to four days per month are the same nurses who fill the Saturday night callout and the holiday shift that no full-timer wanted.
 
 The scheduling challenge is that per diem availability is fluid. It changes week to week, sometimes day to day. A tool that handles per diem staff poorly creates two problems simultaneously: it misses available per diem nurses during callout events, and it surfaces nurses who are already at overtime risk because the system did not track their current-week hours.
 

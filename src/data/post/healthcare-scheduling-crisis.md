@@ -250,7 +250,7 @@ Reviewers of major nurse scheduling platforms document the pattern clearly:
 >
 > Chief Nursing Officer, Hospital & Health Care, June 13, 2024, Capterra (NurseGrid Manager review)
 
-The $26,000 shadow salary does not disappear when you add software to the process. At facilities where the software requires ongoing configuration maintenance, or where the mobile app fails and managers have to work from a desktop while covering clinical shifts, the administrative burden can be comparable to what it was before the software was purchased. The problem is not a lack of technology. It is a mismatch between the tools available and the operational reality of a 25-bed rural hospital.
+The $26,000 shadow salary does not disappear when you add software to the process. At facilities where the software requires ongoing configuration maintenance, or where the mobile app fails and managers have to work from a desktop while covering clinical shifts, the administrative burden can be comparable to what it was before the software was purchased. The problem is a mismatch between the tools available and the operational reality of a 25-bed rural hospital.
 
 ## How Does SimpleScheduleAI Address These Friction Points?
 
@@ -321,7 +321,7 @@ One honest limitation: a managed scheduling service is not the right fit for fac
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    The $26,000 scheduling burden is not a software-licensing problem. It is a labor-allocation problem. CAH nurse managers spend roughly a fifth of their week on tasks that do not require clinical judgment - spreadsheet maintenance, phone-tree callouts, overtime reconciliation, paper documentation. The fix is not a better tool to do the same work faster. The fix is removing the work from the wrong person. Every hour returned to clinical leadership is an hour the hospital does not pay twice.
+    The $26,000 scheduling burden is a labor-allocation problem. CAH nurse managers spend roughly a fifth of their week on tasks that do not require clinical judgment - spreadsheet maintenance, phone-tree callouts, overtime reconciliation, paper documentation. The fix is not a better tool to do the same work faster. The fix is removing the work from the wrong person. Every hour returned to clinical leadership is an hour the hospital does not pay twice.
   </p>
 </div>
 

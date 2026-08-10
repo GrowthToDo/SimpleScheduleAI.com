@@ -351,7 +351,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    UKG is excellent software for the organizations it was designed for. Small hospitals are not those organizations. The implementation timeline (6-18 months at hospital scale), the dedicated IT and HRIS requirements, and the enterprise pricing structure are not features the vendor could remove for a CAH - they are the operational assumptions the platform is built on. The right UKG alternative for a 25-bed hospital is not a smaller version of UKG. It is a tool sized for the operational reality of a single Critical Access Hospital.
+    UKG is excellent software for the organizations it was designed for. Small hospitals are not those organizations. The implementation timeline (6-18 months at hospital scale), the dedicated IT and HRIS requirements, and the enterprise pricing structure are not features the vendor could remove for a CAH - they are the operational assumptions the platform is built on. The right UKG alternative for a 25-bed hospital is a tool sized for the operational reality of a single Critical Access Hospital.
   </p>
 </div>
 

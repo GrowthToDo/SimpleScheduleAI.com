@@ -251,7 +251,7 @@ initial setup and calibration requires more time. We surface this in onboarding.
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    The 12-hour shift model is not a scheduling problem to solve, it is an operational constraint to design around. Coverage math, fatigue guards, and weekend fairness interact in ways spreadsheets cannot enforce consistently. The hospitals that run 12-hour rotations cleanly are not the ones with the best schedulers - they are the ones that wrote down the constraints as hard rules and applied them before the schedule was posted, not after a nurse raised a grievance.
+    Treat the 12-hour shift model as an operational constraint to design around. Coverage math, fatigue guards, and weekend fairness interact in ways spreadsheets cannot enforce consistently. The hospitals that run 12-hour rotations cleanly are not the ones with the best schedulers - they are the ones that wrote down the constraints as hard rules and applied them before the schedule was posted, not after a nurse raised a grievance.
   </p>
 </div>
 

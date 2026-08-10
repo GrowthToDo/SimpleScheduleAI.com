@@ -552,7 +552,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for large multi-hos
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    The honest answer for most Critical Access Hospitals is that the best tool is not the one with the most features, it is the one that survives contact with a normal Tuesday. A nurse calls out, the manager is mid-shift, and the surveyor visits in three weeks. The systems with the strongest enterprise capability in this guide are built for hospitals that have an IT team to absorb that day. A CAH usually has only one person handling IT, not a team. Pick for the resourcing you actually have, not the demo you watched, and treat implementation burden as the first filter, not the last.
+    The honest answer for most Critical Access Hospitals is that the best tool is the one that survives contact with a normal Tuesday. A nurse calls out, the manager is mid-shift, and the surveyor visits in three weeks. The systems with the strongest enterprise capability in this guide are built for hospitals that have an IT team to absorb that day. A CAH usually has only one person handling IT, not a team. Pick for the resourcing you actually have, not the demo you watched, and treat implementation burden as the first filter, not the last.
   </p>
 </div>
 

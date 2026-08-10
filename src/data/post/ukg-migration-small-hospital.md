@@ -199,7 +199,7 @@ For [Critical Access Hospital administrators](/critical-access-hospital-scheduli
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Migrating off UKG at a small hospital is not a technical project. It is an admission that the platform was not sized for the operational reality of the facility. The hospitals that migrate cleanly are not the ones with the best project plans. They are the ones that started the contract notice clock early, extracted their data while still under contract, and chose a replacement sized for what the facility actually has - not what the original UKG sales conversation assumed it would have.
+    Migrating off UKG at a small hospital is an admission that the platform was not sized for the operational reality of the facility. The hospitals that migrate cleanly are the ones that started the contract notice clock early, extracted their data while still under contract, and chose a replacement sized for what the facility actually has - not what the original UKG sales conversation assumed it would have.
   </p>
 </div>
 

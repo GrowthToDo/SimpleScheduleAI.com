@@ -45,7 +45,7 @@ Hospital staffing software built for large health systems includes dozens of fea
 
 Here is the list, in rough priority order:
 
-**Feature 1: Excel roster import.** Every CAH already has staff data in Excel or a spreadsheet-equivalent. Software that requires a clean data import from an EHR, payroll system, or custom format will not get implemented in a facility with only limited IT. Excel-first onboarding is not a technical compromise. It is a deployment reality.
+**Feature 1: Excel roster import.** Every CAH already has staff data in Excel or a spreadsheet-equivalent. Software that requires a clean data import from an EHR, payroll system, or custom format will not get implemented in a facility with only limited IT. Excel-first onboarding is a deployment reality.
 
 **Feature 2: FLSA overtime compliance.** Under the [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), hospital overtime is generally due after 40 hours in a workweek, at 1.5 times the regular rate. Texas adds no state overtime layer on top of the federal rule. Software that does not track hours-to-date per nurse and alert before a shift assignment would create overtime does not solve the compliance problem. It just moves it to payroll.
 

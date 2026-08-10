@@ -255,7 +255,7 @@ To model the cost comparison at your facility's actual numbers, run the [SimpleS
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    TCP TimeClock+ and a managed scheduling service answer different questions. TimeClock+ answers "how does the hospital unify time, attendance, and scheduling on one platform?" - a real and valid question for facilities with the operational bandwidth to run unified platforms. A managed scheduling service answers "how does the nurse manager stop being the scheduling administrator?" For a 25-bed Critical Access Hospital, the second question is usually the one driving the evaluation, and the platform that solves it best is not the one with the most modules. It is the one that removes the work entirely.
+    TCP TimeClock+ and a managed scheduling service answer different questions. TimeClock+ answers "how does the hospital unify time, attendance, and scheduling on one platform?" - a real and valid question for facilities with the operational bandwidth to run unified platforms. A managed scheduling service answers "how does the nurse manager stop being the scheduling administrator?" For a 25-bed Critical Access Hospital, the second question is usually the one driving the evaluation, and the platform that solves it best is the one that removes the work entirely.
   </p>
 </div>
 

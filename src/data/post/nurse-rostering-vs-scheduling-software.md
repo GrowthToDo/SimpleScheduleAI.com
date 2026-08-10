@@ -114,7 +114,7 @@ First, ask to see live credential tracking, not a static field. A real roster en
 
 ## Do Critical Access Hospitals Need Rostering, Scheduling, or Both?
 
-Critical access hospitals need both jobs done well, and done inside one tool rather than two that someone has to keep in sync. Scheduling logic is only as good as the roster data feeding it. If the scheduling side does not know a nurse's ACLS expired last month, it can assign that nurse to a shift requiring ACLS. That is not a scheduling failure, it is a roster failure that became a scheduling problem, and it only happens when the two functions live apart.
+Critical access hospitals need both jobs done well, and done inside one tool rather than two that someone has to keep in sync. Scheduling logic is only as good as the roster data feeding it. If the scheduling side does not know a nurse's ACLS expired last month, it can assign that nurse to a shift requiring ACLS. That is a roster failure that became a scheduling problem, and it only happens when the two functions live apart.
 
 When rostering and scheduling sit in separate tools, keeping them aligned is constant manual work and a standing source of data drift. The other reason integration matters for a small hospital is survey documentation. When a surveyor asks you to show that every nurse on shift during a given week held the required credentials, you want to answer from a single system of record, not by reconciling a credential spreadsheet against a scheduling spreadsheet. A tool that owns both functions keeps that record as a byproduct of normal use, instead of as a separate reconciliation task you only attempt when a surveyor asks.
 

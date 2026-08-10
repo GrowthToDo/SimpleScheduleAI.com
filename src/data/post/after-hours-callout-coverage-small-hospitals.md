@@ -47,7 +47,7 @@ A nurse calls in sick at 2:40 AM for a shift that starts at 6:45 AM. There is no
 
 An after-hours callout is the hardest coverage problem at a small hospital because every buffer that a large facility relies on is absent. There is no float pool to pull from, no night staffing office, no internal agency desk, and often only one or two qualified replacements in the whole county, which is why a small hospital leans on [coverage models built for its size](/blog/float-pool-nursing-small-hospitals) rather than a float pool. The callout has to be solved by one tired person making phone calls.
 
-At a 200-bed hospital, a night callout routes to a staffing office that reassigns a float nurse in minutes. A Critical Access Hospital has none of that infrastructure. The [Flex Monitoring Team](https://www.flexmonitoring.org/) documents that CAHs operate with thin staffing margins by design, because they serve low-volume rural areas where a full float pool is not financially viable. When the one night nurse on a unit calls out, the replacement pool is not a department, it is a list of individual people who are asleep at home.
+At a 200-bed hospital, a night callout routes to a staffing office that reassigns a float nurse in minutes. A Critical Access Hospital has none of that infrastructure. The [Flex Monitoring Team](https://www.flexmonitoring.org/) documents that CAHs operate with thin staffing margins by design, because they serve low-volume rural areas where a full float pool is not financially viable. When the one night nurse on a unit calls out, the replacement pool is a list of individual people who are asleep at home.
 
 The problem compounds at night specifically. Daytime callouts have a deep bench of available staff and a manager at her desk. A 2 AM callout has the smallest possible candidate pool, the highest chance of [pushing someone into overtime](/blog/how-to-reduce-nurse-overtime), and the least decision support. This is why after-hours callout coverage, not schedule building, is the operational pain that CAH nurse managers report first.
 
@@ -195,7 +195,7 @@ To see the underlying scheduling model, compare [nurse scheduling software](/nur
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    After-hours callout coverage at a Critical Access Hospital is not a scheduling problem. It is an infrastructure problem solved at 2 AM by the one tired person who happened to be awake. The hospitals that have this under control are not the ones with better callout policies. They are the ones that pre-ranked the call list during business hours and built a standing per-diem bench. The work happens upstream, not in the middle of the night.
+    After-hours callout coverage at a Critical Access Hospital is an infrastructure problem, solved at 2 AM by the one tired person who happened to be awake. The hospitals that have this under control are the ones that pre-ranked the call list during business hours and built a standing per-diem bench. The work happens upstream, not in the middle of the night.
   </p>
 </div>
 

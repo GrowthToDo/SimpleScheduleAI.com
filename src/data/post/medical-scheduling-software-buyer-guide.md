@@ -45,7 +45,7 @@ Medical scheduling software is purpose-built workforce management tooling for cl
 
 Generic employee scheduling tools like Homebase or When I Work are designed for retail and food service environments. They understand "shifts" but not "nursing certifications," "CMS staffing ratios," or "on-call pools." Medical scheduling software encodes the specific rules of hospital operations: minimum competency requirements per shift, credential expiration tracking, and compliance with [CMS Conditions of Participation §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals).
 
-At a critical access hospital, a scheduling gap is not an inconvenience, it is a patient safety event and a potential CMS survey finding. Small hospitals lack the HR departments, workforce management specialists, and IT infrastructure that allow larger systems to absorb scheduling complexity. The software needs to reduce the manager's burden, not add to it.
+At a critical access hospital, a scheduling gap is a patient safety event and a potential CMS survey finding. Small hospitals lack the HR departments, workforce management specialists, and IT infrastructure that allow larger systems to absorb scheduling complexity. The software needs to reduce the manager's burden, not add to it.
 
 ## What Are the Types of Medical Scheduling Software?
 

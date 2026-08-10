@@ -18,7 +18,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/hospital-staff-scheduling-software-critical-access'
 ---
 
-Most hospital staff scheduling software is positioned for 200-bed health systems with HR analysts, scheduling coordinators, and an IT roadmap. Your CAH has none of those, and the platform you bought eight months ago is still being configured. The mismatch is not a feature problem. It is a structural assumption built into how the software is sold and deployed.
+Most hospital staff scheduling software is positioned for 200-bed health systems with HR analysts, scheduling coordinators, and an IT roadmap. Your CAH has none of those, and the platform you bought eight months ago is still being configured. The mismatch is a structural assumption built into how the software is sold and deployed.
 
 This guide covers what hospital staff scheduling actually requires at 25-bed scale, written for the nurse manager who needs the work done, not a platform she has to operate.
 
@@ -171,7 +171,7 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Hospital staff scheduling software at the CAH scale fails for the same reason every cycle: the platform assumes someone at the hospital has time to operate it. At a 25-bed Critical Access Hospital, that person usually does not exist. The nurse manager is also a clinician. The IT contact is part-time. The scheduling coordinator role does not exist. The platform that survives at CAH scale is not the one with the most features. It is the one that does not require a scheduling administrator to function.
+    Hospital staff scheduling software at the CAH scale fails for the same reason every cycle: the platform assumes someone at the hospital has time to operate it. At a 25-bed Critical Access Hospital, that person usually does not exist. The nurse manager is also a clinician. The IT contact is part-time. The scheduling coordinator role does not exist. The platform that survives at CAH scale is the one that does not require a scheduling administrator to function.
   </p>
 </div>
 

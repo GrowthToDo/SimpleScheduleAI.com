@@ -201,7 +201,7 @@ Each scheduling cycle, the AI generates three draft schedule options (balanced, 
 
 For callout coverage, a pre-ranked replacement list is maintained with certification, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime status, and availability constraints already applied. When a nurse calls out, the manager sees the ranked shortlist immediately rather than running the calculation herself.
 
-This is not a software tool with automation features. It is a different operating model. The AI handles the schedule build and our scheduling team checks it; the nurse manager retains clinical judgment and final approval authority.
+This is a different operating model from a software tool with automation features. The AI handles the schedule build and our scheduling team checks it; the nurse manager retains clinical judgment and final approval authority.
 
 One honest limitation: the managed service model requires comfort delegating draft generation. For nurse managers who prefer direct control over every scheduling decision, or who have specific scheduling rules the specialist cannot easily replicate, a self-serve platform at Level 3 may be a better fit. For a side-by-side look at the leading self-serve options for small hospitals, see our [best nurse scheduling software guide for 2026](/blog/best-nurse-scheduling-software-2026).
 

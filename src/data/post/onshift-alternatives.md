@@ -484,7 +484,7 @@ The core difference is target environment and operating model. OnShift is a self
   </table>
 </div>
 
-The core tradeoff between OnShift and SimpleScheduleAI is not a feature count. It is a design-target difference. OnShift was built for long-term care settings where caregiver engagement and predictable shift pickup are the operational reality. SimpleScheduleAI was built for Critical Access Hospitals where acute care callout dynamics, CMS compliance, and credential enforcement are the operational reality.
+The core tradeoff between OnShift and SimpleScheduleAI is the design target. OnShift was built for long-term care settings where caregiver engagement and predictable shift pickup are the operational reality. SimpleScheduleAI was built for Critical Access Hospitals where acute care callout dynamics, CMS compliance, and credential enforcement are the operational reality.
 
 For a hospital that is primarily a CAH or acute care facility, that difference is the reason to evaluate alternatives, not a marginal feature gap but a fundamental difference in what each product was designed to do. For an organization that is primarily LTC, the same difference is the reason OnShift may still be the right tool.
 

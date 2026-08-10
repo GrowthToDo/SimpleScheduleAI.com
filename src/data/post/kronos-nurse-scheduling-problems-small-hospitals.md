@@ -117,7 +117,7 @@ For practical replacements at CAH scale, see [UKG Alternatives for Critical Acce
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">UKG is genuinely good software for the enterprises it was built for, and the reviewers who rate it well are not wrong. The mistake a small hospital makes is reading an enterprise track record as proof of small-facility fit. The long implementation, the dedicated IT and HRIS assumptions, and the analytics depth are not extras a vendor can trim for a 25-bed hospital; they are the operating model. The right tool for a Critical Access Hospital is not a lighter version of an enterprise suite. It is a tool sized for one small hospital with limited IT and no spare administrator to run a platform.</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">UKG is genuinely good software for the enterprises it was built for, and the reviewers who rate it well are not wrong. The mistake a small hospital makes is reading an enterprise track record as proof of small-facility fit. The long implementation, the dedicated IT and HRIS assumptions, and the analytics depth are not extras a vendor can trim for a 25-bed hospital; they are the operating model. The right tool for a Critical Access Hospital is one sized for a single small hospital with limited IT and no spare administrator to run a platform.</p>
 </div>
 
 ## What Should You Do This Week?

@@ -32,7 +32,7 @@ She had evaluated the right products for the wrong market. This guide breaks dow
 - Enterprise platforms are scoped for large workforces. Shiftboard, for instance, markets its platform to organizations from 25 to 100,000 employees and is priced and supported for the upper end of that range. The automation that justifies the cost needs a scale a 20-nurse CAH never reaches.
 - The problem is not cost. A CAH paying the same per-seat price as a large system still ends up with software that requires IT integration, a training program its staff cannot absorb, and implementation timelines measured in months.
 - CAH-specific requirements, including callout coverage without a float pool, FLSA overtime threshold tracking, and a nurse manager who also delivers patient care, are not addressed by scaling enterprise software down.
-- The right answer is not a cheaper enterprise platform. It is a platform or service built for the 20-bed hospital from the beginning.
+- The right answer is a platform or service built for the 20-bed hospital from the beginning, rather than a cheaper enterprise tier.
 
 ## Table of Contents
 
@@ -51,7 +51,7 @@ Scheduling software for large health systems is built around organizational comp
 
 The vendors are explicit about who they serve. QGenda is built for large physician and provider groups; OnShift targets multi-facility senior-care operators. Neither markets to a 20-bed rural hospital, and the feature set reflects it. The products are not broken. They work correctly for their intended market and incorrectly for a CAH.
 
-The mismatch is not a flaw in those products. It is a category problem. Most enterprise scheduling tools were built for health system contracts and optimized for health system requirements. An AI labor-optimization platform like the one in our [M7 Health vs. SimpleScheduleAI comparison](/blog/m7-health-vs-simplescheduleai) shows the pattern clearly: it is funded and built to serve a 47-hospital system, not a 20-bed unit. Small hospitals ended up evaluating the same tools because nothing purpose-built for their context existed at the time most of these vendors launched.
+The mismatch is a category problem rather than a flaw in those products. Most enterprise scheduling tools were built for health system contracts and optimized for health system requirements. An AI labor-optimization platform like the one in our [M7 Health vs. SimpleScheduleAI comparison](/blog/m7-health-vs-simplescheduleai) shows the pattern clearly: it is funded and built to serve a 47-hospital system, not a 20-bed unit. Small hospitals ended up evaluating the same tools because nothing purpose-built for their context existed at the time most of these vendors launched.
 
 ## What Does It Mean When a Platform Is Built for Hundreds of Employees?
 
@@ -214,7 +214,7 @@ The limitations are real and worth stating: SimpleScheduleAI is not built for ho
 
 **Q: Why are most nurse scheduling platforms built for large organizations?**
 
-The core value of enterprise scheduling platforms, automation, workforce-optimization analytics, and agency integration, needs a volume of scheduling activity to pay off. Below a certain size, the overhead of running the platform exceeds the value it returns. That is why these tools are priced and supported for large workforces, and why some vendors set seat minimums. For a CAH, that is not a pricing problem. It is a signal about who the product was built for.
+The core value of enterprise scheduling platforms, automation, workforce-optimization analytics, and agency integration, needs a volume of scheduling activity to pay off. Below a certain size, the overhead of running the platform exceeds the value it returns. That is why these tools are priced and supported for large workforces, and why some vendors set seat minimums. For a CAH, that is a signal about who the product was built for.
 
 **Q: Can a small hospital use enterprise scheduling software if they pay the enterprise price?**
 

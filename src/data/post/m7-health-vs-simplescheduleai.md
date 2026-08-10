@@ -104,7 +104,7 @@ With a platform like M7 Health, onboarding involves connecting to existing hospi
 
 With SimpleScheduleAI, the hospital sends an Excel file with its staff roster. The service builds the first schedule draft from that. There is no payroll integration, no EHR connection, and no configuration the hospital owns. When the roster changes because a nurse resigns or a new hire starts, the hospital sends an updated file. The first usable schedule comes back within days.
 
-The practical difference is this: a CAH with limited IT staff does not need to ask who will own the integration, because there is no integration. For a hospital that has already tried a software rollout that stalled when the IT point of contact left, the no-integration path is not a limitation. It is the whole point.
+The practical difference is this: a CAH with limited IT staff does not need to ask who will own the integration, because there is no integration. For a hospital that has already tried a software rollout that stalled when the IT point of contact left, the no-integration path is the whole point.
 
 ## What Happens When a Nurse Calls Out at 5:30 a.m.?
 

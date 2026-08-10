@@ -211,7 +211,7 @@ Most platforms accept an Excel or CSV upload for initial setup, though format re
 
 **Q: Is there a risk of losing scheduling data if the transition fails?**
 
-Your Excel file remains yours throughout, so the exposure is not the data. It is the time spent on a failed implementation, the disruption of introducing and withdrawing a process, and continuity problems if the parallel run ended too early. Keeping the spreadsheet until the new system completes at least two clean cycles is the conservative approach.
+Your Excel file remains yours throughout, so the exposure is the time spent on a failed implementation, the disruption of introducing and withdrawing a process, and continuity problems if the parallel run ended too early. Keeping the spreadsheet until the new system completes at least two clean cycles is the conservative approach.
 
 **Q: What is the most common reason a hospital goes back to Excel?**
 

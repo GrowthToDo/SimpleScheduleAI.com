@@ -364,29 +364,17 @@ function check(file) {
     if (wordHit) fail(`AI-tone "${wordHit[0]}"`, bodyOffset + i + 1, line.trim().slice(0, 100));
   });
 
-  // 2b. Structural AI-slop patterns. WARN only: a binary contrast that corrects
-  // a belief the reader actually holds is legitimate rhetoric, while a
-  // decorative one is filler. A human decides. Cap is judgment too: more than
-  // one per post reads as a tic regardless of individual merit.
-  {
-    let binaryContrastCount = 0;
-    body.forEach((line, i) => {
-      if (inBlockquote(line)) return;
-      for (const [name, re] of SLOP_STRUCTURES) {
-        if (re.test(line)) {
-          if (name.startsWith('binary contrast')) binaryContrastCount++;
-          else warn(`AI-slop structure: ${name}`, bodyOffset + i + 1, line.trim().slice(0, 100));
-        }
-      }
-    });
-    if (binaryContrastCount > 1) {
-      warn(
-        `${binaryContrastCount} binary contrasts ("X is not A, it is B") — keep at most one, and only where the reader really believes A`,
-        0,
-        ''
-      );
+  // 2b. Structural AI-slop patterns, WARN so a human judges each one. On the
+  // binary contrast the founder's ruling (2026-08-10) is stricter than the
+  // first pass: a defensible instance is still a prominent AI tell, and the
+  // claim reads stronger stated directly, so every occurrence is flagged rather
+  // than capped. Swept to zero across the live corpus the same day.
+  body.forEach((line, i) => {
+    if (inBlockquote(line)) return;
+    for (const [name, re] of SLOP_STRUCTURES) {
+      if (re.test(line)) warn(`AI-slop structure: ${name}`, bodyOffset + i + 1, line.trim().slice(0, 100));
     }
-  }
+  });
 
   // 3. No inline <svg> in .md files (must be Tailwind div / table).
   lines.forEach((line, i) => {

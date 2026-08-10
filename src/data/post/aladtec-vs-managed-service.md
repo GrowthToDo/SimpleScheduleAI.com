@@ -126,7 +126,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
 
 ## What Is the Core Difference Between the Two Models?
 
-The distinction between scheduling software and a managed scheduling service is not a feature gap. It is a labor model difference. Scheduling software gives you a tool to use. A managed service delivers the output. For a 25-bed Critical Access Hospital, that distinction determines whether scheduling stays the nurse manager's responsibility or becomes the vendor's.
+The distinction between scheduling software and a managed scheduling service comes down to the labor model. Scheduling software gives you a tool to use. A managed service delivers the output. For a 25-bed Critical Access Hospital, that distinction determines whether scheduling stays the nurse manager's responsibility or becomes the vendor's.
 
 When you buy scheduling software, you are buying a tool. You (or a scheduler you designate) use that tool to build schedules, check overtime, handle callouts, update credentials, and maintain configuration. The software makes those tasks faster and more accurate than a spreadsheet. But you are still doing those tasks.
 
@@ -414,7 +414,7 @@ One honest limitation: a managed scheduling service is not the right fit for hos
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Aladtec is a competent self-serve scheduler. The question is not whether it is good software. The question is whether a Critical Access Hospital nurse manager, who is also covering 2-3 clinical shifts a week, has the four to six hours per week the platform requires to be used well. For most CAHs we have spoken to, the honest answer is no - which is why scheduling software adoption at this scale routinely drifts back to spreadsheets within twelve months. The managed service model is not a feature claim. It is an admission that the constraint at a 25-bed hospital is staff time to operate software, not access to software.
+    Aladtec is a competent self-serve scheduler. The question is not whether it is good software. The question is whether a Critical Access Hospital nurse manager, who is also covering 2-3 clinical shifts a week, has the four to six hours per week the platform requires to be used well. For most CAHs we have spoken to, the honest answer is no - which is why scheduling software adoption at this scale routinely drifts back to spreadsheets within twelve months. The managed service model exists because the constraint at a 25-bed hospital is staff time to operate software, not access to software.
   </p>
 </div>
 

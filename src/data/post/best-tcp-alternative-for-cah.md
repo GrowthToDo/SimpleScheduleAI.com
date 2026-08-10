@@ -348,7 +348,7 @@ Four questions separate the platforms that will actually improve a CAH nurse man
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    The best TCP alternative for a 25-bed CAH is the one that matches the operational reality, not the one with the most checkboxes. TCP TimeClock+ is a competent unified-platform tool for hospitals with the staff to run unified platforms. For most Critical Access Hospitals, scheduling overhead is the problem, and the platform that removes it best is not the one with more modules. It is the one that does not need a scheduling administrator.
+    The best TCP alternative for a 25-bed CAH is the one that matches the operational reality, not the one with the most checkboxes. TCP TimeClock+ is a competent unified-platform tool for hospitals with the staff to run unified platforms. For most Critical Access Hospitals, scheduling overhead is the problem, and the platform that removes it best is the one that does not need a scheduling administrator.
   </p>
 </div>
 

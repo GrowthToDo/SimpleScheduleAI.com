@@ -28,7 +28,7 @@ This guide covers what actually works at CAH scale, written for the administrato
 ## Key Takeaways
 
 - UKG is a genuinely capable workforce management system. It is designed for large health systems with IT departments, dedicated HRIS staff, and 6-12 month implementation timelines. None of those resources exist at a typical Critical Access Hospital (CAH).
-- The problem with UKG at a CAH is not the cost. It is the operational overhead required to use it correctly. Staff credential requirements drift. Overtime rules miscalculate. CMS documentation requires manual assembly. The nurse manager ends up doing manual verification on top of a system they cannot trust.
+- The problem with UKG at a CAH is the operational overhead required to use it correctly, rather than the cost. Staff credential requirements drift. Overtime rules miscalculate. CMS documentation requires manual assembly. The nurse manager ends up doing manual verification on top of a system they cannot trust.
 - The alternatives built for CAH scale are Aladtec (self-serve, configurable), SmartLinx (mid-market, healthcare-specific), and SimpleScheduleAI (managed service, zero IT required).
 - The right framing is not "is UKG too expensive?" It is: "is the complexity proportional to the value your facility will actually extract?" At a 25-bed hospital with 18-25 nursing staff, it almost never is.
 - For CAHs currently on UKG through a health system contract, the path off may be constrained by contract terms. Evaluate early termination fees and parallel-run options before switching.
@@ -231,7 +231,7 @@ For a side-by-side comparison of the practical alternatives, see our [UKG altern
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    UKG is not too complex because the software is poorly designed. It is too complex because the operational assumptions it makes - dedicated HRIS staff, multi-month implementations, integrated payroll and scheduling teams - do not exist at a 25-bed Critical Access Hospital. The complexity is not a feature problem. It is a scale mismatch. Small hospitals that buy UKG are not buying a hard-to-use platform. They are buying a platform built for organizations five times their size.
+    UKG is not too complex because the software is poorly designed. It is too complex because the operational assumptions it makes - dedicated HRIS staff, multi-month implementations, integrated payroll and scheduling teams - do not exist at a 25-bed Critical Access Hospital. The complexity is a scale mismatch. Small hospitals that buy UKG are not buying a hard-to-use platform. They are buying a platform built for organizations five times their size.
   </p>
 </div>
 
