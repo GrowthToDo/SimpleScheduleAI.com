@@ -31,7 +31,8 @@
     "sitemap-diff": "node scripts/competitor-sitemap-diff.mjs",
     "llm-citations": "node scripts/llm-citation-check.mjs",
     "keyword-check": "node scripts/check-keyword-registry.mjs",
-    "site-hygiene": "node scripts/site-hygiene.mjs"
+    "site-hygiene": "node scripts/site-hygiene.mjs",
+    "competitor-watch": "node scripts/competitor-page-watch.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",

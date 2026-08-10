@@ -6,16 +6,63 @@ Why LLM answers cite competitor pages and not ours on four money prompts, and wh
 - **Method:** DataForSEO `/v3/ai_optimization/{model}/llm_responses/live` with web search enabled, US context. Models: `gpt-5.5` (ChatGPT), `sonar` (Perplexity), `gemini-3.5-flash` (Gemini), `claude-sonnet-5` (Claude). 12 successful calls (gemini required a retry without the country field).
 - **All edit recommendations in Section 5 are FOUNDER-GATED. Money pages are edit-gated; nothing here authorizes a change.**
 
+## 0. Measurement protocol (added 2026-08-10 — read before any re-probe)
+
+**Frozen prompts.** These four strings are frozen. Re-probes use them verbatim,
+on the same four models, with web search enabled, US context. Never reword a
+prompt after seeing an answer you did not like — the moment the wording moves,
+the trend line is measuring our edits to the question instead of our position in
+the answer.
+
+| ID | Frozen prompt string | Engines | Location |
+| --- | --- | --- | --- |
+| P1 | `what is the best nurse scheduling software` | gpt-5.5, sonar, gemini-3.5-flash, claude-sonnet-5 | United States |
+| P2 | `best hospital staffing software for a small hospital` | same four | United States |
+| P3 | `what is AI nurse scheduling and which tools do it` | same four | United States |
+| P4 | `qgenda alternatives` | same four | United States |
+
+Baseline run: 2026-08-09. Next re-probe: ~2026-08-23, and thereafter whenever the
+publish queue empties.
+
+**Four tracking states, not yes/no.** Being recommended and being cited are two
+different leaderboards with two different fixes, and our own baseline proves it:
+Perplexity P3 named us in the answer AND cited us, while Perplexity P4 cited
+`/blog/qgenda-alternatives` in the sources and never mentioned us in the answer
+text. Record every cell as one of:
+
+- **CITED** — named in the answer text and linked in the sources.
+- **MENTIONED** — named in the answer text, not linked.
+- **SOURCED** — linked in the sources, not named in the answer text.
+- **ABSENT** — neither. (`NO DATA` where the probe failed or was not run.)
+
+**Gap taxonomy.** Label every non-CITED cell with the gap that explains it, because
+each one has a different fix and three of the four are not content edits:
+
+- **Decision gap** — the answer is not framed around a decision we win. Fix: content.
+- **Entity gap** — the model does not reliably know what we are. Fix: entity signals.
+- **Evidence gap** — we make claims the model cannot verify (no numbers, no dates,
+  no named sources). Fix: content.
+- **Distribution gap** — our page is fine; the answer is assembled from third-party
+  pages we are absent from. Fix: get onto those pages. Not an edit to ours.
+
+Our QGenda page is a **distribution gap** — shape-competitive, absent from the
+closed club of pages the answers are built from. That is why the fix routes to
+T1.3 listicle-gap pitches in the backlink plan and not to a page rewrite.
+
 ## 1. Citation matrix (prompt x model)
+
+States per Section 0: CITED / MENTIONED / SOURCED / ABSENT. Gap label in brackets.
 
 | Prompt | ChatGPT (gpt-5.5) | Perplexity (sonar) | Gemini (3.5-flash) | Claude (sonnet-5) |
 | --- | --- | --- | --- | --- |
-| P1 "what is the best nurse scheduling software" | **NO** | **NO** | **NO** | **NO** |
-| P2 "best hospital staffing software for a small hospital" | **NO** | **NO** | not run | not run |
-| P3 "what is AI nurse scheduling and which tools do it" | **NO** | **YES** — named in answer text AND cited (`/ai-nurse-scheduling` + homepage) | not run | not run |
-| P4 "qgenda alternatives" | **NO** | **YES** — citation only (`/blog/qgenda-alternatives`), not named in answer text | **NO** | **NO** |
+| P1 "what is the best nurse scheduling software" | ABSENT [distribution] | ABSENT [distribution] | ABSENT [entity] | ABSENT [distribution] |
+| P2 "best hospital staffing software for a small hospital" | ABSENT [distribution] | ABSENT [distribution] | NO DATA | NO DATA |
+| P3 "what is AI nurse scheduling and which tools do it" | ABSENT [entity] | **CITED** (`/ai-nurse-scheduling` + homepage) | NO DATA | NO DATA |
+| P4 "qgenda alternatives" | ABSENT [distribution] | **SOURCED** (`/blog/qgenda-alternatives`, not named in answer text) | ABSENT [distribution] | ABSENT [distribution] |
 
-**Presence: 2 of 12.** Both wins are Perplexity. ChatGPT, Gemini, and Claude never surface us.
+**Presence: 2 of 12 — one CITED, one SOURCED.** Both on Perplexity. ChatGPT, Gemini, and Claude never surface us.
+**Dominant gap: distribution (7 of 10 non-present cells).** The answers are assembled
+from third-party pages we are absent from, not from a defect in our own pages.
 
 ### Cited domains per cell (deduped, social noise trimmed)
 

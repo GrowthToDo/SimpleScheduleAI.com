@@ -24,6 +24,22 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
    window and would fake a "#2 channel" story. Directional metric only (paid-ChatGPT
    in-content links pass no referrer). Structural fix pending: GA4 internal-traffic
    IP filter (founder-side); the US-only proxy breaks if founders browse from the US.
+3. **Competitor radar** (both free, no API spend):
+   - `npm run sitemap-diff` — new/removed competitor URLs. Feeds the trendjacking
+     radar and tells us what they are publishing.
+   - `npm run competitor-watch` — H1, title, meta, H2 set, CTA and price changes on
+     17 watched pages. This is the one that catches positioning moves: the sitemap
+     radar showed 0 new M7 URLs on 2026-08-10 while their homepage H1 had been
+     rewritten to a new category label. Two of the watched URLs are **pricing
+     sentinels** (`m7health.com/pricing`, `inhouse.health/pricing`) — they 404
+     today; the day either returns a page, a competitor has published a price.
+   - Anything that moves goes into the dossier's maintenance log the same day, with
+     the verbatim before/after. Known gaps: YouShift ships no sitemap, ShiftWizard
+     serves a Webflow catch-all, aladtec.com robots.txt is Cloudflare-blocked.
+   - Quarterly (not monthly) DataForSEO pass, timeboxed to one hour:
+     `domain_rank_overview` for each competitor plus ours, `ranked_keywords` for any
+     whose keyword count moved >20%, and the T2.3 link-gap intersection. Baseline
+     and method: `docs/seo/competitor-intel-2026-08.md`.
 4. **Backlink pulse**: Bing `get_link_counts` + GSC Links UI export ask (founder,
    quarterly is enough) -> update backlink-ledger.md baseline block; review ledger
    asks-vs-placements; nudge stalled founder-side items.

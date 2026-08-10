@@ -52,3 +52,17 @@ Appended by `npm run sitemap-diff`. New competitor URLs feed the trendjacking ra
 - onshift.com: +0 / -35 since 2026-07-16
 - shiftwizard.com: unreachable (not an XML sitemap)
 - nursegrid.com: +0 / -0 since 2026-07-16
+
+## 2026-08-10
+
+- m7health.com: +0 / -0 since 2026-08-02
+- youshift.com: unreachable (HTTP 404)
+- qgenda.com: +3 / -2 since 2026-08-02
+  - NEW: https://www.qgenda.com/video/ssm-health-automation/
+  - NEW: https://www.qgenda.com/video/ssm-health-healthcare-complexity/
+  - NEW: https://www.qgenda.com/video/ssm-health-single-platform/
+- aladtec.com: unreachable (HTTP 403)
+- smartlinx.com: +0 / -0 since 2026-08-02
+- onshift.com: +0 / -0 since 2026-08-02
+- shiftwizard.com: unreachable (not an XML sitemap)
+- nursegrid.com: +0 / -0 since 2026-08-02

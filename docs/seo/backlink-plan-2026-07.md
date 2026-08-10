@@ -75,6 +75,17 @@ number, and we have our own proof: the 2026-08-03 measurement found 338 referrin
 domains at 99.4% nofollow, nearly all directory syndication, with exactly two
 genuinely followed domains. More of that changes nothing.
 
+**Target-selection rule (added 2026-08-10).** The standard advice is to rank
+prospect pages by referring domains. In this niche that selector is wrong, and
+the T2.3 run below is the proof: the pages with link mass are funding
+announcements and job boards, while the pages that actually decide a buyer's
+shortlist have almost no links at all. Rank prospects by **how often an LLM
+answer cites them on our money prompts** instead — that is measured on the
+surface where our buyers ask the question. The citation-shape autopsy already
+produces this list (perfectserve, withassured, medstafftracker, sanishift,
+schedulingwiz, aviahealth, plus the G2/Capterra alternatives pages); it feeds
+T1.3, not a link-reclamation play.
+
 | Tactic | Source | Why rejected |
 | --- | --- | --- |
 | Inserting our links into Wikipedia by swapping dead citations | hridoyreh, Jul 2026 | Wikipedia external links have been nofollow since 2007, so there is no equity. Its dead-link policy requires replacing a dead citation with an ARCHIVED copy of the original, not a different site, so the edit itself breaks policy and reads as self-citation. For a healthcare vendor pitching hospital associations, being seen editing Wikipedia to promote itself is a reputational loss far bigger than any link. |
@@ -84,6 +95,10 @@ genuinely followed domains. More of that changes nothing.
 | Automated reciprocal link-exchange networks (e.g. Distribb "Exchange Only") | borjafat, Aug 2026 | An automated link scheme; the source article itself concedes Google warns against exactly this. Violates our no-reciprocity guardrail. |
 | Dropping our links into nursing communities (r/nursing and similar) | standing rule | Vendor links in threads about nurses' working conditions read as ambulance-chasing, and most subs remove vendor content. |
 | Mass directory submission beyond one batched session | 2026-08-01 measurement | Measured: almost entirely nofollow. Kept as an entity and AI-retrieval signal only, capped, never iterated, never paid. |
+| A second cheap-model CLI (Kimi K3 subagents) to run the "heavy digging" tier | borjafat "Last Word", Aug 2026 | A second vendor CLI and a second plaintext API key on a repo that has already leaked credentials once, to save tokens on work our own tier ladder already routes to a cheap model. The saving is real and the marginal value here is not. |
+| Transcribing the top-10 YouTube videos as a content-gap input | borjafat "Last Word", Aug 2026 | Nurse-scheduling YouTube is thin and vendor-produced. Our 1-star review mining and Reddit passes already surface sharper unanswered questions for a fraction of the effort. |
+| Multi-touch automated cold-email cadences to editorial and association contacts | borjafat "Last Word", Aug 2026 | Rural health in Texas is a small community and the founder sends personally. A three-touch automated sequence to association staff costs more relationship than any link it wins. One follow-up, written by hand, is the ceiling. |
+| Retail AEO stack: product feeds, GTIN/SKU, Product/Offer/AggregateRating schema | alexgroberman / Microsoft AEO-GEO guide, Aug 2026 | Written for retailers with a catalog and shopping agents. We have no SKUs and no reviews to aggregate, and its schema-stacking emphasis runs against Part 0 (Google's May 2026 guidance: structured data is not required for AI features). |
 
 **Adopted inversion from the Wikipedia thread:** do not put links INTO Wikipedia,
 mine it. Articles on critical access hospitals, rural health, and nurse staffing
@@ -220,10 +235,45 @@ checking which category the existing profile sits in.
       resource you reference is now UKG's enterprise suite; here is a current,
       independent comparison for small hospitals" — only where our page genuinely
       serves the link's purpose.
-- [ ] **T2.3 Competitor backlink reverse-engineering** (tactic 2): PARKED until
-      DataForSEO top-up (its backlinks endpoints are the affordable source). On
-      unpark: monthly gap report (domains linking to 2+ of M7/QGenda/ShiftWizard/
-      CronShift but not us), classified by earn-pattern.
+      **Pitch shape (upgraded 2026-08-10).** Name the exact article and the exact
+      link, show the upgrade in one line, and make swapping a two-second decision.
+      Before writing, pull the linked page's archived version to see what it looked
+      like when it earned the link, and read the anchor text and the sentence around
+      it — the link was given for one specific reason, and the pitch has to speak to
+      that reason rather than to our page in general. One follow-up maximum, written
+      by hand. We are handing someone a current version of something they already
+      chose to link to, not asking them to admire a new post.
+- [x] **T2.3 Competitor backlink reverse-engineering** (tactic 2): UNPARKED and
+      RUN 2026-08-10 (DataForSEO topped up). The run answered the question and the
+      answer downgrades the tactic. Findings, so nobody re-parks or re-runs it
+      hoping for a different result:
+      - **There is no editorial link club to break into.** M7 Health has 90
+        referring main domains, and the profile is a hiring-and-fundraising
+        artifact, not a content one: breezy.hr (their ATS, 23 links), jobgether,
+        startup.jobs, designjobs.careers, digital-health-jobs, bestpmjobs,
+        engineeringjobs.net + VC firms (lakehouse.vc, 25madison, everywhere.vc,
+        threshold.vc, january.ventures, heidiroizen.com) + data aggregators
+        (Crunchbase, CB Insights, ZoomInfo, Growjo, healthtechalpha). None of it
+        is replicable by us and none of it is worth replicating.
+      - **No competitor content page has earned links.** 47 of M7's referring
+        domains point at the bare homepage. Their best-performing content page
+        (`/resources/better-nurse-schedules-reduce-turnover`) has exactly ONE
+        backlink, spam score 35. The "find the competitor page with 120 referring
+        domains and beat it" premise does not exist in this niche.
+      - **The link-gap intersection is mostly junk.** Domains linking to
+        NurseGrid + ShiftWizard + SmartLinx but not us, top 30: two real names
+        (aviahealth.com, technologycounter.com), three data aggregators
+        (CB Insights, Growjo, Mergr), and 25 scraper/stat-spam/directory domains
+        (worldmetrics.org, wifitalents.com, nerdisa.com, ebool.com and similar).
+      - **Two genuine prospects came out of it**, both already reachable through
+        existing lanes: **aviahealth.com** (also appears in our LLM citation
+        autopsy for "QGenda alternatives" — so it is a listicle-gap target under
+        T1.3, not a link-reclamation target) and **technologycounter.com** (a
+        software directory, folds into the capped P5 batch).
+      - **Standing rule: rerun at most quarterly, timeboxed to one hour.** Two
+        usable prospects per run does not justify a monthly engine. The two
+        .edu links pointing at M7's homepage are the only lead worth a second
+        look next quarter (identify which universities and why).
 
 ## Explicitly skipped
 
