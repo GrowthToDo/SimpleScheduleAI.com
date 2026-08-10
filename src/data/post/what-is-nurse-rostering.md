@@ -39,7 +39,7 @@ Nurse rostering is the ongoing management of a nursing staff list: who is employ
 
 ## How Nurse Rostering Works in a Critical Access Hospital?
 
-At a [critical access hospital](/critical-access-hospital-scheduling) with 10-20 nursing staff, rostering is a continuous process, not a one-time activity. The roster is effectively the master record of everyone available to work, full-time staff, part-time staff, and per diem nurses, along with the constraints and credentials that govern how each person can be assigned.
+At a [critical access hospital](/critical-access-hospital-scheduling) with 10-20 nursing staff, rostering is a continuous process, not a one-time activity. The roster is effectively the master record of everyone available to work, full-time staff, part-time staff, and per diem nurses, along with the constraints and credentials that govern how each person can be assigned. Nursing is one of the streams a hospital staffs; how it sits inside the wider job is covered in [what clinical scheduling is](/blog/what-is-clinical-scheduling).
 
 A functioning roster at a CAH typically tracks:
 

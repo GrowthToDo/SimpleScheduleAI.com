@@ -642,5 +642,13 @@
     "primaryKeyword": "how to reduce nurse overtime",
     "pillar": "/nurse-scheduling-software",
     "note": "Howto MOFU: 3 root causes (callout defaults, hour blind spots, roster thinness) + corrected FLSA framing. Pre-rewrite draft was legally inverted TWICE: claimed Texas has no mandatory-OT law (ch.258 says opposite) AND stated 8-and-80 backwards (claimed 4x12=0 OT; daily trigger means 16 OT hrs; 8-and-80 usually COSTS more for 12-hr shifts). Also removed fabricated NSI/AONL 5-12% benchmark, managed-service self-labels, free-analysis offer, 48-hr promise, historical-response-rate ranking factor. Pairs with how-to-handle-nurse-callouts (cross-linked both ways). Hero = callout-night-02 (AI pool)."
+  },
+  {
+    "slug": "what-is-clinical-scheduling",
+    "type": "post",
+    "url": "/blog/what-is-clinical-scheduling",
+    "primaryKeyword": "clinical scheduling",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Comparison/definitional: clinical scheduling (170/mo, LOW comp) vs nurse scheduling. Five-streams device is the differentiator. PRE-PUBLISH REHAB: draft had publishDate 2099 placeholder, inverted structure (TL;DR top / KTs bottom, no TOC), a managed-service self-label, §485.635 cited for the staffing-floor claim (correct pin = §485.631), a 1,350-CAH figure sourced to an unrelated HRSA URL (dossier = 1,383, Flex Monitoring Apr 2026), and an EHR-integration implication in the FAQ. Proofread agent also caught the §485.635 PA-exception omission. Differentiated from what-is-nurse-rostering (roster = the data) and nurse-rostering-vs-scheduling-software (tool categories) by scope framing."
   }
 ]

@@ -201,7 +201,7 @@ In everyday vendor language, yes, the terms are used interchangeably. Operationa
 
 **Is "staff rostering" the same as "nurse rostering" in a hospital?**
 
-Largely yes. "Staff rostering" is the broader workforce-management term; "nurse rostering" is specific to clinical nursing staff. The underlying job is the same: maintaining an accurate pool of available staff with their constraints and qualifications. Healthcare-specific rostering tools add clinical credential tracking that generic workforce tools usually do not include.
+Largely yes. "Staff rostering" is the broader workforce-management term; "nurse rostering" is specific to clinical nursing staff. The underlying job is the same: maintaining an accurate pool of available staff with their constraints and qualifications. Healthcare-specific rostering tools add clinical credential tracking that generic workforce tools usually do not include. The same nesting applies one level up, where nursing is one stream inside [clinical scheduling](/blog/what-is-clinical-scheduling).
 
 **Can a spreadsheet serve as a rostering tool for a small CAH?**
 
