@@ -333,6 +333,35 @@ Implementation example: aladtec-vs-managed-service post — six comparison sub-q
   parse, it is too complex. This also serves AI chunking: engines weigh passage starts heavily
   and chunk mid-paragraph, so a long multi-clause sentence can lose its subject in the split.
 
+### 3.2.2 Structural AI-slop patterns (gate-backed WARNs, added 2026-08-10)
+
+Word-level AI vocabulary is already a hard failure (see `AI_TONE_PHRASES` in
+`check-blog.mjs`). These are the SENTENCE-SHAPE tells, adopted after scanning the
+no-ai-slop pattern list (github.com/petergyang/no-ai-slop) against all 81 live
+files. Everything below scored zero live hits except the first, so treat them as
+prevention, not cleanup.
+
+- **Binary contrast, "X is not A, it is B" (the one real tic: 27 of 81 live
+  files).** Keep it ONLY where the reader genuinely arrives believing A, which is
+  legitimate reframing ("After-hours callout coverage is not a scheduling
+  problem. It is an infrastructure problem"). Cut it when nobody believed A, and
+  state B directly. Hard cap ONE per post; `check-blog` WARNs at two or more,
+  because past that it reads as a verbal tic regardless of each instance's merit.
+- **Never write:** throat-clearing openers ("Here's the thing", "Let me be
+  clear"), faux-insight setups ("What nobody tells you", "The part everyone
+  misses" — one live H2 still carries this), rhetorical setups ("What if I told
+  you", "Think about it"), dramatic fragments ("That's it.", "Full stop."),
+  negative listing ("Not X. Not Y. Z."), colon reveals ("The catch: ..."),
+  fake-profound kickers (end on the concrete point instead), interpretive
+  metadiscourse ("matters more than it sounds", "the key point is"), and
+  superficial -ing analysis (", highlighting the team's commitment to ...").
+- **Synonym cycling:** repeat the right word instead of rotating through
+  variants. "Schedule" five times beats schedule/roster/grid/rota/lineup, except
+  where the variant is a real SEO semantic target (see 3.2).
+- **Summary-recap endings** are already banned by the `in conclusion` /
+  `in summary` word gate; Key Takeaways, FAQ, Our Take, and What-to-Do are the
+  only sanctioned recaps.
+
 ### 3.2.1 SimpleScheduleAI Capability Claims (compliance-adjacent)
 
 Every sentence that attributes a capability to SimpleScheduleAI (advantage bullets, comparison-table SSAI cells, "How SimpleScheduleAI works" sections, CTAs, FAQ answers about SSAI, SVG diagram labels of SSAI features) must match shipped reality. Compliance-adjacent claims especially: a CAH administrator may rely on them.

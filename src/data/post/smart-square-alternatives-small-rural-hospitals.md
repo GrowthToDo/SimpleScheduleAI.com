@@ -71,7 +71,7 @@ Smart Square holds 4.6/5 on Capterra (19 reviews; small sample).[1] The overall 
 
 ### What Reviewers Report
 
-**Empowers Frontline Staff.** A hospital RN described the staff-facing experience positively.
+**Staff-facing experience.** A hospital RN described it positively.
 
 > "SmartSquare stands out as an exceptional tool that empowers employees."
 >

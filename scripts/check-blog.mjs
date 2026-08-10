@@ -68,6 +68,49 @@ const AI_TONE_PHRASES = [
   'stands as',
   'marks a',
   'represents a',
+  // Added 2026-08-10 from the no-ai-slop pattern list (github.com/petergyang/
+  // no-ai-slop). Multi-word only; single words live in AI_TONE_WORDS below
+  // because substring matching false-positives on them.
+  'cutting-edge',
+  'paradigm shift',
+  'game changer',
+  'this is huge',
+];
+
+// Single-word AI vocabulary, matched as EXPLICIT VERB FORMS only. Two false
+// positives from the 2026-08-10 regression run forced this precision: a greedy
+// stem caught "underutilized" (fine word) and, worse, "utilization review",
+// which is a real hospital department and the subject of an entire article.
+// The slop is the verb "utilize" standing in for "use"; the noun
+// "utilization" is domain vocabulary and must pass. Same exemptions as
+// AI_TONE_PHRASES: verbatim blockquotes and the canonical author bio.
+const AI_TONE_WORDS =
+  /\b(fosters?|fostered|fostering|utilizes?|utilized|utilizing|facilitates?|facilitated|facilitating|empowers?|empowered|empowering|supercharges?|supercharged|supercharging)\b/i;
+
+// Structural AI-slop patterns (WARN, not fail: each has legitimate uses, so a
+// human judges). Sourced from the no-ai-slop pattern list, scanned against the
+// live corpus 2026-08-10 before adopting. Everything below scored ZERO live
+// hits except binary-contrast, which appeared in 27 of 81 files.
+const SLOP_STRUCTURES = [
+  [
+    'binary contrast ("X is not A, it is B")',
+    /\b(is|are|it'?s|that'?s) not (a|an|the) [^,.;]{3,45}[,.] (it|they|that) (is|are|'?s|'?re) (a|an|the) /i,
+  ],
+  ['throat-clearing opener', /\b(here'?s the thing|let me be clear|make no mistake|the truth is,)/i],
+  [
+    'faux-insight setup',
+    /\b(what (most people|nobody|everyone|no one) (gets? wrong|misses|tells you)|the part everyone misses)/i,
+  ],
+  ['rhetorical setup', /\b(what if i told you|think about it\.|ask yourself|picture this)/i],
+  ['dramatic fragment', /(^|\s)(that'?s it\.|that'?s the whole (thing|point)\.|full stop\.|end of story\.)/i],
+  ['interpretive metadiscourse', /\b(matters more than it sounds|the key point (here )?is|worth pausing on)/i],
+  ['fake-profound kicker', /\b(the future (is|isn'?t) (already )?(here|coming)|that is the real (story|lesson))/i],
+  ['negative listing', /\bnot [a-z]+\. not [a-z]+\./i],
+  [
+    'superficial -ing analysis',
+    /,\s(highlighting|underscoring|showcasing|demonstrating) (the|its|their|a) [a-z]+ (commitment|dedication|focus)/i,
+  ],
+  ['colon reveal', /^\*?\*?(the (secret|catch|best part|twist|kicker))\*?\*?:/i],
 ];
 
 // Anything in this list is forbidden anywhere (including blockquotes — these
@@ -317,7 +360,33 @@ function check(file) {
         }
       }
     }
+    const wordHit = line.replace(/https?:\/\/\S+/g, '').match(AI_TONE_WORDS);
+    if (wordHit) fail(`AI-tone "${wordHit[0]}"`, bodyOffset + i + 1, line.trim().slice(0, 100));
   });
+
+  // 2b. Structural AI-slop patterns. WARN only: a binary contrast that corrects
+  // a belief the reader actually holds is legitimate rhetoric, while a
+  // decorative one is filler. A human decides. Cap is judgment too: more than
+  // one per post reads as a tic regardless of individual merit.
+  {
+    let binaryContrastCount = 0;
+    body.forEach((line, i) => {
+      if (inBlockquote(line)) return;
+      for (const [name, re] of SLOP_STRUCTURES) {
+        if (re.test(line)) {
+          if (name.startsWith('binary contrast')) binaryContrastCount++;
+          else warn(`AI-slop structure: ${name}`, bodyOffset + i + 1, line.trim().slice(0, 100));
+        }
+      }
+    });
+    if (binaryContrastCount > 1) {
+      warn(
+        `${binaryContrastCount} binary contrasts ("X is not A, it is B") — keep at most one, and only where the reader really believes A`,
+        0,
+        ''
+      );
+    }
+  }
 
   // 3. No inline <svg> in .md files (must be Tailwind div / table).
   lines.forEach((line, i) => {
