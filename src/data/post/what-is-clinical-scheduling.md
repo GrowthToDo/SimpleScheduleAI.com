@@ -54,20 +54,21 @@ Credentials are the second difference. Availability alone does not make a nurse 
 
 ## How Does Clinical Scheduling Differ From Nurse Scheduling?
 
-Nurse scheduling is a subset of clinical scheduling. It covers RNs, LPNs, and CNAs assigned to direct patient care. Clinical scheduling is the umbrella over every licensed and allied health role in the building.
+Nurse scheduling is a subset of clinical scheduling. It covers every nurse who works the unit: RNs, LPNs, and CNAs, on staff or [per diem](/blog/what-is-per-diem-nursing), plus travel and agency nurses filling a contract. Employment type changes availability and cost, not whether the shift needs covering. Clinical scheduling is the umbrella over every licensed and allied health role in the building.
 
-The reason the distinction matters is that the rules differ by category.
+The reason the distinction matters is that the rules differ by category. Here are the same five streams from the section below, seen as scheduling problems.
 
-| Scheduling domain    | Typical shape                                     | What makes it hard                                               |
-| -------------------- | ------------------------------------------------- | ---------------------------------------------------------------- |
-| Nursing              | 8 or 12 hour blocks, rotating days and nights     | Credential match, charge coverage, fair distribution, callouts   |
-| Providers            | On-call rotations, often with contracted coverage | Coordinating people who are not employees, response expectations |
-| Allied health        | Weekday hours plus after-hours call               | Small pools where one absence removes the whole function         |
-| Emergency department | Continuous, no gaps permitted                     | Highest stakes, mixed employed and contracted staffing           |
+| Scheduling stream     | Typical shape                                    | What makes it hard                                                 |
+| --------------------- | ------------------------------------------------ | ------------------------------------------------------------------ |
+| Nursing shifts        | 8 or 12 hour blocks, rotating days and nights    | Credential match, charge coverage, fair distribution               |
+| On-call nursing       | A standby roster sitting behind the posted grid  | Who can actually come in at 2 AM, and what hours they already have |
+| Provider on-call      | Rotations, often including contracted clinicians | Coordinating people who are not employees, response expectations   |
+| Ancillary departments | Weekday hours plus after-hours call              | Pools small enough that one absence removes the service            |
+| Emergency coverage    | Continuous, no gaps permitted                    | Highest stakes, mixed employed and contracted staffing             |
 
 Each column carries its own compliance framework and its own coverage logic. A system that models nursing shifts well may have no concept of a contracted provider's on-call week. That is why hospitals often end up with a scheduling tool and a separate spreadsheet, and why the person who owns both is usually the nurse manager.
 
-The overlap is also where the hours go. When a nurse manager says scheduling takes 8 to 12 hours a week, that time is rarely just building the nursing grid. Most of it is the work around the grid: swaps, callout calls, and whatever coordination spills over when another stream comes up short. Our [breakdown of where those hours actually go](/blog/nurse-manager-scheduling-time-breakdown) splits them out.
+The overlap is also where the hours go. When a nurse manager says scheduling takes 8 to 12 hours a week, that time is rarely just building the nursing grid. Across the 30-plus nurse manager interviews we ran before building SimpleScheduleAI, securing callout and absence cover was the largest single consumer of those hours, not the initial build. Our [breakdown of where those hours actually go](/blog/nurse-manager-scheduling-time-breakdown) splits them line by line.
 
 ## What Scheduling Streams Does a Small Hospital Actually Run?
 
@@ -80,7 +81,7 @@ Five, typically, and all at once. With no float pool from a parent system, every
   </div>
   <div class="rounded-lg bg-blue-200 px-5 py-3">
     <p class="text-sm font-bold text-blue-900 m-0">2. On-call nursing</p>
-    <p class="text-xs text-blue-800 m-0">A separate layer from the posted grid, used for volume spikes and callout coverage. Tracking who is on call and what hours they have already worked happens outside the schedule itself.</p>
+    <p class="text-xs text-blue-800 m-0">A separate layer from the posted grid, used for volume spikes and <a href="/blog/after-hours-callout-coverage-small-hospitals">after-hours coverage</a>. Tracking who is on call and what hours they have already worked happens outside the schedule itself.</p>
   </div>
   <div class="rounded-lg bg-blue-400 px-5 py-3">
     <p class="text-sm font-bold text-white m-0">3. Provider on-call</p>
@@ -106,7 +107,7 @@ Two federal requirements shape the whole exercise at a critical access hospital,
 
 **Emergency services available 24 hours a day.** Under [42 CFR 485.618](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618), emergency services must be available on a 24-hour basis, which is what makes the emergency stream the one with no acceptable gap.
 
-Separately, a registered nurse, or where State law permits a physician assistant, must supervise and evaluate the nursing care of each patient under [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). The schedule expresses that requirement through charge coverage on every shift. None of these are documentation exercises invented after the fact. They are the constraints the schedule has to satisfy while it is being built, and the reason the [1,383 critical access hospitals](https://www.flexmonitoring.org/historical-cah-data-0) certified nationally as of April 2026 cannot treat scheduling as a purely administrative task.
+Separately, a registered nurse, or where State law permits a physician assistant, must supervise and evaluate the nursing care of each patient under [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). The schedule expresses that requirement through charge coverage on every shift, and our [CMS compliance guide](/blog/how-to-stay-cms-compliant-nurse-scheduling) walks the documentation side. None of these are documentation exercises invented after the fact. They are the constraints the schedule has to satisfy while it is being built, and the reason the [1,383 critical access hospitals](https://www.flexmonitoring.org/historical-cah-data-0) certified nationally as of April 2026 cannot treat scheduling as a purely administrative task.
 
 ## What Software Handles Clinical Scheduling at a Small Hospital?
 
@@ -124,7 +125,7 @@ For a small hospital, the most practical answer to "what do we need for clinical
 
 ## How Does SimpleScheduleAI Fit Into Clinical Scheduling?
 
-SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling) for Texas Critical Access Hospitals, and it covers one of the five streams: inpatient nursing. The AI builds each schedule against the compliance and fairness rules configured at onboarding, a scheduling specialist checks the draft, and the nurse manager approves before anything posts. Fair distribution of nights, weekends, and holidays is tracked with a running per-nurse count, callouts return a ranked shortlist of qualified replacements with the reasons visible, and every change lands in a timestamped log. The full cycle is on [how the scheduling process works](/how-it-works).
+SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling) for Texas Critical Access Hospitals, and it covers the two nursing streams: the posted grid and the callout coverage that follows it. The AI builds each schedule against the compliance and fairness rules configured at onboarding, a scheduling specialist checks the draft, and the nurse manager approves before anything posts. Fair distribution of nights, weekends, and holidays is tracked with a running per-nurse count, and every change lands in a timestamped log. When a nurse calls out, the service returns a ranked shortlist of qualified replacements with the reasons visible: skills, role, charge coverage, and overtime risk. That is the [callout handling process](/blog/how-to-handle-nurse-callouts) run as a service rather than a phone tree, and the full cycle is on [how the scheduling process works](/how-it-works).
 
 Being precise about scope, and about where we are not right for you: we do not schedule providers, we do not run ancillary departments, and we are not an EHR integration. If your hardest problem is provider on-call or ED contracting, we are not the answer to it. Our claim is narrower and, we think, more useful: nursing is the stream that consumes the most manager hours at a small hospital, and stabilizing it first is what makes the other four manageable.
 
