@@ -156,6 +156,48 @@ const howItWorksBreadcrumbSchema = {
     ]}
   />
 
+  <!-- Setup: the objection scheduling software cannot answer -->
+  <section class="bg-page">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="max-w-3xl" data-reveal>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Getting started</p>
+        <h2 class="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+          How long does setup take, and what does your team have to do?
+        </h2>
+        <p class="mt-4 text-lg text-default/80">
+          Three to five business days of onboarding, and your first schedule inside two weeks. Almost all of that work
+          is ours. There is no software to install, nothing for your nurses to learn, and no IT project to staff.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-10 md:grid-cols-2 md:gap-0" data-reveal-group>
+        <div class="md:pr-12 lg:pr-16">
+          <h3 class="mb-5 text-sm font-semibold uppercase tracking-[0.14em] text-primary">What your team does</h3>
+          <ul class="divide-y divide-ink/10 border-t border-ink/10">
+            <li class="py-3.5 leading-relaxed text-default">Sends the staff roster you already keep, in Excel</li>
+            <li class="py-3.5 leading-relaxed text-default">
+              Answers questions about your unit rules once, in a kickoff call
+            </li>
+            <li class="py-3.5 leading-relaxed text-default">Reviews the first schedule and approves it</li>
+          </ul>
+          <p class="mt-4 text-sm text-muted">We configure your rules before your first cycle.</p>
+        </div>
+
+        <div class="md:border-l md:border-ink/10 md:pl-12 lg:pl-16">
+          <h3 class="mb-5 text-sm font-semibold uppercase tracking-[0.14em] text-muted">What your team never does</h3>
+          <ul class="divide-y divide-ink/10 border-t border-ink/10">
+            <li class="py-3.5 leading-relaxed text-default/80">Installs or maintains software</li>
+            <li class="py-3.5 leading-relaxed text-default/80">Trains staff on a new system</li>
+            <li class="py-3.5 leading-relaxed text-default/80">Assigns IT people to an integration or a go-live</li>
+          </ul>
+          <p class="mt-4 text-sm text-muted">
+            Scheduling software asks a hospital to run a rollout. We are not asking you to run anything.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Weekly cadence: how a week runs once the rules are locked -->
   <WeeklyCadence />
 
@@ -176,6 +218,11 @@ const howItWorksBreadcrumbSchema = {
     title="Questions about the process"
     tagline="Common questions"
     items={[
+      {
+        title: 'How long does setup take, and what does our IT team have to do?',
+        description:
+          'Onboarding is three to five business days and your first schedule arrives inside two weeks. Your IT team has nothing to do: there is no installation, no integration to build, and no system for your staff to be trained on. You send a roster, answer rule questions once, and approve the first schedule.',
+      },
       {
         title: 'How do we get our data in?',
         description: 'Excel upload. Export your current data, edit, re-import anytime. No new software for your staff.',
