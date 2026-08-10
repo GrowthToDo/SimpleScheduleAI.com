@@ -79,6 +79,27 @@ service customer. A live-copy scan on 2026-08-10 found no violations: every
 "log in" on the site refers to a competitor's product or explicitly contrasts us
 ("hospital staff never have to log into a new tool").
 
+### Founder rulings on the load-bearing open questions (2026-08-10)
+
+The inventory's section 7 lists 14 open questions. These five were the ones that
+gate content; the rest are lower-stakes and get asked when a specific post needs
+them.
+
+1. **Who approves, and where?** Nobody at the hospital operates anything. Approval
+   travels by email or an agreed channel. See the operating truth above.
+2. **`AUTH_ENABLED` / login security.** A product-mode concern only. Service
+   customers have no accounts, so it is irrelevant to service copy and to today's
+   risk. At product launch the product runs in a separate environment with real
+   customer data, and auth-on is a launch requirement there.
+3. **Safe Harbor: DO NOT MENTION.** We have nothing specific to it. The fields and
+   audit action found in code are not a capability. What we do have is per-nurse
+   visibility of violations and overtime across a period, so a manager can see a
+   nurse being leaned on and decide not to overuse her. Claim that as visibility
+   supporting a human decision, never as a protection or a legal safeguard.
+4. **Hourly rates: not planned.** All cost claims stay in hours.
+5. **Multi-specialty:** wanted for the live demo, but the demo runs one department
+   (ICU) today. Do not present multi-unit scheduling as demo-able yet.
+
 ### A code STUB or PARTIAL does not mean service-unavailable
 
 This is the correction that makes the rest of the doc safe to use. The status
