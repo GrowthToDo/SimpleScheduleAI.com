@@ -8,19 +8,20 @@ Founder Pradeep. Frame suggestions: hospital ops perspective, not generic tech.
 
 ## Key File Locations
 
-| What                         | Where                                        |
-| ---------------------------- | -------------------------------------------- |
-| Pages                        | `src/pages/`                                 |
-| Blog posts                   | `src/data/post/`                             |
-| SEO/AEO skill                | `.claude/skills/seo-aeo-simplescheduleai.md` |
-| Competitor review skill      | `.claude/skills/competitor-reviews.md`       |
-| Dev reference skill          | `.claude/skills/project-dev.md`              |
-| Programmatic video skill     | `.claude/skills/programmatic-brand-video.md` |
-| Blog post template           | `docs/seo/blog-post-template.mdx`            |
-| Pre-publish checklist        | `docs/seo/pre-publish-checklist.md`          |
-| **Governance authority map** | **`docs/seo/GOVERNANCE.md`**                 |
-| Facts dossier                | `docs/seo/facts-dossier.md`                  |
-| **Competitor dossier**       | **`docs/seo/competitor-dossier.md`**         |
+| What                         | Where                                                                                                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Pages                        | `src/pages/`                                                                                                                         |
+| Blog posts                   | `src/data/post/`                                                                                                                     |
+| SEO/AEO skill                | `.claude/skills/seo-aeo-simplescheduleai.md`                                                                                         |
+| Competitor review skill      | `.claude/skills/competitor-reviews.md`                                                                                               |
+| Dev reference skill          | `.claude/skills/project-dev.md`                                                                                                      |
+| Programmatic video skill     | `.claude/skills/programmatic-brand-video.md`                                                                                         |
+| Blog post template           | `docs/seo/blog-post-template.mdx`                                                                                                    |
+| Pre-publish checklist        | `docs/seo/pre-publish-checklist.md`                                                                                                  |
+| **Governance authority map** | **`docs/seo/GOVERNANCE.md`**                                                                                                         |
+| Facts dossier                | `docs/seo/facts-dossier.md`                                                                                                          |
+| **What the product can do**  | **`docs/seo/product-capability-inventory-2026-08.md`** (code-verified; read its MODE APPLICABILITY section before any product claim) |
+| **Competitor dossier**       | **`docs/seo/competitor-dossier.md`**                                                                                                 |
 
 ## Competitor Data Rule
 
