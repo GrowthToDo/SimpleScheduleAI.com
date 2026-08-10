@@ -207,7 +207,7 @@ One honest limitation: a managed callout shortlist is not the right fit for hosp
 2. **Document your callout-coverage escalation order in writing.** Charge nurse → per-diem bench → cross-credentialed daytime staff → agency. Put it on one page, post it in the break room and in the charge nurse handoff binder. Verbal escalation orders fail at 3 AM.
 3. **Recruit and brief your per-diem bench this month.** Aim for 4 to 6 cross-credentialed nurses on a fixed weekly availability cadence. Confirm their certifications match your acute-coverage needs. A standing bench is the difference between paying agency premium and covering internally.
 4. **Audit your CMS §485.635 callout-documentation gaps.** Pull the last six months of callouts. For how many do you have a complete record of who was called, who declined or accepted, what time, and the credential match? Documentation gaps surface during CMS surveys, not when the callout happens.
-5. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service maintains the ranked call list, the per-diem bench, and the CMS-ready callout documentation so the on-call charge nurse makes calls instead of building the list at 2 AM. Start at [how it works](/how-it-works).
+5. **See how SimpleScheduleAI works if you are a Texas CAH.** The service produces the ranked call list and the timestamped record of every change, so the on-call charge nurse makes calls instead of building the list at 2 AM. Start at [how it works](/how-it-works).
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Stop building the call list at 2 AM</p>
