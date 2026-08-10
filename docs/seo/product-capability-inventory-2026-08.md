@@ -63,6 +63,40 @@ clicked what. Second, when a capability is product-only, the honest service line
 is often the inverse: not "your nurses can swap shifts in the app" but "your
 nurses never have to learn a new app."
 
+### The service-mode operating truth (founder, 2026-08-10)
+
+> "In service mode our whole idea is they will not get to do anything. If they
+> want to log in to approve, we can do that, but the whole idea behind service
+> is we do everything and you tell us what to do. Approval will be through mail
+> or whatever channel we decide."
+
+So in service copy, the hospital logs into nothing by default, including the
+manager. Approval is a DECISION the manager makes, communicated over email or an
+agreed channel, not a button they press. Keep writing "the nurse manager
+approves before anything posts" — that stays true — but never write or imply
+"approves in the app", "logs in to review", or "from the dashboard" about a
+service customer. A live-copy scan on 2026-08-10 found no violations: every
+"log in" on the site refers to a competitor's product or explicitly contrasts us
+("hospital staff never have to log into a new tool").
+
+### A code STUB or PARTIAL does not mean service-unavailable
+
+This is the correction that makes the rest of the doc safe to use. The status
+column describes the SOFTWARE. In service mode our team is part of the system,
+so a missing button is not a missing capability.
+
+- **SERVICE mode:** a capability is claimable if the software does it **or** our
+  team does it manually as part of the service and the founder confirms we
+  actually will. Example: low-census release has config and suggestions in code
+  but no execution workflow, yet the founder confirms we do change the census
+  band and release excess staff. That is a real service capability.
+- **PRODUCT mode:** only what the software does unassisted is claimable. The
+  same low-census example is NOT a product claim until the workflow ships.
+
+When you use a PARTIAL or STUB line for service copy, say what the SERVICE
+delivers, never what the screen shows, and get founder confirmation that the
+manual step is genuinely part of the operating routine.
+
 ## 2. Route map
 
 ### 2a. Pages (24)
