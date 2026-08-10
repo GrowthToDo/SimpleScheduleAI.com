@@ -63,6 +63,35 @@ play**. They stay in the plan, capped at one batched session, no paid tiers.
 5. **P5 — Software directories (the six).** One batched session using the
    product-mode kit. Do not iterate, do not pay, do not chase.
 
+## REJECTED TACTICS REGISTER (standing filter, opened 2026-08-10)
+
+Tactics arrive faster than they can be evaluated from scratch. This is the
+running list of what we have looked at and refused, with the reason, so the next
+one takes thirty seconds instead of an hour and the answer stays consistent.
+
+**The one filter that decides most cases:** judge a link by whether a real person
+in our ICP could plausibly arrive through it. Referring-domain count is a vanity
+number, and we have our own proof: the 2026-08-03 measurement found 338 referring
+domains at 99.4% nofollow, nearly all directory syndication, with exactly two
+genuinely followed domains. More of that changes nothing.
+
+| Tactic | Source | Why rejected |
+| --- | --- | --- |
+| Inserting our links into Wikipedia by swapping dead citations | hridoyreh, Jul 2026 | Wikipedia external links have been nofollow since 2007, so there is no equity. Its dead-link policy requires replacing a dead citation with an ARCHIVED copy of the original, not a different site, so the edit itself breaks policy and reads as self-citation. For a healthcare vendor pitching hospital associations, being seen editing Wikipedia to promote itself is a reputational loss far bigger than any link. |
+| Self-created Google properties (Google Sites, Google Docs, Blogger pages) linking back | hridoyreh, Jul 2026 | Self-created links, explicitly discounted by Google's link-spam policy. Inflates Ahrefs, moves nothing. |
+| Posting in the Search Console community "acting like you know nothing" to drop a link | hridoyreh, Jul 2026 | Deliberate deception. Fails our own honesty standard before it fails Google's, and forum links are nofollow anyway. |
+| Building a Chrome extension purely to earn a Web Store link | hridoyreh, Jul 2026 | No ICP fit. Hospital administrators do not install browser extensions to solve scheduling. |
+| Automated reciprocal link-exchange networks (e.g. Distribb "Exchange Only") | borjafat, Aug 2026 | An automated link scheme; the source article itself concedes Google warns against exactly this. Violates our no-reciprocity guardrail. |
+| Dropping our links into nursing communities (r/nursing and similar) | standing rule | Vendor links in threads about nurses' working conditions read as ambulance-chasing, and most subs remove vendor content. |
+| Mass directory submission beyond one batched session | 2026-08-01 measurement | Measured: almost entirely nofollow. Kept as an entity and AI-retrieval signal only, capped, never iterated, never paid. |
+
+**Adopted inversion from the Wikipedia thread:** do not put links INTO Wikipedia,
+mine it. Articles on critical access hospitals, rural health, and nurse staffing
+carry curated citation lists of primary sources (CMS, HRSA, AHA, state health
+departments). Those are simultaneously facts for the dossier and organizations
+whose resource pages are P1/P2 outreach targets. Same search, opposite direction,
+entirely legitimate.
+
 **Quotable-asset lane (added 2026-08-05, first asset: the Montefiore article).**
 Newsroom analysis pieces are a different asset class from the template and the
 statistics page: they state a sourced position on a live story, which is what
