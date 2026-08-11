@@ -51,7 +51,7 @@ The service line findings show what financial pressure does to a rural community
 
 The Texas number is worse because the national average blends two very different groups. Chartis splits the in-the-red finding by Medicaid expansion status: 34.9% of rural hospitals in expansion states against 52.2% in states that did not expand. Texas is listed as [Not Adopted](https://www.kff.org/affordable-care-act/state-indicator/state-activity-around-expanding-medicaid-under-the-affordable-care-act/) in KFF's tracker of state expansion decisions, so the 52.2% figure is the one that describes the environment a Texas rural hospital operates in.
 
-That gap, roughly 17 percentage points, is the single most useful thing in the report for a Texas reader, and it is the part the national coverage flattens. Texas also carries the largest absolute count of vulnerable hospitals at 50, ahead of Kansas at 44, Tennessee at 27, Georgia at 25, and Mississippi at 24. Texas has [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas) according to the Rural Health Information Hub, so this is a large population of small facilities inside the worse half of the split.
+That gap, roughly 17 percentage points, is the single most useful thing in the report for a Texas reader, and it is the part the national coverage flattens. Texas also carries the largest absolute count of vulnerable hospitals at 50, ahead of Kansas at 44, Tennessee at 27, Georgia at 25, and Mississippi at 24. Texas has [93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas) according to the Rural Health Information Hub, so this is a large population of small facilities inside the worse half of the split.
 
 ## Does Nurse Scheduling Have Anything to Do With Hospital Finances?
 

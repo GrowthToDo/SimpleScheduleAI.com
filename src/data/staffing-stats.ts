@@ -16,13 +16,13 @@ export const sections = [
     intro:
       'Critical Access Hospitals (CAHs) are federally designated rural hospitals of 25 or fewer acute-care beds. For how scheduling actually works at that scale, see our guide to <a href="/critical-access-hospital-scheduling">critical access hospital scheduling</a>.',
     takeaway:
-      'Nearly every Critical Access Hospital CEO calls nursing staff hard to recruit (94%), and there are 1,383 of these hospitals across the country.',
+      'Nearly every Critical Access Hospital CEO calls nursing staff hard to recruit (94%), and there are 1,388 of these hospitals across the country.',
     stats: [
       {
         anchor: 'us-cah-count',
-        value: '1,383',
+        value: '1,388',
         label: 'Certified Critical Access Hospitals in the U.S.',
-        context: 'Rural hospitals of 25 or fewer acute-care beds, as of April 2026.',
+        context: 'Rural hospitals of 25 or fewer acute-care beds, as of July 2026.',
         source: 'Flex Monitoring Team, Historical CAH Data',
         url: 'https://www.flexmonitoring.org/historical-cah-data-0',
       },
@@ -143,7 +143,7 @@ export const sections = [
     id: 'texas-cah',
     heading: 'The Texas Critical Access Hospital Picture',
     intro:
-      'Texas has 91 Critical Access Hospitals today (Rural Health Information Hub, 2026), and it runs its own hospital nurse-staffing study, which lets us separate CAHs from other rural and non-rural hospitals. The figures below are from the Texas DSHS 2024 study (spring-2024 survey, published February 2025), which counted 86 CAHs in its survey frame at the time. For the compliance layer these facilities operate under, see <a href="/blog/texas-nursing-overtime-compliance-cah">Texas nursing overtime compliance</a>.',
+      'Texas has 93 Critical Access Hospitals today (Rural Health Information Hub, 2026), and it runs its own hospital nurse-staffing study, which lets us separate CAHs from other rural and non-rural hospitals. The figures below are from the Texas DSHS 2024 study (spring-2024 survey, published February 2025), which counted 86 CAHs in its survey frame at the time. For the compliance layer these facilities operate under, see <a href="/blog/texas-nursing-overtime-compliance-cah">Texas nursing overtime compliance</a>.',
     takeaway:
       'Texas Critical Access Hospitals fill their nursing jobs better than any other hospital type in the state, then lose those nurses faster than any of them.',
     stats: [
@@ -210,7 +210,7 @@ export const sections = [
 
 // Single source of truth for the freshness stamp: update BOTH values whenever a
 // figure is re-verified. Wired to the visible "Updated" line and schema dateModified.
-export const lastUpdated = 'July 25, 2026';
-export const lastUpdatedISO = '2026-07-25';
+export const lastUpdated = 'August 11, 2026';
+export const lastUpdatedISO = '2026-08-11';
 
 export const allStats = sections.flatMap((s) => s.stats);

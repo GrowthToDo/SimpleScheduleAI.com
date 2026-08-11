@@ -6,7 +6,7 @@ title: 'What Rural Texas Hospitals Are Actually Using for Nurse Scheduling in 20
 excerpt: >
   Ask which nurse scheduling tools rural Texas hospitals actually use and you hit a
   wall: nobody publishes the data. Public rural-health evidence still points somewhere
-  specific. Here is a directional read on what the state's 91 critical access hospitals
+  specific. Here is a directional read on what the state's 93 critical access hospitals
   likely run in 2026, with the guesswork labeled as guesswork.
 image: https://images.unsplash.com/photo-1512678080530-7760d81faba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
@@ -23,7 +23,7 @@ metadata:
 
 ## Key Takeaways
 
-- Texas has [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), most concentrated in rural communities where the nearest alternative facility can be a long drive away.
+- Texas has [93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), most concentrated in rural communities where the nearest alternative facility can be a long drive away.
 - Public rural-health data documents that small rural facilities operate with thin margins and without dedicated IT departments. Facilities in that position commonly rely on the simplest available tools: spreadsheets, a whiteboard, and a phone. We cannot measure the exact split at Texas facilities, so treat any tool ranking as directional inference from public evidence, not a measured market share.
 - When a small rural hospital does buy purpose-built scheduling software, ease of setup and direct support tend to matter more than feature breadth. Publicly reviewed platforms in this space, such as Aladtec, built their reputations on exactly those attributes.
 - Structured software evaluation rarely happens where no one owns the task and there is no dedicated budget line, a plausible reason many small rural hospitals have not adopted a tool recently. This is inference from documented staffing constraints, not a survey result.
@@ -44,7 +44,7 @@ Scheduling software companies publicly focus their sales and marketing on health
 
 ## How Many Texas Critical Access Hospitals Are There, and What Are They Facing?
 
-Texas has 91 critical access hospitals, making it one of the largest CAH states in the country. They are distributed across rural communities throughout West Texas, the Panhandle, East Texas, and South Texas, often serving counties where the next closest hospital is a long drive away.
+Texas has 93 critical access hospitals, making it one of the largest CAH states in the country. They are distributed across rural communities throughout West Texas, the Panhandle, East Texas, and South Texas, often serving counties where the next closest hospital is a long drive away.
 
 [Critical access hospitals](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) are federally designated rural facilities with 25 or fewer acute care beds. In Texas, they are also subject to Texas Health and Human Services Commission (HHSC) hospital licensing and staffing standards, Texas Payday Law wage-payment provisions, and CMS Conditions of Participation, creating a specific compliance environment that generic scheduling software does not address.
 

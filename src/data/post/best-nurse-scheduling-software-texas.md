@@ -22,7 +22,7 @@ metadata:
 
 ## Key Takeaways
 
-- Texas has 91 Critical Access Hospitals (CAHs), among the most of any state, concentrated in rural west Texas, the Panhandle, and south Texas border communities where rural isolation amplifies every scheduling challenge.
+- Texas has 93 Critical Access Hospitals (CAHs), among the most of any state, concentrated in rural west Texas, the Panhandle, and south Texas border communities where rural isolation amplifies every scheduling challenge.
 - Texas has no separate state overtime law; the federal [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) governs, including the healthcare "8-and-80" option many hospitals elect. The scheduling question that matters is whether a tool tracks that 8-and-80 calculation, not a Texas-specific overtime layer, because there isn't one.
 - A nurse manager at a Texas CAH can lose a meaningful slice of the week to scheduling, on the order of 8 to 12 hours by our own directional estimate (not a published figure). That time cost is the baseline any tool needs to beat before it provides positive ROI.
 - SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals. FLSA overtime threshold tracking, CMS §485.635 audit documentation, and charge nurse coverage logic are defaults, not configuration options.
@@ -577,7 +577,7 @@ No. Texas has no state overtime statute; overtime for Texas hospitals is governe
 
 **Q: How many Critical Access Hospitals are in Texas?**
 
-Texas has 91 certified Critical Access Hospitals (Rural Health Information Hub, 2026), making it one of the states with the highest CAH concentration. Most are in rural west Texas, the Panhandle, south Texas, and east Texas. For scheduling purposes, this means a large segment of the Texas hospital market has CAH-specific compliance requirements that most national scheduling software vendors do not address explicitly.
+Texas has 93 certified Critical Access Hospitals (Rural Health Information Hub, 2026), making it one of the states with the highest CAH concentration. Most are in rural west Texas, the Panhandle, south Texas, and east Texas. For scheduling purposes, this means a large segment of the Texas hospital market has CAH-specific compliance requirements that most national scheduling software vendors do not address explicitly.
 
 **Q: What is the FLSA 8 and 80 rule for Texas hospital nurses?**
 

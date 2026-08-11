@@ -23,7 +23,7 @@ metadata:
 ## Key Takeaways
 
 - Texas nurse staffing splits sharply by hospital type. In the [Texas DSHS 2024 study](https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf), critical access hospitals had the lowest RN vacancy (11.6%) but the highest RN median turnover (18.2%) of the three hospital groups.
-- Texas has [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas) today (Rural Health Information Hub, 2026). The 2024 DSHS study surveyed a frame of 86, so its rates are computed on that older survey universe, not the current statewide count.
+- Texas has [93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas) today (Rural Health Information Hub, 2026). The 2024 DSHS study surveyed a frame of 86, so its rates are computed on that older survey universe, not the current statewide count.
 - Turnover, not vacancy, is the expensive number for a small hospital. The [2026 NSI report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) puts the cost of turning over one bedside RN at $60,090 and the time to recruit an experienced RN at 78 days.
 - The nursing staff mix at a Texas critical access hospital is different: 61.0% registered nurses and 16.4% LVNs, versus 80.5% RN and 3.6% LVN at non-rural hospitals. Skill-mix planning, not just headcount, drives coverage at this scale.
 - On top of the staffing math sits a compliance layer: CMS requires a licensed nurse on duty whenever the hospital has inpatients, and overtime runs on the federal FLSA because Texas adds no state overtime law.
@@ -45,7 +45,7 @@ For an administrator or director of nursing at a Texas critical access hospital,
 
 ## What Do the 2026 Numbers Say About Texas Nurse Staffing?
 
-Texas has [91 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), among the most of any state, concentrated in West Texas, the Panhandle, East Texas, and the border counties. That is the current federal count. The state also publishes the [Texas DSHS 2024 Hospital Nurse Staffing Study](https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf), a spring-2024 survey released in February 2025, which is the best facility-level read available.
+Texas has [93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), among the most of any state, concentrated in West Texas, the Panhandle, East Texas, and the border counties. That is the current federal count. The state also publishes the [Texas DSHS 2024 Hospital Nurse Staffing Study](https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf), a spring-2024 survey released in February 2025, which is the best facility-level read available.
 
 The study surveyed a frame of 86 critical access hospitals across 78 counties, of which 50 responded. That 86 was how many the study started with back then, not how many Texas has now. Its vacancy and turnover rates come from the 50 that answered. The current statewide count is 91.
 
@@ -141,7 +141,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for a large Texas h
 
 **Q: How many critical access hospitals does Texas have?**
 
-Texas has 91 critical access hospitals today, per the Rural Health Information Hub (2026), among the most of any state. The Texas DSHS 2024 staffing study surveyed a frame of 86 at the time, so that older number appears only inside the study's vacancy and turnover figures, never as the current count.
+Texas has 93 critical access hospitals today, per the Rural Health Information Hub (2026), among the most of any state. The Texas DSHS 2024 staffing study surveyed a frame of 86 at the time, so that older number appears only inside the study's vacancy and turnover figures, never as the current count.
 
 **Q: What is the nurse turnover rate at Texas critical access hospitals?**
 

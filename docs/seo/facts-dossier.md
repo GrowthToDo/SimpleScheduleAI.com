@@ -6,12 +6,12 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 
 ### Texas critical access hospital count
 
-- Approved wording: "Texas has 91 critical access hospitals" (or "the state's 91 critical access hospitals")
-- Source: RHIhub Texas state guide, "Rural Healthcare Facilities" section, shows 91 Critical Access Hospitals; corroborated by Flex Monitoring Team / RHIhub CAH locator (both CMS-based) and WebSearch confirming 91 as the current count.
+- Approved wording: "Texas has 93 critical access hospitals" (or "the state's 93 critical access hospitals")
+- Source: RHIhub Texas state guide, "Rural Healthcare Facilities" section, shows 93 Critical Access Hospitals.
 - URL: https://www.ruralhealthinfo.org/states/texas
-- **91 is THE current count for all general "Texas has N CAHs" claims.** Do NOT use "86" as a current headline count. 86 is the OLDER Texas DSHS 2024 staffing-study survey frame (spring 2024) — see the DSHS entry below. The two differ by data vintage/scope; 86 is valid ONLY inside explicit DSHS-2024-study context (its vacancy/turnover stats depend on that 86-CAH universe), never as the present-day total.
+- **93 is THE current count for all general "Texas has N CAHs" claims.** It was 91 until the 2026-08-11 re-verification; that is normal drift, not an error in the earlier figure. Do NOT use "86" as a current headline count. 86 is the OLDER Texas DSHS 2024 staffing-study survey frame (spring 2024) — see the DSHS entry below. The two differ by data vintage/scope; 86 is valid ONLY inside explicit DSHS-2024-study context (its vacancy/turnover stats depend on that 86-CAH universe), never as the present-day total.
 - Note: CAH counts drift slowly as facilities convert or close; re-verify if the entry is older than 60 days at time of use.
-- Verified: 2026-07-17 (fact-check agent live fetch + Flex/CMS cross-check; standardized 91-vs-86 across the site same day)
+- Verified: 2026-08-11 (live RHIhub fetch; count moved 91 -> 93, swept across all live content the same day). Prior: 2026-07-17 (fact-check agent live fetch + Flex/CMS cross-check; standardized 91-vs-86 across the site same day).
 
 ### 42 CFR 485.631(a)(5)
 
@@ -138,7 +138,7 @@ All verified from loaded primary pages/PDFs on 2026-07-13; collected for the pla
 
 **CAH landscape**
 
-- 1,383 certified CAHs in the US (April 2026) — Flex Monitoring Team, Historical CAH Data. URL: https://www.flexmonitoring.org/historical-cah-data-0 (prior data point: 1,381 in January 2026)
+- 1,388 certified CAHs in the US (July 2026) — Flex Monitoring Team, Historical CAH Data. URL: https://www.flexmonitoring.org/historical-cah-data-0 (series: 1,381 Jan 2026, 1,383 Apr 2026, 1,388 Jul 2026 — the page publishes a new count roughly quarterly, so re-verify before any outreach push). Verified 2026-08-11 (live page read; site swept 1,383 -> 1,388 same day). NSI 2026 figures re-verified UNCHANGED the same day: 17.6% turnover, 8.6% vacancy, $60,090 per RN, 43 unfilled FTEs, 33.1% of hospitals above 10% vacancy, 527 hospitals across 40 states.
 - 197 rural hospital closures/conversions since January 2005 (109 complete + 88 converted); 154 since 2010 — UNC Sheps Center rural closures tracker, page updated 12/4/25. URL: https://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/ — Wrong: 195 (stale snippet); NO per-state Texas total is stated (never hand-count the table).
 - 94% of CAH CEOs reported nursing staff difficult to recruit; 86% reported retention challenges — Flex Monitoring policy brief (Feb 2023; survey of CAH CEOs Mar-May 2022, n=155 of 404, 38% response). URL: https://www.flexmonitoring.org/sites/flexmonitoring.umn.edu/files/media/CAH_workforce_during_COVID_Barriers_and_facilitators_for_recruiting_and_retaining_staff_2025.pdf — always carry the 2022-survey date.
 

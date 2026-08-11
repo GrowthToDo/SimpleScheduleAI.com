@@ -107,7 +107,7 @@ Two federal requirements shape the whole exercise at a critical access hospital,
 
 **Emergency services available 24 hours a day.** Under [42 CFR 485.618](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618), emergency services must be available on a 24-hour basis, which is what makes the emergency stream the one with no acceptable gap.
 
-Separately, a registered nurse, or where State law permits a physician assistant, must supervise and evaluate the nursing care of each patient under [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). The schedule expresses that requirement through charge coverage on every shift, and our [CMS compliance guide](/blog/how-to-stay-cms-compliant-nurse-scheduling) walks the documentation side. None of these are documentation exercises invented after the fact. They are the constraints the schedule has to satisfy while it is being built, and the reason the [1,383 critical access hospitals](https://www.flexmonitoring.org/historical-cah-data-0) certified nationally as of April 2026 cannot treat scheduling as a purely administrative task.
+Separately, a registered nurse, or where State law permits a physician assistant, must supervise and evaluate the nursing care of each patient under [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). The schedule expresses that requirement through charge coverage on every shift, and our [CMS compliance guide](/blog/how-to-stay-cms-compliant-nurse-scheduling) walks the documentation side. None of these are documentation exercises invented after the fact. They are the constraints the schedule has to satisfy while it is being built, and the reason the [1,388 critical access hospitals](https://www.flexmonitoring.org/historical-cah-data-0) certified nationally as of July 2026 cannot treat scheduling as a purely administrative task.
 
 ## What Software Handles Clinical Scheduling at a Small Hospital?
 
@@ -171,7 +171,7 @@ Enterprise platforms aim to, and large health systems with IT teams do run them 
 1. 42 CFR 485.631, Conditions of Participation: Staffing and staff responsibilities. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
 2. 42 CFR 485.618, Conditions of Participation: Emergency services. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618)
 3. 42 CFR 485.635, Conditions of Participation: Provision of services. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
-4. Flex Monitoring Team, Historical CAH Data (1,383 certified CAHs, April 2026). [Flex Monitoring](https://www.flexmonitoring.org/historical-cah-data-0)
+4. Flex Monitoring Team, Historical CAH Data (1,388 certified CAHs, July 2026). [Flex Monitoring](https://www.flexmonitoring.org/historical-cah-data-0)
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
