@@ -43,6 +43,8 @@ Self-scheduling is appealing in theory. Give nurses autonomy over their hours an
 
 At a large health system with a dedicated scheduling coordinator and a deep bench of staff, the damage from a flawed self-scheduling rollout is contained. At a 25-bed Critical Access Hospital with 15-20 nurses on a unit, the same failure pattern creates a coverage crisis within two cycles.
 
+This guide is about the failure modes and how to fix them. If you are still deciding whether to run self-scheduling at all, the comparison of [self-scheduling for nurses against a cyclical rotation](/blog/cyclical-scheduling-vs-self-scheduling-small-hospital) works through which model fits a small hospital, and why most end up running a hybrid of the two.
+
 ## Why Does Self-Scheduling Break Down at a Critical Access Hospital?
 
 Self-scheduling breaks down at a CAH because the shift pool is too small to absorb the natural tendency of nurses to claim the same desirable shifts. When 15 nurses are all avoiding nights and weekends, the gap between what gets chosen and what needs to be covered is structural, not a matter of individual bad behavior. The coverage math does not work.

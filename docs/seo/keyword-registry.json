@@ -650,5 +650,13 @@
     "primaryKeyword": "clinical scheduling",
     "pillar": "/nurse-scheduling-software",
     "note": "Comparison/definitional: clinical scheduling (170/mo, LOW comp) vs nurse scheduling. Five-streams device is the differentiator. PRE-PUBLISH REHAB: draft had publishDate 2099 placeholder, inverted structure (TL;DR top / KTs bottom, no TOC), a managed-service self-label, §485.635 cited for the staffing-floor claim (correct pin = §485.631), a 1,350-CAH figure sourced to an unrelated HRSA URL (dossier = 1,383, Flex Monitoring Apr 2026), and an EHR-integration implication in the FAQ. Proofread agent also caught the §485.635 PA-exception omission. Differentiated from what-is-nurse-rostering (roster = the data) and nurse-rostering-vs-scheduling-software (tool categories) by scope framing."
+  },
+  {
+    "slug": "cyclical-scheduling-vs-self-scheduling-small-hospital",
+    "type": "post",
+    "url": "/blog/cyclical-scheduling-vs-self-scheduling-small-hospital",
+    "primaryKeyword": "self scheduling for nurses",
+    "pillar": "/nurse-scheduling-software",
+    "note": "RETARGETED at publish (2026-08-11): original primary keyword \"cyclical scheduling\" measured 20/mo and collapsing (-75% quarterly; DFS core keyword resolves to \"cyclic scheduler\", a computing term). Moved to the self-scheduling cluster (110/mo, LOW comp, $30.84 CPC). Slug and URL unchanged. CANNIBALIZATION PAIR with self-scheduling-problems-critical-access-hospital (primaryKeyword \"self-scheduling problems\"): THAT post owns the FAILURE MODES and their fixes; THIS post owns the MODEL CHOICE (self-scheduling vs cyclical vs hybrid) and the bandwidth decision rule. The three enforcement rules and the \"none of these require software\" passage were deliberately removed from this post at publish so the pair does not present duplicate answer capsules; do not reintroduce them here. Pre-publish proofread also caught a shipped-facing overclaim: the draft claimed SSAI builds a \"rule-bounded self-scheduling layer\" and applies a \"load ceiling\" - capability inventory Notable Absence #9 says we have NO self-scheduling and no open-shift claiming. SSAI section now claims only SHIPPED lines and states the no-nurse-portal limitation."
   }
 ]

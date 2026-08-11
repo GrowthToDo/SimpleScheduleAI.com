@@ -67,7 +67,7 @@ Night shift carries three constraints at once: health effects, lifestyle disrupt
 
 ## Should Critical Access Hospitals Use Rotating or Permanent Night Shift Nurses?
 
-Both models carry genuine tradeoffs for a critical access hospital, and neither is categorically correct. The right answer depends on the size and willingness of your night-eligible pool.
+Both models carry genuine tradeoffs for a critical access hospital, and neither is categorically correct. The right answer depends on the size and willingness of your night-eligible pool. The same tradeoff shows up one level higher, in the choice between [self-scheduling for nurses and a cyclical rotation](/blog/cyclical-scheduling-vs-self-scheduling-small-hospital) for the schedule as a whole.
 
 **Rotating night shift** spreads the physical and lifestyle burden across the full nursing staff, so no single nurse carries nights indefinitely. The cost: rotating nurses never settle into the routines that reduce fatigue impact, and scheduling gets harder when every nurse has different rotation preferences, health constraints, and personal commitments.
 
