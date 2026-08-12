@@ -132,7 +132,7 @@ A useful diagnostic question for any platform: after implementation, how many ho
   </table>
 </div>
 
-Most tools marketed as "automated" operate at Level 3. They significantly reduce scheduling time compared to [pure spreadsheets](/blog/nurse-scheduling-software-vs-excel), but the nurse manager is still in the scheduling business. Level 4 tools exist, but they require substantial configuration time to set up the rules correctly before the auto-generation is reliable. Level 5 is a service model, not a software model, and the decision between software and a managed service for a small hospital is covered in depth in [managed service vs. scheduling software](/blog/managed-service-vs-scheduling-software).
+Most tools marketed as "automated" operate at Level 3. They significantly reduce scheduling time compared to [pure spreadsheets](/blog/nurse-scheduling-software-vs-excel), but the nurse manager is still in the scheduling business. Level 4 tools exist, but they require substantial configuration time to set up the rules correctly before the auto-generation is reliable. Level 5 is a service model, not a software model, and the decision between software and a managed service for a small hospital is covered in depth in [managed service vs. scheduling software](/blog/managed-service-vs-scheduling-software). General assistants sit below Level 3 entirely: they draft a grid and enforce nothing, which is why [Microsoft Copilot can generate a nurse schedule](/blog/can-microsoft-copilot-generate-nurse-schedule) without producing one you can post.
 
 ## Why Do Automated Scheduling Tools Still Require Manual Work?
 

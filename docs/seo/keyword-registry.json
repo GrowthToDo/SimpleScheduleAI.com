@@ -658,5 +658,13 @@
     "primaryKeyword": "self scheduling for nurses",
     "pillar": "/nurse-scheduling-software",
     "note": "RETARGETED at publish (2026-08-11): original primary keyword \"cyclical scheduling\" measured 20/mo and collapsing (-75% quarterly; DFS core keyword resolves to \"cyclic scheduler\", a computing term). Moved to the self-scheduling cluster (110/mo, LOW comp, $30.84 CPC). Slug and URL unchanged. CANNIBALIZATION PAIR with self-scheduling-problems-critical-access-hospital (primaryKeyword \"self-scheduling problems\"): THAT post owns the FAILURE MODES and their fixes; THIS post owns the MODEL CHOICE (self-scheduling vs cyclical vs hybrid) and the bandwidth decision rule. The three enforcement rules and the \"none of these require software\" passage were deliberately removed from this post at publish so the pair does not present duplicate answer capsules; do not reintroduce them here. Pre-publish proofread also caught a shipped-facing overclaim: the draft claimed SSAI builds a \"rule-bounded self-scheduling layer\" and applies a \"load ceiling\" - capability inventory Notable Absence #9 says we have NO self-scheduling and no open-shift claiming. SSAI section now claims only SHIPPED lines and states the no-nurse-portal limitation."
+  },
+  {
+    "slug": "can-microsoft-copilot-generate-nurse-schedule",
+    "type": "post",
+    "url": "/blog/can-microsoft-copilot-generate-nurse-schedule",
+    "primaryKeyword": "microsoft copilot nurse scheduling",
+    "pillar": "/nurse-scheduling-software",
+    "note": "MOFU. Answers the incumbent-software objection: a CAH already pays for Microsoft 365, so \"can we just use Copilot?\" is a live buying question. PRE-PUBLISH the proofread gate caught two serious defects. (1) The draft attributed \"productivity companion\" to Microsoft's own Copilot page as a quasi-quote; page-verified 2026-08-12 that the phrase appears NOWHERE (real headline: \"AI built for work\"). (2) The post's central argument (\"Copilot has no live data on your roster\") was FALSE: Copilot grounds on tenant data via Work IQ. Reframed throughout to ENFORCEMENT-not-access, which is the standing rule now recorded in the competitor dossier Microsoft section. Also fixed a credential-enforcement overclaim in our own SSAI section (inventory: certifications are not consulted by any rule) and a CFR mixup (coverage claims repointed from 485.635 to 485.631(a)(5)). Carries a Teams Shifts FAQ because Shifts, not Copilot, is the honest \"what we already pay for\" comparison. Declared deviation: body 2,511 words vs the 1,500-2,500 mofu band (+11, accepted after a ~240-word trim)."
   }
 ]
