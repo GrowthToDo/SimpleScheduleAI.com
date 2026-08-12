@@ -155,7 +155,7 @@ All verified from loaded primary pages/PDFs on 2026-07-13; collected for the pla
 **Texas cut (Texas DSHS / TCNWS 2024 Hospital Nurse Staffing Study, published Feb 2025; spring-2024 survey, 297 of 739 hospitals, 40.2% response)**
 
 - Texas has 86 CAHs across 78 counties; 50 of 86 (58.1%) responded. Rural/CAH factsheet #25-16864: https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf
-  - **"86" is this study's spring-2024 survey frame ONLY, not the current statewide total.** The current count is 91 (RHIhub/Flex/CMS, 2026 — see "Texas critical access hospital count" entry above). Use 86 solely inside DSHS-2024-study context (all the vacancy/turnover/staff-mix stats below are computed on this 86-CAH universe, so those stats keep 86). Never write "Texas has 86 CAHs" as a present-day fact.
+  - **"86" is this study's spring-2024 survey frame ONLY, not the current statewide total.** The current count is 93 (RHIhub/Flex/CMS, 2026 — see "Texas critical access hospital count" entry above). Use 86 solely inside DSHS-2024-study context (all the vacancy/turnover/staff-mix stats below are computed on this 86-CAH universe, so those stats keep 86). Never write "Texas has 86 CAHs" as a present-day fact.
 - Texas CAH RN vacancy 11.6% (rural non-CAH 14.3%; non-rural 16.5%) — CAHs LOWER than non-rural on vacancy.
 - Texas CAH RN median turnover 18.2% — highest of the three hospital groups (rural non-CAH 15.4%; non-rural 17.4%).
 - CAH staff mix: RNs are 61.0% of nursing staff (vs 80.5% non-rural); LVNs 16.4% (vs 3.6%) — the LVN-heavy mix claim.

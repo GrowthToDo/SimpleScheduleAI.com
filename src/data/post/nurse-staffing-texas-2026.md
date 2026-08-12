@@ -163,7 +163,7 @@ CMS Conditions of Participation require that a registered nurse, clinical nurse 
 
 ## Sources
 
-1. Rural Health Information Hub, [Texas State Guide](https://www.ruralhealthinfo.org/states/texas) (Texas critical access hospital count, 91).
+1. Rural Health Information Hub, [Texas State Guide](https://www.ruralhealthinfo.org/states/texas) (Texas critical access hospital count, 93).
 2. Texas DSHS 2024 Hospital Nurse Staffing Study, Rural/CAH factsheet, [dshs.texas.gov](https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf) (vacancy 11.6%, turnover 18.2%, staff mix 61.0% RN / 16.4% LVN, group comparisons).
 3. Texas DSHS 2024 Hospital Nurse Staffing Study, Highlights factsheet, [dshs.texas.gov](https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_Highlights_accessible.pdf) (statewide RN vacancy 16.4%, statewide RN median turnover 23.2%).
 4. 2026 NSI National Health Care Retention & RN Staffing Report, [nsinursingsolutions.com](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) (cost per bedside RN turnover $60,090, 78 days to recruit, 17.6% average hospital RN turnover).

@@ -600,7 +600,7 @@ The FLSA healthcare worker exemption allows hospitals and residential care facil
 9. Texas Labor Code Chapter 62 (minimum wage; §62.151 exempts FLSA-covered workers; no state overtime provision). [Texas Statutes](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
 10. CMS Conditions of Participation for Critical Access Hospitals (§485.635). [CMS](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals).
 11. Texas Health and Human Services Commission hospital licensing. [Texas HHSC](https://www.hhs.texas.gov/providers/health-care-facilities-regulation/hospitals-general-hospitals).
-12. Texas CAH count (91): Rural Health Information Hub, Texas state guide, 2026. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas).
+12. Texas CAH count (93): Rural Health Information Hub, Texas state guide, 2026. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas).
 
 **Methodology note:** Reviewer quotes are reproduced verbatim from Capterra with the reviewer's name or role, date, and source shown. Ratings reflect the figures captured on the verification dates above and may have changed since. Documented product capabilities reference each vendor's own product page. Texas hospitals evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 

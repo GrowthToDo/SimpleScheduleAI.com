@@ -184,7 +184,7 @@ No. SimpleScheduleAI does not recruit and it does not shorten the roughly 78-day
 
 [2] Texas Critical Access Hospital RN turnover (18.2%, highest of the three hospital groups). [SimpleScheduleAI Rural Hospital & CAH Nurse Staffing Statistics](/rural-hospital-nurse-staffing-statistics), drawn from the Texas DSHS 2024 Hospital Nurse Staffing Study.
 
-[3] Texas critical access hospital count (91). [Rural Health Information Hub, Texas state guide](https://www.ruralhealthinfo.org/states/texas).
+[3] Texas critical access hospital count (93). [Rural Health Information Hub, Texas state guide](https://www.ruralhealthinfo.org/states/texas).
 
 [4] Nurse staffing as a retention factor. [American Nurses Association, Nurse Staffing](https://www.nursingworld.org/practice-policy/nurse-staffing/).
 

@@ -160,7 +160,7 @@ The service is designed for the operating reality documented across rural facili
 
 The service model means setup is handled by the specialist, not the nurse manager. The Texas compliance requirements are configured by someone who knows them, not translated from generic software documentation by an administrator without a compliance background.
 
-The 91 Texas critical access hospitals are the specific market SimpleScheduleAI was built to serve, designed as a Texas CAH scheduling service from that operating context rather than adapted to Texas from a generic tool.
+The 93 Texas critical access hospitals are the specific market SimpleScheduleAI was built to serve, designed as a Texas CAH scheduling service from that operating context rather than adapted to Texas from a generic tool.
 
 This focus is also a limitation, and it is worth naming plainly. SimpleScheduleAI is not the right fit for a large health system that wants to self-administer an enterprise platform across dozens of departments, or for a facility outside Texas that needs another state's compliance rules out of the box. If your hospital already runs a well-supported enterprise scheduler and has the IT staff to maintain it, a purpose-built Texas CAH service is not what you need. The fit is a small rural Texas hospital that wants the scheduling and compliance work handled, not another tool to administer.
 
@@ -180,7 +180,7 @@ For more on what Texas-specific requirements apply to CAH nurse scheduling, see 
 5. Book a call with our team to see how a service built for the Texas CAH context would handle your roster and your compliance documentation.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-default mb-2">Built specifically for the 91 Texas critical access hospitals.</p>
+  <p class="text-lg font-semibold text-default mb-2">Built specifically for the 93 Texas critical access hospitals.</p>
   <p class="text-muted text-sm mb-6">Texas HHSC compliance built in. No IT setup. Operational in 3 to 5 business days.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>

@@ -152,7 +152,7 @@ export const sections = [
         value: '86',
         label: 'Texas CAHs in the 2024 DSHS study frame',
         context:
-          'The 2024 state survey counted 86 CAHs across 78 counties, of which 50 responded. The current federal count is 91 (Rural Health Information Hub, 2026).',
+          'The 2024 state survey counted 86 CAHs across 78 counties, of which 50 responded. The current federal count is 93 (Rural Health Information Hub, 2026).',
         source: 'Texas DSHS 2024 Hospital Nurse Staffing Study, Rural/CAH factsheet',
         url: 'https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf',
       },

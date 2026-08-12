@@ -142,7 +142,7 @@ Chartis puts human capital at 56% of healthcare costs. At a Critical Access Hosp
 
 4. Texas Critical Access Hospital RN turnover (18.2%). [SimpleScheduleAI Rural Hospital and CAH Nurse Staffing Statistics](/rural-hospital-nurse-staffing-statistics), drawn from the Texas DSHS 2024 Hospital Nurse Staffing Study.
 
-5. Texas critical access hospital count (91). [Rural Health Information Hub, Texas state guide](https://www.ruralhealthinfo.org/states/texas).
+5. Texas critical access hospital count (93). [Rural Health Information Hub, Texas state guide](https://www.ruralhealthinfo.org/states/texas).
 
 6. Texas Rural Health Transformation Program first-year award ($281,319,360.67, 100% federally funded by CMS/HHS, administered by HHSC). [Texas HHSC, Rural Texas Strong program bulletin](https://content.govdelivery.com/accounts/TXHHSC/bulletins/4143d1c), April 23, 2026.
 

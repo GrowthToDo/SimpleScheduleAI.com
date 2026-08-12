@@ -197,7 +197,7 @@ checking which category the existing profile sits in.
 - [ ] **T1.1 Statistics-page upgrade to journalist grade**
       (/rural-hospital-nurse-staffing-statistics): visible "Updated <date>" stamp,
       short quotable takeaway per section, every figure linked to primary source
-      (NSI 2026, DSHS 2024 with 86-frame caveat, HRSA, RHIhub 91-CAH count), anchor
+      (NSI 2026, DSHS 2024 with 86-frame caveat, HRSA, RHIhub 93-CAH count), anchor
       ids per stat for deep-linking. This page is the ammo for HARO + all pitches.
 - [ ] **T1.2 Template resource-page outreach**: prospect pages = "nurse scheduling
       resources", nurse-manager toolkits, nursing-school student/career resource pages
