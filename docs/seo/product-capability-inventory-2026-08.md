@@ -380,6 +380,40 @@ Two preferences are applied as **hard tiers before scoring**, not as penalties (
 - **Non-OT first** — "any nurse who can cover this shift without crossing the 40h overtime threshold is used before nurses who would go into OT, regardless of employment type or current FTE utilisation."
 - **Charge-distribution** — once a charge-qualified nurse is on the shift, non-charge-qualified nurses are preferred for the remaining slots.
 
+**Shift fill ORDER — hardest first (`greedy.ts`, `repair.ts`; verified against
+cah-scheduler @ `bd7bc05`, 2026-08-12).** Shifts are processed most-constrained
+first, so the hard-to-fill slots get first pick of the eligible pool instead of
+being left with whoever is unassigned at the end:
+
+| Rank | Shift |
+| --- | --- |
+| 1 | Weekend ICU/ER charge |
+| 2 | Weekday ICU/ER charge |
+| 3 | ICU/ER, non-charge |
+| 4 | **Night** |
+| 5 | Day / Evening |
+| 6 | On-call |
+
+The code comment explains the reason for rank 1: weekend charge slots "come at
+the END of the week in date order, so charge nurses accumulate too many hours
+Mon-Fri before the slot is reached. Processing them FIRST guarantees they get
+first pick of the charge-qualified pool."
+
+**This is the ONLY place nights are treated specially, and it is ordering, not
+fairness.** `scoring.ts` contains the word "night" zero times, and there is no
+`nightCount` / `nightsWorked` / night-history field anywhere in `src/`. So:
+
+- **CLAIMABLE:** "night shifts are filled first, because they are the hardest to
+  cover"; night coverage is bounded by per-unit minimum staffing (a hard rule),
+  rest-hours and max-consecutive; total per-nurse load is balanced in the FAIR
+  variant.
+- **NOT CLAIMABLE:** that we distribute nights against a running per-nurse
+  count, track night distribution, or apply night fairness parameters. Weekends
+  (quota + history carryover) and holidays (vs team average) are counted. Nights
+  are not. Corrected across 27 places in 19 files on 2026-08-12 after the
+  founder asked for the claim to be checked against the repo rather than against
+  this document.
+
 ### 4.4 The three variants' weights (verbatim from `weight-profiles.ts`)
 
 | Weight | BALANCED | FAIR | COST_OPTIMIZED |

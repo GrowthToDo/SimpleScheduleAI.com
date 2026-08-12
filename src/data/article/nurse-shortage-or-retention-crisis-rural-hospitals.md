@@ -112,7 +112,7 @@ None of this manufactures a nurse. It keeps the nurse you have from becoming one
 
 ## How Does SimpleScheduleAI Help With Retention at a Small Hospital?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. On retention specifically, the product works on the three levers above. It distributes nights, weekends, and holidays according to fairness parameters set during onboarding, so the burden does not silently concentrate on the three nurses who never say no. It surfaces those imbalances during schedule building, before the schedule posts, rather than after someone has already worked six weekends in a row.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. On retention specifically, the product works on the three levers above. It distributes weekends and holidays according to fairness parameters set during onboarding, and fills nights first because they are the hardest shifts to cover, so the burden does not silently concentrate on the three nurses who never say no. It surfaces those imbalances during schedule building, before the schedule posts, rather than after someone has already worked six weekends in a row.
 
 When a nurse calls out, the replacement shortlist is drawn from available, qualified, fairly-rotated staff, and for Texas hospitals the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds so a callout does not quietly push someone into unplanned overtime. Whether a nurse can audit that a generated schedule is actually fair is a reasonable question, and we walk through it in [can nurses trust an AI-generated schedule](/blog/can-nurses-trust-ai-generated-schedule). You can read the full method on our [nurse scheduling software](/nurse-scheduling-software) page, our [critical access hospital scheduling](/critical-access-hospital-scheduling) hub, the [AI nurse scheduling](/ai-nurse-scheduling) overview, or [how the process works](/how-it-works) step by step.
 
@@ -129,14 +129,14 @@ One honest limitation: scheduling discipline improves retention, but it does not
 2. Multiply avoidable departures by the $61,110 NSI replacement figure to size the dollars. It is usually larger than the line item anyone tracks.
 3. Pull your last eight weeks of schedules and count nights, weekends, and holidays per nurse. If three names carry most of them, you have found the people most likely to leave next.
 4. Confirm your schedules post at least two weeks ahead. Advance notice is the cheapest retention control you have, and it costs nothing to fix.
-5. Book a call with our team to see how a fairness-tracked draft would spread nights and callouts across your specific roster.
+5. Book a call with our team to see how a fairness-tracked draft would spread weekends, holidays, and callouts across your specific roster.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-muted text-sm mb-6">
-    See how SimpleScheduleAI spreads nights, weekends, and callouts fairly so the nurses you already have decide to stay. We build the schedule, you approve it.
+    See how SimpleScheduleAI spreads weekends, holidays, and callouts fairly so the nurses you already have decide to stay. We build the schedule, you approve it.
   </p>
   <a
     href="/how-it-works"

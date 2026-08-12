@@ -125,7 +125,7 @@ The largest cost never appears on an invoice. When overtime clusters, callouts s
 
 ## How Does SimpleScheduleAI Help You Analyze Your Schedule?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Because the schedule is built inside the system rather than a spreadsheet, the four measurements in this guide become a byproduct of the scheduling work rather than a separate project you have to carve out time for. Overtime exposure, callout frequency, and per-nurse weekend and night counts are tracked as the schedule is built, not reconstructed afterward from payroll.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Because the schedule is built inside the system rather than a spreadsheet, the four measurements in this guide become a byproduct of the scheduling work rather than a separate project you have to carve out time for. Overtime exposure, callout frequency, and per-nurse weekend and holiday counts are tracked as the schedule is built, not reconstructed afterward from payroll.
 
 The practical difference is timing. A spreadsheet tells you a nurse crossed into overtime after payroll runs. A system that tracks running hours against the applicable FLSA overtime thresholds flags the risk while the schedule is still a draft, so a night callout does not quietly push someone past their limit. Fairness works the same way: instead of computing a coefficient of variation after the fact, the draft distributes weekend and night shifts against the fairness parameters set during onboarding, so concentration is prevented rather than discovered.
 

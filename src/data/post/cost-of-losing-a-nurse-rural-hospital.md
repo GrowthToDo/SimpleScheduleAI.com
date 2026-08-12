@@ -128,7 +128,7 @@ To be clear about the limits of this claim: no scheduling method reduces turnove
 
 ## How Does SimpleScheduleAI Help Rural Hospitals Keep Nurses?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. For Texas Critical Access Hospitals, that means the fairness rules for nights, weekends, and holidays are applied before the manager reviews the schedule, so the load is distributed evenly instead of concentrating on the two or three nurses who always say yes. When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, skill match, and rotation fairness, which keeps the coverage gap from quietly turning into burnout.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. For Texas Critical Access Hospitals, that means the fairness rules for weekends and holidays are applied before the manager reviews the schedule, so the load is distributed evenly instead of concentrating on the two or three nurses who always say yes. When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, skill match, and rotation fairness, which keeps the coverage gap from quietly turning into burnout.
 
 You can see how the pieces connect across our [nurse scheduling software](/nurse-scheduling-software) overview, the way [AI nurse scheduling](/ai-nurse-scheduling) builds the ranked drafts, the operational requirements behind [critical access hospital scheduling](/critical-access-hospital-scheduling), and the end-to-end walkthrough of [how the service works](/how-it-works).
 
@@ -151,7 +151,7 @@ One honest limitation: SimpleScheduleAI does not recruit nurses and it does not 
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">One departure should not cost you three more nurses</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI distributes nights, weekends, and callouts fairly, so the coverage gap after a resignation does not burn out the nurses who remain. Built for Texas Critical Access Hospitals.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI distributes weekends and holidays fairly and ranks callout replacements, so the coverage gap after a resignation does not burn out the nurses who remain. Built for Texas Critical Access Hospitals.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

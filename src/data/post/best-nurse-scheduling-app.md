@@ -149,7 +149,7 @@ A general scheduling app solves a coordination problem: who works when. For most
   </div>
   <div class="rounded-lg bg-blue-800 px-5 py-3">
     <p class="text-sm font-bold text-white m-0">Layer 4: Operational intelligence</p>
-    <p class="text-xs text-blue-100 m-0">Callout ranking by credential and overtime risk, fair distribution of nights and weekends. Rare in self-serve apps.</p>
+    <p class="text-xs text-blue-100 m-0">Callout ranking by skill match and overtime risk, fair distribution of weekends and holidays. Rare in self-serve apps.</p>
   </div>
 </div>
 

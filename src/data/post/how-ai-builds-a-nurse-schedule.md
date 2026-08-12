@@ -139,7 +139,7 @@ Independent research bears that out. A [2024 study of nurse rostering](https://p
 
 There is no single best schedule, because best depends on what a hospital is optimizing for. A schedule that keeps overtime cost lowest may lean on the same three flexible nurses week after week. A schedule that spreads shifts most fairly may cost a little more. A good system hands the manager options and lets them choose the trade-off, rather than deciding it quietly and hiding the choice.
 
-SimpleScheduleAI, for example, produces three drafts of every schedule. The balanced draft is the sensible middle: reasonable coverage, reasonable fairness, reasonable cost. The fairness-optimized draft distributes weekends, nights, and holidays as evenly as the roster allows, which protects your most reliable nurses from quietly absorbing the worst shifts. The cost-optimized draft holds overtime down.
+SimpleScheduleAI, for example, produces three drafts of every schedule. The balanced draft is the sensible middle: reasonable coverage, reasonable fairness, reasonable cost. The fairness-optimized draft distributes weekends and holidays as evenly as the roster allows, and balances total load per nurse, which protects your most reliable nurses from quietly absorbing the worst shifts. The cost-optimized draft holds overtime down.
 
 The point is that these are trade-offs, not a right answer and two wrong ones. A cycle with a holiday in it might call for the fairness draft. A tight budget month might call for the cost draft. The manager sees all three, sees what each one costs the others, and picks the one that fits this cycle. That decision stays with a person who knows the unit.
 

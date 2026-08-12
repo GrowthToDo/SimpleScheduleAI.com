@@ -184,7 +184,7 @@ Cyclical handles the shifts where self-scheduling breaks, the ones everyone avoi
 
 SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. The tracking is the part we own, whichever way the shifts get decided, because that is what determines whether a model holds past a few cycles.
 
-Every draft distributes nights, weekends, and holidays against a running per-nurse count, and weekend history carries across scheduling periods, so the nurses who covered last period's weekends are not first in line again this period. Holiday load is scored against the team average. A per-unit weekend quota and a consecutive-weekend cap set the boundaries, and every draft, swap, and callout replacement is logged with a timestamp, so when a nurse asks why she has three of the last six weekends the answer is in the record we keep instead of in anyone's recollection. For Texas Critical Access Hospitals, every draft also tracks each nurse's running hours against the applicable FLSA overtime thresholds, so a swap or a callout does not quietly push someone into unplanned overtime.
+Every draft distributes weekends and holidays against a running per-nurse count, and weekend history carries across scheduling periods, so the nurses who covered last period's weekends are not first in line again this period. Holiday load is scored against the team average. A per-unit weekend quota and a consecutive-weekend cap set the boundaries, and every draft, swap, and callout replacement is logged with a timestamp, so when a nurse asks why she has three of the last six weekends the answer is in the record we keep instead of in anyone's recollection. For Texas Critical Access Hospitals, every draft also tracks each nurse's running hours against the applicable FLSA overtime thresholds, so a swap or a callout does not quietly push someone into unplanned overtime.
 
 One honest limitation, and it matters most on this topic: we do not run a nurse-facing self-scheduling portal. Nurses do not log in, bid on open shifts, or claim them. The nurse manager collects preferences and gives them to us, and the fairness distribution is applied before those preferences are honored. That gives you the fairness outcome self-scheduling is supposed to produce without a bidding window to police, and it does mean that if nurse self-service access is a hard requirement for your unit, we are not the right fit on that axis. A second limitation worth stating: the fairness logic can only distribute the availability that exists. If a rotation is impossible because too few nurses can work nights, the system flags the coverage risk accurately, and it cannot manufacture night-eligible staff.
 
@@ -201,14 +201,14 @@ You can watch the AI build a schedule and rank callout replacements in the [inte
 2. Pull your last eight weeks of schedules and count nights, weekends, and holidays per nurse. If two or three names carry most of them, your current model, whatever you call it, is already concentrating burden.
 3. Separate your shifts into two buckets: the ones nobody volunteers for and the ones where preferences genuinely differ. That split is the blueprint for a hybrid, cyclical for the first bucket, self-pick for the second.
 4. Decide how you will carry fairness across cycles, a rotation count or a cross-cycle load record, and pick that mechanism before you pick the model, because the model fails without it.
-5. Book a call with our team to see how a draft would distribute nights, weekends, and holidays across your specific roster, with the running count and the audit trail included.
+5. Book a call with our team to see how a draft would distribute weekends and holidays across your specific roster, with the running count and the audit trail included.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-muted text-sm mb-6">
-    See how SimpleScheduleAI distributes nights, weekends, and holidays against a running per-nurse count, whichever scheduling model you run. We build the schedule, you approve it.
+    See how SimpleScheduleAI distributes weekends and holidays against a running per-nurse count, and fills nights first because they are hardest to cover, whichever scheduling model you run. We build the schedule, you approve it.
   </p>
   <a
     href="/how-it-works"

@@ -128,7 +128,7 @@ A system that manages night coverage well does four things:
 
 ## How Does SimpleScheduleAI Help With Night Coverage?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. We build night coverage constraints directly into the scheduling logic for each facility. When the system generates a schedule draft, it distributes night assignments according to the fairness parameters set during onboarding, which prevents concentration on a small group without a manager having to intervene by hand.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Your unit’s minimum staffing for every shift, nights included, is configured before the first cycle and applied as a hard rule. Night shifts are also filled first, ahead of days and evenings, because they are the hardest slots to cover and leaving them until last is how they end up unfilled. Rest-hour and consecutive-shift limits then cap how much night work can stack on one nurse, and the fairness-optimized draft balances total load across the roster.
 
 When a night nurse calls out, the replacement list is generated from night-eligible, available staff, not pulled from whoever is easiest to reach. For Texas Critical Access Hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so a night callout does not quietly push someone into unplanned overtime.
 
@@ -154,7 +154,7 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-muted text-sm mb-6">
-    See how SimpleScheduleAI spreads night coverage fairly and fills callouts without the 3 a.m. phone tree. We build the schedule, you approve it.
+    See how SimpleScheduleAI fills night coverage first and handles callouts without the 3 a.m. phone tree. We build the schedule, you approve it.
   </p>
   <a
     href="/how-it-works"

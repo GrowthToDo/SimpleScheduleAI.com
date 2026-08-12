@@ -109,7 +109,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service built for Texas Critic
 
 Instead of handing a nurse manager a platform to configure, the AI builds the first schedule from an uploaded roster, our scheduling team checks it, and the manager reviews and approves. In this [AI-native scheduling model](/ai-nurse-scheduling), the algorithm and the specialist absorb the hard work and the nurse sees a finished schedule. You can watch the AI build a compliant schedule and rank a callout shortlist in the [interactive simulator](/simulator), and the full workflow is on the [how it works](/how-it-works) page.
 
-The same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds and produces CMS §485.635 documentation by default, so survey preparation is not a separate manual project. It also distributes weekend, overnight, and holiday assignments across the roster, with a distribution record a manager can show a nurse.
+The same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds and produces CMS §485.635 documentation by default, so survey preparation is not a separate manual project. It also distributes weekend and holiday assignments across the roster, with a distribution record a manager can show a nurse.
 
 One honest limitation: SimpleScheduleAI is not the right fit if your facility wants a staff-facing self-service app where nurses pick up and swap shifts themselves, or if you need the enterprise workforce analytics UKG provides across a multi-hospital system.
 

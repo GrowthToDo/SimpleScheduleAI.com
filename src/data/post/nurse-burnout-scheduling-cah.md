@@ -113,7 +113,7 @@ Pay is set by budget and market, not by the roster. If nurses are leaving primar
 
 ## How Does SimpleScheduleAI Help Reduce Burnout Risk?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. On burnout specifically, the system distributes night and weekend assignments according to the fairness parameters set during onboarding, and it keeps a running per-nurse count so concentration on a few people surfaces while you can still act on it, not after the fact. When a nurse calls out, the replacement shortlist is drawn from available, qualified staff rather than defaulting to whoever is easiest to reach, which keeps a single callout from deepening one person's overload.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. On burnout specifically, the system distributes weekend and holiday assignments according to the fairness parameters set during onboarding, fills nights first because they are the hardest to cover, and keeps a running per-nurse count so concentration on a few people surfaces while you can still act on it, not after the fact. When a nurse calls out, the replacement shortlist is drawn from available, qualified staff rather than defaulting to whoever is easiest to reach, which keeps a single callout from deepening one person's overload.
 
 For Texas Critical Access Hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so unplanned overtime does not quietly stack on the person already carrying the most. Because the schedule is modeled across the full period before anyone approves it, this is where [AI nurse scheduling](/ai-nurse-scheduling) earns its keep: it shows thin spots and lopsided loads during building, which you can watch it do live in our [interactive simulator](/simulator), and if you are weighing whether to rely on that output, we address it directly in [can nurses trust an AI-generated schedule](/blog/can-nurses-trust-ai-generated-schedule).
 
@@ -132,14 +132,14 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
 2. Mark who is genuinely night-and-weekend-eligible after real health, family, and per-diem constraints. The usable pool is almost always smaller than the headcount, and that gap is your concentration risk.
 3. Confirm your schedule is posted at least two weeks ahead. If it is not, fix the posting cadence first, since predictability is the cheapest burnout control you have.
 4. Set a written cap on consecutive shifts and per-nurse overtime, and decide in advance how you will hold it when a callout tempts you to break it for the person already carrying the most.
-5. Book a call with our team to see how an automated draft would distribute nights, weekends, and overtime across your specific roster and flag concentration before it hardens into turnover.
+5. Book a call with our team to see how an automated draft would distribute weekends, holidays, and overtime across your specific roster and flag concentration before it hardens into turnover.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-muted text-sm mb-6">
-    See how SimpleScheduleAI spreads nights, weekends, and overtime fairly and flags an overloaded nurse before it forces someone out. We build the schedule, you approve it.
+    See how SimpleScheduleAI spreads weekends, holidays, and overtime fairly and flags an overloaded nurse before it forces someone out. We build the schedule, you approve it.
   </p>
   <a
     href="/how-it-works"

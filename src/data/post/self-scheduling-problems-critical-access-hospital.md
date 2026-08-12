@@ -195,7 +195,7 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">End selfish scheduling without losing self-service</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI distributes weekends, nights, and holidays before nurses self-pick, then opens the rest. Reliable nurses stop carrying the load. Built for Texas CAHs.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI distributes weekends and holidays before nurses self-pick, then opens the rest. Reliable nurses stop carrying the load. Built for Texas CAHs.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>

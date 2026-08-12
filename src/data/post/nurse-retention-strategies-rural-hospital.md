@@ -84,7 +84,7 @@ The reason this rarely happens is time. A manager doing schedules by hand spends
 
 ## How Does SimpleScheduleAI Help With Nurse Retention?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. On the retention side, the value is that fairness and overtime become tracked numbers instead of a manager's memory. When the system builds a draft, it distributes nights, weekends, and holidays according to the fairness parameters set during onboarding, so the burden does not silently concentrate on your most reliable people. You can pick a fairness-optimized draft when spreading the hard shifts evenly is the priority.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. On the retention side, the value is that fairness and overtime become tracked numbers instead of a manager's memory. When the system builds a draft, it distributes weekends and holidays according to the fairness parameters set during onboarding, and fills nights first because they are the hardest shifts to cover, so the burden does not silently concentrate on your most reliable people. You can pick a fairness-optimized draft when spreading the hard shifts evenly is the priority.
 
 The system also watches each nurse's running hours against the applicable [FLSA overtime thresholds](/blog/texas-nursing-overtime-compliance-cah) and surfaces the people trending toward overload before the schedule publishes, turning "who is about to burn out" into a report rather than a hunch. When a nurse calls out, the replacement shortlist is built from eligible, available staff, so callout burden spreads too.
 
