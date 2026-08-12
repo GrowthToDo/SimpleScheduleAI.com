@@ -5,7 +5,37 @@
 
 # Keyword strategy, content strategy, programmatic patterns, competitor comparisons
 
-## PART 6 — KEYWORD STRATEGY
+## DataForSEO "AI Search Volume" endpoint (noted 2026-08-12, vendor email)
+
+DataForSEO now sells an **AI Search Volume** metric, pitched as capturing demand
+that Google Ads volume misses because people phrase things differently in
+ChatGPT, Perplexity and AI Overviews. Cost is the same pay-as-you-go as our
+existing usage: **$0.01 per task + $0.0001 per keyword**, so money is not the
+consideration.
+
+**What it actually is, from the vendor's own description:** their algorithm
+*calculates* the metric "using statistical question signals from the Google
+People Also Ask SERP element across our entire index." It is a **modeled proxy
+derived from PAA structure**, not measured LLM query volume. Nobody outside
+OpenAI, Anthropic, Google and Perplexity has real LLM query counts.
+
+**Therefore:**
+
+- **NEVER publish it as a statistic.** "X people ask ChatGPT this every month"
+  would be a fabricated stat under our own no-fabricated-stats rule, because the
+  underlying number is inferred from PAA, not observed. This is a hard line.
+- **NEVER write it into `docs/seo/keyword-registry.json` as `searchVolume`.**
+  That field means Google Ads volume; mixing a modeled figure in silently
+  corrupts every future comparison. If it is ever recorded, use a distinct key
+  and label it modeled.
+- **DO use it directionally, for tie-breaks only.** It is genuinely useful when
+  Google volume is tiny but conversational demand plausibly is not, which is
+  exactly the call we made retargeting the cyclical/self post (`cyclical
+  scheduling` 20/mo and collapsing vs the self-scheduling cluster at 110/mo).
+  Where two candidate topics look equal on Google volume, this can break the tie.
+- Treat a reading as one input beside the citation-shape autopsy, which measures
+  something better: whether the models actually cite us on the prompts we care
+  about. Observed citation beats modeled demand.
 
 ### 6.1 Keyword Tiers
 
