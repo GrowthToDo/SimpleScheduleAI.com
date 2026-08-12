@@ -166,7 +166,7 @@ Start with the time number, because it is the easiest to defend in a budget conv
 
 ## How Do Traditional and AI Scheduling Compare at a 25-Bed Hospital?
 
-At a 25-bed hospital, traditional Excel scheduling costs the manager 8 to 12 hours a week with manual, error-prone overtime tracking. AI scheduling software cuts that to 4 to 6 hours but still requires her to operate the tool. An AI managed service reduces it to 1 to 2 hours of review and approval, with overtime and credential enforcement handled automatically in every cycle. These figures, and the loaded-rate cost calculation below, are operational estimates from SimpleScheduleAI's work with Critical Access Hospitals, not vendor benchmarks or a survey dataset.
+At a 25-bed hospital, traditional Excel scheduling costs the manager 8 to 12 hours a week with manual, error-prone overtime tracking. AI scheduling software cuts that to 4 to 6 hours but still requires her to operate the tool. An AI managed service reduces it to 1 to 2 hours of review and approval, with overtime and skill-mix enforcement handled automatically in every cycle. These figures, and the loaded-rate cost calculation below, are operational estimates from SimpleScheduleAI's work with Critical Access Hospitals, not vendor benchmarks or a survey dataset.
 
 <div class="not-prose my-10">
   <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">Workflow Comparison: Same Posted Schedule, Different Path</h3>

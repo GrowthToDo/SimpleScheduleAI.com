@@ -321,7 +321,7 @@ The workflow has four steps:
 
 2. **Draft delivery.** Inside two weeks, the AI builds three complete schedule drafts and our team checks them: one balanced, one fair-rotation, and one overtime-minimized. The manager reviews them and selects one.
 
-3. **Callout management.** When a nurse calls out, the manager uses the callout module to generate a ranked replacement list in under two minutes. The list is filtered by unit credentials and sorted by overtime risk. The manager confirms the replacement.
+3. **Callout management.** When a nurse calls out, the manager uses the callout module to generate a ranked replacement list in under two minutes. The list is filtered by unit competency requirements and sorted by overtime risk. The manager confirms the replacement.
 
 4. **Documentation maintenance.** [CMS §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) staffing documentation is maintained automatically throughout each scheduling cycle. Pre-survey preparation takes under 30 minutes.
 
@@ -373,7 +373,7 @@ The nurse manager retains decision authority in both models. She reviews and app
 
 **How does a managed scheduling service handle urgent callout replacements?**
 
-In a managed service like SimpleScheduleAI, the nurse manager uses the callout module to generate a ranked replacement list in under two minutes. The list is pre-filtered by unit credentials and sorted by overtime risk. The manager reviews the list, selects the best option, and makes the call. The service handles the preparation; the manager makes the confirmation decision. The total time from callout to confirmed replacement is typically under 15 minutes.
+In a managed service like SimpleScheduleAI, the nurse manager uses the callout module to generate a ranked replacement list in under two minutes. The list is pre-filtered by unit competency requirements and sorted by overtime risk. The manager reviews the list, selects the best option, and makes the call. The service handles the preparation; the manager makes the confirmation decision. The total time from callout to confirmed replacement is typically under 15 minutes.
 
 **Is a managed scheduling service more expensive than scheduling software?**
 

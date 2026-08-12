@@ -196,7 +196,7 @@ The honest answer for many CAHs is "items 1, 3, and 4 favor a managed service; i
 
 ## How SimpleScheduleAI Fits If You Need the Managed Service Model?
 
-SimpleScheduleAI is an AI-native nurse scheduling service built for Critical Access Hospitals in Texas where the nurse manager takes clinical shifts and cannot sustain weekly scheduling construction. Setup takes 3 to 5 business days from an Excel roster upload. CMS §485.635 documentation is automatic. Callout replacement lists are pre-ranked by credential and overtime status. The AI builds the schedule and our scheduling team checks it, so the nurse manager approves rather than builds. There is no staff-facing mobile app. See the AI build a schedule and rank callout replacements in the [live simulator](/simulator).
+SimpleScheduleAI is an AI-native nurse scheduling service built for Critical Access Hospitals in Texas where the nurse manager takes clinical shifts and cannot sustain weekly scheduling construction. Setup takes 3 to 5 business days from an Excel roster upload. CMS §485.635 documentation is automatic. Callout replacement lists are pre-ranked by skill match and overtime status. The AI builds the schedule and our scheduling team checks it, so the nurse manager approves rather than builds. There is no staff-facing mobile app. See the AI build a schedule and rank callout replacements in the [live simulator](/simulator).
 
 <img src="/images/blog/shiftwizard-vs-managed-service/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

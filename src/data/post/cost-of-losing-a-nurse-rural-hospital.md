@@ -128,7 +128,7 @@ To be clear about the limits of this claim: no scheduling method reduces turnove
 
 ## How Does SimpleScheduleAI Help Rural Hospitals Keep Nurses?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. For Texas Critical Access Hospitals, that means the fairness rules for nights, weekends, and holidays are applied before the manager reviews the schedule, so the load is distributed evenly instead of concentrating on the two or three nurses who always say yes. When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, credential match, and rotation fairness, which keeps the coverage gap from quietly turning into burnout.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. For Texas Critical Access Hospitals, that means the fairness rules for nights, weekends, and holidays are applied before the manager reviews the schedule, so the load is distributed evenly instead of concentrating on the two or three nurses who always say yes. When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, skill match, and rotation fairness, which keeps the coverage gap from quietly turning into burnout.
 
 You can see how the pieces connect across our [nurse scheduling software](/nurse-scheduling-software) overview, the way [AI nurse scheduling](/ai-nurse-scheduling) builds the ranked drafts, the operational requirements behind [critical access hospital scheduling](/critical-access-hospital-scheduling), and the end-to-end walkthrough of [how the service works](/how-it-works).
 

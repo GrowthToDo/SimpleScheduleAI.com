@@ -543,7 +543,7 @@ Per diem availability is maintained centrally alongside full-time scheduling. Wh
 
 Every per diem shift that is filled through the callout module is logged automatically against the CMS §485.635 staffing record. There is no separate documentation step for per diem coverage.
 
-Credential tracking flags when a per diem nurse's certifications do not match the unit requirements for the shift being filled, before the confirmation is made.
+Competency requirements for the unit are applied before a per diem nurse is offered the shift, so a nurse who is not cleared for that unit does not reach the confirmation step.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>

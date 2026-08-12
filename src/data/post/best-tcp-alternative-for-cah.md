@@ -293,7 +293,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve plat
 - Onboarding in 3 to 5 business days from your staff roster, first schedule inside two weeks
 - Weekly scheduling time drops to 1-2 hours of reviewing and approving
 - [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds and CMS §485.635 audit trail included by default
-- Callout coverage shortlists delivered pre-ranked with credential and overtime constraints applied
+- Callout coverage shortlists delivered pre-ranked with competency and overtime constraints applied
 
 **Key limitations:**
 

@@ -182,7 +182,7 @@ Texas compliance is built in as the default: [FLSA overtime thresholds](https://
 
 - Setup in 3 to 5 business days from Excel roster upload; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, not a configured module the manager maintains
-- Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
+- Callout replacement list is ranked by overtime risk and filtered by unit competency before it reaches the manager
 - FLSA overtime threshold tracking and CMS CAH requirements are defaults, not configuration options
 - Service maintains scheduling rules as staff and policies change; no manager-side configuration burden
 
@@ -361,7 +361,7 @@ QGenda is worth keeping if:
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Callout replacement ranking</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Configurable</td>
-        <td class="py-3 text-primary">Built in, credentialed + OT-ranked</td>
+        <td class="py-3 text-primary">Built in, competency + OT-ranked</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Ongoing configuration burden</td>

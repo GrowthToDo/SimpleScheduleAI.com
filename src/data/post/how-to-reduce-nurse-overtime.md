@@ -165,7 +165,7 @@ One honest boundary: the service ranks and flags; it does not do payroll, and it
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Overtime risk checked before every assignment, not after</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI ranks callout replacements by credentials and overtime risk, tracks running hours continuously, and leaves the final call with your manager.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI ranks callout replacements by competency and overtime risk, tracks running hours continuously, and leaves the final call with your manager.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

@@ -106,7 +106,7 @@ The idea is straightforward: if three nearby hospitals each keep a handful of nu
 
 ## How Does SimpleScheduleAI Help Small Hospitals Cover Gaps?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. We do not try to give a small hospital a float pool it cannot staff. Instead, the scheduling logic is built around the three models that fit. Each nurse's employment type sits on the roster we configure at onboarding, and per-diem availability is tracked as it comes in, so a callout returns a ranked shortlist of nurses who are actually credentialed and available rather than a manual phone tree.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. We do not try to give a small hospital a float pool it cannot staff. Instead, the scheduling logic is built around the three models that fit. Each nurse's employment type sits on the roster we configure at onboarding, and per-diem availability is tracked as it comes in, so a callout returns a ranked shortlist of nurses who are actually qualified for the unit and available rather than a manual phone tree.
 
 The same draft respects who is cross-trained for which function, so when it fills an open emergency, swing bed, or med-surg assignment, it only offers the shift to nurses cleared for it. For Texas hospitals, the draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so covering a gap does not quietly push someone into unplanned overtime. If you take part in a shared-staffing arrangement, nurses credentialed at your facility can sit on the same roster.
 

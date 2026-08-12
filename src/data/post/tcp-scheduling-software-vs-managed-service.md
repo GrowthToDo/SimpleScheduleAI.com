@@ -167,7 +167,7 @@ With TCP TimeClock+, the nurse manager uses the platform for both time tracking 
 
 ## How Does Each Model Handle After-Hours Callouts?
 
-With TCP TimeClock+, the nurse manager reviews availability in the platform and makes replacement calls manually. The platform surfaces who is available; she applies the constraint logic for overtime and credentials. For hospitals that need automated callout backfill, TCP's advanced feature for this is in Humanity Scheduling, not TimeClock+. With a managed service, the replacement list is pre-ranked by credential match, overtime exposure, and historical availability before the nurse manager sees it.
+With TCP TimeClock+, the nurse manager reviews availability in the platform and makes replacement calls manually. The platform surfaces who is available; she applies the constraint logic for overtime and credentials. For hospitals that need automated callout backfill, TCP's advanced feature for this is in Humanity Scheduling, not TimeClock+. With a managed service, the replacement list is pre-ranked by skill match, overtime exposure, and historical availability before the nurse manager sees it.
 
 ## How Does Each Model Produce CMS §485.635 Documentation?
 

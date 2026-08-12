@@ -207,7 +207,7 @@ SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It
 
 - Setup in 3 to 5 business days from an Excel roster upload; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, not a configured module the nurse manager maintains
-- Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager's phone
+- Callout replacement list is ranked by overtime risk and filtered by unit competency before it reaches the manager's phone
 - FLSA overtime threshold tracking and CAH-specific CMS requirements are defaults, not configuration options
 - Service maintains scheduling rules as staff and policies change; no manager-side configuration burden between releases
 
@@ -398,7 +398,7 @@ Schedule360 is worth keeping if:
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Callout coverage logic</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Broadcast SMS, email, pager (first-come-first-serve)</td>
-        <td class="py-3 text-primary">Ranked replacement list filtered by credentials and OT risk</td>
+        <td class="py-3 text-primary">Ranked replacement list filtered by competency and OT risk</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Ongoing configuration burden</td>

@@ -266,7 +266,7 @@ The platform can be configured to use a subset of features, but the underlying c
 
 **What is the minimum viable scheduling tool for a 25-bed CAH?**
 
-At minimum, a 25-bed CAH needs: proactive FLSA overtime threshold tracking, credential-based shift enforcement, CMS §485.635 documentation, and a callout coverage process that applies clinical constraints. These requirements can be met by Aladtec or SmartLinx with proper configuration, or by SimpleScheduleAI with zero configuration. They cannot be met by generic scheduling tools.
+At minimum, a 25-bed CAH needs: proactive FLSA overtime threshold tracking, competency-based shift enforcement, CMS §485.635 documentation, and a callout coverage process that applies clinical constraints. These requirements can be met by Aladtec or SmartLinx with proper configuration, or by SimpleScheduleAI with zero configuration. They cannot be met by generic scheduling tools.
 
 **Does Aladtec handle FLSA 8-and-80 overtime correctly for healthcare employers?**
 

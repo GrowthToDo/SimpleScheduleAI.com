@@ -32,7 +32,7 @@ This guide compares 6 Deputy alternatives for a Critical Access Hospital where g
 
 - Deputy is a well-designed general workforce scheduling tool. For hospital nurse scheduling, its gaps are significant: credential enforcement, CMS compliance documentation, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) healthcare overtime configuration, and callout ranking by credential or overtime status are not documented on its product page. Verify current capabilities with Deputy before evaluating for a clinical environment.
 - Hospitals often adopt Deputy for nurse scheduling because they needed a tool quickly and it was easy to deploy. The compliance and credential gaps accumulate as a hidden cost, manual work that someone is absorbing without it appearing in the scheduling software budget.
-- SimpleScheduleAI is the strongest alternative for Critical Access Hospitals (CAHs). It provides credential-filtered callout replacement, automated CMS §485.635 documentation, and FLSA overtime threshold tracking as defaults, none of which are documented on Deputy's product page.
+- SimpleScheduleAI is the strongest alternative for Critical Access Hospitals (CAHs). It provides competency-filtered callout replacement, automated CMS §485.635 documentation, and FLSA overtime threshold tracking as defaults, none of which are documented on Deputy's product page.
 - For hospitals that want self-serve healthcare scheduling software, Aladtec provides the strongest small-roster alternative with meaningful credential and coverage tracking.
 - When I Work, Connecteam, and Homebase are similar in simplicity to Deputy but do not solve the healthcare compliance gaps. They make sense only for outpatient or non-clinical settings where compliance requirements are minimal.
 - Deputy is appropriate for non-clinical or outpatient settings, but any hospital with active CMS obligations should move to a purpose-built healthcare scheduling tool.
@@ -152,15 +152,15 @@ The five alternatives are ranked by clinical appropriateness for hospital nurse 
 
 <img src="/images/blog/deputy-alternatives-healthcare/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI addresses every gap that causes hospitals to leave Deputy: credential enforcement in callout replacement, automated CMS documentation, FLSA healthcare overtime tracking, and a callout model built for acute care urgency rather than broadcast-and-wait.
+SimpleScheduleAI addresses every gap that causes hospitals to leave Deputy: skill-mix enforcement in callout replacement, automated CMS documentation, FLSA healthcare overtime tracking, and a callout model built for acute care urgency rather than broadcast-and-wait.
 
-The AI-native, human-verified model means the hospital does not install software or maintain configuration. The nurse manager uploads a roster in Excel, the AI builds three schedule drafts and our scheduling team checks each one before delivery, she selects one, and the AI callout module handles coverage gaps with a ranked shortlist filtered by credentials and overtime status. See [how it works](/how-it-works) for the full service model. Watch the AI build a schedule and generate a credential-filtered callout replacement shortlist in the [interactive simulator](/simulator).
+The AI-native, human-verified model means the hospital does not install software or maintain configuration. The nurse manager uploads a roster in Excel, the AI builds three schedule drafts and our scheduling team checks each one before delivery, she selects one, and the AI callout module handles coverage gaps with a ranked shortlist filtered by unit competency and overtime status. See [how it works](/how-it-works) for the full service model. Watch the AI build a schedule and generate a competency-filtered callout replacement shortlist in the [interactive simulator](/simulator).
 
 **Best for:** Critical Access Hospitals that deployed Deputy as a quick scheduling solution and are now experiencing the compliance and credential gaps that accumulate as the hospital's CMS obligations increase.
 
 **Key advantages:**
 
-- Credential-filtered replacement list: replacements are filtered by unit credentials before the list is generated
+- competency-filtered replacement list: replacements are filtered by unit competency requirements before the list is generated
 - [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation is maintained automatically, eliminating manual survey prep entirely
 - FLSA overtime threshold tracking is the default, not a configuration option
 - Managed service eliminates implementation cost and ongoing IT dependency
@@ -335,7 +335,7 @@ In all four cases, the hospital must be certain that the clinical nursing schedu
 
 ## How SimpleScheduleAI Compares to Deputy?
 
-SimpleScheduleAI is purpose-built for clinical nurse scheduling where Deputy is a general workforce tool. The core differences are credential-filtered callout replacement, automatic CMS §485.635 documentation, and healthcare FLSA overtime as a default calculation. For hospitals where those features represent real compliance risk, SimpleScheduleAI addresses what Deputy was not designed to solve.
+SimpleScheduleAI is purpose-built for clinical nurse scheduling where Deputy is a general workforce tool. The core differences are competency-filtered callout replacement, automatic CMS §485.635 documentation, and healthcare FLSA overtime as a default calculation. For hospitals where those features represent real compliance risk, SimpleScheduleAI addresses what Deputy was not designed to solve.
 
 <div class="not-prose my-6">
   <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3">Deputy vs. SimpleScheduleAI: Hospital Nurse Scheduling</p>
@@ -349,7 +349,7 @@ SimpleScheduleAI is purpose-built for clinical nurse scheduling where Deputy is 
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Healthcare credential enforcement</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Healthcare competency enforcement</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
         <td class="py-3 text-primary">Yes, in replacement list</td>
       </tr>
@@ -392,7 +392,7 @@ SimpleScheduleAI is purpose-built for clinical nurse scheduling where Deputy is 
   </table>
 </div>
 
-The comparison above illustrates the category difference between Deputy and SimpleScheduleAI. Deputy is fast to deploy and low cost because the healthcare-specific features hospital nursing requires are not documented on its product page. SimpleScheduleAI's value is precisely in those features, credential enforcement, CMS documentation, healthcare FLSA, and acute care callout management, that Deputy was never designed to provide.
+The comparison above illustrates the category difference between Deputy and SimpleScheduleAI. Deputy is fast to deploy and low cost because the healthcare-specific features hospital nursing requires are not documented on its product page. SimpleScheduleAI's value is precisely in those features, skill-mix enforcement, CMS documentation, healthcare FLSA, and acute care callout management, that Deputy was never designed to provide.
 
 For hospitals where those features represent real operational risk and real manual labor cost, the price difference between Deputy and SimpleScheduleAI is offset by what the hospital is currently paying in manual compliance work and credential management that lives outside the scheduling system.
 
@@ -422,7 +422,7 @@ Start by calculating the full cost of Deputy for your hospital. Add the monthly 
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-default dark:text-slate-100">The hospital scheduling upgrade from Deputy</p>
-    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI provides credential-filtered callout replacement, automatic CMS §485.635 documentation, and FLSA healthcare overtime tracking as defaults. Built for Critical Access Hospitals that need clinical scheduling compliance, not a general workforce scheduling tool applied to a clinical environment.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI provides competency-filtered callout replacement, automatic CMS §485.635 documentation, and FLSA healthcare overtime tracking as defaults. Built for Critical Access Hospitals that need clinical scheduling compliance, not a general workforce scheduling tool applied to a clinical environment.</p>
   </div>
   <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>

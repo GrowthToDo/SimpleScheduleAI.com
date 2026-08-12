@@ -179,7 +179,7 @@ SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling
 
 <img src="/images/blog/how-to-handle-nurse-callouts/SimpleScheduleAI.webp" alt="SimpleScheduleAI ranked callout replacement shortlist for a nurse manager" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-One honest boundary: everything in this guide works in Excel, and a disciplined manager with a current one-page list gets most of the benefit. What the service removes is the 2 AM spreadsheet math and the credential cross-check, at the moment the manager has the least capacity for either. The call-by-call record of who was contacted and who declined stays yours to keep; the shortlist's job is to make that list short.
+One honest boundary: everything in this guide works in Excel, and a disciplined manager with a current one-page list gets most of the benefit. What the service removes is the 2 AM spreadsheet math and the competency cross-check, at the moment the manager has the least capacity for either. The call-by-call record of who was contacted and who declined stays yours to keep; the shortlist's job is to make that list short.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 border-l-4 border-amber-500 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">Our Take</p>
@@ -196,7 +196,7 @@ One honest boundary: everything in this guide works in Excel, and a disciplined 
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Stop guessing who to call at 2 AM</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI ranks every qualified replacement by credential match and overtime risk, with the manager making the final call. Every approved change lands in a timestamped log automatically.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI ranks every qualified replacement by skill match and overtime risk, with the manager making the final call. Every approved change lands in a timestamped log automatically.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

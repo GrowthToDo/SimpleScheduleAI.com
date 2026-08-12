@@ -164,7 +164,7 @@ One honest note: if your facility needs features outside these seven, specifical
 1. **Map where your scheduling hours go this cycle.** Before comparing vendors, write down what the schedule costs you now: building, callout coverage, corrections, distribution. Our [nurse manager time breakdown](/blog/nurse-manager-scheduling-time-breakdown) gives an interview-based baseline to compare against.
 2. **Turn the table above into your demo scorecard.** Seven rows, one column per vendor. If a demo spends its time on dashboards instead of these rows, that tells you who the product was built for.
 3. **Ask the implementation question first.** "Can we produce a posted schedule within two weeks without involving IT?" If the answer includes an integration project, stop the evaluation there.
-4. **Ask for the callout walkthrough.** "A nurse calls out at 5 AM before a 7 AM shift. Show me exactly what your software does." A ranked, credential-checked replacement list is the right answer; "the manager checks availability in the system" is not.
+4. **Ask for the callout walkthrough.** "A nurse calls out at 5 AM before a 7 AM shift. Show me exactly what your software does." A ranked, competency-checked replacement list is the right answer; "the manager checks availability in the system" is not.
 5. **If you run a Texas Critical Access Hospital, see the service version.** SimpleScheduleAI delivers the capabilities above as a service. [How it works](/how-it-works) shows the weekly rhythm from roster upload to posted schedule.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">

@@ -182,7 +182,7 @@ Where NurseGrid serves the nurse communication layer, SimpleScheduleAI covers th
 
 - Manager-side scheduling is delivered as drafts, not built by the nurse manager, which removes the construction time entirely
 - CMS §485.635 documentation is automatic, not a manual export process before each survey
-- Callout shortlist is ranked by overtime risk and filtered by credentials without any manual calculation
+- Callout shortlist is ranked by overtime risk and filtered by unit competency requirements without any manual calculation
 - Excel-based roster upload means the transition from NurseGrid does not require IT involvement
 - FLSA overtime threshold tracking and CMS CAH requirements are built in as defaults
 

@@ -225,7 +225,7 @@ survey or TWC audit requires documentation.
 
 We build FLSA overtime thresholds into the [AI nurse scheduling](/ai-nurse-scheduling) logic, flagging nurses who are
 approaching the FLSA overtime threshold before shifts are assigned, not after the
-payroll run. Credential expiration dates are tracked against each nurse's profile, and
+payroll run. Competency level and role are held on each nurse's profile, and
 we alert you before a certification lapses. See the AI build a compliant schedule and flag overtime risk live in the [interactive simulator](/simulator).
 
 One honest limitation: we document what happens within the scheduling system. If
@@ -253,7 +253,7 @@ be complete.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Running a Critical Access Hospital in Texas?</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI keeps the compliance audit trail automatically: every change logged, every credential checked. Flat monthly pricing, no IT setup.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI keeps the compliance audit trail automatically: every change logged with a timestamp. Flat monthly pricing, no IT setup.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

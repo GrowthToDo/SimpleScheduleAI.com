@@ -168,9 +168,9 @@ A managed scheduling service is not scheduling software with extra support. It i
 With SimpleScheduleAI, the process works like this:
 
 1. The nurse manager shares the staff roster with SimpleScheduleAI: names, credentials, availability, and any scheduling constraints. A standard Excel file is all that is needed to start.
-2. The AI builds the first schedule inside two weeks, applying CMS documentation requirements, FLSA overtime thresholds, and credential-based shift assignments; the SimpleScheduleAI team checks it before it reaches the nurse manager.
+2. The AI builds the first schedule inside two weeks, applying CMS documentation requirements, FLSA overtime thresholds, and competency-based shift assignments; the SimpleScheduleAI team checks it before it reaches the nurse manager.
 3. The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff.
-4. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a credential gap. They call from the top of the list.
+4. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a skill-mix gap. They call from the top of the list.
 5. As staff join or leave, credentials change, or availability patterns shift, the nurse manager sends the update and the SimpleScheduleAI team handles the rest. The nurse manager does not administer a system. They manage a roster.
 
 The weekly time commitment for the nurse manager drops from 4-6 hours (typical for software users actively managing scheduling) to 1-2 hours (review and approval only). That difference, across a 25-nurse staff on a rolling 4-week schedule, is 100-200 hours per year returned to clinical work. To see the build-and-rank step for yourself, watch the AI assemble a compliant schedule and rank a callout shortlist live in the [interactive simulator](/simulator).
@@ -242,7 +242,7 @@ Callout handling is the most time-sensitive scheduling task. When a nurse calls 
 
 With Aladtec, the nurse manager reviews the staff roster, identifies who is available and who has the right credentials, mentally calculates who is at risk of hitting overtime, and starts calling. Aladtec provides the scheduling calendar as a reference, but the OT calculation and credential check are the nurse manager's responsibility.
 
-With SimpleScheduleAI, the nurse manager opens the callout dashboard and sees a ranked list. The top candidates are sorted by: credential match, hours worked this pay period (to avoid triggering the FLSA overtime threshold), and historical response rate. The nurse manager calls from the top of the list.
+With SimpleScheduleAI, the nurse manager opens the callout dashboard and sees a ranked list. The top candidates are sorted by: skill match, hours worked this pay period (to avoid triggering the FLSA overtime threshold), and historical response rate. The nurse manager calls from the top of the list.
 
 The difference is about 20-30 minutes per callout event. For a CAH that averages 2-3 callouts per week, that is an hour per week, 50 hours per year.
 

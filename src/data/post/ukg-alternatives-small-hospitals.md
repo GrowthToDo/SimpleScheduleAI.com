@@ -172,7 +172,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 
 - First schedule inside two weeks from Excel roster upload, after 3 to 5 business days of onboarding; no IT involvement or implementation project
 - CMS §485.635 documentation is automatic, eliminating manual survey prep
-- Callout replacement list is ranked by overtime risk and filtered by credentials before it reaches the manager
+- Callout replacement list is ranked by overtime risk and filtered by unit competency before it reaches the manager
 - FLSA overtime threshold tracking and CMS CAH requirements are built-in defaults
 - Service maintains scheduling rules as staff and policies change; no ongoing configuration burden
 

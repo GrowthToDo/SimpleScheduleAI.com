@@ -161,9 +161,9 @@ That is the honest decision point. If someone at your facility has the hours to 
 
 ## How Does SimpleScheduleAI Handle Schedule Generation?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Each cycle the AI generates three scored draft options, balanced, fairness-optimized, and cost-optimized, applying coverage requirements, credential matching, rest rules, and applicable FLSA overtime thresholds to every draft. Our scheduling team resolves the flagged items before your manager sees the schedule.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Each cycle the AI generates three scored draft options, balanced, fairness-optimized, and cost-optimized, applying coverage requirements, skill matching, rest rules, and applicable FLSA overtime thresholds to every draft. Our scheduling team resolves the flagged items before your manager sees the schedule.
 
-When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, credential match, and rotation fairness. A person at the hospital still places the call and confirms the replacement, because the on-call charge nurse knows context the data does not. Every schedule change is logged with a timestamp.
+When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, skill match, and rotation fairness. A person at the hospital still places the call and confirms the replacement, because the on-call charge nurse knows context the data does not. Every schedule change is logged with a timestamp.
 
 One honest limitation: this is an operated service for Texas Critical Access Hospitals of 25 beds and under. If your facility has a dedicated scheduling staff and wants to run the tool in-house, a self-serve generator fits that workflow better than we do. For how the drafts get built underneath, see [AI nurse scheduling](/ai-nurse-scheduling), and for the end-to-end walkthrough see [how it works](/how-it-works).
 
@@ -184,7 +184,7 @@ One honest limitation: this is an operated service for Texas Critical Access Hos
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Automate the grid, and the callout that follows it</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds scored draft schedules, applies overtime and credential rules to every one, and ranks callout replacements. Built for Texas Critical Access Hospitals.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds scored draft schedules, applies overtime and competency rules to every one, and ranks callout replacements. Built for Texas Critical Access Hospitals.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

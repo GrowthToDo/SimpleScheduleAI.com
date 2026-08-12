@@ -31,7 +31,7 @@ This guide compares 6 OnShift alternatives for a CAH that runs acute inpatient n
 
 - OnShift, now part of Workday, was designed for long-term care and assisted living workforce scheduling. Its caregiver engagement and shift-pickup model fits stable LTC census patterns, which is a different operational model than acute care hospital nursing.
 - The questions a Critical Access Hospital should probe before keeping OnShift are operational: how fast a confirmed credentialed replacement can be secured during a callout, whether the platform produces CMS §485.635 survey documentation without manual assembly, and whether acute care unit constraints are enforced rather than advisory.
-- SimpleScheduleAI is the strongest alternative for a Critical Access Hospital that wants the scheduling handled rather than a better tool to do it itself. It delivers ranked, credential-filtered callout replacement lists, automatic CMS §485.635 documentation, and FLSA overtime threshold tracking as defaults.
+- SimpleScheduleAI is the strongest alternative for a Critical Access Hospital that wants the scheduling handled rather than a better tool to do it itself. It delivers ranked, competency-filtered callout replacement lists, automatic CMS §485.635 documentation, and FLSA overtime threshold tracking as defaults.
 - For hospitals that want self-serve software, Aladtec is the smaller-roster option with direct-outreach callout management, and SmartLinx is the path for 50-100 bed facilities that need stronger compliance automation than OnShift and have IT capacity for a longer implementation.
 - QGenda is the right choice when the actual problem is consolidating physician and nursing scheduling onto one platform. UKG is the enterprise-tier option only when a parent health system mandates it and supplies the implementation resources.
 - General workforce tools such as [Deputy](/blog/deputy-alternatives-healthcare) and nurse-facing apps such as NurseGrid Manager solve narrower problems; CAHs with active CMS or HIPAA obligations should verify clinical compliance capabilities directly with each vendor before relying on either as a primary scheduling system.
@@ -160,17 +160,17 @@ The six strongest OnShift alternatives for a Critical Access Hospital are Simple
 
 SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike OnShift's self-serve LTC platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster and policies change.
 
-The replacement list is ranked by overtime risk and filtered by credential requirements before it reaches the manager. A replacement for an ICU shift only shows ICU-credentialed nurses, and a replacement for a charge nurse shift only shows charge-designated nurses. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle, so survey preparation is not a manual assembly task.
+The replacement list is ranked by overtime risk and filtered by unit competency requirements before it reaches the manager. A replacement for an ICU shift only shows ICU-cleared nurses, and a replacement for a charge nurse shift only shows charge-designated nurses. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle, so survey preparation is not a manual assembly task.
 
 This is a different operating model than OnShift, which is a self-serve platform the manager configures and runs herself. SimpleScheduleAI moves the construction and maintenance work to the service and leaves the nurse manager with review and approval decisions. See [how the managed service works](/how-it-works) for the full workflow, and the [AI nurse scheduling](/ai-nurse-scheduling) approach behind the draft generation. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
-**Best for:** Critical Access Hospitals evaluating OnShift alternatives because acute care callout speed, credential enforcement during coverage, and CMS documentation prep time are the primary unmet needs.
+**Best for:** Critical Access Hospitals evaluating OnShift alternatives because acute care callout speed, competency enforcement during coverage, and CMS documentation prep time are the primary unmet needs.
 
 **Key advantages:**
 
-- Callout shortlist generated in under two minutes, ranked by overtime risk and filtered by unit credential requirements
+- Callout shortlist generated in under two minutes, ranked by overtime risk and filtered by unit competency requirements
 - CMS §485.635 staffing documentation maintained automatically, eliminating manual survey prep
-- Charge nurse and unit-specific credential tracking prevents unqualified replacements from appearing on callout lists
+- Charge-nurse and unit competency requirements keep nurses who are not cleared for the unit off the callout list
 - Managed service model means no implementation burden and no ongoing IT dependency
 - FLSA overtime threshold tracking and CMS CAH requirements are defaults, not configuration options
 
@@ -180,7 +180,7 @@ This is a different operating model than OnShift, which is a self-serve platform
 - No staff-facing mobile app; nurses do not view schedules or submit shift trades directly through SimpleScheduleAI. If nurse-facing self-scheduling is a priority, evaluate a self-serve platform or pair SimpleScheduleAI with a separate staff communication tool
 - Not designed for hospitals with a large long-term care component that need the caregiver engagement features OnShift was built around
 
-**Verdict:** The strongest OnShift alternative for a CAH where callout credential enforcement and CMS documentation are the primary unmet needs. The managed service model eliminates the configuration overhead that makes self-serve alternatives harder to maintain at 25-bed scale. [See how it works](/how-it-works).
+**Verdict:** The strongest OnShift alternative for a CAH where callout skill-mix enforcement and CMS documentation are the primary unmet needs. The managed service model eliminates the configuration overhead that makes self-serve alternatives harder to maintain at 25-bed scale. [See how it works](/how-it-works).
 
 **Ratings:** New service; no public G2 or Capterra listing yet.
 
@@ -423,7 +423,7 @@ If all three conditions apply, the switch cost and learning curve of an alternat
 
 ## How SimpleScheduleAI Compares to OnShift?
 
-The core difference is target environment and operating model. OnShift is a self-serve platform designed for long-term care, where caregiver engagement and predictable shift pickup are the primary model. SimpleScheduleAI is an AI-native nurse scheduling service designed for Critical Access Hospitals, where acute care callout dynamics, CMS compliance, and credential enforcement are the primary requirements. The table below maps that difference across what a 25-bed CAH actually cares about.
+The core difference is target environment and operating model. OnShift is a self-serve platform designed for long-term care, where caregiver engagement and predictable shift pickup are the primary model. SimpleScheduleAI is an AI-native nurse scheduling service designed for Critical Access Hospitals, where acute care callout dynamics, CMS compliance, and skill-mix enforcement are the primary requirements. The table below maps that difference across what a 25-bed CAH actually cares about.
 
 <div class="not-prose">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -451,9 +451,9 @@ The core difference is target environment and operating model. OnShift is a self
         <td class="py-3 text-primary">Ranked shortlist delivered in under 2 min</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Credential enforcement in callout</td>
+        <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Competency enforcement in callout</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-primary">Filtered by unit credentials before list reaches manager</td>
+        <td class="py-3 text-primary">Filtered by unit competency before list reaches manager</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>
@@ -484,7 +484,7 @@ The core difference is target environment and operating model. OnShift is a self
   </table>
 </div>
 
-The core tradeoff between OnShift and SimpleScheduleAI is the design target. OnShift was built for long-term care settings where caregiver engagement and predictable shift pickup are the operational reality. SimpleScheduleAI was built for Critical Access Hospitals where acute care callout dynamics, CMS compliance, and credential enforcement are the operational reality.
+The core tradeoff between OnShift and SimpleScheduleAI is the design target. OnShift was built for long-term care settings where caregiver engagement and predictable shift pickup are the operational reality. SimpleScheduleAI was built for Critical Access Hospitals where acute care callout dynamics, CMS compliance, and skill-mix enforcement are the operational reality.
 
 For a hospital that is primarily a CAH or acute care facility, that difference is the reason to evaluate alternatives, not a marginal feature gap but a fundamental difference in what each product was designed to do. For an organization that is primarily LTC, the same difference is the reason OnShift may still be the right tool.
 
@@ -510,7 +510,7 @@ For a hospital that is primarily a CAH or acute care facility, that difference i
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-default dark:text-slate-100">Built for what OnShift wasn't designed for</p>
-    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI delivers ranked callout replacements with credential filtering, automatic CMS §485.635 documentation, and FLSA overtime threshold tracking. Designed for Critical Access Hospitals where acute care callout dynamics, not long-term care engagement features, are the scheduling priority.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI delivers ranked callout replacements with competency filtering, automatic CMS §485.635 documentation, and FLSA overtime threshold tracking. Designed for Critical Access Hospitals where acute care callout dynamics, not long-term care engagement features, are the scheduling priority.</p>
   </div>
   <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
@@ -536,7 +536,7 @@ For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) 
 
 **Is SimpleScheduleAI better than OnShift for a Critical Access Hospital?**
 
-For a CAH specifically, SimpleScheduleAI is built around the requirements that matter most: ranked callout replacement with credential filtering, automatic CMS §485.635 documentation, and FLSA overtime threshold tracking as defaults. OnShift was designed for long-term care, where caregiver engagement is the primary model. For a hospital where acute care nursing is the main scheduling challenge, that design-target difference is the deciding factor.
+For a CAH specifically, SimpleScheduleAI is built around the requirements that matter most: ranked callout replacement with competency filtering, automatic CMS §485.635 documentation, and FLSA overtime threshold tracking as defaults. OnShift was designed for long-term care, where caregiver engagement is the primary model. For a hospital where acute care nursing is the main scheduling challenge, that design-target difference is the deciding factor.
 
 **Does OnShift work for ED nurse scheduling?**
 
