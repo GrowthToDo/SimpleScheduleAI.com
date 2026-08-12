@@ -37,7 +37,7 @@ metadata:
 - [What Should You Do This Week?](#what-should-you-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Texas has more rural hospitals vulnerable to closure than any other state, 50 of the 417 Chartis counted nationally. For a Texas administrator the operative figure is 52.2%, the share of rural hospitals operating in the red across states that did not expand Medicaid, and Texas is one of them. The 41.2% in the national headline describes a broader mix.
+Texas has more rural hospitals vulnerable to closure than any other state, 50 of the 417 Chartis counted nationally. For a Texas administrator the operative figure is 52.2%, the share of rural hospitals operating in the red across states that did not expand Medicaid, and Texas is one of them. The 41.2% in the national headline describes a broader mix. For a hospital in that position, converting to a Rural Emergency Hospital is one of the few structural options on the table, and [what a designation change does to the nurse schedule](/articles/rural-emergency-hospital-bill-nurse-staffing) is the part the financial case usually leaves out.
 
 That reframing is the point of this piece. The coverage of this report has stayed at the national level, where the average blends expansion and non-expansion states into one number that describes neither. Below is what the finding looks like at Texas scale, and a worked figure for the one large cost line a nurse manager actually touches.
 

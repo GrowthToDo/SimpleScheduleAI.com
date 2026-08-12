@@ -666,5 +666,13 @@
     "primaryKeyword": "microsoft copilot nurse scheduling",
     "pillar": "/nurse-scheduling-software",
     "note": "MOFU. Answers the incumbent-software objection: a CAH already pays for Microsoft 365, so \"can we just use Copilot?\" is a live buying question. PRE-PUBLISH the proofread gate caught two serious defects. (1) The draft attributed \"productivity companion\" to Microsoft's own Copilot page as a quasi-quote; page-verified 2026-08-12 that the phrase appears NOWHERE (real headline: \"AI built for work\"). (2) The post's central argument (\"Copilot has no live data on your roster\") was FALSE: Copilot grounds on tenant data via Work IQ. Reframed throughout to ENFORCEMENT-not-access, which is the standing rule now recorded in the competitor dossier Microsoft section. Also fixed a credential-enforcement overclaim in our own SSAI section (inventory: certifications are not consulted by any rule) and a CFR mixup (coverage claims repointed from 485.635 to 485.631(a)(5)). Carries a Teams Shifts FAQ because Shifts, not Copilot, is the honest \"what we already pay for\" comparison. Declared deviation: body 2,511 words vs the 1,500-2,500 mofu band (+11, accepted after a ~240-word trim)."
+  },
+  {
+    "slug": "rural-emergency-hospital-bill-nurse-staffing",
+    "type": "article",
+    "url": "/articles/rural-emergency-hospital-bill-nurse-staffing",
+    "primaryKeyword": "rural emergency hospital designation staffing",
+    "pillar": "/ai-nurse-scheduling",
+    "note": "Newsroom trendjack (S.5164, Tuberville, introduced Aug 2026; would let Rural Emergency Hospitals reopen inpatient beds and ease the route back to Critical Access status). Targets the designation-versus-staffing analysis long-tail, not the bill-news head SERP. Citable hooks: (1) the reversion asymmetry, converting OUT of CAH is administrative while converting BACK is not; (2) the necessary-provider path closed to new entrants Jan 1 2006, so a returning hospital must clear 485.610 mileage (35-mile drive from the nearest hospital or CAH, or 15 miles mountainous/secondary roads). REH facts from RHIhub (no inpatient beds except a distinct-part SNF, 24hr annual average LOS, OPPS +5% plus $285,625.90/mo facility payment 2025, 42 REHs as of Oct 2025). Bill text not yet on govinfo at publish; coverage-cited only. Inbound: rural-hospital-losses-nurse-staffing-cost + rural-hospital-networks-nurse-staffing."
   }
 ]

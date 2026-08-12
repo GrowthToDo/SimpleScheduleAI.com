@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-08-12T00:00:00Z
-updateDate: 2026-08-12T00:00:00Z
+draft: false
+publishDate: 2026-08-13T00:00:00Z
+updateDate: 2026-08-13T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'The Rural Emergency Hospital Bill Is a Staffing Bill: What S.5164 Would Change on the Schedule'
 excerpt: >
@@ -57,7 +57,7 @@ The Rural Emergency Hospital designation was created in December 2020 and took e
 
 A Critical Access Hospital works the other way. It is capped at 25 inpatient beds under [42 CFR 485.620](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620), and under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) a registered nurse, clinical nurse specialist or licensed practical nurse must be on duty whenever it has one or more inpatients. There are 1,388 certified Critical Access Hospitals nationally as of July 2026, 93 of them in Texas.
 
-That is a staffing distinction with a payment attached, rather than the reverse.
+The contrast is a staffing distinction with a payment attached, rather than the reverse.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-sm border-collapse table-fixed break-words">
@@ -117,7 +117,9 @@ The roster reshapes itself around the new obligation, and reshaping it back is s
 
 A hospital that converts to Rural Emergency Hospital status stops needing continuous inpatient coverage, a genuine relief for a manager holding nights together with a handful of night-eligible nurses and a lot of goodwill. The pattern to expect, and the one worth pressure-testing against your own roster, runs like this. Nurses who preferred nights leave for facilities that still run them, others move to day work in the same building, and the per diem list thins because the shifts that justified keeping casual staff are gone. This is an illustration of the logic, not a customer result.
 
-Now read the provision reported to ease a return to Critical Access status. Returning is already possible today, but it is not symmetrical: converting to a Rural Emergency Hospital is handled as a change of information on the hospital's existing Medicare enrollment, while converting back does not use that simple route and means re-qualifying against every Critical Access condition, including the distance test in [42 CFR 485.610](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.610). That last point is sharper than it sounds: a hospital that originally qualified through the necessary-provider path cannot use it again, because that route closed to new entrants in 2006, so it has to clear the 35-mile drive test instead. Whatever the bill does to that paperwork, the staffing problem underneath is untouched. A hospital going back has to rebuild 24-hour licensed coverage from a roster that no longer contains the people who used to provide it, and the regulation is unforgiving: the nurse must be on duty whenever there is an inpatient, so the obligation arrives with the first admission rather than phasing in with the hiring plan. The same applies to running inpatient psychiatric, rehabilitation or obstetric units. Admitted patients mean somebody qualified is there overnight, every night, including the night three people call out.
+Now read the provision reported to ease a return to Critical Access status. Returning is already possible today, but it is not symmetrical: converting to a Rural Emergency Hospital is handled as a change of information on the hospital's existing Medicare enrollment, while converting back does not use that simple route and means re-qualifying against every Critical Access condition, including the distance test in [42 CFR 485.610](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.610). That last point is sharper than it sounds: a hospital that originally qualified through the necessary-provider path cannot use it again, because that route closed to new entrants in 2006, so it has to clear the mileage test instead: more than a 35-mile drive on primary roads from the nearest hospital or Critical Access Hospital, or more than 15 miles in areas of mountainous terrain or where only secondary roads are available.
+
+Whatever the bill does to that paperwork, the staffing problem underneath is untouched. A hospital going back has to rebuild 24-hour licensed coverage from a roster that no longer contains the people who used to provide it, and the regulation is unforgiving: the nurse must be on duty whenever there is an inpatient, so the obligation arrives with the first admission rather than phasing in with the hiring plan. The same applies to running inpatient psychiatric, rehabilitation or obstetric units. Admitted patients mean somebody qualified is there overnight, every night, including the night three people call out.
 
 This is worth separating from the other structural change rural hospitals are being sold. Joining a network raises the ceiling on staffing by widening the pool a manager can draw from, and leaves the floor where it was, which we argued in [rural hospitals forming networks](/articles/rural-hospital-networks-nurse-staffing). A designation change moves the floor itself, on a fixed date. That deserves separate attention from a board already told a network solves staffing.
 
