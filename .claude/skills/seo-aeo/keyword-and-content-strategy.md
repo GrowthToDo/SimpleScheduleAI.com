@@ -5,7 +5,9 @@
 
 # Keyword strategy, content strategy, programmatic patterns, competitor comparisons
 
-## DataForSEO "AI Search Volume" endpoint (noted 2026-08-12, vendor email)
+## PART 6 — KEYWORD STRATEGY
+
+### 6.0 DataForSEO "AI Search Volume" endpoint (noted 2026-08-12, vendor email)
 
 DataForSEO now sells an **AI Search Volume** metric, pitched as capturing demand
 that Google Ads volume misses because people phrase things differently in
