@@ -100,7 +100,7 @@ UKG fails at a 25-bed hospital because every operational assumption the platform
 
 **The budget.** Implementation costs typically run $150,000-$500,000 before licensing. The ROI calculation that justifies this investment works at a 500-bed system where labor represents tens of millions of dollars annually. At a 25-bed CAH with $400,000-$600,000 in nursing labor, the math rarely works.
 
-**The operational overhead.** Even after a successful implementation, UKG requires ongoing configuration management. Overtime rules, unit staffing requirements, and credential requirements must be kept current. At a large hospital, a workforce management analyst handles this. At a CAH, it falls to the nurse manager on top of her clinical and supervisory responsibilities.
+**The operational overhead.** Even after a successful implementation, UKG requires ongoing configuration management. Overtime rules, unit staffing requirements, and credential requirements must be kept current. At a large hospital, a workforce management analyst handles this. At a CAH, it falls to the nurse manager on top of her clinical and supervisory responsibilities, which is the ownership gap behind [why nurse managers stop using scheduling automation](/blog/why-nurse-managers-stop-using-scheduling-automation) altogether.
 
 ## What Does UKG Complexity Look Like in Practice at a Critical Access Hospital?
 

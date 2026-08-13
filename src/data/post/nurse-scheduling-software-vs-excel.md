@@ -179,7 +179,7 @@ For more context on [nurse scheduling software](/nurse-scheduling-software) opti
 ## Frequently Asked Questions
 
 **Q: Can I keep using Excel alongside scheduling software during a transition?**
-Yes, and most CAHs do. A managed service like SimpleScheduleAI typically runs parallel for 2-4 weeks during onboarding so the manager can verify accuracy before fully handing off. You don't have to flip a switch on day one. What that parallel period costs, and why some hospitals abandon the new system and return to the spreadsheet, is covered in [the real cost of switching from Excel](/blog/switching-from-excel-to-nurse-scheduling-software).
+Yes, and most CAHs do. A managed service like SimpleScheduleAI typically runs parallel for 2-4 weeks during onboarding so the manager can verify accuracy before fully handing off. You don't have to flip a switch on day one. What that parallel period costs is covered in [the real cost of switching from Excel](/blog/switching-from-excel-to-nurse-scheduling-software), and the reasons a parallel spreadsheet quietly becomes the permanent one are in [why nurse managers stop using scheduling automation](/blog/why-nurse-managers-stop-using-scheduling-automation).
 
 **Q: Does scheduling software integrate with our payroll system?**
 Most scheduling platforms offer payroll exports in common formats (CSV, ADP, Paylocity-compatible files). A managed service should handle that export setup as part of onboarding rather than leaving it to your IT staff.

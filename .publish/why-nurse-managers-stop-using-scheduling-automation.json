@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "why-nurse-managers-stop-using-scheduling-automation",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:54:13.623Z",
+      "contentHash": "c131de0936ab6e83f062ea41e774bb524c2bc7ca09a480caefe40b4219d9c55b"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:54:16.153Z",
+      "contentHash": "c131de0936ab6e83f062ea41e774bb524c2bc7ca09a480caefe40b4219d9c55b"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:54:17.570Z",
+      "contentHash": "c131de0936ab6e83f062ea41e774bb524c2bc7ca09a480caefe40b4219d9c55b"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:54:17.616Z",
+      "contentHash": "c131de0936ab6e83f062ea41e774bb524c2bc7ca09a480caefe40b4219d9c55b"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:54:17.653Z",
+      "contentHash": "c131de0936ab6e83f062ea41e774bb524c2bc7ca09a480caefe40b4219d9c55b"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:54:17.653Z",
+      "contentHash": "c131de0936ab6e83f062ea41e774bb524c2bc7ca09a480caefe40b4219d9c55b"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:54:17.655Z",
+      "contentHash": "c131de0936ab6e83f062ea41e774bb524c2bc7ca09a480caefe40b4219d9c55b"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "claude",
+      "setAt": "2026-08-13T16:56:31.082Z",
+      "contentHash": "e660e9f9b1608347b34c9e4b668cbdb75b1a5f3249e7fcb97ff88ec8710bd3bf"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "claude",
+      "setAt": "2026-08-13T16:56:28.607Z",
+      "contentHash": "e660e9f9b1608347b34c9e4b668cbdb75b1a5f3249e7fcb97ff88ec8710bd3bf"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "claude",
+      "setAt": "2026-08-13T16:56:33.186Z",
+      "contentHash": "e660e9f9b1608347b34c9e4b668cbdb75b1a5f3249e7fcb97ff88ec8710bd3bf"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-13T16:56:34.581Z",
+      "contentHash": "e660e9f9b1608347b34c9e4b668cbdb75b1a5f3249e7fcb97ff88ec8710bd3bf"
+    }
+  },
+  "overrides": []
+}

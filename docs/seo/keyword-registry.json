@@ -674,5 +674,13 @@
     "primaryKeyword": "rural emergency hospital designation staffing",
     "pillar": "/ai-nurse-scheduling",
     "note": "Newsroom trendjack (S.5164, Tuberville, introduced Aug 2026; would let Rural Emergency Hospitals reopen inpatient beds and ease the route back to Critical Access status). Targets the designation-versus-staffing analysis long-tail, not the bill-news head SERP. Citable hooks: (1) the reversion asymmetry, converting OUT of CAH is administrative while converting BACK is not; (2) the necessary-provider path closed to new entrants Jan 1 2006, so a returning hospital must clear 485.610 mileage (35-mile drive from the nearest hospital or CAH, or 15 miles mountainous/secondary roads). REH facts from RHIhub (no inpatient beds except a distinct-part SNF, 24hr annual average LOS, OPPS +5% plus $285,625.90/mo facility payment 2025, 42 REHs as of Oct 2025). Bill text not yet on govinfo at publish; coverage-cited only. Inbound: rural-hospital-losses-nurse-staffing-cost + rural-hospital-networks-nurse-staffing."
+  },
+  {
+    "slug": "why-nurse-managers-stop-using-scheduling-automation",
+    "type": "post",
+    "url": "/blog/why-nurse-managers-stop-using-scheduling-automation",
+    "primaryKeyword": "nurse scheduling automation",
+    "pillar": "/ai-nurse-scheduling",
+    "note": "Next-15 topic #1, the review-mining flagship. Built on the dossier-verified QGenda abandonment quote (Courtney D., May 10 2024, Capterra p/90628: \"automated scheduling and rules set up seem to have hiccups...I just stopped using the automation\"), paired against Ari W.'s positive review of the same product three days earlier to show the difference is rule ownership, not the code. Low/AEO volume, KD 0; SERP is all vendor-generic feature guides with nobody covering POST-adoption abandonment, so the info-gain is the failure mode itself plus the 5-question override audit. Citable hooks: measure overrides not logins; the parallel spreadsheet as the abandonment tell; no super-user role at 25 beds. Quote set is QGenda-only on purpose, because TCP/symplr/SmartLinx dossier rows are past the 60-day freshness window. Inbound: nurse-scheduling-software-vs-excel + ukg-too-complex-small-hospital."
   }
 ]

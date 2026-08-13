@@ -440,7 +440,7 @@ and larger health systems.
 - G2: 4.6/5 (164 reviews) — search-indicated
 - Capterra: 4.2/5 (68 reviews) — page-verified, Product ID 90628
 
-**Capterra URL:** https://www.capterra.com/p/[verify-ID]/QGenda/
+**Capterra URL (verified 2026-08-13):** https://www.capterra.com/p/90628/QGenda/reviews/ — the reviews path resolves; the host 403s automated checkers, so `check-links` reports it as "check" rather than broken. URL shape confirmed via search-result exact match, and the 4.2/68 rating plus the automation-hiccups theme were corroborated in the same pass.
 
 ### Verified Reviewer Quotes
 
