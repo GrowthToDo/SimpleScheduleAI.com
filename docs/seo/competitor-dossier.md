@@ -655,10 +655,34 @@ Product page DOES cover:
 **Product:** Hospital nurse scheduling platform. Designed specifically for hospital nursing.
 Owned by HealthStream (acquired). Used by 500+ hospital facilities.
 
-**Ratings (verified 2026-04-30):**
+**Ratings (verified 2026-04-30; G2 line founder-verified 2026-08-14):**
 
-- G2: 4.3/5 (G2 Spring 2026 Leader)
+- G2: 4.3/5 across 405 reviews — founder page-verified 2026-08-14 (previously recorded without a review count). Listed as "ShiftWizard by HealthStream". G2 blocks automated fetch, so this line is human-verified, not tool-verified.
 - Capterra: 4.4/5 (723 reviews; 88%+ rated 4 stars or higher)
+
+**G2 "Time to Implement": 3 months** — founder page-verified 2026-08-14 on
+g2.com/products/shiftwizard/reviews. This closes the last of the five parked
+quote verifications, and it is the strongest single number for the
+implementation-time post (next-15 topic #2).
+
+**How to cite it, exactly.** The figure sits in a G2 box headed "Value at a
+Glance" with the subtitle "Averages based on real user reviews". So it is
+G2's AVERAGE across its reviewer base. It is therefore:
+
+- NOT a vendor claim, and must never be attributed to ShiftWizard or
+  HealthStream as something they state.
+- NOT a single reviewer's experience, so it must not be quoted as one.
+- Correct form: "G2 lists ShiftWizard's average time to implement as 3 months,
+  based on its own aggregation of user reviews (verified 2026-08-14)."
+
+**Comparison guardrail.** Do not set 3 months against our "onboarding takes 3
+to 5 business days" number. Those measure different things: G2 is timing a
+hospital standing up software it will then operate, and our figure times a
+service being configured for a hospital that operates nothing. The honest
+contrast is against our OTHER canonical number, "first schedule inside two
+weeks", and it should name the reason for the gap (delivery model) rather than
+implying the same job is done fifteen times faster. Overclaiming here is easy
+and would be caught.
 
 **Capterra URL (re-verified live 2026-08-14):** https://www.capterra.com/p/178376/ShiftWizard/reviews/ — ID 178376 and the 4.4/5 across 723 reviews both confirmed on the live page header.
 _(Note: product ID 210972 seen in some older URLs is incorrect — live listing is 178376. 210972 in fact resolves to DelyvaX, an unrelated delivery-management product, so it is wrong rather than merely stale.)_
