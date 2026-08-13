@@ -57,7 +57,7 @@ NEVER USE (fabricated, per dossier): OnShift "4 employees...overkill"; Shiftboar
 
 ## Founder to-dos surfaced by this research
 
-- 5 quote candidates need a manual page-open to become dossier-grade (Capterra/Trustpilot block tooling): NurseGrid "Please Bring back the mobile app" (p/254829), QGenda pricing quote (p/90628), ShiftWizard slowness (p/178376), Deputy 12-month-commitment complaints (Trustpilot), ShiftWizard "3 months" G2 data point. ~15 min total; unlocks #1, #2, and the lock-in bench topic.
+- ~~5 quote candidates need a manual page-open (Capterra/Trustpilot block tooling)~~ **RESOLVED 2026-08-14, and the premise was wrong.** Capterra does not block Playwright; it only blocks WebFetch and curl. Nothing here needed a human. Status after the refresh pass: NurseGrid "Please Bring back the mobile app" VERIFIED live (and product ID 254829 confirmed, replacing a `[verify-ID]` placeholder); QGenda pricing quotes already in-dossier and inside the 60-day window, URL page-verified; Deputy 12-month-commitment was ALREADY page-verified via Playwright on 2026-08-09, so this line was stale when written; ShiftWizard slowness quotes NOT re-located on page 1 of 723 reviews (unconfirmed, not disproven); ShiftWizard "3 months" G2 data point still unverified because G2 blocks automated fetch, which Playwright does not solve. So the only genuinely founder-blocked item of the five is the G2 one. Method is now recorded in the dossier's "How to Use This File".
 - OnShift Capterra sub-score discrepancy (3.6 customer-service vs dossier 3.9 overall) — reconcile at next OnShift touch.
 
 ## Process adoptions (2026-08-09, from founder-shared playbooks)

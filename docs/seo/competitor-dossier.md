@@ -4,7 +4,7 @@ Verified quotes, ratings, and product notes for competitors covered across all b
 Use this file before fetching any live review data — only go online if a competitor is missing
 from this dossier or the verification date is older than 60 days.
 
-**Dossier last updated:** 2026-08-13
+**Dossier last updated:** 2026-08-14
 **Maintained by:** Pradeep Pandey / Claude (update each time new quotes are verified live)
 
 ---
@@ -415,7 +415,7 @@ shift trades. Manager tier extends to unit-level oversight. Owned by HealthStrea
 - G2: 4.6/5 (5 reviews; small sample) — search-indicated
 - Capterra: 4.2/5 (13 reviews; small sample), Product ID 254829 — page-verified
 
-**Capterra URL:** https://www.capterra.com/p/[verify-ID]/NurseGrid/
+**Capterra URL (verified 2026-08-14):** https://www.capterra.com/p/254829/NurseGrid/reviews/ — product ID 254829 CONFIRMED, listing name is "NurseGrid Manager". Live rating 4.2/5 across 13 reviews.
 
 **Important caveat:** Manager-facing mobile app removed per multiple reviewers (June 2024).
 Desktop login required for schedule edits. Not a primary scheduling system for CAHs with
@@ -431,15 +431,15 @@ active CMS obligations — missing FLSA tracking, CMS audit trail, credential en
 
 **Negative — Manager App Removed:**
 
-> "It no longer has the manager app so I have to login to desktop."
+> "It no longer has the manager app so I have to login to desktop to make changes."
 >
-> Chief Nursing Officer, Hospital & Health Care, June 13, 2024, Capterra
+> Chief Nursing Officer, Hospital & Health Care, June 13, 2024, Capterra _(re-verified live 2026-08-14. CORRECTED: our version ended at "desktop", cutting the sentence mid-clause without an ellipsis. The full sentence is restored above.)_
 
 > "they took away the Manager App for your phone."
 >
-> Staffing Coordinator, Medical Practice, June 11, 2024, Capterra
+> Staffing Coordinator, Medical Practice, June 11, 2024, Capterra _(re-verified live 2026-08-14. Excerpt from a longer Cons field beginning "My only 2 cons are the BIGGEST they took away the Manager App for your phone so instead of the ease of changing the schedule being right there in the app at your fingertips after hours, you now have to use your browser to log in". Lowercase "they" is correct because the excerpt starts mid-sentence.)_
 
-> "I really like it. It is easy to use. Please Bring back the mobile app"
+> "I really like it. It is easy to use. Please Bring back the mobile app" _(re-verified live 2026-08-14, still posted and verbatim, including the mid-sentence capital in "Bring")_
 >
 > Nika S., Inpatient Director, Hospital & Health Care, June 17, 2024, Capterra (5.0-star review titled "HRRMC- Inpatient"; same reviewer as the Android quote below, name PAGE-VERIFIED via Playwright 2026-08-09; capitalization "Bring" is the original)
 
@@ -451,9 +451,9 @@ active CMS obligations — missing FLSA tracking, CMS audit trail, credential en
 
 **Negative — Cost for Small Facilities:**
 
-> "cost is too expensive for small centers."
+> "cost is too expensive for small centers. We are not renewing ours."
 >
-> Administrator, Hospital & Health Care, June 17, 2024, Capterra
+> Administrator, Hospital & Health Care, June 17, 2024, Capterra _(re-verified live 2026-08-14. EXTENDED: the second sentence was missing from our version and is the stronger half, since it reports an actual churn decision rather than a price opinion.)_
 
 ---
 
@@ -660,8 +660,9 @@ Owned by HealthStream (acquired). Used by 500+ hospital facilities.
 - G2: 4.3/5 (G2 Spring 2026 Leader)
 - Capterra: 4.4/5 (723 reviews; 88%+ rated 4 stars or higher)
 
-**Capterra URL (verified 2026-05-15):** https://www.capterra.com/p/178376/ShiftWizard/reviews/
-_(Note: product ID 210972 seen in some older URLs is incorrect — live listing is 178376)_
+**Capterra URL (re-verified live 2026-08-14):** https://www.capterra.com/p/178376/ShiftWizard/reviews/ — ID 178376 and the 4.4/5 across 723 reviews both confirmed on the live page header.
+_(Note: product ID 210972 seen in some older URLs is incorrect — live listing is 178376. 210972 in fact resolves to DelyvaX, an unrelated delivery-management product, so it is wrong rather than merely stale.)_
+_(The Erika A. and Jacob G. app-performance quotes were NOT re-located on page 1 of 723 reviews in the 2026-08-14 pass. Not disproven, only unconfirmed; page deeper or filter by star rating before citing them.)_
 
 ### Verified Reviewer Quotes
 
@@ -739,9 +740,9 @@ _(Note: some vendor copy contains em-dashes; reproduce only inside quoted vendor
 care, post-acute care, senior care, behavioral health. 50-200 bed range. Requires dedicated
 scheduling administrator and IT support for implementation.
 
-**Ratings (verified 2026-04-30):**
+**Ratings (re-verified live 2026-08-14):**
 
-- Capterra: 4.5/5 (6 reviews; very small sample — treat as directional only)
+- Capterra: 4.5/5 (6 reviews; very small sample — treat as directional only). Unchanged since 2026-04-30.
 
 **Capterra URL (verified 2026-05-15):** https://www.capterra.com/p/154002/SmartLinx/reviews/
 _(Note: product ID 88988 seen in older references returns 404 — live listing is 154002)_
@@ -755,13 +756,13 @@ not CAH-specific CMS §485.635. Ask for hospital-acute reference customers speci
 
 > "Implementation was a breeze with resources helping and project management and user training are all included. Customer Support is very responsive and always delivers resolution quickly."
 >
-> Carol G., Director of IT Services, Hospital & Health Care, March 22, 2021, Capterra _(verified 2026-05-15)_
+> Carol G., Director of IT Services, Hospital & Health Care, March 22, 2021, Capterra _(re-verified live 2026-08-14, still posted and verbatim)_
 
 **Negative — Implementation Complexity:**
 
 > "Implementation was much more complex that expected and end result still was full of errors on first payroll. Some changes can only be made on the back end."
 >
-> Daniel C., CFO, Hospital & Health Care, March 16, 2021, Capterra _(verified 2026-05-15)_
+> Daniel C., CFO, Hospital & Health Care, March 16, 2021, Capterra _(re-verified live 2026-08-14, still posted and verbatim)_
 >
 > _Note: "that expected" is a typo in the original review (should be "than"). Use as written — do not silently correct without [sic]._
 
@@ -769,7 +770,7 @@ not CAH-specific CMS §485.635. Ask for hospital-acute reference customers speci
 
 > "Not the best at calculating PBJ for CMS - had some issues that cost money and star ratings."
 >
-> Rebecca K., HR, Hospital & Health Care, September 27, 2019, Capterra
+> Rebecca K., HR, Hospital & Health Care, September 27, 2019, Capterra _(re-verified live 2026-08-14, still posted and verbatim)_
 
 ---
 
@@ -836,11 +837,11 @@ not CAH-specific CMS §485.635. Ask for hospital-acute reference customers speci
 TCP Aladtec (same parent company, TCP Software, but distinct products). Has staff-facing
 mobile app for clock-in/out and schedule viewing.
 
-**Ratings (verified 2026-05-12):**
+**Ratings (re-verified live 2026-08-14):**
 
-- Capterra: 4.4/5 (271 reviews)
+- Capterra: 4.4/5 (271 reviews). Unchanged since 2026-05-12; the live page header reads "4.4 (271)" and the review list reads "Showing 1-25 of 271 Reviews".
 
-**Capterra URL:** https://www.capterra.com/p/[verify-ID]/TCP-TimeClock-Plus/
+**Capterra URL (verified 2026-08-14):** https://www.capterra.com/p/21548/TimeClock-Plus/reviews/ — product ID 21548 CONFIRMED. This row previously carried a `[verify-ID]` placeholder, so the URL was unusable. Note a live trap: a web search returned "226 reviews" for this product on the same day the page itself showed 271. Search snippets are not page verification.
 
 **Important caveat:** Scheduling is secondary to time and attendance. Some hospital users
 describe the scheduling features as basic. Do not conflate with TCP Aladtec (separate product).
@@ -851,13 +852,15 @@ describe the scheduling features as basic. Do not conflate with TCP Aladtec (sep
 
 > "The scheduling aspect leaves a bit to be desired."
 >
-> Karen L., Payroll, Hospital & Health Care, June 2025, Capterra
+> Karen L., Payroll, Hospital & Health Care, June 2025, Capterra _(NOT RE-LOCATED on refresh 2026-08-14: absent from pages 1 and 2 of the default "most helpful" sort across 271 reviews. The quote is not disproven, only unconfirmed. Re-locate it before citing, or use the Donna L. quote below, which is page-verified and makes the same point more strongly.)_
 
 **Negative — Configuration Complexity:**
 
 > "Because TCP is highly customizable, configuring features may be complicated and/or confusing."
 >
-> Donna L., April 2026, Capterra
+> Donna L., April 2026, Capterra _(re-verified live 2026-08-14, still posted and verbatim)_
+>
+> _Excerpt note: the full Cons field continues "Many of the TCP features interact with each other, so knowing what changes need to be made or how those changes may affect associated features may be confusing to new administrators." Our quote is the opening sentence, which is fair, but the continuation is stronger evidence for the configuration-burden theme if a post needs it._
 
 ---
 
