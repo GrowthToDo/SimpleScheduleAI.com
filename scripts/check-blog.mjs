@@ -113,6 +113,36 @@ const SLOP_STRUCTURES = [
   ['colon reveal', /^\*?\*?(the (secret|catch|best part|twist|kicker))\*?\*?:/i],
 ];
 
+// Unclear-referent openers (WARN). Added 2026-08-14 after the founder flagged
+// the SAME defect four times in four different sentences of one article, and
+// each round only the flagged sentence got fixed. The defect: a paragraph opens
+// on an abstraction with no concrete referent in that sentence, so the reader
+// has to hold the previous paragraph in mind to parse it. Real examples from
+// that piece: "Going back is the hard direction" (back from what, to what),
+// "A designation change rewrites what the roster has to produce" (designation
+// of what), "That framing misses where it lands", "Leaving is close to
+// paperwork" (leaving what).
+//
+// Scoped deliberately to PARAGRAPH-OPENING sentences. That is where a clarity
+// read of the whole article found every remaining instance clustered, because
+// transitions are written while the author holds the argument in mind and the
+// reader does not. Scanning mid-paragraph would bury the signal: a pronoun one
+// sentence after its noun is fine.
+const UNCLEAR_REFERENT_OPENERS = [
+  [
+    'paragraph opens on a bare pronoun subject',
+    /^(this|that|these|those|it|they)\s+(is|are|was|were|means?|makes?|does|do|can|will|would|should|has|have|had)\b/i,
+  ],
+  [
+    'paragraph opens on a demonstrative plus an abstract noun',
+    /^(this|that|these|those|the)\s+(framing|change|switch|move|shift|trade|direction|designation|category|provision|obligation|requirement|approach|distinction|difference|dynamic|pattern|logic|model|situation|process|point|thing)\b/i,
+  ],
+  [
+    'paragraph opens on a bare gerund with no object',
+    /^(leaving|going back|returning|converting|switching|moving|changing|coming back)\s+(is|are|was|were|means?|takes?|costs?)\b/i,
+  ],
+];
+
 // Anything in this list is forbidden anywhere (including blockquotes — these
 // are formatting characters, not vocabulary, so the reviewer-quote exemption
 // does not apply).
@@ -394,6 +424,58 @@ function check(file) {
       if (re.test(line)) warn(`AI-slop structure: ${name}`, bodyOffset + i + 1, line.trim().slice(0, 100));
     }
   });
+
+  // 2c. Unclear-referent paragraph openers, WARN so a human judges each one.
+  // A hit is not automatically wrong: an opener whose referent is genuinely
+  // obvious reads fine. The question the WARN asks is "could a reader who has
+  // forgotten the previous paragraph parse this sentence?" If yes, ignore it.
+  //
+  // ADOPTION BASELINE (2026-08-14): unlike the 2026-08-10 slop patterns, this
+  // one was NOT swept to zero before adopting. It matched 82 times across 55
+  // live files, and a sample read showed most are real instances rather than
+  // false positives, so a sweep is a founder-gated editing pass over live copy,
+  // not a mechanical find and replace. Until that pass happens, treat hits on
+  // existing live posts as advisory and hold NEW drafts to zero. Capped per
+  // file so a legacy post cannot flood its own report.
+  {
+    const UNCLEAR_REFERENT_CAP = 5;
+    let unclearReferentHits = 0;
+    let prevBlank = true;
+    let inFence = false;
+    // A paragraph that directly answers a heading has its referent in that
+    // heading, and answer-first capsules under question H2s are the house
+    // style, so those openers are exempt. Same for an FAQ answer under its
+    // bold question line. Without this exemption the check flags the pattern
+    // the style guide asks for.
+    let lastNonBlank = '';
+    body.forEach((line, i) => {
+      const raw = line.trim();
+      if (/^```/.test(raw)) inFence = !inFence;
+      const blank = raw === '';
+      if (inFence || blank || /^```/.test(raw)) {
+        prevBlank = blank;
+        return;
+      }
+      const isOpener = prevBlank;
+      const precededByHeading = /^#{1,6}\s/.test(lastNonBlank) || /^\*\*.+\?\*\*$/.test(lastNonBlank);
+      prevBlank = false;
+      lastNonBlank = raw;
+      if (!isOpener || precededByHeading) return;
+      // Prose paragraphs only: skip headings, lists, tables, blockquotes, raw
+      // HTML and the italic author-bio line.
+      if (/^(#{1,6}\s|[-*+]\s|\d+\.\s|>|\||<|_\[Pradeep)/.test(raw)) return;
+      if (unclearReferentHits >= UNCLEAR_REFERENT_CAP) return;
+      // Strip leading bold/italic markers so "**That change**" is still seen.
+      const text = raw.replace(/^\*{1,2}|^_/g, '');
+      for (const [name, re] of UNCLEAR_REFERENT_OPENERS) {
+        if (re.test(text)) {
+          unclearReferentHits += 1;
+          warn(`Unclear referent: ${name}`, bodyOffset + i + 1, raw.slice(0, 100));
+          break;
+        }
+      }
+    });
+  }
 
   // 3. No inline <svg> in .md files (must be Tailwind div / table).
   lines.forEach((line, i) => {

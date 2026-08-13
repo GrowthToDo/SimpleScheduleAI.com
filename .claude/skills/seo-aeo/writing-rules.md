@@ -35,6 +35,18 @@
   parse, it is too complex. This also serves AI chunking: engines weigh passage starts heavily
   and chunk mid-paragraph, so a long multi-clause sentence can lose its subject in the split.
 
+### 3.2.1 SimpleScheduleAI Capability Claims (compliance-adjacent)
+
+Every sentence that attributes a capability to SimpleScheduleAI (advantage bullets, comparison-table SSAI cells, "How SimpleScheduleAI works" sections, CTAs, FAQ answers about SSAI, SVG diagram labels of SSAI features) must match shipped reality. Compliance-adjacent claims especially: a CAH administrator may rely on them.
+
+**Current rule: no FLSA 8-and-80 claim as an SSAI feature.** The scheduler tracks generic FLSA overtime thresholds; the 8-and-80 (80-hour/14-day) calculation method is not yet shipped.
+
+- USE: "FLSA overtime thresholds", "FLSA overtime threshold tracking", "tracks each nurse's running hours against the applicable FLSA threshold"
+- DO NOT WRITE (when attributed to SSAI): "FLSA 8-and-80 rule built in", "applies the 8-and-80 rule by default", "8-and-80 handled automatically", "Texas FLSA 8-and-80 compliance built in"
+- KEEP UNTOUCHED: generic educational descriptions of the rule (with DOL source), "ask your vendor whether they support 8-and-80" evaluation questions, competitor-confirm / competitor-gap lines ("X does not document 8-and-80 — confirm with vendor"), and the dedicated educational posts on FLSA/Texas overtime
+
+When 8-and-80 ships, this rule reverses. Update this section and revert the softened lines (commit eeefa9f softened the pattern across 19 posts; the same diff in reverse restores them).
+
 ### 3.2.2 Structural AI-slop patterns (gate-backed WARNs, added 2026-08-10)
 
 Word-level AI vocabulary is already a hard failure (see `AI_TONE_PHRASES` in
@@ -72,17 +84,44 @@ prevention, not cleanup.
   `in summary` word gate; Key Takeaways, FAQ, Our Take, and What-to-Do are the
   only sanctioned recaps.
 
-### 3.2.1 SimpleScheduleAI Capability Claims (compliance-adjacent)
+### 3.2.3 Unclear referents at paragraph openings (gate-backed WARN, added 2026-08-14)
 
-Every sentence that attributes a capability to SimpleScheduleAI (advantage bullets, comparison-table SSAI cells, "How SimpleScheduleAI works" sections, CTAs, FAQ answers about SSAI, SVG diagram labels of SSAI features) must match shipped reality. Compliance-adjacent claims especially: a CAH administrator may rely on them.
+`check-blog` WARNs when a paragraph OPENS on an abstraction with no concrete
+referent in that same sentence. The script owns the patterns; this is the intent
+behind them and the judgment it cannot make.
 
-**Current rule: no FLSA 8-and-80 claim as an SSAI feature.** The scheduler tracks generic FLSA overtime thresholds; the 8-and-80 (80-hour/14-day) calculation method is not yet shipped.
+Origin: the founder read one live article and flagged the same defect four
+times, in four different sentences, across three rounds of feedback. Each round
+only the sentence he pointed at got fixed, so the class survived. His examples:
+"Going back is the hard direction" (back from what, to what), "A designation
+change rewrites what the roster has to produce" (designation of what), "That
+framing misses where it lands", "Leaving is close to paperwork".
 
-- USE: "FLSA overtime thresholds", "FLSA overtime threshold tracking", "tracks each nurse's running hours against the applicable FLSA threshold"
-- DO NOT WRITE (when attributed to SSAI): "FLSA 8-and-80 rule built in", "applies the 8-and-80 rule by default", "8-and-80 handled automatically", "Texas FLSA 8-and-80 compliance built in"
-- KEEP UNTOUCHED: generic educational descriptions of the rule (with DOL source), "ask your vendor whether they support 8-and-80" evaluation questions, competitor-confirm / competitor-gap lines ("X does not document 8-and-80 — confirm with vendor"), and the dedicated educational posts on FLSA/Texas overtime
+Why it clusters at paragraph openings: transitions get written while the author
+holds the whole argument in mind. The reader does not. A pronoun one sentence
+after its noun is fine; the same pronoun after a paragraph break is a re-read.
 
-When 8-and-80 ships, this rule reverses. Update this section and revert the softened lines (commit eeefa9f softened the pattern across 19 posts; the same diff in reverse restores them).
+How to judge a hit. The WARN is a question, not a verdict: **could a reader who
+has forgotten the previous paragraph parse this sentence?** If yes, dismiss it.
+If no, name the thing. Answer-first capsules under question H2s and FAQ answers
+are exempt in the script, because there the heading IS the referent and that
+shape is the house style.
+
+Two things the gate cannot see, so check them by hand:
+
+- **Terms of art used before they are explained.** Key Takeaways are read BEFORE
+  the intro, so a term defined only in the intro is still undefined where the
+  reader first meets it. Define it in the takeaway or avoid it there.
+- **A metaphor doing load-bearing work undefined.** "The floor" and "the
+  ceiling" carried an entire article's argument and were never defined, and a
+  nurse manager reads "floor" as a nursing floor. Prefer the literal statement
+  ("how many nurses you are required to have overnight").
+
+Adoption note: this pattern was NOT swept to zero before adopting, unlike the
+3.2.2 patterns. It matched 82 times across 55 live files, most of them real, so
+the sweep is a founder-gated editing pass rather than a find and replace. Hold
+NEW drafts to zero; treat hits on existing live posts as advisory until that
+pass runs.
 
 ### 3.3 Image Alt Text Rules
 
