@@ -27,7 +27,7 @@ metadata:
 - The difference that hits a small hospital hardest is about staffing. A Rural Emergency Hospital **cannot have inpatient beds**. A Critical Access Hospital must keep a licensed nurse on duty whenever it has **even one inpatient**
 - So the designation a hospital holds sets its nurse staffing floor. A change in either direction is a roster decision before it is a finance decision
 - The bill is sitting in committee and may never get a vote, so do not plan around it. The useful move now is to find out whether your own roster could handle the change if it ever came
-- Going back is the hard direction. Once a hospital gives up inpatient beds its night nurses move on, and returning to round-the-clock coverage means rebuilding a night rotation from staff who no longer work nights
+- Hospitals convert because empty inpatient beds still cost a full night rotation to cover. Going back is the hard direction, because by then the night nurses have moved on and the rotation has to be rebuilt from staff who no longer work nights
 
 ## Table of Contents
 
@@ -54,17 +54,23 @@ Two things to know if you look this bill up yourself. Congress has not published
 [Coverage published on August 6, 2026](https://yellowhammernews.com/tuberville-introduces-bill-to-expand-options-for-struggling-rural-hospitals/) lays out what the bill would do, though it cites the old 2024 bill number. According to that reporting, it would:
 
 - Let certain rural hospitals that closed between 2015 and 2020 reopen and apply for the designation
-- Direct the Department of Health and Human Services to set up a waiver program for facilities already operating much like a Rural Emergency Hospital
+- Direct Health and Human Services to set up a waiver program for facilities already operating much like a Rural Emergency Hospital
 - Let those hospitals run inpatient psychiatric and obstetric units, and provide limited inpatient rehabilitation
-- Let certain hospitals return to Critical Access Hospital status if their circumstances change
+- Let certain hospitals return to Critical Access Hospital status if circumstances change
 
 ## Why Is a Payment Bill a Staffing Bill?
 
-Because the two designations set different rules about who has to be in the building. Those rules are the floor under every nurse schedule.
+Because each designation comes with its own rule about who has to be in the building. That rule sets the minimum your schedule has to cover, and it does not bend on a night when three people call out.
 
-The Rural Emergency Hospital designation was created in December 2020 and took effect in January 2023. A Rural Emergency Hospital **cannot have inpatient beds**. The one exception is beds in a distinct part unit licensed as a skilled nursing facility. It also has to keep its annual average length of stay under 24 hours per patient. In exchange it receives the Outpatient Prospective Payment System rate plus five percent and a monthly facility payment, $285,625.90 in 2025. Not every hospital can convert. Critical Access Hospitals qualify. So do rural acute care, tribal and Indian Health Service hospitals with 50 or fewer beds, if they were open on December 27, 2020. There were 42 Rural Emergency Hospitals as of October 2025 ([Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/rural-emergency-hospitals)).
+Start with why a hospital would give up inpatient beds at all, because on the face of it that sounds like giving up income. At many small rural hospitals the inpatient side stopped paying for itself years ago. The beds sit mostly empty, but keeping them open still costs a full night rotation, because the nurse requirement starts the moment one patient is admitted. The UNC Sheps Center counts [197 rural hospital closures and conversions since January 2005](https://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/).
 
-A Critical Access Hospital works the other way. It is capped at 25 inpatient beds under [42 CFR 485.620](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620), and under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) a registered nurse, clinical nurse specialist or licensed practical nurse must be on duty whenever it has one or more inpatients. There are 1,388 certified Critical Access Hospitals nationally as of July 2026, 93 of them in Texas.
+The Rural Emergency Hospital designation was built for exactly those hospitals. Give up the inpatient beds, keep the emergency department and outpatient services, and take a guaranteed monthly payment instead of inpatient revenue that was losing money. For a board looking at closure, that is not giving something up. It is the trade that keeps the doors open.
+
+Here is what the trade involves. The designation was created in December 2020 and took effect in January 2023. A Rural Emergency Hospital **cannot have inpatient beds**. The one exception is beds in a distinct part unit licensed as a skilled nursing facility. It also has to keep its annual average length of stay under 24 hours per patient. In exchange it receives the Outpatient Prospective Payment System rate plus five percent and a monthly facility payment, $285,625.90 in 2025.
+
+Only some hospitals are allowed to make that switch. Critical Access Hospitals are eligible, as are rural acute care, tribal and Indian Health Service hospitals with 50 or fewer beds, if they were open on December 27, 2020. There were 42 Rural Emergency Hospitals as of October 2025 ([Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/rural-emergency-hospitals)).
+
+Now the other side of the trade. A Critical Access Hospital carries the exact obligation a Rural Emergency Hospital sheds. It is capped at 25 inpatient beds under [42 CFR 485.620](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620), and under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) a registered nurse, clinical nurse specialist or licensed practical nurse must be on duty whenever it has one or more inpatients. There are 1,388 certified Critical Access Hospitals nationally as of July 2026, 93 of them in Texas.
 
 So the real difference between the two is who has to be there overnight.
 
@@ -122,19 +128,19 @@ So the real difference between the two is who has to be there overnight.
 
 ## What Happens to the Schedule When a Hospital Changes Designation?
 
-The roster changes to match the new rules. Changing it back takes far longer than the decision that started it.
+A designation change rewrites what the roster has to produce every night. Rebuilding the roster afterwards takes far longer than the decision that changed it.
 
-A hospital that converts to Rural Emergency Hospital status stops needing continuous inpatient coverage. That is a real relief for a manager holding nights together with a few night-eligible nurses and a lot of goodwill. Then the roster starts to change. Nurses who preferred nights leave for hospitals that still run them. Others move to day work in the same building. The per diem list thins out, because the shifts that made casual staff worth keeping are gone. This is an illustration of the logic, not a customer result.
+A hospital that converts to Rural Emergency Hospital status stops needing continuous inpatient coverage. For a manager who has been holding nights together with a few night-eligible nurses and a lot of goodwill, that is a real relief, and it is part of why the trade appeals. Then the roster starts to change. Nurses who preferred nights leave for hospitals that still run them. Others move to day work in the same building. The per diem list thins out, because the shifts that made casual staff worth keeping are gone. This is an illustration of the logic, not a customer result.
 
 Now look at the part of the bill meant to make it easier to go back to Critical Access status. Going back is already allowed today. It is simply much harder than leaving.
 
-Leaving is close to paperwork. A hospital becoming a Rural Emergency Hospital files it as a change of information on its existing Medicare enrollment. Coming back does not work that way. It has to qualify again on every Critical Access condition, including the distance test in [42 CFR 485.610](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.610).
+Leaving is close to paperwork: a hospital becoming a Rural Emergency Hospital files it as a change of information on its existing Medicare enrollment. Coming back does not work that way. It has to qualify again on every Critical Access condition, including the distance test in [42 CFR 485.610](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.610).
 
 The distance test is where a hospital can get stuck. A hospital that originally qualified through the necessary-provider route cannot use that route again, because it closed to new applicants in 2006. It has to pass on distance alone. The hospital must be more than a 35-mile drive on primary roads from the nearest hospital or Critical Access Hospital. Where the terrain is mountainous, or only secondary roads are available, the threshold is more than 15 miles.
 
-Whatever the bill does to the paperwork, it does nothing about the staffing. A hospital going back has to rebuild round-the-clock nurse coverage from a roster that no longer holds the people who used to provide it. And the rule does not phase in. A licensed nurse has to be on duty from the first admitted patient, not from the day the hiring plan is finished. The same goes for opening inpatient psychiatric, rehabilitation or obstetric units. Admitted patients mean somebody qualified is there every night, including the night three people call out.
+Whatever the bill does to the paperwork, it does nothing about the staffing. A hospital going back has to rebuild round-the-clock coverage from a roster that no longer holds the people who used to provide it. And the rule does not phase in. A licensed nurse has to be on duty from the first admitted patient, not from the day the hiring plan is finished. The same goes for opening inpatient psychiatric, rehabilitation or obstetric units.
 
-This is a different thing from the other big change rural hospitals are being sold on. Joining a network gives a manager a bigger pool of nurses to draw from, so it raises the ceiling and leaves the floor where it was. That is the argument in [rural hospitals forming networks](/articles/rural-hospital-networks-nurse-staffing). A designation change moves the floor itself, on a fixed date.
+This is different from the other big change rural hospitals are being sold on. Joining a network gives a manager a bigger pool to draw from, so it raises the ceiling and leaves the floor where it was, which is the argument in [rural hospitals forming networks](/articles/rural-hospital-networks-nurse-staffing). A designation change moves the floor itself.
 
 A board can approve a designation change in one meeting. Hiring the nurses to staff it takes far longer, as the recruiting-difficulty figures in our [rural hospital nurse staffing statistics](/rural-hospital-nurse-staffing-statistics) show.
 
@@ -142,17 +148,17 @@ A board can approve a designation change in one meeting. Hiring the nurses to st
 
 Unknown, and most bills do not become law. S.5164 sits in the Senate Finance Committee, where a great deal of health legislation stops, and it has not been voted on.
 
-Two things make it more interesting than the average bill. It has cosponsors from both parties, though only one is a Democrat, and it adjusts a designation that already exists instead of creating a new program. An earlier version, S.4322, was filed by the same senator in May 2024 and did not pass. This one is not identical: S.4322 changed title XVIII of the Social Security Act, while S.5164 changes titles XVIII and XIX, which reaches Medicaid as well as Medicare.
+Two things make it more interesting than the average bill. It has cosponsors from both parties, and it adjusts a designation that already exists instead of creating a new program. An earlier version, S.4322, was filed by the same senator in May 2024 and did not pass. This one reaches further: it changes Medicaid rules as well as Medicare rules.
 
 ## How Does SimpleScheduleAI Help?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. The rules for your unit are configured before your first cycle, which includes the minimum coverage the schedule has to satisfy on every shift.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Your unit's rules are configured before your first cycle, including the minimum coverage every shift has to satisfy.
 
 That configuration is the part that matters here. When your coverage requirement changes, it is changed once in the rules, and every draft after that respects it.
 
-Each draft spreads weekends and holidays against a running per-nurse count, and weekend history carries from one scheduling period to the next. A manager rebuilding night coverage also sees overtime and rule violations per nurse across the period, which is how you spot the person being leaned on before she resigns. Every draft tracks each nurse's running hours against the applicable FLSA overtime thresholds too.
+Each draft spreads weekends and holidays against a running per-nurse count, and weekend history carries from one period to the next. A manager rebuilding night coverage also sees overtime and rule violations per nurse, which is how you spot the person being leaned on before she resigns. Every draft tracks each nurse's running hours against the applicable FLSA overtime thresholds.
 
-One honest limitation: the fairness logic can only work with the availability that exists. If a designation change leaves a hospital needing overnight coverage it does not have the staff to provide, we will show you the gap accurately and early. We cannot fill it. Hiring is still hiring. See a schedule get built in the [interactive simulator](/simulator), or the full process on [how it works](/how-it-works). The background sits in the [nurse scheduling software](/nurse-scheduling-software), [critical access hospital scheduling](/critical-access-hospital-scheduling) and [AI nurse scheduling](/ai-nurse-scheduling) hubs.
+One honest limitation: we can only work with the availability that exists. If a designation change leaves a hospital needing overnight coverage it does not have the staff to provide, we will show you the gap early and accurately. We cannot fill it. Hiring is still hiring. See a schedule get built in the [interactive simulator](/simulator), or the full process on [how it works](/how-it-works), with background in the [nurse scheduling software](/nurse-scheduling-software), [critical access hospital scheduling](/critical-access-hospital-scheduling) and [AI nurse scheduling](/ai-nurse-scheduling) hubs.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -162,15 +168,15 @@ One honest limitation: the fairness logic can only work with the availability th
     rotation falls apart. Beds reopen and somebody has to find nurses willing to work nights in a town
     that has fewer of them every year. This bill would widen a door that is much easier to walk out of
     than back through, and that is worth supporting. Just do not confuse having the door with being
-    able to walk through it. Your roster decides that.
+    able to walk through it.
   </p>
 </div>
 
 ## What Should You Do This Week?
 
 1. Write down which designation your hospital holds and what it requires overnight. If nobody on the leadership team can state it from memory, fix that first.
-2. Count your night-eligible nurses. Not the whole roster, just the ones who actually work nights and are cleared for the unit. That number is the real limit on any designation change.
-3. Pull the last eight weeks and count nights per nurse. If two or three names carry most of them, your coverage is already running on goodwill, and any change would land on those same people first.
+2. Count your night-eligible nurses. Not the whole roster, just the ones who work nights and are cleared for the unit. That number is the real limit on any designation change.
+3. Pull the last eight weeks and count nights per nurse. If two or three names carry most of them, your coverage is already running on goodwill, and any change lands on those people first.
 4. Ask your finance lead whether a designation change has ever been modelled, and whether the model counted the cost of recruiting night coverage or only the payment difference. It is usually the latter.
 5. To see how a coverage requirement turns into a real roster, book a call and we will walk through what your current staff could and could not cover.
 
@@ -195,7 +201,7 @@ One honest limitation: the fairness logic can only work with the availability th
 
 **Q: What is S.5164?**
 
-S.5164 is a Senate bill filed on July 29, 2026 by Senator Jerry Moran of Kansas. It is called the Rural Emergency Hospital Designation Improvement Act, and it changes the Medicare and Medicaid rules for the Rural Emergency Hospital designation. It went to the Committee on Finance and has not been voted on. An earlier version, S.4322, was filed in May 2024 and did not pass.
+S.5164 is a Senate bill filed on July 29, 2026 by Senator Jerry Moran of Kansas. It is called the Rural Emergency Hospital Designation Improvement Act, and it changes the Medicare and Medicaid rules for the Rural Emergency Hospital designation. It went to the Committee on Finance and has not been voted on.
 
 **Q: What is the difference between a Rural Emergency Hospital and a Critical Access Hospital?**
 
@@ -207,7 +213,7 @@ Yes, but going back is much harder than leaving. Becoming a Rural Emergency Hosp
 
 **Q: Why would a designation change affect nurse scheduling?**
 
-Because the two designations set different rules about who has to be present. A Critical Access Hospital must keep a licensed nurse on duty for as long as any patient is admitted, so it needs overnight coverage every night. A Rural Emergency Hospital has no admitted inpatients to cover. Moving between them changes what the roster has to produce.
+Because a Critical Access Hospital must keep a licensed nurse on duty for as long as any patient is admitted, and a Rural Emergency Hospital has no admitted inpatients to cover. Moving between them changes what the roster has to produce every night.
 
 ## Sources
 
@@ -216,8 +222,9 @@ Because the two designations set different rules about who has to be present. A 
 3. eCFR, 42 CFR 485.631, Condition of Participation: Staffing and staff responsibilities (the on-duty licensed nurse requirement is at paragraph (a)(5)). [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
 4. eCFR, 42 CFR 485.620, Condition of Participation: Number of beds and length of stay. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620)
 5. Flex Monitoring Team, Historical CAH Data (1,388 certified Critical Access Hospitals, July 2026). [flexmonitoring.org](https://www.flexmonitoring.org/historical-cah-data-0)
-6. Rural Health Information Hub, Texas State Guide (Texas critical access hospital count, 93). [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas)
-7. Yellowhammer News, coverage of the bill's provisions, August 6, 2026 (cites the 2024 predecessor bill number). [yellowhammernews.com](https://yellowhammernews.com/tuberville-introduces-bill-to-expand-options-for-struggling-rural-hospitals/)
+6. UNC Sheps Center, Rural Hospital Closures tracker (197 closures and conversions since January 2005). [shepscenter.unc.edu](https://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/)
+7. Rural Health Information Hub, Texas State Guide (Texas critical access hospital count, 93). [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas)
+8. Yellowhammer News, coverage of the bill's provisions, August 6, 2026 (cites the 2024 predecessor bill number). [yellowhammernews.com](https://yellowhammernews.com/tuberville-introduces-bill-to-expand-options-for-struggling-rural-hospitals/)
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
