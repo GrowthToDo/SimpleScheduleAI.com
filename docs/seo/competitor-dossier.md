@@ -4,7 +4,7 @@ Verified quotes, ratings, and product notes for competitors covered across all b
 Use this file before fetching any live review data — only go online if a competitor is missing
 from this dossier or the verification date is older than 60 days.
 
-**Dossier last updated:** 2026-07-01
+**Dossier last updated:** 2026-08-13
 **Maintained by:** Pradeep Pandey / Claude (update each time new quotes are verified live)
 
 ---
@@ -16,6 +16,34 @@ from this dossier or the verification date is older than 60 days.
 3. If a competitor is missing, or you need more quotes, fetch live data from Capterra/G2, verify
    verbatim, and add the new quotes here with today's date before publishing.
 4. Never paraphrase quotes from this file — use verbatim text only.
+
+### Refreshing a stale row: use Playwright, not WebFetch (settled 2026-08-13)
+
+Capterra returns 403 to WebFetch and to curl. That block is why five quote
+verifications had been parked as manual founder to-dos, and why three vendor
+sections (TCP 2026-05-12, symplr 2026-05-17, SmartLinx 2026-04-30) drifted past
+the 60-day window without anyone re-checking them.
+
+The Playwright MCP browser loads Capterra review pages normally, with no
+challenge page, and `browser_find` reads review body text directly. The method
+for any stale row:
+
+1. `browser_navigate` to `https://www.capterra.com/p/<ID>/<Name>/reviews/`
+2. `browser_find` the quote text
+3. Confirm it verbatim against the row, then stamp today's date on that row
+
+Two findings from the first run of this method, both worth knowing:
+
+- **A product ID in this file was wrong.** The Aladtec row's URL pointed at
+  `p/210972`, which resolves to DelyvaX, an unrelated delivery-management
+  product. The page-verified ID (248403) was already sitting two lines above it
+  in the ratings line. Verify that a review page's title actually names the
+  competitor before trusting anything you read on it.
+- **Our quotes are sometimes excerpts of longer sentences.** That is fine, and
+  the row should say so, because the next person to re-verify will otherwise
+  read the mismatch as a misquote.
+
+Do not re-park Capterra work as a manual founder task.
 
 ---
 
