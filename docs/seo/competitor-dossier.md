@@ -29,7 +29,7 @@ healthcare. Parent company: TCP Software (acquired Aladtec 2021).
 - G2: 4.5/5 (94 reviews) — search-indicated (G2 blocks automated fetch)
 - Capterra: 4.6/5 (17 reviews; small sample) — page-verified, Product ID 248403
 
-**Capterra URL:** https://www.capterra.com/p/210972/Aladtec/ _(verify ID is current — TCP has rebranded some pages)_
+**Capterra URL (verified 2026-08-13):** https://www.capterra.com/p/248403/Aladtec/reviews/ — WRONG ID CORRECTED. The old URL in this row used p/210972, which resolves to an unrelated product (DelyvaX, a delivery-management tool). Product ID 248403 is the page-verified Aladtec listing and its reviews path loads. Never cite p/210972.
 
 **Important caveat:** Capterra reviewers skew heavily toward fire, EMS, and law enforcement.
 The most recent hospital-nursing context reviews are several years old (most recent: Oct 2020).
@@ -782,7 +782,7 @@ not CAH-specific CMS §485.635. Ask for hospital-acute reference customers speci
 
 > "Learning SS was a challenge being as though it is a robust software."
 >
-> Stephanie T., System Administrator, Hospital & Health Care, November 23, 2022, Capterra _(verified 2026-05-17)_
+> Stephanie T., System Administrator, Hospital & Health Care, November 23, 2022, Capterra _(re-verified live 2026-08-13 via Playwright; the review is still posted and the full sentence reads "As an SAA, learning SS was a challenge being as though it is a robust software capable of almost anything." Our quote is an excerpt of it, capitalised at the excerpt boundary.)_
 
 **Negative, symplr Workforce Reliability (hospital RN):**
 
