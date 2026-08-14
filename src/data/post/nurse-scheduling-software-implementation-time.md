@@ -6,7 +6,7 @@ author: 'Pradeep Pandey'
 title: 'How Long Does Nurse Scheduling Software Implementation Take?'
 excerpt: >
   The vendors who publish an implementation timeline say weeks. The one figure
-  aggregated from actual customers says three months. Here is what that time gets
+  averaged from actual customers says three months. Here is what that time gets
   spent on, and which person at your hospital ends up absorbing it.
 image: '~/assets/images/pool/payroll-desk-01.webp'
 imageCredit: 'AI-generated illustration'
@@ -24,7 +24,7 @@ metadata:
 ## Key Takeaways
 
 - No established enterprise platform we track publishes an implementation timeline. Two newer entrants do, and both print weeks: M7 Health describes a four-week rollout, and In-House Health lists "4 Weeks to implement". Those are vendor claims about themselves.
-- The one figure aggregated from customers rather than from marketing says longer. G2 lists ShiftWizard's average time to implement as **3 months**, based on G2's own aggregation of user reviews.
+- The one figure that comes from customers rather than from marketing says longer. G2 puts ShiftWizard's average time to implement at **3 months**, averaged from its own reviewers.
 - Implementation is not installation. The time goes into rule configuration, payroll and HR connections, and training, and the rules keep needing attention after go-live.
 - The reviewers who describe implementation going smoothly tend to hold dedicated technical roles, such as Director of IT Services or System Administrator. A hospital with 25 beds or fewer does not staff those roles.
 - Before signing, get the vendor's answer in writing to one question: who does the configuration work, and how many hours of our staff's time does it require?
@@ -91,9 +91,9 @@ Two kinds of number circulate, and they are not equally useful.
 
 The first kind is a vendor's claim about itself, and a few newer entrants publish one. M7 Health's implementation page describes a four-week rollout, and In-House Health's homepage carries "4 Weeks to implement" among its headline metrics. Those are marketing figures, not audited results, and no established enterprise platform we track publishes an equivalent number at all.
 
-The second kind is aggregated from customers, and there is far less of it. [G2's ShiftWizard listing](https://www.g2.com/products/shiftwizard/reviews) shows a "Time to Implement" of **3 months**, in a panel G2 labels "Averages based on real user reviews". ShiftWizard is a hospital nurse scheduling platform owned by HealthStream, rated 4.3 out of 5 across 405 reviews.
+The second kind is averaged from what customers report, and there is far less of it. [G2's ShiftWizard listing](https://www.g2.com/products/shiftwizard/reviews) shows a time to implement of **3 months**, averaged across the hospitals that reviewed it there. ShiftWizard is a hospital nurse scheduling platform owned by HealthStream, rated 4.3 out of 5 across 405 reviews.
 
-Be precise about that 3-month figure, because it gets misused. It is G2's average across its own reviewer base, not a vendor promise and not one hospital's experience. It also describes a hospital standing up software it will then operate itself.
+Be precise about that 3-month figure, because it gets misused. It is an average of what reviewers reported, not a promise from the vendor and not one hospital's experience. And it counts the full job: buying the software, setting it up, and running it yourself afterwards.
 
 ## What Do Other Hospitals Say About Implementing Scheduling Software?
 
@@ -202,7 +202,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service for Texas Critical Acc
 
 Those two numbers measure different things and are not interchangeable. Onboarding is the setup work on our side once you send your staff list and shift structure by Excel. The first schedule is what lands in your hands, and inside two weeks is the number to hold us to.
 
-The comparison against a three-month figure needs stating carefully. G2 is timing a hospital standing up software it will then operate, configure and maintain itself. Our "first schedule inside two weeks" number times something narrower: a service being configured for a hospital that operates nothing afterwards. The gap is the delivery model, not the same job done faster.
+The comparison against a three-month figure needs stating carefully, because the two numbers count different work. G2's three months covers a hospital buying software, setting it up, and then running it itself. Our two weeks covers us setting up a schedule for a hospital that runs nothing afterwards. The difference is who does the work, not the same work done faster.
 
 Honest limitations. We serve Texas Critical Access Hospitals, so the timeline above is for that setting, not a 200-bed system. We do not connect to your payroll or HR system during onboarding, and connections are where software implementations lose weeks, so part of our speed is scope rather than skill. If your hospital already employs a staffing coordinator who owns configuration, a software implementation is a reasonable path and the gap narrows.
 
@@ -239,7 +239,7 @@ To see the mechanics, compare [nurse scheduling software](/nurse-scheduling-soft
 
 **How long does nurse scheduling software take to implement?**
 
-There is no industry-wide figure. Vendors who publish a number publish weeks, and those are claims about themselves: M7 Health describes a four-week rollout and In-House Health lists "4 Weeks to implement". The one figure aggregated from customers is G2's listing for ShiftWizard, which shows an average time to implement of 3 months. Your own timeline depends mostly on who owns the configuration work and how many payroll or HR connections are in scope.
+There is no industry-wide figure. Vendors who publish a number publish weeks, and those are claims about themselves: M7 Health describes a four-week rollout and In-House Health lists "4 Weeks to implement". The one figure that comes from customers is G2's listing for ShiftWizard, which puts the average time to implement at 3 months. Your own timeline depends mostly on who owns the configuration work and how many payroll or HR connections are in scope.
 
 **Why do vendors give a range instead of a date?**
 
@@ -259,7 +259,7 @@ Not by itself. A short timeline can mean less scope rather than better execution
 
 ## Sources
 
-1. G2, ShiftWizard product listing, "Time to Implement: 3 months" shown in the "Value at a Glance" panel labelled "Averages based on real user reviews"; listing rated 4.3/5 across 405 reviews. Verified 2026-08-14. [G2](https://www.g2.com/products/shiftwizard/reviews)
+1. G2, ShiftWizard product listing: time to implement 3 months, averaged by G2 from its reviewers rather than supplied by the vendor; listing rated 4.3/5 across 405 reviews. Verified 2026-08-14. [G2](https://www.g2.com/products/shiftwizard/reviews)
 2. M7 Health implementation page (four-week rollout) and In-House Health homepage ("4 Weeks to implement", listed among the vendor's own headline metrics). Both are vendor claims about their own products, page-verified 2026-08-10, not independently audited. [m7health.com](https://www.m7health.com/) and [inhouse.health](https://www.inhouse.health/)
 3. Capterra, QGenda reviews (Roger S., May 3, 2024; Brandi D., December 13, 2023). [Capterra](https://www.capterra.com/p/90628/QGenda/reviews/)
 4. Capterra, SmartLinx reviews (Carol G., March 22, 2021; Daniel C., March 16, 2021). [Capterra](https://www.capterra.com/p/154002/SmartLinx/reviews/)
