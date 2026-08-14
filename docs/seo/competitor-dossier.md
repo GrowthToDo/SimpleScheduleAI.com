@@ -17,6 +17,36 @@ from this dossier or the verification date is older than 60 days.
    verbatim, and add the new quotes here with today's date before publishing.
 4. Never paraphrase quotes from this file — use verbatim text only.
 
+### Read the WHOLE vendor section before adding to it (added 2026-08-14)
+
+A propagation audit on 2026-08-14 tested the theory that verifications get
+written into the maintenance log but never reach the vendor sections. **The
+theory was wrong.** Every log entry checked had in fact landed in its section.
+
+What the audit found instead was a duplicate that I had created the day before:
+the ShiftWizard G2 figures were already recorded in that section from
+2026-08-09, sitting further down between two reviewer quotes, and I added a
+second copy near the ratings because I read only the top of the section before
+editing. Both copies were accurate, which is exactly what makes this kind of
+duplicate dangerous: nothing contradicts, so nothing flags, and the two entries
+drift apart on the next update.
+
+Two rules follow:
+
+1. **Read the entire vendor section before adding anything to it.** These
+   sections are long and facts are not always where you would file them. A
+   figure can sit below the quotes rather than beside the ratings.
+2. **Put verified figures with the ratings block**, not in the quote list, so
+   the next person finds them where they expect to. The ShiftWizard section is
+   now the model: one consolidated G2 block directly under the ratings.
+
+Related trap: the topic docs (`next-15-topics-2026-08.md` and the like) carry
+their own founder to-do lists, and those go stale. On 2026-08-14 that list still
+showed five quote verifications as outstanding when the maintenance log recorded
+all five as complete on 2026-08-09, which caused a full re-verification pass
+that was not needed. **The maintenance log is the authority on what has been
+verified. A to-do list in a topic doc is not.**
+
 ### Refreshing a stale row: use Playwright, not WebFetch (settled 2026-08-13)
 
 Capterra returns 403 to WebFetch and to curl. That block is why five quote
@@ -660,29 +690,29 @@ Owned by HealthStream (acquired). Used by 500+ hospital facilities.
 - G2: 4.3/5 across 405 reviews — founder page-verified 2026-08-14 (previously recorded without a review count). Listed as "ShiftWizard by HealthStream". G2 blocks automated fetch, so this line is human-verified, not tool-verified.
 - Capterra: 4.4/5 (723 reviews; 88%+ rated 4 stars or higher)
 
-**G2 "Time to Implement": 3 months** — founder page-verified 2026-08-14 on
-g2.com/products/shiftwizard/reviews. This closes the last of the five parked
-quote verifications, and it is the strongest single number for the
-implementation-time post (next-15 topic #2).
+**G2 Pricing Insights (founder screenshot, PAGE-VERIFIED 2026-08-09, re-confirmed
+2026-08-14):** Time to Implement = 3 months; Return on Investment = 3 months;
+Average Discount = 8%. G2 labels these "Averages based on real user reviews."
+Same page shows G2 rating 4.3/5 across 405 reviews (counts drift; re-verify
+past 60 days).
 
-**How to cite it, exactly.** The figure sits in a G2 box headed "Value at a
-Glance" with the subtitle "Averages based on real user reviews". So it is
-G2's AVERAGE across its reviewer base. It is therefore:
+**How to cite it, exactly.** These are G2's AVERAGES across its own reviewer
+base. They are therefore:
 
 - NOT a vendor claim, and must never be attributed to ShiftWizard or
   HealthStream as something they state.
-- NOT a single reviewer's experience, so it must not be quoted as one.
+- NOT a single reviewer's experience, so they must not be quoted as one.
 - Correct form: "G2 lists ShiftWizard's average time to implement as 3 months,
-  based on its own aggregation of user reviews (verified 2026-08-14)."
+  averaged from its own reviewers."
 
 **Comparison guardrail.** Do not set 3 months against our "onboarding takes 3
 to 5 business days" number. Those measure different things: G2 is timing a
-hospital standing up software it will then operate, and our figure times a
-service being configured for a hospital that operates nothing. The honest
-contrast is against our OTHER canonical number, "first schedule inside two
-weeks", and it should name the reason for the gap (delivery model) rather than
-implying the same job is done fifteen times faster. Overclaiming here is easy
-and would be caught.
+hospital buying software, setting it up, and then running it itself, while our
+figure times a service being configured for a hospital that runs nothing
+afterwards. The honest contrast is against our OTHER canonical number, "first
+schedule inside two weeks", and it should name the delivery model as the reason
+for the gap rather than implying the same job is done fifteen times faster.
+That exact overclaim was caught in review on 2026-08-14 before publish.
 
 **Capterra URL (re-verified live 2026-08-14):** https://www.capterra.com/p/178376/ShiftWizard/reviews/ — ID 178376 and the 4.4/5 across 723 reviews both confirmed on the live page header.
 _(Note: product ID 210972 seen in some older URLs is incorrect — live listing is 178376. 210972 in fact resolves to DelyvaX, an unrelated delivery-management product, so it is wrong rather than merely stale.)_
@@ -711,9 +741,6 @@ _(The Erika A. and Jacob G. app-performance quotes were NOT re-located on page 1
 > "I wish the messaging was better, and that I have to input my info every time I log in."
 >
 > Melissa R., LVN, Hospital & Health Care, July 26, 2024, Capterra _(verified verbatim 2026-05-15)_
-
-**G2 Pricing Insights (founder screenshot, PAGE-VERIFIED 2026-08-09):** Time to Implement = 3 months; Return on Investment = 3 months; Average Discount = 8%. G2 labels these "Averages based on real user reviews." Cite as "per G2 Pricing Insights data" with the averages-from-reviews framing, never as a vendor commitment. Same page shows G2 rating 4.3/5 across 405 reviews (counts drift; re-verify >60 days).
-
 
 **Negative — Shift Type Configuration:**
 
