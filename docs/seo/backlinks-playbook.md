@@ -31,13 +31,14 @@ Founder bio:     Co-founder, SimpleScheduleAI. Background in healthcare operatio
                  and workforce optimization. Former DGM Operations, Apollo Hospitals.
                  MBA, IIM Trichy.
 Location/market: Texas, United States. Serves Critical Access Hospitals (25 or fewer beds).
-One-liner:       AI nurse scheduling delivered as a managed service for Critical
-                 Access Hospitals in Texas. No IT team required. Free 60-day pilot.
+One-liner:       An AI-native nurse scheduling service for Critical Access
+                 Hospitals in Texas. Our AI builds the schedule, our scheduling
+                 team checks it, your manager approves. No IT involvement required.
 Long description (≤300 chars):
-  SimpleScheduleAI is a managed AI nurse scheduling service built for Critical
+  SimpleScheduleAI is an AI-native nurse scheduling service built for Critical
   Access Hospitals with 25 or fewer beds. It cuts the 8 to 12 weekly hours nurse
   managers spend on schedules and callouts, with Texas overtime compliance and a
-  full audit trail. No IT integration. Free 60-day pilot.
+  full audit trail. Flat monthly pricing. No IT involvement required.
 LinkedIn (company): https://www.linkedin.com/company/simplescheduleai
 LinkedIn (founder): https://www.linkedin.com/in/pradeep-pandeyji/
 ```
@@ -228,9 +229,9 @@ Subject: SimpleScheduleAI — vendor/associate listing for [ORG] members
 
 Hi [NAME],
 
-I run SimpleScheduleAI, a managed AI nurse-scheduling service built specifically
-for Critical Access Hospitals with 25 or fewer beds (Texas-focused, no IT team
-required). Your members are exactly the hospitals we are built for.
+I run SimpleScheduleAI, an AI-native nurse scheduling service built specifically
+for Critical Access Hospitals with 25 or fewer beds (Texas-focused, no IT
+involvement required). Your members are exactly the hospitals we are built for.
 
 Does [ORG] offer an associate/vendor membership or a member-facing resource or
 vendor directory? I would like to be listed accurately and learn how we can be
@@ -239,7 +240,7 @@ resource on CAH scheduling compliance if that is helpful).
 
 Company details:
 - SimpleScheduleAI — https://simplescheduleai.com
-- Managed AI nurse scheduling for Critical Access Hospitals, Texas
+- AI-native nurse scheduling service for Critical Access Hospitals, Texas
 - Founder: Pradeep Pandey, [founder LinkedIn]
 
 Thank you,
@@ -285,9 +286,9 @@ with no IT team and a clinically-active nurse manager. I can bring concrete
 numbers (the ~$26k/year shadow cost), the CMS/Texas compliance angle, and an
 honest take on where AI scheduling helps and where it does not.
 
-I am Pradeep Pandey, co-founder of SimpleScheduleAI (managed nurse scheduling
-for Critical Access Hospitals). Background: healthcare operations, former DGM
-Operations at Apollo Hospitals.
+I am Pradeep Pandey, co-founder of SimpleScheduleAI (an AI-native nurse
+scheduling service for Critical Access Hospitals). Background: healthcare
+operations, former DGM Operations at Apollo Hospitals.
 
 Happy to send 3 specific talking points if useful.
 
@@ -321,11 +322,29 @@ https://simplescheduleai.com/about/pradeep-pandey
 [One sentence of practical takeaway.]
 
 Attribution: Pradeep Pandey, Co-founder, SimpleScheduleAI
-(managed nurse scheduling for Critical Access Hospitals).
+(an AI-native nurse scheduling service for Critical Access Hospitals).
 https://simplescheduleai.com — [founder LinkedIn]
 
 [Keep total under 150 words. No marketing language. Journalists cut fluff.]
 ```
+
+**Evidence bank for the "one concrete number" line.** The slowest part of a
+journalist response is finding a defensible figure under time pressure, so pull
+from here rather than from memory. Every item is dossier-verified; re-check the
+date before sending if it is older than 60 days.
+
+| Use when the query is about | Figure | Source |
+| --- | --- | --- |
+| Rural hospital scale | 1,388 certified Critical Access Hospitals nationally (July 2026); 93 in Texas | Flex Monitoring Team; RHIhub Texas guide |
+| Turnover and its cost | 17.6% hospital RN turnover; $60,090 average cost per bedside RN departure | 2026 NSI report (CY2025 data) |
+| Rural closures | 197 rural hospital closures and conversions since January 2005 | UNC Sheps Center tracker |
+| Software implementation time | G2 lists ShiftWizard's average time to implement as 3 months, averaged from its reviewers | G2 listing, page-verified 2026-08-14 |
+| Why automation gets abandoned | "automated scheduling and rules set up seem to have hiccups...I just stopped using the automation" | Courtney D., May 10 2024, Capterra (QGenda) |
+| Nurse-to-patient ratio law | No federal ratio exists; states split into fixed-ratio, committee, and no-law groups | `/rural-hospital-nurse-staffing-statistics` |
+
+Link the statistics page (`/rural-hospital-nurse-staffing-statistics`) when the
+query wants data rather than a quote. It has `.csv` and `.json` endpoints, which
+is the reason a journalist keeps the bookmark.
 
 ---
 

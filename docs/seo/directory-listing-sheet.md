@@ -10,20 +10,30 @@ Listings already created by founder. The open work is **not** creating listings,
 Business name:   SimpleScheduleAI
 Website:         https://simplescheduleai.com
 Contact email:   hello@simplescheduleai.com
-Category:        Nurse scheduling software / Healthcare staff scheduling (managed service)
+Category:        Nurse scheduling software / Healthcare staff scheduling
 Founder:         Pradeep Pandey, Co-founder
 Founder profile: https://simplescheduleai.com/about/pradeep-pandey
 Founder LinkedIn: https://www.linkedin.com/in/pradeep-pandeyji/
 Company LinkedIn: https://www.linkedin.com/company/simplescheduleai
 Location/market: Texas, United States. Serves Critical Access Hospitals (25 or fewer beds).
-One-liner:       AI nurse scheduling delivered as a managed service for Critical
-                 Access Hospitals in Texas. No IT team required. Free 60-day pilot.
+One-liner:       AI-native nurse scheduling software for Critical Access Hospitals
+                 in Texas. Runs in the browser, no installation and no integration
+                 project. $10 per user per month.
 Long description (<=300 chars):
-  SimpleScheduleAI is a managed AI nurse scheduling service built for Critical
+  SimpleScheduleAI is AI-native nurse scheduling software built for Critical
   Access Hospitals with 25 or fewer beds. It cuts the 8 to 12 weekly hours nurse
   managers spend on schedules and callouts, with Texas overtime compliance and a
-  full audit trail. No IT integration. Free 60-day pilot.
+  full audit trail. 21 automated rule checks validate every draft. $10 per user
+  per month, or $100 per user per year. No setup fees.
 ```
+
+**Mode note (this sheet is PRODUCT mode).** Software directories list products,
+so this block uses the product column of `positioning-registry.md`: software
+self-label, per-user pricing, and named absences ("no installation, no
+integration project") rather than a bald "No IT". Do NOT paste the service-mode
+flat price ($1,000 to $1,500/month) or "no per-nurse fees" here, because product
+pricing IS per user. Journalist and association pitches are the opposite case and
+use the SERVICE column; that block lives in `backlinks-playbook.md` §2.
 
 ---
 

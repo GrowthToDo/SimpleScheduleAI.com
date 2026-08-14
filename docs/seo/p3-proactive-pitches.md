@@ -52,9 +52,15 @@ to confirm the submission route), SENT, REPLIED, PLACED.
 
 | # | Outlet | Route | Asset + angle | Status |
 | --- | --- | --- | --- | --- |
-| 1 | **NRHA Rural Health Voices** (ruralhealth.us/blogs) | Contributed association blog | Statistics page as the anchor, staffing angle for small rural hospitals. WARM: NRHA was already contacted in the P1 association round, so this is a follow-on rather than a cold approach | VERIFY |
-| 2 | **NRHA Rural Horizons** (quarterly member magazine) | Member magazine | Same anchor, longer form. Confirm whether it takes non-staff contributions before drafting | VERIFY |
+| 1 | ~~**NRHA Rural Health Voices**~~ | — | — | **DISQUALIFIED 2026-08-14.** The blog page states verbatim: "NRHA publishes blogs written by NRHA staff and vetted NRHA Partner organizations." It is not open to contributed pitches, and no submission route is published. The only way in is partner status, which is a paid-membership decision for the founder, not an editorial pitch. Do not re-prospect this as a P3 target |
+| 2 | **NRHA Rural Horizons** (quarterly member magazine) | Member magazine | Same anchor, longer form. Likely subject to the same member/partner gate as the blog; check before drafting anything | VERIFY (low confidence) |
 | 3 | **HIStalk** | Tip / contributed | Health IT audience. Founder sent a Tier 2 mail 2026-08-14; treat any reply as the opening | SENT (P2) |
+
+**What target 1 taught, before we spent a session on it.** The obvious
+association targets are member-gated rather than editorially open, and the gate
+is invisible until you read the outlet's own page. Verify the submission route
+FIRST, on the outlet's site, before writing a word of pitch copy. That check
+cost one page fetch and removed the top-ranked target.
 
 ## Rules for this lane
 
