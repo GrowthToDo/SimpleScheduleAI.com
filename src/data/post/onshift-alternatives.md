@@ -144,7 +144,7 @@ The table below covers customer focus, public ratings, and setup time across the
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">UKG</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Large multi-facility health systems, 200+ beds</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">No small-hospital public listing; verify with vendor</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">6-12 months</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Months</td>
       </tr>
     </tbody>
   </table>
@@ -357,7 +357,7 @@ For a CAH leaving OnShift because of acute care callout speed and CMS documentat
 
 UKG, formerly Kronos, is the dominant enterprise workforce management suite in large health systems, used by thousands of US hospitals. It is reviewed here because hospitals affiliated with regional health systems frequently encounter UKG as the system-wide workforce management mandate when the parent organization is consolidating away from point tools like OnShift.
 
-As a direct OnShift replacement at CAH scale, UKG is categorically wrong-sized. Its implementation runs 6-12 months and requires dedicated IT and HRIS staff. The credential tracking, overtime rules, and staffing compliance logic it provides are more configurable than OnShift, but the operational overhead required to run them correctly exceeds what a standalone 25-bed hospital can sustain without system-level support.
+As a direct OnShift replacement at CAH scale, UKG is categorically wrong-sized. Its implementation runs for months and requires dedicated IT and HRIS staff. The credential tracking, overtime rules, and staffing compliance logic it provides are more configurable than OnShift, but the operational overhead required to run them correctly exceeds what a standalone 25-bed hospital can sustain without system-level support.
 
 **Best for:** Hospitals affiliated with a health system consolidating all workforce management onto a single enterprise platform, where the UKG implementation is handled at the system level rather than the individual CAH level.
 
@@ -369,7 +369,7 @@ As a direct OnShift replacement at CAH scale, UKG is categorically wrong-sized. 
 
 **Key limitations:**
 
-- Implementation requires 6-12 months and dedicated IT and HRIS resources that are not available at most CAHs
+- Implementation runs for months and requires dedicated IT and HRIS resources that are not available at most CAHs
 - The deployment cost and configuration burden do not produce a positive return for a standalone 25-bed hospital
 - Ongoing configuration maintenance is higher than any other tool in this list, including SmartLinx
 - No verified small-hospital reviewer quotes are available; UKG does not maintain a public listing that maps to CAH-scale nursing. Verify scope and total cost directly with the vendor.

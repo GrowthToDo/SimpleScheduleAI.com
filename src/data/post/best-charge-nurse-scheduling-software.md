@@ -399,7 +399,7 @@ UKG is an enterprise workforce management suite deployed at large health systems
 
 **Key limitations:**
 
-- Implementation for a CAH takes 6-12 months and requires dedicated IT resources.
+- Implementation takes months and requires dedicated IT resources.
 - Enterprise pricing makes it economically impractical for a 25-bed hospital.
 - The complexity built for 3,000-employee health systems adds overhead that serves no purpose at a 25-nurse CAH.
 
@@ -508,7 +508,7 @@ Tracking means the scheduling software records which nurses are charge-qualified
 
 **Does UKG handle charge nurse scheduling better than SimpleScheduleAI?**
 
-UKG has more advanced charge scheduling capabilities than SimpleScheduleAI in terms of raw configurability for large systems. For a 25-bed CAH, UKG is overbuilt by orders of magnitude. Implementation takes 6-12 months and requires dedicated IT. The charge scheduling features that matter for a CAH (designation enforcement, equitable distribution, callout ranking) are fully covered by SimpleScheduleAI at a fraction of the complexity and cost.
+UKG has more advanced charge scheduling capabilities than SimpleScheduleAI in terms of raw configurability for large systems. For a 25-bed CAH, UKG is overbuilt by orders of magnitude. Implementation takes months and requires dedicated IT. The charge scheduling features that matter for a CAH (designation enforcement, equitable distribution, callout ranking) are fully covered by SimpleScheduleAI at a fraction of the complexity and cost.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

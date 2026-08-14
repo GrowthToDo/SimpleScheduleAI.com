@@ -682,5 +682,13 @@
     "primaryKeyword": "nurse scheduling automation",
     "pillar": "/ai-nurse-scheduling",
     "note": "Next-15 topic #1, the review-mining flagship. Built on the dossier-verified QGenda abandonment quote (Courtney D., May 10 2024, Capterra p/90628: \"automated scheduling and rules set up seem to have hiccups...I just stopped using the automation\"), paired against Ari W.'s positive review of the same product three days earlier to show the difference is rule ownership, not the code. Low/AEO volume, KD 0; SERP is all vendor-generic feature guides with nobody covering POST-adoption abandonment, so the info-gain is the failure mode itself plus the 5-question override audit. Citable hooks: measure overrides not logins; the parallel spreadsheet as the abandonment tell; no super-user role at 25 beds. Quote set is QGenda-only on purpose, because TCP/symplr/SmartLinx dossier rows are past the 60-day freshness window. Inbound: nurse-scheduling-software-vs-excel + ukg-too-complex-small-hospital."
+  },
+  {
+    "slug": "nurse-scheduling-software-implementation-time",
+    "type": "post",
+    "url": "/blog/nurse-scheduling-software-implementation-time",
+    "primaryKeyword": "nurse scheduling software implementation",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Next-15 topic #2, the cross-vendor implementation-time piece. Differentiated from the pillar (containment warn) and from switching-from-excel: this answers \"how long will it take\", a project-planning question, rather than which tool to buy or what migrating off Excel feels like. Evidence base is the strongest in the lot: G2's ShiftWizard \"Time to Implement: 3 months\" (founder page-verified 2026-08-14; it is G2's AVERAGE across its reviewer base, never a vendor claim, and never to be set against our 3-to-5-business-day onboarding number, only against \"first schedule inside two weeks\" — guardrail in the dossier ShiftWizard section) plus six dossier-verified reviewer accounts (QGenda Roger S. + Brandi D., SmartLinx Carol G. + Daniel C., TCP Donna L., Smart Square Stephanie T., UKG Swaminathan S. who is HOSPITALITY not healthcare and is disclosed as such). Citable hook: the only reviewers reporting smooth implementations hold dedicated technical roles (Director of IT Services, System Administrator) that a 25-bed hospital does not staff, so the timeline question is a staffing question. Second hook: vendors who publish a timeline publish weeks (M7 four-week rollout, In-House Health \"4 Weeks to implement\", both vendor claims), while the one customer-aggregated figure says months. Inbound: switching-from-excel-to-nurse-scheduling-software + how-to-choose-nurse-scheduling-software."
   }
 ]

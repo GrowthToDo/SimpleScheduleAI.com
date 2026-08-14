@@ -172,6 +172,30 @@ Prose lines only (HTML, tables, TOC, headings, blockquotes excluded). No source 
 **Soft hedge (usually/typically/often) — lower risk:**
   - L512: For a nurse manager at a 25-bed CAH who takes clinical shifts, the manager-side compliance burden is usually the binding constraint, not the nurse app. For a facility where nu
 
+> **RESOLVED 2026-08-14 — the UKG implementation figures.** The "6-12 month
+> implementation" and "$150,000-$500,000 implementation budget" numbers flagged
+> below (and the "$400,000-$600,000 in annual nursing labor" figure that sat in
+> the same sentence) had no dossier entry and no source. They were softened
+> across five live files: ukg-too-complex-small-hospital, ukg-alternatives-small-hospitals,
+> onshift-alternatives, best-charge-nurse-scheduling-software and
+> hospital-workforce-management-software-cah, 19 replacements in total.
+>
+> The fix removed the invented specifics and kept the structural claim we can
+> stand behind: enterprise platforms assume dedicated IT and HRIS staff, run for
+> months, and are priced per deployment rather than published. Trigger was a new
+> post (`nurse-scheduling-software-implementation-time`) that states no
+> industry-wide implementation figure exists, which would have contradicted
+> these five files. The founder ruled the live copy should soften rather than
+> the new post weaken.
+>
+> Two matches deliberately left alone because they are not vendor claims:
+> `fair-nurse-schedule-critical-access-hospital.md` ("Over 6-12 months, this
+> creates...", a time window) and `free-nurse-schedule-templates.md` ("Review
+> the template every 6-12 months", a cadence recommendation).
+>
+> Gate results were identical before and after on all five files, so the edits
+> introduced no new failures.
+
 ## onshift-alternatives.md
 **Superlative/frequency asserted as fact:**
   - L371: - Implementation requires 6-12 months and dedicated IT and HRIS resources that are not available at most CAHs

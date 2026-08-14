@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-scheduling-software-implementation-time",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-14T05:20:48.594Z",
+      "contentHash": "e77b59d1cf97a0717948433d75959c8ba53bc40e9d90edf06a6cf2c7ccbfc255"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-14T05:20:51.266Z",
+      "contentHash": "e77b59d1cf97a0717948433d75959c8ba53bc40e9d90edf06a6cf2c7ccbfc255"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-14T05:20:52.654Z",
+      "contentHash": "e77b59d1cf97a0717948433d75959c8ba53bc40e9d90edf06a6cf2c7ccbfc255"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-14T05:20:52.729Z",
+      "contentHash": "e77b59d1cf97a0717948433d75959c8ba53bc40e9d90edf06a6cf2c7ccbfc255"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-14T05:20:52.767Z",
+      "contentHash": "e77b59d1cf97a0717948433d75959c8ba53bc40e9d90edf06a6cf2c7ccbfc255"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-14T05:20:52.768Z",
+      "contentHash": "e77b59d1cf97a0717948433d75959c8ba53bc40e9d90edf06a6cf2c7ccbfc255"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-14T05:20:52.769Z",
+      "contentHash": "e77b59d1cf97a0717948433d75959c8ba53bc40e9d90edf06a6cf2c7ccbfc255"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "claude",
+      "setAt": "2026-08-14T05:20:53.793Z",
+      "contentHash": "7dae86355c6524afc02cc86efa346f0b71fadeeaac6ad5c637e5abea7ba8c29b"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "claude",
+      "setAt": "2026-08-14T05:20:55.229Z",
+      "contentHash": "7dae86355c6524afc02cc86efa346f0b71fadeeaac6ad5c637e5abea7ba8c29b"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "claude",
+      "setAt": "2026-08-14T05:20:56.192Z",
+      "contentHash": "7dae86355c6524afc02cc86efa346f0b71fadeeaac6ad5c637e5abea7ba8c29b"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-14T05:20:57.063Z",
+      "contentHash": "7dae86355c6524afc02cc86efa346f0b71fadeeaac6ad5c637e5abea7ba8c29b"
+    }
+  },
+  "overrides": []
+}

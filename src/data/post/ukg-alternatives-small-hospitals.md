@@ -60,7 +60,7 @@ The alternative path is direct purchase. A hospital administrator, seeing that U
 
 ## What UKG Assumes You Have?
 
-UKG was built for health systems with dedicated IT departments, HRIS analysts, and 6-12 month implementation budgets. At a 25-bed Critical Access Hospital, none of those resources typically exist. The nurse manager is also on clinical shifts, IT support is a part-time contractor at best, and the implementation budget runs $150,000 to $500,000 at enterprise scale. Every UKG assumption fails at CAH scale, which is why the platform creates operational burden rather than reducing it.
+UKG was built for health systems with dedicated IT departments, HRIS analysts, and months-long implementations. At a 25-bed Critical Access Hospital, none of those resources typically exist. The nurse manager is also on clinical shifts, IT support is a part-time contractor at best, and the implementation budget is quoted at enterprise scale. Every UKG assumption fails at CAH scale, which is why the platform creates operational burden rather than reducing it.
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/UKG.webp" alt="UKG workforce management platform for enterprise healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -85,7 +85,7 @@ UKG was built for health systems with dedicated IT departments, HRIS analysts, a
         <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">Managed service handles config for you</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700">
-        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">6-12 month implementation budget</td>
+        <td class="py-3 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 align-top">Months-long implementation</td>
         <td class="py-3 px-4 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300 border border-red-200 dark:border-red-800 align-top">$150K-$500K not in budget</td>
         <td class="py-3 px-4 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border border-green-200 dark:border-green-800 align-top">First schedule inside two weeks, no project required</td>
       </tr>
@@ -129,7 +129,7 @@ The three best UKG alternatives for a Critical Access Hospital are SimpleSchedul
       <tr>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">UKG (Kronos)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Enterprise WFM suite</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">6-12 months</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Months</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">Yes, significant</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-700 dark:text-slate-300 align-top">200+ beds, health systems</td>
       </tr>
@@ -306,7 +306,7 @@ If none of these conditions apply, a 25-bed CAH cannot run UKG correctly, and th
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Implementation timeline</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-12 months, dedicated IT required</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Months, dedicated IT required</td>
         <td class="py-3 text-primary align-top">Inside two weeks, Excel upload</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">

@@ -201,7 +201,7 @@ One honest limitation: a facility that wants direct control over every variable 
 
 **Q: How long does it actually take to switch from Excel to scheduling software?**
 
-It depends on the platform, and the number a vendor quotes usually measures technical setup, not the point where the manager is fluent. Add the parallel-run period and the first full cycle on the new system to any estimate. Ask for a median time from roster upload to first published schedule, which is harder to answer optimistically than a generic onboarding figure.
+It depends on the platform, and the number a vendor quotes usually measures technical setup, not the point where the manager is fluent. Add the parallel-run period and the first full cycle on the new system to any estimate. Ask for a median time from roster upload to first published schedule, which is harder to answer optimistically than a generic onboarding figure. What the published figures actually show, and why so few vendors publish one, is covered in [how long nurse scheduling software implementation takes](/blog/nurse-scheduling-software-implementation-time).
 
 **Q: What happens to my existing Excel roster when I switch?**
 

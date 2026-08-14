@@ -79,13 +79,13 @@ A complete hospital WFM platform typically includes: scheduling engine with rule
     <text x="95" y="80" text-anchor="middle" font-size="9" fill="#7f1d1d">support contracts</text>
   </g>
   <rect x="30" y="160" width="640" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="350" y="185" text-anchor="middle" font-size="12" font-weight="600" fill="#92400e">Total first-year cost for a mid-size hospital: $150,000-$500,000</text>
+  <text x="350" y="185" text-anchor="middle" font-size="12" font-weight="600" fill="#92400e">First-year cost for a mid-size hospital: quoted per deployment</text>
   <text x="350" y="205" text-anchor="middle" font-size="10" fill="#92400e">Scheduling alone addresses much of a CAH's labor-management burden.</text>
 </svg>
 
 Pricing for enterprise WFM platforms is not publicly listed but consistent patterns emerge from industry reports. Licensing typically runs $30 to $60 per employee per month depending on module selection. For a CAH with 70 employees, that is $25,200 to $50,400 per year in licensing alone.
 
-Implementation costs add substantially to that figure. Enterprise WFM implementations require a vendor-led configuration phase (typically 3 to 6 months), integration with existing EHR and payroll systems, staff training for managers and employees, testing and parallel-run periods, and ongoing vendor support contracts. Total first-year costs for a mid-size hospital often run $150,000 to $500,000.
+Implementation costs add substantially to that figure. Enterprise WFM implementations require a vendor-led configuration phase running months, integration with existing EHR and payroll systems, staff training for managers and employees, testing and parallel-run periods, and ongoing vendor support contracts. Enterprise vendors quote first-year cost per deployment rather than publishing it, which is itself worth noting when you compare against a published flat price.
 
 Some vendors offer "lite" tiers designed for smaller facilities, but these typically strip out the features that make WFM software valuable in the first place (the analytics, the automation, the integration depth) while retaining the implementation complexity.
 
