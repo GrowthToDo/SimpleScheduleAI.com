@@ -110,7 +110,8 @@ reviewer accounts plus the rural staffing data, and the practical takeaway is
 the override count and the parallel-spreadsheet test. Nothing in that argument
 requires naming us.
 
-Status: **PROSPECT, ready to pitch.** Needs Pradeep to write it.
+Status: **PROSPECT, ready to pitch.** Needs Pradeep to write it. Evidence pack,
+structure and traps are in `p3-che-viewpoint-pack.md`.
 
 ## Rules for this lane
 
