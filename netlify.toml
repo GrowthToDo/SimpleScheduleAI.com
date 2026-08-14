@@ -57,6 +57,17 @@
   status = 301
   force = true
 
+# Reversed-word alias for the managed-service comparison post. The live slug is
+# managed-service-vs-scheduling-software, but "scheduling software vs managed
+# service" is the more natural word order for anyone recalling the title, so the
+# reversed form gets typed, cited and generated. That matters more now that AI
+# engines cite us and can construct a plausible-but-wrong URL from a title.
+[[redirects]]
+  from = "/blog/scheduling-software-vs-managed-service"
+  to = "/blog/managed-service-vs-scheduling-software"
+  status = 301
+  force = true
+
 # Deleted landing pages — redirect to homepage so Google drops the 404s
 [[redirects]]
   from = "/landing/*"

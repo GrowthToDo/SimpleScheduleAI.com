@@ -255,6 +255,13 @@ automated checker. Known offenders:
 - `statutes.capitol.texas.gov` — fails DNS outside the US (geo-blocked).
 - `dol.gov` deep links — 403 automated fetchers (bot-block); the page may be fine for humans, but
   a US-only or bot-blocked host still fails readers and checkers abroad.
+- `flexmonitoring.org` — 403s automated fetchers, loads normally in a real browser.
+  Added 2026-08-14 after the same URL was investigated twice in one day: once from
+  `check-links`, once from an Ahrefs site audit reporting it as a 403 with 5 inlinks.
+  Verified in a real browser that day: the page renders, and the tab reads
+  "July 2026 (1,388 CAHs)", matching the figure we cite. **This host is a
+  false positive in every automated link report. Do not swap the link, and do not
+  re-investigate it.** Re-verify the DATA on the normal dossier cadence instead.
 - `ecfr.gov` — bot-blocks automated checks (fine for human readers; cross-verify via a mirror).
 
 Rule: for any host known to be geo-blocked or bot-blocked, link a globally-resolving mirror with
