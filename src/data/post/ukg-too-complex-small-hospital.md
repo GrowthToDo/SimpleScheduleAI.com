@@ -206,7 +206,7 @@ These requirements can be met by purpose-built tools at a fraction of UKG's cost
 
 Aladtec (branded as TCP Scheduling Software by its parent company TCP) is a scheduling platform used at critical access hospitals and EMS settings. Setup runs 2-4 weeks with minimal IT involvement.
 
-The trade-off: Aladtec is a self-serve platform. The nurse manager configures and operates it. This is dramatically less complex than UKG, but the operational burden on the nurse manager does not disappear. It is simply smaller. Credential tracking, overtime rule configuration, and CMS documentation require manual setup and maintenance.
+The trade-off is that Aladtec is a self-serve platform. The nurse manager configures and operates it. This is dramatically less complex than UKG, but the operational burden on the nurse manager does not disappear. It is simply smaller. Credential tracking, overtime rule configuration, and CMS documentation require manual setup and maintenance.
 
 Best for: CAHs where the nurse manager or administrator has time to configure and maintain the scheduling system. Not appropriate for a dual-role nurse manager with no scheduling bandwidth.
 

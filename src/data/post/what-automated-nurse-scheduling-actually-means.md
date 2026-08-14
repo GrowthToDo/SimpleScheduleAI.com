@@ -158,7 +158,7 @@ On QGenda, Courtney D. (Manager of Employee and Physician Relations) wrote on [C
 
 On ShiftWizard, Erika A. (Registered Nurse) wrote on [Capterra](https://www.capterra.com/p/178376/ShiftWizard/reviews/) on July 9, 2024 that the platform "can be slow and glitchy, making inputting schedule difficult and stressful." The platform reduces scheduling time meaningfully, but the nurse manager is still operating the tool and making decisions. The automation helps; it does not replace. The trade-offs hospitals weigh against ShiftWizard at this same level of automation are laid out in our [ShiftWizard alternatives guide](/blog/shiftwizard-alternatives).
 
-The pattern in these accounts: tools that market automation at Level 3 are delivering what they promise. The mismatch is when buyers expect Level 4 or Level 5 based on the marketing and receive Level 3 in practice. The time savings are real. The claim that "the scheduling is done for you" is not.
+Across these accounts, tools that market automation at Level 3 are delivering what they promise. The mismatch is when buyers expect Level 4 or Level 5 based on the marketing and receive Level 3 in practice. The time savings are real. The claim that "the scheduling is done for you" is not.
 
 ## What Should a Critical Access Hospital Expect from Genuinely Automated Scheduling?
 

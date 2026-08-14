@@ -369,7 +369,7 @@ The two axes that decide this purchase rarely move together. The most polished a
 | Aladtec          | Functional access                          | Multi-department, configurable           |
 | UKG              | Full enterprise mobile                     | Enterprise health systems                |
 
-The pattern to notice: a great app that knows nothing about nursing moves the coordination problem to your phone and leaves every other layer on the manager's desk. A nurse-specific tool with a weaker app still beats a polished generic one for clinical scheduling, because the layers it covers are the expensive ones.
+A great app that knows nothing about nursing moves the coordination problem to your phone and leaves every other layer on the manager's desk. A nurse-specific tool with a weaker app still beats a polished generic one for clinical scheduling, because the layers it covers are the expensive ones.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 border-l-4 border-amber-500 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">Our Take</p>

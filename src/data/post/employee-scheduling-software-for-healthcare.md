@@ -111,7 +111,7 @@ Generic employee scheduling software does some things well, even in healthcare c
 
 **Staff communication** is an area where generic tools often outperform purpose-built healthcare scheduling systems. If nurses need to view their schedules on their phones, request time off, or propose shift swaps through an app, generic tools typically have better UX for that function.
 
-The pattern: generic tools work when healthcare scheduling is simple. The more CMS compliance requirements, certification complexity, and callout coverage challenges a facility has, the more the generic tool gaps matter.
+Generic tools work when healthcare scheduling is simple. The more CMS compliance requirements, certification complexity, and callout coverage challenges a facility has, the more the generic tool gaps matter.
 
 ## Generic vs. Healthcare-Specific: Direct Comparison: Which Is Better?
 

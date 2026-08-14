@@ -261,7 +261,7 @@ fair-rotation), builds a replacement call list when a nurse is unavailable, and 
 a full audit trail for every schedule change - so you have documentation if a surveyor
 asks.
 
-It is not a self-serve software tool. A scheduling specialist checks every draft and
+SimpleScheduleAI is not a self-serve software tool. A scheduling specialist checks every draft and
 handles setup and ongoing support, which means there is no learning curve for your team.
 
 One honest limitation: if your facility has highly unusual union rules or a staffing

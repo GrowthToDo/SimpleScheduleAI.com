@@ -136,7 +136,7 @@ The right TCP TimeClock+ alternative depends on which problem you are solving. F
 
 If you want to keep building schedules yourself but with a platform designed for hospital nursing specifically, **ShiftWizard** is the strongest alternative to TCP TimeClock+. It is built for hospital scheduling rather than adapted from general workforce management, has a more modern interface, and covers hospital-specific credential fields and department-level workflows. Setup time is comparable, so the lift to switch is similar; the upside is a scheduling-first design instead of a time-and-attendance platform with scheduling added on.
 
-This switch makes sense when the complaint is interface, scheduling workflow depth, or click count. It does not reduce the hours your nurse manager spends building schedules each week. The operating model is the same.
+Switching from TCP TimeClock+ to another self-serve platform makes sense when the complaint is interface, scheduling workflow depth, or click count. It does not reduce the hours your nurse manager spends building schedules each week. The operating model is the same.
 
 ## Scenario 2: Scheduling Work Done for You
 

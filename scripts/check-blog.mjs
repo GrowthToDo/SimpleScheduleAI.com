@@ -110,7 +110,19 @@ const SLOP_STRUCTURES = [
     'superficial -ing analysis',
     /,\s(highlighting|underscoring|showcasing|demonstrating) (the|its|their|a) [a-z]+ (commitment|dedication|focus)/i,
   ],
-  ['colon reveal', /^\*?\*?(the (secret|catch|best part|twist|kicker))\*?\*?:/i],
+  // Widened 2026-08-14. The original list (secret/catch/best part/twist/kicker)
+  // scored zero live hits, but the same construction was shipping under duller
+  // nouns: "The pattern to notice:", "The pattern in these accounts:", "The
+  // trade-off:". Same tell, same fix (state the claim directly), so the nouns
+  // that actually appear in our corpus are now covered.
+  // The defect is a NOUN-PHRASE FRAGMENT plus colon ("The catch: ...", "The
+  // pattern to notice: ..."). A complete clause before the colon ("The trade-off
+  // is clear: ...") is ordinary punctuation, not the tell, so the lookahead
+  // excludes a following linking verb.
+  [
+    'colon reveal',
+    /^\*?\*?(the (secret|catch|best part|twist|kicker|pattern|trade-?off|upshot|takeaway))(?!\s+(is|are|was|were|here|looks|seems|becomes|holds|runs))\b[^:.]{0,30}\*?\*?:/i,
+  ],
 ];
 
 // Unclear-referent openers (WARN). Added 2026-08-14 after the founder flagged
@@ -430,13 +442,23 @@ function check(file) {
   // obvious reads fine. The question the WARN asks is "could a reader who has
   // forgotten the previous paragraph parse this sentence?" If yes, ignore it.
   //
-  // ADOPTION BASELINE (2026-08-14): unlike the 2026-08-10 slop patterns, this
-  // one was NOT swept to zero before adopting. It matched 82 times across 55
-  // live files, and a sample read showed most are real instances rather than
-  // false positives, so a sweep is a founder-gated editing pass over live copy,
-  // not a mechanical find and replace. Until that pass happens, treat hits on
-  // existing live posts as advisory and hold NEW drafts to zero. Capped per
-  // file so a legacy post cannot flood its own report.
+  // ADOPTION BASELINE, corrected 2026-08-14 after reading all 67 live hits.
+  // The first estimate ("most are real", written off a sample) was WRONG. Of 67
+  // openers on live posts, roughly 61 are ordinary cohesive prose whose referent
+  // sits in the immediately preceding sentence: "That difference cascades" right
+  // after naming the difference, "Those are legitimate questions" right after
+  // listing them. Rewriting those would damage the prose and add repetition.
+  //
+  // So this WARN has LOW precision by design, and that is acceptable for a
+  // question-shaped check, but it must never be treated as a to-do list. The
+  // six genuine hits found in the full read were: a bare "It" whose product
+  // referent sat a paragraph up, one vague "This switch", and three colon
+  // reveals that the slop-pattern regex was too narrow to catch (see the widened
+  // pattern above). All six are fixed; the remainder were deliberately left.
+  //
+  // Read a hit as a question, never a verdict: could a reader who has forgotten
+  // the previous paragraph parse this sentence? Usually yes. Capped per file so
+  // a legacy post cannot flood its own report.
   {
     const UNCLEAR_REFERENT_CAP = 5;
     let unclearReferentHits = 0;

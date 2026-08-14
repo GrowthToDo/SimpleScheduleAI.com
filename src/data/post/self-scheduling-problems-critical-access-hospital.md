@@ -86,7 +86,7 @@ Selfish scheduling appears as three repeating patterns at a CAH: first-mover adv
 
 In practice, selfish scheduling is not nurses behaving badly. It is the predictable outcome of a system with no guardrails on what any individual nurse can claim relative to the unit's coverage needs. A nurse who logs in at 8 AM when the window opens and claims three consecutive day shifts on weekdays is following the rules as written. The problem is that those rules allow the coverage gap her choices create.
 
-The pattern appears in three forms at CAHs:
+Coverage gaps created by the rules appear in three forms:
 
 **First-mover advantage.** The first nurses to submit preferences claim the best shifts. Late submitters get whatever remains. At a small unit, this consistently advantages senior nurses or nurses who are more attentive to scheduling deadlines, and consistently disadvantages newer staff who may not know the game yet.
 

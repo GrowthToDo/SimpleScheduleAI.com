@@ -117,8 +117,20 @@ Two things the gate cannot see, so check them by hand:
   nurse manager reads "floor" as a nursing floor. Prefer the literal statement
   ("how many nurses you are required to have overnight").
 
-Adoption note: this pattern was NOT swept to zero before adopting, unlike the
-3.2.2 patterns. It matched 82 times across 55 live files, most of them real, so
+**Precision note, corrected 2026-08-14 after reading all 67 live hits.** The
+first estimate was wrong: this WARN has LOW precision, and that is by design.
+About 61 of 67 hits were ordinary cohesive prose whose referent sits in the
+previous sentence ("That difference cascades" right after naming the
+difference). Those were deliberately left alone, because rewriting them adds
+repetition and removes normal English cohesion. Treat the WARN as a question,
+never as a to-do list. The full read found only six genuine defects, and three
+of those turned out to be colon reveals (3.2.2) that the slop regex was too
+narrow to catch, which is the more useful lesson: when a check fires a lot,
+look for the DIFFERENT defect hiding inside the noise.
+
+Superseded adoption note (kept for the record): this pattern was NOT swept to
+zero before adopting, unlike the 3.2.2 patterns. It matched 82 times across 55
+files including drafts, believed at the time to be mostly real, so
 the sweep is a founder-gated editing pass rather than a find and replace. Hold
 NEW drafts to zero; treat hits on existing live posts as advisory until that
 pass runs.
