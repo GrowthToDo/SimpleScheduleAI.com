@@ -62,6 +62,56 @@ is invisible until you read the outlet's own page. Verify the submission route
 FIRST, on the outlet's site, before writing a word of pitch copy. That check
 cost one page fetch and removed the top-ranked target.
 
+## Target 4: Chief Healthcare Executive — VERIFIED AND OPEN (2026-08-14)
+
+The best-fit target found so far, and the guidelines below are quoted from their
+own submission page, read in a real browser (the page 403s automated fetchers).
+
+- **Route:** email the editor, Ron Southwick, at **rsouthwick@mjhlifesciences.com**.
+  Verbatim from the page: "Send them to me: rsouthwick@mjhlifesciences.com."
+- **Format:** opinion pieces, published under the "Viewpoint" label.
+- **Length:** "around 600-700 words". Not a hard limit, but "if a submitted piece
+  is more than 1,000 words, there's a good chance it will be sent back".
+- **Who they take:** "We love hearing from hospital executives, but we want to
+  hear from doctors, nurses, financial officers, technology leaders, and anyone
+  from the healthcare ecosystem."
+- **Bio format:** a photo plus "a very short description of the author at the
+  end (Example: Jane Doe is CEO of Metropolis Health)."
+- **Style:** AP style, plain conversational English, no footnotes.
+
+Three rules that decide whether this works for us:
+
+1. **Non-promotional, and they say it is non-negotiable.** Verbatim: "Contributed
+   features must be non-promotional and vendor-neutral, avoiding any overt or
+   subtle promotion of specific companies or products." They explicitly route
+   promotional material to paid sponsored content instead. So the piece argues an
+   idea; SimpleScheduleAI appears only in the one-line author bio.
+2. **The link mechanism is citation, not promotion.** They take no footnotes, but
+   "it's a good idea to link to studies or news stories that are relevant." Our
+   statistics page is a legitimate thing to link as a data source in a piece
+   about rural staffing. That is the dofollow path here, and it only works if
+   the data genuinely supports the argument.
+3. **Human authors only, stated explicitly.** Verbatim: "We don't want pieces
+   created by AI. We expect contributed features to be written by human authors.
+   We understand if contributors are using AI tools to assist in research or spur
+   ideas. But we're only taking articles from real people." **This piece has to
+   be written by Pradeep.** I can assemble the evidence, check the facts and
+   pressure-test the argument; the draft itself must be his. Submitting an
+   AI-written piece here would breach a stated condition and burn the outlet
+   permanently.
+
+**Angle that fits their audience and their rules.** Hospital executives, not
+nurse managers, so lead with the money and the asset that is already bought:
+scheduling software that was purchased and is now being worked around. The
+argument is vendor-neutral because it indicts no product. Automation gets
+abandoned when nobody owns the configuration, and a hospital under 25 beds does
+not staff the super-user role the platforms assume. The evidence is public
+reviewer accounts plus the rural staffing data, and the practical takeaway is
+the override count and the parallel-spreadsheet test. Nothing in that argument
+requires naming us.
+
+Status: **PROSPECT, ready to pitch.** Needs Pradeep to write it.
+
 ## Rules for this lane
 
 - **Never invent a contact address.** Every route above is marked VERIFY until a
@@ -79,4 +129,7 @@ cost one page fetch and removed the top-ranked target.
 
 | Date | Outlet | Action | Result |
 | --- | --- | --- | --- |
-| 2026-08-14 | — | File opened. Citation-targeting mechanic checked and found to have no pitchable targets. NRHA blog and magazine identified as the first proactive prospects | — |
+| 2026-08-14 | — | File opened. Citation-targeting mechanic checked and found to have no pitchable targets | — |
+| 2026-08-14 | NRHA Rural Health Voices | Read their blog page | DISQUALIFIED: staff and vetted partners only, no contributed route |
+| 2026-08-14 | American Nurse Journal | Read author guidelines | VERIFIED OPEN but POOR FIT: wants evidence-based clinical content (treatments, procedures, diagnostics) and the author is not a nurse. Blog/Perspectives (600-1200 words) is the only plausible slot. Park unless a genuinely clinical angle appears |
+| 2026-08-14 | **Chief Healthcare Executive** | Read submission guidelines in a real browser | **VERIFIED OPEN, BEST FIT.** Viewpoint pieces, 600-700 words, editor address recorded above. Non-promotional and human-author rules both explicit. Ready to pitch; needs Pradeep to write |
