@@ -1,10 +1,9 @@
 # Needs Stack — SimpleScheduleAI
 
-> ⚠️ IN PROGRESS — the walk is complete and the adversarial pass has been run and
-> applied. Remaining before finalization: founder confirmation of the two levels
-> added by that pass (N9 patient safety, N8 predictability), of the N3+N4 merge,
-> and of whether "this hospital is still here in five years" belongs on her stack
-> or only the administrator's. If you are resuming, continue there.
+**Status: FINAL for this persona**, walked and adversarially attacked 2026-08-15,
+with every open question closed by the founder the same day. One level (N9)
+is recorded as an explicit hypothesis rather than a settled finding; see its
+warning block.
 
 Whose stack: the **nurse manager, DON or CNO** at a Texas Critical Access
 Hospital of 25 beds or fewer, confirmed by the founder 2026-08-15 as the primary
@@ -42,12 +41,15 @@ diagram is the shape; the sections below carry the detail.
            this unit together              the hospital again
                      \                        /
                       \                      /
-   N9 Nobody gets hurt on my watch   N5 Keep my nurses from quitting
+   N9 My nurses aren't so worn down   N5 Keep my nurses from quitting
+      that something goes wrong
+      (least-evidenced level)
                       \                      /
                        \                    /
-   N3 Every shift covered, without leaning     N8 My nurses know when
-      on the same three people again              they're working, far
-      ← THE PROMISE                                enough ahead to plan
+   N3 Every shift covered, without leaning     N8 They can plan their lives
+      on the same three people again              around it, and changes
+      ← THE PROMISE                                don't blow up their week
+                                                   ← second promise
                        \                    /
                         \                  /
         N1 Get the schedule out every cycle, and patch the
@@ -77,16 +79,26 @@ tell: being the indispensable manager is exactly what eats the weekends.
 
 ### Aspiration levels (siblings)
 
-**N9.** → **"Nobody gets hurt on my watch."**
-Occupants: staffing-ratio regulation and the Texas HSC 257 committee route;
-accreditation and CMS survey processes; acuity tools; incident-reporting and
-patient-safety programs.
-Role: **aspiration** — reference it, never promise it. This is a patient-safety
-claim, which is the highest-risk category of overclaim we have.
+**N9.** → **"My nurses aren't so worn down that something goes wrong."**
+Occupants: fatigue and rest-break policies; shift-length rules; acuity tools;
+wellness programs; incident-reporting and patient-safety programs.
+Role: **aspiration** — reference it, never promise it. This is patient-safety
+adjacent, which is the highest-risk category of overclaim we have. Never state or
+imply that our scheduling reduces patient harm.
+
 Added by the adversarial pass, which found that a seven-level ladder for a nurse
-leader mentioned no patient anywhere. It is the reason "someone who can *actually
-do it*" is in the promise wording at all, and it is the answer she would give
-first in an interview.
+leader mentioned no patient anywhere. The founder rejected the first phrasing
+("nobody gets hurt on my watch") as not sounding like these managers, and
+supplied the better route: the chain runs unfair rotation → worn-down nurses →
+mistakes, so this level sits above the FAIRNESS half of the promise rather than
+above the coverage half. Note that "well rested nurses make fewer mistakes" is a
+mechanism, not a need, which is why it is recorded here as her goal instead.
+
+> ⚠️ **THIS IS THE LEAST-EVIDENCED LEVEL IN THE FILE.** Both the founder and the
+> author were guessing at it, and the founder's hesitation was the signal. It is
+> the first thing to test in the CNO interviews the NAINA introduction produces:
+> ask what actually worried them about a short shift, in their words, and replace
+> this wording with theirs. Do not build copy on this level until then.
 
 **N5.** → **"Keep my nurses from quitting."**
 Occupants: pay rises and sign-on bonuses; career ladders; tuition support;
@@ -122,17 +134,24 @@ against a running per-nurse count, with weekend history carried across periods,
 and the callout shortlist sorts straight-time before overtime. Those are
 mechanisms, stated in hours and in ordering, never in dollars.
 
-**N8.** → **"My nurses know when they're working, far enough ahead to plan their
-lives."**
+**N8.** → **"My nurses can plan their lives around the schedule, and the changes
+that do come don't blow up their week."**
 Occupants: self-scheduling initiatives; posted-schedule policies and union or
 committee rules on advance notice; shift-swap apps.
 Role: **a second promise, sibling to N3** — the outcome of the *publication* half
 of N1.
+
 Added by the adversarial pass, which showed N1 bundles two jobs with different
 parents: patching holes leads to coverage, but getting the schedule *out* leads
 to predictability. Guarantee perfect coverage with nothing ever posted and the
-unit still collapses. We genuinely serve this: the delivery cadence is a
-post-ready schedule every Thursday.
+unit still collapses.
+
+Founder correction (2026-08-15), and it changed the wording: they want
+predictability, **but last-minute change is part of everyday work**. So the need
+is not a schedule that never moves, which would misdescribe the job. It is a
+schedule posted early enough to plan around, where the changes that inevitably
+come are absorbed rather than chaotic. We serve both halves: the post-ready
+schedule every Thursday, and a corrected copy when a callout is logged.
 
 ### What we do
 
