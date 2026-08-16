@@ -1,9 +1,73 @@
 # Positioning statements — SimpleScheduleAI
 
-> ⚠️ IN PROGRESS — **all 7 messages walked** (6 settled into P1-P9, 1 retired).
-> Remaining: gap-fill for the two unfilled roles (counter the vendors above,
-> aspiration), then the closing adversarial press, then finalization. If you are
-> resuming, continue at gap-fill.
+> ⚠️ **NOT FINAL.** All 7 inherited messages walked (P1-P9, one retired), two
+> roles gap-filled (P10, P11), closing adversarial press RUN and returned
+> **DO NOT FINALIZE** on ten findings. The five falsifiable claims are fixed
+> (see "Fixed after the press"); **five structural findings remain open** and are
+> listed under "Open after the press". Do not ship any statement from this file
+> until those close.
+
+## Fixed after the press (2026-08-16)
+
+Five claims were falsifiable as written and are corrected above:
+
+1. **P11 asserted holiday load "carried across scheduling periods".** False.
+   Only weekend counts carry (`scoring.ts` §3 `historicalWeekendCounts`); holiday
+   fairness is scored against the **team average inside the period** (factor 9).
+   The correct wording was sitting in this file's own annotation while the copy
+   said otherwise.
+2. **P11 said "every hard shift", which reaches nights.** Nights are on the
+   NOT CLAIMABLE list: `scoring.ts` contains "night" zero times, and this exact
+   claim was swept from 27 places across 19 files on 2026-08-12 at the founder's
+   instruction. Reintroducing it here was the worst miss in the walk.
+3. **P8 led with "The schedule goes out on time."** Deleted. Its opposite ("our
+   schedules go out late") is nobody's strategy, so it fails the Opposite Test as
+   table stakes; it is a **deliverable** framing of the kind this file killed M5
+   for; and it is a delivery-record claim from a company that has never run a
+   cycle for a paying hospital.
+4. **P2 and P7 said "nothing for you to operate".** `NEEDS-STACK.md` N2 already
+   corrected that overclaim: she still sends PTO, known constraints and ED spikes
+   every week (registry `weekly-inputs`), and approves out of band. P2 now states
+   the bounded truth, and the section heading changed from "What you make
+   obsolete" to "What we take over".
+5. **P1 carried an em-dash**, which the registry forbids in both columns and the
+   global tone rule bans outright. Now a comma.
+
+## Open after the press (must close before anything ships)
+
+1. **P4 is NOT registry-verbatim, despite saying it is.** The `triad` row reads
+   "AI builds **your** schedule, our scheduling team checks it, you approve.
+   **No IT.**" P4 copied `src/pages/index.astro:122`, which has already drifted
+   from the registry. Either quote the row exactly or open a registry amendment
+   — but do not call a changed line canon. **Also file the live drift at
+   index.astro:122 as a separate defect.**
+2. **The governance claim is true as intent, false as executed.** P7 and P9 are
+   drop-in replacements for the `value-prop` and `pricing-short` rows, drafted to
+   shipping spec (P7 even carries a character count). P9 additionally breaks
+   registry authoring rule 5, "never restate pricing in any other shape". A
+   section listing every registry row this file would amend, each with its
+   product-mode twin authored, must exist before adoption.
+3. **No statement carries a mode label.** Registry authoring rule 2: a
+   service-mode phrase without a product-mode twin is migration debt. Six novel
+   statements here generate six units of it.
+4. **N8 — the second promise — has no statement at all.** `NEEDS-STACK.md`
+   instructs "promise N3 and N8". N3 has three statements; N8 has zero, despite
+   having the most registry-backed proof already written (`delivery-cadence`,
+   `callout`, and the founder's own 2026-08-15 correction about absorbed change).
+5. **P11 builds copy on N9, which `NEEDS-STACK.md` forbids** until the CNO
+   interviews settle that level. The explicit refusal sentence mitigates but does
+   not override a standing instruction. Hold P11, or ship only its
+   weekend/holiday mechanism, which sits at N3 and needs no N9 reference.
+
+Lower-severity findings from the press, not yet applied: P6's provenance is
+graded OBSERVED when the dossier requires REPORTED, and its "on top of your
+clinical shifts" clause is unsourced; P5 still leans on subtraction and its
+"Those hours" has no antecedent inside the statement; the argument that "No
+per-nurse fees" is an affordability identity is contested — at $37.50 per nurse
+per month against product mode's $10, it is a **model** contrast that is more
+expensive per head, which is a More-for-More device rather than a discount
+signal; no counter-statement exists against Excel, which `NEEDS-STACK.md` calls
+the real default alternative; and P3 is a headline any vendor could paste.
 
 Targets the **nurse manager, DON or CNO** at a Texas Critical Access Hospital of
 25 beds or fewer, per `NEEDS-STACK.md` (levels cited as N-numbers) and
@@ -32,7 +96,7 @@ statement is checked against it. Two consequences that bind this whole file:
 
 ## What you promise (one level up)
 
-**P1.** **"Every shift covered — without leaning on whoever always says yes."**
+**P1.** **"Every shift covered, without leaning on whoever always says yes."**
 [N3 — the promise level: every shift covered by someone who can actually do it,
 without leaning on the same few people]
 Reworked from: "Every shift covered — without asking the same three nurses
@@ -46,8 +110,7 @@ competitors run. Price story — consistent with More for More: it claims
 thoroughness, not a discount.
 
 **P7.** **"Every shift covered, without leaning on whoever always says yes. Nurse
-scheduling for Texas hospitals of 25 beds or fewer, with nothing for you to
-operate."**
+scheduling for Texas hospitals of 25 beds or fewer."**
 [N3 promise + N2 obsolete-brag; meta description, so it carries an SEO job as
 well as a positioning one]
 Reworked from M4: "Scheduling stress drives your best nurses out and burns your
@@ -67,9 +130,9 @@ Founder instruction 2026-08-16: keep "nurse scheduling" discoverable. Placed in
 the second sentence so the promise still leads. **154 characters**, inside the
 140-160 meta-description band.
 
-## What you make obsolete (below)
+## What we take over (below)
 
-**P2.** **"Nothing for you to operate."**
+**P2.** **"You send us PTO and constraints. We do the rest."**
 [N2 — the roster upkeep and tool operation we take over]
 Reworked from: the third clause of a rejected candidate, "Your unit covered,
 your rotation fair, and nothing for you to operate." The founder liked the line;
@@ -93,8 +156,8 @@ work she likes. Opposite test — PASSES; plenty of tools are sold on giving the
 manager a better console to work in, i.e. keeping her in the tool rather than out
 of it.
 
-**P8.** **"The schedule goes out on time. When it doesn't, you have a name and a
-number."**
+**P8.** **"When something slips on our side, you have a name and a number, not a
+ticket queue."**
 [N1/N3 — the craft-and-care claim for the pricing block]
 Reworked from M5: "A compliant, post-ready schedule every cycle. Flat monthly
 pricing."
@@ -165,6 +228,43 @@ subtitle where the promise belongs, which is why the live hero reads
 commiseration, then mechanism, then savings, with no value claim anywhere. It
 should sit beneath P1.
 
+## Against the adjacent occupants (gap-fill)
+
+**P10.** **"An agency booking covers tonight. It doesn't change who gets asked
+tomorrow."**
+[counters the labour-source occupants at N3 — agency and travel staffing firms,
+per diem agencies, float pools, overtime]
+Gap-filled, not reworked from existing copy.
+
+**Written carefully, because the previous attempt at this argument was wrong.**
+An earlier draft of `VOTERS.md` claimed agency was our real competitive
+alternative and that a DON who calls an agency "never needs us at all". That was
+false: she has covered one shift and still has the rest of the cycle to build.
+Agency solves a **supply** problem, we solve an **allocation** problem, so they
+are complements. This statement therefore counters agency **only on the rotation
+question**, which is genuinely ours, and claims no displacement.
+Opposite test — PASSES; "book agency and let the rotation sort itself out" is
+exactly what many hospitals do today.
+What she keeps by buying at our level: her own staff on the shifts, continuity of
+care, and a rotation that still means something next month.
+
+## Aspiration (reference, never promise)
+
+**P11.** **"Weekend shifts are counted per nurse and the count carries into the
+next scheduling period; holidays are scored against the team's average. The same
+names don't keep landing on the weekends by default. Whether that keeps someone
+from leaving is not ours to claim."**
+[references N5 — keep my nurses from quitting — and N9 — my nurses aren't so worn
+down that something goes wrong — without promising either]
+Gap-filled. Aspiration copy shows the part we play and never claims the outcome.
+The second sentence is doing deliberate work: with zero customers we have no
+retention evidence whatsoever, and an explicit refusal reads stronger than a
+hedge. It also protects against the N9 warning in `NEEDS-STACK.md`, which flags
+that level as the least-evidenced in the file and forbids building copy on it
+until the CNO interviews settle it.
+Mechanism is real and code-backed: weekend counts carry across periods and
+holiday load is scored against the team average.
+
 ## Retired without a statement (stays after finalization)
 
 - **M7: "Your Sunday nights back: the week's schedule arrives done."** — killed
@@ -175,7 +275,25 @@ should sit beneath P1.
   the floor", which sends the time somewhere she is counted on). Retiring rather
   than rewriting, because a compliant version would simply duplicate P3 and P5.
 
-## Live-copy defect found during the walk (fix independent of positioning)
+## Live-copy defects found during the walk (fix independent of positioning)
+
+**Both need the founder's localhost review before shipping** (standing
+instruction, 2026-08-16: site changes go to localhost first).
+
+### 2. `/how-it-works` claims an outcome we have no basis for
+
+`src/pages/how-it-works.astro:69` — subtitle, live: *"Scheduling workload drops
+from 8 to 12 hours a week to **1 to 2**."*
+
+The 8-to-12 figure is sourced. **"1 to 2" appears zero times in the facts
+dossier** — verified by search 2026-08-16. It is an outcome projection published
+by a company with zero customers, in the same sentence as a sourced number, which
+is what makes it read as equally evidenced. Same defect class as the
+day-and-a-half figure below, found by the adversarial press rather than by the
+walk. Note the pattern: the walk checked the homepage and stopped, so a sourced
+number sitting next to an unsourced one on a different page survived.
+
+### 1. Homepage overstates the sourced range
 
 **"a day and a half every week"** on the homepage (`src/pages/index.astro:127`)
 overstates the sourced range. The facts dossier records **8 to 12 hours a week**
