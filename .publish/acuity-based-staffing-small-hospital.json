@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "acuity-based-staffing-small-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-17T07:49:08.199Z",
+      "contentHash": "b3c4811e85fe2337b722d328d23c4fe975673b4a55468dcc7383ca4e437cf6ce"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-17T07:49:11.942Z",
+      "contentHash": "b3c4811e85fe2337b722d328d23c4fe975673b4a55468dcc7383ca4e437cf6ce"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-17T07:49:23.528Z",
+      "contentHash": "b3c4811e85fe2337b722d328d23c4fe975673b4a55468dcc7383ca4e437cf6ce"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-17T07:49:23.565Z",
+      "contentHash": "b3c4811e85fe2337b722d328d23c4fe975673b4a55468dcc7383ca4e437cf6ce"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-17T07:49:23.594Z",
+      "contentHash": "b3c4811e85fe2337b722d328d23c4fe975673b4a55468dcc7383ca4e437cf6ce"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-17T07:49:23.594Z",
+      "contentHash": "b3c4811e85fe2337b722d328d23c4fe975673b4a55468dcc7383ca4e437cf6ce"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-17T07:49:23.596Z",
+      "contentHash": "b3c4811e85fe2337b722d328d23c4fe975673b4a55468dcc7383ca4e437cf6ce"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-08-17T07:50:07.354Z",
+      "contentHash": "29b3ac16be193071c79010762df18c453a5607c71e95484aa233290c288226cd"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "verifier",
+      "setAt": "2026-08-17T07:48:53.241Z",
+      "contentHash": "29b3ac16be193071c79010762df18c453a5607c71e95484aa233290c288226cd"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-17T07:53:15.985Z",
+      "contentHash": "29b3ac16be193071c79010762df18c453a5607c71e95484aa233290c288226cd"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-08-17T07:53:15.099Z",
+      "contentHash": "29b3ac16be193071c79010762df18c453a5607c71e95484aa233290c288226cd"
+    }
+  },
+  "overrides": []
+}

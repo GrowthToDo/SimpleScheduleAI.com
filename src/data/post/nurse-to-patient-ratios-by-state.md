@@ -95,7 +95,7 @@ The plan is where acuity lives. Rather than a statewide number, the committee se
 
 ## What Does the State Map Mean for a Small Texas Hospital?
 
-For a small Texas hospital, the map means the standard you are held to is the plan your own committee wrote, translated into a schedule that covers every shift at the acuity the plan calls for, backed by records that prove it happened. With no ratio to copy, the plan itself is the yardstick, and the schedule is how you meet it. If the model is new to you, start with what a [critical access hospital](/blog/what-is-a-critical-access-hospital) is and how its rules differ from a larger hospital.
+For a small Texas hospital, the map means the standard you are held to is the plan your own committee wrote, translated into a schedule that covers every shift at the acuity the plan calls for, backed by records that prove it happened. With no ratio to copy, the plan itself is the yardstick, and the schedule is how you meet it. Our guide to [acuity-based staffing at a small hospital](/blog/acuity-based-staffing-small-hospital) walks through building those bands without buying a scoring tool. If the model is new to you, start with what a [critical access hospital](/blog/what-is-a-critical-access-hospital) is and how its rules differ from a larger hospital.
 
 At this size, the hard part is the thin bench. A 25-bed facility may run with 15 to 25 nurses in total, so a plan that looks fine on paper can fall apart the moment two nurses are out and the patients get sicker. The schedule has to build in enough qualified coverage on every shift, including nights and weekends, and it has to flag when a callout would drop a unit below what the plan requires.
 
