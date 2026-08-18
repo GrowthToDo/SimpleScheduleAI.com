@@ -53,8 +53,34 @@ to confirm the submission route), SENT, REPLIED, PLACED.
 | # | Outlet | Route | Asset + angle | Status |
 | --- | --- | --- | --- | --- |
 | 1 | ~~**NRHA Rural Health Voices**~~ | — | — | **DISQUALIFIED 2026-08-14.** The blog page states verbatim: "NRHA publishes blogs written by NRHA staff and vetted NRHA Partner organizations." It is not open to contributed pitches, and no submission route is published. The only way in is partner status, which is a paid-membership decision for the founder, not an editorial pitch. Do not re-prospect this as a P3 target |
-| 2 | **NRHA Rural Horizons** (quarterly member magazine) | Member magazine | Same anchor, longer form. Likely subject to the same member/partner gate as the blog; check before drafting anything | VERIFY (low confidence) |
+| 2 | **NRHA Rural Horizons** (quarterly magazine) | **editor@ruralhealth.us** | Same anchor, longer form | **ROUTE VERIFIED 2026-08-18, eligibility still unknown. Do not pitch yet** (see below) |
 | 3 | **HIStalk** | Tip / contributed | Health IT audience. Founder sent a Tier 2 mail 2026-08-14; treat any reply as the opening | SENT (P2) |
+
+### Target 2 verification result (2026-08-18)
+
+Checked `ruralhealth.us/publications/nrha-magazines`. **It is NOT the same gate
+as target 1**, and the earlier "likely member-gated" guess was wrong.
+
+- **A published editorial submission route exists:** "Email the editors" at
+  **editor@ruralhealth.us** to "submit content for potential publication."
+- **Advertising is a separate, clearly separated route** (Larry Bedell,
+  bedell@nrhasc.com, via their engagement guide). An outlet that separates
+  editorial from paid is considering editorial submissions on merit.
+- **Nothing on the page restricts submissions to members or partners.** Contrast
+  target 1, whose blog page states the restriction verbatim.
+- The page references an `NRHA-Content-Planning-Worksheet.docx` for contributors,
+  which is the most likely home for any eligibility or length rules. Not read.
+
+**What is still unknown:** whether they accept contributed pieces from a vendor
+founder. The page is silent, which is not the same as open.
+
+**Recommendation: do not pitch this yet, for a lane reason rather than a target
+reason.** The rule is one outlet at a time, judged on placements. Chief
+Healthcare Executive went out 2026-08-18 and is the best-fit target found. When
+it resolves, the cheapest next step here is a three-line query to
+editor@ruralhealth.us asking whether they consider contributed articles from
+outside the membership, BEFORE writing anything. That is exactly the check that
+cost one page fetch and saved a session on target 1.
 
 **What target 1 taught, before we spent a session on it.** The obvious
 association targets are member-gated rather than editorially open, and the gate
