@@ -1,94 +1,110 @@
-# DRAFT 1: Chief Healthcare Executive "Viewpoint"
+# DRAFT 2: Chief Healthcare Executive "Viewpoint"
 
-**Status: raw first draft for Pradeep to rewrite in his own voice.** Their
-guidelines ask for human authors; treat this as structure and evidence on the
-page, not as finished copy. The parts that most need your voice are marked in
-the notes at the bottom.
+**Status: full draft, written 2026-08-18 at the founder's request for touch-ups.**
 
-Target 600-700 words. **This draft: 610 words** (body only, excluding headline,
-subheads and bio). That leaves roughly 90 words of headroom, which is deliberate:
-the opening scene should get longer when you replace it with a real one.
+**Read this first.** Their guidelines state they do not accept AI-written pieces.
+Pradeep is the author of record and asked for a draft to edit, which is his call
+to make, but the risk is real and practical, not just principled: an editor who
+senses generated prose rejects the piece and the relationship. **The two places
+that most need his own words are marked in the notes.** The opening scene in
+particular should be replaced with something he has actually watched happen.
+
+Target 600-700 words; over 1,000 gets sent back. **This draft: 681 words** (body
+only, excluding headline, subheads and bio).
+
+Route: send the finished piece, not a pitch, to **rsouthwick@mjhlifesciences.com**.
 
 ---
 
-## The scheduling software you bought may already be abandoned
+## The scheduling software on your budget may already be abandoned
 
-Somewhere in your organization, a nurse manager is building next month's
-schedule in a spreadsheet. The scheduling platform you licensed is open in
-another tab. It holds the roster, it sends the notifications, and it appears on
+Somewhere in your organization tonight, a nurse manager is building next month's
+schedule in a spreadsheet. The scheduling platform your system licensed is open
+in another tab. It holds the roster. It sends the notifications. It appears on
 the budget. It is not building the schedule.
 
-Nobody decided this. There was no meeting, no complaint and no cancellation. The
-overrides simply accumulated until working around the software was faster than
+Nobody decided this. There was no meeting, no escalation, no cancellation. The
+manual corrections accumulated until working around the software was faster than
 working with it.
 
-This is the most expensive failure I see that never reaches a report. A
-cancelled contract triggers a conversation. An unused one renews quietly.
+It is the most expensive failure I have seen that never reaches a report. A
+canceled contract starts a conversation. An unused one renews quietly.
 
-### How it happens
+### Why it happens
 
-Implementation ends before configuration is finished. A unit's real scheduling
-rules surface over months, while the configuration window lasts days. The rules
-that get captured are the ones someone can state out loud in a meeting. The ones
-that live in a manager's judgment do not: the two nurses who should not share a
-shift, the nurse finishing a degree who cannot take Tuesdays, the per diem who
+Implementation ends before configuration is finished.
+
+A unit's real scheduling rules surface over months. The configuration window
+lasts days. The rules that get captured are the ones someone can say out loud in
+a meeting: minimum staffing, overtime thresholds, shift lengths. The ones that
+live in a manager's judgment do not. The two nurses who should not share a
+shift. The nurse finishing a degree who cannot take Tuesdays. The per diem who
 is reliable on weekends and unreachable midweek.
 
-Every rule the software does not know becomes a correction someone makes by
-hand. Corrections accumulate each cycle. Eventually the manager stops correcting
-the draft and starts building from scratch.
+Every rule the system does not know becomes a correction made by hand.
+Corrections accumulate each cycle. Eventually the manager stops correcting the
+draft and starts from a blank grid.
 
 ### The part that decides it
 
 Enterprise scheduling platforms assume a role most hospitals do not staff.
 
-Read the public reviews of the major platforms and a pattern appears. The people
-who describe implementation going well tend to hold dedicated technical jobs.
-One reviewer who described a smooth rollout listed what came with it: project
-management and user training, included. Their title was director of IT services.
-The people who describe abandonment are managers doing scheduling alongside a
-clinical role. One wrote that the automated scheduling and rules setup "seem to
-have hiccups," and that they "just stopped using the automation."
+They assume someone owns the configuration after go-live. Someone who updates
+the rules when a nurse's competency changes, when a unit's coverage requirement
+moves, when a contract term lands. In a large system that person exists and has
+a title: workforce analyst, staffing coordinator, scheduling super user.
+
+Below a certain size, that role is not on the org chart. The work does not
+disappear with it. It defaults to whoever is closest, which is the nurse
+manager, who already has a unit to run.
+
+Read the public reviews of the major platforms and the pattern is visible. The
+reviewers who describe implementation going well tend to hold dedicated
+technical jobs. One who described a smooth rollout listed what came with it,
+project management and user training included, under the title director of IT
+services. The reviewers describing abandonment are managers doing scheduling
+alongside a clinical assignment. One wrote that the automated scheduling and
+rules setup "seem to have hiccups," and that they "just stopped using the
+automation."
 
 Same category of product. Different staffing behind it.
 
-That is why one platform can succeed at a 400-bed system and die at a 25-bed
-hospital. The system has a workforce analyst who keeps the configuration
-current. The small hospital has a nurse manager who also takes clinical shifts.
-Ownership defaults to whoever is left, and whoever is left has a unit to run.
+### What the research supports, and what it does not
+
+The nursing literature is careful here, and it is worth being careful with it.
+An integrative review of nurse manager span of control found the evidence on
+turnover genuinely mixed. One study reported no relationship between span and
+turnover. Another found wide spans associated with intent to resign.
+
+What the same body of work supports more consistently is narrower and more
+useful: managers report greater satisfaction and less burnout when
+administrative support is provided. That is the finding that bears on a renewal
+decision. The question is not how many people report to the manager. It is
+whether anyone is carrying the administrative load beside her.
+
+Scheduling configuration is exactly that kind of load. The cost of getting it
+wrong is better established than the span research:
+[hospital RN turnover averages 17.6%, at roughly $60,090 per bedside departure](https://simplescheduleai.com/rural-hospital-nurse-staffing-statistics).
 
 ### Two numbers you can get this week
 
 Neither requires buying anything.
 
-Count the overrides. Take the last three posted schedules and compare each with
-the draft the software generated. Under five changed assignments is healthy. If
-a third of the grid changed, the configuration no longer describes the unit.
+Count the overrides. Take the last three posted schedules and compare each
+against the draft the system generated. A handful of changed assignments is
+normal. If a third of the grid moved, the configuration no longer describes the
+unit.
 
 Then look for the parallel spreadsheet. Ask whether the schedule passes through
-a spreadsheet before it gets posted. If it does, you are paying for a filing
-cabinet.
+one before it is posted. If it does, you are paying to store a roster.
 
-Login counts will not tell you either of these things. A manager can open the
-software daily and still build the real schedule somewhere else.
+Login counts will not tell you either of these. A manager can open the software
+every day and still build the real schedule somewhere else.
 
 ### Before the next renewal
 
-Implementation timelines are worth reading in this light. One widely used
-hospital scheduling platform shows an average time to implement of three months
-on its public listing, averaged from its own reviewers. Three months is not
-three months of vendor work. It is three months of a hospital finding hours it
-did not have, from people who already have jobs.
-
-That lands hardest where the margin is thinnest. There are 1,388 certified
-critical access hospitals in the United States, and at that scale a single
-departure is expensive: hospital RN turnover averages 17.6%, at roughly $60,090
-per bedside departure.
-
-So before renewing any scheduling platform, write down the name of the person
-who owns its configuration. Not the person who bought it. The person who updates
-the rules when a nurse's competency changes or a unit's coverage requirement
-moves.
+Write down the name of the person who owns the configuration. Not the person who
+approved the purchase. The person who updates the rules when the unit changes.
 
 If that line is blank, you are not renewing software. You are renewing a tool
 nobody operates.
@@ -99,36 +115,74 @@ _Pradeep Pandey is co-founder of SimpleScheduleAI._
 
 ## Notes for your edit
 
-**Where the link goes.** One link only, on the turnover and hospital-count
-sentence: `https://simplescheduleai.com/rural-hospital-nurse-staffing-statistics`.
-That page is the sourced compilation behind both figures, which is what makes
-the link editorial rather than promotional. Do not add a second link anywhere.
+### What changed from draft 1, and why
 
-**Where this draft is weakest, and where you are strongest.** The opening scene
-is generic because I do not have your specific one. If you have watched this
-happen at a named-but-unidentified hospital, replace the first paragraph with
-that. An editor takes a Viewpoint for the operator's eye, and a real scene is
-the difference between a publishable piece and a competent one. The same is true
-of the "how it happens" section: your Apollo operations background is the reason
-you can assert this, and one first-person sentence there would carry the piece.
+**The evidence spine moved from review-mining to peer-reviewed literature.**
+Draft 1 rested on two Capterra quotes plus a G2 implementation figure. That is
+thin for an executive audience and reads like vendor research. This draft leads
+the evidence section with an integrative review of nurse manager span of control
+(PMC10660758), and it does something draft 1 did not: **it reports the evidence
+against itself.** The review found the span-to-turnover link mixed, one study
+finding no relationship at all. Saying so costs nothing and buys credibility,
+because an executive who knows the literature will not trust a piece that
+overstates it.
 
-**Verification status of every factual claim.**
+**The load-bearing finding is now Simpson et al. (2017, Nursing Administration
+Quarterly), via that review: managers report greater satisfaction and less
+burnout when administrative support is provided.** That is the ownership
+argument, stated by the nursing literature rather than by a vendor.
 
-- Three-month implementation average: G2 listing, page-verified 2026-08-14. Safe
-  as written, because it is attributed to the listing and to its own reviewers,
-  not presented as an industry figure.
-- Both reviewer quotes: verbatim from public Capterra reviews (May 10 2024 and
-  March 22 2021), deliberately unattributed to a brand. See the trap note below.
-- 1,388 critical access hospitals: Flex Monitoring Team, July 2026.
-- 17.6% turnover and $60,090 per departure: 2026 NSI report, CY2025 data.
+**The evidence count dropped from five items to three.** The pack said pick two
+or three; draft 1 used five and diluted itself.
 
-**The one deliberate omission.** I did not name the products behind either
-quote. Both are real and public, but naming rivals in a piece under your byline
-reads as competitive positioning rather than commentary, and the argument does
-not need the brand. If you disagree, that is a judgment call worth making
-consciously rather than by accident.
+### A number I nearly used and did not
 
-**Rules this draft is holding to, so you do not undo them by accident.**
-SimpleScheduleAI appears once, in the bio, in their own example format. No
-customer, pilot or outcome claims anywhere, because we have none. No em-dashes.
-No vendor names. Plain English and AP style, per their guidance.
+A widely repeated figure says unit turnover rises 1.6% for every 10 employees
+added to a nurse manager's span. **It is not in this draft.** I could not
+page-verify it (the AONL PDF would not open through our fetcher), and the
+peer-reviewed review directly complicates it by reporting no span-turnover
+relationship in at least one study. If you want it in, verify it against the
+AONL source yourself first. It is a strong line and it is not worth the risk of
+an editor checking it.
+
+### The two places that need your voice
+
+1. **The opening scene.** It is generic because I do not have yours. If you have
+   watched a hospital pay for scheduling software while the real schedule lived
+   in a spreadsheet, replace the first paragraph with that. An editor takes a
+   Viewpoint for the operator's eye, and a real scene is what separates a
+   publishable piece from a competent one.
+2. **The "why it happens" section.** Your Apollo operations background is why you
+   can assert this at all. One first-person sentence there would carry the piece.
+   Something like what you saw go in, and what people were doing 18 months later.
+
+### Verification status of every factual claim
+
+- **Span of control review:** integrative review of nurse manager span of control
+  in hospital settings, PMC10660758, fetched and quoted 2026-08-18. Mixed
+  turnover evidence: "SOC is not related to staff turnover" (Wong et al., 2015,
+  Journal of Nursing Management) against "a wide SOC was associated with intent
+  to resign from the post" (Brown et al., 2013, same journal).
+- **Administrative support finding:** "NMs experience greater satisfaction and
+  less burnout when...support...is provided" (Simpson et al., 2017, Nursing
+  Administration Quarterly), via the same review.
+- **Both reviewer quotes:** verbatim from public Capterra reviews (May 10 2024
+  and March 22 2021), deliberately unattributed to any brand.
+- **17.6% turnover and $60,090 per departure:** 2026 NSI report, CY2025 data, per
+  the facts dossier.
+
+### Rules this draft holds to, so you do not undo them by accident
+
+- **SimpleScheduleAI appears once, in the bio,** in their own example format. No
+  description of what we sell, no "we help hospitals" sentence anywhere.
+- **One link only,** on the turnover figures, pointing at our sourced statistics
+  compilation. That placement is what makes it editorial rather than
+  promotional. Do not add a second.
+- **No competitor names.** Both reviewer quotes are real and public, but naming
+  rivals under your byline reads as competitive positioning rather than
+  commentary. The argument never needed the brand.
+- **No customer, pilot or outcome claims.** We are pre-launch with zero
+  customers. Your Apollo operations background is real and usable;
+  SimpleScheduleAI results are not.
+- **No em-dashes, no marketing vocabulary.** They asked for plain conversational
+  English and AP style.
