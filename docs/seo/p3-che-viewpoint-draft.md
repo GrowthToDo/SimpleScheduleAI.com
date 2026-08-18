@@ -72,9 +72,10 @@ Same category of product. Different staffing behind it.
 ### What the research supports, and what it does not
 
 The nursing literature is careful here, and it is worth being careful with it.
-An integrative review of nurse manager span of control found the evidence on
-turnover genuinely mixed. One study reported no relationship between span and
-turnover. Another found wide spans associated with intent to resign.
+An [integrative review of nurse manager span of control](https://pmc.ncbi.nlm.nih.gov/articles/PMC10660758/)
+found the evidence on turnover genuinely mixed. One study reported no
+relationship between span and turnover. Another found wide spans associated with
+intent to resign.
 
 What the same body of work supports more consistently is narrower and more
 useful: managers report greater satisfaction and less burnout when
@@ -83,8 +84,9 @@ decision. The question is not how many people report to the manager. It is
 whether anyone is carrying the administrative load beside her.
 
 Scheduling configuration is exactly that kind of load. The cost of getting it
-wrong is better established than the span research:
-[hospital RN turnover averages 17.6%, at roughly $60,090 per bedside departure](https://simplescheduleai.com/rural-hospital-nurse-staffing-statistics).
+wrong is better established than the span research. The 2026 NSI National Health
+Care Retention Report puts average hospital RN turnover at 17.6%, at roughly
+$60,090 per bedside departure.
 
 ### Two numbers you can get this week
 
@@ -175,9 +177,16 @@ an editor checking it.
 
 - **SimpleScheduleAI appears once, in the bio,** in their own example format. No
   description of what we sell, no "we help hospitals" sentence anywhere.
-- **One link only,** on the turnover figures, pointing at our sourced statistics
-  compilation. That placement is what makes it editorial rather than
-  promotional. Do not add a second.
+- **NO link to our own domain. Changed 2026-08-18 on the founder's challenge.**
+  An earlier draft linked our statistics page on the turnover figures. The
+  founder asked whether their guidelines actually permit that, and they do not:
+  the non-negotiable rule is "avoiding any overt or subtle promotion of specific
+  companies," and a vendor founder's byline linking that vendor's domain is
+  precisely that. The single link is now the peer-reviewed span-of-control
+  review, which is literally what they invited ("link to studies"). NSI is
+  attributed in text without a link. **Do not add a link to simplescheduleai.com
+  anywhere in this piece.** The placement and the byline are the asset; a
+  self-placed link an editor would likely strip is not worth risking them.
 - **No competitor names.** Both reviewer quotes are real and public, but naming
   rivals under your byline reads as competitive positioning rather than
   commentary. The argument never needed the brand.

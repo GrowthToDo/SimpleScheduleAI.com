@@ -86,11 +86,20 @@ Three rules that decide whether this works for us:
    subtle promotion of specific companies or products." They explicitly route
    promotional material to paid sponsored content instead. So the piece argues an
    idea; SimpleScheduleAI appears only in the one-line author bio.
-2. **The link mechanism is citation, not promotion.** They take no footnotes, but
-   "it's a good idea to link to studies or news stories that are relevant." Our
-   statistics page is a legitimate thing to link as a data source in a piece
-   about rural staffing. That is the dofollow path here, and it only works if
-   the data genuinely supports the argument.
+2. **Link STUDIES, never our own domain. REVERSED 2026-08-18 by founder
+   challenge.** They take no footnotes but say "it's a good idea to link to
+   studies or news stories that are relevant." An earlier version of this rule
+   argued our statistics page was "a legitimate thing to link as a data source"
+   and then admitted, one sentence later, "that is the dofollow path here." That
+   second clause was the real motive, and it is exactly what rule 1 forbids: a
+   vendor founder's byline carrying a link to that vendor's domain is subtle
+   promotion of a specific company, whatever the page contains.
+   **The asymmetry decides it.** Upside is one link an editor will probably strip
+   anyway. Downside is a rejected piece and a permanently burned outlet, in
+   exchange for a self-placed link that is worth less than an earned one
+   regardless. Link the primary sources instead, which is literally what they
+   asked for. Precedent from our own ledger: the nursemagazine.co dofollow link
+   was EARNED without asking, because the contribution was worth citing.
 3. **Human authors only, stated explicitly.** Verbatim: "We don't want pieces
    created by AI. We expect contributed features to be written by human authors.
    We understand if contributors are using AI tools to assist in research or spur
