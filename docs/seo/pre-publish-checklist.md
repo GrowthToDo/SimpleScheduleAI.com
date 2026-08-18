@@ -68,6 +68,26 @@ block a publish on them, and never cite "AI citation probability" as their reaso
 
 These repeatedly slip past agent passes. Check each explicitly.
 
+- [ ] **PLAIN LANGUAGE SWEEP — read every paragraph and ask whether a busy DON would need a second
+      pass to get it.** Founder rule, made a standing pre-publish check 2026-08-18 after he flagged
+      the same defect on two consecutive posts (acuity, then charge nurse). The gate cannot catch
+      this: sentences can be short, jargon-free and still abstract. What he actually flagged, as the
+      pattern to hunt:
+      - **Abstraction where a concrete noun would do.** "a manager-level gap is showing up as a
+        shift-level crisis" became "that is a planning problem, and it lands on the shift".
+        "the constraint that binds first is scope of practice" became "what runs out first is scope
+        of practice".
+      - **Metaphor doing real work.** "that closes the escape hatch an ordinary callout would use"
+        became "the option you would normally fall back on is closed".
+      - **Piled-up clause lists.** One sentence carrying four actions gets split into four
+        sentences, even though the original was under the 35-word gate limit.
+      - **Invented precision.** "all 21 shifts a week" assumed 8-hour shifts; units running 12s
+        have 14. Drop the number rather than defend it.
+      - **Grand claims.** "the question the rest of the internet does not answer" became "the part
+        that keeps managers awake, and most guides skip it".
+      Do this sweep on the WHOLE post, not only the lines someone quoted back. Both times the
+      founder said "check the whole blog for similar language", which means the class survived the
+      first fix.
 - [ ] **Excerpt is a DISTINCT hook, not a restatement.** Quote the excerpt's first sentence, the
       intro's first sentence, and each Key Takeaway bullet, then compare. The excerpt must not open
       on the same clause as the intro and must not restate any single KT bullet near-verbatim.

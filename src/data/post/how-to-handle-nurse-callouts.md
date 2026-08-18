@@ -217,7 +217,7 @@ Whoever holds the current ranked list and the hours data, which is usually the m
 
 **Q: What happens when the charge nurse is the one calling out?**
 
-Filter the list to charge-qualified nurses first, which usually shrinks the pool to a handful. Work that short list in ranked order. If no charge-qualified nurse can take the shift, the remaining options are voluntary overtime from a charge-qualified nurse or reassessing coverage under your minimum staffing rules, documented either way.
+Filter the list to charge-qualified nurses first, which usually shrinks the pool to a handful. Work that short list in ranked order. If no charge-qualified nurse can take the shift, the remaining options are voluntary overtime from a charge-qualified nurse or reassessing coverage under your minimum staffing rules, documented either way. Our guide to [what a charge nurse is and who covers the shift](/blog/what-is-a-charge-nurse) explains why that pool is so small.
 
 **Q: Does SimpleScheduleAI handle callouts outside business hours?**
 

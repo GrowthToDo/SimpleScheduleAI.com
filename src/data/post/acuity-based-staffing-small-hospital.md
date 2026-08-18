@@ -76,7 +76,7 @@ Measurement cost is the third problem. Scoring every patient every shift takes r
 
 ## How Do You Set Acuity Tiers Without Buying an Acuity Tool?
 
-Use census bands with a named skill mix. Group your realistic patient loads into three or four bands, and for each band write down the exact number of registered nurses, licensed vocational nurses, aides and charge coverage the unit requires. Then add one modifier for the nights when the patients are heavier than the count suggests.
+Use census bands with a named skill mix. Group your realistic patient loads into three or four bands, and for each band write down the exact number of registered nurses, licensed vocational nurses, aides and [charge coverage](/blog/what-is-a-charge-nurse) the unit requires. Then add one modifier for the nights when the patients are heavier than the count suggests.
 
 Bands work as your written plan because they do what the law asks. They state minimum staffing, they take the patients into account, and they leave room for a contingency line. A director of nursing can build one in an afternoon, and a charge nurse can apply it in ten seconds at handoff.
 

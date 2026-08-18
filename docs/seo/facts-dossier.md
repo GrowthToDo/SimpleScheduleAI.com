@@ -227,6 +227,26 @@ All verified from loaded primary pages/PDFs on 2026-07-13; collected for the pla
 - URL: https://www.nursingworld.org/practice-policy/nurse-staffing/
 - Verified: 2026-07-04
 
+### Charge nurse: what the role is (ANA + RegisteredNursing.org)
+
+- Approved wording (ANA, verbatim): "Charge nurses oversee the operations of their specific nursing unit during a set period while working alongside the team." ANA lists charge duties including "Ensuring staff adheres to workplace protocols and procedures", "Overseeing the smooth transition from one shift to another", and "Creating and evaluating staffing plans and schedules". ANA's nurse-manager contrast: "Nurse managers are licensed nurses in upper management positions. Because their roles are mainly administrative, they often work in an office environment versus a clinical setting."
+- Approved wording (RegisteredNursing.org, verbatim): **"The position is an assignment, not a separate license or title."** Also: "No nationally recognized charge-nurse-specific certification exists"; "most charge nurses still take a patient assignment on top of their leadership duties"; "The role is layered on, not swapped in."
+- **Why these two sources and not one.** ANA is the professional body and gives the cleanest definition and the manager contrast, but its page does NOT say whether charge is a shift assignment or a standing title. Do not attribute the assignment-versus-title point to ANA. That point comes from RegisteredNursing.org, which states it explicitly.
+- Attribution rule for the "most charge nurses" line: it is RegisteredNursing.org's volume claim, not ours. Quote it with attribution, never restate it in our own voice as "most charge nurses do X".
+- Wrong: claiming a charge nurse certification or license exists; claiming ANA defines charge as a rotating assignment; asserting in our own voice how many charge nurses carry a patient load.
+- URL: https://www.nursingworld.org/content-hub/resources/nursing-resources/charge-nurse-vs-nurse-manager/ (ANA); https://www.registerednursing.org/specialty/charge-nurse/ (RegisteredNursing.org)
+- Verified: 2026-08-18 (nurse.com bot-blocks automated fetches; both sources above loaded normally)
+
+### Charge nurse: preparation gap (American Nurse Journal)
+
+- Approved wording (verbatim): charge nurses are "frontline leaders" who "act as go-to resource problem solvers, overseers of patient safety and care quality, policy enforcers, and operational experts responsible for processes including staffing and coordinating nurse-patient assignments." On preparation: "Traditionally, nurses learn the charge nurse role over time as they progress from novice to expert," and **"Many organizations lack role-specific competency-based orientation, leaving nurses to learn on the job."**
+- Source: Bilyeu et al., American Nurse Journal (2023). This is the ANA's own journal, so it is the strongest authority we have on the role and it corroborates the assignment framing without stating it directly.
+- **Why this entry exists.** An adversarial fact-check on 2026-08-18 found that the whole "charge is an assignment, not a title" thesis rested on RegisteredNursing.org alone, a commercial nursing-education site, because the ANA charge-vs-manager page does not address the question. This entry adds an authoritative second source for the surrounding claim that the role is learned on the job rather than credentialed.
+- **Practice varies, and it IS sourced.** RegisteredNursing.org carries this verbatim, in two places on the same page already cited above: "In many hospitals, the charge nurse role is a rotating assignment given to experienced staff nurses on a per-shift basis, not a formal title change. In other settings, it is a permanent, posted position with its own job description and pay grade." Also: "Some hospitals rotate the responsibility among experienced staff nurses on a shift-by-shift basis... Others appoint a permanent charge nurse for each shift or post the role as a formal position requiring an application and interview process." Do NOT state flatly that charge is always an assignment; quote this instead. (Recorded 2026-08-18 after a first pass hedged the point as an unsourced generalisation while the quote sat unused in a source the post already cited. The allnurses page carrying similar wording bot-blocks at 403 and is not needed.)
+- Wrong: citing this source for the assignment-versus-title point, which it does not make; treating "learn on the job" as a claim that charge nurses are untrained.
+- URL: https://www.myamericannurse.com/magnet-and-the-charge-nurse-role/
+- Verified: 2026-08-18
+
 ### ARISE Healthcare AI Industry Report (July 2026)
 
 - **Source note:** ARISE (Stanford/Harvard academic collaborative), "Healthcare AI Industry Report," July 2026 edition — PDF supplied directly by the founder. UPGRADE 2026-07-12: the report's official bibliography appendix ("ARISE Industry Report Appendix vShare.pdf", Google Drive via tinyurl.com/ARISE-References-26) was fetched and the primary citations below are now verified as real, correctly-attributed publications (citation-verified; the full papers themselves were not read — quote the finding via ARISE, cite the primary by name+DOI).

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-a-charge-nurse",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-18T06:57:48.156Z",
+      "contentHash": "44307cc0ad41071f24d92c8d164e1af9b0e9e70299ccd86fe2740d729c18298a"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-18T06:57:49.893Z",
+      "contentHash": "44307cc0ad41071f24d92c8d164e1af9b0e9e70299ccd86fe2740d729c18298a"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-18T06:57:50.953Z",
+      "contentHash": "44307cc0ad41071f24d92c8d164e1af9b0e9e70299ccd86fe2740d729c18298a"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-18T06:57:50.994Z",
+      "contentHash": "44307cc0ad41071f24d92c8d164e1af9b0e9e70299ccd86fe2740d729c18298a"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-18T06:57:51.025Z",
+      "contentHash": "44307cc0ad41071f24d92c8d164e1af9b0e9e70299ccd86fe2740d729c18298a"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-18T06:57:51.025Z",
+      "contentHash": "44307cc0ad41071f24d92c8d164e1af9b0e9e70299ccd86fe2740d729c18298a"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-18T06:57:51.027Z",
+      "contentHash": "44307cc0ad41071f24d92c8d164e1af9b0e9e70299ccd86fe2740d729c18298a"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-08-18T06:58:02.437Z",
+      "contentHash": "bd351e90c8308bcb7b4916c1704dd1b8ea8d9155194b0160cca86b00a9848ce8"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "verifier",
+      "setAt": "2026-08-18T06:58:03.383Z",
+      "contentHash": "bd351e90c8308bcb7b4916c1704dd1b8ea8d9155194b0160cca86b00a9848ce8"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-08-18T06:58:04.127Z",
+      "contentHash": "bd351e90c8308bcb7b4916c1704dd1b8ea8d9155194b0160cca86b00a9848ce8"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-18T06:58:04.912Z",
+      "contentHash": "bd351e90c8308bcb7b4916c1704dd1b8ea8d9155194b0160cca86b00a9848ce8"
+    }
+  },
+  "overrides": []
+}
