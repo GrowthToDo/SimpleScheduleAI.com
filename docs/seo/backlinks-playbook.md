@@ -316,17 +316,52 @@ https://simplescheduleai.com/about/pradeep-pandey
 
 ### 8e. HARO / Qwoted response format
 
+**Pick the variant by whether the platform already carries the profile.** Getting
+this wrong is what makes an otherwise good answer read as an ad.
+
+**8e-i. Platform with an attached source profile (Qwoted, Featured).** The
+platform shows your name, title, company and link automatically. Repeating them
+in the body is redundant and eats the word budget with the least useful content
+in the message. **No signature block.**
+
 ```
 [Answer the exact question in the first 2 sentences — specific and usable.]
-[One concrete number or example from real CAH context.]
+[One concrete number, or one pattern you have personally seen.]
 [One sentence of practical takeaway.]
 
-Attribution: Pradeep Pandey, Co-founder, SimpleScheduleAI
+[Optional closer, useful not promotional:
+ "Happy to go deeper on <the specific mechanism> if useful."]
+
+[Under 150 words, or under the query's stated limit, whichever is lower.]
+```
+
+The credential belongs in the FIRST sentence, as a plain statement of standing
+("I work in hospital operations"), not in a sign-off. That is what a journalist
+reads to decide whether to trust the rest.
+
+**8e-ii. Cold email to a journalist, where nothing is attached.** Here the block
+IS needed, because there is no profile to carry it.
+
+```
+[Answer / observation, same shape as above.]
+
+Pradeep Pandey, Co-founder, SimpleScheduleAI
 (an AI-native nurse scheduling service for Critical Access Hospitals).
 https://simplescheduleai.com — [founder LinkedIn]
-
-[Keep total under 150 words. No marketing language. Journalists cut fluff.]
 ```
+
+**Origin (2026-08-18):** a Qwoted response was drafted with the 8e-ii block
+attached. The founder caught it: the profile was already on the platform, and
+the self-description read as a sales line inside a 100-word answer. The single
+template was being applied to both channels.
+
+**Plain-language rule applies to outbound copy too.** The same defect class the
+pre-publish checklist hunts in blog posts (abstractions where concrete nouns
+belong) showed up in this pitch. "The work around it never changed" and "costs
+minutes she does not have" were rewritten to "the tool gets added and nothing
+gets taken away ... the same patients, the same deadline and the same
+paperwork". Run the checklist's PLAIN LANGUAGE SWEEP over any pitch before
+sending.
 
 **Evidence bank for the "one concrete number" line.** The slowest part of a
 journalist response is finding a defensible figure under time pressure, so pull
