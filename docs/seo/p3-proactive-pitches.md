@@ -119,8 +119,20 @@ reviewer accounts plus the rural staffing data, and the practical takeaway is
 the override count and the parallel-spreadsheet test. Nothing in that argument
 requires naming us.
 
-Status: **PROSPECT, ready to pitch.** Needs Pradeep to write it. Evidence pack,
-structure and traps are in `p3-che-viewpoint-pack.md`.
+Status: **SENT 2026-08-18** by the founder to rsouthwick@mjhlifesciences.com.
+Piece pasted in the email body (not attached), headshot attached, ~681 words.
+Evidence pack and traps in `p3-che-viewpoint-pack.md`; the submitted draft and
+its verification notes are in `p3-che-viewpoint-draft.md`.
+
+**No follow-up before ~2026-09-01**, and one maximum, per the lane rule. Their
+guidance is to send the piece rather than query, so silence is a normal outcome
+and chasing it early reads badly with an editor who receives unsolicited
+submissions all day.
+
+**If it runs:** log the placement in `backlink-ledger.md` with the link's rel
+attribute checked in a real browser, and write the LinkedIn share post in the
+SAME session (the gap that bit us on the nursemagazine.co placement, where the
+ledger row existed for six days with no share post written).
 
 ## Rules for this lane
 
@@ -143,3 +155,5 @@ structure and traps are in `p3-che-viewpoint-pack.md`.
 | 2026-08-14 | NRHA Rural Health Voices | Read their blog page | DISQUALIFIED: staff and vetted partners only, no contributed route |
 | 2026-08-14 | American Nurse Journal | Read author guidelines | VERIFIED OPEN but POOR FIT: wants evidence-based clinical content (treatments, procedures, diagnostics) and the author is not a nurse. Blog/Perspectives (600-1200 words) is the only plausible slot. Park unless a genuinely clinical angle appears |
 | 2026-08-14 | **Chief Healthcare Executive** | Read submission guidelines in a real browser | **VERIFIED OPEN, BEST FIT.** Viewpoint pieces, 600-700 words, editor address recorded above. Non-promotional and human-author rules both explicit. Ready to pitch; needs Pradeep to write |
+| 2026-08-18 | **Chief Healthcare Executive** | **SENT by founder** to rsouthwick@mjhlifesciences.com | Piece in the email body, headshot attached, ~681 words. Argument: scheduling software gets worked around because nobody owns the configuration after go-live. Zero product mentions, zero self-links, one link to a peer-reviewed span-of-control review. Awaiting reply |
+| 2026-08-18 | Self-link rule REVERSED | Founder challenged whether their guidelines permit linking our own domain | They do not. An earlier version of rule 2 argued our statistics page was a fair data source and then admitted "that is the dofollow path here", which was the actual motive and exactly what their non-promotional rule forbids. Link studies, never our domain. Reasoning recorded in rule 2 |
