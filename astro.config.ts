@@ -44,6 +44,14 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/tag/') &&
         !page.includes('/category/') &&
+        // Paginated blog-list pages (/blog/2, /blog/3, ...) carry a noindex:
+        // src/pages/[...blog]/[...page].astro sets `index: ... && currentPage === 1`.
+        // Listing a noindexed URL in the sitemap is a contradictory signal and wastes
+        // crawl budget, which matters on a domain Google is already rationing.
+        // GSC confirmed /blog/2, /blog/3 and /blog/4 as "Excluded by noindex tag"
+        // while still submitted, and /blog/5 as unknown to Google (2026-08-18).
+        // Matches ONLY a trailing all-digits segment, so real post slugs are untouched.
+        !/\/blog\/\d+\/?$/.test(page) &&
         !page.includes('/ask') &&
         !page.includes('/simulator') &&
         // Unlisted product-positioning page (noindex); remove this line together
