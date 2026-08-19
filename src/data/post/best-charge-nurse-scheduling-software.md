@@ -246,7 +246,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service built specifically for
 
 ### 2. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/Nursegrid.webp" alt="NurseGrid Manager scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/Nursegrid.webp" alt="NurseGrid Manager scheduling interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager is a scheduling and communication platform built for nursing staff. It is popular at small hospitals for its clean mobile interface and shift-swap functionality.
 
@@ -269,7 +269,7 @@ NurseGrid Manager is a scheduling and communication platform built for nursing s
 
 ### 3. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/Smartlinx.webp" alt="SmartLinx scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/Smartlinx.webp" alt="SmartLinx scheduling software interface" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SmartLinx is a workforce management platform that includes configurable credential-based scheduling rules. It can be configured to enforce charge nurse coverage requirements, but that configuration requires IT involvement.
 
@@ -292,7 +292,7 @@ SmartLinx is a workforce management platform that includes configurable credenti
 
 ### 4. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec is a scheduling platform originally designed for EMS and fire services that has expanded to healthcare. Its scheduling engine can be configured to track charge qualifications, but this requires manual setup.
 
@@ -316,7 +316,7 @@ Aladtec is a scheduling platform originally designed for EMS and fire services t
 
 ### 5. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/QGenda.webp" alt="QGenda scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/QGenda.webp" alt="QGenda scheduling software interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 QGenda is a provider scheduling platform with strong credential-based scheduling logic. It was built primarily for physician scheduling but includes nursing module capabilities.
 
@@ -339,7 +339,7 @@ QGenda is a provider scheduling platform with strong credential-based scheduling
 
 ### 6. [OnShift](https://www.onshift.com) (now part of Workday)
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/Onshift.webp" alt="OnShift scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/Onshift.webp" alt="OnShift scheduling software interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 OnShift was built for long-term care and senior living. Its scheduling model assumes lower acuity staff and shift structures common in nursing homes, not acute care hospitals.
 
@@ -362,7 +362,7 @@ OnShift was built for long-term care and senior living. Its scheduling model ass
 
 ### 7. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/Deputy.webp" alt="Deputy scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/Deputy.webp" alt="Deputy scheduling software interface" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Deputy is a workforce management platform used primarily in hospitality, retail, and general shift work. It has expanded into healthcare but lacks clinical-specific scheduling logic.
 
@@ -385,7 +385,7 @@ Deputy is a workforce management platform used primarily in hospitality, retail,
 
 ### 8. [UKG (formerly Kronos)](https://www.ukg.com)
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/UKG.webp" alt="UKG scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/UKG.webp" alt="UKG scheduling software interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 UKG is an enterprise workforce management suite deployed at large health systems. It has comprehensive charge nurse credential tracking and coverage enforcement capabilities. It also has enterprise implementation timelines and pricing.
 

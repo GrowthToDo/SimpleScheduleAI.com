@@ -65,7 +65,7 @@ Here is how the alternatives compare before we go deeper:
 
 Hospitals switch away from Aladtec because the platform's heritage is in public-safety scheduling, not hospital nursing. CAH nurse managers report that routine schedule edits require too many clicks, the initial configuration is harder than expected, and the Capterra reviewer base skews toward fire, EMS, and law enforcement rather than acute hospital nursing. Configuration maintenance burden and limited CMS compliance automation are the two most common specific complaints from hospital users.
 
-<img src="/images/blog/aladtec-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/aladtec-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews).[1] The overall ratings are strong, but the Capterra reviewers skew heavily toward fire, EMS, and law enforcement users. The minority of negative reviews from hospital users cluster around two recurring themes worth probing specifically during a CAH demo.
 
@@ -188,7 +188,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 
 ## 2. [TCP Scheduling](https://www.tcpsoftware.com)
 
-<img src="/images/blog/aladtec-alternatives/TCP.webp" alt="TCP Scheduling Software workforce management platform for healthcare" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/aladtec-alternatives/TCP.webp" alt="TCP Scheduling Software workforce management platform for healthcare" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews). TCP Software owns Aladtec, and TCP Scheduling is their enterprise-tier product, more powerful, more configurable, and significantly more complex than Aladtec. For a hospital that wants to stay within the TCP vendor ecosystem but needs capabilities that Aladtec does not provide, TCP Scheduling is the direct upgrade path.
 
@@ -224,7 +224,7 @@ The tradeoff is considerable. TCP Scheduling requires a longer implementation, I
 
 ## 3. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/aladtec-alternatives/Smartlinx.webp" alt="SmartLinx workforce management platform with compliance and scheduling features" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/aladtec-alternatives/Smartlinx.webp" alt="SmartLinx workforce management platform with compliance and scheduling features" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SmartLinx holds 4.5/5 on Capterra (6 reviews; small sample). The vendor describes the platform as "purpose-built for the long-term care, post-acute care, senior care, and behavioral health industries" ([smartlinx.com](https://www.smartlinx.com)). It addresses more of Aladtec's hospital-specific gaps than When I Work or Homebase, with stronger healthcare compliance logic, more automated credential tracking, and integrated time and attendance. The tradeoff is a significantly longer and more complex implementation.
 
@@ -264,7 +264,7 @@ Hospitals that leave Aladtec because of configuration burden and then adopt Smar
 
 ## 4. [When I Work](https://wheniwork.com)
 
-<img src="/images/blog/aladtec-alternatives/WhenIWork.webp" alt="When I Work scheduling and shift management app for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/aladtec-alternatives/WhenIWork.webp" alt="When I Work scheduling and shift management app for healthcare teams" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 When I Work is a scheduling app positioned across retail, hospitality, and small-business workforce scheduling ([wheniwork.com](https://wheniwork.com)). The mobile app is well-designed, shift pickup and communication features are documented as core, and setup is described as fast.
 
@@ -300,7 +300,7 @@ When I Work is a scheduling app positioned across retail, hospitality, and small
 
 ## 5. [Homebase](https://joinhomebase.com)
 
-<img src="/images/blog/aladtec-alternatives/Homebase.webp" alt="Homebase workforce scheduling and time tracking app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/aladtec-alternatives/Homebase.webp" alt="Homebase workforce scheduling and time tracking app" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Homebase is positioned primarily for retail, restaurant, and service industry scheduling ([joinhomebase.com](https://joinhomebase.com)). The free tier and low cost make it attractive as a pure cost-reduction option for very small care settings with minimal scheduling complexity.
 
@@ -328,7 +328,7 @@ Homebase is positioned primarily for retail, restaurant, and service industry sc
 
 ## 6. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/aladtec-alternatives/Deputy.webp" alt="Deputy general workforce scheduling platform for healthcare teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/aladtec-alternatives/Deputy.webp" alt="Deputy general workforce scheduling platform for healthcare teams" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Deputy holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews), a strong overall rating across a large general workforce sample.[5] Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) covering hospitals, clinics, and nursing facilities. Compared to Aladtec, Deputy is simpler to configure and lower in cost. The documented healthcare feature set is narrower than Aladtec's clinical-specific capability.
 

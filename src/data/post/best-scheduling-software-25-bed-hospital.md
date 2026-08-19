@@ -204,7 +204,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service designed from the star
 
 ### 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-scheduling-software-25-bed-hospital/Aladtec.webp" alt="Aladtec scheduling software interface for small hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-25-bed-hospital/Aladtec.webp" alt="Aladtec scheduling software interface for small hospitals" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec was built for emergency services (EMS, fire, law enforcement) but has a solid base in small hospitals that mirrors those environments: 24/7 coverage, small rosters, mandatory staffing minimums, and a heavy callout burden. Its self-service model is genuinely accessible for nurse managers without technical backgrounds.
 
@@ -241,7 +241,7 @@ Aladtec was built for emergency services (EMS, fire, law enforcement) but has a 
 
 ### 3. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-scheduling-software-25-bed-hospital/Nursegrid.webp" alt="NurseGrid Manager scheduling interface for nurses" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-25-bed-hospital/Nursegrid.webp" alt="NurseGrid Manager scheduling interface for nurses" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager is a nurse communication and schedule visibility tool rather than a full scheduling platform. The core product is a mobile app nurses use to view shifts, request time off, and swap shifts. The manager layer publishes schedules and sends broadcast open-shift notifications. It works well as a communication layer on top of an existing schedule built in Excel or another system.
 
@@ -281,7 +281,7 @@ NurseGrid Manager is a nurse communication and schedule visibility tool rather t
 
 ### 4. [When I Work](https://wheniwork.com)
 
-<img src="/images/blog/best-scheduling-software-25-bed-hospital/WhenIWork.webp" alt="When I Work scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-25-bed-hospital/WhenIWork.webp" alt="When I Work scheduling software interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 When I Work is a workforce scheduling platform used by small businesses across healthcare, retail, and hospitality. For a 25-bed hospital considering a low-cost digital step up from Excel, When I Work is the most functional budget option. It handles shift scheduling, time tracking, and staff communication in a clean mobile-first interface.
 
@@ -319,7 +319,7 @@ The limitation at a CAH is compliance. When I Work does not have credential trac
 
 ### 5. [Homebase](https://joinhomebase.com)
 
-<img src="/images/blog/best-scheduling-software-25-bed-hospital/Homebase.webp" alt="Homebase scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-scheduling-software-25-bed-hospital/Homebase.webp" alt="Homebase scheduling software interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Homebase is a scheduling and time tracking tool built for very small businesses, primarily under 20 staff. It has a free tier that covers basic scheduling and shift communication. For a 25-bed hospital, Homebase is below the complexity threshold the tool was designed for: most hospitals will have more than 20 nursing staff, and the free tier limits will push the facility onto a paid plan that costs more than the compliance benefit justifies.
 

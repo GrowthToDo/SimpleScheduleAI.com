@@ -235,7 +235,7 @@ SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling
 
 ### 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Aladtec.webp" alt="Aladtec scheduling software interface showing per diem staff availability" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Aladtec.webp" alt="Aladtec scheduling software interface showing per diem staff availability" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 **Ratings:** Capterra 4.6/5 (17 reviews, small sample); G2 4.5/5 (94 reviews).
 
@@ -266,7 +266,7 @@ Aladtec handles per diem staff through a self-reporting availability system wher
 
 ### 3. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Nursegrid.webp" alt="NurseGrid Manager interface for nurse communication and shift management" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Nursegrid.webp" alt="NurseGrid Manager interface for nurse communication and shift management" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 **Ratings:** Capterra 4.2/5 (13 reviews, small sample); G2 4.6/5 (5 reviews, small sample).
 
@@ -296,7 +296,7 @@ NurseGrid Manager is a nurse communication platform with a strong mobile app tha
 
 ### 4. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Smartlinx.webp" alt="SmartLinx workforce management platform for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Smartlinx.webp" alt="SmartLinx workforce management platform for healthcare staffing" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 **Ratings:** Capterra 4.5/5 (6 reviews, small sample); G2 3.8/5 (11 reviews).
 
@@ -326,7 +326,7 @@ NurseGrid Manager is a nurse communication platform with a strong mobile app tha
 
 ### 5. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/QGenda.webp" alt="QGenda provider scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/QGenda.webp" alt="QGenda provider scheduling software interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 **Ratings:** Capterra 4.2/5 (68 reviews); G2 4.6/5 (164 reviews).
 
@@ -356,7 +356,7 @@ NurseGrid Manager is a nurse communication platform with a strong mobile app tha
 
 ### 6. [OnShift](https://www.onshift.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Onshift.webp" alt="OnShift workforce management software for healthcare staffing" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Onshift.webp" alt="OnShift workforce management software for healthcare staffing" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 **Ratings:** Capterra 3.9/5 (14 reviews, small sample); G2 4.5/5 (40 reviews).
 
@@ -382,7 +382,7 @@ NurseGrid Manager is a nurse communication platform with a strong mobile app tha
 
 ### 7. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/Deputy.webp" alt="Deputy employee scheduling software showing shift management interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/Deputy.webp" alt="Deputy employee scheduling software showing shift management interface" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 **Ratings:** Capterra 4.6/5 (773 reviews); G2 4.6/5 (666 reviews).
 
@@ -412,7 +412,7 @@ Deputy's per diem model relies on availability blocks set by the nurse and open-
 
 ### 8. [UKG (formerly Kronos)](https://www.ukg.com)
 
-<img src="/images/blog/best-per-diem-nurse-scheduling-software/UKG.webp" alt="UKG workforce management software for large healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-per-diem-nurse-scheduling-software/UKG.webp" alt="UKG workforce management software for large healthcare organizations" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 **Ratings:** Capterra 4.3/5 (727 reviews); G2 4.3/5 (2,167 reviews).
 

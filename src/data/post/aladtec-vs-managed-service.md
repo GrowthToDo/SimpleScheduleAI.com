@@ -138,7 +138,7 @@ For a 400-bed hospital with a dedicated scheduling department, the distinction m
 
 Aladtec is a web-based scheduling platform originally built for emergency services and expanded to healthcare. It handles shift scheduling, availability tracking, time-off requests, and basic overtime monitoring. Owned by TCP Software, Aladtec is a self-serve tool: the nurse manager or a designated scheduler configures the system, builds each schedule, and maintains the configuration as staff and policy changes occur. If you are running TCP's flagship product instead, our comparison of [TCP scheduling software versus a managed service](/blog/tcp-scheduling-software-vs-managed-service) makes the same self-serve-versus-done-for-you call.
 
-<img src="/images/blog/aladtec-vs-managed-service/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/aladtec-vs-managed-service/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 **What Aladtec does well:**
 

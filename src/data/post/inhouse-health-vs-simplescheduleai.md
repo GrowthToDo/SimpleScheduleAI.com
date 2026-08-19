@@ -53,7 +53,7 @@ Both products use AI to build nurse schedules, so they show up in the same searc
 
 ## What Is In-House Health?
 
-<img src="/images/blog/in-house-health.webp" alt="In-House Health AI nurse scheduling platform interface" width="1280" height="602" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/in-house-health.webp" alt="In-House Health AI nurse scheduling platform interface" width="1200" height="563" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 In-House Health is a venture-funded, seed-stage startup offering an AI-driven nurse scheduling and workforce platform. Its [product page](https://www.inhouse.health/) describes software "purpose-built for nursing teams, integrating predictive analytics, workload adjustments and preference tracking" and an AI copilot that "balances shifts weeks in advance, automatically adjusting for patient acuity, union rules and regulatory requirements." It can layer onto an existing scheduling system or run end to end.
 

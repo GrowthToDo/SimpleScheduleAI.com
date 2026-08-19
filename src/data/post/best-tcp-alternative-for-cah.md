@@ -107,7 +107,7 @@ For a CAH operating under [CMS Conditions of Participation](https://www.cms.gov/
 
 TCP TimeClock+ is a time and attendance platform made by TCP Software that includes employee scheduling as a secondary feature. It handles time tracking, payroll integration, overtime monitoring, and leave management for small and mid-size employers. Scheduling is configurable but not the platform's primary design focus. TCP Software also owns Aladtec and Humanity Scheduling as separate products; hospitals should confirm which product they are being sold before committing.
 
-<img src="/images/blog/best-tcp-alternative-for-cah/TCP.webp" alt="TCP TimeClock+ time and attendance platform homepage" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-tcp-alternative-for-cah/TCP.webp" alt="TCP TimeClock+ time and attendance platform homepage" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 TCP TimeClock+ is a time and attendance platform made by TCP Software that includes employee scheduling as a secondary feature. Its primary strengths are time clock management, payroll integration, leave tracking, and overtime monitoring. Scheduling is part of the platform but not its primary design focus. TCP Software also owns two separate scheduling-focused products: Aladtec (designed for healthcare and public safety scheduling) and Humanity Scheduling (enterprise employee scheduling). A Critical Access Hospital evaluating any TCP product should confirm which one is being proposed and what it covers before committing.
 
@@ -189,7 +189,7 @@ Most Critical Access Hospital nurse managers evaluating TCP TimeClock+ alternati
 
 ## ShiftWizard
 
-<img src="/images/blog/best-tcp-alternative-for-cah/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-tcp-alternative-for-cah/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 ShiftWizard holds 4.4/5 on Capterra from 723 reviews and is purpose-built for hospital nurse scheduling. It is the closest like-for-like replacement for TCP TimeClock+'s scheduling function in the hospital segment, designed for nursing workflows rather than adapted from a general workforce management platform. It covers float pool management, hospital-specific credential fields, and department-level scheduling.
 
@@ -223,7 +223,7 @@ ShiftWizard holds 4.4/5 on Capterra from 723 reviews and is purpose-built for ho
 
 ## Aladtec by TCP
 
-<img src="/images/blog/best-tcp-alternative-for-cah/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-tcp-alternative-for-cah/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec by TCP is a separate TCP Software product designed specifically for healthcare and public safety scheduling. It is not a rebrand of TCP TimeClock+: TCP Software acquired Aladtec in October 2021, and both products remain separately maintained. Aladtec holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews; small sample). If your primary frustration with TCP TimeClock+ is that its scheduling features are too basic for healthcare-specific needs, Aladtec by TCP is the purpose-built TCP alternative worth evaluating before switching vendors entirely.
 
@@ -258,7 +258,7 @@ See our full [Aladtec alternatives](/blog/aladtec-alternatives) post for a compl
 
 ## NurseGrid
 
-<img src="/images/blog/best-tcp-alternative-for-cah/Nursegrid.webp" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-tcp-alternative-for-cah/Nursegrid.webp" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 [NurseGrid](/blog/nursegrid-alternatives) is positioned as a mobile-first nurse-facing app for per diem and shift-trading workflows. The NurseGrid Manager tier holds 4.2/5 on Capterra (13 reviews; small sample). It is generally a different category of tool from TCP TimeClock+: a nurse-facing scheduling layer rather than a full time-and-attendance and scheduling platform. CAHs evaluating NurseGrid as a primary scheduling system should confirm directly with NurseGrid sales which compliance and management capabilities are supported in their hospital tier.
 

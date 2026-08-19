@@ -65,7 +65,7 @@ Here is how the alternatives compare before we go deeper.
 
 Smart Square is built for large multi-facility health systems, and the documented customer base reflects that. symplr describes Smart Square as AI-driven workforce optimization for health systems, and Capterra reviewers hold large-system roles such as System Administrator, Labor Management Analyst, and Director of Labor Management. A 25-bed Critical Access Hospital rarely has those roles on staff, and symplr does not publicly document a CAH reference customer. The gap between what Smart Square is built for and what a single CAH operates at is structural, not a matter of feature differences.
 
-<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/SmartSquare.webp" alt="symplr Smart Square enterprise nurse and staff scheduling platform for health systems" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/SmartSquare.webp" alt="symplr Smart Square enterprise nurse and staff scheduling platform for health systems" width="1200" height="563" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Smart Square holds 4.6/5 on Capterra (19 reviews; small sample).[1] The overall rating is strong, and the product won Best in KLAS for Scheduling: Nurse and Staff in both 2025 and 2026.[4] The fit question for a Critical Access Hospital is not whether the product is good. It is whether an enterprise platform sizes down to a single 25-bed facility without enterprise overhead, and the public reviewer base does not answer that.
 
@@ -188,7 +188,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 
 ## 2. [ShiftWizard](https://www.shiftwizard.com)
 
-<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/ShiftWizard.webp" alt="ShiftWizard hospital nurse scheduling software self-serve platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/ShiftWizard.webp" alt="ShiftWizard hospital nurse scheduling software self-serve platform" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 ShiftWizard is a nurse scheduling platform built specifically for hospital nursing rather than general workforce scheduling ([shiftwizard.com](https://www.shiftwizard.com)). For a Critical Access Hospital that wants self-serve software and a hospital-nursing workflow without enterprise system overhead, ShiftWizard is closer to the right scale than an enterprise platform built for health systems. It is designed around unit-based nurse scheduling, charge nurse designation, and staffing-ratio logic.
 
@@ -226,7 +226,7 @@ The tradeoff relative to a managed service is ownership. ShiftWizard is still a 
 
 ## 3. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/NurseGrid.webp" alt="NurseGrid Manager nurse scheduling app for hospital units" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/NurseGrid.webp" alt="NurseGrid Manager nurse scheduling app for hospital units" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager is a scheduling product built around single nursing units and the nurse-facing mobile app that nurses already use to track their own shifts ([nursegrid.com](https://nursegrid.com)). For a Critical Access Hospital with one or two nursing units and a manager who wants staff to see and swap shifts on a phone, NurseGrid operates at a much smaller scale than an enterprise health-system platform.
 
@@ -270,7 +270,7 @@ The tradeoff is depth. NurseGrid is focused on unit-level scheduling and staff c
 
 ## 4. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/Deputy.webp" alt="Deputy general workforce scheduling platform with a healthcare segment" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/Deputy.webp" alt="Deputy general workforce scheduling platform with a healthcare segment" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Deputy holds 4.6/5 on Capterra (765 reviews), a strong rating across a large general workforce sample. Deputy markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) covering hospitals, clinics, and nursing facilities. Compared to an enterprise health-system platform, Deputy is far simpler to configure and lower in cost, which is its main appeal to a Critical Access Hospital with no scheduling staff.
 
@@ -310,7 +310,7 @@ The tradeoff is that Deputy is a general workforce scheduling tool rather than a
 
 ## 5. [When I Work](https://wheniwork.com)
 
-<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/WhenIWork.webp" alt="When I Work scheduling and shift management app for small teams" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/WhenIWork.webp" alt="When I Work scheduling and shift management app for small teams" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 When I Work is a scheduling app positioned across retail, hospitality, and small-business workforce scheduling ([wheniwork.com](https://wheniwork.com)). It holds 4.5/5 on Capterra (1,289 reviews). The mobile app is well designed, shift pickup and communication are documented as core, and setup is described as fast. For a very small rural facility where the scheduling problem is simple, that simplicity is the appeal relative to an enterprise platform.
 
@@ -344,7 +344,7 @@ The tradeoff is the same as Deputy's, with a stronger lean away from healthcare.
 
 ## 6. [Smartlinx](https://www.smartlinx.com)
 
-<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/Smartlinx.webp" alt="Smartlinx workforce management platform with compliance and scheduling features" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smart-square-alternatives-small-rural-hospitals/Smartlinx.webp" alt="Smartlinx workforce management platform with compliance and scheduling features" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Smartlinx holds 4.5/5 on Capterra (6 reviews; small sample).[9] The vendor describes the platform as purpose-built for the long-term care, post-acute care, senior care, and behavioral health industries ([smartlinx.com](https://www.smartlinx.com)). It carries stronger healthcare compliance logic and credential tracking than a general workforce tool, with integrated time and attendance. The tradeoff is a significantly longer and more complex implementation than a lightweight tool.
 

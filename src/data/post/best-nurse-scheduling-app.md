@@ -198,7 +198,7 @@ SimpleScheduleAI is not a traditional app, and the distinction is deliberate. It
 
 ### 2. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/Nursegrid.webp" alt="NurseGrid Manager scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Nursegrid.webp" alt="NurseGrid Manager scheduling app interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager is a scheduling platform designed specifically for nurses. The staff-facing app is where it shines: nurses use it to view schedules, pick up open shifts, request time off, and message the scheduling team.
 
@@ -222,7 +222,7 @@ NurseGrid Manager is a scheduling platform designed specifically for nurses. The
 
 ### 3. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/Aladtec.webp" alt="Aladtec scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Aladtec.webp" alt="Aladtec scheduling app interface" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec, part of TCP Software, provides web and mobile scheduling access used heavily in emergency services and multi-department healthcare settings. Staff use mobile access for schedule viewing, availability, time-off requests, and shift trades.
 
@@ -244,7 +244,7 @@ Aladtec, part of TCP Software, provides web and mobile scheduling access used he
 
 ### 4. [SmartLinx](https://www.smartlinx.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/Smartlinx.webp" alt="SmartLinx scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Smartlinx.webp" alt="SmartLinx scheduling interface" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SmartLinx pairs its workforce platform with a full mobile suite: schedule viewing, open-shift response, time and attendance, and manager approval workflows all run on mobile.
 
@@ -267,7 +267,7 @@ SmartLinx pairs its workforce platform with a full mobile suite: schedule viewin
 
 ### 5. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/QGenda.webp" alt="QGenda scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/QGenda.webp" alt="QGenda scheduling interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 QGenda's mobile app was built first for physician self-scheduling and on-call management, with nursing served through an additional module.
 
@@ -289,7 +289,7 @@ QGenda's mobile app was built first for physician self-scheduling and on-call ma
 
 ### 6. [OnShift](https://www.onshift.com) (now part of ShiftKey)
 
-<img src="/images/blog/best-nurse-scheduling-app/Onshift.webp" alt="OnShift scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Onshift.webp" alt="OnShift scheduling app interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 OnShift, acquired by ShiftKey and fully integrated into its platform in 2023, is a mobile-first workforce tool for senior care: skilled nursing, assisted living, and long-term care.
 
@@ -311,7 +311,7 @@ OnShift, acquired by ShiftKey and fully integrated into its platform in 2023, is
 
 ### 7. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/best-nurse-scheduling-app/Deputy.webp" alt="Deputy scheduling app interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/Deputy.webp" alt="Deputy scheduling app interface" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Deputy is a general workforce scheduling platform with one of the most polished mobile apps in the category, used across retail, hospitality, and parts of healthcare. Setup is fast and the staff-facing experience is clean.
 
@@ -334,7 +334,7 @@ Deputy is a general workforce scheduling platform with one of the most polished 
 
 ### 8. [UKG](https://www.ukg.com) (formerly Kronos)
 
-<img src="/images/blog/best-nurse-scheduling-app/UKG.webp" alt="UKG scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-nurse-scheduling-app/UKG.webp" alt="UKG scheduling interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 UKG offers a full enterprise mobile workforce app spanning scheduling, time and attendance, and compliance reporting, with the depth and complexity of the platform behind it.
 

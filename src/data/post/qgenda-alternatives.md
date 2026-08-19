@@ -59,7 +59,7 @@ QGenda's customer base skews toward physician group practices and larger health 
 
 QGenda is built for physician scheduling and provider on-call management at larger health systems and multi-specialty group practices. Its core strength is complex scheduling logic across physician specialties, residency programs, and multi-facility on-call networks. The platform's documented customer base and feature depth reflect enterprise-scale deployment. A 25-bed Critical Access Hospital evaluating QGenda is typically using a fraction of its features while carrying the full implementation complexity and cost.
 
-<img src="/images/blog/qgenda-alternatives/QGenda.webp" alt="QGenda provider and nurse scheduling platform for healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/qgenda-alternatives/QGenda.webp" alt="QGenda provider and nurse scheduling platform for healthcare organizations" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 QGenda's product page covers provider scheduling, on-call management, credentialing, time tracking, and analytics for healthcare organizations. The platform's strongest documented use case is multi-specialty physician scheduling and complex on-call management at larger health systems. Reviews from larger-scale customers and reviews from smaller-scale customers describe meaningfully different experiences, which is typical of platforms serving multiple market segments.
 
@@ -198,7 +198,7 @@ Texas compliance is built in as the default: [FLSA overtime thresholds](https://
 
 ## 2. TCP Scheduling (Aladtec)
 
-<img src="/images/blog/qgenda-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/qgenda-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews).[2] The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
 
@@ -247,7 +247,7 @@ Ask the vendor for current named support contacts, response-time SLA, and a rece
 
 ## 3. ShiftWizard
 
-<img src="/images/blog/qgenda-alternatives/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/qgenda-alternatives/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 ShiftWizard holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews) and was named a G2 Spring 2026 Leader.[3] It is a hospital scheduling platform owned by HealthStream, Inc. (acquired), designed specifically for hospital nursing scheduling and used by more than 500 hospital facilities ([healthstream.com](https://www.healthstream.com)).
 
@@ -289,7 +289,7 @@ Ask the demo to walk through mobile workflows from both manager and staff perspe
 
 ## 4. NurseGrid Manager
 
-<img src="/images/blog/qgenda-alternatives/Nursegrid.webp" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/qgenda-alternatives/Nursegrid.webp" alt="NurseGrid mobile-first nurse scheduling app" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability ([nursegrid.com](https://www.nursegrid.com)). The Manager tier extends this with unit-level oversight.
 

@@ -62,7 +62,7 @@ The alternative path is direct purchase. A hospital administrator, seeing that U
 
 UKG was built for health systems with dedicated IT departments, HRIS analysts, and months-long implementations. At a 25-bed Critical Access Hospital, none of those resources typically exist. The nurse manager is also on clinical shifts, IT support is a part-time contractor at best, and the implementation budget is quoted at enterprise scale. Every UKG assumption fails at CAH scale, which is why the platform creates operational burden rather than reducing it.
 
-<img src="/images/blog/ukg-alternatives-small-hospitals/UKG.webp" alt="UKG workforce management platform for enterprise healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/ukg-alternatives-small-hospitals/UKG.webp" alt="UKG workforce management platform for enterprise healthcare organizations" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 <div class="not-prose my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -188,7 +188,7 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 
 ## 2. Aladtec (TCP Scheduling)
 
-<img src="/images/blog/ukg-alternatives-small-hospitals/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/ukg-alternatives-small-hospitals/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec (the platform; [TCP](/blog/best-tcp-alternative-for-cah) is the parent company after the 2021 acquisition) is a scheduling platform used at critical access hospitals and EMS organizations. Unlike UKG, it requires minimal IT involvement and can be operational in 2-4 weeks. For a CAH leaving UKG because of implementation complexity, Aladtec is a meaningful reduction in setup overhead.
 
@@ -240,7 +240,7 @@ If you are leaving UKG because it demands too much from one person, Aladtec is s
 
 ## 3. SmartLinx
 
-<img src="/images/blog/ukg-alternatives-small-hospitals/Smartlinx.webp" alt="SmartLinx workforce management platform for mid-size healthcare organizations" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/ukg-alternatives-small-hospitals/Smartlinx.webp" alt="SmartLinx workforce management platform for mid-size healthcare organizations" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 SmartLinx is a workforce management platform built for mid-size healthcare organizations, primarily skilled nursing facilities and hospitals in the 50-200 bed range. It has stronger built-in credential enforcement and compliance logic than Aladtec, with pre-configured rules for common healthcare regulatory requirements.
 

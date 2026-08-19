@@ -179,7 +179,7 @@ SimpleScheduleAI is nurse scheduling software we build and operate ourselves, de
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Aladtec.webp" alt="Aladtec self-serve scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Aladtec.webp" alt="Aladtec self-serve scheduling platform" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 Aladtec, now part of TCP Software, holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews; small sample). It is a self-serve scheduling platform with a long history in 24/7 shift-work environments: fire, EMS, law enforcement, and small healthcare. It includes credential expiration tracking, availability management, shift coverage requests, and overtime monitoring, and it does not require heavy IT involvement to stand up.
 
@@ -218,7 +218,7 @@ One caveat matters for a hospital audience: the Capterra review base skews heavi
 
 ## 3. [ShiftWizard](https://www.healthstream.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 ShiftWizard, owned by HealthStream, holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews), the largest hospital-nursing review base of any platform in this guide. It was designed specifically for hospital nursing, and one reviewer captured why that origin matters.
 
@@ -260,7 +260,7 @@ ShiftWizard speaks hospital nursing natively, but it is still a self-serve platf
 
 ## 4. [NurseGrid](https://nursegrid.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Nursegrid.webp" alt="NurseGrid nurse-facing scheduling app" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Nursegrid.webp" alt="NurseGrid nurse-facing scheduling app" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 NurseGrid, owned by HealthStream, holds 4.2/5 on Capterra (13 reviews; small sample). It is built primarily as a nurse-facing mobile app for viewing schedules, setting availability, and picking up open shifts, with a manager tier that adds unit-level oversight. Staff adoption tends to be high because nurses use the app on their own.
 
@@ -301,7 +301,7 @@ For a CAH weighing NurseGrid as a primary scheduling system, two reviewer-flagge
 
 ## 5. [symplr Smart Square](https://www.symplr.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/smart-square.webp" alt="symplr Smart Square nurse and staff scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/smart-square.webp" alt="symplr Smart Square nurse and staff scheduling platform" width="1200" height="563" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 symplr Smart Square, formerly Avantas Smart Square and acquired by symplr from AMN Healthcare in July 2025, holds 4.6/5 on Capterra (19 reviews; small sample). It is an AI-driven nurse and staff scheduling platform with predictive analytics and a two-time Best in KLAS win for Scheduling: Nurse and Staff (2025 and 2026), the strongest independent quality signal among the enterprise tools here.
 
@@ -338,7 +338,7 @@ The positioning points away from a CAH: symplr markets Smart Square as enterpris
 
 ## 6. [QGenda](https://www.qgenda.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/QGenda.webp" alt="QGenda provider scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/QGenda.webp" alt="QGenda provider scheduling platform" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It began as physician scheduling software and expanded into nursing; its strength is managing complex physician call schedules alongside nursing rosters.
 
@@ -381,7 +381,7 @@ For a CAH that does not coordinate physician on-call scheduling, much of QGenda'
 
 ## 7. [UKG](https://www.ukg.com) (formerly Kronos)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/UKG.webp" alt="UKG workforce management platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/UKG.webp" alt="UKG workforce management platform" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 UKG, formerly Kronos, is the dominant enterprise workforce-management suite in large hospital systems, used by more than 3,500 hospitals in the US across scheduling, time and attendance, payroll, and analytics. We do not cite reviewer quotes here because the available reviews map to large multi-industry deployments rather than CAH-scale nurse scheduling; the evaluation below is operational, based on documented product positioning.
 
@@ -404,7 +404,7 @@ UKG is engineered for 200-plus-bed facilities with dedicated IT and HRIS staff, 
 
 ## 8. [ScheduleAnywhere](https://www.tcpsoftware.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/ScheduleAnywhere-TCPHumanitySchedule.webp" alt="ScheduleAnywhere, now redirecting to TCP Humanity Schedule" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/ScheduleAnywhere-TCPHumanitySchedule.webp" alt="ScheduleAnywhere, now redirecting to TCP Humanity Schedule" width="1200" height="562" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 ScheduleAnywhere, now owned by TCP Software after its acquisition from Atlas Business Solutions, holds 4.6/5 on Capterra (61 reviews). Its own site now redirects to TCP Humanity Schedule, so the standalone brand appears to be folding into TCP's Humanity product line; confirm which product you would actually be buying before committing. It is a general shift-scheduling tool for any industry with a dedicated nurse and healthcare sub-page, and RN reviewers describe straightforward shift viewing and editing.
 
@@ -441,7 +441,7 @@ For a CAH, the vendor credential-tracking claim is not independently verified as
 
 ## 9. [M7 Health](https://www.m7health.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/M7Health.webp" alt="M7 Health enterprise nurse scheduling and labor optimization platform homepage" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/M7Health.webp" alt="M7 Health enterprise nurse scheduling and labor optimization platform homepage" width="1200" height="572" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 M7 Health, founded in 2022, is an AI-driven nurse scheduling and labor optimization platform built for health systems, with documented enterprise-scale deployments.
 
@@ -472,7 +472,7 @@ That statement is partnership PR and should be read as an announcement, not a pr
 
 ## 10. [CronShift](https://www.cronshift.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/CronShift.webp" alt="CronShift healthcare workforce management platform homepage" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/CronShift.webp" alt="CronShift healthcare workforce management platform homepage" width="1200" height="572" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
 CronShift is a healthcare workforce management platform that describes itself as "The first all-in-one workforce management platform transforming how healthcare teams work" and as "built by nurses, for nurses." Its documented feature set centers on PPD/PRD forecasting, mobile shift swaps, CMS staffing reports, cross-facility staff pooling, and partner agency integration.
 

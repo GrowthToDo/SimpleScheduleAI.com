@@ -59,7 +59,7 @@ The mismatch appears at smaller hospitals. A 25-bed Critical Access Hospital (CA
 
 Small hospitals switch away from SmartLinx when the implementation complexity and per-user pricing exceed what a 25-bed facility can justify. SmartLinx's 3-4 month implementation, IT dependency for ongoing configuration, and feature depth designed for 50-150 bed long-term care facilities create overhead that a Critical Access Hospital with no dedicated IT staff cannot absorb. The most common exit driver is cost-to-value mismatch: paying for compliance automation the hospital uses at a fraction of its capacity.
 
-<img src="/images/blog/smartlinx-alternatives/SmartLinx.webp" alt="SmartLinx workforce management platform for healthcare and long-term care" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smartlinx-alternatives/SmartLinx.webp" alt="SmartLinx workforce management platform for healthcare and long-term care" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Small hospitals leave SmartLinx for predictable reasons. The platform's per-user pricing, IT-dependent configuration, and 3-4 month implementation timeline were designed for mid-market facilities with dedicated IT staff. At 25 beds, those costs do not recover their investment the way they do at 100 beds. The most common exit drivers, ranked by frequency:
 
@@ -196,7 +196,7 @@ SimpleScheduleAI delivers the compliance documentation, overtime tracking, and c
 
 ## 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/smartlinx-alternatives/Aladtec.webp" alt="Aladtec scheduling software for small hospitals and emergency services" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smartlinx-alternatives/Aladtec.webp" alt="Aladtec scheduling software for small hospitals and emergency services" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Aladtec is a simpler, faster-to-configure self-serve alternative to SmartLinx for small rosters. Its 24/7 coverage model, availability tracking, and minimum staffing rules handle most of what a small hospital needs without the implementation complexity of SmartLinx.
 
@@ -233,7 +233,7 @@ Time and attendance integration, automated CMS compliance documentation, and cal
 
 ## 3. [TCP Scheduling](https://www.tcpsoftware.com)
 
-<img src="/images/blog/smartlinx-alternatives/TCP.webp" alt="TCP Scheduling Software enterprise workforce management platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smartlinx-alternatives/TCP.webp" alt="TCP Scheduling Software enterprise workforce management platform" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 TCP Scheduling is TCP Software's enterprise-tier platform, the same parent company that owns Aladtec. It competes directly with SmartLinx in the mid-market healthcare segment and offers comparable compliance automation, credential tracking, and time and attendance integration. For hospitals evaluating a SmartLinx replacement that are already familiar with the TCP Software vendor ecosystem, TCP Scheduling is a natural comparison.
 
@@ -259,7 +259,7 @@ TCP Scheduling is designed as an enterprise implementation requiring IT involvem
 
 ## 4. [NurseGrid Manager](https://nursegrid.com)
 
-<img src="/images/blog/smartlinx-alternatives/Nursegrid.webp" alt="NurseGrid Manager nurse communication and schedule visibility platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smartlinx-alternatives/Nursegrid.webp" alt="NurseGrid Manager nurse communication and schedule visibility platform" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 NurseGrid Manager is not a full SmartLinx replacement but can supplement or partially replace it for hospitals that discover they were primarily using SmartLinx for nurse communication and schedule visibility. It handles those functions well at a significantly lower cost.
 
@@ -291,7 +291,7 @@ NurseGrid Manager includes schedule building and credential tracking. CMS compli
 
 ## 5. [Deputy](https://www.deputy.com)
 
-<img src="/images/blog/smartlinx-alternatives/Deputy.webp" alt="Deputy general-purpose workforce scheduling software" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/smartlinx-alternatives/Deputy.webp" alt="Deputy general-purpose workforce scheduling software" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 Deputy is a significant simplification from SmartLinx. If the reason for leaving SmartLinx is that the feature depth is not being used and the cost is not justified, Deputy eliminates the complexity and most of the cost simultaneously. The tradeoff is losing every healthcare-specific feature SmartLinx provided.
 

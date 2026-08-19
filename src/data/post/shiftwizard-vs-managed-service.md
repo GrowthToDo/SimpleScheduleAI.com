@@ -53,7 +53,7 @@ For a Critical Access Hospital nurse manager evaluating hospital scheduling opti
 
 ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream, designed specifically for nursing workflows. It holds 4.3/5 on G2 and 4.4/5 on Capterra across 723 reviews.[1] The defining characteristic from an operating model perspective: the nurse manager or a designated scheduler configures the system, builds every schedule, and operates the platform week to week. ShiftWizard provides the tools; the hospital provides the labor to use them.
 
-<img src="/images/blog/shiftwizard-vs-managed-service/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/shiftwizard-vs-managed-service/Shiftwizard.webp" alt="ShiftWizard hospital nurse scheduling platform by HealthStream" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream, Inc. (NASDAQ: HSTM). It holds 4.3/5 on G2 and 4.4/5 on Capterra (723 reviews), with over 88% of Capterra reviews rating 4 stars or higher. G2's overall summary describes ShiftWizard as a tool users praise for ease of use and intuitive scheduling, and ShiftWizard has been named a G2 Spring 2026 Leader.
 
