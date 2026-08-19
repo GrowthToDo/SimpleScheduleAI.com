@@ -288,6 +288,16 @@ All verified from loaded primary pages/PDFs on 2026-07-13; collected for the pla
 - External context (published, weak): vendor and nursing-school blogs put nurse-manager scheduling at roughly 5-10 hrs/week (10-20 per pay period), which brackets our 8-12 range. No published study gives a reliable build-versus-cover split, so the interviews are our only source for the RANKING.
 - Verified: 2026-08-10 (breakdown post cross-checked against the money-page chart; web search found no authoritative published split)
 
+### Manager time under the service: 1 to 2 hours of review (founder-stated design figure)
+
+- APPROVED CLAIM: under SimpleScheduleAI the nurse manager's weekly scheduling workload is 1 to 2 hours, and that work is REVIEW, not building. Pair it with the 8-12 hour baseline above as the before/after.
+- SOURCE AND FRAMING: founder-stated, confirmed 2026-08-19. This is what the service is designed to require of the manager, and the founder's position is that 1 to 2 hours is deliberately generous. It is NOT a measured customer outcome and never can be presented as one, because we are pre-launch with zero customers. Frame as what the service asks of the manager, never as "hospitals we work with report" or any observed/pilot result.
+- Always name the unit and the activity: "1 to 2 hours of review," not a bare "1 to 2." A bare number invites the reader to assume it is build time, which is the opposite of the point.
+- Wrong: attributing it to a study, a customer, a pilot, or a benchmark; using it as a guaranteed outcome ("your manager will spend 1 to 2 hours"); stating it in dollars (cost claims stay in hours — see the hours-never-dollars rule).
+- Live usages as of 2026-08-19: `/nurse-scheduling-software` comparison chart, `/how-it-works` hero subtitle, `/blog/nursing-scheduling-software-ai` (intro + table), `/blog/nurse-manager-scheduling-time-breakdown` FAQ.
+- HISTORY: this figure had no dossier entry until 2026-08-19, so a fact-check pass flagged it as unsourced and it was briefly removed from `/how-it-works` before the founder confirmed it. The entry exists so that does not recur.
+- Verified: 2026-08-19 (founder confirmation)
+
 ### Montefiore utilization review AI layoffs (July 2026)
 
 - Approved facts: Montefiore eliminated 12 utilization review nurse positions across its Bronx campuses; termination notices dated May 28; positions ended July 12, 2026; the chart-review work shifted to AI-powered software from Datavant, a private-equity-backed health data company (attribute the 12/May 28/July 12/Datavant set to Nurse.org's report). NYSNA held a public action July 1, 2026 under the banner "The Bronx needs real nurses, not AI" (NYSNA press release, July 1, 2026). Utilization review role definition (Norwood News): nurses who "read patient charts and make the case for a patient's insurance company to cover the care a doctor orders."
