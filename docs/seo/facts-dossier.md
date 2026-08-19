@@ -288,6 +288,38 @@ All verified from loaded primary pages/PDFs on 2026-07-13; collected for the pla
 - External context (published, weak): vendor and nursing-school blogs put nurse-manager scheduling at roughly 5-10 hrs/week (10-20 per pay period), which brackets our 8-12 range. No published study gives a reliable build-versus-cover split, so the interviews are our only source for the RANKING.
 - Verified: 2026-08-10 (breakdown post cross-checked against the money-page chart; web search found no authoritative published split)
 
+### Nurse manager vs charge nurse: authority, supervisory status, pay, credentials
+
+Verified 2026-08-19 for the `nurse-manager-vs-charge-nurse` post. Every figure below is page-verified at the named primary source, not from an aggregator.
+
+**BLS pay and occupation codes (bls.gov blocks WebFetch and curl; page-verified via Playwright):**
+
+- Registered nurses: "The median annual wage for registered nurses was $93,600 in May 2024." Quick Facts labels it "2024 Median Pay", $45.00/hour. SOC **29-1141**.
+- Medical and health services managers: "The median annual wage for medical and health services managers was $117,960 in May 2024." Quick Facts "2024 Median Pay", $56.71/hour. SOC **11-9111**.
+- **THE STRONG CLAIM, and it is ours to make:** the 2018 SOC detailed-occupation list contains NO entry for "Nurse Manager" and NO entry for "Charge Nurse". Verified against the full list at bls.gov/soc/2018/major_groups.htm. Charge nurses are counted inside Registered Nurses (29-1141); nurse managers inside Medical and Health Services Managers (11-9111). The BLS medical-and-health-services-managers page does not name "nurse manager" anywhere.
+- Use for: the honest reframe that every competing article quotes an aggregator salary for a job title the federal wage survey does not track. NOT usable for: a "charge nurse salary" or "nurse manager salary" figure. Those do not exist at BLS; never manufacture one by averaging aggregators.
+- Always state the survey month ("May 2024"), because the OOH Quick Facts label says only "2024".
+
+**Supervisory status under the NLRA — three different senses of "supervisor", never conflate them:**
+
+- *Oakwood Healthcare, Inc.*, 348 NLRB 686 (2006): found "12 permanent charge nurses employed in 5 of 10 patient care units" were statutory supervisors, and "none of the rotating charge nurses was a supervisor." Part-time supervision test: whether the individual spends "a regular and substantial portion" of work time on supervisory functions, with status found at "at least 10-15 percent" of total work time. Source: Congressional Research Service RL34350 (NLRB.gov's case lookup refused connection; cite CRS and name the case).
+- *NLRB v. Kentucky River Community Care*, 532 U.S. 706 (2001), page-verified at Cornell LII 2026-08-19: "Respondent carries the burden of proving the nurses' supervisory status." The Court rejected the Board's position that employees do not exercise "independent judgment" when applying "ordinary professional or technical judgment in directing less-skilled employees," calling it a "categorical exclusion into statutory text that does not suggest its existence."
+- **Guardrail:** never write "charge nurses are supervisors" or "are not supervisors". The holding is fact-specific and turns on permanent vs rotating assignment. Frame as worth asking HR counsel; never give legal advice.
+
+**Texas hospital licensing — CITATION MOVED, do not use the old number:**
+
+- 25 TAC § 133.41 was **transferred to 26 TAC § 505.41 effective 2025-01-10**. Any source citing "25 TAC 133" for Texas hospital licensing is stale. We have never cited the old number anywhere in the corpus (swept 2026-08-19); keep it that way.
+- 26 TAC § 505.41(o)(1)(A): "Nursing services shall be under the administrative authority of a chief nursing officer (CNO) who shall be an RN."
+- 26 TAC § 505.41(o)(2)(D): "The RN shall supervise and evaluate the nursing care for each patient and assign the nursing care to other nursing personnel"; "An RN shall be on duty in each building of a licensed hospital that contains at least one nursing unit where patients are present."
+- **Why this matters and how to frame it:** the federal CAH Conditions of Participation require no nurse manager and no director of nursing (485.631(a)(1) names the required professional staff without any nursing leadership role; 485.635(d) says only that nursing services must meet patients' needs). Texas imposes the CNO requirement through STATE licensing instead. So at a Texas CAH the nursing leadership layer exists because the state requires it, not because CMS does. Verified via Cornell LII 2026-08-19.
+
+**Nurse leadership credentials (page-verified 2026-08-19):**
+
+- AONL issues **CNML** (Certified Nurse Manager and Leader), "designed exclusively for nurse managers", and **CENP** (Certified in Executive Nursing Practice), for nurse executives. Source: aonl.org/initiatives/certification.
+- ANCC issues **NE-BC** (Nurse Executive Board Certified). Source: nursingworld.org/our-certifications/nurse-executive/.
+- Contrast with the charge nurse side, already in the dossier: RegisteredNursing.org, "No nationally recognized charge-nurse-specific certification exists."
+- **AONL GUARDRAIL:** the AONL Nurse Manager Competencies detail lives in a PDF that has not been parsed. Do NOT attribute any staffing/scheduling competency, any hours benchmark, or the 8-12 hour figure to AONL. The parked `what-is-a-nurse-manager` draft currently makes exactly that false attribution (the 8-12 figure is OURS, from 30+ interviews) and must be corrected before it publishes.
+
 ### Manager time under the service: 1 to 2 hours of review (founder-stated design figure)
 
 - APPROVED CLAIM: under SimpleScheduleAI the nurse manager's weekly scheduling workload is 1 to 2 hours, and that work is REVIEW, not building. Pair it with the 8-12 hour baseline above as the before/after.
