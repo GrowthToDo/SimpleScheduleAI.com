@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "m7-health-alternatives",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:38:26.730Z",
+      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:38:29.200Z",
+      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:38:40.695Z",
+      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:38:40.753Z",
+      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:38:40.792Z",
+      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:38:40.792Z",
+      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:38:40.794Z",
+      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+    }
+  },
+  "recorded": {},
+  "overrides": []
+}

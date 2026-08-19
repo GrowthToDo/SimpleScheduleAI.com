@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-05-18T00:00:00Z
-updateDate: 2026-05-18T00:00:00Z
+updateDate: 2026-08-19T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'M7 Health vs SimpleScheduleAI: Ochsner Scale or CAH Fit? (2026)'
 excerpt: >
@@ -256,7 +256,6 @@ Write the answers down before any demo. A demo shows what the software can do. T
 3. **Ask any enterprise vendor two direct questions.** Request a named Critical Access Hospital or standalone rural reference customer, and ask for documented CMS §485.635 support and FLSA overtime threshold tracking. Treat any vendor outcome figure as a claim until you see independent confirmation.
 
 4. **Ask who does the scheduling work in week six.** Setup help and ongoing operation are different promises. Get both answered before you sign: who configures it on day one, and who rebuilds the schedule every cycle after that.
-
 5. **Track your nurse manager's weekly scheduling hours for one week.** Include schedule building, callout coverage, swap requests, and pre-survey CMS documentation. That total is the number any model has to beat to be worth the change.
 
 6. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service lets you compare the actual time burden against your baseline before committing. Start at [how it works](/how-it-works).
