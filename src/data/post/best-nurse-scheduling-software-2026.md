@@ -84,7 +84,7 @@ The market in 2026 splits cleanly into three tiers: enterprise platforms for lar
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Aladtec by [TCP](/blog/best-tcp-alternative-for-cah)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Public safety, EMS, fire, small healthcare</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.5/5 (94 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">2-4 weeks</td>
         <td class="py-3 text-slate-600 dark:text-slate-400 align-top">~$200-450</td>
       </tr>
@@ -235,7 +235,7 @@ SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews); the most recent hospital-context reviews on Capterra are several years old. It offers credential tracking, shift coverage requests, availability management, and basic overtime monitoring, with an interface that sets up without significant IT involvement. For the operating-model comparison between a self-serve platform like Aladtec and a managed service, see our [Aladtec vs. managed scheduling service comparison](/blog/aladtec-vs-managed-service).
+Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews); the most recent hospital-context reviews on Capterra are several years old. It offers credential tracking, shift coverage requests, availability management, and basic overtime monitoring, with an interface that sets up without significant IT involvement. For the operating-model comparison between a self-serve platform like Aladtec and a managed service, see our [Aladtec vs. managed scheduling service comparison](/blog/aladtec-vs-managed-service).
 
 **Best for:** Small hospitals and EMS agencies that want proven self-serve scheduling software with low implementation burden.
 
@@ -580,7 +580,7 @@ It is not the right fit for every hospital. If your facility has 75+ beds, a ded
 
 [1] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews), G2 Spring 2026 Leader. Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30.
 
-[2] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+[2] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
 
 [3] QGenda ratings: 4.6/5 on G2 (164 reviews), 4.2/5 on Capterra (68 reviews). Vendor page: [qgenda.com](https://www.qgenda.com). Verified 2026-04-30.
 

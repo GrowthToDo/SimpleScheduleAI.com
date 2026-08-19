@@ -119,7 +119,7 @@ The table below covers customer focus, public ratings, and setup time across the
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Aladtec by [TCP](/blog/best-tcp-alternative-for-cah)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Public safety, EMS, small healthcare rosters</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews; small sample)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94 reviews)<br>Capterra: 4.6/5 (17 reviews; small sample)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">2-4 weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -190,7 +190,7 @@ This is a different operating model than OnShift, which is a self-serve platform
 
 <img src="/images/blog/onshift-alternatives/Aladtec.webp" alt="Aladtec by TCP scheduling software for small hospitals and emergency services" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). Its heritage is in 24/7 public-safety shift work, fire, EMS, and law enforcement, with a more recent expansion into small healthcare rosters. The callout model is direct-outreach oriented rather than post-and-wait, which is closer to how an acute care coverage gap actually gets filled than OnShift's open-shift posting model.
+Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews). Its heritage is in 24/7 public-safety shift work, fire, EMS, and law enforcement, with a more recent expansion into small healthcare rosters. The callout model is direct-outreach oriented rather than post-and-wait, which is closer to how an acute care coverage gap actually gets filled than OnShift's open-shift posting model.
 
 Aladtec covers shift management, time and attendance, overtime tracking, certification tracking, and reporting. For a small hospital leaving OnShift primarily because the open-shift model is too slow for acute care callouts, Aladtec's direct-outreach approach is a meaningful change in operating model rather than a feature swap.
 
@@ -220,7 +220,7 @@ Aladtec covers shift management, time and attendance, overtime tracking, certifi
 
 **Verdict:** A reasonable self-serve alternative for hospitals leaving OnShift because of callout speed, where the direct-outreach model fits and the nurse manager has capacity for configuration maintenance. CMS documentation and overtime ranking still require manual effort. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
-**Ratings:** G2: 4.3/5 (97 reviews); Capterra: 4.6/5 (17 reviews; small sample).
+**Ratings:** G2: 4.5/5 (94 reviews); Capterra: 4.6/5 (17 reviews; small sample).
 
 **Cost:** Pricing not listed on website. Contact TCP Software for a quote.
 
@@ -524,7 +524,7 @@ For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) 
 
 [2] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30; selected quotes re-verified 2026-05-15.
 
-[3] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30. Recent reviewer base skews toward public safety; most recent hospital-context reviews date to 2020.
+[3] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15. Recent reviewer base skews toward public safety; most recent hospital-context reviews date to 2020.
 
 [4] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-04-30; selected quotes re-verified 2026-05-15.
 

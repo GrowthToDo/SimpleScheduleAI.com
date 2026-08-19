@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "ukg-too-complex-small-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:42.757Z",
+      "contentHash": "94894a9d017ebe8795cf5ed8ef0c7d10f6a44ea92e93bb0baa50d9e6123568cd"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:45.076Z",
+      "contentHash": "94894a9d017ebe8795cf5ed8ef0c7d10f6a44ea92e93bb0baa50d9e6123568cd"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:46.686Z",
+      "contentHash": "94894a9d017ebe8795cf5ed8ef0c7d10f6a44ea92e93bb0baa50d9e6123568cd"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:46.715Z",
+      "contentHash": "94894a9d017ebe8795cf5ed8ef0c7d10f6a44ea92e93bb0baa50d9e6123568cd"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:46.905Z",
+      "contentHash": "94894a9d017ebe8795cf5ed8ef0c7d10f6a44ea92e93bb0baa50d9e6123568cd"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:46.905Z",
+      "contentHash": "94894a9d017ebe8795cf5ed8ef0c7d10f6a44ea92e93bb0baa50d9e6123568cd"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:46.906Z",
+      "contentHash": "94894a9d017ebe8795cf5ed8ef0c7d10f6a44ea92e93bb0baa50d9e6123568cd"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:58:47.936Z",
+      "contentHash": "0580bbdd05f2587c781f312688d94654db6fe19cc3a20485f1a82fcf686acdb7"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:58:49.229Z",
+      "contentHash": "0580bbdd05f2587c781f312688d94654db6fe19cc3a20485f1a82fcf686acdb7"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:58:50.689Z",
+      "contentHash": "0580bbdd05f2587c781f312688d94654db6fe19cc3a20485f1a82fcf686acdb7"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:58:51.925Z",
+      "contentHash": "0580bbdd05f2587c781f312688d94654db6fe19cc3a20485f1a82fcf686acdb7"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:58:53.049Z",
+      "contentHash": "0580bbdd05f2587c781f312688d94654db6fe19cc3a20485f1a82fcf686acdb7"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:58:54.112Z",
+      "contentHash": "0580bbdd05f2587c781f312688d94654db6fe19cc3a20485f1a82fcf686acdb7"
+    }
+  },
+  "overrides": []
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "ukg-alternatives-small-hospitals",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:07.802Z",
+      "contentHash": "c1632abcf8c47227676a825571659033741188e5b200bad0eb2f967c38cd54df"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:10.570Z",
+      "contentHash": "c1632abcf8c47227676a825571659033741188e5b200bad0eb2f967c38cd54df"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:12.469Z",
+      "contentHash": "c1632abcf8c47227676a825571659033741188e5b200bad0eb2f967c38cd54df"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:12.515Z",
+      "contentHash": "c1632abcf8c47227676a825571659033741188e5b200bad0eb2f967c38cd54df"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:12.691Z",
+      "contentHash": "c1632abcf8c47227676a825571659033741188e5b200bad0eb2f967c38cd54df"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:12.691Z",
+      "contentHash": "c1632abcf8c47227676a825571659033741188e5b200bad0eb2f967c38cd54df"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:12.693Z",
+      "contentHash": "c1632abcf8c47227676a825571659033741188e5b200bad0eb2f967c38cd54df"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:58:14.088Z",
+      "contentHash": "dfb39a0a8da4d7d0d2b258c06ca85a1ff3420383363d9368b1abd68ef45a6311"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:58:15.916Z",
+      "contentHash": "dfb39a0a8da4d7d0d2b258c06ca85a1ff3420383363d9368b1abd68ef45a6311"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:58:17.497Z",
+      "contentHash": "dfb39a0a8da4d7d0d2b258c06ca85a1ff3420383363d9368b1abd68ef45a6311"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:58:19.626Z",
+      "contentHash": "dfb39a0a8da4d7d0d2b258c06ca85a1ff3420383363d9368b1abd68ef45a6311"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:58:22.032Z",
+      "contentHash": "dfb39a0a8da4d7d0d2b258c06ca85a1ff3420383363d9368b1abd68ef45a6311"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:58:24.454Z",
+      "contentHash": "dfb39a0a8da4d7d0d2b258c06ca85a1ff3420383363d9368b1abd68ef45a6311"
+    }
+  },
+  "overrides": []
+}

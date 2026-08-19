@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "12-hour-hospital-shifts-scheduling",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:51:55.869Z",
+      "contentHash": "68f368ab8e91a6bfad2c019a14bdc2d900ea91faa7e90df58f93dbe98fe4f488"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:51:58.270Z",
+      "contentHash": "68f368ab8e91a6bfad2c019a14bdc2d900ea91faa7e90df58f93dbe98fe4f488"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:00.388Z",
+      "contentHash": "68f368ab8e91a6bfad2c019a14bdc2d900ea91faa7e90df58f93dbe98fe4f488"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:00.416Z",
+      "contentHash": "68f368ab8e91a6bfad2c019a14bdc2d900ea91faa7e90df58f93dbe98fe4f488"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:00.795Z",
+      "contentHash": "68f368ab8e91a6bfad2c019a14bdc2d900ea91faa7e90df58f93dbe98fe4f488"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:00.796Z",
+      "contentHash": "68f368ab8e91a6bfad2c019a14bdc2d900ea91faa7e90df58f93dbe98fe4f488"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:00.797Z",
+      "contentHash": "68f368ab8e91a6bfad2c019a14bdc2d900ea91faa7e90df58f93dbe98fe4f488"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:52:01.776Z",
+      "contentHash": "eb1e2c0de28b4dce52f60deed249081bf6b070816946d2db059b7577714a4122"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:52:02.662Z",
+      "contentHash": "eb1e2c0de28b4dce52f60deed249081bf6b070816946d2db059b7577714a4122"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:52:03.519Z",
+      "contentHash": "eb1e2c0de28b4dce52f60deed249081bf6b070816946d2db059b7577714a4122"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:52:04.377Z",
+      "contentHash": "eb1e2c0de28b4dce52f60deed249081bf6b070816946d2db059b7577714a4122"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:52:05.380Z",
+      "contentHash": "eb1e2c0de28b4dce52f60deed249081bf6b070816946d2db059b7577714a4122"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:52:06.407Z",
+      "contentHash": "eb1e2c0de28b4dce52f60deed249081bf6b070816946d2db059b7577714a4122"
+    }
+  },
+  "overrides": []
+}

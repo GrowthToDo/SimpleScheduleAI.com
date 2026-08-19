@@ -5,40 +5,77 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T06:38:26.730Z",
-      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+      "checkedAt": "2026-08-19T11:14:30.066Z",
+      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T06:38:29.200Z",
-      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+      "checkedAt": "2026-08-19T11:14:33.316Z",
+      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T06:38:40.695Z",
-      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+      "checkedAt": "2026-08-19T11:14:36.045Z",
+      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T06:38:40.753Z",
-      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+      "checkedAt": "2026-08-19T11:14:36.079Z",
+      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T06:38:40.792Z",
-      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+      "checkedAt": "2026-08-19T11:14:36.106Z",
+      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T06:38:40.792Z",
-      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+      "checkedAt": "2026-08-19T11:14:36.106Z",
+      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T06:38:40.794Z",
-      "contentHash": "0d592e98e4cdc55121eb9a04a3d04ebef9ca2b6fc2dfb74330b2ae2958e86cad"
+      "checkedAt": "2026-08-19T11:14:36.108Z",
+      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
     }
   },
-  "recorded": {},
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "proofread-agent: structural diff vs qgenda/shiftwizard/smart-square; 11 findings, all resolved",
+      "setAt": "2026-08-19T11:14:26.680Z",
+      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "factcheck-agent + live verification (3 WRONG + 4 imprecise, all corrected; Lifepoint acquisition confirmed at source)",
+      "setAt": "2026-08-19T11:09:03.094Z",
+      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder reviewed rendered page on localhost:4331; competitor images added per request; dimensions ground-truthed",
+      "setAt": "2026-08-19T11:14:27.677Z",
+      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder: 'take the blog live' 2026-08-19",
+      "setAt": "2026-08-19T11:14:28.838Z",
+      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+    },
+    "indexNow": {
+      "value": "READY",
+      "setBy": "queued; submits after deploy (pre-deploy ping would hit a 404)",
+      "setAt": "2026-08-19T11:12:48.184Z",
+      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+    },
+    "gscSitemap": {
+      "value": "READY",
+      "setBy": "queued; sitemap resubmit after deploy",
+      "setAt": "2026-08-19T11:12:49.126Z",
+      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+    }
+  },
   "overrides": []
 }

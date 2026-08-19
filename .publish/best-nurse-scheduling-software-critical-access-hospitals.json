@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "best-nurse-scheduling-software-critical-access-hospitals",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:51:04.931Z",
+      "contentHash": "8679529122e2f54d90dce80237d14e221fa8ff3ae936b5dcba6fbaae2d57f3b1"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:51:06.991Z",
+      "contentHash": "8679529122e2f54d90dce80237d14e221fa8ff3ae936b5dcba6fbaae2d57f3b1"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:51:29.933Z",
+      "contentHash": "8679529122e2f54d90dce80237d14e221fa8ff3ae936b5dcba6fbaae2d57f3b1"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:51:29.982Z",
+      "contentHash": "8679529122e2f54d90dce80237d14e221fa8ff3ae936b5dcba6fbaae2d57f3b1"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:51:31.346Z",
+      "contentHash": "8679529122e2f54d90dce80237d14e221fa8ff3ae936b5dcba6fbaae2d57f3b1"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:51:31.346Z",
+      "contentHash": "8679529122e2f54d90dce80237d14e221fa8ff3ae936b5dcba6fbaae2d57f3b1"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-19T06:51:31.347Z",
+      "contentHash": "8679529122e2f54d90dce80237d14e221fa8ff3ae936b5dcba6fbaae2d57f3b1"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:53:32.448Z",
+      "contentHash": "a349b144613aa9cc75e438862d33220e48c7110fc1f4c08989f4165f80840bef"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:53:34.153Z",
+      "contentHash": "a349b144613aa9cc75e438862d33220e48c7110fc1f4c08989f4165f80840bef"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:53:35.944Z",
+      "contentHash": "a349b144613aa9cc75e438862d33220e48c7110fc1f4c08989f4165f80840bef"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:53:37.679Z",
+      "contentHash": "a349b144613aa9cc75e438862d33220e48c7110fc1f4c08989f4165f80840bef"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:53:39.722Z",
+      "contentHash": "a349b144613aa9cc75e438862d33220e48c7110fc1f4c08989f4165f80840bef"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:53:41.583Z",
+      "contentHash": "a349b144613aa9cc75e438862d33220e48c7110fc1f4c08989f4165f80840bef"
+    }
+  },
+  "overrides": []
+}

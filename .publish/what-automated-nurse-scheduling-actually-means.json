@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-automated-nurse-scheduling-actually-means",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:55.927Z",
+      "contentHash": "dea8bd89ce62d0caf583dc36be2803d757d65a225e1285c792f0e80626bcc84c"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:58.327Z",
+      "contentHash": "dea8bd89ce62d0caf583dc36be2803d757d65a225e1285c792f0e80626bcc84c"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:59.678Z",
+      "contentHash": "dea8bd89ce62d0caf583dc36be2803d757d65a225e1285c792f0e80626bcc84c"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:59.746Z",
+      "contentHash": "dea8bd89ce62d0caf583dc36be2803d757d65a225e1285c792f0e80626bcc84c"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:59.989Z",
+      "contentHash": "dea8bd89ce62d0caf583dc36be2803d757d65a225e1285c792f0e80626bcc84c"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:59.990Z",
+      "contentHash": "dea8bd89ce62d0caf583dc36be2803d757d65a225e1285c792f0e80626bcc84c"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:59.992Z",
+      "contentHash": "dea8bd89ce62d0caf583dc36be2803d757d65a225e1285c792f0e80626bcc84c"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:59:01.405Z",
+      "contentHash": "e679944ba32a57e3070b4ab40eac828f2dfb8fcefb6fc8ccc9a2c38cd652ed7a"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:59:03.000Z",
+      "contentHash": "e679944ba32a57e3070b4ab40eac828f2dfb8fcefb6fc8ccc9a2c38cd652ed7a"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:59:04.279Z",
+      "contentHash": "e679944ba32a57e3070b4ab40eac828f2dfb8fcefb6fc8ccc9a2c38cd652ed7a"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:59:05.521Z",
+      "contentHash": "e679944ba32a57e3070b4ab40eac828f2dfb8fcefb6fc8ccc9a2c38cd652ed7a"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:59:06.726Z",
+      "contentHash": "e679944ba32a57e3070b4ab40eac828f2dfb8fcefb6fc8ccc9a2c38cd652ed7a"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:59:07.924Z",
+      "contentHash": "e679944ba32a57e3070b4ab40eac828f2dfb8fcefb6fc8ccc9a2c38cd652ed7a"
+    }
+  },
+  "overrides": []
+}

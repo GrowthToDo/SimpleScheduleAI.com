@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "ukg-migration-small-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:26.922Z",
+      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:29.749Z",
+      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:32.117Z",
+      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:32.182Z",
+      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:32.817Z",
+      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:32.817Z",
+      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:58:32.819Z",
+      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:58:34.121Z",
+      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:58:35.146Z",
+      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:58:36.191Z",
+      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:58:37.676Z",
+      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:58:39.247Z",
+      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:58:40.309Z",
+      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+    }
+  },
+  "overrides": []
+}

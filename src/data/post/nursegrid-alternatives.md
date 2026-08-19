@@ -139,7 +139,7 @@ The table below covers customer focus, public ratings, and setup time across Nur
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">TCP Scheduling (Aladtec)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Public safety, EMS, small healthcare</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">2-4 weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -251,7 +251,7 @@ For a CAH switching from NurseGrid specifically because of the manager-app remov
 
 <img src="/images/blog/nursegrid-alternatives/TCP.webp" alt="TCP Scheduling Aladtec workforce management platform for healthcare and public safety" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews).[3] It covers manager-side scheduling functions that a nurse-facing app does not: shift management, certification tracking, overtime visibility, and basic reporting. The trade-off is a more configuration-heavy platform with a 2-4 week setup and ongoing operation by the nurse manager.
+Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews).[3] It covers manager-side scheduling functions that a nurse-facing app does not: shift management, certification tracking, overtime visibility, and basic reporting. The trade-off is a more configuration-heavy platform with a 2-4 week setup and ongoing operation by the nurse manager.
 
 If you are switching from NurseGrid because you need manager-side scheduling and compliance capability rather than a better nurse app, TCP Scheduling provides those functions while keeping a self-serve model. The documented customer base on Capterra skews toward fire, EMS, and law enforcement, so the nurse-facing experience is more limited than NurseGrid's, which may frustrate staff who adopted NurseGrid for its mobile app.
 
@@ -281,7 +281,7 @@ If you are switching from NurseGrid because you need manager-side scheduling and
 
 **Verdict:** A reasonable self-serve path for a CAH that needs manager-side scheduling capability NurseGrid does not provide and can absorb a 2-4 week setup. Probe the nurse-facing experience and a current hospital reference before committing. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
-**Ratings:** G2: 4.3/5 (97 reviews). Capterra: 4.6/5 (17 reviews).
+**Ratings:** G2: 4.5/5 (94 reviews). Capterra: 4.6/5 (17 reviews).
 
 **Cost:** Pricing not listed. Contact TCP Software for a quote.
 
@@ -547,7 +547,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the manager-side 
 
 [2] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30; quotes re-verified 2026-05-15.
 
-[3] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+[3] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
 
 [4] Deputy ratings: 4.6/5 on G2 (1,400+ reviews), 4.6/5 on Capterra (765 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-04-30; quotes re-verified 2026-05-15.
 

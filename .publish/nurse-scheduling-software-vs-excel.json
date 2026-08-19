@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-scheduling-software-vs-excel",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:30.590Z",
+      "contentHash": "c4042344721d246bfb5c5ff6a67e37657d39a206cb0ce1ee3e3007d9274e6a48"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:32.846Z",
+      "contentHash": "c4042344721d246bfb5c5ff6a67e37657d39a206cb0ce1ee3e3007d9274e6a48"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:34.418Z",
+      "contentHash": "c4042344721d246bfb5c5ff6a67e37657d39a206cb0ce1ee3e3007d9274e6a48"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:34.457Z",
+      "contentHash": "c4042344721d246bfb5c5ff6a67e37657d39a206cb0ce1ee3e3007d9274e6a48"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:34.648Z",
+      "contentHash": "c4042344721d246bfb5c5ff6a67e37657d39a206cb0ce1ee3e3007d9274e6a48"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:34.648Z",
+      "contentHash": "c4042344721d246bfb5c5ff6a67e37657d39a206cb0ce1ee3e3007d9274e6a48"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:34.651Z",
+      "contentHash": "c4042344721d246bfb5c5ff6a67e37657d39a206cb0ce1ee3e3007d9274e6a48"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:56:35.989Z",
+      "contentHash": "5dbdac30b36af0518fdbc2667f632303929ee43bc70db2d045faf36122808b19"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:56:37.223Z",
+      "contentHash": "5dbdac30b36af0518fdbc2667f632303929ee43bc70db2d045faf36122808b19"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:56:38.288Z",
+      "contentHash": "5dbdac30b36af0518fdbc2667f632303929ee43bc70db2d045faf36122808b19"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:56:39.331Z",
+      "contentHash": "5dbdac30b36af0518fdbc2667f632303929ee43bc70db2d045faf36122808b19"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:56:40.344Z",
+      "contentHash": "5dbdac30b36af0518fdbc2667f632303929ee43bc70db2d045faf36122808b19"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:56:42.173Z",
+      "contentHash": "5dbdac30b36af0518fdbc2667f632303929ee43bc70db2d045faf36122808b19"
+    }
+  },
+  "overrides": []
+}

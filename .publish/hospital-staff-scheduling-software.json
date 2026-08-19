@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "hospital-staff-scheduling-software",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "FAIL",
+      "checkedAt": "2026-08-13T16:24:23.223Z",
+      "contentHash": "71ab432fe88bd674b45ebe3322db311c13d131d9801855ac34bea938cf8f4a98"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:24:29.950Z",
+      "contentHash": "71ab432fe88bd674b45ebe3322db311c13d131d9801855ac34bea938cf8f4a98"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:24:32.640Z",
+      "contentHash": "71ab432fe88bd674b45ebe3322db311c13d131d9801855ac34bea938cf8f4a98"
+    },
+    "inboundLinks": {
+      "status": "FAIL",
+      "checkedAt": "2026-08-13T16:24:32.686Z",
+      "contentHash": "71ab432fe88bd674b45ebe3322db311c13d131d9801855ac34bea938cf8f4a98"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:24:33.131Z",
+      "contentHash": "71ab432fe88bd674b45ebe3322db311c13d131d9801855ac34bea938cf8f4a98"
+    },
+    "dateSanity": {
+      "status": "FAIL",
+      "checkedAt": "2026-08-13T16:24:33.132Z",
+      "contentHash": "71ab432fe88bd674b45ebe3322db311c13d131d9801855ac34bea938cf8f4a98"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-13T16:24:33.134Z",
+      "contentHash": "71ab432fe88bd674b45ebe3322db311c13d131d9801855ac34bea938cf8f4a98"
+    }
+  },
+  "recorded": {},
+  "overrides": []
+}

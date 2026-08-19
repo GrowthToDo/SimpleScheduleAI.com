@@ -114,7 +114,7 @@ The common options split into four groups: spreadsheets, consumer shift apps, ho
         <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">Aladtec (TCP)</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Public safety, EMS, small healthcare rosters</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Self-serve; admin-side configuration</td>
-        <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br />Capterra: 4.6/5 (17 reviews; small sample)</td>
+        <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94 reviews)<br />Capterra: 4.6/5 (17 reviews; small sample)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed; contact vendor</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -158,7 +158,7 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 
 [2] ShiftWizard ratings: G2 4.3/5, Capterra 4.4/5 (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-05-15.
 
-[3] Aladtec by TCP ratings: G2 4.3/5 (97 reviews), Capterra 4.6/5 (17 reviews; small sample that skews toward public safety and EMS rather than hospital nursing). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-05-15.
+[3] Aladtec by TCP ratings: G2 4.5/5 (94 reviews), Capterra 4.6/5 (17 reviews; small sample that skews toward public safety and EMS rather than hospital nursing). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
 
 [4] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 

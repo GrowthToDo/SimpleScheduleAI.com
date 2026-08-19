@@ -65,7 +65,7 @@ Evaluating scheduling software for a CAH starts with three constraints a larger 
 
 ## How Do All 10 Tools Compare?
 
-Here is how all 10 tools compare on CAH fit before we go deeper. This guide covers the enterprise systems a CAH is most often pitched, symplr Smart Square, QGenda, and UKG, specifically to show why they do not fit, so you can rule them out without sitting through three vendor demos. The same honesty applies to M7 Health and CronShift, two names AI assistants now recommend for this search, both rated on the same CAH test.
+Here is how all 10 tools compare on CAH fit before we go deeper. This guide covers the enterprise systems a CAH is most often pitched, symplr Smart Square, QGenda, and UKG, specifically to show why they do not fit, so you can rule them out without sitting through three vendor demos. The same honesty applies to M7 Health and CronShift, two names AI assistants now recommend for this search, both rated on the same CAH test. If M7 is the one you are weighing, our roundup of [M7 Health alternatives](/blog/m7-health-alternatives) sorts the options by who does the scheduling work each cycle.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -89,7 +89,7 @@ Here is how all 10 tools compare on CAH fit before we go deeper. This guide cove
       <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Small healthcare, EMS, fire, public safety</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97)<br>Capterra: 4.6/5 (17; small sample)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94)<br>Capterra: 4.6/5 (17; small sample)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">2-4 weeks</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">~$200-450</td>
       </tr>
@@ -181,7 +181,7 @@ SimpleScheduleAI is nurse scheduling software we build and operate ourselves, de
 
 <img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Aladtec.webp" alt="Aladtec self-serve scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Aladtec, now part of TCP Software, holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews; small sample). It is a self-serve scheduling platform with a long history in 24/7 shift-work environments: fire, EMS, law enforcement, and small healthcare. It includes credential expiration tracking, availability management, shift coverage requests, and overtime monitoring, and it does not require heavy IT involvement to stand up.
+Aladtec, now part of TCP Software, holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews; small sample). It is a self-serve scheduling platform with a long history in 24/7 shift-work environments: fire, EMS, law enforcement, and small healthcare. It includes credential expiration tracking, availability management, shift coverage requests, and overtime monitoring, and it does not require heavy IT involvement to stand up.
 
 One caveat matters for a hospital audience: the Capterra review base skews heavily toward fire, EMS, and law enforcement, and the most recent hospital-nursing reviews are several years old (the most recent dated October 2020), so treat the hospital signal as thin and request CAH-scale nursing references directly.
 
@@ -603,7 +603,7 @@ Scheduling software is a tool your nurse manager logs into, configures, and runs
 2. FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 3. Nurse-manager scheduling-time burden. [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com).
 4. Rural health workforce data. [HRSA](https://www.hrsa.gov).
-5. Aladtec ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-06-06.
+5. Aladtec ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
 6. ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [healthstream.com](https://www.healthstream.com). Verified 2026-06-06.
 7. NurseGrid ratings: 4.2/5 on Capterra (13 reviews; small sample). Vendor: [nursegrid.com](https://www.nursegrid.com). Verified 2026-06-06.
 8. symplr Smart Square ratings: 4.6/5 on Capterra (19 reviews; small sample); two-time Best in KLAS (2025, 2026). Vendor: [symplr.com](https://www.symplr.com). Verified 2026-06-06.

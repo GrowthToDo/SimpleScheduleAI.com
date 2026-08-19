@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "will-ai-replace-nurses-montefiore-layoffs",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T18:16:44.971Z",
+      "contentHash": "23c99fc5728713a356be9d799d686f111237cbbb0bd6a7ec5bef66a6472f5a99"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T18:16:46.776Z",
+      "contentHash": "23c99fc5728713a356be9d799d686f111237cbbb0bd6a7ec5bef66a6472f5a99"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T18:16:48.241Z",
+      "contentHash": "23c99fc5728713a356be9d799d686f111237cbbb0bd6a7ec5bef66a6472f5a99"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T18:16:48.269Z",
+      "contentHash": "23c99fc5728713a356be9d799d686f111237cbbb0bd6a7ec5bef66a6472f5a99"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T18:16:48.377Z",
+      "contentHash": "23c99fc5728713a356be9d799d686f111237cbbb0bd6a7ec5bef66a6472f5a99"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T18:16:48.378Z",
+      "contentHash": "23c99fc5728713a356be9d799d686f111237cbbb0bd6a7ec5bef66a6472f5a99"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-04T18:16:48.379Z",
+      "contentHash": "23c99fc5728713a356be9d799d686f111237cbbb0bd6a7ec5bef66a6472f5a99"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-08-04T18:14:53.317Z",
+      "contentHash": "5772fc2c967e29cd0e743c33adca4363b7b199917a29e01c8ff0dadcbd09da81"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "main-session live fetches + dossier entry 2026-08-04",
+      "setAt": "2026-08-04T18:14:54.325Z",
+      "contentHash": "5772fc2c967e29cd0e743c33adca4363b7b199917a29e01c8ff0dadcbd09da81"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-08-04T18:14:55.742Z",
+      "contentHash": "5772fc2c967e29cd0e743c33adca4363b7b199917a29e01c8ff0dadcbd09da81"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-04T18:14:56.669Z",
+      "contentHash": "5772fc2c967e29cd0e743c33adca4363b7b199917a29e01c8ff0dadcbd09da81"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "indexnow-submit 96 URLs HTTP 200",
+      "setAt": "2026-08-04T18:19:39.860Z",
+      "contentHash": "5772fc2c967e29cd0e743c33adca4363b7b199917a29e01c8ff0dadcbd09da81"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "GSC MCP submit 2026-08-04",
+      "setAt": "2026-08-04T18:19:40.683Z",
+      "contentHash": "5772fc2c967e29cd0e743c33adca4363b7b199917a29e01c8ff0dadcbd09da81"
+    }
+  },
+  "overrides": []
+}

@@ -30,7 +30,7 @@ This guide compares 6 alternatives for a 25-bed CAH that needs hospital-nursing 
 ## Key Takeaways
 
 - For a Critical Access Hospital that needs a self-serve platform designed specifically for hospital nurse scheduling workflows, [ShiftWizard](/blog/shiftwizard-alternatives) is a stronger fit than Aladtec. For a facility staying within the [TCP](/blog/best-tcp-alternative-for-cah) ecosystem, TCP Scheduling is the direct upgrade path with a longer implementation. For a hospital that needs the scheduling handled rather than a better tool to do it themselves, SimpleScheduleAI is the managed service alternative.
-- Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews).[1] The platform's documented customer base on Capterra skews toward fire, EMS, law enforcement, and security users; the most recent hospital-context reviews on Capterra are several years old.
+- Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews).[1] The platform's documented customer base on Capterra skews toward fire, EMS, law enforcement, and security users; the most recent hospital-context reviews on Capterra are several years old.
 - TCP Scheduling is the enterprise-tier product from the same parent company; data migration within the TCP ecosystem is simpler than switching vendors entirely, but configuration depth and implementation effort are higher.
 - SmartLinx, with documented focus on long-term care, post-acute, senior care, and behavioral health, is a self-serve option for hospitals at 50-100 beds with IT capacity for a longer implementation.
 - When I Work, Homebase, and Deputy are general workforce scheduling tools used across many industries; healthcare buyers should confirm with each vendor which clinical compliance capabilities (HIPAA, BAA, CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) audit trail, credential constraints) are covered in their tier and contract.
@@ -67,7 +67,7 @@ Hospitals switch away from Aladtec because the platform's heritage is in public-
 
 <img src="/images/blog/aladtec-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews).[1] The overall ratings are strong, but the Capterra reviewers skew heavily toward fire, EMS, and law enforcement users. The minority of negative reviews from hospital users cluster around two recurring themes worth probing specifically during a CAH demo.
+Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews).[1] The overall ratings are strong, but the Capterra reviewers skew heavily toward fire, EMS, and law enforcement users. The minority of negative reviews from hospital users cluster around two recurring themes worth probing specifically during a CAH demo.
 
 ### Online User Complaints
 
@@ -111,7 +111,7 @@ The table below covers setup time and public ratings across the six alternatives
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Aladtec by TCP (current)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Public safety, EMS, fire, small healthcare</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">2-4 weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -190,7 +190,7 @@ The service implements the hospital's rules, maintains them as staff changes occ
 
 <img src="/images/blog/aladtec-alternatives/TCP.webp" alt="TCP Scheduling Software workforce management platform for healthcare" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews). TCP Software owns Aladtec, and TCP Scheduling is their enterprise-tier product, more powerful, more configurable, and significantly more complex than Aladtec. For a hospital that wants to stay within the TCP vendor ecosystem but needs capabilities that Aladtec does not provide, TCP Scheduling is the direct upgrade path.
+Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews). TCP Software owns Aladtec, and TCP Scheduling is their enterprise-tier product, more powerful, more configurable, and significantly more complex than Aladtec. For a hospital that wants to stay within the TCP vendor ecosystem but needs capabilities that Aladtec does not provide, TCP Scheduling is the direct upgrade path.
 
 The tradeoff is considerable. TCP Scheduling requires a longer implementation, IT involvement, and ongoing configuration expertise. It is designed for mid-size and larger healthcare organizations, not for 25-bed CAHs. If the reason for leaving Aladtec is configuration burden, moving to TCP Scheduling does not solve the problem, it moves you to a more configurable tool that requires even more configuration management.
 
@@ -495,7 +495,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the overhead mode
 
 ## Sources
 
-[1] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+[1] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
 
 [2] Amanda F., Nurse Manager (Hospital & Health Care), Aladtec review. Capterra, October 13, 2020.
 

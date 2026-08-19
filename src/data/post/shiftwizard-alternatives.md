@@ -118,7 +118,7 @@ For a CAH evaluating ShiftWizard, ask the demo to walk through swap workflows fr
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">TCP Scheduling (Aladtec)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Public safety, EMS, small hospital self-serve</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">2-4 weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -173,7 +173,7 @@ The service is a new offering, without public G2 or Capterra reviews yet. CMS [Â
 
 <img src="/images/blog/shiftwizard-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-TCP Scheduling Software (formerly Aladtec, acquired by TCP Software in 2021) holds 4.3/5 across 97 G2 reviews and 4.6/5 across 17 Capterra reviews (verified 2026-04-30); small Capterra sample, larger G2 sample. The platform covers shift management, time and attendance, overtime tracking, certification tracking, and reporting across fire, EMS, law enforcement, and hospital settings. The product's heritage is in 24/7 shift-work environments; its hospital-nursing deployment is a more recent expansion of the original use case.
+TCP Scheduling Software (formerly Aladtec, acquired by TCP Software in 2021) holds 4.5/5 across 94 G2 reviews and 4.6/5 across 17 Capterra reviews (Verified 2026-07-15); small Capterra sample, larger G2 sample. The platform covers shift management, time and attendance, overtime tracking, certification tracking, and reporting across fire, EMS, law enforcement, and hospital settings. The product's heritage is in 24/7 shift-work environments; its hospital-nursing deployment is a more recent expansion of the original use case.
 
 A representative positive review from a public-safety user:
 
@@ -426,7 +426,7 @@ If you are currently evaluating hospital scheduling options for your CAH, these 
 
 [1] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30.
 
-[2] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+[2] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
 
 [3] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-04-30.
 

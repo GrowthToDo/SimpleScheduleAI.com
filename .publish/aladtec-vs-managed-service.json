@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "aladtec-vs-managed-service",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:37.984Z",
+      "contentHash": "4d19ceabd6ca0bcaec4bca94f4d34a5bf237e121cc69b9ead79c792ded49640c"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:44.438Z",
+      "contentHash": "4d19ceabd6ca0bcaec4bca94f4d34a5bf237e121cc69b9ead79c792ded49640c"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:46.402Z",
+      "contentHash": "4d19ceabd6ca0bcaec4bca94f4d34a5bf237e121cc69b9ead79c792ded49640c"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:46.491Z",
+      "contentHash": "4d19ceabd6ca0bcaec4bca94f4d34a5bf237e121cc69b9ead79c792ded49640c"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:47.232Z",
+      "contentHash": "4d19ceabd6ca0bcaec4bca94f4d34a5bf237e121cc69b9ead79c792ded49640c"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:47.232Z",
+      "contentHash": "4d19ceabd6ca0bcaec4bca94f4d34a5bf237e121cc69b9ead79c792ded49640c"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:52:47.236Z",
+      "contentHash": "4d19ceabd6ca0bcaec4bca94f4d34a5bf237e121cc69b9ead79c792ded49640c"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:52:51.271Z",
+      "contentHash": "a78eb37fe890a44ca84407eb0b854d8928a6788ec37730fb9579a589d095299d"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:52:54.670Z",
+      "contentHash": "a78eb37fe890a44ca84407eb0b854d8928a6788ec37730fb9579a589d095299d"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:53:00.891Z",
+      "contentHash": "a78eb37fe890a44ca84407eb0b854d8928a6788ec37730fb9579a589d095299d"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:53:05.348Z",
+      "contentHash": "a78eb37fe890a44ca84407eb0b854d8928a6788ec37730fb9579a589d095299d"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:53:07.452Z",
+      "contentHash": "a78eb37fe890a44ca84407eb0b854d8928a6788ec37730fb9579a589d095299d"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:53:09.088Z",
+      "contentHash": "a78eb37fe890a44ca84407eb0b854d8928a6788ec37730fb9579a589d095299d"
+    }
+  },
+  "overrides": []
+}

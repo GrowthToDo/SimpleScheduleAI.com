@@ -203,7 +203,7 @@ Setup is 100% remote and takes 3 to 5 business days. No IT involvement, no confi
 
 <img src="/images/blog/best-nurse-scheduling-software-texas/Aladtec.webp" alt="Aladtec scheduling software for Texas small hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Aladtec by TCP is a self-serve scheduling platform built for 24/7 shift-work environments. It holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews), as of April 2026. It is fully cloud-based and sets up entirely remotely. Credential expiration tracking, shift coverage tools, and basic overtime monitoring are included.
+Aladtec by TCP is a self-serve scheduling platform built for 24/7 shift-work environments. It holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews), as of April 2026. It is fully cloud-based and sets up entirely remotely. Credential expiration tracking, shift coverage tools, and basic overtime monitoring are included.
 
 FLSA overtime rules, including the healthcare 8-and-80 calculation, can be configured within the platform's rule engine, though it requires setup time from whoever is managing the implementation.
 
@@ -589,7 +589,7 @@ The FLSA healthcare worker exemption allows hospitals and residential care facil
 
 ## Sources
 
-1. Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [aladtec.com](https://www.aladtec.com). Verified 2026-04-30.
+1. Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [aladtec.com](https://www.aladtec.com). Verified 2026-07-15.
 2. SmartLinx ratings: 4.5/5 on Capterra (6 reviews; small sample). Vendor page: [smartlinx.com](https://www.smartlinx.com). Verified 2026-04-30.
 3. QGenda ratings: 4.6/5 on G2 (164 reviews), 4.2/5 on Capterra (68 reviews). Vendor page: [qgenda.com](https://www.qgenda.com). Verified 2026-04-30.
 4. NurseGrid ratings: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://nursegrid.com). Verified 2026-04-30.

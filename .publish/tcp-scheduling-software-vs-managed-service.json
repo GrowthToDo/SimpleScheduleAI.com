@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "tcp-scheduling-software-vs-managed-service",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:54.007Z",
+      "contentHash": "8bedec6bb0a9facadb879d531bcc68804a2edcd48b657729981bb46c6fce4286"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:56.406Z",
+      "contentHash": "8bedec6bb0a9facadb879d531bcc68804a2edcd48b657729981bb46c6fce4286"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:58.027Z",
+      "contentHash": "8bedec6bb0a9facadb879d531bcc68804a2edcd48b657729981bb46c6fce4286"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:58.075Z",
+      "contentHash": "8bedec6bb0a9facadb879d531bcc68804a2edcd48b657729981bb46c6fce4286"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:58.364Z",
+      "contentHash": "8bedec6bb0a9facadb879d531bcc68804a2edcd48b657729981bb46c6fce4286"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:58.365Z",
+      "contentHash": "8bedec6bb0a9facadb879d531bcc68804a2edcd48b657729981bb46c6fce4286"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:58.366Z",
+      "contentHash": "8bedec6bb0a9facadb879d531bcc68804a2edcd48b657729981bb46c6fce4286"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:57:59.765Z",
+      "contentHash": "ccbd28cc7b032f476bf6aea508beba3eccbd5e2086ed37a02a00ecf37467dbf0"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:58:00.967Z",
+      "contentHash": "ccbd28cc7b032f476bf6aea508beba3eccbd5e2086ed37a02a00ecf37467dbf0"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:58:02.680Z",
+      "contentHash": "ccbd28cc7b032f476bf6aea508beba3eccbd5e2086ed37a02a00ecf37467dbf0"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:58:04.143Z",
+      "contentHash": "ccbd28cc7b032f476bf6aea508beba3eccbd5e2086ed37a02a00ecf37467dbf0"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:58:05.134Z",
+      "contentHash": "ccbd28cc7b032f476bf6aea508beba3eccbd5e2086ed37a02a00ecf37467dbf0"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:58:06.072Z",
+      "contentHash": "ccbd28cc7b032f476bf6aea508beba3eccbd5e2086ed37a02a00ecf37467dbf0"
+    }
+  },
+  "overrides": []
+}

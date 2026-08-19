@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "after-hours-callout-coverage-small-hospitals",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T12:17:35.597Z",
+      "contentHash": "905ff693c8960f8f3073f8950681136b928636b4f2306b711ed36ec1d4216170"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T12:17:38.472Z",
+      "contentHash": "905ff693c8960f8f3073f8950681136b928636b4f2306b711ed36ec1d4216170"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T12:17:40.011Z",
+      "contentHash": "905ff693c8960f8f3073f8950681136b928636b4f2306b711ed36ec1d4216170"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T12:17:40.044Z",
+      "contentHash": "905ff693c8960f8f3073f8950681136b928636b4f2306b711ed36ec1d4216170"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T12:17:40.297Z",
+      "contentHash": "905ff693c8960f8f3073f8950681136b928636b4f2306b711ed36ec1d4216170"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T12:17:40.297Z",
+      "contentHash": "905ff693c8960f8f3073f8950681136b928636b4f2306b711ed36ec1d4216170"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T12:17:40.299Z",
+      "contentHash": "905ff693c8960f8f3073f8950681136b928636b4f2306b711ed36ec1d4216170"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "bench-claim-sweep",
+      "setAt": "2026-08-10T12:17:42.495Z",
+      "contentHash": "097042044661a7cf3c84bf7aa5be32fd796068bf0eb6e36a3e5d7d07c3928320"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "inventory-verified-2026-08-10",
+      "setAt": "2026-08-10T12:17:44.577Z",
+      "contentHash": "097042044661a7cf3c84bf7aa5be32fd796068bf0eb6e36a3e5d7d07c3928320"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T12:17:46.408Z",
+      "contentHash": "097042044661a7cf3c84bf7aa5be32fd796068bf0eb6e36a3e5d7d07c3928320"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T12:17:51.880Z",
+      "contentHash": "097042044661a7cf3c84bf7aa5be32fd796068bf0eb6e36a3e5d7d07c3928320"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T12:17:57.946Z",
+      "contentHash": "097042044661a7cf3c84bf7aa5be32fd796068bf0eb6e36a3e5d7d07c3928320"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T12:18:03.813Z",
+      "contentHash": "097042044661a7cf3c84bf7aa5be32fd796068bf0eb6e36a3e5d7d07c3928320"
+    }
+  },
+  "overrides": []
+}

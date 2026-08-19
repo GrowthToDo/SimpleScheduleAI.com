@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-clinical-scheduling",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T06:17:05.482Z",
+      "contentHash": "6a1693a663ce486611f1370e7fb0975085213f76c5815d8f1095fcfe990d6761"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T06:17:06.990Z",
+      "contentHash": "6a1693a663ce486611f1370e7fb0975085213f76c5815d8f1095fcfe990d6761"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T06:17:09.073Z",
+      "contentHash": "6a1693a663ce486611f1370e7fb0975085213f76c5815d8f1095fcfe990d6761"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T06:17:09.098Z",
+      "contentHash": "6a1693a663ce486611f1370e7fb0975085213f76c5815d8f1095fcfe990d6761"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T06:17:09.118Z",
+      "contentHash": "6a1693a663ce486611f1370e7fb0975085213f76c5815d8f1095fcfe990d6761"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T06:17:09.128Z",
+      "contentHash": "6a1693a663ce486611f1370e7fb0975085213f76c5815d8f1095fcfe990d6761"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T06:17:09.129Z",
+      "contentHash": "6a1693a663ce486611f1370e7fb0975085213f76c5815d8f1095fcfe990d6761"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "consistency-audit-fixes",
+      "setAt": "2026-08-10T06:17:16.443Z",
+      "contentHash": "1364505f7c86d2089903b4171d6cbdff776b3aff3dd18e3738a828299b547eb9"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "dossier-hours-entry-added",
+      "setAt": "2026-08-10T06:17:18.819Z",
+      "contentHash": "1364505f7c86d2089903b4171d6cbdff776b3aff3dd18e3738a828299b547eb9"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-08-10T06:17:21.512Z",
+      "contentHash": "1364505f7c86d2089903b4171d6cbdff776b3aff3dd18e3738a828299b547eb9"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T06:17:24.349Z",
+      "contentHash": "1364505f7c86d2089903b4171d6cbdff776b3aff3dd18e3738a828299b547eb9"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T06:17:26.890Z",
+      "contentHash": "1364505f7c86d2089903b4171d6cbdff776b3aff3dd18e3738a828299b547eb9"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T06:17:29.658Z",
+      "contentHash": "1364505f7c86d2089903b4171d6cbdff776b3aff3dd18e3738a828299b547eb9"
+    }
+  },
+  "overrides": []
+}

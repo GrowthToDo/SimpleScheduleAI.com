@@ -235,7 +235,7 @@ Aladtec was built for emergency services (EMS, fire, law enforcement) but has a 
 
 **Verdict:** The strongest self-serve option for a 25-bed hospital that wants to own its scheduling process internally. Expect a 4-6 week ramp before the tool is working efficiently for your specific constraints. See the deeper [Aladtec alternatives for Critical Access Hospitals](/blog/aladtec-alternatives) guide for a fuller competitor analysis or the [Aladtec vs managed service](/blog/aladtec-vs-managed-service) comparison if the operating model is the decision point.
 
-**Ratings (May 2026):** G2: 4.3/5 (97 reviews). Capterra: 4.6/5 (17 reviews; small sample, reviewer base skews toward fire, EMS, and law enforcement; most recent hospital-context review is October 2020).[1]
+**Ratings (July 2026):** G2: 4.5/5 (94 reviews). Capterra: 4.6/5 (17 reviews; small sample, reviewer base skews toward fire, EMS, and law enforcement; most recent hospital-context review is October 2020).[1]
 
 **Cost:** $200-450 per month depending on roster size and modules. Pricing requires a quote.
 
@@ -469,7 +469,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals over 
 
 ## Sources
 
-[1] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified per inline dates. Hospital-context Capterra quotes (Amanda F., October 13, 2020; Jeanne C., May 7, 2019) are several years old; recent reviewers skew toward fire, EMS, and law enforcement.
+[1] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified per inline dates. Hospital-context Capterra quotes (Amanda F., October 13, 2020; Jeanne C., May 7, 2019) are several years old; recent reviewers skew toward fire, EMS, and law enforcement.
 
 [2] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Quotes dated June 2024.
 

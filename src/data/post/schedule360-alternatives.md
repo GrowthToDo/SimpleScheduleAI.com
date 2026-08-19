@@ -170,7 +170,7 @@ For a critical access hospital, scheduling requirements differ from what a broad
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">TCP (Aladtec)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Public safety, EMS, fire, small healthcare</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews; small sample)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94 reviews)<br>Capterra: 4.6/5 (17 reviews; small sample)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">2-4 weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -269,7 +269,7 @@ Ask the demo to walk through mobile workflows from both manager and staff perspe
 
 <img src="/images/blog/schedule360-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews; small sample).[6] The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
+Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews; small sample).[6] The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
 
 For a CAH coming off Schedule360, TCP/Aladtec's lower price point and faster setup may be a fit. Trade-offs CAH demos should probe:
 
@@ -454,7 +454,7 @@ For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) 
 
 [5] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews), G2 Spring 2026 Leader. Vendor page: [healthstream.com](https://www.healthstream.com). Reviewer quotes (Jennifer C., Director of Emergency Services, July 15, 2024; Erika A., Registered Nurse, July 9, 2024) verified on Capterra 2026-04-30.
 
-[6] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Reviewer quotes (Amanda F., Nurse Manager, October 13, 2020; Jeanne C., Administrative Coordinator, May 7, 2019) verified on Capterra 2026-04-30.
+[6] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample), verified 2026-07-15. Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Reviewer quotes (Amanda F., Nurse Manager, October 13, 2020; Jeanne C., Administrative Coordinator, May 7, 2019) verified on Capterra 2026-04-30.
 
 [7] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Reviewer quotes (Chief Nursing Officer, June 13, 2024; Staffing Coordinator, June 11, 2024) verified on Capterra 2026-04-30.
 

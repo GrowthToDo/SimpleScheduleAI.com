@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "qgenda-alternatives",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-09T16:37:08.694Z",
+      "contentHash": "e908c3279e6df21160b9f99c963751b311cea14568c8629e6364253155cacfc9"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-09T16:37:10.521Z",
+      "contentHash": "e908c3279e6df21160b9f99c963751b311cea14568c8629e6364253155cacfc9"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-09T16:37:13.014Z",
+      "contentHash": "e908c3279e6df21160b9f99c963751b311cea14568c8629e6364253155cacfc9"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-09T16:37:13.050Z",
+      "contentHash": "e908c3279e6df21160b9f99c963751b311cea14568c8629e6364253155cacfc9"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-09T16:37:13.197Z",
+      "contentHash": "e908c3279e6df21160b9f99c963751b311cea14568c8629e6364253155cacfc9"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-09T16:37:13.197Z",
+      "contentHash": "e908c3279e6df21160b9f99c963751b311cea14568c8629e6364253155cacfc9"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-09T16:37:13.199Z",
+      "contentHash": "e908c3279e6df21160b9f99c963751b311cea14568c8629e6364253155cacfc9"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "review-agent-SHIP-after-2-fixes",
+      "setAt": "2026-08-09T16:39:09.844Z",
+      "contentHash": "d005fea3e396d19a07993b2d42215c3267017b55a0f376fbdb8874a4f0ebb8a6"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "positioning-facts-dossier-backed",
+      "setAt": "2026-08-09T16:39:11.652Z",
+      "contentHash": "d005fea3e396d19a07993b2d42215c3267017b55a0f376fbdb8874a4f0ebb8a6"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged-hero",
+      "setAt": "2026-08-09T16:39:13.271Z",
+      "contentHash": "d005fea3e396d19a07993b2d42215c3267017b55a0f376fbdb8874a4f0ebb8a6"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder-approved-edits-1-2-4",
+      "setAt": "2026-08-09T16:39:14.772Z",
+      "contentHash": "d005fea3e396d19a07993b2d42215c3267017b55a0f376fbdb8874a4f0ebb8a6"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "resubmit-after-deploy",
+      "setAt": "2026-08-09T16:39:16.345Z",
+      "contentHash": "d005fea3e396d19a07993b2d42215c3267017b55a0f376fbdb8874a4f0ebb8a6"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-09",
+      "setAt": "2026-08-09T16:39:18.151Z",
+      "contentHash": "d005fea3e396d19a07993b2d42215c3267017b55a0f376fbdb8874a4f0ebb8a6"
+    }
+  },
+  "overrides": []
+}

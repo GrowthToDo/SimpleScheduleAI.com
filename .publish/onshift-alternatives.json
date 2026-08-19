@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "onshift-alternatives",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:11.167Z",
+      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:13.527Z",
+      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:15.536Z",
+      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:15.590Z",
+      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:15.849Z",
+      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:15.849Z",
+      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:57:15.853Z",
+      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:57:17.446Z",
+      "contentHash": "7b6dc59c63b3870559ecf44a7f8a5aecd04bb1d3e3a38a43c5578c4b6859a25e"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:57:18.492Z",
+      "contentHash": "7b6dc59c63b3870559ecf44a7f8a5aecd04bb1d3e3a38a43c5578c4b6859a25e"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:57:19.841Z",
+      "contentHash": "7b6dc59c63b3870559ecf44a7f8a5aecd04bb1d3e3a38a43c5578c4b6859a25e"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:57:21.604Z",
+      "contentHash": "7b6dc59c63b3870559ecf44a7f8a5aecd04bb1d3e3a38a43c5578c4b6859a25e"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:57:23.305Z",
+      "contentHash": "7b6dc59c63b3870559ecf44a7f8a5aecd04bb1d3e3a38a43c5578c4b6859a25e"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:57:24.604Z",
+      "contentHash": "7b6dc59c63b3870559ecf44a7f8a5aecd04bb1d3e3a38a43c5578c4b6859a25e"
+    }
+  },
+  "overrides": []
+}

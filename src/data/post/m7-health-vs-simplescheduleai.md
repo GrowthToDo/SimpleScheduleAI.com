@@ -256,9 +256,11 @@ Write the answers down before any demo. A demo shows what the software can do. T
 3. **Ask any enterprise vendor two direct questions.** Request a named Critical Access Hospital or standalone rural reference customer, and ask for documented CMS §485.635 support and FLSA overtime threshold tracking. Treat any vendor outcome figure as a claim until you see independent confirmation.
 
 4. **Ask who does the scheduling work in week six.** Setup help and ongoing operation are different promises. Get both answered before you sign: who configures it on day one, and who rebuilds the schedule every cycle after that.
-5. **Track your nurse manager's weekly scheduling hours for one week.** Include schedule building, callout coverage, swap requests, and pre-survey CMS documentation. That total is the number any model has to beat to be worth the change.
 
-6. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service lets you compare the actual time burden against your baseline before committing. Start at [how it works](/how-it-works).
+5. **Widen the shortlist before deciding.** This guide is a head-to-head. For the fuller set a small hospital should weigh, see our roundup of [M7 Health alternatives](/blog/m7-health-alternatives), which sorts four platforms by who does the work each cycle.
+6. **Track your nurse manager's weekly scheduling hours for one week.** Include schedule building, callout coverage, swap requests, and pre-survey CMS documentation. That total is the number any model has to beat to be worth the change.
+
+7. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service lets you compare the actual time burden against your baseline before committing. Start at [how it works](/how-it-works).
 
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>

@@ -139,7 +139,7 @@ For a critical access hospital, scheduling requirements differ from what QGenda 
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">TCP (Aladtec)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Public safety, EMS, fire, small healthcare</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.3/5 (97 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">2-4 weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
@@ -200,7 +200,7 @@ Texas compliance is built in as the default: [FLSA overtime thresholds](https://
 
 <img src="/images/blog/qgenda-alternatives/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews).[2] The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
+Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews).[2] The platform's documented customer base skews toward fire, EMS, law enforcement, and security users; its hospital-nursing deployment is a more recent expansion of the original use case ([tcpsoftware.com](https://www.tcpsoftware.com)).
 
 For a CAH coming off QGenda, TCP/Aladtec's pricing tier and faster setup may be a fit. Trade-offs CAH demos should probe:
 
@@ -419,7 +419,7 @@ For a full breakdown of [nurse scheduling software](/nurse-scheduling-software) 
 
 [1] QGenda ratings: 4.6/5 on G2 (164 reviews), 4.2/5 on Capterra (68 reviews). Vendor page: [qgenda.com](https://www.qgenda.com). Verified 2026-04-30.
 
-[2] TCP / Aladtec ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+[2] TCP / Aladtec ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
 
 [3] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews), G2 Spring 2026 Leader. Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30.
 

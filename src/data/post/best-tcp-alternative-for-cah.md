@@ -225,7 +225,7 @@ ShiftWizard holds 4.4/5 on Capterra from 723 reviews and is purpose-built for ho
 
 <img src="/images/blog/best-tcp-alternative-for-cah/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec by TCP is a separate TCP Software product designed specifically for healthcare and public safety scheduling. It is not a rebrand of TCP TimeClock+: TCP Software acquired Aladtec in October 2021, and both products remain separately maintained. Aladtec holds 4.3/5 on G2 (97 reviews) and 4.6/5 on Capterra (17 reviews; small sample). If your primary frustration with TCP TimeClock+ is that its scheduling features are too basic for healthcare-specific needs, Aladtec by TCP is the purpose-built TCP alternative worth evaluating before switching vendors entirely.
+Aladtec by TCP is a separate TCP Software product designed specifically for healthcare and public safety scheduling. It is not a rebrand of TCP TimeClock+: TCP Software acquired Aladtec in October 2021, and both products remain separately maintained. Aladtec holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews; small sample). If your primary frustration with TCP TimeClock+ is that its scheduling features are too basic for healthcare-specific needs, Aladtec by TCP is the purpose-built TCP alternative worth evaluating before switching vendors entirely.
 
 **Best for:** Facilities that want to stay within the TCP Software ecosystem but need a scheduling tool designed specifically for healthcare and EMS operations rather than general workforce management.
 
@@ -333,7 +333,7 @@ Four questions separate the platforms that will actually improve a CAH nurse man
 
 [6] Erika A., Registered Nurse, ShiftWizard review. Capterra, July 9, 2024.
 
-[7] Aladtec by TCP ratings: 4.3/5 on G2 (97 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-04-30.
+[7] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
 
 [8] Jody S., Security Management, Aladtec review. Capterra, August 14, 2025.
 

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-rostering-vs-scheduling-software",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:00.426Z",
+      "contentHash": "3b05a9216345ea9c6e3c3eb0ec31d58139c990011be3f51f84c84f685746af18"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:02.925Z",
+      "contentHash": "3b05a9216345ea9c6e3c3eb0ec31d58139c990011be3f51f84c84f685746af18"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:04.231Z",
+      "contentHash": "3b05a9216345ea9c6e3c3eb0ec31d58139c990011be3f51f84c84f685746af18"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:04.292Z",
+      "contentHash": "3b05a9216345ea9c6e3c3eb0ec31d58139c990011be3f51f84c84f685746af18"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:05.534Z",
+      "contentHash": "3b05a9216345ea9c6e3c3eb0ec31d58139c990011be3f51f84c84f685746af18"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:05.534Z",
+      "contentHash": "3b05a9216345ea9c6e3c3eb0ec31d58139c990011be3f51f84c84f685746af18"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:56:05.536Z",
+      "contentHash": "3b05a9216345ea9c6e3c3eb0ec31d58139c990011be3f51f84c84f685746af18"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:56:06.623Z",
+      "contentHash": "5ff7ef7c0b2e1f380e2129f7ca2878473d07483d356ed22f255ee2fd131fd7ad"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:56:07.889Z",
+      "contentHash": "5ff7ef7c0b2e1f380e2129f7ca2878473d07483d356ed22f255ee2fd131fd7ad"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:56:09.131Z",
+      "contentHash": "5ff7ef7c0b2e1f380e2129f7ca2878473d07483d356ed22f255ee2fd131fd7ad"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:56:10.307Z",
+      "contentHash": "5ff7ef7c0b2e1f380e2129f7ca2878473d07483d356ed22f255ee2fd131fd7ad"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:56:11.402Z",
+      "contentHash": "5ff7ef7c0b2e1f380e2129f7ca2878473d07483d356ed22f255ee2fd131fd7ad"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:56:12.412Z",
+      "contentHash": "5ff7ef7c0b2e1f380e2129f7ca2878473d07483d356ed22f255ee2fd131fd7ad"
+    }
+  },
+  "overrides": []
+}

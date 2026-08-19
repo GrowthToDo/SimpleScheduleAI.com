@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "healthcare-scheduling-crisis",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:54:36.805Z",
+      "contentHash": "12ea43a018ee6eab0f829414e48cb790478f70b7d6eb6c7bf61e127ab7fa5a1c"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:54:39.062Z",
+      "contentHash": "12ea43a018ee6eab0f829414e48cb790478f70b7d6eb6c7bf61e127ab7fa5a1c"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:54:41.318Z",
+      "contentHash": "12ea43a018ee6eab0f829414e48cb790478f70b7d6eb6c7bf61e127ab7fa5a1c"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:54:41.404Z",
+      "contentHash": "12ea43a018ee6eab0f829414e48cb790478f70b7d6eb6c7bf61e127ab7fa5a1c"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:54:41.755Z",
+      "contentHash": "12ea43a018ee6eab0f829414e48cb790478f70b7d6eb6c7bf61e127ab7fa5a1c"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:54:41.756Z",
+      "contentHash": "12ea43a018ee6eab0f829414e48cb790478f70b7d6eb6c7bf61e127ab7fa5a1c"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:54:41.759Z",
+      "contentHash": "12ea43a018ee6eab0f829414e48cb790478f70b7d6eb6c7bf61e127ab7fa5a1c"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "binary-contrast-sweep",
+      "setAt": "2026-08-10T10:54:43.026Z",
+      "contentHash": "470ea66e2be4d00cbbf4cea8b0c68590724483703f970dcc79bbaa1b51bc3b22"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:54:44.200Z",
+      "contentHash": "470ea66e2be4d00cbbf4cea8b0c68590724483703f970dcc79bbaa1b51bc3b22"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:54:45.299Z",
+      "contentHash": "470ea66e2be4d00cbbf4cea8b0c68590724483703f970dcc79bbaa1b51bc3b22"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:54:48.144Z",
+      "contentHash": "470ea66e2be4d00cbbf4cea8b0c68590724483703f970dcc79bbaa1b51bc3b22"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:54:50.350Z",
+      "contentHash": "470ea66e2be4d00cbbf4cea8b0c68590724483703f970dcc79bbaa1b51bc3b22"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:54:51.489Z",
+      "contentHash": "470ea66e2be4d00cbbf4cea8b0c68590724483703f970dcc79bbaa1b51bc3b22"
+    }
+  },
+  "overrides": []
+}

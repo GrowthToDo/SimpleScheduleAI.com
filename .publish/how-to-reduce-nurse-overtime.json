@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "how-to-reduce-nurse-overtime",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-07T06:17:38.545Z",
+      "contentHash": "35cb68ebe9cf4c293a1692c844bb66db30b946d7c778c5466cb215abcce8cb87"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-07T06:17:40.755Z",
+      "contentHash": "35cb68ebe9cf4c293a1692c844bb66db30b946d7c778c5466cb215abcce8cb87"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-07T06:17:42.748Z",
+      "contentHash": "35cb68ebe9cf4c293a1692c844bb66db30b946d7c778c5466cb215abcce8cb87"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-07T06:17:42.812Z",
+      "contentHash": "35cb68ebe9cf4c293a1692c844bb66db30b946d7c778c5466cb215abcce8cb87"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-07T06:17:42.854Z",
+      "contentHash": "35cb68ebe9cf4c293a1692c844bb66db30b946d7c778c5466cb215abcce8cb87"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-07T06:17:42.855Z",
+      "contentHash": "35cb68ebe9cf4c293a1692c844bb66db30b946d7c778c5466cb215abcce8cb87"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-07T06:17:42.857Z",
+      "contentHash": "35cb68ebe9cf4c293a1692c844bb66db30b946d7c778c5466cb215abcce8cb87"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "copy-feedback-round-only",
+      "setAt": "2026-08-07T06:17:46.079Z",
+      "contentHash": "b16d5538d9aa217772d4c9d7e44081654443a6dc8074f651dd4c47e43da14f97"
+    },
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "no-new-facts",
+      "setAt": "2026-08-07T06:17:48.866Z",
+      "contentHash": "b16d5538d9aa217772d4c9d7e44081654443a6dc8074f651dd4c47e43da14f97"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-08-07T06:17:51.845Z",
+      "contentHash": "b16d5538d9aa217772d4c9d7e44081654443a6dc8074f651dd4c47e43da14f97"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-07T06:17:54.654Z",
+      "contentHash": "b16d5538d9aa217772d4c9d7e44081654443a6dc8074f651dd4c47e43da14f97"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-07",
+      "setAt": "2026-08-07T06:17:58.565Z",
+      "contentHash": "b16d5538d9aa217772d4c9d7e44081654443a6dc8074f651dd4c47e43da14f97"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-07",
+      "setAt": "2026-08-07T06:18:01.838Z",
+      "contentHash": "b16d5538d9aa217772d4c9d7e44081654443a6dc8074f651dd4c47e43da14f97"
+    }
+  },
+  "overrides": []
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "smart-square-alternatives-small-rural-hospitals",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:34:52.697Z",
+      "contentHash": "c12ade5152e64c7b963cbb92f96e9f5ccb351863c053cdf46216d12473d1dab4"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:34:55.071Z",
+      "contentHash": "c12ade5152e64c7b963cbb92f96e9f5ccb351863c053cdf46216d12473d1dab4"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:34:57.902Z",
+      "contentHash": "c12ade5152e64c7b963cbb92f96e9f5ccb351863c053cdf46216d12473d1dab4"
+    },
+    "inboundLinks": {
+      "status": "FAIL",
+      "checkedAt": "2026-08-10T10:34:57.956Z",
+      "contentHash": "c12ade5152e64c7b963cbb92f96e9f5ccb351863c053cdf46216d12473d1dab4"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:34:58.885Z",
+      "contentHash": "c12ade5152e64c7b963cbb92f96e9f5ccb351863c053cdf46216d12473d1dab4"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:34:58.885Z",
+      "contentHash": "c12ade5152e64c7b963cbb92f96e9f5ccb351863c053cdf46216d12473d1dab4"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T10:34:58.887Z",
+      "contentHash": "c12ade5152e64c7b963cbb92f96e9f5ccb351863c053cdf46216d12473d1dab4"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "label-reword-only",
+      "setAt": "2026-08-10T10:35:00.798Z",
+      "contentHash": "ab6e0d28a800cc873455f9457ea897f5496a9f2949be76d857180ee3a10b25a4"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-fact-changes",
+      "setAt": "2026-08-10T10:35:02.557Z",
+      "contentHash": "ab6e0d28a800cc873455f9457ea897f5496a9f2949be76d857180ee3a10b25a4"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T10:35:04.483Z",
+      "contentHash": "ab6e0d28a800cc873455f9457ea897f5496a9f2949be76d857180ee3a10b25a4"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T10:35:06.225Z",
+      "contentHash": "ab6e0d28a800cc873455f9457ea897f5496a9f2949be76d857180ee3a10b25a4"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:35:07.841Z",
+      "contentHash": "ab6e0d28a800cc873455f9457ea897f5496a9f2949be76d857180ee3a10b25a4"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T10:35:09.472Z",
+      "contentHash": "ab6e0d28a800cc873455f9457ea897f5496a9f2949be76d857180ee3a10b25a4"
+    }
+  },
+  "overrides": []
+}

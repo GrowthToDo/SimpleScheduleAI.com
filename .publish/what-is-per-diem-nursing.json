@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-per-diem-nursing",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T07:05:23.637Z",
+      "contentHash": "265381d0ef4fa07c3d4ef177a2c86a8d11332e9dbe63544ce51a6983014ab83d"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T07:05:25.353Z",
+      "contentHash": "265381d0ef4fa07c3d4ef177a2c86a8d11332e9dbe63544ce51a6983014ab83d"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T07:05:27.573Z",
+      "contentHash": "265381d0ef4fa07c3d4ef177a2c86a8d11332e9dbe63544ce51a6983014ab83d"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T07:05:27.617Z",
+      "contentHash": "265381d0ef4fa07c3d4ef177a2c86a8d11332e9dbe63544ce51a6983014ab83d"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T07:05:27.772Z",
+      "contentHash": "265381d0ef4fa07c3d4ef177a2c86a8d11332e9dbe63544ce51a6983014ab83d"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T07:05:27.772Z",
+      "contentHash": "265381d0ef4fa07c3d4ef177a2c86a8d11332e9dbe63544ce51a6983014ab83d"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-10T07:05:27.774Z",
+      "contentHash": "265381d0ef4fa07c3d4ef177a2c86a8d11332e9dbe63544ce51a6983014ab83d"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "prn-availability-claim-upgrade",
+      "setAt": "2026-08-10T07:05:29.508Z",
+      "contentHash": "30188b5e5cbf22949a57b2709311ac3a15fdb1fd2a031ac065b20788e25fe0a3"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "product-screenshot-verified-2026-08-10",
+      "setAt": "2026-08-10T07:05:30.954Z",
+      "contentHash": "30188b5e5cbf22949a57b2709311ac3a15fdb1fd2a031ac065b20788e25fe0a3"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "unchanged",
+      "setAt": "2026-08-10T07:05:32.364Z",
+      "contentHash": "30188b5e5cbf22949a57b2709311ac3a15fdb1fd2a031ac065b20788e25fe0a3"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-10T07:05:34.083Z",
+      "contentHash": "30188b5e5cbf22949a57b2709311ac3a15fdb1fd2a031ac065b20788e25fe0a3"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T07:05:35.639Z",
+      "contentHash": "30188b5e5cbf22949a57b2709311ac3a15fdb1fd2a031ac065b20788e25fe0a3"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-10",
+      "setAt": "2026-08-10T07:05:37.013Z",
+      "contentHash": "30188b5e5cbf22949a57b2709311ac3a15fdb1fd2a031ac065b20788e25fe0a3"
+    }
+  },
+  "overrides": []
+}
