@@ -17,7 +17,7 @@ tags:
   - healthcare-operations
 metadata:
   canonical: 'https://simplescheduleai.com/blog/m7-health-vs-simplescheduleai'
-  description: 'What M7 Health is, who it fits (large health systems with IT and scheduling staff), and how it compares to an AI-native scheduling service built for standalone CAHs.'
+  description: 'What M7 Health is, who operates it after go-live, and how software your hospital runs compares to an AI-native scheduling service built for standalone CAHs.'
 ---
 
 M7 Health's reference customers are Ochsner (47 hospitals) and ScionHealth, both large health systems. SimpleScheduleAI is built for the opposite end: the single Critical Access Hospital at 25 beds or fewer. Both products use AI. They are designed for different operational realities, and the product fit at a CAH is decided by that design target, not the algorithm description.
@@ -68,13 +68,15 @@ The hospital sends a roster in Excel, and the service builds and maintains the s
 
 ## What Is the Core Difference Between M7 Health and SimpleScheduleAI?
 
-M7 Health is software a health system runs itself, built for large hospital organizations. SimpleScheduleAI is an AI-native nurse scheduling service that builds the schedule for a single small hospital. M7 assumes the buyer has IT staff, scheduling coordinators, and many facilities. SimpleScheduleAI assumes the buyer is one nurse manager at a 25-bed hospital who also takes clinical shifts.
+M7 Health is software the hospital operates, sold with setup and support. SimpleScheduleAI is an AI-native nurse scheduling service that builds the schedule for you. M7 now markets to small rural hospitals as well as health systems, so the useful question is no longer who each company sells to. It is who does the scheduling work in week six.
 
 That difference runs through every part of the decision. As described above, M7 Health positions itself for large health systems and names enterprise reference customers like Ochsner and ScionHealth. SimpleScheduleAI does not compete for those accounts. It serves the facility that is too small to staff that kind of rollout: one Critical Access Hospital, designated under [CMS rules](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) at 25 inpatient beds or fewer, where the nurse manager is also on the floor. The rest of this comparison works through what that gap means in practice.
 
 ## Two Different Models: Managed Service vs. Software You Run Yourself
 
-These two products use opposite delivery models, and the model matters more than any feature. M7 Health is software the hospital runs itself: the organization licenses the platform, integrates it, and has its own staff operate it day to day. SimpleScheduleAI is an AI-native nurse scheduling service: the hospital sends a roster and the service builds and maintains the schedule.
+These two products use different delivery models, and the model matters more than any feature. M7 Health is software the hospital licenses and operates, with setup, training and account support from M7 to get it running. SimpleScheduleAI is an AI-native nurse scheduling service: the hospital sends a roster and the service builds and maintains the schedule.
+
+The distinction is narrower than it sounds and it is the one that matters. Help getting started is not the same as someone doing the work each cycle. M7's own Critical Access Hospital page is largely about adoption, staff seeing schedules on their phones, and leaders gaining visibility and control. All of that assumes the hospital is the one operating the tool.
 
 Software you run yourself fits an organization that has people to run it. A large health system has an IT department, scheduling coordinators, and a workforce office, so a platform its own staff operate is the right choice for that organization. A standalone Critical Access Hospital usually has none of that at scale: IT, where it exists, is typically one person or a contracted service, not a department. The nurse manager is the whole back office and also takes clinical shifts. A managed service exists for exactly that situation: it removes setup, configuration, and weekly maintenance so the hospital reviews finished schedules instead of running a platform. Keep this distinction in mind through the rest of this comparison, because every row in the tables below comes back to it.
 
@@ -82,11 +84,15 @@ Running software yourself also means owning it over time. When a nurse leaves, s
 
 ## Who Is M7 Health Best For?
 
-M7 Health is best for large health systems and multi-hospital organizations that have IT teams, scheduling coordinators, and the internal capacity to run workforce software themselves.
+M7 Health is best for an organization that wants to own its scheduling platform and has someone to run it, whether that is a large health system with a workforce office or a smaller hospital with a nurse leader who genuinely wants the tool.
 
-This is a fair assessment, not a dismissal. A 47-hospital system like Ochsner has problems a standalone hospital does not: standardizing scheduling rules across dozens of facilities, controlling premium labor cost at scale, and rolling a single platform out to thousands of staff. That is the scale M7 is built and funded to serve. For a company with a workforce management office and IT integration staff, software you run yourself is the correct model. If you are weighing M7 against another AI platform your organization would operate itself, our [In-House Health vs. SimpleScheduleAI comparison](/blog/inhouse-health-vs-simplescheduleai) runs the same model-against-model test. The same strength that makes M7 a good fit for a 47-hospital system is exactly the reason it is the wrong fit for one 25-bed hospital with limited IT.
+This is a fair assessment, not a dismissal. A 47-hospital system like Ochsner has problems a standalone hospital does not: standardizing scheduling rules across dozens of facilities, controlling premium labor cost at scale, and rolling a single platform out to thousands of staff. That is the scale M7 is built and funded to serve. For a company with a workforce management office and IT integration staff, software you run yourself is the correct model. If you are weighing M7 against another AI platform your organization would operate itself, our [In-House Health vs. SimpleScheduleAI comparison](/blog/inhouse-health-vs-simplescheduleai) runs the same model-against-model test. Whether that fits one 25-bed hospital depends less on M7 and more on whether your nurse manager wants to operate a platform on top of a clinical assignment.
 
-One thing worth addressing directly: M7 has published a CAH-specific page describing low-lift implementation for small rural hospitals, citing reference customers that include Palestine Regional and Logan Regional Medical Center. This is a legitimate positioning signal and worth confirming with the vendor directly. The honest test for any CAH buyer is the same regardless of how M7 frames its onboarding: does your hospital have a person, by name and role, who will own platform configuration, maintain the roster data, and handle exception documentation as staff turn over? If M7 can provide a documented Critical Access Hospital reference at 25 beds or fewer with limited IT who ran the integration independently, that is the clearest evidence to request. A low-lift onboarding and a low-maintenance ongoing operation are two different claims.
+One thing worth addressing directly: M7 has published a Critical Access Hospital page describing low-lift implementation for small rural hospitals. It says its team handles setup and trains staff, that most such hospitals are live within a few weeks with no IT burden, and that every nurse manager gets a dedicated account manager. That is a legitimate positioning signal and worth taking seriously.
+
+Read the evidence behind it carefully, though. That page names no individual hospital. It describes onboarding "across Utah, Mississippi, and Alabama" through a named member of its activation team. M7's named hospital references, Carolina Pines Regional Medical Center and Palestine Regional Medical Center, come through its ScionHealth partnership, which is a multi-hospital enterprise rather than a standalone rural facility.
+
+So the honest test for a Critical Access Hospital buyer is unchanged: does your hospital have a person, by name and role, who will own platform configuration, maintain roster data, and handle exception documentation as staff turn over? Ask for a documented reference at 25 beds or fewer, independent of a parent system, that ran the setup itself. A low-lift onboarding and a low-maintenance ongoing operation are two different claims, and only the second one decides what your nurse manager does every cycle.
 
 ## Who Is SimpleScheduleAI Best For?
 
@@ -249,9 +255,11 @@ Write the answers down before any demo. A demo shows what the software can do. T
 
 3. **Ask any enterprise vendor two direct questions.** Request a named Critical Access Hospital or standalone rural reference customer, and ask for documented CMS §485.635 support and FLSA overtime threshold tracking. Treat any vendor outcome figure as a claim until you see independent confirmation.
 
-4. **Track your nurse manager's weekly scheduling hours for one week.** Include schedule building, callout coverage, swap requests, and pre-survey CMS documentation. That total is the number any model has to beat to be worth the change.
+4. **Ask who does the scheduling work in week six.** Setup help and ongoing operation are different promises. Get both answered before you sign: who configures it on day one, and who rebuilds the schedule every cycle after that.
 
-5. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service lets you compare the actual time burden against your baseline before committing. Start at [how it works](/how-it-works).
+5. **Track your nurse manager's weekly scheduling hours for one week.** Include schedule building, callout coverage, swap requests, and pre-survey CMS documentation. That total is the number any model has to beat to be worth the change.
+
+6. **See how SimpleScheduleAI works if you are a Texas CAH.** The managed service lets you compare the actual time burden against your baseline before committing. Start at [how it works](/how-it-works).
 
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
@@ -306,7 +314,7 @@ Compare by model, not feature list. Ask who operates the system day to day, who 
 
 **Does M7 Health have a Critical Access Hospital product?**
 
-M7 has published a CAH-specific page describing low-lift implementation for small rural hospitals, citing reference customers including Palestine Regional and Logan Regional Medical Center. If your hospital is a CAH at 25 beds or fewer with limited IT, ask M7 directly for a reference customer in the same situation who ran the integration without internal IT support. M7's platform integrates with payroll, timekeeping, EHR, and ERP systems, so the first question to resolve is what the hospital is responsible for connecting.
+Yes. M7 publishes a Critical Access Hospital page describing low-lift implementation for small rural hospitals, with setup handled by its team and a dedicated account manager per nurse manager. That page names no individual hospital; it describes onboarding across Utah, Mississippi and Alabama. Its named hospital references come through the ScionHealth partnership, which is a multi-hospital enterprise. So ask M7 directly for a reference at 25 beds or fewer, independent of a parent system, that ran setup without internal IT. Their platform integrates with payroll, timekeeping, EHR and ERP systems, so also resolve what the hospital is responsible for connecting.
 
 **What does CMS §485.635 require for nurse scheduling documentation?**
 
