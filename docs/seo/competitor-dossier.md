@@ -374,7 +374,24 @@ directly with vendor.
 - Enterprise deployments: Ochsner Health (system-wide across all 47 hospitals by end of 2025); ScionHealth (enterprise of Community and Specialty Hospitals)
 - Funding: $10M Series A led by Threshold Ventures; about $17M total ($1.75M pre-seed led by 25m Health, $4M seed led by First Round)
 
-**CAH/rural fit:** Explicitly an enterprise and health-system product. Positioning, press, and reference customers (Ochsner 47-hospital system, ScionHealth multi-hospital enterprise) all point to large multi-facility systems and academic medical centers, not ≤25-bed Critical Access Hospitals. No documented CAH or standalone-rural reference customers. Verify any single-CAH fit directly with vendor.
+**CAH/rural fit — SUPERSEDED 2026-08-19. The old reading below is STALE. Do not reuse it.**
+
+~~Explicitly an enterprise and health-system product. Positioning, press, and reference customers (Ochsner 47-hospital system, ScionHealth multi-hospital enterprise) all point to large multi-facility systems and academic medical centers, not ≤25-bed Critical Access Hospitals. No documented CAH or standalone-rural reference customers.~~
+
+**M7 HAS MOVED INTO THE CAH LANE.** Page-verified in a real browser 2026-08-19 at `m7health.com/blogs/critical-access-hospital-scheduling-software`, authored by co-founder Ilana Borkenstein: "Why Critical Access Hospitals Deserve Better Scheduling Software (And Finally Have It)". Verbatim from that page:
+
+- **Positioning:** "M7 is the nurse-built scheduling platform that fits how small rural hospitals actually work — simple to adopt, low-lift to implement, and backed by hands-on support from day one."
+- **Delivery:** "Our team handles the setup, trains staff directly, and stays close until scheduling feels effortless. Most critical access hospitals are live within a few weeks, with no IT burden."
+- **Support model:** "Every nurse manager at every M7 facility has a dedicated account manager — a real person with a phone number and an email address."
+- **Pricing FAQ:** "Is M7 affordable for small critical access hospitals? Yes. M7 is priced to be accessible for smaller facilities and is specifically designed not to require the IT investment or implementation overhead of enterprise scheduling systems."
+- **Deployment evidence:** a named M7 employee (Marc Mansolillo, RN, customer activation) "has personally onboarded critical access hospitals across Utah, Mississippi, and Alabama". **No individually named CAH customer appears on the page** — the claim is by state, not by hospital.
+- They cite the same "over 1,380 critical access hospitals" figure we use.
+
+**Why this outranks a dossier line.** Their CAH page now claims the operational wedge we have treated as ours: hands-on setup, no IT burden, a named human per account, and pricing pitched as accessible to small facilities. **Any content asserting that M7 is enterprise-only, that M7 ignores CAHs, or that "you operate it" while "we operate it for you" is now FALSE and must not ship.** A draft of `m7-health-alternatives` built on exactly that premise was written 2026-08-19 and stopped by this check before review.
+
+**Their content direction matters too.** Their 2026-07-28 post is "Your Hospital Bought Scheduling Software. Why Are Managers Still in Spreadsheets?", substantively the same argument as our Chief Healthcare Executive Viewpoint submission sent 2026-08-18.
+
+**What remains honestly differentiating, and must still be verified per claim:** no independent third-party reviews (Capterra listing with 0 reviews; no G2 listing found), no published price, and a CAH deployment claim made by state rather than by named hospital.
 
 **Secondary source pass (verified 2026-05-16):** No consumer app exists (enterprise web platform; customer subdomains e.g. ochsner.m7health.com, scion.m7health.com). No independent reviews on Software Advice, GetApp, Gartner Peer Insights, Reddit, Product Hunt, or LinkedIn. Two fully attributed named-customer statements exist on customer-owned newsrooms, usable ONLY as partnership-announcement PR with explicit framing, NEVER as product reviews:
 
