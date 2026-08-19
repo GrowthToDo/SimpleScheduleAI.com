@@ -246,7 +246,7 @@ That review base is also where the honest caution lives. G2 lists an average tim
 
 - Pricing not published
 
-**Verdict:** The best self-serve alternative to M7 for a hospital that wants to keep operating its own platform and has the staff to do it. The review base is the strongest argument for it and the three-month implementation average is the strongest argument against it at 25 beds. Our deeper [ShiftWizard alternatives guide](/blog/shiftwizard-alternatives) covers the fit question in more detail.
+**Verdict:** The best self-serve alternative to M7 for a hospital that wants to keep operating its own platform and has the staff to do it. The review base is the strongest argument for it and the three-month implementation average is the strongest argument against it at 25 beds. Our deeper [ShiftWizard alternatives guide](/blog/shiftwizard-alternatives) covers the fit question in more detail, and [ShiftWizard vs a managed service](/blog/shiftwizard-vs-managed-service) puts it head to head with the operated model.
 
 **Cost:** Not listed on the website. Contact HealthStream for a quote.
 
@@ -280,7 +280,7 @@ For a small hospital whose scheduling problem is mostly rotation mechanics, that
 
 - Pricing not published
 
-**Verdict:** The lightest self-serve option here and a reasonable landing spot for a facility that wants to keep control without an enterprise implementation. It is the weakest fit of the four on nursing-specific compliance work, so read our [TCP alternatives guide for small hospitals](/blog/best-tcp-alternative-for-cah) before deciding.
+**Verdict:** The lightest self-serve option here and a reasonable landing spot for a facility that wants to keep control without an enterprise implementation. It is the weakest fit of the four on nursing-specific compliance work, so read our [TCP alternatives guide for small hospitals](/blog/best-tcp-alternative-for-cah) before deciding, or [Aladtec vs a managed service](/blog/aladtec-vs-managed-service) if the real question is whether to operate a platform at all.
 
 **Cost:** Not listed on the website. Contact TCP Software for a quote.
 

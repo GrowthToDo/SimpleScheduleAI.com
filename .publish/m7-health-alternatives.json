@@ -5,76 +5,76 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T11:14:30.066Z",
-      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
+      "checkedAt": "2026-08-19T11:20:40.811Z",
+      "contentHash": "aee1cbf27109d25b218a03c6ad944fddc5d62451465f4769541c12fc1e1611bf"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T11:14:33.316Z",
-      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
+      "checkedAt": "2026-08-19T11:20:43.378Z",
+      "contentHash": "aee1cbf27109d25b218a03c6ad944fddc5d62451465f4769541c12fc1e1611bf"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T11:14:36.045Z",
-      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
+      "checkedAt": "2026-08-19T11:20:45.250Z",
+      "contentHash": "aee1cbf27109d25b218a03c6ad944fddc5d62451465f4769541c12fc1e1611bf"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T11:14:36.079Z",
-      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
+      "checkedAt": "2026-08-19T11:20:45.349Z",
+      "contentHash": "aee1cbf27109d25b218a03c6ad944fddc5d62451465f4769541c12fc1e1611bf"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T11:14:36.106Z",
-      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
+      "checkedAt": "2026-08-19T11:20:45.420Z",
+      "contentHash": "aee1cbf27109d25b218a03c6ad944fddc5d62451465f4769541c12fc1e1611bf"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T11:14:36.106Z",
-      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
+      "checkedAt": "2026-08-19T11:20:45.420Z",
+      "contentHash": "aee1cbf27109d25b218a03c6ad944fddc5d62451465f4769541c12fc1e1611bf"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-19T11:14:36.108Z",
-      "contentHash": "639bca6a788862649de2c33db99060b543bbaffe40d020a92368ae686cb7cd16"
+      "checkedAt": "2026-08-19T11:20:45.424Z",
+      "contentHash": "aee1cbf27109d25b218a03c6ad944fddc5d62451465f4769541c12fc1e1611bf"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "proofread-agent: structural diff vs qgenda/shiftwizard/smart-square; 11 findings, all resolved",
-      "setAt": "2026-08-19T11:14:26.680Z",
-      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+      "setBy": "proofread-agent; re-recorded after link-only edit (2 vs-post links added to Verdict lines; no claim changed)",
+      "setAt": "2026-08-19T11:20:33.164Z",
+      "contentHash": "23b43e5466508d996f585046815123f04564e7b2b4ae8a67f7fc47a535f5f4db"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "factcheck-agent + live verification (3 WRONG + 4 imprecise, all corrected; Lifepoint acquisition confirmed at source)",
-      "setAt": "2026-08-19T11:09:03.094Z",
-      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+      "setBy": "factcheck-agent + live verification; re-recorded after link-only edit (2 vs-post links added to Verdict lines; no claim changed)",
+      "setAt": "2026-08-19T11:20:34.233Z",
+      "contentHash": "23b43e5466508d996f585046815123f04564e7b2b4ae8a67f7fc47a535f5f4db"
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "founder reviewed rendered page on localhost:4331; competitor images added per request; dimensions ground-truthed",
-      "setAt": "2026-08-19T11:14:27.677Z",
-      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+      "setBy": "founder localhost review; re-recorded after link-only edit (2 vs-post links added to Verdict lines; no claim changed)",
+      "setAt": "2026-08-19T11:20:35.730Z",
+      "contentHash": "23b43e5466508d996f585046815123f04564e7b2b4ae8a67f7fc47a535f5f4db"
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder: 'take the blog live' 2026-08-19",
-      "setAt": "2026-08-19T11:14:28.838Z",
-      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+      "setBy": "founder 'take the blog live' 2026-08-19; re-recorded after link-only edit (2 vs-post links added to Verdict lines; no claim changed)",
+      "setAt": "2026-08-19T11:20:36.580Z",
+      "contentHash": "23b43e5466508d996f585046815123f04564e7b2b4ae8a67f7fc47a535f5f4db"
     },
     "indexNow": {
-      "value": "READY",
-      "setBy": "queued; submits after deploy (pre-deploy ping would hit a 404)",
-      "setAt": "2026-08-19T11:12:48.184Z",
-      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+      "value": "DONE",
+      "setBy": "Bing submit_url 2026-08-19; will re-ping after this deploy",
+      "setAt": "2026-08-19T11:20:38.362Z",
+      "contentHash": "23b43e5466508d996f585046815123f04564e7b2b4ae8a67f7fc47a535f5f4db"
     },
     "gscSitemap": {
-      "value": "READY",
-      "setBy": "queued; sitemap resubmit after deploy",
-      "setAt": "2026-08-19T11:12:49.126Z",
-      "contentHash": "8445e7d3ca973c9cf60030cad80184c86b057eafa347917cce0fa45cd53356a6"
+      "value": "DONE",
+      "setBy": "sitemap-index.xml resubmitted to GSC 2026-08-19",
+      "setAt": "2026-08-19T11:20:39.273Z",
+      "contentHash": "23b43e5466508d996f585046815123f04564e7b2b4ae8a67f7fc47a535f5f4db"
     }
   },
   "overrides": []
