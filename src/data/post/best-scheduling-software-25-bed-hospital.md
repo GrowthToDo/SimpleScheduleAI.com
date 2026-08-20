@@ -29,7 +29,7 @@ This guide compares 5 scheduling platforms specifically on fit for the 25-bed ro
 ## Key Takeaways
 
 - A 25-bed hospital typically employs 15-25 nurses across all units. Most enterprise scheduling software is engineered for rosters of 100-plus, which means the configuration burden does not scale down proportionally. How vendors signal those size floors is covered in [nurse scheduling software employee minimums](/blog/nurse-scheduling-software-minimum-employees).
-- The nurse manager at a 25-bed hospital almost always takes clinical shifts in addition to managing schedules. A tool that demands 8-12 hours per week of administrative scheduling time is not viable.
+- The nurse manager at a 25-bed hospital almost always takes clinical shifts in addition to managing schedules. A tool that demands 8 to 12 hours per week of administrative scheduling time is not viable. That range is our own estimate from [more than 30 nurse manager interviews](/blog/nurse-manager-scheduling-time-breakdown).
 - Callout coverage is the highest-stakes daily task. With a pool of 15-25 nurses, a single callout can drop coverage below CMS §485.635 minimums. A ranked shortlist generated in under two minutes is not a luxury.
 - SimpleScheduleAI is purpose-built for 25-bed Critical Access Hospitals (CAHs). It handles three-option draft scheduling, instant replacement lists, and CMS audit documentation as default behavior, not optional add-ons.
 - For hospitals that prefer self-serve software, Aladtec and NurseGrid Manager are the strongest fits for 25-bed rosters. When I Work and Homebase are lower-cost options for non-CAH facilities where clinical compliance documentation is less critical.

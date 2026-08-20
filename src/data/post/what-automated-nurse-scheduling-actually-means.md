@@ -83,7 +83,7 @@ Automated nurse scheduling means the software generates a draft schedule without
 
 The core distinction is whether the nurse manager is still doing the scheduling work, using software as a tool, or whether the scheduling work is done for her and she is reviewing output. Both can be described as "automated." Only one removes the scheduling burden from the nurse manager's weekly workload.
 
-A useful diagnostic question for any platform: after implementation, how many hours per week does the nurse manager spend on scheduling tasks? Tools that reduce that number from 8-12 hours to 4-6 hours are automating parts of the process. Tools that reduce it to 1-2 hours (review and approval only) are automating the process itself.
+A useful diagnostic question for any platform: after implementation, how many hours per week does the nurse manager spend on scheduling tasks? The starting point at a small hospital is 8 to 12 hours, our own estimate from [more than 30 nurse manager interviews](/blog/nurse-manager-scheduling-time-breakdown). Tools that reduce that to 4 to 6 hours are automating parts of the process. Tools that reduce it to 1 to 2 hours, review and approval only, are automating the process itself.
 
 ## What Are the Real Levels of Scheduling Automation?
 

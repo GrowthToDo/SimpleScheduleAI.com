@@ -106,7 +106,7 @@ The practical result: CAHs that implement scheduling apps often see initial impr
 
 Scheduling software reduces the nurse manager's weekly scheduling time to roughly 4-6 hours per week, but she still builds every schedule, handles callouts, and maintains the system. A managed scheduling service takes the build off her desk, to 1-2 hours per week for review and approval only. The difference is not incremental. For a nurse manager who also takes clinical shifts, it determines whether scheduling is a manageable task or a persistent burnout driver.
 
-At a 25-bed Critical Access Hospital (CAH), the average nurse manager currently spends 8-12 hours per week on scheduling-related tasks: building the next schedule, handling callout replacements, managing shift swap requests, updating the scheduling system as staff changes occur, and assembling CMS documentation before surveys.
+At a 25-bed Critical Access Hospital (CAH), the average nurse manager currently spends 8 to 12 hours per week on scheduling-related tasks: building the next schedule, handling callout replacements, managing shift swap requests, updating the scheduling system as staff changes occur, and assembling CMS documentation before surveys. That figure is our own estimate from [more than 30 nurse manager interviews](/blog/nurse-manager-scheduling-time-breakdown), not a published study.
 
 The [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com) documents that nurse manager burnout is driven significantly by administrative load. Scheduling is consistently the largest administrative time sink at small hospitals.
 

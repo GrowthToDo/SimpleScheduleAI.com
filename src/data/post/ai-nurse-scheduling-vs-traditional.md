@@ -29,7 +29,7 @@ This guide separates the genuine workflow changes from the marketing claims, wri
 
 ## Key Takeaways
 
-- Traditional nurse scheduling (Excel, paper grids, manual rule-checking) requires the nurse manager to hold every scheduling rule in her head and apply it by hand. At a typical 25-bed hospital this consumes 8 to 12 hours per week.
+- Traditional nurse scheduling (Excel, paper grids, manual rule-checking) requires the nurse manager to hold every scheduling rule in her head and apply it by hand. At a typical 25-bed hospital this consumes 8 to 12 hours per week, our own estimate from [more than 30 nurse manager interviews](/blog/nurse-manager-scheduling-time-breakdown).
 - AI scheduling, whether delivered as software or as a managed service, applies overtime, credential, and coverage rules automatically, generates constraint-aware schedule options, and produces callout replacement lists without manual calculation.
 - The real AI advantage is not abstract "optimization." It is three concrete capabilities: consistent constraint enforcement, overtime-aware callout ranking, and continuous fairness tracking across the rotation.
 - AI scheduling does not replace clinical judgment. It removes the computational rule-checking so the manager spends her time on decisions that actually require nursing knowledge.
