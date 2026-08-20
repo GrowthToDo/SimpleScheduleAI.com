@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T02:03:17.204Z",
+      "checkedAt": "2026-08-20T02:06:32.261Z",
       "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T02:03:19.646Z",
+      "checkedAt": "2026-08-20T02:06:34.581Z",
       "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T02:03:21.058Z",
+      "checkedAt": "2026-08-20T02:06:35.858Z",
       "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T02:03:21.101Z",
+      "checkedAt": "2026-08-20T02:06:35.902Z",
       "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T02:03:21.136Z",
+      "checkedAt": "2026-08-20T02:06:35.939Z",
       "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T02:03:21.136Z",
+      "checkedAt": "2026-08-20T02:06:35.939Z",
       "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T02:03:21.138Z",
+      "checkedAt": "2026-08-20T02:06:35.940Z",
       "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
     }
   },
@@ -62,6 +62,18 @@
       "value": "YES",
       "setBy": "founder: 'It is good to go now, take this and the article live' 2026-08-20",
       "setAt": "2026-08-20T02:03:15.953Z",
+      "contentHash": "3de5a84f2eb688657b03a6d660ba2741c1505ae242eee002560f71e55e6ef125"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "Bing submit_url 2026-08-20 post-deploy",
+      "setAt": "2026-08-20T02:06:28.859Z",
+      "contentHash": "3de5a84f2eb688657b03a6d660ba2741c1505ae242eee002560f71e55e6ef125"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "sitemap-index.xml resubmitted 2026-08-20",
+      "setAt": "2026-08-20T02:06:29.688Z",
       "contentHash": "3de5a84f2eb688657b03a6d660ba2741c1505ae242eee002560f71e55e6ef125"
     }
   },

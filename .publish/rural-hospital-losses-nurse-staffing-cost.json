@@ -5,76 +5,76 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T01:49:46.897Z",
-      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
+      "checkedAt": "2026-08-20T02:07:37.804Z",
+      "contentHash": "6642fb82aadb3b1a5a0118934857a41bf4c22699b4c05d8658304f6857aca509"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T01:49:49.872Z",
-      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
+      "checkedAt": "2026-08-20T02:07:40.409Z",
+      "contentHash": "6642fb82aadb3b1a5a0118934857a41bf4c22699b4c05d8658304f6857aca509"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T01:49:59.729Z",
-      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
+      "checkedAt": "2026-08-20T02:07:51.266Z",
+      "contentHash": "6642fb82aadb3b1a5a0118934857a41bf4c22699b4c05d8658304f6857aca509"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T01:49:59.802Z",
-      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
+      "checkedAt": "2026-08-20T02:07:51.297Z",
+      "contentHash": "6642fb82aadb3b1a5a0118934857a41bf4c22699b4c05d8658304f6857aca509"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T01:50:00.092Z",
-      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
+      "checkedAt": "2026-08-20T02:07:51.416Z",
+      "contentHash": "6642fb82aadb3b1a5a0118934857a41bf4c22699b4c05d8658304f6857aca509"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T01:50:00.093Z",
-      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
+      "checkedAt": "2026-08-20T02:07:51.416Z",
+      "contentHash": "6642fb82aadb3b1a5a0118934857a41bf4c22699b4c05d8658304f6857aca509"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-20T01:50:00.095Z",
-      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
+      "checkedAt": "2026-08-20T02:07:51.417Z",
+      "contentHash": "6642fb82aadb3b1a5a0118934857a41bf4c22699b4c05d8658304f6857aca509"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "founder reviewed the new RHTP section, flagged it as unclear, rewrite applied and re-reviewed",
-      "setAt": "2026-08-20T01:49:06.408Z",
-      "contentHash": "0cba94f4772e7f47b1f089708f07f107d6d71f3530c5aff1f442ef79752cf764"
+      "setBy": "founder reviewed the new RHTP section and the rewrite; re-recorded after an encoding-only repair (mojibake arrows restored); no content change",
+      "setAt": "2026-08-20T02:07:34.287Z",
+      "contentHash": "f6fcb74be46f4d68c0831dea23408743a9e9d193e4be9a7fa6f036237ed6aa4c"
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "hero unchanged from the already-published article",
-      "setAt": "2026-08-20T01:49:08.664Z",
-      "contentHash": "0cba94f4772e7f47b1f089708f07f107d6d71f3530c5aff1f442ef79752cf764"
+      "setBy": "hero unchanged from the already-published article; re-recorded after an encoding-only repair (mojibake arrows restored); no content change",
+      "setAt": "2026-08-20T02:07:35.932Z",
+      "contentHash": "f6fcb74be46f4d68c0831dea23408743a9e9d193e4be9a7fa6f036237ed6aa4c"
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder: 'take this and the article live' 2026-08-20",
-      "setAt": "2026-08-20T01:49:10.046Z",
-      "contentHash": "0cba94f4772e7f47b1f089708f07f107d6d71f3530c5aff1f442ef79752cf764"
+      "setBy": "founder: 'take this and the article live' 2026-08-20; re-recorded after an encoding-only repair (mojibake arrows restored); no content change",
+      "setAt": "2026-08-20T02:07:36.753Z",
+      "contentHash": "f6fcb74be46f4d68c0831dea23408743a9e9d193e4be9a7fa6f036237ed6aa4c"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "new RHTP facts primary-source verified 2026-08-19; Texas Tribune per-resident figure page-verified via Playwright",
-      "setAt": "2026-08-20T01:49:45.468Z",
-      "contentHash": "0cba94f4772e7f47b1f089708f07f107d6d71f3530c5aff1f442ef79752cf764"
+      "setBy": "new RHTP facts primary-source verified 2026-08-19; re-recorded after an encoding-only repair (mojibake arrows restored); no content change",
+      "setAt": "2026-08-20T02:07:35.163Z",
+      "contentHash": "f6fcb74be46f4d68c0831dea23408743a9e9d193e4be9a7fa6f036237ed6aa4c"
     },
     "indexNow": {
       "value": "DONE",
-      "setBy": "founder",
-      "setAt": "2026-07-30T09:39:51.511Z",
-      "contentHash": "5bea7e9a7354b3ad37767936503be946f6c5645b368496e0ea2af26c72b6f9c0"
+      "setBy": "Bing submit_url 2026-08-20 after refresh",
+      "setAt": "2026-08-20T02:06:30.512Z",
+      "contentHash": "f6fcb74be46f4d68c0831dea23408743a9e9d193e4be9a7fa6f036237ed6aa4c"
     },
     "gscSitemap": {
       "value": "DONE",
-      "setBy": "founder",
-      "setAt": "2026-07-30T09:39:53.864Z",
-      "contentHash": "5bea7e9a7354b3ad37767936503be946f6c5645b368496e0ea2af26c72b6f9c0"
+      "setBy": "sitemap-index.xml resubmitted 2026-08-20",
+      "setAt": "2026-08-20T02:06:31.247Z",
+      "contentHash": "f6fcb74be46f4d68c0831dea23408743a9e9d193e4be9a7fa6f036237ed6aa4c"
     }
   },
   "overrides": []
