@@ -66,7 +66,7 @@ This is worth stating carefully, because the accurate version is narrower than t
 
 Here is the math at Critical Access Hospital scale, with every assumption stated. These are illustrative figures at the stated rates, not measured results from any facility.
 
-Start with one departure. It takes about [78 days to recruit an experienced RN](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) per the 2026 NSI National Health Care Retention and RN Staffing Report, roughly 11 weeks. A full-time RN line runs about 36 hours a week, so that vacancy leaves about 400 shift-hours to backfill. At a $50 per hour loaded rate, covering those hours at straight time would run about $20,000. Covered on overtime or agency at a $75 per hour premium rate, it runs closer to $30,000. The premium, meaning the extra cost of covering the gap rather than having a nurse in the seat, is about $10,000 per vacancy.
+Start with one departure. It takes about [78 days to fill an RN vacancy](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) per the 2026 NSI National Health Care Retention and RN Staffing Report, roughly 11 weeks. A full-time RN line runs about 36 hours a week, so that vacancy leaves about 400 shift-hours to backfill. At a $50 per hour loaded rate, covering those hours at straight time would run about $20,000. Covered on overtime or agency at a $75 per hour premium rate, it runs closer to $30,000. The premium, meaning the extra cost of covering the gap rather than having a nurse in the seat, is about $10,000 per vacancy.
 
 Now scale it to a year. Texas Critical Access Hospitals carry RN turnover of about [18.2%](/rural-hospital-nurse-staffing-statistics), drawn from the Texas DSHS 2024 Hospital Nurse Staffing Study. On a 25-nurse roster that is between four and five departures a year. At roughly $10,000 of coverage premium each, the annual figure lands around $45,000.
 
@@ -153,7 +153,7 @@ Chartis puts human capital at 56% of healthcare costs. At a Critical Access Hosp
 
 2. Texas Medicaid expansion status (listed as Not Adopted). [KFF State Health Facts, Status of State Action on the Medicaid Expansion Decision](https://www.kff.org/affordable-care-act/state-indicator/state-activity-around-expanding-medicaid-under-the-affordable-care-act/), accessed July 2026.
 
-3. Time to recruit an experienced RN (78 days). [NSI Nursing Solutions, 2026 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf).
+3. Time to fill an RN vacancy (78 days). [NSI Nursing Solutions, 2026 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf).
 
 4. Texas Critical Access Hospital RN turnover (18.2%). [SimpleScheduleAI Rural Hospital and CAH Nurse Staffing Statistics](/rural-hospital-nurse-staffing-statistics), drawn from the Texas DSHS 2024 Hospital Nurse Staffing Study.
 

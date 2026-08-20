@@ -23,7 +23,7 @@ metadata:
 
 - The cost of nurse turnover is usually quoted as one national number, about $60,090 per bedside RN departure per the [2026 NSI report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf). That figure is only the floor at a small rural hospital.
 - One RN leaving a roughly 25-nurse rural hospital is about 4 percent of the whole nursing staff gone at once. The same departure at a 300-bed system is well under one percent.
-- The role does not fill overnight. It takes about [78 days to recruit an experienced RN](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf), and a Critical Access Hospital has no float pool to cover that gap, so the open shifts fall on overtime, agency rates, and the nurses still on the roster.
+- The role does not fill overnight. It takes about [78 days to fill an RN vacancy](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf), and a Critical Access Hospital has no float pool to cover that gap, so the open shifts fall on overtime, agency rates, and the nurses still on the roster.
 - Texas Critical Access Hospitals carry the highest RN turnover of the state's three hospital groups, about [18.2 percent](/rural-hospital-nurse-staffing-statistics), so this recurs often enough to plan around as an annual line item.
 - Fair, predictable schedules are a documented retention lever, separate from recruiting. Distributing nights, weekends, and callouts evenly is one of the few turnover drivers a nurse manager can actually control.
 
@@ -112,7 +112,7 @@ One honest note on the arithmetic: the NSI $60,090 already includes some vacancy
 
 ## What Does the Open Role Cost While You Recruit?
 
-The open role costs a rural hospital in overtime and agency premiums for as long as it takes to hire, and that window is not short. It takes about [78 days to recruit an experienced RN](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf), roughly 11 weeks. With no float pool, every shift on that vacant line has to be covered by someone at a higher rate or by the staff already on the roster.
+The open role costs a rural hospital in overtime and agency premiums for as long as it takes to hire, and that window is not short. It takes about [78 days to fill an RN vacancy](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf), roughly 11 weeks. With no float pool, every shift on that vacant line has to be covered by someone at a higher rate or by the staff already on the roster.
 
 Here is the math, with the assumptions stated. A full-time RN line runs about 36 hours a week, three 12-hour shifts. Over the roughly 11-week vacancy, that is about 400 shift-hours to backfill. At a $50 per hour loaded rate, covering those hours at straight time would run about $20,000. Covered on overtime or agency at a $75 per hour premium rate, it runs closer to $30,000. The premium, the extra cost of covering the gap instead of having a nurse in the seat, is about $10,000. This is an illustrative figure at the stated rates only.
 
@@ -132,7 +132,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the sch
 
 You can see how the pieces connect across our [nurse scheduling software](/nurse-scheduling-software) overview, the way [AI nurse scheduling](/ai-nurse-scheduling) builds the ranked drafts, the operational requirements behind [critical access hospital scheduling](/critical-access-hospital-scheduling), and the end-to-end walkthrough of [how the service works](/how-it-works).
 
-One honest limitation: SimpleScheduleAI does not recruit nurses and it does not shorten the 78-day hiring gap. It cannot fill a vacancy that a rural labor market cannot supply. It manages the coverage and the fairness during the gap so the departure does not trigger the next one. If your problem is purely recruiting reach, scheduling is the wrong tool for that part.
+One honest limitation: SimpleScheduleAI does not recruit nurses and it does not shorten the 78-day time-to-fill gap. It cannot fill a vacancy that a rural labor market cannot supply. It manages the coverage and the fairness during the gap so the departure does not trigger the next one. If your problem is purely recruiting reach, scheduling is the wrong tool for that part.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -176,11 +176,11 @@ Fair, predictable scheduling is a documented retention lever with no guaranteed 
 
 **Q: Does SimpleScheduleAI help us recruit nurses faster?**
 
-No. SimpleScheduleAI does not recruit and it does not shorten the roughly 78-day hiring window for an experienced RN. It manages the coverage and the fairness during the gap so one departure does not burn out the nurses who stayed and trigger the next resignation. Recruiting reach is a separate problem that scheduling does not solve.
+No. SimpleScheduleAI does not recruit and it does not shorten the roughly 78-day window to fill an RN vacancy. It manages the coverage and the fairness during the gap so one departure does not burn out the nurses who stayed and trigger the next resignation. Recruiting reach is a separate problem that scheduling does not solve.
 
 ## Sources
 
-[1] Average cost to turn over one bedside RN ($60,090), hospital RN turnover (17.6%), and time to recruit an experienced RN (78 days). [NSI Nursing Solutions, 2026 National Health Care Retention & RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf).
+[1] Average cost to turn over one bedside RN ($60,090), hospital RN turnover (17.6%), and time to fill an RN vacancy (78 days). [NSI Nursing Solutions, 2026 National Health Care Retention & RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf).
 
 [2] Texas Critical Access Hospital RN turnover (18.2%, highest of the three hospital groups). [SimpleScheduleAI Rural Hospital & CAH Nurse Staffing Statistics](/rural-hospital-nurse-staffing-statistics), drawn from the Texas DSHS 2024 Hospital Nurse Staffing Study.
 
