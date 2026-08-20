@@ -1,11 +1,13 @@
 # LinkedIn posts — crawl-path set (4 drafts, awaiting founder edit)
 
 - Publish under: Pradeep Pandey personal profile (https://www.linkedin.com/in/pradeep-pandeyji/)
-- Status: **full drafts written 2026-08-20**, below each outline. Founder to edit
-  before posting. The outlines are kept above each draft so the intent stays
-  visible while editing.
-- Founder posting schedule (set 2026-08-20): one on Fri Aug 21, one Tue Aug 25,
-  one Wed Aug 26. Post 4 should go first, it is the priority test.
+- Status: **ALL FOUR SCHEDULED BY THE FOUNDER 2026-08-20.** Drafts written
+  2026-08-20 and scheduled the same day. Nothing further needed before they go
+  out. The outlines are kept above each draft for reference.
+- **Next action is measurement, not writing.** See "After posting" below: collect
+  the four "Copy link to post" URLs once they publish, then re-check GSC
+  coverage for all four target pages around **2026-09-16** (roughly three weeks
+  after the last post lands).
 - These are short POSTS, not the long-form Articles in `article-1/2/3` in this folder.
 
 ## Why these four, and why now
