@@ -59,7 +59,7 @@ At a critical access hospital, the nurse manager typically owns the complete sch
 - Tracking and logging schedule changes with timestamps
 - Preparing staffing committee reports
 
-Across interviews with 30+ Texas CAH nurse managers, the consistent finding is 8-12 hours per week, a $26,000 annual administrative cost at a $50/hr loaded rate per the methodology in our [healthcare scheduling crisis analysis](/blog/healthcare-scheduling-crisis-26000-administrative-burden).
+Across interviews with 30+ Texas CAH nurse managers, the consistent finding is 8-12 hours per week, a $26,000 annual administrative cost at a $50/hr loaded rate per the methodology in our [healthcare scheduling crisis analysis](/blog/healthcare-scheduling-crisis).
 
 ## How Much Time Do Nurse Managers Typically Spend on Scheduling Tasks?
 

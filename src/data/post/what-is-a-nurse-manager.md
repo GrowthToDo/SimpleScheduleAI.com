@@ -26,19 +26,15 @@ At a large hospital, the nurse manager is a dedicated administrative position. A
 
 This means scheduling is not a background task that happens between other duties. For many CAH nurse managers, scheduling occupies a significant and measurable share of their workweek.
 
-Industry benchmarks from [AONL](https://www.aonl.org/resources/nursing-workforce-now) and operational analysis from hospitals using manual scheduling processes consistently find that nurse managers at small facilities spend 8-12 hours per week on scheduling-related tasks: building the initial schedule draft, handling swap requests, managing callouts in real time, and updating the schedule as circumstances change across the 4-6 week scheduling horizon.
+Across more than 30 interviews with nurse managers, conducted before we built SimpleScheduleAI, the consistent range was 8 to 12 hours per week on scheduling: building the initial draft, handling swap requests, managing callouts in real time, and updating the schedule as things change across the 4 to 6 week cycle. That is our estimate of a typical week from those conversations, not a measured time study. The activity-by-activity split is in our guide to [where nurse manager scheduling time actually goes](/blog/nurse-manager-scheduling-time-breakdown).
 
-At an average RN compensation level, 10 hours per week represents approximately $26,000 per year in labor allocated to a task that many facilities have never formally measured. That figure does not include the downstream cost of scheduling errors, unnecessary overtime, compliance gaps, and the retention impact of perceived scheduling unfairness on nursing staff.
+Put your own rate against it and the number gets concrete. At an illustrative $50 an hour loaded rate, 10 hours a week is about $26,000 a year of leadership time going into a task most facilities have never formally measured. Run that arithmetic with your own figure rather than ours. It also excludes the downstream cost of scheduling errors, unnecessary overtime, compliance gaps, and the retention effect of a schedule staff consider unfair.
 
-## How Nurse Manager Differs from Charge Nurse?
+## Is a Nurse Manager the Same as a Charge Nurse?
 
-These two roles are frequently confused, particularly by administrators from outside a clinical background. The distinction matters because their scheduling involvement is different in kind, not just in degree.
+No. The nurse manager owns the forward schedule, the budget and the staff. The charge nurse runs a single shift and hands it over at the end of it. At a small hospital the same person often does both, which is where the confusion starts.
 
-**The nurse manager** is an administrative and clinical leadership role with unit-level or facility-wide scope. Their scheduling responsibility is forward-looking: building and maintaining the schedule for the upcoming 4-6 week period, managing the per diem pool, tracking overtime accumulation, and ensuring compliance with regulatory requirements. They are accountable for the schedule as a whole.
-
-**The charge nurse** is a shift-level clinical coordination role. During a given shift, the charge nurse is responsible for patient assignments, care coordination, and immediate clinical decisions. If a nurse calls out during their shift, the charge nurse manages the immediate coverage response, calling per diem staff, reassigning patients, or contacting the nurse manager. Their scheduling involvement is reactive and shift-specific, not forward-planning.
-
-At a small CAH, the same person may hold both roles on different occasions, the nurse manager may also serve as charge nurse on shifts they work clinically. This overlap is normal at small facilities but can create confusion about whose job it is to address a given scheduling issue.
+We cover the full comparison separately, including whether a charge nurse counts as a supervisor and who owns which schedule document: [nurse manager vs charge nurse](/blog/nurse-manager-vs-charge-nurse).
 
 ## What Are the Scheduling Duties of the Nurse Manager?
 
@@ -60,10 +56,10 @@ The nurse manager's scheduling work breaks down into several distinct tasks, eac
 A nurse manager's daily work typically includes reviewing staffing for the current and upcoming shifts, responding to callout notifications, handling staff scheduling requests, addressing clinical concerns escalated by the charge nurse, participating in administrative meetings, and working on the forward schedule. At a CAH, they may also provide direct patient care on short-staffed shifts. Scheduling tasks surface throughout the day, not just during a dedicated block of administrative time.
 
 **Q: How much time do nurse managers spend on scheduling?**
-Research from AONL and operational data from small hospital environments consistently find nurse managers spending 8-12 hours per week on scheduling across all related tasks: schedule construction, callout management, swap requests, and overtime tracking. At average RN compensation rates, this represents roughly $26,000 per year in time allocated to scheduling, time that could otherwise go to staff development, patient care, or strategic planning.
+Our own interviews with more than 30 nurse managers put it at 8 to 12 hours per week across all the related tasks: schedule construction, callout management, swap requests, and overtime tracking. At an illustrative $50 an hour loaded rate, 10 of those hours a week works out to roughly $26,000 a year of leadership time, which could otherwise go to staff development, patient care, or planning. Use your own rate to get your own number.
 
-**Q: What is the difference between a nurse manager and a charge nurse?**
-A nurse manager has unit-level or facility-wide administrative responsibility, including ownership of the forward schedule, budget management, and regulatory compliance. A charge nurse has shift-level clinical coordination responsibility, managing patient assignments and immediate coverage issues during a specific shift. The roles are complementary: the nurse manager sets up the schedule in advance; the charge nurse executes within it in real time.
+**Q: Who does the nurse manager report to?**
+At most hospitals the nurse manager reports to the director of nursing or the chief nursing officer. At a Critical Access Hospital those layers often collapse, and the nurse manager may be the director of nursing, reporting straight to the administrator or CEO.
 
 For more on how SimpleScheduleAI supports nurse managers at critical access hospitals, see: [Critical Access Hospital Scheduling](/critical-access-hospital-scheduling).
 

@@ -41,7 +41,7 @@ Each category has different vendors, different implementation requirements, and 
 
 Per interviews with 30+ Texas CAH nurse managers, scheduling administrative work, not clinical documentation, not communication tools, is the single largest time sink outside of direct clinical supervision.
 
-The breakdown of scheduling time per the analysis in our [administrative burden research](/blog/healthcare-scheduling-crisis-26000-administrative-burden):
+The breakdown of scheduling time per the analysis in our [administrative burden research](/blog/healthcare-scheduling-crisis):
 
 | Task                          | Weekly time                      | Reducible?                                |
 | ----------------------------- | -------------------------------- | ----------------------------------------- |

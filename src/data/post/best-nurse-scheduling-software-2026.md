@@ -30,7 +30,7 @@ This guide compares 8 platforms across the operational variables that actually d
 
 - Enterprise platforms (UKG, API Healthcare) are built for 200+ bed systems with dedicated HR and IT teams. Small hospitals that buy them pay for features they cannot use.
 - For hospitals under 50 beds, the right question is not "which software has the most features" but "which option your team will actually use without a full-time administrator."
-- The average nurse manager at a small or community hospital spends 8-12 hours per week on scheduling, per the [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com). Software that cuts this to 2-3 hours pays for itself quickly.
+- The average nurse manager at a small or community hospital spends 8 to 12 hours per week on scheduling. That is our own estimate from more than 30 nurse manager interviews, broken down by activity in our guide to [where nurse manager scheduling time actually goes](/blog/nurse-manager-scheduling-time-breakdown). Software that meaningfully reduces it pays for itself quickly.
 - Managed scheduling services now compete directly with self-serve software. Where scheduling is the manager's biggest time drain, managed service often wins on ROI.
 - Implementation burden is the most underrated evaluation criterion. A platform that takes 6 months to configure is a worse choice under 75 beds than a simpler tool that works in week one.
 

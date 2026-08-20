@@ -27,7 +27,7 @@ This guide compares ten platforms on that exact test. For the broader market spl
 ## Key Takeaways
 
 - A Critical Access Hospital is capped at 25 beds and runs under [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), which requires a documented staffing record. Score scheduling tools on whether they produce that record by default, not as a custom report you build yourself.
-- The CAH nurse manager is usually a dual-role manager who also takes clinical shifts. A tool that needs 8-12 hours a week of administration, per the [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com), is not viable no matter how good the feature list looks. That makes implementation burden the deciding variable, not feature count.
+- The CAH nurse manager is usually a dual-role manager who also takes clinical shifts. A tool that needs 8 to 12 hours a week of administration, the range we heard across more than 30 [nurse manager interviews](/blog/nurse-manager-scheduling-time-breakdown), is not viable no matter how good the feature list looks. That makes implementation burden the deciding variable, not feature count.
 - The enterprise systems in this guide (symplr Smart Square, QGenda, UKG) are positioned for large health systems with dedicated IT and HRIS staff a CAH does not have.
 - With no float pool, callout coverage is the highest-stakes daily task: a single callout can drop a unit below its §485.635 staffing plan, so a ranked, compliance-aware replacement shortlist matters more than any analytics dashboard.
 - Of the ten options, SimpleScheduleAI is the only one that removes the schedule-build burden from the manager entirely; the others are rated honestly for where they fit.
@@ -601,7 +601,7 @@ Scheduling software is a tool your nurse manager logs into, configures, and runs
 
 1. Critical Access Hospital Conditions of Participation, 42 CFR §485.635. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 2. FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
-3. Nurse-manager scheduling-time burden. [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com).
+3. Nurse-manager scheduling-time burden (8 to 12 hours a week). SimpleScheduleAI's own estimate from more than 30 nurse manager interviews conducted before the service was built, broken down by activity in [where nurse manager scheduling time actually goes](/blog/nurse-manager-scheduling-time-breakdown). Not a measured time study and not customer data.
 4. Rural health workforce data. [HRSA](https://www.hrsa.gov).
 5. Aladtec ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
 6. ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [healthstream.com](https://www.healthstream.com). Verified 2026-06-06.

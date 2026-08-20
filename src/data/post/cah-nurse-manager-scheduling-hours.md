@@ -40,7 +40,7 @@ metadata:
 
 ## How Much Time Do Nurse Managers Actually Spend on Scheduling?
 
-Survey data from [nursing management research published by the American Organization for Nursing Leadership](https://www.aonl.org/resources/nurse-manager-workforce-survey) consistently finds that nurse managers across hospital types spend 40-50% of their working hours on administrative tasks. For nurse managers at small rural hospitals, scheduling is the dominant administrative task. Interviews with CAH nurse managers in Texas and other rural states put weekly scheduling time at 8-12 hours in a typical week, rising to 15-20 hours during callout-heavy periods like holiday windows.
+For nurse managers at small rural hospitals, scheduling is the dominant administrative task. Our own interviews with more than 30 nurse managers, run before we built SimpleScheduleAI, put weekly scheduling time at 8 to 12 hours in a typical week. That is our estimate from those conversations rather than a measured time study, and the activity-by-activity split is in our guide to [where nurse manager scheduling time actually goes](/blog/nurse-manager-scheduling-time-breakdown).
 
 That range covers every scheduling-related task: building the initial draft, fielding preference requests, managing callouts and replacements, handling shift swap negotiations, and performing the compliance checks (overtime thresholds, certification requirements) that are required before a schedule can be posted.
 
@@ -171,7 +171,7 @@ SimpleScheduleAI does not eliminate the nurse manager's judgment. It eliminates 
 
 **Q: How many hours a week do nurse managers spend on scheduling?**
 
-Most nurse managers at Critical Access Hospitals spend 8-12 hours per week on scheduling tasks, based on AONL survey data and CAH administrator interviews. The target for a well-run process is 1-2 hours per week. The gap between the two is driven almost entirely by unstructured callout management and rebuilding schedules from scratch each cycle, not by the inherent complexity of the scheduling work itself.
+Most nurse managers at Critical Access Hospitals spend 8 to 12 hours per week on scheduling tasks, based on our own interviews with more than 30 nurse managers. The target for a well-run process is 1-2 hours per week. The gap between the two is driven almost entirely by unstructured callout management and rebuilding schedules from scratch each cycle, not by the inherent complexity of the scheduling work itself.
 
 **Q: What is the cost of nurse manager time spent on scheduling?**
 
