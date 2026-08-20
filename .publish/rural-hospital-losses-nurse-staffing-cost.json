@@ -5,64 +5,64 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T12:58:07.605Z",
-      "contentHash": "b33a871c6bcfac4837f8807ba4fcc70bcc9b982a3205454aca29741f53d4ea11"
+      "checkedAt": "2026-08-20T01:49:46.897Z",
+      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T12:58:10.860Z",
-      "contentHash": "b33a871c6bcfac4837f8807ba4fcc70bcc9b982a3205454aca29741f53d4ea11"
+      "checkedAt": "2026-08-20T01:49:49.872Z",
+      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T12:58:22.355Z",
-      "contentHash": "b33a871c6bcfac4837f8807ba4fcc70bcc9b982a3205454aca29741f53d4ea11"
+      "checkedAt": "2026-08-20T01:49:59.729Z",
+      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T12:58:22.395Z",
-      "contentHash": "b33a871c6bcfac4837f8807ba4fcc70bcc9b982a3205454aca29741f53d4ea11"
+      "checkedAt": "2026-08-20T01:49:59.802Z",
+      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T12:58:22.563Z",
-      "contentHash": "b33a871c6bcfac4837f8807ba4fcc70bcc9b982a3205454aca29741f53d4ea11"
+      "checkedAt": "2026-08-20T01:50:00.092Z",
+      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T12:58:22.564Z",
-      "contentHash": "b33a871c6bcfac4837f8807ba4fcc70bcc9b982a3205454aca29741f53d4ea11"
+      "checkedAt": "2026-08-20T01:50:00.093Z",
+      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-07-30T12:58:22.565Z",
-      "contentHash": "b33a871c6bcfac4837f8807ba4fcc70bcc9b982a3205454aca29741f53d4ea11"
+      "checkedAt": "2026-08-20T01:50:00.095Z",
+      "contentHash": "774cd2d8af7e5181716ae78385f7fa67ea7c141e1847a848239c3b2e0955c761"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "opus-founder-edit",
-      "setAt": "2026-07-30T12:57:42.653Z",
-      "contentHash": "c75df19def11da38067a39e8d45eda24964a02c84a5b053629ad9654b40b8d78"
+      "setBy": "founder reviewed the new RHTP section, flagged it as unclear, rewrite applied and re-reviewed",
+      "setAt": "2026-08-20T01:49:06.408Z",
+      "contentHash": "0cba94f4772e7f47b1f089708f07f107d6d71f3530c5aff1f442ef79752cf764"
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "founder",
-      "setAt": "2026-07-30T12:57:46.270Z",
-      "contentHash": "c75df19def11da38067a39e8d45eda24964a02c84a5b053629ad9654b40b8d78"
+      "setBy": "hero unchanged from the already-published article",
+      "setAt": "2026-08-20T01:49:08.664Z",
+      "contentHash": "0cba94f4772e7f47b1f089708f07f107d6d71f3530c5aff1f442ef79752cf764"
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder",
-      "setAt": "2026-07-30T12:57:49.699Z",
-      "contentHash": "c75df19def11da38067a39e8d45eda24964a02c84a5b053629ad9654b40b8d78"
+      "setBy": "founder: 'take this and the article live' 2026-08-20",
+      "setAt": "2026-08-20T01:49:10.046Z",
+      "contentHash": "0cba94f4772e7f47b1f089708f07f107d6d71f3530c5aff1f442ef79752cf764"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "opus-primary-source-verified",
-      "setAt": "2026-07-30T12:58:01.921Z",
-      "contentHash": "c75df19def11da38067a39e8d45eda24964a02c84a5b053629ad9654b40b8d78"
+      "setBy": "new RHTP facts primary-source verified 2026-08-19; Texas Tribune per-resident figure page-verified via Playwright",
+      "setAt": "2026-08-20T01:49:45.468Z",
+      "contentHash": "0cba94f4772e7f47b1f089708f07f107d6d71f3530c5aff1f442ef79752cf764"
     },
     "indexNow": {
       "value": "DONE",

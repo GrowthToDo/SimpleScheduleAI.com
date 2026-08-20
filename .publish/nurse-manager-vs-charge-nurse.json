@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-manager-vs-charge-nurse",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-20T02:03:17.204Z",
+      "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-20T02:03:19.646Z",
+      "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-20T02:03:21.058Z",
+      "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-20T02:03:21.101Z",
+      "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-20T02:03:21.136Z",
+      "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-20T02:03:21.136Z",
+      "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-20T02:03:21.138Z",
+      "contentHash": "5cf44f1851a124480f128501dea3bf5f5ccc80d2e48960e175414dd13215a797"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "proofread agent vs 3 tofu references; 14 findings incl. mojibake, all resolved",
+      "setAt": "2026-08-20T02:03:13.737Z",
+      "contentHash": "3de5a84f2eb688657b03a6d660ba2741c1505ae242eee002560f71e55e6ef125"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "all facts primary-source verified 2026-08-19 (BLS via Playwright, Cornell LII, AONL, ANCC, CRS) and recorded in facts-dossier",
+      "setAt": "2026-08-20T02:03:14.494Z",
+      "contentHash": "3de5a84f2eb688657b03a6d660ba2741c1505ae242eee002560f71e55e6ef125"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder reviewed rendered post on localhost:4331 across two review rounds",
+      "setAt": "2026-08-20T02:03:15.195Z",
+      "contentHash": "3de5a84f2eb688657b03a6d660ba2741c1505ae242eee002560f71e55e6ef125"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder: 'It is good to go now, take this and the article live' 2026-08-20",
+      "setAt": "2026-08-20T02:03:15.953Z",
+      "contentHash": "3de5a84f2eb688657b03a6d660ba2741c1505ae242eee002560f71e55e6ef125"
+    }
+  },
+  "overrides": []
+}

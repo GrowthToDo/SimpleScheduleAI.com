@@ -94,7 +94,7 @@ The charge nurse runs the shift. The nurse manager runs the unit.
 
 Quoted phrases are ANA's. If nobody can say who is in charge tonight, that is a planning problem, and it lands on the shift.
 
-At a Critical Access Hospital the two roles blur, because the director of nursing often takes clinical shifts and sometimes charge herself. That is what a thin roster produces.
+At a Critical Access Hospital the two roles blur, because the director of nursing often takes clinical shifts and sometimes charge herself. That is what a thin roster produces. For the full comparison, including whether a charge nurse counts as a supervisor and who owns which schedule, see [nurse manager vs charge nurse](/blog/nurse-manager-vs-charge-nurse).
 
 ## Who Covers Charge When the Charge Nurse Calls Out?
 
