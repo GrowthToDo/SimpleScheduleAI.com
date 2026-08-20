@@ -138,8 +138,13 @@ line. Do not let it imply customers.
 ## Post 3 — Aladtec comparison
 
 - **Target:** `/blog/aladtec-vs-managed-service`
-- **First line:** Aladtec vs a managed scheduling service for a small hospital
-- **Angle:** a category question, not a takedown.
+- **First line (v2):** A lot of scheduling software sold to small hospitals was
+  built for fire departments first
+- **Angle (v2):** an observation about where these tools come from, with Aladtec
+  as the worked example rather than the subject. Deliberately NOT the
+  software-vs-service argument, because Post 4 already carries that and two
+  posts making the same case days apart would be self-cannibalizing.
+- **Original angle (v1, superseded):** a category question, not a takedown.
 - **CAUTION, read before writing.** Competitor content on a personal profile is
   higher-risk than on our own blog. Load `.claude/skills/competitor-reviews.md`
   and use `docs/seo/competitor-dossier.md` wording. No unverified negatives, no
@@ -150,38 +155,51 @@ line. Do not let it imply customers.
 - **Close:** which fits depends on whether you have anyone to run it.
 - **Link:** the blog post, once.
 
-### DRAFT
+### DRAFT (v2, reframed 2026-08-20 on founder feedback)
 
-> Aladtec vs a managed scheduling service for a small hospital.
+**Why v2:** v1 opened with "Aladtec vs a managed scheduling service" and read as
+singling out one competitor from a personal profile. The founder's suggested fix
+was to generalize and mention Aladtec at the end. The problem with that fix is
+Post 4 IS the generalized version, so both posts would make the same argument
+days apart. This version takes a third angle instead: a genuine observation
+about where small-hospital scheduling tools come from. Aladtec appears as the
+worked example, not the subject. v1 is preserved at the bottom of this file.
+
+> A lot of scheduling software sold to small hospitals was built for fire
+> departments first.
 >
-> This gets framed as a product comparison. It is not really one. They are two
-> different purchases, and the feature lists are not where the decision sits.
+> That is not a criticism. It is a real lineage and it explains a lot.
 >
-> Aladtec is scheduling software. It came out of public safety, fire and EMS,
-> and it is genuinely good at 24/7 rotating coverage. You license it and your
-> hospital runs it.
+> Fire, EMS and police solved 24/7 rotating coverage decades before anyone wrote
+> software for a 25-bed hospital. Same core problem: a small pool of people, a
+> rota that never stops, someone has to be on at 3am. So the tools built for
+> those services crossed over into small healthcare, and some are genuinely good
+> at the rota part. Aladtec is the clearest example, and it came out of exactly
+> that world.
 >
-> A managed service is the other model. The scheduling work sits outside the
-> hospital and you get a finished schedule to approve.
+> Where it gets interesting is what nursing adds on top.
 >
-> So the question is not which has more features. It is who at your hospital
-> configures the rules, keeps them current as staff change, and rebuilds the
-> schedule every cycle a year from now.
+> A fire rota does not care whether someone is charge-qualified. It does not
+> check unit competency before it assigns a shift. It does not have to produce a
+> staffing record a CMS surveyor will read.
 >
-> If you have that person and they want the job, software is the cheaper answer
-> and you should buy software.
+> So the fit question for a small hospital is not whether the tool handles 24/7
+> coverage. It almost certainly does, better than a spreadsheet. It is whether
+> the nursing-specific parts are things the tool knows, or things your nurse
+> manager holds in her head and checks by hand every cycle.
 >
-> If the honest answer is that it lands on the nurse manager who is also taking
-> clinical shifts, more features will not fix that. A better tool still needs an
-> operator.
+> Worth asking in any demo, whoever you are looking at.
 >
-> Comparison here, written to be useful whichever way you go:
+> I wrote up the comparison for one of them here:
 > https://simplescheduleai.com/blog/aladtec-vs-managed-service
 
-**Notes for editing:** deliberately carries no ratings, no reviewer quotes and no
-criticism of Aladtec. The "genuinely good at 24/7 rotating coverage" line is
-accurate and should stay; it is what keeps this from reading as a hit piece on a
-personal profile. If you want it shorter, cut the two if/then paragraphs to one.
+**Notes for editing:** the whole post is now an observation about the category,
+with Aladtec as the example rather than the target. It carries no ratings, no
+reviewer quotes, no criticism, and one accurate positive ("genuinely good at the
+rota part"). The lineage claim is dossier-verified for Aladtec specifically; "a
+lot of" is deliberately vague rather than a made-up percentage, so do not tighten
+it into a statistic. If you want it shorter, cut the "Where it gets interesting"
+line and run the two paragraphs together.
 
 ## Post 4 — software vs service
 
@@ -253,3 +271,36 @@ our self-label.
    the before/after here. Before state, all four on 2026-08-18: "Discovered -
    currently not indexed", `last_crawled: null`.
 4. If unchanged, mark the hypothesis dead in this file so nobody retries it.
+
+## Superseded drafts
+
+### Post 3, v1 (replaced 2026-08-20, kept for reference)
+
+Retired because it opened by naming a single competitor, which reads badly from
+a personal profile. Do not post this version.
+
+> Aladtec vs a managed scheduling service for a small hospital.
+>
+> This gets framed as a product comparison. It is not really one. They are two
+> different purchases, and the feature lists are not where the decision sits.
+>
+> Aladtec is scheduling software. It came out of public safety, fire and EMS,
+> and it is genuinely good at 24/7 rotating coverage. You license it and your
+> hospital runs it.
+>
+> A managed service is the other model. The scheduling work sits outside the
+> hospital and you get a finished schedule to approve.
+>
+> So the question is not which has more features. It is who at your hospital
+> configures the rules, keeps them current as staff change, and rebuilds the
+> schedule every cycle a year from now.
+>
+> If you have that person and they want the job, software is the cheaper answer
+> and you should buy software.
+>
+> If the honest answer is that it lands on the nurse manager who is also taking
+> clinical shifts, more features will not fix that. A better tool still needs an
+> operator.
+>
+> Comparison here, written to be useful whichever way you go:
+> https://simplescheduleai.com/blog/aladtec-vs-managed-service
