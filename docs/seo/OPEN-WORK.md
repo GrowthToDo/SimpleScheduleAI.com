@@ -15,31 +15,29 @@ it done, so the file stays a live list. Anything with a date gets the date.
 | --- | --- |
 | **Run the interview chain before NAINA CNO intros** | Highest leverage item on this list. It blocks three separate findings across `VOTERS.md`, `NEEDS-STACK.md` and `POSITIONING.md`, all of which currently rest on assumptions about what CAH administrators say rather than on anything one told us. |
 | **Decide the `what-is-a-nurse-manager` draft** | Retarget it to "what is a nurse manager" (210/mo) and publish, or retire it. Its competing vs-section, the false AONL attribution, and the bare $26,000 figure are already fixed, so it is publishable either way. Its URL currently 404s, which is correct for a draft. |
-| **Decide the two unattributed 8-12 hour instances** | The homepage and `/how-it-works` hero lines state the range with no attribution. Twenty other live surfaces now credit our own interviews. These two were left because a citation clause damages hero copy and the how-it-works subtitle is a plain string prop that cannot carry a link. Say the word and the homepage number can be linked without adding words. |
+| **Decide the last unattributed 8-12 hour instance** | The `/how-it-works` hero states the range with no attribution. Every other live surface now credits our own interviews (the homepage line was attributed and linked on 2026-08-21, `5799bb14`). This one was left because the how-it-works subtitle is a plain string prop that cannot carry a link. Options: drop the number from that subtitle, or convert the prop to a slot. |
+| **Three positioning copy calls left open by the pre-ship review** | (1) "Every shift covered" is an absolute promise from a company with no customers, and our own engine deliberately returns understaffed shifts with reasons rather than pretending coverage exists. Keep it, or soften to a mechanism claim. (2) "Flat" and "facility" are now half-renamed: the pricing hero and homepage CTA say "one price per hospital", but `index.astro:172`, `:259`, `:298`, `pricing.astro:132` and three schema blocks still say flat/per-facility. Finish the rename or revert it. (3) The software-vs-service table now needs `lg` width for four columns, so tablets get the stacked layout that used to appear only on phones. |
 
-## 2. Positioning — blocks all positioning-derived shipping
+## 2. Positioning
 
-`docs/strategy/POSITIONING.md` carries a DO-NOT-FINALIZE header on five
-structural findings. Verbatim status as of 2026-08-21:
+The five structural findings that blocked all positioning-derived shipping are
+closed (`733bbdb5`, 2026-08-21): P4 quotes the registry row exactly, the
+registry amendment table exists with every product-mode twin authored, every
+statement carries a mode label, P12 covers N8, and P11 is held with P11a
+separated. The approved copy shipped to the service and product pages on
+2026-08-21 (`5799bb14`), with the eight registry rows it depends on.
 
-1. **P4 is not registry-verbatim despite saying it is.** It copied
-   `index.astro:122`, which had drifted. **The live drift is now fixed**
-   (2026-08-21, `6b3b8d29`) so the registry line and the page agree again; what
-   remains is correcting P4 itself to quote the row exactly.
-2. **The governance claim is true as intent, false as executed.** A section
-   listing every registry row this file would amend, each with its product-mode
-   twin authored, must exist before adoption. P9 also breaks registry authoring
-   rule 5, "never restate pricing in any other shape".
-3. **No statement carries a mode label.** Six novel statements generate six
-   units of migration debt under registry authoring rule 2.
-4. **N8, the second promise, has no statement at all.** N3 has three. N8 has
-   zero, despite having the most registry-backed proof already written.
-5. **P11 builds copy on N9, which `NEEDS-STACK.md` forbids** until the CNO
-   interviews settle that level. Hold P11, or ship only its weekend/holiday
-   mechanism, which sits at N3.
+The Excel counter-statement that was missing now exists as the third column in
+`SoftwareVsService.astro` plus the `excel-counter` registry row.
 
-Lower severity, not yet applied: P6's provenance is graded OBSERVED where the
-dossier requires REPORTED; no counter-statement exists against Excel.
+Still open:
+
+1. **P11 stays held** until the CNO interviews settle N9. Only its
+   weekend/holiday mechanism (P11a, which sits at N3) is shippable today.
+2. **P6's provenance is graded OBSERVED where the dossier requires REPORTED.**
+   Low severity, no live copy depends on it.
+3. **The three copy calls from the pre-ship review** are in section 1, because
+   they need a founder decision, not more work.
 
 ## 3. Strategy files with known gaps
 
