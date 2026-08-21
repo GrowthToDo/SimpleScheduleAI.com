@@ -17,7 +17,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'SimpleScheduleAI | Nurse Scheduling for Critical Access Hospitals',
   description:
-    'Scheduling stress drives your best nurses out and burns your budget. You get a compliant, post-ready schedule every cycle, callout coverage handled.',
+    'Every shift covered, without leaning on the same few nurses. Nurse scheduling for Texas hospitals of 25 beds or fewer. AI builds it, our scheduling team checks it.',
   ignoreTitleTemplate: true,
 };
 
@@ -118,11 +118,18 @@ const faqSchema = {
       Stop Rebuilding the Nurse Schedule <span class="text-primary">Every Sunday Night</span>
     </Fragment>
 
-    <Fragment slot="subtitle"> AI builds your schedule, our scheduling team checks it, you approve. No IT. </Fragment>
+    <Fragment slot="subtitle"> Every shift covered, without leaning on the same few nurses. </Fragment>
 
     <Fragment slot="content">
+      <p class="mt-3 text-center text-base text-default reveal-delay-3" data-reveal>
+        AI builds your schedule, our scheduling team checks it, you approve. No IT.
+      </p>
       <p class="mt-4 text-center text-sm text-muted reveal-delay-3" data-reveal>
-        Your nurse manager spends 8 to 12 hours every week building the schedule and chasing cover. We give it back.
+        From our interviews with 30+ nurse managers: <a
+          href="/blog/nurse-manager-scheduling-time-breakdown"
+          class="underline">8 to 12 hours a week</a
+        > building the schedule and chasing cover. Most of those hours go back to the floor. What's left is 1 to 2 hours
+        of review.
       </p>
       <div class="mx-auto mt-10 max-w-4xl reveal-delay-4" data-reveal>
         <div
@@ -242,13 +249,18 @@ const faqSchema = {
         description:
           "Log the callout with us and the system generates the top 3 replacement candidates with reasons, checked by our scheduling team.<br /><br />You pick, we update the schedule and send the corrected copy. No phone tree, and we're reachable if something unusual comes up.",
       },
+      {
+        title: 'Why not just call an agency?',
+        description:
+          "An agency booking covers tonight. It doesn't change who gets asked tomorrow.<br /><br />Agencies solve a supply problem: you are short a body and they have one. We solve an allocation problem: who on your own roster should take the shift, and who has taken too many already. Most hospitals need both, and the agency call gets easier when the rotation underneath it is fair.",
+      },
     ]}
   />
 
   <!-- Call to Action -->
   <CallToAction
     title="A compliant, post-ready schedule every cycle.<br/>Flat monthly pricing."
-    subtitle="$1,000 to $1,500 a month, by roster size. No IT setup. No per-nurse fees."
+    subtitle="$1,000 to $1,500 a month, by roster size. One price per hospital, not per nurse."
     tagline="Simple pricing"
     actions={[
       {

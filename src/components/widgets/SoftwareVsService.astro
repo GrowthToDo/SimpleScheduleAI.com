@@ -7,40 +7,65 @@ type Props = Widget;
 const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
 
 const rows = [
-  { attr: 'Who builds the schedule', soft: 'You do, in the tool', serv: 'Our AI builds it, our team checks it' },
-  { attr: 'Where the rules live', soft: 'You configure and maintain them', serv: 'We map them to your unit, once' },
+  {
+    attr: 'Who builds the schedule',
+    excel: 'You do, from a blank grid',
+    soft: 'You do, in the tool',
+    serv: 'Our AI builds it, our team checks it',
+  },
+  {
+    attr: 'Where the rules live',
+    excel: 'In your head',
+    soft: 'You configure and maintain them',
+    serv: 'We map them to your unit, once',
+  },
   {
     attr: 'When someone calls out',
-    soft: 'You work the phone tree',
+    excel: 'You work the phone tree',
+    soft: 'You post an open shift and wait',
     serv: 'You get the top 3 candidates, with reasons',
   },
   {
     attr: 'How fairness is tracked',
-    soft: 'By hand, in spreadsheets',
+    excel: 'By memory, or a tally you keep by hand',
+    soft: 'In reports you build yourself',
     serv: 'Automatically: weekends, holidays, overtime',
   },
-  { attr: 'What you do each week', soft: 'Build it, check it, chase it', serv: 'Review it, then approve' },
+  {
+    attr: 'What catches a mistake',
+    excel: 'Only you, on the reread',
+    soft: 'Rules you set up correctly',
+    serv: 'Every draft checked before you see it',
+  },
+  {
+    attr: 'What you do each week',
+    excel: 'Build it, check it, chase it',
+    soft: 'Configure it, then still check it',
+    serv: 'Review it, then approve',
+  },
 ];
 
-const cols = 'md:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)_minmax(0,1fr)]';
+const cols = 'lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]';
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl ${classes?.container ?? ''}`} bg={bg}>
   <div class="max-w-2xl" data-reveal>
-    <p class="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-primary">Software vs service</p>
+    <p class="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-primary">Spreadsheet, software, or service</p>
     <h2 class="font-heading text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
-      Most tools hand you the <span class="text-primary">work</span>.
+      Most of the alternatives hand you the <span class="text-primary">work</span>.
     </h2>
     <p class="mt-4 text-lg leading-relaxed text-muted">
-      Scheduling software gives you a blank grid and rules to enforce yourself. Our AI builds the finished schedule; our
-      team checks it.
+      A spreadsheet does what you tell it. It won't tell you the shift has nobody charge-qualified on it. Scheduling
+      software adds the rules, then asks you to set them up and run them. Our AI builds the finished schedule; our team
+      checks it.
     </p>
   </div>
 
   <div class="mt-10 md:mt-14" data-reveal>
     <!-- Column headers (desktop) -->
-    <div class={`hidden md:grid ${cols} gap-x-8 pb-3`}>
+    <div class={`hidden lg:grid ${cols} gap-x-8 pb-3`}>
       <div></div>
+      <div class="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Excel</div>
       <div class="text-xs font-semibold uppercase tracking-[0.14em] text-muted">Scheduling software</div>
       <div class="text-xs font-semibold uppercase tracking-[0.14em] text-primary">SimpleScheduleAI</div>
     </div>
@@ -50,11 +75,15 @@ const cols = 'md:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)_minmax(0,1fr)]';
         <div class={`grid grid-cols-1 ${cols} gap-x-8 gap-y-1 border-t border-ink/10 py-5`}>
           <div class="font-semibold text-default">{row.attr}</div>
           <div class="text-default/70">
-            <span class="mr-1 text-xs uppercase tracking-wider text-muted md:hidden">Software:</span>
+            <span class="mr-1 text-xs uppercase tracking-wider text-muted lg:hidden">Excel:</span>
+            {row.excel}
+          </div>
+          <div class="text-default/70">
+            <span class="mr-1 text-xs uppercase tracking-wider text-muted lg:hidden">Software:</span>
             {row.soft}
           </div>
           <div class="text-default">
-            <span class="mr-1 text-xs uppercase tracking-wider text-primary md:hidden">SimpleScheduleAI:</span>
+            <span class="mr-1 text-xs uppercase tracking-wider text-primary lg:hidden">SimpleScheduleAI:</span>
             {row.serv}
           </div>
         </div>

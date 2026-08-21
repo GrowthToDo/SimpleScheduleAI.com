@@ -6,7 +6,7 @@ import DarkHero from '~/components/widgets/DarkHero.astro';
 const metadata = {
   title: 'Pricing',
   description:
-    'Flat monthly pricing for the SimpleScheduleAI AI-native nurse scheduling service. One price per facility, by roster size. No per-nurse fees, no IT setup.',
+    'Monthly pricing for the SimpleScheduleAI AI-native nurse scheduling service. One price per hospital, not per nurse, set by your roster size.',
 };
 
 const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
@@ -96,9 +96,9 @@ const pricingBreadcrumbSchema = {
   <SchemaOrg slot="head" schema={[serviceSchema, pricingBreadcrumbSchema]} />
 
   <DarkHero
-    badge="Flat price. No per-nurse fees."
+    badge="One price per hospital, not per nurse."
     title="Simple pricing for Critical Access Hospitals"
-    subtitle="One flat monthly price per facility, set by your roster size. The AI builds the schedule, our scheduling team checks it, your manager approves. No IT setup, no long-term contract."
+    subtitle="One monthly price per hospital, set by your roster size. AI builds your schedule, our scheduling team checks it, you approve. When something slips on our side, you have a name and a number, not a ticket queue."
     actions={[{ text: 'Book a call with our team', href: ctaLink, variant: 'secondary' }]}
   />
 
