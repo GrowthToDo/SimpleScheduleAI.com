@@ -23,7 +23,7 @@ metadata:
 
 Picture a nurse manager at a swing-bed Critical Access Hospital who hears that CMS Payroll-Based Journal reporting is due in 45 days and starts pulling exports from the nurse scheduling software to reconcile against payroll. Days of work get scheduled for a filing the hospital almost certainly does not owe. The premise sounds plausible: swing beds deliver skilled nursing care, PBJ collects skilled nursing staffing data, so swing beds must report. That chain breaks at the first link.
 
-Swing beds are exempt from PBJ. The reporting requirement attaches to a specific kind of certified facility, and a swing-bed CAH is not that kind, so most Critical Access Hospitals file nothing at all. This guide gives you the one-question test that settles which group you are in, then covers what PBJ requires for the rare hospital that does owe it.
+Swing beds are exempt from PBJ. The reporting requirement attaches to a specific kind of certified facility, and a swing-bed CAH is not that kind, so most Critical Access Hospitals file nothing at all. This guide gives you the one-question test that settles which group you are in, then covers what PBJ requires for the rare hospital that does owe it. The same swing-bed split decides which staffing rules reach you, which our guide to [CNA-to-patient ratio laws by state](/blog/cna-patient-ratio-laws-by-state) covers.
 
 ## Key Takeaways
 

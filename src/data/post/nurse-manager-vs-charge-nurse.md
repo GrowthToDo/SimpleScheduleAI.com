@@ -194,7 +194,7 @@ It depends on when it lands. A callout during a shift is usually the charge nurs
 
 [8] Burden of proof on supervisory status: _NLRB v. Kentucky River Community Care_, 532 U.S. 706 (2001). [Cornell LII](https://www.law.cornell.edu/supct/html/99-1815.ZS.html). Verified 2026-08-19.
 
-[9] Texas hospital licensing, nursing services: 26 Texas Administrative Code § 505.41(o), transferred from 25 TAC § 133.41 effective 2025-01-10. [Cornell LII](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41). Verified 2026-08-19.
+[9] Texas hospital licensing, nursing services: 26 Texas Administrative Code § 505.41(o), transferred from 25 TAC § 133.41 effective 2025-01-31. [Cornell LII](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41). Verified 2026-08-19.
 
 **Methodology note:** The 8 to 12 hour scheduling figure is our own estimate drawn from more than thirty nurse manager conversations held before we built SimpleScheduleAI. It is not a measured time study and not customer data.
 

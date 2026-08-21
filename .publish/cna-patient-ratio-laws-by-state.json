@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "cna-patient-ratio-laws-by-state",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-21T07:52:23.814Z",
+      "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-21T07:52:25.752Z",
+      "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-21T07:52:28.105Z",
+      "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-21T07:52:28.160Z",
+      "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-21T07:52:28.191Z",
+      "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-21T07:52:28.202Z",
+      "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-21T07:52:28.205Z",
+      "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "proofread agent vs 3 mofu references; 31 findings incl. missing MOFU visual and product-column self-label, all resolved",
+      "setAt": "2026-08-21T07:52:19.752Z",
+      "contentHash": "77934573823434e52c06260c4096ad52368a7ec191e62a495e40b2fc016842b2"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "factcheck agent, all 12 claim classes primary-source verified; 2 must-fixes corrected (TAC transfer date, unhedged only-state claim)",
+      "setAt": "2026-08-21T07:52:20.423Z",
+      "contentHash": "77934573823434e52c06260c4096ad52368a7ec191e62a495e40b2fc016842b2"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder reviewed rendered post on localhost:4331 across two review rounds",
+      "setAt": "2026-08-21T07:52:21.403Z",
+      "contentHash": "77934573823434e52c06260c4096ad52368a7ec191e62a495e40b2fc016842b2"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder: 'Take the blog live' 2026-08-21",
+      "setAt": "2026-08-21T07:52:22.505Z",
+      "contentHash": "77934573823434e52c06260c4096ad52368a7ec191e62a495e40b2fc016842b2"
+    }
+  },
+  "overrides": []
+}
