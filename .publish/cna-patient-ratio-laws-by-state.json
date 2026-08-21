@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-21T07:52:23.814Z",
+      "checkedAt": "2026-08-21T08:25:43.797Z",
       "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-21T07:52:25.752Z",
+      "checkedAt": "2026-08-21T08:25:46.503Z",
       "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-21T07:52:28.105Z",
+      "checkedAt": "2026-08-21T08:25:48.926Z",
       "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-21T07:52:28.160Z",
+      "checkedAt": "2026-08-21T08:25:48.953Z",
       "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-21T07:52:28.191Z",
+      "checkedAt": "2026-08-21T08:25:48.974Z",
       "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-21T07:52:28.202Z",
+      "checkedAt": "2026-08-21T08:25:48.979Z",
       "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-21T07:52:28.205Z",
+      "checkedAt": "2026-08-21T08:25:48.980Z",
       "contentHash": "dd2011a4474cf434e0fdc7b2d380207ba48898644a6a5ccb43544d99a9cbe38e"
     }
   },
@@ -62,6 +62,18 @@
       "value": "YES",
       "setBy": "founder: 'Take the blog live' 2026-08-21",
       "setAt": "2026-08-21T07:52:22.505Z",
+      "contentHash": "77934573823434e52c06260c4096ad52368a7ec191e62a495e40b2fc016842b2"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "Bing submit_url 2026-08-21 post-deploy (connector was down at publish time)",
+      "setAt": "2026-08-21T08:25:41.830Z",
+      "contentHash": "77934573823434e52c06260c4096ad52368a7ec191e62a495e40b2fc016842b2"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "sitemap-index.xml resubmitted to GSC 2026-08-21 08:25",
+      "setAt": "2026-08-21T08:25:42.739Z",
       "contentHash": "77934573823434e52c06260c4096ad52368a7ec191e62a495e40b2fc016842b2"
     }
   },
