@@ -1,11 +1,24 @@
 # Positioning statements — SimpleScheduleAI
 
-> ⚠️ **NOT FINAL.** All 7 inherited messages walked (P1-P9, one retired), two
-> roles gap-filled (P10, P11), closing adversarial press RUN and returned
-> **DO NOT FINALIZE** on ten findings. The five falsifiable claims are fixed
-> (see "Fixed after the press"); **five structural findings remain open** and are
-> listed under "Open after the press". Do not ship any statement from this file
-> until those close.
+> ⚠️ **NOT FINAL, but no longer blocked on structure.** All 7 inherited messages
+> walked (P1-P9, one retired), three roles gap-filled (P10, P11, P12), closing
+> adversarial press RUN and returned DO NOT FINALIZE on ten findings.
+>
+> **Status 2026-08-21.** The five falsifiable claims were fixed on 2026-08-16
+> (see "Fixed after the press"). The **five structural findings are now worked**:
+> four are closed and one is deliberately held.
+>
+> | Finding | Status |
+> | --- | --- |
+> | 1. P4 not registry-verbatim | **CLOSED.** P4 now quotes the `triad` row exactly. The live drift at `index.astro:122` that caused it is fixed (commit `6b3b8d29`). |
+> | 2. Governance claim false as executed | **CLOSED.** See "Registry amendment table". |
+> | 3. No statement carries a mode label | **CLOSED.** Every statement carries one; twins authored. |
+> | 4. N8 has no statement | **CLOSED.** P12 added. |
+> | 5. P11 builds on forbidden N9 | **HELD, by design.** P11 is not proposed for adoption. Its N3 mechanism is separated as P11a. Unholds when the CNO interviews settle N9. |
+>
+> **What still gates shipping is founder approval, not open structure.** Nothing
+> here flows into `positioning-registry.md` until the founder approves the
+> amendment table. The lower-severity findings below are also unapplied.
 
 ## Fixed after the press (2026-08-16)
 
@@ -33,28 +46,31 @@ Five claims were falsifiable as written and are corrected above:
 5. **P1 carried an em-dash**, which the registry forbids in both columns and the
    global tone rule bans outright. Now a comma.
 
-## Open after the press (must close before anything ships)
+## The press findings and how each was worked (2026-08-21)
 
-1. **P4 is NOT registry-verbatim, despite saying it is.** The `triad` row reads
+Kept in full as the record. Each now carries its resolution; the file's status
+table at the top is the summary.
+
+1. **CLOSED.** **P4 is NOT registry-verbatim, despite saying it is.** The `triad` row reads
    "AI builds **your** schedule, our scheduling team checks it, you approve.
    **No IT.**" P4 copied `src/pages/index.astro:122`, which has already drifted
    from the registry. Either quote the row exactly or open a registry amendment
    — but do not call a changed line canon. **Also file the live drift at
    index.astro:122 as a separate defect.**
-2. **The governance claim is true as intent, false as executed.** P7 and P9 are
+2. **CLOSED** by the Registry amendment table. **The governance claim is true as intent, false as executed.** P7 and P9 are
    drop-in replacements for the `value-prop` and `pricing-short` rows, drafted to
    shipping spec (P7 even carries a character count). P9 additionally breaks
    registry authoring rule 5, "never restate pricing in any other shape". A
    section listing every registry row this file would amend, each with its
    product-mode twin authored, must exist before adoption.
-3. **No statement carries a mode label.** Registry authoring rule 2: a
+3. **CLOSED.** Every statement now carries one. **No statement carries a mode label.** Registry authoring rule 2: a
    service-mode phrase without a product-mode twin is migration debt. Six novel
    statements here generate six units of it.
-4. **N8 — the second promise — has no statement at all.** `NEEDS-STACK.md`
+4. **CLOSED** by P12. **N8, the second promise, has no statement at all.** `NEEDS-STACK.md`
    instructs "promise N3 and N8". N3 has three statements; N8 has zero, despite
    having the most registry-backed proof already written (`delivery-cadence`,
    `callout`, and the founder's own 2026-08-15 correction about absorbed change).
-5. **P11 builds copy on N9, which `NEEDS-STACK.md` forbids** until the CNO
+5. **HELD by design**, with the shippable half separated as P11a. **P11 builds copy on N9, which `NEEDS-STACK.md` forbids** until the CNO
    interviews settle that level. The explicit refusal sentence mitigates but does
    not override a standing instruction. Hold P11, or ship only its
    weekend/holiday mechanism, which sits at N3 and needs no N9 reference.
@@ -98,7 +114,7 @@ statement is checked against it. Two consequences that bind this whole file:
 
 **P1.** **"Every shift covered, without leaning on whoever always says yes."**
 [N3 — the promise level: every shift covered by someone who can actually do it,
-without leaning on the same few people]
+without leaning on the same few people] [MODE: service. Twin authored below; identical, the claim names no operator.]
 Reworked from: "Every shift covered — without asking the same three nurses
 again." (candidate), which the founder correctly rejected: "three" reads as a
 counted number and is not true for every hospital. The specificity now sits on
@@ -112,7 +128,7 @@ thoroughness, not a discount.
 **P7.** **"Every shift covered, without leaning on whoever always says yes. Nurse
 scheduling for Texas hospitals of 25 beds or fewer."**
 [N3 promise + N2 obsolete-brag; meta description, so it carries an SEO job as
-well as a positioning one]
+well as a positioning one] [MODE: service. Amends the registry `value-prop` row; twin authored below.]
 Reworked from M4: "Scheduling stress drives your best nurses out and burns your
 budget. You get a compliant, post-ready schedule every cycle, callout coverage
 handled."
@@ -130,10 +146,47 @@ Founder instruction 2026-08-16: keep "nurse scheduling" discoverable. Placed in
 the second sentence so the promise still leads. **154 characters**, inside the
 140-160 meta-description band.
 
+**P12.** **"A schedule your nurses can build a life around, cycle after cycle."**
+[N8 — the second promise: my nurses can plan their lives around the schedule, and
+the changes that do come don't blow up their week]
+[MODE: service. Product twin authored in the registry amendment table below.]
+Gap-filled 2026-08-21 to close the open finding that N8, which `NEEDS-STACK.md`
+names as a promise sibling to N3, had no statement while N3 had three.
+
+Why this level needs its own promise rather than folding into N3: the
+adversarial pass showed N1 bundles two jobs with different parents. Patching
+holes leads to coverage, which is N3. Getting the schedule *out* leads to
+predictability, which is N8. Guarantee perfect coverage with nothing ever posted
+and the unit still collapses.
+
+Gates. **Value framing** — it promises more of something she is counted on for,
+staff who can plan, rather than relief from a negative; the rejected drafts
+("your nurses stop asking when the schedule is coming", "stop being blindsided")
+were both less-of-a-negative and failed here. **Opposite test — PASSES**, and
+this is the one worth stating: "keep the schedule fluid right up to the day" is
+a real strategy that per diem marketplaces and gig-shift apps actively sell.
+**Price story** — consistent with More for More; it claims reliability and craft,
+not a lower price. **Deliverable check** — deliberately not "you get the schedule
+on Thursday", which would name what arrives in her inbox rather than what changes
+for her people.
+
+Proof already written and registry-backed: `delivery-cadence` (a post-ready
+schedule on a known day each cycle), `callout` (we generate ranked replacements,
+she picks, **we** update the schedule and send the corrected copy), and the
+founder's 2026-08-15 correction that the change is absorbed on our side rather
+than handed back to her.
+
+**Honest boundary, and it constrains the wording.** `delivery-cadence` is
+delivery to the *manager*, not publication to nurses. We do not control when she
+posts. "Cycle after cycle" therefore carries the cadence claim we can support
+without implying we control what her nurses see or when. Do not extend this
+statement to advance-notice claims, which belong to her posting policy and, in
+committee states, to her staffing plan.
+
 ## What we take over (below)
 
 **P2.** **"You send us PTO and constraints. We do the rest."**
-[N2 — the roster upkeep and tool operation we take over]
+[N2 — the roster upkeep and tool operation we take over] [MODE: service. Twin authored below; the sentence names an operator, so the twin differs.]
 Reworked from: the third clause of a rejected candidate, "Your unit covered,
 your rotation fair, and nothing for you to operate." The founder liked the line;
 the wording failed the clause test, because deleting the conjunction and
@@ -144,7 +197,7 @@ Caveat carried from `VOTERS.md`: this is the investment candidate, not a proven
 voter. It must not be worded to imply the bet is already validated in market.
 
 **P5.** **"Those hours go back to the floor."**
-[N2/N1 — the consequence of taking the build and upkeep off her plate]
+[N2/N1 — the consequence of taking the build and upkeep off her plate] [MODE: service. Twin authored below; identical.]
 Reworked from M3: "Your nurse manager spends a day and a half every week
 building the schedule. We give it back."
 Gates: the original was a savings pitch, the one framing the method says never to
@@ -158,7 +211,7 @@ of it.
 
 **P8.** **"When something slips on our side, you have a name and a number, not a
 ticket queue."**
-[N1/N3 — the craft-and-care claim for the pricing block]
+[N1/N3 — the craft-and-care claim for the pricing block] [MODE: SERVICE-ONLY. No product twin is possible; see the amendment table.]
 Reworked from M5: "A compliant, post-ready schedule every cycle. Flat monthly
 pricing."
 Gates on the original: **deliverable pitch** (a schedule arriving, not something
@@ -178,7 +231,7 @@ Opposite test — PASSES; self-serve software's entire model is that you run it 
 you own the outcome.
 
 **P9.** **"$1,000 to $1,500 a month, by roster size."**
-[supporting detail, not a claim]
+[supporting detail, not a claim] [MODE: service. Amends the registry `pricing-short` row; twin authored below.]
 Reworked from M6: "$1,000 to $1,500 a month, by roster size. No IT setup. No
 per-nurse fees."
 The price stays; the two absence claims are **demoted out of the headline slot**
@@ -212,10 +265,15 @@ specific, and naming the moment she is actually in. It stays as the headline
 
 ## What you do (your level — features)
 
-**P4.** **"AI builds the schedule, our scheduling team checks it, you approve."**
-[N1 — what we do]
-Kept VERBATIM from M2. This is the `triad` row in `positioning-registry.md`,
-founder-set canon, and this file only proposes.
+**P4.** **"AI builds your schedule, our scheduling team checks it, you approve. No IT."**
+[N1 — what we do] [MODE: service. Product twin exists in the registry `triad` row.]
+Quoted VERBATIM from the `triad` row in `positioning-registry.md`, founder-set
+canon, and this file only proposes.
+**Corrected 2026-08-21.** The earlier version of this statement read "AI builds
+**the** schedule … you approve." with no "No IT.", because it was copied from
+`src/pages/index.astro:122` rather than from the registry, and that line had
+drifted. The live drift is now fixed (2026-08-21, commit `6b3b8d29`): the page
+and the registry row agree again, so P4 can be what it always claimed to be.
 Diagnosis: it is a **mechanism pitch** — every clause's subject is how the
 product works. But mechanism claims are not banned, they are demoted, and this
 one belongs exactly here, at our level, as the feature that explains how the P1
@@ -233,7 +291,7 @@ should sit beneath P1.
 **P10.** **"An agency booking covers tonight. It doesn't change who gets asked
 tomorrow."**
 [counters the labour-source occupants at N3 — agency and travel staffing firms,
-per diem agencies, float pools, overtime]
+per diem agencies, float pools, overtime] [MODE: service. Twin authored below; identical.]
 Gap-filled, not reworked from existing copy.
 
 **Written carefully, because the previous attempt at this argument was wrong.**
@@ -255,7 +313,7 @@ next scheduling period; holidays are scored against the team's average. The same
 names don't keep landing on the weekends by default. Whether that keeps someone
 from leaving is not ours to claim."**
 [references N5 — keep my nurses from quitting — and N9 — my nurses aren't so worn
-down that something goes wrong — without promising either]
+down that something goes wrong — without promising either] [MODE: n/a — HELD, not proposed for adoption. See finding 5 below.]
 Gap-filled. Aspiration copy shows the part we play and never claims the outcome.
 The second sentence is doing deliberate work: with zero customers we have no
 retention evidence whatsoever, and an explicit refusal reads stronger than a
@@ -275,10 +333,26 @@ holiday load is scored against the team average.
   the floor", which sends the time somewhere she is counted on). Retiring rather
   than rewriting, because a compliant version would simply duplicate P3 and P5.
 
-## Live-copy defects found during the walk (fix independent of positioning)
+## Live-copy defects found during the walk — BOTH FIXED 2026-08-21
 
-**Both need the founder's localhost review before shipping** (standing
-instruction, 2026-08-16: site changes go to localhost first).
+**Both are now resolved and live.** Kept here as the record of what the walk
+found and how each closed, because one of them did not close the way this file
+predicted.
+
+- **Homepage "a day and a half every week" → FIXED** to the sourced range, "8 to
+  12 hours every week" (commit `6b3b8d29`). This file called it correctly: a
+  confirmed fact worded to imply more than it says.
+- **`/how-it-works` "1 to 2" → NOT a fabrication after all.** This file recorded
+  it as an unsourced outcome projection and it was briefly removed on that basis.
+  The founder confirmed 2026-08-19 that 1 to 2 hours of review is the designed
+  manager load and is deliberately generous. The real defect was that the figure
+  had **no facts-dossier entry**, which is why it read as unsourced to a
+  fact-check pass. It is restored, with the unit and activity now stated ("1 to 2
+  hours of review" rather than a bare "1 to 2"), and a dossier entry records it
+  as a founder-stated design figure with its framing rules.
+- **Lesson worth keeping:** "absent from the dossier" is not the same as "false".
+  The walk was right that the number was unsupported *as published* and wrong
+  that it was unsupportable.
 
 ### 2. `/how-it-works` claims an outcome we have no basis for
 
@@ -302,6 +376,85 @@ not a measured time study. "A day and a half" is twelve hours, the top of the
 range, presented as the norm. The truth gate catches this as a confirmed fact
 worded to imply more than it says. **Fix the live page to the honest range
 regardless of whether any positioning statement here is adopted.**
+
+## Registry amendment table (adoption plan)
+
+Written 2026-08-21 to close two open findings: the governance claim was true as
+intent but false as executed, and no statement carried a mode label. Every
+statement below now declares its mode, and every one that would change or add a
+registry row has its **product-mode twin authored here**, per registry authoring
+rule 2: a service-mode phrase without a product-mode twin is migration debt.
+
+**Nothing here is adopted.** This is the list a founder approves before anything
+flows into `positioning-registry.md`. The registry stays the authority.
+
+### Rows this file would AMEND
+
+| Row | Current service column | Proposed | Product-mode twin (proposed) |
+| --- | --- | --- | --- |
+| `value-prop` | You get a compliant, post-ready schedule every cycle, callout coverage handled. | **P7:** Every shift covered, without leaning on whoever always says yes. Nurse scheduling for Texas hospitals of 25 beds or fewer. | Every shift covered, without leaning on whoever always says yes. Nurse scheduling software for hospitals of 25 beds or fewer. |
+| `pricing-short` | $1,000 to $1,500 a month, by roster size. No IT setup. No per-nurse fees. | **P9:** $1,000 to $1,500 a month, by roster size. | $10 per user per month, or $100 per user per year. |
+
+Two notes on the `pricing-short` amendment. It does not restate pricing in a new
+shape; it is the same row with the two absence claims removed, because More for
+More permits the price to appear but not the affordability identity. And the
+founder's recorded dissent stands: "No per-nurse fees" may be converting today,
+demoting it is a framework prediction rather than evidence, and the change is
+reversible.
+
+### Rows this file would ADD
+
+| Proposed row | Service mode | Product-mode twin (proposed) |
+| --- | --- | --- |
+| `promise-coverage` | **P1:** Every shift covered, without leaning on whoever always says yes. | Every shift covered, without leaning on whoever always says yes. |
+| `promise-predictability` | **P12:** A schedule your nurses can build a life around, cycle after cycle. | A schedule your nurses can build a life around, cycle after cycle. |
+| `inputs-short` | **P2:** You send us PTO and constraints. We do the rest. | You enter PTO and constraints. The engine does the rest. |
+| `hours-returned` | **P5:** Those hours go back to the floor. | Those hours go back to the floor. |
+| `accountability` | **P8:** When something slips on our side, you have a name and a number, not a ticket queue. | *No twin. See below.* |
+| `rotation-vs-agency` | **P10:** An agency booking covers tonight. It doesn't change who gets asked tomorrow. | An agency booking covers tonight. It doesn't change who gets asked tomorrow. |
+
+**P8 cannot have a product-mode twin, and that is the finding, not an omission.**
+Its whole content is that a named human on our side is accountable when something
+slips. In product mode the hospital operates the software and there is no "our
+side" to be accountable for a schedule we did not run. Writing a twin would
+manufacture a support promise the product tier does not make. **Recommendation:
+mark `accountability` service-only in the registry**, which the table already
+supports (rows may be service-only where the claim is structurally service-bound),
+rather than authoring a twin to satisfy the rule mechanically.
+
+P1, P5, P10 and P12 carry identical twins because they are claims about the
+customer's outcome, not about who operates the tool. That is expected and is not
+a copy-paste error: mode only bites where the sentence names an operator.
+
+### Statements NOT proposed for the registry
+
+- **P3** and **P6** are commiseration and supporting copy, not positioning
+  claims, so they do not need rows.
+- **P4** already IS the `triad` row, quoted verbatim. No amendment.
+- **P11** is held (see below), so it is not proposed for adoption.
+
+## Finding 5 — P11 held, with the shippable half separated
+
+`NEEDS-STACK.md` forbids building copy on N9 until the CNO interviews settle
+that level, and the explicit refusal sentence inside P11 mitigates but does not
+override a standing instruction. **P11 is held in full.**
+
+The mechanism inside it does not depend on N9 and sits at N3, where we already
+have a promise. It is separated here so the useful half is not lost:
+
+> **P11a (shippable):** "Weekend shifts are counted per nurse and the count
+> carries into the next scheduling period; holidays are scored against the
+> team's average. The same names don't keep landing on the weekends by default."
+> [N3 — mechanism supporting the coverage promise] [MODE: service; twin identical,
+> the mechanism is the same in both tiers]
+
+P11a drops only the final sentence, which is the sentence that reaches N9 and
+N5. Code-backed and verified: weekend counts carry across periods
+(`scoring.ts` §3 `historicalWeekendCounts`), holiday load is scored against the
+team average (factor 9). Nights remain NOT CLAIMABLE.
+
+**Unhold condition:** the CNO interview chain runs and N9 settles. Until then,
+neither P11 nor any retention or patient-safety framing ships.
 
 ## Facts to verify
 
