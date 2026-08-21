@@ -16,7 +16,6 @@ it done, so the file stays a live list. Anything with a date gets the date.
 | **Run the interview chain before NAINA CNO intros** | Highest leverage item on this list. It blocks three separate findings across `VOTERS.md`, `NEEDS-STACK.md` and `POSITIONING.md`, all of which currently rest on assumptions about what CAH administrators say rather than on anything one told us. |
 | **Decide the `what-is-a-nurse-manager` draft** | Retarget it to "what is a nurse manager" (210/mo) and publish, or retire it. Its competing vs-section, the false AONL attribution, and the bare $26,000 figure are already fixed, so it is publishable either way. Its URL currently 404s, which is correct for a draft. |
 | **Decide the last unattributed 8-12 hour instance** | The `/how-it-works` hero states the range with no attribution. Every other live surface now credits our own interviews (the homepage line was attributed and linked on 2026-08-21, `5799bb14`). This one was left because the how-it-works subtitle is a plain string prop that cannot carry a link. Options: drop the number from that subtitle, or convert the prop to a slot. |
-| **Three positioning copy calls left open by the pre-ship review** | (1) "Every shift covered" is an absolute promise from a company with no customers, and our own engine deliberately returns understaffed shifts with reasons rather than pretending coverage exists. Keep it, or soften to a mechanism claim. (2) "Flat" and "facility" are now half-renamed: the pricing hero and homepage CTA say "one price per hospital", but `index.astro:172`, `:259`, `:298`, `pricing.astro:132` and three schema blocks still say flat/per-facility. Finish the rename or revert it. (3) The software-vs-service table now needs `lg` width for four columns, so tablets get the stacked layout that used to appear only on phones. |
 
 ## 2. Positioning
 
@@ -36,8 +35,9 @@ Still open:
    weekend/holiday mechanism (P11a, which sits at N3) is shippable today.
 2. **P6's provenance is graded OBSERVED where the dossier requires REPORTED.**
    Low severity, no live copy depends on it.
-3. **The three copy calls from the pre-ship review** are in section 1, because
-   they need a founder decision, not more work.
+3. The three copy calls from the pre-ship review are settled (founder,
+   2026-08-21): the coverage promise stays, the 4-column `lg` breakpoint stays,
+   and the per-hospital rename is finished (`4fe64b89`).
 
 ## 3. Strategy files with known gaps
 
