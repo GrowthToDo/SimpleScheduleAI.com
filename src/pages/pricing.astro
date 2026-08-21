@@ -68,7 +68,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'SimpleScheduleAI AI-Native Nurse Scheduling Service',
   description:
-    'AI-native nurse scheduling service for Critical Access Hospitals in Texas. Flat monthly price per facility by roster size.',
+    'AI-native nurse scheduling service for Critical Access Hospitals in Texas. Flat monthly price per hospital by roster size.',
   provider: { '@id': 'https://simplescheduleai.com/#organization' },
   serviceType: 'Nurse Scheduling',
   areaServed: { '@type': 'State', name: 'Texas' },
@@ -78,7 +78,7 @@ const serviceSchema = {
     lowPrice: '1000',
     highPrice: '1500',
     offerCount: '2',
-    description: 'Flat monthly price per facility, by roster size',
+    description: 'Flat monthly price per hospital, by roster size',
   },
 };
 
@@ -129,7 +129,7 @@ const pricingBreadcrumbSchema = {
       </div>
 
       <p class="mt-6 text-center text-sm text-muted">
-        Flat per-facility price, billed monthly, cancel anytime. No per-nurse fees, no setup fees. If your roster size
+        One price per hospital, billed monthly, cancel anytime. No per-nurse fees, no setup fees. If your roster size
         changes, your plan adjusts at the next billing cycle. Rosters above 40 nurses or multi-facility groups,
         <a href={ctaLink} class="text-primary underline">talk to us</a>.
       </p>

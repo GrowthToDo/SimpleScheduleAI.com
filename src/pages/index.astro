@@ -41,7 +41,7 @@ const softwareAppSchema = {
     lowPrice: '1000',
     highPrice: '1500',
     offerCount: '2',
-    description: 'Flat monthly price per facility, by roster size',
+    description: 'Flat monthly price per hospital, by roster size',
   },
   provider: { '@id': 'https://simplescheduleai.com/#organization' },
 };
@@ -172,7 +172,7 @@ const faqSchema = {
           ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Full audit trail on every change</span
         >
         <span class="flex items-center gap-2"
-          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Flat monthly pricing</span
+          ><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>One price per hospital</span
         >
       </div>
     </Fragment>
@@ -259,7 +259,7 @@ const faqSchema = {
 
   <!-- Call to Action -->
   <CallToAction
-    title="A compliant, post-ready schedule every cycle.<br/>Flat monthly pricing."
+    title="A compliant, post-ready schedule every cycle.<br/>One monthly price per hospital."
     subtitle="$1,000 to $1,500 a month, by roster size. One price per hospital, not per nurse."
     tagline="Simple pricing"
     actions={[
