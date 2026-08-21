@@ -15,7 +15,6 @@ it done, so the file stays a live list. Anything with a date gets the date.
 | --- | --- |
 | **Run the interview chain before NAINA CNO intros** | Highest leverage item on this list. It blocks three separate findings across `VOTERS.md`, `NEEDS-STACK.md` and `POSITIONING.md`, all of which currently rest on assumptions about what CAH administrators say rather than on anything one told us. |
 | **Decide the `what-is-a-nurse-manager` draft** | Retarget it to "what is a nurse manager" (210/mo) and publish, or retire it. Its competing vs-section, the false AONL attribution, and the bare $26,000 figure are already fixed, so it is publishable either way. Its URL currently 404s, which is correct for a draft. |
-| **Decide the last unattributed 8-12 hour instance** | The `/how-it-works` hero states the range with no attribution. Every other live surface now credits our own interviews (the homepage line was attributed and linked on 2026-08-21, `5799bb14`). This one was left because the how-it-works subtitle is a plain string prop that cannot carry a link. Options: drop the number from that subtitle, or convert the prop to a slot. |
 
 ## 2. Positioning
 
