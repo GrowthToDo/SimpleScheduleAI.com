@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-22T06:05:52.753Z",
+      "checkedAt": "2026-08-22T06:09:01.388Z",
       "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-22T06:05:55.119Z",
+      "checkedAt": "2026-08-22T06:09:03.051Z",
       "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-22T06:05:56.348Z",
+      "checkedAt": "2026-08-22T06:09:04.137Z",
       "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-22T06:05:56.392Z",
+      "checkedAt": "2026-08-22T06:09:04.176Z",
       "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-22T06:05:56.442Z",
+      "checkedAt": "2026-08-22T06:09:04.194Z",
       "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-22T06:05:56.443Z",
+      "checkedAt": "2026-08-22T06:09:04.194Z",
       "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-22T06:05:56.444Z",
+      "checkedAt": "2026-08-22T06:09:04.195Z",
       "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
     }
   },
@@ -62,6 +62,18 @@
       "value": "OK",
       "setBy": "founder",
       "setAt": "2026-08-22T06:06:51.391Z",
+      "contentHash": "bf40aa21c9b9ae0317c7f1fd650c41d1702df57eb45ea06626e9e3780ba663ec"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-22",
+      "setAt": "2026-08-22T06:11:29.565Z",
+      "contentHash": "bf40aa21c9b9ae0317c7f1fd650c41d1702df57eb45ea06626e9e3780ba663ec"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-22",
+      "setAt": "2026-08-22T06:11:30.256Z",
       "contentHash": "bf40aa21c9b9ae0317c7f1fd650c41d1702df57eb45ea06626e9e3780ba663ec"
     }
   },
