@@ -321,7 +321,7 @@ Verified 2026-08-19 for the `nurse-manager-vs-charge-nurse` post. Every figure b
 - AONL issues **CNML** (Certified Nurse Manager and Leader), "designed exclusively for nurse managers", and **CENP** (Certified in Executive Nursing Practice), for nurse executives. Source: aonl.org/initiatives/certification.
 - ANCC issues **NE-BC** (Nurse Executive Board Certified). Source: nursingworld.org/our-certifications/nurse-executive/.
 - Contrast with the charge nurse side, already in the dossier: RegisteredNursing.org, "No nationally recognized charge-nurse-specific certification exists."
-- **AONL GUARDRAIL:** the AONL Nurse Manager Competencies detail lives in a PDF that has not been parsed. Do NOT attribute any staffing/scheduling competency, any hours benchmark, or the 8-12 hour figure to AONL. The parked `what-is-a-nurse-manager` draft currently makes exactly that false attribution (the 8-12 figure is OURS, from 30+ interviews) and must be corrected before it publishes.
+- **AONL GUARDRAIL:** the AONL Nurse Manager Competencies detail lives in a PDF that has not been parsed. Do NOT attribute any staffing/scheduling competency, any hours benchmark, or the 8-12 hour figure to AONL. The `what-is-a-nurse-manager` draft once made exactly that false attribution; corrected 2026-08-22 during its publish pass (the figure is OURS, from 30+ interviews, and the draft now credits them).
 
 ### CNA and aide staffing ratios: hospitals vs nursing homes
 

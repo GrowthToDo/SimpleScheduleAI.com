@@ -706,5 +706,37 @@
     "primaryKeyword": "what is a charge nurse",
     "pillar": "/nurse-scheduling-software",
     "note": "Next-15 topic #4, the volume anchor (6,600, KD 0). keyword-check returned a containment WARN against what-is-nurse-rostering; nominal only, different entity, differentiated in the brief. Differentiated from the BOFU best-charge-nurse-scheduling-software draft: that one compares tools, this defines the role. THE ANGLE: every ranking result (everynurse, nurse.com, registerednursing, Sigma, Tulsa, ANA) writes for nurses who WANT the job (salary, how to become one). This writes for the DON who has to STAFF it, and carries a section none of them have: who covers charge when the charge nurse calls out. Three page-verified sources: ANA for the definition and manager contrast, RegisteredNursing.org for 'The position is an assignment, not a separate license or title', American Nurse Journal (Bilyeu et al. 2023, the ANA's own journal) for 'many organizations lack role-specific competency-based orientation'. GUARDRAILS EARNED THE HARD WAY: practice varies (some hospitals rotate charge per shift, others post it as a standing position with its own pay grade) so never say flatly it is an assignment; the agency-cannot-hold-charge claim has NO authoritative source and is framed as operational reasoning, not fact; 'hard rule' is banned in our voice, use compliance and fairness rules. Product claims limited to the code-verified charge-nurse rule, weekend-charge-first fill order and agency-skipped-on-charge, with no competency assessment or training tracking stated as boundaries. Inbound: acuity-based-staffing-small-hospital + how-to-handle-nurse-callouts."
+  },
+  {
+    "slug": "m7-health-alternatives",
+    "type": "post",
+    "url": "/blog/m7-health-alternatives",
+    "primaryKeyword": "m7 health alternatives",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Next-15 topic #6, published 2026-08-19. Registry entry backfilled 2026-08-22 (missed at publish). BOFU alternatives post in the house pattern (KT names which alternative wins which situation; 4 vendors as H2 with images and Verdict lines). Premise changed mid-write: the original enterprise-only framing was false per our own vs-post; rewritten around who each alternative actually fits. Competitor images in public/images/blog/m7-health-alternatives/."
+  },
+  {
+    "slug": "nurse-manager-vs-charge-nurse",
+    "type": "post",
+    "url": "/blog/nurse-manager-vs-charge-nurse",
+    "primaryKeyword": "nurse manager vs charge nurse",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Next-15 topic #7, published 2026-08-19 (commit 834ef811). Registry entry backfilled 2026-08-22 (missed at publish). Companion to what-is-a-charge-nurse (#4). Spine: three schedule documents (master schedule = manager, tonight's assignment sheet = charge, callout backfill = contested). 29 inline named hyperlinks per founder instruction, no bracketed refs. Supervisor question handled per the dossier NLRA guardrail: Oakwood/Kentucky River are fact-specific, never a flat yes/no."
+  },
+  {
+    "slug": "cna-patient-ratio-laws-by-state",
+    "type": "post",
+    "url": "/blog/cna-patient-ratio-laws-by-state",
+    "primaryKeyword": "cna patient ratio laws by state",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Next-15 topic #8, published 2026-08-21 (commit 4d648a46). Registry entry backfilled 2026-08-22 (missed at publish). GSC showed ~pos 8 with no page targeting it (halo from the RN ratios post). Reframed at draft from a 50-state table to the hospital-vs-nursing-home disambiguation: aide ratio laws are almost entirely LTC law (Oregon ORS 441.768 the hospital exception), and the CAH swing-bed table shows which nursing-facility requirements carry over (485.645(d) omits the nursing-services section that carries staffing). TAC transfer date guardrail: effective 2025-01-31, not the 2025-01-10 Texas Register publication date."
+  },
+  {
+    "slug": "what-is-a-nurse-manager",
+    "type": "post",
+    "url": "/blog/what-is-a-nurse-manager",
+    "primaryKeyword": "what is a nurse manager",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Glossary (210/mo). Published 2026-08-22 after founder decision to publish rather than retire the parked draft. Rehabbed at publish: false AONL attribution long removed (the 8-12 figure is OURS from 30+ interviews; always attributed, denominator stated per the unit-trap rule); two figures aligned to the canonical time-breakdown post (build 4 to 6 hours PER CYCLE, callout cover 1 to 3 hours per event); KT/TOC/Sources added to match the glossary house shape; salary FAQ carries the honest BLS reframe (no SOC entry for the title; category median only, May 2024). Differentiated from what-is-a-charge-nurse (role vs role) and nurse-manager-vs-charge-nurse (the comparison query). Hero one-on-one-02 (cluster sibling uses one-on-one-01)."
   }
 ]

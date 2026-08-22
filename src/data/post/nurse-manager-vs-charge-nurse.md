@@ -20,7 +20,7 @@ metadata:
   description: 'How a nurse manager and a charge nurse differ on authority, supervisory status, and scheduling, including who owns the master schedule versus tonight.'
 ---
 
-Ask five people at a hospital where the nurse manager's job ends and the [charge nurse's](/blog/what-is-a-charge-nurse) begins, and you will get five answers. The confusion is not carelessness. The two roles genuinely overlap on the floor, and at a small hospital the same person often holds both.
+Ask five people at a hospital where the [nurse manager's](/blog/what-is-a-nurse-manager) job ends and the [charge nurse's](/blog/what-is-a-charge-nurse) begins, and you will get five answers. The confusion is not carelessness. The two roles genuinely overlap on the floor, and at a small hospital the same person often holds both.
 
 The confusion has a cost, and it shows up in scheduling. When nobody has written down who owns which decision, the decisions that fall between the two roles get made late, or twice, or not at all.
 

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-a-nurse-manager",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-22T06:05:52.753Z",
+      "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-22T06:05:55.119Z",
+      "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-22T06:05:56.348Z",
+      "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-22T06:05:56.392Z",
+      "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-22T06:05:56.442Z",
+      "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-22T06:05:56.443Z",
+      "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-22T06:05:56.444Z",
+      "contentHash": "63b814d7db38511a16f455e39f56e8c80518303f9f0906ca5753057f761aadb4"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "dossier-only-facts-2026-08-22",
+      "setAt": "2026-08-22T06:05:57.610Z",
+      "contentHash": "bf40aa21c9b9ae0317c7f1fd650c41d1702df57eb45ea06626e9e3780ba663ec"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-22T06:05:59.601Z",
+      "contentHash": "bf40aa21c9b9ae0317c7f1fd650c41d1702df57eb45ea06626e9e3780ba663ec"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer reconfirmed after founder wording pass",
+      "setAt": "2026-08-22T06:05:58.679Z",
+      "contentHash": "bf40aa21c9b9ae0317c7f1fd650c41d1702df57eb45ea06626e9e3780ba663ec"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-08-22T06:06:51.391Z",
+      "contentHash": "bf40aa21c9b9ae0317c7f1fd650c41d1702df57eb45ea06626e9e3780ba663ec"
+    }
+  },
+  "overrides": []
+}
