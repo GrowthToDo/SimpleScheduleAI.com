@@ -173,7 +173,7 @@ No. Texas requires a nurse staffing committee with at least 60 percent direct-ca
 
 **Q: How does a small hospital prove it staffs safely without a ratio?**
 
-By documenting to its plan. The staffing committee's written plan is the standard, so the hospital keeps schedules and staffing records that show each shift met the plan's coverage and skill mix. A surveyor asks how you met your plan, not whether you hit a number the state never set.
+By documenting to its plan. The staffing committee's written plan is the standard, so the hospital keeps schedules and staffing records that show each shift met the plan's coverage and skill mix. A surveyor asks how you met your plan, not whether you hit a number the state never set. Who the surveyor works for depends on your route to Medicare certification; our guide to the [Joint Commission nurse staffing standards](/blog/joint-commission-nurse-staffing-standards) covers both routes.
 
 ## Sources
 

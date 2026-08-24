@@ -738,5 +738,13 @@
     "primaryKeyword": "what is a nurse manager",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Glossary (210/mo). Published 2026-08-22 after founder decision to publish rather than retire the parked draft. Rehabbed at publish: false AONL attribution long removed (the 8-12 figure is OURS from 30+ interviews; always attributed, denominator stated per the unit-trap rule); two figures aligned to the canonical time-breakdown post (build 4 to 6 hours PER CYCLE, callout cover 1 to 3 hours per event); KT/TOC/Sources added to match the glossary house shape; salary FAQ carries the honest BLS reframe (no SOC entry for the title; category median only, May 2024). Differentiated from what-is-a-charge-nurse (role vs role) and nurse-manager-vs-charge-nurse (the comparison query). Hero one-on-one-02 (cluster sibling uses one-on-one-01)."
+  },
+  {
+    "slug": "joint-commission-nurse-staffing-standards",
+    "type": "post",
+    "url": "/blog/joint-commission-nurse-staffing-standards",
+    "primaryKeyword": "joint commission nurse staffing",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Next-15 topic #9 (320/mo, KD 1), published 2026-08-24. FACT-CAREFUL topic; premise check found the ground had shifted: NPG 12 (Health Professional Resource Management) effective 2026-01-01 under Accreditation 360, replacing the NPSGs. THE LANE nobody in the SERP covers: most CAHs are not TJC-accredited (state-survey route), so the honest answer is the CoP floor (485.631(a)(5) RN/CNS/LPN on duty with inpatients) plus the who-binds-you table. Landmines recorded in the dossier section: never attribute ratios to TJC; never 'first time ever' (2002-2009 staffing-effectiveness history); 24/7-RN is hospital-CoP-derived, never a CAH requirement; requirement-level numbers (12.02.01 etc.) are snippet-only, do not cite. Adversarial fact-check caught an invented Sources title tail (Flex brief #33) pre-publish. First post published under the live-first flow (no localhost preview; IndexNow/GSC held for founder live review). Inbound: acuity-based-staffing-small-hospital + nurse-staffing-ratios-critical-access-hospital."
   }
 ]

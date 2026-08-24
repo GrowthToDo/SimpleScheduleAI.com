@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "joint-commission-nurse-staffing-standards",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-24T17:01:20.134Z",
+      "contentHash": "d2b414ed9d4539218ddd8a79e48ebb244ebfef282540b45067e690fa59a3ec84"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-24T17:01:21.961Z",
+      "contentHash": "d2b414ed9d4539218ddd8a79e48ebb244ebfef282540b45067e690fa59a3ec84"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-24T17:01:24.866Z",
+      "contentHash": "d2b414ed9d4539218ddd8a79e48ebb244ebfef282540b45067e690fa59a3ec84"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-24T17:01:24.926Z",
+      "contentHash": "d2b414ed9d4539218ddd8a79e48ebb244ebfef282540b45067e690fa59a3ec84"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-24T17:01:24.977Z",
+      "contentHash": "d2b414ed9d4539218ddd8a79e48ebb244ebfef282540b45067e690fa59a3ec84"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-24T17:01:24.978Z",
+      "contentHash": "d2b414ed9d4539218ddd8a79e48ebb244ebfef282540b45067e690fa59a3ec84"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-24T17:01:24.982Z",
+      "contentHash": "d2b414ed9d4539218ddd8a79e48ebb244ebfef282540b45067e690fa59a3ec84"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer, reconfirmed after fact-check + themes fixes",
+      "setAt": "2026-08-24T17:01:25.769Z",
+      "contentHash": "3e1264e75f3d5b94f31f06910c54916d3bcf8e02272dcd1a55194c9cd78f795d"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "adversarial-agent-2026-08-24, its own findings applied",
+      "setAt": "2026-08-24T17:01:26.511Z",
+      "contentHash": "3e1264e75f3d5b94f31f06910c54916d3bcf8e02272dcd1a55194c9cd78f795d"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-24T17:01:27.242Z",
+      "contentHash": "3e1264e75f3d5b94f31f06910c54916d3bcf8e02272dcd1a55194c9cd78f795d"
+    }
+  },
+  "overrides": []
+}

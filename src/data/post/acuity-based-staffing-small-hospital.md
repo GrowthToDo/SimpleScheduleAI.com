@@ -52,7 +52,7 @@ What the answer tells you matters more than how you worked it out. If your metho
 
 ## Does Texas Require a Small Hospital to Staff by Acuity?
 
-No. Texas does not require acuity-based staffing, and no Texas law sets a nurse-to-patient ratio. What Texas does require is a written staffing plan, and that plan has to answer the same question acuity models answer. This is why the topic comes up in surveys and committee meetings. For the ratio side of it, see our guide to [nurse staffing ratios at a critical access hospital](/blog/nurse-staffing-ratios-critical-access-hospital).
+No. Texas does not require acuity-based staffing, and no Texas law sets a nurse-to-patient ratio. What Texas does require is a written staffing plan, and that plan has to answer the same question acuity models answer. This is why the topic comes up in surveys and committee meetings. For the ratio side of it, see our guide to [nurse staffing ratios at a critical access hospital](/blog/nurse-staffing-ratios-critical-access-hospital). Accreditors ask a version of the same question too; the [Joint Commission nurse staffing standards](/blog/joint-commission-nurse-staffing-standards) that took effect in 2026 require needs-based staffing without setting a number.
 
 Texas Health and Safety Code 257.003 puts the obligation on the governing body. It must adopt, implement and enforce a written nurse staffing policy. That policy has to "ensure that an adequate number and skill mix of nurses are available to meet the level of patient care needed."
 
