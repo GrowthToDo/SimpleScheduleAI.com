@@ -94,12 +94,12 @@ Notice what the federal floor for a critical access hospital does allow: the on-
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Critical access hospital, Joint Commission accredited</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">That same nurse-on-duty floor, because the federal rules do not change with accreditation, plus the accreditor's critical access hospital manual</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">An RN, clinical nurse specialist, or LPN on duty whenever you have an inpatient, unchanged by accreditation (485.631(a)(5)), plus the accreditor's critical access hospital manual</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Joint Commission surveyors, on a triennial cycle, instead of the state agency</td>
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Larger PPS hospital, accredited</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A stricter floor: round-the-clock registered-nurse coverage under the hospital Conditions of Participation, plus National Performance Goal 12</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Round-the-clock registered-nurse coverage under the hospital Conditions of Participation, a stricter floor than either critical access hospital row, plus National Performance Goal 12</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Joint Commission surveyors</td>
       </tr>
     </tbody>

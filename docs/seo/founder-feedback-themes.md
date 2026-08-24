@@ -101,11 +101,16 @@ sentence, of what or to what. This is T5's cousin and the founder catches it
 constantly; the vaguer and more elegant the phrase, the more likely it fails.
 ("The goal is a return" — return to what? "the operative requirement" — for what? "Which advisory board?")
 
-**T17. A comparison table's rows must differ visibly in the cells.**
-Check: read only the middle column. If two rows say roughly the same thing,
-the table is not earning its space; put the actual distinguishing fact in the
-cell rather than a label that implies one.
-("In the table, what is the difference between 2nd and 3rd option?" Rows said "the Conditions of Participation" and "Hospital Conditions of Participation"; rewritten to state each nurse-coverage floor outright.)
+**T17. Every table cell stands alone: differs visibly, and borrows nothing.**
+Two failures, same table, one review apart.
+Check A: read only the distinguishing column. If two rows say roughly the same
+thing, put the actual distinguishing fact in the cell rather than a label that
+implies one.
+Check B: read each cell cold, as if it were the only one on screen. Tables are
+scanned, not read top to bottom, so "the same X", "as above", "that floor" and
+every other backward reference fails. Restate the thing, even at the cost of
+repetition.
+("In the table, what is the difference between 2nd and 3rd option?" then, after the rewrite, "same nurse-on-duty floor means? same as what?" The cell now names the rule outright.)
 
 ## How to run the pass
 
