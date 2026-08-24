@@ -11,7 +11,11 @@ export const MECHANICAL_FIELDS = [
   'factsDossier',
 ];
 export const RECORDED_FIELDS = ['proofread', 'factCheck', 'imageEyeball', 'founderApproval', 'indexNow', 'gscSitemap'];
-export const BLOCKING_RECORDED = ['proofread', 'factCheck', 'imageEyeball', 'founderApproval'];
+// imageEyeball moved out of the commit-blocking set 2026-08-24 (founder workflow
+// change): blogs go live without a localhost preview, the founder reviews the
+// LIVE page, and imageEyeball is recorded from that review. It gates
+// IndexNow/GSC submission (process rule in publish-pipeline.md), not the commit.
+export const BLOCKING_RECORDED = ['proofread', 'factCheck', 'founderApproval'];
 
 const ACCEPTED = {
   proofread: ['READY'],
