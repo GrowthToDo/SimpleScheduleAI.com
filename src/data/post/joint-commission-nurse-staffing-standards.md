@@ -22,10 +22,10 @@ metadata:
 
 ## Key Takeaways
 
-- On January 1, 2026, nurse staffing became a named Joint Commission survey goal for the first time. National Performance Goal 12 reads: "The hospital is staffed to meet the needs of the patients it serves, and staff are competent to provide safe, quality care."
+- On January 1, 2026, nurse staffing became a named Joint Commission survey goal for the first time. [National Performance Goal 12](https://www.jointcommission.org/en-us/standards/national-performance-goals/health-professional-resource-management) reads: "The hospital is staffed to meet the needs of the patients it serves, and staff are competent to provide safe, quality care."
 - The Joint Commission has never set a numeric nurse-to-patient ratio, and the new goal does not either. Ratio mandates come from state law, not from accreditors.
-- The goal is a return, and most coverage skips that. The Joint Commission ran staffing effectiveness standards from 2002 until 2009, suspended them for consuming resources without improving safety, and kept slimmed-down interim requirements from 2010 on.
-- Accreditation itself is optional. A hospital can hold [Medicare certification](/critical-access-hospital-scheduling) through a state agency survey instead, and historically most critical access hospitals have taken that route.
+- Staffing is a subject the Joint Commission had dropped and has now picked back up. It ran staffing effectiveness standards from 2002 until 2009, suspended them for consuming resources without improving safety, and kept slimmed-down interim requirements from 2010 on.
+- Accreditation itself is optional. A hospital can hold Medicare certification through a state agency survey instead, and historically most [critical access hospitals](/blog/what-is-a-critical-access-hospital) have taken that route.
 - A non-accredited critical access hospital owes the CMS Conditions of Participation instead. The staffing line that matters is 42 CFR 485.631(a)(5): a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever there is an inpatient.
 
 ## Table of Contents
@@ -39,13 +39,13 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-The Joint Commission nurse staffing standards changed on January 1, 2026. Staffing is now National Performance Goal 12, one of 14 goals that replaced the National Patient Safety Goals under the organization's Accreditation 360 overhaul. The goal text: "The hospital is staffed to meet the needs of the patients it serves, and staff are competent to provide safe, quality care." It sets no ratio, and it binds only hospitals that are Joint Commission accredited. For a small hospital, the useful question is narrower than the headlines: which staffing rules actually apply to your building, and what will the surveyor ask to see.
+The Joint Commission nurse staffing standards changed on January 1, 2026. Staffing is now National Performance Goal 12, one of 14 goals that replaced the National Patient Safety Goals under the organization's Accreditation 360 overhaul. The goal itself is one sentence: "The hospital is staffed to meet the needs of the patients it serves, and staff are competent to provide safe, quality care." It sets no ratio, and it binds only hospitals that are Joint Commission accredited. For a small hospital, the useful question is narrower than the headlines: which staffing rules actually apply to your building, and what will the surveyor ask to see.
 
 ## What Are the Joint Commission Nurse Staffing Standards in 2026?
 
-Since January 1, 2026, the operative requirement is National Performance Goal 12, titled Health Professional Resource Management. The goal requires that the hospital is staffed to meet the needs of the patients it serves and that staff are competent to provide safe, quality care. It arrived as part of Accreditation 360, the June 2025 overhaul that removed more than 700 requirements from the hospital accreditation program and reorganized what remained.
+Since January 1, 2026, nurse staffing at a Joint Commission accredited hospital is governed by [National Performance Goal 12](https://www.jointcommission.org/en-us/standards/national-performance-goals/health-professional-resource-management), titled Health Professional Resource Management. The goal requires that the hospital is staffed to meet the needs of the patients it serves and that staff are competent to provide safe, quality care. It arrived as part of Accreditation 360, the June 2025 overhaul that removed more than 700 requirements from the hospital accreditation program and reorganized what remained.
 
-The goal deliberately avoids numbers. Reporting on the announcement, Advisory Board noted the language "is not specific about what 'adequate' staffing levels are required to meet patient care needs." In practice, surveyors look for a staffing plan that reflects patient needs and acuity, evidence that nursing leadership directs it, and competency documentation for the people on the schedule. Advisory Board's summary also describes an expectation of round-the-clock registered-nurse coverage, caring for patients directly or supervising the nursing care others provide. That expectation echoes the Medicare hospital rules it was drawn from, and the small-hospital version of the rule is different, which matters later in this guide.
+The goal deliberately avoids numbers. Reporting on the announcement, the health care research firm Advisory Board noted the language "is not specific about what 'adequate' staffing levels are required to meet patient care needs." In practice, surveyors look for a staffing plan that reflects patient needs and [acuity](/blog/acuity-based-staffing-small-hospital), evidence that nursing leadership directs it, and competency documentation for the people on the schedule. Advisory Board's summary also describes an expectation of round-the-clock registered-nurse coverage, caring for patients directly or supervising the nursing care others provide. That expectation echoes the Medicare hospital rules it was drawn from, and the small-hospital version of the rule is different, which matters later in this guide.
 
 The nursing profession treated the goal as a milestone. The American Nurses Association president called it "a defining moment for the nursing profession and for patient care across the nation" in the same Advisory Board report. It is a milestone worth dating precisely: the first time staffing has been a named performance goal, as of 2026.
 
@@ -57,23 +57,23 @@ Ratio mandates, where they exist, come from state legislatures. California has r
 
 ## Has the Joint Commission Tried Staffing Standards Before?
 
-Yes, and the earlier attempt is the context most 2026 coverage leaves out. The Joint Commission introduced staffing effectiveness standards in July 2002. Hospitals had to track screening indicators that correlated staffing levels with clinical outcomes.
+Yes. Most 2026 coverage calls the new goal the first time the Joint Commission has tied staffing to accreditation, and that is wrong. The Joint Commission introduced staffing effectiveness standards in July 2002. Hospitals had to track screening indicators that correlated staffing levels with clinical outcomes.
 
 The standards did not survive contact with practice. In 2009 the Joint Commission suspended them, citing feedback that they did not meaningfully improve quality or safety, consumed extensive resources, and ranked among the most frequently cited findings on surveys. Interim requirements took effect on July 1, 2010: leadership reports staffing-adequacy concerns to the board at least annually, and the hospital includes staffing adequacy when it analyzes undesirable events. Those slimmed-down requirements carried the topic for fifteen years.
 
-That history reframes the 2026 goal. Calling it the first time the Joint Commission has addressed staffing is wrong. It is the first time staffing is a named National Performance Goal, and the second attempt at making staffing a survey subject at all. The first attempt failed on measurement burden, which is a useful thing to remember when preparing for the second.
+That history reframes the 2026 goal. It is the first time staffing is a named National Performance Goal, and the second attempt at making staffing a survey subject at all. The first attempt failed on measurement burden, which is worth remembering when preparing for the second.
 
 ## Do Joint Commission Staffing Standards Apply to a Critical Access Hospital?
 
 Only if the hospital is Joint Commission accredited, and most critical access hospitals are not. A hospital demonstrates Medicare compliance one of two ways: a survey by the state agency, or deemed status through a CMS-approved accrediting organization. For critical access hospitals, four accreditors hold that approval: ACHC, CIHQ, DNV, and the Joint Commission.
 
-Accreditation costs money and preparation time; the state agency survey does not carry an accreditation fee. An earlier Flex Monitoring Team policy brief, from when the national count stood at 1,328 critical access hospitals, found only 30 percent held accreditation, and the accredited minority skewed toward larger, system-affiliated facilities. The count is 1,388 hospitals as of July 2026, and no newer share has been published that we could verify, so treat the exact percentage as historical. The pattern it shows has held: the typical independent 25-bed hospital takes the state survey route.
+Accreditation costs money and preparation time; the state agency survey does not carry an accreditation fee. An earlier [Flex Monitoring Team policy brief](https://www.flexmonitoring.org/sites/flexmonitoring.umn.edu/files/media/policybrief33-med-safety-qi-cah-1.pdf), from when the national count stood at 1,328 critical access hospitals, found only 30 percent held accreditation, and the accredited minority skewed toward larger, system-affiliated facilities. The count is 1,388 hospitals as of July 2026, and no newer share has been published that we could verify, so treat the exact percentage as historical. The pattern it shows has held: the typical independent 25-bed hospital takes the state survey route.
 
 The Joint Commission runs a dedicated critical access hospital accreditation program, and its published material says it accredits more critical access hospitals than any other accrediting body. If your hospital is in that group, expect the slimmed-down manual and the performance goals to reach your program too; the Joint Commission's own announcement of the overhaul covered critical access hospital requirements alongside hospital requirements. If your hospital is not accredited, National Performance Goal 12 does not bind you, and your staffing obligations live somewhere else entirely.
 
 ## Which Staffing Rules Bind Your Hospital?
 
-Every critical access hospital, accredited or not, owes the CMS Conditions of Participation. Two citations do most of the staffing work. 42 CFR 485.631(a)(5) requires that "a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients." And 42 CFR 485.635(d) requires that a registered nurse provide, or assign to other personnel, the nursing care of each patient, including swing-bed patients at a SNF level of care.
+Every critical access hospital, accredited or not, owes the [CMS Conditions of Participation](/blog/critical-access-hospital-requirements). Two citations do most of the staffing work. 42 CFR 485.631(a)(5) requires that "a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients." And 42 CFR 485.635(d) requires that a registered nurse provide, or assign to other personnel, the nursing care of each patient, including swing-bed patients at a SNF level of care.
 
 Notice what the federal floor for a critical access hospital does allow: the on-duty nurse can be an LPN, with an RN supervising nursing care (or a physician assistant, where state law permits it). The 24/7 RN expectation described in coverage of the new performance goal comes from the Medicare rules for larger hospitals. Do not import it into your reading of the critical access hospital conditions, and do not let a consultant do it either.
 
@@ -89,24 +89,24 @@ Notice what the federal floor for a critical access hospital does allow: the on-
     <tbody>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Critical access hospital, state survey route</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">CMS Conditions of Participation (485.631, 485.635) plus state licensing rules</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">An RN, clinical nurse specialist, or LPN on duty whenever you have an inpatient (485.631(a)(5)), plus state licensing rules</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">State survey agency</td>
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Critical access hospital, Joint Commission accredited</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">The same Conditions of Participation, plus the accreditor's manual and performance goals</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Joint Commission surveyors, on a triennial cycle</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">That same nurse-on-duty floor, because the federal rules do not change with accreditation, plus the accreditor's critical access hospital manual</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Joint Commission surveyors, on a triennial cycle, instead of the state agency</td>
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Larger PPS hospital, accredited</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Hospital Conditions of Participation (including 24/7 RN coverage) plus National Performance Goal 12</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A stricter floor: round-the-clock registered-nurse coverage under the hospital Conditions of Participation, plus National Performance Goal 12</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Joint Commission surveyors</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-In every row, the schedule itself is the primary evidence. A surveyor reconstructing whether a nurse was on duty for an inpatient night two months ago reads the posted schedule, the changes made to it, and who actually worked. A staffing plan that the schedule quietly contradicts is worse than no plan, because the contradiction is now documented.
+In every row, the schedule itself is the primary evidence. A surveyor reconstructing whether a nurse was on duty for an inpatient night two months ago reads the posted schedule, the changes made to it, and who actually worked. A staffing plan that the schedule quietly contradicts is worse than no plan, because the contradiction is now documented. Our guide to [staying CMS compliant through the schedule](/blog/how-to-stay-cms-compliant-nurse-scheduling) covers what that record needs to show.
 
 ## How Does SimpleScheduleAI Fit Into Survey Readiness?
 
@@ -148,7 +148,7 @@ No. Accreditation is one of two routes to Medicare certification. The other is a
 It is the Joint Commission's staffing goal, titled Health Professional Resource Management, one of 14 National Performance Goals that replaced the National Patient Safety Goals on January 1, 2026. The goal text: the hospital is staffed to meet the needs of the patients it serves, and staff are competent to provide safe, quality care.
 
 **Q: What staffing rules apply if our hospital is not accredited?**
-The CMS Conditions of Participation, checked by your state survey agency, plus your state's hospital licensing rules. For a critical access hospital the core staffing citation is 42 CFR 485.631(a)(5), the on-duty nurse requirement, alongside 485.635(d) on nursing services. Texas licensing adds its own layer under 26 TAC 505.41: nursing services under a chief nursing officer who is an RN, and an RN on duty in each building that contains a nursing unit with patients present.
+The CMS Conditions of Participation, checked by your state survey agency, plus your state's hospital licensing rules. For a critical access hospital the core staffing citation is 42 CFR 485.631(a)(5), the on-duty nurse requirement, alongside 485.635(d) on nursing services. Texas licensing adds its own layer under 26 TAC 505.41: nursing services under a chief nursing officer who is an RN, and an RN on duty in each building that contains a nursing unit with patients present. Texas also has [its own nursing overtime rules](/blog/texas-nursing-overtime-compliance-cah), which bite the same schedule from a different direction.
 
 ## Sources
 

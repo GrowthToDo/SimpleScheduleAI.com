@@ -76,9 +76,49 @@ Check: no future placeholders; an update date only moves when the update is
 substantive; if a post is edited too often, the founder prefers the update
 date left alone.
 
+**T13. Every named source gets its hyperlink at first mention, including in Key Takeaways.**
+Check: walk each named document, standard, brief, or study top to bottom. Is
+the first mention linked? Key Takeaways are not exempt, and a source named in
+the body but only linked in the Sources list fails.
+(Joint Commission post: NPG 12 named in KT with no link; the Flex Monitoring brief cited in prose with no link. Both are checklist items, both were missed.)
+
+**T14. Anchor the link on the thing the destination is about.**
+Check: for each internal link, does the anchor text name what the target page
+covers? A link about critical access hospitals belongs on "critical access
+hospitals", not on the nearest adjacent noun.
+("Why is the hyperlink on medicare cert and not critical access hospitals here?")
+
+**T15. Internal link count matches the live siblings, not just the required hubs.**
+Check: count unique `/blog/` links and compare against two or three live posts
+of the same type before publishing. Passing the required-hub gate is not the
+same as being well linked.
+(Joint Commission post shipped with 1 blog-to-blog link where siblings carry 5 to 9.)
+
+**T16. No abstraction without its referent, especially the interesting ones.**
+Check: every noun phrase making a claim ("a return", "the operative
+requirement", "the context most coverage leaves out") must say, in the same
+sentence, of what or to what. This is T5's cousin and the founder catches it
+constantly; the vaguer and more elegant the phrase, the more likely it fails.
+("The goal is a return" — return to what? "the operative requirement" — for what? "Which advisory board?")
+
+**T17. A comparison table's rows must differ visibly in the cells.**
+Check: read only the middle column. If two rows say roughly the same thing,
+the table is not earning its space; put the actual distinguishing fact in the
+cell rather than a label that implies one.
+("In the table, what is the difference between 2nd and 3rd option?" Rows said "the Conditions of Participation" and "Hospital Conditions of Participation"; rewritten to state each nurse-coverage floor outright.)
+
 ## How to run the pass
 
 Read the draft top to bottom once per theme cluster: T1-T3 on the facts and
-takeaways, T4-T8 on the language, T9-T12 on structure and corpus fit. Fix
-what fails, re-run the mechanical gate if the fixes touched text, and note in
-the publish commit message that the themes pass ran.
+takeaways, T4-T8 and T16 on the language, T9-T12 and T17 on structure and
+corpus fit, T13-T15 on links. Fix what fails, re-run the mechanical gate if
+the fixes touched text, and note in the publish commit message that the themes
+pass ran.
+
+Two of these are mechanical enough to run as commands, and both were missed by
+eye on the first live post:
+
+- **Links (T13, T15):** list every named source and confirm a first-mention
+  link; then count unique `/blog/` links in the draft and in two live
+  same-type siblings, and match the range.
+- **Table rows (T17):** read the distinguishing column alone, top to bottom.
