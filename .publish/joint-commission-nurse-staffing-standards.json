@@ -57,6 +57,24 @@
       "setBy": "founder",
       "setAt": "2026-08-24T17:48:20.548Z",
       "contentHash": "cd3f80bc4105b3abe6e2f7dd0c319d5185ff390066fc583391eca203e52dae74"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder live review 2026-08-24",
+      "setAt": "2026-08-24T17:50:37.476Z",
+      "contentHash": "cd3f80bc4105b3abe6e2f7dd0c319d5185ff390066fc583391eca203e52dae74"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "2026-08-24",
+      "setAt": "2026-08-24T17:50:57.528Z",
+      "contentHash": "cd3f80bc4105b3abe6e2f7dd0c319d5185ff390066fc583391eca203e52dae74"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "2026-08-24",
+      "setAt": "2026-08-24T17:50:58.269Z",
+      "contentHash": "cd3f80bc4105b3abe6e2f7dd0c319d5185ff390066fc583391eca203e52dae74"
     }
   },
   "overrides": []
