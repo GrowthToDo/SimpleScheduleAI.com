@@ -4,53 +4,53 @@
   "collection": "post",
   "mechanical": {
     "checkBlog": {
-      "status": "FAIL",
-      "checkedAt": "2026-08-10T12:18:13.425Z",
-      "contentHash": "e72d2db20f5d3cc2eafe6895c1277726dfbc7b04e7abf54a58243c09684e5caa"
+      "status": "PASS",
+      "checkedAt": "2026-08-25T02:28:30.308Z",
+      "contentHash": "fe630bb64b503df0c9853f160c3b0a7182b6dad12a9636d4d89ac3efd9035b3a"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T12:18:17.176Z",
-      "contentHash": "e72d2db20f5d3cc2eafe6895c1277726dfbc7b04e7abf54a58243c09684e5caa"
+      "checkedAt": "2026-08-25T02:28:32.150Z",
+      "contentHash": "fe630bb64b503df0c9853f160c3b0a7182b6dad12a9636d4d89ac3efd9035b3a"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T12:18:19.508Z",
-      "contentHash": "e72d2db20f5d3cc2eafe6895c1277726dfbc7b04e7abf54a58243c09684e5caa"
+      "checkedAt": "2026-08-25T02:28:34.090Z",
+      "contentHash": "fe630bb64b503df0c9853f160c3b0a7182b6dad12a9636d4d89ac3efd9035b3a"
     },
     "inboundLinks": {
-      "status": "FAIL",
-      "checkedAt": "2026-08-10T12:18:19.568Z",
-      "contentHash": "e72d2db20f5d3cc2eafe6895c1277726dfbc7b04e7abf54a58243c09684e5caa"
+      "status": "PASS",
+      "checkedAt": "2026-08-25T02:28:34.138Z",
+      "contentHash": "fe630bb64b503df0c9853f160c3b0a7182b6dad12a9636d4d89ac3efd9035b3a"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T12:18:19.908Z",
-      "contentHash": "e72d2db20f5d3cc2eafe6895c1277726dfbc7b04e7abf54a58243c09684e5caa"
+      "checkedAt": "2026-08-25T02:28:34.170Z",
+      "contentHash": "fe630bb64b503df0c9853f160c3b0a7182b6dad12a9636d4d89ac3efd9035b3a"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T12:18:19.908Z",
-      "contentHash": "e72d2db20f5d3cc2eafe6895c1277726dfbc7b04e7abf54a58243c09684e5caa"
+      "checkedAt": "2026-08-25T02:28:34.170Z",
+      "contentHash": "fe630bb64b503df0c9853f160c3b0a7182b6dad12a9636d4d89ac3efd9035b3a"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T12:18:19.911Z",
-      "contentHash": "e72d2db20f5d3cc2eafe6895c1277726dfbc7b04e7abf54a58243c09684e5caa"
+      "checkedAt": "2026-08-25T02:28:34.173Z",
+      "contentHash": "fe630bb64b503df0c9853f160c3b0a7182b6dad12a9636d4d89ac3efd9035b3a"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "bench-claim-sweep",
-      "setAt": "2026-08-10T12:18:23.484Z",
-      "contentHash": "dadce14872439547a3b86d436285e8e3544d41667d12c2bac3305dc19c786671"
+      "setBy": "feature-dev:code-reviewer, 8 attributions + transition H2 + nits applied",
+      "setAt": "2026-08-25T02:28:34.815Z",
+      "contentHash": "820edfc9e46205a2eb63634cbb055898dcd29b39fdccba2e21a7faaf9c61715a"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "inventory-verified-2026-08-10",
-      "setAt": "2026-08-10T12:18:26.547Z",
-      "contentHash": "dadce14872439547a3b86d436285e8e3544d41667d12c2bac3305dc19c786671"
+      "setBy": "adversarial-agent-2026-08-25, 10 defects fixed incl. Deputy pricing verified live",
+      "setAt": "2026-08-25T02:28:35.512Z",
+      "contentHash": "820edfc9e46205a2eb63634cbb055898dcd29b39fdccba2e21a7faaf9c61715a"
     },
     "imageEyeball": {
       "value": "OK",
@@ -61,8 +61,8 @@
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-08-10T12:18:31.780Z",
-      "contentHash": "dadce14872439547a3b86d436285e8e3544d41667d12c2bac3305dc19c786671"
+      "setAt": "2026-08-25T02:28:36.232Z",
+      "contentHash": "820edfc9e46205a2eb63634cbb055898dcd29b39fdccba2e21a7faaf9c61715a"
     },
     "indexNow": {
       "value": "DONE",

@@ -149,7 +149,7 @@ What it does not do matters as much. It does not define your roles, decide who i
 1. **Name the owner of each of the three documents.** Master schedule, tonight's assignment sheet, callout backfill. Write a person against each one.
 2. **Check whether your charge assignment is rotating or permanent in practice.** Not in policy. Look at who actually held charge over the last eight weeks, then take that pattern to HR counsel if the same names repeat.
 3. **Ask who covers the backfill at 5am.** If the answer is the manager at home, that is unpaid time nobody has budgeted.
-4. **Count your charge-qualified nurses.** If the number is four or five, charge coverage is a scheduling constraint and should be treated as one.
+4. **Count your charge-qualified nurses.** If the number is four or five, charge coverage is a scheduling constraint and should be treated as one. Our guide to [charge nurse scheduling software](/blog/best-charge-nurse-scheduling-software) compares what eight platforms document about handling it.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">The master schedule, handled</p>

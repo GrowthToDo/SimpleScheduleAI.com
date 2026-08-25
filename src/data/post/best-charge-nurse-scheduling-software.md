@@ -1,15 +1,13 @@
 ---
-draft: true
-publishDate: 2026-06-08T00:00:00Z
-updateDate: 2026-07-21T00:00:00Z
+draft: false
+publishDate: 2026-08-25T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Charge Nurse Scheduling Software: A 2026 Guide'
 excerpt: >
-  Scheduling charge nurses is harder than scheduling staff nurses. The qualified pool is smaller,
-  coverage gaps have compliance consequences, and equitable distribution across a bench of 4-6
-  people determines whether your charge nurses burn out. This guide reviews the 8 best scheduling
-  platforms for hospitals that need to get charge coverage right every shift.
-image: https://images.unsplash.com/photo-1666214280557-f1b5022eb634?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+  When a staff nurse calls out you can backfill from the whole roster. When the charge nurse calls
+  out, the list of people cleared to run the shift might be four names long. Here is what eight
+  scheduling platforms actually document about that problem.
+image: ~/assets/images/pool/night-shift-01.webp
 category: Healthcare Operations
 postType: bofu
 tags:
@@ -20,495 +18,433 @@ tags:
   - healthcare-operations
 metadata:
   canonical: 'https://simplescheduleai.com/blog/best-charge-nurse-scheduling-software'
+  description: 'Eight nurse scheduling platforms compared on what they document about charge coverage: role requirements, coverage alerts, and callout replacement for small hospitals.'
 ---
 
 ## Key Takeaways
 
-- Charge nurse scheduling is not a subset of staff nurse scheduling. It requires separate credential tracking (charge designation, ACLS, clinical leadership sign-off), equitable distribution logic across a thin bench of 4-6 qualified nurses, and automatic coverage alerts when a shift would have no qualified charge nurse assigned.
-- The most common charge nurse scheduling failure at Critical Access Hospitals (CAHs) is equitable distribution breakdown. One or two charge nurses end up covering 70-80% of charge shifts because the scheduling system has no logic to spread charge hours across the full qualified bench.
-- SimpleScheduleAI is the strongest option for CAH charge nurse scheduling because it tracks charge designation as a scheduling constraint, enforces equitable charge distribution automatically, and flags uncovered charge shifts before the schedule publishes.
-- For hospitals that need self-serve software, NurseGrid Manager and SmartLinx both handle credential-based assignment logic better than general-purpose platforms like Deputy or UKG out of the box.
-- A scheduling system that cannot distinguish between "RN on shift" and "qualified charge RN on shift" is not solving the CAH charge nurse scheduling problem. It is just making a staff nurse schedule faster.
+- No federal rule requires a designated charge nurse on every shift. What binds a critical access hospital is [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631): a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever there is an inpatient. Charge coverage is your policy, and your schedule is where you keep that promise.
+- Most scheduling platforms document requirements by license type, meaning RN, LPN, or CNA. Charge qualification is a narrower thing, because a fully licensed RN may not have completed your hospital's charge sign-off. Of eight platforms reviewed, none documents a charge-specific requirement except ours.
+- [NurseGrid Manager](https://nursegrid.com/for-organizations/nursegrid-manager/) is the only competitor that names critical access hospitals in its own positioning, at a published $5 per staff member per month. [Deputy publishes rates](https://www.deputy.com/pricing) too, starting at $5 per user per month. The rest ask you to call.
+- Three platforms serve a different building than yours. Aladtec's live pages sell to fire, EMS, and law enforcement. SmartLinx and OnShift sell to senior care and skilled nursing. Their own websites say so.
+- Ask every vendor the same question before you buy: when my charge nurse calls out at 5 a.m., what does your product put in front of me? The answers differ more than the feature lists suggest, and our [buyer's guide to choosing scheduling software](/blog/how-to-choose-nurse-scheduling-software) covers the rest of the evaluation.
 
 ## Table of Contents
 
-- [The Three Charge Nurse Scheduling Challenges at a CAH](#the-three-charge-nurse-scheduling-challenges-at-a-cah)
-- [What to Look for in Charge Nurse Scheduling Software](#what-to-look-for-in-charge-nurse-scheduling-software)
-- [The 8 Best Charge Nurse Scheduling Software Options](#the-8-best-charge-nurse-scheduling-software-options)
-  - [1. SimpleScheduleAI](#1-simplescheduleai)
-  - [2. NurseGrid Manager](#2-nursegrid-manager)
-  - [3. SmartLinx](#3-smartlinx)
-  - [4. Aladtec](#4-aladtec)
-  - [5. QGenda](#5-qgenda)
-  - [6. OnShift](#6-onshift-now-part-of-workday)
-  - [7. Deputy](#7-deputy)
-  - [8. UKG](#8-ukg-formerly-kronos)
-- [Charge Nurse Scheduling Capability vs. Complexity](#charge-nurse-scheduling-capability-vs-complexity)
+- [What Makes Charge Nurse Scheduling Different?](#what-makes-charge-nurse-scheduling-different)
+- [Does Any Rule Require a Charge Nurse on Every Shift?](#does-any-rule-require-a-charge-nurse-on-every-shift)
+- [What Should You Look for in Charge Nurse Scheduling Software?](#what-should-you-look-for-in-charge-nurse-scheduling-software)
+- [How Do the Eight Platforms Compare?](#how-do-the-eight-platforms-compare)
+- [1. SimpleScheduleAI](#1-simplescheduleai)
+- [2. NurseGrid Manager](#2-nursegrid-manager)
+- [3. SmartLinx](#3-smartlinx)
+- [4. Aladtec](#4-aladtec)
+- [5. QGenda](#5-qgenda)
+- [6. OnShift](#6-onshift)
+- [7. Deputy](#7-deputy)
+- [8. UKG](#8-ukg)
+- [Which One Fits Your Hospital?](#which-one-fits-your-hospital)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Charge nurses at CAHs carry a heavier scheduling burden than staff nurses, not just in hours but in replaceability. When a staff nurse calls out, you can fill the shift with any qualified RN. When the charge nurse calls out, you need someone from a pool that might be 4 people. That difference turns what looks like a staffing problem into a scheduling architecture problem: the system you use to build schedules must actively manage charge coverage, not just record it.
+The best charge nurse scheduling software for a small hospital is the one that treats charge as a requirement the schedule has to satisfy, not a note someone types in a cell. Most platforms handle license type well. They know an RN is not an LPN. Far fewer know that one of your RNs has completed charge sign-off and another has not, and fewer still will stop you from publishing a shift that has nobody qualified to run it. This guide compares eight platforms on what their own documentation says about charge coverage, and it is explicit about where that documentation runs out.
+
+## What Makes Charge Nurse Scheduling Different?
+
+Replaceability. When a staff nurse calls out, the replacement can be any qualified RN on your roster. When [the charge nurse](/blog/what-is-a-charge-nurse) calls out, the replacement has to come from the smaller group who have completed your hospital's charge preparation. At a small hospital that group is a fraction of the roster, and several of them are already on the schedule that week.
+
+That changes what the scheduling tool has to do. Covering a staff shift is a search problem: find someone available. Covering a charge shift is a constraint problem: find someone available **and** qualified to hold the role, without pushing them into overtime or a rest violation on the way. A tool that only records who is working will not help with the second one, which is also why [handling callouts](/blog/how-to-handle-nurse-callouts) is harder than it looks from outside the unit.
+
+There is a fairness problem underneath the coverage problem. The nurses who are best at charge tend to get asked most, because they say yes and because the manager trusts them. Over a few cycles the same two or three people carry most of the charge shifts. That concentration never shows up as a rule violation, so a tool that only checks rules will not flag it. It surfaces when someone resigns, which is later than you want to hear about it.
+
+## Does Any Rule Require a Charge Nurse on Every Shift?
+
+No federal rule does. The critical access hospital Conditions of Participation require "a registered nurse, clinical nurse specialist, or licensed practical nurse" on duty whenever the hospital has one or more inpatients ([42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)). Nursing services must meet patient needs under [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), where a registered nurse provides or assigns the nursing care of each patient. Neither says the words charge nurse.
+
+Charge coverage is required by your own policy instead, and it is worth being clear about that, because vendors sometimes describe it as a federal mandate. In Texas, hospital licensing under [26 TAC 505.41(o)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) puts nursing services under a chief nursing officer who is an RN. It also requires an RN on duty in each building with a nursing unit where patients are present. Everything below that, including who runs the shift, is your policy and your competency process.
+
+Your own policy is still the standard a surveyor holds you to, which makes the schedule the document that matters. If the policy says every shift has a charge nurse, the posted schedule is the evidence you kept it. The change history is the evidence for the nights you nearly did not. Our guide to [staying CMS compliant through the schedule](/blog/how-to-stay-cms-compliant-nurse-scheduling) covers what that record needs to show, and the [Joint Commission staffing goal](/blog/joint-commission-nurse-staffing-standards) that took effect in January 2026 adds an accreditor's version of the same question for hospitals that carry accreditation.
+
+## What Should You Look for in Charge Nurse Scheduling Software?
+
+Four capabilities separate a tool that manages charge coverage from one that merely records it. Use these as the questions you ask on the demo call, because most product pages do not answer them directly.
 
 <div class="not-prose overflow-x-auto my-8">
-  <table class="w-full text-sm border-collapse" style="min-width:700px">
-    <thead>
-      <tr class="bg-slate-100">
-        <th class="border border-slate-300 px-4 py-3 text-left font-semibold">Platform</th>
-        <th class="border border-slate-300 px-4 py-3 text-left font-semibold">Best For</th>
-        <th class="border border-slate-300 px-4 py-3 text-left font-semibold">Charge Designation Tracking</th>
-        <th class="border border-slate-300 px-4 py-3 text-left font-semibold">Equitable Distribution</th>
-        <th class="border border-slate-300 px-4 py-3 text-left font-semibold">Coverage Gap Alerts</th>
-        <th class="border border-slate-300 px-4 py-3 text-left font-semibold">Pricing</th>
+  <table class="min-w-full table-fixed break-words align-top text-sm border border-slate-200 dark:border-slate-700">
+    <thead class="bg-slate-50 dark:bg-slate-800">
+      <tr>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">What to ask for</th>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Why it matters at a small hospital</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="border border-slate-300 px-4 py-2 font-semibold text-primary">SimpleScheduleAI</td>
-        <td class="border border-slate-300 px-4 py-2">CAH charge nurse scheduling</td>
-        <td class="border border-slate-300 px-4 py-2">Automated</td>
-        <td class="border border-slate-300 px-4 py-2">Automated</td>
-        <td class="border border-slate-300 px-4 py-2">Pre-publish alerts</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
-      </tr>
-      <tr class="bg-slate-50">
-        <td class="border border-slate-300 px-4 py-2 font-medium">NurseGrid Manager</td>
-        <td class="border border-slate-300 px-4 py-2">Small hospital staff communication</td>
-        <td class="border border-slate-300 px-4 py-2">Manual tracking</td>
-        <td class="border border-slate-300 px-4 py-2">Manual</td>
-        <td class="border border-slate-300 px-4 py-2">Limited</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">A charge requirement on the shift, not just a license type</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">An RN requirement is satisfied by any RN. Your charge sign-off list is shorter than your RN list, and the gap between those two lists is where uncovered shifts hide.</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 px-4 py-2 font-medium">SmartLinx</td>
-        <td class="border border-slate-300 px-4 py-2">Mid-size hospitals with T&A integration</td>
-        <td class="border border-slate-300 px-4 py-2">Configurable</td>
-        <td class="border border-slate-300 px-4 py-2">Configurable</td>
-        <td class="border border-slate-300 px-4 py-2">Configurable</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
-      </tr>
-      <tr class="bg-slate-50">
-        <td class="border border-slate-300 px-4 py-2 font-medium">Aladtec</td>
-        <td class="border border-slate-300 px-4 py-2">Multi-department self-serve scheduling</td>
-        <td class="border border-slate-300 px-4 py-2">Manual config</td>
-        <td class="border border-slate-300 px-4 py-2">Manual</td>
-        <td class="border border-slate-300 px-4 py-2">Manual</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">A warning before the schedule is published</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A manager reviewing four weeks of shifts by eye will miss one. Catching it in the office costs a minute; catching it at 11 p.m. costs a phone tree.</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 px-4 py-2 font-medium">QGenda</td>
-        <td class="border border-slate-300 px-4 py-2">Physician + nurse combined scheduling</td>
-        <td class="border border-slate-300 px-4 py-2">Configurable</td>
-        <td class="border border-slate-300 px-4 py-2">Configurable</td>
-        <td class="border border-slate-300 px-4 py-2">Configurable</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
-      </tr>
-      <tr class="bg-slate-50">
-        <td class="border border-slate-300 px-4 py-2 font-medium">OnShift</td>
-        <td class="border border-slate-300 px-4 py-2">Long-term care facilities</td>
-        <td class="border border-slate-300 px-4 py-2">Limited</td>
-        <td class="border border-slate-300 px-4 py-2">Limited</td>
-        <td class="border border-slate-300 px-4 py-2">Limited</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Callout replacements filtered to people who can hold the role</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A list of everyone who is free is not useful at 5 a.m. A list of everyone who is free and charge-qualified is the whole job.</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 px-4 py-2 font-medium">Deputy</td>
-        <td class="border border-slate-300 px-4 py-2">Retail and hospitality workforce</td>
-        <td class="border border-slate-300 px-4 py-2">Minimal</td>
-        <td class="border border-slate-300 px-4 py-2">Not included</td>
-        <td class="border border-slate-300 px-4 py-2">Not included</td>
-        <td class="border border-slate-300 px-4 py-2">From ~$5/user/mo</td>
-      </tr>
-      <tr class="bg-slate-50">
-        <td class="border border-slate-300 px-4 py-2 font-medium">UKG (Kronos)</td>
-        <td class="border border-slate-300 px-4 py-2">Large hospital systems (500+ staff)</td>
-        <td class="border border-slate-300 px-4 py-2">Full (enterprise)</td>
-        <td class="border border-slate-300 px-4 py-2">Full (enterprise)</td>
-        <td class="border border-slate-300 px-4 py-2">Full (enterprise)</td>
-        <td class="border border-slate-300 px-4 py-2">Enterprise pricing</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Some way to see who is carrying the load</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Charge concentration is invisible until someone resigns. You need either the tool or a habit that surfaces it every cycle.</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-## What Is the Three Charge Nurse Scheduling Challenges at a CAH?
+## How Do the Eight Platforms Compare?
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-label="Three charge nurse scheduling challenges at a Critical Access Hospital">
-  <title>Three Charge Nurse Scheduling Challenges at a CAH</title>
-  <rect width="720" height="300" fill="#f8fafc" rx="10"/>
-  <text x="360" y="30" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">Three Charge Nurse Scheduling Challenges at a CAH</text>
-  <!-- Column 1 -->
-  <rect x="30" y="50" width="200" height="220" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="30" y="50" width="200" height="44" fill="#1e40af" rx="8"/>
-  <rect x="30" y="83" width="200" height="11" fill="#1e40af"/>
-  <text x="130" y="75" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">1. Thin Qualified Bench</text>
-  <text x="130" y="116" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">A 25-bed CAH typically has</text>
-  <text x="130" y="132" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">4-6 nurses who have completed</text>
-  <text x="130" y="148" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">charge competency sign-off.</text>
-  <text x="130" y="172" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">One callout removes 20-25%</text>
-  <text x="130" y="188" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">of available charge capacity</text>
-  <text x="130" y="204" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">from any given week.</text>
-  <text x="130" y="248" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#1e40af" text-anchor="middle">Solution: designation-aware</text>
-  <text x="130" y="262" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#1e40af" text-anchor="middle">callout ranking</text>
-  <!-- Column 2 -->
-  <rect x="260" y="50" width="200" height="220" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="260" y="50" width="200" height="44" fill="#7c3aed" rx="8"/>
-  <rect x="260" y="83" width="200" height="11" fill="#7c3aed"/>
-  <text x="360" y="75" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">2. Equitable Distribution</text>
-  <text x="360" y="116" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">Without distribution logic,</text>
-  <text x="360" y="132" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">the most available or most</text>
-  <text x="360" y="148" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">agreeable charge nurses absorb</text>
-  <text x="360" y="164" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">disproportionate charge hours.</text>
-  <text x="360" y="188" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Leads to burnout among the</text>
-  <text x="360" y="204" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">2-3 most relied-on nurses.</text>
-  <text x="360" y="248" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#7c3aed" text-anchor="middle">Solution: charge hour tracking</text>
-  <text x="360" y="262" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#7c3aed" text-anchor="middle">and distribution rules</text>
-  <!-- Column 3 -->
-  <rect x="490" y="50" width="200" height="220" fill="white" rx="8" stroke="#e2e8f0" stroke-width="1.5"/>
-  <rect x="490" y="50" width="200" height="44" fill="#dc2626" rx="8"/>
-  <rect x="490" y="83" width="200" height="11" fill="#dc2626"/>
-  <text x="590" y="75" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">3. Compliance Gap Risk</text>
-  <text x="590" y="116" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">CMS expects a qualified nurse</text>
-  <text x="590" y="132" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">designated in charge on every</text>
-  <text x="590" y="148" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">shift. A schedule that does not</text>
-  <text x="590" y="164" font-family="system-ui,sans-serif" font-size="11" fill="#374151" text-anchor="middle">enforce this is a survey risk.</text>
-  <text x="590" y="188" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Most general-purpose</text>
-  <text x="590" y="204" font-family="system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">schedulers do not flag this.</text>
-  <text x="590" y="248" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#dc2626" text-anchor="middle">Solution: pre-publish coverage</text>
-  <text x="590" y="262" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#dc2626" text-anchor="middle">alerts before schedule goes live</text>
-</svg>
+The table below reports what each vendor documents on its own website, checked on 2026-08-25. It does not report what each product can do, and the difference matters.
 
-## What to Look for in Charge Nurse Scheduling Software?
+**Read the "not documented" cells carefully.** NurseGrid and UKG publish public product documentation. QGenda's sits behind a login, and we found none for SmartLinx, Aladtec, OnShift, or Deputy. So "not documented" means we searched the vendor's own pages and found nothing on that question. It is not proof the product cannot do it, and any vendor may be able to show you the feature on a demo call. Ask.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-label="Criteria bar chart for charge nurse scheduling software evaluation">
-  <title>Charge Nurse Scheduling Software: Evaluation Criteria</title>
-  <rect width="720" height="320" fill="#f8fafc" rx="10"/>
-  <text x="360" y="28" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">What Matters Most for Charge Nurse Scheduling at a CAH</text>
-  <!-- Bar chart, horizontal -->
-  <!-- Y labels -->
-  <text x="220" y="68" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Charge designation tracking</text>
-  <text x="220" y="103" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Pre-publish coverage alerts</text>
-  <text x="220" y="138" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Equitable charge distribution</text>
-  <text x="220" y="173" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Callout ranking by charge eligibility</text>
-  <text x="220" y="208" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">CMS documentation</text>
-  <text x="220" y="243" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Overtime enforcement (FLSA thresholds)</text>
-  <text x="220" y="278" font-family="system-ui,sans-serif" font-size="12" fill="#374151" text-anchor="end">Staff self-service (mobile app)</text>
-  <!-- Bars -->
-  <rect x="228" y="54" width="430" height="20" fill="#1e40af" rx="3"/>
-  <text x="664" y="68" font-family="system-ui,sans-serif" font-size="11" fill="#1e40af" font-weight="600">Critical</text>
-  <rect x="228" y="89" width="400" height="20" fill="#1e40af" rx="3"/>
-  <text x="634" y="103" font-family="system-ui,sans-serif" font-size="11" fill="#1e40af" font-weight="600">Critical</text>
-  <rect x="228" y="124" width="370" height="20" fill="#3b82f6" rx="3"/>
-  <text x="604" y="138" font-family="system-ui,sans-serif" font-size="11" fill="#3b82f6" font-weight="600">High</text>
-  <rect x="228" y="159" width="340" height="20" fill="#3b82f6" rx="3"/>
-  <text x="574" y="173" font-family="system-ui,sans-serif" font-size="11" fill="#3b82f6" font-weight="600">High</text>
-  <rect x="228" y="194" width="290" height="20" fill="#60a5fa" rx="3"/>
-  <text x="524" y="208" font-family="system-ui,sans-serif" font-size="11" fill="#60a5fa" font-weight="600">Important</text>
-  <rect x="228" y="229" width="260" height="20" fill="#60a5fa" rx="3"/>
-  <text x="494" y="243" font-family="system-ui,sans-serif" font-size="11" fill="#60a5fa" font-weight="600">Important</text>
-  <rect x="228" y="264" width="200" height="20" fill="#93c5fd" rx="3"/>
-  <text x="434" y="278" font-family="system-ui,sans-serif" font-size="11" fill="#64748b" font-weight="600">Useful</text>
-</svg>
+<div class="not-prose overflow-x-auto my-8">
+  <table class="min-w-full table-fixed break-words align-top text-sm border border-slate-200 dark:border-slate-700">
+    <thead class="bg-slate-50 dark:bg-slate-800">
+      <tr>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Platform</th>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Who the vendor says it is for</th>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Charge requirement on a shift</th>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Callout replacement list</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">SimpleScheduleAI</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Texas hospitals of 25 beds or fewer</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Charge qualification is one of 13 rules the schedule must satisfy before a draft reaches you</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Ranked, with charge qualification weighted in; says so plainly when nobody available qualifies, rather than offering an invalid name</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">NurseGrid Manager</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">"critical access hospitals, hospital departments, surgery centers, clinics"</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Requirements are set per position (RN, LPN, CNA); charge appears as a counted row, not a requirement</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Staff are listed on "Not Working" and "Available to Work" tabs, filtered by availability</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">SmartLinx</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Skilled nursing, assisted living, senior living; no hospital category in their navigation</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">License checks per CNA, LPN, RN are documented; a charge requirement is not documented</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">"identifies qualified, available staff" who then claim the shift by notification</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Aladtec</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Fire, EMS, law enforcement, corrections; no healthcare claim on its current pages</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Scheduling by qualification is documented in public-safety terms; nothing charge-nurse specific</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Ordered by seniority, hours worked, and last overtime shift, for those "available and qualified"</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">QGenda</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Hospitals and health systems, academic medical centers; no small-hospital segment listed</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Skills are visible to the scheduler; requiring a role on a shift is not documented</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Identifies internal resources "qualified to work" and sends mobile notifications</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">OnShift</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">"exclusively for long-term, post-acute and senior care"</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Not documented; the related documented feature is avoiding scheduling staff with expired credentials</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Recommends replacements on "work history, availability, and cost"; qualification is not named</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Deputy</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">General workforce across retail, hospitality, healthcare and others</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Qualifications are a scheduling constraint; a charge or role requirement is not documented</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Serves up "suitable employees who are available, qualified, and cost-efficient" to offer the shift to</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">UKG</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Enterprise healthcare; "3,500 hospitals and 10,000 post acute care facilities"</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Skills, certifications and licensure enforcement are documented; the term charge nurse appears on none of the pages we read</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A Call List showing which employees are "qualified to fill an open shift"</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-**Charge designation tracking** is non-negotiable. The scheduling system must distinguish between nurses who are charge-qualified and those who are not. This is separate from the nursing license record. A nurse can be a fully licensed RN without having completed a hospital's charge nurse competency program. The scheduling system needs to reflect that distinction at the shift-assignment level.
+## What Are the 8 Best Charge Nurse Scheduling Platforms?
 
-**Pre-publish coverage alerts** catch gaps before the schedule goes to staff. If a published schedule has a shift where no charge-qualified nurse is assigned, that is a compliance risk that the nurse manager may not catch when reviewing 168 time blocks across a 4-week calendar. Automated alerts that flag "no charge nurse on 11/14 night shift" before publishing are the difference between catching a problem in the office and managing a crisis at 11 PM.
+Reviewed below in the order a small hospital should consider them, starting with the two built for hospitals your size and ending with the enterprise platforms. Each section reports what the vendor documents, what reviewers report, and what it costs where a price is published.
 
-**Equitable distribution logic** prevents charge nurse burnout by tracking how many charge hours each qualified nurse has accumulated in the scheduling period and preferring those with lower charge hour totals when building future schedules.
+## 1. SimpleScheduleAI
 
-**Callout ranking by charge eligibility** means that when a charge nurse calls out, the replacement list surfaces charge-qualified nurses first, not the nearest available RN. The scheduling system needs to know the difference.
+<img src="/images/blog/best-charge-nurse-scheduling-software/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-## What Are the 8 Best Charge Nurse Scheduling Software Options?
+SimpleScheduleAI is [nurse scheduling software](/nurse-scheduling-software) we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for Texas hospitals of 25 beds or fewer, which is why charge coverage is a rule in the engine rather than a configuration exercise.
 
-### 1. [SimpleScheduleAI](/)
-
-<img src="/images/blog/best-charge-nurse-scheduling-software/SimpleScheduleAI.webp" alt="SimpleScheduleAI charge nurse scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
-
-SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Critical Access Hospitals. It handles charge nurse scheduling as a built-in feature rather than a configuration project.
-
-**Best for:** CAH nurse managers who need charge coverage enforced automatically without spending hours building and auditing schedules.
+**Best for:** Nurse managers at small hospitals who want charge coverage guaranteed on every draft without maintaining the rules themselves.
 
 **Key advantages:**
 
-- Tracks charge nurse designation as a first-class scheduling constraint. Shifts that require charge are never filled with a non-qualified RN.
-- Equitable charge distribution is calculated automatically. The system tracks charge hours per nurse across the scheduling window and balances future assignments toward under-utilized charge nurses.
-- Pre-publish alerts flag any shift without a charge-qualified assignment before the schedule goes to staff.
-- When a charge nurse calls out, the callout ranking list shows charge-qualified replacements first, with OT risk and credential status pre-calculated.
-- CMS §485.635 staffing documentation is generated automatically, including charge nurse designation per shift.
+- Charge qualification is one of 13 rules a draft must satisfy, so a shift needing charge is never filled by a nurse your roster has not cleared for it.
+- The hardest charge shifts are built first. Weekend charge comes before weekday charge, and both come before nights and regular days, because leaving them until last is how gaps happen.
+- When a callout removes the charge nurse and nobody available is charge-qualified, the system says exactly that instead of offering you a name that will not work. Charge qualification is also weighted into the replacement ranking, alongside overtime risk.
+- Agency nurses are skipped entirely on charge shifts, so an agency booking never appears as the answer to a charge gap.
+- The engine avoids stacking charge-qualified nurses on the same shift, which keeps the qualified group spread across the schedule rather than bunched.
 
 **Key limitations:**
 
-- Pricing is not listed publicly. Requires a consultation call.
-- Does not handle physician scheduling. If your hospital schedules physicians and nurses in the same system, a platform like QGenda may be a better fit.
+- We hold no training records, sign-off dates, or expiry tracking for charge competency. Who is cleared for charge comes from your roster, and keeping that list current is your side of the work.
+- We count weekend distribution across cycles and holiday balance against the team average, not charge hours. Watching charge concentration is still a manual review, using the count described in the checklist below.
+- We are Texas only, and we do not schedule physicians. A hospital scheduling both in one system will want a different tool.
 
-**Verdict:** The most complete charge nurse scheduling solution for a CAH. The managed service model means the nurse manager never has to configure charge designation rules or audit equitable distribution manually. It is simply enforced.
+**Verdict:** The strongest option if charge coverage is the thing that keeps failing and you do not have someone to own scheduling rules full time. Weaker if you need physician scheduling in the same system, or if you are outside Texas.
 
-**Cost:** Pricing not listed on website. Contact for a quote.
+**Cost:** $1,000 a month for up to 20 nurses, $1,500 for 21 to 40. One price per hospital, not per nurse.
 
-### 2. [NurseGrid Manager](https://nursegrid.com)
+## 2. NurseGrid Manager
 
 <img src="/images/blog/best-charge-nurse-scheduling-software/Nursegrid.webp" alt="NurseGrid Manager scheduling interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-NurseGrid Manager is a scheduling and communication platform built for nursing staff. It is popular at small hospitals for its clean mobile interface and shift-swap functionality.
+NurseGrid Manager is the manager tier of the nurse-facing NurseGrid app, owned by HealthStream. It is the only platform here whose own marketing names critical access hospitals: "Usually teams with 250 staff or fewer. Think critical access hospitals, hospital departments, surgery centers, clinics, and more."
 
-**Best for:** Small hospitals that want a nurse-focused scheduling tool with good staff communication features and are comfortable managing charge designation manually.
-
-**Key advantages:**
-
-- Mobile-first interface nurses find easy to use for viewing schedules, requesting time off, and swapping shifts.
-- Allows credential and qualification tagging that can be used to mark charge-qualified nurses.
-- Shift communication features make it easy for charge nurses to broadcast open shifts.
-
-**Key limitations:**
-
-- Charge designation enforcement is not automated. The nurse manager must manually verify charge coverage when building schedules.
-- No pre-publish coverage alerts for missing charge nurses. Gaps must be caught during manual review.
-
-**Verdict:** A solid choice for hospitals that primarily want better staff communication and do not need automated charge coverage enforcement. Not the strongest option if charge coverage gaps are a recurring problem.
-
-**Cost:** Contact for pricing.
-
-### 3. [SmartLinx](https://www.smartlinx.com)
-
-<img src="/images/blog/best-charge-nurse-scheduling-software/Smartlinx.webp" alt="SmartLinx scheduling software interface" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
-
-SmartLinx is a workforce management platform that includes configurable credential-based scheduling rules. It can be configured to enforce charge nurse coverage requirements, but that configuration requires IT involvement.
-
-**Best for:** Mid-size hospitals (50-200 beds) with an IT team available to configure and maintain scheduling rules, including charge designation tracking.
+**Best for:** Small hospitals that want position-level coverage requirements and a schedule their nurses will actually open on a phone.
 
 **Key advantages:**
 
-- Configurable credential tracking can be set up to enforce charge nurse assignment requirements.
-- Time and attendance integration means charge hours are automatically captured in payroll records.
-- Supports complex multi-unit scheduling with overlapping credential requirements.
+- Coverage requirements are set per position and day of week. An unmet one turns the cell red with a dog-ear, on the screen their documentation calls "Balancing and Publishing a Draft Schedule", so you see it before the schedule goes out.
+- The requirement also gates self-scheduling. If a Day shift needs an RN, LPNs and CNAs cannot sign up for it.
+- Pricing is public, which is rare in this category: $5 per staff member per month, for teams of 2 to 250.
+- Nurses like the app. An Inpatient Director wrote, "Ease of loading schedules and posting open shifts." (Hospital and Health Care, June 17, 2024, Capterra)
 
 **Key limitations:**
 
-- Charge coverage enforcement requires initial IT configuration. A CAH without dedicated IT support will find this configuration difficult to set up and maintain.
-- Implementation takes 3-4 months for full deployment. Not a fast-start option.
+- Requirements are per position, not per charge qualification. Charge appears in their documentation as a counted row, so a charge-qualified requirement on a shift is not documented.
+- Their own docs state a boundary plainly: "Coverage requirements currently do not appear elsewhere in the app and do not automatically create or approve open shift requests."
+- Multiple reviewers reported in mid-2024 that the manager mobile app had been removed. A Chief Nursing Officer wrote, "It no longer has the manager app so I have to login to desktop to make changes." (June 13, 2024, Capterra)
+- Cost still bites at small scale. An Administrator wrote, "cost is too expensive for small centers. We are not renewing ours." (June 17, 2024, Capterra)
 
-**Verdict:** A capable platform for hospitals with IT support. Not a practical option for a 25-bed CAH trying to implement quickly without technical resources.
+**Verdict:** The closest competitor to a small-hospital fit, and the only one whose own marketing is aimed at hospitals your size. Choose it if position-level coverage is enough for you and the desktop-only manager workflow is acceptable.
 
-**Cost:** Contact for pricing.
+**Cost:** $5 per staff member per month.
 
-### 4. [Aladtec](https://www.aladtec.com)
+## 3. SmartLinx
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/Smartlinx.webp" alt="SmartLinx workforce management scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec is a scheduling platform originally designed for EMS and fire services that has expanded to healthcare. Its scheduling engine can be configured to track charge qualifications, but this requires manual setup.
+SmartLinx is a workforce management platform covering scheduling, time and attendance, and payroll. Its own site sells to senior care: "Our platform is purpose-built for the senior care ecosystem."
 
-**Best for:** Organizations already using Aladtec for multi-department scheduling that want to extend it to nursing, with IT support to configure nursing-specific rules.
+**Best for:** Skilled nursing and assisted living operators who want scheduling and payroll in one system.
 
 **Key advantages:**
 
-- Shift categorization can be used to mark positions as requiring charge qualification.
-- Custom qualification fields allow charge designation to be tracked per employee.
-- Strong availability and time-off management features.
+- License and qualification checks are documented per role: "Built-in license and qualification checks confirm that any CNA, LPN, or RN assigned to a shift holds a current, valid credential for that role."
+- Callout handling is documented as filtered rather than broadcast to everyone: the system "identifies qualified, available staff" and notifies them to claim the shift.
+- Predictive alerts are documented for coverage gaps, which is more than most platforms in this list claim.
 
 **Key limitations:**
 
-- No native charge nurse coverage enforcement. The system does not automatically prevent a non-charge nurse from being assigned to a charge-designated shift without custom configuration.
-- FLSA 8-and-80 overtime calculation is not the default, requiring manual configuration for healthcare employers.
-- CMS documentation not included.
+- Their "Built for Your Operation" navigation lists Skilled Nursing, Assisted Living, Senior Living, Continuing Care, Healthcare Staffing, and Managed Service Providers. There is no hospital category, so ask for acute-care references before you commit.
+- A charge requirement is not documented, and their alerting language is "before they happen" rather than before the schedule publishes.
+- Implementation experiences vary sharply. A CFO wrote, "Implementation was much more complex that expected and end result still was full of errors on first payroll." (March 16, 2021, Capterra)
+- Their CMS reporting has drawn a specific complaint. An HR reviewer wrote, "Not the best at calculating PBJ for CMS - had some issues that cost money and star ratings." (September 27, 2019, Capterra)
 
-**Verdict:** Works for charge nurse scheduling if you have the time to configure it correctly. Not the right choice for a CAH that needs charge coverage enforcement ready at launch.
+**Verdict:** A reasonable fit for a senior care operator, a stretch for a hospital. The scheduling and payroll combination is the real draw.
 
-**Cost:** Contact for pricing.
+**Cost:** We found no published price on the pages cited below. Contact the vendor.
 
-### 5. [QGenda](https://www.qgenda.com)
+## 4. Aladtec
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/QGenda.webp" alt="QGenda scheduling software interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-QGenda is a provider scheduling platform with strong credential-based scheduling logic. It was built primarily for physician scheduling but includes nursing module capabilities.
+Aladtec is now part of TCP Software, and its site has moved: aladtec.com redirects to tcpsoftware.com. That move came with a repositioning worth noticing before you shortlist it.
 
-**Best for:** Hospitals that schedule physicians and nurses in the same platform and need credential-based assignment logic for both.
+**Best for:** Fire, EMS, and law enforcement agencies running 24/7 rotations, which is who the vendor now says it serves.
 
 **Key advantages:**
 
-- Sophisticated credential enforcement that can be configured for charge nurse designation.
-- Handles equitable distribution logic for rotations, including tracking charge-type assignments.
-- Supports complex on-call and float pool scheduling alongside standard shift scheduling.
+- Fill logic is genuinely history-aware, which is rarer than it sounds: shifts are filled "based on seniority, hours worked, last overtime shift, and more". That is real distribution logic over time, even though it tracks hours rather than shift type.
+- Qualification-based scheduling is documented, along with skills and certifications carrying expiration and renewal dates.
+- Minimum staffing is monitored: "Aladtec monitors minimum staffing levels and flags violations, so every shift has the right number of qualified staff."
+- Support draws praise. Jody S. wrote, "Their customer support team is better than any other support team I have ever had to deal with." (Security Management, August 14, 2025, Capterra)
 
 **Key limitations:**
 
-- Priced for health systems, not Critical Access Hospitals. Implementation cost and timeline reflect enterprise deployment.
-- The nursing module is an add-on to a physician-primary platform. For a hospital that only needs nursing scheduling, it is overbuilt and overpriced.
+- The current Aladtec pages carry no healthcare positioning at all. The product is described as "Public safety scheduling software built for 24/7 agencies" serving fire, EMS, law enforcement, and corrections.
+- Nothing charge-nurse specific is documented, and the callout workflow is built around emergency recall and overtime bidding rather than a nurse calling in sick.
+- Administrative setup takes effort. An Administrative Coordinator wrote, "It was a bit complicated to figure out from the administrator side." (May 7, 2019, Capterra)
+- Its hospital-nursing review history is thin and dated, so treat nursing-specific reassurance with care.
 
-**Verdict:** The right choice if your primary need is unified physician and nurse scheduling. Not the right choice for a CAH that only needs nursing schedule management.
+**Verdict:** Strong at what it now sells itself for, which is not hospital nursing. If your hospital also schedules an EMS service, that side of the house may be the better fit.
 
-**Cost:** Contact for pricing.
+**Cost:** We found no published price on the pages cited below. Contact the vendor.
 
-### 6. [OnShift](https://www.onshift.com) (now part of Workday)
+## 5. QGenda
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/Onshift.webp" alt="OnShift scheduling software interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/QGenda.webp" alt="QGenda provider scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-OnShift was built for long-term care and senior living. Its scheduling model assumes lower acuity staff and shift structures common in nursing homes, not acute care hospitals.
+QGenda's customer base skews toward physician groups and larger health systems, and that shows in which claims come with a described mechanism and which do not.
 
-**Best for:** Assisted living, skilled nursing facilities, and long-term care environments where charge nurse credential requirements are different from acute care.
+**Best for:** Hospitals and health systems that schedule physicians and nurses together and have someone to own the configuration.
 
 **Key advantages:**
 
-- User-friendly scheduling interface for long-term care workflows.
-- Strong broadcast messaging for open shift coverage.
+- Skills, preferences, hours worked, and work target status are visible system-wide to whoever is filling a shift.
+- Filling open shifts is documented as qualification-aware: QGenda "makes it simple to identify floaters and other internal resources who are qualified to work and send mobile notifications to fill open shifts before turning to premium labor options."
+- Float management across multiple units is a genuine strength if you have multiple units to float across.
 
 **Key limitations:**
 
-- Not designed for acute care charge nurse designation enforcement. The concept of a charge-qualified RN required on every shift is not built into OnShift's default logic.
-- No CMS CAH documentation.
-- Now part of Workday, adding enterprise complexity without CAH-appropriate support.
+- Their "Who We Serve" list runs from academic medical centers to health systems and private practices. No rural or small-hospital segment appears, and the framing throughout is enterprise: "across the enterprise", "system-wide".
+- Coverage gap detection is documented as intraday, meaning day-of adjustment, rather than a warning before you publish.
+- The equitable scheduling claim on the nurse page has no mechanism attached; the balanced-distribution mechanism is described on the physician page instead.
+- Setup is real work, and automation does not always survive it. Courtney D. wrote, "automated scheduling and rules set up seem to have hiccups...I just stopped using the automation." (Manager of Employee and Physician Relations, May 10, 2024, Capterra) Brandi D. noted, "Doing the initial set up of new providers is a little complicated." (Scheduling Coordinator, Hospital and Health Care, December 13, 2023, Capterra)
 
-**Verdict:** Not appropriate for CAH charge nurse scheduling. Designed for a fundamentally different care environment.
+**Verdict:** Capable, and aimed above your bed count. Worth it if physician scheduling is in scope and you have configuration help.
 
-**Cost:** Contact for pricing.
+**Cost:** We found no published price on the pages cited below. Contact the vendor.
 
-### 7. [Deputy](https://www.deputy.com)
+## 6. OnShift
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/Deputy.webp" alt="Deputy scheduling software interface" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/Onshift.webp" alt="OnShift workforce scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Deputy is a workforce management platform used primarily in hospitality, retail, and general shift work. It has expanded into healthcare but lacks clinical-specific scheduling logic.
+OnShift describes itself today as "a ShiftKey brand", following ShiftKey's acquisition and its announcement of complete integration in July 2023. The product still ships under the OnShift name.
 
-**Best for:** Retail, food service, and non-clinical healthcare environments (medical reception, housekeeping) where scheduling rules are simple.
+**Best for:** Long-term care and senior living operators, which is the market the vendor claims without qualification.
 
 **Key advantages:**
 
-- Simple, clean interface with fast onboarding.
-- Shift trades and availability requests work well for non-clinical shift workers.
+- Understaffing and overstaffing detection is documented, along with recommended replacements.
+- Credential expiry is handled at scheduling time, to "avoid scheduling employees with expired credentials (and associated fines)".
+- The ShiftKey marketplace connection gives access to outside workers when internal coverage runs out.
 
 **Key limitations:**
 
-- No charge nurse designation logic. Deputy treats all workers in a role as interchangeable.
-- No credential enforcement, healthcare-specific overtime rules, or CMS documentation.
-- Per-user pricing scales cost at small hospitals where all 25 staff would each need a seat.
+- The positioning is explicit and it is not yours: "the only workforce management software made exclusively for long-term, post-acute and senior care".
+- Replacement recommendations are documented as based on "work history, availability, and cost". Qualification does not appear in that list, which is the opposite of what a charge gap needs.
+- A charge or role requirement on a shift is not documented, and neither is any tracking of who has worked a shift type over time.
+- No pricing is published anywhere on the site, and their pricing URL returns a 404.
 
-**Verdict:** Wrong tool for charge nurse scheduling at a hospital. Deputy solves a different problem.
+**Verdict:** Built for a different building. Worth a look only if your hospital also operates a skilled nursing or senior living facility.
 
-**Cost:** From approximately $5/user/month.
+**Cost:** Not published, and no pricing page exists.
 
-### 8. [UKG (formerly Kronos)](https://www.ukg.com)
+## 7. Deputy
 
-<img src="/images/blog/best-charge-nurse-scheduling-software/UKG.webp" alt="UKG scheduling software interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/best-charge-nurse-scheduling-software/Deputy.webp" alt="Deputy employee scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-UKG is an enterprise workforce management suite deployed at large health systems. It has comprehensive charge nurse credential tracking and coverage enforcement capabilities. It also has enterprise implementation timelines and pricing.
+Deputy is a general workforce scheduling platform used across retail, hospitality, healthcare, and other sectors. Healthcare is one vertical among several rather than the whole product.
 
-**Best for:** Large hospital systems (500+ staff) with dedicated HR, IT, and scheduling departments.
+**Best for:** Organizations that want straightforward shift scheduling and timekeeping across a mixed hourly workforce.
 
 **Key advantages:**
 
-- Full credential tracking, charge designation enforcement, and equitable distribution reporting.
-- Complete time and attendance integration with payroll.
-- Detailed compliance reporting built for Joint Commission and CMS audit readiness.
+- Qualifications and certifications are documented as scheduling constraints: the product page names "break compliance, qualifications, fatigue limits, and even pay rules" as guardrails managers work inside.
+- Replacement offers go to filtered candidates: the app will "serve up suitable employees who are available, qualified, and cost-efficient".
+- Auto-scheduling can optimize for "equal spread of hours", which is genuine fairness logic even though it works on hours rather than shift type.
+- Reviewers find it easy. Portia A., a nurse, wrote, "Deputy makes scheduling very easy and organised." (Hospital and Health Care, April 8, 2026, Capterra)
 
 **Key limitations:**
 
-- Implementation takes months and requires dedicated IT resources.
-- Enterprise pricing makes it economically impractical for a 25-bed hospital.
-- The complexity built for 3,000-employee health systems adds overhead that serves no purpose at a 25-nurse CAH.
+- A charge or role requirement on a shift is not documented, and neither is a coverage warning before publishing. Their "know the cost before you publish" line refers to labor cost, not coverage.
+- Their healthcare page does not document HIPAA, a business associate agreement, CMS audit-trail support, or the FLSA overtime handling a hospital needs. Confirm all of it with the vendor.
+- Contract terms have drawn complaints. A reviewer named Paul described being charged in a way that "presents exactly like a normal monthly subscription", with no clear point where a fixed 12 month commitment was made obvious. (Australia, April 8, 2026, Trustpilot)
+- The same nurse quoted above also reported performance trouble: "Sometimes the app can be a bit slow or glitchy, especially when trying to load shifts." (Portia A., April 8, 2026, Capterra)
 
-**Verdict:** Everything a large system needs. Everything a CAH does not need, at a price that reflects the mismatch.
+**Verdict:** Good general scheduling, not a clinical scheduling tool. The compliance gaps are the reason to be careful, not the price.
 
-**Cost:** Enterprise pricing. Contact for quote.
+**Cost:** Published. Lite is $5 per user per month, Core $6.50, Pro $9, with a $30 minimum monthly spend. Healthcare features sit in the higher tiers, so price the tier you would actually need.
 
-## Charge Nurse Scheduling Capability vs. Complexity: Which Is Better?
+## 8. UKG
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" role="img" aria-label="Scatter plot comparing charge nurse scheduling capability vs implementation complexity">
-  <title>Charge Nurse Scheduling: Capability vs. Implementation Complexity</title>
-  <rect width="720" height="400" fill="#f8fafc" rx="10"/>
-  <text x="360" y="28" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">Charge Nurse Scheduling Capability vs. Implementation Complexity</text>
-  <!-- Axes -->
-  <line x1="80" y1="340" x2="660" y2="340" stroke="#94a3b8" stroke-width="1.5"/>
-  <line x1="80" y1="60" x2="80" y2="340" stroke="#94a3b8" stroke-width="1.5"/>
-  <!-- Axis labels -->
-  <text x="370" y="378" font-family="system-ui,sans-serif" font-size="13" fill="#64748b" text-anchor="middle">Implementation Complexity (Low to High)</text>
-  <text x="22" y="200" font-family="system-ui,sans-serif" font-size="13" fill="#64748b" text-anchor="middle" transform="rotate(-90,22,200)">Charge Scheduling Capability</text>
-  <!-- Grid -->
-  <line x1="80" y1="220" x2="660" y2="220" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="80" y1="140" x2="660" y2="140" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="370" y1="60" x2="370" y2="340" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="225" y1="60" x2="225" y2="340" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="515" y1="60" x2="515" y2="340" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
-  <!-- Quadrant labels -->
-  <text x="152" y="90" font-family="system-ui,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Low complexity,</text>
-  <text x="152" y="102" font-family="system-ui,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">high capability</text>
-  <text x="152" y="114" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#16a34a" text-anchor="middle">(Ideal for CAH)</text>
-  <!-- Points -->
-  <!-- SimpleScheduleAI: low complexity, high capability -->
-  <circle cx="140" cy="80" r="14" fill="#1e40af" opacity="0.9"/>
-  <text x="140" y="84" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">SSA</text>
-  <text x="140" y="62" font-family="system-ui,sans-serif" font-size="10" fill="#1e40af" text-anchor="middle" font-weight="600">SimpleScheduleAI</text>
-  <!-- NurseGrid: low-medium complexity, medium capability -->
-  <circle cx="200" cy="210" r="12" fill="#0891b2" opacity="0.9"/>
-  <text x="200" y="214" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">NG</text>
-  <text x="200" y="236" font-family="system-ui,sans-serif" font-size="10" fill="#0891b2" text-anchor="middle">NurseGrid</text>
-  <!-- Aladtec: medium complexity, medium-low capability -->
-  <circle cx="340" cy="250" r="12" fill="#7c3aed" opacity="0.9"/>
-  <text x="340" y="254" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">AL</text>
-  <text x="340" y="238" font-family="system-ui,sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">Aladtec</text>
-  <!-- SmartLinx: high complexity, high capability -->
-  <circle cx="510" cy="110" r="12" fill="#ea580c" opacity="0.9"/>
-  <text x="510" y="114" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">SL</text>
-  <text x="510" y="98" font-family="system-ui,sans-serif" font-size="10" fill="#ea580c" text-anchor="middle">SmartLinx</text>
-  <!-- QGenda: high complexity, high capability -->
-  <circle cx="560" cy="90" r="12" fill="#b91c1c" opacity="0.9"/>
-  <text x="560" y="94" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">QG</text>
-  <text x="560" y="78" font-family="system-ui,sans-serif" font-size="10" fill="#b91c1c" text-anchor="middle">QGenda</text>
-  <!-- OnShift: medium complexity, low capability for acute -->
-  <circle cx="310" cy="305" r="12" fill="#6b7280" opacity="0.9"/>
-  <text x="310" y="309" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">OS</text>
-  <text x="310" y="293" font-family="system-ui,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">OnShift</text>
-  <!-- Deputy: low complexity, low capability -->
-  <circle cx="170" cy="315" r="12" fill="#64748b" opacity="0.9"/>
-  <text x="170" y="319" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">DP</text>
-  <text x="170" y="303" font-family="system-ui,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Deputy</text>
-  <!-- UKG: very high complexity, very high capability -->
-  <circle cx="620" cy="75" r="12" fill="#374151" opacity="0.9"/>
-  <text x="620" y="79" font-family="system-ui,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="700">UKG</text>
-  <text x="620" y="63" font-family="system-ui,sans-serif" font-size="10" fill="#374151" text-anchor="middle">UKG</text>
-  <!-- Ideal zone -->
-  <rect x="82" y="62" width="145" height="145" fill="#dcfce7" opacity="0.3" rx="6"/>
-  <text x="154" y="132" font-family="system-ui,sans-serif" font-size="10" fill="#16a34a" text-anchor="middle">CAH ideal zone</text>
-</svg>
+<img src="/images/blog/best-charge-nurse-scheduling-software/UKG.webp" alt="UKG workforce management scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-The scatter above illustrates the core tradeoff for CAH charge nurse scheduling. High-capability platforms (SmartLinx, QGenda, UKG) require high implementation complexity. Low-complexity platforms (Deputy, NurseGrid) have limited charge-specific capability. SimpleScheduleAI lands in the upper-left quadrant because the managed service model shifts implementation complexity to the vendor. The nurse manager does not configure charge designation enforcement. It arrives configured.
+UKG, formerly Kronos, is the enterprise end of this market. It states that it has "partnered with more than 3,500 hospitals and 10,000 post acute care facilities".
 
-## What to Do This Week?
+**Best for:** Hospital systems with a dedicated IT function and staff who own workforce configuration.
 
-1. **Audit your current charge coverage gaps.** Pull the last 4 weeks of published schedules and count how many shifts went live without a charge-designated nurse assigned. If your scheduling system cannot show you this number, that is itself the problem.
+**Key advantages:**
 
-2. **Count your charge-qualified nurses and check the distribution.** How many are signed off, and how evenly did charge duty fall across them last quarter? If two names carry most of it, that is your coverage risk and your retention risk in one number.
+- Skills and certifications are enforced at scheduling time: assigning and tracking them "allows managers to ensure that the right employee for a job or shift is in place when and where they are needed."
+- Coverage is visible by job, with undercoverage flagged directly in the staffing dashboard: "A red downward-pointing arrow in the cell indicates Undercoverage."
+- The Call List shows which employees are "qualified to fill an open shift", which is the closest documented equivalent to a qualification-aware replacement list among the large vendors.
+- Nurse-patient ratios and licensure requirements can be enforced automatically through their clinical scheduling add-on.
 
-3. **Map your charge-qualified nurses and their recent charge hour counts.** If you find that 2-3 nurses are carrying 70%+ of charge hours while 2-3 other qualified nurses carry very few, you have an equity problem that manual scheduling is not solving. That is an automated distribution problem.
+**Key limitations:**
 
-4. **Ask your current scheduling vendor whether charge designation is enforced at the shift level or just tracked as a tag.** The distinction matters. Tracking means you can see who is charge-qualified. Enforcement means the system prevents a non-qualified nurse from filling a charge-designated shift without a manual override.
+- The clinical capability is an add-on to an add-on: clinical scheduling extensions work "when combined with UKG Advanced Scheduler". Confirm exactly which products a quote includes.
+- Every healthcare customer named on their own pages is a large system, including Geisinger, Bon Secours Mercy Health, and Billings Clinic. There are no small-hospital references to ask for.
+- Reporting takes expertise. Felicia W. wrote that "trying to build a custom report on your own is very complicated if not impossible." (Payroll Consultant, Automotive, April 8, 2026, Capterra)
+- Complexity is a running theme even among administrative power users. Swaminathan S. wrote, "Some areas of the platform can be complex for new users, and certain reports or customizations may require additional training or administrative expertise." (HR Assistant, Hospitality, June 18, 2026, Capterra) Note that both reviewers work outside healthcare, so read them as evidence about the platform's complexity rather than about nursing workflows.
 
-5. **If you are on spreadsheets,** add a "charge-qualified" column to your staff roster now and note how many nurses qualify. If the number is 4 or fewer, charge coverage should be a scheduling constraint, not an afterthought.
+**Verdict:** The most capable platform here on paper, and the least suited to a hospital without IT staff to run it.
+
+**Cost:** We found no published price on the pages cited below. Contact the vendor.
+
+## Which One Fits Your Hospital?
+
+If you run 25 beds or fewer in Texas and charge coverage is the recurring failure, we built SimpleScheduleAI for exactly that, and the [service is described in full here](/how-it-works). Our wider roundup of [scheduling software for critical access hospitals](/blog/best-nurse-scheduling-software-critical-access-hospitals) covers the same vendors on the broader criteria. If you want a tool you operate yourself at a published price, NurseGrid Manager is the honest recommendation, with the caveat that its requirements work at position level rather than charge level.
+
+If you also operate skilled nursing or senior living beds, SmartLinx and OnShift are built for that side and worth evaluating there. If you schedule physicians alongside nurses and have configuration help, QGenda earns its look. If you have an IT department, UKG will do more than any of them. If your hospital also runs an EMS service, Aladtec is strong at that job even though it no longer sells itself to healthcare.
+
+Deputy is the one to approach most carefully for clinical use. It schedules people well, and a hospital needs more than that from the system holding its coverage record.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Charge coverage is where scheduling software gets graded, and almost nobody grades it. Five of the seven competitors here document requirements by license type or qualification, which is the easy half of the problem, because an RN requirement is satisfied by any RN. The list of nurses you would actually trust to run a Saturday night is shorter than your RN list, and no product page we read acknowledges that gap. When you take a demo, do not ask whether the tool supports charge nurses. Ask them to show you what happens when the charge nurse calls out and the only free RN has never held charge.
+  </p>
+</div>
+
+## What to Do This Week
+
+1. Write down who on your roster is charge-qualified today, and when each of them last ran a shift as charge. If that takes more than ten minutes to reconstruct, or the answer lives in [a spreadsheet only you understand](/blog/nurse-scheduling-software-vs-excel), the list is not really written down anywhere.
+2. Count charge shifts per nurse over your last four weeks. If two or three names carry most of them, you have a retention problem forming, not a scheduling preference.
+3. Take last month's posted schedule and check every shift against your own charge policy. Note the ones that were covered by whoever happened to be there.
+4. On every vendor demo, ask the 5 a.m. question: my charge nurse just called out, show me the screen I would be looking at.
+5. If the honest answer is that your charge coverage depends on one person remembering, that is the gap our [critical access hospital scheduling](/critical-access-hospital-scheduling) service is built to close, and our [AI nurse scheduling](/ai-nurse-scheduling) overview explains how the draft gets built before anyone reviews it.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-default mb-2">Get Charge Coverage Right on Every Shift</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI enforces charge nurse designation automatically, distributes charge hours equitably across your qualified bench, and flags coverage gaps before the schedule publishes. No configuration. No manual auditing.</p>
-  <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
+  <p class="text-lg font-semibold text-default mb-2">Charge covered on every shift, before you see the draft</p>
+  <p class="text-muted text-sm mb-6">Charge qualification is one of 13 rules every draft has to satisfy. Onboarding takes 3 to 5 business days and your first schedule lands inside two weeks.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
+
+## Sources
+
+[1] Critical access hospital Conditions of Participation: staffing at [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), provision of services at [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[2] Texas hospital licensing, nursing services: 26 Texas Administrative Code § 505.41(o). [Cornell LII](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41). Verified 2026-08-19.
+
+[3] NurseGrid Manager positioning, pricing, and coverage-requirement documentation. [nursegrid.com](https://nursegrid.com/for-organizations/nursegrid-manager/) and the NurseGrid Manager help center. Verified 2026-08-25.
+
+[4] SmartLinx scheduling and analytics pages. [smartlinx.com](https://www.smartlinx.com/solutions/scheduling/). Verified 2026-08-25.
+
+[5] Aladtec product pages, now hosted by TCP Software. [tcpsoftware.com](https://tcpsoftware.com/products/aladtec/). Verified 2026-08-25.
+
+[6] QGenda nurse and staff scheduling pages. [qgenda.com](https://www.qgenda.com/nurse-and-staff-scheduling-software/). Verified 2026-08-25.
+
+[7] OnShift company and scheduling pages. [onshift.com](https://www.onshift.com/company/about-us). ShiftKey integration announcement, July 12, 2023. [shiftkey.com](https://www.shiftkey.com/resources/news/shiftkey-fully-integrates-onshift). Verified 2026-08-25.
+
+[8] Deputy scheduling, shift swapping, and healthcare pages. [deputy.com](https://www.deputy.com/features/scheduling-software). Verified 2026-08-25.
+
+[9] UKG healthcare, scheduling, and clinical scheduling pages, plus UKG Pro WFM documentation. [ukg.com](https://www.ukg.com/industry-solutions/healthcare) and [library.ukg.com](https://library.ukg.com). Verified 2026-08-25.
+
+[10] Reviewer quotes are verbatim from Capterra product pages and, where noted, Trustpilot, with the reviewer role and date as displayed on the review. They were collected across verification passes between 2026-04-30 and 2026-08-25; the oldest, on Deputy and QGenda, are past a year from posting and should be re-checked before being relied on.
+
+[11] Deputy pricing page, plan rates and minimum monthly spend. [deputy.com](https://www.deputy.com/pricing). Verified 2026-08-25.
 
 ## Frequently Asked Questions
 
-**Is NurseGrid Manager or SmartLinx better for charge nurse scheduling at a small hospital?**
+**Q: Does any regulation require a charge nurse on every shift?**
+No federal regulation does. The critical access hospital rules require a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever there is an inpatient, under 42 CFR 485.631(a)(5). Texas licensing requires an RN on duty in each building with a nursing unit where patients are present. Charge designation itself is hospital policy, which is why your schedule is the record that shows the policy was kept.
 
-For a hospital with IT support, SmartLinx is more capable for charge nurse scheduling because it supports configurable credential enforcement and distribution rules. NurseGrid is easier to implement but requires the nurse manager to manually verify charge coverage when reviewing the schedule. For most CAH nurse managers without dedicated IT, NurseGrid is more practical even though SmartLinx has stronger charge-specific logic.
+**Q: What is the cheapest charge nurse scheduling option for a small hospital?**
+NurseGrid Manager publishes the lowest entry price of the platforms here, at $5 per staff member per month, which is $125 a month for a 25-nurse roster. Most others do not publish pricing at all. Compare on total cost rather than headline rate, including who configures the rules and who maintains them after go-live.
 
-**Can Aladtec enforce charge nurse coverage requirements?**
+**Q: Can a general scheduling tool handle charge nurse coverage?**
+It can record it. Whether it enforces it is the question to ask on the demo. General tools like Deputy document qualifications as a constraint, but none of the general platforms we reviewed documents a charge-specific requirement on a shift, and none documents a warning before you publish a schedule with a charge gap.
 
-Aladtec can be configured to mark certain shifts as requiring specific qualifications, which can be used to flag charge nurse requirements. However, this configuration must be set up manually, and Aladtec does not natively prevent a non-qualified nurse from being scheduled to a charge-designated shift without a warning. For hospitals with the IT resources to configure and maintain this setup, it can work. For a CAH nurse manager doing configuration themselves, it is difficult to sustain.
+**Q: How do I stop the same two nurses taking every charge shift?**
+Count it, then act on the count. None of the platforms here, including ours, documents charge-hour tracking per nurse across cycles, so this is a manual review most hospitals have to run themselves. Pull charge shifts by nurse for the last four weeks each cycle. If two people carry most of them, the fix is either widening the qualified group or capping how often the same names get asked.
 
-**How many charge nurses does a typical 25-bed CAH need to maintain coverage?**
-
-A 25-bed CAH running three shifts per day requires at minimum one charge-qualified nurse per shift. To maintain that without creating excessive charge hours for any individual (charge nurses typically earn a charge differential and may have higher fatigue), you generally need 5-6 charge-qualified nurses. This allows for adequate rotation, time off, and a callout buffer without burning out 2 nurses who carry most of the charge burden.
-
-**What is the difference between tracking charge designation and enforcing it?**
-
-Tracking means the scheduling software records which nurses are charge-qualified and can display that information on a roster. Enforcement means the software prevents or alerts when a shift requiring charge coverage would be filled by a non-charge nurse. Most general-purpose scheduling tools only track. Enforcement is the feature that actually prevents coverage gaps from appearing in published schedules.
-
-**Does UKG handle charge nurse scheduling better than SimpleScheduleAI?**
-
-UKG has more advanced charge scheduling capabilities than SimpleScheduleAI in terms of raw configurability for large systems. For a 25-bed CAH, UKG is overbuilt by orders of magnitude. Implementation takes months and requires dedicated IT. The charge scheduling features that matter for a CAH (designation enforcement, equitable distribution, callout ranking) are fully covered by SimpleScheduleAI at a fraction of the complexity and cost.
+---
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

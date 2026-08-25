@@ -116,6 +116,8 @@ Two things matter here. Weekend charge shifts get filled first. They fall at the
 
 One thing decides whether this fits you. **We are not right for a hospital that wants a vendor to judge who should hold charge.** We do not assess competency, track charge nurse training, or certify anyone. Your roster tells us who is cleared, so an out-of-date list produces a confidently wrong schedule.
 
+If you are comparing tools rather than services, our guide to [charge nurse scheduling software](/blog/best-charge-nurse-scheduling-software) reviews eight platforms on what each one documents about charge coverage.
+
 Watch the AI build a week with charge coverage in the [interactive simulator](/simulator), or see [how AI nurse scheduling works](/ai-nurse-scheduling) and [nurse scheduling software](/nurse-scheduling-software).
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">

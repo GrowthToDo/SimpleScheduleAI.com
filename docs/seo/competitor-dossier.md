@@ -267,6 +267,15 @@ not have" in prose; the approved wording is "not documented on product pages as 
   is a CUSTOMER TESTIMONIAL (Catarina Buffalino, Director of Ultrasound Department,
   Zwanger-Pesiri Radiology), not Deputy feature copy. Never cite it as a documented capability.
 
+**PRICING IS PUBLISHED (verified 2026-08-25, deputy.com/pricing).** Verbatim plan rates: Lite
+"$5 per user per month", Core "$6.50 per user per month", Pro "$9 per user per month", all "(USD
+excl. all applicable taxes)". Add-ons priced separately (Payroll $8, HR $2, Messaging+ $1.95,
+Analytics+ $1.50 per user per month). Minimum monthly spend USD $30 per invoice on monthly plans,
+effective September 1, 2025. **Never write that Deputy does not publish pricing** — a draft claimed
+"Not published on the pages we checked", which is refutable in one click. Note also that an older
+draft's unsourced "from ~$5/user/mo" happened to land near the Lite tier; it was still an invented
+figure at the time and the correct fix was sourcing it, not keeping it.
+
 ### Verified Reviewer Quotes
 
 **Positive (hospital nurse):**
