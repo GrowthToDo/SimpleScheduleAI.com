@@ -79,8 +79,45 @@ Do not re-park Capterra work as a manual founder task.
 
 ## Aladtec (TCP Scheduling)
 
-**Product:** Self-serve scheduling platform. Public safety, EMS, fire, law enforcement, and small
-healthcare. Parent company: TCP Software (acquired Aladtec 2021).
+**Product:** Self-serve scheduling platform. Parent company: TCP Software (acquired Aladtec 2021).
+
+**DOMAIN MOVED, verified 2026-08-25.** `aladtec.com` now 308-redirects to
+`tcpsoftware.com/products/aladtec/`, and `blog.aladtec.com` is retired (301s to the same product
+page). **The old Aladtec blog posts that still surface in search snippets cannot be retrieved and
+must not be quoted** (e.g. "Announcing Minimum Staffing Requirements", "Daily Staffing
+Requirements now an option in Aladtec"). Cite `tcpsoftware.com/products/aladtec/*` only.
+
+### Charge-scheduling capability, from Aladtec's own pages (verified 2026-08-25)
+
+Original product-page research pass. **The headline finding upgrades the reviewer-skew caveat
+below:** the live Aladtec pages carry **no healthcare positioning at all**.
+
+- **Positioning — public safety only.** Verbatim: "Public safety scheduling software built for
+  24/7 agencies"; "Aladtec scheduling software helps fire, EMS, law enforcement, and corrections
+  agencies ensure shift coverage, comply with union and labor rules, and retain employees."
+  Page title: "24/7 Public Safety Employee Scheduling Software | Aladtec"
+  (tcpsoftware.com/products/aladtec/). TCP's parent-level "Who we help" nav does list Healthcare,
+  but that is TCP Software platform-wide, **not an Aladtec claim**. So the honest statement is no
+  longer only "reviewers skew public safety" — the vendor's own current Aladtec positioning
+  contains no healthcare claim.
+- **Role/qualification designation — DOCUMENTED, in public-safety framing.** Verbatim: "Build
+  schedules based on qualifications and availability"; "Aladtec makes it easy to build complaint
+  [sic], flexible schedules with the right mix of qualified staff and resources to meet the demands
+  of every shift" (rotational-scheduling page). Skills and certifications with expiration and
+  renewal dates are on the compliance page. No charge-nurse concept anywhere.
+- **Coverage-gap alerting — DOCUMENTED for minimum staffing; timing vs publish NOT stated.**
+  Verbatim: "Aladtec monitors minimum staffing levels and flags violations, so every shift has the
+  right number of qualified staff" (tcpsoftware.com/products/aladtec/compliance/, verified twice).
+  Do not upgrade this into a pre-publish gate.
+- **Equity over time — DOCUMENTED on hours/overtime/seniority, NOT on shift type.** This is the
+  strongest distribution-over-time evidence of any vendor researched. Verbatim: "Fill shifts based
+  on seniority, hours worked, last overtime shift, and more"; section heading "Fill open shifts
+  fast and fairly" (rotational-scheduling page). It does NOT document tracking how often someone
+  works charge, weekends, nights or holidays.
+- **Callout replacement — DOCUMENTED, closest to ranked-and-qualified of the seven vendors.** Same
+  "seniority, hours worked, last overtime shift" ordering, plus "See who's available and qualified
+  to respond to emergencies". Caveat: the framing is emergency recall and overtime bidding for
+  public safety, not a nurse sick-call workflow.
 
 **Ratings (verified 2026-07-15):**
 
@@ -485,6 +522,48 @@ No third-party review quotes collected; not applicable in the usual sense (Micro
 **Product:** Nurse-facing scheduling app with manager tier. Mobile schedule viewing, availability,
 shift trades. Manager tier extends to unit-level oversight. Owned by HealthStream.
 
+### Charge-scheduling capability, from NurseGrid's own docs (verified 2026-08-25)
+
+Original product-page research pass. **NurseGrid is the only one of the seven vendors with a
+PUBLIC product help center** (`healthstreamhelp.mcoutput.com/nursegridmanager/`, last updated
+2025-09-09), so it is documented at a mechanical level the others are not. When comparing, say so:
+silence elsewhere is missing documentation, not a proven missing feature.
+
+- **PUBLISHED PRICING, and it corrects a standing gap.** Verbatim: "$5 per month, per staff member.
+  Got 25 staff? That's $125/month. Easy math." and "For teams of 2 to 250"
+  (nursegrid.com/for-organizations/nursegrid-manager/). **Never write "Contact for pricing" for
+  NurseGrid Manager again** — a draft did, and it is wrong. (The older GTM note below, "no
+  published pricing, all funnels to demo", described the enterprise funnel and is superseded for
+  the Manager tier.)
+- **Positioning NAMES critical access hospitals**, the only vendor of the seven that does.
+  Verbatim: "Usually teams with 250 staff or fewer. Think critical access hospitals, hospital
+  departments, surgery centers, clinics, and more." (same URL)
+- **Role designation — DOCUMENTED per POSITION; charge is a counted row, not a settable
+  requirement.** Verbatim: "You can set coverage requirements per position and day of week for all
+  of your shift types"; "if you set only an RN coverage requirement for Day shifts, no LPNs or CNAs
+  would be able to sign up for that Day shift in self-scheduling"
+  (help center, Schedule_Requirements). On charge specifically the docs describe only counting:
+  "for charge shifts, staff will be counted once in their position row and once in their Charge
+  row" (Balancing_and_Publishing_a_Draft_Schedule).
+- **Pre-publish coverage-gap alert — DOCUMENTED, and explicitly pre-publish. THIS CORRECTS A DRAFT
+  CLAIM THAT SAID THE OPPOSITE.** Verbatim: "If there is a coverage requirement for a position, the
+  system will display a fraction, which indicates the number of staff assigned versus the number
+  needed"; "If your coverage requirement is not met, the cell will be red with a dog-ear appearing
+  in the lower right corner." The topic is titled "Balancing and Publishing a Draft Schedule" and
+  publishing is the later step. A draft asserted "No pre-publish coverage alerts for missing charge
+  nurses" — false as to coverage alerting generally; the true and narrower point is that the
+  requirement is per POSITION, not per charge qualification.
+- **Documented limitation, in the vendor's own words:** "Coverage requirements currently do not
+  appear elsewhere in the app and do not automatically create or approve open shift requests."
+  (Schedule_Requirements)
+- **Equity over time — NOT DOCUMENTED.** The running count is within one scheduling period, per
+  position, per day. The only reporting topic in the whole Manager help TOC is "Exporting
+  Schedules".
+- **Callout replacement — DOCUMENTED as availability-filtered, NOT qualification-ranked.** Verbatim:
+  "Eligible employees are listed on the Not Working and Available to Work tabs"
+  (Filling_Open_Shifts). Call-off handling is manual: "If a staff member calls in sick, you can
+  record their call-off."
+
 **Ratings (verified 2026-07-15):**
 
 - G2: 4.6/5 (5 reviews; small sample) — search-indicated
@@ -585,6 +664,38 @@ comes at no additional cost for facilities using the ShiftKey and/or OnShift pla
 **Product:** Provider scheduling platform. Physician scheduling, on-call management,
 credentialing, time tracking, analytics. Customer base skews toward physician group practices
 and larger health systems.
+
+### Charge-scheduling capability, from QGenda's own pages (verified 2026-08-25)
+
+Original product-page research pass. `support.qgenda.com` is login-gated, so marketing pages are
+the only available evidence; absence of documentation is not evidence of absence of capability.
+Canonical: `/solutions/nurse-and-staff-scheduling/` 301s to `/nurse-and-staff-scheduling-software/`.
+
+- **Positioning — enterprise acute; NO CAH, rural, or small-hospital segment anywhere.** Their "Who
+  We Serve" nav: Academic Medical Centers, Federal, Hospitals & Health Systems, International,
+  National Practice Groups, Private Practices. Repeated framing: "across the enterprise",
+  "system-wide", "a single instance of QGenda".
+- **Role/charge designation — NOT DOCUMENTED as a requirement; skills VISIBILITY only.** Verbatim:
+  "system-wide visibility into available staff, along with skills, preferences, hours worked, and
+  work target status" (/for-nurses/); "Visibility into the entire nurse workforce makes it easy to
+  move qualified resources where they're needed most." **Do NOT convert** the generic "rules-driven"
+  or "the right providers, with the right skills, are in the right place at the right time" into a
+  documented charge-qualification capability.
+- **Coverage-gap alerting — DOCUMENTED as INTRADAY, not pre-publish.** Verbatim: "Instantly
+  determine over/understaffed units and manage intraday adjustments with ease." (/for-nurses/).
+  The only "staffing gaps" language on the nurse page sits inside a CUSTOMER QUOTE (Becky Mitchell,
+  CNIO, WVU Medicine), so it is not usable as vendor documentation.
+- **Equity over time — PARTIAL, and the split matters.** The nurse page claims the outcome without a
+  mechanism: "Create flexible, equitable schedules that support work-life balance". The mechanism
+  is stated only on the PROVIDER page: "Intelligent automation and predictive technology creates
+  fair, cost-effective schedules ... taking into account balanced distribution, clinical/service
+  targets, and provider preferences" (/physician-scheduling-software/). Tracked inputs named on the
+  nurse side are "hours worked, and work target status" — hours-based targets, not shift-type
+  frequency.
+- **Callout replacement — DOCUMENTED as qualification-filtered, not ranked, not callout-specific.**
+  Verbatim: "QGenda makes it simple to identify floaters and other internal resources who are
+  qualified to work and send mobile notifications to fill open shifts before turning to premium
+  labor options."
 
 **Ratings (verified 2026-07-15):**
 
@@ -883,6 +994,34 @@ _(Note: some vendor copy contains em-dashes; reproduce only inside quoted vendor
 **Product:** Workforce management platform for mid-size healthcare. Documented focus: long-term
 care, post-acute care, senior care, behavioral health. 50-200 bed range. Requires dedicated
 scheduling administrator and IT support for implementation.
+
+### Charge-scheduling capability, from SmartLinx's own pages (verified 2026-08-25)
+
+Original product-page research pass. Canonical URL note: `/products/scheduling/` 301s to
+`/solutions/scheduling/`; cite the `/solutions/` form. No public help center exists, so absence of
+documentation is not evidence of absence of capability.
+
+- **Positioning — senior care, and their own navigation has NO hospital category.** Verbatim: H1
+  "Smarter Employee Scheduling Software for Senior Care Teams"; "We know scheduling in assisted
+  living and skilled nursing isn't easy."; "Our platform is purpose-built for the senior care
+  ecosystem." Their "Built for Your Operation" nav lists exactly: Skilled Nursing, Assisted Living,
+  Senior Living, Continuing Care, Healthcare Staffing, Managed Service Providers. This corroborates
+  the existing "ask for hospital-acute reference customers" caveat with vendor-own evidence.
+- **Role designation — DOCUMENTED at license level (CNA/LPN/RN); charge NOT documented.** Verbatim:
+  "built-in license and qualification checks helps you make sure you keep your shifts covered by
+  qualified CNAs, LPNs and RNs"; FAQ: "Built-in license and qualification checks confirm that any
+  CNA, LPN, or RN assigned to a shift holds a current, valid credential for that role."
+- **Coverage-gap alerting — DOCUMENTED as predictive; "before publish" NOT stated.** Verbatim:
+  "Predictive scheduling with alerts helps you spot potential coverage gaps before they happen".
+  Their FAQ line about flagging "as schedules are built and adjusted" is scoped to **overtime and
+  conflicts**, not missing roles. Do not upgrade "before they happen" into "before publish".
+- **Equity over time — NOT DOCUMENTED.** The analytics page enumerates what is tracked and shift-type
+  equity is not in it: "scheduled versus worked hours, overtime trends, staffing levels, labor
+  costs, and shift coverage" (/solutions/workforce-analytics/). The only "fairly" on the scheduling
+  page is about pay rates, not shift distribution.
+- **Callout replacement — DOCUMENTED as qualification-filtered, broadcast-to-claim, NOT ranked.**
+  Verbatim: "When a call-out happens, the system identifies qualified, available staff with the
+  ability to send a notification directly to their phone, so they can claim the open shift".
 
 **Ratings (re-verified live 2026-08-14):**
 
@@ -1212,6 +1351,7 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 | 2026-08-10 | First full competitor-watch run (new `npm run competitor-watch`, 17 pages baselined). Added August update blocks to M7 Health and In-House Health. M7: homepage category label changed to "The AI-powered workforce operations platform for healthcare"; new `/roi-calculator` (bed-count sizing) and `/implementation` (four-week rollout, "IT team's role is minimal"); customer wall expanded to ~17 additional small rural/community hospitals via Lifepoint/ScionHealth (bed counts UNVERIFIED — the no-standalone-CAH-customer line still stands); SEO footprint is 24-of-25 branded/Ochsner navigational; 101 referring domains are job boards + VCs + aggregators with 47 on the bare homepage and one backlink on their best content page. In-House Health: homepage rewritten to "Restore Sustainability to Nursing" with four vendor metrics ($270K/unit/yr, 5.5H/user/wk, 31%, 4 weeks), `/skilled-nursing` segment page added, ~35-post content library + `/case-studies/the-center-at-lowry`, most-cited modern rival in the 2026-08-09 LLM autopsy; "$15M raised" secondary figure UNVERIFIED, do not cite. Neither publishes pricing (both `/pricing` URLs 404, now held as sentinels). Full analysis: `docs/seo/competitor-intel-2026-08.md`. | Claude |
 | 2026-08-09 | ShiftWizard G2 Pricing Insights PAGE-VERIFIED via founder screenshot: Time to Implement 3 months, ROI 3 months, avg discount 8% (G2: averages from real user reviews); G2 rating 4.3/5, 405 reviews. Review-mining verification sweep now 5/5 COMPLETE — topics 1 and 2 of next-15 fully armed. | Founder + Claude |
 | 2026-08-09 | PAGE-VERIFIED 4 of the 5 review-mining quote candidates via Playwright (real-browser pass beat the HTTP 403s): NurseGrid "Please Bring back the mobile app" = Nika S., Inpatient Director, Jun 17 2024 (same reviewer as the Android quote, name now known); QGenda pricing + hidden-costs + talk-to-3-people support quotes = Wilmer R., Practice Administrator, Mar 19 2026; ShiftWizard "website is slow and takes forever" = Jacob G., RN, Jul 18 2024, 1-star "Terrible system"; Deputy 12-month lock-in ($57/$572) = "Paul", AU, Trustpilot Apr 8 2026 + aggregate 2.8/5, 124 reviews, 24% 1-star. REMAINING: G2 ShiftWizard implementation-time field — G2 hard-blocks by device fingerprint; founder to open g2.com/products/shiftwizard/reviews manually. | Claude |
+| 2026-08-25 | CHARGE-SCHEDULING RESEARCH PASS, PART 2 (NurseGrid, SmartLinx, Aladtec, QGenda). Same five-question method. THREE FINDINGS THAT CORRECT STANDING ERRORS: (1) NurseGrid Manager PUBLISHES pricing, `\ per month, per staff member`, and names critical access hospitals in its own positioning — a draft said `Contact for pricing` and that is wrong; (2) NurseGrid DOES document pre-publish coverage alerting (red cell + assigned/needed fraction on the `Balancing and Publishing a Draft Schedule` screen) — a draft asserted the opposite, and the true narrower point is that the requirement is per POSITION, not per charge qualification; (3) aladtec.com now 308s to tcpsoftware.com and the live Aladtec pages carry NO healthcare positioning at all (fire/EMS/law enforcement/corrections only), which upgrades the old reviewer-skew caveat to a vendor-own-copy fact, and blog.aladtec.com is retired so its old posts are uncitable. EVIDENCE ASYMMETRY, must be stated in any comparison: only NurseGrid has a public help center; QGenda's is login-gated and SmartLinx/Aladtec have none, so silence for those three is missing DOCUMENTATION, never a proven missing feature. Also recorded: SmartLinx's own nav has no hospital category; QGenda's gap detection is INTRADAY not pre-publish, and its equity mechanism is stated only on the provider page. Environment note: the Playwright browser on this machine injected unrelated redirects (tcpsoftware landed on deputy.com), so verify the resulting URL and page title before trusting a browser navigation. | Claude |
 | 2026-08-25 | CHARGE-SCHEDULING RESEARCH PASS (original product-page research, vendor-owned domains only) for the best-charge-nurse-scheduling-software rebuild. Root cause: an audit found the dossier held ZERO charge-nurse data for ANY vendor, while the draft asserted ~40 charge capability/absence claims about 7 competitors. Added a five-question capability block (role designation / pre-publish coverage alert / equity over time / callout ranking by qualification / positioning) to Deputy, UKG and a NEW full OnShift section. Every answer tagged DOCUMENTED (verbatim + URL) or NOT DOCUMENTED; the approved prose wording for the latter is `not documented on product pages as of 2026-08-25`, NEVER `does not have`. Corrections made: UKG customer count now `more than 3,500 hospitals and 10,000 post acute care facilities` (was `3,500 healthcare organizations in the US`, and a draft had further mangled it into `3,000-employee health systems`); OnShift naming tightened to the vendor's own `OnShift, a ShiftKey brand`. New attribution traps recorded: Deputy's certification-filtering line is a CUSTOMER TESTIMONIAL not feature copy; UKG's EZCall equity lines sit in generic best-practice FAQ answers, not product description. ukg.com 403s WebFetch, browser pass used per the standing rule. | Claude |
 | 2026-08-06 | OnShift ownership RESOLVED for best-nurse-scheduling-app publish: ShiftKey acquired OnShift (2022 investment, full integration July 2023, shiftkey.com news + Mergr/PitchBook cross-check). Approved: "now part of ShiftKey"; the draft had claimed "now part of Workday" (wrong, removed). | Claude |
 | 2026-07-15 | Re-verified 7 vendors' ratings for the best-per-diem-nurse-scheduling-software post (Capterra page-verified, G2 search-indicated). Aladtec Capterra 4.6/17 (ID 248403) / G2 4.5/94; NurseGrid Capterra 4.2/13 (ID 254829) / G2 4.6/5; SmartLinx Capterra 4.5/6 (ID 154002) / G2 3.8/11; QGenda Capterra 4.2/68 (ID 90628) / G2 4.6/164; OnShift Capterra 3.9/14 (ID 122212) / G2 4.5/40; Deputy Capterra 4.6/773 (ID 167811) / G2 4.6/666; UKG Pro Capterra 4.3/727 (ID 480) / G2 4.3/2,167. Existing sections (Aladtec, NurseGrid, QGenda, Deputy) updated inline; SmartLinx/OnShift/UKG used in-post with verbatim quotes from their Capterra pages (SmartLinx Daniel C.; UKG Swaminathan S.; OnShift ratings-only, no dossier quote) — full standalone sections for those three are a TODO. G2 counts approximate (403 on fetch); watch seller-aggregate vs product-page figures (Aladtec/UKG). |
