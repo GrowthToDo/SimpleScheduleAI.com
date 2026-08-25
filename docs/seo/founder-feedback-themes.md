@@ -112,6 +112,32 @@ every other backward reference fails. Restate the thing, even at the cost of
 repetition.
 ("In the table, what is the difference between 2nd and 3rd option?" then, after the rewrite, "same nurse-on-duty floor means? same as what?" The cell now names the rule outright.)
 
+**T18. Third person for SimpleScheduleAI outside the mandatory category line.**
+Check: in a comparison post, the product is a subject like any other vendor
+("SimpleScheduleAI reads who is cleared from the roster"), not "we" or "ours".
+The one fixed exception is the required BOFU category line, which contains "we
+build and operate ourselves" verbatim. Author-voice "we" for the research
+itself ("we found no published price") is fine, and so are reviewer quotes and
+house labels like Our Take.
+("Should we talk about it in first person? That's not the standard.")
+
+**T19. Every advantage bullet must earn its place for THIS post's question.**
+Check: read each bullet and ask what buying question it answers. A true,
+code-verified capability that sits off-topic distracts and raises questions
+the post is not answering.
+(An agency-skipped-on-charge-shifts bullet in a software comparison: "is this something we should mention here?" Cut.)
+
+**T20. Under-claiming is a defect too.**
+Check: when writing a limitation, confirm the product genuinely does not do the
+adjacent thing. Ask the same "verify against the inventory" question you ask of
+overclaims, in the other direction.
+(The post said watching charge concentration was entirely manual. The engine does spread charge-qualified nurses across shifts; what it does not do is count each nurse's charge total over time. Founder caught it: "We try to keep charge nurse scattered, that doesn't count?")
+
+**T21. No system or web jargon in reader-facing prose.**
+Check: would a DON know this term? Status codes, URL behaviour, and internal
+vocabulary get translated into what the reader would observe.
+("their pricing URL returns a 404" became "the pricing page is missing entirely"; "Our ICP dont know 404".)
+
 ## How to run the pass
 
 Read the draft top to bottom once per theme cluster: T1-T3 on the facts and

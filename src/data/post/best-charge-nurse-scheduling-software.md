@@ -24,8 +24,9 @@ metadata:
 ## Key Takeaways
 
 - No federal rule requires a designated charge nurse on every shift. What binds a critical access hospital is [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631): a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever there is an inpatient. Charge coverage is your policy, and your schedule is where you keep that promise.
-- Most scheduling platforms document requirements by license type, meaning RN, LPN, or CNA. Charge qualification is a narrower thing, because a fully licensed RN may not have completed your hospital's charge sign-off. Of eight platforms reviewed, none documents a charge-specific requirement except ours.
-- [NurseGrid Manager](https://nursegrid.com/for-organizations/nursegrid-manager/) is the only competitor that names critical access hospitals in its own positioning, at a published $5 per staff member per month. [Deputy publishes rates](https://www.deputy.com/pricing) too, starting at $5 per user per month. The rest ask you to call.
+- Most scheduling platforms document requirements by license type, meaning RN, LPN, or CNA. Charge qualification is narrower, because a fully licensed RN may not have completed your hospital's charge sign-off. Of the eight platforms reviewed, SimpleScheduleAI is the only one documenting a charge-specific requirement.
+- [NurseGrid Manager](https://nursegrid.com/for-organizations/nursegrid-manager/) is the only competitor whose own marketing names critical access hospitals.
+- Only two competitors publish a price. NurseGrid Manager lists $5 per staff member per month, and [Deputy](https://www.deputy.com/pricing) starts at $5 per user per month. The other five ask you to call.
 - Three platforms serve a different building than yours. Aladtec's live pages sell to fire, EMS, and law enforcement. SmartLinx and OnShift sell to senior care and skilled nursing. Their own websites say so.
 - Ask every vendor the same question before you buy: when my charge nurse calls out at 5 a.m., what does your product put in front of me? The answers differ more than the feature lists suggest, and our [buyer's guide to choosing scheduling software](/blog/how-to-choose-nurse-scheduling-software) covers the rest of the evaluation.
 
@@ -79,7 +80,7 @@ Four capabilities separate a tool that manages charge coverage from one that mer
     </thead>
     <tbody>
       <tr>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">A charge requirement on the shift, not just a license type</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">When the schedule is built: a charge requirement on the shift, not just a license type</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">An RN requirement is satisfied by any RN. Your charge sign-off list is shorter than your RN list, and the gap between those two lists is where uncovered shifts hide.</td>
       </tr>
       <tr>
@@ -87,8 +88,8 @@ Four capabilities separate a tool that manages charge coverage from one that mer
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A manager reviewing four weeks of shifts by eye will miss one. Catching it in the office costs a minute; catching it at 11 p.m. costs a phone tree.</td>
       </tr>
       <tr>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Callout replacements filtered to people who can hold the role</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A list of everyone who is free is not useful at 5 a.m. A list of everyone who is free and charge-qualified is the whole job.</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">After the schedule is posted: replacements that respect the role when someone calls out</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">The build-time rule is no help once the schedule is live and a name drops off it. At 5 a.m. you need the list narrowed to people who can actually take charge, not everyone who is free.</td>
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Some way to see who is carrying the load</td>
@@ -100,7 +101,7 @@ Four capabilities separate a tool that manages charge coverage from one that mer
 
 ## How Do the Eight Platforms Compare?
 
-The table below reports what each vendor documents on its own website, checked on 2026-08-25. It does not report what each product can do, and the difference matters.
+The table below reports what each vendor documents on its own website, checked in August 2026. It does not report what each product can do, and the difference matters. Product pages change, so treat this as a starting point for the demo call rather than a permanent scorecard.
 
 **Read the "not documented" cells carefully.** NurseGrid and UKG publish public product documentation. QGenda's sits behind a login, and we found none for SmartLinx, Aladtec, OnShift, or Deputy. So "not documented" means we searched the vendor's own pages and found nothing on that question. It is not proof the product cannot do it, and any vendor may be able to show you the feature on a demo call. Ask.
 
@@ -177,21 +178,20 @@ Reviewed below in the order a small hospital should consider them, starting with
 
 SimpleScheduleAI is [nurse scheduling software](/nurse-scheduling-software) we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for Texas hospitals of 25 beds or fewer, which is why charge coverage is a rule in the engine rather than a configuration exercise.
 
-**Best for:** Nurse managers at small hospitals who want charge coverage guaranteed on every draft without maintaining the rules themselves.
+**Best for:** Nurse managers at small hospitals who want charge coverage settled on every draft without maintaining the rules themselves.
 
 **Key advantages:**
 
-- Charge qualification is one of 13 rules a draft must satisfy, so a shift needing charge is never filled by a nurse your roster has not cleared for it.
+- Charge qualification is one of 13 rules a draft must satisfy, so a shift needing charge is never filled by a nurse the roster has not cleared for it.
 - The hardest charge shifts are built first. Weekend charge comes before weekday charge, and both come before nights and regular days, because leaving them until last is how gaps happen.
-- When a callout removes the charge nurse and nobody available is charge-qualified, the system says exactly that instead of offering you a name that will not work. Charge qualification is also weighted into the replacement ranking, alongside overtime risk.
-- Agency nurses are skipped entirely on charge shifts, so an agency booking never appears as the answer to a charge gap.
-- The engine avoids stacking charge-qualified nurses on the same shift, which keeps the qualified group spread across the schedule rather than bunched.
+- Charge-qualified nurses are spread across shifts rather than bunched onto the same one, so the small qualified group is not all working the same day.
+- When a callout removes the charge nurse and nobody available is charge-qualified, the system says exactly that instead of offering a name that will not work. Charge qualification is weighted into the replacement ranking, alongside overtime risk.
 
 **Key limitations:**
 
-- We hold no training records, sign-off dates, or expiry tracking for charge competency. Who is cleared for charge comes from your roster, and keeping that list current is your side of the work.
-- We count weekend distribution across cycles and holiday balance against the team average, not charge hours. Watching charge concentration is still a manual review, using the count described in the checklist below.
-- We are Texas only, and we do not schedule physicians. A hospital scheduling both in one system will want a different tool.
+- Charge competency stays with the hospital. SimpleScheduleAI reads who is cleared from the roster and schedules accordingly, but it holds no training records, sign-off dates, or expiry dates, so the clinical judgement about who is ready remains where it belongs.
+- Spreading charge across shifts is not the same as counting it over time. Weekend distribution carries across cycles and holidays are balanced against the team average, but nobody's running charge total is tracked, so comparing charge hours per nurse is still a manual review. The checklist below has the count.
+- The service covers Texas only, and it does not schedule physicians. A hospital scheduling both in one system will want a different tool.
 
 **Verdict:** The strongest option if charge coverage is the thing that keeps failing and you do not have someone to own scheduling rules full time. Weaker if you need physician scheduling in the same system, or if you are outside Texas.
 
@@ -318,7 +318,7 @@ OnShift describes itself today as "a ShiftKey brand", following ShiftKey's acqui
 - The positioning is explicit and it is not yours: "the only workforce management software made exclusively for long-term, post-acute and senior care".
 - Replacement recommendations are documented as based on "work history, availability, and cost". Qualification does not appear in that list, which is the opposite of what a charge gap needs.
 - A charge or role requirement on a shift is not documented, and neither is any tracking of who has worked a shift type over time.
-- No pricing is published anywhere on the site, and their pricing URL returns a 404.
+- No price appears anywhere on the site. The pricing page is missing entirely, and every route ends at a demo request form.
 
 **Verdict:** Built for a different building. Worth a look only if your hospital also operates a skilled nursing or senior living facility.
 
@@ -378,7 +378,7 @@ UKG, formerly Kronos, is the enterprise end of this market. It states that it ha
 
 ## Which One Fits Your Hospital?
 
-If you run 25 beds or fewer in Texas and charge coverage is the recurring failure, we built SimpleScheduleAI for exactly that, and the [service is described in full here](/how-it-works). Our wider roundup of [scheduling software for critical access hospitals](/blog/best-nurse-scheduling-software-critical-access-hospitals) covers the same vendors on the broader criteria. If you want a tool you operate yourself at a published price, NurseGrid Manager is the honest recommendation, with the caveat that its requirements work at position level rather than charge level.
+If you run 25 beds or fewer in Texas and charge coverage is the recurring failure, SimpleScheduleAI was built for exactly that, and the [service is described in full here](/how-it-works). A wider roundup of [scheduling software for critical access hospitals](/blog/best-nurse-scheduling-software-critical-access-hospitals) covers the same vendors on the broader criteria. If you want a tool you operate yourself at a published price, NurseGrid Manager is the honest recommendation, with the caveat that its requirements work at position level rather than charge level.
 
 If you also operate skilled nursing or senior living beds, SmartLinx and OnShift are built for that side and worth evaluating there. If you schedule physicians alongside nurses and have configuration help, QGenda earns its look. If you have an IT department, UKG will do more than any of them. If your hospital also runs an EMS service, Aladtec is strong at that job even though it no longer sells itself to healthcare.
 
@@ -397,7 +397,7 @@ Deputy is the one to approach most carefully for clinical use. It schedules peop
 2. Count charge shifts per nurse over your last four weeks. If two or three names carry most of them, you have a retention problem forming, not a scheduling preference.
 3. Take last month's posted schedule and check every shift against your own charge policy. Note the ones that were covered by whoever happened to be there.
 4. On every vendor demo, ask the 5 a.m. question: my charge nurse just called out, show me the screen I would be looking at.
-5. If the honest answer is that your charge coverage depends on one person remembering, that is the gap our [critical access hospital scheduling](/critical-access-hospital-scheduling) service is built to close, and our [AI nurse scheduling](/ai-nurse-scheduling) overview explains how the draft gets built before anyone reviews it.
+5. If the honest answer is that your charge coverage depends on one person remembering, that is the gap the SimpleScheduleAI [critical access hospital scheduling](/critical-access-hospital-scheduling) service is built to close, and the [AI nurse scheduling](/ai-nurse-scheduling) overview explains how each draft gets built before anyone reviews it.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Charge covered on every shift, before you see the draft</p>
@@ -442,7 +442,7 @@ NurseGrid Manager publishes the lowest entry price of the platforms here, at $5 
 It can record it. Whether it enforces it is the question to ask on the demo. General tools like Deputy document qualifications as a constraint, but none of the general platforms we reviewed documents a charge-specific requirement on a shift, and none documents a warning before you publish a schedule with a charge gap.
 
 **Q: How do I stop the same two nurses taking every charge shift?**
-Count it, then act on the count. None of the platforms here, including ours, documents charge-hour tracking per nurse across cycles, so this is a manual review most hospitals have to run themselves. Pull charge shifts by nurse for the last four weeks each cycle. If two people carry most of them, the fix is either widening the qualified group or capping how often the same names get asked.
+Count it, then act on the count. None of the eight platforms here, SimpleScheduleAI included, documents charge-hour tracking per nurse across cycles, so this is a manual review most hospitals have to run themselves. Pull charge shifts by nurse for the last four weeks each cycle. If two people carry most of them, the fix is either widening the qualified group or capping how often the same names get asked.
 
 ---
 
