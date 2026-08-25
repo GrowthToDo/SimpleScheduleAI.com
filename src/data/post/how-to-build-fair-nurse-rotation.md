@@ -211,7 +211,7 @@ Do not dismiss fairness complaints as complaints. A nurse who feels chronically 
 
 <img src="/images/blog/how-to-build-fair-nurse-rotation/SimpleScheduleAI.webp" alt="SimpleScheduleAI automated fair rotation distribution for CAH nurses" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-[SimpleScheduleAI](/) tracks weekend, holiday, and charge hour distribution automatically across each scheduling cycle. The nurse manager can pull a distribution summary at any time. When building the next cycle, the system weights assignments toward nurses with lower weekend and charge hour totals. The nurse manager reviews the proposed rotation and approves. Distribution data is available to share with staff as documentation.
+[SimpleScheduleAI](/) tracks weekend and holiday distribution automatically across each scheduling cycle, carrying weekend counts forward from one cycle to the next and measuring holidays against the team average. The nurse manager can pull a distribution summary at any time. When building the next cycle, the system weights assignments toward nurses who are behind on weekends and holidays. Charge coverage is handled differently: every shift that needs charge gets a charge-qualified nurse, charge slots are filled first because they are the hardest to cover, and the system avoids stacking charge-qualified nurses on the same shift so the qualified pool stays spread across the schedule. Counting charge hours per nurse across cycles is still a manual review, using the tracker described above. The nurse manager reviews the proposed rotation and approves.
 
 ## What to Do This Week?
 
@@ -227,7 +227,7 @@ Do not dismiss fairness complaints as complaints. A nurse who feels chronically 
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Build a Rotation Nurses Trust</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI tracks weekend, holiday, and charge hour distribution automatically and weights future assignments toward nurses who are behind. You review the distribution summary before approving each cycle.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI tracks weekend and holiday distribution automatically and weights future assignments toward nurses who are behind. Every shift that needs charge coverage gets it. You review the distribution summary before approving each cycle.</p>
   <a href="/pricing" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See pricing →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
@@ -252,7 +252,7 @@ Credential constraints are legitimate reasons for distribution differences, but 
 
 **Does SimpleScheduleAI allow nurses to see their own distribution data?**
 
-SimpleScheduleAI provides distribution summaries to the nurse manager that can be shared with staff. The nurse manager controls what information is shared with staff directly. The distribution data (weekend count, holiday count, charge hours) is visible in the nurse manager's dashboard at any time.
+SimpleScheduleAI provides distribution summaries to the nurse manager that can be shared with staff. The nurse manager controls what information is shared with staff directly. The distribution data, including weekend distribution and holiday balance per nurse, is visible in the nurse manager's dashboard at any time.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

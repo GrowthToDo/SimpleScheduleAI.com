@@ -202,6 +202,34 @@ segment. Healthcare page: deputy.com/industry/healthcare.
 FLSA 8-and-80 tracking, or credential constraints. Verify current tier capabilities with vendor
 before citing compliance capabilities.
 
+### Charge-scheduling capability, from Deputy's own pages (verified 2026-08-25)
+
+Original product-page research pass; vendor-owned domains only. Answers are DOCUMENTED (verbatim
+evidence) or NOT DOCUMENTED (searched, nothing found). Never convert NOT DOCUMENTED into "does
+not have" in prose; the approved wording is "not documented on product pages as of 2026-08-25".
+
+- **Role/charge designation — PARTIAL.** Qualifications are a schedulable constraint, but no
+  charge-nurse designation and no "this shift requires role X" requirement is documented.
+  Verbatim: "Simplify break compliance, qualifications, fatigue limits, and even pay rules, so
+  managers can move faster with more confidence" (deputy.com/features/scheduling-software);
+  "Bring together staff preferences, certifications, time off, and patient coverage requirements
+  to optimize your operations" (deputy.com/industry/healthcare).
+- **Pre-publish coverage-gap alert — NOT DOCUMENTED.** Two near-misses that must NOT be cited as
+  coverage alerting: "Know the cost before you publish" is about LABOR COST, not coverage; "Spot
+  potential issues early and take action before they impact your shift, from coverage gaps to
+  schedule planning" says before-impact, not before-publish, and names no required role. Both
+  deputy.com/features/scheduling-software.
+- **Equity over time — PARTIAL, hours only.** Verbatim: "Set priorities like lowest cost, equal
+  spread of hours, or matching your past preferences" (scheduling-software and auto-scheduling
+  pages, identical sentence). Shift-TYPE equity across periods is not documented.
+- **Callout replacement — DOCUMENTED as filtered, NOT as ranked.** Verbatim: "the Deputy app will
+  serve up suitable employees who are available, qualified, and cost-efficient"
+  (deputy.com/features/shift-swapping). Keep the filtered/ranked distinction.
+- **ATTRIBUTION TRAP:** the line "With Deputy, I can filter my staff by their training and
+  certifications and quickly move them around into areas needed" on deputy.com/industry/healthcare
+  is a CUSTOMER TESTIMONIAL (Catarina Buffalino, Director of Ultrasound Department,
+  Zwanger-Pesiri Radiology), not Deputy feature copy. Never cite it as a documented capability.
+
 ### Verified Reviewer Quotes
 
 **Positive (hospital nurse):**
@@ -503,6 +531,54 @@ active CMS obligations — missing FLSA tracking, CMS audit trail, credential en
 > Administrator, Hospital & Health Care, June 17, 2024, Capterra _(re-verified live 2026-08-14. EXTENDED: the second sentence was missing from our version and is the stronger half, since it reports an actual churn decision rather than a price opinion.)_
 
 ---
+
+## OnShift (a ShiftKey brand)
+
+Full section added 2026-08-25 from an original product-page research pass; before that it was a
+ratings stub in the not-yet-in-dossier list. Vendor-owned domains only (onshift.com, shiftkey.com).
+
+**NAMING, and this has now been wrong twice in drafts.** The vendor's own words are "OnShift, a
+ShiftKey brand" (onshift.com/company/about-us, verified 2026-08-25). ShiftKey announced complete
+integration on July 12, 2023 (shiftkey.com/resources/news/shiftkey-fully-integrates-onshift).
+onshift.com is live and independently branded; the product still ships as **OnShift** (flagship
+**OnShift Schedule X**, mobile **OnShift X app**), and the joint ShiftKey/OnShift offering is
+**SAMI**. Site footer today: "© 2026 by OnShift, Inc. All rights reserved."
+**NEVER "now part of Workday".** That claim is wrong, was removed from a `best-nurse-scheduling-app`
+draft, and recurred in the `best-charge-nurse-scheduling-software` draft in three places.
+
+**Ratings:** Capterra ID 122212, 3.9/5 (verified 2026-06-15 — past the 60-day gate, refresh
+before citing a rating).
+
+**Positioning — explicitly NOT acute care, and this is the most useful fact in the section:**
+
+- "the only workforce management software made exclusively for long-term, post-acute and senior care" (onshift.com/company/newsroom/onshift-releases-the-onshift-x-app, July 23, 2025)
+- "Foster a culture where people want to work with our innovative software purpose-built for post-acute care & senior living." (onshift.com homepage)
+- "OnShift is 100% dedicated to the long-term post-acute care and senior living industry." (onshift.com/company/about-us)
+
+**Pricing — NOT DOCUMENTED.** onshift.com/pricing returns HTTP 404 (checked 2026-08-25). No rate,
+per-bed or per-user figure on any product page; all funnels route to "Request a Demo". The one
+cost statement found is about the ShiftKey integration only, not the product: "The integration
+comes at no additional cost for facilities using the ShiftKey and/or OnShift platforms."
+
+### Charge-scheduling capability, from OnShift's own pages (verified 2026-08-25)
+
+- **Role/charge designation — NOT DOCUMENTED.** No page documents marking a nurse charge-qualified
+  or requiring a role on a shift. The adjacent documented capability is credential EXPIRY:
+  "Employee CPR and First Aid credential integration to avoid scheduling employees with expired
+  credentials (and associated fines)" (OnShift X app release). Role appears only as an outbound
+  routing rule in SAMI (how far in advance, by role, open shifts are sent to ShiftKey).
+- **Pre-publish coverage-gap alert — PARTIAL.** Detection is documented, timing is not:
+  "Proactively identify understaffing and overstaffing, and get recommended employee replacements
+  based on work history, availability, and cost"
+  (onshift.com/products/workforce-management-software/workforce-scheduling). Neither this nor
+  "before they become problems" states a pre-publish gate or a missing REQUIRED ROLE.
+- **Equity over time — NOT DOCUMENTED.** Nothing about tracking how often a nurse works a shift
+  type across periods. Closest copy is employee-side work-life-balance language, which is not
+  distribution tracking.
+- **Callout replacement — DOCUMENTED, and the ranking basis is the citable contrast.** OnShift's
+  own copy names cost, availability and work history, NOT qualification: "Fill call-offs and open
+  shifts in minutes with technology that recommends employees based on cost and availability" and
+  "recommended employee replacements based on work history, availability, and cost" (same URL).
 
 ## QGenda
 
@@ -935,10 +1011,51 @@ describe the scheduling features as basic. Do not conflate with TCP Aladtec (sep
 ## UKG (formerly Kronos)
 
 **Product:** Enterprise workforce management suite. Scheduling, time and attendance, HR, payroll,
-analytics. UKG states it serves more than 3,500 healthcare organizations in the US
-(ukg.com/industry-solutions/healthcare, verified 2026-07-01). Built for large facilities with
-dedicated IT departments and HRIS staff. Capterra positions UKG Pro as "the Workforce Operating
-Platform," built primarily for enterprises.
+analytics. Built for large facilities with dedicated IT departments and HRIS staff. Capterra
+positions UKG Pro as "the Workforce Operating Platform," built primarily for enterprises.
+
+**CUSTOMER-COUNT FIGURE, corrected 2026-08-25.** The page now reads: "We've partnered with more
+than 3,500 hospitals and 10,000 post acute care facilities"
+(ukg.com/industry-solutions/healthcare, browser-verified 2026-08-25; the site 403s WebFetch, use
+Playwright per the refresh rule above). The older recording, "more than 3,500 healthcare
+organizations in the US" (2026-07-01), is superseded: the current copy says HOSPITALS, adds a
+separate post-acute count, and carries no "in the US" qualifier. **Never render this as a
+per-system headcount** — a draft once turned it into "3,000-employee health systems", which
+confuses organizations served with employees per organization.
+
+### Charge-scheduling capability, from UKG's own pages (verified 2026-08-25)
+
+Original product-page research pass; vendor-owned domains only (ukg.com, library.ukg.com).
+
+- **Role/charge designation — DOCUMENTED.** Verbatim: "Assigning and tracking skills and
+  certifications in the Scheduling solution allows managers to ensure that the right employee for
+  a job or shift is in place when and where they are needed" (library.ukg.com, UKG Dimensions
+  Advanced Scheduling, Employee Skills and Certifications); "Automatically enforce nurse-patient
+  ratios, licensure requirements, and labor laws to stay audit-ready"
+  (ukg.com/products/ukg-clinical-scheduling-extensions). The term "charge nurse" appears on none
+  of the pages read.
+- **Coverage-gap visibility — DOCUMENTED, by job.** Verbatim: "A red downward-pointing arrow in
+  the cell indicates Undercoverage" (library.ukg.com, Staffing Dashboard Details View). Framed as
+  real-time and pre-violation rather than an explicit pre-publish gate; cite the
+  undercoverage-by-job version, which is solid.
+- **Equity over time — DOCUMENTED for PHYSICIANS only (EZCall).** Verbatim: "UKG EZCall for
+  Physicians is a leading automated scheduling solution that creates flexible, fair, and equitable
+  physician work schedules" (ukg.com/products/ukg-ezcall). **DO NOT CITE** the EZCall FAQ lines
+  ("ensure equal distribution of both high-demand and less desirable shifts", "Track how often
+  each physician is scheduled…", "Data & reporting tools to monitor… scheduling equity") — they
+  sit inside generic best-practice FAQ answers ("Here are five key strategies you should follow"),
+  not inside UKG's description of its own product. Also note "Equitable patient assignments" on
+  the Clinical Scheduling Extensions page is about PATIENT assignments, not shift rotation.
+- **Callout replacement — DOCUMENTED as qualification-aware, NOT as ranked.** Verbatim: "Managers
+  use the Call List to fill open shifts… This saves managers time when identifying employees who
+  are qualified to fill an open shift" (library.ukg.com, Access Skills and Certifications Details).
+- **Stacking requirement, useful for the which-product-are-you-buying angle:** "When combined with
+  UKG Advanced Scheduler, UKG Clinical Scheduling Extensions streamline shift-based staffing" —
+  the acuity capability is an add-on to an add-on.
+- **Named healthcare references on UKG's own pages, all large systems:** Billings Clinic, Bon
+  Secours Mercy Health, Geisinger Health System, Community Health System ("11,000 employees"),
+  Community Healthcare System. On-vendor-page support for the "built for large facilities" framing
+  without needing a third-party source.
 
 **Ratings (verified 2026-07-01):**
 
@@ -1036,7 +1153,7 @@ FLSA 8-and-80 tracking, or credential constraints. Verify with vendor for hospit
 The following appear in posts but have no verified quotes collected yet. Go online for these:
 
 - **Connecteam** — mentioned in deputy-alternatives-healthcare.md
-- **OnShift** — Capterra ID 122212, 3.9/5 (verified 2026-06-15). Positioning: multi-facility senior care. OWNERSHIP RESOLVED 2026-08-06: acquired by ShiftKey (strategic investment June 2022, FULL integration announced July 2023 per shiftkey.com/resources/news/shiftkey-fully-integrates-onshift; cross-checked Mergr/PitchBook). Approved wording: "OnShift (now part of ShiftKey)". NEVER "now part of Workday" (a pre-rewrite best-nurse-scheduling-app draft asserted this; it is wrong). FABRICATED quote, do not cite: "Our site has 4 employees and the system was overkill" (exists on no source).
+- **OnShift** — now has a full section below (added 2026-08-25). Reviewer quotes still not collected; ratings stub: Capterra ID 122212, 3.9/5 (verified 2026-06-15).
 - **Shiftboard** — Capterra product "ScheduleFlex" ID 81956, 4.4/5 (verified 2026-06-15). Markets to organizations of 25 to 100,000 employees. FABRICATED quote, do not cite: "Minimum 100 employees to be viable." The 100-employee figure traces only to a Connecteam author's account of a sales call (connecteam.com/reviews/shiftboard), not a documented policy or a customer review.
 - **TCP Scheduling** (enterprise tier, separate from Aladtec and TimeClock+)
 - **QGenda** — Capterra ID 90628, 4.2/5 (verified 2026-06-15). Positioning: large physician/provider groups. FABRICATED quote, do not cite: "Not designed for smaller practices" (third-party blog paraphrase only, not a real review).
@@ -1095,6 +1212,7 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 | 2026-08-10 | First full competitor-watch run (new `npm run competitor-watch`, 17 pages baselined). Added August update blocks to M7 Health and In-House Health. M7: homepage category label changed to "The AI-powered workforce operations platform for healthcare"; new `/roi-calculator` (bed-count sizing) and `/implementation` (four-week rollout, "IT team's role is minimal"); customer wall expanded to ~17 additional small rural/community hospitals via Lifepoint/ScionHealth (bed counts UNVERIFIED — the no-standalone-CAH-customer line still stands); SEO footprint is 24-of-25 branded/Ochsner navigational; 101 referring domains are job boards + VCs + aggregators with 47 on the bare homepage and one backlink on their best content page. In-House Health: homepage rewritten to "Restore Sustainability to Nursing" with four vendor metrics ($270K/unit/yr, 5.5H/user/wk, 31%, 4 weeks), `/skilled-nursing` segment page added, ~35-post content library + `/case-studies/the-center-at-lowry`, most-cited modern rival in the 2026-08-09 LLM autopsy; "$15M raised" secondary figure UNVERIFIED, do not cite. Neither publishes pricing (both `/pricing` URLs 404, now held as sentinels). Full analysis: `docs/seo/competitor-intel-2026-08.md`. | Claude |
 | 2026-08-09 | ShiftWizard G2 Pricing Insights PAGE-VERIFIED via founder screenshot: Time to Implement 3 months, ROI 3 months, avg discount 8% (G2: averages from real user reviews); G2 rating 4.3/5, 405 reviews. Review-mining verification sweep now 5/5 COMPLETE — topics 1 and 2 of next-15 fully armed. | Founder + Claude |
 | 2026-08-09 | PAGE-VERIFIED 4 of the 5 review-mining quote candidates via Playwright (real-browser pass beat the HTTP 403s): NurseGrid "Please Bring back the mobile app" = Nika S., Inpatient Director, Jun 17 2024 (same reviewer as the Android quote, name now known); QGenda pricing + hidden-costs + talk-to-3-people support quotes = Wilmer R., Practice Administrator, Mar 19 2026; ShiftWizard "website is slow and takes forever" = Jacob G., RN, Jul 18 2024, 1-star "Terrible system"; Deputy 12-month lock-in ($57/$572) = "Paul", AU, Trustpilot Apr 8 2026 + aggregate 2.8/5, 124 reviews, 24% 1-star. REMAINING: G2 ShiftWizard implementation-time field — G2 hard-blocks by device fingerprint; founder to open g2.com/products/shiftwizard/reviews manually. | Claude |
+| 2026-08-25 | CHARGE-SCHEDULING RESEARCH PASS (original product-page research, vendor-owned domains only) for the best-charge-nurse-scheduling-software rebuild. Root cause: an audit found the dossier held ZERO charge-nurse data for ANY vendor, while the draft asserted ~40 charge capability/absence claims about 7 competitors. Added a five-question capability block (role designation / pre-publish coverage alert / equity over time / callout ranking by qualification / positioning) to Deputy, UKG and a NEW full OnShift section. Every answer tagged DOCUMENTED (verbatim + URL) or NOT DOCUMENTED; the approved prose wording for the latter is `not documented on product pages as of 2026-08-25`, NEVER `does not have`. Corrections made: UKG customer count now `more than 3,500 hospitals and 10,000 post acute care facilities` (was `3,500 healthcare organizations in the US`, and a draft had further mangled it into `3,000-employee health systems`); OnShift naming tightened to the vendor's own `OnShift, a ShiftKey brand`. New attribution traps recorded: Deputy's certification-filtering line is a CUSTOMER TESTIMONIAL not feature copy; UKG's EZCall equity lines sit in generic best-practice FAQ answers, not product description. ukg.com 403s WebFetch, browser pass used per the standing rule. | Claude |
 | 2026-08-06 | OnShift ownership RESOLVED for best-nurse-scheduling-app publish: ShiftKey acquired OnShift (2022 investment, full integration July 2023, shiftkey.com news + Mergr/PitchBook cross-check). Approved: "now part of ShiftKey"; the draft had claimed "now part of Workday" (wrong, removed). | Claude |
 | 2026-07-15 | Re-verified 7 vendors' ratings for the best-per-diem-nurse-scheduling-software post (Capterra page-verified, G2 search-indicated). Aladtec Capterra 4.6/17 (ID 248403) / G2 4.5/94; NurseGrid Capterra 4.2/13 (ID 254829) / G2 4.6/5; SmartLinx Capterra 4.5/6 (ID 154002) / G2 3.8/11; QGenda Capterra 4.2/68 (ID 90628) / G2 4.6/164; OnShift Capterra 3.9/14 (ID 122212) / G2 4.5/40; Deputy Capterra 4.6/773 (ID 167811) / G2 4.6/666; UKG Pro Capterra 4.3/727 (ID 480) / G2 4.3/2,167. Existing sections (Aladtec, NurseGrid, QGenda, Deputy) updated inline; SmartLinx/OnShift/UKG used in-post with verbatim quotes from their Capterra pages (SmartLinx Daniel C.; UKG Swaminathan S.; OnShift ratings-only, no dossier quote) — full standalone sections for those three are a TODO. G2 counts approximate (403 on fetch); watch seller-aggregate vs product-page figures (Aladtec/UKG). |
 | 2026-07-15 | Refreshed Homebase ratings (dossier had tipped to 61 days). Capterra page-verified 4.6/5, 1,151 reviews (was 1,147; rating unchanged) via live product-page fetch. G2 could not be page-verified (403 on all g2.com fetches); its public listing now shows 539 reviews (title-confirmed) and a 4.6/5 rating (search summary), up from the 2026-04-30 page reading of 4.4/5 (271) — flagged as search-indicated in the section. Bumped dossierVerifiedDate in competitors.json to 2026-07-15. The two Amber B. + Angela P. Capterra quotes carried forward from the 2026-05-15 verbatim check (Capterra reviews persist; not re-fetched from pagination). |
