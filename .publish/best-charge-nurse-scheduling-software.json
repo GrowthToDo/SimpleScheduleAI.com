@@ -54,9 +54,9 @@
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "unchanged",
-      "setAt": "2026-08-10T12:18:29.340Z",
-      "contentHash": "dadce14872439547a3b86d436285e8e3544d41667d12c2bac3305dc19c786671"
+      "setBy": "founder live review 2026-08-25",
+      "setAt": "2026-08-25T05:22:33.419Z",
+      "contentHash": "5307d9eeb8aa6972a54c87a96029a74601e9e40738508766aa619c4e920c0b5f"
     },
     "founderApproval": {
       "value": "YES",
@@ -66,15 +66,15 @@
     },
     "indexNow": {
       "value": "DONE",
-      "setBy": "2026-08-10",
-      "setAt": "2026-08-10T12:18:34.017Z",
-      "contentHash": "dadce14872439547a3b86d436285e8e3544d41667d12c2bac3305dc19c786671"
+      "setBy": "2026-08-25",
+      "setAt": "2026-08-25T05:22:50.742Z",
+      "contentHash": "5307d9eeb8aa6972a54c87a96029a74601e9e40738508766aa619c4e920c0b5f"
     },
     "gscSitemap": {
       "value": "DONE",
-      "setBy": "2026-08-10",
-      "setAt": "2026-08-10T12:18:36.536Z",
-      "contentHash": "dadce14872439547a3b86d436285e8e3544d41667d12c2bac3305dc19c786671"
+      "setBy": "2026-08-25",
+      "setAt": "2026-08-25T05:22:51.472Z",
+      "contentHash": "5307d9eeb8aa6972a54c87a96029a74601e9e40738508766aa619c4e920c0b5f"
     }
   },
   "overrides": []
