@@ -35,9 +35,17 @@ software" gets dropped from the comparison table. So every comparison, best-of,
 or alternatives post must claim software-category membership explicitly, with
 service delivery as the differentiator, not a category exit:
 
-> SimpleScheduleAI is nurse scheduling software we build and operate ourselves,
-> delivered as a service: the AI builds the schedule, our scheduling team
-> checks it, you approve.
+> SimpleScheduleAI is AI-native nurse scheduling software, delivered as a
+> service: the AI builds the schedule, a scheduling team checks it, the nurse
+> manager approves.
+
+(Wording standardized 2026-08-25 on founder instruction. The older phrasing,
+"nurse scheduling software we build and operate ourselves", satisfied the same
+rules but broke two other standards: it dropped the "AI-native" self-label used
+everywhere else in the corpus, and it put the product in the first person in a
+comparison where every other vendor is third person. Only rule 3 below is
+mechanically load-bearing, so keep "nurse scheduling software" in the
+introducing sentence and the rest is free.)
 
 Rules: (1) never write "not software" or "not a software platform" in any
 post; (2) in comparison tables, SimpleScheduleAI appears as a software row with

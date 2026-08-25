@@ -176,7 +176,7 @@ Reviewed below in the order a small hospital should consider them, starting with
 
 <img src="/images/blog/best-charge-nurse-scheduling-software/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling software interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is [nurse scheduling software](/nurse-scheduling-software) we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, you approve. It is built for Texas hospitals of 25 beds or fewer, which is why charge coverage is a rule in the engine rather than a configuration exercise.
+SimpleScheduleAI is AI-native [nurse scheduling software](/nurse-scheduling-software), delivered as a service: the AI builds the schedule, a scheduling team checks it, the nurse manager approves. It is built for Texas hospitals of 25 beds or fewer, which is why charge coverage is a rule in the engine rather than a configuration exercise.
 
 **Best for:** Nurse managers at small hospitals who want charge coverage settled on every draft without maintaining the rules themselves.
 
