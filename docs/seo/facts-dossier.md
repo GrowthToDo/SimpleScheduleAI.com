@@ -355,6 +355,94 @@ Verified 2026-08-20 for the `cna-patient-ratio-laws-by-state` post. **The core t
 - URLs: https://nurse.org/news/montefiore-nurses-laid-off-ai/ (403-blocks non-browser fetches); https://www.norwoodnews.org/nysna-allege-montefiore-plans-to-replace-some-nurses-with-ai-systems/; https://www.nysna.org/press/today-bronx-nurses-sound-alarm-montefiore-replacing-real-nurses-ai; https://www.wnylabortoday.com/news/2026/07/05/new-york-state-labor-news/the-bronx-needs-real-nurses-not-ai-nysna-represented-nurses-at-montefiore-hospital-sound-the-alarm-on-the-medical-facility-s-plans-to-replace-nurses-with-artificial-intelligence-powered-software/
 - Verified: 2026-08-04 (live fetches of Norwood News, NYSNA release, WNY Labor Today; Nurse.org corroborated via search, page bot-blocked)
 
+### QSO-26-15-CAH: CAH rural and distance eligibility review (August 21, 2026)
+
+Added 2026-08-26. **The founder supplied the PDF directly; all facts below are read from the
+primary document**, not from search summaries. cms.gov 403s automated fetchers and the PDF text
+does not extract in a browser, so re-verification means opening the file. URL:
+https://www.cms.gov/files/document/qso-26-15-cah-original-release-2026-08-21.pdf
+
+- **Identity:** Ref QSO-26-15-CAH, dated August 21, 2026, to State Survey Agency Directors, from
+  the Directors of the Quality, Safety & Oversight Group and the Survey & Operations Group
+  (signed Karen L. Tritz and Melissa C. Daly). Subject: "Critical Access Hospital (CAH) Evaluation
+  of Compliance with the Rural and Distance Requirements". **Effective 30 days after issuance**
+  (so on or about September 20, 2026). **Supersedes S&C-16-08-CAH**, now expired.
+- **DECENNIAL REVIEWS START IN CY 2033, NOT NOW.** Verbatim: "decennial reviews beginning in CY
+  2033" and "Beginning in CY 2033, all existing CAHs will be evaluated for compliance with rural
+  status and distance eligibility requirements. This status review will then be performed every
+  ten years hence." Search summaries omitted the 2033 date and made this read as immediate. **Never
+  write that a ten-year review cycle starts now.**
+- **THE ONE-YEAR / TWO-YEAR DISCREPANCY (our original finding, worth citing carefully).** The memo
+  body and the SOM attachment give different windows for the same situation:
+  - Memo body, "Decennial Evaluations" section (p4): "The CAH will generally be allowed **two
+    years** to attempt to reclassify as rural, convert to acute care hospital or rural emergency
+    hospital status, or have its Medicare participation terminated."
+  - Memo body, "Adverse Determinations" (p4): "allowed generally **two years**".
+  - SOM attachment, new-ACH trigger (p20): "The CAH will be allowed generally **one-year**".
+  - SOM attachment, decennial section (p21): "will generally be allowed **one year**".
+  - SOM attachment, Example B1 (p22): "generally afforded **one year**".
+  **Frame as an observed discrepancy and tell readers to confirm with CMS. Never assert which
+  window controls.** Contact given in the memo: CAHReviewTeam@cms.hhs.gov.
+- **Triggers for an eligibility review:** proximal ACH (a new acute care hospital seeking initial
+  Medicare certification near an existing CAH, or one identified later through updated data); new
+  CAH certification or conversion; decennial review from CY 2033. CMS "may perform a distance or
+  rural eligibility review of a CAH at any time."
+- **What does NOT count toward the distance test:** "Psychiatric hospitals, LTCHs, or
+  Rehabilitation hospitals are not considered acute care hospitals and therefore will not factor
+  into a CAH's distance eligibility calculation." Also, IHS/Tribal and non-IHS/Tribal facilities do
+  not count against each other, in either direction.
+- **Islands:** a CAH is compliant on distance if the island is entirely surrounded by water, the
+  CAH is the only hospital or CAH on it, and the island is not accessible by any roads. The rural
+  requirement still applies.
+- **Necessary provider (NP):** state designation before January 1, 2006 exempts a CAH from the
+  DISTANCE requirement only, never from the RURAL requirement. If CMS cannot confirm NP status, the
+  CAH has **60 days** from the date of the CMS letter to submit supplementary evidence, and "the
+  burden is on the CAH". Qualifying evidence examples: a pre-2006 state letter naming the CAH; a
+  2005-or-earlier edition of the state Rural Health Plan naming it; the plan's criteria plus
+  evidence it met them plus a signed state statement; or a pre-2006 state law or regulation plus
+  the same.
+- **Rural status mechanics:** determined from OMB CBSA delineations as adopted in the IPPS final
+  rule (proposed April, final August, effective October 1). Separate and PRE-EXISTING rule: a CAH
+  that falls inside a CBSA after a redelineation "may continue to retain its CAH status up to two
+  years after the effective date". Do not confuse this two-year grace period with the adverse
+  determination window above.
+- **Operational change worth naming:** "State Survey Agency and CMS-Approved Accrediting
+  Organization recertification surveys may be performed based on the CAH's existing recertification
+  schedule and no longer require confirmation from CMS of rural and distance eligibility to
+  proceed."
+- **Provider-based location (PBL) trap:** CMS "recommends a CAH seek an advance determination of
+  compliance with CAH location requirements prior to adding a PBL." An off-campus provider-based
+  facility created or acquired on or after January 1, 2008 must ITSELF be more than 35 miles (15 in
+  mountainous terrain or secondary-roads areas) from another hospital or CAH. If it breaks
+  eligibility the CAH goes on a 90-day termination track with three options: terminate, undo or
+  move the PBL, or convert to a hospital.
+- **THE STAFFING HOOK, and it is in the regulation itself (485.610(d)).** A necessary-provider CAH
+  that relocates keeps its grandfathered status only if the new location "Serves at least 75 percent
+  of the same service area", "Provides at least 75 percent of the same services", and "Is staffed by
+  75 percent of the same staff (including medical staff, contracted staff, and employees)". The
+  guidance explicitly contemplates hospitals that cannot meet the staff test: those "that have
+  difficulty meeting the 75 percent same staff criterion due to historically high staff turnover
+  and/or vacancy rates" may document the effect, but must show active recruitment and that the
+  cause is "circumstances beyond the CAH's control rather than the relocation". The three staff
+  categories are combined, not measured separately. Full staff-test text, verbatim: "Is staffed by
+  75 percent of the same staff (including medical staff, contracted staff, and employees) that were
+  on staff at the original location."
+  - **The recruitment evidence is a "such as" list, not a required checklist.** Verbatim: the CAH
+    "should also provide documentation of efforts it is making to reduce turnover, such as evidence
+    of active recruitment efforts, i.e., posting of vacancies, participating in job fairs, and
+    evidence of outreach to professional schools and universities." Note "professional schools and
+    universities", NOT "nursing schools". Never present these as things CMS requires.
+  - **A replacement building counts as a relocation.** Verbatim: "All newly constructed necessary
+    provider CAH facilities are considered relocated facilities. This includes construction of a new
+    facility that replaces the existing CAH main campus, even when on the same site as the original
+    building."
+  - PBL wording is "created or acquired on or after January 1, 2008" — acquisition counts, not just
+    construction.
+- **Origin:** OIG report "Most Critical Access Hospitals Would Not Meet the Location Requirements if
+  Required to Re-enroll in Medicare", released August 14, 2013 (OEI-05-12-00080). CMS concurred with
+  its recommendation to periodically reassess compliance.
+- Verified: 2026-08-26 (primary document read in full)
+
 ### Joint Commission nurse staffing (NPG 12, Accreditation 360, staffing-effectiveness history)
 
 Added 2026-08-24 for the joint-commission-nurse-staffing-standards post. jointcommission.org 403-blocks automated readers, so official-page claims are verified via named secondary reporting; the secondary source is part of the citation, keep it.

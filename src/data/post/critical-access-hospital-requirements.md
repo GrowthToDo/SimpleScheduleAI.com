@@ -49,6 +49,8 @@ That distinction separates a rule from a preference. A CoP is something a state 
 
 A critical access hospital must be located more than 35 miles by primary road from the nearest hospital, or more than 15 miles in mountainous terrain or where only secondary roads connect the two, under [42 CFR 485.610](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.610). The rule protects access where the next hospital is genuinely far.
 
+CMS guidance issued in August 2026 sets out [how it evaluates this requirement on hospitals that already hold the designation](/articles/cms-cah-location-eligibility-review-2026), and what triggers a review.
+
 The section also describes a "necessary provider" path, where a state certified a hospital as necessary regardless of distance. That path is closed to new entrants: a facility had to receive that designation from the state before January 1, 2006, per [485.610(c)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.610) and the [RuralHealthInfo topic guide](https://www.ruralhealthinfo.org/topics/critical-access-hospitals). A hospital seeking the designation today qualifies on the mileage test, not a new necessary-provider certification. For an existing facility, a surveyor treats location as settled at certification, so it rarely surfaces at an annual survey.
 
 ## What Are the Bed and Length of Stay Limits?

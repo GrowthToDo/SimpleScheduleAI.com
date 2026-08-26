@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "cms-cah-location-eligibility-review-2026",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T05:44:22.659Z",
+      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T05:44:24.400Z",
+      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T05:44:26.398Z",
+      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T05:44:26.444Z",
+      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T05:44:26.473Z",
+      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T05:44:26.473Z",
+      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T05:44:26.474Z",
+      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer, 2 blocking T13 link fixes applied",
+      "setAt": "2026-08-26T05:44:27.154Z",
+      "contentHash": "23e3bffbed07f4fdff65616e1748df1188dce67d19098dc1239a9d6f7768184d"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "adversarial-agent-2026-08-26, 8 defects + notes applied; dossier corrected from primary PDF",
+      "setAt": "2026-08-26T05:44:27.812Z",
+      "contentHash": "23e3bffbed07f4fdff65616e1748df1188dce67d19098dc1239a9d6f7768184d"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-26T05:44:28.490Z",
+      "contentHash": "23e3bffbed07f4fdff65616e1748df1188dce67d19098dc1239a9d6f7768184d"
+    }
+  },
+  "overrides": []
+}
