@@ -12,6 +12,43 @@ Tools: `mcp__bing-webmaster__get_crawl_issues`, `get_crawl_stats`,
 
 ---
 
+## 2026-08-26 — founder asked whether the 2 zero-byte pages are fixed. YES, cleared.
+
+**The persistent CrawlErrors = 2 is now 0.** It sat at exactly 2 every day from
+2026-08-16 through 2026-08-24, then dropped to 0 on 2026-08-25 and has stayed
+there. `get_crawl_issues` also returns an empty list.
+
+Latest daily stats (2026-08-25):
+
+| Metric | Value | vs 2026-08-20 |
+| --- | --- | --- |
+| **CrawlErrors** | **0** | was 2 |
+| **Code4xx** | **0** | was 1 |
+| Code5xx | 0 | unchanged |
+| BlockedByRobotsTxt | 0 | unchanged |
+| ContainsMalware | 0 | unchanged |
+| InIndex | **110** | was 103 |
+| Code2xx | 145 | was 137 |
+| CrawledPages that day | 14 | 45 |
+
+Error trend across the window, showing the clear break:
+CrawlErrors 2, 2, 2, 2, 2 (Aug 16-20), then 2, 3, 2 (Aug 22-24), then **0** (Aug 25).
+Code4xx over the same period: 0, 0, 0, 0, 1, 1, 2, 2, **0**.
+(No row exists for Aug 21 in the API response.)
+
+**InIndex against the sitemap.** Sitemap carried 112 URLs on 2026-08-26 against
+InIndex 110 measured on 2026-08-25. The gap is the two pages published on
+2026-08-26 (the QSO-26-15 article and the nurse scheduling problem post), which
+had not been crawled when the last stats row was written. Coverage is complete.
+
+**Honest limit, same as last time.** The original finding never named the two
+URLs, so this still is not a direct before-and-after on those specific pages.
+What changed since the 2026-08-21 check is that the error count itself went from
+a steady 2 to 0, which is the closest thing to confirmation the data can give.
+Nothing outstanding remains to chase.
+
+---
+
 ## 2026-08-21 — recheck of the "2 zero-byte pages" item. CLOSED, clean.
 
 **`get_crawl_issues` returned an empty list.** No URL on the property carries a
