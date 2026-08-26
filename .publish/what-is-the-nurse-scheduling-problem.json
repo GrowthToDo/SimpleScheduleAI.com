@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-the-nurse-scheduling-problem",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T06:30:01.299Z",
+      "contentHash": "588a734ac082248a5f03eecb45e26f0a4b8b6208bec231bf959f70e4cc6a04d1"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T06:30:03.162Z",
+      "contentHash": "588a734ac082248a5f03eecb45e26f0a4b8b6208bec231bf959f70e4cc6a04d1"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T06:30:14.157Z",
+      "contentHash": "588a734ac082248a5f03eecb45e26f0a4b8b6208bec231bf959f70e4cc6a04d1"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T06:30:14.191Z",
+      "contentHash": "588a734ac082248a5f03eecb45e26f0a4b8b6208bec231bf959f70e4cc6a04d1"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T06:30:14.214Z",
+      "contentHash": "588a734ac082248a5f03eecb45e26f0a4b8b6208bec231bf959f70e4cc6a04d1"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T06:30:14.215Z",
+      "contentHash": "588a734ac082248a5f03eecb45e26f0a4b8b6208bec231bf959f70e4cc6a04d1"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-26T06:30:14.216Z",
+      "contentHash": "588a734ac082248a5f03eecb45e26f0a4b8b6208bec231bf959f70e4cc6a04d1"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer, 6 findings applied",
+      "setAt": "2026-08-26T06:30:14.866Z",
+      "contentHash": "2ed517c57bb002f9889afc5b589ee76f64fd4e00fd8666ef0c18f844709ce7eb"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "adversarial-agent-2026-08-26, 4 defects + notes applied, all quotes re-verified",
+      "setAt": "2026-08-26T06:30:15.678Z",
+      "contentHash": "2ed517c57bb002f9889afc5b589ee76f64fd4e00fd8666ef0c18f844709ce7eb"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-08-26T06:30:16.457Z",
+      "contentHash": "2ed517c57bb002f9889afc5b589ee76f64fd4e00fd8666ef0c18f844709ce7eb"
+    }
+  },
+  "overrides": []
+}

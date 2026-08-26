@@ -55,7 +55,7 @@ The small team size at most CAHs makes roster accuracy especially consequential.
 
 ## How Nurse Rostering Differs from Scheduling?
 
-The distinction matters in practice even if the terms overlap in conversation.
+The distinction matters in practice even if the terms overlap in conversation. It is worth knowing that the academic literature does not draw it at all: in operations research, [the nurse scheduling problem](/blog/what-is-the-nurse-scheduling-problem) and the nurse rostering problem name the same problem.
 
 **Rostering** is about managing the staff list and assignment history over time. It answers questions like: Who is on our team? What can each person do? How much have they worked relative to their peers? Are their credentials current? Is our per diem pool large enough to cover anticipated gaps?
 

@@ -102,7 +102,7 @@ Fairness rules are where judgment lives. The system cannot grant every request a
 
 ## How Does the AI Choose From So Many Possible Schedules?
 
-The AI does not build one schedule and stop. It searches a large space of possible schedules, discards every arrangement that breaks a compliance rule, and scores the survivors on how well they satisfy the fairness rules. The highest-scoring valid schedule wins. Computer scientists call this constraint solving, and nurse rostering is one of its classic problems.
+The AI does not build one schedule and stop. It searches a large space of possible schedules, discards every arrangement that breaks a compliance rule, and scores the survivors on how well they satisfy the fairness rules. The highest-scoring valid schedule wins. Computer scientists call this constraint solving, and nurse rostering is one of its classic problems. Our guide to [the nurse scheduling problem](/blog/what-is-the-nurse-scheduling-problem) covers what researchers have actually proven about how hard it is.
 
 The closest everyday version is a very large seating chart. Picture a wedding where certain guests cannot sit together, a few must be near the door, and every table has a fixed number of seats. Now scale that to a month of shifts, where the seats are hours, the guests are nurses with different qualifications, and the rules include overtime limits and coverage minimums. A person cannot hold thousands of those combinations in their head at once, which is exactly why the manual version takes so long.
 
