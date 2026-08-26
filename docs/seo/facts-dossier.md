@@ -389,8 +389,14 @@ https://www.cms.gov/files/document/qso-26-15-cah-original-release-2026-08-21.pdf
   rural eligibility review of a CAH at any time."
 - **What does NOT count toward the distance test:** "Psychiatric hospitals, LTCHs, or
   Rehabilitation hospitals are not considered acute care hospitals and therefore will not factor
-  into a CAH's distance eligibility calculation." Also, IHS/Tribal and non-IHS/Tribal facilities do
-  not count against each other, in either direction.
+  into a CAH's distance eligibility calculation."
+- **IHS/Tribal exclusion, and the nuance that gets lost.** Verbatim: "the proximity of IHS/Tribal
+  hospitals or CAHs and non-IHS/Tribal hospitals or CAHs to each other is not considered." The
+  exclusion runs ONLY ACROSS that line. The memo's own examples make it explicit: a non-tribal
+  applicant 10 miles from an IHS hospital is fine (Example 1), and a tribal CAH 17 miles from a
+  non-tribal CAH is fine (Example 2), but a TRIBAL hospital 33 miles from an IHS hospital DOES fail
+  (Example 3), because both sit on the same side of the line. Never write this as a blanket "IHS
+  facilities are not counted" — two IHS/Tribal facilities count against each other normally.
 - **Islands:** a CAH is compliant on distance if the island is entirely surrounded by water, the
   CAH is the only hospital or CAH on it, and the island is not accessible by any roads. The rural
   requirement still applies.

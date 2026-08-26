@@ -5,58 +5,58 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-26T05:44:22.659Z",
-      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+      "checkedAt": "2026-08-26T08:11:18.795Z",
+      "contentHash": "bf3fe5ef1fb42a70229ecc8928f117e0c3368fa2e7e9dbef12834c8456cbd2a3"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-26T05:44:24.400Z",
-      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+      "checkedAt": "2026-08-26T08:11:20.672Z",
+      "contentHash": "bf3fe5ef1fb42a70229ecc8928f117e0c3368fa2e7e9dbef12834c8456cbd2a3"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-26T05:44:26.398Z",
-      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+      "checkedAt": "2026-08-26T08:11:22.784Z",
+      "contentHash": "bf3fe5ef1fb42a70229ecc8928f117e0c3368fa2e7e9dbef12834c8456cbd2a3"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-26T05:44:26.444Z",
-      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+      "checkedAt": "2026-08-26T08:11:22.820Z",
+      "contentHash": "bf3fe5ef1fb42a70229ecc8928f117e0c3368fa2e7e9dbef12834c8456cbd2a3"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-26T05:44:26.473Z",
-      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+      "checkedAt": "2026-08-26T08:11:22.851Z",
+      "contentHash": "bf3fe5ef1fb42a70229ecc8928f117e0c3368fa2e7e9dbef12834c8456cbd2a3"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-26T05:44:26.473Z",
-      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+      "checkedAt": "2026-08-26T08:11:22.862Z",
+      "contentHash": "bf3fe5ef1fb42a70229ecc8928f117e0c3368fa2e7e9dbef12834c8456cbd2a3"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-26T05:44:26.474Z",
-      "contentHash": "270dd2ec138d802de288abea9ab847274217ad7d15ee17319946cc7071589176"
+      "checkedAt": "2026-08-26T08:11:22.863Z",
+      "contentHash": "bf3fe5ef1fb42a70229ecc8928f117e0c3368fa2e7e9dbef12834c8456cbd2a3"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer, 2 blocking T13 link fixes applied",
-      "setAt": "2026-08-26T05:44:27.154Z",
-      "contentHash": "23e3bffbed07f4fdff65616e1748df1188dce67d19098dc1239a9d6f7768184d"
+      "setBy": "feature-dev:code-reviewer + founder live review",
+      "setAt": "2026-08-26T08:11:23.737Z",
+      "contentHash": "0291b3cedf497fdd0c3b2f03b8ecfcf5c71a5962e94946ebc11c154a95fa1923"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "adversarial-agent-2026-08-26, 8 defects + notes applied; dossier corrected from primary PDF",
-      "setAt": "2026-08-26T05:44:27.812Z",
-      "contentHash": "23e3bffbed07f4fdff65616e1748df1188dce67d19098dc1239a9d6f7768184d"
+      "setBy": "adversarial-agent-2026-08-26, findings applied",
+      "setAt": "2026-08-26T08:11:24.542Z",
+      "contentHash": "0291b3cedf497fdd0c3b2f03b8ecfcf5c71a5962e94946ebc11c154a95fa1923"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-08-26T05:44:28.490Z",
-      "contentHash": "23e3bffbed07f4fdff65616e1748df1188dce67d19098dc1239a9d6f7768184d"
+      "setAt": "2026-08-26T08:11:25.324Z",
+      "contentHash": "0291b3cedf497fdd0c3b2f03b8ecfcf5c71a5962e94946ebc11c154a95fa1923"
     }
   },
   "overrides": []

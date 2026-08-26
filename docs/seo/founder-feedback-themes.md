@@ -52,6 +52,13 @@ Every claim-bearing noun phrase says, in the same sentence, of what or to what.
 The more elegant the phrase, the more likely it fails.
 ("The goal is a return" — return to what? "Which advisory board?")
 
+**T22. A rule with an exception needs the exception spelled out, not compressed.**
+Check: any sentence of the form "X does not count against Y, and it works both
+ways" or similar. Say which cases are excluded and which still count, ideally
+with a concrete instance. Symmetry phrasing reads as completeness and hides the
+carve-out.
+("Indian Health Service and Tribal facilities are not counted against non-IHS facilities, and the exclusion runs both ways" — not clear, and it buried that two IHS facilities DO count against each other.)
+
 **T21. No system or web jargon in reader-facing prose.**
 Status codes, URL behaviour, internal vocabulary get translated into what the
 reader would observe.
