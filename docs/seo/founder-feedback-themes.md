@@ -109,6 +109,16 @@ claims ("no federal law requires", "the only vendor that") carry a date
 qualifier, but write it as a month, not a timestamp.
 ("Do we need this date?" — keep the qualifier, drop the machine formatting)
 
+**T23. Clarity outranks the word band.**
+The post-type range in check-blog is a WARN and a sanity signal, never a target.
+If trimming to reach it would remove an explanation, a defined term, or worked
+numbers, keep the writing and let the post run long. Say so when handing over,
+rather than cutting quietly. Cut whole sections that do not earn their place;
+never cut the connective tissue that tells a reader what you are talking about.
+(what-is-a-baylor-shift ran 3,556 against a 2,500 mofu band after three rounds of
+clarity fixes: "leave word band, the blog being clear is more important",
+founder 2026-08-27. The band itself was left unchanged, so the WARN still fires.)
+
 ## Links
 
 **T8. Inline named hyperlinks in body prose, never bracketed reference numbers.**
