@@ -22,67 +22,69 @@ metadata:
 
 ## Key Takeaways
 
-- A Baylor shift is two 12-hour weekend shifts, 24 hours worked, paid as more. The original 1981 plan at Baylor University Medical Center paid 36 hours for day shift and 40 for nights, a distinction almost every article drops.
-- Most hospital programs we could find published are not that trade. [Duke](https://hr.duke.edu/policies/health-system-pay/), [UVA](https://careers.uvahealth.org/us/en/weekend-program) and others run weekend programs where nurses work full hours for a premium instead.
+- A Baylor shift is two 12-hour weekend shifts: 24 hours worked, paid as if the nurse had worked considerably more. The original 1981 plan at Baylor University Medical Center paid 36 hours for day shift and 40 for nights, a distinction almost every article drops.
+- Most hospital weekend programs we could find published no longer pay for more hours than the nurse works. [Duke](https://hr.duke.edu/policies/health-system-pay/), [UVA](https://careers.uvahealth.org/us/en/weekend-program) and others pay full hours with a premium on top instead.
 - If your hospital uses the [8-and-80 overtime method](https://www.law.cornell.edu/uscode/text/29/207), a Baylor shift generates overtime on every weekend shift, because each 12-hour shift is four hours past the eight-hour daily trigger. Under a standard 40-hour week it generates none.
-- The size of your weekend premium decides two things at once. At one and a half times the weekday rate or more, federal rules both leave it out of the regular rate and let it count toward the overtime you owe. Below that, it does neither, so a 32-for-24 program fails on both counts.
+- How large the weekend premium is decides how federal rules treat it. A premium worth at least one and a half times the weekday rate can be kept out of the overtime base and counted against overtime you already owe. A smaller premium gets neither benefit: paying 32 hours for 24 worked is a third more than straight time, not half again more, so it falls short of the line.
 - Searching in August 2026, we found no published guidance on the minimum roster size a weekend program needs, and no weekend program documented at any critical access hospital.
 
 ## Table of Contents
 
 - [What Is a Baylor Shift?](#what-is-a-baylor-shift)
-- [Do Hospitals Still Run Them?](#do-hospitals-still-run-them)
+- [Do Hospitals Still Run Baylor Shifts?](#do-hospitals-still-run-baylor-shifts)
 - [Does a Baylor Shift Create Overtime?](#does-a-baylor-shift-create-overtime)
-- [What Does It Do to Everyone Else's Schedule?](#what-does-it-do-to-everyone-elses-schedule)
-- [Does It Work at a Small Hospital?](#does-it-work-at-a-small-hospital)
+- [What Does a Weekend Program Do to Everyone Else's Schedule?](#what-does-a-weekend-program-do-to-everyone-elses-schedule)
+- [Can a Small Hospital Run a Baylor Shift?](#can-a-small-hospital-run-a-baylor-shift)
 - [How Does SimpleScheduleAI Handle Weekend Fairness?](#how-does-simplescheduleai-handle-weekend-fairness)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-A Baylor shift is a weekend-only nursing schedule: two 12-hour shifts across Saturday and Sunday, 24 hours worked, paid as though it were considerably more. Nurses search for it because the deal is attractive. Managers should look at it because the number on the recruitment flyer is rarely the number that determines what the program costs.
+A Baylor shift is a weekend-only nursing schedule: two 12-hour shifts across Saturday and Sunday, 24 hours worked, paid as though it were considerably more. Nurses search for it because the deal is attractive. Managers need a second number. What the recruitment flyer advertises is what the nurse earns. What the program costs the hospital depends on an overtime rule most articles never mention.
 
 ## What Is a Baylor Shift?
 
-The plan has a date and a paper trail. Baylor University Medical Center in Dallas started it in 1981, documented in [the hospital's own peer-reviewed journal](https://pmc.ncbi.nlm.nih.gov/articles/PMC1305904/), with terms more specific than the versions circulating now:
+The Baylor plan has a date and a paper trail. Baylor University Medical Center in Dallas started it in 1981, and [the hospital's own peer-reviewed journal](https://pmc.ncbi.nlm.nih.gov/articles/PMC1305904/) records terms more specific than the versions circulating now:
 
 > "A two-days alternative plan was implemented, which gave nurses the choice of working two 12-hour shifts on weekends (and receiving pay for 36 hours of work or 40 hours for the night shift) or working five 8-hour days Monday through Friday."
 
-Three details in that sentence get lost almost everywhere. Night shift was paid 40, not 36. It was offered as a **choice against** a weekday schedule, not as an extra line bolted onto an existing roster. And the nurse got full-time benefits.
+Two of those terms carry consequences for a manager. The plan was a **choice against** a weekday schedule, so it moved nurses off weekday lines instead of adding a weekend line on top of the roster the hospital already had. Night shift was paid 40 hours rather than 36, so nights cost more for every hour they covered. Nurses on the plan also received full-time benefits.
 
-The idea did not start in healthcare. A Baylor director brought back a journal article about an Akron rubber plant. The plant "created a weekend alternative under which an employee was given 32 hours' pay for 24 hours' work." Baylor raised that 1.33 multiplier to 1.5, a difference that matters legally as well as financially.
+The idea did not start in healthcare. The same journal records that a Baylor director brought back an article about an Akron rubber plant. The plant had "created a weekend alternative under which an employee was given 32 hours' pay for 24 hours' work." Baylor took that arrangement and raised it, from a third more than straight time to half again more.
 
-It worked as recruitment. The hospital was running 32 percent annual nursing turnover against more than 120 vacant positions. Within a week of announcing the plan, over 600 nurses inquired. "Over 200 were hired, and all weekend positions were filled."
+The plan worked as recruitment, and the same source gives the numbers. Baylor was losing 32 percent of its nurses a year and carrying more than 120 vacant positions. Within a week of the announcement, over 600 nurses inquired. "Over 200 were hired, and all weekend positions were filled."
 
-One caution came from Baylor's own side, and nobody repeating this story mentions it. A 1984 account by a Baylor nursing administrator is quoted in the 2001 history. It said "there has been no formal study of the Two-days Alternative plan's impact on either patient care or nurses' job satisfaction and quality of life." Administrators believed morale had improved. That belief was offered as a belief. The recruitment numbers are the part anyone actually counted.
+Baylor also published a caution about its own plan, which the articles repeating this story leave out. A 1984 account by a Baylor nursing administrator is quoted in that same history. It said "there has been no formal study of the Two-days Alternative plan's impact on either patient care or nurses' job satisfaction and quality of life." Administrators thought morale had improved and physicians reported better relationships with nurses. Nobody measured either one. The hiring numbers were counted; the quality claims were not.
 
-## Do Hospitals Still Run Them?
+## Do Hospitals Still Run Baylor Shifts?
 
-Yes, but the model split in two, and conflating the halves will mislead you when you price one. Some programs still pay for more hours than worked. Others pay full hours with a premium on top. Searching hospital career pages in August 2026, every named weekend program we found at a large health system fell into the second group, and the pay-more-than-worked postings were mostly hospice and home health. That is what a search surfaces, not a market count.
+Yes, but weekend programs have split into two different deals, and pricing one as though it were the other will mislead you. In the first deal, a nurse is paid for more hours than the weekend actually covers. In the second, a nurse works the full hours and receives a premium on top of them.
+
+Searching hospital career pages in August 2026, every named weekend program we found at a large health system was the second kind. The postings that still paid for more hours than worked were mostly hospice and home health. That is what a search surfaced, not a count of the market.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="min-w-full table-fixed break-words align-top text-sm border border-slate-200 dark:border-slate-700">
     <thead class="bg-slate-50 dark:bg-slate-800">
       <tr>
         <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Program</th>
-        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Worked and paid</th>
-        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Effective multiple on covered hours</th>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Hours worked, and hours paid</th>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">What the hospital pays per hour actually covered</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">The Akron plant that inspired it</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Works 24 hours, paid 32</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">1.33, below the time-and-a-half line that matters for overtime</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Works 24 hours, paid for 32</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A third more than straight time, which falls below the time-and-a-half line that matters for overtime</td>
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Original Baylor plan, 1981</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Works 24 hours, paid 36 on days and 40 on nights</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">1.5 on days, 1.67 on nights</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Works 24 hours, paid for 36 on days and 40 on nights</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Half again more on days, two-thirds more on nights</td>
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Virginia Mason Hospital, current nurses' contract</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Works 24 hours, "compensated for 36 hours" on days and 40 on nights, coded 0.6 FTE</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">1.5 on days, 1.67 on nights</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Half again more on days, two-thirds more on nights</td>
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Duke weekend option</td>
@@ -102,47 +104,47 @@ The Virginia Mason row holds the detail a manager should read twice. Its [contra
 
 ## Does a Baylor Shift Create Overtime?
 
-It depends on a choice your hospital made years ago, and most articles about Baylor shifts skip it.
+That depends on which overtime method your hospital adopted, a choice usually made years ago and rarely revisited since.
 
 Under a standard 40-hour workweek, a 24-hour weekend generates no federal overtime, because 24 hours is nowhere near the 40-hour threshold.
 
 Hospitals have a second option. [Section 7(j) of the Fair Labor Standards Act](https://www.law.cornell.edu/uscode/text/29/207) lets a hospital use a 14-day period instead of a 7-day week. Overtime is then owed for hours "in excess of eight hours in any workday and in excess of eighty hours in such fourteen-day period." That is the arrangement called 8-and-80.
 
-The word "and" in that sentence hides something, and the implementing regulation spells it out. [29 CFR 778.601(d)](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-G/section-778.601) says overtime is owed for hours over eight in a day "whether or not more than 80 hours are worked in the period."
+The word "and" in that sentence carries the whole cost. It means the eight-hour daily trigger and the 80-hour period trigger are two separate obligations, not a choice between them. [29 CFR 778.601(d)](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-G/section-778.601) makes that explicit: overtime is owed for hours over eight in a day "whether or not more than 80 hours are worked in the period."
 
 So under 8-and-80, a 12-hour shift produces four hours of daily overtime by itself. A two-shift Baylor weekend produces eight hours of overtime a week, while the nurse works 48 hours in the 14-day period, nowhere near 80.
 
-**Practical consequence: 8-and-80 and 12-hour weekend shifts sit badly together.** A hospital that adopted 8-and-80 when it ran 8-hour shifts, and now adds a Baylor line, owes daily overtime on every weekend shift it staffs. Two conditions are easy to miss: the agreement must be reached **before** the work is performed, and a hospital cannot switch between systems to chase whichever is cheaper that month.
+**Practical consequence: 8-and-80 and 12-hour weekend shifts sit badly together.** A hospital that adopted 8-and-80 when it ran 8-hour shifts, and now adds a Baylor line, owes daily overtime on every weekend shift it staffs. Two conditions on using 8-and-80 are easy to miss: the agreement must be reached **before** the work is performed, and a hospital cannot switch between the two methods to chase whichever is cheaper that month.
 
-Then there is the weekend premium itself, which does two separate jobs that get collapsed into one.
+The weekend premium has two separate effects on that overtime, and they usually get collapsed into one.
 
-The first is the regular rate. By default a premium counts toward it. Federal law leaves weekend premium pay out only at one specific threshold: when "such premium rate is not less than one and one-half times the rate established in good faith for like work performed in nonovertime hours on other days." [29 CFR 778.203](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-D/section-778.203) is blunt about the failure case. Below time and a half, the extra compensation "must be included in determining the employee's regular rate of pay." Paying 36 for 24 is exactly 1.5, so it can qualify. Paying 32 for 24 is 1.33, and does not. A flat lump sum paid regardless of hours worked is not an overtime premium at all, whatever its size.
+The first effect is on the regular rate, the hourly figure overtime is calculated from. By default a premium counts toward it. Federal law leaves weekend premium pay out only at one specific threshold: when "such premium rate is not less than one and one-half times the rate established in good faith for like work performed in nonovertime hours on other days." [29 CFR 778.203](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-D/section-778.203) is blunt about the failure case. Below time and a half, the extra compensation "must be included in determining the employee's regular rate of pay." Paying 36 hours for 24 worked is exactly time and a half, so that premium can qualify. Paying 32 hours for 24 worked is only a third more, so it cannot. A flat lump sum paid regardless of hours worked is not an overtime premium at all, whatever its size.
 
-The second job is the one that changes the bill. A premium clearing the time-and-a-half bar does more than sit outside the regular rate. Under [29 U.S.C. 207(h)(2)](https://www.law.cornell.edu/uscode/text/29/207), extra compensation of that kind "shall be creditable toward overtime compensation payable pursuant to this section." So a hospital already paying a qualifying weekend premium may find it offsetting the daily overtime 8-and-80 generates, rather than stacking on top. How much it offsets depends on the premium's structure and your own pay-period arithmetic.
+The second effect is the one that changes the bill. A premium clearing the time-and-a-half bar does more than sit outside the regular rate. Under [29 U.S.C. 207(h)(2)](https://www.law.cornell.edu/uscode/text/29/207), extra compensation of that kind "shall be creditable toward overtime compensation payable pursuant to this section." So a hospital already paying a qualifying weekend premium may find it offsetting the daily overtime 8-and-80 generates, rather than stacking on top. How much it offsets depends on the premium's structure and your own pay-period arithmetic.
 
-Under 8-and-80 the overtime is owed either way. What a qualifying premium changes is whether you pay for it twice.
+Under 8-and-80 the overtime is owed either way. What a qualifying premium changes is whether you pay for those hours twice.
 
 None of this is legal advice, and we could find no Department of Labor opinion letter addressing Baylor plans specifically. Anyone telling you the treatment is settled is filling a gap that exists. Price the program with your counsel, and our guide to [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah) covers the wider picture.
 
-## What Does It Do to Everyone Else's Schedule?
+## What Does a Weekend Program Do to Everyone Else's Schedule?
 
-Two things, and the second one is why programs get cancelled.
+Two things, and the second is why weekend programs get cancelled.
 
-**It relieves weekend rotation without abolishing it.** The promise people hear is that everyone else stops working weekends. The most careful description we found is narrower: nurse leadership author [Rose Sherman](https://emergingrnleader.com/resurrecting-the-baylor-plan/) writes that Baylor nurses "worked almost every weekend while the rest of the staff **rarely** worked weekends." Rarely, not never. Every documented program is a hybrid, with the weekend crew covering the core and regular staff still rotating through holidays and gaps.
+**A weekend program relieves weekend rotation without abolishing it.** The promise people hear is that everyone else stops working weekends. The most careful description we found is narrower: nurse leadership author [Rose Sherman](https://emergingrnleader.com/resurrecting-the-baylor-plan/) writes that Baylor nurses "worked almost every weekend while the rest of the staff **rarely** worked weekends." Rarely, not never. Every documented program is a hybrid, with the weekend crew covering the core and regular staff still rotating through holidays and gaps.
 
-**The weekend crew is a purchased solution, and the price is load-bearing.** In March 2025, [Mission Hospital in Asheville](https://www.bpr.org/bpr-news/2025-03-06/mission-cuts-25-from-hourly-pay-for-weekend-nurses-will-require-others-to-pick-up-shifts-to-improve-staffing) cut its weekend differential from $40 an hour to $15 and announced that other nurses would be required to pick up weekend shifts. At least five weekend nurses resigned. That is the mechanism in one example: the weekend crew exists because it is paid to, and when the premium falls, weekend rotation lands back on the regular roster within weeks.
+**The weekend crew is a purchased solution, and the price is load-bearing.** In March 2025, [Mission Hospital in Asheville](https://www.bpr.org/bpr-news/2025-03-06/mission-cuts-25-from-hourly-pay-for-weekend-nurses-will-require-others-to-pick-up-shifts-to-improve-staffing) cut its weekend differential from $40 an hour to $15 and announced that other nurses would be required to pick up weekend shifts. At least five weekend nurses resigned. Asheville shows the mechanism in one move: the weekend crew exists because it is paid to, and when the premium falls, weekend rotation lands back on the regular roster within weeks.
 
-There is a continuity cost too. A dedicated weekend crew is a second staffing pool, and Monday morning inherits whatever it did not know.
+There is a continuity cost too. A dedicated weekend crew is a second staffing pool, so the weekday team comes in on Monday to patients it has not seen since Friday.
 
-Then there is the callout. Nobody has measured backfill difficulty in weekend-only programs, so we will not pretend otherwise. What is documented is how hard hospitals work to prevent it. Duke allows eight weekend shifts off a year, no more than four unscheduled, on pain of losing the premium entirely. Virginia Mason's nurses are "required to work all weekends including holiday weekends," with time off granted only through the vacation scheduling process in the same appendix. Rules that strict tell you what happens when a two-person weekend crew loses one person on a Saturday morning.
+Then there is the callout problem. Nobody has measured how hard weekend-only shifts are to backfill, so we will not pretend otherwise. What is documented is how hard hospitals work to prevent it. Duke allows eight weekend shifts off a year, no more than four unscheduled, on pain of losing the premium entirely. Virginia Mason's nurses are "required to work all weekends including holiday weekends," with time off granted only through the vacation scheduling process in the same appendix. Rules that strict tell you what happens when a two-person weekend crew loses one person on a Saturday morning.
 
-## Does It Work at a Small Hospital?
+## Can a Small Hospital Run a Baylor Shift?
 
-We do not know, and neither does anyone else. That is worth saying plainly, because the alternative is inventing an answer.
+Nothing in federal rules prevents it. But nobody has published evidence that it works at that size, and we are not going to invent any.
 
-We looked hard for a weekend option or Baylor program documented at a small, rural or critical access hospital, on that hospital's own website, and found none. Named weekend programs cluster in large systems with the volume and HR machinery to run them. That is an absence of evidence rather than proof no small hospital does it, but it is a real signal. We also found no published guidance on the minimum roster size a weekend program needs to be viable. If you see a threshold number quoted somewhere, it was made up.
+We searched for a weekend option or Baylor program documented at a small, rural or critical access hospital, on that hospital's own website, and found none. Named weekend programs cluster in large systems with the volume and HR machinery to run them. Finding none is not proof that no small hospital runs one, but it does mean no small hospital is publishing a model you could copy. We also found no published guidance on the minimum roster size a weekend program needs to be viable. If you see a threshold number quoted somewhere, it was made up.
 
-What can be said comes from the structure itself. A 36-for-24 program is roughly a 50 percent premium on the hours it covers, and it is a fixed cost. At a [critical access hospital](/critical-access-hospital-scheduling) running two or three nurses per shift, a dedicated weekend line commits a meaningful share of the roster to two days of the week and returns no weekday hours. Sherman's retrospective notes why these faded once recruiting pressure eased: "many hospitals stopped using Baylor because it is more expensive than traditional staffing."
+What can be said comes from the structure itself. A program paying 36 hours for 24 worked costs about half again the straight-time rate for every hour it covers, and that cost is fixed whether the weekend is busy or quiet. At a [critical access hospital](/critical-access-hospital-scheduling) running two or three nurses per shift, a dedicated weekend line commits a meaningful share of the roster to two days of the week and returns no weekday hours. Sherman's retrospective notes why Baylor programs faded once recruiting pressure eased: "many hospitals stopped using Baylor because it is more expensive than traditional staffing."
 
 If the problem is that weekends land unfairly on the same few people, a weekend program is one answer and rebalancing the rotation you already have is another. The second is cheaper and reversible. Our comparison of [8-hour and 12-hour shifts](/blog/8-hour-vs-12-hour-nursing-shifts) and our guide to [12-hour shift patterns and coverage](/blog/12-hour-hospital-shifts-scheduling) cover the design choices underneath both.
 
@@ -150,20 +152,20 @@ If the problem is that weekends land unfairly on the same few people, a weekend 
 
 SimpleScheduleAI is an [AI-native nurse scheduling](/ai-nurse-scheduling) service for Texas hospitals of 25 beds or fewer. The AI builds each cycle's schedule, our scheduling team checks it, and the nurse manager approves it.
 
-Weekend distribution is one of the things the engine actually tracks. Weekend counts carry forward between cycles rather than resetting, so a nurse who covered more weekends last cycle is weighted toward fewer in the next, and holidays are balanced against the team average. That matters here because a weekend program is one way to fix unfair weekend distribution and a better rotation is another.
+Weekend distribution is one of the things the engine tracks. Weekend counts carry forward between cycles rather than resetting, so a nurse who covered more weekends last cycle is weighted toward fewer in the next, and holidays are balanced against the team average. That matters here because a weekend program is one way to fix unfair weekend distribution, and a better rotation is another.
 
-Two boundaries are worth stating plainly, because this is not the right fit for either job. The scheduler tracks applicable overtime thresholds but does not implement the 8-and-80 calculation method, so a hospital on that method should treat this article as background for a conversation with counsel rather than something software settles. And [the service](/how-it-works) builds and checks schedules; it does not price compensation programs. Our [nurse scheduling software](/nurse-scheduling-software) overview covers where tooling helps.
+Two things SimpleScheduleAI is not the right fit for are worth stating plainly. It does not calculate your overtime: the scheduler tracks applicable overtime thresholds but does not implement the 8-and-80 method, so a hospital on that method should treat this article as background for a conversation with counsel rather than something software settles. And it does not price compensation programs: [the service](/how-it-works) builds and checks schedules. Our [nurse scheduling software](/nurse-scheduling-software) overview covers where tooling helps.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    The Baylor plan solved a 1981 recruiting emergency, and it solved it well enough that 600 nurses called in a week. What gets copied from that story is the schedule. What gets left out is that Baylor never studied whether it was good for patients or for nurses, said so at the time, and that hospitals dropped it once hiring got easier because it cost more than ordinary staffing. Before pricing one, work out what you are actually buying. If it is recruitment in a market where you cannot hire, that is the case it has genuinely proven. If it is weekend fairness, a rotation you can rebalance for free is the cheaper experiment, and you can reverse it without anyone resigning.
+    The Baylor plan solved a 1981 recruiting emergency, and it solved it well enough that 600 nurses called in a week. What gets copied from that story is the schedule. What gets left out is that Baylor never studied whether it was good for patients or for nurses, said so at the time, and that hospitals dropped it once hiring got easier because it cost more than ordinary staffing. Before pricing a weekend program, work out what you are buying with it. If you are buying recruitment in a market where you cannot hire, that is the one thing the Baylor plan has genuinely proven it can do. If you are buying weekend fairness, rebalancing the rotation you already have costs nothing, and you can reverse it without anyone resigning.
   </p>
 </div>
 
 ## What to Do This Week
 
-1. Find out whether your hospital is on the standard 40-hour workweek or the 8-and-80 method. It changes what a 12-hour weekend shift costs, and many managers have never been told which one they are on.
+1. Find out whether your hospital is on the standard 40-hour workweek or the 8-and-80 method. The answer changes what a 12-hour weekend shift costs, and many managers have never been told which one they are on.
 2. If you already pay a weekend differential, check whether it is at least one and a half times the weekday rate. Above that line it can be credited against overtime you owe; below it, federal rules pull it into the overtime calculation instead.
 3. Count how weekends actually fell across your roster over the last three months. If two or three names carry most of them, that is the problem a weekend program would be fixing, and our guide to [reducing nurse overtime](/blog/how-to-reduce-nurse-overtime) covers the cheaper fixes first.
 4. Before pricing a weekend line, price the alternative: rebalancing the rotation you already have.
@@ -182,13 +184,13 @@ Two boundaries are worth stating plainly, because this is not the right fit for 
 Twenty-four hours worked, as two 12-hour weekend shifts. The pay varies. The original 1981 plan paid 36 hours for day shift and 40 for nights. Some current programs still pay more hours than worked, and many hospitals now pay full hours plus a premium instead.
 
 **Q: Is a Baylor shift full time?**
-It depends what the hospital means. Baylor nurses usually get full-time medical benefits, but the FTE code can be lower: one live contract pays close to full time while coding the position 0.6 FTE, with seniority and vacation accruing on hours worked rather than hours paid. Ask how the FTE is coded before assuming anything downstream.
+It depends on what the hospital means by full time. Baylor nurses usually get full-time medical benefits, but the FTE code can be lower: one live contract pays close to full time while coding the position 0.6 FTE, with seniority and vacation accruing on hours worked rather than hours paid. Ask how the FTE is coded before assuming anything downstream.
 
 **Q: Does a Baylor shift get overtime?**
 Under a standard 40-hour workweek, no, because 24 hours is well under the threshold. Under the 8-and-80 method hospitals may adopt, yes: each 12-hour shift is four hours past the eight-hour daily trigger, and that applies whether or not 80 hours are worked in the period. A weekend premium set at one and a half times the weekday rate or more can be credited toward that overtime rather than paid on top of it, so the premium you already pay may cover part or all of what is owed.
 
-**Q: Can a critical access hospital run one?**
-Nothing prevents it, but we found none documented and no published guidance on the minimum roster size. The structural obstacle is that a dedicated weekend line commits a fixed share of a thin roster to two days a week and returns no weekday hours.
+**Q: Can a critical access hospital run a Baylor shift?**
+Nothing prevents it, but we found no critical access hospital documenting one and no published guidance on the minimum roster size. The structural obstacle is that a dedicated weekend line commits a fixed share of a thin roster to two days a week and returns no weekday hours.
 
 ## Sources
 
