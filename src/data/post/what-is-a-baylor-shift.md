@@ -6,7 +6,7 @@ title: "What Is a Baylor Shift? A Manager's Guide to Weekend Programs"
 excerpt: >
   Two 12-hour weekend shifts, paid as 36 hours. Nurses know the deal. Managers need the other half:
   what it costs the hospital running it, and the overtime rule that can make it far more expensive
-  than the arithmetic suggests.
+  than the headline pay suggests.
 image: ~/assets/images/pool/payroll-desk-02.webp
 category: Healthcare Operations
 postType: mofu
@@ -25,7 +25,7 @@ metadata:
 - A Baylor shift is two 12-hour weekend shifts: 24 hours worked, paid as if the nurse had worked considerably more. The original 1981 plan at Baylor University Medical Center paid 36 hours for day shift and 40 for nights, [per the hospital's own published history](https://pmc.ncbi.nlm.nih.gov/articles/PMC1305904/), a distinction almost every article drops.
 - Most hospital weekend programs we could find published no longer pay for more hours than the nurse works. [Duke](https://hr.duke.edu/policies/health-system-pay/), [UVA](https://careers.uvahealth.org/us/en/weekend-program) and others pay full hours with a premium on top instead.
 - If your hospital uses the [8-and-80 overtime method](https://www.law.cornell.edu/uscode/text/29/207), a Baylor shift generates overtime on every weekend shift, because each 12-hour shift is four hours past the eight-hour daily trigger. Under a standard 40-hour week it generates none.
-- How large the weekend premium is decides how federal rules treat it. A premium worth at least one and a half times the weekday rate does two things for the hospital. It is left out of the pay figure the overtime is calculated from, and the money already paid counts against the overtime bill rather than adding to it. A smaller premium does neither, which is why a hospital paying 32 hours for 24 worked can spend more per weekend than one paying 36.
+- Pay the weekend premium below one and a half times the weekday rate and federal rules turn it against you: your overtime bill goes up instead of down. In the worked example below, a hospital paying 32 hours for 24 worked spends $1,493 on a weekend. One paying 36 hours spends $1,440.
 - Searching in August 2026, we found no published guidance on the minimum roster size a weekend program needs, and no weekend program documented at any critical access hospital.
 
 ## Table of Contents
@@ -175,7 +175,7 @@ Both effects turn on the same threshold, which produces a result most managers d
 
 The more generous program is the cheaper one. Paying for 36 hours clears the line, so the premium stays out of the overtime rate and then pays the overtime bill. Paying for 32 hours misses the line, so the premium pushes the overtime rate up and covers none of what is owed. The hospital that tried to save $160 a weekend on the headline rate pays $53.33 more.
 
-Two cautions on that arithmetic. A flat lump sum paid regardless of hours worked is not an overtime premium at all, whatever its size, so it fails both tests. And how much of the credit actually lands depends on how your premium is structured and how your pay periods fall, which is a question for your payroll team with real numbers rather than these illustrative ones.
+Two cautions on those numbers. A flat lump sum paid regardless of hours worked is not an overtime premium at all, whatever its size, so it fails both tests. And how much of the credit actually lands depends on how your premium is structured and how your pay periods fall, which is a question for your payroll team using your own rates rather than these illustrative ones.
 
 None of this is legal advice, and we could find no Department of Labor opinion letter addressing Baylor plans specifically. Anyone telling you the treatment is settled is filling a gap that exists. Price the program with your counsel, and our guide to [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah) covers the wider picture.
 

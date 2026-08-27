@@ -85,7 +85,19 @@ const AI_TONE_PHRASES = [
 // "utilization" is domain vocabulary and must pass. Same exemptions as
 // AI_TONE_PHRASES: verbatim blockquotes and the canonical author bio.
 const AI_TONE_WORDS =
-  /\b(fosters?|fostered|fostering|utilizes?|utilized|utilizing|facilitates?|facilitated|facilitating|empowers?|empowered|empowering|supercharges?|supercharged|supercharging)\b/i;
+  /\b(fosters?|fostered|fostering|utilizes?|utilized|utilizing|facilitates?|facilitated|facilitating|empowers?|empowered|empowering|supercharges?|supercharging|supercharged)\b/i;
+
+// Founder word bans: reader-facing vocabulary the founder has rejected by
+// name. This list exists because "arithmetic" was rejected verbally, never
+// written down anywhere, and then shipped in 21 live posts and twice more in
+// a single new one. Any word-level preference belongs HERE, in the linter, the
+// same session it is given — not in a memory file or a themes doc, both of
+// which depend on someone remembering to re-read them.
+//
+// WARN, not FAIL: each of these entered the corpus before its rule existed, so
+// failing would block unrelated work. A corpus sweep is a separate, deliberate
+// change the founder approves.
+const FOUNDER_BANNED_WORDS = [['arithmetic', 'use "the numbers" or "the math" (founder 2026-08-27)']];
 
 // Structural AI-slop patterns (WARN, not fail: each has legitimate uses, so a
 // human judges). Sourced from the no-ai-slop pattern list, scanned against the
@@ -423,6 +435,11 @@ function check(file) {
     }
     const wordHit = line.replace(/https?:\/\/\S+/g, '').match(AI_TONE_WORDS);
     if (wordHit) fail(`AI-tone "${wordHit[0]}"`, bodyOffset + i + 1, line.trim().slice(0, 100));
+    for (const [word, guidance] of FOUNDER_BANNED_WORDS) {
+      if (new RegExp(`\\b${word}\\b`, 'i').test(line.replace(/https?:\/\/\S+/g, ''))) {
+        warn(`Founder-banned word "${word}": ${guidance}`, bodyOffset + i + 1, line.trim().slice(0, 100));
+      }
+    }
   });
 
   // 2b. Structural AI-slop patterns, WARN so a human judges each one. On the
