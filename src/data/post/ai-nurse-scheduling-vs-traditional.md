@@ -144,7 +144,7 @@ The largest impact is not schedule construction. It is callout replacement, wher
 
 **Consistent overtime enforcement.** Traditional scheduling produces overtime surprises because no one can reliably track cumulative hours across a 14-day pay period while also building the grid. AI scheduling treats the [applicable FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) as a hard constraint in every schedule generation and every callout ranking, so the threshold is checked before an assignment is ever offered.
 
-**Schedule construction time.** A 4-week schedule for a 20-nurse roster takes 6 to 10 hours to build by hand. AI scheduling reduces that to 1 to 2 hours of review and adjustment. The construction work is done by the system; the manager's time goes to judgment, not arithmetic.
+**Schedule construction time.** A 4-week schedule for a 20-nurse roster takes 6 to 10 hours to build by hand. AI scheduling reduces that to 1 to 2 hours of review and adjustment. The construction work is done by the system; the manager's time goes to judgment, not math.
 
 ## What Are the Real Limitations of AI Nurse Scheduling?
 

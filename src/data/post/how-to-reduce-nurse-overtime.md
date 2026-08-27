@@ -85,7 +85,7 @@ Change who gets called first. When a nurse calls out, most managers call whoever
 
 The fix is the ranked callout list from our [callout handling guide](/blog/how-to-handle-nurse-callouts): before any call, look at a list showing each nurse's hours in the current period, their credentials against the open shift, and their availability. Sort by overtime risk, lowest first. Call from the top and log each attempt.
 
-A spreadsheet with running hour totals serves the purpose. The hard part is not building it; it is keeping it current and actually consulting it at midnight, which is exactly when nobody wants to do arithmetic. Some scheduling systems automate the ranking; done by hand, the discipline still pays for itself in avoided premium hours.
+A spreadsheet with running hour totals serves the purpose. The hard part is not building it; it is keeping it current and actually consulting it at midnight, which is exactly when nobody wants to do math. Some scheduling systems automate the ranking; done by hand, the discipline still pays for itself in avoided premium hours.
 
 ## How Do Hour-Tracking Blind Spots Create Overtime?
 

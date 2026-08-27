@@ -442,6 +442,72 @@ function check(file) {
     }
   });
 
+  // 2a-bis. Reader-comprehension checks, added 2026-08-27 after the Baylor
+  // shift post shipped green through every gate and then took three rounds of
+  // founder feedback, all of it comprehension rather than mechanics.
+  //
+  // (i) COINED SHORTHAND USED BEFORE IT IS EXPLAINED. The post invented
+  // "32-for-24" while drafting a table, then used it in Key Takeaways and two
+  // later sections. To the author it was defined by the table; to a reader
+  // arriving at the takeaways it was noise. Shorthand of the form <n>-for-<n>
+  // or <n>/<n> must be spelled out in words ("36 hours for 24 worked") at or
+  // before its first use.
+  //
+  // (ii) DOMAIN JARGON WITH NO PLAIN-LANGUAGE GLOSS. Terms a nurse manager
+  // will not know cold need explaining the first time they appear. The trigger
+  // was "the regular rate", which the post used four times before ever saying
+  // it means the hourly figure overtime is calculated from.
+  //
+  // Both WARN: each has legitimate uses (a glossary post defining the term, a
+  // verbatim quote), so a human decides.
+  const SHORTHAND_RE = /\b\d{1,3}-for-\d{1,3}\b/;
+  const JARGON_TERMS = [
+    ['regular rate', /\b(hourly figure|rate .{0,40}overtime is (calculated|figured) from|all .{0,30}pay divided by)/i],
+    ['8-and-80', /\b(14-day|fourteen-day|80 hours? in)/i],
+    ['FTE', /\b(full-time equivalent|full time equivalent)/i],
+  ];
+  {
+    const seenShorthand = new Set();
+    body.forEach((line, i) => {
+      if (inBlockquote(line)) return;
+      const m = line.match(SHORTHAND_RE);
+      if (m && !seenShorthand.has(m[0])) {
+        seenShorthand.add(m[0]);
+        // Spelled out on the same line, or anywhere earlier in the body?
+        const upTo = body.slice(0, i + 1).join(' ');
+        const [a, b] = m[0].split('-for-');
+        const spelledOut = new RegExp(`${a}\\s*hours?\\s+for\\s+${b}`, 'i').test(upTo);
+        if (!spelledOut) {
+          warn(
+            `Coined shorthand "${m[0]}" used before it is spelled out — write "${a} hours for ${b} worked" at first use`,
+            bodyOffset + i + 1,
+            line.trim().slice(0, 100)
+          );
+        }
+      }
+    });
+  }
+  {
+    const flagged = new Set();
+    body.forEach((line, i) => {
+      if (inBlockquote(line)) return;
+      for (const [term, glossRe] of JARGON_TERMS) {
+        if (flagged.has(term)) continue;
+        if (!new RegExp(`\\b${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(line)) continue;
+        flagged.add(term);
+        // Gloss must appear on this line or an adjacent one.
+        const window = body.slice(Math.max(0, i - 1), i + 2).join(' ');
+        if (!glossRe.test(window)) {
+          warn(
+            `Jargon "${term}" appears with no plain-language gloss at first use`,
+            bodyOffset + i + 1,
+            line.trim().slice(0, 100)
+          );
+        }
+      }
+    });
+  }
+
   // 2b. Structural AI-slop patterns, WARN so a human judges each one. On the
   // binary contrast the founder's ruling (2026-08-10) is stricter than the
   // first pass: a defensible instance is still a prominent AI tell, and the

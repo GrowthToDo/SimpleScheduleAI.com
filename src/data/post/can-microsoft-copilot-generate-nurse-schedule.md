@@ -129,7 +129,7 @@ One honest limitation: if you need a quick one-off grid and are comfortable chec
 
 1. Try Copilot on one real week. Give it your staff list and shift rules and see how close the draft comes. That shows you where the easy part ends.
 2. Write down the checks the draft cannot do for itself: minimum coverage per shift, running hours against overtime, credential-to-shift matching, callout replacement, and a logged record. That list is the actual job.
-3. Time how long the manual verification takes on one schedule. At a $50/hr loaded rate, 6 hours a week of building and checking schedules is about $300 a week, roughly $15,600 a year. Six hours is the build-and-check share of the [8 to 12 hours a week](/blog/nurse-manager-scheduling-time-breakdown) a CAH nurse manager typically spends on the schedule. This is an illustrative figure at the stated rate, not a customer result. Our [ROI calculator](/roi) runs the same arithmetic on your own numbers.
+3. Time how long the manual verification takes on one schedule. At a $50/hr loaded rate, 6 hours a week of building and checking schedules is about $300 a week, roughly $15,600 a year. Six hours is the build-and-check share of the [8 to 12 hours a week](/blog/nurse-manager-scheduling-time-breakdown) a CAH nurse manager typically spends on the schedule. This is an illustrative figure at the stated rate, not a customer result. Our [ROI calculator](/roi) runs the same math on your own numbers.
 4. Confirm your process produces an audit trail. If the record is a saved spreadsheet with no history of changes, that is a survey gap to close.
 5. Book a call with our team to see how a draft that already enforces coverage, hours, and skill mix would look for your roster.
 

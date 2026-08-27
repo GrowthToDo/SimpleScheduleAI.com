@@ -108,7 +108,7 @@ For a rural hospital, the anchor is only where the accounting starts. The parts 
   </table>
 </div>
 
-One honest note on the arithmetic: the NSI $60,090 already includes some vacancy coverage, so the coverage row overlaps with the anchor rather than stacking cleanly on top of it. The added rows show where a small rural hospital feels that one departure most sharply. They mostly sit inside the $60,090 already, so treat them as detail on the anchor rather than extra dollars to add up.
+One honest note on the math: the NSI $60,090 already includes some vacancy coverage, so the coverage row overlaps with the anchor rather than stacking cleanly on top of it. The added rows show where a small rural hospital feels that one departure most sharply. They mostly sit inside the $60,090 already, so treat them as detail on the anchor rather than extra dollars to add up.
 
 ## What Does the Open Role Cost While You Recruit?
 

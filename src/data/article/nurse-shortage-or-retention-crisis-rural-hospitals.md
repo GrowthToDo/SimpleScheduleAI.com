@@ -69,7 +69,7 @@ That is why the retention framing is not just a national talking point for a sma
 
 Enough to change the annual budget conversation. The 2025 NSI National Health Care Retention and RN Staffing Report puts the average cost to replace one staff registered nurse at $61,110, with a national RN turnover rate of 16.4 percent ([NSI, 2025](https://www.nsinursingsolutions.com/Documents/Library/NSI_National_Health_Care_Retention_Report.pdf)). On a small roster, that figure does not get spread thin. It lands whole.
 
-Here is the arithmetic, scaled to a rural roster. The figures below are illustrative, built only from NSI's published averages and simple multiplication, not from any hospital's actual results.
+Here is the math, scaled to a rural roster. The figures below are illustrative, built only from NSI's published averages and simple multiplication, not from any hospital's actual results.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-sm border-collapse table-fixed break-words">

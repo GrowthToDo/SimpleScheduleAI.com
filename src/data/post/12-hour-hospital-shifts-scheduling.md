@@ -92,7 +92,7 @@ categories: coverage math, rotation design, and FLSA overtime management.
 14 days (a typical scheduling period), you need a minimum of 14 day shifts and 14
 night shifts covered, 28 nurse-shifts total, before accounting for days off. For a
 team where each full-time nurse works 3 shifts per week (42 shifts over 14 days
-across the team), the arithmetic seems comfortable. It isn't: not every nurse is
+across the team), the math seems comfortable. It isn't: not every nurse is
 available every week, and weekends require equal coverage to weekdays.
 
 The weekend problem is where small-team 12-hour scheduling breaks down. A 14-day
@@ -236,7 +236,7 @@ your 12-hour shift schedules for critical access hospitals, applying coverage mi
 weekend distribution rules, fatigue constraints, and FLSA overtime logic simultaneously,
 generating three draft options (balanced, overtime-minimized, fair-rotation), and our
 scheduling team checks every draft before it reaches you for review. The
-[AI nurse scheduling](/ai-nurse-scheduling) engine handles the constraint arithmetic;
+[AI nurse scheduling](/ai-nurse-scheduling) engine handles the constraint math;
 the nurse manager keeps the judgment calls.
 
 The fatigue guard rules are part of the scheduling logic: we flag any draft where a

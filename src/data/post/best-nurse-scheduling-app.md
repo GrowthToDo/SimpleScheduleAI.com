@@ -128,7 +128,7 @@ Two buying intents get tangled under this keyword, and they lead to different sh
   </table>
 </div>
 
-One note on the pricing column. Only two of the eight publish their rates: Deputy lists $5 to $9 per user per month depending on plan, and SimpleScheduleAI publishes flat monthly pricing. The other six quote per deployment. An unpublished price is not a red flag by itself, but it usually signals an enterprise sales process sized for bigger buyers, the same [vendor size signals](/blog/nurse-scheduling-software-minimum-employees) that tell a small hospital whether a product was built with it in mind. For per-user apps, do the arithmetic before the demo: $5 per user per month across a 25-nurse roster is $1,500 a year, an illustrative figure, before counting the manual work the app leaves behind.
+One note on the pricing column. Only two of the eight publish their rates: Deputy lists $5 to $9 per user per month depending on plan, and SimpleScheduleAI publishes flat monthly pricing. The other six quote per deployment. An unpublished price is not a red flag by itself, but it usually signals an enterprise sales process sized for bigger buyers, the same [vendor size signals](/blog/nurse-scheduling-software-minimum-employees) that tell a small hospital whether a product was built with it in mind. For per-user apps, do the math before the demo: $5 per user per month across a 25-nurse roster is $1,500 a year, an illustrative figure, before counting the manual work the app leaves behind.
 
 ## What Makes a Nurse Scheduling App Different From a General Scheduling App?
 

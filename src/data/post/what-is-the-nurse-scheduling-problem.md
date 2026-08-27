@@ -51,7 +51,7 @@ One naming point, because it causes confusion when you go looking for the resear
 
 ## How Many Schedules Are Possible at an 18-Nurse Hospital?
 
-More than you can search by hand, and the arithmetic is worth doing because most published claims about it are not sourced.
+More than you can search by hand, and the math is worth doing because most published claims about it are not sourced.
 
 Take a realistic small hospital unit: 18 nurses, a 4-week cycle, and a daily requirement of 3 nurses on days and 2 on nights. Nobody works twice in one day. Count the ways to staff a single day:
 
@@ -65,7 +65,7 @@ That is an exact count of the rosters satisfying coverage and one-shift-per-day,
 
 What matters about that number is the consequence: you cannot reach a good schedule by checking every option. Every method that works, including the one in your head, is a way of not looking at almost all of them.
 
-Burke's survey sets up an illustrative ward of a head nurse, 15 nurses, three caretakers and two trainees. It calls that setup "rather simple" and observes "there is an extremely high number of possible solutions," leaving the arithmetic undone. The deliberately simplified example in the field's standard reference is the staffing of a small hospital.
+Burke's survey sets up an illustrative ward of a head nurse, 15 nurses, three caretakers and two trainees. It calls that setup "rather simple" and observes "there is an extremely high number of possible solutions," leaving the math undone. The deliberately simplified example in the field's standard reference is the staffing of a small hospital.
 
 ## Is the Nurse Scheduling Problem Really NP-Hard?
 

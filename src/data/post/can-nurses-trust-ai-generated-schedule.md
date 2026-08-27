@@ -91,7 +91,7 @@ An AI scheduling system cannot account for context that was not entered. If a nu
 
 It also cannot assess unit culture, interpersonal dynamics, or the qualitative dimensions of team composition. Putting two strong personalities on the same night shift may be technically compliant but operationally unwise. That judgment belongs to the manager, not the algorithm.
 
-These are not failures of AI scheduling. They are the reason why the manager reviews and approves every schedule before it is posted. The system handles the work that does not require that judgment: the coverage requirements, the fairness math, the scheduling arithmetic. The manager handles the work that does.
+These are not failures of AI scheduling. They are the reason why the manager reviews and approves every schedule before it is posted. The system handles the work that does not require that judgment: the coverage requirements, the fairness math, the hour counting. The manager handles the work that does.
 
 The important distinction for staff is this: an AI-generated schedule is a draft produced by a process that applies the same rules to everyone. A manually built schedule is a draft produced by a human who has informal shortcuts, relationships, and cognitive biases that may or may not be applied consistently. Both require review. The AI version is more auditable because the rules that produced it are visible.
 

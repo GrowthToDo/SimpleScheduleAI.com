@@ -42,7 +42,7 @@ In that setting, scheduling is not a background task that happens between other 
 
 How much of the week does that take? In our interviews with more than 30 nurse managers, the consistent answer was 8 to 12 hours in a typical week, as an average across the 4-6 week scheduling cycle. The rhythm is lumpy: the schedule build lands once per cycle, while swap requests and callout cover can land in any week. That is an estimate from those conversations, not a measured time study. The activity-by-activity split is in our guide to [where nurse manager scheduling time actually goes](/blog/nurse-manager-scheduling-time-breakdown).
 
-Put your own rate against it and the number gets concrete. At an illustrative $50 an hour loaded rate, 10 hours a week is about $26,000 a year of leadership time going into a task most facilities have never formally measured. Run that arithmetic with your own figure rather than ours. It also excludes the downstream cost of scheduling errors, unnecessary overtime, compliance gaps, and the retention effect of a schedule staff consider unfair.
+Put your own rate against it and the number gets concrete. At an illustrative $50 an hour loaded rate, 10 hours a week is about $26,000 a year of leadership time going into a task most facilities have never formally measured. Run that math with your own figure rather than ours. It also excludes the downstream cost of scheduling errors, unnecessary overtime, compliance gaps, and the retention effect of a schedule staff consider unfair.
 
 ## Is a Nurse Manager the Same as a Charge Nurse?
 

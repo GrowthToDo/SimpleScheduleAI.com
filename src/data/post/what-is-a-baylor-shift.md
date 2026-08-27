@@ -24,7 +24,7 @@ metadata:
 
 - A Baylor shift is two 12-hour weekend shifts: 24 hours worked, paid as if the nurse had worked considerably more. The original 1981 plan at Baylor University Medical Center paid 36 hours for day shift and 40 for nights, [per the hospital's own published history](https://pmc.ncbi.nlm.nih.gov/articles/PMC1305904/), a distinction almost every article drops.
 - Most hospital weekend programs we could find published no longer pay for more hours than the nurse works. [Duke](https://hr.duke.edu/policies/health-system-pay/), [UVA](https://careers.uvahealth.org/us/en/weekend-program) and others pay full hours with a premium on top instead.
-- If your hospital uses the [8-and-80 overtime method](https://www.law.cornell.edu/uscode/text/29/207), a Baylor shift generates overtime on every weekend shift, because each 12-hour shift is four hours past the eight-hour daily trigger. Under a standard 40-hour week it generates none.
+- If your hospital uses the [8-and-80 overtime method](https://www.law.cornell.edu/uscode/text/29/207), which counts overtime over a 14-day period instead of a 7-day week, a Baylor shift generates overtime on every weekend shift, because each 12-hour shift is four hours past the eight-hour daily trigger. Under a standard 40-hour week it generates none.
 - Pay the weekend premium below one and a half times the weekday rate and federal rules turn it against you: your overtime bill goes up instead of down. In the worked example below, a hospital paying 32 hours for 24 worked spends $1,493 on a weekend. One paying 36 hours spends $1,440.
 - Searching in August 2026, we found no published guidance on the minimum roster size a weekend program needs, and no weekend program documented at any critical access hospital.
 
@@ -83,7 +83,7 @@ Searching hospital career pages in August 2026, every named weekend program we f
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Virginia Mason Hospital, current nurses' contract</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Works 24 hours, "compensated for 36 hours" on days and 40 on nights, coded 0.6 FTE</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Works 24 hours, "compensated for 36 hours" on days and 40 on nights, but counted as 0.6 of a full-time equivalent post</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Half again more on days, two-thirds more on nights</td>
       </tr>
       <tr>

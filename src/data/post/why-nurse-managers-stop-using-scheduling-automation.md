@@ -111,7 +111,7 @@ The unit itself also changes. A nurse resigns, a competency level moves, the cen
 
 One bad schedule ends trust because a scheduling error at a small hospital lands on a person rather than on a report. A schedule that puts an unqualified nurse in a charge slot, or leaves a night uncovered, is discovered by whoever is on the unit at the time. After that, the manager checks every future draft line by line, which takes about as long as building from scratch.
 
-That is the mechanism that turns one defect into permanent abandonment. Automation only saves time if its output can be trusted without full re-verification. Once a manager audits every assignment, the arithmetic reverses and the tool becomes a slower route to the same schedule.
+That is the mechanism that turns one defect into permanent abandonment. Automation only saves time if its output can be trusted without full re-verification. Once a manager audits every assignment, the math reverses and the tool becomes a slower route to the same schedule.
 
 The stakes are higher at a small hospital because the margin for absorbing an error is thinner. Under [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), a Critical Access Hospital must furnish nursing services under written policies, and the schedule is part of the evidence that patients were adequately staffed. There is no float pool to quietly cover a miss, the same thinness behind [after-hours callout coverage](/blog/after-hours-callout-coverage-small-hospitals) being so hard to solve at this size.
 

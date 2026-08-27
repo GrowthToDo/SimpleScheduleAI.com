@@ -24,7 +24,7 @@ metadata:
 - The three common shift patterns (8-, 10-, and 12-hour) set the template's columns, shift times, and overtime math, so decide the pattern before you build.
 - Reliable free template sources include Microsoft Office galleries, Google Workspace, WhenToWork, and state hospital association resource libraries.
 - Moving off a template is usually triggered by compliance risk, callout complexity, or turnover from inequitable rotation, any one of which costs more than a professional solution.
-- For a 25-bed hospital, the real cost of staying on a template is the manager time it consumes: an illustrative $20,000 to $30,000 a year at a $50/hour loaded rate for 8 to 12 hours a week, plus the downstream costs of problems a template cannot prevent. The hours range is our own estimate from [more than 30 nurse manager interviews](/blog/nurse-manager-scheduling-time-breakdown); run the arithmetic with your own rate.
+- For a 25-bed hospital, the real cost of staying on a template is the manager time it consumes: an illustrative $20,000 to $30,000 a year at a $50/hour loaded rate for 8 to 12 hours a week, plus the downstream costs of problems a template cannot prevent. The hours range is our own estimate from [more than 30 nurse manager interviews](/blog/nurse-manager-scheduling-time-breakdown); run the math with your own rate.
 
 ## Table of Contents
 
