@@ -22,10 +22,10 @@ metadata:
 
 ## Key Takeaways
 
-- A Baylor shift is two 12-hour weekend shifts: 24 hours worked, paid as if the nurse had worked considerably more. The original 1981 plan at Baylor University Medical Center paid 36 hours for day shift and 40 for nights, a distinction almost every article drops.
+- A Baylor shift is two 12-hour weekend shifts: 24 hours worked, paid as if the nurse had worked considerably more. The original 1981 plan at Baylor University Medical Center paid 36 hours for day shift and 40 for nights, [per the hospital's own published history](https://pmc.ncbi.nlm.nih.gov/articles/PMC1305904/), a distinction almost every article drops.
 - Most hospital weekend programs we could find published no longer pay for more hours than the nurse works. [Duke](https://hr.duke.edu/policies/health-system-pay/), [UVA](https://careers.uvahealth.org/us/en/weekend-program) and others pay full hours with a premium on top instead.
 - If your hospital uses the [8-and-80 overtime method](https://www.law.cornell.edu/uscode/text/29/207), a Baylor shift generates overtime on every weekend shift, because each 12-hour shift is four hours past the eight-hour daily trigger. Under a standard 40-hour week it generates none.
-- How large the weekend premium is decides how federal rules treat it. A premium worth at least one and a half times the weekday rate can be kept out of the overtime base and counted against overtime you already owe. A smaller premium gets neither benefit: paying 32 hours for 24 worked is a third more than straight time, not half again more, so it falls short of the line.
+- How large the weekend premium is decides how federal rules treat it. A premium worth at least one and a half times the weekday rate does two things for the hospital. It is left out of the pay figure the overtime is calculated from, and the money already paid counts against the overtime bill rather than adding to it. A smaller premium does neither, which is why a hospital paying 32 hours for 24 worked can spend more per weekend than one paying 36.
 - Searching in August 2026, we found no published guidance on the minimum roster size a weekend program needs, and no weekend program documented at any critical access hospital.
 
 ## Table of Contents
@@ -39,7 +39,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-A Baylor shift is a weekend-only nursing schedule: two 12-hour shifts across Saturday and Sunday, 24 hours worked, paid as though it were considerably more. Nurses search for it because the deal is attractive. Managers need a second number. What the recruitment flyer advertises is what the nurse earns. What the program costs the hospital depends on an overtime rule most articles never mention.
+A Baylor shift is a weekend-only nursing schedule: two 12-hour shifts across Saturday and Sunday, 24 hours worked, paid as though it were considerably more. Nurses search for it because the deal is attractive. Managers are pricing something different. The number on the recruitment flyer is what the nurse takes home. The number that matters to the hospital is the total cost of covering that weekend, and an overtime rule most articles never mention sits between the two. The worked example below shows the two moving in opposite directions, with the more generous program coming out cheaper.
 
 ## What Is a Baylor Shift?
 
@@ -116,13 +116,66 @@ So under 8-and-80, a 12-hour shift produces four hours of daily overtime by itse
 
 **Practical consequence: 8-and-80 and 12-hour weekend shifts sit badly together.** A hospital that adopted 8-and-80 when it ran 8-hour shifts, and now adds a Baylor line, owes daily overtime on every weekend shift it staffs. Two conditions on using 8-and-80 are easy to miss: the agreement must be reached **before** the work is performed, and a hospital cannot switch between the two methods to chase whichever is cheaper that month.
 
-The weekend premium has two separate effects on that overtime, and they usually get collapsed into one.
+The weekend premium then has two separate effects on that overtime bill, and they usually get collapsed into one.
 
-The first effect is on the regular rate, the hourly figure overtime is calculated from. By default a premium counts toward it. Federal law leaves weekend premium pay out only at one specific threshold: when "such premium rate is not less than one and one-half times the rate established in good faith for like work performed in nonovertime hours on other days." [29 CFR 778.203](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-D/section-778.203) is blunt about the failure case. Below time and a half, the extra compensation "must be included in determining the employee's regular rate of pay." Paying 36 hours for 24 worked is exactly time and a half, so that premium can qualify. Paying 32 hours for 24 worked is only a third more, so it cannot. A flat lump sum paid regardless of hours worked is not an overtime premium at all, whatever its size.
+**Effect one: does the premium make each overtime hour more expensive?** Overtime is calculated from a figure called the regular rate, which is normally all the pay divided by all the hours worked. If the weekend premium counts toward that figure, the figure goes up, and every overtime hour costs more. A hospital is allowed to leave the premium out, but only if the weekend rate is at least one and a half times the weekday rate. [29 CFR 778.203](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-D/section-778.203) is blunt about what happens below that line: the extra pay "must be included in determining the employee's regular rate of pay."
 
-The second effect is the one that changes the bill. A premium clearing the time-and-a-half bar does more than sit outside the regular rate. Under [29 U.S.C. 207(h)(2)](https://www.law.cornell.edu/uscode/text/29/207), extra compensation of that kind "shall be creditable toward overtime compensation payable pursuant to this section." So a hospital already paying a qualifying weekend premium may find it offsetting the daily overtime 8-and-80 generates, rather than stacking on top. How much it offsets depends on the premium's structure and your own pay-period arithmetic.
+**Effect two: does the premium count against the overtime you owe?** A premium clearing that same one-and-a-half-times line does more than stay out of the calculation. Under [29 U.S.C. 207(h)(2)](https://www.law.cornell.edu/uscode/text/29/207) it "shall be creditable toward overtime compensation payable pursuant to this section." In plain terms, money you have already handed over as a weekend premium can be set against the overtime bill instead of arriving on top of it.
 
-Under 8-and-80 the overtime is owed either way. What a qualifying premium changes is whether you pay for those hours twice.
+Both effects turn on the same threshold, which produces a result most managers do not expect. Here is the same weekend run two ways, for a nurse whose ordinary weekday rate is $40 an hour, at a hospital using 8-and-80:
+
+<div class="not-prose overflow-x-auto my-8">
+  <table class="min-w-full table-fixed break-words align-top text-sm border border-slate-200 dark:border-slate-700">
+    <thead class="bg-slate-50 dark:bg-slate-800">
+      <tr>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">One weekend, 24 hours worked</th>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Paid for 36 hours</th>
+        <th class="px-3 py-2 text-left font-semibold border-b border-slate-200 dark:border-slate-700">Paid for 32 hours</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Weekend pay before overtime</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">$1,440</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">$1,280</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Works out to, per hour actually worked</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">$60, exactly time and a half</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">$53.33, a third more than straight time</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Clears the time-and-a-half line?</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Yes</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">No</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Rate the overtime is figured from</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">$40, because the premium can be left out</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">$53.33, because the premium must be counted in</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Overtime hours owed (four per 12-hour shift)</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">8</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">8</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Extra overtime the hospital pays</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">$160 owed, covered by the premium already paid</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">$213.33, owed on top of the $1,280</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2 font-medium">Total cost of the weekend</td>
+        <td class="px-3 py-2 font-semibold">$1,440</td>
+        <td class="px-3 py-2 font-semibold">$1,493.33</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+The more generous program is the cheaper one. Paying for 36 hours clears the line, so the premium stays out of the overtime rate and then pays the overtime bill. Paying for 32 hours misses the line, so the premium pushes the overtime rate up and covers none of what is owed. The hospital that tried to save $160 a weekend on the headline rate pays $53.33 more.
+
+Two cautions on that arithmetic. A flat lump sum paid regardless of hours worked is not an overtime premium at all, whatever its size, so it fails both tests. And how much of the credit actually lands depends on how your premium is structured and how your pay periods fall, which is a question for your payroll team with real numbers rather than these illustrative ones.
 
 None of this is legal advice, and we could find no Department of Labor opinion letter addressing Baylor plans specifically. Anyone telling you the treatment is settled is filling a gap that exists. Price the program with your counsel, and our guide to [Texas nursing overtime compliance](/blog/texas-nursing-overtime-compliance-cah) covers the wider picture.
 
@@ -154,7 +207,7 @@ SimpleScheduleAI is an [AI-native nurse scheduling](/ai-nurse-scheduling) servic
 
 Weekend distribution is one of the things the engine tracks. Weekend counts carry forward between cycles rather than resetting, so a nurse who covered more weekends last cycle is weighted toward fewer in the next, and holidays are balanced against the team average. That matters here because a weekend program is one way to fix unfair weekend distribution, and a better rotation is another.
 
-Two things SimpleScheduleAI is not the right fit for are worth stating plainly. It does not calculate your overtime: the scheduler tracks applicable overtime thresholds but does not implement the 8-and-80 method, so a hospital on that method should treat this article as background for a conversation with counsel rather than something software settles. And it does not price compensation programs: [the service](/how-it-works) builds and checks schedules. Our [nurse scheduling software](/nurse-scheduling-software) overview covers where tooling helps.
+Two things SimpleScheduleAI is not the right fit for are worth stating plainly. It does not calculate your overtime: the scheduler tracks applicable overtime thresholds but does not implement the 8-and-80 method, so a hospital on that method should treat this article as background for a conversation with counsel rather than something software settles. And it does not tell you what a weekend program should pay: [the service](/how-it-works) builds and checks schedules, it does not set pay rates. Our [nurse scheduling software](/nurse-scheduling-software) overview covers where tooling helps.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -187,7 +240,7 @@ Twenty-four hours worked, as two 12-hour weekend shifts. The pay varies. The ori
 It depends on what the hospital means by full time. Baylor nurses usually get full-time medical benefits, but the FTE code can be lower: one live contract pays close to full time while coding the position 0.6 FTE, with seniority and vacation accruing on hours worked rather than hours paid. Ask how the FTE is coded before assuming anything downstream.
 
 **Q: Does a Baylor shift get overtime?**
-Under a standard 40-hour workweek, no, because 24 hours is well under the threshold. Under the 8-and-80 method hospitals may adopt, yes: each 12-hour shift is four hours past the eight-hour daily trigger, and that applies whether or not 80 hours are worked in the period. A weekend premium set at one and a half times the weekday rate or more can be credited toward that overtime rather than paid on top of it, so the premium you already pay may cover part or all of what is owed.
+Under a standard 40-hour workweek, no, because 24 hours is well under the threshold. Under the 8-and-80 method hospitals may adopt, yes: each 12-hour shift is four hours past the eight-hour daily trigger, and that applies whether or not 80 hours are worked in the period. A weekend premium worth at least one and a half times the weekday rate can be credited toward that overtime instead of paid on top of it.
 
 **Q: Can a critical access hospital run a Baylor shift?**
 Nothing prevents it, but we found no critical access hospital documenting one and no published guidance on the minimum roster size. The structural obstacle is that a dedicated weekend line commits a fixed share of a thin roster to two days a week and returns no weekday hours.
