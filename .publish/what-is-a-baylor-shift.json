@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-a-baylor-shift",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-27T06:45:35.341Z",
+      "contentHash": "e4ecb8881383ea59dcbfa6792e962a2ebf5a964eed5df61f8ea99eb8a25712a2"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-27T06:45:37.345Z",
+      "contentHash": "e4ecb8881383ea59dcbfa6792e962a2ebf5a964eed5df61f8ea99eb8a25712a2"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-27T06:45:39.445Z",
+      "contentHash": "e4ecb8881383ea59dcbfa6792e962a2ebf5a964eed5df61f8ea99eb8a25712a2"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-27T06:45:39.490Z",
+      "contentHash": "e4ecb8881383ea59dcbfa6792e962a2ebf5a964eed5df61f8ea99eb8a25712a2"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-27T06:45:39.523Z",
+      "contentHash": "e4ecb8881383ea59dcbfa6792e962a2ebf5a964eed5df61f8ea99eb8a25712a2"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-27T06:45:39.524Z",
+      "contentHash": "e4ecb8881383ea59dcbfa6792e962a2ebf5a964eed5df61f8ea99eb8a25712a2"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-27T06:45:39.525Z",
+      "contentHash": "e4ecb8881383ea59dcbfa6792e962a2ebf5a964eed5df61f8ea99eb8a25712a2"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "proofread agent + applied fixes",
+      "setAt": "2026-08-27T06:44:46.804Z",
+      "contentHash": "97ab35236734fe542dddcd7186bfc3dbd510d3557a9915cd284ae61fd8ad5ead"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "adversarial fact-check agent, 9 defects applied",
+      "setAt": "2026-08-27T06:44:47.723Z",
+      "contentHash": "97ab35236734fe542dddcd7186bfc3dbd510d3557a9915cd284ae61fd8ad5ead"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder explicit go-ahead",
+      "setAt": "2026-08-27T06:45:27.528Z",
+      "contentHash": "97ab35236734fe542dddcd7186bfc3dbd510d3557a9915cd284ae61fd8ad5ead"
+    }
+  },
+  "overrides": []
+}

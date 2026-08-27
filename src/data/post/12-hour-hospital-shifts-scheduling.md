@@ -23,10 +23,10 @@ metadata:
 ## Key Takeaways
 
 - 12-hour shifts reduce handoffs and improve nurse schedule satisfaction, but amplify the consequences of each coverage gap, one missed shift is half a day of nursing.
-- Weekend coverage is the primary fairness challenge: map weekend assignments first, before building the weekday schedule.
+- Weekend coverage is the primary fairness challenge: map weekend assignments first, before building the weekday schedule. Some hospitals buy their way out of it with a [weekend-only Baylor shift](/blog/what-is-a-baylor-shift), which carries its own overtime and coverage costs.
 - A common burnout driver in 12-hour models is callout-driven consecutive shift stacking, nurses working 4 or more consecutive shifts informally.
 - Fatigue guards (max 3 consecutive shifts, min 36-hour night-to-day recovery) should be hard constraints in the scheduling process, not guidelines.
-- The 8-and-80 [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) alternative can reduce overtime exposure in 12-hour shift settings but requires prior written employee agreements to be legally valid.
+- The 8-and-80 [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) alternative raises overtime exposure in 12-hour shift settings rather than lowering it, because overtime is owed on hours past eight in a day whether or not 80 hours are worked in the period. It also requires prior written employee agreements to be legally valid.
 
 ## Table of Contents
 
@@ -117,9 +117,14 @@ acute coverage crisis with no internal rotation pool to draw from.
 three 12-hour shifts (36 hours) in a 7-day workweek has no overtime. But if a nurse
 picks up an extra shift, even half a shift to cover a callout, they're at 48 hours
 and overtime applies. The 8-and-80 FLSA alternative (applicable with prior written
-agreement per [DOL FLSA rules](https://www.dol.gov/agencies/whd/flsa)) can help
-here: overtime is owed only for hours over 80 in a 14-day period, which gives more
-flexibility for shift swaps without automatically triggering overtime.
+agreement per [DOL FLSA rules](https://www.dol.gov/agencies/whd/flsa)) is often
+suggested here, but it cuts the other way for 12-hour rosters. Overtime under that
+method is owed for hours over eight in a day as well as hours over 80 in the 14-day
+period, and [29 CFR 778.601(d)](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-G/section-778.601)
+applies the daily trigger "whether or not more than 80 hours are worked in the
+period." So every 12-hour shift carries four hours of daily overtime by itself. The
+14-day period helps hospitals running 8-hour shifts; it makes 12-hour shifts more
+expensive, not less.
 
 ## What are the fatigue and burnout risks of 12-hour rotating shifts?
 
@@ -285,10 +290,12 @@ coverage with adequate flexibility for callouts and leave.
 
 **Q: Is the 8-and-80 FLSA rule better for 12-hour shift hospitals?**
 
-For hospitals where nurses regularly pick up extra shifts or cover callouts, the 8-and-80
-rule can reduce overtime costs by evaluating overtime over a 14-day period rather than
-7 days. However, it requires prior written agreement with each employee and careful
-tracking. Consult legal counsel before switching from a 7-day workweek calculation.
+Usually not. The 8-and-80 method evaluates overtime over a 14-day period rather than
+7 days, which helps hospitals running 8-hour shifts. But it also owes overtime on
+hours past eight in a single day, whether or not 80 hours are worked in the period,
+so each 12-hour shift generates four hours of daily overtime on its own. It further
+requires prior written agreement with each employee and careful tracking. Consult
+legal counsel before switching from a 7-day workweek calculation.
 
 **Q: How do you prevent consecutive night-to-day rotation fatigue?**
 

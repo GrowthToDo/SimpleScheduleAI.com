@@ -221,6 +221,8 @@ The [AI nurse scheduling](/ai-nurse-scheduling) engine handles the constraint ar
   </p>
 </div>
 
+One variant sits outside this comparison entirely: the weekend-only schedule, where nurses work two 12-hour shifts and are paid for more. Our guide to [what a Baylor shift is](/blog/what-is-a-baylor-shift) covers how those programs work and what they cost a hospital.
+
 ## Frequently Asked Questions
 
 ### Basics

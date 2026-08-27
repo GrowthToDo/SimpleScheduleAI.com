@@ -581,7 +581,7 @@ Texas has 93 certified Critical Access Hospitals (Rural Health Information Hub, 
 
 **Q: What is the FLSA 8 and 80 rule for Texas hospital nurses?**
 
-The FLSA healthcare worker exemption allows hospitals and residential care facilities to use a 14-day pay period for overtime calculation instead of the standard 7-day week. Overtime is owed after 8 hours in a day OR 80 hours in the 14-day period, whichever produces the greater overtime obligation. This requires a prior written agreement between employer and employee. Scheduling software that tracks only weekly FLSA overtime will miscalculate overtime for Texas nurses on the 8 and 80 plan.
+The FLSA healthcare worker exemption allows hospitals and residential care facilities to use a 14-day pay period for overtime calculation instead of the standard 7-day week. Overtime is owed on hours past 8 in a day and on hours past 80 in the 14-day period. These are two separate triggers rather than a choice between them: [29 CFR 778.601(d)](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-778/subpart-G/section-778.601) applies the daily one "whether or not more than 80 hours are worked in the period," which is why the method costs more, not less, on a 12-hour roster. This requires a prior written agreement between employer and employee. Scheduling software that tracks only weekly FLSA overtime will miscalculate overtime for Texas nurses on the 8 and 80 plan.
 
 **Q: Does Texas HHSC require specific scheduling documentation from hospitals?**
 

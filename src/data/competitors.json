@@ -80,9 +80,9 @@
           "simplescheduleai": "Audit trail maintained each cycle as part of the service"
         },
         {
-          "dimension": "FLSA 8-and-80 overtime",
+          "dimension": "FLSA overtime thresholds",
           "competitor": "Not documented on the product page; confirm with vendor",
-          "simplescheduleai": "Applied by default, including the 8-and-80 option"
+          "simplescheduleai": "Applicable overtime thresholds tracked each cycle; the 8-and-80 calculation method is not implemented"
         },
         {
           "dimension": "Callout replacement",
