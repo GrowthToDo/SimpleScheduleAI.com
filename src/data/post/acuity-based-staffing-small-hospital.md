@@ -48,7 +48,7 @@ Acuity-based staffing decides how many nurses you need, and which kind, from how
 
 There are two ways to do it. You can buy a tool that scores every patient one by one and adds the scores up. Or you can sort the whole unit into a few levels, such as light, normal and heavy, and set different staffing for each level. Both count as acuity-based staffing. Only the first one costs money.
 
-What the answer tells you matters more than how you worked it out. If your method gives you only a total number of people, it can still leave you short. The count can be right while the mix is wrong, because an extra aide does not cover an assessment only an RN can do.
+What the answer tells you matters more than how you worked it out. If your method gives you only a total number of people, it can still leave you short. The count can be right while the mix is wrong, because an extra aide does not cover an assessment only an RN can do. How that mix gets divided up on the shift is a separate question again, covered in our guide to [nurse staffing models](/blog/nurse-staffing-models).
 
 ## Does Texas Require a Small Hospital to Staff by Acuity?
 
