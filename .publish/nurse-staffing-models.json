@@ -5,58 +5,58 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T04:31:27.024Z",
-      "contentHash": "3a86236b6af0f39c921ecac6da3b09a822fed491c467aa15a71a8b8c3a1010fd"
+      "checkedAt": "2026-08-28T05:20:36.350Z",
+      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T04:31:29.136Z",
-      "contentHash": "3a86236b6af0f39c921ecac6da3b09a822fed491c467aa15a71a8b8c3a1010fd"
+      "checkedAt": "2026-08-28T05:20:38.587Z",
+      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T04:31:31.104Z",
-      "contentHash": "3a86236b6af0f39c921ecac6da3b09a822fed491c467aa15a71a8b8c3a1010fd"
+      "checkedAt": "2026-08-28T05:20:39.900Z",
+      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T04:31:31.152Z",
-      "contentHash": "3a86236b6af0f39c921ecac6da3b09a822fed491c467aa15a71a8b8c3a1010fd"
+      "checkedAt": "2026-08-28T05:20:39.944Z",
+      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T04:31:31.201Z",
-      "contentHash": "3a86236b6af0f39c921ecac6da3b09a822fed491c467aa15a71a8b8c3a1010fd"
+      "checkedAt": "2026-08-28T05:20:39.997Z",
+      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T04:31:31.201Z",
-      "contentHash": "3a86236b6af0f39c921ecac6da3b09a822fed491c467aa15a71a8b8c3a1010fd"
+      "checkedAt": "2026-08-28T05:20:39.997Z",
+      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T04:31:31.203Z",
-      "contentHash": "3a86236b6af0f39c921ecac6da3b09a822fed491c467aa15a71a8b8c3a1010fd"
+      "checkedAt": "2026-08-28T05:20:40.000Z",
+      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "proofread agent + two cold reads, all findings applied",
-      "setAt": "2026-08-28T04:31:10.561Z",
-      "contentHash": "960691f679e314dd2f2bbc9bc2ed77c73d1d839b0029294ddcad233f2d6d5007"
+      "setBy": "founder feedback round 1 applied",
+      "setAt": "2026-08-28T05:20:32.926Z",
+      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "adversarial fact-check, 6 defects applied incl 485.635 reframe",
-      "setAt": "2026-08-28T04:31:11.494Z",
-      "contentHash": "960691f679e314dd2f2bbc9bc2ed77c73d1d839b0029294ddcad233f2d6d5007"
+      "setBy": "Texas rule verified; corpus swept",
+      "setAt": "2026-08-28T05:20:33.716Z",
+      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder: take it live",
-      "setAt": "2026-08-28T04:31:12.411Z",
-      "contentHash": "960691f679e314dd2f2bbc9bc2ed77c73d1d839b0029294ddcad233f2d6d5007"
+      "setBy": "founder feedback round 1",
+      "setAt": "2026-08-28T05:20:34.816Z",
+      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
     }
   },
   "overrides": []

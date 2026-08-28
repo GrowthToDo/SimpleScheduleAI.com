@@ -24,7 +24,7 @@ metadata:
 
 - A nurse staffing model describes who delivers care to which patients on a shift. That is a different question from how many nurses you need, which is a ratio, and from how sick the patients are, which is acuity.
 - Nursing tradition names four: functional, team, total patient care, and primary nursing. The [federal patient-safety handbook](https://www.ncbi.nlm.nih.gov/books/NBK2635/) sorts them in one sentence: "Functional and team nursing are task-oriented and use a mix of nursing personnel; total patient care and primary nursing are patient-oriented and rely on registered nurses (RNs) to deliver care."
-- With two or three licensed nurses covering a whole building, functional and team nursing have nobody to divide the work among. That leaves total patient care as the only one of the four a thin overnight roster can support.
+- With two or three licensed nurses covering a whole building, functional and team nursing have nobody to divide the work among. Total patient care is the only one of the four that still works at that size.
 - The one thing here worth checking tonight: federal rules let a licensed practical nurse be the licensed nurse on duty at a critical access hospital, but [Texas separately requires](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) an RN on duty in each building holding patients. Staff a Texas overnight on an LPN alone and the federal rule is met while the state rule is not.
 - No published evidence says one model outperforms another, and the author of the federal patient-safety handbook chapter calls the research on care models "glaring in its absence."
 
@@ -82,7 +82,7 @@ Four names come up in every nursing curriculum. What follows is what each needs 
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Team nursing</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A registered nurse leads a small team of mixed license types caring for a group of patients.</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A team: at minimum a registered nurse plus one or two other staff, per group of patients.</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Not available. Add a nursing assistant and you have one team of three, which is just the whole shift, so naming it a team changes nothing.</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Not available. Team nursing means splitting the floor into teams, and two people make one team, which is simply everyone on shift.</td>
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Total patient care</td>
@@ -124,9 +124,11 @@ Three rules survive every model choice. Two are federal and sit in neighboring s
 
 **Texas then requires the RN on site.** [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) says: "An RN shall be on duty in each building of a licensed hospital that contains at least one nursing unit where patients are present."
 
-**Meeting the federal on-duty rule with a licensed practical nurse alone does not meet the Texas rule** when a building holds patients. That is the practical finding, and it is worth checking against your own schedule.
+**Meeting the federal on-duty rule with a licensed practical nurse alone does not meet the Texas rule** when a building holds patients. That is the practical finding, and it is worth checking against your own schedule. Our guide to [staying CMS compliant through the schedule](/blog/how-to-stay-cms-compliant-nurse-scheduling) covers the records a surveyor asks for alongside it.
 
-Two limits on how far we can take it for you. The rule turns on what counts as a nursing unit in your building, which is a question about how your hospital is licensed and laid out, and an emergency department is exactly the case where hospitals differ. And if you are the person who would normally answer a compliance question, as many nurse leaders at this size are, there is no one to hand it to. In that case the specific question to put to your CNO, your licensing file, or Texas HHSC is this one: **which areas of our licensed premises count as nursing units for 505.41(o)(2)(D), and does an RN have to be physically present in each of those buildings overnight?** That is answerable, and it is a better question than asking whether you are compliant in general.
+There is a limit to how far an article can take this, and it is worth being straight about where it stops. The rule depends on which parts of your hospital count as a nursing unit, and that depends on how your buildings are licensed and laid out. An emergency department is the case where hospitals differ most.
+
+At a hospital this size there is often nobody to refer that upward to. So rather than telling you to check with compliance, here is the question to ask, whether you put it to your CNO, your licensing file, or Texas HHSC directly: **which areas of our licensed premises count as nursing units under 505.41(o)(2)(D), and does an RN have to be physically present in each of those buildings overnight?** That question has an answer. "Are we compliant?" does not.
 
 **Texas also spells out how assignments must be made.** The same subsection continues: "The RN shall supervise and evaluate the nursing care for each patient and assign the nursing care to other nursing personnel in accordance with the patient's needs and the specialized qualifications and competence of the nursing staff available."
 
@@ -161,9 +163,9 @@ One honest limitation, covering three things this does not do. That charge check
 
 ## What to Do This Week
 
-1. **Check every overnight in your last published schedule for a registered nurse.** This is the compliance one. Go shift by shift and confirm an RN was on duty in each building holding patients, including nights covered mainly by a licensed practical nurse. If you find a night without one, that is a gap to raise with your compliance lead this week, not next quarter.
+1. **Check every overnight in your last published schedule for a registered nurse.** This is the compliance one. Go shift by shift and confirm an RN was on duty in each building holding patients, including nights covered mainly by a licensed practical nurse. If you find a night without one, that is this week's problem, not next quarter's. Our guide to [night shift coverage at a small hospital](/blog/night-shift-nurse-schedule-coverage) covers the rostering side of the same shifts.
 2. **Pull the last three months and count the hard shifts per person by name.** Hard shifts means nights, weekends and holidays. Count each nurse's total, then sort the list. Averages hide the problem, because a fair-looking average is exactly what a roster with two overloaded people produces. If the top name carries roughly double the bottom name, you have a distribution problem worth fixing, and our guide to [reducing nurse overtime](/blog/how-to-reduce-nurse-overtime) covers the cheaper fixes first.
-3. **Write down who on your roster you would actually let take charge, and check that the list is longer than two.** Charge coverage is where a thin roster fails first, because one callout can leave nobody eligible. If your list is two names, expanding it is a training decision to start now.
+3. **Write down who on your roster you would actually let take charge, and check that the list is longer than two.** Charge coverage is where a thin roster fails first, because one callout can leave nobody eligible. If your list is two names, expanding it is a training decision to start now, and our guide to [what a charge nurse does](/blog/what-is-a-charge-nurse) sets out what you are asking of them.
 4. **Decide whether your competency records are current enough to assign from.** Texas requires assignments to match "the specialized qualifications and competence of the nursing staff available." If the last competency sign-off in your file is a year old, the record you would show a surveyor is not the one you are scheduling from.
 5. **If anyone proposes moving you to a named staffing model, ask one question: which additional people will be on the floor?** If the answer is none, it is a renaming exercise, and no published evidence says the new name will help.
 
