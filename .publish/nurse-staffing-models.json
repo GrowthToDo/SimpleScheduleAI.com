@@ -57,6 +57,24 @@
       "setBy": "founder feedback round 1",
       "setAt": "2026-08-28T05:20:34.816Z",
       "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder live review",
+      "setAt": "2026-08-28T05:27:09.941Z",
+      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "114 URLs, HTTP 200",
+      "setAt": "2026-08-28T05:27:24.693Z",
+      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "sitemap-index.xml submitted 2026-08-28",
+      "setAt": "2026-08-28T05:27:25.465Z",
+      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
     }
   },
   "overrides": []
