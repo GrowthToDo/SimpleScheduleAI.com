@@ -1,8 +1,15 @@
 # Interview hypotheses — SimpleScheduleAI
 
-> ⚠️ IN PROGRESS — this list is not yet complete. Goals walked so far: G1-G3
-> of G12; not yet pruned or finalized. If you are resuming, continue the goal
-> walk at G4. (This note is removed when the list is finalized.)
+> ⚠️ GOAL WALK COMPLETE (G1-G12, finished 2026-08-30). H1-H21 recorded.
+> Not yet pruned, and the interview questions are not yet written. If you are
+> resuming, the next step is one open-ended, non-leading question per
+> hypothesis. (This note is removed when the questions are written.)
+>
+> **Two hypotheses are deliberately empty: H14 (what locks scheduling spend)
+> and H18 (what a CNO is graded on).** The founder recorded no belief on
+> either. They are not gaps to fill in later by guessing; they are the two
+> places where the interviews cannot be contaminated by our expectations, and
+> H18 in particular sits under every promise in `POSITIONING.md`.
 
 Maps to `GOALS.md` in this directory (the CNO interview chain, prepared for
 the NAINA introductions). These are the founder's current, unvalidated
@@ -82,8 +89,123 @@ administrator signs. Not a board, not a committee, and not an IT review. [G5]
 > outside nursing, every statement in `POSITIONING.md` aimed only at the nurse
 > leader is aimed at the champion, not the buyer.
 
+**H14. NO CONFIDENT BELIEF — recorded as uncertainty, deliberately.** [G6]
+Nothing contractual locks a small hospital's scheduling spend, because they
+run Excel and there is no tool agreement to escape. They do have budget
+cycles. The founder's open question is whether $1,000 to $1,500 a month is
+small enough that budget timing stops being the gate at all, and he does not
+claim to know.
+
+> **This is the widest gap on the list, so weight the interviews toward it.**
+> A recorded "we do not know" is worth more than a manufactured guess: there is
+> no prediction here for confirmation bias to defend, so whatever we hear is
+> information. What turns on it is concrete: if budget timing gates the deal,
+> outreach has a calendar and we should be asking when the fiscal year sets.
+> If the amount is genuinely below the threshold where that matters, buyers are
+> always in-market and timing outreach is wasted effort.
+
+**H15.** Trust in a vendor with zero customers is earned in two stages, not
+one. The first hospitals need to see the schedule work **on their own real
+roster** before committing. Only after that does peer word of mouth do the
+work, and from then on it does most of it. [G7]
+
+> Two consequences. Nothing we write substitutes for either stage, which caps
+> what content can do for the first sale and explains the 0.1 Eager-identity
+> score in `PROBLEM-SCORE.md`. And "prove it on their real data" is an OFFER
+> design question, not just a messaging one. It sits close to the free 60-day
+> pilot that was retired (`project_pilot_offer_retired`), so any motion built on
+> H15 is a founder decision about what we sell, not something the interviews
+> settle on their own.
+
+**H16.** What makes scheduling urgent this quarter is **retaining nurses**
+first, with cost reduction and surviving audits as real but secondary drivers.
+[G8]
+
+> If H16 holds it argues against how our content is currently weighted. The
+> library leans heavily compliance (CMS conditions, Joint Commission, CFR and
+> Texas rules), which serves the audit driver the founder ranks third. The
+> retention driver he ranks first has far less coverage. Worth testing before
+> acting on: the compliance content may be earning search traffic precisely
+> because it answers questions people type, while retention is what they feel
+> but do not search for.
+
+**H17.** Resistance is two things at once, and both are anticipated rather than
+experienced: losing the final call on who works, and an assumed IT review plus
+EMR integration burden she cannot get scheduled. [G9]
+
+> Both are already false of us: the nurse manager approves every schedule, and
+> nothing needs to touch the EMR. So if H17 holds, objection handling here is a
+> job of making two existing truths visible early, not of changing anything.
+> `/how-it-works` is the page that has to carry it. Worth watching for the
+> failure mode where we answer the objection before she has voiced it, which
+> reads as defensive.
+
+**H18. NO BELIEF — recorded as uncertainty, and this is the costly one.** [G10]
+The founder does not know what a CNO is graded on by her CEO or board.
+
+> This matters more than H14. `asb-positioning` says to promise more of the
+> thing the buyer's own scoreboard counts, and G10 exists to validate the upper
+> levels of `NEEDS-STACK.md`. Not knowing the scoreboard means the top of the
+> needs stack rests on our guess, and every "what you promise" statement in
+> `POSITIONING.md` is aimed at an outcome we have not confirmed anyone is
+> measured on. Ask this one early in every call, and ask it as "what does your
+> CEO ask you about", not "what are you graded on", which invites a job
+> description rather than the real answer.
+
+**H19.** She calls it **scheduling software**, even though we run it as a
+service. [G11]
+
+> This independently supports a rule already enforced mechanically: the
+> seo-aeo category line requires the phrase "nurse scheduling software" in the
+> sentence introducing the product. If H19 holds, that rule is meeting her
+> vocabulary rather than conceding to SEO, and the service explanation belongs
+> second, not first. If interviews contradict it, the category line is the
+> first thing to revisit.
+
+**H20.** Discovery and vetting happen through three human routes: peers at
+other small hospitals, state hospital associations and rural networks, and
+conferences. [G12]
+
+> **Search was offered as an option and deliberately not chosen.** That is the
+> most uncomfortable finding on this list and it should be tested first, not
+> argued with. Our primary investment is a content library aimed at Google.
+> Two readings survive H20 and the interviews have to separate them. Either
+> content is not a discovery channel for this buyer and its real jobs are
+> credibility during vetting and LLM citation, in which case we should stop
+> measuring it as acquisition and stop expecting it to produce leads. Or she
+> does search but does not experience it as "discovering a vendor", which is a
+> reporting artefact rather than a fact about behaviour. Ask what she did the
+> last time she needed to solve something like this, step by step, rather than
+> asking whether she uses Google.
+
+**H21.** The NAINA introductions are the founder's personal network rather
+than a repeatable channel. [G12]
+
+> If H21 holds, the calls are research and nothing more, and no acquisition
+> plan should assume the route repeats. It also raises the value of the closing
+> ask already standing in `GOALS.md`: every call should end by asking for an
+> introduction to a Texas Critical Access CNO or administrator, because
+> personal networks only extend by being asked to.
+
 ## Next steps
 
-(Completed when the goal walk finishes: one open-ended, non-leading interview
-question per hypothesis, then interviews, chasing surprises until nothing
-surprises anymore.)
+Write one open-ended, non-leading question per hypothesis, then interview,
+chasing surprises until nothing surprises any more.
+
+Three constraints on that question set, all earned during this walk:
+
+1. **Never ask the hours question directly** (H10). If the founder is right
+   that CNOs understate it, asking gets a wrong number, and supplying "8 to 12"
+   leads the witness on the figure our hero copy rests on. Walk the week and
+   total it afterwards.
+2. **Do not ask "where do you discover vendors"** (H20). Ask what she did, step
+   by step, the last time she needed to solve something like this. Self-reported
+   channel behaviour is unreliable in exactly the way that would let us keep
+   believing what we already believe about content.
+3. **Ask the H18 question as "what does your CEO ask you about"**, not "what
+   are you graded on". The second invites a job description.
+
+Then, and only then, the downstream files this unblocks: N9 in
+`NEEDS-STACK.md` (which unholds P11 in `POSITIONING.md`), the
+administrator/CEO ladder that has never been walked, and the rarity claim in
+`VOTERS.md`.
