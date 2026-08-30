@@ -31,6 +31,7 @@
     "sitemap-diff": "node scripts/competitor-sitemap-diff.mjs",
     "llm-citations": "node scripts/llm-citation-check.mjs",
     "keyword-check": "node scripts/check-keyword-registry.mjs",
+    "target-positions": "node scripts/target-positions.mjs",
     "site-hygiene": "node scripts/site-hygiene.mjs",
     "competitor-watch": "node scripts/competitor-page-watch.mjs"
   },

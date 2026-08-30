@@ -48,6 +48,25 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
    spot-check for the Cloudflare managed AI-block (until founder disables it),
    CCBot/GPTBot UA fetch = 200.
 6. **Keyword-registry hygiene**: `npm run keyword-check` — 0 fails required.
+6b. **Target-keyword positions** (added 2026-08-30, founder-requested): the
+   only position number worth reporting. Run `npm run target-positions -- --keywords`
+   for the list, pull GSC `dimensions=query` for the month with `row_limit 500`,
+   then `npm run target-positions -- --record <rows.json> --label YYYY-MM-DD`
+   and `npm run target-positions` for the movement table. The MCP pull is large
+   enough that the tool writes it to a file; pass that file path straight to
+   `--record` rather than reading it into context.
+   **Report the like-for-like mean, never the site-wide GSC average.** Site-wide
+   average position is impression-weighted, so while we publish weekly it drifts
+   worse every time Google finds a new deep-ranking query for us. Worked example
+   from the founder's 2026-08-30 question, kept because it will recur: site
+   average went 12.7 -> 13.2 week over week while impressions rose 27% and clicks
+   58%. Nothing had deranked. `best-nurse-scheduling-software-critical-access-hospitals`
+   fell 20 -> 44.9 purely because Google began matching it to a new "clinical
+   ladder software" cluster at positions 35-61, which is nursing career
+   progression and not scheduling at all.
+   Second thing this instrument shows: **how many targets return nothing.**
+   Baseline 2026-08-28: only 14 of 101 registry keywords had any GSC data. That
+   count moving is a better health signal than any average.
 7. **Report**: one summary message — movements, drafted rewrites awaiting approval,
    founder-action list, and any anomaly (indexing drops, new competitor pages,
    citation changes).
