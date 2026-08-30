@@ -1,9 +1,11 @@
 # Interview hypotheses — SimpleScheduleAI
 
-> ⚠️ GOAL WALK COMPLETE (G1-G12, finished 2026-08-30). H1-H21 recorded.
-> Not yet pruned, and the interview questions are not yet written. If you are
-> resuming, the next step is one open-ended, non-leading question per
-> hypothesis. (This note is removed when the questions are written.)
+> **READY TO INTERVIEW.** Goal walk complete (G1-G12, 2026-08-30), H1-H21
+> recorded, and the question set is written at `INTERVIEW-QUESTIONS.md`.
+> Nothing here is validated: these are the founder's beliefs, written down
+> before the calls so reality can contradict them rather than be filtered
+> through them. Update each hypothesis as confirmed or contradicted after the
+> calls, in his words, without softening.
 >
 > **Two hypotheses are deliberately empty: H14 (what locks scheduling spend)
 > and H18 (what a CNO is graded on).** The founder recorded no belief on
@@ -121,13 +123,12 @@ work, and from then on it does most of it. [G7]
 first, with cost reduction and surviving audits as real but secondary drivers.
 [G8]
 
-> If H16 holds it argues against how our content is currently weighted. The
-> library leans heavily compliance (CMS conditions, Joint Commission, CFR and
-> Texas rules), which serves the audit driver the founder ranks third. The
-> retention driver he ranks first has far less coverage. Worth testing before
-> acting on: the compliance content may be earning search traffic precisely
-> because it answers questions people type, while retention is what they feel
-> but do not search for.
+> Retention is therefore the hook for the things that DO acquire: how the
+> founder opens a call, what an introduction gets framed around, what the first
+> five minutes are about. Not a mandate to re-weight the content library, which
+> the founder has ruled is not the acquisition channel (see H20). Compliance
+> content earns search traffic because it answers what people type; retention
+> is what they feel. Those are different jobs and both are fine.
 
 **H17.** Resistance is two things at once, and both are anticipated rather than
 experienced: losing the final call on who works, and an assumed IT review plus
@@ -166,17 +167,18 @@ service. [G11]
 other small hospitals, state hospital associations and rural networks, and
 conferences. [G12]
 
-> **Search was offered as an option and deliberately not chosen.** That is the
-> most uncomfortable finding on this list and it should be tested first, not
-> argued with. Our primary investment is a content library aimed at Google.
-> Two readings survive H20 and the interviews have to separate them. Either
-> content is not a discovery channel for this buyer and its real jobs are
-> credibility during vetting and LLM citation, in which case we should stop
-> measuring it as acquisition and stop expecting it to produce leads. Or she
-> does search but does not experience it as "discovering a vendor", which is a
-> reporting artefact rather than a fact about behaviour. Ask what she did the
-> last time she needed to solve something like this, step by step, rather than
-> asking whether she uses Google.
+> **Search was offered as an option and deliberately not chosen, and the
+> founder has since settled why (2026-08-30): content is NOT the primary
+> acquisition channel. The route in is contacts, then proving the software
+> works.** So H20 is not a tension to resolve against the content library; it
+> describes the actual plan. What follows is a measurement rule rather than a
+> strategy change. Content's jobs are credibility during vetting, LLM
+> citation, and being findable by someone already looking for us. None of
+> those are lead generation, so content should not be reported as acquisition
+> and a quiet month of traffic is not a failure of the go-to-market. Still
+> worth asking her what she did the last time she needed to solve something
+> like this, because if search shows up unprompted that is a genuine surprise
+> worth having.
 
 **H21.** The NAINA introductions are the founder's personal network rather
 than a repeatable channel. [G12]
