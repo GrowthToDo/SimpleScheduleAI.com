@@ -1,0 +1,43 @@
+# Disavow file for simplescheduleai.com
+# Prepared 2026-08-30. Source: DataForSEO backlinks/referring_domains/live.
+#
+# Context: 16 of our 19 referring domains are scraper spam, every one first
+# seen between 2026-08-06 and 2026-08-29. Casino, sports betting, fake-Forbes,
+# a pizza shop, Connecticut real estate. None are relevant to nurse scheduling
+# and none were solicited.
+#
+# This is background scraper spam that hits most domains once they are crawled
+# and harvested. It is not a penalty and Google discounts it automatically.
+# It is disavowed here only because our profile is small enough (19 domains)
+# that 16 junk ones dominate every averaged third-party score: our
+# backlinks_spam_score reads 52, while Buddy Punch with 47,913 backlinks reads 4.
+#
+# Only unambiguous spam is listed. Our three legitimate referring domains are
+# deliberately NOT in this file and are named in docs/seo/backlink-ledger.md
+# instead. Do not list them here even in a comment: a disavow file should
+# contain no domain you want to keep, in any form.
+#
+# Format note: "domain:" disavows the whole domain and all its subdomains,
+# which is correct for scraper spam where the specific URL will churn.
+
+# --- Gambling and betting ---
+domain:bestnz-poker-casinoslot.com
+domain:betwinnermirror.com
+domain:ufabettererm4.com
+
+# --- Fake news / scraped-content networks ---
+domain:forbesstories.com
+domain:theforbestimes.com
+domain:thedocmag.com
+domain:betulcrime.com
+domain:quotesblom.com
+domain:archive-hu.com
+
+# --- Off-topic commercial scrapers ---
+domain:fashionclothingnews.com
+domain:homesforsaleoldgreenwichct.com
+domain:uncledspizza.com
+domain:clifflisting.com
+domain:cmocheatsheets.com
+domain:ggmap.us.com
+domain:drjack.world

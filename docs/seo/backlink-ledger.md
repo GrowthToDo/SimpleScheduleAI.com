@@ -41,6 +41,46 @@ with a Bing number (see the anomaly below).
   submitted via IndexNow. Trend is upward (73 -> 79 in the five days to Aug 1 as the
   week's posts landed). Watch coverage, not crawl volume.
 
+## Spam-link watch (opened 2026-08-30)
+
+**What happened.** A Buddy Punch "paid partnership" email prompted a look at our
+own profile. DataForSEO returned `backlinks_spam_score` 52 across only 19
+referring domains. Pulling the domains explained it: **16 of 19 are scraper
+spam, every one first seen between 2026-08-06 and 2026-08-29**, the most recent
+the day before this check. Gambling (bestnz-poker-casinoslot, betwinnermirror,
+ufabettererm4), fake-Forbes (forbesstories, theforbestimes), and off-topic
+commercial scrapers (a pizza shop, Connecticut real estate, a fashion site).
+
+**The three legitimate referring domains**, which must never be disavowed:
+
+| Domain | Type | First seen |
+| --- | --- | --- |
+| alternativeto.net | our listing, nofollow, image link | 2026-05-02 |
+| solguruz.com | in-article, organization | 2026-08-01 |
+| headsetarmy.com | in-article, ecommerce | 2026-08-22 |
+
+**Read this correctly.** It is not a penalty and we did not cause it. Scraper
+spam hits most domains once they are crawled and harvested onto lists, and
+Google discounts it automatically. The reason it is worth acting on is the
+RATIO, not the links: at 19 total domains, 16 junk ones dominate every averaged
+third-party score. For contrast, Buddy Punch carries 47,913 backlinks at a
+domain spam score of 4. Ours is not worse, it is small enough for noise to win.
+
+**Disavow file prepared:** `docs/seo/disavow-simplescheduleai.txt`. 16 domains,
+`domain:` scope (the specific URLs will churn). Submission is a manual Search
+Console upload and is the founder's call.
+
+**Standing recheck, monthly with the SEO audit.** Re-run
+`/v3/backlinks/referring_domains/live` for simplescheduleai.com and compare
+against the 19 above. What to watch:
+
+- **Is the drip continuing?** If new spam domains keep arriving after the
+  disavow, it is background noise and needs no further action beyond appending.
+- **Is the count of GOOD referring domains moving?** That is the number that
+  matters and it is currently 3.
+- Only escalate if a manual action appears in Search Console, which none of this
+  predicts.
+
 ## Log
 
 | Date | Target | Tier | Asset | Status | Link |
