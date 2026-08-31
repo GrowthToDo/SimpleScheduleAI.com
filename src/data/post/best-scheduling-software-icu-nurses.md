@@ -44,7 +44,7 @@ For a broader comparison, see our [nurse scheduling software guide](/nurse-sched
   - [3. SmartLinx](#3-smartlinx)
   - [4. QGenda](#4-qgenda)
   - [5. NurseGrid Manager](#5-nursegrid-manager)
-  - [6. OnShift](#6-onshift-now-part-of-workday)
+  - [6. OnShift](#6-onshift-a-shiftkey-brand)
   - [7. Deputy](#7-deputy)
   - [8. UKG (formerly Kronos)](#8-ukg-formerly-kronos)
 - [What Makes ICU Nurse Scheduling Uniquely Complex](#what-makes-icu-nurse-scheduling-uniquely-complex)
@@ -303,7 +303,7 @@ NurseGrid Manager does not support credential tracking or ICU-specific schedulin
 
 **Cost:** Approximately $150-300 per month. Pricing requires contact.
 
-### 6. [OnShift](https://www.onshift.com) (now part of Workday)
+### 6. [OnShift](https://www.onshift.com) (a ShiftKey brand)
 
 <img src="/images/blog/best-scheduling-software-icu-nurses/Onshift.webp" alt="OnShift workforce management software for healthcare staffing" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 

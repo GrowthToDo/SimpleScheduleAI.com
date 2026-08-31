@@ -23,13 +23,13 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/onshift-alternatives'
 ---
 
-OnShift was acquired by Workday in 2022. The product is now positioned for post-acute care, SNF, and senior living. Your 25-bed acute Critical Access Hospital is not in any of those categories, but the OnShift sales conversation may have suggested otherwise. The fit gap is real and worth checking before signing.
+OnShift does not claim to serve you, and that is the whole story. Its own site describes it as "the only workforce management software made exclusively for long-term, post-acute and senior care" and says the company is "100% dedicated to the long-term post-acute care and senior living industry." A 25-bed acute Critical Access Hospital is none of those things. The fit gap is not a criticism of the product, it is the product's own stated scope, and it is worth checking against what a sales conversation may have implied.
 
 This guide compares 6 OnShift alternatives for a CAH that runs acute inpatient nursing, not skilled-nursing-facility scheduling.
 
 ## Key Takeaways
 
-- OnShift, now part of Workday, was designed for long-term care and assisted living workforce scheduling. Its caregiver engagement and shift-pickup model fits stable LTC census patterns, which is a different operational model than acute care hospital nursing.
+- OnShift, a ShiftKey brand, was designed for long-term care and senior living workforce scheduling, and says so in its own words: "100% dedicated to the long-term post-acute care and senior living industry." Its caregiver engagement and shift-pickup model fits stable long-term care census patterns, which is a different operational model than acute care hospital nursing.
 - The questions a Critical Access Hospital should probe before keeping OnShift are operational: how fast a confirmed credentialed replacement can be secured during a callout, whether the platform produces CMS §485.635 survey documentation without manual assembly, and whether acute care unit constraints are enforced rather than advisory.
 - SimpleScheduleAI is the strongest alternative for a Critical Access Hospital that wants the scheduling handled rather than a better tool to do it itself. It delivers ranked, competency-filtered callout replacement lists, automatic CMS §485.635 documentation, and FLSA overtime threshold tracking as defaults.
 - For hospitals that want self-serve software, Aladtec is the smaller-roster option with direct-outreach callout management, and SmartLinx is the path for 50-100 bed facilities that need stronger compliance automation than OnShift and have IT capacity for a longer implementation.
@@ -57,7 +57,7 @@ This guide compares 6 OnShift alternatives for a CAH that runs acute inpatient n
 
 For a 25-bed Critical Access Hospital, the best OnShift alternatives are tools built around acute care callout dynamics and CMS compliance rather than long-term care caregiver engagement. SimpleScheduleAI is the managed-service option when the goal is removing the scheduling work entirely, Aladtec is the smaller-roster self-serve option with direct-outreach callouts, and SmartLinx is the upgrade path for hospitals growing past 50 beds.
 
-OnShift built its scheduling product around the operational reality of long-term care: relatively stable patient census, predictable caregiver availability patterns, and a workforce that responds well to engagement-first tools. Its acquisition by Workday has shifted development priorities toward larger enterprise customers and deeper Workday integration.
+OnShift built its scheduling product around the operational reality of long-term care: relatively stable patient census, predictable caregiver availability patterns, and a workforce that responds well to engagement-first tools. Under ShiftKey, development has centered on that same long-term care market and on connecting facilities to the ShiftKey marketplace for open shifts.
 
 For hospitals, particularly small acute care hospitals and Critical Access Hospitals, the questions that matter are operational fit, not a feature checklist. If your priority is [critical access hospital scheduling](/critical-access-hospital-scheduling) with CMS documentation, FLSA overtime, and credential-filtered callouts, review what those requirements actually demand before choosing a platform. Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers the specific features a 25-bed hospital needs that LTC-oriented tools were not designed to provide.
 
@@ -106,7 +106,7 @@ The table below covers customer focus, public ratings, and setup time across the
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">OnShift (current)</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Long-term care, assisted living, Workday users</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Long-term care, senior living, ShiftKey marketplace users</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">No CAH-mapped public listing; verify with vendor</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
       </tr>
@@ -382,7 +382,7 @@ As a direct OnShift replacement at CAH scale, UKG is categorically wrong-sized. 
 
 ## When to Stay with OnShift?
 
-Switching platforms has a real cost in time, training, and configuration rebuild. OnShift is the right choice to keep when long-term care is the majority of your scheduling volume, when the existing implementation is working for your specific environment, or when the organization is committed to the Workday ecosystem.
+Switching platforms has a real cost in time, training, and configuration rebuild. OnShift is the right choice to keep when long-term care is the majority of your scheduling volume, when the existing implementation is working for your specific environment, or when you also use ShiftKey to fill open shifts.
 
 <div class="not-prose my-6">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -406,7 +406,7 @@ Switching platforms has a real cost in time, training, and configuration rebuild
         <td class="py-2 text-slate-600 dark:text-slate-400">Open-shift posting is too slow for your callout events</td>
       </tr>
       <tr class="align-top">
-        <td class="py-2 pr-4 text-slate-600 dark:text-slate-400">Your organization is committed to the Workday ecosystem</td>
+        <td class="py-2 pr-4 text-slate-600 dark:text-slate-400">You already use ShiftKey to fill open shifts</td>
         <td class="py-2 text-slate-600 dark:text-slate-400">You need credential-enforced callout replacement</td>
       </tr>
     </tbody>
@@ -417,7 +417,7 @@ OnShift is worth keeping if:
 
 - Long-term care is the majority of your scheduling volume. OnShift's caregiver engagement and stable-roster scheduling features are genuinely strong for LTC, and that alignment is real value when LTC is your primary use case.
 - The current implementation is functioning adequately for your specific nursing environment, and the switching and retraining cost would exceed the operational gain.
-- Your HR is in Workday and workforce management integration is a strategic priority. Post-acquisition, the OnShift-Workday integration is the direct path for organizations already committed to that ecosystem.
+- You already use ShiftKey to fill open shifts. OnShift is a ShiftKey brand, and the two products are integrated as a joint offering called SAMI, which routes open shifts out to the ShiftKey marketplace by role and lead time. OnShift's own statement is that "the integration comes at no additional cost for facilities using the ShiftKey and/or OnShift platforms." If that marketplace is already part of how you cover shifts, leaving OnShift means unpicking it.
 
 If all three conditions apply, the switch cost and learning curve of an alternative are unlikely to deliver a positive return.
 
@@ -491,7 +491,7 @@ For a hospital that is primarily a CAH or acute care facility, that difference i
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    OnShift was built for post-acute and long-term care, and that focus shows in the product. For a Critical Access Hospital running acute inpatient nursing, the documented feature fit is narrower than vendor positioning suggests. The right OnShift alternative depends on the gap: if the issue is the Workday ecosystem dependency, a standalone tool wins. If the issue is the LTC-shaped product fit, an acute-focused tool wins. Conflating the two leads to choosing wrong.
+    OnShift was built for post-acute and long-term care, and that focus shows in the product. For a Critical Access Hospital running acute inpatient nursing, the documented feature fit is narrower than vendor positioning suggests. The right OnShift alternative depends on the gap: if the issue is that open-shift marketplace filling does not suit a small acute roster, a standalone tool wins. If the issue is the LTC-shaped product fit, an acute-focused tool wins. Conflating the two leads to choosing wrong.
   </p>
 </div>
 
@@ -542,9 +542,9 @@ For a CAH specifically, SimpleScheduleAI is built around the requirements that m
 
 OnShift's documented model is open-shift posting, which suits planned long-term care coverage gaps. ED callouts need a confirmed replacement with correct credentials within minutes. Before relying on OnShift for ED scheduling, ask the vendor to demonstrate a real ED callout scenario and confirm whether credential constraints are enforced at acceptance. Tools with direct-outreach callouts and enforced credential filtering reduce that risk.
 
-**Why did Workday acquire OnShift?**
+**Who owns OnShift?**
 
-Workday acquired OnShift to extend its human capital management platform into healthcare workforce management, specifically the long-term care and post-acute segments. The acquisition gives Workday healthcare clients a scheduling and engagement module inside the Workday ecosystem. For a standalone Critical Access Hospital not already on Workday HCM, the acquisition adds limited direct value.
+OnShift is a ShiftKey brand. ShiftKey announced its full integration of OnShift in July 2023, and OnShift's own site describes the company that way today. The product still ships under the OnShift name, and the joint ShiftKey and OnShift offering, which routes open shifts out to the ShiftKey marketplace, is called SAMI. Some older comparison articles still name a different parent company. Those are out of date, and worth correcting in any internal comparison you are working from.
 
 **What does OnShift cost compared to alternatives?**
 

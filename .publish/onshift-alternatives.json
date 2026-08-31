@@ -5,52 +5,52 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:57:11.167Z",
-      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+      "checkedAt": "2026-08-31T07:57:39.040Z",
+      "contentHash": "a3af2932bbdeed833e0de111e06dcc44213461a62ead7cf32e454c8b2494438c"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:57:13.527Z",
-      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+      "checkedAt": "2026-08-31T07:57:41.214Z",
+      "contentHash": "a3af2932bbdeed833e0de111e06dcc44213461a62ead7cf32e454c8b2494438c"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:57:15.536Z",
-      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+      "checkedAt": "2026-08-31T07:57:53.719Z",
+      "contentHash": "a3af2932bbdeed833e0de111e06dcc44213461a62ead7cf32e454c8b2494438c"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:57:15.590Z",
-      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+      "checkedAt": "2026-08-31T07:57:53.762Z",
+      "contentHash": "a3af2932bbdeed833e0de111e06dcc44213461a62ead7cf32e454c8b2494438c"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:57:15.849Z",
-      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+      "checkedAt": "2026-08-31T07:57:54.113Z",
+      "contentHash": "a3af2932bbdeed833e0de111e06dcc44213461a62ead7cf32e454c8b2494438c"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:57:15.849Z",
-      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+      "checkedAt": "2026-08-31T07:57:54.113Z",
+      "contentHash": "a3af2932bbdeed833e0de111e06dcc44213461a62ead7cf32e454c8b2494438c"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:57:15.853Z",
-      "contentHash": "e3597b17309d29197403de2f67759f0307974686751545b8506d5443e2be633b"
+      "checkedAt": "2026-08-31T07:57:54.115Z",
+      "contentHash": "a3af2932bbdeed833e0de111e06dcc44213461a62ead7cf32e454c8b2494438c"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "binary-contrast-sweep",
-      "setAt": "2026-08-10T10:57:17.446Z",
-      "contentHash": "7b6dc59c63b3870559ecf44a7f8a5aecd04bb1d3e3a38a43c5578c4b6859a25e"
+      "setBy": "OnShift ownership rebuild",
+      "setAt": "2026-08-31T07:57:35.855Z",
+      "contentHash": "3c57ee16bf183c8c6c89e3b7aed6105c26c180a2daaa91dfa1a2f3d69833c1d2"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "no-fact-changes",
-      "setAt": "2026-08-10T10:57:18.492Z",
-      "contentHash": "7b6dc59c63b3870559ecf44a7f8a5aecd04bb1d3e3a38a43c5578c4b6859a25e"
+      "setBy": "ownership verified at onshift.com 2026-08-31",
+      "setAt": "2026-08-31T07:57:36.697Z",
+      "contentHash": "3c57ee16bf183c8c6c89e3b7aed6105c26c180a2daaa91dfa1a2f3d69833c1d2"
     },
     "imageEyeball": {
       "value": "OK",
@@ -60,9 +60,9 @@
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder",
-      "setAt": "2026-08-10T10:57:21.604Z",
-      "contentHash": "7b6dc59c63b3870559ecf44a7f8a5aecd04bb1d3e3a38a43c5578c4b6859a25e"
+      "setBy": "founder: go for the rebuild",
+      "setAt": "2026-08-31T07:57:37.584Z",
+      "contentHash": "3c57ee16bf183c8c6c89e3b7aed6105c26c180a2daaa91dfa1a2f3d69833c1d2"
     },
     "indexNow": {
       "value": "DONE",
