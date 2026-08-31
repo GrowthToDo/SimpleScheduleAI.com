@@ -7,6 +7,7 @@ excerpt: >
   care needed. The statute never says acuity. At a 25-bed hospital the hard part is not the tier
   chart, it is having the right license on the floor at 3am.
 image: ~/assets/images/pool/ward-team-01.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: mofu
 draft: false

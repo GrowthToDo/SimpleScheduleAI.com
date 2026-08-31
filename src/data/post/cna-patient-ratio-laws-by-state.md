@@ -6,6 +6,7 @@ excerpt: >
   Almost every guide to CNA ratios is answering a nursing home question. If you run hospital beds,
   the answer is much shorter. As far as we can tell only one state sets a limit, and the rest set none.
 image: ~/assets/images/pool/compliance-01.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: mofu
 draft: false

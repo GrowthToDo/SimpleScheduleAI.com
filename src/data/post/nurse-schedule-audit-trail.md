@@ -8,6 +8,7 @@ excerpt: >
   data. A critical access hospital usually files none of it, so its record keeping answers to a
   different question, asked by a surveyor standing in front of you.
 image: ~/assets/images/pool/swap-calendar-01.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: mofu
 tags:
@@ -22,11 +23,11 @@ metadata:
 
 ## Key Takeaways
 
-- A schedule audit trail is a record of what the schedule said, what changed, who changed it, and when. The posted schedule alone is not one, because it only shows the final state.
-- Most published guidance on staffing records is written for skilled nursing facilities filing Payroll-Based Journal data. Swing beds are exempt from PBJ, so most critical access hospitals file none of it and the guidance does not transfer.
-- What a hospital actually answers to is narrower and more immediate: a surveyor comparing the staff in front of them to the schedule you handed over, and asking about the difference.
+- A schedule audit trail is a record of what the schedule said, what changed, who changed it, and when. The posted schedule alone is not one, because it only shows the final state. Our comparison of [scheduling software and Excel](/blog/nurse-scheduling-software-vs-excel) covers why a single spreadsheet cannot be one.
+- Most published guidance on staffing records is written for skilled nursing facilities filing Payroll-Based Journal data. Most critical access hospitals file none of it, so the guidance does not transfer. Our guide to [CMS PBJ reporting](/blog/cms-pbj-reporting-scheduling-software) has the one-question test for which side you are on.
+- What a hospital actually answers to is narrower and more immediate: a surveyor comparing the staff in front of them to the schedule you hand over during the survey, and asking about the difference. The wider record set is in our guide to [staying CMS compliant through the schedule](/blog/how-to-stay-cms-compliant-nurse-scheduling).
 - Whether your current tool keeps this record is worth checking rather than assuming. One hospital IT admin reviewing a general-purpose scheduling app wrote that it has "No Auditing capability to see if unauthorized changes were made, and does not work for complex workflows."
-- The gap that matters sits between publishing the schedule and working it: two or three weeks of edits, swaps and callout replacements that the posted version never shows. You can close it by hand, in a spreadsheet tab or a notebook, for nothing.
+- The gap that matters sits between the day you post the schedule and the end of the cycle: two or three weeks of swaps, callouts and replacements that the posted version never shows. Closing that gap costs nothing. A dated copy of the schedule plus a running list of changes, in a spreadsheet tab or a notebook, is a real audit trail.
 
 ## Table of Contents
 
@@ -38,7 +39,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-The schedule you posted three weeks ago is not the schedule that got worked. Somebody swapped a Tuesday, somebody called out on the Saturday and was replaced at 6 a.m., and a shift got extended when the census climbed. If the only record you keep is the current state of the grid, all of that is gone.
+The schedule you posted three weeks ago is not the schedule your nurses actually worked. Somebody swapped a Tuesday, somebody called out on the Saturday and was replaced at 6 a.m., and a shift ran long when the census climbed. If the only record you keep is the grid as it looks today, all of that is gone.
 
 An audit trail exists to capture exactly that difference. This guide covers what one is and why most published advice about them is aimed at a kind of facility you probably are not. It also gives you a way to find out, in about ten minutes, whether the tool you use today records anything at all.
 
@@ -46,7 +47,7 @@ An audit trail exists to capture exactly that difference. This guide covers what
 
 A schedule audit trail is a separate record of **what changed on the schedule, who changed it, and when**. It sits next to the schedule as its own list, rather than being something you can read off the schedule itself.
 
-The difference is between a snapshot and a story. Your posted schedule is a snapshot: it tells you who is working the 15th. An audit trail is the story of how it got that way. It tells you the 15th was assigned to one nurse when the cycle was published, then reassigned eleven days later, and that a named person made that change at a recorded time.
+Your posted schedule and your audit trail answer different questions. The schedule tells you who is working the 15th. The audit trail tells you how the 15th ended up that way: assigned to one nurse when the cycle was published, reassigned eleven days later, by a named person, at a recorded time.
 
 A useful entry answers four questions:
 
@@ -62,7 +63,9 @@ Spreadsheets are where this usually breaks down. A spreadsheet holds the current
 1. **The morning you post the schedule, save a dated copy and do not touch it again.** `Schedule_2026-09_POSTED.xlsx`. That single file is what "as published" means, and it costs you ten seconds.
 2. **Keep a running list of changes, one line each, in a tab of the same workbook or a notebook by the phone.** A line only needs five things:
 
-> `2026-09-12 | Night, 7p-7a, Med-Surg | Dana out sick, Maria covered | approved by me | 05:50`
+> `2026-09-12 | Night, 7p-7a, Med-Surg | Dana out sick, Maria covered | approved by J. Reyes, DON | 05:50`
+
+Write the name, not "me". The point of the line is that somebody reading it in six months knows who made the call without having to ask.
 
 That is a real audit trail. It is not worse than a software one because it is handwritten; it is worse only if it is incomplete or you cannot find it. A paper schedule on the wall with changes written on it in pen counts too, as long as somebody dates the changes and the sheet gets filed at the end of the cycle rather than binned.
 
@@ -76,15 +79,17 @@ Because most of the published guidance is written for nursing homes, and the rep
 
 Searching for staffing audit requirements in August 2026, most of what came back was about **Payroll-Based Journal reporting, usually shortened to PBJ**. That is the system nursing homes use to send their staffing hours to Medicare on a fixed schedule, where the numbers then appear publicly on the government's Nursing Home Care Compare website. Advice written for that world is about making submitted hours match payroll, and it is genuinely demanding.
 
-**A swing-bed critical access hospital is usually not in that system at all.** The obligation follows a particular kind of certification, the one nursing homes hold, and swing-bed care sits under the hospital's own certification instead. So most critical access hospitals file no PBJ data whatsoever.
+**Most critical access hospitals are not in that system at all.** The obligation follows a particular kind of certification, the one nursing homes hold. A critical access hospital that uses swing beds is still operating under its own hospital certification when it does so, which is why the reporting requirement does not reach it. So most critical access hospitals file no PBJ data whatsoever.
 
-**The test is one question, so here it is rather than a link.** Is your hospital listed on [Nursing Home Care Compare](https://www.medicare.gov/care-compare/) with its own separate skilled nursing facility certification number? Search your hospital name and state. A swing-bed-only hospital returns no nursing-home listing. If you get no listing, you do not file PBJ. The main exception is a hospital running a separately certified distinct-part skilled nursing unit, which is certified as a skilled nursing facility and surveyed in its own right. Our guide to [CMS PBJ reporting and scheduling software](/blog/cms-pbj-reporting-scheduling-software) covers that case in full.
+**The test is one question, so here it is rather than a link.** Is your hospital listed on [Nursing Home Care Compare](https://www.medicare.gov/care-compare/) with its own separate skilled nursing facility certification number? Search your hospital name and state. If no nursing-home listing comes back, you do not file PBJ. The main exception is a hospital running a separately certified distinct-part skilled nursing unit, which is certified as a skilled nursing facility and surveyed in its own right. That unit owes the filing, not the hospital around it. Our guide to [CMS PBJ reporting and scheduling software](/blog/cms-pbj-reporting-scheduling-software) covers that case in full.
 
 This is more than a technicality, because it changes what you are keeping records **for**. A nursing home keeps them to survive a data submission. A hospital keeps them to answer a person.
 
 ## What Does a Surveyor Actually Ask For?
 
-They compare what they can see to what you gave them, and ask about the difference.
+During the survey they compare the staff they can see on the floor to the schedule and records you hand over when they ask, then ask about any difference.
+
+**And it is worth knowing there are two surveys, not one.** A CMS survey checks the federal Conditions of Participation. Your state licensing agency, Texas HHSC for a Texas hospital, runs its own inspection against state rules, which as the Texas example below shows are stricter in places. The same schedule has to satisfy both, and a record that answers one will generally answer the other.
 
 A critical access hospital answers instead to the Conditions of Participation, which are the federal rules a hospital has to meet to bill Medicare at all, and which a surveyor checks in person rather than through a data upload. Two of them land directly on the schedule:
 
@@ -112,7 +117,7 @@ One review is not a verdict, and When I Work is well rated overall at 4.5 out of
 Three questions will tell you where you stand, and they apply whether your schedule lives in software, a spreadsheet or a binder:
 
 1. **Can you find out who made a change?** Not who is assigned now, but who did the reassigning. In software this fails when a login is shared, so it is worth checking whether yours are individual. On paper it fails when changes go on in pen with no initials.
-2. **Can you get back to last cycle's schedule as it was published?** If the only copy is the one you have been editing, the answer is no, and that is true of most spreadsheets and some software.
+2. **Can you work out what last cycle's schedule looked like on the day you published it?** Either you kept a copy, or you have a change log complete enough to work backwards from. If the only thing you have is the file you have been editing, you have neither.
 3. **Can you hand the record to somebody else?** Printed, emailed, or copied into a file. A record only you can reach, in a tool only you log into, is not much use when you are on leave and a question arrives.
 
 Failing all three is common and it is fixable by hand, using the dated copy and the running list described above. What you should not do is assume you pass because you own a scheduling tool. That is the assumption the reviewer above turned out to be wrong about.
@@ -121,13 +126,17 @@ Failing all three is common and it is fixable by hand, using the dated copy and 
 
 SimpleScheduleAI is an [AI-native nurse scheduling](/ai-nurse-scheduling) service for Texas hospitals of 25 beds or fewer. The AI builds each schedule, our scheduling team checks it, and your nurse manager approves it.
 
-The change log is kept for you rather than by you. Every schedule change is recorded as it happens, with the person who made it and the time. Ask for it narrowed to one nurse, one kind of change or one date range, and it comes back to you as a spreadsheet file you can email or print, so the record never sits locked inside our system.
+The change log is kept for you rather than by you. Every schedule change is recorded as it happens, with the person who made it and the time.
+
+You can ask for any slice of it: one nurse, one type of change, one date range. It comes back as a spreadsheet file. Email it, print it, put it in a binder. The record is yours, not something that only exists inside our system.
 
 Callouts get the same treatment, including who was contacted and in what order, not just who ended up working. If a drop in patient numbers leaves a shift with more nurses than it needs, the entry says so in those words, so the record shows why somebody was taken off rather than just showing that they were.
 
 Two details exist because a question from a surveyor is not the same as a question from a nurse. Any schedule the system built can be rebuilt later exactly as it was first produced, so "what did it originally give us" has an answer. And when the software leaves a shift short while staff were available, without a rule that explains it, that entry gets flagged instead of passing quietly. The awkward cases stay in the record.
 
-One honest limitation, and it is a real one. This records scheduling decisions. It is not a compliance system. It does not know your state's nursing rules, it does not track when a certification expires, and it will not tell you whether you met a Condition of Participation. Our [nurse scheduling software](/nurse-scheduling-software) overview covers the rest, and [how the service runs a cycle](/how-it-works) covers what arrives each period.
+**Being straight about the second question above, since we ask you to hold your own tool to it.** We do not keep a frozen picture of the schedule as published that you can call up like an old document. What we keep is the publish event and every change after it, each one recording what the shift was before and after. So the published version is reconstructed from the log rather than stored as a separate copy. For answering "what did this look like when it went out, and what happened since", that works. If what you want is a one-click restore to a previous version, no scheduling tool we know of at this price does that, and we do not either.
+
+One honest limitation beyond that. This records scheduling decisions. It is not a compliance system. It does not know your state's nursing rules, it does not track when a certification expires, and it will not tell you whether you met a Condition of Participation. Our [nurse scheduling software](/nurse-scheduling-software) overview covers the rest, and [how the service runs a cycle](/how-it-works) covers what arrives each period.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>

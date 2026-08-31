@@ -7,6 +7,7 @@ excerpt: >
   hospital only a few of your nurses are cleared to do it. That makes charge a scheduling
   problem, not a hiring one.
 image: ~/assets/images/pool/team-huddle-01.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: tofu
 draft: false

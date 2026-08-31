@@ -8,6 +8,7 @@ excerpt: >
   hospital has at 3 a.m. Which one you run was mostly settled by your roster. The skill mix on each
   shift is the part you still control.
 image: ~/assets/images/pool/ward-team-03.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: mofu
 tags:

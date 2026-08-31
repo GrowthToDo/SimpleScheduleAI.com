@@ -7,6 +7,7 @@ excerpt: >
   ratio. What the new goal actually requires, and which rules bind a hospital that was never
   accredited in the first place.
 image: ~/assets/images/pool/compliance-02.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: mofu
 draft: false

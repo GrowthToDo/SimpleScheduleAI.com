@@ -7,6 +7,7 @@ excerpt: >
   problem is the decisions that fall in the gap between them, which get made late, or twice,
   or not at all.
 image: ~/assets/images/pool/one-on-one-01.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: tofu
 draft: false

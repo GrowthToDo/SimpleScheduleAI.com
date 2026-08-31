@@ -8,6 +8,7 @@ excerpt: >
   month. The financial case is well documented. The staffing consequence of capping at 25 beds is not,
   and the coverage floor does not shrink with the bed count.
 image: ~/assets/images/pool/ward-quiet-01.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: mofu
 tags:

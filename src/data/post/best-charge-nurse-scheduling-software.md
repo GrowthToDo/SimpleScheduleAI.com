@@ -8,6 +8,7 @@ excerpt: >
   out, the list of people cleared to run the shift might be four names long. Here is what eight
   scheduling platforms actually document about that problem.
 image: ~/assets/images/pool/night-shift-01.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: bofu
 tags:

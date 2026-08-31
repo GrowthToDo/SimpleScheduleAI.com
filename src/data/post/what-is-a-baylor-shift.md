@@ -8,6 +8,7 @@ excerpt: >
   what it costs the hospital running it, and the overtime rule that can make it far more expensive
   than the headline pay suggests.
 image: ~/assets/images/pool/payroll-desk-02.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: mofu
 tags:

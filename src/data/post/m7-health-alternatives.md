@@ -7,6 +7,7 @@ excerpt: >
   settled. A narrower one still decides a small hospital purchase. Who is building the schedule in
   week six, once onboarding is over?
 image: ~/assets/images/pool/team-huddle-03.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: bofu
 draft: false

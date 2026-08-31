@@ -8,6 +8,7 @@ excerpt: >
   realistic versions of it hard. What decides how hard yours is turns out to be something you
   control: how the rules are written.
 image: ~/assets/images/pool/manual-scheduling-01.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: mofu
 tags:

@@ -63,7 +63,7 @@ This matters because swing-bed care is how the large majority of Critical Access
 
 Ask one question. Is your hospital listed on Nursing Home Care Compare with its own skilled nursing facility CMS Certification Number? If no, you do not file PBJ, because the obligation tracks SNF certification exactly.
 
-To run the check, search your hospital name and state at [Nursing Home Care Compare](https://www.medicare.gov/care-compare/). A swing-bed-only hospital returns no nursing-home listing; one that operates a separately certified skilled nursing unit appears with its own SNF CMS Certification Number and a Five-Star rating. For a dated record, your Medicare Administrative Contractor can confirm your certification status in writing.
+To run the check, search your hospital name and state at [Nursing Home Care Compare](https://www.medicare.gov/care-compare/). A hospital without a separately certified skilled nursing unit returns no nursing-home listing, whether or not it uses swing beds. One that operates such a unit appears with its own SNF CMS Certification Number and a Five-Star rating. For a dated record, your Medicare Administrative Contractor can confirm your certification status in writing.
 
 ## What Is the One Critical Access Hospital Case That Does Owe PBJ?
 

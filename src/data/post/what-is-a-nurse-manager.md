@@ -6,6 +6,7 @@ title: 'What Is a Nurse Manager? Role and Scheduling Duties'
 excerpt: >
   A nurse manager is the RN who runs a nursing unit: staff, budget, compliance, and the schedule. Here is what the job covers, how it changes at a 25-bed hospital, and where the hours actually go.
 image: ~/assets/images/pool/one-on-one-02.webp
+imageCredit: 'AI-generated illustration'
 category: Glossary
 postType: glossary
 tags:
