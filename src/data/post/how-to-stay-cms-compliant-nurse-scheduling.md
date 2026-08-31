@@ -26,7 +26,7 @@ metadata:
 
 Your staffing is compliant. Your documentation might not be able to prove it. At a Critical Access Hospital, those are two different problems, and the second one is what fails a CMS survey.
 
-This guide covers what CMS actually evaluates in CAH nurse staffing, the three records a surveyor asks for, the gaps that draw findings, and how to keep the documentation current without adding hours to the nurse manager's week.
+This guide covers what CMS actually evaluates in CAH nurse staffing, the three records a surveyor asks for, the gaps that draw findings, and how to keep the documentation current without adding hours to the nurse manager's week. For the record that shows how a schedule changed between publishing and being worked, see our guide to [schedule audit trails](/blog/nurse-schedule-audit-trail).
 
 ## Key Takeaways
 

@@ -1273,20 +1273,33 @@ promote any quote to verified.
 **Product:** Scheduling app for retail, hospitality, small business. Mobile shift pickup,
 swap requests, availability. Transparent per-user pricing with free tier.
 
-**Ratings (verified 2026-04-30):**
+**Capterra product ID: 121248.** URL:
+`https://www.capterra.com/p/121248/When-I-Work/reviews/`. Recorded 2026-08-31 after the
+ID was found to be missing from this section, which cost a re-verification pass.
 
-- Capterra: 4.5/5 (1,289 reviews)
+**Ratings (re-verified 2026-08-31, live via Playwright):**
+
+- Capterra: 4.5/5 (1,300 reviews). Ease of use 4.5, Customer Service 4.4.
+  Capterra's own page states "Last updated August 26th, 2026".
+- Prior reading (2026-04-30): 4.5/5 (1,289 reviews). Rating flat, review count +11.
 
 **Important caveat:** Product page does not document HIPAA, BAA, CMS §485.635 audit-trail,
 FLSA 8-and-80 tracking, or credential constraints. Verify with vendor for hospital use cases.
 
 ### Verified Reviewer Quotes
 
-**Negative — Audit Capability:**
+**Negative — Audit Capability (re-verified verbatim on the live page 2026-08-31):**
 
 > "No Auditing capability to see if unauthorized changes were made, and does not work for complex workflows."
 >
-> Jonathan R., IT Admin, Hospital & Health Care, February 25, 2026, Capterra
+> Jonathan R, IT Admin, Hospital & Health Care, 51-200 employees, used the software for
+> 6-12 months. February 25, 2026, Capterra.
+
+Two corrections from the re-verification: the page renders the name as "Jonathan R" with
+no period after the initial, and it carries firmographics this entry had omitted
+(51-200 employees, 6-12 months' use). The employee band matters for our purposes: this is
+a hospital reviewer at roughly our ICP's scale, not an enterprise one, which is what makes
+the quote usable in critical access content.
 
 **Negative — Time-Off Visibility:**
 

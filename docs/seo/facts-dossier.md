@@ -19,7 +19,7 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - Wrong: "a registered nurse must be on duty" (RN-only overstates the reg)
 - Section covers: Staffing and staff responsibilities. Pin-cite for the on-duty clause: (a)(5).
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631
-- Verified: 2026-07-03 (via Cornell LII cross-check)
+- Verified: 2026-07-03 (via Cornell LII cross-check). Re-verified live at Cornell LII 2026-08-31, unchanged.
 
 ### 42 CFR 485.635(d)
 
@@ -28,7 +28,7 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - Wrong: attributing this clause to 485.631; implying only an RN may supervise and evaluate (the reg allows a PA where State law permits)
 - Section covers: Provision of services. Paragraph (d) heading: Standard: Nursing services.
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635
-- Verified: 2026-07-04 (via Cornell LII cross-check; eCFR bot-blocks automated fetches)
+- Verified: 2026-07-04 (via Cornell LII cross-check; eCFR bot-blocks automated fetches). Re-verified live at Cornell LII 2026-08-31, unchanged, including the physician-assistant alternative at (d)(2).
 
 ### 42 CFR 485.610 (location / distance)
 
@@ -448,6 +448,34 @@ https://www.cms.gov/files/document/qso-26-15-cah-original-release-2026-08-21.pdf
   Required to Re-enroll in Medicare", released August 14, 2013 (OEI-05-12-00080). CMS concurred with
   its recommendation to periodically reassess compliance.
 - Verified: 2026-08-26 (primary document read in full)
+
+### PBJ and swing beds: the split, and the wording rule
+
+Added 2026-08-31 after a fact-check found this entry missing. The facts lived only
+inside `src/data/post/cms-pbj-reporting-scheduling-software.md`, and a second post
+(`nurse-schedule-audit-trail`) then leaned on them with no dossier row to check
+against. Line 333 of this file already referred to "the PBJ split already in this
+dossier", which was not true until now.
+
+- **Most Critical Access Hospitals file no PBJ data at all.** Payroll-Based Journal
+  reporting attaches to the skilled-nursing certification, and swing-bed care sits
+  under the hospital's own certification instead.
+- **The decision rule is one question:** is the hospital listed on Nursing Home Care
+  Compare with its own skilled nursing facility CMS Certification Number? If no, it
+  does not file PBJ. Check at https://www.medicare.gov/care-compare/ — a
+  swing-bed-only hospital returns no nursing-home listing.
+- **The exception** is a separately certified distinct-part skilled nursing unit.
+  That unit, not the hospital around it, owes PBJ.
+- **WORDING RULE, same shape as the 483.35 rule below.** Always scope the exemption
+  to the reporting: write "swing beds are exempt **from PBJ**", never a bare "swing
+  beds are exempt". The hospital's own 485.631 obligations still apply to those
+  patients, and a bare exemption reads as though they do not. A fact-check caught
+  exactly this leak in the audit-trail draft on 2026-08-31.
+- **Do not state the distinct-part position as a quoted CMS line.** It is an
+  inference from the separate-certification structure. Safe wording: "certified as a
+  skilled nursing facility and surveyed against Part 483 in its own right."
+- **Avoid "small and shrinking minority"** unless the sibling post's reasoning is
+  carried with it. The trend half is unsourced.
 
 ### Nursing care delivery models (the traditional four) and the evidence for them
 
