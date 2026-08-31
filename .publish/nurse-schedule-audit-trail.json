@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-schedule-audit-trail",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T07:52:45.351Z",
+      "contentHash": "8f13cbbadfde2f5f363b9a77ec406f7c4d681b97681c9470880087c68d56c183"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T07:52:47.566Z",
+      "contentHash": "8f13cbbadfde2f5f363b9a77ec406f7c4d681b97681c9470880087c68d56c183"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T07:52:49.368Z",
+      "contentHash": "8f13cbbadfde2f5f363b9a77ec406f7c4d681b97681c9470880087c68d56c183"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T07:52:49.408Z",
+      "contentHash": "8f13cbbadfde2f5f363b9a77ec406f7c4d681b97681c9470880087c68d56c183"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T07:52:49.441Z",
+      "contentHash": "8f13cbbadfde2f5f363b9a77ec406f7c4d681b97681c9470880087c68d56c183"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T07:52:49.444Z",
+      "contentHash": "8f13cbbadfde2f5f363b9a77ec406f7c4d681b97681c9470880087c68d56c183"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T07:52:49.445Z",
+      "contentHash": "8f13cbbadfde2f5f363b9a77ec406f7c4d681b97681c9470880087c68d56c183"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "cold read + fact-check applied",
+      "setAt": "2026-08-31T07:52:42.603Z",
+      "contentHash": "046b89070fb96191b6001cb001037701e4ff0408aa41ae9d77a310b905462bf6"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "adversarial fact-check, 7 defects applied",
+      "setAt": "2026-08-31T07:52:43.536Z",
+      "contentHash": "046b89070fb96191b6001cb001037701e4ff0408aa41ae9d77a310b905462bf6"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder: take the blog live",
+      "setAt": "2026-08-31T07:52:44.253Z",
+      "contentHash": "046b89070fb96191b6001cb001037701e4ff0408aa41ae9d77a310b905462bf6"
+    }
+  },
+  "overrides": []
+}

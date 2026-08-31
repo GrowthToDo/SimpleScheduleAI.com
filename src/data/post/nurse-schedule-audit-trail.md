@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-08-31T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Who Changed the Schedule? Audit Trails in Nurse Scheduling'
