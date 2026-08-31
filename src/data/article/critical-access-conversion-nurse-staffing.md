@@ -17,7 +17,7 @@ tags:
   - rural-hospitals
 metadata:
   canonical: 'https://simplescheduleai.com/articles/critical-access-conversion-nurse-staffing'
-  description: 'Rural hospital conversions to critical access status have more than doubled since 2019. What the designation changes about nurse staffing, the on-duty rules that come with it, and the review clock CMS attached in August 2026.'
+  description: 'Rural hospital conversions to critical access status have roughly doubled since 2019. What the designation changes about nurse staffing, the on-duty rules that come with it, and the eligibility review CMS described in August 2026.'
 ---
 
 ## Key Takeaways
@@ -25,8 +25,8 @@ metadata:
 - Conversions are rising. [HFMA reported](https://www.hfma.org/fast-finance/rural-hospitals-becoming-critical-access/) that 19 rural hospitals obtained critical access status in 2023 and 16 in 2024, against 8 in 2019. The draw is Medicare reimbursement at 101 percent of reasonable costs.
 - Two more hospitals moved that way in six days this month. Albany Med has proposed taking Columbia Memorial in New York from 192 beds to 25, and Brattleboro Memorial in Vermont says it is exploring whether the designation is even available to it.
 - The financial case is well documented and the staffing consequence is not. Capping at 25 beds does not shrink the schedule proportionally, because the rules that come with the designation set a floor that does not move with your census.
-- Federal rules require a licensed nurse on duty whenever there is an inpatient, and require a registered nurse to assign and supervise the nursing care of every patient. Neither obligation gets smaller at 25 beds.
-- CMS put the designation itself under a review clock in August 2026. Hospitals converting now are joining a status whose eligibility rules are being tightened, which is a question worth asking before the application goes in.
+- Federal rules require a licensed nurse on duty whenever there is an inpatient, and require a registered nurse to provide or assign the nursing care of every patient. Neither obligation gets smaller at 25 beds.
+- CMS put the designation under a review process in August 2026. It does not change who qualifies today, but requesting conversion is itself one of the things that triggers an eligibility review, which is worth knowing before the application goes in.
 
 ## Table of Contents
 
@@ -40,7 +40,7 @@ metadata:
 
 Rural hospitals are converting to critical access status faster than they were five years ago, and the reason is money. Medicare pays a critical access hospital 101 percent of reasonable costs instead of a fixed rate. What gets worked out afterwards, usually by whoever builds the schedule, is that a hospital capped at 25 beds still owes the same nursing coverage floor it owed at 192.
 
-That floor is the subject of this piece. The financial modeling is well served elsewhere. The staffing modeling is almost entirely missing.
+That floor is the subject of this piece. Searching for guidance on it, we found plenty on the financial modeling and almost nothing on the staffing consequence.
 
 ## How Many Hospitals Are Converting, and Why?
 
@@ -50,9 +50,9 @@ More than were converting before the pandemic, though the numbers are small in a
 
 The reimbursement mechanism is the whole case. A critical access hospital is paid 101 percent of reasonable costs rather than a set amount per case, which turns a low-volume inpatient service from a loss-maker into something closer to break-even.
 
-One example in that reporting shows what conversion actually costs in capacity. Wayne Hospital capped itself at 25 beds after converting, down from 32 licensed. Its "average patient census was only nine over the past five years," so the bed cap gave up licensed capacity it was not using.
+One example in that reporting shows what conversion actually costs in capacity. Wayne Hospital in Greenville, Ohio capped itself at 25 beds after converting, down from 32 licensed. A Fitch Ratings report cited by HFMA found its "average patient census was only nine over the past five years," so the bed cap gave up licensed capacity the hospital was not using.
 
-The honest counterweight comes from the [Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), which states plainly that "Some hospitals have closed even after converting to CAH status." Conversion improves the payment formula. It does not fix a hospital whose problem is something else.
+The honest counterweight comes from the [Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), which states plainly that "[S]ome hospitals have closed even after converting to CAH status." Conversion improves the payment formula. It does not fix a hospital whose problem is something else.
 
 ## Which Hospitals Are Moving Right Now?
 
@@ -70,28 +70,28 @@ Both are hospitals under financial strain looking at the same lever. Neither is 
 
 Less than you would hope, because the coverage floor does not scale down with the bed count.
 
-A hospital that halves its beds does not halve its schedule. Coverage is driven by the hours in a day and the areas that must be staffed, not by how many beds are occupied. Two of the rules that come with the designation set that floor directly:
+A hospital that halves its beds does not halve its schedule. Real staffing does flex with census, but the regulatory floor underneath it does not move at all, and that floor is set by the hours in a day and the areas that have to be covered. Two of the rules that come with the designation set it directly:
 
 - **A licensed nurse on duty whenever there is an inpatient.** [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) requires "a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients." One inpatient triggers it. A census of nine and a census of twenty-four trigger the same requirement.
 - **A registered nurse assigns and supervises the care.** [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) requires that a registered nurse "provide (or assign to other personnel) the nursing care of each patient," and that a registered nurse, or a physician assistant where state law permits, "supervise and evaluate the nursing care for each patient." The rule names swing-bed patients specifically.
 
 State law can go further. In Texas, [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) requires an RN on duty in each building of a licensed hospital that contains at least one nursing unit where patients are present, so the federal allowance for a licensed practical nurse alone is not enough there.
 
-The consequence for a converting hospital is a different scheduling problem, not a smaller version of the old one. A 192-bed hospital absorbs a callout inside a large roster. A 25-bed hospital with two licensed nurses on nights has no depth to absorb anything, so the same callout becomes a coverage event. Our guide to [nurse staffing models](/blog/nurse-staffing-models) works through why three of the four traditional care models stop being available at that size, and our [critical access hospital scheduling](/critical-access-hospital-scheduling) overview covers what the coverage floor looks like in practice.
+The consequence for a converting hospital is a different scheduling problem, not a smaller version of the old one. A 192-bed hospital absorbs a callout inside a large roster. Take a 25-bed hospital running two licensed nurses on nights, which is a common shape at that size: there is no depth to absorb anything, so the same callout becomes a coverage event. Our guide to [nurse staffing models](/blog/nurse-staffing-models) works through why three of the four traditional care models stop being available at that size, and our [critical access hospital scheduling](/critical-access-hospital-scheduling) overview covers what the coverage floor looks like in practice.
 
 The [96-hour annual average length of stay](https://www.ruralhealthinfo.org/topics/critical-access-hospitals) adds a second scheduling pressure that is easy to miss. It is an annual average rather than a per-patient cap, so it does not dictate any individual discharge. It does mean the case mix a converted hospital keeps has to stay within it, which changes which services the schedule has to cover at all.
 
 ## Why Is CMS Reviewing the Designation at the Same Time?
 
-Because the eligibility rules and the conversion trend are moving in opposite directions, and hospitals applying now are stepping into both.
+Because requesting the designation is itself one of the things that starts a review, so the conversion and the scrutiny arrive together.
 
-CMS issued QSO-26-15-CAH on August 21, 2026, setting out how it will evaluate whether a hospital still meets the location requirements for the designation. We covered that memo in detail in [our piece on the ten-year eligibility clock](/articles/cms-cah-location-eligibility-review-2026). Three points from it matter to anyone considering conversion:
+CMS issued QSO-26-15-CAH on August 21, 2026, setting out how it will evaluate whether a hospital meets the location requirements for the designation. It does not change who qualifies. It describes how compliance gets checked, on a schedule, for the first time. We covered the memo in detail in [our piece on the ten-year eligibility clock](/articles/cms-cah-location-eligibility-review-2026). Three points matter to anyone considering conversion:
 
-- Decennial reviews do not begin until calendar year 2033, so this is not an immediate threat.
-- A hospital does not have to wait for 2033 to be reviewed. A new acute care hospital seeking initial Medicare certification nearby can trigger a review on its own, and CMS says it may review at any time.
+- **Asking for the designation triggers a review.** A hospital requesting critical access certification or conversion is one of the events that prompts CMS to evaluate location eligibility. For a converting hospital this is not a distant concern, it is part of the application.
+- Beyond that, decennial reviews begin in calendar year 2033 and run every ten years. A new acute care hospital seeking initial Medicare certification nearby can also trigger a review, and CMS says it may review at any time.
 - The memo and its attached manual text give two different deadlines for how long a hospital found ineligible has to fix the problem.
 
-None of that argues against converting. It argues for asking a question the financial modeling does not: is the location basis for our eligibility solid, and would it survive a review? A hospital converting on a necessary-provider basis should also know that its grandfathered status carries a 75 percent staff-retention test if it ever relocates, which turns a staffing decision into an eligibility one.
+None of that argues against converting. It argues for asking a question the financial modeling does not: is the location basis for our eligibility solid enough to survive being examined? Worth noting for existing critical access hospitals rather than converting ones: the necessary-provider exemption is grandfathered to state designations made before January 1, 2006 and cannot be newly obtained, and a hospital holding one keeps it on relocation only if it retains 75 percent of its staff. That is a staffing decision with an eligibility consequence attached.
 
 ## How Does SimpleScheduleAI Help a Hospital Through This?
 
@@ -101,12 +101,12 @@ The scheduling problem after a conversion is the one we are built for. Coverage 
 
 Onboarding takes 3 to 5 business days and your first schedule lands inside two weeks. Our [nurse scheduling software](/nurse-scheduling-software) overview covers the mechanics, and [how the service runs a cycle](/how-it-works) covers what actually happens each period.
 
-One honest limitation, covering the things this does not do. It does not model the financial case for conversion, it does not assess your location eligibility, and it does not do compliance for you: it schedules against the coverage requirements you set, and it does not know your state's nursing rules. Those are questions for your CFO, your counsel and your compliance lead. What we can tell you is what your roster looks like against the coverage you say you need.
+One honest limitation, covering the things this does not do. It does not model the financial case for conversion, it does not assess your location eligibility, and it does not do compliance for you: it schedules against the coverage requirements we configure with you at onboarding, and it does not know your state's nursing rules. Those are questions for your CFO, your counsel and your compliance lead. What we can tell you is what your roster looks like against the coverage you say you need.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Conversion is usually modeled as a payment question and staffed as an afterthought, which is backwards for the people who have to live with it. The reimbursement math is knowable in advance and a finance team can run it. The staffing math is also knowable in advance and almost nobody runs it, so the hospital discovers after the fact that a 25-bed cap did not reduce the number of shifts it has to cover, only the number of beds and nurses it has to cover them with. Anyone weighing this should build the post-conversion schedule on paper before the application goes in. If the answer is that nights work only when nobody is sick, that is worth knowing while the decision is still reversible.
+    Every conversion analysis we could find models the payment question and leaves the staffing to be worked out afterwards, which is backwards for the people who have to live with it. The reimbursement math is knowable in advance and a finance team can run it. The staffing math is also knowable in advance and almost nobody runs it, so the hospital discovers after the fact that a 25-bed cap did not reduce the number of shifts it has to cover, only the number of beds and nurses it has to cover them with. Anyone weighing this should build the post-conversion schedule on paper before the application goes in. If the answer is that nights work only when nobody is sick, that is worth knowing while the decision is still reversible.
   </p>
 </div>
 
@@ -120,7 +120,7 @@ One honest limitation, covering the things this does not do. It does not model t
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">See what your roster looks like at 25 beds</p>
-  <p class="text-muted text-sm mb-6">Every draft is checked against the coverage you set before it reaches you. Onboarding takes 3 to 5 business days and your first schedule lands inside two weeks.</p>
+  <p class="text-muted text-sm mb-6">Every draft is checked against your coverage requirements before it reaches you. Onboarding takes 3 to 5 business days and your first schedule lands inside two weeks.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
@@ -133,11 +133,11 @@ Because Medicare pays a critical access hospital 101 percent of reasonable costs
 
 **Q: Does a smaller hospital need fewer nurses on the schedule?**
 
-Fewer in total, but not proportionally, and the coverage floor does not move at all. Federal rules require a licensed nurse on duty whenever there is even one inpatient, and a registered nurse to assign and supervise the nursing care of every patient. Those obligations are identical at a census of one and a census of twenty-four.
+Fewer in total, but not proportionally, and the federal floor does not move at all. A licensed nurse must be on duty whenever there is even one inpatient, and a registered nurse must provide or assign the nursing care of every patient. Those obligations are identical at a census of one and a census of twenty-four.
 
 **Q: Does converting guarantee the hospital survives?**
 
-No. The Rural Health Information Hub states that "Some hospitals have closed even after converting to CAH status." Conversion changes the payment formula. It does not address a problem whose cause is something else.
+No. The Rural Health Information Hub states that "[S]ome hospitals have closed even after converting to CAH status." Conversion changes the payment formula. It does not address a problem whose cause is something else.
 
 **Q: Is CMS making the designation harder to get or keep?**
 
@@ -149,17 +149,17 @@ A critical access hospital must maintain an annual average length of stay of 96 
 
 ## Sources
 
-[1] Daly R. "Rural hospitals switch to critical access status for financial reasons." Healthcare Financial Management Association, April 28, 2025. [hfma.org](https://www.hfma.org/fast-finance/rural-hospitals-becoming-critical-access/). Conversion counts for 2019, 2023 and 2024; 101 percent of reasonable costs; 340B follow-on eligibility; the Wayne Hospital bed-cap example.
+[1] Daly R. "More rural hospitals adopt critical access status to boost finances." Healthcare Financial Management Association, April 28, 2025. [hfma.org](https://www.hfma.org/fast-finance/rural-hospitals-becoming-critical-access/). Conversion counts for 2019, 2023 and 2024; 101 percent of reasonable costs; 340B follow-on eligibility; the Wayne Hospital bed-cap example. The five-year average census figure for Wayne Hospital is attributed within that article to a Fitch Ratings report, not to HFMA's own reporting.
 
 [2] Rural Health Information Hub, "Critical Access Hospitals (CAHs) Overview," last reviewed December 10, 2024. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/topics/critical-access-hospitals). The 25-bed maximum, the 96-hour annual average length of stay, and the closures-after-conversion caveat.
 
 [3] "Columbia Memorial Hospital radio tech: Push to downsize 'ignores reality'." WAMC Northeast Public Radio, August 20, 2026. [wamc.org](https://www.wamc.org/news/2026-08-20/columbia-memorial-hospital-radio-tech-push-to-downsize-ignores-reality). The 192-to-25 bed proposal, the reimbursement rationale, and the staff objections including the disputed bed-availability counts, which are reported claims rather than established findings.
 
-[4] Scheetz M. "Vermont hospital explores transition to critical access status." Becker's Hospital Review, August 26, 2026. The Brattleboro Memorial spokesperson statement, the nine layoffs, and the obstetrics closure.
+[4] Scheetz M. "Vermont hospital explores transition to critical access status." Becker's Hospital Review, August 26, 2026. [beckershospitalreview.com](https://www.beckershospitalreview.com/finance/vermont-hospital-explores-transition-to-critical-access-status/). The Brattleboro Memorial spokesperson statement, the nine layoffs announced in early August, and the board's early-July decision to close the birthing center over six to nine months. Becker's blocks automated retrieval, so this source was read in a browser rather than fetched.
 
 [5] [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631): the licensed nurse who must be on duty whenever a critical access hospital has one or more inpatients.
 
-[6] [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635): the registered nurse's duty to provide or assign the nursing care of each patient, and to supervise and evaluate it.
+[6] [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635): at (d)(1), the registered nurse's duty to provide or assign the nursing care of each patient; at (d)(2), the duty to supervise and evaluate that care, which falls to a registered nurse or, where State law permits, a physician assistant.
 
 [7] CMS QSO-26-15-CAH, August 21, 2026, on location eligibility review. Covered in detail in our article on [the ten-year eligibility clock](/articles/cms-cah-location-eligibility-review-2026).
 

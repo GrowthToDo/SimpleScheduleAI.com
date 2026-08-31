@@ -196,7 +196,7 @@ Under the federal critical access hospital rule, an LPN can be the licensed nurs
 
 **Q: Do CMS or Texas rules require a hospital to adopt a particular staffing model?**
 
-No. Neither names functional, team, total patient care or primary nursing, and neither requires you to pick one. What they require is a registered nurse to assign and supervise the nursing care of each patient, under 42 CFR 485.635(d), and in Texas an RN on duty in each building holding patients. Those duties hold whichever model you say you run, which is why a model change that adds nobody to the floor changes very little.
+No. Neither names functional, team, total patient care or primary nursing, and neither requires you to pick one. What 42 CFR 485.635(d) requires is that a registered nurse provide or assign the nursing care of each patient, and that a registered nurse, or a physician assistant where state law permits, supervise and evaluate it. Texas adds an RN on duty in each building holding patients. Those duties hold whichever model you say you run, which is why a model change that adds nobody to the floor changes very little.
 
 ## Sources
 

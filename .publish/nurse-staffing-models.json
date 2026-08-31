@@ -5,58 +5,58 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T05:20:36.350Z",
-      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
+      "checkedAt": "2026-08-31T05:19:16.327Z",
+      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T05:20:38.587Z",
-      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
+      "checkedAt": "2026-08-31T05:19:18.987Z",
+      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T05:20:39.900Z",
-      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
+      "checkedAt": "2026-08-31T05:19:21.556Z",
+      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T05:20:39.944Z",
-      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
+      "checkedAt": "2026-08-31T05:19:21.661Z",
+      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T05:20:39.997Z",
-      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
+      "checkedAt": "2026-08-31T05:19:21.724Z",
+      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T05:20:39.997Z",
-      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
+      "checkedAt": "2026-08-31T05:19:21.725Z",
+      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-28T05:20:40.000Z",
-      "contentHash": "9db2b9add3983ec1260e5954185ab2b1b74a2c11a2a6483b8b9c27a690fa32b6"
+      "checkedAt": "2026-08-31T05:19:21.728Z",
+      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "founder feedback round 1 applied",
-      "setAt": "2026-08-28T05:20:32.926Z",
-      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
+      "setBy": "fact-check correction: RN/PA supervision duty",
+      "setAt": "2026-08-31T05:19:12.123Z",
+      "contentHash": "fb64b8dc657a327dc7879fed4ce3dd8859e4cc30bdce422e89e3816cfb0d99ff"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "Texas rule verified; corpus swept",
-      "setAt": "2026-08-28T05:20:33.716Z",
-      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
+      "setBy": "485.635(d)(2) PA carve-out restored",
+      "setAt": "2026-08-31T05:19:13.146Z",
+      "contentHash": "fb64b8dc657a327dc7879fed4ce3dd8859e4cc30bdce422e89e3816cfb0d99ff"
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder feedback round 1",
-      "setAt": "2026-08-28T05:20:34.816Z",
-      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
+      "setBy": "correction to live post",
+      "setAt": "2026-08-31T05:19:14.621Z",
+      "contentHash": "fb64b8dc657a327dc7879fed4ce3dd8859e4cc30bdce422e89e3816cfb0d99ff"
     },
     "imageEyeball": {
       "value": "OK",
