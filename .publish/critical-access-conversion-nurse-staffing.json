@@ -5,58 +5,58 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T07:00:49.834Z",
-      "contentHash": "b4bcf32a8cdd18487b4631453aa8e0e7951b5730843c9d07e5709be8dc364908"
+      "checkedAt": "2026-08-31T07:37:49.271Z",
+      "contentHash": "219dcf8d687ebb2255856b40aae23fcb584e9e84cef6e6ff084e689402e64ed0"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T07:00:53.047Z",
-      "contentHash": "b4bcf32a8cdd18487b4631453aa8e0e7951b5730843c9d07e5709be8dc364908"
+      "checkedAt": "2026-08-31T07:37:51.923Z",
+      "contentHash": "219dcf8d687ebb2255856b40aae23fcb584e9e84cef6e6ff084e689402e64ed0"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T07:01:02.697Z",
-      "contentHash": "b4bcf32a8cdd18487b4631453aa8e0e7951b5730843c9d07e5709be8dc364908"
+      "checkedAt": "2026-08-31T07:37:54.736Z",
+      "contentHash": "219dcf8d687ebb2255856b40aae23fcb584e9e84cef6e6ff084e689402e64ed0"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T07:01:02.754Z",
-      "contentHash": "b4bcf32a8cdd18487b4631453aa8e0e7951b5730843c9d07e5709be8dc364908"
+      "checkedAt": "2026-08-31T07:37:54.785Z",
+      "contentHash": "219dcf8d687ebb2255856b40aae23fcb584e9e84cef6e6ff084e689402e64ed0"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T07:01:02.778Z",
-      "contentHash": "b4bcf32a8cdd18487b4631453aa8e0e7951b5730843c9d07e5709be8dc364908"
+      "checkedAt": "2026-08-31T07:37:54.851Z",
+      "contentHash": "219dcf8d687ebb2255856b40aae23fcb584e9e84cef6e6ff084e689402e64ed0"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T07:01:02.778Z",
-      "contentHash": "b4bcf32a8cdd18487b4631453aa8e0e7951b5730843c9d07e5709be8dc364908"
+      "checkedAt": "2026-08-31T07:37:54.852Z",
+      "contentHash": "219dcf8d687ebb2255856b40aae23fcb584e9e84cef6e6ff084e689402e64ed0"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T07:01:02.780Z",
-      "contentHash": "b4bcf32a8cdd18487b4631453aa8e0e7951b5730843c9d07e5709be8dc364908"
+      "checkedAt": "2026-08-31T07:37:54.856Z",
+      "contentHash": "219dcf8d687ebb2255856b40aae23fcb584e9e84cef6e6ff084e689402e64ed0"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "bed-count editorial call",
-      "setAt": "2026-08-31T07:00:47.114Z",
-      "contentHash": "338aa1194dc8a52003fc64cda2ca876049b79f66c8c96842c9d1aa76fba32f9c"
+      "setBy": "founder feedback round 1",
+      "setAt": "2026-08-31T07:37:46.426Z",
+      "contentHash": "9e8bb2504e520768afb39dc56cdc9328656f7a188b6fe9028791afa91619b4e0"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "no new facts; figures removed",
-      "setAt": "2026-08-31T07:00:47.840Z",
-      "contentHash": "338aa1194dc8a52003fc64cda2ca876049b79f66c8c96842c9d1aa76fba32f9c"
+      "setBy": "coverage-floor claim corrected; 96-hour corpus check clean",
+      "setAt": "2026-08-31T07:37:47.253Z",
+      "contentHash": "9e8bb2504e520768afb39dc56cdc9328656f7a188b6fe9028791afa91619b4e0"
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder: make the call",
-      "setAt": "2026-08-31T07:00:48.697Z",
-      "contentHash": "338aa1194dc8a52003fc64cda2ca876049b79f66c8c96842c9d1aa76fba32f9c"
+      "setBy": "founder feedback round 1",
+      "setAt": "2026-08-31T07:37:48.210Z",
+      "contentHash": "9e8bb2504e520768afb39dc56cdc9328656f7a188b6fe9028791afa91619b4e0"
     }
   },
   "overrides": []

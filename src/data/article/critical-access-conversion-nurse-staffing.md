@@ -22,39 +22,43 @@ metadata:
 
 ## Key Takeaways
 
-- Conversions are rising. [HFMA reported](https://www.hfma.org/fast-finance/rural-hospitals-becoming-critical-access/) that 19 rural hospitals obtained critical access status in 2023 and 16 in 2024, against 8 in 2019. The draw is Medicare reimbursement at 101 percent of reasonable costs.
+- Conversions are rising. [HFMA reported](https://www.hfma.org/fast-finance/rural-hospitals-becoming-critical-access/) that 19 rural hospitals obtained critical access status in 2023 and 16 in 2024, against 8 in 2019. Hospitals convert because Medicare then pays them 101 percent of what their care actually costs, rather than a fixed amount per case.
 - Two more hospitals moved that way in six days this month. Albany Med has proposed taking Columbia Memorial in New York from 192 beds to 25, and Brattleboro Memorial in Vermont says it is exploring whether the designation is even available to it.
-- The financial case is well documented and the staffing consequence is not. Capping at 25 beds does not shrink the schedule proportionally, because the rules that come with the designation set a floor that does not move with your census.
+- The financial case is well documented and the staffing consequence is not. Halving your beds does not halve your schedule. You still cover every hour of every day, whatever the census.
 - Federal rules require a licensed nurse on duty whenever there is an inpatient, and require a registered nurse to provide or assign the nursing care of every patient. Neither obligation gets smaller at 25 beds.
 - CMS put the designation under a review process in August 2026. It does not change who qualifies today, but requesting conversion is itself one of the things that triggers an eligibility review, which is worth knowing before the application goes in.
 
 ## Table of Contents
 
-- [How Many Hospitals Are Converting, and Why?](#how-many-hospitals-are-converting-and-why)
-- [Which Hospitals Are Moving Right Now?](#which-hospitals-are-moving-right-now)
+- [Why Are Rural Hospitals Converting?](#why-are-rural-hospitals-converting)
+- [Which Hospitals Are Converting Right Now?](#which-hospitals-are-converting-right-now)
 - [What Changes on the Schedule at 25 Beds?](#what-changes-on-the-schedule-at-25-beds)
-- [Why Is CMS Reviewing the Designation at the Same Time?](#why-is-cms-reviewing-the-designation-at-the-same-time)
-- [How Does SimpleScheduleAI Help a Hospital Through This?](#how-does-simplescheduleai-help-a-hospital-through-this)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [Why Is CMS Reviewing the Designation Now?](#why-is-cms-reviewing-the-designation-now)
+- [How Does SimpleScheduleAI Help After a Conversion?](#how-does-simplescheduleai-help-after-a-conversion)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Rural hospitals are converting to critical access status faster than they were five years ago, and the reason is money. Medicare pays a critical access hospital 101 percent of reasonable costs instead of a fixed rate. What gets worked out afterwards, usually by whoever builds the schedule, is that a hospital capped at 25 beds still owes the same nursing coverage floor it owed at 192.
+Rural hospitals are converting to critical access status faster than they were five years ago, and the reason is money. Medicare pays a critical access hospital 101 percent of its reasonable costs, instead of a fixed amount per case.
 
-That floor is the subject of this piece. Searching in August 2026, we found plenty of guidance on the financial modeling and almost nothing on the staffing consequence. If the designation itself is new to you, start with [what a critical access hospital is](/blog/what-is-a-critical-access-hospital) and how its rules differ from a larger hospital's.
+The part that gets discovered later, usually by whoever builds the schedule, is that halving your beds does not halve your schedule. You still have to cover every hour of every day. A hospital with nine patients needs a nurse on the floor at 3 a.m. just as much as a hospital with twenty-four does, and that is true whether the building holds 25 beds or 192.
 
-## How Many Hospitals Are Converting, and Why?
+Searching in August 2026, we found plenty of guidance on the financial modeling and almost nothing on the staffing consequence. If the designation itself is new to you, start with [what a critical access hospital is](/blog/what-is-a-critical-access-hospital) and how its rules differ from a larger hospital's.
+
+## Why Are Rural Hospitals Converting?
 
 More than were converting before the pandemic, though the numbers are small in absolute terms.
 
-[HFMA's Rich Daly reported](https://www.hfma.org/fast-finance/rural-hospitals-becoming-critical-access/) in April 2025 that "Sixteen rural hospitals obtaining CAH in 2024 and 19 did so in 2023, compared to 8 obtaining it in 2019." So the rate roughly doubled. Daly also notes that "Nine of the hospitals obtaining CAH status in 2024 have, so far, subsequently become eligible for the 340B discount drug program," which is a second financial draw stacked on the first.
+[HFMA's Rich Daly reported](https://www.hfma.org/fast-finance/rural-hospitals-becoming-critical-access/) in April 2025 that "Sixteen rural hospitals obtaining CAH in 2024 and 19 did so in 2023, compared to 8 obtaining it in 2019." So the rate roughly doubled.
 
-The reimbursement mechanism is the whole case. A critical access hospital is paid 101 percent of reasonable costs rather than a set amount per case, which turns a low-volume inpatient service from a loss-maker into something closer to break-even.
+The payment change is the whole case. A critical access hospital is paid 101 percent of what its care costs, rather than a set amount per case. For a hospital with a half-empty inpatient floor, that is the difference between losing money on every admission and roughly breaking even.
 
-One example in that reporting shows what conversion actually costs in capacity. Wayne Hospital in Greenville, Ohio capped itself at 25 beds after converting, down from 32 licensed. A Fitch Ratings report cited by HFMA found its "average patient census was only nine over the past five years," so the bed cap gave up licensed capacity the hospital was not using.
+There is often a second benefit on top. Daly notes that "Nine of the hospitals obtaining CAH status in 2024 have, so far, subsequently become eligible for the 340B discount drug program," which lets a hospital buy outpatient drugs at reduced prices.
+
+One example in that reporting shows what conversion actually costs in capacity. Wayne Hospital in Greenville, Ohio capped itself at 25 beds after converting, down from 32 licensed. According to a Fitch Ratings report cited by HFMA, its "average patient census was only nine over the past five years." In other words, the beds it gave up were beds it had not been filling.
 
 The honest counterweight comes from the [Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), which states plainly that "[S]ome hospitals have closed even after converting to CAH status." Conversion improves the payment formula. It does not fix a hospital whose problem is something else.
 
-## Which Hospitals Are Moving Right Now?
+## Which Hospitals Are Converting Right Now?
 
 Two, in the last two weeks of August 2026, and they are at very different stages.
 
@@ -81,7 +85,7 @@ The consequence for a converting hospital is a different scheduling problem, not
 
 The [96-hour annual average length of stay](https://www.ruralhealthinfo.org/topics/critical-access-hospitals) adds a second scheduling pressure that is easy to miss. It is an annual average rather than a per-patient cap, so it does not dictate any individual discharge. It does mean the case mix a converted hospital keeps has to stay within it, which changes which services the schedule has to cover at all.
 
-## Why Is CMS Reviewing the Designation at the Same Time?
+## Why Is CMS Reviewing the Designation Now?
 
 Because requesting the designation is itself one of the things that starts a review, so the conversion and the scrutiny arrive together.
 
@@ -91,9 +95,11 @@ CMS issued QSO-26-15-CAH on August 21, 2026, setting out how it will evaluate wh
 - Beyond that, decennial reviews begin in calendar year 2033 and run every ten years. A new acute care hospital seeking initial Medicare certification nearby can also trigger a review, and CMS says it may review at any time.
 - The memo and its attached manual text give two different deadlines for how long a hospital found ineligible has to fix the problem.
 
-None of that argues against converting. It argues for asking a question the financial modeling does not: is the location basis for our eligibility solid enough to survive being examined? Worth noting for existing critical access hospitals rather than converting ones: the necessary-provider exemption is grandfathered to state designations made before January 1, 2006 and cannot be newly obtained, and a hospital holding one keeps it on relocation only if it retains 75 percent of its staff. That is a staffing decision with an eligibility consequence attached.
+None of that argues against converting. It argues for one extra question alongside the financial modeling: **would our location qualify if CMS looked at it closely?**
 
-## How Does SimpleScheduleAI Help a Hospital Through This?
+One footnote for hospitals that already hold the designation, rather than those converting into it. Some older critical access hospitals qualify through a "necessary provider" exemption, which a state had to grant before January 1, 2006 and which no hospital can obtain today. If such a hospital moves to a new building, it keeps that exemption only if it takes 75 percent of its staff with it. That turns a staffing question into an eligibility one.
+
+## How Does SimpleScheduleAI Help After a Conversion?
 
 SimpleScheduleAI is an [AI-native nurse scheduling](/ai-nurse-scheduling) service for Texas hospitals of 25 beds or fewer. AI-native means the schedule is built by software rather than by a person filling in a grid, but it is run as a service: the AI builds each schedule, our scheduling team checks it, and your nurse manager approves it before anyone sees it.
 
@@ -110,7 +116,7 @@ One honest limitation, covering the things this does not do. It does not model t
   </p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. **If conversion is being discussed at your hospital, ask to see the post-conversion staffing plan, not just the financial model.** If one does not exist, that is the finding. The plan should say who covers nights, and what happens when one of them calls out.
 2. **Build one post-conversion schedule on paper.** Take a normal month, apply the reduced roster, and mark every shift that only works if nobody is sick or on leave. That count is your real risk number.
