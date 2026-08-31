@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "critical-access-conversion-nurse-staffing",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T05:28:23.032Z",
+      "contentHash": "7dcf38bfaff7d689c5561661c3978a38f5e9bb7c7ab36a0ca303b70dd01cd074"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T05:28:26.208Z",
+      "contentHash": "7dcf38bfaff7d689c5561661c3978a38f5e9bb7c7ab36a0ca303b70dd01cd074"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T05:28:31.416Z",
+      "contentHash": "7dcf38bfaff7d689c5561661c3978a38f5e9bb7c7ab36a0ca303b70dd01cd074"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T05:28:31.481Z",
+      "contentHash": "7dcf38bfaff7d689c5561661c3978a38f5e9bb7c7ab36a0ca303b70dd01cd074"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T05:28:31.530Z",
+      "contentHash": "7dcf38bfaff7d689c5561661c3978a38f5e9bb7c7ab36a0ca303b70dd01cd074"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T05:28:31.531Z",
+      "contentHash": "7dcf38bfaff7d689c5561661c3978a38f5e9bb7c7ab36a0ca303b70dd01cd074"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-08-31T05:28:31.535Z",
+      "contentHash": "7dcf38bfaff7d689c5561661c3978a38f5e9bb7c7ab36a0ca303b70dd01cd074"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "themes pass + fact-check applied",
+      "setAt": "2026-08-31T05:28:19.959Z",
+      "contentHash": "c0ed07fe0a1d68bfde2013a87945211a503e3c815d4aba7ca1e9b1dcb1bc6ba8"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "adversarial fact-check, 9 defects applied",
+      "setAt": "2026-08-31T05:28:20.906Z",
+      "contentHash": "c0ed07fe0a1d68bfde2013a87945211a503e3c815d4aba7ca1e9b1dcb1bc6ba8"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder: take it live",
+      "setAt": "2026-08-31T05:28:21.775Z",
+      "contentHash": "c0ed07fe0a1d68bfde2013a87945211a503e3c815d4aba7ca1e9b1dcb1bc6ba8"
+    }
+  },
+  "overrides": []
+}

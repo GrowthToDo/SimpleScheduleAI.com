@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-08-31T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Rural Hospitals Are Converting to Critical Access Status. What It Does to the Nurse Schedule.'
@@ -40,7 +40,7 @@ metadata:
 
 Rural hospitals are converting to critical access status faster than they were five years ago, and the reason is money. Medicare pays a critical access hospital 101 percent of reasonable costs instead of a fixed rate. What gets worked out afterwards, usually by whoever builds the schedule, is that a hospital capped at 25 beds still owes the same nursing coverage floor it owed at 192.
 
-That floor is the subject of this piece. Searching for guidance on it, we found plenty on the financial modeling and almost nothing on the staffing consequence.
+That floor is the subject of this piece. Searching in August 2026, we found plenty of guidance on the financial modeling and almost nothing on the staffing consequence. If the designation itself is new to you, start with [what a critical access hospital is](/blog/what-is-a-critical-access-hospital) and how its rules differ from a larger hospital's.
 
 ## How Many Hospitals Are Converting, and Why?
 
@@ -75,7 +75,7 @@ A hospital that halves its beds does not halve its schedule. Real staffing does 
 - **A licensed nurse on duty whenever there is an inpatient.** [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) requires "a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients." One inpatient triggers it. A census of nine and a census of twenty-four trigger the same requirement.
 - **A registered nurse assigns and supervises the care.** [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) requires that a registered nurse "provide (or assign to other personnel) the nursing care of each patient," and that a registered nurse, or a physician assistant where state law permits, "supervise and evaluate the nursing care for each patient." The rule names swing-bed patients specifically.
 
-State law can go further. In Texas, [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) requires an RN on duty in each building of a licensed hospital that contains at least one nursing unit where patients are present, so the federal allowance for a licensed practical nurse alone is not enough there.
+State law can go further. In Texas, [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) requires an RN on duty in each building of a licensed hospital that contains at least one nursing unit where patients are present, so the federal allowance for a licensed practical nurse alone is not enough there. There is no federal nurse-to-patient ratio sitting above any of this either, which our guide to [nurse-to-patient ratios at a small hospital](/blog/nurse-staffing-ratios-critical-access-hospital) covers.
 
 The consequence for a converting hospital is a different scheduling problem, not a smaller version of the old one. A 192-bed hospital absorbs a callout inside a large roster. Take a 25-bed hospital running two licensed nurses on nights, which is a common shape at that size: there is no depth to absorb anything, so the same callout becomes a coverage event. Our guide to [nurse staffing models](/blog/nurse-staffing-models) works through why three of the four traditional care models stop being available at that size, and our [critical access hospital scheduling](/critical-access-hospital-scheduling) overview covers what the coverage floor looks like in practice.
 
@@ -106,7 +106,7 @@ One honest limitation, covering the things this does not do. It does not model t
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Every conversion analysis we could find models the payment question and leaves the staffing to be worked out afterwards, which is backwards for the people who have to live with it. The reimbursement math is knowable in advance and a finance team can run it. The staffing math is also knowable in advance and almost nobody runs it, so the hospital discovers after the fact that a 25-bed cap did not reduce the number of shifts it has to cover, only the number of beds and nurses it has to cover them with. Anyone weighing this should build the post-conversion schedule on paper before the application goes in. If the answer is that nights work only when nobody is sick, that is worth knowing while the decision is still reversible.
+    Every conversion analysis we could find as of August 2026 models the payment question and leaves the staffing to be worked out afterwards, which is backwards for the people who have to live with it. The reimbursement math is knowable in advance and a finance team can run it. The staffing math is also knowable in advance and almost nobody runs it, so the hospital discovers after the fact that a 25-bed cap did not reduce the number of shifts it has to cover, only the number of beds and nurses it has to cover them with. Anyone weighing this should build the post-conversion schedule on paper before the application goes in. If the answer is that nights work only when nobody is sick, that is worth knowing while the decision is still reversible.
   </p>
 </div>
 
