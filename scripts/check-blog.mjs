@@ -97,7 +97,13 @@ const AI_TONE_WORDS =
 // WARN, not FAIL: each of these entered the corpus before its rule existed, so
 // failing would block unrelated work. A corpus sweep is a separate, deliberate
 // change the founder approves.
-const FOUNDER_BANNED_WORDS = [['arithmetic', 'use "the numbers" or "the math" (founder 2026-08-27)']];
+const FOUNDER_BANNED_WORDS = [
+  ['arithmetic', 'use "the numbers" or "the math" (founder 2026-08-27)'],
+  // Non-native usage. Our reader is a nurse manager in Texas; British idiom and
+  // invented jargon both read as written by an outsider (founder 2026-08-31).
+  ['fortnight', 'say "two weeks" (founder 2026-08-31)'],
+  ['got worked', 'not nursing usage; say "the schedule your nurses actually worked" (founder 2026-08-31)'],
+];
 
 // Structural AI-slop patterns (WARN, not fail: each has legitimate uses, so a
 // human judges). Sourced from the no-ai-slop pattern list, scanned against the
@@ -553,6 +559,36 @@ function check(file) {
         );
       }
     });
+
+    // (iv) AI-ILLUSTRATION CREDIT ON POOL IMAGES. Founder 2026-08-31: "Have you
+    // stopped writing AI illustration below the images?" The answer was yes, by
+    // drift rather than decision. 8 pool-image posts carried the credit and 13
+    // did not, including every recent publish, while the template renders the
+    // field. Backfilled via scripts/add-image-credit.mjs, and a failure here so
+    // it cannot drift again.
+    if (fm && fm.image && unquote(fm.image).startsWith('~/assets/images/pool/') && !fm.imageCredit) {
+      fail("Pool image needs `imageCredit: 'AI-generated illustration'` in frontmatter", 0, '');
+    }
+
+    // (v) KEY TAKEAWAYS WITH NO LINKS. Founder 2026-08-31: "No hyperlink/internal
+    // link for KT section or initial bits?" The takeaways are the most-read part
+    // and often the only part read, so a reader who stops there should still have
+    // somewhere to go. WARN, because a short glossary post may legitimately have
+    // none.
+    {
+      const ktStart = body.findIndex((l) => /^##\s+Key Takeaways/i.test(l));
+      if (ktStart >= 0) {
+        const ktEnd = body.findIndex((l, i) => i > ktStart && /^##\s/.test(l));
+        const ktBlock = body.slice(ktStart, ktEnd > ktStart ? ktEnd : body.length).join('\n');
+        if (!/\]\((https?:\/\/|\/)/.test(ktBlock)) {
+          warn(
+            'Key Takeaways contains no link — a reader who stops there has nowhere to go',
+            bodyOffset + ktStart + 1,
+            ''
+          );
+        }
+      }
+    }
 
     const WEB_JARGON = [
       [/\b(?:returns?|throw(?:s|ing)?|gives?)\s+a\s+40\d\b/i, 'say what the reader sees, e.g. "the page is missing"'],

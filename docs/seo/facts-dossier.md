@@ -449,6 +449,23 @@ https://www.cms.gov/files/document/qso-26-15-cah-original-release-2026-08-21.pdf
   its recommendation to periodically reassess compliance.
 - Verified: 2026-08-26 (primary document read in full)
 
+### Two surveys, not one: CMS versus state licensing
+
+Founder correction 2026-08-31 ("Do surveyor not check the state rule?"), after a
+draft treated "a surveyor" as a single actor checking only federal rules.
+
+- **A CMS survey** determines compliance with the federal Conditions of
+  Participation, for a CAH at 42 CFR Part 485 Subpart F, through observation,
+  interviews and record review (CMS State Operations Manual Appendix W).
+- **A state licensing survey is separate**, run by the state agency (Texas HHSC
+  for a Texas hospital) against state rules, which are stricter in places. The
+  clearest example already in this dossier: federal 485.631(a)(5) permits an LPN
+  as the licensed nurse on duty, while 26 TAC 505.41(o)(2)(D) requires an RN on
+  duty in each building containing an occupied nursing unit.
+- **How to write it:** never say "a surveyor" as though one inspection covers
+  everything. Name which survey you mean, and where a state rule is stricter, say
+  the same schedule has to satisfy both.
+
 ### PBJ and swing beds: the split, and the wording rule
 
 Added 2026-08-31 after a fact-check found this entry missing. The facts lived only
@@ -471,6 +488,12 @@ dossier", which was not true until now.
   beds are exempt". The hospital's own 485.631 obligations still apply to those
   patients, and a bare exemption reads as though they do not. A fact-check caught
   exactly this leak in the audit-trail draft on 2026-08-31.
+- **NEVER write "a swing-bed-only hospital".** Founder correction 2026-08-31: a CAH
+  is not swing-bed-only; it runs acute beds and may also use swing beds. The test
+  turns on whether a **separately certified skilled nursing unit** exists, not on
+  swing beds at all. Correct phrasing: "a hospital without a separately certified
+  skilled nursing unit returns no nursing-home listing, whether or not it uses
+  swing beds." The wrong phrasing was live in two posts before this.
 - **Do not state the distinct-part position as a quoted CMS line.** It is an
   inference from the separate-certification structure. Safe wording: "certified as a
   skilled nursing facility and surveyed against Part 483 in its own right."

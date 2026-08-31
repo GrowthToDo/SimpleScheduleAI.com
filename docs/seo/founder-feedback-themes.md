@@ -101,6 +101,18 @@ Diff against live same-type siblings before writing, not after: which sections
 exist, what goes in each, ratings not yes/no cells, competitor images.
 ("Please redo the blog, learn from live vs blogs on what goes where")
 
+**T24. Never set a test we would fail.**
+Any diagnostic question, checklist or "ask your vendor" list you put in front of a
+reader is a standard we are implicitly claiming to meet. Before shipping one,
+check the capability inventory and answer it about ourselves. If the honest
+answer is no or partly, say so in the post; that is more persuasive than the
+question was. Watch for the softer version too: a self-check where every item can
+only be passed by buying software, which reads as a quiz whose answer key is the
+CTA.
+("Can you get back to last cycle's schedule as it was published?" — founder: "we
+also dont do this. How are we defending this?" We reconstruct it from the change
+log; we do not store a frozen copy. The post now says exactly that.)
+
 **T19. Every advantage bullet earns its place for this post's question.**
 Read each bullet and name the buying question it answers. A true, code-verified
 capability that sits off-topic distracts.
