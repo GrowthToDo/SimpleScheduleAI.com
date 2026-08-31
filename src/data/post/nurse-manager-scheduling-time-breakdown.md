@@ -38,7 +38,7 @@ metadata:
 - [What Is the Cost of Post-Publication Schedule Changes?](#what-is-the-cost-of-post-publication-schedule-changes)
 - [Which of These Activities Can Actually Be Reduced?](#which-of-these-activities-can-actually-be-reduced)
 - [How SimpleScheduleAI Reduces Scheduling Time by Activity](#how-simplescheduleai-reduces-scheduling-time-by-activity)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Saying "I spend 10 hours a week on scheduling" is accurate but not actionable. The number is real. The question is where the 10 hours come from, because the interventions are completely different depending on the answer.
@@ -139,7 +139,7 @@ For a broader view of where the $26,000 annual scheduling burden comes from at a
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Vendor demos sell the schedule build because it demos well: a blank grid fills itself in thirty seconds. But in the interviews we ran, the hours that wore managers down came from the interruptions: the 5am callout, the overtime surprise at payroll, the swap request against a published schedule. Before comparing tools, time your own week by activity. The right fix depends on where your hours actually go, and a demo will not tell you that.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Track your scheduling time by activity for one full cycle: build, callouts, overtime checks, conflicts, and post-publication changes. A running tally in a notes app is enough.
 2. Count callout events separately from the minutes they consume. Frequency and duration have different fixes: one is roster depth, the other is tooling.

@@ -42,7 +42,7 @@ Search "nurse rostering vs scheduling software" and almost every result tells yo
 - [What Should You Look For When the Two Are Bundled?](#what-should-you-look-for-when-the-two-are-bundled)
 - [Do Critical Access Hospitals Need Rostering, Scheduling, or Both?](#do-critical-access-hospitals-need-rostering-scheduling-or-both)
 - [Which Functions Matter Most for a Critical Access Hospital?](#which-functions-matter-most-for-a-critical-access-hospital)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 ## What Is Nurse Rostering Software?
@@ -176,7 +176,7 @@ One honest limitation: a single integrated workflow is not the right fit for eve
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The rostering-versus-scheduling debate is mostly vendor vocabulary, and treating it as a real buying decision is how a small hospital ends up with two tools and a weekly export between them. At a 25-bed facility one person owns the whole cycle, so the only question that matters is whether a roster change reaches the schedule without a human carrying it. Buy the workflow, not the word. Any tool that makes you reconcile two systems has already failed the test this post gives you.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 Pin down which half of the cycle is actually breaking before you shop for a tool, then test any candidate against both halves. Five concrete steps:
 

@@ -37,7 +37,7 @@ metadata:
 - [How Does a Location Rule Become a Staffing Problem?](#how-does-a-location-rule-become-a-staffing-problem)
 - [What Changes on the Schedule If a Hospital Converts?](#what-changes-on-the-schedule-if-a-hospital-converts)
 - [How Does SimpleScheduleAI Help?](#how-does-simplescheduleai-help)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 CMS issued new guidance on August 21, 2026 telling its own staff how to check whether a hospital still qualifies as a Critical Access Hospital. Most of it is procedural. Two things in it matter to anyone running a small rural hospital: the review is becoming a scheduled event rather than an occasional one, and the document contradicts itself about how long a hospital gets to fix an eligibility problem before its Medicare participation ends.
@@ -173,7 +173,7 @@ The honest boundary: we are a scheduling service, not a compliance consultancy. 
   </p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Measure your actual drive to the nearest acute care hospital or Critical Access Hospital, by road, the way CMS does it. If the answer is under 40 miles, you are close enough that a new facility nearby could change your status.
 2. Find your necessary provider documentation if you rely on it. CMS gives 60 days to produce it after a letter, the burden of proof is on the hospital, and a pre-2006 designation letter is not something you want to go looking for under deadline.

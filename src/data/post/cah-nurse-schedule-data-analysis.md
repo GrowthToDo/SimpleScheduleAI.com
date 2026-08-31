@@ -37,7 +37,7 @@ metadata:
 - [How Do You Measure Whether Your Schedule Is Fair?](#how-do-you-measure-whether-your-schedule-is-fair)
 - [How Do You Calculate the Cost Impact of Your Schedule?](#how-do-you-calculate-the-cost-impact-of-your-schedule)
 - [How Does SimpleScheduleAI Help You Analyze Your Schedule?](#how-does-simplescheduleai-help-you-analyze-your-schedule)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Most rural hospitals run their nurse schedule on a spreadsheet and their hours on a payroll export, and both hold more insight than anyone has time to pull out. This guide is a practical measurement framework for a nurse manager or administrator at a 25-bed hospital analyzing their own scheduling data: the four things worth measuring, how to compute each from data you already have, and what separates a healthy pattern from a concerning one. Every method below works in a spreadsheet, and none of the numbers here are customer results, because we are pre-launch and have none.
@@ -136,7 +136,7 @@ One honest limitation: analysis does not create staff. If your data shows only f
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The instinct is to treat scheduling data as something you look at only when the budget is already over. That is too late. The four measurements here are cheap to run and they all point the same direction: the cost, the compliance risk, and the retention pressure are downstream of scheduling decisions you can see coming if you look. You do not need our product to do this. You need eight weeks of your own data in a spreadsheet and an afternoon. The hospitals that run this analysis once tend to run it every quarter, because the first pass almost always finds one nurse quietly carrying too much.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Export eight to twelve weeks of four sources into one spreadsheet: the posted schedule, the payroll or timekeeping export, your callout log, and the shift-assignment history. Segment every row by role and status before you analyze.
 2. Run the overtime cut. Tag each overtime hour by shift type and separate planned overruns from callout coverage. Note which shift type carries a disproportionate share.

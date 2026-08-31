@@ -455,7 +455,7 @@ CMS §485.635 staffing documentation is logged automatically for every ICU shift
 
 Credential expiration dates are tracked and flagged 30 days before expiration, so the manager is notified of credential gaps before they affect scheduling rather than during a callout event.
 
-## What to Do This Week?
+## What to Do This Week
 
 1. **Audit your ICU callout history from the last 90 days.** For each callout, note whether the manager had to manually check credentials before calling a replacement, and how many calls it took to fill the shift. That number is the process improvement target.
 

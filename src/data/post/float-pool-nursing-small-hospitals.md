@@ -34,7 +34,7 @@ metadata:
 - [How Does Cross-Training Your Existing Nurses Replace a Float Pool?](#how-does-cross-training-your-existing-nurses-replace-a-float-pool)
 - [Can Regional or Shared Staffing Give a Small Hospital a Bench?](#can-regional-or-shared-staffing-give-a-small-hospital-a-bench)
 - [How Does SimpleScheduleAI Help Small Hospitals Cover Gaps?](#how-does-simplescheduleai-help-small-hospitals-cover-gaps)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Float pool nursing is the answer a big health system reaches for when one unit is short and another is overstaffed: pull a cross-trained nurse off the bench and send her where the need is. It works because a large hospital has the three things a float pool requires. A 25-bed rural hospital has none of them, so copying the model produces a bench with no one on it and no second unit to float to. This guide walks through why the float pool does not fit a small hospital, and the three coverage models that actually do: a standing per-diem bench, cross-training the nurses you already employ, and shared staffing with nearby facilities.
@@ -119,7 +119,7 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Chasing a float pool at a 25-bed hospital wastes the one thing a small hospital cannot spare: the nurse manager's time. The lever is not a bench of extra people you do not have. It is making the people you do have more coverable, a pre-credentialed per-diem list you can call first, cross-training so any on-shift nurse can absorb the open function, and a shared arrangement with a neighbor for the weeks you run dry. Build those three, and you get most of the flexibility a big system buys with a float pool, at a headcount you can actually afford.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Write down your actual structure: one floor, your real nurse count, and which functions (emergency, swing bed, med-surg) each shift has to cover. Confirming there is no second unit to float to settles the float-pool question in five minutes.
 2. Build or refresh your per-diem bench. List every part-timer, willing retiree, and nearby nurse who is already credentialed, and note who has genuinely agreed to short-notice shifts. A longer uncredentialed list does not help at 3 a.m.

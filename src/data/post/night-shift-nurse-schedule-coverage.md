@@ -36,7 +36,7 @@ metadata:
 - [Should Critical Access Hospitals Use Rotating or Permanent Night Shift Nurses?](#should-critical-access-hospitals-use-rotating-or-permanent-night-shift-nurses)
 - [How Do Scheduling Systems Ensure Night Shift Coverage Without Burnout?](#how-do-scheduling-systems-ensure-night-shift-coverage-without-burnout)
 - [How Does SimpleScheduleAI Help With Night Coverage?](#how-does-simplescheduleai-help-with-night-coverage)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Night shift is the hardest shift to fill at a critical access hospital, and the most consequential gap when coverage fails. At a 25-bed facility, the pool of nurses who can or will work nights is small, so the burden concentrates on a handful of people until those people reach their limit. This guide walks through the shift patterns CAHs use to cover nights, the federal rules that govern overnight staffing, and the scheduling discipline that keeps your most reliable night nurses from resigning.
@@ -141,7 +141,7 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The instinct on night coverage is to treat it as a slot-filling problem: an empty shift, find a warm body. That is backwards. The real lever is whether the night rotation is fair and predictable. Permanent nights need a tracked ceiling so the willing few are not quietly carrying the unit. Rotating nights need a visible count so the same names do not surface on every callout. Filling the slot is the easy part; protecting the people who keep saying yes is what keeps the schedule standing six months from now.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. List every nurse on your roster and mark who is genuinely night-eligible after health, family, and per-diem constraints. The honest number is usually smaller than the headcount suggests.
 2. Pull your last eight weeks of schedules and count night shifts per nurse. If two or three names carry most of the nights, you have a concentration risk, not a coverage win.

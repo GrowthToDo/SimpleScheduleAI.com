@@ -38,7 +38,7 @@ metadata:
 - [What Is the Common Thread Across the Five Strikes?](#what-is-the-common-thread-across-the-five-strikes)
 - [What Does the Strike Wave Mean for Hospitals Too Small to Strike?](#what-does-the-strike-wave-mean-for-hospitals-too-small-to-strike)
 - [How Does SimpleScheduleAI Help?](#how-does-simplescheduleai-help)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Staffing, more than pay, is what links July's five nurse strikes. Adding up the approximate counts reported by Nurse.org, roughly 6,700 nurses and home-care clinicians walked out or scheduled strikes between July 3 and July 13, 2026, and in all five actions safe staffing sat at or near the top of the demand list.
@@ -100,7 +100,7 @@ One honest boundary: SimpleScheduleAI does not do labor relations, and a facilit
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The July walkouts will be covered as five local disputes and settled in percentages. Read together, they are one referendum on staffing, and in two states, a referendum on whether staffing laws deliver at the bedside. The statute sets the standard; the schedule keeps or breaks it, every shift. That holds at any roster size, union or not.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Read your last three months of schedules the way a striking nurse would: count the shifts that ran below your own coverage rules, and who absorbed them.
 2. Tally weekend, night, and holiday distribution per nurse for the current quarter. If you cannot produce that tally in ten minutes, neither can you defend it in an exit interview.

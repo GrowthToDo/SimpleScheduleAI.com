@@ -47,7 +47,7 @@ For a broader comparison of scheduling platforms, see our [nurse scheduling soft
 - [What Makes Per Diem Scheduling Uniquely Difficult?](#what-makes-per-diem-scheduling-uniquely-difficult)
 - [Which Software Fits Your Per Diem Model?](#which-software-fits-your-per-diem-model)
 - [How SimpleScheduleAI Handles Per Diem Nurses?](#how-simplescheduleai-handles-per-diem-nurses)
-- [What to Do This Week?](#what-to-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Per diem nursing is how small hospitals stay staffed without carrying a full-time roster that exceeds patient volume. At a [Critical Access Hospital (CAH)](/critical-access-hospital-scheduling), the per diem pool is a structural part of the staffing model. The per diem nurses who work two to four days per month are the same nurses who fill the Saturday night callout and the holiday shift that no full-timer wanted.
@@ -550,7 +550,7 @@ Competency requirements for the unit are applied before a per diem nurse is offe
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Per diem coverage at a Critical Access Hospital is structural, not supplemental, so the feature that decides fit is a callout list ranked by overtime risk, not just an availability calendar. That ranking, plus automatic CMS documentation of every per diem shift, is why SimpleScheduleAI is our pick for a per diem-heavy CAH roster. The self-serve tools here are not wrong choices, though: if your nurse manager has the protected time to keep availability data current and check overtime by hand, Aladtec covers similar ground at a lower price. The honest deciding question is not which tool has the most features, it is how much unprotected admin time the manager actually has each week.</p>
 </div>
 
-## What to Do This Week?
+## What to Do This Week
 
 1. **Count your per diem callout failures from the last 30 days.** A per diem nurse listed as available but unreachable is a failed callout. So is one who accepts the shift but turns out to be at overtime risk. Count those separately from simple unavailability. The number tells you whether your current per diem management system is working.
 

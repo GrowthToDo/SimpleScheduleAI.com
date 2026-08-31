@@ -52,7 +52,7 @@ This guide compares 6 OnShift alternatives for a CAH that runs acute inpatient n
 - [6. UKG](#6-ukg)
 - [When to Stay with OnShift?](#when-to-stay-with-onshift)
 - [How SimpleScheduleAI Compares to OnShift?](#how-simplescheduleai-compares-to-onshift)
-- [What to Do This Week?](#what-to-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions About OnShift Alternatives](#frequently-asked-questions-about-onshift-alternatives)
 
 For a 25-bed Critical Access Hospital, the best OnShift alternatives are tools built around acute care callout dynamics and CMS compliance rather than long-term care caregiver engagement. SimpleScheduleAI is the managed-service option when the goal is removing the scheduling work entirely, Aladtec is the smaller-roster self-serve option with direct-outreach callouts, and SmartLinx is the upgrade path for hospitals growing past 50 beds.
@@ -495,7 +495,7 @@ For a hospital that is primarily a CAH or acute care facility, that difference i
   </p>
 </div>
 
-## What to Do This Week?
+## What to Do This Week
 
 1. **Audit your last 10 OnShift callout events.** For each, record how long it took from callout to confirmed replacement, whether any replacement lacked the correct credentials for the shift, and whether overtime was incurred that the manager did not know about before confirming. The answers tell you whether the callout model is working for your environment.
 

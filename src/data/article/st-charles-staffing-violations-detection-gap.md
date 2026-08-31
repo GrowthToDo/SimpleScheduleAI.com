@@ -36,7 +36,7 @@ metadata:
 - [What Actually Averted the Strike?](#what-actually-averted-the-strike)
 - [Why Is a Small Rural Hospital More Exposed, Not Less?](#why-is-a-small-rural-hospital-more-exposed-not-less)
 - [How Does SimpleScheduleAI Help?](#how-does-simplescheduleai-help)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 The most useful detail in the St. Charles Hospital staffing fight is not the strike that was averted. It is how long the crisis stayed on the books before anyone with authority stopped it. A New York State Department of Health investigation ran for 18 months and found nearly 200 violations of the state safe-staffing law before the roughly 300 nurses there, represented by the New York State Nurses Association, won a contract that finally addressed it.
@@ -88,7 +88,7 @@ One honest boundary: SimpleScheduleAI does not do labor relations, and it is not
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">St. Charles will be filed as a labor win, a strike dodged with a raise. The durable lesson is quieter: the fix that mattered was a faster detection system, not a bigger number. Every hospital has unsafe shifts. The ones that stay safe are the ones that see the gap coming. At a 25-bed hospital with no union and no state investigator, that seeing does not arrive on its own. It has to be built into the schedule, because nothing else is watching.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Count the shifts in your last month that ran below your own coverage or skill-mix rules. If you cannot produce that count, you are where St. Charles was 18 months before the finding: understaffed and unmeasured.
 2. Find out who absorbed those gaps. The nurse who covers every hole is both your early-warning system and your most likely next resignation.

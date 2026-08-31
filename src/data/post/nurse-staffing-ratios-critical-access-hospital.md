@@ -36,7 +36,7 @@ metadata:
 - [How Does a 25-Bed Hospital Set Safe Staffing Without a Ratio?](#how-does-a-25-bed-hospital-set-safe-staffing-without-a-ratio)
 - [What Does the Evidence Say About Nurse-to-Patient Ratios?](#what-does-the-evidence-say-about-nurse-to-patient-ratios)
 - [How Does SimpleScheduleAI Help With Safe Staffing?](#how-does-simplescheduleai-help-with-safe-staffing)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Safe staffing is the question every administrator gets asked and the one with the least satisfying answer, because the honest answer is that there is no single nurse-to-patient ratio to point to. There is no federal ratio, and unless you are in one of a few states, there is no state ratio either. What the law requires is that a hospital keeps "adequate numbers" of nurses matched to how sick the patients are and to round-the-clock coverage, and that it can prove it. This guide covers what safe staffing law actually says, which states set a hard nurse-to-patient ratio, what Texas requires instead, and how a rural 25-bed hospital builds a defensible staffing plan without a number handed down from the state.
@@ -131,7 +131,7 @@ One honest limitation: SimpleScheduleAI does not set your staffing plan or inter
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Chasing a national ratio is the wrong hunt. Outside California there usually is not one, and even where ratios exist they are a floor, not a plan. The real safe-staffing standard for a Texas hospital is the one its own committee wrote, and the only thing a surveyor can hold you to is whether you met it. So the work that matters is unglamorous: an honest acuity-based plan, a schedule that hits it on nights and weekends when the bench is thin, and records that prove it. Get those three right and the missing ratio stops mattering.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Confirm your hospital has a current nurse staffing committee with at least 60 percent direct-care registered nurses, and that a written staffing plan has been formally adopted. If either is missing, that is the first gap to close.
 2. Pull your adopted staffing plan and read what it actually requires by unit, including skill mix, not just headcount. Many teams have never read the plan they are being measured against.

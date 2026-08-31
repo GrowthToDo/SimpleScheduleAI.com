@@ -50,7 +50,7 @@ This guide compares the two models on the operational dimensions that decide the
 - [When Is Aladtec the Right Choice?](#when-is-aladtec-the-right-choice)
 - [When Is a Managed Service the Right Choice?](#when-is-a-managed-service-the-right-choice)
 - [What Decision Framework Should You Use?](#what-decision-framework-should-you-use)
-- [What to Do This Week?](#what-to-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/critical-access-hospital-scheduling). For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). But they answer fundamentally different questions. Aladtec answers: "How do I build better schedules?" SimpleScheduleAI answers: "How do I stop spending 5 hours a week on scheduling?" If you are a nurse manager at a CAH who is simultaneously covering clinical shifts, those two questions lead to very different buying decisions. For context on the full range of [nurse scheduling software](/nurse-scheduling-software) options at the CAH scale, see our dedicated guide.
@@ -418,7 +418,7 @@ One honest limitation: a managed scheduling service is not the right fit for hos
   </p>
 </div>
 
-## What to Do This Week?
+## What to Do This Week
 
 The decision between self-serve scheduling software and a managed service becomes clear once you have two data points: your actual weekly scheduling time and a total cost estimate. The five steps below produce both within one week.
 

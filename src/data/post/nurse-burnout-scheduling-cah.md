@@ -35,7 +35,7 @@ metadata:
 - [How Do You Spot an Overloaded Nurse Before She Resigns?](#how-do-you-spot-an-overloaded-nurse-before-she-resigns)
 - [What Can the Schedule Not Fix About Burnout?](#what-can-the-schedule-not-fix-about-burnout)
 - [How Does SimpleScheduleAI Help Reduce Burnout Risk?](#how-does-simplescheduleai-help-reduce-burnout-risk)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Nurse burnout is usually framed as a wellness problem, so the standard response is a resilience workshop, a meditation app, or a pizza in the break room. At a 25-bed Critical Access Hospital, that response misses the actual mechanism. Your nurses are not burning out because they lack coping skills. They are burning out because the same handful of people keep drawing the hard shifts, and there is no float pool to spread the load. The one lever a nurse manager reliably controls is the schedule, and this guide is about using it well.
@@ -126,7 +126,7 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Wellness perks get the burnout budget because they are easy to announce, but at a 25-bed hospital they treat the symptom while the schedule keeps producing the disease. The uncomfortable truth is that most burnout on a small roster is a distribution failure hiding behind the word resilience. Fix who carries the nights and the overtime, make the load visible instead of averaged, and you protect the few nurses the whole unit depends on. That is not a soft benefit. On a roster this small, it is retention.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Pull your last eight weeks of schedules and tally night shifts, weekend shifts, and overtime hours per nurse. Rank the list, do not average it, so the overloaded few actually show.
 2. Mark who is genuinely night-and-weekend-eligible after real health, family, and per-diem constraints. The usable pool is almost always smaller than the headcount, and that gap is your concentration risk.

@@ -48,7 +48,7 @@ This guide compares 6 alternatives for a 25-bed CAH that needs hospital-nursing 
 - [6. Deputy](#6-deputy)
 - [When to Stay with Aladtec?](#when-to-stay-with-aladtec)
 - [How SimpleScheduleAI Compares to Aladtec?](#how-simplescheduleai-compares-to-aladtec)
-- [What to Do This Week?](#what-to-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions About Aladtec Alternatives](#frequently-asked-questions-about-aladtec-alternatives)
 
 For a 25-bed critical access hospital, the best Aladtec alternatives are tools built for hospital nursing rather than public safety, and runnable without an IT team. ShiftWizard is the strongest self-serve hospital-nursing fit, TCP Scheduling is the in-ecosystem upgrade path, and SimpleScheduleAI is the managed-service option when the goal is removing the scheduling work rather than buying a better tool to do it yourself.
@@ -472,7 +472,7 @@ For a nurse manager at a 25-bed CAH who takes clinical shifts, the overhead mode
   </p>
 </div>
 
-## What to Do This Week?
+## What to Do This Week
 
 1. **Identify the specific Aladtec gap driving the switch consideration.** Is it configuration maintenance burden, CMS documentation prep time, callout overtime checking, or something else? The right alternative depends on which gap is the priority, not all alternatives solve all gaps equally well.
 

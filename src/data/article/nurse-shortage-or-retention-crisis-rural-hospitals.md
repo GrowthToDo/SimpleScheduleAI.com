@@ -36,7 +36,7 @@ metadata:
 - [What Does One Avoidable Resignation Cost a Small Roster?](#what-does-one-avoidable-resignation-cost-a-small-roster)
 - [Why Is the Schedule the Retention Lever a Rural Hospital Controls?](#why-is-the-schedule-the-retention-lever-a-rural-hospital-controls)
 - [How Does SimpleScheduleAI Help With Retention at a Small Hospital?](#how-does-simplescheduleai-help-with-retention-at-a-small-hospital)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 The nurse staffing debate got a fresh round of argument in May 2026, and most of it is being fought at the national level: is there a shortage of nurses, or a shortage of nurses willing to stay at the bedside? That distinction matters, but it hides a second, more useful one for anyone running a small rural hospital. At a 25-bed Critical Access Hospital, the national answer and the local answer are different, and treating them as the same pushes administrators toward a fix a hospital that size can never win. This piece pulls the two apart, then shows the one part a small hospital can actually change.
@@ -123,7 +123,7 @@ One honest limitation: scheduling discipline improves retention, but it does not
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The "shortage versus retention" debate is useful nationally and slightly misleading locally. A rural hospital does not get to pick one. It lives with a distribution problem it did not create and a retention problem it partly can. Arguing about which word is correct wastes the energy a small hospital should spend on the only lever it fully owns. You will not out-recruit a metro system for a license that is scarce in your county. You can be the small hospital where the nurses you have decide to stay, and most of that decision is made on the schedule, not in the pay negotiation.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Pull your last twelve months of registered nurse departures and mark which ones were avoidable, meaning the nurse left for schedule, burnout, or fairness reasons rather than a move or a retirement. That count is your real retention problem, separate from the national headline.
 2. Multiply avoidable departures by the $61,110 NSI replacement figure to size the dollars. It is usually larger than the line item anyone tracks.

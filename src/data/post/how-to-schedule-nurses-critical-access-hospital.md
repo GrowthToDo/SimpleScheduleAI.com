@@ -318,7 +318,7 @@ A managed scheduling service like [SimpleScheduleAI](/) handles steps 1-7 on beh
 
 For a CAH where the nurse manager spends 3+ hours per week on scheduling tasks that do not require clinical judgment, formatting, overtime checking, callout calculations, that time is recoverable.
 
-## What to Do This Week?
+## What to Do This Week
 
 1. **Document your hard constraints in writing.** If you do not have a written constraint document, create one this week. It takes 30-45 minutes and prevents scheduling disputes indefinitely.
 
@@ -337,7 +337,7 @@ For a CAH where the nurse manager spends 3+ hours per week on scheduling tasks t
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 Pick one section of this guide and apply it this week. If you want to see what automated scheduling looks like for a 25-bed CAH, [explore how SimpleScheduleAI works](/how-it-works).
 

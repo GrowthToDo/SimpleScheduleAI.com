@@ -44,7 +44,7 @@ metadata:
 - [What Are the Texas-Specific Scheduling Compliance Requirements?](#what-are-the-texas-specific-scheduling-compliance-requirements)
 - [Which Software Fits Your Texas Hospital?](#which-software-fits-your-texas-hospital)
 - [How SimpleScheduleAI Was Built for Texas?](#how-simplescheduleai-was-built-for-texas)
-- [What to Do This Week?](#what-to-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Texas is the second-largest state by hospital count and has one of the highest concentrations of Critical Access Hospitals in the country. The state's geographic spread, from the Permian Basin to the Rio Grande Valley to the Panhandle, creates rural scheduling challenges that national [nurse scheduling software](/nurse-scheduling-software) vendors rarely account for. Add a Texas-specific compliance layer on top of federal requirements, and the case for purpose-built [Critical Access Hospital scheduling](/critical-access-hospital-scheduling) tools gets stronger.
@@ -550,7 +550,7 @@ Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule 
   </p>
 </div>
 
-## What to Do This Week?
+## What to Do This Week
 
 1. Confirm your compliance baseline: does your current scheduling tool track the FLSA 8 and 80 healthcare worker overtime exemption correctly? If you are not sure, ask your payroll team.
 2. Pull your Texas HHSC licensing documentation requirements for nursing staff. Compare them against what your current scheduling tool actually produces.

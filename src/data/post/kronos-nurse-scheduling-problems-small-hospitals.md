@@ -38,7 +38,7 @@ Your regional health system tells you UKG is "already set up" and ready for your
 - [Does This Matter for a Critical Access Hospital Specifically?](#does-this-matter-for-a-critical-access-hospital-specifically)
 - [How Should a Small Hospital Evaluate UKG Before Buying?](#how-should-a-small-hospital-evaluate-ukg-before-buying)
 - [How Is SimpleScheduleAI Designed for the Small-Hospital Reality?](#how-is-simplescheduleai-designed-for-the-small-hospital-reality)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Administrators and IT directors buy scheduling software; nurses use it. For an enterprise product deployed at a small hospital, the gap between those two perspectives is where the operational problems live, so weigh both before signing any [nurse scheduling software](/nurse-scheduling-software) contract.
@@ -120,7 +120,7 @@ For practical replacements at CAH scale, see [UKG Alternatives for Critical Acce
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">UKG is genuinely good software for the enterprises it was built for, and the reviewers who rate it well are not wrong. The mistake a small hospital makes is reading an enterprise track record as proof of small-facility fit. The long implementation, the dedicated IT and HRIS assumptions, and the analytics depth are not extras a vendor can trim for a 25-bed hospital; they are the operating model. The right tool for a Critical Access Hospital is one sized for a single small hospital with limited IT and no spare administrator to run a platform.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. **Confirm which UKG product is on the table and its support horizon.** If it is a legacy Kronos Workforce Central deployment, note the March 31, 2027 on-premise end-of-life date and ask what migration it implies.
 2. **Ask for a Critical Access Hospital reference customer** at 25 beds or fewer with limited internal IT like yours. If every reference is a large system, treat small-hospital fit as unproven and document that gap.

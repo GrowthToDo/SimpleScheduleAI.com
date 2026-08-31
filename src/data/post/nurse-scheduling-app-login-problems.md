@@ -46,7 +46,7 @@ For users in environments where session security is the primary consideration an
 
 Scheduling apps log users out on a timer because their session management is configured for security compliance rather than for the actual workflows users perform. Most healthcare software applications set aggressive session timeout windows, typically 15 to 30 minutes of inactivity, to reduce the risk of unauthorized access to protected health information.
 
-The problem is that "inactivity" is measured differently than users experience it. In most web applications, the session timer counts down from the last HTTP request to the server. A user who is actively looking at the screen, reading a schedule, and thinking through shift assignments is not making server requests. From the platform's perspective, the session has been idle for 20 minutes. From the nurse manager's perspective, she has been actively working.
+The problem is that "inactivity" is measured differently than users experience it. In most web applications, the session timer counts down from the last time your browser asked the server for something. A user who is actively looking at the screen, reading a schedule, and thinking through shift assignments is not making server requests. From the platform's perspective, the session has been idle for 20 minutes. From the nurse manager's perspective, she has been actively working.
 
 This mismatch between server-side inactivity and user-side activity is the most common cause of mid-session logouts in scheduling software. The session expires, the platform redirects to the login page, and any unsaved work in the current view is lost.
 

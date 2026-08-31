@@ -49,7 +49,7 @@ This guide compares 6 Deputy alternatives for a Critical Access Hospital where g
 - [5. Homebase](#5-homebase)
 - [When Deputy Is Still Adequate for Healthcare?](#when-deputy-is-still-adequate-for-healthcare)
 - [How SimpleScheduleAI Compares to Deputy?](#how-simplescheduleai-compares-to-deputy)
-- [What to Do This Week?](#what-to-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Deputy is a general workforce scheduling platform used across retail, hospitality, and some healthcare settings. Its combination of fast deployment, clear interface, and per-user pricing makes it an accessible entry point for organizations that need scheduling software immediately. Many healthcare organizations, including small hospitals, deploy Deputy because it is easy, not because it is the right fit.
@@ -405,7 +405,7 @@ For hospitals where those features represent real operational risk and real manu
 
 One honest limitation: SimpleScheduleAI is not the right fit for healthcare practices outside the acute hospital context, retail-style shift swapping use cases, or facilities that specifically need a low-cost general workforce tool rather than a managed nurse-scheduling service.
 
-## What to Do This Week?
+## What to Do This Week
 
 Start by calculating the full cost of Deputy for your hospital. Add the monthly subscription to the staff time spent on manual CMS documentation, credential verification for each callout, and FLSA overtime calculation outside the system. That total is what Deputy actually costs. Use it as the baseline when evaluating whether a purpose-built clinical scheduling tool is cost-neutral.
 

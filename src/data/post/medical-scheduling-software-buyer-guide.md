@@ -34,7 +34,7 @@ metadata:
 - [What Small Hospitals Should Prioritize When Evaluating?](#what-small-hospitals-should-prioritize-when-evaluating)
 - [What Are the Red Flags: Tools Not Built for Small Hospitals?](#what-are-the-red-flags-tools-not-built-for-small-hospitals)
 - [How Does SimpleScheduleAI Fit Into This Landscape?](#how-does-simplescheduleai-fit-into-this-landscape)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Medical scheduling software replaces manual spreadsheets with automated shift coverage, compliance tracking, and callout management. For small hospitals, the buying decision hinges less on feature lists and more on implementation burden, most self-serve platforms require IT setup and ongoing configuration that critical access hospitals simply do not have the staff to support. As an illustration, a nurse manager who spends 8 to 12 hours per week on scheduling represents roughly $21,000 to $31,000 per year in administrative time at a $50 per hour loaded rate, before any of it improves coverage; our [nurse manager scheduling time breakdown](/blog/nurse-manager-scheduling-time-breakdown) maps where those hours go. This guide walks through the categories of [nurse scheduling software](/nurse-scheduling-software), the evaluation criteria that matter most for a small facility, and the [critical access hospital scheduling](/critical-access-hospital-scheduling) constraints that rule some options out before you ever see a demo.
@@ -156,7 +156,7 @@ Category labels only get you to a shortlist. To separate a tool that will actual
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The category a tool sits in matters less than one question: after you sign, who does the weekly work? Most buyer guides rank features, and for a short-staffed hospital that is the wrong axis. A self-serve platform with a deep feature list is worthless if the nurse manager has no hours to run it, and a plain tool a vendor operates for you can beat a powerful one that sits unused. Score the operating burden first, then look at features.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Write down your three non-negotiable requirements before you take a single demo. If implementation simplicity and no-IT setup are on that list, most enterprise suites are already out.
 2. Rank the five priorities above, implementation burden, compliance coverage, callout handling, overtime visibility, and support model, in the order they matter to your facility.

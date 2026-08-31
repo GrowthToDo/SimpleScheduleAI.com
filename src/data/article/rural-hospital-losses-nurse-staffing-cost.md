@@ -37,7 +37,7 @@ metadata:
 - [What Does the Rural Health Transformation Money Actually Pay For?](#what-does-the-rural-health-transformation-money-actually-pay-for)
 - [What Can a Small Rural Hospital Actually Control?](#what-can-a-small-rural-hospital-actually-control)
 - [How Does SimpleScheduleAI Help a Hospital Under Financial Pressure?](#how-does-simplescheduleai-help-a-hospital-under-financial-pressure)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Texas has more rural hospitals vulnerable to closure than any other state, 50 of the 417 Chartis counted nationally. For a Texas administrator the operative figure is 52.2%, the share of rural hospitals operating in the red across states that did not expand Medicaid, and Texas is one of them. The 41.2% in the national headline describes a broader mix. For a hospital in that position, converting to a Rural Emergency Hospital is one of the few structural options on the table, and [what a designation change does to the nurse schedule](/articles/rural-emergency-hospital-bill-nurse-staffing) is the part the financial case usually leaves out.
@@ -110,7 +110,7 @@ One honest limitation, stated the same way we would state it to a board: this do
   </p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. **Pull your own in-the-red comparison, not the national one.** If you are in a non-expansion state, the 52.2% cohort is your peer group. Bring that figure to the next board conversation instead of the 41.2% headline.
 2. **Put a number on your own coverage premium.** Take your last vacancy, count the shift-hours backfilled, and price them at your straight-time and premium rates. The difference is your version of the $10,000 above.

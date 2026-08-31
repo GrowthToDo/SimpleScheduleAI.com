@@ -11,6 +11,14 @@ parentheses. If a new theme duplicates an existing one, sharpen the existing one
 instead of adding. If the list ever exceeds ~25 themes, merge the weakest rather
 than letting it grow, because an unread checklist catches nothing.
 
+**The way to keep it short is to move rules OUT, not to refuse new ones.**
+Anything a script can decide belongs in `scripts/check-blog.mjs` and gets deleted
+from here. Already moved: the banned-word list, undefined shorthand, jargon
+without a plain-language gloss, the canonical "What to Do This Week" heading, and
+T21's system/web jargon rule (retired 2026-08-31, now a mechanical check). This
+file is for judgment only. When new founder feedback arrives, ask first whether a
+check can decide it; only what needs a human eye lands here.
+
 ## Facts and takeaways
 
 **T1. Key Takeaways answer the title's question, nothing else.**
@@ -46,6 +54,16 @@ Read each abstract noun and ask whether a DON says it aloud.
 
 **T5. Simple sentences. If the founder asks what a passage means, a reader is already lost.**
 Any sentence needing two reads gets split. Most-repeated feedback in the project.
+Two recurring shapes, both caught again 2026-08-31:
+(a) **An abstract noun the reader has to decode.** "The draw is Medicare
+reimbursement at 101 percent" — founder: "Do you mean reason by draw?" Name the
+thing plainly: hospitals convert BECAUSE Medicare pays them more.
+(b) **Three facts in one sentence.** The necessary-provider line packed a
+grandfather date, a cannot-be-obtained rule and a 75 percent staff test into one
+breath. If a sentence carries more than one fact the reader must retain, split it.
+**check-blog already warns at 35 words. Those warnings are the signal, not noise:
+every instance the founder later flagged had been flagged by the gate first and
+waved through as "quote-bearing". Only a verbatim quote earns that pass.**
 
 **T16. No abstraction without its referent.**
 Every claim-bearing noun phrase says, in the same sentence, of what or to what.
@@ -58,11 +76,6 @@ ways" or similar. Say which cases are excluded and which still count, ideally
 with a concrete instance. Symmetry phrasing reads as completeness and hides the
 carve-out.
 ("Indian Health Service and Tribal facilities are not counted against non-IHS facilities, and the exclusion runs both ways" — not clear, and it buried that two IHS facilities DO count against each other.)
-
-**T21. No system or web jargon in reader-facing prose.**
-Status codes, URL behaviour, internal vocabulary get translated into what the
-reader would observe.
-("returns a 404" → "the pricing page is missing entirely")
 
 **T6. Educational posts mention us only as attribution.**
 Outside the sanctioned product sections, the brand appears only where a fact

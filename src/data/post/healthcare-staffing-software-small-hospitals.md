@@ -33,7 +33,7 @@ metadata:
 - [What Are the Three Priority Features?](#what-are-the-three-priority-features)
 - [How Healthcare Staffing Software Options Compare?](#how-healthcare-staffing-software-options-compare)
 - [What Are the Honest Limitations of Healthcare Staffing Software?](#what-are-the-honest-limitations-of-healthcare-staffing-software)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Healthcare staffing software designed for large health systems solves a different problem than the one facing a 25-bed critical access hospital. At a 200-bed regional hospital, the challenge is coordination: thousands of shifts, dozens of units, float pools, and enterprise HR integration. At a 25-bed [critical access hospital](/critical-access-hospital-scheduling), the challenge is precision: a small roster, no float pool, a nurse manager with no dedicated scheduling support, and continuous coverage requirements under [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) that cannot be met by assigning whoever is available. This guide sits alongside our broader [nurse scheduling software](/nurse-scheduling-software) overview, focused specifically on what a small hospital should prioritize.
@@ -147,7 +147,7 @@ The comparison that matters at 25 beds is not the license price but the total co
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">For a small hospital, the feature list matters less than the operating model. Enterprise platforms have every capability and demand resources a 25-bed hospital does not have; generic tools install in a day but ignore healthcare compliance. The three features that actually move cost and risk, proactive overtime tracking, certification-matched callout coverage, and an automatic CMS audit trail, should arrive as defaults, not as a configuration project. The honest question is not which tool has the most features, it is which one delivers those three without an IT department or a dedicated scheduler you do not have.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 List the three scheduling tasks that take your nurse manager the most time this week. If any of them could be handled by an [AI-native nurse scheduling service](/ai-nurse-scheduling) that requires no IT setup, [explore how SimpleScheduleAI works](/how-it-works).
 

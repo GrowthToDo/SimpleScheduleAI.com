@@ -37,7 +37,7 @@ metadata:
 - [What Scheduling Software Is Being Evaluated by Texas Rural Hospitals?](#what-scheduling-software-is-being-evaluated-by-texas-rural-hospitals)
 - [What Does the Texas Compliance Environment Require That Most Software Ignores?](#what-does-the-texas-compliance-environment-require-that-most-software-ignores)
 - [What SimpleScheduleAI Is Building for the Texas Critical Access Hospital Market](#what-simplescheduleai-is-building-for-the-texas-critical-access-hospital-market)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Scheduling software companies publicly focus their sales and marketing on health systems, large hospital networks, and the long-term care sector. Rural Texas hospitals with 25 beds are not the segment those vendors publicly reference or build case studies around. That means a nurse manager at a small rural hospital is often making a scheduling tool decision with limited proactive vendor guidance: asking a colleague at another facility what they use, running a Google search, or attending a rural health conference session. The result is a directional market gap. The sections below lay out what public rural-health evidence supports, and label clearly where we are inferring rather than measuring.
@@ -171,7 +171,7 @@ For more on what Texas-specific requirements apply to CAH nurse scheduling, see 
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Nobody has a clean dataset on what rural Texas hospitals run for scheduling, so anyone claiming a precise market share is guessing with confidence. What the public evidence does support is narrower and more useful: facilities with limited IT and thin margins default to the simplest tools that clear the bar, and enterprise vendors do not build for them. What the evidence supports is a statement about the market rather than a ranking of products: the segment is underserved, ease of setup beats feature breadth every time here, and the question that matters for an administrator is which tool will actually run without an IT team to babysit it.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Write down how your schedule is actually built today, including the spreadsheet, whiteboard, or phone tree steps, and how many hours a cycle it takes your nurse manager. You cannot evaluate a replacement until the current cost is on paper.
 2. List your must-have compliance outputs: the documentation you would need for a CMS survey and a Texas HHSC or Texas Payday Law review. That list is your evaluation filter.

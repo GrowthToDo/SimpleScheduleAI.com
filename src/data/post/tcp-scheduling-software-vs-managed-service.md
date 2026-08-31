@@ -45,7 +45,7 @@ This guide compares the two on the operational dimensions that matter at CAH sca
 - [Where Does a Managed Service Win?](#where-does-a-managed-service-win)
 - [How Does Time to Value Compare?](#how-does-time-to-value-compare)
 - [Which Fits Your Critical Access Hospital?](#which-fits-your-critical-access-hospital)
-- [What to Do This Week?](#what-to-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 TCP TimeClock+ is a time and attendance platform made by TCP Software. It combines time clock management, leave tracking, payroll integration, and basic employee scheduling in one system. For [critical access hospital scheduling](/critical-access-hospital-scheduling), TCP TimeClock+ is often chosen by hospitals that want one platform handling both time tracking and scheduling rather than managing two separate tools. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). The question for a CAH nurse manager is whether a system built primarily around time tracking meets her scheduling needs, or whether a scheduling-focused service handles more of the weekly work for her. For the full range of [nurse scheduling software](/nurse-scheduling-software) options at the CAH scale, see our dedicated guide. If you are specifically comparing TCP TimeClock+ against other scheduling platforms, see our [best TCP alternatives for Critical Access Hospitals](/blog/best-tcp-alternative-for-cah) guide.
@@ -259,7 +259,7 @@ To model the cost comparison at your facility's actual numbers, run the [SimpleS
   </p>
 </div>
 
-## What to Do This Week?
+## What to Do This Week
 
 The comparison between TCP TimeClock+ and a managed scheduling service becomes clear once you have two data points: what problem you are primarily trying to solve, and what each model actually requires from the nurse manager week-over-week. The five steps below help you get there.
 

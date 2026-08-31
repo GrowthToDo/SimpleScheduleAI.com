@@ -35,7 +35,7 @@ metadata:
 - [Which Nurse Retention Strategies Can a Rural Nurse Manager Actually Control?](#which-nurse-retention-strategies-can-a-rural-nurse-manager-actually-control)
 - [How Do You Spot an At-Risk Nurse Before She Resigns?](#how-do-you-spot-an-at-risk-nurse-before-she-resigns)
 - [How Does SimpleScheduleAI Help With Nurse Retention?](#how-does-simplescheduleai-help-with-nurse-retention)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 The most useful nurse retention strategies for a rural Critical Access Hospital are not the ones in the big-system playbook. At a 25-bed facility, your entire nursing staff is a small group who mostly live nearby, and losing one of them can leave a coverage hole you cannot fill for weeks. You cannot match a metro hospital's sign-on bonus or wellness suite, so the lever you actually hold is the schedule itself. This guide walks through why turnover hits a small roster so hard, why pay and perks are the wrong fight, and the schedule-based retention moves a nurse manager controls week to week.
@@ -97,7 +97,7 @@ You can read the full process on our [nurse scheduling software](/nurse-scheduli
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Most rural retention advice tells a small hospital to compete on things it cannot afford: bonuses, tuition, wellness programs. That is a trap. A Critical Access Hospital will never win the compensation fight against a metro system. The advantage a rural nurse manager actually holds is the schedule: fair rotation of the hard shifts, predictable posting, and a ceiling on chronic overtime, all of which cost nothing and target the real reason nurses in small hospitals quit. Treat the schedule as your retention program, not your admin chore, and you are competing on the one field where a small hospital can win.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Pull your last eight to twelve weeks of schedules and count nights, weekends, holidays, overtime hours, and callout coverage per nurse. Names at the top of several columns at once are your retention risks.
 2. Confirm your schedules are posted at least two weeks ahead, further for holidays. If not, fix the posting cadence first, since predictability is a retention benefit that costs nothing.

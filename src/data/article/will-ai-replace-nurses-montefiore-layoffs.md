@@ -36,7 +36,7 @@ metadata:
 - [Can a Hospital Legally Replace Nurses With AI?](#can-a-hospital-legally-replace-nurses-with-ai)
 - [What Should Nurses Ask When Their Hospital Brings In AI?](#what-should-nurses-ask-when-their-hospital-brings-in-ai)
 - [How Does SimpleScheduleAI Help?](#how-does-simplescheduleai-help)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 No bedside nurse at Montefiore was replaced by AI. The 12 nurses whose jobs were eliminated work in utilization review, the administrative role that reads patient charts and argues with insurance companies over coverage.
@@ -106,7 +106,7 @@ One honest boundary: SimpleScheduleAI is not right for evaluating clinical or ut
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The Montefiore story will be retold as "AI is replacing nurses," and that retelling helps nobody, including AI vendors. The truth is sharper: AI is reaching administrative nursing work now, it is not reaching the bedside, and at a Critical Access Hospital the law will not let it. Hospitals that name which jobs their AI touches, and who keeps the final signature, will keep their nurses' trust. Hospitals that let a press statement do that work will not.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Inventory the AI already in your building by job class: clinical support, administrative processing, or operations. Most leaders find tools in the second column nobody has named as AI.
 2. Write down who holds the final call for each tool. If any determination reaches a patient or a payer without a licensed human signing off, decide now whether you can defend that.

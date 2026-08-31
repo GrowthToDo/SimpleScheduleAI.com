@@ -43,7 +43,7 @@ They are both right, because the model does not decide fairness. What happens to
 - [When Does Cyclical Scheduling Fit a Small Hospital Best?](#when-does-cyclical-scheduling-fit-a-small-hospital-best)
 - [Why Does a Hybrid Model Fit a Small Hospital?](#why-does-a-hybrid-model-fit-a-small-hospital)
 - [How Does SimpleScheduleAI Help?](#how-does-simplescheduleai-help)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 The fastest way to decide skips the philosophy and asks one question about your own unit: is there a person here with the time and the standing to enforce fairness rules every single cycle, including the cycle where a well-liked nurse has claimed every Saturday off this quarter? A yes makes self-scheduling worth its upkeep. A no means a cyclical backbone will treat your staff more fairly than a self-scheduling policy nobody has the hours to police. Everything below is the detail behind that question.
@@ -195,7 +195,7 @@ You can watch the AI build a schedule and rank callout replacements in the [inte
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The self-scheduling versus cyclical debate is usually framed as fairness against flexibility, and that framing is a trap. Cyclical is fair only in the base pattern, and self-scheduling is flexible only until the good shifts run out. Both quietly reconcentrate burden the moment the exceptions start, a swap here, a favor there, and nobody planned for either. The model you pick matters less than whether you can see the rotation count and the accumulated load at a glance. Pick the mix your staff will accept, then track it relentlessly. The tracking is the job.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Name the person who will enforce fairness rules every cycle, or accept that the answer is no. Then name what you are optimizing for: predictability and low effort point to cyclical, morale and flexibility point to self-scheduling.
 2. Pull your last eight weeks of schedules and count nights, weekends, and holidays per nurse. If two or three names carry most of them, your current model, whatever you call it, is already concentrating burden.

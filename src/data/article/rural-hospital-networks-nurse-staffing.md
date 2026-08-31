@@ -35,7 +35,7 @@ metadata:
 - [Does a Network Fix the Callout Coverage Problem?](#does-a-network-fix-the-callout-coverage-problem)
 - [What Staffing Compliance Stays Local Even in a Network?](#what-staffing-compliance-stays-local-even-in-a-network)
 - [How Does SimpleScheduleAI Help a Hospital in a Network?](#how-does-simplescheduleai-help-a-hospital-in-a-network)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 Rural hospitals are increasingly choosing to band together into networks rather than sell to a large system, and a July 2026 Commonwealth Fund report says the strategy is starting to level the playing field with bigger health systems ([Commonwealth Fund, 2026](https://www.commonwealthfund.org/publications/2026/jul/how-small-rural-hospital-networks-are-leveling-playing-field-larger-health)). For a lone hospital weighing whether to join, the staffing promise is the draw: access to more people than a 20-nurse roster could ever hire on its own. The catch, and the part the coverage stories skip, is that a wider shared bench only turns into real coverage at your facility if your schedule can reach and place those people, and the compliance that never pools still has to be handled at home. Here is what a network does and does not change about nurse staffing at a single small hospital.
@@ -85,7 +85,7 @@ One honest limitation: SimpleScheduleAI schedules a single hospital's roster and
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Banding together is a smart survival move, and the market-power case for it is real. Just do not mistake a bigger staff directory for solved coverage. A network hands a small hospital more people, but the two things that decide whether those people become coverage stay at the hospital: a schedule that can place a borrowed nurse legally, and a record that proves it. Shared staff is not shared compliance. The hospitals that get the most out of a network will be the ones whose schedule can actually reach across it, and whose audit trail still holds up one facility at a time.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. If your hospital is in or joining a network, write down exactly which staff are shared and on what terms. A shared specialist you cannot see on a schedule is not coverage you can count on.
 2. Decide who owns cross-facility placement. When a nurse works two network sites in a week, one schedule has to track their combined hours against the overtime threshold, or you will find the breach on a pay stub, not a plan.

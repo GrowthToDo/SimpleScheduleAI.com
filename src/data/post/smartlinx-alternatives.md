@@ -48,7 +48,7 @@ This guide compares 6 SmartLinx alternatives for a 25-bed acute CAH, with the im
 - [5. Deputy](#5-deputy)
 - [When to Stay with SmartLinx?](#when-to-stay-with-smartlinx)
 - [How SimpleScheduleAI Compares to SmartLinx?](#how-simplescheduleai-compares-to-smartlinx)
-- [What to Do This Week?](#what-to-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 SmartLinx built its reputation in long-term care scheduling, where 24/7 coverage requirements, complex per diem pools, and integrated time and attendance create a workflow that general scheduling tools handle poorly. It is a genuinely capable platform for organizations with the staff and IT resources to implement it correctly.
@@ -403,7 +403,7 @@ For hospitals where T&A is managed through payroll software independently of the
   </p>
 </div>
 
-## What to Do This Week?
+## What to Do This Week
 
 1. **Audit your SmartLinx usage.** Log into SmartLinx and identify which features are actively used versus installed but dormant. If T&A integration, labor analytics, and compliance automation are all actively used and working, staying on SmartLinx is probably the right decision. If fewer than three major features are used regularly, the platform is oversized.
 

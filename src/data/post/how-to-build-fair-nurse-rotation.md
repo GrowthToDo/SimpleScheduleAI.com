@@ -213,7 +213,7 @@ Do not dismiss fairness complaints as complaints. A nurse who feels chronically 
 
 [SimpleScheduleAI](/) tracks weekend and holiday distribution automatically across each scheduling cycle, carrying weekend counts forward from one cycle to the next and measuring holidays against the team average. The nurse manager can pull a distribution summary at any time. When building the next cycle, the system weights assignments toward nurses who are behind on weekends and holidays. Charge coverage is handled differently: every shift that needs charge gets a charge-qualified nurse, charge slots are filled first because they are the hardest to cover, and the system avoids stacking charge-qualified nurses on the same shift so the qualified pool stays spread across the schedule. Counting charge hours per nurse across cycles is still a manual review, using the tracker described above. The nurse manager reviews the proposed rotation and approves.
 
-## What to Do This Week?
+## What to Do This Week
 
 1. **Run a weekend count for the last 8 weeks.** For each nurse, count how many Saturday and Sunday shifts they worked. If any nurse is more than 1.5x the average, that is an active fairness problem, not a hypothetical one.
 

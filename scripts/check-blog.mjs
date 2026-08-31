@@ -508,6 +508,71 @@ function check(file) {
     });
   }
 
+  // 2a-ter. Rules moved OUT of founder-feedback-themes.md and into code, so the
+  // themes file stays short enough to be read in full on every publish. The
+  // founder's standing constraint is that an unread checklist catches nothing,
+  // so anything mechanizable belongs here, not there. Added 2026-08-31.
+  //
+  // (i) CANONICAL ACTION HEADING. The founder flagged "What Should You Do This
+  // Week?" as ungrammatical for a heading. The corpus was three-way split: 63
+  // files on the house form, 27 on the question form, 14 with a stray question
+  // mark. Normalized to 104 via scripts/normalize-action-heading.mjs, so this
+  // can be a hard failure rather than a warning.
+  //
+  // (ii) SYSTEM AND WEB JARGON (was theme T21). Status codes and internal
+  // vocabulary in reader-facing prose. Origin: "their pricing URL returns a
+  // 404" — the founder's note was "Our ICP dont know 404". Translate to what
+  // the reader would observe.
+  {
+    const badActionHeadings = [/^## What Should You Do This Week\??$/i, /^## What to Do This Week\?$/i];
+    body.forEach((line, i) => {
+      for (const re of badActionHeadings) {
+        if (re.test(line.trim())) {
+          fail(
+            `Action heading must be exactly "## What to Do This Week" (no question, no question mark)`,
+            bodyOffset + i + 1,
+            line.trim().slice(0, 100)
+          );
+        }
+      }
+    });
+
+    // (iii) FALSE VENDOR OWNERSHIP. OnShift is a ShiftKey brand, verified at
+    // onshift.com/company/about-us ("OnShift, a ShiftKey brand") on 2026-08-31.
+    // It is NOT and never was part of Workday. The competitor dossier has said
+    // "NEVER 'now part of Workday'" since 2026-08-25 and recorded the claim
+    // recurring in two drafts; it was nonetheless live in two posts until
+    // 2026-08-31, including a whole OnShift section premised on it. A dossier
+    // line alone clearly does not hold this one, so it is a hard failure.
+    body.forEach((line, i) => {
+      if (/OnShift[^.\n]{0,60}Workday|Workday[^.\n]{0,60}OnShift/i.test(line)) {
+        fail(
+          'OnShift is a ShiftKey brand, never "part of Workday" — see competitor-dossier.md',
+          bodyOffset + i + 1,
+          line.trim().slice(0, 100)
+        );
+      }
+    });
+
+    const WEB_JARGON = [
+      [/\b(?:returns?|throw(?:s|ing)?|gives?)\s+a\s+40\d\b/i, 'say what the reader sees, e.g. "the page is missing"'],
+      [/\b40[34]\b(?!\s*(?:CFR|TAC|CCR))/, 'a status code means nothing to a nurse manager'],
+      [/\b50\d\s+error\b/i, 'describe the failure, not the code'],
+      [/\bHTTP\b/, 'internal vocabulary'],
+      [/\bAPI endpoint\b/i, 'internal vocabulary'],
+    ];
+    body.forEach((line, i) => {
+      if (inBlockquote(line)) return;
+      const stripped = line.replace(/https?:\/\/\S+/g, '').replace(/`[^`]*`/g, '');
+      for (const [re, why] of WEB_JARGON) {
+        if (re.test(stripped)) {
+          warn(`System/web jargon in reader-facing prose: ${why}`, bodyOffset + i + 1, line.trim().slice(0, 100));
+          break;
+        }
+      }
+    });
+  }
+
   // 2b. Structural AI-slop patterns, WARN so a human judges each one. On the
   // binary contrast the founder's ruling (2026-08-10) is stricter than the
   // first pass: a defensible instance is still a prominent AI tell, and the

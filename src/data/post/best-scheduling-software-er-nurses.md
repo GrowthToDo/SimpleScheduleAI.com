@@ -453,7 +453,7 @@ CMS §485.635 staffing documentation is logged automatically for every ED shift 
 
 Credential expiration dates are tracked and flagged 30 days before expiration, so the manager is notified of upcoming credential gaps before they affect scheduling or callout coverage.
 
-## What to Do This Week?
+## What to Do This Week
 
 1. **Audit your ED callout history from the last 90 days.** For each callout, record whether the replacement held ACLS and TNCC certifications, and whether any shift was filled by a nurse who lacked those credentials. That number tells you whether your current callout process is enforcing ED credential requirements.
 

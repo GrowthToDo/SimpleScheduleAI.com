@@ -47,7 +47,7 @@ This guide compares 8 platforms across the operational variables that actually d
 - [3. SmartLinx](#3-smartlinx)
 - [4. QGenda](#4-qgenda)
 - [5. NurseGrid Manager](#5-nursegrid-manager)
-- [6. OnShift (now part of Workday)](#6-onshift-now-part-of-workday)
+- [6. OnShift (a ShiftKey brand)](#6-onshift-a-shiftkey-brand)
 - [7. Deputy](#7-deputy)
 - [8. UKG (formerly Kronos)](#8-ukg-formerly-kronos)
 - [Which Software Is Right for Your Hospital Size?](#which-software-is-right-for-your-hospital-size)
@@ -383,13 +383,13 @@ NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGr
 
 **Cost:** Free for individual nurses. Manager tools via NurseGrid for Managers - pricing available on request.
 
-## 6. [OnShift](https://www.onshift.com) (now part of Workday)
+## 6. [OnShift](https://www.onshift.com) (a ShiftKey brand)
 
 _For a CAH-specific deeper comparison, see our guide on the [best OnShift alternatives for Critical Access Hospitals](/blog/onshift-alternatives)._
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Onshift.webp" alt="OnShift workforce management platform interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is now positioned as a workforce management platform for post-acute care, with a documented feature set built for SNF and LTC contexts rather than acute inpatient nursing at a standalone small hospital.
+OnShift holds 3.9/5 on Capterra (14 reviews). It is a ShiftKey brand, following ShiftKey's integration of OnShift announced in July 2023, and is positioned as a workforce management platform for post-acute care, with a documented feature set built for SNF and LTC contexts rather than acute inpatient nursing at a standalone small hospital.
 
 **Best for:** Post-acute and long-term care facilities, senior living organizations, and skilled nursing facilities.
 
@@ -420,9 +420,9 @@ OnShift holds 3.9/5 on Capterra (14 reviews). Acquired by Workday in 2022, it is
 >
 > Mark G., RNAC, Hospital & Health Care, November 23, 2023, Capterra
 
-- Now part of the Workday ecosystem, which carries enterprise pricing and implementation expectations; not a natural fit for standalone small hospitals without a broader Workday deployment.
+- Built and sold for post-acute and long-term care, so a standalone acute small hospital is outside the documented use case rather than an edge case within it.
 
-**Verdict:** The right choice for facilities with significant post-acute or LTC volume. For a standalone acute small hospital, the Workday dependency and pricing are hard to justify.
+**Verdict:** The right choice for facilities with significant post-acute or LTC volume. For a standalone acute small hospital, the post-acute orientation is the mismatch, and it is a positioning mismatch rather than a quality one.
 
 **Cost:** Pricing not listed on website. Enterprise pricing applies post-acquisition.
 

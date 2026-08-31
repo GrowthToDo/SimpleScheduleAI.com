@@ -147,7 +147,7 @@ At a CAH, the failure modes are consistent:
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 Identify your biggest staffing gap this month: overtime, callout coverage, or unfilled shifts. If manual processes are driving the cost, [see how SimpleScheduleAI handles it](/how-it-works).
 

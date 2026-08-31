@@ -37,7 +37,7 @@ metadata:
 - [Why Is the Nursing Schedule the Bigger Compliance Burden?](#why-is-the-nursing-schedule-the-bigger-compliance-burden)
 - [Should a Small Hospital Buy One Tool or Two?](#should-a-small-hospital-buy-one-tool-or-two)
 - [How Does SimpleScheduleAI Help, and Where Does It Stop?](#how-does-simplescheduleai-help-and-where-does-it-stop)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 At a small hospital, "medical staff scheduling software" sounds like one purchase, but it hides two jobs that behave nothing alike. One is the physician and provider schedule: a short list of MDs, DOs, and APPs who rotate through call and cover the emergency department. The other is the nursing schedule: dozens of shifts a week, running hours to track, and the staffing pattern a survey inspects. This guide separates the two, explains what physician scheduling software has to do, and is honest about which half [SimpleScheduleAI](/nurse-scheduling-software) is built to solve.
@@ -177,7 +177,7 @@ One honest limitation, stated plainly: SimpleScheduleAI is not the right fit for
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">The single-vendor pitch for "all your scheduling in one place" sounds efficient and usually is not, at least not at 25 beds. Physician call and nurse coverage are different problems with different rules, and the tool that tries to own both tends to do the small, visible job (provider call) passably and the large, invisible one (nursing hours and documentation) poorly. We would rather be honest about our lane. Buy a provider tool for the physicians, buy a nurse solution for the nurses, and protect the nursing schedule first, because that is where the overtime and the survey risk actually sit.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Separate the two schedules on paper. List physicians and APPs on one side, the nursing roster on the other, and note who owns each today. If one person owns both, that is a workload flag.
 2. For the provider side, write down your three hardest rules: how call is split, which privileges gate which assignments, and your ED response-time requirement. Any provider tool has to handle all three.

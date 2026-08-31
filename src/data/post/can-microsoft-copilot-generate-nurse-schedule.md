@@ -34,7 +34,7 @@ metadata:
 - [What Can Microsoft Copilot Not Do for Nurse Scheduling?](#what-can-microsoft-copilot-not-do-for-nurse-scheduling)
 - [What Is the Difference Between a Copilot Draft and a Postable Schedule?](#what-is-the-difference-between-a-copilot-draft-and-a-postable-schedule)
 - [How Does SimpleScheduleAI Help Where Copilot Stops?](#how-does-simplescheduleai-help-where-copilot-stops)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 A nurse manager at a 25-bed hospital already has Microsoft 365 open all day, so the question is fair: if Copilot can write an email and build a spreadsheet, can it just build next month's nurse schedule too? It can draft one, and the draft is often a genuinely helpful starting point. A draft and a schedule you can post are two different things, though, and the gap between them is the part a small hospital cannot skip.
@@ -125,7 +125,7 @@ One honest limitation: if you need a quick one-off grid and are comfortable chec
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Copilot is a good drafting tool and a bad system of record, and confusing the two is the trap. The grid it returns is fine; the problem is that it looks finished when it is only started. At a 25-bed hospital the grid was never the hard part. Proving it is safe to post is: right coverage, no one over their hours, the right nurse in the right seat, logged. Use Copilot to skip the blank page. Do not use it to decide what goes on the wall.</p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Try Copilot on one real week. Give it your staff list and shift rules and see how close the draft comes. That shows you where the easy part ends.
 2. Write down the checks the draft cannot do for itself: minimum coverage per shift, running hours against overtime, credential-to-shift matching, callout replacement, and a logged record. That list is the actual job.

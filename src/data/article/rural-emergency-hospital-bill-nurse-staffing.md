@@ -36,7 +36,7 @@ metadata:
 - [What Happens to the Schedule When a Hospital Changes Designation?](#what-happens-to-the-schedule-when-a-hospital-changes-designation)
 - [How Likely Is This Bill to Become Law?](#how-likely-is-this-bill-to-become-law)
 - [How Does SimpleScheduleAI Help?](#how-does-simplescheduleai-help)
-- [What Should You Do This Week?](#what-should-you-do-this-week)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 A Senate bill introduced on July 29 would loosen the rules for Rural Emergency Hospitals. The news stories so far are about money and access to care. None of them mention who has to be in the building at night.
@@ -172,7 +172,7 @@ One honest limitation: we can only work with the availability that exists. If a 
   </p>
 </div>
 
-## What Should You Do This Week?
+## What to Do This Week
 
 1. Write down which category your hospital holds, Critical Access or Rural Emergency, and what it requires overnight. If nobody on the leadership team can state it from memory, fix that first.
 2. Count your night-eligible nurses. Not the whole roster, just the ones who work nights and are cleared for the unit. That number is the real limit on any designation change.
