@@ -201,8 +201,9 @@
     "slug": "managed-service-vs-scheduling-software",
     "type": "post",
     "url": "/blog/managed-service-vs-scheduling-software",
-    "primaryKeyword": "scheduling software vs managed service",
-    "pillar": "/nurse-scheduling-software"
+    "primaryKeyword": "who builds the nurse schedule",
+    "pillar": "/nurse-scheduling-software",
+    "note": "RETARGETED 2026-09-01. GSC verdict was \"Crawled, currently not indexed\" (fetched 2026-08-18, robots ALLOWED, indexing ALLOWED, canonical self) with ZERO impressions despite 16 inbound links, while shiftwizard-vs-managed-service pulls 1,868 impressions on only 3. Links were never the problem. The old target, \"scheduling software vs managed service\", is a phrase nobody types: a DataForSEO pull on 2026-09-01 returned NO volume data for outsourced nurse scheduling, nurse scheduling service, managed scheduling services, hospital scheduling service, nurse scheduling company, nurse scheduling outsourcing or nurse staffing service. There is no keyword to retarget to. So it is retargeted at the QUESTION SHAPE we demonstrably win instead, which is the AI-assistant phrasing that earns us 400 impressions at position 7 on the ShiftWizard pages. Zero search volume by design; judge this one on AEO citations and GSC indexing state, never on keyword rank. CAVEAT worth remembering: \"aladtec alternatives\" also returns no DFS volume data while our page on it pulls 1,182 impressions, so absent planner data at this tail means the term is too small to report, not that nobody searches it."
   },
   {
     "slug": "medical-scheduling-software-buyer-guide",
