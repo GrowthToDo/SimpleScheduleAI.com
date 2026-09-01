@@ -489,6 +489,44 @@ function check(file) {
     }
   });
 
+  // 2a-quinquies. MINIMUM VISUAL ELEMENTS BY POST TYPE.
+  //
+  // Checklist line 206 has required this since June: 3 for BOFU/how-to, 2 for
+  // vs-service and comparison MOFU, 1 for MOFU/TOFU, 0 for glossary. It was a
+  // manual tick-box, so it leaked. A founder spot-check on 2026-09-01 asked
+  // whether recent posts actually carry their figures and tables; six of the
+  // twelve most recent pieces did not, and four had zero.
+  //
+  // What counts: a markdown table, or a Tailwind `not-prose` block presenting
+  // data. What does NOT count is chrome that appears on almost every post — the
+  // Our Take box and the closing CTA panel. Without that exclusion every post
+  // scores 2 for free and the check is worthless, which is exactly how the
+  // eyeball version of it passed these six.
+  const VISUAL_MIN = { bofu: 3, comparison: 2, 'vs-service': 2, mofu: 1, tofu: 1, glossary: 0 };
+  const vPostType = fm && fm.postType ? unquote(fm.postType).toLowerCase() : null;
+  if (vPostType && VISUAL_MIN[vPostType] !== undefined) {
+    let tableCount = 0;
+    for (let i = 1; i < body.length; i++) {
+      const sep = body[i];
+      if (sep.includes('|') && /^\s*\|?[\s:|-]*-[\s:|-]*\|/.test(sep) && body[i - 1].includes('|')) tableCount++;
+    }
+    const divBlocks = [...bodyText.matchAll(/<div class="not-prose[\s\S]*?<\/div>\s*(?=\n\n|\n##|$)/g)].map(
+      (m) => m[0]
+    );
+    const dataDivs = divBlocks.filter(
+      (d) => !/Our Take|cal\.com|href="\/how-it-works"|href="\/contact"/.test(d)
+    ).length;
+    const visuals = tableCount + dataDivs;
+    const needed = VISUAL_MIN[vPostType];
+    if (visuals < needed) {
+      warn(
+        `Only ${visuals} data visual(s) for postType "${vPostType}" — checklist minimum is ${needed} (tables and data blocks count; Our Take and the CTA panel do not)`,
+        1,
+        ''
+      );
+    }
+  }
+
   // 2a-quater. BODY SHOULD OPEN WITH KEY TAKEAWAYS. WARN, and deliberately so.
   //
   // Founder question 2026-09-01, on free-nurse-scheduling-software: "we go for KT
