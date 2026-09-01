@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "shiftwizard-vs-managed-service",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:39.735Z",
+      "contentHash": "1d9ca48e3f07bc7f6b920c670ede27c09f9bf27b83e50d01e8a96baaf67ae407"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:42.622Z",
+      "contentHash": "1d9ca48e3f07bc7f6b920c670ede27c09f9bf27b83e50d01e8a96baaf67ae407"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:44.794Z",
+      "contentHash": "1d9ca48e3f07bc7f6b920c670ede27c09f9bf27b83e50d01e8a96baaf67ae407"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:44.850Z",
+      "contentHash": "1d9ca48e3f07bc7f6b920c670ede27c09f9bf27b83e50d01e8a96baaf67ae407"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:45.016Z",
+      "contentHash": "1d9ca48e3f07bc7f6b920c670ede27c09f9bf27b83e50d01e8a96baaf67ae407"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:45.016Z",
+      "contentHash": "1d9ca48e3f07bc7f6b920c670ede27c09f9bf27b83e50d01e8a96baaf67ae407"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:45.019Z",
+      "contentHash": "1d9ca48e3f07bc7f6b920c670ede27c09f9bf27b83e50d01e8a96baaf67ae407"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "metadata-only-no-claims-touched",
+      "setAt": "2026-09-01T06:45:29.548Z",
+      "contentHash": "cb2b76e83981314fb4f2dfe5b97ed6ac7e5d84a932af0cbb425ee1d18c992029"
+    },
+    "proofread": {
+      "value": "PASS",
+      "setBy": "claude-n1n2-rewrite",
+      "setAt": "2026-09-01T06:45:30.666Z",
+      "contentHash": "cb2b76e83981314fb4f2dfe5b97ed6ac7e5d84a932af0cbb425ee1d18c992029"
+    },
+    "founderApproval": {
+      "value": "PASS",
+      "setBy": "founder-GO-for-N1-N2",
+      "setAt": "2026-09-01T06:45:31.911Z",
+      "contentHash": "cb2b76e83981314fb4f2dfe5b97ed6ac7e5d84a932af0cbb425ee1d18c992029"
+    }
+  },
+  "overrides": []
+}

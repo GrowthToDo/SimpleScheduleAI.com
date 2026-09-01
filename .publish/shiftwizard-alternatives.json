@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "shiftwizard-alternatives",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:46.977Z",
+      "contentHash": "e6cfc1bd6a51f19eaec26a4cf85d0494e44412e90519eec8ae6321875137609a"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:48.977Z",
+      "contentHash": "e6cfc1bd6a51f19eaec26a4cf85d0494e44412e90519eec8ae6321875137609a"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:51.306Z",
+      "contentHash": "e6cfc1bd6a51f19eaec26a4cf85d0494e44412e90519eec8ae6321875137609a"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:51.350Z",
+      "contentHash": "e6cfc1bd6a51f19eaec26a4cf85d0494e44412e90519eec8ae6321875137609a"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:51.757Z",
+      "contentHash": "e6cfc1bd6a51f19eaec26a4cf85d0494e44412e90519eec8ae6321875137609a"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:51.757Z",
+      "contentHash": "e6cfc1bd6a51f19eaec26a4cf85d0494e44412e90519eec8ae6321875137609a"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T06:44:51.759Z",
+      "contentHash": "e6cfc1bd6a51f19eaec26a4cf85d0494e44412e90519eec8ae6321875137609a"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "metadata-only-no-claims-touched",
+      "setAt": "2026-09-01T06:45:33.568Z",
+      "contentHash": "81b50891d953a667f02f9bd21b14222faa37486e3b8065da42995223cdbc9020"
+    },
+    "proofread": {
+      "value": "PASS",
+      "setBy": "claude-n1n2-rewrite",
+      "setAt": "2026-09-01T06:45:34.538Z",
+      "contentHash": "81b50891d953a667f02f9bd21b14222faa37486e3b8065da42995223cdbc9020"
+    },
+    "founderApproval": {
+      "value": "PASS",
+      "setBy": "founder-GO-for-N1-N2",
+      "setAt": "2026-09-01T06:45:35.834Z",
+      "contentHash": "81b50891d953a667f02f9bd21b14222faa37486e3b8065da42995223cdbc9020"
+    }
+  },
+  "overrides": []
+}
