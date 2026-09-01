@@ -70,6 +70,15 @@ Agency reliance is the model where the hospital builds a base schedule, then rou
 
 The hidden cost is two-layered. Agency nurses typically run two to three times staff rate, which the [NSI National Health Care Retention Report](https://www.nsinursingsolutions.com) and the [HRSA shortage area data](https://data.hrsa.gov/topics/health-workforce/shortage-areas) [2] both flag as a sustained pressure on rural budgets. The deeper cost is what agency masks: an internal schedule that is unfair, badly distributed, or missing relief shifts will still get covered on paper, because the agency closes the gap. The staff nurses see the unfairness; the agency invoice does not. The CFO reads the invoice and asks why agency spend is up. The nurse manager knows it is because the base schedule never had a chance of being fair, but the math is invisible until someone audits the rotation against worked hours.
 
+Those four side by side, because the pattern is the same each time. Every option is genuinely good at something, and the cost sits somewhere the purchase decision does not look.
+
+| Approach                   | What it genuinely does well                                                  | Where the cost actually sits                                                                                    |
+| -------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Paper and whiteboards      | No learning curve, no subscription, visible to every nurse who walks past    | Callout coverage becomes a phone chase, and running overtime totals are not tracked at all                      |
+| Excel                      | Visible, sortable, shareable, and already where most of these hospitals work | Every cycle starts from zero: no carryover of who worked last weekend, no fairness counter, no credential check |
+| Standalone scheduling SaaS | Cleaner than Excel, swaps are tracked, the mobile view is easier             | Configuration. Every credential rule and overtime threshold still has to be encoded, by the nurse manager       |
+| Agency reliance            | The shifts get covered and the staffing record stays clean                   | Agency nurses typically run two to three times staff rate                                                       |
+
 ## What Are the Tradeoffs of a Regional Health-System Scheduling Contract?
 
 A regional or system-affiliate scheduling office builds the CAH's schedule centrally. The CAH submits the roster and the constraints, and the system office returns a finished schedule, often through a help-desk ticket queue. For a CAH that has joined a larger system as an affiliate, this is a common bundled service, and it removes the weekly build burden from the local nurse manager.

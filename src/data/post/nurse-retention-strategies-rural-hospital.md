@@ -74,6 +74,15 @@ The retention strategies a rural nurse manager controls week to week are all sch
 
 **Make callout coverage fair, not convenient.** Spreading the replacement ask across eligible staff instead of dialing the same dependable nurse prevents quiet burnout, the principle behind [after-hours callout coverage at small hospitals](/blog/after-hours-callout-coverage-small-hospitals).
 
+Each of those has a tell, which is what makes them checkable rather than aspirational. Read the right-hand column against your last published cycle.
+
+| Strategy                                          | What it looks like in practice                                      | The tell that it is not happening                          |
+| ------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Distribute nights, weekends and holidays fairly   | Track who has worked the recent hard shifts, then rotate the burden | The same names appear on every holiday, year after year    |
+| Publish the schedule far in advance               | At least two weeks ahead, further for holidays                      | Nurses cannot arrange childcare or sleep around their work |
+| Cap chronic overtime                              | Watch running hours and stop the drift past planned shifts          | The same reliable few are always over                      |
+| Make callout coverage fair rather than convenient | Spread the replacement ask across everyone eligible                 | One dependable nurse gets dialed first every time          |
+
 ## How Do You Spot an At-Risk Nurse Before She Resigns?
 
 You spot an at-risk nurse by reading the schedule as an early-warning system: rising overtime, a lopsided share of nights and weekends, and back-to-back callout coverage are the measurable signals that show up months before someone gives notice. The gap that ends in a resignation is almost always visible in the data first.

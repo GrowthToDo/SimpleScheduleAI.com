@@ -87,6 +87,15 @@ If people whose job is to run the platform describe reporting as "very complicat
 
 The complexity that administrative reviewers describe at enterprise scale lands harder at a Critical Access Hospital, because the CAH inherits the platform without the support infrastructure it assumes. The software is no different; the people who make it work are missing. At a 200-bed health system, a nurse who struggles with UKG has an IT help desk to call and a trainer who ran an onboarding session. At a 20-nurse CAH, the nurse manager often becomes the de facto trainer and deployment lead for any new platform, on top of clinical shifts, because the hospital's IT, whether one person or a contracted service, has no capacity to own a workforce-management suite. A configuration problem a large hospital routes to a workforce-management team has no such owner at a 25-bed facility.
 
+Set out as a list, the missing pieces are specific rather than vague:
+
+| What an enterprise suite assumes exists | At a 200-bed health system   | At a 20-nurse critical access hospital     |
+| --------------------------------------- | ---------------------------- | ------------------------------------------ |
+| Someone who owns the scheduling rules   | A dedicated administrator    | The nurse manager, between clinical shifts |
+| Someone who maintains the integrations  | An IT team                   | One person, or a contractor on call        |
+| Someone who trains new users            | A trainer who ran onboarding | The nurse manager again                    |
+| Somewhere to turn when a nurse is stuck | An internal IT help desk     | In practice, nobody                        |
+
 There is a second, documented gap: no independent Critical Access Hospital reviews of UKG surfaced on the major review platforms during our research. The enterprise track record is real, but a small hospital cannot assume it transfers to a 25-bed operation. That is the central problem any approach to [critical access hospital scheduling](/critical-access-hospital-scheduling) has to solve.
 
 ## How Should a Small Hospital Evaluate UKG Before Buying?
