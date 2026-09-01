@@ -48,6 +48,13 @@ It is a constrained assignment problem: a set of nurses, a set of shifts across 
 
 That distinction is the whole shape of the problem. Coverage is hard: the shift needs a nurse. A request for a Friday off is usually soft: you honor it if you can. Every scheduling tool you have used, including a spreadsheet, is an attempt to satisfy the hard ones and do well on the soft ones.
 
+| Rule type       | Burke's definition                                                                     | On an 18-nurse roster                                                                    | What it does to the schedule                                                  |
+| --------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Hard constraint | "must be satisfied at all costs"                                                       | A licensed nurse on duty whenever there is an inpatient; nobody works two shifts at once | A schedule that breaks one is not a schedule, however good it looks otherwise |
+| Soft constraint | "desirable but which may need to be violated in order to generate a workable solution" | A request for Friday off; weekends spread evenly across the year                         | Honored where possible, and traded against each other when they collide       |
+
+Which of your own rules sit in which row is a decision you make, not a fact about nursing, and it is the decision that sets how hard your schedule is to build.
+
 One naming point, because it causes confusion when you go looking for the research. The same problem appears as the **nurse rostering problem**, and Burke's survey notes that other authors "deliberately do not distinguish between rostering and scheduling." Our glossary draws a working distinction between [nurse rostering](/blog/what-is-nurse-rostering) as maintaining the staff record and scheduling as building the timetable. That split is operationally useful, but the academic literature does not observe it.
 
 ## How Many Schedules Are Possible at an 18-Nurse Hospital?

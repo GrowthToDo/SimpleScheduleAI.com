@@ -84,6 +84,15 @@ State law can go further. In Texas, [26 TAC 505.41(o)(2)(D)](https://www.law.cor
 
 The consequence for a converting hospital is a different scheduling problem, not a smaller version of the old one. A 192-bed hospital absorbs a callout inside a large roster. Take a 25-bed hospital running two licensed nurses on nights, which is a common shape at that size: there is no depth to absorb anything, so the same callout becomes a coverage event. Our guide to [nurse staffing models](/blog/nurse-staffing-models) works through why three of the four traditional care models stop being available at that size, and our [critical access hospital scheduling](/critical-access-hospital-scheduling) overview covers what the coverage floor looks like in practice.
 
+Set the two sides by side and the point is that the first three rows do not move. Only the last one does.
+
+|                                                                                    | Before conversion, at a larger bed count | After conversion, capped at 25 beds                            |
+| ---------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------- |
+| Licensed nurse on duty whenever there is an inpatient (42 CFR 485.631(a)(5))       | Required                                 | Required, unchanged                                            |
+| An RN assigns and supervises the nursing care (42 CFR 485.635(d))                  | Required                                 | Required, unchanged                                            |
+| An RN on duty in each building holding patients, in Texas (26 TAC 505.41(o)(2)(D)) | Required                                 | Required, unchanged                                            |
+| What happens when someone calls out                                                | Absorbed inside a large roster           | A coverage event, with as few as two licensed nurses on nights |
+
 The [96-hour annual average length of stay](https://www.ruralhealthinfo.org/topics/critical-access-hospitals) adds a second scheduling pressure that is easy to miss. It is an annual average rather than a per-patient cap, so it does not dictate any individual discharge. It does mean the case mix a converted hospital keeps has to stay within it, which changes which services the schedule has to cover at all.
 
 ## Why Is CMS Reviewing the Designation Now?

@@ -100,7 +100,15 @@ Four situations, stated plainly. If you are in one of them, build, and this post
 
 If none of the four applies, a 25-bed hospital is buying something that already exists.
 
-**And since this post is written by a vendor, here is the buying map without us in it.** The products a hospital your size actually shortlists fall into three groups. General workforce tools built for shift businesses, such as When I Work, Deputy and Homebase, which are inexpensive and do not know clinical rules. Post-acute and long-term care platforms such as OnShift and SmartLinx, which know healthcare but are built for a different setting. And acute-care or physician scheduling systems such as QGenda, Aladtec and the enterprise tier from UKG, which fit hospitals but are generally sized and priced for larger ones. Our guide to [choosing nurse scheduling software](/blog/how-to-choose-nurse-scheduling-software) works through the trade-offs, [nurse scheduling software for a small hospital](/blog/nurse-scheduling-software-small-hospital) covers the size question, and our [critical access hospital scheduling](/critical-access-hospital-scheduling) overview covers the constraints any option has to satisfy.
+**And since this post is written by a vendor, here is the buying map without us in it.** The products a hospital your size actually shortlists fall into three groups.
+
+| Group                                       | Examples                                      | Does it know clinical rules?               | The catch at 25 beds                                                  |
+| ------------------------------------------- | --------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------- |
+| General workforce tools                     | When I Work, Deputy, Homebase                 | No                                         | Cheapest option, but built for shift businesses rather than hospitals |
+| Post-acute and long-term care platforms     | OnShift, SmartLinx                            | Yes, for skilled nursing and senior living | Healthcare-aware, but aimed at a different setting than acute care    |
+| Acute-care and physician scheduling systems | QGenda, Aladtec, the enterprise tier from UKG | Yes                                        | Fits a hospital, but generally sized and priced for a larger one      |
+
+Our guide to [choosing nurse scheduling software](/blog/how-to-choose-nurse-scheduling-software) works through the trade-offs, [nurse scheduling software for a small hospital](/blog/nurse-scheduling-software-small-hospital) covers the size question, and our [critical access hospital scheduling](/critical-access-hospital-scheduling) overview covers the constraints any option has to satisfy.
 
 ## Why Did We Build One and Not Sell It as Software?
 

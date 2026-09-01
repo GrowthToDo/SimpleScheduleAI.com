@@ -91,6 +91,15 @@ During the survey they compare the staff they can see on the floor to the schedu
 
 **And it is worth knowing there are two surveys, not one.** A CMS survey checks the federal Conditions of Participation. Your state licensing agency, Texas HHSC for a Texas hospital, runs its own inspection against state rules, which as the Texas example below shows are stricter in places. The same schedule has to satisfy both, and a record that answers one will generally answer the other.
 
+|                                   | CMS survey                                                                                           | State licensing survey                                                  |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| What it checks against            | The federal Conditions of Participation                                                              | State hospital licensing rules                                          |
+| Who runs it, for a Texas hospital | CMS                                                                                                  | Texas HHSC                                                              |
+| The nurse-on-duty rule it applies | 42 CFR 485.631(a)(5): an RN, clinical nurse specialist or LPN on duty whenever there is an inpatient | 26 TAC 505.41(o)(2)(D): an RN on duty in each building holding patients |
+| A night covered by an LPN alone   | Meets the requirement                                                                                | Does not meet the requirement                                           |
+
+That last row is the one to check your own records against, because it is the swap that looks fine federally and still leaves a state rule unmet.
+
 A critical access hospital answers instead to the Conditions of Participation, which are the federal rules a hospital has to meet to bill Medicare at all, and which a surveyor checks in person rather than through a data upload. Two of them land directly on the schedule:
 
 - [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) requires that "a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients." The worked schedule is how you show it happened.
