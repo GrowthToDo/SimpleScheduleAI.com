@@ -23,7 +23,7 @@ metadata:
 
 ## Key Takeaways
 
-- Most of what you find answering this question is written by people who sell development. Searching in September 2026, 14 of the first 19 results for custom hospital staffing software development were development-agency pages. Almost none of them has any reason to tell you not to build.
+- Ask online whether to build your own scheduling software and almost every answer comes from a firm that gets paid to build it. Searching in September 2026, 14 of the first 19 results for custom hospital staffing software development were development-agency pages. Almost none of them has any reason to tell you not to build.
 - The build is not the expensive part. Staffing rules change, and a scheduler encodes rules. Whoever builds it owns every future change to it, and that bill arrives every year rather than once.
 - A scheduler is more than a grid that assigns names to shifts. It has to know which licenses can cover which shift, what your state adds on top of the federal rules, and what to do when the answer is that nobody can. Our guide to [what automated nurse scheduling actually means](/blog/what-automated-nurse-scheduling-actually-means) covers the gap between the two.
 - Building genuinely makes sense in four situations, listed below without hedging. Three describe larger organizations. The fourth, having capital or grant money that cannot be spent on a subscription, applies at any size and argues against buying from anyone, us included.
@@ -64,7 +64,7 @@ Two commitments, and the first one gets all the attention.
 **The ownership.** After launch, you own it. Not the agency, unless you keep paying them. That means every one of these lands on your hospital permanently:
 
 - **Changes, and mostly not the ones you expect.** Vendors like to warn that regulations shift under you. Being straight about it: the federal rules that bind a critical access hospital schedule have been stable, and the recent movement mostly has not touched them. Texas renumbered its hospital licensing rules in January 2025, which changed the citation and not the duty. The Joint Commission reorganized staffing into a named performance goal effective January 2026 without adding requirements. A federal minimum staffing standard was repealed in February 2026, and it applied to long-term care rather than to your hospital. **The recurring work is more mundane than regulation and that is exactly why it gets left out of the quote:** you open a swing bed, you change your night shift pattern, a union agreement adds a rule, you hire your first LPNs and now skill mix matters. Each one is a change request to whoever holds the code.
-- **The person who knows it.** Custom software has a keeper. When that developer moves on, the knowledge goes with them, and the next person starts by reading unfamiliar code before they can safely touch a system your rota depends on.
+- **The person who knows it.** Custom software has a keeper. When that developer moves on, the knowledge goes with them, and the next person starts by reading unfamiliar code before they can safely touch a system your schedule depends on.
 - **Everything unglamorous.** Backups, security patching, uptime, and someone reachable when it breaks at 5 a.m. on a Sunday, which is exactly when the night charge nurse needs to see who is coming in.
 
 None of that is an argument that building is wrong. It is an argument that the quote you were given covers the first commitment and not the second, and the second one never ends.
@@ -79,14 +79,14 @@ Building a grid that assigns names to shifts is a solved problem, and a competen
 - **Who has to assign and supervise the care.** That is a different section. [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) requires a registered nurse to provide or assign the nursing care of each patient, and requires a registered nurse, or a physician assistant where State law permits, to supervise and evaluate it.
 - **State rules on top.** In Texas, [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) requires an RN on duty in each building of a licensed hospital containing at least one nursing unit where patients are present. So a night that satisfies the federal rule with a licensed practical nurse alone does not satisfy Texas. A scheduler that only knows the federal rule will happily produce that night and tell you it is fine. Confirm how this applies to you with your compliance lead, since licensing and building layout both affect it, and remember there are two inspections: a CMS survey against the federal conditions, and a separate state licensing survey.
 - **Fairness that lasts longer than one schedule.** Anyone can spread weekends evenly inside a single four-week schedule. Stopping the same three people carrying every weekend across the year means each new schedule has to know what the previous ones did. That is a design decision, and it is painful to add afterwards.
-- **What happens when there is no answer.** The interesting behaviour of a scheduler is not filling a shift. It is what it does when the shift cannot be filled: whether it leaves a gap loudly, quietly, or by breaking a rule it should not break.
+- **What happens when there is no answer.** The interesting behavior of a scheduler is not filling a shift. It is what it does when the shift cannot be filled: whether it leaves a gap loudly, quietly, or by breaking a rule it should not break.
 - **Talking to your other systems.** This is the one that overruns budgets. A schedule has to reach timekeeping and payroll somehow, and if the answer is a real interface into your EMR rather than a file export, you have added the hardest part of the project. Decide early whether you are building an interface or moving spreadsheets, because those are different projects with different price tags.
 
 That last one is where home-built schedulers usually disappoint. They are built and tested against the normal week, and the value of a scheduler is almost entirely in the abnormal one.
 
 ## When Does Building Genuinely Make Sense?
 
-Three situations, stated plainly. If you are in one of them, build, and this post is not for you.
+Four situations, stated plainly. If you are in one of them, build, and this post is not for you.
 
 **1. Your scheduling problem is genuinely unusual.** Not "we do it our way", which every hospital says, but structurally unusual: an unusual mix of services sharing one roster, a union agreement with rules no product supports, a research or teaching obligation that shapes assignments. Products encode the common case. If you are not the common case, you will fight a product forever, and a custom build stops that fight.
 
@@ -94,7 +94,7 @@ Three situations, stated plainly. If you are in one of them, build, and this pos
 
 **3. Scheduling is strategically yours.** Some health systems consider workforce deployment a competitive capability and want it in-house on principle. That is a legitimate strategy, and if leadership genuinely holds it, buying will always feel like a compromise.
 
-**4. The money you have is capital, not operating budget.** This is the one that actually applies at your size, and we left it out of the first version of this post because it argues against us. A build is a capital project. It can be depreciated, it can sit inside a grant, and it ends. A subscription is an operating line that never ends and that your successor inherits. If you are holding restricted funds that can be spent on a system but not on a monthly bill, the comparison is not total cost of ownership at all, and a five-year spreadsheet will not capture why. Rural Health Transformation Program money is live in several states right now, which makes this less hypothetical than it was a year ago, and we cover what that program can and cannot fund in our piece on [Texas rural hospital losses and staffing cost](/articles/rural-hospital-losses-nurse-staffing-cost).
+**4. The money you have is capital, not operating budget.** Reasons 1 to 3 describe larger organizations. This one does not, and it argues against buying from anyone, us included. A build is a capital project. It can be depreciated, it can sit inside a grant, and it ends. A subscription is an operating line that never ends and that your successor inherits. If you are holding restricted funds that can be spent on a system but not on a monthly bill, the comparison is not total cost of ownership at all, and a five-year spreadsheet will not capture why. Rural Health Transformation Program money is live in several states right now, which makes this less hypothetical than it was a year ago, and we cover what that program can and cannot fund in our piece on [Texas rural hospital losses and staffing cost](/articles/rural-hospital-losses-nurse-staffing-cost).
 
 **The reason that does not hold up on its own: "it will be cheaper."** It can be cheaper to build. It is rarely cheaper to own. Unless reason 4 applies, run the five-year numbers before committing rather than after.
 
@@ -171,7 +171,7 @@ You can, and the part that is hard to add later is history. Fair rotation depend
 
 **Q: Should a 25-bed hospital ever build its own scheduler?**
 
-Only in the three situations above: a genuinely unusual scheduling structure, an existing software team with a succession plan, or a leadership decision that scheduling is strategically in-house. Absent those, the honest answer is that this problem is already solved by products and services, and your scarce resource is attention rather than software.
+Only in the four situations above. Three of them describe larger organizations: a genuinely unusual scheduling structure, an existing software team with a succession plan, or a leadership decision that scheduling is strategically in-house. The fourth is the one that reaches a hospital your size, which is capital or grant money that cannot be spent on a subscription. Absent all four, this problem is already solved by products and services, and your scarce resource is attention rather than software.
 
 ## Sources
 

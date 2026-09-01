@@ -5,38 +5,38 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-01T05:47:42.336Z",
-      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+      "checkedAt": "2026-09-01T06:29:28.942Z",
+      "contentHash": "9cd78bad458dae6e6a8c5e18b7cdeda82f5e51dbb039e414b3ded6422e4bde8b"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-01T05:47:44.471Z",
-      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+      "checkedAt": "2026-09-01T06:29:31.160Z",
+      "contentHash": "9cd78bad458dae6e6a8c5e18b7cdeda82f5e51dbb039e414b3ded6422e4bde8b"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-01T05:47:45.693Z",
-      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+      "checkedAt": "2026-09-01T06:29:33.295Z",
+      "contentHash": "9cd78bad458dae6e6a8c5e18b7cdeda82f5e51dbb039e414b3ded6422e4bde8b"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-01T05:47:45.736Z",
-      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+      "checkedAt": "2026-09-01T06:29:33.346Z",
+      "contentHash": "9cd78bad458dae6e6a8c5e18b7cdeda82f5e51dbb039e414b3ded6422e4bde8b"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-01T05:47:45.771Z",
-      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+      "checkedAt": "2026-09-01T06:29:33.387Z",
+      "contentHash": "9cd78bad458dae6e6a8c5e18b7cdeda82f5e51dbb039e414b3ded6422e4bde8b"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-01T05:47:45.771Z",
-      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+      "checkedAt": "2026-09-01T06:29:33.388Z",
+      "contentHash": "9cd78bad458dae6e6a8c5e18b7cdeda82f5e51dbb039e414b3ded6422e4bde8b"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-01T05:47:45.773Z",
-      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+      "checkedAt": "2026-09-01T06:29:33.391Z",
+      "contentHash": "9cd78bad458dae6e6a8c5e18b7cdeda82f5e51dbb039e414b3ded6422e4bde8b"
     }
   },
   "recorded": {
@@ -48,9 +48,9 @@
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "9 defects applied incl SERP ratio and rule-change reframe",
-      "setAt": "2026-09-01T05:47:08.842Z",
-      "contentHash": "5228f6e8bad19924e4253f5472286774c6545cafa77fbba7408dfa29c514e7e7"
+      "setBy": "no-fact-changes-founder-edit-round",
+      "setAt": "2026-09-01T06:30:25.671Z",
+      "contentHash": "6690b1fe5145279f570ea219002b0d803a54056082591639039421d2e41a1269"
     },
     "founderApproval": {
       "value": "YES",

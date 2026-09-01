@@ -190,7 +190,7 @@ SimpleScheduleAI is AI-native [nurse scheduling software](/nurse-scheduling-soft
 
 **Key limitations:**
 
-- Charge competency stays with the hospital. SimpleScheduleAI reads who is cleared from the roster and schedules accordingly, but it holds no training records, sign-off dates, or expiry dates, so the clinical judgement about who is ready remains where it belongs.
+- Charge competency stays with the hospital. SimpleScheduleAI reads who is cleared from the roster and schedules accordingly, but it holds no training records, sign-off dates, or expiry dates, so the clinical judgment about who is ready remains where it belongs.
 - Spreading charge across shifts is not the same as counting it over time. Weekend distribution carries across cycles and holidays are balanced against the team average, but nobody's running charge total is tracked, so comparing charge hours per nurse is still a manual review. The checklist below has the count.
 - The service covers Texas only, and it does not schedule physicians. A hospital scheduling both in one system will want a different tool.
 

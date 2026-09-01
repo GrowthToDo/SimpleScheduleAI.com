@@ -23,7 +23,7 @@ metadata:
 
 ## Key Takeaways
 
-- Nurse scheduling automation is usually abandoned quietly. The licence stays paid, the tool stays installed, and the schedule moves back into a spreadsheet.
+- Nurse scheduling automation is usually abandoned quietly. The license stays paid, the tool stays installed, and the schedule moves back into a spreadsheet.
 - One QGenda reviewer described the whole failure in a sentence: "automated scheduling and rules set up seem to have hiccups...I just stopped using the automation."
 - The common cause is rule configuration that was never finished. Every rule the software does not know becomes a manual override the manager applies by hand.
 - Small hospitals abandon faster because nobody owns the configuration. With no scheduling office and no super-user, the person who set the rules up is the person running the unit.
@@ -44,7 +44,7 @@ Nurse scheduling automation rarely fails loudly. There is no cancellation, no es
 
 ## What Does Abandoned Scheduling Automation Look Like at a Small Hospital?
 
-Abandoned scheduling automation looks like a live licence with a dead workflow. The tool still holds the roster and still appears in the budget, but the schedule is assembled somewhere else and pasted back in afterwards. Nobody decides to stop using it. Overrides accumulate until the software is a record of the schedule rather than the source of it.
+Abandoned scheduling automation looks like a live license with a dead workflow. The tool still holds the roster and still appears in the budget, but the schedule is assembled somewhere else and pasted back in afterwards. Nobody decides to stop using it. Overrides accumulate until the software is a record of the schedule rather than the source of it.
 
 The clearest published description of this comes from a reviewer of QGenda, a physician and staff scheduling platform. Writing on [Capterra](https://www.capterra.com/p/90628/QGenda/reviews/), Courtney D., a Manager of Employee and Physician Relations, put it plainly:
 
@@ -183,14 +183,14 @@ Three parts of the model target the failure this post describes.
 
 **Your staff never touch software.** You get a post-ready PDF and Excel file each cycle, so adoption cannot fail on the nurse side. Onboarding takes 3 to 5 business days. First schedule inside two weeks.
 
-Honest limitations, because they matter more than the pitch here. We do not track credential or licence expiry dates, so renewals remain the hospital's process. Night shifts are filled first because they are the hardest to cover, but we do not keep a running per-nurse night count. Weekend and holiday distribution is what we count, and we can send you that record on request. If your hospital already has a staffing coordinator who owns the configuration and keeps it current, the software route is a reasonable fit.
+Honest limitations, because they matter more than the pitch here. We do not track credential or license expiry dates, so renewals remain the hospital's process. Night shifts are filled first because they are the hardest to cover, but we do not keep a running per-nurse night count. Weekend and holiday distribution is what we count, and we can send you that record on request. If your hospital already has a staffing coordinator who owns the configuration and keeps it current, the software route is a reasonable fit.
 
 To see the mechanics, compare [nurse scheduling software](/nurse-scheduling-software) against the service approach and read how [AI nurse scheduling](/ai-nurse-scheduling) produces the draft. The operational requirements behind [critical access hospital scheduling](/critical-access-hospital-scheduling) are covered separately, and [how it works](/how-it-works) walks the cycle end to end.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 border-l-4 border-amber-500 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 leading-relaxed m-0">
-    Automation gets abandoned at small hospitals for an unglamorous reason. Rules go stale and nobody owns them. Platforms built for 300-bed systems assume a super-user role a 25-bed hospital does not staff, so ownership lands on a nurse manager who already has a unit to run. Whoever keeps the rules current is the whole product. If that person is missing from your org chart, the software gets abandoned and the licence renews anyway.
+    Automation gets abandoned at small hospitals for an unglamorous reason. Rules go stale and nobody owns them. Platforms built for 300-bed systems assume a super-user role a 25-bed hospital does not staff, so ownership lands on a nurse manager who already has a unit to run. Whoever keeps the rules current is the whole product. If that person is missing from your org chart, the software gets abandoned and the license renews anyway.
   </p>
 </div>
 
@@ -213,7 +213,7 @@ To see the mechanics, compare [nurse scheduling software](/nurse-scheduling-soft
 
 **Why do hospitals stop using scheduling software they already paid for?**
 
-Because the rules inside it stop matching the unit and nobody owns updating them. Each unmatched rule becomes a manual override, overrides accumulate every cycle, and building from scratch eventually beats correcting the draft. The licence keeps renewing because nobody formally decides to stop.
+Because the rules inside it stop matching the unit and nobody owns updating them. Each unmatched rule becomes a manual override, overrides accumulate every cycle, and building from scratch eventually beats correcting the draft. The license keeps renewing because nobody formally decides to stop.
 
 **Is scheduling automation worth it for a hospital with 25 beds or fewer?**
 

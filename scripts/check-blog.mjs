@@ -108,6 +108,25 @@ const FOUNDER_BANNED_WORDS = [
   ['rota', 'say "schedule" or "roster" (cold read 2026-09-01)'],
 ];
 
+// BRITISH SPELLING. FAIL, not warn — unlike the list above, there is no context
+// in an American corpus where these are right, so nothing gets grandfathered.
+//
+// Why it exists: critical-access-conversion-nurse-staffing shipped a whole draft
+// in British spelling (licence, organising, judgement, labour) and the founder
+// caught it by eye. A corpus sweep on 2026-09-01 then found "rota" in
+// build-vs-buy, "licence" five times in why-nurse-managers-stop-using-
+// scheduling-automation, and "judgement" in best-charge-nurse-scheduling-
+// software, all live. Eye-checking a category this mechanical was always going
+// to leak.
+//
+// Deliberately EXCLUDES centre/programme/cancelled/travelling: the first two
+// appear in legitimate proper nouns we cite, and the last two are accepted
+// American variants. High precision matters more than coverage here — a check
+// that cries wolf gets waved through, which is how "arithmetic" shipped 21 times.
+// Note the -is[ei] endings: they must not match "specialist" or "analysis".
+const BRITISH_SPELLING =
+  /\b(licence|judgement|labour|defence|behaviour|whilst|amongst|enrolment|fulfil|fulfilment|practise|(?:organi|speciali|analy|prioriti|recogni|utili)s(?:e|ed|ing|ation))\b/i;
+
 // Structural AI-slop patterns (WARN, not fail: each has legitimate uses, so a
 // human judges). Sourced from the no-ai-slop pattern list, scanned against the
 // live corpus 2026-08-10 before adopting. Everything below scored ZERO live
@@ -447,6 +466,25 @@ function check(file) {
     for (const [word, guidance] of FOUNDER_BANNED_WORDS) {
       if (new RegExp(`\\b${word}\\b`, 'i').test(line.replace(/https?:\/\/\S+/g, ''))) {
         warn(`Founder-banned word "${word}": ${guidance}`, bodyOffset + i + 1, line.trim().slice(0, 100));
+      }
+    }
+    // Quotes are exempt, and this carve-out is load-bearing rather than
+    // defensive: the first corpus run flagged Portia A.'s Capterra review, which
+    // really does say "organised". Correcting a reviewer's spelling falsifies a
+    // citation, so both quote forms are stripped before matching — block quotes
+    // (a leading >) and inline quoted spans. Everything outside them is our own
+    // prose and gets the American form.
+    if (!line.trim().startsWith('>')) {
+      const brit = line
+        .replace(/https?:\/\/\S+/g, '')
+        .replace(/"[^"]*"|“[^”]*”/g, '')
+        .match(BRITISH_SPELLING);
+      if (brit) {
+        fail(
+          `British spelling "${brit[0]}" — our reader is a nurse manager in Texas`,
+          bodyOffset + i + 1,
+          line.trim().slice(0, 100)
+        );
       }
     }
   });
