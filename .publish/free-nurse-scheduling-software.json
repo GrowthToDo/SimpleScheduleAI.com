@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "slug": "free-nurse-scheduling-software",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T10:48:24.354Z",
+      "contentHash": "4957bf8cc56a5cd13b70b574a07cd5a1500b316391b49ef6b56bb78b768eb5ad"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T10:48:26.957Z",
+      "contentHash": "4957bf8cc56a5cd13b70b574a07cd5a1500b316391b49ef6b56bb78b768eb5ad"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T10:48:38.577Z",
+      "contentHash": "4957bf8cc56a5cd13b70b574a07cd5a1500b316391b49ef6b56bb78b768eb5ad"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T10:48:38.615Z",
+      "contentHash": "4957bf8cc56a5cd13b70b574a07cd5a1500b316391b49ef6b56bb78b768eb5ad"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T10:48:38.751Z",
+      "contentHash": "4957bf8cc56a5cd13b70b574a07cd5a1500b316391b49ef6b56bb78b768eb5ad"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T10:48:38.761Z",
+      "contentHash": "4957bf8cc56a5cd13b70b574a07cd5a1500b316391b49ef6b56bb78b768eb5ad"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T10:48:38.763Z",
+      "contentHash": "4957bf8cc56a5cd13b70b574a07cd5a1500b316391b49ef6b56bb78b768eb5ad"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "no-new-claims-template-already-shipped",
+      "setAt": "2026-09-01T10:48:45.552Z",
+      "contentHash": "d369c50eeead8554b7a91fe25ca8a9bb6277899c54845f17a64dda263a1a485e"
+    },
+    "proofread": {
+      "value": "PASS",
+      "setBy": "claude-serp-format-restructure",
+      "setAt": "2026-09-01T10:48:46.748Z",
+      "contentHash": "d369c50eeead8554b7a91fe25ca8a9bb6277899c54845f17a64dda263a1a485e"
+    }
+  },
+  "overrides": []
+}
