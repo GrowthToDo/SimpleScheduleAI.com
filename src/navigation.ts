@@ -55,8 +55,29 @@ export const footerData = {
         { text: 'CAH Scheduling Guide', href: getPermalink('/critical-access-hospital-scheduling') },
         { text: 'Nurse Staffing Statistics', href: getPermalink('/rural-hospital-nurse-staffing-statistics') },
         { text: 'Free Schedule Template', href: getPermalink('/resources/nurse-schedule-template') },
+        { text: 'Free Scheduling Software', href: getPermalink('/blog/free-nurse-scheduling-software') },
         { text: 'Blog', href: getBlogPermalink() },
         { text: 'Articles', href: getPermalink('/articles') },
+      ],
+    },
+    // Comparison pages live in the footer deliberately. They are the pages a
+    // buyer looks for by competitor name, they rank as individual brand-vs-brand
+    // URLs, and a site-wide link is the cheapest way to give them the internal
+    // authority they were missing (2026-09-01 link audit: every post linked the
+    // two pillars, which already rank, and almost nothing else).
+    // Ordered by 90-day GSC impressions, then by how central the vendor is to
+    // the dossier.
+    {
+      title: 'Compare',
+      links: [
+        { text: 'Aladtec Alternatives', href: getPermalink('/blog/aladtec-alternatives') },
+        { text: 'ShiftWizard Alternatives', href: getPermalink('/blog/shiftwizard-alternatives') },
+        { text: 'Schedule360 Alternatives', href: getPermalink('/blog/schedule360-alternatives') },
+        { text: 'QGenda Alternatives', href: getPermalink('/blog/qgenda-alternatives') },
+        { text: 'UKG Alternatives', href: getPermalink('/blog/ukg-alternatives-small-hospitals') },
+        { text: 'SmartLinx Alternatives', href: getPermalink('/blog/smartlinx-alternatives') },
+        { text: 'NurseGrid Alternatives', href: getPermalink('/blog/nursegrid-alternatives') },
+        { text: 'M7 Health Alternatives', href: getPermalink('/blog/m7-health-alternatives') },
       ],
     },
     {
@@ -64,11 +85,6 @@ export const footerData = {
       links: [
         { text: 'About', href: getPermalink('/about') },
         { text: 'Contact', href: getPermalink('/contact') },
-      ],
-    },
-    {
-      title: 'Legal',
-      links: [
         { text: 'Privacy', href: getPermalink('/privacy') },
         { text: 'Terms', href: getPermalink('/terms') },
       ],

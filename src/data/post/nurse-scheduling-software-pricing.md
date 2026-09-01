@@ -217,7 +217,7 @@ Nurse scheduling software costs $2-$8 per nurse per month for SaaS platforms, tr
 
 **Q: Is there free nurse scheduling software for hospitals?**
 
-No scheduling software designed specifically for hospital nursing is fully free for ongoing use. General tools like Google Sheets or Excel templates are free but require manual compliance tracking and do not automate callout coverage. Our breakdown of [free nurse scheduling software](/blog/free-nurse-scheduling-software) shows which gaps the no-cost options leave on the nurse manager's desk. SimpleScheduleAI is a paid AI-native nurse scheduling service, not free software, but its flat pricing ($1,000-$1,500/month by roster size) includes setup and ongoing support with no per-nurse fees.
+No scheduling software designed specifically for hospital nursing is fully free for ongoing use. General tools like Google Sheets or Excel templates are free but require manual compliance tracking and do not automate callout coverage. Our own [free nurse schedule template](/resources/nurse-schedule-template) is one of those, and downloads without a signup. Our breakdown of [free nurse scheduling software](/blog/free-nurse-scheduling-software) shows which gaps the no-cost options leave on the nurse manager's desk. SimpleScheduleAI is a paid AI-native nurse scheduling service, not free software, but its flat pricing ($1,000-$1,500/month by roster size) includes setup and ongoing support with no per-nurse fees.
 
 **Q: How much does UKG cost for a small hospital?**
 

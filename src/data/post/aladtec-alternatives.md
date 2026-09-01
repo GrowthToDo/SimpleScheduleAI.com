@@ -302,7 +302,7 @@ When I Work is a scheduling app positioned across retail, hospitality, and small
 
 <img src="/images/blog/aladtec-alternatives/Homebase.webp" alt="Homebase workforce scheduling and time tracking app" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Homebase is positioned primarily for retail, restaurant, and service industry scheduling ([joinhomebase.com](https://joinhomebase.com)). The free tier and low cost make it attractive as a pure cost-reduction option for very small care settings with minimal scheduling complexity.
+Homebase is positioned primarily for retail, restaurant, and service industry scheduling ([joinhomebase.com](https://joinhomebase.com)). The free tier and low cost make it attractive as a pure cost-reduction option for very small care settings with minimal scheduling complexity. For what the free tiers across this category do and do not cover, see our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software).
 
 **Best for:** Outpatient clinics or very small care settings with 5-15 staff and minimal scheduling complexity, where cost reduction is the primary goal and compliance is handled through separate processes.
 

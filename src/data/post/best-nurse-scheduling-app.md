@@ -398,7 +398,7 @@ For nursing, NurseGrid. It was designed for nurses, and its defaults reflect nur
 
 **Q: Can a free nurse scheduling app work for a small hospital?**
 
-Free tiers and staff-facing apps cover schedule viewing and swap communication, and for that narrow job they work. They do not cover credential checks, healthcare overtime logic, or survey documentation, so those tasks land back on the manager, usually in a spreadsheet. The app is free; the manager hours compensating for it are not.
+Free tiers and staff-facing apps cover schedule viewing and swap communication, and for that narrow job they work. They do not cover credential checks, healthcare overtime logic, or survey documentation, so those tasks land back on the manager, usually in a spreadsheet. The app is free; the manager hours compensating for it are not. Our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) works through what each free tier actually covers.
 
 **Q: Is SimpleScheduleAI an app I download from an app store?**
 

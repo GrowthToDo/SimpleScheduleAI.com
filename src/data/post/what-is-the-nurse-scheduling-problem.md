@@ -139,7 +139,7 @@ Two boundaries. We do not claim mathematical optimality, because at this problem
 ## Frequently Asked Questions
 
 **Q: Is the nurse scheduling problem the same as the nurse rostering problem?**
-Yes. The research literature uses the names interchangeably, and Burke's survey notes that other authors deliberately do not distinguish between them. Our glossary separates rostering (maintaining the staff record) from scheduling (building the timetable), which is a useful operational distinction but not one the academic literature makes.
+Yes. The research literature uses the names interchangeably, and Burke's survey notes that other authors deliberately do not distinguish between them. Our glossary separates rostering (maintaining the staff record) from scheduling (building the timetable), which is a useful operational distinction but not one the academic literature makes. If you are comparing products rather than papers, [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software) covers how vendors use the two words.
 
 **Q: Is the nurse scheduling problem NP-hard?**
 Specific realistic versions have been proven NP-hard, including one with coverage constraints, day-off requests, and forbidden shift sequences, using only three shift types (den Hartog and colleagues, 2023). A blanket claim that every version is hard is not supported: a 2016 paper in the European Journal of Operational Research explicitly refuted that assumption.

@@ -92,7 +92,7 @@ The audit trail is the quiet requirement that protects you in a survey or a wage
 
 ## How Do the Three Realistic Paths Compare?
 
-Once you strip the market down, a small hospital is really choosing between three paths, not ten products. A spreadsheet plus a phone tree (see our [free nurse schedule template](/blog/free-nurse-schedule-templates) for the strongest version of that path), self-serve scheduling software your manager configures and runs, or an operated-for-you service that builds the schedule and hands it back for approval. Here is how the three compare on the criteria the checklist above scores.
+Once you strip the market down, a small hospital is really choosing between three paths, not ten products. A spreadsheet plus a phone tree (our [free nurse schedule template](/resources/nurse-schedule-template) is the strongest version of that path, and downloads without a signup), self-serve scheduling software your manager configures and runs, or an operated-for-you service that builds the schedule and hands it back for approval. Here is how the three compare on the criteria the checklist above scores.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">

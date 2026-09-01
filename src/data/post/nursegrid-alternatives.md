@@ -332,7 +332,7 @@ For a CAH leaving NurseGrid because the manager workflow is now desktop-only, De
 
 <img src="/images/blog/nursegrid-alternatives/Homebase.webp" alt="Homebase workforce scheduling and time tracking app" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Homebase holds 4.4/5 on G2 (271 reviews) and 4.6/5 on Capterra (1,147 reviews).[5] It is positioned primarily for retail, restaurant, and service industry scheduling ([joinhomebase.com](https://joinhomebase.com)). The free tier and low cost make it attractive as a pure cost-reduction option for very small care settings where NurseGrid's paid tier is hard to justify.
+Homebase holds 4.4/5 on G2 (271 reviews) and 4.6/5 on Capterra (1,147 reviews).[5] It is positioned primarily for retail, restaurant, and service industry scheduling ([joinhomebase.com](https://joinhomebase.com)). The free tier and low cost make it attractive as a pure cost-reduction option for very small care settings where NurseGrid's paid tier is hard to justify. Our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) compares what those free tiers cover.
 
 For a CAH, Homebase is a cost play, not a compliance play. It is documented for simple rosters and basic schedule publishing, not for hospital-nursing clinical constraints or CMS documentation.
 

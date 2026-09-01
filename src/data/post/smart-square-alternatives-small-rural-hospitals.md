@@ -566,7 +566,7 @@ symplr positions Smart Square as AI-driven workforce optimization for health sys
 
 **What is the cheapest Smart Square alternative for a small hospital?**
 
-Among the options reviewed, the general workforce tools have the most transparent low pricing. When I Work runs $2.50 to $4.00 per user per month with a free tier for small teams, and Deputy is $4.50 per user per month. Those tools are simpler and cheaper but are general workforce products, not hospital-nursing or enterprise clinical platforms, so confirm compliance capabilities with the vendor before relying on them at a hospital.
+Among the options reviewed, the general workforce tools have the most transparent low pricing. When I Work runs $2.50 to $4.00 per user per month with a free tier for small teams, and Deputy is $4.50 per user per month. Those tools are simpler and cheaper but are general workforce products, not hospital-nursing or enterprise clinical platforms, so confirm compliance capabilities with the vendor before relying on them at a hospital. Our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) covers where those free and low-cost tiers stop.
 
 **How long does an enterprise scheduling platform take to implement at a small hospital?**
 
