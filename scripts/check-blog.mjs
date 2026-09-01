@@ -497,15 +497,24 @@ function check(file) {
   // whether recent posts actually carry their figures and tables; six of the
   // twelve most recent pieces did not, and four had zero.
   //
-  // What counts: a markdown table, or a Tailwind `not-prose` block presenting
-  // data. What does NOT count is chrome that appears on almost every post — the
-  // Our Take box and the closing CTA panel. Without that exclusion every post
-  // scores 2 for free and the check is worthless, which is exactly how the
-  // eyeball version of it passed these six.
+  // What counts: a markdown table, an HTML <table>, or a Tailwind `not-prose`
+  // block presenting data. What does NOT count is chrome that appears on almost
+  // every post — the Our Take box and the closing CTA panel. Without that
+  // exclusion every post scores 2 for free and the check is worthless, which is
+  // exactly how the eyeball version of it passed these six.
+  //
+  // BUG FIXED SAME DAY, and it is the reason this comment is long. The first
+  // version counted only `<div class="not-prose">` and markdown pipes, so it
+  // missed every HTML table wrapped in `<figure class="not-prose">` — which is
+  // how most of this corpus's tables are actually built. It reported 21 posts
+  // below the minimum when the real number is far smaller, and it nearly caused
+  // tables to be added to posts that already had them. Count <table> directly,
+  // and count a not-prose wrapper only when it does NOT contain a <table>, so a
+  // figure-wrapped table is one visual rather than two.
   const VISUAL_MIN = { bofu: 3, comparison: 2, 'vs-service': 2, mofu: 1, tofu: 1, glossary: 0 };
   const vPostType = fm && fm.postType ? unquote(fm.postType).toLowerCase() : null;
   if (vPostType && VISUAL_MIN[vPostType] !== undefined) {
-    let tableCount = 0;
+    let tableCount = (bodyText.match(/<table[\s>]/g) || []).length;
     for (let i = 1; i < body.length; i++) {
       const sep = body[i];
       if (sep.includes('|') && /^\s*\|?[\s:|-]*-[\s:|-]*\|/.test(sep) && body[i - 1].includes('|')) tableCount++;
@@ -514,7 +523,7 @@ function check(file) {
       (m) => m[0]
     );
     const dataDivs = divBlocks.filter(
-      (d) => !/Our Take|cal\.com|href="\/how-it-works"|href="\/contact"/.test(d)
+      (d) => !/Our Take|cal\.com|href="\/how-it-works"|href="\/contact"/.test(d) && !/<table[\s>]/.test(d)
     ).length;
     const visuals = tableCount + dataDivs;
     const needed = VISUAL_MIN[vPostType];
