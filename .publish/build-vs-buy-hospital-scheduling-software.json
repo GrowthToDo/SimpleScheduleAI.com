@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "build-vs-buy-hospital-scheduling-software",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T05:47:10.800Z",
+      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T05:47:13.116Z",
+      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T05:47:15.283Z",
+      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T05:47:15.342Z",
+      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T05:47:15.380Z",
+      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T05:47:15.380Z",
+      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-01T05:47:15.382Z",
+      "contentHash": "bf9fb949a47f4592e7ceaf779615446a060b7b6612b55605c21121131c0c9717"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "CEO cold read + fact-check applied",
+      "setAt": "2026-09-01T05:47:07.890Z",
+      "contentHash": "5228f6e8bad19924e4253f5472286774c6545cafa77fbba7408dfa29c514e7e7"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "9 defects applied incl SERP ratio and rule-change reframe",
+      "setAt": "2026-09-01T05:47:08.842Z",
+      "contentHash": "5228f6e8bad19924e4253f5472286774c6545cafa77fbba7408dfa29c514e7e7"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder: take it live",
+      "setAt": "2026-09-01T05:47:09.749Z",
+      "contentHash": "5228f6e8bad19924e4253f5472286774c6545cafa77fbba7408dfa29c514e7e7"
+    }
+  },
+  "overrides": []
+}

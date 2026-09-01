@@ -103,6 +103,9 @@ const FOUNDER_BANNED_WORDS = [
   // invented jargon both read as written by an outsider (founder 2026-08-31).
   ['fortnight', 'say "two weeks" (founder 2026-08-31)'],
   ['got worked', 'not nursing usage; say "the schedule your nurses actually worked" (founder 2026-08-31)'],
+  // A CEO cold-read on 2026-09-01 said of "rota": "Nobody in a Texas hospital
+  // says rota. I read it as a typo on the first pass."
+  ['rota', 'say "schedule" or "roster" (cold read 2026-09-01)'],
 ];
 
 // Structural AI-slop patterns (WARN, not fail: each has legitimate uses, so a

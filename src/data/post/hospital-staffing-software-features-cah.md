@@ -37,6 +37,8 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
+If you are weighing whether to buy at all rather than build something of your own, start with [build vs buy for hospital scheduling software](/blog/build-vs-buy-hospital-scheduling-software) and come back here for the feature list.
+
 Critical access hospitals need seven features in hospital staffing software: Excel roster import, FLSA overtime compliance, ranked callout replacement shortlist, fairness distribution controls, CMS audit trail, no-IT setup, and cost optimization across schedule options. At the standalone hospitals we build for, everything else (EHR-integrated scheduling, payroll automation, mobile staff portals) is either unnecessary or a barrier that delays implementation. For the broader view of what [healthcare staffing software for a small hospital](/blog/healthcare-staffing-software-small-hospitals) should prioritize, start with our small-hospital guide.
 
 ## What Features Does Hospital Staffing Software Need for a Critical Access Hospital?

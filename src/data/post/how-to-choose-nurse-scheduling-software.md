@@ -27,7 +27,7 @@ This is a decision framework, not a product ranking. It gives a small hospital a
 
 - For a small hospital, the deciding variable is simple: can one nurse manager, who also works clinical shifts, run the tool without standing up an IT project? Feature count matters far less than fit and operating burden.
 - Score every vendor on seven questions: right-sizing, setup without an IT project, callout replacement speed, FLSA overtime documentation, who operates it each week, cost transparency, and a defensible audit trail.
-- There are three realistic paths, not ten: a spreadsheet plus a phone tree, self-serve software your manager configures and runs, or an operated-for-you service that builds the schedule and hands it back for approval.
+- There are three realistic paths, not ten: a spreadsheet plus a phone tree, self-serve software your manager configures and runs, or an operated-for-you service that builds the schedule and hands it back for approval. A fourth, building your own, is a bigger commitment than it looks, and we work through when it is justified in [build vs buy](/blog/build-vs-buy-hospital-scheduling-software).
 - Callout coverage is the highest-stakes daily test at a hospital with no float pool. Ask each vendor exactly what happens in the next five minutes when a nurse calls out.
 - Manual scheduling carries a real dollar cost. At a $50/hr loaded rate, 8 hours a week of scheduling is roughly $20,800 a year, an illustrative figure at the stated rate, not a customer result.
 - Insist on published pricing and a written record of every schedule change before you sign. Quote-only annual contracts and per-seat minimums hide the true cost until renewal.
