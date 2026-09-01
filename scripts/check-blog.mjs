@@ -489,6 +489,45 @@ function check(file) {
     }
   });
 
+  // 2a-ter. STATED COUNT vs THE LIST UNDER IT. FAIL — this is arithmetic against
+  // the post's own text, not a judgment call.
+  //
+  // build-vs-buy shipped "Three situations, stated plainly" over a list of four,
+  // through every gate, and the founder caught it by eye. Scoped tightly so it
+  // stays silent: the number must sit in a NON-list line whose very next
+  // non-blank line opens a "**1. " run. A looser first draft of this check fired
+  // on "five years" inside item 2 and on numbers buried mid-list; this version
+  // produces ZERO hits across all 133 live files and one hit on the pre-fix post.
+  //
+  // What it CANNOT catch, and why theme T25 exists: the same post repeated the
+  // error in an FAQ answer ("Only in the three situations above") where no list
+  // follows, so the count has nothing to be checked against. A stated count that
+  // refers backwards is still a human read.
+  const COUNT_WORDS = { two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
+  const isListLine = (l) => /^\s*([-*+]\s|\d+\.\s|\*\*\d+\.\s)/.test(l);
+  body.forEach((line, i) => {
+    if (isListLine(line)) return;
+    const said = line.match(/\b(two|three|four|five|six|seven|eight|nine|ten)\b/i);
+    if (!said) return;
+    let j = i + 1;
+    while (j < body.length && body[j].trim() === '') j++;
+    if (!/^\*\*1\.\s/.test(body[j] || '')) return;
+    let listMax = 1;
+    for (let k = j; k < Math.min(j + 60, body.length); k++) {
+      if (/^#{2,3} /.test(body[k])) break;
+      const n = body[k].match(/^\*\*(\d+)\.\s/);
+      if (n) listMax = Math.max(listMax, Number(n[1]));
+    }
+    const claimed = COUNT_WORDS[said[1].toLowerCase()];
+    if (claimed !== listMax) {
+      fail(
+        `Says "${said[1]}" but the list below it has ${listMax} items`,
+        bodyOffset + i + 1,
+        line.trim().slice(0, 100)
+      );
+    }
+  });
+
   // 2a-bis. Reader-comprehension checks, added 2026-08-27 after the Baylor
   // shift post shipped green through every gate and then took three rounds of
   // founder feedback, all of it comprehension rather than mechanics.

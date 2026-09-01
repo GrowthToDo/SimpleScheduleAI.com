@@ -113,6 +113,18 @@ CTA.
 also dont do this. How are we defending this?" We reconstruct it from the change
 log; we do not store a frozen copy. The post now says exactly that.)
 
+**T25. Summary passages must still match the body after any edit.**
+Key Takeaways, FAQ answers and Our Take restate the body, so every body edit can
+silently falsify one of them. Read all three against the body last, not first.
+The failure to watch for is a summary that drops the item that matters most for
+the question it answers, because the FAQ and KT are exactly what an AI assistant
+lifts and quotes.
+(build-vs-buy said "Three situations" over a list of four. check-blog now FAILs
+on that. But the same post repeated it in the FAQ, "Only in the three situations
+above", where no list follows and no check can help, and the reason it dropped
+was the fourth, the only one that applies at 25 beds. The FAQ question was
+literally "Should a 25-bed hospital ever build its own scheduler?")
+
 **T19. Every advantage bullet earns its place for this post's question.**
 Read each bullet and name the buying question it answers. A true, code-verified
 capability that sits off-topic distracts.
