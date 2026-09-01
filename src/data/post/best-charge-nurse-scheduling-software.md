@@ -383,6 +383,15 @@ If you run 25 beds or fewer in Texas and charge coverage is the recurring failur
 
 If you also operate skilled nursing or senior living beds, SmartLinx and OnShift are built for that side and worth evaluating there. If you schedule physicians alongside nurses and have configuration help, QGenda earns its look. If you have an IT department, UKG will do more than any of them. If your hospital also runs an EMS service, Aladtec is strong at that job even though it no longer sells itself to healthcare.
 
+| If this is your hospital                                                | The honest recommendation                                                                                |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 25 beds or fewer in Texas, and charge coverage is the recurring failure | SimpleScheduleAI, which was built for exactly that                                                       |
+| You want a tool you operate yourself, at a published price              | NurseGrid Manager, with the caveat that its requirements work at position level rather than charge level |
+| You also operate skilled nursing or senior living beds                  | SmartLinx or OnShift, both built for that side                                                           |
+| You schedule physicians alongside nurses and have configuration help    | QGenda                                                                                                   |
+| You have an IT department                                               | UKG will do more than any of them                                                                        |
+| Your hospital also runs an EMS service                                  | Aladtec, strong at that job even though it no longer sells itself to healthcare                          |
+
 Deputy is the one to approach most carefully for clinical use. It schedules people well, and a hospital needs more than that from the system holding its coverage record.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">

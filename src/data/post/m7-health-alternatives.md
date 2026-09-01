@@ -161,6 +161,15 @@ The table below sorts the five platforms on the axis that decides a small hospit
 
 The four strongest M7 Health alternatives for a small hospital are SimpleScheduleAI, In-House Health, ShiftWizard, and TCP Scheduling (Aladtec). ShiftWizard is the established hospital-nursing platform with a real review base. TCP Scheduling comes from public safety and is the lightest to stand up. In-House Health layers automation onto a system you already run. SimpleScheduleAI is the one that takes the scheduling work off the hospital entirely. Which fits depends on how many hours your staff can give the schedule after the vendor's setup help ends.
 
+Which one to shortlist depends on what you want taken off the nurse manager’s desk.
+
+| If this is what you need                                                    | Shortlist                                                                     |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| The schedule built and checked for you, at a Texas critical access hospital | SimpleScheduleAI                                                              |
+| An automation layer on top of a scheduling system you already run           | In-House Health                                                               |
+| An established platform aimed at mid-market hospitals and systems           | ShiftWizard                                                                   |
+| Strong handling of complex rotating shift patterns                          | TCP Scheduling (Aladtec), whose heritage is public safety rather than nursing |
+
 ## 1. SimpleScheduleAI
 
 <img src="/images/blog/m7-health-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />

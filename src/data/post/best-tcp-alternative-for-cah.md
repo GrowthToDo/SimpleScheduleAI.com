@@ -311,6 +311,13 @@ Four questions should anchor every TCP TimeClock+ alternative evaluation at a Cr
 
 Four questions separate the platforms that will actually improve a CAH nurse manager's scheduling situation from the ones that look promising in a demo but replicate the same operational burden with a different interface.
 
+| Ask this                                              | A good answer sounds like                                   | The answer that should worry you                                  |
+| ----------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
+| How long until my first operational schedule?         | Days for a managed service, weeks for a self-serve platform | Anything measured in months, which means an enterprise product    |
+| Who does the configuration work?                      | A named person on the vendor side, with hours quoted        | "Your team", without anyone quantifying what that costs you       |
+| What does the callout workflow look like at 5am?      | A walked-through scenario, step by step                     | A feature list, rather than the actual sequence a manager follows |
+| What CMS documentation does it produce automatically? | A sample audit trail you can look at                        | "We have compliance features"                                     |
+
 1. **How long until my first operational schedule?** The answer should be in days (managed service) or weeks (self-serve platform). Anything measured in months is an enterprise product not designed for CAH scale.
 
 2. **Who does the configuration work?** If the answer is "your team," understand what that means in hours for your specific facility size and scheduling complexity. Configuration time is a real cost that rarely appears in a sales conversation.

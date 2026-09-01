@@ -148,6 +148,16 @@ SimpleScheduleAI and Aladtec are the only options in this list with documented h
 
 The five alternatives are ranked by clinical appropriateness for hospital nurse scheduling. SimpleScheduleAI and Aladtec address the compliance and credential gaps that cause hospitals to leave Deputy. When I Work, Connecteam, and Homebase are appropriate only for outpatient or non-clinical settings where the compliance requirements that matter in an inpatient hospital do not apply.
 
+Which one to shortlist depends on why you are leaving Deputy in the first place.
+
+| If this is why you are leaving                                             | Shortlist                                                             |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Callout replacement ignores skill mix, and CMS documentation is manual     | SimpleScheduleAI, at a Texas critical access hospital                 |
+| You want to stay self-serve but need healthcare credential rules           | Aladtec, the most natural upgrade path from Deputy                    |
+| Deputy works well enough and you want a like-for-like swap                 | When I Work, which shares Deputy’s model and setup speed              |
+| You need mobile-first tooling for deskless staff and a broader feature set | Connecteam                                                            |
+| You are a small clinic or outpatient setting and cost is the constraint    | Homebase, positioned for retail and service rather than for hospitals |
+
 ## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/deputy-alternatives-healthcare/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />

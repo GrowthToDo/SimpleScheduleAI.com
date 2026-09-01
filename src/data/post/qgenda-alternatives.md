@@ -324,12 +324,14 @@ NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGr
 
 Stay with QGenda when your facility has physician scheduling requirements that no nursing-only platform can handle, when the CAH operates under an enterprise health-system contract that covers QGenda at the system level, or when the implementation is fully configured and functioning for your specific workflows. The switching cost is real: new configuration, retraining, and a parallel-run period. If QGenda is working, that cost rarely pays off unless the nurse manager's scheduling burden is unsustainable.
 
-QGenda is worth keeping if:
+QGenda is worth keeping in four situations. If any of these describes your hospital, the rest of this guide is not for you.
 
-- Your facility has physician scheduling requirements alongside nursing. QGenda's physician on-call scheduling, resident scheduling, and multi-specialty coordination are not matched by any alternative in this guide.
-- Your organization is part of a health system that negotiated an enterprise QGenda contract covering your CAH; the transition cost may not be justified when the contract is already paid for at the system level.
-- The implementation is fully configured and functioning at your scale. If QGenda is actually working for your facility, the switching cost and retraining burden of a new platform are real and may exceed the operational improvement.
-- Your facility has a dedicated scheduling coordinator who operates QGenda's configuration without burdening the nurse manager. At that staffing model, QGenda's features may be appropriate.
+| If this describes your hospital                                  | Why QGenda is still the right answer                                                                                                            |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| You schedule physicians as well as nurses                        | QGenda's physician on-call scheduling, resident scheduling and multi-specialty coordination are not matched by any alternative in this guide    |
+| Your CAH sits under an enterprise health-system QGenda contract  | It is already paid for at the system level, so the transition cost may not be justified                                                         |
+| The implementation is fully configured and working at your scale | The switching cost and retraining burden of a new platform are real, and may exceed the operational improvement                                 |
+| You have a dedicated scheduling coordinator                      | Someone operates the configuration without it landing on the nurse manager, which is the staffing model QGenda's feature depth was designed for |
 
 ## How SimpleScheduleAI Compares to QGenda?
 

@@ -141,6 +141,15 @@ For a CAH evaluating ShiftWizard, ask the demo to walk through swap workflows fr
 
 The four alternatives below cover the range a CAH is likely to encounter: a managed service built specifically for 25-bed facilities, a self-serve platform with a hospital-nursing track record, a nurse-facing app with a manager tier, and a provider scheduling platform designed for larger organizations. Each is reviewed against the operational constraints of a CAH.
 
+Which one to shortlist depends on the constraint you are actually under, rather than on the feature count.
+
+| If this is your constraint                                                                                       | Shortlist                                                                  |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| The nurse manager cannot absorb configuring and running a platform, and you are a Texas critical access hospital | SimpleScheduleAI, which builds the schedule rather than handing you a tool |
+| You want to stay on self-serve software but need healthcare credential handling                                  | TCP Scheduling (Aladtec), 4.5/5 across 94 G2 reviews                       |
+| The main need is nurses seeing and swapping shifts on a phone                                                    | NurseGrid Manager, 4.2/5 across 13 Capterra reviews                        |
+| You schedule physicians and on-call alongside nursing                                                            | QGenda, 4.6/5 across 164 G2 reviews                                        |
+
 ## 1. [SimpleScheduleAI](/)
 
 <img src="/images/blog/shiftwizard-alternatives/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
