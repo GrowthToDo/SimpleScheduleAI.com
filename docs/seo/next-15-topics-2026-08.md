@@ -5,6 +5,128 @@ query data, keyword-registry coverage map (87 entries), competitor sitemap DIFFL
 and a competitor 1-star review mining pass (dossier + live). New topics only;
 rewrites/consolidations of existing posts are tracked in the Sept 1 audit, not here.
 
+---
+
+# NEXT SET — added 2026-09-01
+
+14 of the original 15 are published. **#15 is still unwritten and stays at the top
+of the queue.** Everything below it is new, ordered by priority.
+
+Inputs for this set: the 2026-09 monthly audit (90-day GSC, 1,046 query x page
+rows, complete), a DataForSEO Google Ads volume pull on 45 candidate keywords
+(US, $0.06), the competitor sitemap diff and competitor-watch run of the same
+day, and the MicroConf talk "How to Win Customers From Bigger Competitors"
+(Dev Basu, Powered by Search), which the founder asked to be read into this file.
+Playbook notes from that talk are in the last section.
+
+**The one finding that shapes this whole set.** Our best-performing queries are
+not head terms. They are **AI-assistant-shaped questions about competitors**, and
+we hold page 1 on all of them:
+
+| Impr | Pos | Query |
+| ---- | --- | ----- |
+| 155 | 7.3 | how do clinical staff rate shiftwizard's self-service features… |
+| 109 | 7.9 | does shiftwizard help hospital managers build compliant nurse and clinical staff schedules while controlling overtime and managing certifications? |
+| 84 | 6.2 | we are setting up a prn pool for our critical access hospital—who offers technology that… |
+| 67 | 6.7 | how does shiftwizard compare to kronos healthcare… |
+| 31 | 2.7 | most trusted scheduling solutions by nursing managers based on user reviews |
+
+That is the MicroConf "slip into consideration midstream" play, already working,
+by accident, on exactly one competitor. Topics 18 and 19 turn it into a format.
+
+## The next set, in priority order
+
+| # | Working title / slug idea | Primary keyword | Vol (US) | Type | Why |
+|---|---------------------------|-----------------|----------|------|-----|
+| 15 | Can a Nurse Refuse Mandatory Overtime? State Rules | mandatory nurse overtime | **110/mo, LOW** (re-verified 2026-09-01) | MOFU | Carried over, still unwritten. Volume confirmed. SERP is .gov and unions, so the play is the state-guide format that already works for ratios, and we own the deepest Texas ch. 258 treatment on the web. Note: "can a nurse refuse mandatory overtime" itself returns NO volume data, so target the 110/mo head term and let the question own the H2. |
+| 16 | What Is a Float Pool Nurse? | float pool nurse | **1,300/mo, competition index 5** | TOFU | **Biggest uncontested cluster since "what is a charge nurse" (6,600).** "float pool nursing" also 1,300; "what is a float pool nurse" 170. CPC $4.16 with competition index 5 means commercial value and nobody bidding. We already have `float-pool-nursing-small-hospitals` LIVE, and what it is drawing makes the case rather than undermining it: **6 impressions across 4 queries, and all four are definitional** — "what is float pool in a hospital" (18.5), "what does float pool mean in hospital" (23), "what does float pool mean in nursing" (25), "float pool hospital" (22). Google has already decided our page is the closest thing we own to the definition intent, and it is ranking page 2 to 3 for it because it is a MOFU operations piece being asked to do a TOFU entity job. Build the definition page, link the operational one beneath it. This is the exact charge-nurse pattern that worked. |
+| 17 | Critical Access Hospitals in Texas: The Full List | critical access hospitals in texas | **90/mo, competition index 2** | TOFU/asset | ICP-perfect and we already rank 22.6 for it with no dedicated page (plus "list of critical access hospitals in texas" and "critical access hospitals texas" as separate impressions). Competition index 2 is the lowest number in this entire research set. Two payoffs beyond search: it becomes a real internal-link hub for the Band A pages that are starved of inbound links, and it is a working list of exactly the hospitals the founder wants to reach through personal contacts. SOURCING CARE: build from the Flex Monitoring Team / CMS list and date-stamp it; flexmonitoring.org bot-blocks our fetches, so this needs a browser pass. |
+| 18 | "Does [Vendor] Do X?" — the capability-question format | zero volume, pure AEO | n/a | MOFU/AEO | Not one post; a FORMAT to repeat per vendor. The evidence above shows this is our single strongest query shape and we have it for exactly one competitor by accident. Build the same for QGenda, SmartLinx, UKG and NurseGrid from dossier data. **Guardrail, non-negotiable:** the dossier's evidence-asymmetry rule applies — only NurseGrid has a public help center, so silence for the others is missing DOCUMENTATION, never a proven missing feature. Approved wording is "not documented on product pages as of [date]". |
+| 19 | QGenda vs ShiftWizard vs SimpleScheduleAI | qgenda vs shiftwizard (no volume) | n/a | BOFU | Straight from the MicroConf Q&A: with two well-known competitors, a three-way page inserts you into a conversation that is already happening without you. Neither "qgenda vs shiftwizard" nor "shiftwizard vs kronos" returns volume data, so this is an AEO and long-tail play, not an SEO one — write it for the assistant, not the keyword. Follow the talk's rules: no feature-for-feature table (you lose), name what each competitor genuinely does better, and say plainly who should NOT pick us. |
+| 20 | What Happens When Your Scheduling Vendor Gets Acquired | vendor acquisition (AEO) | n/a | MOFU | **DRAFT ALREADY EXISTS** — `scheduling-software-vendor-acquisition-support`. Finish it rather than writing anything new. Three live triggers to anchor it in fact: OnShift is now a ShiftKey brand, Aladtec 308s to tcpsoftware.com, ShiftWizard is owned by HealthStream. This is MicroConf playbook 3 (enter the conversation at the moment of disruption) with the disruptions already sitting in our dossier. |
+| 21 | Aladtec Just Rewrote Itself Out of Healthcare | trendjack | n/a | Article | Competitor-watch caught it on 2026-09-01: Aladtec's H1 changed to "Public safety scheduling software built for 24/7 agencies" and its description now names "fire, EMS, and law enforcement" outright. Anyone who bought Aladtec as a healthcare scheduler has a vendor whose own homepage no longer claims their vertical. That is the citable hook. **Check the trendjacking skill's relevance gradient before writing** — and note we already rank 7.5 for "aladtec star ems", which is EMS traffic we do not want, so this must be written for the hospital reader, not the EMS one. |
+| 22 | The Self-Scheduling Workload Trap | self scheduling nursing | **110/mo, CPC $16.04** | MOFU | **DRAFT ALREADY EXISTS** — `self-scheduling-manager-workload-trap`. That $16.04 CPC is the highest in this research set by a factor of three; it means vendors are paying real money for this click. We rank 52.7 for "self scheduling software for nurses" on the pillar, which is nowhere. Finish the draft. |
+| 23 | What Nurse Scheduling Software Actually Costs | nurse scheduling software pricing | (live post exists) | BOFU | Not a new post — a REFRESH argument. Both competitor pricing sentinels (`m7health.com/pricing`, `inhouse.health/pricing`) have 404ed for two consecutive months. Nobody in this market publishes a price. We do. MicroConf's "cost-effective plus flexible plus less risky" positioning says hammer that, and the fact that it is checkable monthly makes it a defensible claim rather than a boast. |
+
+## Drafts that beat writing something new
+
+We are carrying **41 drafts**. Three of them answer items in this set better than
+a fresh post would, and two more are already aimed at demand we can now measure:
+
+| Draft | Use it for | Evidence |
+| ----- | ---------- | -------- |
+| `scheduling-software-vendor-acquisition-support` | Topic 20, as-is | Three real acquisitions already in the dossier |
+| `self-scheduling-manager-workload-trap` | Topic 22, as-is | 110/mo, CPC $16.04, we rank 52.7 |
+| `what-is-nursing-overtime` | Pairs with topic 15 — write them as a linked pair | "mandatory overtime nurses" 110/mo |
+| `nurse-scheduling-software-reliability-crashes` + `nurse-scheduling-app-login-problems` + `nurse-scheduling-software-hard-to-configure` | The switcher trio. MicroConf playbook 1 verbatim: mine what people dislike about competitors and answer it. | All three were built from review-mining; the dossier already holds the verbatim complaints |
+| `hospital-callout-coverage-ranked-shortlist` | Feeds the PRN-pool query at position 6.2 | 84 impressions on the PRN-pool question |
+
+**Before writing anything new in this set, the honest question is whether one of
+the 41 drafts already covers it.** Three of nine did.
+
+## What the competitors published (2026-08-10 to 2026-09-01)
+
+- **QGenda: 11 new URLs, every one enterprise or ambulatory.** Ambulatory
+  capacity (four posts), an enterprise scheduling roadmap report, a healthcare-HR
+  visibility piece, a provider-coverage guide, two webinars. They are writing for
+  the HR persona at a health system, not the nurse manager at a 25-bed hospital.
+- **M7 Health, SmartLinx, OnShift, NurseGrid: zero new URLs.**
+- **YouShift** baselined at 39 URLs, and rewrote its homepage onto our two core
+  messages (see the dossier maintenance log, 2026-09-01).
+- **Read:** the small-hospital lane is not getting more crowded. The largest
+  player is moving further away from it. The competitive pressure is coming from
+  YouShift's positioning, not from anyone's content.
+
+## MicroConf playbook notes (Dev Basu, Powered by Search)
+
+Source: <https://youtu.be/oYRzvehnC64>, "How to Win Customers From Bigger
+Competitors: 5 SaaS Playbooks", talk plus both Q&A answers. Recorded here because
+several items above come straight from it.
+
+**The frame.** Do not build brand awareness; **slip into consideration
+midstream**. Ride the brand awareness that already exists in the market by being
+present when someone searches a competitor's name. Two audiences only:
+**upgraders** (spreadsheets and email, not yet paying for software) and
+**switchers** (leaving a bigger, pricier or clunkier platform). Both are ours.
+
+**Comparison pages, done properly:**
+
+- A differentiated point of view on which kind of product suits which kind of
+  person. **Feature-for-feature tables lose.**
+- Give a genuine nod to what the competitor does better. The Amazon parallel he
+  uses: 4.1-star products outsell 5-star ones, because mixed reviews read as
+  objective. All-green-checkmarks-versus-all-red-crosses reads as marketing.
+- Say plainly that not everybody is your customer.
+- Mine review sites for what people dislike about the competitor, then answer
+  those specific complaints. We already hold this material in the dossier.
+- Copy should be "clear and useful, not clever", assembled from customer language
+  rather than written.
+
+**Q&A answer 1 — where comparison pages live.** In the **footer**, as individual
+brand-vs-brand pages; they rank. With two well-known competitors, do a **three-way
+page** and insert yourself into their conversation (topic 19). Only move them onto
+pricing and signup pages if you are losing deals to that competitor during trials.
+And do not beat your own chest — **let a customer describe why they switched**.
+NOTE FOR US: that last instruction is unavailable. We are pre-launch with zero
+customers and cannot quote a switcher. Everything else applies.
+
+**Q&A answer 2 — sell the next step, not the 30-day outcome.** Most ads and CTAs
+sell the value the buyer feels after 30 days. Sell the value of the demo itself.
+"Your demo has to make somebody feel like they can make progress regardless of
+whether they buy your product." Good drivers: by the end of this, you will see
+how to save X hours, or do twice the work with the same staff. This is a copy
+change to our CTAs and the simulator, not a content topic.
+
+**Other playbooks, and whether they apply to us right now:**
+
+| Playbook | Applies now? |
+| -------- | ------------ |
+| Comment on competitor events (retirement, acquisition, price rise) within days, on LinkedIn; set free Google Alerts to catch them | **Yes.** Our competitor-watch covers the website half; alerts cover the social and news half. Topics 20 and 21 are this. |
+| Google Discovery ads at $10/day, targeting competitor keywords, URLs, purchase interest, and even competitor renewal-notice and price-increase moments in Gmail | **Founder call.** Costs money, and content is not our acquisition channel. Listed, not recommended. |
+| Concierge onboarding, free and mandatory, with qualifying parameters | **Already our entire model.** Nothing to change; the note is that we should say it more loudly, since it is what big vendors structurally cannot do. |
+| Founder visibility and interaction | **Yes,** and it is already the acquisition plan. |
+| Customer-voice switch stories | **No.** Requires customers we do not have. |
+
 ## The 15, in priority order
 
 | # | Working title / slug idea | Primary keyword | Vol (US) | KD | Type | Why |
