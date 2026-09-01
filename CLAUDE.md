@@ -83,6 +83,21 @@ Website-repo specifics on top of the ladder:
 - Ground-truth every subagent edit yourself (git diff + word counts +
   preserved blockquote/link counts) — trim agents here have under-reported
   cuts by ~7x. A self-report is a hypothesis; the diff is the fact.
+- **No causal claim in a report without the command that tested it.** The
+  founder raised the error rate on 2026-09-01. Behind almost every wrong
+  statement that week was the same pattern: a plausible causal story built from
+  partial data and handed over as a finding, when the test was one cheap command
+  away. Four in one session — "a four-way split on free/template intent" (it was
+  a two-way split plus a format mismatch), "the live float-pool post draws zero
+  float-pool impressions" (it draws 6, all definitional, which was the stronger
+  argument), "those two pages are stranded for want of links" (they had 6 and
+  16, while a thriving sibling has 3), and "people search outsourced nurse
+  scheduling instead" (no volume for any phrasing of it). Each needed one GSC
+  filter or one grep.
+  So: **state something as a finding only if the check has already run, and name
+  the check.** Otherwise label it a hypothesis and name the test that settles it.
+  Drafts and first attempts being wrong is fine and expected; that is what the
+  gates are for. Reports being wrong is not.
 - The full reference implementation of this operating model (blocking verify
   gate, ground-truth script, project agent contracts) lives in the
   cah-scheduler repo's CLAUDE.md.

@@ -70,12 +70,31 @@ Also parked and failing: `nurse-manager-guide-work-scheduling`,
 Six dead AONL URLs sit across these drafts, all 404, all needing real sources or
 removal before any of them publish.
 
+## 4b. Open after the 2026-09-01 session
+
+**Blocked on the founder:**
+
+| Item | Why it matters |
+| --- | --- |
+| **GA4 internal-traffic filter is still not working** | Highest priority of these. Every AI-referral number is untrustworthy until it is fixed. Hyderabad is still the largest city in the property (43 sessions in August, and the user count held at 8 across June, July and August, so the session drop was less activity rather than a filter). Ruled out Testing mode: `testDataFilterName` returns `(not set)` for all 332 August sessions. So it is either never activated (GA4 creates data filters INACTIVE by default) or active with a non-matching IP, most often an IPv4/IPv6 mismatch. Gautham was never added, and 8 users in Hyderabad is more than one person. |
+| **Manual Request Indexing** for `/blog/managed-service-vs-scheduling-software` | GSC URL Inspection, two minutes. The page is "Crawled, currently not indexed" and was just retargeted, so it needs a fresh signal. Google has no indexing API; sitemap resubmission (done 2026-09-01) is the only programmatic lever. |
+
+**Decisions waiting on the founder:**
+
+1. **Standardise the other 45 posts to KT-first?** 52 live posts open on `## Key Takeaways`, 45 open on prose. check-blog now WARNs on the prose shape and the rule applies to new work only (founder, 2026-09-01). Promoting it to `fail()` is a one-line change if the corpus is ever standardised.
+2. **The 41 drafts.** Three are named in `next-15-topics-2026-08.md` as better than writing fresh: `scheduling-software-vendor-acquisition-support`, `self-scheduling-manager-workload-trap`, `what-is-nursing-overtime`.
+
+**Unblocked, not yet done:**
+
+- **Google Alerts** on the eight competitor names plus the three event queries (acquisition/retirement/price-rise, and the `site:linkedin.com/posts` one). Step-by-step was given to the founder 2026-09-01. Covers the social and news half; `competitor-watch` already covers the website half.
+- **Software directory submissions.** Cheap, and the product-mode wording rules already exist. See the backlink-directories memory: software self-label, per-user pricing, never the flat service price.
+
 ## 5. Scheduled, do not run early
 
 | When | What |
 | --- | --- |
 | **~2026-09-16** | GSC crawl-path read. Four LinkedIn posts scheduled Aug 21 to Aug 26; check whether the four never-fetched target pages got fetched. Before-state recorded in `linkedin/posts-crawl-path-set.md`: all four "Discovered - currently not indexed", `last_crawled: null`. If unchanged, mark the hypothesis dead. |
-| **2026-09-01** | Monthly SEO audit. Founder triggers. Runbook: `monthly-seo-audit.md`. |
+| **2026-10-01** | Monthly SEO audit. Founder triggers. Runbook: `monthly-seo-audit.md`. The 2026-09 run is at `monthly-audits/2026-09.md` and its carry-forward block lists 13 items, four of them decisions due next run: the 301 on `free-nurse-schedule-templates` (with its decision test written down), what to do with the two stranded `managed service` posts, the N1/N2 measurement (the test is clicks appearing at all, not position), and the first Common Crawl re-check. |
 | **not before 2026-09-01** | Chief Healthcare Executive follow-up. One attempt maximum. |
 | **after CHE resolves** | NRHA Rural Horizons query, held deliberately. Draft ready at `outreach/nrha-rural-horizons-query.md`. |
 
