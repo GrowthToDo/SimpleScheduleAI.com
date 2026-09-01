@@ -489,6 +489,28 @@ function check(file) {
     }
   });
 
+  // 2a-quater. BODY SHOULD OPEN WITH KEY TAKEAWAYS. WARN, and deliberately so.
+  //
+  // Founder question 2026-09-01, on free-nurse-scheduling-software: "we go for KT
+  // then excerpt, why have we switched that here?" Nothing had been switched —
+  // that post has opened on prose since June. But the question exposed a real
+  // split nobody had recorded: 52 live posts open on `## Key Takeaways` and 45
+  // open on an intro paragraph. The three most recent posts are all KT-first, so
+  // the house style drifted that way without a decision being written down.
+  //
+  // Founder's call: apply it to new work, do not churn the 45 existing posts.
+  // Hence WARN — it flags the shape on anything being written or edited now, and
+  // an old post that trips it is not a failure, it is a candidate. If the corpus
+  // is ever standardised, promote this to fail().
+  const firstBodyLine = body.find((l) => l.trim());
+  if (firstBodyLine && !/^##\s+Key Takeaways/.test(firstBodyLine.trim())) {
+    warn(
+      'Body does not open with "## Key Takeaways" — house style since 2026-09-01 puts KT first and lets the excerpt do the intro job',
+      bodyOffset + body.indexOf(firstBodyLine) + 1,
+      firstBodyLine.trim().slice(0, 100)
+    );
+  }
+
   // 2a-ter. STATED COUNT vs THE LIST UNDER IT. FAIL — this is arithmetic against
   // the post's own text, not a judgment call.
   //

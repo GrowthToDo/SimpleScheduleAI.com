@@ -18,10 +18,6 @@ metadata:
   description: 'Download a free nurse schedule template, no email required, and see what free nurse scheduling apps like NurseGrid, Connecteam and Sling cover at a small hospital.'
 ---
 
-Free nurse scheduling software is real, and for a stable roster with no compliance overhead it does the job. The catch is that the free tools ranking for this search, NurseGrid, Connecteam, Sling, and the spreadsheet templates, were built for personal shift calendars and small retail teams. None of them were built for a Critical Access Hospital that has to track [Texas overtime exposure](/blog/texas-nursing-overtime-compliance-cah), cover a 2 a.m. callout, and produce [staffing records a CMS surveyor will accept](/blog/how-to-stay-cms-compliant-nurse-scheduling).
-
-This guide is written for a Texas CAH nurse manager weighing whether free is good enough. It covers what these tools genuinely do well, where they stop, and the real cost of the work they leave on your desk. If you would rather have something in your hands than read a comparison, start with our [free nurse schedule template](/resources/nurse-schedule-template), which is an Excel worksheet with no email gate.
-
 ## Key Takeaways
 
 - If you came here for something you can use today, our [free nurse schedule template](/resources/nurse-schedule-template) is an Excel worksheet that downloads without an email address. It works out how many nurses each shift needs from your census, then flags overtime, rest-hour and consecutive-day problems as you assign.
@@ -57,6 +53,8 @@ The honest limits, so you can decide before you download. It will not chase a ca
 ## Is There Actually Free Nurse Scheduling Software?
 
 Yes. Several free or freemium tools handle basic nurse scheduling, but most of them were designed for a use case other than running a hospital unit. Knowing what each was built for matters more than the price, because that is what tells you where it stops.
+
+The tools ranking for this search, NurseGrid, Connecteam, Sling and the spreadsheet templates, were built for personal shift calendars and small retail teams. None was built for a Critical Access Hospital that has to track [Texas overtime exposure](/blog/texas-nursing-overtime-compliance-cah), cover a 2 a.m. callout, and produce [staffing records a CMS surveyor will accept](/blog/how-to-stay-cms-compliant-nurse-scheduling).
 
 The free options a search for this term surfaces fall into three buckets.
 
