@@ -78,3 +78,89 @@ are privacy-suppressed at our volume — never read 0 clicks literally.
 Drafted copy lives in the session review table (2026-07-22); on approval each edit
 ships as title/meta(excerpt)-only diffs, one commit, then re-measure in 28 days.
 
+> **2026-09-01 — the drafted copy above is GONE.** It was written into a chat
+> review table and never to disk, so the exact wording did not survive the
+> session. Only the intent column above remains. **Rule from now on: no rewrite
+> is "drafted" until the exact before/after strings are in this file.** The
+> 2026-09-01 queue below follows that rule.
+
+---
+
+## 2026-09-01 queue — triaged against the corrected method
+
+The 2026-09 audit established that **title rewrites only pay in Band B (positions
+4-10.9)**. At positions 12-20 nobody scrolls to page 2 and then declines to click
+over wording, so Band A is a link-and-authority worklist instead. Proof: the
+`free-nurse-scheduling-software` title was rewritten 2026-08-02 and its seven
+variants (424 impressions) did not move off 12.4-15.7.
+
+### Disposition of the six July items
+
+| #  | Page                                                    | Disposition                                                                                                                             |
+| -- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| R1 | /blog/m7-health-vs-simplescheduleai                      | **KILLED.** The Ochsner cluster is 2,003 impressions of M7 login navigation, not demand. Winning it wins nothing. Never re-queue.          |
+| R2 | /blog/free-nurse-scheduling-software                     | **SHIPPED 2026-08-02, no effect.** Reclassified as a Band A link problem. Do not rewrite a third time.                                     |
+| R3 | /blog/shiftwizard-vs-managed-service                     | **STILL VALID — now the top item.** 400 impressions, positions 6.7-8.7, 0 clicks. Copy drafted below.                                      |
+| R4 | /blog/shiftwizard-alternatives                           | **STILL VALID, ships with R3.** Same-intent split. Copy drafted below.                                                                     |
+| R5 | /blog/hospital-staff-scheduling-software-critical-access | **RECLASSIFIED** to the link worklist (36 impressions at 15.3 — Band A).                                                                   |
+| R6 | /blog/nurse-rostering-vs-scheduling-software             | **RECLASSIFIED** to the link worklist (99 impressions at 11.3 — Band A).                                                                   |
+
+Six drafted items reduce to two that survive the corrected method.
+
+### N1 + N2 — the ShiftWizard pair (ship together, one commit)
+
+These two pages split four queries between them. The fix is not consolidation;
+each page keeps its own intent and the metadata is sharpened so Google can tell
+them apart. `/blog/shiftwizard-alternatives` currently outranks its sibling on
+both shared queries while receiving fewer impressions, which is the signature of
+an unresolved split.
+
+**N1. `/blog/shiftwizard-vs-managed-service`** — 400 impressions across four
+queries at 6.7-8.7, 0 clicks. Owns EVALUATION intent ("what is it, does it do X").
+
+- Title BEFORE: `What Is ShiftWizard? A Review vs a Managed Scheduling Service (2026)`
+- Title AFTER: `What Is ShiftWizard? Overtime, Certifications and Self-Service Reviewed (2026)`
+- Meta BEFORE: `Does ShiftWizard control overtime, track certifications, and give staff mobile self-service? What the software does, and what a managed service does for you.`
+- Meta AFTER: unchanged — it already names all three query nouns and is doing its job.
+- Why: the three highest-volume queries name overtime, certification compliance
+  or mobile self-service by name. `What Is ShiftWizard` stays first because it is
+  itself a 69-impression query at position 8.7. The words that come out are
+  `A Review vs a Managed Scheduling Service`, which describes our format rather
+  than answering their question, and which duplicates the sibling page's intent.
+
+**N2. `/blog/shiftwizard-alternatives`** — 120 impressions on the same two
+evaluation queries at 5.3-6.9, 0 clicks. Owns SWITCHING intent.
+
+- Title BEFORE: `4 Best ShiftWizard Alternatives for Critical Access Hospitals (2026)`
+- Title AFTER: unchanged. It is already unambiguously switching-intent.
+- Meta BEFORE: `Four ShiftWizard alternatives for a critical access hospital, compared on operating model, not just features, when the nurse manager cannot run scheduling weekly.`
+- Meta AFTER: `Leaving ShiftWizard? Four alternatives for a 25-bed hospital, compared on switching cost, setup burden, and who runs the schedule after go-live.`
+- Why: the current meta opens on what the alternatives are compared ON, which
+  reads as evaluation. Opening on `Leaving ShiftWizard?` states the intent in the
+  first two words. The body already carries the switching framing; this is
+  metadata only, no claims touched.
+
+**Measurement:** re-pull the four ShiftWizard queries at the 2026-10-01 audit. The
+test is clicks appearing at all, not position — we already hold page 1.
+
+### Band A link worklist (NOT rewrites)
+
+Diagnosed 2026-09-01. Internal-link counts across 142 posts and articles:
+
+| Inbound | Page                                          | Impressions / position     |
+| ------- | --------------------------------------------- | -------------------------- |
+| 119     | /nurse-scheduling-software (pillar)           | already ranks              |
+| 118     | /critical-access-hospital-scheduling (pillar)  | already ranks              |
+| 5       | /blog/nurse-rostering-vs-scheduling-software   | 99 impr, 11.3              |
+| 4       | /blog/free-nurse-schedule-templates            | template cluster           |
+| 4       | /blog/nurse-schedule-generator                 | template cluster           |
+| 3       | **/blog/free-nurse-scheduling-software**       | **424 impr, 12.4-15.7**    |
+| 2       | /blog/hospital-staff-scheduling-software-critical-access | 36 impr, 15.3   |
+| 2       | /blog/best-per-diem-nurse-scheduling-software  | 30 impr, 11.7              |
+| 1       | **/resources/nurse-schedule-template**         | **241 impr, 14.5-20**      |
+
+Every post links to the two pillars, which already rank. The two pages with the
+most page-2 demand on the site carry three and one inbound link. Separately, the
+free/template intent is split across FOUR URLs sharing twelve internal links.
+Both problems are ours to fix and cost nothing but editing time.
+

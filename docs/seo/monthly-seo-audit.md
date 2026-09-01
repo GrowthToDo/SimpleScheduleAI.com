@@ -13,6 +13,13 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
    title/excerpt rewrites (scope rule: title/meta/H1 ONLY, founder review, one
    commit). Compare last month's shipped rewrites: position/impressions delta on
    their target queries -> log outcome in ctr-rewrite-queue.md.
+   **Draft rewrites for Band B ONLY (2026-09-01).** At positions 12-20 nobody
+   scrolls to page 2 and then declines to click over wording, so the constraint
+   is position, not the snippet. Proof: the `free-nurse-scheduling-software`
+   title was rewritten 2026-08-02 and its seven variants (424 impressions) did
+   not move off 12.4-15.7. **Band A is a link-and-authority worklist; Band B is
+   the CTR worklist.** Also strip the Ochsner navigational cluster before
+   reporting Band B — 2,003 of its impressions are M7 login searches, not demand.
 2. **AEO snapshot**: `npm run llm-citations` (dataset endpoints; ~$0.30-0.60 —
    SKIP with a note if DataForSEO balance is empty). Appends docs/seo/aeo-trend.jsonl.
 2b. **GA4 AI-referral pull** (google-analytics MCP, wired 2026-08-03): `run_report` on

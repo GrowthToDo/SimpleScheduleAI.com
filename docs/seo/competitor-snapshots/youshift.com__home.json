@@ -1,25 +1,24 @@
 {
  "url": "https://www.youshift.com/",
- "fetchedAt": "2026-08-10",
- "title": "The Operating System for Healthcare Workforce | YouShift",
- "description": "AI-powered scheduling, staffing optimization, and workforce intelligence — all in one platform.",
- "h1": "The Operating System for Healthcare Workforce",
+ "fetchedAt": "2026-09-01",
+ "title": "YouShift - The OS for Healthcare Workforce",
+ "description": "YouShift connects scheduling, time off, time tracking, payroll, and workforce forecasting for healthcare teams, with AI agents helping coordinate the work.",
+ "h1": "Stop managing your healthcare teams in spreadsheets",
  "h2s": [
-  "Smarter Scheduling. Full Workforce Control.",
-  "Clinician Scheduling, Reimagined",
-  "August 2026",
-  "Turn Scheduling Data Into Operational Advantage",
-  "Operational Outcomes That Matter",
-  "Why Leading Hospitals Choose YouShift",
-  "Frequently Asked Questions",
-  "Ready to transform your workforce operations?"
+  "See YouShift from your perspective.",
+  "Connected to EHR, payroll, credentialing, and licensing.",
+  "What we learn from the teams we build schedules with.",
+  "Let us build your next schedule.",
+  "What healthcare teams need to know.",
+  "Get the mobile app",
+  "Product",
+  "Company",
+  "Legal",
+  "Ask AI",
+  "Language"
  ],
- "ctas": [
-  "Schedule a demo",
-  "Schedule a Demo",
-  "Start Free Trial"
- ],
+ "ctas": [],
  "prices": [],
- "words": 1320,
- "bodyHash": "f14389e8ab7b"
+ "words": 1680,
+ "bodyHash": "9d0b8a38e07e"
 }

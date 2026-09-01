@@ -66,3 +66,25 @@ Appended by `npm run sitemap-diff`. New competitor URLs feed the trendjacking ra
 - onshift.com: +0 / -0 since 2026-08-02
 - shiftwizard.com: unreachable (not an XML sitemap)
 - nursegrid.com: +0 / -0 since 2026-08-02
+
+## 2026-09-01
+
+- m7health.com: +0 / -0 since 2026-08-10
+- youshift.com: baseline stored (39 URLs)
+- qgenda.com: +11 / -6 since 2026-08-10
+  - NEW: https://www.qgenda.com/blog/ambulatory-health-systems-struggling-to-expand-capacity/
+  - NEW: https://www.qgenda.com/blog/seeing-the-whole-workforce-a-healthcare-hr-perspective-on-visibility/
+  - NEW: https://www.qgenda.com/blog/ten-questions-that-reveal-how-well-you-really-understand-your-ambulatory-capacity/
+  - NEW: https://www.qgenda.com/blog/when-full-schedules-dont-mean-full-capacity-in-ambulatory-care/
+  - NEW: https://www.qgenda.com/guide/the-provider-coverage-visibility-guide/
+  - NEW: https://www.qgenda.com/hr-role-in-healthcare-workforce-management/
+  - NEW: https://www.qgenda.com/newsroom/napa-anesthesia-honored-for-workforce-management-innovation-with-qgenda/
+  - NEW: https://www.qgenda.com/report/the-enterprise-scheduling-roadmap-building-alignment-that-drives-workforce-transformation/
+  - NEW: https://www.qgenda.com/webinar/from-fragmentation-to-operational-flow-solving-the-healthcare-workforce-puzzle/
+  - NEW: https://www.qgenda.com/webinar/the-real-bottleneck-holding-back-ambulatory-growth-capacity-problem/
+  - NEW: https://www.qgenda.com/workforcemanagement/
+- aladtec.com: unreachable (HTTP 403)
+- smartlinx.com: +0 / -0 since 2026-08-10
+- onshift.com: +0 / -0 since 2026-08-10
+- shiftwizard.com: unreachable (not an XML sitemap)
+- nursegrid.com: +0 / -0 since 2026-08-10

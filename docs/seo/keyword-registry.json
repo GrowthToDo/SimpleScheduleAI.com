@@ -754,5 +754,61 @@
     "primaryKeyword": "nurse staffing models",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Next-15 topic #12 (90/mo, KD 0), published 2026-08-28. SERP was academic (PMC, AONL) plus agency blogs, nothing written for a small hospital. THE LANE: three of the four traditional care models (functional, team, total patient care, primary nursing) need more staff on the floor than a 25-bed hospital has overnight, so the model is settled by the roster rather than chosen. THE PAYOFF is a compliance finding, not a definition: 485.631(a)(5) permits an LPN as the on-duty licensed nurse, but 26 TAC 505.41(o)(2)(D) requires an RN on duty in each building holding patients, so a Texas LPN-only overnight meets federal and fails state. Landmines recorded in the dossier: the supervise-and-assign duty is FEDERAL (485.635(d)), NOT a Texas addition (the draft got this backwards through KT, body, FAQ and Sources before the fact-check caught it); primary nursing is named 24-hour ACCOUNTABILITY with associate nurses, never the same nurse recurring across a stay; carry the Texas assignment quote through its qualifications-and-competence clause or the skill-mix point is lost. First post through the new cold-read phase, which returned 'Monday: nothing' on draft one and forced the compliance payoff. The founder's review question exposed the same LPN gap in how-to-stay-cms-compliant-nurse-scheduling (fixed same session), which also carried a banned credential-tracking claim and a 'managed service' self-label. Inbound: acuity-based-staffing-small-hospital + nurse-staffing-ratios-critical-access-hospital."
+  },
+  {
+    "slug": "what-is-a-baylor-shift",
+    "type": "post",
+    "url": "/blog/what-is-a-baylor-shift",
+    "primaryKeyword": "what is a baylor shift",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Next-15 topic #11, published 2026-08-27. SERP was written entirely for nurses (what the deal is, is it worth it); nothing answered the manager question of what the program costs the hospital. THE PAYOFF is 29 U.S.C. 207(h)(2): a qualifying weekend premium is CREDITABLE against overtime owed, which the first draft omitted while telling managers they were simply buying overtime. Worked costing table proves the counterintuitive result: paying for 36 hours (,440 total) is CHEAPER than paying for 32 (,493.33), because the higher regular rate clears time-and-a-half and the premium covers the OT owed. Arithmetic verified independently. Ran 3,556 words against a 2,500 mofu band after three founder rounds of clarity fixes; the band lost (theme T23, 'leave word band, the blog being clear is more important'). GSC already shows 'baylor shift meaning' at pos 8 and 'baylor pay meaning' at 10.5 within days."
+  },
+  {
+    "slug": "what-is-the-nurse-scheduling-problem",
+    "type": "post",
+    "url": "/blog/what-is-the-nurse-scheduling-problem",
+    "primaryKeyword": "the nurse scheduling problem",
+    "pillar": "/ai-nurse-scheduling",
+    "note": "Published 2026-08-26. The operations-research term of art (NSP), where the SERP is academic papers and no page connects the theory to a real 18-nurse roster. THE LANE: complexity is not fixed by roster size, it is set by how the rules are written, which is the one thing the nurse manager controls. Keyword deliberately 'the nurse scheduling problem' rather than 'nurse scheduling problem' to avoid a containment collision with kronos-nurse-scheduling-problems."
+  },
+  {
+    "slug": "nurse-schedule-audit-trail",
+    "type": "post",
+    "url": "/blog/nurse-schedule-audit-trail",
+    "primaryKeyword": "nurse schedule audit trail",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Next-15 topic #13, published 2026-08-31. Existing guidance is all written for nursing homes filing Payroll-Based Journal data; a CAH usually files none of it (swing beds are exempt, see the PBJ dossier entry), so the record answers a surveyor standing in front of you instead. LANDMINE, founder-caught: the draft asked readers 'can you get back to last cycle's schedule as it was published?' when WE do not store a frozen copy either, only a reconstruction from the change log. That became theme T24 (never set a test we would fail); the post now says so plainly. Also the source of the imageCredit drift catch and the KT-no-link warn."
+  },
+  {
+    "slug": "build-vs-buy-hospital-scheduling-software",
+    "type": "post",
+    "url": "/blog/build-vs-buy-hospital-scheduling-software",
+    "primaryKeyword": "build your own nurse scheduling system",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Next-15 topic #14, published 2026-09-01. Every result for 'custom hospital scheduling software' is written by a dev shop paid to build it; the lane is the same question answered by people who built one and then chose not to sell it as software. LANDMINE: the fact-check killed the original 'rules keep changing so maintenance never ends' argument because all three examples disproved it. Reframed to the honest and stronger version: CAH rules are stable, and the recurring cost is mundane (the person who wrote it leaves). GSC evidence: 'custom hospital staffing software development' 13 imp at pos 31.5. Keyword avoids containing the 25-bed guide's \"hospital scheduling software\". Founder review of the live page still pending; IndexNow and GSC held."
+  },
+  {
+    "slug": "best-charge-nurse-scheduling-software",
+    "type": "post",
+    "url": "/blog/best-charge-nurse-scheduling-software",
+    "primaryKeyword": "charge nurse scheduling",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-08-25. BOFU. THE LANE: backfilling a staff nurse means the whole roster; backfilling the charge nurse means a cleared list maybe four names long, and no vendor page addresses that. Built from what eight platforms actually document about charge-nurse eligibility rather than from feature-matrix claims. Keyword set to 'charge nurse scheduling' rather than 'charge nurse scheduling software' to avoid a containment collision with the /nurse-scheduling-software money page. GSC already shows 'charge nurse or software' at pos 8."
+  },
+  {
+    "slug": "cms-cah-location-eligibility-review-2026",
+    "type": "article",
+    "url": "/articles/cms-cah-location-eligibility-review-2026",
+    "primaryKeyword": "critical access hospital eligibility review",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Trendjacked 2026-08-26. THE CITABLE HOOK is a genuine internal contradiction: the CMS memo gives a hospital two years to correct an eligibility problem while the manual text attached to it says one. That discrepancy is the reason to link, and nothing else covered it. Sourcing note: cms.gov blocks our fetches (403), so the memo text was verified through mirrors, which is recorded in the facts dossier."
+  },
+  {
+    "slug": "critical-access-conversion-nurse-staffing",
+    "type": "article",
+    "url": "/articles/critical-access-conversion-nurse-staffing",
+    "primaryKeyword": "critical access hospital conversion",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Trendjacked 2026-08-31. Conversions have roughly doubled since 2019 and two hospitals moved toward it within six days; the financial case is documented everywhere, the staffing consequence nowhere. THE PAYOFF: capping at 25 beds does not shrink the coverage floor, so a hospital that converts from 192 beds still owes the same nurse-on-duty requirement. LANDMINES, both founder-caught: the necessary-provider route is logically impossible for any 2026 converter (the status is grandfathered pre-2006 and cannot be newly obtained), and the entire draft shipped in British spelling (licence, organising, judgement, labour) against an American corpus."
   }
 ]

@@ -1,17 +1,17 @@
 {
  "url": "https://www.aladtec.com/",
- "fetchedAt": "2026-08-10",
+ "fetchedAt": "2026-09-01",
  "title": "24/7 Public Safety Employee Scheduling Software | Aladtec",
- "description": "No matter your unique rotation patterns, policies, or rules, Aladtec simplifies 24/7 public safety scheduling to mitigate compliance risks and streamline workflows.",
- "h1": "Automate public safety scheduling for hometown heroes",
+ "description": "Aladtec simplifies 24/7 public safety scheduling for fire, EMS, and law enforcement agencies. Cover every shift and stay audit-ready.",
+ "h1": "Public safety scheduling software built for 24/7 agencies",
  "h2s": [
   "Simpler 24/7 rotational scheduling for every shift pattern",
-  "Get coverage right with 24/7 rotational scheduling",
-  "Simplify compliance tracking and audit-readiness",
+  "Rotational scheduling software for 24/7 full shift coverage",
+  "Compliance and audit-readiness solutions for public safety",
   "Control labor costs and manage budgets",
-  "Keep your staff happy, engaged, and ready to serve",
+  "Employee self-service scheduling and shift trades",
   "Featured resources",
-  "Ready to learn more?",
+  "Ready to give your crews a schedule that works?",
   "Select a Chat Option"
  ],
  "ctas": [
@@ -20,6 +20,6 @@
   "Book a demo"
  ],
  "prices": [],
- "words": 986,
- "bodyHash": "e64f7e7f1faf"
+ "words": 1019,
+ "bodyHash": "610187fa4c04"
 }

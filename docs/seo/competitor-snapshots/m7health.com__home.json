@@ -1,6 +1,6 @@
 {
  "url": "https://www.m7health.com/",
- "fetchedAt": "2026-08-10",
+ "fetchedAt": "2026-09-01",
  "title": "Nurse Scheduling and Labor Optimization for Health Systems | M7",
  "description": "",
  "h1": "The AI-powered workforce operations platform for healthcare",
@@ -18,9 +18,8 @@
   "Request a Demo"
  ],
  "prices": [
-  "$10",
-  "$4"
+  "$10"
  ],
- "words": 723,
- "bodyHash": "2e36e60e3236"
+ "words": 676,
+ "bodyHash": "07a29b4d1dc8"
 }

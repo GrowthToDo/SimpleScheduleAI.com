@@ -119,7 +119,7 @@ Beyond spreadsheets, the market divides into three practical categories.
 
 **EHR-embedded scheduling modules** ship inside the broader clinical platform. Coverage varies by vendor and by how the module was implemented, so the practical question is not whether the module exists but whether your implementation actually handles callout coverage and overtime visibility. Ask your vendor to demonstrate both before assuming they are included.
 
-**Scheduling services** invert the model. Instead of handing the hospital a tool to configure, a team does the scheduling work and the manager approves the output. That fits facilities where nobody has the hours to own a platform, and it is the model we describe in the [service versus software comparison](/blog/scheduling-software-vs-managed-service).
+**Scheduling services** invert the model. Instead of handing the hospital a tool to configure, a team does the scheduling work and the manager approves the output. That fits facilities where nobody has the hours to own a platform, and it is the model we describe in the [service versus software comparison](/blog/managed-service-vs-scheduling-software).
 
 For a small hospital, the most practical answer to "what do we need for clinical scheduling" is usually: cover nursing properly first, then layer in provider and ancillary coordination once the nursing grid is stable. Attempting all five streams in one implementation is how scheduling projects stall.
 

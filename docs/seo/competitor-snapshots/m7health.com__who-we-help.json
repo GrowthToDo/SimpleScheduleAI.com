@@ -1,6 +1,6 @@
 {
  "url": "https://www.m7health.com/who-we-help",
- "fetchedAt": "2026-08-10",
+ "fetchedAt": "2026-09-01",
  "title": "Who M7 Helps | Nurse Scheduling for Health Systems and Nursing Leaders",
  "description": "",
  "h1": "The AI-powered workforce operations platform for healthcare",
@@ -21,9 +21,8 @@
   "Request a Demo"
  ],
  "prices": [
-  "$10",
-  "$4"
+  "$10"
  ],
- "words": 1480,
- "bodyHash": "b2ef9697afd9"
+ "words": 1433,
+ "bodyHash": "ebe7ca8668b1"
 }
