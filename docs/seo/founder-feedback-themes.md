@@ -78,6 +78,9 @@ carve-out.
 ("Indian Health Service and Tribal facilities are not counted against non-IHS facilities, and the exclusion runs both ways" — not clear, and it buried that two IHS facilities DO count against each other.)
 
 **T26. Never let advice to the reader become a claim about the product.**
+_Partly mechanical since 2026-09-02: check-blog 9a fails on product absences
+attributed to us and warns on the back-reference shape. The gate cannot resolve
+an antecedent or judge a PARTIAL capability, so this stays a human check too._
 When a post tells the reader to keep a record, do a sequence, or track a thing,
 the product section must not then imply we do that same thing for them unless
 the inventory says so at the same level of detail. Check: read the how-to

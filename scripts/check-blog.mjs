@@ -934,6 +934,153 @@ function check(file) {
     }
   });
 
+  // 9a. PRODUCT ABSENCES attributed to us (added 2026-09-02, founder request).
+  //
+  //     Origin: a live post said our escalation record was "the four fields above
+  //     kept for you", where those fields were who you called and what they said.
+  //     We log escalation STEPS, not call content. The founder caught it after the
+  //     mechanical gate, the proofread agent and the fact-check agent had all
+  //     passed the sentence, and asked why the gate does not know what the product
+  //     can do. It does now, for the flat absences.
+  //
+  //     Source of truth: docs/seo/product-capability-inventory-2026-08.md §6
+  //     ("NOTABLE ABSENCES ... These do not exist. Do not claim any of them") and
+  //     §4.6. Only things §6 lists as categorically absent belong here. A PARTIAL
+  //     or a judgment call does not; those stay with the human reviewer.
+  //
+  //     Scoping, because most mentions of these words are legitimate. The corpus
+  //     is full of educational explanation, competitor capabilities, and
+  //     "ask your vendor whether they do X" evaluation lists. This fires ONLY when
+  //     an SSAI subject governs the absent capability inside one sentence, with no
+  //     negation in that sentence, so our own honest-boundary lines ("we do not
+  //     track credential expiry") stay clean. Blockquotes are exempt.
+  const SSAI_SUBJ =
+    '(simplescheduleai|ssai|our (service|scheduler|software|platform|system|engine)|the service|we|our team)';
+  const CLAIM_VERB =
+    '(builds?|tracks?|records?|logs?|monitors?|manages?|handles?|applies|enforces?|integrates? with|syncs? with|sends?|notifies|supports?|offers?|provides?|includes?|captures?|stores?|flags?|alerts?|has|have|does|do)';
+  const NEGATED =
+    /\b(do(es)?\s+not|don't|doesn't|cannot|can't|never|no longer|without|is not|are not|we are not|not right for|nothing|neither|nor|rather than|instead of)\b|,\s*not\s/i;
+  const PRODUCT_ABSENCES = [
+    ['EHR/EMR integration', /\b(ehr|emr|epic|cerner|meditech|athenahealth|hl7|fhir)\b/i, '§6.1'],
+    ['payroll or HRIS integration', /\b(payroll|hris|adp|paycom|workday)\b/i, '§6.2'],
+    [
+      'time clock or actual-hours tracking',
+      /\b(time ?clocks?|punch(es|ed|ing)?|time ?sheets?|actual hours|hours actually worked)\b/i,
+      '§6.3 — every hours figure is SCHEDULED hours',
+    ],
+    ['labor cost in dollars', /\b(labou?r costs?|hourly rates?|dollar cost)\b/i, '§6.4'],
+    [
+      'credential or licence expiry tracking',
+      /\b(credential|licen[sc]e|certification)s?\b[^.]{0,30}\b(expir\w*|renewals?|validity)\b/i,
+      '§6.5 — certifications is a string[] with no expiry, consulted by no rule',
+    ],
+    ['travel/contract nurse management', /\btravel (nurses?|contracts?)\b|\bcontract (start|end) dates?\b/i, '§6.6'],
+    [
+      'physician or non-nursing scheduling',
+      // No "APPs?" here: it is the abbreviation for advanced practice provider
+      // and it matched the ordinary word "app" on the first corpus sweep.
+      /\b(physicians?|MDs?|DOs?|nurse practitioners?|physician assistants?|respiratory therap\w+)\b/i,
+      '§6.7 — staff.role is exactly RN | LPN | CNA',
+    ],
+    [
+      'a native mobile app',
+      /\b(native (mobile )?app|ios app|android app|installable pwa|offline[- ]capable)\b/i,
+      '§6.8',
+    ],
+    [
+      'nurse self-scheduling or open-shift claiming',
+      /\b(self[- ]schedul\w+|claim (an? )?open shifts?|bid on shifts?|shift bidding)\b/i,
+      '§6.9/§6.15 — coverage requests are manager-approved only',
+    ],
+    [
+      'email or SMS notification',
+      /\b(emails?|SMS|text messages?|texts? them)\b/i,
+      '§6.10 — notifications are in-app rows only',
+    ],
+    [
+      'agency integration',
+      /\bagency (integration|api|request|booking)\b/i,
+      '§6.12 — selecting agency records a decision only',
+    ],
+    [
+      'call content or conversation records',
+      /\b(what (was|they) (said|discussed)|call (content|recordings?|transcripts?)|phone conversations?)\b/i,
+      '§3.2 — escalationStepsTaken is STEP-level only',
+    ],
+    ['forecasting or predictive census', /\b(forecast\w*|predictive census|predicts? (the )?census)\b/i, '§6.18'],
+  ];
+  body.forEach((line, i) => {
+    if (inBlockquote(line)) return;
+    // Judge attribution, negation and mood per sentence.
+    line.split(/(?<=[.!?])\s+/).forEach((sentence) => {
+      if (NEGATED.test(sentence)) return;
+      // Interrogatives are the "Does SimpleScheduleAI do X?" FAQ shape. The
+      // answer underneath carries the claim, so let the answer be checked.
+      if (/\?/.test(sentence) || /^\W*(does|do|can|is|are|will|should|would|what|how|why)\b/i.test(sentence.trim()))
+        return;
+      for (const [label, re, ref] of PRODUCT_ABSENCES) {
+        const m = sentence.match(re);
+        if (!m) continue;
+        // The capability must follow the attributing verb closely, with no
+        // sentence boundary between, so an incidental "the hospitals we build
+        // for" earlier in a long sentence does not turn an unrelated noun into a
+        // product claim.
+        const lit = m[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        // A verb trailed by a preposition is a relative clause, not a claim:
+        // "the standalone hospitals we build FOR, everything else (EHR ...)".
+        // The multiword verbs that legitimately take one ("integrates with",
+        // "syncs with") are already spelled out in CLAIM_VERB.
+        const NOT_A_CLAIM = '(?!\\s+(for|at|in|to|from|about|around|because|since|when|where|who|that)\\b)';
+        const claimed = new RegExp(`\\b${SSAI_SUBJ}\\s+${CLAIM_VERB}\\b${NOT_A_CLAIM}[^.]{0,60}?${lit}`, 'i').test(
+          sentence
+        );
+        if (claimed) {
+          fail(
+            `Product absence claimed as ours: ${label} (inventory ${ref})`,
+            bodyOffset + i + 1,
+            sentence.trim().slice(0, 120)
+          );
+        }
+      }
+    });
+  });
+
+  // 9a-ii. Back-referenced product claims (WARN).
+  //
+  //     The absence table above catches blunt attribution ("we track credential
+  //     expiry"). It does NOT catch the form that actually shipped, because the
+  //     claim's object was a pointer: "Each step is then recorded on that callout
+  //     ... which is THE FOUR FIELDS ABOVE kept for you", where those four fields
+  //     were defined fifteen lines earlier and included what a nurse said on the
+  //     phone. No regex resolves that antecedent, and neither did two human-shaped
+  //     review passes: the sentence reads as modest until you scroll up.
+  //
+  //     So flag the shape instead. A sentence that both attributes a capability to
+  //     us AND points at an antecedent somewhere else is the exact construction
+  //     that smuggles an overclaim past review. Rewrite it to name what is
+  //     actually stored, in the sentence making the claim.
+  // Backward pointers only. A forward pointer ("the evaluation below") is
+  // ordinary signposting, not the shape that hides a claim, and it was the one
+  // corpus false positive on the first sweep.
+  const BACKREF =
+    /\b(the (same |four |three |five )?\w+ (above|earlier)|as above|the (above|preceding|former)\b|those (fields|items|steps|four)|the same \w+ (list|fields|four))/i;
+  body.forEach((line, i) => {
+    if (inBlockquote(line)) return;
+    line.split(/(?<=[.!?])\s+/).forEach((sentence) => {
+      if (!BACKREF.test(sentence)) return;
+      if (NEGATED.test(sentence)) return;
+      const attributed = new RegExp(`\\b${SSAI_SUBJ}\\s+${CLAIM_VERB}\\b`, 'i').test(sentence);
+      const keptForYou = /\b(kept|handled|done|captured|recorded|tracked|logged|stored)\s+for you\b/i.test(sentence);
+      if (attributed || keptForYou) {
+        warn(
+          'Product claim points at an antecedent elsewhere — name what is actually stored in this sentence',
+          bodyOffset + i + 1,
+          sentence.trim().slice(0, 120)
+        );
+      }
+    });
+  });
+
   // 9b. Facts drift: known stats/regs must match docs/seo/facts-dossier.md wording.
   for (const v of checkFacts(bodyText)) {
     fail(`Facts drift [${v.id}]: ${v.message} -> docs/seo/${v.anchor}`, bodyOffset + v.line, v.text);

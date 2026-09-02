@@ -109,7 +109,17 @@ first on any publish session), `.claude/skills/competitor-reviews.md`,
 `npm run check-blog <path>` enforces the mechanical rules: em/en-dashes, AI-tone
 vocabulary, AI-slop sentence structures, TOC-anchor match, inline `<svg>`, "CAH"
 in headings, required links, Sources label/URL host match, image pool and family,
-post-type word ranges, body sentences over 35 words, and retired-offer strings.
+post-type word ranges, body sentences over 35 words, retired-offer strings, and
+**product absences attributed to us** (check 9a, sourced from the capability
+inventory's §6 NOTABLE ABSENCES).
+
+That last one has a known blind spot, so do not treat a green gate as clearance
+on product claims. It catches blunt attribution ("we track credential expiry")
+and warns on the back-reference shape that smuggled the one real overclaim past
+it ("which is the four fields above kept for you"). It cannot resolve an
+antecedent, judge a PARTIAL capability, or read a claim spread across two
+sentences. **Every sentence attributing a capability to us still gets checked
+against the inventory by hand.**
 
 Do not restate those rules at length anywhere. Run the gate, read its output, fix
 what it names. The reference files explain the INTENT behind a rule and the

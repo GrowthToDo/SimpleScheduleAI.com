@@ -27,6 +27,7 @@ For a CAH, the compliance risk is less about breaking a rule than about being un
 ## Key Takeaways
 
 - Texas CAHs face three overlapping compliance frameworks, each with different documentation requirements: [FLSA overtime rules](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), [CMS Conditions of Participation (§485.631 staffing and §485.635 services)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), and the [Texas Minimum Wage Act (Labor Code Chapter 62)](https://www.twc.texas.gov/).
+- Texas restricts more than pay. [Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits a hospital from requiring a nurse to work hours beyond her scheduled shifts, and a nurse may refuse mandatory overtime. Retaliation against her is separately prohibited.
 - The 8-and-80 FLSA alternative requires a prior written agreement with each nurse before the work period, not a retroactive policy decision, and it does not stop daily overtime on 12-hour shifts.
 - Five recurring compliance gaps each map to a specific FLSA or CMS requirement: missing 8-and-80 agreements, no schedule change logs, untracked credential expirations, improper meal break auto-deductions, and incomplete on-call/callback records.
 - CMS compliance requires both the original posted schedule AND documentation of actual coverage; substitution events must be logged with credentials for the replacing nurse.
@@ -36,6 +37,7 @@ For a CAH, the compliance risk is less about breaking a rule than about being un
 
 - [What are the FLSA overtime rules for hospital nurses in Texas?](#what-are-the-flsa-overtime-rules-for-hospital-nurses-in-texas)
 - [What Texas-specific requirements apply to Critical Access Hospital nurse scheduling?](#what-texas-specific-requirements-apply-to-critical-access-hospital-nurse-scheduling)
+- [Can a Texas hospital require a nurse to work mandatory overtime?](#can-a-texas-hospital-require-a-nurse-to-work-mandatory-overtime)
 - [What compliance gaps recur in Critical Access Hospital scheduling?](#what-compliance-gaps-recur-in-critical-access-hospital-scheduling)
 - [What documentation must a Texas Critical Access Hospital maintain for CMS compliance?](#what-documentation-must-a-texas-critical-access-hospital-maintain-for-cms-compliance)
 - [How does SimpleScheduleAI help with compliance?](#how-does-simplescheduleai-help-with-compliance)
@@ -76,8 +78,9 @@ Key FLSA requirements for Texas CAHs:
 
 ## What Texas-specific requirements apply to Critical Access Hospital nurse scheduling?
 
-Texas overlays two state-level frameworks on top of federal FLSA requirements:
-the Texas Labor Code and Texas HHSC nursing facility regulations.
+Texas overlays three state-level frameworks on top of federal FLSA requirements:
+the Texas Labor Code, Texas HHSC nursing regulations, and Health and Safety Code
+Chapter 258, which governs whether a nurse can be required to work overtime at all.
 
 **Texas Labor Code Chapter 62** is the Texas Minimum Wage Act. It adopts the federal wage floor and largely defers to
 FLSA; Texas does not impose a separate overtime standard, so overtime for hospital
@@ -97,7 +100,7 @@ the intersection of these requirements creates a compliance profile that looks l
 
 <figure class="not-prose my-8">
   <figcaption class="mb-3 text-sm font-semibold text-slate-700 dark:text-slate-200">
-    The four frameworks governing CAH nurse scheduling in Texas
+    The five frameworks governing CAH nurse scheduling in Texas
   </figcaption>
   <table class="w-full table-fixed border-collapse break-words text-xs sm:text-sm">
     <thead>
@@ -124,6 +127,11 @@ the intersection of these requirements creates a compliance profile that looks l
         <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">CMS surveyors</td>
       </tr>
       <tr class="align-top">
+        <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Texas HSC Ch. 258</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Whether a nurse can be required to work past her scheduled shift</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Texas HHSC, on nurse complaint</td>
+      </tr>
+      <tr class="align-top">
         <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100">Texas HHSC</td>
         <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Staffing adequacy and state licensure exposure</td>
         <td class="border border-slate-300 px-3 py-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">Texas HHSC</td>
@@ -135,6 +143,21 @@ the intersection of these requirements creates a compliance profile that looks l
 These frameworks don't conflict, but they require different documentation to satisfy
 different auditing bodies. A facility that documents adequately for FLSA purposes
 may still have CMS documentation gaps, and vice versa.
+
+## Can a Texas hospital require a nurse to work mandatory overtime?
+
+Generally no. [Texas Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits a hospital from requiring a nurse to work hours beyond her scheduled shifts, and a nurse may refuse mandatory overtime. Chapter 258 covers registered nurses and licensed vocational nurses. It excludes prescheduled on-call time and brief handoff or documentation time at shift boundaries.
+
+Four narrow exceptions apply:
+
+1. A health care disaster in the county or a neighboring county.
+2. A declared federal, state or county emergency.
+3. An emergency the hospital could not reasonably have anticipated.
+4. A procedure in progress that the nurse cannot safely leave.
+
+Before using the third exception, the hospital must first attempt voluntary overtime, agency nurses and off-duty volunteers. Retaliation against a nurse who refuses is separately prohibited under §258.005.
+
+Keep this separate from everything else on this page. The rest of this guide is about overtime PAY, which is a federal FLSA question. Chapter 258 is about overtime ASSIGNMENT, meaning whether you can make somebody stay. Texas sets no state overtime pay rule, and people hear that and conclude Texas does not regulate nurse overtime. On assignment, Texas is one of the stricter states. For how the other states handle the same question, see [mandatory nurse overtime by state](/blog/mandatory-nurse-overtime-by-state).
 
 ## What compliance gaps recur in Critical Access Hospital scheduling?
 
