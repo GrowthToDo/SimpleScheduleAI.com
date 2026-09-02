@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "mandatory-nurse-overtime-by-state",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-02T05:51:10.170Z",
+      "contentHash": "8fcc8379f694403e8a3dcbb232dfa1c193d9d7e0603b7358653b9e0bd552f2f8"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-02T05:51:13.441Z",
+      "contentHash": "8fcc8379f694403e8a3dcbb232dfa1c193d9d7e0603b7358653b9e0bd552f2f8"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-02T05:51:24.531Z",
+      "contentHash": "8fcc8379f694403e8a3dcbb232dfa1c193d9d7e0603b7358653b9e0bd552f2f8"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-02T05:51:24.600Z",
+      "contentHash": "8fcc8379f694403e8a3dcbb232dfa1c193d9d7e0603b7358653b9e0bd552f2f8"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-02T05:51:24.643Z",
+      "contentHash": "8fcc8379f694403e8a3dcbb232dfa1c193d9d7e0603b7358653b9e0bd552f2f8"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-02T05:51:24.643Z",
+      "contentHash": "8fcc8379f694403e8a3dcbb232dfa1c193d9d7e0603b7358653b9e0bd552f2f8"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-02T05:51:24.647Z",
+      "contentHash": "8fcc8379f694403e8a3dcbb232dfa1c193d9d7e0603b7358653b9e0bd552f2f8"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "verifier",
+      "setAt": "2026-09-02T05:46:48.046Z",
+      "contentHash": "437159683fdd920b565512a420f6219bcc44e2dfa2a5e088f5387153ab6a4432"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-09-02T05:46:49.336Z",
+      "contentHash": "437159683fdd920b565512a420f6219bcc44e2dfa2a5e088f5387153ab6a4432"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-09-02T05:50:38.743Z",
+      "contentHash": "437159683fdd920b565512a420f6219bcc44e2dfa2a5e088f5387153ab6a4432"
+    }
+  },
+  "overrides": []
+}
