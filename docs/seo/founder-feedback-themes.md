@@ -50,7 +50,7 @@ underclaims with equal care.
 
 **T4. The reader's words, not stat-speak or formal register.**
 Read each abstract noun and ask whether a DON says it aloud.
-("consumer" for a time cost; "patient safety" where a nurse says "falls" or "med errors")
+("consumer" for a time cost; "patient safety" where a nurse says "falls" or "med errors"; "a hospital may not require HOURS beyond the shift" — founder 2026-09-02: "what is requiring hours?" Put the person in the sentence: making a nurse keep working after her shift ends.)
 
 **T5. Simple sentences. If the founder asks what a passage means, a reader is already lost.**
 Any sentence needing two reads gets split. Most-repeated feedback in the project.
@@ -76,6 +76,18 @@ ways" or similar. Say which cases are excluded and which still count, ideally
 with a concrete instance. Symmetry phrasing reads as completeness and hides the
 carve-out.
 ("Indian Health Service and Tribal facilities are not counted against non-IHS facilities, and the exclusion runs both ways" — not clear, and it buried that two IHS facilities DO count against each other.)
+
+**T26. Never let advice to the reader become a claim about the product.**
+When a post tells the reader to keep a record, do a sequence, or track a thing,
+the product section must not then imply we do that same thing for them unless
+the inventory says so at the same level of detail. Check: read the how-to
+passage and the product passage together, and ask whether a reader would finish
+the second one believing the first is handled.
+("Each step is then recorded on that callout with what was attempted, the result
+and the time, **which is the four fields above kept for you**" — founder: "we dont
+record the calls made and what was discussed." The system logs escalation STEPS;
+the four fields were who you called and what they said, which nothing captures.
+The inventory line was accurate; the leap from it was not.)
 
 **T6. Educational posts mention us only as attribution.**
 Outside the sanctioned product sections, the brand appears only where a fact

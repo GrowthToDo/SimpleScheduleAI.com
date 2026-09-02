@@ -23,12 +23,12 @@ metadata:
 
 ## Key Takeaways
 
-- Mandatory nurse overtime is limited by state law rather than federal law. We read the statute or rule in seven states, and all seven bar a hospital from requiring hours beyond the shift a nurse agreed to work.
-- Texas is one of them. [Texas Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits a hospital from requiring a nurse to work hours beyond her scheduled shifts, and a nurse may refuse mandatory overtime.
-- Refusing is protected, but not everywhere that restricts the overtime itself. Texas, Pennsylvania and Washington all bar retaliation against a nurse who declines. The New York statute restricts the overtime without giving the nurse that separate protection.
+- Mandatory nurse overtime means making a nurse keep working after her shift ends. It is limited by state law, not federal law. We read the statute or rule in seven states, and all seven stop a hospital from doing it.
+- Texas is one of them. A nurse at the end of her shift can say no and go home. [Texas Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits a hospital from requiring a nurse to work hours beyond her scheduled shifts, and a nurse may refuse mandatory overtime.
+- Saying no is protected in Texas, Pennsylvania and Washington. A hospital in those states cannot punish her for it. New York bans the overtime but does not protect the nurse who turns it down, so the two do not always come together.
 - The exceptions are narrower than they sound. One of the four Texas exceptions is an emergency the hospital could not have seen coming, and a hospital may only use it after trying voluntary overtime, agency nurses and off-duty nurses. California and Massachusetts carry their own version of that voluntary-first condition.
 - Neither a single unplanned callout nor chronic short staffing is an emergency, which together covers most of the nights a nurse gets asked to stay. [Massachusetts writes the second half into the statute](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXVI/Chapter111/Section226): mandatory overtime "shall not be used as a practice for providing appropriate staffing for the level of patient care required."
-- Published counts of the overtime states disagree. The [American Federation of Teachers](https://www.aft.org/healthcare/our-positions/mandatory-overtime) names 16, other lists name 18, and most carry no citation to check. Treat any count as a starting point, then read your own state's text.
+- Nobody agrees how many states these are. The [American Federation of Teachers](https://www.aft.org/healthcare/our-positions/mandatory-overtime) says 16. Other lists say 18. Almost none name a statute you can check, so go to your own state's text instead of a count.
 
 ## Table of Contents
 
@@ -174,7 +174,7 @@ The refusal right lands on a 25-bed hospital in three places.
 
 **A callout is where this gets tested.** Call in this order: unit roster, then the PRN pool, then agency if you hold agreements, then a conversation about what the unit can carry. Write the call order down and follow it every time. An order you improvise is an order you cannot show later. [Handling nurse callouts](/blog/how-to-handle-nurse-callouts) has the full version, and [after-hours callout coverage](/blog/after-hours-callout-coverage-small-hospitals) covers the 2 a.m. case.
 
-**Write four things per call, while you are making it.** Who you called, the time, what they said, and what you did next. That is the whole record, and it fits on the back of the assignment sheet. A [nurse schedule audit trail](/blog/nurse-schedule-audit-trail) is the durable version of the same four fields.
+**Write four things per call, while you are making it.** Who you called, the time, what they said, and what you did next. That is the whole record, and it fits on the back of the assignment sheet. Do this by hand, because no scheduling system listens to your phone calls. A [nurse schedule audit trail](/blog/nurse-schedule-audit-trail) sits alongside it and covers a different thing, which is who changed the schedule and when.
 
 **The real fix is upstream.** A roster that depends on somebody staying over is one callout away from a compliance problem. Reducing that dependency is a schedule design question rather than a legal one, and [reducing nurse overtime](/blog/how-to-reduce-nurse-overtime) covers the patterns that create it.
 
@@ -184,7 +184,9 @@ SimpleScheduleAI is an AI-native [nurse scheduling](/nurse-scheduling-software) 
 
 The honest boundary matters on a legal topic. **We do not decide whether a Chapter 258 exception applies, and we do not certify a hospital as compliant with any state overtime law.** Those are calls for your nursing leadership and your counsel. We are also **not right for** a hospital that wants to configure and run its own platform.
 
-What the service does is narrower, and it is the record rather than the ruling. When a nurse calls out you get a ranked replacement shortlist, ranked by who is qualified for that shift and available, with the reason shown next to each name. You still make the calls. Each step is then recorded on that callout with what was attempted, the result and the time, which is the four fields above kept for you. Every schedule change is logged with the person who made it. Separately, each nurse's running hours are tracked against the 40-hour weekly overtime threshold, so a draft that would push somebody into overtime is visible before it is published. See [how it works](/how-it-works) and [critical access hospital scheduling](/critical-access-hospital-scheduling) for the wider picture.
+What the service does is narrower. When a nurse calls out you get a ranked replacement shortlist, ordered by who is qualified for that shift and available, with the reason shown next to each name. You still make the calls. The system records which escalation steps were taken, whether each was attempted, the outcome and the time.
+
+Be clear about where that stops. **It does not record the individual calls you made or what was said on them.** The four fields above are still yours to write down, and no scheduling system captures a phone conversation for you. What you get from us is the step-level trail around those calls, plus a log of every schedule change with the person who made it. Separately, each nurse's running hours are tracked against the 40-hour weekly overtime threshold, so a draft that would push somebody into overtime is visible before it is published. See [how it works](/how-it-works) and [critical access hospital scheduling](/critical-access-hospital-scheduling) for the wider picture.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
