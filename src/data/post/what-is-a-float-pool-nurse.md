@@ -36,7 +36,7 @@ metadata:
 - [Do Float Pool Nurses Get Paid More?](#do-float-pool-nurses-get-paid-more)
 - [What Are the Safety Risks of Floating to an Unfamiliar Unit?](#what-are-the-safety-risks-of-floating-to-an-unfamiliar-unit)
 - [Does a 25-Bed Hospital Have a Float Pool?](#does-a-25-bed-hospital-have-a-float-pool)
-- [How Does SimpleScheduleAI Use Cross-Trained Nurses?](#how-does-simplescheduleai-use-cross-trained-nurses)
+- [How Do You Schedule Around Who Is Cross-Trained?](#how-do-you-schedule-around-who-is-cross-trained)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -116,7 +116,7 @@ The [New York State Nurses Association](https://www.nysna.org/position-statement
 
 NYSNA's headline position is that floating should be avoided. Where an unanticipated emergency makes it necessary anyway, the statement sets out what the hospital owes the nurse. Give adequate orientation for the settings they are expected to float to. Assign "a proficient, regularly scheduled staff member to the floated RN to act as a mentor." Then "reduce the patient assignment of both the mentor and the floated RN."
 
-That last instruction has a consequence worth sitting with. Floating a nurse in properly costs capacity on the receiving unit, because the mentor takes fewer patients too. So a float arriving is worth less than one full nurse to that unit, since two people are now carrying lighter assignments.
+That last instruction has a consequence worth sitting with. The mentor gives up patients as well, so the unit ends up with two nurses carrying lighter assignments. A float arriving is therefore worth less than one full nurse, and a staffing plan that counts her as one is already short.
 
 Nurses carry a right here as well, and NYSNA attaches a condition to it. Registered nurses "have the right and responsibility to express their concerns and protest an assignment in writing if placed in a potentially unsafe practice situation without fear of retribution."
 
@@ -130,11 +130,11 @@ The second requirement is spare headcount. A float pool nurse is paid whether or
 
 The consequence lands on the same few people. With no bench to absorb a short shift, the nurses who always say yes absorb it, which is the pattern behind most [nurse burnout](/blog/nurse-burnout-scheduling-cah) at a small hospital. A callout also has to be solved by phone rather than by redeployment, which makes [handling nurse callouts](/blog/how-to-handle-nurse-callouts) a bigger job here than at a hospital with a staffing office.
 
-## How Does SimpleScheduleAI Use Cross-Trained Nurses?
+## How Do You Schedule Around Who Is Cross-Trained?
 
 SimpleScheduleAI is an AI-native nurse scheduling service for Texas Critical Access Hospitals. We build the schedule, our scheduling team checks it, and your nurse manager approves it.
 
-Your roster tells us each nurse's employment type, the unit she normally works, and which other units she is signed off for. When we build the schedule, nurses stay on their own unit by default. Moving someone elsewhere counts as a cost against that version of the schedule, and that cost is about a third as large when she is cross-trained for the unit she is moving to. What you get back is a schedule that moves people only when moving them beats the alternative.
+Your roster tells us each nurse's employment type, the unit she normally works, and which other units she is signed off for. When we build the schedule, nurses stay on their own unit by default. If covering a shift means moving someone, the schedule looks first for a nurse already cross-trained for that unit, and treats moving anyone else as about three times worse. So people get moved only when there is no better answer.
 
 When a nurse calls out, the replacement shortlist works down your own staff first, then per diem, then anyone who would cross into overtime, with agency last. Straight time always ranks above overtime, and you get the top three names with the reason each one is there.
 
