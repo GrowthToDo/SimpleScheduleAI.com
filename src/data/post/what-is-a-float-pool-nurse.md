@@ -36,7 +36,7 @@ metadata:
 - [Do Float Pool Nurses Get Paid More?](#do-float-pool-nurses-get-paid-more)
 - [What Are the Safety Risks of Floating to an Unfamiliar Unit?](#what-are-the-safety-risks-of-floating-to-an-unfamiliar-unit)
 - [Does a 25-Bed Hospital Have a Float Pool?](#does-a-25-bed-hospital-have-a-float-pool)
-- [How Do You Schedule Around Who Is Cross-Trained?](#how-do-you-schedule-around-who-is-cross-trained)
+- [How Does SimpleScheduleAI Decide Which Nurse Covers a Short Shift?](#how-does-simplescheduleai-decide-which-nurse-covers-a-short-shift)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -130,7 +130,7 @@ The second requirement is spare headcount. A float pool nurse is paid whether or
 
 The consequence lands on the same few people. With no bench to absorb a short shift, the nurses who always say yes absorb it, which is the pattern behind most [nurse burnout](/blog/nurse-burnout-scheduling-cah) at a small hospital. A callout also has to be solved by phone rather than by redeployment, which makes [handling nurse callouts](/blog/how-to-handle-nurse-callouts) a bigger job here than at a hospital with a staffing office.
 
-## How Do You Schedule Around Who Is Cross-Trained?
+## How Does SimpleScheduleAI Decide Which Nurse Covers a Short Shift?
 
 SimpleScheduleAI is an AI-native nurse scheduling service for Texas Critical Access Hospitals. We build the schedule, our scheduling team checks it, and your nurse manager approves it.
 
