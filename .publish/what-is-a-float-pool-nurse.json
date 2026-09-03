@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-a-float-pool-nurse",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-03T10:33:17.181Z",
+      "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-03T10:33:21.426Z",
+      "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-03T10:33:25.312Z",
+      "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-03T10:33:25.412Z",
+      "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-03T10:33:25.497Z",
+      "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-03T10:33:25.497Z",
+      "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-03T10:33:25.500Z",
+      "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-09-03T10:31:22.715Z",
+      "contentHash": "086edfbd74d0369426e9d892d72b73916cf956639091d259e29ec3ab9682447a"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "fact-check-agent",
+      "setAt": "2026-09-03T10:31:15.604Z",
+      "contentHash": "086edfbd74d0369426e9d892d72b73916cf956639091d259e29ec3ab9682447a"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-09-03T10:32:59.315Z",
+      "contentHash": "086edfbd74d0369426e9d892d72b73916cf956639091d259e29ec3ab9682447a"
+    }
+  },
+  "overrides": []
+}

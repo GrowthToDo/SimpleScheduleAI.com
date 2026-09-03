@@ -67,7 +67,7 @@ Federal rules do not add a number either, and the wording differs by facility ty
 
 ## Why Do Large-Hospital Acuity Tools Fail at 25 Beds?
 
-They fail because they answer the wrong question. A scoring tool tells you tonight's unit needs 4.7 nurses' worth of staffing instead of 3.9. At a large hospital the house supervisor pulls the difference from a float pool. At a small hospital there is no float pool, and the answer to "we need another nurse" is a phone call to someone who already worked yesterday.
+They fail because they answer the wrong question. A scoring tool tells you tonight's unit needs 4.7 nurses' worth of staffing instead of 3.9. At a large hospital the house supervisor pulls the difference from a [float pool](/blog/what-is-a-float-pool-nurse). At a small hospital there is no float pool, and the answer to "we need another nurse" is a phone call to someone who already worked yesterday.
 
 The bigger mismatch is skill mix. These tools assume the next person you add is a registered nurse, and that any RN will do. Rural staffing data says otherwise. At Texas Critical Access Hospitals, registered nurses make up 61.0% of nursing staff against 80.5% at non-rural hospitals, and licensed vocational nurses make up 16.4% against 3.6%.
 

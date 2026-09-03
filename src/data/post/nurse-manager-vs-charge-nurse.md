@@ -116,7 +116,7 @@ Published sources contradict each other here. The [ANA's own article](https://ww
 
 **Tonight's assignment sheet** takes the nurses who showed up and matches them to patients. This is the charge nurse's document, and it is rebuilt every shift.
 
-**The callout backfill** is the contested one, and it is the reason the sources disagree. When a nurse calls out at 5am, someone has to find cover. At a large hospital a house supervisor pulls from a float pool. At a small hospital the call goes to whoever answers the phone, which is frequently the manager, at home. Our guide to [handling nurse callouts](/blog/how-to-handle-nurse-callouts) walks through that sequence.
+**The callout backfill** is the contested one, and it is the reason the sources disagree. When a nurse calls out at 5am, someone has to find cover. At a large hospital a house supervisor pulls from a [float pool](/blog/what-is-a-float-pool-nurse). At a small hospital the call goes to whoever answers the phone, which is frequently the manager, at home. Our guide to [handling nurse callouts](/blog/how-to-handle-nurse-callouts) walks through that sequence.
 
 Writing down which of the three you mean settles most arguments about who owns scheduling.
 

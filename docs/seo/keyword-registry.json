@@ -811,5 +811,13 @@
     "primaryKeyword": "critical access hospital conversion",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Trendjacked 2026-08-31. Conversions have roughly doubled since 2019 and two hospitals moved toward it within six days; the financial case is documented everywhere, the staffing consequence nowhere. THE PAYOFF: capping at 25 beds does not shrink the coverage floor, so a hospital that converts from 192 beds still owes the same nurse-on-duty requirement. LANDMINES, both founder-caught: the necessary-provider route is logically impossible for any 2026 converter (the status is grandfathered pre-2006 and cannot be newly obtained), and the entire draft shipped in British spelling (licence, organising, judgement, labour) against an American corpus."
+  },
+  {
+    "slug": "what-is-a-float-pool-nurse",
+    "type": "post",
+    "url": "/blog/what-is-a-float-pool-nurse",
+    "primaryKeyword": "float pool nurse",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Topic 16, published 2026-09-03. TOFU definition post taking the definitional intent off float-pool-nursing-small-hospitals, which was ranking 18-25 for four purely definitional queries it was never built for. That MOFU sibling keeps the operations intent (per-diem bench, cross-training, shared staffing) and the two cross-link. Volume 1,300/mo at competition index 5. Sourcing note: the facts dossier had zero float-pool entries before this piece, so the NYSNA floating position statement, the WakeMed careers page and Borgatti 2010 were verified and added in the same session. Guardrail: do NOT claim float pool nurses hold guaranteed hours, both benefited and as-needed float roles exist."
   }
 ]
