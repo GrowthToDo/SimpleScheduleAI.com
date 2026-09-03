@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-03T10:33:17.181Z",
+      "checkedAt": "2026-09-03T10:33:53.073Z",
       "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-03T10:33:21.426Z",
+      "checkedAt": "2026-09-03T10:33:59.466Z",
       "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-03T10:33:25.312Z",
+      "checkedAt": "2026-09-03T10:34:01.178Z",
       "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-03T10:33:25.412Z",
+      "checkedAt": "2026-09-03T10:34:01.399Z",
       "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-03T10:33:25.497Z",
+      "checkedAt": "2026-09-03T10:34:01.685Z",
       "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-03T10:33:25.497Z",
+      "checkedAt": "2026-09-03T10:34:01.685Z",
       "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-03T10:33:25.500Z",
+      "checkedAt": "2026-09-03T10:34:01.718Z",
       "contentHash": "bcdc8712105fcb15bd1a6a2ae1812455b8849b4ca02d26e79ead3c7b0b994c90"
     }
   },
