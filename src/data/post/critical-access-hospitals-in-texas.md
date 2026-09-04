@@ -22,10 +22,10 @@ metadata:
 
 ## Key Takeaways
 
-- The [Flex Monitoring Team](https://www.flexmonitoring.org/critical-access-hospital-locations) list of Texas critical access hospitals holds 92 hospitals, retrieved 4 September 2026. The [Rural Health Information Hub](https://www.ruralhealthinfo.org/states/texas) shows 93 on the same day, so you will see both numbers in print.
+- The [Flex Monitoring Team](https://www.flexmonitoring.org/critical-access-hospital-locations) list of Texas critical access hospitals holds 92 hospitals. The [Rural Health Information Hub](https://www.ruralhealthinfo.org/states/texas) shows 93, so you will see both numbers in print.
 - Seven in ten sit at exactly 25 beds. That is the federal cap under [42 CFR 485.620](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620), so most of these hospitals are built right up to the line.
 - The rest are much smaller. Twenty-eight run below the cap, twelve run 15 beds or fewer, and the smallest runs 10.
-- The designation is still being granted. Seven of the 92 were certified in 2023 or later, and three of those in 2025.
+- Texas is still gaining critical access hospitals. Seven of the 92 were certified in 2023 or later, and three of those in 2025.
 - Every one of them owes the same staffing floor. Under [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the hospital has one or more inpatients.
 
 ## Table of Contents
@@ -621,7 +621,7 @@ All 92 hospitals, sorted alphabetically. Beds and certification dates are as the
   </table>
 </div>
 
-Names and cities appear as the source lists them, with all-capitals entries set in title case so the table reads cleanly. Retrieved 4 September 2026.
+Names and cities appear as the source lists them, with all-capitals entries set in title case so the table reads cleanly.
 
 ## What Does the List Show About Rural Hospitals in Texas?
 
@@ -639,7 +639,7 @@ Four things stand out once you total the columns.
 
 Hospitals move on and off it, which is why a dated list matters more than a precise one.
 
-They arrive by converting from acute care, as seven have since 2023. They leave by closing, or by converting to a different designation. Texas also has four Rural Emergency Hospitals, per the Rural Health Information Hub, which is a newer designation for facilities that stop providing inpatient care and keep emergency and outpatient services.
+Seven hospitals have joined the list since 2023. A hospital seeking the designation today has to qualify on the mileage test in [42 CFR 485.610](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.610), because the necessary-provider route closed to new entrants on 1 January 2006. Hospitals leave the list by closing, or by converting to a different designation. Texas also has four Rural Emergency Hospitals, per the Rural Health Information Hub, which is a newer designation for facilities that stop providing inpatient care and keep emergency and outpatient services.
 
 There is also a review coming, though not for years. In [QSO-26-15-CAH](https://www.cms.gov/files/document/qso-26-15-cah-original-release-2026-08-21.pdf), issued 21 August 2026, CMS set out how state survey agencies should check that a hospital still meets the rural location and distance rules. Those reviews start in 2033 and repeat every ten years after that. Nothing in the memo changes anything this year.
 
@@ -647,7 +647,7 @@ There is also a review coming, though not for years. In [QSO-26-15-CAH](https://
 
 The bed counts above set the same problem for every hospital on the list. Under 42 CFR 485.631, a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the hospital has one or more inpatients. That is a 24-hour, 365-day obligation, and it does not shrink when the census, meaning the number of patients in the building, falls to one.
 
-A hospital averaging 22.6 beds covers that floor from a small roster. One resignation or one badly placed callout is felt immediately, because there is no second unit to borrow from and no [float pool](/blog/what-is-a-float-pool-nurse) to draw on. It also means the nightly staffing floor does not scale with the bed count. A 25-bed hospital holding four patients owes the same overnight cover as one that is full, so that floor is set by the obligation rather than by the census. The staffing models that fit a roster this size are compared in [nurse staffing models](/blog/nurse-staffing-models), and the callout half of it in [how to handle nurse callouts](/blog/how-to-handle-nurse-callouts).
+A hospital averaging 22.6 beds covers that floor from a small roster. One resignation or one badly placed callout is felt immediately, because there is no second unit to borrow from and no [float pool](/blog/what-is-a-float-pool-nurse) to draw on. It also means the regulatory minimum does not move with the census. One inpatient obliges the same minimum licensed cover as twenty-five do, so the floor never drops below a single licensed nurse on duty. What a hospital actually staffs sits above that floor, and that does move with the census. The staffing models that fit a roster this size are compared in [nurse staffing models](/blog/nurse-staffing-models), and the callout half of it in [how to handle nurse callouts](/blog/how-to-handle-nurse-callouts).
 
 SimpleScheduleAI is an AI-native nurse scheduling service built for hospitals on this list. We build the schedule, our scheduling team checks it, and your nurse manager approves it. **We are not right for a hospital that wants software it configures and runs itself.**
 
