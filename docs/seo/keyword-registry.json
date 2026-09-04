@@ -819,5 +819,13 @@
     "primaryKeyword": "float pool nurse",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Topic 16, published 2026-09-03. TOFU definition post taking the definitional intent off float-pool-nursing-small-hospitals, which was ranking 18-25 for four purely definitional queries it was never built for. That MOFU sibling keeps the operations intent (per-diem bench, cross-training, shared staffing) and the two cross-link. Volume 1,300/mo at competition index 5. Sourcing note: the facts dossier had zero float-pool entries before this piece, so the NYSNA floating position statement, the WakeMed careers page and Borgatti 2010 were verified and added in the same session. Guardrail: do NOT claim float pool nurses hold guaranteed hours, both benefited and as-needed float roles exist."
+  },
+  {
+    "slug": "critical-access-hospitals-in-texas",
+    "type": "post",
+    "url": "/blog/critical-access-hospitals-in-texas",
+    "primaryKeyword": "critical access hospitals in texas",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Topic 17, published 2026-09-04. Data-asset post: all 92 Texas CAHs with beds and certification year, from the Flex Monitoring Team list the founder supplied (source CSV committed at docs/seo/data/tx-cah-flexmonitoring-2026-09-04.csv). Competition index 2, the lowest in the 2026-09 research set; we ranked ~22.6 with no dedicated page before this. SOURCING WARNING for any refresh: every authoritative list is unreachable from our environment. All .texas.gov hosts fail DNS, and data.cms.gov, flexmonitoring.org and tha.org 403 both curl and headless Chromium, so a refresh needs a human to fetch the file. COUNT GUARDRAIL: this list has 92 while RHIhub shows 93; state both with dates, never silently resolve the gap. See the facts-dossier entry for the verified statistics."
   }
 ]
