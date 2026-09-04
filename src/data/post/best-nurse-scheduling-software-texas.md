@@ -5,7 +5,7 @@ author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Texas Hospitals in 2026'
 excerpt: >
   Texas hospitals face a specific compliance environment: FLSA overtime including the healthcare
-  8-and-80 option, Texas HHSC licensing, and CMS §485.635 requirements for the state's 91 Critical
+  8-and-80 option, Texas HHSC licensing, and CMS §485.635 requirements for the state's 93 Critical
   Access Hospitals. This guide compares eight scheduling platforms on Texas compliance fit,
   implementation burden, and operational match for small and mid-size hospitals across the state.
 image: https://images.unsplash.com/photo-1755995083683-50d08cd83d09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80

@@ -18,7 +18,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/what-is-a-critical-access-hospital'
 ---
 
-A critical access hospital (CAH) is a Medicare designation for a small rural hospital: 25 or fewer acute care beds, located at least 35 miles from the nearest hospital (or 15 miles by secondary road in mountainous terrain), and providing 24-hour emergency care every day of the year. It exists to preserve rural access and carries a financial advantage: CAHs receive cost-based Medicare reimbursement instead of the fixed prospective rates standard hospitals get. Roughly 84 are in Texas, per the [Flex Monitoring Team](https://www.flexmonitoring.org/critical-access-hospital-locations-list), and the designation is governed by [42 CFR Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F).
+A critical access hospital (CAH) is a Medicare designation for a small rural hospital: 25 or fewer acute care beds, located at least 35 miles from the nearest hospital (or 15 miles by secondary road in mountainous terrain), and providing 24-hour emergency care every day of the year. It exists to preserve rural access and carries a financial advantage: CAHs receive cost-based Medicare reimbursement instead of the fixed prospective rates standard hospitals get. Texas has 93, per the [Rural Health Information Hub](https://www.ruralhealthinfo.org/states/texas), and the designation is governed by [42 CFR Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F).
 
 ## Key Takeaways
 

@@ -47,7 +47,7 @@ For an administrator or director of nursing at a Texas critical access hospital,
 
 Texas has [93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), among the most of any state, concentrated in West Texas, the Panhandle, East Texas, and the border counties. That is the current federal count. The state also publishes the [Texas DSHS 2024 Hospital Nurse Staffing Study](https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf), a spring-2024 survey released in February 2025, which is the best facility-level read available.
 
-The study surveyed a frame of 86 critical access hospitals across 78 counties, of which 50 responded. That 86 was how many the study started with back then, not how many Texas has now. Its vacancy and turnover rates come from the 50 that answered. The current statewide count is 91.
+The study surveyed a frame of 86 critical access hospitals across 78 counties, of which 50 responded. That 86 was how many the study started with back then, not how many Texas has now. Its vacancy and turnover rates come from the 50 that answered. The current statewide count is 93.
 
 The DSHS study splits results into three groups, critical access hospitals, other rural hospitals, and non-rural hospitals, so you can see where small facilities land rather than reading one statewide average. Statewide, RN vacancy was 16.4% in 2024 (down from 17.6% in 2022) and RN median facility turnover was 23.2% (down from 28.3% in 2022). Those figures improved, but the small-hospital picture underneath is not uniform.
 
