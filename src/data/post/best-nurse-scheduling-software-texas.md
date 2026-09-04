@@ -577,7 +577,7 @@ No. Texas has no state overtime statute; overtime for Texas hospitals is governe
 
 **Q: How many Critical Access Hospitals are in Texas?**
 
-Texas has 93 certified Critical Access Hospitals (Rural Health Information Hub, 2026), making it one of the states with the highest CAH concentration. Most are in rural west Texas, the Panhandle, south Texas, and east Texas. For scheduling purposes, this means a large segment of the Texas hospital market has CAH-specific compliance requirements that most national scheduling software vendors do not address explicitly.
+Texas has 93 certified Critical Access Hospitals (Rural Health Information Hub, 2026), making it one of the states with the highest CAH concentration. The [full list of Texas critical access hospitals](/blog/critical-access-hospitals-in-texas) names each one. Most are in rural west Texas, the Panhandle, south Texas, and east Texas. For scheduling purposes, this means a large segment of the Texas hospital market has CAH-specific compliance requirements that most national scheduling software vendors do not address explicitly.
 
 **Q: What is the FLSA 8 and 80 rule for Texas hospital nurses?**
 

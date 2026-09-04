@@ -44,7 +44,7 @@ Scheduling software companies publicly focus their sales and marketing on health
 
 ## How Many Texas Critical Access Hospitals Are There, and What Are They Facing?
 
-Texas has 93 critical access hospitals, making it one of the largest CAH states in the country. They are distributed across rural communities throughout West Texas, the Panhandle, East Texas, and South Texas, often serving counties where the next closest hospital is a long drive away.
+Texas has 93 critical access hospitals, making it one of the largest CAH states in the country. You can see [every hospital on the federal list](/blog/critical-access-hospitals-in-texas), with its bed count and certification year. They are distributed across rural communities throughout West Texas, the Panhandle, East Texas, and South Texas, often serving counties where the next closest hospital is a long drive away.
 
 [Critical access hospitals](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) are federally designated rural facilities with 25 or fewer acute care beds. In Texas, they are also subject to Texas Health and Human Services Commission (HHSC) hospital licensing and staffing standards, Texas Payday Law wage-payment provisions, and CMS Conditions of Participation, creating a specific compliance environment that generic scheduling software does not address.
 

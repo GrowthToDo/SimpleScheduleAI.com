@@ -141,7 +141,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for a large Texas h
 
 **Q: How many critical access hospitals does Texas have?**
 
-Texas has 93 critical access hospitals today, per the Rural Health Information Hub (2026), among the most of any state. The Texas DSHS 2024 staffing study surveyed a frame of 86 at the time, so that older number appears only inside the study's vacancy and turnover figures, never as the current count.
+Texas has 93 critical access hospitals today, per the Rural Health Information Hub (2026), among the most of any state, and they are named individually in our [list of Texas critical access hospitals](/blog/critical-access-hospitals-in-texas). The Texas DSHS 2024 staffing study surveyed a frame of 86 at the time, so that older number appears only inside the study's vacancy and turnover figures, never as the current count.
 
 **Q: What is the nurse turnover rate at Texas critical access hospitals?**
 
