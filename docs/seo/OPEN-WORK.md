@@ -83,6 +83,7 @@ removal before any of them publish.
 
 1. **Standardise the other 45 posts to KT-first?** 52 live posts open on `## Key Takeaways`, 45 open on prose. check-blog now WARNs on the prose shape and the rule applies to new work only (founder, 2026-09-01). Promoting it to `fail()` is a one-line change if the corpus is ever standardised.
 2. **The 41 drafts.** Three are named in `next-15-topics-2026-08.md` as better than writing fresh: `scheduling-software-vendor-acquisition-support`, `self-scheduling-manager-workload-trap`, `what-is-nursing-overtime`.
+3. **ShiftWizard consolidation, deferred to end of September (founder, 2026-09-05).** `shiftwizard-vs-managed-service` wins every ShiftWizard query organically (positions 4 to 8, zero clicks) while `shiftwizard-alternatives` still takes a minority share of the same three AI-shaped queries; the 2026-08-02 de-cannibalization did not take. The 2026-09-05 AI Overview check found those overviews are built from Capterra, G2, Software Advice and KLAS, and the winning page carried no attributed reviewer quotes. Evidence is being added to the winning page now (separate item); the retitle-or-merge decision waits for the end-September GSC read. See `llm-citation-log.md` 2026-09-05.
 
 **Unblocked, not yet done:**
 
