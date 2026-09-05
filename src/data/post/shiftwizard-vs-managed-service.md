@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-05-02T00:00:00Z
-updateDate: 2026-05-07T00:00:00Z
+updateDate: 2026-09-05T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Is ShiftWizard? Overtime, Certifications and Self-Service Reviewed (2026)'
 excerpt: >
@@ -37,6 +37,7 @@ This guide compares the two models on the operational dimensions that decide the
 ## Table of Contents
 
 - [What Is ShiftWizard?](#what-is-shiftwizard)
+- [What Do ShiftWizard Reviewers Say About the App and Self-Service?](#what-do-shiftwizard-reviewers-say-about-the-app-and-self-service)
 - [What Is a Managed Scheduling Service?](#what-is-a-managed-scheduling-service)
 - [What Are the Five Questions to Ask in Any Hospital Scheduling Demo?](#what-are-the-five-questions-to-ask-in-any-hospital-scheduling-demo)
 - [What Does the Direct Comparison of the Two Operating Models Look Like?](#what-does-the-direct-comparison-of-the-two-operating-models-look-like)
@@ -60,6 +61,42 @@ ShiftWizard is a self-serve hospital scheduling platform owned by HealthStream, 
 ShiftWizard is built for hospital scheduling and covers shift assignment, self-scheduling, shift swaps, manager and staff mobile apps, credential management, overtime tracking, and onboarding support ([healthstream.com](https://www.healthstream.com)).
 
 The defining characteristic of the platform from an operating-model standpoint: it is self-serve. The vendor provides software, training, and onboarding support; your team configures the system, builds schedules, and operates the platform week to week. The schedule does not generate itself; the nurse manager (or a scheduling coordinator at facilities that have one) is the operator.
+
+## What Do ShiftWizard Reviewers Say About the App and Self-Service?
+
+Capterra lists ShiftWizard at 4.4 out of 5 across 723 reviews, on a page last updated 20 August 2026 and checked on 5 September 2026. The quotes below are verbatim from that listing, with the reviewer name, role and date as Capterra shows them. Both the praise and the complaints are included.
+
+The design itself gets credit, including the mobile app:
+
+> "ShiftWizard was designed by nurses which is why it is fantastic to use for Hospital/clinic use! The mobile app is fantastic, contacting employees with open shifts etc and communication is on point!"
+>
+> Jennifer C., Director of Emergency Services, July 15, 2024, Capterra
+
+The complaints in the same listing cluster on speed, login and the app:
+
+> "I wish the messaging was better, and that I have to input my info every time I log in."
+>
+> Melissa R., LVN, July 26, 2024, Capterra
+
+> "Can be slow and glitchy, making inputting schedule difficult and stressful"
+>
+> Erika A., Registered Nurse, July 9, 2024, Capterra
+
+> "Everything is slow and difficult to use. The app does not work well. The website is slow and takes forever to click on any options. Everything about it is a negative experience."
+>
+> Jacob G., Registered Nurse, July 18, 2024, Capterra
+
+A second cluster is configuration, which is the work the self-serve model leaves with the hospital:
+
+> "We do not like when we have to put in a new shift type that it comes across as a code VS the shift type."
+>
+> Amanda M., Quality Assurance Process improvement Manager, July 15, 2024, Capterra
+
+> "Not being able to sign up for 4 hour increment shifts."
+>
+> Michalina W., RN, August 13, 2024, Capterra
+
+On time to get running, G2 lists ShiftWizard's average time to implement as 3 months, averaged from its own reviewers. That figure times a hospital buying the software, configuring it and then running it. It also runs longer than the two to four week range this guide uses for self-serve platforms in general, so for ShiftWizard specifically the reviewer-reported figure is the one to plan around. A service that configures the schedule for a hospital which runs nothing afterwards delivers a first schedule inside two weeks. The gap is the delivery model rather than the same job done faster.
 
 ## What Is a Managed Scheduling Service?
 
@@ -214,13 +251,13 @@ It is not the right choice if staff-facing self-service mobile features are a ha
 
 ## Sources
 
-[1] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews), G2 Spring 2026 Leader. Vendor: [HealthStream, Inc.](https://www.healthstream.com) (NASDAQ: HSTM). Verified 2026-04-30.
+[1] ShiftWizard ratings and reviewer quotes: 4.4/5 on Capterra across 723 reviews, page last updated 20 August 2026, quotes re-verified verbatim 2026-09-05. [capterra.com](https://www.capterra.com/p/178376/ShiftWizard/reviews/). G2: 4.3/5 across 405 reviews and a 3-month average time to implement, founder page-verified 2026-08-14. Vendor: [HealthStream, Inc.](https://www.healthstream.com) (NASDAQ: HSTM).
 
 [2] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR, Title 42, Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
 [3] FLSA healthcare overtime guidance. [U.S. Department of Labor, Wage and Hour Division, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
-**Methodology note:** ShiftWizard reviewer quotes referenced in this comparison were cross-checked on G2, Capterra, AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on the verification date. Documented product capabilities reference each vendor's own product page on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
+**Methodology note:** ShiftWizard reviewer quotes referenced in this comparison were cross-checked on G2, Capterra, AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on the original verification date, 2026-04-30, and re-verified on Capterra on 2026-09-05. Documented product capabilities reference each vendor's own product page on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -252,11 +289,11 @@ ShiftWizard's healthcare-specific design makes it more appropriate for hospitals
 
 **What happens when a nurse calls out at 5am with each model?**
 
-With a self-serve platform, the nurse manager opens the platform, checks current hours and availability, verifies certifications, and makes calls. With a managed service like SimpleScheduleAI, a pre-replacement call list ranked by certification, overtime status, and availability is already maintained; the nurse manager's work reduces to making the calls. Ask both vendors to demo this exact workflow.
+With a self-serve platform, the nurse manager opens the platform, checks current hours and availability, verifies certifications, and makes calls. With a managed service like SimpleScheduleAI, you log the callout with us and the system generates the top 3 replacement candidates with reasons, ranked by skill match, competency for the unit, charge coverage, and overtime risk, checked by our scheduling team. You pick, we update the schedule and send the corrected copy. Ask both vendors to demo this exact workflow.
 
 **Is SimpleScheduleAI cheaper than ShiftWizard?**
 
-Both vendors are quote-based; neither publishes list pricing. The relevant comparison is total cost of ownership: software cost plus the nurse manager's operating time. A managed service bundles both into a service fee; a platform separates them. Recovering 3-4 hours per week of nurse manager time over a year is a meaningful operational consideration alongside the direct cost comparison.
+ShiftWizard is quote-based and does not publish list pricing. SimpleScheduleAI publishes its price: a flat monthly price by roster size, $1,000/month for up to 20 nurses and $1,500/month for 21 to 40 nurses, with no per-nurse fees and no setup fees. The relevant comparison is still total cost of ownership, meaning software cost plus the nurse manager's operating time. A service bundles both into one fee; a platform separates them.
 
 **Can I use both ShiftWizard for staff communication and SimpleScheduleAI for scheduling?**
 
@@ -268,5 +305,5 @@ Setup configuration that drifts out of date. Self-serve platforms work as well a
 
 [See how the managed service model works in practice →](/how-it-works)
 
-_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
+_[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for Critical Access Hospitals and other small rural facilities._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
