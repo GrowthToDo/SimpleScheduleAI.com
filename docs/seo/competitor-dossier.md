@@ -898,10 +898,10 @@ Product page DOES cover:
 **Product:** Hospital nurse scheduling platform. Designed specifically for hospital nursing.
 Owned by HealthStream (acquired). Used by 500+ hospital facilities.
 
-**Ratings (verified 2026-04-30; G2 line founder-verified 2026-08-14):**
+**Ratings (Capterra line re-verified live 2026-09-05; G2 line founder-verified 2026-08-14):**
 
 - G2: 4.3/5 across 405 reviews — founder page-verified 2026-08-14 (previously recorded without a review count). Listed as "ShiftWizard by HealthStream". G2 blocks automated fetch, so this line is human-verified, not tool-verified.
-- Capterra: 4.4/5 (723 reviews; 88%+ rated 4 stars or higher)
+- Capterra: 4.4/5 (723 reviews; 88%+ rated 4 stars or higher) _(header re-read via Playwright 2026-09-05: still "4.4 (723)", page stamped "Last updated August 20th, 2026"; Ease of use 4.3, Customer Service 4.4)_
 
 **G2 Pricing Insights (founder screenshot, PAGE-VERIFIED 2026-08-09, re-confirmed
 2026-08-14):** Time to Implement = 3 months; Return on Investment = 3 months;
@@ -927,9 +927,9 @@ schedule inside two weeks", and it should name the delivery model as the reason
 for the gap rather than implying the same job is done fifteen times faster.
 That exact overclaim was caught in review on 2026-08-14 before publish.
 
-**Capterra URL (re-verified live 2026-08-14):** https://www.capterra.com/p/178376/ShiftWizard/reviews/ — ID 178376 and the 4.4/5 across 723 reviews both confirmed on the live page header.
+**Capterra URL (re-verified live 2026-09-05):** https://www.capterra.com/p/178376/ShiftWizard/reviews/ — ID 178376 and the 4.4/5 across 723 reviews both confirmed on the live page header. Pagination is `?page=N` (29 pages, default "most helpful" order); a `?rating=` query param is ignored, so star filtering is not URL-addressable.
 _(Note: product ID 210972 seen in some older URLs is incorrect — live listing is 178376. 210972 in fact resolves to DelyvaX, an unrelated delivery-management product, so it is wrong rather than merely stale.)_
-_(The Erika A. and Jacob G. app-performance quotes were NOT re-located on page 1 of 723 reviews in the 2026-08-14 pass. Not disproven, only unconfirmed; page deeper or filter by star rating before citing them.)_
+_(The Erika A. and Jacob G. app-performance quotes were NOT re-located on page 1 of 723 reviews in the 2026-08-14 pass. 2026-09-05 update: Erika A. WAS relocated on page 3 (see her note below). Jacob G. was NOT relocated on pages 1 to 8 of the default order in the 2026-09-05 pass, and the `?rating=1` filter attempt was ignored by the site; his 2026-08-09 Playwright page-verification stands and is still inside the 60-day window, so the quote remains usable until 2026-10-08. Page deeper or use the on-page star filter before citing it after that.)_
 
 ### Verified Reviewer Quotes
 
@@ -937,13 +937,13 @@ _(The Erika A. and Jacob G. app-performance quotes were NOT re-located on page 1
 
 > "ShiftWizard was designed by nurses which is why it is fantastic to use."
 >
-> Jennifer C., Director of Emergency Services, July 15, 2024, Capterra
+> Jennifer C., Director of Emergency Services, July 15, 2024, Capterra _(re-verified on Capterra 2026-09-05, page 2, 5.0-star review titled "ShiftWizard review". The live sentence does not end at "use": the full Pros line reads "ShiftWizard was designed by nurses which is why it is fantastic to use for Hospital/clinic use! The mobile app is fantastic, contacting employees with open shifts etc and communication is on point!" Our quote is a truncation; when citing, either quote the full sentence or end it with an ellipsis rather than a period.)_
 
 **Negative — App Performance:**
 
 > "Can be slow and glitchy, making inputting schedule difficult and stressful."
 >
-> Erika A., Registered Nurse, July 9, 2024, Capterra
+> Erika A., Registered Nurse, July 9, 2024, Capterra _(re-verified verbatim on Capterra 2026-09-05, page 3, 4.0-star review titled "The best scheduling system I’ve used"; the live Cons field has no trailing period. Her Pros field: "Mobile app, ability to see other coworkers schedules and request time off/swaps in app")_
 
 > "Everything is slow and difficult to use. The app does not work well. The website is slow and takes forever to click on any options. Everything about it is a negative experience."
 >
@@ -953,19 +953,19 @@ _(The Erika A. and Jacob G. app-performance quotes were NOT re-located on page 1
 
 > "I wish the messaging was better, and that I have to input my info every time I log in."
 >
-> Melissa R., LVN, Hospital & Health Care, July 26, 2024, Capterra _(verified verbatim 2026-05-15)_
+> Melissa R., LVN, Hospital & Health Care, July 26, 2024, Capterra _(verified verbatim 2026-05-15; re-verified verbatim on Capterra 2026-09-05, page 4, 4.0-star review titled "Does the job". Pros field: "I like how I know my schedule at a glance, it is clear and direct.")_
 
 **Negative — Shift Type Configuration:**
 
 > "We do not like when we have to put in a new shift type that it comes across as a code."
 >
-> Amanda M., QA Process Improvement Manager, July 15, 2024, Capterra
+> Amanda M., QA Process Improvement Manager, July 15, 2024, Capterra _(re-verified on Capterra 2026-09-05, page 1, 3.0-star review titled "ShiftWizard- The employee Friendly Tool"; role shown live as "Quality Assurance Process improvement Manager". The live sentence continues past "code": full Cons opening is "We do not like when we have to put in a new shift type that it comes across as a code VS the shift type." Our quote is a truncation; end it with an ellipsis, not a period, or quote the full sentence.)_
 
 **Negative — Shift Increment Limits:**
 
 > "Not being able to sign up for 4 hour increment shifts."
 >
-> Michalina W., RN, August 13, 2024, Capterra
+> Michalina W., RN, August 13, 2024, Capterra _(re-verified verbatim on Capterra 2026-09-05, page 6, 5.0-star review titled "ShiftWizard review"; Cons field matches exactly. Pros field: "Seeing other people’s schedules & being able to see who you’re working with that day. Easy to use.")_
 
 ---
 
@@ -1387,3 +1387,4 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 | 2026-07-06 | M7 Health deep tech/GTM pass: solver undisclosed everywhere (job req frames AI/ML as to-build; turnover feature = baseline-deviation rules); AI copy outcome-framed only; no native mobile app (store-searched, absent); $10M Series A 2025-07 (Threshold), Ochsner 47-hospital rollout 2026-02; ALL named customers are systems — zero named CAH customers/case studies; CAH authority post (2026-04-01, ChatGPT-cited) is proof-free positioning. Full profile appended to M7 section. |
 | 2026-07-12 | YouShift Playwright site pass (SPA rendered): agents "early access" (verbatim), enterprise pricing unpublished (verbatim FAQ), "hundreds to thousands of clinicians" scale, NEW managed-service option ("our team manages your scheduling end-to-end"), time tracking shipped, points system ABSENT from current site (downgrade to legacy claim). Also fetched ARISE bibliography appendix — primary citations verified into facts-dossier. |
 | 2026-09-01 | Monthly `competitor-watch` run, 14 of 17 watched pages moved. **YouShift homepage rewritten onto our two core messages.** H1 verbatim before: `The Operating System for Healthcare Workforce`; after: `Stop managing your healthcare teams in spreadsheets`. Description before: `AI-powered scheduling, staffing optimization, and workforce intelligence — all in one platform.`; after: `YouShift connects scheduling, time off, time tracking, payroll, and workforce forecasting for healthcare teams, with AI agents helping coordinate the work.` The whole H2 set was replaced, and two of the new ones matter: `Let us build your next schedule.` and `Connected to EHR, payroll, credentialing, and licensing.` All three CTAs were REMOVED (`Schedule a demo`, `Schedule a Demo`, `Start Free Trial` → empty). Body grew 1,320 → 1,680 words. Read it correctly: the done-for-you angle is NOT new — the 2026-07-12 pass already recorded `our team manages your scheduling end-to-end` on an inner page. What is new is that it has been promoted to the homepage and paired with an Excel-replacement H1, so the message a first-time visitor sees is now the same message as ours. They still publish no price. Their integration H2 is a claim on their own page, NOT verified capability; never cite it as fact. **Aladtec sharpened AWAY from healthcare, which is the useful half.** H1 before: `Automate public safety scheduling for hometown heroes`; after: `Public safety scheduling software built for 24/7 agencies`. Description now names the verticals outright: `Aladtec simplifies 24/7 public safety scheduling for fire, EMS, and law enforcement agencies. Cover every shift and stay audit-ready.` This upgrades the 2026-08-25 finding (live pages carry no healthcare positioning) from an observation to the vendor's own headline. Anywhere we present Aladtec as a healthcare option needs re-reading against this. SmartLinx swapped one customer-story H2; qgenda/shiftwizard/nursegrid moved body text only. Sitemap diff same run: QGenda published 8 new URLs, all enterprise/ambulatory; aladtec.com 403s; shiftwizard.com serves no XML sitemap; smartlinx/onshift/nursegrid unchanged. Pricing sentinels `m7health.com/pricing` and `inhouse.health/pricing` both still 404 — nobody has published a price. | Claude |
+| 2026-09-05 | ShiftWizard Capterra re-verification pass via Playwright (p/178376, default order, pages 1 to 8 walked). Header still 4.4 (723), page stamped "Last updated August 20th, 2026". RELOCATED verbatim: Melissa R. (page 4), Michalina W. (page 6), Erika A. (page 3, previously unconfirmed since 2026-08-14). RELOCATED with truncation caveats: Jennifer C. (page 2; live sentence continues "...fantastic to use for Hospital/clinic use!") and Amanda M. (page 1; live sentence continues "...as a code VS the shift type."). Both quotes now carry an ellipsis-not-period instruction. NOT RELOCATED: Jacob G. (1-star, not on pages 1 to 8; `?rating=1` URL filter ignored by the site); his 2026-08-09 page-verification is still inside the 60-day window. | Claude |
