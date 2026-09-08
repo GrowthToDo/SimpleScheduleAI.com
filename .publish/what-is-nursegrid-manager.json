@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-nursegrid-manager",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-08T04:52:54.833Z",
+      "contentHash": "d1f30c203ea48564f6c2aa9d691510d7423d5c1b7f952a661706ed339a3dfeaf"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-08T04:52:56.339Z",
+      "contentHash": "d1f30c203ea48564f6c2aa9d691510d7423d5c1b7f952a661706ed339a3dfeaf"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-08T04:52:57.512Z",
+      "contentHash": "d1f30c203ea48564f6c2aa9d691510d7423d5c1b7f952a661706ed339a3dfeaf"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-08T04:52:57.547Z",
+      "contentHash": "d1f30c203ea48564f6c2aa9d691510d7423d5c1b7f952a661706ed339a3dfeaf"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-08T04:52:57.699Z",
+      "contentHash": "d1f30c203ea48564f6c2aa9d691510d7423d5c1b7f952a661706ed339a3dfeaf"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-08T04:52:57.699Z",
+      "contentHash": "d1f30c203ea48564f6c2aa9d691510d7423d5c1b7f952a661706ed339a3dfeaf"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-08T04:52:57.702Z",
+      "contentHash": "d1f30c203ea48564f6c2aa9d691510d7423d5c1b7f952a661706ed339a3dfeaf"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-09-08T04:52:00.200Z",
+      "contentHash": "14fd327b986d8715fa8c7a062b60c174995c55f4856c098f16f5cb7860219e75"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "verifier",
+      "setAt": "2026-09-08T04:52:53.913Z",
+      "contentHash": "14fd327b986d8715fa8c7a062b60c174995c55f4856c098f16f5cb7860219e75"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-09-08T04:52:54.058Z",
+      "contentHash": "14fd327b986d8715fa8c7a062b60c174995c55f4856c098f16f5cb7860219e75"
+    }
+  },
+  "overrides": []
+}

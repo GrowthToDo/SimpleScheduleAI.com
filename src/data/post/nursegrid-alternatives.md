@@ -55,7 +55,7 @@ This guide compares 6 alternatives for a Critical Access Hospital that needs nur
 
 For a 25-bed Critical Access Hospital, the best NurseGrid alternatives are tools that cover the manager side of scheduling rather than only the nurse-facing app. ShiftWizard is the strongest self-serve hospital-nursing fit, TCP Scheduling is the more management-capable platform path, and SimpleScheduleAI is the managed-service option when the goal is removing the scheduling work rather than buying a better tool to do it yourself.
 
-NurseGrid is a scheduling tool built primarily for nurses. Its strongest feature is the nurse-facing mobile experience: nurses view schedules, manage availability, and request shift trades through a mobile app. It is lighter-weight than enterprise scheduling platforms and faster to get nurses using. NurseGrid is owned by [HealthStream](https://www.healthstream.com). For clinics with simple scheduling needs and no inpatient CMS obligations, NurseGrid works well as a communication layer.
+NurseGrid is a scheduling tool built primarily for nurses, with a paid manager tier reviewed in [what NurseGrid Manager does and costs](/blog/what-is-nursegrid-manager). Its strongest feature is the nurse-facing mobile experience: nurses view schedules, manage availability, and request shift trades through a mobile app. It is lighter-weight than enterprise scheduling platforms and faster to get nurses using. NurseGrid is owned by [HealthStream](https://www.healthstream.com). For clinics with simple scheduling needs and no inpatient CMS obligations, NurseGrid works well as a communication layer.
 
 The questions that matter when a Critical Access Hospital evaluates a switch are operational fit: how much weekly capacity does your nurse manager have to build and maintain schedules; what compliance capabilities does your facility actually need for CMS surveys; and whether the manager-side workflow holds up at your specific scale and on the devices your staff carry.
 
@@ -468,7 +468,7 @@ The core difference is scope and operating model. NurseGrid is a self-serve, nur
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Schedule construction</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Manager builds (desktop login)</td>
-        <td class="py-3 text-primary">3 drafts delivered in 48 hrs</td>
+        <td class="py-3 text-primary">Three scored drafts delivered every cycle</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">CMS §485.635 documentation</td>

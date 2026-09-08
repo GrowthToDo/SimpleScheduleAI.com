@@ -216,9 +216,9 @@ NurseGrid Manager is a scheduling platform designed specifically for nurses. The
 - Credential enforcement at the shift level is not automatic; the manager verifies coverage during review
 - Healthcare overtime configuration should be verified against your FLSA setup, and survey documentation stays manual
 
-**Verdict:** The strongest nurse-facing app in this list. The manager side now lives on desktop, and the compliance and credential layers remain the manager's job. For a deeper comparison, see [NurseGrid alternatives](/blog/nursegrid-alternatives).
+**Verdict:** The strongest nurse-facing app in this list. The manager side now lives on desktop, and the compliance and credential layers remain the manager's job. For what the manager tier documents on coverage alerts and callouts, see [what NurseGrid Manager does](/blog/what-is-nursegrid-manager); for a deeper comparison, see [NurseGrid alternatives](/blog/nursegrid-alternatives).
 
-**Cost:** Contact for pricing.
+**Cost:** $5 per staff member per month, published on the vendor page ("Got 25 staff? That's $125/month."). Nurse app free.
 
 ### 3. [Aladtec](https://www.aladtec.com)
 

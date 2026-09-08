@@ -827,5 +827,13 @@
     "primaryKeyword": "critical access hospitals in texas",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Topic 17, published 2026-09-04. Data-asset post: all 92 Texas CAHs with beds and certification year, from the Flex Monitoring Team list the founder supplied (source CSV committed at docs/seo/data/tx-cah-flexmonitoring-2026-09-04.csv). Competition index 2, the lowest in the 2026-09 research set; we ranked ~22.6 with no dedicated page before this. SOURCING WARNING for any refresh: every authoritative list is unreachable from our environment. All .texas.gov hosts fail DNS, and data.cms.gov, flexmonitoring.org and tha.org 403 both curl and headless Chromium, so a refresh needs a human to fetch the file. COUNT GUARDRAIL: this list has 92 while RHIhub shows 93; state both with dates, never silently resolve the gap. See the facts-dossier entry for the verified statistics."
+  },
+  {
+    "slug": "what-is-nursegrid-manager",
+    "type": "post",
+    "url": "/blog/what-is-nursegrid-manager",
+    "primaryKeyword": "nursegrid manager",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Topic 18 (capability-question format), first vendor, published 2026-09-08. Primary keyword 'nursegrid manager' 1,000/mo, competition index 2, CPC $15 (DataForSEO 2026-09-08); 'nursegrid' brand 5,400/mo; 'is nursegrid free' and 'does nursegrid cost money' are the PAA/related queries the pricing capsule answers. Differentiated from nursegrid-alternatives (switcher intent) by capability/definition intent. Vendor chosen over QGenda/SmartLinx/UKG because NurseGrid is the only one with a public help center (evidence-asymmetry rule), names critical access hospitals in its positioning, and publishes pricing. Every capability answer is a verbatim vendor quote; absences are written as 'not documented', never 'does not have'. Format sibling: shiftwizard-vs-managed-service."
   }
 ]

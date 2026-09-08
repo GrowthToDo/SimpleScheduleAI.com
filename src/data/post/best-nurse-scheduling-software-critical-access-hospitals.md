@@ -268,7 +268,7 @@ ShiftWizard speaks hospital nursing natively, but it is still a self-serve platf
 
 <img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Nursegrid.webp" alt="NurseGrid nurse-facing scheduling app" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-NurseGrid, owned by HealthStream, holds 4.2/5 on Capterra (13 reviews; small sample). It is built primarily as a nurse-facing mobile app for viewing schedules, setting availability, and picking up open shifts, with a manager tier that adds unit-level oversight. Staff adoption tends to be high because nurses use the app on their own.
+NurseGrid, owned by HealthStream, holds 4.2/5 on Capterra (13 reviews; small sample). It is built primarily as a nurse-facing mobile app for viewing schedules, setting availability, and picking up open shifts, with a manager tier that adds unit-level oversight (reviewed in [what NurseGrid Manager does and costs](/blog/what-is-nursegrid-manager)). Staff adoption tends to be high because nurses use the app on their own.
 
 > "Ease of loading schedules and posting open shifts."
 >
