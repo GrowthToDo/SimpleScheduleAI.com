@@ -5,7 +5,8 @@ author: 'Pradeep Pandey'
 title: 'What Is NurseGrid Manager? Pricing, Coverage Alerts and Callouts Reviewed (2026)'
 excerpt: >
   NurseGrid Manager costs $5 per staff member a month and turns a cell red when a position is short before you publish. Ranking a callout replacement and keeping the weekend count fair are still the nurse manager's job.
-image: https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: ~/assets/images/pool/phone-tree-01.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: comparison
 tags:
@@ -49,11 +50,11 @@ Your nurses may already keep their shifts in the free NurseGrid app. The schedul
 
 NurseGrid Manager is the department scheduling tool that sits behind the NurseGrid nurse app. The nurse manager builds and posts the schedule from a browser, and each nurse sees her shifts in the free app on her phone. NurseGrid is owned by [HealthStream](https://www.healthstream.com/career-network/nursegrid). The vendor positions the Manager tier (its name for the paid manager version) for "teams with 250 staff or fewer" and lists critical access hospitals first among the examples ([nursegrid.com](https://nursegrid.com/for-organizations/nursegrid-manager/)).
 
-<img src="/images/blog/nursegrid-alternatives/NurseGrid.webp" alt="NurseGrid Manager nurse scheduling tool with the staff-facing mobile app" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/what-is-nursegrid-manager/NurseGrid.webp" alt="NurseGrid Manager nurse scheduling tool with the staff-facing mobile app" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 The two halves matter for what follows. The nurse app is where NurseGrid started, and it is the half most nurses know: a shift calendar, a view of who else is working, and shift swaps. The Manager tier is the hospital's half. The vendor describes the link between them in one line: "Managers schedule, staff gets notified in the mobile app. Staff can self-schedule, pick shifts, and stay updated through their Nursegrid app."
 
-That line also says who does the work. NurseGrid Manager is a tool the manager runs herself. The hospital sets the coverage requirements, the manager builds each draft, and the tool shows her where the draft is short. Nothing builds the schedule for her. Whether that works at a 25-bed hospital depends on whether the manager has the hours, the same question this site asked of [ShiftWizard](/blog/shiftwizard-vs-managed-service).
+That line also says who does the work. NurseGrid Manager is a tool the manager runs herself. The hospital sets the coverage requirements, the manager builds each draft, and the tool shows her where the draft is short. Nothing builds the schedule for her. Whether that works at a 25-bed hospital comes down to one thing: whether the nurse manager has those hours every week. The same question decides whether [ShiftWizard](/blog/shiftwizard-vs-managed-service) is worth buying, and it matters more than any feature list.
 
 ## How Much Does NurseGrid Manager Cost, and Is the NurseGrid App Free?
 
@@ -258,11 +259,11 @@ Five questions settle whether NurseGrid Manager can be the hospital's only sched
 4. **Post a schedule with a red cell still showing.** The help center says the warning does not block posting. Confirm that, and decide whether a warning is enough for your unit.
 5. **Edit a shift from a phone.** Reviewers report the manager app was removed in 2024. Ask what a manager can do from her phone today, and try it on an Android phone if your staff carry them.
 
-The same five questions, put to SimpleScheduleAI, get these answers. Charge coverage is a rule configured at onboarding, and a draft that leaves a shift without a charge nurse is fixed before it is sent. The callout shortlist is ranked, straight-time first. Per-nurse weekend, night and holiday counts are sent on request, counted from the schedules the service built. A draft that breaks a rule is not the one delivered. Nothing is edited on a phone, because the manager approves by email and the service makes the change.
-
 ## How Does SimpleScheduleAI Compare to NurseGrid Manager?
 
 SimpleScheduleAI is AI-native nurse scheduling software, delivered as a service: the AI builds the schedule, a scheduling team checks it, the nurse manager approves. In practice that means the hospital sends its roster and rules once, and a finished schedule comes back each cycle for the manager to approve by email. It is built for Texas critical access hospitals. The difference from NurseGrid Manager is who builds the schedule. With NurseGrid Manager the nurse manager builds it and the tool shows her where it is short. With SimpleScheduleAI the schedule arrives built, and the manager's weekly job is 1 to 2 hours of review.
+
+Put the five demo questions above to SimpleScheduleAI and the answers are these. Charge coverage is a rule configured at onboarding, and a draft that leaves a shift without a charge nurse is fixed before it is sent. The callout shortlist is ranked, straight-time first. Per-nurse weekend, night and holiday counts are sent on request, counted from the schedules the service built. A draft that breaks a rule is not the one delivered. Nothing is edited on a phone, because the manager approves by email and the service makes the change.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
