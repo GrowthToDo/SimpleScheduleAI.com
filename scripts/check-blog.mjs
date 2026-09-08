@@ -1446,6 +1446,25 @@ function check(file) {
     }
   }
 
+  // K2. In-body blog images must live in THIS post's own folder.
+  //     Convention (blog-post-template.mdx): public/images/blog/<slug>/<file>.
+  //     A src pointing at another post's folder renders that post's exact
+  //     image file. That is what the founder saw on what-is-nursegrid-manager
+  //     2026-09-08: its NurseGrid screenshot was served straight out of
+  //     /images/blog/nursegrid-alternatives/. The featured-image checks above
+  //     only look at the hero, so nothing caught it. The corpus was at zero
+  //     cross-slug refs across 151 in-body images when this check landed.
+  lines.forEach((line, i) => {
+    const m = /<img[^>]+src="(\/images\/blog\/([^/"]+)\/[^"]+)"/.exec(line);
+    if (m && m[2] !== selfSlug) {
+      fail(
+        `In-body image "${m[1]}" points at another post's folder — copy it to public/images/blog/${selfSlug}/ and reference that`,
+        i + 1,
+        m[1]
+      );
+    }
+  });
+
   // K. Dark-mode variants on tables. For each <table>...</table> region, if any
   //    non-dark COLOR utility of a given prefix (bg-/text-/border-) appears, a
   //    matching dark: utility of the same prefix must appear somewhere in that
