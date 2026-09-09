@@ -320,6 +320,8 @@ A representative positive review:
 
 Stay with ShiftWizard when the nurse manager or a designated scheduling coordinator has 4-6 hours per week of protected scheduling time and actively uses the platform features. ShiftWizard is worth keeping when hospital-specific capabilities are working well, the primary pain point is not compliance documentation or overtime calculation burden, and staff-facing mobile shift trading is a hard requirement that a managed service cannot replace.
 
+If the decision is still open between ShiftWizard and QGenda rather than settled, our [comparison of who each product is built for](/blog/qgenda-vs-shiftwizard-vs-simplescheduleai) covers that head-to-head choice.
+
 ShiftWizard is worth keeping if:
 
 - The nurse manager or a designated scheduling coordinator has 4-6 hours per week for scheduling administration and actively uses the platform features

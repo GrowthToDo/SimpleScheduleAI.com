@@ -291,6 +291,15 @@ Nurse API access is an explicit ordered allow-list in `src/lib/auth/roles.ts` (`
 | **SHIPPED** | **Full roster export to Excel** — `GET /api/import` returns the current Staff, Units, Holidays, Census Bands, and Staff Leave data as a 5-sheet workbook (PRN availability is summarised back into a day pattern such as "Mon, Wed, Fri"). It falls back to a bundled sample workbook only when the roster is empty. Round-trips into the import template, so a customer's data is not locked in. | `src/app/api/import/route.ts` — `GET()` at line 674, `exportCurrentData()` at line 734, 5 × `book_append_sheet` |
 | **PARTIAL** | That export is **mislabelled in the UI**: the only button that calls it says "Download Template (.xlsx)". A manager with a populated roster gets their live data and may believe it is a blank template. `RULES_SPECIFICATION.md` §11.5 describes a separate "Export Data" button on `/setup` that does not exist. | `src/app/setup/page.tsx`; `src/components/layout/sidebar.tsx` (nav label "Import / Export") |
 
+**PDF is a SERVICE deliverable, not a code export. Read this before flagging "PDF" in copy.**
+No PDF writer exists in the repo; every export above is Excel or CSV. That is a fact about the
+SOFTWARE. It does NOT make "you get a PDF and Excel file by Thursday" an overclaim, because that is
+the canonical SERVICE-mode line in `docs/seo/positioning-registry.md` (`delivery` row), it is live on
+the site today, and section 1b of this document says a service capability is claimable when our team
+does it as part of the routine. Two separate review passes (2026-09-08 and 2026-09-09) flagged the
+word "PDF" in blog copy as fabricated by reading this section alone. Both were false positives. In
+PRODUCT-mode copy, describe the Excel and CSV exports above; in SERVICE-mode copy, the registry wins.
+
 ### 3.8 Reporting
 
 | Status | Capability | Evidence |

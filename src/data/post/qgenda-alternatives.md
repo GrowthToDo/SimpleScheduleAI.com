@@ -322,7 +322,7 @@ NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGr
 
 ## When to Stay with QGenda?
 
-Stay with QGenda when your facility has physician scheduling requirements that no nursing-only platform can handle, when the CAH operates under an enterprise health-system contract that covers QGenda at the system level, or when the implementation is fully configured and functioning for your specific workflows. The switching cost is real: new configuration, retraining, and a parallel-run period. If QGenda is working, that cost rarely pays off unless the nurse manager's scheduling burden is unsustainable.
+Stay with QGenda when your facility has physician scheduling requirements that no nursing-only platform can handle, when the CAH operates under an enterprise health-system contract that covers QGenda at the system level, or when the implementation is fully configured and functioning for your specific workflows. The switching cost is real: new configuration, retraining, and a parallel-run period. If you have not decided yet and are weighing QGenda against ShiftWizard, our [three-way comparison of what each one is built for](/blog/qgenda-vs-shiftwizard-vs-simplescheduleai) sets them side by side before any switch. If QGenda is working, that cost rarely pays off unless the nurse manager's scheduling burden is unsustainable.
 
 QGenda is worth keeping in four situations. If any of these describes your hospital, the rest of this guide is not for you.
 

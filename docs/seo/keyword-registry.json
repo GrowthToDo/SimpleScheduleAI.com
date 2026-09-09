@@ -835,5 +835,13 @@
     "primaryKeyword": "nursegrid manager",
     "pillar": "/nurse-scheduling-software",
     "note": "Topic 18 (capability-question format), first vendor, published 2026-09-08. Primary keyword 'nursegrid manager' 1,000/mo, competition index 2, CPC $15 (DataForSEO 2026-09-08); 'nursegrid' brand 5,400/mo; 'is nursegrid free' and 'does nursegrid cost money' are the PAA/related queries the pricing capsule answers. Differentiated from nursegrid-alternatives (switcher intent) by capability/definition intent. Vendor chosen over QGenda/SmartLinx/UKG because NurseGrid is the only one with a public help center (evidence-asymmetry rule), names critical access hospitals in its positioning, and publishes pricing. Every capability answer is a verbatim vendor quote; absences are written as 'not documented', never 'does not have'. Format sibling: shiftwizard-vs-managed-service."
+  },
+  {
+    "slug": "qgenda-vs-shiftwizard-vs-simplescheduleai",
+    "type": "post",
+    "url": "/blog/qgenda-vs-shiftwizard-vs-simplescheduleai",
+    "primaryKeyword": "qgenda vs shiftwizard",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Topic 19, published 2026-09-09. AEO play, not an SEO one: neither 'qgenda vs shiftwizard' nor 'shiftwizard vs kronos' returns volume, but the comparison-question shape is our best-performing GSC query family and the 2026-09-05 citation log shows we are already cited inside the AI Overview for 'how does shiftwizard compare to kronos healthcare' (8th of 8 sources, 71 impressions, pos 4). Follows the MicroConf three-way rules from the queue doc: no feature-for-feature table, each competitor's genuine advantage named (QGenda = provider scheduling and credentialing across specialties; ShiftWizard = census-driven demand and the certified Workday integration), and an explicit who-should-NOT-buy-us section. Differentiated from qgenda-alternatives and shiftwizard-alternatives, which both serve switcher intent ('I am leaving X'); this one serves an undecided head-to-head evaluation. Spine is who each vendor is built for, sourced to their own pages. Sourcing note: qgenda.com 403s some fetchers, and shiftwizard.com 301s to HealthStream (verified by direct request 2026-09-09)."
   }
 ]

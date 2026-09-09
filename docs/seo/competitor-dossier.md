@@ -687,6 +687,24 @@ comes at no additional cost for facilities using the ShiftKey and/or OnShift pla
 credentialing, time tracking, analytics. Customer base skews toward physician group practices
 and larger health systems.
 
+### Corporate-site scale and positioning (verified 2026-09-09)
+
+- Homepage headline "Optimize Your Care Team", subhead "Healthcare Workforce Management Redefined".
+  Scale claims, verbatim: "4,500+ customers", "850,000+ physicians, nurses, and staff",
+  "100+ healthcare enterprise sites with end-to-end presence" (qgenda.com).
+- Nurse and staff page sells "inpatient and ambulatory settings"
+  (qgenda.com/nurse-and-staff-scheduling-software/).
+- **Use the FULL six-segment list when arguing that QGenda does not target small or rural hospitals.**
+  The "Who We Serve" menu names: Academic Medical Centers, Federal, Hospitals & Health Systems,
+  International, National Practice Groups, Private Practices. Quoting only three of the six and then
+  saying rural "appears nowhere in that list" is an argument by omission; a review caught exactly
+  that in a draft on 2026-09-09. The full list makes the point better anyway.
+- **DO NOT USE without verifying:** a "more than 1,200 customers in over 30 medical specialties
+  across 5,000 hospitals" claim circulates via G2 and AVIA snippets. It was NOT found on qgenda.com,
+  and /provider-scheduling-software/ and /provider-scheduling/ both 404 as of 2026-09-09.
+- Environment note: qgenda.com 403s some automated fetchers (Cloudflare). The 2026-08-25 and
+  2026-09-09 readings came through when the fetch succeeded; a 403 is not a contradiction.
+
 ### Charge-scheduling capability, from QGenda's own pages (verified 2026-08-25)
 
 Original product-page research pass. `support.qgenda.com` is login-gated, so marketing pages are
@@ -909,7 +927,36 @@ Product page DOES cover:
 ## ShiftWizard
 
 **Product:** Hospital nurse scheduling platform. Designed specifically for hospital nursing.
-Owned by HealthStream (acquired). Used by 500+ hospital facilities.
+Owned by HealthStream (acquired).
+
+**CAUTION on "500+ hospital facilities":** that figure has lived in this section with NO source URL
+and NO verification date, unlike every other number here. It was NOT relocatable on HealthStream's
+live page on 2026-09-09. Do not cite it until someone verifies it. Use the named customers below
+instead, which are on the vendor's own page.
+
+### Positioning, from HealthStream's own page (verified 2026-09-09)
+
+**shiftwizard.com now 301-redirects to HealthStream**, confirmed by direct request 2026-09-09:
+`https://www.shiftwizard.com` and the bare host both return `301 Moved Permanently` to
+`https://www.healthstream.com/solution/scheduling/nurse-and-staff-scheduling/shiftwizard`. The
+product no longer has a site of its own. (Note for tooling: the HealthStream host 403s some
+automated fetchers, so a blocked fetch is not evidence against the redirect; curl with a browser
+user-agent reproduces it.)
+
+- **Segment — health systems with scale, not single small hospitals.** Verbatim: "multiple locations
+  or departments". Buyer roles named on the page: "CNOs & Nursing Leaders", "CIOs & IT Leaders",
+  "Operations & Workforce Teams", "Department Managers".
+- **Headline / subhead.** Verbatim: "Simply smarter workforce scheduling"; "ShiftWizard™ by
+  HealthStream® helps healthcare organizations reduce labor costs, align schedules with patient
+  demand, and engage staff with tools that are intuitive, mobile, and fully integrated."
+- **Differentiator claim, vendor's own words.** Verbatim: "ShiftWizard is the only healthcare
+  scheduling solution with certified Workday integration." Cite as a HealthStream claim, not as a
+  verified fact about the market.
+- **Named customers on that page:** WakeMed, UF Health, Deaconess Cancer Services, Sandoval Regional
+  Medical Center. All are health systems or larger facilities; no critical access hospital is named.
+- **ATTRIBUTION TRAP: "designed by nurses" is NOT on HealthStream's live page.** It appears in our
+  dossier only inside Jennifer C.'s Capterra review, and in third-party pages. Attribute it to the
+  reviewer, never to the vendor.
 
 **Ratings (Capterra line re-verified live 2026-09-05; G2 line founder-verified 2026-08-14):**
 
@@ -1402,3 +1449,4 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 | 2026-09-01 | Monthly `competitor-watch` run, 14 of 17 watched pages moved. **YouShift homepage rewritten onto our two core messages.** H1 verbatim before: `The Operating System for Healthcare Workforce`; after: `Stop managing your healthcare teams in spreadsheets`. Description before: `AI-powered scheduling, staffing optimization, and workforce intelligence — all in one platform.`; after: `YouShift connects scheduling, time off, time tracking, payroll, and workforce forecasting for healthcare teams, with AI agents helping coordinate the work.` The whole H2 set was replaced, and two of the new ones matter: `Let us build your next schedule.` and `Connected to EHR, payroll, credentialing, and licensing.` All three CTAs were REMOVED (`Schedule a demo`, `Schedule a Demo`, `Start Free Trial` → empty). Body grew 1,320 → 1,680 words. Read it correctly: the done-for-you angle is NOT new — the 2026-07-12 pass already recorded `our team manages your scheduling end-to-end` on an inner page. What is new is that it has been promoted to the homepage and paired with an Excel-replacement H1, so the message a first-time visitor sees is now the same message as ours. They still publish no price. Their integration H2 is a claim on their own page, NOT verified capability; never cite it as fact. **Aladtec sharpened AWAY from healthcare, which is the useful half.** H1 before: `Automate public safety scheduling for hometown heroes`; after: `Public safety scheduling software built for 24/7 agencies`. Description now names the verticals outright: `Aladtec simplifies 24/7 public safety scheduling for fire, EMS, and law enforcement agencies. Cover every shift and stay audit-ready.` This upgrades the 2026-08-25 finding (live pages carry no healthcare positioning) from an observation to the vendor's own headline. Anywhere we present Aladtec as a healthcare option needs re-reading against this. SmartLinx swapped one customer-story H2; qgenda/shiftwizard/nursegrid moved body text only. Sitemap diff same run: QGenda published 8 new URLs, all enterprise/ambulatory; aladtec.com 403s; shiftwizard.com serves no XML sitemap; smartlinx/onshift/nursegrid unchanged. Pricing sentinels `m7health.com/pricing` and `inhouse.health/pricing` both still 404 — nobody has published a price. | Claude |
 | 2026-09-05 | ShiftWizard Capterra re-verification pass via Playwright (p/178376, default order, pages 1 to 8 walked). Header still 4.4 (723), page stamped "Last updated August 20th, 2026". RELOCATED verbatim: Melissa R. (page 4), Michalina W. (page 6), Erika A. (page 3, previously unconfirmed since 2026-08-14). RELOCATED with truncation caveats: Jennifer C. (page 2; live sentence continues "...fantastic to use for Hospital/clinic use!") and Amanda M. (page 1; live sentence continues "...as a code VS the shift type."). Both quotes now carry an ellipsis-not-period instruction. NOT RELOCATED: Jacob G. (1-star, not on pages 1 to 8; `?rating=1` URL filter ignored by the site); his 2026-08-09 page-verification is still inside the 60-day window. | Claude |
 | 2026-09-08 | NurseGrid re-verification for the capability-question post (what-is-nursegrid-manager). Manager page pricing, 250-staff positioning and the manager-to-app workflow line re-confirmed verbatim; NEW: nurse app "100% free" quote and the nurse-app feature list added; help center last-updated date re-confirmed, topic pages are login-gated to fetchers (cite landing URL + topic name). Corrected two live posts: best-nurse-scheduling-app said "Contact for pricing" for NurseGrid Manager (now the published $5 line); nursegrid-alternatives carried a stale "3 drafts delivered in 48 hrs" cell. | Claude |
+| 2026-09-09 | ShiftWizard and QGenda re-verification for the three-way comparison post. NEW: shiftwizard.com 301-redirects to HealthStream (reproduced by direct request); HealthStream page positioning, the four buyer roles, the "only ... certified Workday integration" claim and four named customers recorded verbatim; the undated "500+ hospital facilities" figure flagged as unsourced and quarantined; "designed by nurses" recorded as a REVIEWER line, not vendor copy. QGenda: homepage scale claims recorded; the full six-segment "Who We Serve" list recorded with a warning against quoting a partial list; an unverified 1,200-customers/5,000-hospitals claim quarantined. | Claude |

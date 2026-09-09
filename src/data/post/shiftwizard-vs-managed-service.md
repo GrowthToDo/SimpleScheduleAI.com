@@ -196,7 +196,7 @@ These are typical numbers across the two operating models. Specific products var
 
 ## Where Self-Serve Platforms Fit?
 
-Self-serve platforms fit when the hospital has a designated scheduling coordinator whose primary role includes scheduling administration, when direct real-time control over individual assignments matters operationally, when staff-facing mobile features for shift trading and availability submission are a hard requirement, and when the hospital prefers operational self-sufficiency over a service dependency. If all four conditions apply, a platform like ShiftWizard, Aladtec, or QGenda is the right evaluation category.
+Self-serve platforms fit when the hospital has a designated scheduling coordinator whose primary role includes scheduling administration, when direct real-time control over individual assignments matters operationally, when staff-facing mobile features for shift trading and availability submission are a hard requirement, and when the hospital prefers operational self-sufficiency over a service dependency. If all four conditions apply, a platform like ShiftWizard, Aladtec, or QGenda is the right evaluation category, and our [QGenda and ShiftWizard comparison](/blog/qgenda-vs-shiftwizard-vs-simplescheduleai) covers how those two differ from each other.
 
 Self-serve platforms are the right model when:
 
