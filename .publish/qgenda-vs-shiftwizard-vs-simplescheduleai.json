@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-09T17:21:06.148Z",
+      "checkedAt": "2026-09-09T17:23:47.215Z",
       "contentHash": "a1e7e8d92f18564ddb9d07feca67b24cc908883d70ff8f469fabf92072d944c4"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-09T17:21:07.761Z",
+      "checkedAt": "2026-09-09T17:23:48.669Z",
       "contentHash": "a1e7e8d92f18564ddb9d07feca67b24cc908883d70ff8f469fabf92072d944c4"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-09T17:21:08.748Z",
+      "checkedAt": "2026-09-09T17:23:49.884Z",
       "contentHash": "a1e7e8d92f18564ddb9d07feca67b24cc908883d70ff8f469fabf92072d944c4"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-09T17:21:08.774Z",
+      "checkedAt": "2026-09-09T17:23:49.918Z",
       "contentHash": "a1e7e8d92f18564ddb9d07feca67b24cc908883d70ff8f469fabf92072d944c4"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-09T17:21:08.794Z",
+      "checkedAt": "2026-09-09T17:23:49.937Z",
       "contentHash": "a1e7e8d92f18564ddb9d07feca67b24cc908883d70ff8f469fabf92072d944c4"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-09T17:21:08.794Z",
+      "checkedAt": "2026-09-09T17:23:49.937Z",
       "contentHash": "a1e7e8d92f18564ddb9d07feca67b24cc908883d70ff8f469fabf92072d944c4"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-09T17:21:08.795Z",
+      "checkedAt": "2026-09-09T17:23:49.938Z",
       "contentHash": "a1e7e8d92f18564ddb9d07feca67b24cc908883d70ff8f469fabf92072d944c4"
     }
   },
@@ -62,6 +62,18 @@
       "value": "OK",
       "setBy": "claude",
       "setAt": "2026-09-09T17:20:11.326Z",
+      "contentHash": "f7fbfbbed86cfa75133a27173e2927463244201440ce3baa424cc71bd003a16a"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "claude",
+      "setAt": "2026-09-09T17:23:46.755Z",
+      "contentHash": "f7fbfbbed86cfa75133a27173e2927463244201440ce3baa424cc71bd003a16a"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "claude",
+      "setAt": "2026-09-09T17:23:46.903Z",
       "contentHash": "f7fbfbbed86cfa75133a27173e2927463244201440ce3baa424cc71bd003a16a"
     }
   },
