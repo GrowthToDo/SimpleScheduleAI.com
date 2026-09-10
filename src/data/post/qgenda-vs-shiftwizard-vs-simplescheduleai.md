@@ -85,6 +85,8 @@ That "designed by nurses" line is a reviewer's words, not a claim on HealthStrea
 
 SimpleScheduleAI is AI-native nurse scheduling software, delivered as a service: the AI builds the schedule, a scheduling team checks it, the nurse manager approves. It is built for Critical Access Hospitals in Texas with 25 beds or fewer, where the nurse manager also takes clinical shifts and has no scheduling coordinator to hand the work to.
 
+<img src="/images/blog/qgenda-vs-shiftwizard-vs-simplescheduleai/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling service for Texas Critical Access Hospitals" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+
 The design assumption behind it is narrow on purpose. It assumes nobody at the hospital wants to learn a scheduling platform. The hospital sends its roster as an Excel file, the rules are configured during onboarding, and each cycle a finished schedule arrives for the nurse manager to approve by email. Onboarding takes 3 to 5 business days and the first schedule arrives inside two weeks. After that the manager's weekly scheduling work is 1 to 2 hours of review.
 
 **Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees and no setup fees, with the full breakdown on the [pricing page](/pricing).
