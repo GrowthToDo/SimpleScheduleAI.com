@@ -29,7 +29,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename } from 'node:path';
 import { checkFacts } from './lib/facts-rules.mjs';
 import { checkPositioning } from './lib/positioning-rules.mjs';
-import { overusedFamily } from './lib/image-pool.mjs';
+import { overusedFamily, familyOf } from './lib/image-pool.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const POSTS_DIR = resolve(__dirname, '../src/data/post');
@@ -1428,6 +1428,31 @@ function check(file) {
         // Visually near-duplicate heroes pass the exact-ID check; the family
         // field catches them. WARN (human judges) when the chosen image's
         // family is already the hero family of 3+ LIVE posts.
+        // A SMALL family is a twin trap the 3+ saturation check cannot see. When a
+        // family has only two members and the other one is already live, the two
+        // images are near-certain visual twins whatever the live count says. That
+        // is exactly how rural-texas-02 shipped as a twin of rural-texas-01 on
+        // 2026-09-09: family live-count was 1, under the saturation threshold, so
+        // nothing fired. Scoped to size <= 2 deliberately; at <= 3 this flags 17
+        // live posts and becomes noise, at <= 2 it flags 2.
+        {
+          const fam = familyOf(pool, id);
+          if (fam) {
+            const famSize = pool.filter((p) => p && p.family === fam).length;
+            if (famSize <= 2) {
+              const liveTwins = siblingImages
+                .filter((s) => s.live && familyOf(pool, s.imageId) === fam)
+                .map((s) => s.slug);
+              if (liveTwins.length > 0) {
+                warn(
+                  `Image family "${fam}" has only ${famSize} images and ${liveTwins.join(', ')} already uses one — these read as the same picture; pick another family`,
+                  0,
+                  ''
+                );
+              }
+            }
+          }
+        }
         const over = overusedFamily(pool, id, siblingImages, 3);
         if (over) {
           warn(
@@ -1464,6 +1489,24 @@ function check(file) {
       );
     }
   });
+
+  // K3. Sources belongs BELOW the FAQ (checklist: "above bio, below FAQ"). The
+  //     dominant live convention is Our Take > What to Do > FAQ > Sources (50
+  //     posts) against 6 using any other order; the founder confirmed it on
+  //     2026-09-10 after a post shipped with Sources ahead of Our Take. WARN, not
+  //     FAIL: 22 of the 87 live posts carrying both sections still have the old
+  //     order, so a hard gate would block unrelated edits to those files.
+  {
+    const iSrc = bodyText.search(/^## Sources\s*$/m);
+    const iFaq = bodyText.search(/^## Frequently Asked Questions/m);
+    if (iSrc >= 0 && iFaq >= 0 && iSrc < iFaq) {
+      warn(
+        'Sources appears before the FAQ — house order is Our Take, What to Do, FAQ, then Sources (above the author bio)',
+        0,
+        ''
+      );
+    }
+  }
 
   // K. Dark-mode variants on tables. For each <table>...</table> region, if any
   //    non-dark COLOR utility of a given prefix (bg-/text-/border-) appears, a
