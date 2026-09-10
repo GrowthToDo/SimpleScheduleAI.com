@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-10T08:47:19.321Z",
+      "checkedAt": "2026-09-10T08:50:03.206Z",
       "contentHash": "81f9606e405818f97de7d6f2c6ee663a5c9283a582cdcfd22ce21929fc981957"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-10T08:47:21.597Z",
+      "checkedAt": "2026-09-10T08:50:05.187Z",
       "contentHash": "81f9606e405818f97de7d6f2c6ee663a5c9283a582cdcfd22ce21929fc981957"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-10T08:47:23.272Z",
+      "checkedAt": "2026-09-10T08:50:06.669Z",
       "contentHash": "81f9606e405818f97de7d6f2c6ee663a5c9283a582cdcfd22ce21929fc981957"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-10T08:47:23.333Z",
+      "checkedAt": "2026-09-10T08:50:06.739Z",
       "contentHash": "81f9606e405818f97de7d6f2c6ee663a5c9283a582cdcfd22ce21929fc981957"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-10T08:47:23.370Z",
+      "checkedAt": "2026-09-10T08:50:06.799Z",
       "contentHash": "81f9606e405818f97de7d6f2c6ee663a5c9283a582cdcfd22ce21929fc981957"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-10T08:47:23.370Z",
+      "checkedAt": "2026-09-10T08:50:06.799Z",
       "contentHash": "81f9606e405818f97de7d6f2c6ee663a5c9283a582cdcfd22ce21929fc981957"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-10T08:47:23.372Z",
+      "checkedAt": "2026-09-10T08:50:06.801Z",
       "contentHash": "81f9606e405818f97de7d6f2c6ee663a5c9283a582cdcfd22ce21929fc981957"
     }
   },
@@ -67,13 +67,13 @@
     "indexNow": {
       "value": "DONE",
       "setBy": "claude",
-      "setAt": "2026-09-10T08:47:18.585Z",
+      "setAt": "2026-09-10T08:50:02.618Z",
       "contentHash": "0b885f4a19672448938d068902bc6b04fa1a2e3304fdf490df917c2e88a4edb9"
     },
     "gscSitemap": {
       "value": "DONE",
       "setBy": "claude",
-      "setAt": "2026-09-10T08:47:18.791Z",
+      "setAt": "2026-09-10T08:50:02.769Z",
       "contentHash": "0b885f4a19672448938d068902bc6b04fa1a2e3304fdf490df917c2e88a4edb9"
     }
   },
