@@ -5,7 +5,7 @@ author: 'Pradeep Pandey'
 title: 'QGenda vs ShiftWizard vs SimpleScheduleAI: Who Each One Is Built For (2026)'
 excerpt: >
   QGenda schedules providers across an enterprise. ShiftWizard schedules nursing units inside a health system. Neither sells to a hospital with 25 beds and one nurse manager, and their own pages say so.
-image: ~/assets/images/pool/rural-texas-02.webp
+image: ~/assets/images/pool/night-shift-02.webp
 imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: comparison
@@ -23,9 +23,9 @@ metadata:
 
 - QGenda is built for providers at enterprise scale. Its own [corporate site](https://www.qgenda.com/) claims "4,500+ customers" and "850,000+ physicians, nurses, and staff". It names six customer segments, and none of them is rural or small-hospital.
 - ShiftWizard is built for hospital nursing inside a health system. [HealthStream](https://www.healthstream.com/solution/scheduling/nurse-and-staff-scheduling/shiftwizard) describes it for organizations with "multiple locations or departments" and claims it is "the only healthcare scheduling solution with certified Workday integration".
-- Both are quote-based. Across every comparison page and review profile checked in September 2026, the price for both resolves to custom or contact sales. SimpleScheduleAI publishes a flat monthly price.
+- Neither QGenda nor ShiftWizard publishes a price. Both send you to a sales conversation, so you cannot compare cost until the quotes arrive. SimpleScheduleAI publishes a flat monthly price.
 - The three do not differ mainly on features. They differ on who sits down and builds the schedule every week. With QGenda that person is usually a scheduling coordinator. With ShiftWizard it is your nurse manager. With SimpleScheduleAI it is a scheduling team outside the hospital.
-- Two things a 25-bed hospital needs are missing from the whole comparison set: one nurse covering several departments in a single shift, and a plan for the callout at 3 a.m. when nobody is at a desk.
+- Two things that decide a 25-bed schedule go unmentioned in the comparison pages written about these products. One is a single nurse covering several departments in one shift. The other is knowing who to call first when someone rings in sick at 3 a.m.
 - If you schedule physicians, need payroll or Workday integration, or want your nurses swapping shifts in an app, SimpleScheduleAI is the wrong choice and this guide says which of the other two to look at.
 
 ## Table of Contents
@@ -41,13 +41,15 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Most comparisons of these two products are written by someone selling a third one, or by a review site counting stars. This one is written by a vendor too, so read it with that in mind. What it will not do is pretend the other two are bad products. QGenda and ShiftWizard are both good at the job they were built for, and for a hospital with 25 beds and one nurse manager, that job is usually not the one you are hiring for.
+We sell a competing product, so weigh this guide accordingly. What follows still says what each of the other two is good at, because both are good at the job they were built for. The catch for a 25-bed hospital is that their job and yours are not the same one.
 
 ## What Is QGenda Built For?
 
 QGenda is built for scheduling providers across a large healthcare organization. Its [nurse and staff scheduling page](https://www.qgenda.com/nurse-and-staff-scheduling-software/) sells "inpatient and ambulatory settings". The [corporate site](https://www.qgenda.com/) leads with "Healthcare Workforce Management Redefined" and claims "4,500+ customers" and "850,000+ physicians, nurses, and staff". Its "Who We Serve" menu lists six segments in full: academic medical centers, federal, hospitals and health systems, international, national practice groups, and private practices. Rural and small-hospital buyers are not among them.
 
-**What QGenda genuinely does better.** It puts physician and provider scheduling, on-call rotations, and credentialing in one platform, across many specialties and many sites. If your organization schedules anesthesia one way, hospitalists another, and nursing a third, QGenda handles all three in a single system. SimpleScheduleAI cannot do this at all: it schedules registered nurses, licensed practical nurses, and certified nursing assistants, and has no concept of a physician, a nurse practitioner, or a physician assistant.
+<img src="/images/blog/qgenda-vs-shiftwizard-vs-simplescheduleai/QGenda.webp" alt="QGenda provider and staff scheduling platform for health systems" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+
+**What QGenda genuinely does better.** It puts physician and provider scheduling, on-call rotations, and credentialing in one platform, across many specialties and many sites. If your organization schedules anesthesia one way, hospitalists another, and nursing a third, QGenda handles all three in a single system.
 
 **Where it gets hard for a small hospital.** QGenda holds 4.2 out of 5 across 68 reviews on [Capterra](https://www.capterra.com/p/90628/QGenda/reviews/). In the hospital-context reviews, the recurring theme is setup effort rather than the product itself.
 
@@ -59,13 +61,15 @@ QGenda is built for scheduling providers across a large healthcare organization.
 >
 > Courtney D., Manager of Employee and Physician Relations, May 10, 2024, Capterra
 
-That second quote is the one to sit with. A scheduling coordinator at a facility with staff to spare can afford to switch the automation off and carry on by hand. At a hospital where the nurse manager is also taking clinical shifts, the automation is the entire reason for buying.
+That second quote is the one to focus on. A scheduling coordinator at a facility with staff to spare can afford to switch the automation off and carry on by hand. At a hospital where the nurse manager is also taking clinical shifts, the automation is the entire reason for buying.
 
 ## What Is ShiftWizard Built For?
 
 ShiftWizard is built for nursing inside a health system. [HealthStream](https://www.healthstream.com/solution/scheduling/nurse-and-staff-scheduling/shiftwizard), which owns it, positions it for organizations with "multiple locations or departments". It names its buyers as "CNOs & Nursing Leaders", "CIOs & IT Leaders", "Operations & Workforce Teams" and "Department Managers". Its customer names on that page are WakeMed, UF Health, Deaconess Cancer Services and Sandoval Regional Medical Center. Worth knowing before you search for it: shiftwizard.com now redirects to a HealthStream page, so the product no longer has a site of its own.
 
-**What ShiftWizard genuinely does better.** Two things stand out and neither is marketing fluff. It ties scheduling to patient demand, so a unit's staffing follows census rather than a fixed pattern. HealthStream also claims it is "the only healthcare scheduling solution with certified Workday integration". Say your hospital runs Workday or UKG, the two big payroll and workforce systems, and wants the schedule to reach payroll without anyone retyping it. That is a real advantage, and one SimpleScheduleAI does not offer at all. There is no payroll integration, no link to an HR system, and no time clock.
+<img src="/images/blog/qgenda-vs-shiftwizard-vs-simplescheduleai/ShiftWizard.webp" alt="ShiftWizard by HealthStream hospital nurse scheduling platform" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+
+**What ShiftWizard genuinely does better.** Two things, and both are real. It ties scheduling to patient demand, so a unit's staffing follows census rather than a fixed pattern. HealthStream also claims it is "the only healthcare scheduling solution with certified Workday integration". Say your hospital runs Workday or UKG, the two big payroll and workforce systems, and wants the schedule to reach payroll without anyone retyping it. For a hospital running either one, that is a real advantage.
 
 It also has the deepest review base of the three by a wide margin. It holds 4.4 out of 5 across 723 reviews on [Capterra](https://www.capterra.com/p/178376/ShiftWizard/reviews/), the software review site nurses and administrators post to, with more than 88% rating it four stars or higher. Nurses like the app.
 
@@ -83,9 +87,9 @@ SimpleScheduleAI is AI-native nurse scheduling software, delivered as a service:
 
 The design assumption behind it is narrow on purpose. It assumes nobody at the hospital wants to learn a scheduling platform. The hospital sends its roster as an Excel file, the rules are configured during onboarding, and each cycle a finished schedule arrives for the nurse manager to approve by email. Onboarding takes 3 to 5 business days and the first schedule arrives inside two weeks. After that the manager's weekly scheduling work is 1 to 2 hours of review.
 
-**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees. See [pricing](/pricing).
+**Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees and no setup fees, with the full breakdown on the [pricing page](/pricing).
 
-Neither QGenda nor ShiftWizard publishes a price. Across every comparison page, aggregator profile and vendor page checked for this guide in September 2026, both resolve to custom pricing or a sales conversation. That is not a criticism, it is how enterprise software is sold. It does mean the only way to compare cost is to get both quotes and add your own staff time to each.
+Neither QGenda nor ShiftWizard publishes a price. Every vendor and review page checked for this guide in September 2026 sent you to a sales conversation instead. That is normal for enterprise software. It does mean you cannot compare the three on cost until you have both quotes in hand, with your own staff time added to each.
 
 ## Who Actually Builds the Schedule Each Week?
 
@@ -152,13 +156,13 @@ The row that decides this is the first one, "who builds each schedule". Two of t
 
 ## What Does a 25-Bed Hospital Need That Neither Enterprise Tool Targets?
 
-Two needs come up in every conversation with a small-hospital nurse manager and appear in none of the comparison pages written about these products.
+Two needs come up in every conversation with a small-hospital nurse manager, and the comparison pages written about these products skip both.
 
 **One nurse covering several departments in one shift.** Enterprise scheduling assumes discrete units with their own staffing patterns, because at 300 beds that is true. At 25 beds the same nurse may cover med-surg, take emergency department call, and watch a swing bed on the same night. A scheduler built around unit-by-unit coverage models that badly, and the workaround is a spreadsheet next to the software.
 
 **A plan for the callout at 3 a.m.** Every product here will show you an open shift. The question at a small hospital is which of the four people who could cover it you should call first. That depends on who is near overtime, who is signed off for the unit, and who can take charge if the nurse who called out was holding it. Working that out by hand at 3 a.m., on a phone, is where the hours go. Our own interviews with more than 30 nurse managers put scheduling at 8 to 12 hours a week when built by hand, with covering callouts the largest single piece ([how that week breaks down](/blog/nurse-manager-scheduling-time-breakdown)).
 
-SimpleScheduleAI answers the second one directly. A callout produces a ranked shortlist of replacements with the reason for each name, ordered so nurses who are not yet into overtime come before those who are, and agency last. The nurse manager still picks up the phone. What the shortlist takes away is the guesswork about who to try first.
+SimpleScheduleAI is built around both. The rules for each of your units are mapped at onboarding, and the engine counts a nurse working outside her home unit as a cost rather than treating each department as its own separate roster. And a callout produces a ranked shortlist of replacements with the reason for each name, ordered so nurses who are not yet into overtime come before those who are, and agency last. The nurse manager still picks up the phone. What the shortlist takes away is the guesswork about who to try first.
 
 ## Who Should Not Buy SimpleScheduleAI?
 
@@ -223,7 +227,7 @@ If any of those five describe your hospital, a SimpleScheduleAI demo wastes your
 Six questions separate these products faster than any feature list. Ask each vendor the same six, on a schedule that looks like yours, and write the answers down.
 
 1. **Who builds the schedule in week six?** Not during setup, when the vendor is still helping. Ask who sits down and builds it once the vendor team has moved on, and how long it takes them.
-2. **Show me one nurse covering three departments in one shift.** Ask them to model it live rather than describe it. This is where unit-based products get awkward, and where you learn how much manual work your hospital inherits.
+2. **Show me one nurse covering three departments in one shift.** Ask to see it built on screen, not described. Products designed around separate units struggle here, and watching them try shows you how much of the work lands back on your desk.
 3. **A nurse holding charge calls out at 3 a.m. What does the system tell me?** Listen for whether it produces a list or an order. A list of available people is not the same as knowing who to call first.
 4. **What is the total first-year cost, including our staff time?** License plus setup plus the weekly hours the tool needs from your team, at her hourly cost to the hospital including benefits. Both enterprise vendors quote custom prices, so this is the only comparable number you will get.
 5. **How long until a schedule we can actually post?** G2's reviewers put ShiftWizard's average implementation at 3 months. Ask each vendor for their own number and for a reference customer at your bed count who hit it.
@@ -239,26 +243,6 @@ Here are SimpleScheduleAI's answers to the same six, in the same order.
 6. Escalation runs to a named person with a written response time, not a ticket queue.
 
 Where the honest answer is no, the section above on who should not buy this says so.
-
-## Sources
-
-[1] QGenda, Nurse & Staff Scheduling Software: "inpatient and ambulatory settings"; facility types named. [qgenda.com](https://www.qgenda.com/nurse-and-staff-scheduling-software/). Verified 2026-09-09.
-
-[2] QGenda corporate site: "Healthcare Workforce Management Redefined", "4,500+ customers", "850,000+ physicians, nurses, and staff". [qgenda.com](https://www.qgenda.com/). Verified 2026-09-09.
-
-[3] QGenda ratings and reviewer quotes: 4.2/5 across 68 reviews. [capterra.com](https://www.capterra.com/p/90628/QGenda/reviews/). Verified 2026-08-13.
-
-[4] ShiftWizard by HealthStream product page: "multiple locations or departments", named buyer roles, "the only healthcare scheduling solution with certified Workday integration", named customers. [healthstream.com](https://www.healthstream.com/solution/scheduling/nurse-and-staff-scheduling/shiftwizard). Verified 2026-09-09, including the shiftwizard.com redirect.
-
-[5] ShiftWizard ratings and reviewer quote: 4.4/5 across 723 reviews, 88%+ at four stars or higher. [capterra.com](https://www.capterra.com/p/178376/ShiftWizard/reviews/). Re-verified 2026-09-05.
-
-[6] G2 lists ShiftWizard's average time to implement as 3 months, averaged from its own reviewers. Page-verified 2026-08-09, re-confirmed 2026-08-14.
-
-[7] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR, Title 42, Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
-
-[8] FLSA overtime for hospitals and residential care. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
-
-**Methodology note:** Vendor capability and positioning statements are quoted from each vendor's own live pages on the verification dates above. Ratings and reviewer quotes come from Capterra listings on their stated dates. Where a vendor's page does not describe a capability, this guide says it is not published rather than claiming the feature is absent. Two aggregator comparison pages (G2 and AVIA Marketplace) block automated access and were not used as sources. Vendors change products and prices; confirm with each before deciding.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 border-l-4 border-amber-500 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">Our Take</p>
@@ -311,6 +295,26 @@ SimpleScheduleAI checks each nurse's scheduled hours against the 40-hour federal
 **What if we want the enterprise tool and cannot staff it?**
 
 That is the most common answer at 25 beds, and it is worth naming out loud in the buying meeting. The options are hiring a scheduling coordinator, accepting that the nurse manager loses those hours every week, or moving the building work outside the hospital. The [nurse scheduling software](/nurse-scheduling-software) hub compares those three paths, and [AI nurse scheduling](/ai-nurse-scheduling) covers how an AI-built draft is produced and checked.
+
+## Sources
+
+[1] QGenda, Nurse & Staff Scheduling Software: "inpatient and ambulatory settings"; facility types named. [qgenda.com](https://www.qgenda.com/nurse-and-staff-scheduling-software/). Verified 2026-09-09.
+
+[2] QGenda corporate site: "Healthcare Workforce Management Redefined", "4,500+ customers", "850,000+ physicians, nurses, and staff". [qgenda.com](https://www.qgenda.com/). Verified 2026-09-09.
+
+[3] QGenda ratings and reviewer quotes: 4.2/5 across 68 reviews. [capterra.com](https://www.capterra.com/p/90628/QGenda/reviews/). Verified 2026-08-13.
+
+[4] ShiftWizard by HealthStream product page: "multiple locations or departments", named buyer roles, "the only healthcare scheduling solution with certified Workday integration", named customers. [healthstream.com](https://www.healthstream.com/solution/scheduling/nurse-and-staff-scheduling/shiftwizard). Verified 2026-09-09, including the shiftwizard.com redirect.
+
+[5] ShiftWizard ratings and reviewer quote: 4.4/5 across 723 reviews, 88%+ at four stars or higher. [capterra.com](https://www.capterra.com/p/178376/ShiftWizard/reviews/). Re-verified 2026-09-05.
+
+[6] G2 lists ShiftWizard's average time to implement as 3 months, averaged from its own reviewers. Page-verified 2026-08-09, re-confirmed 2026-08-14.
+
+[7] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR, Title 42, Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+
+[8] FLSA overtime for hospitals and residential care. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+**Methodology note:** Vendor capability and positioning statements are quoted from each vendor's own live pages on the verification dates above. Ratings and reviewer quotes come from Capterra listings on their stated dates. Where a vendor's page does not describe a capability, this guide says it is not published rather than claiming the feature is absent. Two aggregator comparison pages (G2 and AVIA Marketplace) block automated access and were not used as sources. Vendors change products and prices; confirm with each before deciding.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for Critical Access Hospitals and other small rural facilities._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
