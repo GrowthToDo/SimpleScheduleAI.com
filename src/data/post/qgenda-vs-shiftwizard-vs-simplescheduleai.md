@@ -5,7 +5,7 @@ author: 'Pradeep Pandey'
 title: 'QGenda vs ShiftWizard vs SimpleScheduleAI: Who Each One Is Built For (2026)'
 excerpt: >
   QGenda schedules providers across an enterprise. ShiftWizard schedules nursing units inside a health system. Neither sells to a hospital with 25 beds and one nurse manager, and their own pages say so.
-image: ~/assets/images/pool/night-shift-02.webp
+image: ~/assets/images/pool/payroll-desk-03.webp
 imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: comparison
