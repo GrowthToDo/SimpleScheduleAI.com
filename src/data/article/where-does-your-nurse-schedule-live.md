@@ -5,9 +5,9 @@ updateDate: 2026-09-12T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Where Does Your Nurse Schedule Live, and Who Can See It?'
 excerpt: >
-  A nurse schedule is the one routine document that pins a named person to a place and an hour,
-  weeks ahead. Most hospitals treat it as an operations file and check it for patient data, which is
-  the wrong test. Here is where the copies live at a small hospital, and who can see each one.
+  A nurse schedule names a person, a place and an hour, weeks ahead. When a scheduling tool is in
+  the news, hospitals ask whether patient records got out. Here none did, and the schedule still put
+  the staff on it at risk. Where do the copies of yours live, and who can see each one?
 image: ~/assets/images/pool/phone-tree-02.webp
 imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
@@ -27,7 +27,7 @@ metadata:
 - The [Philadelphia Inquirer](https://www.inquirer.com/health/qgenda-schedule-privacy-links-cell-numbers-20260831.html) found that about fifty health systems had web pages showing clinician schedules, and in some cases cell phone numbers, reachable without a login. Penn Medicine, Johns Hopkins Medicine and the University of California San Francisco were among them.
 - No patient information was involved. The platform in question does not hold any. That is exactly why the usual privacy reflex misses what is at stake.
 - A schedule states where a named person will physically be, at what hour, weeks in advance. Security and privacy experts told the Inquirer that combining that with a cell number is what creates the risk.
-- How the pages became public has not been established, and the Inquirer is explicit about that. No harm to any worker has been reported. The documented facts are that a share-without-login feature exists and that the settings sat as they sat.
+- How the pages became public has not been established, and the Inquirer is explicit about that. No harm to any worker has been reported. What is documented is that the tool has a feature for sharing a schedule without a login, and that these pages were reachable without one.
 - At least ten health systems removed the public link or added a password after being contacted by reporters.
 - A 25-bed hospital rarely has one schedule. It has a posted copy, a texted copy, an emailed copy and a file on a shared drive, and each copy answers "who can see it" differently.
 
@@ -42,7 +42,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-A nurse manager reading the August coverage would have reached for the wrong test. The reflex is to check whether patient data moved, find that it did not, and close the ticket. None moved, and the exposure still mattered, because of what a schedule says about the people on it.
+When this story broke in August, the natural first question was whether any patient records had been exposed. None had been. That answer is true, and it lets a hospital stop too early, because the people a schedule exposes are the staff on it rather than the patients.
 
 So the useful question is not whether a large health system got caught out. It is where the copies of your own schedule come to rest, and who can see each one.
 
@@ -50,9 +50,9 @@ So the useful question is not whether a large health system got caught out. It i
 
 The [Philadelphia Inquirer reported on 31 August 2026](https://www.inquirer.com/health/qgenda-schedule-privacy-links-cell-numbers-20260831.html) that daily work schedules and cell phone numbers of healthcare workers were publicly reachable. The pages were hosted by the scheduling vendor QGenda. Reporters started from a confidential tip about three East Coast health systems and identified roughly fifty institutions with public pages. Those named include Penn Medicine, Children's Hospital of Philadelphia, ChristianaCare, Johns Hopkins Medicine, the University of California San Francisco and Cedars-Sinai Medical Center.
 
-First, nobody has established how this happened. The Inquirer says so plainly. It is not clear how the schedules became public, how long they were reachable, how much administrators knew, or whether anyone looking to cause harm ever opened one. What is documented is that QGenda offers a "QuickLinks" feature letting "any staff member without a QGenda account" reach a schedule. That is a reasonable thing for a hospital to want and a dangerous default to leave open, but treat it as the likely explanation rather than a proven one. QGenda's own materials acknowledge that on-call schedules "may contain sensitive information" and carry a risk of "unauthorized access or data breaches". The company did not respond to the Inquirer's requests for comment.
+First, nobody has established how this happened. The Inquirer says so plainly. It is not clear how the schedules became public, how long they were reachable, how much administrators knew, or whether anyone looking to cause harm ever opened one. What is documented is that QGenda offers a "QuickLinks" feature letting "any staff member without a QGenda account" reach a schedule. That is a reasonable thing for a hospital to want, and a dangerous setting to leave switched on. Nobody has shown that this feature is how each of these pages became reachable, so treat it as the likely explanation and not a proven one. QGenda's own materials acknowledge that on-call schedules "may contain sensitive information" and carry a risk of "unauthorized access or data breaches". The company did not respond to the Inquirer's requests for comment.
 
-No patient data was exposed, because the platform does not hold any. A hospital that checks whether protected health information moved, finds that it did not, and closes the ticket has answered a question nobody asked.
+No patient data was exposed, because the platform does not hold any. A hospital that checks for exposed patient records, finds none, and stops there has answered the wrong question. The names, shifts and phone numbers on the page all belong to staff.
 
 At least ten health systems, including Johns Hopkins and UCSF, removed the public link or added a password requirement after reporters contacted them.
 
@@ -122,7 +122,7 @@ Expect several rows to apply at once rather than just one. The scheduling platfo
 
 Both. The vendor owns the default and owes you a plain description of what a setting does. The hospital owns the settings on its own account. The usual failure is mundane: a setting someone switched on three years ago for a good reason, which nobody has looked at since that person left.
 
-If your hospital runs a yearly check of who can reach which systems, scheduling belongs in it, with a date and a name against it. Plenty of small hospitals have no such check and no IT staff to run one. The workable version there is a calendar reminder, held by the nurse manager or the administrator, to re-open the sharing settings every time someone leaves.
+Some hospitals go through their software once a year and confirm who still has access to what. If yours does, add the scheduling tool to that list and write down whose job it is to check. Plenty of small hospitals have no such review and nobody in IT to run one. There, the version that works is a calendar reminder for the nurse manager or the administrator to re-open the sharing settings every time someone leaves.
 
 ## What Should You Ask a Scheduling Vendor About Public Schedule Access?
 

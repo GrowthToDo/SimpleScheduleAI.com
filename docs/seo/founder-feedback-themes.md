@@ -64,6 +64,14 @@ breath. If a sentence carries more than one fact the reader must retain, split i
 **check-blog already warns at 35 words. Those warnings are the signal, not noise:
 every instance the founder later flagged had been flagged by the gate first and
 waved through as "quote-bearing". Only a verbatim quote earns that pass.**
+(c) **A metaphor or an office idiom standing in for the concrete thing.** Three
+sessions running, the founder has asked "what does this mean" of a figure of
+speech, never of a fact: "the building work" (read as a physical building),
+"the one to sit with", "the wrong test", "close the ticket", "the settings sat
+as they sat", "with a date and a name against it". Each was replaced with the
+literal statement and lost nothing. The tell is that the phrase would survive
+being deleted. Help-desk and consulting idiom is the most common source, and our
+reader does not work a ticket queue.
 
 **T16. No abstraction without its referent.**
 Every claim-bearing noun phrase says, in the same sentence, of what or to what.
