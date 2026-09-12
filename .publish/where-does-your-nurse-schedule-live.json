@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "slug": "where-does-your-nurse-schedule-live",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-12T08:23:33.394Z",
+      "contentHash": "273eb25eeaf47ec71d8de671299bb8418b2712f5841f29bcdf8a1c779a68b908"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-12T08:23:34.869Z",
+      "contentHash": "273eb25eeaf47ec71d8de671299bb8418b2712f5841f29bcdf8a1c779a68b908"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-12T08:23:35.581Z",
+      "contentHash": "273eb25eeaf47ec71d8de671299bb8418b2712f5841f29bcdf8a1c779a68b908"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-12T08:23:35.613Z",
+      "contentHash": "273eb25eeaf47ec71d8de671299bb8418b2712f5841f29bcdf8a1c779a68b908"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-12T08:23:35.635Z",
+      "contentHash": "273eb25eeaf47ec71d8de671299bb8418b2712f5841f29bcdf8a1c779a68b908"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-12T08:23:35.636Z",
+      "contentHash": "273eb25eeaf47ec71d8de671299bb8418b2712f5841f29bcdf8a1c779a68b908"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-12T08:23:35.637Z",
+      "contentHash": "273eb25eeaf47ec71d8de671299bb8418b2712f5841f29bcdf8a1c779a68b908"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-09-12T08:23:32.416Z",
+      "contentHash": "08bac04905ea3b00ec433291e4682edca6f46c4b777fe5dffa35ef181b780837"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "verifier",
+      "setAt": "2026-09-12T08:23:32.540Z",
+      "contentHash": "08bac04905ea3b00ec433291e4682edca6f46c4b777fe5dffa35ef181b780837"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "claude",
+      "setAt": "2026-09-12T08:23:32.668Z",
+      "contentHash": "08bac04905ea3b00ec433291e4682edca6f46c4b777fe5dffa35ef181b780837"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-09-12T08:23:32.816Z",
+      "contentHash": "08bac04905ea3b00ec433291e4682edca6f46c4b777fe5dffa35ef181b780837"
+    }
+  },
+  "overrides": []
+}

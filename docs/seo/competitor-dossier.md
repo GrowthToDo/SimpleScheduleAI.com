@@ -687,6 +687,31 @@ comes at no additional cost for facilities using the ShiftKey and/or OnShift pla
 credentialing, time tracking, analytics. Customer base skews toward physician group practices
 and larger health systems.
 
+### Public-schedule exposure reported by the Philadelphia Inquirer (2026-08-31)
+
+News event, not a product-capability finding. Recorded here because any future QGenda content will
+meet it, and because getting the framing wrong is a legal and reputational risk for us.
+
+- **What was reported.** The Inquirer found roughly 50 health systems whose QGenda-hosted pages showed
+  clinician daily work schedules, and in some cases cell phone numbers, reachable with no login.
+  Named: Penn Medicine, Children's Hospital of Philadelphia, ChristianaCare, Johns Hopkins Medicine,
+  UCSF, Cedars-Sinai. At least ten, including Johns Hopkins and UCSF, removed the link or added a
+  password after being contacted. QGenda did not respond to requests for comment.
+  URL: inquirer.com/health/qgenda-schedule-privacy-links-cell-numbers-20260831.html
+- **NO patient data was involved**, and QGenda's platform does not hold any. Never imply otherwise;
+  a reader's default assumption will be HIPAA and that assumption is wrong here.
+- **It was a configuration problem, not an intrusion.** The pages came from a feature that lets "any
+  staff member without a QGenda account" reach a schedule. The controls existed; the health systems
+  had not enabled them. Never write that QGenda leaked data or was breached.
+- **Approved framing, and the reason for it.** Write about where a hospital's schedule lives and who
+  can see it, vendor-neutral, citing the Inquirer. Do NOT write a piece positioning SimpleScheduleAI
+  as the safer choice: the founder ruled 2026-08-10 that login security is a PRODUCT-mode concern and
+  never a service selling point, and our own AUTH_ENABLED question is open. Attack framing here would
+  be both off-strategy and unsafe.
+- Becker's Hospital Review carried secondary coverage; its page bot-blocks automated retrieval, so it
+  is citable as corroboration but must not be quoted from a search snippet.
+- First use: `/articles/where-does-your-nurse-schedule-live` (2026-09-12).
+
 ### Corporate-site scale and positioning (verified 2026-09-09)
 
 - Homepage headline "Optimize Your Care Team", subhead "Healthcare Workforce Management Redefined".
@@ -1450,3 +1475,4 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 | 2026-09-05 | ShiftWizard Capterra re-verification pass via Playwright (p/178376, default order, pages 1 to 8 walked). Header still 4.4 (723), page stamped "Last updated August 20th, 2026". RELOCATED verbatim: Melissa R. (page 4), Michalina W. (page 6), Erika A. (page 3, previously unconfirmed since 2026-08-14). RELOCATED with truncation caveats: Jennifer C. (page 2; live sentence continues "...fantastic to use for Hospital/clinic use!") and Amanda M. (page 1; live sentence continues "...as a code VS the shift type."). Both quotes now carry an ellipsis-not-period instruction. NOT RELOCATED: Jacob G. (1-star, not on pages 1 to 8; `?rating=1` URL filter ignored by the site); his 2026-08-09 page-verification is still inside the 60-day window. | Claude |
 | 2026-09-08 | NurseGrid re-verification for the capability-question post (what-is-nursegrid-manager). Manager page pricing, 250-staff positioning and the manager-to-app workflow line re-confirmed verbatim; NEW: nurse app "100% free" quote and the nurse-app feature list added; help center last-updated date re-confirmed, topic pages are login-gated to fetchers (cite landing URL + topic name). Corrected two live posts: best-nurse-scheduling-app said "Contact for pricing" for NurseGrid Manager (now the published $5 line); nursegrid-alternatives carried a stale "3 drafts delivered in 48 hrs" cell. | Claude |
 | 2026-09-09 | ShiftWizard and QGenda re-verification for the three-way comparison post. NEW: shiftwizard.com 301-redirects to HealthStream (reproduced by direct request); HealthStream page positioning, the four buyer roles, the "only ... certified Workday integration" claim and four named customers recorded verbatim; the undated "500+ hospital facilities" figure flagged as unsourced and quarantined; "designed by nurses" recorded as a REVIEWER line, not vendor copy. QGenda: homepage scale claims recorded; the full six-segment "Who We Serve" list recorded with a warning against quoting a partial list; an unverified 1,200-customers/5,000-hospitals claim quarantined. | Claude |
+| 2026-09-12 | QGenda public-schedule exposure (Inquirer, 2026-08-31) recorded in the QGenda section: what was reported, the named systems, that NO patient data was involved, that it was a configuration problem rather than an intrusion, and the approved vendor-neutral framing with the reason attack framing is off-limits (founder ruling on login security as product-mode only). | Claude |

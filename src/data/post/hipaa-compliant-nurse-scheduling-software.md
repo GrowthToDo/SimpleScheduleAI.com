@@ -51,6 +51,8 @@ The nurse manager has not done anything wrong by intent. She has done something 
 
 Nurse scheduling software needs HIPAA compliance when it stores, processes, or transmits Protected Health Information. For most CAH scheduling workflows, that line is crossed when the tool records patient assignment data (which nurse is assigned to which patient) or stores patient census counts in a way that links to identifiable patient records.
 
+A schedule with no patient linkage still carries staff information worth protecting, which is a separate question from HIPAA and one we took up after about fifty health systems left clinician schedules publicly reachable: [where your schedule lives and who can see it](/articles/where-does-your-nurse-schedule-live).
+
 Pure shift-coverage scheduling, meaning who works which hours in which unit without any patient linkage, has a narrower HIPAA obligation. If the scheduling record cannot be traced back to a specific patient, it is workforce data rather than PHI. The practical challenge is that many facilities log more than just shift coverage inside their scheduling tools without realizing the compliance implication.
 
 The [HHS guidance on Business Associates](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html) defines the obligation clearly: any third-party vendor that creates, receives, maintains, or transmits PHI on behalf of a covered entity is a Business Associate and must sign a BAA. The trigger is contact with PHI, not intent to handle it.

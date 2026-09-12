@@ -113,7 +113,7 @@ The practical failure is rarely the posted schedule, which is usually fine. It i
 
 ## Does Your Current Tool Record Changes at All?
 
-Possibly not, and this is worth ten minutes rather than an assumption.
+Possibly not, and this is worth ten minutes rather than an assumption. Worth separating two things while you look: a record of who CHANGED the schedule is not a record of who VIEWED it, a distinction that matters more since [clinician schedules turned up on the open web](/articles/where-does-your-nurse-schedule-live) at about fifty health systems.
 
 Scheduling tools built for retail and hospitality often treat the schedule as a live document to be kept current, which is exactly right for a coffee shop and leaves nothing behind. A hospital IT admin reviewing [When I Work](/blog/best-nurse-scheduling-app) on Capterra put it plainly:
 
