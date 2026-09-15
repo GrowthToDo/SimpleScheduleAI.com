@@ -342,6 +342,13 @@
     "pillar": "/nurse-scheduling-software"
   },
   {
+    "slug": "scheduling-software-vendor-acquisition-support",
+    "type": "post",
+    "url": "/blog/scheduling-software-vendor-acquisition-support",
+    "primaryKeyword": "vendor acquisition",
+    "pillar": "/nurse-scheduling-software"
+  },
+  {
     "slug": "self-scheduling-problems-critical-access-hospital",
     "type": "post",
     "url": "/blog/self-scheduling-problems-critical-access-hospital",

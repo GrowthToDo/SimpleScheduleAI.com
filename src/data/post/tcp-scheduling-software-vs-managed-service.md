@@ -117,7 +117,7 @@ TCP TimeClock+ is a time and attendance platform made by TCP Software that inclu
 
 TCP TimeClock+ is a time and attendance platform made by TCP Software that includes employee scheduling as a secondary feature. Its core strengths are time clock management, payroll integration, leave and absence tracking, and overtime monitoring. Scheduling is part of the platform but is not its primary design focus. Some healthcare users on Capterra note the scheduling aspect is more basic than dedicated scheduling tools. The platform carries a 4.4/5 rating from 271 reviews on Capterra as of May 2026.
 
-TCP Software is the parent company. It owns three separate workforce management products: TimeClock+ for time and attendance, Humanity Scheduling for advanced employee scheduling, and [Aladtec](/blog/aladtec-alternatives) for healthcare and public safety scheduling. These are distinct products with different feature sets. A Critical Access Hospital evaluating TCP should clarify which product addresses their scheduling needs before purchasing.
+TCP Software is the parent company. It owns three separate workforce management products: TimeClock+ for time and attendance, Humanity Scheduling for advanced employee scheduling, and [Aladtec](/blog/aladtec-alternatives) for healthcare and public safety scheduling, acquired in 2021. These are distinct products with different feature sets. A Critical Access Hospital evaluating TCP should clarify which product addresses their scheduling needs before purchasing. For a broader look at [what changes for a hospital after a scheduling vendor is acquired](/blog/scheduling-software-vendor-acquisition-support), the Aladtec deal is one example.
 
 **What TCP TimeClock+ does well:**
 
