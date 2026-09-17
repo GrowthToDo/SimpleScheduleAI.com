@@ -186,7 +186,7 @@ For more context on the specific structural fixes that make self-scheduling work
 
 ## How Does SimpleScheduleAI Build the Schedule Instead of Self-Scheduling?
 
-SimpleScheduleAI is one way to run [AI nurse scheduling](/ai-nurse-scheduling) on the review-and-approve model. It generates three schedule versions each cycle, Balanced, Fairness Optimized, and Cost Optimized, built from the roster, coverage rules, and fairness history before the manager ever opens the schedule. She reviews the version that fits the cycle, overrides anything she wants to change by hand, and approves it. Watch the AI build a compliant week live, in under a minute, in the [interactive demo](/simulator).
+SimpleScheduleAI is one way to run [AI nurse scheduling](/ai-nurse-scheduling) on the review-and-approve model. It generates three schedule versions each cycle, Balanced, Fairness Optimized, and Cost Optimized, built from the roster, coverage rules, and fairness history before the manager ever opens the schedule. The manager reviews whichever version fits the cycle, overrides whatever needs changing by hand, and approves it. Watch the AI build a compliant week live, in under a minute, in the [interactive demo](/simulator).
 
 Stating plainly how our own flow works: a nurse's shift preferences and per-diem availability are entered by the manager during setup, not submitted by the nurse through a self-service claiming window. A nurse who wants a preference honored still tells her manager, who records it before the next cycle's draft runs. That is a deliberate tradeoff, not an oversight. Because nothing is claimed by nurses directly, there is no open window for the coverage gap and fairness problems this article describes to form in the first place.
 
