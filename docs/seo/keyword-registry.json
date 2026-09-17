@@ -850,5 +850,13 @@
     "primaryKeyword": "qgenda vs shiftwizard",
     "pillar": "/nurse-scheduling-software",
     "note": "Topic 19, published 2026-09-09. AEO play, not an SEO one: neither 'qgenda vs shiftwizard' nor 'shiftwizard vs kronos' returns volume, but the comparison-question shape is our best-performing GSC query family and the 2026-09-05 citation log shows we are already cited inside the AI Overview for 'how does shiftwizard compare to kronos healthcare' (8th of 8 sources, 71 impressions, pos 4). Follows the MicroConf three-way rules from the queue doc: no feature-for-feature table, each competitor's genuine advantage named (QGenda = provider scheduling and credentialing across specialties; ShiftWizard = census-driven demand and the certified Workday integration), and an explicit who-should-NOT-buy-us section. Differentiated from qgenda-alternatives and shiftwizard-alternatives, which both serve switcher intent ('I am leaving X'); this one serves an undecided head-to-head evaluation. Spine is who each vendor is built for, sourced to their own pages. Sourcing note: qgenda.com 403s some fetchers, and shiftwizard.com 301s to HealthStream (verified by direct request 2026-09-09)."
+  },
+  {
+    "slug": "self-scheduling-manager-workload-trap",
+    "type": "post",
+    "url": "/blog/self-scheduling-manager-workload-trap",
+    "primaryKeyword": "self scheduling nursing",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Topic 22, published 2026-09-17 (pre-existing draft finished, per 'Drafts that beat writing something new' in the topics doc). 'self scheduling nursing' 110/mo, CPC $16.04, we ranked 52.7 for 'self scheduling software for nurses' on the pillar. THIRD post in the self-scheduling cluster: self-scheduling-problems-critical-access-hospital owns the FAILURE MODES and enforcement fixes; cyclical-scheduling-vs-self-scheduling-small-hospital owns the MODEL CHOICE (self-scheduling vs cyclical vs hybrid); THIS post owns the MANAGER TIME COST specifically, framed as a workload-restructuring argument rather than a workload-elimination one, with a dedicated SimpleScheduleAI section stating the same no-self-scheduling limitation as its siblings (preferences are manager-entered, not nurse-submitted)."
   }
 ]
