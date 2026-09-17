@@ -39,6 +39,7 @@ metadata:
 - [What Is the Actual Time Cost of Managing a Failed Self-Scheduling Round?](#what-is-the-actual-time-cost-of-managing-a-failed-self-scheduling-round)
 - [When Does Self-Scheduling Actually Work at a Small Hospital?](#when-does-self-scheduling-actually-work-at-a-small-hospital)
 - [How Does the Manager-Review-and-Approve Model Compare to Self-Scheduling?](#how-does-the-manager-review-and-approve-model-compare-to-self-scheduling)
+- [How Does SimpleScheduleAI Build the Schedule Instead of Self-Scheduling?](#how-does-simplescheduleai-build-the-schedule-instead-of-self-scheduling)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -50,7 +51,7 @@ The time ranges in this article are operational estimates drawn from CAH schedul
 
 ## Why Does Self-Scheduling Increase Manager Workload at a Small Hospital?
 
-Self-scheduling increases manager workload at a small hospital because it converts a single scheduled task into a multi-phase process. Building the draft becomes opening the scheduling window, monitoring claims, following up on unfilled shifts, resolving conflicts, and negotiating coverage for undesirable shifts. All of that still has to happen within the same timeframe a direct build would have taken.
+Self-scheduling increases manager workload at a small hospital because it converts a single scheduled task into a multi-phase process. Building the draft becomes opening the scheduling window, checking which shifts nurses have picked so far, following up on unfilled shifts, resolving conflicts, and negotiating coverage for undesirable shifts. All of that still has to happen within the same timeframe a direct build would have taken.
 
 The time savings promised by self-scheduling assumes that nurses collectively fill the schedule correctly and completely during the open window. At a 20-nurse CAH, this assumption fails for three predictable reasons:
 
@@ -86,7 +87,7 @@ Both complaints land on the manager's desk as exceptions to be resolved after th
 
 ## What Is the Actual Time Cost of Managing a Failed Self-Scheduling Round?
 
-Define a failed self-scheduling round as one that closes with 30% or more of required shifts unfilled, or a fairness dispute requiring direct manager intervention. A round like that costs an estimated 3 to 6 hours more than a direct manager build of the same schedule. The breakdown, illustrative and not a guarantee for any single facility:
+Call a round "failed" when it closes with 30% or more of required shifts still open, or when a fairness complaint needs the manager to step in directly. A round like that costs an estimated 3 to 6 hours more than if the manager had just built the schedule herself. The breakdown, illustrative and not a guarantee for any single facility:
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -119,7 +120,7 @@ Define a failed self-scheduling round as one that closes with 30% or more of req
 
 A direct build of the same schedule takes an estimated 6 to 10 hours and produces a complete schedule on the first pass. A failed self-scheduling round adds an estimated 3 to 6 hours of post-window cleanup on top of whatever the nurses claimed during the window. That cleanup time alone can run close to the cost of building the schedule directly.
 
-Not all self-scheduling rounds fail completely. But at a 20-nurse CAH with a significant proportion of undesirable shifts to fill, the failure rate for fully self-managed rounds runs high. That is enough to push the expected time cost above the direct build cost in most cycles, on top of whatever share of the [8 to 12 hours a week](/blog/nurse-manager-scheduling-time-breakdown) the manager already spends on scheduling overall.
+Not every round fails outright. But at a 20-nurse CAH with a significant share of undesirable shifts to fill, failed rounds are common. Common enough that, on average, self-scheduling ends up costing the manager more time than a direct build, not less. That comes on top of whatever share of the [8 to 12 hours a week](/blog/nurse-manager-scheduling-time-breakdown) the manager already spends on scheduling overall.
 
 ## When Does Self-Scheduling Actually Work at a Small Hospital?
 
@@ -143,13 +144,60 @@ Most CAHs do not have a 40-nurse roster. For facilities under 25 nurses, manager
 
 The manager-review-and-approve model, where the manager or a scheduling service builds a complete draft and the manager reviews and approves before publication, captures the benefits of self-scheduling without the structural failure modes.
 
-Staff input still factors in: the manager records each nurse's preferences, per-diem availability, and fairness history, and those feed the draft before she ever sees it. One honest limitation: preferences are entered by the manager on the nurse's behalf, not submitted directly by the nurse. A nurse who wants a preference honored still has to tell her manager, not fill out a self-service portal. What changes is that the manager reviews a complete schedule, not a partial one with gaps to fill, and fairness distribution is built into the draft algorithmically rather than produced by the competitive dynamics of a self-scheduling window.
-
 The key difference from pure self-scheduling is the starting point. Self-scheduling starts from nurse preferences and hopes coverage works out. The review-and-approve model starts from coverage requirements and fits preferences in around them, so the schedule the manager sees is already complete.
 
-For nurse managers who tried self-scheduling to reduce their workload and found the opposite, review-and-approve is often the better fit at CAH scale. The manager's role becomes judgment and oversight, not gap-filling and dispute resolution. How much time that saves depends on who builds the draft: a manager building it herself is still doing the same 6 to 10 hours of work, just without the self-scheduling cleanup on top. [AI nurse scheduling](/ai-nurse-scheduling) is built to hand the manager a finished draft instead, cutting her time down to review and adjustment. Watch the [interactive simulator](/simulator) to see a draft built live, or run your own hours through the [ROI calculator](/roi) to check the math against this article's estimates. [See how it works →](/how-it-works)
+<div class="not-prose overflow-x-auto my-8">
+  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-700">
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:25%">Dimension</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:37.5%">Open Self-Scheduling</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:37.5%">Manager-Review-and-Approve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Starting point</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Nurse preferences claimed first, coverage checked after</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Coverage requirements first, preferences fit in around them</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">What the manager sees</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">A partially filled schedule with gaps to close herself</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">A complete schedule ready for review</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Fairness distribution</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Produced by the order nurses happened to claim shifts in</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Built into the draft before anyone claims anything</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Manager time, 20-nurse CAH</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">6 to 10 hours build-equivalent, plus 3 to 6 hours of cleanup when a round fails</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">6 to 10 hours if she builds the draft herself; less if a scheduling service builds it for her</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+For nurse managers who tried self-scheduling to reduce their workload and found the opposite, review-and-approve is often the better fit at CAH scale. The manager's role becomes judgment and oversight, not gap-filling and dispute resolution.
 
 For more context on the specific structural fixes that make self-scheduling work better when it is the right choice for a facility, see [Self-Scheduling Problems at a CAH: How to Fix Them](/blog/self-scheduling-problems-critical-access-hospital).
+
+## How Does SimpleScheduleAI Build the Schedule Instead of Self-Scheduling?
+
+SimpleScheduleAI is one way to run [AI nurse scheduling](/ai-nurse-scheduling) on the review-and-approve model. It generates three schedule versions each cycle, Balanced, Fairness Optimized, and Cost Optimized, built from the roster, coverage rules, and fairness history before the manager ever opens the schedule. She reviews the version that fits the cycle, overrides anything she wants to change by hand, and approves it. Watch the AI build a compliant week live, in under a minute, in the [interactive demo](/simulator).
+
+Stating plainly how our own flow works: a nurse's shift preferences and per-diem availability are entered by the manager during setup, not submitted by the nurse through a self-service claiming window. A nurse who wants a preference honored still tells her manager, who records it before the next cycle's draft runs. That is a deliberate tradeoff, not an oversight. Because nothing is claimed by nurses directly, there is no open window for the coverage gap and fairness problems this article describes to form in the first place.
+
+Run your own roster through the [scheduling cost calculator](/roi) to see what closing that gap would be worth at your hospital, or read [how SimpleScheduleAI works](/how-it-works) for the full setup and review cycle.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The self-scheduling workload trap comes down to sequencing: preferences get claimed before coverage is checked, instead of the other way around. Fixing that sequencing, whether by adding structural rules to self-scheduling or replacing it with a review-and-approve process, is what actually gets the manager's time back. Self-service alone was never the real goal. A complete, fair draft on the first pass was.
+  </p>
+</div>
 
 ## What to Do This Week
 
@@ -161,7 +209,7 @@ For more context on the specific structural fixes that make self-scheduling work
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">A complete draft that meets coverage requirements, before the manager reviews it.</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI delivers three AI-drafted options per cycle. Review, adjust, approve.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds three schedule versions per cycle: Balanced, Fairness Optimized, and Cost Optimized. Review, adjust, approve.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
