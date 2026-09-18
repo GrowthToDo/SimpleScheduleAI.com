@@ -635,6 +635,8 @@ Four things stand out once you total the columns.
 
 **Most of the list is long established.** Sixty-seven of the 92 were certified before 2006, in the wave that followed the program's creation. For more than two thirds of these hospitals, critical access is simply what they have always been.
 
+The Texas rule that defines which hospitals Medicaid directed payments reach names this designation by name, and that payment stream [stopped for seventeen days in September 2026](/articles/texas-medicaid-freeze-critical-access-hospitals).
+
 ## Why Does This List Keep Changing?
 
 Hospitals move on and off it, which is why a dated list matters more than a precise one.
