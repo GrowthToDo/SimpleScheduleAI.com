@@ -43,3 +43,46 @@ Raise Domain Rating by earning **topically-relevant** referring domains: be the 
 ## First run
 
 Pick one Tier-1 rising question this week, write and publish it to `/articles`, and measure referring domains at 30 days. Iterate from there.
+
+## Topic queue (held, with reasons)
+
+The skill requires logging what was considered and not written, and why. Held topics
+carry their peg and their unverified claims so a later session does not re-research
+from scratch or publish an unchecked hook.
+
+### HELD - Palo Verde Hospital (Blythe, CA) accreditation, a peg for a CAH survey-readiness piece
+
+- **Held on:** 2026-09-18, founder. **Reconsider:** week of 2026-09-21, if no stronger
+  Tier 1 item appears in that week's detection pass.
+- **Peg:** Palo Verde Hospital, a bankrupt Critical Access Hospital under Riverside
+  County management, received three-year national accreditation as a critical access
+  hospital from DNV Healthcare USA. Announced September 2026.
+  Source: https://heysocal.com/2026/09/14/hospital-in-blythe-under-county-management-receives-national-certification/
+- **Score:** Relevance 4 x Rising 2 x Can-we-be-first 5 x Hook 1 = 40. The news itself
+  barely rises (hyperlocal SoCal outlet, negligible search volume) and the hospital is
+  in California, not Texas. It qualifies as a peg, not as a story: the durable question
+  underneath it is what a CAH has to prove on staffing and scheduling to pass an
+  accreditation survey, which no low-DR competitor owns.
+- **Candidate hook, UNVERIFIED - verify before writing:** a search snippet indicates
+  DNV's NIAHO Revision 25-1 requires a facility to produce the survey team's requested
+  documents within three hours of arrival, with nonconformance if it cannot. If true,
+  the hook is "can you produce twelve months of nurse schedules, on-call rosters and
+  coverage records in three hours?" **The test that settles it:** read the primary DNV
+  source directly, not a summary - https://www.dnv.us/publications/niaho-requirements-revision-25-1-updated/
+  (secondary: https://www.hfmmagazine.com/dnv-changes-its-accreditation-process).
+  If the three-hour rule is not in the primary source, the piece needs a different hook
+  or gets dropped.
+- **Accuracy notes for whoever writes it:** the hospital is California, so do not frame
+  it as a Texas story. Do not imply the accreditation was won because of scheduling
+  practice - nothing in the source says that. Bed count not confirmed in the source;
+  verify before stating it.
+
+### DROPPED - "Physician Scheduling Software Market" (openPR / Worldwide Market Reports)
+
+- **Dropped on:** 2026-09-18. **Reason:** citable-hook score 0, an automatic fail.
+  Syndicated market-research lead-gen with no actual market size or CAGR in the body,
+  so there is nothing to cite that would not violate the no-fabricated-stats rule.
+  Also physician scheduling, not nurse scheduling.
+- **Salvage value (not an article):** it names ten vendors - QGenda, AMiON, Lightning
+  Bolt, ShiftWizard, TigerConnect, symplr, Smart Square, Omnigo, Hospital IQ, Kronos
+  Workforce Central. Worth diffing that list against `competitor-dossier.md` for gaps.

@@ -87,3 +87,17 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
   never skip something that needs a cadence in order to save credits.** Prefer
   small `limit` values, filter server-side, and reuse a pull rather than
   re-requesting it. Cadence beats completeness.
+
+## Open decisions (raise at the next review)
+
+- **Gate the free nurse schedule template?** (opened 2026-09-18, founder)
+  Today the .xlsx at `/resources/nurse-schedule-template` is ungated by an earlier
+  founder decision (reach + share value > email capture, pre-launch). It is getting
+  good reach and producing **zero leads**. The question for the next review is
+  whether to put an email gate in front of it (or a partial gate: ungated preview,
+  gated full workbook) to start collecting leads.
+  Bring to the decision: download/pageview counts for the landing page and the
+  asset, GSC impressions/clicks for the template keyword lane, and the honest
+  read on how many gated emails would actually be worth the reach we'd lose —
+  note that content is not the acquisition channel here (route in is personal
+  contacts), so the gate has to earn its cost in credibility terms too.
