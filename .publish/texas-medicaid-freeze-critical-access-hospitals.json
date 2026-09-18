@@ -5,37 +5,37 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-18T08:23:41.310Z",
+      "checkedAt": "2026-09-18T08:24:00.736Z",
       "contentHash": "7e6a59d2850bd60341cc5e58730d4688359dc01478e7c2ead81897128c1be4c3"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-18T08:23:42.792Z",
+      "checkedAt": "2026-09-18T08:24:02.323Z",
       "contentHash": "7e6a59d2850bd60341cc5e58730d4688359dc01478e7c2ead81897128c1be4c3"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-18T08:23:46.077Z",
+      "checkedAt": "2026-09-18T08:24:03.544Z",
       "contentHash": "7e6a59d2850bd60341cc5e58730d4688359dc01478e7c2ead81897128c1be4c3"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-18T08:23:46.105Z",
+      "checkedAt": "2026-09-18T08:24:03.571Z",
       "contentHash": "7e6a59d2850bd60341cc5e58730d4688359dc01478e7c2ead81897128c1be4c3"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-18T08:23:46.125Z",
+      "checkedAt": "2026-09-18T08:24:03.592Z",
       "contentHash": "7e6a59d2850bd60341cc5e58730d4688359dc01478e7c2ead81897128c1be4c3"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-18T08:23:46.125Z",
+      "checkedAt": "2026-09-18T08:24:03.592Z",
       "contentHash": "7e6a59d2850bd60341cc5e58730d4688359dc01478e7c2ead81897128c1be4c3"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-18T08:23:46.126Z",
+      "checkedAt": "2026-09-18T08:24:03.593Z",
       "contentHash": "7e6a59d2850bd60341cc5e58730d4688359dc01478e7c2ead81897128c1be4c3"
     }
   },
@@ -56,6 +56,12 @@
       "value": "YES",
       "setBy": "pradeep",
       "setAt": "2026-09-18T08:23:35.713Z",
+      "contentHash": "68fc142f72d9cbb47475ee960afaac47ec2795d4480d93f889cf0f194b17a0f7"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "claude",
+      "setAt": "2026-09-18T08:26:17.834Z",
       "contentHash": "68fc142f72d9cbb47475ee960afaac47ec2795d4480d93f889cf0f194b17a0f7"
     }
   },
