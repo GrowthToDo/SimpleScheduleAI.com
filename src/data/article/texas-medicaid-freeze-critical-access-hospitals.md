@@ -61,7 +61,7 @@ Four numbers get quoted in this story and they do not mean the same thing.
 | $27 million a day      | An estimate of what hospitals statewide were losing, not a count     | Texas Hospital Association, via Texas Tribune, August 31, 2026 |
 | Nearly $12 billion     | What the September 17 approval covers, across five kinds of provider | Governor's office, via Texas Tribune, September 17, 2026       |
 
-The last number covers five kinds of provider and the first covers three programs. That is most of the difference between them. Texas runs five of these programs, and the two that pay nursing homes and behavioral health providers were not among the three that stopped. Texas does not publish what each program is worth this year, so the two totals still do not match exactly.
+The last number covers five kinds of provider and the first covers three programs, which is where most of the roughly $2 billion gap between them comes from. Texas runs five of these programs. The two that pay nursing homes and behavioral health providers were not among the three that stopped, and in 2022 those two were worth about $1.3 billion between them. We could not find current figures published for each program, so the gap does not close exactly.
 
 Seventeen days at $27 million a day is about $459 million. That is our own math on a statewide estimate, not what any one hospital lost.
 
@@ -85,17 +85,19 @@ Two things to keep in mind. That count is from 2022, so it may look different no
 
 No. Cost based payment is a Medicare rule, and it has nothing to do with what Medicaid pays you.
 
-Medicare pays a Critical Access Hospital its [allowable cost plus one percent](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), less the two percent sequestration cut that has applied since April 2013. That is the reason the designation exists. But every state decides on its own what Medicaid pays these hospitals, and in Texas part of that comes through the programs above.
+Medicare pays a Critical Access Hospital its [allowable cost plus one percent](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), less the two percent sequestration cut that has applied since April 2013. But every state decides on its own what Medicaid pays these hospitals, and in Texas part of that comes through the programs above.
 
 [Texas has 93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), going by federal data current to April 2026.
 
-People usually get this next part backwards. You would expect the smallest hospitals to have the least cash in the bank. On days cash on hand, they have the most. [Chartis puts the national median](https://www.chartis.com/insights/2026-rural-health-state-state) at 29 days for rural and community hospitals, and 98 days for Critical Access Hospitals. Medicaid is close to ten percent of revenue at a typical rural hospital, and that is a national number rather than a Texas one. A hospital sitting on 98 days of cash can cover a seventeen day gap out of reserves. Seven months would be a different story.
+On cash in the bank, the smallest hospitals are not the thinnest. [Chartis puts the national median](https://www.chartis.com/insights/2026-rural-health-state-state) at 29 days of cash on hand for rural and community hospitals, and 98 days for Critical Access Hospitals. Medicaid is close to ten percent of revenue at a typical rural hospital, and that is a national number rather than a Texas one.
+
+Seventeen days is short next to a 98 day cushion. The hold in 2021 ran about seven months, more than twelve times longer, and that is the version worth planning against. Days cash on hand measures how long a hospital could run with no money coming in at all, so it is a rough yardstick here rather than an exact one. Losing one payment stream is not the same as losing everything.
 
 ## Did Any News Story About the Freeze Name a Critical Access Hospital?
 
 One story did, and it never used those words.
 
-We read the coverage published while the payments were stopped: two reports from the Texas Tribune, plus HFMA, KTRE and The Bond Buyer. Several outlets ran the same wire story.
+We read the coverage published while the payments were stopped: two reports from the Texas Tribune, plus HFMA, KTRE and The Bond Buyer. Every hospital they named was a big one: Harris Health in Houston, Children's Health and Children's Medical Center in Dallas, University Medical Center in Lubbock, and UT Health and Christus in East Texas. HFMA named no hospital at all.
 
 The Bond Buyer was the exception. On [September 8](https://www.bondbuyer.com/news/texas-hospitals-face-financial-headwinds) it reported that Moody's had cut Kimble County Hospital District's rating one notch, to Baa3. Moody's pointed to the district's "very small operating scale, with combined operating revenue of approximately $13.5 million." That district runs Kimble Hospital in Junction, a 15 bed Critical Access Hospital designated in 2000.
 
@@ -119,7 +121,7 @@ Yes, and it looked a lot like this one. The Texas Hospital Association's own pap
 
 Same three programs. Same argument about where the state's share of the money comes from. That one lasted about seven months. This one lasted seventeen days.
 
-What changed is the daily number. In 2021 the association said "hospitals lost more than $7 million per day." This year the estimate was $27 million a day. That is close to four times as much, for the same argument over the same programs, and none of the coverage made the comparison.
+What changed is the daily number. In 2021 the association said "hospitals lost more than $7 million per day." This year the estimate was $27 million a day. That is close to four times as much, for the same argument over the same programs. None of the coverage we read put those two numbers side by side.
 
 The same paper warns that "any future interruption, disallowance, or disapproval of DPPs, similar to the lapse that occurred in SFY 2022, would prove destabilizing."
 
@@ -141,8 +143,9 @@ These programs are approved one year at a time. September 17 settled this year's
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     The reporting on this was accurate, and it was written for the whole state, which means it was
-    written about the big systems where most of the money goes. A hospital with 25 beds reading it had
-    no way to tell whether the story included them. The answer was in the state rules the whole time.
+    written about the big systems where most of the money goes, which is why every hospital named in it
+    was a large one. A hospital with 25 beds reading it had no way to tell whether the story included
+    them. The answer was in the state rules the whole time.
     You just had to follow one rule to another. The more useful thing to know is that this is the
     second time in five years, and the daily number is close to four times what it was last time.
     These programs get approved one year at a time.
@@ -154,7 +157,7 @@ These programs are approved one year at a time. September 17 settled this year's
 1. **Find out whether your hospital is enrolled in CHIRP.** Ask your finance lead, and ask which class you are in. The rule already says your designation qualifies, so that part is settled. What decides whether money reaches you is being enrolled and being in the health plan's network.
 2. **Ask what September's payment looked like.** If you are in the program, find out whether your finance team is treating the gap as late money or as lost money. Those are two different lines on a cash forecast.
 3. **Write down anything you paused.** Hiring, agency use, overtime approval, a piece of equipment. No hospital said any of this publicly, so your own notes may be the only record you get.
-4. **Pull the last eight weeks of overtime by nurse.** If a cost conversation is coming, that is the table you will be asked for. Putting it together in a hurry is how the wrong shift gets cut.
+4. **Pull the last eight weeks of overtime by nurse.** If a cost conversation is coming, that is the table you will be asked for. Better to have it before the meeting than to build it during one.
 5. **Put a note in your calendar for next August.** These approvals run a year at a time, and the state's fiscal year starts on September 1.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
