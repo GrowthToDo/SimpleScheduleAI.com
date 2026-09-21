@@ -77,6 +77,32 @@ from scratch or publish an unchecked hook.
   practice - nothing in the source says that. Bed count not confirmed in the source;
   verify before stating it.
 
+- **VERIFICATION RESULT, 2026-09-21: the candidate hook FAILED. Do not write it as held.**
+  The three-hour rule is real and verbatim in DNV's own words, but it is in the NIAHO
+  *Accreditation Process* manual, not the *Accreditation Requirements* standard, and it
+  traces to Revision 18 (eff. 8/7/2016, p.6) and Revision 17 (eff. 2015-04-23, pp.4 and 8):
+  "no later than 3 hours after the request is made."
+  Rev 18 PDF: https://nhiso.com/wp-content/uploads/2018/11/NIAHO-Accreditation-Process-Rev18-872016-1.pdf
+  **Revision 25-1 was NOT read** (dnv.us landing page is a lead-capture form; it states only
+  that Rev 25-1 supersedes prior revisions effective 2025-09-08, and carries no document-timing
+  language). So never attribute the rule to Revision 25-1.
+  **The hook itself is unsupported:** nurse schedules are NOT on DNV's day-one Survey Document
+  Request List. That list names the org chart, the nursing services org chart, the nursing
+  service plan of administrative authority, the leadership roster, the restraint log, and
+  "Surgery/procedure schedule" (the only schedule on it). Staffing schedules and nurse rosters
+  are not enumerated day-one items. Request list:
+  https://s3.amazonaws.com/cms.ipressroom.com/107/files/20167/DNV_GL_Healthcare-Survey_Document_Request_List.pdf
+  That same list also says documents are wanted "usually by mid-morning on day one," so DNV's
+  two primaries state the deadline differently. The "nonconformance" consequence appears only
+  in HFM Magazine (2024-12-15), not in the Rev 17 or Rev 18 primary text.
+- **Score revised down, 2026-09-21: Relevance 4 -> 2.** Our own live post
+  `src/data/post/joint-commission-nurse-staffing-standards.md` (line 71) records that only about
+  30 percent of Critical Access Hospitals hold accreditation at all, and that the accredited
+  minority "skewed toward larger, system-affiliated facilities." DNV is one of four CMS-approved
+  accreditors splitting that third, so the addressable audience is a minority of a minority and
+  skews away from the ICP. Revised score 2 x 2 x 5 x 1 = 20. The thin SERP reflects a thin
+  audience, not an opening.
+
 ### DROPPED - "Physician Scheduling Software Market" (openPR / Worldwide Market Reports)
 
 - **Dropped on:** 2026-09-18. **Reason:** citable-hook score 0, an automatic fail.
