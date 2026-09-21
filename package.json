@@ -33,7 +33,8 @@
     "keyword-check": "node scripts/check-keyword-registry.mjs",
     "target-positions": "node scripts/target-positions.mjs",
     "site-hygiene": "node scripts/site-hygiene.mjs",
-    "competitor-watch": "node scripts/competitor-page-watch.mjs"
+    "competitor-watch": "node scripts/competitor-page-watch.mjs",
+    "cold-read": "node scripts/cold-read-score.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",

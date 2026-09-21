@@ -51,6 +51,21 @@ export function setRecorded(manifest, field, value, by, contentHash) {
 }
 
 /**
+ * ADVISORY scores. Deliberately stored OUTSIDE `mechanical` and `recorded` so
+ * they can never reach manifestStatus() and therefore can never block a commit.
+ * Promoting a score to blocking is a separate, explicit change: add it to
+ * RECORDED_FIELDS and BLOCKING_RECORDED. See docs/seo/content-scoring.md.
+ */
+export function setScore(manifest, name, payload, contentHash) {
+  if (!manifest.scores) manifest.scores = {};
+  manifest.scores[name] = { ...payload, scoredAt: new Date().toISOString(), contentHash };
+}
+
+export function getScore(manifest, name) {
+  return manifest.scores ? manifest.scores[name] : undefined;
+}
+
+/**
  * @param {object} manifest
  * @param {string|{mechanicalHash: string, verdictHash: string}} hashes - either
  *   a single hash string (applied to both mechanical and recorded fields, for

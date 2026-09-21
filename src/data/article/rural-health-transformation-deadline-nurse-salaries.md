@@ -118,7 +118,7 @@ No. We searched seven federal documents, including the program rules, both CMS F
 
 Silence is not a prohibition. The documents do not address how a hospital staffs itself, so whether an arrangement qualifies comes down to the initiative a state writes and how CMS reads it.
 
-The documents come close three times. Staffing appears in a list of services an integrated network might share. Schedulers appear among administrative roles whose training can be funded. And CMS allows [travel and lodging for a clinician](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf) visiting "one rural location from another" weekly or monthly.
+The documents come close twice. Staffing appears in a list of services an integrated network might share. And CMS allows [travel and lodging for a clinician](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf) visiting "one rural location from another" weekly or monthly.
 
 That describes someone working across sites, but as a recruitment incentive, not permission to build a pool.
 
@@ -152,9 +152,9 @@ The rules above explain why it feels that way. The money is built to change what
 
 Two things we would rather name.
 
-Whether Critical Access Hospitals are named as eligible in the Texas workforce round. We could not retrieve that announcement's full terms. An earlier Texas initiative was limited to districts with a publicly owned hospital, so do not assume your designation qualifies you.
+Whether Critical Access Hospitals are named as eligible in the Texas workforce round. We could not retrieve that announcement's full terms, and an earlier Texas initiative was limited to districts with a publicly owned hospital. Do not assume you qualify.
 
-How CMS treats a staffing arrangement if a state proposes one. West Virginia shows a state can write one, not where the line sits.
+How CMS treats a staffing arrangement if a state proposes one. West Virginia shows a state can write one, but not where the line sits.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -162,17 +162,17 @@ How CMS treats a staffing arrangement if a state proposes one. West Virginia sho
     Whether $50 billion is enough is the wrong argument for a hospital with 25 beds. The rules decide
     more than the amount does. A grant that cannot pay a salary you already pay, that closes if your
     contracts carry non-competes, and that puts salary on the shortest clock, was never built for
-    coverage. Read it as money for the hospital you will be in five years.
+    coverage. It is money for the hospital you will be in five years.
   </p>
 </div>
 
 ## What to Do This Week
 
-1. **Ask who runs the program in your state what is still unobligated.** In Texas that is HHSC. Ask whether your hospital is already named in an approved initiative, because that decides whether you are applying or reporting.
-2. **Check your employment contracts for non-compete terms first.** If they are there, clinician salary support is closed to your facility. Better to know before someone writes a proposal around it.
-3. **Separate two questions when you read a funding notice.** Does this money bring someone in over the next few years, or does it cover a shift next month? The table above shows which costs qualify.
-4. **Ask who writes the report.** A first progress report can fall due within a month of the money arriving, and that work lands on the people who already build the schedule.
-5. **Put the last eight weeks of overtime by nurse on one page.** A board conversation will ask for that number.
+1. **Ask your finance lead one question: is our hospital named in anything approved under this program?** They will know or know who does, and the answer decides whether you are applying or already reporting. In Texas the program runs through HHSC.
+2. **Ask the same person for your state closing date.** October 30 is the date your state has to commit the money. Whatever date your hospital has to apply by is earlier, and that is the one that binds you.
+3. **Ask HR a yes or no question: do clinician contracts carry a non-compete clause?** You are not reading the contracts. If the answer is yes, clinician salary support is closed to your facility.
+4. **Ask who would write the progress report.** A first report can fall due within a month of the money arriving, and it lands on whoever builds the schedule. Name a person first.
+5. **Put the last eight weeks of overtime by nurse on one page.** Pull the hours yourself and ask payroll for the rates, because a board conversation wants both. That number is yours whatever the grant does.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Running a Critical Access Hospital in Texas?</p>
@@ -195,19 +195,19 @@ How CMS treats a staffing arrangement if a state proposes one. West Virginia sho
 
 **Q: Can Rural Health Transformation Program funds pay a nurse salary?**
 
-They can pay a clinician salary inside a new or expanded initiative, where the employee commits to five years of rural service and the facility uses no non-compete contracts. They cannot pay a salary you already fund.
+Only inside a new or expanded initiative, where the employee commits to five years of rural service and the facility uses no non-compete contracts. Not a salary you already fund.
 
 **Q: What is the deadline for the first round of Rural Health Transformation money?**
 
-October 30, 2026, the end of the first budget period. That is the last date a state can commit the funds. Unobligated money is returned, and there are no extensions.
+October 30, 2026, the end of the first budget period. That is the last date a state can commit the funds. Uncommitted money is returned, and there are no extensions.
 
 **Q: If the money is obligated on time, how long is there to spend it?**
 
-Through September 30, 2027. Personnel costs are the exception. CMS says salary and fringe must be spent inside the budget period where the cost arose.
+Through September 30, 2027. Personnel costs are the exception: salary and fringe must be spent inside the budget period where the cost arose.
 
 **Q: Does the program allow spending on float pools or agency staffing?**
 
-The federal documents do not address it. Float pools, locum tenens, agency staffing and scheduling systems appear nowhere in the rules, the CMS FAQs, the fact sheets or the statute. West Virginia funded rotational pools anyway, so a state can propose one.
+The federal documents do not address it. Float pools, locum tenens, agency staffing and scheduling systems appear nowhere in the rules, the CMS FAQs, the fact sheets or the statute. West Virginia funded rotational pools anyway.
 
 ## Sources
 

@@ -5,59 +5,207 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-21T09:18:24.583Z",
-      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+      "checkedAt": "2026-09-21T09:47:22.519Z",
+      "contentHash": "6f48c91198cd5d8bfea74c62fb7e54056cee253dcf36bb2132a01c0904603bc6"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-21T09:18:26.329Z",
-      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+      "checkedAt": "2026-09-21T09:47:24.144Z",
+      "contentHash": "6f48c91198cd5d8bfea74c62fb7e54056cee253dcf36bb2132a01c0904603bc6"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-21T09:18:37.237Z",
-      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+      "checkedAt": "2026-09-21T09:47:27.388Z",
+      "contentHash": "6f48c91198cd5d8bfea74c62fb7e54056cee253dcf36bb2132a01c0904603bc6"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-21T09:18:37.290Z",
-      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+      "checkedAt": "2026-09-21T09:47:27.436Z",
+      "contentHash": "6f48c91198cd5d8bfea74c62fb7e54056cee253dcf36bb2132a01c0904603bc6"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-21T09:18:37.320Z",
-      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+      "checkedAt": "2026-09-21T09:47:27.456Z",
+      "contentHash": "6f48c91198cd5d8bfea74c62fb7e54056cee253dcf36bb2132a01c0904603bc6"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-21T09:18:37.320Z",
-      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+      "checkedAt": "2026-09-21T09:47:27.456Z",
+      "contentHash": "6f48c91198cd5d8bfea74c62fb7e54056cee253dcf36bb2132a01c0904603bc6"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-21T09:18:37.321Z",
-      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+      "checkedAt": "2026-09-21T09:47:27.457Z",
+      "contentHash": "6f48c91198cd5d8bfea74c62fb7e54056cee253dcf36bb2132a01c0904603bc6"
     }
   },
   "recorded": {
     "factCheck": {
       "value": "PASS",
       "setBy": "general-purpose-primary-source-verification",
-      "setAt": "2026-09-21T09:18:38.265Z",
-      "contentHash": "32fc6891cc6f8928eb8720f0066c7d7bcea1c1ec09e8b68e6be4d91d7bdc21bd"
+      "setAt": "2026-09-21T09:47:35.491Z",
+      "contentHash": "7293f5179d7ab90f6a234a03c4861b915b9f207410abb49dd48a7573966631c6"
     },
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-09-21T09:18:17.179Z",
-      "contentHash": "32fc6891cc6f8928eb8720f0066c7d7bcea1c1ec09e8b68e6be4d91d7bdc21bd"
+      "setBy": "cold-read-run-2",
+      "setAt": "2026-09-21T09:47:36.613Z",
+      "contentHash": "7293f5179d7ab90f6a234a03c4861b915b9f207410abb49dd48a7573966631c6"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-09-21T09:18:18.269Z",
-      "contentHash": "32fc6891cc6f8928eb8720f0066c7d7bcea1c1ec09e8b68e6be4d91d7bdc21bd"
+      "setAt": "2026-09-21T09:47:37.629Z",
+      "contentHash": "7293f5179d7ab90f6a234a03c4861b915b9f207410abb49dd48a7573966631c6"
     }
   },
-  "overrides": []
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 21.2,
+        "headings": 100,
+        "actionability": 42.9,
+        "attention": 72.7
+      },
+      "overall": 53.4,
+      "counts": {
+        "sections": 11,
+        "rereads": 21,
+        "undefinedTerms": 31,
+        "headingsAnswered": 11,
+        "mondayActions": 6,
+        "blockedActions": 8,
+        "quitPoints": 3
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-09-21T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "budget period",
+          "subaward",
+          "non-compete clause",
+          "supplanting",
+          "fringe",
+          "unobligated",
+          "unallowable costs",
+          "wage supports",
+          "direct payments to providers",
+          "15 percent of a state award in a budget period",
+          "rescoring",
+          "policy and initiative factors",
+          "data-driven factors",
+          "fiscal 2026 versus calendar year",
+          "graduate medical education initiative",
+          "residency programs",
+          "locum tenens",
+          "advanced practice providers",
+          "float pool",
+          "rotational or shared staffing",
+          "per diem",
+          "initiative as a formal grant term",
+          "state funding notice",
+          "HHSC",
+          "CMS",
+          "Section 71401 of Public Law 119-21",
+          "Notice of Funding Opportunity / CMS-RHT-26-001",
+          "post-award FAQ versus pre-award FAQ",
+          "the statute",
+          "progress report / annual report",
+          "AI-native nurse scheduling service"
+        ],
+        "mondayActions": [
+          "Ask the CFO whether our hospital is named in anything already approved, and whether we are applying or reporting",
+          "Ask that same person for our state closing date for hospitals, not October 30",
+          "Ask HR a yes or no question: do clinician contracts carry a non-compete clause",
+          "Ask who would write the progress report, and get a name attached before the money arrives",
+          "Pull the last eight weeks of overtime by nurse onto one page",
+          "Stop planning around this money as a way to cover open shifts or pay agency, and say so in the leadership meeting"
+        ],
+        "blockedActions": [
+          "Put overtime on one page in hours AND dollars: I can pull hours, but pay rates and differentials sit with payroll and the post never says to ask them",
+          "Find the binding date on the state funding notice: never seen one, no page, email or HHSC contact given",
+          "Resolve whether Critical Access Hospitals qualify in the Texas round: the post warns me and leaves no way to find out",
+          "Act on the salary rule if HR says yes to non-competes: the door closes and nothing follows it",
+          "Get a staffing pool funded the West Virginia way: no one at state level named to raise it with",
+          "Act if the window has already passed: the post does not say what to do then",
+          "Use any of this outside Texas: every concrete pointer is Texas HHSC",
+          "Judge whether the five year commitment is workable: does not say who signs it or what happens if the nurse leaves in year two"
+        ],
+        "sections": [
+          {
+            "heading": "How Much Money Is There and Who Decides Where It Goes?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Can Rural Health Transformation Money Pay Nurse Salaries?",
+            "rereadCount": 5,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "When Does the First Round of Money Have to Be Committed?",
+            "rereadCount": 6,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "Does the Program Say Anything About Float Pools or Agency Staffing?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Did Any State Spend Rural Health Transformation Money on Staffing?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Texas Spending Its Workforce Money On?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Did Hospital Leaders Tell STAT About the Program?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What Do We Still Not Know About the Rural Health Transformation Program?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Sources",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-09-21T09:46:49.212Z",
+      "contentHash": "1c66b5d47a5ce358dbb5adae9ae60843d12d6e29b157166aaa6d8b5b916d7745"
+    }
+  }
 }
