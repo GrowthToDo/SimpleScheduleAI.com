@@ -23,10 +23,10 @@ metadata:
 ## Key Takeaways
 
 - The Rural Health Transformation Program is **$50 billion over five years**, $10 billion a year from fiscal 2026 through fiscal 2030 ([CMS](https://www.medicaid.gov/resources-for-states/rural-health))
-- **The first budget period ends October 30, 2026.** That is the date a state loses the authority to commit the money. Anything still unobligated goes back to be redistributed
-- **Salary does not get the extra year.** Other money obligated by October 30 can be spent through September 30, 2027. [Personnel costs have to be spent inside the budget period](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf)
+- **The first funding round ends October 30, 2026.** After that date a state can no longer promise the money to anyone. Whatever it has not promised is taken back and handed out again
+- **Salary does not get the extra year.** Other money promised by October 30 can be paid out until September 30, 2027. [Wages and benefits must be paid inside their own round](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf)
 - **Yes, it can pay a clinician salary**, inside a new or expanded initiative, where [the employee commits to five years of rural service](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). It pays nothing **where the facility uses non-compete contracts**
-- Across [the program rules](https://apply07.grants.gov/apply/opportunities/instructions/PKG00291485-instructions.pdf), both FAQs, both fact sheets and the statute, we found **no mention of float pools, agency staffing or scheduling systems**
+- CMS has published [seven documents](https://apply07.grants.gov/apply/opportunities/instructions/PKG00291485-instructions.pdf) for this program. We read all seven and found **no mention of float pools, agency staffing or scheduling systems**
 
 ## Table of Contents
 
@@ -47,74 +47,71 @@ There is $50 billion in the Rural Health Transformation Program. A nurse manager
 
 [$50 billion goes to approved states over five fiscal years](https://www.medicaid.gov/resources-for-states/rural-health), $10 billion a year, from fiscal 2026 through fiscal 2030. [Section 71401 of Public Law 119-21](https://www.cms.gov/files/document/chapter-4-protecting-rural-health-hospitals-providers.pdf) created it.
 
-Your hospital does not apply to CMS. States apply, states are awarded, and states run their own funding rounds. So what the money can do for you is decided twice. Federal rules set the outer limits, and your state picks the initiatives inside them.
+Your hospital does not apply to CMS. States apply, states are awarded, and states run their own funding rounds. So what the money can do for you is decided twice. Federal rules set the outer limits, and your state picks which programs to fund inside them. The rules call each one an initiative.
 
-One cap is worth knowing. CMS limits [direct payments to providers](https://www.cms.gov/files/document/provider-payments-fact-sheet.pdf) to 15 percent of a state award in a budget period. That is the ceiling on money reaching a hospital as a payment.
+One cap is worth knowing. No more than 15 percent of what CMS gives a state can go out as [direct payments to providers](https://www.cms.gov/files/document/provider-payments-fact-sheet.pdf), meaning hospitals, clinics and clinicians.
 
 ## Can Rural Health Transformation Money Pay Nurse Salaries?
 
 Yes, but narrowly. Three separate rules have to clear before a salary qualifies.
 
-The first rule is the broadest. CMS will not fund what [the program rules call supplanting](https://apply07.grants.gov/apply/opportunities/instructions/PKG00291485-instructions.pdf), which means using this money for something you already pay for.
+The first rule is the broadest. You cannot use this money to cover something you already pay for. [The rules call that supplanting](https://apply07.grants.gov/apply/opportunities/instructions/PKG00291485-instructions.pdf).
 
 > "Supplanting existing State, local, tribal, or private funding of infrastructure or services, such as staff salaries."
 
-A salary you already pay is not eligible. CMS makes the same point in [an expansion example](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). Extend a program into three new counties, and only the share of an existing employee's work covering those counties may be funded.
+A salary you already pay is not eligible. CMS makes the same point in [an expansion example](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf): extend a program into three new counties, and only the share of an existing worker's time spent on those counties can be funded.
 
 The second rule is the [five year service commitment](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). CMS states it plainly.
 
 > "Funding salaries or payments directly related to new or expanded workforce development initiatives provided the clinical workforce employee commits to five years of service and the contract does not have a non-compete clause."
 
-The third rule is absolute. [Unallowable costs](https://apply07.grants.gov/apply/opportunities/instructions/PKG00291485-instructions.pdf) include "clinician salaries or wage supports for facilities that subject clinicians to non-compete contractual limitations." That tests the facility, not the individual nurse. If your contracts carry non-compete terms, this category closes for your hospital.
+The third rule is absolute. The [list of costs CMS will not cover](https://apply07.grants.gov/apply/opportunities/instructions/PKG00291485-instructions.pdf) includes "clinician salaries or wage supports for facilities that subject clinicians to non-compete contractual limitations." That tests the facility, not the nurse. If your contracts carry non-compete terms, this door is closed to your hospital.
 
 The documents do name costs it can pay a person.
 
-| Personnel cost                                   | What the rules require                                                  | Where it comes from                                                                                      |
-| ------------------------------------------------ | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Clinician salary and wage support                | Part of an approved initiative, and no non-compete at the facility      | CMS post-award FAQ                                                                                       |
-| Workforce initiative salaries                    | New or expanded initiative, plus a five year rural service commitment   | CMS pre-award FAQ                                                                                        |
-| Resident and fellow salaries and stipends        | During training, inside a graduate medical education initiative         | [CMS commitment fact sheet](https://www.cms.gov/files/document/5-year-service-commitment-fact-sheet.pdf) |
-| Sign-on, recruitment and retention bonuses       | Paid to providers, inside an approved initiative                        | CMS commitment fact sheet                                                                                |
-| Relocation, travel, per diem, lodging, childcare | Named as possible incentives, with state justification and CMS approval | CMS pre-award FAQ                                                                                        |
+| Personnel cost                             | What the rules require                                                | Where it comes from                                                                                      |
+| ------------------------------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Clinician salary and wage support          | Part of an approved initiative, and no non-compete at the facility    | CMS post-award FAQ                                                                                       |
+| Workforce initiative salaries              | New or expanded initiative, plus a five year rural service commitment | CMS pre-award FAQ                                                                                        |
+| Resident and fellow salaries and stipends  | During training, inside a graduate medical education initiative       | [CMS commitment fact sheet](https://www.cms.gov/files/document/5-year-service-commitment-fact-sheet.pdf) |
+| Sign-on, recruitment and retention bonuses | Paid to providers, inside an approved initiative                      | CMS commitment fact sheet                                                                                |
 
-Two things people ask about are not allowed. [Student loan repayment and issuing student loans](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf) are unallowable. So are [payments not tied to a specific initiative](https://www.cms.gov/files/document/provider-payments-fact-sheet.pdf).
+Two things people ask about are out. [Student loan repayment and issuing student loans](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf) are not allowed. Neither are [payments not tied to a specific program](https://www.cms.gov/files/document/provider-payments-fact-sheet.pdf).
 
 ## When Does the First Round of Money Have to Be Committed?
 
-October 30, 2026. CMS dates the [first budget period](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf) as December 31, 2025 through October 30, 2026.
+October 30, 2026. CMS calls this the [first budget period](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). It runs ten months, from December 31, 2025 to October 30, 2026, so it is not a year at all.
 
-The word that matters is obligate, not spend. Obligating means the state has put the money under a signed commitment, like a contract or subaward. The money need not be out the door, but the commitment must exist.
+The word that matters is not spend. It is promise. The rules say obligate, and it means the state has signed something committing the money to a named party. The cash need not have moved by the deadline. The signature must.
 
 October 30 is the state deadline, not yours. Whatever window your state gives hospitals closes earlier, so the binding date is on your state funding notice.
 
 > "The State's authority to obligate funds (including to commit them to a contract or subaward) exists only during an active Budget Period for which the funds are available. Once that period ends, States can no longer use any remaining unobligated funds to make new expenditures or commitments."
 
-Funds not obligated in time "will result in those funds being returned and redistributed." There are [no extensions](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf), because the statute does not allow one.
+Money the state has not promised by then is taken back. The rules say it "will result in those funds being returned and redistributed." There are [no extensions](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf), because the law does not allow one.
 
-Money obligated in time can be spent [through September 30, 2027](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). An exception sits inside that.
+Money promised in time can be paid out [through September 30, 2027](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). An exception sits inside that.
 
 **Personnel costs do not get the extra year.** The [post-award rules](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf) are explicit.
 
 > "To avoid duplication of costs across budget periods, personnel-related costs, such as salary and fringe, must be expended within the budget period in which the expense is incurred."
 
-A contract signed in October can be paid next year. A salary cannot. So the thing closest to covering shifts sits on the shortest clock.
+Fringe means the benefits that ride along with a wage. So a contract signed in October can be paid next year. A salary cannot. The cost closest to covering shifts is on the shortest clock.
 
-Three other dates sit in the same stretch and are easy to confuse. None is yours to act on, but they set what your state has to give away.
+Three other dates sit in the same stretch. None is yours to act on.
 
-| Date                      | What happens                                                | Whose job it is |
-| ------------------------- | ----------------------------------------------------------- | --------------- |
-| August 30, 2026           | First annual report, covering seven months, was due to CMS  | The state       |
-| September to October 2026 | Rescoring, which sets each state's share for fiscal 2027    | CMS             |
-| October 30, 2026          | First budget period ends and all funds must be obligated    | The state       |
-| October 31, 2026          | Second budget period begins and fiscal 2027 amounts are set | CMS             |
+| Date                      | What happens                                               | Whose job it is |
+| ------------------------- | ---------------------------------------------------------- | --------------- |
+| August 30, 2026           | First annual report, covering seven months, was due to CMS | The state       |
+| September to October 2026 | CMS re-scores the states to set each share for next year   | CMS             |
+| October 30, 2026          | First funding round ends, every dollar must be promised    | The state       |
+| October 31, 2026          | Second funding round begins and next year amounts are set  | CMS             |
 
-Each budget period, CMS [recalculates the policy and initiative factors](https://www.cms.gov/files/document/rht-program-reporting-rescoring-webinar-02-25-26.pdf) that set what a state gets next, while the data-driven factors stay fixed.
-
-None of that is yours to do, but it sets what your state has left.
+Each year CMS [re-scores every state](https://www.cms.gov/files/document/rht-program-reporting-rescoring-webinar-02-25-26.pdf) to set what it gets next. Part of that score is fixed data. The rest is what the state has done with the money.
 
 ## Does the Program Say Anything About Float Pools or Agency Staffing?
 
-No. We searched seven federal documents, including the program rules, both CMS FAQs and both fact sheets. The terms were float pools, staffing pools, rotational or shared staffing, locum tenens, agency or temporary staffing, contract labor and scheduling software. None appears anywhere.
+No. CMS has published seven documents for this program: the rules, two question-and-answer documents, two fact sheets, a workforce guide and the law. We searched every one for float pools, staffing pools, rotational or shared staffing, locum tenens, agency or temporary staffing, contract labor and scheduling software. None appears anywhere.
 
 Silence is not a prohibition. The documents do not address how a hospital staffs itself, so whether an arrangement qualifies comes down to the initiative a state writes and how CMS reads it.
 
@@ -124,9 +121,9 @@ That describes someone working across sites, but as a recruitment incentive, not
 
 ## Did Any State Spend Rural Health Transformation Money on Staffing?
 
-One that we could confirm. On July 14, 2026, West Virginia announced $1.8 million for ["regional, rotational staffing pools"](https://governor.wv.gov/article/governor-morrisey-announces-18m-investment-address-critical-healthcare-workforce-shortages) of physicians, nurses and advanced practice providers, deployable across facilities to cover short-term gaps. The state said the aim was to cut reliance on outside staffing agencies.
+One that we could confirm. On July 14, 2026, West Virginia announced $1.8 million for ["regional, rotational staffing pools"](https://governor.wv.gov/article/governor-morrisey-announces-18m-investment-address-critical-healthcare-workforce-shortages) of doctors, nurses and advanced practice providers, moved between facilities to cover short-term gaps. The state said the aim was to cut reliance on staffing agencies.
 
-Put that next to the silence above. West Virginia did not pick this off a federal menu. A state read rules that never mention staffing pools and built something anyway.
+Put that next to the silence above. West Virginia did not pick this off a federal menu. It read rules that never mention staffing pools and built something anyway.
 
 We looked for a second state doing the same between August and September 2026 and found none.
 
@@ -134,25 +131,25 @@ We looked for a second state doing the same between August and September 2026 an
 
 Recruitment and training, not coverage. Texas received the largest first year award in the country, [$281.3 million](https://content.govdelivery.com/accounts/TXHHSC/bulletins/4143d1c), administered by Texas HHSC. The $99 million workforce share, announced April 29, 2026, pays for [scholarships, relocation and signing bonuses, and new residency programs](https://gov.texas.gov/news/post/governor-abbott-hhsc-announce-99-million-in-federal-funding-for-rural-hospitals-to-recruit-workers).
 
-Every one of those brings a clinician in over a period of years. None covers a shift next month. That is a reasonable answer to a pipeline problem, and a pipeline problem is not what a nurse manager holding an uncovered Saturday has.
+Every one of those brings a clinician in over several years. None covers a shift next month. That is a reasonable answer to a pipeline problem, and a pipeline problem is not what a nurse manager holding an uncovered Saturday has.
 
 We have covered [what that works out to per rural resident](/articles/rural-hospital-losses-nurse-staffing-cost), the lowest rate in the country.
 
 ## What Did Hospital Leaders Tell STAT About the Program?
 
-The health news outlet STAT reported on September 14, 2026 that hospital leaders think the program is [coming up short](https://www.statnews.com/2026/09/14/rural-health-transformation-fund-skepticism-shortcomings-part-5-unraveled-series/). The reporting is Daniel Payne's.
+STAT reported on September 14, 2026 that hospital leaders think the program is [coming up short](https://www.statnews.com/2026/09/14/rural-health-transformation-fund-skepticism-shortcomings-part-5-unraveled-series/).
 
-The clearest line comes from Randy Clark, a senior vice president at Northern Light Health in Maine.
+The clearest line is from Randy Clark, a senior vice president at Northern Light Health in Maine.
 
 > "It's hard to think about transformation when you're thinking about survival."
 
-The rules above explain why it feels that way. The money is built to change what a hospital looks like in five years, and written to stop it paying what the hospital costs to run today.
+The rules above explain why. The money is built to change what a hospital looks like in five years, not to pay what it costs to run today.
 
 ## What Do We Still Not Know About the Rural Health Transformation Program?
 
 Two things we would rather name.
 
-Whether Critical Access Hospitals are named as eligible in the Texas workforce round. We could not retrieve that announcement's full terms, and an earlier Texas initiative was limited to districts with a publicly owned hospital. Do not assume you qualify.
+Whether Critical Access Hospitals are named as eligible in the Texas round. We could not retrieve that announcement's full terms, and an earlier Texas program was limited to districts with a publicly owned hospital. Do not assume you qualify.
 
 How CMS treats a staffing arrangement if a state proposes one. West Virginia shows a state can write one, but not where the line sits.
 
@@ -160,16 +157,16 @@ How CMS treats a staffing arrangement if a state proposes one. West Virginia sho
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
     Whether $50 billion is enough is the wrong argument for a hospital with 25 beds. The rules decide
-    more than the amount does. A grant that cannot pay a salary you already pay, that closes if your
-    contracts carry non-competes, and that puts salary on the shortest clock, was never built for
+    more than the amount. A grant that cannot pay a salary you already pay, that closes if your
+    contracts carry non-competes, and that puts wages and benefits on the shortest clock, was never built for
     coverage. It is money for the hospital you will be in five years.
   </p>
 </div>
 
 ## What to Do This Week
 
-1. **Ask your finance lead one question: is our hospital named in anything approved under this program?** They will know or know who does, and the answer decides whether you are applying or already reporting. In Texas the program runs through HHSC.
-2. **Ask the same person for your state closing date.** October 30 is the date your state has to commit the money. Whatever date your hospital has to apply by is earlier, and that is the one that binds you.
+1. **Ask your finance lead one question: is our hospital named in anything approved under this program?** They will know or know who does, and the answer decides whether you are applying or already reporting. In Texas it runs through HHSC.
+2. **Ask the same person for your state closing date.** October 30 is your state deadline. Your hospital date is earlier, and that is the one that binds you.
 3. **Ask HR a yes or no question: do clinician contracts carry a non-compete clause?** You are not reading the contracts. If the answer is yes, clinician salary support is closed to your facility.
 4. **Ask who would write the progress report.** A first report can fall due within a month of the money arriving, and it lands on whoever builds the schedule. Name a person first.
 5. **Put the last eight weeks of overtime by nurse on one page.** Pull the hours yourself and ask payroll for the rates, because a board conversation wants both. That number is yours whatever the grant does.
@@ -195,19 +192,19 @@ How CMS treats a staffing arrangement if a state proposes one. West Virginia sho
 
 **Q: Can Rural Health Transformation Program funds pay a nurse salary?**
 
-Only inside a new or expanded initiative, where the employee commits to five years of rural service and the facility uses no non-compete contracts. Not a salary you already fund.
+Only inside a new or expanded program, where the employee commits to five years of rural service and the facility uses no non-compete contracts. Not a salary you already fund.
 
 **Q: What is the deadline for the first round of Rural Health Transformation money?**
 
-October 30, 2026, the end of the first budget period. That is the last date a state can commit the funds. Uncommitted money is returned, and there are no extensions.
+October 30, 2026, the end of the first funding round. That is the last date a state can promise the money to anyone. Whatever is left unpromised is taken back, and there are no extensions.
 
-**Q: If the money is obligated on time, how long is there to spend it?**
+**Q: If the money is promised on time, how long is there to pay it out?**
 
-Through September 30, 2027. Personnel costs are the exception: salary and fringe must be spent inside the budget period where the cost arose.
+Through September 30, 2027. Wages are the exception. A salary, and the benefits that go with it, must be paid inside the round it belongs to.
 
 **Q: Does the program allow spending on float pools or agency staffing?**
 
-The federal documents do not address it. Float pools, locum tenens, agency staffing and scheduling systems appear nowhere in the rules, the CMS FAQs, the fact sheets or the statute. West Virginia funded rotational pools anyway.
+The federal documents do not address it. Float pools, agency staffing and scheduling systems appear nowhere across the seven documents CMS has published. West Virginia funded rotational pools anyway.
 
 ## Sources
 
