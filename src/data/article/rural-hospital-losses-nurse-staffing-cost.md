@@ -26,7 +26,7 @@ metadata:
 - The 41.2% headline understates the picture in Texas. Chartis splits the finding by Medicaid expansion status: 34.9% in expansion states against 52.2% in states that did not expand. Texas is a non-expansion state, so the higher figure is the one that describes its rural hospitals.
 - Chartis puts human capital at 56% of healthcare costs. That makes the schedule the instrument that allocates the largest cost line in the building, which is why it belongs in a financial conversation and not only an operational one.
 - Scheduling does not fix a reimbursement problem. The worked figure below is roughly $45,000 a year for a 25-nurse roster, which is real money and still small next to a structural deficit. Treat it as one controllable line, not a rescue.
-- Texas received the largest first-year Rural Health Transformation award of any state, $281.3 million. It also works out to the lowest amount per rural resident in the country, about $60.[8] The money cannot be spent on routine operating costs or on salaries you already pay.[9]
+- Texas received the largest first-year Rural Health Transformation award of any state, $281.3 million. It also works out to the lowest amount per rural resident in the country, about $60.[8] The money cannot be spent on salaries you already pay, or used to prop up ongoing operating expenses with no path to sustainability.[9][12]
 
 ## Table of Contents
 
@@ -85,7 +85,7 @@ Since this piece was first published, the federal Rural Health Transformation Pr
 
 The per-person figure looks very different. Half the federal money is split evenly between the states, whatever their size. Texas has more rural residents than any other state, so that even split has to cover more people here than anywhere else. The Texas Tribune reported that Texas "will receive about $60 per resident in a rural county," which it called "the lowest rate in the nation."[8] Texas got the biggest award in the country and the smallest amount per rural Texan.
 
-There are also limits on how the money can be spent. The workforce share is $99 million, announced in April 2026. It pays for scholarships, relocation and signing bonuses, and new residency programs.[7] All of those bring in clinicians over the next few years. The rules block spending on routine operating costs, on covering losses, and on replacing money you already spend, including staff salaries.[9] The grant can help you hire a nurse next year. It cannot pay the nurse covering this Saturday night.
+There are also limits on how the money can be spent. The workforce share is $99 million, announced in April 2026. It pays for scholarships, relocation and signing bonuses, and new residency programs.[7] All of those bring in clinicians over the next few years. The rules block "supplanting existing State, local, tribal, or private funding of infrastructure or services, such as staff salaries."[9] CMS also says states should invest in lasting improvements rather than "funding perpetual ongoing operating expenses with no path to sustainability."[12] The grant can help you hire a nurse next year. It cannot pay the nurse covering this Saturday night.
 
 Applying takes work too. Governing reported that some Texas hospitals had as little as 30 days between hearing about a funding opportunity and the deadline.[10] A first progress report can fall due within a month of the money arriving. Some awards pay you back only after you spend, so the hospital fronts the cash.[10] States had to file their own first-year reports with CMS by August 30, 2026, and that first report covered only seven months of activity.[11]
 
@@ -115,7 +115,7 @@ One honest limitation, stated the same way we would state it to a board: this do
 1. **Pull your own in-the-red comparison, not the national one.** If you are in a non-expansion state, the 52.2% cohort is your peer group. Bring that figure to the next board conversation instead of the 41.2% headline.
 2. **Put a number on your own coverage premium.** Take your last vacancy, count the shift-hours backfilled, and price them at your straight-time and premium rates. The difference is your version of the $10,000 above.
 3. **Check who carried the last vacancy.** If the same two or three nurses absorbed the open shifts, you are accumulating the next departure and the next premium along with it.
-4. **Check the terms on any Rural Health Transformation grant before you apply.** The money cannot cover routine operating costs or salaries you already pay. Ask two things. Does the award pay up front, or reimburse you after you have spent your own cash? And who at your hospital will write the progress report that falls due in the first month?
+4. **Check the terms on any Rural Health Transformation grant before you apply.** The money cannot cover salaries you already pay, and CMS expects lasting investments rather than ongoing operating expenses. Ask two things. Does the award pay up front, or reimburse you after you have spent your own cash? And who at your hospital will write the progress report that falls due in the first month?
 5. **See how the coverage and overtime side works for a Texas Critical Access Hospital.** Walk through how drafts get built and checked at [how it works](/how-it-works), or book a call to talk through your roster.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
@@ -165,11 +165,13 @@ Chartis puts human capital at 56% of healthcare costs. At a Critical Access Hosp
 
 8. Texas per-rural-resident allocation ("about $60 per resident in a rural county, the lowest rate in the nation"), Texas first-year award $81 million above its application request, and Alaska second at $272.7 million. [The Texas Tribune, Texas to receive $281 million for rural health care](https://www.texastribune.org/2025/12/29/texas-rural-health-care-281-million-federal-program/), December 29, 2025. Page-verified 2026-08-19.
 
-9. Rural Health Transformation Program restrictions on allowable uses (no routine operating costs, no financial losses, no supplanting existing funding including staff salaries). [CMS, Rural Health Transformation Program overview](https://www.cms.gov/initiatives/rural-health-transformation-rht-program/overview).
+9. Rural Health Transformation Program limitation on supplanting existing funding, including staff salaries, quoted verbatim. [CMS, Rural Health Transformation Program Notice of Funding Opportunity, CMS-RHT-26-001](https://apply07.grants.gov/apply/opportunities/instructions/PKG00291485-instructions.pdf), "Funding policies and limitations."
 
 10. Texas rollout administrative timelines: proposal windows as short as 30 days, progress reporting within the first month of receiving funds, and some awards reimbursed rather than advanced. [Governing, Rural Health Transformation Program rolls out in Texas to excitement and confusion](https://www.governing.com/management-and-administration/rural-health-transformation-program-rolls-out-in-texas-to-excitement-and-confusion), August 17, 2026.
 
 11. State annual report #1 due date ("Annual report #1 is due August 30, 2026 (covering a 7-month period)"). [CMS Office of Rural Health Transformation, Reporting and Rescoring Webinar](https://www.cms.gov/files/document/rht-program-reporting-rescoring-webinar-02-25-26.pdf), February 25, 2026.
+
+12. The sustainability test on allowable costs ("funding perpetual ongoing operating expenses with no path to sustainability"). [CMS, Rural Health Transformation Frequently Asked Questions](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf), October 31, 2025.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
