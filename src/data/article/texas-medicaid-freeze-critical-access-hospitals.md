@@ -87,7 +87,7 @@ No. Cost based payment is a Medicare rule, and it has nothing to do with what Me
 
 Medicare pays a Critical Access Hospital its [allowable cost plus one percent](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), less the two percent sequestration cut that has applied since April 2013. But every state decides on its own what Medicaid pays these hospitals, and in Texas part of that comes through the programs above.
 
-[Texas has 93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), going by federal data current to April 2026.
+[Texas has 93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), going by federal data current to April 2026. Texas also has federal rural health transformation money arriving, though [what that money is allowed to pay for](/articles/rural-health-transformation-deadline-nurse-salaries) is a narrower list than most coverage suggests.
 
 On cash in the bank, the smallest hospitals are not the thinnest. [Chartis puts the national median](https://www.chartis.com/insights/2026-rural-health-state-state) at 29 days of cash on hand for rural and community hospitals, and 98 days for Critical Access Hospitals. Medicaid is close to ten percent of revenue at a typical rural hospital, and that is a national number rather than a Texas one.
 

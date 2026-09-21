@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "slug": "rural-health-transformation-deadline-nurse-salaries",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-21T09:18:24.583Z",
+      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-21T09:18:26.329Z",
+      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-21T09:18:37.237Z",
+      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-21T09:18:37.290Z",
+      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-21T09:18:37.320Z",
+      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-21T09:18:37.320Z",
+      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-21T09:18:37.321Z",
+      "contentHash": "34d2a6ad67205f34f99852a82c84c36b8460fa8003ce81f21b10be2d86d20e14"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-primary-source-verification",
+      "setAt": "2026-09-21T09:18:38.265Z",
+      "contentHash": "32fc6891cc6f8928eb8720f0066c7d7bcea1c1ec09e8b68e6be4d91d7bdc21bd"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-09-21T09:18:17.179Z",
+      "contentHash": "32fc6891cc6f8928eb8720f0066c7d7bcea1c1ec09e8b68e6be4d91d7bdc21bd"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-09-21T09:18:18.269Z",
+      "contentHash": "32fc6891cc6f8928eb8720f0066c7d7bcea1c1ec09e8b68e6be4d91d7bdc21bd"
+    }
+  },
+  "overrides": []
+}
