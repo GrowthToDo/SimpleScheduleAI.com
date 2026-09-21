@@ -87,7 +87,7 @@ The per-person figure looks very different. Half the federal money is split even
 
 There are also limits on how the money can be spent. The workforce share is $99 million, announced in April 2026. It pays for scholarships, relocation and signing bonuses, and new residency programs.[7] All of those bring in clinicians over the next few years. The rules block spending on routine operating costs, on covering losses, and on replacing money you already spend, including staff salaries.[9] The grant can help you hire a nurse next year. It cannot pay the nurse covering this Saturday night.
 
-Applying takes work too. Governing reported that some Texas hospitals had as little as 30 days between hearing about a funding opportunity and the deadline.[10] A first progress report can fall due within a month of the money arriving. Some awards pay you back only after you spend, so the hospital fronts the cash.[10] States had to file their own first-year reports with CMS by August 31, 2026.[10]
+Applying takes work too. Governing reported that some Texas hospitals had as little as 30 days between hearing about a funding opportunity and the deadline.[10] A first progress report can fall due within a month of the money arriving. Some awards pay you back only after you spend, so the hospital fronts the cash.[10] States had to file their own first-year reports with CMS by August 30, 2026, and that first report covered only seven months of activity.[11]
 
 A small hospital has no grants office. So the proposal, the receipts and the progress report go to the same two or three people who already build the schedule, keep the survey binder and answer the payroll questions. Chasing the grant costs staff time, even though the grant cannot be spent on staff.
 
@@ -167,7 +167,9 @@ Chartis puts human capital at 56% of healthcare costs. At a Critical Access Hosp
 
 9. Rural Health Transformation Program restrictions on allowable uses (no routine operating costs, no financial losses, no supplanting existing funding including staff salaries). [CMS, Rural Health Transformation Program overview](https://www.cms.gov/initiatives/rural-health-transformation-rht-program/overview).
 
-10. Texas rollout administrative timelines: proposal windows as short as 30 days, progress reporting within the first month of receiving funds, some awards reimbursed rather than advanced, and the August 31, 2026 state progress-report deadline to CMS. [Governing, Rural Health Transformation Program rolls out in Texas to excitement and confusion](https://www.governing.com/management-and-administration/rural-health-transformation-program-rolls-out-in-texas-to-excitement-and-confusion), August 17, 2026.
+10. Texas rollout administrative timelines: proposal windows as short as 30 days, progress reporting within the first month of receiving funds, and some awards reimbursed rather than advanced. [Governing, Rural Health Transformation Program rolls out in Texas to excitement and confusion](https://www.governing.com/management-and-administration/rural-health-transformation-program-rolls-out-in-texas-to-excitement-and-confusion), August 17, 2026.
+
+11. State annual report #1 due date ("Annual report #1 is due August 30, 2026 (covering a 7-month period)"). [CMS Office of Rural Health Transformation, Reporting and Rescoring Webinar](https://www.cms.gov/files/document/rht-program-reporting-rescoring-webinar-02-25-26.pdf), February 25, 2026.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
