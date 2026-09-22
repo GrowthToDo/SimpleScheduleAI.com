@@ -26,7 +26,7 @@ metadata:
 - **Four publish one.** [NurseGrid](https://nursegrid.com/) states "$5 per month, per staff member". [Deputy](https://www.deputy.com/pricing) lists $5, $6.50 and $9 per user per month by tier. ScheduleAnywhere shows from $25 per user per month on [Capterra](https://www.capterra.com/). SimpleScheduleAI charges $1,000 or $1,500 a month, flat
 - A published per-user rate is not the cost. Implementation, training and support tiers are billed separately, and for a 25-nurse hospital they routinely add more than the license itself
 - The question that decides a purchase is the all-in first-year figure, set against the overtime the tool actually removes. The sticker price rarely settles it
-- Two pricing pages, Aladtec and UKG, blocked our checks rather than returning a missing page. We are not counting those either way
+- Two pricing pages, Aladtec and UKG, refused our check rather than showing a missing page. A refusal is not evidence either way, so they sit in neither column
 
 ## Table of Contents
 
@@ -102,9 +102,9 @@ We checked the pricing page of every vendor a small hospital is likely to shortl
 | ScheduleAnywhere | Third-party listing                      | From $25 per user per month                 |
 | SimpleScheduleAI | Live                                     | $1,000 or $1,500 a month, flat              |
 
-Two more, Aladtec and UKG, blocked our automated check instead of showing a missing page. That is not the same finding, so we leave them out of both columns.
+Two more, Aladtec and UKG, refused our check rather than showing a missing page. A refusal tells us nothing about whether a price exists, so neither vendor appears in either column.
 
-Be careful what you read into a missing page. It does not prove a vendor is hiding anything, and some never had that address. The narrower pattern is the one worth noting. For six of these platforms there is no way to learn the price without booking a call, and M7 Health and In-House Health have had no pricing page for three monthly checks running.
+A missing page does not prove a vendor is hiding anything. Some never had that address. The point is simpler: for six of these platforms, there is no way to learn the price without booking a call.
 
 That matters for a nurse manager with a budget conversation in two weeks, because a sales cycle you cannot shortcut is itself a cost.
 
@@ -157,6 +157,16 @@ Compare total cost of ownership against [the overtime the tool removes](/blog/ho
 Take a loaded rate of $60 an hour. A nurse working four hours of unplanned overtime a week, at a $20 premium above base, costs about $80 a week in premium pay. Across five nurses drawing regular overtime that is $400 a week, or roughly $20,800 a year attributable to scheduling gaps rather than patient volume.
 
 Cut that by a fifth and you save about $4,160 a year. We picked a fifth to show the shape of the calculation, not because it is a number we can promise. Run it on your payroll rather than ours. The [ROI calculator](/roi) runs the same math against your figures.
+
+Overtime is only the part you can price easily. Three more lines move with the schedule and are harder to put a number on.
+
+**Agency and traveler spend.** Every shift you cover from your own roster is a shift you do not buy at agency rates. If your last quarter included agency hours, ask what they cost per hour against your own loaded rate.
+
+**Turnover.** Nurses who repeatedly carry the bad shifts leave sooner. Replacing one of them costs far more than a year of any tool on this page, and we have walked through [that math separately](/blog/cost-of-losing-a-nurse-rural-hospital).
+
+**Manager hours.** Time spent building the schedule and chasing callouts is clinical or leadership time that went somewhere else.
+
+We are not going to pretend we can size those three for your hospital. We cannot. But a comparison built on overtime alone understates what a schedule is worth, so bring them to the conversation even if they stay unpriced.
 
 ## How Is SimpleScheduleAI Priced?
 
