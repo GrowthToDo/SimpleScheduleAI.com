@@ -26,7 +26,7 @@ metadata:
 - **Four publish one.** [NurseGrid](https://nursegrid.com/) states "$5 per month, per staff member". [Deputy](https://www.deputy.com/pricing) lists $5, $6.50 and $9 per user per month by tier. ScheduleAnywhere shows from $25 per user per month on [Capterra](https://www.capterra.com/). SimpleScheduleAI charges $1,000 or $1,500 a month, flat
 - A published per-user rate is not the cost. Implementation, training and support tiers are billed separately, and for a 25-nurse hospital they routinely add more than the license itself
 - The question that decides a purchase is the all-in first-year figure, set against the overtime the tool actually removes. The sticker price rarely settles it
-- Two pricing pages, Aladtec and UKG, refused our check rather than showing a missing page. A refusal is not evidence either way, so they sit in neither column
+- Two pricing pages, Aladtec and UKG, refused our check rather than showing a missing page. A refusal tells us nothing about whether a price exists, so neither vendor is counted
 
 ## Table of Contents
 
