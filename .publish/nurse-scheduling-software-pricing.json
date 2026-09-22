@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-scheduling-software-pricing",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-22T06:00:27.864Z",
+      "contentHash": "e4de06dfc0e1076e78979b8fd8f0b48b2dcecbcf7d4804c8a40788f1954a44df"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-22T06:00:29.335Z",
+      "contentHash": "e4de06dfc0e1076e78979b8fd8f0b48b2dcecbcf7d4804c8a40788f1954a44df"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-22T06:00:30.485Z",
+      "contentHash": "e4de06dfc0e1076e78979b8fd8f0b48b2dcecbcf7d4804c8a40788f1954a44df"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-22T06:00:30.511Z",
+      "contentHash": "e4de06dfc0e1076e78979b8fd8f0b48b2dcecbcf7d4804c8a40788f1954a44df"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-22T06:00:30.530Z",
+      "contentHash": "e4de06dfc0e1076e78979b8fd8f0b48b2dcecbcf7d4804c8a40788f1954a44df"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-22T06:00:30.530Z",
+      "contentHash": "e4de06dfc0e1076e78979b8fd8f0b48b2dcecbcf7d4804c8a40788f1954a44df"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-22T06:00:30.531Z",
+      "contentHash": "e4de06dfc0e1076e78979b8fd8f0b48b2dcecbcf7d4804c8a40788f1954a44df"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "dossier-and-live-sweep",
+      "setAt": "2026-09-22T06:00:31.302Z",
+      "contentHash": "f56a24a5314e34eed470b6f55f2f56e5be6c64c9a22a50b95291d93854a88774"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev-code-reviewer-reconfirm",
+      "setAt": "2026-09-22T06:00:32.050Z",
+      "contentHash": "f56a24a5314e34eed470b6f55f2f56e5be6c64c9a22a50b95291d93854a88774"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-09-22T06:00:32.913Z",
+      "contentHash": "f56a24a5314e34eed470b6f55f2f56e5be6c64c9a22a50b95291d93854a88774"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 7.4,
+        "headings": 88.9,
+        "actionability": 60,
+        "attention": 88.9
+      },
+      "overall": 57,
+      "counts": {
+        "sections": 9,
+        "rereads": 12,
+        "undefinedTerms": 38,
+        "headingsAnswered": 8,
+        "mondayActions": 9,
+        "blockedActions": 6,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital evaluating scheduling software, reading once on a phone",
+      "publishDate": "2026-06-14T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "SaaS",
+          "per-unit line item",
+          "per-diem staff",
+          "seats",
+          "tier / support tiers",
+          "per-module",
+          "add-ons",
+          "service pricing",
+          "third-party listing",
+          "Capterra",
+          "blocked our automated check",
+          "EHR",
+          "EHR or payroll integration",
+          "unit competency",
+          "charge coverage",
+          "FLSA overtime thresholds",
+          "loaded rate",
+          "$20 premium above base",
+          "overtime premium",
+          "gap coverage",
+          "volume-driven overtime",
+          "total cost of ownership",
+          "ROI",
+          "ROI calculator",
+          "all-in first-year figure",
+          "AI-native",
+          "ranked callout shortlists",
+          "audit trail",
+          "build-and-approve flow",
+          "auto-renewal",
+          "early-termination penalties",
+          "monthly billing instead of annual prepay",
+          "performance exit",
+          "30-day exit clause",
+          "multi-site organizations",
+          "dual-role manager",
+          "illustrative assumptions for modeling",
+          "Critical Access Hospitals / CAH"
+        ],
+        "mondayActions": [
+          "Pull the last six months of payroll and pull out the overtime lines",
+          "Try to separate overtime caused by callouts and open shifts from overtime caused by a busy census",
+          "Write down one question for every vendor before any demo: what is the all-in first-year cost",
+          "Ask each vendor for exit terms in writing before scheduling a pitch",
+          "Open the pricing pages myself for the vendors named and note which show a number",
+          "Count actual nurse headcount including per-diem, because that changes the per-user math",
+          "Take the flat figure and the license range to the board as the two ends of the range",
+          "Ask whoever handles IT whether we could support a tool that expects an IT department",
+          "Open the ROI calculator and put our own wage and overtime numbers in"
+        ],
+        "blockedActions": [
+          "Split payroll overtime into callout versus volume: no field, code or person named to produce that split",
+          "Re-run the pricing-page check in ten minutes: the vendor pricing addresses are not listed, and it does not say what to do when a page blocks you",
+          "Rule out anything that assumes an IT department: no test given for spotting that on a vendor page or in a demo",
+          "Compare total cost of ownership: implementation is called billed separately with no figure or range, so the total side cannot be built",
+          "Judge what overtime reduction is realistic: the one-fifth is the only number available to take to a board",
+          "Negotiate fees, billing and an exit clause: named as strong positions with no guidance on how to raise them or what to do if refused"
+        ],
+        "sections": [
+          {
+            "heading": "How Is Nurse Scheduling Software Priced?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Which Vendors Actually Publish a Price?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does It Cost for a 25-Bed Hospital?",
+            "rereadCount": 3,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "What Are the Hidden Costs Vendors Do Not Advertise?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Calculate ROI Before Buying?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Is SimpleScheduleAI Priced?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "A Note on Sources",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-09-22T05:49:30.520Z",
+      "contentHash": "f624631cc64ba7b47ca70b96f6bbdcce0271c4269440fd1cc6a79b8def4d8b44"
+    }
+  }
+}
