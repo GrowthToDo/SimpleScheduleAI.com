@@ -24,7 +24,7 @@ metadata:
 
 - Plan the whole stretch from the Wednesday before Thanksgiving to New Year's Day, and not only the three holidays. A [study of anesthesia staff at one hospital](https://pubmed.ncbi.nlm.nih.gov/33102816/) found more unplanned absences on Mondays, Fridays and the days next to a holiday.
 - Your per-diem nurses will cover fewer holiday shifts than usual, because they want the holidays off too. Ask each one in writing, by early November, which holiday dates they can work.
-- Build a holiday volunteer list with the extra pay written next to each name. Let your charge nurses offer that pay on the first call without phoning you first.
+- Build a holiday volunteer list with the extra pay written next to each name. Let your charge nurses offer that pay on the first call, without waiting for your approval.
 - In Texas, [Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) bars a hospital from requiring a nurse to work extra hours or extra days beyond her schedule. Your holiday plan has to rest on volunteers.
 - Do not plan late December as a slow month. [CDC](https://www.cdc.gov/flu/about/season.html) says flu activity usually peaks between December and February. If you do elective surgery, one [study of a large anesthesia practice in Texas and Florida](https://pubmed.ncbi.nlm.nih.gov/34525169/) found December elective cases about 20% above the rest of the year.
 
@@ -51,7 +51,7 @@ A holiday callout is harder to cover at a small hospital because the usual backu
 
 For most of the year, a callout at a [Critical Access Hospital](/critical-access-hospital-scheduling) gets covered by a per-diem nurse or by a full-time nurse taking an extra shift. Over the holidays, both groups shrink at once. A per-diem nurse who will work Christmas may also be on the call list at another hospital nearby. If that hospital calls first, or pays more, your call goes to voicemail. Our guide to [coverage options for hospitals too small for a float pool](/blog/float-pool-nursing-small-hospitals) covers the alternatives in more depth.
 
-The numbers are tight too. Say your holiday night shift runs with two licensed nurses and one calls out. You are down to one, with fewer people than usual to call. That is an example; use your own holiday staffing numbers.
+The numbers are tight too. Say your holiday night shift runs with two licensed nurses and one calls out. You are down to one, with fewer people than usual to call.
 
 ## Do Nurse Callouts Really Go Up Over the Holidays?
 
