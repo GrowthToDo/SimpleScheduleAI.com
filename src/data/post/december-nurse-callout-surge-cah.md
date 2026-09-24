@@ -1,14 +1,13 @@
 ---
-draft: true
-publishDate: 2026-07-24T00:00:00Z
-updateDate: 2026-05-02T00:00:00Z
+draft: false
+publishDate: 2026-09-24T00:00:00Z
+updateDate: 2026-09-24T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Holiday Staffing: How CAHs Plan Thanksgiving to New Year'
+title: 'Holiday Nurse Staffing: How to Cover Callouts From Thanksgiving to New Year'
 excerpt: >
-  Critical Access Hospitals see nurse callout rates rise 25-35% between Thanksgiving and
-  New Year's Day, while patient volume follows an unpredictable surge-and-dip pattern.
-  Managing this window requires planning that starts in October, not the week before
-  Thanksgiving. This guide explains the specific preparation steps for a 25-bed CAH.
+  Your per-diem nurses want Christmas off too. When a nurse calls in sick on a
+  holiday, the plan you wrote in October decides whether you make three phone
+  calls or thirty.
 image: https://images.unsplash.com/photo-1512389142860-9c449e58a543?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
@@ -16,185 +15,180 @@ tags:
   - nurse-scheduling
   - critical-access-hospitals
   - holiday-scheduling
+  - callout-coverage
 metadata:
   canonical: 'https://simplescheduleai.com/blog/december-nurse-callout-surge-cah'
 ---
 
 ## Key Takeaways
 
-- CAHs typically see 25-35% higher nurse callout rates during the Thanksgiving-to-New-Year window compared to the rest of the year, driven by illness, travel conflicts, and personal emergencies.
-- The callout surge compounds with a staffing vulnerability: per-diem nurses who normally fill gaps are also traveling or taking time off, which removes the usual buffer.
-- Effective planning starts in October with three specific steps: building a holiday coverage reserve roster, converting the callout replacement tree into a documented list, and pre-negotiating overtime commitments with nurses who are willing to work extra holiday shifts.
-- The December patient volume pattern at most CAHs does not follow a simple surge. It dips between Christmas and New Year's, spikes on New Year's Eve, and sees elevated respiratory illness admissions throughout the month. Staff accordingly rather than applying a flat coverage boost.
-- A CAH that begins December planning in November is already too late to adequately staff the Thanksgiving weekend.
+- Plan the whole stretch from the Wednesday before Thanksgiving to New Year's Day, and not only the three holidays. A [study of anesthesia staff at one hospital](https://pubmed.ncbi.nlm.nih.gov/33102816/) found more unplanned absences on Mondays, Fridays and the days next to a holiday.
+- Your per-diem nurses will cover fewer holiday shifts than usual, because they want the holidays off too. Ask each one in writing, by early November, which holiday dates they can work.
+- Build a holiday volunteer list with the extra pay written next to each name. Let your charge nurses offer that pay on the first call without phoning you first.
+- In Texas, [Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) bars a hospital from requiring a nurse to work extra hours or extra days beyond her schedule. Your holiday plan has to rest on volunteers.
+- Do not plan late December as a slow month. [CDC](https://www.cdc.gov/flu/about/season.html) says flu activity usually peaks between December and February. If you do elective surgery, one [study of a large anesthesia practice in Texas and Florida](https://pubmed.ncbi.nlm.nih.gov/34525169/) found December elective cases about 20% above the rest of the year.
 
 ## Table of Contents
 
-- [What Actually Happens to Nurse Staffing in December at a CAH](#what-happens-in-december)
-- [Why Per-Diem Buffers Fail During Holiday Weeks](#why-per-diem-buffers-fail)
-- [The October Preparation Checklist](#october-preparation-checklist)
-- [How to Build a Holiday Coverage Reserve Roster](#holiday-coverage-reserve-roster)
-- [Managing the Callout Replacement Tree During Holiday Weeks](#callout-replacement-tree)
-- [Patient Volume Patterns: When to Staff Up vs. Staff Lean](#patient-volume-patterns)
-- [How SimpleScheduleAI Prepares CAHs for Holiday Surge](#how-simplescheduleai-helps)
+- [Why Are Holiday Callouts Harder to Cover at a Small Hospital?](#why-are-holiday-callouts-harder-to-cover-at-a-small-hospital)
+- [Do Nurse Callouts Really Go Up Over the Holidays?](#do-nurse-callouts-really-go-up-over-the-holidays)
+- [Is Late December a Slow Time to Run Lean on Nurses?](#is-late-december-a-slow-time-to-run-lean-on-nurses)
+- [When Should You Start Planning Holiday Nurse Staffing?](#when-should-you-start-planning-holiday-nurse-staffing)
+- [How Do You Build a Holiday Volunteer List?](#how-do-you-build-a-holiday-volunteer-list)
+- [Who Should You Call First When a Nurse Calls Out on a Holiday?](#who-should-you-call-first-when-a-nurse-calls-out-on-a-holiday)
+- [What Do Federal and Texas Rules Require for Holiday Nurse Staffing?](#what-do-federal-and-texas-rules-require-for-holiday-nurse-staffing)
+- [How Does SimpleScheduleAI Help With Holiday Coverage?](#how-does-simplescheduleai-help-with-holiday-coverage)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-## What Actually Happens to Nurse Staffing in December at a CAH?
+Holiday nurse staffing at a 25-bed hospital comes down to one question. When a nurse calls in sick on Christmas morning, who do you call, and will they say yes? This post is about answering that question in October, while you still have time. It covers the five weeks or so from Thanksgiving to New Year's Day.
 
-The holiday staffing problem at a Critical Access Hospital is not a single surge event. It is a six-week sequence of overlapping pressures that starts before Thanksgiving and does not resolve until after New Year's Day.
+This post does not cover who works which holiday in the first place. That is a separate decision, covered in [how to set up a fair holiday rotation](/blog/fair-holiday-rotation-nurses-cah). This post starts after the rotation is set, and deals with the sick calls that arrive anyway.
 
-In the first week: Thanksgiving travel requests peak, which means the nurse manager receives more time-off requests in late October and early November for the Thanksgiving week than for any other week of the year. Nurses who submitted requests early get approvals; nurses who submit late get denials; nurses who get denied sometimes call out anyway.
+## Why Are Holiday Callouts Harder to Cover at a Small Hospital?
 
-In the second and third weeks (the two weeks after Thanksgiving): nursing staff who traveled for the holiday return, but illness transmission from travel begins showing up as sick calls. The callout rate for the two weeks following Thanksgiving is consistently higher than the Thanksgiving week itself.
+A holiday callout is harder to cover at a small hospital because the usual backup people are busy too. Per-diem nurses travel and see family over the same weeks as everyone else. Most small hospitals have no float pool, meaning a group of nurses who move between units to fill gaps. On a holiday night, the whole backup list may be three or four people, and each of them already has plans.
 
-In weeks four through six (mid-December through New Year's): illness callouts, family emergency callouts, and holiday depression callouts layer on top of each other. Managers who planned staffing only around the major holidays (Thanksgiving, Christmas, New Year's) find they have under-staffed the adjacent weeks.
+For most of the year, a callout at a [Critical Access Hospital](/critical-access-hospital-scheduling) gets covered by a per-diem nurse or by a full-time nurse taking an extra shift. Over the holidays, both groups shrink at once. A per-diem nurse who will work Christmas may also be on the call list at another hospital nearby. If that hospital calls first, or pays more, your call goes to voicemail. Our guide to [coverage options for hospitals too small for a float pool](/blog/float-pool-nursing-small-hospitals) covers the alternatives in more depth.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-label="Chart showing nurse callout rate by week from early November through early January with peak callout weeks identified">
-  <rect width="720" height="260" fill="#f8fafc" rx="8"/>
-  <text x="360" y="26" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle">Typical CAH Nurse Callout Pattern: Nov-Jan (Relative to Annual Average)</text>
-  <line x1="60" y1="200" x2="680" y2="200" stroke="#e2e8f0" stroke-width="1.5"/>
-  <line x1="60" y1="50" x2="60" y2="200" stroke="#e2e8f0" stroke-width="1.5"/>
-  <line x1="60" y1="200" x2="60" y2="205" stroke="#94a3b8" stroke-width="1"/>
-  <line x1="185" y1="200" x2="185" y2="205" stroke="#94a3b8" stroke-width="1"/>
-  <line x1="310" y1="200" x2="310" y2="205" stroke="#94a3b8" stroke-width="1"/>
-  <line x1="435" y1="200" x2="435" y2="205" stroke="#94a3b8" stroke-width="1"/>
-  <line x1="560" y1="200" x2="560" y2="205" stroke="#94a3b8" stroke-width="1"/>
-  <line x1="680" y1="200" x2="680" y2="205" stroke="#94a3b8" stroke-width="1"/>
-  <text x="60" y="218" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Nov 1</text>
-  <text x="185" y="218" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Nov 15</text>
-  <text x="310" y="218" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Nov 29</text>
-  <text x="435" y="218" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Dec 13</text>
-  <text x="560" y="218" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Dec 27</text>
-  <text x="680" y="218" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Jan 10</text>
-  <line x1="60" y1="140" x2="680" y2="140" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="45" y="144" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Avg</text>
-  <polyline points="60,138 100,132 140,120 185,90 225,118 265,105 310,115 350,108 390,95 435,80 475,85 520,88 560,100 600,108 640,115 680,130" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
-  <rect x="165" y="55" width="70" height="22" rx="3" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
-  <text x="200" y="70" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626" text-anchor="middle">Thanksgiving</text>
-  <rect x="415" y="55" width="65" height="22" rx="3" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
-  <text x="447" y="70" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626" text-anchor="middle">Christmas</text>
-  <text x="360" y="245" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Peak callout periods extend beyond the holiday dates themselves. Post-Thanksgiving illness wave is the most under-planned week.</text>
-</svg>
+The numbers are tight too. Say your holiday night shift runs with two licensed nurses and one calls out. You are down to one, with fewer people than usual to call. That is an example; use your own holiday staffing numbers.
 
-The manager who accounts for this full six-week pattern is planning correctly. The manager who plans only for the three major holiday dates is planning for a fraction of the actual staffing problem.
+## Do Nurse Callouts Really Go Up Over the Holidays?
 
-## Why Per-Diem Buffers Fail During Holiday Weeks?
+Nobody publishes a reliable number for how much nurse callouts rise over the holidays. As of September 2026, we found no government or peer-reviewed figure. One study of anesthesia staff found more unplanned absences on Mondays, Fridays and the days next to a holiday. Your own last-year callout records are the most useful number you have.
 
-Most CAH nurse managers rely on a per-diem pool to fill callout gaps throughout the year. During holiday weeks, that buffer partially or completely evaporates for three reasons.
+You may have seen a figure like "callouts rise up to 30% over the holidays." We traced it back to a staffing agency blog post that cites no data. Keep it out of your budget and your board reports.
 
-First, per-diem nurses have the same holiday plans as full-time staff. They travel, visit family, and take unpaid time off. A per-diem nurse who works flexible hours specifically because they value schedule control is not available on demand during the weeks they have already committed to travel.
+The research that does exist is narrower. A [2020 study by Dexter and colleagues](https://pubmed.ncbi.nlm.nih.gov/33102816/) looked at two years of unplanned absences, meaning sick calls and other no-notice absences, among anesthesia staff at the University of Iowa. The study counted Mondays, Fridays and days next to holidays as one group. That group had more unplanned absences than Tuesdays, Wednesdays and Thursdays. Because the days were grouped, the study cannot tell you how much the holidays add on their own.
 
-Second, per-diem nurses who are available during holiday weeks have usually already been contacted by multiple facilities. In rural Texas labor markets, a qualified per-diem nurse has relationships with several facilities within driving distance. If they are willing to work over Christmas, they will have committed to one facility before you call. The nurse who says yes to the second call is either exhausted from covering elsewhere or was declined by the higher-paying offer.
+The study also counted the Wednesday before Thanksgiving as a day next to a holiday. That is why this post starts the holiday stretch on that Wednesday. An [earlier study at the University of Miami](https://pubmed.ncbi.nlm.nih.gov/30149226/) found only minor differences by day of the week, or on the day before or after a holiday. So treat the pattern as something to check against your own records.
 
-Third, per-diem nurses who accept holiday shifts often do so for the premium pay. If your facility is not offering holiday overtime premiums that compete with nearby hospitals or traveling nurse agencies, your per-diem calls will increasingly go to voicemail between Thanksgiving and New Year's.
+To check it, pull last year's callout records from November 20 to January 5 and count the callouts by date. If you have no callout log, use last year's posted schedule and the changes made to it, plus any texts you kept. Then start a log this year with four columns: date, shift, who called out, and who covered.
 
-The practical consequence: your backup for callout coverage during holiday weeks is effectively unavailable. Your planning for this period must account for full-time staff covering more of the gap than they do during the rest of the year.
+## Is Late December a Slow Time to Run Lean on Nurses?
 
-## What Should You Prepare in October?
+Late December is usually not a safe time to run lean on nurses. [CDC](https://www.cdc.gov/flu/about/season.html) says flu activity usually peaks between December and February. If you do elective surgery, one large study found December elective caseloads about 20% higher than the rest of the year. Plan December from your own census history, meaning how many patients you had each day.
 
-Holiday staffing preparation should begin in October, not November. By the time Thanksgiving week arrives, every preparation step should already be complete.
+The first piece of evidence is flu. In the [2024-25 season](https://www.cdc.gov/flu/whats-new/2025-2026-influenza-activity.html), CDC reports that activity started rising in mid-November and peaked in early February 2025. Flu season brings sick patients to your beds and sick nurses to the phone over the same weeks.
 
-**By October 15:**
+The second is elective surgery. [Piersa and colleagues](https://pubmed.ncbi.nlm.nih.gov/34525169/) studied about 3.5 million adult elective anesthesia cases at the Texas and Florida locations of one large anesthesia practice, from 2017 to 2019. In December 2017, the daily caseload was "a 20% increase over the January-to-November baseline." The next two Decembers showed the same rise. If your hospital does elective surgery or procedures, expect a busier December.
 
-- Post the Thanksgiving week schedule and the Christmas/New Year's week schedule simultaneously. Nurses who need to book travel do so more than six weeks in advance; giving them visibility this early reduces the number of late time-off requests and associated resentment.
-- Identify which nurses have not worked a major holiday in the past 12 months. These nurses are the most likely candidates for holiday coverage duty under the rotation system.
+Neither study tells you how busy your unit will be on December 28. Your census from the last two Decembers does. Pull it before you decide which days to staff up.
 
-**By October 31:**
+## When Should You Start Planning Holiday Nurse Staffing?
 
-- Complete the holiday rotation assignments for Thanksgiving, Christmas, and New Year's. Do not leave any mandatory coverage slots unfilled heading into November.
-- Send a voluntary holiday overtime sign-up to all nurses. Offer a specific premium rate for each holiday. Collect responses by November 7.
-- Confirm per-diem nurse availability for each holiday week. Do not assume last year's per-diem coverage pattern holds.
+Start planning holiday nurse staffing in early October. Nurses book holiday travel early, and per-diem nurses commit to other hospitals early. By mid-November, many of the people you would call are already spoken for. A plan built in October gives you a list of names who have said yes.
 
-**By November 15:**
+Here is a simple timeline to adapt. The dates are suggestions. The first row assumes you already know who works each holiday, from your holiday rotation or however your hospital decides it.
 
-- Finalize the holiday reserve roster (see below). Every holiday slot should have a primary assignee and a named backup.
-- Run a pre-holiday briefing with charge nurses on the callout escalation procedure. Every charge nurse should know exactly who to call, in what order, and what the premium rate is for holiday coverage.
+<div class="not-prose overflow-x-auto my-8">
+  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-700">
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:22%">By this date</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:78%">What should be done</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">October 15</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Post the Thanksgiving, Christmas and New Year's schedules together, so nurses can plan travel. Pull last year's callout records and census. Get the extra holiday pay approved.</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">October 31</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Send the holiday volunteer sign-up to every nurse, with the extra pay for each date in writing. Ask each per-diem nurse which holiday dates they can work. If you use an agency, ask what they can send on each holiday.</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">November 10</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Close the sign-up. Write the holiday volunteer list and the call order for a holiday callout.</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">November 17</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Hand every charge nurse the volunteer list and the call order. Confirm the extra pay they can offer without calling you.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-label="October-November preparation timeline showing three planning phases with specific actions and deadlines">
-  <rect width="720" height="300" fill="#f8fafc" rx="8"/>
-  <text x="360" y="28" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle">Holiday Staffing Preparation Timeline</text>
-  <rect x="30" y="50" width="200" height="210" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
-  <text x="130" y="75" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" text-anchor="middle">Phase 1: Oct 1-15</text>
-  <text x="130" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">Post holiday schedules</text>
-  <text x="130" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">Give nurses full visibility</text>
-  <text x="130" y="129" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">to Nov-Jan coverage needs</text>
-  <text x="130" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">Identify nurses due for</text>
-  <text x="130" y="172" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">holiday duty (rotation)</text>
-  <text x="130" y="195" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">Confirm per-diem pool</text>
-  <text x="130" y="212" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">availability for each</text>
-  <text x="130" y="229" font-family="system-ui, sans-serif" font-size="10" fill="#1e40af" text-anchor="middle">holiday week</text>
-  <rect x="260" y="50" width="200" height="210" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
-  <text x="360" y="75" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#15803d" text-anchor="middle">Phase 2: Oct 16-31</text>
-  <text x="360" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">Complete rotation</text>
-  <text x="360" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">assignments for all</text>
-  <text x="360" y="129" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">three major holidays</text>
-  <text x="360" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">Post voluntary OT sign-up;</text>
-  <text x="360" y="172" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">collect by Nov 7</text>
-  <text x="360" y="195" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">Define holiday premium</text>
-  <text x="360" y="212" font-family="system-ui, sans-serif" font-size="10" fill="#166534" text-anchor="middle">rates in writing</text>
-  <rect x="490" y="50" width="200" height="210" rx="8" fill="#fefce8" stroke="#fef08a" stroke-width="1.5"/>
-  <text x="590" y="75" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#a16207" text-anchor="middle">Phase 3: Nov 1-15</text>
-  <text x="590" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">Finalize holiday reserve</text>
-  <text x="590" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">roster with backups</text>
-  <text x="590" y="129" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">named for every slot</text>
-  <text x="590" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">Brief all charge nurses</text>
-  <text x="590" y="172" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">on callout escalation</text>
-  <text x="590" y="195" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">procedure</text>
-  <text x="590" y="215" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">All steps complete</text>
-  <text x="590" y="232" font-family="system-ui, sans-serif" font-size="10" fill="#854d0e" text-anchor="middle">before Thanksgiving</text>
-</svg>
+The first row matters most. Nurses who know their holiday schedule in October can plan around it. Nurses who find out in late November are more likely to ask for changes.
 
-## How to Build a Holiday Coverage Reserve Roster?
+## How Do You Build a Holiday Volunteer List?
 
-The holiday coverage reserve roster is a separate list from your standard callout replacement tree. It lists nurses who have pre-committed to holiday coverage under specific conditions, along with their contact information, their agreed premium rate, and the dates they are available.
+A holiday volunteer list is a short written list of nurses who have agreed to pick up extra holiday shifts. Each name has the dates they can work, the shifts they will take, and the extra pay you agreed. It sits apart from your normal callout list. When a holiday shift opens up, the charge nurse calls this list first.
 
-The reserve roster has two tiers:
+Split the list into two groups, because each group answers the phone differently.
 
-**Tier 1 (committed):** Nurses who have signed up for specific holiday shifts through the voluntary overtime process. They have agreed to a specific date, time, and premium rate. They receive a scheduling confirmation before the holiday. They are the first call when a holiday shift needs coverage.
+**Signed up for a shift.** These nurses agreed to a specific date and shift, at a specific extra pay. They expect the call and have kept that day open.
 
-**Tier 2 (available, not committed):** Nurses who indicated they may be available for holiday overtime but did not commit to specific dates. They are on the list at their own request and understand they may be called. They are not guaranteed hours and have no obligation to accept when called.
+**Open to a call.** These nurses said they might be free on some dates but did not commit to a shift. They can say no when you call, and saying no should not count against them. A per-diem nurse who only sent you dates goes in this group.
 
-Per-diem nurses who confirmed availability go on Tier 2 of the reserve roster, sorted by seniority.
+For each nurse, write down:
 
-The reserve roster should include, for each nurse: name, phone number, available dates, availability window (morning vs. night vs. either), agreed premium rate for Tier 1 nurses, and any constraints (cannot travel in from out of town, cannot work back-to-back with existing scheduled shifts).
+- Name and phone number
+- The holiday dates they can work
+- Day shift, night shift, or either
+- The extra pay you agreed for each date
+- Anything that limits them, such as a shift they already work the day before
 
-Distribute the reserve roster to every charge nurse before November 15. This is the document they pull out at 5 a.m. on Christmas morning when someone calls in sick.
+**How much extra pay?** We cannot give you a dollar figure, because it depends on your budget and on what nearby hospitals pay. Ask your charge nurses and per-diem nurses what nearby hospitals offered last year. Then take one number per holiday to your CEO or CFO for approval in October. It can be a flat amount per shift or a higher hourly rate. Pick one and write it down. Our guide on [how to reduce nurse overtime](/blog/how-to-reduce-nurse-overtime) covers how extra shifts add to your overtime bill.
 
-## How Do You Manage the Callout Replacement Tree During Holiday Weeks?
+The sign-up itself can be one short message. For example: "We need extra help on these holiday shifts. The extra pay for each is listed. Reply by November 10 with the dates and shifts you can take." List the dates, shifts and pay below it.
 
-Your normal callout replacement tree, which probably works adequately during regular weeks, will fail during the holiday surge because it assumes per-diem availability and because nurses on the tree have competing holiday commitments.
+Watch for the same two or three nurses taking every extra shift. That is how holiday coverage turns into [nurse burnout](/blog/nurse-burnout-scheduling-cah) by January. If you are not sure how your per-diem nurses are paid or scheduled, see [what per diem nursing is](/blog/what-is-per-diem-nursing).
 
-Two modifications make the callout tree work better during holiday weeks:
+## Who Should You Call First When a Nurse Calls Out on a Holiday?
 
-**Modification 1: Pre-authorize charge nurses to offer the holiday premium rate without manager approval.** During regular callouts, a charge nurse typically needs to check with the manager before offering overtime. During holiday weeks, that approval delay is the difference between filling the shift and not filling the shift. Pre-authorize the specific premium rate so the charge nurse can offer it immediately on the first call.
+When a nurse calls out on a holiday, call the nurses who signed up for that shift first. Then call the rest of the holiday volunteer list. Then use your normal callout list, meaning the order you call nurses for a sick call during the rest of the year. Call an agency last. Write this order down before Thanksgiving, so that at 5 a.m. on Christmas the charge nurse reads it off a page.
 
-**Modification 2: Work the reserve roster before the standard callout tree.** During holiday weeks, start callout replacement with the reserve roster (nurses who pre-committed or pre-indicated availability), not with the standard rotation. This respects the pre-planning and reaches the nurses most likely to say yes first.
+Two changes to your normal callout process make the holiday version work.
 
-Document every call attempt during holiday weeks. If you ever face a CMS survey inquiry about holiday staffing adequacy, the call log and the reserve roster are your evidence that you had a systematic process and followed it.
+**Let charge nurses offer the holiday pay on the first call.** On a normal night, a charge nurse may need your approval before offering overtime. On a holiday, waiting for that approval can cost you the nurse. Set the extra pay in October, write it on the volunteer list, and tell charge nurses they can offer it right away.
 
-## Patient Volume Patterns: When to Staff Up vs. Staff Lean: Which Is Better?
+**Call the volunteer list before the normal callout list.** The volunteers already said they are willing to work. They are the people most likely to pick up. If you run a [three-group holiday rotation](/blog/fair-holiday-rotation-nurses-cah), where nurses take turns working each holiday, your volunteers come from the per-diem nurses and the nurses who are off that holiday.
 
-Not every day between Thanksgiving and New Year's requires elevated staffing. The volume pattern at most CAHs follows a predictable shape:
+Requiring a nurse to work is not a step in this order. [Texas Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) bars a hospital from requiring a nurse to work extra hours or extra days beyond her schedule, and a nurse may refuse. That covers ordering an off-duty nurse to come in on a holiday. The law has four narrow emergency exceptions. Under the one for an unforeseen emergency, the hospital must still make a good-faith effort, as far as possible, to cover the shift with volunteers. Other states set different rules, compared in [mandatory nurse overtime by state](/blog/mandatory-nurse-overtime-by-state).
 
-- **Thanksgiving Day:** Low elective volume; moderate emergency volume. Staff at standard minimums.
-- **Post-Thanksgiving (Nov 26-Dec 4):** Elevated respiratory illness admissions. Staff slightly above minimums.
-- **December 1-20:** Normal to slightly elevated volume. Standard staffing.
-- **December 21-24 (pre-Christmas):** Low elective volume; moderate emergency volume. Staff at minimums.
-- **December 25-26:** Very low elective; moderate trauma and respiratory. Staff at minimums with reserve list on call.
-- **December 27-30:** Lowest patient volume of the year in many CAHs. Staff lean; this is when voluntary time-off requests for nurses who worked the holidays should be accommodated.
-- **December 31-January 1 (New Year's Eve/Day):** Elevated trauma, alcohol-related presentations, respiratory emergencies. Staff above minimums; have reserve roster available.
+Keep a short note of each holiday callout: who called out, who you reached, who covered, and the time. If a nurse later asks why someone else got the extra shift, you will have the answer. The full callout process is in [how to handle nurse callouts](/blog/how-to-handle-nurse-callouts), and night callouts are covered in [after-hours callout coverage](/blog/after-hours-callout-coverage-small-hospitals).
 
-The most common planning mistake is applying uniform elevated staffing across all six weeks, which burns overtime budget on the slow days and leaves managers without resources on the actual surge days. Match your staffing level to the volume pattern, and build your reserve roster for the specific high-risk dates rather than blanket coverage.
+## What Do Federal and Texas Rules Require for Holiday Nurse Staffing?
 
-## How SimpleScheduleAI Prepares CAHs for Holiday Surge?
+No federal or Texas rule sets special staffing levels for holidays. The federal rule for Critical Access Hospitals applies every day of the year. A registered nurse, clinical nurse specialist or licensed practical nurse must be on duty whenever the hospital has one or more inpatients. Texas sets no nurse-to-patient ratio, but it does require a nurse staffing committee and a staffing plan.
 
-[SimpleScheduleAI's scheduling system](/nurse-scheduling-software) supports holiday surge planning through several specific features. The reserve roster can be built and stored within the system in October, so charge nurses have instant access to the pre-committed nurses during holiday callouts rather than searching through text messages or a shared spreadsheet.
+The federal rule is [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), where CAH means Critical Access Hospital. The rule holds on holidays, so you cannot leave a holiday shift open while you have inpatients. It says "a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients."
 
-When a holiday callout occurs, the system surfaces the reserve roster first, filtered by date availability and certification match, before falling back to the standard callout replacement list. The audit trail logs every callout and replacement contact during holiday weeks, providing the documentation CAH managers need for CMS surveys and internal grievance responses.
+Under [Texas Health and Safety Code 257.004](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/), each hospital has a nurse staffing committee. At least 60 percent of its members must be direct-care registered nurses, meaning nurses who spend at least half their work time caring for patients. The committee recommends a staffing plan to the hospital's board. Bring your holiday call order and volunteer list to that committee in October, so the nurses who will work the holidays see the plan first.
 
-For [Critical Access Hospital administrators](/critical-access-hospital-scheduling) doing their first structured holiday planning, the setup process typically takes one conversation with our team to configure the specific rules for your holiday rotation system, reserve roster structure, and callout escalation sequence.
+Staff your holidays to your staffing plan. If the plan sets a higher number than the federal rule, the plan's number is the one to meet.
 
-SimpleScheduleAI is not a workforce forecasting tool and does not provide patient volume predictions. For volume planning, consult your previous years' census data from your EHR. The system handles the staffing execution side: who covers, in what order, and at what cost.
+## How Does SimpleScheduleAI Help With Holiday Coverage?
+
+[SimpleScheduleAI](/nurse-scheduling-software) is an AI-native nurse scheduling service for Critical Access Hospitals. The AI builds each draft schedule, our scheduling team checks it, and the nurse manager approves it. For the holidays, that means three things. We set up your hospital's holidays at the start. Each draft spreads holiday shifts evenly across your nurses. And when a nurse calls out, you get a short ranked list of who to call.
+
+Here is what each piece does.
+
+- **Holiday shifts are spread evenly.** When a draft is built, the [AI scheduling engine](/ai-nurse-scheduling) counts holiday shifts per nurse against the team average. That way the same few nurses do not keep drawing them.
+- **Per-diem nurses are only scheduled on dates they offered.** Our team keeps per-diem availability current from what you tell us, and flags any per-diem nurse who has not sent theirs.
+- **A ranked shortlist when someone calls out.** The list puts nurses who would not go into overtime pay ahead of those who would. It compares each nurse's skill level, which you set for each nurse at setup, with the nurse who called out. If the nurse who called out was your charge nurse and no one on the list can take charge, the list says so.
+- **A timestamped record of every schedule change.** When a holiday shift changes, the change and its time are logged.
+
+Here is what it does not do. The service does not know about your holiday volunteer list or the extra pay you agreed, so keep that list yourself. It does not track pay rates or dollar costs. It does not forecast your December census. It does not place the phone calls, and it does not record who you phoned or what they said. Your charge nurse still makes the calls and writes the short note.
+
+SimpleScheduleAI is not the right fit if you need holiday pay calculated in the same system as the schedule. That belongs in your payroll system. See [how it works](/how-it-works) for the full cycle, or watch it build a schedule and rank a callout shortlist in the [interactive simulator](/simulator).
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Most holiday staffing problems are decided in October. By the time a nurse calls in sick on Christmas morning, the charge nurse either has a list of names with agreed pay, or has a phone and a guess. We would skip any number that says how much callouts rise, because no trustworthy one exists. Look at your own last-year callout records, find the days that hurt, and put a named volunteer against each of them.
+  </p>
+</div>
+
+## What to Do This Week
+
+1. **Pull last year's callouts from November 20 to January 5.** Count them by date. Mark the days with the most callouts. Those days go in your plan along with the holidays.
+2. **Pull your census for the last two Decembers.** Check whether late December was actually slow. Staff to what you find.
+3. **Decide the extra holiday pay for each date.** Ask what nearby hospitals paid last year, and get your number approved now so charge nurses can offer it on the first call.
+4. **Draft the holiday volunteer sign-up.** List the dates, the shifts and the pay. Plan to send it by October 31.
+5. **Ask each per-diem nurse for their holiday dates.** Get the answer in writing. A per-diem nurse who has not answered by early November is not on your list.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">
@@ -207,34 +201,52 @@ SimpleScheduleAI is not a workforce forecasting tool and does not provide patien
     href="/how-it-works"
     class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
   >
-    See how it works →
+    See how it works â†’
   </a>
-  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
+  <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team â†’</a></p>
 </div>
 
 ## Frequently Asked Questions
 
-**Q: How much do nurse callout rates increase during the holidays?**
+**Q: How much do nurse callouts go up during the holidays?**
 
-Critical Access Hospitals typically see nurse callout rates 25-35% above their annual average during Thanksgiving and Christmas weeks, based on scheduling data reported by CAH administrators. The peak is not always the holiday itself: the two weeks after Thanksgiving are often the highest callout period of the year due to illness spread from holiday travel. Planning for this extended window, not just the three major holiday dates, is the difference between adequate and inadequate holiday staffing.
+No reliable figure exists for nurses, as of September 2026. One study of anesthesia staff found more unplanned absences on Mondays, Fridays and days next to holidays than midweek, and an earlier study found little difference. The "up to 30%" figure online traces to a staffing agency blog that cites no data. Your own callout records from last November and December are the best number to plan with.
 
-**Q: When should a CAH start planning December nurse staffing?**
+**Q: When should a small hospital start planning holiday nurse staffing?**
 
-October. Specifically, the holiday schedule and voluntary overtime sign-up should both be posted by October 31 to give nurses enough lead time to plan travel and accept or decline shifts. Hospitals that begin planning in November are already working against a compressed timeline that limits options. The per-diem confirmation and reserve roster finalization should be complete before November 15.
+Start in early October. Post the holiday schedules by mid-October, send the volunteer sign-up with the extra pay by October 31, and give charge nurses the volunteer list and call order by mid-November. Per-diem nurses commit to other hospitals early, so a plan started in late November has fewer names on it.
 
-**Q: How do you handle holiday callouts when per-diem nurses are unavailable?**
+**Q: How do you cover holiday callouts when per-diem nurses are not available?**
 
-Build a holiday reserve roster in October that identifies which full-time nurses have pre-committed to holiday overtime at a specific premium rate. When a callout occurs, work this list first before attempting the standard callout tree. Pre-authorizing charge nurses to offer the holiday premium without manager approval removes a delay that frequently results in shifts going uncovered. Document every contact attempt for CMS compliance records.
+Use a holiday volunteer list built in October. It names nurses who agreed to pick up extra holiday shifts, with dates and extra pay. The charge nurse calls this list first and can offer the agreed pay without calling the manager. After that comes the normal callout list, then an agency.
 
-**Q: How do CAHs handle the post-Thanksgiving illness wave in nursing staff?**
+**Q: Can a Texas hospital require a nurse to cover a holiday shift?**
 
-Plan for it specifically. The two weeks following Thanksgiving should be staffed at a higher-than-normal coverage level, not at Thanksgiving-week levels. Stock up on nurse availability for weeks 2 and 3 of the holiday window, not just week 1. Hospitals that drop back to standard staffing immediately after Thanksgiving weekend are consistently underprepared for the illness callout surge that follows.
+Generally no. Texas Health and Safety Code Chapter 258 bars a hospital from requiring a nurse to work extra hours or extra days beyond her schedule, and a nurse may refuse. That includes ordering an off-duty nurse in on a holiday. The four exceptions are narrow emergencies. If you think one applies, ask your hospital's legal counsel before relying on it.
 
-**Q: Do Texas CAHs have specific requirements for holiday nurse staffing?**
+**Q: Do Texas Critical Access Hospitals have special holiday staffing rules?**
 
-[Texas DSHS regulations](https://www.dshs.texas.gov/acute-settlement-agreement) require CAHs to maintain RN coverage at all times under CMS §485.635(c). There is no specific state requirement for elevated holiday staffing ratios, but the requirement for continuous RN coverage means that holiday callouts cannot simply go uncovered. The practical requirement is that you must always have a qualified replacement plan, not that you must staff above minimums on specific holidays.
+No. Under 42 CFR 485.631(a)(5), a registered nurse, clinical nurse specialist or licensed practical nurse must be on duty whenever the hospital has at least one inpatient, every day of the year. Texas sets no ratio. It requires a nurse staffing committee and a staffing plan, and holidays should be staffed to that plan.
+
+## Sources
+
+1. Dexter F, Epstein RH, Marian AA. Comparisons of unscheduled absences among categories of anesthesia practitioners, including anesthesiologists, nurse anesthetists, and anesthesia residents. _Perioperative Care and Operating Room Management_, 2020;21:100139. [PubMed 33102816](https://pubmed.ncbi.nlm.nih.gov/33102816/).
+
+2. Earlier study of unscheduled absences among anesthesia practitioners at the University of Miami. [PubMed 30149226](https://pubmed.ncbi.nlm.nih.gov/30149226/).
+
+3. Piersa AP, Tung A, Dutton RP, Shahul S, Glick DB. Study of December adult elective anesthesia caseload across Florida and Texas locations of a large multistate practice, 2017 to 2019. _Anesthesiology_, 2021;135(5):804-812. [PubMed 34525169](https://pubmed.ncbi.nlm.nih.gov/34525169/).
+
+4. Centers for Disease Control and Prevention. About the flu season: timing of peak activity. [CDC](https://www.cdc.gov/flu/about/season.html).
+
+5. Centers for Disease Control and Prevention. Influenza Activity in the United States during the 2024-25 Season and Composition of the 2025-26 Influenza Vaccine. [CDC](https://www.cdc.gov/flu/whats-new/2025-2026-influenza-activity.html).
+
+6. Texas Health and Safety Code Chapter 258, mandatory overtime for nurses prohibited. [Justia](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/).
+
+7. CMS Conditions of Participation for Critical Access Hospitals, licensed nurse on duty. [eCFR, 42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631).
+
+8. Texas Health and Safety Code 257.004, nurse staffing committee. [FindLaw](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/).
 
 ---
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
-[LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
+[LinkedIn â†’](https://www.linkedin.com/in/pradeep-pandeyji/)

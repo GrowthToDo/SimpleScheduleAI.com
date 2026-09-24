@@ -167,7 +167,7 @@ So the unfillable-shift playbook looks like this:
 
 Handling callouts well is reactive. Reducing them is schedule design.
 
-**Predictability.** A schedule posted well in advance, on a stable rotation, gives nurses fewer collisions between work and life, which is where many callouts start. Late postings and frequent changes push nurses to protect their plans with a callout.
+**Predictability.** A schedule posted well in advance, on a stable rotation, gives nurses fewer collisions between work and life, which is where many callouts start. Late postings and frequent changes push nurses to protect their plans with a callout. The same logic drives [holiday nurse staffing from Thanksgiving to New Year](/blog/december-nurse-callout-surge-cah), where posting the holiday schedules in October comes first.
 
 **Equitable distribution.** A nurse who can see that weekends, nights, and holidays fall evenly has less reason to defend herself against the schedule. Track the distribution per nurse and correct visible imbalances before they harden into resentment.
 

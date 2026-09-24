@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "slug": "december-nurse-callout-surge-cah",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-24T08:30:32.762Z",
+      "contentHash": "f6915f592f664c2e48347d180fba543698ea5951da4f0280455da9dfd702b628"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-24T08:30:34.316Z",
+      "contentHash": "f6915f592f664c2e48347d180fba543698ea5951da4f0280455da9dfd702b628"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-24T08:30:37.415Z",
+      "contentHash": "f6915f592f664c2e48347d180fba543698ea5951da4f0280455da9dfd702b628"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-24T08:30:37.451Z",
+      "contentHash": "f6915f592f664c2e48347d180fba543698ea5951da4f0280455da9dfd702b628"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-24T08:30:37.599Z",
+      "contentHash": "f6915f592f664c2e48347d180fba543698ea5951da4f0280455da9dfd702b628"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-24T08:30:37.599Z",
+      "contentHash": "f6915f592f664c2e48347d180fba543698ea5951da4f0280455da9dfd702b628"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-24T08:30:37.600Z",
+      "contentHash": "f6915f592f664c2e48347d180fba543698ea5951da4f0280455da9dfd702b628"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-09-24T08:30:53.916Z",
+      "contentHash": "2f08dbdb6858e135d138281221fc0908a8a0ac029403bf7421f4e2a20e02b798"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-09-24T08:30:54.508Z",
+      "contentHash": "2f08dbdb6858e135d138281221fc0908a8a0ac029403bf7421f4e2a20e02b798"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-09-24T08:30:55.038Z",
+      "contentHash": "2f08dbdb6858e135d138281221fc0908a8a0ac029403bf7421f4e2a20e02b798"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 63.3,
+        "headings": 100,
+        "actionability": 42.9,
+        "attention": 70
+      },
+      "overall": 63.5,
+      "counts": {
+        "sections": 10,
+        "rereads": 7,
+        "undefinedTerms": 15,
+        "headingsAnswered": 10,
+        "mondayActions": 6,
+        "blockedActions": 8,
+        "quitPoints": 3
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-09-24T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "extra pay / holiday pay (premium, differential, flat bonus? how much?)",
+          "normal callout list (assumes I already have one)",
+          "three-group holiday rotation",
+          "float pool",
+          "unplanned absences (same as callouts?)",
+          "census",
+          "overtime threshold",
+          "skill level",
+          "compliance lead",
+          "unforeseeable-emergency exception",
+          "clinical nurse specialist",
+          "direct-care registered nurses",
+          "AI-native",
+          "draft (of the schedule)",
+          "agency (which kind, how fast they can send someone on a holiday)"
+        ],
+        "mondayActions": [
+          "Pull last year's callouts from November 20 to January 5 and count them by date",
+          "Pull December census for the last two years",
+          "Ask administration/CFO to approve a holiday pay amount per date so charge nurses can offer it without calling me",
+          "Text each per-diem nurse asking which holiday dates they can work, answer in writing",
+          "Start a holiday volunteer sign-up with dates, shifts and pay, to go out by October 31",
+          "Write a one-page call order for charge nurses: signed-up volunteers, other volunteers, normal callout list, agency"
+        ],
+        "blockedActions": [
+          "Decide the extra holiday pay for each date: no range, no example amount, nothing on what beats the hospital down the road that 'pays more'",
+          "Get pay approved so charge nurses can offer it on the first call: no guidance on who approves or how to pitch it to the CEO/CFO",
+          "Pull last year's callout log: assumes one exists; many of us only have texts and memory",
+          "Post Thanksgiving, Christmas and New Year's schedules by October 15: depends on a rotation this post says it does not cover",
+          "Draft the holiday volunteer sign-up: no sample form or wording",
+          "Bring the holiday plan to the nurse staffing committee in October: no guidance on what to present",
+          "Call an agency as the last step: nothing on lining one up before the holidays",
+          "Check both with your compliance lead: unclear what 'both' is, and at 25 beds that person is often me"
+        ],
+        "sections": [
+          {
+            "heading": "Why Are Holiday Callouts Harder to Cover at a Small Hospital?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Do Nurse Callouts Really Go Up Over the Holidays?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Is Late December a Slow Time to Run Lean on Nurses?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "When Should You Start Planning Holiday Nurse Staffing?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Build a Holiday Volunteer List?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Who Should You Call First When a Nurse Calls Out on a Holiday?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Do Federal and Texas Rules Require for Holiday Nurse Staffing?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Help With Holiday Coverage?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-09-24T07:13:13.599Z",
+      "contentHash": "87aafdb3238b1eaf3d2cdbb6fbb534104283632966c9a7abf61d0b5229ad9e1d"
+    }
+  }
+}

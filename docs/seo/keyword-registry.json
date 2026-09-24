@@ -612,6 +612,14 @@
     "note": "MOFU seasonal: A/B/C three-year block method for holiday rotation. Published 2026-08-02 deliberately early so it indexes before the Nov-Dec scheduling season. Pre-publish repair removed a WRONG CFR cite (485.635(c) was cited 3x as safe-staffing rules; it is actually Services provided through agreements or arrangements) and a non-resolving DSHS URL; now cites only 485.631(a)(5) and 485.635(d). Three inline SVGs converted to Tailwind divs/table per the no-inline-svg rule."
   },
   {
+    "slug": "december-nurse-callout-surge-cah",
+    "type": "post",
+    "url": "/blog/december-nurse-callout-surge-cah",
+    "primaryKeyword": "holiday nurse staffing",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "MOFU seasonal, published 2026-09-24. Rewritten from a blocked draft built on a fabricated 25-35% holiday callout stat (traced to an uncited NurseRegistry agency blog). Zero measurable search volume (DataForSEO 2026-09-24): credibility + seasonal relevance piece, not traffic. Differentiated from fair-holiday-rotation-nurses-cah (WHO works each holiday) by owning holiday CALLOUT coverage: October timeline, holiday volunteer list with pre-approved pay, call order, Texas ch. 258 (hours OR days). Evidence: Dexter 2020 (pooled odds ratio, paired with Miami counter-study), Piersa 2021 (one practice's elective anesthesia caseload), CDC flu timing; all in facts-dossier."
+  },
+  {
     "slug": "nurse-scheduling-software-minimum-employees",
     "type": "post",
     "url": "/blog/nurse-scheduling-software-minimum-employees",
