@@ -33,7 +33,7 @@ metadata:
 - [How to Evaluate Healthcare Scheduling Software for a Small Hospital](#how-to-evaluate-healthcare-scheduling-software-for-a-small-hospital)
 - [Healthcare Scheduling Software Options Compared](#healthcare-scheduling-software-options-compared)
   - [UKG (formerly Kronos)](#ukg-formerly-kronos)
-  - [Aladtec (TCP Scheduling)](#aladtec-tcp-scheduling)
+  - [Aladtec by TCP Software](#aladtec-by-tcp-software)
   - [When I Work](#when-i-work)
   - [SmartLinx](#smartlinx)
   - [SimpleScheduleAI](#simplescheduleai)
@@ -98,17 +98,17 @@ Before comparing options, define what "best" means for your facility. Four quest
 
 **Not for:** Critical access hospitals without IT support, dedicated scheduling staff, or the implementation runway for an enterprise rollout.
 
-### Aladtec (TCP Scheduling)
+### Aladtec by TCP Software
 
-**What it is:** Healthcare-specific scheduling platform designed for EMS, fire/rescue, and healthcare organizations. The most widely used scheduling tool at smaller healthcare facilities.
+**What it is:** A self-serve scheduling platform owned by TCP Software. As of September 2026, its product pages market it to fire, EMS, law enforcement and corrections agencies, with no healthcare claim, although some hospitals use it.
 
-**Strengths:** Purpose-built for healthcare and public safety. Covers certification tracking, overtime visibility (manual), and basic compliance documentation. Suitable for smaller facilities. Self-serve SaaS model accessible from any browser. Reasonable implementation timeline (2-4 weeks) compared to enterprise platforms.
+**Strengths:** Built for 24/7 shift-work agencies. Covers certification tracking, overtime visibility (manual), and basic compliance documentation. Suitable for smaller facilities. Self-serve SaaS model accessible from any browser. Reasonable implementation timeline (2-4 weeks) compared to enterprise platforms.
 
-**Weaknesses:** Self-serve model, the nurse manager still operates the system and builds schedules. Configuration requires time investment. No managed service component. Post-acquisition support quality complaints on G2 and Capterra.
+**Weaknesses:** Self-serve model, the nurse manager still operates the system and builds schedules. Configuration requires time investment. No managed service component. Built for public safety, so ask TCP for a hospital nursing reference.
 
 **Best for:** CAHs where a nurse manager wants direct control over scheduling, is willing to invest 2-4 weeks in configuration, and has basic technical comfort with SaaS tools.
 
-**Not for:** Facilities that need structural burden reduction or that need to be operational in weeks rather than months.
+**Not for:** Facilities that need structural burden reduction, where the nurse manager has no time to operate a scheduling system.
 
 ### When I Work?
 

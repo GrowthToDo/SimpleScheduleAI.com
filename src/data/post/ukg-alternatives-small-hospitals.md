@@ -41,7 +41,7 @@ This guide compares 6 UKG alternatives for a Critical Access Hospital that needs
 - [What Is the Real Cost of Running UKG at a Small Hospital?](#what-is-the-real-cost-of-running-ukg-at-a-small-hospital)
 - [What Are the 3 Best UKG Alternatives for Critical Access Hospitals?](#what-are-the-3-best-ukg-alternatives-for-critical-access-hospitals)
 - [1. SimpleScheduleAI](#1-simplescheduleai)
-- [2. Aladtec (TCP Scheduling)](#2-aladtec-tcp-scheduling)
+- [2. Aladtec by TCP Software](#2-aladtec-by-tcp-software)
 - [3. SmartLinx](#3-smartlinx)
 - [When to Stay with UKG?](#when-to-stay-with-ukg)
 - [How SimpleScheduleAI Compares to UKG?](#how-simplescheduleai-compares-to-ukg)
@@ -186,11 +186,11 @@ The nurse manager reviews and approves schedules and handles callout coverage us
 
 **Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
-## 2. Aladtec (TCP Scheduling)
+## 2. Aladtec by TCP Software
 
 <img src="/images/blog/ukg-alternatives-small-hospitals/Aladtec.webp" alt="Aladtec by TCP healthcare and public safety scheduling platform" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec (the platform; [TCP](/blog/best-tcp-alternative-for-cah) is the parent company after the 2021 acquisition) is a scheduling platform used at critical access hospitals and EMS organizations. Unlike UKG, it requires minimal IT involvement and can be operational in 2-4 weeks. For a CAH leaving UKG because of implementation complexity, Aladtec is a meaningful reduction in setup overhead.
+Aladtec (the platform; [TCP](/blog/best-tcp-alternative-for-cah) is the parent company after the 2021 acquisition) is a scheduling platform that, as of September 2026, its own product pages market to fire, EMS, law enforcement and corrections agencies, with no healthcare claim. Some hospitals use it, based on its Capterra reviews. Unlike UKG, it requires minimal IT involvement and can be operational in 2-4 weeks. For a CAH leaving UKG because of implementation complexity, Aladtec is a meaningful reduction in setup overhead.
 
 The trade-off is clear: Aladtec replaces UKG's complexity with a different kind of self-serve overhead. The nurse manager still configures credential tracking, FLSA overtime thresholds, and shift rules manually. CMS documentation requires the manager to structure and export records; the system does not generate them automatically.
 
@@ -210,9 +210,8 @@ If you are leaving UKG because it demands too much from one person, Aladtec is s
 
 **Key advantages:**
 
-- Widest CAH-specific adoption; pre-built templates for common small-hospital scenarios
+- Built for 24/7 shift-work environments, with credential expiration tracking and minimum-staffing violation flags documented on its product pages
 - Minimal IT involvement for setup and operation
-- Lower cost than UKG and SmartLinx
 - 2-4 week implementation timeline
 
 **Key limitations:**
@@ -277,7 +276,7 @@ SmartLinx is most cited by skilled nursing and long-term care facilities, not ac
 
 **Verdict:** SmartLinx is a capable platform for the facility size it was built for. A 25-bed CAH without a dedicated IT resource and scheduling coordinator will not get the value the platform is priced for. If UKG felt over-engineered, SmartLinx is a smaller step down, not a different operating model. See our deeper [SmartLinx alternatives guide for Critical Access Hospitals](/blog/smartlinx-alternatives).
 
-**Cost:** Pricing not publicly listed. Contact for quote. Mid-market pricing above Aladtec; typically requires annual contract commitment.
+**Cost:** No pricing page as of September 22, 2026 (smartlinx.com/pricing returned a missing page). Contact SmartLinx for a quote.
 
 ## When to Stay with UKG?
 
