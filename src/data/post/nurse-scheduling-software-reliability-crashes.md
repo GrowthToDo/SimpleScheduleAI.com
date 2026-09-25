@@ -23,7 +23,7 @@ metadata:
 ## Key Takeaways
 
 - A scheduling software outage can last for weeks. When the [Kronos Private Cloud was hit by ransomware](https://www.aha.org/h-isac-reports/2021-12-13-h-isac-tlp-white-kronos-private-cloud-kpc-ransomware-incident-causes) on December 11, 2021, UKG told customers restoring it "may take up to several weeks."
-- The first things to go are the ones you use every shift: the posted schedule, the staff phone list, the callout call order, and the record of hours worked.
+- The first things to take a hit are the ones you use every shift: the posted schedule, the staff phone list, the callout call order, and the record of hours worked.
 - [Shannon Medical Center in San Angelo](https://www.techtarget.com/healthtechsecurity/news/366594979/Kronos-Cyberattack-Takes-Down-Healthcare-Workforce-Management-Services) used Kronos for timekeeping and scheduling, and switched to its backup process for running payroll without the system. [UMass Memorial Health](https://www.cybersecuritydive.com/news/kronos-outage-UMass-restoration/620966/) relied on backup timekeeping, including hours written on paper, for more than a month.
 - The fix is a downtime kit that lives outside the software: a printed four-week schedule, a paper phone list, a written callout order, and a paper hours sheet.
 - CMS (the Centers for Medicare and Medicaid Services) requires a critical access hospital's [emergency preparedness communication plan](https://www.law.cornell.edu/cfr/text/42/485.625) to hold staff contact information and an alternate way to reach staff. A phone list that exists only inside the scheduling system does not meet that need during an outage.
@@ -42,7 +42,7 @@ metadata:
 
 A scheduling software outage at a 25-bed hospital does not arrive with a warning. You open the system to finish the weekend schedule and it will not load. Your nurses need to know who is working Saturday night. The one person who can answer that is you, and your records are inside the system that just went down.
 
-At a 25-bed hospital there may be no IT person on call to work the problem. The scheduling vendor's support line may not answer until Monday. So the real question is what you can still do in the next hour with what is on paper. This guide walks through a real multi-week outage, what breaks first, and the downtime kit that keeps a holiday weekend covered.
+If the vendor hosts the system, nobody at your hospital can bring it back, however good your IT support is. The scheduling vendor's support line may not answer until Monday. So the real question is what you can still do in the next hour with what is on paper. This guide walks through a real multi-week outage, what breaks first, and the downtime kit that keeps a holiday weekend covered.
 
 ## What Happened When the Kronos Private Cloud Went Down in December 2021?
 
@@ -58,7 +58,7 @@ The problems hospitals reported were mainly with timekeeping and payroll, not wi
 
 ## What Stops Working at a Small Hospital When the Scheduling Software Goes Down?
 
-Four things stop working at once: the posted schedule, the staff phone list, the callout call order and the record of hours worked. A large hospital has a staffing office and an IT team to share that work. At a 25-bed hospital the nurse manager may have to rebuild all four alone.
+Four things stop working at once: the posted schedule, the staff phone list, the callout call order and the record of hours worked. A large hospital may have a staffing office to share that work. At a 25-bed hospital the nurse manager may have to rebuild all four alone.
 
 **The posted schedule.** If nurses check their shifts in an app, an outage means they cannot see next week. The printed copy on the unit wall may be two changes out of date.
 
@@ -68,7 +68,7 @@ Four things stop working at once: the posted schedule, the staff phone list, the
 
 **The hours record.** Overtime still has to be paid correctly for every hour worked, as [federal overtime rules](/blog/texas-nursing-overtime-compliance-cah) require. If the time clock feeds the same system, someone has to track hours by hand until it comes back.
 
-Everyday problems are smaller, but they follow the same pattern. One ShiftWizard reviewer on Capterra is a registered nurse. The reviewer wrote that the app "can be slow and glitchy, making inputting schedule difficult and stressful." A NurseGrid reviewer, an inpatient director, wrote: "Does not work well with androids. The texting function doesn't work." Neither describes an outage. Both describe a tool nurses cannot fully rely on at the moment they need it.
+Everyday problems are smaller, but they follow the same pattern. A registered nurse reviewing ShiftWizard on Capterra wrote that the app "can be slow and glitchy, making inputting schedule difficult and stressful." A NurseGrid reviewer, an inpatient director, wrote: "Does not work well with androids. The texting function doesn't work." Neither describes an outage. Both describe a tool nurses cannot fully rely on at the moment they need it.
 
 ## Why Is a Holiday Weekend the Worst Time for a Scheduling Outage?
 
@@ -116,11 +116,9 @@ Ask any scheduling vendor four questions before you sign. Where does my schedule
 
 Two of those terms need a plain meaning. A status page is a public web page that shows whether the vendor's system is working right now. An uptime figure is the share of time the system was available over the past year. A format you can open without the vendor's software means a file like Excel or CSV that opens on any hospital computer.
 
-These questions belong in any [software evaluation](/blog/how-to-choose-nurse-scheduling-software) of [nurse scheduling software](/nurse-scheduling-software), alongside price and features. They matter more for a small hospital, because there is no IT team to [work around the vendor](/blog/nurse-scheduling-no-it-department-rural-hospital) during an outage.
+These questions belong in any [software evaluation](/blog/how-to-choose-nurse-scheduling-software) of [nurse scheduling software](/nurse-scheduling-software), alongside price and features. They matter most for [a small hospital without an IT department](/blog/nurse-scheduling-no-it-department-rural-hospital), where the nurse manager has no one to hand an outage to.
 
-Watch for two kinds of answers. A vendor who answers with a specific process, a named contact and a response time has planned for this. A vendor who says outages are rare has not answered the question.
-
-Also ask what happens to your data if the vendor is acquired or retires the product. Legacy Kronos Workforce Central, one of the products the 2021 attack hit, is [being retired by UKG](/blog/kronos-nurse-scheduling-problems-small-hospitals). Ownership changes bring their own [support and roadmap risk](/blog/scheduling-software-vendor-acquisition-support).
+Watch for two kinds of answers. A vendor who answers with a specific process and a named contact has planned for this. A vendor who says outages are rare has not answered the question.
 
 We ask these questions of ourselves in the next section. Not every answer is yes.
 
@@ -130,14 +128,14 @@ SimpleScheduleAI is an AI-native nurse scheduling service for [critical access h
 
 If our system is down, the schedule you already have does not change. You can print it, email it and post it without us. The Excel file includes a sheet listing each nurse's shifts, which drops straight into a downtime kit. Staff phone numbers are not in it, so keep your own phone list.
 
-When something is blocking coverage, you call or text a named person: Pradeep, co-founder, on a direct number shared at onboarding. The published commitment on [how it works](/how-it-works) is a response within 1 hour in business hours and within 3 hours after hours for anything coverage-blocking. Coverage-blocking means an uncovered shift or a schedule that cannot post.
+When something is blocking coverage, you call or text a named contact on a direct number shared at onboarding. Coverage-blocking means an uncovered shift or a schedule that cannot post. Those issues go to the front of our queue, ahead of everything else. The escalation steps are on [how it works](/how-it-works).
 
-One honest limitation: mid-cycle changes run through us. When a nurse calls out, you log it with our team, and the system returns the top three replacement candidates with reasons. If our system is down at that moment, you still hear from a person within that response window. The ranked shortlist itself waits until our system is back, and we do not promise a recovery time. Your written callout call order covers the gap. Keep it in the kit.
+One honest limitation: mid-cycle changes run through us. When a nurse calls out, you log it with our team, and the system returns the top three replacement candidates with reasons. If our system is down at that moment, you can still reach a person. The ranked shortlist itself waits until our system is back, and we do not promise a recovery time. Your written callout call order covers the gap. Keep it in the kit.
 
 Here is how SimpleScheduleAI answers the four vendor questions above:
 
 - **Where does my schedule live if your system is down?** In your own files, as the PDF and Excel you received.
-- **Who do I call, and how fast do they answer?** Pradeep, within 1 hour in business hours or 3 hours after hours for coverage-blocking issues.
+- **Who do I call, and how fast do they answer?** A named contact on a direct number. Coverage-blocking issues go to the front of the queue.
 - **Do you publish a status page or an uptime figure?** No, as of September 2026. That is a second limitation.
 - **Can I export the schedule myself?** You do not log in to pull an export. You receive the full schedule file every cycle and keep every copy.
 
@@ -158,7 +156,7 @@ Here is how SimpleScheduleAI answers the four vendor questions above:
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">A schedule you already hold, and a named person to call</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI delivers each cycle as a PDF and an Excel file, with coverage-blocking issues answered within 1 hour in business hours and 3 hours after.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI delivers each cycle as a PDF and an Excel file, and coverage-blocking issues go to the front of our queue.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
