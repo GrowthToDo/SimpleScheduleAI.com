@@ -29,7 +29,7 @@ This guide covers what actually works at CAH scale, written for the administrato
 
 - UKG is a genuinely capable workforce management system. It is designed for large health systems with IT departments, dedicated HRIS staff, and months-long implementation timelines. None of those resources exist at a typical Critical Access Hospital (CAH).
 - The problem with UKG at a CAH is the operational overhead required to use it correctly, rather than the cost. Staff credential requirements drift. Overtime rules miscalculate. CMS documentation requires manual assembly. The nurse manager ends up doing manual verification on top of a system they cannot trust.
-- The alternatives built for CAH scale are Aladtec (self-serve, configurable), SmartLinx (mid-market, healthcare-specific), and SimpleScheduleAI (managed service, zero IT required).
+- Smaller alternatives a CAH can consider are Aladtec (self-serve, built for public safety agencies), SmartLinx (mid-market, built for senior care) and SimpleScheduleAI (an AI-native scheduling service built for critical access hospitals, with no IT project).
 - The right framing is not "is UKG too expensive?" It is: "is the complexity proportional to the value your facility will actually extract?" At a 25-bed hospital with 18-25 nursing staff, it almost never is.
 - For CAHs currently on UKG through a health system contract, the path off may be constrained by contract terms. Evaluate early termination fees and parallel-run options before switching.
 
@@ -39,7 +39,7 @@ This guide covers what actually works at CAH scale, written for the administrato
 - [What Does UKG Complexity Look Like in Practice at a Critical Access Hospital?](#what-does-ukg-complexity-look-like-in-practice-at-a-critical-access-hospital)
 - [What Is the Complexity-to-Value Gap?](#what-is-the-complexity-to-value-gap)
 - [What Works at Critical Access Hospital Scale?](#what-works-at-critical-access-hospital-scale)
-- [Aladtec (TCP Scheduling)](#aladtec-tcp-scheduling)
+- [Aladtec by TCP Software](#aladtec-by-tcp-software)
 - [SmartLinx](#smartlinx)
 - [SimpleScheduleAI](#simplescheduleai)
 - [What to Do This Week](#what-to-do-this-week)
@@ -139,7 +139,7 @@ The complexity required to access the three features you use is the same as the 
 
 ## What Works at Critical Access Hospital Scale?
 
-Three scheduling tools are actually suited to Critical Access Hospital scale: Aladtec for self-serve CAHs with a nurse manager who has time to configure and maintain the system, SmartLinx for hospitals in the 50-200 bed range with IT support available, and SimpleScheduleAI for CAHs where the nurse manager needs the scheduling work handled entirely without a platform to operate. All three deliver the compliance and coverage requirements a CAH needs at a fraction of UKG's complexity and cost.
+Three scheduling tools are worth a look at Critical Access Hospital scale: Aladtec for self-serve CAHs with a nurse manager who has time to configure and maintain the system, SmartLinx for facilities in the 50-200 bed range with IT support available, and SimpleScheduleAI for CAHs where the nurse manager needs the scheduling work handled without a platform to operate. Only the last is built for hospitals: Aladtec's own pages market it to public safety agencies and SmartLinx's to senior care, so test each against your CAH rules before you buy.
 
 The scheduling requirements for a CAH are not simple. They are just different from enterprise requirements (the full list is in our [seven features CAHs need in staffing software](/blog/hospital-staffing-software-features-cah)):
 
@@ -149,7 +149,7 @@ The scheduling requirements for a CAH are not simple. They are just different fr
 - Callout coverage logic that applies clinical credential requirements
 - Fast implementation without IT infrastructure
 
-These requirements can be met by purpose-built tools at a fraction of UKG's cost and complexity.
+Smaller tools can cover these at a fraction of UKG's cost and complexity, but check each one against your own rules.
 
 <div class="not-prose my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -202,9 +202,9 @@ These requirements can be met by purpose-built tools at a fraction of UKG's cost
   </table>
 </div>
 
-## Aladtec (TCP Scheduling)
+## Aladtec by TCP Software
 
-Aladtec (branded as TCP Scheduling Software by its parent company TCP) is a scheduling platform used at critical access hospitals and EMS settings. Setup runs 2-4 weeks with minimal IT involvement.
+Aladtec is a scheduling platform owned by TCP Software. As of September 2026, its product pages market it to fire, EMS, law enforcement and corrections agencies, with no healthcare claim, although some hospitals use it, based on its Capterra reviews. Setup runs 2-4 weeks with minimal IT involvement.
 
 The trade-off is that Aladtec is a self-serve platform. The nurse manager configures and operates it. This is dramatically less complex than UKG, but the operational burden on the nurse manager does not disappear. It is simply smaller. Credential tracking, overtime rule configuration, and CMS documentation require manual setup and maintenance.
 
@@ -266,7 +266,7 @@ The platform can be configured to use a subset of features, but the underlying c
 
 **What is the minimum viable scheduling tool for a 25-bed CAH?**
 
-At minimum, a 25-bed CAH needs: proactive FLSA overtime threshold tracking, competency-based shift enforcement, CMS §485.635 documentation, and a callout coverage process that applies clinical constraints. These requirements can be met by Aladtec or SmartLinx with proper configuration, or by SimpleScheduleAI with zero configuration. They cannot be met by generic scheduling tools.
+At minimum, a 25-bed CAH needs: proactive FLSA overtime threshold tracking, competency-based shift enforcement, CMS §485.635 documentation, and a callout coverage process that applies clinical constraints. Ask any vendor to demonstrate each of these on your own unit rules before you buy. Aladtec and SmartLinx can be configured for some of them, but neither is built for hospitals, so check every item. SimpleScheduleAI's team configures your unit rules during onboarding. Generic retail scheduling tools are unlikely to cover them.
 
 **Does Aladtec handle FLSA 8-and-80 overtime correctly for healthcare employers?**
 

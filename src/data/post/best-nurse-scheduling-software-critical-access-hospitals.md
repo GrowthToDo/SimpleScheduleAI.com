@@ -187,15 +187,15 @@ SimpleScheduleAI is nurse scheduling software we build and operate ourselves, de
 
 <img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Aladtec.webp" alt="Aladtec self-serve scheduling platform" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Aladtec, now part of TCP Software, holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews; small sample). It is a self-serve scheduling platform with a long history in 24/7 shift-work environments: fire, EMS, law enforcement, and small healthcare. It includes credential expiration tracking, availability management, shift coverage requests, and overtime monitoring, and it does not require heavy IT involvement to stand up.
+Aladtec, now part of TCP Software, holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews; small sample). It is a self-serve scheduling platform built for 24/7 shift-work agencies. As of September 2026, its own product pages describe it as public safety scheduling software for fire, EMS, law enforcement and corrections, with no healthcare claim. It includes credential expiration tracking, availability management, shift coverage requests, and overtime monitoring, and it does not require heavy IT involvement to stand up.
 
 One caveat matters for a hospital audience: the Capterra review base skews heavily toward fire, EMS, and law enforcement, and the most recent hospital-nursing reviews are several years old (the most recent dated October 2020), so treat the hospital signal as thin and request CAH-scale nursing references directly.
 
-**Best for:** Small Critical Access Hospitals and rural healthcare facilities that want proven self-serve scheduling without heavy IT involvement. Strongest fit where a tech-comfortable administrator can own the configuration.
+**Best for:** Small Critical Access Hospitals and rural healthcare facilities that want self-serve scheduling without heavy IT involvement, and are comfortable with a tool built for public safety agencies. Strongest fit where a tech-comfortable administrator can own the configuration.
 
 **Key advantages:**
 
-- Long track record in 24/7 shift-work settings, including small healthcare and EMS, with credential expiration tracking out of the box.
+- Built for 24/7 shift-work environments, with credential expiration tracking and minimum-staffing violation flags documented on its product pages.
 - Lower configuration burden than the enterprise platforms in this guide.
 
 **Key limitations:**

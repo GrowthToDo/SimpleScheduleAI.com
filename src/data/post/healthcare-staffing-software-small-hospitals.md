@@ -106,10 +106,10 @@ Enterprise staffing software typically requires: IT department involvement for i
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-slate-700 dark:text-slate-300">Yes</td>
       </tr>
       <tr>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top font-medium text-slate-900 dark:text-slate-100">Mid-market (Aladtec, SmartLinx)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top font-medium text-slate-900 dark:text-slate-100">Self-serve and mid-market (Aladtec, SmartLinx)</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-slate-700 dark:text-slate-300">2-4 weeks</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-slate-700 dark:text-slate-300">Minimal</td>
-        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-green-700 dark:text-green-400">Yes (healthcare-specific)</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-slate-700 dark:text-slate-300">Partial: Aladtec is built for public safety and SmartLinx for senior care</td>
         <td class="border border-slate-300 dark:border-slate-600 px-4 py-2 align-top text-slate-700 dark:text-slate-300">Partial</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-900/40">
