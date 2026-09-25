@@ -866,5 +866,13 @@
     "primaryKeyword": "self scheduling nursing",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Topic 22, published 2026-09-17 (pre-existing draft finished, per 'Drafts that beat writing something new' in the topics doc). 'self scheduling nursing' 110/mo, CPC $16.04, we ranked 52.7 for 'self scheduling software for nurses' on the pillar. THIRD post in the self-scheduling cluster: self-scheduling-problems-critical-access-hospital owns the FAILURE MODES and enforcement fixes; cyclical-scheduling-vs-self-scheduling-small-hospital owns the MODEL CHOICE (self-scheduling vs cyclical vs hybrid); THIS post owns the MANAGER TIME COST specifically, framed as a workload-restructuring argument rather than a workload-elimination one, with a dedicated SimpleScheduleAI section stating the same no-self-scheduling limitation as its siblings (preferences are manager-entered, not nurse-submitted)."
+  },
+  {
+    "slug": "nurse-scheduling-software-reliability-crashes",
+    "type": "post",
+    "url": "/blog/nurse-scheduling-software-reliability-crashes",
+    "primaryKeyword": "scheduling software outage",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-09-25 (switcher-trio draft from the topics doc, REWRITTEN: all five vendor quotes in the April draft were absent from the competitor dossier). AEO/planning play: 'scheduling software outage' and 'nurse scheduling software crashes' return no volume; 'ukg outage' 210/mo and 'kronos outage' 50/mo are status-check intent owned by Downdetector-type pages, and nothing ranking covers downtime PLANNING for a small hospital. Spine is the verified Dec 2021 Kronos Private Cloud outage (facts-dossier entry) plus 42 CFR 485.625 communication-plan duties and a paper downtime kit. Differentiated from kronos-nurse-scheduling-problems-small-hospitals (enterprise fit) and scheduling-software-vendor-acquisition-support (ownership change)."
   }
 ]

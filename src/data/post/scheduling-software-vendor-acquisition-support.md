@@ -86,7 +86,7 @@ When a scheduling software vendor is acquired, a critical access hospital should
 
 **Set a 90-day checkpoint.** There is no reliable public data on how fast a support change becomes visible, so treat 90 days as a practical starting point rather than a documented average. After the acquisition closes, run a scheduled evaluation: submit a few non-urgent support requests, note response times and response quality, and compare against your baseline. If the gap is material, that is the signal to begin evaluating alternatives before you are in a crisis.
 
-The worst position is discovering that support has declined during an active scheduling problem, when there is no time to evaluate options and the most expedient choice may not be the right one.
+The worst position is discovering that support has declined during an active scheduling problem, when there is no time to evaluate options and the most expedient choice may not be the right one. A full outage is the hardest version of that test, and a [paper downtime kit for your nurse schedule](/blog/nurse-scheduling-software-reliability-crashes) is what carries you through it.
 
 ## What Are the Warning Signs That Post-Acquisition Support Has Already Declined?
 

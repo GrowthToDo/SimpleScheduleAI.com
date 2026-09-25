@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-scheduling-software-reliability-crashes",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T07:12:31.731Z",
+      "contentHash": "6b698a836823e5279a9ae834c1305110b8aa3c3c93894a9c536e1fc77066d24d"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T07:12:33.171Z",
+      "contentHash": "6b698a836823e5279a9ae834c1305110b8aa3c3c93894a9c536e1fc77066d24d"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T07:12:35.416Z",
+      "contentHash": "6b698a836823e5279a9ae834c1305110b8aa3c3c93894a9c536e1fc77066d24d"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T07:12:35.473Z",
+      "contentHash": "6b698a836823e5279a9ae834c1305110b8aa3c3c93894a9c536e1fc77066d24d"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T07:12:35.521Z",
+      "contentHash": "6b698a836823e5279a9ae834c1305110b8aa3c3c93894a9c536e1fc77066d24d"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T07:12:35.521Z",
+      "contentHash": "6b698a836823e5279a9ae834c1305110b8aa3c3c93894a9c536e1fc77066d24d"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T07:12:35.523Z",
+      "contentHash": "6b698a836823e5279a9ae834c1305110b8aa3c3c93894a9c536e1fc77066d24d"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-09-25T07:12:29.767Z",
+      "contentHash": "d0ed35a0c2a4917717949b68246362f8e893db0debcd524675912e230dfe30b7"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "verifier",
+      "setAt": "2026-09-25T07:12:30.606Z",
+      "contentHash": "d0ed35a0c2a4917717949b68246362f8e893db0debcd524675912e230dfe30b7"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-09-25T07:37:08.930Z",
+      "contentHash": "d0ed35a0c2a4917717949b68246362f8e893db0debcd524675912e230dfe30b7"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 77.8,
+        "headings": 88.9,
+        "actionability": 55.6,
+        "attention": 88.9
+      },
+      "overall": 72.8,
+      "counts": {
+        "sections": 9,
+        "rereads": 4,
+        "undefinedTerms": 8,
+        "headingsAnswered": 8,
+        "mondayActions": 5,
+        "blockedActions": 4,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-09-25T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "CMS",
+          "42 CFR 485.625",
+          "status page",
+          "uptime figure",
+          "downtime procedures",
+          "coverage-blocking",
+          "charge-qualified",
+          "H-ISAC"
+        ],
+        "mondayActions": [
+          "Print the next four weeks of the schedule, one copy on the unit and one with the administrator",
+          "Export the staff phone list from the scheduling system and add a second number per nurse",
+          "Write the callout call order by shift type (days, nights, charge-qualified)",
+          "Name and tell a backup approver for overtime",
+          "Call the current vendor and ask the four outage questions, logging who answered and when"
+        ],
+        "blockedActions": [
+          "Ask the vendor about a status page or uptime figure without knowing what either is or how to judge the answer",
+          "Judge whether a vendor's export format is one I can open without their software, with no guidance on what format that means",
+          "Track who is close to overtime from a paper hours sheet during an outage, without the system's calculation behind it",
+          "Run the CMS-required twice-yearly emergency-plan exercise for a scheduling outage, given only one line of guidance on how"
+        ],
+        "sections": [
+          {
+            "heading": "What Happened When the Kronos Private Cloud Went Down in December 2021?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Stops Working at a Small Hospital When the Scheduling Software Goes Down?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Why Is a Holiday Weekend the Worst Time for a Scheduling Outage?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does CMS Require a Critical Access Hospital to Have if Its Systems Fail?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should a Scheduling Downtime Kit Contain?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should You Ask a Scheduling Vendor About Outages Before You Sign?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Handle a Scheduling Outage?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-09-25T07:01:23.324Z",
+      "contentHash": "b95cbe1f2337b2202ec022e1223c6ab424b47e1147ad65400772947d61144785"
+    }
+  }
+}

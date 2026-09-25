@@ -1,15 +1,14 @@
 ---
-draft: true
-publishDate: 2026-07-28T00:00:00Z
-updateDate: 2026-07-21T00:00:00Z
+draft: false
+publishDate: 2026-09-25T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'What Happens When Your Scheduling Software Crashes Before a Holiday Weekend'
+title: 'What Happens When Your Nurse Scheduling Software Goes Down Before a Holiday Weekend'
 excerpt: >
-  OnShift reviewers described it as software that "barely works." ShiftWizard
-  users flagged reliability as a recurring concern. At a critical access
-  hospital, a scheduling tool that goes down on a Friday afternoon before
-  a holiday weekend is not a minor inconvenience.
-image: https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+  A scheduling vendor can tell you it is working on an outage. It cannot always
+  tell you when the outage will end. What a small hospital keeps on paper, and
+  who is allowed to use it, decides how a weekend without the system goes.
+image: ~/assets/images/pool/phone-tree-03.webp
+imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
 postType: mofu
 tags:
@@ -23,116 +22,174 @@ metadata:
 
 ## Key Takeaways
 
-- App instability and reliability problems are the most-cited complaint category across scheduling software reviews on G2 and Capterra, appearing across QGenda, ShiftWizard, OnShift, NurseGrid, and Deputy.
-- For a 500-bed health system, a scheduling tool outage is a staffing operations problem. For a 20-bed critical access hospital with one nurse manager, it is a direct patient safety risk if it falls inside an active scheduling cycle.
-- The complaint pattern is specific: forced logouts during active schedule builds, mobile app crashes that prevent nurses from viewing their shifts, and outages that happen without advance notice or a clear resolution timeline.
-- A scheduling platform that goes down on a Friday before a holiday weekend leaves a CAH nurse manager with no published schedule and no reliable way to communicate shift assignments to her nurses.
-- A managed scheduling service changes the risk profile: the specialist owns the schedule, maintains a last-published backup, and is the point of contact when something fails, not a general helpdesk with a 48-hour queue.
+- A scheduling software outage can last for weeks. When the [Kronos Private Cloud was hit by ransomware](https://www.aha.org/h-isac-reports/2021-12-13-h-isac-tlp-white-kronos-private-cloud-kpc-ransomware-incident-causes) on December 11, 2021, UKG told customers restoring it "may take up to several weeks."
+- The first things to go are the ones you use every shift: the posted schedule, the staff phone list, the callout call order, and the record of hours worked.
+- [Shannon Medical Center in San Angelo](https://www.techtarget.com/healthtechsecurity/news/366594979/Kronos-Cyberattack-Takes-Down-Healthcare-Workforce-Management-Services) used Kronos for timekeeping and scheduling, and switched to its backup process for running payroll without the system. [UMass Memorial Health](https://www.cybersecuritydive.com/news/kronos-outage-UMass-restoration/620966/) relied on backup timekeeping, including hours written on paper, for more than a month.
+- The fix is a downtime kit that lives outside the software: a printed four-week schedule, a paper phone list, a written callout order, and a paper hours sheet.
+- CMS (the Centers for Medicare and Medicaid Services) requires a critical access hospital's [emergency preparedness communication plan](https://www.law.cornell.edu/cfr/text/42/485.625) to hold staff contact information and an alternate way to reach staff. A phone list that exists only inside the scheduling system does not meet that need during an outage.
 
 ## Table of Contents
 
-- [How common are scheduling software reliability problems?](#how-common-are-scheduling-software-reliability-problems)
-- [What does a scheduling software crash look like at a critical access hospital?](#what-does-a-scheduling-software-crash-look-like-at-a-critical-access-hospital)
-- [Which scheduling platforms have documented reliability issues?](#which-scheduling-platforms-have-documented-reliability-issues)
-- [What is the actual risk of a scheduling outage at a small hospital?](#what-is-the-actual-risk-of-a-scheduling-outage-at-a-small-hospital)
-- [How should a CAH evaluate scheduling software reliability before buying?](#how-should-a-cah-evaluate-scheduling-software-reliability-before-buying)
-- [How SimpleScheduleAI handles scheduling continuity when something fails](#how-simplescheduleai-handles-scheduling-continuity-when-something-fails)
+- [What Happened When the Kronos Private Cloud Went Down in December 2021?](#what-happened-when-the-kronos-private-cloud-went-down-in-december-2021)
+- [What Stops Working at a Small Hospital When the Scheduling Software Goes Down?](#what-stops-working-at-a-small-hospital-when-the-scheduling-software-goes-down)
+- [Why Is a Holiday Weekend the Worst Time for a Scheduling Outage?](#why-is-a-holiday-weekend-the-worst-time-for-a-scheduling-outage)
+- [What Does CMS Require a Critical Access Hospital to Have if Its Systems Fail?](#what-does-cms-require-a-critical-access-hospital-to-have-if-its-systems-fail)
+- [What Should a Scheduling Downtime Kit Contain?](#what-should-a-scheduling-downtime-kit-contain)
+- [What Should You Ask a Scheduling Vendor About Outages Before You Sign?](#what-should-you-ask-a-scheduling-vendor-about-outages-before-you-sign)
+- [How Does SimpleScheduleAI Handle a Scheduling Outage?](#how-does-simplescheduleai-handle-a-scheduling-outage)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-A nurse manager at a critical access hospital does not have a backup operator, a dedicated IT contact on call, or an alternative system to fall back on when her scheduling software goes down. She has a phone, whatever was last printed or exported, and the memory of who she called last time something similar happened.
+A scheduling software outage at a 25-bed hospital does not arrive with a warning. You open the system to finish the weekend schedule and it will not load. Your nurses need to know who is working Saturday night. The one person who can answer that is you, and your records are inside the system that just went down.
 
-Scheduling software vendors do not design for this scenario. Their uptime commitments are written for health system customers with IT departments that can manage outages. Their support escalation paths assume someone other than the nurse manager can work the problem. For a CAH, none of that is true.
+At a 25-bed hospital there may be no IT person on call to work the problem. The scheduling vendor's support line may not answer until Monday. So the real question is what you can still do in the next hour with what is on paper. This guide walks through a real multi-week outage, what breaks first, and the downtime kit that keeps a holiday weekend covered.
 
-Understanding the reliability risks documented by current users of major scheduling platforms is not pessimism. It is the kind of due diligence that prevents a Friday afternoon from becoming a staffing crisis.
+## What Happened When the Kronos Private Cloud Went Down in December 2021?
 
-## How Common Are Scheduling Software Reliability Problems?
+Late on Saturday, December 11, 2021, UKG detected a ransomware attack on its Kronos Private Cloud. The attack took down UKG Workforce Central, UKG TeleStaff, Healthcare Extensions and Banking Scheduling Solutions. UKG told customers that restoring the systems "may take up to several weeks." It told them to put their own backup procedures in place.
 
-Reliability problems are the most frequently documented complaint category across nurse scheduling software reviews on G2 and Capterra, appearing across every major platform with sufficient review volume. The specific complaints include forced logouts during active sessions, mobile app crashes that prevent staff from viewing their schedules, and system-wide outages that go unannounced until users attempt to log in.
+That warning came in a [customer statement republished by the American Hospital Association](https://www.aha.org/h-isac-reports/2021-12-13-h-isac-tlp-white-kronos-private-cloud-kpc-ransomware-incident-causes) two days later. UKG's exact words were that customers should "evaluate and implement alternative business continuity protocols related to the affected UKG solutions." In plain terms, the hospitals were on their own until the vendor recovered.
 
-This is not unique to one platform or one vendor size. QGenda, ShiftWizard, OnShift, NurseGrid, and Deputy all have documented reliability complaints from separate reviewers in separate time periods. The frequency varies by platform, but the pattern does not.
+Hospitals felt it right away. Shannon Medical Center in San Angelo, Texas, was one of them. [TechTarget reported](https://www.techtarget.com/healthtechsecurity/news/366594979/Kronos-Cyberattack-Takes-Down-Healthcare-Workforce-Management-Services) that the hospital "uses Kronos services for timekeeping and scheduling." The hospital confirmed it had been hit. It said it "has since implemented payroll downtime procedures." Downtime procedures are a hospital's written backup steps for doing the work by hand while a system is down.
 
-Several reasons explain why this category of complaint is so persistent. Mobile-first applications are more vulnerable to OS update conflicts and device compatibility issues than desktop applications. Cloud platforms with high concurrent user counts during peak scheduling periods face load constraints that can produce slowdowns and session failures. Integration layers between scheduling platforms and payroll, EHR, or timeclock systems introduce additional failure points.
+The recovery was slow. At UMass Memorial Health, [Cybersecurity Dive reported](https://www.cybersecuritydive.com/news/kronos-outage-UMass-restoration/620966/) that staff were asked to write their hours "down on paper." The health system did not go back to Kronos for payroll timekeeping until January 27, 2022. Its first clean payroll after the attack was February 3, 2022.
 
-None of these are unusual technical challenges. They are normal engineering problems that well-resourced development teams manage continuously. The risk for CAHs is not that these problems exist. It is that when they happen, the CAH has no internal resources to work around them.
+The problems hospitals reported were mainly with timekeeping and payroll, not with the schedules themselves. Those records matter to scheduling too. The same hours records tell you who worked, who is close to overtime, and who you can call next.
 
-## What Does a Scheduling Software Crash Look Like at a Critical Access Hospital?
+## What Stops Working at a Small Hospital When the Scheduling Software Goes Down?
 
-A scheduling software crash at a critical access hospital looks like this: the nurse manager opens the platform at 4pm on Friday to finalize the holiday weekend schedule. The platform is unresponsive. She logs out and logs back in. Her draft is gone, or the platform continues to time out. Her nurses expect to see the published schedule by 5pm. She has no way to reach the vendor until Monday morning.
+Four things stop working at once: the posted schedule, the staff phone list, the callout call order and the record of hours worked. A large hospital has a staffing office and an IT team to share that work. At a 25-bed hospital the nurse manager may have to rebuild all four alone.
 
-This scenario is not hypothetical. AllNurses.com forum threads contain multiple descriptions of nurses arriving for shifts that were not in the system because the app went down and schedule changes were not saved or propagated correctly. NurseGrid users specifically described pressing issues going unresolved for hours or days during active scheduling periods.
+**The posted schedule.** If nurses check their shifts in an app, an outage means they cannot see next week. The printed copy on the unit wall may be two changes out of date.
 
-At a hospital with 500 nurses and an on-call IT department, this scenario is a significant inconvenience that gets resolved within hours. At a 20-bed CAH, it is a nurse manager who spends her Friday evening calling every nurse on the roster manually to confirm their shifts, using whatever paper record she has from the last printed version of the schedule.
+**The staff phone list.** If phone numbers live only in the scheduling system, an outage takes them with it. You cannot call anyone whose number you do not already know.
 
-The operational damage is not just the time it takes to recover. It is the reliability cost to the manager's trust in the tool, the cost of any miscommunicated shifts that result in coverage gaps or unnecessary overtime, and the cost of the recovery process coming out of the manager's personal time.
+**The callout call order.** When a nurse calls out, you need to know who is eligible, who is rested, and who is close to overtime. If that answer comes from the system, then during an outage you call the same two reliable nurses again, which is how [burnout concentrates on your best people](/blog/nurse-burnout-scheduling-cah).
 
-## Which Scheduling Platforms Have Documented Reliability Issues?
+**The hours record.** Overtime still has to be paid correctly for every hour worked, as [federal overtime rules](/blog/texas-nursing-overtime-compliance-cah) require. If the time clock feeds the same system, someone has to track hours by hand until it comes back.
 
-Multiple major scheduling platforms have documented reliability complaints from verified reviewers, with specific patterns that repeat across independent sources.
+Everyday problems are smaller, but they follow the same pattern. One ShiftWizard reviewer on Capterra is a registered nurse. The reviewer wrote that the app "can be slow and glitchy, making inputting schedule difficult and stressful." A NurseGrid reviewer, an inpatient director, wrote: "Does not work well with androids. The texting function doesn't work." Neither describes an outage. Both describe a tool nurses cannot fully rely on at the moment they need it.
 
-On **OnShift**, a Capterra reviewer described the platform in direct terms: "Barely works." A separate reviewer noted that the time clock and OnShift integration "never sync properly." These were not one-star reviews from frustrated buyers. They were from long-term users documenting consistent behavior.
+## Why Is a Holiday Weekend the Worst Time for a Scheduling Outage?
 
-On **ShiftWizard**, multiple Capterra reviewers flagged login and access reliability as a recurring concern. At least one reviewer described an incident where account access was cut off during a contract dispute, a different category of availability risk that is worth noting separately.
+A holiday weekend is the worst time for a scheduling outage because help is hardest to reach just when coverage is tightest. The vendor's support team and your own administration may be on reduced holiday hours. Some of your nurses are on planned leave. And [CDC](https://www.cdc.gov/flu/about/season.html) says flu activity usually peaks between December and February.
 
-On **QGenda**, reviewers described being forced to log back in constantly during active sessions. For a nurse manager mid-schedule-build, a forced logout that does not preserve draft state is not a minor friction point. It is lost work.
+The Kronos attack is the real example. It started on a Saturday night in mid-December, two weeks before Christmas. At UMass Memorial, Kronos did not return as the payroll timekeeping source until January 27, 2022. For hospitals like that one, the Christmas and New Year shifts were worked and paid while the system was down.
 
-On **NurseGrid**, AllNurses.com forum threads document mobile app issues that left nurses unable to view their current shift assignments. For staff who rely on the app to check schedule changes and shift times, a mobile reliability failure is a direct communication breakdown.
+Holidays are also when fairness matters most to nurses. A fair rotation depends on knowing [who worked which holiday last year](/blog/fair-holiday-rotation-nurses-cah). If that record lives only in the software, an outage in December can quietly reset it, and next year's holiday rotation starts from memory.
 
-On **Deputy**, reliability complaints included unexpected session terminations and data sync failures between the web and mobile versions of the platform.
+For a small hospital, a holiday callout already stretches a thin bench. Our guide to [covering callouts from Thanksgiving to New Year](/blog/december-nurse-callout-surge-cah) covers that problem on its own. An outage on top of it removes the list you would use to solve it.
 
-None of these platforms have been uniformly unreliable. Many reviewers report smooth experiences. The documented complaint patterns represent a subset of users in specific situations, not a universal failure rate. But for a CAH administrator deciding which tool to trust with her scheduling operations, the subset that experienced these failures matters.
+## What Does CMS Require a Critical Access Hospital to Have if Its Systems Fail?
 
-## What Is the Actual Risk of a Scheduling Outage at a Small Hospital?
+CMS requires every critical access hospital to keep an emergency preparedness plan under its federal emergency preparedness rule, [42 CFR 485.625](https://www.law.cornell.edu/cfr/text/42/485.625). Its communication plan must include "Names and contact information" for staff. It must also include "Primary and alternate means for communicating with" the hospital's staff. Both the plan and the communication plan must be reviewed at least every two years.
 
-The actual risk of a scheduling outage at a small hospital is proportional to how much the hospital depends on the platform for real-time schedule communication and how little redundancy it has in its operations.
+The rule does not name scheduling software, so CMS does not require a scheduling downtime plan as such. It does require the staff contact list and the second way to reach staff. If your only copy of staff phone numbers lives inside the scheduling system, that second way does not exist during an outage.
 
-For a facility where the published schedule lives in the platform and staff rely on the mobile app for shift confirmations and change notifications, a platform outage effectively breaks the communication channel between the manager and her nurses. If that outage happens during the window when a new schedule is being built or when a callout needs immediate coverage, the operational impact is immediate.
+The emergency plan itself must address "continuity of operations, including delegations of authority and succession plans." For scheduling, we read that as two plain things. Someone other than the nurse manager should know where the downtime kit is kept. That person should also be allowed to approve an overtime shift if the manager cannot be reached.
 
-For a facility that also maintains a printed or exported backup of the last published schedule and uses the platform as a secondary rather than sole communication channel, an outage is disruptive but not operationally paralyzing.
+The same rule requires critical access hospitals to "conduct exercises to test the emergency plan at least twice per year." A scheduling outage is a cheap scenario for one of those exercises. It needs no patients moved and no outside agencies. It only needs someone to try covering tomorrow's shifts without opening the software. Pick a weekday and tell the charge nurse the scheduling system is down for two hours. Ask them to cover the next shift using only the downtime kit. Write down every piece of information they had to go looking for, and add it to the kit.
 
-The risk is highest for facilities that have moved entirely to platform-based scheduling without maintaining any offline backup. The risk is lower for facilities that treat the platform as a scheduling tool and the printed or exported schedule as the authoritative record for staff communication.
+## What Should a Scheduling Downtime Kit Contain?
 
-Neither approach is wrong. But understanding which category your facility falls into determines how serious a platform reliability event actually is for your operations.
+A scheduling downtime kit is a folder that lets anyone cover the next four weeks without the software. It holds a printed four-week schedule, a staff phone list, a written callout call order, a paper hours sheet, and one page naming who can approve overtime. Keep one copy on the unit and one with the administrator.
 
-## How Should a CAH Evaluate Scheduling Software Reliability Before Buying?
+| What goes in the kit                                                                      | What it replaces during an outage                           | How often to refresh it                        |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------- |
+| Printed schedule for the next four weeks                                                  | The app or portal nurses use to check shifts                | Every time a new schedule is posted            |
+| Staff phone list with a second number for each nurse                                      | Contact details stored inside the scheduling system         | Monthly, and after every hire or departure     |
+| Written callout call order by shift type (days, nights, nurses qualified as charge nurse) | The system's replacement suggestions                        | Every schedule cycle                           |
+| Paper hours sheet, one line per nurse per shift                                           | The time clock and the overtime tracking that depends on it | Printed blank; filled in only during an outage |
+| One page: who approves overtime and agency use if the manager is out                      | The manager's approval steps inside the software            | Once a year, and when leadership changes       |
 
-Four steps that reveal actual reliability before a contract is signed:
+**The printed schedule.** Print it every time you post a new schedule, not once a month. A kit with last month's schedule in it is worse than no kit, because people will trust it.
 
-**Check G2 and Capterra for reliability-specific complaints.** Search for terms like "crashes," "logs out," "down," "outage," and "unreliable" within the review set for any platform you are evaluating. The presence of multiple independent reliability complaints from different time periods is signal that the issue is structural rather than isolated.
+**The callout call order.** Write it by shift type. Night callouts and charge-nurse callouts need different lists, because only some nurses are qualified to work as charge nurse. If you already build a [ranked list before the night shift](/blog/after-hours-callout-coverage-small-hospitals), print it into the kit.
 
-**Ask for uptime data.** Request documented uptime statistics for the past 12 months. Vendors with strong uptime records will provide this. Vendors who deflect or provide vague assurances without numbers are not providing the answer you need.
+**The hours sheet.** Keep it simple: nurse name, date, shift start, shift end, and a column for anyone who stayed late. Add a running total of each nurse's hours for the week. Check that total before you call a nurse in, so you can see who is already close to overtime. UMass Memorial asked employees to write their hours down on paper. That gave officials a record to check when they went back to fix pay problems.
 
-**Ask what happens when the platform is unavailable.** What is the vendor's procedure for a platform outage? Who do you call at 9pm on a Friday? What is the documented response time? A vendor with a clear answer has thought through this scenario. A vendor without a clear answer has not.
+Most of the kit is lists you already have. After the first build, keeping it current is one extra print each time you post a schedule.
 
-**Speak to a customer who has been on the platform for 18 or more months.** New customers have not yet experienced the platform's reliability across full seasonal cycles, including holiday weekends. Long-term customers have. Ask them specifically whether they have experienced outages during active scheduling periods and how the vendor responded.
+## What Should You Ask a Scheduling Vendor About Outages Before You Sign?
 
-## How SimpleScheduleAI Handles Scheduling Continuity When Something Fails
+Ask any scheduling vendor four questions before you sign. Where does my schedule live if your system is down? Who do I call at 9pm on a Saturday, and how fast do they answer? Do you publish a status page or an uptime figure? Can I export the full schedule and staff list myself, at any time, in a format I can open without your software?
 
-SimpleScheduleAI is an AI-native nurse scheduling service. The specialist who builds and maintains the schedule is the single point of accountability when something is not working. There is no ticket queue standing between the nurse manager and the person responsible for the schedule.
+Two of those terms need a plain meaning. A status page is a public web page that shows whether the vendor's system is working right now. An uptime figure is the share of time the system was available over the past year. A format you can open without the vendor's software means a file like Excel or CSV that opens on any hospital computer.
 
-Because the specialist maintains the scheduling record and the last-published version is always accessible outside the platform, a technical failure does not result in a nurse manager working from memory or a handwritten note. The specialist can export the current schedule in a PDF or Excel format and send it directly if platform access is disrupted.
+These questions belong in any [software evaluation](/blog/how-to-choose-nurse-scheduling-software) of [nurse scheduling software](/nurse-scheduling-software), alongside price and features. They matter more for a small hospital, because there is no IT team to [work around the vendor](/blog/nurse-scheduling-no-it-department-rural-hospital) during an outage.
 
-One honest limitation: SimpleScheduleAI does not have a 24/7 support line with rotating coverage. If an issue arises at 3am, the specialist will address it during business hours. For facilities where middle-of-the-night real-time access to the scheduling system is a regular operational need, a platform with round-the-clock support staff may be a better fit. For facilities where the primary reliability concern is a scheduling failure during a business-hours scheduling cycle, the managed service model addresses the most common risk scenario.
+Watch for two kinds of answers. A vendor who answers with a specific process, a named contact and a response time has planned for this. A vendor who says outages are rare has not answered the question.
+
+Also ask what happens to your data if the vendor is acquired or retires the product. Legacy Kronos Workforce Central, one of the products the 2021 attack hit, is [being retired by UKG](/blog/kronos-nurse-scheduling-problems-small-hospitals). Ownership changes bring their own [support and roadmap risk](/blog/scheduling-software-vendor-acquisition-support).
+
+We ask these questions of ourselves in the next section. Not every answer is yes.
+
+## How Does SimpleScheduleAI Handle a Scheduling Outage?
+
+SimpleScheduleAI is an AI-native nurse scheduling service for [critical access hospital scheduling](/critical-access-hospital-scheduling). The AI builds the schedule, our scheduling team checks it, and the nurse manager approves it. The [AI nurse scheduling](/ai-nurse-scheduling) guide explains how the drafts are built. Your nurses never log into our software. Each cycle you get the schedule as a PDF and an Excel file. So the posted schedule already lives in your own files and on your unit wall.
+
+If our system is down, the schedule you already have does not change. You can print it, email it and post it without us. The Excel file includes a sheet listing each nurse's shifts, which drops straight into a downtime kit. Staff phone numbers are not in it, so keep your own phone list.
+
+When something is blocking coverage, you call or text a named person: Pradeep, co-founder, on a direct number shared at onboarding. The published commitment on [how it works](/how-it-works) is a response within 1 hour in business hours and within 3 hours after hours for anything coverage-blocking. Coverage-blocking means an uncovered shift or a schedule that cannot post.
+
+One honest limitation: mid-cycle changes run through us. When a nurse calls out, you log it with our team, and the system returns the top three replacement candidates with reasons. If our system is down at that moment, you still hear from a person within that response window. The ranked shortlist itself waits until our system is back, and we do not promise a recovery time. Your written callout call order covers the gap. Keep it in the kit.
+
+Here is how SimpleScheduleAI answers the four vendor questions above:
+
+- **Where does my schedule live if your system is down?** In your own files, as the PDF and Excel you received.
+- **Who do I call, and how fast do they answer?** Pradeep, within 1 hour in business hours or 3 hours after hours for coverage-blocking issues.
+- **Do you publish a status page or an uptime figure?** No, as of September 2026. That is a second limitation.
+- **Can I export the schedule myself?** You do not log in to pull an export. You receive the full schedule file every cycle and keep every copy.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Every scheduling system will go down at some point, including ours. What decides how bad that weekend gets is whether the schedule, the phone list and the call order also exist on paper. The Kronos attack showed that a vendor can be out for weeks, and UMass Memorial kept working by writing hours down on paper. Build the kit before the holidays, and refresh it every time you post a schedule.
+  </p>
+</div>
+
+## What to Do This Week
+
+1. **Print the next four weeks of your schedule and put it in a labeled folder on the unit.** Put a second copy in the administrator's office.
+2. **Export or copy your staff phone list out of the scheduling system.** Add a second number for each nurse where you have one.
+3. **Write your callout call order by shift type.** Keep separate lists for days, nights and nurses qualified to work as charge nurse.
+4. **Name a backup approver for overtime.** Write down who can approve an extra shift when you cannot be reached, and tell that person.
+5. **Ask your current vendor the four outage questions above.** Write down the answers, with the date and the name of the person who gave them.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-default mb-2">When something goes wrong, your specialist answers, not a ticket queue.</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI assigns a dedicated specialist to each facility. No IT setup required.</p>
+  <p class="text-lg font-semibold text-default mb-2">A schedule you already hold, and a named person to call</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI delivers each cycle as a PDF and an Excel file, with coverage-blocking issues answered within 1 hour in business hours and 3 hours after.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
 
-**Q: How do I find out if a scheduling platform has had outages before I buy it?**
+**Q: What should I do in the first hour if my scheduling software goes down?**
 
-Three sources: G2 and Capterra reviews filtered by keywords like "crash," "outage," "down," and "unreliable"; the vendor's public status page if they maintain one; and direct conversations with reference customers who have been on the platform for more than a year. Any vendor that does not have a public status page or cannot point you to reliability documentation should be asked directly for uptime statistics from the previous 12 months.
+First, check whether the problem is only yours by trying another browser or device. Then open your downtime kit and post the printed schedule. Call the vendor and say it is blocking shift coverage. Start the paper hours sheet for every shift worked until the system is back. Note the time the outage started.
 
-**Q: What should I do right now if my current scheduling software just went down?**
+**Q: How long can a scheduling software outage last?**
 
-If your scheduling software is unavailable during an active scheduling period: first, check if the outage is account-specific (try a different browser or device) or platform-wide. If platform-wide, contact the vendor's support line with the phrase "active scheduling outage" to escalate priority. Use your most recent printed or exported schedule as the working document for nurse communications until the platform is restored. If the outage extends past 2 to 3 hours during a business day, escalate to a supervisor at the vendor. Document the incident with timestamps for any future contract discussion.
+There is no typical length, so plan for a long one. The December 2021 ransomware attack took down the Kronos Private Cloud. UKG warned that restoring it "may take up to several weeks." UMass Memorial Health did not go back to Kronos for payroll timekeeping until January 27, 2022.
 
-**Q: Does a managed scheduling service eliminate reliability risk?**
+**Q: Does CMS require a critical access hospital to plan for a scheduling system outage?**
 
-It changes the risk profile rather than eliminating it. A managed service removes the nurse manager's direct dependency on the platform for schedule building and maintenance, since the specialist handles those functions. The platform still needs to function for the specialist to work. But the failure point is shifted: instead of a nurse manager being blocked from building a schedule because the platform is down, the specialist manages the recovery and delivers the schedule output through an alternative channel. The nurse manager's operational continuity is less dependent on real-time platform access.
+Not by name. The CMS emergency preparedness rule, 42 CFR 485.625, requires staff contact information and an alternate way to reach staff in the communication plan. It also requires the plan to address continuity of operations. A paper staff list and callout order are a simple way to meet that need when the scheduling system is down.
+
+**Q: Is a paper backup schedule still worth keeping if our software has never gone down?**
+
+Yes. Most of the kit is lists you already have, and keeping it current is one extra print each cycle. The Kronos attack gave hospitals no warning, and the outage ran for weeks. A printed schedule also helps with smaller problems, such as a nurse whose phone app will not load before a shift.
+
+## Sources
+
+1. UKG customer statement on the Kronos Private Cloud ransomware incident, republished by AHA and H-ISAC (the Health Information Sharing and Analysis Center), December 13, 2021. [American Hospital Association](https://www.aha.org/h-isac-reports/2021-12-13-h-isac-tlp-white-kronos-private-cloud-kpc-ransomware-incident-causes)
+2. "Kronos Cyberattack Takes Down Healthcare Workforce Management Services," December 16, 2021. [TechTarget HealthTech Security](https://www.techtarget.com/healthtechsecurity/news/366594979/Kronos-Cyberattack-Takes-Down-Healthcare-Workforce-Management-Services)
+3. Ryan Golden, "The Kronos outage disrupted one employer's payroll for more than a month," March 24, 2022. [Cybersecurity Dive](https://www.cybersecuritydive.com/news/kronos-outage-UMass-restoration/620966/)
+4. 42 CFR 485.625, Condition of participation: Emergency preparedness (critical access hospitals). [Cornell Law School LII](https://www.law.cornell.edu/cfr/text/42/485.625)
+5. ShiftWizard reviews, reviewer Erika A., Registered Nurse, July 9, 2024. [Capterra](https://www.capterra.com/p/178376/ShiftWizard/reviews/)
+6. NurseGrid reviews, reviewer Inpatient Director, Hospital and Health Care, June 17, 2024. [Capterra](https://www.capterra.com/p/254829/NurseGrid/reviews/)
+7. Flu season timing. [Centers for Disease Control and Prevention](https://www.cdc.gov/flu/about/season.html)
 
 ---
 

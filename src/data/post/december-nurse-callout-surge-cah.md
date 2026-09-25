@@ -187,7 +187,7 @@ SimpleScheduleAI is not the right fit if you need holiday pay calculated in the 
 1. **Pull last year's callouts from November 20 to January 5.** Count them by date. Mark the days with the most callouts. Those days go in your plan along with the holidays.
 2. **Pull your census for the last two Decembers.** Check whether late December was actually slow. Staff to what you find.
 3. **Decide the extra holiday pay for each date.** Ask what nearby hospitals paid last year, and get your number approved now so charge nurses can offer it on the first call.
-4. **Draft the holiday volunteer sign-up.** List the dates, the shifts and the pay. Plan to send it by October 31.
+4. **Draft the holiday volunteer sign-up.** List the dates, the shifts and the pay. Plan to send it by October 31. Keep a printed copy with your [scheduling downtime kit](/blog/nurse-scheduling-software-reliability-crashes), in case the scheduling system goes down over the holidays.
 5. **Ask each per-diem nurse for their holiday dates.** Get the answer in writing. A per-diem nurse who has not answered by early November is not on your list.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">

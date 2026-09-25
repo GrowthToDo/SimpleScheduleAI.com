@@ -71,6 +71,21 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618
 - Verified: 2026-07-06 (via Cornell LII)
 
+### 42 CFR 485.625 (CAH emergency preparedness)
+
+- Approved wording: the communication plan must include "Names and contact information for the following: (i) Staff." [(c)(1)] and "Primary and alternate means for communicating with the following: (i) CAH's staff." [(c)(3)]. The plan must address "continuity of operations, including delegations of authority and succession plans" [(a)(3)]. Plan and communication plan are "reviewed and updated at least every 2 years"; CAHs "conduct exercises to test the emergency plan at least twice per year" [(d)].
+- **Guardrail:** the rule never mentions scheduling software. Linking it to a scheduling-system outage is OUR reading and must be written as such ("if the only copy of your staff phone list lives inside the scheduling system, the alternate means does not exist during an outage"). Never write "CMS requires a scheduling downtime plan."
+- URL (reader-facing, globally resolving): https://www.law.cornell.edu/cfr/text/42/485.625 (ecfr.gov bot-blocks automated fetches)
+- Verified: 2026-09-25 (verbatim at Cornell LII; paragraph numbering as quoted)
+
+### Kronos Private Cloud ransomware outage (December 2021)
+
+- Approved wording: "late on Saturday, December 11, 2021" UKG "became aware of unusual activity impacting UKG solutions using Kronos Private Cloud"; the incident affected "UKG Workforce Central, UKG TeleStaff, Healthcare Extensions, and Banking Scheduling Solutions"; UKG told customers "it may take up to several weeks to restore system availability" and recommended they "evaluate and implement alternative business continuity protocols". Source: UKG customer statement republished by AHA/H-ISAC, December 13, 2021: https://www.aha.org/h-isac-reports/2021-12-13-h-isac-tlp-white-kronos-private-cloud-kpc-ransomware-incident-causes
+- Texas case: "Shannon Medical Center in San Angelo, Texas confirmed that it had been impacted by the Kronos cyberattack and has since implemented payroll downtime procedures" and "Shannon Medical Center uses Kronos services for timekeeping and scheduling". TechTarget HealthTech Security, December 16, 2021: https://www.techtarget.com/healthtechsecurity/news/366594979/Kronos-Cyberattack-Takes-Down-Healthcare-Workforce-Management-Services
+- Duration case: UMass Memorial Health "relied on backup timekeeping methods" for more than a month; employees were asked to "write them down on paper"; Kronos resumed as the payroll timekeeping source on January 27, 2022, first clean payroll February 3, 2022. Cybersecurity Dive, Ryan Golden, March 24, 2022: https://www.cybersecuritydive.com/news/kronos-outage-UMass-restoration/620966/
+- **Guardrails:** (1) the documented hospital effects are mostly TIMEKEEPING and PAYROLL; do not claim a named hospital lost its nurse schedule unless a source says so. Shannon is the only verified source that names scheduling as a use. (2) Other UKG products (UKG Pro, Ready, Dimensions) were stated NOT affected; never write "UKG went down". (3) Becker's named-hospital list and NPR holiday-pay line are UNVERIFIED (403 / timeout on 2026-09-25); do not cite them.
+- Verified: 2026-09-25 (all three URLs opened directly, sentences verbatim)
+
 ### Chartis 2026 Rural Health State of the State
 
 - Approved figures: 41.2% of rural hospitals operating in the red nationally; split by Medicaid expansion status 34.9% (expansion states) vs 52.2% (non-expansion states); 417 rural hospitals vulnerable to closure; state vulnerable counts Texas 50 (highest), Kansas 44, Tennessee 27, Georgia 25, Mississippi 24; 331 rural hospitals stopped offering OB between 2011 and 2024; 448 stopped offering chemotherapy between 2014 and 2024; human capital = 56% of healthcare costs

@@ -160,7 +160,7 @@ Yes. "Already set up" usually means the platform was configured for the health s
 
 **Q: Is Kronos being discontinued?**
 
-UKG has announced end-of-life timelines for legacy Kronos Workforce Central: on-premise Workforce Central reaches end of life on March 31, 2027, and the Kronos Private Cloud hosting reached end of life at the end of 2025. If you are offered a Kronos-branded product, confirm which UKG product you are actually buying and its supported lifespan before committing.
+UKG has announced end-of-life timelines for legacy Kronos Workforce Central: on-premise Workforce Central reaches end of life on March 31, 2027, and the Kronos Private Cloud hosting reached end of life at the end of 2025. The Kronos Private Cloud was also the platform taken down by the December 2021 ransomware attack, which we cover in [what happens when nurse scheduling software goes down](/blog/nurse-scheduling-software-reliability-crashes). If you are offered a Kronos-branded product, confirm which UKG product you are actually buying and its supported lifespan before committing.
 
 ## Sources
 
