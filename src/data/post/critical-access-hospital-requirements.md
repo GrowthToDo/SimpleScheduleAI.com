@@ -33,7 +33,7 @@ metadata:
 - [What Are the Location Requirements?](#what-are-the-location-requirements)
 - [What Are the Bed and Length of Stay Limits?](#what-are-the-bed-and-length-of-stay-limits)
 - [What Are the Emergency Services Requirements?](#what-are-the-emergency-services-requirements)
-- [What Are the Nurse Staffing Requirements?](#what-are-the-nurse-staffing-requirements)
+- [What Are the Nurse Staffing Rules for a Critical Access Hospital?](#what-are-the-nurse-staffing-rules-for-a-critical-access-hospital)
 - [How Does SimpleScheduleAI Help?](#how-does-simplescheduleai-help)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -65,7 +65,7 @@ A critical access hospital must provide emergency services 24 hours a day under 
 
 The condition also governs staff availability. Where a physician is not on site, [485.618](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618) permits a physician assistant, nurse practitioner, or clinical nurse specialist to be on call and available within a set response time, with a physician available by phone. A surveyor checks the on-call roster and response-time policy against this section, which is why emergency call coverage and the nursing schedule are read together. The two rosters have to agree.
 
-## What Are the Nurse Staffing Requirements?
+## What Are the Nurse Staffing Rules for a Critical Access Hospital?
 
 A critical access hospital must have a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever the hospital has one or more inpatients, under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631). This is the staffing floor, and it is the condition a nurse manager or director of nursing owns directly.
 

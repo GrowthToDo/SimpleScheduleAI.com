@@ -122,7 +122,7 @@ below:** the live Aladtec pages carry **no healthcare positioning at all**.
 **Ratings (verified 2026-07-15):**
 
 - G2: 4.5/5 (94 reviews) — search-indicated (G2 blocks automated fetch)
-- Capterra: 4.6/5 (17 reviews; small sample) — page-verified, Product ID 248403
+- Capterra: 4.6/5 (17 reviews; small sample) — page-verified, Product ID 248403 (re-verified live via Playwright 2026-09-25: header "4.6 (17)", unchanged)
 
 **Capterra URL (verified 2026-08-13):** https://www.capterra.com/p/248403/Aladtec/reviews/ — WRONG ID CORRECTED. The old URL in this row used p/210972, which resolves to an unrelated product (DelyvaX, a delivery-management tool). Product ID 248403 is the page-verified Aladtec listing and its reviews path loads. Never cite p/210972.
 
@@ -231,7 +231,7 @@ segment. Healthcare page: deputy.com/industry/healthcare.
 **Ratings (verified 2026-07-15):**
 
 - G2: 4.6/5 (666 reviews) — search-indicated (G2 blocks automated fetch)
-- Capterra: 4.6/5 (773 reviews) — page-verified, Product ID 167811
+- Capterra: 4.6/5 (773 reviews) — page-verified, Product ID 167811 (re-verified live via Playwright 2026-09-25: header "4.6 (773)", unchanged)
 
 **Capterra URL (verified 2026-05-15):** https://www.capterra.com/p/167811/Deputy/reviews/
 
@@ -303,6 +303,12 @@ figure at the time and the correct fix was sourcing it, not keeping it.
 > "...the time clock system is an important part of any rostering system - and they have just issued a new feature where staff can clock in and out from home, without any consultation or ability to turn off this feature. While this may suit some businesses it does not suit mine and I am sure I am not alone."
 >
 > Julie B., CEO/DON, Hospital & Health Care, January 18, 2022, Capterra _(verified 2026-05-15)_
+
+**Negative — Customer Support (same CEO/DON reviewer as above):**
+
+> "The customer support is atrocious."
+>
+> Julie B., CEO/DON, Hospital & Health Care, January 18, 2022, Capterra (3.0-star review titled "Worst customer support ever", review page 3; Cons field; PAGE-VERIFIED via Playwright 2026-09-25. The same pass confirmed the clock-in-from-home excerpt above is still posted verbatim. Reviewer's wording, "rostering" and "overseas call centre", may indicate a non-US facility (unverified); do not present her as a US hospital voice.)
 
 **Negative — PTO Requests:**
 
@@ -590,7 +596,7 @@ silence elsewhere is missing documentation, not a proven missing feature.
 **Ratings (verified 2026-07-15):**
 
 - G2: 4.6/5 (5 reviews; small sample) — search-indicated
-- Capterra: 4.2/5 (13 reviews; small sample), Product ID 254829 — page-verified
+- Capterra: 4.2/5 (13 reviews; small sample), Product ID 254829 — page-verified (re-verified live via Playwright 2026-09-25: header "NurseGrid Manager 4.2 (13)", unchanged)
 
 **Capterra URL (verified 2026-08-14):** https://www.capterra.com/p/254829/NurseGrid/reviews/ — product ID 254829 CONFIRMED, listing name is "NurseGrid Manager". Live rating 4.2/5 across 13 reviews.
 
@@ -648,8 +654,7 @@ onshift.com is live and independently branded; the product still ships as **OnSh
 **NEVER "now part of Workday".** That claim is wrong, was removed from a `best-nurse-scheduling-app`
 draft, and recurred in the `best-charge-nurse-scheduling-software` draft in three places.
 
-**Ratings:** Capterra ID 122212, 3.9/5 (verified 2026-06-15 — past the 60-day gate, refresh
-before citing a rating).
+**Ratings:** Capterra ID 122212, 3.9/5 (14 reviews; small sample) (re-verified live via Playwright 2026-09-25: header "OnShift 3.9 (14)", "Showing 1-14 of 14 Reviews"; rating unchanged from the 2026-06-15 reading, which had recorded no review count).
 
 **Positioning — explicitly NOT acute care, and this is the most useful fact in the section:**
 
@@ -681,6 +686,14 @@ comes at no additional cost for facilities using the ShiftKey and/or OnShift pla
   own copy names cost, availability and work history, NOT qualification: "Fill call-offs and open
   shifts in minutes with technology that recommends employees based on cost and availability" and
   "recommended employee replacements based on work history, availability, and cost" (same URL).
+
+### Verified Reviewer Quotes
+
+**Positive — Staff Notification (hospital staffing coordinator):**
+
+> "I used to just print out the schedule and leave it out side my office."
+>
+> David S., Staff Coordinator, Hospital & Health Care, March 20, 2019, Capterra (5.0-star review titled "A great scheduling tool "; Pros field; "out side" is the original spelling, keep as written; PAGE-VERIFIED via Playwright 2026-09-25). Review is from 2019 and the reviewer used the product less than 6 months; note the age when citing.
 
 ## QGenda
 
@@ -766,7 +779,7 @@ Canonical: `/solutions/nurse-and-staff-scheduling/` 301s to `/nurse-and-staff-sc
 **Ratings (verified 2026-07-15):**
 
 - G2: 4.6/5 (164 reviews) — search-indicated
-- Capterra: 4.2/5 (68 reviews) — page-verified, Product ID 90628
+- Capterra: 4.2/5 (68 reviews) — page-verified, Product ID 90628 (re-verified live via Playwright 2026-09-25: header "4.2 (68)", unchanged)
 
 **Capterra URL (verified 2026-08-13):** https://www.capterra.com/p/90628/QGenda/reviews/ — the reviews path resolves; the host 403s automated checkers, so `check-links` reports it as "check" rather than broken. URL shape confirmed via search-result exact match, and the 4.2/68 rating plus the automation-hiccups theme were corroborated in the same pass.
 
@@ -799,6 +812,10 @@ Canonical: `/solutions/nurse-and-staff-scheduling/` 301s to `/nurse-and-staff-sc
 > "They outsourced customer service...you have generic people who respond."
 >
 > David S., President, Hospital & Health Care, May 7, 2024, Capterra
+
+> "Too complex to manage without Customer support"
+>
+> Bryan S., Scheduler, Hospital & Health Care, May 7, 2024, Capterra (3.0-star review titled "EMI review"; Cons field, complete as written, no closing period, capital "C" is the original; PAGE-VERIFIED via Playwright 2026-09-25)
 
 > "Also do not like how hard it is to find someone that can step in and help troubleshoot issues. I feel like I talk to 3 people before I get an actual answer"
 >
@@ -997,7 +1014,7 @@ user-agent reproduces it.)
 **Ratings (Capterra line re-verified live 2026-09-05; G2 line founder-verified 2026-08-14):**
 
 - G2: 4.3/5 across 405 reviews — founder page-verified 2026-08-14 (previously recorded without a review count). Listed as "ShiftWizard by HealthStream". G2 blocks automated fetch, so this line is human-verified, not tool-verified.
-- Capterra: 4.4/5 (723 reviews; 88%+ rated 4 stars or higher) _(header re-read via Playwright 2026-09-05: still "4.4 (723)", page stamped "Last updated August 20th, 2026"; Ease of use 4.3, Customer Service 4.4)_
+- Capterra: 4.4/5 (723 reviews; 88%+ rated 4 stars or higher) _(header re-read via Playwright 2026-09-05: still "4.4 (723)", page stamped "Last updated August 20th, 2026"; Ease of use 4.3, Customer Service 4.4)_ (re-verified live via Playwright 2026-09-25: header still "4.4 (723)", "Last updated August 20th, 2026", unchanged)
 
 **G2 Pricing Insights (founder screenshot, PAGE-VERIFIED 2026-08-09, re-confirmed
 2026-08-14):** Time to Implement = 3 months; Return on Investment = 3 months;
@@ -1130,7 +1147,7 @@ documentation is not evidence of absence of capability.
 
 **Ratings (re-verified live 2026-08-14):**
 
-- Capterra: 4.5/5 (6 reviews; very small sample — treat as directional only). Unchanged since 2026-04-30.
+- Capterra: 4.5/5 (6 reviews; very small sample — treat as directional only). Unchanged since 2026-04-30. (re-verified live via Playwright 2026-09-25: the /reviews/ path redirects to the product page, which reads "Smartlinx 4.5 (6)" and "Based on 6 user reviews", unchanged)
 
 **Capterra URL (verified 2026-05-15):** https://www.capterra.com/p/154002/SmartLinx/reviews/
 _(Note: product ID 88988 seen in older references returns 404 — live listing is 154002)_
@@ -1303,7 +1320,7 @@ Original product-page research pass; vendor-owned domains only (ukg.com, library
 
 **Ratings (verified 2026-07-01):**
 
-- Capterra (UKG Pro): 4.3/5 (726 reviews) — Product ID 480
+- Capterra (UKG Pro): 4.3/5 (731 reviews) — Product ID 480 (re-verified live via Playwright 2026-09-25: header "UKG Pro 4.3 (731)"; supersedes 726 reviews recorded 2026-07-01, rating unchanged)
 - Capterra (UKG Ready): 4.2/5 (1,143 reviews) — Product ID 198579
 - Capterra (Kronos Workforce Central): Product ID 212370 seen in SERP; reviews URL 404'd, rating not captured
 - G2 (Kronos Workforce Central): 3.9/5 (733 reviews) — snippet only, page 403-blocked, verify before citing
@@ -1459,6 +1476,7 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 
 | Date       | Action                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-09-25 | **CAPTERRA RE-VERIFICATION PASS (Playwright, 8 listings).** Headers read from the rendered pages: Aladtec 4.6 (17), SmartLinx 4.5 (6; /reviews/ redirects to product page), QGenda 4.2 (68), NurseGrid Manager 4.2 (13), OnShift 3.9 (14), Deputy 4.6 (773), UKG Pro 4.3 (731), ShiftWizard 4.4 (723). **Only change: UKG Pro count 726 -> 731** (rating unchanged); OnShift count recorded for the first time. G2 not attempted. New PAGE-VERIFIED quotes: QGenda Bryan S. (Scheduler, Hospital & Health Care, Cons), OnShift David S. (Staff Coordinator, Hospital & Health Care, Pros; new OnShift quotes subsection), Deputy Julie B. (CEO/DON, second sentence from her existing review; existing excerpt confirmed still posted). UKG Pro: no nursing-leadership or scheduling reviewer on review pages 1-3, none added. Method note: the first /reviews/ hit of a session returned a Cloudflare 403 block page; loading the product URL first, then /reviews/, cleared it. Capterra offers no industry filter on these pages (filters are rating, company size, role, length and frequency of use). |
 | 2026-09-22 | **THREE FOUNDER-FLAGGED FACT CORRECTIONS.** (1) **ScheduleAnywhere HAS a CAH reference** — Sarah D. Culbertson Memorial Hospital, 22-bed CAH, Rushville IL, in a vendor-written case study published by AONL April 2019 (PDF read directly, verified verbatim). Corrected the false limitation bullet in `best-nurse-scheduling-software-critical-access-hospitals.md` and softened the near-blanket claim in `rural-texas-hospital-nurse-scheduling-2026.md`; full entry + caveats added to the ScheduleAnywhere section. (2) **M7 is NOT YC-backed** — re-verified investors (Threshold, First Round, 25m Health/25madison, Lakehouse, January); guardrail added to the M7 section; the YC vendor here is YouShift (W25); no live page ever carried the wrong claim. (3) **OnShift belongs to ShiftKey** — the site never said ShiftMed, but `scheduling-software-vendor-acquisition-support.md` said **"Paradox acquired OnShift"** in three places (all fixed to ShiftKey, June 2022 from Clearlake, full integration July 2023), and `best-per-diem-nurse-scheduling-software.md` carried a stale "operate independently" framing. Also fixed in the same pass: Aladtec acquisition dated 2019 in one post vs October 21 2021 in six; an unsourced "documented CAH install base" claim for Aladtec; a site-wide-reading "only competitor" NurseGrid exclusivity claim contradicted by our own M7 posts; ScheduleAnywhere called "healthcare-focused" in one post and general-purpose in another. |
 | 2026-09-22 | **PRICING-TRANSPARENCY SWEEP (new instrument, reproducible).** Requested the `/pricing` path on every vendor a CAH is likely to shortlist and recorded the response. **No pricing page:** M7 Health, In-House Health, OnShift, QGenda, SmartLinx (all 404). **ShiftWizard: `shiftwizard.com/pricing` now 301-redirects to `healthstream.com/solution/scheduling/nurse-and-staff-scheduling/shiftwizard`**, which page-verified as NO PRICE PUBLISHED, CTA verbatim "Request demo" and "Have questions? Let's talk". **Blocked, not missing (do NOT count either way):** aladtec.com/pricing and ukg.com/pricing both 403 to automated requests. **Publishes a price:** NurseGrid ("$5 per month, per staff member"), Deputy ($5 / $6.50 / $9 per user per month by tier), ScheduleAnywhere (from $25 per user/month, Capterra listing). This extends the two-sentinel watch (m7health, inhouse.health) to a five-vendor 404 set plus a redirect. Used as the spine of the 2026-09-22 refresh of `/blog/nurse-scheduling-software-pricing`. **CORRECTION MADE IN THE SAME PASS:** that live post previously stated OnShift "annual contracts range $10,000-$30,000", Aladtec "start at $2,000", and UKG "$50,000-$100,000+" with no source, and twice attributed figures to "administrator-reported" data. We are pre-launch with zero customers and the dossier records OnShift pricing as NOT DOCUMENTED, so all three figures and both attributions were removed. Never estimate an unpublished contract price. |
 | 2026-04-30 | Initial quotes sourced from Capterra/G2 for all published alternatives posts                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |

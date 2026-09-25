@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-04-02T00:00:00Z
-updateDate: 2026-05-16T00:00:00Z
+updateDate: 2026-09-25T00:00:00Z
 author: 'Pradeep Pandey'
 title: '8 Best Nurse Scheduling Software in 2026 (Honest Comparison)'
 excerpt: >
@@ -37,6 +37,7 @@ This guide compares 8 platforms across the operational variables that actually d
 ## Table of Contents
 
 - [Quick Comparison: All 8 Platforms](#quick-comparison-all-8-platforms)
+- [Which Nurse Scheduling Software Has the Highest Rating on Capterra?](#which-nurse-scheduling-software-has-the-highest-rating-on-capterra)
 - [How to Evaluate Nurse Scheduling Software in 2026?](#how-to-evaluate-nurse-scheduling-software-in-2026)
 - [What Is Your Bed Count and Staff Size?](#what-is-your-bed-count-and-staff-size)
 - [Do You Want to Manage Scheduling Yourself or Hand It Off?](#do-you-want-to-manage-scheduling-yourself-or-hand-it-off)
@@ -79,14 +80,14 @@ The market in 2026 splits cleanly into three tiers: enterprise platforms for lar
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Critical Access Hospitals, Texas</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">New service; no public reviews yet</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">3 to 5 business days</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">$1,000/mo up to 20 nurses; $1,500/mo for 21 to 40</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Aladtec by [TCP](/blog/best-tcp-alternative-for-cah)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Public safety, EMS, fire, small healthcare</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.5/5 (94 reviews)<br>Capterra: 4.6/5 (17 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 4.6/5 (17 reviews; small sample)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">2-4 weeks</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">~$200-450</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Pricing page blocked our check; ask for a quote</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">SmartLinx</td>
@@ -98,7 +99,7 @@ The market in 2026 splits cleanly into three tiers: enterprise platforms for lar
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">QGenda</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Physician scheduling, larger health systems</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.6/5 (164 reviews)<br>Capterra: 4.2/5 (68 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 4.2/5 (68 reviews)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-12 weeks</td>
         <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
       </tr>
@@ -107,34 +108,55 @@ The market in 2026 splits cleanly into three tiers: enterprise platforms for lar
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Nurse-facing app; staff coordination</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 4.2/5 (13 reviews; small sample)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Days</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">$5 per staff member per month</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">OnShift</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Post-acute care, SNF, LTC, senior living</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 3.9/5 (14 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 3.9/5 (14 reviews; small sample)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">4-8 weeks</td>
         <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">Deputy</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Retail, hospitality, food service, healthcare</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.6/5 (1,400+ reviews)<br>Capterra: 4.6/5 (765 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 4.6/5 (773 reviews)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Hours to days</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">$4-6 per user</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">$5, $6.50 or $9 per user per month by tier</td>
       </tr>
       <tr class="align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100 align-top">UKG Pro</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Large enterprises and large health systems</td>
-        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">G2: 4.2/5<br>Capterra: 4.3/5 (716 reviews)</td>
+        <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">Capterra: 4.3/5 (731 reviews)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400 align-top">6-18 months at hospital scale</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Not listed</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400 align-top">Pricing page blocked our check; ask for a quote</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 italic">Public Ratings show G2 and Capterra scores where available, with review counts in parentheses. Cells showing only one source mean public ratings on the other source were not collected for this guide. Customer Focus reflects each vendor's own positioning on its product page. Setup Time reflects vendor-stated or industry-typical ranges. Pricing reflects publicly available figures only. Data gathered on 2026-04-30 and may have changed since.</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-2 italic">Public Ratings show Capterra scores with review counts in parentheses, re-checked on the live pages September 25, 2026. G2 figures are not shown because G2 blocks automated checks and we could not re-verify them. Customer Focus reflects each vendor's own positioning on its product page. Setup Time reflects vendor-stated or industry-typical ranges. Pricing reflects publicly available figures only. Data gathered on 2026-04-30 and may have changed since.</p>
+
+## Which Nurse Scheduling Software Has the Highest Rating on Capterra?
+
+On Capterra, checked September 25, 2026, the tools in this guide rate between 3.9 and 4.6 out of 5. Deputy and Aladtec are highest at 4.6, and OnShift is lowest at 3.9. A star rating blends every industry that uses a tool, so it tells a small hospital less than it seems to. What hospital scheduling reviewers wrote is more useful.
+
+Two things change how to read the stars. Review counts run from 6 for SmartLinx to 773 for Deputy, and a 4.5 from six reviews is a much weaker signal than a 4.6 from several hundred. The reviewers may also not be hospitals: Aladtec's reviewer base leans toward fire, EMS and law enforcement, and Deputy's rating covers retail, hospitality and food service as well as healthcare.
+
+| Tool              | Capterra rating (reviews) | One hospital scheduling reviewer, in their words                                                                                                                                        |
+| ----------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Deputy            | 4.6 (773)                 | "The customer support is atrocious." Julie B., CEO/DON, Hospital and Health Care, January 2022 (facility location not stated)                                                           |
+| Aladtec           | 4.6 (17)                  | No hospital nursing review on Capterra newer than 2020                                                                                                                                  |
+| SmartLinx         | 4.5 (6)                   | "Implementation was a breeze with resources helping and project management and user training are all included." Carol G., Director of IT Services, Hospital and Health Care, March 2021 |
+| UKG Pro           | 4.3 (731)                 | No nurse leader or scheduler among reviewers on the first three review pages                                                                                                            |
+| QGenda            | 4.2 (68)                  | "Too complex to manage without Customer support" Bryan S., Scheduler, Hospital and Health Care, May 2024                                                                                |
+| NurseGrid Manager | 4.2 (13)                  | "I really like it. It is easy to use. Please Bring back the mobile app" Nika S., Inpatient Director, Hospital and Health Care, June 2024                                                |
+| OnShift           | 3.9 (14)                  | "I used to just print out the schedule and leave it out side my office." David S., Staff Coordinator, Hospital and Health Care, March 2019                                              |
+| SimpleScheduleAI  | No reviews yet            | New service, with no public reviews and no reference customers yet                                                                                                                      |
+
+Quotes are copied exactly as posted, including the original spelling. We show Capterra only because it is the review site we could re-check on the day; G2 blocks automated checks.
+
+If trust is the deciding question, ask each vendor for a reference at a hospital your size, and call that person. SimpleScheduleAI cannot offer one yet, so the fair test for it is to watch it build a schedule in the [interactive simulator](/simulator).
 
 ## How to Evaluate Nurse Scheduling Software in 2026?
 
@@ -235,7 +257,7 @@ SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews); the most recent hospital-context reviews on Capterra are several years old. It offers credential tracking, shift coverage requests, availability management, and basic overtime monitoring, with an interface that sets up without significant IT involvement. For the operating-model comparison between a self-serve platform like Aladtec and a managed service, see our [Aladtec vs. managed scheduling service comparison](/blog/aladtec-vs-managed-service).
+Aladtec by TCP holds 4.6/5 on Capterra (17 reviews; small sample); the most recent hospital-context reviews on Capterra are several years old. It offers credential tracking, shift coverage requests, availability management, and basic overtime monitoring, with an interface that sets up without significant IT involvement. For the operating-model comparison between a self-serve platform like Aladtec and a managed service, see our [Aladtec vs. managed scheduling service comparison](/blog/aladtec-vs-managed-service).
 
 **Best for:** Small hospitals and EMS agencies that want proven self-serve scheduling software with low implementation burden.
 
@@ -264,7 +286,7 @@ Aladtec by TCP holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews)
 
 **Verdict:** The strongest self-serve option for hospitals under 50 beds. If you have a tech-comfortable administrator and want to keep scheduling in-house, start here. See our [Aladtec alternatives for critical access hospitals](/blog/aladtec-alternatives).
 
-**Cost:** Approximately $200-$450/month for small hospital staff sizes.
+**Cost:** Aladtec's pricing page refused our automated check on September 22, 2026, so we could not confirm a price. Ask TCP for a quote.
 
 ## 3. [SmartLinx](https://www.smartlinx.com)
 
@@ -308,7 +330,7 @@ SmartLinx holds 4.5/5 on Capterra (6 reviews; small sample). The vendor describe
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/QGenda.webp" alt="QGenda physician and nurse scheduling platform interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It started as physician scheduling software and has expanded into nursing. Ari W., Administrator (Hospital & Health Care), wrote on Capterra (May 7, 2024): "Qgenda is easy to use and does a great job at automating." For a deeper look at QGenda specifically, see our [QGenda alternatives breakdown](/blog/qgenda-alternatives).
+QGenda holds 4.2/5 on Capterra (68 reviews). It started as physician scheduling software and has expanded into nursing. Ari W., Administrator (Hospital & Health Care), wrote on Capterra (May 7, 2024): "Qgenda is easy to use and does a great job at automating." For a deeper look at QGenda specifically, see our [QGenda alternatives breakdown](/blog/qgenda-alternatives).
 
 **Best for:** Multi-specialty physician scheduling and hospitals that need physician and nursing scheduling on one platform.
 
@@ -344,13 +366,13 @@ QGenda holds 4.6/5 on G2 (164 reviews) and 4.2/5 on Capterra (68 reviews). It st
 
 **Verdict:** Best suited to hospitals that need physician and nursing scheduling on one platform. For facilities that only need nursing scheduling, the physician-scheduling overhead adds cost without proportional value.
 
-**Cost:** Pricing not listed on website. Contact for a quote. Typically starts at $500+/month for small deployments.
+**Cost:** No pricing page as of September 22, 2026 (qgenda.com/pricing returned a missing page). Contact QGenda for a quote.
 
 ## 5. [NurseGrid Manager](https://nursegrid.com)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Nursegrid.webp" alt="NurseGrid Manager scheduling app interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability. The Manager tier adds unit-level oversight.
+NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[3] NurseGrid is built primarily as a nurse-facing app for individual nurses to view schedules, pick up open shifts, and communicate availability. The Manager tier adds unit-level oversight.
 
 **Best for:** Hospitals that want a staff-facing shift communication layer alongside a primary scheduling system.
 
@@ -381,7 +403,7 @@ NurseGrid Manager holds 4.2/5 on Capterra (13 reviews; small sample).[4] NurseGr
 
 **Verdict:** A useful add-on for shift communication and open-shift posting. Not a replacement for a scheduling platform and should not be the only scheduling tool in use. For a CAH-specific deeper comparison, see our guide on the [best NurseGrid alternatives for Critical Access Hospitals](/blog/nursegrid-alternatives).
 
-**Cost:** Free for individual nurses. Manager tools via NurseGrid for Managers - pricing available on request.
+**Cost:** The nurse app is free. NurseGrid Manager is published at "$5 per month, per staff member", for teams of 2 to 250.
 
 ## 6. [OnShift](https://www.onshift.com) (a ShiftKey brand)
 
@@ -424,13 +446,13 @@ OnShift holds 3.9/5 on Capterra (14 reviews). It is a ShiftKey brand, following 
 
 **Verdict:** The right choice for facilities with significant post-acute or LTC volume. For a standalone acute small hospital, the post-acute orientation is the mismatch, and it is a positioning mismatch rather than a quality one.
 
-**Cost:** Pricing not listed on website. Enterprise pricing applies post-acquisition.
+**Cost:** No pricing page as of September 22, 2026 (onshift.com/pricing returned a missing page). Contact OnShift for a quote.
 
 ## 7. [Deputy](https://www.deputy.com)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/Deputy.webp" alt="Deputy workforce scheduling software interface" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Deputy is a general workforce scheduling platform used across retail, hospitality, food service, and healthcare. It holds 4.6/5 on G2 (1,400+ reviews) and 4.6/5 on Capterra (765 reviews) across a large general workforce sample,[5] and markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) covering hospitals, clinics, private practice, and nursing facilities.
+Deputy is a general workforce scheduling platform used across retail, hospitality, food service, and healthcare. It holds 4.6/5 on Capterra (773 reviews) across a large general workforce sample,[4] and markets a [healthcare segment page](https://www.deputy.com/industry/healthcare) covering hospitals, clinics, private practice, and nursing facilities.
 
 **Best for:** Small to mid-sized healthcare practices and clinics with relatively simple shift scheduling needs and the tightest possible budgets.
 
@@ -439,7 +461,7 @@ Deputy is a general workforce scheduling platform used across retail, hospitalit
 - Very fast to set up: hours, not weeks
 - Lowest cost option in this comparison
 - Good mobile app with a clean staff-facing interface
-- Strong overall ratings (4.6/5 on both G2 and Capterra)
+- Strong overall rating (4.6/5 on Capterra, 773 reviews)
 
 **Key limitations:**
 
@@ -448,13 +470,13 @@ Deputy is a general workforce scheduling platform used across retail, hospitalit
 
 **Verdict:** Strongly rated as a general workforce scheduling tool. CAHs evaluating Deputy as a primary scheduling system in a licensed clinical environment should specifically verify HIPAA, BAA, credential-tracking, and CMS audit-trail capabilities directly with the vendor before deciding. See our [Deputy alternatives for healthcare](/blog/deputy-alternatives-healthcare).
 
-**Cost:** Approximately $4-$6/employee/month.
+**Cost:** $5, $6.50 or $9 per user per month by tier, with add-ons priced separately ([deputy.com/pricing](https://www.deputy.com/pricing)).
 
 ## 8. [UKG](https://www.ukg.com) (formerly Kronos)
 
 <img src="/images/blog/best-nurse-scheduling-software-2026/UKG.webp" alt="UKG workforce management platform interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-UKG Pro holds 4.3/5 on Capterra (716 reviews) and 4.2/5 on G2. UKG is the dominant workforce management platform in large hospital systems and handles scheduling, time and attendance, payroll integration, and workforce analytics across many industries.
+UKG Pro holds 4.3/5 on Capterra (731 reviews). UKG is the dominant workforce management platform in large hospital systems and handles scheduling, time and attendance, payroll integration, and workforce analytics across many industries.
 
 **Best for:** Large health systems with 200+ beds, dedicated HRIS and payroll teams, and existing UKG infrastructure.
 
@@ -477,7 +499,7 @@ UKG Pro holds 4.3/5 on Capterra (716 reviews) and 4.2/5 on G2. UKG is the domina
 
 **Verdict:** The right platform for a 300-bed regional system with dedicated HR, IT, and project management capacity. A documented failure mode for small and rural hospitals that buy it expecting a simpler experience. See our [UKG alternatives for critical access hospitals](/blog/ukg-alternatives-small-hospitals).
 
-**Cost:** Pricing not listed on website. Enterprise pricing. Not appropriate for under 50-bed facilities.
+**Cost:** UKG's pricing page refused our automated check on September 22, 2026, so we could not confirm a price. Enterprise sales process. Not appropriate for under 50-bed facilities.
 
 ## Which Software Is Right for Your Hospital Size?
 
@@ -578,23 +600,17 @@ It is not the right fit for every hospital. If your facility has 75+ beds, a ded
 
 ## Sources
 
-[1] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews), G2 Spring 2026 Leader. Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30.
+[1] Aladtec by TCP rating: 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-09-25.
 
-[2] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15.
+[2] QGenda rating: 4.2/5 on Capterra (68 reviews). Vendor page: [qgenda.com](https://www.qgenda.com). Verified 2026-09-25.
 
-[3] QGenda ratings: 4.6/5 on G2 (164 reviews), 4.2/5 on Capterra (68 reviews). Vendor page: [qgenda.com](https://www.qgenda.com). Verified 2026-04-30.
+[3] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-09-25.
 
-[4] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample). Vendor page: [nursegrid.com](https://www.nursegrid.com). Verified 2026-04-30.
+[4] Deputy rating: 4.6/5 on Capterra (773 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-09-25.
 
-[5] Deputy ratings: 4.6/5 on G2 (1,400+ reviews), 4.6/5 on Capterra (765 reviews). Vendor page: [deputy.com](https://www.deputy.com). Verified 2026-04-30.
+[5] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
 
-[6] Homebase ratings: 4.6/5 on Capterra (5,150 reviews). Vendor page: [joinhomebase.com](https://joinhomebase.com). Verified 2026-04-30.
-
-[7] When I Work ratings: 4.5/5 on Capterra (1,289 reviews). Vendor page: [wheniwork.com](https://wheniwork.com). Verified 2026-04-30.
-
-[8] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
-
-[9] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[6] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
 **Methodology note:** Reviewer quotes were cross-checked against AllNurses.com, Reddit (r/nursing), the iOS App Store, Google Play, GetApp, and SoftwareAdvice on the verification date. Documented product capabilities reference each vendor's own product page on that date. Vendor offerings, ratings, and product capabilities change over time; CAHs evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 
@@ -614,7 +630,7 @@ Typically 6-18 months for a full deployment, including configuration, training, 
 
 **Q: What is the cheapest nurse scheduling software for a 25-bed hospital?**
 
-Deputy is the lowest-cost option at roughly $4-6 per employee per month, but it lacks the compliance features hospitals need. Aladtec runs $200-450 per month and covers most compliance requirements for small hospitals. NurseGrid Manager has a low-cost tier but is a shift coordination layer, not a full scheduling engine. If you are weighing the no-cost route first, our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) covers where the truly free tools stop. SimpleScheduleAI uses flat monthly pricing by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses, with no per-nurse fees and no setup fees.
+Deputy lists $5, $6.50 or $9 per user per month by tier, but it lacks the compliance features hospitals need. NurseGrid Manager is published at "$5 per month, per staff member", but it is a shift coordination layer rather than a full scheduling engine. Aladtec's pricing page refused our check, so ask TCP for a quote. Our [nurse scheduling software pricing](/blog/nurse-scheduling-software-pricing) guide lists which vendors publish a price at all. If you are weighing the no-cost route first, our guide to [free nurse scheduling software](/blog/free-nurse-scheduling-software) covers where the truly free tools stop. SimpleScheduleAI uses flat monthly pricing by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses, with no per-nurse fees and no setup fees.
 
 **Q: What is the difference between scheduling software and a managed scheduling service?**
 
