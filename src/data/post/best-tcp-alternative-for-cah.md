@@ -400,7 +400,7 @@ If your nurse manager is comfortable with TCP TimeClock+, has a manageable weekl
 
 **Is ShiftWizard or Aladtec by TCP better for a 25-bed hospital?**
 
-They serve different purposes. ShiftWizard is a general hospital scheduling platform with a strong nurse-facing design. Aladtec by TCP is designed for healthcare and public safety scheduling with a documented CAH install base. Both are self-serve platforms where the nurse manager remains the operator. If your primary need is scheduling-first design with a modern interface, ShiftWizard is the stronger comparison. If you want to stay in the TCP Software ecosystem and need healthcare-specific scheduling depth, Aladtec by TCP is worth evaluating.
+They serve different purposes. ShiftWizard is a general hospital scheduling platform with a strong nurse-facing design. Aladtec by TCP is designed for healthcare and public safety scheduling, though its recent public reviewer base skews toward fire, EMS, and law enforcement rather than hospital nursing, so ask for a current reference at your scale. Both are self-serve platforms where the nurse manager remains the operator. If your primary need is scheduling-first design with a modern interface, ShiftWizard is the stronger comparison. If you want to stay in the TCP Software ecosystem and need healthcare-specific scheduling depth, Aladtec by TCP is worth evaluating.
 
 ---
 

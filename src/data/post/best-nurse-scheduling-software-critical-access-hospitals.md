@@ -437,8 +437,8 @@ For a CAH, the vendor credential-tracking claim is not independently verified as
 
 **Key limitations:**
 
-- CMS, §485.635, audit trail, FLSA, and Critical Access Hospital framing are not documented on the product or healthcare page; a CAH cannot assume those obligations are covered.
-- Named reference customers are large organizations, not CAHs; request rural or CAH-scale references directly.
+- CMS, §485.635, audit trail, FLSA, and Critical Access Hospital framing are not documented on the current product or healthcare page; a CAH cannot assume those obligations are covered.
+- One Critical Access Hospital reference is documented: Sarah D. Culbertson Memorial Hospital, a 22-bed facility in Rushville, Illinois, in a 2019 vendor-written case study published by AONL. It predates TCP's ownership and describes scheduling logistics rather than CMS or FLSA compliance, so ask for a current reference at your scale.
 - Reviewers note staff frustration when facilities restrict schedule visibility (see Lisa T. and Laurie V., above).
 
 **Verdict:** A reasonable general scheduling tool with a healthcare sub-page and clear pricing. For a CAH that needs CMS §485.635 documentation and FLSA tracking as defaults, confirm those capabilities directly with the vendor before treating it as a compliance system of record.
@@ -614,7 +614,7 @@ Scheduling software is a tool your nurse manager logs into, configures, and runs
 7. NurseGrid ratings: 4.2/5 on Capterra (13 reviews; small sample). Vendor: [nursegrid.com](https://www.nursegrid.com). Verified 2026-06-06.
 8. symplr Smart Square ratings: 4.6/5 on Capterra (19 reviews; small sample); two-time Best in KLAS (2025, 2026). Vendor: [symplr.com](https://www.symplr.com). Verified 2026-06-06.
 9. QGenda ratings: 4.6/5 on G2 (164 reviews), 4.2/5 on Capterra (68 reviews). Vendor: [qgenda.com](https://www.qgenda.com). Verified 2026-06-06.
-10. ScheduleAnywhere ratings: 4.6/5 on Capterra (61 reviews). Vendor: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-06-06.
+10. ScheduleAnywhere ratings: 4.6/5 on Capterra (61 reviews). Vendor: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-06-06. Critical Access Hospital reference: "How Two Healthcare Facilities Improved Efficiency by Updating Their Scheduling Methods," a vendor-written case study published by AONL in April 2019, which describes Sarah D. Culbertson Memorial Hospital as "a 22-bed Critical Access Hospital." [aonl.org](https://www.aonl.org/system/files/media/file/2019/04/schedule-anywhere-casestudy.pdf). Verified 2026-09-22. TCP's own customer-story page for the hospital now redirects to its general resource library.
 11. M7 Health: [Capterra listing](https://www.capterra.com/p/10037829/M7-Health/) (product ID 10037829) with 0 reviews; no G2 listing found. Vendor: [m7health.com](https://www.m7health.com). The Amy Trainor statement is from an Ochsner Health news release, approximately February 2026, and is a partnership announcement rather than a product review.
 12. CronShift: no third-party review listings found on Capterra, G2, or other aggregators. Vendor: [cronshift.com](https://www.cronshift.com).
 

@@ -360,7 +360,7 @@ NurseGrid Manager is a nurse communication platform with a strong mobile app tha
 
 **Ratings:** Capterra 3.9/5 (14 reviews, small sample); G2 4.5/5 (40 reviews).
 
-[OnShift](/blog/onshift-alternatives) is a workforce management platform for post-acute and senior-care settings, which received a strategic investment from the staffing marketplace ShiftKey in 2022 (the two operate independently and share an integration). Its per diem model is built around open-shift posting and caregiver engagement features. Per diem nurses see available shifts in the app and pick up what they want. The manager can also directly offer shifts to specific per diem staff. This works well in long-term care environments where per diem nurses have predictable availability windows and shift pickup is routine.
+[OnShift](/blog/onshift-alternatives) is a workforce management platform for post-acute and senior-care settings, now a ShiftKey brand, following the staffing marketplace's 2022 investment and its announcement of full integration in July 2023. Its per diem model is built around open-shift posting and caregiver engagement features. Per diem nurses see available shifts in the app and pick up what they want. The manager can also directly offer shifts to specific per diem staff. This works well in long-term care environments where per diem nurses have predictable availability windows and shift pickup is routine.
 
 **Best for:** Hospitals or long-term care facilities where per diem nurses are accustomed to self-directed shift pickup, and the manager's role is posting available shifts rather than actively building a per diem roster.
 

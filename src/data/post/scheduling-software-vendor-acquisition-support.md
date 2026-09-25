@@ -23,7 +23,7 @@ metadata:
 
 ## Key Takeaways
 
-- Scheduling software acquisitions in healthcare are not rare events. TCP Software, Paradox, HealthStream, and other acquirers have absorbed multiple scheduling products in the last five years; [what happened to Aladtec](/blog/aladtec-vs-managed-service) after TCP Software acquired it in 2021 is the clearest documented case.
+- Scheduling software acquisitions in healthcare are not rare events. TCP Software, ShiftKey, HealthStream, and other acquirers have absorbed multiple scheduling products in the last five years; [what happened to Aladtec](/blog/aladtec-vs-managed-service) after TCP Software acquired it in 2021 is the clearest documented case.
 - The support model is the first thing that changes after an acquisition. A centralized support operation is cheaper to run than a relationship-based team, and the acquiring company's cost structure requires consolidation.
 - There is no fixed timeline for when a support change shows up, and no reliable public data to promise one. Treat the acquisition announcement itself, not a symptom you notice later, as the trigger to document your baseline and start watching.
 - The right question to ask when your vendor announces an acquisition is not "will the product change?" Products change slowly. The right question is: "Who is our new support contact, and what is the documented SLA?" (SLA = service level agreement, the written promise for how fast support responds.)
@@ -48,7 +48,7 @@ Losing that team is not speculation. It is a documented, recurring pattern acros
 
 Scheduling software vendors get acquired because there are many small, independent players in this category and few large ones. Buying one is cheaper for a large platform or a private equity firm than building the same product. They gain the customer base, cut the duplicate support costs, and can sell their other products to those same hospitals.
 
-The [nurse scheduling software](/nurse-scheduling-software) market has seen significant consolidation activity. [TCP Software](https://www.tcpsoftware.com/) has acquired multiple scheduling platforms, including [Aladtec](/blog/aladtec-alternatives), TimeForge, and others; if you run TCP's flagship product, our [TCP scheduling software versus a managed service](/blog/tcp-scheduling-software-vs-managed-service) comparison covers it directly. Paradox acquired [OnShift](/blog/onshift-alternatives). HealthStream acquired [ShiftWizard](/blog/shiftwizard-alternatives). The pattern in each case is the same. A mid-market or SMB-focused product with a loyal customer base is absorbed by a larger organization with a broader software portfolio, one that has an interest in the acquired product's customer relationships.
+The [nurse scheduling software](/nurse-scheduling-software) market has seen significant consolidation activity. [TCP Software](https://www.tcpsoftware.com/) has acquired multiple scheduling platforms, including [Aladtec](/blog/aladtec-alternatives), TimeForge, and others; if you run TCP's flagship product, our [TCP scheduling software versus a managed service](/blog/tcp-scheduling-software-vs-managed-service) comparison covers it directly. ShiftKey acquired [OnShift](/blog/onshift-alternatives) from Clearlake Capital in June 2022 and announced its full integration in July 2023. HealthStream acquired [ShiftWizard](/blog/shiftwizard-alternatives). The pattern in each case is the same. A mid-market or SMB-focused product with a loyal customer base is absorbed by a larger organization with a broader software portfolio, one that has an interest in the acquired product's customer relationships.
 
 For smaller vendors, acquisition is often the most realistic path to investor return. Once an outside investor and a cost-cutting mandate own the decisions, the founders who built a product with genuine relationship-based support often cannot preserve that model.
 
@@ -140,7 +140,7 @@ One honest limitation worth naming: SimpleScheduleAI is an early-stage company, 
 
 **Q: How common are acquisitions in the nurse scheduling software market?**
 
-Very common. The healthcare scheduling software market has been consolidating for over a decade. TCP Software, Paradox, HealthStream, and UKG (formerly Kronos) have each absorbed multiple scheduling products. Private equity has been active in the category as well. An independent scheduling software vendor with a loyal small-hospital customer base is a common acquisition target. Customers who chose based on support model should treat the possibility of acquisition as a known scenario, not a remote one.
+Very common. The healthcare scheduling software market has been consolidating for over a decade. TCP Software, ShiftKey, HealthStream, and UKG (formerly Kronos) have each absorbed multiple scheduling products. Private equity has been active in the category as well. An independent scheduling software vendor with a loyal small-hospital customer base is a common acquisition target. Customers who chose based on support model should treat the possibility of acquisition as a known scenario, not a remote one.
 
 **Q: Can I negotiate acquisition protection into a scheduling software contract?**
 

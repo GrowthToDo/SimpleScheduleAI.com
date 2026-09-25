@@ -80,7 +80,7 @@ The common thread: none of these reviewers described a product that stopped work
 
 Acquisitions almost always degrade support quality for small accounts, because the acquiring company inherits a customer base and immediately applies cost optimization pressure to the support function.
 
-Aladtec is the clearest documented case in the scheduling software space. Aladtec built a genuine reputation for responsive, relationship-based support, particularly among small agencies and facilities. Multiple reviewers described it as a primary reason they chose Aladtec over larger competitors. TCP Software acquired Aladtec in 2019. The support team structure that produced those reviews did not survive the acquisition intact.
+Aladtec is the clearest documented case in the scheduling software space. Aladtec built a genuine reputation for responsive, relationship-based support, particularly among small agencies and facilities. Multiple reviewers described it as a primary reason they chose Aladtec over larger competitors. TCP Software acquired Aladtec on October 21, 2021. The support team structure that produced those reviews did not survive the acquisition intact.
 
 Multiple Capterra reviewers specifically documented the change:
 

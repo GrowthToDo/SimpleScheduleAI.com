@@ -26,7 +26,7 @@ metadata:
 
 - No federal rule requires a designated charge nurse on every shift. What binds a critical access hospital is [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631): a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever there is an inpatient. Charge coverage is your policy, and your schedule is where you keep that promise.
 - Most scheduling platforms document requirements by license type, meaning RN, LPN, or CNA. Charge qualification is narrower, because a fully licensed RN may not have completed your hospital's charge sign-off. Of the eight platforms reviewed, SimpleScheduleAI is the only one documenting a charge-specific requirement.
-- [NurseGrid Manager](https://nursegrid.com/for-organizations/nursegrid-manager/) is the only competitor whose own marketing names critical access hospitals.
+- [NurseGrid Manager](https://nursegrid.com/for-organizations/nursegrid-manager/) is the only platform in this guide whose own marketing names critical access hospitals.
 - Only two competitors publish a price. NurseGrid Manager lists $5 per staff member per month, and [Deputy](https://www.deputy.com/pricing) starts at $5 per user per month. The other five ask you to call.
 - Three platforms serve a different building than yours. Aladtec's live pages sell to fire, EMS, and law enforcement. SmartLinx and OnShift sell to senior care and skilled nursing. Their own websites say so.
 - Ask every vendor the same question before you buy: when my charge nurse calls out at 5 a.m., what does your product put in front of me? The answers differ more than the feature lists suggest, and our [buyer's guide to choosing scheduling software](/blog/how-to-choose-nurse-scheduling-software) covers the rest of the evaluation.
@@ -220,7 +220,7 @@ NurseGrid Manager is the manager tier of the nurse-facing NurseGrid app, owned b
 - Multiple reviewers reported in mid-2024 that the manager mobile app had been removed. A Chief Nursing Officer wrote, "It no longer has the manager app so I have to login to desktop to make changes." (June 13, 2024, Capterra)
 - Cost still bites at small scale. An Administrator wrote, "cost is too expensive for small centers. We are not renewing ours." (June 17, 2024, Capterra)
 
-**Verdict:** The closest competitor to a small-hospital fit, and the only one whose own marketing is aimed at hospitals your size. Choose it if position-level coverage is enough for you and the desktop-only manager workflow is acceptable.
+**Verdict:** The closest competitor to a small-hospital fit, and the only one in this guide whose own marketing is aimed at hospitals your size. Choose it if position-level coverage is enough for you and the desktop-only manager workflow is acceptable.
 
 **Cost:** $5 per staff member per month.
 
