@@ -1,6 +1,7 @@
 ---
 draft: false
 publishDate: 2026-07-15T00:00:00Z
+updateDate: 2026-09-25T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Per Diem Nurse Scheduling Software: 2026 Guide'
 excerpt: >
@@ -33,6 +34,7 @@ For a broader comparison of scheduling platforms, see our [nurse scheduling soft
 
 ## Table of Contents
 
+- [What Does a Critical Access Hospital Need to Set Up a PRN Pool?](#what-does-a-critical-access-hospital-need-to-set-up-a-prn-pool)
 - [Quick Comparison: All 8 Platforms for Per Diem Scheduling](#quick-comparison-all-8-platforms-for-per-diem-scheduling)
 - [How to Evaluate Per Diem Scheduling Software?](#how-to-evaluate-per-diem-scheduling-software)
 - [The 8 Best Options, Reviewed for Per Diem Nurse Scheduling](#the-8-best-options-reviewed-for-per-diem-nurse-scheduling)
@@ -53,6 +55,20 @@ For a broader comparison of scheduling platforms, see our [nurse scheduling soft
 Per diem nursing is how small hospitals stay staffed without carrying a full-time roster that exceeds patient volume. At a [Critical Access Hospital (CAH)](/critical-access-hospital-scheduling), the per diem pool is a structural part of the staffing model. The per diem nurses who work two to four days per month are the same nurses who fill the Saturday night callout and the holiday shift that no full-timer wanted.
 
 The scheduling challenge is that per diem availability is fluid. It changes week to week, sometimes day to day. A tool that handles per diem staff poorly creates two problems simultaneously: it misses available per diem nurses during callout events, and it surfaces nurses who are already at overtime risk because the system did not track their current-week hours.
+
+## What Does a Critical Access Hospital Need to Set Up a PRN Pool?
+
+A PRN pool is a group of nurses who work as needed, with no guaranteed schedule. Running one at a critical access hospital takes four things. You need a current list of PRN nurses and the units each can work. You need each nurse's available dates before the schedule is built. You need a written callout order. And you need a running count of each nurse's hours this week.
+
+Software can carry the last three. Here is what each one does for you:
+
+- **Available dates, collected before the build.** The schedule can only use a PRN nurse on dates that nurse offered. Without the dates in hand, the manager ends up phoning around after the schedule is posted.
+- **A written callout order.** It says when you call a PRN nurse rather than a float nurse, a full-timer on overtime, or an agency. Decide it once, so the 5 a.m. call does not depend on who picks up the phone.
+- **Hours this week, per nurse.** A PRN nurse who already worked two shifts elsewhere in the building can tip into overtime on the third. The count needs to sit next to the callout list.
+
+Two jobs usually come up in the same question and are separate: credential verification and timekeeping. SimpleScheduleAI does neither. It does not check licenses or certification expiry, and it does not run a time clock. When you compare the tools below, check each one for those jobs on their own terms.
+
+What SimpleScheduleAI does cover: PRN availability is a hard rule, so a per diem nurse is never scheduled on a date they did not offer. Our team keeps each nurse's dates current from what the hospital sends us. The system flags any PRN nurse who has not sent dates for the cycle. For the definitions behind these terms, see [what per diem nursing is](/blog/what-is-per-diem-nursing).
 
 Here is how all 8 platforms compare before we go deeper:
 
@@ -220,7 +236,7 @@ SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling
 - Ranked replacement list generated in under two minutes, cross-referenced against FLSA overtime accumulation for each per diem nurse
 - Per diem availability is maintained centrally, not through nurse self-reporting alone, reducing the lag between availability changes and scheduler visibility
 - CMS §485.635 documentation captures per diem shifts automatically alongside scheduled shifts, creating a single audit-ready record
-- Credential tracking flags assignment-competency mismatches before confirming a per diem placement
+- Unit competency requirements are checked before a per diem placement is confirmed, so a nurse not cleared for that unit does not reach the confirmation step
 
 **Key limitations:**
 

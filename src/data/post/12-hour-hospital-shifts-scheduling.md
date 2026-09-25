@@ -1,14 +1,13 @@
 ---
 draft: false
 publishDate: 2026-05-28T00:00:00Z
-updateDate: 2026-05-28T00:00:00Z
+updateDate: 2026-09-25T00:00:00Z
 author: 'Pradeep Pandey'
-title: '12-Hour Nurse Schedule: Shift Patterns, Coverage, and Fairness'
+title: '12-Hour Nurse Schedule Examples: 3x12, 2-2-3, 4-on-4-off'
 excerpt: >
-  A 12-hour nurse schedule is standard at most critical access hospitals, but building
-  one is harder than it looks. This guide covers the common 12-hour shift patterns, the
-  coverage math, fatigue risks, and fairness challenges for a 25-bed CAH running 12-hour
-  rotations.
+  Three 12-hour shifts a week is a full-time nurse schedule. The pattern you pick
+  decides who works weekends and whose week quietly runs to 60 hours. Here are the
+  common patterns with the hours worked out for each.
 image: https://images.unsplash.com/photo-1495364141860-b0d03eccd065?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
@@ -32,6 +31,8 @@ metadata:
 
 - [Why do critical access hospitals use 12-hour nursing shifts?](#why-do-critical-access-hospitals-use-12-hour-nursing-shifts)
 - [What are the common 12-hour nurse shift patterns?](#what-are-the-common-12-hour-nurse-shift-patterns)
+- [What does a typical 12-hour nurse schedule look like?](#what-does-a-typical-12-hour-nurse-schedule-look-like)
+- [How many 12-hour shifts can a nurse work in a row?](#how-many-12-hour-shifts-can-a-nurse-work-in-a-row)
 - [What scheduling challenges are unique to 12-hour shift hospitals?](#what-scheduling-challenges-are-unique-to-12-hour-shift-hospitals)
 - [What are the fatigue and burnout risks of 12-hour rotating shifts?](#what-are-the-fatigue-and-burnout-risks-of-12-hour-rotating-shifts)
 - [How do you build a fair 12-hour shift schedule for a 25-bed Critical Access Hospital?](#how-do-you-build-a-fair-12-hour-shift-schedule-for-a-25-bed-critical-access-hospital)
@@ -75,13 +76,37 @@ small hospitals use most:
 | Pattern            | How it runs                                                            | Weekend effect                    | Best for                                         |
 | ------------------ | ---------------------------------------------------------------------- | --------------------------------- | ------------------------------------------------ |
 | Fixed 3 × 12       | The same three 12-hour days every week (say Mon, Tue, Wed)             | Weekends need a separate rotation | Predictability and simple planning               |
-| 2-2-3 (Pitman)     | 2 on, 2 off, 3 on, then 2 off, 3 on, 2 off, on a repeating 14-day loop | Every other weekend off, built in | Fairness without hand-tracking weekends          |
+| 2-2-3 (Pitman)     | 2 on, 2 off, 3 on, then 2 off, 2 on, 3 off, on a repeating 14-day loop | Every other weekend off, built in | Fairness without hand-tracking weekends          |
 | 4 on, 4 off        | Four 12-hour shifts in a row, then four days off                       | Weekends rotate through the cycle | Long blocks of time off (watch fatigue by day 4) |
 | Day/night rotation | Alternating day and night 12s across the cycle                         | Varies by cycle                   | Covering both when the night pool is small       |
 
-Most 25-bed hospitals run a fixed 3 × 12 for its simplicity, then layer a 2-2-3 or a separate weekend
+A fixed 3 × 12 is the simplest place to start. Many units then add a 2-2-3 or a separate weekend
 rotation on top to keep weekends fair. Whatever the shape, the fatigue guards below matter more than the
 pattern: cap consecutive shifts and protect the night-to-day recovery gap.
+
+## What does a typical 12-hour nurse schedule look like?
+
+A typical full-time 12-hour nurse schedule is three shifts a week, 36 hours. The pattern decides which days those shifts fall on, how many weekends the nurse works, and whether any week tips into overtime. The same nurse can work 36 hours every week on one pattern and 60 hours in a single week on another.
+
+Here is one nurse's two weeks on each pattern, with a 7-day workweek starting Monday. "On" is a 12-hour shift.
+
+| Pattern                    | Week 1                     | Week 2           | Hours (week 1 + week 2) | Overtime under the 40-hour workweek |
+| -------------------------- | -------------------------- | ---------------- | ----------------------- | ----------------------------------- |
+| Fixed 3 × 12               | On Mon, Tue, Wed           | On Mon, Tue, Wed | 36 + 36                 | None                                |
+| 2-2-3 (Pitman)             | On Mon, Tue, Fri, Sat, Sun | On Wed, Thu      | 60 + 24                 | 20 hours, all in week 1             |
+| 4 on, 4 off (starting Mon) | On Mon to Thu              | On Tue to Fri    | 48 + 48                 | 16 hours, 8 in each week            |
+
+The table shows the trade in plain numbers. Fixed 3 × 12 never triggers overtime, but it puts nobody on weekends, so weekends need a separate rotation. The 2-2-3 builds in every other weekend off, but the working week runs 60 hours, which is 20 hours of overtime under the [federal 40-hour workweek](https://www.dol.gov/agencies/whd/overtime). Switching to the 8-and-80 method covered below does not remove it. That method owes overtime on every hour past 8 in a day, which comes to 28 hours across these same seven shifts. The 4 on, 4 off pattern moves through the week, so some weeks carry four shifts and 48 hours.
+
+If you want a blank grid to try these on your own roster, the [free nurse schedule templates](/blog/free-nurse-schedule-templates) cover 8, 10 and 12-hour layouts.
+
+## How many 12-hour shifts can a nurse work in a row?
+
+Federal law sets no limit on how many 12-hour shifts a nurse works in a row. The Department of Labor says: "There is no limit in the Act on the number of hours employees aged 16 and older may work in any workweek." The limits that exist come from state law and from your own scheduling policy.
+
+In Texas, [Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) bars a hospital from requiring a nurse to work hours or days beyond the schedule, and a nurse may refuse. So a Texas nurse can volunteer for a fourth or fifth shift in a row, but you cannot order it outside the chapter's narrow exceptions. Some states go further: Oregon and California cap required work at 12 hours in 24, with limited exceptions. Our [state guide to mandatory nurse overtime](/blog/mandatory-nurse-overtime-by-state) covers each one.
+
+With no legal number to lean on, the cap is yours to set. This guide recommends no more than 3 consecutive 12-hour shifts before a day off, and treats a fourth shift in a row as a fatigue warning sign. The 4 on, 4 off pattern breaks that cap by design, which is why the pattern table flags fatigue by day 4. The most common way a nurse reaches four is a callout, so the cap has to hold when you are covering a gap, not only when you build the schedule.
 
 ## What scheduling challenges are unique to 12-hour shift hospitals?
 

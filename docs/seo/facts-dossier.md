@@ -169,6 +169,14 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - Verified: 2026-07-11 (TWC FLSA guidance + §62.151 via Justia mirror + FS#54 quotes via compliance-vendor mirror; dol.gov and statutes.capitol.texas.gov bot-block direct fetches)
 - CROSS-REF: the entry above is about overtime PAY. Mandatory overtime ASSIGNMENT is a separate question with the OPPOSITE answer — see "Texas HSC Chapter 258" below. Never write "Texas does not restrict nurse overtime" without distinguishing pay from assignment.
 
+### FLSA sets no cap on hours or consecutive shifts
+
+- Approved wording (DOL, verbatim): "There is no limit in the Act on the number of hours employees aged 16 and older may work in any workweek." Plain restatement: federal law sets no cap on how many 12-hour shifts a nurse works in a row; it only governs overtime PAY.
+- Pair it with the state layer, never alone: in Texas, HSC Chapter 258 means a hospital cannot REQUIRE extra shifts beyond the schedule (see entry below); Oregon and California cap hours at 12 in 24 (see "Mandatory nurse overtime, the OTHER states").
+- Wrong: "there is no limit on nurse hours" without the state and Texas qualifiers; attributing a consecutive-shift cap to ANA or CMS (neither is in this dossier).
+- URL: https://www.dol.gov/agencies/whd/overtime
+- Verified: 2026-09-25 (page fetched directly, sentence verbatim)
+
 ### Texas HSC Chapter 258 (mandatory overtime for nurses PROHIBITED)
 
 - Approved wording: "Texas Health and Safety Code Chapter 258 prohibits a hospital from requiring a nurse to work hours beyond her scheduled shifts, and a nurse may refuse mandatory overtime." Retaliation against a refusing nurse is prohibited (§258.005).

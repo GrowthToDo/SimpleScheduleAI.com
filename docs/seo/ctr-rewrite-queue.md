@@ -164,3 +164,13 @@ most page-2 demand on the site carry three and one inbound link. Separately, the
 free/template intent is split across FOUR URLs sharing twelve internal links.
 Both problems are ours to fix and cost nothing but editing time.
 
+
+## 2026-09-25 quick wins (SHIPPED, measure at the 2026-10-01 audit)
+
+From a 90-day GSC gap pull (2026-06-25 to 2026-09-24). Baselines are page-level from that pull.
+
+| # | URL | Baseline | Change shipped | What to measure |
+| - | --- | -------- | -------------- | --------------- |
+| Q1 | /blog/12-hour-hospital-shifts-scheduling | 6,659 impr, pos 10.4, 18 clicks (0.27%) | Band B title test: "12-Hour Nurse Schedule Examples: 3x12, 2-2-3, 4-on-4-off" (was "...Shift Patterns, Coverage, and Fairness"); new excerpt; H2s "What does a typical 12-hour nurse schedule look like?" (worked hours/overtime table) and "How many 12-hour shifts can a nurse work in a row?"; corrected the 2-2-3 (Pitman) row | CTR at a like-for-like position; "how many 12-hour shifts can a nurse work in a row" (18 impr, 17.6) and "typical nurse schedule" (12, 29.2) |
+| Q2 | /blog/nurse-rostering-vs-scheduling-software | 911 impr, pos 12.4, 1 click | Band A, so NO title change: answer-first opening paragraph for "nurse rostering software" (334 impr, 17.7), tighter excerpt, and a T24 limitation (SimpleScheduleAI does not track credential expiry) with KT4, Our Take, CTA and FAQ scoped to match. Already had 7 live inbound links, so links were not the lever. | Position for "nurse rostering software" |
+| Q3 | /blog/best-per-diem-nurse-scheduling-software | 438 impr, pos 8.9 | New answer-first H2 "What Does a Critical Access Hospital Need to Set Up a PRN Pool?" (with the no-credentialing, no-timekeeping scope line); removed a banned "Credential tracking" advantage bullet | Whether the PRN-pool question (109 impr, 5.7, currently landing on best-CAH) shifts to this URL |
