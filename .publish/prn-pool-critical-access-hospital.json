@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "slug": "prn-pool-critical-access-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T15:14:38.190Z",
+      "contentHash": "98a2d595321d75f3b96548c7390c2e16d065c5703df29eb982fd5c9b2ba31f41"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T15:14:40.366Z",
+      "contentHash": "98a2d595321d75f3b96548c7390c2e16d065c5703df29eb982fd5c9b2ba31f41"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T15:14:42.982Z",
+      "contentHash": "98a2d595321d75f3b96548c7390c2e16d065c5703df29eb982fd5c9b2ba31f41"
+    },
+    "inboundLinks": {
+      "status": "FAIL",
+      "checkedAt": "2026-09-25T15:14:43.010Z",
+      "contentHash": "98a2d595321d75f3b96548c7390c2e16d065c5703df29eb982fd5c9b2ba31f41"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T15:14:43.031Z",
+      "contentHash": "98a2d595321d75f3b96548c7390c2e16d065c5703df29eb982fd5c9b2ba31f41"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T15:14:43.031Z",
+      "contentHash": "98a2d595321d75f3b96548c7390c2e16d065c5703df29eb982fd5c9b2ba31f41"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-25T15:14:43.032Z",
+      "contentHash": "98a2d595321d75f3b96548c7390c2e16d065c5703df29eb982fd5c9b2ba31f41"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-09-25T15:12:30.946Z",
+      "contentHash": "09f414c6cad221656e023768e8d75775d7279b609c23884b70f391d0f0764146"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "verifier",
+      "setAt": "2026-09-25T15:12:32.862Z",
+      "contentHash": "09f414c6cad221656e023768e8d75775d7279b609c23884b70f391d0f0764146"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 86.4,
+        "headings": 90.9,
+        "actionability": 55.6,
+        "attention": 81.8
+      },
+      "overall": 74.3,
+      "counts": {
+        "sections": 11,
+        "rereads": 4,
+        "undefinedTerms": 5,
+        "headingsAnswered": 10,
+        "mondayActions": 5,
+        "blockedActions": 4,
+        "quitPoints": 2
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-09-25T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "PRN",
+          "R",
+          "§258.004(b)",
+          "straight time",
+          "time and a half"
+        ],
+        "mondayActions": [
+          "List current PRN nurses with unit clearance and last shift date",
+          "Set a due date for next cycle's PRN availability and send the request today",
+          "Write down the call order (straight time, then overtime-eligible, then agency)",
+          "Add an hours-worked-this-week column to the PRN list",
+          "Call two former staff nurses and ask if they'd join the pool"
+        ],
+        "blockedActions": [
+          "Recruit former staff nurses (no script or talking points given)",
+          "Keep a record of unit clearances (no tool or format specified)",
+          "Count last quarter's overtime/agency shifts (no source system named)",
+          "Track a PRN nurse's hours in departments outside your own schedule (no method given)"
+        ],
+        "sections": [
+          {
+            "heading": "What Is a PRN Pool at a Critical Access Hospital?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Who Should You Recruit Into a PRN Pool?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does a PRN Nurse Need Before a First Shift?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Collect PRN Availability Before the Schedule Is Built?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "In What Order Should You Call PRN Nurses When a Shift Opens?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "When Does a PRN Shift Push a Nurse Into Overtime?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "Can a Texas Hospital Require a PRN Nurse to Take a Shift?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Which PRN Pool Jobs Can Scheduling Software Handle?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Handle a PRN Pool?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": false,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-09-25T15:04:06.524Z",
+      "contentHash": "423a66ee21c8bdc74846c2ea727920fd602a7eae3d54e2c72dcf9aaafe773fea"
+    }
+  }
+}

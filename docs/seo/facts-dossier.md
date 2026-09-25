@@ -169,6 +169,13 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - Verified: 2026-07-11 (TWC FLSA guidance + §62.151 via Justia mirror + FS#54 quotes via compliance-vendor mirror; dol.gov and statutes.capitol.texas.gov bot-block direct fetches)
 - CROSS-REF: the entry above is about overtime PAY. Mandatory overtime ASSIGNMENT is a separate question with the OPPOSITE answer — see "Texas HSC Chapter 258" below. Never write "Texas does not restrict nurse overtime" without distinguishing pay from assignment.
 
+### FLSA: hours for the same employer combine across departments
+
+- Approved wording: "Count every hour the nurse worked for your hospital that week, not only the hours on your unit." Basis: DOL Fact Sheet #54's "Two Different Jobs" example (an employee working 40 hours as a nurse's aide and 16 as a receptionist for the same employer in one workweek has 56 hours for overtime purposes); 29 CFR 778.115 computes the regular rate over the "total number of hours worked at all jobs".
+- Use: PRN nurses who also work in another department of the same hospital; the overtime check must use their total hours that week.
+- URL: https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime (403s browser UAs to automated fetchers; loads with a curl UA)
+- Verified: 2026-09-25 (adversarial fact-check agent, live fetch of FS#54 and 29 CFR 778.115)
+
 ### FLSA sets no cap on hours or consecutive shifts
 
 - Approved wording (DOL, verbatim): "There is no limit in the Act on the number of hours employees aged 16 and older may work in any workweek." Plain restatement: federal law sets no cap on how many 12-hour shifts a nurse works in a row; it only governs overtime PAY.
