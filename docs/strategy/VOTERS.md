@@ -108,7 +108,7 @@ if we make it a product, the idea remains the same."
 - **Reverberates** — **PARTIAL, SERVICE MODE ONLY.** An earlier draft called this
   a hard pass on the strength of six forced decisions. Three of them bend the
   other way in product mode, which ships today: the nurse portal exists, the
-  scheduling team is replaced by "21 automated rule checks", and pricing is $10
+  scheduling team is replaced by "22 automated rule checks", and pricing is $10
   per user per month rather than per facility. The architecture did not bend one
   way; it was built both ways and one branch was hidden. What holds in BOTH
   modes: Excel upload instead of integration, and approval outside the app.

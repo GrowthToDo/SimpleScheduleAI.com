@@ -10,8 +10,8 @@
 export const POSITIONING_RULES = [
   {
     id: 'product-mode-leak',
-    trigger: /guided setup session|facility license|runs in the browser, no installation|21 automated rule checks/i,
-    bad: /guided setup session|facility license|runs in the browser, no installation|21 automated rule checks/i,
+    trigger: /guided setup session|facility license|runs in the browser, no installation|2[12] automated rule checks/i,
+    bad: /guided setup session|facility license|runs in the browser, no installation|2[12] automated rule checks/i,
     requires: null,
     anchor: 'positioning-registry.md#mapping-table',
     message: 'product-mode phrase in service-mode content; use the registry service column',

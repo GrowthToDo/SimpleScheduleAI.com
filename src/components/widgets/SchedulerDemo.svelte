@@ -73,7 +73,7 @@
 
   const ANN = {
     1: { icon: '✦', text: 'AI filling shifts. 13 compliance rules enforced on every slot', bg: BLUE, fg: '#fff', spin: false },
-    2: { icon: '⟳', text: 'Validating 13 compliance + 8 fairness rules…', bg: '#1a2332', fg: '#fff', spin: true },
+    2: { icon: '⟳', text: 'Validating 13 compliance + 9 fairness rules…', bg: '#1a2332', fg: '#fff', spin: true },
     3: { icon: '✓', text: 'Schedule complete · All 45 shifts staffed · Post-ready', bg: '#16a34a', fg: '#fff', spin: false },
     4: { icon: '⚠', text: 'Callout received · Scanning 33 staff for coverage', bg: '#ea580c', fg: '#fff', spin: false },
     5: { icon: '⚡', text: '3 candidates ranked by availability, OT risk & fairness', bg: BLUE, fg: '#fff', spin: false },
@@ -185,7 +185,7 @@
               ruleIntervalId = setInterval(() => {
                 r++;
                 rules = r;
-                if (r >= 21) {
+                if (r >= 22) {
                   clearInterval(ruleIntervalId);
                   ruleIntervalId = null;
                   at(() => (phase = 3), 350);
@@ -202,7 +202,7 @@
       }, 2400);
 
       const fillDone = 2050 + TOTAL * 165 + 500;
-      const validateDone = fillDone + 21 * 85 + 350;
+      const validateDone = fillDone + 22 * 85 + 350;
       const phase3Hold = 3800;
       const calloutAt = validateDone + phase3Hold;
 
@@ -608,7 +608,7 @@
             style="font-size:10px;color:#16a34a;font-weight:700;display:flex;align-items:center;gap:3px;"
             ><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               ><polyline points="20 6 9 17 4 12" /></svg
-            >21 rules · 0 violations</span
+            >22 rules · 0 violations</span
           >
         {/if}
         <button
@@ -669,11 +669,11 @@
       <span style="font-size:10px;color:#2d5a4a;font-weight:600;">Checking rules…</span>
       <div style="flex:1;height:3px;border-radius:9999px;background:#dce8e3;overflow:hidden;">
         <div
-          style="height:100%;background:{BLUE};border-radius:9999px;width:{(rules / 21) *
+          style="height:100%;background:{BLUE};border-radius:9999px;width:{(rules / 22) *
             100}%;transition:width .08s linear;"
         ></div>
       </div>
-      <span style="font-size:10px;font-weight:700;color:{BLUE};min-width:34px;">{rules}/21</span>
+      <span style="font-size:10px;font-weight:700;color:{BLUE};min-width:34px;">{rules}/22</span>
     </div>
 
     <!-- Column headers -->
@@ -728,7 +728,7 @@
             style="position:absolute;bottom:10px;right:10px;display:inline-flex;align-items:center;gap:6px;background:{ann.bg};color:{ann.fg};border-radius:9999px;padding:7px 14px;font-size:10px;font-weight:700;box-shadow:0 3px 14px rgba(0,0,0,0.2);max-width:380px;z-index:5;pointer-events:none;"
           >
             <span class={ann.spin ? 'spin' : ''} style="font-size:13px;">{ann.icon}</span>
-            {phase === 2 ? `Validating rule ${Math.min(rules, 21)} of 21…` : ann.text}
+            {phase === 2 ? `Validating rule ${Math.min(rules, 22)} of 22…` : ann.text}
           </div>
         {/key}
       {/if}
@@ -741,7 +741,7 @@
       <div style="display:flex;align-items:center;gap:4px;">
         <div style="width:6px;height:6px;border-radius:50%;background:{phase >= 3 ? '#22c55e' : '#d1d5db'};"></div>
         <span
-          >{phase >= 3 ? '21 rules validated · 0 violations' : phase === 2 ? `${rules}/21 rules…` : 'Pending validation'}</span
+          >{phase >= 3 ? '22 rules validated · 0 violations' : phase === 2 ? `${rules}/22 rules…` : 'Pending validation'}</span
         >
       </div>
       <div style="display:flex;align-items:center;gap:4px;">

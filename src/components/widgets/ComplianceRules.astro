@@ -8,7 +8,7 @@ type Props = Widget;
 
 const { id, isDark = true, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
 
-const title = '21 rules validated on every schedule';
+const title = '22 rules validated on every schedule';
 const subtitle = 'Every draft is automatically checked before it reaches you. No rule can be quietly skipped.';
 
 const complianceRules = [
@@ -72,9 +72,10 @@ const fairnessGoals = [
   'Charge duty distributed evenly across eligible staff',
   'Consecutive weekends capped: no nurse works more than 2 weekends in a row',
   'Staff shift preferences honored when possible',
-  'Overtime spread evenly when OT is unavoidable',
-  'Extra hours above FTE minimized per nurse',
+  'Overtime and extra hours above FTE kept low and spread evenly',
   'Float pool assignments rotated fairly',
+  'Each shift mixes experience levels instead of pairing only the newest nurses',
+  'Weekend-exempt staff kept off weekend shifts',
 ];
 
 const competencyLevels = [

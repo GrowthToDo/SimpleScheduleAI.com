@@ -62,12 +62,12 @@ ranking work lives in the dofollow lane (see `backlink-plan-2026-07.md`).
   > AI-native nurse scheduling software for Texas Critical Access Hospitals.
 - **Extended tagline (~208 chars, for fields with room):**
   > AI-native nurse scheduling software for Texas Critical Access Hospitals. The AI
-  > builds the schedule, 21 automated rule checks validate every draft, your manager
+  > builds the schedule, 22 automated rule checks validate every draft, your manager
   > approves. Runs in the browser, no installation.
 - **Long description (~1,900 chars, fits a 2,000-char field):**
   > SimpleScheduleAI is AI-native nurse scheduling software built for Critical Access
   > Hospitals and small rural hospitals of 25 beds and under, currently focused on
-  > Texas. The AI builds your schedule, 21 automated rule checks validate every draft,
+  > Texas. The AI builds your schedule, 22 automated rule checks validate every draft,
   > and your manager approves before anything reaches nurses.
   >
   > A cycle works like this. Your roster lives in the system, and the AI builds draft
@@ -96,7 +96,7 @@ ranking work lives in the dofollow lane (see `backlink-plan-2026-07.md`).
   | Feature name | Description |
   | --- | --- |
   | AI Schedule Generation | The AI builds three scored draft schedules each cycle against coverage, skill mix, fairness, and FLSA overtime thresholds. |
-  | 21 Automated Rule Checks | Built-in quality checks validate every draft and flag any rule violation with a documented reason before your manager reviews it. |
+  | 22 Automated Rule Checks | Built-in quality checks validate every draft and flag any rule violation with a documented reason before your manager reviews it. |
   | Ranked Callout Coverage | Log a callout and the system ranks the top three replacement candidates with reasons: skills, role, charge coverage, overtime risk. |
   | FLSA Overtime Tracking | Tracks each nurse's running hours against applicable FLSA overtime thresholds and flags a draft before it breaches one. |
   | Full Audit Trail | Every schedule change is logged with a timestamp, giving a clear record for CMS documentation and survey readiness. |

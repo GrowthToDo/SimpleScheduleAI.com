@@ -26,9 +26,10 @@
     'Charge duty distributed evenly across eligible staff',
     'Consecutive weekends capped (max 2 in a row)',
     'Staff shift preferences honored when possible',
-    'Overtime spread evenly when OT is unavoidable',
-    'Extra hours above FTE minimized per nurse',
+    'Overtime and extra hours above FTE kept low',
     'Float pool assignments rotated fairly',
+    'Each shift mixes experience levels',
+    'Weekend-exempt staff kept off weekends',
   ];
 
   const allRules = [...complianceRules, ...fairnessGoals];
@@ -48,7 +49,7 @@
 
       schedule(() => {
         phase = 'checking';
-        for (let i = 0; i <= 20; i++) {
+        for (let i = 0; i < allRules.length; i++) {
           const idx = i;
           schedule(() => {
             checkedCount = idx + 1;
@@ -58,9 +59,9 @@
 
       schedule(() => {
         phase = 'done';
-      }, 11000);
+      }, 1500 + allRules.length * 450 + 300);
 
-      schedule(runLoop, 14000);
+      schedule(runLoop, 1500 + allRules.length * 450 + 3300);
     }
 
     runLoop();
@@ -70,7 +71,7 @@
 </script>
 
 <div
-  class="rounded-xl border border-gray-700 bg-slate-900 shadow-lg overflow-hidden font-mono text-sm min-h-[660px]"
+  class="rounded-xl border border-gray-700 bg-slate-900 shadow-lg overflow-hidden font-mono text-sm min-h-[690px]"
   class:ring-2={phase === 'done'}
   class:ring-green-400={phase === 'done'}
 >
@@ -79,8 +80,8 @@
     <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-400">
       Compliance Scan · 09:47:22 PM
     </span>
-    <span class="text-[11px] font-bold {checkedCount === 21 ? 'text-green-400' : 'text-gray-400'}">
-      {checkedCount} / 21
+    <span class="text-[11px] font-bold {checkedCount === allRules.length ? 'text-green-400' : 'text-gray-400'}">
+      {checkedCount} / {allRules.length}
     </span>
   </div>
 
@@ -111,7 +112,7 @@
 
       <!-- Fairness goals divider — only show once we reach them -->
       {#if checkedCount > 13}
-        <p class="mb-2 text-[10px] font-semibold uppercase tracking-widest text-blue-400">8 Fairness Goals</p>
+        <p class="mb-2 text-[10px] font-semibold uppercase tracking-widest text-blue-400">9 Fairness Goals</p>
         <ul class="space-y-1 mb-4">
           {#each fairnessGoals as goal, i}
             {#if checkedCount > 13 + i}
@@ -127,7 +128,7 @@
       <!-- Done banner -->
       {#if phase === 'done'}
         <div class="mt-2 rounded-lg bg-green-900/30 border border-green-700 px-4 py-3 text-center">
-          <span class="text-green-400 font-semibold text-sm">21 / 21 · Schedule is compliant. Ready for your review.</span>
+          <span class="text-green-400 font-semibold text-sm">22 / 22 · Schedule is compliant. Ready for your review.</span>
         </div>
       {/if}
     {/if}

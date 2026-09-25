@@ -21,7 +21,8 @@ test('product-mode-leak: runs in the browser, no installation phrase flagged', (
   bad('It runs in the browser, no installation, no IT department required.', 'product-mode-leak');
 });
 
-test('product-mode-leak: 21 automated rule checks phrase flagged', () => {
+test('product-mode-leak: 22 automated rule checks phrase flagged', () => {
+  bad('22 automated rule checks validate every draft.', 'product-mode-leak');
   bad('21 automated rule checks validate every draft.', 'product-mode-leak');
 });
 
