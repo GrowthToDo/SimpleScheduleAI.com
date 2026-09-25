@@ -5,10 +5,9 @@ updateDate: 2026-09-25T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Per Diem Nurse Scheduling Software: 2026 Guide'
 excerpt: >
-  Per diem nurses fill critical gaps in small hospital rosters, but most scheduling software treats
-  them as an afterthought. This guide reviews eight platforms on how well they handle per diem
-  availability, callout coverage, overtime tracking, and credential verification for hospitals that
-  depend on per diem staff to maintain safe coverage.
+  At a small hospital, the per diem nurse may be the one who covers the 5 a.m. callout.
+  This guide reviews eight platforms on how they handle per diem availability, callout
+  coverage, overtime tracking and credential verification.
 image: https://images.unsplash.com/photo-1741707041492-dd5835cc6da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: bofu
@@ -25,9 +24,9 @@ metadata:
 ## Key Takeaways
 
 - Per diem nurses are a primary coverage mechanism at small and rural hospitals, not a supplemental one. At Critical Access Hospitals (CAHs), per diem staff often make up a large share of the effective nursing roster.
-- Most scheduling software handles per diem staff through availability calendars, which require per diem nurses to self-report available days. This works poorly when call-in decisions are last-minute.
-- The highest-value feature for per diem scheduling is a replacement call list that cross-references per diem availability with current-week overtime accumulation. Most tools do not provide this.
-- SimpleScheduleAI includes per diem availability tracking and ranked callout replacement as defaults, with automatic CMS §485.635 documentation for every shift filled. This is the only tool in this list purpose-built for a CAH per diem model.
+- An availability calendar that each per diem nurse fills in works poorly when the call-in decision is last-minute and the calendar is out of date.
+- The highest-value feature for per diem scheduling is a replacement call list that checks each nurse's availability against their overtime hours this week. Test every tool for it in the demo.
+- SimpleScheduleAI treats per diem availability as a hard rule and ranks callout replacements by overtime risk, with every change recorded in the audit trail delivered with each schedule. It was built for a critical access hospital that leans on per diem staff.
 - [Aladtec](/blog/aladtec-alternatives) handles per diem tracking well for self-serve environments. [NurseGrid](/blog/nursegrid-alternatives) Manager excels at per diem communication but does not build schedules. [Deputy](/blog/deputy-alternatives-healthcare) is the lowest-cost entry point but lacks healthcare compliance features.
 
 For a broader comparison of scheduling platforms, see our [nurse scheduling software guide](/nurse-scheduling-software).
@@ -211,15 +210,15 @@ Per diem scheduling has specific requirements that differ from full-time nurse s
   </div>
 </div>
 
-**Ranked replacement list with overtime cross-check:** The critical gap in most scheduling software is that the callout replacement list is sorted by availability only, not by overtime risk. At a small hospital, the first available per diem nurse may be the one who will tip into overtime if she takes the shift. A ranked list that surfaces nurses in order of lowest overtime risk eliminates that calculation from the manager's plate at 5:45 a.m.
+**Ranked replacement list with overtime cross-check:** The gap to test for is a callout replacement list sorted by availability only, not by overtime risk. At a small hospital, the first available per diem nurse may be the one who tips into overtime by taking the shift. A ranked list that surfaces nurses in order of lowest overtime risk eliminates that calculation from the manager's plate at 5:45 a.m.
 
 **Per diem availability accuracy:** Self-reported availability works when per diem nurses keep their calendars current. In practice, most per diem nurses update availability weekly at best and sometimes not at all between availability windows. The best tools surface this discrepancy by showing when availability was last updated.
 
-**Overtime tracking for per diem staff:** The [FLSA 8-and-80 rule](https://www.dol.gov/agencies/whd/flsa) for healthcare employers allows hospitals to use an 80-hour bi-weekly overtime threshold rather than the standard 40-hour weekly threshold. Per diem nurses who work across multiple short shifts in a pay period can cross the overtime threshold without the manager realizing it unless the system tracks cumulative hours against the chosen FLSA model.
+**Overtime tracking for per diem staff:** The [FLSA 8-and-80 rule](https://www.dol.gov/agencies/whd/flsa) for healthcare employers lets a hospital use a 14-day period instead of the standard 40-hour workweek. Overtime is then owed after 8 hours in a day or 80 hours in the period, so every 12-hour shift carries 4 hours of daily overtime. Per diem nurses who work across multiple short shifts in a pay period can cross the overtime threshold without the manager realizing it unless the system tracks cumulative hours against the chosen FLSA model.
 
 **Credential and competency verification:** A per diem nurse filling a floor shift needs to be confirmed as meeting the credential and competency requirements for that unit, not just available. Tools that track credential expiration dates against assignments prevent scope-of-practice compliance gaps.
 
-**CMS audit documentation:** [CMS Conditions of Participation for CAHs](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) (§485.635) require staffing records that include per diem shifts. If per diem shift documentation is captured separately from scheduled shifts, survey preparation doubles the manual work.
+**Survey documentation:** The [CMS Conditions of Participation for CAHs](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) require that "a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients" (§485.631(a)(5)). A shift record that includes per diem nurses is how you show a surveyor who was on duty. If per diem shifts are recorded separately from scheduled shifts, survey preparation doubles the manual work.
 
 ## The 8 Best Options, Reviewed for Per Diem Nurse Scheduling
 
@@ -235,17 +234,17 @@ SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling
 
 - Ranked replacement list generated in under two minutes, cross-referenced against FLSA overtime accumulation for each per diem nurse
 - Per diem availability is maintained centrally, not through nurse self-reporting alone, reducing the lag between availability changes and scheduler visibility
-- CMS §485.635 documentation captures per diem shifts automatically alongside scheduled shifts, creating a single audit-ready record
+- Per diem shifts filled through a callout are recorded in the same audit trail as scheduled shifts, so the shift record lives in one place
 - Unit competency requirements are checked before a per diem placement is confirmed, so a nurse not cleared for that unit does not reach the confirmation step
 
 **Key limitations:**
 
-- Managed service model means less direct manager control over individual per diem scheduling decisions compared to self-serve platforms
+- The service model means less direct manager control over individual per diem scheduling decisions compared to self-serve platforms
 - Not designed for hospitals with a large agency or travel nurse component requiring external credentialing workflows
 
 **Not right for:** A larger hospital or health system that wants to operate its own scheduling platform in-house, or a facility whose per diem coverage is mostly agency and travel staff rather than a local per diem pool. Those needs are a better match for a self-operated enterprise tool.
 
-**Verdict:** The strongest fit for a CAH where per diem nurses are essential to daily coverage and the nurse manager cannot spend 30 minutes per callout event doing manual overtime math. The managed service model handles the operational overhead that self-serve tools push back to the manager.
+**Verdict:** The strongest fit for a CAH where per diem nurses are essential to daily coverage and the nurse manager cannot spend 30 minutes per callout event doing manual overtime math. Its service model handles the operational overhead that self-serve tools push back to the manager.
 
 **Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse or setup fees.
 
@@ -553,11 +552,11 @@ At a 25-bed CAH, these three problems interact every time there is a callout eve
 
 ## How SimpleScheduleAI Handles Per Diem Nurses?
 
-The structural problem with most scheduling tools is that per diem nurses are treated as a secondary input rather than a primary coverage mechanism. SimpleScheduleAI was built for CAHs where per diem staff are a large share of weekly coverage, which means the system treats per diem availability with the same reliability requirements as full-time scheduling.
+A scheduling tool can treat per diem nurses as a secondary input, when at a small hospital they are a primary coverage mechanism. SimpleScheduleAI was built for CAHs where per diem staff are a large share of weekly coverage, which means the system treats per diem availability with the same reliability requirements as full-time scheduling.
 
 Per diem availability is maintained centrally alongside full-time scheduling. When a callout event occurs, the system generates a ranked shortlist that includes both full-time and per diem nurses, sorted by current-week hours against the FLSA overtime threshold. The nurse manager sees who is available and who represents the lowest overtime risk, in order, without running a manual calculation.
 
-Every per diem shift that is filled through the callout module is logged automatically against the CMS §485.635 staffing record. There is no separate documentation step for per diem coverage.
+Every per diem shift filled through a callout is recorded in the audit trail alongside the scheduled shifts, and the audit trail comes with each cycle's schedule. There is no separate documentation step for per diem coverage.
 
 Competency requirements for the unit are applied before a per diem nurse is offered the shift, so a nurse who is not cleared for that unit does not reach the confirmation step.
 
@@ -597,7 +596,7 @@ NurseGrid Manager handles the broadcast communication layer of per diem callouts
 
 **How do you track per diem nurse overtime with FLSA 8-and-80 rules?**
 
-The FLSA 8-and-80 rule allows healthcare employers to pay overtime only when a non-exempt employee works more than 8 hours in a single day or more than 80 hours in a 14-day period, rather than the standard 40-hour weekly threshold. Most scheduling software does not apply this rule by default. It must be manually configured. SimpleScheduleAI tracks FLSA overtime thresholds by default for CAH environments; if your facility has adopted the 8-and-80 method, confirm the calculation basis during onboarding. Aladtec and SmartLinx require configuration. Deputy, NurseGrid, and OnShift do not support it without custom development.
+The FLSA 8-and-80 rule allows healthcare employers to pay overtime only when a non-exempt employee works more than 8 hours in a single day or more than 80 hours in a 14-day period, rather than the standard 40-hour weekly threshold. Ask each vendor whether it calculates the 8-and-80 method, and have them show it on a sample pay period. SimpleScheduleAI tracks the standard FLSA threshold of 40 hours in a workweek. It does not yet calculate the 8-and-80 method, so a facility that has adopted it should keep that calculation in payroll.
 
 **What is the cheapest per diem scheduling software for a small hospital?**
 
@@ -619,7 +618,7 @@ Vendor ratings reflect each product's current public review listings. Capterra f
 6. Deputy, Capterra reviews. [Capterra](https://www.capterra.com/p/167811/Deputy/reviews/).
 7. UKG Pro, Capterra reviews. [Capterra](https://www.capterra.com/p/480/UKG-Pro/reviews/).
 8. FLSA healthcare overtime and the 8-and-80 rule. [U.S. Department of Labor](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
-9. Critical Access Hospital Conditions of Participation, 42 CFR 485.635. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+9. Critical Access Hospital Conditions of Participation, staffing and staff responsibilities, 42 CFR 485.631. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631).
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
