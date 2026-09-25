@@ -59,7 +59,7 @@ This guide compares 8 platforms across the operational variables that actually d
 
 For a critical access hospital, the best [nurse scheduling software](/nurse-scheduling-software) is the option a one-person scheduling team can actually run: no IT project, FLSA overtime thresholds built in, and fast callout coverage. Enterprise suites like UKG fit 200-plus-bed systems, not a 25-bed CAH. Of the eight platforms below, SimpleScheduleAI is the only one purpose-built for that context and delivered as [AI nurse scheduling](/ai-nurse-scheduling) as a service; the others are rated honestly for where they genuinely fit.
 
-The market in 2026 splits cleanly into three tiers: enterprise platforms for large health systems (UKG, Infor, API Healthcare), mid-market tools for community hospitals and clinics (SmartLinx, Aladtec, QGenda), and lightweight or managed options for small and critical access hospitals (SimpleScheduleAI, NurseGrid, Deputy). This guide evaluates full scheduling systems; if your question is really about the mobile app your nurses and manager will touch daily, the [best nurse scheduling app guide](/blog/best-nurse-scheduling-app) applies that lens to the same market.
+The market in 2026 splits cleanly into three tiers: enterprise platforms for large health systems (UKG, Infor, API Healthcare), mid-market and specialist tools built for other settings or staff types (SmartLinx for long-term care, QGenda for physician scheduling in larger health systems, OnShift for post-acute care), and lighter options that small and critical access hospitals use (SimpleScheduleAI, Aladtec, NurseGrid, Deputy). Two of those lighter options come from outside hospital nursing: Aladtec's own pages now market it to public safety agencies, and Deputy serves general hourly workforces. This guide evaluates full scheduling systems; if your question is really about the mobile app your nurses and manager will touch daily, the [best nurse scheduling app guide](/blog/best-nurse-scheduling-app) applies that lens to the same market.
 
 ## Quick Comparison: All 8 Platforms
 
@@ -259,17 +259,17 @@ SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It
 
 Aladtec by TCP holds 4.6/5 on Capterra (17 reviews; small sample); the most recent hospital-context reviews on Capterra are several years old. It offers credential tracking, shift coverage requests, availability management, and basic overtime monitoring, with an interface that sets up without significant IT involvement. For the operating-model comparison between a self-serve platform like Aladtec and a managed service, see our [Aladtec vs. managed scheduling service comparison](/blog/aladtec-vs-managed-service).
 
-**Best for:** Small hospitals and EMS agencies that want proven self-serve scheduling software with low implementation burden.
+**Best for:** Small hospitals that want self-serve scheduling software with a low implementation burden, and are comfortable with a tool built for 24/7 public safety agencies.
 
 **Key advantages:**
 
-- Long track record in small hospitals and EMS agencies; built for 24/7 shift-work environments
+- Built for 24/7 shift-work environments, and flags minimum-staffing violations on a shift, per its product pages
 - Credential expiration tracking included out of the box
 - Lower implementation burden than most mid-market alternatives
 
 **Key limitations:**
 
-- Not purpose-built for hospital nursing. The Capterra customer base skews toward fire, EMS, and law-enforcement users; complex nurse-specific rules such as charge nurse requirements and skill mix management may require manual workarounds.
+- Not built for hospital nursing. As of September 2026, Aladtec's own product pages describe it as public safety scheduling software for fire, EMS, law enforcement and corrections, with no healthcare claim, and its Capterra reviewers skew the same way; complex nurse-specific rules such as charge nurse requirements and skill mix management may require manual workarounds.
 - Some reviewers report click-heavy workflows for routine schedule edits.
 
 > "When editing the schedule there are a lot of clicks involved."
@@ -284,7 +284,7 @@ Aladtec by TCP holds 4.6/5 on Capterra (17 reviews; small sample); the most rece
 
 - Hospital-nursing reference customers at CAH scale should be requested directly from the vendor, given the small Capterra hospital sample.
 
-**Verdict:** The strongest self-serve option for hospitals under 50 beds. If you have a tech-comfortable administrator and want to keep scheduling in-house, start here. See our [Aladtec alternatives for critical access hospitals](/blog/aladtec-alternatives).
+**Verdict:** The strongest self-serve option in this guide for hospitals under 50 beds, with one caution: the vendor now markets it to public safety, so ask TCP for a hospital nursing reference before you commit. If you have a tech-comfortable administrator and want to keep scheduling in-house, start here. See our [Aladtec alternatives for critical access hospitals](/blog/aladtec-alternatives).
 
 **Cost:** Aladtec's pricing page refused our automated check on September 22, 2026, so we could not confirm a price. Ask TCP for a quote.
 
@@ -586,7 +586,7 @@ It is not the right fit for every hospital. If your facility has 75+ beds, a ded
 ## What to Do This Week
 
 1. Count your beds and identify your tier: under 25, 25-75, or 75+. This single number rules out more than half the platforms in this guide.
-2. If you are under 50 beds, put Aladtec and SimpleScheduleAI side by side. They serve the same segment with different models - one is self-serve software, the other builds the schedule for you.
+2. If you are under 50 beds, put Aladtec and SimpleScheduleAI side by side. Both are options small hospitals consider, with different models: one is self-serve software, the other builds the schedule for you.
 3. Request demos from your two or three shortlisted tools. Ask each vendor: how long does implementation take, who owns the configuration, and what does the audit trail look like during a CMS survey?
 4. Ask any vendor for a compliance documentation sample - specifically a staffing report formatted for a CMS §485.635 review.
 5. Calculate how many hours per week your nurse manager currently spends on scheduling. Multiply by their hourly rate. That is the baseline ROI any tool needs to beat. Run the [SimpleScheduleAI ROI calculator](/roi) to model what reducing weekly scheduling time returns in dollars and clinical hours.
@@ -618,7 +618,7 @@ It is not the right fit for every hospital. If your facility has 75+ beds, a ded
 
 **Q: Is Aladtec or SmartLinx better for a small hospital?**
 
-For hospitals under 50 beds, Aladtec is the better default: lower implementation burden, solid credential tracking, and a support team experienced with small healthcare organizations. SmartLinx has a more integrated scheduling-and-time-attendance platform but requires more admin capacity during setup, which pays off at 50-200 beds where someone is dedicated to owning the configuration.
+For hospitals under 50 beds, Aladtec is the better default: lower implementation burden and credential expiration tracking. The caution is that Aladtec's own pages now market it to public safety agencies, so ask TCP for a hospital nursing reference. SmartLinx has a more integrated scheduling-and-time-attendance platform but requires more admin capacity during setup, which pays off at 50-200 beds where someone is dedicated to owning the configuration.
 
 **Q: Does Deputy work for hospital nurse scheduling?**
 
