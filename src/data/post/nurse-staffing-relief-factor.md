@@ -7,7 +7,7 @@ excerpt: >
   Budget two night nurses at 2,080 hours each and you come up about half a nurse short
   once vacation and sick days arrive. The relief factor is the multiplier that closes
   that gap, and you can work it out from your own payroll.
-image: https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1687966208029-2ffe095ad14a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: tofu
 tags:
