@@ -27,10 +27,10 @@ This guide compares 6 Smart Square alternatives for a Critical Access Hospital, 
 
 ## Key Takeaways
 
-- symplr Smart Square is positioned for health systems and the enterprise, with no documented Critical Access Hospital, rural, or 25-bed-or-fewer reference customers. For a Critical Access Hospital, the right alternative is a tool sized to a single 25-bed facility rather than a multi-facility system, runnable without a labor-management analyst.
+- symplr Smart Square, formerly Avantas Smart Square, is positioned for health systems and the enterprise, with no documented Critical Access Hospital, rural, or 25-bed-or-fewer reference customers. For a Critical Access Hospital, the right alternative is a tool sized to a single 25-bed facility rather than a multi-facility system, runnable without a labor-management analyst.
 - Smart Square holds 4.6/5 on Capterra (19 reviews; small sample).[1] The companion symplr Workforce time-and-attendance product holds 4.1/5 on Capterra (13 reviews; small sample).[2]
 - Smart Square has real strengths: it won Best in KLAS for Scheduling: Nurse and Staff in both 2025 and 2026, and its predictive-analytics depth is built for large multi-facility systems. Those strengths are aimed at health-system scale, not a single Critical Access Hospital.
-- For a Critical Access Hospital that needs the scheduling handled rather than a more powerful tool to do it itself, SimpleScheduleAI is the managed-service alternative. For facilities that want self-serve software at a smaller scale, several options below fit a 25-bed roster better than an enterprise platform.
+- For a Critical Access Hospital that needs the scheduling handled rather than a more powerful tool to do it itself, SimpleScheduleAI, AI-native nurse scheduling software delivered as a service, is the alternative that builds the schedule for you. For facilities that want self-serve software at a smaller scale, several options below fit a 25-bed roster better than an enterprise platform.
 - Whichever direction you go, ask any vendor for a current reference customer at Critical Access Hospital scale and confirm CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation handling directly, because product pages rarely document single-CAH deployment fit.
 
 ## Table of Contents
@@ -555,6 +555,10 @@ Related comparison posts: [QGenda alternatives for Critical Access Hospitals](/b
 **Methodology note:** Reviewer quotes are used verbatim with the original date, even when older than 30 days, because hospital-context Smart Square quotes within the last month were not available at verification. Vendor offerings, ratings, and product capabilities change over time. Before deciding on any platform, request a current reference customer at your scale directly from the vendor.
 
 ## Frequently Asked Questions About Smart Square Alternatives
+
+**Is Avantas the same as Smart Square?**
+
+Yes. Smart Square was sold as Avantas Smart Square. symplr acquired it from AMN Healthcare in July 2025, and it is now sold as symplr Smart Square. If you are looking for an alternative to Avantas, the alternatives in this guide apply.
 
 **Is Smart Square or SimpleScheduleAI better for a small or rural hospital?**
 
