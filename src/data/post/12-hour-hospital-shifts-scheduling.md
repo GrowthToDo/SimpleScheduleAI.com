@@ -98,7 +98,7 @@ Here is one nurse's two weeks on each pattern, with a 7-day workweek starting Mo
 
 The table shows the trade in plain numbers. Fixed 3 × 12 never triggers overtime, but it puts nobody on weekends, so weekends need a separate rotation. The 2-2-3 builds in every other weekend off, but the working week runs 60 hours, which is 20 hours of overtime under the [federal 40-hour workweek](https://www.dol.gov/agencies/whd/overtime). Switching to the 8-and-80 method covered below does not remove it. That method owes overtime on every hour past 8 in a day, which comes to 28 hours across these same seven shifts. The 4 on, 4 off pattern moves through the week, so some weeks carry four shifts and 48 hours.
 
-If you want a blank grid to try these on your own roster, the [free nurse schedule templates](/blog/free-nurse-schedule-templates) cover 8, 10 and 12-hour layouts.
+If you want a blank grid to try these on your own roster, our [free Excel nurse schedule template](/resources/nurse-schedule-template) ships with 12-hour day and night shift codes and flags overtime. The [free nurse schedule templates](/blog/free-nurse-schedule-templates) guide covers 8, 10 and 12-hour layouts.
 
 ## How many 12-hour shifts can a nurse work in a row?
 

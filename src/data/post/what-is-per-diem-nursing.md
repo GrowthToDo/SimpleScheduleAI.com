@@ -18,7 +18,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/what-is-per-diem-nursing'
 ---
 
-Per diem nursing means working on an as-needed, day-by-day basis without a guaranteed schedule. Per diem nurses are called to cover shifts when full-time staff are unavailable, due to callouts, vacations, or census spikes. Per diem rates commonly run a premium over staff base pay, in exchange for no benefits such as health insurance or paid time off and no guaranteed minimum hours. The term comes from the Latin "per diem," meaning "by the day." In critical access hospitals, per diem nurses are the primary flexible staffing mechanism for covering gaps without an agency.
+Per diem nursing, also called PRN nursing, means working on an as-needed, day-by-day basis without a guaranteed schedule. Per diem nurses are called to cover shifts when full-time staff are unavailable, due to callouts, vacations, or census spikes. Per diem rates commonly run a premium over staff base pay, in exchange for no benefits such as health insurance or paid time off and no guaranteed minimum hours. The term comes from the Latin "per diem," meaning "by the day." In critical access hospitals, per diem nurses are the primary flexible staffing mechanism for covering gaps without an agency.
 
 ## Key Takeaways
 

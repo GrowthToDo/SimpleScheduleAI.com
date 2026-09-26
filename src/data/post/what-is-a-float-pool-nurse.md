@@ -40,7 +40,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-A float pool nurse is a nurse employed by one hospital or health system who is not assigned to a single unit. Each shift they are told where to go, based on which unit is short that day.
+A float pool nurse, also called a float nurse, is a nurse employed by one hospital or health system who is not assigned to a single unit. Each shift they are told where to go, based on which unit is short that day.
 
 Most writing about float pool nursing is aimed at nurses deciding whether to take the job. This guide answers the definition first, then looks at the role from the staffing side, because whether a hospital can run a float pool at all depends on how many units it has.
 
