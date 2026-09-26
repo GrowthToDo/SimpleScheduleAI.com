@@ -23,7 +23,7 @@ metadata:
 ## Key Takeaways
 
 - Support after go-live is often run by a different team from the one that set you up. Ask who answers after the implementation ends.
-- Public reviews are mixed. A QGenda reviewer wrote that they "talk to 3 people before I get an actual answer," while a SmartLinx reviewer called support "very responsive."
+- Public reviews are mixed. A [QGenda reviewer on Capterra](https://www.capterra.com/p/90628/QGenda/reviews/) wrote that they "talk to 3 people before I get an actual answer," while a [SmartLinx reviewer](https://www.capterra.com/p/154002/SmartLinx/reviews/) called support "very responsive."
 - At a small hospital, the nurse manager usually has no one else to hand a scheduling problem to, so a slow answer lands on one person.
 - Put support in the contract: a named contact, response times by how urgent the problem is, weekend coverage, and your right to export your data.
 - An acquisition is a separate risk. Our guide on [what happens when a scheduling vendor is acquired](/blog/scheduling-software-vendor-acquisition-support) covers it.
@@ -49,17 +49,17 @@ Scheduling software support can change after go-live because setup and ongoing s
 
 That handoff is not always a problem. A good support team with good documentation can answer most questions quickly. It becomes a problem when the answer needs someone who knows how your account was set up, and nobody left on the account does.
 
-Size matters too. A large health system has IT staff and schedulers who can work around a slow answer. A small hospital usually has the nurse manager, who may also be covering shifts. When the schedule will not post on a Friday evening, a support reply on Monday leaves one person to solve it alone.
+Size matters too. A large health system has IT staff and schedulers who can work around a slow answer. A small hospital usually has the nurse manager, who may also be covering shifts. When the schedule will not post on a Friday evening, a support reply on Monday leaves one person to solve it alone. Our guide to [what happens when scheduling software goes down](/blog/nurse-scheduling-software-reliability-crashes) covers how to keep shifts covered while you wait.
 
 ## What Do Reviewers Say About Scheduling Software Support?
 
-Reviewers describe both slow and fast support, and the difference seems to depend more on the vendor than on the industry. Some of the clearest complaints about reaching the right person come from QGenda reviewers. Some of the clearest praise comes from a SmartLinx reviewer. Read reviews for the specific vendor you are considering, and look at the dates.
+Reviewers describe both slow and fast support, and the difference seems to depend more on the vendor than on the industry. Some of the clearest complaints about reaching the right person come from QGenda reviewers. Some of the clearest praise comes from a SmartLinx reviewer. Read reviews for the specific vendor you are considering, and look at the dates. Our guides to [QGenda alternatives](/blog/qgenda-alternatives), [Deputy alternatives](/blog/deputy-alternatives-healthcare) and [SmartLinx alternatives](/blog/smartlinx-alternatives) cover each product in more depth.
 
-On the difficult side, a practice administrator reviewing QGenda on Capterra in March 2026 wrote: "Also do not like how hard it is to find someone that can step in and help troubleshoot issues. I feel like I talk to 3 people before I get an actual answer." That reviewer works in a medical practice, not a hospital. A scheduler at a hospital reviewing QGenda wrote more briefly: "Too complex to manage without Customer support."
+On the difficult side, a practice administrator reviewing [QGenda on Capterra](https://www.capterra.com/p/90628/QGenda/reviews/) in March 2026 wrote: "Also do not like how hard it is to find someone that can step in and help troubleshoot issues. I feel like I talk to 3 people before I get an actual answer." That reviewer works in a medical practice, not a hospital. A scheduler at a hospital reviewing QGenda wrote more briefly: "Too complex to manage without Customer support."
 
-A reviewer with the title CEO/DON, in a hospital and health care role, reviewed Deputy in January 2022 and wrote: "The customer support is atrocious." The review does not say where the facility is.
+A reviewer with the title CEO/DON, in a hospital and health care role, reviewed [Deputy on Capterra](https://www.capterra.com/p/167811/Deputy/reviews/) in January 2022 and wrote: "The customer support is atrocious." The review does not say where the facility is.
 
-On the positive side, a director of IT services at a hospital wrote about SmartLinx: "Customer Support is very responsive and always delivers resolution quickly." Aladtec's current Capterra reviews are also positive about support. We looked for reviews saying Aladtec's support got worse after its acquisition and found none.
+On the positive side, a director of IT services at a hospital wrote about [SmartLinx on Capterra](https://www.capterra.com/p/154002/SmartLinx/reviews/): "Customer Support is very responsive and always delivers resolution quickly." Aladtec's current [Capterra reviews](https://www.capterra.com/p/248403/Aladtec/reviews/) are also positive about support. We looked for reviews saying Aladtec's support got worse after its acquisition and found none.
 
 ## Does an Acquisition Change Scheduling Software Support?
 
@@ -69,7 +69,7 @@ Aladtec is the example we could verify. After TCP Software acquired it in Octobe
 
 ## What Should a Scheduling Software Contract Say About Support?
 
-A scheduling software contract should name who supports you after go-live, how fast they respond to each kind of problem, when they are available, and what happens to your data if the relationship ends. If these are only in the sales conversation, they are not guaranteed. Ask for them in writing.
+A scheduling software contract should name who supports you after go-live, how fast they respond to each kind of problem, when they are available, and what happens to your data if the relationship ends. If these are only in the sales conversation, they are not guaranteed. Ask for them in writing, alongside the rest of your [software evaluation](/blog/how-to-choose-nurse-scheduling-software).
 
 | What to ask for                                    | Why it matters                                                   | A good answer looks like                                                                            |
 | -------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -98,6 +98,8 @@ Measured against the contract table above:
 
 - **Named contact:** yes, on a direct number.
 - **Response by urgency:** coverage-blocking problems come first; the published commitments are on how it works.
+- **Hours of coverage:** coverage-blocking problems are covered after business hours too, and the published details are on how it works.
+- **Escalation path:** partly. Today there is one named contact, and the team behind them is small, so there is no separate manager to escalate to.
 - **Your data:** you receive every schedule as a PDF and an Excel file, and you keep every copy.
 - **A reference customer your size, 18 months in:** no. SimpleScheduleAI is new, and we have no customers to refer you to yet.
 
