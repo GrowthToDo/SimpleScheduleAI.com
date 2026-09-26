@@ -57,6 +57,14 @@
   status = 301
   force = true
 
+# Guessed-slug alias for the CNA ratio post: /blog/cna-to-patient-ratio-laws-by-state
+# never existed but drew a GSC impression (2026-06/09 pull) and returned 404.
+[[redirects]]
+  from = "/blog/cna-to-patient-ratio-laws-by-state"
+  to = "/blog/cna-patient-ratio-laws-by-state"
+  status = 301
+  force = true
+
 # Reversed-word alias for the managed-service comparison post. The live slug is
 # managed-service-vs-scheduling-software, but "scheduling software vs managed
 # service" is the more natural word order for anyone recalling the title, so the

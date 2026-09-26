@@ -40,7 +40,7 @@ metadata:
 
 Ask what the required nurse-to-patient ratio is, and the honest answer is that it depends on which state you are in. Nurse-to-patient ratios are not the same from one state to the next. A nurse working a 1-to-5 medical-surgical assignment in California crosses into Texas and finds no legal ratio at all, only a staffing plan her hospital's committee wrote.
 
-This is the 2026 map. It sorts states into three groups, a fixed ratio in law, a staffing committee or disclosure rule, or no staffing law at all, then explains what Texas's group means for a small hospital that must build a defensible schedule without a state-issued number.
+This is the 2026 map. It sorts states into three groups, a fixed ratio in law, a staffing committee or disclosure rule, or no staffing law at all, then explains what Texas's group means for a small hospital that must build a defensible schedule without a state-issued number. It covers licensed nurses only; for nursing assistants, see [CNA-to-patient ratio laws by state](/blog/cna-patient-ratio-laws-by-state).
 
 ## Which States Mandate a Nurse-to-Patient Ratio in Law?
 
