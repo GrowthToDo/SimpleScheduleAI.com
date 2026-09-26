@@ -134,12 +134,12 @@ const breadcrumbSchema = {
         </table>
       </div>
 
-      <h2 class="mt-12 font-heading text-2xl font-semibold">What does it look like?</h2>
+      <h2 class="mt-12 font-heading text-2xl font-semibold">What does a nurse schedule example look like?</h2>
       <p class="mt-3 text-default/80">
         The Schedule tab, from the sample week that ships inside the file. Day shifts are gold, nights slate, off days
-        grey. The red flags on the right are computed live from the rules you set: David Jones is over the overtime
-        threshold, Sarah Garcia has worked six straight days and is scheduled during her approved vacation, and Chris
-        Miller's night shift rolls straight into a day shift with zero rest.
+        grey. The red flags on the right are computed live from the rules you set: David Jones and Sarah Garcia are both
+        over the overtime threshold, Sarah Garcia has also worked six straight days and is scheduled during her approved
+        vacation, and Chris Miller's night shift rolls straight into a day shift with zero rest.
       </p>
       <div class="mt-5 overflow-x-auto rounded-xl border border-hairline bg-white p-2">
         <Image
@@ -151,6 +151,128 @@ const breadcrumbSchema = {
           loading="lazy"
           decoding="async"
         />
+      </div>
+
+      <p class="mt-6 text-default/80">
+        The same sample week as a table, for the first seven nurses. D12 is a 12-hour day shift, N12 a 12-hour night, D8
+        an 8-hour day. The flags use the sample rules in the file: overtime after 40 hours a week, at least 10 hours of
+        rest between shifts, and no more than five days in a row. The names and hours are sample data, not a real unit.
+      </p>
+      <div class="mt-4 overflow-x-auto rounded-xl border border-hairline">
+        <table class="w-full min-w-[720px] text-sm">
+          <caption class="sr-only">Nurse schedule example: one sample week from the free template</caption>
+          <thead class="bg-primary/5">
+            <tr
+              ><th class="border-b border-hairline px-3 py-2 text-left font-semibold">Nurse</th><th
+                class="border-b border-hairline px-3 py-2 text-left font-semibold">Role</th
+              ><th class="border-b border-hairline px-3 py-2 text-left font-semibold">Mon</th><th
+                class="border-b border-hairline px-3 py-2 text-left font-semibold">Tue</th
+              ><th class="border-b border-hairline px-3 py-2 text-left font-semibold">Wed</th><th
+                class="border-b border-hairline px-3 py-2 text-left font-semibold">Thu</th
+              ><th class="border-b border-hairline px-3 py-2 text-left font-semibold">Fri</th><th
+                class="border-b border-hairline px-3 py-2 text-left font-semibold">Sat</th
+              ><th class="border-b border-hairline px-3 py-2 text-left font-semibold">Sun</th><th
+                class="border-b border-hairline px-3 py-2 text-left font-semibold">Hours</th
+              ><th class="border-b border-hairline px-3 py-2 text-left font-semibold">Flag raised</th></tr
+            >
+          </thead>
+          <tbody>
+            <tr
+              ><td class="border-b border-hairline px-3 py-2">John Smith</td><td
+                class="border-b border-hairline px-3 py-2">RN</td
+              ><td class="border-b border-hairline px-3 py-2">PTO</td><td class="border-b border-hairline px-3 py-2"
+                >PTO</td
+              ><td class="border-b border-hairline px-3 py-2">D12</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">D12</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">N12</td><td class="border-b border-hairline px-3 py-2"
+                >36</td
+              ><td class="border-b border-hairline px-3 py-2">None</td></tr
+            >
+            <tr
+              ><td class="border-b border-hairline px-3 py-2">Emily Johnson</td><td
+                class="border-b border-hairline px-3 py-2">RN</td
+              ><td class="border-b border-hairline px-3 py-2">D12</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">Sick</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">N12</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">N12</td><td class="border-b border-hairline px-3 py-2"
+                >36</td
+              ><td class="border-b border-hairline px-3 py-2">None</td></tr
+            >
+            <tr
+              ><td class="border-b border-hairline px-3 py-2">Michael Williams</td><td
+                class="border-b border-hairline px-3 py-2">LPN</td
+              ><td class="border-b border-hairline px-3 py-2">D12</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">Off</td><td class="border-b border-hairline px-3 py-2"
+                >D12</td
+              ><td class="border-b border-hairline px-3 py-2">Off</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">D12</td><td class="border-b border-hairline px-3 py-2"
+                >36</td
+              ><td class="border-b border-hairline px-3 py-2">None</td></tr
+            >
+            <tr
+              ><td class="border-b border-hairline px-3 py-2">Jessica Brown</td><td
+                class="border-b border-hairline px-3 py-2">CNA</td
+              ><td class="border-b border-hairline px-3 py-2">D12</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">Off</td><td class="border-b border-hairline px-3 py-2"
+                >D12</td
+              ><td class="border-b border-hairline px-3 py-2">Off</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">D12</td><td class="border-b border-hairline px-3 py-2"
+                >36</td
+              ><td class="border-b border-hairline px-3 py-2">None</td></tr
+            >
+            <tr
+              ><td class="border-b border-hairline px-3 py-2">David Jones</td><td
+                class="border-b border-hairline px-3 py-2">RN</td
+              ><td class="border-b border-hairline px-3 py-2">D12</td><td class="border-b border-hairline px-3 py-2"
+                >D12</td
+              ><td class="border-b border-hairline px-3 py-2">D12</td><td class="border-b border-hairline px-3 py-2"
+                >D12</td
+              ><td class="border-b border-hairline px-3 py-2">Off</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">Off</td><td class="border-b border-hairline px-3 py-2"
+                >48</td
+              ><td class="border-b border-hairline px-3 py-2">Over 40 hours</td></tr
+            >
+            <tr
+              ><td class="border-b border-hairline px-3 py-2">Sarah Garcia</td><td
+                class="border-b border-hairline px-3 py-2">RN</td
+              ><td class="border-b border-hairline px-3 py-2">D8</td><td class="border-b border-hairline px-3 py-2"
+                >D8</td
+              ><td class="border-b border-hairline px-3 py-2">D8</td><td class="border-b border-hairline px-3 py-2"
+                >D8</td
+              ><td class="border-b border-hairline px-3 py-2">D8</td><td class="border-b border-hairline px-3 py-2"
+                >D8</td
+              ><td class="border-b border-hairline px-3 py-2">Off</td><td class="border-b border-hairline px-3 py-2"
+                >48</td
+              ><td class="border-b border-hairline px-3 py-2"
+                >Over 40 hours; six days in a row; working Saturday during approved vacation</td
+              ></tr
+            >
+            <tr
+              ><td class="border-b border-hairline px-3 py-2">Chris Miller</td><td
+                class="border-b border-hairline px-3 py-2">RN</td
+              ><td class="border-b border-hairline px-3 py-2">N12</td><td class="border-b border-hairline px-3 py-2"
+                >D12</td
+              ><td class="border-b border-hairline px-3 py-2">Off</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">N12</td><td class="border-b border-hairline px-3 py-2"
+                >Off</td
+              ><td class="border-b border-hairline px-3 py-2">Off</td><td class="border-b border-hairline px-3 py-2"
+                >36</td
+              ><td class="border-b border-hairline px-3 py-2">Monday night runs straight into Tuesday day, zero rest</td
+              ></tr
+            >
+          </tbody>
+        </table>
       </div>
 
       <div class="mt-10 rounded-2xl border border-primary/40 bg-primary/5 p-8 text-center" id="download">
