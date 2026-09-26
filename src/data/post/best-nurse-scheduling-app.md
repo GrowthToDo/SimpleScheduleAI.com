@@ -5,10 +5,9 @@ updateDate: 2026-08-06T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling App for Small Hospitals in 2026'
 excerpt: >
-  Most apps marketed for nurse scheduling were built for retail or long-term care, and it
-  shows the moment you need credential checks or healthcare overtime logic. This guide
-  reviews 8 nurse scheduling apps for small hospitals by what each one actually handles
-  on a phone at midnight.
+  "Nurse scheduling app" means two things: an app a nurse uses to track their own
+  shifts, and a system a hospital uses to build them. This guide covers both, and
+  reviews eight hospital-side options for a small hospital.
 image: '~/assets/images/pool/ward-team-02.webp'
 imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
@@ -26,13 +25,15 @@ metadata:
 ## Key Takeaways
 
 - The word "app" hides two different purchases: a staff-facing app nurses use to view and swap shifts, and a full scheduling engine that happens to have a mobile layer. Decide which one you are buying before comparing anything
-- Only two of the eight platforms publish pricing: Deputy at $5 to $9 per user per month, and SimpleScheduleAI at a flat $1,000 to $1,500 per month by roster size. The other six are quote-only, which is itself a sizing signal
+- Three of the eight publish pricing. NurseGrid Manager charges $5 per staff member per month and Deputy $5 to $9 per user per month. SimpleScheduleAI charges a flat $1,000 to $1,500 per month by roster size. When we checked in September 2026, the other five either had no pricing page or blocked the check
 - For staff-facing use at a small hospital, NurseGrid is the strongest nurse-built app, with one reviewer-flagged caveat: manager-side schedule edits now require a desktop login
 - A polished general app like Deputy still leaves credential checks, healthcare overtime logic, and survey documentation on the manager's desk. Enterprise suites like UKG bury a 25-nurse department in configuration instead
-- SimpleScheduleAI takes the no-app route: an AI-native nurse scheduling service that delivers each schedule for the manager to approve from any device, with compliance handled at the service layer
+- SimpleScheduleAI takes the no-app route: an AI-native nurse scheduling service that sends each schedule as a PDF and an Excel file for the manager to approve, with nothing to install or log in to
+- For a nurse tracking their own shifts, free personal calendar apps such as the [NurseGrid app](https://nursegrid.com/for-nurses/nursegrid-app/) and [MYDUTY](https://apps.apple.com/us/app/myduty-nurse-calendar/id990247742) do the job; they do not build a hospital's schedule
 
 ## Table of Contents
 
+- [Which Nurse Schedule App Do Nurses Use for Their Own Shifts?](#which-nurse-schedule-app-do-nurses-use-for-their-own-shifts)
 - [Do You Need a Scheduling App or Full Scheduling Software?](#do-you-need-a-scheduling-app-or-full-scheduling-software)
 - [What Makes a Nurse Scheduling App Different From a General Scheduling App?](#what-makes-a-nurse-scheduling-app-different-from-a-general-scheduling-app)
 - [What Should You Look For in a Nurse Scheduling App?](#what-should-you-look-for-in-a-nurse-scheduling-app)
@@ -42,6 +43,16 @@ metadata:
 - [Frequently Asked Questions](#frequently-asked-questions)
 
 The phrase "nurse scheduling app" covers a wide range of products. Some are purpose-built for nursing departments. Others are generic workforce tools with a healthcare landing page. The difference is not visible on a feature list. It shows up when a nurse calls out at midnight and someone has to find a qualified replacement, on a phone, without triggering overtime.
+
+## Which Nurse Schedule App Do Nurses Use for Their Own Shifts?
+
+If you are a nurse looking for an app to keep track of your own shifts, a free personal calendar app does that job. Two that come up most in app store searches are the NurseGrid app and MYDUTY. Neither builds a hospital's schedule. They show the shifts you enter, or the shifts your hospital publishes if it uses the same vendor's manager tool.
+
+The [NurseGrid nurse app](https://nursegrid.com/for-nurses/nursegrid-app/) is free. Its own page says: "Yep, 100% free for nurses and healthcare workers!" The same page lists what it does: "Manage your work calendar. Coordinate schedules with coworkers. Track credentials and get reminders for expiration dates. Earn CE credits." If your hospital uses NurseGrid Manager, shifts the manager posts reach the app.
+
+[MYDUTY](https://apps.apple.com/us/app/myduty-nurse-calendar/id990247742) is listed on the App Store as "Free with in-app purchases." Its group feature lets you "Create groups and invite your team - see everyone's schedule at once."
+
+The rest of this guide is for the other half of the question: the manager or administrator choosing what the hospital runs.
 
 ## Do You Need a Scheduling App or Full Scheduling Software?
 
@@ -62,9 +73,9 @@ Two buying intents get tangled under this keyword, and they lead to different sh
     <tbody>
       <tr>
         <td class="border border-slate-300 px-4 py-2 font-semibold text-primary">SimpleScheduleAI</td>
-        <td class="border border-slate-300 px-4 py-2">Small-hospital service + review from any device</td>
+        <td class="border border-slate-300 px-4 py-2">Small-hospital service; approve from any device</td>
         <td class="border border-slate-300 px-4 py-2">Yes, small rural hospitals</td>
-        <td class="border border-slate-300 px-4 py-2">Web-based review and approval</td>
+        <td class="border border-slate-300 px-4 py-2">No app: PDF and Excel sent to you, approve by reply</td>
         <td class="border border-slate-300 px-4 py-2">Ranked shortlist with reasons</td>
         <td class="border border-slate-300 px-4 py-2">Flat $1,000 to $1,500/mo</td>
       </tr>
@@ -74,23 +85,23 @@ Two buying intents get tangled under this keyword, and they lead to different sh
         <td class="border border-slate-300 px-4 py-2">Yes, nurse-specific</td>
         <td class="border border-slate-300 px-4 py-2">Strong staff app; manager edits on desktop</td>
         <td class="border border-slate-300 px-4 py-2">Broadcast to qualified staff</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
+        <td class="border border-slate-300 px-4 py-2">$5/staff member/mo (published)</td>
       </tr>
       <tr>
         <td class="border border-slate-300 px-4 py-2 font-medium">Aladtec</td>
-        <td class="border border-slate-300 px-4 py-2">Multi-department scheduling</td>
-        <td class="border border-slate-300 px-4 py-2">Partial (configurable)</td>
+        <td class="border border-slate-300 px-4 py-2">Public safety scheduling, per its own pages</td>
+        <td class="border border-slate-300 px-4 py-2">No (built for public safety)</td>
         <td class="border border-slate-300 px-4 py-2">Functional mobile access</td>
         <td class="border border-slate-300 px-4 py-2">Manual overtime check</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
+        <td class="border border-slate-300 px-4 py-2">Pricing page blocked our check</td>
       </tr>
       <tr class="bg-slate-50">
         <td class="border border-slate-300 px-4 py-2 font-medium">SmartLinx</td>
-        <td class="border border-slate-300 px-4 py-2">Mid-size hospital with IT</td>
-        <td class="border border-slate-300 px-4 py-2">Yes (configurable)</td>
+        <td class="border border-slate-300 px-4 py-2">Senior care and post-acute, per its own pages</td>
+        <td class="border border-slate-300 px-4 py-2">Senior-care focus (configurable)</td>
         <td class="border border-slate-300 px-4 py-2">Full mobile suite</td>
         <td class="border border-slate-300 px-4 py-2">Configurable automation</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
+        <td class="border border-slate-300 px-4 py-2">No pricing page</td>
       </tr>
       <tr>
         <td class="border border-slate-300 px-4 py-2 font-medium">QGenda</td>
@@ -98,7 +109,7 @@ Two buying intents get tangled under this keyword, and they lead to different sh
         <td class="border border-slate-300 px-4 py-2">Yes (enterprise)</td>
         <td class="border border-slate-300 px-4 py-2">Full mobile suite</td>
         <td class="border border-slate-300 px-4 py-2">Configurable</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
+        <td class="border border-slate-300 px-4 py-2">No pricing page</td>
       </tr>
       <tr class="bg-slate-50">
         <td class="border border-slate-300 px-4 py-2 font-medium">OnShift</td>
@@ -106,7 +117,7 @@ Two buying intents get tangled under this keyword, and they lead to different sh
         <td class="border border-slate-300 px-4 py-2">Senior-care focus, not acute</td>
         <td class="border border-slate-300 px-4 py-2">Mobile-first design</td>
         <td class="border border-slate-300 px-4 py-2">Broadcast model</td>
-        <td class="border border-slate-300 px-4 py-2">Contact for pricing</td>
+        <td class="border border-slate-300 px-4 py-2">No pricing page</td>
       </tr>
       <tr>
         <td class="border border-slate-300 px-4 py-2 font-medium">Deputy</td>
@@ -122,13 +133,13 @@ Two buying intents get tangled under this keyword, and they lead to different sh
         <td class="border border-slate-300 px-4 py-2">Yes (enterprise)</td>
         <td class="border border-slate-300 px-4 py-2">Full enterprise mobile</td>
         <td class="border border-slate-300 px-4 py-2">Full automation</td>
-        <td class="border border-slate-300 px-4 py-2">Enterprise pricing</td>
+        <td class="border border-slate-300 px-4 py-2">Pricing page blocked our check</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-One note on the pricing column. Only two of the eight publish their rates: Deputy lists $5 to $9 per user per month depending on plan, and SimpleScheduleAI publishes flat monthly pricing. The other six quote per deployment. An unpublished price is not a red flag by itself, but it usually signals an enterprise sales process sized for bigger buyers, the same [vendor size signals](/blog/nurse-scheduling-software-minimum-employees) that tell a small hospital whether a product was built with it in mind. For per-user apps, do the math before the demo: $5 per user per month across a 25-nurse roster is $1,500 a year, an illustrative figure, before counting the manual work the app leaves behind.
+One note on the pricing column. Three of the eight publish their rates: NurseGrid Manager lists $5 per staff member per month, Deputy lists $5 to $9 per user per month depending on plan, and SimpleScheduleAI publishes flat monthly pricing. When we checked on September 22, 2026, the other five either had no pricing page or blocked our check. An unpublished price is not a red flag by itself, but it can signal an enterprise sales process sized for bigger buyers, the same [vendor size signals](/blog/nurse-scheduling-software-minimum-employees) that tell a small hospital whether a product was built with it in mind. For per-user apps, do the math before the demo: $5 per user per month across a 25-nurse roster is $1,500 a year, an illustrative figure, before counting the manual work the app leaves behind.
 
 ## What Makes a Nurse Scheduling App Different From a General Scheduling App?
 
@@ -176,7 +187,7 @@ The operational layer is where the midnight test lives. A [callout](/blog/how-to
 
 <img src="/images/blog/best-nurse-scheduling-app/SimpleScheduleAI.webp" alt="SimpleScheduleAI scheduling interface" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI is not a traditional app, and the distinction is deliberate. It is an [AI-native nurse scheduling service](/ai-nurse-scheduling): the AI builds the schedule against your unit's compliance and fairness rules, a scheduling specialist checks the draft, and the nurse manager reviews and approves. The interface is web-based, so review and approval work from a phone as easily as a desktop, but nobody at the hospital builds schedules in an app.
+SimpleScheduleAI is not a traditional app, and the distinction is deliberate. It is an [AI-native nurse scheduling service](/ai-nurse-scheduling): the AI builds the schedule against your unit's compliance and fairness rules, our scheduling team checks it, and the nurse manager approves. Each schedule arrives as a PDF and an Excel file, and you approve it by reply, so it works from a phone as easily as a desktop. Nobody at the hospital logs in to anything.
 
 **Best for:** Small rural hospitals where the nurse manager is clinically active and wants scheduling handled, not another app to run.
 
@@ -212,7 +223,7 @@ NurseGrid Manager is a scheduling platform designed specifically for nurses. The
 
 **Key limitations:**
 
-- The manager-facing mobile app is no longer available: multiple reviewers report schedule edits now require a desktop login (Capterra, June 2024). In an app-lens evaluation, that matters most for the manager herself
+- The manager-facing mobile app is no longer available: two reviewers report that schedule edits now require a desktop login (Capterra, June 2024). In an app-lens evaluation, that matters most for the manager herself
 - Credential enforcement at the shift level is not automatic; the manager verifies coverage during review
 - Healthcare overtime configuration should be verified against your FLSA setup, and survey documentation stays manual
 
@@ -224,9 +235,9 @@ NurseGrid Manager is a scheduling platform designed specifically for nurses. The
 
 <img src="/images/blog/best-nurse-scheduling-app/Aladtec.webp" alt="Aladtec scheduling app interface" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Aladtec, part of TCP Software, provides web and mobile scheduling access used heavily in emergency services and multi-department healthcare settings. Staff use mobile access for schedule viewing, availability, time-off requests, and shift trades.
+Aladtec, part of TCP Software, provides web and mobile scheduling access. As of September 2026, its own product pages market it to fire, EMS, law enforcement and corrections agencies, with no healthcare claim, although some hospitals use it. Staff use mobile access for schedule viewing, availability, time-off requests, and shift trades.
 
-**Best for:** Facilities that want one scheduling tool across nursing, EMS, lab, and support departments.
+**Best for:** Facilities that want one self-serve scheduling tool across departments, and are comfortable with a product built for public safety agencies.
 
 **Key advantages:**
 
@@ -240,7 +251,7 @@ Aladtec, part of TCP Software, provides web and mobile scheduling access used he
 
 **Verdict:** A solid multi-department choice once configured; the configuration is the cost. See the operating-model comparison in [Aladtec vs a scheduling service](/blog/aladtec-vs-managed-service).
 
-**Cost:** Contact for pricing.
+**Cost:** Aladtec's pricing page refused our automated check on September 22, 2026, so we could not confirm a price. Ask TCP for a quote.
 
 ### 4. [SmartLinx](https://www.smartlinx.com)
 
@@ -248,7 +259,7 @@ Aladtec, part of TCP Software, provides web and mobile scheduling access used he
 
 SmartLinx pairs its workforce platform with a full mobile suite: schedule viewing, open-shift response, time and attendance, and manager approval workflows all run on mobile.
 
-**Best for:** Mid-size hospitals with IT support that want mobile workforce management with configurable healthcare rules.
+**Best for:** Senior care, post-acute and behavioral health organizations with IT support that want mobile workforce management. Its own pages list no hospital category.
 
 **Key advantages:**
 
@@ -261,7 +272,7 @@ SmartLinx pairs its workforce platform with a full mobile suite: schedule viewin
 - Implementation is a project measured in months, not days
 - Ongoing IT involvement is assumed
 
-**Verdict:** A strong platform for hospitals with technical staff. Heavy for a small facility with limited IT; see [SmartLinx alternatives](/blog/smartlinx-alternatives) for lighter options.
+**Verdict:** A strong platform for the care settings it targets, with technical staff to run it. Heavy for a small facility with limited IT; see [SmartLinx alternatives](/blog/smartlinx-alternatives) for lighter options.
 
 **Cost:** Contact for pricing.
 
@@ -360,7 +371,7 @@ The two axes that decide this purchase rarely move together. The most polished a
 
 | Platform         | Mobile experience                          | Nurse-specificity                        |
 | ---------------- | ------------------------------------------ | ---------------------------------------- |
-| SimpleScheduleAI | Web review, any device                     | Built for small-hospital nursing         |
+| SimpleScheduleAI | No app: PDF and Excel, approve by reply    | Built for small-hospital nursing         |
 | NurseGrid        | Staff app strong; manager edits on desktop | Nurse-specific by design                 |
 | Deputy           | Most polished general app                  | General workforce, minimal nursing logic |
 | SmartLinx        | Full mobile suite                          | Healthcare-configurable, IT required     |
@@ -402,7 +413,7 @@ Free tiers and staff-facing apps cover schedule viewing and swap communication, 
 
 **Q: Is SimpleScheduleAI an app I download from an app store?**
 
-No. SimpleScheduleAI is a scheduling service with a web-based interface, so there is nothing to install. Schedules are built by the service and arrive for the manager's review, and approval works from a phone browser as easily as a desktop. The day-to-day shifts from building schedules in an app to approving schedules built for you.
+No. SimpleScheduleAI is a scheduling service with nothing to install and nothing to log in to. Each schedule arrives as a PDF and an Excel file, and the manager approves it by reply from any phone or computer. The day-to-day shifts from building schedules in an app to approving schedules built for you.
 
 **Q: We are moving from long-term care to acute care. Does OnShift carry over?**
 
