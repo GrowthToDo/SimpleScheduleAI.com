@@ -40,7 +40,7 @@ metadata:
 
 Most nurse managers looking for a schedule generator are trying to get a weekend back. The building of the grid is the visible work, so it is the work people try to automate first. The part that decides whether a tool actually helps is what happens after the grid exists: whether the hours survive a payroll review, whether the right nurse is on the right unit, and who solves the first callout.
 
-This guide covers what a generator does, where free tools stop, and what a small hospital should require before trusting one with a published schedule.
+This guide covers what a generator does, [where free tools stop](/blog/free-nurse-scheduling-software), and what a small hospital should require before trusting one with a published schedule.
 
 ## What Is a Nurse Schedule Generator?
 
