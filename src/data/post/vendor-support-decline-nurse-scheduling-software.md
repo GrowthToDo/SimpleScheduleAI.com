@@ -1,15 +1,13 @@
 ---
 draft: true
-publishDate: 2026-06-24T00:00:00Z
-updateDate: 2026-05-23T00:00:00Z
+publishDate: 2026-09-26T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Why Scheduling Software Vendors Stop Caring After You Sign the Contract'
+title: 'What Happens to Scheduling Software Support After You Sign?'
 excerpt: >
-  The most common complaint across nurse scheduling software reviews is not the
-  feature set. It is what happens six months after go-live. For critical access
-  hospitals with limited IT, the vendor relationship after contract signature
-  matters more than the demo.
-image: https://images.unsplash.com/photo-1646082275130-347d10885c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+  The people who set up your scheduling software may not be the people who answer
+  when it breaks. At a small hospital, that difference decides how a bad Friday goes,
+  so put the support terms in the contract.
+image: https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:
@@ -24,136 +22,134 @@ metadata:
 
 ## Key Takeaways
 
-- The most documented post-purchase complaint across QGenda, Aladtec, OnShift, and NurseGrid is not feature limitations. It is support quality declining after the contract is signed.
-- Acquisition-driven support decline is a specific, recurring pattern: after TCP Software acquired Aladtec, multiple Capterra reviewers noted that the support quality that drove their original purchase decision was no longer available.
-- At a critical access hospital with limited IT, a support ticket unanswered for 24 to 48 hours is not an inconvenience. It is an operational risk when it falls inside an active scheduling cycle.
-- The per-seat SaaS business model creates no financial incentive to invest in post-sale support for small accounts. Managed services have the opposite incentive: ongoing service delivery depends on the relationship staying functional.
-- Before signing any scheduling software contract, ask: "Who is our dedicated point of contact after go-live, and what is the documented SLA for urgent issues?"
+- Support after go-live is often run by a different team from the one that set you up. Ask who answers after the implementation ends.
+- Public reviews are mixed. A QGenda reviewer wrote that they "talk to 3 people before I get an actual answer," while a SmartLinx reviewer called support "very responsive."
+- At a small hospital, the nurse manager usually has no one else to hand a scheduling problem to, so a slow answer lands on one person.
+- Put support in the contract: a named contact, response times by how urgent the problem is, weekend coverage, and your right to export your data.
+- An acquisition is a separate risk. Our guide on [what happens when a scheduling vendor is acquired](/blog/scheduling-software-vendor-acquisition-support) covers it.
 
 ## Table of Contents
 
-- [Why do scheduling software vendors reduce support after the contract?](#why-do-scheduling-software-vendors-reduce-support-after-the-contract)
-- [What does support decline look like in practice?](#what-does-support-decline-look-like-in-practice)
-- [How does acquisition affect scheduling software support quality?](#how-does-acquisition-affect-scheduling-software-support-quality)
-- [What is the difference between software support and managed service support?](#what-is-the-difference-between-software-support-and-managed-service-support)
-- [What should a CAH ask before signing any scheduling software contract?](#what-should-a-cah-ask-before-signing-any-scheduling-software-contract)
-- [How SimpleScheduleAI handles ongoing support](#how-simplescheduleai-handles-ongoing-support)
+- [Why Can Scheduling Software Support Change After Go-Live?](#why-can-scheduling-software-support-change-after-go-live)
+- [What Do Reviewers Say About Scheduling Software Support?](#what-do-reviewers-say-about-scheduling-software-support)
+- [Does an Acquisition Change Scheduling Software Support?](#does-an-acquisition-change-scheduling-software-support)
+- [What Should a Scheduling Software Contract Say About Support?](#what-should-a-scheduling-software-contract-say-about-support)
+- [What Should You Do if Your Scheduling Software Support Has Already Declined?](#what-should-you-do-if-your-scheduling-software-support-has-already-declined)
+- [How Does SimpleScheduleAI Handle Support?](#how-does-simplescheduleai-handle-support)
+- [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-A nurse manager at a critical access hospital in central Texas described her experience with a nurse scheduling platform this way: she signed the contract after a thorough demo, onboarded with the help of a dedicated implementation specialist, and had smooth early cycles. Eight months later, the implementation specialist was gone. Her support tickets were answered by a rotating general helpdesk. Response times went from same-day to three to four days. When she asked who to call for urgent issues, she was told to submit a ticket.
+During a software demo and setup, you usually have a named person who answers quickly. A few months after go-live, you may have a support form instead. Whether that change happens, and how much it matters, depends on the vendor and on what your contract says.
 
-She had not been sold an inferior product. She had been sold a product paired with implementation support that was withdrawn once the license was secured.
+This guide covers what can change, what reviewers of [nurse scheduling software](/nurse-scheduling-software) actually report, and what to write into a contract before you sign. It is aimed at a [critical access hospital](/critical-access-hospital-scheduling) where one nurse manager runs the schedule.
 
-This pattern shows up across every major nurse scheduling platform in user reviews. Understanding why it happens, and how to evaluate for it before signing, is one of the most practical things a CAH administrator can do.
+## Why Can Scheduling Software Support Change After Go-Live?
 
-## Why Do Scheduling Software Vendors Reduce Support After the Contract?
+Scheduling software support can change after go-live because setup and ongoing support are often handled by different people. An implementation specialist helps you configure the system, then moves on to the next new customer. After that, questions may go to a general support team that does not know your hospital, your units or your rules.
 
-Scheduling software vendors reduce post-sale support because the SaaS business model rewards customer acquisition more than customer retention at small accounts. The implementation phase is a cost the vendor absorbs to get the license signed. Once signed, the financial incentive to maintain that level of investment disappears.
+That handoff is not always a problem. A good support team with good documentation can answer most questions quickly. It becomes a problem when the answer needs someone who knows how your account was set up, and nobody left on the account does.
 
-For enterprise customers spending $50,000 to $200,000 per year on a scheduling platform, a dedicated customer success manager is a justifiable investment. For a critical access hospital paying $500 to $2,000 per year, the math rarely works. The same support infrastructure used to close the deal cannot be sustained profitably across a small-account base at those price points. The result: implementation support is a sales cost. Post-sale support is a recurring operating cost that gets minimized.
+Size matters too. A large health system has IT staff and schedulers who can work around a slow answer. A small hospital usually has the nurse manager, who may also be covering shifts. When the schedule will not post on a Friday evening, a support reply on Monday leaves one person to solve it alone.
 
-This is not a criticism specific to scheduling software. It is the structural reality of SaaS economics at scale. The problem for CAHs is that small hospitals are especially harmed by it. A 500-nurse hospital system has internal IT and HR staff who can work around slow vendor support. A 20-nurse CAH has the nurse manager, who is also often the charge nurse. When the scheduling platform has a configuration problem at 11pm on a Saturday, there is no one to escalate to.
+## What Do Reviewers Say About Scheduling Software Support?
 
-## What Does Support Decline Look Like in Practice?
+Reviewers describe both slow and fast support, and the difference seems to depend more on the vendor than on the industry. Some of the clearest complaints about reaching the right person come from QGenda reviewers. Some of the clearest praise comes from a SmartLinx reviewer. Read reviews for the specific vendor you are considering, and look at the dates.
 
-Support decline in scheduling software follows predictable patterns: a shift from named contacts to ticket queues, slower response times, answers from generalists who do not know the facility's configuration, and support teams that do not understand the operational urgency of a scheduling problem at a small hospital.
+On the difficult side, a practice administrator reviewing QGenda on Capterra in March 2026 wrote: "Also do not like how hard it is to find someone that can step in and help troubleshoot issues. I feel like I talk to 3 people before I get an actual answer." That reviewer works in a medical practice, not a hospital. A scheduler at a hospital reviewing QGenda wrote more briefly: "Too complex to manage without Customer support."
 
-Reviewers on Capterra and G2 document this across multiple platforms:
+A reviewer with the title CEO/DON, in a hospital and health care role, reviewed Deputy in January 2022 and wrote: "The customer support is atrocious." The review does not say where the facility is.
 
-On QGenda, a President-level reviewer on Capterra described the shift precisely:
+On the positive side, a director of IT services at a hospital wrote about SmartLinx: "Customer Support is very responsive and always delivers resolution quickly." Aladtec's current Capterra reviews are also positive about support. We looked for reviews saying Aladtec's support got worse after its acquisition and found none.
 
-> "They outsourced customer service. Instead of having an individual assigned to your account, you have generic people who respond to issues."
+## Does an Acquisition Change Scheduling Software Support?
 
-The same platform, from a Medical Staff Coordinator who gave a five-star rating but still noted the change:
+It can, but it does not always, and it is hard to prove from reviews. When one company buys another, support teams are sometimes merged or moved. The more checkable risk is that the new owner changes what the product is built for.
 
-> "We used to have great customer service support and felt like we mattered to the business. We've been with them for over 10 years."
+Aladtec is the example we could verify. After TCP Software acquired it in October 2021, Aladtec's own product pages came to describe it as public safety scheduling software, with no healthcare claim. That is a change in direction, not a proven drop in support. Our guide on [what happens when your scheduling vendor is acquired](/blog/scheduling-software-vendor-acquisition-support) covers the warning signs and what to ask.
 
-That reviewer gave five stars. The decline they described happened to a long-term, satisfied customer. That is not a dissatisfied buyer complaining. That is a loyal customer documenting structural deterioration.
+## What Should a Scheduling Software Contract Say About Support?
 
-On NurseGrid, users on AllNurses.com reported that pressing issues went unanswered for hours or days. For a nurse manager who needs to post a schedule or confirm a callout replacement, that window is operationally meaningful.
+A scheduling software contract should name who supports you after go-live, how fast they respond to each kind of problem, when they are available, and what happens to your data if the relationship ends. If these are only in the sales conversation, they are not guaranteed. Ask for them in writing.
 
-On ShiftWizard, at least one Capterra reviewer described the vendor shutting down account access without warning during a contract dispute. Whatever the dispute, a vendor with that lever and a willingness to use it creates a different category of risk for a small hospital.
+| What to ask for                                    | Why it matters                                                   | A good answer looks like                                                                            |
+| -------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| A named contact after go-live                      | A general queue does not know how your hospital is set up        | A person or small team assigned to your account, by name or role                                    |
+| Response times by how urgent the problem is        | "We respond quickly" is not a commitment                         | Written times for an urgent problem, such as a schedule that cannot post, and for routine questions |
+| Hours of coverage, including evenings and weekends | Schedules break on Friday nights too                             | Stated hours, and what happens outside them                                                         |
+| An escalation path                                 | You need to know who to call when the first answer does not work | A second contact or a manager's name                                                                |
+| Access to your data during a billing dispute       | Your schedule history should not be held hostage                 | Written confirmation that you can export your data at any time                                      |
+| A reference customer your size, 18 months in       | New customers still have the setup team                          | A small hospital you can call                                                                       |
 
-The common thread: none of these reviewers described a product that stopped working. They described a vendor relationship that stopped functioning.
+Keep the vendor's written answers with the contract. If support slips later, they are what you point to.
 
-## How Does Acquisition Affect Scheduling Software Support Quality?
+## What Should You Do if Your Scheduling Software Support Has Already Declined?
 
-Acquisitions almost always degrade support quality for small accounts, because the acquiring company inherits a customer base and immediately applies cost optimization pressure to the support function.
+Write down each problem as it happens: the date, what broke, when you reported it and when it was fixed. After a few weeks, you have a record instead of a feeling. Take that record to your account manager, and ask what the contract says about response times.
 
-Aladtec is the clearest documented case in the scheduling software space. Aladtec built a genuine reputation for responsive, relationship-based support, particularly among small agencies and facilities. Multiple reviewers described it as a primary reason they chose Aladtec over larger competitors. TCP Software acquired Aladtec on October 21, 2021. The support team structure that produced those reviews did not survive the acquisition intact.
+If the contract has support terms and the vendor is missing them, that is grounds to escalate, and possibly to leave. If it has none, the record still helps. It turns "support is slow" into specific dates the vendor has to answer. Either way, export a copy of your schedule history and staff data now, so a later switch does not start from nothing.
 
-Multiple Capterra reviewers specifically documented the change:
+If a switch is coming, our guide to [switching from Excel to scheduling software](/blog/switching-from-excel-to-nurse-scheduling-software) covers what to prepare before the move.
 
-> "Customer support quality declined after the TCP acquisition."
+## How Does SimpleScheduleAI Handle Support?
 
-This appeared across several independent reviews, not as a single complaint. It represents a documented shift in service model, not an isolated incident.
+SimpleScheduleAI is an AI-native nurse scheduling service: AI builds your schedule, our scheduling team checks it, you approve. The [AI nurse scheduling](/ai-nurse-scheduling) guide explains how the drafts are built. When something is wrong, you call or text a named contact on a direct number shared at onboarding. Coverage-blocking problems, such as an uncovered shift or a schedule that cannot post, go to the front of our queue, ahead of everything else. The full escalation steps are on [how it works](/how-it-works).
 
-The business logic is straightforward. TCP Software acquired multiple scheduling platforms. Centralizing support across those platforms reduces cost. The personal relationship that Aladtec customers bought was not compatible with a centralized, rationalized support operation at TCP's scale.
+Measured against the contract table above:
 
-For a CAH evaluating any scheduling software: if the vendor has been acquired recently, ask specifically whether the support team that served customers before the acquisition is still in place. Ask whether the support model was changed as part of the acquisition. Those are the questions that reveal whether you are buying what the legacy reviews describe.
+- **Named contact:** yes, on a direct number.
+- **Response by urgency:** coverage-blocking problems come first; the published commitments are on how it works.
+- **Your data:** you receive every schedule as a PDF and an Excel file, and you keep every copy.
+- **A reference customer your size, 18 months in:** no. SimpleScheduleAI is new, and we have no customers to refer you to yet.
 
-## What Is the Difference Between Software Support and Managed Service Support?
+One honest limitation: SimpleScheduleAI is an early-stage company with a small team, not one with a 10-year track record. That is part of why the named contact is real today, and it is also a risk you should weigh.
 
-Software support and managed service support have fundamentally different incentive structures. Software support is a cost center: the vendor's goal is to resolve tickets efficiently and move on. Managed service support is a service delivery function: if the service is not working, the relationship fails.
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    Support quality varies too much by vendor to judge from a category. What you can control is the contract. A demo shows you the best week of the relationship. The contract decides the worst one. Ask for the named contact, the response times and the data export in writing, and call a customer your size who has been on the system for more than a year.
+  </p>
+</div>
 
-In a SaaS scheduling platform, the nurse manager operates the software. When something goes wrong, she submits a ticket. The vendor fixes the problem. The relationship is transactional. Slow support is frustrating but does not threaten the vendor's revenue directly, because the license is already paid.
+## What to Do This Week
 
-In a managed scheduling service, the specialist builds the schedule and maintains the configuration. When something goes wrong, it is the specialist's problem, not the nurse manager's problem. If the service produces a broken schedule, the nurse manager calls for a fix immediately. The service provider cannot treat that as a low-priority ticket, because the output is what they are being paid to deliver.
-
-This is why support quality tends to hold in managed service models in ways it does not in SaaS models. The economic incentive points toward responsiveness rather than away from it.
-
-The limitation is real: if a facility prefers direct control over every scheduling decision, a managed service is not the right model regardless of support quality. But for CAH nurse managers primarily focused on outcomes, the support structure difference is meaningful.
-
-## What Should a CAH Ask Before Signing Any Scheduling Software Contract?
-
-Five questions that reveal the actual post-sale support model before any contract is signed:
-
-**"Who is our specific point of contact after implementation ends, and what is their role?"** If the answer is a ticket queue or a general support team, the named-contact support from the sales cycle is not being carried forward.
-
-**"What is your documented SLA for urgent issues, and what qualifies as urgent?"** A scheduling problem on a Friday night before a holiday weekend is urgent. If the SLA is 48 business hours, that Friday night problem will not be resolved until Tuesday.
-
-**"Has your support model changed in the past 24 months?"** This is the acquisition question without naming acquisitions. An honest answer from a vendor who has centralized or restructured support will come through here.
-
-**"Can we speak to a customer your size who has been on the platform for 18 months?"** New customers have fresh implementation support. Customers who have been on the platform for a year and a half are living in the post-sale support reality.
-
-**"What happens to our access and data if we have a billing dispute?"** The ShiftWizard account shutdown complaint is unusual, but the question costs nothing to ask. A vendor confident in their support model will answer it directly.
-
-## How SimpleScheduleAI Handles Ongoing Support
-
-SimpleScheduleAI is an AI-native nurse scheduling service. The specialist assigned to a facility at onboarding stays assigned. They know the facility's shift structure, its coverage requirements, the nurses on the roster, and the constraints that show up in every scheduling cycle.
-
-When something goes wrong, the nurse manager contacts the specialist directly. There is no ticket queue for operational issues. The specialist is accountable for the schedule, which means they are accountable for fixing it.
-
-One honest limitation: SimpleScheduleAI does not have a 24/7 support line staffed by rotating agents. If a nurse manager needs to make a change at 3am that cannot wait, she will be working from the last published schedule until the specialist is available. For facilities where middle-of-the-night independent changes are a regular operational need, a self-serve platform with round-the-clock access may be a better fit.
-
-For facilities where the primary concern is a scheduling partner who knows the facility and responds when something is broken, the managed service model addresses that directly.
-
-For the broader overview of what [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) needs to cover, including compliance and callout coverage, see the feature guide.
+1. **Find your current support terms.** Pull your scheduling software contract and look for response times, hours and a named contact.
+2. **Start a support log.** Note each problem, when you reported it and when it was fixed.
+3. **Export your data.** Save a copy of your staff list and schedule history outside the system.
+4. **Ask your vendor one question:** who is our named contact after go-live, and how do we reach them on a weekend?
+5. **If you are shopping, bring the contract table above** to every demo, and ask each vendor to answer it in writing.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-default mb-2">Want a scheduling service where the same person picks up the phone?</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI assigns a dedicated specialist to each facility. Your nurse manager reviews and approves. No IT setup, operational in 3 to 5 business days.</p>
+  <p class="text-lg font-semibold text-default mb-2">A named contact, not a support queue</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI gives you a direct number at onboarding, and coverage-blocking problems go to the front of our queue.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
 ## Frequently Asked Questions
 
-**Q: Is poor post-sale support actually common with scheduling software?**
+**Q: Does scheduling software support always get worse after the contract is signed?**
 
-Yes. It is the most consistently documented complaint across major scheduling platforms on Capterra and G2, separate from product-specific issues. QGenda, Aladtec, OnShift, and NurseGrid each have documented review patterns describing support quality declining after the initial implementation period ends. The pattern is consistent enough to treat as a category risk rather than a vendor-specific problem.
+No. Reviews are mixed, and support varies by vendor. Some reviewers describe slow answers and being passed between people; others describe fast, helpful support. The risk is real enough to plan for, so put support terms in the contract rather than relying on the demo.
 
-**Q: How do I protect against support decline in a software contract?**
+**Q: What should count as an urgent support problem for a nurse schedule?**
 
-Negotiate support terms into the contract, not just the license terms. Specify: a named account contact by name or role, documented response SLAs for different issue categories (urgent vs. routine), and what constitutes an escalation path. Contracts that address support only through a generic "customer support team" provision offer no protection against the deterioration documented in the reviews above.
+Anything that stops shifts being covered: a schedule that cannot be posted, a system that is down during a scheduling cycle, or an error that leaves a shift uncovered. Ask the vendor to name these in writing as urgent, with a response time, so a Friday evening problem is not treated like a routine question.
 
-**Q: Does a managed service model eliminate the support problem?**
+**Q: How do I protect our hospital if support declines later?**
 
-It changes the incentive structure, not the delivery guarantee. A managed service where the specialist is accountable for the schedule output has stronger natural pressure toward responsiveness. But a managed service provider who is understaffed, over-committed, or poorly run can still produce inconsistent support. The same due diligence applies: ask about dedicated contacts, response expectations, and speak to current customers who have been on the service for more than 12 months.
+Write the support terms into the contract, keep a log of every problem and its fix, and export your data regularly. If the vendor misses written response times, the contract and the log give you grounds to escalate or leave.
 
-**Q: What should I do if my current scheduling software support has already declined?**
+**Q: Is an acquisition a sign that support will decline?**
 
-Document specific incidents: tickets submitted, response times, issue resolutions. This is useful both for escalating within the vendor's organization and for evaluating alternatives. Most contracts have service level provisions. If the vendor is not meeting documented SLA commitments, that is grounds for escalation and potentially early termination. If no SLAs were specified, use the incidents to make the support gap concrete when speaking with the vendor's account management team.
+Not by itself. An acquisition can bring changes to support teams or to what the product is built for, but reviews rarely prove a support decline. Ask the new owner who supports your account now, and watch whether the product's own pages still describe your kind of hospital.
+
+## Sources
+
+1. QGenda reviews, reviewer Wilmer R., Practice Administrator, Medical Practice, March 19, 2026. [Capterra](https://www.capterra.com/p/90628/QGenda/reviews/)
+2. QGenda reviews, reviewer Bryan S., Scheduler, Hospital and Health Care, May 7, 2024. [Capterra](https://www.capterra.com/p/90628/QGenda/reviews/)
+3. Deputy reviews, reviewer Julie B., CEO/DON, Hospital and Health Care, January 18, 2022. [Capterra](https://www.capterra.com/p/167811/Deputy/reviews/)
+4. SmartLinx reviews, reviewer Carol G., Director of IT Services, Hospital and Health Care, March 22, 2021. [Capterra](https://www.capterra.com/p/154002/SmartLinx/reviews/)
+5. Aladtec reviews. [Capterra](https://www.capterra.com/p/248403/Aladtec/reviews/)
 
 ---
 

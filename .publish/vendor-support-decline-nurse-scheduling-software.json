@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "vendor-support-decline-nurse-scheduling-software",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-26T10:14:27.814Z",
+      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-26T10:14:29.643Z",
+      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-26T10:14:31.892Z",
+      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+    },
+    "inboundLinks": {
+      "status": "FAIL",
+      "checkedAt": "2026-09-26T10:14:31.917Z",
+      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-26T10:14:32.021Z",
+      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-26T10:14:32.022Z",
+      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-26T10:14:32.022Z",
+      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "verifier",
+      "setAt": "2026-09-26T10:20:00.046Z",
+      "contentHash": "114331b7e93f8ade3f5ef82efae31438844e3e29874178df3e9b1357bb3a867d"
+    }
+  },
+  "overrides": []
+}

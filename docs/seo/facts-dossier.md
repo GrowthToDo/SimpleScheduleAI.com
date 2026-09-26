@@ -169,6 +169,13 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - Verified: 2026-07-11 (TWC FLSA guidance + §62.151 via Justia mirror + FS#54 quotes via compliance-vendor mirror; dol.gov and statutes.capitol.texas.gov bot-block direct fetches)
 - CROSS-REF: the entry above is about overtime PAY. Mandatory overtime ASSIGNMENT is a separate question with the OPPOSITE answer — see "Texas HSC Chapter 258" below. Never write "Texas does not restrict nurse overtime" without distinguishing pay from assignment.
 
+### HIPAA Security Rule automatic logoff (45 CFR 164.312(a)(2)(iii))
+
+- Approved wording (verbatim): "Implement electronic procedures that terminate an electronic session after a predetermined time of inactivity. (Addressable)." Addressable, per 45 CFR 164.306(d)(3): the organization must "Assess whether each implementation specification is a reasonable and appropriate safeguard in its environment", then implement it, or document why not and "Implement an equivalent alternative measure if reasonable and appropriate".
+- Guardrails: the rule applies to systems holding electronic protected health information. A staff schedule usually holds no patient data, so never write that HIPAA REQUIRES a scheduling app to time out; write that hospitals and vendors often apply one idle-logout policy across systems. HIPAA sets no number of minutes; never attach a figure to it.
+- URL: https://www.law.cornell.edu/cfr/text/45/164.312 and https://www.law.cornell.edu/cfr/text/45/164.306
+- Verified: 2026-09-26 (both pages fetched, text verbatim)
+
 ### FLSA: hours for the same employer combine across departments
 
 - Approved wording: "Count every hour the nurse worked for your hospital that week, not only the hours on your unit." Basis: DOL Fact Sheet #54's "Two Different Jobs" example (an employee working 40 hours as a nurse's aide and 16 as a receptionist for the same employer in one workweek has 56 hours for overtime purposes); 29 CFR 778.115 computes the regular rate over the "total number of hours worked at all jobs".
