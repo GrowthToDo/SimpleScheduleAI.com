@@ -308,10 +308,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals runni
 
 **Q: How many nurses does a 25-bed CAH need on a 12-hour shift rotation?**
 
-To maintain a minimum of 2 nurses per shift, 24 hours a day, 7 days a week on 12-hour
-shifts, you need a minimum of 8-10 FTE nurses (allowing for days off, leave, and
-callouts). In practice, most 25-bed CAHs run 14-18 nursing staff to maintain this
-coverage with adequate flexibility for callouts and leave.
+Two nurses on every shift, around the clock, is 2 × 24 × 365 = 17,520 hours a year. At 2,080 paid hours per full-time equivalent (FTE), that is 8.42 FTEs before anyone takes any time off. Vacation, holidays and sick time push it higher: with an illustrative 250 hours of time off per FTE, it is 17,520 ÷ 1,830, or about 9.6 FTEs. A nurse on three 12-hour shifts is 0.9 FTE, so count people separately from FTEs, and use your own payroll's time off rather than this example.
 
 **Q: Is the 8-and-80 FLSA rule better for 12-hour shift hospitals?**
 
