@@ -57,7 +57,7 @@ The scheduling challenge is that per diem availability is fluid. It changes week
 
 ## What Does a Critical Access Hospital Need to Set Up a PRN Pool?
 
-A PRN pool is a group of nurses who work as needed, with no guaranteed schedule. Running one at a critical access hospital takes four things. You need a current list of PRN nurses and the units each can work. You need each nurse's available dates before the schedule is built. You need a written callout order. And you need a running count of each nurse's hours this week.
+A PRN pool is a group of nurses who work as needed, with no guaranteed schedule. [Running one](/blog/prn-pool-critical-access-hospital) at a critical access hospital takes four things. You need a current list of PRN nurses and the units each can work. You need each nurse's available dates before the schedule is built. You need a written callout order. And you need a running count of each nurse's hours this week.
 
 Software can carry the last three. Here is what each one does for you:
 

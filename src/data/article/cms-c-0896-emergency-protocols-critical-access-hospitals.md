@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 publishDate: 2026-09-28T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'CMS Tag C-0896: What Surveyors Will Check on Your Emergency Protocols'

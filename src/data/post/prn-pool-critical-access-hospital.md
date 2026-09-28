@@ -1,6 +1,6 @@
 ---
-draft: true
-publishDate: 2026-09-25T00:00:00Z
+draft: false
+publishDate: 2026-09-28T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'How to Set Up a PRN Pool at a Critical Access Hospital'
 excerpt: >

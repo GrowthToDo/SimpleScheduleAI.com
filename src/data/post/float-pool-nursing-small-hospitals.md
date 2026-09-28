@@ -161,7 +161,7 @@ A float pool is spare staff a large hospital carries and moves between its units
 
 **Q: How do you cover a nurse callout without a float pool?**
 
-Cover it from a standing per-diem bench and your cross-trained on-shift staff. Work a pre-agreed shortlist of credentialed nurses rather than a cold phone tree, and let any nurse cleared for the open function absorb it. A scheduling system that keeps availability and the competency map current turns a 3 a.m. scramble into a short set of targeted calls.
+Cover it from a [standing per-diem bench](/blog/prn-pool-critical-access-hospital) and your cross-trained on-shift staff. Work a pre-agreed shortlist of credentialed nurses rather than a cold phone tree, and let any nurse cleared for the open function absorb it. A scheduling system that keeps availability and the competency map current turns a 3 a.m. scramble into a short set of targeted calls.
 
 **Q: Does a critical access hospital need a registered nurse on duty at all times?** <!-- facts-ok -->
 

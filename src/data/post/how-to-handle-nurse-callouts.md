@@ -161,7 +161,7 @@ So the unfillable-shift playbook looks like this:
 
 **Reserve mandatory assignment for a true Chapter 258 exception.** If the situation genuinely fits one of the four exceptions, document which one, show the voluntary attempts that preceded it, and assign it to a qualified nurse with the lowest hours in the period.
 
-**Review the event afterward.** An unfillable shift is data. If the same shift slots keep failing, the roster or the PRN pool needs a structural fix, not a better phone tree.
+**Review the event afterward.** An unfillable shift is data. If the same shift slots keep failing, the roster or the [PRN pool](/blog/prn-pool-critical-access-hospital) needs a structural fix, not a better phone tree.
 
 ## How Do You Reduce Callout Frequency Over Time?
 

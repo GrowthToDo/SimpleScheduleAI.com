@@ -874,5 +874,21 @@
     "primaryKeyword": "scheduling software outage",
     "pillar": "/nurse-scheduling-software",
     "note": "Published 2026-09-25 (switcher-trio draft from the topics doc, REWRITTEN: all five vendor quotes in the April draft were absent from the competitor dossier). AEO/planning play: 'scheduling software outage' and 'nurse scheduling software crashes' return no volume; 'ukg outage' 210/mo and 'kronos outage' 50/mo are status-check intent owned by Downdetector-type pages, and nothing ranking covers downtime PLANNING for a small hospital. Spine is the verified Dec 2021 Kronos Private Cloud outage (facts-dossier entry) plus 42 CFR 485.625 communication-plan duties and a paper downtime kit. Differentiated from kronos-nurse-scheduling-problems-small-hospitals (enterprise fit) and scheduling-software-vendor-acquisition-support (ownership change)."
+  },
+  {
+    "slug": "prn-pool-critical-access-hospital",
+    "type": "post",
+    "url": "/blog/prn-pool-critical-access-hospital",
+    "primaryKeyword": "prn pool",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Published 2026-09-28 from the unpublished per-diem-nursing-shifts draft (fully rewritten; its stats were invented). 'prn pool' 140/mo, LOW competition; SERP is brand/jobs/Q&A pages, no hospital-side setup guide. Targets the GSC PRN-pool AI-assistant question (109 impr, pos 5.7). SETUP GUIDE intent; the 'who offers PRN software' vendor intent stays with best-per-diem-nurse-scheduling-software, which links here. Hook: illustrative 5-nurse overtime table (36h nurse paid 16 hours for a 12-hour shift vs 12 at 28h)."
+  },
+  {
+    "slug": "cms-c-0896-emergency-protocols-critical-access-hospitals",
+    "type": "article",
+    "url": "/articles/cms-c-0896-emergency-protocols-critical-access-hospitals",
+    "primaryKeyword": "cms c-0896",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Newsroom trendjack, published 2026-09-28. CMS Transmittal 247 (Sept 18, 2026) added survey tag C-0896 for CAH emergency services readiness (42 CFR 485.618(e)). SERP at writing held only CMS's own documents. Hook: CMS counts personnel in emergency readiness, surveyors ask staff to demonstrate or explain protocols, (e)(2) annual training; the night schedule becomes survey evidence. Secondary: cah emergency protocols."
   }
 ]

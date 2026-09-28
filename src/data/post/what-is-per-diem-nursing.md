@@ -76,7 +76,7 @@ A functioning per diem pool at a critical access hospital typically includes:
 - **New graduates** building hours while searching for permanent positions
 - **Nurses who prefer schedule flexibility** over employment security
 
-Managing a per diem pool requires active maintenance. Availability must be tracked, since per diem nurses may be available on specific days only, may have blackout periods, or may be juggling availability across multiple employers. Nurse managers often maintain this via text chains, informal agreements, or shared spreadsheets, none of which scale well when coverage gaps become urgent.
+Managing a [per diem pool](/blog/prn-pool-critical-access-hospital) requires active maintenance. Availability must be tracked, since per diem nurses may be available on specific days only, may have blackout periods, or may be juggling availability across multiple employers. Nurse managers often maintain this via text chains, informal agreements, or shared spreadsheets, none of which scale well when coverage gaps become urgent.
 
 One recurring problem is availability list decay. A nurse added 18 months ago may have moved, taken a job elsewhere, or changed their available days, and an out-of-date list means calling people for shifts they cannot accept during an already stressful callout. The hospitals that hold coverage most reliably maintain the pool on a schedule rather than rebuild it during a crisis, which is harder to do with [limited IT](/blog/nurse-scheduling-no-it-department-rural-hospital) to lean on.
 
