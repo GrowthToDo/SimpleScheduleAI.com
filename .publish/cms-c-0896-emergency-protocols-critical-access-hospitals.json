@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "slug": "cms-c-0896-emergency-protocols-critical-access-hospitals",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-09-28T08:44:27.513Z",
+      "contentHash": "c7f0810e87e6b3868af3c3359b4573301f7323ac9f2e77e8062c6e5f3d23842c"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-28T08:44:29.345Z",
+      "contentHash": "c7f0810e87e6b3868af3c3359b4573301f7323ac9f2e77e8062c6e5f3d23842c"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-28T08:44:31.174Z",
+      "contentHash": "c7f0810e87e6b3868af3c3359b4573301f7323ac9f2e77e8062c6e5f3d23842c"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-09-28T08:44:31.247Z",
+      "contentHash": "c7f0810e87e6b3868af3c3359b4573301f7323ac9f2e77e8062c6e5f3d23842c"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-09-28T08:44:31.667Z",
+      "contentHash": "c7f0810e87e6b3868af3c3359b4573301f7323ac9f2e77e8062c6e5f3d23842c"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-09-28T08:44:31.667Z",
+      "contentHash": "c7f0810e87e6b3868af3c3359b4573301f7323ac9f2e77e8062c6e5f3d23842c"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-09-28T08:44:31.669Z",
+      "contentHash": "c7f0810e87e6b3868af3c3359b4573301f7323ac9f2e77e8062c6e5f3d23842c"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-09-28T08:44:51.483Z",
+      "contentHash": "099228ed194b2f46f6aec5e26a186941f8ddefde3dfea3d8fb7430af34eef1cf"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "verifier",
+      "setAt": "2026-09-28T08:44:54.823Z",
+      "contentHash": "099228ed194b2f46f6aec5e26a186941f8ddefde3dfea3d8fb7430af34eef1cf"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 72.9,
+        "headings": 87.5,
+        "actionability": 55.6,
+        "attention": 75
+      },
+      "overall": 71.7,
+      "counts": {
+        "sections": 8,
+        "rereads": 5,
+        "undefinedTerms": 8,
+        "headingsAnswered": 7,
+        "mondayActions": 5,
+        "blockedActions": 4,
+        "quitPoints": 2
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-09-28T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "Transmittal",
+          "Appendix W",
+          "State Operations Manual",
+          "tag C-0896",
+          "QSO memo",
+          "frontier areas",
+          "governing body",
+          "complexity and scope of services offered"
+        ],
+        "mondayActions": [
+          "Confirm written protocols exist for medical/surgical and obstetric emergencies",
+          "Pull this year's training records and cross-check against the night roster",
+          "Check whether the night protocol names who does what with one or two nurses",
+          "Verify one recent emergency record shows who was on duty and that they were trained",
+          "Log night-shift schedule changes instead of handling them by phone"
+        ],
+        "blockedActions": [
+          "Add roles to protocols with no example",
+          "Decide on OB protocols without a labor unit; deciding phrase never explained",
+          "No guidance if training gaps turn up",
+          "No way to judge how much to invest in the 'should'"
+        ],
+        "sections": [
+          {
+            "heading": "What Did CMS Change in Transmittal 247?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does Tag C-0896 Ask a Critical Access Hospital to Have?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Will Surveyors Check Emergency Protocols Under C-0896?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Why Does C-0896 Make Staffing Part of the Survey?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does C-0896 Mean for the Night Shift at a 25-Bed Hospital?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Still Unclear About C-0896?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-09-28T08:37:03.530Z",
+      "contentHash": "4a8ccbbbb3b9cfd31a989ff765e572bc03524e0b22117ed1970de4bb3505a392"
+    }
+  }
+}
