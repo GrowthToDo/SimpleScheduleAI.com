@@ -63,6 +63,18 @@
       "setBy": "founder",
       "setAt": "2026-09-29T07:14:32.593Z",
       "contentHash": "cf2f10ac0c315e47d6d86196946afcb8dfb7d0095b8b3a14df05241a16b9bebc"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "main-session",
+      "setAt": "2026-09-29T07:16:50.026Z",
+      "contentHash": "cf2f10ac0c315e47d6d86196946afcb8dfb7d0095b8b3a14df05241a16b9bebc"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "main-session",
+      "setAt": "2026-09-29T07:16:51.011Z",
+      "contentHash": "cf2f10ac0c315e47d6d86196946afcb8dfb7d0095b8b3a14df05241a16b9bebc"
     }
   },
   "overrides": [],
@@ -90,13 +102,7 @@
       "publishDate": "2026-09-25T00:00:00Z",
       "postType": "mofu",
       "observations": {
-        "undefinedTerms": [
-          "PRN",
-          "R",
-          "§258.004(b)",
-          "straight time",
-          "time and a half"
-        ],
+        "undefinedTerms": ["PRN", "R", "§258.004(b)", "straight time", "time and a half"],
         "mondayActions": [
           "List current PRN nurses with unit clearance and last shift date",
           "Set a due date for next cycle's PRN availability and send the request today",
