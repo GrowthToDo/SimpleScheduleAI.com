@@ -110,7 +110,7 @@ The hours check belongs next to the call list for this reason. A PRN nurse who w
 
 ## Can a Texas Hospital Require a PRN Nurse to Take a Shift?
 
-Generally no. Texas [Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) bars a hospital from requiring a nurse to work extra hours or extra days beyond their schedule, and a nurse may refuse. This next part is our reading of the law, not a court ruling: a PRN nurse has no set schedule, so any shift you order them into is a day beyond it. Treat every PRN shift as an offer.
+Generally no. Texas [Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) bars a hospital from requiring a nurse to work extra hours or extra days beyond their schedule, and a nurse may refuse. A PRN nurse has no regular schedule, so every shift they work is extra. That means the hospital cannot make them take one. This is our reading of the law, not a court ruling. Treat every PRN shift as an offer the nurse can turn down.
 
 The chapter has narrow exceptions, such as a declared disaster or an emergency the hospital could not have foreseen. Even then, section 258.004(b) of the chapter says the hospital shall, "to the extent possible, make a good faith effort to meet the staffing need through voluntary overtime, including calling per diems and agency nurses, assigning floats, or requesting an additional day of work from off-duty employees." In plain terms, even in an exception the hospital is expected to try volunteers first, and PRN nurses are named as one of them.
 
