@@ -30,6 +30,9 @@ asks. A true, interesting, well-sourced side fact still fails.
 For each figure, say in one sentence why the ICP needs it here. If it answers a
 different question, move it there or cut it.
 ("What is the need of this- median $117,960 in May 2024?")
+The excerpt and Key Takeaways are read before the body, so a figure there must
+explain itself in the same sentence or be replaced by its plain meaning.
+("Budget two night nurses at 2,080 hours each" in an excerpt: "where is 2080 number coming from?")
 
 **T3. State denominators and time units so numbers cannot collide.**
 When two figures with different units share a paragraph, name each unit in the

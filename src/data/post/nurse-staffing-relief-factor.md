@@ -4,9 +4,9 @@ publishDate: 2026-09-30T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Is a Nurse Staffing Relief Factor? How to Calculate It'
 excerpt: >
-  Budget two night nurses at 2,080 hours each and you come up about half a nurse short
-  once vacation and sick days arrive. The relief factor is the multiplier that closes
-  that gap, and you can work it out from your own payroll.
+  Keeping two nurses on nights every night takes about 4.2 full-time equivalents (FTEs)
+  before anyone takes time off. Once vacation, holidays and sick days are counted, it
+  takes about 4.8. The relief factor is the multiplier that covers the difference.
 image: https://images.unsplash.com/photo-1687966208029-2ffe095ad14a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: tofu
@@ -23,7 +23,7 @@ metadata:
 - A nurse staffing relief factor is the multiplier that turns the hours your schedule must cover into the number of full-time equivalents (FTEs) you need, once paid time off is counted.
 - The Veterans Health Administration calls it a [replacement factor](https://www.va.gov/vhapublications/ViewPublication.asp?pub_ID=10117): the share of time staff are "away from the unit not performing direct patient care duties," such as sick leave, annual leave and education.
 - One FTE, a full-time equivalent, is 2,080 paid hours a year. The relief factor is those 2,080 hours divided by the hours a nurse actually works after time off.
-- In an illustrative example, 2 nurses on nights every night need 4.21 FTEs with no time off and 4.79 FTEs once 250 hours of time off per FTE are counted.
+- In an illustrative example, keeping 2 nurses on nights every night takes 4.21 FTEs if nobody takes time off. If each FTE takes 250 hours of time off a year, it takes 4.79 FTEs.
 - There is no current published "typical" relief factor. Calculate your own from payroll, once a year.
 
 ## Table of Contents

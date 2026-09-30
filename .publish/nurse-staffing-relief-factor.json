@@ -5,58 +5,64 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-30T06:24:08.606Z",
-      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
+      "checkedAt": "2026-09-30T09:35:24.043Z",
+      "contentHash": "890ecd5db0409822ce4ba1679dea6cbdcad9e11fd55349266926a4ad0485f67c"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-30T06:24:10.169Z",
-      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
+      "checkedAt": "2026-09-30T09:35:25.791Z",
+      "contentHash": "890ecd5db0409822ce4ba1679dea6cbdcad9e11fd55349266926a4ad0485f67c"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-30T06:24:13.293Z",
-      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
+      "checkedAt": "2026-09-30T09:35:28.311Z",
+      "contentHash": "890ecd5db0409822ce4ba1679dea6cbdcad9e11fd55349266926a4ad0485f67c"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-30T06:24:13.366Z",
-      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
+      "checkedAt": "2026-09-30T09:35:28.357Z",
+      "contentHash": "890ecd5db0409822ce4ba1679dea6cbdcad9e11fd55349266926a4ad0485f67c"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-30T06:24:13.652Z",
-      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
+      "checkedAt": "2026-09-30T09:35:28.471Z",
+      "contentHash": "890ecd5db0409822ce4ba1679dea6cbdcad9e11fd55349266926a4ad0485f67c"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-30T06:24:13.653Z",
-      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
+      "checkedAt": "2026-09-30T09:35:28.482Z",
+      "contentHash": "890ecd5db0409822ce4ba1679dea6cbdcad9e11fd55349266926a4ad0485f67c"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-30T06:24:13.655Z",
-      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
+      "checkedAt": "2026-09-30T09:35:28.483Z",
+      "contentHash": "890ecd5db0409822ce4ba1679dea6cbdcad9e11fd55349266926a4ad0485f67c"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-09-26T11:00:36.247Z",
-      "contentHash": "8e76edfb5a2e5fdee2ef4f6a8f3e63bf81676f694c9a87dd2cf8836aa4251221"
+      "setBy": "main-session",
+      "setAt": "2026-09-30T09:35:48.319Z",
+      "contentHash": "789e76ed511110a6a2e8c16be8a76ab2d79767ed42dc19c32193d551fa1cff7e"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "verifier",
-      "setAt": "2026-09-26T11:00:37.165Z",
-      "contentHash": "8e76edfb5a2e5fdee2ef4f6a8f3e63bf81676f694c9a87dd2cf8836aa4251221"
+      "setBy": "main-session",
+      "setAt": "2026-09-30T09:35:49.604Z",
+      "contentHash": "789e76ed511110a6a2e8c16be8a76ab2d79767ed42dc19c32193d551fa1cff7e"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-09-30T06:24:26.943Z",
-      "contentHash": "8e76edfb5a2e5fdee2ef4f6a8f3e63bf81676f694c9a87dd2cf8836aa4251221"
+      "setAt": "2026-09-30T09:35:52.394Z",
+      "contentHash": "789e76ed511110a6a2e8c16be8a76ab2d79767ed42dc19c32193d551fa1cff7e"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-09-30T09:35:50.878Z",
+      "contentHash": "789e76ed511110a6a2e8c16be8a76ab2d79767ed42dc19c32193d551fa1cff7e"
     }
   },
   "overrides": []
