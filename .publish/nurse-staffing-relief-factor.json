@@ -5,38 +5,38 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T11:00:21.548Z",
-      "contentHash": "5fb229c95d67767bcf5a4bf722b67175f830dffc27953362af07789f2bdb16f4"
+      "checkedAt": "2026-09-30T06:24:08.606Z",
+      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T11:00:22.963Z",
-      "contentHash": "5fb229c95d67767bcf5a4bf722b67175f830dffc27953362af07789f2bdb16f4"
+      "checkedAt": "2026-09-30T06:24:10.169Z",
+      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T11:00:25.059Z",
-      "contentHash": "5fb229c95d67767bcf5a4bf722b67175f830dffc27953362af07789f2bdb16f4"
+      "checkedAt": "2026-09-30T06:24:13.293Z",
+      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
     },
     "inboundLinks": {
-      "status": "FAIL",
-      "checkedAt": "2026-09-26T11:00:25.094Z",
-      "contentHash": "5fb229c95d67767bcf5a4bf722b67175f830dffc27953362af07789f2bdb16f4"
+      "status": "PASS",
+      "checkedAt": "2026-09-30T06:24:13.366Z",
+      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T11:00:25.272Z",
-      "contentHash": "5fb229c95d67767bcf5a4bf722b67175f830dffc27953362af07789f2bdb16f4"
+      "checkedAt": "2026-09-30T06:24:13.652Z",
+      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T11:00:25.272Z",
-      "contentHash": "5fb229c95d67767bcf5a4bf722b67175f830dffc27953362af07789f2bdb16f4"
+      "checkedAt": "2026-09-30T06:24:13.653Z",
+      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T11:00:25.274Z",
-      "contentHash": "5fb229c95d67767bcf5a4bf722b67175f830dffc27953362af07789f2bdb16f4"
+      "checkedAt": "2026-09-30T06:24:13.655Z",
+      "contentHash": "ca5349da8cb4459e97b7727890c12c9fcddd433f25380411de8a197d666de8d7"
     }
   },
   "recorded": {
@@ -50,6 +50,12 @@
       "value": "PASS",
       "setBy": "verifier",
       "setAt": "2026-09-26T11:00:37.165Z",
+      "contentHash": "8e76edfb5a2e5fdee2ef4f6a8f3e63bf81676f694c9a87dd2cf8836aa4251221"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-09-30T06:24:26.943Z",
       "contentHash": "8e76edfb5a2e5fdee2ef4f6a8f3e63bf81676f694c9a87dd2cf8836aa4251221"
     }
   },

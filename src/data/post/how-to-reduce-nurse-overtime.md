@@ -186,7 +186,7 @@ In Texas, generally no. Chapter 258 prohibits mandatory nurse overtime and prote
 
 **Q: Our overtime comes from the published schedule, not callouts. What does that mean?**
 
-It means the overtime is being created at build time: the schedule assigns hours past the threshold before the period even starts. Either running totals are not visible during construction, or the roster genuinely cannot fill required shifts within threshold, in which case the fix is bench depth, not tracking. Check the totals first; it is the cheaper explanation.
+It means the overtime is being created at build time: the schedule assigns hours past the threshold before the period even starts. Either running totals are not visible during construction, or the roster genuinely cannot fill required shifts within threshold, in which case the fix is bench depth, not tracking. A [relief factor](/blog/nurse-staffing-relief-factor) tells you how many FTEs that bench needs once vacation and sick time are counted. Check the totals first; it is the cheaper explanation.
 
 **Q: How does SimpleScheduleAI decide who appears first on a callout shortlist?**
 

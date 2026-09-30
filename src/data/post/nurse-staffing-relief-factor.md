@@ -1,6 +1,6 @@
 ---
-draft: true
-publishDate: 2026-09-26T00:00:00Z
+draft: false
+publishDate: 2026-09-30T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Is a Nurse Staffing Relief Factor? How to Calculate It'
 excerpt: >

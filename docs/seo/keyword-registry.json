@@ -890,5 +890,13 @@
     "primaryKeyword": "cms c-0896",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Newsroom trendjack, published 2026-09-28. CMS Transmittal 247 (Sept 18, 2026) added survey tag C-0896 for CAH emergency services readiness (42 CFR 485.618(e)). SERP at writing held only CMS's own documents. Hook: CMS counts personnel in emergency readiness, surveyors ask staff to demonstrate or explain protocols, (e)(2) annual training; the night schedule becomes survey evidence. Secondary: cah emergency protocols."
+  },
+  {
+    "slug": "nurse-staffing-relief-factor",
+    "type": "post",
+    "url": "/blog/nurse-staffing-relief-factor",
+    "primaryKeyword": "nurse staffing relief factor",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Published 2026-09-30 (GSC gap item 5). TOFU glossary + worked math: 2 night nurses = 4.21 FTEs with no time off, 4.79 FTEs at an illustrative 250 hours time off per FTE (relief factor 1.14). No current published standard (VHA 1.2 floor removed in 2023). Secondary: nursing replacement factor, nonproductive hours."
   }
 ]
