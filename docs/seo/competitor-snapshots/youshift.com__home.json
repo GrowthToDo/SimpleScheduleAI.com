@@ -1,8 +1,8 @@
 {
  "url": "https://www.youshift.com/",
- "fetchedAt": "2026-09-01",
+ "fetchedAt": "2026-10-01",
  "title": "YouShift - The OS for Healthcare Workforce",
- "description": "YouShift connects scheduling, time off, time tracking, payroll, and workforce forecasting for healthcare teams, with AI agents helping coordinate the work.",
+ "description": "YouShift is healthcare staff scheduling software. One record carries the assignment from the scheduling rule through worked time to gross pay, with AI agents coordinating the day-to-day.",
  "h1": "Stop managing your healthcare teams in spreadsheets",
  "h2s": [
   "See YouShift from your perspective.",
@@ -19,6 +19,6 @@
  ],
  "ctas": [],
  "prices": [],
- "words": 1680,
- "bodyHash": "9d0b8a38e07e"
+ "words": 1758,
+ "bodyHash": "ff8953e6d674"
 }

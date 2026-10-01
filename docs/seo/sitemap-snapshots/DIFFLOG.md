@@ -88,3 +88,37 @@ Appended by `npm run sitemap-diff`. New competitor URLs feed the trendjacking ra
 - onshift.com: +0 / -0 since 2026-08-10
 - shiftwizard.com: unreachable (not an XML sitemap)
 - nursegrid.com: +0 / -0 since 2026-08-10
+
+## 2026-10-01
+
+- m7health.com: +0 / -0 since 2026-09-01
+- youshift.com: +5 / -0 since 2026-09-01
+  - NEW: https://youshift.com/compare
+  - NEW: https://youshift.com/compare/youshift-vs-amion
+  - NEW: https://youshift.com/compare/youshift-vs-lightning-bolt
+  - NEW: https://youshift.com/compare/youshift-vs-qgenda
+  - NEW: https://youshift.com/compare/youshift-vs-shift-admin
+- qgenda.com: +13 / -1 since 2026-09-01
+  - NEW: https://www.qgenda.com/anesthesiology-learn-more/
+  - NEW: https://www.qgenda.com/beckers-hit-giveaway-26/
+  - NEW: https://www.qgenda.com/blog/ai-in-credentialing/
+  - NEW: https://www.qgenda.com/infographic/solve-common-operational-challenges-with-a-unified-workforce-management-platform/
+  - NEW: https://www.qgenda.com/mgma-2026-giveaway/
+  - NEW: https://www.qgenda.com/namss-2026/
+  - NEW: https://www.qgenda.com/video/ambulatory-workforce-management-solutions/
+  - NEW: https://www.qgenda.com/webinar/ai-in-credentialing-what-it-is-what-it-isnt-and-how-to-start/
+  - NEW: https://www.qgenda.com/webinar/how-one-organization-automated-schedules-for-improved-flexibility-and-efficiency-a-fireside-chat/
+  - NEW: https://www.qgenda.com/webinar/read-between-the-dots-whats-really-driving-your-workforce-challenges/
+  - NEW: https://www.qgenda.com/webinar/why-your-workforce-strategy-isnt-showing-up-in-your-financial-results/
+  - NEW: https://www.qgenda.com/workday-rising-2026/
+  - NEW: https://www.qgenda.com/workforce-puzzle/
+- aladtec.com: unreachable (HTTP 403)
+- smartlinx.com: +1 / -1 since 2026-09-01
+  - NEW: https://www.smartlinx.com/ht/
+- onshift.com: +4 / -0 since 2026-09-01
+  - NEW: https://www.onshift.com/resources/blog/getting-back-to-care-how-senior-care-leaders-are-reducing-administrative-burden
+  - NEW: https://www.onshift.com/resources/blog/how-much-time-senior-care-leaders-lose-to-scheduling-and-admin-work
+  - NEW: https://www.onshift.com/resources/blog/how-technology-can-preserve-and-reignite-professionals-passion-for-care
+  - NEW: https://www.onshift.com/resources/blog/why-care-quality-is-the-most-underrated-financial-strategy
+- shiftwizard.com: unreachable (not an XML sitemap)
+- nursegrid.com: +0 / -0 since 2026-09-01

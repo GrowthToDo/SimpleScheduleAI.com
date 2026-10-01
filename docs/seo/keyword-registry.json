@@ -898,5 +898,37 @@
     "primaryKeyword": "nurse staffing relief factor",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Published 2026-09-30 (GSC gap item 5). TOFU glossary + worked math: 2 night nurses = 4.21 FTEs with no time off, 4.79 FTEs at an illustrative 250 hours time off per FTE (relief factor 1.14). No current published standard (VHA 1.2 floor removed in 2023). Secondary: nursing replacement factor, nonproductive hours."
+  },
+  {
+    "slug": "mandatory-nurse-overtime-by-state",
+    "type": "post",
+    "url": "/blog/mandatory-nurse-overtime-by-state",
+    "primaryKeyword": "mandatory nurse overtime laws by state",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Published 2026-09-02. Backfilled into the registry 2026-10-01 (monthly audit step 6 found it missing)."
+  },
+  {
+    "slug": "rural-health-transformation-deadline-nurse-salaries",
+    "type": "article",
+    "url": "/articles/rural-health-transformation-deadline-nurse-salaries",
+    "primaryKeyword": "rural health transformation program nurse salaries",
+    "pillar": null,
+    "note": "Newsroom article published 2026-09-21. Backfilled 2026-10-01 (monthly audit step 6)."
+  },
+  {
+    "slug": "texas-medicaid-freeze-critical-access-hospitals",
+    "type": "article",
+    "url": "/articles/texas-medicaid-freeze-critical-access-hospitals",
+    "primaryKeyword": "texas medicaid freeze critical access hospitals",
+    "pillar": null,
+    "note": "Newsroom article published 2026-09-18. Backfilled 2026-10-01 (monthly audit step 6)."
+  },
+  {
+    "slug": "where-does-your-nurse-schedule-live",
+    "type": "article",
+    "url": "/articles/where-does-your-nurse-schedule-live",
+    "primaryKeyword": "nurse schedule data privacy",
+    "pillar": null,
+    "note": "Newsroom article published 2026-09-12. Backfilled 2026-10-01 (monthly audit step 6)."
   }
 ]

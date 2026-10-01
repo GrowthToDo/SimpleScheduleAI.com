@@ -41,6 +41,20 @@ with a Bing number (see the anomaly below).
   submitted via IndexNow. Trend is upward (73 -> 79 in the five days to Aug 1 as the
   week's posts landed). Watch coverage, not crawl volume.
 
+### Bing pulse 2026-10-01 (monthly audit step 4)
+
+Run after the Bing MCP was repaired the same day (upstream `mcp-server-bwt` moved to
+`mcp>=2.2` on 2026-09-25, which our local `mcp<2` pin blocked; now pinned to commit
+`ead1a469`).
+
+- `get_link_counts` -> `{"Links":[],"TotalPages":0}`. Still cannot enumerate a single
+  inbound link, as in every pull since July.
+- `CrawlStats.InLinks` = 12 on 2026-09-30 (11 on 2026-09-01, 8 on 2026-08-02). Still
+  UNVERIFIED for the reason above; do not report it as backlinks.
+- Bing index: `InIndex` 142 on 2026-09-30, up from 121 on 2026-09-01. `Code2xx` 186,
+  `BlockedByRobotsTxt` 0 every day, no 5xx all month. Crawling healthy.
+- GSC Links export: not requested this month (quarterly; next due with the November run).
+
 ## Spam-link watch (opened 2026-08-30)
 
 **What happened.** A Buddy Punch "paid partnership" email prompted a look at our

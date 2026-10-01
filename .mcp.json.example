@@ -23,7 +23,11 @@
     },
     "bing-webmaster": {
       "command": "C:/Users/Admin/AppData/Local/Programs/Python/Python312/Scripts/uvx.exe",
-      "args": ["--from", "git+https://github.com/zizzfizzix/mcp-server-bwt", "mcp-server-bwt"],
+      "args": [
+        "--from",
+        "git+https://github.com/zizzfizzix/mcp-server-bwt@ead1a469ec1e9331e8d26abb601e847142255158",
+        "mcp-server-bwt"
+      ],
       "env": {
         "BING_WEBMASTER_API_KEY": "__SET_IN_LOCAL_.mcp.json__"
       }

@@ -77,3 +77,21 @@ Appended by `npm run competitor-watch`. Positioning, pricing and CTA moves on wa
   - h1: "Automate public safety scheduling for hometown heroes" -> "Public safety scheduling software built for 24/7 agencies"
   - h2s added: "Rotational scheduling software for 24/7 full shift coverage", "Compliance and audit-readiness solutions for public safety", "Employee self-service scheduling and shift trades", "Ready to give your crews a schedule that works?"
   - h2s removed: "Get coverage right with 24/7 rotational scheduling", "Simplify compliance tracking and audit-readiness", "Keep your staff happy, engaged, and ready to serve", "Ready to learn more?"
+
+## 2026-10-01
+
+- m7health.com__home: 1 change(s) since 2026-09-01
+  - prices removed: "$10"
+- m7health.com__who-we-help: 1 change(s) since 2026-09-01
+  - prices removed: "$10"
+- m7health.com__blogs-critical-access-hospital-scheduling-software: 1 change(s) since 2026-09-01
+  - body text changed with no heading/CTA/price move (-3 words)
+- m7health.com__pricing: unreachable (HTTP 404)
+- inhouse.health__pricing: unreachable (HTTP 404)
+- youshift.com__home: 1 change(s) since 2026-09-01
+  - description: "YouShift connects scheduling, time off, time tracking, payroll, and workforce forecasting for healthcare teams, with AI agents helping coordinate the work." -> "YouShift is healthcare staff scheduling software. One record carries the assignment from the scheduling rule through worked time to gross pay, with AI agents coordinating the day-to-day."
+- smartlinx.com__home: 1 change(s) since 2026-09-01
+  - body text changed with no heading/CTA/price move (+4 words)
+- shiftwizard.com__home: 1 change(s) since 2026-09-01
+  - body text changed with no heading/CTA/price move (+10 words)
+- aladtec.com__home: unreachable (fetch failed)
