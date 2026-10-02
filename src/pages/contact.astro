@@ -132,7 +132,7 @@ const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
   </section>
 
   <script is:inline>
-    document.addEventListener('astro:page-load', () => {
+    const initMessageResize = () => {
       const textarea = document.querySelector('#input-message');
       if (!textarea) return;
 
@@ -143,6 +143,8 @@ const ctaLink = 'https://cal.com/gautham-8bdvdx/30min';
 
       resize(3);
       textarea.addEventListener('input', () => resize(3));
-    });
+    };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initMessageResize);
+    else initMessageResize();
   </script>
 </Layout>
