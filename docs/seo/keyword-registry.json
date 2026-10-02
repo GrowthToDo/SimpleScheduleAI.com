@@ -82,8 +82,9 @@
     "slug": "cms-pbj-reporting-scheduling-software",
     "type": "post",
     "url": "/blog/cms-pbj-reporting-scheduling-software",
-    "primaryKeyword": "cms pbj reporting",
-    "pillar": "/critical-access-hospital-scheduling"
+    "primaryKeyword": "cms pbj",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Re-aimed 2026-10-02 from 'cms pbj reporting': GSC 11 at pos 22 plus pbj reporting software 10 at 17; US vol 170 vs 50 (GSC 2026-07-02..09-30; DataForSEO US volume)."
   },
   {
     "slug": "critical-access-hospital-requirements",
@@ -244,9 +245,9 @@
     "slug": "nurse-rostering-vs-scheduling-software",
     "type": "post",
     "url": "/blog/nurse-rostering-vs-scheduling-software",
-    "primaryKeyword": "nurse rostering vs scheduling software",
+    "primaryKeyword": "nurse rostering software",
     "pillar": "/nurse-scheduling-software",
-    "note": "Near-collision with what-is-nurse-rostering (\"what is nurse rostering\"). Same topic cluster (nurse rostering); this post is the comparison-intent query, the other is the definitional query."
+    "note": "Near-collision with what-is-nurse-rostering (\"what is nurse rostering\"). Same topic cluster (nurse rostering); this post is the comparison-intent query, the other is the definitional query. Re-aimed 2026-10-02 from 'nurse rostering vs scheduling software': GSC 198 impr at pos 10 (all variants 261 at 9) vs 12 for the old keyword; US vol 260/mo vs below threshold (GSC 2026-07-02..09-30; DataForSEO US volume)."
   },
   {
     "slug": "nurse-scheduling-no-it-department-rural-hospital",
@@ -367,9 +368,9 @@
     "slug": "shiftwizard-vs-managed-service",
     "type": "post",
     "url": "/blog/shiftwizard-vs-managed-service",
-    "primaryKeyword": "shiftwizard vs managed service",
+    "primaryKeyword": "what is shiftwizard",
     "pillar": "/nurse-scheduling-software",
-    "note": "CANNIBALIZATION PAIR with shiftwizard-alternatives (see that entry). THIS post = EVALUATION intent: what ShiftWizard is, how the self-serve operating model works, who it fits. Owns the ShiftWizard capability and review queries. NOTE: also on the positioning-migration vs-class retitle list."
+    "note": "CANNIBALIZATION PAIR with shiftwizard-alternatives (see that entry). THIS post = EVALUATION intent: what ShiftWizard is, how the self-serve operating model works, who it fits. Owns the ShiftWizard capability and review queries. NOTE: also on the positioning-migration vs-class retitle list. Re-aimed 2026-10-02 from 'shiftwizard vs managed service': GSC 69 at pos 7 plus what is shift wizard 48 at 9; title already asks the question (GSC 2026-07-02..09-30; DataForSEO US volume)."
   },
   {
     "slug": "smart-square-alternatives-small-rural-hospitals",
@@ -411,8 +412,9 @@
     "slug": "ukg-migration-small-hospital",
     "type": "post",
     "url": "/blog/ukg-migration-small-hospital",
-    "primaryKeyword": "ukg migration guide",
-    "pillar": "/nurse-scheduling-software"
+    "primaryKeyword": "ukg migration",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Re-aimed 2026-10-02 from 'ukg migration guide': GSC 48 at pos 27 vs 0 for the old wording (GSC 2026-07-02..09-30; DataForSEO US volume)."
   },
   {
     "slug": "ukg-too-complex-small-hospital",
@@ -455,9 +457,9 @@
     "slug": "best-per-diem-nurse-scheduling-software",
     "type": "post",
     "url": "/blog/best-per-diem-nurse-scheduling-software",
-    "primaryKeyword": "best per diem nurse scheduling software",
+    "primaryKeyword": "per diem staffing software",
     "pillar": "/nurse-scheduling-software",
-    "note": "Per-diem-specific BOFU comparison; differentiated from best-nurse-scheduling-software-2026 (general best) and nurse-scheduling-software-pricing by the per diem callout and overtime-ranking angle."
+    "note": "Per-diem-specific BOFU comparison; differentiated from best-nurse-scheduling-software-2026 (general best) and nurse-scheduling-software-pricing by the per diem callout and overtime-ranking angle. Re-aimed 2026-10-02 from 'best per diem nurse scheduling software': GSC 53 at pos 12 vs 0 for the old keyword. Title unchanged until the Q3 title test is read at the 2026-11-01 audit (GSC 2026-07-02..09-30; DataForSEO US volume)."
   },
   {
     "slug": "healthcare-staffing-software-small-hospitals",
@@ -647,9 +649,9 @@
     "slug": "best-nurse-scheduling-app",
     "type": "post",
     "url": "/blog/best-nurse-scheduling-app",
-    "primaryKeyword": "best nurse scheduling app",
+    "primaryKeyword": "nurse scheduling app",
     "pillar": "/nurse-scheduling-software",
-    "note": "BOFU listicle, APP/MOBILE intent, explicitly differentiated from best-nurse-scheduling-software-2026 (system intent) via the Is-This-the-Guide-You-Need section + reciprocal cross-links. 8 entries mirror the software listicle vendor set through a mobile lens. OnShift = ShiftKey (never Workday, dossier 2026-08-06); NurseGrid manager-app-removal disclosed (Capterra Jun 2024); Deputy claims verify-with-vendor framed. SSAI entry: no mobile-app claim (web-based any-device review), flat service pricing."
+    "note": "BOFU listicle, APP/MOBILE intent, explicitly differentiated from best-nurse-scheduling-software-2026 (system intent) via the Is-This-the-Guide-You-Need section + reciprocal cross-links. 8 entries mirror the software listicle vendor set through a mobile lens. OnShift = ShiftKey (never Workday, dossier 2026-08-06); NurseGrid manager-app-removal disclosed (Capterra Jun 2024); Deputy claims verify-with-vendor framed. SSAI entry: no mobile-app claim (web-based any-device review), flat service pricing. Re-aimed 2026-10-02 from 'best nurse scheduling app': GSC 171 impr at pos 29 (variants 367 at 26) vs 12 at 13; US vol 480/mo vs below threshold (GSC 2026-07-02..09-30; DataForSEO US volume)."
   },
   {
     "slug": "how-to-reduce-nurse-overtime",
