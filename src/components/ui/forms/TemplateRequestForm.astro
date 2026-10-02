@@ -1,0 +1,156 @@
+---
+// Emails the nurse schedule template (.xlsx) to a work address. The Apps Script
+// behind TEMPLATE_SCRIPT_URL re-checks the domain, logs the request to the
+// "Template leads" sheet and sends the file from Drive. Source and setup:
+// docs/ops/template-gate-apps-script.md
+const TEMPLATE_SCRIPT_URL = '__TEMPLATE_SCRIPT_URL__';
+
+const FREE_EMAIL_DOMAINS = [
+  'gmail.com',
+  'googlemail.com',
+  'yahoo.com',
+  'ymail.com',
+  'rocketmail.com',
+  'hotmail.com',
+  'outlook.com',
+  'live.com',
+  'msn.com',
+  'aol.com',
+  'icloud.com',
+  'me.com',
+  'mac.com',
+  'proton.me',
+  'protonmail.com',
+  'pm.me',
+  'gmx.com',
+  'gmx.net',
+  'mail.com',
+  'yandex.com',
+  'zoho.com',
+  'zohomail.com',
+  'tutanota.com',
+  'fastmail.com',
+  'hey.com',
+  'comcast.net',
+  'att.net',
+  'sbcglobal.net',
+  'verizon.net',
+  'cox.net',
+  'charter.net',
+  'bellsouth.net',
+  'earthlink.net',
+  'juno.com',
+  'rediffmail.com',
+  'qq.com',
+  '163.com',
+];
+
+const roles = [
+  'Director of Nursing / CNO',
+  'Nurse manager or charge nurse',
+  'CEO or administrator',
+  'Staffing or scheduling coordinator',
+  'Staff nurse',
+  'Other',
+];
+
+const inputClass =
+  'block w-full rounded-lg border border-hairline bg-white p-3 text-sm focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary';
+---
+
+<form id="template-form" class="mx-auto mt-6 max-w-md space-y-4 text-left" novalidate>
+  <div>
+    <label for="tpl-email" class="mb-1 block text-sm font-medium">Work email</label>
+    <input
+      type="email"
+      id="tpl-email"
+      name="email"
+      class={inputClass}
+      placeholder="you@yourhospital.org"
+      autocomplete="email"
+      required
+    />
+  </div>
+  <div>
+    <label for="tpl-hospital" class="mb-1 block text-sm font-medium">Hospital or organization</label>
+    <input type="text" id="tpl-hospital" name="hospital" class={inputClass} autocomplete="organization" required />
+  </div>
+  <div>
+    <label for="tpl-role" class="mb-1 block text-sm font-medium">Your role</label>
+    <select id="tpl-role" name="role" class={inputClass} required>
+      <option value="">Select your role</option>
+      {roles.map((r) => <option value={r}>{r}</option>)}
+    </select>
+  </div>
+  <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+  <button type="submit" id="tpl-submit" class="btn btn-primary w-full">Email me the template</button>
+  <p id="tpl-error" class="hidden rounded-lg bg-red-100 p-3 text-sm text-red-800" role="alert"></p>
+  <p id="tpl-success" class="hidden rounded-lg bg-green-100 p-3 text-sm text-green-800" role="status"></p>
+</form>
+
+<script define:vars={{ TEMPLATE_SCRIPT_URL, FREE_EMAIL_DOMAINS }}>
+  document.addEventListener('astro:page-load', () => {
+    const form = document.getElementById('template-form');
+    if (!form) return;
+    const button = document.getElementById('tpl-submit');
+    const errorBox = document.getElementById('tpl-error');
+    const successBox = document.getElementById('tpl-success');
+
+    const showError = (text) => {
+      errorBox.textContent = text;
+      errorBox.classList.remove('hidden');
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorBox.classList.add('hidden');
+      successBox.classList.add('hidden');
+
+      const data = Object.fromEntries(new FormData(form));
+      const email = String(data.email || '')
+        .trim()
+        .toLowerCase();
+      const domain = email.split('@')[1] || '';
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showError('Please enter a valid email address.');
+      if (FREE_EMAIL_DOMAINS.includes(domain))
+        return showError(
+          'Please use your work email. We send the template to hospital and organization addresses only, not Gmail, Yahoo or other personal accounts.'
+        );
+      if (!String(data.hospital || '').trim()) return showError('Please enter your hospital or organization.');
+      if (!data.role) return showError('Please select your role.');
+      if (data.website) return;
+
+      button.disabled = true;
+      button.textContent = 'Sending...';
+      try {
+        await fetch(TEMPLATE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            email,
+            hospital: String(data.hospital).trim(),
+            role: data.role,
+            page: location.pathname,
+            timestamp: new Date().toISOString(),
+          }),
+        });
+        window.dataLayer = window.dataLayer || [];
+        (function () {
+          window.dataLayer.push(arguments);
+        })('event', 'generate_lead', { lead_source: 'nurse_schedule_template', role: data.role });
+        successBox.textContent = `Sent. The template is on its way to ${email}. If it has not arrived in 10 minutes, check your spam folder or write to support@simplescheduleai.com.`;
+        successBox.classList.remove('hidden');
+        form.reset();
+      } catch {
+        showError(
+          'Something went wrong sending the request. Please try again, or write to support@simplescheduleai.com.'
+        );
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Email me the template';
+      }
+    });
+  });
+</script>

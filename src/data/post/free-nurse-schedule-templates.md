@@ -122,7 +122,7 @@ When downloading any free template, verify that it includes: separate columns fo
 <div class="my-8 rounded-lg border border-primary/20 bg-primary/5 p-6">
   <p class="font-semibold text-default dark:text-blue-100">Free template</p>
   <p class="mt-1 text-muted dark:text-blue-200">Nurse Weekly Schedule Template, pre-filled for a 25-bed hospital with 3 shifts and weekend rotation tracking.</p>
-  <a href="/resources/nurse-schedule-template" class="mt-3 inline-block font-medium text-primary underline">Download free →</a>
+  <a href="/resources/nurse-schedule-template" class="mt-3 inline-block font-medium text-primary underline">Get it free →</a>
 </div>
 
 ## When does a template stop being enough?

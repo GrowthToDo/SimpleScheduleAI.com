@@ -25,6 +25,15 @@
   [headers.values]
     Cache-Control = "public, max-age=300, must-revalidate"
 
+# The nurse schedule template is emailed to work addresses (founder decision
+# 2026-10-02); the file is no longer served from the site. Old direct links land
+# on the request form instead.
+[[redirects]]
+  from = "/downloads/SimpleScheduleAI-Nurse-Schedule-Template.xlsx"
+  to = "/resources/nurse-schedule-template"
+  status = 301
+  force = true
+
 # 301 from www subdomain to apex so Google consolidates signals on one host.
 [[redirects]]
   from = "https://www.simplescheduleai.com/*"

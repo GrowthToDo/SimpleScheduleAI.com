@@ -224,7 +224,7 @@ As of September 22, 2026: NurseGrid, Deputy and SimpleScheduleAI publish rates d
 
 **Q: Is there free nurse scheduling software for hospitals?**
 
-No tool built for hospital nursing is free for ongoing use. Our [free nurse schedule template](/resources/nurse-schedule-template) downloads without a signup, and our breakdown of [free nurse scheduling software](/blog/free-nurse-scheduling-software) shows which gaps the no-cost options leave. SimpleScheduleAI is paid, at a flat $1,000 to $1,500 a month including setup and support.
+No tool built for hospital nursing is free for ongoing use. Our [free nurse schedule template](/resources/nurse-schedule-template) is free, and our breakdown of [free nurse scheduling software](/blog/free-nurse-scheduling-software) shows which gaps the no-cost options leave. SimpleScheduleAI is paid, at a flat $1,000 to $1,500 a month including setup and support.
 
 **Q: Do vendors negotiate pricing?**
 
