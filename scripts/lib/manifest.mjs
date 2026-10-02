@@ -9,6 +9,7 @@ export const MECHANICAL_FIELDS = [
   'prettier',
   'dateSanity',
   'factsDossier',
+  'keywordRegistry',
 ];
 export const RECORDED_FIELDS = ['proofread', 'factCheck', 'imageEyeball', 'founderApproval', 'indexNow', 'gscSitemap'];
 // imageEyeball moved out of the commit-blocking set 2026-08-24 (founder workflow

@@ -109,6 +109,35 @@ function dateSanity(data) {
   return { ok: true };
 }
 
+/**
+ * The piece must have its own entry in docs/seo/keyword-registry.json, with a
+ * primaryKeyword no other entry already uses. Added 2026-10-02: two monthly audits
+ * running found live pieces missing from the registry (7 in September, 4 in
+ * October) because adding the entry depended on memory.
+ */
+export function keywordRegistryCheck(slug, collection, root) {
+  const file = path.join(root, 'docs', 'seo', 'keyword-registry.json');
+  if (!fs.existsSync(file)) return { ok: false, why: 'docs/seo/keyword-registry.json not found' };
+  const registry = JSON.parse(fs.readFileSync(file, 'utf8'));
+  const own = registry.filter((e) => e.slug === slug && e.type === collection);
+  if (own.length === 0)
+    return { ok: false, why: `no ${collection} entry for "${slug}" (add one, then run npm run keyword-check)` };
+  if (own.length > 1) return { ok: false, why: `${own.length} entries for "${slug}"; keep one` };
+  const kw = String(own[0].primaryKeyword || '')
+    .trim()
+    .toLowerCase();
+  if (!kw) return { ok: false, why: `entry for "${slug}" has no primaryKeyword` };
+  const clash = registry.find(
+    (e) =>
+      e !== own[0] &&
+      String(e.primaryKeyword || '')
+        .trim()
+        .toLowerCase() === kw
+  );
+  if (clash) return { ok: false, why: `primaryKeyword "${kw}" is already owned by ${clash.url || clash.slug}` };
+  return { ok: true };
+}
+
 export function parseCheckLinksOutput(out, canonical) {
   // Tolerate ONLY the canonical self-URL 404 (expected pre-deploy).
   // A non-zero exit with no [BROKEN] lines is a tool failure, not a pass.
@@ -158,6 +187,10 @@ export async function runMechanical(slugOrPath, root, { network = true, external
   const facts = checkFacts(body);
   setMechanical(manifest, 'factsDossier', facts.length === 0 ? 'PASS' : 'FAIL', hash);
   for (const v of facts) console.log(`  facts drift [${v.id}] L${v.line}: ${v.message}`);
+
+  const kr = keywordRegistryCheck(slug, collection, root);
+  setMechanical(manifest, 'keywordRegistry', kr.ok ? 'PASS' : 'FAIL', hash);
+  if (!kr.ok) console.log(`  keywordRegistry: ${kr.why}`);
 
   saveManifest(manifest, root);
   return { manifest, hash, vHash: verdictHash(text) };

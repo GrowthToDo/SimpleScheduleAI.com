@@ -26,6 +26,11 @@ function makeRepo() {
     path.join(root, 'src', 'data', 'post', 'linker-b.md'),
     `---\ndraft: false\ntitle: B\n---\n[x](/blog/subject)`
   );
+  fs.mkdirSync(path.join(root, 'docs', 'seo'), { recursive: true });
+  fs.writeFileSync(
+    path.join(root, 'docs', 'seo', 'keyword-registry.json'),
+    JSON.stringify([{ slug: 'subject', type: 'post', url: '/blog/subject', primaryKeyword: 'subject keyword' }])
+  );
   return root;
 }
 
@@ -48,6 +53,7 @@ test('mechanical run fills manifest; not green without recorded fields', () => {
   assert.equal(m.mechanical.inboundLinks.status, 'PASS');
   assert.equal(m.mechanical.dateSanity.status, 'PASS');
   assert.equal(m.mechanical.factsDossier.status, 'PASS');
+  assert.equal(m.mechanical.keywordRegistry.status, 'PASS');
 });
 
 test('--set records verdicts; full green exits 0', () => {
@@ -109,4 +115,23 @@ test('recorded verdicts survive a draft/date flip: proofread stays FRESH, mechan
   assert.doesNotMatch(r.out.match(/proofread[^\n]*/)[0], /STALE/);
   // Mechanical fields ARE stale because contentHash changed (dateSanity must re-check the new dates).
   assert.match(r.out, /dateSanity.*STALE|checkBlog.*STALE/s);
+});
+
+test('missing or clashing keyword-registry entry fails', () => {
+  const root = makeRepo();
+  const reg = path.join(root, 'docs', 'seo', 'keyword-registry.json');
+  fs.writeFileSync(reg, '[]');
+  gate(root, ['subject']);
+  let m = JSON.parse(fs.readFileSync(path.join(root, '.publish', 'subject.json'), 'utf8'));
+  assert.equal(m.mechanical.keywordRegistry.status, 'FAIL');
+  fs.writeFileSync(
+    reg,
+    JSON.stringify([
+      { slug: 'subject', type: 'post', url: '/blog/subject', primaryKeyword: 'shared keyword' },
+      { slug: 'other', type: 'post', url: '/blog/other', primaryKeyword: 'Shared Keyword' },
+    ])
+  );
+  gate(root, ['subject']);
+  m = JSON.parse(fs.readFileSync(path.join(root, '.publish', 'subject.json'), 'utf8'));
+  assert.equal(m.mechanical.keywordRegistry.status, 'FAIL');
 });
