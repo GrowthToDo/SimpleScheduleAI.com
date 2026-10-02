@@ -89,7 +89,7 @@ const inputClass =
 </form>
 
 <script define:vars={{ TEMPLATE_SCRIPT_URL, FREE_EMAIL_DOMAINS }}>
-  document.addEventListener('astro:page-load', () => {
+  const initTemplateForm = () => {
     const form = document.getElementById('template-form');
     if (!form) return;
     const button = document.getElementById('tpl-submit');
@@ -152,5 +152,7 @@ const inputClass =
         button.textContent = 'Email me the template';
       }
     });
-  });
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initTemplateForm);
+  else initTemplateForm();
 </script>
