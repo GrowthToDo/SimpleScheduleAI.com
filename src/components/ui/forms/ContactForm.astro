@@ -110,7 +110,7 @@ const GOOGLE_SCRIPT_URL =
 </form>
 
 <script define:vars={{ GOOGLE_SCRIPT_URL, formStrings }}>
-  document.addEventListener('astro:page-load', () => {
+  const initContactForm = () => {
     const form = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
     const btnText = document.getElementById('btn-text');
@@ -160,5 +160,7 @@ const GOOGLE_SCRIPT_URL =
         btnText.textContent = formStrings.submit;
       }
     });
-  });
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initContactForm);
+  else initContactForm();
 </script>
