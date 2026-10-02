@@ -18,6 +18,7 @@ tags:
   - healthcare-operations
 metadata:
   canonical: 'https://simplescheduleai.com/blog/best-nurse-scheduling-software-critical-access-hospitals'
+  description: 'Ten nurse scheduling tools compared for a critical access hospital: which ones a nurse manager can run without an IT department, and what Capterra reviewers report.'
 ---
 
 Your CMS surveyor expects a clean staffing record that proves every shift met [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). Your reality is a nurse manager who builds that record between her own clinical shifts, on a spreadsheet, with only limited IT behind her, often one person or a contracted service, and no float pool to pull from when someone calls in sick. Most scheduling software is sold to the surveyor's fantasy and handed to the manager's reality.

@@ -184,3 +184,21 @@ From a 90-day GSC gap pull (2026-06-25 to 2026-09-24). Baselines are page-level 
 - **Q1-Q3** (shipped 2026-09-25): only 5 post-change days; no verdict. Baselines for the 2026-11-01 read: Q1 140 impr/day, 0.27% CTR, pos 9.6 (post 146/d, 0.14%, 9.7); Q2 pos 12.1 -> 17.4 post (watch: hypothesis = post-rewrite churn); Q3 PRN-pool question did not move to the per-diem page (5 post impressions across 4 URLs).
 - **Item 4 (hospital-shift H2 on the 12-hour post): still PARKED.** Q1 not yet measured. Re-check 2026-11-01.
 - New Band B drafts (B1 inhouse-health, B2 best-CAH) are in the 2026-10 audit, AWAITING FOUNDER REVIEW.
+
+## 2026-10-02 decisions on the October Band B drafts (measure at the 2026-11-01 audit)
+
+- **B2 SHIPPED, meta description only.** `/blog/best-nurse-scheduling-software-critical-access-hospitals`
+  had no `metadata.description`, so Google fell back to the excerpt, which leads with
+  the §485.635 "staffing documentation" line still awaiting the founder-approved sweep.
+  New description: "Ten nurse scheduling tools compared for a critical access hospital:
+  which ones a nurse manager can run without an IT department, and what Capterra
+  reviewers report." Title NOT changed: the drafted 100-character title would truncate,
+  and the two queries it was aimed at are long AI-assistant questions that a title is
+  unlikely to move (see the N1 hypothesis in the October audit). Baseline: 140
+  impressions on those two questions at 6.3 to 7.5 (90 days to 2026-09-30). Read page-level
+  CTR before vs after at the November run.
+- **B1 NOT SHIPPED.** Live web search for `in house scheduling` (2026-10-02): page one is
+  mostly generic (in-house vs outsourced appointment booking, HotSchedules house shifts,
+  home-visit booking apps); inhouse.health is result 5. The audit's own condition
+  ("if page 1 is generic DIY-scheduling content, do not ship B1") is met. Retitling the
+  comparison page around the brand would chase a query that is mostly not about the brand.
