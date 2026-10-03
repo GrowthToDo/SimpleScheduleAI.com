@@ -1,9 +1,10 @@
 ---
 // Emails the nurse schedule template (.xlsx) to a work address. The Apps Script
 // behind TEMPLATE_SCRIPT_URL re-checks the domain, logs the request to the
-// "Template leads" sheet and sends the file from Drive. Source and setup:
-// docs/ops/template-gate-apps-script.md
-const TEMPLATE_SCRIPT_URL = '__TEMPLATE_SCRIPT_URL__';
+// "Template leads" tab and sends the file from Drive. Source and setup:
+// docs/ops/leads-apps-script.md (one script for the template and the calculator).
+const TEMPLATE_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbz5E7W1TVlB30zJIJiYbzo1UhxtzJnoK47TKHuGnefr9I9NdLN6V7dkRWYOvrImgqjE/exec';
 
 const FREE_EMAIL_DOMAINS = [
   'gmail.com',

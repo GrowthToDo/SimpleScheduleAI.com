@@ -1,5 +1,9 @@
 # Nurse schedule template gate: Google Apps Script
 
+> **Superseded 2026-10-03.** The live script is the shared leads script in
+> `docs/ops/leads-apps-script.md` (one deployment for the template gate and the
+> calculator breakdown). The code below is kept for history only.
+
 The `/resources/nurse-schedule-template` page asks for a work email, hospital and
 role, then this script emails the .xlsx as an attachment. The file lives in Google
 Drive, not on the website, so the only way to get it is through the form.
