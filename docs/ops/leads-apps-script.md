@@ -8,13 +8,16 @@ deployment and one URL:
 - `kind: "roi_breakdown"`: emails a one-page PDF of the visitor's numbers from the
   scheduling cost calculator. Form: `src/components/widgets/ROICalculatorWidget.svelte`.
 
-**Live since 2026-10-03.** Deployment "Leads v2" (version 5) of the founder's Apps Script
-project, bound to the "SSAI : Contact Form" sheet. Web app URL:
-`https://script.google.com/macros/s/AKfycbz5E7W1TVlB30zJIJiYbzo1UhxtzJnoK47TKHuGnefr9I9NdLN6V7dkRWYOvrImgqjE/exec`
-The calculator form uses it. The template form (branch `template-gate`) still has the
-placeholder `__TEMPLATE_SCRIPT_URL__`: replace it with this URL when that branch ships,
-and set `TEMPLATE_FILE_ID` in the script (until then template requests are logged, not sent).
-The live copy of the script holds the team-alert addresses in `NOTIFY_EMAILS`; this doc keeps
+**Live since 2026-10-03.** Deployment "Leads v3" of the Apps Script project bound to the
+"SSAI : Contact Form" sheet (owner Gautham). It **executes as simplescheduleai@gmail.com**,
+so every lead email comes from SimpleScheduleAI <simplescheduleai@gmail.com> (replies go to
+support@simplescheduleai.com, which is receive-only Cloudflare Email Routing and cannot send).
+Web app URL:
+`https://script.google.com/macros/s/AKfycbxFlkPVZ9S6GBPFMmC0X34LF5OdGzriEZ117j75KnH_wgeGURq42NZudLfaKf1eoRBD/exec`
+Both forms use it: the calculator (`ROICalculatorWidget.svelte`) and the template gate
+(`TemplateRequestForm.astro`). In the live copy, `TEMPLATE_FILE_ID` points to the .xlsx in
+simplescheduleai@gmail.com's Drive, which must be the deploying account's own file (or shared with it).
+The live copy holds the team-alert addresses in `NOTIFY_EMAILS`; this doc keeps
 that list empty because the repo is public.
 
 **This code supersedes the code block in `template-gate-apps-script.md`.** The setup
