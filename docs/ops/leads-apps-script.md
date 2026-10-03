@@ -31,7 +31,7 @@ fields = email + hospital + role (template 2026-10-02; breakdown 2026-10-02).
 2. **Recomputes every number from the inputs and rates**, with clamps, so nothing the
    browser sends as a "cost" is trusted. The formulas mirror the calculator exactly.
 3. Builds a one-page summary, sends it as the email body and as a PDF attachment.
-4. Logs the request to the `Calculator breakdowns` tab (not the old `Calculator Leads` tab: Sheets treats tab names that differ only in case as the same name, and the old tab has different columns): who, the hospital, the total and the
+4. Logs the request to the `Calculator breakdowns` tab, one column per input, rate and cost, (not the old `Calculator Leads` tab: Sheets treats tab names that differ only in case as the same name, and the old tab has different columns): who, the hospital, the total and the
    inputs, so a follow-up call can start from their own numbers.
 5. Sends at most one breakdown per address per 10 minutes (stops double-clicks and abuse).
 
@@ -122,12 +122,20 @@ function sendTemplate(email) {
 }
 
 // ---- Calculator breakdown ----
+const BREAKDOWN_HEADER = [
+  'Timestamp', 'Email', 'Hospital', 'Role', 'Domain', 'Status', 'Total per year',
+  'Manager hrs/week', 'Overtime hrs/week', 'Agency shifts/month', 'Nurse exits/year',
+  'What-if: agency shifts covered', 'What-if: overtime hrs avoided',
+  'Manager $/hr', 'Overtime premium $/hr', 'Agency premium $/hr', 'Hours per agency shift', 'RN replacement cost',
+  'Manager cost/yr', 'Overtime cost/yr', 'Agency cost/yr', 'Turnover cost/yr',
+  'Manager time back (low)', 'Manager time back (high)', 'What-if $/yr', 'Page',
+];
 function handleBreakdown(data) {
   const lead = checkLead(data);
-  const sheet = getSheet('Calculator breakdowns', ['Timestamp', 'Email', 'Hospital', 'Role', 'Domain', 'Total per year', 'Inputs', 'Status']);
+  const sheet = getSheet('Calculator breakdowns', BREAKDOWN_HEADER);
   const c = computeBreakdown(data.inputs || {}, data.rates || {});
   let status = lead.status === 'ok' ? 'sent' : lead.status;
-  if (status === 'sent' && sentRecently(sheet, lead.email, 10, 7)) status = 'skipped: already sent in last 10 min';
+  if (status === 'sent' && sentRecently(sheet, lead.email, 10, 5)) status = 'skipped: already sent in last 10 min';
   if (status === 'sent') {
     try {
       sendBreakdown(lead, c);
@@ -135,7 +143,14 @@ function handleBreakdown(data) {
       status = 'error: ' + err;
     }
   }
-  sheet.appendRow([new Date(), lead.email, lead.hospital, lead.role, lead.domain, c.total, JSON.stringify({ inputs: c.inputs, rates: c.rates }), status]);
+  const i = c.inputs, r = c.rates;
+  // One column per value the visitor entered, so leads can be sorted and qualified later.
+  sheet.appendRow([
+    new Date(), lead.email, lead.hospital, lead.role, lead.domain, status, c.total,
+    i.mgmtHours, i.otHours, i.agencyShifts, i.rnExits, i.coverShifts, i.avoidOt,
+    r.mgrRate, r.otPremium, r.agencyPremium, r.agencyShiftHours, r.replaceCost,
+    c.mgmt, c.ot, c.agency, c.turnover, c.backLow, c.backHigh, c.whatIf, data.page || '',
+  ]);
   if (status === 'sent') notifyTeam('Calculator breakdown', lead, 'Total: $' + c.total.toLocaleString('en-US') + ' a year');
   return { status: status };
 }
