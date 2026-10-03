@@ -69,7 +69,7 @@
   // `kind`, re-checks the email domain, recomputes every number from the inputs, emails a
   // one-page PDF and logs the request to the "Calculator breakdowns" tab.
   // Source and setup: docs/ops/leads-apps-script.md. Keep FREE_EMAIL_DOMAINS in step with it.
-  const LEADS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5E7W1TVlB30zJIJiYbzo1UhxtzJnoK47TKHuGnefr9I9NdLN6V7dkRWYOvrImgqjE/exec';
+  const LEADS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxFlkPVZ9S6GBPFMmC0X34LF5OdGzriEZ117j75KnH_wgeGURq42NZudLfaKf1eoRBD/exec';
   const connected = LEADS_SCRIPT_URL.startsWith('https://');
   const showBreakdownForm = connected || import.meta.env.DEV;
 
