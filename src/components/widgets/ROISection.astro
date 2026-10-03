@@ -4,21 +4,13 @@ import Headline from '~/components/ui/Headline.astro';
 import ROICalculatorWidget from './ROICalculatorWidget.svelte';
 import type { Widget } from '~/types';
 
-interface Props extends Widget {
-  googleScriptUrl?: string;
-}
+interface Props extends Widget {}
 
-const {
-  id,
-  isDark = false,
-  classes = {},
-  bg = await Astro.slots.render('bg'),
-  googleScriptUrl = 'https://script.google.com/macros/s/AKfycbxP0OhrZPSdJgWpE8n08meo-5C6nSkSdbx-wKDHwovCEtAy7ZLhyJcwmOLIwFQOiYKZ/exec',
-} = Astro.props;
+const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
 
-const title = 'Calculate your hidden scheduling costs';
+const title = 'See what these costs add up to at your hospital';
 const subtitle =
-  'CAH nursing leadership typically spends 8 to 12 hours per week on scheduling. Plus overtime, agency, and turnover costs add up fast. See your numbers.';
+  'Nurse managers tell us the schedule, callouts and swaps take 8 to 12 hours of their week. Overtime, agency and turnover add up fast. Move the sliders to see your numbers.';
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
@@ -27,5 +19,5 @@ const subtitle =
     <Headline title={title} subtitle={subtitle} classes={{ title: 'text-3xl sm:text-4xl', subtitle: 'text-lg' }} />
   </div>
 
-  <ROICalculatorWidget client:load googleScriptUrl={googleScriptUrl} />
+  <ROICalculatorWidget client:load />
 </WidgetWrapper>

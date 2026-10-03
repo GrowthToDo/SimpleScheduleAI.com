@@ -1,272 +1,399 @@
 <script>
-  let { googleScriptUrl } = $props();
+  // Scheduling cost calculator (ungated, 2026-10-01).
+  // Every result is visible as the sliders move. Savings are never quoted as a
+  // percentage: the only reduction we state is the approved `hours-returned`
+  // line (1 to 2 hours of review, docs/seo/positioning-registry.md); anything
+  // else is the visitor's own "what if".
 
-  // --- Slider state ---
-  let mgmtHours   = $state(10);   // hours/week manager spends on scheduling
-  let otHours     = $state(48);   // total overtime hours per week across all RNs
-  let agencyShifts = $state(3);   // agency shifts per month
-  let rnExits     = $state(2);    // RN exits in past year where scheduling was a factor
+  const CALL_LINK = 'https://cal.com/gautham-8bdvdx/30min';
+  const NSI_LINK = 'https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf';
 
-  // --- Derived costs ---
-  // Manager time: hours/week × 52 weeks × $50 fully loaded rate
-  let mgmtCost     = $derived(Math.round(mgmtHours * 52 * 50));
-  // OT premium: hours/week × 52 weeks × $19 OT premium
-  let otCost       = $derived(Math.round(otHours * 52 * 19));
-  // Agency: shifts/month × 8 hr shift × $95/hr × 12 months
-  let agencyCost   = $derived(Math.round(agencyShifts * 8 * 95 * 12));
-  // Turnover: exits × $61,000 replacement cost
-  let turnoverCost = $derived(rnExits * 61000);
-  let totalCost    = $derived(mgmtCost + otCost + agencyCost + turnoverCost);
+  // --- Hospital inputs ---
+  let mgmtHours = $state(10); // hours/week the manager spends on scheduling, callouts, swaps
+  let otHours = $state(48); // overtime hours per week, all RNs combined
+  let agencyShifts = $state(3); // agency shifts per month
+  let rnExits = $state(2); // RN exits in the past year where scheduling was a factor
 
-  // --- UI state ---
-  let showForm    = $state(false);
-  let showResults = $state(false);
-  let submitting  = $state(false);
-  let submitError = $state(false);
+  // --- Rates (editable). Sources: 2026 NSI National Health Care Retention & RN Staffing Report. ---
+  let mgrRate = $state(50); // our estimate of a nurse manager's fully loaded hourly cost
+  let otPremium = $state(23.63); // half of average RN base pay: $59.46 incl. 25.8% benefits / 1.258 / 2
+  let agencyPremium = $state(31.77); // travel nurse fee $91.23 minus staff RN pay $59.46
+  let agencyShiftHours = $state(12);
+  let replaceCost = $state(60090); // average cost of turnover for a bedside RN
 
-  // --- Form fields ---
-  let formName     = $state("");
-  let formTitle    = $state("");
-  let formHospital = $state("");
-  let formEmail    = $state("");
+  // --- Costs per year ---
+  const n = (v) => (Number.isFinite(+v) && +v > 0 ? +v : 0);
+  let mgmtCost = $derived(Math.round(mgmtHours * 52 * n(mgrRate)));
+  let otCost = $derived(Math.round(otHours * 52 * n(otPremium)));
+  let agencyCost = $derived(Math.round(agencyShifts * n(agencyShiftHours) * n(agencyPremium) * 12));
+  let turnoverCost = $derived(Math.round(rnExits * n(replaceCost)));
+  let totalCost = $derived(mgmtCost + otCost + agencyCost + turnoverCost);
 
-  function fmt(n) {
-    return "$" + n.toLocaleString("en-US");
+  let rows = $derived([
+    { key: 'mgmt', label: 'Nurse manager time on scheduling', value: mgmtCost },
+    { key: 'ot', label: 'Overtime premium', value: otCost },
+    { key: 'agency', label: 'Agency premium over staff pay', value: agencyCost },
+    { key: 'turnover', label: 'Replacing nurses who left', value: turnoverCost },
+  ]);
+
+  // --- Manager time back: the one reduction we state (1 to 2 hours of review) ---
+  let backLow = $derived(Math.max(0, Math.round((mgmtHours - 2) * 52 * n(mgrRate))));
+  let backHigh = $derived(Math.max(0, Math.round((mgmtHours - 1) * 52 * n(mgrRate))));
+
+  // --- Visitor's own what-if ---
+  let coverShifts = $state(1);
+  let avoidOt = $state(8);
+  let coverShiftsC = $derived(Math.min(coverShifts, agencyShifts));
+  let avoidOtC = $derived(Math.min(avoidOt, otHours));
+  let whatIf = $derived(
+    Math.round(coverShiftsC * n(agencyShiftHours) * n(agencyPremium) * 12 + avoidOtC * 52 * n(otPremium))
+  );
+
+  function fmt(v) {
+    return '$' + Math.round(v).toLocaleString('en-US');
+  }
+  const pct = (v) => (totalCost > 0 ? Math.max(2, Math.round((v / totalCost) * 100)) : 0);
+
+  // --- Light analytics (Microsoft Clarity custom events), once per kind ---
+  const sent = new Set();
+  function track(name) {
+    if (sent.has(name)) return;
+    sent.add(name);
+    try {
+      window.clarity?.('event', name);
+    } catch {}
   }
 
-  async function handleSubmit(e) {
+  // --- "Email me a one-page breakdown" ---
+  // Same Apps Script web app as the template gate (one deployment, one URL); it routes on
+  // `kind`, re-checks the email domain, recomputes every number from the inputs, emails a
+  // one-page PDF and logs the request to the "Calculator breakdowns" tab.
+  // Source and setup: docs/ops/leads-apps-script.md. Keep FREE_EMAIL_DOMAINS in step with it.
+  const LEADS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5E7W1TVlB30zJIJiYbzo1UhxtzJnoK47TKHuGnefr9I9NdLN6V7dkRWYOvrImgqjE/exec';
+  const connected = LEADS_SCRIPT_URL.startsWith('https://');
+  const showBreakdownForm = connected || import.meta.env.DEV;
+
+  const FREE_EMAIL_DOMAINS = [
+    'gmail.com', 'googlemail.com', 'yahoo.com', 'ymail.com', 'rocketmail.com', 'hotmail.com',
+    'outlook.com', 'live.com', 'msn.com', 'aol.com', 'icloud.com', 'me.com', 'mac.com', 'proton.me',
+    'protonmail.com', 'pm.me', 'gmx.com', 'gmx.net', 'mail.com', 'yandex.com', 'zoho.com',
+    'zohomail.com', 'tutanota.com', 'fastmail.com', 'hey.com', 'comcast.net', 'att.net',
+    'sbcglobal.net', 'verizon.net', 'cox.net', 'charter.net', 'bellsouth.net', 'earthlink.net',
+    'juno.com', 'rediffmail.com', 'qq.com', '163.com',
+  ];
+  const ROLES = [
+    'Director of Nursing / CNO',
+    'Nurse manager or charge nurse',
+    'CEO or administrator',
+    'CFO or finance',
+    'Staffing or scheduling coordinator',
+    'Other',
+  ];
+
+  let bdEmail = $state('');
+  let bdHospital = $state('');
+  let bdRole = $state('');
+  let bdTrap = $state('');
+  let bdSending = $state(false);
+  let bdError = $state('');
+  let bdDone = $state('');
+
+  async function requestBreakdown(e) {
     e.preventDefault();
-    submitting  = true;
-    submitError = false;
+    bdError = '';
+    bdDone = '';
+    const email = bdEmail.trim().toLowerCase();
+    const domain = email.split('@')[1] || '';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return (bdError = 'Please enter a valid email address.');
+    if (FREE_EMAIL_DOMAINS.includes(domain))
+      return (bdError =
+        'Please use your work email. We send the breakdown to hospital and organization addresses only, not Gmail, Yahoo or other personal accounts.');
+    if (!bdHospital.trim()) return (bdError = 'Please enter your hospital or organization.');
+    if (!bdRole) return (bdError = 'Please select your role.');
+    if (bdTrap) return;
+    if (!connected) return (bdError = 'Preview only: the email service is not connected yet, so nothing was sent.');
 
-    const payload = {
-      timestamp:    new Date().toISOString(),
-      name:         formName,
-      title:        formTitle,
-      hospital:     formHospital,
-      email:        formEmail,
-      mgmtHours,
-      otHours,
-      agencyShifts,
-      rnExits,
-      mgmtCost,
-      otCost,
-      agencyCost,
-      turnoverCost,
-      totalCost,
-    };
-
+    bdSending = true;
     try {
-      await fetch(googleScriptUrl, {
-        method:  "POST",
-        mode:    "no-cors",
-        headers: { "Content-Type": "text/plain" },
-        body:    JSON.stringify(payload),
+      await fetch(LEADS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({
+          kind: 'roi_breakdown',
+          email,
+          hospital: bdHospital.trim(),
+          role: bdRole,
+          page: location.pathname,
+          timestamp: new Date().toISOString(),
+          inputs: { mgmtHours, otHours, agencyShifts, rnExits, coverShifts: coverShiftsC, avoidOt: avoidOtC },
+          rates: { mgrRate: n(mgrRate), otPremium: n(otPremium), agencyPremium: n(agencyPremium), agencyShiftHours: n(agencyShiftHours), replaceCost: n(replaceCost) },
+        }),
       });
-      showResults = true;
+      window.dataLayer = window.dataLayer || [];
+      (function () {
+        window.dataLayer.push(arguments);
+      })('event', 'generate_lead', { lead_source: 'roi_breakdown', role: bdRole });
+      track('roi_breakdown_requested');
+      bdDone = `Sent. Your one-page breakdown is on its way to ${email}. If it hasn't arrived in 10 minutes, check your spam folder or write to support@simplescheduleai.com.`;
+      bdEmail = '';
     } catch {
-      submitError = true;
+      bdError = 'Something went wrong sending the request. Please try again, or write to support@simplescheduleai.com.';
     } finally {
-      submitting = false;
+      bdSending = false;
     }
   }
+
+  const fieldClass =
+    'block w-full rounded-lg border border-hairline bg-white p-3 text-sm focus:border-primary focus:outline-hidden focus:ring-2 focus:ring-primary';
 </script>
 
-<div class="mx-auto max-w-2xl">
-
-  <!-- Sliders -->
-  <div class="space-y-8">
-
-    <!-- Slider 1: Manager hours -->
-    <div>
-      <div class="mb-2 flex items-center justify-between">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
-          Hours your manager spends on scheduling each week
-        </label>
-        <span class="ml-4 shrink-0 text-sm font-bold text-primary">{mgmtHours} hrs</span>
+<div class="mx-auto max-w-3xl">
+  <!-- Inputs -->
+  <div class="space-y-8" oninput={() => track('roi_used')}>
+    {#each [
+      { id: 'roi-mgmt', label: 'Hours your manager spends each week on the schedule, callouts and swaps', min: 2, max: 20, step: 1, unit: 'hrs', get: () => mgmtHours, set: (v) => (mgmtHours = v) },
+      { id: 'roi-ot', label: 'Overtime hours per week, all RNs combined', min: 0, max: 120, step: 4, unit: 'hrs', get: () => otHours, set: (v) => (otHours = v) },
+      { id: 'roi-agency', label: 'Agency shifts called in per month', min: 0, max: 20, step: 1, unit: 'shifts', get: () => agencyShifts, set: (v) => (agencyShifts = v) },
+      { id: 'roi-exits', label: 'Nurses who left in the past year with scheduling as a factor', min: 0, max: 6, step: 1, unit: 'nurses', get: () => rnExits, set: (v) => (rnExits = v) },
+    ] as s (s.id)}
+      <div>
+        <div class="mb-2 flex items-center justify-between gap-4">
+          <label for={s.id} class="text-sm font-medium text-gray-700">{s.label}</label>
+          <span class="shrink-0 text-sm font-bold text-primary tabular-nums">{s.get()} {s.unit}</span>
+        </div>
+        <input
+          id={s.id}
+          type="range"
+          min={s.min}
+          max={s.max}
+          step={s.step}
+          value={s.get()}
+          oninput={(e) => s.set(+e.currentTarget.value)}
+          class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 accent-primary"
+        />
+        <div class="mt-1 flex justify-between text-xs text-muted tabular-nums">
+          <span>{s.min}</span><span>{s.max}</span>
+        </div>
       </div>
-      <input
-        type="range" min="2" max="20" step="1"
-        bind:value={mgmtHours}
-        class="w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700 accent-blue-600 h-2"
-      />
-      <div class="mt-1 flex justify-between text-xs text-muted">
-        <span>2 hrs</span><span>20 hrs</span>
-      </div>
-    </div>
-
-    <!-- Slider 2: OT hours -->
-    <div>
-      <div class="mb-2 flex items-center justify-between">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
-          Total overtime hours per week (all RNs combined)
-        </label>
-        <span class="ml-4 shrink-0 text-sm font-bold text-primary">{otHours} hrs</span>
-      </div>
-      <input
-        type="range" min="0" max="120" step="4"
-        bind:value={otHours}
-        class="w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700 accent-blue-600 h-2"
-      />
-      <div class="mt-1 flex justify-between text-xs text-muted">
-        <span>0 hrs</span><span>120 hrs</span>
-      </div>
-    </div>
-
-    <!-- Slider 3: Agency shifts -->
-    <div>
-      <div class="mb-2 flex items-center justify-between">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
-          Agency shifts called in per month
-        </label>
-        <span class="ml-4 shrink-0 text-sm font-bold text-primary">{agencyShifts} {agencyShifts === 1 ? "shift" : "shifts"}</span>
-      </div>
-      <input
-        type="range" min="0" max="20" step="1"
-        bind:value={agencyShifts}
-        class="w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700 accent-blue-600 h-2"
-      />
-      <div class="mt-1 flex justify-between text-xs text-muted">
-        <span>0</span><span>20 shifts</span>
-      </div>
-    </div>
-
-    <!-- Slider 4: RN exits -->
-    <div>
-      <div class="mb-2 flex items-center justify-between">
-        <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
-          Nurse exits in the past year where scheduling was a factor
-        </label>
-        <span class="ml-4 shrink-0 text-sm font-bold text-primary">{rnExits} {rnExits === 1 ? "exit" : "exits"}</span>
-      </div>
-      <input
-        type="range" min="0" max="6" step="1"
-        bind:value={rnExits}
-        class="w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700 accent-blue-600 h-2"
-      />
-      <div class="mt-1 flex justify-between text-xs text-muted">
-        <span>0</span><span>6 exits</span>
-      </div>
-    </div>
-
+    {/each}
   </div>
-  <!-- end sliders -->
 
-  <!-- Gate / Results -->
-  {#if !showResults}
+  <!-- Rates -->
+  <details class="mt-8 rounded-xl border border-hairline bg-white p-5" ontoggle={() => track('roi_rates_opened')}>
+    <summary class="cursor-pointer text-sm font-semibold text-gray-800">Adjust the rates to match your hospital</summary>
+    <div class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2" oninput={() => track('roi_rates_changed')}>
+      <label class="block text-sm">
+        <span class="text-gray-700">Nurse manager cost per hour</span>
+        <input id="rate-mgr" type="number" min="0" step="1" bind:value={mgrRate} class="mt-1 block w-full rounded-lg border border-hairline px-3 py-2 tabular-nums" />
+        <span class="mt-1 block text-xs text-muted">Our estimate, fully loaded</span>
+      </label>
+      <label class="block text-sm">
+        <span class="text-gray-700">Overtime premium per hour</span>
+        <input id="rate-ot" type="number" min="0" step="0.01" bind:value={otPremium} class="mt-1 block w-full rounded-lg border border-hairline px-3 py-2 tabular-nums" />
+        <span class="mt-1 block text-xs text-muted">Half of average RN base pay (NSI)</span>
+      </label>
+      <label class="block text-sm">
+        <span class="text-gray-700">Agency premium per hour over staff pay</span>
+        <input id="rate-agency" type="number" min="0" step="0.01" bind:value={agencyPremium} class="mt-1 block w-full rounded-lg border border-hairline px-3 py-2 tabular-nums" />
+        <span class="mt-1 block text-xs text-muted">$91.23 travel fee minus $59.46 staff RN pay (NSI)</span>
+      </label>
+      <label class="block text-sm">
+        <span class="text-gray-700">Hours per agency shift</span>
+        <input id="rate-shift" type="number" min="0" step="1" bind:value={agencyShiftHours} class="mt-1 block w-full rounded-lg border border-hairline px-3 py-2 tabular-nums" />
+        <span class="mt-1 block text-xs text-muted">Use 8 if your unit runs 8-hour shifts</span>
+      </label>
+      <label class="block text-sm sm:col-span-2">
+        <span class="text-gray-700">Cost to replace one RN</span>
+        <input id="rate-replace" type="number" min="0" step="100" bind:value={replaceCost} class="mt-1 block w-full rounded-lg border border-hairline px-3 py-2 tabular-nums" />
+        <span class="mt-1 block text-xs text-muted">Average cost of turnover for a bedside RN (NSI)</span>
+      </label>
+    </div>
+    <p class="mt-4 text-xs text-muted">
+      NSI figures are national averages from the
+      <a href={NSI_LINK} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-primary">2026 NSI National Health Care Retention &amp; RN Staffing Report</a>.
+      Your hospital's pay may differ, so change any number to your own.
+    </p>
+  </details>
 
-    <!-- Blurred teaser card -->
-    <div class="mt-10 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 p-8 text-center shadow-sm">
-      <p class="text-sm text-muted">Your estimated hidden scheduling cost</p>
-      <div class="pointer-events-none mt-2 select-none text-5xl font-bold tracking-tight blur-2xl">
-        $222,784
-      </div>
-      <p class="mt-3 text-sm text-muted">Enter your details to reveal your number</p>
+  <!-- Results -->
+  <div class="mt-10 rounded-2xl border border-hairline bg-white p-6 shadow-sm sm:p-8" aria-live="polite">
+    <p class="text-sm font-medium text-muted">What these four cost your hospital each year</p>
+    <p class="mt-1 text-5xl font-bold tracking-tight text-gray-900 tabular-nums">{fmt(totalCost)}</p>
 
-      {#if !showForm}
-        <button
-          onclick={() => (showForm = true)}
-          class="btn-primary mt-5"
-        >
-          Reveal My Cost Breakdown
-        </button>
-      {:else}
-        <!-- Contact gate form -->
-        <form onsubmit={handleSubmit} class="mt-6 space-y-3 text-left">
-          <input
-            type="text"
-            placeholder="Your name"
-            bind:value={formName}
-            required
-            class="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 px-4 py-2.5 text-sm text-gray-900 dark:text-gray-100 placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-          />
-          <input
-            type="text"
-            placeholder="Your title (e.g. CNO, Nurse Manager)"
-            bind:value={formTitle}
-            required
-            class="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 px-4 py-2.5 text-sm text-gray-900 dark:text-gray-100 placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-          />
-          <input
-            type="text"
-            placeholder="Hospital name"
-            bind:value={formHospital}
-            required
-            class="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 px-4 py-2.5 text-sm text-gray-900 dark:text-gray-100 placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-          />
-          <input
-            type="email"
-            placeholder="Work email"
-            bind:value={formEmail}
-            required
-            class="block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 px-4 py-2.5 text-sm text-gray-900 dark:text-gray-100 placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-          />
+    <div class="mt-6 space-y-4">
+      {#each rows as r (r.key)}
+        <div>
+          <div class="flex items-baseline justify-between gap-4 text-sm">
+            <span class="text-gray-700">{r.label}</span>
+            <span class="font-semibold tabular-nums">{fmt(r.value)}/yr</span>
+          </div>
+          <div class="mt-1.5 h-2 w-full rounded-full bg-gray-100">
+            <div class="h-2 rounded-full bg-primary opacity-75 transition-all" style="width: {pct(r.value)}%"></div>
+          </div>
+        </div>
+      {/each}
+    </div>
 
-          {#if submitError}
-            <p class="text-sm text-red-600">Something went wrong. Please try again.</p>
-          {/if}
+    <p class="mt-5 text-xs text-muted">
+      Not all of this comes from scheduling. It is what these four costs add up to with your numbers, so you can see
+      where the money goes.
+    </p>
+  </div>
 
-          <button
-            type="submit"
-            disabled={submitting}
-            class="w-full rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-secondary disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            {submitting ? "Calculating…" : "Show My Results"}
-          </button>
-
-          <p class="text-center text-xs text-muted">
-            No spam. We'll follow up once and only if we think we can help.
+  <!-- Where SimpleScheduleAI helps -->
+  <div class="mt-8 rounded-2xl border border-hairline bg-page p-6 sm:p-8">
+    <h3 class="text-xl font-semibold text-gray-900">Where SimpleScheduleAI helps</h3>
+    <ul class="mt-5 space-y-5">
+      <li>
+        <p class="text-sm font-semibold text-gray-900">Manager time</p>
+        <p class="mt-1 text-sm text-default">Most of those hours go back to the floor. What's left is 1 to 2 hours of review.</p>
+        {#if backHigh > 0}
+          <p class="mt-1 text-sm font-semibold text-primary tabular-nums">
+            {#if backLow > 0}About {fmt(backLow)} to {fmt(backHigh)}{:else}Up to {fmt(backHigh)}{/if} a year of manager time back,
+            using your numbers.
           </p>
-        </form>
-      {/if}
+        {/if}
+      </li>
+      <li>
+        <p class="text-sm font-semibold text-gray-900">Overtime</p>
+        <p class="mt-1 text-sm text-default">
+          Overtime shows up on the draft, before anyone works it. When someone calls out, nurses who can cover without
+          going into overtime are ranked first.
+        </p>
+      </li>
+      <li>
+        <p class="text-sm font-semibold text-gray-900">Agency</p>
+        <p class="mt-1 text-sm text-default">
+          When someone calls out, you get a ranked list in under two minutes. Your own nurses come first. Agency comes
+          last.
+        </p>
+      </li>
+      <li>
+        <p class="text-sm font-semibold text-gray-900">Turnover</p>
+        <p class="mt-1 text-sm text-default">
+          Weekends and holidays are shared evenly, so the same few nurses don't carry them.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Visitor's what-if -->
+  <div class="mt-8 rounded-2xl border border-hairline bg-white p-6 sm:p-8" oninput={() => track('roi_whatif')}>
+    <h3 class="text-xl font-semibold text-gray-900">Your what-if</h3>
+    <p class="mt-1 text-sm text-muted">
+      Set your own assumption. We don't quote savings percentages; these numbers are yours.
+    </p>
+
+    <div class="mt-6 space-y-6">
+      <div>
+        <div class="mb-2 flex items-center justify-between gap-4">
+          <label for="whatif-agency" class="text-sm font-medium text-gray-700">Agency shifts a month your own nurses could cover instead</label>
+          <span class="shrink-0 text-sm font-bold text-primary tabular-nums">{coverShiftsC} of {agencyShifts}</span>
+        </div>
+        <input
+          id="whatif-agency"
+          type="range"
+          min="0"
+          max={agencyShifts}
+          step="1"
+          bind:value={coverShifts}
+          disabled={agencyShifts === 0}
+          class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 accent-primary disabled:cursor-not-allowed disabled:opacity-50"
+        />
+      </div>
+      <div>
+        <div class="mb-2 flex items-center justify-between gap-4">
+          <label for="whatif-ot" class="text-sm font-medium text-gray-700">Overtime hours a week you could avoid</label>
+          <span class="shrink-0 text-sm font-bold text-primary tabular-nums">{avoidOtC} of {otHours} hrs</span>
+        </div>
+        <input
+          id="whatif-ot"
+          type="range"
+          min="0"
+          max={otHours}
+          step="4"
+          bind:value={avoidOt}
+          disabled={otHours === 0}
+          class="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 accent-primary disabled:cursor-not-allowed disabled:opacity-50"
+        />
+      </div>
     </div>
 
-  {:else}
-
-    <!-- Full breakdown revealed -->
-    <div class="mt-10 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/30 p-8 shadow-sm">
-      <h3 class="mb-6 text-center text-lg font-semibold">
-        Your estimated hidden scheduling cost
-      </h3>
-
-      <div class="space-y-3">
-        <div class="flex items-center justify-between border-b border-blue-100 dark:border-blue-900 py-2">
-          <span class="text-sm text-gray-700 dark:text-gray-300">Nurse manager time on scheduling</span>
-          <span class="text-sm font-semibold">{fmt(mgmtCost)}/yr</span>
-        </div>
-        <div class="flex items-center justify-between border-b border-blue-100 dark:border-blue-900 py-2">
-          <span class="text-sm text-gray-700 dark:text-gray-300">Overtime premium cost</span>
-          <span class="text-sm font-semibold">{fmt(otCost)}/yr</span>
-        </div>
-        <div class="flex items-center justify-between border-b border-blue-100 dark:border-blue-900 py-2">
-          <span class="text-sm text-gray-700 dark:text-gray-300">Agency fill cost</span>
-          <span class="text-sm font-semibold">{fmt(agencyCost)}/yr</span>
-        </div>
-        <div class="flex items-center justify-between border-b border-blue-100 dark:border-blue-900 py-2">
-          <span class="text-sm text-gray-700 dark:text-gray-300">Turnover from scheduling-related exits</span>
-          <span class="text-sm font-semibold">{fmt(turnoverCost)}/yr</span>
-        </div>
-        <div class="flex items-center justify-between pt-3">
-          <span class="text-base font-bold">Total hidden scheduling cost</span>
-          <span class="text-2xl font-bold text-primary">{fmt(totalCost)}/yr</span>
-        </div>
+    <div class="mt-6 grid grid-cols-1 gap-4 border-t border-hairline pt-5 sm:grid-cols-2">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-muted">Your what-if</p>
+        <p class="mt-1 text-2xl font-bold text-gray-900 tabular-nums">{fmt(whatIf)}/yr</p>
       </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-muted">With manager time back</p>
+        <p class="mt-1 text-2xl font-bold text-primary tabular-nums">
+          {#if backLow !== backHigh}{fmt(whatIf + backLow)} to {fmt(whatIf + backHigh)}/yr{:else}{fmt(whatIf + backHigh)}/yr{/if}
+        </p>
+      </div>
+    </div>
+  </div>
 
-      <p class="mt-4 text-center text-xs text-muted">
-        Rates based on interviews with 30+ Texas CAH nurse managers. Manager rate $50/hr fully loaded,
-        OT premium $19/hr, agency $95/hr, RN replacement cost $61,000.
+  <!-- Email me a one-page breakdown (work emails only) -->
+  {#if showBreakdownForm}
+    <div class="mt-8 rounded-2xl border border-hairline bg-page p-6 sm:p-8">
+      <h3 class="text-xl font-semibold text-gray-900">Email me a one-page breakdown of my numbers</h3>
+      <p class="mt-1 text-sm text-muted">
+        Your costs, the rates behind them and your what-if on one page, ready to forward to your CEO or CFO.
       </p>
-
-      <div class="mt-6 text-center">
-        <a
-          href="/contact"
-          class="inline-flex items-center rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-secondary"
-        >
-          Get your first schedule
-        </a>
-      </div>
+      <form class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2" onsubmit={requestBreakdown} novalidate>
+        <div class="sm:col-span-2">
+          <label for="bd-email" class="mb-1 block text-sm font-medium">Work email</label>
+          <input id="bd-email" type="email" bind:value={bdEmail} class={fieldClass} placeholder="you@yourhospital.org" autocomplete="email" required />
+        </div>
+        <div>
+          <label for="bd-hospital" class="mb-1 block text-sm font-medium">Hospital or organization</label>
+          <input id="bd-hospital" type="text" bind:value={bdHospital} class={fieldClass} autocomplete="organization" required />
+        </div>
+        <div>
+          <label for="bd-role" class="mb-1 block text-sm font-medium">Your role</label>
+          <select id="bd-role" bind:value={bdRole} class={fieldClass} required>
+            <option value="">Select your role</option>
+            {#each ROLES as r (r)}<option value={r}>{r}</option>{/each}
+          </select>
+        </div>
+        <input type="text" name="website" bind:value={bdTrap} class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="sm:col-span-2">
+          <button type="submit" class="btn btn-primary w-full" disabled={bdSending}>
+            {bdSending ? 'Sending...' : 'Email me my breakdown'}
+          </button>
+          {#if bdError}
+            <p class="mt-3 rounded-lg bg-red-100 p-3 text-sm text-red-800" role="alert">{bdError}</p>
+          {/if}
+          {#if bdDone}
+            <p class="mt-3 rounded-lg bg-green-100 p-3 text-sm text-green-800" role="status">{bdDone}</p>
+          {/if}
+          <p class="mt-3 text-xs text-muted">Work email only, no personal accounts.</p>
+        </div>
+      </form>
     </div>
-
   {/if}
 
+  <!-- CTA: one button + Book-a-call text link -->
+  <div class="mt-10 text-center">
+    <h3 class="text-xl font-semibold text-gray-900">Want to walk through these numbers for your hospital?</h3>
+    <p class="mx-auto mt-2 max-w-xl text-sm text-muted">
+      We'll go through your unit and show you what next week's schedule would look like. Nothing needed from your side
+      to start.
+    </p>
+    <div class="mt-5">
+      <a href="/contact" class="btn btn-primary inline-flex px-6 py-3 text-base" onclick={() => track('roi_cta_contact')}>
+        Get your first schedule
+      </a>
+    </div>
+    <a
+      href={CALL_LINK}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-3 inline-block text-sm font-medium text-primary underline underline-offset-4"
+      onclick={() => track('roi_cta_call')}
+    >
+      Or book a call with our team
+    </a>
+  </div>
 </div>
