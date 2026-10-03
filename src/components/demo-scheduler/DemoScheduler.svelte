@@ -408,11 +408,14 @@
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        // The contact script stores only name, email and message, so the role and the
+        // source go into the message (and the name column) or they would be dropped.
         body: JSON.stringify({
           source: 'simulator-demo',
+          name: role.trim() ? `${role.trim()} (from the demo)` : 'Demo visitor',
           email,
           role,
-          message: 'Wants to see the demo on their own roster (from /simulator).',
+          message: `Role: ${role.trim() || 'not given'}. Wants a walkthrough for their hospital (from the /simulator demo).`,
         }),
       });
     } catch {
@@ -618,8 +621,11 @@
 
     <!-- CONVERT -->
     <div class="ssa-convert">
-      <h3>That was one unit and one week. Your hospital is harder — that's the point.</h3>
-        <p>Send us last month's real schedule and we'll show you this on your own roster, free.</p>
+      <h3>That was one unit and one week. Your hospital is harder, and that's the point.</h3>
+        <p>
+          Leave your work email and we'll walk you through what next week's schedule would look like at your
+          hospital. Nothing needed from your side to start.
+        </p>
         {#if !sent}
           <form class="ssa-form" onsubmit={submitEmail}>
             <input
@@ -631,14 +637,14 @@
             />
             <input type="text" bind:value={role} placeholder="Role (DON, Nurse Manager…)" aria-label="Your role" />
             <button class="ssa-btn ssa-btn-primary" type="submit" disabled={sending}>
-              {sending ? 'Sending…' : 'Show me on my roster'}
+              {sending ? 'Sending…' : 'Show me for my hospital'}
             </button>
           </form>
           <a class="ssa-booklink" href={CONFIG.calUrl} target="_blank" rel="noopener" onclick={() => track('demo_book_click')}>
             …or book a 30-minute call →
           </a>
         {:else}
-          <p class="ssa-sent" role="status">✓ Thanks — we'll be in touch within one business day.</p>
+          <p class="ssa-sent" role="status">✓ Thanks. We'll email you to set up a time.</p>
           <a class="ssa-btn ssa-btn-primary" href={CONFIG.calUrl} target="_blank" rel="noopener" onclick={() => track('demo_book_click')}>
             Book a 30-minute call →
           </a>
