@@ -39,6 +39,14 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631
 - Verified: 2026-07-03 (via Cornell LII cross-check). Re-verified live at Cornell LII 2026-08-31, unchanged.
 
+### 42 CFR 485.631(a)(4) and (b)(2) (practitioner availability)
+
+- Approved wording, (a)(4): "A doctor of medicine or osteopathy, nurse practitioner, clinical nurse specialist, or physician assistant is available to furnish patient care services at all times the CAH operates."
+- Approved wording, (b)(2): "A doctor of medicine or osteopathy is present for sufficient periods of time to provide medical direction, consultation, and supervision for the services provided in the CAH, and is available through direct radio or telephone communication or electronic communication for consultation, assistance with medical emergencies, or patient referral."
+- Wrong: "a doctor of medicine or osteopathy must be available to furnish care when a patient is present" (no such clause; caught in the physician-scheduling draft 2026-10-05); implying the at-all-times clause is physician-only (it names MD/DO, NP, CNS, PA).
+- URL: https://www.law.cornell.edu/cfr/text/42/485.631 (as amended at 87 FR 72308, Nov. 23, 2022)
+- Verified: 2026-10-05 (fact-check agent, verbatim at Cornell LII)
+
 ### 42 CFR 485.635(d)
 
 - Approved wording: a registered nurse must "provide (or assign to other personnel) the nursing care of each patient" and "supervise and evaluate the nursing care for each patient"

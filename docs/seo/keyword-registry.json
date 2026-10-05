@@ -902,6 +902,14 @@
     "note": "Published 2026-09-30 (GSC gap item 5). TOFU glossary + worked math: 2 night nurses = 4.21 FTEs with no time off, 4.79 FTEs at an illustrative 250 hours time off per FTE (relief factor 1.14). No current published standard (VHA 1.2 floor removed in 2023). Secondary: nursing replacement factor, nonproductive hours."
   },
   {
+    "slug": "physician-medical-staff-scheduling-small-hospital",
+    "type": "post",
+    "url": "/blog/physician-medical-staff-scheduling-small-hospital",
+    "primaryKeyword": "physician scheduling software small hospital",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-10-05. MOFU explainer: medical staff scheduling splits into provider call (QGenda-class tools) and nursing (our lane); states plainly that SSAI does not schedule physicians. Secondary: medical staff scheduling, provider on-call scheduling. Word-overlap warns vs best-scheduling-software-25-bed-hospital and hospital-staff-scheduling-software-critical-access are word-level only; intent differs (provider vs nursing)."
+  },
+  {
     "slug": "mandatory-nurse-overtime-by-state",
     "type": "post",
     "url": "/blog/mandatory-nurse-overtime-by-state",

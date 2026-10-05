@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "slug": "physician-medical-staff-scheduling-small-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-05T09:48:35.326Z",
+      "contentHash": "7f00e07397439042fa58344f0b1baadc05e245dcb3eaf0f5e0ee789d4b5ae1fa"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-05T09:48:36.699Z",
+      "contentHash": "7f00e07397439042fa58344f0b1baadc05e245dcb3eaf0f5e0ee789d4b5ae1fa"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-05T09:48:40.743Z",
+      "contentHash": "7f00e07397439042fa58344f0b1baadc05e245dcb3eaf0f5e0ee789d4b5ae1fa"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-05T09:48:40.773Z",
+      "contentHash": "7f00e07397439042fa58344f0b1baadc05e245dcb3eaf0f5e0ee789d4b5ae1fa"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-05T09:48:40.921Z",
+      "contentHash": "7f00e07397439042fa58344f0b1baadc05e245dcb3eaf0f5e0ee789d4b5ae1fa"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-05T09:48:40.921Z",
+      "contentHash": "7f00e07397439042fa58344f0b1baadc05e245dcb3eaf0f5e0ee789d4b5ae1fa"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-05T09:48:40.923Z",
+      "contentHash": "7f00e07397439042fa58344f0b1baadc05e245dcb3eaf0f5e0ee789d4b5ae1fa"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-05T09:48:40.924Z",
+      "contentHash": "7f00e07397439042fa58344f0b1baadc05e245dcb3eaf0f5e0ee789d4b5ae1fa"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-05T09:58:49.403Z",
+      "contentHash": "f994ea33d4683653e43447d338acc76d7c1894e535f67b6116cc8c4ad7e547bb"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-10-05T09:48:33.312Z",
+      "contentHash": "f994ea33d4683653e43447d338acc76d7c1894e535f67b6116cc8c4ad7e547bb"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-05T09:48:34.188Z",
+      "contentHash": "f994ea33d4683653e43447d338acc76d7c1894e535f67b6116cc8c4ad7e547bb"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 70.8,
+        "headings": 87.5,
+        "actionability": 25,
+        "attention": 87.5
+      },
+      "overall": 58.3,
+      "counts": {
+        "sections": 8,
+        "rereads": 9,
+        "undefinedTerms": 5,
+        "headingsAnswered": 7,
+        "mondayActions": 2,
+        "blockedActions": 6,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-10-05T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "running hours / running-hours math / running-hours tracking",
+          "light provider-call tool (no example given; the only tool named is QGenda, described as large)",
+          "operated-for-you nurse service",
+          "the applicable FLSA overtime thresholds (which threshold applies to my nurses: 40-hour week or 8-and-80?)",
+          "the staffing pattern a survey inspects (which survey, which pattern)"
+        ],
+        "mondayActions": [
+          "Pull the last eight weeks of nursing schedules and total the overtime hours",
+          "Write down who owns the nursing schedule and who owns physician/APP call today"
+        ],
+        "blockedActions": [
+          "Write down your ED response-time requirement: the post cites 42 CFR 485.618 but never states the number",
+          "Buy a light provider-call tool: no light tool is named, only QGenda",
+          "Ask vendors for proof before accepting 'both': the post does not say what proof looks like",
+          "Total eight weeks of overtime: the post does not say what a normal or bad total is, or what to do with the number",
+          "If one person owns both schedules, that is a workload flag: the post does not say what to do about the flag",
+          "Protect the nursing schedule first: no steps beyond booking a call"
+        ],
+        "sections": [
+          {
+            "heading": "Why Does Medical Staff Scheduling Split Into Two Different Problems?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does Physician Scheduling Software Need to Do?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does Physician Scheduling Differ From Nurse Scheduling?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Why Is the Nursing Schedule the Bigger Compliance Burden?",
+            "rereadCount": 2,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "Should a Small Hospital Buy One Tool or Two?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Help, and Where Does It Stop?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-10-05T09:47:43.322Z",
+      "contentHash": "d5077b9f8b8e75b7696972eb9b26e852e59d33f7b7a58b568039e6786d025a44"
+    }
+  }
+}

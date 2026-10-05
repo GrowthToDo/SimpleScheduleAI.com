@@ -193,7 +193,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service designed from the star
 **Key limitations:**
 
 - Managed service model means the nurse manager receives draft schedules rather than building them directly; less real-time cell-by-cell control than self-serve software
-- Not designed for hospitals with complex multi-department or physician scheduling beyond nursing
+- Not designed for hospitals with complex multi-department or physician scheduling beyond nursing (our guide to [physician and medical-staff scheduling](/blog/physician-medical-staff-scheduling-small-hospital) covers the provider half)
 - No staff-facing mobile app: nurses do not view schedules or submit shift trades directly through SimpleScheduleAI. Pair with a separate communication tool if nurse-facing self-service is a priority
 
 **Verdict:** For a 25-bed CAH where the nurse manager takes shifts and scheduling is eating clinical hours, SimpleScheduleAI is the only tool on this list purpose-built for that exact constraint. Every other tool in this list is general-purpose software applied to a specialized problem. See [how it works](/how-it-works) or the [managed service vs scheduling software](/blog/managed-service-vs-scheduling-software) comparison for the operating-model breakdown.
