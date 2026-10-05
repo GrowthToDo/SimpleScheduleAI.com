@@ -7,7 +7,7 @@ title: 'Physician and Medical-Staff Scheduling for Small Hospitals'
 excerpt: >
   A single "medical staff scheduling" tool at a 25-bed hospital tends to fix the small
   problem and leave the big one. Here is what physician call and nurse staffing each need,
-  where QGenda fits, and which schedule to fix first.
+  where dedicated provider tools fit, and which schedule to fix first.
 image: https://images.unsplash.com/photo-1612531385446-f7e6d131e1d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
@@ -22,10 +22,9 @@ metadata:
 ## Key Takeaways
 
 - "Medical staff scheduling" covers two jobs: physician and provider call (a few people, with complex call and privilege rules) and nurse scheduling (a large roster, with shifts every day and night)
-- Physician scheduling software has to handle call fairness, credential and privilege matching, emergency-department coverage rules, and locum coordination. Dedicated provider tools such as QGenda are built for that; our [QGenda alternatives](/blog/qgenda-alternatives) roundup compares the options
+- Physician scheduling software has to handle call fairness, credential and privilege matching, emergency-department coverage rules, and locum coordination. Dedicated provider scheduling tools are built for that
 - The nursing side is a separate need: a bigger roster, running hours (the hours each nurse has already worked this workweek) tracked against [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), and the staffing record a surveyor asks for
 - A 25-bed hospital usually needs a light provider-call tool and a nurse scheduling tool or service, not one tool stretched across both
-- SimpleScheduleAI is an AI-native nurse scheduling service, so it fits the nursing half only; it does not schedule physicians
 
 ## Table of Contents
 
@@ -38,7 +37,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Shopping for "medical staff scheduling software" sounds like one purchase. At a small hospital it is two jobs that behave nothing alike. One is the physician and provider schedule: a short list of MDs, DOs, and advanced practice providers (APPs, such as nurse practitioners and physician assistants) who rotate through call and cover the emergency department. The other is the nursing schedule: day and night shifts every day of the week, the hours each nurse has worked, and the staffing record a surveyor checks. This guide separates the two, explains what physician scheduling software has to do, and shows which half [SimpleScheduleAI](/nurse-scheduling-software) is built for.
+Shopping for "medical staff scheduling software" sounds like one purchase. At a small hospital it is two jobs that behave nothing alike. One is the physician and provider schedule: a short list of MDs, DOs, and advanced practice providers (APPs, such as nurse practitioners and physician assistants) who rotate through call and cover the emergency department. The other is the nursing schedule: day and night shifts every day of the week, the hours each nurse has worked, and the staffing record a surveyor checks. This guide separates the two, explains what each one needs, and shows which to fix first.
 
 ## Why Does Medical Staff Scheduling Split Into Two Different Problems?
 
@@ -129,7 +128,7 @@ On a spreadsheet, overtime creep and single-nurse overload stay hidden until the
 
 ## Should a Small Hospital Buy One Tool or Two?
 
-Most small hospitals should plan on two tools: a light provider-call tool for the physician group and a nurse scheduling tool or service for the nursing roster. A product that does both well is hard to find, and the compromise tends to shortchange the nursing side, the larger job. Our [QGenda alternatives](/blog/qgenda-alternatives) guide names the main physician on-call vendors.
+Most small hospitals should plan on two tools: a light provider-call tool for the physician group and [nurse scheduling software](/nurse-scheduling-software) or a service for the nursing roster. A product that does both well is hard to find, and the compromise tends to shortchange the nursing side, the larger job. Our [QGenda alternatives](/blog/qgenda-alternatives) guide names the main physician on-call vendors.
 
 The provider group is small, so the provider tool can be light. It only has to get call fairness, privilege matching, and the ED response time right, which a dedicated physician scheduler does and a general staff scheduler often does not. The nursing roster is large and driven by hours, so the nursing side needs coverage, callouts, hours tracking, and an audit trail. Those are different feature sets.
 

@@ -105,8 +105,12 @@ The inventory line was accurate; the leap from it was not.)
 
 **T6. Educational posts mention us only as attribution.**
 Outside the sanctioned product sections, the brand appears only where a fact
-needs its source named. "Our interviews" beats the company name.
-("Do we need to mention us in an educational blog?")
+needs its source named. "Our interviews" beats the company name. The opening
+(excerpt, Key Takeaways, intro) names neither us nor a competitor unless the post
+is about that vendor: the reader came for the topic, not a pitch.
+("Do we need to mention us in an educational blog?"; 2026-10-05, physician
+scheduling post: "why are we naming qgenda specifically in the start?" and
+"we don't have to mention ourselves so soon. It should not sound like a sell")
 
 **T18. Third person for SimpleScheduleAI in comparisons.**
 The product is a subject like any other vendor, not "we" or "ours". Author-voice
