@@ -6,8 +6,8 @@ author: 'Pradeep Pandey'
 title: 'What Is Symplr Smart Square? Owner, Go App and Fit for Small Hospitals (2026)'
 excerpt: >
   When a nearby health system runs its nurse schedule in Smart Square, your administrator may ask whether your hospital should too. This is what symplr documents, what it leaves unpublished, and what a 25-bed hospital should ask in a demo.
-image: ~/assets/images/pool/callout-night-03.webp
-imageCredit: 'AI-generated illustration'
+image: ~/assets/images/blog/heroes/what-is-symplr-smart-square.webp
+imageCredit: 'Screenshot of symplr.com, captured October 6, 2026'
 category: Healthcare Operations
 postType: comparison
 tags:
@@ -242,7 +242,7 @@ If you want a smaller, self-serve tool with a published price for comparison, se
 
 ## What Does Smart Square Cover, and What Stays With the Nurse Manager?
 
-The table below puts each scheduling job next to what symplr documents about Smart Square and what the nurse manager still checks. "Not documented" means symplr's public pages did not describe it as of October 2026. It does not mean the feature is missing, so ask.
+The table below puts each scheduling job next to what symplr documents about Smart Square and what the nurse manager should still check. "Not documented" means symplr's public pages did not describe it as of October 2026. It does not mean the feature is missing, so ask.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -250,7 +250,7 @@ The table below puts each scheduling job next to what symplr documents about Sma
       <tr class="bg-slate-100">
         <th class="border border-slate-300 px-3 py-3 text-left font-semibold text-slate-900 align-top" style="width:24%">Scheduling job</th>
         <th class="border border-slate-300 px-3 py-3 text-left font-semibold text-slate-900 align-top" style="width:38%">What symplr documents</th>
-        <th class="border border-slate-300 px-3 py-3 text-left font-semibold text-slate-900 align-top" style="width:38%">What the nurse manager still checks</th>
+        <th class="border border-slate-300 px-3 py-3 text-left font-semibold text-slate-900 align-top" style="width:38%">What the nurse manager should still check</th>
       </tr>
     </thead>
     <tbody>
