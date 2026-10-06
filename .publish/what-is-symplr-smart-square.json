@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-symplr-smart-square",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-06T10:09:52.325Z",
+      "contentHash": "3de33625608fc91d1d8bcd7a7d3391752462f512a66419740e4fce66625f9af2"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-06T10:09:53.827Z",
+      "contentHash": "3de33625608fc91d1d8bcd7a7d3391752462f512a66419740e4fce66625f9af2"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-06T10:09:55.402Z",
+      "contentHash": "3de33625608fc91d1d8bcd7a7d3391752462f512a66419740e4fce66625f9af2"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-06T10:09:55.431Z",
+      "contentHash": "3de33625608fc91d1d8bcd7a7d3391752462f512a66419740e4fce66625f9af2"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-06T10:09:55.464Z",
+      "contentHash": "3de33625608fc91d1d8bcd7a7d3391752462f512a66419740e4fce66625f9af2"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-06T10:09:55.464Z",
+      "contentHash": "3de33625608fc91d1d8bcd7a7d3391752462f512a66419740e4fce66625f9af2"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-06T10:09:55.466Z",
+      "contentHash": "3de33625608fc91d1d8bcd7a7d3391752462f512a66419740e4fce66625f9af2"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-06T10:09:55.466Z",
+      "contentHash": "3de33625608fc91d1d8bcd7a7d3391752462f512a66419740e4fce66625f9af2"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-10-06T10:09:49.491Z",
+      "contentHash": "934d33d387fc29d42aa4007c4de6d416a69603f56757b71af8a1ef45def40007"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-06T10:09:50.430Z",
+      "contentHash": "934d33d387fc29d42aa4007c4de6d416a69603f56757b71af8a1ef45def40007"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-06T10:09:51.239Z",
+      "contentHash": "934d33d387fc29d42aa4007c4de6d416a69603f56757b71af8a1ef45def40007"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 80.8,
+        "headings": 84.6,
+        "actionability": 37.5,
+        "attention": 92.3
+      },
+      "overall": 72,
+      "counts": {
+        "sections": 13,
+        "rereads": 10,
+        "undefinedTerms": 5,
+        "headingsAnswered": 11,
+        "mondayActions": 3,
+        "blockedActions": 5,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-10-06T00:00:00Z",
+      "postType": "comparison",
+      "observations": {
+        "undefinedTerms": [
+          "GE-era predecessor (symplr Workforce table row and the paragraph under it)",
+          "single sign-on (SSO) and Active Directory (login FAQ)",
+          "\"what the patent covers\" (demo question 6)",
+          "Balanced / Fairness Optimized / Cost Optimized drafts",
+          "Fit labels \"Ask for a reference\" vs \"Test first\" vs \"Ask first\""
+        ],
+        "mondayActions": [
+          "Write down how many nurses could actually take my hardest-to-fill shift",
+          "Pull last month's census and mark the nights two admissions changed staffing",
+          "Save the seven demo questions in case my administrator brings up Smart Square"
+        ],
+        "blockedActions": [
+          "Ask your staffing or scheduling office for the correct sign-in link: at a 25-bed hospital the scheduling office is me",
+          "Ask what the patent covers: the post does not say why the patent matters to my decision",
+          "Show symplr a month of census swings and ask how the forecast performs: no guidance on what a good or bad answer sounds like",
+          "Time one schedule build and compare against what each option leaves on your desk: no Smart Square time to compare against",
+          "Ask whether a health system you belong to licenses Smart Square: does not apply to a standalone hospital, and nothing replaces it for that case"
+        ],
+        "sections": [
+          {
+            "heading": "What Is Symplr Smart Square?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Who Owns Smart Square, and What Changed After symplr Bought It?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does Smart Square Scheduling Work?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Smart Square Go, and Is Smart Square Free?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is the Difference Between symplr Workforce and Smart Square?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Is Smart Square Different From SmartLinx?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What Do Smart Square Reviews Say About Support and Onboarding?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "Which Hospitals and Industries Use Smart Square?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does Smart Square Cover, and What Stays With the Nurse Manager?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should You Ask symplr to Show in a Smart Square Demo?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Differ From Smart Square?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-10-06T10:00:30.190Z",
+      "contentHash": "eb1e100179ee2478ffd8656f2c3c1561c7a639ed43e21241c9ea2a59785b3af2"
+    }
+  }
+}

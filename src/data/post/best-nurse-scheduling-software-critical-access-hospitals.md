@@ -310,7 +310,7 @@ For a CAH weighing NurseGrid as a primary scheduling system, two reviewer-flagge
 
 <img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/smart-square.webp" alt="symplr Smart Square nurse and staff scheduling platform" width="1200" height="563" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-symplr Smart Square, formerly Avantas Smart Square and acquired by symplr from AMN Healthcare in July 2025, holds 4.6/5 on Capterra (19 reviews; small sample). It is an AI-driven nurse and staff scheduling platform with predictive analytics and a two-time Best in KLAS win for Scheduling: Nurse and Staff (2025 and 2026), the strongest independent quality signal among the enterprise tools here.
+[symplr Smart Square](/blog/what-is-symplr-smart-square), formerly Avantas Smart Square and acquired by symplr from AMN Healthcare in July 2025, holds 4.6/5 on Capterra (19 reviews; small sample). It is an AI-driven nurse and staff scheduling platform with predictive analytics and a two-time Best in KLAS win for Scheduling: Nurse and Staff (2025 and 2026), the strongest independent quality signal among the enterprise tools here.
 
 The positioning points away from a CAH: symplr markets Smart Square as enterprise workforce optimization, and its reviewer base skews to large-system roles with no CAH, rural, or 25-bed-or-fewer reference reviews. The capability is real; it is built for a different scale. One system administrator captured the learning curve.
 

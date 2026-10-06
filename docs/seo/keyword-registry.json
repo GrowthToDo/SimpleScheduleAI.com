@@ -910,6 +910,14 @@
     "note": "Published 2026-10-05. MOFU explainer: medical staff scheduling splits into provider call (QGenda-class tools) and nursing (our lane); states plainly that SSAI does not schedule physicians. Secondary: medical staff scheduling, provider on-call scheduling. Word-overlap warns vs best-scheduling-software-25-bed-hospital and hospital-staff-scheduling-software-critical-access are word-level only; intent differs (provider vs nursing)."
   },
   {
+    "slug": "what-is-symplr-smart-square",
+    "type": "post",
+    "url": "/blog/what-is-symplr-smart-square",
+    "primaryKeyword": "symplr smart square",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-10-06 (next-15 Oct plan #2). Vendor explainer (what it is, how it works, Go app, cost, Workforce merger, SmartLinx positioning, fit); switch intent hands off to /blog/smart-square-alternatives-small-rural-hospitals. Secondary: smart square scheduling, smart square go, symplr workforce vs smart square. GSC questions that landed on the alternatives page (79 impr, pos 3-7, Jul-Sep 2026) are the H2 source."
+  },
+  {
     "slug": "mandatory-nurse-overtime-by-state",
     "type": "post",
     "url": "/blog/mandatory-nurse-overtime-by-state",
