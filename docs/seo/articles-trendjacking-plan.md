@@ -103,6 +103,78 @@ from scratch or publish an unchecked hook.
   skews away from the ICP. Revised score 2 x 2 x 5 x 1 = 20. The thin SERP reflects a thin
   audience, not an opening.
 
+### Detection pass 2026-10-07 (founder-supplied links, triaged by two agents)
+
+### HELD - Northern Maine Medical Center ED nurse resignations (founder: "save for next week")
+
+- **Held on:** 2026-10-07, founder. **Reconsider:** week of 2026-10-12 (after the JAMA
+  piece). Score 36: Relevance 4 (Tier 1, nurse labor at a 25-bed CAH) x Rising 3 x
+  First 3 x Hook 1. Not a Texas story; say so plainly, the lesson travels.
+- **Sources to cite (only these):** Bangor Daily News, Kathleen Phalen Tomaselli,
+  2026-10-01 and 2026-10-02; The Maine Monitor, John Forbes, 2026-10-01 (direct fetch
+  failed with a header error; a Yahoo syndicated copy was read). Never cite
+  news.ssbcrack.com (2026-10-06): an unsourced rewrite site with a "News Desk" byline.
+- **What the triage read (2026-10-07, agent-read, UNVERIFIED until the writer re-reads
+  the originals and quotes them):** NMMC, Fort Kent, Maine, described by BDN as a
+  25-bed Critical Access Hospital. ED sees about 7,000 visits a year. In June the ED had
+  13 RNs (10 full-time, 3 per-diem); 5 full-time and 1 per-diem have since left or
+  given notice. No ED diversion or closure reported. Three contract nurses brought in.
+  Night registration clerk position cut 2026-09-06. A plan to go from two overnight
+  RNs to one was withdrawn. The nurses' letter cites pressure to work a day/night
+  rotation, "changes to scheduling practices", short staffing, and travelers paid
+  $50 to $90/hr plus housing. Hospital says the departures were for other
+  opportunities. NMMC lost $3.6M in FY2025 (Maine Monitor). Confirm CAH status
+  independently (Flex Monitoring CAH list) and the bed count.
+- **Candidate hook:** the coverage arithmetic of a 24/7 ED staffed with two RNs per
+  shift (shifts per week x 2 RNs, against 10 full-time RNs at their contracted hours),
+  and what losing 5 of them does to the remaining nurses' nights; labelled
+  illustrative, built only from the published headcounts. Second strand: a mandatory
+  day/night rotation is a schedule policy a hospital controls; what the evidence says
+  about rotating shifts (find a primary study before claiming any health or retention
+  effect).
+- **Guardrails:** labor dispute, so stay neutral and carry the hospital's own
+  explanation in its words. Overlaps `nurse-shortage-or-retention-crisis-rural-hospitals`
+  (it already has a "cost of one resignation" calc), so lead with rotation policy and
+  night coverage, not resignation cost. Light overlap with `july-2026-nurse-strikes-staffing`.
+  No force-fit product section. Re-check the story the day it is written (more
+  resignations, diversion, or a hospital statement may have followed).
+
+Kept (see recommendation in session): **UPDATE** `texas-medicaid-freeze-critical-access-hospitals`
+with the CMS 9/16/2026 CHIRP approval record (score 60; primary docs on
+pfd.hhs.texas.gov CHIRP page); **WRITE** JAMA Netw Open 2026-09-28, Poisler & Gujral,
+"Rural Hospital Closures and Mortality From Time-Sensitive Conditions in Texas" (48;
+PLANNED, brief at `docs/seo/briefs/2026-10-jama-texas-rural-closures-mortality.md`,
+facts read from the full text via Europe PMC PMC13621260. Corrections to the triage:
+the 6.85 is a broader-definition sensitivity estimate incl. injuries, not significant;
+the 79 excluded counties were dropped for CDC suppression of counts under 10, not
+chosen as "most rural" (they skew smaller and more rural); license CC-BY-NC-ND, so
+quote briefly and link figures, never reproduce them); **HOLD** Northern Maine
+Medical Center (Fort Kent, 25-bed CAH) ED nurse resignations over day/night rotation
+(36; cite Bangor Daily News Oct 1-2 and The Maine Monitor Oct 1 only, never
+news.ssbcrack.com, an unsourced rewrite site; carry the hospital's explanation;
+overlaps nurse-shortage-or-retention-crisis on resignation cost, so lead with rotation
+policy and night coverage).
+
+Dropped, with reasons:
+
+- **Modoc Medical Center (Alturas, CA, 12-bed CAH) data breach** (HIPAA Journal 2026-09-28):
+  score 0. Breach was Jan 2026 data theft with no reported scheduling or clinical
+  outage, so a 485.625 downtime angle would overclaim; overlaps
+  `where-does-your-nurse-schedule-live`; SERP is legal-intent.
+- **Exceptional Community Hospital, Rapid City**: score 0. A for-profit urban
+  micro-hospital, not a CAH.
+- **$51M rural Texas chronic-disease awards** (KSST 2026-09-29; CMS release 2026-09-28):
+  score 0. No districts named, so no checkable CAH hook; the $281M award is already
+  covered in `rural-health-transformation-deadline-nurse-salaries`.
+- **"How 1 critical access hospital is facing 2027 cuts"** (Becker's 2026-10-01): score 0
+  as a peg. Arbuckle Memorial (Sulphur, OK) CFO Q&A; the cuts are never named. The
+  Texas 2027 angle lives in the CHIRP freeze and 2028 phase-down instead.
+- **Texas hospital names CNO** (Becker's 2026-09-18): score 0. Medical City North Hills
+  (HCA, DFW metro), not a CAH, no news value.
+- Also noted: 24/7 Wall St (via Yahoo, 2026-10-05) wrongly says the September freeze was
+  the first CMS stop "since 2014"; THA documents a Sept 2021 to Mar 2022 hold. Do not
+  cite it.
+
 ### DROPPED - "Physician Scheduling Software Market" (openPR / Worldwide Market Reports)
 
 - **Dropped on:** 2026-09-18. **Reason:** citable-hook score 0, an automatic fail.

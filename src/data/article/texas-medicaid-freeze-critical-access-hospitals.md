@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-09-18T00:00:00Z
-updateDate: 2026-09-18T00:00:00Z
+updateDate: 2026-10-07T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Were Critical Access Hospitals Caught in the Texas Medicaid Freeze? The Rule Says Yes'
 excerpt: >
@@ -28,6 +28,7 @@ metadata:
 - The Texas rule that decides who CHIRP pays names your designation. It covers a hospital "designated by Medicare as a Critical Access Hospital" ([1 TAC 355.8052](https://www.law.cornell.edu/regulations/texas/1-Tex-Admin-Code-SS-355-8052)). Qualifying is not the same as being enrolled and getting paid
 - Of the stories we read, **one named a small hospital**: Kimble County Hospital District, and only because Moody's cut its credit rating. The story never called it a Critical Access Hospital
 - Medicare pays these hospitals on a cost basis. That is a Medicare rule, and it does nothing for you when a Medicaid program stops paying
+- CMS approved CHIRP for September 2026 to August 2027 in a letter dated September 16, and the approved program document still names Critical Access Hospitals in the rural class. We found no published word on when, or whether, hospitals are paid for September 1 to 17 ([HHSC CHIRP page](https://pfd.hhs.texas.gov/hospitals-clinic/hospital-services/comprehensive-hospital-increase-reimbursement-program))
 
 ## Table of Contents
 
@@ -36,11 +37,13 @@ metadata:
 - [Does Medicare Paying Your Costs Protect You When Medicaid Stops?](#does-medicare-paying-your-costs-protect-you-when-medicaid-stops)
 - [Did Any News Story About the Freeze Name a Critical Access Hospital?](#did-any-news-story-about-the-freeze-name-a-critical-access-hospital)
 - [Has Texas Lost These Medicaid Payments Before?](#has-texas-lost-these-medicaid-payments-before)
-- [What Do We Still Not Know About the Texas Medicaid Payments?](#what-do-we-still-not-know-about-the-texas-medicaid-payments)
+- [What Did CMS's September 16 Approval of Texas CHIRP Settle, and What Is Still Open?](#what-did-cmss-september-16-approval-of-texas-chirp-settle-and-what-is-still-open)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Texas hospitals went seventeen days without a set of Medicaid payments worth billions of dollars a year. It stopped on September 1 and started again on September 17. If you run a Critical Access Hospital in Texas, you would want to know whether your hospital was one of the ones that stopped getting paid. None of the news reports said. The state rules do.
+_Updated October 7, 2026: added what the CMS approval letter says and what it leaves open._
+
+Texas hospitals went seventeen days without a set of Medicaid payments worth billions of dollars a year. It stopped on September 1. CMS signed its approval on September 16, and the governor announced it on September 17. If you run a Critical Access Hospital in Texas, you would want to know whether your hospital was one of the ones that stopped getting paid. None of the news reports said. The state rules do.
 
 ## What Texas Medicaid Payments Stopped on September 1, 2026?
 
@@ -54,12 +57,12 @@ CMS put two objections in a letter dated September 3. It wants the federal tests
 
 Four numbers get quoted in this story and they do not mean the same thing.
 
-| Number                 | What it actually counts                                              | Where it comes from                                            |
-| ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------- |
-| More than $9.8 billion | All three programs, for the state fiscal year that began September 1 | HFMA, September 15, 2026                                       |
-| More than $9.1 billion | CHIRP alone, the hospital program                                    | HFMA, September 15, 2026                                       |
-| $27 million a day      | An estimate of what hospitals statewide were losing, not a count     | Texas Hospital Association, via Texas Tribune, August 31, 2026 |
-| Nearly $12 billion     | What the September 17 approval covers, across five kinds of provider | Governor's office, via Texas Tribune, September 17, 2026       |
+| Number                 | What it actually counts                                                                            | Where it comes from                                            |
+| ---------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| More than $9.8 billion | All three programs, for the state fiscal year that began September 1                               | HFMA, September 15, 2026                                       |
+| More than $9.1 billion | CHIRP alone, the hospital program                                                                  | HFMA, September 15, 2026                                       |
+| $27 million a day      | An estimate of what hospitals statewide were losing, not a count                                   | Texas Hospital Association, via Texas Tribune, August 31, 2026 |
+| Nearly $12 billion     | What the governor's office said on September 17 the approval covers, across five kinds of provider | Governor's office, via Texas Tribune, September 17, 2026       |
 
 The last number covers five kinds of provider and the first covers three programs, which is where most of the roughly $2 billion gap between them comes from. Texas runs five of these programs. The two that pay nursing homes and behavioral health providers were not among the three that stopped, and in 2022 those two were worth about $1.3 billion between them. We could not find current figures published for each program, so the gap does not close exactly.
 
@@ -76,6 +79,8 @@ Yes. The rules that decide who CHIRP pays name Critical Access Hospitals directl
 | [1 TAC 355.8052(b)(35)](https://www.law.cornell.edu/regulations/texas/1-Tex-Admin-Code-SS-355-8052) | Defines rural hospital three ways, and one is a hospital "designated by Medicare as a Critical Access Hospital"    | Your designation is named in the rule |
 
 Here are the three ways. A hospital counts as rural if it sits in a county of 68,750 people or fewer by the 2020 census. Or if Medicare has designated it a Critical Access Hospital, a Sole Community Hospital or a Rural Referral Center, and it sits outside a metro area. Or if it has 100 beds or fewer, holds one of those three designations, and sits inside a metro area.
+
+This year's program document, the one CMS approved on September 16, defines its rural class the same three ways. It names a hospital "designated by Medicare as a Critical Access Hospital" in the same words.
 
 There is older evidence that these hospitals really do take part. A [Texas Hospital Association paper](https://www.tha.org/wp-content/uploads/2023/01/2022-Medicaid-DPP-Whitepaper.pdf) looked at 394 hospitals in CHIRP and counted 77 Critical Access Hospitals among them. It also found that without these programs, "baseline negative adjusted margins in small, rural, and critical access hospitals would fall 1-2%."
 
@@ -125,19 +130,39 @@ What changed is the daily number. In 2021 the association said "hospitals lost m
 
 The same paper warns that "any future interruption, disallowance, or disapproval of DPPs, similar to the lapse that occurred in SFY 2022, would prove destabilizing."
 
-## What Do We Still Not Know About the Texas Medicaid Payments?
+## What Did CMS's September 16 Approval of Texas CHIRP Settle, and What Is Still Open?
 
-Three things, and none of them has been answered in public.
+It settled this year's money and left the argument open. CMS signed the approval letter on September 16, and the governor's office announced it the next day. The letter and Texas's written answers to CMS are [posted on the HHSC CHIRP page](https://pfd.hhs.texas.gov/hospitals-clinic/hospital-services/comprehensive-hospital-increase-reimbursement-program).
 
-Whether hospitals get paid for the seventeen days. No state or federal statement we could find says whether that money is paid back or written off.
+**This year's money is approved.** The letter covers CHIRP for September 1, 2026 through August 31, 2027, up to about $9.15 billion.
 
-Whether Texas had to agree to anything to get the approval. CMS has not released a letter, so nobody outside the talks knows whether Texas changed anything about the hospital fee.
+**CHIRP is capped, and Texas trimmed its request to fit.** CMS says a federal law passed in July 2025 stops CHIRP from growing past about $9.15 billion, which is last year's approved total. Texas had asked for about $9.25 billion. In August, CMS told Texas to come back under the cap.
 
-How long the money takes to show up. Anna Stelter runs policy at the Texas Hospital Association, and [she said this before the approval came through](https://www.texastribune.org/2026/08/31/texas-hospitals-medicaid-funding-chirp/).
+Texas cut its request by about $105.7 million, a little over one percent. Texas cut a quality award, a bonus payment for meeting quality measures, from 95 percent to about 93.7 percent of what commercial insurers pay. Only urban and children's hospitals can earn it this year, according to this year's program document. So the trim came from a part of CHIRP that rural hospitals cannot earn this year.
+
+**The letter does not approve how Texas raises its share.** In its words, it "does not constitute approval of any specific Medicaid financing mechanism" behind the state's share. In Texas, that mechanism is the local hospital fee described above. In [its September 9 answers to CMS](https://pfd.hhs.texas.gov/sites/default/files/documents/hospital-svcs/2026/9-9-2026-cms-round-4-sfy-2027-chirp-pre-print.pdf), Texas pointed out that every CHIRP approval letter since March 2022 carried "substantially similar language." So that sentence is not new.
+
+Texas says what is new is that CMS made approval depend on settling the fee objections first. On September 3, CMS wrote that the two objections "must be resolved before the proposal can be approved." Texas answered that this stood "in stark contrast to CMS' past practices." Nothing HHSC has posted says the objections were resolved before CMS signed on September 16.
+
+**As of September 3, the two sides were still negotiating.** CMS said then that the two sides were still working on a written agreement, called an MOU. CMS had drafted it, Texas had sent back edits, and CMS was helping Texas with the fee calculations. We found nothing published after September 16 that says where those talks stand.
+
+The argument is older than this year's freeze. CMS received a change to last year's CHIRP on November 3, 2025. CMS [approved it on September 16, 2026](https://pfd.hhs.texas.gov/sites/default/files/documents/hospital-svcs/2026/9-16-2026-approved-chirp-pre-print.pdf), more than ten months later.
+
+**The next regular legislative session starts January 12, 2027.** CMS asked for the state laws that set up the fee districts. Texas told CMS those laws have not changed. It added: "The Texas legislature meets biennially and will not reconvene for a regular legislative session until January 12, 2027."
+
+**A cut is scheduled from 2028.** The letter says programs like CHIRP must follow a "phase down" in every program year starting on or after January 1, 2028. The [federal law itself, section 71116(b)](https://www.congress.gov/119/plaws/publ21/PLAW-119publ21.htm), says the payment "shall be reduced by 10 percentage points each year." The cuts continue until the total payment rate for a service reaches a federal limit. For a state like Texas that did not expand Medicaid, that limit is 110 percent of the Medicare rate.
+
+CHIRP's year starts every September 1. On our reading of that wording, the first CHIRP year the cut would touch is the one starting September 1, 2028. The cap and the cut apply because CMS found that CHIRP "likely qualified for the temporary grandfathering period" under that law. CMS calls that finding preliminary and says its policies "will be finalized as part of notice and comment rulemaking."
+
+Two questions are still open.
+
+We could not find out whether hospitals get paid for September 1 to 17. The approved program year begins September 1, 2026, but no published document we read, from CMS or the state, says when or whether money for those days reaches hospitals.
+
+We found no statement on when the money will arrive. Anna Stelter runs policy at the Texas Hospital Association. [Before the approval came through](https://www.texastribune.org/2026/08/31/texas-hospitals-medicaid-funding-chirp/), she estimated that a claims backlog would take at least 90 days to clear.
 
 > "Even if we get an approval soon, there will be a claims backlog that takes at least 90 days to clear. And the bigger the claims backlog, the longer it takes to catch up."
 
-These programs are approved one year at a time. September 17 settled this year's payment. It did not settle the argument.
+These programs are approved one year at a time. September 16 settled this year's money. Nothing we read shows it settled the argument, and CHIRP needs a new approval for the year starting September 1, 2027.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -148,7 +173,8 @@ These programs are approved one year at a time. September 17 settled this year's
     them. The answer was in the state rules the whole time.
     You just had to follow one rule to another. The more useful thing to know is that this is the
     second time in five years, and the daily number is close to four times what it was last time.
-    These programs get approved one year at a time.
+    These programs get approved one year at a time. The September 16 letter approved one year of money.
+    In the last documents we could find, Texas and CMS were still working through the fee objections.
   </p>
 </div>
 
@@ -158,7 +184,7 @@ These programs are approved one year at a time. September 17 settled this year's
 2. **Ask what September's payment looked like.** If you are in the program, find out whether your finance team is treating the gap as late money or as lost money. Those are two different lines on a cash forecast.
 3. **Write down anything you paused.** Hiring, agency use, overtime approval, a piece of equipment. No hospital said any of this publicly, so your own notes may be the only record you get.
 4. **Pull the last eight weeks of overtime by nurse.** If a cost conversation is coming, that is the table you will be asked for. Better to have it before the meeting than to build it during one.
-5. **Put a note in your calendar for next August.** These approvals run a year at a time, and the state's fiscal year starts on September 1.
+5. **Put three dates in your calendar, so your finance lead can plan around when this money could change.** The Texas Legislature next meets in regular session on January 12, 2027, and Texas has told CMS the state law behind the hospital fee has not changed. The next CHIRP year starts September 1, 2027, and it needs a new federal approval. This year's approval came after the year had already started. The federal phase-down applies to program years starting on or after January 1, 2028, which on our reading means the CHIRP year starting September 1, 2028.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Running a Critical Access Hospital in Texas?</p>
@@ -193,7 +219,11 @@ Yes. CMS held up the same three programs from September 2021 through March 2022,
 
 **Q: Will hospitals be paid for the days the payments were stopped?**
 
-Nobody has said. Coverage at the time of the approval noted it was not clear when the money would move. The Texas Hospital Association had said a claims backlog would take at least ninety days to clear.
+We could not find out. No document we found says when or whether money for September 1 to 17 reaches hospitals. The Texas Hospital Association had said a claims backlog would take at least ninety days to clear.
+
+**Q: Is the Texas Medicaid funding dispute settled?**
+
+No. CMS approved this year's CHIRP on September 16, 2026, but the letter says it does not approve how Texas raises its share of the money. As of September 3, CMS said the two sides were still working on a written agreement, called an MOU, over the two fee objections. We found nothing published after September 16 that says where those talks stand. CHIRP needs a new approval for the year starting September 1, 2027.
 
 ## Sources
 
@@ -209,6 +239,10 @@ Nobody has said. Coverage at the time of the approval noted it was not clear whe
 10. KTRE, by Emma Burns, September 2026. The Hawkins quote on rural margins. [ktre.com](https://www.ktre.com/2026/09/05/texas-hospitals-face-27m-daily-loss-federal-medicaid-funds-withheld/)
 11. The Bond Buyer, by Karen Pierog, September 8, 2026. The Moody's downgrade of Kimble County Hospital District. [bondbuyer.com](https://www.bondbuyer.com/news/texas-hospitals-face-financial-headwinds)
 12. Superior HealthPlan, Directed Payment Program provider FAQ. The CHIRP in network requirement. [superiorhealthplan.com](https://www.superiorhealthplan.com/content/dam/centene/Superior/Provider/PDFs/dpp-faq-508.pdf)
+13. CMS approval letter for SFY 2027 CHIRP, signed by John Giles, September 16, 2026, with the approved SFY 2027 CHIRP preprint. The program year, the approved total, the financing disclaimer, the cap, the 2028 phase-down sentence, the rural class wording and who can earn the quality award. Posted by HHSC as the "Approved SFY 2027 CHIRP Pre-Print Package as of 9/16/2026." [hhs.texas.gov](https://pfd.hhs.texas.gov/hospitals-clinic/hospital-services/comprehensive-hospital-increase-reimbursement-program) (package download: [hhsc.texas.gov](https://rad-apps.hhsc.texas.gov/downloads/9-16-2026-approved-chirp-pre-print.zip))
+14. Texas Health and Human Services Commission, Texas Response to CMS Round 4 Questions for SFY 2027 CHIRP Pre-Print, September 9, 2026. CMS's questions of June through September, the $9,254,513,046 request and the trim, the two fee objections, the MOU talks and the Legislature date. [hhs.texas.gov](https://pfd.hhs.texas.gov/sites/default/files/documents/hospital-svcs/2026/9-9-2026-cms-round-4-sfy-2027-chirp-pre-print.pdf)
+15. CMS approval letter for the SFY 2026 CHIRP amendment, September 16, 2026. The November 3, 2025 submission date. [hhs.texas.gov](https://pfd.hhs.texas.gov/sites/default/files/documents/hospital-svcs/2026/9-16-2026-approved-chirp-pre-print.pdf)
+16. Public Law 119-21, section 71116, signed July 4, 2025. The 10 percentage point yearly reduction and the 110 percent of Medicare limit. [congress.gov](https://www.congress.gov/119/plaws/publ21/PLAW-119publ21.htm)
 
 A note on who wrote this. We build [nurse scheduling software](/nurse-scheduling-software) for critical access hospitals in Texas. Nothing we sell would have changed anything about this freeze, and we are not going to pretend otherwise. If you want to know what we actually do, start with [how it works](/how-it-works), or read our background pages on [critical access hospital scheduling](/critical-access-hospital-scheduling) and [AI nurse scheduling](/ai-nurse-scheduling).
 
