@@ -54,6 +54,8 @@ underclaims with equal care.
 **T4. The reader's words, not stat-speak or formal register.**
 Read each abstract noun and ask whether a DON says it aloud.
 ("consumer" for a time cost; "patient safety" where a nurse says "falls" or "med errors"; "a hospital may not require HOURS beyond the shift" — founder 2026-09-02: "what is requiring hours?" Put the person in the sentence: making a nurse keep working after her shift ends.)
+Research write-ups are where this fails hardest. A study's own vocabulary (study designs, confidence intervals, p-values, "treated" or "comparison" groups, sensitivity checks) stays out of the body; say once, in plain words, who was compared with whom, and translate each number into what it means for one county or one hospital. Every count names its noun ("3 of the 14 closed hospitals", never "3 of the 14").
+(Founder 2026-10-07, JAMA closures article: "what are comparison counties, closure counties?", "14 what?", "the whole article is sounding too statistical, technical. Our ICP might not understand the whole thing.")
 
 **T5. Simple sentences. If the founder asks what a passage means, a reader is already lost.**
 Any sentence needing two reads gets split. Most-repeated feedback in the project.
