@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "slug": "rural-hospital-closures-mortality-texas-jama",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-07T16:49:50.150Z",
+      "contentHash": "2cf90ddd7115b8fc24b70c65e7ab194525ba4be9e0b6f216343298d77f3cc296"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-07T16:49:51.703Z",
+      "contentHash": "2cf90ddd7115b8fc24b70c65e7ab194525ba4be9e0b6f216343298d77f3cc296"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-07T16:49:55.130Z",
+      "contentHash": "2cf90ddd7115b8fc24b70c65e7ab194525ba4be9e0b6f216343298d77f3cc296"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-07T16:49:55.211Z",
+      "contentHash": "2cf90ddd7115b8fc24b70c65e7ab194525ba4be9e0b6f216343298d77f3cc296"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-07T16:49:55.261Z",
+      "contentHash": "2cf90ddd7115b8fc24b70c65e7ab194525ba4be9e0b6f216343298d77f3cc296"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-07T16:49:55.262Z",
+      "contentHash": "2cf90ddd7115b8fc24b70c65e7ab194525ba4be9e0b6f216343298d77f3cc296"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-07T16:49:55.263Z",
+      "contentHash": "2cf90ddd7115b8fc24b70c65e7ab194525ba4be9e0b6f216343298d77f3cc296"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-07T16:49:55.265Z",
+      "contentHash": "2cf90ddd7115b8fc24b70c65e7ab194525ba4be9e0b6f216343298d77f3cc296"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-10-07T16:49:47.403Z",
+      "contentHash": "345b801514b64041ec8ccd5a3f9c3eb8d74242299fc465235f9505df389bb052"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-07T16:49:48.248Z",
+      "contentHash": "345b801514b64041ec8ccd5a3f9c3eb8d74242299fc465235f9505df389bb052"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-07T16:49:49.013Z",
+      "contentHash": "345b801514b64041ec8ccd5a3f9c3eb8d74242299fc465235f9505df389bb052"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 68.8,
+        "headings": 87.5,
+        "actionability": 33.3,
+        "attention": 87.5
+      },
+      "overall": 67.1,
+      "counts": {
+        "sections": 8,
+        "rereads": 10,
+        "undefinedTerms": 5,
+        "headingsAnswered": 7,
+        "mondayActions": 2,
+        "blockedActions": 4,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-10-07T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "border-county design / service-area design (the table labels the two approaches with long descriptions; the short names appear later without being tied back to the rows)",
+          "\"a method that fixes a known weakness in the standard one\" (which weakness, so why should I trust the second method more or less?)",
+          "\"a published list\" / \"a broader published list\" of causes of death (whose list, and how it relates to the four conditions)",
+          "\"counted as rural by the study's test\" (what test)",
+          "Chartis (who they are, why their count matters)"
+        ],
+        "mondayActions": [
+          "Pull our heart attack, stroke and sepsis emergency protocols and check whose names are on the annual training list",
+          "Write down every hospital our transfers go to, with drive time from our door"
+        ],
+        "blockedActions": [
+          "Check whose names are on the protocol training list: the post does not say who should be on it or what a gap looks like",
+          "List transfer hospitals and work from 'your own list' of at-risk hospitals: Chartis does not name them and the post gives no way to tell which of mine are at risk",
+          "Check night and weekend ER coverage 'if more patients start coming from a county next door': no sense of how many more patients, so nothing to staff against",
+          "Ask the EMS director how run times would change: fine to ask, but nothing on what to do with the answer"
+        ],
+        "sections": [
+          {
+            "heading": "What Did the New JAMA Study Find About Rural Hospital Closure Mortality in Texas?",
+            "rereadCount": 4,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Which Rural Texas Hospitals Closed Between 2007 and 2018?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Many Extra Deaths Is That for a Small Texas County?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Why Did the Study Leave Out the Smallest Texas Counties?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Do Deaths Rise in Counties Next to a Closed Rural Hospital?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does the Texas Rural Hospital Closure Study Not Show?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 2,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-10-07T16:38:03.931Z",
+      "contentHash": "f13b76f8eeaea18338b3dbd903559ee9611f786e67b83f46a2e5fc6c78a8fbc8"
+    }
+  }
+}

@@ -143,7 +143,7 @@ Kept (see recommendation in session): **UPDATE** `texas-medicaid-freeze-critical
 with the CMS 9/16/2026 CHIRP approval record (score 60; primary docs on
 pfd.hhs.texas.gov CHIRP page); **WRITE** JAMA Netw Open 2026-09-28, Poisler & Gujral,
 "Rural Hospital Closures and Mortality From Time-Sensitive Conditions in Texas" (48;
-PLANNED, brief at `docs/seo/briefs/2026-10-jama-texas-rural-closures-mortality.md`,
+PUBLISHED 2026-10-07 as `/articles/rural-hospital-closures-mortality-texas-jama`; brief at `docs/seo/briefs/2026-10-jama-texas-rural-closures-mortality.md`,
 facts read from the full text via Europe PMC PMC13621260. Corrections to the triage:
 the 6.85 is a broader-definition sensitivity estimate incl. injuries, not significant;
 the 79 excluded counties were dropped for CDC suppression of counts under 10, not

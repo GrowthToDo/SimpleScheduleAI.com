@@ -948,5 +948,13 @@
     "primaryKeyword": "nurse schedule data privacy",
     "pillar": null,
     "note": "Newsroom article published 2026-09-12. Backfilled 2026-10-01 (monthly audit step 6)."
+  },
+  {
+    "slug": "rural-hospital-closures-mortality-texas-jama",
+    "type": "article",
+    "url": "/articles/rural-hospital-closures-mortality-texas-jama",
+    "primaryKeyword": "rural hospital closure mortality",
+    "pillar": null,
+    "note": "Newsroom article published 2026-10-07. Peg: JAMA Netw Open 2026-09-28, Poisler & Gujral, Texas rural hospital closures 2007-2018 and time-sensitive mortality (+11.60 / +11.52 per 100,000, 5.4%). Secondary: rural hospital closures texas (word-overlap warn vs /blog/rural-texas-hospital-nurse-scheduling-2026; different intent). Brief: docs/seo/briefs/2026-10-jama-texas-rural-closures-mortality.md."
   }
 ]

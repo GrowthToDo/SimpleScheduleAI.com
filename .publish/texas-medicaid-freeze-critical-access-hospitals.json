@@ -65,9 +65,9 @@
     },
     "indexNow": {
       "value": "DONE",
-      "setBy": "claude",
-      "setAt": "2026-09-18T09:35:00.192Z",
-      "contentHash": "e8f0ccaccfc2acf1a5115014d1f2a9ac449c881272975d030524ae06a2950484"
+      "setBy": "main-session",
+      "setAt": "2026-10-07T16:24:20.273Z",
+      "contentHash": "a813b6d7c39c77d75fd649e84743f9d7bbb84d56bbe4cb5a4b925083fba1bba6"
     },
     "imageEyeball": {
       "value": "OK",
@@ -77,9 +77,9 @@
     },
     "gscSitemap": {
       "value": "DONE",
-      "setBy": "claude",
-      "setAt": "2026-09-18T09:34:58.923Z",
-      "contentHash": "e8f0ccaccfc2acf1a5115014d1f2a9ac449c881272975d030524ae06a2950484"
+      "setBy": "main-session",
+      "setAt": "2026-10-07T16:24:21.040Z",
+      "contentHash": "a813b6d7c39c77d75fd649e84743f9d7bbb84d56bbe4cb5a4b925083fba1bba6"
     }
   },
   "overrides": []
