@@ -1,4 +1,6 @@
 <script>
+  import { FREE_EMAIL_DOMAINS } from '~/utils/work-email';
+
   // Scheduling cost calculator (ungated, 2026-10-01).
   // Every result is visible as the sliders move. Savings are never quoted as a
   // percentage: the only reduction we state is the approved `hours-returned`
@@ -68,19 +70,11 @@
   // Same Apps Script web app as the template gate (one deployment, one URL); it routes on
   // `kind`, re-checks the email domain, recomputes every number from the inputs, emails a
   // one-page PDF and logs the request to the "Calculator breakdowns" tab.
-  // Source and setup: docs/ops/leads-apps-script.md. Keep FREE_EMAIL_DOMAINS in step with it.
+  // Source and setup: docs/ops/leads-apps-script.md. The domain list lives in src/utils/work-email.ts.
   const LEADS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxFlkPVZ9S6GBPFMmC0X34LF5OdGzriEZ117j75KnH_wgeGURq42NZudLfaKf1eoRBD/exec';
   const connected = LEADS_SCRIPT_URL.startsWith('https://');
   const showBreakdownForm = connected || import.meta.env.DEV;
 
-  const FREE_EMAIL_DOMAINS = [
-    'gmail.com', 'googlemail.com', 'yahoo.com', 'ymail.com', 'rocketmail.com', 'hotmail.com',
-    'outlook.com', 'live.com', 'msn.com', 'aol.com', 'icloud.com', 'me.com', 'mac.com', 'proton.me',
-    'protonmail.com', 'pm.me', 'gmx.com', 'gmx.net', 'mail.com', 'yandex.com', 'zoho.com',
-    'zohomail.com', 'tutanota.com', 'fastmail.com', 'hey.com', 'comcast.net', 'att.net',
-    'sbcglobal.net', 'verizon.net', 'cox.net', 'charter.net', 'bellsouth.net', 'earthlink.net',
-    'juno.com', 'rediffmail.com', 'qq.com', '163.com',
-  ];
   const ROLES = [
     'Director of Nursing / CNO',
     'Nurse manager or charge nurse',

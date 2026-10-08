@@ -1,50 +1,12 @@
 ---
+import { FREE_EMAIL_DOMAINS } from '~/utils/work-email';
+
 // Emails the nurse schedule template (.xlsx) to a work address. The Apps Script
 // behind TEMPLATE_SCRIPT_URL re-checks the domain, logs the request to the
 // "Template leads" tab and sends the file from Drive. Source and setup:
 // docs/ops/leads-apps-script.md (one script for the template and the calculator).
 const TEMPLATE_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbxFlkPVZ9S6GBPFMmC0X34LF5OdGzriEZ117j75KnH_wgeGURq42NZudLfaKf1eoRBD/exec';
-
-const FREE_EMAIL_DOMAINS = [
-  'gmail.com',
-  'googlemail.com',
-  'yahoo.com',
-  'ymail.com',
-  'rocketmail.com',
-  'hotmail.com',
-  'outlook.com',
-  'live.com',
-  'msn.com',
-  'aol.com',
-  'icloud.com',
-  'me.com',
-  'mac.com',
-  'proton.me',
-  'protonmail.com',
-  'pm.me',
-  'gmx.com',
-  'gmx.net',
-  'mail.com',
-  'yandex.com',
-  'zoho.com',
-  'zohomail.com',
-  'tutanota.com',
-  'fastmail.com',
-  'hey.com',
-  'comcast.net',
-  'att.net',
-  'sbcglobal.net',
-  'verizon.net',
-  'cox.net',
-  'charter.net',
-  'bellsouth.net',
-  'earthlink.net',
-  'juno.com',
-  'rediffmail.com',
-  'qq.com',
-  '163.com',
-];
 
 const roles = [
   'Director of Nursing / CNO',

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { workEmailError } from '~/utils/work-email';
   /*
    * SimpleScheduleAI — interactive "try it yourself" scheduler demo.
    * Svelte 5 island. All scheduling logic lives in ./engine (pure + unit-tested);
@@ -72,6 +73,7 @@
 
   // CTA form
   let email = $state('');
+  let emailError = $state('');
   let role = $state('');
   let sending = $state(false);
   let sent = $state(false);
@@ -402,6 +404,8 @@
   async function submitEmail(e: SubmitEvent) {
     e.preventDefault();
     if (!email || sending) return;
+    emailError = workEmailError(email);
+    if (emailError) return;
     sending = true;
     try {
       await fetch(CONFIG.captureUrl, {
@@ -640,6 +644,9 @@
               {sending ? 'Sending…' : 'Show me for my hospital'}
             </button>
           </form>
+          {#if emailError}
+            <p class="ssa-email-error" role="alert">{emailError}</p>
+          {/if}
           <a class="ssa-booklink" href={CONFIG.calUrl} target="_blank" rel="noopener" onclick={() => track('demo_book_click')}>
             …or book a 30-minute call →
           </a>
@@ -1356,6 +1363,12 @@
   }
   .ssa-sent {
     color: var(--green);
+    font-weight: 600;
+  }
+  .ssa-email-error {
+    margin-top: 0.6rem;
+    color: #b91c1c;
+    font-size: 0.88rem;
     font-weight: 600;
   }
 

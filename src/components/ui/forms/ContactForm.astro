@@ -1,12 +1,17 @@
 ---
+import { FREE_EMAIL_DOMAINS, WORK_EMAIL_MESSAGE } from '~/utils/work-email';
+
 const formStrings = {
   name: 'Name',
-  email: 'Email',
+  email: 'Work email',
   message: 'Message (unit size, how you schedule today)',
   submit: 'Submit',
   submitting: 'Submitting...',
   success: "Thank you! We'll be in touch soon.",
   error: 'Something went wrong. Please try again or email us directly.',
+  invalidEmail: 'Please enter a valid email address.',
+  workEmail: WORK_EMAIL_MESSAGE,
+  messageHint: 'e.g. 25-bed CAH, 30 nurses, scheduling in Excel',
 };
 
 // Google Apps Script Web App URL - deployed from your Google Sheet
@@ -71,7 +76,8 @@ const GOOGLE_SCRIPT_URL =
         placeholder={formStrings.message}
         required
         aria-required="true"
-        aria-labelledby="input-message-label"></textarea>
+        aria-labelledby="input-message-label"
+        aria-describedby="input-message-hint"></textarea>
       <label
         id="input-message-label"
         for="input-message"
@@ -79,6 +85,7 @@ const GOOGLE_SCRIPT_URL =
       >
         {formStrings.message}
       </label>
+      <p id="input-message-hint" class="mt-1.5 px-1 text-xs text-muted">{formStrings.messageHint}</p>
     </div>
   </fieldset>
 
@@ -109,7 +116,7 @@ const GOOGLE_SCRIPT_URL =
   </div>
 </form>
 
-<script define:vars={{ GOOGLE_SCRIPT_URL, formStrings }}>
+<script define:vars={{ GOOGLE_SCRIPT_URL, formStrings, FREE_EMAIL_DOMAINS }}>
   const initContactForm = () => {
     const form = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
@@ -125,6 +132,21 @@ const GOOGLE_SCRIPT_URL =
       // Hide any previous messages
       successDiv.classList.add('hidden');
       errorDiv.classList.add('hidden');
+
+      // Work email only (shared rule: src/utils/work-email.ts)
+      const email = String(new FormData(form).get('email') || '')
+        .trim()
+        .toLowerCase();
+      const emailProblem = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        ? formStrings.invalidEmail
+        : FREE_EMAIL_DOMAINS.includes(email.split('@')[1] || '')
+          ? formStrings.workEmail
+          : '';
+      if (emailProblem) {
+        errorDiv.textContent = emailProblem;
+        errorDiv.classList.remove('hidden');
+        return;
+      }
 
       // Disable button and show loading state
       submitBtn.disabled = true;
@@ -153,6 +175,7 @@ const GOOGLE_SCRIPT_URL =
         form.reset();
       } catch (error) {
         console.error('Form submission error:', error);
+        errorDiv.textContent = formStrings.error;
         errorDiv.classList.remove('hidden');
       } finally {
         // Re-enable button
