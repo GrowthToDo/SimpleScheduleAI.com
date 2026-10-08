@@ -71,7 +71,7 @@
   // `kind`, re-checks the email domain, recomputes every number from the inputs, emails a
   // one-page PDF and logs the request to the "Calculator breakdowns" tab.
   // Source and setup: docs/ops/leads-apps-script.md. The domain list lives in src/utils/work-email.ts.
-  const LEADS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxFlkPVZ9S6GBPFMmC0X34LF5OdGzriEZ117j75KnH_wgeGURq42NZudLfaKf1eoRBD/exec';
+  const LEADS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz4p0y635-FzHVZM_Euo-D7PfMaFyuRg6GYhuG-0bA9AB8sKevRBCQTuX8sRm2wzNsW/exec';
   const connected = LEADS_SCRIPT_URL.startsWith('https://');
   const showBreakdownForm = connected || import.meta.env.DEV;
 

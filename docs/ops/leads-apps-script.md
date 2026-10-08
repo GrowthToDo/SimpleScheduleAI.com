@@ -8,15 +8,21 @@ deployment and one URL:
 - `kind: "roi_breakdown"`: emails a one-page PDF of the visitor's numbers from the
   scheduling cost calculator. Form: `src/components/widgets/ROICalculatorWidget.svelte`.
 
-**Live since 2026-10-03.** Deployment "Leads v3" of the Apps Script project bound to the
-"SSAI : Contact Form" sheet (owner Gautham). It **executes as simplescheduleai@gmail.com**,
-so every lead email comes from SimpleScheduleAI <simplescheduleai@gmail.com> (replies go to
-support@simplescheduleai.com, which is receive-only Cloudflare Email Routing and cannot send).
+**Live deployment (2026-10-08): "Leads v4", an interim deployment that executes as
+pradeep.pandey99@gmail.com.** Leads v3 ran as simplescheduleai@gmail.com and stopped
+working on 2026-10-08, when that Gmail account was converted into the Google Workspace
+account pradeep@simplescheduleai.com. The converted account is an Editor on the project
+but gets "You do not have permission" on Manage deployments, a Workspace-side setting
+still to fix. Once fixed, redeploy as pradeep@simplescheduleai.com so lead emails come
+from the company domain, and set `TEMPLATE_FILE_ID` back to that account's copy
+(1zde-lJHq_V07sxszkL42Mv255hRvOesA). Replies go to support@simplescheduleai.com, which
+is now a real Google Workspace mailbox (MX moved from Cloudflare Email Routing to Google
+on 2026-10-08).
 Web app URL:
-`https://script.google.com/macros/s/AKfycbxFlkPVZ9S6GBPFMmC0X34LF5OdGzriEZ117j75KnH_wgeGURq42NZudLfaKf1eoRBD/exec`
+`https://script.google.com/macros/s/AKfycbz4p0y635-FzHVZM_Euo-D7PfMaFyuRg6GYhuG-0bA9AB8sKevRBCQTuX8sRm2wzNsW/exec`
 Both forms use it: the calculator (`ROICalculatorWidget.svelte`) and the template gate
 (`TemplateRequestForm.astro`). In the live copy, `TEMPLATE_FILE_ID` points to the .xlsx in
-simplescheduleai@gmail.com's Drive, which must be the deploying account's own file (or shared with it).
+pradeep.pandey99@gmail.com's Drive (1CgBPxdDcZYvlC9ARmC086d90pBwVSCuN), which must be the deploying account's own file (or shared with it).
 The live copy holds the team-alert addresses in `NOTIFY_EMAILS`; this doc keeps
 that list empty because the repo is public.
 
