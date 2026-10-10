@@ -4,6 +4,8 @@
 //
 // The leads Apps Script re-checks this server-side for the calculator and the template
 // (docs/ops/leads-apps-script.md keeps its own copy of the list: keep them in step).
+// Gautham's contact script ("SSAI Form", serves the contact page and the simulator) also
+// holds a copy since 2026-10-10, and drops any submission whose hidden "website" field is filled.
 
 export const FREE_EMAIL_DOMAINS = [
   'gmail.com',

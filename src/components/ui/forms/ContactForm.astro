@@ -24,6 +24,12 @@ const GOOGLE_SCRIPT_URL =
   <fieldset class="space-y-4">
     <legend id="form-title" class="sr-only">{formStrings.submit}</legend>
 
+    {/* Spam trap: hidden from people, bots fill it in, the script drops those submissions */}
+    <div class="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
+      <label for="input-website">Leave this field empty</label>
+      <input type="text" id="input-website" name="website" tabindex="-1" autocomplete="off" />
+    </div>
+
     {/* Name input field */}
     <div class="relative">
       <input
@@ -157,6 +163,7 @@ const GOOGLE_SCRIPT_URL =
         name: formData.get('name'),
         email: formData.get('email'),
         message: formData.get('message'),
+        website: formData.get('website') || '',
         timestamp: new Date().toISOString(),
       };
 
