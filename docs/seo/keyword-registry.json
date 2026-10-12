@@ -918,6 +918,14 @@
     "note": "Published 2026-10-06 (next-15 Oct plan #2). Vendor explainer (what it is, how it works, Go app, cost, Workforce merger, SmartLinx positioning, fit); switch intent hands off to /blog/smart-square-alternatives-small-rural-hospitals. Secondary: smart square scheduling, smart square go, symplr workforce vs smart square. GSC questions that landed on the alternatives page (79 impr, pos 3-7, Jul-Sep 2026) are the H2 source."
   },
   {
+    "slug": "nursing-staff-scheduling-small-hospital",
+    "type": "post",
+    "url": "/blog/nursing-staff-scheduling-small-hospital",
+    "primaryKeyword": "nursing staff scheduling",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-10-12 (next-15 Oct plan #3). Merges three unpublished drafts (how-to-schedule-nurses-critical-access-hospital, nursing-staff-scheduling-best-practices-25-bed, nurse-manager-guide-work-scheduling). Secondary: nurse staffing schedule, how to create a nurse schedule. GSC Jul-Oct 2026: nurse staff scheduling 117 impr (mostly /nurse-scheduling-software pos 46), nurse staffing schedule 92 (12-hour post pos 28.5), how to create a nurse schedule 21 (/resources/nurse-schedule-template pos 56.5). Brief: docs/seo/briefs/2026-10-how-to-schedule-nursing-staff-small-hospital.md."
+  },
+  {
     "slug": "mandatory-nurse-overtime-by-state",
     "type": "post",
     "url": "/blog/mandatory-nurse-overtime-by-state",

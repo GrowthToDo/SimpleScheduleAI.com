@@ -55,7 +55,7 @@ We cover the full comparison separately, including whether a charge nurse counts
 
 The nurse manager's scheduling work breaks down into several distinct tasks, each with its own time and complexity profile:
 
-**Schedule construction:** Building the initial draft schedule for the next 4-6 week period. This involves matching staff availability, credential requirements, contract constraints (maximum hours, minimum rest periods), and patient coverage requirements. In our interview-based model, the initial build at a 20-nurse critical access hospital working in Excel takes 4 to 6 hours per cycle.
+**Schedule construction:** [Building the initial draft schedule](/blog/nursing-staff-scheduling-small-hospital) for the next 4-6 week period. This involves matching staff availability, credential requirements, contract constraints (maximum hours, minimum rest periods), and patient coverage requirements. In our interview-based model, the initial build at a 20-nurse critical access hospital working in Excel takes 4 to 6 hours per cycle.
 
 **Request management:** Processing time-off requests, shift swap requests, and availability changes from staff. These arrive continuously and require the manager to update the schedule, verify that coverage remains intact, and communicate decisions back to staff.
 

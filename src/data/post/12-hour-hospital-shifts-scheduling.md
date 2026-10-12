@@ -217,7 +217,7 @@ before filling weekdays, don't treat weekends as the residual category.
 
 **Step 4: Apply fatigue guards as hard limits.** Set a rule: no nurse works more than
 3 consecutive 12-hour shifts without at least one day off. Enter this as a constraint
-before building the schedule, not as a post-hoc review. For rotating nurses, require
+before [building the schedule](/blog/nursing-staff-scheduling-small-hospital), not as a post-hoc review. For rotating nurses, require
 a minimum of 36 hours between a final night shift and a first day shift to allow
 adequate circadian recovery.
 

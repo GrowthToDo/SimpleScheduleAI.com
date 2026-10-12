@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "slug": "nursing-staff-scheduling-small-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-12T17:24:05.760Z",
+      "contentHash": "630f33ff952a0bc4137aa3b2176ba3a3f07f989e41fcc70b9ddf5854570b598b"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-12T17:24:07.704Z",
+      "contentHash": "630f33ff952a0bc4137aa3b2176ba3a3f07f989e41fcc70b9ddf5854570b598b"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-12T17:24:08.988Z",
+      "contentHash": "630f33ff952a0bc4137aa3b2176ba3a3f07f989e41fcc70b9ddf5854570b598b"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-12T17:24:09.015Z",
+      "contentHash": "630f33ff952a0bc4137aa3b2176ba3a3f07f989e41fcc70b9ddf5854570b598b"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-12T17:24:09.120Z",
+      "contentHash": "630f33ff952a0bc4137aa3b2176ba3a3f07f989e41fcc70b9ddf5854570b598b"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-12T17:24:09.120Z",
+      "contentHash": "630f33ff952a0bc4137aa3b2176ba3a3f07f989e41fcc70b9ddf5854570b598b"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-12T17:24:09.121Z",
+      "contentHash": "630f33ff952a0bc4137aa3b2176ba3a3f07f989e41fcc70b9ddf5854570b598b"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-12T17:24:09.122Z",
+      "contentHash": "630f33ff952a0bc4137aa3b2176ba3a3f07f989e41fcc70b9ddf5854570b598b"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-10-12T17:24:02.750Z",
+      "contentHash": "f85ec66b0a6d3e3cc4b9134db875e90083a87d7f47def73273de7e9cb7d603e7"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-12T17:24:03.709Z",
+      "contentHash": "f85ec66b0a6d3e3cc4b9134db875e90083a87d7f47def73273de7e9cb7d603e7"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-12T17:24:04.564Z",
+      "contentHash": "f85ec66b0a6d3e3cc4b9134db875e90083a87d7f47def73273de7e9cb7d603e7"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 79.2,
+        "headings": 91.7,
+        "actionability": 54.5,
+        "attention": 91.7
+      },
+      "overall": 73.7,
+      "counts": {
+        "sections": 12,
+        "rereads": 10,
+        "undefinedTerms": 5,
+        "headingsAnswered": 11,
+        "mondayActions": 6,
+        "blockedActions": 5,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-10-12T00:00:00Z",
+      "postType": "howto",
+      "observations": {
+        "undefinedTerms": [
+          "0.9 FTE per nurse on three 12s (used in the table before the post explains it two paragraphs later)",
+          "1,830 hours each FTE works after 250 hours of time off (the 2,080 starting figure only appears after the table)",
+          "your own payroll figure (which number in payroll counts as time off per FTE)",
+          "build week (read first as a verb, 'build week and posting date')",
+          "8-and-80 system 'instead' (instead of what, and what is it that 'costs more')"
+        ],
+        "mondayActions": [
+          "Make a ranked callout list now: charge-qualified/unit-qualified nurses not working that day, fewest hours this week first, and log each call",
+          "Count my charge-qualified nurses against 14 charge shifts a week (need at least 5) and pick one nurse to cross-train if I am at or near it",
+          "Check whether any night is covered only by LPNs, since that misses the Texas RN-on-duty rule",
+          "Before posting the next schedule, total every nurse's hours per workweek and flag any fourth 12 in a week",
+          "Pick a weekend cap number (e.g. two per four-week cycle) and start a weekend/holiday count per nurse",
+          "Set a fixed request deadline and posting date and tell the nurses"
+        ],
+        "blockedActions": [
+          "Post far enough ahead: no lead time is given (2, 4 or 6 weeks?), so I cannot set the posting date the Friday task asks for",
+          "Leave room for one callout shift so the first callout does not push a nurse over 40: a nurse on three 12s is at 36, so any 12-hour callout shift goes over 40; I do not know how to leave that room",
+          "Use your own payroll figure for time off: I do not know which report or which hours (PTO, sick, education, orientation) to pull",
+          "Monday count: the This Week step says divide by 36 and compare with the roster, but the table says the real answer includes time off (9.3 vs 10.6); I do not know which number to compare my roster against, or whether to compare against heads or FTEs",
+          "Confirm the Texas RN-per-building rule with your compliance lead: at my size that person may be me"
+        ],
+        "sections": [
+          {
+            "heading": "What Does Nursing Staff Scheduling Involve at a Small Hospital?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Many Nurses Do You Need to Staff a Small Hospital Schedule?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Rules Should You Write Down Before Building a Nurse Schedule?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Create a Nurse Schedule Step by Step?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Far in Advance Should You Post a Nurse Schedule?",
+            "rereadCount": 2,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Keep a Nurse Schedule Fair for Weekends and Holidays?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Check a Nurse Schedule for Overtime and Fatigue Before Posting?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Fix the Nurse Schedule When a Nurse Calls Out?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Review a Nurse Schedule at the End of Each Cycle?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Build a Nurse Schedule?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-10-12T17:17:05.687Z",
+      "contentHash": "47fe704b702a707b8b1db3a3472cb68eb904ae76f43e35098e0f11776ea04999"
+    }
+  }
+}
