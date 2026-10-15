@@ -5,69 +5,69 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:00:46.487Z",
-      "contentHash": "735f8ee1f3642ea84cc25c81dda529f38c5d9f32ca14d78a8eaedf314e7d7989"
+      "checkedAt": "2026-10-15T18:23:42.281Z",
+      "contentHash": "905ef6f2fdc597e4a53461591fdb762f11e659799f192103f7d7b0dffed9515c"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:00:48.398Z",
-      "contentHash": "735f8ee1f3642ea84cc25c81dda529f38c5d9f32ca14d78a8eaedf314e7d7989"
+      "checkedAt": "2026-10-15T18:23:46.209Z",
+      "contentHash": "905ef6f2fdc597e4a53461591fdb762f11e659799f192103f7d7b0dffed9515c"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:00:49.620Z",
-      "contentHash": "735f8ee1f3642ea84cc25c81dda529f38c5d9f32ca14d78a8eaedf314e7d7989"
+      "checkedAt": "2026-10-15T18:23:48.053Z",
+      "contentHash": "905ef6f2fdc597e4a53461591fdb762f11e659799f192103f7d7b0dffed9515c"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:00:49.650Z",
-      "contentHash": "735f8ee1f3642ea84cc25c81dda529f38c5d9f32ca14d78a8eaedf314e7d7989"
+      "checkedAt": "2026-10-15T18:23:48.166Z",
+      "contentHash": "905ef6f2fdc597e4a53461591fdb762f11e659799f192103f7d7b0dffed9515c"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:00:49.791Z",
-      "contentHash": "735f8ee1f3642ea84cc25c81dda529f38c5d9f32ca14d78a8eaedf314e7d7989"
+      "checkedAt": "2026-10-15T18:23:48.709Z",
+      "contentHash": "905ef6f2fdc597e4a53461591fdb762f11e659799f192103f7d7b0dffed9515c"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:00:49.791Z",
-      "contentHash": "735f8ee1f3642ea84cc25c81dda529f38c5d9f32ca14d78a8eaedf314e7d7989"
+      "checkedAt": "2026-10-15T18:23:48.709Z",
+      "contentHash": "905ef6f2fdc597e4a53461591fdb762f11e659799f192103f7d7b0dffed9515c"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:00:49.792Z",
-      "contentHash": "735f8ee1f3642ea84cc25c81dda529f38c5d9f32ca14d78a8eaedf314e7d7989"
+      "checkedAt": "2026-10-15T18:23:48.713Z",
+      "contentHash": "905ef6f2fdc597e4a53461591fdb762f11e659799f192103f7d7b0dffed9515c"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:00:49.793Z",
-      "contentHash": "735f8ee1f3642ea84cc25c81dda529f38c5d9f32ca14d78a8eaedf314e7d7989"
+      "checkedAt": "2026-10-15T18:23:48.716Z",
+      "contentHash": "905ef6f2fdc597e4a53461591fdb762f11e659799f192103f7d7b0dffed9515c"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
       "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-10-15T16:00:33.030Z",
-      "contentHash": "683eeb97fa65cb4812b8ef15f162b54b4dbb1a89fca48baf3980635a9f7257f2"
+      "setAt": "2026-10-15T18:23:34.910Z",
+      "contentHash": "851099895f57cddda881958523b1e17c991aa28378c6c9738b5f7662fbf2e6b8"
     },
     "factCheck": {
       "value": "PASS",
       "setBy": "general-purpose-factcheck",
-      "setAt": "2026-10-15T16:00:34.939Z",
-      "contentHash": "683eeb97fa65cb4812b8ef15f162b54b4dbb1a89fca48baf3980635a9f7257f2"
+      "setAt": "2026-10-15T18:23:36.543Z",
+      "contentHash": "851099895f57cddda881958523b1e17c991aa28378c6c9738b5f7662fbf2e6b8"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-10-15T16:00:36.560Z",
-      "contentHash": "683eeb97fa65cb4812b8ef15f162b54b4dbb1a89fca48baf3980635a9f7257f2"
+      "setAt": "2026-10-15T18:23:38.355Z",
+      "contentHash": "851099895f57cddda881958523b1e17c991aa28378c6c9738b5f7662fbf2e6b8"
     },
     "imageEyeball": {
       "value": "OK",
       "setBy": "founder",
-      "setAt": "2026-10-15T16:01:22.800Z",
-      "contentHash": "683eeb97fa65cb4812b8ef15f162b54b4dbb1a89fca48baf3980635a9f7257f2"
+      "setAt": "2026-10-15T18:23:39.885Z",
+      "contentHash": "851099895f57cddda881958523b1e17c991aa28378c6c9738b5f7662fbf2e6b8"
     }
   },
   "overrides": [],

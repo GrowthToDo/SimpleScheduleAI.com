@@ -43,7 +43,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-A fair nurse schedule spreads the hard shifts evenly across the nurses who work them. The hard shifts are weekends, holidays, nights and charge. Evenly means in proportion to the hours each nurse works, so a nurse on half the hours of a full-time nurse carries about half the load.
+A fair nurse schedule spreads the hard shifts evenly across the nurses who work them. The hard shifts are weekends, holidays, nights and charge. Evenly means by a rule you write down and apply to every nurse: the same weekend frequency for everyone, or a share in proportion to the hours each nurse works.
 
 At a small hospital, such as a [critical access hospital](/critical-access-hospital-scheduling) of 25 beds or fewer, the roster is short enough to count every one of those shifts by hand. This guide is built on that count. A cycle here means one four-week schedule.
 
@@ -97,7 +97,7 @@ The weekend hours are the same either way: 4 × 12 = 48 nurse hours a day, or 6 
       <tr><td class="align-top px-3 py-2 border-b border-slate-100">One nurse exempt from weekends: each other nurse's weekend shifts in a year</td><td class="align-top px-3 py-2 border-b border-slate-100">416 ÷ 10 = about 42, so about 4 more each</td><td class="align-top px-3 py-2 border-b border-slate-100">624 ÷ 9 = about 69, so about 7 more each</td></tr>
       <tr><td class="align-top px-3 py-2 border-b border-slate-100">Holiday shifts per nurse in a year, for 5 holidays</td><td class="align-top px-3 py-2 border-b border-slate-100">5 × 4 = 20, ÷ 11 = about 2</td><td class="align-top px-3 py-2 border-b border-slate-100">5 × 6 = 30, ÷ 10 = 3</td></tr>
       <tr><td class="align-top px-3 py-2 border-b border-slate-100">Share of each charge-qualified nurse's shifts that are charge shifts, with the fewest charge-qualified nurses needed</td><td class="align-top px-3 py-2 border-b border-slate-100">6 nurses: about 9 in 10</td><td class="align-top px-3 py-2 border-b border-slate-100">5 nurses: every shift</td></tr>
-      <tr><td class="align-top px-3 py-2">Same share with two more charge-qualified nurses</td><td class="align-top px-3 py-2">8 nurses: about 7 in 10</td><td class="align-top px-3 py-2">7 nurses: about 7 in 10</td></tr>
+      <tr><td class="align-top px-3 py-2">Same share if you train two more nurses to take charge</td><td class="align-top px-3 py-2">8 nurses: about 7 in 10</td><td class="align-top px-3 py-2">7 nurses: about 7 in 10</td></tr>
     </tbody>
   </table>
 </div>
@@ -110,7 +110,7 @@ Holidays follow the same steps. This count-based approach is an alternative to t
 
 Charge is where the share gets steepest, because the charge nurse is one of the two licensed nurses on each shift. On 12-hour shifts, 2 charge shifts a day is 730 a year. Each nurse works about 133 shifts a year (2 nurses × 2 shifts × 365 days = 1,460, ÷ 11 nurses). Six charge-qualified nurses work 6 × 133 = 798 shifts, so about 9 in 10 of their shifts are charge shifts. On 8-hour shifts, 3 charge shifts a day is 1,095 a year. Each nurse works 219 shifts (2 × 3 × 365 = 2,190, ÷ 10 nurses), so five charge-qualified nurses work exactly 1,095, and every one of their shifts is a charge shift.
 
-Signing off two more nurses brings the share to about 7 in 10 on either shift length. Our guide to [what a charge nurse is](/blog/what-is-a-charge-nurse) explains why that group stays small.
+If you train two more nurses to take charge, the same charge shifts are split among more people. On 12-hour shifts, 8 charge-qualified nurses work 8 × 133 = 1,064 shifts a year, and 730 of them are charge shifts, about 7 in 10. On 8-hour shifts, 7 nurses work 7 × 219 = 1,533 shifts, and 1,095 of them are charge shifts, also about 7 in 10. Our guide to [what a charge nurse is](/blog/what-is-a-charge-nurse) explains why that group stays small.
 
 ## Which Shifts Should You Count for Every Nurse?
 
@@ -138,7 +138,11 @@ Count five things for every nurse, every cycle. Count weekend shifts, holiday sh
 
 Count shifts rather than days. On 8-hour shifts a weekend day has three shifts, and a day count would hide who keeps getting the Saturday night.
 
-A nurse's target is their fair share for their hours: the even share, cut in proportion for a part-time nurse. To put part-time nurses into the divide step, count a half-time nurse as half a nurse. On 12-hour shifts, 10 full-time nurses and 2 half-time nurses count as 11, so each full-time nurse gets about 38 weekend shifts a year and each half-time nurse about 19.
+Decide how part-time nurses share the weekends, because two ways work. One way gives every nurse the same weekend frequency, such as every other weekend, whatever their hours. The other splits weekends in proportion to hours, so a half-time nurse works about half as many. Pick one, write it down, and apply it to everyone.
+
+A nurse's target is then their share under that rule. If you split by hours, count a half-time nurse as half a nurse in the divide step.
+
+On 12-hour shifts, 10 full-time nurses and 2 half-time nurses count as 11. Each full-time nurse then works about 38 weekend shifts a year, about 19 weekends. Each half-time nurse works about 19 weekend shifts.
 
 The callout row shows who the phone calls keep landing on. Picked-up shifts are not on the posted schedule, so take them from your callout log or your timekeeping records. A nurse who covered three extra weekend shifts this cycle has worked those weekends, whatever the posted schedule said.
 
@@ -168,7 +172,7 @@ Our [nursing staff scheduling guide](/blog/nursing-staff-scheduling-small-hospit
 
 ## When Is an Uneven Nurse Schedule Still Fair?
 
-An uneven schedule is still fair when a written rule explains the gap and the rule applies the same way to every nurse it covers. Compare each nurse with others in the same position: part-time nurses against their target for their hours, and permanent night nurses with each other.
+An uneven schedule is still fair when a written rule explains the gap and the rule applies the same way to every nurse it covers. Compare each nurse with others in the same position: part-time nurses against the target your written rule gives them, and permanent night nurses with each other.
 
 **Charge-qualified nurses.** Charge shifts can only go to them, so their charge counts are compared inside that group. A nurse who is not signed off for charge has a charge count of zero, and the fair step is to keep the route to sign-off open.
 
@@ -194,7 +198,7 @@ Requests are handled from the most senior level down. If a senior nurse does not
 
 Seniority decides which weekends a nurse works. The weekend count decides how many. In the 12-hour example, a nurse works about 3 of the 8 weekend days in a cycle, so 4 requests still leave 4 days to cover 3. On 8-hour shifts, a nurse works about 5 of the 8, so only 3 days off can be honored.
 
-If your unit has always honored the most senior nurse's requests first, with no limit, expect pushback from senior nurses. Explain the change and give a grace period. For example, keep current senior nurses on the old arrangement for one full cycle, then move everyone to the new caps.
+If your unit has always given senior nurses first pick with no limit, a cap takes something away from them, so expect senior nurses to object. Explain the change and give a grace period. For example, keep current senior nurses on the old arrangement for one full cycle, then move everyone to the new caps.
 
 After the grace period, apply the policy to everyone at the same level. A policy with exceptions for named nurses stops being a policy. If your hospital already has a written seniority policy, start from it.
 
