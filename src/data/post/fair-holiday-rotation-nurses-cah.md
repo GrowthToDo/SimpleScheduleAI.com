@@ -90,6 +90,8 @@ The A/B/C block method divides your nursing staff into three groups that rotate 
 
 The result is that no group works the same high-demand holiday two years in a row. Group B works Christmas in Year 1, then does not work Christmas again until Year 4.
 
+These groups assume a roster of 20 to 30 nurses, so at 10 or 11 nurses each group has only 3 or 4 nurses. As an example, a 12-hour holiday with two licensed nurses on each shift needs 4 nurses (2 nurses × 2 shifts), and an 8-hour holiday needs 6 nurses (2 nurses × 3 shifts). A group of 3 falls short on either shift length, and with 8-hour shifts no group can cover a holiday alone. For a roster that small, the count-based method in our [fair nurse schedule guide](/blog/fair-nurse-schedule-small-hospital) works better.
+
 <div class="not-prose overflow-x-auto my-8">
   <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">A/B/C block holiday rotation: the three-year cycle</p>
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">

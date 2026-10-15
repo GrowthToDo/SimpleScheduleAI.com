@@ -170,7 +170,13 @@ A fixed calendar matters as much as the lead time. Requests that arrive late mea
 
 ## How Do You Keep a Nurse Schedule Fair for Weekends and Holidays?
 
-Set a number for weekends, [count weekends and holidays for every nurse](/blog/fair-nurse-schedule-small-hospital), and carry the counts from one cycle to the next. "No more than two weekends in a four-week cycle" is one example threshold. Pick yours, write it down, and apply it when you build.
+Set a number for weekends, count weekends and holidays for every nurse, and carry the counts from one cycle to the next. Set your weekend cap from your own count, because shift length changes what a cap can hold. Write it down and apply it when you build.
+
+Take the example above, with two licensed nurses on every shift. A four-week cycle has 8 weekend days. On 12-hour shifts, each weekend day needs 4 licensed-nurse shifts (2 nurses × 2 shifts), so the cycle needs 32 shifts. Spread across 11 nurses (10.6 rounded up), that is about 2.9 weekend shifts each.
+
+A nurse who works a full weekend works 2 shifts, Saturday and Sunday. So 2.9 shifts is about 1.5 full weekends per nurse in four weeks. A cap of two weekends in four weeks, about every other weekend, fits on 12-hour shifts.
+
+On 8-hour shifts, each weekend day needs 6 licensed-nurse shifts (2 nurses × 3 shifts), so the cycle needs 48 shifts. Across 10 nurses (9.6 rounded up), that is about 4.8 weekend shifts each, or about 2.4 full weekends. So expect more than two weekends in four weeks unless you add nurses. Our guide to [counting weekends and holidays for every nurse](/blog/fair-nurse-schedule-small-hospital) works through the full count for a year.
 
 Without a number, weekend shifts go to whoever agrees first. Over a few months, the same few nurses can end up carrying most of them.
 
@@ -218,7 +224,7 @@ For a callout, the routine is short. Log the callout with us and the system gene
 
 Your staff never touches the software. Most of the weekly scheduling hours from the start of this guide go back to the floor. What's left is 1 to 2 hours of review. Onboarding takes 3 to 5 business days. First schedule inside two weeks. See [how it works](/how-it-works) and [pricing](/pricing).
 
-Some honest limitations. Overtime is checked against the FLSA 40-hour workweek only, not the 8-and-80 system. The service does not count nights per nurse, so keep that tally yourself if you rotate nights. It does not check certifications against any rule or track license expiry dates. The log records schedule changes, not the calls you made to fill a shift. It does not set your headcount; the staffing count above stays with you and finance. If you are comparing tools, see our guide to [nurse scheduling software for critical access hospitals](/nurse-scheduling-software).
+Some honest limitations. Overtime is checked against the FLSA 40-hour workweek only, not the 8-and-80 system. The scheduler does not balance nights when it builds the schedule, so check nights yourself if your nurses rotate onto them. Because every shift is marked day or night, we can send you a per-nurse night count for any schedule we built, on request. The service does not check certifications against any rule or track license expiry dates. The log records schedule changes, not the calls you made to fill a shift. It does not set your headcount; the staffing count above stays with you and finance. If you are comparing tools, see our guide to [nurse scheduling software for critical access hospitals](/nurse-scheduling-software).
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 border-l-4 border-amber-500 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">Our Take</p>

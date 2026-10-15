@@ -165,7 +165,7 @@ There are exactly **two roles** in the system: `manager` and `nurse` (`src/lib/a
 | `/swaps` | manager | Approve/deny nurse swap requests after an automatic rule validation; log a swap on behalf of staff. | `src/app/swaps/page.tsx` |
 | `/census` | manager | Set a per-shift census/acuity tier (Blue/Green/Yellow/Red) by date; view read-only census band thresholds. | `src/app/census/page.tsx` |
 | `/rules` | manager | View all scheduling rules; edit selected hard-rule parameters; enable/disable rules; set soft-rule weights; edit census bands. | `src/app/rules/page.tsx` |
-| `/settings/units` | manager | Per-unit configuration: weekend/holiday quotas, schedule period length, on-call limits, OT approval threshold, minimum staffing floor. | `src/app/settings/units/page.tsx` |
+| `/settings/units` | manager | Per-unit configuration: weekend quotas (a holiday quota field exists but no rule reads it; see "Holidays, nights and charge counts"), schedule period length, on-call limits, OT approval threshold, minimum staffing floor. | `src/app/settings/units/page.tsx` |
 | `/settings/holidays` | manager | Manage public holidays per year; one-click add of 10 standard US holidays. | `src/app/settings/holidays/page.tsx` |
 | `/setup` | manager | 3-step Excel import wizard (download template → upload → review → import). Import **wipes all existing data**. | `src/app/setup/page.tsx` |
 | `/audit` | manager | Filterable audit trail (entity, action, date range) with CSV export. | `src/app/audit/page.tsx` |
@@ -267,7 +267,7 @@ Nurse API access is an explicit ordered allow-list in `src/lib/auth/roles.ts` (`
 | **SHIPPED** | 22 rule evaluators registered: **13 hard** (min-staff, charge-nurse, patient-ratio, rest-hours, max-consecutive, icu-competency, level1-preceptor, level2-supervision, no-overlapping-shifts, prn-availability, staff-on-leave, on-call-limits, max-hours-60) and **9 soft** (overtime-v2, weekend-count, consecutive-weekends, holiday-fairness, preference-match, float-penalty, charge-clustering, skill-mix, weekend-exempt). | `src/lib/engine/rules/index.ts` |
 | **SHIPPED** | Managers can enable/disable rules and adjust soft-rule weights (0–10) from the UI. | `src/app/rules/page.tsx` → `PUT /api/rules/[id]` |
 | **SHIPPED** | `no-overlapping-shifts` is locked on and cannot be disabled. | `src/app/rules/page.tsx` — `const LOCKED_RULES = new Set(["no-overlapping-shifts"])` |
-| **SHIPPED** | Per-unit configuration of weekend/holiday quotas, schedule period length, on-call limits, consecutive-weekend cap, OT approval threshold, absolute minimum staffing day/night, acuity extra-staff counts. | `unit` table in `src/db/schema.ts`; `src/app/settings/units/page.tsx` |
+| **SHIPPED** | Per-unit configuration of weekend quotas (a holiday quota field exists but no rule reads it; see "Holidays, nights and charge counts"), schedule period length, on-call limits, consecutive-weekend cap, OT approval threshold, absolute minimum staffing day/night, acuity extra-staff counts. | `unit` table in `src/db/schema.ts`; `src/app/settings/units/page.tsx` |
 | **PARTIAL** | Hard-rule *parameter* editing exists but only for the 8 rules present in a hardcoded map (`rest-hours`, `max-consecutive`, `max-hours-60`, `icu-competency`, `level1-preceptor`, `level2-supervision`, on-call ×2). Other hard rules show "—" and have no Edit button. | `src/app/rules/page.tsx` (`RULE_PARAMS`) |
 | **PARTIAL** | Callout escalation order (`escalationSequence`, default `float → per_diem → overtime → agency`) and low-census send-home order (`lowCensusOrder`) are stored per unit and **displayed** on the unit card, but there is **no form control to change either**. Configurable only by direct API call or seed. | `src/db/schema.ts` (`unit.escalationSequence`, `unit.lowCensusOrder`); `src/app/settings/units/page.tsx` |
 
@@ -422,6 +422,43 @@ fairness.** `scoring.ts` contains the word "night" zero times, and there is no
   are not. Corrected across 27 places in 19 files on 2026-08-12 after the
   founder asked for the claim to be checked against the repo rather than against
   this document.
+
+### Holidays, nights and charge counts (code-verified 2026-10-15)
+
+Read from `cah-scheduler` @ `a02c7e1` (v1.11.0, local clone = `origin/main` per `git ls-remote`). Code read only, nothing executed.
+
+**Holidays: what is defined**
+
+| Status | Claim | Evidence |
+| --- | --- | --- |
+| **SHIPPED** | Holidays are one facility-wide list of named dates per year (name, date, year, active). The table has **no unit column**, so every unit shares the same list. Entered on `/settings/holidays` or the Excel import's Holidays sheet. The generator and the rule check use only active holidays that fall inside the schedule's dates. | `src/db/schema.ts:84-96` (`public_holiday`: `name`, `date`, `year`, `isActive`); `src/lib/engine/rule-engine.ts:261-266` (`.where(eq(publicHoliday.isActive, true))` … `.filter((h) => h.date >= scheduleStartDate && h.date <= scheduleEndDate)`) |
+| **SHIPPED (with defect)** | "Add Standard Holidays" inserts 10 US holidays: New Year's Day, MLK Day, Presidents' Day, Memorial Day, Independence Day, Labor Day, Thanksgiving, Christmas Eve, Christmas Day, New Year's Eve. The five floating holidays use **fixed approximate dates** (`{ name: "Thanksgiving", month: 10, day: 28 }, // 4th Thursday approx`), wrong in 2026 for all five (Thanksgiving is Nov 26, Labor Day Sep 7, MLK Jan 19, Presidents' Feb 16, Memorial May 25). The date string comes from `new Date(year, m, d).toISOString()`, which lands one day early in any browser east of UTC (India). Ops: enter or check every holiday date by hand at onboarding; never trust the button. | `src/app/settings/holidays/page.tsx:33-44`, `:104-105` |
+| **SHIPPED** | Christmas Eve and Christmas Day count as one holiday ("Christmas") in the annual check and the tracking table. The generator's in-schedule count does not merge them. | `src/lib/engine/rules/weekend-holiday-fairness.ts:10-13`; `src/lib/engine/scheduler/runner.ts:18-21` |
+
+**Holidays: how they are balanced**
+
+| Status | Claim | Evidence |
+| --- | --- | --- |
+| **SHIPPED** | **In the generator, within ONE schedule only.** When a shift falls on a holiday, a nurse whose holiday-shift count *in this schedule* is more than 0.5 above the team average gets a penalty: `if (holidayExcess > 0.5) { penalty += weights.holidayFairness * 0.5 * holidayExcess; }`. Inputs: this nurse's assignments on holiday dates in the current schedule; average = total holiday assignments ÷ every staff member in the context (zeros included). No bonus for nurses below the average (unlike weekends). Weight 1.0 Balanced, 3.0 Fairness Optimized, 1.0 Cost Optimized. Tie-break: none specific; on equal total penalty the earlier candidate in the list is kept (`return score < bestScore ? candidate : best;`). The average is recomputed after each accepted local-search swap. | `src/lib/engine/scheduler/scoring.ts:254-296`; `src/lib/engine/scheduler/local-search.ts:282-297`, `:550`, `:610`; `src/lib/engine/scheduler/greedy.ts:104` |
+| **NOT IMPLEMENTED** | **Holiday carryover between periods in the generator.** Weekends are seeded with the prior period's counts; holidays are not. The holiday list passed to scoring is filtered to the schedule's own dates, and the only prior-period data is the last 7 days (for rest and consecutive-day checks). | `rule-engine.ts:266`; `src/lib/engine/scheduler/index.ts:45-63` (prior assignments), `types.ts:68-69` (`historicalWeekendCounts`, no holiday equivalent) |
+| **PARTIAL** | **Calendar-year check, after generation.** The soft rule "Holiday Fairness (Annual)" (seed weight 7.0) counts each nurse's distinct holidays for the schedule's start year (tracking table + the current schedule) and flags a nurse more than one holiday above or below the team's yearly average. It produces a flag in the violation summary (`/api/evaluate`); it does **not** steer the generator. Weekend-exempt nurses are skipped. **Qualifier, why PARTIAL:** the tracking table it reads is written from the Balanced draft at generation time; regenerating deletes the schedule's assignments with foreign keys off and never deletes the old holiday rows, and choosing the Fairness or Cost variant does not update them. Only manual add/remove on the grid keeps the table in step. So the yearly counts can credit a nurse with a holiday the posted schedule gave to someone else. Not runtime-tested; finding is by code read and `grep staffHolidayAssignment` (no delete in `runner.ts` or `scenarios/[id]/route.ts`). | `weekend-holiday-fairness.ts:182-288` (`count > average + 1`, `count < average - 1`); `runner.ts:172-190`, `:241-243`; `src/app/api/schedules/[id]/assignments/route.ts:224-262`, `:335`; `src/db/schema.ts:807-842` |
+| **NOT IMPLEMENTED** | **Year-over-year holiday rotation** ("worked Christmas last year, works Thanksgiving this year"). Nothing reads a prior year: the annual rule queries `eq(staffHolidayAssignment.year, scheduleYear)` only, and it counts how many holidays, not which ones. | `weekend-holiday-fairness.ts:200-216` |
+| **STUB** | **Holiday quota.** `unit.holidayShiftsRequired` ("per schedule period", default 1) is editable on `/settings/units` and loaded into the rule context, but no rule or scoring term reads it. The §3.5 line "weekend/holiday quotas" is true for weekends only. No holiday cap exists either. | `src/db/schema.ts:32-35`; `rule-engine.ts:64`; `grep holidayShiftsRequired src` → no consumer in `src/lib/engine/rules/` or `scheduler/` |
+
+**Nights and charge: what the record holds**
+
+| Status | Claim | Evidence |
+| --- | --- | --- |
+| **NOT IMPLEMENTED** | Night fairness. Confirmed again: `scoring.ts` contains "night" 0 times; no `nightCount` / `nightsWorked` anywhere in `src/` (grep 2026-10-15). | `grep -c -i night src/lib/engine/scheduler/scoring.ts` → 0 |
+| **SHIPPED** | Every assignment points at a shift, and every shift at a shift definition typed `day`, `night`, `evening` or `on_call`. A per-nurse night count for any period is a direct read (assignment → shift → definition). Count only rows whose status is not `called_out` or `cancelled`, as the Excel export does. Service runbook R1 is correct. | `src/db/schema.ts:302-304` (`enum: ["day", "night", "evening", "on_call"]`), `:475-487`; `src/app/api/schedules/[id]/export/route.ts:32`, `:71` |
+| **SHIPPED** | Charge is stored per assignment: `isChargeNurse: integer("is_charge_nurse", …)`, written by the generator and by manual "designate as charge". The Excel export marks charge with `★` and has a "Charge Nurse" column. A per-nurse charge count for any period is therefore a direct read. | `src/db/schema.ts:502-504`; `runner.ts:164`; `export/route.ts:51`, `:155`, `:226` |
+| **NOT IMPLEMENTED** | A running per-nurse charge count, or any rule balancing charge shifts between charge-qualified nurses. Charge clustering only stops two charge-qualified nurses doubling up on one shift. | `scoring.ts` term 7 (see §4.3) |
+
+**Approved wording (service mode)**
+
+- Holidays: "Holidays are balanced against the team's average within each schedule. Your hospital's holiday list is set at onboarding." Do **not** write that holidays are balanced across the year, carried over from last period, rotated from last year, or held to a quota.
+- Nights: "The scheduler does not balance night shifts when it builds the schedule. Every shift in the schedule record is marked day or night, so we can send a per-nurse night count for any period we built, on request."
+- Charge: "The scheduler does not keep a running count of charge shifts. The schedule record marks who held charge on every shift, so a per-nurse charge count can be read off it." The "we can send it on request" offer is code-supported but is not yet in service runbook R1; add charge to R1 before a blog promises it.
 
 ### 4.4 The three variants' weights (verbatim from `weight-profiles.ts`)
 

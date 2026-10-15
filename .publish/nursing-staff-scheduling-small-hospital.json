@@ -5,69 +5,69 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-10-12T18:13:47.470Z",
-      "contentHash": "f48f06a817ef19d08977a0984d78cde9b2b4cc7c30b6d201b811f958fc68e26c"
+      "checkedAt": "2026-10-15T16:00:27.523Z",
+      "contentHash": "e84b1c8d3e221442c3e9991ad28cd49dbeb6088a80c5fd639dafc158d75bfdb7"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-10-12T18:13:49.153Z",
-      "contentHash": "f48f06a817ef19d08977a0984d78cde9b2b4cc7c30b6d201b811f958fc68e26c"
+      "checkedAt": "2026-10-15T16:00:29.759Z",
+      "contentHash": "e84b1c8d3e221442c3e9991ad28cd49dbeb6088a80c5fd639dafc158d75bfdb7"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-12T18:13:50.271Z",
-      "contentHash": "f48f06a817ef19d08977a0984d78cde9b2b4cc7c30b6d201b811f958fc68e26c"
+      "checkedAt": "2026-10-15T16:00:30.853Z",
+      "contentHash": "e84b1c8d3e221442c3e9991ad28cd49dbeb6088a80c5fd639dafc158d75bfdb7"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-12T18:13:50.299Z",
-      "contentHash": "f48f06a817ef19d08977a0984d78cde9b2b4cc7c30b6d201b811f958fc68e26c"
+      "checkedAt": "2026-10-15T16:00:30.882Z",
+      "contentHash": "e84b1c8d3e221442c3e9991ad28cd49dbeb6088a80c5fd639dafc158d75bfdb7"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-10-12T18:13:50.414Z",
-      "contentHash": "f48f06a817ef19d08977a0984d78cde9b2b4cc7c30b6d201b811f958fc68e26c"
+      "checkedAt": "2026-10-15T16:00:30.987Z",
+      "contentHash": "e84b1c8d3e221442c3e9991ad28cd49dbeb6088a80c5fd639dafc158d75bfdb7"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-10-12T18:13:50.414Z",
-      "contentHash": "f48f06a817ef19d08977a0984d78cde9b2b4cc7c30b6d201b811f958fc68e26c"
+      "checkedAt": "2026-10-15T16:00:30.987Z",
+      "contentHash": "e84b1c8d3e221442c3e9991ad28cd49dbeb6088a80c5fd639dafc158d75bfdb7"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-10-12T18:13:50.416Z",
-      "contentHash": "f48f06a817ef19d08977a0984d78cde9b2b4cc7c30b6d201b811f958fc68e26c"
+      "checkedAt": "2026-10-15T16:00:30.988Z",
+      "contentHash": "e84b1c8d3e221442c3e9991ad28cd49dbeb6088a80c5fd639dafc158d75bfdb7"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-10-12T18:13:50.417Z",
-      "contentHash": "f48f06a817ef19d08977a0984d78cde9b2b4cc7c30b6d201b811f958fc68e26c"
+      "checkedAt": "2026-10-15T16:00:30.989Z",
+      "contentHash": "e84b1c8d3e221442c3e9991ad28cd49dbeb6088a80c5fd639dafc158d75bfdb7"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
       "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-10-12T18:13:44.506Z",
-      "contentHash": "fa8f7d05ee5f28a9a03ac266a3fb5d08fd21bd90f7d862ea1cad6aa58db88d22"
+      "setAt": "2026-10-15T16:00:16.100Z",
+      "contentHash": "17ee3e556445be7a9d5097f8bd7ce0ea66745632c6f37f9d0467249836a29335"
     },
     "factCheck": {
       "value": "PASS",
       "setBy": "general-purpose-factcheck",
-      "setAt": "2026-10-12T18:13:43.510Z",
-      "contentHash": "fa8f7d05ee5f28a9a03ac266a3fb5d08fd21bd90f7d862ea1cad6aa58db88d22"
+      "setAt": "2026-10-15T16:00:17.597Z",
+      "contentHash": "17ee3e556445be7a9d5097f8bd7ce0ea66745632c6f37f9d0467249836a29335"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-10-12T18:13:45.432Z",
-      "contentHash": "fa8f7d05ee5f28a9a03ac266a3fb5d08fd21bd90f7d862ea1cad6aa58db88d22"
+      "setAt": "2026-10-15T16:00:19.055Z",
+      "contentHash": "17ee3e556445be7a9d5097f8bd7ce0ea66745632c6f37f9d0467249836a29335"
     },
     "imageEyeball": {
       "value": "OK",
       "setBy": "founder",
-      "setAt": "2026-10-12T18:13:46.311Z",
-      "contentHash": "fa8f7d05ee5f28a9a03ac266a3fb5d08fd21bd90f7d862ea1cad6aa58db88d22"
+      "setAt": "2026-10-15T16:01:21.334Z",
+      "contentHash": "17ee3e556445be7a9d5097f8bd7ce0ea66745632c6f37f9d0467249836a29335"
     },
     "indexNow": {
       "value": "DONE",
