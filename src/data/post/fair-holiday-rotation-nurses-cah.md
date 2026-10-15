@@ -23,9 +23,9 @@ metadata:
 
 - Holiday shift fairness is a recurring flashpoint at small hospitals, and the usual cause is the absence of a documented rotation system rather than any actual favoritism by the manager.
 - The A/B/C block method assigns nurses to one of three groups that rotate through major holidays on a fixed three-year cycle, so no group works the same holiday two years in a row.
-- At a 25-bed CAH with 20-30 nurses, three groups of 7-10 nurses each provide enough coverage for a holiday skeleton crew without requiring agency staff.
-- The method requires two setup decisions before it runs: which holidays are in rotation, and how many nurses constitute minimum safe coverage per shift.
-- New hires and per-diem nurses enter through a defined integration rule, which removes the ad hoc manager judgment that creates most of the grievances.
+- Check that one group can staff a holiday on its own. Multiply the nurses you need per shift by the shifts in a day, and compare that number with the size of one group.
+- The method needs a few setup decisions before it runs, starting with which holidays are in rotation and how many nurses make up minimum safe coverage per shift.
+- New hires and per-diem nurses enter through a defined integration rule, which removes the case-by-case manager judgment that grievances come from.
 
 ## Table of Contents
 
@@ -42,9 +42,9 @@ metadata:
 
 Every nurse manager at a Critical Access Hospital has had this conversation: a nurse pulls up last year's schedule to prove they worked Christmas when someone else had it off. The accusation might be accurate or it might be misremembered, but the manager has no clean way to verify it. Without a written rotation system, the manager must either defend a judgment call or negotiate a swap in real time, both of which signal that holiday fairness is negotiable.
 
-The root cause is structural. Most CAHs assign holidays through a combination of seniority priority, manager discretion, and voluntary swaps. That combination consistently produces the same outcome: nurses who assert preferences early or have social capital with the manager get preferred dates, and nurses who say nothing or are new end up with the unfilled shifts.
+The root cause is structural. When holidays are assigned through a mix of seniority priority, manager discretion and voluntary swaps, the nurses who ask early or are close to the manager can get the dates they want. Nurses who say nothing, or are new, end up with the unfilled shifts.
 
-At a 25-bed hospital, the problem is magnified because there is no float pool. You have 20-30 nurses covering all inpatient shifts, and the holiday skeleton crew is typically 3-5 nurses per shift. Every holiday, you need roughly the same number of bodies, which means the same distribution of sacrifice regardless of who is asking.
+At a 25-bed hospital, the problem is magnified because there is no float pool. The same roster covers every inpatient shift, and a holiday still needs a minimum crew on every shift. Every holiday, you need roughly the same number of bodies, which means the same distribution of sacrifice regardless of who is asking.
 
 <div class="not-prose my-8">
   <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Holiday scheduling without a rotation system</p>
@@ -78,11 +78,11 @@ The solution replaces discretion with a rule-based rotation system that nurses c
 
 ## What Is a Fair Holiday Rotation?
 
-A fair holiday rotation is a written, documented system that assigns nurses to holiday shifts on a predetermined cycle, typically spanning two to three years. Every nurse in the rotation can see when they are scheduled to work each major holiday, and the rotation advances automatically at the end of each cycle. No nurse works the same high-demand holiday two years in a row under a well-structured three-year rotation.
+A fair holiday rotation is a written, documented system that assigns nurses to holiday shifts on a predetermined cycle of a set number of years. Every nurse in the rotation can see when they are scheduled to work each major holiday, and the rotation advances automatically at the end of each cycle. No nurse works the same high-demand holiday two years in a row under a well-structured three-year rotation.
 
 The key word is documented. A rotation that exists only in the manager's memory is functionally the same as discretion-based scheduling, because [nurses cannot verify fairness](/blog/fair-nurse-schedule-small-hospital) and the manager cannot prove it. The system only works if it is written down, distributed, and applied consistently.
 
-For it to qualify as fair by most nursing staff standards, the rotation should satisfy three conditions: equal frequency of holiday coverage across all staff, equal distribution of high-demand dates (Christmas Eve/Christmas Day versus lower-demand holidays like Columbus Day), and a mechanism for new hires to enter the rotation without permanently disadvantaging existing staff.
+As a working standard, a fair rotation meets three conditions: equal frequency of holiday coverage across all staff, equal distribution of high-demand dates (Christmas Eve/Christmas Day versus lower-demand holidays like Columbus Day), and a mechanism for new hires to enter the rotation without permanently disadvantaging existing staff.
 
 ## How Does the A/B/C Block Method Work?
 
@@ -90,7 +90,7 @@ The A/B/C block method divides your nursing staff into three groups that rotate 
 
 The result is that no group works the same high-demand holiday two years in a row. Group B works Christmas in Year 1, then does not work Christmas again until Year 4.
 
-These groups assume a roster of 20 to 30 nurses, so at 10 or 11 nurses each group has only 3 or 4 nurses. As an example, a 12-hour holiday with two licensed nurses on each shift needs 4 nurses (2 nurses × 2 shifts), and an 8-hour holiday needs 6 nurses (2 nurses × 3 shifts). A group of 3 falls short on either shift length, and with 8-hour shifts no group can cover a holiday alone. For a roster that small, the count-based method in our [fair nurse schedule guide](/blog/fair-nurse-schedule-small-hospital) works better.
+Three groups only work if one group can staff a whole holiday. On a roster of 10 or 11 nurses, each group has only 3 or 4 nurses. As an example, a 12-hour holiday with two licensed nurses on each shift needs 4 nurses (2 nurses × 2 shifts), and an 8-hour holiday needs 6 nurses (2 nurses × 3 shifts). A group of 3 falls short on either shift length, and with 8-hour shifts no group can cover a holiday alone. For a roster that small, the count-based method in our [fair nurse schedule guide](/blog/fair-nurse-schedule-small-hospital) works better.
 
 <div class="not-prose overflow-x-auto my-8">
   <p class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">A/B/C block holiday rotation: the three-year cycle</p>
@@ -133,13 +133,13 @@ The method works with any mix of full-time, part-time, and per-diem nurses, but 
 
 Setup requires four decisions before you launch the rotation. Make these decisions with your charge nurses present, document the outcome, and distribute it to all nursing staff before the rotation begins.
 
-**Decision 1: Which holidays are in rotation.** Typical mandatory rotation holidays are Thanksgiving, Christmas Eve, Christmas Day, New Year's Eve, and New Year's Day. Some also include the Fourth of July, Memorial Day, and Labor Day as secondary rotation holidays. Secondary holidays can use the same A/B/C cycle offset by one position (Group B in Year 1 covers secondary holidays while Group A covers primary) or can be handled through a voluntary preference list with manager override.
+**Decision 1: Which holidays are in rotation.** Examples of mandatory rotation holidays are Thanksgiving, Christmas Eve, Christmas Day, New Year's Eve, and New Year's Day. Some also include the Fourth of July, Memorial Day, and Labor Day as secondary rotation holidays. Secondary holidays can use the same A/B/C cycle offset by one position (Group B in Year 1 covers secondary holidays while Group A covers primary) or can be handled through a voluntary preference list with manager override.
 
 **Decision 2: Minimum staffing for a holiday skeleton crew.** Determine the minimum number of RNs and aides required for each shift on a holiday. As an illustration, a 25-bed hospital might set 2 RNs and 2 aides per shift as its holiday floor, though your number will be specific to your unit and census. This is a floor the rotation always staffs at or above.
 
 **Decision 3: Initial group assignment.** Divide your nursing staff into three equal groups. The fairest method is to assign nurses alphabetically by last name and divide into thirds, then conduct a one-time draw to determine which alphabetical third becomes Group A, B, or C. Nurses hired within the same quarter can be assigned together.
 
-**Decision 4: How the rotation handles partial-year availability.** Full-time nurses participate in all holidays in their group's rotation year. Part-time nurses (0.6 FTE or above) participate in a proportional subset, typically two of the three major holidays. Per-diem nurses do not participate in the mandatory rotation but are first on the callout list for holiday coverage bonuses.
+**Decision 4: How the rotation handles partial-year availability.** Full-time nurses participate in all holidays in their group's rotation year. Decide whether part-time nurses join every holiday in their group's year or a share of them, and write the rule down. Per-diem nurses do not participate in the mandatory rotation but are first on the callout list for holiday coverage bonuses.
 
 ## How Do You Handle New Hires, Per-Diem Staff, and Callouts?
 
@@ -217,11 +217,11 @@ One honest limitation: SimpleScheduleAI is not the right tool if your hospital n
 
 **Q: What is a fair holiday rotation system for nurses?**
 
-A fair holiday rotation assigns nurses to holiday shifts on a predetermined, documented cycle so no nurse works the same high-demand holiday two years in a row. It must be written, distributed to all staff, and applied consistently. The A/B/C block method is a common approach at small hospitals because it requires no software and can be verified by any nurse who reads the rotation chart.
+A fair holiday rotation assigns nurses to holiday shifts on a predetermined, documented cycle so no nurse works the same high-demand holiday two years in a row. It must be written, distributed to all staff, and applied consistently. The A/B/C block method is one approach a small hospital can use, because it requires no software and any nurse can check it by reading the rotation chart.
 
 **Q: How do you divide nurses into groups for a holiday rotation?**
 
-Divide nursing staff into three equal groups by an objective method, typically alphabetically by last name, then conduct a randomized draw to assign the alphabetical thirds to Group A, B, or C. Equal group size ensures equal holiday burden distribution. If group sizes are uneven because staff count is not divisible by three, assign the extra nurse to the group with the fewest members.
+Divide nursing staff into three equal groups by an objective method, for example alphabetically by last name, then conduct a randomized draw to assign the alphabetical thirds to Group A, B, or C. Equal group size ensures equal holiday burden distribution. If group sizes are uneven because staff count is not divisible by three, assign the extra nurse to the group with the fewest members.
 
 **Q: What happens when a nurse calls out of a mandatory holiday shift?**
 

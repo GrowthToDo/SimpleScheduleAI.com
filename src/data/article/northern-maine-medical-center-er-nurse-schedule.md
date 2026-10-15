@@ -1,7 +1,7 @@
 ---
-draft: true
-publishDate: 2026-10-15T00:00:00Z
-updateDate: 2026-10-15T00:00:00Z
+draft: false
+publishDate: 2026-10-16T00:00:00Z
+updateDate: 2026-10-16T00:00:00Z
 author: 'Pradeep Pandey'
 title: "What Happens to a Small ER's Night Shifts When Half Its Full-Time Nurses Leave? The Northern Maine Medical Center Math"
 excerpt: >
@@ -47,7 +47,7 @@ Five of the ER's 10 full-time nurses, and 1 of its 3 per diem nurses, have left 
 
 The hospital is in Fort Kent, at the northern tip of Maine. It has 25 beds. The federal government lists it as a Critical Access Hospital in its [hospital data](https://data.cms.gov/provider-data/dataset/xubh-q36u). Its ER sees about 7,000 patients a year, about 19 a day. The next-closest ER is in Caribou, "nearly an hour's drive away," the Monitor reported.
 
-The nurses are represented by the Maine State Nurses Association. They signed a contract with the hospital in May, after about two years of talks. On October 2, the ER nurses gave the chief executive, Jeff Zewe, a signed letter. In the [Bangor Daily News](https://www.bangordailynews.com/2026/10/02/aroostook/aroostook-health/nmmc-emergency-nurse-resignations-toxic-work-environment/) summary, the letter's complaints included staff "pressured into working a shift rotation (a mix of day and night shifts)" and "changes to scheduling practices." The others were a hostile work environment and "a lack of communication between administration and staff." The letter also named a high number of expensive traveling nurses and working short staffed. The letter itself has not been published.
+The nurses are represented by the Maine State Nurses Association. They signed a contract with the hospital in May, after about two years of talks. On October 2, the ER nurses gave the chief executive, Jeff Zewe, a signed letter. In the [Bangor Daily News](https://www.bangordailynews.com/2026/10/02/aroostook/aroostook-health/nmmc-emergency-nurse-resignations-toxic-work-environment/) summary, the letter's complaints included staff "pressured into working a shift rotation (a mix of day and night shifts)" and "changes to scheduling practices." Others included a hostile work environment and "a lack of communication between administration and staff." The letter also named a high number of expensive traveling nurses and working short staffed. The letter itself has not been published.
 
 The hospital gives a different account. Its spokeswoman, Pam Sime, told the [Bangor Daily News](https://www.bangordailynews.com/2026/10/01/aroostook/aroostook-health/emergency-nurses-northern-maine-medical-center-resign/) that two nurses left for "leadership positions at other facilities." One left to become a travel nurse, and one moved out of state. One was a per diem nurse "used intermittently as needed." She also said three of the departing nurses asked to stay on per diem or applied for other jobs in the hospital. "The ER remains staffed with fully qualified staff including RNs," she said.
 

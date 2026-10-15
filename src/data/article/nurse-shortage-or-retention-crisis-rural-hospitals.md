@@ -55,7 +55,7 @@ For a 25-bed rural hospital, it is both at once, and the national framing quietl
 
 The distribution half is well documented. Rural areas carry a disproportionate share of the country's health workforce shortage: the Rural Health Information Hub reports that 63.1 percent of primary care health professional shortage areas are rural, and that provider supply in nonmetro areas runs far below metro areas ([RHIhub, 2026](https://www.ruralhealthinfo.org/topics/health-care-workforce)). A licensed nurse who is not working in a metro hospital is not automatically available to a Critical Access Hospital two hours from the nearest city. Licenses concentrate where the population and the paychecks concentrate.
 
-The retention half then lands on whoever the small hospital already has. When the local pool is thin to begin with, losing one experienced nurse is not diluted across a large staff the way it would be in a 400-bed system. So the national statement "there is no shortage" is true and, for a rural administrator, beside the point. The nurses exist. They are just not on your unit, and the ones who are can leave.
+The retention half then lands on whoever the small hospital already has. When the local pool is thin to begin with, losing one experienced nurse is not diluted across a large staff the way it would be in a 400-bed system. So the national statement "there is no shortage" is true and, for a rural administrator, beside the point. The nurses exist. They are just not on your unit, and [the ones who are can leave](/articles/northern-maine-medical-center-er-nurse-schedule).
 
 ## Why Can a 25-Bed Hospital Not Recruit Its Way Out?
 

@@ -5,57 +5,57 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:01:04.236Z",
-      "contentHash": "9264b12588ef4ca4dd554570cd7f42fb3090969cf7690f04934d220dc41d858a"
+      "checkedAt": "2026-10-15T18:41:16.653Z",
+      "contentHash": "e24bddfb0b29b9e5939af11b4004ca4db450ff64c0f09323840a29eaacd901f4"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:01:06.058Z",
-      "contentHash": "9264b12588ef4ca4dd554570cd7f42fb3090969cf7690f04934d220dc41d858a"
+      "checkedAt": "2026-10-15T18:41:18.931Z",
+      "contentHash": "e24bddfb0b29b9e5939af11b4004ca4db450ff64c0f09323840a29eaacd901f4"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:01:07.106Z",
-      "contentHash": "9264b12588ef4ca4dd554570cd7f42fb3090969cf7690f04934d220dc41d858a"
+      "checkedAt": "2026-10-15T18:41:20.009Z",
+      "contentHash": "e24bddfb0b29b9e5939af11b4004ca4db450ff64c0f09323840a29eaacd901f4"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:01:07.140Z",
-      "contentHash": "9264b12588ef4ca4dd554570cd7f42fb3090969cf7690f04934d220dc41d858a"
+      "checkedAt": "2026-10-15T18:41:20.036Z",
+      "contentHash": "e24bddfb0b29b9e5939af11b4004ca4db450ff64c0f09323840a29eaacd901f4"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:01:07.299Z",
-      "contentHash": "9264b12588ef4ca4dd554570cd7f42fb3090969cf7690f04934d220dc41d858a"
+      "checkedAt": "2026-10-15T18:41:20.149Z",
+      "contentHash": "e24bddfb0b29b9e5939af11b4004ca4db450ff64c0f09323840a29eaacd901f4"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:01:07.300Z",
-      "contentHash": "9264b12588ef4ca4dd554570cd7f42fb3090969cf7690f04934d220dc41d858a"
+      "checkedAt": "2026-10-15T18:41:20.149Z",
+      "contentHash": "e24bddfb0b29b9e5939af11b4004ca4db450ff64c0f09323840a29eaacd901f4"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:01:07.301Z",
-      "contentHash": "9264b12588ef4ca4dd554570cd7f42fb3090969cf7690f04934d220dc41d858a"
+      "checkedAt": "2026-10-15T18:41:20.150Z",
+      "contentHash": "e24bddfb0b29b9e5939af11b4004ca4db450ff64c0f09323840a29eaacd901f4"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-10-15T16:01:07.302Z",
-      "contentHash": "9264b12588ef4ca4dd554570cd7f42fb3090969cf7690f04934d220dc41d858a"
+      "checkedAt": "2026-10-15T18:41:20.151Z",
+      "contentHash": "e24bddfb0b29b9e5939af11b4004ca4db450ff64c0f09323840a29eaacd901f4"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
       "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-10-15T16:00:51.345Z",
-      "contentHash": "b65ea53f16a96d777f21bce4c3af5d9659beefe6f74570afb9c4d0bce24530fc"
+      "setAt": "2026-10-15T18:41:11.158Z",
+      "contentHash": "2124e607e54f149c3de02006ae71ce8d49ffe13cf8c9da2055039af0447289a1"
     },
     "factCheck": {
       "value": "PASS",
       "setBy": "general-purpose-factcheck",
-      "setAt": "2026-10-15T16:00:53.335Z",
-      "contentHash": "b65ea53f16a96d777f21bce4c3af5d9659beefe6f74570afb9c4d0bce24530fc"
+      "setAt": "2026-10-15T18:41:12.969Z",
+      "contentHash": "2124e607e54f149c3de02006ae71ce8d49ffe13cf8c9da2055039af0447289a1"
     },
     "imageEyeball": {
       "value": "OK",
@@ -66,14 +66,14 @@
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-10-15T16:00:54.944Z",
-      "contentHash": "b65ea53f16a96d777f21bce4c3af5d9659beefe6f74570afb9c4d0bce24530fc"
+      "setAt": "2026-10-15T18:41:14.612Z",
+      "contentHash": "2124e607e54f149c3de02006ae71ce8d49ffe13cf8c9da2055039af0447289a1"
     },
     "indexNow": {
       "value": "DONE",
-      "setBy": "founder",
-      "setAt": "2026-08-02T11:46:36.426Z",
-      "contentHash": "bc29e68a61fbfc579af2e8b80d3d264f2051a453308287b8f33a7cdc618ef211"
+      "setBy": "main-session",
+      "setAt": "2026-10-15T18:36:57.719Z",
+      "contentHash": "b65ea53f16a96d777f21bce4c3af5d9659beefe6f74570afb9c4d0bce24530fc"
     },
     "gscSitemap": {
       "value": "DONE",
