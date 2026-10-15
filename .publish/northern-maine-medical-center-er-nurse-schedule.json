@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "slug": "northern-maine-medical-center-er-nurse-schedule",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T18:30:26.693Z",
+      "contentHash": "7dc58ba77da2801eb77ae599ae5e3cafb8de445f1d58607f551e5cb410976ff2"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T18:30:28.347Z",
+      "contentHash": "7dc58ba77da2801eb77ae599ae5e3cafb8de445f1d58607f551e5cb410976ff2"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T18:30:41.464Z",
+      "contentHash": "7dc58ba77da2801eb77ae599ae5e3cafb8de445f1d58607f551e5cb410976ff2"
+    },
+    "inboundLinks": {
+      "status": "FAIL",
+      "checkedAt": "2026-10-15T18:30:41.508Z",
+      "contentHash": "7dc58ba77da2801eb77ae599ae5e3cafb8de445f1d58607f551e5cb410976ff2"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T18:30:41.560Z",
+      "contentHash": "7dc58ba77da2801eb77ae599ae5e3cafb8de445f1d58607f551e5cb410976ff2"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T18:30:41.560Z",
+      "contentHash": "7dc58ba77da2801eb77ae599ae5e3cafb8de445f1d58607f551e5cb410976ff2"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T18:30:41.562Z",
+      "contentHash": "7dc58ba77da2801eb77ae599ae5e3cafb8de445f1d58607f551e5cb410976ff2"
+    },
+    "keywordRegistry": {
+      "status": "FAIL",
+      "checkedAt": "2026-10-15T18:30:41.563Z",
+      "contentHash": "7dc58ba77da2801eb77ae599ae5e3cafb8de445f1d58607f551e5cb410976ff2"
+    }
+  },
+  "recorded": {},
+  "overrides": []
+}
