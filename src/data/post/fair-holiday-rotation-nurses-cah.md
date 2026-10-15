@@ -80,7 +80,7 @@ The solution replaces discretion with a rule-based rotation system that nurses c
 
 A fair holiday rotation is a written, documented system that assigns nurses to holiday shifts on a predetermined cycle, typically spanning two to three years. Every nurse in the rotation can see when they are scheduled to work each major holiday, and the rotation advances automatically at the end of each cycle. No nurse works the same high-demand holiday two years in a row under a well-structured three-year rotation.
 
-The key word is documented. A rotation that exists only in the manager's memory is functionally the same as discretion-based scheduling, because nurses cannot verify fairness and the manager cannot prove it. The system only works if it is written down, distributed, and applied consistently.
+The key word is documented. A rotation that exists only in the manager's memory is functionally the same as discretion-based scheduling, because [nurses cannot verify fairness](/blog/fair-nurse-schedule-small-hospital) and the manager cannot prove it. The system only works if it is written down, distributed, and applied consistently.
 
 For it to qualify as fair by most nursing staff standards, the rotation should satisfy three conditions: equal frequency of holiday coverage across all staff, equal distribution of high-demand dates (Christmas Eve/Christmas Day versus lower-demand holidays like Columbus Day), and a mechanism for new hires to enter the rotation without permanently disadvantaging existing staff.
 

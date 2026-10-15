@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "slug": "fair-nurse-schedule-small-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T15:42:25.985Z",
+      "contentHash": "2738a02d64ada640e006c8f51291eb8e2b0c0a9193642edcb3a585d40595da8e"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T15:42:28.537Z",
+      "contentHash": "2738a02d64ada640e006c8f51291eb8e2b0c0a9193642edcb3a585d40595da8e"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T15:42:30.050Z",
+      "contentHash": "2738a02d64ada640e006c8f51291eb8e2b0c0a9193642edcb3a585d40595da8e"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T15:42:30.105Z",
+      "contentHash": "2738a02d64ada640e006c8f51291eb8e2b0c0a9193642edcb3a585d40595da8e"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T15:42:30.271Z",
+      "contentHash": "2738a02d64ada640e006c8f51291eb8e2b0c0a9193642edcb3a585d40595da8e"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T15:42:30.271Z",
+      "contentHash": "2738a02d64ada640e006c8f51291eb8e2b0c0a9193642edcb3a585d40595da8e"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T15:42:30.273Z",
+      "contentHash": "2738a02d64ada640e006c8f51291eb8e2b0c0a9193642edcb3a585d40595da8e"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-15T15:42:30.276Z",
+      "contentHash": "2738a02d64ada640e006c8f51291eb8e2b0c0a9193642edcb3a585d40595da8e"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-10-15T15:42:20.389Z",
+      "contentHash": "beabe69e4f747ff13d3586cea0df2d1d0785c92acdad5b787e478cf895034cad"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-15T15:42:21.995Z",
+      "contentHash": "beabe69e4f747ff13d3586cea0df2d1d0785c92acdad5b787e478cf895034cad"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-15T15:42:23.736Z",
+      "contentHash": "beabe69e4f747ff13d3586cea0df2d1d0785c92acdad5b787e478cf895034cad"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 75,
+        "headings": 100,
+        "actionability": 50,
+        "attention": 90
+      },
+      "overall": 72.3,
+      "counts": {
+        "sections": 10,
+        "rereads": 10,
+        "undefinedTerms": 5,
+        "headingsAnswered": 10,
+        "mondayActions": 6,
+        "blockedActions": 6,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-10-15T00:00:00Z",
+      "postType": "howto",
+      "observations": {
+        "undefinedTerms": [
+          "cycle (length never pinned down; the math uses a four-week cycle, the seniority example uses a six-week cycle)",
+          "\"once time off is counted\" / the 10.6 and 9.6 nurse figures (derivation lives in another guide)",
+          "\"the fewest charge-qualified nurses this example needs\" (why 6 and 5 is not shown here)",
+          "target (\"check every nurse's counts against your target\", \"weekend target next cycle\"; never said whether target = the even share, or how it changes for part-timers or carry-over)",
+          "Baylor shift (only a link, no gloss)"
+        ],
+        "mondayActions": [
+          "Work out my own weekend number: 104 x nurses needed per weekend day, divided by my nurses",
+          "Go back through last cycle's posted schedules and tally weekend, holiday and charge shifts per nurse",
+          "Add a count column to my scheduling spreadsheet before I build the next cycle",
+          "List every weekend exemption or day limit with who approved it and a review date",
+          "Fill holidays and weekend charge shifts first next build, lowest count first",
+          "Post a count sheet next to the schedule"
+        ],
+        "blockedActions": [
+          "Divide by 'your nurses' when my roster mixes full-time, part-time and PRN: the post never shows how part-timers or PRNs go into the divisor",
+          "Set a weekend target for a part-time nurse inside the cycle math (only the yearly half-of-38 example is given)",
+          "Carry an extra March weekend into April's build: the post says it should happen but not how (subtract from target? swap first?)",
+          "Decide whether picked-up callout shifts lower next cycle's weekend target: listed as a decision to write down, with no guidance either way",
+          "Pull last cycle's callout pickups: they are not on the posted schedule, and the post does not say where to find them",
+          "Work out how many charge-qualified nurses my unit needs: the post sends me to another guide for that number"
+        ],
+        "sections": [
+          {
+            "heading": "What Makes a Nurse Schedule Fair?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Many Weekend and Holiday Shifts Does Each Nurse Work on a Small Roster?",
+            "rereadCount": 5,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Which Shifts Should You Count for Every Nurse?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "In What Order Should You Fill Shifts to Keep a Nurse Schedule Fair?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "When Is an Uneven Nurse Schedule Still Fair?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Should Seniority Factor Into a Fair Nurse Schedule?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Show Nurses Their Schedule Is Fair?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Keep a Nurse Schedule Fair?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-10-15T15:34:48.893Z",
+      "contentHash": "782c5031caaecb7e1d929d6632a8e18368863895a775d08befdd8b30657b01a0"
+    }
+  }
+}

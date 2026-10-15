@@ -170,7 +170,7 @@ A fixed calendar matters as much as the lead time. Requests that arrive late mea
 
 ## How Do You Keep a Nurse Schedule Fair for Weekends and Holidays?
 
-Set a number for weekends, count weekends and holidays for every nurse, and carry the counts from one cycle to the next. "No more than two weekends in a four-week cycle" is one example threshold. Pick yours, write it down, and apply it when you build.
+Set a number for weekends, [count weekends and holidays for every nurse](/blog/fair-nurse-schedule-small-hospital), and carry the counts from one cycle to the next. "No more than two weekends in a four-week cycle" is one example threshold. Pick yours, write it down, and apply it when you build.
 
 Without a number, weekend shifts go to whoever agrees first. Over a few months, the same few nurses can end up carrying most of them.
 

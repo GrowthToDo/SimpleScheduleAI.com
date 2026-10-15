@@ -926,6 +926,14 @@
     "note": "Published 2026-10-12 (next-15 Oct plan #3). Merges three unpublished drafts (how-to-schedule-nurses-critical-access-hospital, nursing-staff-scheduling-best-practices-25-bed, nurse-manager-guide-work-scheduling). Secondary: nurse staffing schedule, how to create a nurse schedule. GSC Jul-Oct 2026: nurse staff scheduling 117 impr (mostly /nurse-scheduling-software pos 46), nurse staffing schedule 92 (12-hour post pos 28.5), how to create a nurse schedule 21 (/resources/nurse-schedule-template pos 56.5). Brief: docs/seo/briefs/2026-10-how-to-schedule-nursing-staff-small-hospital.md."
   },
   {
+    "slug": "fair-nurse-schedule-small-hospital",
+    "type": "post",
+    "url": "/blog/fair-nurse-schedule-small-hospital",
+    "primaryKeyword": "fair nurse schedule",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-10-15 (next-15 Oct plan #5). Merges unpublished drafts fair-nurse-schedule-critical-access-hospital and seniority-vs-fairness-nurse-scheduling. Secondary: fair nurse rotation, nurse scheduling fairness, seniority vs fairness. Recorded demand: Bing 42 impr on fairness/holiday-rotation questions; GSC nurse rotation schedule pos 5.4 (landing page unrecorded; SERP intent is shift patterns, may belong to #4). Brief: docs/seo/briefs/2026-10-fair-nurse-schedule-small-hospital.md."
+  },
+  {
     "slug": "mandatory-nurse-overtime-by-state",
     "type": "post",
     "url": "/blog/mandatory-nurse-overtime-by-state",

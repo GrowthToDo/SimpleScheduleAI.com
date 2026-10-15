@@ -200,7 +200,7 @@ You can watch the AI build a schedule and rank callout replacements in the [inte
 1. Name the person who will enforce fairness rules every cycle, or accept that the answer is no. Then name what you are optimizing for: predictability and low effort point to cyclical, morale and flexibility point to self-scheduling.
 2. Pull your last eight weeks of schedules and count nights, weekends, and holidays per nurse. If two or three names carry most of them, your current model, whatever you call it, is already concentrating burden.
 3. Separate your shifts into two buckets: the ones nobody volunteers for and the ones where preferences genuinely differ. That split is the blueprint for a hybrid, cyclical for the first bucket, self-pick for the second.
-4. Decide how you will carry fairness across cycles, a rotation count or a cross-cycle load record, and pick that mechanism before you pick the model, because the model fails without it.
+4. Decide how you will [carry fairness across cycles](/blog/fair-nurse-schedule-small-hospital), a rotation count or a cross-cycle load record, and pick that mechanism before you pick the model, because the model fails without it.
 5. Book a call with our team to see how a draft would distribute weekends and holidays across your specific roster, with the running count and the audit trail included.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
