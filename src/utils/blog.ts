@@ -4,6 +4,7 @@ import type { CollectionEntry } from 'astro:content';
 import type { Post } from '~/types';
 import { APP_BLOG } from 'astrowind:config';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
+import { fetchArticles } from './articles';
 
 const generatePermalink = async ({
   id,
@@ -223,7 +224,12 @@ export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: Pagin
 export const getStaticPathsBlogTag = async ({ paginate }: { paginate: PaginateFunction }) => {
   if (!isBlogEnabled || !isBlogTagRouteEnabled) return [];
 
-  const posts = await fetchPosts();
+  // Newsroom articles render the same /tag/<slug> links as blog posts, so tag
+  // pages list both. Without the articles, a tag used only by articles (e.g.
+  // nurse-strikes) linked to a page that was never built and returned 404.
+  const posts = [...(await fetchPosts()), ...(await fetchArticles())].sort(
+    (a, b) => b.publishDate.valueOf() - a.publishDate.valueOf()
+  );
   const tags = {};
   posts.map((post) => {
     if (Array.isArray(post.tags)) {
