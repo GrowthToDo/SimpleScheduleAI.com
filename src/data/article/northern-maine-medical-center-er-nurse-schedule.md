@@ -57,7 +57,7 @@ None of the reports we read through October 12 said the ER had closed or turned 
 
 ## How Is the Northern Maine Medical Center Emergency Room Staffed at Night?
 
-Two registered nurses work the ER overnight, from 11 p.m. to 7 a.m. The hospital's statement to the Monitor listed who else is there: one nurse practitioner or physician assistant, one physician, one security officer, and a nurse supervisor who is not assigned patients.
+The hospital's statement to the Monitor describes the ER's overnight team, from 11 p.m. to 7 a.m., as two registered nurses plus one nurse practitioner or physician assistant, one physician, one security officer, and a nurse supervisor who is not assigned patients.
 
 Three facts about the night team have come up in the reporting:
 
@@ -71,7 +71,7 @@ The two sides read the nights differently. Sime said the ER sees one to two pati
 
 Two nurses on duty every hour of the week is 2 × 24 × 7 = **336 nurse hours a week**. On 12-hour shifts that is **28 shifts**. On 8-hour shifts it is **42 shifts**. The reports confirm two nurses only overnight. We assume two at every hour, as an illustration, not the hospital's staffing plan.
 
-None of the reports says whether this ER's nurses work 12-hour or 8-hour shifts, so we show both.
+The hospital describes its overnight team for 11 p.m. to 7 a.m., an 8-hour stretch. That fits an 8-hour night shift, but a nurse on a 12-hour night, such as 7 p.m. to 7 a.m., would cover it too. None of the reports says which shifts the nurses actually work, so we show both.
 
 A nurse who stayed, Terry Caron, told [WAGM-TV](https://www.wagmtv.com/2026/10/12/nmmc-nurse-speaks-out-recent-nurse-departures/) the hospital could not staff a "mid-shift nurse," which left the busiest hours with two nurses. Days may therefore need more than our count.
 
