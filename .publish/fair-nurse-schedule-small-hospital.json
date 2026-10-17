@@ -74,6 +74,12 @@
       "setBy": "main-session",
       "setAt": "2026-10-15T18:36:54.389Z",
       "contentHash": "851099895f57cddda881958523b1e17c991aa28378c6c9738b5f7662fbf2e6b8"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "main-session",
+      "setAt": "2026-10-17T05:55:25.714Z",
+      "contentHash": "851099895f57cddda881958523b1e17c991aa28378c6c9738b5f7662fbf2e6b8"
     }
   },
   "overrides": [],

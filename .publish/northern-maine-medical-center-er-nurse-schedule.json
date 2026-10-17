@@ -62,6 +62,12 @@
       "setBy": "founder",
       "setAt": "2026-10-17T05:52:37.614Z",
       "contentHash": "618824af1bcf0f0edce015ae4f4564835f351a873f52ec2ff4ed94c2ff87af89"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "main-session",
+      "setAt": "2026-10-17T05:55:31.475Z",
+      "contentHash": "618824af1bcf0f0edce015ae4f4564835f351a873f52ec2ff4ed94c2ff87af89"
     }
   },
   "overrides": []
