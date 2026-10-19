@@ -68,7 +68,7 @@ Four things stop working at once: the posted schedule, the staff phone list, the
 
 **The hours record.** Overtime still has to be paid correctly for every hour worked, as [federal overtime rules](/blog/texas-nursing-overtime-compliance-cah) require. If the time clock feeds the same system, someone has to track hours by hand until it comes back.
 
-Everyday problems are smaller, but they follow the same pattern. A registered nurse reviewing ShiftWizard on Capterra wrote that the app "can be slow and glitchy, making inputting schedule difficult and stressful." A NurseGrid reviewer, an inpatient director, wrote: "Does not work well with androids. The texting function doesn't work." Neither describes an outage. Both describe a tool nurses cannot fully rely on at the moment they need it.
+Everyday problems are smaller, but they follow the same pattern. A registered nurse reviewing ShiftWizard on Capterra wrote that the app "can be slow and glitchy, making inputting schedule difficult and stressful." A NurseGrid reviewer, an inpatient director, wrote: "Does not work well with androids. The texting function doesn't work." Neither describes an outage. Both describe a tool nurses cannot fully rely on at the moment they need it. Being logged out partway through a task is another everyday problem, and our guide to [why a nurse scheduling app keeps logging you out](/blog/nurse-scheduling-app-login-problems) covers who sets that timer.
 
 ## Why Is a Holiday Weekend the Worst Time for a Scheduling Outage?
 

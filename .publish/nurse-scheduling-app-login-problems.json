@@ -5,53 +5,174 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:22.898Z",
-      "contentHash": "0e1bfcb4cedb734842d6deb645f90049e6e5f45b3ecb91a605bc78695fef78cc"
+      "checkedAt": "2026-10-19T17:47:31.599Z",
+      "contentHash": "8791772fc8e771ab79f08fd3627418aee7e1ab7878a00c99bc74555172c2ceb0"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:24.527Z",
-      "contentHash": "0e1bfcb4cedb734842d6deb645f90049e6e5f45b3ecb91a605bc78695fef78cc"
+      "checkedAt": "2026-10-19T17:47:34.153Z",
+      "contentHash": "8791772fc8e771ab79f08fd3627418aee7e1ab7878a00c99bc74555172c2ceb0"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:26.582Z",
-      "contentHash": "0e1bfcb4cedb734842d6deb645f90049e6e5f45b3ecb91a605bc78695fef78cc"
+      "checkedAt": "2026-10-19T17:47:36.716Z",
+      "contentHash": "8791772fc8e771ab79f08fd3627418aee7e1ab7878a00c99bc74555172c2ceb0"
     },
     "inboundLinks": {
-      "status": "FAIL",
-      "checkedAt": "2026-09-26T10:14:26.609Z",
-      "contentHash": "0e1bfcb4cedb734842d6deb645f90049e6e5f45b3ecb91a605bc78695fef78cc"
+      "status": "PASS",
+      "checkedAt": "2026-10-19T17:47:36.803Z",
+      "contentHash": "8791772fc8e771ab79f08fd3627418aee7e1ab7878a00c99bc74555172c2ceb0"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:26.842Z",
-      "contentHash": "0e1bfcb4cedb734842d6deb645f90049e6e5f45b3ecb91a605bc78695fef78cc"
+      "checkedAt": "2026-10-19T17:47:37.001Z",
+      "contentHash": "8791772fc8e771ab79f08fd3627418aee7e1ab7878a00c99bc74555172c2ceb0"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:26.842Z",
-      "contentHash": "0e1bfcb4cedb734842d6deb645f90049e6e5f45b3ecb91a605bc78695fef78cc"
+      "checkedAt": "2026-10-19T17:47:37.001Z",
+      "contentHash": "8791772fc8e771ab79f08fd3627418aee7e1ab7878a00c99bc74555172c2ceb0"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:26.843Z",
-      "contentHash": "0e1bfcb4cedb734842d6deb645f90049e6e5f45b3ecb91a605bc78695fef78cc"
+      "checkedAt": "2026-10-19T17:47:37.005Z",
+      "contentHash": "8791772fc8e771ab79f08fd3627418aee7e1ab7878a00c99bc74555172c2ceb0"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-19T17:47:37.012Z",
+      "contentHash": "8791772fc8e771ab79f08fd3627418aee7e1ab7878a00c99bc74555172c2ceb0"
     }
   },
   "recorded": {
     "factCheck": {
       "value": "PASS",
-      "setBy": "verifier",
-      "setAt": "2026-09-26T10:25:20.089Z",
-      "contentHash": "8c5a605efa7ae4703cd5a43261c5b8dd15e71e2448d20625078b450853bf23d5"
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-19T17:49:00.352Z",
+      "contentHash": "0778e313a3d999d00d7ea713995e8b58c519f5f8e8c8e783a2e5e8f0116c9e46"
     },
     "proofread": {
       "value": "READY",
       "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-09-26T10:25:18.863Z",
-      "contentHash": "8c5a605efa7ae4703cd5a43261c5b8dd15e71e2448d20625078b450853bf23d5"
+      "setAt": "2026-10-19T17:48:59.222Z",
+      "contentHash": "0778e313a3d999d00d7ea713995e8b58c519f5f8e8c8e783a2e5e8f0116c9e46"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-19T17:46:51.434Z",
+      "contentHash": "0778e313a3d999d00d7ea713995e8b58c519f5f8e8c8e783a2e5e8f0116c9e46"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-10-19T17:46:53.170Z",
+      "contentHash": "0778e313a3d999d00d7ea713995e8b58c519f5f8e8c8e783a2e5e8f0116c9e46"
     }
   },
-  "overrides": []
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 83.3,
+        "headings": 88.9,
+        "actionability": 55.6,
+        "attention": 88.9
+      },
+      "overall": 74.2,
+      "counts": {
+        "sections": 9,
+        "rereads": 5,
+        "undefinedTerms": 4,
+        "headingsAnswered": 8,
+        "mondayActions": 5,
+        "blockedActions": 4,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-09-26T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "\"Addressable\" (in quotes, explained only by a second legal quote)",
+          "implementation specification",
+          "one company login for every system (is this the login I use for the EHR? what do I ask IT about it?)",
+          "allow cookies for the scheduling app's site / browser extension"
+        ],
+        "mondayActions": [
+          "Leave the scheduling app untouched and time how many minutes it takes to log me out",
+          "Save after each block of shifts and before stepping away to check a leave request",
+          "Email the vendor: what is the idle timeout on our account, can it be longer, do drafts save automatically and how often",
+          "Ask whoever does our IT whether the hospital sets a timeout that applies to the scheduling app",
+          "Stop being signed in on my phone and the office computer at the same time during a scheduling session"
+        ],
+        "blockedActions": [
+          "Check your browser for extensions or settings that clear cookies and allow cookies for the site: no steps given, and on a hospital-locked workstation I may not be allowed to change browser settings",
+          "Ask for a longer timer: no idea what length is reasonable to ask for, so I cannot tell the vendor a number",
+          "Push back if told the short timer is required: the Addressable / document-why explanation is not something I could repeat to a vendor or IT person",
+          "Ask your IT contact: at a 25-bed hospital IT may be one person or an outside company; the post only links elsewhere for that case"
+        ],
+        "sections": [
+          {
+            "heading": "Why Does a Nurse Scheduling App Log You Out?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Does HIPAA Require a Scheduling App to Log You Out?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Who Decides How Long Before a Scheduling App Logs You Out?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Do Nurses Say About Scheduling App Logins in Reviews?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "Can You Stop a Scheduling App From Logging You Out Yourself?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should You Test in a Scheduling App Demo?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Handle Logins?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-10-19T12:24:15.313Z",
+      "contentHash": "8c5a605efa7ae4703cd5a43261c5b8dd15e71e2448d20625078b450853bf23d5"
+    }
+  }
 }

@@ -934,6 +934,14 @@
     "note": "Published 2026-10-15 (next-15 Oct plan #5). Merges unpublished drafts fair-nurse-schedule-critical-access-hospital and seniority-vs-fairness-nurse-scheduling. Secondary: fair nurse rotation, nurse scheduling fairness, seniority vs fairness. Recorded demand: Bing 42 impr on fairness/holiday-rotation questions; GSC nurse rotation schedule pos 5.4 (landing page unrecorded; SERP intent is shift patterns, may belong to #4). Brief: docs/seo/briefs/2026-10-fair-nurse-schedule-small-hospital.md."
   },
   {
+    "slug": "nurse-scheduling-app-login-problems",
+    "type": "post",
+    "url": "/blog/nurse-scheduling-app-login-problems",
+    "primaryKeyword": "nurse scheduling app keeps logging me out",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-10-19 (next-15 Oct plan #7, AI-answer piece, no measured demand). Session timeouts, who sets them, HIPAA automatic logoff (addressable), what a manager can do. Differs from /blog/best-nurse-scheduling-app (app selection) and /blog/kronos-nurse-scheduling-problems-small-hospitals (vendor-specific). Rewritten 2026-09-26 (old draft had fabricated quotes)."
+  },
+  {
     "slug": "mandatory-nurse-overtime-by-state",
     "type": "post",
     "url": "/blog/mandatory-nurse-overtime-by-state",

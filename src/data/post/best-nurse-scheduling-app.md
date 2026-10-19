@@ -172,14 +172,14 @@ The operational layer is where the midnight test lives. A [callout](/blog/how-to
 
 ## What Should You Look For in a Nurse Scheduling App?
 
-| Criterion                                        | Why it matters at a small hospital                                 | Priority  |
-| ------------------------------------------------ | ------------------------------------------------------------------ | --------- |
-| Credential checks at the shift level             | Wrong credential on a shift is a care and survey problem           | Critical  |
-| Overtime threshold logic (your FLSA setup)       | Wrong threshold quietly misprices every extra shift                | Critical  |
-| Callout ranking by credential + overtime risk    | The midnight problem; broadcast-only apps leave it manual          | High      |
-| Survey-ready staffing documentation              | CMS surveyors can request staffing records without notice          | High      |
-| Nurse-facing mobile access (view, swap, request) | Adoption fails when nurses cannot see schedules on their phones    | Important |
-| Implementation speed and IT burden               | A three-month rollout is a real cost at a facility with limited IT | Important |
+| Criterion                                        | Why it matters at a small hospital                                                                                                       | Priority  |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| Credential checks at the shift level             | Wrong credential on a shift is a care and survey problem                                                                                 | Critical  |
+| Overtime threshold logic (your FLSA setup)       | Wrong threshold quietly misprices every extra shift                                                                                      | Critical  |
+| Callout ranking by credential + overtime risk    | The midnight problem; broadcast-only apps leave it manual                                                                                | High      |
+| Survey-ready staffing documentation              | CMS surveyors can request staffing records without notice                                                                                | High      |
+| Nurse-facing mobile access (view, swap, request) | Adoption fails when nurses cannot see schedules on their phones, or [keep getting logged out](/blog/nurse-scheduling-app-login-problems) | Important |
+| Implementation speed and IT burden               | A three-month rollout is a real cost at a facility with limited IT                                                                       | Important |
 
 ## What Are the 8 Best Nurse Scheduling Apps?
 
