@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-06T00:00:00Z
-updateDate: 2026-06-13T00:00:00Z
+updateDate: 2026-10-19T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Critical Access Hospitals (2026)'
 excerpt: >
@@ -95,7 +95,7 @@ Here is how all 10 tools compare on CAH fit before we go deeper. This guide cove
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Small healthcare, EMS, fire, public safety</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Public safety agencies (fire, EMS, law enforcement)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94)<br>Capterra: 4.6/5 (17; small sample)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">2-4 weeks</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">~$200-450</td>
@@ -180,7 +180,7 @@ SimpleScheduleAI is nurse scheduling software we build and operate ourselves, de
 - **Not a self-serve platform you configure and run yourself.** A hospital that wants to own and configure scheduling internally will not find that here, and facilities outside Texas should confirm fit before committing.
 - Preferences, swap requests, and time-off submissions route through the nurse manager rather than a self-service staff portal, which suits a CAH where the manager already knows every nurse but is a constraint if you want staff self-scheduling.
 
-**Verdict:** The right choice for a CAH where the dual-role nurse manager cannot realistically run a scheduling system alongside clinical work. If you want to manage scheduling in-house, or you are a larger multi-site system, look at Aladtec or one of the enterprise systems below instead.
+**Verdict:** The right choice for a CAH where the dual-role nurse manager cannot realistically run a scheduling system alongside clinical work. If you want to manage scheduling in-house, or you are a larger multi-site system, look at one of the enterprise systems below, or at Aladtec if TCP confirms it will support hospital nursing.
 
 **Cost:** Flat monthly price by roster size: $1,000/month for up to 20 nurses, $1,500/month for 21 to 40 nurses. No per-nurse fees, no setup fees.
 
@@ -188,11 +188,11 @@ SimpleScheduleAI is nurse scheduling software we build and operate ourselves, de
 
 <img src="/images/blog/best-nurse-scheduling-software-critical-access-hospitals/Aladtec.webp" alt="Aladtec self-serve scheduling platform" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Aladtec, now part of TCP Software, holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews; small sample). It is a self-serve scheduling platform built for 24/7 shift-work agencies. As of September 2026, its own product pages describe it as public safety scheduling software for fire, EMS, law enforcement and corrections, with no healthcare claim. It includes credential expiration tracking, availability management, shift coverage requests, and overtime monitoring, and it does not require heavy IT involvement to stand up.
+Aladtec, now part of TCP Software, holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews; small sample). It is a self-serve scheduling platform built for 24/7 shift-work agencies. TCP markets Aladtec to fire, EMS, law enforcement and corrections agencies, and markets a different product, Humanity Schedule, to healthcare. It includes credential expiration tracking, availability management, shift coverage requests, and overtime monitoring, and it does not require heavy IT involvement to stand up.
 
-One caveat matters for a hospital audience: the Capterra review base skews heavily toward fire, EMS, and law enforcement, and the most recent hospital-nursing reviews are several years old (the most recent dated October 2020), so treat the hospital signal as thin and request CAH-scale nursing references directly.
+One caveat matters for a hospital audience: the Capterra review base skews heavily toward public safety users, and the most recent hospital-nursing reviews are several years old (the most recent dated October 2020), so treat the hospital signal as thin and request CAH-scale nursing references directly.
 
-**Best for:** Small Critical Access Hospitals and rural healthcare facilities that want self-serve scheduling without heavy IT involvement, and are comfortable with a tool built for public safety agencies. Strongest fit where a tech-comfortable administrator can own the configuration.
+**Best for:** Hospital-run EMS services, or hospitals TCP confirms it will support. Strongest fit where a tech-comfortable administrator can own the configuration.
 
 **Key advantages:**
 
@@ -219,9 +219,9 @@ One caveat matters for a hospital audience: the Capterra review base skews heavi
   >
   > Jody S., Security Management, August 14, 2025, Capterra
 
-**Verdict:** The strongest self-serve fit for a CAH that wants to keep scheduling in-house and has someone comfortable owning the configuration. Confirm CMS §485.635 documentation and current nurse-context references with the vendor before committing.
+**Verdict:** Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. If it would, confirm CMS §485.635 documentation and current nurse-context references before committing.
 
-**Cost:** Approximately $200-$450/month for small hospital staff sizes.
+**Cost:** Approximately $200-$450/month for small staff sizes.
 
 ## 3. [ShiftWizard](https://www.healthstream.com)
 
@@ -514,7 +514,7 @@ For a Critical Access Hospital, the decision comes down to one question before b
         <p class="font-semibold text-blue-800 dark:text-blue-300 text-xs">Want managed: SimpleScheduleAI</p>
       </div>
       <div class="rounded bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 px-3 py-2">
-        <p class="font-semibold text-green-800 dark:text-green-300 text-xs">Want self-serve: Aladtec or ShiftWizard</p>
+        <p class="font-semibold text-green-800 dark:text-green-300 text-xs">Want self-serve: ShiftWizard, or Aladtec if TCP supports hospitals</p>
       </div>
       <div class="rounded bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2">
         <p class="text-slate-700 dark:text-slate-300 text-xs">Less likely to fit: symplr, QGenda, UKG, M7 Health</p>
@@ -526,7 +526,7 @@ For a Critical Access Hospital, the decision comes down to one question before b
     <p class="text-xs text-green-600 dark:text-green-400 mb-3">Some admin capacity</p>
     <div class="space-y-2">
       <div class="rounded bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 px-3 py-2">
-        <p class="font-semibold text-green-800 dark:text-green-300 text-xs">ShiftWizard or Aladtec</p>
+        <p class="font-semibold text-green-800 dark:text-green-300 text-xs">ShiftWizard, or Aladtec if TCP supports hospitals</p>
       </div>
       <div class="rounded bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 px-3 py-2">
         <p class="text-green-700 dark:text-green-400 text-xs">+ QGenda if physician scheduling needed</p>
@@ -567,7 +567,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for large multi-hos
 
 1. Write down your three operating constraints: only limited IT, a dual-role nurse manager who is also clinical, and no float pool. Those three facts rule out the enterprise platforms here before you open a single demo.
 2. Pull your last CMS §485.635 staffing record and time how long it took to assemble. That number is the documentation burden any tool has to remove, and the baseline for the [ROI calculation](/roi).
-3. If you want to keep scheduling in-house, put Aladtec and ShiftWizard side by side and ask each for CAH-scale nursing references and a §485.635 documentation sample.
+3. If you want to keep scheduling in-house, start with ShiftWizard, and ask TCP whether it would sell and support Aladtec for hospital nursing. Ask each for CAH-scale nursing references and a §485.635 documentation sample.
 4. Ask any vendor on your shortlist one direct question: when a nurse calls out and we have no float pool, what does your system do in the next five minutes?
 5. If the weekly build and callout coverage are the real drain, [see how SimpleScheduleAI works](/how-it-works) and let us build a schedule against your actual roster to compare against what you do today.
 
@@ -582,7 +582,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for large multi-hos
 
 **Q: Is Aladtec or ShiftWizard better for a Critical Access Hospital?**
 
-It depends on who runs it. ShiftWizard was designed for hospital nursing and has the deepest nursing review base, but it is a full platform the manager must learn and maintain; Aladtec has lower setup burden and strong support, though its hospital-nursing reviews are old. For a stretched dual-role manager, weigh upkeep load before feature depth.
+It depends on who runs it. ShiftWizard was designed for hospital nursing and has the deepest nursing review base, but it is a full platform the manager must learn and maintain; Aladtec has lower setup burden and strong support, but it is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. For a stretched dual-role manager, weigh upkeep load before feature depth.
 
 **Q: Does symplr Smart Square work for a 25-bed hospital?**
 

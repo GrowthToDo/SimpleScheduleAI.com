@@ -1,6 +1,7 @@
 ---
 draft: false
 publishDate: 2026-07-13T00:00:00Z
+updateDate: 2026-10-19T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Texas Hospitals in 2026'
 excerpt: >
@@ -26,7 +27,7 @@ metadata:
 - Texas has no separate state overtime law; the federal [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) governs, including the healthcare "8-and-80" option many hospitals elect. The scheduling question that matters is whether a tool tracks that 8-and-80 calculation, not a Texas-specific overtime layer, because there isn't one.
 - A nurse manager at a Texas CAH can lose a meaningful slice of the week to scheduling, on the order of 8 to 12 hours by our own directional estimate (not a published figure). That time cost is the baseline any tool needs to beat before it provides positive ROI.
 - SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals. FLSA overtime threshold tracking, CMS §485.635 audit documentation, and charge nurse coverage logic are defaults, not configuration options.
-- For larger Texas hospitals (50-200 beds), Aladtec and SmartLinx are the strongest self-serve options. For small community hospitals needing physician scheduling, QGenda enters the picture.
+- For larger Texas hospitals (50-200 beds), SmartLinx is the strongest self-serve option. Aladtec is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. For small community hospitals needing physician scheduling, QGenda enters the picture.
 
 ## Table of Contents
 
@@ -72,7 +73,7 @@ Here is how all 8 platforms compare for Texas hospitals before we go deeper:
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Good for TX small hospitals</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Unclear; marketed to public safety agencies</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Adequate</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">$200-450</td>
       </tr>
@@ -142,7 +143,7 @@ Most Texas small hospitals that struggle with scheduling have purchased a tool f
     <p class="mb-3 text-xs text-slate-500 dark:text-slate-400">Under 25 beds, rural</p>
     <ul class="mb-3 space-y-1 text-sm text-slate-800 dark:text-slate-200">
       <li>SimpleScheduleAI</li>
-      <li>Aladtec</li>
+      <li>Aladtec (if TCP supports hospitals)</li>
     </ul>
     <p class="mb-0 text-xs text-slate-500 dark:text-slate-400">Priority: Texas compliance, low burden, fast setup</p>
   </div>
@@ -150,7 +151,7 @@ Most Texas small hospitals that struggle with scheduling have purchased a tool f
     <p class="mb-1 text-sm font-bold text-green-700 dark:text-green-300">Texas Community</p>
     <p class="mb-3 text-xs text-slate-500 dark:text-slate-400">25 to 200 beds</p>
     <ul class="mb-3 space-y-1 text-sm text-slate-800 dark:text-slate-200">
-      <li>Aladtec</li>
+      <li>Aladtec (if TCP supports hospitals)</li>
       <li>SmartLinx</li>
       <li>QGenda</li>
     </ul>
@@ -195,29 +196,29 @@ Setup is 100% remote and takes 3 to 5 business days. No IT involvement, no confi
 - Specific to small hospitals under 50 beds. Not designed for larger Texas facilities.
 - A new service with no independent G2 or Capterra reviews yet. Ask for a walkthrough and a sample CMS §485.635 audit output before deciding.
 
-**Verdict:** The strongest operational fit for a Texas CAH. For self-serve scheduling at this size, Aladtec is the right alternative. For larger Texas community hospitals, SmartLinx or QGenda are the better fit.
+**Verdict:** The strongest operational fit for a Texas CAH. For self-serve scheduling at this size, Aladtec is the alternative covered next. For larger Texas community hospitals, SmartLinx or QGenda are the better fit.
 
 **Cost:** Flat $1,000/month for up to 20 nurses, $1,500/month for 21-40 nurses. No per-nurse fees, no setup fees.
 
 ### 2. [Aladtec](https://www.aladtec.com)
 
-<img src="/images/blog/best-nurse-scheduling-software-texas/Aladtec.webp" alt="Aladtec scheduling software for Texas small hospitals" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
+<img src="/images/blog/best-nurse-scheduling-software-texas/Aladtec.webp" alt="Aladtec public safety scheduling software homepage" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 dark:border-slate-700 my-4" />
 
-Aladtec by TCP is a self-serve scheduling platform built for 24/7 shift-work environments. It holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews), as of April 2026. It is fully cloud-based and sets up entirely remotely. Credential expiration tracking, shift coverage tools, and basic overtime monitoring are included.
+Aladtec by TCP is a self-serve scheduling platform built for 24/7 shift-work environments. TCP markets it to fire, EMS, law enforcement and corrections agencies, and markets a different product, Humanity Schedule, to healthcare. It holds 4.5/5 on G2 (94 reviews) and 4.6/5 on Capterra (17 reviews), as of April 2026. It is fully cloud-based and sets up entirely remotely. Credential expiration tracking, shift coverage tools, and basic overtime monitoring are included.
 
-FLSA overtime rules, including the healthcare 8-and-80 calculation, can be configured within the platform's rule engine, though it requires setup time from whoever is managing the implementation.
+TCP's Aladtec pages describe configurable work limits and overtime rules but do not mention the FLSA 8-and-80 method, so ask TCP to show it before you buy.
 
-**Best for:** Texas small hospitals under 75 beds that want to manage scheduling in-house with a proven, low-complexity self-serve platform.
+**Best for:** Hospital-run EMS services, or hospitals TCP confirms it will support.
 
 **Key advantages:**
 
-- Built for 24/7 shift-work environments and used across small healthcare and public-safety agencies
+- Built for 24/7 shift-work environments at public safety agencies
 - Credential expiration tracking included
 - Fully remote setup with no IT involvement required
 
 **Key limitations:**
 
-- Overtime rules, including the healthcare 8-and-80 calculation, require manual configuration; they are not a default.
+- Overtime rules require manual configuration and are not a default. TCP's pages do not mention the 8-and-80 method.
 - The credential-tracking advantage carries a caveat for nursing: the Capterra reviewer base skews toward fire, EMS, and law enforcement, and the most recent hospital-nursing reviews are several years old, so nurse-specific rules such as charge nurse requirements may need workarounds. Request hospital-nursing reference customers at CAH scale directly from the vendor.
 - Some reviewers describe click-heavy workflows for routine schedule edits.
 
@@ -231,9 +232,9 @@ FLSA overtime rules, including the healthcare 8-and-80 calculation, can be confi
 >
 > Jeanne C., Administrative Coordinator, May 7, 2019, Capterra
 
-**Verdict:** The best self-serve option for Texas small hospitals. If you want FLSA overtime thresholds tracked without a configuration project, SimpleScheduleAI is the alternative.
+**Verdict:** Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. If you want FLSA overtime thresholds tracked without a configuration project, SimpleScheduleAI is the alternative.
 
-**Cost:** Approximately $200-$450/month for small hospital staff sizes.
+**Cost:** Approximately $200-$450/month for small staff sizes.
 
 ### 3. [SmartLinx](https://www.smartlinx.com)
 
@@ -466,7 +467,7 @@ UKG is an enterprise workforce management suite covering scheduling, time and at
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">High</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Unclear; confirm TCP support</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Low to moderate</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
@@ -519,11 +520,11 @@ Texas hospitals operate under a layered compliance environment that generic sche
 
 **Texas CAH (under 25 beds, rural):**
 
-Two viable options: SimpleScheduleAI (AI-native nurse scheduling service, Texas-specific compliance built in) or Aladtec (self-serve, Texas rules configurable). Skip everything else.
+Two options worth a look: SimpleScheduleAI (AI-native nurse scheduling service, Texas-specific compliance built in) or Aladtec, if TCP confirms it supports hospital nursing (self-serve; confirm which overtime rules it handles). Skip everything else.
 
 **Texas small community hospital (25-75 beds, non-CAH):**
 
-SmartLinx or Aladtec for nursing scheduling. Add QGenda if physician scheduling is a real need. NurseGrid as a communication add-on.
+SmartLinx for nursing scheduling, or Aladtec if TCP confirms it will support hospital nursing. Add QGenda if physician scheduling is a real need. NurseGrid as a communication add-on.
 
 **Texas regional hospital or health system (75-200 beds):**
 
@@ -554,7 +555,7 @@ Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule 
 
 1. Confirm your compliance baseline: does your current scheduling tool track the FLSA 8 and 80 healthcare worker overtime exemption correctly? If you are not sure, ask your payroll team.
 2. Pull your Texas HHSC licensing documentation requirements for nursing staff. Compare them against what your current scheduling tool actually produces.
-3. If you are a Texas CAH under 25 beds, request information from SimpleScheduleAI and Aladtec this week. Request the same information from both: how does the platform track the healthcare 8-and-80 overtime calculation, and what does CMS §485.635 audit output look like?
+3. If you are a Texas CAH under 25 beds, request information from SimpleScheduleAI this week, and ask TCP whether it would sell and support Aladtec for hospital nursing. Request the same information from each: how does the platform track the healthcare 8-and-80 overtime calculation, and what does CMS §485.635 audit output look like?
 4. If you are a Texas community hospital 50-200 beds, request demos from SmartLinx and QGenda. Ask each one specifically about Texas hospital customers and their compliance documentation for HHSC inspections.
 5. Calculate the weekly scheduling cost at your facility: nurse manager hours on scheduling multiplied by their effective hourly rate. That is the baseline ROI any tool needs to clear.
 
@@ -569,7 +570,7 @@ Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule 
 
 **Q: Is Aladtec or SimpleScheduleAI better for a Texas Critical Access Hospital?**
 
-It depends on whether your nurse manager can own a scheduling platform. Aladtec is the right self-serve choice: proven in Texas rural hospitals, fully remote setup, and solid compliance tools. FLSA overtime rules, including the healthcare 8-and-80 calculation, require configuration, but the platform supports them. SimpleScheduleAI handles FLSA overtime thresholds and CMS §485.635 documentation automatically with no configuration at the facility, the better fit when the nurse manager is clinically active and cannot maintain a software platform.
+It depends on whether your nurse manager can own a scheduling platform. Aladtec is the self-serve option to check, but it is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. It sets up fully remotely. Ask TCP to show how it handles the healthcare 8-and-80 calculation, because its pages do not mention it. SimpleScheduleAI handles FLSA overtime thresholds and CMS §485.635 documentation automatically with no configuration at the facility, the better fit when the nurse manager is clinically active and cannot maintain a software platform.
 
 **Q: Is there a separate Texas state overtime law scheduling software has to handle?**
 

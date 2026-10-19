@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-08-10T00:00:00Z
-updateDate: 2026-08-10T00:00:00Z
+updateDate: 2026-10-19T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Is Clinical Scheduling? How It Differs From Nurse Scheduling'
 excerpt: >
@@ -115,7 +115,7 @@ Start with the honest baseline: most small hospitals run clinical scheduling in 
 
 Beyond spreadsheets, the market divides into three practical categories.
 
-**Nurse-focused scheduling platforms** such as NurseGrid and Aladtec handle nursing shift scheduling and are the usual starting point, because nursing is the largest stream. Our [nurse scheduling software](/nurse-scheduling-software) guide compares that category in depth. Their scope is nursing; provider on-call and multi-department coordination generally sit outside it. These are self-serve tools, so configuration and upkeep belong to whoever at the hospital owns the system.
+**Nurse-focused scheduling platforms** such as NurseGrid handle nursing shift scheduling and are the usual starting point, because nursing is the largest stream. Our [nurse scheduling software](/nurse-scheduling-software) guide compares that category in depth. Their scope is nursing; provider on-call and multi-department coordination generally sit outside it. These are self-serve tools, so configuration and upkeep belong to whoever at the hospital owns the system.
 
 **EHR-embedded scheduling modules** ship inside the broader clinical platform. Coverage varies by vendor and by how the module was implemented, so the practical question is not whether the module exists but whether your implementation actually handles callout coverage and overtime visibility. Ask your vendor to demonstrate both before assuming they are included.
 

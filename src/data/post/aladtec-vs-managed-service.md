@@ -1,11 +1,12 @@
 ---
 draft: false
 publishDate: 2026-05-11T00:00:00Z
-updateDate: 2026-05-11T00:00:00Z
+updateDate: 2026-10-19T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Aladtec vs. Managed Service for Critical Access Hospitals (2026)'
 excerpt: >
-  Aladtec gives a nurse manager a scheduling tool to use. A managed scheduling service delivers
+  Aladtec, which TCP now markets to public safety agencies, gives a nurse manager a scheduling tool
+  to use. A managed scheduling service delivers
   pre-built schedules for the nurse manager to review and approve. For a Critical Access Hospital
   where the nurse manager is also covering clinical shifts, those two things are not
   interchangeable. This guide compares Aladtec and SimpleScheduleAI across implementation speed,
@@ -30,7 +31,7 @@ This guide compares the two models on the operational dimensions that decide the
 
 ## Key Takeaways
 
-- Aladtec is a scheduling software platform. The nurse manager still builds every schedule, checks every callout for overtime risk, and maintains all configuration as staff changes. The software makes those tasks faster, but the tasks do not go away.
+- Aladtec is a scheduling software platform, and TCP now markets it to public safety agencies rather than hospitals. The nurse manager still builds every schedule, checks every callout for overtime risk, and maintains all configuration as staff changes. The software makes those tasks faster, but the tasks do not go away.
 - A managed scheduling service is a different product category. The vendor builds the schedule, manages callout ranking, and maintains compliance documentation. The nurse manager reviews and approves rather than builds.
 - For a Critical Access Hospital (CAH) nurse manager covering 2-3 clinical shifts per week, spending 4-6 hours per week on scheduling versus 1-2 hours is a real operational gap. Those 3-4 recovered hours go directly to patient care.
 - Aladtec wins for organizations that want direct control over the scheduling process and have an administrator with bandwidth to manage it. SimpleScheduleAI wins for CAH nurse managers who need the scheduling overhead eliminated, not reduced.
@@ -136,7 +137,7 @@ For a 400-bed hospital with a dedicated scheduling department, the distinction m
 
 ## What Is Aladtec?
 
-Aladtec is a web-based scheduling platform originally built for emergency services and expanded to healthcare. It handles shift scheduling, availability tracking, time-off requests, and basic overtime monitoring. Owned by TCP Software since a 2021 acquisition, Aladtec is a self-serve tool: the nurse manager or a designated scheduler configures the system, builds each schedule, and maintains the configuration as staff and policy changes occur. If you are running TCP's flagship product instead, our comparison of [TCP scheduling software versus a managed service](/blog/tcp-scheduling-software-vs-managed-service) makes the same self-serve-versus-done-for-you call. For what a scheduling-vendor acquisition typically changes for a hospital, see [what changes for a hospital after its scheduling vendor is acquired](/blog/scheduling-software-vendor-acquisition-support).
+Aladtec is a web-based scheduling platform built for emergency services. [TCP's Aladtec page](https://www.tcpsoftware.com/products/aladtec/) now names "fire, EMS, law enforcement, and corrections agencies" and does not mention hospitals. Aladtec's site had a healthcare page naming hospitals and nurses until early 2022. It handles shift scheduling, availability tracking, time-off requests, and basic overtime monitoring. Owned by TCP Software since a 2021 acquisition, Aladtec is a self-serve tool: the nurse manager or a designated scheduler configures the system, builds each schedule, and maintains the configuration as staff and policy changes occur. If you are running TCP's flagship product instead, our comparison of [TCP scheduling software versus a managed service](/blog/tcp-scheduling-software-vs-managed-service) makes the same self-serve-versus-done-for-you call. For what a scheduling-vendor acquisition typically changes for a hospital, see [what changes for a hospital after its scheduling vendor is acquired](/blog/scheduling-software-vendor-acquisition-support).
 
 <img src="/images/blog/aladtec-vs-managed-service/Aladtec.webp" alt="Aladtec scheduling software interface" width="1200" height="571" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -157,7 +158,7 @@ Aladtec is a web-based scheduling platform originally built for emergency servic
 
 Verify all of the above directly with Aladtec before making a purchasing decision.
 
-These considerations are not unique to Aladtec. Most general-purpose scheduling platforms that were not built specifically for acute hospital care share them. The question is whether the configuration work required to fill those gaps fits the bandwidth of the CAH implementing the system.
+These considerations are not unique to Aladtec. Other scheduling platforms not built for acute hospital care can share them. The question is whether the configuration work required to fill those gaps fits the bandwidth of the CAH implementing the system.
 
 ## What Is a Managed Scheduling Service?
 
@@ -348,6 +349,8 @@ Specifically, Aladtec fits well when:
 
 Aladtec is also a reasonable choice for organizations that tried a managed service and found that they preferred direct control over the schedule. Some nurse managers want to see every cell of the schedule before it goes to staff. A managed service model, where the vendor builds the draft and the nurse manager reviews, does not fit every management style.
 
+Check one thing before choosing Aladtec for a nursing unit. As of October 2026, TCP markets Aladtec to public safety agencies. [TCP's healthcare page](https://www.tcpsoftware.com/solutions/healthcare/) links Humanity Schedule and TimeClock Plus for healthcare teams. Aladtec appears there only for EMS agencies. Ask TCP in writing which product it would sell and support for hospital nursing ([what Aladtec's own pages say about hospitals](/blog/aladtec-alternatives#does-aladtec-still-market-to-hospitals)).
+
 ## When Is a Managed Service the Right Choice?
 
 A managed scheduling service is the right choice when the scheduling burden falls on someone who cannot afford the time it requires. For most Critical Access Hospitals, that person is the nurse manager: a clinician responsible for direct patient care, staff supervision, quality reporting, budget management, and hiring in addition to scheduling.
@@ -428,7 +431,7 @@ The decision between self-serve scheduling software and a managed service become
 
 3. **Calculate your estimated labor cost for scheduling.** Multiply your hourly rate (or the hourly rate of whoever manages scheduling) by the weekly hours spent. Multiply by 50 weeks. Compare that number against the annual cost of a managed service. For most CAH nurse managers, the break-even is well inside year one. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison automatically.
 
-4. **Request a pricing comparison from Aladtec and SimpleScheduleAI.** Neither publishes pricing publicly. Get quotes from both and compare total cost (license fee plus estimated labor), not just subscription price.
+4. **Compare an Aladtec quote with SimpleScheduleAI's listed pricing.** Aladtec does not publish its pricing, so ask TCP for a quote. SimpleScheduleAI's flat monthly pricing is listed in the [cost comparison above](#how-do-the-cost-structures-of-the-two-models-compare). Compare total cost (license fee plus estimated labor), not just subscription price.
 
 5. **If you currently use Aladtec,** assess two things: How current is your system configuration? When did you last update credential records for staff changes? And: How much time did you spend on callout coverage last month? If configuration is drifting and callout handling is consuming unplanned hours, that is the case for evaluating a managed service.
 

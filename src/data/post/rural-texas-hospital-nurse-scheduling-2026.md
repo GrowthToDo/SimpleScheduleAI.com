@@ -1,6 +1,7 @@
 ---
 draft: false
 publishDate: 2026-07-17T00:00:00Z
+updateDate: 2026-10-19T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Rural Texas Hospitals Are Actually Using for Nurse Scheduling in 2026'
 excerpt: >
@@ -25,7 +26,7 @@ metadata:
 
 - Texas has [93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), most concentrated in rural communities where the nearest alternative facility can be a long drive away.
 - Public rural-health data documents that small rural facilities operate with thin margins and without dedicated IT departments. Facilities in that position commonly rely on the simplest available tools: spreadsheets, a whiteboard, and a phone. We cannot measure the exact split at Texas facilities, so treat any tool ranking as directional inference from public evidence, not a measured market share.
-- When a small rural hospital does buy purpose-built scheduling software, ease of setup and direct support tend to matter more than feature breadth. Publicly reviewed platforms in this space, such as Aladtec, built their reputations on exactly those attributes.
+- When a small rural hospital does buy purpose-built scheduling software, ease of setup and direct support tend to matter more than feature breadth. Some publicly reviewed scheduling tools, such as Aladtec, built their reputations on exactly those attributes.
 - Structured software evaluation rarely happens where no one owns the task and there is no dedicated budget line, a plausible reason many small rural hospitals have not adopted a tool recently. This is inference from documented staffing constraints, not a survey result.
 - The market gap is directional but real: enterprise scheduling vendors publicly position and reference large health systems, not standalone Texas rural hospitals, and none publicly documents a product built specifically for the Texas Critical Access Hospital compliance environment (HHSC, FLSA, CMS CoP).
 
@@ -58,7 +59,7 @@ There is no public dataset that ranks the exact scheduling tools in use across T
 
 Rural hospitals without dedicated IT commonly rely on the simplest tools available: a spreadsheet, a whiteboard, and a phone. That is a reasonable read of the same limited-IT, constrained-budget facilities described above. Spreadsheets tend to persist not because they are the best tool but because they were the tool on hand when the process was first set up, and switching costs are real. A nurse manager who has built schedules the same way for years has a configured process that clears the minimum bar of producing a schedule each cycle.
 
-When a small rural hospital does adopt purpose-built scheduling software, ease of setup and responsive support tend to weigh more heavily than feature breadth, because there is no IT team to absorb a complex rollout. Aladtec is one publicly reviewed platform that built its reputation on exactly those attributes among small agencies and facilities before the TCP Software acquisition. Some facilities instead use basic time and attendance systems with a schedule module attached. A small number, typically part of a larger health system, run an enterprise platform such as UKG that the parent system rolled out centrally rather than the facility choosing it, which is a common pattern in health-system acquisitions.
+When a small rural hospital does adopt purpose-built scheduling software, ease of setup and responsive support tend to weigh more heavily than feature breadth, because there is no IT team to absorb a complex rollout. Aladtec is one publicly reviewed platform that built its reputation on exactly those attributes. Now sold by TCP Software, it is marketed to fire, EMS, law enforcement and corrections agencies. TCP markets a different product, Humanity Schedule, to healthcare. Some facilities instead use basic time and attendance systems with a schedule module attached. A small number, typically part of a larger health system, run an enterprise platform such as UKG that the parent system rolled out centrally rather than the facility choosing it, which is a common pattern in health-system acquisitions.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -112,7 +113,7 @@ Documented staffing and budget constraints point to four interconnected reasons 
 
 Because there is no public evaluation dataset for this segment, the platforms below are ones that surface in publicly reviewed rural and small-hospital scheduling contexts, not a measured ranking of what Texas administrators choose.
 
-Aladtec surfaces in these contexts because it built a strong word-of-mouth reputation among small agency and hospital users and offered an accessible initial setup path. It is worth pairing that reputation with what reviewers actually flag. On Capterra, one nurse manager noted the editing workflow can be click-heavy:
+Aladtec surfaces in these contexts because it offered an accessible initial setup path. It is worth pairing that with what reviewers actually flag. On Capterra, one nurse manager noted the editing workflow can be click-heavy:
 
 > "When editing the schedule there are a lot of clicks involved."
 >

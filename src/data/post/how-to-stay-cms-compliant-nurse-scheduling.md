@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-07T00:00:00Z
-updateDate: 2026-06-07T00:00:00Z
+updateDate: 2026-10-19T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'How to Stay CMS Compliant with Nurse Scheduling at Critical Access Hospitals'
 excerpt: >
@@ -212,7 +212,7 @@ The documentation burden described above is manual unless your scheduling system
 
 Most general-purpose scheduling software (Deputy, When I Work, standard workforce tools) produces schedules and time tracking. It does not generate CMS-formatted staffing documentation, does not maintain a credential log integrated with the schedule, and does not flag when a shift would have no qualified RN on duty or on call.
 
-Nursing-specific platforms (NurseGrid Manager, Aladtec) are better suited to healthcare but still require manual setup and maintenance to connect credential records to scheduling records in a format that satisfies CMS documentation requests.
+Nursing-specific platforms such as NurseGrid Manager are better suited to healthcare but still require manual setup and maintenance to connect credential records to scheduling records in a format that satisfies CMS documentation requests.
 
 [SimpleScheduleAI](/how-it-works) uses [AI nurse scheduling](/ai-nurse-scheduling) to build each schedule and generate CMS §485.635-formatted staffing documentation automatically from it. When a callout replacement occurs, the replacement and their credentials are captured in the documentation record. When a CMS surveyor requests staffing records, the nurse manager pulls the pre-built report. There is no assembly required. To watch the §485.635 compliance checklist tick off as the AI builds a schedule, try the [scheduling simulator](/simulator). For the wider category, see our [nurse scheduling software](/nurse-scheduling-software) overview and the [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
 

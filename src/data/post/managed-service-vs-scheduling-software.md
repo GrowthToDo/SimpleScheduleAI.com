@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-05-15T00:00:00Z
-updateDate: 2026-05-15T00:00:00Z
+updateDate: 2026-10-19T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'If You Buy Nurse Scheduling Software, Who Builds the Schedule Each Week?'
 excerpt: >
@@ -343,7 +343,7 @@ The total nurse manager time investment per scheduling cycle is under two hours.
 
 4. **Request a free scheduling assessment.** Describe your current scheduling workflow in the request: how many hours per week the manager spends on scheduling, how callout replacement currently works, and how CMS survey preparation is handled. Start at [how it works](/how-it-works).
 
-5. **If you prefer self-serve software, compare Aladtec and SmartLinx.** Aladtec is faster to configure for small rosters. SmartLinx provides more automation for larger hospitals. Neither eliminates the manager's scheduling construction time; both reduce it. If your current tool is a time-and-attendance suite, our look at [TCP scheduling software versus a managed service](/blog/tcp-scheduling-software-vs-managed-service) applies the same comparison to that product.
+5. **If you prefer self-serve software, compare Aladtec and SmartLinx.** Aladtec is worth evaluating only if TCP confirms it would sell and support it for hospital nursing. Aladtec is faster to configure for small rosters. SmartLinx provides more automation for larger hospitals. Neither eliminates the manager's scheduling construction time; both reduce it. If your current tool is a time-and-attendance suite, our look at [TCP scheduling software versus a managed service](/blog/tcp-scheduling-software-vs-managed-service) applies the same comparison to that product.
 
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
@@ -380,7 +380,7 @@ Managed scheduling services are typically more expensive than scheduling softwar
 
 **Which scheduling platforms are self-serve software vs. managed services?**
 
-Self-serve scheduling software for hospital nursing: Aladtec, SmartLinx, QGenda, NurseGrid Manager, OnShift, Deputy, UKG. Managed scheduling service for Critical Access Hospital nursing: SimpleScheduleAI. The distinction matters when evaluating these tools. Comparing software features to a managed service's workflow is an apples-to-oranges comparison.
+Self-serve scheduling software that hospitals evaluate: SmartLinx, QGenda, NurseGrid Manager, OnShift, Deputy, UKG, plus public safety scheduling tools such as Aladtec. Managed scheduling service for Critical Access Hospital nursing: SimpleScheduleAI. The distinction matters when evaluating these tools. Comparing software features to a managed service's workflow is an apples-to-oranges comparison.
 
 ---
 

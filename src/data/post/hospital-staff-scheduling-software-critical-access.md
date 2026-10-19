@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-05-31T00:00:00Z
-updateDate: 2026-05-31T00:00:00Z
+updateDate: 2026-10-19T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Hospital Staff Scheduling Software for Critical Access Hospitals'
 excerpt: >
@@ -112,7 +112,7 @@ The common options split into four groups: spreadsheets, consumer shift apps, ho
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-3 font-medium text-slate-900 dark:text-slate-100">Aladtec (TCP)</td>
-        <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Public safety, EMS, small healthcare rosters</td>
+        <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Public safety agencies (fire, EMS, law enforcement)</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">Self-serve; admin-side configuration</td>
         <td class="py-3 pr-3 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94 reviews)<br />Capterra: 4.6/5 (17 reviews; small sample)</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Not listed; contact vendor</td>
