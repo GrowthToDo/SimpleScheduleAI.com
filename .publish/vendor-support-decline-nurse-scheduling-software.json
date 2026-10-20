@@ -5,69 +5,69 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-10-20T05:54:13.127Z",
-      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
+      "checkedAt": "2026-10-20T06:41:13.561Z",
+      "contentHash": "2c7638187db91779225da70efbba8dfdf2d619780e88be307ced50ee41bbad72"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-10-20T05:54:20.850Z",
-      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
+      "checkedAt": "2026-10-20T06:41:17.008Z",
+      "contentHash": "2c7638187db91779225da70efbba8dfdf2d619780e88be307ced50ee41bbad72"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-20T05:54:24.831Z",
-      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
+      "checkedAt": "2026-10-20T06:41:18.479Z",
+      "contentHash": "2c7638187db91779225da70efbba8dfdf2d619780e88be307ced50ee41bbad72"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-20T05:54:25.313Z",
-      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
+      "checkedAt": "2026-10-20T06:41:18.565Z",
+      "contentHash": "2c7638187db91779225da70efbba8dfdf2d619780e88be307ced50ee41bbad72"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-10-20T05:54:26.276Z",
-      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
+      "checkedAt": "2026-10-20T06:41:18.874Z",
+      "contentHash": "2c7638187db91779225da70efbba8dfdf2d619780e88be307ced50ee41bbad72"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-10-20T05:54:26.301Z",
-      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
+      "checkedAt": "2026-10-20T06:41:18.874Z",
+      "contentHash": "2c7638187db91779225da70efbba8dfdf2d619780e88be307ced50ee41bbad72"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-10-20T05:54:26.306Z",
-      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
+      "checkedAt": "2026-10-20T06:41:18.877Z",
+      "contentHash": "2c7638187db91779225da70efbba8dfdf2d619780e88be307ced50ee41bbad72"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-10-20T05:54:26.317Z",
-      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
+      "checkedAt": "2026-10-20T06:41:18.880Z",
+      "contentHash": "2c7638187db91779225da70efbba8dfdf2d619780e88be307ced50ee41bbad72"
     }
   },
   "recorded": {
     "factCheck": {
       "value": "PASS",
       "setBy": "general-purpose-factcheck",
-      "setAt": "2026-10-20T05:53:46.982Z",
-      "contentHash": "51bcc2d409391eda9df671a8ffc76b5408632aecfe0c8fbec0aa2b01d3478005"
+      "setAt": "2026-10-20T06:41:06.829Z",
+      "contentHash": "78cfb7f252f6ec7f1773eb087bb71a237667670b887cf1c36a4826ccff686eea"
     },
     "proofread": {
       "value": "READY",
       "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-10-20T05:53:43.106Z",
-      "contentHash": "51bcc2d409391eda9df671a8ffc76b5408632aecfe0c8fbec0aa2b01d3478005"
+      "setAt": "2026-10-20T06:41:05.258Z",
+      "contentHash": "78cfb7f252f6ec7f1773eb087bb71a237667670b887cf1c36a4826ccff686eea"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-10-20T05:53:51.229Z",
-      "contentHash": "51bcc2d409391eda9df671a8ffc76b5408632aecfe0c8fbec0aa2b01d3478005"
+      "setAt": "2026-10-20T06:41:08.788Z",
+      "contentHash": "78cfb7f252f6ec7f1773eb087bb71a237667670b887cf1c36a4826ccff686eea"
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "main-session",
-      "setAt": "2026-10-20T05:53:55.483Z",
-      "contentHash": "51bcc2d409391eda9df671a8ffc76b5408632aecfe0c8fbec0aa2b01d3478005"
+      "setBy": "founder",
+      "setAt": "2026-10-20T06:41:10.841Z",
+      "contentHash": "78cfb7f252f6ec7f1773eb087bb71a237667670b887cf1c36a4826ccff686eea"
     }
   },
   "overrides": [],

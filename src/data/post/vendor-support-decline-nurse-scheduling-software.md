@@ -39,9 +39,9 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-During a software demo and setup, you may have a named person who answers quickly. A few months after go-live, that can turn into a support form. Whether that change happens, and how much it matters, depends on the vendor and on what your contract says.
+During a software demo and setup, you may have a named person who answers quickly. A few months after go-live, that named person can be replaced by a support form. Whether that change happens, and how much it matters, depends on the vendor and on what your contract says.
 
-This guide covers what can change, what reviewers of [nurse scheduling software](/nurse-scheduling-software) actually report, and what to write into a contract before you sign. It is aimed at a [critical access hospital](/critical-access-hospital-scheduling) where one nurse manager runs the schedule.
+This guide covers what can change, what reviewers of [nurse scheduling software](/nurse-scheduling-software) actually report, and what to write into a contract before you sign. The examples fit a [critical access hospital](/critical-access-hospital-scheduling) where one nurse manager runs the schedule.
 
 ## Why Can Scheduling Software Support Change After Go-Live?
 
@@ -69,7 +69,7 @@ Aladtec is the example we could verify. [TCP Software acquired Aladtec in Octobe
 
 ## What Should a Scheduling Software Contract Say About Support?
 
-A scheduling software contract should name who supports you after go-live, how fast they respond to each kind of problem, and when they are available. It should also say what happens if they miss those times, and what happens to your data when the contract ends. If these are only in the sales conversation, they are not guaranteed. Ask for them in writing, alongside the rest of your [software evaluation](/blog/how-to-choose-nurse-scheduling-software).
+A scheduling software contract should name who supports you after go-live, how fast the vendor responds to each kind of problem, and when its support team is available. It should also say what happens if the vendor misses those times, and what happens to your data when the contract ends. A support promise made only in a sales call is not guaranteed. Ask the vendor to write each of these support terms into the contract, alongside the rest of your [software evaluation](/blog/how-to-choose-nurse-scheduling-software).
 
 Start by defining an urgent problem in the contract. An urgent problem is anything that stops shifts being covered. Examples are a schedule that cannot be posted, a system that is down during a scheduling cycle, or an error that leaves a shift uncovered. Ask the vendor to list these as urgent in writing, so a Friday evening problem is not treated like a routine question.
 
@@ -127,15 +127,15 @@ Start by defining an urgent problem in the contract. An urgent problem is anythi
   </table>
 </div>
 
-Keep the vendor's written answers with the contract. If support slips later, they are what you point to.
+Keep the vendor's written answers with the contract. If support slips later, those written answers are what you point to.
 
 ## What Should You Do if Your Scheduling Software Support Has Already Declined?
 
 Write down each problem as it happens: the date, what broke, when you reported it and when it was fixed. After a few weeks, you have a record instead of a feeling. Take that record to your account manager, and ask what the contract says about response times.
 
-If the contract has support terms and the vendor is missing them, the record gives you grounds to escalate. Whether you can also leave early depends on the contract's termination clause, so read it now. When you renew or sign a new contract, ask for a clause that lets you end it if written support terms are missed.
+If the contract has support terms and the vendor is missing them, the record gives you grounds to escalate. Whether you can also leave early depends on the contract's termination clause, so read it now. When you renew or sign a new contract, ask for a clause that lets you end the contract if written support terms are missed.
 
-If the contract has no support terms, the record still helps. It turns "support is slow" into specific dates the vendor has to answer.
+If the contract has no support terms, the record still helps. The record turns "support is slow" into specific dates the vendor has to answer.
 
 If you think a switch is coming, do two things first. Export a copy of your schedule history and staff list, so a new system does not start from nothing. Then check how much notice the termination clause asks for, so you know your real leaving date.
 

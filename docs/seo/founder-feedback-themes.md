@@ -84,6 +84,12 @@ reader does not work a ticket queue.
 Every claim-bearing noun phrase says, in the same sentence, of what or to what.
 The more elegant the phrase, the more likely it fails.
 ("The goal is a return" — return to what? "Which advisory board?")
+_Sharpened 2026-10-20:_ the same applies to a pronoun that opens a sentence. A
+"these", "they", "them" or "this" that points back across a sentence to a list
+must name the thing again. ("If these are only in the sales conversation, they
+are not guaranteed. Ask for them in writing" — these what? them what? Fixed to
+"A support promise made only in a sales call is not guaranteed. Ask the vendor
+to write each of these support terms into the contract.")
 
 **T22. A rule with an exception needs the exception spelled out, not compressed.**
 Check: any sentence of the form "X does not count against Y, and it works both

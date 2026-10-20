@@ -53,13 +53,13 @@ There are other causes too. Cookies are small files that keep you signed in, and
 
 ## Does HIPAA Require a Scheduling App to Log You Out?
 
-Not directly. The [HIPAA Security Rule](https://www.law.cornell.edu/cfr/text/45/164.312) covers systems that hold patient records in electronic form. It asks them to "Implement electronic procedures that terminate an electronic session after a predetermined time of inactivity". A staff schedule usually holds no patient information, so the rule may not apply to it at all.
+Not directly. The [HIPAA Security Rule](https://www.law.cornell.edu/cfr/text/45/164.312) covers systems that hold patient records in electronic form. The rule asks those systems to "Implement electronic procedures that terminate an electronic session after a predetermined time of inactivity". A staff schedule usually holds no patient information, so the rule may not apply to it at all.
 
-Hospitals and healthcare vendors often use one idle-logout policy across every system anyway. That is simpler for IT, and it is how a scheduling app can end up on the same short timer as the electronic health record.
+Hospitals and healthcare vendors often use one idle-logout policy across every system anyway. One policy is simpler for IT, and it is how a scheduling app can end up on the same short timer as the electronic health record.
 
-Two details in the rule matter here. It sets no number of minutes. And the automatic logoff rule is marked "Addressable". Under [45 CFR 164.306](https://www.law.cornell.edu/cfr/text/45/164.306), an organization must "Assess whether each implementation specification is a reasonable and appropriate safeguard in its environment". If the organization decides it is not, it must document why and "Implement an equivalent alternative measure if reasonable and appropriate".
+Two details in the rule matter here. It sets no number of minutes. And the automatic logoff rule is marked "Addressable". Under [45 CFR 164.306](https://www.law.cornell.edu/cfr/text/45/164.306), an organization must "Assess whether each implementation specification is a reasonable and appropriate safeguard in its environment". If the organization decides the safeguard is not reasonable and appropriate, it must document why and "Implement an equivalent alternative measure if reasonable and appropriate".
 
-In plain terms, "Addressable" means a hospital or vendor has to consider an automatic logoff. If it decides one does not fit, it must write down why and, if reasonable, use something else that protects the records as well. So a short timer on a scheduling app is a choice someone made, and you can ask that person to change it.
+In plain terms, "Addressable" means a hospital or vendor has to consider an automatic logoff. If the hospital or vendor decides an automatic logoff does not fit, it must write down why and, if reasonable, use something else that protects the records as well. So a short timer on a scheduling app is a choice someone made, and you can ask that person to change it.
 
 ## Who Decides How Long Before a Scheduling App Logs You Out?
 
@@ -73,19 +73,50 @@ When you ask for a longer timer, ask what the longest allowed setting is, and wh
 
 The table shows each cause and who controls it.
 
-| What ends your session                             | Who can change it | What to do or ask                                                          |
-| -------------------------------------------------- | ----------------- | -------------------------------------------------------------------------- |
-| The app's idle timer                               | The vendor        | Ask what the idle timeout is on your account and whether it can be longer  |
-| The hospital's own login policy                    | Your IT team      | Ask whether the hospital sets a timeout that applies to the scheduling app |
-| A browser setting or extension that clears cookies | You               | Allow cookies for the scheduling app's site                                |
-| Signing in on a second device                      | You               | Use one device and one browser for a scheduling session                    |
-| An out-of-date mobile app                          | You               | Update the app after a phone software update                               |
+<div class="not-prose overflow-x-auto my-8">
+  <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
+    <thead>
+      <tr class="bg-slate-100 dark:bg-slate-700">
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:34%">What ends your session</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:20%">Who can change it</th>
+        <th class="border border-slate-300 dark:border-slate-600 px-3 py-3 text-left font-semibold text-slate-900 dark:text-slate-100" style="width:46%">What to do or ask</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">The app's idle timer</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">The vendor</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Ask what the idle timeout is on your account and whether it can be longer</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">The hospital's own login policy</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Your IT team</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Ask whether the hospital sets a timeout that applies to the scheduling app</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">A browser setting or extension that clears cookies</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">You</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Allow cookies for the scheduling app's site</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">Signing in on a second device</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">You</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Use one device and one browser for a scheduling session</td>
+      </tr>
+      <tr class="align-top">
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">An out-of-date mobile app</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">You</td>
+        <td class="border border-slate-300 dark:border-slate-600 px-3 py-2 text-slate-700 dark:text-slate-300">Update the app after a phone software update</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Ask one more question while you are talking to the vendor: does the app save drafts automatically, and how often? An app that saves every few minutes costs you a few minutes when you are logged out. An app that saves only when you click save can cost you the whole session.
 
 ## What Do Nurses Say About Scheduling App Logins in Reviews?
 
-Two public reviews mention login friction. A licensed vocational nurse reviewed [ShiftWizard on Capterra](https://www.capterra.com/p/178376/ShiftWizard/reviews/). They wrote: "I wish the messaging was better, and that I have to input my info every time I log in". In the same review they wrote: "I like how I know my schedule at a glance, it is clear and direct".
+Two public reviews mention login friction. A licensed vocational nurse reviewed [ShiftWizard on Capterra](https://www.capterra.com/p/178376/ShiftWizard/reviews/). The nurse wrote: "I wish the messaging was better, and that I have to input my info every time I log in". In the same review the nurse also wrote: "I like how I know my schedule at a glance, it is clear and direct".
 
 The second review is about where you have to log in. A chief nursing officer reviewed [NurseGrid on Capterra](https://www.capterra.com/p/254829/NurseGrid/reviews/) and wrote: "It no longer has the manager app so I have to login to desktop to make changes". The reviewer reports that the manager app was removed. HealthStream, which makes NurseGrid, told another reviewer that "there is a mobile browser view that has the same functionality as the mobile app".
 
@@ -107,7 +138,7 @@ Test the idle timer and the save behavior in any demo, before you sign. Start a 
 
 Then ask the three questions above, about the idle timeout, your hospital's login policy and automatic saving. Write down the answers.
 
-Add these to the rest of your [software evaluation](/blog/how-to-choose-nurse-scheduling-software). If you are comparing mobile apps in particular, our [best nurse scheduling app guide](/blog/best-nurse-scheduling-app) looks at how each one behaves on a phone.
+Add these questions to the rest of your [software evaluation](/blog/how-to-choose-nurse-scheduling-software). If you are comparing mobile apps in particular, our [best nurse scheduling app guide](/blog/best-nurse-scheduling-app) looks at how each one behaves on a phone.
 
 ## How Does SimpleScheduleAI Handle Logins?
 
@@ -117,7 +148,7 @@ You review the draft we send and tell us what to change. We make the change and 
 
 Against the demo questions above, there is no idle timeout to test and no draft for you to save, because nobody at the hospital logs in to the service.
 
-One honest limitation: there is no nurse-facing app in the service. If your nurses want to check shifts or pick up open shifts on their phones, SimpleScheduleAI does not give them that. They see the schedule you post and share.
+One honest limitation: there is no nurse-facing app in the service. If your nurses want to check shifts or pick up open shifts on their phones, SimpleScheduleAI does not give them that. Your nurses see the schedule you post and share.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
