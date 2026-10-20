@@ -72,7 +72,7 @@ Everyday problems are smaller, but they follow the same pattern. A registered nu
 
 ## Why Is a Holiday Weekend the Worst Time for a Scheduling Outage?
 
-A holiday weekend is the worst time for a scheduling outage because help is hardest to reach just when coverage is tightest. The vendor's support team and your own administration may be on reduced holiday hours. Some of your nurses are on planned leave. And [CDC](https://www.cdc.gov/flu/about/season.html) says flu activity usually peaks between December and February.
+A holiday weekend is the worst time for a scheduling outage because help is hardest to reach just when coverage is tightest. The vendor's support team and your own administration may be on reduced holiday hours. Some of your nurses are on planned leave. And [CDC](https://www.cdc.gov/flu/about/season.html) says flu activity usually peaks between December and February. Our guide to [what happens to scheduling software support after you sign](/blog/vendor-support-decline-nurse-scheduling-software) covers how to get weekend support written into the contract.
 
 The Kronos attack is the real example. It started on a Saturday night in mid-December, two weeks before Christmas. At UMass Memorial, Kronos did not return as the payroll timekeeping source until January 27, 2022. For hospitals like that one, the Christmas and New Year shifts were worked and paid while the system was down.
 

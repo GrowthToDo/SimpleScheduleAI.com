@@ -5,53 +5,179 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:27.814Z",
-      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+      "checkedAt": "2026-10-20T05:54:13.127Z",
+      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:29.643Z",
-      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+      "checkedAt": "2026-10-20T05:54:20.850Z",
+      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:31.892Z",
-      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+      "checkedAt": "2026-10-20T05:54:24.831Z",
+      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
     },
     "inboundLinks": {
-      "status": "FAIL",
-      "checkedAt": "2026-09-26T10:14:31.917Z",
-      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+      "status": "PASS",
+      "checkedAt": "2026-10-20T05:54:25.313Z",
+      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:32.021Z",
-      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+      "checkedAt": "2026-10-20T05:54:26.276Z",
+      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:32.022Z",
-      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+      "checkedAt": "2026-10-20T05:54:26.301Z",
+      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-09-26T10:14:32.022Z",
-      "contentHash": "901f6f384a2b040b3e6faa2d19625ea75c5c40fdb0089ff055097a0234a5cc26"
+      "checkedAt": "2026-10-20T05:54:26.306Z",
+      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-20T05:54:26.317Z",
+      "contentHash": "b1525fb06a780170f398fbfc31ef668f827a6c0328eca0328a63985d872970be"
     }
   },
   "recorded": {
     "factCheck": {
       "value": "PASS",
-      "setBy": "verifier",
-      "setAt": "2026-09-26T10:25:22.959Z",
-      "contentHash": "f1882c126fab67de07312c19d08f326055a6f497438ed48cca69d0e99ea5961e"
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-20T05:53:46.982Z",
+      "contentHash": "51bcc2d409391eda9df671a8ffc76b5408632aecfe0c8fbec0aa2b01d3478005"
     },
     "proofread": {
       "value": "READY",
       "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-09-26T10:25:21.488Z",
-      "contentHash": "f1882c126fab67de07312c19d08f326055a6f497438ed48cca69d0e99ea5961e"
+      "setAt": "2026-10-20T05:53:43.106Z",
+      "contentHash": "51bcc2d409391eda9df671a8ffc76b5408632aecfe0c8fbec0aa2b01d3478005"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-20T05:53:51.229Z",
+      "contentHash": "51bcc2d409391eda9df671a8ffc76b5408632aecfe0c8fbec0aa2b01d3478005"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "main-session",
+      "setAt": "2026-10-20T05:53:55.483Z",
+      "contentHash": "51bcc2d409391eda9df671a8ffc76b5408632aecfe0c8fbec0aa2b01d3478005"
     }
   },
-  "overrides": []
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 87,
+        "headings": 88.9,
+        "actionability": 50,
+        "attention": 100
+      },
+      "overall": 74.5,
+      "counts": {
+        "sections": 9,
+        "rereads": 5,
+        "undefinedTerms": 2,
+        "headingsAnswered": 8,
+        "mondayActions": 5,
+        "blockedActions": 5,
+        "quitPoints": 0
+      },
+      "icp": "Director of Nursing at a 25-bed rural Texas Critical Access Hospital who is also the scheduler, no IT department (one outside contractor), about to renew or sign a scheduling-software contract; reads once, start to finish",
+      "publishDate": "2026-09-26T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": ["coverage-blocking", "AI-native"],
+        "mondayActions": [
+          "Pull the current scheduling software contract and look for response times, hours of coverage and a named contact",
+          "Start a support log: date, what broke, when reported, when fixed",
+          "Export a copy of the staff list and schedule history outside the system",
+          "Email the vendor: who is our named contact after go-live, and how do we reach them on a weekend?",
+          "Bring the six-row contract table to any demo or renewal call and ask for written answers"
+        ],
+        "blockedActions": [
+          "Write the actual contract clause for urgent response times: the post gives no sample wording to paste into a redline or renewal email",
+          "Judge whether a vendor's stated response time is good or bad: no benchmark numbers for urgent vs routine or for weekend coverage",
+          "Ask for a remedy if the vendor misses written response times (service credits, termination for cause without penalty, auto-renewal opt-out): the post says 'possibly to leave' with no mechanism",
+          "Ask for a data-return clause at contract end: no format (CSV/Excel), no timeframe, no scope (staff, schedule history, rules) beyond 'export at any time' tied to a billing dispute",
+          "Compare SimpleScheduleAI's response times to the table on this page: the times are only on /how-it-works"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Clear. Fifth bullet points away to another guide before the post has started."
+          },
+          {
+            "heading": "Why Can Scheduling Software Support Change After Go-Live?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "L48-52 lands: implementation specialist moves on, Friday-evening schedule that will not post, nobody else to hand it to. This is my situation."
+          },
+          {
+            "heading": "What Do Reviewers Say About Scheduling Software Support?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "L56 tells me to look at review dates, then L60 leans on a January 2022 Deputy review. L58 quotes a medical-practice reviewer and then says it is not a hospital, so why lead with it? L62 brings in Aladtec, which I have never considered for nursing, and an acquisition I have not been told about yet; reread to work out why it is here. Interest drops in this section: it is about other vendors, not my contract."
+          },
+          {
+            "heading": "Does an Acquisition Change Scheduling Software Support?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false,
+            "notes": "The heading asks about support. The answer is 'it can, hard to prove', and the only example (L68) is explicitly 'not a proven drop in support' but a product-direction change at a public-safety vendor. Then it sends me to another guide. I learned nothing I can use at renewal. Most likely skim point."
+          },
+          {
+            "heading": "What Should a Scheduling Software Contract Say About Support?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "The table is the reason I came. But 'A good answer looks like' gives no numbers (L77: 'Written times for an urgent problem' - is 4 hours good? 1 hour? next business day?). No sample clause wording. No remedy if they miss it (credits, right to terminate). L80 'during a billing dispute' is oddly narrow: I care about export at renewal and at exit. L81 'New customers still have the setup team' reread to get the point."
+          },
+          {
+            "heading": "What Should You Do if Your Scheduling Software Support Has Already Declined?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Support log is practical. L89 'possibly to leave' with no how (notice period, termination for cause, auto-renew). L91 links to switching from Excel, but I would be switching vendor to vendor; reread to check I had not misunderstood."
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Handle Support?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Honest scorecard and the 'no reference customer' admission builds trust. But L100-101 answer 'response by urgency' and 'hours' with 'front of our queue' and 'see how it works', which is the exact 'We respond quickly is not a commitment' the table at L77 warned me about. L102 'one named contact': what happens when that person is sick or on leave?"
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Five clear steps I can do before renewal."
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Urgent-problem definition (L138) is the most usable contract input in the post and should sit in the table."
+          }
+        ]
+      },
+      "scoredAt": "2026-10-20T05:34:10.768Z",
+      "contentHash": "f1882c126fab67de07312c19d08f326055a6f497438ed48cca69d0e99ea5961e"
+    }
+  }
 }

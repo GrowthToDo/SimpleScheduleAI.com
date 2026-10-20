@@ -1016,5 +1016,11 @@
     "description": "Empty corner patient room with wingback chair and flowers",
     "family": "ward-quiet",
     "topics": ["patient room", "swing bed", "quiet ward"]
+  },
+  {
+    "id": "1758691462848-31a39258dbd8",
+    "description": "Clinician in white coat on a phone call at a clinic office desk, typing on a laptop",
+    "family": "desk-admin",
+    "topics": ["vendor support", "support call", "software", "healthcare admin"]
   }
 ]

@@ -988,5 +988,13 @@
     "primaryKeyword": "northern maine medical center nurses",
     "pillar": null,
     "note": "Newsroom article published 2026-10-16. Peg: NMMC (Fort Kent, ME, 25-bed CAH) ER nurse resignations over day/night rotation (Maine Monitor Oct 1, BDN Oct 1-2, WAGM Oct 6 and 12). Hook: shift-count arithmetic for a 24-hour ER with two nurses (our assumption at all hours). Secondary: er nurse night shift coverage, nurse rotation day night. Brief: docs/seo/briefs/2026-10-northern-maine-medical-center-nurse-resignations.md."
+  },
+  {
+    "slug": "vendor-support-decline-nurse-scheduling-software",
+    "type": "post",
+    "url": "/blog/vendor-support-decline-nurse-scheduling-software",
+    "primaryKeyword": "scheduling software support",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-10-20 (next-15 Oct plan #8, AI-answer piece, no measured demand). Support after go-live: who answers, reviewer evidence, support terms to put in the contract (response times, backup contact, missed-response remedies, data return). Differs from /blog/scheduling-software-vendor-acquisition-support (acquisition risk) and /blog/nurse-scheduling-software-reliability-crashes (outages). Rewritten 2026-09-26 (old draft had fabricated quotes)."
   }
 ]
