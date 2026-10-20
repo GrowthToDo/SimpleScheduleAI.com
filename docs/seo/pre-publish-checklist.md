@@ -14,7 +14,7 @@ Run these; fix every HARD FAILURE; a human never re-verifies a green row by hand
 - `npm run check-blog src/data/post/<slug>.md` — offline gate. HARD-FAILS: em/en-dashes; the full
   AI-tone phrase list; inline `<svg>`; blank line inside `<div>` blocks; retired `/pilot` CTA
   strings; the CTA pattern (one primary button + Book-a-call text link, exactly one CTA box);
-  italic-linked author bio format; both pillar links + `/how-it-works`; canonical-matches-slug;
+  italic-linked author bio format; all three pillar links (`/nurse-scheduling-software`, `/critical-access-hospital-scheduling`, `/ai-nurse-scheduling`) + `/how-it-works`; canonical-matches-slug;
   TOC anchor/heading integrity + broken jump links; merged heading + stray glued `?`; no "CAH" in
   headings, table headers, or figcaptions; stray MDX (`import`, `astro:assets`) in `.md`;
   image-pool membership + exact-ID duplication + unquoted image URL; dark-mode table variants
@@ -23,7 +23,7 @@ Run these; fix every HARD FAILURE; a human never re-verifies a green row by hand
   max; facts drift via `scripts/lib/facts-rules.mjs` (CFR pin-cites §485.631 vs §485.635,
   DSHS-vs-HHSC, §62.002, no 8-and-80 attributed to SimpleScheduleAI).
 - `check-blog` WARNs (advisory — a human judges each flagged line, never ignores them silently):
-  word count vs post-type range; `/ai-nurse-scheduling` third hub; in-body `.webp`; standard
+  word count vs post-type range; in-body `.webp`; standard
   table classes; volume language near competitor names; excerpt run-on (>40-word sentence);
   "managed service" self-label; front-loaded link/reference; over-used image family (3+ live
   posts in the same visual family); internal-link orphan (corpus `--all`/`--live` runs).

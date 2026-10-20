@@ -81,7 +81,7 @@ There is no federal wage figure for the title. The 2018 Standard Occupational Cl
 **Q: Who does the nurse manager report to?**
 At most hospitals the nurse manager reports to the director of nursing or the chief nursing officer. At a Critical Access Hospital those layers often collapse, and the nurse manager may be the director of nursing, reporting straight to the administrator or CEO. In Texas the top of that chain is set by state licensing, which requires nursing services under a chief nursing officer who is an RN. The federal critical access hospital rules require no nursing leadership title at all.
 
-For more on how SimpleScheduleAI supports nurse managers at critical access hospitals, see: [Critical Access Hospital Scheduling](/critical-access-hospital-scheduling).
+For more on how SimpleScheduleAI supports nurse managers at critical access hospitals, see: [Critical Access Hospital Scheduling](/critical-access-hospital-scheduling). The [AI nurse scheduling](/ai-nurse-scheduling) guide explains how the drafts are built.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">The schedule, off the nurse manager's plate</p>

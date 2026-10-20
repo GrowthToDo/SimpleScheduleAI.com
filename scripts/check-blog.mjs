@@ -1110,11 +1110,14 @@ function check(file) {
     }
   }
 
-  // 11. Required internal hub links: both pillars + /how-it-works (HARD).
-  //     /ai-nurse-scheduling is a WARN-only third hub (handled below).
+  // 11. Required internal hub links: all three pillars + /how-it-works (HARD).
+  //     /ai-nurse-scheduling became HARD on 2026-10-20 (founder). It had been a
+  //     WARN that fired only when the body mentioned AI, so two live posts
+  //     shipped without the third pillar link.
   const requiredHubs = [
     { path: '/nurse-scheduling-software', label: 'pillar 1 (nurse scheduling software)' },
     { path: '/critical-access-hospital-scheduling', label: 'pillar 2 (critical access hospital scheduling)' },
+    { path: '/ai-nurse-scheduling', label: 'pillar 3 (AI nurse scheduling)' },
     { path: '/how-it-works', label: '/how-it-works' },
   ];
   for (const r of requiredHubs) {
@@ -1607,13 +1610,6 @@ function check(file) {
   }
 
   // --- SOFT WARNINGS ---
-
-  // /ai-nurse-scheduling third hub — required only where the post discusses AI
-  // scheduling. WARN only.
-  const discussesAI = /\bAI\b/.test(bodyText) || /artificial intelligence/i.test(bodyText);
-  if (discussesAI && !bodyText.includes('(/ai-nurse-scheduling)')) {
-    warn('Third hub /ai-nurse-scheduling not linked (post discusses AI scheduling)', 0, '');
-  }
 
   // In-body images whose src is neither .webp nor an Unsplash URL.
   body.forEach((line, i) => {
