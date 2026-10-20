@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-05-23T00:00:00Z
-updateDate: 2026-10-19T00:00:00Z
+updateDate: 2026-10-20T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Hospital Staff Scheduling Software for Small Hospitals (2026)'
 excerpt: >
@@ -75,7 +75,7 @@ Here is how the five platforms most commonly evaluated at 25-bed scale compare b
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Unclear; marketed to public safety agencies</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Adequate</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Manual with alerts</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">$200-450</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200 align-top">Quote only (not published)</td>
       </tr>
       <tr>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100 align-top">NurseGrid Manager</td>
@@ -237,7 +237,7 @@ Aladtec, now sold by TCP Software, is marketed to fire, EMS, law enforcement and
 
 **Ratings (July 2026):** G2: 4.5/5 (94 reviews). Capterra: 4.6/5 (17 reviews; small sample, reviewer base skews toward public safety; most recent hospital-context review is October 2020).[1]
 
-**Cost:** $200-450 per month depending on roster size and modules. Pricing requires a quote.
+**Cost:** Not published. TCP quotes on request.
 
 ### 3. [NurseGrid Manager](https://nursegrid.com)
 
@@ -413,7 +413,7 @@ The decision comes down to two operational questions: does the nurse manager als
       </tr>
       <tr>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Manager is administrative only</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Lowest cost, no CMS survey exposure</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 text-slate-800 dark:text-slate-200 align-top">Lowest per-user price, no CMS survey exposure</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-3 font-medium text-slate-900 dark:text-slate-100 align-top">When I Work</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/40">
@@ -501,7 +501,7 @@ Homebase is below the functional requirements for a hospital nursing unit. The f
 
 **What is the cheapest scheduling software for a 25-bed hospital?**
 
-When I Work at $2.50-$6 per user per month is the lowest-cost option, totaling approximately $50-$120/month for a 20-nurse roster. NurseGrid Manager runs approximately $150-$300/month and adds communication features. Aladtec starts around $200-$450/month. None of these include CAH-specific compliance documentation as defaults. For hospitals where the compliance burden is significant, the total cost including nurse manager documentation time often makes a higher-cost automated tool less expensive overall.
+Homebase has a free tier for up to 20 staff per location. Among the paid per-user plans here, When I Work at $2.50-$6 per user per month is the lowest, totaling approximately $50-$120/month for a 20-nurse roster. NurseGrid Manager runs approximately $150-$300/month and adds communication features. Aladtec requires a quote, so compare it once TCP gives you one. None of these include CAH-specific compliance documentation as defaults. For hospitals where the compliance burden is significant, the total cost including nurse manager documentation time often makes a higher-cost automated tool less expensive overall.
 
 **What is the difference between scheduling software and a managed scheduling service for a 25-bed hospital?**
 

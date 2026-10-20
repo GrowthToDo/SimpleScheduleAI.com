@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-07-13T00:00:00Z
-updateDate: 2026-10-19T00:00:00Z
+updateDate: 2026-10-20T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Texas Hospitals in 2026'
 excerpt: >
@@ -75,7 +75,7 @@ Here is how all 8 platforms compare for Texas hospitals before we go deeper:
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Unclear; marketed to public safety agencies</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Adequate</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">$200-450</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Quote only (not published)</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">SmartLinx</td>
@@ -234,7 +234,7 @@ TCP's Aladtec pages describe configurable work limits and overtime rules but do 
 
 **Verdict:** Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. If you want FLSA overtime thresholds tracked without a configuration project, SimpleScheduleAI is the alternative.
 
-**Cost:** Approximately $200-$450/month for small staff sizes.
+**Cost:** Not published. TCP quotes on request.
 
 ### 3. [SmartLinx](https://www.smartlinx.com)
 

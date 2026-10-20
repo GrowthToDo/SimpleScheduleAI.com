@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-04-26T00:00:00Z
-updateDate: 2026-10-19T00:00:00Z
+updateDate: 2026-10-20T00:00:00Z
 author: 'Pradeep Pandey'
 title: '4 Best ShiftWizard Alternatives for Critical Access Hospitals (2026)'
 excerpt: >
@@ -28,7 +28,7 @@ This guide compares 6 ShiftWizard alternatives for a Critical Access Hospital ev
 - For a Critical Access Hospital, the right comparison is not feature-by-feature. It is which operating model fits a 25-bed facility with no dedicated scheduling coordinator and a nurse manager who also takes clinical shifts.
 - The main platform alternatives are [TCP](/blog/best-tcp-alternative-for-cah) Scheduling / Aladtec (self-serve, marketed to public safety agencies), NurseGrid (nurse-facing, manager tier available), and QGenda (physician scheduling, positioned for larger health systems). For facilities where the core issue is scheduling labor rather than platform fit, a managed service is a different operating model.
 - The critical question before any evaluation: does your nurse manager have 4-6 hours per week available for scheduling administration after go-live? If not, the operating model matters more than which platform you choose.
-- For a CAH staying on a self-serve platform, TCP/Aladtec offers comparable cost and setup time, but it is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. For a facility where the nurse manager cannot sustain weekly scheduling administration alongside clinical shifts, SimpleScheduleAI removes that work entirely rather than swapping one platform for another.
+- For a CAH staying on a self-serve platform, TCP/Aladtec offers comparable setup time, though TCP quotes its price only on request. It is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. For a facility where the nurse manager cannot sustain weekly scheduling administration alongside clinical shifts, SimpleScheduleAI removes that work entirely rather than swapping one platform for another.
 
 ## Table of Contents
 
@@ -216,7 +216,7 @@ A representative positive review from a public-safety user:
 
 **Verdict:** Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. If it does, it suits a CAH that wants direct platform control and has the bandwidth to configure and maintain the system. CAHs leaving ShiftWizard because of scheduling burden should weigh whether a different self-serve platform solves the underlying capacity problem. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
-**Cost:** Pricing not listed publicly. Typically positions in the mid-market range.
+**Cost:** Not published. TCP quotes on request.
 
 ## 3. [NurseGrid](https://www.nursegrid.com)
 

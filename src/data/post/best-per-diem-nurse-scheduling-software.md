@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-07-15T00:00:00Z
-updateDate: 2026-09-25T00:00:00Z
+updateDate: 2026-10-20T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Per Diem Nurse Scheduling Software: 2026 Guide'
 excerpt: >
@@ -27,7 +27,7 @@ metadata:
 - An availability calendar that each per diem nurse fills in works poorly when the call-in decision is last-minute and the calendar is out of date.
 - The highest-value feature for per diem scheduling is a replacement call list that checks each nurse's availability against their overtime hours this week. Test every tool for it in the demo.
 - SimpleScheduleAI treats per diem availability as a hard rule and ranks callout replacements by overtime risk, with every change recorded in the audit trail delivered with each schedule. It was built for a critical access hospital that leans on per diem staff.
-- [Aladtec](/blog/aladtec-alternatives) handles per diem tracking well for self-serve environments. [NurseGrid](/blog/nursegrid-alternatives) Manager excels at per diem communication but does not build schedules. [Deputy](/blog/deputy-alternatives-healthcare) is the lowest-cost entry point but lacks healthcare compliance features.
+- [Aladtec](/blog/aladtec-alternatives) handles per diem tracking well for self-serve environments. [NurseGrid](/blog/nursegrid-alternatives) Manager excels at per diem communication but does not build schedules. [Deputy](/blog/deputy-alternatives-healthcare) has the lowest published price here but lacks healthcare compliance features.
 
 For a broader comparison of scheduling platforms, see our [nurse scheduling software guide](/nurse-scheduling-software).
 
@@ -97,7 +97,7 @@ Here is how all 8 platforms compare before we go deeper:
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Good for self-serve per diem</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, self-reported</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Partial, manual sort</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">$200-450</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Quote only (not published)</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">NurseGrid Manager</td>
@@ -277,7 +277,7 @@ Aladtec handles per diem staff through a self-reporting availability system wher
 
 **Verdict:** The strongest self-serve option for per diem management at a small hospital. The main limitation is that callout decisions still require the manager to manually check overtime status, which costs time at the worst possible moment.
 
-**Cost:** $200-450 per month depending on roster size. Pricing requires a quote.
+**Cost:** Not published. TCP quotes on request.
 
 ### 3. [NurseGrid Manager](https://nursegrid.com)
 
@@ -562,7 +562,7 @@ Competency requirements for the unit are applied before a per diem nurse is offe
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Per diem coverage at a Critical Access Hospital is structural, not supplemental, so the feature that decides fit is a callout list ranked by overtime risk, not just an availability calendar. That ranking, plus automatic CMS documentation of every per diem shift, is why SimpleScheduleAI is our pick for a per diem-heavy CAH roster. The self-serve tools here are not wrong choices, though: if your nurse manager has the protected time to keep availability data current and check overtime by hand, Aladtec covers similar ground at a lower price. The honest deciding question is not which tool has the most features, it is how much unprotected admin time the manager actually has each week.</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Per diem coverage at a Critical Access Hospital is structural, not supplemental, so the feature that decides fit is a callout list ranked by overtime risk, not just an availability calendar. That ranking, plus automatic CMS documentation of every per diem shift, is why SimpleScheduleAI is our pick for a per diem-heavy CAH roster. The self-serve tools here are not wrong choices, though: if your nurse manager has the protected time to keep availability data current and check overtime by hand, Aladtec covers similar ground. Ask TCP for a quote, since its price is not published. The honest deciding question is not which tool has the most features, it is how much unprotected admin time the manager actually has each week.</p>
 </div>
 
 ## What to Do This Week
@@ -600,7 +600,7 @@ The FLSA 8-and-80 rule allows healthcare employers to pay overtime only when a n
 
 **What is the cheapest per diem scheduling software for a small hospital?**
 
-Deputy at $4.50 per user per month is the lowest-cost option. At a 15-nurse per diem pool, it costs approximately $67.50 per month. NurseGrid Manager runs approximately $150-300 per month and adds communication features. Aladtec starts around $200-450 per month and provides more complete scheduling and availability management. None of these include healthcare compliance features as defaults. For hospitals where FLSA tracking and CMS documentation are requirements, a higher-cost tool that includes those features as defaults often costs less in total labor than the cheapest subscription plus manual compliance work.
+Of the tools here that publish a price, Deputy at $4.50 per user per month is the lowest-cost option. At a 15-nurse per diem pool, it costs approximately $67.50 per month. NurseGrid Manager runs approximately $150-300 per month and adds communication features. Aladtec provides more complete scheduling and availability management, but TCP does not publish its price, so get a quote before comparing. None of these include healthcare compliance features as defaults. For hospitals where FLSA tracking and CMS documentation are requirements, a higher-cost tool that includes those features as defaults often costs less in total labor than the cheapest subscription plus manual compliance work.
 
 **What is the difference between per diem scheduling software and a managed scheduling service for per diem nurses?**
 

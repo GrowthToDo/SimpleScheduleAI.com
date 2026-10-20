@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-04-21T00:00:00Z
-updateDate: 2026-10-19T00:00:00Z
+updateDate: 2026-10-20T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'UKG Alternatives for Critical Access Hospitals (2026)'
 excerpt: >
@@ -235,7 +235,7 @@ If you are leaving UKG because it demands too much from one person, Aladtec is s
 
 **Verdict:** Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. If it does, it fits a CAH that wants to reduce UKG complexity without outsourcing scheduling decisions. Not the right fit if the core problem is that one person cannot sustain the weekly scheduling workload alongside clinical duties. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
-**Cost:** Pricing not listed publicly. Contact for quote. Typically positions below SmartLinx and well below UKG in per-facility cost.
+**Cost:** Not published. TCP quotes on request.
 
 ## 3. SmartLinx
 
@@ -399,7 +399,7 @@ Yes, almost always. UKG's value proposition is workforce intelligence across lar
 
 **What does it cost to switch from UKG to a simpler tool?**
 
-The primary cost is transition labor: exporting data, configuring the new system, and running parallel for one scheduling cycle. For a managed service, the vendor handles most of this. For Aladtec, the nurse manager or a scheduling coordinator handles it. Financially, Aladtec typically costs significantly less than UKG enterprise licensing for a small facility. See our [scheduling ROI breakdown for CAHs](/roi) for a worked example, or contact SimpleScheduleAI and Aladtec for current pricing.
+The primary cost is transition labor: exporting data, configuring the new system, and running parallel for one scheduling cycle. For a managed service, the vendor handles most of this. For Aladtec, the nurse manager or a scheduling coordinator handles it. Aladtec's price is not published, so get a TCP quote before comparing it with UKG enterprise licensing. See our [scheduling ROI breakdown for CAHs](/roi) for a worked example, or contact SimpleScheduleAI and Aladtec for current pricing.
 
 **Can a CAH run scheduling without any specialized software?**
 

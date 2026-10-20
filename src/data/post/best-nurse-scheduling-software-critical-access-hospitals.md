@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-06T00:00:00Z
-updateDate: 2026-10-19T00:00:00Z
+updateDate: 2026-10-20T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Critical Access Hospitals (2026)'
 excerpt: >
@@ -98,7 +98,7 @@ Here is how all 10 tools compare on CAH fit before we go deeper. This guide cove
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Public safety agencies (fire, EMS, law enforcement)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">G2: 4.5/5 (94)<br>Capterra: 4.6/5 (17; small sample)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">2-4 weeks</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">~$200-450</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-600 dark:text-slate-400">Quote only (not published)</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-700 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium text-slate-900 dark:text-slate-100">ShiftWizard</td>
@@ -221,7 +221,7 @@ One caveat matters for a hospital audience: the Capterra review base skews heavi
 
 **Verdict:** Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. If it would, confirm CMS §485.635 documentation and current nurse-context references before committing.
 
-**Cost:** Approximately $200-$450/month for small staff sizes.
+**Cost:** Not published. TCP quotes on request.
 
 ## 3. [ShiftWizard](https://www.healthstream.com)
 
@@ -598,7 +598,7 @@ At hospital scale, UKG implementation typically runs 6 to 18 months from contrac
 
 **Q: What is the cheapest nurse scheduling software for a critical access hospital?**
 
-ScheduleAnywhere lists a Basic plan from $25 per user per month, and Aladtec runs roughly $200 to $450 per month for small staff sizes. Cheapest is not the same as compliant: confirm CMS §485.635 documentation and FLSA tracking before choosing on price, since rebuilding those by hand costs more than the license.
+ScheduleAnywhere lists a Basic plan from $25 per user per month. Aladtec's price is not published, so compare it once TCP gives you a quote. Cheapest is not the same as compliant: confirm CMS §485.635 documentation and FLSA tracking before choosing on price, since rebuilding those by hand costs more than the license.
 
 **Q: What is the difference between scheduling software and a managed scheduling service for a CAH?**
 
