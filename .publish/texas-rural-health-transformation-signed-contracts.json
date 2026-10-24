@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "slug": "texas-rural-health-transformation-signed-contracts",
+  "collection": "article",
+  "mechanical": {},
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-10-24T10:07:31.990Z",
+      "contentHash": "4c3e82bcc79a29c3dcd0984e5f849bb0c86ffdde210acac0cf7c91d132f728fc"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-24T10:07:34.091Z",
+      "contentHash": "4c3e82bcc79a29c3dcd0984e5f849bb0c86ffdde210acac0cf7c91d132f728fc"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 63.6,
+        "headings": 90.9,
+        "actionability": 54.5,
+        "attention": 90.9
+      },
+      "overall": 73.1,
+      "counts": {
+        "sections": 11,
+        "rereads": 17,
+        "undefinedTerms": 7,
+        "headingsAnswered": 10,
+        "mondayActions": 6,
+        "blockedActions": 5,
+        "quitPoints": 1
+      },
+      "icp": "CEO/administrator of a 25-bed Critical Access Hospital in rural Texas, not a finance or policy specialist, who heard there is state rural-health grant money and wants to know if their hospital is getting any and what to do; reading once, start to finish",
+      "publishDate": "2026-10-24T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "Year 1 subset",
+          "first budget period / Budget Period 1 (when it started is never said)",
+          "first-year award vs first-year money (two different totals, near-identical wording)",
+          "subaward",
+          "reconciliation table",
+          "Flex Monitoring Team",
+          "pendency of the contract execution process"
+        ],
+        "mondayActions": [
+          "Search HHSC's October 23 list for our hospital name, hospital district, county and operating company",
+          "Read the 'Awarded (Contract Fully Executed)' column on each of our rows",
+          "Ask whoever signs contracts for us whether an HHSC contract is waiting on our side",
+          "Leave any unsigned (No) row out of next quarter's staffing and hiring plan",
+          "Set a weekly calendar reminder to re-check the HHSC list",
+          "Before spending a signed award on people, read the linked nurse-salary rules article"
+        ],
+        "blockedActions": [
+          "See my own hospital's row in the article: no per-hospital table, and Step 1 does not link the .xlsx (the methodology notes HHSC's server refused a direct download, so it may not open for me either)",
+          "Tell whether my unsigned money is at risk on October 30: the article says HHSC has not said",
+          "Find out whether I can still apply: Initiatives 2, 3 and 5 have no rows, but the article never says whether they are open, closed or coming",
+          "Know whom to call at HHSC about a stuck contract: no contact or office named",
+          "Know whether my hospital is one of the 18 matched only through an inferred owner, i.e. whether the rows the article counts for me are really mine"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "31% (bullet 2) then 'stayed near 39%' (bullet 4) with no denominator change flagged: reader thinks one number is wrong. '$281,319,360.67 first-year award' penny precision in a takeaway. The CAH bullet (86 of 92) is the reader's hook but it is last."
+          },
+          {
+            "heading": "What Does Intent to Award Mean for a Rural Texas Strong Grant?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Clear first two sentences. 'during the pendency of the contract execution process' inside the quote. 'Year 1 subset' admitted as undefined."
+          },
+          {
+            "heading": "How Much Rural Texas Strong Money Is Under Signed Contract?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Opens with '$87,432,868.65'. Initiative-name paragraph (six names, three absent) and the 'our reading of HHSC's program page' label caveat are methodology the CEO does not need. 'first-year money' ($223.0M listed) vs 'first-year award' ($281.3M) are two near-identical phrases for different totals."
+          },
+          {
+            "heading": "Is Rural Texas Strong Money Being Signed Faster Than It Is Being Listed?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Attention starts dropping here; this is about the state's paperwork pace, not the reader's hospital. 'Signing has kept pace with the list but has not caught up with it' reads as contradictory next to +$36.4M signed vs +$93.9M listed. 'On October 8 the signed share of the $281.3 million award was lower, because the list itself was shorter. A rising share of the award tells you the list is growing. It does not tell you contracts are catching up.' needed three passes."
+          },
+          {
+            "heading": "What Was the $8 Million Rural Texas Strong Announcement on October 22?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Answer is clear (one weekly batch). Date juggling: added Oct 14, announced Oct 22, checked Oct 23. '$23,955,761.64' all-years figure is one number too many."
+          },
+          {
+            "heading": "Do the Rural Texas Strong Announcements Match the State's Recipient List?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": true,
+            "notes": "Reader abandons linear reading here and jumps to the CAH section / What to Do. Four-column table of budget lines to the cent. 'Keep them apart if you quote either one' speaks to journalists. 'Either HHSC changed the first-year budget after its April 7 revision, or the list's \"Year 1 subset\" is not the same thing as the federal first budget period.' is policy-analyst territory. 'which we did not read' undercuts trust."
+          },
+          {
+            "heading": "How Many Texas Critical Access Hospitals Are on the Rural Texas Strong List?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "The payoff section for this reader, buried sixth. Dense: 'Those 86 hospitals appear on 184 applications. The applications hold $132,272,332.34 of first-year money... Of it, $61,803,671.69 sits under 91 signed contracts'. 'Frio Regional may appear under an association whose county column does not match, so we left it out.' Left out of what? The $725,000 / $221,995 Initiative 4 benchmark is genuinely useful. No per-hospital table, so the reader still cannot see their own row."
+          },
+          {
+            "heading": "Does Any Rural Texas Strong Award Pay for Nurses?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Plain, honest answer: the list does not say. 'Budget Period 1' jargon in the Board of Nursing quote."
+          },
+          {
+            "heading": "Does Unsigned Rural Texas Strong Money Have to Be Committed by October 30?",
+            "rereadCount": 3,
+            "answeredItsQuestion": false,
+            "quitHere": false,
+            "notes": "Reader's real question (will my unsigned money vanish Oct 30?) is not answered; the section says HHSC has not said. 'First-year money may not be first-budget-period money.' and 'It could be the Year 1 subset or the full award' both reread. 'as the reconciliation table shows' points to a table never called that. 'subaward' undefined. 'We are not saying any money will be lost.' reads defensive."
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Concrete and usable. Step 1 'Find your hospital's rows on HHSC's October 23 list' carries no link to the list; the link is back in section 2."
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Clean recap."
+          }
+        ]
+      },
+      "scoredAt": "2026-10-24T09:49:27.585Z",
+      "contentHash": "2eeead2d5be2e36ae3be1c96e776f15908f97a6addac3628a52a9dd124ac4d1a"
+    }
+  }
+}

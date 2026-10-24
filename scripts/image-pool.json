@@ -1022,5 +1022,11 @@
     "description": "Clinician in white coat on a phone call at a clinic office desk, typing on a laptop",
     "family": "desk-admin",
     "topics": ["vendor support", "support call", "software", "healthcare admin"]
+  },
+  {
+    "id": "1764106813759-9ef7bf42a0af",
+    "description": "Black-and-white close-up of a hand signing a printed form at a dark desk",
+    "family": "desk-admin",
+    "topics": ["contract", "signing", "grant", "paperwork"]
   }
 ]
