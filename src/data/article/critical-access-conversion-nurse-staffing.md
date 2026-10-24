@@ -1,6 +1,7 @@
 ---
 draft: false
 publishDate: 2026-08-31T00:00:00Z
+updateDate: 2026-10-24T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Rural Hospitals Are Converting to Critical Access Status. What It Does to the Nurse Schedule.'
 excerpt: >
@@ -67,7 +68,7 @@ Two, in the last two weeks of August 2026, and they are at very different stages
 
 Staff have also disputed the hospital's bed-availability figures, saying their own counts on the floor did not match what was being reported. We are not in a position to judge that, and we are not going to repeat the specific numbers as though we could. The general point does not depend on who is right: bed-availability data is part of the evidence base for a conversion decision, and at Columbia Memorial the people working the floor did not recognize it.
 
-**Brattleboro Memorial Hospital, Vermont.** Becker's reported on August 26 that the hospital is exploring the transition. A spokesperson said that "becoming a critical access hospital would involve significant federal eligibility requirements and could fundamentally change how BMH delivers care." Any decision, the statement added, "would depend on whether the designation is legally available, financially sustainable, and compatible with preserving the broad range of care the community needs." The hospital laid off nine employees in early August, and its board approved closing its birthing center over six to nine months.
+**Brattleboro Memorial Hospital, Vermont.** Becker's reported on August 26 that the hospital is exploring the transition. A spokesperson said that "becoming a critical access hospital would involve significant federal eligibility requirements and could fundamentally change how BMH delivers care." Any decision, the statement added, "would depend on whether the designation is legally available, financially sustainable, and compatible with preserving the broad range of care the community needs." The hospital laid off nine employees in early August, and its board approved closing its birthing center over six to nine months. In October the hospital said it had backed away from that plan, after updated projections showed more births than expected.
 
 Both are hospitals under financial strain looking at the same lever. Neither is a small hospital that has always been small, which is the part that matters for staffing.
 
@@ -180,6 +181,8 @@ A critical access hospital must maintain an annual average length of stay of 96 
 [7] CMS QSO-26-15-CAH, August 21, 2026, on location eligibility review. Covered in detail in our article on [the ten-year eligibility clock](/articles/cms-cah-location-eligibility-review-2026).
 
 [8] [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41), Texas hospital licensing: an RN on duty in each building containing a nursing unit where patients are present.
+
+[9] "Brattleboro Memorial Hospital receives $4 million donation." Magic 96.7, October 19, 2026. [magic967.com](https://www.magic967.com/news/local/brattleboro-memorial-hospital-receives-4-million-donation/). The hospital "backed away from a plan to close its birthing center"; "Updated FY26 projections now anticipate more births than previously expected."
 
 ---
 

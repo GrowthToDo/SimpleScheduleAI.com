@@ -175,6 +175,34 @@ Dropped, with reasons:
   the first CMS stop "since 2014"; THA documents a Sept 2021 to Mar 2022 hold. Do not
   cite it.
 
+### Detection pass 2026-10-24 (founder-supplied links)
+
+- **WRITING - CMS: $8M to 28 rural Texas providers** (CMS release 2026-10-22). Score 60:
+  Relevance 5 x Rising 3 x First 4 x Hook 1. Founder go 2026-10-24. Angle: a sourced
+  running total of Rural Texas Strong awards against Texas's $281.3M first-year RHTP
+  award, with the Oct 30 obligation deadline. No product section.
+- **VTDigger "Budget cuts are hurting patients"** (2026-10-21): score 0. A Vermont
+  letter to the editor; no hospital, no figures, no nurses; Vermont-only regulator.
+- **Brattleboro Memorial $4M donation** (Magic 96.7, 2026-10-19): score 0. Not a CAH
+  (only exploring the status). Side finding: the hospital "backed away from a plan to
+  close its birthing center", which corrects Source 4 of
+  `critical-access-conversion-nurse-staffing`.
+
+### PARKED - Rural nurse housing ("Before a Rural Hospital Can Hire a Nurse, It Has to House One")
+
+- **Parked on:** 2026-10-24, founder. Score 27: Relevance 3 x Rising 3 x First 3 x Hook 1.
+- **The peg is not citable.** The Business Insider page (2026-10-22) is a paid BOXABL stock
+  promotion on GlobeNewswire ("This is a paid advertisement"). Use only its primary sources.
+- **Facts it repeats, each needing its primary source:** IHS vacancy rate over 30%; IHS
+  $15.3M for eight staff-quarters projects (August 2026); HRSA 5,480 rural primary care
+  shortage areas (62.06% of all); NRHA 2025 brief: 20% of rural workers name housing as a
+  retention barrier.
+- **Who covers it:** Becker's "Health systems alter approaches to workforce housing" (cites
+  Hammond-Henry, an Illinois CAH) and the Navajo Times (Tuba City's 48 units).
+- **Possible angle:** an evergreen piece on housing as a rural nurse retention tool, with
+  the RHTP "lodging" incentive rule (facts dossier) as the Texas link. Overlaps
+  `rural-health-transformation-deadline-nurse-salaries`; find a Texas CAH example first.
+
 ### DROPPED - "Physician Scheduling Software Market" (openPR / Worldwide Market Reports)
 
 - **Dropped on:** 2026-09-18. **Reason:** citable-hook score 0, an automatic fail.
