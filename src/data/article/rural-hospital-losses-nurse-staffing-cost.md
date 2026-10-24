@@ -81,7 +81,7 @@ Two honest caveats on that number. It is not $45,000 of pure savings available t
 
 ## What Does the Rural Health Transformation Money Actually Pay For?
 
-Since this piece was first published, the federal Rural Health Transformation Program has begun paying out, and the Texas numbers deserve a second look. Texas received the largest first-year award of any state, more than $281.3 million, which was about $81 million more than it asked for in its application.[6] Alaska was second at $272.7 million.[8]
+Since this piece was first published, the federal Rural Health Transformation Program has begun paying out, and the Texas numbers deserve a second look. Texas received the largest first-year award of any state, more than $281.3 million, which was about $81 million more than it asked for in its application.[6] Alaska was second at $272.7 million.[8] Our tracker of [how much Rural Texas Strong grant money is actually signed](/articles/texas-rural-health-transformation-signed-contracts) shows how much of the Texas money is under contract so far.
 
 The per-person figure looks very different. Half the federal money is split evenly between the states, whatever their size. Texas has more rural residents than any other state, so that even split has to cover more people here than anywhere else. The Texas Tribune reported that Texas "will receive about $60 per resident in a rural county," which it called "the lowest rate in the nation."[8] Texas got the biggest award in the country and the smallest amount per rural Texan.
 

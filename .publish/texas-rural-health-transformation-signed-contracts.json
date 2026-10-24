@@ -2,7 +2,48 @@
   "schemaVersion": 1,
   "slug": "texas-rural-health-transformation-signed-contracts",
   "collection": "article",
-  "mechanical": {},
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-24T14:59:03.708Z",
+      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-24T14:59:06.984Z",
+      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-24T14:59:13.276Z",
+      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-24T14:59:13.388Z",
+      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-24T14:59:13.824Z",
+      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-24T14:59:13.828Z",
+      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-24T14:59:13.832Z",
+      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-24T14:59:13.835Z",
+      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+    }
+  },
   "recorded": {
     "proofread": {
       "value": "READY",
@@ -14,6 +55,18 @@
       "value": "PASS",
       "setBy": "general-purpose-factcheck",
       "setAt": "2026-10-24T10:07:34.091Z",
+      "contentHash": "4c3e82bcc79a29c3dcd0984e5f849bb0c86ffdde210acac0cf7c91d132f728fc"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-24T14:58:20.891Z",
+      "contentHash": "4c3e82bcc79a29c3dcd0984e5f849bb0c86ffdde210acac0cf7c91d132f728fc"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "main-session",
+      "setAt": "2026-10-24T14:58:22.441Z",
       "contentHash": "4c3e82bcc79a29c3dcd0984e5f849bb0c86ffdde210acac0cf7c91d132f728fc"
     }
   },

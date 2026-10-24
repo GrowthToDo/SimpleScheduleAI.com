@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-09-21T00:00:00Z
-updateDate: 2026-09-21T00:00:00Z
+updateDate: 2026-10-24T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Can Rural Health Transformation Money Pay Nurse Salaries? Yes, If You Clear Three Conditions'
 excerpt: >
@@ -88,7 +88,7 @@ October 30 is the state deadline, not yours. Whatever window your state gives ho
 
 > "The State's authority to obligate funds (including to commit them to a contract or subaward) exists only during an active Budget Period for which the funds are available. Once that period ends, States can no longer use any remaining unobligated funds to make new expenditures or commitments."
 
-Money the state has not promised by then is taken back. The rules say it "will result in those funds being returned and redistributed." There are [no extensions](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf), because the law does not allow one.
+Money the state has not promised by then is taken back. The rules say it "will result in those funds being returned and redistributed." CMS also says states [cannot get more time to spend the funds](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf).
 
 Money promised in time can be paid out [through September 30, 2027](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). An exception sits inside that.
 
@@ -149,7 +149,7 @@ The rules above explain why. The money is built to change what a hospital looks 
 
 Two things we would rather name.
 
-Whether Critical Access Hospitals are named as eligible in the Texas round. We could not retrieve that announcement's full terms, and an earlier Texas program was limited to districts with a publicly owned hospital. Do not assume you qualify.
+Whether your hospital qualifies for a given Texas round. HHSC's October 23, 2026 grant list includes workforce-grant applications from 66 of the 92 Texas Critical Access Hospitals, so Critical Access Hospitals have applied. Each round still sets its own terms, so check the one you apply to. Our tracker of [how much Rural Texas Strong grant money is actually signed](/articles/texas-rural-health-transformation-signed-contracts) shows where those applications stand.
 
 How CMS treats a staffing arrangement if a state proposes one. West Virginia shows a state can write one, but not where the line sits.
 
@@ -196,7 +196,7 @@ Only inside a new or expanded program, where the employee commits to five years 
 
 **Q: What is the deadline for the first round of Rural Health Transformation money?**
 
-October 30, 2026, the end of the first funding round. That is the last date a state can promise the money to anyone. Whatever is left unpromised is taken back, and there are no extensions.
+October 30, 2026, the end of the first funding round. That is the last date a state can promise the money to anyone. Whatever is left unpromised is taken back.
 
 **Q: If the money is promised on time, how long is there to pay it out?**
 
@@ -212,7 +212,7 @@ The federal documents do not address it. Float pools, agency staffing and schedu
 2. CMS, Rural Health Transformation Program Notice of Funding Opportunity, CMS-RHT-26-001. The supplanting limitation, the non-compete exclusion and the 15 percent cap. [grants.gov](https://apply07.grants.gov/apply/opportunities/instructions/PKG00291485-instructions.pdf)
 3. CMS, Rural Health Transformation Frequently Asked Questions, October 31, 2025. Budget period dates, the five year service commitment, the expansion example, incentives, the student loan exclusion and the September 30, 2027 spending window. [cms.gov](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf)
 4. CMS, Rural Health Transformation Provider Payments Fact Sheet. The 15 percent cap and the unallowable payments table. [cms.gov](https://www.cms.gov/files/document/provider-payments-fact-sheet.pdf)
-5. CMS, Rural Health Transformation Program Post-Award FAQ, April 2026. The obligation rule, redistribution of unobligated funds, no extensions, and the personnel cost carve out. [cms.gov](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf)
+5. CMS, Rural Health Transformation Program Post-Award FAQ, April 2026. The obligation rule, redistribution of unobligated funds, no extra time to spend funds, and the personnel cost carve out. [cms.gov](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf)
 6. CMS Office of Rural Health Transformation, Reporting and Rescoring Webinar, February 25, 2026. The August 30, 2026 annual report and the rescoring window. [cms.gov](https://www.cms.gov/files/document/rht-program-reporting-rescoring-webinar-02-25-26.pdf)
 7. Office of the Texas Governor, April 29, 2026. The $99 million Texas workforce initiative and its scope. [gov.texas.gov](https://gov.texas.gov/news/post/governor-abbott-hhsc-announce-99-million-in-federal-funding-for-rural-hospitals-to-recruit-workers)
 8. Texas HHSC, Rural Texas Strong program bulletin. The Texas first year award of $281,319,360.67. [content.govdelivery.com](https://content.govdelivery.com/accounts/TXHHSC/bulletins/4143d1c)

@@ -996,5 +996,13 @@
     "primaryKeyword": "scheduling software support",
     "pillar": "/nurse-scheduling-software",
     "note": "Published 2026-10-20 (next-15 Oct plan #8, AI-answer piece, no measured demand). Support after go-live: who answers, reviewer evidence, support terms to put in the contract (response times, backup contact, missed-response remedies, data return). Differs from /blog/scheduling-software-vendor-acquisition-support (acquisition risk) and /blog/nurse-scheduling-software-reliability-crashes (outages). Rewritten 2026-09-26 (old draft had fabricated quotes)."
+  },
+  {
+    "slug": "texas-rural-health-transformation-signed-contracts",
+    "type": "article",
+    "url": "/articles/texas-rural-health-transformation-signed-contracts",
+    "primaryKeyword": "rural texas strong grant recipients",
+    "pillar": null,
+    "note": "Newsroom article published 2026-10-24. How much Rural Texas Strong (Texas RHTP) grant money is under signed contract per HHSC's Oct 23 list; CAH presence; announcements reconciled to list rows. Differs from rural-health-transformation-deadline-nurse-salaries (what the money can pay for)."
   }
 ]
