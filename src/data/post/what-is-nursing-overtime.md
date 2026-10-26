@@ -1,80 +1,178 @@
 ---
-draft: true
-publishDate: 2099-01-01T00:00:00Z
-updateDate: 2026-04-01T00:00:00Z
+draft: false
+publishDate: 2026-10-26T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'What Is Nursing Overtime? FLSA Rules and CAH Compliance'
+title: 'What Is Nursing Overtime? How the 40-Hour Rule Works'
 excerpt: >
-  Nursing overtime is any time a nurse works beyond 40 hours in a workweek, triggering the FLSA requirement to pay 1.5× the regular rate. For critical access hospitals, overtime is one of the largest controllable labor costs and one of the most common scheduling compliance gaps. Proactive overtime tracking, not reactive payroll correction, is the standard for well-managed CAH nursing departments.
-image: https://images.unsplash.com/photo-1700832082200-af7deeb63d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
-category: Glossary
-postType: glossary
+  Six 12-hour shifts over two weeks can owe a nurse no overtime, or eight hours of it. The
+  difference is which workweek each shift lands in, and whether interrupted meal breaks and late
+  charting count as work.
+image: https://images.unsplash.com/photo-1584339820255-b904138a13fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+category: Healthcare Operations
+postType: tofu
 tags:
-  - glossary
   - nursing-overtime
-  - compliance
-  - critical-access-hospitals
+  - flsa
+  - nurse-scheduling
+  - healthcare-operations
 metadata:
   canonical: 'https://simplescheduleai.com/blog/what-is-nursing-overtime'
 ---
 
-Nursing overtime is any time a nurse works beyond 40 hours in a workweek, which triggers the requirement under the [Fair Labor Standards Act (FLSA)](https://www.dol.gov/agencies/whd/flsa) to pay at least 1.5 times the nurse's regular rate of pay for every hour over 40. For critical access hospitals operating on cost-based Medicare reimbursement, nursing overtime is one of the largest controllable labor costs, and one of the most common scheduling compliance gaps. Unlike most industries where overtime is exceptional, healthcare facilities run 24/7 and are structurally vulnerable to overtime accumulation whenever scheduling is managed reactively rather than proactively.
+## Key Takeaways
 
-## What Are the FLSA Rules for Hospital Nurses?
+- Nursing overtime is time a non-exempt nurse works past 40 hours in one workweek. The federal [Fair Labor Standards Act](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) requires at least 1.5 times the regular rate for each hour past 40. The regular rate is the hourly figure overtime is calculated from.
+- The workweek is a fixed seven-day block the hospital sets. Two workweeks are never averaged.
+- Hours worked include meal breaks the nurse was not fully relieved from, required training, late charting, and hours in other departments.
+- The regular rate includes shift differentials and bonuses such as attendance and retention bonuses.
+- Hourly nurses are owed overtime. A registered nurse on a salary of at least $684 a week may be exempt, per the [U.S. Department of Labor](https://www.dol.gov/agencies/whd/fact-sheets/17n-overtime-nurses).
 
-The FLSA governs overtime for most private-sector employees, including nurses at most hospitals and CAHs. The core rule is simple: non-exempt employees must be paid at least 1.5× their regular rate for all hours worked beyond 40 in a workweek. A workweek is a fixed, recurring period of seven consecutive days, it does not reset with the pay period, and it cannot be averaged across pay periods to reduce overtime liability.
+## Table of Contents
 
-Several FLSA provisions are relevant to hospital nursing specifically:
+- [How Is the Workweek Defined for Nurse Overtime?](#how-is-the-workweek-defined-for-nurse-overtime)
+- [What Counts as Hours Worked for a Nurse?](#what-counts-as-hours-worked-for-a-nurse)
+- [How Do You Calculate Nurse Overtime Pay With a Shift Differential?](#how-do-you-calculate-nurse-overtime-pay-with-a-shift-differential)
+- [Are Nurses Exempt From Overtime Pay?](#are-nurses-exempt-from-overtime-pay)
+- [Does Texas Have Its Own Overtime Law for Nurses?](#does-texas-have-its-own-overtime-law-for-nurses)
+- [How Does SimpleScheduleAI Count Overtime When It Builds a Schedule?](#how-does-simplescheduleai-count-overtime-when-it-builds-a-schedule)
+- [What to Do This Week](#what-to-do-this-week)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
-**The 8/80 rule (§7(j) exemption):** Hospitals may, under a written agreement with employees, pay overtime based on hours in excess of 8 per day or 80 per 14-day period, whichever is greater, rather than the standard 40-hour workweek. This provision was designed for healthcare's shift-based scheduling model. However, it requires a formal written agreement with each affected employee and must be carefully administered to achieve the intended benefit. Many CAHs are unaware of this option or do not have the correct documentation in place.
+Nursing overtime is the time a non-exempt nurse works past 40 hours in one workweek. Non-exempt means the law entitles the nurse to overtime pay, and every nurse paid by the hour is non-exempt. Each overtime hour is paid at no less than one and a half times the nurse's regular rate.
 
-**Regular rate calculation:** The "regular rate" for overtime calculation is not simply the base hourly rate. It includes shift differentials (night pay, weekend pay), certain bonuses, and other compensation. Miscalculating the regular rate is a common FLSA violation in healthcare settings and can result in back-pay liability.
+Per [Fact Sheet #23](https://www.dol.gov/agencies/whd/fact-sheets/23-flsa-overtime-pay), a long day, a weekend or a holiday earns no overtime by itself. What a nurse is owed depends on four things: when the workweek starts, what counts as work, what goes into the regular rate, and whether the nurse is exempt.
 
-**Exempt vs. non-exempt status:** Most staff nurses are non-exempt and entitled to overtime. Nurse managers who exercise genuine management authority and meet the salary and duties tests may qualify as exempt executive employees under the FLSA, but the determination requires careful analysis. A nurse manager who primarily performs direct patient care alongside incidental supervisory duties may not qualify as exempt. CAHs that misclassify nurse managers as exempt are exposed to back-pay claims.
+## How Is the Workweek Defined for Nurse Overtime?
 
-A common misconception is that nurses are automatically exempt from overtime because they are licensed professionals. This is incorrect. The FLSA professional exemption requires that the employee's primary duty requires advanced knowledge in a field of science customarily acquired by a prolonged course of specialized intellectual instruction, and for this exemption to apply, the employee must earn a salary of at least $684 per week. Staff nurses paid hourly do not meet the salary requirement and are non-exempt regardless of their credentials.
+A workweek is a fixed and regularly recurring period of 168 hours, which is seven days in a row. The hospital picks the day and hour it starts. Averaging hours over two or more weeks is not permitted ([U.S. Department of Labor](https://www.dol.gov/agencies/whd/overtime)).
 
-## What Are the Texas CAH Overtime Requirements?
+The no-averaging rule creates overtime nobody planned. Take six 12-hour shifts over two weeks. If the shifts split three and three, the nurse works 36 hours each week and earns no overtime. If the shifts split four and two, the first week has 48 hours and 8 hours of overtime, though the two-week total is the same 72. The start day decides which week a shift lands in. The [12-hour shift guide](/blog/12-hour-hospital-shifts-scheduling) covers how three-shift and four-shift weeks are usually laid out.
 
-Texas does not have a state overtime law that provides greater protection than the FLSA. The Texas Labor Code adopts the federal FLSA standard as the applicable overtime rule. However, several Texas-specific provisions affect CAH payroll compliance:
+Hospitals have one alternative, often called the 8-and-80 method, which replaces the workweek with a fixed 14-day period. Overtime is then owed for every hour past 8 in a workday and every hour past 80 in the 14 days ([29 CFR 778.601](https://www.law.cornell.edu/cfr/text/29/778.601)). The hospital and the nurse must agree to the method before the work is done. An unwritten agreement needs a record of its terms and the date it was made ([29 CFR 516.23](https://www.law.cornell.edu/cfr/text/29/516.23)). The guide to [reducing nurse overtime](/blog/how-to-reduce-nurse-overtime) compares the two methods.
 
-**Texas Payday Law ([TWC](https://twc.texas.gov/businesses/texas-payday-law)):** Requires that all wages owed, including overtime, be paid on the scheduled payday. Late or withheld overtime pay is a Payday Law violation distinct from (and in addition to) an FLSA violation. The Texas Workforce Commission enforces Payday Law claims and can initiate audits based on employee complaints.
+## What Counts as Hours Worked for a Nurse?
 
-**No separate Texas overtime methodology:** Texas has no state overtime law. The Texas Labor Code (Chapter 62) governs minimum wage, not overtime, and exempts FLSA-covered employees under §62.151. FLSA rules apply exclusively.
+Hours worked include all the time a nurse must be on duty, plus any time the hospital lets the nurse keep working. The Department of Labor's [hours-worked fact sheet for health care](https://www.dol.gov/agencies/whd/fact-sheets/53-healthcare-hours-worked) covers the cases that matter on a nursing unit:
 
-**Documentation and audit trail:** CMS cost reports require accurate labor cost data. Overtime paid to nursing staff is reported as part of Medicare cost reports and affects reimbursement calculations under cost-based payment. CAHs with high overtime rates will see that reflected in cost reports, and CMS auditors may flag it as a potential efficiency issue. Maintaining an accurate, shift-level overtime record is both a labor law requirement and a Medicare reimbursement management tool.
+- **Meal breaks.** A meal break is unpaid only if the nurse is completely relieved of duty. When a break is interrupted so often that it mainly serves the hospital, the nurse is paid for the full 30 minutes.
+- **On-call time.** On call at the hospital is work. On call at home with a phone generally is not, but answering calls and coming in does count.
+- **Training.** Required classes and in-services count. A class is unpaid only if it is outside regular hours, truly voluntary, not directly job-related, and involves no productive work.
+- **Staying late to chart.** In one Labor Department example, nurses who stayed late to finish charts were owed time and a half, even without prior authorization.
+- **Hours in another department.** Count every hour the nurse worked for your hospital that week. In a [Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) example, 40 hours as a nurse's aide plus 16 as a receptionist makes 56 hours, so 16 are overtime. Hours on two units also add up for a per diem nurse who picks up shifts on both.
 
-## How Overtime Accumulates in a Scheduling Context?
+Every minute of meal break, training and charting time adds to the workweek total. A nurse scheduled for exactly 40 hours goes into overtime with one meal break during which the nurse was not fully relieved of duty. The [PRN pool guide](/blog/prn-pool-critical-access-hospital) covers checking hours before calling in a per diem nurse.
 
-The majority of nursing overtime at CAHs is not intentional, it accumulates through scheduling decisions that seem reasonable in isolation but compound across a workweek.
+## How Do You Calculate Nurse Overtime Pay With a Shift Differential?
 
-**The callout coverage problem:** When a nurse calls out on Thursday, the nurse manager calls in a per diem nurse to cover the shift. If that per diem nurse has already worked 36 hours that week, the additional 12-hour shift produces 8 hours of overtime. The overtime was not planned; it was the side effect of a coverage decision made under time pressure without visibility into the per diem nurse's weekly hours.
+The regular rate is the nurse's total straight-time pay for the workweek, including shift differentials and bonuses such as attendance and retention bonuses, divided by the hours worked ([Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)).
 
-**The split-week problem:** A nurse working a 12-hour schedule who has already completed three shifts (36 hours) picks up a fourth shift due to short staffing, producing 12 hours of overtime in a single event. If the fourth shift crosses a workweek boundary (e.g., Sunday is the first day of the workweek), the calculation may be more complex.
+Straight-time pay already covers every hour once, overtime hours included. Each overtime hour then adds an overtime premium of half the regular rate, which brings that hour to 1.5 times the rate.
 
-**The schedule edit cascade:** A nurse manager modifies the schedule mid-cycle to accommodate a vacation request. The downstream effect on other nurses' weekly totals is not immediately obvious in a spreadsheet, and a nurse who was on track for a 40-hour week may now hit 44.
+Illustrative round numbers, not market pay data: a nurse earns $40 an hour plus a $4 night differential, and works two day and two night 12-hour shifts in one workweek.
 
-Proactive overtime management requires knowing, in real time, each nurse's cumulative hours for the current workweek, and having that information surfaced before an additional shift assignment would trigger overtime. Manual spreadsheets do not provide this visibility automatically. Scheduling software or a managed scheduling service that tracks live weekly hours against the 40-hour threshold is the standard for facilities that manage overtime as a line item rather than a monthly surprise.
+| Step                             | How it is figured          | Amount  |
+| -------------------------------- | -------------------------- | ------- |
+| Base pay for all hours           | 48 hours times $40         | $1,920  |
+| Night differential               | 24 hours times $4          | $96     |
+| Straight-time pay for the week   | $1,920 plus $96            | $2,016  |
+| Overtime hours                   | 48 minus 40                | 8 hours |
+| Regular rate                     | $2,016 divided by 48 hours | $42.00  |
+| Overtime premium (half the rate) | 8 hours times $21.00       | $168    |
+| Total pay for the week           | $2,016 plus $168           | $2,184  |
+
+The total equals 40 hours at $42 plus 8 hours at $63. If payroll figured overtime on the $40 base rate alone, the premium would be 8 times $20, or $160. The nurse would be paid $8 too little that week. Fact Sheet #54 names leaving differentials and bonuses out of the regular rate as a common error in health care.
+
+## Are Nurses Exempt From Overtime Pay?
+
+Nurses paid by the hour are owed overtime. A registered nurse can be exempt only by passing two tests in [Fact Sheet #17N](https://www.dol.gov/agencies/whd/fact-sheets/17n-overtime-nurses). The first is a salary of at least $684 a week, the [standard salary level](https://www.dol.gov/agencies/whd/overtime/salary-levels) as of October 2026. The second is a duties test, which checks that the job needs advanced nursing judgment.
+
+Registered nurses generally meet the duties test. Licensed practical nurses, called licensed vocational nurses in Texas, generally do not. A job title decides nothing. An RN nurse manager paid by the hour is owed overtime.
+
+If your hospital pays a nurse a salary and no overtime, confirm both the weekly salary level and the job-duties test are met. Ask your payroll provider or HR, or call the Department of Labor's [Wage and Hour Division](https://www.dol.gov/agencies/whd/contact) at 1-866-487-9243.
+
+## Does Texas Have Its Own Overtime Law for Nurses?
+
+No. Texas has no overtime law for nurses of its own, so the FLSA decides overtime pay. The Texas Minimum Wage Act has no overtime provision, and [Labor Code §62.151](https://texas.public.law/statutes/tex._labor_code_section_62.151) excludes anyone the FLSA covers. The [Texas nursing overtime compliance guide](/blog/texas-nursing-overtime-compliance-cah) covers the records to keep.
+
+One federal exception matters to small Texas hospitals. A county or hospital-district hospital is generally a public agency, since the FLSA's definition includes any political subdivision of a State ([29 U.S.C. 203(x)](https://www.law.cornell.edu/uscode/text/29/203)). A public agency may give comp time (paid time off instead of cash) at 1.5 hours for each overtime hour, under an agreement made before the work ([29 U.S.C. 207(o)](https://www.law.cornell.edu/uscode/text/29/207)).
+
+Texas does limit whether a hospital can require extra work. [Health and Safety Code Chapter 258](https://texas.public.law/statutes/tex._health_and_safety_code_section_258.003) stops a hospital from making a nurse keep working past the scheduled shift or come in on an extra day, and the [state-by-state guide to mandatory nurse overtime](/blog/mandatory-nurse-overtime-by-state) covers the exceptions.
+
+## How Does SimpleScheduleAI Count Overtime When It Builds a Schedule?
+
+SimpleScheduleAI is an AI-native nurse scheduling service for [critical access hospital scheduling](/critical-access-hospital-scheduling) in Texas. AI builds your schedule, our scheduling team checks it, you approve.
+
+The [AI nurse scheduling](/ai-nurse-scheduling) behind each draft counts every nurse's scheduled hours in each week against the FLSA overtime threshold of 40 hours. A nurse who can cover a shift without going past 40 is used first. When a nurse calls out, the replacement shortlist ranks straight-time candidates above overtime ones, with agency last, as the [callout guide](/blog/how-to-handle-nurse-callouts) explains.
+
+Five limits on that overtime check:
+
+- **Scheduled hours, not hours worked.** We have no time clock, so a missed meal break or late charting is not in our count.
+- **Hours, not dollars.** We do not calculate the regular rate, differentials or bonuses.
+- **The 40-hour workweek only.** Our schedules do not apply the 8-and-80 method.
+- **A Monday-to-Sunday week.** A payroll week that starts on another day can count a nurse's hours differently than our schedule does.
+- **Only the schedules we hold.** Hours in a department we do not schedule are not in our count.
+
+One honest limitation: SimpleScheduleAI is not the right fit for a hospital that wants its overtime pay calculated or its payroll audited. Overtime pay stays with your payroll team. See [how it works](/how-it-works) for the steps of each scheduling cycle.
+
+<div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
+  <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
+    The costly overtime mistakes sit in three definitions: which day the workweek starts, whether an interrupted meal break was paid, and whether the night differential reached the overtime rate. A nurse manager does not need to run payroll. The manager does need all three of those definitions for the hospital, because the schedule decides how many hours land in each workweek.
+  </p>
+</div>
+
+## What to Do This Week
+
+1. **Ask payroll for your workweek start day and time.** Check that your template or [nurse scheduling software](/nurse-scheduling-software) starts the week at the same point.
+2. **Recheck one overtime paycheck.** Pick a nurse who worked nights and overtime in the same week, and redo the regular rate with the differential included.
+3. **Split last month's overtime into scheduled and unscheduled.** Ask payroll for the hours report by nurse and by workweek. Overtime on the posted schedule is scheduled. The rest is unscheduled: late charting, missed meals, callout cover, and hours in another department. The two totals answer the CFO who asks where the overtime came from.
+4. **Look at how meal breaks are deducted.** If the deduction is automatic, find out how a nurse reports a missed or interrupted break.
+5. **Confirm which overtime method each nurse is on.** For any nurse on 8-and-80, find the agreement or its record, dated before the work started.
+
+<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
+  <p class="text-lg font-semibold text-default mb-2">A schedule built around the 40-hour line</p>
+  <p class="text-muted text-sm mb-6">AI builds your schedule, our scheduling team checks it, you approve. Onboarding takes 3 to 5 business days and your first schedule lands inside two weeks.</p>
+  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
+  <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
+</div>
 
 ## Frequently Asked Questions
 
-**Q: Does FLSA apply to hospital nurses and nurse managers?**
-Yes. The FLSA applies to most private-sector hospitals and their employees. Staff nurses paid hourly are non-exempt and entitled to overtime at 1.5× for hours over 40 per workweek. Nurse managers may be exempt if they meet both the salary test ($684/week minimum) and the duties test for executive or administrative exemption, but the determination is fact-specific. Misclassification is a significant source of FLSA back-pay liability at small hospitals.
+**Q: Do paid vacation or sick hours count toward the 40?**
 
-**Q: How does overtime work for Texas hospital nurses?**
-Texas has no state overtime law; overtime for Texas hospital nurses is governed entirely by the federal FLSA, which requires 1.5× pay for hours over 40 in a workweek. The one relevant nuance is the FLSA's healthcare-specific 8-and-80 option (Section 7(j)), which lets a hospital calculate overtime on hours over 8 in a day or 80 in a 14-day period instead of the standard 40-hour workweek, but only with a prior written agreement with each nurse. Separately, the Texas Payday Law requires that overtime wages actually owed be paid on schedule, late payment is a distinct violation from the underlying FLSA requirement, enforced by the Texas Workforce Commission. CAHs should maintain complete, shift-level payroll records to demonstrate compliance.
+Not under the FLSA. Overtime is owed on hours actually worked, and Fact Sheet #53 says the law does not require pay for holidays, vacation, sick or personal time at all.
 
-**Q: How do hospitals track nursing overtime for compliance?**
-Best practice is real-time tracking of weekly hours per employee, surfaced within the scheduling tool or managed scheduling service, so that an additional shift assignment triggers an alert before overtime is created. Many CAHs currently manage this through payroll system review after the fact, identifying overtime that has already been worked and paid. Reactive tracking is legally sufficient but economically inefficient: the overtime has already been incurred by the time it is identified. Proactive scheduling-integrated tracking is what separates facilities that control overtime as a budget item from those that manage it as a recurring cost surprise.
+**Q: Can a nurse agree to give up overtime pay?**
 
-For more on overtime management and scheduling compliance at critical access hospitals, see: [Critical Access Hospital Scheduling](/critical-access-hospital-scheduling).
+No. Fact Sheet #23 says the overtime requirement cannot be waived by agreement. An agreement to count only 40 hours a week as work also fails.
 
-<div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-default mb-2">Overtime creeping up every cycle?</p>
-  <p class="text-muted text-sm mb-6">Flat monthly pricing. The AI builds the schedule, our scheduling team checks it, you approve it.</p>
-  <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
-  <p class="text-sm text-muted mt-4 mb-0"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
-</div>
+**Q: When does overtime have to be paid?**
+
+Fact Sheet #23 says overtime is normally due on the regular payday for the pay period in which it was earned.
+
+## Sources
+
+[1] DOL Fact Sheet #54: The Health Care Industry and Calculating Overtime Pay. [dol.gov](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)
+
+[2] DOL Fact Sheet #23: Overtime Pay Requirements of the FLSA. [dol.gov](https://www.dol.gov/agencies/whd/fact-sheets/23-flsa-overtime-pay)
+
+[3] DOL, Overtime Pay (workweek definition). [dol.gov](https://www.dol.gov/agencies/whd/overtime)
+
+[4] DOL Fact Sheet #53: The Health Care Industry and Hours Worked. [dol.gov](https://www.dol.gov/agencies/whd/fact-sheets/53-healthcare-hours-worked)
+
+[5] 29 CFR 778.601 and 29 CFR 516.23, the 14-day overtime period for hospitals. [Cornell LII](https://www.law.cornell.edu/cfr/text/29/778.601)
+
+[6] DOL Fact Sheet #17N: Nurses and the Part 541 Exemptions. [dol.gov](https://www.dol.gov/agencies/whd/fact-sheets/17n-overtime-nurses)
+
+[7] DOL, earnings thresholds for the professional exemption. [dol.gov](https://www.dol.gov/agencies/whd/overtime/salary-levels)
+
+[8] 29 U.S.C. 203(x) and 207(o), public agencies and compensatory time. [Cornell LII](https://www.law.cornell.edu/uscode/text/29/207)
+
+[9] Texas Labor Code §62.151. [texas.public.law](https://texas.public.law/statutes/tex._labor_code_section_62.151)
+
+[10] Texas Health and Safety Code §258.003, mandatory overtime for nurses. [texas.public.law](https://texas.public.law/statutes/tex._health_and_safety_code_section_258.003)
+
+All sources verified 2026-10-26.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

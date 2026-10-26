@@ -57,7 +57,7 @@ The phrase the statutes use is "hours she agreed to work," and that wording conf
 
 Two things get mistaken for mandatory overtime. Prescheduled on-call time is excluded in Texas and New York, so a call-in from an on-call rotation does not count. Brief handoff at the end of a shift is also excluded. The New York [Department of Labor](https://dol.ny.gov/mandatory-overtime-nurses) treats shift report as regularly scheduled hours, and bars an employer from using on-call time as a substitute.
 
-Keep all of this separate from overtime pay. These laws govern assignment, meaning whether you can make somebody stay. Pay is a separate question, governed by the federal Fair Labor Standards Act, and it is answered the same way in every state. Our guide to [nursing overtime rules in Texas](/blog/texas-nursing-overtime-compliance-cah) covers the pay side.
+Keep all of this separate from overtime pay. These laws govern assignment, meaning whether you can make somebody stay. Pay is a separate question, governed by the federal Fair Labor Standards Act, and it is answered the same way in every state. Our guide to [nursing overtime rules in Texas](/blog/texas-nursing-overtime-compliance-cah) covers the pay side, and our explainer on [what nursing overtime is](/blog/what-is-nursing-overtime) covers how the federal rule counts hours.
 
 ## Which States Restrict Mandatory Nurse Overtime?
 

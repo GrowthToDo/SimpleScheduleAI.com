@@ -1004,5 +1004,13 @@
     "primaryKeyword": "rural texas strong grant recipients",
     "pillar": null,
     "note": "Newsroom article published 2026-10-24. How much Rural Texas Strong (Texas RHTP) grant money is under signed contract per HHSC's Oct 23 list; CAH presence; announcements reconciled to list rows. Differs from rural-health-transformation-deadline-nurse-salaries (what the money can pay for)."
+  },
+  {
+    "slug": "what-is-nursing-overtime",
+    "type": "post",
+    "url": "/blog/what-is-nursing-overtime",
+    "primaryKeyword": "nursing overtime",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-10-26 (next-15 Oct plan #9). Federal definition explainer: 40-hour workweek, hours worked, regular rate with differentials, 8-and-80 (educational only; SSAI does not implement it), exemptions, Texas pointer. Differs from texas-nursing-overtime-compliance-cah (Texas compliance), how-to-reduce-nurse-overtime (reduction), mandatory-nurse-overtime-by-state (assignment limits)."
   }
 ]

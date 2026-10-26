@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-nursing-overtime",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-26T16:51:04.544Z",
+      "contentHash": "926ca5570ba41f4d9dd14fbedbce2dd2b016bda88ddf0680163ee8a088e5f751"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-26T16:51:07.461Z",
+      "contentHash": "926ca5570ba41f4d9dd14fbedbce2dd2b016bda88ddf0680163ee8a088e5f751"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-26T16:51:08.785Z",
+      "contentHash": "926ca5570ba41f4d9dd14fbedbce2dd2b016bda88ddf0680163ee8a088e5f751"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-26T16:51:08.856Z",
+      "contentHash": "926ca5570ba41f4d9dd14fbedbce2dd2b016bda88ddf0680163ee8a088e5f751"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-26T16:51:09.587Z",
+      "contentHash": "926ca5570ba41f4d9dd14fbedbce2dd2b016bda88ddf0680163ee8a088e5f751"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-26T16:51:09.598Z",
+      "contentHash": "926ca5570ba41f4d9dd14fbedbce2dd2b016bda88ddf0680163ee8a088e5f751"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-26T16:51:09.599Z",
+      "contentHash": "926ca5570ba41f4d9dd14fbedbce2dd2b016bda88ddf0680163ee8a088e5f751"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-26T16:51:09.601Z",
+      "contentHash": "926ca5570ba41f4d9dd14fbedbce2dd2b016bda88ddf0680163ee8a088e5f751"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-10-26T16:50:57.010Z",
+      "contentHash": "344bd9ccd0736d8265b33ccae8753ede187f7432b009fb76dd00487ac2f0d9b0"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-26T16:50:58.607Z",
+      "contentHash": "344bd9ccd0736d8265b33ccae8753ede187f7432b009fb76dd00487ac2f0d9b0"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-26T16:51:00.464Z",
+      "contentHash": "344bd9ccd0736d8265b33ccae8753ede187f7432b009fb76dd00487ac2f0d9b0"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "main-session",
+      "setAt": "2026-10-26T16:51:02.504Z",
+      "contentHash": "344bd9ccd0736d8265b33ccae8753ede187f7432b009fb76dd00487ac2f0d9b0"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 79.2,
+        "headings": 100,
+        "actionability": 57.1,
+        "attention": 91.7
+      },
+      "overall": 80.3,
+      "counts": {
+        "sections": 12,
+        "rereads": 11,
+        "undefinedTerms": 4,
+        "headingsAnswered": 12,
+        "mondayActions": 4,
+        "blockedActions": 3,
+        "quitPoints": 1
+      },
+      "icp": "Nurse manager at a 25-bed Texas Critical Access Hospital who builds the schedule, is not an HR or payroll specialist, and was just asked by the CFO why overtime is so high; reading once, start to finish",
+      "publishDate": "2026-10-26T00:00:00Z",
+      "postType": "tofu",
+      "observations": {
+        "undefinedTerms": [
+          "non-exempt (at first use)",
+          "duties test",
+          "learned professional exemption",
+          "special record (8-and-80)"
+        ],
+        "mondayActions": [
+          "Ask payroll for the workweek start day and hour and compare it to the schedule template",
+          "Find out whether meal breaks are auto-deducted and how a nurse reports a missed or interrupted break",
+          "List nurses who work in more than one department and agree with those managers how weekly hours get added up",
+          "Ask payroll which overtime method (40-hour or 8-and-80) each nurse is on"
+        ],
+        "blockedActions": [
+          "Recheck one overtime paycheck: a nurse manager usually cannot see earnings statements or differential and bonus lines; the post does not say to get the statement from payroll, and the worked example covers a differential only, not a pick-up bonus",
+          "For a nurse on 8-and-80, 'find the agreement or its record': the 'special record' for an unwritten agreement is never described, so she cannot tell whether what she finds is the right thing",
+          "'have employment counsel confirm both tests are met': a 25-bed CAH has no employment counsel on staff and no alternative is named"
+        ],
+        "sections": [
+          {
+            "heading": "What Is Nursing Overtime Under Federal Law?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": [
+              "'non-exempt' is the first word of the post and is not explained until the exempt section near the end"
+            ]
+          },
+          {
+            "heading": "How Is the Workweek Defined for Nurse Overtime?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": [],
+            "gap": "Silent on a 7p-7a night shift that straddles the workweek start: which week do those hours go in?"
+          },
+          {
+            "heading": "What Counts as Hours Worked for a Nurse?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": [
+              "Training bullet: 'count as work unless the class is outside regular hours, truly voluntary, not directly related to the job, and involves no productive work. All four conditions must hold.' (negated four-part test)",
+              "'A nurse whose meal break is frequently interrupted must be paid for the full 30 minutes' vs 'A nurse scheduled for exactly 40 hours goes into overtime with one interrupted meal break.' Frequently, or once?"
+            ]
+          },
+          {
+            "heading": "Do a Nurse's Hours in Different Departments Count Together?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": [
+              "'The same rule catches a per diem nurse who picks up shifts on two units.' Which rule: adding the hours, or blending the two pay rates?"
+            ]
+          },
+          {
+            "heading": "What Is the Regular Rate of Pay for Nurse Overtime?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": ["'the overtime rate is 1.5 times a figure higher than her base pay'"]
+          },
+          {
+            "heading": "How Do You Calculate Nurse Overtime Pay With a Shift Differential?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": [
+              "Table row 'Overtime premium (half the rate) 8 hours x $21.00' reads wrong to someone who knows overtime as time and a half; the explanation comes only after the table"
+            ]
+          },
+          {
+            "heading": "What Is the 8-and-80 Overtime Rule for Hospitals?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": [
+              "Opens on 'Under section 7(j) of the FLSA' (statute label before the rule)",
+              "'Under 778.601 it need not be in writing, but an unwritten agreement requires a special record.' What record?"
+            ]
+          },
+          {
+            "heading": "Are Nurses Exempt From Overtime Pay?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": [
+              "'meets the duties test' then 'the duties test for the learned professional exemption': neither test is described"
+            ]
+          },
+          {
+            "heading": "Does Texas Have Its Own Overtime Law for Nurses?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": [
+              "'[Labor Code §62.151] says it does not apply to anyone the FLSA covers' plus 'public agency' / '29 U.S.C. 207(o)' stacked in two sentences"
+            ]
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Count Overtime When It Builds a Schedule?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": ["'Your manager approves.' The reader IS the manager. Same line repeats in the CTA box"]
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "friction": []
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true,
+            "friction": [
+              "All four answers repeat the body (daily overtime, holidays, approval, salaried). Reader stops after the first one"
+            ]
+          }
+        ]
+      },
+      "scoredAt": "2026-10-26T16:37:23.789Z",
+      "contentHash": "46d670f633028d8ceb92dce5507108ecbeef464f15dc8ca6697f4540dd776d0d"
+    }
+  }
+}
