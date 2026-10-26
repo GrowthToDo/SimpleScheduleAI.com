@@ -79,3 +79,74 @@ test('caps at 5 hits per file so a legacy post cannot flood its report', () => {
   const hits = (r.out.match(/Unclear referent/g) || []).length;
   assert.equal(hits, 5);
 });
+
+// Sentence-level check (2d), added 2026-10-26 after the founder flagged a
+// mid-paragraph partitive on a live article: "By October 23, one of them had a
+// signed contract" should have named "those 28 applications".
+const SENTENCE = /Unclear referent \(sentence\)/;
+const LEAD = 'The state posted 28 new applications in its October 14 batch.';
+
+test('sentence-level: the founder\'s real "one of them" sentence warns', () => {
+  const r = runGate(`${LEAD} By October 23, one of them had a signed contract.`);
+  assert.match(r.out, /Unclear referent \(sentence\): "one of them" with no noun after it/);
+});
+
+test('sentence-level: naming the thing ("one of those 28 applications") passes', () => {
+  const r = runGate(`${LEAD} By October 23, one of those 28 applications had a signed contract.`);
+  assert.doesNotMatch(r.out, SENTENCE);
+});
+
+test('sentence-level: a mid-paragraph "They wrote:" warns', () => {
+  const r = runGate('Two nurses and a charge nurse filed the complaint in March. They wrote: the unit was short.');
+  assert.match(r.out, /Unclear referent \(sentence\): sentence opens on a bare pronoun "They"/);
+});
+
+test('sentence-level: a mid-paragraph "The nurse wrote:" passes', () => {
+  const r = runGate('Two nurses and a charge nurse filed the complaint in March. The nurse wrote: the unit was short.');
+  assert.doesNotMatch(r.out, SENTENCE);
+});
+
+test('sentence-level: demonstrative plus a concrete noun passes', () => {
+  const r = runGate(
+    'A vendor can promise a one-hour response on a sales call. These support terms belong in the contract. This guide shows how.'
+  );
+  assert.doesNotMatch(r.out, SENTENCE);
+});
+
+test('sentence-level: a mid-paragraph "It" does not warn (it/its dropped from 2d)', () => {
+  const r = runGate('When I Work is the most functional budget option. It handles shift scheduling.');
+  assert.doesNotMatch(r.out, SENTENCE);
+});
+
+test('sentence-level: a sentence wrapped across source lines is read whole', () => {
+  // Read line by line, the wrapped tail "them." looks like a sentence opening
+  // on a bare pronoun. Joined, it is the object of "included".
+  const r = runGate(
+    'A 25-bed hospital could not tell whether the story included\nthem. The answer was in the state rules.\nThey were public.'
+  );
+  const hits = r.out.match(/Unclear referent \(sentence\)[^\n]*\n[^\n]*/g) || [];
+  assert.equal(hits.length, 1);
+  assert.match(hits[0], /"They"[\s\S]*L8:/);
+});
+
+test('sentence-level: blockquotes, the Sources section and "IT" do not warn', () => {
+  const r = runGate(
+    [
+      'Small hospitals rarely have a full IT team. IT handles the badge readers.',
+      '',
+      '> One nurse said the roster was wrong. They wrote: nobody checked it.',
+      '',
+      '## Sources',
+      '',
+      '1. A report. One of them is a PDF.',
+    ].join('\n')
+  );
+  assert.doesNotMatch(r.out, SENTENCE);
+});
+
+test('sentence-level: lists more than 25 hits with an "N more" summary', () => {
+  const body = Array.from({ length: 30 }, () => 'Nurses filed two complaints. They wrote back.').join('\n\n');
+  const r = runGate(body);
+  assert.equal((r.out.match(/sentence opens on a bare pronoun "They"/g) || []).length, 25);
+  assert.match(r.out, /Unclear referent \(sentence\): 5 more hit\(s\) not shown \(30 total\)/);
+});

@@ -26,7 +26,12 @@ Run these; fix every HARD FAILURE; a human never re-verifies a green row by hand
   word count vs post-type range; in-body `.webp`; standard
   table classes; volume language near competitor names; excerpt run-on (>40-word sentence);
   "managed service" self-label; front-loaded link/reference; over-used image family (3+ live
-  posts in the same visual family); internal-link orphan (corpus `--all`/`--live` runs).
+  posts in the same visual family); internal-link orphan (corpus `--all`/`--live` runs);
+  unclear referent at paragraph openers AND, since 2026-10-26, at sentence level (a sentence
+  opening on a bare It/They/This/That/These/Those/Both with no noun after it, or "one of
+  them"/"of these." anywhere; up to 25 per file, partitives and plurals listed first). Each hit
+  is a question, not a verdict: if a reader could not say what the pronoun points at, name the
+  noun again (T16).
 - `npm run check-links src/data/post/<slug>.md` — network pass. Every external source URL and the
   featured image must resolve. 403/429/timeouts are usually bot-blocks, not dead links — verify
   those by hand before declaring broken; see the geo-block rule in the seo-aeo skill's

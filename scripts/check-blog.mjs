@@ -195,6 +195,129 @@ const UNCLEAR_REFERENT_OPENERS = [
   ],
 ];
 
+// Sentence-level unclear referents (WARN). Added 2026-10-26. The paragraph
+// check above only reads paragraph OPENERS and caps at 5, so the founder kept
+// finding vague pronouns mid-paragraph (theme T16, sharpened 2026-10-20; then
+// again on a live article 2026-10-26: "By October 23, one of them had a signed
+// contract" should have named "those 28 applications"). Two shapes:
+//   (a) a sentence that opens on a bare pronoun or a demonstrative with no noun
+//       after it ("They wrote:", "This means", "Those were"). A demonstrative
+//       plus a concrete noun ("This guide", "These support terms") is the fix,
+//       not the defect, so it passes.
+//   (b) a partitive with no noun after it anywhere in a sentence ("one of
+//       them", "most of those.", "two of these are").
+// Low precision by design, like the paragraph check: read each hit as "would a
+// reader who skimmed the previous sentence know what this points at?"
+//
+// It/Its are deliberately NOT in (a). Measured 2026-10-26 on 125 live files:
+// 743 of 1,328 raw hits were it/its, almost all with one clear noun in the
+// sentence just before ("When I Work is the budget option. It handles shift
+// scheduling..."). The founder's T16 cases are plural pronouns and this/that
+// pointing back at a list, so it/its was dropped; a paragraph-initial "It is"
+// is still read by the paragraph check (2c).
+const REFERENT_PRONOUNS = new Set(['they', 'them', 'their']);
+const REFERENT_DEMONSTRATIVES = new Set(['this', 'that', 'these', 'those', 'both', 'either']);
+const REFERENT_AUX = new Set(
+  (
+    'is are was were be been being has have had does do did can cannot could will would should may might must ' +
+    "isn't aren't wasn't weren't hasn't haven't hadn't doesn't don't didn't can't couldn't won't wouldn't shouldn't"
+  ).split(' ')
+);
+// Words that, right after a demonstrative, mean no noun follows: adverbs and
+// common verbs whose base or past form does not end in -s/-ed (the -s/-ed
+// forms are caught by suffix below).
+const REFERENT_NON_NOUN = new Set(
+  (
+    'also alone only still just often usually never always already again too all mostly rarely sometimes then now ' +
+    'here there not matter mean make leave give put create change explain sound happen work apply show take raise ' +
+    'add help let cover include require say tell hit cost feel look seem become depend come go get keep turn set cut ' +
+    'wrote said told found showed made meant came went got became took gave ran fell rose left sat stood held ' +
+    'brought bought paid sent kept lost won began grew drew knew saw led met read spent'
+  ).split(' ')
+);
+// -s / -ed words that are nouns, so "This process" or "These needs" pass.
+const REFERENT_S_NOUN = /(ss|us|is|ics|ws|ys|as|os)$/;
+const REFERENT_ED_NOUN = new Set(['need', 'bed', 'speed', 'feed', 'seed', 'shed', 'red', 'hundred', 'breed']);
+// Fixed phrases that open on a demonstrative but carry no referent problem.
+// "That is 416 ÷ 11 nurses" continues a worked calculation, so it passes too.
+const REFERENT_FIXED =
+  /^(?:(?:that said|that way|either way|this way|that is,|that is to say|this one|that one|so that)\b|(?:this|that) (?:is|comes to|works out to)(?: about| roughly| only| just)? [\d$])/i;
+// A short leading adverbial with a comma ("In 2025, they", "By October 23, those")
+// is stripped so the pronoun behind it is still read as the opener.
+const REFERENT_LEAD_IN =
+  /^(?:(?:and|but|so|yet|or)\s+|(?:[\w$%'’-]+\s+){0,3}[\w$%'’-]+,\s+(?=(?:they|them|their|this|that|these|those|both|either)\b))/i;
+const REFERENT_PARTITIVE =
+  /\b(one|some|most|all|none|each|both|many|several|any|neither|either) of (them)\b|\bof (these|those)(?=\s*(?:[.,;:!?)]|$|(?:is|are|was|were|has|have|had|will|would|can|could)\b))/i;
+
+// Returns a short reason when the sentence opens on a vague referent, else null.
+function sentenceOpenerReferent(sentence) {
+  let s = sentence.replace(/^[\s*_"'“‘([]+/, '');
+  for (let k = 0; k < 2; k++) s = s.replace(REFERENT_LEAD_IN, '');
+  if (REFERENT_FIXED.test(s)) return null;
+  const m = s.match(/^([A-Za-z]+)(['’](?:s|re|ll|d|ve))?\b\s*(\S*)/);
+  if (!m) return null;
+  const word = m[1].toLowerCase();
+  const contraction = m[2];
+  const nextRaw = m[3] || '';
+  // Drop a possessive so "This year's" reads as demonstrative + noun.
+  const next = nextRaw
+    .toLowerCase()
+    .replace(/['’]s$/, '')
+    .replace(/[^a-z'’]/g, '');
+  if (REFERENT_PRONOUNS.has(word)) return `opens on a bare pronoun "${m[1]}${contraction || ''}"`;
+  if (!REFERENT_DEMONSTRATIVES.has(word)) return null;
+  const why = `opens on "${m[1]}${contraction || ''}" with no noun after it`;
+  if (contraction) return why;
+  // Punctuation or end straight after the demonstrative: "This, in turn," / "That."
+  if (nextRaw === '' || /^[.,;:!?)]/.test(nextRaw)) return why;
+  if (/^\d/.test(next) || next === '') return null;
+  // A hyphenated compound ("This count-based approach") is a modifier before
+  // a noun, not a verb, even when it ends in -ed or -s.
+  if (/[a-z]-[a-z]/i.test(nextRaw)) return null;
+  if (REFERENT_AUX.has(next) || REFERENT_NON_NOUN.has(next)) return why;
+  // "Those who work nights" defines its referent in place.
+  if (word === 'those' && /^(who|whose|with|without|in|on|at|of|that|which|under|over|above|below)$/.test(next)) {
+    return null;
+  }
+  if (word === 'both' || word === 'either') return null;
+  // Singular demonstrative + an -s word is almost always a verb ("This means",
+  // "That leaves"); plurals take nouns ending in -s, so the rule is singular-only.
+  if ((word === 'this' || word === 'that') && /s$/.test(next) && !REFERENT_S_NOUN.test(next)) return why;
+  if (/ed$/.test(next) && !REFERENT_ED_NOUN.has(next)) return why;
+  return null;
+}
+
+// Split a block (one or more wrapped source lines) into sentences, each tagged
+// with the source line it starts on. Links collapse to their text, URLs and
+// inline code are dropped, so a period inside a URL does not split.
+function splitSentences(parts) {
+  let joined = '';
+  const starts = [];
+  for (const { text, lineNo } of parts) {
+    const clean = text
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+      .replace(/https?:\/\/\S+/g, '')
+      .replace(/`[^`]*`/g, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    if (!clean) continue;
+    if (joined) joined += ' ';
+    starts.push({ at: joined.length, lineNo });
+    joined += clean;
+  }
+  if (!joined) return [];
+  const cuts = [0];
+  for (const m of joined.matchAll(/(?<=[.!?:]["'”’*_)]*)\s+(?=["'“‘*_(]*[A-Z0-9$])/g)) {
+    cuts.push(m.index + m[0].length);
+  }
+  return cuts.map((at, k) => ({
+    sentence: joined.slice(at, cuts[k + 1] ?? joined.length).trim(),
+    lineNo: starts.filter((s) => s.at <= at).pop().lineNo,
+  }));
+}
+
 // Anything in this list is forbidden anywhere (including blockquotes — these
 // are formatting characters, not vocabulary, so the reviewer-quote exemption
 // does not apply).
@@ -830,6 +953,122 @@ function check(file) {
         }
       }
     });
+  }
+
+  // 2d. Sentence-level unclear referents (WARN). See REFERENT_* above. Covers
+  // what 2c cannot see: sentences after the first in a paragraph, and the
+  // partitive "one of them" anywhere. A paragraph opener that 2c already reads
+  // (its regex matched, or it sits under a heading/FAQ question, or it is the
+  // first sentence of a list item or table cell) is left to 2c's design, so
+  // the two checks never double-report a line. Wrapped source lines are joined
+  // into one block first, so a sentence broken across lines is read whole.
+  // Skips code fences, blockquotes (verbatim quotes), headings, table header
+  // rows, the Sources section and the author bio. Capped high (25) with an
+  // "N more" line; hits are sorted by tier (partitives, then plural pronouns,
+  // then this/that), so the hidden ones are the lowest-yield.
+  {
+    const SENTENCE_REFERENT_CAP = 25;
+    const hits = [];
+    const blocks = [];
+    let cur = null;
+    const flush = () => {
+      if (cur) blocks.push(cur);
+      cur = null;
+    };
+    let inFence = false;
+    let inSources = false;
+    let prevBlank = true;
+    let lastNonBlank = '';
+    body.forEach((line, i) => {
+      const raw = line.trim();
+      const lineNo = bodyOffset + i + 1;
+      if (/^```/.test(raw)) {
+        inFence = !inFence;
+        flush();
+        prevBlank = false;
+        return;
+      }
+      if (inFence) return;
+      if (raw === '') {
+        flush();
+        prevBlank = true;
+        return;
+      }
+      const isOpener = prevBlank;
+      const afterHeading = /^#{1,6}\s/.test(lastNonBlank) || /^\*\*.+\?\*\*$/.test(lastNonBlank);
+      prevBlank = false;
+      lastNonBlank = raw;
+      if (/^##\s/.test(raw)) inSources = /^##\s+(A Note on Sources|Sources)\b/i.test(raw);
+      if (
+        inSources ||
+        /^#{1,6}\s/.test(raw) ||
+        inBlockquote(line) ||
+        /^_\[Pradeep|^(import|export)\s|^---+$|^\|?\s*:?-{3,}/.test(raw) ||
+        /^\*\*Q:.*\*\*$/.test(raw)
+      ) {
+        flush();
+        return;
+      }
+      if (/^\|/.test(raw)) {
+        // Table: skip the header row (the row directly above a separator row);
+        // each body cell is its own block, read like a list item.
+        flush();
+        if (/^\|?\s*:?-{3,}/.test((body[i + 1] || '').trim())) return;
+        for (const text of raw
+          .split('|')
+          .map((c) => c.trim())
+          .filter(Boolean)) {
+          blocks.push({ parts: [{ text, lineNo }], firstExempt: true });
+        }
+        return;
+      }
+      if (/^([-*+]\s|\d+\.\s)/.test(raw)) {
+        flush();
+        cur = { parts: [{ text: raw.replace(/^([-*+]\s|\d+\.\s)/, ''), lineNo }], firstExempt: true };
+        return;
+      }
+      if (cur && !isOpener) {
+        // A wrapped continuation of the current paragraph or list item.
+        cur.parts.push({ text: raw, lineNo });
+        return;
+      }
+      flush();
+      const text = raw.replace(/^\*{1,2}|^_/g, '');
+      const coveredBy2c =
+        isOpener && (afterHeading || /^</.test(raw) || UNCLEAR_REFERENT_OPENERS.some(([, re]) => re.test(text)));
+      cur = { parts: [{ text: raw, lineNo }], firstExempt: coveredBy2c };
+    });
+    flush();
+
+    for (const { parts, firstExempt } of blocks) {
+      splitSentences(parts).forEach(({ sentence, lineNo }, si) => {
+        const snippet = sentence.slice(0, 90);
+        const p = sentence.match(REFERENT_PARTITIVE);
+        if (p) {
+          hits.push({ tier: 0, why: `"${p[0]}" with no noun after it`, lineNo, snippet });
+          return;
+        }
+        if (si === 0 && firstExempt) return;
+        const why = sentenceOpenerReferent(sentence);
+        if (!why) return;
+        // Order hits by how often the shape is the founder's defect: plural
+        // pronouns pointing back at a list (T16) first, then this/that.
+        const opener = (why.match(/"([A-Za-z]+)/) || [])[1]?.toLowerCase();
+        const tier = /^(this|that)$/.test(opener) ? 2 : 1;
+        hits.push({ tier, why: `sentence ${why}`, lineNo, snippet });
+      });
+    }
+    hits.sort((a, b) => a.tier - b.tier || a.lineNo - b.lineNo);
+    hits
+      .slice(0, SENTENCE_REFERENT_CAP)
+      .forEach((h) => warn(`Unclear referent (sentence): ${h.why}`, h.lineNo, h.snippet));
+    if (hits.length > SENTENCE_REFERENT_CAP) {
+      warn(
+        `Unclear referent (sentence): ${hits.length - SENTENCE_REFERENT_CAP} more hit(s) not shown (${hits.length} total)`,
+        0,
+        ''
+      );
+    }
   }
 
   // 3. No inline <svg> in .md files (must be Tailwind div / table).
