@@ -251,10 +251,9 @@ logged automatically: original assignment, substitution, who covered, and timest
 This audit trail is maintained as part of the service and available for export if a CMS
 survey or TWC audit requires documentation.
 
-We build FLSA overtime thresholds into the [AI nurse scheduling](/ai-nurse-scheduling) logic, flagging nurses who are
+We build the 40-hour weekly FLSA overtime threshold into the [AI nurse scheduling](/ai-nurse-scheduling) logic, flagging nurses who are
 approaching the FLSA overtime threshold before shifts are assigned, not after the
-payroll run. Competency level and role are held on each nurse's profile, and
-we alert you before a certification lapses. See the AI build a compliant schedule and flag overtime risk live in the [interactive simulator](/simulator).
+payroll run. Competency level and role are held on each nurse's profile. See the AI build a compliant schedule and flag overtime risk live in the [interactive simulator](/simulator).
 
 One honest limitation: we document what happens within the scheduling system. If
 callout events are handled outside the system, managed by text or verbal

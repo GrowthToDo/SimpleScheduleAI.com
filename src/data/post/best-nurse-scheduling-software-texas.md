@@ -232,7 +232,7 @@ TCP's Aladtec pages describe configurable work limits and overtime rules but do 
 >
 > Jeanne C., Administrative Coordinator, May 7, 2019, Capterra
 
-**Verdict:** Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. If you want FLSA overtime thresholds tracked without a configuration project, SimpleScheduleAI is the alternative.
+**Verdict:** Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. If you want the 40-hour weekly FLSA overtime threshold tracked without a configuration project, SimpleScheduleAI is the alternative.
 
 **Cost:** Not published. TCP quotes on request.
 
@@ -570,7 +570,7 @@ Flat monthly pricing, no long-term contract. No IT setup. We bring the schedule 
 
 **Q: Is Aladtec or SimpleScheduleAI better for a Texas Critical Access Hospital?**
 
-It depends on whether your nurse manager can own a scheduling platform. Aladtec is the self-serve option to check, but it is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. It sets up fully remotely. Ask TCP to show how it handles the healthcare 8-and-80 calculation, because its pages do not mention it. SimpleScheduleAI handles FLSA overtime thresholds and CMS §485.635 documentation automatically with no configuration at the facility, the better fit when the nurse manager is clinically active and cannot maintain a software platform.
+It depends on whether your nurse manager can own a scheduling platform. Aladtec is the self-serve option to check, but it is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. It sets up fully remotely. Ask TCP to show how it handles the healthcare 8-and-80 calculation, because its pages do not mention it. SimpleScheduleAI handles the 40-hour weekly FLSA overtime threshold and CMS §485.635 documentation automatically with no configuration at the facility, the better fit when the nurse manager is clinically active and cannot maintain a software platform.
 
 **Q: Is there a separate Texas state overtime law scheduling software has to handle?**
 

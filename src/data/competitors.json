@@ -82,7 +82,7 @@
         {
           "dimension": "FLSA overtime thresholds",
           "competitor": "Not documented on the product page; confirm with vendor",
-          "simplescheduleai": "Applicable overtime thresholds tracked each cycle; the 8-and-80 calculation method is not implemented"
+          "simplescheduleai": "The 40-hour weekly FLSA overtime threshold is tracked each cycle; the 8-and-80 calculation method is not implemented"
         },
         {
           "dimension": "Callout replacement",

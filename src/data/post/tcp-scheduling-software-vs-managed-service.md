@@ -138,7 +138,7 @@ Verify current capabilities directly with TCP before making a purchasing decisio
 
 ## What Does a Managed Scheduling Service Do Differently?
 
-A managed scheduling service removes the scheduling function from the nurse manager's plate entirely. The hospital provides a staff roster and scheduling constraints; a specialist builds the schedule each cycle, monitors [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), pre-ranks callout replacements, and logs every change for CMS documentation. The nurse manager reviews and approves. The manager's weekly scheduling time drops to 1-2 hours, and they never touch the configuration or the call list.
+A managed scheduling service removes the scheduling function from the nurse manager's plate entirely. The hospital provides a staff roster and scheduling constraints; a specialist builds the schedule each cycle, monitors the [40-hour weekly FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), pre-ranks callout replacements, and logs every change for CMS documentation. The nurse manager reviews and approves. The manager's weekly scheduling time drops to 1-2 hours, and they never touch the configuration or the call list.
 
 <img src="/images/blog/tcp-scheduling-software-vs-managed-service/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
@@ -147,7 +147,7 @@ A managed scheduling service removes the scheduling function from the nurse mana
 With SimpleScheduleAI:
 
 - A scheduling specialist completes initial setup from your staff roster within 3 to 5 business days
-- The AI builds draft schedules each cycle; a specialist checks overtime thresholds and credential requirements before presenting drafts
+- The AI builds draft schedules each cycle; a specialist checks the 40-hour weekly FLSA overtime threshold and credential requirements before presenting drafts
 - The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff
 - Callout coverage shortlists come pre-ranked by certification, overtime status, and availability
 - Every schedule change is automatically logged for [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance documentation

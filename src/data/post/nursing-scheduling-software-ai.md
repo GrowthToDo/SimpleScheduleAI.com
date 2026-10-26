@@ -143,7 +143,7 @@ Being honest about AI limitations matters. CAH administrators need accurate expe
 
 ## How Does SimpleScheduleAI Use AI for Hospital Roster Management?
 
-SimpleScheduleAI uses AI to generate three draft schedule options per cycle (balanced, fair-rotation, and overtime-minimized) for Texas Critical Access Hospitals, incorporating FLSA overtime thresholds, nurse certifications, per-diem availability, and fairness distribution metrics. If the terms feel interchangeable, our explainer on [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software) sorts out where building the roster ends and producing the weekly schedule begins.
+SimpleScheduleAI uses AI to generate three draft schedule options per cycle (balanced, fair-rotation, and overtime-minimized) for Texas Critical Access Hospitals, incorporating the 40-hour weekly FLSA overtime threshold, nurse certifications, per-diem availability, and fairness distribution metrics. If the terms feel interchangeable, our explainer on [nurse rostering versus scheduling software](/blog/nurse-rostering-vs-scheduling-software) sorts out where building the roster ends and producing the weekly schedule begins.
 
 Critically, SimpleScheduleAI is an AI-native nurse scheduling service, not a self-serve AI tool. A scheduling specialist handles the initial configuration and ongoing calibration; the nurse manager does not interact with the AI directly. The output is three human-readable draft schedules delivered for review, not an AI interface the manager has to learn.
 

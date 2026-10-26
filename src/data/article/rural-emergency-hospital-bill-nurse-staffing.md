@@ -156,7 +156,7 @@ SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the sch
 
 That configuration is the part that matters here. If your overnight coverage requirement changes, you tell us once. We change the rule, and every schedule we build after that follows it.
 
-Each draft spreads weekends and holidays against a running per-nurse count, and weekend history carries from one period to the next. A manager rebuilding night coverage also sees overtime and rule violations per nurse, which is how you spot the person being leaned on before she resigns. Every draft tracks each nurse's running hours against the applicable FLSA overtime thresholds.
+Each draft spreads weekends and holidays against a running per-nurse count, and weekend history carries from one period to the next. A manager rebuilding night coverage also sees overtime and rule violations per nurse, which is how you spot the person being leaned on before she resigns. Every draft tracks each nurse's running hours against the 40-hour weekly FLSA overtime threshold.
 
 One honest limitation: we can only work with the availability that exists. If a category switch means you need nurses on nights you do not have, we will show you that gap early and accurately. We cannot fill it. Hiring is still hiring. See a schedule get built in the [interactive simulator](/simulator), or the full process on [how it works](/how-it-works), with background in the [nurse scheduling software](/nurse-scheduling-software), [critical access hospital scheduling](/critical-access-hospital-scheduling) and [AI nurse scheduling](/ai-nurse-scheduling) hubs.
 

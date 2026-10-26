@@ -174,7 +174,7 @@ The four strongest QGenda alternatives for a Critical Access Hospital are Simple
 
 SimpleScheduleAI is a new service, without public G2 or Capterra reviews yet. It is a managed [healthcare staff scheduling](/nurse-scheduling-software) service built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a specialist handles setup from an Excel roster upload (3 to 5 business days), checks each draft, and maintains the system as the roster changes.
 
-Texas compliance is built in as the default: [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
+Texas compliance is built in as the default: the [40-hour weekly FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and [CMS CoP §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) documentation are part of the standard service rather than configuration the nurse manager has to maintain. See the AI build a schedule and the compliance checks run live in the [interactive simulator](/simulator).
 
 **Best for:** CAHs where the nurse manager is already stretched and cannot absorb another implementation project, or where the core issue is scheduling labor rather than just platform cost.
 
@@ -373,7 +373,7 @@ QGenda is worth keeping in four situations. If any of these describes your hospi
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime thresholds (Texas)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Configurable</td>
-        <td class="py-3 text-primary">Built in as default</td>
+        <td class="py-3 text-primary">40-hour weekly threshold built in as default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Physician scheduling</td>

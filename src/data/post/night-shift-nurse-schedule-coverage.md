@@ -130,7 +130,7 @@ A system that manages night coverage well does four things:
 
 SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Your unit’s minimum staffing for every shift, nights included, is configured before the first cycle and applied as a hard rule. Night shifts are also filled first, ahead of days and evenings, because they are the hardest slots to cover and leaving them until last is how they end up unfilled. Rest-hour and consecutive-shift limits then cap how much night work can stack on one nurse, and the fairness-optimized draft balances total load across the roster.
 
-When a night nurse calls out, the replacement list is generated from night-eligible, available staff, not pulled from whoever is easiest to reach. For Texas Critical Access Hospitals, the same draft tracks each nurse's running hours against the applicable FLSA overtime thresholds, so a night callout does not quietly push someone into unplanned overtime.
+When a night nurse calls out, the replacement list is generated from night-eligible, available staff, not pulled from whoever is easiest to reach. For Texas Critical Access Hospitals, the same draft tracks each nurse's running hours against the 40-hour weekly FLSA overtime threshold, so a night callout does not quietly push someone into unplanned overtime.
 
 One honest limitation: the quality of night coverage scheduling depends on the size of your night-eligible pool. If a CAH has only four or five nurses who can work nights, the system flags coverage risk accurately, but it cannot create availability that does not exist. We are direct about this during onboarding rather than promising a fix we cannot deliver.
 

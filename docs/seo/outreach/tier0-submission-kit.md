@@ -72,8 +72,8 @@ ranking work lives in the dofollow lane (see `backlink-plan-2026-07.md`).
   >
   > A cycle works like this. Your roster lives in the system, and the AI builds draft
   > schedules against real constraints: coverage and skill mix, credential matching,
-  > rest requirements, fairness across nights, weekends, and holidays, and applicable
-  > FLSA overtime thresholds. It produces three scored draft options so tradeoffs are
+  > rest requirements, fairness across nights, weekends, and holidays, and the 40-hour
+  > weekly FLSA overtime threshold. It produces three scored draft options so tradeoffs are
   > visible instead of hidden. The built-in quality checks flag any rule violation with
   > a documented reason before the manager reviews. You export a post-ready PDF and a
   > full Excel workbook every cycle.
@@ -95,10 +95,10 @@ ranking work lives in the dofollow lane (see `backlink-plan-2026-07.md`).
 - **Features and Specs rows** (name → description):
   | Feature name | Description |
   | --- | --- |
-  | AI Schedule Generation | The AI builds three scored draft schedules each cycle against coverage, skill mix, fairness, and FLSA overtime thresholds. |
+  | AI Schedule Generation | The AI builds three scored draft schedules each cycle against coverage, skill mix, fairness, and the 40-hour weekly FLSA overtime threshold. |
   | 22 Automated Rule Checks | Built-in quality checks validate every draft and flag any rule violation with a documented reason before your manager reviews it. |
   | Ranked Callout Coverage | Log a callout and the system ranks the top three replacement candidates with reasons: skills, role, charge coverage, overtime risk. |
-  | FLSA Overtime Tracking | Tracks each nurse's running hours against applicable FLSA overtime thresholds and flags a draft before it breaches one. |
+  | FLSA Overtime Tracking | Tracks each nurse's running hours against the 40-hour weekly FLSA overtime threshold and flags a draft before it breaches it. |
   | Full Audit Trail | Every schedule change is logged with a timestamp, giving a clear record for CMS documentation and survey readiness. |
   | Post-Ready Exports | Export a post-ready PDF and a full Excel workbook every cycle. |
   | Runs in the Browser | No installation, no integration project, no IT department required. Nurses need no accounts. |
@@ -134,7 +134,7 @@ Never, in any product-mode listing:
 - **Credential/licence EXPIRY tracking.** We do credential MATCHING for assignment.
   Expiry tracking is not a feature.
 - **Any customer, pilot, cohort, or outcome claim.** Pre-launch, zero customers.
-- **The FLSA calculation method / "8-and-80".** Say "FLSA overtime thresholds".
+- **The FLSA calculation method / "8-and-80".** Say "the 40-hour weekly FLSA overtime threshold" (founder 2026-10-26), never "applicable FLSA overtime thresholds".
 - Em-dashes or en-dashes anywhere.
 
 ## C. The five remaining directories (batch in one session)

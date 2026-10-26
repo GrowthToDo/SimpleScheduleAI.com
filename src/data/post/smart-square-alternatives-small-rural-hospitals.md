@@ -162,7 +162,7 @@ The six strongest Smart Square alternatives for a Critical Access Hospital are S
 
 SimpleScheduleAI is a new service, without public Capterra or G2 reviews yet. It is a managed [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Where Smart Square is a self-serve enterprise platform configured and maintained by labor-management staff, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
 
-The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds. The [AI nurse scheduling](/ai-nurse-scheduling) engine produces three draft options each cycle: balanced, fairness-optimized, and cost-optimized. Watch the AI fill a weekly grid and rank callout replacements in the [live simulator](/simulator).
+The service implements the hospital's rules, maintains them as staff changes occur, and updates them when policies change. CMS §485.635 staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and the 40-hour weekly [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold. The [AI nurse scheduling](/ai-nurse-scheduling) engine produces three draft options each cycle: balanced, fairness-optimized, and cost-optimized. Watch the AI fill a weekly grid and rank callout replacements in the [live simulator](/simulator).
 
 **Best for:** Critical Access Hospitals that hit Smart Square, found it sized for health systems rather than a single 25-bed facility, and want the scheduling handled rather than a more powerful tool to run themselves.
 
@@ -473,7 +473,7 @@ The core difference is scale and operating model. Smart Square is a self-serve e
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime thresholds (Texas)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Confirm configuration with vendor</td>
-        <td class="py-3 text-primary">Built in as default</td>
+        <td class="py-3 text-primary">40-hour weekly threshold built in as default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Predictive analytics across facilities</td>

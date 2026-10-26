@@ -540,6 +540,8 @@ There is no 14-day work-period concept, no biweekly pay-period boundary, no 8-ho
 
 **The marketing site must continue to say "FLSA overtime thresholds" and must not claim 8-and-80.** This confirms the existing rule in `MEMORY.md`.
 
+> Wording update (founder 2026-10-26): in any claim about SimpleScheduleAI, say "the 40-hour weekly FLSA overtime threshold", not "applicable FLSA overtime threshold(s)" or bare "FLSA overtime thresholds", which can read as also covering 8-and-80. Generic and educational lines keep "FLSA overtime thresholds". Source: `facts-dossier.md#flsa-overtime`.
+
 ### 5.3 Hours and rest caps — computed and enforced
 
 | Cap | Value | Where enforced |

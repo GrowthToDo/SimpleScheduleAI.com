@@ -39,9 +39,9 @@
 
 Every sentence that attributes a capability to SimpleScheduleAI (advantage bullets, comparison-table SSAI cells, "How SimpleScheduleAI works" sections, CTAs, FAQ answers about SSAI, SVG diagram labels of SSAI features) must match shipped reality. Compliance-adjacent claims especially: a CAH administrator may rely on them.
 
-**Current rule: no FLSA 8-and-80 claim as an SSAI feature.** The scheduler tracks generic FLSA overtime thresholds; the 8-and-80 (80-hour/14-day) calculation method is not yet shipped.
+**Current rule: no FLSA 8-and-80 claim as an SSAI feature.** The scheduler counts only the FLSA 40-hour workweek (Monday to Sunday); the 8-and-80 (80-hour/14-day) calculation method is not yet shipped.
 
-- USE: "FLSA overtime thresholds", "FLSA overtime threshold tracking", "tracks each nurse's running hours against the applicable FLSA threshold"
+- USE (when attributed to SSAI, founder 2026-10-26): "the 40-hour weekly FLSA overtime threshold", "tracks each nurse's running hours against the 40-hour weekly FLSA overtime threshold". Never "applicable FLSA overtime threshold(s)" in an SSAI sentence: it reads as also covering 8-and-80. The gate enforces this (`facts-rules.mjs` id `flsa-applicable-threshold-ssai`); wording source is `docs/seo/facts-dossier.md#flsa-overtime`.
 - DO NOT WRITE (when attributed to SSAI): "FLSA 8-and-80 rule built in", "applies the 8-and-80 rule by default", "8-and-80 handled automatically", "Texas FLSA 8-and-80 compliance built in"
 - KEEP UNTOUCHED: generic educational descriptions of the rule (with DOL source), "ask your vendor whether they support 8-and-80" evaluation questions, competitor-confirm / competitor-gap lines ("X does not document 8-and-80 — confirm with vendor"), and the dedicated educational posts on FLSA/Texas overtime
 

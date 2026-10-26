@@ -9,7 +9,9 @@ mirrors `facts-dossier.md#product-truths`; on any drift, the facts dossier wins 
 the numbers and this registry wins on the mode framing.
 
 Hard guardrails that bind BOTH columns (facts-dossier.md#product-truths):
-never the FLSA calculation method (say "FLSA overtime thresholds"); never
+never the FLSA 8-and-80 calculation method; for any claim about what we do, say
+"the 40-hour weekly FLSA overtime threshold", never "applicable FLSA overtime
+threshold(s)" (founder 2026-10-26; the scheduler counts only the 40-hour workweek); never
 credential/license-expiry tracking; never customers, pilots, cohorts, or results;
 pricing numbers SPLIT BY MODE (founder 2026-07-06): SERVICE = $1,000 / $1,500 flat
 monthly by roster size, no per-nurse fees, no setup fees. PRODUCT = $10 per user

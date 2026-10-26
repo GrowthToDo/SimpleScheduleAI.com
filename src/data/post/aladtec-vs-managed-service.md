@@ -94,7 +94,7 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">FLSA overtime thresholds (Texas)</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Manual configuration required</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Built-in default ([FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds)</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Built-in default (the 40-hour weekly [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold)</td>
       </tr>
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Config maintenance as staff changes</td>
@@ -169,7 +169,7 @@ A managed scheduling service is not scheduling software with extra support. It i
 With SimpleScheduleAI, the process works like this:
 
 1. The nurse manager shares the staff roster with SimpleScheduleAI: names, credentials, availability, and any scheduling constraints. A standard Excel file is all that is needed to start.
-2. The AI builds the first schedule inside two weeks, applying CMS documentation requirements, FLSA overtime thresholds, and competency-based shift assignments; the SimpleScheduleAI team checks it before it reaches the nurse manager.
+2. The AI builds the first schedule inside two weeks, applying CMS documentation requirements, the 40-hour weekly FLSA overtime threshold, and competency-based shift assignments; the SimpleScheduleAI team checks it before it reaches the nurse manager.
 3. The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff.
 4. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a skill-mix gap. They call from the top of the list.
 5. As staff join or leave, credentials change, or availability patterns shift, the nurse manager sends the update and the SimpleScheduleAI team handles the rest. The nurse manager does not administer a system. They manage a roster.
@@ -450,7 +450,7 @@ Aladtec can be configured to produce exports that are useful for CMS documentati
 
 **How does SimpleScheduleAI handle overtime for hospital employers?**
 
-SimpleScheduleAI applies FLSA overtime thresholds by default and tracks each nurse's running hours so a draft schedule does not silently cross an overtime line before the manager reviews it. If your facility has adopted the FLSA Section 7(j) 8-and-80 method (overtime after 8 hours in a day or 80 in a 14-day period rather than the standard 40-hour week), confirm the specific calculation basis with us during onboarding. Based on Aladtec's documented configuration options, overtime thresholds are admin-configurable; whether the FLSA Section 7(j) 8-and-80 healthcare rule is a pre-configured option should be confirmed with Aladtec directly before deploying at a Texas CAH.
+SimpleScheduleAI applies the 40-hour weekly FLSA overtime threshold by default and tracks each nurse's running hours so a draft schedule does not silently cross an overtime line before the manager reviews it. Our schedules do not apply the FLSA Section 7(j) 8-and-80 method (overtime after 8 hours in a day or 80 in a 14-day period), so a facility that uses that method should know our drafts count the 40-hour week only. Based on Aladtec's documented configuration options, overtime thresholds are admin-configurable; whether the FLSA Section 7(j) 8-and-80 healthcare rule is a pre-configured option should be confirmed with Aladtec directly before deploying at a Texas CAH.
 
 **Is it possible to switch from Aladtec to a managed service mid-contract?**
 

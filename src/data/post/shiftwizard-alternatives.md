@@ -156,7 +156,7 @@ Which one to shortlist depends on the constraint you are actually under, rather 
 
 SimpleScheduleAI is an AI-native [nurse scheduling service](/how-it-works) built specifically for Critical Access Hospitals in Texas. Unlike a self-serve platform, SimpleScheduleAI requires no configuration work from the nurse manager: the AI builds draft schedules each cycle, while a scheduling specialist handles setup from an Excel roster upload, checks each draft, and maintains the system as the roster changes.
 
-The service is a new offering, without public G2 or Capterra reviews yet. CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds. FLSA overtime threshold tracking is built in as a default.
+The service is a new offering, without public G2 or Capterra reviews yet. CMS [§485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) staffing documentation is logged automatically throughout each scheduling cycle. Callout replacement generates a ranked shortlist cross-referenced against current-week hours and the 40-hour weekly [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold. FLSA overtime threshold tracking is built in as a default.
 
 **Best for:** Critical Access Hospitals leaving ShiftWizard because the weekly scheduling administration load exceeds what one nurse manager can absorb while also taking clinical shifts.
 
@@ -366,7 +366,7 @@ If all of these conditions apply, the switch cost and learning curve of an alter
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">FLSA overtime thresholds (Texas)</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Configurable (requires setup)</td>
-        <td class="py-3 text-primary">Built in as default</td>
+        <td class="py-3 text-primary">40-hour weekly threshold built in as default</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">Implementation time</td>

@@ -3,7 +3,15 @@
  * the approved wording. A line violates when `trigger` matches AND
  * (`bad` matches OR `requires` fails), unless the line has `<!-- facts-ok -->`.
  * Grow this table whenever a new recurring fact enters docs/seo/facts-dossier.md.
+ * A rule may instead carry `sentence(s)`: the line violates when any sentence of
+ * it (link targets stripped) satisfies that predicate.
  */
+// "applicable FLSA (overtime) threshold(s)", "applicable overtime threshold(s)",
+// and the linked "applicable [FLSA](url) overtime threshold(s)".
+const APPLICABLE_FLSA = /applicable (\[?FLSA\]?(\([^)]*\))? (overtime )?|overtime )thresholds?/i;
+const SSAI_SUBJECT =
+  /\b(simplescheduleai|ssai|our|we|(each|every|the same) draft|the (system|scheduler|service|team|ai))\b/i;
+
 export const FACTS_RULES = [
   {
     id: 'cfr-631-on-duty',
@@ -63,7 +71,28 @@ export const FACTS_RULES = [
     message:
       'Oregon (2023 law, 12 unit types, in effect mid-2026) also mandates broad ratios — California is not the only state',
   },
+  {
+    // Founder 2026-10-26: the scheduler counts only the FLSA 40-hour workweek
+    // (product-capability-inventory-2026-08.md §5.1-5.2). "Applicable FLSA
+    // overtime threshold(s)" in a claim about us reads as also covering 8-and-80.
+    // Sentence-scoped: generic/educational uses of the phrase stay legal.
+    id: 'flsa-applicable-threshold-ssai',
+    trigger: APPLICABLE_FLSA,
+    sentence: (s) => APPLICABLE_FLSA.test(s) && SSAI_SUBJECT.test(s),
+    anchor: 'facts-dossier.md#flsa-overtime',
+    message:
+      'SSAI claim says "applicable FLSA overtime threshold(s)"; we count only the 40-hour workweek, say "the 40-hour weekly FLSA overtime threshold"',
+  },
 ];
+
+// Split a line into sentences after dropping markdown link targets and href
+// values, whose dots (www.dol.gov) would otherwise break a sentence early.
+function sentencesOf(text) {
+  return text
+    .replace(/\]\([^)]*\)/g, ']')
+    .replace(/href="[^"]*"/g, '')
+    .split(/(?<=[.!?])\s+/);
+}
 
 export function checkFacts(body) {
   const violations = [];
@@ -72,6 +101,11 @@ export function checkFacts(body) {
     if (text.includes('<!-- facts-ok -->')) return;
     for (const r of FACTS_RULES) {
       if (!r.trigger.test(text)) continue;
+      if (r.sentence) {
+        if (sentencesOf(text).some(r.sentence))
+          violations.push({ line: i + 1, id: r.id, text: text.slice(0, 120), anchor: r.anchor, message: r.message });
+        continue;
+      }
       const isBad = r.bad ? r.bad.test(text) : false;
       const missing = r.requires ? !r.requires.test(text) : false;
       if (isBad || missing)

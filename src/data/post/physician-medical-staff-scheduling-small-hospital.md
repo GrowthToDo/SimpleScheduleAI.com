@@ -218,7 +218,7 @@ QGenda is a large, established physician and provider scheduling tool. Its homep
 
 **Q: Does SimpleScheduleAI schedule physicians?**
 
-No. SimpleScheduleAI is an AI-native nurse scheduling service and handles the nursing half only: coverage, callouts, running-hours tracking against FLSA overtime thresholds, and an audit trail. For physician or provider on-call scheduling, use a dedicated provider tool such as QGenda.
+No. SimpleScheduleAI is an AI-native nurse scheduling service and handles the nursing half only: coverage, callouts, running-hours tracking against the 40-hour weekly FLSA overtime threshold, and an audit trail. For physician or provider on-call scheduling, use a dedicated provider tool such as QGenda.
 
 **Q: Which schedule should a small hospital fix first?**
 

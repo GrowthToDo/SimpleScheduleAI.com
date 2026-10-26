@@ -232,7 +232,8 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 
 ### FLSA overtime
 
-- Approved framing: "FLSA overtime thresholds" via DOL Fact Sheet #54 ("The Health Care Industry and Calculating Overtime Pay"; the 7(j) 8-and-80 system pays overtime over 8 hours/workday and 80 hours/14-day period). The 8-and-80 system is educational content only.
+- Approved framing for claims about SimpleScheduleAI (founder 2026-10-26): "the 40-hour weekly FLSA overtime threshold". The scheduler counts only the FLSA 40-hour workweek, Monday to Sunday (product-capability-inventory-2026-08.md §5.1-5.2), so "applicable FLSA overtime threshold(s)" is wrong in an SSAI claim because it reads as also covering 8-and-80. Gate: `facts-rules.mjs` id `flsa-applicable-threshold-ssai`.
+- Approved framing for generic/educational lines: "FLSA overtime thresholds" via DOL Fact Sheet #54 ("The Health Care Industry and Calculating Overtime Pay"; the 7(j) 8-and-80 system pays overtime over 8 hours/workday and 80 hours/14-day period). The 8-and-80 system is educational content only.
 - Wrong: linking https://www.dol.gov/agencies/whd/fact-sheets/54-flsa-hospitals (stale URL held only by this dossier; every live post already uses the canonical URL below)
 - URL: https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime
 - Verified: 2026-07-04 (dol.gov 403-blocks automated fetches; canonical URL confirmed via search index, content cross-verified via DOL elaws FLSA Overtime Calculator Advisor, webapps.dol.gov)

@@ -161,7 +161,7 @@ That is the honest decision point. If someone at your facility has the hours to 
 
 ## How Does SimpleScheduleAI Handle Schedule Generation?
 
-SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Each cycle the AI generates three scored draft options, balanced, fairness-optimized, and cost-optimized, applying coverage requirements, skill matching, rest rules, and applicable FLSA overtime thresholds to every draft. Our scheduling team resolves the flagged items before your manager sees the schedule.
+SimpleScheduleAI is an AI-native nurse scheduling service: the AI builds the schedule, our scheduling team checks it, you approve. Each cycle the AI generates three scored draft options, balanced, fairness-optimized, and cost-optimized, applying coverage requirements, skill matching, rest rules, and the 40-hour weekly FLSA overtime threshold to every draft. Our scheduling team resolves the flagged items before your manager sees the schedule.
 
 When a nurse calls out, the service produces a ranked replacement shortlist sorted by overtime exposure, skill match, and rotation fairness. A person at the hospital still places the call and confirms the replacement, because the on-call charge nurse knows context the data does not. Every schedule change is logged with a timestamp.
 

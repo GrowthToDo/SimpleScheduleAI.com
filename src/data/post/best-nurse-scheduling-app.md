@@ -196,7 +196,7 @@ SimpleScheduleAI is not a traditional app, and the distinction is deliberate. It
 - Nothing to configure or maintain: rules are set up with you at onboarding, and your first schedule arrives inside two weeks
 - When a nurse calls out, a ranked shortlist of qualified replacements arrives with the reasons visible: skills, role, charge coverage, and overtime risk
 - Every schedule change lands in a timestamped audit trail, formatted for CMS survey readiness
-- Applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) are checked before an assignment is proposed, not after
+- The [40-hour weekly FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) is checked before an assignment is proposed, not after
 
 **Key limitations:**
 
