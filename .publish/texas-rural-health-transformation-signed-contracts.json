@@ -5,69 +5,69 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-10-24T14:59:03.708Z",
-      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+      "checkedAt": "2026-10-26T16:19:19.611Z",
+      "contentHash": "e42d335910ae714e362e4cc39c54de036aa28e02530222381f731cb99b6e4c7c"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-10-24T14:59:06.984Z",
-      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+      "checkedAt": "2026-10-26T16:19:25.964Z",
+      "contentHash": "e42d335910ae714e362e4cc39c54de036aa28e02530222381f731cb99b6e4c7c"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-24T14:59:13.276Z",
-      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+      "checkedAt": "2026-10-26T16:19:41.655Z",
+      "contentHash": "e42d335910ae714e362e4cc39c54de036aa28e02530222381f731cb99b6e4c7c"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-10-24T14:59:13.388Z",
-      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+      "checkedAt": "2026-10-26T16:19:41.759Z",
+      "contentHash": "e42d335910ae714e362e4cc39c54de036aa28e02530222381f731cb99b6e4c7c"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-10-24T14:59:13.824Z",
-      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+      "checkedAt": "2026-10-26T16:19:42.041Z",
+      "contentHash": "e42d335910ae714e362e4cc39c54de036aa28e02530222381f731cb99b6e4c7c"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-10-24T14:59:13.828Z",
-      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+      "checkedAt": "2026-10-26T16:19:42.042Z",
+      "contentHash": "e42d335910ae714e362e4cc39c54de036aa28e02530222381f731cb99b6e4c7c"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-10-24T14:59:13.832Z",
-      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+      "checkedAt": "2026-10-26T16:19:42.045Z",
+      "contentHash": "e42d335910ae714e362e4cc39c54de036aa28e02530222381f731cb99b6e4c7c"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-10-24T14:59:13.835Z",
-      "contentHash": "38fe353968db84dda0672bca620d3c93d7d7565bbc8e54678c866d089e0eb894"
+      "checkedAt": "2026-10-26T16:19:42.048Z",
+      "contentHash": "e42d335910ae714e362e4cc39c54de036aa28e02530222381f731cb99b6e4c7c"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
       "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-10-24T10:07:31.990Z",
-      "contentHash": "4c3e82bcc79a29c3dcd0984e5f849bb0c86ffdde210acac0cf7c91d132f728fc"
+      "setAt": "2026-10-26T16:18:48.602Z",
+      "contentHash": "e8eb36da0b6ab75d9327afd96395002dfb0ac8816c8de6f6a87cb50eb5043a4f"
     },
     "factCheck": {
       "value": "PASS",
       "setBy": "general-purpose-factcheck",
-      "setAt": "2026-10-24T10:07:34.091Z",
-      "contentHash": "4c3e82bcc79a29c3dcd0984e5f849bb0c86ffdde210acac0cf7c91d132f728fc"
+      "setAt": "2026-10-26T16:18:53.044Z",
+      "contentHash": "e8eb36da0b6ab75d9327afd96395002dfb0ac8816c8de6f6a87cb50eb5043a4f"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-10-24T14:58:20.891Z",
-      "contentHash": "4c3e82bcc79a29c3dcd0984e5f849bb0c86ffdde210acac0cf7c91d132f728fc"
+      "setAt": "2026-10-26T16:18:57.569Z",
+      "contentHash": "e8eb36da0b6ab75d9327afd96395002dfb0ac8816c8de6f6a87cb50eb5043a4f"
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "main-session",
-      "setAt": "2026-10-24T14:58:22.441Z",
-      "contentHash": "4c3e82bcc79a29c3dcd0984e5f849bb0c86ffdde210acac0cf7c91d132f728fc"
+      "setBy": "founder",
+      "setAt": "2026-10-26T16:19:03.090Z",
+      "contentHash": "e8eb36da0b6ab75d9327afd96395002dfb0ac8816c8de6f6a87cb50eb5043a4f"
     }
   },
   "overrides": [],
