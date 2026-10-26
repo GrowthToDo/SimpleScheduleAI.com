@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-08-07T00:00:00Z
-updateDate: 2026-08-07T00:00:00Z
+updateDate: 2026-10-26T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'How to Reduce Nurse Overtime at a Critical Access Hospital'
 excerpt: >
@@ -28,7 +28,7 @@ metadata:
 - Most preventable nurse overtime is structural, not behavioral. The scheduling process creates overtime conditions; the nurses just work inside them
 - The three root causes are callout defaults (the same nurses always get called first), hour-tracking blind spots (schedules built without running totals), and roster thinness (no one to call who is not already near the threshold)
 - The fastest lever is the callout call order. Ranking replacement candidates by overtime risk instead of familiarity, per our [callout handling guide](/blog/how-to-handle-nurse-callouts), cuts unplanned overtime without changing the schedule at all
-- The [FLSA 8-and-80 system](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) is optional, requires written adoption, and is not automatically cheaper. Its daily 8-hour trigger usually makes it more expensive for 12-hour-shift hospitals, not less
+- The [FLSA 8-and-80 system](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) is optional, requires an agreement with employees made before the work it covers, and is not automatically cheaper. Its daily 8-hour trigger usually makes it more expensive for 12-hour-shift hospitals, not less
 - In Texas, mandatory overtime is not a lawful fallback for coverage gaps. [Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits it outside narrow emergencies, which makes voluntary, well-ranked callout coverage the whole game
 
 ## Table of Contents
@@ -116,7 +116,7 @@ This is the section where hospitals lose money in both directions, so the rule n
 
 Notice what the example shows: for 12-hour shifts, 8-and-80 is usually the more expensive system, because every 12-hour shift crosses the daily trigger. The 8-and-80 system tends to fit facilities running 8-hour shifts with alternating heavy and light weeks. Neither system is "the right one" for all hospitals, and the 40-hour default is not a mistake; it is the standard rule.
 
-Three requirements if you do adopt 8-and-80: a written agreement with employees before the work period it covers, a fixed 14-day period that does not float, and payroll configured to test both triggers. Adoption cannot be retroactive, so ask payroll one precise question: which threshold is our system using, and does it match what we have adopted in writing? A mismatch in either direction, paying 40-hour overtime under an adopted 8-and-80 or the reverse, is a wage-and-hour liability. If the answer is unclear, involve an employment attorney before changing anything.
+Three requirements if you do adopt 8-and-80: an agreement with employees made before the work period it covers, a fixed 14-day period that does not float, and payroll configured to test both triggers. The agreement need not be in writing, but an unwritten one needs a record of its terms and the date it was made ([29 CFR 778.601](https://www.law.cornell.edu/cfr/text/29/778.601)). A written, dated agreement is the easiest proof. Adoption cannot be retroactive, so ask payroll one precise question: which threshold is our system using, and does it match what we have actually adopted and documented? A mismatch in either direction, paying 40-hour overtime under an adopted 8-and-80 or the reverse, is a wage-and-hour liability. If the answer is unclear, involve an employment attorney before changing anything.
 
 ## How Does Schedule Design Itself Reduce Overtime?
 
@@ -133,7 +133,7 @@ Beyond who gets called and what gets tracked, the schedule's own structure is a 
 1. **Audit the last 90 days of overtime.** From payroll: which nurses, how many hours, and was each occurrence scheduled or callout-driven? This one split tells you whether your problem is schedule construction or call order.
 2. **Review the last 30 days of callouts.** Who was called first, who covered, and what were their hours at that moment? If the same few nurses covered most events regardless of hours, defaults are the problem.
 3. **Build the ranked callout list.** Names, credentials, current-period hours, availability. Sort by hours ascending. Use it on every callout.
-4. **Verify the payroll threshold.** Confirm the system's overtime rule matches what your hospital has actually adopted, 40-hour default or written 8-and-80.
+4. **Verify the payroll threshold.** Confirm the system's overtime rule matches what your hospital has actually adopted, 40-hour default or a documented 8-and-80 agreement.
 5. **Add the headroom check to schedule builds.** Before publishing, confirm no nurse is close enough to the threshold that one callout shift tips them over.
 6. **Measure the coverage-without-overtime rate.** If callouts end in overtime more often than not, the pool is too thin, and the fix is the PRN bench, not more discipline.
 
@@ -149,7 +149,7 @@ SimpleScheduleAI is an [AI-native nurse scheduling service](/ai-nurse-scheduling
 
 <img src="/images/blog/how-to-reduce-nurse-overtime/SimpleScheduleAI.webp" alt="SimpleScheduleAI overtime-aware callout ranking for a nurse manager" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-One honest boundary: the service ranks and flags; it does not do payroll, and it cannot fix a threshold configured wrong in your payroll system or substitute for the written 8-and-80 adoption. Steps 1, 4, and 6 above are audits only your payroll data can answer, whatever scheduling tool you use.
+One honest boundary: the service ranks and flags; it does not do payroll, and it cannot fix a threshold configured wrong in your payroll system or substitute for the 8-and-80 agreement and its records. Steps 1, 4, and 6 above are audits only your payroll data can answer, whatever scheduling tool you use.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 border-l-4 border-amber-500 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">Our Take</p>
@@ -159,7 +159,7 @@ One honest boundary: the service ranks and flags; it does not do payroll, and it
 ## What to Do This Week
 
 1. **Pull the last 90 days of overtime from payroll.** Split it into scheduled versus callout-driven. The bigger pile is your first target.
-2. **Ask payroll one question.** Which overtime threshold is configured, and does it match what the hospital has adopted in writing? Close the gap before optimizing anything else.
+2. **Ask payroll one question.** Which overtime threshold is configured, and does it match what the hospital has actually adopted and documented? Close the gap before optimizing anything else.
 3. **Build the ranked callout list.** Names, credentials, hours this period, availability, sorted by hours. Use it on the next callout and note whether the first call changes.
 4. **Name one cross-training candidate.** The nurse whose second-unit or charge sign-off would most widen the callout pool. One sign-off is often worth more than a hire.
 
@@ -178,7 +178,7 @@ There is no published benchmark specific to 25-bed hospital nursing overtime, an
 
 **Q: Does the 8-and-80 rule apply to every nurse once adopted?**
 
-It applies to the non-exempt employees covered by the written agreement at a hospital or residential care establishment. Most staff RNs and LVNs paid hourly are non-exempt. The agreement must exist before the work period it covers, and the 14-day period must be fixed. If your hospital cannot produce the written agreement, assume the 40-hour default governs and verify with counsel before relying on 8-and-80 math.
+It applies to the non-exempt employees covered by the agreement or understanding at a hospital or residential care establishment. Most staff RNs and LVNs paid hourly are non-exempt. The agreement must exist before the work period it covers, and the 14-day period must be fixed. A verbal agreement counts, but the hospital must keep a record of its terms and the date it was made. If your hospital cannot produce a written agreement or a dated record of one, assume the 40-hour default governs and verify with counsel before relying on 8-and-80 math.
 
 **Q: Can we require a nurse to stay and cover a shift to avoid an overtime gap?**
 
@@ -190,13 +190,14 @@ It means the overtime is being created at build time: the schedule assigns hours
 
 **Q: How does SimpleScheduleAI decide who appears first on a callout shortlist?**
 
-The shortlist ranks qualified replacement candidates with the reasons shown: skills, role, charge coverage, and overtime risk, drawing on each nurse's running hours against your hospital's applicable FLSA threshold. The manager sees why each candidate is ranked where they are and makes the call. Nothing is assigned automatically, and the manager can always choose differently than the ranking suggests.
+The shortlist ranks qualified replacement candidates with the reasons shown: skills, role, charge coverage, and overtime risk, drawing on each nurse's scheduled hours against the 40-hour weekly FLSA overtime threshold. The manager sees why each candidate is ranked where they are and makes the call. Nothing is assigned automatically, and the manager can always choose differently than the ranking suggests.
 
 ## Sources
 
 1. U.S. Department of Labor, Fact Sheet #54: The Health Care Industry and Calculating Overtime Pay (FLSA §7(j) 8-and-80 system). [DOL](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)
 2. Texas Health and Safety Code, Chapter 258: Mandatory Overtime for Nurses Prohibited. [Justia](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/)
 3. 42 CFR 485.631, Conditions of Participation: Staffing and staff responsibilities. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
+4. 29 CFR 778.601, Special overtime provisions available for hospital and residential care establishments under section 7(j). [Cornell LII](https://www.law.cornell.edu/cfr/text/29/778.601)
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

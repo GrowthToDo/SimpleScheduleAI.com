@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-18T00:00:00Z
-updateDate: 2026-06-18T00:00:00Z
+updateDate: 2026-10-26T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Texas Nursing Overtime Compliance: Guide for Critical Access Hospitals'
 excerpt: >
@@ -28,7 +28,7 @@ For a CAH, the compliance risk is less about breaking a rule than about being un
 
 - Texas CAHs face three overlapping compliance frameworks, each with different documentation requirements: [FLSA overtime rules](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), [CMS Conditions of Participation (§485.631 staffing and §485.635 services)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), and the [Texas Minimum Wage Act (Labor Code Chapter 62)](https://www.twc.texas.gov/).
 - Texas restricts more than pay. [Health and Safety Code Chapter 258](https://law.justia.com/codes/texas/health-and-safety-code/title-4/subtitle-b/chapter-258/) prohibits a hospital from requiring a nurse to work hours beyond her scheduled shifts, and a nurse may refuse mandatory overtime. Retaliation against her is separately prohibited.
-- The 8-and-80 FLSA alternative requires a prior written agreement with each nurse before the work period, not a retroactive policy decision, and it does not stop daily overtime on 12-hour shifts.
+- The 8-and-80 FLSA alternative requires an agreement with each nurse made before the work period, not a retroactive policy decision, and it does not stop daily overtime on 12-hour shifts. The agreement need not be written, but an unwritten one needs a dated record of its terms.
 - Five recurring compliance gaps each map to a specific FLSA or CMS requirement: missing 8-and-80 agreements, no schedule change logs, untracked credential expirations, improper meal break auto-deductions, and incomplete on-call/callback records.
 - CMS compliance requires both the original posted schedule AND documentation of actual coverage; substitution events must be logged with credentials for the replacing nurse.
 - FLSA requires payroll and hours records for three years; CMS best practice suggests maintaining scheduling documentation for five years.
@@ -60,8 +60,11 @@ overtime accrues on every 12-hour shift regardless of the bi-weekly total. The r
 mainly benefits facilities with 8-hour or variable shift patterns, not 12-hour-shift
 units.
 
-The 8-and-80 method also applies only if the employer has a written agreement with each
-employee before work begins, not retroactively. Where a CAH elects 8-and-80, that
+The 8-and-80 method also applies only if the employer has an agreement or understanding
+with each employee before work begins, not retroactively. The agreement need not be in
+writing. An unwritten agreement still requires a record of its terms and the date it was
+made ([29 CFR 778.601(c)](https://www.law.cornell.edu/cfr/text/29/778.601) and 516.23).
+A written, dated agreement is the easiest way to prove the arrangement. Where a CAH elects 8-and-80, that
 agreement is a precondition, not a formality. Without it, overtime reverts to the
 standard 7-day workweek basis and any differential is owed retroactively, even if the
 facility believed its pay was fair.
@@ -73,8 +76,8 @@ Key FLSA requirements for Texas CAHs:
   consult legal counsel for your specific on-call policy
 - Automatic deductions for meal breaks are only permissible if the employee is
   completely relieved of duties during that break (rare in CAH nursing)
-- The 8-and-80 alternative requires a prior written agreement, verbal understanding
-  is not sufficient
+- The 8-and-80 alternative requires an agreement made before the work it covers. A
+  verbal agreement counts, but the hospital must keep a dated record of its terms
 
 ## What Texas-specific requirements apply to Critical Access Hospital nurse scheduling?
 
@@ -165,12 +168,14 @@ Five gaps recur in Critical Access Hospital scheduling, each tied to a specific 
 CMS requirement. None require intentional misconduct; they emerge from scheduling
 processes that prioritize getting coverage over documenting it.
 
-**Gap 1: No written 8-and-80 agreements.** Facilities using the 8-and-80 FLSA
-alternative without documented prior written agreements with each employee are
-technically violating FLSA even if total compensation is correct. The written
-agreement must exist before the work period begins. If a DOL audit occurs, the absence
-of these agreements exposes the facility to back-pay liability for overtime calculated
-at the 7-day workweek standard.
+**Gap 1: No 8-and-80 agreement, or no record of one.** Facilities using the 8-and-80
+FLSA alternative need an agreement or understanding with each employee, made before
+the work period begins. The agreement need not be written, but an unwritten one
+requires a record of its terms and the date it was made. Using 8-and-80 with no prior
+agreement, or with no record of one, is the violation risk, even if total compensation
+is correct. A written, dated agreement is the easiest proof. If a DOL audit occurs, a
+missing agreement or record exposes the facility to back-pay liability for overtime
+calculated at the 7-day workweek standard.
 
 **Gap 2: Schedule change logs not maintained.** The original posted schedule rarely
 matches what actually happened. Callout substitutions, voluntary shift swaps, and
@@ -268,7 +273,7 @@ be complete.
 
 ## What to Do This Week
 
-1. Confirm you have a signed 8-and-80 agreement on file for every nurse, dated before the work period it applies to. Using the 8-and-80 method without them is back-pay exposure today.
+1. Confirm you have an 8-and-80 agreement for every nurse, made before the work period it applies to. A signed, dated copy on file is the easiest proof. An unwritten agreement needs a record of its terms and date. Using the 8-and-80 method without a prior agreement is back-pay exposure today.
 2. Pull last month's posted schedule and compare it to who actually worked. Every callout substitution should have a logged replacement with the covering nurse's credentials. Gaps here are a common CMS survey finding.
 3. Check that your scheduling or credentialing log flags license, BLS, and certification expirations before a nurse is assigned, not after. If you are shopping for a tool, our guide to the [best nurse scheduling software for Texas hospitals](/blog/best-nurse-scheduling-software-texas) compares eight platforms on exactly this kind of compliance handling.
 4. Review your meal-break policy. If nurses work through auto-deducted breaks, that is FLSA back-pay exposure; document the interruptions or stop auto-deducting.
@@ -285,9 +290,12 @@ be complete.
 
 **Q: Do Texas Critical Access Hospitals need written 8-and-80 agreements with nurses?**
 
-Yes. The FLSA Section 7(j) 8-and-80 overtime alternative requires a prior written
-agreement with each employee before the work period begins. Verbal understanding is
-not sufficient. Without written agreements, overtime is calculated on the standard
+Not necessarily in writing, but the hospital must be able to prove the agreement exists.
+The FLSA Section 7(j) 8-and-80 overtime alternative requires an agreement or
+understanding with each employee, made before the work period begins. If the agreement
+is not written, the hospital must keep a record of its terms and the date it was made
+(29 CFR 778.601(c) and 516.23). A written, dated agreement is the easiest way to prove
+the arrangement. Without a prior agreement, overtime is calculated on the standard
 7-day workweek basis, and any differential must be paid retroactively in an audit.
 
 **Q: What does CMS look for in CAH staffing records during a survey?**
@@ -313,6 +321,7 @@ Best practice is maintaining scheduling and payroll documentation for five years
 3. Texas Labor Code Chapter 62, the Texas Minimum Wage Act, administered by the [Texas Workforce Commission](https://www.twc.texas.gov/).
 4. Texas hospital licensing and staffing adequacy. [Texas Health and Human Services Commission (HHSC)](https://www.hhs.texas.gov/).
 5. Payroll record retention and inspection. [Texas Workforce Commission](https://www.twc.texas.gov/).
+6. The 8-and-80 agreement or understanding, which need not be in writing if a record is kept. [29 CFR 778.601, Cornell Legal Information Institute](https://www.law.cornell.edu/cfr/text/29/778.601).
 
 **Methodology note:** This guide summarizes federal and Texas regulatory requirements as of the date shown and is not legal advice. On-call compensability, meal-break treatment, and the 8-and-80 method depend on facility-specific facts; confirm your policies with employment counsel before relying on them.
 
