@@ -35,7 +35,7 @@ metadata:
 - [Why Do Island Shifts Show Up on Small Hospital Schedules?](#why-do-island-shifts-show-up-on-small-hospital-schedules)
 - [How Do You Schedule Island Shifts Out of a Night Rotation?](#how-do-you-schedule-island-shifts-out-of-a-night-rotation)
 - [How Do You Avoid an Island Shift When Covering a Callout?](#how-do-you-avoid-an-island-shift-when-covering-a-callout)
-- [Does SimpleScheduleAI Prevent Island Shifts?](#does-simplescheduleai-prevent-island-shifts)
+- [What Does SimpleScheduleAI Check on a Night Schedule?](#what-does-simplescheduleai-check-on-a-night-schedule)
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
@@ -200,11 +200,11 @@ Sometimes the only nurse available is off on both sides. At a 25-bed hospital th
 
 A simple note of who covered island nights shows, over a few months, whether the same nurse always says yes. Our guide on [how to handle nurse callouts](/blog/how-to-handle-nurse-callouts) covers the rest of the callout routine, and [after-hours callout coverage](/blog/after-hours-callout-coverage-small-hospitals) covers the overnight version.
 
-## Does SimpleScheduleAI Prevent Island Shifts?
+## What Does SimpleScheduleAI Check on a Night Schedule?
 
-No. SimpleScheduleAI is an AI-native nurse scheduling service: AI builds your schedule, our scheduling team checks it, you approve. The scheduler has no island-shift rule today. None of the 22 rules it checks, 13 safety rules and 9 fairness rules, looks for a single shift between days off. The schedule you approve does respect the fatigue limits that sit next to island shifts. Every shift keeps at least 10 hours of rest before and after it. No nurse works more than five days in a row, or more than 60 hours in any seven days. The last seven days of the previous schedule count toward these limits. Our [nurse scheduling software](/nurse-scheduling-software) page lists the rules, and [AI nurse scheduling](/ai-nurse-scheduling) explains how a draft gets built.
+SimpleScheduleAI is an AI-native nurse scheduling service: AI builds your schedule, our scheduling team checks it, you approve. Every draft is checked against 22 rules, 13 safety rules and 9 fairness rules. Three of the safety rules cover the fatigue limits close to island shifts. Every shift keeps at least 10 hours of rest before and after it. No nurse works more than five days in a row, or more than 60 hours in any seven days. The last seven days of the previous schedule count toward those limits. One honest limitation: none of the 22 rules looks for an island shift, so the nurse manager's review before posting is where an island night can be caught. Our [nurse scheduling software](/nurse-scheduling-software) page lists the rules, and [AI nurse scheduling](/ai-nurse-scheduling) explains how a draft gets built.
 
-On callouts: log the callout with us and the system generates the top 3 replacement candidates with reasons, checked by our scheduling team. The reasons include the hours scheduled that week and the rest hours before the shift. The list also flags a candidate who has already worked four or more days in a row. The ranking does not weigh island shifts, and the list does not show the day after. One honest limitation: until the scheduler has an island-shift rule, spotting an island shift in a draft is a human check. The nurse manager approves before anything posts, so an island shift in the draft can be raised before any nurse sees it. Our [critical access hospital scheduling](/critical-access-hospital-scheduling) guide and [how it works](/how-it-works) cover the rest of the service.
+On callouts, log the callout with us and the system generates the top 3 replacement candidates with reasons, checked by our scheduling team. The reasons include the hours scheduled that week and the rest hours before the shift, and the list flags a candidate who has already worked four or more days in a row. The candidate list does not show the day after the open night, so check that day yourself before calling. Our [critical access hospital scheduling](/critical-access-hospital-scheduling) guide and [how it works](/how-it-works) cover the rest of the service.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -251,9 +251,9 @@ For the same number of nights worked, yes. A block of three nights has one first
 
 Yes if the shift is already on the posted schedule. No if it is added on top. Texas Health and Safety Code Chapter 258 bars a hospital from making a nurse work extra hours or extra days beyond the posted schedule. Narrow emergency exceptions exist, and the nurse may say no.
 
-**Q: Does SimpleScheduleAI flag island shifts?**
+**Q: How many night shifts in a row should a nurse work?**
 
-No. The scheduler has no island-shift rule today. The schedule you approve does keep 10 hours of rest around every shift and caps runs at five days in a row. The callout shortlist flags a candidate who has already worked four or more days in a row. The nurse manager approves before anything posts, so an island shift can be raised before any nurse sees it.
+Runs of two or three nights. NIOSH advises keeping runs of night shifts short on rotating schedules and suggests two rest days after three 12-hour shifts in a row. The 2021 Lee and Jeong recommendation list caps runs at three nights in a row.
 
 ## Sources
 
