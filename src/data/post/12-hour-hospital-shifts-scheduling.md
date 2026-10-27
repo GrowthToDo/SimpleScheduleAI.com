@@ -177,7 +177,9 @@ night staff do not. A nurse coming off a block of three night shifts and rotatin
 days experiences the equivalent of crossing several time zones. If your rotation cycle
 requires back-to-back day/night transitions without adequate recovery time, you're
 accumulating fatigue that doesn't show up in hours-worked data but shows up in
-nursing errors and eventual turnover.
+nursing errors and eventual turnover. A single shift with days off on both sides is called an
+island shift, and our guide to [island shifts](/blog/island-shifts-night-nurses-cah)
+explains how to keep a rotation free of them.
 
 **Specific fatigue risk patterns to monitor at a 25-bed CAH:**
 

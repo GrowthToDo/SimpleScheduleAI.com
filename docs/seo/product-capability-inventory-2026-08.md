@@ -499,7 +499,9 @@ The **sort key is overtime status first, score second**:
 
 A candidate whose role rank is below the called-out nurse's is **skipped entirely**, not shown as ineligible: "A CNA/LPN cannot perform RN duties regardless of circumstances."
 
-Displayed per candidate: source, competency vs. the called-out nurse, hours already this week, reliability rating, rest hours before the shift, weekends already worked this period, consecutive days worked before the shift.
+Displayed per candidate: source, competency vs. the called-out nurse, scheduled hours this week (shown when above zero; all hours are scheduled-shift hours, §4.6), reliability rating, rest hours before the shift (always shown for eligible candidates; "24h+" when there is no shift the day before), weekends already worked this period (shown only at 3 or more), consecutive days worked before the shift (shown only when the candidate has already worked 4 or more days in a row, as "N consecutive days — this would be day N+1").
+
+> Corrected 2026-10-27 per `src/app/callouts/page.tsx:869` (cah-scheduler local clone @ 270ea92): the earlier line said consecutive days were always displayed. The value is computed for every candidate (`src/lib/callout/escalation.ts`, `consecutiveDaysBeforeShift`) but the UI shows it only at 4 or more. Weekends display at 3 or more (`:865`); hours display when above zero (`:812`); rest always displays (`:892-907`). Claim wording: "flags a candidate who has already worked four or more days in a row", never "shows how many days in a row each candidate has worked".
 
 The near-identical coverage-request ranker (`src/lib/coverage/find-candidates.ts`) walks the escalation tiers in order — `float → per_diem → overtime → agency` — and sorts with **agency always last**, then straight-time before overtime, then score. It adds `+5` for the nurse's home unit and returns the top 3.
 

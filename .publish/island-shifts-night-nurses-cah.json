@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "slug": "island-shifts-night-nurses-cah",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-27T16:08:22.197Z",
+      "contentHash": "806d0f7ef1544cc2de3f1ac615c5404ef66b78f6b60cd885f7f3975b53b402c6"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-27T16:08:24.361Z",
+      "contentHash": "806d0f7ef1544cc2de3f1ac615c5404ef66b78f6b60cd885f7f3975b53b402c6"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-27T16:08:27.305Z",
+      "contentHash": "806d0f7ef1544cc2de3f1ac615c5404ef66b78f6b60cd885f7f3975b53b402c6"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-27T16:08:27.403Z",
+      "contentHash": "806d0f7ef1544cc2de3f1ac615c5404ef66b78f6b60cd885f7f3975b53b402c6"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-27T16:08:27.807Z",
+      "contentHash": "806d0f7ef1544cc2de3f1ac615c5404ef66b78f6b60cd885f7f3975b53b402c6"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-27T16:08:27.808Z",
+      "contentHash": "806d0f7ef1544cc2de3f1ac615c5404ef66b78f6b60cd885f7f3975b53b402c6"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-27T16:08:27.811Z",
+      "contentHash": "806d0f7ef1544cc2de3f1ac615c5404ef66b78f6b60cd885f7f3975b53b402c6"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-27T16:08:27.815Z",
+      "contentHash": "806d0f7ef1544cc2de3f1ac615c5404ef66b78f6b60cd885f7f3975b53b402c6"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-10-27T16:08:13.616Z",
+      "contentHash": "7ab65c272419e8ecc65b7c5555b4f20029792824a38ce2689d2bdcd8f0b9b00e"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-27T16:08:15.349Z",
+      "contentHash": "7ab65c272419e8ecc65b7c5555b4f20029792824a38ce2689d2bdcd8f0b9b00e"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-27T16:08:17.881Z",
+      "contentHash": "7ab65c272419e8ecc65b7c5555b4f20029792824a38ce2689d2bdcd8f0b9b00e"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "main-session",
+      "setAt": "2026-10-27T16:08:19.712Z",
+      "contentHash": "7ab65c272419e8ecc65b7c5555b4f20029792824a38ce2689d2bdcd8f0b9b00e"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 70.8,
+        "headings": 100,
+        "actionability": 50,
+        "attention": 100
+      },
+      "overall": 72.7,
+      "counts": {
+        "sections": 8,
+        "rereads": 9,
+        "undefinedTerms": 5,
+        "headingsAnswered": 8,
+        "mondayActions": 5,
+        "blockedActions": 5,
+        "quitPoints": 0
+      },
+      "icp": "Nurse manager at a 25-bed rural Texas CAH who builds a 12-hour night rotation for 6 to 8 night nurses and keeps getting 'one night, then off' complaints; reading once on a phone",
+      "publishDate": "2026-10-27T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "governing bodies (whose fatigue and safety guidelines apply to a Texas CAH?)",
+          "rotating schedules (does NIOSH's short-run advice apply to permanent night staff?)",
+          "if rest allows (what minimum rest?)",
+          "narrow emergency exceptions (Chapter 258: which ones?)",
+          "schedule record"
+        ],
+        "mondayActions": [
+          "Mark every off, on, off pattern in each night nurse's row on the current schedule",
+          "Try moving each island night next to that nurse's other nights, or to a nurse whose run it extends",
+          "Set a rule for the next build: nights in runs of two or three, two days off after three 12-hour nights",
+          "On every callout, check each candidate's day before and day after, and say plainly when the ask is an island",
+          "Keep a running note of who covers island nights to spot the one nurse who always says yes"
+        ],
+        "blockedActions": [
+          "Rebuild next month's 4-week rotation for 6 to 8 night nurses in runs: no worked pattern showing how runs tile across 28 nights at the unit's nightly headcount",
+          "Move an island night next to the nurse's other nights: the post says the same gaps stay covered but never shows who now covers the vacated night",
+          "Handle islands that exist because the nurse requested the surrounding days off, or prefers single nights: the likely source of the complaints is not addressed",
+          "Act on 'ask the nurse before the schedule posts': ask what, and what to do if she says no",
+          "Extend a run on a callout safely: 'if rest allows' gives no limit and conflicts with the three-night cap"
+        ],
+        "sections": [
+          {
+            "heading": "What Is an Island Shift in Nursing?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Includes the intro. Reread: 'then doing the same thing again on Friday' (is Friday also an island? Saturday is never stated). 'adapted from ergonomic guidance by the shift-work researchers Knauth and Hornberger' and the journal name are skipped as noise."
+          },
+          {
+            "heading": "Why Are Island Shifts Harder on Night Nurses?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Reread: 'In an island shift, every night worked is one.' An island shift is one night, so 'every night' and 'one' (= first night back) both stall. Same phrasing in Key Takeaways and FAQ."
+          },
+          {
+            "heading": "Why Do Island Shifts Show Up on Small Hospital Schedules?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Reread: '115 of the 182 nurses ... 29 of the 255 island shifts' then told the counts do not transfer to 12-hour units, so why read them. 'Island nights were the rarest kind' cuts against the night-nurse thrust. Evidence is Korean and Australian large hospitals; the small-hospital answer is one sentence plus a link. Attention dips here."
+          },
+          {
+            "heading": "How Do You Schedule Island Shifts Out of a Night Rotation?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Reread: 'Both columns cover the same three nights with the same nurse' (table shows Tue-Wed-Thu vs Tue-Fri-Sat, not the same nights). Reread: 'splits the nurse's days off into two short stretches' (Wednesday after a Tuesday night is a sleep day, not a day off). 'If neither works, ask the nurse' has no object: ask what?"
+          },
+          {
+            "heading": "How Do You Avoid an Island Shift When Covering a Callout?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Reread: 'A nurse finishing a run of nights can add one more if rest allows' makes a fourth night, against the three-night cap two sections earlier; 'if rest allows' has no number."
+          },
+          {
+            "heading": "Does SimpleScheduleAI Prevent Island Shifts?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Answers 'Not directly' up front (good). Reread: 'What the schedule you approve does respect is the fatigue limits next to that pattern.' Reread: 'A count of zero days in a row means the nurse is coming off a day off.' 'schedule record' / 'per-nurse night count ... on request' reads like a product spec. Four paragraphs of what the product does not do plus a four-link 'More on the service' list: skimmed, not read."
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false,
+            "notes": "Texas Q is the most useful new line in the piece: a posted island is not Chapter 258 overtime."
+          }
+        ]
+      },
+      "scoredAt": "2026-10-27T15:56:03.471Z",
+      "contentHash": "bc983bb92f4af0588d4d5f836d83b0acb0470431bca2a44c9ffd5e24355ddfa6"
+    }
+  }
+}

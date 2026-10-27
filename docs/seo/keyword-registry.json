@@ -1012,5 +1012,13 @@
     "primaryKeyword": "nursing overtime",
     "pillar": "/nurse-scheduling-software",
     "note": "Published 2026-10-26 (next-15 Oct plan #9). Federal definition explainer: 40-hour workweek, hours worked, regular rate with differentials, 8-and-80 (educational only; SSAI does not implement it), exemptions, Texas pointer. Differs from texas-nursing-overtime-compliance-cah (Texas compliance), how-to-reduce-nurse-overtime (reduction), mandatory-nurse-overtime-by-state (assignment limits)."
+  },
+  {
+    "slug": "island-shifts-night-nurses-cah",
+    "type": "post",
+    "url": "/blog/island-shifts-night-nurses-cah",
+    "primaryKeyword": "island shift nursing",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Published 2026-10-27 (next-15 Oct plan #10). What an island shift is (single working day between days off), why it is harder on night nurses, how to schedule it out of a night rotation and avoid it in callout fill. Product section states plainly there is no island-shift rule. Differs from night-shift-nurse-schedule-coverage (night coverage models) and 12-hour-hospital-shifts-scheduling (shift patterns)."
   }
 ]
