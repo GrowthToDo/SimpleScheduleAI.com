@@ -65,8 +65,20 @@
     },
     "imageEyeball": {
       "value": "OK",
+      "setBy": "founder",
+      "setAt": "2026-10-27T15:35:07.049Z",
+      "contentHash": "344bd9ccd0736d8265b33ccae8753ede187f7432b009fb76dd00487ac2f0d9b0"
+    },
+    "indexNow": {
+      "value": "DONE",
       "setBy": "main-session",
-      "setAt": "2026-10-26T16:51:02.504Z",
+      "setAt": "2026-10-27T15:35:08.959Z",
+      "contentHash": "344bd9ccd0736d8265b33ccae8753ede187f7432b009fb76dd00487ac2f0d9b0"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "main-session",
+      "setAt": "2026-10-27T15:35:10.904Z",
       "contentHash": "344bd9ccd0736d8265b33ccae8753ede187f7432b009fb76dd00487ac2f0d9b0"
     }
   },
