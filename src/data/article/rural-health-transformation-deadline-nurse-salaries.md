@@ -131,7 +131,7 @@ We looked for a second state doing the same between August and September 2026 an
 
 Recruitment and training, not coverage. Texas received the largest first year award in the country, [$281.3 million](https://content.govdelivery.com/accounts/TXHHSC/bulletins/4143d1c), administered by Texas HHSC. The $99 million workforce share, announced April 29, 2026, pays for [scholarships, relocation and signing bonuses, and new residency programs](https://gov.texas.gov/news/post/governor-abbott-hhsc-announce-99-million-in-federal-funding-for-rural-hospitals-to-recruit-workers).
 
-Every one of those brings a clinician in over several years. None covers a shift next month. That is a reasonable answer to a pipeline problem, and a pipeline problem is not what a nurse manager holding an uncovered Saturday has.
+Every one of those brings a clinician in over several years. None covers a shift next month. That is a reasonable answer to a pipeline problem, and a pipeline problem is not what a nurse manager holding an uncovered Saturday has. We read the Texas application rules for the scholarship route in [Can a Small Texas Hospital Use Rural Health Grants to Grow Its Own Nurses?](/articles/grow-your-own-nurses-texas-rural-grants)
 
 We have covered [what that works out to per rural resident](/articles/rural-hospital-losses-nurse-staffing-cost), the lowest rate in the country.
 

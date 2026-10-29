@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "slug": "grow-your-own-nurses-texas-rural-grants",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-10-29T17:21:19.584Z",
+      "contentHash": "3f4cccb656f751624c5270fb4072b071788838fd90d610b720033821b4cb05e3"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-29T17:21:21.478Z",
+      "contentHash": "3f4cccb656f751624c5270fb4072b071788838fd90d610b720033821b4cb05e3"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-29T17:21:38.329Z",
+      "contentHash": "3f4cccb656f751624c5270fb4072b071788838fd90d610b720033821b4cb05e3"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-10-29T17:21:38.386Z",
+      "contentHash": "3f4cccb656f751624c5270fb4072b071788838fd90d610b720033821b4cb05e3"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-10-29T17:21:38.553Z",
+      "contentHash": "3f4cccb656f751624c5270fb4072b071788838fd90d610b720033821b4cb05e3"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-29T17:21:38.553Z",
+      "contentHash": "3f4cccb656f751624c5270fb4072b071788838fd90d610b720033821b4cb05e3"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-10-29T17:21:38.565Z",
+      "contentHash": "3f4cccb656f751624c5270fb4072b071788838fd90d610b720033821b4cb05e3"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-10-29T17:21:38.567Z",
+      "contentHash": "3f4cccb656f751624c5270fb4072b071788838fd90d610b720033821b4cb05e3"
+    }
+  },
+  "recorded": {
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-10-29T17:15:04.604Z",
+      "contentHash": "f7e0782227f334660ac2421eed3a7a440fd1729a633cd62797e26c547ccdbed8"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-10-29T17:14:25.310Z",
+      "contentHash": "f7e0782227f334660ac2421eed3a7a440fd1729a633cd62797e26c547ccdbed8"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-10-29T17:21:39.821Z",
+      "contentHash": "f7e0782227f334660ac2421eed3a7a440fd1729a633cd62797e26c547ccdbed8"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 41.7,
+        "headings": 87.5,
+        "actionability": 55.6,
+        "attention": 75
+      },
+      "overall": 63,
+      "counts": {
+        "sections": 8,
+        "rereads": 11,
+        "undefinedTerms": 17,
+        "headingsAnswered": 7,
+        "mondayActions": 5,
+        "blockedActions": 4,
+        "quitPoints": 2
+      },
+      "icp": "Nurse manager at a 25-bed rural hospital, reading once on a phone between shifts",
+      "publishDate": "2026-10-29T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "Initiative 4",
+          "spending period",
+          "first-year part / first-year share",
+          "Request for Applications (RFA)",
+          "CMS",
+          "Rural Health Transformation Program / RHT funds",
+          "signed contract (on a grant)",
+          "approach (the four approaches)",
+          "dual credit",
+          "LPN vs LVN (same license?)",
+          "LVN to RN instructor",
+          "Flex Monitoring Team",
+          "nonmetro",
+          "Daily Yonder",
+          "HRSA",
+          "recent (high school graduate)",
+          "HHSC contact"
+        ],
+        "mondayActions": [
+          "ask my CEO or CFO whether we hold an Initiative 4 workforce grant and which approach we chose",
+          "look our hospital up on the HHSC award list from the linked Rural Health Transformation page",
+          "tell any aide hoping to use the grant for nursing school not to count on it until admin gets an answer from HHSC",
+          "flag to admin that scholarships need a signed five-year agreement before any money goes out",
+          "look up the vocational nursing cost at our nearest community college"
+        ],
+        "blockedActions": [
+          "read your own application: a nurse manager does not hold the grant application and the post does not say who does",
+          "ask HHSC in writing / ask your HHSC contact: no office, email or contact named",
+          "write the five-year agreement before paying anyone: no template or list of what the agreement must contain",
+          "check the Department of Agriculture's stipend page: the step has no link"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does It Mean for a Rural Hospital to Grow Its Own Nurses?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Can Rural Texas Strong Grants Pay for Nursing School?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Many Nursing Students Could One Rural Texas Strong Grant Pay For?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does the Texas Panhandle Nursing Consortium Train Its Own Nurses?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Is the Texas $15,000 Rural Nurse Stipend Open in 2026?",
+            "rereadCount": 2,
+            "answeredItsQuestion": false,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-10-29T16:58:06.666Z",
+      "contentHash": "2fc7a99f6514d35684d08459b9ccccc5c61b9fab02d6c13dc8df741afdea5278"
+    }
+  }
+}

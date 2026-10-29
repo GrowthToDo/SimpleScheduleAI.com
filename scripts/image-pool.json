@@ -1040,5 +1040,11 @@
     "description": "Person asleep face-down in grey bedding, daylight on the window blind above",
     "family": "misc",
     "topics": ["day sleep", "night shift", "sleep debt", "fatigue", "island shifts"]
+  },
+  {
+    "id": "1571260899304-425eee4c7efc",
+    "description": "College classroom: a student holding a green textbook stands among seated classmates writing in notebooks",
+    "family": "classroom",
+    "topics": ["nursing school", "students", "grow your own", "scholarships", "workforce pipeline"]
   }
 ]

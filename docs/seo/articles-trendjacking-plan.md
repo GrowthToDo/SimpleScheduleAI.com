@@ -203,6 +203,37 @@ Dropped, with reasons:
   the RHTP "lodging" incentive rule (facts dossier) as the Texas link. Overlaps
   `rural-health-transformation-deadline-nurse-salaries`; find a Texas CAH example first.
 
+### Detection pass 2026-10-29 (founder-supplied links + the parked housing topic)
+
+- **WRITING (founder go 2026-10-29) - `/articles/grow-your-own-nurses-texas-rural-grants`.** The
+  research corrected three triage assumptions: HRSA 24% and 11% are the 2028 and 2038 intervals
+  of one Dec 2025 edition; Panhandle consortium hospitals pay instructors and "Students pay
+  tuition"; the Texas RFA allows scholarships for recent high school graduates only (5-year
+  agreement), while CMS's federal example (LPN tuition) is broader. The "66 CAHs hold a
+  workforce row" count was already in the Oct 24 article, so the hook became the RFA reading
+  plus the $221,995 first-period share and an illustrative Cisco College tuition calculation.
+- **Original triage - Daily Yonder "Looking Local Could Be a Solution to Rural Nursing Shortage"**
+  (Liz Carey, 2026-10-26; CC BY-ND 4.0, so quote briefly). Grow-your-own pipelines (A.O.
+  Fox Hospital NY; Kaweah Health CA with WGU). No Texas, no CAH, no scheduling in it.
+  Score 32: Relevance 4 x Rising 2 x First 4 x Hook 1, with the hook built by us: a sourced
+  table of the Texas money a small hospital can put toward a local nurse pipeline (RHTP
+  Initiative 4 $99M workforce share: scholarships for local students, relocation and
+  signing bonuses; RHTP lodging incentives; TDA Rural Nursing Recruitment & Retention
+  Program $15,000 stipends for 36 months in a rural county of 68,000 or less; Texas
+  examples: Panhandle Rural Nursing Education Consortium, Guadalupe Regional + TLU).
+  Folds in the parked housing topic without its uncitable peg. **Verify before writing:**
+  whether an RNRR round is open in 2026 (the documents found are the 2024 RFGA); Daily
+  Yonder's HRSA "24% nonmetro RN shortage" vs the facts dossier's Dec 2025 HRSA projection
+  (11% nonmetro vs 2% metro); which edition each is. SERP for "grow your own nurses Texas"
+  not yet checked. No product section; footer note only.
+- **Corpus Christi group health insurance** (financialcontent/marketersmedia, 2026-10-27):
+  score 0. A PressCable press release promoting Insurance4Dallas; no hospital named, no
+  figures, no sources; the page's own disclaimer: "We make no guarantees regarding its
+  accuracy or completeness."
+- **Rep. Gluesenkamp Perez visits Willapa Harbor Hospital** (house.gov, 2026-10-26): score 0.
+  A Washington CAH; the story is imaging equipment and $1M in project funding. No nurses,
+  no staffing, no Texas; a member's press release, not news.
+
 ### DROPPED - "Physician Scheduling Software Market" (openPR / Worldwide Market Reports)
 
 - **Dropped on:** 2026-09-18. **Reason:** citable-hook score 0, an automatic fail.

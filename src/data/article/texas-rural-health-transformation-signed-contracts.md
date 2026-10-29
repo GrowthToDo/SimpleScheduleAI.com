@@ -79,7 +79,7 @@ Many of the 86 hospitals do not apply under the hospital's own name. A hospital 
 
 ## Does Any Rural Texas Strong Grant Pay for Nurses?
 
-Some grants fund workforce recruiting and retention. 66 Critical Access Hospitals hold a workforce-grant application, and 24 of those 66 have a signed workforce-grant contract. [HHSC's program page](https://pfd.hhs.texas.gov/rural-health-transformation-program) lists four uses for workforce grants: career paths for local high school students, scholarships for recent graduates, relocation or signing bonuses, and new residency or fellowship programs.
+Some grants fund workforce recruiting and retention. 66 Critical Access Hospitals hold a workforce-grant application, and 24 of those 66 have a signed workforce-grant contract. [HHSC's program page](https://pfd.hhs.texas.gov/rural-health-transformation-program) lists four uses for workforce grants: career paths for local high school students, scholarships for recent graduates, relocation or signing bonuses, and new residency or fellowship programs. Our [article on using the workforce grants to grow your own nurses](/articles/grow-your-own-nurses-texas-rural-grants) explains which of those four uses can pay toward training a local nurse.
 
 The list itself does not say what any grant pays for. The list gives names, amounts and contract status. So no one can tell from the list that a hospital received money for nurses. One line in [HHSC's approved first-year budget](https://pfd.hhs.texas.gov/sites/default/files/documents/rural-hlth-prgm/aprvd-bdgt-prd-1-rvsd-bdgt-narr.pdf) is about nursing, an agreement with the Texas Board of Nursing. The budget says the Board of Nursing agreement "remains budgeted at $0.00 in Budget Period 1 and is projected to begin in Year 2."
 
