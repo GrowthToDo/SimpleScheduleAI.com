@@ -25,7 +25,10 @@ lives in `docs/seo/change-log/`.
    excluded:
    - before: the 28 days before the change
    - after: the 28 days after the change
-3. Pull each window with `get_advanced_search_analytics`, dimension `page`,
+3. Normally run `npm run change-log -- judge --pull --dry-run`, then without
+   `--dry-run`. The script pulls every window itself. The manual route below
+   is the fallback when the local GSC server is unavailable.
+   Manual route: pull each window with `get_advanced_search_analytics`, dimension `page`,
    `row_limit` 1000, `data_state` "final". That is about 190 rows a call. Save
    one file:
    `{"windows":[{"changeDate":"YYYY-MM-DD","before":<response>,"after":<response>}]}`.

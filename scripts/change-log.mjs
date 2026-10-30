@@ -14,8 +14,9 @@
 // the window is flagged, and pages with under 10 clicks either side are flagged
 // clicksTooSmall because CTR on a handful of clicks is noise.
 //
-// GSC is reachable only through the MCP server, not from node, so this script
-// does not fetch. It prints the pulls it needs and takes them as input.
+// GSC is reachable only through the local MCP server. `due` prints the pulls each
+// date needs; `judge` takes them as input (--from, --daily) or fetches them itself
+// through scripts/lib/gsc-mcp.mjs (--pull).
 //
 // WHAT COUNTS AS A CHANGE: a commit touching src/data/post/*.md|mdx or
 // src/data/article/*.md (added or modified, renames use the new path), where the
@@ -39,11 +40,16 @@
 //       pulls.json = {windows:[{changeDate, before, after}]}; before/after are
 //       the GSC page-dimension rows (whole MCP response, {rows:[...]}, or a bare
 //       array). Appends one verdict per due entry to change-log-verdicts.jsonl.
+//
+//   npm run change-log -- judge --pull [--dry-run] [--since YYYY-MM-DD]
+//       Pulls the before and after windows (page dimension, rowLimit 1000, final)
+//       for each due change date itself, then judges exactly as --from does.
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { pullRows } from './lib/gsc-mcp.mjs';
 import {
   SITE,
   addDays,
@@ -239,9 +245,10 @@ if (command === 'due') {
 if (command === 'judge') {
   const from = valueOf('--from');
   const daily = valueOf('--daily');
+  const doPull = args.includes('--pull');
   const dryRun = args.includes('--dry-run');
-  if (!from && !daily) {
-    console.error('judge needs --daily <page,date pull> or --from <{windows:[{changeDate, before, after}]}>.');
+  if (!from && !daily && !doPull) {
+    console.error('judge needs --pull, --daily <page,date pull> or --from <{windows:[{changeDate, before, after}]}>.');
     process.exit(2);
   }
   const pulls = new Map();
@@ -276,6 +283,20 @@ if (command === 'judge') {
   }
 
   const due = loadDue();
+  if (doPull) {
+    for (const [date] of groupByDate(due)) {
+      if (pulls.has(date)) continue; // --from / --daily already supplied it
+      const w = windowsFor(date);
+      try {
+        const before = await pullRows({ dimensions: 'page', start: w.before.start, end: w.before.end, rowLimit: 1000 });
+        const after = await pullRows({ dimensions: 'page', start: w.after.start, end: w.after.end, rowLimit: 1000 });
+        pulls.set(date, { before, after, site: controlFor(before, after) });
+      } catch (e) {
+        console.error(`Pull failed for change date ${date}: ${e.message}`);
+        process.exit(1);
+      }
+    }
+  }
   const verdicts = [];
   const missing = new Set();
   for (const e of due) {

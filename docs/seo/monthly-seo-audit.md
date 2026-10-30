@@ -7,8 +7,13 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
 ## Steps (in order)
 
 0. **Judge past edits** (added 2026-10-30): load `.claude/skills/seo-analyst.md`,
-   run `npm run change-log -- due`, then pull each printed window and run
-   `judge` (the reference file `seo-analyst/change-log.md` has the steps). Lead
+   run `npm run change-log -- due`, then `npm run change-log -- judge --pull`
+   (the reference file `seo-analyst/change-log.md` has the steps). Then run
+   `npm run gsc-diagnose -- --pull` and read its report in
+   `docs/seo/diagnostics/`: page movement by drop type, lost queries, split
+   queries, questions people ask, near page one, unserved demand, and target
+   keywords on the wrong page. Its near-page-one section replaces step 1's
+   manual band arithmetic; step 1 still drafts the rewrites. Lead
    the report with the batch verdicts. The same check also runs weekly, in
    about 10 minutes, so this step normally finds little left to judge.
 
@@ -29,9 +34,17 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
 2. **AEO snapshot**: `npm run llm-citations` (dataset endpoints; ~$0.30-0.60 —
    SKIP with a note if DataForSEO balance is empty). Appends docs/seo/aeo-trend.jsonl.
 2b. **GA4 AI-referral pull** (google-analytics MCP, wired 2026-08-03): `run_report` on
-   property 528589584, dims `sessionSource`, metrics `sessions,totalUsers`, trailing 90
-   days, dimension_filter = country "United States" AND sessionSource regex
-   `chatgpt|openai|perplexity|claude|copilot|gemini`. **Baseline 2026-08-03: 0 US
+   property 528589584, dims `sessionSource,landingPage` (landing page added
+   2026-10-30), metrics `sessions,engagedSessions,keyEvents`, trailing 90 days,
+   dimension_filter = country "United States" AND sessionSource regex
+   `chatgpt|openai|perplexity|claude|copilot|gemini` with **`match_type` 6
+   (PARTIAL_REGEXP)**. Never use 5 (FULL_REGEXP): it only matches a source named
+   exactly "chatgpt", never "chatgpt.com". Tested 2026-10-30 on the same 90 days:
+   FULL gave 0 US sessions, PARTIAL gave 9 across 8 landing pages. The September
+   audit's "0" may be this artifact; its match type was not recorded.
+   Monthly also: open GSC's web UI and check whether a Search Console AI report
+   (AI Overviews / AI Mode) exists for the property. It is not in the GSC API or
+   our MCP (the tool list was checked 2026-10-30), so it is a manual one-minute look. **Baseline 2026-08-03: 0 US
    sessions.** NEVER report the unfiltered number: founder verification clicks from
    Hyderabad/Bengaluru produced 168 chatgpt.com sessions from ~1 user in the same
    window and would fake a "#2 channel" story. Directional metric only (paid-ChatGPT

@@ -41,3 +41,6 @@ public/quality-checks.png
 # Local-only style-board preview (served by dev server, never deployed)
 public/design-preview.html
 pool-originals/
+
+# GSC diagnostic raw pulls (reproducibility copies; the report itself is committed)
+docs/seo/diagnostics/raw/

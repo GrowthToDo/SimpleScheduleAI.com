@@ -1,6 +1,6 @@
 ---
 name: seo-analyst
-description: Use when reading Google Search Console or GA4 data for simplescheduleai.com, when a page or the site gains or loses clicks, impressions or rankings, when deciding whether to refresh, retitle or merge pages, when asked whether a past edit to a live post worked, or when running the weekly or monthly SEO review.
+description: Use when asked to "run the weekly change-log judge", when reading Google Search Console or GA4 data for simplescheduleai.com, when a page or the site gains or loses clicks, impressions or rankings, when deciding whether to refresh, retitle or merge pages, when asked whether a past edit to a live post worked, or when running the weekly or monthly SEO review.
 ---
 
 # SEO analyst (measuring search performance)
@@ -13,10 +13,14 @@ this skill is the machinery: which pull, which script, where results go.
 
 ## Data access
 
-- GSC is MCP-only (`mcp__google-search-console__*`, site_url
-  `https://simplescheduleai.com/`). Scripts never fetch. Pull with MCP, save
-  the JSON to the scratchpad, feed the script. This is the `target-positions`
-  pattern: the script does the arithmetic, never the agent.
+- Scripts pull GSC themselves: `scripts/lib/gsc-mcp.mjs` starts the local GSC
+  MCP server (configured in the untracked `.mcp.json`; never print or commit
+  it) and writes the rows straight to files. Prefer `--pull` on a script over
+  an MCP call in the conversation: the data never passes through the context,
+  and the script does the arithmetic, never the agent. `npm run gsc-pull` saves
+  any one pull to a file.
+- Use the in-conversation MCP tools (`mcp__google-search-console__*`, site_url
+  `https://simplescheduleai.com/`) only for small, one-off looks.
 - Use `get_advanced_search_analytics` with `row_limit` 1000 or more for any
   analysis. `compare_search_periods` returns only the top N rows, so use it
   for a quick look, never as the whole picture.
@@ -31,12 +35,14 @@ this skill is the machinery: which pull, which script, where results go.
 
 | Question | Do this |
 | --- | --- |
-| Did an edit to a live post work? | `npm run change-log -- due`, run the pulls it prints, then `judge` (see `seo-analyst/change-log.md`) |
-| Why did a page lose clicks? | query + page pull for both windows, then name the drop type below |
+| Did an edit to a live post work? | `npm run change-log -- due`, then `judge --pull` (see `seo-analyst/change-log.md`) |
+| What moved this month, and what to fix? | `npm run gsc-diagnose -- --pull`, report in `docs/seo/diagnostics/` (see `seo-analyst/diagnostics.md`) |
+| Why did a page lose clicks? | section a of the diagnosis gives its drop type; read the page's queries in the raw pull |
 | Are our target keywords moving? | `npm run target-positions` |
 | Are two pages competing for one query? | that query, dimensions page + date (daily): taking turns or ranking together? Plus each page's full query list |
 | Which titles to rewrite? | `docs/seo/ctr-rewrite-queue.md` |
 | Are AI assistants citing us? | `npm run llm-citations` (`docs/seo/aeo-tracking.md`) |
+| Which pages do AI assistants send visitors to? | GA4 `run_report`, sessionSource + landingPage, US only, regex `match_type` 6 (audit step 2b) |
 | What happened this month? | `docs/seo/monthly-seo-audit.md` |
 
 ## The three drop types
@@ -54,11 +60,13 @@ appearing for deep queries shows a "better" position with no real gain.
 
 ## Cadence
 
-- **Weekly, about 10 minutes:** `npm run change-log -- due`. If anything is
-  due, run the pulls and `judge`. Report batch verdicts first, at most 3 lines
-  each. Do not compare one week's traffic with the next: at about 1,100
-  impressions a day that is noise.
-- **Monthly:** the audit runbook, which starts with the same `due` check.
+- **Weekly, about 10 minutes** (founder-confirmed 2026-10-30): a cloud routine
+  runs `change-log due` every Monday and lists what is due. Locally, "run the
+  weekly change-log judge" means `npm run change-log -- judge --pull`, then
+  report batch verdicts first, at most 3 lines each. Do not compare one week's
+  traffic with the next: at about 1,100 impressions a day that is noise.
+- **Monthly:** the audit runbook: step 0 judges past edits and runs
+  `gsc-diagnose`.
 
 ## Common mistakes
 

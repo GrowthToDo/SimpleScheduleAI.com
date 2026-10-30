@@ -35,7 +35,9 @@
     "change-log": "node scripts/change-log.mjs",
     "site-hygiene": "node scripts/site-hygiene.mjs",
     "competitor-watch": "node scripts/competitor-page-watch.mjs",
-    "cold-read": "node scripts/cold-read-score.mjs"
+    "cold-read": "node scripts/cold-read-score.mjs",
+    "gsc-pull": "node scripts/gsc-pull.mjs",
+    "gsc-diagnose": "node scripts/gsc-diagnose.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
