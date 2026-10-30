@@ -6,6 +6,12 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
 
 ## Steps (in order)
 
+0. **Judge past edits** (added 2026-10-30): load `.claude/skills/seo-analyst.md`,
+   run `npm run change-log -- due`, then pull each printed window and run
+   `judge` (the reference file `seo-analyst/change-log.md` has the steps). Lead
+   the report with the batch verdicts. The same check also runs weekly, in
+   about 10 minutes, so this step normally finds little left to judge.
+
 1. **Page-2 goldmine** (the core, from the 20-prompt thread + ctr-rewrite-queue.md):
    pull GSC `query,page` for trailing 90 days (`get_advanced_search_analytics`).
    Band A = position 11-20, >=30 impressions; Band B = position 4-10.9, >=50.

@@ -1,0 +1,50 @@
+# Pronoun/referent changes, texas-rural-health-transformation-signed-contracts.md (2026-10-26)
+
+- says nothing counts as awarded until it does. -> says no grant counts as awarded until the grant's contract is signed.
+- **$87.4 million of it, on 159 applications, -> **$87.4 million of that $223.0 million, on 159 applications,
+- appear on the state's list. 62 of them have at least one signed contract. -> appear on the state's list. 62 of those 86 hospitals have at least one signed contract.
+- By October 23, one of them had a signed contract. -> By October 23, one of those 28 applications had a signed contract.
+- matched each public announcement to the grants behind it. -> matched each public announcement to the grants behind each announcement.
+- It means HHSC has finished negotiating with the provider -> An approved but unsigned grant means HHSC has finished negotiating with the provider
+- HHSC calls this stage "Intent to Award". It explains the term at the top of [its October 8 list] -> HHSC calls the approved but unsigned stage "Intent to Award". HHSC explains "Intent to Award" at the top of [the October 8 list]
+- once for each grant it applied for. -> once for each grant the hospital applied for.
+- and does not define it further. -> and does not define "Year 1 subset" further.
+- The Governor's office put it plainly in [its October 22 release] -> The Governor's office also says money comes only after signing, in [the Governor's October 22 release]
+- That money sits on 159 of the 441 applications. -> The $87.4 million of signed money sits on 159 of the 441 applications.
+- This piece calls that Texas's first-year federal award. -> This piece calls the $281.3 million Texas's first-year federal award.
+- The list has grants under three of them. -> The list has grants under three of the six initiatives.
+- Money on the list, and how much of it is signed -> Money on the list, and how much of that money is signed
+- Those 86 hospitals have applications worth $132.3 million of the $223.0 million on the list. 62 of them -> Those 86 hospitals have applications worth $132.3 million of the $223.0 million on the list. 62 of the 86 hospitals
+- Many of them do not apply under the hospital's own name. A hospital district, a hospital authority, a county or an operating company applies instead. So a hospital can be on the list under a name its staff would not search for first. -> Many of the 86 hospitals do not apply under the hospital's own name. A hospital district, a hospital authority, a county or an operating company applies on the hospital's behalf. So a hospital can be on the list under a name the hospital's staff would not search for first.
+- pays for. It gives names, amounts and contract status. -> pays for. The list gives names, amounts and contract status.
+- The budget says it "remains budgeted -> The budget says the Board of Nursing agreement "remains budgeted
+- nothing is planned for this in the first year. -> nothing is planned for the Board of Nursing agreement in the first year.
+- Whether federal rules let this money pay a nurse's salary is a separate question. We answered it in -> Whether federal rules let Rural Texas Strong money pay a nurse's salary is a separate question. We answered the salary question in
+- Two of them match the list exactly. Both are sums of named grants. -> Two of the announcements match the list exactly. Both announcements are sums of named grants.
+- | All 68               | -> | All 68 grants        |
+- | 1 of the 28          | -> | 1 of the 28 applications |
+- HHSC's budget planned that kind of grant at -> HHSC's budget planned hospital-district prevention grants at
+- His release says HHSC "plans to award" the money, and calls it "a portion of" Texas's first-year federal award. -> The Governor's release says HHSC "plans to award" the $8,145,444.89. The release calls the $8,145,444.89 "a portion of" Texas's first-year federal award.
+- All three are in the October 14 batch. -> All three providers are in the October 14 batch.
+- The federal rules call this "obligating" funds. -> The federal rules call committing money "obligating" funds.
+- the figure to plan around is the signed one. -> the figure to plan around is the signed figure.
+- Until both sides sign it, keep it out of the budget. -> Until both sides sign the contract, keep the grant out of the budget.
+- where that contract stands.** HHSC describes this stage as -> where the unsigned contract stands.** HHSC describes the Intent to Award stage as
+- Those figures are the first-year part of each grant. -> The $87.4 million and the $223.0 million are the first-year part of each grant.
+- It was a new batch of 28 applications, -> The $8 million was a new batch of 28 applications,
+- By October 23, 1 of the 28 had a signed contract. -> By October 23, 1 of the 28 applications had a signed contract.
+- Texas list. 62 of them have at least one signed contract. -> Texas list. 62 of those 86 hospitals have at least one signed contract.
+- and the providers it names. -> and the providers the CMS release names.
+- print their first-year part larger than their total, so we swapped them back; none is a Critical Access Hospital. -> print the first-year part larger than the total, so we swapped each row's two amounts back. None of the three rows belongs to a Critical Access Hospital.
+- legal name or their own district or operator; -> legal name or the hospital's own district or operator;
+- so we did not count it. -> so we did not count Frio Regional.
+- Our service has nothing to do with these grants. -> Our service has nothing to do with Rural Texas Strong grants.
+- nothing we sell would change where a hospital stands on it. -> nothing we sell would change where a hospital stands on HHSC's list.
+- Texas must commit the money from its first budget year, -> Texas must commit the money from Texas's first budget year,
+- To commit money means to promise it to a named party, -> To commit money means to promise the money to a named party,
+- HHSC says it updates the list weekly. -> HHSC says the list is updated weekly.
+- A note on who wrote this. We run -> A note on who wrote this article. We run
+- are the five kinds of grant in our table, in that order. -> are the five kinds of grant in our table, in the order listed.
+- projected to begin in Year 2." In plain words, nothing -> projected to begin in Year 2."  In plain words, nothing
+
+Total: 46 changes.

@@ -18,6 +18,7 @@ export const IMAGE_FAMILIES = [
   'desk-admin',
   'historic-bw',
   'data-analytics',
+  'classroom',
   'misc',
   // AI-generated (nano banana) families, self-hosted under /images/pool/
   'callout-night',

@@ -1,0 +1,263 @@
+# FLSA threshold wording changes (2026-10-26)
+
+Founder decision: claims about SimpleScheduleAI say "the 40-hour weekly FLSA overtime threshold". No dates changed (T12). Not committed.
+
+## Content, pages, data (scripted, each old string asserted unique)
+
+- `src/data/post/8-hour-vs-12-hour-nursing-shifts.md`
+  - OLD: against the applicable FLSA overtime thresholds, so a callout pickup
+  - NEW: against the 40-hour weekly FLSA overtime threshold, so a callout pickup
+- `src/data/post/ai-nurse-scheduling-vs-traditional.md`
+  - OLD: CMS requirements for CAHs, and FLSA overtime thresholds.
+  - NEW: CMS requirements for CAHs, and the 40-hour weekly FLSA overtime threshold.
+- `src/data/post/aladtec-alternatives.md`
+  - OLD: current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds.
+  - NEW: current-week hours and the 40-hour weekly [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold.
+- `src/data/post/aladtec-vs-managed-service.md`
+  - OLD: Built-in default ([FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds)
+  - NEW: Built-in default (the 40-hour weekly [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold)
+- `src/data/post/aladtec-vs-managed-service.md`
+  - OLD: applying CMS documentation requirements, FLSA overtime thresholds, and
+  - NEW: applying CMS documentation requirements, the 40-hour weekly FLSA overtime threshold, and
+- `src/data/post/aladtec-vs-managed-service.md`
+  - OLD: SimpleScheduleAI applies FLSA overtime thresholds by default
+  - NEW: SimpleScheduleAI applies the 40-hour weekly FLSA overtime threshold by default
+- `src/data/post/best-nurse-scheduling-app.md`
+  - OLD: - Applicable [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) are checked before
+  - NEW: - The [40-hour weekly FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) is checked before
+- `src/data/post/best-nurse-scheduling-software-critical-access-hospitals.md`
+  - OLD: not already past the applicable [FLSA overtime threshold](
+  - NEW: not already past the [40-hour weekly FLSA overtime threshold](
+- `src/data/post/best-nurse-scheduling-software-texas.md`
+  - OLD: If you want FLSA overtime thresholds tracked
+  - NEW: If you want the 40-hour weekly FLSA overtime threshold tracked
+- `src/data/post/best-nurse-scheduling-software-texas.md`
+  - OLD: SimpleScheduleAI handles FLSA overtime thresholds and
+  - NEW: SimpleScheduleAI handles the 40-hour weekly FLSA overtime threshold and
+- `src/data/post/best-per-diem-nurse-scheduling-software.md`
+  - OLD: current-period hours against the applicable FLSA overtime thresholds before
+  - NEW: current-period hours against the 40-hour weekly FLSA overtime threshold before
+- `src/data/post/best-scheduling-software-25-bed-hospital.md`
+  - OLD: - Texas [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) are built in as a default setting
+  - NEW: - The [40-hour weekly FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) is built in as a default setting
+- `src/data/post/best-scheduling-software-25-bed-hospital.md`
+  - OLD: For Texas CAHs specifically, FLSA overtime thresholds for healthcare employers and
+  - NEW: For Texas CAHs specifically, the 40-hour weekly FLSA overtime threshold and
+- `src/data/post/best-tcp-alternative-for-cah.md`
+  - OLD: - [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds and CMS
+  - NEW: - The 40-hour weekly [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold and CMS
+- `src/data/post/cah-nurse-schedule-data-analysis.md`
+  - OLD: tracks running hours against the applicable FLSA overtime thresholds flags
+  - NEW: tracks running hours against the 40-hour weekly FLSA overtime threshold flags
+- `src/data/post/can-microsoft-copilot-generate-nurse-schedule.md`
+  - OLD: running hours against the applicable FLSA overtime thresholds, so a late change
+  - NEW: running hours against the 40-hour weekly FLSA overtime threshold, so a late change
+- `src/data/post/cyclical-scheduling-vs-self-scheduling-small-hospital.md`
+  - OLD: against the applicable FLSA overtime thresholds, so a swap
+  - NEW: against the 40-hour weekly FLSA overtime threshold, so a swap
+- `src/data/post/float-pool-nursing-small-hospitals.md`
+  - OLD: against the applicable FLSA overtime thresholds, so covering a gap
+  - NEW: against the 40-hour weekly FLSA overtime threshold, so covering a gap
+- `src/data/post/healthcare-workforce-management-cah.md`
+  - OLD: We track overtime risk against the applicable FLSA threshold in real time.
+  - NEW: We track overtime risk against the 40-hour weekly FLSA overtime threshold in real time.
+- `src/data/post/how-to-choose-nurse-scheduling-software.md`
+  - OLD: not already past their applicable FLSA overtime threshold.
+  - NEW: not already past the 40-hour weekly FLSA overtime threshold.
+- `src/data/post/how-to-reduce-nurse-overtime.md`
+  - OLD: against the applicable [FLSA overtime thresholds](
+  - NEW: against the [40-hour weekly FLSA overtime threshold](
+- `src/data/post/kronos-nurse-scheduling-problems-small-hospitals.md`
+  - OLD: against the applicable FLSA overtime thresholds and produces
+  - NEW: against the 40-hour weekly FLSA overtime threshold and produces
+- `src/data/post/medical-scheduling-software-buyer-guide.md`
+  - OLD: checked against the applicable [FLSA overtime thresholds](
+  - NEW: checked against the [40-hour weekly FLSA overtime threshold](
+- `src/data/post/night-shift-nurse-schedule-coverage.md`
+  - OLD: against the applicable FLSA overtime thresholds, so a night callout
+  - NEW: against the 40-hour weekly FLSA overtime threshold, so a night callout
+- `src/data/post/nurse-burnout-scheduling-cah.md`
+  - OLD: against the applicable FLSA overtime thresholds, so unplanned overtime
+  - NEW: against the 40-hour weekly FLSA overtime threshold, so unplanned overtime
+- `src/data/post/nurse-retention-strategies-rural-hospital.md`
+  - OLD: running hours against the applicable [FLSA overtime thresholds](/blog/
+  - NEW: running hours against the [40-hour weekly FLSA overtime threshold](/blog/
+- `src/data/post/nurse-schedule-generator.md`
+  - OLD: rest rules, and applicable FLSA overtime thresholds to every draft.
+  - NEW: rest rules, and the 40-hour weekly FLSA overtime threshold to every draft.
+- `src/data/post/nurse-scheduling-no-it-department-rural-hospital.md`
+  - OLD: and tracks FLSA overtime thresholds against a CMS
+  - NEW: and tracks the 40-hour weekly FLSA overtime threshold against a CMS
+- `src/data/post/nurse-scheduling-no-it-department-rural-hospital.md`
+  - OLD: running hours against the applicable FLSA overtime threshold and references
+  - NEW: running hours against the 40-hour weekly FLSA overtime threshold and references
+- `src/data/post/nurse-scheduling-software-small-hospital.md`
+  - OLD: FLSA overtime thresholds are tracked automatically.
+  - NEW: The 40-hour weekly FLSA overtime threshold is tracked automatically.
+- `src/data/post/nurse-shift-schedule-daily-coverage.md`
+  - OLD: incorporating FLSA overtime thresholds, per-diem
+  - NEW: incorporating the 40-hour weekly FLSA overtime threshold, per-diem
+- `src/data/post/nurse-staffing-ratios-critical-access-hospital.md`
+  - OLD: against the applicable FLSA overtime thresholds, so meeting the plan
+  - NEW: against the 40-hour weekly FLSA overtime threshold, so meeting the plan
+- `src/data/post/nurse-staffing-texas-2026.md`
+  - OLD: skill mix, the FLSA overtime thresholds, and the CMS
+  - NEW: skill mix, the 40-hour weekly FLSA overtime threshold, and the CMS
+- `src/data/post/nurse-to-patient-ratios-by-state.md`
+  - OLD: against the applicable FLSA overtime thresholds, so meeting the plan
+  - NEW: against the 40-hour weekly FLSA overtime threshold, so meeting the plan
+- `src/data/post/nursing-scheduling-app-what-to-look-for.md`
+  - OLD: and configures FLSA overtime thresholds, shift patterns
+  - NEW: and configures the 40-hour weekly FLSA overtime threshold, shift patterns
+- `src/data/post/nursing-scheduling-software-ai.md`
+  - OLD: incorporating FLSA overtime thresholds, nurse certifications
+  - NEW: incorporating the 40-hour weekly FLSA overtime threshold, nurse certifications
+- `src/data/post/nursegrid-alternatives.md`
+  - OLD: current-week hours and [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime thresholds.
+  - NEW: current-week hours and the 40-hour weekly [FLSA](https://www.dol.gov/agencies/whd/flsa) overtime threshold.
+- `src/data/post/physician-medical-staff-scheduling-small-hospital.md`
+  - OLD: running-hours tracking against FLSA overtime thresholds, and an audit trail
+  - NEW: running-hours tracking against the 40-hour weekly FLSA overtime threshold, and an audit trail
+- `src/data/post/qgenda-alternatives.md`
+  - OLD: built in as the default: [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and
+  - NEW: built in as the default: the [40-hour weekly FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and
+- `src/data/post/shiftwizard-alternatives.md`
+  - OLD: current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds.
+  - NEW: current-week hours and the 40-hour weekly [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold.
+- `src/data/post/smart-square-alternatives-small-rural-hospitals.md`
+  - OLD: current-week hours and [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime thresholds.
+  - NEW: current-week hours and the 40-hour weekly [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) overtime threshold.
+- `src/data/post/texas-nursing-overtime-compliance-cah.md`
+  - OLD: We build FLSA overtime thresholds into the
+  - NEW: We build the 40-hour weekly FLSA overtime threshold into the
+- `src/data/post/ukg-too-complex-small-hospital.md`
+  - OLD: SimpleScheduleAI applies healthcare-appropriate FLSA overtime thresholds as a default.
+  - NEW: SimpleScheduleAI applies the 40-hour weekly FLSA overtime threshold as a default.
+- `src/data/post/what-is-a-baylor-shift.md`
+  - OLD: the scheduler tracks applicable overtime thresholds but does not implement
+  - NEW: the scheduler tracks the 40-hour weekly FLSA overtime threshold but does not implement
+- `src/data/article/july-2026-nurse-strikes-staffing.md`
+  - OLD: checked against the applicable [FLSA overtime thresholds](
+  - NEW: checked against the [40-hour weekly FLSA overtime threshold](
+- `src/data/article/nurse-shortage-or-retention-crisis-rural-hospitals.md`
+  - OLD: against the applicable FLSA overtime thresholds so a callout
+  - NEW: against the 40-hour weekly FLSA overtime threshold so a callout
+- `src/data/article/rural-emergency-hospital-bill-nurse-staffing.md`
+  - OLD: against the applicable FLSA overtime thresholds.
+  - NEW: against the 40-hour weekly FLSA overtime threshold.
+- `src/data/article/rural-hospital-losses-nurse-staffing-cost.md`
+  - OLD: against applicable FLSA overtime thresholds while the draft is being built, so a schedule that would cross one is flagged
+  - NEW: against the 40-hour weekly FLSA overtime threshold while the draft is being built, so a schedule that would cross it is flagged
+- `src/data/article/st-charles-staffing-violations-detection-gap.md`
+  - OLD: checked against the applicable [FLSA overtime thresholds](
+  - NEW: checked against the [40-hour weekly FLSA overtime threshold](
+- `src/pages/ai-nurse-scheduling.astro`
+  - OLD: AI nurse scheduling can encode FLSA overtime thresholds, and the CMS
+  - NEW: AI nurse scheduling can encode the 40-hour weekly FLSA overtime threshold, and the CMS
+- `src/pages/ai-nurse-scheduling.astro`
+  - OLD: Our team configures shift rules, FLSA overtime thresholds, and fairness weights.
+  - NEW: Our team configures shift rules, the 40-hour weekly FLSA overtime threshold, and fairness weights.
+- `src/pages/ai-nurse-scheduling.astro`
+  - OLD: 'It can encode FLSA overtime thresholds, and the CMS
+  - NEW: 'It can encode the 40-hour weekly FLSA overtime threshold, and the CMS
+- `src/pages/how-it-works.astro`
+  - OLD: and tracks FLSA overtime thresholds.
+  - NEW: and tracks the 40-hour weekly FLSA overtime threshold.
+- `src/pages/nurse-scheduling-software.astro` (x2)
+  - OLD: handles certifications, FLSA overtime thresholds, and ranked callout coverage
+  - NEW: handles certifications, the 40-hour weekly FLSA overtime threshold, and ranked callout coverage
+- `src/pages/product.astro`
+  - OLD: tracks FLSA overtime thresholds, and exports
+  - NEW: tracks the 40-hour weekly FLSA overtime threshold, and exports
+- `src/pages/product.astro`
+  - OLD: >FLSA overtime thresholds clear</span
+  - NEW: >40-hour weekly FLSA overtime threshold clear</span
+- `src/data/competitors.json`
+  - OLD: Applicable overtime thresholds tracked each cycle; the 8-and-80
+  - NEW: The 40-hour weekly FLSA overtime threshold is tracked each cycle; the 8-and-80
+- `src/data/post/aladtec-alternatives.md`
+  - OLD: <td class="py-3 text-primary">Built in as default</td>
+  - NEW: <td class="py-3 text-primary">40-hour weekly threshold built in as default</td>
+- `src/data/post/qgenda-alternatives.md`
+  - OLD: <td class="py-3 text-primary">Built in as default</td>
+  - NEW: <td class="py-3 text-primary">40-hour weekly threshold built in as default</td>
+- `src/data/post/shiftwizard-alternatives.md`
+  - OLD: <td class="py-3 text-primary">Built in as default</td>
+  - NEW: <td class="py-3 text-primary">40-hour weekly threshold built in as default</td>
+- `src/data/post/smart-square-alternatives-small-rural-hospitals.md`
+  - OLD: <td class="py-3 text-primary">Built in as default</td>
+  - NEW: <td class="py-3 text-primary">40-hour weekly threshold built in as default</td>
+
+## Docs / copy-token sources (Edit tool)
+
+- `docs/seo/positioning-registry.md` guardrail: `never the FLSA calculation method (say "FLSA overtime thresholds")` -> `never the FLSA 8-and-80 calculation method; for any claim about what we do, say "the 40-hour weekly FLSA overtime threshold", never "applicable FLSA overtime threshold(s)" (founder 2026-10-26; ...)`
+- `docs/seo/facts-dossier.md#flsa-overtime`: added SSAI-claim approved framing line ("the 40-hour weekly FLSA overtime threshold", gate id) and relabelled the old line as the generic/educational framing
+- `.claude/skills/seo-aeo/writing-rules.md` 3.2.1: "tracks generic FLSA overtime thresholds" -> "counts only the FLSA 40-hour workweek (Monday to Sunday)"; USE line "...against the applicable FLSA threshold" -> "the 40-hour weekly FLSA overtime threshold" + never-applicable note + gate pointer
+- `docs/seo/outreach/tier0-submission-kit.md`: lines 75-76, 98, 101 ("applicable FLSA overtime thresholds"/"FLSA overtime thresholds" in SSAI copy) -> "the 40-hour weekly FLSA overtime threshold"; line 137 guardrail updated
+- `docs/seo/product-capability-inventory-2026-08.md` §5.2: appended dated wording-update note under the "must continue to say FLSA overtime thresholds" line
+
+## Guard
+
+- `scripts/lib/facts-rules.mjs`: new rule `flsa-applicable-threshold-ssai` (FAIL via check-blog 9b and publish-gate). Sentence-scoped: fires when /applicable \[?FLSA (overtime )?thresholds?/i shares a sentence with SimpleScheduleAI|SSAI|our|we|each/every/the same draft|the system/scheduler/service/team|the AI builds. Markdown link targets and href values are stripped before sentence split. checkFacts gained an optional `sentence` predicate.
+- `scripts/tests/facts-rules.test.mjs`: new test (6 bad, 3 ok cases).
+- Verified: rule flags 18 lines in the HEAD versions of the edited files, 0 lines in the current post+article corpus.
+
+## (B) left unchanged (generic / educational / other tools / buyer criteria)
+
+- 8-hour-vs-12-hour-nursing-shifts.md:31: Key takeaway about 12-hour patterns crossing thresholds; educational
+- ai-nurse-scheduling-vs-traditional.md:63, :76: what the nurse manager balances by hand (text + diagram tile)
+- ai-nurse-scheduling-vs-traditional.md:145, :342: generic "AI scheduling" capability; :342 FAQ also explains 8-and-80 as one such threshold
+- aladtec-alternatives.md:456, aladtec-vs-managed-service.md:95, qgenda-alternatives.md:374, shiftwizard-alternatives.md:367, smart-square-alternatives-small-rural-hospitals.md:474: comparison-table ROW LABEL "FLSA overtime thresholds (Texas)" shared with competitor column; the SSAI cells were fixed instead (see above)
+- best-nurse-scheduling-software-2026.md:60, best-nurse-scheduling-software-critical-access-hospitals.md:71: generic buyer criteria for "the best software"
+- best-per-diem-nurse-scheduling-software.md:176, :471: buyer-priority bar label; educational per diem overtime risk
+- can-microsoft-copilot-generate-nurse-schedule.md:26, :60, :88, :162: what a postable schedule requires / what Copilot does not do
+- free-nurse-scheduling-software.md:123, :187: about free tools
+- how-ai-builds-a-nurse-schedule.md:60, :81: post declares itself a vendor-neutral explainer; SSAI section does not use the phrase
+- how-to-choose-nurse-scheduling-software.md:40, :69, :188: buyer-question H2 + TOC entry; "some tools track ..., many do not"
+- how-to-handle-nurse-callouts.md:28: generic callout mistake
+- is-ai-nurse-scheduling-safe.md:27, :100, :156: vendor-neutral AI-scheduling discussion and FAQ ("confirm with any vendor exactly which thresholds their system enforces")
+- kronos-nurse-scheduling-problems-small-hospitals.md:111: buyer question to ask a vendor
+- nurse-manager-scheduling-time-breakdown.md:89, :91: generic overtime-tracking explanation (states the 40-hour basis already)
+- nurse-retention-strategies-rural-hospital.md:73: generic retention advice
+- nurse-schedule-generator.md:212: FAQ: what any generator should meet
+- nurse-scheduling-no-it-department-rural-hospital.md:33, :96, :120: standalone SaaS / generic managed-service category / audit question
+- nurse-scheduling-software-minimum-employees.md:125: evaluation criterion
+- nurse-scheduling-software-pricing.md:115: about general workforce tools
+- nurse-scheduling-software-small-hospital.md:92: about platforms not built for Texas healthcare
+- physician-medical-staff-scheduling-small-hospital.md:26: what the nursing side needs (generic)
+- rural-texas-hospital-nurse-scheduling-2026.md:150, :202: about most scheduling software / what a tool should do
+- tcp-scheduling-software-vs-managed-service.md:141: generic "a managed scheduling service" category description, SSAI not named (borderline; candidate for a follow-up if founder wants it narrowed)
+- ukg-alternatives-small-hospitals.md:195: about Aladtec
+- what-is-nurse-rostering.md:28, :74: generic rostering education
+- article/rural-hospital-networks-nurse-staffing.md:57: what nurse scheduling software in general must carry
+- src/pages/critical-access-hospital-scheduling.astro:143: definition of CAH scheduling (regulatory frame)
+- src/pages/nurse-scheduling-software.astro:220, :251: what generic apps miss; buyer checklist question
+- DRAFTS cah-nurse-schedule-data-analysis.md:59, hospital-staff-scheduling-software.md:112, nursing-scheduling-app-what-to-look-for.md:39, staff-scheduling-software-healthcare-vs-generic.md:103: draft, generic/educational or about enterprise tools
+
+## Not touched (out of scope, historical)
+
+- docs/seo/migration-staging/**, docs/seo/migration-dryrun/**, docs/seo/briefs/*, docs/superpowers/plans/*, docs/seo/texas-overtime-correction-sweep.md, docs/seo/youtube-video-seo-checklist.md, docs/seo/outreach/torch-nrha-emails.md, .publish/*.json
+- Singular "[FLSA](url) overtime threshold tracking" SSAI lines (schedule360-alternatives.md:131, :202; ukg-alternatives-small-hospitals.md:165; shiftwizard-alternatives.md:159 second sentence): approved token in the old skill, not one of the three target phrases.
+
+## Round 2 (coordinator leftovers, 2026-10-26)
+
+- `src/data/post/tcp-scheduling-software-vs-managed-service.md`
+  - OLD: monitors [FLSA overtime thresholds](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime),
+  - NEW: monitors the [40-hour weekly FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime),
+- `src/data/post/tcp-scheduling-software-vs-managed-service.md`
+  - OLD: a specialist checks overtime thresholds and credential requirements
+  - NEW: a specialist checks the 40-hour weekly FLSA overtime threshold and credential requirements
+- `src/data/post/best-nurse-scheduling-software-2026.md`
+  - OLD: no IT project, FLSA overtime thresholds built in, and fast callout coverage
+  - NEW: no IT project, 40-hour weekly FLSA overtime tracking built in, and fast callout coverage
+- `src/data/article/rural-hospital-networks-nurse-staffing.md`
+  - OLD: respect coverage, skill mix, and overtime thresholds, and every assignment
+  - NEW: respect coverage, skill mix, and the 40-hour weekly FLSA overtime threshold, and every assignment
+- `src/data/post/hidden-compliance-cost-nurse-scheduling.md`
+  - OLD: and flags overtime thresholds as the schedule is built.
+  - NEW: and flags hours against the 40-hour weekly FLSA overtime threshold as the schedule is built.
+- `src/data/post/ai-nurse-scheduling-vs-traditional.md`
+  - OLD: every active constraint, credentials, overtime thresholds, availability windows,
+  - NEW: every active constraint, credentials, the 40-hour weekly FLSA overtime threshold, availability windows,
+- LEFT: src/data/post/nurse-scheduling-no-it-department-rural-hospital.md:96, generic definition of the managed-service category ("the vendor", "depends on the vendor"); SimpleScheduleAI is not named; the SSAI section at L104 was already fixed.
+- Guard broadened: APPLICABLE_FLSA = /applicable (\[?FLSA\]?(\([^)]*\))? (overtime )?|overtime )thresholds?/i (adds 'applicable overtime threshold(s)' and linked 'applicable [FLSA](url) overtime thresholds'); subjects add 'the AI' ('our AI' via 'our'). 5 new test cases (3 bad, 2 generic ok). HEAD versions: 19 lines flagged; current corpus: 0.
