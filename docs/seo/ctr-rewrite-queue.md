@@ -202,3 +202,21 @@ From a 90-day GSC gap pull (2026-06-25 to 2026-09-24). Baselines are page-level 
   home-visit booking apps); inhouse.health is result 5. The audit's own condition
   ("if page 1 is generic DIY-scheduling content, do not ship B1") is met. Retitling the
   comparison page around the brand would chase a query that is mostly not about the brand.
+
+## 2026-11-01 outcomes (from docs/seo/monthly-audits/2026-11.md)
+
+- **Q1 (12-hour post title, 2026-09-25): CTR effect detected at like-for-like position.**
+  Days at average position 8-9: 0.18% before (12 days, 1,632 impr, 3 clk) vs 0.69% after
+  (7 days, 1,749 impr, 12 clk). Page-level 0.24% at 9.9 -> 1.00% at 6.8 by late October.
+  Small click counts, so a strong signal, not proof. Method: GSC page x date, bucket days
+  by that day's position.
+- **Q2 (rostering opening):** `nurse rostering software` 17.7 -> 8.7 (10-02..10-29). Page
+  still 0 clicks. Now Band B: title draft R1 in the November audit, AWAITING FOUNDER REVIEW.
+- **Q3 (PRN-pool question):** landed on `/blog/prn-pool-critical-access-hospital` (best
+  position 1.3), not the per-diem post. Closed.
+- **B2 (best-CAH meta, 2026-10-02):** 0 clicks before and after, position 19.8 -> 23.5. No
+  effect. Leave.
+- **Item 4 (hospital-shift H2 on the 12-hour post): UNPARKED**, its condition is met.
+  Awaiting founder go; goes through the publish pipeline (body edit).
+- **N1 long-question test:** dropped. Query clicks are privacy-suppressed, so the planned
+  query-level comparison cannot be run.

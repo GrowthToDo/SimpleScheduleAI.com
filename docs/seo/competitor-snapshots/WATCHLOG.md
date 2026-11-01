@@ -95,3 +95,31 @@ Appended by `npm run competitor-watch`. Positioning, pricing and CTA moves on wa
 - shiftwizard.com__home: 1 change(s) since 2026-09-01
   - body text changed with no heading/CTA/price move (+10 words)
 - aladtec.com__home: unreachable (fetch failed)
+
+## 2026-11-01
+
+- inhouse.health__home: 2 change(s) since 2026-10-01
+  - h2s added: "Part 3: The ground changes underneath"
+  - h2s removed: "The Future of AI Agents in Nurse Scheduling"
+- inhouse.health__product: 2 change(s) since 2026-10-01
+  - h2s added: "Part 3: The ground changes underneath"
+  - h2s removed: "The Future of AI Agents in Nurse Scheduling"
+- inhouse.health__skilled-nursing: 2 change(s) since 2026-10-01
+  - h2s added: "Part 3: The ground changes underneath"
+  - h2s removed: "The Future of AI Agents in Nurse Scheduling"
+- inhouse.health__about: 2 change(s) since 2026-10-01
+  - h2s added: "Part 3: The ground changes underneath"
+  - h2s removed: "The Future of AI Agents in Nurse Scheduling"
+- inhouse.health__pr-blog: 2 change(s) since 2026-10-01
+  - h2s added: "Part 3: The ground changes underneath", "Great Clinical Scheduling is More than CRUD", "The Future of AI Agents in Nurse Scheduling", "Insightful talks with Joseph De Veyra"
+  - h2s removed: "The Never-Ending Puzzle - Building Nurse Schedule", "Insightfull talks with Joseph De Veyra", "Recent trends in nurse staffing ratios", "Nursing care impact on patient outcomes"
+- m7health.com__pricing: unreachable (HTTP 404)
+- inhouse.health__pricing: unreachable (HTTP 404)
+- nursegrid.com__home: 1 change(s) since 2026-10-01
+  - body text changed with no heading/CTA/price move (-1 words)
+- smartlinx.com__home: 1 change(s) since 2026-10-01
+  - h1: "Join 5,000+ Senior Care Leaders Optimizing Their Workforce with Smartlinx" -> "Join Thousands of Senior Care Leaders Optimizing Their Workforce with Smartlinx"
+- shiftwizard.com__home: 1 change(s) since 2026-10-01
+  - body text changed with no heading/CTA/price move (-36 words)
+- aladtec.com__home: 1 change(s) since 2026-09-01
+  - body text changed with no heading/CTA/price move (-55 words)

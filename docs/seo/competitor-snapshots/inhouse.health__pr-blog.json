@@ -1,15 +1,17 @@
 {
  "url": "https://www.inhouse.health/pr-blog",
- "fetchedAt": "2026-10-01",
+ "fetchedAt": "2026-11-01",
  "title": "PR & Blog | In-House Health",
  "description": "",
  "h1": "PR & Blog",
  "h2s": [
+  "Part 3: The ground changes underneath",
   "Part 2: A house of cards",
-  "The Never-Ending Puzzle - Building Nurse Schedule",
+  "Great Clinical Scheduling is More than CRUD",
+  "The Future of AI Agents in Nurse Scheduling",
   "The Limits of Human memory",
   "The Elusive \"True Preference\": Do You Really Know What You Want?",
-  "Insightfull talks with Joseph De Veyra",
+  "Insightful talks with Joseph De Veyra",
   "The Big Picture: What Does a “Good” Nurse Schedule Even Mean?",
   "Fixing Nursing schedulling with AI",
   "Insightful Talks with Sergey Vasilenko. Guest: Dayna Dixon",
@@ -32,9 +34,7 @@
   "The future of nursing tech",
   "The black hole of clinical scheduling",
   "From bedside to building",
-  "Nurse ratios in practice",
-  "Recent trends in nurse staffing ratios",
-  "Nursing care impact on patient outcomes"
+  "Nurse ratios in practice"
  ],
  "ctas": [
   "Schedule a Demo",
@@ -43,6 +43,6 @@
  "prices": [
   "$4"
  ],
- "words": 1021,
- "bodyHash": "0d38e188d111"
+ "words": 1077,
+ "bodyHash": "985291d71e2b"
 }

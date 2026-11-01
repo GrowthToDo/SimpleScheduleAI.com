@@ -1,6 +1,6 @@
 {
  "url": "https://www.inhouse.health/",
- "fetchedAt": "2026-10-01",
+ "fetchedAt": "2026-11-01",
  "title": "In-House Health: AI-driven Nurse Scheduling Platform",
  "description": "",
  "h1": "Restore Sustainability to Nursing",
@@ -16,9 +16,9 @@
   "Solutions Across Clinical Teams",
   "Nursing teams urgently need better tech",
   "PR & Blog",
+  "Part 3: The ground changes underneath",
   "Part 2: A house of cards",
   "Great Clinical Scheduling is More than CRUD",
-  "The Future of AI Agents in Nurse Scheduling",
   "Get out of spreadsheets and back to the bedside"
  ],
  "ctas": [
@@ -28,6 +28,6 @@
  "prices": [
   "$ 270"
  ],
- "words": 909,
- "bodyHash": "0bef464a701f"
+ "words": 907,
+ "bodyHash": "0bec16b040a0"
 }

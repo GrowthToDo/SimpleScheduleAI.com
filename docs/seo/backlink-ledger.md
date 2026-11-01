@@ -41,19 +41,20 @@ with a Bing number (see the anomaly below).
   submitted via IndexNow. Trend is upward (73 -> 79 in the five days to Aug 1 as the
   week's posts landed). Watch coverage, not crawl volume.
 
-### Bing pulse 2026-10-01 (monthly audit step 4)
+### Bing pulse 2026-11-01 (monthly audit step 4)
 
-Run after the Bing MCP was repaired the same day (upstream `mcp-server-bwt` moved to
-`mcp>=2.2` on 2026-09-25, which our local `mcp<2` pin blocked; now pinned to commit
-`ead1a469`).
+Bing MCP pinned to commit `ead1a469` since the 2026-10-01 repair (upstream
+`mcp-server-bwt` moved to `mcp>=2.2` on 2026-09-25; our old `mcp<2` pin blocked it).
 
 - `get_link_counts` -> `{"Links":[],"TotalPages":0}`. Still cannot enumerate a single
-  inbound link, as in every pull since July.
-- `CrawlStats.InLinks` = 12 on 2026-09-30 (11 on 2026-09-01, 8 on 2026-08-02). Still
-  UNVERIFIED for the reason above; do not report it as backlinks.
-- Bing index: `InIndex` 142 on 2026-09-30, up from 121 on 2026-09-01. `Code2xx` 186,
-  `BlockedByRobotsTxt` 0 every day, no 5xx all month. Crawling healthy.
-- GSC Links export: not requested this month (quarterly; next due with the November run).
+  inbound link, as in every pull since July (same on 2026-10-01).
+- `CrawlStats.InLinks` = 30 on 2026-10-29, the latest row (19 on 10-28, 16 on 10-20,
+  14 on 10-01, 12 on 2026-09-30, 11 on 09-01, 8 on 08-02). The 19 -> 30 jump is a single
+  day. Still UNVERIFIED for the reason above; do not report it as backlinks.
+- Bing index: `InIndex` 153 on 2026-10-29, up from 142 on 2026-09-30. `Code2xx` 186,
+  `BlockedByRobotsTxt` 0 every day, no 5xx all October. Series has no rows for
+  10-26, 10-27, 10-30, 10-31.
+- GSC Links export: due this (November) run, quarterly; founder-side ask.
 
 ## Spam-link watch (opened 2026-08-30)
 

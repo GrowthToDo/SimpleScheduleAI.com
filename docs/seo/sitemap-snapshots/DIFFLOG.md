@@ -122,3 +122,24 @@ Appended by `npm run sitemap-diff`. New competitor URLs feed the trendjacking ra
   - NEW: https://www.onshift.com/resources/blog/why-care-quality-is-the-most-underrated-financial-strategy
 - shiftwizard.com: unreachable (not an XML sitemap)
 - nursegrid.com: +0 / -0 since 2026-09-01
+
+## 2026-11-01
+
+- m7health.com: +0 / -0 since 2026-10-01
+- youshift.com: +0 / -0 since 2026-10-01
+- qgenda.com: +6 / -4 since 2026-10-01
+  - NEW: https://www.qgenda.com/anesthesiology-2026-giveaway/
+  - NEW: https://www.qgenda.com/blog/the-ultimate-guide-to-ambulatory-capacity-management/
+  - NEW: https://www.qgenda.com/credentialing-ama-vericre/
+  - NEW: https://www.qgenda.com/video/the-capacity-you-already-have-podcast/
+  - NEW: https://www.qgenda.com/webinar/how-ssm-health-is-connecting-scheduling-and-staffing-to-strengthen-its-workforce/
+  - NEW: https://www.qgenda.com/webinar/how-ssm-health-reimagined-workforce-management-for-nurses/
+- aladtec.com: unreachable (HTTP 403)
+- smartlinx.com: +1 / -0 since 2026-10-01
+  - NEW: https://www.smartlinx.com/hostedtime/
+- onshift.com: +3 / -1 since 2026-10-01
+  - NEW: https://www.onshift.com/company/newsroom/the-onshift-applause-awards-return-for-2026-to-honor-senior-cares-most-dedicated-professionals
+  - NEW: https://www.onshift.com/resources/blog/celebrating-our-2026-onshift-applause-award-winners
+  - NEW: https://www.onshift.com/resources/blog/the-cost-of-uninformed-workforce-decisions
+- shiftwizard.com: unreachable (not an XML sitemap)
+- nursegrid.com: +0 / -0 since 2026-10-01

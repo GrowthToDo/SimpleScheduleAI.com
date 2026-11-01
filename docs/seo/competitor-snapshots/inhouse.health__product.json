@@ -1,6 +1,6 @@
 {
  "url": "https://www.inhouse.health/product",
- "fetchedAt": "2026-10-01",
+ "fetchedAt": "2026-11-01",
  "title": "Product | In-House Health",
  "description": "",
  "h1": "Our Solutions",
@@ -14,9 +14,9 @@
   "Onboarding made Easy",
   "Frequently Asked Questions",
   "PR & Blog",
+  "Part 3: The ground changes underneath",
   "Part 2: A house of cards",
   "Great Clinical Scheduling is More than CRUD",
-  "The Future of AI Agents in Nurse Scheduling",
   "Get out of spreadsheets and back to the bedside"
  ],
  "ctas": [
@@ -24,6 +24,6 @@
   "Get Started"
  ],
  "prices": [],
- "words": 1393,
- "bodyHash": "a4d127c1ef5c"
+ "words": 1391,
+ "bodyHash": "dacba592c408"
 }
