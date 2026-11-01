@@ -83,6 +83,55 @@ const softwareAppSchema = {
     ]}
   >
     <p class="text-sm text-ivory/50">The demo runs in your browser. No signup, no sales call first.</p>
+    <div class="mx-auto mt-10 max-w-4xl">
+      <div class="overflow-hidden rounded-2xl border border-ivory/10 bg-ink shadow-[0_14px_40px_-28px_rgb(0_0_0/0.6)]">
+        <video
+          id="product-video"
+          class="aspect-video w-full"
+          src="/videos/ssai-product-v4d.mp4"
+          poster="/videos/ssai-product-v4d-poster.jpg"
+          width="1280"
+          height="720"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Product video with captions: a nurse calls out at 5:12 a.m.; the nursing leader's phone list and the CEO's overtime and agency costs both start in the schedule; SimpleScheduleAI builds next month as three drafts checked against 22 safety and fairness rules, and for a callout ranks nurses without overtime first and agency last, filled in one click"
+        ></video>
+      </div>
+      <button
+        id="product-video-sound"
+        type="button"
+        class="mt-4 inline-flex items-center gap-2 rounded-full border border-ivory/20 bg-ivory/5 px-4 py-2 text-sm font-medium text-ivory hover:bg-ivory/10"
+      >
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+          ><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"></path></svg
+        >
+        Play with sound
+      </button>
+    </div>
+    <script is:inline>
+      // Muted autoplay (burned-in captions tell the story); "Play with sound" restarts it from the top with sound.
+      (function () {
+        const v = document.getElementById('product-video');
+        const b = document.getElementById('product-video-sound');
+        if (!v || !b) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          v.removeAttribute('autoplay');
+          v.removeAttribute('loop');
+          v.pause();
+        }
+        b.addEventListener('click', function () {
+          v.loop = false;
+          v.muted = false;
+          v.controls = true;
+          v.currentTime = 0;
+          v.play();
+          b.remove();
+        });
+      })();
+    </script>
   </DarkHero>
 
   <!-- Trust row: pre-launch credibility via what it plugs into and what it checks -->
