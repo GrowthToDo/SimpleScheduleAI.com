@@ -20,11 +20,10 @@ One-liner:       AI-native nurse scheduling software for Critical Access Hospita
                  in Texas. Runs in the browser, no installation and no integration
                  project. $10 per user per month.
 Long description (<=300 chars):
-  SimpleScheduleAI is AI-native nurse scheduling software built for Critical
-  Access Hospitals with 25 or fewer beds. It cuts the 8 to 12 weekly hours nurse
-  managers spend on schedules and callouts, with Texas overtime compliance and a
-  full audit trail. 21 automated rule checks validate every draft. $10 per user
-  per month, or $100 per user per year. No setup fees.
+  SimpleScheduleAI is AI-native nurse scheduling software for Critical Access
+  Hospitals with 25 or fewer beds. It tracks the 40-hour weekly FLSA overtime
+  threshold and keeps a full audit trail. 22 automated rule checks validate
+  every draft. $10 per user per month, or $100 per user per year.
 ```
 
 **Mode note (this sheet is PRODUCT mode).** Software directories list products,

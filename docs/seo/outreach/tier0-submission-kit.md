@@ -122,7 +122,7 @@ ranking work lives in the dofollow lane (see `backlink-plan-2026-07.md`).
 Never, in any product-mode listing:
 
 - The **service self-label** ("managed service", "our scheduling team checks it",
-  "we build and operate it for you"). Product column says software + "21 automated
+  "we build and operate it for you"). Product column says software + "22 automated
   rule checks validate every draft".
 - **"No IT."** bald. Always name what is absent: no installation, no integration
   project, no IT department required.
