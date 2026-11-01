@@ -75,7 +75,7 @@ The common split is two 12-hour shifts (day and night) or three 8-hour shifts (d
 make a 40-hour week.
 
 At each shift change, the nurse going off gives report to the nurse coming on. Report
-covers each patient's condition, what is due next, and anything to watch. The schedule has to put enough nurses on each side of that change.
+covers each patient's condition, what is due next, and anything to watch. So every day shift and every night shift needs its own nurses on the schedule, including weekends.
 
 Each hospital sets its own start times. As an example, here are the default times in
 our [free Excel nurse schedule template](/resources/nurse-schedule-template):
