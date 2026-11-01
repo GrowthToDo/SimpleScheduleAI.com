@@ -3,7 +3,7 @@ draft: false
 publishDate: 2026-06-23T00:00:00Z
 updateDate: 2026-09-25T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Nurse Rostering Software vs. Scheduling Software: The Difference (2026)'
+title: 'Nurse Rostering Software: What It Does and What a Small Hospital Needs (2026)'
 excerpt: >
   Nurse rostering software keeps the staff pool: who you have and what each nurse is
   qualified to do. Scheduling software puts that pool on shifts. At a small hospital one
