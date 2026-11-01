@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-27T00:00:00Z
-updateDate: 2026-09-01T00:00:00Z
+updateDate: 2026-11-01T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Free Nurse Scheduling Software, Plus a Free Excel Template (2026)'
 excerpt: >
@@ -15,12 +15,13 @@ tags:
   - critical-access-hospitals
 metadata:
   canonical: 'https://simplescheduleai.com/blog/free-nurse-scheduling-software'
-  description: 'Get a free Excel nurse schedule template for a small hospital, and see what free nurse scheduling apps like NurseGrid, Connecteam and Sling cover at a small hospital.'
+  description: 'Get a free Excel nurse schedule template for a small hospital, and see what Teams Shifts, NurseGrid, Connecteam and Sling cover.'
 ---
 
 ## Key Takeaways
 
 - If you came here for something you can use today, our [free nurse schedule template](/resources/nurse-schedule-template) is a free Excel worksheet, emailed to your work address. It works out how many nurses each shift needs from your census, then flags overtime, rest-hour and consecutive-day problems as you assign.
+- If your nurses already have Microsoft Teams licenses, the Shifts app comes with Teams. Shifts handles the schedule and staff requests, but Microsoft documents none of the hospital checks covered below.
 - Free nurse scheduling software works well for the easy half of the job: shift assignment, availability collection, and staff messaging on a stable roster.
 - The free tools that rank for this search were built for personal calendars (NurseGrid) or small non-clinical teams (Connecteam, Sling), so hospital requirements like certification matching and survey-ready records are out of scope.
 - For a Texas CAH, free tools leave four gaps open: overtime threshold tracking, certification-aware assignment, ranked callout coverage, and CMS staffing documentation.
@@ -56,11 +57,17 @@ Yes. Several free or freemium tools handle basic nurse scheduling, but most of t
 
 The tools ranking for this search, NurseGrid, Connecteam, Sling and the spreadsheet templates, were built for personal shift calendars and small retail teams. None was built for a Critical Access Hospital that has to track [Texas overtime exposure](/blog/texas-nursing-overtime-compliance-cah), cover a 2 a.m. callout, and produce [staffing records a CMS surveyor will accept](/blog/how-to-stay-cms-compliant-nurse-scheduling).
 
-The free options a search for this term surfaces fall into three buckets.
+The free options a search for this term surfaces fall into four buckets.
 
 **Personal shift calendars.** [NurseGrid](https://nursegrid.com/for-nurses/calendar/) is free for individual nurses and is built as a personal shift tracker. The free product is a calendar a nurse keeps for themselves, not an employer-side scheduling system. NurseGrid Manager, the version a unit would use to build and publish schedules, is a paid product; confirm current pricing and any trial directly on its [product page](https://nursegrid.com/for-organizations/nursegrid-manager/).
 
 **Small-team workforce apps with a free tier.** [Connecteam](https://connecteam.com/pricing/) offers a free Small Business plan for up to 10 users with scheduling, time tracking, and messaging. [Sling](https://getsling.com/) offers a free tier for shift scheduling and team communication. Both are general workforce tools, so they do not advertise healthcare-specific compliance or certification logic on their pricing pages.
+
+**Scheduling inside software you already pay for.** On Microsoft Teams, your hospital may already have [Microsoft Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6). Microsoft calls Shifts the scheduling and time tracking app "included with Microsoft Teams" in its own guide. Microsoft lists no separate charge for Shifts, but [each person who uses it needs a Teams license](https://learn.microsoft.com/en-us/microsoftteams/expand-teams-across-your-org/shifts/manage-the-shifts-app-for-your-organization-in-teams). Ask your IT contact whether your nurses, aides and PRN staff have a Teams license. Shifts is switched on by default for everyone with a license, though IT can block it.
+
+In Shifts, the manager builds and publishes the schedule. Nurses see their shifts on their phones, request time off, swap or offer a shift within the team, and clock in and out.
+
+Shifts checks very little of the schedule for you. Microsoft is testing a preview feature that [fills open shifts automatically](https://learn.microsoft.com/en-us/microsoft-365/frontline/shifts-auto-assign-open-shifts) within limits you set on daily and weekly hours, consecutive days and rest between shifts. Microsoft documents those limits only for the auto-assign feature. In November 2026 we found no Microsoft documentation of a check for overtime, for which nurse is qualified for which unit, or for how many nurses each shift needs. If your nurses already have Teams licenses, Shifts is the free tool to try first. Our guide to [whether Microsoft Copilot can build a nurse schedule](/blog/can-microsoft-copilot-generate-nurse-schedule) compares Shifts with Copilot.
 
 **Spreadsheet templates.** Google Sheets and Microsoft Excel nurse schedule templates are free and give you a structured grid for manual scheduling. Most stop there, so everything the template does not calculate, you calculate by hand. [Ours](/resources/nurse-schedule-template) goes further than a grid, which is why it gets its own section above, but it is still a spreadsheet and it still enforces nothing.
 
@@ -156,7 +163,7 @@ One honest limitation: if your primary need is a staff-facing app where nurses l
 ## What to Do This Week
 
 1. List the parts of scheduling that actually eat your week: building the grid, chasing availability, covering callouts, tracking overtime, and documenting changes. Mark which a free tool would handle.
-2. Pick one free tool that fits your size, such as Connecteam's free tier for a team of 10 or fewer, and trial it on the schedule-building portion only.
+2. Pick one free tool that fits your size, such as Shifts if your nurses already have Teams licenses, or Connecteam's free tier for a team of 10 or fewer, and trial it on the schedule-building portion only.
 3. For the parts it does not cover, write down your current manual process for callout coverage and overtime tracking, and estimate the hours each takes per week.
 4. Multiply those hours by your nurse manager's loaded hourly rate to get the real annual cost of "free."
 5. If that number is meaningful, compare it against an AI-native option like SimpleScheduleAI by reviewing [how the SimpleScheduleAI process works](/how-it-works) or [booking a call with our team](https://cal.com/gautham-8bdvdx/30min).
@@ -172,11 +179,15 @@ One honest limitation: if your primary need is a staff-facing app where nurses l
 
 **Q: Is there actually free nurse scheduling software?**
 
-Yes. NurseGrid is free as a personal shift calendar for individual nurses, and Connecteam and Sling offer free tiers for small teams. Google Sheets and Excel templates are free too. These work for basic shift assignment but do not document hospital requirements like overtime tracking, certification matching, callout coverage, or survey-ready records.
+Yes. If your nurses have Microsoft Teams licenses, the Shifts app comes with Teams. NurseGrid is free as a personal shift calendar for individual nurses, and Connecteam and Sling offer free tiers for small teams. Google Sheets and Excel templates are free too. These free options work for basic shift assignment but do not document hospital requirements like overtime tracking, certification matching, callout coverage, or survey-ready records.
 
 **Q: Is there a free nurse schedule template that does more than give you a blank grid?**
 
 Ours does. The [SimpleScheduleAI nurse schedule template](/resources/nurse-schedule-template) is a free Excel file, emailed to your work address. It works out required staffing per shift from your census, then flags overtime, rest-hour, consecutive-day, leave and coverage problems as you assign nurses. You still make every assignment yourself. It does not cover callouts, credential matching, or survey documentation.
+
+**Q: Does Microsoft Teams Shifts cost extra for nurse scheduling?**
+
+Microsoft lists no separate charge. Shifts is included with Microsoft Teams, but each person who uses it needs a Teams license, so check with IT whether your nurses have one. Shifts covers the schedule, time-off and swap requests, and a time clock. Microsoft documents none of the hospital checks listed in the questions below.
 
 **Q: Is NurseGrid free for a hospital to use for scheduling?**
 
@@ -202,6 +213,9 @@ Free tools do not remove the compliance and callout work; they just do not help 
 4. eCFR, [42 CFR 485.631, Condition of participation: Staffing and staff responsibilities](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
 5. NurseGrid, [NurseGrid Manager product page](https://nursegrid.com/for-organizations/nursegrid-manager/)
 6. Connecteam, [Pricing](https://connecteam.com/pricing/)
+7. Microsoft Support, [Get started in Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6)
+8. Microsoft Learn, [Manage the Shifts app for your organization](https://learn.microsoft.com/en-us/microsoftteams/expand-teams-across-your-org/shifts/manage-the-shifts-app-for-your-organization-in-teams)
+9. Microsoft Learn, [Auto-assign open shifts](https://learn.microsoft.com/en-us/microsoft-365/frontline/shifts-auto-assign-open-shifts)
 
 ---
 
