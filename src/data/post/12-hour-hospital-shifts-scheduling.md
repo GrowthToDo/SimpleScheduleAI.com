@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-05-28T00:00:00Z
-updateDate: 2026-09-25T00:00:00Z
+updateDate: 2026-11-01T00:00:00Z
 author: 'Pradeep Pandey'
 title: '12-Hour Nurse Schedule Examples: 3x12, 2-2-3, 4-on-4-off'
 excerpt: >
@@ -30,6 +30,7 @@ metadata:
 ## Table of Contents
 
 - [Why do critical access hospitals use 12-hour nursing shifts?](#why-do-critical-access-hospitals-use-12-hour-nursing-shifts)
+- [How do nurse shifts work in a hospital?](#how-do-nurse-shifts-work-in-a-hospital)
 - [What are the common 12-hour nurse shift patterns?](#what-are-the-common-12-hour-nurse-shift-patterns)
 - [What does a typical 12-hour nurse schedule look like?](#what-does-a-typical-12-hour-nurse-schedule-look-like)
 - [How many 12-hour shifts can a nurse work in a row?](#how-many-12-hour-shifts-can-a-nurse-work-in-a-row)
@@ -67,6 +68,31 @@ the number of scheduling permutations, but it amplifies the consequences of each
 individual scheduling decision. In a 12-hour model, one coverage gap costs you a
 full half of a day's nursing for an entire unit.
 
+## How do nurse shifts work in a hospital?
+
+A hospital needs nurses on the unit around the clock, so the day is split into shifts.
+The common split is two 12-hour shifts (day and night) or three 8-hour shifts (day, evening and night). Some units also use 10-hour or 4-hour shifts. Three 12-hour shifts make a 36-hour week. Five 8-hour shifts
+make a 40-hour week.
+
+At each shift change, the nurse going off gives report to the nurse coming on. Report
+covers each patient's condition, what is due next, and anything to watch. The schedule has to put enough nurses on each side of that change.
+
+Each hospital sets its own start times. As an example, here are the default times in
+our [free Excel nurse schedule template](/resources/nurse-schedule-template):
+
+| Shift          | Length   | Default times in our template |
+| -------------- | -------- | ----------------------------- |
+| Day 12-hour    | 12 hours | 7 AM to 7 PM                  |
+| Night 12-hour  | 12 hours | 7 PM to 7 AM                  |
+| Day 8-hour     | 8 hours  | 7 AM to 3 PM                  |
+| Evening 8-hour | 8 hours  | 3 PM to 11 PM                 |
+| Night 8-hour   | 8 hours  | 11 PM to 7 AM                 |
+
+If your day shift starts at 6 AM or 6:30 AM, the template has two spare rows where you
+add your own shift times. Shifts you add there count toward each nurse's hours and
+overtime. The rest of this guide covers the 12-hour model. Our comparison of [8-hour vs
+12-hour nursing shifts](/blog/8-hour-vs-12-hour-nursing-shifts) covers when each one fits.
+
 ## What are the common 12-hour nurse shift patterns?
 
 A 12-hour nurse schedule is usually built on one of a few repeating patterns. The pattern sets how
@@ -98,7 +124,7 @@ Here is one nurse's two weeks on each pattern, with a 7-day workweek starting Mo
 
 The table shows the trade in plain numbers. Fixed 3 × 12 never triggers overtime, but it puts nobody on weekends, so weekends need a separate rotation. The 2-2-3 builds in every other weekend off, but the working week runs 60 hours, which is 20 hours of overtime under the [federal 40-hour workweek](https://www.dol.gov/agencies/whd/overtime). Switching to the 8-and-80 method covered below does not remove it. That method owes overtime on every hour past 8 in a day, which comes to 28 hours across these same seven shifts. The 4 on, 4 off pattern moves through the week, so some weeks carry four shifts and 48 hours.
 
-If you want a blank grid to try these on your own roster, our [free Excel nurse schedule template](/resources/nurse-schedule-template) ships with 12-hour day and night shift codes and flags overtime. The [free nurse schedule templates](/blog/free-nurse-schedule-templates) guide covers 8, 10 and 12-hour layouts.
+If you want a blank grid to try these patterns on your own roster, the free template from the shift-times table above adds up each nurse's weekly hours and flags overtime. The [free nurse schedule templates](/blog/free-nurse-schedule-templates) guide covers 8, 10 and 12-hour layouts.
 
 ## How many 12-hour shifts can a nurse work in a row?
 
