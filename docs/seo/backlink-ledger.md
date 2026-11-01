@@ -54,7 +54,31 @@ Bing MCP pinned to commit `ead1a469` since the 2026-10-01 repair (upstream
 - Bing index: `InIndex` 153 on 2026-10-29, up from 142 on 2026-09-30. `Code2xx` 186,
   `BlockedByRobotsTxt` 0 every day, no 5xx all October. Series has no rows for
   10-26, 10-27, 10-30, 10-31.
-- GSC Links export: due this (November) run, quarterly; founder-side ask.
+- GSC Links export: done, see the next block.
+
+### GSC Links export 2026-11-01 (founder export, "Latest links")
+
+**11 referring domains, 29 linking URLs** (was 5 domains on 2026-07-21). "Latest
+links" lists recently crawled links only, so a domain missing from it is not proven
+lost: crunchbase.com and alternativeto.net (both in the July baseline) are absent.
+
+| Domain | URLs | What it is | Last crawled |
+| --- | --- | --- | --- |
+| linkedin.com | 11 | Founder's two LinkedIn articles; one of them in 9 language mirrors | 2026-10-24 |
+| reddit.com | 4 | r/healthcare thread, language variants | 2026-04-03 |
+| growthtodo.com | 4 | Founder-owned | 2026-10-14 |
+| goodfirms.co | 2 | Software listing + a category page | 2026-08-23 |
+| registerednursing.org | 1 | Article "nurse staffing and sustainability" (editorial) | 2026-08-15 |
+| nursemagazine.co | 1 | Q&A on shift handoffs (editorial) | 2026-08-12 |
+| saashub.com | 1 | Listing | 2026-10-06 |
+| signalhire.com | 1 | Company data page (scraper-type) | 2026-09-29 |
+| connectively.us | 1 | Founder profile | 2026-07-31 |
+| f6s.com | 1 | Listing | 2026-07-23 |
+| g2.com | 1 | Seller profile | 2026-05-05 |
+
+Read: the two editorial domains (registerednursing.org, nursemagazine.co) are new
+since July and are the only links a third party chose to give. Everything else is a
+profile, a listing, or our own. Next export: 2027-02 (quarterly).
 
 ## Spam-link watch (opened 2026-08-30)
 

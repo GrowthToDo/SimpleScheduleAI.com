@@ -43,6 +43,7 @@ this skill is the machinery: which pull, which script, where results go.
 | Which titles to rewrite? | `docs/seo/ctr-rewrite-queue.md` |
 | Are AI assistants citing us? | `npm run llm-citations` (`docs/seo/aeo-tracking.md`) |
 | Which pages do AI assistants send visitors to? | GA4 `run_report`, sessionSource + landingPage, US only, regex `match_type` 6 (audit step 2b) |
+| How often does Google show us in AI Overviews or AI Mode? | GSC web UI only: Performance > Generative AI (Beta), EXPORT for pages and queries (audit step 2b) |
 | What happened this month? | `docs/seo/monthly-seo-audit.md` |
 
 ## The three drop types

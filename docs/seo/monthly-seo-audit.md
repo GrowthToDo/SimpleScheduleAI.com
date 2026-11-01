@@ -42,9 +42,13 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
    exactly "chatgpt", never "chatgpt.com". Tested 2026-10-30 on the same 90 days:
    FULL gave 0 US sessions, PARTIAL gave 9 across 8 landing pages. The September
    audit's "0" may be this artifact; its match type was not recorded.
-   Monthly also: open GSC's web UI and check whether a Search Console AI report
-   (AI Overviews / AI Mode) exists for the property. It is not in the GSC API or
-   our MCP (the tool list was checked 2026-10-30), so it is a manual one-minute look. **Baseline 2026-08-03: 0 US
+   Monthly also: GSC web UI, **Performance > Generative AI** ("Generative AI
+   features", Beta; found 2026-11-01). Record total impressions for 28 days, search
+   type Web, and use EXPORT for the page and query breakdown. First reading
+   2026-11-01: **7.32k impressions in 28 days**, daily rising from about 120 (Oct 3)
+   to a peak near 430 (Oct 27-28). The report shows impressions only. It was not in
+   the GSC API or our MCP tool list when checked 2026-10-30; re-check each run.
+   GA4 AI-referral **baseline 2026-08-03: 0 US
    sessions.** NEVER report the unfiltered number: founder verification clicks from
    Hyderabad/Bengaluru produced 168 chatgpt.com sessions from ~1 user in the same
    window and would fake a "#2 channel" story. Directional metric only (paid-ChatGPT
