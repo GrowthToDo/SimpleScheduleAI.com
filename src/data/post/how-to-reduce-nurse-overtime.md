@@ -130,7 +130,7 @@ Beyond who gets called and what gets tracked, the schedule's own structure is a 
 
 ## What Is a Step-by-Step Overtime Reduction Process?
 
-1. **Audit the last 90 days of overtime.** From payroll: which nurses, how many hours, and was each occurrence scheduled or callout-driven? This one split tells you whether your problem is schedule construction or call order.
+1. **Audit the last 90 days of overtime.** From payroll: which nurses, how many hours, and was each occurrence scheduled or callout-driven? This one split tells you whether your problem is schedule construction or call order. Our guide to [nurse scheduling metrics](/blog/nurse-scheduling-metrics-small-hospital) works through that split on an example roster.
 2. **Review the last 30 days of callouts.** Who was called first, who covered, and what were their hours at that moment? If the same few nurses covered most events regardless of hours, defaults are the problem.
 3. **Build the ranked callout list.** Names, credentials, current-period hours, availability. Sort by hours ascending. Use it on every callout.
 4. **Verify the payroll threshold.** Confirm the system's overtime rule matches what your hospital has actually adopted, 40-hour default or a documented 8-and-80 agreement.

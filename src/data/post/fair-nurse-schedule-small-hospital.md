@@ -208,7 +208,7 @@ Post the counts with the schedule. Each cycle, post a one-page count sheet next 
 
 When a nurse raises a fairness question, start with the numbers. Put that nurse's counts next to those of nurses on the same hours. If the nurse is right, say so, and name the shift you will move in the next cycle. If the counts are even, show the written rule that explains the difference.
 
-A question about the same pattern over several cycles may be accurate, and the count sheet shows it. Keep each cycle's sheet with the posted schedule; our guide to a [nurse schedule audit trail](/blog/nurse-schedule-audit-trail) covers what else to keep.
+A question about the same pattern over several cycles may be accurate, and the count sheet shows it. Keep each cycle's sheet with the posted schedule; our guide to a [nurse schedule audit trail](/blog/nurse-schedule-audit-trail) covers what else to keep. To read the counts next to overtime and callouts, see our guide to [nurse scheduling metrics](/blog/nurse-scheduling-metrics-small-hospital).
 
 ## How Does SimpleScheduleAI Keep a Nurse Schedule Fair?
 

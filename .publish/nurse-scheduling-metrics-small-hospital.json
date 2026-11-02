@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-scheduling-metrics-small-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-02T16:58:29.276Z",
+      "contentHash": "e4aa1e18e37350dd170e4df2b27ae701042e6a6f17b0f417a587b16d99b78050"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-02T16:58:31.443Z",
+      "contentHash": "e4aa1e18e37350dd170e4df2b27ae701042e6a6f17b0f417a587b16d99b78050"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-02T16:58:33.385Z",
+      "contentHash": "e4aa1e18e37350dd170e4df2b27ae701042e6a6f17b0f417a587b16d99b78050"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-02T16:58:33.465Z",
+      "contentHash": "e4aa1e18e37350dd170e4df2b27ae701042e6a6f17b0f417a587b16d99b78050"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-02T16:58:33.829Z",
+      "contentHash": "e4aa1e18e37350dd170e4df2b27ae701042e6a6f17b0f417a587b16d99b78050"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-02T16:58:33.829Z",
+      "contentHash": "e4aa1e18e37350dd170e4df2b27ae701042e6a6f17b0f417a587b16d99b78050"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-02T16:58:33.835Z",
+      "contentHash": "e4aa1e18e37350dd170e4df2b27ae701042e6a6f17b0f417a587b16d99b78050"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-02T16:58:33.840Z",
+      "contentHash": "e4aa1e18e37350dd170e4df2b27ae701042e6a6f17b0f417a587b16d99b78050"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-11-02T16:58:22.733Z",
+      "contentHash": "f0e6f161a6e7cd63a00bb2db89a9fc85789d2f61ab69182b39be190b5e0b563b"
+    },
+    "factCheck": {
+      "value": "NOT_REQUIRED",
+      "setBy": "claude",
+      "setAt": "2026-11-02T16:58:24.876Z",
+      "contentHash": "f0e6f161a6e7cd63a00bb2db89a9fc85789d2f61ab69182b39be190b5e0b563b"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-11-02T16:58:27.020Z",
+      "contentHash": "f0e6f161a6e7cd63a00bb2db89a9fc85789d2f61ab69182b39be190b5e0b563b"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 58.3,
+        "headings": 80,
+        "actionability": 50,
+        "attention": 90
+      },
+      "overall": 64.1,
+      "counts": {
+        "sections": 10,
+        "rereads": 11,
+        "undefinedTerms": 14,
+        "headingsAnswered": 8,
+        "mondayActions": 6,
+        "blockedActions": 6,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-11-02T00:00:00Z",
+      "postType": "howto",
+      "observations": {
+        "undefinedTerms": [
+          "regular rate (defined only as 'the hourly figure overtime is calculated from', which is circular)",
+          "shift differentials",
+          "straight time",
+          "FLSA",
+          "build / next build (of the schedule)",
+          "licensed nurses (RN only, or RN plus LVN?)",
+          "same position (same job title? same FTE?)",
+          "relief factor",
+          "audit trail",
+          "charge shifts",
+          "AI-native",
+          "billed rate",
+          "NIOSH",
+          "NSI"
+        ],
+        "mondayActions": [
+          "Pull the last three four-week cycles of posted schedules and the payroll export for the same weeks",
+          "Start a callout log at the nurses' station if I do not have one",
+          "Count weekend shifts per full-time nurse and flag anyone at 5 or more in a cycle",
+          "Work out callouts per 100 scheduled shifts for each of the three cycles",
+          "Check whether the nurses picking up night callouts are the same ones above the weekend average",
+          "Pick one change and write down the number I will check next cycle"
+        ],
+        "blockedActions": [
+          "Match every overtime hour to the shift that caused it: overtime is counted by the week, so the post never says which shift in a 48-hour week gets the overtime label (the first? the last? the picked-up one?)",
+          "Split overtime into posted-schedule vs callout-cover when a nurse had both in the same week",
+          "Calculate the regular rate including differentials and 'most bonuses' without being told which bonuses count",
+          "Record how each callout gap was filled when my existing notes do not say",
+          "Decide what to change about night coverage once the sheet shows nights drive overtime (sent to another guide)",
+          "Compare callouts on nights or weekends against 'those shifts' share of the schedule' without being shown the math"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Do You Need From Your Own Files to Review a Nurse Schedule?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Find Out Which Shifts Your Overtime Comes From?",
+            "rereadCount": 3,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Measure Nurse Callouts?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Check Whether the Hard Shifts Are Shared Fairly?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Put a Cost on What the Schedule Review Shows?",
+            "rereadCount": 3,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "How Often Should You Review Your Nurse Scheduling Metrics?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Can SimpleScheduleAI Send You for This Review?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-11-02T16:57:11.581Z",
+      "contentHash": "23997a4348ee0e0430f39d21bf290e59e815e916859425c857dc03bd6629f599"
+    }
+  }
+}

@@ -4,7 +4,12 @@ Drafts deliberately deferred. Each entry: **why parked**, **what would make us r
 
 Convention: parked drafts use `publishDate: 2099-01-01T00:00:00Z` so they stay out of the schedule but remain in `src/data/post/` with `draft: true`. Killed drafts are `git rm`'d and recovered from history if needed (`git log --all --diff-filter=D -- <path>`).
 
-When a parked draft is revived, the entry moves to the bottom of this file under a `## Revived` section with the actual publish date — this keeps the parking history auditable.
+When a parked draft is revived, the entry moves to the bottom of this file under a `## Revived
+
+### cah-nurse-schedule-data-analysis
+
+- **Revived:** rewritten and published 2026-11-02 as `nurse-scheduling-metrics-small-hospital` (next-15 Oct plan #13). Brief: `docs/seo/briefs/2026-11-nurse-schedule-data.md`.
+` section with the actual publish date — this keeps the parking history auditable.
 
 ---
 
@@ -16,14 +21,6 @@ When a parked draft is revived, the entry moves to the bottom of this file under
 - **Parked:** 2026-06-05 (commit at this entry)
 - **Reason:** Generic title with no clear differentiation from the live `/blog/best-nurse-scheduling-software-2026`. As written, it cannibalizes the workhorse post (currently the #1 GSC impression page sitewide).
 - **Revival trigger:** A unique positioning angle emerges, such as a "healthcare scheduling software" treatment specifically for physician + nurse + ancillary multi-role facilities (which is genuinely different from the nursing-only 2026 post). Or: an "AI healthcare scheduling" angle that complements `/ai-nurse-scheduling` rather than the buyer's-guide 2026 post.
-- **Next review:** 2026-09-05 (quarterly)
-
-### cah-nurse-schedule-data-analysis
-
-- **File:** `src/data/post/cah-nurse-schedule-data-analysis.md`
-- **Parked:** Date unknown (already at `publishDate: 2099-01-01` before parking-lot doc existed)
-- **Reason:** Not logged at time of parking. Founder to fill in when convenient.
-- **Revival trigger:** TBD
 - **Next review:** 2026-09-05 (quarterly)
 
 ### fair-nurse-schedule-critical-access-hospital
