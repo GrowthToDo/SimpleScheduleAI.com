@@ -26,7 +26,7 @@ metadata:
 - A schedule audit trail is a record of what the schedule said, what changed, who changed it, and when. The posted schedule alone is not one, because it only shows the final state. Our comparison of [scheduling software and Excel](/blog/nurse-scheduling-software-vs-excel) covers why a single spreadsheet cannot be one.
 - Most published guidance on staffing records is written for skilled nursing facilities filing Payroll-Based Journal data. Most critical access hospitals file none of it, so the guidance does not transfer. Our guide to [CMS PBJ reporting](/blog/cms-pbj-reporting-scheduling-software) has the one-question test for which side you are on.
 - What a hospital actually answers to is narrower and more immediate: a surveyor comparing the staff in front of them to the schedule you hand over during the survey, and asking about the difference. The wider record set is in our guide to [staying CMS compliant through the schedule](/blog/how-to-stay-cms-compliant-nurse-scheduling).
-- Whether your current tool keeps this record is worth checking rather than assuming. One hospital IT admin reviewing a general-purpose scheduling app wrote that it has "No Auditing capability to see if unauthorized changes were made, and does not work for complex workflows."
+- Whether your current tool keeps this record is worth checking rather than assuming. One hospital IT admin reviewing a general-purpose scheduling app wrote that it has "No Auditing capability to see if unauthorized changes were made, and does not work for complex workflows." That app's help center now documents a 60-day shift history, so check how far back your tool's record goes.
 - The gap that matters sits between the day you post the schedule and the end of the cycle: two or three weeks of swaps, callouts and replacements that the posted version never shows. Closing that gap costs nothing. A dated copy of the schedule plus a running list of changes, in a spreadsheet tab or a notebook, is a real audit trail.
 
 ## Table of Contents
@@ -115,13 +115,15 @@ The practical failure is rarely the posted schedule, which is usually fine. It i
 
 Possibly not, and this is worth ten minutes rather than an assumption. Worth separating two things while you look: a record of who CHANGED the schedule is not a record of who VIEWED it, a distinction that matters more since [clinician schedules turned up on the open web](/articles/where-does-your-nurse-schedule-live) at about fifty health systems.
 
-Scheduling tools built for retail and hospitality often treat the schedule as a live document to be kept current, which is exactly right for a coffee shop and leaves nothing behind. A hospital IT admin reviewing [When I Work](/blog/best-nurse-scheduling-app) on Capterra put it plainly:
+Scheduling tools built for retail and hospitality often treat the schedule as a live document to be kept current, which is exactly right for a coffee shop and often leaves little behind. A hospital IT admin reviewing [When I Work](/blog/best-nurse-scheduling-app) on Capterra put it plainly:
 
 > "No Auditing capability to see if unauthorized changes were made, and does not work for complex workflows."
 >
 > Jonathan R, IT Admin, Hospital and Health Care, 51 to 200 employees, February 25, 2026, Capterra
 
-One review is not a verdict, and When I Work is well rated overall at 4.5 out of 5 across roughly 1,300 Capterra reviews as of August 2026. The quote is here because of who wrote it. An IT admin at a healthcare organization of 51 to 200 people is close to your scale, and he is describing this exact gap in a tool he already had.
+One review is not a verdict, and When I Work is well rated overall at 4.5 out of 5 across roughly 1,300 Capterra reviews as of August 2026. The quote is here because of who wrote it. An IT admin at a healthcare organization of 51 to 200 people is close to your scale, and the reviewer is describing this exact gap in a tool the organization already had.
+
+Since that review, When I Work's help center documents a [Shift History report](https://help.wheniwork.com/articles/shift-history-report-details/) for shifts from the last 60 days, including who updated each shift. Check whether 60 days covers what your hospital needs to keep. Other general scheduling apps document change logs too, as our [comparison of five general scheduling apps](/blog/best-scheduling-software-25-bed-hospital#when-is-a-generic-scheduling-app-enough-for-a-small-hospital) shows.
 
 Three questions will tell you where you stand, and they apply whether your schedule lives in software, a spreadsheet or a binder:
 
@@ -139,7 +141,7 @@ The change log is kept for you rather than by you. Every schedule change is reco
 
 You can ask for any slice of it: one nurse, one type of change, one date range. It comes back as a spreadsheet file. Email it, print it, put it in a binder. The record is yours, not something that only exists inside our system.
 
-Callouts get the same treatment, including who was contacted and in what order, not just who ended up working. If a drop in patient numbers leaves a shift with more nurses than it needs, the entry says so in those words, so the record shows why somebody was taken off rather than just showing that they were.
+Callouts get the same treatment, including each escalation step attempted and its result, not just who ended up working. If a drop in patient numbers leaves a shift with more nurses than it needs, the entry says so in those words, so the record shows why somebody was taken off rather than just showing that they were.
 
 Two details exist because a question from a surveyor is not the same as a question from a nurse. Any schedule the system built can be rebuilt later exactly as it was first produced, so "what did it originally give us" has an answer. And when the software leaves a shift short while staff were available, without a rule that explains it, that entry gets flagged instead of passing quietly. The awkward cases stay in the record.
 

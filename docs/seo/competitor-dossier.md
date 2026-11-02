@@ -226,6 +226,42 @@ Other App Store review titles safe to quote with attribution (bodies NOT yet ver
 
 ---
 
+## Connecteam
+
+**Product:** General employee scheduling and operations app (Connecteam, connecteam.com) with a
+healthcare page. Not a healthcare-specific scheduler.
+
+No Capterra product ID recorded; ratings not yet verified.
+
+**Documented capabilities (vendor pages, read 2026-11-02):** Source brief:
+`docs/seo/briefs/2026-11-healthcare-vs-generic-scheduling-software.md` section 5. Docs, not a
+hands-on test; "not documented" never means "cannot".
+
+- **Overtime warning while scheduling: DOCUMENTED.** "Get alerted before you schedule overtime"
+  and "Set overtime and other schedule limits before publishing"
+  (connecteam.com/employee-scheduling-app/). Rules include custom pay-period, weekly, holiday and
+  consecutive-day overtime (connecteam.com/employee-time-clock-app/overtime).
+- **Qualification gating: DOCUMENTED.** "qualify employees for shifts independently of job
+  qualifications" (help.connecteam.com/en/articles/8693629-job-schedule-qualifying-users-to-shifts);
+  "open shifts for qualified employees to claim" (connecteam.com/employee-scheduling-app/), with
+  approval.
+- **Change history: DOCUMENTED.** Scheduler activity lists shifts created, edited and deleted;
+  viewing from the Operations Basic plan, export from the Expert plan
+  (help.connecteam.com/en/articles/9337115-how-to-view-the-job-scheduler-s-activity).
+- **Coverage / minimum staffing: NOT DOCUMENTED** in the pages read.
+- **Healthcare page: YES** (connecteam.com/industries/healthcare-app/); lists "Fill call-outs
+  fast". A HIPAA-registered account is a paid option listed with "additional fees" on the pricing
+  page (connecteam.com/pricing/).
+- **Pricing (list, read 2026-11-02, connecteam.com/pricing/):** free for up to 10 users;
+  Operations hub Basic $29 or $35/mo for the first 30 users, Advanced $49 or $59, Expert $99 or
+  $119. Basic adds $0.80 per extra user, Expert $4.20 per extra user per the page. The two price
+  sets appear to be yearly vs monthly billing (toggle reads "Yearly save 18% Monthly"); the
+  pairing was not verified by toggling.
+- **NOT DOCUMENTED in sources read:** 8-and-80 hour counting, credential expiry dates, rest or
+  consecutive-day scheduling rules (not checked).
+
+---
+
 ## CronShift
 
 **Product:** Healthcare-focused workforce management and scheduling platform. Self-described (cronshift.com, verified 2026-06-12): "The first all-in-one workforce management platform transforming how healthcare teams work," focused on "solving the staffing crisis, optimizing labor costs, and simplifying operations." Positioning tagline in Google SERP: "the only platform purpose-built for healthcare facilities to manage complex staff rosters, emergency shift fulfillment, and compliance."
@@ -260,9 +296,34 @@ segment. Healthcare page: deputy.com/industry/healthcare.
 
 **Capterra URL (verified 2026-05-15):** https://www.capterra.com/p/167811/Deputy/reviews/
 
-**Important caveat:** Healthcare page does not document HIPAA, BAA, CMS §485.635 audit-trail,
-FLSA 8-and-80 tracking, or credential constraints. Verify current tier capabilities with vendor
+**Important caveat:** HIPAA/BAA and FLSA 8-and-80 tracking are not documented in the sources
+read (2026-11-02). CORRECTED 2026-11-02: an earlier version of this line said the healthcare page
+does not document credential constraints. Deputy's help center DOES document Training Tags
+(block below), and expiry tracking exists in a paid HR add-on. No federal CAH rule requires a
+schedule-change audit trail (brief section 6). Verify current tier capabilities with vendor
 before citing compliance capabilities.
+
+**Documented capabilities (vendor pages, read 2026-11-02):** Source brief:
+`docs/seo/briefs/2026-11-healthcare-vs-generic-scheduling-software.md` section 5. Docs, not a
+hands-on test.
+
+- **Overtime tags and warnings: DOCUMENTED, BETA.** "An overtime tag will appear on any shift"
+  that triggers overtime. Needs library pay rates: "Legacy pay rate configurations do not support
+  these warnings". It warns; "Schedule anyway" is offered
+  (help.deputy.com/hc/en-au/articles/15192896170895-How-do-I-enable-and-understand-overtime-tags-and-warnings-on-the-schedule-BETA).
+- **Training Tags: DOCUMENTED.** Tags "identify team members who are qualified, trained, or
+  approved to work" (help.deputy.com/hc/en-au/articles/4621991456527-Setting-up-Deputy-for-a-healthcare-business).
+- **Credential expiry tracking: paid HR add-on** (same healthcare setup guide). Deputy's blog
+  claims expiry warnings at scheduling; that is a vendor blog, not a help-center article, so do
+  not cite it as documented behavior.
+- **Change history: DOCUMENTED, paid tier.** Shift audit report, Analytics+ only: "history of
+  changes made to a shift including, when, what and by whom"
+  (help.deputy.com/hc/en-au/articles/12016108679823-Shift-audit-report-Analytics-only).
+- **Staff coverage planner: DOCUMENTED.** Staff Coverage model lets managers "set the amount of
+  staff required" per area
+  (help.deputy.com/hc/en-au/articles/4688843118223-Using-a-simple-staff-coverage-planner-when-scheduling).
+- **Healthcare page: YES.** deputy.com/industry/healthcare plus the healthcare setup guide above.
+- **NOT DOCUMENTED in sources read:** HIPAA/BAA, 8-and-80 hour counting.
 
 ### Charge-scheduling capability, from Deputy's own pages (verified 2026-08-25)
 
@@ -394,9 +455,35 @@ Free tier available for one location.
 
 **Capterra URL (verified 2026-07-15):** https://www.capterra.com/p/153076/Homebase/reviews/
 
-**Important caveat:** Product page does not document HIPAA, BAA, CMS §485.635 audit-trail,
-FLSA 8-and-80 tracking, or credential constraints. CAHs should verify compliance capabilities
-directly with vendor.
+**Important caveat:** HIPAA/BAA, FLSA 8-and-80 tracking, and credential EXPIRY dates are not
+documented in the sources read (2026-11-02). The Homebase help center (support.joinhomebase.com)
+returned a login wall on 2026-11-02, so no help-center article could be read; everything below is
+from public marketing pages and the vendor's own blog. Silence there is missing documentation,
+never proof of a missing feature. No federal CAH rule requires a schedule-change audit trail
+(brief section 6). CAHs should verify compliance capabilities directly with vendor.
+
+**Documented capabilities (vendor pages, read 2026-11-02):** Source brief:
+`docs/seo/briefs/2026-11-healthcare-vs-generic-scheduling-software.md` section 5.
+
+- **Overtime warning while scheduling: DOCUMENTED (marketing page).** Alerts "alert you when an
+  employee is about to hit overtime" while scheduling (joinhomebase.com/labor-law-compliance).
+  Threshold basis not stated on the page.
+- **Qualification limits: NOT DOCUMENTED publicly** (help center is login-gated). Healthcare page
+  says it will "prevent staff members from clocking into shifts they're not qualified for", and
+  open shifts are handled by "requiring manager approval" (joinhomebase.com/healthcare; page
+  title still reads "in 2024").
+- **Change history: DOCUMENTED (marketing page only).** "Managers can view a history of all shift
+  changes" (joinhomebase.com/employee-scheduling/shift-swapping).
+- **Minimum staffing: NOT DOCUMENTED.** The only source is a Capterra reviewer, not Homebase
+  (Angela P. quote below: "not able to limit number of people on a shift").
+- **Healthcare page: YES, with a vendor-drawn limit.** The page says Homebase "wasn't designed for
+  hospitals or medical staff specifically" (joinhomebase.com/healthcare). The June 23, 2026 guide
+  says "nurse rotation management, or academic medical centers" are not the right fit
+  (joinhomebase.com/blog/healthcare-staff-scheduling-software). Quote it; it is the vendor
+  drawing the line.
+- **Pricing (list):** $0 Basic (1 location, up to 10 employees); Essentials $30, Plus $70,
+  All-in-One $120, per LOCATION per month, unlimited employees (joinhomebase.com/pricing/).
+- **NOT DOCUMENTED in sources read:** HIPAA/BAA, 8-and-80 hour counting, credential expiry dates.
 
 ### Verified Reviewer Quotes
 
@@ -1145,6 +1232,43 @@ _(Note: some vendor copy contains em-dashes; reproduce only inside quoted vendor
 
 ---
 
+## Sling
+
+**Product:** General employee scheduling app (Sling, getsling.com) with a healthcare page. Not a
+healthcare-specific scheduler.
+
+No Capterra product ID recorded; ratings not yet verified.
+
+**Documented capabilities (vendor pages, read 2026-11-02):** Source brief:
+`docs/seo/briefs/2026-11-healthcare-vs-generic-scheduling-software.md` section 5. Docs, not a
+hands-on test; "not documented" never means "cannot".
+
+- **Overtime warning while scheduling: DOCUMENTED.** Sling "alerts you whenever you schedule
+  employees into weekly overtime" (support.getsling.com/en/articles/4683228-set-overtime). Basis
+  described as "over 40 hours in a workweek"; daily and California double-time rules also
+  described. Premium plan lists "Overtime tracking" (getsling.com/pricing/).
+- **Qualification gating: DOCUMENTED, position-based.** Positions "separate your employees'
+  skills, responsibilities, and more"
+  (support.getsling.com/en/articles/3678084-3-adding-positions). An employee sees a shift only
+  with the same location and position on their profile
+  (support.getsling.com/en/articles/6408495-available-shift-visibility). Healthcare page: "set
+  eligibility requirements for each shift" (getsling.com/healthcare/).
+- **Change history: DOCUMENTED.** Activity log "up to 60 days in the past", admins and managers;
+  per-shift history, web only (support.getsling.com/en/articles/6442847-activity-log and
+  support.getsling.com/en/articles/1176782-viewing-shift-history).
+- **Coverage requirement: DOCUMENTED, paid plans only.** "slots" for required employees per job
+  (support.getsling.com/en/articles/3104957-getting-your-coverage-right).
+- **Healthcare page: YES.** "From regional hospitals to neighborhood dentists"
+  (getsling.com/healthcare/). Business plan lists "Sick call-outs" tracking
+  (getsling.com/pricing/).
+- **Pricing (list, read 2026-11-02, getsling.com/pricing/):** free for up to 30 users per the
+  pricing page (the healthcare page says 50); Premium $2.00 monthly or $1.70 annual per user;
+  Business $4.00 monthly or $3.40 annual per user.
+- **NOT DOCUMENTED in sources read:** 8-and-80 hour counting, credential expiry dates,
+  HIPAA/BAA, census or ratio-based requirements.
+
+---
+
 ## SmartLinx
 
 **Product:** Workforce management platform for mid-size healthcare. Documented focus: long-term
@@ -1491,8 +1615,40 @@ ID was found to be missing from this section, which cost a re-verification pass.
   Capterra's own page states "Last updated August 26th, 2026".
 - Prior reading (2026-04-30): 4.5/5 (1,289 reviews). Rating flat, review count +11.
 
-**Important caveat:** Product page does not document HIPAA, BAA, CMS §485.635 audit-trail,
-FLSA 8-and-80 tracking, or credential constraints. Verify with vendor for hospital use cases.
+**Important caveat:** HIPAA/BAA, FLSA 8-and-80 tracking, and credential EXPIRY dates are not
+documented in the sources read (2026-11-02). Qualification gating (positions and tags) and a
+shift change history ARE documented in the help center (block below), so never write that the
+product has no credential constraints or no audit capability. No federal CAH rule requires a
+schedule-change audit trail (brief section 6), so a missing "CMS §485.635 audit trail" is not a
+gap. Verify with vendor for hospital use cases.
+
+**Documented capabilities (vendor pages, read 2026-11-02):** Source brief:
+`docs/seo/briefs/2026-11-healthcare-vs-generic-scheduling-software.md` section 5. Docs, not a
+hands-on test; "not documented" never means "cannot".
+
+- **Overtime warning while scheduling: DOCUMENTED.** Shows overtime impact: "displays the
+  overtime impact when scheduling" (help.wheniwork.com/articles/overtime-visibility/). Alerts use
+  "the configured overtime thresholds" (help.wheniwork.com/articles/setting-overtime-alerts-computer/).
+  Docs example uses a 40-hour weekly threshold; daily and double overtime also supported. The
+  max-hours setting is warn, not block: "Users can still be scheduled past their configured max
+  hours" (help.wheniwork.com/articles/max-hours-enforcement-reference/). The same page says
+  max-hours enforcement hides OpenShifts from users who would exceed, and does not count overtime.
+- **Qualification / position / tag limits: DOCUMENTED.** Positions plus tags: "Tags provide an
+  additional eligibility requirement" layered on positions; tag examples include "Certifications".
+  OpenShift pickup is limited to shifts "they are qualified to work"
+  (help.wheniwork.com/articles/when-to-use-positions-and-tags/). No expiry dates documented.
+- **Change history: DOCUMENTED.** "Shift history is available for shifts from the last 60 days";
+  fields include who updated the shift (help.wheniwork.com/articles/shift-history-report-details/
+  and help.wheniwork.com/articles/shift-history-computer/).
+- **Minimum staffing: NOT DOCUMENTED** as a per-shift headcount that blocks publishing. Pro plan
+  lists "Custom Unit Forecasting" and "Scheduling rules" (minimum rest between shifts, 1 to 12
+  hours same day, 1 to 18 hours different days)
+  (help.wheniwork.com/articles/scheduling-settings/ and wheniwork.com/pricing).
+- **Healthcare page: YES.** "Medical & Healthcare Staff Scheduling Software"; says it "acts as
+  scheduling software for hospitals" (wheniwork.com/industries/healthcare).
+- **Pricing (list, per user per month):** Essentials $2.50, Pro $5, Premium $8
+  (wheniwork.com/pricing).
+- **NOT DOCUMENTED in sources read:** HIPAA/BAA, 8-and-80 hour counting, credential expiry dates.
 
 ### Verified Reviewer Quotes
 
@@ -1521,7 +1677,6 @@ the quote usable in critical access content.
 
 The following appear in posts but have no verified quotes collected yet. Go online for these:
 
-- **Connecteam** — mentioned in deputy-alternatives-healthcare.md
 - **OnShift** — now has a full section below (added 2026-08-25). Reviewer quotes still not collected; ratings stub: Capterra ID 122212, 3.9/5 (verified 2026-06-15).
 - **Shiftboard** — Capterra product "ScheduleFlex" ID 81956, 4.4/5 (verified 2026-06-15). Markets to organizations of 25 to 100,000 employees. FABRICATED quote, do not cite: "Minimum 100 employees to be viable." The 100-employee figure traces only to a Connecteam author's account of a sales call (connecteam.com/reviews/shiftboard), not a documented policy or a customer review.
 - **TCP Scheduling** (enterprise tier, separate from Aladtec and TimeClock+)
@@ -1571,6 +1726,7 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 
 | Date       | Action                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-11-02 | Added documented-capability blocks for When I Work, Homebase, Deputy (help centers read 2026-11-02; Homebase help center login-gated, so marketing pages and blog only); new Connecteam and Sling sections. Corrected stale "does not document credential constraints" lines. Source: brief 2026-11-healthcare-vs-generic-scheduling-software.md | Claude |
 | 2026-11-01 | Monthly `competitor-watch` + `sitemap-diff` run (November audit). 9 of 17 watched pages moved; no M7, YouShift or QGenda page changed, and no watched page changed title, meta description, CTA or price. **SmartLinx homepage H1 dropped its customer count.** Before: `Join 5,000+ Senior Care Leaders Optimizing Their Workforce with Smartlinx`; after: `Join Thousands of Senior Care Leaders Optimizing Their Workforce with Smartlinx`. Title, description and H2 set unchanged. **In-House Health published a "Part 3" blog post.** On home, product, skilled-nursing and about, the H2 list under `PR & Blog` (a latest-posts list) gained `Part 3: The ground changes underneath` and lost `The Future of AI Agents in Nurse Scheduling`; it follows `Part 2: A house of cards`. PR-blog page H2s added: `Part 3: The ground changes underneath`, `Great Clinical Scheduling is More than CRUD`, `The Future of AI Agents in Nurse Scheduling`, `Insightful talks with Joseph De Veyra`; removed: `The Never-Ending Puzzle - Building Nurse Schedule`, `Insightfull talks with Joseph De Veyra` (typo fix of the added one), `Recent trends in nurse staffing ratios`, `Nursing care impact on patient outcomes`. Post content not fetched. Body-text churn only: NurseGrid (-1 word), ShiftWizard (-36), Aladtec home (-55, compared against the 2026-09-01 snapshot). Pricing sentinels `m7health.com/pricing` and `inhouse.health/pricing` still 404. Sitemaps: QGenda +6/-4 (new: `webinar/how-ssm-health-reimagined-workforce-management-for-nurses`, `webinar/how-ssm-health-is-connecting-scheduling-and-staffing-to-strengthen-its-workforce`, `blog/the-ultimate-guide-to-ambulatory-capacity-management`, `video/the-capacity-you-already-have-podcast`, `credentialing-ama-vericre`, `anesthesiology-2026-giveaway`; removed: `acep-2026`, `beckers-hit-giveaway-26`, `mgma-2026-giveaway`, `mgma-annual-conference-2026`), OnShift +3/-1 (two Applause Awards pages, `resources/blog/the-cost-of-uninformed-workforce-decisions`; removed `resources/blog/why-care-quality-is-the-most-underrated-financial-strategy`), SmartLinx +1 (`/hostedtime/`), M7, YouShift and NurseGrid 0. aladtec.com 403, ShiftWizard not an XML sitemap (known gaps). | Claude |
 | 2026-10-20 | **Two support quotes re-verified live (Playwright)** for the `vendor-support-decline-nurse-scheduling-software` draft. QGenda, Wilmer R., Practice Administrator, Medical Practice, 3.0 stars, March 19, 2026 ("Also do not like how hard it is to find someone that can step in and help troubleshoot issues. I feel like I talk to 3 people before I get an actual answer", no closing period in the original): still posted and verbatim. SmartLinx, Carol G., Director of IT Services, March 22, 2021: still posted and verbatim. Her review is titled "Simple and reliable T&A for Nursing Homes", so describe her as an IT director whose review covers nursing homes, never as a hospital voice. Both quote lines in the vendor sections now carry the 2026-10-20 mark. | Claude |
 | 2026-10-20 | **Aladtec unsourced price removed from live posts.** Pricing check of 2026-10-19 found no public Aladtec price (TCP product page shows none, `/products/aladtec/pricing/` 404, `aladtec.com/pricing` 403; aggregator estimates unsourced). Added the "Pricing (checked 2026-10-19)" note to the Aladtec section. Removed every "$200-450 per month" Aladtec figure, and the relative-cost claims built on it ("costs less than QGenda", "lower price point", "below SmartLinx and well below UKG", "mid-market range"), from 12 live posts: `aladtec-alternatives`, `best-nurse-scheduling-software-critical-access-hospitals`, `best-scheduling-software-25-bed-hospital`, `best-nurse-scheduling-software-texas`, `best-per-diem-nurse-scheduling-software`, `deputy-alternatives-healthcare`, `smartlinx-alternatives`, `qgenda-alternatives`, `schedule360-alternatives`, `onshift-alternatives`, `shiftwizard-alternatives`, `ukg-alternatives-small-hospitals`. Draft posts `best-scheduling-software-icu-nurses` and `best-scheduling-software-er-nurses` still carry the figure and must be fixed before publishing. | Claude |

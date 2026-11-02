@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-27T00:00:00Z
-updateDate: 2026-11-01T00:00:00Z
+updateDate: 2026-11-02T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Free Nurse Scheduling Software, Plus a Free Excel Template (2026)'
 excerpt: >
@@ -23,8 +23,8 @@ metadata:
 - If you came here for something you can use today, our [free nurse schedule template](/resources/nurse-schedule-template) is a free Excel worksheet, emailed to your work address. It works out how many nurses each shift needs from your census, then flags overtime, rest-hour and consecutive-day problems as you assign.
 - If your nurses already have Microsoft Teams licenses, the Shifts app comes with Teams. Shifts handles the schedule and staff requests, but Microsoft documents none of the hospital checks covered below.
 - Free nurse scheduling software works well for the easy half of the job: shift assignment, availability collection, and staff messaging on a stable roster.
-- The free tools that rank for this search were built for personal calendars (NurseGrid) or small non-clinical teams (Connecteam, Sling), so hospital requirements like certification matching and survey-ready records are out of scope.
-- For a Texas CAH, free tools leave four gaps open: overtime threshold tracking, certification-aware assignment, ranked callout coverage, and CMS staffing documentation.
+- The free tools that rank for this search were built for personal calendars (NurseGrid) or small non-clinical teams (Connecteam, Sling), so hospital nursing rules, such as charge coverage on every shift, are out of scope. Some of those tools warn about overtime or limit shifts by qualification, often on paid plans.
+- For a Texas CAH, free tools leave gaps that matter. Some warn about overtime or limit shifts by qualification, but none documents hospital nursing rules such as a charge nurse on every shift, or a ranked list of callout replacements.
 - The "$0 software" framing hides the labor cost, since the compliance, callout, and documentation work the tool skips still lands on the nurse manager.
 - Free tools plus disciplined manual processes can be enough for a clinic or home health agency; a 25-bed hospital trying to cut administrative burden usually needs more.
 
@@ -55,7 +55,7 @@ The honest limits, so you can decide before you download. It will not chase a ca
 
 Yes. Several free or freemium tools handle basic nurse scheduling, but most of them were designed for a use case other than running a hospital unit. Knowing what each was built for matters more than the price, because that is what tells you where it stops.
 
-The tools ranking for this search, NurseGrid, Connecteam, Sling and the spreadsheet templates, were built for personal shift calendars and small retail teams. None was built for a Critical Access Hospital that has to track [Texas overtime exposure](/blog/texas-nursing-overtime-compliance-cah), cover a 2 a.m. callout, and produce [staffing records a CMS surveyor will accept](/blog/how-to-stay-cms-compliant-nurse-scheduling).
+The tools ranking for this search, NurseGrid, Connecteam, Sling and the spreadsheet templates, were built for personal shift calendars and small retail teams. None was built for a Critical Access Hospital that has to track [Texas overtime exposure](/blog/texas-nursing-overtime-compliance-cah), cover a 2 a.m. callout, and show a surveyor [who was on duty and when](/blog/how-to-stay-cms-compliant-nurse-scheduling).
 
 The free options a search for this term surfaces fall into four buckets.
 
@@ -105,12 +105,12 @@ The table sets the four hospital requirements against what a typical free tool d
     <tbody>
       <tr class="border-b border-slate-200 dark:border-slate-800">
         <td class="align-top py-3 pr-4 text-slate-800 dark:text-slate-200">Overtime threshold tracking</td>
-        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Not documented for healthcare</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Varies: Connecteam and Sling document overtime alerts (Sling on a paid plan); Teams Shifts and spreadsheets document none</td>
         <td class="align-top py-3 text-slate-700 dark:text-slate-300">Unflagged hours become unplanned overtime cost</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-800">
-        <td class="align-top py-3 pr-4 text-slate-800 dark:text-slate-200">Certification-aware assignment</td>
-        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Not documented</td>
+        <td class="align-top py-3 pr-4 text-slate-800 dark:text-slate-200">Qualification-aware assignment</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Varies: Connecteam and Sling limit shifts by qualification or position; spreadsheets do not</td>
         <td class="align-top py-3 text-slate-700 dark:text-slate-300">Wrong-skill assignment to a unit is a patient-safety risk</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-800">
@@ -119,23 +119,25 @@ The table sets the four hospital requirements against what a typical free tool d
         <td class="align-top py-3 text-slate-700 dark:text-slate-300">Replacing a 2 a.m. callout falls back to a manual phone tree</td>
       </tr>
       <tr class="border-b border-slate-200 dark:border-slate-800">
-        <td class="align-top py-3 pr-4 text-slate-800 dark:text-slate-200">Survey-ready staffing records</td>
-        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Basic logs, not survey format</td>
-        <td class="align-top py-3 text-slate-700 dark:text-slate-300">CMS surveyors expect reviewable staffing documentation</td>
+        <td class="align-top py-3 pr-4 text-slate-800 dark:text-slate-200">Record of schedule changes</td>
+        <td class="align-top py-3 pr-4 text-slate-700 dark:text-slate-300">Connecteam's change log is on paid plans; Sling's page names no plan; spreadsheets keep none</td>
+        <td class="align-top py-3 text-slate-700 dark:text-slate-300">Shows who was on duty each shift and who changed it</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-**No overtime threshold tracking.** Free tools do not track each nurse's running hours against the applicable FLSA overtime threshold and warn you before you assign the shift that tips them over. They assign it anyway. Under the [FLSA overtime rules for healthcare](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and the [Texas Payday Law](https://www.twc.texas.gov/programs/wage-and-hour/texas-payday-law), unplanned overtime is both a cost and a wage-compliance exposure.
+Several of the features below sit on paid plans, so check what each free plan includes before you rely on it.
 
-**No certification-aware assignment.** A free tool does not know that one nurse is ICU-certified and another is not. It will let you assign an uncertified nurse to a unit that requires the certification without raising a flag.
+**Overtime warnings vary by tool.** Connecteam documents an alert before you schedule overtime, without saying which plans include it. Sling documents an overtime alert on its paid Premium plan. Microsoft documents no overtime check for Teams Shifts, and a blank spreadsheet has none unless you build one. Without a warning, the shift that takes a nurse past 40 hours gets assigned anyway. Under the [FLSA overtime rules for healthcare](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) and the [Texas Payday Law](https://www.twc.texas.gov/programs/wage-and-hour/texas-payday-law), unplanned overtime is both a cost and a wage-compliance exposure.
 
-**No ranked callout coverage.** When a nurse calls out, free tools do not generate a ranked list of available, qualified replacements. The manual scramble, working the phone tree to find coverage, is exactly the problem they do not solve. We cover this in detail in our guide to [after-hours callout coverage](/blog/after-hours-callout-coverage-small-hospitals) for small hospitals.
+**Qualification limits vary too.** Connecteam lets you qualify employees for specific shifts, and Sling limits who sees a shift by position. A spreadsheet or a personal calendar app does not know that one nurse is ICU-qualified and another is not. It will not flag the wrong assignment.
 
-**No survey-ready staffing records.** CAH participation requirements run on accurate, reviewable staffing documentation. Provision of services is governed by [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635), and staffing and supervision sit under [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631). Free tools either do not log schedule changes or do not produce records in a form a surveyor can review.
+**No ranked callout coverage.** When a nurse calls out, none of these free tools documents a ranked list of available, qualified replacements. The manual scramble, working the phone tree to find coverage, is exactly the problem they do not solve. We cover this in detail in our guide to [after-hours callout coverage](/blog/after-hours-callout-coverage-small-hospitals) for small hospitals.
 
-These are not features a free tool is about to add. They are absent because the tool was built for a different job.
+**Change records vary.** No Condition of Participation names a scheduling record, but a CAH still has to be able to show who was on duty, and when. Staffing and supervision sit under [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), and nursing services under [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). Connecteam documents a log of schedule changes on its paid plans, and Sling documents one without naming a plan. A spreadsheet keeps no history of who changed a shift unless you keep one yourself.
+
+None of these free tools documents a hospital nursing rule set: a charge nurse on every shift, staffing that follows census, or newer nurses paired with experienced ones. Those rules are absent because the tools were built for a different job. Our [comparison of five general scheduling apps](/blog/best-scheduling-software-25-bed-hospital#when-is-a-generic-scheduling-app-enough-for-a-small-hospital) shows what each one does document.
 
 ## What Is the Real Cost of Free Nurse Scheduling at a 25-Bed Hospital?
 
@@ -147,7 +149,7 @@ So the $0 software line tells you what the license costs, not what scheduling co
 
 ## How Does SimpleScheduleAI Help a Critical Access Hospital?
 
-SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, and you approve. It is built specifically for Texas Critical Access Hospitals, and it covers the half of the job that free tools leave open, schedule generation, FLSA overtime threshold tracking, certification-aware assignment, ranked callout coverage shortlists, fairness tracking, and an audit trail for staffing records. This is the same approach behind our work in [AI nurse scheduling](/ai-nurse-scheduling) for small hospitals.
+SimpleScheduleAI is nurse scheduling software we build and operate ourselves, delivered as a service: the AI builds the schedule, our scheduling team checks it, and you approve. It is built specifically for Texas Critical Access Hospitals, and it covers the half of the job that free tools leave open, schedule generation, FLSA overtime threshold tracking, assignment by competency level and charge qualification, ranked callout coverage shortlists, fairness tracking, and a record of every schedule change. This is the same approach behind our work in [AI nurse scheduling](/ai-nurse-scheduling) for small hospitals.
 
 You start by uploading your existing roster from Excel. We turn that into three schedule drafts, balanced, fairness-optimized, and cost-optimized, and your nurse manager approves the one that fits the week. When a nurse calls out, you get a ranked shortlist of qualified, available replacements instead of a phone tree. You can watch the AI build a compliant schedule and rank that callout shortlist live in the [interactive simulator](/simulator).
 
@@ -179,7 +181,7 @@ One honest limitation: if your primary need is a staff-facing app where nurses l
 
 **Q: Is there actually free nurse scheduling software?**
 
-Yes. If your nurses have Microsoft Teams licenses, the Shifts app comes with Teams. NurseGrid is free as a personal shift calendar for individual nurses, and Connecteam and Sling offer free tiers for small teams. Google Sheets and Excel templates are free too. These free options work for basic shift assignment but do not document hospital requirements like overtime tracking, certification matching, callout coverage, or survey-ready records.
+Yes. If your nurses have Microsoft Teams licenses, the Shifts app comes with Teams. NurseGrid is free as a personal shift calendar for individual nurses, and Connecteam and Sling offer free tiers for small teams. Google Sheets and Excel templates are free too. Connecteam documents an overtime alert before you schedule, and Sling documents one on its paid Premium plan, so check what the free plan includes. None of these free options documents hospital nursing rules for charge coverage or skill mix.
 
 **Q: Is there a free nurse schedule template that does more than give you a blank grid?**
 
@@ -195,7 +197,7 @@ NurseGrid is free for individual nurses as a personal calendar. The employer-sid
 
 **Q: Why can't a critical access hospital just use free scheduling software?**
 
-A CAH can use a free tool for the schedule-building step, but free tools do not track FLSA overtime thresholds, match nurses to units by certification, generate ranked callout replacements, or produce survey-ready staffing records. For a hospital where those are non-negotiable, free covers the easy part and leaves the costly part to the manager.
+A CAH can use a free tool for the schedule-building step. Some free tools warn about overtime or limit shifts by qualification. None documents rules for charge coverage or skill mix, or a ranked list of callout replacements. For a hospital where those are non-negotiable, free covers the easy part and leaves the costly part to the manager.
 
 **Q: How much does paid nurse scheduling software cost for a small hospital?**
 
@@ -203,7 +205,7 @@ Pricing varies by model, and our [nurse scheduling software pricing](/blog/nurse
 
 **Q: What is the hidden cost of free nurse scheduling tools?**
 
-Free tools do not remove the compliance and callout work; they just do not help with it, so it stays on the nurse manager's desk. The real cost of "free" is the salaried manager hours spent by hand on overtime tracking, callout coverage, and documentation that the tool was never built to handle.
+Free tools do not remove the compliance and callout work; they just do not help with it, so it stays on the nurse manager's desk. The real cost of "free" is the salaried manager hours spent by hand on callout coverage and on checking each draft against the hospital's rules, which the tool was never built to handle.
 
 ## Sources
 

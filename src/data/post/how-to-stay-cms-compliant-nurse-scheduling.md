@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-07T00:00:00Z
-updateDate: 2026-10-19T00:00:00Z
+updateDate: 2026-11-02T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'How to Stay CMS Compliant with Nurse Scheduling at Critical Access Hospitals'
 excerpt: >
@@ -34,7 +34,7 @@ This guide covers what CMS actually evaluates in CAH nurse staffing, the three r
 - Surveyors cite the records, not your intentions. A CAH can have the right nurse on every shift and still draw a finding if it cannot produce the schedule, the worked record, and the credential proof a surveyor asks for.
 - Three documents form the core of a defensible CMS staffing record: the published schedule, the time and attendance record (who actually worked), and a credential log (what qualifications each nurse held at the time of each shift).
 - The biggest compliance risk in nurse scheduling is a published schedule that shows coverage but does not match reality. If a nurse called out and was replaced, the replacement and their credentials must be documented. A schedule showing the original nurse's name and a payroll record showing someone else's is a discrepancy that surveyors notice.
-- Automatic CMS documentation, where the scheduling system generates survey-ready staffing records from the published schedule, removes the manual assembly burden. SimpleScheduleAI generates this documentation by default. Most general-purpose scheduling software does not.
+- A scheduling system that logs every change, with who made it and when, removes most of the manual assembly. SimpleScheduleAI keeps that change record by default. Several general scheduling apps keep a change history too, so check how far back yours goes.
 
 ## Table of Contents
 
@@ -208,17 +208,17 @@ CMS surveys for CAHs can be unannounced. When a surveyor arrives, the compliance
 
 ## How Scheduling Software Affects CMS Compliance?
 
-The documentation burden described above is manual unless your scheduling system generates it automatically. This §485.635 staffing record is a separate obligation from CMS Payroll-Based Journal reporting, which most CAHs do not file at all; our guide to [CMS PBJ reporting and nurse scheduling software](/blog/cms-pbj-reporting-scheduling-software) gives the one-question test for whether your facility owes a filing.
+The documentation burden described above is manual unless your scheduling system keeps the records for you. This staffing record is separate from CMS Payroll-Based Journal reporting, which most CAHs do not file at all; our guide to [CMS PBJ reporting and nurse scheduling software](/blog/cms-pbj-reporting-scheduling-software) gives the one-question test for whether your facility owes a filing.
 
-Most general-purpose scheduling software (Deputy, When I Work, standard workforce tools) produces schedules and time tracking. It does not generate CMS-formatted staffing documentation, does not maintain a credential log integrated with the schedule, and does not flag when a shift would have no qualified RN on duty or on call.
+Most general-purpose scheduling software (Deputy, When I Work, standard workforce tools) produces schedules and time tracking. Several document a history of shift changes, and some let you tag which staff hold which certification. Deputy sells credential expiry-date tracking as a paid HR add-on. None that we checked produces a CMS report or documents hospital nursing rules, such as a charge nurse on every shift. Our [comparison of five general scheduling apps](/blog/best-scheduling-software-25-bed-hospital#when-is-a-generic-scheduling-app-enough-for-a-small-hospital) has the details.
 
 Nursing-specific platforms such as NurseGrid Manager are better suited to healthcare but still require manual setup and maintenance to connect credential records to scheduling records in a format that satisfies CMS documentation requests.
 
-[SimpleScheduleAI](/how-it-works) uses [AI nurse scheduling](/ai-nurse-scheduling) to build each schedule and generate CMS §485.635-formatted staffing documentation automatically from it. When a callout replacement occurs, the replacement and their credentials are captured in the documentation record. When a CMS surveyor requests staffing records, the nurse manager pulls the pre-built report. There is no assembly required. To watch the §485.635 compliance checklist tick off as the AI builds a schedule, try the [scheduling simulator](/simulator). For the wider category, see our [nurse scheduling software](/nurse-scheduling-software) overview and the [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
+[SimpleScheduleAI](/how-it-works) uses [AI nurse scheduling](/ai-nurse-scheduling) to build each schedule. Hard rules, such as a charge-qualified nurse on every shift and minimum rest between shifts, are checked before a schedule can be published. Every change after that, including each callout replacement, is logged with who made it, when, and what changed, and we can send you that record on request. It is a change record, not a CMS report: the service produces no CMS-formatted documents and no PBJ files. To watch the AI check its rules as it builds a schedule, try the [scheduling simulator](/simulator). For the wider category, see our [nurse scheduling software](/nurse-scheduling-software) overview and the [critical access hospital scheduling](/critical-access-hospital-scheduling) guide.
 
-For a CAH that has had a CMS finding related to staffing documentation, or that has an upcoming survey and knows its current documentation is not complete, this is the most direct path to survey readiness.
+For a CAH that has had a CMS finding related to staffing documentation, a change record kept as the cycle runs closes most of the gap between the posted schedule and the final one.
 
-One honest limitation: SimpleScheduleAI is not the right fit for hospitals outside Texas, and it produces the documentation rather than making staffing decisions for you. The hospital still owns its staffing levels and its final compliance review.
+Some honest limitations. SimpleScheduleAI is not the right fit for hospitals outside Texas. It does not track credentials or license expiry dates, and it has no time clock, so time and attendance stay in your payroll system. The hospital still owns its staffing levels and its final compliance review.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -233,7 +233,7 @@ One honest limitation: SimpleScheduleAI is not the right fit for hospitals outsi
 
 3. **Audit your credential master list for expirations.** Check ACLS and BLS expiration dates for all nurses currently on the schedule. Any nurse whose credentials have lapsed should be removed from eligible rotation for the shifts requiring those credentials.
 
-4. **If you are a Texas Critical Access Hospital, [See how it works](/how-it-works).** Our AI builds your schedule from an Excel roster upload, our scheduling team checks it and attaches the §485.635 documentation to each cycle, so you can compare it against your current records.
+4. **If you are a Texas Critical Access Hospital, [See how it works](/how-it-works).** Our AI builds your schedule from an Excel roster upload, our scheduling team checks it, and the record of every schedule change is available on request, so you can compare it against your current records.
 
 5. **Verify your callout replacement documentation process.** When a nurse calls out and is replaced, is the replacement and their credentials added to the scheduling record that day? Or is it recorded only in payroll, leaving a schedule-vs-payroll discrepancy?
 
@@ -262,9 +262,9 @@ CMS does not specify a minimum nurse-to-patient ratio for CAHs. The standard is 
 
 CMS requires that a registered nurse provide and supervise nursing care under §485.635(d). A nurse who is both an administrator and a licensed RN can fulfill that supervisory role if they are actively overseeing nursing care. A non-nurse administrator cannot. Keep this separate from the §485.618 emergency-care requirement, where the on-call practitioner available within 30 minutes is a physician, physician assistant, nurse practitioner, or clinical nurse specialist, not necessarily the supervising registered nurse.
 
-**How does SimpleScheduleAI handle CMS documentation when a nurse's credentials change mid-cycle?**
+**Does SimpleScheduleAI track nurse credentials for CMS?**
 
-When a nurse's credentials change (renewal, expiration, or new certification), the SimpleScheduleAI team updates the credential record in the system. Future schedule documentation reflects the updated credential status. For historical documentation, the credential record at the time of each shift is preserved, the documentation shows what credentials each nurse held at the time of each shift, which is what CMS requires for retrospective review.
+No. SimpleScheduleAI does not track credentials or license expiry dates. Keep those in your HR or credentialing system, and check them before a nurse is scheduled into a unit that needs them. What the service keeps is the schedule-change record: every change, with who made it, when, and what changed.
 
 ## Sources
 
@@ -274,7 +274,7 @@ When a nurse's credentials change (renewal, expiration, or new certification), t
 
 [3] Centers for Medicare & Medicaid Services. Conditions of Participation: Emergency services, 42 CFR §485.618(d). [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.618). Verified 2026-06-06.
 
-**Methodology note:** Regulatory claims reference the CMS Conditions of Participation for Critical Access Hospitals (42 CFR Part 485, Subpart F), verified against the current eCFR text on 2026-06-06. SimpleScheduleAI produces the staffing documentation; the hospital retains responsibility for staffing decisions and final compliance.
+**Methodology note:** Regulatory claims reference the CMS Conditions of Participation for Critical Access Hospitals (42 CFR Part 485, Subpart F), verified against the current eCFR text on 2026-06-06. SimpleScheduleAI keeps a record of every schedule change; the hospital retains responsibility for staffing decisions and final compliance.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)
