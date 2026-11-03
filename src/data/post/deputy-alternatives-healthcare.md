@@ -1,16 +1,13 @@
 ---
 draft: false
 publishDate: 2026-05-09T00:00:00Z
-updateDate: 2026-10-20T00:00:00Z
+updateDate: 2026-11-03T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Best Deputy Alternatives for Critical Access Hospitals (2026)'
 excerpt: >
-  Deputy is a general-purpose workforce scheduling platform used across retail, hospitality, and
-  some healthcare settings. For hospital nurse scheduling, the features that matter most in a
-  clinical environment are not documented on its product page: credential enforcement, CMS
-  compliance documentation, automated overtime tracking, and callout replacement logic suited to
-  acute care urgency. This guide reviews the five best Deputy alternatives for healthcare
-  organizations with clinical scheduling requirements.
+  Deputy documents training tags and overtime warnings. It does not document the rules a hospital
+  nursing unit runs on, such as a charge nurse on every shift. Here are five alternatives, and when
+  Deputy is still enough.
 image: https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: bofu
@@ -24,18 +21,18 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/deputy-alternatives-healthcare'
 ---
 
-Deputy's product page describes shift scheduling and time tracking for healthcare. Your hospital's CMS surveyor asks to see defensible staffing records. Those two descriptions cover different work, and the gap shows up at week 8 when the audit binder does not assemble itself from the same data the staff app uses.
+Deputy's product pages describe shift scheduling and time tracking for healthcare. A hospital nursing unit also needs each schedule checked against charge coverage, skill mix and census. Those are different jobs, and the gap shows up every time a nurse manager checks a draft by hand.
 
-This guide compares 6 Deputy alternatives for a Critical Access Hospital where general workforce scheduling is not enough and HIPAA, BAA, and §485.635 audit-trail requirements are not optional.
+This guide compares 5 Deputy alternatives for a Critical Access Hospital where general workforce scheduling is not enough for hospital nursing rules such as charge coverage and skill mix.
 
 ## Key Takeaways
 
-- Deputy is a well-designed general workforce scheduling tool. For hospital nurse scheduling, its gaps are significant: credential enforcement, CMS compliance documentation, [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) healthcare overtime configuration, and callout ranking by credential or overtime status are not documented on its product page. Verify current capabilities with Deputy before evaluating for a clinical environment.
-- Hospitals often adopt Deputy for nurse scheduling because they needed a tool quickly and it was easy to deploy. The compliance and credential gaps accumulate as a hidden cost, manual work that someone is absorbing without it appearing in the scheduling software budget.
-- SimpleScheduleAI is the strongest alternative for Critical Access Hospitals (CAHs). It provides competency-filtered callout replacement, automated CMS §485.635 documentation, and FLSA overtime threshold tracking as defaults, none of which are documented on Deputy's product page.
+- Deputy is a well-designed general workforce scheduling tool. Its help center documents training tags, overtime warnings (in beta) and a shift change history on its Analytics+ add-on. Hospital nursing rules, such as a charge nurse on every shift, and a ranked list of callout replacements are not documented. Verify current capabilities with Deputy before evaluating it for a clinical unit.
+- A hospital may adopt Deputy for nurse scheduling because it needed a tool quickly and Deputy was easy to deploy. The gaps show up as manual work: someone checks charge coverage and skill mix by hand, and that time never appears in the scheduling software budget.
+- SimpleScheduleAI is the strongest alternative for Critical Access Hospitals (CAHs) in Texas. It is AI-native nurse scheduling software, delivered as a service, and every draft must pass 13 safety rules, including charge coverage and ICU and ER competency. It tracks each nurse's hours against the [40-hour weekly FLSA overtime threshold](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 - For hospitals that want to stay on self-serve software, Aladtec offers certification and coverage tracking. It is worth evaluating only if TCP confirms it would sell and support it for hospital nursing.
-- When I Work, Connecteam, and Homebase are similar in simplicity to Deputy but do not solve the healthcare compliance gaps. They make sense only for outpatient or non-clinical settings where compliance requirements are minimal.
-- Deputy is appropriate for non-clinical or outpatient settings, but any hospital with active CMS obligations should move to a purpose-built healthcare scheduling tool.
+- When I Work, Connecteam, and Homebase are similar in simplicity to Deputy. Each documents some overtime and qualification features, and none documents hospital nursing rules. These three apps fit outpatient or non-clinical settings best.
+- Deputy is appropriate for non-clinical or outpatient settings. A hospital scheduling inpatient nurses on it should make sure charge coverage and skill mix are checked somewhere, by a tool or by a person.
 
 ## Table of Contents
 
@@ -52,9 +49,9 @@ This guide compares 6 Deputy alternatives for a Critical Access Hospital where g
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Deputy is a general workforce scheduling platform used across retail, hospitality, and some healthcare settings. Its combination of fast deployment, clear interface, and per-user pricing makes it an accessible entry point for organizations that need scheduling software immediately. Many healthcare organizations, including small hospitals, deploy Deputy because it is easy, not because it is the right fit.
+Deputy is a general workforce scheduling platform used across retail, hospitality, and some healthcare settings. Its combination of fast deployment, clear interface, and per-user pricing makes it an accessible entry point for organizations that need scheduling software immediately. Ease of deployment is a good reason to start with Deputy, and a separate question from whether it fits a nursing unit.
 
-The problem with using Deputy for hospital nurse scheduling is not that it is poorly made. It is that it was designed for a completely different set of operational requirements. Retail stores and restaurants using Deputy do not need credential enforcement, FLSA healthcare overtime rules, or CMS compliance documentation. Hospitals do. Every one of those requirements is a manual process outside of Deputy.
+Deputy is well made for a different set of operational requirements. Retail stores and restaurants do not need a charge nurse on every shift, newer nurses paired with experienced ones, or staffing that follows census. Hospitals do, and none of those rules is documented on Deputy's pages. Each one becomes a manual check outside Deputy.
 
 If your facility needs purpose-built [critical access hospital scheduling](/critical-access-hospital-scheduling), not a general workforce tool adapted for clinical use, the evaluation criteria are different from standard software comparisons. For the broader treatment of how AI-built nurse schedules work, see [AI nurse scheduling](/ai-nurse-scheduling). Our [nurse scheduling software for critical access hospitals](/nurse-scheduling-software) guide covers what CAH-specific compliance features to require before signing with any platform.
 
@@ -62,29 +59,29 @@ Here is how the alternatives compare before we go deeper:
 
 ## Why Hospitals Move Away from Deputy?
 
-Hospitals move away from Deputy when CMS compliance obligations grow beyond what a general workforce scheduling tool can support. Deputy does not document credential enforcement, FLSA 8-and-80 overtime configuration, or CMS §485.635 audit trail support on its product pages. For hospital nursing units where those features are required, every gap becomes a manual compliance process the nurse manager absorbs outside the scheduling system.
+Hospitals move away from Deputy when their nursing rules outgrow what a general workforce tool documents. Deputy documents training tags and overtime warnings. It does not document charge coverage, skill mix or callout ranking. For a hospital nursing unit, every rule the tool does not check becomes a manual check the nurse manager does outside the scheduling system.
 
 <img src="/images/blog/deputy-alternatives-healthcare/Deputy.webp" alt="Deputy general workforce scheduling platform" width="1200" height="566" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-Hospitals move away from Deputy when clinical compliance requirements exceed its general workforce scheduling model. Common gaps are CMS staffing documentation that must be maintained manually outside the tool, credential enforcement that is not described on the product page, and FLSA 8-and-80 overtime configuration that Deputy does not document in its public materials.
+Deputy's help center covers more than its marketing pages suggest. Its [healthcare setup guide](https://help.deputy.com/hc/en-au/articles/4621991456527-Setting-up-Deputy-for-a-healthcare-business) describes training tags. The tags "identify team members who are qualified, trained, or approved to work," according to the guide. Its [shift swapping page](https://www.deputy.com/features/shift-swapping) says "every shift swap complies with training requirements or maximum permitted hours." Overtime warnings are in beta and offer a "Schedule anyway" option.
 
-**CMS compliance documentation still entirely manual.** Hospitals using Deputy for scheduling must maintain CMS staffing documentation through a completely separate process, typically spreadsheets or manual logs. Every survey preparation cycle requires assembling that documentation by hand because Deputy has no concept of CMS compliance requirements. These gaps are based on product page verification as of May 2026; credential enforcement, FLSA 8-and-80 configuration, and CMS documentation tooling are not described on Deputy's public product pages.
+**A change record, on a paid add-on.** No federal or Texas rule we found requires a log of schedule changes. Texas does require the nurse staffing committee to compare the staffing plan with actual staffing ([Texas Health and Safety Code 257.004](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/)). A change history is a practical way to answer what happened on a given night. Deputy's [shift audit report](https://help.deputy.com/hc/en-au/articles/12016108679823-Shift-audit-report-Analytics-only) shows the "history of changes made to a shift including, when, what and by whom." It is part of the Analytics+ add-on, so check which plan you are on.
 
-**Credential enforcement not documented on the product page.** Deputy's product page does not document credential-based assignment logic. Without a credential enforcement layer, a nurse without ACLS certification could accept a posted ED shift, a floor nurse without ICU competency could be assigned to the ICU, and a non-charge-designated nurse could fill a charge shift. Verify current credential checking capabilities with Deputy directly before deploying for clinical nursing.
+**Training tags are documented; charge and unit rules are not.** Training tags can mark which staff are qualified for an area, and Deputy says swaps and auto-scheduling respect them. A charge-nurse requirement on a shift is not documented. Neither is a rule that keeps a newer nurse off the ICU unless an experienced nurse is on. Ask Deputy to show you how a charge shift is protected before you rely on it for clinical nursing. These findings come from Deputy's product and help-center pages, checked November 2026.
 
-**FLSA healthcare overtime configuration not documented.** The [FLSA 8-and-80 rule](https://www.dol.gov/agencies/whd/flsa) for healthcare employers allows a different overtime calculation threshold than the standard 40-hour weekly rule. Deputy does not document FLSA 8-and-80 configuration on its product page. Verify current overtime tracking capabilities with Deputy directly before relying on it for healthcare FLSA compliance.
+**8-and-80 overtime not documented.** The [FLSA 8-and-80 method](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) lets a hospital count overtime over a 14-day period instead of the standard 40-hour week. Deputy does not document 8-and-80 support on the pages we read. If your hospital uses that method, ask Deputy whether its overtime warnings can follow it.
 
 **App reliability in acute care settings.** For hospitals relying on Deputy to fill shift coverage gaps, app performance determines how quickly a callout can be resolved. How the app category compares for nursing specifically is covered in our [best nurse scheduling app guide](/blog/best-nurse-scheduling-app). One hospital nurse using Deputy noted:
 
 > "Sometimes the app can be a bit slow or glitchy, especially when trying to load shifts."
 >
-> Portia A., Nurse, Hospital & Health Care, April 8, 2026, Capterra [6]
+> Portia A., Nurse, Hospital & Health Care, April 8, 2026, Capterra
 
 In retail scheduling, a slow shift-loading experience is an inconvenience. In an acute care setting where an uncovered shift creates a patient safety exposure, the same delay becomes an operational risk.
 
 ## Quick Comparison: Deputy vs. The Alternatives
 
-SimpleScheduleAI is built for hospital nurse scheduling. Aladtec is a public safety scheduling tool that also tracks certifications. When I Work, Connecteam, and Homebase are general workforce tools without documented clinical compliance features. Deputy is included as the baseline for comparison. Ratings are sourced from Capterra and G2 as of May 2026.
+SimpleScheduleAI is built for hospital nurse scheduling. Aladtec is a public safety scheduling tool that also tracks certifications. When I Work, Connecteam, and Homebase are general workforce tools that document some overtime and qualification features but no hospital nursing rules. Deputy is included as the baseline for comparison. Ratings are from Capterra and G2 on the dates in the Sources list.
 
 <div class="not-prose">
   <table class="w-full text-xs sm:text-sm border-collapse table-fixed break-words">
@@ -93,7 +90,7 @@ SimpleScheduleAI is built for hospital nurse scheduling. Aladtec is a public saf
         <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100" style="width:20%">Platform</th>
         <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100" style="width:24%">Best For</th>
         <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100" style="width:28%">Ratings</th>
-        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100" style="width:14%">CMS Docs</th>
+        <th class="text-left py-3 pr-4 font-semibold text-slate-900 dark:text-slate-100" style="width:14%">Hospital nursing rules</th>
         <th class="text-left py-3 font-semibold text-slate-900 dark:text-slate-100" style="width:14%">Cost/Month</th>
       </tr>
     </thead>
@@ -101,44 +98,44 @@ SimpleScheduleAI is built for hospital nurse scheduling. Aladtec is a public saf
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Deputy (current)</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">General workforce scheduling</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Capterra: 4.6/5 (772 reviews)</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Capterra: 4.6/5 (773 reviews)</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">$4.50/user</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">$5 to $9 per user</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 font-semibold text-primary">SimpleScheduleAI</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">CAHs, managed service</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Texas hospitals of 25 beds or fewer</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">New service; no public reviews yet</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Yes, automatic</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Not listed</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Checked on every draft: 13 safety rules</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">$1,000 to $1,500 flat</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Aladtec</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Public safety agencies (fire, EMS, law enforcement)</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Capterra: 4.6/5 (17 reviews; small sample)</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Manual export</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Qualifications in public-safety terms; no nursing-specific rule documented</td>
         <td class="py-3 text-slate-600 dark:text-slate-400">Quote only (not published)</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">When I Work</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Simple teams, low complexity</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">G2: 4.4/5 (361 reviews)<br>Capterra: 4.5/5 (1,289 reviews)</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Capterra: 4.5/5 (1,300 reviews)</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">$2.50-4/user</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">$2.50 to $8 per user</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Connecteam</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Deskless workforce, mobile teams</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Capterra: 4.6/5 (5,150 reviews)</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not verified for this guide</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Free-$99/month</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Free up to 10 users; from $29 for 30 users</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">Homebase</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Very small teams, single location</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">G2: 4.4/5 (271 reviews)<br>Capterra: 4.6/5 (1,147 reviews)</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">G2: 4.6/5 (539 reviews)<br>Capterra: 4.6/5 (1,151 reviews)</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Free-$80/month</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Free up to 10 employees; $30 to $120 per location</td>
       </tr>
     </tbody>
   </table>
@@ -146,13 +143,13 @@ SimpleScheduleAI is built for hospital nurse scheduling. Aladtec is a public saf
 
 ## What Are the 5 Best Deputy Alternatives for Critical Access Hospitals?
 
-The five alternatives are ranked by clinical appropriateness for hospital nurse scheduling. SimpleScheduleAI addresses the compliance gaps that cause hospitals to leave Deputy. Aladtec adds certification tracking and minimum staffing rules. When I Work, Connecteam, and Homebase are appropriate only for outpatient or non-clinical settings where the compliance requirements that matter in an inpatient hospital do not apply.
+The five alternatives are ranked by clinical appropriateness for hospital nurse scheduling. SimpleScheduleAI checks the hospital nursing rules Deputy does not document. Aladtec adds certification tracking and minimum staffing rules. When I Work, Connecteam, and Homebase are appropriate only for outpatient or non-clinical settings where the compliance requirements that matter in an inpatient hospital do not apply.
 
 Which one to shortlist depends on why you are leaving Deputy in the first place.
 
 | If this is why you are leaving                                             | Shortlist                                                             |
 | -------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| Callout replacement ignores skill mix, and CMS documentation is manual     | SimpleScheduleAI, at a Texas critical access hospital                 |
+| Charge coverage and skill mix are checked by hand                          | SimpleScheduleAI, at a Texas critical access hospital                 |
 | You want to stay self-serve and need certification tracking                | Aladtec, if TCP confirms it will support hospital nursing             |
 | Deputy works well enough and you want a like-for-like swap                 | When I Work, which shares Deputy’s model and setup speed              |
 | You need mobile-first tooling for deskless staff and a broader feature set | Connecteam                                                            |
@@ -160,28 +157,31 @@ Which one to shortlist depends on why you are leaving Deputy in the first place.
 
 ## 1. [SimpleScheduleAI](/)
 
-<img src="/images/blog/deputy-alternatives-healthcare/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling managed service for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
+<img src="/images/blog/deputy-alternatives-healthcare/SimpleScheduleAI.webp" alt="SimpleScheduleAI nurse scheduling software for critical access hospitals" width="1200" height="630" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-SimpleScheduleAI addresses every gap that causes hospitals to leave Deputy: skill-mix enforcement in callout replacement, automated CMS documentation, FLSA healthcare overtime tracking, and a callout model built for acute care urgency rather than broadcast-and-wait.
+SimpleScheduleAI is AI-native [nurse scheduling software](/nurse-scheduling-software), delivered as a service: the AI builds the schedule, a scheduling team checks it, the nurse manager approves. It checks the hospital nursing rules that Deputy does not document, and it is built for Texas hospitals of 25 beds or fewer.
 
-The AI-native, human-verified model means the hospital does not install software or maintain configuration. The nurse manager uploads a roster in Excel, the AI builds three schedule drafts and our scheduling team checks each one before delivery, she selects one, and the AI callout module handles coverage gaps with a ranked shortlist filtered by unit competency and overtime status. See [how it works](/how-it-works) for the full service model. Watch the AI build a schedule and generate a competency-filtered callout replacement shortlist in the [interactive simulator](/simulator).
+The hospital installs nothing. The nurse manager sends the roster in Excel. The AI builds three schedule drafts (Balanced, Fairness Optimized and Cost Optimized), our scheduling team checks each one, and the nurse manager picks one. When a nurse calls out, the manager gets a ranked shortlist of replacements. See [how it works](/how-it-works) for the full service model, or watch the AI build a schedule in the [interactive simulator](/simulator).
 
-**Best for:** Critical Access Hospitals that deployed Deputy as a quick scheduling solution and are now experiencing the compliance and credential gaps that accumulate as the hospital's CMS obligations increase.
+**Best for:** Critical Access Hospitals that deployed Deputy as a quick scheduling solution and now check charge coverage and skill mix by hand.
 
 **Key advantages:**
 
-- competency-filtered replacement list: replacements are filtered by unit competency requirements before the list is generated
-- [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) documentation is maintained automatically, eliminating manual survey prep entirely
-- FLSA overtime threshold tracking is the default, not a configuration option
-- Managed service eliminates implementation cost and ongoing IT dependency
-- Texas-specific compliance (Texas Labor Code Chapter 62) is a built-in default for TX CAHs
+- Charge coverage, ICU and ER competency, and minimum rest are among the 13 safety rules every draft must pass before it reaches the nurse manager.
+- Callouts get a ranked shortlist in under two minutes. Nurses who would stay under 40 hours this week come first, and each name shows its competency level against the nurse who called out. If the nurse who called out held charge, anyone not charge-qualified is marked ineligible.
+- Each nurse's running hours are tracked against the 40-hour weekly FLSA overtime threshold while the draft is built.
+- Every schedule change is logged with who made it and when, and the record is available on request.
+- No software to install or configure. Onboarding takes 3 to 5 business days, and the first schedule lands inside two weeks.
 
 **Key limitations:**
 
-- Managed service model with less direct manager control than Deputy's self-serve platform
-- Higher cost than Deputy's per-user pricing model; the compliance value must justify the cost difference
+- Less direct control than Deputy's self-serve platform: changes go through the scheduling team.
+- Higher cost than Deputy for a small roster.
+- It does not track credentials or certification expiry dates, and it has no time clock or payroll connection, both of which Deputy offers.
+- It applies the 40-hour weekly FLSA threshold only, and does not support the 8-and-80 overtime method.
+- The service covers Texas only, and it does not schedule physicians.
 
-**Verdict:** The most complete hospital scheduling alternative to Deputy. The cost increase versus Deputy is offset by eliminating the hidden cost of manual compliance work that Deputy leaves to the manager.
+**Verdict:** The strongest Deputy alternative for a Texas hospital whose nursing rules are being checked by hand. The extra cost pays for the rule checks and the scheduling work, which Deputy leaves to the nurse manager.
 
 **Ratings:** New service; no public reviews yet.
 
@@ -199,9 +199,9 @@ The migration from Deputy to Aladtec is straightforward: export your current sta
 
 **Key advantages:**
 
-- Credential and qualification tracking per employee profile, configurable for any certification type
-- Minimum staffing rules enforce coverage thresholds and flag when callouts would create gaps
-- Direct-outreach callout model more suited to acute care urgency than Deputy's broadcast shift posting
+- Skills and certifications tracked per employee, with expiration and renewal dates
+- Aladtec "monitors minimum staffing levels and flags violations"
+- Open shifts are filled "based on seniority, hours worked, last overtime shift, and more"
 - 24/7 coverage model designed for environments where coverage cannot lapse between shifts
 
 **Key limitations:**
@@ -216,13 +216,13 @@ The migration from Deputy to Aladtec is straightforward: export your current sta
 
 > "It was a bit complicated to figure out from the administrator side."
 >
-> Jeanne C., Administrative Coordinator, Hospital & Health Care, May 7, 2019, Capterra
+> Jeanne C., Administrative Coordinator, May 7, 2019, Capterra
 
-CMS compliance documentation and initial credential configuration require setup time. Confirm current CMS documentation export capabilities with Aladtec directly.
+Initial qualification setup takes time. Confirm with TCP how qualifications are entered and kept current.
 
-**Verdict:** A capable self-serve scheduler with certification tracking and coverage rules, without the implementation complexity of SmartLinx or QGenda. Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
+**Verdict:** A capable self-serve scheduler with certification tracking and minimum-staffing alerts. Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. See our deeper [Aladtec alternatives guide for Critical Access Hospitals](/blog/aladtec-alternatives).
 
-**Ratings:** Capterra: 4.6/5 (17 reviews; small sample) [2]
+**Ratings:** Capterra: 4.6/5 (17 reviews; small sample)
 
 **Cost:** Not published. TCP quotes on request.
 
@@ -230,9 +230,9 @@ CMS compliance documentation and initial credential configuration require setup 
 
 <img src="/images/blog/deputy-alternatives-healthcare/WhenIWork.webp" alt="When I Work scheduling and shift communication app for healthcare teams" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-When I Work is the most direct like-for-like alternative to Deputy in the general workforce scheduling category. It shares Deputy's model: fast setup, per-user pricing, strong mobile app, and shift communication without healthcare compliance features. The distinction is interface design and specific features like scheduling templates and shift-pool management.
+When I Work is the most direct like-for-like alternative to Deputy in the general workforce scheduling category. It shares Deputy's model: fast setup, per-user pricing, a mobile app, and shift communication. The distinction is interface design and specific features like scheduling templates and shift-pool management.
 
-For healthcare organizations using Deputy primarily for schedule publishing and communication, and handling compliance manually, When I Work offers equivalent capability at a slightly lower price point. It does not solve the healthcare compliance gaps; it provides the same category of tool with a different interface.
+For healthcare organizations using Deputy mainly for schedule publishing and communication, When I Work offers equivalent capability at a slightly lower price. It is the same category of tool with a different interface, so it leaves the same hospital nursing rules to the manager.
 
 **Best for:** Outpatient clinics, home health agencies, and non-clinical healthcare departments that are using Deputy primarily for schedule visibility and communication, and want a comparable tool at a lower cost.
 
@@ -245,23 +245,25 @@ For healthcare organizations using Deputy primarily for schedule publishing and 
 
 **Key limitations:**
 
-**Healthcare compliance tooling.** When I Work is a general workforce scheduling platform. Credential enforcement, FLSA healthcare overtime tracking, and CMS documentation are not featured on the product page. Hospital users have noted the absence of audit capability:
+**Hospital nursing rules.** When I Work's help center documents overtime visibility while you schedule, positions and tags that limit who can pick up a shift, and a history of shift changes. Hospital nursing rules, such as a charge nurse on every shift, are not documented. One hospital IT admin found the change history missing:
 
 > "No Auditing capability to see if unauthorized changes were made, and does not work for complex workflows."
 >
 > Jonathan R., IT Admin, Hospital & Health Care, February 25, 2026, Capterra
 
-**Hospital-specific scheduling logic.** When I Work does not feature acute care callout ranking or unit-based credential filtering. Time-off request visibility for providers has been flagged as a gap by clinical staff:
+When I Work's help center now documents a [Shift History report](https://help.wheniwork.com/articles/shift-history-report-details/) covering the last 60 days, so check whether that covers what your hospital needs to keep.
+
+**Callout ranking.** A ranked list of callout replacements is not documented. Time-off request visibility for providers has been flagged as a gap by clinical staff:
 
 > "I don't like that when providers have time off requests, they cannot view shifts."
 >
 > Mallory S., Clinical Operations Manager, Hospital & Health Care, February 12, 2026, Capterra
 
-**Verdict:** A reasonable Deputy alternative for non-clinical healthcare settings where compliance is not the driver of the switch. For hospital nursing, it solves none of the problems that make Deputy inadequate.
+**Verdict:** A reasonable Deputy alternative for non-clinical healthcare settings where compliance is not the driver of the switch. For hospital nursing, it leaves the same rules to the manager that Deputy does.
 
-**Ratings:** G2: 4.4/5 (361 reviews) / Capterra: 4.5/5 (1,289 reviews) [3]
+**Ratings:** Capterra: 4.5/5 (1,300 reviews)
 
-**Cost:** $2.50 per user per month (Essentials) to $4.00 per user per month (Pro).
+**Cost:** $2.50 per user per month (Essentials), $5 (Pro) or $8 (Premium).
 
 ## 4. [Connecteam](https://connecteam.com)
 
@@ -269,7 +271,7 @@ For healthcare organizations using Deputy primarily for schedule publishing and 
 
 Connecteam is a mobile-first workforce management platform designed for deskless and distributed teams. It has a broader feature set than Deputy, including training and onboarding tools, internal communications, and task management alongside scheduling, at a comparable price. For healthcare organizations using Deputy primarily as a communication and coordination tool, Connecteam's broader feature surface may be useful.
 
-Like Deputy and When I Work, Connecteam does not document healthcare-specific compliance features on its product page. Its broader tool set is useful for administrative and operational teams, but credential enforcement, FLSA tracking, and CMS documentation are not described in its public materials.
+Connecteam documents an alert "before you schedule overtime" and lets you qualify employees for specific shifts. Its scheduler activity log, a history of shifts created, edited and deleted, starts on its paid Operations Basic plan. Like Deputy and When I Work, it does not document hospital nursing rules.
 
 **Best for:** Healthcare-adjacent operations teams or outpatient clinics that need schedule management alongside staff communication and task tracking, and do not have acute care nursing compliance requirements.
 
@@ -281,15 +283,15 @@ Like Deputy and When I Work, Connecteam does not document healthcare-specific co
 
 **Key limitations:**
 
-**Healthcare compliance tooling.** Connecteam is designed for deskless and distributed teams across industries. Credential enforcement, CMS documentation, and FLSA healthcare overtime tracking are not featured on the product page. Verify current capabilities with Connecteam directly.
+**Hospital nursing rules.** Connecteam is designed for deskless and distributed teams across industries. A charge nurse on every shift, skill mix and minimum staffing are not documented on the pages we read. Verify current capabilities with Connecteam directly.
 
-**Hospital nursing scheduling scope.** Connecteam does not feature unit-based assignment logic or acute care callout ranking. Confirm with Connecteam whether these capabilities exist before evaluating for clinical nursing use.
+**Callout ranking.** Open shifts go to qualified employees to claim. A ranked list of replacements is not documented. Confirm with Connecteam before evaluating it for clinical nursing.
 
 **Verdict:** A strong choice for administrative and operational deskless teams within a healthcare organization. Not a suitable replacement for hospital nurse scheduling regardless of the broader feature set.
 
-**Ratings:** Capterra: 4.6/5 (5,150 reviews) [4]
+**Ratings:** Not verified for this guide.
 
-**Cost:** Free for up to 10 users; paid plans from $29-99 per month for the first 30 users.
+**Cost:** Free for up to 10 users. Paid plans start at $29 or $35 a month for the first 30 users, depending on billing.
 
 ## 5. [Homebase](https://joinhomebase.com)
 
@@ -297,19 +299,19 @@ Like Deputy and When I Work, Connecteam does not document healthcare-specific co
 
 Homebase is designed for retail and service industry scheduling but is used by some small clinics and outpatient settings as a lower-cost alternative to Deputy. It has fewer features than Deputy, a simpler interface, and a free tier that makes it the lowest-cost general scheduling option in this list.
 
-For any hospital nursing environment, Homebase is the wrong category of tool. Healthcare-specific features are not documented on Homebase's product page, and it does not address the compliance gaps that make Deputy inadequate for hospital scheduling.
+Homebase draws the line itself. Its healthcare page says Homebase "wasn't designed for hospitals or medical staff specifically," and its June 2026 guide names "nurse rotation management" among the uses it does not fit.
 
 **Best for:** Outpatient medical offices and clinics with very simple scheduling needs, minimal staff, and no compliance requirements beyond basic time tracking. The free tier makes it viable for operations that previously used a spreadsheet.
 
 **Key advantages:**
 
-- Free plan for unlimited employees at a single location
+- Free plan for up to 10 employees at one location
 - Integrated time clock, basic PTO tracking, and payroll export
 - Extremely simple setup with no configuration learning curve
 
 **Key limitations:**
 
-**Healthcare compliance tooling.** Homebase is designed for retail and service teams. Healthcare-specific compliance features are not documented on the product page. Verify current capabilities with Homebase before evaluating for any clinical setting.
+**Hospital nursing rules.** Homebase is designed for retail and service teams, and hospital nursing rules are not documented. Verify current capabilities with Homebase before evaluating it for any clinical setting.
 
 **Scheduling feature depth.** Homebase targets very simple single-location teams. Mobile scheduling and multi-location tracking have been flagged by hospital users as gaps:
 
@@ -323,29 +325,29 @@ For any hospital nursing environment, Homebase is the wrong category of tool. He
 
 **Verdict:** A cost reduction move for the simplest possible scheduling environments. Any hospital nursing context requires a purpose-built tool, not a retail scheduling app.
 
-**Ratings:** G2: 4.4/5 (271 reviews) / Capterra: 4.6/5 (1,147 reviews) [5]
+**Ratings:** G2: 4.6/5 (539 reviews) / Capterra: 4.6/5 (1,151 reviews)
 
-**Cost:** Free for one location; paid plans from $24-80 per month depending on features.
+**Cost:** Free for one location with up to 10 employees. Paid plans are $30, $70 or $120 per location per month.
 
 ## When Deputy Is Still Adequate for Healthcare?
 
-Deputy remains adequate for non-clinical healthcare settings: outpatient clinics without inpatient care, home health agencies with stable caregiver pools, and administrative staff scheduling within a hospital. In each of these contexts, the credential enforcement, FLSA healthcare overtime, and CMS documentation requirements that create gaps in a hospital do not apply.
+Deputy remains adequate for non-clinical healthcare settings: outpatient clinics without inpatient care, home health agencies with stable caregiver pools, and administrative staff scheduling within a hospital. In each of these settings, the charge, skill-mix and census rules that create gaps on a hospital nursing unit do not apply.
 
 Deputy remains adequate for healthcare organizations in four scenarios:
 
-1. **Outpatient clinics and medical offices without inpatient care.** CMS §485.635 applies to inpatient care. An outpatient clinic scheduling clinical staff does not have the same compliance obligations as a hospital. Deputy's general scheduling features are adequate for simple outpatient scheduling.
+1. **Outpatient clinics and medical offices without inpatient care.** An outpatient clinic does not schedule around inpatient nursing rules such as a charge nurse on every shift. Deputy's general scheduling features are adequate for simple outpatient scheduling.
 
-2. **Home health agencies with a stable caregiver pool and no certification requirements.** Home health scheduling does not require ACLS or CCRN tracking. If the primary scheduling challenge is matching caregivers to patients on a daily basis, Deputy's availability and assignment model works.
+2. **Home health agencies with a stable caregiver pool.** If the primary scheduling challenge is matching caregivers to patients on a daily basis, Deputy's availability and assignment model works.
 
-3. **Administrative and non-clinical staff scheduling within a hospital.** Hospitals that use one system for clinical nursing (with credential requirements) and a separate, simpler system for housekeeping, dietary, and administrative scheduling can reasonably use Deputy for the non-clinical scheduling pool without compliance risk.
+3. **Administrative and non-clinical staff scheduling within a hospital.** Hospitals that use one system for clinical nursing and a separate, simpler system for housekeeping, dietary, and administrative scheduling can reasonably use Deputy for the non-clinical pool.
 
-4. **Multi-site outpatient networks with administrative staff only.** Healthcare organizations operating networks of outpatient clinics where scheduling covers only administrative and support staff, with no clinical credentialing requirements, can use Deputy for that population. Deputy's per-user pricing scales well for large administrative rosters where healthcare compliance features are not the primary driver.
+4. **Multi-site outpatient networks with administrative staff only.** Healthcare organizations operating networks of outpatient clinics where scheduling covers only administrative and support staff can use Deputy for that population. Deputy's per-user pricing scales well for large administrative rosters.
 
 In all four cases, the hospital must be certain that the clinical nursing scheduling population is handled by a separate, clinically appropriate tool, not by Deputy.
 
 ## How SimpleScheduleAI Compares to Deputy?
 
-SimpleScheduleAI is purpose-built for clinical nurse scheduling where Deputy is a general workforce tool. The core differences are competency-filtered callout replacement, automatic CMS §485.635 documentation, and healthcare FLSA overtime as a default calculation. For hospitals where those features represent real compliance risk, SimpleScheduleAI addresses what Deputy was not designed to solve.
+SimpleScheduleAI is purpose-built for clinical nurse scheduling, and Deputy is a general workforce tool. The core differences are the hospital nursing rules each draft must pass, a ranked callout shortlist, and who does the scheduling work.
 
 <div class="not-prose my-6">
   <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3">Deputy vs. SimpleScheduleAI: Hospital Nurse Scheduling</p>
@@ -359,126 +361,124 @@ SimpleScheduleAI is purpose-built for clinical nurse scheduling where Deputy is 
     </thead>
     <tbody>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Healthcare competency enforcement</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Confirm with vendor</td>
-        <td class="py-3 text-primary">Yes, in replacement list</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Training or competency on a shift</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Training tags; swaps check training requirements</td>
+        <td class="py-3 text-primary">Competency level per nurse; ICU and ER shifts are given a Level 4 or 5 nurse when one is eligible, or reported short with the reason</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">CMS §485.635 documentation</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Charge nurse on every shift</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented</td>
-        <td class="py-3 text-primary">Yes, automatic</td>
+        <td class="py-3 text-primary">Safety rule: a charge-qualified nurse at Level 4 or above</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">FLSA overtime threshold tracking</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented; confirm with vendor</td>
-        <td class="py-3 text-primary">Yes, default for CAHs</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Overtime</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Overtime warnings (beta), with a "Schedule anyway" option</td>
+        <td class="py-3 text-primary">Running hours against the 40-hour weekly FLSA threshold; straight-time nurses ranked first</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Callout replacement model</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Broadcast open shift</td>
-        <td class="py-3 text-primary">Ranked shortlist, 2 min</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Callout replacement</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Serves up "suitable employees who are available, qualified, and cost-efficient"</td>
+        <td class="py-3 text-primary">Ranked shortlist in under two minutes; competency shown, not filtered</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Implementation burden</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Minimal, days to deploy</td>
-        <td class="py-3 text-primary">Low, Excel upload, days</td>
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Record of schedule changes</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Shift audit report on the Analytics+ add-on</td>
+        <td class="py-3 text-primary">Every change logged with who made it and when</td>
+      </tr>
+      <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
+        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Setup</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Self-serve</td>
+        <td class="py-3 text-primary">Onboarding in 3 to 5 business days; first schedule inside two weeks</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Target environment</td>
         <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">General workforce</td>
-        <td class="py-3 text-primary">CAH, acute care nursing</td>
-      </tr>
-      <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
-        <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Texas Labor Code compliance</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">Not documented</td>
-        <td class="py-3 text-primary">Yes, built-in default for TX CAHs</td>
+        <td class="py-3 text-primary">Texas hospitals of 25 beds or fewer</td>
       </tr>
       <tr class="align-top">
         <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">Pricing</td>
-        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">$4.50/user/month</td>
-        <td class="py-3 text-primary">Not listed, contact for quote</td>
+        <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">$5 to $9 per user per month</td>
+        <td class="py-3 text-primary">$1,000 a month up to 20 nurses; $1,500 for 21 to 40</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-The comparison above illustrates the category difference between Deputy and SimpleScheduleAI. Deputy is fast to deploy and low cost because the healthcare-specific features hospital nursing requires are not documented on its product page. SimpleScheduleAI's value is precisely in those features, skill-mix enforcement, CMS documentation, healthcare FLSA, and acute care callout management, that Deputy was never designed to provide.
+The table shows the category difference. Deputy is fast to deploy and low cost, and it leaves hospital nursing rules to the manager. SimpleScheduleAI's value is in those rule checks and in the scheduling work itself.
 
-For hospitals where those features represent real operational risk and real manual labor cost, the price difference between Deputy and SimpleScheduleAI is offset by what the hospital is currently paying in manual compliance work and credential management that lives outside the scheduling system.
+For a hospital where the nurse manager checks charge coverage and skill mix by hand every cycle, that manual time is the right number to set against the price difference.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    Deputy is a well-rated general workforce tool. The Critical Access Hospital question is whether general workforce tooling fits a licensed clinical environment with active CMS survey obligations. The honest answer for most CAHs is no - not because Deputy is bad software, but because the compliance and credential logic a hospital needs is not what Deputy was built for. The right alternative depends on whether you need shift visibility or staffing-record defensibility.
+    Deputy is a well-rated general workforce tool, and its help center documents more than its marketing pages show: training tags, overtime warnings and a shift change history. The Critical Access Hospital question is whether a general tool checks the rules a nursing unit runs on. On the pages we read, Deputy does not document charge coverage on every shift, skill mix or callout ranking. The right alternative depends on whether you need shift visibility, or a schedule checked against those rules before it posts.
   </p>
 </div>
 
-One honest limitation: SimpleScheduleAI is not the right fit for healthcare practices outside the acute hospital context, retail-style shift swapping use cases, or facilities that specifically need a low-cost general workforce tool rather than a managed nurse-scheduling service.
+One honest limitation: SimpleScheduleAI is not the right fit outside the acute hospital setting. It also does not suit retail-style shift swapping, or a facility that needs a low-cost general workforce tool rather than a nurse scheduling service.
 
 ## What to Do This Week
 
-Start by calculating the full cost of Deputy for your hospital. Add the monthly subscription to the staff time spent on manual CMS documentation, credential verification for each callout, and FLSA overtime calculation outside the system. That total is what Deputy actually costs. Use it as the baseline when evaluating whether a purpose-built clinical scheduling tool is cost-neutral.
+Start by calculating the full cost of Deputy for your hospital. Add the monthly subscription to the staff time spent checking charge coverage, skill mix and overtime by hand. That total is what Deputy actually costs, and it is the baseline for comparing a purpose-built clinical scheduling tool.
 
-1. **Calculate the true cost of Deputy for your hospital.** Add the monthly Deputy subscription to the estimated staff hours per month spent on: manual CMS documentation, manual credential verification for each callout, manual FLSA overtime calculation, and manual survey prep. The total is the real cost of Deputy for your nursing schedule.
+1. **Calculate the true cost of Deputy for your hospital.** Add the monthly Deputy subscription to the staff hours spent each month on three jobs: checking charge coverage, checking skill mix on nights, and working callouts by phone. The total is the real cost of Deputy for your nursing schedule.
 
-2. **Document your last three CMS survey prep experiences.** How long did each take? What records had to be assembled manually from sources outside Deputy? If survey prep takes more than two hours, that time cost repeats with every survey cycle for as long as you are on Deputy.
+2. **Check last month's record of schedule changes.** Can you see who changed each shift, and when? Deputy's shift audit report needs the Analytics+ add-on, so confirm which plan you are on before you rely on it.
 
-3. **Check whether any credential mismatches have occurred under Deputy.** Pull your callout history from the last 90 days and verify that every replacement nurse held the credentials required for the shift they filled. If you cannot verify this from Deputy's records, the credential check did not happen systematically.
+3. **Check last quarter's callouts against your unit and charge rules.** Pull your callout history from the last 90 days. Check that every replacement nurse was qualified for the unit, and for charge where the shift needed it. If you cannot check this from Deputy's records, the check did not happen systematically.
 
-4. **Request a demo of SimpleScheduleAI and frame it as a compliance gap assessment.** Describe your current Deputy setup, your CMS compliance obligations, and your credential requirements. Ask specifically how SimpleScheduleAI handles each gap. See [how it works](/how-it-works).
+4. **Request a demo of SimpleScheduleAI with your own rules.** Describe your current Deputy setup and your charge, skill-mix and overtime rules. Ask how SimpleScheduleAI handles each one. See [how it works](/how-it-works).
 
-5. **If you want to stay on self-serve software, ask TCP whether it will support Aladtec for hospital nursing.** If it will, request a trial and deploy Aladtec in parallel with Deputy for one scheduling cycle. Compare the time investment required in Aladtec to configure credential tracking and coverage rules against the time you are currently spending on manual compliance outside of Deputy.
+5. **If you want to stay on self-serve software, ask TCP whether it will support Aladtec for hospital nursing.** If it will, request a trial and deploy Aladtec in parallel with Deputy for one scheduling cycle. Compare the time it takes to set up qualification tracking and coverage rules in Aladtec against the time you spend checking the schedule by hand today.
 
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-default dark:text-slate-100">The hospital scheduling upgrade from Deputy</p>
-    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI provides competency-filtered callout replacement, automatic CMS §485.635 documentation, and FLSA healthcare overtime tracking as defaults. Built for Critical Access Hospitals that need clinical scheduling compliance, not a general workforce scheduling tool applied to a clinical environment.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">Charge coverage and ICU and ER competency are checked on every draft, and hours are tracked against the 40-hour weekly FLSA overtime threshold. Built for Texas hospitals of 25 beds or fewer.</p>
   </div>
   <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary hover:bg-secondary dark:bg-primary/50 dark:hover:bg-primary px-6 py-3 text-white font-semibold transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>
 
-## Sources
-
-[1] Deputy ratings: 4.6/5 on Capterra (772 reviews). Vendor page: [deputy.com](https://www.deputy.com) and [healthcare segment page](https://www.deputy.com/industry/healthcare). Verified May 2026.
-
-[2] Aladtec by TCP ratings: 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified May 2026.
-
-[3] When I Work ratings: 4.4/5 on G2 (361 reviews), 4.5/5 on Capterra (1,289 reviews). Vendor page: [wheniwork.com](https://wheniwork.com). Verified May 2026.
-
-[4] Homebase ratings: 4.6/5 on Capterra (5,150 reviews). Vendor page: [joinhomebase.com](https://joinhomebase.com). Verified May 2026.
-
-[5] TCP TimeClock+ ratings: 4.4/5 on G2 (271 reviews), 4.6/5 on Capterra (1,147 reviews). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified May 2026.
-
-[6] Portia A., Nurse (Hospital & Health Care), Deputy review. Capterra, April 8, 2026.
-
-[7] FLSA 8-and-80 healthcare overtime rule. [U.S. Department of Labor, Wage and Hour Division, FLSA guidance](https://www.dol.gov/agencies/whd/flsa).
-
-[8] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR, Title 42, Chapter IV, Subchapter G, Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
-
-**Methodology note:** Capability descriptions for all platforms are based on publicly available product pages, verified May 2026. Compliance-specific limitations for Deputy (credential enforcement, FLSA 8-and-80, CMS documentation) are based on product page verification; no hospital-context reviewer complaints about these gaps were found on Capterra or G2 during research for this post. Features change; verify current capabilities with each vendor before finalizing an evaluation.
-
 ## Frequently Asked Questions
 
 **Is Deputy HIPAA compliant?**
 
-Deputy provides HIPAA compliance features and offers a Business Associate Agreement (BAA) for healthcare customers. The scheduling data that flows through Deputy can be managed in a HIPAA-compliant manner. However, HIPAA compliance in the scheduling context addresses data security, not clinical appropriateness of assignments. A HIPAA-compliant scheduling tool that assigns uncredentialed nurses to clinical units is still creating a safety gap.
+The Deputy pages we read do not document HIPAA support or a business associate agreement (BAA). Ask Deputy directly whether it will sign a BAA before you put any patient information into it. HIPAA covers how data is protected. It does not tell you whether the right nurse is on the right shift, which is the question the rest of this guide answers.
 
 **Is Aladtec or SimpleScheduleAI a better Deputy alternative for a small hospital?**
 
-Aladtec suits hospitals that want to remain on self-serve software and have a nurse manager who will invest in configuration and maintenance. Confirm first that TCP will sell and support it for hospital nursing. SimpleScheduleAI is the better alternative for hospitals where the nurse manager also takes clinical shifts and cannot spend 6-10 hours per week maintaining a scheduling system.
+Aladtec suits hospitals that want to remain on self-serve software and have a nurse manager who will invest in configuration and maintenance. Confirm first that TCP will sell and support it for hospital nursing. SimpleScheduleAI is the better alternative for hospitals where the nurse manager also takes clinical shifts and has no time to maintain a scheduling system.
 
 **Can Deputy track nurse credentials for scheduling purposes?**
 
-Deputy has an employee profile system where credential information can be entered as notes. Credential enforcement that automatically blocks assignment based on credential status is not documented on the product page. Verify current credential tracking capabilities with Deputy directly before evaluating for clinical use.
+Partly. Deputy's healthcare setup guide documents training tags that "identify team members who are qualified, trained, or approved to work," and it places credential expiry tracking in a paid HR add-on. A charge-nurse requirement on a shift is not documented. Ask Deputy to show how a training tag stops the wrong nurse being scheduled before you rely on it for clinical nursing.
 
 **What is the cost difference between Deputy and healthcare scheduling software?**
 
-At a 20-nurse roster, Deputy costs approximately $90 per month ($4.50 per user). Aladtec's price is not published; TCP quotes on request. [NurseGrid](/blog/nursegrid-alternatives) Manager runs approximately $150-300 per month. SmartLinx does not publish pricing and requires a quote; SimpleScheduleAI uses flat monthly pricing, $1,000 for up to 20 nurses and $1,500 for 21 to 40 nurses. For most hospitals, the labor cost of manual compliance work that Deputy requires exceeds the price difference between Deputy and a healthcare-specific tool, making the upgrade cost-neutral or positive when total cost is calculated.
+For 20 users, Deputy's published plans cost $100 to $180 a month ($5 to $9 per user), with a $30 monthly minimum. Aladtec's price is not published; TCP quotes on request. [NurseGrid](/blog/nursegrid-alternatives) Manager publishes $5 per staff member per month. SmartLinx does not publish pricing. SimpleScheduleAI uses flat monthly pricing, $1,000 for up to 20 nurses and $1,500 for 21 to 40. Set the difference against the hours your nurse manager spends checking the schedule by hand.
 
 **Does Deputy work for hospital scheduling if I configure it correctly?**
 
-Credential tracking enforcement, FLSA healthcare overtime configuration, CMS documentation, and charge nurse logic are not documented on Deputy's product page. Verify current capabilities with Deputy directly. For hospitals with clinical scheduling requirements, confirm whether Deputy's current feature set covers those needs before relying on it for compliance-sensitive scheduling.
+Deputy documents training tags, overtime warnings and a shift change history. Charge nurse logic, skill-mix rules and staffing that follows census are not documented on the pages we read. Ask Deputy to show each one on a demo before you rely on it for a nursing unit.
+
+## Sources
+
+[1] Deputy: 4.6/5 on Capterra (773 reviews), checked September 2026. Vendor pages: [healthcare](https://www.deputy.com/industry/healthcare), [pricing](https://www.deputy.com/pricing), [shift swapping](https://www.deputy.com/features/shift-swapping), the [healthcare setup guide](https://help.deputy.com/hc/en-au/articles/4621991456527-Setting-up-Deputy-for-a-healthcare-business), [overtime tags and warnings](https://help.deputy.com/hc/en-au/articles/15192896170895-How-do-I-turn-on-and-understand-overtime-warnings-on-the-schedule-BETA) and the [shift audit report](https://help.deputy.com/hc/en-au/articles/12016108679823-Shift-audit-report-Analytics-only). Checked November 2026.
+
+[2] Aladtec by TCP: 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com/products/aladtec/).
+
+[3] When I Work: 4.5/5 on Capterra (1,300 reviews), checked August 2026. Vendor pages: [pricing](https://wheniwork.com/pricing), [positions and tags](https://help.wheniwork.com/articles/when-to-use-positions-and-tags/), [overtime visibility](https://help.wheniwork.com/articles/overtime-visibility/) and the [shift history report](https://help.wheniwork.com/articles/shift-history-report-details/). Checked November 2026.
+
+[4] Connecteam: [scheduling app](https://connecteam.com/employee-scheduling-app/), [qualifying users to shifts](https://help.connecteam.com/en/articles/8693629-job-schedule-qualifying-users-to-shifts), [scheduler activity](https://help.connecteam.com/en/articles/9337115-how-to-view-the-job-scheduler-s-activity) and [pricing](https://connecteam.com/pricing/). Checked November 2026.
+
+[5] Homebase: 4.6/5 on G2 (539 reviews) and 4.6/5 on Capterra (1,151 reviews), checked July 2026. Vendor pages: [healthcare](https://joinhomebase.com/healthcare), [healthcare staff scheduling guide, June 23, 2026](https://joinhomebase.com/blog/healthcare-staff-scheduling-software) and [pricing](https://joinhomebase.com/pricing/). Checked November 2026.
+
+[6] Reviewer quotes are verbatim from Capterra, with the reviewer role and date as displayed on the review.
+
+[7] FLSA overtime for hospitals, including the 8-and-80 method. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+
+**Methodology note:** Capability descriptions come from each vendor's product and help-center pages, checked in November 2026. "Not documented" means we searched those pages and found nothing on that question. It does not prove a product cannot do it. Features change, so verify current capabilities with each vendor before you decide.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

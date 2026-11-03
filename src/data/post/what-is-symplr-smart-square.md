@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-10-06T00:00:00Z
-updateDate: 2026-10-06T00:00:00Z
+updateDate: 2026-11-03T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Is Symplr Smart Square? Owner, Go App and Fit for Small Hospitals (2026)'
 excerpt: >
@@ -23,7 +23,7 @@ metadata:
 
 ## Key Takeaways
 
-- symplr Smart Square is nurse and staff scheduling software for hospitals and health systems. symplr says it combines "predictive analytics, automation, and flexible scheduling tools" ([symplr.com](https://www.symplr.com/products/smart-square)). Its earlier name was Avantas Smart Square.
+- symplr Smart Square is nurse and staff scheduling software for hospitals and health systems. symplr says it combines "predictive analytics, automation, and flexible scheduling tools" ([symplr.com](https://www.symplr.com/products/smart-square)). symplr now calls it "symplr Scheduling (formerly Smart Square®)". Its earlier name was Avantas Smart Square.
 - symplr owns it now. AMN Healthcare sold Smart Square to symplr, and [AMN's Q2 2025 earnings release](https://www.sec.gov/Archives/edgar/data/1142750/000114275025000051/amn-ex991x20250630xearning.htm), filed with the SEC, says the sale closed on July 1, 2025. In February 2026, symplr said it is integrating Smart Square and symplr Workforce into a single workforce management platform.
 - On scheduling, symplr claims Smart Square can forecast staffing needs "up to 120 days in advance with 96 percent accuracy". It also describes staff self-scheduling and open shifts that can carry extra pay to get them filled early.
 - Smart Square Go, the staff phone app, is free to download. Both app store listings say it "requires an active Smart Square account", so it only works for someone who already has a Smart Square account.
@@ -49,11 +49,11 @@ A new hire may tell you their last hospital scheduled everyone in Smart Square. 
 
 ## What Is Symplr Smart Square?
 
-symplr Smart Square is scheduling software for nurses and other hospital staff. symplr sells it to hospitals and health systems under the label "Smart Square® Scheduling and Staff Planning". Its product page sums it up in one line: "Smart Square® combines predictive analytics, automation, and flexible scheduling tools to help healthcare organizations improve coverage, efficiency, and staff satisfaction" ([symplr.com](https://www.symplr.com/products/smart-square)).
+symplr Smart Square is scheduling software for nurses and other hospital staff, sold to hospitals and health systems. As of November 3, 2026, symplr's [product page](https://www.symplr.com/products/smart-square) calls it "symplr Scheduling (formerly Smart Square®)". In October 2026 it read: "Smart Square® combines predictive analytics, automation, and flexible scheduling tools to help healthcare organizations improve coverage, efficiency, and staff satisfaction" ([symplr.com](https://www.symplr.com/products/smart-square)).
 
 The pitch on that page is about cost and coverage. It promises to "reduce premium labor", which is hospital shorthand for hours paid above the normal rate, such as overtime and agency shifts.
 
-The product is older than its current owner. It began as Avantas Smart Square. Avantas was a clinical labor management company in Omaha, Nebraska, and AMN Healthcare announced it had bought Avantas in December 2014 ([AMN Healthcare](https://www.prnewswire.com/news-releases/amn-healthcare-acquires-avantas-300013370.html)). The Smart Square name has stayed through AMN and now symplr.
+The product is older than its current owner. It began as Avantas Smart Square. Avantas was a clinical labor management company in Omaha, Nebraska, and AMN Healthcare announced it had bought Avantas in December 2014 ([AMN Healthcare](https://www.prnewswire.com/news-releases/amn-healthcare-acquires-avantas-300013370.html)). The Smart Square name lasted through AMN and into 2026.
 
 Smart Square was named Best in KLAS for Scheduling: Nurse & Staff in 2025 ([AMN Healthcare](https://ir.amnhealthcare.com/2025-02-05-AMN-Healthcares-Smart-Square-R-Recognized-as-2025-Highest-Ranked-Workforce-Solution-in-Latest-KLAS-Report)) and again in 2026 ([symplr](https://www.symplr.com/press-releases/symplr-smart-square-earns-2026-best-in-klas-nurse-and-staff-scheduling)). KLAS Research rates healthcare software; both announcements are vendor press releases.
 
@@ -65,7 +65,7 @@ In its 2026 award release, symplr describes itself as "a leading provider of ent
 
 The bigger change came in 2026. At the ViVE conference on February 23, 2026, symplr announced plans to combine two products ([symplr](https://www.symplr.com/press-releases/symplr-unveils-new-ai-powered-innovations-at-vive-2026)). In its words, symplr "is integrating symplr Workforce and symplr Smart Square into a single workforce management platform". symplr sells a second product, symplr Workforce, that adds time and attendance, meaning the time clock staff use to clock in and out. The difference between the two is covered below.
 
-As of October 2026, Smart Square still has its own product page on symplr.com. For a hospital looking at it today, that raises a practical point. Ask which product the contract names, and what happens to it once the two are combined.
+In November 2026, Smart Square still had its own page on symplr.com. Ask which product the contract names, and what happens to it once the two are combined.
 
 ## How Does Smart Square Scheduling Work?
 
@@ -93,7 +93,7 @@ On the hospital side, there is no public price. [Capterra](https://www.capterra.
 
 ## What Is the Difference Between symplr Workforce and Smart Square?
 
-symplr Workforce combines timekeeping and scheduling in one product. Smart Square is symplr's scheduling and staff-planning product. symplr's menu describes Workforce as time and attendance plus scheduling, and Smart Square as scheduling and staff planning. Timekeeping means staff clocking in and out, which feeds payroll.
+symplr Workforce combines timekeeping and scheduling in one product. Smart Square is symplr's scheduling and staff-planning product. In October 2026, symplr's menu described Workforce as time and attendance plus scheduling, and Smart Square as scheduling and staff planning. Timekeeping means staff clocking in and out, which feeds payroll.
 
 A hospital does not need Workforce to run Smart Square, according to symplr. The [symplr Workforce page](https://www.symplr.com/products/symplr-workforce) asks, "Is there a standalone scheduling solution available?" Its answer: "Yes. Smart Square can integrate with leading third-party timekeeping systems, allowing healthcare organizations to modernize scheduling workflows without replacing their existing timekeeping investments."
 
@@ -109,7 +109,7 @@ A hospital does not need Workforce to run Smart Square, according to symplr. The
     <tbody>
       <tr class="bg-white">
         <td class="border border-slate-300 px-3 py-2 font-medium text-slate-900 align-top">What symplr calls it</td>
-        <td class="border border-slate-300 px-3 py-2 text-slate-700 align-top">Scheduling and Staff Planning</td>
+        <td class="border border-slate-300 px-3 py-2 text-slate-700 align-top">symplr Scheduling (formerly Smart Square®)</td>
         <td class="border border-slate-300 px-3 py-2 text-slate-700 align-top">Time and Attendance Staffing and Scheduling</td>
       </tr>
       <tr class="bg-slate-50">
@@ -306,13 +306,13 @@ Eight questions cover what symplr's public pages leave open. Ask to see each one
 5. **How does the forecast perform on a small unit?** Ask how symplr measures its forecast accuracy, and show them a month of your own census swings.
 6. **How does self-scheduling work, step by step?** Ask how long the window runs, who approves requests, and what happens to the night shift nobody picks.
 7. **What happens when an open shift goes unclaimed?** Ask who sets the incentive amounts and who gets called next on a roster of 30.
-8. **Which product will we be on once the two are combined?** symplr announced in February 2026 that Smart Square and symplr Workforce are being combined. Ask what changes for a new customer, including price.
+8. **Which product will we be on once the two are combined?** symplr announced in February 2026 that Smart Square and symplr Workforce are being combined. Ask which name the contract will carry and what changes for a new customer, including price.
 
 ## How Does SimpleScheduleAI Differ From Smart Square?
 
 SimpleScheduleAI is AI-native nurse scheduling software, delivered as a service: the AI builds the schedule, a scheduling team checks it, the nurse manager approves. It is built for Texas Critical Access Hospitals. The main difference from Smart Square is who does the scheduling work. Smart Square is software the hospital runs, with staff choosing and trading shifts in it. With SimpleScheduleAI, the schedule arrives built.
 
-The hospital sends its staff list and shift structure by Excel, and the team configures the rules before the first cycle. Each cycle, the AI builds three draft options to choose from. The scheduling team checks them, and the nurse manager approves by email or another agreed channel. When a nurse calls out, the hospital tells the scheduling team through the channel agreed at onboarding. The system then generates the top 3 replacement candidates with reasons, ranked by skill match, competency for the unit, charge coverage, and overtime risk.
+The hospital sends its staff list and shift structure by Excel, and the team configures the rules before the first cycle. Each cycle, the AI builds three draft options to choose from. The scheduling team checks them, and the nurse manager approves by email or another agreed channel. When a nurse calls out, the hospital tells the scheduling team through the channel agreed at onboarding. The system then ranks replacements with reasons, nurses under 40 hours first, each shown with their competency level.
 
 SimpleScheduleAI is not the right fit for every hospital that looks at Smart Square:
 
@@ -345,7 +345,7 @@ For a side-by-side table of Smart Square against SimpleScheduleAI and four other
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">The schedule, built and checked, before Thursday</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds three drafts against your rules, checks them, and sends you the options to approve. Charge coverage and overtime handled before you see it. Built for Texas Critical Access Hospitals.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI builds three drafts against your rules, checks them, and sends you the options to approve. Charge coverage checked before you see it. Built for Texas Critical Access Hospitals.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="text-muted text-xs mt-4"><a href="https://cal.com/gautham-8bdvdx/30min" class="underline">Book a call with our team →</a></p>
 </div>
@@ -388,7 +388,7 @@ That cannot be compared from public data, because symplr does not publish Smart 
 
 ## Sources
 
-[1] symplr, Smart Square product page. [symplr.com/products/smart-square](https://www.symplr.com/products/smart-square). Verified 2026-10-06.
+[1] symplr, Smart Square product page. [symplr.com/products/smart-square](https://www.symplr.com/products/smart-square). Verified 2026-10-06; rename checked 2026-11-03.
 
 [2] symplr, symplr Workforce product page and FAQ. [symplr.com/products/symplr-workforce](https://www.symplr.com/products/symplr-workforce). Verified 2026-10-06.
 

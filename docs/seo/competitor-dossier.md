@@ -370,6 +370,8 @@ per user per month", each "(USD excl. all applicable taxes)". **NEW:** Payroll a
 every shift swap complies with training requirements or maximum permitted hours." This is a
 documented TRAINING check on swaps; it is not a charge or ratio check.
 
+**URL moved 2026-11-03:** the overtime-warnings help article now lives at https://help.deputy.com/hc/en-au/articles/15192896170895-How-do-I-turn-on-and-understand-overtime-warnings-on-the-schedule-BETA (the old "...enable-and-understand-overtime-tags-and-warnings..." slug 301-redirects to it and fails check-links). Swapped in deputy-alternatives-healthcare and best-scheduling-software-25-bed-hospital.
+
 ### Verified Reviewer Quotes
 
 **Positive (hospital nurse):**
@@ -773,8 +775,13 @@ silence elsewhere is missing documentation, not a proven missing feature.
 **Capterra URL (verified 2026-08-14):** https://www.capterra.com/p/254829/NurseGrid/reviews/ — product ID 254829 CONFIRMED, listing name is "NurseGrid Manager". Live rating 4.2/5 across 13 reviews.
 
 **Important caveat:** Manager-facing mobile app removed per multiple reviewers (June 2024).
-Desktop login required for schedule edits. Not a primary scheduling system for CAHs with
-active CMS obligations — missing FLSA tracking, CMS audit trail, credential enforcement.
+Desktop login required for schedule edits. CORRECTED 2026-11-03: the earlier line here ("Not a
+primary scheduling system for CAHs with active CMS obligations — missing FLSA tracking, CMS audit
+trail, credential enforcement") rested on a false premise (no CoP requires a scheduling audit
+trail; brief 2026-11-healthcare-vs-generic section 6) and fed an unsourced line into
+onshift-alternatives. Use the documented boundary instead: coverage requirements by POSITION
+(RN/LPN/CNA), no charge or competency requirement documented, no census, and "Coverage
+requirements ... do not automatically create or approve open shift requests."
 
 ### Verified Reviewer Quotes
 
