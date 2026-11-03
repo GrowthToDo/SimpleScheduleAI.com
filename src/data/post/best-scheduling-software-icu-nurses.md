@@ -135,7 +135,7 @@ The table below reports what each vendor documents on its own website, checked i
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">SimpleScheduleAI</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Texas hospitals of 25 beds or fewer</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A rule: every ICU shift gets one of your most experienced nurses (Level 4 or 5 on a 1 to 5 scale your hospital sets), and no orientee works the ICU</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">A rule: every ICU shift gets one of your most experienced nurses, and no orientee works the ICU</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Your census ranges set the RN count; a busier census level on a shift raises it</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Ranked shortlist: nurses who stay under 40 hours first, each shown with their level against the nurse who called out</td>
       </tr>
@@ -230,7 +230,7 @@ SimpleScheduleAI is AI-native [nurse scheduling software](/nurse-scheduling-soft
 
 <img src="/images/blog/best-scheduling-software-icu-nurses/Nursegrid.webp" alt="NurseGrid Manager scheduling interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-NurseGrid Manager is the manager tier of the NurseGrid app, owned by HealthStream. Our [NurseGrid Manager explainer](/blog/what-is-nursegrid-manager) covers how it works. It holds 4.2/5 on Capterra (13 reviews; small sample, checked September 2026). It is the only platform here whose marketing names critical access hospitals: "Usually teams with 250 staff or fewer. Think critical access hospitals, hospital departments, surgery centers, clinics, and more."
+NurseGrid Manager is the manager tier of the NurseGrid app, owned by HealthStream. Our [NurseGrid Manager explainer](/blog/what-is-nursegrid-manager) covers how it works. It holds 3.9/5 on Capterra (13 reviews; small sample, checked November 2026). It is the only platform here whose marketing names critical access hospitals: "Usually teams with 250 staff or fewer. Think critical access hospitals, hospital departments, surgery centers, clinics, and more."
 
 **Best for:** Small hospitals that want to run the schedule themselves at a published price, with coverage set by position.
 
@@ -247,8 +247,19 @@ NurseGrid Manager is the manager tier of the NurseGrid app, owned by HealthStrea
 - Nothing in its documentation restricts a charge shift to charge-trained staff.
 - Its own help center says coverage requirements "do not automatically create or approve open shift requests." A gap shows in the cell, and filling it is up to you.
 - Census and acuity do not appear in its help center.
+- An assistant director of nursing reported that only the schedule's manager can edit it:
 
-**Verdict:** The closest self-run option for a small hospital, and the cheapest published price here. It fits if position-level coverage is enough for your ICU and you will check experience on each night yourself.
+  > "unable to adjust schedule unless you are the manager of the schedule. this is not helpful when other employees have to take call and manage the schedule."
+  >
+  > Reviewer, ADON, June 12, 2024, Capterra
+
+- Reviewers report that the manager phone app was removed in 2024.
+
+  > "It no longer has the manager app so I have to login to desktop to make changes."
+  >
+  > Reviewer, Chief Nursing Officer, June 18, 2024, Capterra
+
+**Verdict:** The closest self-run option for a small hospital, and the cheapest published price here. It fits if position-level coverage is enough for your ICU, desktop-only manager access is acceptable, and you will check experience on each night yourself.
 
 **Cost:** $5 per staff member per month.
 
@@ -257,6 +268,8 @@ NurseGrid Manager is the manager tier of the NurseGrid app, owned by HealthStrea
 <img src="/images/blog/best-scheduling-software-icu-nurses/M7Health.webp" alt="M7 Health nurse scheduling platform interface" width="1200" height="572" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
 M7 Health describes a "nurse-built scheduling platform that fits how small rural hospitals actually work." It says it has onboarded critical access hospitals in Utah, Mississippi and Alabama. On the pages we read, it names none of those hospitals. Our [M7 Health alternatives guide](/blog/m7-health-alternatives) covers the company in more depth. Ascend Learning [announced its acquisition of M7](https://www.globenewswire.com/news-release/2026/09/21/3365483/0/en/ascend-learning-acquires-m7-health-connecting-the-full-healthcare-career-to-scheduling.html) on September 21, 2026.
+
+M7 has no Capterra reviews, and G2 marks both reviews on its M7 listing as seller-invited, so we have no independent review to quote.
 
 **Best for:** Rural and community hospitals that want census forecasting and an account manager in one subscription.
 
@@ -282,6 +295,8 @@ M7 Health describes a "nurse-built scheduling platform that fits how small rural
 
 In-House Health sells AI scheduling to hospitals and skilled nursing facilities. Of the seven other platforms here, it is the only one whose product page we found naming the ICU: "In-House can give recommendations even for high acuity units like ICUs."
 
+In-House Health has no Capterra listing, and its G2 listing has no reviews yet, so we have no reviewer quote to share.
+
 **Best for:** Hospitals that want staffing forecasts driven by how sick patients are and how busy each shift will be.
 
 **Key advantages:**
@@ -304,7 +319,7 @@ In-House Health sells AI scheduling to hospitals and skilled nursing facilities.
 
 <img src="/images/blog/best-scheduling-software-icu-nurses/Shiftwizard.webp" alt="ShiftWizard nurse scheduling interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-ShiftWizard is HealthStream's hospital nurse scheduling product. It holds 4.4/5 on Capterra (723 reviews, checked September 2026). Its own FAQ says, "ShiftWizard was designed for health systems, with tools to manage complexity across locations."
+ShiftWizard is HealthStream's hospital nurse scheduling product. It holds 4.3/5 on Capterra (723 reviews, checked November 2026). Its own FAQ says, "ShiftWizard was designed for health systems, with tools to manage complexity across locations."
 
 **Best for:** Hospitals in a system that want nurse scheduling plus a separate acuity and assignment tool from one vendor.
 
@@ -319,6 +334,17 @@ ShiftWizard is HealthStream's hospital nurse scheduling product. It holds 4.4/5 
 - A skill or competency rule is not documented on the ShiftWizard page. Charge is not documented on either product page.
 - The ratio language belongs to the companion product. Confirm which products a quote includes.
 - No price is published, and the positioning is health systems rather than small hospitals.
+- Nurses report friction viewing and marking shifts. A critical care RN wrote:
+
+  > "I cannot see what unit I am scheduled for in one view. I have to toggle between 2 screens to view my scheduled days."
+  >
+  > Reviewer, Critical Care RN, August 12, 2024, Capterra
+
+- An RN who takes charge described a gap in recording callouts:
+
+  > "if i am in charge, i am unable to put an icon if someone leaves early or calls out sick"
+  >
+  > Reviewer, RN, August 7, 2024, Capterra
 
 **Verdict:** A strong option inside a health system that already uses HealthStream. For a standalone small hospital, ask what the two products cost together.
 
@@ -328,7 +354,7 @@ ShiftWizard is HealthStream's hospital nurse scheduling product. It holds 4.4/5 
 
 <img src="/images/blog/best-scheduling-software-icu-nurses/QGenda.webp" alt="QGenda nurse and staff scheduling interface" width="1200" height="568" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-QGenda started in physician scheduling and now sells nurse and staff scheduling too. It holds 4.2/5 on Capterra (68 reviews, checked September 2026). Its hospital page now says it serves hospitals "from large enterprises to small community facilities."
+QGenda started in physician scheduling and now sells nurse and staff scheduling too. It holds 4.2/5 on Capterra (68 reviews, checked November 2026). Its hospital page now says it serves hospitals "from large enterprises to small community facilities."
 
 **Best for:** Hospitals that schedule intensivists or hospitalists and nurses together and have someone to own the setup.
 
@@ -343,6 +369,17 @@ QGenda started in physician scheduling and now sells nurse and staff scheduling 
 - Skills are shown to the person scheduling. A required skill or competency on a shift is not documented, and neither is a charge requirement.
 - Its nurse page reports nurse-to-patient ratios in analytics. Enforcing a ratio is not documented.
 - No price is published. Rural and critical access hospitals are not named on the pages we read.
+- Running it can depend on one trained person. A CEO wrote:
+
+  > "It was a disaster with our staff member who was more versed on it took a vacation. nobody could replace her"
+  >
+  > Verified Reviewer, CEO, June 30, 2023, Capterra
+
+- A scheduler made a similar point:
+
+  > "Too complex to manage without Customer support"
+  >
+  > Reviewer, Scheduler, May 9, 2024, Capterra
 
 **Verdict:** Worth it if physician and nurse scheduling belong in one system. For nurse-only ICU scheduling at a small hospital, ask how much of the quote pays for physician scheduling you will not use.
 
@@ -352,13 +389,22 @@ QGenda started in physician scheduling and now sells nurse and staff scheduling 
 
 <img src="/images/blog/best-scheduling-software-icu-nurses/SmartSquare.webp" alt="symplr Scheduling, formerly Smart Square, staffing interface" width="1200" height="563" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-symplr Scheduling is the product formerly sold as Smart Square, and symplr's page now uses the new name. It holds 4.6/5 on Capterra (19 reviews, checked October 2026). symplr says the product won Best in KLAS, an annual award from the health IT research firm KLAS, for nurse and staff scheduling in 2025 and 2026. Our explainer on [symplr Smart Square](/blog/what-is-symplr-smart-square) covers its history.
+symplr Scheduling is the product formerly sold as Smart Square, and symplr's page now uses the new name. It holds 4.5/5 on Capterra (19 reviews, checked November 2026), where it is still listed as Smart Square. symplr says the product won Best in KLAS, an annual award from the health IT research firm KLAS, for nurse and staff scheduling in 2025 and 2026. Our explainer on [symplr Smart Square](/blog/what-is-symplr-smart-square) covers its history.
 
 **Best for:** Health systems that want staffing forecasts checked against each unit's staffing matrix, the table that sets how many nurses the unit needs at each census.
 
 **Key advantages:**
 
-- Skill mix shapes the recommendation: "AI evaluates historical data, patient volume, and skill mix to recommend optimal staffing levels."
+- Skill mix shapes the recommendation: "AI evaluates historical data, patient volume, and skill mix to recommend optimal staffing levels." Reviewers like seeing skills and gaps at a glance:
+
+  > "Color coding makes identification of skills easy."
+  >
+  > Reviewer, Director, November 11, 2022, Capterra
+
+  > "The software allows you too proactively know where you have staffing/scheduling gaps."
+  >
+  > Reviewer, Director of Nursing, November 18, 2022, Capterra
+
 - Forecasts respect each unit's rules: "the predictions pass through the staffing matrices for each unit/service area."
 - symplr's Workforce page says open shifts can be "posted to qualified staff automatically, up to 30 days in advance."
 
@@ -376,7 +422,7 @@ symplr Scheduling is the product formerly sold as Smart Square, and symplr's pag
 
 <img src="/images/blog/best-scheduling-software-icu-nurses/UKG.webp" alt="UKG workforce management scheduling interface" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-UKG, formerly Kronos, is the enterprise end of this market. It says it has "partnered with more than 3,500 hospitals and 10,000 post acute care facilities."
+UKG, formerly Kronos, is the enterprise end of this market. It says it has "partnered with more than 3,500 hospitals and 10,000 post acute care facilities." UKG Pro, the suite's main Capterra listing, holds 4.1/5 (739 reviews, checked November 2026). The reviews below come from that listing rather than from its scheduling add-ons.
 
 **Best for:** Hospitals in a health system that already runs UKG and has IT staff to own the configuration.
 
@@ -391,6 +437,17 @@ UKG, formerly Kronos, is the enterprise end of this market. It says it has "part
 - The clinical features come in layers. Clinical Scheduling Extensions work "when combined with UKG Advanced Scheduler," so ask for both product names on the quote.
 - ICU and critical care do not appear on the four UKG pages we read, and a charge requirement is not documented. Its help documents now sit behind a login.
 - No price is published, and we found no critical access or rural hospital page.
+- An ICU and ER nursing director reported that shift swap could not be customized by department:
+
+  > "the shift swap is not working. That it could not be department customized."
+  >
+  > Amy J., RN Director ICU/ER/RT Services, June 7, 2021, Capterra
+
+- Weekend support was a problem for a 24-hour hospital:
+
+  > "Customer support was closed on weekends so managing a 24 hour a day hospital made it hard to get support when needed at certain times."
+  >
+  > Reviewer, Manager, November 17, 2020, Capterra
 
 **Verdict:** The most capable platform here on paper, and the hardest for a hospital without IT staff to run.
 
@@ -483,7 +540,7 @@ NurseGrid Manager publishes the lowest price here, $5 per staff member per month
 
 [17] Benner P. From novice to expert. American Journal of Nursing. 1982;82(3):402-407. [PubMed](https://pubmed.ncbi.nlm.nih.gov/6917683/).
 
-[18] Capterra ratings for NurseGrid Manager, ShiftWizard and QGenda checked September 25, 2026; symplr Smart Square checked October 6, 2026. Review counts change; check the live page before relying on them.
+[18] Capterra ratings and reviewer quotes for NurseGrid Manager, ShiftWizard, QGenda, Smart Square and UKG Pro, checked November 3, 2026. Quotes are verbatim, including the reviewers' spelling. Several quotes are more than a year old; each carries its date. Capterra now shows most reviewers without a name, and the date shown is when Capterra published the review.
 
 ---
 

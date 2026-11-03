@@ -75,6 +75,33 @@ Two findings from the first run of this method, both worth knowing:
 
 Do not re-park Capterra work as a manual founder task.
 
+### Capterra display change: anonymized names, publish dates (observed 2026-11-03)
+
+Read live via Playwright on 2026-11-03 across NurseGrid, ShiftWizard, QGenda, Smart Square,
+symplr Workforce, UKG Pro and UKG Ready. Three changes matter for attribution:
+
+1. **Most review cards now show the reviewer as "Reviewer"**, not a name or initial. A few still
+   show a name (e.g. "Jacob G.", "Wilmer R.", "Patricia K.", "Amy J."). Quote the name only if the
+   card shows it today; otherwise attribute as "a [role] reviewer on Capterra".
+2. **The main review list no longer displays industry.** Industry ("Hospital & Health Care") now
+   appears only in the "Pros and Cons in Reviews" highlight block at the top of page 1, which shows
+   eight excerpts with name, role, industry and company size.
+3. **The list shows a publish date that differs from the original review date**, usually by days,
+   sometimes weeks (ShiftWizard reviews from July 2024 nearly all display "July 31, 2024"). The
+   highlight block shows the original dates, which match the dates already in this dossier. The
+   same review can therefore carry two dates on one page. Cite the date shown on the card you quote.
+
+Method that worked: the reviews page embeds every review on that page as JSON in its scripts
+(objects starting `"value":{"id":"...`, with `publishedAt`, `reviewer.fullName`,
+`reviewer.jobTitle`, `overallRating`, `title`, `pros`, `cons`). Read them with `browser_evaluate`,
+page through `?page=N` (25 per page; page past the end returns 404), then confirm any quote you
+use against `document.body.innerText`. On NurseGrid the first hit on `/reviews/` returned a
+Cloudflare 403; loading the product URL first and then `/reviews/` worked. No CAPTCHA was met.
+
+Capterra header ratings moved down 0.1 to 0.2 on most listings checked the same day, several with
+the review count unchanged. Hypothesis, not tested: a site-wide recalculation. Re-read the header
+before citing any rating.
+
 ---
 
 ## Aladtec (TCP Scheduling)
@@ -522,6 +549,11 @@ never proof of a missing feature. No federal CAH rule requires a schedule-change
 
 **Capterra URL:** None. No Capterra product listing exists as of 2026-05-16.
 
+**Review status re-checked 2026-11-03 (verified live via Playwright):**
+
+- **Capterra: still no listing.** Capterra search for "In-House Health", "InHouse Health" and "In-House" returned 20 products each, none of them In-House Health.
+- **G2: a listing now exists, with 0 reviews.** https://www.g2.com/products/in-house-health/reviews, "By In-House Health", header "0/5 (0)", "Unclaimed Profile", page text "In-House Health hasn't been reviewed yet". G2 files it under Patient Engagement Software. Its description matches the company: "In-House Health offers an AI-driven scheduling and management platform designed to optimize nursing team operations." The "No G2 listing found" line above is now out of date; correct form: "listed on G2 with no reviews (checked November 2026)". Still no verified reviewer quotes.
+
 **No verified reviewer quotes in dossier.** No G2, Capterra, or TrustRadius reviews exist for In-House Health as of 2026-05-16. The company has iOS and Android apps but no usable written third-party reviews surfaced. Per pre-publish checklist L66, all blog content must use neutral product-page framing only, no quote substitution, no volume language.
 
 **Product positioning (from inhouse.health, verified 2026-05-16):**
@@ -574,6 +606,23 @@ never proof of a missing feature. No federal CAH rule requires a schedule-change
 - Capterra: 0.0/5 (0 reviews); listing exists but unrated. **Re-verified live 2026-08-19 via Playwright**, product page renders "Overall rating / Based on 0 user reviews" with a "Write a review" prompt. Note: the `/reviews/` path 403s on first hit but redirects and loads on the product URL; the "Based on 311 Nurse Scheduling reviews" string on the same page is Capterra's category-wide AI summary, NOT M7's review count. Do not misread it.
 
 **Capterra URL (verified 2026-05-16):** https://www.capterra.com/p/10037829/M7-Health/ _(Product ID 10037829 confirmed live; page explicitly states "Based on 0 user reviews", 0.0 across Ease of Use, Value for Money, and Customer Service.)_
+
+**Review status re-checked 2026-11-03 (verified live via Playwright). G2 HAS CHANGED.**
+
+- **Capterra: still 0 reviews.** Product page "M7 Health Software Review 2026", "Last updated on October 15, 2026", comparison block shows "M7 Health 0.0" and "0.0 (0)" for each sub-rating; `/reviews/` redirects to the product page; Capterra search card reads "Overall Rating: No Reviews / Be the first to review!".
+- **G2: a listing now exists with 2 reviews.** https://www.g2.com/products/m7/reviews, product name "M7", "By M7 Health", category Medical Staff Scheduling, profile "Claimed", header "5/5 (2)". G2 states: "There are not enough reviews of M7 for G2 to provide buying insight." **Both reviews are labelled "Source: Seller invite"**, so M7 invited both reviewers. **The standing line "no G2 listing found" and any "no third-party reviews anywhere" claim are now FALSE.** Correct form: "M7 has no Capterra reviews and two seller-invited reviews on G2 (checked November 2026)." The first G2 search attempt returned 403; the second loaded.
+- The two G2 reviews, verbatim:
+
+> "They have great communication. Anytime I call needing help or education, they’re responsive and easy to work with."
+>
+> Thomas L., Sergeant, Mid-Market (51-1000 emp.), 7/23/2026, G2 (5/5, titled "Great Communication and Responsive Support"; "What do you like best"; Dislike field: "The open shifts aren’t always accurate when I make changes."; Validated Reviewer, Source: Seller invite; industry not displayed) _(verified live 2026-11-03 via Playwright)_
+
+> "Not able to modify once early lock in schedule then later upload"
+>
+> Verified User in Hospital & Health Care, Small-Business (50 or fewer emp.), 7/6/2026, G2 (5/5, titled "Flexible M7 schedule preferences"; "What do you dislike" field, complete; Like field: "Own preferences of schedule and swapping"; Current User, Validated Reviewer, Source: Seller invite) _(verified live 2026-11-03 via Playwright)_
+
+  If either is quoted, say it was seller-invited. Neither mentions ICU, charge or competency.
+- G2's M7 description, verbatim (vendor-written, "Claimed" profile): "live in health systems nationwide, from the country's largest academic medical centers to rural community hospitals."
 
 **No verified reviewer quotes in dossier.** Capterra listing has 0 reviews; no G2 or TrustRadius reviews exist for M7 Health as of 2026-05-16. Per pre-publish checklist L66, all blog content must use neutral product-page framing only, no quote substitution, no volume language. Vendor-published metrics (NPS, percentage reductions) are M7 marketing claims, not independent reviews; attribute as vendor claims if cited.
 
@@ -771,6 +820,7 @@ silence elsewhere is missing documentation, not a proven missing feature.
 
 - G2: 4.6/5 (5 reviews; small sample) — search-indicated
 - Capterra: 4.2/5 (13 reviews; small sample), Product ID 254829 — page-verified (re-verified live via Playwright 2026-09-25: header "NurseGrid Manager 4.2 (13)", unchanged)
+- **CHANGED 2026-11-03 (verified live via Playwright):** header now reads "NurseGrid Manager 3.9 (13)"; Ease of use 4.0, Customer Service 4.2; "Last updated October 19th, 2026"; "Showing 1-13 of 13 available reviews". Use 3.9, not 4.2.
 
 **Capterra URL (verified 2026-08-14):** https://www.capterra.com/p/254829/NurseGrid/reviews/ — product ID 254829 CONFIRMED, listing name is "NurseGrid Manager". Live rating 4.2/5 across 13 reviews.
 
@@ -816,6 +866,38 @@ requirements ... do not automatically create or approve open shift requests."
 > "cost is too expensive for small centers. We are not renewing ours."
 >
 > Administrator, Hospital & Health Care, June 17, 2024, Capterra _(re-verified live 2026-08-14. EXTENDED: the second sentence was missing from our version and is the stronger half, since it reports an actual churn decision rather than a price opinion.)_
+
+**Re-verification 2026-11-03 (verified live 2026-11-03 via Playwright; all 13 reviews read).** Every
+card above except Erica E. and Tonya D. now displays the reviewer as "Reviewer" and shows no
+industry, so names and "Hospital & Health Care" in the attributions above are no longer displayed.
+
+| Quote (opening words) | Status | As displayed today |
+| --- | --- | --- |
+| "Ease of loading schedules..." | STILL POSTED, verbatim | Reviewer, Inpatient Director, June 18, 2024, 5.0, "HRRMC- Inpatient" |
+| "It no longer has the manager app..." | STILL POSTED, verbatim | Reviewer, Chief Nursing Officer, June 18, 2024, 3.0 (was "shannon K.", June 13) |
+| "they took away the Manager App..." | STILL POSTED, verbatim | Reviewer, Staffing Coordinator, June 12, 2024, 5.0 |
+| "I really like it... Bring back the mobile app" | STILL POSTED, verbatim (line breaks in original) | Reviewer, Inpatient Director, June 18, 2024, 5.0 |
+| "Does not work well with androids..." | STILL POSTED; live uses a curly apostrophe in "doesn’t" | same review as above |
+| "cost is too expensive for small centers..." | STILL POSTED, verbatim | Reviewer, Administrator, June 18, 2024, 5.0. **Review title is "Too expensive for ASC's"**: this is an ambulatory surgery center, not a hospital. Never present it as a hospital voice. |
+
+**New quotes (verified live 2026-11-03 via Playwright):**
+
+> "unable to adjust schedule unless you are the manager of the schedule. this is not helpful when other employees have to take call and manage the schedule."
+>
+> Reviewer, ADON, June 12, 2024, Capterra (1.0-star review titled "not impressed"; Cons field; excerpt, the field continues "unable to do anything if looking at the schedule on the app...you have to be logged into the site"; lowercase is the original; industry not displayed) _(verified live 2026-11-03 via Playwright)_
+
+> "I wish there was a function other than sick or delete to remove someone from the schedule."
+>
+> Erica E., Director of Cardiopulmonary, June 12, 2024, Capterra (5.0-star review titled "Nursegrid is easy to use"; Cons field, complete; industry not displayed) _(verified live 2026-11-03 via Playwright)_
+
+> "Not sure other than not all departments in the hospital used it and the House Supervisor did not want to use it"
+>
+> Reviewer, Manager, June 18, 2024, Capterra (5.0-star review titled "Hospital Scheduling"; Cons field, complete, no closing period; industry not displayed) _(verified live 2026-11-03 via Playwright)_
+
+Keyword sweep of all 13 reviews: ICU, intensive care, critical care, CCU, step-down, charge nurse,
+competency, skill, acuity, ratio, callout, call-off and sick call return nothing beyond the "sick"
+line above. One CNA Cons line mentions census: "I do not like that the staff are unable to see who
+signed up voluntary low census" (Reviewer, CNA, June 26, 2024, 4.0).
 
 ---
 
@@ -981,6 +1063,7 @@ Canonical: `/solutions/nurse-and-staff-scheduling/` 301s to `/nurse-and-staff-sc
 
 - G2: 4.6/5 (164 reviews) — search-indicated
 - Capterra: 4.2/5 (68 reviews) — page-verified, Product ID 90628 (re-verified live via Playwright 2026-09-25: header "4.2 (68)", unchanged)
+- **CHANGED 2026-11-03 (verified live via Playwright):** reviews-page header now reads "QGenda 4 (68)"; Ease of use 4.1, Customer Service 4.2; "Last updated November 1st, 2026". The Capterra search-results card the same day showed "4.24 (68)". The two displays disagree; cite "4.0 (68)" from the listing header, or avoid citing a decimal.
 
 **Capterra URL (verified 2026-08-13):** https://www.capterra.com/p/90628/QGenda/reviews/ — the reviews path resolves; the host 403s automated checkers, so `check-links` reports it as "check" rather than broken. URL shape confirmed via search-result exact match, and the 4.2/68 rating plus the automation-hiccups theme were corroborated in the same pass.
 
@@ -1031,6 +1114,37 @@ Canonical: `/solutions/nurse-and-staff-scheduling/` 301s to `/nurse-and-staff-sc
 > "Cost. Seems there are hidden costs behind every door now."
 >
 > Wilmer R., Practice Administrator, Medical Practice, March 19, 2026, Capterra (Cons field of the same review)
+
+**Re-verification 2026-11-03 (verified live 2026-11-03 via Playwright; all 68 reviews read, pages 1-3).**
+
+| Quote (opening words) | Status | As displayed today |
+| --- | --- | --- |
+| "Qgenda is easy to use and does a great job at automating." | STILL POSTED; **excerpt**, live sentence continues "...automating what would otherwise be a daunting task." End with an ellipsis or quote it whole | "Ari  W." (double space as displayed), Administrator, May 9, 2024, 5.0 |
+| "Doing the initial set up of new providers is a little complicated." | STILL POSTED, verbatim | Reviewer, Scheduling Coordinator, December 14, 2023, 4.0 (was "Brandi D.") |
+| "The initial setup was time-consuming...collating...digitize documents." | STILL POSTED, but **our text is a compressed splice**. Full sentence: "The initial setup was time-consuming as is to be expected when you are collating and having to digitize documents which have often been just in paper format." Review is titled "QGenda Credentialing Simplified": it is about the credentialing module, not scheduling | Reviewer, Practice Administrator, May 6, 2024, 5.0 (was "Roger S.") |
+| "automated scheduling and rules set up seem to have hiccups...I just stopped using the automation." | STILL POSTED (splice of one long sentence) | List: Courtney D., May 13, 2024, 4.0. Highlight block: "Courtney D, Manager of Employee and Physician Relations, Medical Practice, 11 - 50 employees", May 10, 2024 |
+| "They outsourced customer service...you have generic people who respond." | STILL POSTED (splice) | Reviewer, President, May 9, 2024, 4.0 (was "David S.") |
+| "Too complex to manage without Customer support" | STILL POSTED, verbatim | Reviewer, Scheduler, May 9, 2024, 3.0 (was "Bryan S.") |
+| Wilmer R., all three quotes | STILL POSTED, verbatim | Wilmer R., Practice Administrator, March 23, 2026, 3.0 |
+
+Keyword sweep of all 68 reviews: no review mentions ICU, intensive care, critical care, CCU,
+step-down, charge nurse, competency, skill, acuity, ratio, callout, call-off or sick call. No
+reviewer role is a nurse manager or DON. The listing is dominated by physician-practice schedulers
+and credentialing staff.
+
+**New quotes (verified live 2026-11-03 via Playwright):**
+
+> "If you didn't work on the software 8 hours a day you would never know how to use it. It was a disaster with our staff member who was more versed on it took a vacation. nobody could replace her"
+>
+> Verified Reviewer, CEO, June 30, 2023, Capterra (1.0-star review titled "Clunky and difficult to use, but not useful for large organizations"; Cons field, excerpt, the field opens "The software is difficult to implement because it's not user friendly."; lowercase "nobody" and no closing period are the original; industry not displayed) _(verified live 2026-11-03 via Playwright)_
+
+> "It is easy to use and see what coverage is missing and who is available to fill missing tasks."
+>
+> Reviewer, Administrative Assistant III, June 11, 2018, Capterra (5.0-star review titled "I find QGenda easy to use, easy to read and support is fantastic."; Pros field, first sentence; a 2018 review, show the year) _(verified live 2026-11-03 via Playwright)_
+
+> "We have a large practice that requires a complex schedule and Qgenda has made it easier."
+>
+> Reviewer, Program Manager, June 17, 2026, Capterra (5.0-star review titled "Even Better with Time"; general comments, second sentence; most recent review on the listing) _(verified live 2026-11-03 via Playwright)_
 
 ---
 
@@ -1237,6 +1351,7 @@ Direct curl with a browser user-agent, both HealthStream pages, 2026-11-03.
 
 - G2: 4.3/5 across 405 reviews — founder page-verified 2026-08-14 (previously recorded without a review count). Listed as "ShiftWizard by HealthStream". G2 blocks automated fetch, so this line is human-verified, not tool-verified.
 - Capterra: 4.4/5 (723 reviews; 88%+ rated 4 stars or higher) _(header re-read via Playwright 2026-09-05: still "4.4 (723)", page stamped "Last updated August 20th, 2026"; Ease of use 4.3, Customer Service 4.4)_ (re-verified live via Playwright 2026-09-25: header still "4.4 (723)", "Last updated August 20th, 2026", unchanged)
+- **CHANGED 2026-11-03 (verified live via Playwright):** header now reads "ShiftWizard 4.3 (723)"; Ease of use 4.3, Customer Service 4.4; "Last updated October 19th, 2026"; 29 pages, "Showing 701-723 of 723 available reviews" on page 29. Use 4.3, not 4.4. (Incidental, same day: G2's M7 page lists ShiftWizard as an alternative at "4.3 (405)", consistent with the founder-verified G2 line above.)
 
 **G2 Pricing Insights (founder screenshot, PAGE-VERIFIED 2026-08-09, re-confirmed
 2026-08-14):** Time to Implement = 3 months; Return on Investment = 3 months;
@@ -1301,6 +1416,41 @@ _(The Erika A. and Jacob G. app-performance quotes were NOT re-located on page 1
 > "Not being able to sign up for 4 hour increment shifts."
 >
 > Michalina W., RN, August 13, 2024, Capterra _(re-verified verbatim on Capterra 2026-09-05, page 6, 5.0-star review titled "ShiftWizard review"; Cons field matches exactly. Pros field: "Seeing other people’s schedules & being able to see who you’re working with that day. Easy to use.")_
+
+**Re-verification 2026-11-03 (verified live 2026-11-03 via Playwright; all 723 reviews read, pages 1-29).**
+Names are now hidden on every card above except Jacob G., and the list shows publish dates, nearly
+all "July 31, 2024". Original dates survive only in the highlight block.
+
+| Quote (opening words) | Status | As displayed today |
+| --- | --- | --- |
+| "ShiftWizard was designed by nurses which is why it is fantastic to use." | STILL POSTED (truncation already flagged) | Page 2: Reviewer, Director of Emergency Services, July 31, 2024, 5.0 |
+| "Can be slow and glitchy..." | STILL POSTED, verbatim | Page 1: Reviewer, Registered Nurse, July 31, 2024, 4.0. Highlight block shows "Erika A, Registered Nurse, Hospital & Health Care, 1,001 - 5,000 employees", July 9, 2024, with her general-comments line |
+| "Everything is slow and difficult to use..." | STILL POSTED, verbatim. **Relocated** (missed in the 2026-09-05 pass) | Page 14: Jacob G., Registered Nurse, July 31, 2024, 1.0, "Terrible system" |
+| "I wish the messaging was better..." | STILL POSTED, verbatim | Page 4: Reviewer, LVN, July 31, 2024, 4.0 |
+| "We do not like when we have to put in a new shift type..." | STILL POSTED (truncation already flagged) | Page 1: Reviewer, Quality Assurance Process improvement Manager, July 31, 2024, 3.0 |
+| "Not being able to sign up for 4 hour increment shifts." | STILL POSTED, verbatim | Page 6: Reviewer, RN, August 21, 2024, 5.0 |
+
+**New quotes, ICU / critical care / charge (verified live 2026-11-03 via Playwright):**
+
+> "They shut off our Shiftwizard and we did not have access to our schedule and your customer service gave us a hard time with the contract and while the contract was going back in fourth to your company and ours; your company shut us down with no warning. It was unsafe for the patients and the staff."
+>
+> Regina M., MSU-ICU Administrative Assistant, Hospital & Health Care (51 - 200 employees), July 10, 2024, Capterra (name, industry and July 10 date as shown in the page-1 "Pros and Cons in Reviews" highlight block, which quotes the first sentence; the full Cons field is on page 8, where the card shows "Reviewer", July 31, 2024, 4.0 stars, title "anonymous ", and continues "Plus when they turned our ShiftWizard back on they took all our icons."; "back in fourth" is the original). An administrative assistant, not a nurse; describe her as an ICU unit administrative assistant. The incident is a contract dispute, so present it as her account, not as a product defect. _(verified live 2026-11-03 via Playwright)_
+
+> "I cannot see what unit I am scheduled for in one view. I have to toggle between 2 screens to view my scheduled days."
+>
+> Reviewer, Critical Care RN, August 12, 2024, Capterra (5.0-star review titled "Schedule at your fingertips"; Cons field, first two sentences; page 14; industry not displayed) _(verified live 2026-11-03 via Playwright)_
+
+> "if i am in charge, i am unable to put an icon if someone leaves early or calls out sick"
+>
+> Reviewer, RN, August 7, 2024, Capterra (3.0-star review titled "Shift Wizard"; Cons field, second sentence, complete; the field opens "all users are unable to add shift icons."; lowercase and no closing period are the original; page 5; industry not displayed) _(verified live 2026-11-03 via Playwright)_
+
+Other on-topic cards found in the sweep, not yet promoted: "I don’t like that I can’t see if I am
+charge for my shift." (Reviewer, RN, July 31, 2024, 4.0, page 8); "And as charge nurse I can see my
+staff, add then, take them off etc!!" (Reviewer, RN, July 31, 2024, 5.0, page 10); "The updates
+have made the system almost unusable." (Reviewer, Assistant Nurse Manager, July 31, 2024, 3.0,
+page 13); highlight block, "Making shift swaps is harder as it comparing schedules with people who
+are in the same job code (only shows everyone) and when looking for coverage it takes longer to
+navigate." (Megan L, Nurse, Hospital & Health Care, July 12, 2024). Re-read before citing.
 
 ---
 
@@ -1456,6 +1606,7 @@ not CAH-specific CMS §485.635. Ask for hospital-acute reference customers speci
 
 - G2: **Blocked 2026-10-06** (403 on both g2.com/products/symplr-smart-square/reviews and g2.com/sellers/symplr). The 2026-05-17 figure, symplr brand aggregate 4.3/5 (356 reviews) across all symplr products, is **UNVERIFIED since 2026-05-17**; do not cite it. No standalone Smart Square G2 rating has ever been retrieved.
 - Capterra (Smart Square): 4.6/5 (19 reviews), unchanged. Sub-scores: Ease of use 4.4, Customer Service 4.9 (18 ratings, verified 2026-10-06), Value for Money 4.6 (9). Listing "Last updated September 30th, 2026"; starting price "Contact vendor for pricing"; "Free trial not available" _(verified 2026-10-06)_
+- **CHANGED 2026-11-03 (verified live via Playwright):** Capterra Smart Square header now reads "Smart Square 4.5 (19)" (was 4.6); Ease of use 4.4, Customer Service 4.9; still "Last updated September 30th, 2026"; "Showing 1-19 of 19 available reviews". Capterra still lists it as "Smart Square", not "symplr Scheduling". symplr Workforce header now "symplr Workforce 3.9 (13)" (was 4.1); Ease of use 4.2; "Last updated November 1st, 2026".
 - Capterra (symplr Workforce, separate listing): 4.1/5 (13 reviews), unchanged. Ease of use 4.2, Customer Service 4.0 _(verified 2026-10-06)_. Note: this listing also holds legacy GE-era reviews (one titled "Centricity Review", one praising "GE's Customer Service"), so pre-2020 reviews here describe the predecessor product.
 - TrustRadius: No standalone listing surfaced (verified 2026-05-17; not re-checked 2026-10-06)
 - Gartner Peer Insights: symplr Workforce listing exists; no usable verbatim quotes retrieved (2026-05-17; not re-checked 2026-10-06)
@@ -1522,6 +1673,38 @@ not CAH-specific CMS §485.635. Ask for hospital-acute reference customers speci
 > "This system is very complex for new users, especially when navigating the different modules. Some features are not as intuitive as they could be, which means there can be a learning curve when getting started."
 >
 > Jordan E., HR, Human Resources, March 5, 2026, Capterra _(verified 2026-10-06; symplr Workforce listing, p/241148; Cons field of a 4-star review. Industry is Human Resources, not hospital; reviewer's Pros say they used it "in a healthcare environment".)_
+
+**Re-verification 2026-11-03 (verified live 2026-11-03 via Playwright; all 19 Smart Square and all 13 symplr Workforce reviews read).** Every quote above is STILL POSTED with the quoted text unchanged. No card on either listing now shows a reviewer name, no card shows industry, and no highlight block appears on either listing, so names and "Hospital & Health Care" above are no longer displayed. Displayed dates and stars today:
+
+| Reviewer (dossier name) | As displayed today |
+| --- | --- |
+| Hanna N. (both quotes) | Reviewer, RN, August 1, 2024, 5.0, "Effortless Schedule Management" |
+| Wanda C. | Reviewer, Director, November 11, 2022, 5.0, "SmartSquare-a way to simplify Scheduling and Staffing" |
+| Betsy W. | Reviewer, Director of Nursing, November 18, 2022, 5.0 |
+| Ginger H. | Reviewer, COO, November 17, 2022, 5.0 |
+| Stephanie T. (both quotes) | Reviewer, System Administrator, November 24, 2022, 3.0, "Smart Square Pros and Cons" |
+| Elisabeth C. (Workforce) | Reviewer, RN, May 10, 2018, 1.0, "Total Junk" |
+| Jordan E. (Workforce) | Reviewer, HR, March 9, 2026, 4.0, "Powerful Scheduling system " |
+
+**New quotes, Smart Square (verified live 2026-11-03 via Playwright):**
+
+> "The tool provides ability to have a predictive model for nursing unit census, a staffing plan built within the system to vary staff appropriately to the volume"
+>
+> Reviewer, Director, Labor Management, November 17, 2022, Capterra (5.0-star review titled "Smart Square = Success in Labor Management"; Pros field, excerpt of a longer sentence that continues "and a interface capability to load daily actual worked hours..."; mark the cut with an ellipsis; reviewer describes "a multifacility healthcare system") _(verified live 2026-11-03 via Playwright)_
+
+> "Color coding makes identification of skills easy."
+>
+> Reviewer, Director, November 11, 2022, Capterra (5.0-star review titled "SmartSquare-a way to simplify Scheduling and Staffing"; Pros field, last sentence; same review as the "see staff on all units" quote above) _(verified live 2026-11-03 via Playwright)_
+
+> "The biggest opportunity we face with this software is the difficulty of integration between Smart Square and our HRIS software."
+>
+> Reviewer, Systems Administrator, November 22, 2022, Capterra (4.0-star review titled "Healthcare Scheduling"; Cons field, complete) _(verified live 2026-11-03 via Playwright)_
+
+Keyword sweep: no Smart Square or symplr Workforce review mentions ICU, intensive care, critical
+care, CCU, step-down, charge nurse, competency, acuity, ratio, callout, call-off or sick call. The
+only "skill" hit is the color-coding line above. Also on-topic, not promoted: "We are also able to
+make staffing decisions quickly with tools such as cancellation list when we need to downsize."
+(Reviewer, Director, November 16, 2022, 5.0, "Smart Square Staffing System").
 
 **Product positioning (symplr.com re-verified 2026-10-06 via Playwright; previous pass 2026-05-17):**
 
@@ -1664,6 +1847,7 @@ Original product-page research pass; vendor-owned domains only (ukg.com, library
 
 - Capterra (UKG Pro): 4.3/5 (731 reviews) — Product ID 480 (re-verified live via Playwright 2026-09-25: header "UKG Pro 4.3 (731)"; supersedes 726 reviews recorded 2026-07-01, rating unchanged)
 - Capterra (UKG Ready): 4.2/5 (1,143 reviews) — Product ID 198579
+- **CHANGED 2026-11-03 (verified live via Playwright):** UKG Pro header now reads "UKG Pro 4.1 (739)" (was 4.3 (731)), "Last updated October 19th, 2026", 30 pages, all 739 read. UKG Ready header now "UKG Ready 4.1 (1159)" (was 4.2 (1,143)), 47 pages, all read.
 - Capterra (Kronos Workforce Central): Product ID 212370 seen in SERP; reviews URL 404'd, rating not captured
 - G2 (Kronos Workforce Central): 3.9/5 (733 reviews) — snippet only, page 403-blocked, verify before citing
 
@@ -1714,6 +1898,39 @@ _(UKG Ready hospital-industry reviewers who commented were mild and do not suppo
 critique; one Hospital & Health Care reviewer, Mayted B., Mar 27 2026, noted "always having system
 issues as in minor bugs here and there" — verbatim, typos preserved — usable only as a minor
 "occasional bugs" note, not a complexity claim.)_
+
+**Re-verification 2026-11-03 (verified live 2026-11-03 via Playwright; UKG Pro all 739 reviews, UKG Ready all 1,159).**
+
+| Quote (opening words) | Status | As displayed today |
+| --- | --- | --- |
+| "The reporting could be more user friendly..." | STILL POSTED, verbatim | Page 1: Reviewer, "Payroll Consult" (truncated as displayed), April 13, 2026, 4.0 (was "Felicia W.", April 8) |
+| "Some areas of the platform can be complex for new users..." | STILL POSTED, verbatim | Page 3: Reviewer, HR Assistant, June 19, 2026, 5.0. Highlight block shows "Swaminathan S, HR Assistant, Hospitality", June 18, 2026, with a different excerpt (his Pros line) |
+| "The software was difficult to use and not user friendly..." | STILL POSTED, verbatim | Page 1: Patricia K., Senior HR Generalist, April 6, 2026, 2.0 |
+| "The mobile app needs to be updated to include more features..." | STILL POSTED, verbatim (excerpt; the field continues "Having to direct hundreds of employees to the web browsers...") | Page 1: Reviewer, Senior Director, People and Culture, April 22, 2026, 4.0 (was "Jessica J.") |
+| UKG Ready, "always having system issues as in minor bugs here and there" | STILL POSTED; live text has a curly apostrophe in "they’re" and "lease" is the original | Page 3: Reviewer, "Medical billing and collection", March 30, 2026, 5.0 (was "Mayted B., Hospital & Health Care", Mar 27). Industry no longer displayed |
+
+**New quotes, UKG Pro listing p/480 (verified live 2026-11-03 via Playwright).** Note: this
+listing now carries 2021 reviews that name UKG Dimensions and Kronos, so the listing mixes
+products; name the product the reviewer names.
+
+> "the shift swap is not working. That it could not be department customized."
+>
+> Amy J., RN Director ICU/ER/RT Services, June 7, 2021, Capterra (5.0-star review titled "New implentation"; Cons field, complete; page 28; industry not displayed; general comments: "Kronos lead for our planning on implementation was not as helpful as we anticipated.") _(verified live 2026-11-03 via Playwright)_
+
+> "Customer support was closed on weekends so managing a 24 hour a day hospital made it hard to get support when needed at certain times."
+>
+> Reviewer, Manager, November 17, 2020, Capterra (4.0-star review titled "Ultipro for Business"; Cons field, complete; page 20; an UltiPro-era review, show the year) _(verified live 2026-11-03 via Playwright)_
+
+> "It is very complicated even for a millennial and tech savvy like me."
+>
+> Crishna G., Nurse, December 21, 2022, Capterra (1.0-star review titled "Save yourself and DO NOT use this app!"; Cons field, first sentence; page 20; industry not displayed) _(verified live 2026-11-03 via Playwright)_
+
+Keyword sweep, UKG Pro: one ICU reviewer (Amy J. above), no review mentions critical care, CCU,
+step-down, charge nurse, acuity, callout or call-off. One "ratio" hit is a CIO describing
+"staff:clients" ratios at non-hospital sites (June 7, 2021, "UKG Dimensions for the win!"); do not
+use it as a nurse-patient ratio quote. UKG Ready: no ICU, critical care or charge-nurse hits; nearest
+nurse-manager line is "It is not user friendly. Staff schedules don't show up. It was hard to enter
+agency staff." (Reviewer, RN, December 19, 2018, 3.0, page 42), not promoted.
 
 **Unverified (snippet-only, do NOT quote as exact):** allnurses thread "Electronic scheduling -
 Need some advice (Kronos/Cerner)" (403-blocked, real nurse thread but wording unconfirmed);
@@ -1849,6 +2066,7 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 
 | Date       | Action                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-11-03 | **Reviewer-quote refresh for the ICU post (best-scheduling-software-icu-nurses), Playwright.** Every review read on NurseGrid (13), ShiftWizard (723, 29 pages), QGenda (68), Smart Square (19), symplr Workforce (13), UKG Pro (739) and UKG Ready (1,159), plus keyword sweeps (ICU, critical care, charge, competency, skill, acuity, ratio, callout, sick). No vendor blocked (NurseGrid's first `/reviews/` hit was a Cloudflare 403; product URL first then worked). **All 35 existing quotes on these listings STILL POSTED (NurseGrid 6, ShiftWizard 6, QGenda 9, Smart Square/Workforce 9, UKG 5); none GONE.** CHANGED attribution: Capterra now shows most reviewers as "Reviewer", drops industry from the list, and shows publish dates that differ from original dates (new subsection under the Playwright note). Wording flags: QGenda Ari W. is an excerpt; QGenda Roger S. is a compressed splice from a credentialing review; NurseGrid "cost is too expensive" is an ASC administrator. **Ratings CHANGED:** NurseGrid 4.2 to 3.9 (13); ShiftWizard 4.4 to 4.3 (723); QGenda 4.2 to "4" (68); Smart Square 4.6 to 4.5 (19); symplr Workforce 4.1 to 3.9 (13); UKG Pro 4.3 (731) to 4.1 (739); UKG Ready 4.2 (1,143) to 4.1 (1,159). **New quotes:** 3 ShiftWizard (MSU-ICU administrative assistant, Critical Care RN, charge RN on call-outs), 1 ICU-director UKG quote plus 2 more, 3 NurseGrid, 3 QGenda, 3 Smart Square. **M7:** Capterra still 0 reviews, but **G2 now lists M7 with 2 seller-invited reviews (5/5)**; "no G2 listing" is false. **In-House:** Capterra still no listing; G2 listing exists, unclaimed, 0 reviews. | Claude |
 | 2026-11-03 | ICU-post fact-check gate (best-scheduling-software-icu-nurses; brief 2026-11-icu-nurse-scheduling-software.md section 6). Raw-text verification by direct curl (browser UA) of 15 vendor pages, plus Playwright for GlobeNewswire and the NurseGrid help center. **M7:** acquired by Ascend Learning, announced Sept 21, 2026 (GlobeNewswire release URL recorded); "owner of ATI" sourced to the Sept 22 ATI release, not the M7 one; /platform and CAH-page lines re-confirmed. **symplr:** product renamed "symplr Scheduling (formerly Smart Square®)", staffing-matrices and qualified-staff lines, ShiftSelect 404. **QGenda:** "from large enterprises to small community facilities" (corrects the 2026-08-25 "no small-hospital segment" line), EHR census/acuity feed, ratio reporting on /for-nurses/. **UKG:** library.ukg.com login-gated (three help-doc quotes not re-locatable); "charge" appears once on the HHS page as users; 3,500-hospitals line is on /industry-solutions/healthcare. **ShiftWizard:** Acuity and Assignment Manager carries the ratio/HPPD language and "is sold with" ShiftWizard; "designed for health systems" FAQ; first-vs-only Workday inconsistency. **NurseGrid:** all 30 help topics read in-page (corrects "login-gated"), zero skill/competency/certification/census/acuity; Charge/Preceptor toggles; "charge trained status"; topic renamed "Creating Open Shifts". **In-House:** ICU line (Inpatient Acute), "2 Weeks to implement" tile, /about no longer lists Vasilenko. **Deputy:** pricing re-verified, Payroll $49 base fee, training-requirements swap line. NOT done this pass: OnShift and SmartLinx section-6 items (not re-checked). | Claude |
 | 2026-11-02 | Added documented-capability blocks for When I Work, Homebase, Deputy (help centers read 2026-11-02; Homebase help center login-gated, so marketing pages and blog only); new Connecteam and Sling sections. Corrected stale "does not document credential constraints" lines. Source: brief 2026-11-healthcare-vs-generic-scheduling-software.md | Claude |
 | 2026-11-01 | Monthly `competitor-watch` + `sitemap-diff` run (November audit). 9 of 17 watched pages moved; no M7, YouShift or QGenda page changed, and no watched page changed title, meta description, CTA or price. **SmartLinx homepage H1 dropped its customer count.** Before: `Join 5,000+ Senior Care Leaders Optimizing Their Workforce with Smartlinx`; after: `Join Thousands of Senior Care Leaders Optimizing Their Workforce with Smartlinx`. Title, description and H2 set unchanged. **In-House Health published a "Part 3" blog post.** On home, product, skilled-nursing and about, the H2 list under `PR & Blog` (a latest-posts list) gained `Part 3: The ground changes underneath` and lost `The Future of AI Agents in Nurse Scheduling`; it follows `Part 2: A house of cards`. PR-blog page H2s added: `Part 3: The ground changes underneath`, `Great Clinical Scheduling is More than CRUD`, `The Future of AI Agents in Nurse Scheduling`, `Insightful talks with Joseph De Veyra`; removed: `The Never-Ending Puzzle - Building Nurse Schedule`, `Insightfull talks with Joseph De Veyra` (typo fix of the added one), `Recent trends in nurse staffing ratios`, `Nursing care impact on patient outcomes`. Post content not fetched. Body-text churn only: NurseGrid (-1 word), ShiftWizard (-36), Aladtec home (-55, compared against the 2026-09-01 snapshot). Pricing sentinels `m7health.com/pricing` and `inhouse.health/pricing` still 404. Sitemaps: QGenda +6/-4 (new: `webinar/how-ssm-health-reimagined-workforce-management-for-nurses`, `webinar/how-ssm-health-is-connecting-scheduling-and-staffing-to-strengthen-its-workforce`, `blog/the-ultimate-guide-to-ambulatory-capacity-management`, `video/the-capacity-you-already-have-podcast`, `credentialing-ama-vericre`, `anesthesiology-2026-giveaway`; removed: `acep-2026`, `beckers-hit-giveaway-26`, `mgma-2026-giveaway`, `mgma-annual-conference-2026`), OnShift +3/-1 (two Applause Awards pages, `resources/blog/the-cost-of-uninformed-workforce-decisions`; removed `resources/blog/why-care-quality-is-the-most-underrated-financial-strategy`), SmartLinx +1 (`/hostedtime/`), M7, YouShift and NurseGrid 0. aladtec.com 403, ShiftWizard not an XML sitemap (known gaps). | Claude |
