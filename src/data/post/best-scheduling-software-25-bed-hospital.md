@@ -28,8 +28,8 @@ This guide compares 5 scheduling platforms specifically on fit for the 25-bed ro
 
 ## Key Takeaways
 
-- A 25-bed hospital typically employs 15-25 nurses across all units. Most enterprise scheduling software is engineered for rosters of 100-plus, which means the configuration burden does not scale down proportionally. How vendors signal those size floors is covered in [nurse scheduling software employee minimums](/blog/nurse-scheduling-software-minimum-employees).
-- The nurse manager at a 25-bed hospital almost always takes clinical shifts in addition to managing schedules. A tool that demands 8 to 12 hours per week of administrative scheduling time is not viable. That range is our own estimate from [more than 30 nurse manager interviews](/blog/nurse-manager-scheduling-time-breakdown).
+- A 25-bed hospital may run on a roster of 15 to 25 nurses across all units. Most enterprise scheduling software is engineered for rosters of 100-plus, which means the configuration burden does not scale down proportionally. How vendors signal those size floors is covered in [nurse scheduling software employee minimums](/blog/nurse-scheduling-software-minimum-employees).
+- The nurse manager at a 25-bed hospital may also take clinical shifts in addition to managing schedules. A tool that demands 8 to 12 hours per week of administrative scheduling time is not viable. That range is our own estimate from [more than 30 nurse manager interviews](/blog/nurse-manager-scheduling-time-breakdown).
 - Callout coverage is the highest-stakes daily task. With a pool of 15-25 nurses, a single callout can leave a shift without a charge-qualified nurse or short of the staff it needs. A ranked shortlist generated in under two minutes saves the manager from working down the roster by phone.
 - SimpleScheduleAI is purpose-built for 25-bed Critical Access Hospitals (CAHs). It handles three-option draft scheduling, a ranked replacement list within two minutes of a callout, and a record of every schedule change as default behavior.
 - For hospitals that prefer self-serve software, NurseGrid Manager is a self-serve scheduler for small teams, and its own pages name critical access hospitals. Aladtec is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. When I Work and Homebase are lower-cost general scheduling apps. Both document overtime warnings while you schedule, but neither documents hospital nursing rules such as a charge nurse on every shift.
@@ -165,11 +165,11 @@ A 25-bed hospital has structurally different scheduling problems from a 200-bed 
 
 **Manager time savings:** A nurse manager at a 25-bed CAH who reclaims 8 hours per week from scheduling recovers 416 clinical hours per year. At an illustrative loaded rate of $55-70 per hour, that is $23,000-29,000 in recovered labor capacity annually. The scheduling tool needs to do this, not just assist with it.
 
-**Callout response speed:** At 25 beds, a single unexpected callout typically cannot be absorbed by floating staff. There is no float pool. The manager needs a ranked shortlist of available replacements within two minutes, accounting for who is already at risk for overtime before they even pick up the phone.
+**Callout response speed:** At 25 beds, a single unexpected callout may not be absorbed by floating staff, because a small hospital may have no float pool. The manager needs a ranked shortlist of available replacements within two minutes, accounting for who is already at risk for overtime before they even pick up the phone.
 
 **Record of schedule changes:** No federal or Texas rule we found requires a log of schedule changes. Texas does require the nurse staffing committee to compare the staffing plan with actual staffing ([Texas Health and Safety Code 257.004](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/)). A change history is a practical way to answer what happened on a given night. A schedule edited in a spreadsheet keeps no history of who changed a shift, and software that logs every change keeps that answer on file. Our guide to the [nurse schedule audit trail](/blog/nurse-schedule-audit-trail) covers what to keep.
 
-**Implementation burden:** A 25-bed CAH typically has one IT person shared across the hospital, or none at all. Any software requiring dedicated IT for setup or ongoing maintenance is disqualifying in practice.
+**Implementation burden:** A 25-bed CAH may have one IT person shared across the hospital, or none at all. Any software requiring dedicated IT for setup or ongoing maintenance is disqualifying in practice.
 
 **Shift fairness:** With a roster of 15-25 nurses, perceived unfairness in weekend or overnight assignment distribution accelerates turnover. The [2026 NSI National Health Care Retention Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf) puts registered nurse turnover at 17.6% nationally. At 25 beds, losing two nurses is losing 10% of the roster.
 
@@ -232,7 +232,7 @@ Aladtec, now sold by TCP Software, is marketed to fire, EMS, law enforcement and
 
 **Verdict:** Worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. See the deeper [Aladtec alternatives for Critical Access Hospitals](/blog/aladtec-alternatives) guide for a fuller competitor analysis or the [Aladtec vs managed service](/blog/aladtec-vs-managed-service) comparison if the operating model is the decision point.
 
-**Ratings (July 2026):** G2: 4.5/5 (94 reviews). Capterra: 4.6/5 (17 reviews; small sample, reviewer base skews toward public safety; most recent hospital-context review is October 2020).[1]
+**Ratings (July 2026):** G2: 4.5/5 (94 reviews). Capterra: 4.6/5 (17 reviews; small sample, reviewer base skews toward public safety; most recent hospital-context review is October 2020).
 
 **Cost:** Not published. TCP quotes on request.
 
@@ -311,7 +311,7 @@ The limitation at a CAH is hospital nursing rules. When I Work's pages do not do
 
 **Verdict:** A reasonable budget option when the person building the schedule checks the hospital rules by eye. At a Critical Access Hospital, someone still has to check charge coverage and skill mix on every draft. See the deeper [Aladtec alternatives](/blog/aladtec-alternatives) guide for the broader When I Work / Homebase / [Deputy](/blog/deputy-alternatives-healthcare) comparison context.
 
-**Ratings (August 2026):** Capterra: 4.5/5 (1,300 reviews).[3]
+**Ratings (August 2026):** Capterra: 4.5/5 (1,300 reviews).
 
 **Cost:** $2.50, $5 or $8 per user per month for the Essentials, Pro and Premium plans (November 2026, [When I Work pricing](https://wheniwork.com/pricing)). At a 20-nurse roster, $50 to $160 a month.
 
@@ -326,7 +326,7 @@ Homebase is a scheduling and time tracking tool built for small businesses. Its 
 **Key advantages:**
 
 - Free plan for one location with up to 10 employees
-- Near-zero setup time, no training required
+- Simple setup for a small team
 - Clean mobile interface for shift viewing and swaps
 
 **Key limitations:**
@@ -347,7 +347,7 @@ Homebase is a scheduling and time tracking tool built for small businesses. Its 
 
 **Verdict:** Below the functional requirements for a hospital nursing unit. Consider it for non-clinical support staff scheduling at the same facility, not for nursing operations. See the deeper [Aladtec alternatives](/blog/aladtec-alternatives) guide for broader Homebase / When I Work / Deputy positioning context.
 
-**Ratings (July 2026):** G2: 4.6/5 (539 reviews). Capterra: 4.6/5 (1,151 reviews).[4]
+**Ratings (July 2026):** G2: 4.6/5 (539 reviews). Capterra: 4.6/5 (1,151 reviews).
 
 **Cost:** Free for one location with up to 10 employees. Paid plans are $30, $70 or $120 per location per month, with unlimited employees (November 2026, [Homebase pricing](https://joinhomebase.com/pricing/)).
 
@@ -402,7 +402,7 @@ If your nurses already have Microsoft Teams licenses, our guide to [free nurse s
       <div class="bg-blue-600 dark:bg-blue-700 h-2"></div>
       <div class="p-4">
         <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-3 text-center">Thin Callout Pool</h3>
-        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">With 15-25 nurses total, each shift has 4-6 people on it. One callout is a 17-25% coverage gap, not a minor variance.</p>
+        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">If a shift has four to six people on it, one callout removes 17 to 25 percent of that shift.</p>
         <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed mt-2">The replacement pool is the same 15-25 nurses who are also at risk for overtime if called in on a day off. Every callout requires overtime-aware triage, not just availability lookup.</p>
       </div>
     </div>
@@ -410,7 +410,7 @@ If your nurses already have Microsoft Teams licenses, our guide to [free nurse s
       <div class="bg-blue-600 dark:bg-blue-700 h-2"></div>
       <div class="p-4">
         <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-3 text-center">Dual-Role Nurse Manager</h3>
-        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">At a 25-bed CAH, the nurse manager almost always takes clinical shifts alongside admin duties. Scheduling eats 8-12 hours per week that would otherwise be spent at the bedside.</p>
+        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">At a 25-bed CAH, the nurse manager may also take clinical shifts. In our <a href="/blog/nurse-manager-scheduling-time-breakdown" class="underline">nurse manager interviews</a>, scheduling took 8 to 12 hours a week that could otherwise go to the bedside.</p>
         <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed mt-2">Any tool that demands significant configuration or daily management is trading one time sink for another.</p>
       </div>
     </div>
@@ -482,7 +482,7 @@ Some honest limitations. SimpleScheduleAI is not the right fit for hospitals ove
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    At 25 beds, the binding constraint is which tool the nurse manager can actually sustain while also covering clinical shifts. Aladtec is competent self-serve software, but it is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. NurseGrid Manager is a self-serve scheduler the manager still has to run, and When I Work and Homebase are general workforce tools, not clinical scheduling systems. For a Critical Access Hospital where the manager has zero protected admin time, a service that builds the schedule takes the building off the manager's desk and leaves the review. The platform with the most features is rarely the platform that survives at this scale.
+    At 25 beds, the binding constraint is which tool the nurse manager can actually sustain while also covering clinical shifts. Aladtec is competent self-serve software, but it is worth evaluating only if TCP confirms it would sell and support Aladtec for hospital nursing. NurseGrid Manager is a self-serve scheduler the manager still has to run, and When I Work and Homebase are general workforce tools, not clinical scheduling systems. For a Critical Access Hospital where the manager has little protected admin time, a service that builds the schedule takes the building off the manager's desk and leaves the review. The platform with the most features is rarely the platform that survives at this scale.
   </p>
 </div>
 
@@ -517,23 +517,19 @@ Some honest limitations. SimpleScheduleAI is not the right fit for hospitals ove
 
 [4] Homebase ratings: 4.6/5 on G2 (539 reviews) and 4.6/5 on Capterra (1,151 reviews), July 2026. Vendor page: [joinhomebase.com](https://joinhomebase.com). Quotes dated March 2025 and September 2025.
 
-[5] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com).
+[5] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
 
-[6] CMS Conditions of Participation §485.635 for Critical Access Hospitals. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
+[6] When I Work help center and pricing, read November 2, 2026: [overtime visibility](https://help.wheniwork.com/articles/overtime-visibility/), [max hours enforcement](https://help.wheniwork.com/articles/max-hours-enforcement-reference/), [positions and tags](https://help.wheniwork.com/articles/when-to-use-positions-and-tags/), [shift history report](https://help.wheniwork.com/articles/shift-history-report-details/), [pricing](https://wheniwork.com/pricing).
 
-[7] FLSA healthcare overtime guidance. [U.S. Department of Labor, Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime).
+[7] Homebase, read November 2, 2026: [pricing](https://joinhomebase.com/pricing/), [healthcare staff scheduling guide (June 23, 2026)](https://www.joinhomebase.com/blog/healthcare-staff-scheduling-software), [healthcare page](https://www.joinhomebase.com/healthcare), [labor law compliance page](https://joinhomebase.com/labor-law-compliance), [shift swapping page](https://www.joinhomebase.com/employee-scheduling/shift-swapping).
 
-[8] When I Work help center and pricing, read November 2, 2026: [overtime visibility](https://help.wheniwork.com/articles/overtime-visibility/), [max hours enforcement](https://help.wheniwork.com/articles/max-hours-enforcement-reference/), [positions and tags](https://help.wheniwork.com/articles/when-to-use-positions-and-tags/), [shift history report](https://help.wheniwork.com/articles/shift-history-report-details/), [pricing](https://wheniwork.com/pricing).
+[8] Deputy help center, read November 2, 2026: [overtime tags and warnings (beta)](https://help.deputy.com/hc/en-au/articles/15192896170895-How-do-I-turn-on-and-understand-overtime-warnings-on-the-schedule-BETA), [setting up Deputy for a healthcare business](https://help.deputy.com/hc/en-au/articles/4621991456527-Setting-up-Deputy-for-a-healthcare-business), [shift audit report](https://help.deputy.com/hc/en-au/articles/12016108679823-Shift-audit-report-Analytics-only), [staff coverage planner](https://help.deputy.com/hc/en-au/articles/4688843118223-Using-a-simple-staff-coverage-planner-when-scheduling). Prices from [deputy.com/pricing](https://www.deputy.com/pricing), verified August 25, 2026.
 
-[9] Homebase, read November 2, 2026: [pricing](https://joinhomebase.com/pricing/), [healthcare staff scheduling guide (June 23, 2026)](https://www.joinhomebase.com/blog/healthcare-staff-scheduling-software), [healthcare page](https://www.joinhomebase.com/healthcare), [labor law compliance page](https://joinhomebase.com/labor-law-compliance), [shift swapping page](https://www.joinhomebase.com/employee-scheduling/shift-swapping).
+[9] Connecteam, read November 2, 2026: [scheduling app](https://connecteam.com/employee-scheduling-app/), [qualifying users to shifts](https://help.connecteam.com/en/articles/8693629-job-schedule-qualifying-users-to-shifts), [scheduler activity](https://help.connecteam.com/en/articles/9337115-how-to-view-the-job-scheduler-s-activity), [pricing](https://connecteam.com/pricing/).
 
-[10] Deputy help center, read November 2, 2026: [overtime tags and warnings (beta)](https://help.deputy.com/hc/en-au/articles/15192896170895-How-do-I-turn-on-and-understand-overtime-warnings-on-the-schedule-BETA), [setting up Deputy for a healthcare business](https://help.deputy.com/hc/en-au/articles/4621991456527-Setting-up-Deputy-for-a-healthcare-business), [shift audit report](https://help.deputy.com/hc/en-au/articles/12016108679823-Shift-audit-report-Analytics-only), [staff coverage planner](https://help.deputy.com/hc/en-au/articles/4688843118223-Using-a-simple-staff-coverage-planner-when-scheduling). Prices from [deputy.com/pricing](https://www.deputy.com/pricing), verified August 25, 2026.
+[10] Sling, read November 2, 2026: [set overtime](https://support.getsling.com/en/articles/4683228-set-overtime), [adding positions](https://support.getsling.com/en/articles/3678084-3-adding-positions), [activity log](https://support.getsling.com/en/articles/6442847-activity-log), [coverage](https://support.getsling.com/en/articles/3104957-getting-your-coverage-right), [pricing](https://getsling.com/pricing/).
 
-[11] Connecteam, read November 2, 2026: [scheduling app](https://connecteam.com/employee-scheduling-app/), [qualifying users to shifts](https://help.connecteam.com/en/articles/8693629-job-schedule-qualifying-users-to-shifts), [scheduler activity](https://help.connecteam.com/en/articles/9337115-how-to-view-the-job-scheduler-s-activity), [pricing](https://connecteam.com/pricing/).
-
-[12] Sling, read November 2, 2026: [set overtime](https://support.getsling.com/en/articles/4683228-set-overtime), [adding positions](https://support.getsling.com/en/articles/3678084-3-adding-positions), [activity log](https://support.getsling.com/en/articles/6442847-activity-log), [coverage](https://support.getsling.com/en/articles/3104957-getting-your-coverage-right), [pricing](https://getsling.com/pricing/).
-
-[13] CMS Conditions of Participation §485.631, staffing and staff responsibilities. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631).
+[11] CMS Conditions of Participation §485.631, staffing and staff responsibilities. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631).
 
 **Methodology note:** Documented product capabilities reference each vendor's own product page, with the verification date noted in the vendor caveats. Vendor offerings, ratings, and product capabilities change over time; hospitals evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 

@@ -130,7 +130,7 @@ The table below covers customer focus, public ratings, and setup time across the
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">QGenda</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">Combined physician and nurse scheduling</td>
         <td class="py-3 pr-2 text-slate-600 dark:text-slate-400">G2: 4.6/5 (164 reviews)<br>Capterra: 4.2/5 (68 reviews)</td>
-        <td class="py-3 text-slate-600 dark:text-slate-400">Months; confirm with vendor</td>
+        <td class="py-3 text-slate-600 dark:text-slate-400">Not published; ask the vendor</td>
       </tr>
       <tr class="border-b border-slate-100 dark:border-slate-800 align-top">
         <td class="py-3 pr-2 font-medium text-slate-900 dark:text-slate-100">NurseGrid Manager</td>
@@ -299,7 +299,7 @@ For a hospital running OnShift for nursing and a separate system for physicians,
   >
   > Courtney D., Manager of Employee and Physician Relations, May 10, 2024, Capterra
 
-- QGenda's pricing reflects a physician scheduling platform; a nursing-only hospital pays for capabilities it does not use. It does not target the LTC caregiver engagement use case OnShift was built around. CAHs should ask for a small-hospital reference customer and a demo of how a charge shift is covered.
+- QGenda publishes no price, so ask what share of a quote pays for physician scheduling a nursing-only hospital will not use. It does not target the LTC caregiver engagement use case OnShift was built around. CAHs should ask for a small-hospital reference customer and a demo of how a charge shift is covered.
 
 **Verdict:** QGenda solves the scheduling fragmentation problem that OnShift creates for hospitals with both nursing and provider scheduling needs. For nursing-only CAHs, a nursing-focused tool is the closer match. See our deeper [QGenda alternatives guide for Critical Access Hospitals](/blog/qgenda-alternatives).
 
@@ -354,25 +354,23 @@ For a CAH leaving OnShift because of acute care callout speed, NurseGrid Manager
 
 <img src="/images/blog/onshift-alternatives/UKG.webp" alt="UKG workforce management platform for large health systems" width="1200" height="565" loading="lazy" class="rounded-lg border border-slate-200 my-4" />
 
-UKG, formerly Kronos, is the enterprise end of this market. It says it has "partnered with more than 3,500 hospitals and 10,000 post acute care facilities." It is reviewed here because hospitals affiliated with regional health systems frequently encounter UKG as the system-wide workforce management mandate when the parent organization is consolidating away from point tools like OnShift.
+UKG, formerly Kronos, is the enterprise end of this market. It says it has "partnered with more than 3,500 hospitals and 10,000 post acute care facilities." It is reviewed here because a hospital affiliated with a regional health system may meet UKG as the system-wide workforce platform its parent organization chooses.
 
-As a direct OnShift replacement at CAH scale, UKG is categorically wrong-sized. Its implementation runs for months and requires dedicated IT and HRIS staff. Its Clinical Scheduling Extensions page says the add-on can "automatically enforce nurse-patient ratios, licensure requirements, and labor laws," but the operational overhead required to run them correctly exceeds what a standalone 25-bed hospital can sustain without system-level support.
+As a direct OnShift replacement at CAH scale, UKG is sized for much larger organizations. It publishes no implementation timeline. Its Clinical Scheduling Extensions page says the add-on can "automatically enforce nurse-patient ratios, licensure requirements, and labor laws." Ask what IT and HR staff the setup expects a standalone 25-bed hospital to provide.
 
 **Best for:** Hospitals affiliated with a health system consolidating all workforce management onto a single enterprise platform, where the UKG implementation is handled at the system level rather than the individual CAH level.
 
 **Key advantages:**
 
 - Ratio and licensure enforcement through its Clinical Scheduling Extensions add-on, which works "when combined with UKG Advanced Scheduler"
-- Full EHR and payroll integration for large, multi-facility health systems
-- Labor analytics across thousands of employees provide visibility unavailable in OnShift
+- Census and acuity feed its forecasts: "Proactively predict patient volume with census, acuity, and churn data"
 
 **Key limitations:**
 
-- Implementation runs for months and requires dedicated IT and HRIS resources that are not available at most CAHs
-- The deployment cost and configuration burden do not produce a positive return for a standalone 25-bed hospital
+- No implementation timeline or price is published; ask for both, and for the IT and HR staff the setup expects
 - No verified small-hospital reviewer quotes are available; UKG does not maintain a public listing that maps to CAH-scale nursing. Verify scope and total cost directly with the vendor.
 
-**Verdict:** The right choice only when a health system mandate drives the UKG implementation and the CAH's scheduling is supported by the system's IT and HRIS infrastructure. As an independent decision for a standalone CAH, UKG is an order of magnitude too complex. See our deeper [UKG alternatives guide for small hospitals](/blog/ukg-alternatives-small-hospitals).
+**Verdict:** The right choice only when a health system mandate drives the UKG implementation and the CAH's scheduling is supported by the system's IT and HRIS infrastructure. As an independent decision for a standalone CAH, it is far more system than the hospital needs. See our deeper [UKG alternatives guide for small hospitals](/blog/ukg-alternatives-small-hospitals).
 
 **Ratings:** No public listing that maps to small-hospital nursing; verify with vendor.
 
@@ -538,15 +536,13 @@ Ask OnShift directly for its business associate agreement (BAA) and data-handlin
 
 [1] OnShift company and scheduling pages. [onshift.com](https://www.onshift.com/company/about-us). Checked November 2026. Capterra rating 3.9/5 (14 reviews) checked September 2026. OnShift limitations are framed as vendor-verification questions rather than asserted product gaps.
 
-[2] ShiftWizard ratings: 4.3/5 on G2, 4.4/5 on Capterra (723 reviews). Vendor: [HealthStream](https://www.healthstream.com). Verified 2026-04-30; selected quotes re-verified 2026-05-15.
+[2] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15. Recent reviewer base skews toward public safety; most recent hospital-context reviews date to 2020.
 
-[3] Aladtec by TCP ratings: 4.5/5 on G2 (94 reviews), 4.6/5 on Capterra (17 reviews; small sample). Vendor page: [tcpsoftware.com](https://www.tcpsoftware.com). Verified 2026-07-15. Recent reviewer base skews toward public safety; most recent hospital-context reviews date to 2020.
+[3] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample), checked September 2026. Vendor page and pricing: [nursegrid.com](https://nursegrid.com/for-organizations/nursegrid-manager/). Selected quotes re-verified October 2026.
 
-[4] NurseGrid Manager: 4.2/5 on Capterra (13 reviews; small sample), checked September 2026. Vendor page and pricing: [nursegrid.com](https://nursegrid.com/for-organizations/nursegrid-manager/). Selected quotes re-verified October 2026.
+[4] Texas nurse staffing committees, including the plan-versus-actual staffing review. [FindLaw, Texas Health and Safety Code 257.004](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/). Checked November 2026.
 
-[5] Critical access hospital Conditions of Participation: staffing at [42 CFR 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) and nursing services at [42 CFR 485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635).
-
-[6] SmartLinx, QGenda and UKG product pages. [smartlinx.com](https://www.smartlinx.com/solutions/scheduling/), [qgenda.com](https://www.qgenda.com/for-nurses/) and [ukg.com](https://www.ukg.com/products/ukg-clinical-scheduling-extensions). Checked November 2026.
+[5] SmartLinx, QGenda and UKG product pages. [smartlinx.com](https://www.smartlinx.com/solutions/scheduling/), [qgenda.com](https://www.qgenda.com/for-nurses/) and [ukg.com](https://www.ukg.com/products/ukg-clinical-scheduling-extensions). Checked November 2026.
 
 **Methodology note:** Documented product capabilities reference each vendor's own product page as of the verification dates. Vendor offerings, ratings, and capabilities change over time; CAHs evaluating any platform should verify current capabilities directly with the vendor before deciding.
 

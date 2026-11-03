@@ -143,9 +143,9 @@ None of these free tools documents a hospital nursing rule set: a charge nurse o
 
 The hidden cost of a free tool is that the compliance and coverage work it skips does not disappear. It moves to the nurse manager's desk, where the hours are real and the rate is not free.
 
-Scheduling at a small hospital is two tasks. There is the schedule-building portion, which a free tool can shoulder, and there is everything around it: monitoring overtime exposure, finding callout coverage, documenting changes, and handling per-diem fill-ins. A free tool reduces the first and barely touches the second. The portion it leaves untouched is usually the larger one, and it is the part that carries the overtime cost.
+Scheduling at a small hospital is two tasks. There is the schedule-building portion, which a free tool can shoulder, and there is everything around it: monitoring overtime exposure, finding callout coverage, documenting changes, and handling per-diem fill-ins. A free tool reduces the first and barely touches the second. The portion it leaves untouched can be the larger one, and it is the part that carries the overtime cost.
 
-So the $0 software line tells you what the license costs, not what scheduling costs. If the manual half still consumes a meaningful slice of a manager's week at a loaded nursing-leadership rate, the true cost of "free" is the salaried time spent doing by hand what the tool does not do. That number is almost always larger than any per-seat license fee a paid tool would charge. For a closer look at the math by facility size, see [scheduling software for a 25-bed hospital](/blog/best-scheduling-software-25-bed-hospital) and [nurse scheduling software for a small hospital](/blog/nurse-scheduling-software-small-hospital).
+So the $0 software line tells you what the license costs, not what scheduling costs. If the manual half still consumes a meaningful slice of a manager's week at a loaded nursing-leadership rate, the true cost of "free" is the salaried time spent doing by hand what the tool does not do. That number can easily be larger than the per-seat license fee a paid tool would charge. For a closer look at the math by facility size, see [scheduling software for a 25-bed hospital](/blog/best-scheduling-software-25-bed-hospital) and [nurse scheduling software for a small hospital](/blog/nurse-scheduling-software-small-hospital).
 
 ## How Does SimpleScheduleAI Help a Critical Access Hospital?
 
@@ -211,13 +211,12 @@ Free tools do not remove the compliance and callout work; they just do not help 
 
 1. U.S. Department of Labor, [Fact Sheet #54: The Health Care Industry and Hours Worked](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)
 2. Texas Workforce Commission, [Texas Payday Law](https://www.twc.texas.gov/programs/wage-and-hour/texas-payday-law)
-3. eCFR, [42 CFR 485.635, Condition of participation: Provision of services](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635)
-4. eCFR, [42 CFR 485.631, Condition of participation: Staffing and staff responsibilities](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631)
-5. NurseGrid, [NurseGrid Manager product page](https://nursegrid.com/for-organizations/nursegrid-manager/)
-6. Connecteam, [Pricing](https://connecteam.com/pricing/)
-7. Microsoft Support, [Get started in Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6)
-8. Microsoft Learn, [Manage the Shifts app for your organization](https://learn.microsoft.com/en-us/microsoftteams/expand-teams-across-your-org/shifts/manage-the-shifts-app-for-your-organization-in-teams)
-9. Microsoft Learn, [Auto-assign open shifts](https://learn.microsoft.com/en-us/microsoft-365/frontline/shifts-auto-assign-open-shifts)
+3. FindLaw, [Texas Health and Safety Code 257.004, nurse staffing committee](https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-004/)
+4. NurseGrid, [NurseGrid Manager product page](https://nursegrid.com/for-organizations/nursegrid-manager/)
+5. Connecteam, [Pricing](https://connecteam.com/pricing/)
+6. Microsoft Support, [Get started in Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6)
+7. Microsoft Learn, [Manage the Shifts app for your organization](https://learn.microsoft.com/en-us/microsoftteams/expand-teams-across-your-org/shifts/manage-the-shifts-app-for-your-organization-in-teams)
+8. Microsoft Learn, [Auto-assign open shifts](https://learn.microsoft.com/en-us/microsoft-365/frontline/shifts-auto-assign-open-shifts)
 
 ---
 
