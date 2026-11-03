@@ -38,6 +38,7 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - Section covers: Staffing and staff responsibilities. Pin-cite for the on-duty clause: (a)(5).
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631
 - Verified: 2026-07-03 (via Cornell LII cross-check). Re-verified live at Cornell LII 2026-08-31, unchanged.
+- Re-verified: 2026-11-03, raw Cornell LII text: "(5) A registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients." No ratio or certification requirement anywhere in 485.631.
 
 ### 42 CFR 485.631(a)(4) and (b)(2) (practitioner availability)
 
@@ -71,6 +72,15 @@ Rule (same as the competitor dossier): any fact with an entry here MUST be used 
 - Wrong: "patients can only stay 96 hours"; treating swing beds as exempt from the 25-bed cap
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620
 - Verified: 2026-07-06 (via Cornell LII)
+
+### CMS SOM Appendix W, tag C-0902 (what counts toward the 25 beds; ICU beds count)
+
+- Approved wording (verbatim interpretive guideline under §485.620(a)): "Any bed used for inpatient services at any time must be counted when assessing compliance with the 25 inpatient bed limit."
+- The "Other bed types that do not count toward the 25 inpatient bed limit include, but are not limited to" list, verbatim items: examination or procedure tables; stretchers; operating room tables; beds in a surgical recovery room used exclusively for surgical patients during recovery from anesthesia; beds in an obstetric delivery room used exclusively for OB patients in labor or recovery after delivery; newborn bassinets and isolettes used for well-baby boarders; stretchers in emergency departments; inpatient beds in Medicare-certified distinct part rehabilitation or psychiatric units. Observation-only beds are excluded in a separate paragraph ("only if they are never used for inpatient services").
+- **Intensive care beds are NOT on the exclusion list.** Approved framing: "ICU beds are not on its list of exceptions", so an ICU bed used for inpatients counts inside the 25. That last step is an inference from the guideline, not a sentence CMS wrote; never put it in quotation marks.
+- Wrong: claiming CMS says "ICU beds count" in so many words; calling the exclusion list exhaustive (it says "include, but are not limited to").
+- URL: https://www.cms.gov/Regulations-and-Guidance/Guidance/Manuals/downloads/som107ap_w_cah.pdf (PDF header "Rev. 247; Issued: 09-18-26"; C-0902 itself carries "Rev. 200, Issued: 02-21-20"). Resolved 200 by direct curl 2026-11-03; text extracted with pdftotext.
+- Verified: 2026-11-03
 
 ### 42 CFR 485.618 (emergency services)
 
@@ -385,6 +395,7 @@ All verified from loaded primary pages/PDFs on 2026-07-13; collected for the pla
 - Section covers: Condition of Participation: Nursing services (general hospitals).
 - URL: https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-482/subpart-C/section-482.23
 - Verified: 2026-07-04 (via Cornell LII cross-check; eCFR bot-blocks automated fetches)
+- Re-verified: 2026-11-03 at Cornell LII (https://www.law.cornell.edu/cfr/text/42/482.23), unchanged; no ratio and no certification (e.g. CCRN) requirement anywhere in 482.23. eCFR still 302s automated fetches to unblock.federalregister.gov.
 
 ### California 22 CCR 70217
 
@@ -392,6 +403,7 @@ All verified from loaded primary pages/PDFs on 2026-07-13; collected for the pla
 - Wrong: 1:6 med-surg (the pre-2005 initial figure); citing a court case for the breaks-coverage point (no case precisely holds it — the regulation's own "at all times" text plus relief-nurse coverage is the support).
 - URL: https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217
 - Verified: 2026-07-04
+- Re-verified: 2026-11-03. Pin-cite for the ICU figure is subsection (a)(1), verbatim: "The licensed nurse-to-patient ratio in a critical care unit shall be 1:2 or fewer at all times."
 
 ### State ratio-law landscape (CA / OR / MA / NY)
 
@@ -399,6 +411,60 @@ All verified from loaded primary pages/PDFs on 2026-07-13; collected for the pla
 - Wrong: "California is the only state with comprehensive mandated ratios" (stale once Oregon's phase-in completed in June/July 2026); describing Oregon as regulating "one unit" or as "limited ratios"; citing the Massachusetts ICU law as § 227 (that section covers unlicensed personnel).
 - URL: https://www.oregon.gov/oha/PH/PROVIDERPARTNERRESOURCES/HOSPITALSTAFFING/Documents/HOSPITALStaffingFAQ.pdf
 - Verified: 2026-07-04
+
+### Massachusetts ICU staffing law (M.G.L. c. 111, § 231)
+
+- Section heading (verbatim): "Section 231: Limitation on patient assignments per nurse in intensive care units; development and certification of acuity tool".
+- Approved wording (verbatim statute text): "Notwithstanding any general or special law to the contrary, in all intensive care units the patient assignment for the registered nurse shall be 1:1 or 1:2 depending on the stability of the patient as assessed by the acuity tool and by the staff nurses in the unit, including the nurse manager or the nurse manager's designee when needed to resolve a disagreement."
+- Acceptable compression: "one nurse to one or two ICU patients, depending on how stable each patient is" (the statute's word is stability, assessed by a hospital acuity tool certified by DPH). Implementing regulation: 958 CMR 8.00 (Health Policy Commission), whose stated regulatory authority is "MGL c. 111, § 231".
+- Wrong: citing § 227 (unlicensed personnel); calling it a hospital-wide ratio law (ICU only); claiming a "default 1:1" (disputed by the Massachusetts Hospital Association; not in the statute text).
+- URL: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXVI/Chapter111/Section231 — **this IS the correct URL.** malegislature.gov refuses connections from this machine (ECONNREFUSED via WebFetch and curl, timeout in Playwright, 2026-11-03), which is why `check-links` errors on it. Content confirmed through the Wayback Machine capture of that exact URL dated 2026-05-18 (raw `id_` fetch), and the statute text cross-matched against the Massachusetts Nurses Association ICU-law primer PDF (massnurses.org/files/file/News/2015/Primer-on-ICU-Staffing-Law-and-HPC-Regulations.pdf). Do NOT "fix" the link by swapping it; the check-links error is a network block.
+- Verified: 2026-11-03
+
+### AACN Standards for Appropriate Staffing in Adult Critical Care (2024)
+
+- Release: "Standards Published for Critical Care Nurse Staffing", AACN newsroom, dateline "ALISO VIEJO, Calif. — April 23, 2024". Document title (verbatim): "AACN Standards for Appropriate Staffing in Adult Critical Care". Seven standards, 42-page document; the full document is free but sign-in gated, so the press release is the citable public text.
+- The seven standards, verbatim, in the order the release lists them:
+  1. "Direct care nurses participate in all aspects of staffing: planning, implementation and evaluation."
+  2. "Hospital patient care areas establish, evaluate and refine unit-specific staffing guidelines based upon their impact on patient and nurse outcomes."
+  3. "For every shift, patient assignments are based on an accurate assessment of the current nursing workload generated by each patient's needs and align nurse competency with patient characteristics."
+  4. "Clinical leaders such as charge nurses, educators and nurse managers are not included in patient assignments, except in rare crisis situations."
+  5. "Staffing plans and patient assignments support the unique needs of nurses who are new to the unit."
+  6. "Organizational staffing plans are designed to prioritize the health of the work environment and thus drive nurse retention and optimal patient outcomes."
+  7. "Organizational staffing plans anticipate that critically ill or injured patients generally require a ratio of one nurse to two patients."
+- **Numbering trap:** the public release prints the seven as an UNORDERED bullet list (`<ul>`, checked in the raw HTML 2026-11-03). "Standard 5" or "Standard 7" is our positional label, not text on the page. In copy, say "one of AACN's 2024 standards" or "AACN's 2024 standards say", unless someone verifies the numbering in the signed-in PDF.
+- Approved sentence (ratio): "AACN's 2024 standards say staffing plans should anticipate that critically ill patients generally need one nurse for every two patients." Approved framing: a planning expectation, not a legal minimum.
+- Scheduling consequence (approved): the charge-nurse standard means a unit staffed at one nurse to two patients needs the charge nurse on top of the bedside count.
+- Wrong: "AACN mandates 1:2"; "AACN requires a 1:2 ratio"; "AACN's minimum ratio"; "AACN baseline ratio" (AACN never uses "baseline"); "AACN opposes ratios" or "AACN endorses legislated ratios" (no formal position found); quoting "charge nurses are not included..." as if charge nurses were the only clinical leaders named (educators and nurse managers are named too).
+- URL: https://www.aacn.org/newsroom/standards-published-for-critical-care-nurse-staffing (200 by direct curl 2026-11-03; every quote above string-matched in the raw page text)
+- Verified: 2026-11-03
+
+### CAHs with intensive care units: Joynt 2011 and Freeman 2005 (always dated)
+
+- **No current count of CAHs with ICUs exists.** Use the two sources below, always with their data years.
+- Joynt KE, Harris Y, Orav EJ, Jha AK. Quality of care and patient outcomes in critical access rural hospitals. JAMA. 2011;306(1):45-52. PMID 21730240. Verbatim (abstract, Results): "Compared with other hospitals (n = 3470), 1268 CAHs (26.8%) were less likely to have intensive care units (380 [30.0%] vs 2581 [74.4%], P < .001)". Data: Medicare fee-for-service discharges for AMI, CHF and pneumonia in 2008-2009.
+- Approved wording: "380 of 1,268 critical access hospitals (30.0%) had an intensive care unit, from 2008 to 2009 data (Joynt and colleagues, JAMA, 2011)."
+- Freeman V, Walsh J, Rudolf M, Slifkin R. Intensive Care in Critical Access Hospitals. NC Rural Health Research and Policy Analysis Center, Cecil G. Sheps Center, UNC Chapel Hill. Working Paper No. 81, dated March 3, 2005 (not peer-reviewed; HRSA ORHP-funded). Verbatim: "Semi-structured interviews were conducted with Directors of Nursing at 63 CAHs in 27 states." Table 1, "Mean number of beds (range) 3.5 (1 – 9)"; body: "The average number of intensive care beds was 3.5." Also: "The nurse to patient ratio ranged from 1:1 to 1:3 with the majority (60%) reporting a ratio of 1:2." Cost-report frame: "Two hundred and twenty CAHs (26%) were identified as providing intensive care in at least one of the cost report years" (cost data October 1995 to April 2003).
+- **Scope of the 3.5:** it is the mean across the 63 INTERVIEWED hospitals (Table 1; "percentages reported in the tables that follow were calculated based on the total group of interviewees"), NOT across all ICU-providing CAHs. The paper itself says the interview set "cannot be weighted to represent all CAHs". Approved wording: "Across the 63 hospitals it interviewed, the average was 3.5 intensive care beds, ranging from 1 to 9."
+- Wrong: "the average CAH ICU has 3.5 beds"; "30% of CAHs have an ICU today" (2008-2009 data); citing the Chartis "about 870 ICU beds" figure (unverified); using SCCM's "5222" AHA figure for CAHs (its 25-acute-bed floor excludes most CAHs).
+- URLs: https://pubmed.ncbi.nlm.nih.gov/21730240/ (PubMed cookie-walls fetchers; abstract text read via the Europe PMC REST API, same PMID); https://www.shepscenter.unc.edu/wp-content/uploads/2014/10/WP81.pdf (PDF text extracted with pdftotext)
+- Verified: 2026-11-03
+
+### CCRN (Adult) and federal staffing rules
+
+- Approved wording (AACN, verbatim): "CCRN® (Adult) is a specialty certification." AACN does not use the word "voluntary" on the page checked.
+- Approved framing: "No federal Condition of Participation requires CCRN to work in an ICU." Basis: 42 CFR 482.23 and 485.631 contain no certification requirement (both read at Cornell LII 2026-11-03). Texas 26 TAC 505 and the Nursing Practice Act were NOT checked for certification; do not extend the claim to Texas law.
+- Wrong: "CCRN is required to work ICU"; "CCRN is voluntary" in AACN's voice.
+- URL: https://www.aacn.org/certification/get-certified/ccrn-adult (200 by direct curl 2026-11-03)
+- Verified: 2026-11-03
+
+### Benner, From Novice to Expert (stage names)
+
+- Citation (verified via the Europe PMC record for PMID 6917683): Benner P. From novice to expert. Am J Nurs. 1982;82(3):402-407. DOI 10.2307/3462928. Book: From Novice to Expert: Excellence and Power in Clinical Nursing Practice (Addison-Wesley, 1984).
+- Stage names, verbatim via McHugh MD, Lake ET. Understanding Clinical Expertise: Nurse Education, Experience, and the Hospital Context. Res Nurs Health. 2010;33(4):276-287: Benner "proposed five possible expertise levels: novice, advanced beginner, competent, proficient, and expert." The 1982 article is paywalled; cite McHugh and Lake for the names if a quote is needed.
+- SSAI use: the scheduler's competency levels 1 to 5 carry these names in its schema code comments (1 Novice/Orientee, 2 Advanced Beginner, 3 Competent, 4 Proficient, 5 Expert; seen 2026-11-03 in the `SSAI fixed schedule` repo, src/db/schema.ts lines 136-141; the cah-scheduler repo was not checked). Those comments also mention ACLS/PALS/TNCC by level, but no rule reads certifications (capability inventory), so never cite the comments as a certification check. Approved: "The levels use the names of Patricia Benner's novice-to-expert stages." Wrong: claiming the levels ARE Benner's stages or were validated against her framework.
+- URLs: https://pubmed.ncbi.nlm.nih.gov/6917683/; https://pmc.ncbi.nlm.nih.gov/articles/PMC2998339/
+- Verified: 2026-11-03
 
 ### Texas Health and Safety Code 257.004
 
@@ -834,6 +900,16 @@ Collected for `free-nurse-scheduling-software`. Microsoft primary pages, read 20
 - URLs: https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6 ; https://learn.microsoft.com/en-us/microsoft-365/frontline/shifts-auto-assign-open-shifts ; https://learn.microsoft.com/en-us/microsoftteams/expand-teams-across-your-org/shifts/manage-the-shifts-app-for-your-organization-in-teams ; https://learn.microsoft.com/en-us/microsoftteams/expand-teams-across-your-org/shifts/shifts-data-faq
 - Verified: 2026-11-01
 
+### Ascend Learning acquisition of M7 Health (September 21, 2026)
+
+- Approved wording: "Ascend Learning, the owner of ATI, announced its acquisition of M7 Health on September 21, 2026."
+- Release, verbatim: headline "Ascend Learning Acquires M7 Health, Connecting the Full Healthcare Career to Scheduling"; dateline "BOSTON, Sept. 21, 2026 (GLOBE NEWSWIRE) -- Ascend Learning, a leading healthcare and learning technology company, today announced the acquisition of M7 Health, an AI-powered platform transforming how health systems schedule, staff and deploy their clinical workforce." Subhead: "M7 Health joins Ascend brands StaffGarden and Laudio". Terms not disclosed.
+- **ATI ownership comes from a DIFFERENT release.** The M7 release never names ATI (zero matches, 2026-11-03). Source for "owner of ATI": GlobeNewswire, September 22, 2026, "ATI and Elsevier Obtain Preliminary Injunction Against Naxlex...", verbatim "Lissy Hu, chief executive officer of Ascend Learning, LLC, parent company of ATI". Cite that release if the ATI link is challenged.
+- Vendor stats in the release ("reduced administrative burden by over 60%, lowered premium labor spend by 35%, and reduced nurse turnover by 30%") differ from M7's own site figures ("up to 40%" premium labor). Vendor claims; attribute, never restate in our voice.
+- Wrong: dating the deal to the close (no close date published); "Blackstone acquired M7" (Ascend, which is Blackstone/CPP-owned, acquired it); naming ATI as the acquirer.
+- URLs: https://www.globenewswire.com/news-release/2026/09/21/3365483/0/en/ascend-learning-acquires-m7-health-connecting-the-full-healthcare-career-to-scheduling.html ; https://www.globenewswire.com/news-release/2026/09/22/3366456/0/en/ati-and-elsevier-obtain-preliminary-injunction-against-naxlex-in-nursing-assessment-piracy-and-cheating-case.html (GlobeNewswire 403s WebFetch and curl; both read in Playwright)
+- Verified: 2026-11-03. Competitor detail lives in competitor-dossier.md, M7 Health section.
+
 ## Product truths
 
 - Self-label: "AI-native nurse scheduling service". Never "managed service" as a self-label (category/comparison use is fine).
@@ -892,3 +968,4 @@ Collected for `free-nurse-scheduling-software`. Microsoft primary pages, read 20
 | 2026-10-26 | Added **FLSA definitions: workweek, hours worked, regular rate, 8-and-80 agreement, nurse exemption** for the what-is-nursing-overtime rebuild (DOL FS#23/#53/#54/#17N, salary-levels page, 29 CFR 778.601, 29 U.S.C. 207(o), Tex. Lab. Code §62.151 mirror). Found that 778.601(c) says the 8-and-80 agreement need NOT be in writing (special record required instead); two live posts say a written agreement is required. Flagged, not fixed. | Claude |
 | 2026-10-27 | Added **Island shifts and night-shift fatigue** for the island-shifts-night-nurses-cah rebuild: Lee & Jeong 2021 (single working day between days off, 115 of 182, 29 of 255 island nights), NIOSH Module 5/9 verbatim lines (first night back, two rest days after three 12s), Smith & Eastman 2012 (days-off sleep, rhythms rarely shift), second Booker 2024 use; listed the April draft's unsourced claims as cut. | Claude |
 | 2026-11-01 | Added Microsoft Teams Shifts (included with Teams, features, preview auto-assign rules, no overtime/skill/staffing checks documented) for free-nurse-scheduling-software | Claude |
+| 2026-11-03 | Fact-check gate for best-scheduling-software-icu-nurses. Added: **CMS SOM Appendix W C-0902** (bed-count quote, exclusion list has no ICU beds, working PDF URL Rev. 247), **Massachusetts ICU law § 231** (verbatim statute text; the malegislature.gov URL is correct, check-links fails on a network block, confirmed via Wayback 2026-05-18), **AACN 2024 staffing standards** (all seven verbatim, April 23, 2024; the public list is UNNUMBERED, so never cite "Standard 5/7" as page text), **CAHs with ICUs** (Joynt 2011 380/1,268 = 30.0%, 2008-2009 data; Freeman 2005 WP81: 3.5 is the mean across 63 INTERVIEWED hospitals, not all ICU CAHs), **CCRN** (specialty certification; no federal CoP requirement), **Benner** (citation + stage names), **Ascend Learning / M7 acquisition** (Sept 21, 2026; ATI parentage sourced from the Sept 22 ATI release, not the M7 one). Re-verified lines added to 482.23(b), 485.631(a)(5), CA 70217 ((a)(1) pin-cite). Texas 257.004 and 257.001 re-read on FindLaw ("Current as of January 01, 2026"), unchanged. | Claude |

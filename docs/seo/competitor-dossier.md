@@ -362,6 +362,14 @@ effective September 1, 2025. **Never write that Deputy does not publish pricing*
 draft's unsourced "from ~$5/user/mo" happened to land near the Lite tier; it was still an invented
 figure at the time and the correct fix was sourcing it, not keeping it.
 
+**Re-verified 2026-11-03 (direct curl, deputy.com/pricing and /features/shift-swapping).** Plan
+rates unchanged, verbatim: Lite "$5 per user per month", Core "$6.50 per user per month", Pro "$9
+per user per month", each "(USD excl. all applicable taxes)". **NEW:** Payroll add-on now reads
+"$8 USD (excl. all applicable taxes) per user per month billed monthly + $49 monthly base fee" (the
+2026-08-25 line above omits the $49 base fee). Shift-swapping page, verbatim: "Feel confident that
+every shift swap complies with training requirements or maximum permitted hours." This is a
+documented TRAINING check on swaps; it is not a charge or ratio check.
+
 ### Verified Reviewer Quotes
 
 **Positive (hospital nurse):**
@@ -540,6 +548,16 @@ never proof of a missing feature. No federal CAH rule requires a schedule-change
 - **They run their own interview series with external nurse leaders** ("Insightful Talks with…", "Tech Talks with…"), which is where their firsthand voice comes from.
 - **Founder priority 2026-08-10: this is the competitor to track, ahead of M7**, because they are the most active.
 
+**November 2026 update (verified 2026-11-03, direct curl of inhouse.health pages):**
+
+- **The only vendor with ICU product copy.** /product, under Who We Serve > Inpatient Acute, verbatim: "...but In-House can give recommendations even for high acuity units like ICUs". **Unit trap:** the "rounding, 1:1 care, and caregiver-specific ratios" line sits under Inpatient Behavioral, and HPPD lines under Skilled Nursing; never attach either to ICU.
+- Census and acuity, verbatim (/product): "Predictive scheduling uses AI to forecast patient census, acuity levels and staffing needs in advance"; "factoring in patient acuity, volume of admits/discharges".
+- Skill mix, verbatim: "predicts patient workload and balances the skill mix of your available staff". Described as balanced, not as a hard per-shift rule.
+- Open shifts go to "those likeliest to pick them up" (verbatim). Qualification filtering not documented. "Charge", "competency", "rural", "small" and "critical access" appear zero times on /product (raw-text count).
+- **CHANGED vs the 2026-08-10 block:** homepage tile now reads "2 Weeks to implement with immediate budget impact" (was "4 Weeks to implement"). Vendor claim.
+- **CHANGED: /about no longer lists Sergey Vasilenko.** Leadership Team now reads Ari Brenner "Founder & CEO", Shachar Har Zvi "Founder & Head of Engineering", Yuval Jacoby "Head of Product". The "former critical care nurse founder" line above is therefore no longer supported by a current In-House page; do not cite it without a current primary source.
+- Pricing: still none published (`/pricing` 404 per the 2026-11-01 watch run).
+
 **Secondary source pass (verified 2026-05-16):** App Store listing "In House Health" (iOS, id6748960919) and Google Play (inhouse.health) exist; the app is end-user nurse-facing (view and pick up shifts, set availability). App-store star rating and review count were not retrievable this pass and must be re-checked before any rating is cited; if cited it is end-user app feedback, not an enterprise product review. No independent third-party reviews on Software Advice, GetApp, Gartner Peer Insights, Reddit, or Product Hunt. One named customer quote exists only in vendor funding PR: James Kerridge, Associate Chief Nurse, Chicago VA Medical Center, in Fierce Healthcare's coverage of the $4M seed (May 2024). Usable ONLY with explicit "stated in Fierce Healthcare's coverage of In-House's funding announcement" framing, never as an independent review. Neutral product-page framing still required for all evaluative claims.
 
 ---
@@ -609,6 +627,14 @@ These confirm M7's enterprise/multi-hospital deployment footprint (a factual CAH
 - **Backlink profile is a hiring-and-fundraising artifact.** 101 referring domains (90 main), of which 47 point at the bare homepage; sources are their ATS (breezy.hr), job boards, VC firms and data aggregators. Their best content page has ONE backlink. Two notable exceptions: ionl.org (Illinois Organization of Nurse Leaders) and scionhealth.com (customer newsroom).
 - Content library is 13 blog posts + 7 resources, including `/blogs/healthcare-staff-scheduling-software` (the head term we retired) and case studies on ScionHealth Denver and ScionHealth community hospitals. Their CAH piece `/blogs/critical-access-hospital-scheduling-software` carries **no question H2s at all** — a structural AEO weakness on the exact page ChatGPT was citing in June.
 - Still no published pricing; `m7health.com/pricing` 404s.
+
+**November 2026 update (verified 2026-11-03; direct curl of m7health.com, GlobeNewswire in Playwright):**
+
+- **ACQUIRED BY ASCEND LEARNING, announced September 21, 2026.** Release URL: https://www.globenewswire.com/news-release/2026/09/21/3365483/0/en/ascend-learning-acquires-m7-health-connecting-the-full-healthcare-career-to-scheduling.html. Verbatim headline: "Ascend Learning Acquires M7 Health, Connecting the Full Healthcare Career to Scheduling". Verbatim subhead: "M7 Health joins Ascend brands StaffGarden and Laudio to create a connected workforce solution spanning professional development, intelligent scheduling and staff deployment, engagement and retention for the healthcare workforce". Dateline "BOSTON, Sept. 21, 2026 (GLOBE NEWSWIRE)". Release positioning, verbatim: "M7 is used by health systems nationwide, from the country's largest academic medical centers to community and rural hospitals." Release stats (vendor claims, and they DIFFER from the site's): "reduced administrative burden by over 60%, lowered premium labor spend by 35%, and reduced nurse turnover by 30%". Terms not disclosed. GlobeNewswire 403s WebFetch and curl; read in Playwright.
+- **Ascend owns ATI, but the M7 release does not say so.** Source: GlobeNewswire Sept 22, 2026 ATI/Elsevier injunction release, verbatim "Lissy Hu, chief executive officer of Ascend Learning, LLC, parent company of ATI". Approved wording: "Ascend Learning, the owner of ATI". Ascend is owned by Blackstone and CPP Investments (trade-press coverage; not re-checked against a primary source). Never write that ATI or Blackstone acquired M7.
+- **What the acquisition changes for us:** M7 now sits beside StaffGarden (RN competencies) and Laudio (frontline-leader tooling) under one owner. Fair buyer advice: ask how the new ownership changes the roadmap and the contract. Do not speculate about product changes.
+- **/platform lines re-confirmed verbatim:** "M7's AI forecasts patient census and staffing demand based on historical patterns"; "routes open shifts only to eligible staff before a gap becomes a crisis"; FAQ "Does M7 Health work for smaller community hospitals? Yes. M7 is designed to serve the full range of health systems, including smaller community and rural hospitals"; "clinical requirements" (undefined). ICU, intensive care, critical care, competency and charge appear ZERO times on /platform (raw-text count 2026-11-03). "Eligible" is undefined on the page.
+- **CAH page still live** (`/blogs/critical-access-hospital-scheduling-software`), and the 2026-08-19 lines re-confirmed verbatim: "nurse-built scheduling platform that fits how small rural hospitals actually work", "dedicated account manager", "M7 is priced to be accessible for smaller facilities", onboarded critical access hospitals "across Utah, Mississippi, and Alabama". Still no individually named CAH customer on the page.
 
 ---
 
@@ -713,6 +739,31 @@ silence elsewhere is missing documentation, not a proven missing feature.
   "Eligible employees are listed on the Not Working and Available to Work tabs"
   (Filling_Open_Shifts). Call-off handling is manual: "If a staff member calls in sick, you can
   record their call-off."
+
+**Help-center re-read, ALL 30 topics (verified 2026-11-03, Playwright, in-page fetch):**
+
+- **CORRECTS the 2026-09-08 note that topic pages are login-gated.** They render a login shell to
+  plain automated fetchers, but load fully when fetched from inside a browser page on the help
+  host. Method: open the landing URL in Playwright, read the TOC from `Data/Tocs/NG_Manager_Chunk0.js`
+  (30 topic paths), then fetch each path in-page. All 30 returned full text.
+- **"skill", "competenc", "certification", "census" and "acuity" appear in NONE of the 30 topics**
+  (whole-word-stem count, 2026-11-03). Approved: "The words skill, competency and certification
+  appear in none of its 30 help topics, checked November 2026."
+- **Charge is a shift toggle and a staff attribute, not a requirement.** Verbatim: "Use the Charge
+  Shift, Preceptor Shift, and Overtime Shift toggles as needed." (Content/NG_Manager/Adding_Events.htm);
+  "You can quickly add team members by position, FTE status, or charge trained status."
+  (Messaging/Messaging.htm). Nothing in the 30 topics restricts a charge shift to charge-trained
+  staff; state it as "not documented", never "allows untrained staff".
+- Re-confirmed verbatim: "If your coverage requirement is not met, the cell will be red with a
+  dog-ear appearing in the lower right corner." (Schedule_Mgmt/Balancing_and_Publishing_a_Draft_Schedule.htm);
+  "Coverage requirements currently do not appear elsewhere in the app and do not automatically
+  create or approve open shift requests." and "no LPNs or CNAs would be able to sign up"
+  (Schedule_Mgmt/Schedule_Requirements.htm); "Eligible employees are listed on the Not Working and
+  Available to Work tabs" (Schedule_Mgmt/Filling_Open_Shifts.htm).
+- **Topic renamed:** the page at `Filling_Open_Shifts.htm` is now titled "Creating Open Shifts".
+  The call-off sentence above was NOT found in the 30 topics on 2026-11-03; re-locate before citing.
+- Marketing page (nursegrid.com/for-organizations/nursegrid-manager/) re-confirmed by direct curl
+  the same day: pricing line and the 250-staff / critical access hospitals line, both verbatim.
 
 **Ratings (verified 2026-07-15):**
 
@@ -864,6 +915,28 @@ meet it, and because getting the framing wrong is a legal and reputational risk 
   and /provider-scheduling-software/ and /provider-scheduling/ both 404 as of 2026-09-09.
 - Environment note: qgenda.com 403s some automated fetchers (Cloudflare). The 2026-08-25 and
   2026-09-09 readings came through when the fetch succeeded; a 403 is not a contradiction.
+
+### Small-community positioning, EHR census feed, ratio reporting (verified 2026-11-03)
+
+Direct curl with a browser user-agent succeeded on all three pages 2026-11-03.
+
+- **CHANGED, segment.** Hospitals & Health Systems page (qgenda.com/hospital-health-systems/),
+  verbatim: "from large enterprises to small community facilities" (full line: "Learn why hospitals
+  and health systems – from large enterprises to small community facilities – trust QGenda...").
+  **This makes the "NO CAH, rural, or small-hospital segment anywhere" line in the 2026-08-25 block
+  below WRONG as to "small".** Rural and critical access are still named on none of the three pages
+  (raw-text count). Never write "QGenda ignores small hospitals".
+- **NEW, census/acuity from the EHR.** Nurse and staff page (qgenda.com/nurse-and-staff-scheduling-software/),
+  verbatim: "Integration with the EHR automatically sends patient census and acuity data to QGenda
+  to inform staffing and deployment decisions."
+- **Ratios are REPORTING, not enforcement.** For-nurses page (qgenda.com/for-nurses/) analytics,
+  verbatim: "...better understand premium labor spend, float patterns, nurse-to-patient ratios, and
+  discrepancies between scheduled vs. actual time worked". The phrase does NOT appear on the nurse and
+  staff page; cite /for-nurses/.
+- Re-confirmed verbatim on /for-nurses/: "skills, preferences, hours worked, and work target status";
+  "qualified to work and send mobile notifications to fill open shifts before turning to premium
+  labor options". The page does not say "agency"; do not gloss premium labor as agency in a quote.
+- ICU, critical care, competency and charge: zero occurrences on all three pages.
 
 ### Charge-scheduling capability, from QGenda's own pages (verified 2026-08-25)
 
@@ -1132,6 +1205,27 @@ user-agent reproduces it.)
   dossier only inside Jennifer C.'s Capterra review, and in third-party pages. Attribute it to the
   reviewer, never to the vendor.
 
+### Acuity and Assignment Manager, segment FAQ, Workday wording (verified 2026-11-03)
+
+Direct curl with a browser user-agent, both HealthStream pages, 2026-11-03.
+
+- **Ratio and workload language lives in a SEPARATE product.** Acuity and Assignment Manager
+  (https://www.healthstream.com/solution/scheduling/nurse-and-staff-scheduling/acuity-assignment-manager),
+  verbatim: "The system continuously updates staffing assignments to align with mandated staffing
+  ratios, nursing hours per patient day, and workload matrices." and "Yes, Acuity and Assignment
+  Manager is sold with our workforce scheduling solution ShiftWizard." Name both products whenever
+  the ratio point is made.
+- **Segment, NEW, verbatim (ShiftWizard FAQ):** "Yes. ShiftWizard was designed for health systems,
+  with tools to manage complexity across locations."
+- Census, verbatim: "Schedule the right staff every time with Predictive Census".
+- **Workday claim is INCONSISTENT on the same page.** Tile: "ShiftWizard is the first healthcare
+  scheduling solution with Workday-certified integration." FAQ: "ShiftWizard is the only healthcare
+  scheduling solution with certified Workday integration." The 2026-09-09 line above records only the
+  "only" form. If cited at all, quote one form and attribute it to HealthStream.
+- Implementation, vendor claim, verbatim: "up and running in 60–90 days with our guided implementation".
+- ICU, critical care and charge: zero occurrences on either page. "Competency" appears only in
+  site-nav links to other HealthStream products (Competency Development), not as a scheduling rule.
+
 **Ratings (Capterra line re-verified live 2026-09-05; G2 line founder-verified 2026-08-14):**
 
 - G2: 4.3/5 across 405 reviews — founder page-verified 2026-08-14 (previously recorded without a review count). Listed as "ShiftWizard by HealthStream". G2 blocks automated fetch, so this line is human-verified, not tool-verified.
@@ -1342,6 +1436,8 @@ not CAH-specific CMS §485.635. Ask for hospital-acute reference customers speci
 
 **Product:** AI-driven nurse and staff scheduling platform for health systems. Predictive analytics, real-time staffing adjustments, patented open-shift management, nurse competency integration, and time/attendance via the companion symplr Workforce product. Formerly Avantas Smart Square. **Still a live, separately named product as of 2026-10-06** (not yet folded into symplr Workforce, though symplr announced on February 23, 2026 that it "is integrating symplr Workforce and symplr Smart Square into a single workforce management platform"; see Product mechanics below): symplr.com sells it as "Smart Square® Scheduling and Staff Planning" at https://www.symplr.com/products/smart-square, and the symplr Workforce page FAQ answers "Is there a standalone scheduling solution available?" with "Yes. Smart Square can integrate with leading third-party timekeeping systems, allowing healthcare organizations to modernize scheduling workflows without replacing their existing timekeeping investments." Staff mobile app: **Smart Square Go** (App Store, developer "symplr software LLC", iPhone only, 3.0 from 610 ratings, page-verified 2026-10-06; "requires an active Smart Square account"). Sold by AMN Healthcare to symplr: **announced July 2, 2025; closed July 1, 2025**; $75M ($65M at close plus a $10M note due end of 2026). Two-time Best in KLAS for Scheduling: Nurse and Staff (2025 and 2026).
 
+**RENAMED: now "symplr Scheduling (formerly Smart Square®)" (verified 2026-11-03, direct curl).** The line above that symplr.com sells it as "Smart Square® Scheduling and Staff Planning" is OUT OF DATE. The page at https://www.symplr.com/products/smart-square now reads, verbatim, "symplr Scheduling (formerly Smart Square®) is recognized as Best in KLAS for nurse and staff" and "See what our customers are saying about symplr Scheduling (formerly Smart Square®)". Use "symplr Scheduling (formerly Smart Square)" in new copy; the live post `what-is-symplr-smart-square` predates the rename and should be checked. Same day, verbatim: "AI evaluates historical data, patient volume, and skill mix to recommend optimal staffing levels."; "the predictions pass through the staffing matrices for each unit/service area" (both Smart Square page); "posted to qualified staff automatically, up to 30 days in advance" (symplr Workforce page only, not the Smart Square page); "Nurse & Staff Scheduling Best in KLAS awards in 2025 and 2026" (symplr Workforce page). ICU, critical care, competency and charge appear zero times on either page; skill mix is a forecasting input, not a per-shift rule. `symplr.com/products/shiftselect` returns 404 (2026-11-03); do not list ShiftSelect as a product.
+
 **Acquisition, primary sources (verified 2026-10-06):**
 
 - AMN press release, July 2, 2025 (https://ir.amnhealthcare.com/2025-07-02-AMN-Healthcare-Sells-Smart-Square-Scheduling-Technology-to-symplr,-Creates-Commercial-Partnership-to-Deliver-Comprehensive-Healthcare-Workforce-Solutions): "The total purchase price was $75 million, with $65 million paid at closing and a $10 million note due at the end of 2026."
@@ -1537,6 +1633,26 @@ Original product-page research pass; vendor-owned domains only (ukg.com, library
   Community Healthcare System. On-vendor-page support for the "built for large facilities" framing
   without needing a third-party source.
 
+**Re-check 2026-11-03 (direct curl with a browser user-agent succeeded on ukg.com this time):**
+
+- **library.ukg.com is now LOGIN-GATED.** The root redirects to `library.ukg.com/login?returnURL=%2f`
+  ("Library Login ... Choose Your Role"). The three help-doc quotes in the block above (skills and
+  certifications, Undercoverage arrow, Call List) could NOT be re-located and must not be cited
+  until someone with access re-reads them.
+- Re-confirmed verbatim on the Clinical Scheduling Extensions page: "Automatically enforce
+  nurse-patient ratios, licensure requirements, and labor laws"; "employee skills, licensure,
+  experience, and preferences"; "Proactively predict patient volume with census, acuity, and churn
+  data"; "When combined with UKG Advanced Scheduler".
+- Hospitals and health systems page (ukg.com/industry-solutions/healthcare/hospitals-and-health-systems),
+  verbatim: "provides intelligence, rule checking, shift cover functionality". **"Charge" DOES appear
+  once on that page**, in "charge nurses and leaders can make adjustments in the moment" (describes
+  users, not a scheduling requirement). So the "charge nurse appears on none of the pages read" line
+  above no longer holds for this page; write "charge appears only as a user, not as a requirement".
+- The "more than 3,500 hospitals and 10,000 post acute care facilities" line is on
+  ukg.com/industry-solutions/healthcare, NOT on the hospitals-and-health-systems page (raw-text check).
+  Cite the healthcare page for it.
+- ICU, intensive care and critical care: zero occurrences on the CSE, HHS and healthcare pages.
+
 **Ratings (verified 2026-07-01):**
 
 - Capterra (UKG Pro): 4.3/5 (731 reviews) — Product ID 480 (re-verified live via Playwright 2026-09-25: header "UKG Pro 4.3 (731)"; supersedes 726 reviews recorded 2026-07-01, rating unchanged)
@@ -1726,6 +1842,7 @@ _(ScheduleAnywhere, ScheduleForward, Shiftable, and EasyShifts were added as ful
 
 | Date       | Action                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-11-03 | ICU-post fact-check gate (best-scheduling-software-icu-nurses; brief 2026-11-icu-nurse-scheduling-software.md section 6). Raw-text verification by direct curl (browser UA) of 15 vendor pages, plus Playwright for GlobeNewswire and the NurseGrid help center. **M7:** acquired by Ascend Learning, announced Sept 21, 2026 (GlobeNewswire release URL recorded); "owner of ATI" sourced to the Sept 22 ATI release, not the M7 one; /platform and CAH-page lines re-confirmed. **symplr:** product renamed "symplr Scheduling (formerly Smart Square®)", staffing-matrices and qualified-staff lines, ShiftSelect 404. **QGenda:** "from large enterprises to small community facilities" (corrects the 2026-08-25 "no small-hospital segment" line), EHR census/acuity feed, ratio reporting on /for-nurses/. **UKG:** library.ukg.com login-gated (three help-doc quotes not re-locatable); "charge" appears once on the HHS page as users; 3,500-hospitals line is on /industry-solutions/healthcare. **ShiftWizard:** Acuity and Assignment Manager carries the ratio/HPPD language and "is sold with" ShiftWizard; "designed for health systems" FAQ; first-vs-only Workday inconsistency. **NurseGrid:** all 30 help topics read in-page (corrects "login-gated"), zero skill/competency/certification/census/acuity; Charge/Preceptor toggles; "charge trained status"; topic renamed "Creating Open Shifts". **In-House:** ICU line (Inpatient Acute), "2 Weeks to implement" tile, /about no longer lists Vasilenko. **Deputy:** pricing re-verified, Payroll $49 base fee, training-requirements swap line. NOT done this pass: OnShift and SmartLinx section-6 items (not re-checked). | Claude |
 | 2026-11-02 | Added documented-capability blocks for When I Work, Homebase, Deputy (help centers read 2026-11-02; Homebase help center login-gated, so marketing pages and blog only); new Connecteam and Sling sections. Corrected stale "does not document credential constraints" lines. Source: brief 2026-11-healthcare-vs-generic-scheduling-software.md | Claude |
 | 2026-11-01 | Monthly `competitor-watch` + `sitemap-diff` run (November audit). 9 of 17 watched pages moved; no M7, YouShift or QGenda page changed, and no watched page changed title, meta description, CTA or price. **SmartLinx homepage H1 dropped its customer count.** Before: `Join 5,000+ Senior Care Leaders Optimizing Their Workforce with Smartlinx`; after: `Join Thousands of Senior Care Leaders Optimizing Their Workforce with Smartlinx`. Title, description and H2 set unchanged. **In-House Health published a "Part 3" blog post.** On home, product, skilled-nursing and about, the H2 list under `PR & Blog` (a latest-posts list) gained `Part 3: The ground changes underneath` and lost `The Future of AI Agents in Nurse Scheduling`; it follows `Part 2: A house of cards`. PR-blog page H2s added: `Part 3: The ground changes underneath`, `Great Clinical Scheduling is More than CRUD`, `The Future of AI Agents in Nurse Scheduling`, `Insightful talks with Joseph De Veyra`; removed: `The Never-Ending Puzzle - Building Nurse Schedule`, `Insightfull talks with Joseph De Veyra` (typo fix of the added one), `Recent trends in nurse staffing ratios`, `Nursing care impact on patient outcomes`. Post content not fetched. Body-text churn only: NurseGrid (-1 word), ShiftWizard (-36), Aladtec home (-55, compared against the 2026-09-01 snapshot). Pricing sentinels `m7health.com/pricing` and `inhouse.health/pricing` still 404. Sitemaps: QGenda +6/-4 (new: `webinar/how-ssm-health-reimagined-workforce-management-for-nurses`, `webinar/how-ssm-health-is-connecting-scheduling-and-staffing-to-strengthen-its-workforce`, `blog/the-ultimate-guide-to-ambulatory-capacity-management`, `video/the-capacity-you-already-have-podcast`, `credentialing-ama-vericre`, `anesthesiology-2026-giveaway`; removed: `acep-2026`, `beckers-hit-giveaway-26`, `mgma-2026-giveaway`, `mgma-annual-conference-2026`), OnShift +3/-1 (two Applause Awards pages, `resources/blog/the-cost-of-uninformed-workforce-decisions`; removed `resources/blog/why-care-quality-is-the-most-underrated-financial-strategy`), SmartLinx +1 (`/hostedtime/`), M7, YouShift and NurseGrid 0. aladtec.com 403, ShiftWizard not an XML sitemap (known gaps). | Claude |
 | 2026-10-20 | **Two support quotes re-verified live (Playwright)** for the `vendor-support-decline-nurse-scheduling-software` draft. QGenda, Wilmer R., Practice Administrator, Medical Practice, 3.0 stars, March 19, 2026 ("Also do not like how hard it is to find someone that can step in and help troubleshoot issues. I feel like I talk to 3 people before I get an actual answer", no closing period in the original): still posted and verbatim. SmartLinx, Carol G., Director of IT Services, March 22, 2021: still posted and verbatim. Her review is titled "Simple and reliable T&A for Nursing Homes", so describe her as an IT director whose review covers nursing homes, never as a hospital voice. Both quote lines in the vendor sections now carry the 2026-10-20 mark. | Claude |

@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "slug": "best-scheduling-software-icu-nurses",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-03T14:05:02.449Z",
+      "contentHash": "41f73423c9ae576aabfe8f12fc30a9b65e76b93a0bc8b948a2e00ddda943e3d5"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-03T14:05:04.412Z",
+      "contentHash": "41f73423c9ae576aabfe8f12fc30a9b65e76b93a0bc8b948a2e00ddda943e3d5"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-03T14:05:15.378Z",
+      "contentHash": "41f73423c9ae576aabfe8f12fc30a9b65e76b93a0bc8b948a2e00ddda943e3d5"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-03T14:05:15.432Z",
+      "contentHash": "41f73423c9ae576aabfe8f12fc30a9b65e76b93a0bc8b948a2e00ddda943e3d5"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-03T14:05:15.569Z",
+      "contentHash": "41f73423c9ae576aabfe8f12fc30a9b65e76b93a0bc8b948a2e00ddda943e3d5"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-03T14:05:15.580Z",
+      "contentHash": "41f73423c9ae576aabfe8f12fc30a9b65e76b93a0bc8b948a2e00ddda943e3d5"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-03T14:05:15.582Z",
+      "contentHash": "41f73423c9ae576aabfe8f12fc30a9b65e76b93a0bc8b948a2e00ddda943e3d5"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-03T14:05:15.583Z",
+      "contentHash": "41f73423c9ae576aabfe8f12fc30a9b65e76b93a0bc8b948a2e00ddda943e3d5"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-11-03T14:04:57.927Z",
+      "contentHash": "02abd388fd6a48a080c668dae51cd137bdb4839e016892ce7c48d40535b7a37a"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-11-03T14:04:58.831Z",
+      "contentHash": "02abd388fd6a48a080c668dae51cd137bdb4839e016892ce7c48d40535b7a37a"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-11-03T14:04:59.950Z",
+      "contentHash": "02abd388fd6a48a080c668dae51cd137bdb4839e016892ce7c48d40535b7a37a"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 70.4,
+        "headings": 94.4,
+        "actionability": 72.7,
+        "attention": 94.4
+      },
+      "overall": 81.6,
+      "counts": {
+        "sections": 18,
+        "rereads": 17,
+        "undefinedTerms": 15,
+        "headingsAnswered": 17,
+        "mondayActions": 8,
+        "blockedActions": 3,
+        "quitPoints": 1
+      },
+      "icp": "Nurse manager at a 25-bed rural hospital with a small ICU, reading once on a phone between shifts",
+      "publishDate": "2026-11-03T00:00:00Z",
+      "postType": "bofu",
+      "observations": {
+        "undefinedTerms": [
+          "Level 1 / Level 2 / Level 4 or 5 (used in the comparison table before the levels are explained)",
+          "census bands",
+          "census tier",
+          "straight-time first",
+          "staffing matrix / staffing matrices",
+          "add-on to an add-on (Clinical Scheduling Extensions vs Advanced Scheduler)",
+          "Best in KLAS",
+          "dog-ear",
+          "churn data",
+          "premium labor",
+          "work target status",
+          "standalone critical access hospital",
+          "Standard 5 (AACN)",
+          "tag C-0902 / Appendix W",
+          "Capterra"
+        ],
+        "mondayActions": [
+          "write down every nurse signed off for the ICU with the month each finished orientation",
+          "mark my experienced ICU nurses and count last month's ICU nights with none of them on",
+          "take one recent ICU callout and write down how it was filled and whether the replacement was new to the unit",
+          "decide whether the charge nurse sits inside or outside the one-to-two bedside count",
+          "on every vendor demo, ask the 5 p.m. callout question and watch the screen",
+          "ask M7 how 'eligible staff' is decided for an ICU shift",
+          "ask each vendor whether a draft can put two new nurses on the same night",
+          "price NurseGrid Manager at $5 per staff member per month against my headcount"
+        ],
+        "blockedActions": [
+          "mark my experienced nurses: the post never says what counts as experienced (more than a year? Level 4? eight years?)",
+          "ask the 5 p.m. question 'from the top of this guide': it sits in Key Takeaways in different words, and I had to scroll back to find it",
+          "ask ShiftWizard / UKG to confirm which products a quote includes: no product names or bundle names given for UKG beyond two module names I could not tell apart"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "(intro, before first H2)",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Makes ICU Nurse Scheduling Different at a Small Hospital?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Is There a Required ICU Nurse-to-Patient Ratio?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should ICU Nurse Scheduling Software Check?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do the Eight ICU Scheduling Platforms Compare?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Are the 8 Best ICU Nurse Scheduling Platforms?",
+            "rereadCount": 0,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "1. SimpleScheduleAI",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "2. NurseGrid Manager",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "3. M7 Health",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "4. In-House Health",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "5. ShiftWizard",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "6. QGenda",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "7. symplr Scheduling",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "8. UKG",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Which ICU Scheduling Software Fits Your Hospital?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-11-03T13:44:28.778Z",
+      "contentHash": "bd57af6a3114d7540d1f9d24f12a15d78b1f36c626f98d30f1230b28126b74a5"
+    }
+  }
+}

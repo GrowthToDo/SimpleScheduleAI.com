@@ -357,6 +357,8 @@ Quoted in order from `src/lib/engine/scheduler/eligibility.ts` → `passesHardRu
 3. **ICU/ER competency** — `if (isICUUnit(shiftInfo.unit) && staffInfo.icuCompetencyLevel < 2) return false;`
    - 3b. Level 1 requires a **Level 5 preceptor already on the same shift**.
    - 3c. Level 2 on ICU/ER requires a **Level 4+ supervisor already on the same shift**.
+   - 3d. **Every ICU/ER shift gets a Level 4+ nurse, whatever the rest of the mix** (verified 2026-11-03 against cah-scheduler @ `270ea92`). `greedy.ts` Pass 1.5 places a Level 4+ nurse on each ICU/ER shift before the remaining slots, designating them charge when the shift still needs charge and they qualify; when no Level 4+ nurse is eligible it records the reason "no eligible Level 4+ staff for ICU/ER supervision". The `level2-supervision` evaluator also flags any ICU/ER shift whose highest level is below `minSupervisorLevel` (default 4): "ICU/ER requires at least one Level 4+ staff member." Unit matching is by WORD in the unit name (`unit-utils.ts`, `isICUUnit`): ICU, ER, ED, EMERGENCY. "ICU-Stepdown" matches; "CCU", "Critical Care" and "Special Care" do NOT.
+   - 3e. **The callout shortlist does not enforce 3-3d** (`src/lib/callout/escalation.ts`). It labels each candidate's level against the called-out nurse ("matches or exceeds" / "below called-out nurse") and ranks by it, but excludes nobody for competency and does not check whether the shift keeps a Level 4+ nurse after the callout. Claim it as visibility, never as a filter.
 4. **No overlapping shifts.**
 5. **Minimum rest 10 hours**, checked both before and after the proposed shift.
 6. **Max consecutive days** — `const maxConsec = Math.min(staffInfo.preferences?.maxConsecutiveDays ?? 5, 5);`

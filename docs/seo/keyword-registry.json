@@ -1036,5 +1036,13 @@
     "primaryKeyword": "nurse scheduling metrics",
     "pillar": "/nurse-scheduling-software",
     "note": "Drafted 2026-11-02 (next-15 Oct plan #13), rewrite of parked draft cah-nurse-schedule-data-analysis. One-page review sheet: overtime by source and shift type, callouts per 100 scheduled shifts, hard shifts per nurse vs group average, cost of filling gaps. No measured search volume for any phrasing (brief docs/seo/briefs/2026-11-nurse-schedule-data.md); credibility and link-target asset. Differs from how-to-reduce-nurse-overtime (fixes), how-to-handle-nurse-callouts (log and workflow), fair-nurse-schedule-small-hospital (fair-share method): links to each."
+  },
+  {
+    "slug": "best-scheduling-software-icu-nurses",
+    "type": "post",
+    "url": "/blog/best-scheduling-software-icu-nurses",
+    "primaryKeyword": "icu nurse scheduling software",
+    "pillar": "/nurse-scheduling-software",
+    "note": "Rewritten 2026-11-03 (next-15 Oct plan #14) from the blocked draft. No measured volume for any ICU + scheduling phrasing (brief docs/seo/briefs/2026-11-icu-nurse-scheduling-software.md); Google maps the phrase to generic nurse scheduling, so this is an AI-answer and sales asset. Differentiated from the generic best-of posts by the ICU angle only: unit competency, novice-experienced pairing, census, charge outside the bedside count. Sibling of best-charge-nurse-scheduling-software (charge coverage). The ratio queries belong to nurse-staffing-ratios-critical-access-hospital, which this post links to."
   }
 ]

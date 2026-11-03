@@ -62,6 +62,24 @@
       "setBy": "founder",
       "setAt": "2026-11-02T16:58:27.020Z",
       "contentHash": "f0e6f161a6e7cd63a00bb2db89a9fc85789d2f61ab69182b39be190b5e0b563b"
+    },
+    "imageEyeball": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-11-03T13:14:12.811Z",
+      "contentHash": "f0e6f161a6e7cd63a00bb2db89a9fc85789d2f61ab69182b39be190b5e0b563b"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "claude",
+      "setAt": "2026-11-03T13:14:13.768Z",
+      "contentHash": "f0e6f161a6e7cd63a00bb2db89a9fc85789d2f61ab69182b39be190b5e0b563b"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "claude",
+      "setAt": "2026-11-03T13:14:14.506Z",
+      "contentHash": "f0e6f161a6e7cd63a00bb2db89a9fc85789d2f61ab69182b39be190b5e0b563b"
     }
   },
   "overrides": [],

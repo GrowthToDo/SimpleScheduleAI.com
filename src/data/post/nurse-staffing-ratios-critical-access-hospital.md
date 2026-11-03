@@ -53,7 +53,7 @@ That absence is deliberate. No single number can fit a 700-bed academic medical 
 
 Very few. California has the longest-standing comprehensive nurse-to-patient ratios, in force across unit types since 2004, and Oregon joined it in 2023 with a staffing law that sets ratios across 12 unit types, fully in effect as of mid-2026. A handful of other states regulate one unit or require a staffing committee and public disclosure instead of a hard number. Most states, including Texas, take the committee-and-plan route with no fixed ratio at all.
 
-California's ratios come from [22 CCR 70217](https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217): 1 nurse to 5 patients on medical-surgical units, 1 to 2 in the ICU and other critical care, and 1 to 4 in the emergency department, among others. These are floors, not targets, and they apply at all times including breaks. The table below shows who mandates what.
+California's ratios come from [22 CCR 70217](https://www.law.cornell.edu/regulations/california/Cal-Code-Regs-Tit-22-SS-70217): 1 nurse to 5 patients on medical-surgical units, 1 to 2 in the ICU and other critical care, and 1 to 4 in the emergency department, among others. These are floors, not targets, and they apply at all times including breaks. If you run ICU beds, our comparison of [ICU nurse scheduling software](/blog/best-scheduling-software-icu-nurses) shows how each platform handles staffing to census. The table below shows who mandates what.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-sm border-collapse table-fixed break-words">
