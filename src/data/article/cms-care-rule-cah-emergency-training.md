@@ -69,21 +69,24 @@ The table below walks through CMS's savings estimate one step at a time. The fig
 
 CMS's method has three inputs. Every staff member who takes the training needs a 1-hour refresher each year, a new hire needs the 3-hour first training instead, and 21 percent of staff are new each year. CMS takes the 21 percent from the annual hospital turnover rate in a 2024 staffing report from Nursing Solutions Inc.
 
-| Step                                   | How it is worked out     | Critical access hospitals | Other hospitals with emergency services |
-| -------------------------------------- | ------------------------ | ------------------------- | --------------------------------------- |
-| A. Number of hospitals                 | From CMS                 | 1,329                     | 3,319                                   |
-| B. Medical staff in those hospitals    | From CMS                 | 68,234                    | 1,667,532                               |
-| C. Share CMS assumes take the training | From CMS                 | 100 percent               | 20 percent                              |
-| D. Staff who take the training         | B x C                    | 68,234                    | 333,506                                 |
-| E. Hours for new staff                 | D x 21 percent x 3 hours | 42,987                    | 210,109                                 |
-| F. Hours for returning staff           | D x 79 percent x 1 hour  | 53,905                    | 263,470                                 |
-| G. Staff hours saved each year         | E + F                    | 96,892                    | 473,579                                 |
-| H. Dollars saved each year             | G x about $114 an hour   | $11,061,162               | $54,063,623                             |
-| I. Share of all the savings            | H / $65,124,785 total    | 17 percent                | 83 percent                              |
-| J. Staff hours for an average hospital | G / A                    | 73 hours                  | 143 hours                               |
-| K. Dollars for an average hospital     | H / A                    | $8,323                    | $16,289                                 |
+| Step                                   | How it is worked out                                          | Critical access hospitals | Other hospitals with emergency services |
+| -------------------------------------- | ------------------------------------------------------------- | ------------------------- | --------------------------------------- |
+| A. Number of hospitals                 | From CMS                                                      | 1,329                     | 3,319                                   |
+| B. Medical staff in those hospitals    | From CMS                                                      | 68,234                    | 1,667,532                               |
+| C. Share CMS assumes take the training | From CMS                                                      | 100 percent               | 20 percent                              |
+| D. Staff who take the training         | B x C                                                         | 68,234                    | 333,506                                 |
+| E. Hours for new staff                 | D x 21 percent x 3 hours                                      | 42,987                    | 210,109                                 |
+| F. Hours for returning staff           | D x 79 percent x 1 hour                                       | 53,905                    | 263,470                                 |
+| G. Staff hours saved each year         | E + F                                                         | 96,892                    | 473,579                                 |
+| H. Dollars saved each year             | From CMS: each staff hour priced at the job's pay (see below) | $11,061,162               | $54,063,623                             |
+| I. Share of all the savings            | H / $65,124,785 total                                         | 17 percent                | 83 percent                              |
+| J. Staff hours for an average hospital | G / A                                                         | 73 hours                  | 143 hours                               |
+| K. Dollars for an average hospital     | H / A                                                         | $8,323                    | $16,289                                 |
+| L. Average value of one staff hour     | H / G                                                         | $114                      | $114                                    |
 
-Rows A, B, C, E, F, G and H are CMS's figures. Rows D, I, J and K are our division of them, and so is the $114 an hour in row H: CMS's dollars divided by its hours. CMS builds that hourly figure from wages plus overhead.
+Rows A, B, C, E, F, G and H are CMS's figures. Rows D, I, J, K and L are our division of them.
+
+How CMS gets the dollars in row H: it prices each staff hour at twice the national average hourly wage for that job in hospitals, from the Bureau of Labor Statistics' May 2025 figures. CMS doubles the wage to cover benefits and overhead. The staff it counts are licensed practical nurses, registered nurses, nurse anesthetists, nurse midwives, nurse practitioners, physician assistants, physicians and surgeons. CMS does not print one hourly figure for that mix. Row L does it for you: CMS's dollars divided by its hours come to about $114 per staff hour for both groups.
 
 Row I is the point. Critical access hospitals have only 2.7 percent of the certified beds in CMS's count, meaning the beds Medicare has approved, yet they would get 17 percent of the savings. Row C is the reason. If CMS had assumed one in five at critical access hospitals too, row D would be 13,647 staff, and their savings would drop to about $2.2 million, about 4 percent of a $56.3 million total.
 
