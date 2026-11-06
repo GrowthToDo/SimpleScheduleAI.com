@@ -1,6 +1,7 @@
 ---
 draft: false
 publishDate: 2026-09-28T00:00:00Z
+updateDate: 2026-11-06T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'CMS Tag C-0896: What Surveyors Will Check on Your Emergency Protocols'
 excerpt: >
@@ -80,6 +81,8 @@ C-0896 counts people as part of emergency readiness. The guidance says: "Adequat
 
 The regulation also already requires training. Under [42 CFR 485.618(e)(2)](https://www.law.cornell.edu/cfr/text/42/485.618), "Applicable staff, as identified by the CAH, must be trained annually on the protocols and provisions implemented pursuant to this section." The hospital decides which staff that covers. When a surveyor asks a nurse to explain the steps for a postpartum hemorrhage, that nurse is showing whether the training reached the floor.
 
+**Update, November 6, 2026:** CMS has proposed removing this annual training requirement in rule CMS-3484-P. The requirement stays in force until a final rule takes effect, and the protocols and the C-0896 survey check stay either way. Our article on [the CMS emergency training proposal](/articles/cms-care-rule-cah-emergency-training) covers what would change.
+
 So the question for a nurse manager is not only "do we have a protocol?" It is also "was the nurse on that shift trained on it, and could they explain it?"
 
 ## What Does C-0896 Mean for the Night Shift at a 25-Bed Hospital?
@@ -154,7 +157,7 @@ Yes. CMS memo QSO-26-07 says the guidance "addresses emergency services readines
 
 **Q: Does staff training count under C-0896?**
 
-Yes. The regulation already requires that "Applicable staff, as identified by the CAH, must be trained annually on the protocols and provisions ..." Under C-0896, surveyors may ask staff to demonstrate or explain the protocol, which is how training shows up in a survey.
+Yes. The regulation already requires that "Applicable staff, as identified by the CAH, must be trained annually on the protocols and provisions ..." Under C-0896, surveyors may ask staff to demonstrate or explain the protocol, which is how training shows up in a survey. In November 2026, CMS proposed removing the annual training requirement; it stays in force until a final rule takes effect.
 
 ## Sources
 

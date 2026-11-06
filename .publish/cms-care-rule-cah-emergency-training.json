@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "slug": "cms-care-rule-cah-emergency-training",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-06T16:28:44.611Z",
+      "contentHash": "326ef501920a5f47fcb23ade31bd2aa534d2ed153969fed39de6662d4c4736ef"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-06T16:28:47.072Z",
+      "contentHash": "326ef501920a5f47fcb23ade31bd2aa534d2ed153969fed39de6662d4c4736ef"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-06T16:28:48.605Z",
+      "contentHash": "326ef501920a5f47fcb23ade31bd2aa534d2ed153969fed39de6662d4c4736ef"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-06T16:28:48.669Z",
+      "contentHash": "326ef501920a5f47fcb23ade31bd2aa534d2ed153969fed39de6662d4c4736ef"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-06T16:28:48.870Z",
+      "contentHash": "326ef501920a5f47fcb23ade31bd2aa534d2ed153969fed39de6662d4c4736ef"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-06T16:28:48.871Z",
+      "contentHash": "326ef501920a5f47fcb23ade31bd2aa534d2ed153969fed39de6662d4c4736ef"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-06T16:28:48.873Z",
+      "contentHash": "326ef501920a5f47fcb23ade31bd2aa534d2ed153969fed39de6662d4c4736ef"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-06T16:28:48.875Z",
+      "contentHash": "326ef501920a5f47fcb23ade31bd2aa534d2ed153969fed39de6662d4c4736ef"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-11-06T16:28:56.471Z",
+      "contentHash": "6f2a6779e35226ad06d3f53ad624fa561969672078fbf4f595f8ac7c828df568"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-11-06T16:28:56.639Z",
+      "contentHash": "6f2a6779e35226ad06d3f53ad624fa561969672078fbf4f595f8ac7c828df568"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-11-06T16:28:56.809Z",
+      "contentHash": "6f2a6779e35226ad06d3f53ad624fa561969672078fbf4f595f8ac7c828df568"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 77.3,
+        "headings": 100,
+        "actionability": 66.7,
+        "attention": 81.8
+      },
+      "overall": 80.3,
+      "counts": {
+        "sections": 11,
+        "rereads": 8,
+        "undefinedTerms": 7,
+        "headingsAnswered": 11,
+        "mondayActions": 4,
+        "blockedActions": 2,
+        "quitPoints": 2
+      },
+      "icp": "Nurse manager at a 25-bed rural hospital, reading once on a phone between shifts",
+      "publishDate": "2026-11-06T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "CARE (named as the rule but never spelled out as an acronym)",
+          "CoPs",
+          "EMTALA",
+          "obstetric quality items / maternal health quality requirements (never said what they are)",
+          "docket / file code",
+          "certified beds",
+          "35-mile test"
+        ],
+        "mondayActions": [
+          "keep the annual emergency readiness training running",
+          "count our training hours: returning staff x 1 hour, new hires x 3 hours",
+          "check which nurses on the night schedule are trained on this year's emergency protocols, including obstetric ones",
+          "put January 9, 2027 on the calendar as the comment deadline and write down our training headcount and hours now"
+        ],
+        "blockedActions": [
+          "keep preparing for the January 1, 2027 obstetric items: post never says what those items are, and the CMS line telling surveyors to focus elsewhere left me unsure how hard to push",
+          "decide whether to comment: post does not say who at the hospital normally decides or files (me, the DON, the CEO), or whether a nurse manager's comment is expected"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Table of Contents (plus intro paragraph)",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Did CMS Propose for Critical Access Hospitals?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Does the Emergency Training Rule Still Apply Right Now?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Why Does This Training Weigh More on a Small Hospital?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Many Staff Hours Does the Training Take at Your Hospital?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Else Does the Rule Change for Critical Access Hospitals?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Comment on the Proposed Rule?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "Sources",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-11-06T16:28:56.953Z",
+      "contentHash": "6f2a6779e35226ad06d3f53ad624fa561969672078fbf4f595f8ac7c828df568"
+    }
+  }
+}

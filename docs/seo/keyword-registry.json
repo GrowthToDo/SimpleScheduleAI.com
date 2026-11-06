@@ -886,6 +886,14 @@
     "note": "Published 2026-09-28 from the unpublished per-diem-nursing-shifts draft (fully rewritten; its stats were invented). 'prn pool' 140/mo, LOW competition; SERP is brand/jobs/Q&A pages, no hospital-side setup guide. Targets the GSC PRN-pool AI-assistant question (109 impr, pos 5.7). SETUP GUIDE intent; the 'who offers PRN software' vendor intent stays with best-per-diem-nurse-scheduling-software, which links here. Hook: illustrative 5-nurse overtime table (36h nurse paid 16 hours for a 12-hour shift vs 12 at 28h)."
   },
   {
+    "slug": "cms-care-rule-cah-emergency-training",
+    "type": "article",
+    "url": "/articles/cms-care-rule-cah-emergency-training",
+    "primaryKeyword": "cms-3484-p critical access hospital",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Newsroom trendjack, drafted 2026-11-06 (detection pass docs/seo/briefs/2026-11-newsroom-detection-pass.md, score 100). CMS CARE proposed rule CMS-3484-P (issued Nov 5, FR Nov 10, 2026) would remove the CAH emergency readiness staff training at 42 CFR 485.618(e)(2). Hook from Table 48: CMS assumes 100% of CAH staff train vs 20% at hospitals because CAH staff 'work across units'; CAHs 2.7% of beds, ~17% of savings. Companion to cms-c-0896-emergency-protocols-critical-access-hospitals (protocols and survey check, which stay). Secondary: cah emergency readiness training, cms care rule."
+  },
+  {
     "slug": "cms-c-0896-emergency-protocols-critical-access-hospitals",
     "type": "article",
     "url": "/articles/cms-c-0896-emergency-protocols-critical-access-hospitals",
