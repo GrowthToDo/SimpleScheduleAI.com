@@ -25,7 +25,7 @@ metadata:
 - It is a proposal. The training rule stays in force until a final rule takes effect, and CMS itself says the final rule is unlikely before January 1, 2027. Keep training your staff.
 - The emergency protocols themselves stay. Surveyors can still ask a nurse to "demonstrate or explain" a protocol under survey tag C-0896.
 - CMS assumes every medical staff member at a critical access hospital takes this training, against one in five at other hospitals, because small-hospital staff cover more than one unit.
-- That assumption turns critical access hospitals' 2.7 percent of certified beds into about 17 percent of the savings. Dividing CMS's totals by its 1,329 critical access hospitals gives about 73 staff hours and $8,300 a year for an average one (our division).
+- Because of that assumption, critical access hospitals would get about 17 percent of the savings, even though they have only 2.7 percent of hospital beds. For an average critical access hospital, by our division of CMS's totals, the training takes about 73 staff hours a year, worth about $8,300. The table below shows every step.
 - Comments are due 60 days after the rule is published in the Federal Register. Publication is scheduled for November 10, which would put the deadline at January 9, 2027.
 
 ## Table of Contents
@@ -65,36 +65,35 @@ Training also shows up in a survey whether or not the rule changes. Under tag C-
 
 CMS assumes every medical staff member at a critical access hospital takes the training. At other hospitals it assumes one in five does. Its reason: "In hospitals, which have a larger number of beds, there is likely to be a greater division of staff among units, with medical staff specifically designated to work in emergency departments. In contrast, CAHs, which are smaller in size, are likely to have medical staff that work across units."
 
-The table below shows how that assumption plays out. It comes from CMS's savings estimate, [Table 48 of the proposed rule](https://public-inspection.federalregister.gov/2026-22812.pdf). Certified beds are the beds a hospital is approved by Medicare to use, which is how CMS sized each group.
+The table below walks through CMS's savings estimate one step at a time. The figures come from [Table 48 of the proposed rule](https://public-inspection.federalregister.gov/2026-22812.pdf). Each row shows how it is worked out from the rows above it.
 
-| Item                                  | Critical access hospitals | Other hospitals with emergency services |
-| ------------------------------------- | ------------------------- | --------------------------------------- |
-| Number of facilities                  | 1,329                     | 3,319                                   |
-| Share of certified beds               | 2.7 percent               | 66.9 percent                            |
-| Medical staff in these facilities     | 68,234                    | 1,667,532                               |
-| Share CMS assumes take the training   | 100 percent               | 20 percent                              |
-| Staff hours saved each year           | 96,892                    | 473,579                                 |
-| Yearly savings if the rule is removed | $11,061,162               | $54,063,623                             |
+CMS's method has three inputs. Every staff member who takes the training needs a 1-hour refresher each year, a new hire needs the 3-hour first training instead, and 21 percent of staff are new each year. CMS takes the 21 percent from the annual hospital turnover rate in a 2024 staffing report from Nursing Solutions Inc.
 
-Critical access hospitals hold 2.7 percent of the certified beds in CMS's count. Those hospitals would get about 17 percent of the savings: $11.1 million of the $65.1 million total.
+| Step                                   | How it is worked out     | Critical access hospitals | Other hospitals with emergency services |
+| -------------------------------------- | ------------------------ | ------------------------- | --------------------------------------- |
+| A. Number of hospitals                 | From CMS                 | 1,329                     | 3,319                                   |
+| B. Medical staff in those hospitals    | From CMS                 | 68,234                    | 1,667,532                               |
+| C. Share CMS assumes take the training | From CMS                 | 100 percent               | 20 percent                              |
+| D. Staff who take the training         | B x C                    | 68,234                    | 333,506                                 |
+| E. Hours for new staff                 | D x 21 percent x 3 hours | 42,987                    | 210,109                                 |
+| F. Hours for returning staff           | D x 79 percent x 1 hour  | 53,905                    | 263,470                                 |
+| G. Staff hours saved each year         | E + F                    | 96,892                    | 473,579                                 |
+| H. Dollars saved each year             | G x about $114 an hour   | $11,061,162               | $54,063,623                             |
+| I. Share of all the savings            | H / $65,124,785 total    | 17 percent                | 83 percent                              |
+| J. Staff hours for an average hospital | G / A                    | 73 hours                  | 143 hours                               |
+| K. Dollars for an average hospital     | H / A                    | $8,323                    | $16,289                                 |
 
-The 100 percent assumption is what makes the difference. If CMS had assumed one in five at critical access hospitals too, their share of the savings would be about 4 percent, not 17. The math is ours: a fifth of $11.1 million is $2.2 million. The total would then be $54.1 million + $2.2 million = $56.3 million, and $2.2 million out of $56.3 million is about 4 percent.
+Rows A, B, C, E, F, G and H are CMS's figures. Rows D, I, J and K are our division of them, and so is the $114 an hour in row H: CMS's dollars divided by its hours. CMS builds that hourly figure from wages plus overhead.
 
-For an average critical access hospital, here is our division of CMS's totals by its 1,329 hospitals:
-
-- 68,234 staff / 1,329 = about 51 staff trained a year
-- 96,892 staff hours / 1,329 = about 73 staff hours a year
-- $11,061,162 / 1,329 = about $8,300 a year
-
-The dollar figure is CMS's value for that staff time, built from wages plus overhead. It is an average across hospitals, not a number CMS gives for any one hospital.
+Row I is the point. Critical access hospitals have only 2.7 percent of the certified beds in CMS's count, meaning the beds Medicare has approved, yet they would get 17 percent of the savings. Row C is the reason. If CMS had assumed one in five at critical access hospitals too, row D would be 13,647 staff, and their savings would drop to about $2.2 million, about 4 percent of a $56.3 million total.
 
 In plain terms, CMS is saying in writing that at a small hospital the same people cover the emergency department and the other units. That is why CMS counts every staff member as needing the training. Here is our reading of that for the schedule. The nurse you put on the medical floor at night may be the first one to an emergency. Under [42 CFR 485.618(d)](https://www.law.cornell.edu/cfr/text/42/485.618), the on-call practitioner can generally be up to 30 minutes away, or 60 in the most remote areas. The night nurse's role stays the same whatever CMS decides about the training rule. Our guide to [night shift coverage at a small hospital](/blog/night-shift-nurse-schedule-coverage) covers how those nights are staffed.
 
 ## How Many Staff Hours Does Annual Emergency Readiness Training Take?
 
-CMS's method is simple enough to run on your own roster. It assumes a returning staff member needs a 1-hour refresher each year, and a new hire needs the 3-hour initial training. It assumes 21 percent of staff are new each year, citing the annual hospital turnover rate in a 2024 staffing report from Nursing Solutions Inc.
+You can run CMS's method on your own roster: 1 hour for each returning staff member, and 3 hours for each new hire.
 
-Here is a made-up example, not a real hospital. Say 40 of your staff take the training, and 8 of them joined this year.
+Here is a made-up example, not a real hospital. Say 40 of your staff take the training, and 8 of them joined this year, close to CMS's 21 percent.
 
 - 32 returning staff x 1 hour = 32 hours
 - 8 new staff x 3 hours = 24 hours
