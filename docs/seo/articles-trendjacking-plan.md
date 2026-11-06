@@ -234,6 +234,21 @@ Dropped, with reasons:
   A Washington CAH; the story is imaging equipment and $1M in project funding. No nurses,
   no staffing, no Texas; a member's press release, not news.
 
+### Detection pass 2026-11-06 (founder-supplied link)
+
+- **DROPPED - HealthTech Magazine "rural healthcare organizations can excel at security
+  recruitment"** (Calvin Hennick, CDW's HealthTech, November 2026). Score 0: Relevance 2 x
+  Rising 1 x First 2 x Hook 0. The piece is about hiring and keeping cybersecurity and IT
+  staff at rural hospitals (Community Hospital, McCook NE; Lakewood Health System, Staples
+  MN, a CAH; OCHIN; HSCC "On the Edge" May 2025; Proofpoint $3.9M average cost of the
+  worst attack, October 2025). It never mentions nurses, nurse staffing or Texas; its only
+  "scheduling" is IT staff hybrid schedules. A nurse-scheduling angle would be the Tier 3
+  forced hook the gradient rules out, and the one link to us (where schedule data lives)
+  is already covered by `where-does-your-nurse-schedule-live`. It is also vendor-publisher
+  content (CDW), not a rising question. Quick general searches the same day for November
+  2026 nurse staffing, CAH/CMS and Texas staffing news found no dated November peg; a full
+  detection pass is the next step.
+
 ### DROPPED - "Physician Scheduling Software Market" (openPR / Worldwide Market Reports)
 
 - **Dropped on:** 2026-09-18. **Reason:** citable-hook score 0, an automatic fail.
