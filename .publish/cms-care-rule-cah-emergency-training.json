@@ -68,6 +68,18 @@
       "setBy": "founder",
       "setAt": "2026-11-06T17:27:09.521Z",
       "contentHash": "506445706e135dc51a8d2366f21aec4f2c205d26088893cd5710f531619076f6"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "claude",
+      "setAt": "2026-11-06T17:32:04.322Z",
+      "contentHash": "506445706e135dc51a8d2366f21aec4f2c205d26088893cd5710f531619076f6"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "claude",
+      "setAt": "2026-11-06T17:32:04.408Z",
+      "contentHash": "506445706e135dc51a8d2366f21aec4f2c205d26088893cd5710f531619076f6"
     }
   },
   "overrides": [],
