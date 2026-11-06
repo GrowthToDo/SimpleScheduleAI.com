@@ -6,7 +6,7 @@ measurement (DR 3.2, 338 referring domains, 99.4% nofollow) showed that link
 count alone does not move DR. Ahrefs DR counts followed links only, so this
 batch keeps only directories whose free listing gives a followed link.
 
-Status: **SHORTLIST, awaiting founder go.** Nothing submitted. Copy comes from
+Status: **RUN 2026-11-06.** 4 submitted (business-software.com, buildvoyage.com, foundigy.com, thetoolbus.ai), 1 applied (startupstash.com), 5 not done; reasons per site in `backlink-ledger.md` (2026-11-06 row). Corrections to this shortlist from the live run: product-tower.com now requires a badge (exclude), featuredcustomers.com is a paid-plan sales form, trendystartups.com free route is upvote-gated. Copy comes from
 `docs/seo/directory-listing-sheet.md` (product mode, fixed in c7a5e2c5).
 
 ## How the list was built
