@@ -4,7 +4,6 @@ import { fileURLToPath } from 'url';
 import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import svelte from '@astrojs/svelte';
 import partytown from '@astrojs/partytown';
@@ -12,6 +11,8 @@ import icon from 'astro-icon';
 import compress from 'astro-compress';
 import type { AstroIntegration } from 'astro';
 import astrowind from './vendor/integration';
+
+import { unified } from '@astrojs/markdown-remark';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
@@ -36,10 +37,11 @@ export default defineConfig({
     inlineStylesheets: 'always',
   },
 
+  // Astro 7 defaults to 'jsx', which drops whitespace between inline elements
+  // (<a>x</a> <em>y</em> would render as "xy"). Keep the v5/v6 behaviour.
+  compressHTML: true,
+
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
     sitemap({
       filter: (page) =>
         !page.includes('/tag/') &&
@@ -117,8 +119,12 @@ export default defineConfig({
   },
 
   markdown: {
-    remarkPlugins: [readingTimeRemarkPlugin],
-    rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
+    // Astro 7 defaults to the Satteri pipeline; keep remark/rehype so the
+    // reading-time and table/lazy-image plugins keep running unchanged.
+    processor: unified({
+      remarkPlugins: [readingTimeRemarkPlugin],
+      rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
+    }),
   },
 
   vite: {
