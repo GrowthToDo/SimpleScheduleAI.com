@@ -278,7 +278,7 @@ constraints of the codebase.
 ### 16.2 Project Technical Context for SEO Work
 
 ```
-Framework: Astro 5 (static output)
+Framework: Astro 7 (static output)
 Blog posts: src/data/post/*.md or *.mdx
 Schema injection: SchemaOrg.astro component (src/components/common/SchemaOrg.astro)
   — accepts: schema prop (object or array)

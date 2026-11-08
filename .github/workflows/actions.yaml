@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        # Astro 7 requires Node >=22.12 (see .nvmrc).
         node-version:
-          - 18
-          - 20
           - 22
+          - 24
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js v${{ matrix.node-version }}

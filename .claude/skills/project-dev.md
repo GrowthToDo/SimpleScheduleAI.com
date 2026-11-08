@@ -7,8 +7,8 @@ description: Tech stack, key pages, schema injection pattern, and coding standar
 
 ## Tech Stack
 
-- **Framework:** Astro 5 (static site)
-- **Styling:** Tailwind CSS — no custom CSS unless Tailwind cannot achieve it
+- **Framework:** Astro 7 (static site)
+- **Styling:** Tailwind CSS 3 via `postcss.config.mjs` (no Astro integration) — no custom CSS unless Tailwind cannot achieve it
 - **Language:** TypeScript + MDX
 - **SEO:** @astrolib/seo, @astrojs/sitemap
 - **Deployment:** Netlify (`netlify.toml`) or Vercel (`vercel.json`)
