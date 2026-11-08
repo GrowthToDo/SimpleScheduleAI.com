@@ -108,7 +108,9 @@ if (cmd === 'status') {
   }
   console.log(`  ${'OVERALL'.padEnd(14)} ${String(s.overall).padStart(5)}  ${bar(s.overall)}`);
   if (s.observations?.undefinedTerms?.length) {
-    console.log(`\n  undefined terms (${s.observations.undefinedTerms.length}): ${s.observations.undefinedTerms.join(', ')}`);
+    console.log(
+      `\n  undefined terms (${s.observations.undefinedTerms.length}): ${s.observations.undefinedTerms.join(', ')}`
+    );
   }
   if (s.observations?.blockedActions?.length) {
     console.log(`  asked for but not equipped: ${s.observations.blockedActions.length}`);
@@ -140,7 +142,8 @@ if (cmd === 'trend') {
       `${d.padEnd(12)}${String(r.overall).padStart(8)}${String(r.parts.comprehension).padStart(7)}${String(r.parts.headings).padStart(6)}${String(r.parts.actionability).padStart(6)}${String(r.parts.attention).padStart(6)}  ${r.slug}`
     );
   }
-  const mean = (k) => Math.round((rows.reduce((a, r) => a + (k === 'overall' ? r.overall : r.parts[k]), 0) / rows.length) * 10) / 10;
+  const mean = (k) =>
+    Math.round((rows.reduce((a, r) => a + (k === 'overall' ? r.overall : r.parts[k]), 0) / rows.length) * 10) / 10;
   console.log(
     `\nmean over ${rows.length} post(s): overall ${mean('overall')}, comprehension ${mean('comprehension')}, headings ${mean('headings')}, actionability ${mean('actionability')}, attention ${mean('attention')}`
   );

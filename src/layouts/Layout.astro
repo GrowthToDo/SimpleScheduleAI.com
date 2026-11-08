@@ -26,6 +26,23 @@ export interface Props {
 const { metadata = {} } = Astro.props;
 const { language, textDirection } = I18N;
 
+// Microsoft Clarity loader. Emitted with set:html because Astro does not
+// evaluate {expressions} inside <script>: a {`...`} child was shipped
+// literally, so the browser ran a block holding an unused string and Clarity
+// never loaded (broken from 14afb860, 2026-07-13, until this fix).
+const clarityScript = `(function (c, l, a, r, i, t, y) {
+  c[a] =
+    c[a] ||
+    function (...args) {
+      (c[a].q = c[a].q || []).push(args);
+    };
+  t = l.createElement(r);
+  t.async = 1;
+  t.src = 'https://www.clarity.ms/tag/' + i;
+  y = l.getElementsByTagName(r)[0];
+  y.parentNode.insertBefore(t, y);
+})(window, document, 'clarity', 'script', 'w8wkhk69g6');`;
+
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -84,24 +101,7 @@ const orgSchema = {
 
     <!-- Microsoft Clarity — runs via Partytown (off main thread); PROD only so
          localhost review sessions stop polluting the dashboard -->
-    {
-      import.meta.env.PROD && (
-        <script type="text/partytown">
-          {`(function (c, l, a, r, i, t, y) {
-            c[a] =
-              c[a] ||
-              function (...args) {
-                (c[a].q = c[a].q || []).push(args);
-              };
-            t = l.createElement(r);
-            t.async = 1;
-            t.src = 'https://www.clarity.ms/tag/' + i;
-            y = l.getElementsByTagName(r)[0];
-            y.parentNode.insertBefore(t, y);
-          })(window, document, 'clarity', 'script', 'w8wkhk69g6');`}
-        </script>
-      )
-    }
+    {import.meta.env.PROD && <script type="text/partytown" set:html={clarityScript} />}
 
     <!-- View Transitions disabled — see import comment above -->
     <SchemaOrg schema={orgSchema} />

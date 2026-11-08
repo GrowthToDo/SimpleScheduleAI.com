@@ -54,7 +54,6 @@ const page = await browser.newPage({ viewport: { width: 1400, height: 620 }, dev
 await page.setContent(html, { waitUntil: 'networkidle' });
 await page.evaluate(() => document.fonts.ready);
 await page.waitForTimeout(400);
-const el = await page.locator('body');
 const png = await page.screenshot({ fullPage: true });
 await browser.close();
 await sharp(png).trim({ threshold: 8 }).webp({ quality: 90 }).toFile(OUT);
