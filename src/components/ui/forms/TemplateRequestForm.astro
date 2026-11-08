@@ -101,6 +101,9 @@ const inputClass =
         });
         window.dataLayer = window.dataLayer || [];
         (function () {
+          // gtag.js only runs commands pushed as an Arguments object (an array
+          // is read as a plain data message), so a rest-param array won't work.
+          // eslint-disable-next-line prefer-rest-params
           window.dataLayer.push(arguments);
         })('event', 'generate_lead', { lead_source: 'nurse_schedule_template', role: data.role });
         successBox.textContent = `Sent. The template is on its way to ${email}. If it has not arrived in 10 minutes, check your spam folder or write to support@simplescheduleai.com.`;

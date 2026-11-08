@@ -4,7 +4,7 @@ import Headline from '~/components/ui/Headline.astro';
 import ROICalculatorWidget from './ROICalculatorWidget.svelte';
 import type { Widget } from '~/types';
 
-interface Props extends Widget {}
+type Props = Widget;
 
 const { id, isDark = false, classes = {}, bg = await Astro.slots.render('bg') } = Astro.props;
 

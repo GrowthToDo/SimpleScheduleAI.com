@@ -186,9 +186,10 @@ const keywordStats = [
 ];
 
 // Live content counts, computed at build so these proof numbers never go stale.
-const pMods = import.meta.glob('../data/post/*.md', { eager: true });
-const aMods = import.meta.glob('../data/article/*.md', { eager: true });
-const allDocs: any[] = [...Object.values(pMods), ...Object.values(aMods)];
+type DocModule = { frontmatter?: { draft?: boolean } };
+const pMods = import.meta.glob<DocModule>('../data/post/*.md', { eager: true });
+const aMods = import.meta.glob<DocModule>('../data/article/*.md', { eager: true });
+const allDocs = [...Object.values(pMods), ...Object.values(aMods)];
 const liveCount = allDocs.filter((m) => m.frontmatter?.draft === false).length;
 const draftCount = allDocs.filter((m) => m.frontmatter?.draft === true).length;
 const authoredCount = liveCount + draftCount;
