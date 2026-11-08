@@ -48,8 +48,12 @@ The `mcp-gsc` server must be installed **persistently and pinned**. The
 showing zero tools. Install it once:
 
 ```
-uv tool install "git+https://github.com/AminForou/mcp-gsc@daab327277e28f8efcc83d9964fb1466a91a1d68"
+uv tool install "git+https://github.com/AminForou/mcp-gsc@daab327277e28f8efcc83d9964fb1466a91a1d68" --with "mcp<2"
 ```
+
+The `--with "mcp<2"` pin is required: this mcp-gsc commit does not cap its `mcp`
+dependency, and `mcp` 2.x removed `mcp.server.fastmcp`, so an unpinned install
+crashes on startup (found 2026-11-08 on the Mac migration).
 
 Then point `.mcp.json` -> `google-search-console.command` at the installed
 executable (`~/.local/bin/mcp-gsc`, or `...\.local\bin\mcp-gsc.exe` on Windows)

@@ -7,5 +7,5 @@
     "feature-dev@claude-plugins-official": true,
     "playwright@claude-plugins-official": true
   },
-  "enabledMcpjsonServers": ["dataforseo", "google-search-console", "microsoft-clarity", "bing-webmaster"]
+  "enabledMcpjsonServers": ["dataforseo", "google-search-console", "microsoft-clarity", "bing-webmaster", "google-analytics"]
 }
