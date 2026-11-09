@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "slug": "texas-medicaid-expansion-earliest-date",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T12:50:06.460Z",
+      "contentHash": "849e3a8f01c1105008577d6610542b74ed3db760c024afda4b96bf7d06ae2008"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T12:50:06.738Z",
+      "contentHash": "849e3a8f01c1105008577d6610542b74ed3db760c024afda4b96bf7d06ae2008"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T12:50:08.555Z",
+      "contentHash": "849e3a8f01c1105008577d6610542b74ed3db760c024afda4b96bf7d06ae2008"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T12:50:08.571Z",
+      "contentHash": "849e3a8f01c1105008577d6610542b74ed3db760c024afda4b96bf7d06ae2008"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T12:50:08.582Z",
+      "contentHash": "849e3a8f01c1105008577d6610542b74ed3db760c024afda4b96bf7d06ae2008"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T12:50:08.582Z",
+      "contentHash": "849e3a8f01c1105008577d6610542b74ed3db760c024afda4b96bf7d06ae2008"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T12:50:08.582Z",
+      "contentHash": "849e3a8f01c1105008577d6610542b74ed3db760c024afda4b96bf7d06ae2008"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T12:50:08.584Z",
+      "contentHash": "849e3a8f01c1105008577d6610542b74ed3db760c024afda4b96bf7d06ae2008"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-11-09T12:48:47.397Z",
+      "contentHash": "1eaeb040f03edf0594045b3ad3a887f68efd92283f1fbcb1bc1f100643b4c0cc"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-11-09T12:48:47.527Z",
+      "contentHash": "1eaeb040f03edf0594045b3ad3a887f68efd92283f1fbcb1bc1f100643b4c0cc"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-11-09T12:49:58.339Z",
+      "contentHash": "1eaeb040f03edf0594045b3ad3a887f68efd92283f1fbcb1bc1f100643b4c0cc"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 42.9,
+        "headings": 71.4,
+        "actionability": 42.9,
+        "attention": 71.4
+      },
+      "overall": 55.4,
+      "counts": {
+        "sections": 7,
+        "rereads": 10,
+        "undefinedTerms": 14,
+        "headingsAnswered": 5,
+        "mondayActions": 3,
+        "blockedActions": 4,
+        "quitPoints": 2
+      },
+      "icp": "nurse manager, 25-bed rural hospital",
+      "publishDate": "2026-11-09T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "expansion group",
+          "plan change / state plan",
+          "CMS",
+          "CHIRP",
+          "state-directed payment program",
+          "provider taxes",
+          "coverage gap",
+          "back coverage",
+          "trigger bill",
+          "holdout states / expansion bonus",
+          "poverty line (copay threshold)",
+          "four-fifths / two-thirds of all members / day 61 (legislative procedure)",
+          "statewide (program runs statewide)",
+          "42 CFR / Article III citations in table"
+        ],
+        "mondayActions": [
+          "Nothing on the unit for a nurse manager; the post never connects to staffing or scheduling",
+          "Forward the uninsured-adult count and application-speed questions to the business office / patient access",
+          "Stop expecting expansion money in 2027 budget planning"
+        ],
+        "blockedActions": [
+          "Ask the hospital association about CHIRP limits in writing (no name, contact, or wording equipped; and not a nurse manager's lane)",
+          "Count uninsured adults 19 to 64 from last year's inpatient and ER visits (no report name, system, or how to pull it; business office task)",
+          "Measure days to help an uninsured patient start a Medicaid application (no method given for who measures it or where it is recorded)",
+          "Bring the uninsured count to leadership meeting (no guidance on what to say or what decision it supports)"
+        ],
+        "sections": [
+          {
+            "heading": "What Did Texas's Governor-Elect Say About Medicaid Expansion?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is the Earliest Date a Texas Medicaid Expansion Could Start?",
+            "rereadCount": 4,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "How Long Did Other States Take From an Expansion Law to Coverage?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What Federal Rules Would Come With a Texas Medicaid Expansion Now?",
+            "rereadCount": 3,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does Medicaid Expansion Mean for Rural Hospital Finances?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-11-09T12:34:21.855Z",
+      "contentHash": "2976ff00944cc6568e80642869208dd331fa0e5f8d7c0b08afda2bfc0016f1c5"
+    }
+  }
+}

@@ -1060,5 +1060,13 @@
     "primaryKeyword": "home health scheduling software",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Rewritten 2026-11-09 (next-15 Oct plan #15) as a where-we-stop piece for hospitals that also run a home health agency. Secondary: home health vs hospital scheduling (10/mo). 140/mo for the primary (last 4 months 70 to 90, DataForSEO 2026-11-09); the SERP is vendor pages for home care agencies, so this is an AI-answer and sales asset, not a ranking play. Brief docs/seo/briefs/2026-11-home-health-vs-hospital-scheduling.md. Siblings: float-pool-nursing-small-hospitals (shared staff), physician-medical-staff-scheduling-small-hospital (same one-tool-or-two shape)."
+  },
+  {
+    "slug": "texas-medicaid-expansion-earliest-date",
+    "type": "article",
+    "url": "/articles/texas-medicaid-expansion-earliest-date",
+    "primaryKeyword": "texas medicaid expansion",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Newsroom piece 2026-11-09 on Gov.-elect Hinojosa's expansion push. 210/mo (DataForSEO, series to Sept 2026, pre-election). SERP is old advocacy/think-tank pages; no page lays out the earliest-date timeline. Brief docs/seo/briefs/2026-11-texas-medicaid-expansion-rural-hospitals.md. Siblings: texas-medicaid-freeze-critical-access-hospitals, rural-hospital-losses-nurse-staffing-cost."
   }
 ]
