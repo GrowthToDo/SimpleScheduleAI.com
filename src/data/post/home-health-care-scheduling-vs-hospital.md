@@ -72,7 +72,7 @@ An inpatient scheduler at a [Critical Access Hospital](/critical-access-hospital
       <tr class="border-b border-slate-100">
         <td class="align-top py-3 pr-4 font-medium text-slate-900">Who is scheduled</td>
         <td class="align-top py-3 pr-4 text-slate-700">Nurses, therapists, aides, and social workers, by visit</td>
-        <td class="align-top py-3 text-slate-700">RNs, LVNs, and aides, by shift</td>
+        <td class="align-top py-3 text-slate-700">RNs, LPNs, and aides, by shift</td>
       </tr>
       <tr class="border-b border-slate-100">
         <td class="align-top py-3 pr-4 font-medium text-slate-900">What drives the schedule</td>
