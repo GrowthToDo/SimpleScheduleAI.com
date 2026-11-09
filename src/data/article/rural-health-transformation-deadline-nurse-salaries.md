@@ -1,12 +1,11 @@
 ---
 draft: false
 publishDate: 2026-09-21T00:00:00Z
-updateDate: 2026-10-24T00:00:00Z
+updateDate: 2026-11-09T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Can Rural Health Transformation Money Pay Nurse Salaries? Yes, If You Clear Three Conditions'
 excerpt: >
-  The first round of this money has to be committed by October 30. Salary is the one cost that cannot
-  be carried into next year. And across seven federal documents, staffing never comes up once.
+  The first round of this money had to be committed by October 30, 2026. Salary is the one cost that cannot be carried into the next round. And across seven federal documents, staffing never comes up once.
 image: ~/assets/images/pool/night-shift-02.webp
 imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
@@ -23,7 +22,7 @@ metadata:
 ## Key Takeaways
 
 - The Rural Health Transformation Program is **$50 billion over five years**, $10 billion a year from fiscal 2026 through fiscal 2030 ([CMS](https://www.medicaid.gov/resources-for-states/rural-health))
-- **The first funding round ends October 30, 2026.** After that date a state can no longer promise the money to anyone. Whatever it has not promised is taken back and handed out again
+- **The first funding round ended October 30, 2026.** After that date a state could no longer promise first-round money to anyone. Whatever it had not promised is taken back and handed out again
 - **Salary does not get the extra year.** Other money promised by October 30 can be paid out until September 30, 2027. [Wages and benefits must be paid inside their own round](https://www.cms.gov/files/document/frequently-asked-questions-april-2026.pdf)
 - **Yes, it can pay a clinician salary**, inside a new or expanded initiative, where [the employee commits to five years of rural service](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). It pays nothing **where the facility uses non-compete contracts**
 - CMS has published [seven documents](https://apply07.grants.gov/apply/opportunities/instructions/PKG00291485-instructions.pdf) for this program. We read all seven and found **no mention of float pools, agency staffing or scheduling systems**
@@ -80,11 +79,11 @@ Two things people ask about are out. [Student loan repayment and issuing student
 
 ## When Does the First Round of Money Have to Be Committed?
 
-October 30, 2026. CMS calls this the [first budget period](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). It runs ten months, from December 31, 2025 to October 30, 2026, so it is not a year at all.
+By October 30, 2026, the end of what CMS calls the [first budget period](https://www.cms.gov/files/document/rural-health-transformation-frequently-asked-questions.pdf). That period ran ten months, from December 31, 2025 to October 30, 2026, so it was not a year at all.
 
 The word that matters is not spend. It is promise. The rules say obligate, and it means the state has signed something committing the money to a named party. The cash need not have moved by the deadline. The signature must.
 
-October 30 is the state deadline, not yours. Whatever window your state gives hospitals closes earlier, so the binding date is on your state funding notice.
+October 30 was the state's deadline. A state's funding notice could set an earlier date for hospitals, and that earlier date was the one that bound a hospital.
 
 > "The State's authority to obligate funds (including to commit them to a contract or subaward) exists only during an active Budget Period for which the funds are available. Once that period ends, States can no longer use any remaining unobligated funds to make new expenditures or commitments."
 
@@ -100,14 +99,17 @@ Fringe means the benefits that ride along with a wage. So a contract signed in O
 
 Three other dates sit in the same stretch. None is yours to act on.
 
-| Date                      | What happens                                               | Whose job it is |
-| ------------------------- | ---------------------------------------------------------- | --------------- |
-| August 30, 2026           | First annual report, covering seven months, was due to CMS | The state       |
-| September to October 2026 | CMS re-scores the states to set each share for next year   | CMS             |
-| October 30, 2026          | First funding round ends, every dollar must be promised    | The state       |
-| October 31, 2026          | Second funding round begins and next year amounts are set  | CMS             |
+| Date                      | What happens                                                                                                    | Whose job it is |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------- |
+| August 30, 2026           | First annual report, covering seven months, was due to CMS                                                      | The state       |
+| September to October 2026 | CMS re-scores the states to set each share for next year                                                        | CMS             |
+| October 30, 2026          | First funding round ends, every dollar must be promised                                                         | The state       |
+| October 31, 2026          | Second funding round begins. CMS was due to announce next year's amounts by this date, and delayed part of them | CMS             |
+| November 30, 2026         | State budget revisions for the second year are due back to CMS                                                  | The state       |
 
 Each year CMS [re-scores every state](https://www.cms.gov/files/document/rht-program-reporting-rescoring-webinar-02-25-26.pdf) to set what it gets next. Part of that score is fixed data. The rest is what the state has done with the money.
+
+CMS missed the October 31 date. On October 30, the head of the federal Office of Rural Health Transformation emailed the states, [KFF Health News reported on November 5, 2026](https://kffhealthnews.org/rural-health/rural-health-transformation-program-funding-delays-states-cms/). The email said each state's second-year base of $100 million was available, but the competitive share was delayed. The competitive share is the part that differs from state to state. The email gave no new date. It said officials had "discovered an additional administrative process requirement."
 
 ## Does the Program Say Anything About Float Pools or Agency Staffing?
 
@@ -147,11 +149,13 @@ The rules above explain why. The money is built to change what a hospital looks 
 
 ## What Do We Still Not Know About the Rural Health Transformation Program?
 
-Two things we would rather name.
+Three things we would rather name.
 
 Whether your hospital qualifies for a given Texas round. HHSC's October 23, 2026 grant list includes workforce-grant applications from 66 of the 92 Texas Critical Access Hospitals, so Critical Access Hospitals have applied. Each round still sets its own terms, so check the one you apply to. Our tracker of [how much Rural Texas Strong grant money is actually signed](/articles/texas-rural-health-transformation-signed-contracts) shows where those applications stand.
 
 How CMS treats a staffing arrangement if a state proposes one. West Virginia shows a state can write one, but not where the line sits.
+
+When CMS will announce each state's competitive share for the second year. As of KFF's November 5, 2026 report, no date had been given. Until CMS announces it, each state, Texas included, knows only its $100 million base for that year.
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
@@ -166,7 +170,7 @@ How CMS treats a staffing arrangement if a state proposes one. West Virginia sho
 ## What to Do This Week
 
 1. **Ask your finance lead one question: is our hospital named in anything approved under this program?** They will know or know who does, and the answer decides whether you are applying or already reporting. In Texas it runs through HHSC.
-2. **Ask the same person for your state closing date.** October 30 is your state deadline. Your hospital date is earlier, and that is the one that binds you.
+2. **Ask the same person whether the delay touches anything you applied for.** CMS has confirmed each state's $100 million base for the second year, but not the competitive share. Ask whether any Texas round you are counting on depends on second-year money.
 3. **Ask HR a yes or no question: do clinician contracts carry a non-compete clause?** You are not reading the contracts. If the answer is yes, clinician salary support is closed to your facility.
 4. **Ask who would write the progress report.** A first report can fall due within a month of the money arriving, and it lands on whoever builds the schedule. Name a person first.
 5. **Put the last eight weeks of overtime by nurse on one page.** Pull the hours yourself and ask payroll for the rates, because a board conversation wants both. That number is yours whatever the grant does.
@@ -174,8 +178,7 @@ How CMS treats a staffing arrangement if a state proposes one. West Virginia sho
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Running a Critical Access Hospital in Texas?</p>
   <p class="text-muted text-sm mb-6">
-    SimpleScheduleAI is an AI-native nurse scheduling service for hospitals your size. We build the
-    schedule, your nurse manager approves it.
+    SimpleScheduleAI is an AI-native nurse scheduling service for hospitals your size. AI builds your schedule, our scheduling team checks it, you approve.
   </p>
   <a
     href="/how-it-works"
@@ -194,9 +197,13 @@ How CMS treats a staffing arrangement if a state proposes one. West Virginia sho
 
 Only inside a new or expanded program, where the employee commits to five years of rural service and the facility uses no non-compete contracts. Not a salary you already fund.
 
-**Q: What is the deadline for the first round of Rural Health Transformation money?**
+**Q: What was the deadline for the first round of Rural Health Transformation money?**
 
-October 30, 2026, the end of the first funding round. That is the last date a state can promise the money to anyone. Whatever is left unpromised is taken back.
+October 30, 2026, the end of the first funding round. October 30 was the last date a state could promise first-round money to anyone. Whatever was left unpromised is taken back.
+
+**Q: When will states know their second-year Rural Health Transformation amounts?**
+
+Not yet. Each state's $100 million base for the second year is available, [KFF Health News reported](https://kffhealthnews.org/rural-health/rural-health-transformation-program-funding-delays-states-cms/). CMS delayed the competitive share and gave no new date. State budget revisions are due back to CMS by November 30, 2026.
 
 **Q: If the money is promised on time, how long is there to pay it out?**
 
@@ -219,8 +226,8 @@ The federal documents do not address it. Float pools, agency staffing and schedu
 9. Office of the Governor of West Virginia, July 14, 2026. The $1.8 million for regional rotational staffing pools. [governor.wv.gov](https://governor.wv.gov/article/governor-morrisey-announces-18m-investment-address-critical-healthcare-workforce-shortages)
 10. STAT, by Daniel Payne, September 14, 2026. The hospital leader quotes on the program coming up short. [statnews.com](https://www.statnews.com/2026/09/14/rural-health-transformation-fund-skepticism-shortcomings-part-5-unraveled-series/)
 11. CMS, Rural Health Transformation Program page. The $50 billion over five fiscal years. [medicaid.gov](https://www.medicaid.gov/resources-for-states/rural-health)
-
 12. CMS, Rural Health Transformation Service Commitment Fact Sheet. Resident and fellow stipends, and recruitment and retention bonuses. [cms.gov](https://www.cms.gov/files/document/5-year-service-commitment-fact-sheet.pdf)
+13. Sarah Jane Tribble, Arielle Zionts and Bram Sable-Smith, "Trump Administration Delays Awards Slated To Improve Rural America's Health," KFF Health News, November 5, 2026. The October 30 delay email, the $100 million second-year base, and the November 30 budget revision date. [kffhealthnews.org](https://kffhealthnews.org/rural-health/rural-health-transformation-program-funding-delays-states-cms/)
 
 A note on who wrote this. We build [nurse scheduling software](/nurse-scheduling-software) for critical access hospitals in Texas, and we are not the right fit for a hospital outside Texas or above 25 beds. No part of this grant program pays for what we do, and nothing we sell would change a hospital's position under these rules. If you want to know what we actually do, start with [how it works](/how-it-works), or read our background pages on [critical access hospital scheduling](/critical-access-hospital-scheduling) and [AI nurse scheduling](/ai-nurse-scheduling).
 
