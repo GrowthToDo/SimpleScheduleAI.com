@@ -57,16 +57,15 @@ source, Joint Commission material is paywalled in places, and it needs the same
 premise check #8 got, since accreditation standards may say nothing a 25-bed CAH
 can act on. #10 through #15 follow.
 
-**Three blocked drafts, all failing `check-blog`:**
+**Blocked drafts, all failing `check-blog`** (`best-scheduling-software-er-nurses` deleted 2026-11-09 with 22 other retired drafts, founder-approved):
 
 | Draft | Problem |
 | --- | --- |
-| `best-scheduling-software-er-nurses` | 29 credential-filtering overclaims. Needs a new differentiator; no ED-specific rule exists in the engine. Recorded in `blocked-drafts.md`. |
 | `best-scheduling-software-icu-nurses` | 22 of the same. Easier fix: `icu-competency` IS a shipped hard rule. Recorded in `blocked-drafts.md`. |
 | `best-charge-nurse-scheduling-software` | Deliberately NOT in `blocked-drafts.md` (checked 2026-08-24): that file is for defects gates cannot catch, and this draft's 15 failures are ordinary gate failures ("utilized", three inline `<svg>` blocks, all three hub links missing, "CAH" in a heading, six broken TOC anchors). The normal pipeline fixes it; ~1 hour, unscheduled. Stale manifest note: its Aug-10 recorded rows (incl. founderApproval) were set by a bulk sweep against a different content hash and are not a green light. |
 
-Also parked and failing: `nurse-manager-guide-work-scheduling`,
-`nursing-software-critical-access-hospitals`, `cah-nurse-manager-scheduling-hours`.
+Also parked and failing: `nurse-manager-guide-work-scheduling`. (`nursing-software-critical-access-hospitals` and
+`cah-nurse-manager-scheduling-hours` were deleted 2026-11-09.)
 Six dead AONL URLs sit across these drafts, all 404, all needing real sources or
 removal before any of them publish.
 

@@ -67,7 +67,10 @@ their verdicts come due around 2026-12-09.
 | [ ]  | `/blog/what-is-symplr-smart-square` | "best alternative to avantas" 50 at 3.2 | Add an Avantas-history section from the dossier |
 | [ ]  | `/critical-access-hospital-scheduling` | "cah staffing rules" | Done 2026-11-09 (04d9bbad): staffing-rules section added. Judge from 2026-12-09 |
 
-## Drafts to retire (your yes needed, then they are deleted)
+## Drafts to retire (DONE 2026-11-09: 23 deleted on the founder's yes)
+
+None of the 23 was ever live and no live page linked to any of them (checked 2026-11-09), so the
+deletion has no search effect. Git history keeps every file.
 
 All 24 drafts were triaged on 2026-11-09. None is close to ready. Two more join the
 October retire list: `nursing-software-critical-access-hospitals` and

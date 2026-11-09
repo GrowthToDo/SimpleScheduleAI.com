@@ -7,9 +7,9 @@ will not fix. The publish-pipeline skill points here; keep this file short and
 
 | Draft | Why blocked | What has to change |
 | --- | --- | --- |
-| `best-scheduling-software-er-nurses` | 29 instances of ED-credential filtering as the SSAI pitch ("the ranked replacement list is generated from ED-credentialed nurses only", "SimpleScheduleAI applies ED credential filtering automatically"). Inventory §4.6/§6.5: certifications are a `string[]` with no expiry dates, **not consulted by any rule**, and there is no ED-specific rule at all. | Needs a new differentiator. The honest ED angle is NOT credentials: it is that ED callouts need a confirmed replacement fast, and what we actually enforce is role, competency level, charge coverage and overtime headroom. Do not reuse the ICU fix here, because no ED-specific rule exists in the engine. |
+| _(none as of 2026-11-09)_ | | |
 
-Both were caught by the 2026-08-12 corpus sweep (the ICU draft was rewritten around the shipped icu-competency rule and published 2026-11-03, so its row is gone) that removed 51 credential
+The last two rows were caught by the 2026-08-12 corpus sweep. The ICU draft was rewritten around the shipped icu-competency rule and published 2026-11-03; the ER draft was deleted 2026-11-09 with the other retired drafts. That sweep removed 51 credential
 overclaims from 23 live files (commit `2ca68d3a`). The approved replacement
 vocabulary is the `shortlist-reasons` row in `docs/seo/positioning-registry.md`:
 skill match, unit competency, charge-qualified, role. Never credential match,
