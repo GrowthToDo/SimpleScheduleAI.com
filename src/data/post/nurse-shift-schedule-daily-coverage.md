@@ -5,8 +5,8 @@ updateDate: 2026-04-01T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Nurse Shift Schedule: Managing Daily Coverage at CAHs'
 excerpt: >
-  A nurse shift schedule at a critical access hospital must ensure continuous RN
-  coverage 24 hours a day, 7 days a week, with a roster of 15-25 nurses, no float
+  A nurse shift schedule at a critical access hospital must keep the required nurse
+  on duty whenever there are inpatients, with a roster of 15-25 nurses, no float
   pool, and limited agency access. This guide covers how CAHs build and maintain
   daily coverage without burning out the nurses who hold the schedule together.
 image: https://images.unsplash.com/photo-1585842378054-ee2e52f94ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
@@ -22,11 +22,11 @@ metadata:
 
 ## TL;DR
 
-A nurse shift schedule at a critical access hospital must deliver continuous RN coverage across all shifts without a float pool or easy agency access. The two most common daily coverage failures are callout-driven gaps (solved by ranked per-diem shortlists) and overtime accumulation from coverage concentration (solved by fairness tracking). CAH nurse managers spend 8-12 hours per week managing these problems manually; systematic scheduling practices can reduce this to 1-2 hours.
+A nurse shift schedule at a critical access hospital must keep the required nurse on duty on every shift with inpatients, without a float pool or easy agency access. The two most common daily coverage failures are callout-driven gaps (solved by ranked per-diem shortlists) and overtime accumulation from coverage concentration (solved by fairness tracking). CAH nurse managers spend 8-12 hours per week managing these problems manually; systematic scheduling practices can reduce this to 1-2 hours.
 
 ## What Is a Nurse Shift Schedule and How Does It Work at a Critical Access Hospital?
 
-A nurse shift schedule is the structured assignment of nursing staff to defined time blocks, shifts, across a scheduling period, typically 4-6 weeks. At a critical access hospital, the schedule must guarantee that at least one RN is on duty or on call at all times, as required by [CMS Conditions of Participation §485.635](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals).
+A nurse shift schedule is the structured assignment of nursing staff to defined time blocks, shifts, across a scheduling period, typically 4-6 weeks. At a critical access hospital, [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) requires a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever there is an inpatient. In Texas, a registered nurse must be on duty in each building with patients present.
 
 At a 25-bed CAH, a typical nurse shift schedule covers:
 
@@ -65,7 +65,7 @@ Consistent daily coverage at CAH scale is a scheduling precision problem: you do
 
 **Match nurse hours to actual census patterns.** Most CAHs have predictable census patterns by day of week and season. Scheduling the same staffing level regardless of expected census generates overtime on high-census days and idle time on low-census days. Historical census data, available from your billing system, supports more precise staffing decisions.
 
-**Use on-call coverage strategically.** On-call shifts (where a nurse is available but not on-site unless needed) are appropriate for low-census periods when the CAH's CMS obligation can be met with one in-house RN plus one on call. On-call coverage is significantly cheaper than full scheduled coverage. Most CAHs underuse on-call and overschedule in-house coverage on predictably low-census nights.
+**Use on-call coverage strategically.** On-call shifts (where a nurse is available but not on-site unless needed) are appropriate for low-census periods when one in-house RN covers the census and a second nurse can be on call. On-call coverage is significantly cheaper than full scheduled coverage. Most CAHs underuse on-call and overschedule in-house coverage on predictably low-census nights.
 
 **Automate callout replacement to reduce the cost of individual absences.** If covering a callout takes 2-3 hours of phone calls, every callout is a productivity crisis. A replacement shortlist that can be acted on in 10-15 minutes makes individual callouts manageable events rather than emergencies. This allows the overall schedule to be less padded because the response cost of gaps is lower.
 
@@ -87,7 +87,7 @@ One honest limitation: SimpleScheduleAI's daily coverage optimization is only as
 
 **Q: What is a nurse shift schedule?**
 
-A nurse shift schedule assigns nursing staff to defined time blocks (shifts) across a scheduling period, ensuring continuous coverage. At critical access hospitals, the schedule must guarantee RN availability 24/7 per CMS §485.635, typically covering 3-4 shifts per day from a roster of 15-25 nurses.
+A nurse shift schedule assigns nursing staff to defined time blocks (shifts) across a scheduling period, ensuring continuous coverage. At critical access hospitals, the schedule must keep a licensed nurse on duty whenever there is an inpatient (42 CFR 485.631(a)(5)), typically covering 3-4 shifts per day from a roster of 15-25 nurses.
 
 **Q: How far in advance should a CAH publish the nurse shift schedule?**
 
@@ -103,7 +103,7 @@ Define minimum staffing per shift explicitly. Build the schedule 4 weeks out. In
 
 ## Key Takeaways
 
-- A CAH nurse shift schedule must guarantee continuous RN coverage (CMS §485.635) from a small roster with no float pool
+- A CAH nurse shift schedule must keep the required nurse on duty whenever there are inpatients (42 CFR 485.631(a)(5)) from a small roster with no float pool
 - Three common daily coverage failures: predictable callout days without proactive coverage, concentration on reliable nurses, no per-diem pool
 - Publishing 4 weeks out reduces last-minute callouts significantly compared to the typical 2-week publication window
 - Pre-replacement call lists built during schedule review convert 2-hour scramble events into 15-minute coverage decisions

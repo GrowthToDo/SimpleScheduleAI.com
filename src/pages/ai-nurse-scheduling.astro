@@ -88,7 +88,7 @@ const faqSchema = {
       name: 'Is AI nurse scheduling compliant with Texas nursing rules?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI nurse scheduling can encode the 40-hour weekly FLSA overtime threshold, and the CMS requirement that a registered nurse is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these constraints during generation and logs an audit trail of every change for CMS surveys and Texas HHSC hospital licensing documentation.',
+        text: 'AI nurse scheduling can encode the 40-hour weekly FLSA overtime threshold and the nurse coverage rules. Federal 42 CFR 485.631(a)(5) requires a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever there is an inpatient. Texas 26 TAC 505.41(o)(2)(D) also requires a registered nurse on duty in each building with patients present. SimpleScheduleAI applies these constraints during generation and logs every change in an audit trail that we can send you on request.',
       },
     },
   ],
@@ -127,7 +127,7 @@ const breadcrumbSchema = {
       <p class="not-prose text-sm text-muted dark:text-slate-400 mb-8">
         By <a href="/about/pradeep-pandey" class="text-muted dark:text-slate-300 underline decoration-dotted"
           >Pradeep Pandey</a
-        > · Published March 31, 2026 · Updated June 1, 2026
+        > · Published March 31, 2026 · Updated November 9, 2026
       </p>
 
       <div class="not-prose mb-10 border-l-2 border-primary/60 pl-5">
@@ -174,11 +174,12 @@ const breadcrumbSchema = {
       <ul>
         <li>
           <strong>Constraint solving:</strong> Hard rules that cannot be broken, including required coverage per shift, certification
-          match, mandatory rest between shifts, and the <a
-            href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+          match, mandatory rest between shifts, and the number of registered nurses each shift needs. Texas requires at least
+          one registered nurse on duty in each building with patients present, under <a
+            href="https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41"
             rel="noopener"
-            target="_blank">CMS §485.635</a
-          > requirement that an RN is on duty or on call at all times.
+            target="_blank">26 TAC 505.41(o)(2)(D)</a
+          >.
         </li>
         <li>
           <strong>Fairness optimization:</strong> Spreading weekends and holidays so the same nurses do not repeatedly draw
@@ -206,7 +207,7 @@ const breadcrumbSchema = {
               <li>RN coverage every shift</li>
               <li>Certification match</li>
               <li>Mandatory rest periods</li>
-              <li>CMS §485.635 RN on duty</li>
+              <li>Licensed nurse on duty (42 CFR 485.631)</li>
             </ul>
           </div>
 
@@ -377,7 +378,7 @@ const breadcrumbSchema = {
       </p>
       <p>
         The audit trail logs every AI suggestion and every human decision, which is the documentation <a
-          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F"
           rel="noopener"
           target="_blank">CMS surveys</a
         > and Texas HHSC hospital licensing checks ask for. The full step-by-step is on <a href="/how-it-works"
@@ -461,7 +462,7 @@ const breadcrumbSchema = {
       {
         title: 'Is AI nurse scheduling compliant with Texas nursing rules?',
         description:
-          'It can encode the 40-hour weekly FLSA overtime threshold, and the CMS requirement that an RN is on duty or on call at all times (42 CFR §485.635). SimpleScheduleAI applies these during generation and logs an audit trail of every change for CMS surveys and Texas HHSC hospital licensing documentation.',
+          'It can encode the 40-hour weekly FLSA overtime threshold and the nurse coverage rules. Federal 42 CFR 485.631(a)(5) requires a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever there is an inpatient. Texas 26 TAC 505.41(o)(2)(D) also requires a registered nurse on duty in each building with patients present. SimpleScheduleAI applies these during generation and logs every change in an audit trail that we can send you on request.',
       },
     ]}
   />

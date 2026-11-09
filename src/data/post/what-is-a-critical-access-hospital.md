@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-06-20T00:00:00Z
-updateDate: 2026-06-20T00:00:00Z
+updateDate: 2026-11-09T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Is a Critical Access Hospital? A Complete Guide'
 excerpt: >
@@ -83,7 +83,7 @@ The differences go beyond bed count.
         </tr>
         <tr>
           <td class="border border-slate-300 p-3 font-medium text-slate-900 dark:border-slate-700 dark:text-slate-100 align-top">Nurse staffing rule</td>
-          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">RN on duty or on call at all times (42 CFR 485.631)</td>
+          <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">RN, clinical nurse specialist, or LPN on duty whenever there is an inpatient (42 CFR 485.631(a)(5))</td>
           <td class="border border-slate-300 p-3 dark:border-slate-700 align-top">CMS Conditions of Participation, 42 CFR Part 482</td>
         </tr>
       </tbody>
@@ -91,7 +91,7 @@ The differences go beyond bed count.
   </div>
 </figure>
 
-Two differences drive staffing. Cost-based reimbursement means unnecessary staffing cost hits the margin, and the continuous-RN requirement under Section 485.631 is specific to CAHs.
+Two differences drive staffing. Cost-based reimbursement means unnecessary staffing cost hits the margin, and the nurse-on-duty requirement under Section 485.631 is specific to CAHs.
 
 ## Why Does Critical Access Hospital Status Matter for Nurse Managers?
 
@@ -112,7 +112,7 @@ That is what SimpleScheduleAI was built for. Our [nurse scheduling software](/nu
 It must be in a rural area at least 35 miles from the nearest hospital, hold 25 or fewer acute care beds, provide 24/7 emergency care, and keep average inpatient stays under 96 hours. CMS administers it under 42 CFR Part 485, Subpart F; the condition-by-condition list, each with its CFR citation, is in our [critical access hospital requirements](/blog/critical-access-hospital-requirements) reference.
 
 **Q: What is the difference between a hospital and a critical access hospital?**
-A CAH is capped at 25 acute care beds, sits more than 35 miles from the nearest hospital, is reimbursed at 101% of its reasonable Medicare costs, and carries the [Section 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) always-on-duty nurse rule. Standard hospitals have no federal bed cap and are paid fixed prospective rates.
+A CAH is capped at 25 acute care beds, sits more than 35 miles from the nearest hospital, and is reimbursed at 101% of its reasonable Medicare costs. It also carries the [Section 485.631](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) rule that a licensed nurse be on duty whenever there is an inpatient. Standard hospitals have no federal bed cap and are paid fixed prospective rates.
 
 **Q: How long can a patient stay in a critical access hospital?**
 There is no cap on an individual patient's stay. The 96-hour figure is an annual average across the facility for acute care, not a limit on any single admission, and a CAH must maintain that average to keep its designation, per [CMS](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) and [RuralHealthInfo](https://www.ruralhealthinfo.org/topics/critical-access-hospitals).

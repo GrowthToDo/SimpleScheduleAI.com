@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-05-12T00:00:00Z
-updateDate: 2026-10-19T00:00:00Z
+updateDate: 2026-11-09T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'TCP TimeClock+ vs. Managed Scheduling for Small Hospitals (2026)'
 excerpt: >
@@ -23,7 +23,7 @@ metadata:
 
 TCP TimeClock+ promises unified time tracking and scheduling on one platform. A managed scheduling service promises that your nurse manager stops being the scheduling administrator. Both are real products. They answer different questions, and at a 25-bed Critical Access Hospital where the nurse manager also covers clinical shifts, the second question usually decides the purchase.
 
-This guide compares the two on the operational dimensions that matter at CAH scale: who operates the platform, what the weekly time burden looks like, and how each model handles CMS §485.635 documentation and callout coverage.
+This guide compares the two on the operational dimensions that matter at CAH scale: who operates the platform, what the weekly time burden looks like, and how each model handles staffing records for CMS surveys and callout coverage.
 
 ## Key Takeaways
 
@@ -40,7 +40,7 @@ This guide compares the two on the operational dimensions that matter at CAH sca
 - [How Long Does Each Model Take to Implement?](#how-long-does-each-model-take-to-implement)
 - [What Weekly Time Does Each Model Cost the Nurse Manager?](#what-weekly-time-does-each-model-cost-the-nurse-manager)
 - [How Does Each Model Handle After-Hours Callouts?](#how-does-each-model-handle-after-hours-callouts)
-- [How Does Each Model Produce CMS §485.635 Documentation?](#how-does-each-model-produce-cms-485635-documentation)
+- [How Does Each Model Keep Staffing Records for a CMS Survey?](#how-does-each-model-keep-staffing-records-for-a-cms-survey)
 - [Where Does TCP TimeClock+ Win?](#where-does-tcp-timeclock-win)
 - [Where Does a Managed Service Win?](#where-does-a-managed-service-win)
 - [How Does Time to Value Compare?](#how-does-time-to-value-compare)
@@ -86,9 +86,9 @@ TCP TimeClock+ is a time and attendance platform made by TCP Software. It combin
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Proactive; flagged before draft is presented</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">CMS §485.635 audit trail</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Staffing records for CMS surveys</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Event logs available; CAH-specific documentation not confirmed. Verify with TCP.</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Automatic; every change logged for compliance documentation</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Every change logged; record sent on request</td>
       </tr>
       <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Callout coverage</td>
@@ -130,7 +130,7 @@ TCP Software is the parent company. It owns three separate workforce management 
 
 **What TCP TimeClock+ does not include by default:**
 
-- CMS Conditions of Participation documentation for CAH certification (§485.635): not documented as a product feature; verify with TCP before purchasing
+- CMS survey documentation for CAH certification: not documented as a product feature; verify with TCP before purchasing
 - Automated callout replacement ranking: nurses can view availability, but the nurse manager applies constraint logic manually; advanced backfill is in TCP Humanity Schedule, a separate product
 - CAH-specific configuration templates: setup requires configuring shift rules, credential requirements, and compliance thresholds from scratch
 
@@ -150,7 +150,7 @@ With SimpleScheduleAI:
 - The AI builds draft schedules each cycle; a specialist checks the 40-hour weekly FLSA overtime threshold and credential requirements before presenting drafts
 - The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff
 - Callout coverage shortlists come pre-ranked by certification, overtime status, and availability
-- Every schedule change is automatically logged for [CMS §485.635](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) compliance documentation
+- Every schedule change is logged with who made it, when, and what changed
 - The specialist maintains the roster as staff join, leave, or change credentials
 
 The nurse manager's role shifts from operator to approver. The manager keeps final authority over every scheduling decision, and the work before that is handled for them. For a full walkthrough of how SimpleScheduleAI delivers scheduling as a service, see [how it works](/how-it-works). Try building a schedule in the [interactive simulator](/simulator).
@@ -169,9 +169,9 @@ With TCP TimeClock+, the nurse manager uses the platform for both time tracking 
 
 With TCP TimeClock+, the nurse manager reviews availability in the platform and makes replacement calls manually. The platform shows who is available. The manager then checks each name for overtime and credentials by hand. For hospitals that need automated callout backfill, TCP's advanced feature for this is in Humanity Schedule, not TimeClock+. With a managed service, the replacement list is pre-ranked by skill match, overtime exposure, and historical availability before the nurse manager sees it.
 
-## How Does Each Model Produce CMS §485.635 Documentation?
+## How Does Each Model Keep Staffing Records for a CMS Survey?
 
-CMS §485.635 requires Critical Access Hospitals to document qualified staffing on duty at all times. TCP TimeClock+ maintains event logs and audit trails for time and attendance records. Whether these logs produce CMS-formatted staffing documentation for CAH certification surveys is not documented as a product feature. Verify this specifically with TCP before relying on TimeClock+ for CMS compliance reporting. SimpleScheduleAI generates CMS-formatted documentation automatically from each published schedule.
+Under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever a critical access hospital has one or more inpatients. Texas adds that a registered nurse must be on duty in each building with a nursing unit where patients are present, under [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41). TCP TimeClock+ maintains event logs and audit trails for time and attendance records. Whether TimeClock+ logs produce staffing documentation for CAH certification surveys is not documented as a product feature. Verify this specifically with TCP before relying on TimeClock+ for survey records. SimpleScheduleAI logs every schedule change, including each callout replacement, with who made it, when, and what changed, and we can send you that record on request. SimpleScheduleAI does not produce CMS-formatted documents.
 
 ## Where Does TCP TimeClock+ Win?
 
@@ -195,7 +195,7 @@ A managed service focuses entirely on scheduling. For a nurse manager already st
 
 **Setup speed for scheduling.** A managed scheduling service onboards in 3 to 5 business days and delivers your first schedule inside two weeks from your staff roster. TCP TimeClock+ implementation covers both time tracking and scheduling configuration, and typical timelines are not published.
 
-**CMS documentation.** SimpleScheduleAI generates CMS-formatted staffing documentation automatically from each published schedule. TCP TimeClock+'s event logs cover time and attendance records; CAH-specific CMS documentation is not confirmed as a built-in feature.
+**CMS documentation.** SimpleScheduleAI keeps a change record of every schedule edit and sends it on request; it produces no CMS-formatted documents. TCP TimeClock+'s event logs cover time and attendance records; CAH-specific CMS documentation is not confirmed as a built-in feature.
 
 ## How Does Time to Value Compare?
 
@@ -212,7 +212,7 @@ The time comparison between TCP TimeClock+ and a managed service depends on whic
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Setup time</span><span class="font-medium">Contact TCP for estimate</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Scheduling focus</span><span class="font-medium">Secondary feature</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Callout coverage</span><span class="font-medium">Manual; advanced requires Humanity add-on</span></div>
-        <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>CMS §485.635 docs</span><span class="font-medium">Verify with TCP</span></div>
+        <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Survey staffing records</span><span class="font-medium">Verify with TCP</span></div>
       </div>
     </div>
     <div class="rounded-lg border border-green-200 dark:border-green-800 overflow-hidden">
@@ -223,7 +223,7 @@ The time comparison between TCP TimeClock+ and a managed service depends on whic
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Setup time</span><span class="font-medium text-green-700 dark:text-green-400">3 to 5 business days</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Scheduling focus</span><span class="font-medium text-green-700 dark:text-green-400">Core function</span></div>
         <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Callout coverage</span><span class="font-medium text-green-700 dark:text-green-400">Pre-ranked shortlist, all constraints applied</span></div>
-        <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>CMS §485.635 docs</span><span class="font-medium text-green-700 dark:text-green-400">Automatic, every schedule</span></div>
+        <div class="flex justify-between text-xs text-slate-700 dark:text-slate-300"><span>Survey staffing records</span><span class="font-medium text-green-700 dark:text-green-400">Change record, sent on request</span></div>
       </div>
     </div>
   </div>
@@ -246,7 +246,7 @@ The decision comes down to what the hospital is trying to solve. TCP TimeClock+ 
 **Choose a managed scheduling service if:**
 
 - Reducing the nurse manager's weekly scheduling burden is the primary goal
-- Your hospital needs CMS §485.635 compliance documentation generated automatically each cycle
+- Your hospital wants a record of every schedule change without keeping one by hand
 - Callout coverage is a recurring problem that manual constraint checking has not solved
 - You need to be operational in weeks, not months
 
@@ -267,7 +267,7 @@ The comparison between TCP TimeClock+ and a managed scheduling service becomes c
 
 2. **Time-track your scheduling hours this week.** Keep a running note of every scheduling task: building the schedule draft, processing time-off, handling callout coverage, and maintaining system configuration. Most nurse managers underestimate their total scheduling time, because callout handling is not mentally logged as scheduling work.
 
-3. **If you are evaluating TCP TimeClock+, ask two specific questions when you speak with their team.** First: does TimeClock+ produce CMS §485.635 staffing documentation reports for CAH certification surveys, or just event logs? Second: does the callout backfill feature come with TimeClock+ or does it require adding Humanity Schedule? Both answers change the total cost and capability picture significantly.
+3. **If you are evaluating TCP TimeClock+, ask two specific questions when you speak with their team.** First: does TimeClock+ produce staffing documentation reports for CAH certification surveys, or just event logs? Second: does the callout backfill feature come with TimeClock+ or does it require adding Humanity Schedule? Both answers change the total cost and capability picture significantly.
 
 4. **Request a free scheduling assessment from SimpleScheduleAI.** The assessment covers your current overtime patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [see how it works](/how-it-works).
 
@@ -294,7 +294,7 @@ No. TCP Software owns three separate products: TimeClock+ (time and attendance w
 
 TCP TimeClock+ pricing is not publicly listed and varies by organization size and contract terms. Contact TCP directly for current pricing. When evaluating cost, calculate total cost: the subscription fee, any hardware costs for on-site time clocks, and whether advanced scheduling or callout backfill features require a Humanity Schedule add-on.
 
-**Does TCP TimeClock+ handle CMS §485.635 documentation for Critical Access Hospitals?**
+**Does TCP TimeClock+ produce staffing records for CMS surveys at Critical Access Hospitals?**
 
 TCP TimeClock+ maintains event logs and audit trails for time and attendance records. Whether the platform generates CMS-formatted staffing documentation specifically required for CAH certification surveys is not documented as a product feature. Verify this directly with TCP before relying on TimeClock+ for CMS compliance reporting during a survey.
 

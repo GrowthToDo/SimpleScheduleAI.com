@@ -1,7 +1,7 @@
 ---
 draft: false
 publishDate: 2026-05-11T00:00:00Z
-updateDate: 2026-10-19T00:00:00Z
+updateDate: 2026-11-09T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Aladtec vs. Managed Service for Critical Access Hospitals (2026)'
 excerpt: >
@@ -45,7 +45,7 @@ This guide compares the two models on the operational dimensions that decide the
 - [How Long Does Each Model Take to Implement?](#how-long-does-each-model-take-to-implement)
 - [What Weekly Time Does Each Model Cost the Nurse Manager?](#what-weekly-time-does-each-model-cost-the-nurse-manager)
 - [How Does Each Model Handle After-Hours Callouts?](#how-does-each-model-handle-after-hours-callouts)
-- [How Does Each Model Produce CMS §485.635 Documentation?](#how-does-each-model-produce-cms-485635-documentation)
+- [How Does Each Model Keep Staffing Records for a CMS Survey?](#how-does-each-model-keep-staffing-records-for-a-cms-survey)
 - [What Configuration Maintenance Does Each Model Require?](#what-configuration-maintenance-does-each-model-require)
 - [How Do the Cost Structures of the Two Models Compare?](#how-do-the-cost-structures-of-the-two-models-compare)
 - [When Is Aladtec the Right Choice?](#when-is-aladtec-the-right-choice)
@@ -87,9 +87,9 @@ Both Aladtec and SimpleScheduleAI serve [critical access hospital scheduling](/c
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Automated ranking by OT risk and credentials</td>
       </tr>
       <tr class="align-top">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">CMS §485.635 documentation</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">Staffing records for CMS surveys</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Verify with Aladtec</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Automated, maintained continuously</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 text-slate-600 dark:text-slate-400">Change record of every schedule edit, sent on request</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-2 font-medium text-slate-800 dark:text-slate-200">FLSA overtime thresholds (Texas)</td>
@@ -151,7 +151,7 @@ Aladtec is a web-based scheduling platform built for emergency services. [TCP's 
 
 **What Aladtec does not include by default:**
 
-- CMS Conditions of Participation documentation templates (§485.635 for CAH certification): not documented on the Aladtec product page
+- CMS survey documentation templates: not documented on the Aladtec product page
 - Credential-based callout ranking (ACLS, BLS, charge nurse, specific unit qualifications): Aladtec supports credential profiles, but automated callout ranking filtered by credential is not documented
 - [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) 8-and-80 rule for healthcare employers: Aladtec uses overtime thresholds configurable by the administrator; whether the 8-and-80 healthcare rule is a selectable option is not documented
 - Pre-built hospital-specific configuration defaults: the extent of pre-built vs. required setup configuration is not specified on the product page
@@ -169,7 +169,7 @@ A managed scheduling service is not scheduling software with extra support. It i
 With SimpleScheduleAI, the process works like this:
 
 1. The nurse manager shares the staff roster with SimpleScheduleAI: names, credentials, availability, and any scheduling constraints. A standard Excel file is all that is needed to start.
-2. The AI builds the first schedule inside two weeks, applying CMS documentation requirements, the 40-hour weekly FLSA overtime threshold, and competency-based shift assignments; the SimpleScheduleAI team checks it before it reaches the nurse manager.
+2. The AI builds the first schedule inside two weeks, applying your coverage rules, the 40-hour weekly FLSA overtime threshold, and competency-based shift assignments; the SimpleScheduleAI team checks it before it reaches the nurse manager.
 3. The nurse manager reviews the proposed schedule, approves it or requests adjustments, and it goes to staff.
 4. When callouts happen, the nurse manager receives a ranked replacement list showing who can cover the shift without triggering overtime or creating a skill-mix gap. They call from the top of the list.
 5. As staff join or leave, credentials change, or availability patterns shift, the nurse manager sends the update and the SimpleScheduleAI team handles the rest. The nurse manager does not administer a system. They manage a roster.
@@ -247,13 +247,13 @@ With SimpleScheduleAI, the nurse manager opens the callout dashboard and sees a 
 
 The difference is about 20-30 minutes per callout event. For a CAH that averages 2-3 callouts per week, that is an hour per week, 50 hours per year.
 
-## How Does Each Model Produce CMS §485.635 Documentation?
+## How Does Each Model Keep Staffing Records for a CMS Survey?
 
-Critical Access Hospitals are required to maintain staffing documentation that demonstrates compliance with [CMS Conditions of Participation (§485.635)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635). This includes records of qualified staff on duty at all times, credential verification, and minimum staffing coverage for each unit.
+Under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse must be on duty whenever a critical access hospital has one or more inpatients. Texas adds that a registered nurse must be on duty in each building with a nursing unit where patients are present, under [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41). The schedule, and the record of every change to it, is how a hospital shows who covered each shift.
 
 CMS CAH documentation templates are not documented as a built-in Aladtec feature. Schedules can be exported, but creating the specific documentation format CMS surveyors expect requires additional configuration or a parallel documentation system. Most CAHs using Aladtec maintain CMS documentation separately, either in a binder system or a spreadsheet parallel to the scheduling system. Verify current documentation capabilities with Aladtec before evaluating for survey readiness.
 
-SimpleScheduleAI generates CMS-formatted staffing documentation automatically from each published schedule. When a CMS surveyor requests staffing records, the nurse manager can pull the report directly rather than manually assembling it from scheduling exports.
+SimpleScheduleAI logs every schedule change, including each callout replacement, with who made it, when, and what changed, and we can send you that record on request. Each published schedule also comes to you as an Excel file. SimpleScheduleAI does not produce CMS-formatted documents.
 
 For a CAH that has had a CMS survey or that operates under a corrective action plan related to staffing documentation, this difference is significant.
 
@@ -323,11 +323,11 @@ When the full labor cost is included, self-serve scheduling software is often mo
       <div class="p-4 space-y-3 bg-white dark:bg-slate-900">
         <div>
           <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">Aladtec</p>
-          <p class="text-xs text-slate-600 dark:text-slate-400">CMS §485.635 documentation maintained separately. Verify current capabilities with Aladtec.</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400">Survey staffing records maintained separately. Verify current capabilities with Aladtec.</p>
         </div>
         <div class="border-t border-slate-100 dark:border-slate-700 pt-3">
           <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">SimpleScheduleAI</p>
-          <p class="text-xs text-slate-600 dark:text-slate-400">Auto-generated, CMS §485.635 ready.</p>
+          <p class="text-xs text-slate-600 dark:text-slate-400">Change record of every schedule edit, sent on request. Not a CMS-formatted report.</p>
         </div>
         <p class="text-xs font-semibold text-green-700 dark:text-green-400 pt-1">Critical for hospitals with active surveys or corrective action plans.</p>
       </div>
@@ -446,7 +446,7 @@ The decision between self-serve scheduling software and a managed service become
 
 **Can Aladtec be configured to meet CMS CAH documentation requirements?**
 
-Aladtec can be configured to produce exports that are useful for CMS documentation. CMS §485.635 Conditions of Participation documentation templates are not documented as a built-in Aladtec feature; verify current capabilities with Aladtec directly. Creating compliant documentation typically requires building custom report templates or maintaining a parallel documentation system. For a Critical Access Hospital where the nurse manager would need to build and maintain that configuration, it adds to the implementation burden.
+Aladtec can be configured to produce exports that are useful for CMS documentation. CMS survey documentation templates are not documented as a built-in Aladtec feature; verify current capabilities with Aladtec directly. Creating compliant documentation typically requires building custom report templates or maintaining a parallel documentation system. For a Critical Access Hospital where the nurse manager would need to build and maintain that configuration, it adds to the implementation burden.
 
 **How does SimpleScheduleAI handle overtime for hospital employers?**
 

@@ -36,7 +36,7 @@ const articleSchema = {
     logo: { '@type': 'ImageObject', url: 'https://simplescheduleai.com/images/logo.png' },
   },
   datePublished: '2026-03-31T00:00:00Z',
-  dateModified: '2026-06-01T00:00:00Z',
+  dateModified: '2026-11-09T00:00:00Z',
 };
 
 const faqSchema = {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What are the staffing requirements for critical access hospitals?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Critical access hospitals must have a registered nurse on duty or on call at all times under CMS Conditions of Participation (42 CFR §485.635). Texas additionally requires CAHs to comply with state hospital licensing rules (HHSC, 26 TAC Chapter 505) and FLSA overtime rules. CAHs with 25 or fewer beds must maintain adequate coverage without the budget of larger health systems.',
+        text: 'Under 42 CFR 485.631(a)(5), a critical access hospital must have a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever it has one or more inpatients. Texas adds an RN rule: 26 TAC 505.41(o)(2)(D) requires a registered nurse on duty in each building with a nursing unit where patients are present. So in Texas, a night covered only by an LPN meets the federal rule but not the state rule. Neither rule sets a nurse-to-patient ratio. Texas requires a written nurse staffing plan instead, under Texas Health and Safety Code 257.003. Building layout and licensing affect how the Texas rule applies, so confirm the details with your compliance lead.',
       },
     },
     {
@@ -119,16 +119,17 @@ const breadcrumbSchema = {
       <p class="not-prose text-sm text-muted dark:text-slate-400 mb-8">
         By <a href="/about/pradeep-pandey" class="text-muted dark:text-slate-300 underline decoration-dotted"
           >Pradeep Pandey</a
-        > · Published March 31, 2026 · Updated June 1, 2026
+        > · Published March 31, 2026 · Updated November 9, 2026
       </p>
 
       <div class="not-prose mb-10 border-l-2 border-primary/60 pl-5">
         <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Quick answer</p>
         <p class="text-sm text-default dark:text-slate-200 leading-relaxed m-0">
           Critical Access Hospital scheduling is nurse rostering at federally designated rural hospitals of 25 beds or
-          fewer, governed by CMS §485.635 staffing-record rules and FLSA overtime limits. SimpleScheduleAI is an
-          AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals where one nurse
-          manager runs scheduling on top of clinical shifts, with limited IT to operate a self-serve platform.
+          fewer, governed by the CMS Conditions of Participation, Texas hospital licensing rules, and the 40-hour weekly
+          FLSA overtime threshold. SimpleScheduleAI is an AI-native nurse scheduling service built specifically for
+          Texas Critical Access Hospitals where one nurse manager runs scheduling on top of clinical shifts, with
+          limited IT to operate a self-serve platform.
         </p>
       </div>
 
@@ -136,9 +137,9 @@ const breadcrumbSchema = {
       <p>
         Critical access hospital scheduling is the process by which Medicare-designated rural hospitals (25 or fewer
         inpatient beds) build, post, and maintain nursing rosters under <a
-          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F"
           rel="noopener"
-          target="_blank">CMS §485.635 Conditions of Participation</a
+          target="_blank">CMS Conditions of Participation (42 CFR Part 485, Subpart F)</a
         >, <a href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime" rel="noopener" target="_blank"
           >FLSA overtime thresholds</a
         >, and Texas hospital licensing rules. It differs from large-system scheduling in one structural way: the roster
@@ -154,16 +155,17 @@ const breadcrumbSchema = {
       <h2>How Many Critical Access Hospitals Are There in the US and Texas?</h2>
       <p>
         Critical access hospitals are federally designated rural facilities certified under <a
-          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F"
           rel="noopener"
-          target="_blank">CMS Conditions of Participation (42 CFR §485.635)</a
+          target="_blank">CMS Conditions of Participation (42 CFR Part 485, Subpart F)</a
         >. There are approximately 1,350 CAHs in the United States, with 84 in Texas alone, serving rural communities
         where the nearest alternative hospital may be 30 to 60 miles away.
       </p>
       <p>
         The volume is small enough that spreadsheets feel manageable until they aren't. The coverage requirements are
-        unforgiving: a CAH must have a registered nurse on duty or on call at all times. And when a nurse calls out, the
-        charge nurse personally works the phone tree until someone comes in.
+        unforgiving: whenever there is an inpatient, a licensed nurse must be on duty, and in Texas a registered nurse
+        must be on duty in every building with patients. And when a nurse calls out, the charge nurse personally works
+        the phone tree until someone comes in.
       </p>
 
       <h2>What Are the Core Scheduling Challenges at Critical Access Hospitals?</h2>
@@ -191,25 +193,117 @@ const breadcrumbSchema = {
         </li>
         <li>
           <strong>Compliance documentation:</strong> Texas hospital licensing rules and <a
-            href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+            href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F"
             rel="noopener"
             target="_blank">CMS Conditions of Participation</a
           > require staffing documentation that manual systems create inconsistently.
         </li>
       </ul>
 
+      <h2>What Are the Staffing Rules for a Critical Access Hospital?</h2>
+      <p>
+        Two rules decide who must be on duty at a critical access hospital in Texas. The federal rule sets the floor,
+        Texas raises it for registered nurses, and neither one sets a nurse-to-patient ratio.
+      </p>
+      <div class="not-prose my-6 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <thead class="bg-slate-100 dark:bg-slate-800">
+            <tr>
+              <th
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left text-slate-900 dark:text-slate-100"
+                >Rule</th
+              >
+              <th
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left text-slate-900 dark:text-slate-100"
+                >Source</th
+              >
+              <th
+                class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-left text-slate-900 dark:text-slate-100"
+                >What it requires</th
+              >
+            </tr>
+          </thead>
+          <tbody class="bg-white dark:bg-slate-900">
+            <tr>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Federal floor</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                ><a
+                  href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631"
+                  rel="noopener"
+                  target="_blank"
+                  class="text-primary underline">42 CFR 485.631(a)(5)</a
+                ></td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >A registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever the
+                hospital has one or more inpatients</td
+              >
+            </tr>
+            <tr>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >What Texas adds</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                ><a
+                  href="https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41"
+                  rel="noopener"
+                  target="_blank"
+                  class="text-primary underline">26 TAC 505.41(o)(2)(D)</a
+                ></td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >A registered nurse on duty in each building that has at least one nursing unit where patients are
+                present</td
+              >
+            </tr>
+            <tr>
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >Nurse-to-patient ratio</td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                ><a
+                  href="https://codes.findlaw.com/tx/health-and-safety-code/health-safety-sect-257-003"
+                  rel="noopener"
+                  target="_blank"
+                  class="text-primary underline">Texas Health and Safety Code 257.003</a
+                ></td
+              >
+              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
+                >No fixed ratio, federal or state. Texas requires a written nurse staffing policy and plan so that the
+                number and skill mix of nurses meets the level of patient care needed</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The difference shows up at night. An overnight shift covered only by an LPN meets the federal rule but fails the
+        Texas rule, because Texas wants a registered nurse in every building with patients. Building layout and how the
+        hospital is licensed affect how the Texas rule applies, so confirm the details with your compliance lead.
+      </p>
+      <p>
+        For the full list of federal conditions, see <a href="/blog/critical-access-hospital-requirements"
+          >critical access hospital requirements</a
+        >. For how staffing levels get set without a ratio, see <a
+          href="/blog/nurse-staffing-ratios-critical-access-hospital"
+          >nurse staffing ratios at critical access hospitals</a
+        >.
+      </p>
+
       <h2>What Are the Texas Compliance Requirements for CAH Nurse Scheduling?</h2>
       <p>
         Texas CAHs must comply with <a
-          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
+          href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F"
           rel="noopener"
-          target="_blank">CMS Conditions of Participation (42 CFR §485.635)</a
+          target="_blank">CMS Conditions of Participation (42 CFR Part 485, Subpart F)</a
         >, Texas hospital licensing rules (administered by HHSC under 26 TAC Chapter 505), and <a
           href="https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime"
           rel="noopener"
           target="_blank">FLSA overtime rules</a
-        >. At minimum: an RN on duty or on call at all times, documented shift ratios for CMS cost reports, and overtime
-        pay for all hours worked above 40 in a workweek for non-exempt staff.
+        >. The nurse coverage rules are in the section above. The rest come down to overtime pay for all hours worked
+        above 40 in a workweek for non-exempt staff, pay records, and state hospital licensing.
       </p>
       <div class="not-prose my-6 overflow-x-auto">
         <table class="w-full border-collapse text-sm">
@@ -230,22 +324,6 @@ const breadcrumbSchema = {
             </tr>
           </thead>
           <tbody class="bg-white dark:bg-slate-900">
-            <tr>
-              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
-                >RN coverage</td
-              >
-              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200">
-                <a
-                  href="https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635"
-                  rel="noopener"
-                  target="_blank"
-                  class="text-primary underline">CMS CoP §485.635(c)(4)</a
-                >
-              </td>
-              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
-                >Registered nurse on duty or on call at all times</td
-              >
-            </tr>
             <tr>
               <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
                 >Overtime pay</td
@@ -289,24 +367,12 @@ const breadcrumbSchema = {
                 >Staffing records and licensing compliance for general/special hospitals</td
               >
             </tr>
-            <tr>
-              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
-                >Staffing ratio reporting</td
-              >
-              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
-                >CMS cost reports</td
-              >
-              <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
-                >Documented shift-by-shift staffing for annual cost report submission</td
-              >
-            </tr>
           </tbody>
         </table>
       </div>
       <p>
-        Every schedule change, callout, and replacement must be documented. Manual scheduling systems create
-        documentation gaps that surface during CMS surveys. An automated scheduling system with an audit trail addresses
-        this compliance requirement automatically.
+        Keep a record of every schedule change, callout, and replacement. Manual scheduling systems leave gaps in that
+        record. SimpleScheduleAI keeps a change record of every schedule edit and sends it to you on request.
       </p>
 
       <h2>How Does SimpleScheduleAI Handle Critical Access Hospital Scheduling?</h2>
@@ -328,9 +394,9 @@ const breadcrumbSchema = {
       <h2>Worked Example: Staffing Math for a 25-Bed CAH on 12-Hour Shifts</h2>
       <p>
         Consider a 25-bed critical access hospital running med-surg and a small ED on two 12-hour shifts. To keep a
-        registered nurse on duty at all times and hold a safe ratio, the unit needs roughly 4 to 6 nurses on days and 3
-        to 5 on nights, every day of the year. That is 7 to 11 nurse shifts a day, or roughly 50 to 75 shifts a week
-        before a single callout.
+        registered nurse on duty whenever patients are in the building, as Texas requires, and hold safe staffing
+        levels, the unit needs roughly 4 to 6 nurses on days and 3 to 5 on nights, every day of the year. That is 7 to
+        11 nurse shifts a day, or roughly 50 to 75 shifts a week before a single callout.
       </p>
 
       <div class="not-prose my-10">
@@ -519,7 +585,7 @@ const breadcrumbSchema = {
                 >Manual, often skipped</td
               >
               <td class="border border-slate-300 dark:border-slate-700 px-3 py-2 text-slate-800 dark:text-slate-200"
-                >Automatic audit log</td
+                >Change record of every edit</td
               >
             </tr>
             <tr>
@@ -597,7 +663,7 @@ const breadcrumbSchema = {
       {
         title: 'What are the staffing requirements for critical access hospitals?',
         description:
-          'CMS requires CAHs to have an RN on duty or on call at all times (42 CFR §485.635). Texas additionally requires HHSC hospital licensing compliance (26 TAC Chapter 505) and FLSA overtime documentation. Staffing ratios must be documented for CMS cost reports.',
+          'Under 42 CFR 485.631(a)(5), a critical access hospital must have a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever it has one or more inpatients. Texas adds an RN rule: 26 TAC 505.41(o)(2)(D) requires a registered nurse on duty in each building with a nursing unit where patients are present. So in Texas, a night covered only by an LPN meets the federal rule but not the state rule. Neither rule sets a nurse-to-patient ratio. Texas requires a written nurse staffing plan instead, under Texas Health and Safety Code 257.003. Building layout and licensing affect how the Texas rule applies, so confirm the details with your compliance lead.',
       },
       {
         title: 'How do CAHs handle nurse callouts without a large float pool?',
@@ -617,7 +683,7 @@ const breadcrumbSchema = {
       {
         title: 'Can scheduling software help with Texas nursing compliance?',
         description:
-          'Yes. Automated scheduling software tracks overtime approaching thresholds, logs every schedule change with a timestamp, and generates documentation suitable for CMS surveys and Texas HHSC hospital licensing compliance checks.',
+          'Yes. Automated scheduling software tracks overtime approaching thresholds, and logs every schedule change with a timestamp. SimpleScheduleAI sends you that change record on request; it does not produce CMS-formatted documents.',
       },
     ]}
   />

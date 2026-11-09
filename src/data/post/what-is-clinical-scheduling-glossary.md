@@ -37,7 +37,7 @@ Clinical scheduling at a CAH typically covers:
 
 The nurse manager typically owns the nursing schedule and coordinates with department heads or the medical director for physician and ancillary coverage. At smaller CAHs, the DON (Director of Nursing) and the nurse manager role may be the same person, making the scheduling burden even more concentrated.
 
-CMS §485.635 requires that CAHs maintain an RN on duty or on call at all times. This federal requirement means the nursing schedule is not just an operational document, it is a compliance record. During surveys, CMS reviewers examine scheduling records to verify continuous RN availability.
+Under 42 CFR 485.631(a)(5), a critical access hospital must have a registered nurse, clinical nurse specialist, or licensed practical nurse on duty whenever it has one or more inpatients. Texas also requires a registered nurse on duty in each building with patients present (26 TAC 505.41(o)(2)(D)). These rules mean the nursing schedule is also a compliance record. During surveys, CMS reviewers examine scheduling records to verify that the required nurse was on duty.
 
 ## How Clinical Scheduling Differs from Administrative Scheduling?
 
