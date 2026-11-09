@@ -49,7 +49,7 @@ Most free nurse schedule templates are a blank grid with the days across the top
 - **It checks the schedule as you build it.** Assign a nurse and it flags overtime exposure, rest-hour problems, too many consecutive days, leave conflicts, and any shift left short.
 - **You still make every assignment.** Shift codes are picked from a dropdown, by you, on purpose. The template does the math; the judgment stays yours.
 
-The honest limits, so you can decide before you download. It will not chase a callout at 2 a.m., it does not know which nurses are cleared for which unit, and it keeps no history of who changed a shift. It is a better spreadsheet, not a scheduling system. If the spreadsheet is where your process currently lives, it will save you the recalculating; if the problem is the hours around the schedule rather than the schedule itself, keep reading.
+The honest limits, so you can decide before you download. It will not chase a callout at 2 a.m., it does not know which nurses are cleared for which unit, and it keeps no history of who changed a shift. It is a better spreadsheet, not a scheduling system. If you would rather a [nurse schedule maker](/blog/nurse-schedule-generator) place the shifts for you, start with what those tools check and skip. If the spreadsheet is where your process currently lives, it will save you the recalculating; if the problem is the hours around the schedule rather than the schedule itself, keep reading.
 
 ## Is There Actually Free Nurse Scheduling Software?
 
@@ -69,7 +69,7 @@ In Shifts, the manager builds and publishes the schedule. Nurses see their shift
 
 Shifts checks very little of the schedule for you. Microsoft is testing a preview feature that [fills open shifts automatically](https://learn.microsoft.com/en-us/microsoft-365/frontline/shifts-auto-assign-open-shifts) within limits you set on daily and weekly hours, consecutive days and rest between shifts. Microsoft documents those limits only for the auto-assign feature. In November 2026 we found no Microsoft documentation of a check for overtime, for which nurse is qualified for which unit, or for how many nurses each shift needs. If your nurses already have Teams licenses, Shifts is the free tool to try first. Our guide to [whether Microsoft Copilot can build a nurse schedule](/blog/can-microsoft-copilot-generate-nurse-schedule) compares Shifts with Copilot.
 
-**Spreadsheet templates.** Google Sheets and Microsoft Excel nurse schedule templates are free and give you a structured grid for manual scheduling. Most stop there, so everything the template does not calculate, you calculate by hand. [Ours](/resources/nurse-schedule-template) goes further than a grid, which is why it gets its own section above, but it is still a spreadsheet and it still enforces nothing.
+**Spreadsheet templates.** Google Sheets and Microsoft Excel nurse schedule templates are free and give you a structured grid for manual scheduling. Most stop there, so everything the template does not calculate, you calculate by hand. [Ours](/resources/nurse-schedule-template) goes further than a grid, which is why it gets its own section above, but it is still a spreadsheet and it still enforces nothing. If you want a tool that fills in the grid for you, our guide to [free nurse schedule generators](/blog/nurse-schedule-generator) explains how they work and what they miss.
 
 The right question for a CAH is not whether these are free. It is whether they solve the parts of scheduling that actually cost you time and create risk.
 
