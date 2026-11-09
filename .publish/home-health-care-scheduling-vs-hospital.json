@@ -5,42 +5,42 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:16:55.004Z",
+      "checkedAt": "2026-11-09T09:19:43.273Z",
       "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:16:55.287Z",
+      "checkedAt": "2026-11-09T09:19:43.544Z",
       "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:16:57.245Z",
+      "checkedAt": "2026-11-09T09:19:45.611Z",
       "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:16:57.260Z",
+      "checkedAt": "2026-11-09T09:19:45.626Z",
       "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:16:57.336Z",
+      "checkedAt": "2026-11-09T09:19:45.704Z",
       "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:16:57.336Z",
+      "checkedAt": "2026-11-09T09:19:45.704Z",
       "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:16:57.336Z",
+      "checkedAt": "2026-11-09T09:19:45.705Z",
       "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:16:57.337Z",
+      "checkedAt": "2026-11-09T09:19:45.705Z",
       "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     }
   },
@@ -60,13 +60,25 @@
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-11-09T05:27:46.936Z",
-      "contentHash": "5f88495dc20c15fddc5392f6609f089f4d29aa9ec930738d0582863cf3548032"
+      "setAt": "2026-11-09T09:17:59.605Z",
+      "contentHash": "b86d16961f682f3b103e2bc010488625abe69555d10d53327e1116b2fab15c23"
     },
     "imageEyeball": {
       "value": "OK",
       "setBy": "founder",
       "setAt": "2026-11-09T09:16:48.279Z",
+      "contentHash": "b86d16961f682f3b103e2bc010488625abe69555d10d53327e1116b2fab15c23"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "npm run indexnow 2026-11-09 (148 URLs, HTTP 200)",
+      "setAt": "2026-11-09T09:19:42.935Z",
+      "contentHash": "b86d16961f682f3b103e2bc010488625abe69555d10d53327e1116b2fab15c23"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "GSC MCP submit_sitemap sitemap-index.xml 2026-11-09",
+      "setAt": "2026-11-09T09:19:43.065Z",
       "contentHash": "b86d16961f682f3b103e2bc010488625abe69555d10d53327e1116b2fab15c23"
     }
   },
