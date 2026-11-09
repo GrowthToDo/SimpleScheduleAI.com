@@ -5,52 +5,57 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:58:26.922Z",
-      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+      "checkedAt": "2026-11-09T10:18:27.730Z",
+      "contentHash": "e61459a71dafdb5bca11cb63c9d4c89731a253d1632232c7cb0b1f690a721b59"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:58:29.749Z",
-      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+      "checkedAt": "2026-11-09T10:18:28.005Z",
+      "contentHash": "e61459a71dafdb5bca11cb63c9d4c89731a253d1632232c7cb0b1f690a721b59"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:58:32.117Z",
-      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+      "checkedAt": "2026-11-09T10:18:30.772Z",
+      "contentHash": "e61459a71dafdb5bca11cb63c9d4c89731a253d1632232c7cb0b1f690a721b59"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:58:32.182Z",
-      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+      "checkedAt": "2026-11-09T10:18:30.788Z",
+      "contentHash": "e61459a71dafdb5bca11cb63c9d4c89731a253d1632232c7cb0b1f690a721b59"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:58:32.817Z",
-      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+      "checkedAt": "2026-11-09T10:18:30.867Z",
+      "contentHash": "e61459a71dafdb5bca11cb63c9d4c89731a253d1632232c7cb0b1f690a721b59"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:58:32.817Z",
-      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+      "checkedAt": "2026-11-09T10:18:30.867Z",
+      "contentHash": "e61459a71dafdb5bca11cb63c9d4c89731a253d1632232c7cb0b1f690a721b59"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-10T10:58:32.819Z",
-      "contentHash": "87375a248571507cb8b5277e4610cb08e08a13b554294a66cc43c88b8a9b2c86"
+      "checkedAt": "2026-11-09T10:18:30.868Z",
+      "contentHash": "e61459a71dafdb5bca11cb63c9d4c89731a253d1632232c7cb0b1f690a721b59"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T10:18:30.868Z",
+      "contentHash": "e61459a71dafdb5bca11cb63c9d4c89731a253d1632232c7cb0b1f690a721b59"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "binary-contrast-sweep",
-      "setAt": "2026-08-10T10:58:34.121Z",
-      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+      "setBy": "feature-dev:code-reviewer (rewrite 2026-11-09, two rounds)",
+      "setAt": "2026-11-09T10:18:27.384Z",
+      "contentHash": "0adcf74033370d5adc79dba43743cf23230f7c06f55286c85599cc8453c45044"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "no-fact-changes",
-      "setAt": "2026-08-10T10:58:35.146Z",
-      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+      "setBy": "general-purpose fact-check agent, two rounds, live fetches incl. Playwright for ukg.com, 2026-11-09",
+      "setAt": "2026-11-09T10:18:27.517Z",
+      "contentHash": "0adcf74033370d5adc79dba43743cf23230f7c06f55286c85599cc8453c45044"
     },
     "imageEyeball": {
       "value": "OK",
@@ -77,5 +82,140 @@
       "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
     }
   },
-  "overrides": []
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 53,
+        "headings": 81.8,
+        "actionability": 38.5,
+        "attention": 90.9
+      },
+      "overall": 58.6,
+      "counts": {
+        "sections": 11,
+        "rereads": 12,
+        "undefinedTerms": 19,
+        "headingsAnswered": 9,
+        "mondayActions": 5,
+        "blockedActions": 8,
+        "quitPoints": 1
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-05-07T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "Workforce Central / WFC (abbreviation used before and after being spelled out; I only half-know it as old Kronos)",
+          "on-premises installation (vs cloud) and how to tell which one I am on",
+          "Kronos Private Cloud",
+          "end of engineering vs end of life vs support (three different dates, never contrasted in plain words)",
+          "UKG Pro Workforce Management / UKG Dimensions (two names, one product; I did not know which one I own)",
+          "UKG partners / implementation partner (RSM US, Healthcare IT Leaders, HRchitect: who are they and why trust them)",
+          "archive service / archived for reporting",
+          "Microsoft SQL Server, database administrator",
+          "payroll feed",
+          "go-live",
+          "old and non-active configurations",
+          "which staff records convert",
+          "enterprise platform",
+          "tool sized for one unit",
+          "AI-native nurse scheduling service",
+          "FLSA",
+          "DOL Fact Sheet #54 (what it will tell me)",
+          "ranked replacement shortlist",
+          "termination (of the agreement) vs the day I switch vs the day notice is sent"
+        ],
+        "mondayActions": [
+          "Ask IT or the UKG account team which UKG product we are on and whether it is on-premises or cloud",
+          "Ask whoever holds the contract (administrator or finance) for the term end, renewal, notice period and data-return clauses",
+          "Write one page listing what UKG does for us today: scheduling, time clock, payroll feed, HR records",
+          "Ask for the nurse roster export and check every per-diem nurse and every unit is in it",
+          "Put a calendar reminder for the 30-day data-copy request"
+        ],
+        "blockedActions": [
+          "I do not hold the UKG contract and cannot pull it; the post never says who usually does",
+          "How to actually export the roster and 'recent schedule reports' out of UKG: no steps, and I probably lack the access",
+          "Decide whether to move to UKG Pro or leave: no cost for either path, and that call is the administrator's, not mine",
+          "Know which date applies to us: three dates given (support March 2027, engineering and Private Cloud December 2025) and no way to tell which matches our installation",
+          "Know whether my installation is already past a cutoff if we are on cloud hosting",
+          "Run the 60-day plan: it counts back from a 'switch' date I do not have, and the notice period in the contract may be longer than 60 days",
+          "See how scheduled hours reach payroll if the new tool 'does not connect to UKG'",
+          "Compare cost: SimpleScheduleAI shows 'flat monthly pricing' with no number"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Why Is Your Hospital Facing a UKG Migration Now?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Should a Small Hospital Move to UKG Pro Workforce Management or Leave UKG?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Happens to Your Schedule and Staff Data When You Leave Workforce Central?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should You Check in Your UKG Contract Before Giving Notice?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does a UKG Migration Timeline Look Like at a 25-Bed Hospital?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Should You Tell Nurses About a Scheduling System Change?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should a Small Hospital Look for in a UKG Replacement?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Where Does SimpleScheduleAI Fit in a UKG Migration?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-11-09T10:11:08.638Z",
+      "contentHash": "d5901e939e194fd13fe05eb36026720f8fea6162909b07a117f9acdf27af9fc2"
+    }
+  }
 }
