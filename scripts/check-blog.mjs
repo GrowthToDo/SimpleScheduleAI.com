@@ -106,6 +106,9 @@ const FOUNDER_BANNED_WORDS = [
   // A CEO cold-read on 2026-09-01 said of "rota": "Nobody in a Texas hospital
   // says rota. I read it as a typo on the first pass."
   ['rota', 'say "schedule" or "roster" (cold read 2026-09-01)'],
+  // Statute shorthand. The founder read "most expansion adults must show 80 hours"
+  // in a Key Takeaway and asked "what are expansion adults?" (2026-11-09).
+  ['expansion adults', 'say "adults who get Medicaid through an expansion" (founder 2026-11-09)'],
 ];
 
 // BRITISH SPELLING. FAIL, not warn — unlike the list above, there is no context
