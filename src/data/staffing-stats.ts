@@ -143,7 +143,7 @@ export const sections = [
     id: 'texas-cah',
     heading: 'The Texas Critical Access Hospital Picture',
     intro:
-      'Texas has 93 Critical Access Hospitals today (Rural Health Information Hub, 2026), and it runs its own hospital nurse-staffing study, which lets us separate CAHs from other rural and non-rural hospitals. The figures below are from the Texas DSHS 2024 study (spring-2024 survey, published February 2025), which counted 86 CAHs in its survey frame at the time. For the compliance layer these facilities operate under, see <a href="/blog/texas-nursing-overtime-compliance-cah">Texas nursing overtime compliance</a>.',
+      'Texas has 92 Critical Access Hospitals today (Rural Health Information Hub, 2026), and it runs its own hospital nurse-staffing study, which lets us separate CAHs from other rural and non-rural hospitals. The figures below are from the Texas DSHS 2024 study (spring-2024 survey, published February 2025), which counted 86 CAHs in its survey frame at the time. For the compliance layer these facilities operate under, see <a href="/blog/texas-nursing-overtime-compliance-cah">Texas nursing overtime compliance</a>.',
     takeaway:
       'Texas Critical Access Hospitals fill their nursing jobs better than any other hospital type in the state, then lose those nurses faster than any of them.',
     stats: [
@@ -152,7 +152,7 @@ export const sections = [
         value: '86',
         label: 'Texas CAHs in the 2024 DSHS study frame',
         context:
-          'The 2024 state survey counted 86 CAHs across 78 counties, of which 50 responded. The current federal count is 93 (Rural Health Information Hub, 2026).',
+          'The 2024 state survey counted 86 CAHs across 78 counties, of which 50 responded. The current federal count is 92 (Rural Health Information Hub, 2026).',
         source: 'Texas DSHS 2024 Hospital Nurse Staffing Study, Rural/CAH factsheet',
         url: 'https://www.dshs.texas.gov/sites/default/files/chs/cnws/HNSS/2024/2024_HNSS_RuralCAH_accessible.pdf',
       },

@@ -70,7 +70,7 @@ Here is what the trade involves. The category was created in December 2020 and t
 
 Not every hospital is allowed to become a Rural Emergency Hospital. Critical Access Hospitals are eligible. So are rural acute care, tribal and Indian Health Service hospitals with 50 or fewer beds, if they were open on December 27, 2020, the day the program was signed into law. There were 42 Rural Emergency Hospitals as of October 2025 ([Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/rural-emergency-hospitals)).
 
-Now the other side of the trade. A Critical Access Hospital carries the overnight nurse requirement a Rural Emergency Hospital does not have. It is capped at 25 inpatient beds under [42 CFR 485.620](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620), and under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) a registered nurse, clinical nurse specialist or licensed practical nurse must be on duty whenever it has one or more inpatients. There are 1,388 certified Critical Access Hospitals nationally as of July 2026, 93 of them in Texas.
+Now the other side of the trade. A Critical Access Hospital carries the overnight nurse requirement a Rural Emergency Hospital does not have. It is capped at 25 inpatient beds under [42 CFR 485.620](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620), and under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) a registered nurse, clinical nurse specialist or licensed practical nurse must be on duty whenever it has one or more inpatients. There are 1,388 certified Critical Access Hospitals nationally as of July 2026, 92 of them in Texas.
 
 So the real difference between the two is who has to be there overnight.
 
@@ -223,7 +223,7 @@ Because a Critical Access Hospital must keep a licensed nurse on duty for as lon
 4. eCFR, 42 CFR 485.620, Condition of Participation: Number of beds and length of stay. [eCFR](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620)
 5. Flex Monitoring Team, Historical CAH Data (1,388 certified Critical Access Hospitals, July 2026). [flexmonitoring.org](https://www.flexmonitoring.org/historical-cah-data-0)
 6. UNC Sheps Center, Rural Hospital Closures tracker (197 closures and conversions since January 2005). [shepscenter.unc.edu](https://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/)
-7. Rural Health Information Hub, Texas State Guide (Texas critical access hospital count, 93). [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas)
+7. Rural Health Information Hub, Texas State Guide (Texas critical access hospital count, 92). [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas)
 8. Yellowhammer News, coverage of the bill's provisions, August 6, 2026 (cites the 2024 predecessor bill number). [yellowhammernews.com](https://yellowhammernews.com/tuberville-introduces-bill-to-expand-options-for-struggling-rural-hospitals/)
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI, an AI-native nurse scheduling service built for Critical Access Hospitals in Texas. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy._

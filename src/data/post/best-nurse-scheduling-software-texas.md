@@ -6,7 +6,7 @@ author: 'Pradeep Pandey'
 title: 'Best Nurse Scheduling Software for Texas Hospitals in 2026'
 excerpt: >
   Texas hospitals face a specific compliance environment: FLSA overtime including the healthcare
-  8-and-80 option, Texas HHSC licensing, and CMS §485.635 requirements for the state's 93 Critical
+  8-and-80 option, Texas HHSC licensing, and CMS §485.635 requirements for the state's 92 Critical
   Access Hospitals. This guide compares eight scheduling platforms on Texas compliance fit,
   implementation burden, and operational match for small and mid-size hospitals across the state.
 image: https://images.unsplash.com/photo-1755995083683-50d08cd83d09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
@@ -23,7 +23,7 @@ metadata:
 
 ## Key Takeaways
 
-- Texas has 93 Critical Access Hospitals (CAHs), among the most of any state, concentrated in rural west Texas, the Panhandle, and south Texas border communities where rural isolation amplifies every scheduling challenge.
+- Texas has 92 Critical Access Hospitals (CAHs), among the most of any state, concentrated in rural west Texas, the Panhandle, and south Texas border communities where rural isolation amplifies every scheduling challenge.
 - Texas has no separate state overtime law; the federal [FLSA](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) governs, including the healthcare "8-and-80" option many hospitals elect. The scheduling question that matters is whether a tool tracks that 8-and-80 calculation, not a Texas-specific overtime layer, because there isn't one.
 - A nurse manager at a Texas CAH can lose a meaningful slice of the week to scheduling, on the order of 8 to 12 hours by our own directional estimate (not a published figure). That time cost is the baseline any tool needs to beat before it provides positive ROI.
 - SimpleScheduleAI is an AI-native nurse scheduling service built specifically for Texas Critical Access Hospitals. FLSA overtime threshold tracking, CMS §485.635 audit documentation, and charge nurse coverage logic are defaults, not configuration options.
@@ -578,7 +578,7 @@ No. Texas has no state overtime statute; overtime for Texas hospitals is governe
 
 **Q: How many Critical Access Hospitals are in Texas?**
 
-Texas has 93 certified Critical Access Hospitals (Rural Health Information Hub, 2026), making it one of the states with the highest CAH concentration. The [full list of Texas critical access hospitals](/blog/critical-access-hospitals-in-texas) names each one. Most are in rural west Texas, the Panhandle, south Texas, and east Texas. For scheduling purposes, this means a large segment of the Texas hospital market has CAH-specific compliance requirements that most national scheduling software vendors do not address explicitly.
+Texas has 92 certified Critical Access Hospitals (Rural Health Information Hub, 2026), making it one of the states with the highest CAH concentration. The [full list of Texas critical access hospitals](/blog/critical-access-hospitals-in-texas) names each one. Most are in rural west Texas, the Panhandle, south Texas, and east Texas. For scheduling purposes, this means a large segment of the Texas hospital market has CAH-specific compliance requirements that most national scheduling software vendors do not address explicitly.
 
 **Q: What is the FLSA 8 and 80 rule for Texas hospital nurses?**
 
@@ -601,7 +601,7 @@ The FLSA healthcare worker exemption allows hospitals and residential care facil
 9. Texas Labor Code Chapter 62 (minimum wage; §62.151 exempts FLSA-covered workers; no state overtime provision). [Texas Statutes](https://statutes.capitol.texas.gov/Docs/LA/htm/LA.62.htm).
 10. CMS Conditions of Participation for Critical Access Hospitals (§485.635). [CMS](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals).
 11. Texas Health and Human Services Commission hospital licensing. [Texas HHSC](https://www.hhs.texas.gov/providers/health-care-facilities-regulation/hospitals-general-hospitals).
-12. Texas CAH count (93): Rural Health Information Hub, Texas state guide, 2026. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas).
+12. Texas CAH count (92): Rural Health Information Hub, Texas state guide, 2026. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas).
 
 **Methodology note:** Reviewer quotes are reproduced verbatim from Capterra with the reviewer's name or role, date, and source shown. Ratings reflect the figures captured on the verification dates above and may have changed since. Documented product capabilities reference each vendor's own product page. Texas hospitals evaluating any specific platform should verify current capabilities directly with the vendor before deciding.
 

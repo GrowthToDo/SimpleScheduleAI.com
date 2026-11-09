@@ -63,6 +63,19 @@ export const FACTS_RULES = [
     message: 'the 65% is of the NONRETIRED subset; qualifier required',
   },
   {
+    // Texas CAH headline count moved 93 -> 92 on 2026-11-09 (RHIhub 11/6/2026
+    // update now matches the Flex roster). Founder-approved sweep; this keeps a
+    // stale 93 (or the older 91) from coming back. Historical mentions that
+    // name the old figure on purpose carry <!-- facts-ok -->.
+    id: 'tx-cah-count',
+    trigger:
+      /\b9[13] (certified )?(Texas )?critical access hospitals|Texas has 9[13]\b|count \(9[13]\)|count, 9[13]\b|count is 9[13]\b/i,
+    bad: /\b9[13] (certified )?(Texas )?critical access hospitals|Texas has 9[13]\b|count \(9[13]\)|count, 9[13]\b|count is 9[13]\b/i,
+    requires: null,
+    anchor: 'facts-dossier.md#texas-critical-access-hospital-count',
+    message: 'Texas has 92 critical access hospitals (RHIhub, updated 11/6/2026; matches the Flex roster)',
+  },
+  {
     id: 'ca-only-ratio-state',
     trigger: /only state\b[^.\n]{0,60}(ratio|staffing)|California is the only/i,
     bad: /only state\b[^.\n]{0,60}(ratio|staffing)|California is the only/i,

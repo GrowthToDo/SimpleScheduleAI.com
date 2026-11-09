@@ -92,7 +92,7 @@ No. Cost based payment is a Medicare rule, and it has nothing to do with what Me
 
 Medicare pays a Critical Access Hospital its [allowable cost plus one percent](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), less the two percent sequestration cut that has applied since April 2013. But every state decides on its own what Medicaid pays these hospitals, and in Texas part of that comes through the programs above.
 
-[Texas has 93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), going by federal data current to April 2026. Texas also has federal rural health transformation money arriving, though [what that money is allowed to pay for](/articles/rural-health-transformation-deadline-nurse-salaries) is a narrower list than most coverage suggests.
+[Texas has 92 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), going by federal data current to July 2026. Texas also has federal rural health transformation money arriving, though [what that money is allowed to pay for](/articles/rural-health-transformation-deadline-nurse-salaries) is a narrower list than most coverage suggests.
 
 On cash in the bank, the smallest hospitals are not the thinnest. [Chartis puts the national median](https://www.chartis.com/insights/2026-rural-health-state-state) at 29 days of cash on hand for rural and community hospitals, and 98 days for Critical Access Hospitals. Medicaid is close to ten percent of revenue at a typical rural hospital, and that is a national number rather than a Texas one.
 
@@ -234,7 +234,7 @@ No. CMS approved this year's CHIRP on September 16, 2026, but the letter says it
 5. Texas Administrative Code, 1 TAC 355.8052, effective March 25, 2025. Subsection (b)(35), the rural hospital definition. [law.cornell.edu](https://www.law.cornell.edu/regulations/texas/1-Tex-Admin-Code-SS-355-8052)
 6. Texas Hospital Association, Medicaid Directed Payment Programs whitepaper, Dobson DaVanzo and Associates, 2022. The five program table, the 2021 to 2022 hold, the $7 million per day figure, the 394 participants, and the margin findings. [tha.org](https://www.tha.org/wp-content/uploads/2023/01/2022-Medicaid-DPP-Whitepaper.pdf)
 7. Rural Health Information Hub, Critical Access Hospitals guide. Cost plus one percent and the 2013 sequestration cut. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/topics/critical-access-hospitals)
-8. Rural Health Information Hub, Texas State Guide, federal data current to April 2026. The count of 93. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas)
+8. Rural Health Information Hub, Texas State Guide, federal data current to July 2026. The count of 92. [ruralhealthinfo.org](https://www.ruralhealthinfo.org/states/texas)
 9. Chartis, "2026 Rural Health State of the State," February 10, 2026. The cash medians and the net revenue figure. [chartis.com](https://www.chartis.com/insights/2026-rural-health-state-state)
 10. KTRE, by Emma Burns, September 2026. The Hawkins quote on rural margins. [ktre.com](https://www.ktre.com/2026/09/05/texas-hospitals-face-27m-daily-loss-federal-medicaid-funds-withheld/)
 11. The Bond Buyer, by Karen Pierog, September 8, 2026. The Moody's downgrade of Kimble County Hospital District. [bondbuyer.com](https://www.bondbuyer.com/news/texas-hospitals-face-financial-headwinds)

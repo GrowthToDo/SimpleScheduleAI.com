@@ -7,7 +7,7 @@ title: 'What Rural Texas Hospitals Are Actually Using for Nurse Scheduling in 20
 excerpt: >
   Ask which nurse scheduling tools rural Texas hospitals actually use and you hit a
   wall: nobody publishes the data. Public rural-health evidence still points somewhere
-  specific. Here is a directional read on what the state's 93 critical access hospitals
+  specific. Here is a directional read on what the state's 92 critical access hospitals
   likely run in 2026, with the guesswork labeled as guesswork.
 image: https://images.unsplash.com/photo-1512678080530-7760d81faba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
@@ -24,7 +24,7 @@ metadata:
 
 ## Key Takeaways
 
-- Texas has [93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), most concentrated in rural communities where the nearest alternative facility can be a long drive away.
+- Texas has [92 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), most concentrated in rural communities where the nearest alternative facility can be a long drive away.
 - Public rural-health data documents that small rural facilities operate with thin margins and without dedicated IT departments. Facilities in that position commonly rely on the simplest available tools: spreadsheets, a whiteboard, and a phone. We cannot measure the exact split at Texas facilities, so treat any tool ranking as directional inference from public evidence, not a measured market share.
 - When a small rural hospital does buy purpose-built scheduling software, ease of setup and direct support tend to matter more than feature breadth. Some publicly reviewed scheduling tools, such as Aladtec, built their reputations on exactly those attributes.
 - Structured software evaluation rarely happens where no one owns the task and there is no dedicated budget line, a plausible reason many small rural hospitals have not adopted a tool recently. This is inference from documented staffing constraints, not a survey result.
@@ -45,7 +45,7 @@ Scheduling software companies publicly focus their sales and marketing on health
 
 ## How Many Texas Critical Access Hospitals Are There, and What Are They Facing?
 
-Texas has 93 critical access hospitals, making it one of the largest CAH states in the country. You can see [every hospital on the federal list](/blog/critical-access-hospitals-in-texas), with its bed count and certification year. They are distributed across rural communities throughout West Texas, the Panhandle, East Texas, and South Texas, often serving counties where the next closest hospital is a long drive away.
+Texas has 92 critical access hospitals, making it one of the largest CAH states in the country. You can see [every hospital on the federal list](/blog/critical-access-hospitals-in-texas), with its bed count and certification year. They are distributed across rural communities throughout West Texas, the Panhandle, East Texas, and South Texas, often serving counties where the next closest hospital is a long drive away.
 
 [Critical access hospitals](https://www.cms.gov/medicare/health-safety-standards/certification-compliance/critical-access-hospitals) are federally designated rural facilities with 25 or fewer acute care beds. In Texas, they are also subject to Texas Health and Human Services Commission (HHSC) hospital licensing and staffing standards, Texas Payday Law wage-payment provisions, and CMS Conditions of Participation, creating a specific compliance environment that generic scheduling software does not address.
 
@@ -161,7 +161,7 @@ The service is designed for the operating reality documented across rural facili
 
 The service model means setup is handled by the specialist, not the nurse manager. The Texas compliance requirements are configured by someone who knows them, not translated from generic software documentation by an administrator without a compliance background.
 
-The 93 Texas critical access hospitals are the specific market SimpleScheduleAI was built to serve, designed as a Texas CAH scheduling service from that operating context rather than adapted to Texas from a generic tool.
+The 92 Texas critical access hospitals are the specific market SimpleScheduleAI was built to serve, designed as a Texas CAH scheduling service from that operating context rather than adapted to Texas from a generic tool.
 
 This focus is also a limitation, and it is worth naming plainly. SimpleScheduleAI is not the right fit for a large health system that wants to self-administer an enterprise platform across dozens of departments, or for a facility outside Texas that needs another state's compliance rules out of the box. If your hospital already runs a well-supported enterprise scheduler and has the IT staff to maintain it, a purpose-built Texas CAH service is not what you need. The fit is a small rural Texas hospital that wants the scheduling and compliance work handled, not another tool to administer.
 
@@ -181,7 +181,7 @@ For more on what Texas-specific requirements apply to CAH nurse scheduling, see 
 5. Book a call with our team to see how a service built for the Texas CAH context would handle your roster and your compliance documentation.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
-  <p class="text-lg font-semibold text-default mb-2">Built specifically for the 93 Texas critical access hospitals.</p>
+  <p class="text-lg font-semibold text-default mb-2">Built specifically for the 92 Texas critical access hospitals.</p>
   <p class="text-muted text-sm mb-6">Texas HHSC compliance built in. No IT setup. Operational in 3 to 5 business days.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>

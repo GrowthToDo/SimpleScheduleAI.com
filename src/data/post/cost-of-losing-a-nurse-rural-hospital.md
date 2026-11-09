@@ -47,7 +47,7 @@ Losing one nurse costs a rural hospital more because a single RN is a much large
 
 The proportional hit is only half of it. A large hospital has a float pool, a staffing office, and a recruiting pipeline that keeps candidates warm. A Critical Access Hospital serving a low-volume rural area has thin staffing margins by design, which the [Flex Monitoring Team](https://www.flexmonitoring.org/) documents across the CAH program. When one nurse leaves, the replacement pool shrinks to a short list of individual people, and the open shifts get covered by the same nurses who are already on the schedule.
 
-That pressure compounds where the finances are already tight, and Texas has more rural hospitals vulnerable to closure than any other state, as we break down in [the 2026 rural hospital loss data](/articles/rural-hospital-losses-nurse-staffing-cost). This is why turnover reads differently on a rural roster. Texas has [93 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), and its CAHs carry the highest RN turnover of the state's three hospital groups at about [18.2 percent](/rural-hospital-nurse-staffing-statistics), drawn from the Texas DSHS 2024 Hospital Nurse Staffing Study. One departure a year on a small unit is the baseline to plan around.
+That pressure compounds where the finances are already tight, and Texas has more rural hospitals vulnerable to closure than any other state, as we break down in [the 2026 rural hospital loss data](/articles/rural-hospital-losses-nurse-staffing-cost). This is why turnover reads differently on a rural roster. Texas has [92 critical access hospitals](https://www.ruralhealthinfo.org/states/texas), and its CAHs carry the highest RN turnover of the state's three hospital groups at about [18.2 percent](/rural-hospital-nurse-staffing-statistics), drawn from the Texas DSHS 2024 Hospital Nurse Staffing Study. One departure a year on a small unit is the baseline to plan around.
 
 <div class="not-prose my-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
   <div class="rounded-lg border border-red-300 dark:border-red-700 bg-white dark:bg-slate-800 overflow-hidden">
@@ -184,7 +184,7 @@ No. SimpleScheduleAI does not recruit and it does not shorten the roughly 78-day
 
 [2] Texas Critical Access Hospital RN turnover (18.2%, highest of the three hospital groups). [SimpleScheduleAI Rural Hospital & CAH Nurse Staffing Statistics](/rural-hospital-nurse-staffing-statistics), drawn from the Texas DSHS 2024 Hospital Nurse Staffing Study.
 
-[3] Texas critical access hospital count (93). [Rural Health Information Hub, Texas state guide](https://www.ruralhealthinfo.org/states/texas).
+[3] Texas critical access hospital count (92). [Rural Health Information Hub, Texas state guide](https://www.ruralhealthinfo.org/states/texas).
 
 [4] Nurse staffing as a retention factor. [American Nurses Association, Nurse Staffing](https://www.nursingworld.org/practice-policy/nurse-staffing/).
 

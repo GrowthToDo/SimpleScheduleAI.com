@@ -5,7 +5,7 @@ updateDate: 2026-11-09T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'What Is a Critical Access Hospital? A Complete Guide'
 excerpt: >
-  A critical access hospital is a federally designated rural hospital, capped at 25 beds, that earns cost-based Medicare reimbursement in exchange for meeting strict distance and emergency-care rules. This guide breaks down how a hospital qualifies, how its payment model differs from a standard hospital, and what the designation means day to day for the nurse managers who staff one of the roughly 93 critical access hospitals in Texas.
+  A critical access hospital is a federally designated rural hospital, capped at 25 beds, that earns cost-based Medicare reimbursement in exchange for meeting strict distance and emergency-care rules. This guide breaks down how a hospital qualifies, how its payment model differs from a standard hospital, and what the designation means day to day for the nurse managers who staff one of the roughly 92 critical access hospitals in Texas.
 image: '~/assets/images/blog/what-is-a-critical-access-hospital.webp'
 category: Glossary
 postType: glossary
@@ -18,7 +18,7 @@ metadata:
   canonical: 'https://simplescheduleai.com/blog/what-is-a-critical-access-hospital'
 ---
 
-A critical access hospital (CAH) is a Medicare designation for a small rural hospital: 25 or fewer acute care beds, located at least 35 miles from the nearest hospital (or 15 miles by secondary road in mountainous terrain), and providing 24-hour emergency care every day of the year. It exists to preserve rural access and carries a financial advantage: CAHs receive cost-based Medicare reimbursement instead of the fixed prospective rates standard hospitals get. Texas has 93, per the [Rural Health Information Hub](https://www.ruralhealthinfo.org/states/texas), and the designation is governed by [42 CFR Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F).
+A critical access hospital (CAH) is a Medicare designation for a small rural hospital: 25 or fewer acute care beds, located at least 35 miles from the nearest hospital (or 15 miles by secondary road in mountainous terrain), and providing 24-hour emergency care every day of the year. It exists to preserve rural access and carries a financial advantage: CAHs receive cost-based Medicare reimbursement instead of the fixed prospective rates standard hospitals get. Texas has 92, per the [Rural Health Information Hub](https://www.ruralhealthinfo.org/states/texas), and the designation is governed by [42 CFR Part 485, Subpart F](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F).
 
 ## Key Takeaways
 

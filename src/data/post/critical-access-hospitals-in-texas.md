@@ -1,11 +1,11 @@
 ---
 publishDate: 2026-09-04T00:00:00Z
+updateDate: 2026-11-09T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Critical Access Hospitals in Texas: The Full List for 2026'
 excerpt: >
-  Two federal sources cannot agree on whether Texas has 92 critical access hospitals or 93. Here
-  is the full list from the one that names every hospital, with the beds each carries and the year
-  it was certified.
+  Texas has 92 critical access hospitals, and both federal sources that count them now show the same
+  number. Here is the full list, with the beds each hospital carries and the year it was certified.
 image: ~/assets/images/pool/rural-texas-01.webp
 imageCredit: 'AI-generated illustration'
 category: Healthcare Operations
@@ -22,7 +22,7 @@ metadata:
 
 ## Key Takeaways
 
-- The [Flex Monitoring Team](https://www.flexmonitoring.org/critical-access-hospital-locations) list of Texas critical access hospitals holds 92 hospitals. The [Rural Health Information Hub](https://www.ruralhealthinfo.org/states/texas) shows 93, so you will see both numbers in print.
+- The [Flex Monitoring Team](https://www.flexmonitoring.org/critical-access-hospital-locations) list of Texas critical access hospitals holds 92 hospitals. The [Rural Health Information Hub](https://www.ruralhealthinfo.org/states/texas) also shows 92, on a page updated 6 November 2026. Older pages may still say 93.
 - Seven in ten sit at exactly 25 beds. That is the federal cap under [42 CFR 485.620](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.620), so most of these hospitals are built right up to the line.
 - The rest are much smaller. Twenty-eight run below the cap, twelve run 15 beds or fewer, and the smallest runs 10.
 - Texas is still gaining critical access hospitals. Seven of the 92 were certified in 2023 or later, and three of those in 2025.
@@ -44,11 +44,11 @@ This page is the list itself, followed by what the numbers in it actually say. I
 
 ## How Many Critical Access Hospitals Are in Texas?
 
-Ninety-two, or ninety-three, depending on which source you read. Both were checked on 4 September 2026.
+Ninety-two. The two federal sources that count these hospitals now agree.
 
-The Flex Monitoring Team, which tracks these hospitals for the federal Flex Program, publishes the national list of certified critical access hospitals. Its Texas list holds 92 entries. The Rural Health Information Hub, a federally funded rural health information service, shows 93 on its Texas state guide, on a page last updated 20 July 2026. Neither is wrong. Published counts of these hospitals rarely agree, because they are drawn from different snapshots of federal certification data taken on different days, and a single conversion or closure moves the number.
+The Flex Monitoring Team, which tracks these hospitals for the federal Flex Program, publishes the national list of certified critical access hospitals. Its Texas list held 92 entries when we checked it on 4 September 2026. The Rural Health Information Hub, a federally funded rural health information service, showed 93 on its Texas state guide in September. Its page updated 6 November 2026 shows 92, drawn from July 2026 federal data. Published counts of these hospitals often differ, because they are drawn from different snapshots of federal certification data taken on different days, and a single conversion or closure moves the number.
 
-The practical answer is that Texas has about 92 to 93 of them, and any page giving you a precise figure without a date attached is telling you less than it appears to. The list below is the Flex Monitoring Team's, because that is the one that names every hospital.
+The count can still move, so any page giving you a precise figure without a date attached is telling you less than it appears to. The list below is the Flex Monitoring Team's, because that is the one that names every hospital.
 
 ## What Is the Full List of Critical Access Hospitals in Texas?
 
