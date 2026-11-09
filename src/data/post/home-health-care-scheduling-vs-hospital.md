@@ -153,14 +153,14 @@ A hospital with a home health agency is usually better served by two tools. The 
         <td class="align-top py-3 text-slate-700">Routes, care plans, and visit verification are its core job</td>
       </tr>
       <tr class="border-b border-slate-100">
-        <td class="align-top py-3 pr-4 font-medium text-slate-800">The inpatient schedule eats the manager's week</td>
+        <td class="align-top py-3 pr-4 font-medium text-slate-800">The inpatient nurse shift schedule eats the manager's week</td>
         <td class="align-top py-3 pr-4 text-slate-700">A nurse scheduling tool or service for the unit</td>
         <td class="align-top py-3 text-slate-700">Coverage, callouts, and weekly hours are its core job</td>
       </tr>
       <tr class="border-b border-slate-100">
         <td class="align-top py-3 pr-4 font-medium text-slate-800">Both hurt, and some nurses work both sides</td>
         <td class="align-top py-3 pr-4 text-slate-700">Both tools, plus a weekly check of combined hours</td>
-        <td class="align-top py-3 text-slate-700">Each tool sees only its own schedule, and overtime counts the total</td>
+        <td class="align-top py-3 text-slate-700">Each tool sees only the hours it schedules, and overtime counts the total</td>
       </tr>
     </tbody>
   </table>

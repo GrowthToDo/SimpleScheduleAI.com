@@ -5,57 +5,57 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:15:31.732Z",
-      "contentHash": "b7eeb9407db4ce7f8d1ab668b47287c98bc0fb181d296eeae45663057a229e22"
+      "checkedAt": "2026-11-09T09:16:55.004Z",
+      "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:15:32.021Z",
-      "contentHash": "b7eeb9407db4ce7f8d1ab668b47287c98bc0fb181d296eeae45663057a229e22"
+      "checkedAt": "2026-11-09T09:16:55.287Z",
+      "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:15:34.480Z",
-      "contentHash": "b7eeb9407db4ce7f8d1ab668b47287c98bc0fb181d296eeae45663057a229e22"
+      "checkedAt": "2026-11-09T09:16:57.245Z",
+      "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:15:34.503Z",
-      "contentHash": "b7eeb9407db4ce7f8d1ab668b47287c98bc0fb181d296eeae45663057a229e22"
+      "checkedAt": "2026-11-09T09:16:57.260Z",
+      "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:15:34.571Z",
-      "contentHash": "b7eeb9407db4ce7f8d1ab668b47287c98bc0fb181d296eeae45663057a229e22"
+      "checkedAt": "2026-11-09T09:16:57.336Z",
+      "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:15:34.571Z",
-      "contentHash": "b7eeb9407db4ce7f8d1ab668b47287c98bc0fb181d296eeae45663057a229e22"
+      "checkedAt": "2026-11-09T09:16:57.336Z",
+      "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:15:34.572Z",
-      "contentHash": "b7eeb9407db4ce7f8d1ab668b47287c98bc0fb181d296eeae45663057a229e22"
+      "checkedAt": "2026-11-09T09:16:57.336Z",
+      "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-11-09T09:15:34.575Z",
-      "contentHash": "b7eeb9407db4ce7f8d1ab668b47287c98bc0fb181d296eeae45663057a229e22"
+      "checkedAt": "2026-11-09T09:16:57.337Z",
+      "contentHash": "7c19a9b99be0d996f601baaff60bf27aab3ef4f9fd1a35467de504e775450ce5"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer",
-      "setAt": "2026-11-09T05:27:46.688Z",
-      "contentHash": "5f88495dc20c15fddc5392f6609f089f4d29aa9ec930738d0582863cf3548032"
+      "setBy": "feature-dev:code-reviewer (diff check of 364dd51a + 2 table fixes)",
+      "setAt": "2026-11-09T09:16:48.004Z",
+      "contentHash": "b86d16961f682f3b103e2bc010488625abe69555d10d53327e1116b2fab15c23"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "general-purpose fact-check agent (2026-11-09); 785.38 and 484.60 added after, verified by writer on Cornell LII",
-      "setAt": "2026-11-09T05:27:46.812Z",
-      "contentHash": "5f88495dc20c15fddc5392f6609f089f4d29aa9ec930738d0582863cf3548032"
+      "setBy": "no new facts: wording-only founder-review edits; numbers re-checked by proofread",
+      "setAt": "2026-11-09T09:16:48.143Z",
+      "contentHash": "b86d16961f682f3b103e2bc010488625abe69555d10d53327e1116b2fab15c23"
     },
     "founderApproval": {
       "value": "YES",
@@ -66,8 +66,8 @@
     "imageEyeball": {
       "value": "OK",
       "setBy": "founder",
-      "setAt": "2026-11-09T09:14:54.813Z",
-      "contentHash": "b6466197e3534d3c81d07ab78ca92780068a1900fadebf2bb0b80bb5c1818649"
+      "setAt": "2026-11-09T09:16:48.279Z",
+      "contentHash": "b86d16961f682f3b103e2bc010488625abe69555d10d53327e1116b2fab15c23"
     }
   },
   "overrides": [],
