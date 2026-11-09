@@ -92,6 +92,13 @@ must name the thing again. ("If these are only in the sales conversation, they
 are not guaranteed. Ask for them in writing" — these what? them what? Fixed to
 "A support promise made only in a sales call is not guaranteed. Ask the vendor
 to write each of these support terms into the contract.")
+_Sharpened 2026-11-09:_ when a post compares two things of the same kind, every
+mention says which one, every time, including the excerpt. A bare "schedule" in
+a post about a home health visit schedule and a nurse shift schedule fails.
+("Your home health schedule and your inpatient schedule can each look fine": "not
+clear that we are talking about nurse schedule. Check this for the whole blog."
+Fixed to "your home health agency's visit schedule and your hospital's nurse shift
+schedule"; 16 sentences changed in the sweep.)
 
 **T22. A rule with an exception needs the exception spelled out, not compressed.**
 Check: any sentence of the form "X does not count against Y, and it works both

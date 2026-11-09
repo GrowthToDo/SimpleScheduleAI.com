@@ -5,9 +5,9 @@ updateDate: 2026-11-09T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'Home Health Scheduling Software vs. Hospital Scheduling for Critical Access Hospitals'
 excerpt: >
-  Your home health schedule and your inpatient schedule can each look fine on their own. A
-  nurse who works both can still end the week past 40 hours, and neither schedule will show
-  it.
+  Your home health agency's visit schedule and your hospital's nurse shift schedule can each
+  look fine on their own. A nurse who works both can still end the week past 40 hours, and
+  neither schedule will show it.
 image: https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
@@ -25,7 +25,7 @@ metadata:
 - Home health scheduling software is built for routing between homes, each patient's ordered visits, and [electronic visit verification (EVV)](https://www.medicaid.gov/medicaid/home-community-based-services/guidance/electronic-visit-verification-evv), which states must require for Medicaid-paid home visits
 - A hospital's home health agency that bills Medicare follows its own federal rules in [42 CFR Part 484](https://www.law.cornell.edu/cfr/text/42/part-484). The inpatient unit follows the Critical Access Hospital rules
 - A hospital that runs both usually needs a home health system for the visits and a nurse scheduling tool or service for the inpatient shifts
-- If the hospital employs one nurse for both jobs, overtime counts every hour that nurse worked for the hospital that week, including driving between homes. Someone has to add the two schedules together
+- If the hospital employs one nurse for both jobs, overtime counts every hour that nurse worked for the hospital that week, including driving between homes. Someone has to add up that nurse's hours from the visit schedule and the shift schedule
 
 ## Table of Contents
 
@@ -39,7 +39,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-Many small rural hospitals run a home health agency alongside the inpatient unit. The [Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/home-health), citing 2022 research, puts it at 18.6% of Critical Access Hospitals offering home health services directly. Counting home health run through a health system or joint venture, the share is 49.6%, about half. If your hospital runs an agency, home health scheduling software and hospital nurse scheduling can look like one purchase. The two tools plan different kinds of work. This guide explains what each schedule has to do, which federal rules sit behind each, and what to watch when the same nurses work both.
+Many small rural hospitals run a home health agency alongside the inpatient unit. The [Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/home-health), citing 2022 research, puts it at 18.6% of Critical Access Hospitals offering home health services directly. Counting home health run through a health system or joint venture, the share is 49.6%, about half. If your hospital runs an agency, home health scheduling software and hospital nurse scheduling can look like one purchase. The two tools plan different kinds of work. This guide explains what the visit schedule and the nurse shift schedule each have to do, which federal rules sit behind each, and what to watch when the same nurses work both.
 
 ## How Is Home Health Scheduling Different From Hospital Shift Scheduling?
 
@@ -95,11 +95,11 @@ An inpatient scheduler at a [Critical Access Hospital](/critical-access-hospital
 
 ## Which Federal Rules Apply to a Hospital's Home Health Agency?
 
-A home health agency (HHA) that bills Medicare follows its own federal conditions of participation (the rules a provider must meet to bill Medicare) in 42 CFR Part 484, even when a hospital runs it. The inpatient unit follows the Critical Access Hospital conditions in 42 CFR Part 485. In practice, the agency's schedule is driven by each patient's plan of care, and the unit's schedule is driven by the rule to keep a licensed nurse on duty.
+A home health agency (HHA) that bills Medicare follows its own federal conditions of participation (the rules a provider must meet to bill Medicare) in 42 CFR Part 484, even when a hospital runs it. The inpatient unit follows the Critical Access Hospital conditions in 42 CFR Part 485. In practice, the agency's visit schedule is driven by each patient's plan of care, and the unit's nurse shift schedule is driven by the rule to keep a licensed nurse on duty.
 
 The plan of care is where visit frequency comes from: [42 CFR 484.60](https://www.law.cornell.edu/cfr/text/42/484.60) requires it to include the "frequency and duration of visits to be made."
 
-The inpatient side runs on a different clause. Under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients. That sentence is why the inpatient schedule is built around unbroken coverage. Part 484 has no clause requiring a nurse on duty around the clock.
+The inpatient side runs on a different clause. Under [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631), a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients. That sentence is why the inpatient nurse schedule is built around unbroken coverage. Part 484 has no clause requiring a nurse on duty around the clock.
 
 ## Does Electronic Visit Verification Apply to Hospital Nurse Shifts?
 
@@ -123,13 +123,13 @@ Each of those features assumes the work is a visit to someone's home. An inpatie
 
 ## What Happens When the Same Nurse Works Home Visits and Hospital Shifts?
 
-When the hospital employs a nurse for both agency visits and inpatient shifts, the 40-hour weekly overtime threshold is counted on the whole workweek. Count every hour the nurse worked for your hospital that week, not only the hours on your unit. Two separate schedules can each look fine while the combined week runs past 40 hours.
+When the hospital employs a nurse for both agency visits and inpatient shifts, the 40-hour weekly overtime threshold is counted on the whole workweek. Count every hour the nurse worked for your hospital that week, not only the hours on your unit. The agency's visit schedule and the unit's nurse schedule can each look fine while the nurse's combined week runs past 40 hours.
 
 The Department of Labor's [Fact Sheet #54](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime) gives a plain example. An employee works 40 hours as a nurse's aide and 16 hours as a receptionist for the same employer in one workweek. That employee has 56 hours for overtime purposes. Swap in home visits and inpatient shifts and the math is the same. Driving counts too: under [29 CFR 785.38](https://www.law.cornell.edu/cfr/text/29/785.38), "travel from job site to job site during the workday, must be counted as hours worked." Our explainer on [nursing overtime](/blog/what-is-nursing-overtime) covers the rest of the rule.
 
-Here is an illustrative week, not a real case. A nurse is scheduled for three 12-hour inpatient shifts, which is 36 hours. On a day off, the agency books the nurse for home visits that take 8 hours, counting the driving between homes. Each schedule shows under 40 hours. The combined week is 36 plus 8, or 44 hours, so 4 hours are overtime.
+Here is an illustrative week, not a real case. A nurse is scheduled for three 12-hour inpatient shifts, which is 36 hours. On a day off, the agency books the nurse for home visits that take 8 hours, counting the driving between homes. The nurse shift schedule shows 36 hours and the visit schedule shows 8, both under 40. The combined week is 36 plus 8, or 44 hours, so 4 hours are overtime.
 
-Unless the two systems are connected, neither tool sees the other's hours. If the hospital employs the nurse for both jobs, both sets of hours are paid through the hospital's payroll, so payroll is where to add them. Ask payroll for a weekly list of anyone over 40 combined hours. If a nurse paid by the hour already went over, the overtime for that week is still owed. The fix going forward is to plan the next week across both schedules.
+Unless the two systems are connected, neither tool sees the other's hours. If the hospital employs the nurse for both jobs, both sets of hours are paid through the hospital's payroll, so payroll is where to add them. Ask payroll for a weekly list of anyone over 40 combined hours. If a nurse paid by the hour already went over, the overtime for that week is still owed. The fix going forward is to plan that nurse's next week across the visit schedule and the shift schedule together.
 
 If nurses move between your agency and your unit, read our guide to [float pool nursing at small hospitals](/blog/float-pool-nursing-small-hospitals). It explains why a 25-bed hospital covers gaps with cross-training and a per-diem bench instead of a formal pool.
 
@@ -170,7 +170,7 @@ A hospital with a home health agency is usually better served by two tools. The 
 
 SimpleScheduleAI is [AI-native nurse scheduling](/ai-nurse-scheduling) software, delivered as a service: the AI builds the inpatient nursing schedule, a scheduling team checks it, and the nurse manager approves. It schedules shifts for Texas Critical Access Hospitals. It does not schedule home health visits, plan routes, record EVV, or bill for visits.
 
-On the inpatient side, it takes your roster from Excel and builds draft schedules against the coverage rules set up with you at onboarding. When a nurse calls out, you get a ranked replacement shortlist, which helps when you are working a callout at night (see our guide to [after-hours callout coverage](/blog/after-hours-callout-coverage-small-hospitals)). It tracks each nurse's scheduled hours against the 40-hour weekly FLSA overtime threshold and logs every change to the schedule. The full process is on our [how it works](/how-it-works) page.
+On the inpatient side, it takes your roster from Excel and builds draft nurse schedules against the coverage rules set up with you at onboarding. When a nurse calls out, you get a ranked replacement shortlist, which helps when you are working a callout at night (see our guide to [after-hours callout coverage](/blog/after-hours-callout-coverage-small-hospitals)). It tracks each nurse's scheduled hours against the 40-hour weekly FLSA overtime threshold and logs every change to the nurse schedule. The full process is on our [how it works](/how-it-works) page.
 
 Its limits matter for a hospital with an agency. It schedules RNs, LPNs, and CNAs only, so therapists, social workers, and home health aides are outside it. It counts only the shifts it schedules. If a nurse also makes home visits that week, those hours do not appear in its count, so the payroll check of combined hours described earlier still has to happen. For the visit side, use a home health system such as the ones named above.
 
@@ -178,7 +178,7 @@ SimpleScheduleAI is not the right fit for a hospital that wants one tool to run 
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 border-l-4 border-amber-500 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 leading-relaxed m-0">A hospital with a home health agency runs two different scheduling jobs, and each one deserves a tool built for it. The visit schedule needs routes and EVV. The inpatient schedule needs unbroken coverage and an honest count of hours. The risk sits in the gap between the two: a nurse who works both can go into overtime without either schedule showing it. Plan on a tool built for each job, and assign one person to check the combined hours each week.</p>
+  <p class="text-sm text-slate-800 leading-relaxed m-0">A hospital with a home health agency runs two different scheduling jobs, and each one deserves a tool built for it. The agency's visit schedule needs routes and EVV. The inpatient nurse schedule needs unbroken coverage and an honest count of hours. The risk sits in the gap between the two: a nurse who works both can go into overtime without either the visit schedule or the nurse schedule showing it. Plan on a tool built for each job, and assign one person to check the combined hours each week.</p>
 </div>
 
 ## What to Do This Week
@@ -187,14 +187,14 @@ SimpleScheduleAI is not the right fit for a hospital that wants one tool to run 
 2. Ask payroll for those nurses' total hours in one recent workweek, both jobs combined. Count driving between homes as work time. Check anyone over 40 against the overtime actually paid.
 3. Ask your agency's billing office whether any home visits are Medicaid-paid. If they are, ask your state Medicaid agency which EVV system it accepts, and write the answer down before anyone shops for software.
 4. Ask each vendor directly whether it was built for home visits or for hospital shifts. If it claims both, ask to see a sample week of the side you care about.
-5. If the inpatient schedule is the bigger burden, book a call with our team to see how we would build it and handle callouts.
+5. If the inpatient nurse schedule is the bigger burden, book a call with our team to see how we would build it and handle callouts.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">
     Running a Critical Access Hospital in Texas?
   </p>
   <p class="text-muted text-sm mb-6">
-    See how SimpleScheduleAI handles the inpatient nursing schedule: coverage, callouts, and weekly hours. We build the schedule, you approve it.
+    See how SimpleScheduleAI handles the inpatient nursing schedule: coverage, callouts, and weekly hours. We build the nurse schedule, you approve it.
   </p>
   <a
     href="/how-it-works"
@@ -223,11 +223,11 @@ No. Under section 12006(a) of the 21st Century Cures Act, EVV covers Medicaid pe
 
 **Q: How do I count overtime for a nurse who works home visits and hospital shifts?**
 
-Add every hour the nurse worked for your hospital in the workweek, across both schedules. Department of Labor Fact Sheet #54 gives the example of an employee with 40 hours in one job and 16 in another for the same employer: 56 hours count for overtime. Driving between patients' homes during the workday counts as hours worked too. Unless the two systems are connected, neither one adds those hours for you, so ask payroll for the combined total.
+Add every hour the nurse worked for your hospital in the workweek, across the visit schedule and the shift schedule. Department of Labor Fact Sheet #54 gives the example of an employee with 40 hours in one job and 16 in another for the same employer: 56 hours count for overtime. Driving between patients' homes during the workday counts as hours worked too. Unless the two systems are connected, neither one adds those hours for you, so ask payroll for the combined total.
 
 **Q: Does SimpleScheduleAI schedule home health visits?**
 
-No. SimpleScheduleAI is an AI-native nurse scheduling service for inpatient nursing shifts at Texas Critical Access Hospitals. It does not schedule home visits, plan routes, or record EVV, and it counts only the hours on the schedule it builds. For the agency's visits, use a home health system.
+No. SimpleScheduleAI is an AI-native nurse scheduling service for inpatient nursing shifts at Texas Critical Access Hospitals. It does not schedule home visits, plan routes, or record EVV, and it counts only the hours on the nurse schedule it builds. For the agency's visits, use a home health system.
 
 ## Sources
 
