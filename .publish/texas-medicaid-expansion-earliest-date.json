@@ -60,13 +60,25 @@
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-11-09T12:49:58.339Z",
-      "contentHash": "1eaeb040f03edf0594045b3ad3a887f68efd92283f1fbcb1bc1f100643b4c0cc"
+      "setAt": "2026-11-09T15:49:30.625Z",
+      "contentHash": "7b48e025c89275a36d6b43afd31d1f84c585e787d5c420ca0f630ab8c86ab6e8"
     },
     "imageEyeball": {
       "value": "OK",
       "setBy": "founder",
       "setAt": "2026-11-09T15:46:56.854Z",
+      "contentHash": "7b48e025c89275a36d6b43afd31d1f84c585e787d5c420ca0f630ab8c86ab6e8"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "claude",
+      "setAt": "2026-11-09T15:49:47.288Z",
+      "contentHash": "7b48e025c89275a36d6b43afd31d1f84c585e787d5c420ca0f630ab8c86ab6e8"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "claude",
+      "setAt": "2026-11-09T15:49:47.417Z",
       "contentHash": "7b48e025c89275a36d6b43afd31d1f84c585e787d5c420ca0f630ab8c86ab6e8"
     }
   },
