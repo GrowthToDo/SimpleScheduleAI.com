@@ -59,27 +59,27 @@
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "unchanged",
-      "setAt": "2026-08-10T10:58:36.191Z",
-      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+      "setBy": "founder",
+      "setAt": "2026-11-09T11:22:32.898Z",
+      "contentHash": "0adcf74033370d5adc79dba43743cf23230f7c06f55286c85599cc8453c45044"
     },
     "founderApproval": {
       "value": "YES",
       "setBy": "founder",
-      "setAt": "2026-08-10T10:58:37.676Z",
-      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+      "setAt": "2026-11-09T11:22:33.026Z",
+      "contentHash": "0adcf74033370d5adc79dba43743cf23230f7c06f55286c85599cc8453c45044"
     },
     "indexNow": {
       "value": "DONE",
-      "setBy": "2026-08-10",
-      "setAt": "2026-08-10T10:58:39.247Z",
-      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+      "setBy": "claude",
+      "setAt": "2026-11-09T11:22:51.372Z",
+      "contentHash": "0adcf74033370d5adc79dba43743cf23230f7c06f55286c85599cc8453c45044"
     },
     "gscSitemap": {
       "value": "DONE",
-      "setBy": "2026-08-10",
-      "setAt": "2026-08-10T10:58:40.309Z",
-      "contentHash": "7222f61a1a9e91404d7f7d4fec83b79e91e77b8557ac45af714092ab70bce646"
+      "setBy": "claude",
+      "setAt": "2026-11-09T11:22:51.499Z",
+      "contentHash": "0adcf74033370d5adc79dba43743cf23230f7c06f55286c85599cc8453c45044"
     }
   },
   "overrides": [],
