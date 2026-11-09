@@ -26,7 +26,7 @@ metadata:
 - The free tools that rank for this search were built for personal calendars (NurseGrid) or small non-clinical teams (Connecteam, Sling), so hospital nursing rules, such as charge coverage on every shift, are out of scope. Some of those tools warn about overtime or limit shifts by qualification, often on paid plans.
 - For a Texas CAH, free tools leave gaps that matter. Some warn about overtime or limit shifts by qualification, but none documents hospital nursing rules such as a charge nurse on every shift, or a ranked list of callout replacements.
 - The "$0 software" framing hides the labor cost, since the compliance, callout, and documentation work the tool skips still lands on the nurse manager.
-- Free tools plus disciplined manual processes can be enough for a clinic or home health agency; a 25-bed hospital trying to cut administrative burden usually needs more.
+- Free tools plus disciplined manual processes can be enough for a small clinic; a 25-bed hospital trying to cut administrative burden usually needs more.
 
 ## Table of Contents
 
@@ -85,7 +85,7 @@ Free [nurse scheduling software](/nurse-scheduling-software) handles the mechani
 
 **Team communication.** Basic messaging, shift reminders, and schedule sharing come standard in most free tiers.
 
-For a small clinic, a home health agency, or any setting with predictable hours, free tools are often enough on their own. The requirements that rule them out for a hospital simply do not apply in those settings.
+For a small clinic or any setting with predictable hours, free tools are often enough on their own. The requirements that rule them out for a hospital simply do not apply in those settings. A home health agency is a different case: it schedules visits and drives between homes, and if it bills Medicaid it also has to verify each visit electronically. If your hospital runs its own agency, our comparison of [home health and hospital scheduling](/blog/home-health-care-scheduling-vs-hospital) covers what each side needs.
 
 ## Where Do Free Tools Fall Short for a Critical Access Hospital?
 

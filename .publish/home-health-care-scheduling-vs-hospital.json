@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "slug": "home-health-care-scheduling-vs-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T05:28:52.701Z",
+      "contentHash": "bb5786a4cb7482777e89f2bbb04b0ed27e161896848fb1ddb411dd0337bd1e0f"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T05:28:52.970Z",
+      "contentHash": "bb5786a4cb7482777e89f2bbb04b0ed27e161896848fb1ddb411dd0337bd1e0f"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T05:28:54.989Z",
+      "contentHash": "bb5786a4cb7482777e89f2bbb04b0ed27e161896848fb1ddb411dd0337bd1e0f"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T05:28:55.013Z",
+      "contentHash": "bb5786a4cb7482777e89f2bbb04b0ed27e161896848fb1ddb411dd0337bd1e0f"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T05:28:55.086Z",
+      "contentHash": "bb5786a4cb7482777e89f2bbb04b0ed27e161896848fb1ddb411dd0337bd1e0f"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T05:28:55.087Z",
+      "contentHash": "bb5786a4cb7482777e89f2bbb04b0ed27e161896848fb1ddb411dd0337bd1e0f"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T05:28:55.087Z",
+      "contentHash": "bb5786a4cb7482777e89f2bbb04b0ed27e161896848fb1ddb411dd0337bd1e0f"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-09T05:28:55.088Z",
+      "contentHash": "bb5786a4cb7482777e89f2bbb04b0ed27e161896848fb1ddb411dd0337bd1e0f"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-11-09T05:27:46.688Z",
+      "contentHash": "5f88495dc20c15fddc5392f6609f089f4d29aa9ec930738d0582863cf3548032"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose fact-check agent (2026-11-09); 785.38 and 484.60 added after, verified by writer on Cornell LII",
+      "setAt": "2026-11-09T05:27:46.812Z",
+      "contentHash": "5f88495dc20c15fddc5392f6609f089f4d29aa9ec930738d0582863cf3548032"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-11-09T05:27:46.936Z",
+      "contentHash": "5f88495dc20c15fddc5392f6609f089f4d29aa9ec930738d0582863cf3548032"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "both",
+      "parts": {
+        "comprehension": 58.3,
+        "headings": 90,
+        "actionability": 50,
+        "attention": 80
+      },
+      "overall": 67.7,
+      "counts": {
+        "sections": 10,
+        "rereads": 9,
+        "undefinedTerms": 16,
+        "headingsAnswered": 9,
+        "mondayActions": 6,
+        "blockedActions": 6,
+        "quitPoints": 2
+      },
+      "icp": "DON at a 25-bed rural hospital, reading once on a phone",
+      "publishDate": "2026-11-09T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "plan of care",
+          "discipline (as in 'which discipline each visit needs')",
+          "episode of care",
+          "territory and mileage limits / configurable agency guardrails",
+          "personal care services vs. home health services (Medicaid)",
+          "Medicaid-funded visits (post never says how to tell if my agency has any)",
+          "42 CFR Part 484 / Part 485 Subpart F / 485.631(a)(5) / 42 U.S.C. 1396b(l) / Section 12006(a) of the Cures Act (cites with no plain-language consequence for me)",
+          "conditions of participation (used before HHA is spelled out)",
+          "same employer (is a hospital-run agency the same employer for overtime? never stated)",
+          "40-hour weekly FLSA overtime threshold",
+          "per-diem bench",
+          "ranked replacement shortlist",
+          "coverage rules set up with you at onboarding",
+          "a scheduling team checks it (who, what do they check)",
+          "service vs. software (used interchangeably for SimpleScheduleAI)",
+          "the section above (which section)"
+        ],
+        "mondayActions": [
+          "Make a list of every nurse who worked both home visits and inpatient shifts in the last month",
+          "For those nurses, add one recent week across both schedules and compare to overtime payroll actually paid",
+          "Call or email the state Medicaid program to ask which EVV system the agency must use",
+          "Ask any vendor whether it was built for visits or for shifts, and ask for a sample week of the side I care about",
+          "Stop expecting one product to cover both the agency and the inpatient unit",
+          "Know that EVV does not apply to inpatient shifts, so I do not need to chase it for the unit"
+        ],
+        "blockedActions": [
+          "Assign one person to check combined hours each week: no method, no report name, no sample sheet, no named owner (payroll? me? the agency manager?)",
+          "Add up one week across both schedules: the two schedules live in different systems and the post never says where the agency hours come from or what format to use",
+          "Compare to overtime payroll actually paid: does not say what I do if I find nurses already over 40 combined",
+          "Ask the state Medicaid program about EVV: does not say which office or who to contact, or how to find out whether my agency even has Medicaid patients",
+          "Treat agency and inpatient hours as one total: does not settle whether my agency is the same legal employer as the hospital, which decides whether the total applies",
+          "Ask each vendor for a sample week: does not say what a good one looks like"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Is Home Health Scheduling Different From Hospital Shift Scheduling?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Which Federal Rules Apply to a Hospital's Home Health Agency?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Electronic Visit Verification, and Does It Apply to Hospital Shifts?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does Home Health Scheduling Software Do?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What Happens When the Same Nurse Works Home Visits and Hospital Shifts?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Should a Hospital With a Home Health Agency Buy One Scheduling Tool or Two?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Where Does SimpleScheduleAI Stop for a Hospital That Runs Home Health?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-11-09T05:18:23.960Z",
+      "contentHash": "04f2cf217bf09de3ab9f8dab79b902d892e4f27e8d97bf298cc8c7e599baec89"
+    }
+  }
+}

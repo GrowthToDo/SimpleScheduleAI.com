@@ -331,7 +331,7 @@ Homebase draws the line itself. Its healthcare page says Homebase "wasn't design
 
 ## When Deputy Is Still Adequate for Healthcare?
 
-Deputy remains adequate for non-clinical healthcare settings: outpatient clinics without inpatient care, home health agencies with stable caregiver pools, and administrative staff scheduling within a hospital. In each of these settings, the charge, skill-mix and census rules that create gaps on a hospital nursing unit do not apply.
+Deputy remains adequate for non-clinical healthcare settings: outpatient clinics without inpatient care, home health agencies with stable caregiver pools, and administrative staff scheduling within a hospital. In each of these settings, the charge, skill-mix and census rules that create gaps on a hospital nursing unit do not apply. If a home health agency serves Medicaid patients, confirm its tool also meets your state's electronic visit verification requirement; our guide to [home health scheduling software](/blog/home-health-care-scheduling-vs-hospital) explains what that covers.
 
 Deputy remains adequate for healthcare organizations in four scenarios:
 

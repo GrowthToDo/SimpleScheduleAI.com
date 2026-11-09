@@ -926,6 +926,35 @@ Collected for `free-nurse-scheduling-software`. Microsoft primary pages, read 20
 - URLs: https://www.globenewswire.com/news-release/2026/09/21/3365483/0/en/ascend-learning-acquires-m7-health-connecting-the-full-healthcare-career-to-scheduling.html ; https://www.globenewswire.com/news-release/2026/09/22/3366456/0/en/ati-and-elsevier-obtain-preliminary-injunction-against-naxlex-in-nursing-assessment-piracy-and-cheating-case.html (GlobeNewswire 403s WebFetch and curl; both read in Playwright)
 - Verified: 2026-11-03. Competitor detail lives in competitor-dossier.md, M7 Health section.
 
+### Electronic visit verification (EVV): scope and dates
+
+- Approved wording: "Section 12006(a) of the 21st Century Cures Act requires states to use electronic visit verification for Medicaid personal care services and for Medicaid home health services that need an in-home visit." Dates: "states had to cover personal care services by January 1, 2020 and home health care services by January 1, 2023." Mechanism: a state that does not require EVV takes a reduction in its federal Medicaid matching percentage (42 U.S.C. 1396b(l)(1)).
+- Medicaid only. Say "ties to Medicaid-paid visits"; a visit paid only by Medicare falls outside it. No CMS sentence says "not Medicare" in so many words; the scope comes from 1396b(l) applying to services under a State plan (Title XIX). Never say Medicare "exempts" or "prohibits" EVV, and never say EVV applies to inpatient shifts.
+- Not verified: any state-level detail (Texas HHSC EVV system, Texas-specific deadlines). Do not state.
+- URLs: https://www.medicaid.gov/medicaid/home-community-based-services/guidance/electronic-visit-verification-evv (403s browser UAs to automated fetchers; loads with plain curl) ; https://www.law.cornell.edu/uscode/text/42/1396b
+- Verified: 2026-11-09 (research brief + adversarial fact-check agent, live curl of both pages; Medicaid.gov verbatim "Section 12006(a) of the 21st Century Cures Act mandates that states implement EVV for all Medicaid personal care services (PCS) and home health services (HHCS) that require an in-home visit by a provider" and "States must require Electronic Visit Verification (EVV) use for all Medicaid-funded PCS by January 1, 2020 and HHCS by January 1, 2023")
+
+### 42 CFR Part 484: home health agency conditions of participation
+
+- Approved wording: "A home health agency (HHA) that bills Medicare follows its own federal conditions of participation in 42 CFR Part 484." 484.1(a)(1), verbatim contiguous: "the conditions that an HHA must meet in order to participate in the Medicare program" (preceded in the source by "Sections 1861(o) and 1891 of the Act, which establish"). 484.60(a)(2)(iv): the plan of care must include "The frequency and duration of visits to be made".
+- Part 484 has no on-duty clause: grep of the full Part 484 text for "on duty", "on call", "at all times" = 0 hits (2026-11-09). So "Part 484 has no clause requiring a nurse on duty around the clock" is checked; any reason WHY is our reasoning, not the reg's.
+- Wrong: "a CAH's home health agency must be separately certified / has its own provider number" (not verified; say "operated by").
+- URLs: https://www.law.cornell.edu/cfr/text/42/part-484 ; https://www.law.cornell.edu/cfr/text/42/484.1 ; https://www.law.cornell.edu/cfr/text/42/484.60 (Cornell LII; eCFR bot-blocks, per the global-resolution rule)
+- Verified: 2026-11-09 (fact-check agent via eCFR versioner API + Cornell; 484.60 title and quote re-read by the writer on Cornell the same day)
+
+### Share of CAHs that offer home health (RHIhub, Flex Monitoring Team)
+
+- Approved wording: "The Rural Health Information Hub, citing 2022 research, puts it at 18.6% of Critical Access Hospitals offering home health services directly. Counting home health run through a health system or joint venture, the share is 49.6%." Also verbatim: "Facility-based home health agencies may be operated by a hospital, skilled nursing facility, or other facility."
+- Wrong: "18.6% of CAHs offered home health in 2022" stated as a data year. RHIhub gives 2022 only as the report title ("Community Impact and Benefit Activities of Critical Access, Other Rural, and Urban Hospitals, 2022"); the Flex PDF 403'd, so the data year is unconfirmed. Wrong: quoting 18.6% without the 49.6% system/joint-venture figure in the same breath.
+- URL: https://www.ruralhealthinfo.org/topics/home-health
+- Verified: 2026-11-09 (curl + WebFetch of the RHIhub page; primary Flex report unreachable, 403)
+
+### FLSA: travel between job sites during the workday is hours worked
+
+- Approved wording: "Under 29 CFR 785.38, 'travel from job site to job site during the workday, must be counted as hours worked.'" Use: home health visits, where the drive between patients' homes counts toward the 40-hour week.
+- URL: https://www.law.cornell.edu/cfr/text/29/785.38
+- Verified: 2026-11-09 (writer, curl of Cornell LII, verbatim "Time spent by an employee in travel as part of his principal activity, such as travel from job site to job site during the workday, must be counted as hours worked.")
+
 ## Product truths
 
 - Self-label: "AI-native nurse scheduling service". Never "managed service" as a self-label (category/comparison use is fine).
@@ -985,3 +1014,4 @@ Collected for `free-nurse-scheduling-software`. Microsoft primary pages, read 20
 | 2026-10-27 | Added **Island shifts and night-shift fatigue** for the island-shifts-night-nurses-cah rebuild: Lee & Jeong 2021 (single working day between days off, 115 of 182, 29 of 255 island nights), NIOSH Module 5/9 verbatim lines (first night back, two rest days after three 12s), Smith & Eastman 2012 (days-off sleep, rhythms rarely shift), second Booker 2024 use; listed the April draft's unsourced claims as cut. | Claude |
 | 2026-11-01 | Added Microsoft Teams Shifts (included with Teams, features, preview auto-assign rules, no overtime/skill/staffing checks documented) for free-nurse-scheduling-software | Claude |
 | 2026-11-03 | Fact-check gate for best-scheduling-software-icu-nurses. Added: **CMS SOM Appendix W C-0902** (bed-count quote, exclusion list has no ICU beds, working PDF URL Rev. 247), **Massachusetts ICU law § 231** (verbatim statute text; the malegislature.gov URL is correct, check-links fails on a network block, confirmed via Wayback 2026-05-18), **AACN 2024 staffing standards** (all seven verbatim, April 23, 2024; the public list is UNNUMBERED, so never cite "Standard 5/7" as page text), **CAHs with ICUs** (Joynt 2011 380/1,268 = 30.0%, 2008-2009 data; Freeman 2005 WP81: 3.5 is the mean across 63 INTERVIEWED hospitals, not all ICU CAHs), **CCRN** (specialty certification; no federal CoP requirement), **Benner** (citation + stage names), **Ascend Learning / M7 acquisition** (Sept 21, 2026; ATI parentage sourced from the Sept 22 ATI release, not the M7 one). Re-verified lines added to 482.23(b), 485.631(a)(5), CA 70217 ((a)(1) pin-cite). Texas 257.004 and 257.001 re-read on FindLaw ("Current as of January 01, 2026"), unchanged. | Claude |
+| 2026-11-09 | Fact-check gate for home-health-care-scheduling-vs-hospital (next-15 #15). Added: **EVV scope and dates** (Cures Act 12006(a), 1396b(l), Medicaid only), **42 CFR Part 484** (484.1 quote, 484.60 visit frequency, no on-duty clause), **share of CAHs offering home health** (RHIhub 18.6% / 49.6%, data year unconfirmed), **29 CFR 785.38** (travel between job sites is hours worked). Re-verified: 485.631(a)(5) and DOL FS#54 two-jobs example (FS#54 is "Revised July 2009"). | Claude |

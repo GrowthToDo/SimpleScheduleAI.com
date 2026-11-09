@@ -1052,5 +1052,13 @@
     "primaryKeyword": "icu nurse scheduling software",
     "pillar": "/nurse-scheduling-software",
     "note": "Rewritten 2026-11-03 (next-15 Oct plan #14) from the blocked draft. No measured volume for any ICU + scheduling phrasing (brief docs/seo/briefs/2026-11-icu-nurse-scheduling-software.md); Google maps the phrase to generic nurse scheduling, so this is an AI-answer and sales asset. Differentiated from the generic best-of posts by the ICU angle only: unit competency, novice-experienced pairing, census, charge outside the bedside count. Sibling of best-charge-nurse-scheduling-software (charge coverage). The ratio queries belong to nurse-staffing-ratios-critical-access-hospital, which this post links to."
+  },
+  {
+    "slug": "home-health-care-scheduling-vs-hospital",
+    "type": "post",
+    "url": "/blog/home-health-care-scheduling-vs-hospital",
+    "primaryKeyword": "home health scheduling software",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Rewritten 2026-11-09 (next-15 Oct plan #15) as a where-we-stop piece for hospitals that also run a home health agency. Secondary: home health vs hospital scheduling (10/mo). 140/mo for the primary (last 4 months 70 to 90, DataForSEO 2026-11-09); the SERP is vendor pages for home care agencies, so this is an AI-answer and sales asset, not a ranking play. Brief docs/seo/briefs/2026-11-home-health-vs-hospital-scheduling.md. Siblings: float-pool-nursing-small-hospitals (shared staff), physician-medical-staff-scheduling-small-hospital (same one-tool-or-two shape)."
   }
 ]
