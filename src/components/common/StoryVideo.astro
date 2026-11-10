@@ -1,0 +1,238 @@
+---
+// A muted, looping story video that plays only while it is on screen, with visible
+// pause and full-screen buttons, an optional "play with sound" button, an optional
+// hold on the closing frame, and an optional link laid over the button drawn inside
+// the video's end card. Without JavaScript the browser's own controls show instead.
+export interface Props {
+  id: string;
+  src: string;
+  poster: string;
+  width: number;
+  height: number;
+  label: string;
+  tone?: 'light' | 'dark';
+  soundLabel?: string;
+  holdAt?: number;
+  holdMs?: number;
+  cta?: {
+    href: string;
+    label: string;
+    from: number;
+    to?: number;
+    left: number;
+    top: number;
+    width: number;
+    height: number;
+  };
+}
+
+const { id, src, poster, width, height, label, tone = 'light', soundLabel, holdAt, holdMs = 3500, cta } = Astro.props;
+
+const frame =
+  tone === 'dark'
+    ? 'border-ivory/10 shadow-[0_14px_40px_-28px_rgb(0_0_0/0.6)]'
+    : 'border-hairline shadow-[0_14px_40px_-28px_rgb(26_35_50/0.35)]';
+const button =
+  tone === 'dark'
+    ? 'border-ivory/20 bg-ivory/5 text-ivory hover:bg-ivory/10'
+    : 'border-hairline bg-white/60 text-default hover:bg-white';
+const external = cta ? /^https?:\/\//.test(cta.href) : false;
+---
+
+<div data-story-video data-hold-at={holdAt} data-hold-ms={holdMs}>
+  <div class:list={['relative overflow-hidden rounded-2xl border bg-ink', frame]}>
+    <video
+      id={id}
+      class="aspect-video w-full"
+      src={src}
+      poster={poster}
+      width={width}
+      height={height}
+      muted
+      loop
+      playsinline
+      controls
+      preload="metadata"
+      aria-label={label}></video>
+    {
+      cta && (
+        <a
+          data-video-cta
+          data-from={cta.from}
+          data-to={cta.to}
+          href={cta.href}
+          target={external ? '_blank' : undefined}
+          rel={external ? 'noopener' : undefined}
+          aria-label={cta.label}
+          class="absolute hidden rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
+          style={`left:${cta.left}%;top:${cta.top}%;width:${cta.width}%;height:${cta.height}%`}
+        />
+      )
+    }
+  </div>
+  <div class="mt-4 hidden flex-wrap items-center justify-center gap-3" data-video-controls>
+    {
+      soundLabel && (
+        <button
+          type="button"
+          data-video-sound
+          class:list={['inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium', button]}
+        >
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z" />
+          </svg>
+          {soundLabel}
+        </button>
+      )
+    }
+    <button
+      type="button"
+      data-video-toggle
+      class:list={['inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium', button]}
+    >
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path data-icon-pause d="M7 5h4v14H7zM13 5h4v14h-4z"></path>
+        <path data-icon-play class="hidden" d="M8 5v14l11-7z"></path>
+      </svg>
+      <span data-video-toggle-text>Pause</span>
+    </button>
+    <button
+      type="button"
+      data-video-full
+      class:list={['inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium', button]}
+    >
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M5 5h6v2H7v4H5V5zm14 0v6h-2V7h-4V5h6zM5 19v-6h2v4h4v2H5zm14 0h-6v-2h4v-4h2v6z"></path>
+      </svg>
+      Full screen
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    document.querySelectorAll('[data-story-video]:not([data-ready])').forEach(function (wrap) {
+      wrap.setAttribute('data-ready', '');
+      var v = wrap.querySelector('video');
+      var controls = wrap.querySelector('[data-video-controls]');
+      var toggle = wrap.querySelector('[data-video-toggle]');
+      var toggleText = wrap.querySelector('[data-video-toggle-text]');
+      var iconPause = wrap.querySelector('[data-icon-pause]');
+      var iconPlay = wrap.querySelector('[data-icon-play]');
+      var full = wrap.querySelector('[data-video-full]');
+      var sound = wrap.querySelector('[data-video-sound]');
+      var cta = wrap.querySelector('[data-video-cta]');
+      var holdAt = parseFloat(wrap.getAttribute('data-hold-at'));
+      var holdMs = parseFloat(wrap.getAttribute('data-hold-ms')) || 0;
+      if (!v || !controls) return;
+
+      // The page's own buttons replace the browser's controls once the script runs.
+      v.controls = false;
+      controls.classList.remove('hidden');
+      controls.classList.add('flex');
+
+      var userPaused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var withSound = false;
+      var inView = false;
+      var holding = null;
+
+      function play() {
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      }
+      function endHold() {
+        if (holding) {
+          clearTimeout(holding);
+          holding = null;
+        }
+      }
+      function stopped() {
+        return v.paused && !holding;
+      }
+      function sync() {
+        var s = stopped();
+        toggleText.textContent = s ? 'Play' : 'Pause';
+        iconPause.classList.toggle('hidden', s);
+        iconPlay.classList.toggle('hidden', !s);
+      }
+
+      toggle.addEventListener('click', function () {
+        if (stopped()) {
+          userPaused = false;
+          play();
+        } else {
+          userPaused = true;
+          endHold();
+          v.pause();
+        }
+        sync();
+      });
+      v.addEventListener('play', sync);
+      v.addEventListener('pause', sync);
+
+      full.addEventListener('click', function () {
+        if (v.requestFullscreen) v.requestFullscreen();
+        else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen();
+      });
+      document.addEventListener('fullscreenchange', function () {
+        if (!withSound) v.controls = document.fullscreenElement === v;
+      });
+
+      if (sound) {
+        sound.addEventListener('click', function () {
+          withSound = true;
+          userPaused = false;
+          endHold();
+          v.loop = false;
+          v.muted = false;
+          v.controls = true;
+          v.currentTime = 0;
+          play();
+          sound.remove();
+          toggle.remove();
+        });
+      }
+
+      v.addEventListener('timeupdate', function () {
+        var t = v.currentTime;
+        if (cta) {
+          var from = parseFloat(cta.getAttribute('data-from'));
+          var to = parseFloat(cta.getAttribute('data-to'));
+          cta.classList.toggle('hidden', !(t >= from && (isNaN(to) || t <= to)));
+        }
+        // Hold the closing frame long enough to read it, then start the loop again.
+        if (!withSound && !isNaN(holdAt) && holdMs > 0 && t >= holdAt && !v.paused && !holding) {
+          v.pause();
+          holding = setTimeout(function () {
+            holding = null;
+            v.currentTime = 0;
+            if (inView && !userPaused) play();
+            sync();
+          }, holdMs);
+          sync();
+        }
+      });
+
+      // Play only while at least half the video is on screen, so the story starts
+      // when the visitor reaches it instead of running unseen below the fold.
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(
+          function (entries) {
+            inView = entries[0].isIntersecting;
+            if (inView) {
+              if (!userPaused && !holding && v.paused) play();
+            } else if (!withSound) {
+              endHold();
+              v.pause();
+            }
+          },
+          { threshold: 0.5 }
+        ).observe(v);
+      } else {
+        inView = true;
+        if (!userPaused) play();
+      }
+      sync();
+    });
+  })();
+</script>

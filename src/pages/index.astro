@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import SchemaOrg from '~/components/common/SchemaOrg.astro';
+import StoryVideo from '~/components/common/StoryVideo.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import HeroStationBackdrop from '~/components/widgets/HeroStationBackdrop.astro';
 import PainStrip from '~/components/widgets/PainStrip.astro';
@@ -132,38 +133,29 @@ const faqSchema = {
         of review.
       </p>
       <div class="mx-auto mt-10 max-w-4xl reveal-delay-4" data-reveal>
-        <div
-          class="overflow-hidden rounded-2xl border border-hairline bg-ink shadow-[0_14px_40px_-28px_rgb(26_35_50/0.35)]"
-        >
-          <video
-            id="hero-launch-video"
-            class="aspect-video w-full"
-            src="/videos/ssai-hero-v2.mp4"
-            poster="/videos/ssai-hero-v2-poster.jpg"
-            width="1920"
-            height="1080"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            aria-label="Product overview video: a nurse manager sends us the roster and PTO, the AI builds three draft schedules, every rule is checked, our scheduling team reviews it and the manager approves by reply; then a callout gets three replacement names with the reason for each"
-          ></video>
-        </div>
+        <StoryVideo
+          id="hero-launch-video"
+          src="/videos/ssai-hero-v2.mp4"
+          poster="/videos/ssai-hero-v2-poster.jpg"
+          width={1920}
+          height={1080}
+          holdAt={32}
+          holdMs={3500}
+          cta={{
+            href: 'https://cal.com/gautham-8bdvdx/30min',
+            label: 'Book a call with our team',
+            from: 30.2,
+            left: 35,
+            top: 64.5,
+            width: 30,
+            height: 9.5,
+          }}
+          label="Product overview video: a nurse manager sends us the roster and PTO, the AI builds three draft schedules, every rule is checked, our scheduling team reviews it and the manager approves by reply; then a callout gets three replacement names with the reason for each"
+        />
+        <p class="mt-3 text-center text-sm text-muted">
+          One week of nurse scheduling with SimpleScheduleAI, in 33 seconds. The video has no sound.
+        </p>
       </div>
-      <script is:inline>
-        // Respect prefers-reduced-motion: stop the hero video's autoplay loop.
-        (function () {
-          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            const v = document.getElementById('hero-launch-video');
-            if (v) {
-              v.removeAttribute('autoplay');
-              v.removeAttribute('loop');
-              v.pause();
-            }
-          }
-        })();
-      </script>
       <div
         class="mx-auto mt-9 flex max-w-4xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted reveal-delay-4"
         data-reveal
