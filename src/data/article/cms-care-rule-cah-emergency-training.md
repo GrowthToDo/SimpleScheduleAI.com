@@ -1,6 +1,7 @@
 ---
 draft: false
 publishDate: 2026-11-06T00:00:00Z
+updateDate: 2026-11-11T00:00:00Z
 author: 'Pradeep Pandey'
 title: 'CMS Proposes Dropping the Critical Access Hospital Emergency Training Rule'
 excerpt: >
@@ -21,12 +22,12 @@ metadata:
 
 ## Key Takeaways
 
-- On November 5, 2026, CMS proposed a rule, [CMS-3484-P](https://public-inspection.federalregister.gov/2026-22812.pdf), that would remove the annual emergency readiness training required of every critical access hospital since July 1, 2025.
+- On November 5, 2026, CMS proposed a rule, [CMS-3484-P](https://www.federalregister.gov/documents/2026/11/10/2026-22812/medicare-and-medicaid-programs-cutting-administrative-requirements-for-excellence-in-patient-care), that would remove the annual emergency readiness training required of every critical access hospital since July 1, 2025.
 - It is a proposal. The training rule stays in force until a final rule takes effect, and CMS itself says the final rule is unlikely before January 1, 2027. Keep training your staff.
 - The emergency protocols themselves stay. Surveyors can still ask a nurse to "demonstrate or explain" a protocol under survey tag C-0896.
 - CMS assumes every medical staff member at a critical access hospital takes this training, against one in five at other hospitals, because small-hospital staff cover more than one unit.
 - Because of that assumption, critical access hospitals would get about 17 percent of the savings, even though they have only 2.7 percent of hospital beds. For an average critical access hospital, by our division of CMS's totals, the training takes about 73 staff hours a year, worth about $8,300. The table below shows every step.
-- Comments are due 60 days after the rule is published in the Federal Register. Publication is scheduled for November 10, which would put the deadline at January 9, 2027.
+- Comments are due by January 11, 2027. The Federal Register printed that deadline when it published the rule on November 10, 2026.
 
 ## Table of Contents
 
@@ -43,7 +44,7 @@ CMS has proposed removing the annual emergency readiness training that every cri
 
 ## What Did CMS Propose for Critical Access Hospitals?
 
-CMS proposed removing one paragraph of the emergency services standard: [42 CFR 485.618(e)(2)](https://www.law.cornell.edu/cfr/text/42/485.618), the staff training requirement. That paragraph says "Applicable staff, as identified by the CAH, must be trained annually on the protocols and provisions" a critical access hospital has for emergencies, including obstetric emergencies. The proposal is in rule CMS-3484-P, issued November 5, 2026 and scheduled for the Federal Register on November 10.
+CMS proposed removing one paragraph of the emergency services standard: [42 CFR 485.618(e)(2)](https://www.law.cornell.edu/cfr/text/42/485.618), the staff training requirement. That paragraph says "Applicable staff, as identified by the CAH, must be trained annually on the protocols and provisions" a critical access hospital has for emergencies, including obstetric emergencies. The proposal is in rule CMS-3484-P, issued November 5, 2026 and published in the Federal Register on November 10 (91 FR 72634).
 
 Removing the paragraph would also remove the paperwork that comes with it. Today the hospital's governing body has to identify which staff must be trained, and the hospital has to record completed training in personnel files and show that staff know the material.
 
@@ -65,7 +66,7 @@ Training also shows up in a survey whether or not the rule changes. Under tag C-
 
 CMS assumes every medical staff member at a critical access hospital takes the training. At other hospitals it assumes one in five does. Its reason: "In hospitals, which have a larger number of beds, there is likely to be a greater division of staff among units, with medical staff specifically designated to work in emergency departments. In contrast, CAHs, which are smaller in size, are likely to have medical staff that work across units."
 
-The table below walks through CMS's savings estimate one step at a time. The figures come from [Table 48 of the proposed rule](https://public-inspection.federalregister.gov/2026-22812.pdf). Each row shows how it is worked out from the rows above it.
+The table below walks through CMS's savings estimate one step at a time. The figures come from [Table 48 of the proposed rule](https://www.federalregister.gov/documents/2026/11/10/2026-22812/medicare-and-medicaid-programs-cutting-administrative-requirements-for-excellence-in-patient-care). Each row shows how it is worked out from the rows above it.
 
 CMS's method has three inputs. Every staff member who takes the training needs a 1-hour refresher each year, a new hire needs the 3-hour first training instead, and 21 percent of staff are new each year. CMS takes the 21 percent from the annual hospital turnover rate in a 2024 staffing report from Nursing Solutions Inc.
 
@@ -116,7 +117,7 @@ The rule also touches fire-safety code and emergency power updates, birth tissue
 
 ## How Do You Comment on CMS-3484-P?
 
-Comments go to CMS on [regulations.gov, docket CMS-2026-3631](https://www.regulations.gov/docket/CMS-2026-3631). A docket is the public online file for one rule, and CMS asks you to refer to file code CMS-3484-P. CMS also accepts mail at the address in the rule. Comments are due 60 days after the rule is published in the Federal Register. Publication is scheduled for November 10, 2026, which would put the deadline at January 9, 2027. Check the date on the published version.
+Comments go to CMS on [regulations.gov, docket CMS-2026-3631](https://www.regulations.gov/docket/CMS-2026-3631). A docket is the public online file for one rule, and CMS asks you to refer to file code CMS-3484-P. CMS also accepts mail at the address in the rule. Comments are due by January 11, 2027, the date printed in the published rule.
 
 Anyone can comment, including a nurse manager. Agree inside your hospital whether a comment goes in under the CEO's name, the director of nursing's, or your own. A comment from a small hospital is most useful when it is specific. Say how many staff you train, how many hours it takes, and what the training has or has not changed on your floor. If your hospital wants to keep the rule, say why.
 
@@ -132,7 +133,7 @@ Anyone can comment, including a nurse manager. Agree inside your hospital whethe
 1. **Keep the annual emergency training going.** The rule is still in force, and nothing in the proposal pauses it.
 2. **Count your training hours** with the method above: returning staff at 1 hour, new hires at 3 hours.
 3. **Check which nurses on your night schedule** have been trained on this year's emergency protocols, including the obstetric ones.
-4. **Decide who will comment, and whether,** before January 9, 2027, and write down your hospital's numbers while they are fresh.
+4. **Decide who will comment, and whether,** before January 11, 2027, and write down your hospital's numbers while they are fresh.
 5. **If you offer obstetric services,** keep preparing for the January 1, 2027 obstetric training and quality items. Those items take effect on that date unless a final rule removes them first.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
@@ -167,11 +168,11 @@ CMS estimates that removing it would save critical access hospitals $11,061,162 
 
 **Q: When is the comment deadline for CMS-3484-P?**
 
-Comments are due 60 days after the rule is published in the Federal Register. Publication is scheduled for November 10, 2026, which would put the deadline at January 9, 2027. Confirm the date on the published version.
+Comments are due by January 11, 2027. The Federal Register published the rule on November 10, 2026, and the published rule prints that deadline.
 
 ## Sources
 
-1. CMS, Medicare and Medicaid Programs; Cutting Administrative Requirements for Excellence in Patient Care (CMS-3484-P), proposed rule, public inspection copy, scheduled for publication November 10, 2026. Emergency services readiness training is section II.E.2, and the savings estimate is Table 48. [federalregister.gov](https://public-inspection.federalregister.gov/2026-22812.pdf)
+1. CMS, Medicare and Medicaid Programs; Cutting Administrative Requirements for Excellence in Patient Care (CMS-3484-P), proposed rule, 91 FR 72634, published November 10, 2026. Emergency services readiness training is section II.E.2, and the savings estimate is Table 48. [federalregister.gov](https://www.federalregister.gov/documents/2026/11/10/2026-22812/medicare-and-medicaid-programs-cutting-administrative-requirements-for-excellence-in-patient-care)
 2. CMS fact sheet, Cutting Administrative Requirements for Excellence in Patient Care (CMS-3484-P), November 5, 2026. [cms.gov](https://www.cms.gov/newsroom/fact-sheets/medicare-medicaid-programs-cutting-administrative-requirements-excellence-patient-care-care-cms-3484)
 3. 42 CFR 485.618, Condition of participation: Emergency services. [Cornell Law School LII](https://www.law.cornell.edu/cfr/text/42/485.618)
 4. 42 CFR 485.649, Obstetrical services, [Cornell Law School LII](https://www.law.cornell.edu/cfr/text/42/485.649), and 42 CFR 485.641, Quality assessment and performance improvement program, [Cornell Law School LII](https://www.law.cornell.edu/cfr/text/42/485.641)
