@@ -303,3 +303,40 @@ test("M5: a run made before a check changed says so once at the top, and its fin
   assert.equal(fresh.olderRules, 0);
   assert.equal(fresh.olderRulesNote, null);
 });
+
+// ---------------------------------------------------------------- M6: the page's own target in other words
+
+test("M6: a search with the page's own target words, joined or ordered differently, is not a secondary keyword", async () => {
+  const { secondaryView } = await import('../lib/api/ext/insights.mjs');
+  writeJson('state/items.json', {});
+  writeJson('state/targets.json', { adopted: [], ignored: [], priorities: {} });
+  const qp = (query, impressions, position) => ({
+    query,
+    page: '/blog/made-up-rota',
+    impressions,
+    clicks: 0,
+    position,
+  });
+  const qpCur = [
+    qp('made up rota rules', 20, 5),
+    qp('rules for the made up rota', 50, 9),
+    qp('made up rota pay rules', 40, 11),
+  ];
+  snap('gsc', {
+    pageDaily: [],
+    siteDaily: [],
+    qpCur,
+    queryCur: qpCur.map(({ query, impressions, clicks, position }) => ({ query, impressions, clicks, position })),
+    queryPrev: [],
+  });
+  snap('local', {
+    livePages: [{ page: '/blog/made-up-rota' }],
+    registry: [{ slug: 'made-up-rota', type: 'post', url: '/blog/made-up-rota', primaryKeyword: 'made up rota rules' }],
+    verdicts: [],
+    due: [],
+    edits: [],
+  });
+  invalidate();
+  const items = secondaryView(buildModel()).items.map((x) => x.query);
+  assert.deepEqual(items, ['made up rota pay rules']);
+});

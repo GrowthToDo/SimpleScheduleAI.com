@@ -908,10 +908,14 @@ const sharedWords = (a, b) => {
   return tokens(b).filter((w) => words.has(w)).length;
 };
 const SECONDARY_MIN_SHARED = 2;
+// A phrase's meaningful words as one key, in any order: "scheduling for nurses" and "nurse scheduling"
+// are one key. Empty for a phrase with no meaningful word.
+const wordSetKey = (s) => [...tokens(s)].sort().join(' ');
 
 // Searches a live page that targets a keyword already shows for, that nothing targets: 30 or more views
 // on that page in the 28 days (the page's own views, from the query and page rows), not a brand search,
-// not any target in another spelling (matchKey), and about the page: it shares two or more meaningful
+// not any target in another spelling (matchKey) or with its words joined or ordered differently (the
+// same meaningful words, tokens), and about the page: it shares two or more meaningful
 // words with one of the page's target keywords (the one sharing the most is named). A search a real
 // split or a wrong page ranking owns is left out (ownership), and one search is offered to one page
 // only, the best placed. At most three a page, busiest first. Each is a candidate whatever the founder
@@ -921,6 +925,7 @@ function secondaryCandidates(model) {
     const live = liveSet(model);
     const taken = targetKeywords(model);
     const takenKeys = new Set(model.targets.map((t) => matchKey(t.keyword)).filter(Boolean));
+    const takenWords = new Set(model.targets.map((t) => wordSetKey(t.keyword)).filter(Boolean));
     const owned = new Set([
       ...competingList(model).map((c) => norm(c.query)),
       ...model.opps.filter((o) => o.type === 'wrong-page' && o.query).map((o) => norm(o.query)),
@@ -946,6 +951,7 @@ function secondaryCandidates(model) {
     for (const e of rows.values()) {
       const q = norm(e.query);
       if (e.impressions < SECONDARY_MIN_VIEWS || taken.has(q) || takenKeys.has(matchKey(e.query))) continue;
+      if (takenWords.has(wordSetKey(e.query))) continue;
       if (owned.has(q) || isBrand(e.query, model.brands)) continue;
       const scored = targetsOf
         .get(e.page)

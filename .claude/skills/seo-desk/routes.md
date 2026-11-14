@@ -128,7 +128,8 @@ targetKeyword, evidence, recommendation, test, eligibility, frozenUntilText, ado
 priority, brief}`. `finished[]` (same shape, up to 50, newest first) holds the ones marked done or
 dismissed. A mistaken Done froze the page and used the week's edit, so Reopen on a finished one is
 a write: only when he asks, in his own words. A
-search a page already shows for (30 or more views in 28 days) that no page targets in any spelling,
+search a page already shows for (30 or more views in 28 days) that no page targets in any spelling
+(nor with the same meaningful words joined or ordered differently),
 sharing two or more meaningful words with that page's target. One search goes to one page only, the
 best placed. At most three per page. A Done runner-up for the same page and search closes it too. Adopting one only records it; it never becomes a target. Marking one done
 counts as the week's page edit.
