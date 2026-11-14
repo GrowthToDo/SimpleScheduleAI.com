@@ -2495,3 +2495,11 @@ test('B6: the section names what its rows are: Search Console searches close to 
   assert.doesNotMatch(src, /planned keyword/i);
   assert.match(src, /Searches from Search Console close to a target keyword/);
 });
+
+test('B1: a card that edits no page (the Bing page check) carries no page-edit eligibility chip', async () => {
+  const { showsEligibility } = await import('../static/views/card.js');
+  const eligible = { eligible: true, from: null, text: 'Eligible now' };
+  assert.equal(showsEligibility({ isPageEdit: false, eligibility: eligible }), false);
+  assert.equal(showsEligibility({ isPageEdit: true, eligibility: eligible }), true);
+  assert.equal(showsEligibility({ isPageEdit: true, eligibility: null }), false);
+});

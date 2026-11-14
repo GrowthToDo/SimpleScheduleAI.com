@@ -155,13 +155,17 @@ function statusChip(state, fmt) {
   return null;
 }
 
+// The eligibility chip is about the one live-page edit a week and the 28-day freeze, so a card that
+// edits no page (a setup task such as checking a page in Bing Webmaster Tools) shows none.
+export const showsEligibility = (n) => Boolean(n?.eligibility) && n.isPageEdit !== false;
+
 function chips(n, fmt) {
   const out = [];
   const st = statusChip(n.state, fmt);
   if (st) out.push(ctxChip(st[0], st[1]));
   if (n.state?.pinnedWeek && n.state.pinnedWeek >= thisMonday())
     out.push(ctxChip('chip-accent', 'Pinned to this week'));
-  if (n.eligibility) {
+  if (showsEligibility(n)) {
     out.push(
       n.eligibility.eligible
         ? ctxChip('', n.eligibility.text ?? 'Eligible now')
