@@ -5,7 +5,7 @@
 
 import { classify } from '../../scripts/lib/change-log-core.mjs';
 import { groupTopics } from './topics.mjs';
-import { norm } from './targets.mjs';
+import { norm, matchKey } from './targets.mjs';
 import { readJson } from './store.mjs';
 import { pct } from './api/fmt.mjs';
 
@@ -190,15 +190,28 @@ export function recommendationOf({ choice, shouldWin, others }) {
 export const cannibalizationTest = (query) =>
   `Wait 28 days after the change, then check in Search Console whether one page now holds most of the views for "${query}".`;
 
+// The views a page needs for one search before it can be part of a likely false alarm.
+export const FALSE_ALARM_MIN_VIEWS = 10;
+
 // Whether a split search is probably not a real problem: a pillar page and one of its own posts (they
-// are meant to cover the same ground). pages are the page paths in the split; registry rows are
-// {url, pillar}. A likely false alarm, never a certain one. (Searches for the site's own name never
-// reach the split list, so they need no rule here.)
-export function falseAlarmOf({ pages = [], registry = [] }) {
+// are meant to cover the same ground), both with FALSE_ALARM_MIN_VIEWS views or more for the search.
+// Never when the keyword file gives this exact search (by matchKey) to one of the two pages: then the
+// split is the problem the file was written to prevent. pages are page paths or {page, impressions};
+// registry rows are {url, pillar, primaryKeyword}. A likely false alarm, never a certain one. (Searches
+// for the site's own name never reach the split list, so they need no rule here.)
+export function falseAlarmOf({ query = '', pages = [], registry = [] }) {
   const pillarOf = new Map(registry.filter((r) => r?.url).map((r) => [r.url, r.pillar ?? null]));
-  for (const a of pages)
-    for (const b of pages)
-      if (a !== b && pillarOf.get(a) === b)
+  const key = matchKey(query);
+  const ownerOf = new Set(
+    registry.filter((r) => r?.url && r.primaryKeyword && key && matchKey(r.primaryKeyword) === key).map((r) => r.url)
+  );
+  const counted = pages
+    .map((p) => (typeof p === 'string' ? { page: p, impressions: null } : p))
+    .filter((p) => p.impressions === null || p.impressions >= FALSE_ALARM_MIN_VIEWS)
+    .map((p) => p.page);
+  for (const a of counted)
+    for (const b of counted)
+      if (a !== b && pillarOf.get(a) === b && !ownerOf.has(a) && !ownerOf.has(b))
         return {
           likelyFalseAlarm: true,
           falseAlarmReason: `${b} is the pillar page and ${a} is one of its own posts, so they likely cover the same ground on purpose.`,

@@ -4,7 +4,7 @@
 // row Map to a page (or Change page) and Ignore, through the existing keyword routes.
 //
 // From GET /api/keyword-map/table: counters {all, mapped, unmapped, opportunities, runnerUp,
-// cannibalized, ...} and rows {keyword, kind, status 'live'|'pending', mappedTo, origin, source,
+// cannibalized, ...} and rows {keyword, kind, status 'live'|'ranks'|'pending', mappedTo, origin, source,
 // volume, position, impressions, rankingPage, flags, clusterConflict}.
 //
 // The pure helpers (KM_FILTERS, filterRows, sourceTags, statusText) import nothing from the
@@ -41,7 +41,10 @@ export function filterRows(rows, key) {
 const SOURCE_LABEL = { file: 'Keyword file', 'search-console': 'Search Console', import: 'Imported' };
 export const sourceTags = (row) => (row.source ?? []).map((s) => SOURCE_LABEL[s] ?? s);
 
-export const statusText = (row) => (row.status === 'live' ? 'Live' : 'Pending');
+// live: mapped to a live page; ranks: no page targets it, but a live page already shows on page one
+// for it; pending: no page yet.
+export const statusText = (row) =>
+  row.status === 'live' ? 'Live' : row.status === 'ranks' ? 'Ranks, no target' : 'Pending';
 
 const FLAG_LABEL = { 'runner-up': 'Runner-up', cannibalized: 'Cannibalized', 'wrong-page': 'Wrong page ranking' };
 
@@ -165,7 +168,8 @@ export async function render(el, ctx) {
     {
       key: 'status',
       label: 'Status',
-      title: 'Live: mapped to a live page. Pending: no page yet.',
+      title:
+        'Live: mapped to a live page. Ranks, no target: no page targets it, but a live page already shows on page one for it. Pending: no page yet.',
       format: (v, r) => h('span', { class: `chip ${v === 'live' ? 'chip-accent' : ''}`.trim() }, statusText(r)),
     },
     {

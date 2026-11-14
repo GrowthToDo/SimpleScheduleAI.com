@@ -1855,7 +1855,11 @@ test('an engine gap says which way round it is, and its tab stays neutral', asyn
   const r = (await get('/api/opportunities?type=engine-gap')).json;
   const label = (q) => r.items.find((o) => (o.query ?? '').includes(q)).typeLabel;
   assert.equal(label('bing only phrase'), 'On Bing, not on Google');
-  assert.equal(label('pricing target phrase'), 'On Google, not on Bing');
+  // The Google side is page level (audit B1): a busy page Bing's page report has no row for.
+  const googleSide = r.items.find((o) => o.source === 'gsc');
+  assert.equal(googleSide.typeLabel, 'On Google, not on Bing');
+  assert.equal(googleSide.query, null);
+  assert.ok(googleSide.page);
   assert.equal(r.types.find((t) => t.type === 'engine-gap').label, 'Google and Bing differ');
   assert.ok(!r.types.some((t) => /Bing sees it/.test(t.label)));
   const csv = (await get('/api/export/opportunities.csv?type=engine-gap')).text;

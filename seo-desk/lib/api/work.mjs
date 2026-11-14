@@ -4,7 +4,6 @@
 
 import { readJson } from '../store.mjs';
 import { WINDOW_DAYS, GSC_LAG_DAYS, isDueDate, windowsFor } from '../../../scripts/lib/change-log-core.mjs';
-import { splitQueries, isBrand } from '../../../scripts/lib/gsc-diagnose-core.mjs';
 import { judgePage } from '../verdicts.mjs';
 import { addDays, mondayOf } from '../dates.mjs';
 import { deliberateEdits as lifecycleEdits, eligibility } from '../lifecycle.mjs';
@@ -36,7 +35,8 @@ import {
   CHOICES,
   LEAVE_ALONE,
 } from '../insights.mjs';
-import { opportunityId } from '../rules.mjs';
+import { opportunityId, splitSearches } from '../rules.mjs';
+import { matchKey } from '../targets.mjs';
 import {
   POST_PAGE_RE,
   TYPE_LABEL,
@@ -53,7 +53,8 @@ import {
   slugOf,
   loadSettings,
 } from './model.mjs';
-import { n0, pct, sumRange, lower } from './fmt.mjs';
+import { n0, pct, sumRange } from './fmt.mjs';
+import { ownership } from './ext/insights.mjs';
 
 // ---------------------------------------------------------------- annotations
 
@@ -782,41 +783,59 @@ export function opportunitiesView(model, filters, { insightCounts = null } = {})
 
 // ---------------------------------------------------------------- two pages competing
 
-export function competingList(model) {
-  return memo(model, 'competing', () => {
-    const qp = model.data.gsc?.qpCur;
-    if (!Array.isArray(qp)) return [];
+// Every search that shows two or more of our pages, from the same rule the opportunities use
+// (rules.mjs splitSearches), as {split, together, noRank, missing}: the real splits (cannibalization),
+// the searches where our pages are shown together in the same results (never cannibalization, no
+// action), how many have no page ranking yet (left out), and whether the per-search counts are
+// missing (then every list is empty). The keyword file's page for a search is found by matchKey.
+export function splitGroups(model) {
+  return memo(model, 'split-groups', () => {
+    const all = model.data.gsc ? splitSearches({ gsc: model.data.gsc }, model.cfg) : [];
+    if (!all) return { split: [], together: [], noRank: 0, missing: true };
     const registry = model.data.local?.registry ?? [];
-    const byKeyword = new Map(registry.filter((r) => r.primaryKeyword).map((r) => [lower(r.primaryKeyword), r.url]));
+    const byKey = new Map();
+    for (const r of registry)
+      if (r.primaryKeyword && matchKey(r.primaryKeyword) && !byKey.has(matchKey(r.primaryKeyword)))
+        byKey.set(matchKey(r.primaryKeyword), r.url);
     const oppFor = new Map(model.opps.filter((o) => o.type === 'competing-pages').map((o) => [o.query, o.id]));
-    return splitQueries(qp)
-      .filter((q) => !isBrand(q.query, model.brands))
-      .map((q) => {
-        const registryPage = byKeyword.get(lower(q.query)) ?? null;
-        const winner = registryPage ? q.pages[0].page === registryPage : null;
-        return {
-          query: q.query,
-          impressions: q.impressions,
-          topShare: Math.round(q.topShare * 100) / 100,
-          registryPage,
-          registryWins: winner,
-          pages: q.pages.map((p) => ({
-            page: p.page,
-            share: Math.round(p.share * 100) / 100,
-            impressions: p.impressions,
-            position: p.position,
-            isRegistryPage: registryPage ? p.page === registryPage : false,
-          })),
-          note: registryPage
-            ? winner
-              ? 'The page your keyword file names is already the top one. A split is fine if the pages answer different needs.'
-              : `Your keyword file names ${registryPage} for this search, but another page is showing more. A split is fine if the pages answer different needs.`
-            : 'No page in your keyword file targets this search. A split is fine if the pages answer different needs.',
-          oppId: oppFor.get(q.query) ?? null,
-        };
-      });
+    const shape = (q) => {
+      const registryPage = byKey.get(matchKey(q.query)) ?? null;
+      const winner = registryPage ? q.pages[0].page === registryPage : null;
+      return {
+        query: q.query,
+        impressions: q.impressions,
+        pageViews: q.pageViews,
+        ratio: q.ratio,
+        kind: q.kind,
+        topShare: Math.round(q.topShare * 100) / 100,
+        registryPage,
+        registryWins: winner,
+        pages: q.pages.map((p) => ({
+          page: p.page,
+          share: Math.round(p.share * 100) / 100,
+          impressions: p.impressions,
+          position: p.position,
+          isRegistryPage: registryPage ? p.page === registryPage : false,
+        })),
+        note: registryPage
+          ? winner
+            ? 'The page your keyword file names is already the top one. A split is fine if the pages answer different needs.'
+            : `Your keyword file names ${registryPage} for this search, but another page is showing more. A split is fine if the pages answer different needs.`
+          : 'No page in your keyword file targets this search. A split is fine if the pages answer different needs.',
+        oppId: oppFor.get(q.query) ?? null,
+      };
+    };
+    return {
+      split: all.filter((q) => q.kind === 'split').map(shape),
+      together: all.filter((q) => q.kind === 'together').map(shape),
+      noRank: all.filter((q) => q.kind === 'no-rank').length,
+      missing: false,
+    };
   });
 }
+
+// The real splits: cannibalization.
+export const competingList = (model) => splitGroups(model).split;
 
 // The id of a split search: its opportunity's id, else the id the rules would give it. The founder's
 // cannibalization choices are saved under it.
@@ -867,10 +886,13 @@ export function leftAloneSplits(model) {
 // The ranked opportunities without the split searches the founder chose to leave alone. One place
 // decides this, so the week, the Opportunities list, the proposal and the sidebar count agree. The
 // left alone ones stay reachable through the cannibalization route's leftAlone list.
+// It also leaves out an opportunity whose search another list owns (ext/insights.mjs ownership: one
+// owner per search, so no search carries two cards).
 export const activeOpps = (model) =>
   memo(model, 'active-opps', () => {
     const left = new Set(leftAloneSplits(model).map((c) => c.oppId));
-    return left.size ? model.opps.filter((o) => !left.has(o.id)) : model.opps;
+    const { drop } = ownership(model);
+    return left.size || drop.size ? model.opps.filter((o) => !left.has(o.id) && !drop.has(o.id)) : model.opps;
   });
 
 export function competingView(model) {

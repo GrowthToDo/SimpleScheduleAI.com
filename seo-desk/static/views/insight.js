@@ -436,6 +436,44 @@ function leftAloneSection(ctx, list) {
   );
 }
 
+// Searches where our pages are shown together in the same results: not cannibalization, so no choice,
+// no Done and no merge. Folded away, with the server's own sentence for each.
+function togetherSection(ctx, list, note) {
+  const { h, fmt } = ctx;
+  if (!list?.length) return null;
+  return h(
+    'details',
+    { class: 'section ins-fold' },
+    h('summary', {}, `Shown together, not competing (${list.length})`),
+    note ? h('p', { class: 'small muted', style: { margin: '6px 0 10px' } }, note) : null,
+    h(
+      'ul',
+      { class: 'side-list' },
+      list.map((it) =>
+        h(
+          'li',
+          { class: 'ins-left' },
+          h(
+            'div',
+            {},
+            h('strong', {}, it.query),
+            h('div', { class: 'small muted' }, it.note),
+            h(
+              'div',
+              { class: 'small' },
+              ...it.pages.flatMap((p, i) => [
+                i ? ', ' : '',
+                pageLink(h, p.page),
+                ` (${fmt.plural(p.impressions, 'view', 'views')} at place ${fmt.position(p.position)})`,
+              ])
+            )
+          )
+        )
+      )
+    )
+  );
+}
+
 function conflictSection(ctx, conflicts, data) {
   const { h, fmt } = ctx;
   const cards = conflicts.map((c) =>
@@ -443,14 +481,14 @@ function conflictSection(ctx, conflicts, data) {
       priority: c.priority,
       priorityTitle: data.priorityNote,
       label: 'Cluster conflict',
-      labelTitle: 'A search no page targets yet that sits in a topic one of your pages already covers.',
+      labelTitle: 'A Search Console search no page targets yet that holds every word of a live page target keyword.',
       title: c.keyword,
       evidence: h(
         'span',
         {},
-        `"${c.keyword}" is shown ${fmt.plural(c.impressions, 'time', 'times')} at place ${fmt.position(c.position)}, and it falls in a topic `,
+        `"${c.keyword}" is shown ${fmt.plural(c.impressions, 'time', 'times')} at place ${fmt.position(c.position)}, and it holds every word of the target keyword of `,
         pageLink(h, c.page),
-        ` already targets ("${c.targetKeyword}").`
+        ` ("${c.targetKeyword}").`
       ),
       recommendation: c.recommendation,
       test: c.test,
@@ -462,15 +500,15 @@ function conflictSection(ctx, conflicts, data) {
     h(
       'div',
       { class: 'section-head' },
-      h('h2', { class: 'section-title' }, 'Planned keyword may already be covered'),
+      h('h2', { class: 'section-title' }, 'Searches from Search Console close to a target keyword'),
       h('span', { class: 'section-note' }, fmt.plural(conflicts.length, 'search', 'searches'))
     ),
     h(
       'p',
       { class: 'section-note', style: { marginBottom: '12px' } },
-      'Searches no page targets yet that fall in a topic one of your pages already covers. A new page here could end up competing with that one.'
+      'Searches Google already shows you for that no page targets, each holding every word of a live page target keyword. A new page for one could end up competing with that page.'
     ),
-    cardList(ctx, cards, { first: 6, emptyText: 'No planned keyword overlaps a page you already have.' })
+    cardList(ctx, cards, { first: 6, emptyText: 'No search sits that close to a target keyword of a live page.' })
   );
 }
 
@@ -496,7 +534,11 @@ function cannibalizationPage(el, ctx, data, nav) {
           note: 'a pillar page and one of its own posts',
         },
         { label: 'Left alone', value: fmt.num(data.leftAlone?.length ?? 0), note: 'splits you chose to keep' },
-        { label: 'May already be covered', value: fmt.num(conflicts.length), note: 'planned keywords, see below' },
+        {
+          label: 'May already be covered',
+          value: fmt.num(conflicts.length),
+          note: 'searches close to a target, see below',
+        },
       ],
     }),
     h(
@@ -509,6 +551,7 @@ function cannibalizationPage(el, ctx, data, nav) {
       )
     ),
     leftAloneSection(ctx, data.leftAlone),
+    togetherSection(ctx, data.together, data.togetherNote),
     conflictSection(ctx, conflicts, data)
   );
 }

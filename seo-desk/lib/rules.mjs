@@ -10,14 +10,14 @@
 import crypto from 'node:crypto';
 import {
   nearPageOne,
-  splitQueries,
   questions,
-  unservedDemand,
   targetKeywords,
   pageMovement,
   groupByQuery,
   isBrand,
 } from '../../scripts/lib/gsc-diagnose-core.mjs';
+import { realQueryCounts } from './query-counts.mjs';
+import { matchKey } from './targets.mjs';
 import { THRESHOLDS, DEFAULT_MONEY_PAGES, EXPECTED_CTR } from './config.mjs';
 import { windows as reportingWindows, daysBetween, todayIso } from './dates.mjs';
 import { longDate, longRange } from './text.mjs';
@@ -42,7 +42,18 @@ const LEGAL_RE = /^\/(privacy|terms|cookie|cookies|legal|disclaimer)(\/|-|$)/i;
 const EVIDENCE_CAP = 5;
 
 // Desk-only numbers that config.mjs does not carry yet; overridable via cfg.thresholds.
-const DEFAULTS = { ENGINE_BING_MIN_IMP: 20, ENGINE_GOOGLE_MIN_IMP: 30, NOT_INDEXED_MIN_DAYS: 14 };
+//   ENGINE_GOOGLE_PAGE_MIN_IMP  Google views a page needs before a missing Bing page row is worth a look
+//   PAGE_MIN_VIEWS              views a page needs for one search before it counts as competing for it,
+//                               as the closest page, or as the page that ranks instead
+//   TOGETHER_RATIO              our pages' views for a search over the real searches at or above which
+//                               the pages are shown together in the same results, not competing
+const DEFAULTS = {
+  ENGINE_BING_MIN_IMP: 20,
+  ENGINE_GOOGLE_PAGE_MIN_IMP: 200,
+  NOT_INDEXED_MIN_DAYS: 14,
+  PAGE_MIN_VIEWS: 10,
+  TOGETHER_RATIO: 1.3,
+};
 
 // Effort signal: higher means cheaper. 0.9 title or link change, 0.6 section, 0.2 new post.
 const EFFORT = {
@@ -143,8 +154,27 @@ function contextOf(snaps, cfg = {}) {
     latestAeo,
     citedPaths,
     pageCur: null,
+    real: undefined,
   };
 }
+
+// The real number of times each search showed the site, from the query-only pull (query-counts.mjs).
+// null when the snapshot has no such pull: a rule then lists nothing that depends on a minimum.
+function realOf(ctx) {
+  if (ctx.real === undefined) ctx.real = realQueryCounts(ctx.gsc, 'cur');
+  return ctx.real;
+}
+const searchKey = (q) =>
+  String(q ?? '')
+    .trim()
+    .toLowerCase();
+const realCount = (real, query) => real?.get(searchKey(query))?.impressions ?? null;
+
+// The live pages as a set, or null when the desk has no live page list (then every page counts).
+const liveOf = (ctx) =>
+  isArr(ctx.local?.livePages) && ctx.local.livePages.length
+    ? new Set(ctx.local.livePages.map((p) => normPath(p.page)))
+    : null;
 
 // page -> {clicks, impressions, position} for one window, from pageDaily.
 function aggregatePages(pageDaily, range) {
@@ -250,6 +280,8 @@ function build(ctx, spec) {
 
 // ---------------------------------------------------------------- Google query rules
 
+const onPageOne = (position) => Math.round(position) <= 10;
+
 export function detectNearPageOne(snaps, cfg) {
   const ctx = contextOf(snaps, cfg);
   if (!isArr(ctx.gsc?.qpCur)) return [];
@@ -259,8 +291,9 @@ export function detectNearPageOne(snaps, cfg) {
       type: 'near-page-one',
       page: r.page,
       query: r.query,
-      title: `"${r.query}" is close to page one`,
-      measured: `From ${rangeText(range)}, ${r.page} showed up ${n0(r.impressions)} times in search results for "${r.query}", at an average position of ${pos1(r.position)}. Page one ends at position 10.`,
+      // An average place of 10 or better is already on page one, only low on it.
+      title: onPageOne(r.position) ? `"${r.query}" is low on page one` : `"${r.query}" is close to page one`,
+      measured: `From ${rangeText(range)}, ${r.page} showed up ${n0(r.impressions)} times in search results for "${r.query}", at an average position of ${pos1(r.position)}. Page one ends at position 10${onPageOne(r.position) ? ', so it is on page one but low on it' : ''}.`,
       action: `Rework ${r.page} so it answers "${r.query}" more directly: put the answer near the top and add a section on what searchers still need.`,
       isPageEdit: true,
       range,
@@ -272,12 +305,61 @@ export function detectNearPageOne(snaps, cfg) {
   );
 }
 
+// Every search that shows two or more of our pages, sorted into what it really is. A search counts
+// when Search Console's query-only pull says it showed the site SPLIT_MIN_IMP times or more (the page
+// rows count one search once per page shown, so their sum is never used for the minimum), at least two
+// pages had PAGE_MIN_VIEWS views or more for it, and the top page holds under SPLIT_MAX_TOP_SHARE of
+// our pages' views. kind:
+//   'no-rank'   no page placed better than position 20: nothing ranks yet, so nothing is split
+//   'together'  our pages' views are TOGETHER_RATIO times the searches or more: the pages showed in the
+//               same results, side by side, so they are not competing
+//   'split'     the pages took turns: cannibalization
+// {query, impressions (real searches), pageViews (our pages' views added up), ratio, topShare,
+// bestPosition, kind, pages (the competing pages, share = of pageViews)}, busiest first. [] without
+// query and page rows, null without the query-only pull.
+export function splitSearches(snaps, cfg) {
+  return splitsOf(contextOf(snaps, cfg));
+}
+
+function splitsOf(ctx) {
+  if (!isArr(ctx.gsc?.qpCur)) return [];
+  const real = realOf(ctx);
+  if (!real) return null;
+  const t = ctx.t;
+  const out = [];
+  for (const q of groupByQuery(ctx.gsc.qpCur)) {
+    if (isBrand(q.query, ctx.brands)) continue;
+    const pages = q.pages.filter((p) => p.impressions > 0);
+    const competing = pages.filter((p) => p.impressions >= t.PAGE_MIN_VIEWS);
+    if (competing.length < t.SPLIT_MIN_PAGES) continue;
+    const searches = realCount(real, q.query);
+    if (!(searches >= t.SPLIT_MIN_IMP)) continue;
+    const pageViews = pages.reduce((a, p) => a + p.impressions, 0);
+    const topShare = pages[0].impressions / pageViews;
+    if (!(topShare < t.SPLIT_MAX_TOP_SHARE)) continue;
+    const bestPosition = Math.min(...pages.map((p) => p.position));
+    const ratio = Math.round((pageViews / searches) * 100) / 100;
+    const kind =
+      bestPosition > t.UNSERVED_MIN_POS ? 'no-rank' : pageViews / searches >= t.TOGETHER_RATIO ? 'together' : 'split';
+    out.push({
+      query: q.query,
+      impressions: searches,
+      pageViews,
+      ratio,
+      topShare,
+      bestPosition,
+      kind,
+      pages: competing.map((p) => ({ ...p, share: p.impressions / pageViews })),
+    });
+  }
+  return out.sort((a, b) => b.impressions - a.impressions || a.query.localeCompare(b.query));
+}
+
 export function detectCompetingPages(snaps, cfg) {
   const ctx = contextOf(snaps, cfg);
-  if (!isArr(ctx.gsc?.qpCur)) return [];
   const range = ctx.cur;
-  return splitQueries(ctx.gsc.qpCur)
-    .filter((q) => !isBrand(q.query, ctx.brands))
+  return (splitsOf(ctx) ?? [])
+    .filter((q) => q.kind === 'split')
     .map((q) => {
       const top = q.pages[0];
       const shown = q.pages.slice(0, EVIDENCE_CAP);
@@ -288,7 +370,7 @@ export function detectCompetingPages(snaps, cfg) {
         page: top.page,
         query: q.query,
         title: `${q.pages.length} of our pages compete for "${q.query}"`,
-        measured: `From ${rangeText(range)}, "${q.query}" showed our site ${n0(q.impressions)} times, split across ${q.pages.length} pages: ${listed}. The top page holds only ${pct0(q.topShare)} of the views.`,
+        measured: `From ${rangeText(range)}, "${q.query}" showed our site ${n0(q.impressions)} times. Its views were split across ${q.pages.length} of our pages with ${ctx.t.PAGE_MIN_VIEWS} or more views each: ${listed}. The top page holds only ${pct0(q.topShare)} of our pages' views for it.`,
         action: `Pick one page to own "${q.query}": strengthen ${top.page}, and change or link the other pages so they stop answering the same question. First check whether the pages take turns rather than compete.`,
         isPageEdit: true,
         range,
@@ -304,8 +386,9 @@ export function detectWrongPage(snaps, cfg) {
   const ctx = contextOf(snaps, cfg);
   if (!isArr(ctx.gsc?.qpCur) || !ctx.registry.length) return [];
   const range = ctx.cur;
+  // The other page needs PAGE_MIN_VIEWS views for the search before it can be said to rank instead.
   return targetKeywords(ctx.registry, ctx.gsc.qpCur)
-    .filter((r) => r.status === 'mismatch')
+    .filter((r) => r.status === 'mismatch' && r.impressions >= ctx.t.PAGE_MIN_VIEWS)
     .map((r) =>
       build(ctx, {
         type: 'wrong-page',
@@ -324,21 +407,38 @@ export function detectWrongPage(snaps, cfg) {
     );
 }
 
+// A search that showed the site UNSERVED_MIN_IMP times or more (the query-only count) while no live page
+// placed at position 20 or better. The page named as closest is the best placed one among the pages
+// with PAGE_MIN_VIEWS views or more for it, never the busiest page and never one with a handful of views.
 export function detectUnserved(snaps, cfg) {
   const ctx = contextOf(snaps, cfg);
   if (!isArr(ctx.gsc?.qpCur)) return [];
+  const real = realOf(ctx);
+  if (!real) return [];
   const range = ctx.cur;
-  const targeted = new Set(ctx.registry.map((r) => String(r.primaryKeyword || '').toLowerCase()).filter(Boolean));
-  return unservedDemand(ctx.gsc.qpCur)
-    .filter((q) => !isBrand(q.query, ctx.brands) && !targeted.has(String(q.query).toLowerCase()))
-    .map((q) => {
-      const closest = q.pages[0]?.page;
-      return build(ctx, {
+  const t = ctx.t;
+  const live = liveOf(ctx);
+  const targeted = new Set(ctx.registry.map((r) => matchKey(r.primaryKeyword)).filter(Boolean));
+  const out = [];
+  for (const q of groupByQuery(ctx.gsc.qpCur)) {
+    if (isBrand(q.query, ctx.brands) || targeted.has(matchKey(q.query))) continue;
+    const searches = realCount(real, q.query);
+    if (!(searches >= t.UNSERVED_MIN_IMP)) continue;
+    const pages = q.pages.filter((p) => p.impressions > 0 && (!live || live.has(normPath(p.page))));
+    const best = pages.length ? Math.min(...pages.map((p) => p.position)) : null;
+    if (best !== null && best <= t.UNSERVED_MIN_POS) continue;
+    const closest = pages
+      .filter((p) => p.impressions >= t.PAGE_MIN_VIEWS)
+      .sort((a, b) => a.position - b.position || b.impressions - a.impressions)[0];
+    const placed =
+      best === null ? 'none of our live pages showed for it' : `our best position was ${pos1(best)}, past page two`;
+    out.push(
+      build(ctx, {
         type: 'unserved',
         page: null,
         query: q.query,
         title: `People search "${q.query}" and none of our pages rank for it`,
-        measured: `From ${rangeText(range)}, "${q.query}" showed our site ${n0(q.impressions)} times, but our best position was ${pos1(q.bestPosition)}, past page two.${closest ? ` The closest page is ${closest}.` : ''}`,
+        measured: `From ${rangeText(range)}, "${q.query}" showed our site ${n0(searches)} times, but ${placed}.${closest ? ` The best placed page with ${t.PAGE_MIN_VIEWS} or more views for it is ${closest.page}, at position ${pos1(closest.position)}.` : ''}`,
         action: `Write a post that answers "${q.query}" directly. Check first that it is not already a section of an existing page.`,
         test: 'Judged by whether the new post shows up in Search Console for this phrase within 28 days of going live.',
         isPageEdit: false,
@@ -347,32 +447,41 @@ export function detectUnserved(snaps, cfg) {
         evidence: [
           {
             query: q.query,
-            impressions: q.impressions,
-            bestPosition: q.bestPosition,
-            pages: q.pages.slice(0, EVIDENCE_CAP),
+            impressions: searches,
+            bestPosition: best,
+            closestPage: closest?.page ?? null,
+            pages: [...pages].sort((a, b) => b.impressions - a.impressions).slice(0, EVIDENCE_CAP),
           },
         ],
-        impressions: q.impressions,
+        impressions: searches,
         distance: 0.5,
-      });
-    });
+      })
+    );
+  }
+  return out.sort((a, b) => b.evidence[0].impressions - a.evidence[0].impressions || a.query.localeCompare(b.query));
 }
 
 export function detectQuestion(snaps, cfg) {
   const ctx = contextOf(snaps, cfg);
   if (!isArr(ctx.gsc?.qpCur)) return [];
+  const real = realOf(ctx);
+  if (!real) return [];
   const range = ctx.cur;
   const out = [];
   for (const group of questions(ctx.gsc.qpCur).groups) {
-    for (const q of group.queries) {
-      if (!q.weak || isBrand(q.query, ctx.brands)) continue;
+    for (const g of group.queries) {
+      if (!g.weak || isBrand(g.query, ctx.brands)) continue;
+      // The minimum and the count are the real searches, not the page rows added up.
+      const searches = realCount(real, g.query);
+      if (!(searches >= ctx.t.QUESTION_MIN_IMP)) continue;
+      const q = { ...g, impressions: searches };
       out.push(
         build(ctx, {
           type: 'question',
           page: group.page,
           query: q.query,
           title: `Readers ask "${q.query}" and we answer it weakly`,
-          measured: `From ${rangeText(range)}, "${q.query}" showed ${group.page} ${n0(q.impressions)} times, and our best position was ${pos1(q.bestPosition)}, so almost nobody sees our answer.`,
+          measured: `From ${rangeText(range)}, "${q.query}" showed our site ${n0(q.impressions)} times, mostly with ${group.page}, and our best position was ${pos1(q.bestPosition)}, so almost nobody sees our answer.`,
           action: `Add a short, direct answer to "${q.query}" under its own heading on ${group.page}.`,
           isPageEdit: true,
           range,
@@ -617,7 +726,6 @@ export function detectEngineGap(snaps, cfg) {
   const googleQueries = new Set();
   for (const r of googleRows || []) googleQueries.add(String(r.query).toLowerCase());
   for (const r of isArr(ctx.gsc?.queryCur) ? ctx.gsc.queryCur : []) googleQueries.add(String(r.query).toLowerCase());
-  const bingSet = new Set((bingQueries || []).map((r) => String(r.query).toLowerCase()));
   // Bing snapshots now sum each search over Google's 28 days; older ones summed everything.
   const sameDates = Boolean(ctx.bing?.windows?.cur);
 
@@ -650,28 +758,53 @@ export function detectEngineGap(snaps, cfg) {
     }
   }
 
-  // Google shows a money or pillar page, Bing does not.
-  if (bingQueries && googleRows) {
-    for (const q of groupByQuery(googleRows)) {
-      if (q.impressions < ctx.t.ENGINE_GOOGLE_MIN_IMP || isBrand(q.query, ctx.brands)) continue;
-      if (bingSet.has(String(q.query).toLowerCase())) continue;
-      const top = q.pages[0].page;
-      if (importanceOf(ctx, top) < 0.7) continue;
+  // Google shows a page often, and Bing's page report for the same dates has no row for it. Page level,
+  // one card per page: a search missing from Bing's search report is never evidence on its own, because
+  // that report lists only a small part of what Bing shows.
+  const bingPages = isArr(ctx.bing?.pages) && ctx.bing.pages.length ? ctx.bing.pages : null;
+  const googlePages = pageCurOf(ctx);
+  if (bingPages && googlePages) {
+    const onBing = new Set(bingPages.map((p) => pathFromUrl(p.page)));
+    const live = liveOf(ctx);
+    const reportViews = bingPages.reduce((a, p) => a + (Number(p.impressions) || 0), 0);
+    const bingRange = ctx.bing?.windows?.cur ?? null;
+    const siteViews = isArr(ctx.bing?.siteDaily)
+      ? ctx.bing.siteDaily
+          .filter((r) => !bingRange || (r.date >= bingRange.start && r.date <= bingRange.end))
+          .reduce((a, r) => a + (Number(r.impressions) || 0), 0)
+      : 0;
+    // A share needs 30 views under it.
+    const coverage =
+      siteViews >= 30
+        ? `That report lists ${n0(reportViews)} of the ${n0(siteViews)} times Bing showed our site (${pct0(Math.min(1, reportViews / siteViews))}), so a page missing from it is a lead to check, not proof.`
+        : 'Bing does not say how much of what it shows that report lists, so a page missing from it is a lead to check, not proof.';
+    for (const p of googlePages.values()) {
+      if (p.impressions < ctx.t.ENGINE_GOOGLE_PAGE_MIN_IMP || onBing.has(p.page)) continue;
+      if (live && !live.has(p.page)) continue;
       out.push(
         build(ctx, {
           type: 'engine-gap',
-          page: top,
-          query: q.query,
-          title: `Google shows ${top} for "${q.query}" but Bing does not`,
-          measured: `From ${rangeText(range)}, "${q.query}" showed ${top} ${n0(q.impressions)} times on Google, and the search is missing from Bing's report${sameDates ? ' for the same dates' : ''}.`,
-          action: `Check that ${top} is indexed in Bing, submit it through Bing Webmaster if it is not, and compare its title with what Bing shows.`,
-          test: `Judged by whether "${q.query}" appears in Bing's query report within 28 days of the fix.`,
+          page: p.page,
+          query: '',
+          title: `Google shows ${p.page} but Bing's page report has no row for it`,
+          measured: `From ${rangeText(range)}, Google showed ${p.page} ${n0(p.impressions)} times, at an average position of ${pos1(p.position)}. Bing's page report${sameDates ? ' for the same dates' : ', which runs back further than 28 days,'} has no row for it. ${coverage}`,
+          action: `Hypothesis: Bing may not have this page in its index. Check this page in Bing Webmaster Tools (URL inspection). If Bing has not indexed it, submit it.`,
+          test: "Judged by whether the page appears in Bing's page report within two weeks.",
           isPageEdit: false,
           range,
           source: 'gsc',
-          evidence: [{ query: q.query, impressions: q.impressions, pages: q.pages.slice(0, EVIDENCE_CAP) }],
-          impressions: q.impressions,
+          evidence: [
+            {
+              page: p.page,
+              impressions: p.impressions,
+              position: p.position,
+              bingReportViews: reportViews,
+              bingSiteViews: siteViews,
+            },
+          ],
+          impressions: p.impressions,
           distance: 0.5,
+          effort: 0.9,
         })
       );
     }

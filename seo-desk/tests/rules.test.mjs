@@ -13,20 +13,43 @@ const cfg = { thresholds: THRESHOLDS, moneyPages: DEFAULT_MONEY_PAGES, brands: [
 const CUR_DAY = '2026-10-20';
 const PREV_DAY = '2026-09-20';
 
-const gscData = (over = {}) => ({
-  siteDaily: [],
-  pageDaily: [],
-  qpCur: [],
-  qpPrev: [],
-  qp90: [],
-  queryCur: [],
-  queryPrev: [],
-  countries: [],
-  devices: [],
-  index: [],
-  windows: { cur: W.cur, prev: W.prev, d90: W.d90 },
-  ...over,
-});
+// The query-only rows a real pull would carry for these query and page rows when each search showed
+// one page per result (the views of its pages added up). A test that needs the real count to differ
+// passes queryCur itself; queryCur: null is a snapshot without the query-only pull.
+const realFrom = (rows) => {
+  const m = new Map();
+  for (const r of rows ?? []) {
+    const a = m.get(r.query) ?? { query: r.query, clicks: 0, impressions: 0, posW: 0 };
+    a.clicks += r.clicks || 0;
+    a.impressions += r.impressions || 0;
+    a.posW += (r.position || 0) * (r.impressions || 0);
+    m.set(r.query, a);
+  }
+  return [...m.values()].map((a) => ({
+    query: a.query,
+    clicks: a.clicks,
+    impressions: a.impressions,
+    position: a.impressions ? a.posW / a.impressions : 0,
+  }));
+};
+const gscData = (over = {}) => {
+  const data = {
+    siteDaily: [],
+    pageDaily: [],
+    qpCur: [],
+    qpPrev: [],
+    qp90: [],
+    queryCur: [],
+    queryPrev: [],
+    countries: [],
+    devices: [],
+    index: [],
+    windows: { cur: W.cur, prev: W.prev, d90: W.d90 },
+    ...over,
+  };
+  if (!('queryCur' in over)) data.queryCur = realFrom(data.qpCur);
+  return data;
+};
 const withGsc = (over) => ({ gsc: gscData(over), bing: null, ga4: null, clarity: null, local: null });
 const localData = (over = {}) => ({
   verdicts: [],
@@ -318,13 +341,14 @@ test('ai-gap reads only the latest line and needs an absent keyword with a cited
 
 // ---------------------------------------------------------------- engine-gap
 
-test('engine-gap fires both ways and respects the gates, brands and page importance', () => {
+test("engine-gap fires both ways: a Bing search Google lacks, and a busy Google page Bing's page report lacks", () => {
   const snaps = withGsc({
-    qpCur: [
-      qp('google only money', '/pricing', 30, 9),
-      qp('google only blog', '/blog/a', 80, 9),
-      qp('google thin', '/pricing', 29, 9),
-      qp('shared', '/pricing', 100, 9),
+    qpCur: [qp('shared', '/pricing', 100, 9)],
+    pageDaily: [
+      pd('/pricing', CUR_DAY, 0, 250, 12),
+      pd('/blog/a', CUR_DAY, 0, 400, 30),
+      pd('/blog/thin', CUR_DAY, 0, 199, 9),
+      pd('/blog/on-bing', CUR_DAY, 0, 900, 4),
     ],
   });
   snaps.bing = {
@@ -335,20 +359,24 @@ test('engine-gap fires both ways and respects the gates, brands and page importa
       { query: 'm7 bing brand', clicks: 0, impressions: 90, position: 5 },
       { query: 'shared', clicks: 0, impressions: 50, position: 5 },
     ],
-    pages: [],
+    pages: [{ page: '/blog/on-bing', clicks: 0, impressions: 3 }],
     crawlIssues: [],
     links: { total: 0, history: [] },
   };
-  snaps.local = localData({
-    registry: [{ slug: 'a', type: 'post', url: '/blog/a', primaryKeyword: 'x', pillar: null }],
-  });
   const out = rules.detectEngineGap(snaps, cfg);
-  const byQuery = Object.fromEntries(out.map((o) => [o.query, o]));
-  assert.deepEqual(Object.keys(byQuery).sort(), ['bing only', 'google only money']);
-  assert.equal(byQuery['bing only'].page, null);
-  assert.equal(byQuery['bing only'].source, 'bing');
-  assert.equal(byQuery['google only money'].page, '/pricing');
-  assert.equal(byQuery['google only money'].isPageEdit, false);
+  const bingSide = out.filter((o) => o.source === 'bing');
+  assert.deepEqual(
+    bingSide.map((o) => o.query),
+    ['bing only']
+  );
+  assert.equal(bingSide[0].page, null);
+  // Page level: one card per page, whatever its importance, at 200 Google views or more.
+  const googleSide = out.filter((o) => o.source === 'gsc');
+  assert.deepEqual(googleSide.map((o) => o.page).sort(), ['/blog/a', '/pricing']);
+  for (const o of googleSide) {
+    assert.equal(o.query, '');
+    assert.equal(o.isPageEdit, false);
+  }
 });
 
 test('engine-gap does not flag every Bing query when the Search Console pull is empty', () => {
@@ -637,4 +665,198 @@ test('importance is 1 for a money page, 0.7 for a pillar, 0.5 for a registry tar
   });
   const imp = Object.fromEntries(rules.detectNearPageOne(snaps, cfg).map((o) => [o.page, o.signals.importance]));
   assert.deepEqual(imp, { '/pricing': 1, '/pillar-page': 0.7, '/blog/target': 0.5, '/blog/other': 0.3 });
+});
+
+// ================================================================ the audit of 14 November (package 2)
+
+const bingWith = (pages, siteDaily = []) => ({
+  siteDaily,
+  queries: [],
+  pages,
+  windows: { cur: W.cur },
+  crawlIssues: [],
+  links: { total: 0, history: [] },
+});
+
+test('B2: a split needs its real searches over the minimum, never the sum of page rows', () => {
+  // Two pages each shown 20 times: the page rows add up to 40, but the search was made 26 times.
+  const qpCur = [qp('float pool nurses', '/blog/a', 20, 6), qp('float pool nurses', '/blog/b', 20, 7)];
+  const out = rules.detectCompetingPages(
+    withGsc({ qpCur, queryCur: [{ query: 'float pool nurses', clicks: 0, impressions: 26, position: 6 }] }),
+    cfg
+  );
+  assert.deepEqual(out, []);
+  // Without the query-only pull nothing that depends on the minimum is listed.
+  assert.deepEqual(rules.detectCompetingPages(withGsc({ qpCur, queryCur: null }), cfg), []);
+  assert.equal(rules.splitSearches(withGsc({ qpCur, queryCur: null }), cfg), null);
+});
+
+test('B3: pages shown together (views 1.3 times the searches or more) are not cannibalization', () => {
+  const qpCur = [qp('night shift rota ideas', '/blog/a', 60, 4), qp('night shift rota ideas', '/blog/b', 50, 6)];
+  const together = withGsc({
+    qpCur,
+    queryCur: [{ query: 'night shift rota ideas', impressions: 60, clicks: 0, position: 4 }],
+  });
+  assert.deepEqual(rules.detectCompetingPages(together, cfg), []);
+  const [s] = rules.splitSearches(together, cfg);
+  assert.equal(s.kind, 'together');
+  assert.equal(s.impressions, 60);
+  assert.equal(s.pageViews, 110);
+  assert.ok(s.ratio >= 1.3);
+  // Just under 1.3 is a split.
+  const split = withGsc({
+    qpCur,
+    queryCur: [{ query: 'night shift rota ideas', impressions: 85, clicks: 0, position: 4 }],
+  });
+  assert.equal(rules.splitSearches(split, cfg)[0].kind, 'split');
+  assert.equal(rules.detectCompetingPages(split, cfg).length, 1);
+});
+
+test('B3: a split where no page ranks better than position 20 is not cannibalization', () => {
+  const qpCur = [qp('rota for a tiny ward', '/blog/a', 30, 24), qp('rota for a tiny ward', '/blog/b', 25, 31)];
+  const snaps = withGsc({ qpCur });
+  assert.deepEqual(rules.detectCompetingPages(snaps, cfg), []);
+  assert.equal(rules.splitSearches(snaps, cfg)[0].kind, 'no-rank');
+});
+
+test('W3 and W1: only pages with 10 or more views for the search count as competing', () => {
+  const qpCur = [
+    qp('shift bidding rules', '/blog/a', 30, 6),
+    qp('shift bidding rules', '/blog/b', 20, 8),
+    qp('shift bidding rules', '/blog/c', 2, 9),
+    qp('shift bidding rules', '/blog/d', 1, 9),
+  ];
+  const [o] = rules.detectCompetingPages(withGsc({ qpCur }), cfg);
+  assert.match(o.title, /^2 of our pages compete/);
+  assert.deepEqual(
+    o.evidence.map((p) => p.page),
+    ['/blog/a', '/blog/b']
+  );
+  assert.match(o.measured, /showed our site 53 times/);
+  // One page over 10 views and one under is not a split at all.
+  const lone = [
+    qp('lone page search', '/blog/a', 30, 6),
+    qp('lone page search', '/blog/b', 9, 8),
+    qp('lone page search', '/blog/c', 9, 8),
+  ];
+  assert.deepEqual(rules.detectCompetingPages(withGsc({ qpCur: lone }), cfg), []);
+});
+
+test('B9: the wrong page ranks only with 10 or more views, and never says "1 times"', () => {
+  const registry = [{ slug: 'a', type: 'post', url: '/blog/a', primaryKeyword: 'kw thin mismatch', pillar: null }];
+  const thin = withGsc({ qpCur: [qp('kw thin mismatch', '/blog/b', 1, 6)] });
+  thin.local = localData({ registry });
+  assert.deepEqual(rules.detectWrongPage(thin, cfg), []);
+  const nine = withGsc({ qpCur: [qp('kw thin mismatch', '/blog/b', 9, 6)] });
+  nine.local = localData({ registry });
+  assert.deepEqual(rules.detectWrongPage(nine, cfg), []);
+  const ten = withGsc({ qpCur: [qp('kw thin mismatch', '/blog/b', 10, 6)] });
+  ten.local = localData({ registry });
+  const [o] = rules.detectWrongPage(ten, cfg);
+  assert.match(o.measured, /10 times/);
+});
+
+test('B2 and B8: an unserved card counts real searches and names the best placed page with 10 views', () => {
+  // The page rows add up to 34; the search was made 17 times, under the minimum of 30.
+  const doubled = withGsc({
+    qpCur: [qp('cross cover rules', '/blog/a', 17, 40), qp('cross cover rules', '/blog/b', 17, 45)],
+    queryCur: [{ query: 'cross cover rules', impressions: 17, clicks: 0, position: 42 }],
+  });
+  assert.deepEqual(rules.detectUnserved(doubled, cfg), []);
+  // The busiest page sits at 62; a page with 2 views sits at 28; the best placed page with 10 views is at 35.
+  const snaps = withGsc({
+    qpCur: [
+      qp('rural ward cover', '/blog/busy', 40, 62),
+      qp('rural ward cover', '/blog/tiny', 2, 28),
+      qp('rural ward cover', '/blog/placed', 12, 35),
+    ],
+  });
+  const [o] = rules.detectUnserved(snaps, cfg);
+  assert.match(o.measured, /showed our site 54 times/);
+  assert.match(o.measured, /\/blog\/placed, at position 35\.0/);
+  assert.doesNotMatch(o.measured, /\/blog\/busy/);
+});
+
+test('B5: a content gap needs no live page at position 20 or better; a page that is not live does not count', () => {
+  const rows = [qp('weekend cover plan', '/blog/old', 30, 5), qp('weekend cover plan', '/blog/live', 30, 33)];
+  const snaps = withGsc({ qpCur: rows });
+  snaps.local = localData({ livePages: [{ page: '/blog/live' }] });
+  const [o] = rules.detectUnserved(snaps, cfg);
+  assert.equal(o.query, 'weekend cover plan');
+  snaps.local = localData({ livePages: [{ page: '/blog/live' }, { page: '/blog/old' }] });
+  assert.deepEqual(rules.detectUnserved(snaps, cfg), []);
+});
+
+test('B2: a question card needs 10 real searches, and says how often the search showed our site', () => {
+  const q = 'how do small wards plan nurse cover at night';
+  const doubled = withGsc({
+    qpCur: [qp(q, '/blog/a', 5, 30), qp(q, '/blog/b', 5, 32)],
+    queryCur: [{ query: q, impressions: 9, clicks: 0, position: 31 }],
+  });
+  assert.deepEqual(rules.detectQuestion(doubled, cfg), []);
+  const ok = withGsc({
+    qpCur: [qp(q, '/blog/a', 6, 30), qp(q, '/blog/b', 6, 32)],
+    queryCur: [{ query: q, impressions: 11, clicks: 0, position: 31 }],
+  });
+  const [o] = rules.detectQuestion(ok, cfg);
+  assert.match(o.measured, /showed our site 11 times/);
+  assert.deepEqual(rules.detectQuestion(withGsc({ qpCur: ok.gsc.qpCur, queryCur: null }), cfg), []);
+});
+
+test('B14: a runner-up at position 10 or better is low on page one; 11 to 20 is close to page one', () => {
+  const out = rules.detectNearPageOne(
+    withGsc({ qpCur: [qp('on page one already', '/blog/a', 40, 9.4), qp('just off page one', '/blog/a', 40, 12)] }),
+    cfg
+  );
+  const by = Object.fromEntries(out.map((o) => [o.query, o]));
+  assert.match(by['on page one already'].title, /is low on page one/);
+  assert.doesNotMatch(by['on page one already'].title, /close to page one/);
+  assert.match(by['just off page one'].title, /is close to page one/);
+});
+
+test('B1: the Google side of engine-gap is one card per page, quotes the page and says what Bing covers', () => {
+  const snaps = withGsc({
+    pageDaily: [pd('/pricing', CUR_DAY, 0, 300, 29.24), pd('/pricing', '2026-10-21', 0, 100, 29.24)],
+    qpCur: [
+      qp('rival search one', '/pricing', 32, 29),
+      qp('rival search one', '/blog/x', 15, 9),
+      qp('rival search two', '/pricing', 45, 54),
+    ],
+  });
+  const days = [
+    { date: '2026-10-20', clicks: 0, impressions: 600 },
+    { date: '2026-10-21', clicks: 0, impressions: 400 },
+  ];
+  snaps.bing = bingWith(
+    [
+      { page: '/blog/x', clicks: 0, impressions: 150 },
+      { page: '/', clicks: 0, impressions: 30 },
+    ],
+    days
+  );
+  snaps.local = localData({ livePages: [{ page: '/pricing' }, { page: '/blog/x' }] });
+  const out = rules.detectEngineGap(snaps, cfg).filter((o) => o.source === 'gsc');
+  assert.equal(out.length, 1);
+  const [o] = out;
+  assert.equal(o.page, '/pricing');
+  assert.equal(o.id, rules.opportunityId('engine-gap', '/pricing', ''));
+  assert.match(o.measured, /Google showed \/pricing 400 times/);
+  assert.match(o.measured, /average position of 29\.2/);
+  assert.match(o.measured, /18%/); // 180 of the 1,000 times Bing showed the site
+  assert.match(o.action, /Bing Webmaster Tools/);
+  assert.match(o.action, /^Hypothesis:/);
+  assert.match(o.test, /within two weeks/);
+  assert.equal(o.isPageEdit, false);
+  // A missing Bing search is never evidence on its own.
+  assert.doesNotMatch(o.measured, /rival search/);
+  // No Bing page report, or a page that is not live: no card.
+  assert.deepEqual(
+    rules.detectEngineGap({ ...snaps, bing: bingWith([], days) }, cfg).filter((x) => x.source === 'gsc'),
+    []
+  );
+  snaps.local = localData({ livePages: [{ page: '/blog/x' }] });
+  assert.deepEqual(
+    rules.detectEngineGap(snaps, cfg).filter((x) => x.source === 'gsc'),
+    []
+  );
 });

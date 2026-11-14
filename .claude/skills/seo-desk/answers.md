@@ -64,6 +64,10 @@ Use the item's own `recommendation` and `test`. The Growing lists (`pages.growin
   it only if he asks.
 - Content gaps: lead with `title` and `why`, then the pages in `linkFrom` that could link to it on
   day one (skip frozen ones or give their date). A new post is not a page edit.
+- A search sits in one list only, so never add one list's count to another's for "how many
+  searches need work". An engine-gap card from `source` gsc is about a page, not a search: Bing's
+  page report has no row for a busy Google page. It is a lead to check in Bing Webmaster Tools, not
+  proof, and not a page edit.
 
 ## Did it work, and what we have learned
 
@@ -115,7 +119,9 @@ phrase' was shown 200 times, split three ways: the main page 50 percent, one blo
 another 20 percent. The page that should win is the main page. Google may be unsure which page to
 show. Telling the pages apart may help; it would be judged by the 28-day before and after verdict.
 The blog post is eligible from 2 December." If `likelyFalseAlarm` is true: "This one is probably
-on purpose: the main page and its own post cover the same ground."
+on purpose: the main page and its own post cover the same ground." The searches in `together[]` are
+not cannibalization: our pages showed side by side in the same results, so say so and suggest no
+merge.
 
 **3. "Why did this page drop?"** Read `/api/insights/decay`, find the page. "Decay means a page is
 being shown less than before. This page was shown 380 times in the last 28 days against 650 in the

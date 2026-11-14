@@ -17,7 +17,7 @@ import {
   rangeOf,
   invalidate,
 } from '../model.mjs';
-import { competingList, competingId, splitEdit } from '../work.mjs';
+import { competingList, competingId, splitEdit, splitGroups, activeOpps } from '../work.mjs';
 import { itemAction, editGuards, editRefused } from '../actions.mjs';
 import { windowsFor, pagesTable, queriesTable } from '../search.mjs';
 import { n0, round1 } from '../fmt.mjs';
@@ -29,9 +29,19 @@ import { addDays } from '../../dates.mjs';
 import { longDate } from '../../text.mjs';
 import { brief } from '../../brief.mjs';
 import { loadPosts, linkSuggestions } from '../../links.mjs';
-import { norm, foldPage, loadTargets, saveTargets, MAX_SECONDARY, MIN_DISCOVERED_IMPRESSIONS } from '../../targets.mjs';
+import {
+  norm,
+  matchKey,
+  foldPage,
+  loadTargets,
+  saveTargets,
+  MAX_SECONDARY,
+  MIN_DISCOVERED_IMPRESSIONS,
+} from '../../targets.mjs';
+import { opportunityId } from '../../rules.mjs';
 import { groupTopics, tokens } from '../../topics.mjs';
 import { isBrand } from '../../../../scripts/lib/gsc-diagnose-core.mjs';
+import { realQueryCounts } from '../../query-counts.mjs';
 import {
   TERMS,
   SECONDARY,
@@ -86,6 +96,17 @@ function eligibilityOfPages(model, pages) {
 
 const heading = (type) => ({ term: TERMS[type].term, explain: TERMS[type].explain });
 
+// A Search Console snapshot without the query-only pull has no real per-search counts, so every list
+// that needs a minimum number of searches is empty. The envelope then says so in its warnings.
+export const COUNTS_MISSING =
+  'This Search Console snapshot has no per-search counts (the pull of searches without pages), so the lists that need a minimum number of searches are empty until the next pull.';
+export const countsMissing = (model) => Boolean(model.data.gsc) && !realQueryCounts(model.data.gsc, 'cur');
+function insightEnvelope(model, opts) {
+  const env = envelope(model, opts);
+  if (!countsMissing(model)) return env;
+  return { ...env, warnings: [...(env.warnings ?? []), COUNTS_MISSING] };
+}
+
 // The recommendation without its "Hypothesis:" label, for a brief that already labels it.
 const unlabelled = (text) => {
   const t = String(text ?? '')
@@ -122,35 +143,102 @@ const CLUSTER_TEST = 'Judged by the 28-day before and after verdict if you add t
 const clusterRecommendation = (page) =>
   `Hypothesis: this may already be covered by ${page}, so it may be better added there as a section than written as a new page.`;
 
-// {page, keyword, recommendation, test} when a search that is not a target is the same as, or a more
-// specific variant of, the target keyword of a LIVE page in its topic: every meaningful word of that
-// target appears in the search (the topic tokenising and stemming). A broader search (fewer words than
-// the target), a page that is not live and an unrelated search are never conflicts. Else null.
+// The page Google showed most for each search (from the 28 day query and page rows), once per model.
+const topPageOf = (model) =>
+  memo(model, 'insights:top-page', () => {
+    const best = new Map();
+    for (const r of model.data.gsc?.qpCur ?? []) {
+      const k = norm(r.query);
+      const had = best.get(k);
+      if (!had || (r.impressions || 0) > had.impressions)
+        best.set(k, { page: foldPage(r.page), impressions: r.impressions || 0 });
+    }
+    return best;
+  });
+
+// {page, keyword, recommendation, test} when a search that is not a target (in any spelling, matchKey)
+// is the same as, or a more specific variant of, the target keyword of a LIVE page: every meaningful
+// word of that target appears in the search (topics.mjs tokens, which keep a one-digit number, so "8
+// hour shift" never claims a 12 hour search). When several targets qualify, the one sharing the most
+// words wins, then the page the search already ranks on. A broader search (fewer words than the
+// target), a page that is not live and an unrelated search are never conflicts. Else null.
 export function clusterConflictOf(model, query) {
   if (targetKeywords(model).has(norm(query))) return null;
-  const topic = topicOfSearch(model).get(norm(query));
-  if (!topic?.targeted) return null;
+  if (model.targets.some((t) => matchKey(t.keyword) && matchKey(t.keyword) === matchKey(query))) return null;
   const words = new Set(tokens(query));
   const live = liveSet(model);
-  for (const t of topic.targets) {
+  const ranksOn = topPageOf(model).get(norm(query))?.page ?? null;
+  let best = null;
+  for (const t of model.targets) {
     if (!t.page || !live.has(foldPage(t.page))) continue;
     const need = tokens(t.keyword);
-    if (need.length && need.every((w) => words.has(w)))
-      return {
-        page: foldPage(t.page),
-        keyword: t.keyword,
-        recommendation: clusterRecommendation(foldPage(t.page)),
-        test: CLUSTER_TEST,
-      };
+    if (!need.length || !need.every((w) => words.has(w))) continue;
+    const c = { page: foldPage(t.page), keyword: t.keyword, n: need.length };
+    if (!best || c.n > best.n || (c.n === best.n && c.page === ranksOn && best.page !== ranksOn)) best = c;
   }
-  return null;
+  return best
+    ? { page: best.page, keyword: best.keyword, recommendation: clusterRecommendation(best.page), test: CLUSTER_TEST }
+    : null;
 }
 
 // ---------------------------------------------------------------- open opportunities
 
 // An opportunity the founder has not dealt with (the same set the week page counts).
 export const isOpen = (model, opp) => OPEN_STATUSES.includes(itemState(model, opp.id).status);
-const openOfType = (model, type) => model.opps.filter((o) => o.type === type && isOpen(model, o));
+// From the active opportunities (work.mjs activeOpps: a left alone split and a search another list owns
+// are out), so every insight list, All opportunities and the sidebar hold the same cards.
+const openOfType = (model, type) => activeOpps(model).filter((o) => o.type === type && isOpen(model, o));
+
+// ---------------------------------------------------------------- one owner per search
+
+// Every search has one owner, so the founder never gets two cards about one search. In order:
+//   1. a real split (cannibalization) owns its search;
+//   2. then the wrong page ranking;
+//   3. for a page and a search: a runner-up when the search is that page's target (by matchKey),
+//      otherwise the secondary keyword (secondary keywords never hold a target, and one search is a
+//      secondary keyword of one page only), never both;
+//   4. then a content gap, when the rule found no live page at position 20 or better, unless the search
+//      sits close to a live page's target (a cluster conflict: a section of that page, not a new post);
+//   5. then a weakly answered question;
+//   6. the cluster conflict list keeps only the searches nothing above holds.
+// A runner-up whose page and search carry a finished or dismissed secondary keyword stays closed too.
+// Returns {drop: Set of opportunity ids another list owns, owner: Map(search -> owning kind)}.
+export function ownership(model) {
+  return memo(model, 'insights:ownership', () => {
+    const k = (q) => norm(q);
+    const owner = new Map();
+    const take = (q, kind) => {
+      if (!owner.has(k(q))) owner.set(k(q), kind);
+    };
+    for (const c of competingList(model)) take(c.query, 'competing-pages');
+    const drop = new Set();
+    const ofType = (t) => model.opps.filter((o) => o.type === t && o.query);
+    for (const o of ofType('wrong-page')) {
+      if (owner.has(k(o.query))) drop.add(o.id);
+      else take(o.query, 'wrong-page');
+    }
+    const secondary = secondaryCandidates(model);
+    for (const c of secondary) take(c.query, 'secondary');
+    const closedSecondary = (o) => {
+      const st = itemState(model, secondaryId(foldPage(o.page), o.query)).status;
+      return st === 'done' || st === 'ignored';
+    };
+    for (const o of ofType('near-page-one')) {
+      const held = owner.get(k(o.query));
+      if ((held && held !== 'near-page-one') || closedSecondary(o)) drop.add(o.id);
+    }
+    for (const o of ofType('near-page-one')) if (!drop.has(o.id)) take(o.query, 'near-page-one');
+    for (const o of ofType('unserved')) {
+      if (owner.has(k(o.query)) || clusterConflictOf(model, o.query)) drop.add(o.id);
+      else take(o.query, 'unserved');
+    }
+    for (const o of ofType('question')) {
+      if (owner.has(k(o.query))) drop.add(o.id);
+      else take(o.query, 'question');
+    }
+    return { drop, owner };
+  });
+}
 
 // ---------------------------------------------------------------- cannibalization
 
@@ -203,7 +291,8 @@ function cannibalizationBase(model) {
         })),
         atRisk: atRiskOf(model, c, shouldWin),
         ...falseAlarmOf({
-          pages: c.pages.map((p) => p.page),
+          query: c.query,
+          pages: c.pages.map((p) => ({ page: p.page, impressions: p.impressions })),
           registry: model.data.local?.registry ?? [],
         }),
         note: c.note,
@@ -228,7 +317,7 @@ function cannibalizationAll(model) {
       const recommendation = recommendationOf({ choice, shouldWin: c.shouldWin, others });
       const test = cannibalizationTest(c.query);
       const measured =
-        `"${c.query}" was shown ${n0(c.impressions)} ${c.impressions === 1 ? 'time' : 'times'} from ${model.range.text}, split across ${c.pages.length} of our pages. ${c.note ?? ''}`.trim();
+        `"${c.query}" showed our site ${n0(c.impressions)} ${c.impressions === 1 ? 'time' : 'times'} from ${model.range.text}, and its views were split across ${c.pages.length} of our pages with 10 or more views each. ${c.note ?? ''}`.trim();
       return {
         ...c,
         choice,
@@ -260,14 +349,32 @@ function cannibalizationAll(model) {
 // The ones that still need a decision: a search the founder chose to leave alone is not one of them.
 export const cannibalizationItems = (model) => cannibalizationAll(model).filter((c) => c.choice !== LEAVE_ALONE);
 
+// Searches where our pages are shown together in the same results (our pages' views are 1.3 times the
+// searches or more): not cannibalization, so no choice, no Done and no merge. Kept to be seen.
+export const TOGETHER_NOTE =
+  'Shown together, not competing: Google showed two or more of our pages in the same results for these searches, so the pages add views rather than split them. Nothing to merge.';
+function togetherItems(model) {
+  return splitGroups(model).together.map((c) => ({
+    id: competingId(c),
+    query: c.query,
+    impressions: c.impressions,
+    pageViews: c.pageViews,
+    ratio: c.ratio,
+    pages: c.pages.map((p) => ({ page: p.page, impressions: p.impressions, position: round1(p.position) })),
+    note: `"${c.query}" showed our site ${n0(c.impressions)} times from ${model.range.text}, and our pages were shown ${n0(c.pageViews)} times between them, ${c.ratio} times the searches. So they mostly appeared together in the same results.`,
+  }));
+}
+
 export function cannibalizationView(model) {
   const items = withPriority(cannibalizationItems(model), (it) => it.impressions);
   return {
-    ...envelope(model, { need: ['gsc'] }),
+    ...insightEnvelope(model, { need: ['gsc'] }),
     ...heading('competing-pages'),
     priorityNote: PRIORITY_NOTE,
     count: items.length,
     items,
+    together: togetherItems(model),
+    togetherNote: TOGETHER_NOTE,
     // Split searches the founder chose to leave alone, kept so the choice can be undone.
     leftAlone: cannibalizationAll(model).filter((c) => c.choice === LEAVE_ALONE),
     // Searches with no page yet that fall in a topic an existing page already targets.
@@ -299,7 +406,7 @@ export const runnerUpItems = (model) =>
 
 export function runnerUpView(model) {
   const items = runnerUpItems(model);
-  return { ...envelope(model, { need: ['gsc'] }), ...heading('near-page-one'), count: items.length, items };
+  return { ...insightEnvelope(model, { need: ['gsc'] }), ...heading('near-page-one'), count: items.length, items };
 }
 
 // ---------------------------------------------------------------- content gaps
@@ -321,7 +428,9 @@ const gapRows = (opps) =>
 // text and could link to a page written for it.
 // The searches the rules call unserved that are really a section of a page a topic already points at
 // (a cluster conflict) are left out: they are secondary keywords or sections, not new pages.
-const unservedOpps = (model) => model.opps.filter((o) => o.type === 'unserved' && !clusterConflictOf(model, o.query));
+// The content gaps are the active unserved opportunities: ownership() already left out a search another
+// list owns and a cluster conflict, so Content gaps and All opportunities hold the same searches.
+const unservedOpps = (model) => activeOpps(model).filter((o) => o.type === 'unserved');
 
 export function gapItems(model) {
   return memo(model, 'insights:gaps', () => {
@@ -468,7 +577,7 @@ function gapAction(id, body) {
 
 export function gapsView(model) {
   const items = gapItems(model);
-  return { ...envelope(model, { need: ['gsc'] }), ...heading('unserved'), count: items.length, items };
+  return { ...insightEnvelope(model, { need: ['gsc'] }), ...heading('unserved'), count: items.length, items };
 }
 
 // ---------------------------------------------------------------- decay
@@ -657,6 +766,9 @@ export function keywordTable(model) {
         ...(seen ? ['search-console'] : []),
       ];
     };
+    // Without the per-search counts a times-shown figure would be page rows added up (a search counted
+    // once per page shown), so the column is left empty and no search is discovered (that needs a minimum).
+    const missing = countsMissing(model);
     const targeted = targetRows(model).rows.map((r) => ({
       keyword: r.keyword,
       kind: 'targeted',
@@ -666,15 +778,23 @@ export function keywordTable(model) {
       source: sourcesOf(r, r.position !== null),
       volume: adopted.get(norm(r.keyword))?.volume ?? null,
       position: r.position,
-      impressions: r.impressions,
+      impressions: missing ? null : r.impressions,
       rankingPage: r.rankingPage,
       flags: flagsOf(r.keyword, r.label === 'ranks elsewhere' ? ['wrong-page'] : []),
       clusterConflict: null,
     }));
-    const found = discoveredList(model).map((d) => ({
+    const { owner } = ownership(model);
+    const found = (missing ? [] : discoveredList(model)).map((d) => ({
       keyword: d.query,
       kind: 'discovered',
-      status: 'pending',
+      // A live page already on page one for it: no page targets it, but one ranks (audit W4).
+      status:
+        d.rankingPage &&
+        live.has(foldPage(d.rankingPage)) &&
+        Number.isFinite(d.position) &&
+        Math.round(d.position) <= 10
+          ? 'ranks'
+          : 'pending',
       mappedTo: null,
       origin: 'discovered',
       source: ['search-console'],
@@ -683,7 +803,8 @@ export function keywordTable(model) {
       impressions: d.impressions,
       rankingPage: d.rankingPage ? foldPage(d.rankingPage) : null,
       flags: flagsOf(d.query),
-      clusterConflict: clusterConflictOf(model, d.query),
+      // Another list owns the search (one owner per search): it is not a cluster conflict as well.
+      clusterConflict: owner.has(norm(d.query)) ? null : clusterConflictOf(model, d.query),
     }));
     const rows = [...targeted, ...found];
     const has = (f) => rows.filter((r) => r.flags.includes(f)).length;
@@ -693,6 +814,7 @@ export function keywordTable(model) {
         mapped: targeted.length,
         unmapped: found.length,
         live: rows.filter((r) => r.status === 'live').length,
+        ranks: rows.filter((r) => r.status === 'ranks').length,
         pending: rows.filter((r) => r.status === 'pending').length,
         opportunities: rows.filter((r) => r.flags.length).length,
         runnerUp: has('runner-up'),
@@ -723,7 +845,7 @@ function clusterConflictList(model) {
 
 function keywordTableView(model) {
   return {
-    ...envelope(model, { need: ['gsc', 'local'] }),
+    ...insightEnvelope(model, { need: ['gsc', 'local'] }),
     // The order of the rows and the minimum behind a discovered one, from the rule itself.
     minImpressions: MIN_DISCOVERED_IMPRESSIONS,
     orderNote: `Targeted keywords first, then searches you already show for (${MIN_DISCOVERED_IMPRESSIONS} or more times shown).`,
@@ -763,16 +885,29 @@ const secondaryId = (page, query) =>
     .digest('hex')
     .slice(0, 12)}`;
 
-// Searches a live page that targets a keyword already shows for, that nothing targets: 30 or more
-// views in the 28 days, not a brand search, not a target of any page, and about the page (it shares a
-// meaningful word with the page's target keyword, or falls in a topic that page targets). At most
-// three a page, busiest first. Each is a candidate whatever the founder has done with it; the list the
-// page shows keeps only the open ones.
+// The meaningful words two phrases share (topics.mjs tokens: stop words dropped, plurals trimmed, digits kept).
+const sharedWords = (a, b) => {
+  const words = new Set(tokens(a));
+  return tokens(b).filter((w) => words.has(w)).length;
+};
+const SECONDARY_MIN_SHARED = 2;
+
+// Searches a live page that targets a keyword already shows for, that nothing targets: 30 or more views
+// on that page in the 28 days (the page's own views, from the query and page rows), not a brand search,
+// not any target in another spelling (matchKey), and about the page: it shares two or more meaningful
+// words with one of the page's target keywords (the one sharing the most is named). A search a real
+// split or a wrong page ranking owns is left out (ownership), and one search is offered to one page
+// only, the best placed. At most three a page, busiest first. Each is a candidate whatever the founder
+// has done with it; the list the page shows keeps only the open ones.
 function secondaryCandidates(model) {
   return memo(model, 'insights:secondary', () => {
     const live = liveSet(model);
     const taken = targetKeywords(model);
-    const topics = topicOfSearch(model);
+    const takenKeys = new Set(model.targets.map((t) => matchKey(t.keyword)).filter(Boolean));
+    const owned = new Set([
+      ...competingList(model).map((c) => norm(c.query)),
+      ...model.opps.filter((o) => o.type === 'wrong-page' && o.query).map((o) => norm(o.query)),
+    ]);
     const targetsOf = new Map();
     for (const t of model.targets) {
       if (!t.page) continue;
@@ -790,19 +925,26 @@ function secondaryCandidates(model) {
       e.posW += (r.position || 0) * (r.impressions || 0);
       rows.set(key, e);
     }
-    const byPage = new Map();
+    const best = new Map(); // search -> the best placed page's candidate
     for (const e of rows.values()) {
-      if (e.impressions < SECONDARY_MIN_VIEWS || taken.has(norm(e.query)) || isBrand(e.query, model.brands)) continue;
-      const words = new Set(tokens(e.query));
-      const own = targetsOf.get(e.page);
-      let target = own.find((k) => tokens(k).some((w) => words.has(w)));
-      if (!target) {
-        const claimed = topics.get(norm(e.query))?.targets.find((t) => t.page && foldPage(t.page) === e.page);
-        target = claimed?.keyword;
-      }
-      if (!target) continue;
-      if (!byPage.has(e.page)) byPage.set(e.page, []);
-      byPage.get(e.page).push({ ...e, position: e.impressions ? round1(e.posW / e.impressions) : null, target });
+      const q = norm(e.query);
+      if (e.impressions < SECONDARY_MIN_VIEWS || taken.has(q) || takenKeys.has(matchKey(e.query))) continue;
+      if (owned.has(q) || isBrand(e.query, model.brands)) continue;
+      const scored = targetsOf
+        .get(e.page)
+        .map((k) => ({ k, n: sharedWords(e.query, k) }))
+        .filter((x) => x.n >= SECONDARY_MIN_SHARED)
+        .sort((a, b) => b.n - a.n);
+      if (!scored.length) continue;
+      const c = { ...e, position: e.impressions ? round1(e.posW / e.impressions) : null, target: scored[0].k };
+      const had = best.get(q);
+      if (!had || c.position < had.position || (c.position === had.position && c.impressions > had.impressions))
+        best.set(q, c);
+    }
+    const byPage = new Map();
+    for (const c of best.values()) {
+      if (!byPage.has(c.page)) byPage.set(c.page, []);
+      byPage.get(c.page).push(c);
     }
     const out = [];
     for (const list of byPage.values()) {
@@ -813,6 +955,15 @@ function secondaryCandidates(model) {
       (a, b) => b.impressions - a.impressions || a.page.localeCompare(b.page) || a.query.localeCompare(b.query)
     );
   });
+}
+
+// The state of a secondary keyword: its own, or, while its own is still open, a finished or dismissed
+// runner-up for the same page and search (the same job, marked from the other list).
+function secondaryState(model, id, c) {
+  const own = itemState(model, id);
+  if (!OPEN_STATUSES.includes(own.status)) return own;
+  const runner = itemState(model, opportunityId('near-page-one', c.page, c.query));
+  return runner.status === 'done' || runner.status === 'ignored' ? runner : own;
 }
 
 function secondaryAll(model) {
@@ -844,7 +995,7 @@ function secondaryAll(model) {
         },
         { frozen: model.frozen }
       ),
-      state: itemState(model, id),
+      state: secondaryState(model, id, c),
       eligibility: eligibilityOfPages(model, [c.page]),
       frozenUntil: f.frozenUntil,
       frozenUntilText: f.frozenUntilText,
@@ -871,7 +1022,7 @@ export function secondaryView(model) {
     .sort((a, b) => finishedAt(b).localeCompare(finishedAt(a)) || a.id.localeCompare(b.id))
     .slice(0, FINISHED_MAX);
   return {
-    ...envelope(model, { need: ['gsc'] }),
+    ...insightEnvelope(model, { need: ['gsc'] }),
     ...SECONDARY,
     priorityNote: PRIORITY_NOTE,
     count: items.length,

@@ -337,8 +337,10 @@ test('/api/nav gives null counts (never 0) on an empty data folder', async () =>
   const r = await get('/api/nav');
   assert.equal(r.status, 200);
   assert.deepEqual(Object.keys(r.json.counts).sort(), [
+    'auditOld',
     'auditOpen',
     'auditScore',
+    'auditStoppedEarly',
     'auditToFix',
     'cannibalization',
     'contentGaps',
@@ -500,7 +502,12 @@ test('runner-up keywords: the searches just off page one, each with its term', a
   assert.equal(r.term, 'Runner-up keywords');
   assert.equal(r.explain, 'Searches where you sit just off page one.');
   assert.equal(r.count, r.items.length);
-  assert.ok(r.count >= 3);
+  // One owner per search (audit B5): the split search and the one the wrong page ranks for are owned by
+  // those lists, so the runner-up left is the page's own target.
+  assert.deepEqual(
+    r.items.map((x) => x.query),
+    ['pricing target phrase']
+  );
   assert.ok(r.items.every((x) => x.type === 'near-page-one' && x.term === 'Runner-up keywords' && x.query && x.page));
 });
 
@@ -618,7 +625,8 @@ test('keyword map table: counters add up and the flags come from the opportuniti
   assert.equal(by('alpha target phrase').mappedTo, '/blog/alpha-guide');
   assert.equal(by('alpha target phrase').origin, 'registry');
   assert.deepEqual(by('alpha target phrase').flags, []);
-  assert.ok(by('beta target phrase').flags.includes('runner-up'));
+  // The wrong page ranking owns this search, so it is not a runner-up as well (audit B5).
+  assert.ok(!by('beta target phrase').flags.includes('runner-up'));
   assert.ok(by('beta target phrase').flags.includes('wrong-page'));
   assert.equal(by('shared topic phrase').kind, 'discovered');
   assert.equal(by('shared topic phrase').status, 'pending');
@@ -1374,12 +1382,25 @@ const SEC_QP = [
   qp('pricing target phrase', '/pricing', 50, 12, 2),
 ];
 const SEC_LIVE = ['/', '/pricing', '/blog/alpha-guide', '/blog/beta-notes', '/blog/gamma-tips', '/blog/epsilon-old'];
+// The query-only rows a real pull would carry: one row per search, its pages' views added up (no
+// search in this fixture shows two pages in the same results).
+const realRowsOf = (rows) => {
+  const m = new Map();
+  for (const r of rows) {
+    const a = m.get(r.query) ?? { query: r.query, clicks: 0, impressions: 0, posW: 0 };
+    a.clicks += r.clicks;
+    a.impressions += r.impressions;
+    a.posW += r.position * r.impressions;
+    m.set(r.query, a);
+  }
+  return [...m.values()].map((a) => ({ ...a, position: a.posW / a.impressions, posW: undefined }));
+};
 writeSnap(SEC, 'gsc', {
   ...gscData(),
   pageDaily: [],
   qpCur: SEC_QP,
   qp90: SEC_QP,
-  queryCur: [],
+  queryCur: realRowsOf(SEC_QP),
   queryPrev: [],
 });
 writeSnap(SEC, 'local', {
@@ -1454,7 +1475,9 @@ test('secondary keywords: under 30 views, a brand search, a search another page 
   assert.ok(!queries.includes('float pool coverage'), 'the page own target');
   assert.ok(!queries.includes('overtime rules nurses'));
   assert.ok(queries.includes('shift differential'), 'exactly 30 views counts');
-  assert.ok(queries.includes('staffing policy rules'), 'same topic as the target, with no word in common');
+  // Audit B10: a secondary keyword shares two meaningful words with the page's target.
+  assert.ok(!queries.includes('staffing policy rules'), 'same topic as the target, with no word in common');
+  assert.ok(!queries.includes('coverage float pool'), "the page's own target in another word order");
   assert.ok(queries.includes('overtime pay rules'), 'shares a word with the target');
   assert.ok(!queries.some((q) => /guitar/.test(q)), 'unrelated to the target');
   assert.ok(!queries.includes('weekend coverage pay'), 'a page with no target keyword has nothing to be secondary to');
@@ -1466,7 +1489,7 @@ test('secondary keywords: at most three a page, busiest first', async () => {
   const alpha = r.items.filter((x) => x.page === '/blog/alpha-guide');
   assert.deepEqual(
     alpha.map((x) => x.query),
-    ['float pool staffing policy', 'float pool nurse pay', 'staffing policy rules']
+    ['float pool staffing policy', 'float pool nurse pay', 'float pool']
   );
   assert.ok(!alpha.some((x) => x.query === 'float pool cost'), 'the fourth is cut');
   const impressions = r.items.map((x) => x.impressions);
@@ -1600,13 +1623,14 @@ test('keyword map: source, monthly searches, live or pending, and no difficulty 
   assert.equal(by('weekend coverage pay').volume, 1900);
   assert.deepEqual(by('night nurse ratios').source, [], 'a keyword Search Console has not returned and no file gave');
   assert.equal(by('night nurse ratios').status, 'pending', 'its page is not live');
-  assert.equal(by('float pool staffing policy').status, 'pending', 'unmapped is pending');
+  assert.equal(by('float pool staffing policy').status, 'ranks', 'unmapped, but a live page shows on page one for it');
+  assert.equal(by('float pool cost').status, 'pending', 'unmapped and past page one');
   assert.deepEqual(by('float pool staffing policy').source, ['search-console']);
   assert.equal(by('float pool staffing policy').volume, null);
   assert.equal(by('float pool staffing policy').kind, 'discovered');
-  assert.ok(r.rows.every((x) => ['live', 'pending'].includes(x.status)));
+  assert.ok(r.rows.every((x) => ['live', 'ranks', 'pending'].includes(x.status)));
   assert.ok(r.rows.every((x) => x.volume === null || typeof x.volume === 'number'));
-  assert.equal(r.counters.live + r.counters.pending, r.counters.all);
+  assert.equal(r.counters.live + r.counters.ranks + r.counters.pending, r.counters.all);
   assert.doesNotMatch(JSON.stringify(r), /difficult/i, 'keyword difficulty is never sent');
   for (const row of r.rows) for (const k of Object.keys(row)) assert.doesNotMatch(k, /difficult|\bkd\b/i);
 });
@@ -1674,19 +1698,16 @@ test('content gaps leave out a conflict, keep a broader search and a search on a
   useSec();
   const model = buildModel();
   const unserved = (q) => model.opps.some((o) => o.type === 'unserved' && o.query === q);
-  for (const q of [
-    'float pool coverage cost',
-    'coverage float pool',
-    'float pool',
-    'night swap rota guide',
-    'guitar chord charts',
-  ])
+  for (const q of ['float pool coverage cost', 'float pool', 'night swap rota guide', 'guitar chord charts'])
     assert.ok(unserved(q), `${q} is a gap candidate for the rules`);
+  // The page's own target in another word order is that target, not a gap (matchKey).
+  assert.equal(unserved('coverage float pool'), false);
   const gaps = (await get('/api/insights/content-gaps')).json;
   const inGaps = (q) => gaps.items.some((g) => g.searches.some((s) => s.query === q));
   assert.equal(inGaps('float pool coverage cost'), false, 'a section of the existing page');
   assert.equal(inGaps('coverage float pool'), false);
-  assert.equal(inGaps('float pool'), true, 'a broader search stays a content gap');
+  // Audit B5: one owner per search. The page shows for this broader search and secondary keywords owns it.
+  assert.equal(inGaps('float pool'), false, 'a secondary keyword of the page, not a gap');
   assert.equal(inGaps('float pool cost'), true, 'it lacks a word of the target');
   assert.equal(inGaps('night swap rota guide'), true, 'the draft page covers nothing yet');
   assert.equal(inGaps('guitar chord charts'), true);
@@ -1914,7 +1935,10 @@ test('priorities and briefs come from the server on every insight list', async (
   assert.ok(can.items.length && can.items.every((it) => ['high', 'medium', 'low'].includes(it.priority)));
   assert.ok(can.priorityNote);
   const it = can.items.find((x) => x.query === 'shared topic phrase');
-  assert.match(it.measured, /^"shared topic phrase" was shown 80 times from .+, split across 2 of our pages\./);
+  assert.match(
+    it.measured,
+    /^"shared topic phrase" showed our site 80 times from .+, and its views were split across 2 of our pages with 10 or more views each\./
+  );
   assert.match(it.brief, /Recommendation \(a hypothesis\): /);
   assert.match(it.brief, /Page: \/blog\/alpha-guide/);
   for (const c of can.clusterConflicts) assert.ok(['high', 'medium', 'low'].includes(c.priority));
@@ -2113,4 +2137,361 @@ test('overview: a range longer than the history held says what it covers, for th
   assert.deepEqual([d28.range.start, d28.range.end], [CUR.start, CUR.end]);
   assert.equal(spanText('2025-07-16', '2026-11-07'), '16 July 2025 to 7 November 2026');
   assert.equal(spanText('2026-08-01', '2026-11-07'), '1 August to 7 November');
+});
+
+// ================================================================ audit of 14 November: insight rules
+
+// A site made for the cannibalization rules. Every search is invented.
+const CAN = path.join(root, 'can');
+fs.mkdirSync(CAN, { recursive: true });
+const CAN_QP = [
+  // a real split: two pages over 10 views, and a third with 3 views that must never count
+  qp('rota swap rules', '/blog/alpha-guide', 40, 5),
+  qp('rota swap rules', '/blog/beta-notes', 30, 7),
+  qp('rota swap rules', '/blog/gamma-tips', 3, 9),
+  // the keyword file gives this search to alpha-guide, written another way ("the rota swap guide")
+  qp('swap guide rota', '/blog/alpha-guide', 40, 5),
+  qp('swap guide rota', '/blog/beta-notes', 30, 7),
+  // the pillar page has 1 view here: the pair is not a likely false alarm
+  qp('pillar thin search', '/blog/alpha-guide', 30, 5),
+  qp('pillar thin search', '/blog/beta-notes', 1, 6),
+  qp('pillar thin search', '/blog/gamma-tips', 20, 8),
+  // shown together: our pages got 110 views from 60 searches
+  qp('shown together search', '/blog/alpha-guide', 60, 3),
+  qp('shown together search', '/blog/gamma-tips', 50, 5),
+  // no page better than position 20
+  qp('nobody ranks search', '/blog/alpha-guide', 30, 25),
+  qp('nobody ranks search', '/blog/gamma-tips', 25, 31),
+];
+const CAN_QUERY = [
+  queryRow('rota swap rules', 72, 6),
+  queryRow('swap guide rota', 70, 6),
+  queryRow('pillar thin search', 51, 6),
+  queryRow('shown together search', 60, 4),
+  queryRow('nobody ranks search', 55, 28),
+];
+writeSnap(CAN, 'gsc', { ...gscData(), qpCur: CAN_QP, qp90: CAN_QP, queryCur: CAN_QUERY, queryPrev: [] });
+writeSnap(CAN, 'local', {
+  ...localData(),
+  registry: [
+    {
+      slug: 'alpha-guide',
+      type: 'post',
+      url: '/blog/alpha-guide',
+      primaryKeyword: 'the rota swap guide',
+      pillar: '/blog/beta-notes',
+    },
+    { slug: 'beta-notes', type: 'pillar', url: '/blog/beta-notes', primaryKeyword: 'beta target phrase' },
+    { slug: 'gamma-tips', type: 'post', url: '/blog/gamma-tips', primaryKeyword: null, pillar: '/blog/beta-notes' },
+  ],
+});
+const useCan = () => {
+  use(CAN);
+  store.writeJson('state/items.json', {});
+  store.writeJson('state/insight-choices.json', {});
+  invalidate();
+};
+
+test('B3: cannibalization lists real splits only; pages shown together sit in their own group with no action', async () => {
+  useCan();
+  const r = (await get('/api/insights/cannibalization')).json;
+  assert.deepEqual(
+    r.items.map((x) => x.query),
+    ['rota swap rules', 'swap guide rota', 'pillar thin search']
+  );
+  assert.equal(r.count, 3);
+  assert.equal((await get('/api/nav')).json.counts.cannibalization, 3);
+  const opps = opportunitiesList(buildModel(), { type: 'competing-pages', status: 'open' }).items;
+  assert.deepEqual(opps.map((o) => o.query).sort(), ['pillar thin search', 'rota swap rules', 'swap guide rota']);
+  // Shown together: listed in its own group, with the numbers and no merge or consolidate action.
+  assert.deepEqual(
+    r.together.map((x) => x.query),
+    ['shown together search']
+  );
+  const t = r.together[0];
+  assert.equal(t.impressions, 60);
+  assert.equal(t.pageViews, 110);
+  assert.equal(t.ratio, 1.83);
+  for (const k of ['choice', 'eligibility', 'recommendation', 'editPages', 'brief']) assert.ok(!(k in t), k);
+  assert.match(t.note, /60 times/);
+  assert.match(t.note, /110 times/);
+  assert.doesNotMatch(t.note, /[–—]/);
+  assert.match(r.togetherNote, /not competing/i);
+  // No page ranks: in neither list.
+  assert.ok(!r.items.some((x) => x.query === 'nobody ranks search'));
+  assert.ok(!r.together.some((x) => x.query === 'nobody ranks search'));
+});
+
+test('B2 and W3: a split counts real searches, and only pages with 10 or more views compete', async () => {
+  useCan();
+  const it = (await get('/api/insights/cannibalization')).json.items.find((x) => x.query === 'rota swap rules');
+  assert.equal(it.impressions, 72);
+  assert.deepEqual(
+    it.pages.map((p) => p.page),
+    ['/blog/alpha-guide', '/blog/beta-notes']
+  );
+  assert.match(it.measured, /72 times/);
+  assert.match(it.measured, /2 of our pages/);
+});
+
+test('W1: views at risk never name a page under 10 views', async () => {
+  useCan();
+  const items = (await get('/api/insights/cannibalization')).json.items;
+  assert.equal(items.find((x) => x.query === 'rota swap rules').atRisk.page, '/blog/beta-notes');
+  assert.equal(items.find((x) => x.query === 'pillar thin search').atRisk.page, '/blog/gamma-tips');
+});
+
+test('W2: a likely false alarm needs both pages over the minimum, and never fires when the keyword file gives this search to one of them', async () => {
+  useCan();
+  const items = (await get('/api/insights/cannibalization')).json.items;
+  const by = Object.fromEntries(items.map((x) => [x.query, x]));
+  assert.equal(by['rota swap rules'].likelyFalseAlarm, true);
+  assert.equal(by['swap guide rota'].likelyFalseAlarm, false, 'the keyword file gives this search to alpha-guide');
+  assert.equal(by['pillar thin search'].likelyFalseAlarm, false, 'the pillar has 1 view');
+  // The keyword file's page is found by matchKey, not exact text.
+  assert.equal(by['swap guide rota'].shouldWin, '/blog/alpha-guide');
+  assert.match(by['swap guide rota'].note, /names \/blog\/alpha-guide|already the top one/);
+  // The helper itself: the minimum and the exact search.
+  const registry = [
+    { url: '/p', type: 'pillar', pillar: null },
+    { url: '/blog/x', type: 'post', pillar: '/p', primaryKeyword: 'x search words' },
+  ];
+  const pages = [
+    { page: '/blog/x', impressions: 40 },
+    { page: '/p', impressions: 9 },
+  ];
+  assert.equal(I.falseAlarmOf({ query: 'other words', pages, registry }).likelyFalseAlarm, false);
+  pages[1].impressions = 10;
+  assert.equal(I.falseAlarmOf({ query: 'other words', pages, registry }).likelyFalseAlarm, true);
+  assert.equal(I.falseAlarmOf({ query: 'words x search', pages, registry }).likelyFalseAlarm, false);
+});
+
+test('per-search counts missing: the rules that need a minimum list nothing and the route says why', async () => {
+  const dir = path.join(root, 'noquery');
+  fs.mkdirSync(dir, { recursive: true });
+  const g = { ...gscData(), qpCur: CAN_QP, qp90: CAN_QP };
+  delete g.queryCur;
+  writeSnap(dir, 'gsc', g);
+  writeSnap(dir, 'local', localData());
+  use(dir);
+  for (const route of ['cannibalization', 'content-gaps', 'secondary-keywords', 'runner-up']) {
+    const r = (await get(`/api/insights/${route}`)).json;
+    // A secondary keyword and a runner-up count one page's own views, which the page rows hold.
+    if (route === 'cannibalization' || route === 'content-gaps') assert.equal(r.count, 0, route);
+    assert.ok(
+      (r.warnings ?? []).some((w) => /per-search counts/.test(w)),
+      `${route} says the per-search counts are missing`
+    );
+  }
+  const km = (await get('/api/keyword-map/table')).json;
+  assert.equal(km.counters.unmapped, 0);
+  assert.ok((km.warnings ?? []).some((w) => /per-search counts/.test(w)));
+  const types = new Set(buildModel().opps.map((o) => o.type));
+  for (const t of ['competing-pages', 'unserved', 'question']) assert.ok(!types.has(t), t);
+  use(FULL);
+});
+
+// One owner per search (B5), with every kind of overlap the audit found. Every search is invented.
+const OWN = path.join(root, 'own');
+fs.mkdirSync(OWN, { recursive: true });
+const OWN_QP = [
+  // S1 a real split, where beta-notes is also just off page one
+  qp('rota float alpha guide', '/blog/alpha-guide', 40, 6),
+  qp('rota float alpha guide', '/blog/beta-notes', 35, 8),
+  // S2 the keyword file gives it to beta-notes; gamma-tips ranks instead (and sits off page one)
+  qp('beta night cover', '/blog/gamma-tips', 40, 12),
+  qp('beta night cover', '/blog/beta-notes', 5, 30),
+  // S3 off page one on alpha-guide, which does not target it, and close to its target
+  qp('alpha float rota tips', '/blog/alpha-guide', 50, 11),
+  // S4 off page one on the page that targets it
+  qp('gamma weekend plan', '/blog/gamma-tips', 40, 9),
+  // S5 shown together on two pages, close to both their targets: one page only, the best placed
+  qp('weekend night cover plan', '/blog/beta-notes', 40, 14),
+  qp('weekend night cover plan', '/blog/gamma-tips', 35, 9),
+  // S6 no page ranks and nothing else covers it: a content gap
+  qp('pricing tiers for wards', '/pricing', 40, 35),
+  // S7 a question, a gap and a secondary keyword at once: secondary keywords owns it
+  qp('how do wards plan weekend cover each month', '/blog/gamma-tips', 40, 33),
+  // S8 a question searched 25 times: under the content gap minimum of 30, so the question owns it
+  qp('how do small wards share one rota nurse', '/pricing', 25, 34),
+  // S9 a question and a content gap at once: the content gap owns it
+  qp('how many nurses cover a small ward overnight', '/pricing', 45, 38),
+];
+writeSnap(OWN, 'gsc', {
+  ...gscData(),
+  qpCur: OWN_QP,
+  qp90: OWN_QP,
+  queryCur: [
+    queryRow('rota float alpha guide', 75, 7),
+    queryRow('beta night cover', 45, 14),
+    queryRow('alpha float rota tips', 50, 11),
+    queryRow('gamma weekend plan', 40, 9),
+    queryRow('weekend night cover plan', 50, 11),
+    queryRow('pricing tiers for wards', 40, 35),
+    queryRow('how do wards plan weekend cover each month', 40, 33),
+    queryRow('how do small wards share one rota nurse', 25, 34),
+    queryRow('how many nurses cover a small ward overnight', 45, 38),
+  ],
+  queryPrev: [],
+});
+writeSnap(OWN, 'local', {
+  ...localData(),
+  registry: [
+    { slug: 'alpha-guide', type: 'post', url: '/blog/alpha-guide', primaryKeyword: 'alpha float rota' },
+    { slug: 'beta-notes', type: 'post', url: '/blog/beta-notes', primaryKeyword: 'beta night cover' },
+    { slug: 'gamma-tips', type: 'post', url: '/blog/gamma-tips', primaryKeyword: 'gamma weekend plan' },
+    { slug: 'pricing', type: 'money', url: '/pricing', primaryKeyword: 'pricing target phrase' },
+  ],
+  livePages: ['/', '/pricing', '/blog/alpha-guide', '/blog/beta-notes', '/blog/gamma-tips'].map((page) => ({
+    page,
+    lastmod: '2026-10-01',
+  })),
+});
+const useOwn = () => {
+  use(OWN);
+  store.writeJson('state/items.json', {});
+  store.writeJson('state/insight-choices.json', {});
+  store.writeJson('state/targets.json', { adopted: [], ignored: [], priorities: {} });
+  invalidate();
+};
+const S = {
+  split: 'rota float alpha guide',
+  wrong: 'beta night cover',
+  pair: 'alpha float rota tips',
+  target: 'gamma weekend plan',
+  together: 'weekend night cover plan',
+  gap: 'pricing tiers for wards',
+  qsec: 'how do wards plan weekend cover each month',
+  question: 'how do small wards share one rota nurse',
+  qgap: 'how many nurses cover a small ward overnight',
+};
+
+test('B5: one owner per search across every list, and the sidebar counts follow the lists', async () => {
+  useOwn();
+  const can = (await get('/api/insights/cannibalization')).json;
+  const ru = (await get('/api/insights/runner-up')).json;
+  const sec = (await get('/api/insights/secondary-keywords')).json;
+  const gaps = (await get('/api/insights/content-gaps')).json;
+  const open = opportunitiesList(buildModel(), { status: 'open' }).items;
+  const ofType = (t) => open.filter((o) => o.type === t).map((o) => o.query);
+  assert.deepEqual(
+    can.items.map((x) => x.query),
+    [S.split]
+  );
+  assert.deepEqual(ofType('wrong-page'), [S.wrong]);
+  assert.deepEqual(
+    ru.items.map((x) => x.query),
+    [S.target],
+    'a runner-up only where the search is the page target'
+  );
+  assert.deepEqual(
+    sec.items.map((x) => [x.page, x.query]).sort(),
+    [
+      ['/blog/alpha-guide', S.pair],
+      ['/blog/gamma-tips', S.qsec],
+      ['/blog/gamma-tips', S.together],
+    ].sort()
+  );
+  assert.deepEqual(ofType('question'), [S.question]);
+  assert.deepEqual(gaps.items.flatMap((g) => g.searches.map((x) => x.query)).sort(), [S.gap, S.qgap].sort());
+  // Never more than one open card for one search.
+  const cards = [...open.filter((o) => o.query).map((o) => o.query), ...sec.items.map((x) => x.query)];
+  assert.equal(new Set(cards).size, cards.length, `duplicates: ${cards.join(' | ')}`);
+  for (const c of can.clusterConflicts) assert.ok(!cards.includes(c.keyword), `${c.keyword} has another owner`);
+  const nav = (await get('/api/nav')).json.counts;
+  assert.equal(nav.cannibalization, can.count);
+  assert.equal(nav.runnerUp, ru.count);
+  assert.equal(nav.secondaryKeywords, sec.count);
+  assert.equal(nav.contentGaps, gaps.count);
+});
+
+test('B7: Content gaps and All opportunities hold the same searches, and the count note is true', async () => {
+  useOwn();
+  const gaps = (await get('/api/insights/content-gaps')).json;
+  const inGaps = gaps.items.flatMap((g) => g.searches.map((x) => x.query)).sort();
+  const model = buildModel();
+  const all = opportunitiesList(model, { type: 'unserved', status: 'open' })
+    .items.map((o) => o.query)
+    .sort();
+  assert.deepEqual(all, inGaps);
+  const nav = (await get('/api/nav')).json.counts;
+  const tab = opportunitiesView(model, {}, { insightCounts: nav }).types.find((t) => t.type === 'unserved');
+  assert.equal(tab.openRows, inGaps.length);
+  if (tab.countNote) assert.match(tab.countNote, new RegExp(`listed here as ${inGaps.length} search`));
+});
+
+test('L3: Done on a secondary keyword closes the runner-up for the same page and search, and the reverse', async () => {
+  useOwn();
+  const model = buildModel();
+  const runner = model.opps.find((o) => o.type === 'near-page-one' && o.query === S.pair);
+  assert.ok(runner, 'the rules still find the runner-up');
+  const r = await itemAction(runner.id, { action: 'done', override: true });
+  assert.ok(r.ok !== false);
+  const it = (await get('/api/insights/secondary-keywords')).json;
+  assert.ok(!it.items.some((x) => x.query === S.pair), 'a Done runner-up closes the secondary keyword');
+  assert.ok(
+    it.finished.some((x) => x.query === S.pair && x.state.status === 'done'),
+    'listed as finished, so it can be reopened'
+  );
+  useOwn();
+  const sec = (await get('/api/insights/secondary-keywords')).json.items.find((x) => x.query === S.together);
+  assert.equal(
+    (await post_(`/api/insights/secondary-keywords/${sec.id}`, { action: 'done', override: true })).status,
+    200
+  );
+  const open = opportunitiesList(buildModel(), { status: 'open' }).items;
+  assert.ok(!open.some((o) => o.query === S.together), 'no runner-up comes back for it');
+});
+
+test('W4: a discovered search a live page already shows on page one for is not "Pending: no page yet"', async () => {
+  useCan();
+  const km = (await get('/api/keyword-map/table')).json;
+  const by = (k) => km.rows.find((x) => x.keyword === k);
+  // Shown at an average place of 6 with alpha-guide (live) on top: it ranks, though nothing targets it.
+  assert.equal(by('rota swap rules').status, 'ranks');
+  assert.equal(by('nobody ranks search').status, 'pending');
+  assert.equal(km.counters.ranks, km.rows.filter((x) => x.status === 'ranks').length);
+  use(FULL);
+  const { statusText } = await import('../static/views/keyword-map.js');
+  assert.equal(statusText({ status: 'ranks' }), 'Ranks, no target');
+  assert.equal(statusText({ status: 'pending' }), 'Pending');
+});
+
+test('B6: a one-character number is a word, and a cluster conflict names the most specific live target', async () => {
+  const { tokens } = await import('../lib/topics.mjs');
+  assert.deepEqual(tokens('8 hour shift'), ['8', 'hour', 'shift']);
+  assert.ok(!tokens('a b c').length, 'one-letter words still go');
+  const { clusterConflictOf } = await import('../lib/api/ext/insights.mjs');
+  const live = ['/blog/eight', '/blog/twelve', '/blog/pattern', '/blog/pay-a', '/blog/pay-b'];
+  const model = {
+    brands: [],
+    memo: new Map(),
+    targets: [
+      { keyword: '8 hour shift pattern', page: '/blog/eight' },
+      { keyword: '12 hour shift pattern', page: '/blog/twelve' },
+      { keyword: 'shift pattern', page: '/blog/pattern' },
+      { keyword: 'night shift pay', page: '/blog/pay-a' },
+      { keyword: 'night pay rota', page: '/blog/pay-b' },
+    ],
+    data: {
+      gsc: {
+        qpCur: [
+          qp('12 hour shift pattern ideas', '/blog/eight', 40, 7),
+          qp('night shift pay rota guide', '/blog/pay-b', 40, 9),
+          qp('night shift pay rota guide', '/blog/pay-a', 10, 30),
+        ],
+      },
+      local: { livePages: live.map((page) => ({ page })) },
+    },
+  };
+  // "8" is a word, so the 8-hour post never claims a 12-hour search; the 4-word target beats "shift pattern".
+  assert.equal(clusterConflictOf(model, '12 hour shift pattern ideas').page, '/blog/twelve');
+  // Two targets with three words each: the page the search already ranks on (most views) wins.
+  assert.equal(clusterConflictOf(model, 'night shift pay rota guide').page, '/blog/pay-b');
+});
+
+test('B6: the section names what its rows are: Search Console searches close to a target keyword', () => {
+  const src = fs.readFileSync(new URL('../static/views/insight.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(src, /planned keyword/i);
+  assert.match(src, /Searches from Search Console close to a target keyword/);
 });

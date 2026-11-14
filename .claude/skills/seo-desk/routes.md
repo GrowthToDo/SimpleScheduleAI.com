@@ -73,20 +73,33 @@ why}`.
 ## Insights
 
 Every insight route returns `term`, `explain`, `count` and `items[]`. Only open items are listed.
+One owner per search: a search sits in one list only (a real split first, then the wrong page
+ranking, then a runner-up when it is that page's own target or else a secondary keyword, then a
+content gap, then a weak question, then a cluster conflict), so the lists never double count and the
+sidebar counts follow them. Every per-search "times shown" and minimum is the real count from the
+query-only pull. When a snapshot lacks that pull, `warnings[]` says the per-search counts are
+missing and the lists that need a minimum are empty.
 
 `/api/insights/cannibalization`: `items[] {id, query, impressions, shouldWin, pages[{page, share,
 impressions, position, frozenUntil, frozenUntilText}], note, measured, choice, recommendation,
 test, editPages[], eligibility, atRisk {page, impressions, clicks}, likelyFalseAlarm,
 falseAlarmReason, priority, brief}`. `choice` is consolidate, differentiate, leave-alone or null.
-`atRisk` is the weaker page of the split. `editPages` are the pages the current choice would
+`impressions` is the real number of times the search showed the site; `pages` are only the pages
+with 10 or more views for it, and `share` is each page's part of our pages' views. A search is a
+split only when its real searches are 30 or more, a page is better than position 20 and our pages'
+views are under 1.3 times the searches. `atRisk` is the weaker page of the split. `editPages` are the pages the current choice would
 edit (a leave-alone choice edits none), and `eligibility` covers those pages only. `likelyFalseAlarm`
-is true when one page is the pillar page and the other is one of its own posts (the reason is in
+is true when one page is the pillar page and the other is one of its own posts, both with 10 or more
+views, and the keyword file does not give this search to either (the reason is in
 `falseAlarmReason`). `priority` is high, medium or low by how often the search is shown against the
 others in the list (`priorityNote` says so). `brief` is a ready-to-paste task for Claude whose
 recommendation line reads "Recommendation (a hypothesis)". Also `leftAlone[]` (splits he marked leave alone,
-same shape, not counted in `count`) and `clusterConflicts[]` (`{keyword, page, targetKeyword,
-impressions, position, recommendation, test}`: a keyword we might add as a new page that an
-existing page may already cover). A search needs 30 views to be listed.
+same shape, not counted in `count`), `together[]` (`{id, query, impressions, pageViews, ratio,
+pages[{page, impressions, position}], note}`: searches where our pages' views are 1.3 times the
+searches or more, so the pages are shown together in the same results; not cannibalization, no
+action, not counted; `togetherNote` says so) and `clusterConflicts[]` (`{keyword, page, targetKeyword,
+impressions, position, recommendation, test}`: a Search Console search no page targets that holds
+every word of a live page's target keyword, so that page may already cover it).
 
 `/api/insights/runner-up`: `items[]` are opportunity cards: `id, page, query, title, measured,
 action, test, eligibility, evidence[], score, status, brief`. Their `priority` is null (they rank by
@@ -97,8 +110,9 @@ targetKeyword, evidence, recommendation, test, eligibility, frozenUntilText, ado
 priority, brief}`. `finished[]` (same shape, up to 50, newest first) holds the ones marked done or
 dismissed. A mistaken Done froze the page and used the week's edit, so Reopen on a finished one is
 a write: only when he asks, in his own words. A
-search a page already shows for (30 or more views in 28 days) that the page does not target. At
-most three per page. Adopting one only records it; it never becomes a target. Marking one done
+search a page already shows for (30 or more views in 28 days) that no page targets in any spelling,
+sharing two or more meaningful words with that page's target. One search goes to one page only, the
+best placed. At most three per page. A Done runner-up for the same page and search closes it too. Adopting one only records it; it never becomes a target. Marking one done
 counts as the week's page edit.
 
 `/api/insights/content-gaps`: `items[] {id, title, topic, searches[{query, impressions, position}],
@@ -121,11 +135,11 @@ numbers), `recommendation` and `recentDrop` (the last 14 days are 30 percent or 
 before). The window is fixed: the last 28 days against the 28 before. Brand searches are left out
 of `queries`.
 
-`/api/keyword-map/table`: `counters {all, live, pending, mapped, unmapped, opportunities,
+`/api/keyword-map/table`: `counters {all, live, ranks, pending, mapped, unmapped, opportunities,
 runnerUp, cannibalized, clusterConflicts}`, `rows[] {keyword, kind (targeted|discovered), status
-(live|pending), mappedTo, origin, source, volume, position, impressions, rankingPage, flags,
-clusterConflict}`. `status` is live when the keyword is mapped to a live page; every unmapped row
-is pending. `clusterConflict` (`{page, keyword, recommendation, test}`) says an existing page may
+(live|ranks|pending), mappedTo, origin, source, volume, position, impressions, rankingPage, flags,
+clusterConflict}`. `status` is live when the keyword is mapped to a live page; ranks when no page
+targets it but a live page already shows at position 10 or better; otherwise pending. `clusterConflict` (`{page, keyword, recommendation, test}`) says an existing page may
 already cover a pending keyword, so add a section there instead of a new page.
 
 `/api/link-suggestions?page=/blog/x`: `total`, `open` and `pages[] {page, title, keyword,
@@ -139,7 +153,10 @@ frozen `from` page would edit that page, so check `fromFrozenUntilText`.
 cards above. `status=open` means new, in progress or came back: it is what the Open view and the
 sidebar count use, and `counts.byStatus.open` is its size. `status=attention` is new only. Other
 values are one status each (done, ignored, snoozed) or `all`. Types: near-page-one, low-click-rate, competing-pages, slipping, wrong-page,
-unserved, question, needs-links, ai-gap, engine-gap, not-indexed.
+unserved, question, needs-links, ai-gap, engine-gap, not-indexed. An engine-gap with `source` gsc is
+page level (no query): Google showed the page 200 times or more and Bing's page report has no row
+for it; it is a setup task (check the page in Bing Webmaster Tools), not a page edit. One with
+`source` bing is a search Bing shows us for that Search Console lacks.
 
 ## Health and AI
 

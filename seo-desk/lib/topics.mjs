@@ -100,7 +100,7 @@ export function stem(word) {
 }
 
 // The words of a text, in order: lower case, punctuation gone, stop words and one letter words
-// dropped, plurals trimmed, each word once. Any script works (a run of letters is a word).
+// dropped (a one-digit number is kept), plurals trimmed, each word once. Any script works (a run of letters is a word).
 export function wordsOf(text) {
   return String(text ?? '')
     .toLowerCase()
@@ -112,7 +112,8 @@ export function tokens(query) {
   const out = [];
   for (const w of wordsOf(query)) {
     if (STOP_WORDS.has(w)) continue;
-    if ([...w].length < 2) continue;
+    // A one-letter word goes; a one-digit number stays ("8 hour shift" is not "12 hour shift").
+    if ([...w].length < 2 && !/^\p{N}$/u.test(w)) continue;
     const t = stem(w);
     if (!out.includes(t)) out.push(t);
   }
