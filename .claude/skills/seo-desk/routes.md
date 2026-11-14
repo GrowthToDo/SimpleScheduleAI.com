@@ -1,4 +1,4 @@
-<!-- Reference file for .claude/skills/seo-desk.md. Field notes checked against the route code in seo-desk/lib/api/ and seo-desk/lib/api/ext/ on 2026-11-13. The code is the authority; if a field here is missing from a reply, trust the reply. -->
+<!-- Reference file for .claude/skills/seo-desk.md. Field notes checked against the route code in seo-desk/lib/api/ and seo-desk/lib/api/ext/ on 2026-11-14. The code is the authority; if a field here is missing from a reply, trust the reply. -->
 
 # SEO Desk routes: fields and units
 
@@ -35,7 +35,9 @@ targetPosition; each has `key, label, value, change, changeKind, note, enoughDat
 the tile's own `range`. `clickRate` also has `valueText` ("3.1%") and is null under 500
 impressions. `targetPosition` is the like-for-like mean for the keywords we target; `detail` says
 how many. `topQueries[]` (`query, clicks, impressions, position, brand`) use `queriesRange` and
-`queriesNote` (7 and 480 read the 28 or 90 day list). `topPages[]` (`page, clicks, impressions,
+`queriesNote` (7 and 480 read the 28 or 90 day list; it also says so when an older snapshot
+has no query-only 90-day pull and the 90-day counts are added up across pages, which counts a
+search once per page it showed). `topPages[]` (`page, clicks, impressions,
 position, clickRate`) use `pagesRange`, which can be shorter than `range` when the desk holds
 less page history. `short` is true, and `coverageNote` says so, when the desk holds less daily
 history than the range asks for (then the big numbers make no comparison with an earlier period). `countries[]`, `devices[]` are the latest
@@ -48,15 +50,17 @@ change, alignment) and `brandSplit`.
 `/api/explore?dim=query|page&range=…`: `rows[] {key, clicks, impressions, position, ctr (pages
 only, gated), prev, change, movement, brand}`, `totals`, `comparable`, `truncated`, `source`
 (stored, live or cache), `fetchedOn`, `notes[]`, `chips[]`. `movement` is growing, slipping, new,
-gone, steady or null. Stored with no filter for searches at 28 and 90 days and pages at 7, 14, 28
-and 90. Everything else is a live Search Console pull (two calls, cached 12 hours; 429 when busy,
+gone, steady or null. Stored with no filter for searches at 28 and 90 days (90 only once the
+snapshot holds the query-only 90-day pull) and pages at 7, 14, 28 and 90. Live ranges end on
+`through`, the same day as the stored lists. Everything else is a live Search Console pull (two calls, cached 12 hours; 429 when busy,
 502 when it fails). Same for `/api/distribution` (stored for 28 and 90) and `/api/search-detail?query=`
 (always live). Stay on stored ranges unless he asks for a filtered view.
 
 `/api/pages`: `items[] {page, kind, keyword, position, impressions, clicks, ctr, change,
 movement, queryCount, inbound, lastEdit, frozenUntil, index (indexed|not-indexed|unknown)}`.
 `/api/page?path=/blog/x` (path must start with a slash; 404 for an unknown page): the same row plus
-`queries[]`, `opportunities[]`, `verdicts[]`, `inboundFrom[]`, `frozen {since, until, untilText,
+`queries[]` (each `impressions` is the times THIS page was shown for that search, not the times the
+search was made; a search that showed two pages counts on both), `opportunities[]`, `verdicts[]`, `inboundFrom[]`, `frozen {since, until, untilText,
 why}`.
 
 ## Insights

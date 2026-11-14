@@ -164,6 +164,11 @@ const QUERY_CUR = [
   queryRow('orphan search phrase', 90, 31),
   queryRow('tiny search', 1, 40),
   queryRow('simplescheduleai login', 30, 1),
+  // Every search in the query and page rows is also in the query-only rows, as in a real pull.
+  queryRow('float pool staffing policy', 50, 31),
+  queryRow('float pool staffing rules', 40, 28),
+  queryRow('how long is a nurse shift', 45, 33),
+  queryRow('on-call pay rules', 35, 40),
 ];
 const QUERY_PREV = [
   queryRow('alpha target phrase', 100, 8),

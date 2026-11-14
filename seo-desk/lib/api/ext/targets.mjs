@@ -96,6 +96,7 @@ export function targetRows(model) {
 export function discoveredList(model) {
   return discovered({
     qpCur: model.data.gsc?.qpCur ?? [],
+    queryCur: model.data.gsc?.queryCur ?? null,
     targets: model.targets,
     ignored: model.targetState.ignored,
     brands: model.brands,

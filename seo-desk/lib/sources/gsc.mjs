@@ -18,36 +18,55 @@ function dimsOf(dims) {
   return (Array.isArray(dims) ? dims : String(dims).split(',')).map((d) => d.trim()).filter(Boolean);
 }
 
-// Raw rows to one row per distinct dimension combination. Clicks and impressions
-// sum; position is the impression-weighted mean. Output keys: the dimensions,
-// then clicks, impressions, position.
+// Raw rows to one row per distinct dimension combination. Output keys: the dimensions, then
+// clicks, impressions, position.
+//
+// Rows that are the same apart from the address form of one page (/blog/x, /blog/x/, /blog/x#part)
+// fold into one. Without a search among the dimensions their clicks and impressions add up and the
+// position is the impression-weighted mean. With a search, one showing of that search can list
+// several forms of the page at once, so adding them would count it more than once: the folded row
+// takes the LARGEST impressions among the forms, adds the clicks (a click lands on one address),
+// and takes the position of the form with the most impressions.
 export function normGscRows(rows, dims) {
   const dimList = dimsOf(dims);
+  const perSearch = dimList.includes('query') && dimList.includes('page');
   const map = new Map();
   for (const r of rows || []) {
     const vals = {};
     let skip = false;
+    let raw = '';
     dimList.forEach((d, i) => {
       let v = r[d] !== undefined ? r[d] : r.keys?.[i];
-      if (d === 'page') v = pathOf(v);
+      if (d === 'page') {
+        raw = String(v ?? '');
+        v = pathOf(v);
+      }
       if (v === undefined || v === null || v === '') skip = true;
       vals[d] = v;
     });
     if (skip) continue;
     const key = dimList.map((d) => vals[d]).join('\u0000');
-    if (!map.has(key)) map.set(key, { vals, clicks: 0, impressions: 0, posWeighted: 0 });
-    const acc = map.get(key);
+    if (!map.has(key)) map.set(key, { vals, forms: new Map() });
+    const forms = map.get(key).forms;
+    const formKey = perSearch ? raw : '';
+    if (!forms.has(formKey)) forms.set(formKey, { clicks: 0, impressions: 0, posWeighted: 0 });
+    const acc = forms.get(formKey);
     const imp = Number(r.impressions) || 0;
     acc.clicks += Number(r.clicks) || 0;
     acc.impressions += imp;
     acc.posWeighted += (Number(r.position) || 0) * imp;
   }
-  return [...map.values()].map(({ vals, clicks, impressions, posWeighted }) => ({
-    ...vals,
-    clicks,
-    impressions,
-    position: impressions ? round2(posWeighted / impressions) : 0,
-  }));
+  return [...map.values()].map(({ vals, forms }) => {
+    const list = [...forms.values()];
+    const top = list.reduce((a, b) => (b.impressions > a.impressions ? b : a));
+    const clicks = list.reduce((s, f) => s + f.clicks, 0);
+    return {
+      ...vals,
+      clicks,
+      impressions: top.impressions,
+      position: top.impressions ? round2(top.posWeighted / top.impressions) : 0,
+    };
+  });
 }
 
 // "2026-11-09 02:17" or ISO to 'YYYY-MM-DD'; null when there is no real date.

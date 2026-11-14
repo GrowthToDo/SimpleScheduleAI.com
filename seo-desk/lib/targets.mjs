@@ -124,23 +124,32 @@ export function allTargets({ registry = [], state = emptyState() } = {}) {
 }
 
 // Searches the site appears for that nobody has claimed: not a target, not ignored, not a brand
-// search, and with enough impressions. Biggest first.
+// search, and with enough impressions. Biggest first. The times shown, the place and the minimum use
+// the query-only rows (queryCur), the same unit as the targeted rows; the query and page rows only
+// say which page Google showed most. Without query-only rows (none pulled, or an empty list) the page
+// rows are added up per search.
 export function discovered({
   qpCur = [],
+  queryCur = null,
   targets = [],
   ignored = [],
   brands = [],
   minImpressions = MIN_DISCOVERED_IMPRESSIONS,
 } = {}) {
   const taken = new Set([...targets.map((t) => norm(t.keyword)), ...ignored.map(norm)]);
-  return groupByQuery(qpCur)
+  const byPage = new Map(groupByQuery(qpCur).map((q) => [norm(q.query), q]));
+  const counts = Array.isArray(queryCur) && queryCur.length ? queryCur : [...byPage.values()];
+  return counts
     .filter((q) => q.impressions >= minImpressions && !taken.has(norm(q.query)) && !isBrand(q.query, brands))
-    .map((q) => ({
-      query: q.query,
-      impressions: q.impressions,
-      position: q.position,
-      rankingPage: q.pages[0] ? foldPage(q.pages[0].page) : null,
-    }))
+    .map((q) => {
+      const top = byPage.get(norm(q.query))?.pages[0];
+      return {
+        query: q.query,
+        impressions: q.impressions,
+        position: q.position,
+        rankingPage: top ? foldPage(top.page) : null,
+      };
+    })
     .sort((a, b) => b.impressions - a.impressions || a.query.localeCompare(b.query));
 }
 

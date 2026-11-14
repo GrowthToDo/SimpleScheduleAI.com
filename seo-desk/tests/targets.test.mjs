@@ -321,9 +321,14 @@ function seed() {
       ],
       qpPrev: [],
       qp90: [],
+      // Every search in the query and page rows is also in the query-only rows, as in a real pull.
       queryCur: [
         { query: 'alpha target', clicks: 2, impressions: 61, position: 6.2 },
+        { query: 'beta target', clicks: 1, impressions: 40, position: 14 },
+        { query: 'gamma target', clicks: 1, impressions: 5, position: 3 },
         { query: 'fresh idea one', clicks: 0, impressions: 47, position: 9.1 },
+        { query: 'fresh idea two', clicks: 1, impressions: 33, position: 15 },
+        { query: 'examplecare login', clicks: 1, impressions: 99, position: 1 },
       ],
       queryPrev: [],
       windows: { cur: CUR, prev: PREV },

@@ -237,3 +237,126 @@ test('live explorer ranges end on the stored end date, not today minus 3', () =>
   // With no stored end date, today minus 3 stands.
   assert.equal(resolveRange('7', '2026-11-14').end, '2026-11-11');
 });
+
+// ---------------------------------------------------------------- A2 and B2: real per-search counts
+
+const { realQueryCounts } = await import('../lib/query-counts.mjs');
+const { normGscRows } = await import('../lib/sources/gsc.mjs');
+const { discovered } = await import('../lib/targets.mjs');
+
+// One search that showed two pages: the query and page rows add to 55, the search was shown 35 times.
+const TWO_PAGES = [
+  { query: 'made up search', page: '/blog/a', clicks: 2, impressions: 30, position: 4 },
+  { query: 'made up search', page: '/blog/b', clicks: 1, impressions: 25, position: 9 },
+  { query: 'other made up search', page: '/blog/b', clicks: 0, impressions: 22, position: 12 },
+];
+const REAL = [
+  { query: 'made up search', clicks: 3, impressions: 35, position: 5 },
+  { query: 'other made up search', clicks: 0, impressions: 22, position: 12 },
+];
+
+test('realQueryCounts gives the query-only counts by search, and null when that pull is missing', () => {
+  const gsc = { queryCur: REAL, queryPrev: [], query90: [{ ...REAL[0], query: ' Made Up Search ' }] };
+  const cur = realQueryCounts(gsc, 'cur');
+  assert.equal(cur.size, 2);
+  assert.deepEqual(cur.get('made up search'), { query: 'made up search', impressions: 35, clicks: 3, position: 5 });
+  assert.equal(realQueryCounts(gsc, 'prev').size, 0);
+  assert.equal(realQueryCounts(gsc, 'd90').get('made up search').impressions, 35);
+  assert.equal(realQueryCounts({ queryCur: REAL }, 'd90'), null);
+  assert.equal(realQueryCounts(null, 'cur'), null);
+  assert.throws(() => realQueryCounts(gsc, 'week'), /cur, prev or d90/);
+});
+
+function snapWith(dataOver = {}) {
+  const old = oldSnapshot();
+  return { ...old, through: '2026-11-10', data: { ...old.data, ...dataOver } };
+}
+
+test('the 90-day and 16-month search lists use the query-only pull, never a sum of page rows', () => {
+  writeSnap('gsc', snapWith({ qp90: TWO_PAGES, query90: REAL }));
+  const model = buildModel();
+  for (const days of [90, 480]) {
+    const t = queriesTable(model, days);
+    const row = t.rows.find((r) => r.query === 'made up search');
+    assert.equal(row.impressions, 35);
+    assert.equal(row.clicks, 3);
+    assert.equal(row.topPage, '/blog/a');
+    assert.equal(t.summed, false);
+  }
+  const ov = overviewView(model, 90);
+  assert.equal(ov.topQueries.find((r) => r.query === 'made up search').impressions, 35);
+  const ex = storedExplore(model.data.gsc, { through: '2026-11-10', dim: 'query', days: 90 });
+  assert.equal(ex.totals.impressions, 57);
+  assert.equal(ex.rows.find((r) => r.key === 'made up search').impressions, 35);
+});
+
+test('an older snapshot with no query-only 90-day pull says its counts are summed across pages', () => {
+  writeSnap('gsc', snapWith({ qp90: TWO_PAGES, query90: undefined }));
+  const model = buildModel();
+  const t = queriesTable(model, 90);
+  assert.equal(t.summed, true);
+  assert.equal(t.rows.find((r) => r.query === 'made up search').impressions, 55);
+  assert.match(overviewView(model, 90).queriesNote, /added up across pages/);
+  // The stored explorer gives no answer, so the route pulls the real counts live instead.
+  assert.equal(storedExplore(model.data.gsc, { through: '2026-11-10', dim: 'query', days: 90 }), null);
+});
+
+test('normGscRows: address variants of one page for the same search take the largest count, not the sum', () => {
+  const rows = normGscRows(
+    [
+      {
+        query: 'made up search',
+        page: 'https://simplescheduleai.com/blog/x/',
+        clicks: 2,
+        impressions: 100,
+        position: 4,
+      },
+      {
+        query: 'made up search',
+        page: 'https://simplescheduleai.com/blog/x#part',
+        clicks: 1,
+        impressions: 300,
+        position: 8,
+      },
+      {
+        query: 'made up search',
+        page: 'https://simplescheduleai.com/blog/x',
+        clicks: 0,
+        impressions: 120,
+        position: 12,
+      },
+      { query: 'made up search', page: 'https://simplescheduleai.com/blog/y', clicks: 1, impressions: 10, position: 6 },
+    ],
+    'query,page'
+  );
+  const x = rows.find((r) => r.page === '/blog/x');
+  assert.deepEqual(x, { query: 'made up search', page: '/blog/x', clicks: 3, impressions: 300, position: 8 });
+  assert.equal(rows.length, 2);
+  // Without a search in the rows (pages by day), the variants still add up as before.
+  const daily = normGscRows(
+    [
+      { keys: ['https://simplescheduleai.com/blog/x/', '2026-11-01'], clicks: 1, impressions: 10, position: 3 },
+      { keys: ['https://simplescheduleai.com/blog/x', '2026-11-01'], clicks: 1, impressions: 30, position: 7 },
+    ],
+    'page,date'
+  );
+  assert.equal(daily[0].impressions, 40);
+});
+
+test('discovered searches carry the real count, the same unit as targeted rows', () => {
+  const found = discovered({ qpCur: TWO_PAGES, queryCur: REAL, targets: [], minImpressions: 20 });
+  const row = found.find((d) => d.query === 'made up search');
+  assert.equal(row.impressions, 35);
+  assert.equal(row.position, 5);
+  assert.equal(row.rankingPage, '/blog/a');
+  // 22 real views: listed; a search whose page rows add past 20 but whose real count is under it is not.
+  const under = discovered({
+    qpCur: [
+      { query: 'thin made up search', page: '/blog/a', clicks: 0, impressions: 12, position: 30 },
+      { query: 'thin made up search', page: '/blog/b', clicks: 0, impressions: 11, position: 31 },
+    ],
+    queryCur: [{ query: 'thin made up search', clicks: 0, impressions: 14, position: 30 }],
+    minImpressions: 20,
+  });
+  assert.equal(under.length, 0);
+});

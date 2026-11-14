@@ -17,7 +17,7 @@ import { GSC_SITE_URL, normGscRows, gscEnd } from './sources/gsc.mjs';
 import { bad } from './api/kit.mjs';
 import { movementOf } from './api/search.mjs';
 import { coversFrom, pct } from './api/fmt.mjs';
-import { groupByQuery } from '../../scripts/lib/gsc-diagnose-core.mjs';
+import { realQueryCounts } from './query-counts.mjs';
 
 const TOOL = 'get_advanced_search_analytics';
 const MAX_ROWS = 25000;
@@ -463,8 +463,9 @@ function pagesFromDaily(pageDaily, start, end) {
 }
 
 // The same result as explore() from the stored Search Console pulls, with no live call. Only for
-// views with no filters: searches for the last 28 or 90 days, pages for the last 7, 14, 28 or 90
-// days. Null when the stored data cannot answer. The range is the stored period, so its dates
+// views with no filters: searches for the last 28 or 90 days (90 only when the snapshot holds the
+// query-only 90-day pull), pages for the last 7, 14, 28 or 90 days. Null when the stored data
+// cannot answer. The range is the stored period, so its dates
 // are the pull's, not necessarily "today minus 3".
 export function storedExplore(gsc, { through: asked, dim, days, limit = 1000, ctrMin } = {}) {
   if (!gsc || !STORED_LABEL[days]) return null;
@@ -483,13 +484,10 @@ export function storedExplore(gsc, { through: asked, dim, days, limit = 1000, ct
     prev = gsc.queryPrev ?? [];
     comparable = Array.isArray(gsc.queryPrev);
     range = { start: w.cur.start, end: capEnd(w.cur.end), prevStart: w.prev.start, prevEnd: w.prev.end };
-  } else if (dim === 'query' && days === 90 && w?.d90 && Array.isArray(gsc.qp90)) {
-    cur = groupByQuery(gsc.qp90).map((q) => ({
-      query: q.query,
-      clicks: q.clicks,
-      impressions: q.impressions,
-      position: q.position,
-    }));
+  } else if (dim === 'query' && days === 90 && w?.d90 && realQueryCounts(gsc, 'd90')) {
+    // The query-only 90-day pull. A snapshot without it gives no stored answer, so the route pulls
+    // the real counts live rather than adding up query and page rows.
+    cur = [...realQueryCounts(gsc, 'd90').values()];
     range = { start: w.d90.start, end: capEnd(w.d90.end), prevStart: null, prevEnd: null };
   } else if (dim === 'page' && Array.isArray(gsc.pageDaily) && gsc.pageDaily.length && through) {
     const start = addDays(through, -(days - 1));

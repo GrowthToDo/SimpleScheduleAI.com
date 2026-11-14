@@ -416,7 +416,7 @@ function briefText(p, fmt) {
     lines.push('', `Top searches on Google (${fmt.range(p.queriesRange)}):`);
     for (const q of top) {
       lines.push(
-        `- "${q.query}": place ${fmt.position(q.position)}, shown ${fmt.num(q.impressions)}, clicks ${fmt.num(q.clicks)}`
+        `- "${q.query}": place ${fmt.position(q.position)}, times this page was shown for it ${fmt.num(q.impressions)}, clicks ${fmt.num(q.clicks)}`
       );
     }
   }
@@ -550,7 +550,14 @@ function pageDetail(p, ctx) {
               ? ''
               : fmt.change(v, 'positions'),
       },
-      { key: 'impressions', label: 'Times shown', align: 'right', format: (v) => fmt.num(v) },
+      {
+        key: 'impressions',
+        label: 'Times this page was shown for it',
+        align: 'right',
+        title:
+          'How many times Google showed this page for the search. A search that showed several of our pages is counted on each of them, so this is not the number of times the search was made.',
+        format: (v) => fmt.num(v),
+      },
       { key: 'clicks', label: 'Clicks', align: 'right', format: (v) => fmt.num(v) },
       hasBing
         ? {

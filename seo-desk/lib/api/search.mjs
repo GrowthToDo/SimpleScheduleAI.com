@@ -5,6 +5,7 @@
 import { groupByQuery, isBrand, targetKeywords } from '../../../scripts/lib/gsc-diagnose-core.mjs';
 import { addDays, todayIso } from '../dates.mjs';
 import { gscEnd } from '../sources/gsc.mjs';
+import { realQueryCounts } from '../query-counts.mjs';
 import { longDate, longRange } from '../text.mjs';
 import { POST_PAGE_RE, envelope, memo, linksFor, pagePath, rangeOf, lowCtrMin, checkedText } from './model.mjs';
 import { deliberateEdits, timelineEvents, verdictRows, moneyPageVerdicts, opportunitiesList } from './work.mjs';
@@ -12,6 +13,9 @@ import { n0, round1, pct, sumRange, coversFrom, lower } from './fmt.mjs';
 
 export const RANGES = [7, 28, 90, 480];
 export const LIKE_MIN_N = 3;
+// Said under a searches list whose counts are added up across pages (see queriesTable).
+export const SUMMED_NOTE =
+  'These search counts are added up across pages, so a search that showed two pages is counted twice. The next Search Console pull replaces them with real counts.';
 const MOVE_PCT = 20;
 // The pull asks for 5000 rows; snapshots pulled before that asked for 1000, and a count that lands
 // exactly on either number is a floor.
@@ -109,9 +113,14 @@ function byQueryMap(rows) {
 export function queriesTable(model, days) {
   return memo(model, `queries:${days}`, () => {
     const gsc = model.data.gsc;
-    if (!gsc) return { rows: [], range: null, comparable: false };
+    if (!gsc) return { rows: [], range: null, comparable: false, summed: false };
     const short = days <= 28;
-    const curRows = short ? (gsc.queryCur ?? []) : groupByQuery(gsc.qp90 ?? []);
+    // Per-search counts come from the query-only pulls. A snapshot from before the 90-day one existed
+    // has only the query and page rows for 90 days: their sum counts a search once per page, so the
+    // table says so (summed) and the pages print a note.
+    const real90 = short ? null : realQueryCounts(gsc, 'd90');
+    const summed = !short && !real90;
+    const curRows = short ? (gsc.queryCur ?? []) : real90 ? [...real90.values()] : groupByQuery(gsc.qp90 ?? []);
     const prevRows = short ? (gsc.queryPrev ?? []) : [];
     const range = short ? gsc.windows?.cur : gsc.windows?.d90;
     const comparable = short && prevRows.length > 0;
@@ -153,7 +162,7 @@ export function queriesTable(model, days) {
       }
     }
     rows.sort((x, y) => y.impressions - x.impressions || x.query.localeCompare(y.query));
-    return { rows, range, comparable };
+    return { rows, range, comparable, summed };
   });
 }
 
@@ -370,6 +379,7 @@ export function searchView(model, { days = 28, metric = 'impressions' } = {}) {
           ]
         : []),
       'Search Console data runs about two days behind.',
+      ...(queriesT.summed ? [SUMMED_NOTE] : []),
     ],
   };
 }

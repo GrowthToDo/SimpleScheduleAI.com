@@ -4,7 +4,7 @@
 
 import { get, bad, q } from '../kit.mjs';
 import { buildModel, envelope, rangeOf, memo } from '../model.mjs';
-import { windowsFor, pagesTable, queriesTable, targetsView, RANGES } from '../search.mjs';
+import { windowsFor, pagesTable, queriesTable, targetsView, RANGES, SUMMED_NOTE } from '../search.mjs';
 import { timelineEvents, weekModel, openOpportunityCount } from '../work.mjs';
 import { n0, round1, pct, sumRange, coversFrom } from '../fmt.mjs';
 import { longRange, spanText } from '../../text.mjs';
@@ -148,11 +148,16 @@ export function overviewView(model, days) {
       })),
     queriesRange: rangeOf(queriesT.range),
     queriesNote:
-      days < 28
-        ? 'The searches list covers the last 28 days, because Search Console is pulled in 28 day periods.'
-        : days > 28
-          ? 'The searches list covers the last 90 days, the longest period the desk pulls searches for.'
-          : null,
+      [
+        days < 28
+          ? 'The searches list covers the last 28 days, because Search Console is pulled in 28 day periods.'
+          : days > 28
+            ? 'The searches list covers the last 90 days, the longest period the desk pulls searches for.'
+            : null,
+        queriesT.summed ? SUMMED_NOTE : null,
+      ]
+        .filter(Boolean)
+        .join(' ') || null,
     // The dates the Top pages list covers (the daily page rows may hold less than the range).
     pagesRange: { start: pagesCovered.start, end: pagesCovered.end, text: pagesCovered.text },
     topPages: pagesT.rows

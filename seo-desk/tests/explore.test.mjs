@@ -599,6 +599,8 @@ test('storedExplore: serves the unfiltered views from the stored pulls and nothi
       { query: 'x', page: '/a', clicks: 1, impressions: 100, position: 4 },
       { query: 'x', page: '/b', clicks: 0, impressions: 100, position: 8 },
     ],
+    // The search showed both pages at once on some days: it was shown 120 times, not 200.
+    query90: [{ query: 'x', clicks: 1, impressions: 120, position: 6 }],
     pageDaily: [
       { page: '/a', date: '2026-10-05', clicks: 0, impressions: 10, position: 5 },
       { page: '/a', date: '2026-11-07', clicks: 2, impressions: 300, position: 4 },
@@ -613,7 +615,13 @@ test('storedExplore: serves the unfiltered views from the stored pulls and nothi
 
   const q90 = storedExplore(gsc, { dim: 'query', days: 90, through: '2026-11-08' });
   assert.equal(q90.rows.length, 1);
-  assert.equal(q90.rows[0].position, 6, 'weighted over its pages');
+  assert.equal(q90.rows[0].impressions, 120, 'the query-only count, not the sum of its page rows');
+  assert.equal(q90.rows[0].position, 6);
+  assert.equal(
+    storedExplore({ ...gsc, query90: undefined }, { dim: 'query', days: 90, through: '2026-11-08' }),
+    null,
+    'without the query-only 90-day pull the route pulls live'
+  );
   assert.equal(q90.comparable, false);
   assert.ok(q90.rows[0].prev === null && q90.rows[0].movement === null);
 

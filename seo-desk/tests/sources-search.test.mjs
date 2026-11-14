@@ -18,12 +18,13 @@ const { parseBingDate, normBingDaily, normBingQueries, normBingPages, normBingLi
 const { readJson } = await import('../lib/store.mjs');
 const { McpError } = await import('../lib/mcp-client.mjs');
 
-test('normGscRows folds trailing slash and #heading into one page and weights position', () => {
+test('normGscRows folds trailing slash and #heading into one page: largest count, clicks added', () => {
   const rows = normGscRows(fx('gsc-rows.json').qpFlat, ['query', 'page']);
   const x = rows.find((r) => r.query === 'example query one' && r.page === '/blog/x');
+  // The three address forms are one page shown for one search: the largest form's 300 times shown
+  // and its place 8, never the 500 their sum would give; the clicks add up.
   assert.equal(x.clicks, 3);
-  assert.equal(x.impressions, 500);
-  // (4*100 + 8*300 + 12*100) / 500 = 8
+  assert.equal(x.impressions, 300);
   assert.equal(x.position, 8);
   assert.equal(rows.find((r) => r.page === '/').page, '/');
   assert.equal(rows.length, 3);
