@@ -416,3 +416,105 @@ test('K3: a git edit holds a page only from 15 changed lines in one commit, and 
   assert.equal(recent.has('/blog/new-guide'), false);
   assert.equal(recent.get('/blog/later-guide').edit.date, '2026-11-08', 'three days after publish counts');
 });
+
+// ---------------------------------------------------------------- S8, S9, K5: counts missing, git unread
+
+const route = async (file, path) => {
+  const mod = await import(file);
+  const r = mod.routes.find((x) => x.method === 'GET' && x.path === path.split('?')[0]);
+  return r.handler({ url: new URL(`http://127.0.0.1${path}`) });
+};
+
+test('S8, S9: with the query-only pull emptied, every affected reply says so once, and counts are a dash, not 0', async () => {
+  const { COUNTS_MISSING_NOTE } = await import('../lib/query-counts.mjs');
+  const { navCounts } = await import('../lib/api/ext/overview.mjs');
+  const { searchView } = await import('../lib/api/search.mjs');
+  const { storedExplore } = await import('../lib/explore.mjs');
+  writeJson('state/items.json', {});
+  const qpCur = [
+    { query: 'made up split search', page: '/blog/one-guide', impressions: 40, clicks: 0, position: 6 },
+    { query: 'made up split search', page: '/blog/two-guide', impressions: 35, clicks: 0, position: 7 },
+  ];
+  const gsc = { pageDaily: [], siteDaily: [], qpCur, queryCur: [], queryPrev: [] };
+  snap('gsc', gsc);
+  // A local snapshot pulled before the desk read git: no contentEdits list at all.
+  snap('local', {
+    livePages: [{ page: '/blog/one-guide' }, { page: '/blog/two-guide' }],
+    verdicts: [],
+    due: [],
+    edits: [],
+  });
+  invalidate();
+  const model = buildModel();
+  const nav = navCounts(model);
+  assert.equal(nav.cannibalization, null);
+  assert.equal(nav.contentGaps, null);
+  const once = (w) => (w ?? []).filter((x) => x === COUNTS_MISSING_NOTE).length;
+  assert.equal(once(work.opportunitiesView(model, {}).warnings), 1);
+  const wk = work.weekView(model);
+  assert.equal(once(wk.warnings), 1);
+  assert.ok(wk.warnings.includes('Recent edits from git have not been read yet. Refresh to read them.'));
+  const s = searchView(model, { days: 28, metric: 'impressions' });
+  assert.equal(once(s.warnings), 1);
+  assert.equal(s.brandSplit, null);
+  assert.equal(storedExplore(gsc, { dim: 'query', days: 28, through: '2026-11-13' }), null, 'pulled live instead');
+  for (const r of ['runner-up', 'secondary-keywords', 'cannibalization', 'content-gaps']) {
+    const v = await route('../lib/api/ext/insights.mjs', `/api/insights/${r}`);
+    assert.equal(once(v.warnings), 1, r);
+    assert.ok(!/empty/i.test((v.warnings ?? []).join(' ')), `${r} says no "empty" sentence`);
+  }
+  const t = await route('../lib/api/ext/targets.mjs', '/api/targets?tab=targeted');
+  assert.equal(once(t.warnings), 1);
+});
+
+test('K5: a target the query-only pull does not hold shows no number and a note, never page rows added up', async () => {
+  writeJson('state/items.json', {});
+  writeJson('state/targets.json', { adopted: [], ignored: [], priorities: {} });
+  const qpCur = [
+    { query: 'made up target one', page: '/blog/one-guide', impressions: 40, clicks: 0, position: 6 },
+    { query: 'made up target one', page: '/blog/two-guide', impressions: 35, clicks: 0, position: 9 },
+    { query: 'made up target two', page: '/blog/two-guide', impressions: 50, clicks: 0, position: 4 },
+  ];
+  snap('gsc', {
+    pageDaily: [],
+    siteDaily: [],
+    qpCur,
+    queryCur: [{ query: 'made up target two', impressions: 48, clicks: 0, position: 4 }],
+    queryPrev: [],
+  });
+  snap('local', {
+    livePages: [{ page: '/blog/one-guide' }, { page: '/blog/two-guide' }],
+    registry: [
+      { slug: 'one-guide', url: '/blog/one-guide', primaryKeyword: 'made up target one' },
+      { slug: 'two-guide', url: '/blog/two-guide', primaryKeyword: 'made up target two' },
+      { slug: 'three-guide', url: '/blog/three-guide', primaryKeyword: 'made up target three' },
+    ],
+    contentEdits: [],
+    verdicts: [],
+    due: [],
+    edits: [],
+  });
+  invalidate();
+  const t = await route('../lib/api/ext/targets.mjs', '/api/targets?tab=targeted');
+  const by = (k) => t.rows.find((r) => r.keyword === k);
+  assert.equal(by('made up target one').impressions, null, 'not 75');
+  assert.equal(by('made up target one').position, null);
+  assert.match(by('made up target one').noTotalNote, /only per page/);
+  assert.equal(by('made up target two').impressions, 48);
+  assert.equal(by('made up target three').impressions, 0, 'a search Google did not show at all');
+  assert.ok(t.warnings.some((w) => /^1 keyword shows no times shown or place/.test(w)));
+});
+
+test('K4: the stored 28-day searches on a short snapshot are not compared, and say why', async () => {
+  const { storedExplore } = await import('../lib/explore.mjs');
+  const { QUERY_WAIT_NOTE } = await import('../lib/query-counts.mjs');
+  const gsc = {
+    ...decaySnapshot(),
+    queryCur: [{ query: 'made up search', clicks: 0, impressions: 40, position: 7 }],
+    queryPrev: [{ query: 'made up search', clicks: 0, impressions: 90, position: 7 }],
+  };
+  gsc.windows = { ...gsc.windows, cur: { start: '2026-10-15', end: '2026-11-10' } };
+  const r = storedExplore(gsc, { dim: 'query', days: 28, through: '2026-11-10' });
+  assert.equal(r.comparable, false);
+  assert.equal(r.waitNote, QUERY_WAIT_NOTE);
+});

@@ -34,3 +34,28 @@ export function realQueryCounts(gsc, range) {
   }
   return out;
 }
+
+// Said once in every reply whose lists need the per-search counts when the query-only pull for the
+// latest 28 days is missing, or empty beside query and page rows (a pull that failed, not a site no
+// one searched): those lists cannot be worked out.
+export const COUNTS_MISSING_NOTE =
+  'Per-search counts are missing, so these lists cannot be worked out. Refresh Search Console.';
+export function countsMissingIn(gsc) {
+  if (!gsc) return false;
+  const real = realQueryCounts(gsc, 'cur');
+  return !real || (real.size === 0 && (gsc.qpCur ?? []).length > 0);
+}
+
+// Said where searches are compared with the 28 days before but the stored totals of the latest period
+// are a day short (an older snapshot whose last day was cut back, sources/gsc.mjs capSnapshot). The
+// totals cannot be re-cut, so no change is shown rather than a biased one.
+export const QUERY_WAIT_NOTE =
+  'The stored search totals for the latest period are one day shorter than the period before, so the comparison of searches waits for the next Search Console refresh.';
+// Whether the stored search totals for the latest 28 days and the 28 before cover the same number of
+// days. No stored windows: nothing to say against them.
+export function queryPeriodsEven(gsc) {
+  const w = gsc?.windows;
+  if (!w?.cur || !w?.prev) return true;
+  const days = (r) => Math.round((Date.parse(`${r.end}T00:00:00Z`) - Date.parse(`${r.start}T00:00:00Z`)) / 86400000);
+  return days(w.cur) === days(w.prev);
+}

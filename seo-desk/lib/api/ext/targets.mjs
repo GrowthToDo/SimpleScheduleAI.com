@@ -1,7 +1,6 @@
 // Routes for keyword management: the targeted, discovered and ignored lists, adopting, ignoring,
 // editing, the CSV import and export.
 
-import { groupByQuery } from '../../../../scripts/lib/gsc-diagnose-core.mjs';
 import {
   PRIORITIES,
   MAX_KEYWORD_LENGTH,
@@ -18,6 +17,7 @@ import {
   rowsForKeyword,
 } from '../../targets.mjs';
 import { buildModel, envelope, invalidate, linksFor } from '../model.mjs';
+import { realQueryCounts, COUNTS_MISSING_NOTE } from '../../query-counts.mjs';
 import { toCsv } from '../csv.mjs';
 import { bad, get, post, put, del, q, bodyOf, sendText } from '../kit.mjs';
 
@@ -37,22 +37,29 @@ const skip = (keyword, text) => ({ keyword, why: why(text) });
 
 const round1 = (n) => Math.round(n * 10) / 10;
 
-// Position and impressions for a keyword: the Search Console query table first (as the Search page
-// does), then the query and page rows. The keyword matches its exact search first, then another
-// form of it (matchKey), so "the x" finds the "x" Google returns. stats.get(keyword) -> {position,
-// impressions} or undefined.
+// Position and impressions for a keyword, from Search Console's query-only pull (the real number of
+// times the search showed the site, lib/query-counts.mjs). The keyword matches its exact search first,
+// then another form of it (matchKey), so "the x" finds the "x" Google returns. A search the pull does
+// not hold gets no number: the page rows count it once per page shown, so their sum is never used.
+// stats.get(keyword) -> {position, impressions} or undefined. stats.missing: the pull itself is
+// missing or empty beside page rows, so no keyword has a number.
 function statsMap(gsc) {
-  const rows = [...(gsc?.queryCur ?? [])];
-  const have = new Set(rows.map((r) => norm(r.query)));
-  for (const g of groupByQuery(gsc?.qpCur ?? [])) if (!have.has(norm(g.query))) rows.push(g);
-  const find = searchIndex(rows);
+  const real = realQueryCounts(gsc, 'cur');
+  const find = searchIndex(real ? [...real.values()] : []);
   return {
+    missing: Boolean(gsc) && (!real || (real.size === 0 && (gsc.qpCur ?? []).length > 0)),
     get(keyword) {
       const r = find(keyword);
       return r ? { position: round1(r.position), impressions: r.impressions } : undefined;
     },
   };
 }
+
+// Said on a keyword the page rows hold but the query-only pull does not.
+export const NO_TOTAL_NOTE = 'Search Console gave this search only per page, so no total is shown.';
+// Said once above the list when some keywords have no total.
+export const noTotalWarning = (n) =>
+  `${n} ${n === 1 ? 'keyword shows' : 'keywords show'} no times shown or place: Search Console gave ${n === 1 ? 'it' : 'them'} only per page, and adding pages up would count one search more than once.`;
 
 function rankingPageOf(keyword, qpCur) {
   const byPage = new Map();
@@ -75,7 +82,10 @@ function rowOf(t, { stats, qpCur, label = true }) {
     intentGroup: t.intentGroup ?? null,
     origin: t.origin,
     position: s?.position ?? null,
-    impressions: s?.impressions ?? 0,
+    // No number for a search the page rows hold but the query-only pull does not, or for any search
+    // when that pull is missing (never a sum of page rows); 0 for a search Google did not show at all.
+    impressions: s ? s.impressions : stats.missing || rowsForKeyword(t.keyword, qpCur).length ? null : 0,
+    noTotalNote: !s && !stats.missing && rowsForKeyword(t.keyword, qpCur).length ? NO_TOTAL_NOTE : null,
     rankingPage: rankingPageOf(t.keyword, qpCur),
     label: label ? labelTarget(t, qpCur) : null,
     ...(t.addedOn ? { addedOn: t.addedOn } : {}),
@@ -192,8 +202,15 @@ export const routes = [
           { stats, qpCur, label: false }
         )
       );
+    const env = envelope(model, { need: ['gsc'] });
+    const noTotal = rows.filter((r) => r.noTotalNote).length;
+    const warnings = [
+      ...(env.warnings ?? []),
+      ...(stats.missing ? [COUNTS_MISSING_NOTE] : noTotal ? [noTotalWarning(noTotal)] : []),
+    ];
     return {
-      ...envelope(model, { need: ['gsc'] }),
+      ...env,
+      ...(warnings.length ? { warnings } : {}),
       tab,
       rows,
       counts: {

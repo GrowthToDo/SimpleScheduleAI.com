@@ -4,6 +4,8 @@
 
 All routes are GET, base `http://127.0.0.1:8766`. Every reply (except `/api/sources`) carries
 `through`, `range` (`{start, end, text}`, can be null), `sources`, `empty` and sometimes `warnings`.
+`/api/week` also warns "Recent edits from git have not been read yet. Refresh to read them." when the
+repo files were read before the desk read git: then a page edited lately may be proposed.
 
 ## Units
 
@@ -65,7 +67,7 @@ stored 28 days whatever range you ask for. `series[]` is clicks and impressions 
 
 `/api/search?range=…&metric=…`: the older Performance data. Use it for `likeForLike {mean,
 prevMean, n, targetsTotal, enough, range, prevRange}`, `targets[]` (keyword, page, position,
-change, alignment) and `brandSplit`. When the stored search totals for the latest 28 days are a day
+change, alignment) and `brandSplit` (null when the per-search counts are missing). When the stored search totals for the latest 28 days are a day
 short of the 28 before, `notes[]` says the comparison of searches waits for the next refresh, and the
 searches list and tile carry no change.
 
@@ -100,8 +102,11 @@ One owner per search: a search sits in one list only (a real split first, then t
 ranking, then a runner-up when it is that page's own target or else a secondary keyword, then a
 content gap, then a weak question, then a cluster conflict), so the lists never double count and the
 sidebar counts follow them. Every per-search "times shown" and minimum is the real count from the
-query-only pull. When a snapshot lacks that pull, `warnings[]` says the per-search counts are
-missing and the lists that need a minimum are empty.
+query-only pull. When a snapshot lacks that pull, or it came back empty beside the page rows, every
+affected reply (these insight pages, the keyword map, `/api/targets`, `/api/opportunities`,
+`/api/week`, `/api/search` for 28 days or less) carries the one warning "Per-search counts are
+missing, so these lists cannot be worked out. Refresh Search Console." Quote it; never read a 0 there
+as no searches.
 
 `/api/insights/cannibalization`: `items[] {id, query, impressions, shouldWin, pages[{page, share,
 impressions, position, frozenUntil, frozenUntilText}], note, measured, choice, recommendation,
@@ -278,8 +283,11 @@ worry on `/api/week` has no test, no hypothesis flag and no Search Console link;
 the events it covers, so Seen holds until a new event appears.
 `/api/settings`: weights, money pages, brand words, `strategicKeywords`, switches (`paused`,
 `weeklyAudit`, `showGoogleUpdates`), `schedule`, `planSize` (3 or 5). `/api/targets`: target
-keywords and their positions. `/api/nav`: `counts {keywordMap, cannibalization, runnerUp,
+keywords and their positions, from the query-only pull only. A keyword the page rows hold but that
+pull does not has `impressions` and `position` null and `noTotalNote` (never page rows added up), and
+`warnings` counts them; 0 means Google did not show the search at all. `/api/nav`: `counts {keywordMap, cannibalization, runnerUp,
 secondaryKeywords, contentGaps, decay, internalLinks (open link suggestions), opportunities (open),
 worries, auditToFix, auditOpen, auditScore}`. Each equals the first number on its page. A null
-count means the source was never pulled (or no audit has run), not zero. `/api/jobs`: `jobs[] {key, label, writes, cost, running, last}`. `last.problems` true means the
+count means the source was never pulled (or no audit has run), not zero; `cannibalization` and
+`contentGaps` are also null when the per-search counts are missing. `/api/jobs`: `jobs[] {key, label, writes, cost, running, last}`. `last.problems` true means the
 site check or keyword check finished and found problems (not that it failed).

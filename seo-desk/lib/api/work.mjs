@@ -53,9 +53,14 @@ import {
   pagePath,
   slugOf,
   loadSettings,
+  withCountsWarning,
 } from './model.mjs';
 import { n0, pct, sumRange } from './fmt.mjs';
 import { ownership, decayItems } from './ext/insights.mjs';
+
+// Said on the week when the local snapshot has no list of git edits yet (one pulled before the desk read
+// git): a page edited lately could be proposed.
+export const GIT_NOT_READ_YET = 'Recent edits from git have not been read yet. Refresh to read them.';
 
 // ---------------------------------------------------------------- annotations
 
@@ -833,8 +838,15 @@ export function weekView(model) {
     worryCard(w, model.frozen, model.today, { recent: model.recent, week: true })
   );
   const waitingWorries = wm.worries.filter((w) => w.waitUntil).length;
+  // The cards that need the per-search counts are missing when the counts are, and a local snapshot
+  // from before the desk read git holds no recent edits, so the week says both.
+  const env = withCountsWarning(model, envelope(model));
+  const localSnap = model.snapObjs.local?.data;
+  const gitUnread = Boolean(localSnap) && !Array.isArray(localSnap.contentEdits) && !localSnap.contentEditsError;
+  const warnings = [...(env.warnings ?? []), ...(gitUnread ? [GIT_NOT_READ_YET] : [])];
   return {
-    ...envelope(model),
+    ...env,
+    ...(warnings.length ? { warnings } : {}),
     weekOf,
     weekLabel: `Week of ${longDate(weekOf)}`,
     standingLine:
@@ -1017,7 +1029,8 @@ export function opportunitiesView(model, filters, { insightCounts = null } = {})
   const { items, counts } = opportunitiesList(model, filters);
   const openRows = opportunitiesList(model, { status: 'open', page: filters?.page ?? '' }).counts.byType;
   return {
-    ...envelope(model, { need: ['gsc', 'bing', 'local'] }),
+    // Searches that need the per-search counts are missing from the list when the counts are.
+    ...withCountsWarning(model, envelope(model, { need: ['gsc', 'bing', 'local'] })),
     types: Object.entries(TYPE_LABEL).map(([type, label]) => {
       const ins = INSIGHT_OF_TYPE[type];
       const count = ins && insightCounts ? (insightCounts[ins.count] ?? null) : null;

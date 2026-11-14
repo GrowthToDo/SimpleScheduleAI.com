@@ -23,6 +23,7 @@ import { windows, todayIso } from '../dates.mjs';
 import { sourceStatus } from '../refresh.mjs';
 import { DEFAULT_REPO_ROOT, readJsonl, pageOfNote } from '../sources/local.mjs';
 import { capSnapshot } from '../sources/gsc.mjs';
+import { COUNTS_MISSING_NOTE, countsMissingIn } from '../query-counts.mjs';
 import { brief } from '../brief.mjs';
 import { loadTargets, allTargets, applySignals } from '../targets.mjs';
 import { longDate, longRange, plain } from '../text.mjs';
@@ -311,6 +312,11 @@ export function envelope(model, { need = [], range = null, ...extra } = {}) {
     ...extra,
   };
 }
+
+// An envelope with the one warning every reply whose lists need the per-search counts carries when
+// the query-only pull is missing or empty (lib/query-counts.mjs).
+export const withCountsWarning = (model, env) =>
+  countsMissingIn(model.data.gsc) ? { ...env, warnings: [...(env.warnings ?? []), COUNTS_MISSING_NOTE] } : env;
 
 export const rangeOf = (r) => (r ? { start: r.start, end: r.end, text: longRange(r.start, r.end) } : null);
 

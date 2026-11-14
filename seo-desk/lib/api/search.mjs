@@ -3,9 +3,9 @@
 // never produced here.
 
 import { groupByQuery, isBrand, targetKeywords } from '../../../scripts/lib/gsc-diagnose-core.mjs';
-import { addDays, daysBetween, todayIso } from '../dates.mjs';
+import { addDays, todayIso } from '../dates.mjs';
 import { gscEnd } from '../sources/gsc.mjs';
-import { realQueryCounts } from '../query-counts.mjs';
+import { realQueryCounts, QUERY_WAIT_NOTE, queryPeriodsEven, countsMissingIn } from '../query-counts.mjs';
 import { THRESHOLDS } from '../config.mjs';
 import { longDate, longRange } from '../text.mjs';
 import {
@@ -19,6 +19,7 @@ import {
   checkedText,
   holdFields,
   pageHold,
+  withCountsWarning,
 } from './model.mjs';
 import { deliberateEdits, timelineEvents, verdictRows, moneyPageVerdicts, opportunitiesList } from './work.mjs';
 import { n0, round1, pct, sumRange, coversFrom, lower } from './fmt.mjs';
@@ -28,18 +29,8 @@ export const LIKE_MIN_N = 3;
 // Said under a searches list whose counts are added up across pages (see queriesTable).
 export const SUMMED_NOTE =
   'These search counts are added up across pages, so a search that showed two pages is counted twice. The next Search Console pull replaces them with real counts.';
-// Said where searches are compared with the 28 days before but the stored totals of the latest period
-// are a day short (an older snapshot whose last day was cut back, sources/gsc.mjs capSnapshot). The
-// totals cannot be re-cut, so no change is shown rather than a biased one.
-export const QUERY_WAIT_NOTE =
-  'The stored search totals for the latest period are one day shorter than the period before, so the comparison of searches waits for the next Search Console refresh.';
-// Whether the stored search totals for the latest 28 days and the 28 before cover the same number of
-// days. No stored windows: nothing to say against them.
-export function queryPeriodsEven(gsc) {
-  const w = gsc?.windows;
-  if (!w?.cur || !w?.prev) return true;
-  return daysBetween(w.cur.start, w.cur.end) === daysBetween(w.prev.start, w.prev.end);
-}
+// The searches comparison on a short snapshot (lib/query-counts.mjs), re-exported for the views.
+export { QUERY_WAIT_NOTE, queryPeriodsEven };
 const MOVE_PCT = 20;
 // The pull asks for 5000 rows; snapshots pulled before that asked for 1000, and a count that lands
 // exactly on either number is a floor.
@@ -142,7 +133,7 @@ function byQueryMap(rows) {
 export function queriesTable(model, days) {
   return memo(model, `queries:${days}`, () => {
     const gsc = model.data.gsc;
-    if (!gsc) return { rows: [], range: null, comparable: false, summed: false, waitNote: null };
+    if (!gsc) return { rows: [], range: null, comparable: false, summed: false, waitNote: null, countsMissing: false };
     const short = days <= 28;
     // Per-search counts come from the query-only pulls. A snapshot from before the 90-day one existed
     // has only the query and page rows for 90 days: their sum counts a search once per page, so the
@@ -154,6 +145,9 @@ export function queriesTable(model, days) {
     const range = short ? gsc.windows?.cur : gsc.windows?.d90;
     const even = !short || queryPeriodsEven(gsc);
     const comparable = short && prevRows.length > 0 && even;
+    // The latest 28 days' query-only pull missing or empty: the list cannot be worked out, and no
+    // number stands in for it.
+    const countsMissing = short && countsMissingIn(gsc);
     const prev = byQueryMap(prevRows);
     const pageRows = groupByQuery(short ? (gsc.qpCur ?? []) : (gsc.qp90 ?? []));
     const top = new Map(pageRows.map((q) => [lower(q.query).trim(), q.pages[0]?.page ?? null]));
@@ -193,7 +187,7 @@ export function queriesTable(model, days) {
       }
     }
     rows.sort((x, y) => y.impressions - x.impressions || x.query.localeCompare(y.query));
-    return { rows, range, comparable, summed, waitNote: even ? null : QUERY_WAIT_NOTE };
+    return { rows, range, comparable, summed, waitNote: even ? null : QUERY_WAIT_NOTE, countsMissing };
   });
 }
 
@@ -383,7 +377,9 @@ export function searchView(model, { days = 28, metric = 'impressions' } = {}) {
   const devices = (gsc?.devices ?? []).map((d) => ({ device: d.device, clicks: d.clicks, impressions: d.impressions }));
 
   return {
-    ...envelope(model, { need: ['gsc', 'bing'], range }),
+    ...(queriesT.countsMissing
+      ? withCountsWarning(model, envelope(model, { need: ['gsc', 'bing'], range }))
+      : envelope(model, { need: ['gsc', 'bing'], range })),
     days,
     metric,
     ranges: RANGES,
@@ -395,11 +391,14 @@ export function searchView(model, { days = 28, metric = 'impressions' } = {}) {
     pagesRange: rangeOf(pagesT.range),
     queries: queriesT.rows,
     queriesRange: rangeOf(queriesT.range),
-    brandSplit: {
-      ...sums,
-      clicksNote:
-        'Google hides clicks for rare searches, so these click counts are a floor and the real numbers are higher.',
-    },
+    // No split (null) when the per-search counts are missing: a 0 there would read as no searches.
+    brandSplit: queriesT.countsMissing
+      ? null
+      : {
+          ...sums,
+          clicksNote:
+            'Google hides clicks for rare searches, so these click counts are a floor and the real numbers are higher.',
+        },
     targets: targetsView(model).rows,
     likeForLike: like,
     countries,

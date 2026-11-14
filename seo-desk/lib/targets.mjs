@@ -218,7 +218,9 @@ export function discovered({
   const targetKeys = new Set(targets.map((t) => matchKey(t.keyword)).filter(Boolean));
   const isTaken = (query) => taken.has(norm(query)) || targetKeys.has(matchKey(query));
   const byPage = new Map(groupByQuery(qpCur).map((q) => [norm(q.query), q]));
-  const counts = Array.isArray(queryCur) && queryCur.length ? queryCur : [...byPage.values()];
+  // Only the query-only pull gives a search's real count; without it nothing is discovered (the page
+  // rows count a search once per page shown, so their sum is never a count).
+  const counts = Array.isArray(queryCur) ? queryCur : [];
   return counts
     .filter((q) => q.impressions >= minImpressions && !isTaken(q.query) && !isBrand(q.query, brands))
     .map((q) => {

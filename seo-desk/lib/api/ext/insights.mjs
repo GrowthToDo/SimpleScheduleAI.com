@@ -43,7 +43,7 @@ import {
 import { opportunityId } from '../../rules.mjs';
 import { groupTopics, tokens } from '../../topics.mjs';
 import { isBrand } from '../../../../scripts/lib/gsc-diagnose-core.mjs';
-import { realQueryCounts } from '../../query-counts.mjs';
+import { COUNTS_MISSING_NOTE, countsMissingIn } from '../../query-counts.mjs';
 import {
   TERMS,
   SECONDARY,
@@ -105,15 +105,9 @@ const heading = (type) => ({ term: TERMS[type].term, explain: TERMS[type].explai
 
 // A Search Console snapshot without the query-only pull has no real per-search counts, so every list
 // that needs a minimum number of searches is empty. The envelope then says so in its warnings.
-export const COUNTS_MISSING =
-  'This Search Console snapshot has no per-search counts (the pull of searches without pages), so the lists that need a minimum number of searches are empty until the next pull.';
+export const COUNTS_MISSING = COUNTS_MISSING_NOTE;
 // An empty query-only list beside query and page rows is a pull that failed, not a site no one searched.
-export function countsMissing(model) {
-  const gsc = model.data.gsc;
-  if (!gsc) return false;
-  const real = realQueryCounts(gsc, 'cur');
-  return !real || (real.size === 0 && (gsc.qpCur ?? []).length > 0);
-}
+export const countsMissing = (model) => countsMissingIn(model.data.gsc);
 function insightEnvelope(model, opts) {
   const env = envelope(model, opts);
   if (!countsMissing(model)) return env;

@@ -18,7 +18,9 @@ import {
   decayItems,
   keywordTable,
   secondaryKeywordItems,
+  countsMissing,
 } from './insights.mjs';
+import { COUNTS_MISSING_NOTE } from '../../query-counts.mjs';
 
 const TARGET_NOTE =
   'Site-wide average position misleads while new posts publish weekly, so this is the average for the keywords you target that have data in both periods.';
@@ -157,6 +159,8 @@ export function overviewView(model, days) {
             ? 'The searches list covers the last 90 days, the longest period the desk pulls searches for.'
             : null,
         queriesT.summed ? SUMMED_NOTE : null,
+        queriesT.countsMissing ? COUNTS_MISSING_NOTE : null,
+        queriesT.waitNote,
       ]
         .filter(Boolean)
         .join(' ') || null,
@@ -192,11 +196,13 @@ export function navCounts(model) {
   const counts = memo(model, 'nav:counts', () => {
     const gsc = pulled(model, 'gsc');
     const anyData = ['gsc', 'bing', 'local'].some((s) => pulled(model, s));
+    // Without the per-search counts these two lists cannot be worked out: no number (a dash), not 0.
+    const counted = gsc && !countsMissing(model);
     return {
       keywordMap: gsc ? keywordTable(model).counters.all : null,
-      cannibalization: gsc ? cannibalizationItems(model).length : null,
+      cannibalization: counted ? cannibalizationItems(model).length : null,
       runnerUp: gsc ? runnerUpItems(model).length : null,
-      contentGaps: gsc ? gapItems(model).length : null,
+      contentGaps: counted ? gapItems(model).length : null,
       decay: gsc ? decayItems(model).length : null,
       secondaryKeywords: gsc ? secondaryKeywordItems(model).length : null,
       internalLinks: openLinkSuggestions(model),

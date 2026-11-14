@@ -2277,13 +2277,13 @@ test('per-search counts missing: the rules that need a minimum list nothing and 
     // A secondary keyword and a runner-up count one page's own views, which the page rows hold.
     if (route === 'cannibalization' || route === 'content-gaps') assert.equal(r.count, 0, route);
     assert.ok(
-      (r.warnings ?? []).some((w) => /per-search counts/.test(w)),
+      (r.warnings ?? []).some((w) => /per-search counts/i.test(w)),
       `${route} says the per-search counts are missing`
     );
   }
   const km = (await get('/api/keyword-map/table')).json;
   assert.equal(km.counters.unmapped, 0);
-  assert.ok((km.warnings ?? []).some((w) => /per-search counts/.test(w)));
+  assert.ok((km.warnings ?? []).some((w) => /per-search counts/i.test(w)));
   const types = new Set(buildModel().opps.map((o) => o.type));
   for (const t of ['competing-pages', 'unserved', 'question']) assert.ok(!types.has(t), t);
   use(FULL);
@@ -2548,6 +2548,6 @@ test('an empty query-only list beside query and page rows counts as missing, nev
   const km = (await get('/api/keyword-map/table')).json;
   assert.equal(km.counters.unmapped, 0, 'no search is discovered from page rows added up');
   assert.ok(km.rows.every((r) => r.impressions === null));
-  assert.ok((km.warnings ?? []).some((w) => /per-search counts/.test(w)));
+  assert.ok((km.warnings ?? []).some((w) => /per-search counts/i.test(w)));
   use(FULL);
 });

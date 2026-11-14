@@ -92,8 +92,19 @@ test('discovered: only unclaimed, non-brand, non-ignored searches with enough im
     qp('examplecare login', '/', 70),
     qp('second phrase', '/blog/c', 55, 4),
   ];
+  // The real counts come from the query-only pull: 'new phrase one' showed the site 35 times, though
+  // its two page rows add up to 40.
+  const queryCur = [
+    { query: 'new phrase one', impressions: 35, clicks: 0, position: 9.5 },
+    { query: 'tiny phrase', impressions: 19, clicks: 0, position: 10 },
+    { query: 'Taken Phrase', impressions: 90, clicks: 0, position: 10 },
+    { query: 'skipped phrase', impressions: 80, clicks: 0, position: 10 },
+    { query: 'examplecare login', impressions: 70, clicks: 0, position: 1 },
+    { query: 'second phrase', impressions: 55, clicks: 0, position: 4 },
+  ];
   const rows = T.discovered({
     qpCur,
+    queryCur,
     targets: [{ keyword: ' taken phrase' }],
     ignored: ['Skipped Phrase'],
     brands: ['examplecare'],
@@ -103,10 +114,12 @@ test('discovered: only unclaimed, non-brand, non-ignored searches with enough im
     ['second phrase', 'new phrase one']
   );
   const one = rows.find((r) => r.query === 'new phrase one');
-  assert.equal(one.impressions, 40);
+  assert.equal(one.impressions, 35, 'the real count, never the page rows added up');
   assert.equal(one.rankingPage, '/blog/a');
   assert.equal(typeof one.position, 'number');
-  assert.equal(T.discovered({ qpCur, targets: [], ignored: [], brands: [], minImpressions: 85 }).length, 1);
+  assert.equal(T.discovered({ qpCur, queryCur, targets: [], ignored: [], brands: [], minImpressions: 85 }).length, 1);
+  // K5: without the query-only pull nothing is discovered.
+  assert.deepEqual(T.discovered({ qpCur, targets: [], ignored: [], brands: [] }), []);
 });
 
 test('labelTarget: right page, ranks elsewhere, not returned, partial evidence', () => {

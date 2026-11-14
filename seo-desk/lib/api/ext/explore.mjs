@@ -208,9 +208,11 @@ export function makeRoutes({ open = openServer, now, waitMs = WAIT_MS, totalMs =
           dim === 'page'
             ? `Click rate is shown only for pages with at least ${ctrMin} impressions, because Google hides some clicks.`
             : 'Google hides some clicks on small searches, so no click rate is shown for searches and the click counts are a floor.',
-          ...(result.comparable
-            ? []
-            : ['There is no earlier period to compare this view with, so there is no movement.']),
+          ...(result.waitNote
+            ? [result.waitNote]
+            : result.comparable
+              ? []
+              : ['There is no earlier period to compare this view with, so there is no movement.']),
           ...(result.truncated ? [`Only the top ${rows.length} rows are shown; there are more.`] : []),
         ],
       };

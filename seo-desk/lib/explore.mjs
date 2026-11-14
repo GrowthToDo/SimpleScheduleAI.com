@@ -17,7 +17,7 @@ import { GSC_SITE_URL, normGscRows, gscEnd } from './sources/gsc.mjs';
 import { bad } from './api/kit.mjs';
 import { movementOf } from './api/search.mjs';
 import { coversFrom, pct } from './api/fmt.mjs';
-import { realQueryCounts } from './query-counts.mjs';
+import { realQueryCounts, countsMissingIn, queryPeriodsEven, QUERY_WAIT_NOTE } from './query-counts.mjs';
 
 const TOOL = 'get_advanced_search_analytics';
 const MAX_ROWS = 25000;
@@ -480,10 +480,15 @@ export function storedExplore(gsc, { through: asked, dim, days, limit = 1000, ct
   let prev = [];
   let range;
   let comparable = false;
-  if (dim === 'query' && days === 28 && w?.cur && Array.isArray(gsc.queryCur)) {
+  let waitNote = null;
+  // An empty query-only pull beside query and page rows is a pull that failed: no stored answer, so the
+  // route pulls the real counts live rather than showing 0 searches.
+  if (dim === 'query' && days === 28 && w?.cur && Array.isArray(gsc.queryCur) && !countsMissingIn(gsc)) {
     cur = gsc.queryCur;
-    prev = gsc.queryPrev ?? [];
-    comparable = Array.isArray(gsc.queryPrev);
+    // A latest period a day short of the one before (an older snapshot) is not compared.
+    comparable = Array.isArray(gsc.queryPrev) && queryPeriodsEven(gsc);
+    prev = comparable ? gsc.queryPrev : [];
+    if (!queryPeriodsEven(gsc)) waitNote = QUERY_WAIT_NOTE;
     range = { start: w.cur.start, end: capEnd(w.cur.end), prevStart: w.prev.start, prevEnd: w.prev.end };
   } else if (dim === 'query' && days === 90 && w?.d90 && realQueryCounts(gsc, 'd90')) {
     // The query-only 90-day pull. A snapshot without it gives no stored answer, so the route pulls
@@ -508,6 +513,7 @@ export function storedExplore(gsc, { through: asked, dim, days, limit = 1000, ct
     filters: [],
     ...assemble({ dim, cur, prev, comparable, truncated, limit, ctrMin: gate }),
     cached: false,
+    waitNote,
   };
 }
 
