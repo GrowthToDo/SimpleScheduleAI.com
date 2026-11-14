@@ -157,19 +157,26 @@ of the shared ending) and `inline-css-heavy`; page weight (`page-code-large`) le
 styles and scripts, and every size is before compression.
 
 `/api/ai-visibility`: `byKind[]` (brand, alternatives, category, other) and `byAssistant[]`
-(ChatGPT, Google AI answers). Counts: `listed`, `listedLinked`, `keywordChecked`, `keywordNamed`,
+(ChatGPT, Google AI answers). Counts: `listed`, `listedLinked`, `keywordChecked`,
 `keywordCited`, `keywordEnough`, plus ready-made `listedText` and `keywordText`. `lastCheck {date,
 dateText, daysAgo}` and `note`. `listed` is a count of answers that named us, never a share: do not
-divide it by anything. `keywordNamed` and `keywordCited` are null under 3 keyword checks ("not
-enough data yet"). Counts are for the newest saved check only and are a floor.
-`/api/ai`: `trend[]`, `platforms[]`, `moneyKeywords[] {keyword, cited, platforms[]}`, `moneyCitations
-{checked, cited, enough, text}`, `latestCheck`, `visitsFromAi`, `imports`, `check {job, cost, writes}`.
-Use `moneyCitations` for "how many money keywords cite us": its `cited` is null until `enough`
-(3 or more checked), and `text` is the sentence. Never count `moneyKeywords[].cited` yourself, which
-skips that gate.
+divide it by anything. `keywordCited` is null under 3 keyword checks ("not enough data yet"). A
+keyword check says only whether our site is among the top sources the answers cite; it never tests
+whether they name us. Counts are for the newest saved check only and are a floor.
+`/api/ai`: `trend[]` (listed answers that name us only), `platforms[]` (every assistant a check
+asked), `moneyKeywords[] {keyword, cited, platforms[]}`, `keywordCheck {date, dateText, fromLatest,
+note}`, `moneyCitations {checked, cited, enough, text}`, `latestCheck {date, dateText, daysAgo,
+engines, answersFrom, answersTo, answersText}`, `visitsFromAi {range, prevRange, total, prevTotal,
+...}`, `imports`, `check {job, cost, writes}`. The check reads a stored set of AI answers: quote
+`answersText` for their own dates. When `keywordCheck.fromLatest` is false the newest check's
+keyword part returned nothing and the rows are from `keywordCheck.date`. Use `moneyCitations` for
+"how many money keywords cite us": its `cited` is null until `enough` (3 or more checked), and `text`
+is the sentence. Never count `moneyKeywords[].cited` yourself, which skips that gate.
 
 `/api/visitors`: `channels {range, total, rows[], series[]}`, `landing[]`, `interestSignals[]`,
-`clarity`, `standingLine`. `/api/health`: `indexSummary {indexed, notIndexed, unknown, checked,
+`clarity`, `standingLine`, `shareMinVisits`. Every `share` and `engagementRate` is null under 30
+visits: say "not enough data yet". `clarity.scroll[] {page, depth, days}` is an average of daily
+figures over `days` days. `/api/health`: `indexSummary {indexed, notIndexed, unknown, checked,
 live, notChecked, oldestCheckedOn, answersText, lastRun, text}`, `index[] {page, verdict, reason,
 lastCrawl, checkedOn, clicks, changedSinceLast}`, `newSinceLast[]`, `fixedSinceLast[]`,
 `comparedPages`, `comparedText`, `bingCrawlIssues[]`, `issues[]`, `aiCrawlers`. `checked` is the
@@ -210,4 +217,5 @@ the events it covers, so Seen holds until a new event appears.
 keywords and their positions. `/api/nav`: `counts {keywordMap, cannibalization, runnerUp,
 secondaryKeywords, contentGaps, decay, internalLinks (open link suggestions), opportunities (open),
 worries, auditToFix, auditOpen, auditScore}`. Each equals the first number on its page. A null
-count means the source was never pulled (or no audit has run), not zero. `/api/jobs`: `jobs[] {key, label, writes, cost, running, last}`.
+count means the source was never pulled (or no audit has run), not zero. `/api/jobs`: `jobs[] {key, label, writes, cost, running, last}`. `last.problems` true means the
+site check or keyword check finished and found problems (not that it failed).

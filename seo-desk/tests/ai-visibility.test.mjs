@@ -152,16 +152,15 @@ test('visibility counts listed answers and keyword checks apart, by kind of ques
   // alternatives: three listed answers and one keyword check (under the minimum)
   assert.equal(by.alternatives.listed, 3);
   assert.equal(by.alternatives.keywordChecked, 1);
-  assert.equal(by.alternatives.keywordNamed, null);
+  assert.equal(by.alternatives.keywordNamed, undefined, 'a keyword check never tests naming');
   assert.equal(by.alternatives.keywordCited, null);
   // category: three keyword checks, one of them naming us and linking to us; nothing listed
   assert.equal(by.category.listed, 0);
   assert.equal(by.category.listedText, 'The check listed no answers that named us.');
   assert.equal(by.category.keywordChecked, 3);
   assert.equal(by.category.keywordEnough, true);
-  assert.equal(by.category.keywordNamed, 1);
   assert.equal(by.category.keywordCited, 1);
-  assert.equal(by.category.keywordText, 'Named us in at least 1 of 3 keyword checks; linked to us in at least 1.');
+  assert.equal(by.category.keywordText, 'Our site was among the sources cited in at least 1 of 3 keyword checks.');
   // other: two listed answers
   assert.equal(by.other.listed, 2);
   assert.equal(MIN_CHECKS, 3);
@@ -192,19 +191,18 @@ test('visibility counts by assistant with the same split, the same gate and plai
   assert.equal(by.chat_gpt.listedLinked, 2);
   assert.equal(by.chat_gpt.keywordChecked, 1);
   assert.equal(by.chat_gpt.keywordEnough, false);
-  assert.equal(by.chat_gpt.keywordNamed, null);
+  assert.equal(by.chat_gpt.keywordCited, null);
   assert.equal(by.google.listed, 3);
   assert.equal(by.google.listedLinked, 0);
   assert.equal(by.google.keywordChecked, 3);
   assert.equal(by.google.keywordEnough, true);
-  assert.equal(by.google.keywordNamed, 0);
   assert.equal(by.google.keywordCited, 0);
-  assert.equal(by.google.keywordText, 'Named us in at least 0 of 3 keyword checks; linked to us in at least 0.');
+  assert.equal(by.google.keywordText, 'Our site was among the sources cited in at least 0 of 3 keyword checks.');
   assert.equal(v.byAssistant[0].platform, 'chat_gpt', 'most checks first');
   const small = visibility([{ date: '2026-11-02', rows: [own('perplexity', 'a'), kw('perplexity', 'b', true)] }], cfg);
   assert.equal(small.byAssistant[0].assistant, 'Perplexity');
   assert.equal(small.byAssistant[0].keywordEnough, false);
-  assert.equal(small.byAssistant[0].keywordNamed, null);
+  assert.equal(small.byAssistant[0].keywordCited, null);
   assert.match(small.byAssistant[0].text, /not enough data yet/i);
 });
 
@@ -243,7 +241,7 @@ test('visibility with no data lists every kind with nothing counted', () => {
     assert.equal(v.byKind.length, 4);
     assert.ok(
       v.byKind.every(
-        (k) => k.listed === 0 && k.keywordChecked === 0 && k.keywordEnough === false && k.keywordNamed === null
+        (k) => k.listed === 0 && k.keywordChecked === 0 && k.keywordEnough === false && k.keywordCited === null
       )
     );
     assert.deepEqual(v.byAssistant, []);

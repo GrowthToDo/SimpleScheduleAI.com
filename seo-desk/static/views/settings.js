@@ -607,7 +607,11 @@ function sourcesSection(data, ctx) {
           'div',
           { class: 'st-src-top' },
           h('strong', {}, SOURCE_NAMES[s.source] ?? s.source),
-          h('span', { class: `chip ${STATUS_CLASS[s.status] ?? ''}`.trim() }, STATUS_WORDS[s.status] ?? s.status),
+          // A pull that finished with a problem (a stopped index run, an unread sitemap) is not
+          // "Up to date": it says so, and the problem is on the line below.
+          s.status === 'fresh' && s.error
+            ? h('span', { class: 'chip chip-warn' }, 'Pulled, with a problem')
+            : h('span', { class: `chip ${STATUS_CLASS[s.status] ?? ''}`.trim() }, STATUS_WORDS[s.status] ?? s.status),
           h(
             'span',
             { class: 'muted small' },
@@ -619,7 +623,7 @@ function sourcesSection(data, ctx) {
           'div',
           { class: 'small', style: { marginTop: '4px', overflowWrap: 'anywhere' } },
           s.error
-            ? `Last error${s.failedAt ? ` (${fmt.ago(s.failedAt)})` : ''}: ${s.error}${s.retryAt ? ` Trying again at ${fmt.clock(s.retryAt)}.` : ''}`
+            ? `${s.status === 'fresh' ? 'Problem in the last pull' : 'Last error'}${s.failedAt ? ` (${fmt.ago(s.failedAt)})` : ''}: ${s.error}${s.retryAt ? ` Trying again at ${fmt.clock(s.retryAt)}.` : ''}`
             : s.status === 'never'
               ? 'Nothing has been pulled yet, so there is no error either.'
               : 'No errors.'

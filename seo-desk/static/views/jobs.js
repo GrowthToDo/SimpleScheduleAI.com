@@ -50,7 +50,7 @@ export function jobBlock(ctx, jobsData, key, { label, primary = false, confirm }
       tail = p?.tail ?? [];
     } else if (job?.last) {
       const l = job.last;
-      text = `${label}: ${l.ok ? 'finished' : 'did not finish'} ${fmt.ago(l.at)}, took ${lengthText(l.durationSec)}.`;
+      text = `${label}: ${l.ok ? (l.problems ? 'finished and found problems' : 'finished') : 'did not finish'} ${fmt.ago(l.at)}, took ${lengthText(l.durationSec)}.`;
       summary = l.summary ?? (l.ok ? '' : 'It did not finish cleanly.');
       tail = l.tail ?? [];
     }
@@ -87,7 +87,11 @@ export function jobBlock(ctx, jobsData, key, { label, primary = false, confirm }
     }
     const job = state.jobs.find((j) => j.key === key);
     ctx.toast(
-      job?.last?.ok ? `${label} finished.` : `${label} did not finish. The output is on the page.`,
+      job?.last?.ok
+        ? job.last.problems
+          ? `${label} finished and found problems. They are on the page.`
+          : `${label} finished.`
+        : `${label} did not finish. The output is on the page.`,
       job?.last?.ok ? 'success' : 'error'
     );
     await ctx.reload();

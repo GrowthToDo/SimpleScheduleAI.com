@@ -4,7 +4,7 @@ import { readJson } from '../store.mjs';
 import { PRESETS, THRESHOLDS, STALE_HOURS, DAILY_HOUR } from '../config.mjs';
 import { LABEL as SIGNAL_LABEL, MEANING as SIGNAL_MEANING, SIGNAL_ORDER } from '../score.mjs';
 import { addDays, daysBetween, todayIso } from '../dates.mjs';
-import { longDate, plain } from '../text.mjs';
+import { longDate, longRange, plain } from '../text.mjs';
 import { envelope, rangeOf, linksFor, pagePath, itemState, itemOf, SOURCES, ADJUSTABLE_THRESHOLDS } from './model.mjs';
 import { INDEX_PER_RUN } from '../sources/index.mjs';
 import { pagesTable } from './search.mjs';
@@ -14,6 +14,11 @@ import { pct, sumRange } from './fmt.mjs';
 import { parseHygiene } from './site-check.mjs';
 import { AI_CRAWLERS } from '../robots.mjs';
 import { MIN_CHECKS } from '../ai-visibility.mjs';
+import { SHARE_MIN_VIEWS } from '../explore.mjs';
+
+// A share of visits (of a total, or of a page's own visits) only from SHARE_MIN_VIEWS visits, the
+// desk's rule for every share; null under it, and the page shows nothing then.
+const shareOf = (part, total) => (total >= SHARE_MIN_VIEWS ? Math.round((part / total) * 1000) / 1000 : null);
 import {
   groupChanges,
   countChanges,
@@ -54,24 +59,47 @@ export function aiView(model) {
   for (const line of local.aeo ?? []) if (line?.date) byDate.set(line.date, line); // a repeated date keeps the last line
   const lines = [...byDate.values()].sort((a, b) => a.date.localeCompare(b.date));
 
+  // Answers that name us: the listed answers only. A keyword check says whether our site is among
+  // the sources an answer cites, which is not the same thing, so it never adds to this count.
   const trend = lines.map((line) => {
     const byPlatform = {};
     for (const r of line.rows ?? []) {
-      const names = r.kind === 'own-mention' || r.ourPresent === true;
-      if (names) byPlatform[r.platform] = (byPlatform[r.platform] ?? 0) + 1;
+      if (r.kind === 'own-mention') byPlatform[r.platform] = (byPlatform[r.platform] ?? 0) + 1;
     }
     return { date: line.date, byPlatform, total: Object.values(byPlatform).reduce((s, n) => s + n, 0) };
   });
-  const platforms = [...new Set(lines.flatMap((l) => (l.rows ?? []).map((r) => r.platform).filter(Boolean)))].map(
-    (p) => ({
-      platform: p,
-      label: platformLabel(p),
-    })
-  );
+  // Every assistant a check asked (its `engines`) or that has a row.
+  const platforms = [
+    ...new Set(
+      lines.flatMap((l) => [...(Array.isArray(l.engines) ? l.engines : []), ...(l.rows ?? []).map((r) => r.platform)])
+    ),
+  ]
+    .filter(Boolean)
+    .map((p) => ({ platform: p, label: platformLabel(p) }));
 
   const latest = lines[lines.length - 1] ?? null;
+  // The keyword results come from the newest line that has keyword rows. When the newest check's
+  // keyword part returned nothing, the page says so and shows the last results that had answers.
+  const hasKeywords = (l) => (l?.rows ?? []).some((r) => r.keyword !== undefined);
+  const keywordLine = [...lines].reverse().find(hasKeywords) ?? null;
+  const keywordCheck = keywordLine
+    ? {
+        date: keywordLine.date,
+        dateText: longDate(keywordLine.date),
+        fromLatest: keywordLine === latest,
+        note:
+          keywordLine === latest
+            ? null
+            : `The keyword part of the last check, on ${longDate(latest.date)}, returned nothing. These are the results of the check on ${longDate(keywordLine.date)}, the last one that had answers.`,
+      }
+    : null;
+  // The answers' own dates: the stored answers are older than the day the check read them.
+  const answerDays = (latest?.rows ?? [])
+    .map((r) => (r.kind === 'own-mention' ? r.lastResponseAt : null))
+    .filter((d) => /^\d{4}-\d{2}-\d{2}/.test(String(d ?? '')))
+    .sort();
   const keywords = new Map();
-  for (const r of latest?.rows ?? []) {
+  for (const r of keywordLine?.rows ?? []) {
     if (r.keyword === undefined) continue;
     const k = keywords.get(r.keyword) ?? { keyword: r.keyword, cited: false, platforms: [] };
     if (r.ourPresent) k.cited = true;
@@ -107,14 +135,30 @@ export function aiView(model) {
     ...envelope(model, { need: ['local', 'ga4'] }),
     platforms,
     trend,
-    atLeastNote: 'These counts are a floor. The citation check lists at most 10 answers per assistant.',
-    latestCheck: latest ? { date: latest.date, dateText: longDate(latest.date), daysAgo: days } : null,
+    atLeastNote:
+      'These counts are a floor. The citation check reads a stored set of AI answers and lists at most 10 per assistant.',
+    latestCheck: latest
+      ? {
+          date: latest.date,
+          dateText: longDate(latest.date),
+          daysAgo: days,
+          // The assistants this check asked; null on a line that does not say.
+          engines: Array.isArray(latest.engines) ? latest.engines : null,
+          answersFrom: answerDays[0] ?? null,
+          answersTo: answerDays.at(-1) ?? null,
+          answersText: answerDays.length
+            ? `The check on ${longDate(latest.date)} read stored AI answers dated ${longRange(answerDays[0], answerDays.at(-1))}.`
+            : `The check on ${longDate(latest.date)} read a stored set of AI answers.`,
+        }
+      : null,
+    keywordCheck,
     moneyKeywords: [...keywords.values()],
     // The money keywords that cite us, as the one gated "N of M" this page shows: the pair only from
     // MIN_CHECKS keyword checks, else null, with the sentence to show either way.
-    moneyCitations: moneyCitationsOf([...keywords.values()]),
+    moneyCitations: moneyCitationsOf([...keywords.values()], keywordCheck),
     visitsFromAi: {
       range: rangeOf(w.cur),
+      prevRange: rangeOf(w.prev),
       total: ga ? visitsCur : null,
       prevTotal: ga ? visitsPrev : null,
       change: ga ? pct(visitsCur, visitsPrev) : null,
@@ -174,7 +218,7 @@ function breakdownOf(list) {
       sessions: r.sessions,
       prevSessions: r.prevSessions,
       change: pct(r.sessions, r.prevSessions),
-      share: total ? Math.round((r.sessions / total) * 1000) / 1000 : null,
+      share: shareOf(r.sessions, total),
     })),
   };
 }
@@ -203,7 +247,7 @@ export function visitorsView(model) {
       sessions,
       prevSessions: prev.get(channel) ?? 0,
       change: pct(sessions, prev.get(channel) ?? 0),
-      share: total ? Math.round((sessions / total) * 1000) / 1000 : null,
+      share: shareOf(sessions, total),
     }))
     .sort((a, b) => b.sessions - a.sessions);
 
@@ -213,7 +257,7 @@ export function visitorsView(model) {
     prevSessions: r.prevSessions,
     change: pct(r.sessions, r.prevSessions),
     engagedSessions: r.engagedSessions,
-    engagementRate: r.sessions >= 20 ? Math.round((r.engagedSessions / r.sessions) * 100) / 100 : null,
+    engagementRate: r.sessions >= SHARE_MIN_VIEWS ? Math.round((r.engagedSessions / r.sessions) * 100) / 100 : null,
     links: linksFor(r.page),
   }));
 
@@ -261,6 +305,7 @@ export function visitorsView(model) {
 
   return {
     ...envelope(model, { need: ['ga4', 'clarity'], range: rangeOf(w.cur) }),
+    shareMinVisits: SHARE_MIN_VIEWS,
     standingLine:
       'Visits and form submissions are interest signals, not sales. Customers come through personal contacts.',
     internalTrafficNote:
@@ -294,8 +339,10 @@ export function visitorsView(model) {
           rage: top('rage'),
           dead: top('dead'),
           quickBack: top('quickBack'),
+          // An average of the daily averages Clarity gives, on the days the page was in its daily
+          // list: `days` says how many it rests on.
           scroll: [...scroll.entries()]
-            .map(([page, s]) => ({ page, depth: Math.round(s.sum / s.n) }))
+            .map(([page, s]) => ({ page, depth: Math.round(s.sum / s.n), days: s.n }))
             .sort((a, b) => a.depth - b.depth)
             .slice(0, 15),
           jsErrors: [...errors.entries()]
@@ -303,6 +350,8 @@ export function visitorsView(model) {
             .sort((a, b) => b.count - a.count)
             .slice(0, 15),
           note: 'Clarity only answers for the last few days, so this trend starts on the first day the desk pulled it.',
+          scrollNote:
+            'Scroll depth is an average of the daily figures Clarity gives, over the days the page was in its daily list. Each page says how many days that is.',
           recordingsUrl: 'https://clarity.microsoft.com/',
         }
       : { available: false, note: 'Clarity has not been pulled yet.', recordingsUrl: 'https://clarity.microsoft.com/' },
@@ -722,21 +771,24 @@ export const THRESHOLD_LABEL = {
   PCT_MIN_BASE: 'Smallest earlier number a percentage is shown for',
 };
 
-function moneyCitationsOf(keywords) {
+// "Cites us" here means our site is among the top sources the stored answers cite for the keyword.
+function moneyCitationsOf(keywords, keywordCheck = null) {
   const checked = keywords.length;
   const enough = checked >= MIN_CHECKS;
   const cited = enough ? keywords.filter((k) => k.cited).length : null;
+  const when = keywordCheck ? ` at the check on ${keywordCheck.dateText}` : '';
+  const text = !checked
+    ? 'No money keyword has been checked yet.'
+    : !enough
+      ? `Not enough data yet: ${checked} money ${checked === 1 ? 'keyword was' : 'keywords were'} checked, and a count needs ${MIN_CHECKS}.`
+      : cited === 0
+        ? `Our site was not among the sources cited for any of the ${checked} money keywords checked${when}.`
+        : `Our site was among the sources cited for ${cited} of the ${checked} money keywords checked${when}.`;
   return {
     checked,
     cited,
     enough,
-    text: !checked
-      ? 'No money keyword has been checked yet.'
-      : !enough
-        ? `Not enough data yet: ${checked} money ${checked === 1 ? 'keyword was' : 'keywords were'} checked, and a count needs ${MIN_CHECKS}.`
-        : cited === 0
-          ? `None of the ${checked} money keywords checked cites us yet.`
-          : `${cited} of the ${checked} money keywords checked cite us.`,
+    text: keywordCheck?.note ? `${keywordCheck.note} ${text}` : text,
   };
 }
 

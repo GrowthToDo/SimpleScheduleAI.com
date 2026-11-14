@@ -291,9 +291,10 @@ export const SECTIONS = [
       const ai = aiView(m);
       return {
         ...pick(aiVisibilityView(m), ['byKind', 'byAssistant', 'lastCheck', 'note']),
-        ...pick(ai, ['moneyCitations', 'atLeastNote']),
+        ...pick(ai, ['moneyCitations', 'atLeastNote', 'keywordCheck']),
+        answersText: ai.latestCheck?.answersText ?? null,
         visitsFromAi: ai.visitsFromAi
-          ? pick(ai.visitsFromAi, ['range', 'total', 'prevTotal', 'change', 'bySource'])
+          ? pick(ai.visitsFromAi, ['range', 'total', 'prevRange', 'prevTotal', 'change', 'bySource'])
           : null,
       };
     },

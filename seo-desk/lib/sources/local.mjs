@@ -11,7 +11,8 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { readJson } from '../store.mjs';
-import { addDays } from '../dates.mjs';
+import { addDays, todayIso } from '../dates.mjs';
+import { longDate } from '../text.mjs';
 import { SITE } from '../config.mjs';
 import { parsePlan, findPlanFile } from './plan-parser.mjs';
 import { AI_CRAWLERS, robotsAllows } from '../robots.mjs';
@@ -539,11 +540,17 @@ export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl
   edits.sort((a, b) => b.date.localeCompare(a.date) || a.page.localeCompare(b.page));
 
   let livePages;
+  // A failed sitemap read keeps the last list, and says so on the source line (the snapshot's
+  // error), so the source never reads "no errors" while the page list is an old one.
+  let liveError = null;
   try {
     livePages = await fetchLivePages(fetchImpl);
   } catch (e) {
     warnings.push(`livePages: kept the previous list (${String(e?.message ?? e).slice(0, 120)})`);
-    livePages = readJson('snap/local.json', null)?.data?.livePages ?? [];
+    const before = readJson('snap/local.json', null);
+    livePages = before?.data?.livePages ?? [];
+    const when = before?.pulledAt ? ` from ${longDate(todayIso(new Date(before.pulledAt)))}` : '';
+    liveError = `The sitemap could not be read (${String(e?.message ?? e).slice(0, 120)}), so the list of live pages is the last one that was read${when}.`;
   }
 
   const robots = await checkRobots(fetchImpl, readJson('snap/local.json', null)?.data?.robots ?? null);
@@ -572,7 +579,7 @@ export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl
     status: 'fresh',
     pulledAt: new Date().toISOString(),
     through: today,
-    error: null,
+    error: liveError,
     data: {
       verdicts,
       due,

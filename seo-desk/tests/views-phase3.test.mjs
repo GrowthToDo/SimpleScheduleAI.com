@@ -134,11 +134,11 @@ test('audit filterIssues: by severity, and Show quick wins keeps quick wins only
 
 test('AI keyword line: "N of M" only when there are enough keyword checks', () => {
   assert.equal(
-    ai.keywordShare({ keywordChecked: 4, keywordNamed: 1, keywordEnough: true }),
-    'named in 1 of 4 keyword checks'
+    ai.keywordShare({ keywordChecked: 4, keywordCited: 1, keywordEnough: true }),
+    'among the sources cited in 1 of 4 keyword checks'
   );
-  assert.equal(ai.keywordShare({ keywordChecked: 2, keywordNamed: null, keywordEnough: false }), 'not enough data yet');
-  assert.equal(ai.keywordShare({ keywordChecked: 0, keywordNamed: null, keywordEnough: false }), 'not enough data yet');
+  assert.equal(ai.keywordShare({ keywordChecked: 2, keywordCited: null, keywordEnough: false }), 'not enough data yet');
+  assert.equal(ai.keywordShare({ keywordChecked: 0, keywordCited: null, keywordEnough: false }), 'not enough data yet');
 });
 
 // ---------------------------------------------------------------- print view

@@ -459,3 +459,179 @@ test('L3: the sidebar shows no tick for a stopped or old audit', () => {
   assert.equal(c.stoppedEarly, false);
   assert.equal(c.at, '2026-10-01T06:00:00.000Z');
 });
+
+// ---------------------------------------------------------------- AI visibility
+
+const { aiView, visitorsView } = await import('../lib/api/panels.mjs');
+const { visibility } = await import('../lib/ai-visibility.mjs');
+const aiPage = await import('../static/views/ai.js');
+
+const own = (platform, question, lastResponseAt = '2026-10-20') => ({
+  kind: 'own-mention',
+  platform,
+  question,
+  citedUrls: [],
+  lastResponseAt,
+});
+const kw = (keyword, ourPresent) => ({
+  keyword,
+  platform: 'chat_gpt',
+  ourPresent,
+  ourRank: ourPresent ? 2 : null,
+  topSources: [['rival.example', 3]],
+  competitors: [],
+});
+
+function aiFixture(aeo) {
+  fs.rmSync(DATA, { recursive: true, force: true });
+  snap('local', { livePages: [{ page: '/' }], aeo });
+  invalidate();
+  return aiView(buildModel());
+}
+
+test('L8 and L7: the trend counts only answers that name us, and an assistant the check asked is checked', () => {
+  const v = aiFixture([
+    {
+      date: '2026-11-01',
+      engines: ['chat_gpt', 'google'],
+      rows: [own('chat_gpt', 'an invented question'), kw('sample phrase one', true)],
+    },
+  ]);
+  assert.equal(v.trend[0].total, 1, 'a keyword hit is not an answer that names us');
+  assert.deepEqual(
+    v.platforms.map((p) => p.platform),
+    ['chat_gpt', 'google']
+  );
+  assert.deepEqual(v.latestCheck.engines, ['chat_gpt', 'google']);
+  const google = aiPage.assistants(v).find((a) => a.label === 'Google AI answers');
+  assert.equal(google.checked, true, 'asked and listed nothing is not "not checked this time"');
+  assert.equal(google.n, 0);
+});
+
+test('L6: when the newest check has no keyword rows, the last results with answers are shown with their date', () => {
+  const keywords = ['sample phrase one', 'sample phrase two', 'sample phrase three'];
+  const v = aiFixture([
+    { date: '2026-10-01', engines: ['chat_gpt'], rows: keywords.map((k, i) => kw(k, i === 0)) },
+    { date: '2026-11-01', engines: ['chat_gpt'], rows: [own('chat_gpt', 'an invented question')] },
+  ]);
+  assert.equal(v.moneyKeywords.length, 3);
+  assert.equal(v.keywordCheck.date, '2026-10-01');
+  assert.equal(v.keywordCheck.fromLatest, false);
+  assert.match(v.keywordCheck.note, /keyword part of the last check, on 1 November, returned nothing/);
+  assert.doesNotMatch(v.moneyCitations.text, /No money keyword has been checked yet/);
+  assert.match(v.moneyCitations.text, /1 of the 3 money keywords checked at the check on 1 October/);
+});
+
+test('W8 and W7: keyword rows claim only "among the sources cited", answers carry their own dates, visits name both ranges', () => {
+  const v = aiFixture([
+    {
+      date: '2026-11-01',
+      engines: ['chat_gpt'],
+      rows: [own('chat_gpt', 'a', '2026-09-12'), own('chat_gpt', 'b', '2026-10-30'), kw('sample phrase one', true)],
+    },
+  ]);
+  assert.match(v.latestCheck.answersText, /stored AI answers dated 12 September to 30 October/);
+  assert.ok(v.visitsFromAi.prevRange.start < v.visitsFromAi.range.start);
+  const vis = visibility([{ date: '2026-11-01', rows: ['x', 'y', 'z'].map((k) => kw(`phrase ${k}`, true)) }], {
+    today: '2026-11-10',
+  });
+  const row = vis.byAssistant[0];
+  assert.equal(row.keywordNamed, undefined);
+  assert.match(row.keywordText, /among the sources cited in at least 3 of 3/);
+  assert.doesNotMatch(row.keywordText, /[Nn]amed us|linked to us/);
+  assert.equal(aiPage.keywordShare(row), 'among the sources cited in 3 of 3 keyword checks');
+});
+
+// ---------------------------------------------------------------- jobs, Visitors, sources, site check
+
+test('L5: a check script that exits 1 on its last step finished and found problems; a failed build did not finish', async () => {
+  const { EventEmitter } = await import('node:events');
+  const { createJobs } = await import('../lib/jobs.mjs');
+  fs.rmSync(DATA, { recursive: true, force: true });
+  const children = [];
+  const spawn = () => {
+    const c = new EventEmitter();
+    c.stdout = new EventEmitter();
+    c.stderr = new EventEmitter();
+    c.kill = () => {};
+    children.push(c);
+    return c;
+  };
+  const jobs = createJobs({ spawn, repoRoot: REPO, afterJob: () => {} });
+  jobs.start('keyword-check');
+  children[0].emit('close', 1);
+  const kwLast = jobs.list().find((j) => j.key === 'keyword-check').last;
+  assert.equal(kwLast.ok, true);
+  assert.equal(kwLast.problems, true);
+  jobs.start('site-check');
+  children[1].emit('close', 1); // the build failed
+  const failed = jobs.list().find((j) => j.key === 'site-check').last;
+  assert.equal(failed.ok, false);
+  jobs.start('site-check');
+  children[2].emit('close', 0);
+  children[3].emit('close', 1); // the hygiene report found problems
+  const found = jobs.list().find((j) => j.key === 'site-check').last;
+  assert.equal(found.ok, true);
+  assert.equal(found.problems, true);
+});
+
+test('A7 and A11: Visitors shares need 30 visits, and scroll depth says how many days it rests on', () => {
+  fs.rmSync(DATA, { recursive: true, force: true });
+  const day = (d) => `2026-11-${String(d).padStart(2, '0')}`;
+  const channelsDaily = [];
+  for (let d = 1; d <= 8; d++) channelsDaily.push({ date: day(d), channel: 'Organic Search', sessions: 3 });
+  snap('ga4', {
+    channelsDaily,
+    sourceMedium: [
+      { name: 'invented / referral', sessions: 20, prevSessions: 10 },
+      { name: 'other / referral', sessions: 5, prevSessions: 5 },
+    ],
+    landing: [{ page: '/blog/sample-a', sessions: 25, prevSessions: 20, engagedSessions: 10 }],
+  });
+  snap('clarity', {
+    days: {
+      [day(1)]: { scroll: [{ page: '/blog/sample-a', depth: 40 }] },
+      [day(2)]: { scroll: [{ page: '/blog/sample-a', depth: 60 }] },
+    },
+  });
+  invalidate();
+  const v = visitorsView(buildModel());
+  assert.equal(v.channels.total, 24);
+  assert.equal(v.channels.rows[0].share, null, '24 visits is under 30');
+  assert.equal(v.sourceMedium.rows[0].share, null, '25 visits is under 30');
+  assert.equal(v.landing[0].engagementRate, null);
+  assert.deepEqual(v.clarity.scroll, [{ page: '/blog/sample-a', depth: 50, days: 2 }]);
+  assert.match(v.clarity.scrollNote, /average of the daily figures/);
+});
+
+test('L10: a sitemap that cannot be read keeps the old list and says so on the source line', async () => {
+  const { pullLocal } = await import('../lib/sources/local.mjs');
+  fs.rmSync(DATA, { recursive: true, force: true });
+  snap('local', { livePages: [{ page: '/blog/kept-page' }] }, { pulledAt: '2026-11-08T06:00:00.000Z' });
+  const out = await pullLocal({
+    today: '2026-11-10',
+    repoRoot: REPO,
+    fetchImpl: async () => {
+      throw new Error('network down');
+    },
+  });
+  assert.deepEqual(
+    out.data.livePages.map((p) => p.page),
+    ['/blog/kept-page']
+  );
+  assert.match(out.error, /sitemap could not be read/);
+  assert.match(out.error, /8 November/);
+});
+
+test('L4: the site check counts long titles from the total line, not the five it lists', async () => {
+  const { parseHygiene } = await import('../lib/api/site-check.mjs');
+  const lines = [
+    'SITE HYGIENE AUDIT',
+    '--- WARN: titles > 60 chars (42 total, showing 5 worst) ---',
+    ...[1, 2, 3, 4, 5].map((i) => `  [7${i}] /blog/sample-${i}: "An invented long title"`),
+  ];
+  const { issues } = parseHygiene(lines);
+  assert.equal(issues[0].total, 42);
+  assert.equal(issues[0].urls.length, 5);
+  assert.match(issues[0].what, /^42 titles are longer than 60 characters \(the 5 longest are listed\)\.$/);
+});

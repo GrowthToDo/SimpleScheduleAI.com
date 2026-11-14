@@ -77,7 +77,8 @@ const SECTIONS = [
     re: /^--- WARN: titles > 60 chars/,
     id: 'site:long-titles',
     severity: 'warn',
-    what: (n) => `${n} ${n === 1 ? 'title is' : 'titles are'} longer than 60 characters (the longest are listed).`,
+    what: (n, shown) =>
+      `${n} ${n === 1 ? 'title is' : 'titles are'} longer than 60 characters${shown < n ? ` (the ${shown} longest are listed)` : ''}.`,
     why: 'Google cuts long titles short in search results, so the end of the title is lost.',
     fix: 'Shorten the title so the words that matter come first.',
     row: (line) => {
@@ -89,8 +90,8 @@ const SECTIONS = [
     re: /^--- WARN: descriptions > 160 chars/,
     id: 'site:long-descriptions',
     severity: 'warn',
-    what: (n) =>
-      `${n} ${n === 1 ? 'description is' : 'descriptions are'} longer than 160 characters (the longest are listed).`,
+    what: (n, shown) =>
+      `${n} ${n === 1 ? 'description is' : 'descriptions are'} longer than 160 characters${shown < n ? ` (the ${shown} longest are listed)` : ''}.`,
     why: 'Google cuts long descriptions short in search results.',
     fix: 'Shorten the description to one or two sentences.',
     row: (line) => {
@@ -137,7 +138,9 @@ export function parseHygiene(lines) {
       const def = SECTIONS.find((s) => s.re.test(line));
       groupValue = null;
       if (def) {
-        cur = { def, urls: [] };
+        // "(138 total, showing 5 worst)": the count is the total, not the rows shown.
+        const total = /\((\d+) total\b/.exec(line);
+        cur = { def, urls: [], total: total ? Number(total[1]) : null };
         issues.push(cur);
       } else {
         cur = null;
@@ -165,10 +168,11 @@ export function parseHygiene(lines) {
   return {
     issues: issues
       .filter((i) => i.urls.length)
-      .map(({ def, urls }) => ({
+      .map(({ def, urls, total }) => ({
         id: def.id,
         severity: def.severity,
-        what: def.what(urls.length),
+        what: def.what(Math.max(total ?? 0, urls.length), urls.length),
+        total: Math.max(total ?? 0, urls.length),
         why: def.why,
         fix: def.fix,
         urls,

@@ -41,7 +41,8 @@ export const JOBS = [
   {
     key: 'citations',
     label: 'Run the AI citation check',
-    description: 'Asks the AI assistants about the money keywords and records who they name and cite.',
+    description:
+      'Reads a stored set of AI answers (each with its own date, often older than the check) for our name and the money keywords, and records which answers name us and which sites they cite.',
     commands: [['node', 'scripts/llm-citation-check.mjs']],
     writes: ['docs/seo/aeo-trend.jsonl'],
     cost: 'about $0.62',
@@ -64,6 +65,8 @@ export const JOBS = [
     commands: [['node', 'scripts/check-keyword-registry.mjs']],
     writes: [],
     cost: null,
+    // The script exits with 1 when it finds a problem: that run finished.
+    problemsExit: true,
   },
   {
     key: 'site-check',
@@ -77,6 +80,9 @@ export const JOBS = [
     writes: ['dist/'],
     cost: null,
     keepOutput: true,
+    // The hygiene report (the last step) exits with 1 when it finds a problem: that run finished.
+    // A failed build (the first step) did not.
+    problemsExit: true,
   },
   {
     key: 'index-all',
@@ -251,7 +257,7 @@ export function createJobs({
 
     const lengthText = (sec) => (sec >= 90 ? `${Math.round(sec / 60)} minutes` : `${sec} seconds`);
     // summary: one plain line for the page; the raw lines go under "Details from the script".
-    const finish = (ok, exitCode, note, summary) => {
+    const finish = (ok, exitCode, note, summary, extra = {}) => {
       if (job.done) return;
       job.done = true;
       clearTimeout(timer);
@@ -267,6 +273,7 @@ export function createJobs({
         summary: summary ?? (ok ? `Finished in ${lengthText(durationSec)}.` : 'It did not finish cleanly.'),
         tail: job.lines.slice(-TAIL_LINES),
         ...(def.keepOutput ? { output: job.output } : {}),
+        ...extra,
       };
       try {
         const state = readJson(STATE_FILE, {}) || {};
@@ -336,6 +343,11 @@ export function createJobs({
       child.on('close', (code) => {
         if (job.done) return;
         if (job.timedOut) return finish(false, code, job.timedOut, job.timedOut);
+        if (code === 1 && def.problemsExit && i === def.commands.length - 1) {
+          return finish(true, code, null, 'It finished and found problems. They are in the output.', {
+            problems: true,
+          });
+        }
         if (code !== 0) return finish(false, code, `It stopped with exit code ${code}.`);
         if (i + 1 < def.commands.length) return runStep(i + 1);
         finish(true, 0);

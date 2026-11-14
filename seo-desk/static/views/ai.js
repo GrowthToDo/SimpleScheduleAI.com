@@ -18,12 +18,13 @@ const CSS = `
 
 const cleanDomain = (d) => String(d).replace(/^www\./, '');
 
-// The keyword checks of one kind or assistant as "named in N of M keyword checks", only when
-// there are enough of them (keywordEnough, 3 or more); else not enough data yet. The listed
-// answers are a count on their own and are never put over a total.
+// The keyword checks of one kind or assistant as "among the sources cited in N of M keyword
+// checks", only when there are enough of them (keywordEnough, 3 or more); else not enough data yet.
+// A keyword check never tests whether an answer names us. The listed answers are a count on their
+// own and are never put over a total.
 export function keywordShare(row) {
-  if (!row?.keywordEnough || typeof row.keywordNamed !== 'number') return 'not enough data yet';
-  return `named in ${row.keywordNamed} of ${row.keywordChecked} keyword checks`;
+  if (!row?.keywordEnough || typeof row.keywordCited !== 'number') return 'not enough data yet';
+  return `among the sources cited in ${row.keywordCited} of ${row.keywordChecked} keyword checks`;
 }
 
 export async function render(el, ctx) {
@@ -42,7 +43,7 @@ export async function render(el, ctx) {
     confirm: {
       title: 'Run the AI citation check?',
       body:
-        `This asks the AI assistants about the money keywords and costs ${data.check.cost}.\n\n` +
+        `This reads a stored set of AI answers (each with its own date) for our name and the money keywords, and costs ${data.check.cost}.\n\n` +
         `It adds one line to ${data.check.writes.join(', ')}, a file tracked in git, so it will show up as a change to commit.\n\n` +
         'Nothing else changes.',
       confirmLabel: `Run it (${data.check.cost})`,
@@ -65,7 +66,8 @@ export async function render(el, ctx) {
         {},
         h('h1', { class: 'page-title' }, 'AI visibility'),
         h('p', { class: 'page-sub' }, headline(data)),
-        money.checked ? h('p', { class: 'page-sub', style: { marginTop: '2px' } }, money.text) : null
+        money.checked ? h('p', { class: 'page-sub', style: { marginTop: '2px' } }, money.text) : null,
+        last?.answersText ? h('p', { class: 'page-sub', style: { marginTop: '2px' } }, last.answersText) : null
       ),
       h('div', { class: 'row' }, check.button)
     ),
@@ -108,7 +110,9 @@ export async function render(el, ctx) {
           h,
           'Visits from AI assistants',
           visits.total === null ? fmt.NOT_ENOUGH : fmt.num(visits.total),
-          visits.total === null ? '' : `${fmt.num(visits.prevTotal)} in the 28 days before, ${fmt.range(visits.range)}`,
+          visits.total === null
+            ? ''
+            : `${fmt.range(visits.range)}; ${fmt.num(visits.prevTotal)} in the 28 days before${visits.prevRange ? `, ${fmt.range(visits.prevRange)}` : ''}`,
           { text: visits.total === null }
         ),
         tile(
@@ -197,7 +201,7 @@ function headline(data) {
   const last = data.latestCheck;
   const latest = data.trend.at(-1);
   if (!last || !latest) {
-    return 'No citation check has been recorded yet. Press Run citation check to ask the AI assistants about the money keywords.';
+    return 'No citation check has been recorded yet. Press Run citation check to read the stored AI answers for the money keywords.';
   }
   const when = `at the last check on ${last.dateText} (${daysText(last.daysAgo)})`;
   return assistants(data)
@@ -211,11 +215,14 @@ function headline(data) {
     .join(' ');
 }
 
-// Each assistant at the latest check. The data has an entry for an assistant when it named us
-// or when it was asked about a money keyword; with neither, it was not checked this time.
-function assistants(data) {
+// Each assistant at the latest check. The check says which assistants it asked (engines); an older
+// line that does not say counts one as asked when it named us or was asked about a money keyword.
+export function assistants(data) {
   const latest = data.trend.at(-1);
-  const asked = new Set((data.moneyKeywords ?? []).flatMap((k) => k.platforms.map((p) => p.platform)));
+  const engines = data.latestCheck?.engines;
+  const asked = new Set(
+    Array.isArray(engines) ? engines : (data.moneyKeywords ?? []).flatMap((k) => k.platforms.map((p) => p.platform))
+  );
   return data.platforms
     .map((p) => {
       const n = latest?.byPlatform?.[p.platform] ?? 0;
@@ -303,9 +310,9 @@ function keywordSection(data, ctx) {
         ? 'Not checked'
         : hit.cited
           ? hit.rank
-            ? `Cited, place ${hit.rank}`
-            : 'Cited'
-          : 'Not cited';
+            ? `Among cited sources, place ${hit.rank}`
+            : 'Among cited sources'
+          : 'Not among cited sources';
     }
     return row;
   });
@@ -315,7 +322,7 @@ function keywordSection(data, ctx) {
     ...platforms.map((p) => ({
       key: `p_${p.platform}`,
       label: p.label,
-      format: (v) => h('span', { class: `chip${v.startsWith('Cited') ? ' chip-accent' : ''}` }, v),
+      format: (v) => h('span', { class: `chip${v.startsWith('Among') ? ' chip-accent' : ''}` }, v),
     })),
     {
       key: 'competitors',
@@ -325,7 +332,7 @@ function keywordSection(data, ctx) {
     },
     {
       key: 'sources',
-      label: 'Sites the assistant read',
+      label: 'Top sources the answers cite',
       wrap: true,
       format: (v) => (v ? v : h('span', { class: 'muted' }, 'none listed')),
     },
@@ -345,7 +352,15 @@ function keywordSection(data, ctx) {
       'div',
       { class: 'section-head' },
       h('h2', { class: 'section-title' }, 'Are we cited for the money keywords?'),
-      h('span', { class: 'section-note' }, data.latestCheck ? `From the check on ${data.latestCheck.dateText}.` : '')
+      h(
+        'span',
+        { class: 'section-note' },
+        data.keywordCheck
+          ? (data.keywordCheck.note ?? `From the check on ${data.keywordCheck.dateText}.`)
+          : data.latestCheck
+            ? `From the check on ${data.latestCheck.dateText}.`
+            : ''
+      )
     ),
     box
   );

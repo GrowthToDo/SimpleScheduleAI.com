@@ -160,14 +160,19 @@ test('spanText: a range, a single day, and an update still rolling out', () => {
 
 // ---------------------------------------------------------------- visitors breakdowns
 
-test('breakdownState: waiting before the pull, none without visits, shares only above the minimum', () => {
+test('breakdownState: waiting before the pull, none without visits, shares only when the server sent them', () => {
   assert.equal(WAITING, 'This fills in after the next refresh.');
   assert.deepEqual(breakdownState({ available: false, total: 0, rows: [] }), { state: 'waiting', enough: false });
   assert.deepEqual(breakdownState(undefined), { state: 'waiting', enough: false });
   assert.deepEqual(breakdownState({ available: true, total: 0, rows: [] }), { state: 'none', enough: false });
-  const row = { name: 'invented / referral', label: 'invented / referral', sessions: 5 };
+  const row = { name: 'invented / referral', label: 'invented / referral', sessions: 5, share: null };
   assert.deepEqual(breakdownState({ available: true, total: 5, rows: [row] }), { state: 'ok', enough: false });
-  assert.deepEqual(breakdownState({ available: true, total: 20, rows: [row] }), { state: 'ok', enough: true });
+  // The page never gates on its own count: 20 visits with no share from the server shows none.
+  assert.deepEqual(breakdownState({ available: true, total: 20, rows: [row] }), { state: 'ok', enough: false });
+  assert.deepEqual(breakdownState({ available: true, total: 40, rows: [{ ...row, share: 0.125 }] }), {
+    state: 'ok',
+    enough: true,
+  });
 });
 
 test('the second page edit confirm uses the rule in plain words', async () => {

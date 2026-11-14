@@ -1071,7 +1071,8 @@ test('AI answers: trend counts are a floor, money keywords show who is cited', a
     a.trend.map((t) => [t.date, t.total]),
     [
       ['2026-10-01', 1],
-      ['2026-11-01', 3],
+      // Two listed answers; the keyword hit says our site is a cited source, not that it named us.
+      ['2026-11-01', 2],
     ]
   );
   assert.match(a.atLeastNote, /floor/);

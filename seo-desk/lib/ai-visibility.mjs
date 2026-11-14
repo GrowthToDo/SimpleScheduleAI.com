@@ -25,7 +25,7 @@ const PLATFORM = { chat_gpt: 'ChatGPT', google: 'Google AI answers', perplexity:
 const assistantLabel = (p) => PLATFORM[p] || String(p || 'An AI assistant').replace(/_/g, ' ');
 
 export const NOTE =
-  'These counts are a floor. The citation check lists at most 10 answers per assistant, and it lists an answer only when an assistant named us, so the listed count is a number of answers, never a share. Only the keyword checks can miss, so only they read as "N of M", and a keyword line reads "not enough data yet" until it rests on at least 3 checks.';
+  'These counts are a floor. The citation check reads a stored set of AI answers, each with its own date, and lists at most 10 answers per assistant. It lists an answer only when it named us, so the listed count is a number of answers, never a share. A keyword check only says whether our site is among the top sources the answers cite, never whether they name us. Only the keyword checks can miss, so only they read as "N of M", and a keyword line reads "not enough data yet" until it rests on at least 3 checks.';
 
 // ---------------------------------------------------------------- reading a question
 
@@ -96,8 +96,8 @@ export function competitorNamesFrom(hosts = [], { own = [] } = {}) {
 // One saved row as a check, of one of two kinds that are never put in one ratio.
 // listed: a row from the "where are we named" list. It exists only because an assistant named us, so
 // it can say we were named and nothing about misses; it counts as linked when it lists a page of ours.
-// keyword: a row from the keyword check, where a miss is possible: named and linked when we are among
-// its cited sources. Anything else is not a check.
+// keyword: a row from the keyword check, where a miss is possible: cited when our site is among its
+// top cited source sites. It never tests whether an answer names us. Anything else is not a check.
 function checkOf(r) {
   if (!r || typeof r !== 'object') return null;
   if (r.kind === 'own-mention') {
@@ -114,7 +114,6 @@ function checkOf(r) {
       type: 'keyword',
       text: r.keyword,
       platform: r.platform,
-      named: r.ourPresent === true,
       cited: r.ourPresent === true,
     };
   }
@@ -133,26 +132,24 @@ function latestLine(lines) {
 
 const many = (n, one, more) => `${n} ${n === 1 ? one : more}`;
 
-// listed: a count of answers, never a share. keywordChecked, keywordNamed and keywordCited: the only
-// numbers that may be shown as "N of M", and only from MIN_CHECKS keyword checks; under that they carry
-// no numbers and the plain line says so.
+// listed: a count of answers, never a share. keywordChecked and keywordCited: the only numbers that
+// may be shown as "N of M", and only from MIN_CHECKS keyword checks; under that they carry no numbers
+// and the plain line says so.
 function tally(checks) {
   const listed = checks.filter((c) => c.type === 'listed');
   const keyword = checks.filter((c) => c.type === 'keyword');
   const enough = keyword.length >= MIN_CHECKS;
-  const named = keyword.filter((c) => c.named).length;
   const cited = keyword.filter((c) => c.cited).length;
   const listedText = listed.length
     ? `We were named in ${many(listed.length, 'answer', 'answers')} the check listed.`
     : 'The check listed no answers that named us.';
   const keywordText = enough
-    ? `Named us in at least ${named} of ${keyword.length} keyword checks; linked to us in at least ${cited}.`
+    ? `Our site was among the sources cited in at least ${cited} of ${keyword.length} keyword checks.`
     : NOT_ENOUGH;
   return {
     listed: listed.length,
     listedLinked: listed.filter((c) => c.cited).length,
     keywordChecked: keyword.length,
-    keywordNamed: enough ? named : null,
     keywordCited: enough ? cited : null,
     keywordEnough: enough,
     listedText,

@@ -21,7 +21,9 @@ const CSS = `
 .vs-chart { margin-top: 18px; }
 `;
 
-const MIN_VISITS = 20;
+// Shares come from the server, null under its minimum (30 visits); the page shows a share only when
+// it is a number and never works one out itself.
+const hasShare = (r) => typeof r?.share === 'number';
 const CLARITY_URL = 'https://clarity.microsoft.com/';
 
 export async function render(el, ctx) {
@@ -34,7 +36,7 @@ export async function render(el, ctx) {
   const top = rows[0] ?? null;
   // The server sends the change, null under the minimum base.
   const totalChange = ch.change ?? null;
-  const enough = ch.total >= MIN_VISITS;
+  const enough = hasShare(top);
 
   const headline = top
     ? `${fmt.plural(ch.total, 'visit', 'visits')} came to the site from ${fmt.range(ch.range)}. The most came from ${top.channel}${enough ? `, ${fmt.share(top.share)} of all visits` : ''}.${enough ? '' : ` There are too few visits to say which channel leads (${fmt.NOT_ENOUGH}).`}`
@@ -117,7 +119,6 @@ function changeText(fmt, row, prev, cur) {
 function channelSection(data, ctx) {
   const { h, fmt } = ctx;
   const ch = data.channels;
-  const enough = ch.total >= MIN_VISITS;
   const box = h('div', { class: 'vs-chart' });
   lineChart(box, { series: ch.series.map((d) => ({ date: d.date, value: d.total })), label: 'Visits per day' });
   return h(
@@ -149,10 +150,10 @@ function channelSection(data, ctx) {
                   'span',
                   { class: 'num muted' },
                   h('strong', { style: { color: 'var(--ink)' } }, fmt.plural(r.sessions, 'visit', 'visits')),
-                  `  ${enough ? `${fmt.share(r.share)}, ` : ''}${changeSentence(fmt, r)}`
+                  `  ${hasShare(r) ? `${fmt.share(r.share)}, ` : ''}${changeSentence(fmt, r)}`
                 )
               ),
-              enough
+              hasShare(r)
                 ? h('div', { class: 'bar' }, h('span', { style: { width: `${Math.round(r.share * 100)}%` } }))
                 : null
             )
@@ -169,11 +170,11 @@ export const WAITING = 'This fills in after the next refresh.';
 const BREAKDOWN_SHOWN = 8;
 
 // How a breakdown panel reads: 'waiting' before the first pull that has it, 'none' with no
-// visits, else 'ok' with `enough` true when the total clears the minimum for shares and bars.
-export function breakdownState(b, min = MIN_VISITS) {
+// visits, else 'ok' with `enough` true when the server sent shares (it does from 30 visits).
+export function breakdownState(b) {
   if (!b || b.available === false) return { state: 'waiting', enough: false };
   if (!b.rows?.length || !b.total) return { state: 'none', enough: false };
-  return { state: 'ok', enough: b.total >= min };
+  return { state: 'ok', enough: b.rows.some(hasShare) };
 }
 
 function breakdownPanel(ctx, title, hint, b) {
@@ -204,10 +205,10 @@ function breakdownPanel(ctx, title, hint, b) {
                 'span',
                 { class: 'num muted' },
                 h('strong', { style: { color: 'var(--ink)' } }, fmt.plural(r.sessions, 'visit', 'visits')),
-                `  ${enough && r.share !== null && r.share !== undefined ? `${fmt.share(r.share)}, ` : ''}${changeText(fmt, r, r.prevSessions, r.sessions)}`
+                `  ${hasShare(r) ? `${fmt.share(r.share)}, ` : ''}${changeText(fmt, r, r.prevSessions, r.sessions)}`
               )
             ),
-            enough && typeof r.share === 'number'
+            hasShare(r)
               ? h('div', { class: 'bar' }, h('span', { style: { width: `${Math.round(r.share * 100)}%` } }))
               : null
           )
@@ -388,7 +389,7 @@ function landingSection(data, ctx) {
       h(
         'span',
         { class: 'section-note' },
-        `${fmt.range(data.channels.range)}. A share of visits is shown only for pages with 20 visits or more.`
+        `${fmt.range(data.channels.range)}. A share of visits is shown only for pages with ${data.shareMinVisits ?? 30} visits or more.`
       )
     ),
     box
@@ -498,8 +499,15 @@ function claritySection(data, ctx) {
       list('Quick backs', 'People left the page almost at once and went back.', c.quickBack, (r) =>
         pageLine(r.page, fmt.plural(r.count, 'time', 'times'))
       ),
-      list('How far people scroll', 'The average share of the page people reached, shortest first.', c.scroll, (r) =>
-        pageLine(r.page, `${Math.round(r.depth)}% of the page`)
+      list(
+        'How far people scroll',
+        c.scrollNote ?? 'An average of the daily figures Clarity gives, shortest first.',
+        c.scroll,
+        (r) =>
+          pageLine(
+            r.page,
+            `${Math.round(r.depth)}% of the page${typeof r.days === 'number' ? `, over ${fmt.plural(r.days, 'day', 'days')}` : ''}`
+          )
       ),
       list('Page errors', 'Something broke in the visitor’s browser.', c.jsErrors, (r) =>
         pageLine(r.message, fmt.plural(r.count, 'time', 'times'))

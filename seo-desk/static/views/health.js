@@ -495,7 +495,7 @@ function siteCheckCard(data, ctx) {
       {},
       !last
         ? 'Not run yet. Press Run site check at the top of the page.'
-        : `Last run ${fmt.ago(last.at)}: ${sc.issues ? `${fmt.plural(sc.issues, 'problem', 'problems')} found, listed under What to fix.` : last.ok ? 'nothing to fix.' : (last.summary ?? 'It did not finish cleanly.')}`
+        : `Last run ${fmt.ago(last.at)}: ${sc.issues ? `${fmt.plural(sc.issues, 'problem', 'problems')} found, listed under What to fix.` : last.problems ? 'it found problems; they are in the details below.' : last.ok ? 'nothing to fix.' : (last.summary ?? 'It did not finish cleanly.')}`
     ),
     sc.unparsed?.length
       ? h(
