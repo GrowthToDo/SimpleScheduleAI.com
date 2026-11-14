@@ -245,7 +245,7 @@ export async function render(el, ctx) {
         key: 'inbound',
         label: 'Links in',
         align: 'right',
-        title: 'How many of our pages link to this one',
+        title: 'How many of our pages link to this one in their page text (menu and footer links are not counted)',
         format: (v) => fmt.num(v),
       },
       {
@@ -434,7 +434,9 @@ function briefText(p, fmt) {
     );
   if (p.lastEdit) lines.push(`Last deliberate edit: ${p.lastEdit}.`);
   if (p.frozen) lines.push(`Frozen until ${p.frozen.until}: ${p.frozen.why}`);
-  lines.push(`Links in from ${fmt.plural(p.inbound ?? 0, 'page', 'pages')}.`);
+  lines.push(
+    `Links in from ${fmt.plural(p.inbound ?? 0, 'page', 'pages')}, in their page text (menu and footer links are not counted).`
+  );
   const top = [...(p.queries ?? [])].sort((a, b) => b.impressions - a.impressions).slice(0, 15);
   if (top.length) {
     lines.push('', `Top searches on Google (${fmt.range(p.queriesRange)}):`);
@@ -657,7 +659,7 @@ function pageDetail(p, ctx) {
     ),
     section(
       'Links in',
-      `${fmt.plural(p.inbound ?? p.inboundFrom.length, 'page links', 'pages link')} here.${p.inboundSiteWide ? ' It is also linked from every page through the menu or footer.' : ''}`,
+      `${fmt.plural(p.inbound ?? p.inboundFrom.length, 'page links', 'pages link')} here in their page text (menu and footer links are not counted).${p.inboundSiteWide ? ' It is also linked from every page through the menu or footer.' : ''}`,
       p.inboundFrom.length
         ? h(
             'ul',

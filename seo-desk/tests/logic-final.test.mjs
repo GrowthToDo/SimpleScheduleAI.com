@@ -207,3 +207,66 @@ test('K4: on a snapshot whose search totals are a day short, the searches compar
   assert.equal(d.queriesNote, QUERY_WAIT_NOTE);
   assert.equal(d.queries.decaying.length, 0);
 });
+
+// ---------------------------------------------------------------- M3: links in page text
+
+test('M3: Site health and the Not indexed card give one page the same advice, and every count says what it counts', async () => {
+  const { healthView } = await import('../lib/api/panels.mjs');
+  writeJson('state/items.json', {});
+  snap('gsc', { pageDaily: [], siteDaily: [] });
+  snap('index', {
+    pages: [
+      {
+        page: '/blog/linked-guide',
+        verdict: 'not-indexed',
+        reason: 'URL is unknown to Google',
+        checkedAt: '2026-11-13T06:00:00Z',
+      },
+      {
+        page: '/blog/lonely-guide',
+        verdict: 'not-indexed',
+        reason: 'Crawled - currently not indexed',
+        checkedAt: '2026-11-13T06:00:00Z',
+      },
+      {
+        page: '/legal-note',
+        verdict: 'not-indexed',
+        reason: "Excluded by 'noindex' tag",
+        checkedAt: '2026-11-13T06:00:00Z',
+      },
+    ],
+  });
+  snap('local', {
+    livePages: [{ page: '/blog/linked-guide' }, { page: '/blog/lonely-guide' }, { page: '/legal-note' }],
+    inbound: {
+      '/blog/linked-guide': ['/blog/a', '/blog/b', '/blog/c', '/blog/c', 'src/components/Footer.astro'],
+      '/blog/lonely-guide': ['/blog/a'],
+      '/legal-note': [],
+    },
+    verdicts: [],
+    due: [],
+    edits: [],
+  });
+  invalidate();
+  const model = buildModel();
+  const cards = new Map(model.opps.filter((o) => o.type === 'not-indexed').map((o) => [o.page, o]));
+  assert.equal(cards.size, 3);
+  assert.match(cards.get('/blog/linked-guide').action, /^Ask Google to index \/blog\/linked-guide in Search Console/);
+  assert.match(cards.get('/blog/lonely-guide').action, /^Link to \/blog\/lonely-guide from two related pages/);
+  assert.match(cards.get('/legal-note').action, /noindex instruction\)\. Decide whether \/legal-note should be found/);
+  assert.match(
+    cards.get('/blog/linked-guide').measured,
+    /3 pages link to it in their page text \(menu and footer links are not counted\)\./
+  );
+
+  const h = healthView(model);
+  const groupOf = (page) => h.issues.find((i) => i.urls.some((u) => u.page === page))?.id;
+  assert.equal(groupOf('/blog/linked-guide'), 'not-indexed-linked');
+  assert.equal(groupOf('/blog/lonely-guide'), 'not-indexed');
+  assert.equal(groupOf('/legal-note'), 'not-indexed-excluded');
+  const lonely = h.issues.flatMap((i) => i.urls).find((u) => u.page === '/blog/lonely-guide');
+  assert.equal(
+    lonely.detail,
+    'Crawled - currently not indexed. 1 page links to it in their page text (menu and footer links are not counted).'
+  );
+});

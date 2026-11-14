@@ -395,6 +395,7 @@ export function pageDetailOf(model, page) {
     opportunities: v.opportunities,
     verdicts: v.verdicts,
     linkedFrom: v.inboundFrom,
+    linkedFromNote: 'Links in page text only; menu and footer links are not counted.',
   };
 }
 

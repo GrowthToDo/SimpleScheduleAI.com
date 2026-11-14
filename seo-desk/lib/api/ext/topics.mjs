@@ -1,5 +1,6 @@
 // Routes for topics, the keyword map and internal link suggestions.
 
+import { inboundCount, linksInText } from '../../inbound.mjs';
 import { get, post, q, bad, bodyOf, sendText } from '../kit.mjs';
 import {
   buildModel,
@@ -184,15 +185,9 @@ export function openLinkSuggestions(model) {
 // How many other pages of the site link to `page` now, from the repo link count (local.inbound): real
 // pages only (a src/... entry is a shared component or a listing template, not a page that links), never
 // the page itself. null when the page was never counted, which is not zero.
-function linkedFromOf(inbound, page) {
-  const sources = inbound?.[page];
-  if (!Array.isArray(sources)) return null;
-  return new Set(sources.map(String).filter((src) => src.startsWith('/') && src !== page)).size;
-}
+const linkedFromOf = (inbound, page) => inboundCount(inbound, page);
 const linkedFromText = (n) =>
-  n === null
-    ? 'How many pages link here has not been counted yet.'
-    : `${n} other ${n === 1 ? 'page links' : 'pages link'} here now.`;
+  n === null ? 'How many pages link here has not been counted yet.' : linksInText(n, 'here now', { other: true });
 
 // A page's title for the cards: the post's front matter title, else null (the page shows the path).
 // The audit saves no titles, so the post files are the only source the desk has.

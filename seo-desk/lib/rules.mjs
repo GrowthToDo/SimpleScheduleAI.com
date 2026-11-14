@@ -18,6 +18,7 @@ import {
 } from '../../scripts/lib/gsc-diagnose-core.mjs';
 import { realQueryCounts } from './query-counts.mjs';
 import { dropKindOf, dropAction } from './decay.mjs';
+import { inboundCount, linksInText, notIndexedAdvice } from './inbound.mjs';
 import { matchKey } from './targets.mjs';
 import { THRESHOLDS, DEFAULT_MONEY_PAGES, EXPECTED_CTR } from './config.mjs';
 import { windows as reportingWindows, daysBetween, todayIso, addDays } from './dates.mjs';
@@ -617,7 +618,7 @@ export function detectNeedsLinks(snaps, cfg) {
         page,
         query: '',
         title: `${page} has almost no links from our own pages`,
-        measured: `As of ${rangeText(range)}, ${from.size} other ${plural(from.size, 'page', 'pages')} on our site ${plural(from.size, 'links', 'link')} to ${page}. Two or more is the minimum we want.`,
+        measured: `As of ${rangeText(range)}, ${from.size} other ${plural(from.size, 'page', 'pages')} on our site ${plural(from.size, 'links', 'link')} to ${page} in their page text (menu and footer links are not counted). Two or more is the minimum we want.`,
         action: `Add links to ${page} from at least two related pages, using words that describe what it covers.`,
         test: 'Judged by the page’s inbound link count after the links go in, then its search views over the next 28 days.',
         isPageEdit: false,
@@ -717,14 +718,18 @@ export function detectNotIndexed(snaps, cfg) {
       age === null
         ? `It has been live for more than ${ctx.t.NOT_INDEXED_MIN_DAYS} days.`
         : `It went live about ${age} days ago (published ${longDate(since)}).`;
+    // The same advice Site health gives this page (lib/inbound.mjs), from the same link count.
+    const inbound = inboundCount(ctx.local.inbound, page);
+    const advice = notIndexedAdvice({ page, reason: row.reason, inbound });
+    const linksLine = linksInText(inbound);
     out.push(
       build(ctx, {
         type: 'not-indexed',
         page,
         query: '',
         title: `${page} is still not in Google's index`,
-        measured: `As of ${rangeText(range)}, Search Console says ${page} is not indexed. ${ageText}`,
-        action: `Link to ${page} from two related pages that Google already crawls, then request indexing in Search Console.`,
+        measured: `As of ${rangeText(range)}, Search Console says ${page} is not indexed. ${ageText}${linksLine ? ` ${linksLine}` : ''}`,
+        action: advice.action,
         test: 'Judged by whether Search Console reports the page as indexed within 14 days of the fix.',
         isPageEdit: false,
         range,

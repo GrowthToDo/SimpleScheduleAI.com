@@ -78,7 +78,8 @@ export function csvFor(model, list, params = {}) {
           ['clicks', (r) => r.clicks],
           ['change_percent', (r) => r.change],
           ['searches', (r) => r.queryCount],
-          ['inbound_links', (r) => r.inbound],
+          // Links written in other pages' text; menu and footer links are not in the count.
+          ['links_in_page_text_menu_and_footer_not_counted', (r) => r.inbound],
           ['last_deliberate_edit', (r) => r.lastEdit],
           ['frozen_until', (r) => r.frozenUntil],
           ['google_index', (r) => r.index],
@@ -127,6 +128,8 @@ export function csvFor(model, list, params = {}) {
           ['change_date', (v) => v.changeDate],
           ['judged_on', (v) => v.judgedOn],
           ['verdict', (v) => v.verdictText],
+          // How the whole change this row belongs to reads, the reading the verdict count uses.
+          ['change_reads_as', (v) => v.changeVerdictText],
           ['before_impressions', (v) => v.before?.impressions],
           ['after_impressions', (v) => v.after?.impressions],
           ['before_position', (v) => v.before?.position],

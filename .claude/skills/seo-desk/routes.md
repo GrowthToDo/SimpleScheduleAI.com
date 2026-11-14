@@ -80,7 +80,8 @@ live Search Console pull (two calls, cached 12 hours; 429 when busy, 502 when it
 stored ranges unless he asks for a filtered view.
 
 `/api/pages`: `items[] {page, kind, keyword, position, impressions, clicks, ctr, change,
-movement, queryCount, inbound, lastEdit, frozenUntil, index (indexed|not-indexed|unknown)}`;
+movement, queryCount, inbound, lastEdit, frozenUntil, index (indexed|not-indexed|unknown)}`
+(`inbound` counts links in other pages' text; menu and footer links are not counted, so say so);
 `range` is the 28 days the numbers cover.
 `/api/page?path=/blog/x` (path must start with a slash; 404 for an unknown page): the same row plus
 `queries[]` (each `impressions` is the times THIS page was shown for that search, not the times the
@@ -166,7 +167,8 @@ already cover a pending keyword, so add a section there instead of a new page.
 `/api/link-suggestions?page=/blog/x`: `total`, `open` and `pages[] {page, title, linkedFrom,
 linkedFromText, keyword, keywordSource, reasons, suggestions[{to, toTitle, from, fromTitle, anchor,
 context, status, fromFrozenUntil, fromFrozenUntilText}], dismissed}`. `pages` are the pages that
-would gain from more links; `linkedFrom` is how many other pages link to each now (null when never
+would gain from more links; `linkedFrom` is how many other pages link to each now in their page text
+(menu and footer links are not counted; null when never
 counted, which is not zero) and `linkedFromText` says it in a sentence. The number of links still to add is `open`;
 `total` also counts ones already done. The titles are the pages' own titles (null when unknown).
 Without `page` it lists every page with a needs-links or runner-up opportunity. A suggestion on a
@@ -223,7 +225,9 @@ lastCrawl, checkedOn, clicks, changedSinceLast}`, `newSinceLast[]`, `fixedSinceL
 live pages that have an answer, not pages asked today: quote `answersText`, which gives the oldest
 answer's date. An empty `newSinceLast` covers only the `comparedPages` asked again since the
 previous refresh. Not-on-Google issues: `not-indexed` (few links), `not-indexed-linked` (3 or more
-links: request indexing), `not-indexed-excluded` (the page itself keeps it out; links do not help).
+links: request indexing), `not-indexed-excluded` (the page itself keeps it out; links do not help). The
+link counts are links in other pages' text; menu and footer links are not counted, so a footer page
+can read 0. Each Not indexed card gives the same advice Site health gives its page.
 
 ## Workspace
 

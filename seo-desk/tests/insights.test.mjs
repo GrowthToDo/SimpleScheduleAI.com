@@ -2517,7 +2517,10 @@ test('B11: each page on the Internal links list says how many pages link to it n
   const pricing = r.pages.find((p) => p.page === '/pricing');
   assert.ok(pricing, 'the runner-up page is on the list');
   assert.equal(pricing.linkedFrom, 2, 'other pages only: not itself, not a shared component');
-  assert.equal(pricing.linkedFromText, '2 other pages link here now.');
+  assert.equal(
+    pricing.linkedFromText,
+    '2 other pages link here now in their page text (menu and footer links are not counted).'
+  );
   const other = r.pages.find((p) => p.page !== '/pricing');
   if (other) {
     assert.equal(other.linkedFrom, null, 'never counted is not zero');

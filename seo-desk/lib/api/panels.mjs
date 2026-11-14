@@ -1,5 +1,13 @@
 // View models for AI answers, Visitors, Site health, Competitors and Settings.
 
+import {
+  notIndexedKind,
+  excludedText,
+  LINKED_ENOUGH,
+  inboundCount,
+  linksInText,
+  notIndexedAdvice,
+} from '../inbound.mjs';
 import { readJson } from '../store.mjs';
 import { PRESETS, THRESHOLDS, STALE_HOURS, DAILY_HOUR } from '../config.mjs';
 import { LABEL as SIGNAL_LABEL, MEANING as SIGNAL_MEANING, SIGNAL_ORDER } from '../score.mjs';
@@ -362,26 +370,9 @@ export function visitorsView(model) {
 
 const lastJob = (key) => readJson('state/jobs.json', {})?.last?.[key] ?? null;
 
-// Why Search Console left a page out, as one of a few kinds. 'excluded': the page itself keeps it
-// out (a noindex instruction, a redirect, another page named as the main version), so links do not
-// help. 'unknown': Google has not met the address. 'waiting': Google knows it and has not added it.
-export function notIndexedKind(reason) {
-  const r = String(reason ?? '');
-  if (/noindex|redirect|canonical|alternate|duplicate/i.test(r)) return 'excluded';
-  if (/unknown to google/i.test(r)) return 'unknown';
-  return 'waiting';
-}
-
-// The plain words for a page the page itself keeps out of Google.
-function excludedText(reason) {
-  const r = String(reason ?? '');
-  if (/noindex/i.test(r)) return 'The page tells Google not to index it (a noindex instruction).';
-  if (/redirect/i.test(r)) return 'The address sends visitors on to another page, so Google indexes that page instead.';
-  return 'Google treats another page as the main version of this one.';
-}
-
-// A page needs this many inbound links before more links stop being the first thing to try.
-export const LINKED_ENOUGH = 3;
+// The not-indexed kinds, the words for an excluded page, the link count and the advice for one page
+// live in lib/inbound.mjs, shared with the Not indexed cards.
+export { notIndexedKind, LINKED_ENOUGH };
 
 export function healthView(model) {
   const clicksBy = new Map(pagesTable(model, 28).rows.map((r) => [r.page, r.clicks]));
@@ -390,7 +381,8 @@ export function healthView(model) {
   const prevPulledAt = model.prevIndex ? (readJson('state/index-prev.json', null)?.pulledAt ?? null) : null;
   const indexSnap = model.snapObjs?.index ?? null;
   const inbound = model.data.local?.inbound ?? {};
-  const inboundOf = (page) => (Array.isArray(inbound[page]) ? inbound[page].length : null);
+  // Links in from other pages' text (menu and footer links are not in the count).
+  const inboundOf = (page) => inboundCount(inbound, page);
   const index = (model.index.rows ?? []).map((r) => {
     const page = pagePath(r.page);
     const before = prevVerdict.get(page);
@@ -426,38 +418,41 @@ export function healthView(model) {
   // Each issue: what was found, why it matters, the fix, the pages, sorted by the clicks they get.
   const issues = [];
   const notIndexed = index.filter((r) => r.verdict === 'not-indexed');
-  const excluded = notIndexed.filter((r) => notIndexedKind(r.reason) === 'excluded');
-  const missing = notIndexed.filter((r) => notIndexedKind(r.reason) !== 'excluded');
-  const linked = missing.filter((r) => (inboundOf(r.page) ?? 0) >= LINKED_ENOUGH);
-  const thin = missing.filter((r) => (inboundOf(r.page) ?? 0) < LINKED_ENOUGH);
-  const linkDetail = (r) => {
-    const n = inboundOf(r.page);
-    return n === null ? '' : `${n} ${n === 1 ? 'page links' : 'pages link'} to it.`;
+  // Each page falls under the issue its own advice names (lib/inbound.mjs notIndexedAdvice), the same
+  // advice its Not indexed card gives.
+  const groupOf = (r) => notIndexedAdvice({ page: r.page, reason: r.reason, inbound: inboundOf(r.page) }).group;
+  const excluded = notIndexed.filter((r) => groupOf(r) === 'not-indexed-excluded');
+  const linked = notIndexed.filter((r) => groupOf(r) === 'not-indexed-linked');
+  const thin = notIndexed.filter((r) => groupOf(r) === 'not-indexed');
+  const linkDetail = (r) => linksInText(inboundOf(r.page)) ?? '';
+  const reasonOf = (r) => {
+    const t = plain(r.reason);
+    return t && !/[.!?]$/.test(t) ? `${t}.` : t;
   };
   const pagesAre = (n) => `${n} live ${n === 1 ? 'page is' : 'pages are'}`;
   if (thin.length) {
     issues.push({
       id: 'not-indexed',
-      what: `${pagesAre(thin.length)} not on Google, with fewer than ${LINKED_ENOUGH} pages linking to ${thin.length === 1 ? 'it' : 'each'}.`,
+      what: `${pagesAre(thin.length)} not on Google, with fewer than ${LINKED_ENOUGH} pages linking to ${thin.length === 1 ? 'it' : 'each'} in their page text (menu and footer links are not counted).`,
       why: 'A page that is not on Google cannot be found by anyone searching.',
       fix: `A guess worth testing: link to each page from two related pages Google already crawls, then request indexing in Search Console. The test is the next index checks: the page should show as on Google within a few weeks.`,
       urls: thin.map((r) => ({
         page: r.page,
         clicks: r.clicks,
-        detail: [plain(r.reason), linkDetail(r)].filter(Boolean).join(' '),
+        detail: [reasonOf(r), linkDetail(r)].filter(Boolean).join(' '),
       })),
     });
   }
   if (linked.length) {
     issues.push({
       id: 'not-indexed-linked',
-      what: `${pagesAre(linked.length)} not on Google although ${LINKED_ENOUGH} or more pages link to ${linked.length === 1 ? 'it' : 'each'}.`,
+      what: `${pagesAre(linked.length)} not on Google although ${LINKED_ENOUGH} or more pages link to ${linked.length === 1 ? 'it' : 'each'} in their page text.`,
       why: 'A page that is not on Google cannot be found by anyone searching. More links are not the likely gap here.',
       fix: 'A guess worth testing: ask Google to index it in Search Console (URL inspection, then Request indexing). The test is the next index checks: the page should show as on Google within a few weeks. If it does not, the page itself may need work.',
       urls: linked.map((r) => ({
         page: r.page,
         clicks: r.clicks,
-        detail: [plain(r.reason), linkDetail(r)].filter(Boolean).join(' '),
+        detail: [reasonOf(r), linkDetail(r)].filter(Boolean).join(' '),
       })),
     });
   }
