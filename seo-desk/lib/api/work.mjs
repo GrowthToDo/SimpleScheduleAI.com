@@ -23,6 +23,7 @@ import {
   planSizeOf,
 } from '../week.mjs';
 import { brief } from '../brief.mjs';
+import { competitorBrief } from '../competitor-changes.mjs';
 import { staleUpdatesNote } from '../google-updates.mjs';
 import { longDate, plain } from '../text.mjs';
 import {
@@ -463,6 +464,18 @@ const editPagesOf = (model, oppId) => {
 };
 
 function cardOut(model, card) {
+  // A competitor card is not a hypothesis and not an edit of ours: no eligibility, no Search Console.
+  if (card.competitor) {
+    return {
+      ...card,
+      typeLabel: cardLabel(model, card),
+      ...termFields(model, card),
+      score: null,
+      state: itemState(model, keyOfCard(card.id)),
+      brief: competitorBrief(card),
+      links: { live: null, searchConsole: null },
+    };
+  }
   const e = card.eligibility ?? { eligible: true, from: null };
   return {
     ...card,
@@ -477,29 +490,14 @@ function cardOut(model, card) {
   };
 }
 
-// The worries, minus any the founder has dealt with. Competitor changes come back when a
-// newer change appears after the day it was marked seen.
+// The worries, minus any the founder has ignored or snoozed. A competitor change marked Seen is
+// already left out by week.mjs: its id carries the events it covered, so a new event is a new card.
 function visibleWorries(model, all) {
-  const watchDate = new Map();
-  for (const w of model.data.local?.competitors?.watch ?? []) {
-    if (!w.changes?.length) continue;
-    let host = String(w.url).split('__')[0];
-    try {
-      host = new URL(w.url).hostname.replace(/^www\./, '');
-    } catch {
-      // a sentinel label, already a host
-    }
-    if (!watchDate.has(host) || w.fetchedAt > watchDate.get(host)) watchDate.set(host, w.fetchedAt);
-  }
   return all.filter((w) => {
     const it = itemOf(model, w.oppId ?? w.id);
     if (!it) return true;
     if (it.status === 'ignored') return false;
     if (it.status === 'snoozed' && it.snoozeUntil > model.today) return false;
-    if (it.status === 'done' && w.kind === 'competitor-change') {
-      const latest = watchDate.get(String(w.id).split(':')[1]);
-      return Boolean(latest && it.doneAt && latest > it.doneAt);
-    }
     return true;
   });
 }
@@ -523,6 +521,7 @@ export function weekModel(model) {
       sources,
       frozen,
       opps: model.opps,
+      items,
       today,
     });
     const worryList = visibleWorries(model, allWorries);
@@ -644,6 +643,17 @@ export function weekView(model) {
       // The same card the five would show for it, so brief and test read like an opportunity's,
       // and the same id (a slipping page is its opportunity, opp:<id>), so every button works.
       const c = worryCard(w, model.frozen, model.today);
+      if (c.competitor) {
+        return {
+          ...w,
+          ...termFields(model, c),
+          id: c.id,
+          hypothesis: false,
+          brief: competitorBrief(c),
+          links: { live: null, searchConsole: null },
+          state: itemState(model, keyOfCard(c.id)),
+        };
+      }
       return {
         ...w,
         ...termFields(model, c),

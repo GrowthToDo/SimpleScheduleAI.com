@@ -24,6 +24,18 @@ import { pct, sumRange } from './fmt.mjs';
 import { parseHygiene } from './site-check.mjs';
 import { AI_CRAWLERS } from '../robots.mjs';
 import { MIN_CHECKS } from '../ai-visibility.mjs';
+import {
+  groupChanges,
+  countChanges,
+  countText,
+  classifyChange,
+  competitorItemId,
+  eventLine,
+  safeHttps,
+  hostOf,
+  dossierEntryAfter,
+  STALE_CHECK_DAYS,
+} from '../competitor-changes.mjs';
 
 const PLATFORM = { chat_gpt: 'ChatGPT', google: 'Google AI answers', perplexity: 'Perplexity', copilot: 'Copilot' };
 const platformLabel = (p) => PLATFORM[p] || String(p || 'An AI assistant').replace(/_/g, ' ');
@@ -455,15 +467,10 @@ export function healthView(model) {
 
 // ---------------------------------------------------------------- Competitors
 
-const hostOf = (url) => {
-  const raw = String(url);
-  try {
-    return new URL(raw).hostname.replace(/^www\./, '');
-  } catch {
-    return raw.split('__')[0];
-  }
-};
-
+// What each watched competitor did, in plain events. The check writes one line per changed page;
+// lib/competitor-changes.mjs folds those into distinct events (a list that repeats on five pages is
+// one event), sets the pricing sentinels apart and says which events are worth a worry.
+// New keys beside the old ones: hosts[], totals, loggedInDossier lines, check age.
 export function competitorsView(model) {
   const c = model.data.local?.competitors ?? { sitemap: [], watch: [], lastRun: null };
   const days = c.lastRun ? daysBetween(c.lastRun, model.today) : null;
@@ -478,23 +485,102 @@ export function competitorsView(model) {
     added: (s.added ?? []).slice(0, 20),
     removed: (s.removed ?? []).slice(0, 20),
   }));
+
+  const snapshots = c.snapshots ?? null;
+  const grouped = groupChanges(c.watch ?? [], snapshots ? new Set(snapshots.map((s) => s.url)) : null);
+  const byHost = new Map(grouped.map((g) => [g.host, g]));
+  const watchedPages = new Map();
+  for (const s of snapshots ?? []) {
+    const host = hostOf(s.url);
+    watchedPages.set(host, (watchedPages.get(host) ?? 0) + 1);
+    if (!byHost.has(host)) byHost.set(host, { host, events: [], sentinels: [], checkedOn: null });
+  }
+
+  const hosts = [...byHost.values()].map((g) => {
+    const counts = countChanges(g);
+    const material = g.events.filter((e) => e.material);
+    const itemId = material.length ? competitorItemId(g.host, g.events) : null;
+    const it = itemId ? itemOf(model, itemId) : null;
+    const checkedOn = g.checkedOn ?? c.lastRun;
+    const age = checkedOn ? daysBetween(checkedOn, model.today) : null;
+    const noted = dossierEntryAfter(c.dossierLogDates ?? [], checkedOn);
+    const links = [];
+    for (const e of material)
+      for (const p of e.pages) {
+        const url = safeHttps(p);
+        if (url && !links.some((x) => x.url === url))
+          links.push({ url, label: new URL(url).pathname.replace(/\/+$/, '') || 'home page' });
+      }
+    return {
+      host: g.host,
+      itemId,
+      seen: Boolean(it?.status === 'done'),
+      state: itemId ? itemState(model, itemId) : null,
+      worry: Boolean(itemId) && !(it?.status === 'done'),
+      checkedOn,
+      checkedText: checkedOn ? longDate(checkedOn) : null,
+      daysSinceCheck: age,
+      checkOld: age !== null && age > STALE_CHECK_DAYS,
+      watchedPages: watchedPages.get(g.host) ?? 0,
+      counts,
+      countText: countText(counts),
+      summary: !counts.events
+        ? 'Nothing changed on the pages we watch.'
+        : material.length
+          ? `${material.length === 1 ? 'One change' : `${material.length} changes`} worth reading.`
+          : 'Only headings or small text changes. Nothing on price, title, description, headline or buttons.',
+      events: g.events.map((e) => ({
+        kind: e.kind,
+        plain: e.plain,
+        line: material.includes(e) ? eventLine(g.host, e).sentence : e.plain,
+        pages: e.pages.map(safeHttps).filter(Boolean),
+        pageNames: e.pageNames,
+        onText: e.onText,
+        material: e.material,
+      })),
+      sentinels: g.sentinels,
+      pageLinks: links,
+      loggedInDossier: Boolean(noted),
+      dossierLoggedOn: noted,
+      dossierText: noted ? `Already noted in the competitor dossier on ${longDate(noted)}.` : null,
+    };
+  });
+  hosts.sort(
+    (a, b) =>
+      Number(b.worry) - Number(a.worry) ||
+      Number(b.counts.events > 0) - Number(a.counts.events > 0) ||
+      a.host.localeCompare(b.host)
+  );
+
+  // The old per-page rows, kept for the readers of /api/competitors that still use them. Their text is
+  // the plain events now, and Seen is the host's Seen.
+  const hostOfRow = new Map(hosts.map((h) => [h.host, h]));
   const watch = (c.watch ?? []).map((w) => {
     const host = hostOf(w.url);
-    const id = `competitor-change:${host}`;
-    const it = itemOf(model, id);
+    const h = hostOfRow.get(host);
+    const id = h?.itemId ?? `competitor-change:${host}`;
     return {
       id,
       host,
-      url: String(w.url).includes('__') ? null : w.url,
+      url: /^https?:\/\//i.test(String(w.url)) ? w.url : null,
       pricing: String(w.url).includes('__pricing'),
       fetchedAt: w.fetchedAt,
       fetchedText: longDate(w.fetchedAt),
       daysSinceCheck: daysBetween(w.fetchedAt, model.today),
-      changes: (w.changes ?? []).map(plain),
-      seen: Boolean(it?.status === 'done' && it.doneAt && it.doneAt >= w.fetchedAt),
+      changes: (w.changes ?? []).map((t) => classifyChange(t).plain),
+      seen: Boolean(h?.seen),
       state: itemState(model, id),
     };
   });
+
+  const totals = hosts.reduce(
+    (t, h) => ({
+      events: t.events + h.counts.events,
+      pages: t.pages + h.counts.pages,
+      material: t.material + h.counts.material,
+    }),
+    { events: 0, pages: 0, material: 0 }
+  );
   const links = model.data.bing?.links ?? null;
   return {
     ...envelope(model, { need: ['local'] }),
@@ -504,6 +590,9 @@ export function competitorsView(model) {
     stale: days === null ? true : days > 7,
     sitemap,
     watch,
+    hosts,
+    totals,
+    worries: hosts.filter((h) => h.worry).length,
     linksPulse: links
       ? { total: links.total ?? null, history: links.history ?? [], note: "Bing's count of pages linking to the site." }
       : null,

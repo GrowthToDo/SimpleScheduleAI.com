@@ -510,9 +510,13 @@ some stray text
   assert.equal(w.length, 3);
   assert.deepEqual(w[0], {
     url: 'https://a.test/',
+    key: 'a.test__home',
     fetchedAt: '2026-11-01',
     changes: ['h2s added: "New"', 'h1: "A" -> "B"'],
+    hasSnapshot: true,
+    previouslyUnreachable: false,
   });
+  assert.equal(w[1].hasSnapshot, false, 'a page with no saved snapshot has never answered');
   assert.deepEqual(w[1].changes, ['unreachable (HTTP 404)']);
   assert.equal(w[1].url, 'b.test__home');
   assert.deepEqual(w[2].changes, ['baseline stored: h1 "Hello"', 'some stray text']);

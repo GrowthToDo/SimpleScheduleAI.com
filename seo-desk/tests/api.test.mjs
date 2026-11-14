@@ -281,8 +281,18 @@ function localData(overrides = {}) {
         },
       ],
       watch: [
-        { url: 'https://rival.example/pricing', fetchedAt: '2026-11-01', changes: ['Price changed from 5 to 6'] },
+        { url: 'https://rival.example/pricing', fetchedAt: '2026-11-01', changes: ['prices added: "$6"'] },
+        { url: 'https://rival.example/', fetchedAt: '2026-11-01', changes: ['h2s added: "A new post"'] },
+        { url: 'https://rival.example/about', fetchedAt: '2026-11-01', changes: ['h2s added: "A new post"'] },
+        { url: 'quiet.example__pricing', fetchedAt: '2026-11-01', changes: ['unreachable (HTTP 404)'] },
       ],
+      snapshots: [
+        { key: 'rival.example__pricing', url: 'https://rival.example/pricing', fetchedAt: '2026-11-01' },
+        { key: 'rival.example__home', url: 'https://rival.example/', fetchedAt: '2026-11-01' },
+        { key: 'rival.example__about', url: 'https://rival.example/about', fetchedAt: '2026-11-01' },
+        { key: 'quiet.example__home', url: 'https://quiet.example/', fetchedAt: '2026-11-01' },
+      ],
+      dossierLogDates: ['2026-11-03', '2026-10-20'],
       lastRun: '2026-11-01',
     },
     edits: [
@@ -1254,6 +1264,60 @@ test('competitors: days since the check, seen state and the links pulse', async 
   assert.ok(!(await get('/api/week')).json.worries.some((x) => x.kind === 'competitor-change'));
 });
 
+test('competitors: grouped events, sentinels, the dossier note, and Seen that remembers which events', async () => {
+  useFull();
+  const c = (await get('/api/competitors')).json;
+  const rival = c.hosts.find((h) => h.host === 'rival.example');
+  // The same new heading on two pages is one event; the price is its own; the counts say so.
+  assert.deepEqual(rival.counts, { events: 2, pages: 3, material: 1 });
+  assert.equal(rival.countText, '2 changes on 3 pages');
+  const heading = rival.events.find((e) => e.kind === 'headings');
+  assert.equal(heading.plain, 'New heading: "A new post"');
+  assert.equal(heading.pages.length, 2);
+  assert.equal(heading.material, false);
+  assert.equal(rival.events.find((e) => e.kind === 'price').material, true);
+  assert.equal(/h2s/.test(JSON.stringify(c.hosts)), false, 'never the raw wording');
+  assert.equal(rival.loggedInDossier, true);
+  assert.equal(rival.dossierLoggedOn, '2026-11-03');
+  assert.equal(rival.dossierText, 'Already noted in the competitor dossier on 3 November.');
+  assert.deepEqual(rival.pageLinks, [{ url: 'https://rival.example/pricing', label: '/pricing' }]);
+  assert.match(rival.itemId, /^competitor-change:rival\.example:[0-9a-f]{10}$/);
+  // A pricing address that never answered is a sentinel: no event, never counted.
+  const quiet = c.hosts.find((h) => h.host === 'quiet.example');
+  assert.deepEqual(quiet.counts, { events: 0, pages: 0, material: 0 });
+  assert.deepEqual(quiet.sentinels, [{ url: null, state: 'still-missing', plain: 'Still no pricing page' }]);
+  assert.equal(quiet.worry, false);
+  assert.equal(c.totals.events, 2);
+  assert.equal(c.worries, 1);
+
+  // The card in the week: no test, no hypothesis, no eligibility, no Search Console, pages to open.
+  const w = (await get('/api/week')).json;
+  const worry = w.worries.find((x) => x.kind === 'competitor-change');
+  assert.equal(worry.id, rival.itemId);
+  assert.equal(worry.test, undefined);
+  assert.equal(worry.hypothesis, false);
+  assert.deepEqual(worry.links, { live: null, searchConsole: null });
+  assert.match(worry.brief, /Read docs\/seo\/competitor-dossier\.md first/);
+  assert.deepEqual(worry.competitor.pages, [{ url: 'https://rival.example/pricing', label: '/pricing' }]);
+  const chosen = (await post('/api/week/top5', { ids: [worry.id] })).json;
+  const card = chosen.top5[0];
+  assert.equal(card.test, undefined);
+  assert.equal(card.eligibility, null);
+  assert.equal(card.hypothesis, false);
+  assert.equal(card.links.searchConsole, null);
+  assert.equal(card.typeLabel, 'Competitor change');
+
+  // Seen hides it, and the Competitors page says so.
+  assert.equal((await post(`/api/item/${encodeURIComponent(worry.id)}`, { action: 'done' })).status, 200);
+  const after = (await get('/api/competitors')).json.hosts.find((h) => h.host === 'rival.example');
+  assert.equal(after.seen, true);
+  assert.equal(after.worry, false);
+  assert.ok(!(await get('/api/week')).json.worries.some((x) => x.kind === 'competitor-change'));
+  // Undo it: the card is back.
+  assert.equal((await post(`/api/item/${encodeURIComponent(worry.id)}`, { action: 'reopen' })).status, 200);
+  assert.ok((await get('/api/week')).json.worries.some((x) => x.kind === 'competitor-change'));
+});
+
 test('settings: preset and weights change the ranking, thresholds change what is found', async () => {
   useFull();
   const before = (await get('/api/opportunities')).json.items;
@@ -1707,6 +1771,12 @@ test('every worry carries a brief and a test, with or without an opportunity beh
   for (const x of w.worries) {
     assert.match(x.brief, /^Task for the SimpleScheduleAI website:/, x.id);
     assert.ok(x.brief.includes(x.measured), x.id);
+    if (x.kind === 'competitor-change') {
+      // Reading a page is not a hypothesis, so there is no test line.
+      assert.equal(x.test, undefined, x.id);
+      assert.ok(!/[\u2013\u2014]/.test(x.brief));
+      continue;
+    }
     assert.match(x.test, /next daily refresh/, x.id);
     assert.ok(!/[\u2013\u2014]/.test(x.brief + x.test));
   }

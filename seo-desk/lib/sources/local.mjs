@@ -15,6 +15,7 @@ import { SITE } from '../config.mjs';
 import { parsePlan, findPlanFile } from './plan-parser.mjs';
 import { AI_CRAWLERS, robotsAllows } from '../robots.mjs';
 import { refreshGoogleUpdates } from '../google-updates.mjs';
+import { parseDossierLogDates } from '../competitor-changes.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const DEFAULT_REPO_ROOT = path.resolve(HERE, '../../..');
@@ -183,16 +184,54 @@ export function parseSitemapDiff(md) {
   });
 }
 
-// WATCHLOG.md latest block to [{url, fetchedAt, changes}]. Entries without a recognised
-// "N change(s)" line keep their whole summary as one changes string.
+// WATCHLOG.md latest block to [{url, key, fetchedAt, changes, hasSnapshot, previouslyUnreachable}].
+// Entries without a recognised "N change(s)" line keep their whole summary as one changes string.
+// key is the log's own label for the page (host__path). hasSnapshot says the desk holds a saved
+// snapshot for it (a page that never answered has none, and its url stays the key).
+// previouslyUnreachable says an earlier check of that page could not load it, which is how a
+// pricing address that has just started answering is told from a page watched for the first time.
 export function parseWatchLog(md, snapshotUrl = () => null) {
   const block = latestBlock(md);
   if (!block) return [];
+  const before = new Map();
+  for (const b of blocksOf(md)) {
+    if (b.date >= block.date) continue;
+    for (const e of entriesOf(b.lines)) before.set(e.key, /^unreachable/.test(e.summary) ? 'unreachable' : 'answered');
+  }
   return entriesOf(block.lines).map((e) => {
     const many = /^\d+ change\(s\)/.test(e.summary);
     const changes = many ? e.details : [e.summary, ...e.details];
-    return { url: snapshotUrl(e.key) || e.key, fetchedAt: block.date, changes };
+    const snap = snapshotUrl(e.key);
+    return {
+      url: snap || e.key,
+      key: e.key,
+      fetchedAt: block.date,
+      changes,
+      hasSnapshot: Boolean(snap),
+      previouslyUnreachable: before.get(e.key) === 'unreachable',
+    };
   });
+}
+
+// The saved snapshots of the watched pages, [{key, url, fetchedAt}], for telling a page that has
+// never answered from one that used to. Unreadable files are skipped.
+export function listSnapshots(dir) {
+  let files = [];
+  try {
+    files = fs.readdirSync(dir).filter((f) => f.endsWith('.json'));
+  } catch {
+    return [];
+  }
+  const out = [];
+  for (const f of files.sort()) {
+    try {
+      const j = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+      if (j?.url) out.push({ key: f.replace(/\.json$/, ''), url: String(j.url), fetchedAt: j.fetchedAt ?? null });
+    } catch {
+      // skip a file that is not a snapshot
+    }
+  }
+  return out;
 }
 
 // ---------------------------------------------------------------- pages and links
@@ -469,6 +508,9 @@ export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl
   const sitemap = parseSitemapDiff(sitemapLog);
   const watch = parseWatchLog(watchLog, snapshotUrl);
   const lastRun = [...sitemap.map((s) => s.fetchedAt), ...watch.map((w) => w.fetchedAt)].sort().pop() ?? null;
+  const snapshots = listSnapshots(snapDir);
+  // Only the dates of the dossier's maintenance log: the page says whether a note already exists.
+  const dossierLogDates = parseDossierLogDates(readText(seo('competitor-dossier.md')));
 
   const due = attempt('due', () => dueEntries(repoRoot, today), []);
   const edits = attempt('edits', () => gitEdits(repoRoot), []).concat(
@@ -518,7 +560,7 @@ export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl
       registry,
       plan,
       openWork,
-      competitors: { sitemap, watch, lastRun },
+      competitors: { sitemap, watch, lastRun, snapshots, dossierLogDates },
       edits,
       livePages,
       inbound,

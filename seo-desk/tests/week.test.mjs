@@ -530,10 +530,11 @@ test('worries: dropped from index, slipping top three, failed source, crawl, com
         livePages: [{ page: '/blog/real', lastmod: null }],
         competitors: {
           watch: [
-            { url: 'https://www.rival.com/pricing', fetchedAt: '2026-11-01', changes: ['price changed'] },
-            { url: 'https://www.rival.com/product', fetchedAt: '2026-11-01', changes: ['button text changed'] },
-            { url: 'rival.com__pricing', fetchedAt: '2026-11-01', changes: ['price sentinel moved'] },
-            { url: 'https://www.old.com/', fetchedAt: '2026-08-01', changes: ['stale one'] },
+            { url: 'https://www.rival.com/pricing', fetchedAt: '2026-11-01', changes: ['prices added: "$6"'] },
+            { url: 'https://www.rival.com/product', fetchedAt: '2026-11-01', changes: ['ctas removed: "Book a demo"'] },
+            { url: 'rival.com__pricing', fetchedAt: '2026-11-01', changes: ['unreachable (HTTP 404)'] },
+            { url: 'https://www.old.com/', fetchedAt: '2026-08-01', changes: ['title: "Old" -> "Older"'] },
+            { url: 'https://www.listy.com/', fetchedAt: '2026-11-01', changes: ['h2s added: "A new post"'] },
             { url: 'https://www.quiet.com/', fetchedAt: '2026-11-01', changes: [] },
           ],
         },
@@ -613,9 +614,14 @@ test('worries: dropped from index, slipping top three, failed source, crawl, com
   assert.match(kinds('slipping-page')[0].fix, /29 November/, 'a frozen page says when it can be touched');
   assert.equal(kinds('source-failed').length, 2);
   assert.equal(kinds('crawl-issue').length, 1);
-  assert.equal(kinds('competitor-change').length, 1, 'grouped by host, recent only, empty skipped');
-  assert.match(kinds('competitor-change')[0].title, /rival\.com/);
-  assert.match(kinds('competitor-change')[0].measured, /including the pricing page/);
+  assert.deepEqual(
+    kinds('competitor-change').map((w) => w.title),
+    ['old.com changed the page title on its home page', 'rival.com made 2 changes worth reading'],
+    'one per host with a material change; a list change, a sentinel at 404 and an empty row raise none'
+  );
+  assert.match(kinds('competitor-change')[1].measured, /now shows a price on its \/pricing page: "\$6"/);
+  assert.match(kinds('competitor-change')[0].measured, /This check is 101 days old\./, 'an old check says so');
+  assert.doesNotMatch(kinds('competitor-change')[1].measured, /days old/);
   assert.equal(kinds('registry-fail').length >= 2, true, 'a read warning and a registry page that is not live');
   assert.equal(kinds('verdict-worse').length, 2, 'one single page and one batch, recent only');
   const single = kinds('verdict-worse').find((w) => /bad-edit/.test(w.title));
@@ -1012,7 +1018,7 @@ test('a worse verdict on an article points at /articles, and one change on one p
             { slug: 'other-news', changeDate: '2026-10-02', judgedOn: '2026-11-05', verdict: 'worse' },
           ],
           competitors: {
-            watch: [{ url: 'https://rival.example/pricing', fetchedAt: '2026-11-08', changes: ['Price went up'] }],
+            watch: [{ url: 'https://rival.example/pricing', fetchedAt: '2026-11-08', changes: ['prices added: "$7"'] }],
           },
         },
       },
@@ -1022,6 +1028,7 @@ test('a worse verdict on an article points at /articles, and one change on one p
   const pages = list.filter((w) => w.kind === 'verdict-worse').map((w) => w.page);
   assert.deepEqual(pages.sort(), ['/articles/news-piece', '/articles/other-news']);
   const comp = list.find((w) => w.kind === 'competitor-change');
-  assert.match(comp.measured, /found 1 change on 1 of their pages/);
+  assert.match(comp.measured, /rival\.example now shows a price on its \/pricing page: "\$7"\./);
+  assert.equal(comp.title, 'rival.example now shows a price on its /pricing page');
   assert.equal(/\b1 (pages|changes)\b/.test(JSON.stringify(list)), false);
 });

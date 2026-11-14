@@ -9,6 +9,7 @@ import { addDays, daysBetween, mondayOf, todayIso } from './dates.mjs';
 import { SITE } from '../../scripts/lib/change-log-core.mjs';
 import { eligibility } from './lifecycle.mjs';
 import { longDate, longRange, plain } from './text.mjs';
+import { groupChanges, competitorWorries } from './competitor-changes.mjs';
 
 const OK_ELIGIBILITY = { eligible: true, from: null };
 
@@ -19,7 +20,6 @@ export const planSizeOf = () => {
   const v = readJson('state/settings.json', null)?.planSize;
   return PLAN_SIZES.includes(v) ? v : DEFAULT_PLAN_SIZE;
 };
-const RECENT_DAYS = 14;
 const VERDICT_RECENT_DAYS = 28;
 const DEFAULT_TEST = 'Judged by the 28 day before and after verdict, about 30 days after the edit.';
 
@@ -144,36 +144,14 @@ function crawlIssues(snaps) {
   });
 }
 
-function competitorChanges(snaps, today) {
-  const byHost = new Map();
-  for (const w of snaps?.local?.data?.competitors?.watch ?? []) {
-    if (!w.changes?.length || daysBetween(w.fetchedAt, today) > RECENT_DAYS) continue;
-    // Pricing sentinels are stored as "host__pricing", real pages as full addresses.
-    let host = String(w.url).split('__')[0];
-    const pricing = String(w.url).includes('__pricing');
-    try {
-      host = new URL(w.url).hostname.replace(/^www\./, '');
-    } catch {
-      // a sentinel label, already a host
-    }
-    const e = byHost.get(host) ?? { pages: 0, changes: [], date: w.fetchedAt, pricing: false };
-    e.pages += 1;
-    e.pricing = e.pricing || pricing;
-    e.changes.push(...w.changes);
-    if (w.fetchedAt > e.date) e.date = w.fetchedAt;
-    byHost.set(host, e);
-  }
-  return [...byHost.entries()].map(([host, e]) => ({
-    id: `competitor-change:${host}`,
-    kind: 'competitor-change',
-    page: null,
-    isPageEdit: false,
-    title: `${host} changed its pages`,
-    measured: `The competitor check on ${longDate(e.date)} found ${count(e.changes.length, 'change', 'changes')} on ${e.pages} of their pages${e.pricing ? ', including the pricing page' : ''}. First one: ${plain(
-      e.changes[0]
-    )}.`,
-    fix: 'Read the changed pages, then decide whether our comparison pages and our claims about them still hold.',
-  }));
+// One worry per competitor that made a change worth reading (a price, a headline, a title, a
+// description, a button, a pricing page that appeared) and that the founder has not marked Seen.
+// Lists that repeat on several pages, small text changes and pricing sentinels answering 404 are
+// not worries; they show on the Competitors page only (see lib/competitor-changes.mjs).
+function competitorChanges(snaps, today, items) {
+  const c = snaps?.local?.data?.competitors;
+  const snapshots = c?.snapshots ? new Set(c.snapshots.map((s) => s.url)) : null;
+  return competitorWorries(groupChanges(c?.watch ?? [], snapshots), { items, today });
 }
 
 function registryFailures(snaps) {
@@ -262,6 +240,7 @@ export function worries({
   sources = [],
   frozen = new Map(),
   opps = [],
+  items = {},
   today = todayIso(),
 } = {}) {
   const all = [
@@ -271,7 +250,7 @@ export function worries({
     ...crawlIssues(snaps),
     ...registryFailures(snaps),
     ...failedSources(sources),
-    ...competitorChanges(snaps, today),
+    ...competitorChanges(snaps, today, items),
   ];
   return all.sort((a, b) => SERIOUS.indexOf(a.kind) - SERIOUS.indexOf(b.kind));
 }
@@ -402,6 +381,24 @@ function verdictCard(due, frozen, plan, today) {
 }
 
 export function worryCard(w, frozen, today) {
+  // A competitor change is not a hypothesis: reading a page is the whole job. It has no test, no
+  // eligibility chip and no page of ours, and it carries the pages to open.
+  if (w.kind === 'competitor-change') {
+    return {
+      id: w.id,
+      slot: 'worry',
+      title: plain(w.title),
+      measured: plain(w.measured),
+      action: plain(w.fix),
+      page: null,
+      isPageEdit: false,
+      source: 'worry',
+      oppId: null,
+      eligibility: null,
+      hypothesis: false,
+      competitor: w.competitor,
+    };
+  }
   return {
     id: w.oppId ? `opp:${w.oppId}` : w.id,
     slot: 'worry',

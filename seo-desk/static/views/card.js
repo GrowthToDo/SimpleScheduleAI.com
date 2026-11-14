@@ -89,6 +89,7 @@ export function normalize(item, oppById) {
       brief: item.brief ?? opp?.brief ?? null,
       links: item.links,
       note: null,
+      competitor: item.competitor ?? null,
     };
   }
   if (item.slot) {
@@ -117,6 +118,7 @@ export function normalize(item, oppById) {
       note: item.note ?? null,
       readOnly: Boolean(item.readOnly),
       editPages: item.editPages ?? null,
+      competitor: item.competitor ?? null,
     };
   }
   return {
@@ -199,7 +201,7 @@ async function runAction(n, ctx, options, action, extra = {}) {
   if (res === null) return;
   const messages = {
     start: 'Marked as in progress.',
-    done: 'Marked done.',
+    done: n.competitor ? 'Marked as seen. It comes back if something new changes.' : 'Marked done.',
     snooze: `Snoozed until ${fmt.date(res?.item?.snoozeUntil ?? extra.until)}. It comes back on its own then.`,
     ignore: 'Ignored. It stays out of your lists until you reopen it.',
     dismiss: 'Dismissed. It stays out of this list until you reopen it.',
@@ -362,6 +364,24 @@ function actionButtons(n, ctx, options) {
     h('button', { type: 'button', class: `btn btn-small ${cls}`.trim(), onclick: guard(fn, ctx) }, label);
   const out = [];
   const offer = (action) => !options.only || options.only.includes(action);
+  // A competitor change is read, not worked on: Seen (it hides until something new changes) and Snooze.
+  if (n.competitor) {
+    if (s !== 'done' && s !== 'ignored') {
+      out.push(btn('Seen', () => runAction(n, ctx, options, 'done'), 'btn-primary'));
+      if (s !== 'snoozed') {
+        const snooze = h(
+          'button',
+          { type: 'button', class: 'btn btn-small', 'aria-haspopup': 'menu' },
+          'Snooze',
+          h('span', { 'aria-hidden': 'true' }, ' ▾')
+        );
+        snooze.addEventListener('click', () => snoozeMenu(n, ctx, options, snooze));
+        out.push(snooze);
+      }
+    }
+    if (s !== 'new') out.push(btn('Reopen', () => doReopen(n, ctx, options)));
+    return out;
+  }
   if ((s === 'new' || s === 'came-back') && offer('start'))
     out.push(btn('Start', () => runAction(n, ctx, options, 'start'), 'btn-primary'));
   if (s !== 'done' && s !== 'ignored') {
@@ -402,7 +422,7 @@ function linkButtons(n, ctx, options) {
   const out = [];
   if (n.readOnly) return out;
   const pinned = n.state?.pinnedWeek && n.state.pinnedWeek >= thisMonday();
-  if (!options.noPinNote && n.state?.status !== 'ignored' && n.state?.status !== 'done') {
+  if (!n.competitor && !options.noPinNote && n.state?.status !== 'ignored' && n.state?.status !== 'done') {
     out.push(quiet(pinned ? 'Unpin' : 'Pin to this week', () => runAction(n, ctx, options, pinned ? 'unpin' : 'pin')));
   }
   if (!options.noPinNote) out.push(quiet('Add note', () => doNote(n, ctx, options)));
@@ -421,6 +441,11 @@ function linkButtons(n, ctx, options) {
   }
   const link = (label, href) =>
     h('a', { class: 'btn btn-quiet btn-small', href, target: '_blank', rel: 'noopener noreferrer' }, label);
+  // The pages to read come from the desk's own watch data and must be https.
+  if (n.competitor) {
+    const pages = (n.competitor.pages ?? []).filter((p) => /^https:\/\//.test(p.url));
+    for (const p of pages) out.push(link(pages.length === 1 ? 'Open their page' : `Open ${p.label}`, p.url));
+  }
   if (n.links?.live) out.push(link('Open the page', n.links.live));
   if (n.links?.searchConsole) out.push(link('Open in Search Console', n.links.searchConsole));
   return out;
@@ -497,18 +522,20 @@ function fullCard(n, ctx, options) {
       n.action
         ? [
             h('dt', {}, n.actionLabel),
-            h(
-              'dd',
-              {},
-              n.action,
-              ' ',
-              h(
-                'span',
-                { class: 'chip chip-hyp', title: 'A suggestion, not a fact. The test below settles it.' },
-                'Hypothesis'
-              ),
-              n.test ? h('span', { class: 'test' }, n.test) : null
-            ),
+            n.competitor
+              ? h('dd', {}, n.action)
+              : h(
+                  'dd',
+                  {},
+                  n.action,
+                  ' ',
+                  h(
+                    'span',
+                    { class: 'chip chip-hyp', title: 'A suggestion, not a fact. The test below settles it.' },
+                    'Hypothesis'
+                  ),
+                  n.test ? h('span', { class: 'test' }, n.test) : null
+                ),
           ]
         : null
     ),
