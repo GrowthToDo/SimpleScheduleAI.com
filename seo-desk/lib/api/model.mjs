@@ -167,9 +167,18 @@ function indexOf(snapObjs, local) {
 }
 
 // "12 of 149 live pages checked" (the rotation checks a few each morning).
-export function checkedText(model) {
+// The one sentence every index count carries: how many live pages have an answer from Search Console
+// and how old the oldest answer is (Site health and the Search tile say the same).
+export function indexAnswersText(model) {
   const { checked, live } = model.index;
-  return live ? `${checked} of ${live} live pages checked` : `${checked} pages checked`;
+  const oldest = (model.index.rows ?? [])
+    .map((r) => (r.checkedAt ? todayIso(new Date(r.checkedAt)) : null))
+    .filter(Boolean)
+    .sort()[0];
+  if (!checked) return 'No page has an answer from Search Console yet.';
+  const who = live ? `${checked} of ${live} live pages` : `${checked} ${checked === 1 ? 'page' : 'pages'}`;
+  const verb = checked === 1 && !live ? 'has' : 'have';
+  return `${who} ${verb} an answer from Search Console${oldest ? `, the oldest from ${longDate(oldest)}` : ''}.`;
 }
 
 // ---------------------------------------------------------------- the build

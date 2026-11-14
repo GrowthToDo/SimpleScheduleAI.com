@@ -526,18 +526,26 @@ function scheduleCounts() {
 
 // ------------------------------------------------------------------ top bar
 
+// The words on one source dot. A pull that finished with a problem is not "up to date": it says so,
+// as Settings does, and the problem follows.
+export function sourceDotText(s) {
+  const name = SOURCE_NAMES[s.source] ?? s.source;
+  const word = s.status === 'fresh' && s.error ? 'pulled, with a problem' : (STATUS_WORDS[s.status] ?? s.status);
+  let text = `${name}: ${word}`;
+  if (s.pulledAt) text += `. Pulled ${fmt.ago(s.pulledAt)}`;
+  if (s.through) text += `, data through ${fmt.date(s.through)}`;
+  text += '.';
+  if (s.error) text += ` ${s.error}`;
+  // A failed pull that the desk will try again on its own says when.
+  if (s.retryAt) text += ` Trying again at ${fmt.clock(s.retryAt)}.`;
+  return text;
+}
+
 function showSources(sources, through) {
   const dots = document.getElementById('dots');
   dots.replaceChildren(
     ...(sources ?? []).map((s) => {
-      const name = SOURCE_NAMES[s.source] ?? s.source;
-      let text = `${name}: ${STATUS_WORDS[s.status] ?? s.status}`;
-      if (s.pulledAt) text += `. Pulled ${fmt.ago(s.pulledAt)}`;
-      if (s.through) text += `, data through ${fmt.date(s.through)}`;
-      text += '.';
-      if (s.error) text += ` ${s.error}`;
-      // A failed pull that the desk will try again on its own says when.
-      if (s.retryAt) text += ` Trying again at ${fmt.clock(s.retryAt)}.`;
+      const text = sourceDotText(s);
       return h('button', { type: 'button', class: 'dot', 'data-status': s.status, title: text, 'aria-label': text });
     })
   );

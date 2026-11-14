@@ -13,7 +13,17 @@ import { PRESETS, THRESHOLDS, STALE_HOURS, DAILY_HOUR } from '../config.mjs';
 import { LABEL as SIGNAL_LABEL, MEANING as SIGNAL_MEANING, SIGNAL_ORDER } from '../score.mjs';
 import { addDays, daysBetween, todayIso } from '../dates.mjs';
 import { longDate, longRange, plain } from '../text.mjs';
-import { envelope, rangeOf, linksFor, pagePath, itemState, itemOf, SOURCES, ADJUSTABLE_THRESHOLDS } from './model.mjs';
+import {
+  envelope,
+  rangeOf,
+  linksFor,
+  pagePath,
+  itemState,
+  itemOf,
+  SOURCES,
+  ADJUSTABLE_THRESHOLDS,
+  indexAnswersText,
+} from './model.mjs';
 import { INDEX_PER_RUN } from '../sources/index.mjs';
 import { pagesTable } from './search.mjs';
 import { outcomeSignal, OUTCOME_MIN_SESSIONS } from '../targets.mjs';
@@ -524,9 +534,7 @@ export function healthView(model) {
     .map((r) => r.checkedOn)
     .filter(Boolean)
     .sort()[0];
-  const answersText = checked
-    ? `${live ? `${checked} of ${live} live pages` : `${checked} ${checked === 1 ? 'page' : 'pages'}`} ${checked === 1 && !live ? 'has' : 'have'} an answer from Search Console, the oldest from ${longDate(oldest)}.`
-    : 'No page has an answer from Search Console yet.';
+  const answersText = indexAnswersText(model);
   const runChecked = indexSnap?.data?.checkedThisRun;
   const runError = indexSnap?.error ? plain(indexSnap.error) : null;
   const lastRunText = Number.isFinite(runChecked)

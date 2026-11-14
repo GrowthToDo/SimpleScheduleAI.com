@@ -331,3 +331,10 @@ test('the chart keeps only edit and Google update markers, one per day and kind'
 test('the Performance page takes its covered range from the server', () => {
   assert.equal(overview.seriesCoverage, undefined);
 });
+
+test('K6: a source pulled with a problem is not "up to date" in the top bar', () => {
+  const text = app.sourceDotText({ source: 'index', status: 'fresh', error: 'The index run stopped early.' });
+  assert.match(text, /: pulled, with a problem\. The index run stopped early\.$/);
+  assert.ok(!/up to date/.test(text));
+  assert.match(app.sourceDotText({ source: 'gsc', status: 'fresh' }), /: up to date\.$/);
+});

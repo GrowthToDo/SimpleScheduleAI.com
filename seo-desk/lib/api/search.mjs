@@ -16,7 +16,7 @@ import {
   pagePath,
   rangeOf,
   lowCtrMin,
-  checkedText,
+  indexAnswersText,
   holdFields,
   pageHold,
   withCountsWarning,
@@ -342,7 +342,7 @@ export function searchView(model, { days = 28, metric = 'impressions' } = {}) {
       prevIndexed !== null ? indexed - prevIndexed : null,
       'count',
       hasIndex
-        ? `${checkedText(model)}; ${indexed} of those are on Google. A few pages are checked each morning, so each one has its own check date.`
+        ? `${indexAnswersText(model)} ${indexed} of those ${indexed === 1 ? 'is' : 'are'} on Google. A few pages are checked each morning, so each one has its own check date.`
         : 'Not enough data yet.',
       hasIndex
     ),

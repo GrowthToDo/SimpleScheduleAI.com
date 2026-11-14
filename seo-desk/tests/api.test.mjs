@@ -1240,7 +1240,11 @@ test('index checks: the health page and the Pages on Google tile say how many of
   assert.equal(pricing.checkedOn, '2026-11-08');
   const tile = (await get('/api/search')).json.tiles.find((t) => t.key === 'indexed');
   assert.equal(tile.value, 1);
-  assert.match(tile.note, /2 of 8 live pages checked/);
+  // K7: the same sentence Site health gives, with the oldest answer's date.
+  assert.match(
+    tile.note,
+    /^2 of 8 live pages have an answer from Search Console, the oldest from 8 November\. 1 of those is on Google\./
+  );
   const page = (await get('/api/pages')).json.items.find((r) => r.page === '/pricing');
   assert.equal(page.index, 'not-indexed');
   assert.equal(page.indexCheckedOn, '2026-11-08');
