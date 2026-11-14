@@ -34,9 +34,10 @@ export const RULE_TYPES = [
   'question',
   'needs-links',
   'ai-gap',
-  'engine-gap',
   'not-indexed',
 ];
+// Types the desk no longer raises. Saved item state under their ids is left alone and never shown.
+export const RETIRED_TYPES = ['engine-gap'];
 
 const PAGE_EDIT_TEST = 'Judged by the 28-day before and after verdict.';
 const POST_PAGE_RE = /^\/(blog|articles)\/[^/]+$/;
@@ -44,14 +45,11 @@ const LEGAL_RE = /^\/(privacy|terms|cookie|cookies|legal|disclaimer)(\/|-|$)/i;
 const EVIDENCE_CAP = 5;
 
 // Desk-only numbers that config.mjs does not carry yet; overridable via cfg.thresholds.
-//   ENGINE_GOOGLE_PAGE_MIN_IMP  Google views a page needs before a missing Bing page row is worth a look
 //   PAGE_MIN_VIEWS              views a page needs for one search before it counts as competing for it,
 //                               as the closest page, or as the page that ranks instead
 //   TOGETHER_RATIO              our pages' views for a search over the real searches at or above which
 //                               the pages are shown together in the same results, not competing
 const DEFAULTS = {
-  ENGINE_BING_MIN_IMP: 20,
-  ENGINE_GOOGLE_PAGE_MIN_IMP: 200,
   NOT_INDEXED_MIN_DAYS: 14,
   PAGE_MIN_VIEWS: 10,
   TOGETHER_RATIO: 1.3,
@@ -68,7 +66,6 @@ const EFFORT = {
   question: 0.6,
   'needs-links': 0.9,
   'ai-gap': 0.6,
-  'engine-gap': 0.6,
   'not-indexed': 0.9,
 };
 
@@ -235,7 +232,6 @@ function gateFor(ctx, type) {
       slipping: t.SLIP_MIN_PREV_IMP,
       unserved: t.UNSERVED_MIN_IMP,
       question: t.QUESTION_MIN_IMP,
-      'engine-gap': t.ENGINE_BING_MIN_IMP,
     }[type] ?? 0
   );
 }
@@ -746,101 +742,14 @@ export function detectNotIndexed(snaps, cfg) {
   return out;
 }
 
-// ---------------------------------------------------------------- Bing vs Google
+// ---------------------------------------------------------------- Bing vs Google (retired)
 
-export function detectEngineGap(snaps, cfg) {
-  const ctx = contextOf(snaps, cfg);
-  const range = ctx.cur;
-  const out = [];
-  const bingQueries = isArr(ctx.bing?.queries) ? ctx.bing.queries : null;
-  const googleRows = isArr(ctx.gsc?.qpCur) ? ctx.gsc.qpCur : null;
-  const googleQueries = new Set();
-  for (const r of googleRows || []) googleQueries.add(String(r.query).toLowerCase());
-  for (const r of isArr(ctx.gsc?.queryCur) ? ctx.gsc.queryCur : []) googleQueries.add(String(r.query).toLowerCase());
-  // Bing snapshots now sum each search over Google's 28 days; older ones summed everything.
-  const sameDates = Boolean(ctx.bing?.windows?.cur);
-
-  // Bing shows us, Google does not.
-  // Needs real Search Console rows: an empty pull would otherwise flag every Bing query.
-  if (bingQueries && googleQueries.size > 0) {
-    for (const b of bingQueries) {
-      if (b.impressions < ctx.t.ENGINE_BING_MIN_IMP || isBrand(b.query, ctx.brands)) continue;
-      if (googleQueries.has(String(b.query).toLowerCase())) continue;
-      out.push(
-        build(ctx, {
-          type: 'engine-gap',
-          page: null,
-          query: b.query,
-          title: `Bing shows us for "${b.query}" but Google does not`,
-          measured: sameDates
-            ? `From ${rangeText(range)}, Bing showed our site ${n0(b.impressions)} times for "${b.query}", while Google Search Console has no rows for it over the same dates.`
-            : `Bing showed our site ${n0(b.impressions)} times for "${b.query}" in its report, which runs back further than 28 days, while Google Search Console has no rows for it from ${rangeText(range)}.`,
-          action: `Write or adjust a page for "${b.query}" so Google can show us for it too, since Bing already does.`,
-          test: `Judged by whether "${b.query}" appears in Search Console within 28 days of the change.`,
-          isPageEdit: false,
-          range,
-          source: 'bing',
-          evidence: [b],
-          impressions: b.impressions,
-          distance: 0.5,
-          effort: 0.2,
-        })
-      );
-    }
-  }
-
-  // Google shows a page often, and Bing's page report for the same dates has no row for it. Page level,
-  // one card per page: a search missing from Bing's search report is never evidence on its own, because
-  // that report lists only a small part of what Bing shows.
-  const bingPages = isArr(ctx.bing?.pages) && ctx.bing.pages.length ? ctx.bing.pages : null;
-  const googlePages = pageCurOf(ctx);
-  if (bingPages && googlePages) {
-    const onBing = new Set(bingPages.map((p) => pathFromUrl(p.page)));
-    const live = liveOf(ctx);
-    const reportViews = bingPages.reduce((a, p) => a + (Number(p.impressions) || 0), 0);
-    const bingRange = ctx.bing?.windows?.cur ?? null;
-    const siteViews = isArr(ctx.bing?.siteDaily)
-      ? ctx.bing.siteDaily
-          .filter((r) => !bingRange || (r.date >= bingRange.start && r.date <= bingRange.end))
-          .reduce((a, r) => a + (Number(r.impressions) || 0), 0)
-      : 0;
-    // A share needs 30 views under it.
-    const coverage =
-      siteViews >= 30
-        ? `That report lists ${n0(reportViews)} of the ${n0(siteViews)} times Bing showed our site (${pct0(Math.min(1, reportViews / siteViews))}), so a page missing from it is a lead to check, not proof.`
-        : 'Bing does not say how much of what it shows that report lists, so a page missing from it is a lead to check, not proof.';
-    for (const p of googlePages.values()) {
-      if (p.impressions < ctx.t.ENGINE_GOOGLE_PAGE_MIN_IMP || onBing.has(p.page)) continue;
-      if (live && !live.has(p.page)) continue;
-      out.push(
-        build(ctx, {
-          type: 'engine-gap',
-          page: p.page,
-          query: '',
-          title: `Google shows ${p.page} but Bing's page report has no row for it`,
-          measured: `From ${rangeText(range)}, Google showed ${p.page} ${n0(p.impressions)} times, at an average position of ${pos1(p.position)}. Bing's page report${sameDates ? ' for the same dates' : ', which runs back further than 28 days,'} has no row for it. ${coverage}`,
-          action: `Hypothesis: Bing may not have this page in its index. Check this page in Bing Webmaster Tools (URL inspection). If Bing has not indexed it, submit it.`,
-          test: "Judged by whether the page appears in Bing's page report within two weeks.",
-          isPageEdit: false,
-          range,
-          source: 'gsc',
-          evidence: [
-            {
-              page: p.page,
-              impressions: p.impressions,
-              position: p.position,
-              bingReportViews: reportViews,
-              bingSiteViews: siteViews,
-            },
-          ],
-          impressions: p.impressions,
-          distance: 0.5,
-        })
-      );
-    }
-  }
-  return out;
-}
+// The "On Google, not on Bing" and "On Bing, not on Google" cards (type engine-gap) were retired on
+// 14 November 2026. Neither Bing report can show that a page or a search is missing from Bing: Bing had
+// crawled the pages the cards named (its URL info gave October crawl dates), and its page report held
+// 3,885 views over six months against a site total of 2,934 for 28 days, so a row missing from it shows
+// nothing. Search Console's search report leaves out rare searches too. A sound check would ask Bing
+// about each page; until then no card is raised. Bing's own figures stay on Performance and Queries.
 
 // ---------------------------------------------------------------- all
 
@@ -854,7 +763,6 @@ export const DETECTORS = [
   detectQuestion,
   detectNeedsLinks,
   detectAiGap,
-  detectEngineGap,
   detectNotIndexed,
 ];
 

@@ -147,7 +147,7 @@ function periodNote(queryRows, pageRows, cur) {
 
 // {today, session?, signal?} -> snapshot. An McpError propagates. Per search and per page numbers
 // are summed over the same 28 days as Google's (dates on each row decide), so they can sit beside
-// Google's numbers and feed the engine gap rule. A row with no date is kept only when the whole
+// Google's numbers on Performance and the Queries list. A row with no date is kept only when the whole
 // list has none, and the period note says so.
 export async function pullBing({ today, session, signal, open = openServer } = {}) {
   const own = !session;

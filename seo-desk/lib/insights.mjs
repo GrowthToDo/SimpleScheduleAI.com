@@ -37,11 +37,6 @@ export const TERMS = {
     term: 'AI names competitors, not us',
     explain: 'AI tools name other companies for this search and do not name you.',
   },
-  // The tab is neutral; each item says which way round it is (see termOf and typeLabelOf).
-  'engine-gap': {
-    term: 'Google and Bing differ',
-    explain: 'A search or page shows on one of Google and Bing and not on the other.',
-  },
   'not-indexed': { term: 'Not indexed', explain: 'Pages Google has not added to its search results.' },
 };
 
@@ -51,14 +46,10 @@ export const SECONDARY = {
   explain: 'Searches a page already appears for but does not target.',
 };
 
-// {term, explain} for one item. An engine gap runs one of two ways, and the rules mark which with
-// the source that holds the numbers: 'bing' means Bing shows us and Google does not.
-export function termOf(type, source = null) {
+// {term, explain} for one item. Callers may still pass the item's source; no type reads it since the
+// Google and Bing cards were retired (rules.mjs).
+export function termOf(type) {
   const base = TERMS[type] ?? { term: String(type ?? ''), explain: '' };
-  if (type === 'engine-gap' && source === 'bing')
-    return { term: base.term, explain: 'Bing shows this search or page and Google does not.' };
-  if (type === 'engine-gap' && source === 'gsc')
-    return { term: base.term, explain: 'Google shows this search or page and Bing does not.' };
   return { ...base };
 }
 

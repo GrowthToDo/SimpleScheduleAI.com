@@ -65,9 +65,8 @@ Use the item's own `recommendation` and `test`. The Growing lists (`pages.growin
 - Content gaps: lead with `title` and `why`, then the pages in `linkFrom` that could link to it on
   day one (skip frozen ones or give their date). A new post is not a page edit.
 - A search sits in one list only, so never add one list's count to another's for "how many
-  searches need work". An engine-gap card from `source` gsc is about a page, not a search: Bing's
-  page report has no row for a busy Google page. It is a lead to check in Bing Webmaster Tools, not
-  proof, and not a page edit.
+  searches need work". There are no Google and Bing cards any more: a row missing from a Bing report
+  shows nothing, so never present one as a gap.
 
 ## Did it work, and what we have learned
 

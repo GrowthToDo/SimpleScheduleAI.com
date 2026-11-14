@@ -180,7 +180,7 @@ test('C2: once this week\'s page edit is made, every other page edit says "Next 
 
 const opp = (id, extra) => ({ id, title: id, measured: 'm', action: 'a', test: 't', score: { total: 50 }, ...extra });
 
-test('L1: the five never offer a page git shows edited lately, and C4: never the same task twice, one Bing card at most', () => {
+test('L1: the five never offer a page git shows edited lately, and C4: never the same task twice', () => {
   const recent = life.recentEdits({
     contentEdits: [{ page: '/blog/sample-guide', date: '2026-11-01', commit: 'f1', lines: 30 }],
     today: '2026-11-16',
@@ -192,8 +192,7 @@ test('L1: the five never offer a page git shows edited lately, and C4: never the
   const ranked = [
     opp('edit-a', { type: 'slipping', page: '/blog/sample-guide', isPageEdit: true }),
     opp('edit-b', { type: 'near-page-one', page: '/blog/free-guide', isPageEdit: true }),
-    opp('gap-1', { type: 'engine-gap', source: 'gsc', page: '/pricing', action: 'Check /pricing in Bing.' }),
-    opp('gap-2', { type: 'engine-gap', source: 'gsc', page: '/features', action: 'Check /features in Bing.' }),
+    opp('gap-1', { type: 'needs-links', page: '/pricing', action: 'Link to /pricing from two pages.' }),
     opp('same-1', { type: 'unserved', page: '/hub', action: 'Work the search into /hub.' }),
     opp('same-2', { type: 'unserved', page: '/hub', action: 'Work the search into /hub.' }),
     opp('other', { type: 'needs-links', page: '/blog/linked', action: 'Add two links.' }),

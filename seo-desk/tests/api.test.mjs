@@ -661,7 +661,6 @@ test('opportunities: counts by type and status, filters, and every item has what
     'low-click-rate',
     'needs-links',
     'not-indexed',
-    'engine-gap',
     'ai-gap',
   ]) {
     assert.ok(types.has(t), `fixture should produce ${t}`);
@@ -704,7 +703,7 @@ test('opportunities: counts by type and status, filters, and every item has what
   const slip = all.items.find((o) => o.type === 'slipping');
   assert.deepEqual(slip.touchedOn, ['2026-11-03']);
   assert.equal(slip.eligibility.eligible, true);
-  // Unserved and Bing only items have no page.
+  // Unserved items have no page.
   assert.equal(all.items.find((o) => o.type === 'unserved').page, null);
 });
 
@@ -1851,27 +1850,29 @@ test('the top five cannot hold more than one live page edit', async () => {
   assert.equal((await get('/api/week')).json.top5.length, 4);
 });
 
-test('an engine gap says which way round it is, and its tab stays neutral', async () => {
+test('K1: no Google and Bing card is raised, its tab is gone, and a saved item under an old id is ignored', async () => {
   useFull();
-  const r = (await get('/api/opportunities?type=engine-gap')).json;
-  const label = (q) => r.items.find((o) => (o.query ?? '').includes(q)).typeLabel;
-  assert.equal(label('bing only phrase'), 'On Bing, not on Google');
-  // The Google side is page level (audit B1): a busy page Bing's page report has no row for.
-  const googleSide = r.items.find((o) => o.source === 'gsc');
-  assert.equal(googleSide.typeLabel, 'On Google, not on Bing');
-  assert.equal(googleSide.query, null);
-  assert.ok(googleSide.page);
-  assert.equal(r.types.find((t) => t.type === 'engine-gap').label, 'Google and Bing differ');
-  assert.ok(!r.types.some((t) => /Bing sees it/.test(t.label)));
-  const csv = (await get('/api/export/opportunities.csv?type=engine-gap')).text;
-  assert.ok(csv.includes('On Bing, not on Google') && csv.includes('On Google, not on Bing'));
-  // Once marked, the direction survives the rules no longer finding the item.
-  const bing = r.items.find((o) => o.typeLabel === 'On Bing, not on Google');
-  await post(`/api/item/${bing.id}`, { action: 'ignore', reason: 'not now' });
-  writeAll(FULL, { gsc: gscData({ queryCur: [], qpCur: [] }) });
+  const items = (v) => {
+    fs.mkdirSync(path.join(FULL, 'state'), { recursive: true });
+    fs.writeFileSync(path.join(FULL, 'state/items.json'), JSON.stringify(v));
+  };
+  items({
+    'engine-gap:/pricing|': {
+      status: 'ignored',
+      since: '2026-11-01',
+      meta: { kind: 'opportunity', type: 'engine-gap', source: 'gsc', page: '/pricing', title: 'old card' },
+    },
+  });
   invalidate();
-  const gone = (await get('/api/opportunities?status=ignored')).json.items.find((o) => o.id === bing.id);
-  assert.equal(gone.typeLabel, 'On Bing, not on Google');
+  const r = (await get('/api/opportunities')).json;
+  assert.ok(!r.items.some((o) => o.type === 'engine-gap'));
+  assert.ok(!r.types.some((t) => t.type === 'engine-gap' || /Bing/.test(t.label)));
+  const ignored = (await get('/api/opportunities?status=ignored')).json;
+  assert.ok(!ignored.items.some((o) => o.type === 'engine-gap'), 'the old item is kept on disk but not shown');
+  const week = (await get('/api/week')).json;
+  assert.ok(!/not on Bing|not on Google|Google and Bing differ/.test(JSON.stringify(week)));
+  items({});
+  invalidate();
 });
 
 test('the model is built once and reused until a snapshot or a state file changes', async () => {

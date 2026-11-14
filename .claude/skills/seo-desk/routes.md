@@ -179,10 +179,10 @@ frozen `from` page would edit that page, so check `fromFrozenUntilText`.
 cards above. `status=open` means new, in progress or came back: it is what the Open view and the
 sidebar count use, and `counts.byStatus.open` is its size. `status=attention` is new only. Other
 values are one status each (done, ignored, snoozed) or `all`. Types: near-page-one, low-click-rate, competing-pages, slipping, wrong-page,
-unserved, question, needs-links, ai-gap, engine-gap, not-indexed. An engine-gap with `source` gsc is
-page level (no query): Google showed the page 200 times or more and Bing's page report has no row
-for it; it is a setup task (check the page in Bing Webmaster Tools), not a page edit. One with
-`source` bing is a search Bing shows us for that Search Console lacks.
+unserved, question, needs-links, ai-gap, not-indexed. The Google and Bing cards (engine-gap) are
+retired: neither Bing report can show that a page or search is missing from Bing, so the desk raises
+none. Never suggest checking a page in Bing because a Bing report lacks it. Bing's own figures stay
+on Performance and in the Bing columns of the Queries list.
 
 ## Health and AI
 

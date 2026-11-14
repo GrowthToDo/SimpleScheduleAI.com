@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { readJson, writeJson, dataDir } from '../store.mjs';
 import { SITE, THRESHOLDS, PRESETS, DEFAULT_MONEY_PAGES } from '../config.mjs';
-import { detectAll } from '../rules.mjs';
+import { detectAll, RETIRED_TYPES } from '../rules.mjs';
 import { rank } from '../score.mjs';
 import {
   reconcile,
@@ -45,16 +45,13 @@ const STATE_FILES = [
   'insight-choices',
 ].map((n) => `state/${n}.json`);
 
-// The label for one item. The standard terms live in insights.mjs. An engine gap runs one of two
-// ways, and the rules mark which with the source that holds the numbers: 'bing' means Bing shows us
-// and Google does not; its label says which way round it is, while its term stays the neutral one.
-export function typeLabelOf(type, source) {
-  if (type === 'engine-gap' && source === 'bing') return 'On Bing, not on Google';
-  if (type === 'engine-gap' && source === 'gsc') return 'On Google, not on Bing';
+// The label for one item. The standard terms live in insights.mjs. Callers may still pass the item's
+// source; no type reads it since the Google and Bing cards were retired (rules.mjs).
+export function typeLabelOf(type) {
   return TYPE_LABEL[type] ?? type;
 }
 
-// type -> the standard term (the tab label); the neutral name for an engine gap.
+// type -> the standard term (the tab label).
 export const TYPE_LABEL = Object.fromEntries(Object.entries(TERMS).map(([type, t]) => [type, t.term]));
 
 // ---------------------------------------------------------------- paths and the clock
@@ -378,31 +375,37 @@ export function decorateOpp(model, o) {
 // Items the founder marked that the rules no longer find (done pages, old ignores). They keep
 // the few facts saved when they were marked, so the Done and Ignored tabs stay complete.
 export function goneOpps(model) {
-  return Object.entries(model.items)
-    .filter(([id, it]) => !model.oppById.has(id) && it.meta?.kind === 'opportunity')
-    .map(([id, it]) => ({
-      id,
-      type: it.meta.type,
-      typeLabel: typeLabelOf(it.meta.type, it.meta.source),
-      ...termOf(it.meta.type, it.meta.source),
-      page: it.meta.page ?? null,
-      query: it.meta.query ?? null,
-      title: plain(it.meta.title),
-      measured: '',
-      action: '',
-      test: '',
-      isPageEdit: Boolean(it.meta.isPageEdit),
-      range: null,
-      source: null,
-      evidence: [],
-      signals: null,
-      score: null,
-      status: it.status,
-      item: itemState(model, id),
-      eligibility: eligibilityOf(model, { isPageEdit: Boolean(it.meta.isPageEdit), page: it.meta.page ?? null }),
-      touchedOn: [],
-      links: linksFor(it.meta.page ?? null),
-      brief: '',
-      detected: false,
-    }));
+  return (
+    Object.entries(model.items)
+      // A retired type (rules.mjs RETIRED_TYPES) keeps its saved state but is never shown.
+      .filter(
+        ([id, it]) =>
+          !model.oppById.has(id) && it.meta?.kind === 'opportunity' && !RETIRED_TYPES.includes(it.meta?.type)
+      )
+      .map(([id, it]) => ({
+        id,
+        type: it.meta.type,
+        typeLabel: typeLabelOf(it.meta.type, it.meta.source),
+        ...termOf(it.meta.type, it.meta.source),
+        page: it.meta.page ?? null,
+        query: it.meta.query ?? null,
+        title: plain(it.meta.title),
+        measured: '',
+        action: '',
+        test: '',
+        isPageEdit: Boolean(it.meta.isPageEdit),
+        range: null,
+        source: null,
+        evidence: [],
+        signals: null,
+        score: null,
+        status: it.status,
+        item: itemState(model, id),
+        eligibility: eligibilityOf(model, { isPageEdit: Boolean(it.meta.isPageEdit), page: it.meta.page ?? null }),
+        touchedOn: [],
+        links: linksFor(it.meta.page ?? null),
+        brief: '',
+        detected: false,
+      }))
+  );
 }

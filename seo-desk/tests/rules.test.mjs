@@ -339,77 +339,23 @@ test('ai-gap reads only the latest line and needs an absent keyword with a cited
   assert.match(out[0].measured, /rival\.com/);
 });
 
-// ---------------------------------------------------------------- engine-gap
+// ---------------------------------------------------------------- engine-gap (retired)
 
-test("engine-gap fires both ways: a Bing search Google lacks, and a busy Google page Bing's page report lacks", () => {
+test('K1: no rule raises a Google and Bing card, even on data that used to raise both kinds', () => {
   const snaps = withGsc({
     qpCur: [qp('shared', '/pricing', 100, 9)],
-    pageDaily: [
-      pd('/pricing', CUR_DAY, 0, 250, 12),
-      pd('/blog/a', CUR_DAY, 0, 400, 30),
-      pd('/blog/thin', CUR_DAY, 0, 199, 9),
-      pd('/blog/on-bing', CUR_DAY, 0, 900, 4),
-    ],
+    pageDaily: [pd('/pricing', CUR_DAY, 0, 250, 12), pd('/blog/a', CUR_DAY, 0, 400, 30)],
   });
   snaps.bing = {
     siteDaily: [],
-    queries: [
-      { query: 'bing only', clicks: 0, impressions: 20, position: 5 },
-      { query: 'bing thin', clicks: 0, impressions: 19, position: 5 },
-      { query: 'm7 bing brand', clicks: 0, impressions: 90, position: 5 },
-      { query: 'shared', clicks: 0, impressions: 50, position: 5 },
-    ],
+    queries: [{ query: 'bing only', clicks: 0, impressions: 90, position: 5 }],
     pages: [{ page: '/blog/on-bing', clicks: 0, impressions: 3 }],
     crawlIssues: [],
     links: { total: 0, history: [] },
   };
-  const out = rules.detectEngineGap(snaps, cfg);
-  const bingSide = out.filter((o) => o.source === 'bing');
-  assert.deepEqual(
-    bingSide.map((o) => o.query),
-    ['bing only']
-  );
-  assert.equal(bingSide[0].page, null);
-  // Page level: one card per page, whatever its importance, at 200 Google views or more.
-  const googleSide = out.filter((o) => o.source === 'gsc');
-  assert.deepEqual(googleSide.map((o) => o.page).sort(), ['/blog/a', '/pricing']);
-  for (const o of googleSide) {
-    assert.equal(o.query, '');
-    assert.equal(o.isPageEdit, false);
-  }
-});
-
-test('engine-gap does not flag every Bing query when the Search Console pull is empty', () => {
-  const snaps = withGsc({});
-  snaps.bing = {
-    siteDaily: [],
-    queries: [{ query: 'bing only', clicks: 0, impressions: 90, position: 5 }],
-    pages: [],
-    crawlIssues: [],
-    links: { total: 0, history: [] },
-  };
-  assert.deepEqual(rules.detectEngineGap(snaps, cfg), []);
-  assert.deepEqual(rules.detectEngineGap({ ...snaps, gsc: null }, cfg), []);
-});
-
-test('engine-gap text names the dates Bing and Google cover, in plain long dates', () => {
-  const snaps = withGsc({ qpCur: [qp('something else', '/blog/a', 5, 30)] });
-  snaps.bing = {
-    siteDaily: [],
-    queries: [{ query: 'bing only', clicks: 0, impressions: 25, position: 5 }],
-    pages: [],
-    windows: { cur: { start: '2026-10-11', end: '2026-11-07' } },
-    crawlIssues: [],
-    links: { total: 0, history: [] },
-  };
-  const [o] = rules.detectEngineGap(snaps, cfg);
-  assert.match(o.measured, /From 11 October to 7 November, Bing showed our site 25 times/);
-  assert.match(o.measured, /over the same dates/);
-  assert.equal(/\b(Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d/.test(o.measured), false);
-  // An older Bing snapshot has no window: the text says the numbers run back further.
-  delete snaps.bing.windows;
-  const [old] = rules.detectEngineGap(snaps, cfg);
-  assert.match(old.measured, /runs back further than 28 days/);
+  assert.equal(rules.detectEngineGap, undefined);
+  assert.ok(!rules.RULE_TYPES.includes('engine-gap'));
+  assert.ok(!rules.detectAll(snaps, cfg).some((o) => o.type === 'engine-gap'));
 });
 
 // ---------------------------------------------------------------- not-indexed
@@ -522,7 +468,6 @@ test('detectAll emits every type with plain words, a date range and the right ed
     question: true,
     'needs-links': false,
     'ai-gap': false,
-    'engine-gap': false,
     'not-indexed': false,
   };
   for (const [type, edit] of Object.entries(expectPageEdit)) {
@@ -668,15 +613,6 @@ test('importance is 1 for a money page, 0.7 for a pillar, 0.5 for a registry tar
 });
 
 // ================================================================ the audit of 14 November (package 2)
-
-const bingWith = (pages, siteDaily = []) => ({
-  siteDaily,
-  queries: [],
-  pages,
-  windows: { cur: W.cur },
-  crawlIssues: [],
-  links: { total: 0, history: [] },
-});
 
 test('B2: a split needs its real searches over the minimum, never the sum of page rows', () => {
   // Two pages each shown 20 times: the page rows add up to 40, but the search was made 26 times.
@@ -829,51 +765,4 @@ test('B14: a runner-up at position 10 or better is low on page one; 11 to 20 is 
   assert.match(by['on page one already'].title, /is low on page one/);
   assert.doesNotMatch(by['on page one already'].title, /close to page one/);
   assert.match(by['just off page one'].title, /is close to page one/);
-});
-
-test('B1: the Google side of engine-gap is one card per page, quotes the page and says what Bing covers', () => {
-  const snaps = withGsc({
-    pageDaily: [pd('/pricing', CUR_DAY, 0, 300, 29.24), pd('/pricing', '2026-10-21', 0, 100, 29.24)],
-    qpCur: [
-      qp('rival search one', '/pricing', 32, 29),
-      qp('rival search one', '/blog/x', 15, 9),
-      qp('rival search two', '/pricing', 45, 54),
-    ],
-  });
-  const days = [
-    { date: '2026-10-20', clicks: 0, impressions: 600 },
-    { date: '2026-10-21', clicks: 0, impressions: 400 },
-  ];
-  snaps.bing = bingWith(
-    [
-      { page: '/blog/x', clicks: 0, impressions: 150 },
-      { page: '/', clicks: 0, impressions: 30 },
-    ],
-    days
-  );
-  snaps.local = localData({ livePages: [{ page: '/pricing' }, { page: '/blog/x' }] });
-  const out = rules.detectEngineGap(snaps, cfg).filter((o) => o.source === 'gsc');
-  assert.equal(out.length, 1);
-  const [o] = out;
-  assert.equal(o.page, '/pricing');
-  assert.equal(o.id, rules.opportunityId('engine-gap', '/pricing', ''));
-  assert.match(o.measured, /Google showed \/pricing 400 times/);
-  assert.match(o.measured, /average position of 29\.2/);
-  assert.match(o.measured, /18%/); // 180 of the 1,000 times Bing showed the site
-  assert.match(o.action, /Bing Webmaster Tools/);
-  assert.match(o.action, /^Hypothesis:/);
-  assert.match(o.test, /within two weeks/);
-  assert.equal(o.isPageEdit, false);
-  // A missing Bing search is never evidence on its own.
-  assert.doesNotMatch(o.measured, /rival search/);
-  // No Bing page report, or a page that is not live: no card.
-  assert.deepEqual(
-    rules.detectEngineGap({ ...snaps, bing: bingWith([], days) }, cfg).filter((x) => x.source === 'gsc'),
-    []
-  );
-  snaps.local = localData({ livePages: [{ page: '/blog/x' }] });
-  assert.deepEqual(
-    rules.detectEngineGap(snaps, cfg).filter((x) => x.source === 'gsc'),
-    []
-  );
 });

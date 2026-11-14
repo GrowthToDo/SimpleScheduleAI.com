@@ -586,8 +586,7 @@ export function openWorkCard(w) {
 // ranked: opportunities with .score, best first. due: change-log entries ready to judge. pending:
 // edits whose verdict is not ready yet ([{page, judgeFrom}]), for the next verdict date. recent: the
 // git edits the freeze does not know (lifecycle recentEdits): such a page is not offered.
-// The five never hold two cards with the same page and the same action, and at most one
-// "On Google, not on Bing" card (an engine gap Search Console holds the numbers for).
+// The five never hold two cards with the same page and the same action.
 export function proposeTop5({
   plan,
   ranked = [],
@@ -670,7 +669,6 @@ export function proposeTop5({
   //    is a fallback after the opportunities, and rows waiting on the founder are
   //    left out because the page lists them separately (blockedOnYou).
   const rest = ordered.filter((o) => !o.isPageEdit && !used.has(o.id));
-  const bingGap = (o) => o?.type === 'engine-gap' && o.source === 'gsc';
   const extras = [
     ...rest.map((o) => ({ card: oppCard(o, 'other', frozen, today, opts), opp: o })),
     ...openWork.filter((x) => !x.blockedOnFounder).map((x) => ({ card: openWorkCard(x), opp: null })),
@@ -678,15 +676,12 @@ export function proposeTop5({
   const sameTask = (c) => `${c.page ?? ''}\u0000${plain(c.action)}`;
   const seen = new Set(cards.map((c) => c.id));
   const tasks = new Set(cards.filter((c) => c.action).map(sameTask));
-  let bingCards = ranked.filter((o) => bingGap(o) && cards.some((c) => c.oppId === o.id)).length;
-  for (const { card: c, opp } of extras) {
+  for (const { card: c } of extras) {
     if (cards.length >= size) break;
     if (seen.has(c.id)) continue;
     if (c.action && tasks.has(sameTask(c))) continue;
-    if (bingGap(opp) && bingCards >= 1) continue;
     seen.add(c.id);
     if (c.action) tasks.add(sameTask(c));
-    if (bingGap(opp)) bingCards += 1;
     cards.push(c);
   }
   return cards.slice(0, size);

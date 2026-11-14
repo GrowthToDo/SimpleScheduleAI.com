@@ -264,7 +264,6 @@ test('every opportunity type has a standard term and a plain one-sentence explan
     'question',
     'needs-links',
     'ai-gap',
-    'engine-gap',
     'not-indexed',
   ];
   for (const t of types) {
@@ -290,17 +289,13 @@ test('every opportunity type has a standard term and a plain one-sentence explan
   assert.equal(I.TERMS['wrong-page'].term, 'Wrong page ranking');
   assert.equal(I.TERMS.question.term, 'Unanswered questions');
   assert.equal(I.TERMS['not-indexed'].term, 'Not indexed');
-  assert.equal(I.TERMS['engine-gap'].term, 'Google and Bing differ');
+  assert.equal(I.TERMS['engine-gap'], undefined, 'the Google and Bing cards are retired');
   for (const t of types) {
     const text = `${I.TERMS[t].term} ${I.TERMS[t].explain}`;
     assert.doesNotMatch(text, /[–—]/, `${t}: no em or en dash`);
     assert.doesNotMatch(text, /\b(CTR|SERP)\b/, `${t}: no jargon`);
     for (const old of OLD_LABELS) assert.ok(!text.includes(old), `${t}: no old label`);
   }
-  // An engine gap still says which way round it is (the label), and explains it per item.
-  assert.equal(I.termOf('engine-gap', 'bing').term, 'Google and Bing differ');
-  assert.match(I.termOf('engine-gap', 'bing').explain, /Bing/);
-  assert.match(I.termOf('engine-gap', 'gsc').explain, /Google/);
 });
 
 test('every opportunity and every card carries term and explain, and no payload carries an old label', async () => {
@@ -310,7 +305,7 @@ test('every opportunity and every card carries term and explain, and no payload 
   for (const o of model.opps) {
     const d = decorateOpp(model, o);
     assert.ok(d.term && d.explain, `${o.type} carries term and explain`);
-    if (o.type !== 'engine-gap') assert.equal(d.typeLabel, d.term);
+    assert.equal(d.typeLabel, d.term);
   }
   const w = weekView(model);
   assert.ok(w.top5.length > 0);
