@@ -15,6 +15,7 @@ import {
   CHECKS,
   GROUPS,
   SPLIT_FROM,
+  RULE_CHANGED,
   buildPage,
   buildSite,
   evaluate,
@@ -245,7 +246,13 @@ export function saveAudit(run) {
 
 // The checks known to have run in a saved run: its checksRun, or for a run saved before that was
 // kept, only the checks that found something in it (of any other, nobody can tell).
-const ranIn = (run) => new Set(Array.isArray(run?.checksRun) ? run.checksRun : (run?.issues ?? []).map((i) => i.id));
+// A check whose rule changed after the run (RULE_CHANGED) ran differently then, so it is left out.
+const ranIn = (run) =>
+  new Set(
+    (Array.isArray(run?.checksRun) ? run.checksRun : (run?.issues ?? []).map((i) => i.id)).filter(
+      (id) => !(RULE_CHANGED[id] && String(run?.startedAt ?? '') < RULE_CHANGED[id])
+    )
+  );
 
 // What changed between two runs, by issue and page: {added, fixed, unchanged, byNewCheck}. Null
 // without a previous run. Only a check that ran in both runs can say new or fixed. byNewCheck: the

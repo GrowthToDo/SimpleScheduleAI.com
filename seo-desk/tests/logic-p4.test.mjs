@@ -635,3 +635,17 @@ test('L4: the site check counts long titles from the total line, not the five it
   assert.equal(issues[0].urls.length, 5);
   assert.match(issues[0].what, /^42 titles are longer than 60 characters \(the 5 longest are listed\)\.$/);
 });
+
+test('N2: a check whose rule changed since the earlier audit reports nothing as fixed against it', () => {
+  const issue = (id, pages) => ({
+    id,
+    group: 'speed',
+    severity: 'low',
+    pages: pages.map((page) => ({ page, detail: '', clicks: 0 })),
+  });
+  const prev = { startedAt: '2026-11-08T06:00:00.000Z', issues: [issue('img-no-size', ['/'])] };
+  const cur = { startedAt: '2026-11-20T06:00:00.000Z', checksRun: ['img-no-size'], issues: [] };
+  assert.deepEqual(auditRun.compareAudits(prev, cur).fixed, [], 'the page was not fixed; the rule changed');
+  const later = { startedAt: '2026-11-27T06:00:00.000Z', checksRun: ['img-no-size'], issues: [] };
+  assert.equal(auditRun.compareAudits({ ...cur, issues: [issue('img-no-size', ['/b'])] }, later).fixed.length, 1);
+});

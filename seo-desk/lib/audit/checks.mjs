@@ -263,6 +263,15 @@ const PAGE_EDIT_CHECKS = new Set([
 // this one between two audits is not "fixed".
 export const SPLIT_FROM = { 'title-template-long': 'title-long' };
 
+// Checks whose rule changed, with the time the change took effect. An audit saved before then ran
+// the old rule, so it cannot say what is new or fixed for that check.
+export const RULE_CHANGED = {
+  'img-no-size': '2026-11-15T00:00:00.000Z',
+  'canonical-elsewhere': '2026-11-15T00:00:00.000Z',
+  'title-duplicate': '2026-11-15T00:00:00.000Z',
+  'description-duplicate': '2026-11-15T00:00:00.000Z',
+};
+
 // What a saved run lacks: the effort, impact and steps of a check, by id. Null for an id that is no
 // longer a check.
 export const guideOf = (id) => {
