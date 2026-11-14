@@ -116,7 +116,10 @@ export function makeRoutes({ jobs = createJobs() } = {}) {
     }),
 
     post('/api/item/:id', async (ctx) => itemAction(ctx.params.id, await bodyOf(ctx))),
-    post('/api/week/top5', async (ctx) => chooseTop5((await bodyOf(ctx)).ids)),
+    post('/api/week/top5', async (ctx) => {
+      const body = await bodyOf(ctx);
+      return chooseTop5(body.ids, { override: body.override === true });
+    }),
     post('/api/week/lock', async (ctx) => (await bodyOf(ctx), lockCurrentWeek())),
     post('/api/week/unlock', async (ctx) => (await bodyOf(ctx), unlockWeek())),
     post('/api/annotations', async (ctx) => addAnnotation(await bodyOf(ctx))),

@@ -518,3 +518,40 @@ test('K4: the stored 28-day searches on a short snapshot are not compared, and s
   assert.equal(r.comparable, false);
   assert.equal(r.waitNote, QUERY_WAIT_NOTE);
 });
+
+// ---------------------------------------------------------------- S7: the five and a held page
+
+test('S7: choosing a page git shows edited lately for the five is refused with 409, unless override', async () => {
+  const { chooseTop5 } = await import('../lib/api/actions.mjs');
+  writeJson('state/items.json', {});
+  writeJson('state/weeks.json', {});
+  const qpCur = [{ query: 'made up held search', page: '/blog/held-guide', impressions: 200, clicks: 1, position: 12 }];
+  snap('gsc', {
+    pageDaily: [],
+    siteDaily: [],
+    qpCur,
+    queryCur: [{ query: 'made up held search', impressions: 200, clicks: 1, position: 12 }],
+    queryPrev: [],
+  });
+  snap('local', {
+    livePages: [{ page: '/blog/held-guide' }],
+    contentEdits: [{ page: '/blog/held-guide', date: '2026-11-09', commit: 'h1', lines: 40 }],
+    verdicts: [],
+    due: [],
+    edits: [],
+  });
+  invalidate();
+  const opp = buildModel().opps.find((o) => o.isPageEdit && o.page === '/blog/held-guide');
+  assert.ok(opp, 'a page edit card on the held page');
+  let refused = null;
+  try {
+    chooseTop5([`opp:${opp.id}`]);
+  } catch (e) {
+    refused = e;
+  }
+  assert.equal(refused?.status, 409);
+  assert.equal(refused.extra.recentlyEdited[0].page, '/blog/held-guide');
+  assert.match(refused.message, /found in git, 40 lines/);
+  const ok = chooseTop5([`opp:${opp.id}`], { override: true });
+  assert.ok(ok.top5.some((c) => c.oppId === opp.id));
+});

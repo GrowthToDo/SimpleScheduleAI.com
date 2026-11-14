@@ -27,12 +27,27 @@ export async function render(el, ctx) {
   const ids = week.top5.map((c) => c.id);
   const locked = week.locked;
 
-  async function saveFive(next, message) {
+  // The server refuses a page edit card on a frozen page, a page git shows edited lately, or a second
+  // page edit this week (409, with the reasons). The founder is asked once, and a yes sends override.
+  async function saveFive(next, message, { override = false } = {}) {
     if (locked) {
       ctx.toast("This week's plan is locked. Unlock it to change the five.", 'error');
       return;
     }
-    await api.post('/api/week/top5', { ids: next });
+    try {
+      await api.post('/api/week/top5', { ids: next, ...(override ? { override: true } : {}) });
+    } catch (e) {
+      const held = e.status === 409 && (e.data?.frozen || e.data?.recentlyEdited || e.data?.secondThisWeek);
+      if (!held || override) throw e;
+      const ok = await ctx.confirmBox({
+        title: 'This page should be left alone',
+        body: e.message,
+        confirmLabel: 'Add it anyway',
+        danger: true,
+      });
+      if (!ok) return;
+      await api.post('/api/week/top5', { ids: next, override: true });
+    }
     ctx.toast(message, 'success');
     await ctx.reload();
   }
@@ -55,7 +70,9 @@ export async function render(el, ctx) {
       });
       if (!ok) return;
     }
-    const save = (next, message) => saveFive(next, message).catch((e) => ctx.toast(e.message, 'error'));
+    // A yes to the question above is the override the server asks for.
+    const save = (next, message) =>
+      saveFive(next, message, { override: Boolean(recent) }).catch((e) => ctx.toast(e.message, 'error'));
     if (ids.length < 5) return save([...ids, cardId], `Added to this week: ${title}`);
     ctx.menu(
       anchor,

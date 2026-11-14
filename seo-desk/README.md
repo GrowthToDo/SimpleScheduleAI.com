@@ -30,7 +30,7 @@ Some menu names have a number beside them. It is not the same kind of number eve
 
 ### Plan
 
-- **This week.** What should I do this week, what is my biggest upside, and should I worry? The jobs the desk suggests, the next best chances, things that got worse, things that are just waiting, and pages to leave alone for now. You can lock the plan, and **Save the plan as a PDF** gives a clean printed copy with the evidence for each job. How many jobs it suggests, three or five, is a setting (see Settings).
+- **This week.** What should I do this week, what is my biggest upside, and should I worry? The jobs the desk suggests, the next best chances, things that got worse, things that are just waiting, and pages to leave alone for now. Adding a page change to the jobs for a page that is frozen, was edited lately (found in git), or when this week's page edit is already made asks you first, the same way marking a change done does. You can lock the plan, and **Save the plan as a PDF** gives a clean printed copy with the evidence for each job. How many jobs it suggests, three or five, is a setting (see Settings).
 
 ### Search
 

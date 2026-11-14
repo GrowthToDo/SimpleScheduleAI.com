@@ -10,7 +10,7 @@ import { readJson, writeJson, dataDir } from '../store.mjs';
 import { PRESETS, THRESHOLDS } from '../config.mjs';
 import { transition, loadItems, saveItems, FREEZE_DAYS, recentEditText } from '../lifecycle.mjs';
 import { setTop5, lockWeek, editThisWeek, PLAN_SIZES } from '../week.mjs';
-import { addDays, mondayOf } from '../dates.mjs';
+import { addDays } from '../dates.mjs';
 import { longDate, plain } from '../text.mjs';
 import {
   buildModel,
@@ -197,7 +197,9 @@ export function itemAction(id, body) {
 
 // ---------------------------------------------------------------- the weekly plan
 
-export function chooseTop5(input) {
+// override: true chooses a page edit card that is held back (a frozen page, a page git shows edited
+// lately, or a second page edit this week) anyway, the same as Done with override.
+export function chooseTop5(input, { override = false } = {}) {
   let ids = input;
   const model = buildModel();
   const { weekOf, pool } = weekModel(model);
@@ -215,24 +217,14 @@ export function chooseTop5(input) {
       `That plan has ${edits} live page edits. The rule is one live page edit a week, so keep one and move the others to a later week.`
     );
   }
-  // The 28 day rule. A page edit card that is itself done is the edit that froze its page, so it may stay.
-  const done = editThisWeek(model.frozen, model.today);
-  for (const id of ids) {
+  // The 28 day rule, a git edit the freeze does not know, and one page edit a week: the same guards and
+  // the same 409 as Done, unless override. A page edit card that is itself done is the edit that froze
+  // its page, so it may stay.
+  for (const id of override ? [] : ids) {
     const card = pool.get(id);
-    if (!card?.isPageEdit || itemOf(model, itemKey(id))?.status === 'done') continue;
-    const f = card.page ? model.frozen.get(card.page) : null;
-    if (f && f.until > model.today) {
-      throw fail(
-        400,
-        `${card.page} was edited on ${longDate(f.since)} and is frozen until ${longDate(f.until)}, so it cannot be this week's page edit.`
-      );
-    }
-    if (done) {
-      throw fail(
-        400,
-        `This week's live page edit is already done (${done.page} on ${longDate(done.since)}). The next one can go in from ${longDate(addDays(mondayOf(model.today), 7))}.`
-      );
-    }
+    if (!card?.isPageEdit || !card.page || itemOf(model, itemKey(id))?.status === 'done') continue;
+    const g = editGuards(model, card.page);
+    if (g) throw editRefused(g, 'Editing it now');
   }
   if (currentTop5(model).stored?.locked)
     throw fail(409, "This week's plan is locked. Unlock it before changing the five.");

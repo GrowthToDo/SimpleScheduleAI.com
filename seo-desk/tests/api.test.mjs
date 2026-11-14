@@ -1921,15 +1921,21 @@ test('every id on the week page is accepted by the item route and by the five', 
   assert.ok(slip.state.notes.length >= 1 && slip.state.notes.every((n) => n.text === 'checked'));
 });
 
-test('a frozen page edit is refused by the five, with the date', async () => {
+test('S7: a frozen page edit is refused by the five with the same 409 as Done, unless override', async () => {
   useFull();
   addNote({ date: '2026-11-02', slug: '/pricing', text: 'Edit: new pricing table' });
   invalidate();
   const low = (await get('/api/opportunities?type=low-click-rate')).json.items.find((o) => o.page === '/pricing');
   const r = await post('/api/week/top5', { ids: [`opp:${low.id}`] });
-  assert.equal(r.status, 400);
+  assert.equal(r.status, 409);
   assert.match(r.json.error, /2 November/);
   assert.match(r.json.error, /30 November/);
+  assert.match(r.json.error, /Send override to do it anyway\./);
+  assert.equal(r.json.frozen.page, '/pricing', 'the same extra shape as Done');
+  assert.equal(r.json.frozen.untilText, '30 November');
+  const yes = await post('/api/week/top5', { ids: [`opp:${low.id}`], override: true });
+  assert.equal(yes.status, 200);
+  await post('/api/week/top5', { ids: [] });
 });
 
 test('once a page edit is dated this week, the slot says so and no page edit can be chosen', async () => {
@@ -1943,8 +1949,9 @@ test('once a page edit is dated this week, the slot says so and no page edit can
   assert.equal(w.top5.filter((c) => c.isPageEdit).length, 0);
   const edit = (await get('/api/opportunities')).json.items.find((o) => o.isPageEdit && o.page !== '/pricing');
   const r = await post('/api/week/top5', { ids: [`opp:${edit.id}`] });
-  assert.equal(r.status, 400);
+  assert.equal(r.status, 409);
   assert.match(r.json.error, /9 November/);
+  assert.equal(r.json.secondThisWeek.page, '/pricing');
 });
 
 test('Done on a frozen page needs an override, and the override restarts the 28 days', async () => {
