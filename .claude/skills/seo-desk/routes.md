@@ -60,7 +60,9 @@ stored 28 days whatever range you ask for. `series[]` is clicks and impressions 
 
 `/api/search?range=…&metric=…`: the older Performance data. Use it for `likeForLike {mean,
 prevMean, n, targetsTotal, enough, range, prevRange}`, `targets[]` (keyword, page, position,
-change, alignment) and `brandSplit`.
+change, alignment) and `brandSplit`. When the stored search totals for the latest 28 days are a day
+short of the 28 before, `notes[]` says the comparison of searches waits for the next refresh, and the
+searches list and tile carry no change.
 
 `/api/explore?dim=query|page&range=…`: `rows[] {key, clicks, impressions, position, ctr (pages
 only, gated), prev, change, movement, brand}`, `totals`, `siteTotals`, `comparable`, `truncated`,
@@ -147,8 +149,12 @@ a list. Each page row: `{page, impressions, prevImpressions, position, change,
 movement}`; decaying page rows and every item also carry `dropKind` (lost-rankings, lost-demand,
 lost-clicks or unclear), `dropKindLabel`, `dropKindWhy` (one sentence with that page's own
 numbers), `recommendation` and `recentDrop` (the last 14 days are 30 percent or more under the 14
-before). The window is fixed: the last 28 days against the 28 before. Brand searches are left out
-of `queries`.
+before). An item's `action` and `test` are the kind-of-drop recommendation and its test, the same
+words All opportunities, the brief and the week's worry give (one source, `lib/decay.mjs`). The
+window is fixed: the last 28 days against the 28 before, two periods of equal length from the daily
+page rows. Brand searches are left out of `queries`. `queriesNote` is set (and the searches lists are
+empty) when the stored search totals for the latest period are a day short of the period before;
+the comparison of searches then waits for the next Search Console refresh. Say so; do not compare.
 
 `/api/keyword-map/table`: `counters {all, live, ranks, pending, mapped, unmapped, opportunities,
 runnerUp, cannibalized, clusterConflicts}`, `rows[] {keyword, kind (targeted|discovered), status

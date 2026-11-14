@@ -977,7 +977,13 @@ function decayTables(ctx, data) {
       rows: data[view]?.[dir] ?? [],
       columns,
       searchKeys: [key],
-      emptyText: dir === 'decaying' ? 'Nothing is being shown much less than before.' : 'Nothing is growing yet.',
+      // On a snapshot whose search totals are a day short, the searches lists wait for the next refresh.
+      emptyText:
+        view === 'queries' && data.queriesNote
+          ? data.queriesNote
+          : dir === 'decaying'
+            ? 'Nothing is being shown much less than before.'
+            : 'Nothing is growing yet.',
     });
   };
   draw();

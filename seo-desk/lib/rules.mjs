@@ -17,9 +17,10 @@ import {
   isBrand,
 } from '../../scripts/lib/gsc-diagnose-core.mjs';
 import { realQueryCounts } from './query-counts.mjs';
+import { dropKindOf, dropAction } from './decay.mjs';
 import { matchKey } from './targets.mjs';
 import { THRESHOLDS, DEFAULT_MONEY_PAGES, EXPECTED_CTR } from './config.mjs';
-import { windows as reportingWindows, daysBetween, todayIso } from './dates.mjs';
+import { windows as reportingWindows, daysBetween, todayIso, addDays } from './dates.mjs';
 import { longDate, longRange } from './text.mjs';
 
 export const RULE_TYPES = [
@@ -531,9 +532,20 @@ export function detectLowClickRate(snaps, cfg) {
 const changeWords = (frac) =>
   Math.abs(frac) < 0.005 ? 'stayed flat' : `${frac < 0 ? 'fell' : 'rose'} ${pct0(Math.abs(frac))}`;
 
+// Two periods of equal length from the daily page rows: the stored earlier period's length, ending on
+// the stored end. A snapshot whose last day was cut back (sources/gsc.mjs capSnapshot) holds a latest
+// period one day short; the daily rows can be re-cut, so both periods cover the same number of days
+// (the windows Search shows, api/search.mjs windowsFor).
+export function pageWindowsOf(ctx) {
+  const days = daysBetween(ctx.prev.start, ctx.prev.end) + 1;
+  const cur = { start: addDays(ctx.cur.end, -(days - 1)), end: ctx.cur.end };
+  return { cur, prev: { start: addDays(cur.start, -days), end: addDays(cur.start, -1) } };
+}
+
 export function detectSlipping(snaps, cfg) {
-  const ctx = contextOf(snaps, cfg);
-  if (!isArr(ctx.gsc?.pageDaily)) return [];
+  const base = contextOf(snaps, cfg);
+  if (!isArr(base.gsc?.pageDaily)) return [];
+  const ctx = { ...base, ...pageWindowsOf(base) };
   const cur = aggregatePages(ctx.gsc.pageDaily, ctx.cur);
   const prev = aggregatePages(ctx.gsc.pageDaily, ctx.prev);
   const move = pageMovement([...prev.values()], [...cur.values()]);
@@ -548,22 +560,33 @@ export function detectSlipping(snaps, cfg) {
         i.impPct <= -ctx.t.SLIP_DROP &&
         i.impPct - median <= -ctx.t.SLIP_DROP
     )
-    .map((i) =>
-      build(ctx, {
+    .map((i) => {
+      // The kind of drop gives the card its recommendation and its test (lib/decay.mjs), the same
+      // words the Decay page, the brief and the week's worry use.
+      const drop = dropKindOf(i.prev, i.cur);
+      const card = build(ctx, {
         type: 'slipping',
         page: i.page,
         query: '',
         title: `${i.page} lost ${pct0(-i.impPct)} of its search views`,
         measured: `${i.page} showed up ${n0(i.prev.impressions)} times from ${rangeText(ctx.prev)} and ${n0(i.cur.impressions)} times from ${rangeText(ctx.cur)}, a drop of ${pct0(-i.impPct)}. The middle page on our site ${changeWords(median)} over the same dates.`,
-        action: `Compare ${i.page} with the pages now ranking above it and refresh the sections that have gone stale.`,
+        action: dropAction(drop),
+        test: drop.test,
         isPageEdit: true,
         range,
         source: 'gsc',
         evidence: [i],
         impressions: i.prev.impressions,
         distance: Math.min(1, -i.impPct),
-      })
-    );
+      });
+      return {
+        ...card,
+        dropKind: drop.kind,
+        dropKindLabel: drop.label,
+        dropKindWhy: drop.why,
+        recommendation: drop.recommendation,
+      };
+    });
 }
 
 // ---------------------------------------------------------------- local rules

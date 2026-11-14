@@ -19,7 +19,7 @@ import {
 } from '../model.mjs';
 import { competingList, competingId, splitEdit, splitGroups, activeOpps } from '../work.mjs';
 import { itemAction, editGuards, editRefused } from '../actions.mjs';
-import { windowsFor, pagesTable, queriesTable } from '../search.mjs';
+import { windowsFor, pagesTable, queriesTable, QUERY_WAIT_NOTE, queryPeriodsEven } from '../search.mjs';
 import { n0, round1 } from '../fmt.mjs';
 import { toCsv } from '../csv.mjs';
 import { targetRows, discoveredList } from './targets.mjs';
@@ -687,15 +687,24 @@ function dropInfo(model, page) {
   };
 }
 
-// The open decay cards: each carries the kind of drop and its recommendation, and its brief is built
-// from that recommendation (not the rule's first suggestion), so the card and the brief say the same.
+// The open decay cards: each carries the kind of drop the rule read (rules.mjs detectSlipping, from
+// lib/decay.mjs), so its action, test and brief are the kind-of-drop recommendation everywhere: All
+// opportunities, the brief, this page, the week's worry and the Ask digest.
 export const decayItems = (model) =>
   memo(model, 'insights:decay', () =>
     openOfType(model, 'slipping').map((o) => {
       const d = decorateOpp(model, o);
-      const drop = dropInfo(model, o.page);
-      const action = unlabelled(drop.recommendation) || d.action;
-      return { ...d, ...drop, brief: brief({ ...d, action }, { frozen: model.frozen }) };
+      const own = dropInfo(model, o.page);
+      const drop = o.dropKind
+        ? {
+            dropKind: o.dropKind,
+            dropKindLabel: o.dropKindLabel,
+            dropKindWhy: o.dropKindWhy,
+            recommendation: o.recommendation,
+            recentDrop: own.recentDrop,
+          }
+        : own;
+      return { ...d, ...drop };
     })
   );
 
@@ -736,6 +745,8 @@ export function decayView(model) {
     },
     recentDropNote: RECENT_DROP_NOTE,
     note: 'Change is the last 28 days against the 28 days before. It is left out when the earlier period had too few views to compare.',
+    // The searches lists stay empty on a snapshot whose stored search totals are a day short.
+    queriesNote: queryPeriodsEven(model.data.gsc) ? null : QUERY_WAIT_NOTE,
   };
 }
 

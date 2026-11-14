@@ -20,6 +20,8 @@ const changes = await import('../lib/changes.mjs');
 const { buildModel, invalidate } = await import('../lib/api/model.mjs');
 const work = await import('../lib/api/work.mjs');
 const { writeJson } = await import('../lib/store.mjs');
+const { addDays } = await import('../lib/dates.mjs');
+const { buildDeskBrief } = await import('../lib/ask.mjs');
 
 const TODAY = '2026-11-14';
 
@@ -118,4 +120,90 @@ test('M1: the Did it work tile, its list and the week read a change the same way
       .sort(),
     ['/blog/down-guide', '/blog/up-guide']
   );
+});
+
+// ---------------------------------------------------------------- M2 and K4: Decay
+
+// Daily page rows for an old snapshot: the stored windows end on 11 November, the daily rows on 10
+// November. /blog/fading-guide loses half its views at the same place (lost demand); five other
+// pages hold steady, so the middle page stays flat.
+function decaySnapshot() {
+  const pageDaily = [];
+  const siteDaily = [];
+  for (let d = '2026-08-20'; d <= '2026-11-10'; d = addDays(d, 1)) {
+    const late = d >= '2026-10-14';
+    pageDaily.push({ page: '/blog/fading-guide', date: d, impressions: late ? 10 : 20, clicks: 0, position: 6 });
+    for (const p of ['a', 'b', 'c', 'd', 'e'])
+      pageDaily.push({ page: `/blog/steady-${p}`, date: d, impressions: 10, clicks: 0, position: 8 });
+    siteDaily.push({ date: d, impressions: 70, clicks: 0 });
+  }
+  return {
+    pageDaily,
+    siteDaily,
+    windows: {
+      cur: { start: '2026-10-15', end: '2026-11-11' },
+      prev: { start: '2026-09-17', end: '2026-10-14' },
+      d90: { start: '2026-08-14', end: '2026-11-11' },
+    },
+  };
+}
+
+test('M2, K4: one Decay card says the kind-of-drop recommendation and test everywhere, over two equal periods', () => {
+  writeJson('state/items.json', {});
+  snap('gsc', decaySnapshot(), { through: '2026-11-11' });
+  snap('local', { livePages: [], verdicts: [], due: [], edits: [] });
+  invalidate();
+  const model = buildModel();
+  const opp = model.opps.find((o) => o.type === 'slipping');
+  assert.ok(opp, 'the fading page is a Decay card');
+  assert.equal(opp.dropKind, 'lost-demand');
+  const action =
+    'Fewer people may be searching for this, so there may be nothing to fix. Leave it and check again later.';
+  assert.equal(opp.action, action);
+  assert.match(opp.test, /^Look at the page again after the next 28 days/);
+  // Two periods of 28 days each, ending on the last day the daily rows hold: 280 before, 280 after
+  // the cut would be 270 if the latest period were one day short.
+  assert.equal(opp.evidence[0].prev.impressions, 28 * 20);
+  assert.equal(opp.evidence[0].cur.impressions, 28 * 10);
+  assert.match(opp.measured, /14 October to 10 November/);
+  assert.ok(!/11 November/.test(opp.measured));
+  assert.equal(opp.title, '/blog/fading-guide lost 50% of its search views');
+
+  const card = work.opportunitiesList(model, { status: 'open' }).items.find((o) => o.id === opp.id);
+  assert.equal(card.action, action);
+  assert.match(card.brief, /Recommendation \(a hypothesis\): Fewer people may be searching/);
+  assert.ok(!/stale/.test(JSON.stringify(card)));
+  const w = work.weekView(model).worries.find((x) => x.kind === 'slipping-page');
+  assert.equal(w.fix, action);
+  const digest = buildDeskBrief(model, 'Which pages are slipping, and why?').text;
+  assert.ok(digest.includes(action));
+  assert.ok(!/gone stale/.test(digest));
+});
+
+test('K4: on a snapshot whose search totals are a day short, the searches comparison waits for the next refresh', async () => {
+  const { queriesTable, searchView, QUERY_WAIT_NOTE } = await import('../lib/api/search.mjs');
+  const { decayView } = await import('../lib/api/ext/insights.mjs');
+  writeJson('state/items.json', {});
+  snap(
+    'gsc',
+    {
+      ...decaySnapshot(),
+      queryCur: [{ query: 'made up search', clicks: 0, impressions: 40, position: 7 }],
+      queryPrev: [{ query: 'made up search', clicks: 0, impressions: 90, position: 7 }],
+    },
+    { through: '2026-11-11' }
+  );
+  invalidate();
+  const model = buildModel();
+  const q = queriesTable(model, 28);
+  assert.equal(q.comparable, false);
+  assert.equal(q.rows[0].change, null);
+  assert.equal(q.rows[0].movement, null);
+  assert.equal(q.waitNote, QUERY_WAIT_NOTE);
+  const v = searchView(model, { days: 28, metric: 'impressions' });
+  assert.ok(v.notes.includes(QUERY_WAIT_NOTE));
+  assert.equal(v.tiles.find((t) => t.key === 'searches').change, null);
+  const d = decayView(model);
+  assert.equal(d.queriesNote, QUERY_WAIT_NOTE);
+  assert.equal(d.queries.decaying.length, 0);
 });
