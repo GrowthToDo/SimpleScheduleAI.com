@@ -7,7 +7,7 @@ import crypto from 'node:crypto';
 import { readJson, writeJson } from './store.mjs';
 import { addDays, daysBetween, mondayOf, todayIso } from './dates.mjs';
 import { SITE } from '../../scripts/lib/change-log-core.mjs';
-import { eligibility } from './lifecycle.mjs';
+import { eligibility, editThisWeek, recentEditText } from './lifecycle.mjs';
 import { longDate, longRange, plain } from './text.mjs';
 import { groupChanges, competitorWorries } from './competitor-changes.mjs';
 
@@ -85,14 +85,55 @@ function droppedFromIndex(snaps, prevSnaps) {
     }));
 }
 
+// The edit that holds a page back from a new change: a deliberate edit (the freeze) or a git edit of
+// 10 or more lines the freeze does not know (recent, from lifecycle recentEdits). {since, until} or null.
+export function holdOf(page, frozen, recent, today) {
+  const f = page ? frozen?.get(page) : null;
+  if (f && f.until > today) return { since: f.since, until: f.until, found: 'freeze' };
+  const r = page ? recent?.get(page)?.edit : null;
+  if (r && r.until > today) return { since: r.date, until: r.until, found: 'git', lines: r.lines };
+  return null;
+}
+
+// The one sentence a worry on a page that was just edited says instead of a fix: never edit or undo
+// now, it is too early to judge, and when to look again.
+const holdFix = (h) =>
+  `This page was edited on ${longDate(h.since)}${h.found === 'git' ? ' (found in git)' : ''}, so it is too early to judge. Leave it alone and look again on ${longDate(h.until)}.`;
+const holdTest = (h) =>
+  `Look again on ${longDate(h.until)}, when the 28 days after the ${longDate(h.since)} edit are over.`;
+
+// The recommendation without its leading "Hypothesis:" label.
+const unlabelled = (s) => {
+  const t = plain(s).replace(/^Hypothesis:\s*/i, '');
+  return t ? t[0].toUpperCase() + t.slice(1) : t;
+};
+
+// "Google's August core update (from 10 November) fell inside these dates" for a list of updates.
+const updatesText = (list) => {
+  const names = list.map((u) => `${plain(u.label)} (from ${longDate(u.date)})`);
+  return names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0];
+};
+
 // Built from the ranked opportunities, so there is one slipping rule (in rules.mjs).
-// The worry carries oppId so it and the opportunity card are one and the same card.
-function slippingPages(opps, frozen, today) {
+// The worry carries oppId so it and the opportunity card are one and the same card. The first three
+// the founder has not finished, ignored or snoozed are taken, so a Done clears the worry and the
+// next one moves up. decay: Map<oppId, {dropKindLabel, dropKindWhy, recommendation, updates, lastEdit}>
+// from the Decay page (the same kind of drop and recommendation its card shows, the Google ranking
+// updates inside the compared dates and the page's last edit inside them).
+function slippingPages(opps, { frozen, recent, today, items, decay }) {
   return (opps ?? [])
-    .filter((o) => o.type === 'slipping')
+    .filter((o) => o.type === 'slipping' && available(o.id, items, today))
     .slice(0, 3)
     .map((o) => {
-      const f = frozen?.get(o.page);
+      const d = decay?.get(o.id) ?? null;
+      const hold = holdOf(o.page, frozen, recent, today);
+      const notes = [];
+      if (d?.dropKindLabel) notes.push(`Kind of drop: ${plain(d.dropKindLabel)}. ${plain(d.dropKindWhy)}`.trim());
+      if (d?.lastEdit) notes.push(`The page was last edited on ${longDate(d.lastEdit)}, inside these dates.`);
+      if (d?.updates?.length)
+        notes.push(
+          `Google's ${updatesText(d.updates)} fell inside these dates, so read this drop with care. That does not show the update caused it.`
+        );
       return {
         id: `slipping-page:${o.page}`,
         kind: 'slipping-page',
@@ -100,11 +141,9 @@ function slippingPages(opps, frozen, today) {
         oppId: o.id,
         isPageEdit: true,
         title: plain(o.title),
-        measured: plain(o.measured),
-        fix:
-          f && f.until > today
-            ? `This page was changed recently, so leave it alone until ${longDate(f.until)} and let the verdict decide. Then refresh it if it is still down.`
-            : plain(o.action),
+        measured: [plain(o.measured), ...notes].join(' '),
+        fix: hold ? holdFix(hold) : unlabelled(d?.recommendation) || plain(o.action),
+        ...(hold ? { test: holdTest(hold), waitUntil: hold.until } : {}),
       };
     });
 }
@@ -196,15 +235,24 @@ function registryFailures(snaps) {
 
 const isBatch = (v) => v.kind === 'batch' || (Array.isArray(v.pages) && !v.url);
 
-function worseVerdicts(snaps, frozen, today) {
+// A worse verdict that is clean (no other change landed in its 28 days): an observation, never "made
+// things worse", with the cautions Did it work shows. A verdict flagged overlapping cannot be read, so
+// it is not a worry. cautionsOf(v) gives the caution sentences for one verdict row (the control, a
+// Google ranking update inside its dates, a one week spike in the before window).
+function worseVerdicts(snaps, { frozen, recent, today, cautionsOf }) {
   const local = snaps?.local?.data ?? {};
   return (local.verdicts ?? [])
-    .filter((v) => v.verdict === 'worse' && v.judgedOn && daysBetween(v.judgedOn, today) <= VERDICT_RECENT_DAYS)
+    .filter(
+      (v) =>
+        v.verdict === 'worse' && !v.overlapping && v.judgedOn && daysBetween(v.judgedOn, today) <= VERDICT_RECENT_DAYS
+    )
     .map((v) => {
       const numbers = (who, were) =>
         `In the 28 days before the change ${who} ${were} shown ${v.before?.impressions ?? 0} times at an average place of ${
           v.before?.position ?? 'unknown'
         }. In the 28 days after, ${v.after?.impressions ?? 0} times at ${v.after?.position ?? 'unknown'}. Judged on ${longDate(v.judgedOn)}.`;
+      const cautions = (cautionsOf?.(v) ?? []).map(plain).filter(Boolean);
+      const caution = cautions.length ? ` ${cautions.join(' ')}` : '';
       if (isBatch(v)) {
         const pages = (v.pages ?? []).map(String);
         const named = pages.slice(0, 3).join(', ');
@@ -214,24 +262,28 @@ function worseVerdicts(snaps, frozen, today) {
           kind: 'verdict-worse',
           page: null,
           isPageEdit: false,
-          title: `The ${longDate(v.changeDate)} change to ${count(pages.length, 'page', 'pages')} made things worse`,
-          measured: `${numbers('the pages together', 'were')} The pages: ${named}${more}.`,
-          fix: 'Open Did it work, look at each page in the batch, and decide which part of the change to undo before touching any of them again.',
+          title: `After the ${longDate(v.changeDate)} change these ${count(pages.length, 'page', 'pages')} read worse`,
+          measured: `${numbers('the pages together', 'were')} The pages: ${named}${more}.${caution}`,
+          fix: 'Open Did it work and look at each page in the batch before touching any of them again. The numbers show the pages read worse after the change; they do not show the change caused it.',
+          test: 'A new verdict can be read about 30 days after the next change to one of these pages.',
         };
       }
       const page = v.url ?? pageForSlug(v.slug, local);
-      const f = frozen?.get(page);
+      const hold = holdOf(page, frozen, recent, today);
       return {
         id: `verdict-worse:${v.slug}|${v.changeDate}`,
         kind: 'verdict-worse',
         page,
         isPageEdit: true,
-        title: `The ${longDate(v.changeDate)} change to ${page} made things worse`,
-        measured: numbers('the page', 'was'),
-        fix:
-          f && f.until > today
-            ? `The page was touched again recently, so wait until ${longDate(f.until)} before changing it, then compare the old and new versions.`
-            : 'Compare the old and new versions of the page and decide whether to undo the part that hurt.',
+        title: `After the ${longDate(v.changeDate)} change ${page} reads worse`,
+        measured: `${numbers('the page', 'was')}${caution}`,
+        fix: hold
+          ? holdFix(hold)
+          : 'Compare the old and new versions of the page, and undo a part only if it plainly hurt. The numbers show the page reads worse after the change; they do not show the change caused it.',
+        test: hold
+          ? `The next verdict on this page can be read on ${longDate(addDays(hold.since, 30))}.`
+          : 'A new verdict on this page can be read about 30 days after its next change.',
+        ...(hold ? { waitUntil: hold.until } : {}),
       };
     });
 }
@@ -239,19 +291,25 @@ function worseVerdicts(snaps, frozen, today) {
 // snaps and prevSnaps: {gsc, bing, local, ...} snapshot objects (the shape in data/snap).
 // sources: the list from sourceStatus(). opps: the ranked opportunities, best first
 // (the slipping worries are its first three of type slipping). Missing inputs are fine.
+// recent: the git edits the freeze does not know (lifecycle recentEdits); a worry on such a page, or
+// on a frozen one, says to leave it alone until a date (waitUntil) instead of a fix. decay and
+// cautionsOf: see slippingPages and worseVerdicts.
 export function worries({
   snaps = {},
   prevSnaps = {},
   sources = [],
   frozen = new Map(),
+  recent = new Map(),
   opps = [],
   items = {},
+  decay = new Map(),
+  cautionsOf = () => [],
   today = todayIso(),
 } = {}) {
   const all = [
     ...droppedFromIndex(snaps, prevSnaps),
-    ...slippingPages(opps, frozen, today),
-    ...worseVerdicts(snaps, frozen, today),
+    ...slippingPages(opps, { frozen, recent, today, items, decay }),
+    ...worseVerdicts(snaps, { frozen, recent, today, cautionsOf }),
     ...crawlIssues(snaps),
     ...registryFailures(snaps),
     ...failedSources(sources),
@@ -263,13 +321,15 @@ export function worries({
 // ---------------------------------------------------------------- waiting
 
 // Verdicts still pending and pages frozen, soonest first. Nothing here needs action.
-// verdictsDue: [{page|url|slug, date}] for edits whose verdict is not ready yet.
+// verdictsDue: [{page|url|slug, date|judgeFrom}] for edits whose verdict is not ready yet (the
+// pending edits on Did it work). One page can wait on two verdicts (two edits on two days), so a
+// verdict is one page on one date.
 export function waiting({ verdictsDue = [], frozen = new Map(), plan = null, today = todayIso() } = {}) {
   const out = [];
   const seen = new Set();
   const addVerdict = (page, date) => {
-    if (!page || !date || seen.has(page)) return;
-    seen.add(page);
+    if (!page || !date || seen.has(`${page}|${date}`)) return;
+    seen.add(`${page}|${date}`);
     out.push({ title: `Verdict on ${page}`, date, kind: 'verdict' });
   };
   for (const v of verdictsDue)
@@ -295,7 +355,9 @@ function available(id, items, today) {
   return true;
 }
 
-export function oppCard(o, slot, frozen, today) {
+// opts: {recent, week} for eligibility (lifecycle.mjs): the git edits the freeze does not know, and
+// whether this week's used page edit holds the card back.
+export function oppCard(o, slot, frozen, today, opts = {}) {
   return {
     id: `opp:${o.id}`,
     slot,
@@ -307,7 +369,7 @@ export function oppCard(o, slot, frozen, today) {
     isPageEdit: Boolean(o.isPageEdit),
     source: 'opportunity',
     oppId: o.id,
-    eligibility: eligibility(o, frozen, today),
+    eligibility: eligibility(o, frozen, today, opts),
   };
 }
 
@@ -327,7 +389,7 @@ function postCard(post) {
   };
 }
 
-function improveCard(row, frozen, today) {
+function improveCard(row, frozen, today, opts = {}) {
   return {
     id: `plan-improve-${row.page}`,
     slot: 'page-edit',
@@ -339,53 +401,93 @@ function improveCard(row, frozen, today) {
     isPageEdit: true,
     source: 'plan',
     oppId: null,
-    eligibility: eligibility({ isPageEdit: true, page: row.page }, frozen, today),
+    eligibility: eligibility({ isPageEdit: true, page: row.page }, frozen, today, opts),
   };
 }
 
-function verdictCard(due, frozen, plan, today) {
-  if (due?.length) {
-    const dates = due
-      .map((d) => d.date ?? d.changeDate)
-      .filter(Boolean)
-      .sort();
-    const n = due.length;
-    return {
-      id: 'verdict-due',
-      slot: 'verdict',
-      title: n === 1 ? 'Check whether one past edit worked' : `Check whether ${n} past edits worked`,
-      measured: `${n === 1 ? 'One edit' : `${n} edits`} made ${longRange(dates[0], dates[dates.length - 1])} ${
-        n === 1 ? 'has' : 'have'
-      } finished the 28 day wait and ${n === 1 ? 'has' : 'have'} no verdict yet.`,
-      action: 'Open Did it work and press Judge now. It shows the result before anything is saved.',
-      test: 'Each verdict compares the 28 days before and after the edit, against how the typical page moved.',
-      page: null,
-      isPageEdit: false,
-      source: 'verdict',
-      oppId: null,
-      eligibility: OK_ELIGIBILITY,
-    };
+// What the due entries are: page changes, how many commits made them (a commit that touched several
+// pages is one), how many were logged by hand, and how many other edits overlap.
+// due: change-log entries ({date, commits: [{hash}], notes, overlapping}).
+export function dueCounts(due = []) {
+  const commits = new Set();
+  let byHand = 0;
+  for (const d of due) {
+    const hashes = (d.commits ?? []).map((c) => c?.hash).filter(Boolean);
+    if (!hashes.length) byHand += 1;
+    for (const h of hashes) commits.add(h);
   }
-  const next = waiting({ verdictsDue: [], frozen, plan, today })
-    .filter((w) => w.kind === 'verdict' && w.date >= today)
-    .sort((a, b) => a.date.localeCompare(b.date))[0];
-  if (!next) return null;
-  return {
-    id: `verdict-next-${next.date}`,
-    slot: 'verdict',
-    title: `The next verdict is ready on ${longDate(next.date)}`,
-    measured: `Nothing is ready to judge yet. ${next.title} is the next one, ready on ${longDate(next.date)}.`,
-    action: 'Nothing to do now. Leave the changed pages alone until then.',
-    test: 'The verdict compares the 28 days before and after the edit, against how the typical page moved.',
+  return { changes: due.length, commits: commits.size, byHand, overlapping: due.filter((d) => d.overlapping).length };
+}
+
+// The sentence for the due entries: "12 page changes from 6 commits, made 2 to 15 October, have
+// finished the 28 day wait and have no verdict yet. All 12 overlap another change, ..."
+export function dueSentence(due = []) {
+  const c = dueCounts(due);
+  const n = c.changes;
+  const dates = due
+    .map((d) => d.date ?? d.changeDate)
+    .filter(Boolean)
+    .sort();
+  const from = [
+    c.commits ? `from ${count(c.commits, 'commit', 'commits')}` : '',
+    c.byHand ? `${c.commits ? 'and ' : ''}${c.byHand} logged by hand` : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+  const made = dates.length ? `, made ${longRange(dates[0], dates[dates.length - 1])},` : '';
+  const head = `${count(n, 'page change', 'page changes')}${from ? ` ${from}` : ''}${made} ${n === 1 ? 'has' : 'have'} finished the 28 day wait and ${n === 1 ? 'has' : 'have'} no verdict yet.`;
+  if (!c.overlapping) return head;
+  const which =
+    c.overlapping === n ? (n === 1 ? 'It overlaps' : `All ${n} overlap`) : `${c.overlapping} of them overlap`;
+  return `${head} ${which} another change in the same 28 days, so ${c.overlapping === 1 ? 'that verdict' : 'those verdicts'} cannot be read as the result of one edit.`;
+}
+
+// The verdict slot. With entries due: how many page changes from how many commits. Otherwise the next
+// date a verdict is ready, from the pending edits (Did it work's Still waiting), the frozen pages and
+// the plan. A verdict card reports, so it has no eligibility chip and no Hypothesis chip.
+function verdictCard(due, frozen, plan, today, pending = []) {
+  const base = {
     page: null,
     isPageEdit: false,
     source: 'verdict',
     oppId: null,
-    eligibility: OK_ELIGIBILITY,
+    eligibility: null,
+    hypothesis: false,
+  };
+  if (due?.length) {
+    const n = due.length;
+    return {
+      id: 'verdict-due',
+      slot: 'verdict',
+      title: n === 1 ? 'Check whether one past page change worked' : `Check whether ${n} past page changes worked`,
+      measured: dueSentence(due),
+      action: 'Open Did it work and press Judge now. It shows the result before anything is saved.',
+      test: 'Each verdict compares the 28 days before and after the edit, against how the typical page moved.',
+      ...base,
+    };
+  }
+  const list = waiting({ verdictsDue: pending, frozen, plan, today }).filter(
+    (w) => w.kind === 'verdict' && w.date >= today
+  );
+  const next = list[0];
+  if (!next) return null;
+  const same = list.filter((w) => w.date === next.date).length;
+  return {
+    id: `verdict-next-${next.date}`,
+    slot: 'verdict',
+    title: `The next verdict is ready on ${longDate(next.date)}`,
+    measured:
+      same > 1
+        ? `Nothing is ready to judge yet. ${same} page changes come due on ${longDate(next.date)}, the first of them ${next.title.replace(/^Verdict on /, '')}.`
+        : `Nothing is ready to judge yet. ${next.title} is the next one, ready on ${longDate(next.date)}.`,
+    action: 'Nothing to do now. Leave the changed pages alone until then.',
+    test: 'The verdict compares the 28 days before and after the edit, against how the typical page moved.',
+    ...base,
   };
 }
 
-export function worryCard(w, frozen, today) {
+// opts: {recent, week} for the eligibility of a worry on a page (see oppCard).
+export function worryCard(w, frozen, today, opts = {}) {
   // A competitor change is not a hypothesis: reading a page is the whole job. It has no test, no
   // eligibility chip and no page of ours, and it carries the pages to open.
   if (w.kind === 'competitor-change') {
@@ -410,28 +512,22 @@ export function worryCard(w, frozen, today) {
     title: plain(w.title),
     measured: plain(w.measured),
     action: plain(w.fix),
-    test: 'Check the same number again after the next daily refresh.',
+    test: plain(w.test) || 'Check the same number again after the next daily refresh.',
     page: w.page ?? null,
     isPageEdit: Boolean(w.isPageEdit),
     source: 'worry',
     oppId: w.oppId ?? null,
-    eligibility: w.isPageEdit ? eligibility({ isPageEdit: true, page: w.page }, frozen, today) : OK_ELIGIBILITY,
+    eligibility: w.isPageEdit ? eligibility({ isPageEdit: true, page: w.page }, frozen, today, opts) : OK_ELIGIBILITY,
+    ...(w.waitUntil ? { waitUntil: w.waitUntil } : {}),
   };
 }
 
-// The deliberate page edit dated inside the week of `today` (Monday to Sunday), or null.
-// frozen: Map<page, {since, until}>; since is the date of the page's latest deliberate edit.
-export function editThisWeek(frozen, today) {
-  const monday = mondayOf(today);
-  const sunday = addDays(monday, 6);
-  let found = null;
-  for (const [page, f] of frozen ?? []) {
-    if (f.since >= monday && f.since <= sunday && (!found || f.since > found.since)) found = { page, ...f };
-  }
-  return found;
-}
+// The deliberate page edit dated inside the week of `today` lives in lifecycle.mjs with the rest of
+// the freeze rule; it is exported here too for the modules that import it from this one.
+export { editThisWeek };
 
-// The page edit slot once this week's edit is done: a plain card with no buttons.
+// The page edit slot once this week's edit is done: a plain card with no buttons. It reports, so it
+// has no eligibility chip and no Hypothesis chip.
 function editDoneCard(edit, today) {
   const nextMonday = addDays(mondayOf(today), 7);
   return {
@@ -445,7 +541,8 @@ function editDoneCard(edit, today) {
     isPageEdit: false,
     source: 'rule',
     oppId: null,
-    eligibility: OK_ELIGIBILITY,
+    eligibility: null,
+    hypothesis: false,
     readOnly: true,
   };
 }
@@ -482,18 +579,26 @@ export function openWorkCard(w) {
 // Five cards (or `size`, 3 or 5), by the founder's recipe. A slot with nothing in it is skipped and the
 // list is topped up from the best remaining opportunities that are not live page
 // edits. At most one card edits a live page (one a week).
-// ranked: opportunities with .score, best first. due: change-log entries ready to judge.
+// ranked: opportunities with .score, best first. due: change-log entries ready to judge. pending:
+// edits whose verdict is not ready yet ([{page, judgeFrom}]), for the next verdict date. recent: the
+// git edits the freeze does not know (lifecycle recentEdits): such a page is not offered.
+// The five never hold two cards with the same page and the same action, and at most one
+// "On Google, not on Bing" card (an engine gap Search Console holds the numbers for).
 export function proposeTop5({
   plan,
   ranked = [],
   due = [],
+  pending = [],
   worries: worryList = [],
   openWork = [],
   frozen = new Map(),
+  recent = new Map(),
   items = {},
   today,
   size = DEFAULT_PLAN_SIZE,
 }) {
+  const opts = { recent };
+  const ok = (o) => eligibility(o, frozen, today, opts).eligible;
   const cards = [];
   const week = mondayOf(today);
   const pinned = (o) => items?.[o.id]?.pinnedWeek === week;
@@ -515,59 +620,69 @@ export function proposeTop5({
   //    the best eligible page edit opportunity. A pinned edit that is frozen leaves a note on
   //    whichever card takes the slot.
   const pinnedEdits = ordered.filter((o) => o.isPageEdit && pinned(o));
-  const pinnedOk = pinnedEdits.find((o) => eligibility(o, frozen, today).eligible);
-  const pinnedBlocked = pinnedEdits.find((o) => !eligibility(o, frozen, today).eligible);
-  const row = (plan?.improve ?? []).find(
-    (r) => !r.done && eligibility({ isPageEdit: true, page: r.page }, frozen, today).eligible
-  );
+  const pinnedOk = pinnedEdits.find(ok);
+  const pinnedBlocked = pinnedEdits.find((o) => !ok(o));
+  const row = (plan?.improve ?? []).find((r) => !r.done && ok({ isPageEdit: true, page: r.page }));
   let editCard = null;
   if (doneThisWeek) {
     cards.push(editDoneCard(doneThisWeek, today));
   } else if (pinnedOk) {
     used.add(pinnedOk.id);
-    editCard = oppCard(pinnedOk, 'page-edit', frozen, today);
+    editCard = oppCard(pinnedOk, 'page-edit', frozen, today, opts);
   } else if (row) {
-    editCard = improveCard(row, frozen, today);
+    editCard = improveCard(row, frozen, today, opts);
   } else {
-    const best = ordered.find((o) => o.isPageEdit && eligibility(o, frozen, today).eligible);
+    const best = ordered.find((o) => o.isPageEdit && ok(o));
     if (best) {
       used.add(best.id);
-      editCard = oppCard(best, 'page-edit', frozen, today);
+      editCard = oppCard(best, 'page-edit', frozen, today, opts);
     }
   }
   if (editCard) {
     if (!pinnedOk && pinnedBlocked) {
-      editCard.note = `Pinned item is frozen until ${longDate(eligibility(pinnedBlocked, frozen, today).from)}`;
+      const e = eligibility(pinnedBlocked, frozen, today, opts);
+      editCard.note = e.recentEdit
+        ? `Pinned item: ${recentEditText(e.recentEdit)}`
+        : `Pinned item is frozen until ${longDate(e.from)}`;
     }
     cards.push(editCard);
   }
 
   // 3. A verdict that is due, or the next verdict date.
-  const v = verdictCard(due, frozen, plan, today);
+  const v = verdictCard(due, frozen, plan, today, pending);
   if (v) cards.push(v);
 
-  // 4. The most serious worry that has a fix and respects the one edit a week rule.
+  // 4. The most serious worry that has a fix and respects the one edit a week rule. A worry whose own
+  //    fix is to leave the page alone until a date is nothing to do this week.
   const w = worryList.find((x) => {
-    if (!x.fix) return false;
+    if (!x.fix || x.waitUntil) return false;
     if (x.oppId && !available(x.oppId, items, today)) return false;
     if (!x.isPageEdit) return true;
-    return !pageEditTaken() && eligibility({ isPageEdit: true, page: x.page }, frozen, today).eligible;
+    return !pageEditTaken() && ok({ isPageEdit: true, page: x.page });
   });
-  if (w) cards.push(worryCard(w, frozen, today));
+  if (w) cards.push(worryCard(w, frozen, today, opts));
 
   // 5, then top up: the best remaining items that are not live page edits. Open work
   //    is a fallback after the opportunities, and rows waiting on the founder are
   //    left out because the page lists them separately (blockedOnYou).
   const rest = ordered.filter((o) => !o.isPageEdit && !used.has(o.id));
+  const bingGap = (o) => o?.type === 'engine-gap' && o.source === 'gsc';
   const extras = [
-    ...rest.map((o) => oppCard(o, 'other', frozen, today)),
-    ...openWork.filter((w) => !w.blockedOnFounder).map(openWorkCard),
+    ...rest.map((o) => ({ card: oppCard(o, 'other', frozen, today, opts), opp: o })),
+    ...openWork.filter((x) => !x.blockedOnFounder).map((x) => ({ card: openWorkCard(x), opp: null })),
   ];
+  const sameTask = (c) => `${c.page ?? ''}\u0000${plain(c.action)}`;
   const seen = new Set(cards.map((c) => c.id));
-  for (const c of extras) {
+  const tasks = new Set(cards.filter((c) => c.action).map(sameTask));
+  let bingCards = ranked.filter((o) => bingGap(o) && cards.some((c) => c.oppId === o.id)).length;
+  for (const { card: c, opp } of extras) {
     if (cards.length >= size) break;
     if (seen.has(c.id)) continue;
+    if (c.action && tasks.has(sameTask(c))) continue;
+    if (bingGap(opp) && bingCards >= 1) continue;
     seen.add(c.id);
+    if (c.action) tasks.add(sameTask(c));
+    if (bingGap(opp)) bingCards += 1;
     cards.push(c);
   }
   return cards.slice(0, size);

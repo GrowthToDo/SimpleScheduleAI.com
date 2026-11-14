@@ -39,10 +39,21 @@ export async function render(el, ctx) {
 
   // Adds a card to the five: appends when there is room, otherwise asks which to replace.
   // The server refuses a second live page change in the five; its plain message shows as a toast.
-  function swapIn(cardId, title, anchor) {
+  // A page git shows edited lately (no card, plan row or note recorded it) asks first, the same second
+  // confirm a frozen page gets on Done. `recent` is the card's eligibility.recentEdit, when it has one.
+  async function swapIn(cardId, title, anchor, recent = null) {
     if (ids.includes(cardId)) {
       ctx.toast("It is already in this week's five.");
       return;
+    }
+    if (recent) {
+      const ok = await ctx.confirmBox({
+        title: 'This page was edited lately',
+        body: `${recent.page}: ${recent.text}.\n\nA new change now muddies the verdict on that edit.`,
+        confirmLabel: 'Add it anyway',
+        danger: true,
+      });
+      if (!ok) return;
     }
     const save = (next, message) => saveFive(next, message).catch((e) => ctx.toast(e.message, 'error'));
     if (ids.length < 5) return save([...ids, cardId], `Added to this week: ${title}`);
@@ -61,7 +72,8 @@ export async function render(el, ctx) {
 
   const openOpps = week.counts?.openOpportunities ?? week.opportunities.length;
   const doneCount = week.top5.filter((c) => c.state?.status === 'done').length;
-  const nextVerdict = week.waiting.find((w) => w.kind === 'verdict');
+  const nextVerdict = week.nextVerdict ?? null;
+  const worryCounts = week.counts?.worries ?? { total: week.worries.length, needLook: week.worries.length, waiting: 0 };
 
   ctx.mount(
     el,
@@ -91,7 +103,16 @@ export async function render(el, ctx) {
         'div',
         { class: 'tiles' },
         tile(h, 'Done this week', `${doneCount} of ${week.top5.length}`, "of this week's priorities"),
-        tile(h, 'Worries', fmt.num(week.worries.length), week.worries.length ? 'need a look' : 'nothing is wrong'),
+        tile(
+          h,
+          'Worries',
+          fmt.num(worryCounts.total),
+          !worryCounts.total
+            ? 'nothing is wrong'
+            : worryCounts.waiting
+              ? `${fmt.num(worryCounts.needLook)} need a look, ${fmt.num(worryCounts.waiting)} to leave alone for now`
+              : 'need a look'
+        ),
         tile(
           h,
           'Open opportunities',
@@ -102,7 +123,7 @@ export async function render(el, ctx) {
           h,
           'Next verdict',
           nextVerdict ? nextVerdict.dateText : 'none set',
-          nextVerdict ? nextVerdict.title.replace(/^Verdict on /, '') : 'no change is waiting to be judged',
+          nextVerdict ? nextVerdict.note : 'no change is waiting to be judged',
           true
         )
       )
@@ -130,6 +151,9 @@ export async function render(el, ctx) {
     setTimeout(() => api.post('/api/visit').catch(() => {}), 0);
   }
 }
+
+// The git edit on a card's eligibility, with its words, for the swap-in confirm; null otherwise.
+const recentOf = (e) => (e?.recentEdit ? { page: e.recentEdit.page, text: e.text } : null);
 
 function tile(h, label, value, change, isText = false) {
   return h(
@@ -414,7 +438,12 @@ function biggest(week, ctx, { locked, swapIn }) {
               variant: 'row',
               rowActions: locked
                 ? []
-                : [{ label: 'Swap in', onClick: (e) => swapIn(`opp:${o.id}`, o.title, e.currentTarget) }],
+                : [
+                    {
+                      label: 'Swap in',
+                      onClick: (e) => swapIn(`opp:${o.id}`, o.title, e.currentTarget, recentOf(o.eligibility)),
+                    },
+                  ],
             })
           )
         )
@@ -437,7 +466,7 @@ function worries(week, ctx, { locked, swapIn }) {
   return h(
     'section',
     { class: 'section' },
-    sideHead(h, 'Worries', items.length ? `${items.length} to look at` : null),
+    sideHead(h, 'Worries', items.length ? `${items.length}` : null),
     items.length
       ? h(
           'ul',
@@ -457,6 +486,7 @@ function worries(week, ctx, { locked, swapIn }) {
               'li',
               { class: 'worry' },
               h('div', { style: { fontWeight: 600, overflowWrap: 'anywhere' } }, w.title),
+              w.waitUntilText ? h('span', { class: 'chip chip-warn' }, `Leave alone until ${w.waitUntilText}`) : null,
               h('p', { class: 'item-row-line' }, w.measured),
               h(
                 'div',
@@ -469,7 +499,7 @@ function worries(week, ctx, { locked, swapIn }) {
                       {
                         type: 'button',
                         class: 'btn btn-quiet btn-small',
-                        onclick: (e) => swapIn(w.id, w.title, e.currentTarget),
+                        onclick: (e) => swapIn(w.id, w.title, e.currentTarget, recentOf(w.eligibility)),
                       },
                       'Add to this week'
                     )

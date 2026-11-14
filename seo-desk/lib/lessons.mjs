@@ -22,38 +22,66 @@ export const AGREE_TO_PROVE = 3;
 
 const fail = (status, message) => Object.assign(new Error(message), { status });
 
-// 'dropped' when the linked verdicts that say something read two or more different ways; 'proven' when
-// at least three read the same way and that way is better or worse (a lesson can be proven to help or
-// proven to hurt, but three "no real change" or three "mixed" prove nothing); else 'trial'. `words` are the
-// plain verdict words of the linked verdicts (null or an unknown word for one the desk no longer has).
-export function statusFromReadings(words) {
-  const read = (words ?? []).filter((w) => READINGS.includes(w));
+// The linked verdicts as one reading per distinct change. A reading is the plain verdict word, or
+// {verdict, change, overlapping}: `change` names the change the verdict belongs to (a batch commit and
+// its pages are one change), and a verdict another change overlaps cannot be read, so it counts for
+// nothing. Readings of one change count once: their word when they agree, else mixed. A plain word is a
+// change of its own. Words that say nothing (too early, too small to tell, unknown) are left out.
+export function changeReadings(readings) {
+  const byChange = new Map();
+  let i = 0;
+  for (const r of readings ?? []) {
+    const o = r && typeof r === 'object' ? r : { verdict: r, change: null, overlapping: false };
+    i += 1;
+    if (!READINGS.includes(o.verdict) || o.overlapping) continue;
+    const key = o.change ?? `own-${i}`;
+    if (!byChange.has(key)) byChange.set(key, new Set());
+    byChange.get(key).add(o.verdict);
+  }
+  return [...byChange.values()].map((set) => (set.size === 1 ? [...set][0] : 'mixed'));
+}
+
+// 'dropped' when the linked changes that say something read two or more different ways; 'proven' when
+// at least three distinct, non-overlapping changes read the same way and that way is better or worse (a
+// lesson can be proven to help or proven to hurt, but three "no real change" or three "mixed" prove
+// nothing); else 'trial'. `readings`: see changeReadings (null or an unknown word for a verdict the desk
+// no longer has).
+export function statusFromReadings(readings) {
+  const read = changeReadings(readings);
   const kinds = new Set(read);
   if (kinds.size >= 2) return 'dropped';
   if (read.length >= AGREE_TO_PROVE && DECISIVE.includes(read[0])) return 'proven';
   return 'trial';
 }
 
-// 'helps' or 'hurts' when every linked verdict that says something reads better (or worse) and there are
+// 'helps' or 'hurts' when every linked change that says something reads better (or worse) and there are
 // at least three; else null.
-export function provenDirectionOf(words) {
-  const read = (words ?? []).filter((w) => READINGS.includes(w));
+export function provenDirectionOf(readings) {
+  const read = changeReadings(readings);
   if (read.length >= AGREE_TO_PROVE && new Set(read).size === 1) return PROVEN_DIRECTION[read[0]] ?? null;
   return null;
 }
 
 // One plain sentence on why a lesson has its status, for the page.
-export function statusNote(lesson, words) {
-  const read = (words ?? []).filter((w) => READINGS.includes(w));
+export function statusNote(lesson, readings) {
+  const read = changeReadings(readings);
   const kinds = new Set(read);
   const n = read.length;
   const auto = lesson.manual ? 'You set this status by hand. ' : '';
-  if (kinds.size >= 2) return `${auto}The linked results do not agree, so this lesson is dropped until they do.`;
+  const left = (readings ?? []).filter(
+    (r) => r && typeof r === 'object' && r.overlapping && READINGS.includes(r.verdict)
+  ).length;
+  const skipped = left
+    ? ` ${left === 1 ? 'One linked result overlaps' : `${left} linked results overlap`} another change, so ${left === 1 ? 'it does' : 'they do'} not count.`
+    : '';
+  if (kinds.size >= 2)
+    return `${auto}The linked results do not agree, so this lesson is dropped until they do.${skipped}`;
   if (n >= AGREE_TO_PROVE && !DECISIVE.includes(read[0]))
-    return `${auto}${n} linked results read the same way, but they say nothing for or against, so this stays a trial.`;
-  if (n >= AGREE_TO_PROVE) return `${auto}${n} linked results read the same way.`;
-  if (n === 0) return `${auto}No result is linked yet. Three that all read better, or all read worse, prove it.`;
-  return `${auto}${n} linked ${n === 1 ? 'result reads' : 'results read'} one way so far. Three that all read better, or all read worse, prove it.`;
+    return `${auto}${n} linked changes read the same way, but they say nothing for or against, so this stays a trial.${skipped}`;
+  if (n >= AGREE_TO_PROVE) return `${auto}${n} separate linked changes read the same way.${skipped}`;
+  if (n === 0)
+    return `${auto}No result that counts is linked yet. Three separate changes that all read better, or all read worse, prove it.${skipped}`;
+  return `${auto}${n} linked ${n === 1 ? 'change reads' : 'changes read'} one way so far. Three separate changes that all read better, or all read worse, prove it.${skipped}`;
 }
 
 export function cleanText(value) {
@@ -92,7 +120,8 @@ export const loadLessons = () => cleanLessons(readJson(LESSONS_FILE, []));
 export const saveLessons = (list) => writeJson(LESSONS_FILE, cleanLessons(list));
 
 // The lesson with its status brought up to date from the verdicts it links to, unless the founder set
-// the status by hand. wordOf(id) is the plain verdict word of a linked verdict, or null.
+// the status by hand. wordOf(id) is the reading of a linked verdict (its word, or {verdict, change,
+// overlapping}; see changeReadings), or null.
 export const settle = (lesson, wordOf) =>
   lesson.manual ? lesson : { ...lesson, status: statusFromReadings(lesson.verdictIds.map(wordOf)) };
 

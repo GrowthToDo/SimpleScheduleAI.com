@@ -161,7 +161,7 @@ test('a lesson goes trial to proven on the third agreeing verdict, and to droppe
   assert.equal(second.json.lesson.status, 'trial');
   const third = await put(`/api/lessons/${lesson.id}`, { addVerdictId: 'gamma|2026-09-03' });
   assert.equal(third.json.lesson.status, 'proven');
-  assert.match(third.json.lesson.statusNote, /3 linked results read the same way/);
+  assert.match(third.json.lesson.statusNote, /3 separate linked changes read the same way/);
   // Linking the same verdict again changes nothing.
   const again = await put(`/api/lessons/${lesson.id}`, { addVerdictId: 'gamma|2026-09-03' });
   assert.equal(again.json.lesson.verdictIds.length, 3);

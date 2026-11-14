@@ -411,25 +411,157 @@ export function parseGitEdits(log) {
   return [...edits.values()];
 }
 
-// change-log-notes.jsonl records to edits of kind 'manual', pointed at /blog/<slug>.
-export function notesToEdits(notes) {
+// The page a change-log note's slug names. A path stays a path. A bare name (the edit note stores a
+// post's or an article's name without its folder) is the keyword file's page for it, else the live
+// page that has it, else the source file that has it; a name that is none of these is null, never an
+// invented /blog/ page. live: a Set of live page paths. registry: the keyword file rows. repoRoot:
+// where to look for the source files (optional).
+export function pageOfNote(slug, { live = new Set(), registry = [], repoRoot = null } = {}) {
+  const s = String(slug ?? '').trim();
+  if (!s) return null;
+  if (s.startsWith('/')) return s;
+  const reg = (registry ?? []).find((r) => r?.slug === s && typeof r.url === 'string' && r.url.startsWith('/'));
+  if (reg) return reg.url;
+  if (live.has(`/blog/${s}`)) return `/blog/${s}`;
+  if (live.has(`/articles/${s}`)) return `/articles/${s}`;
+  if (repoRoot) {
+    const has = (...parts) => parts.some((p) => fs.existsSync(path.join(repoRoot, p)));
+    if (has(`src/data/post/${s}.md`, `src/data/post/${s}.mdx`)) return `/blog/${s}`;
+    if (has(`src/data/article/${s}.md`, `src/data/article/${s}.mdx`)) return `/articles/${s}`;
+  }
+  return null;
+}
+
+// change-log-notes.jsonl records to edits of kind 'manual', each pointed at the page its slug names
+// (pageOfNote); a note whose page cannot be found is left out.
+export function notesToEdits(notes, where = {}) {
   return notes
     .filter((n) => n?.date && n?.slug)
     .map((n) => ({
-      page: n.slug.startsWith('/') ? n.slug : `/blog/${n.slug}`,
+      page: pageOfNote(n.slug, where),
       date: n.date,
       kind: 'manual',
       subject: String(n.text ?? ''),
-    }));
+    }))
+    .filter((e) => e.page);
 }
 
-function gitEdits(repoRoot) {
-  const log = execFileSync(
-    'git',
+// Runs git in the repo and returns what it prints. Tests pass their own.
+export const runGit = (args, repoRoot) =>
+  execFileSync('git', args, { cwd: repoRoot, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, timeout: 30000 });
+
+function gitEdits(repoRoot, git = runGit) {
+  const log = git(
     ['log', '--since=120.days', '--no-merges', '--name-status', '--format=@@%H|%cs|%s', '--', ...POST_ROOTS],
-    { cwd: repoRoot, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, timeout: 30000 }
+    repoRoot
   );
   return parseGitEdits(log);
+}
+
+// ---------------------------------------------------------------- content edits from git
+
+// How far back the content edits are read: the 28 day freeze plus a week.
+export const CONTENT_EDIT_DAYS = 35;
+
+// The new path of a numstat path, which names a rename as "a => b" or "dir/{a => b}.md".
+const renamedTo = (p) => {
+  const brace = /^(.*)\{(.*) => (.*)\}(.*)$/.exec(p);
+  if (brace) return `${brace[1]}${brace[3]}${brace[4]}`.replace(/\/\//g, '/');
+  const plainArrow = / => /.exec(p);
+  return plainArrow ? p.slice(plainArrow.index + 4) : p;
+};
+
+// `git log --numstat --summary` output (format "@@hash|date|subject") to
+// [{page, date, commit, lines, subject}]: one row per page per commit, lines = lines added plus
+// removed in the page's own source file. Left out: a pure rename (no line changed), the commit that
+// created the file (it published the page), a deleted file, binary files and files that are not pages.
+export function parseContentEdits(log) {
+  const out = [];
+  let head = null;
+  let rows = [];
+  let created = new Set();
+  let deleted = new Set();
+  const flush = () => {
+    if (head) {
+      for (const r of rows) {
+        if (created.has(r.file) || deleted.has(r.file) || !r.lines) continue;
+        const page = pageOfFile(r.file);
+        if (!page || !LINK_EXT.test(r.file)) continue;
+        out.push({ page, file: r.file, date: head.date, commit: head.hash, lines: r.lines, subject: head.subject });
+      }
+    }
+    rows = [];
+    created = new Set();
+    deleted = new Set();
+  };
+  for (const line of String(log ?? '').split(/\r?\n/)) {
+    if (line.startsWith('@@')) {
+      flush();
+      const [hash, date, ...rest] = line.slice(2).split('|');
+      head = { hash, date, subject: rest.join('|') };
+      continue;
+    }
+    if (!head || !line.trim()) continue;
+    const mode = /^\s*(create|delete) mode \d+ (.+)$/.exec(line);
+    if (mode) {
+      (mode[1] === 'create' ? created : deleted).add(mode[2].trim());
+      continue;
+    }
+    const num = /^(\d+|-)\t(\d+|-)\t(.+)$/.exec(line);
+    if (!num || num[1] === '-' || num[2] === '-') continue;
+    rows.push({ file: renamedTo(num[3]), lines: Number(num[1]) + Number(num[2]) });
+  }
+  flush();
+  return out;
+}
+
+// The commits that published a post or an article that already existed as a draft: `git log -p
+// --unified=0 -G '^draft:'` output (format "@@hash") to a Set of "hash|file" where the file's diff
+// adds "draft: false" without removing it (a flip from draft: true, or a file created live).
+export function parsePublishCommits(log) {
+  const out = new Set();
+  let hash = null;
+  let file = null;
+  const files = new Map();
+  const flush = () => {
+    for (const [f, v] of files) if (v.added && !v.removed) out.add(`${hash}|${f}`);
+    files.clear();
+  };
+  for (const line of String(log ?? '').split(/\r?\n/)) {
+    if (line.startsWith('@@') && !line.startsWith('@@ ')) {
+      if (hash) flush();
+      hash = line.slice(2).split('|')[0];
+      file = null;
+      continue;
+    }
+    const plus = /^\+\+\+ (?:b\/)?(.+)$/.exec(line);
+    if (plus) {
+      file = plus[1] === '/dev/null' ? null : plus[1].trim();
+      if (file && !files.has(file)) files.set(file, { added: false, removed: false });
+      continue;
+    }
+    if (!hash || !file) continue;
+    if (/^\+draft:\s*false\b/.test(line)) files.get(file).added = true;
+    else if (/^-draft:\s*false\b/.test(line)) files.get(file).removed = true;
+  }
+  if (hash) flush();
+  return out;
+}
+
+// The content edits of the last CONTENT_EDIT_DAYS days up to `today`, through two git log calls that
+// each cover every page (the lines changed, and the commits that published a draft, which are left
+// out like the commit that created a file). `git` runs git (tests pass their own); it throws when git
+// cannot be read.
+export function readContentEdits({ repoRoot, today, git = runGit }) {
+  const since = addDays(today, -CONTENT_EDIT_DAYS);
+  const window = [`--since=${since}`, '--no-merges'];
+  const log = git(['log', ...window, '--numstat', '--summary', '--format=@@%H|%cs|%s', '--', ...POST_ROOTS], repoRoot);
+  const published = parsePublishCommits(
+    git(['log', ...window, '-G^draft:', '-p', '--unified=0', '--format=@@%H', '--', ...POST_ROOTS], repoRoot)
+  );
+  return parseContentEdits(log).filter(
+    (e) => e.date >= since && e.date <= today && !published.has(`${e.commit}|${e.file}`)
+  );
 }
 
 // ---------------------------------------------------------------- due entries
@@ -480,7 +612,14 @@ function inboundFor(repoRoot, pages) {
 // ---------------------------------------------------------------- the pull
 
 // {today, repoRoot?, fetchImpl?} -> snapshot (not written). Never throws for a bad part.
-export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl = fetch, now = Date.now() } = {}) {
+// `git` runs git in the repo (runGit); tests pass their own so they need no real repository.
+export async function pullLocal({
+  today,
+  repoRoot = DEFAULT_REPO_ROOT,
+  fetchImpl = fetch,
+  now = Date.now(),
+  git = runGit,
+} = {}) {
   const warnings = [];
   const attempt = (label, fn, fallback) => {
     try {
@@ -534,10 +673,17 @@ export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl
   const dossierLog = parseDossierLog(readText(seo('competitor-dossier.md'))).filter((r) => r.date >= dossierFrom);
 
   const due = attempt('due', () => dueEntries(repoRoot, today), []);
-  const edits = attempt('edits', () => gitEdits(repoRoot), []).concat(
-    notesToEdits(readJsonl(seo('change-log-notes.jsonl')))
-  );
-  edits.sort((a, b) => b.date.localeCompare(a.date) || a.page.localeCompare(b.page));
+  const gitList = attempt('edits', () => gitEdits(repoRoot, git), []);
+  // The content edits of the last 35 days, for the pages edited outside the desk. A failed read is
+  // null with the reason (the desk then says so and falls back to the freeze alone).
+  let contentEdits = null;
+  let contentEditsError = null;
+  try {
+    contentEdits = readContentEdits({ repoRoot, today, git });
+  } catch (e) {
+    contentEditsError = `git could not be read (${String(e?.message ?? e).slice(0, 120)})`;
+    warnings.push(`contentEdits: ${contentEditsError}`);
+  }
 
   let livePages;
   // A failed sitemap read keeps the last list, and says so on the source line (the snapshot's
@@ -552,6 +698,16 @@ export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl
     const when = before?.pulledAt ? ` from ${longDate(todayIso(new Date(before.pulledAt)))}` : '';
     liveError = `The sitemap could not be read (${String(e?.message ?? e).slice(0, 120)}), so the list of live pages is the last one that was read${when}.`;
   }
+
+  // The notes are pointed at their pages once the live list is known (an article is not a blog post).
+  const edits = gitList.concat(
+    notesToEdits(readJsonl(seo('change-log-notes.jsonl')), {
+      live: new Set(livePages.map((p) => p.page)),
+      registry,
+      repoRoot,
+    })
+  );
+  edits.sort((a, b) => b.date.localeCompare(a.date) || a.page.localeCompare(b.page));
 
   const robots = await checkRobots(fetchImpl, readJson('snap/local.json', null)?.data?.robots ?? null);
 
@@ -589,6 +745,8 @@ export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl
       openWork,
       competitors: { sitemap, watch, lastRun, snapshots, dossierLog },
       edits,
+      contentEdits,
+      contentEditsError,
       livePages,
       inbound,
       robots,

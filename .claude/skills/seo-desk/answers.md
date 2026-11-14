@@ -71,17 +71,18 @@ Use the item's own `recommendation` and `test`. The Growing lists (`pages.growin
 
 ## Did it work, and what we have learned
 
-- Start with counts: judged, due (28 days up, not judged yet) and pending.
+- Start with counts: `verdictCounts.text` (judged changes, a batch commit and its pages being one;
+  "too early" is not a verdict), due (28 days up, not judged yet) and pending.
 - For each judged edit give `verdictText` and quote `summary`, which already carries both date
   ranges and how the median page moved. Do not rebuild the ranges.
 - `insufficient-data` reads "Too small to tell". Pending or too early reads "too early to say" with
   the `judgeFromText` date.
-- If `overlapping` is true, say the verdict cannot be pinned on one edit. If `nearUpdates` is
-  present, add one line: a Google ranking update fell inside the window, so read it with care.
-  Never call the update the cause.
+- If `overlapping` is true, say other edits landed in the same window, so the verdict cannot be read.
+  Never present its word as a result. If `nearUpdates` is present (money pages too), add one line: a
+  Google ranking update fell inside the window, so read it with care. Never call the update the cause.
 - A "Better" verdict is not a result for sales.
-- Lessons: `proven` with `provenDirection` `helps` or `hurts` means three or more linked verdicts
-  agree. `dropped` means the linked verdicts disagree with each other, so the lesson is not
+- Lessons: `proven` with `provenDirection` `helps` or `hurts` means three or more distinct,
+  non-overlapping linked changes agree. `dropped` means the linked verdicts disagree with each other, so the lesson is not
   reliable. `trial` is not a result. When one bears on a recommendation, say it in one line.
 
 ## AI visibility
@@ -109,9 +110,13 @@ it and its range: "1. Write the next planned post (the plan's turn). 2. Check wh
 worked (their 28 days are up). 3. Look at the slipping page: it was shown 300 times from 15
 September to 12 October and 180 times from 13 October to 9 November." Then the one worry that has a
 `fix`, labelled as a hypothesis. Then "Leave alone this week" from `leaveAlone`: "/example-page,
-being measured until 7 December." If the page edit slot is done, say this week's page edit is spent
-and the next can go in on Monday. End with the standing line: these are findability numbers, not
-sales.
+being measured until 7 December." A `foundInGit` row was edited in git without a card, plan row or
+note: say when it was edited and the date to leave it until. If the page edit slot is done, say this
+week's page edit is spent and the next can go in on Monday. A worry with `waitUntilText` is not a
+task: say the page was edited lately and when to look again, never suggest editing or undoing it.
+A worse verdict worry is an observation ("reads worse after the change"), never "the change made it
+worse"; give its cautions. For the verdict date quote `nextVerdict`. End with the standing line:
+these are findability numbers, not sales.
 
 **2. "Where is cannibalization?"** Read `/api/insights/cannibalization`. "Cannibalization means two
 of your pages are competing for the same search. From 13 October to 9 November, 'example search
@@ -130,8 +135,8 @@ may be searching for it. That is a hypothesis: there may be nothing on the page 
 in a few weeks." For `unclear`: "The numbers do not show what kind of drop this is. Look at the
 page's searches in Search Console before changing anything."
 
-**4. "Did my changes work?"** Read `/api/results`. "6 changes are judged, 1 is ready to judge, 2
-are still waiting. The 2 October change: Worse, quoted from the desk: <summary sentence>. Another
-change overlapped it, so the result cannot be pinned on one edit. A Google ranking update fell
+**4. "Did my changes work?"** Read `/api/results`. "3 changes are judged (1 better, 2 cannot be
+read), 1 is ready to judge, 2 are still waiting. The 2 October change: quoted from the desk:
+<summary sentence>. Other edits landed in the same window, so it cannot be read. A Google ranking update fell
 inside the window, so read it with care. 2 more verdicts are too early; the next can be judged on
 21 November." Name the stale source first if one is behind.

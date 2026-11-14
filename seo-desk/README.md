@@ -60,7 +60,7 @@ Each of these opens a list of cards. A card shows what was measured, then a reco
 
 ### Workspace
 
-- **Did it work?** Were my past changes better, worse, or is it too early to say? Verdicts on edits to live pages, which are still waiting, and which pages are frozen for 28 days. The button **I edited a page** records a change you made by hand so the desk can judge it. **What we have learned** is a short list of lessons you write down from the verdicts. A lesson starts as a trial, becomes proven when three linked verdicts all say better (or all say worse), and is dropped when its linked verdicts disagree.
+- **Did it work?** Were my past changes better, worse, or is it too early to say? Verdicts on edits to live pages, which are still waiting, and which pages are frozen for 28 days. The button **I edited a page** records a change you made by hand so the desk can judge it. **What we have learned** is a short list of lessons you write down from the verdicts. A lesson starts as a trial, becomes proven when three separate linked changes all say better (or all say worse), and is dropped when its linked verdicts disagree. Pages changed in one commit are one change, and a verdict that another change overlaps says it cannot be read, so it does not count. The verdict count on the page counts changes the same way and leaves out the ones that are too early.
 - **Keywords.** Add or remove the keywords we aim at, pick the page meant to win each one, and import a list. Keywords you added here, and secondary keywords you adopted, are removed here with Remove.
 - **Competitors.** Did a competitor move? New or removed pages, and changes to their pricing or calls to action.
 - **Settings.** How the ranking works (you can change the weights), how many priorities each week (3 or 5), your money pages, strategic keywords, brand words, the state of each source and its last error, three switches (Pause monitoring, Show Google updates, Weekly technical audit), and a button to download everything.
@@ -88,6 +88,8 @@ The desk does not show one average place for the whole site. It misleads while n
 ## The one-edit-a-week rule
 
 One live-page improvement a week. Never the same page twice inside 28 days. Each edit is judged on the 28 days before and the 28 days after. The desk plans the week by this rule, shows the date a frozen page can be edited again, and warns before you break it.
+
+The desk also reads the repo's git history for the last 35 days. A page changed by 10 or more lines in the last 28 days that no card, plan row or "Edit:" note recorded shows "Edited 9 November (found in git, 299 lines). Leave it until 7 December unless that edit was minor". The desk does not propose it for the week, lists it under Leave these alone, and asks again before you mark a change to it done. A smaller change only adds an "Also touched on" line. Once this week's page edit is made, every other page change says when the next one can go in. If git cannot be read, the desk says so at the top of each page and goes by the freeze alone.
 
 ## The dark and light look
 

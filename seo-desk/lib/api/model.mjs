@@ -10,14 +10,22 @@ import { readJson, writeJson, dataDir } from '../store.mjs';
 import { SITE, THRESHOLDS, PRESETS, DEFAULT_MONEY_PAGES } from '../config.mjs';
 import { detectAll } from '../rules.mjs';
 import { rank } from '../score.mjs';
-import { reconcile, loadItems, frozenPages, touchedOn, eligibility } from '../lifecycle.mjs';
+import {
+  reconcile,
+  loadItems,
+  frozenPages,
+  touchedOn,
+  eligibility,
+  recentEdits,
+  withEligibilityText,
+} from '../lifecycle.mjs';
 import { windows, todayIso } from '../dates.mjs';
 import { sourceStatus } from '../refresh.mjs';
-import { DEFAULT_REPO_ROOT, readJsonl } from '../sources/local.mjs';
+import { DEFAULT_REPO_ROOT, readJsonl, pageOfNote } from '../sources/local.mjs';
 import { capSnapshot } from '../sources/gsc.mjs';
 import { brief } from '../brief.mjs';
 import { loadTargets, allTargets, applySignals } from '../targets.mjs';
-import { longDate, longRange, plain } from '../text.mjs';
+import { longRange, plain } from '../text.mjs';
 import { TERMS, termOf } from '../insights.mjs';
 
 export const SOURCES = ['gsc', 'bing', 'ga4', 'clarity', 'local', 'index'];
@@ -133,13 +141,10 @@ function keyOf(today) {
   return parts.join('|');
 }
 
-// A note's page: a path stays a path, a bare name is a blog post unless only an article has it.
-function notePage(slug, live) {
-  if (String(slug).startsWith('/')) return slug;
-  if (live.has(`/blog/${slug}`)) return `/blog/${slug}`;
-  if (live.has(`/articles/${slug}`)) return `/articles/${slug}`;
-  return `/blog/${slug}`;
-}
+// The sentence every page shows when the repo's git history could not be read for the edits the
+// desk does not know about.
+export const GIT_UNREAD =
+  "The repo's git history could not be read, so pages edited outside the desk are not flagged as recently edited.";
 
 // ---------------------------------------------------------------- the index table
 
@@ -221,15 +226,27 @@ export function buildModel() {
   const live = new Set((local.livePages ?? []).map((p) => p.page));
   // The notes file is read here, live, so a note written a moment ago counts at once. The local
   // snapshot carries the same notes from its last pull, so its manual rows are left out.
+  // A bare name is resolved to the page that really exists (a blog post or an article); a name that
+  // is neither is left out rather than pointed at a /blog/ page that does not exist.
   const noteEdits = readJsonl(notesFile())
     .filter((n) => n?.date && n?.slug)
-    .map((n) => ({ page: notePage(n.slug, live), date: n.date, kind: 'manual', subject: String(n.text ?? '') }));
+    .map((n) => ({
+      page: pageOfNote(n.slug, { live, registry: local.registry ?? [], repoRoot: repoRoot() }),
+      date: n.date,
+      kind: 'manual',
+      subject: String(n.text ?? ''),
+    }))
+    .filter((e) => e.page);
   const edits = [...(local.edits ?? []).filter((e) => e.kind !== 'manual'), ...noteEdits].sort(
     (a, b) => b.date.localeCompare(a.date) || a.page.localeCompare(b.page)
   );
   const planTicks = readJson('state/plan-ticks.json', {}) || {};
   const planSeenOn = snapObjs.local?.pulledAt ? todayIso(new Date(snapObjs.local.pulledAt)) : null;
   const frozen = frozenPages({ items, opps, plan: local.plan ?? null, edits, planTicks, planSeenOn, today });
+  // Content edits git shows that the freeze does not know. A snapshot from before the desk read them
+  // has no list; a failed read says so on every page.
+  const recent = recentEdits({ contentEdits: local.contentEdits ?? [], frozen, today });
+  if (local.contentEditsError) warnings.push(GIT_UNREAD);
 
   const prevIndex = readJson('state/index-prev.json', null)?.index ?? null;
   const gscCur = data.gsc?.windows?.cur ?? windows(today).cur;
@@ -249,6 +266,7 @@ export function buildModel() {
     items,
     edits,
     frozen,
+    recent,
     planTicks,
     planSeenOn,
     prevIndex,
@@ -314,9 +332,10 @@ export function itemState(model, id) {
   return Object.fromEntries(ITEM_FIELDS.map((k) => [k, it[k] ?? (k === 'notes' ? [] : null)]));
 }
 
+// The eligibility every list beside the five shows (lifecycle eligibility, the one function): the
+// freeze, a git edit the freeze does not know, and this week's page edit already made.
 export function eligibilityOf(model, opp) {
-  const e = eligibility(opp, model.frozen, model.today);
-  return { ...e, text: e.eligible ? 'Eligible now' : `Eligible from ${longDate(e.from)}` };
+  return withEligibilityText(eligibility(opp, model.frozen, model.today, { recent: model.recent ?? null, week: true }));
 }
 
 // An opportunity as the pages see it: plain text, score, lifecycle state, freeze, brief, links.
@@ -380,7 +399,7 @@ export function goneOpps(model) {
       score: null,
       status: it.status,
       item: itemState(model, id),
-      eligibility: { eligible: true, from: null, text: 'Eligible now' },
+      eligibility: eligibilityOf(model, { isPageEdit: Boolean(it.meta.isPageEdit), page: it.meta.page ?? null }),
       touchedOn: [],
       links: linksFor(it.meta.page ?? null),
       brief: '',

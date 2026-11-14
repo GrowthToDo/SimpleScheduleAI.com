@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { readJson, writeJson, dataDir } from '../store.mjs';
 import { PRESETS, THRESHOLDS } from '../config.mjs';
-import { transition, loadItems, saveItems, FREEZE_DAYS } from '../lifecycle.mjs';
+import { transition, loadItems, saveItems, FREEZE_DAYS, recentEditText } from '../lifecycle.mjs';
 import { setTop5, lockWeek, editThisWeek, PLAN_SIZES } from '../week.mjs';
 import { addDays, mondayOf } from '../dates.mjs';
 import { longDate, plain } from '../text.mjs';
@@ -44,13 +44,17 @@ const isDate = (s) => /^\d{4}-\d{2}-\d{2}$/.test(String(s)) && !Number.isNaN(Dat
 
 // ---------------------------------------------------------------- the one edit a week rule
 
-// The two things that hold back a new live page edit, from the lifecycle freeze (model.frozen)
-// and the this-week check in week.mjs (editThisWeek), never worked out here:
+// The things that hold back a new live page edit, from the lifecycle freeze (model.frozen), the git
+// edits the freeze does not know (model.recent) and the this-week check (editThisWeek), never worked
+// out here:
 //   frozen         the page itself is inside the 28 days of an earlier deliberate edit
+//   recentlyEdited git shows an edit of 10 or more lines on the page in the last 28 days that the
+//                  freeze does not know: [{page, date, lines, until, dateText, untilText, text}]
 //   secondThisWeek a deliberate page edit is already dated this week (on any page)
-// Null when neither holds. `page` is the page about to be edited, or a list when one Done edits
+// Null when none holds. `page` is the page about to be edited, or a list when one Done edits
 // several: every frozen one is in `frozenPages`, and `frozen` is the first of them.
-export function editGuards(model, page) {
+// recent: false leaves the git edits out (an edit note is how such an edit gets logged).
+export function editGuards(model, page, { recent = true } = {}) {
   const out = {};
   const pages = (Array.isArray(page) ? page : [page]).filter(Boolean);
   const frozenPages = [];
@@ -69,6 +73,21 @@ export function editGuards(model, page) {
     out.frozen = frozenPages[0];
     out.frozenPages = frozenPages;
   }
+  const lately = [];
+  for (const p of recent ? pages : []) {
+    const r = model.recent?.get(p)?.edit;
+    if (!r || model.frozen.has(p) || !(r.until > model.today)) continue;
+    lately.push({
+      page: p,
+      date: r.date,
+      lines: r.lines,
+      until: r.until,
+      dateText: longDate(r.date),
+      untilText: longDate(r.until),
+      text: `${p}: ${recentEditText(r)}.`,
+    });
+  }
+  if (lately.length) out.recentlyEdited = lately;
   const w = editThisWeek(model.frozen, model.today);
   if (w) out.secondThisWeek = { page: w.page, date: w.since, dateText: longDate(w.since) };
   return Object.keys(out).length ? out : null;
@@ -81,6 +100,8 @@ export function editRefused(g, what) {
     parts.push(
       `${f.page} was edited on ${f.sinceText} and is frozen until ${f.untilText}. ${what} restarts the 28 days.`
     );
+  for (const r of g.recentlyEdited ?? [])
+    parts.push(`${r.text} ${what} starts a new 28 days and muddies the verdict on that edit.`);
   if (g.secondThisWeek)
     parts.push(
       `You already made this week's page edit on ${g.secondThisWeek.dateText} (${g.secondThisWeek.page}). The rule is one a week.`
@@ -539,7 +560,7 @@ export function addEditNote(body) {
   // The same two guards as marking a page edit done: a frozen page, or a second edit this week.
   const model = buildModel();
   if (body.override !== true) {
-    const g = editGuards(model, page);
+    const g = editGuards(model, page, { recent: false });
     if (g) throw editRefused(g, 'Logging this edit');
   }
   const slug = POST_PAGE_RE.test(page) ? page.split('/').pop() : page;

@@ -6,7 +6,7 @@ import { readJson } from '../store.mjs';
 import { WINDOW_DAYS, GSC_LAG_DAYS, isDueDate, windowsFor } from '../../../scripts/lib/change-log-core.mjs';
 import { judgePage } from '../verdicts.mjs';
 import { addDays, mondayOf } from '../dates.mjs';
-import { deliberateEdits as lifecycleEdits, eligibility } from '../lifecycle.mjs';
+import { deliberateEdits as lifecycleEdits, eligibility, withEligibilityText, recentEditText } from '../lifecycle.mjs';
 import {
   proposeTop5,
   worries as buildWorries,
@@ -18,13 +18,13 @@ import {
   worryCard,
   openWorkCard,
   pageForSlug,
-  editThisWeek,
   planSizeOf,
+  dueCounts,
 } from '../week.mjs';
 import { brief } from '../brief.mjs';
 import { competitorBrief } from '../competitor-changes.mjs';
 import { staleUpdatesNote } from '../google-updates.mjs';
-import { longDate, plain } from '../text.mjs';
+import { longDate, longRange, plain } from '../text.mjs';
 import {
   termOf,
   cardExplain,
@@ -54,7 +54,7 @@ import {
   loadSettings,
 } from './model.mjs';
 import { n0, pct, sumRange } from './fmt.mjs';
-import { ownership } from './ext/insights.mjs';
+import { ownership, decayItems } from './ext/insights.mjs';
 
 // ---------------------------------------------------------------- annotations
 
@@ -103,6 +103,106 @@ export function updatesNear(model, changeDate) {
 }
 
 export const NEAR_UPDATE_NOTE = 'A Google ranking update fell inside this period, so read this verdict with care.';
+
+// Ranking updates that touch start..end, whatever the markers setting says (a caution, not a marker).
+const updatesIn = (model, start, end) =>
+  rankingUpdates(model)
+    .filter((u) => u.start <= end && (u.end ?? model.today) >= start)
+    .sort((a, b) => a.start.localeCompare(b.start))
+    .map((u) => ({ label: plain(u.title), date: u.start }));
+
+// ---------------------------------------------------------------- cautions for the worries
+
+// A one week spike in the 28 days before a change: the busiest 7 days in a row hold more than half
+// of the window's times shown (with at least 20 shown). {week: {start, end}, shown, total} or null.
+// pages: the page paths the verdict covers (a batch covers several).
+export function beforeSpike(model, pages, changeDate) {
+  const rows = model.data.gsc?.pageDaily;
+  if (!Array.isArray(rows) || !changeDate) return null;
+  const { before } = windowsFor(changeDate);
+  const want = new Set(pages);
+  const byDay = new Map();
+  for (const r of rows) {
+    if (!want.has(r.page) || r.date < before.start || r.date > before.end) continue;
+    byDay.set(r.date, (byDay.get(r.date) ?? 0) + (Number(r.impressions) || 0));
+  }
+  const total = [...byDay.values()].reduce((a, b) => a + b, 0);
+  if (total < 20) return null;
+  let best = null;
+  for (let start = before.start; addDays(start, 6) <= before.end; start = addDays(start, 1)) {
+    let shown = 0;
+    for (let i = 0; i < 7; i++) shown += byDay.get(addDays(start, i)) ?? 0;
+    if (!best || shown > best.shown) best = { week: { start, end: addDays(start, 6) }, shown };
+  }
+  return best && best.shown * 2 > total ? { ...best, total } : null;
+}
+
+// The cautions Did it work shows beside a verdict, as sentences for the worry: how the typical page
+// moved, a Google ranking update inside its dates, and a one week spike in the before window.
+// v: a row of change-log-verdicts.jsonl.
+export function verdictCautions(model, v) {
+  const local = model.data.local ?? {};
+  const out = [];
+  if (typeof v.siteImpPct === 'number') {
+    const p = Math.round(v.siteImpPct * 100);
+    out.push(
+      `A typical page on the site ${p === 0 ? 'stayed flat' : `moved ${p > 0 ? '+' : ''}${p}%`} over the same dates.`
+    );
+  }
+  const near = updatesNear(model, v.changeDate);
+  if (near.length) {
+    const names = near.map((u) => `${u.label} (from ${longDate(u.date)})`).join(' and ');
+    out.push(`Google's ${names} fell inside these dates, so read this with care.`);
+  }
+  const batch = v.kind === 'batch' || (Array.isArray(v.pages) && !v.url);
+  const pages = batch ? (v.pages ?? []).map((slug) => pageForSlug(slug, local)) : [v.url ?? pageForSlug(v.slug, local)];
+  const spike = beforeSpike(model, pages, v.changeDate);
+  if (spike) {
+    out.push(
+      `One week, ${longRange(spike.week.start, spike.week.end)}, held ${n0(spike.shown)} of the ${n0(spike.total)} times shown in the 28 days before, so the before number may be a one week spike.`
+    );
+  }
+  return out;
+}
+
+// What the Decay page says about each open decaying page, for its worry: the kind of drop and its
+// recommendation (the same the Decay card shows), the Google ranking updates inside the two compared
+// windows (a caution, never the cause) and the page's last edit inside them.
+// Map<oppId, {dropKindLabel, dropKindWhy, recommendation, updates, lastEdit}>.
+function decayNotes(model) {
+  const out = new Map();
+  let items = [];
+  try {
+    items = decayItems(model);
+  } catch {
+    items = [];
+  }
+  const byId = new Map(items.map((d) => [d.id, d]));
+  const deliberate = deliberateEdits(model);
+  for (const o of model.opps) {
+    if (o.type !== 'slipping') continue;
+    const d = byId.get(o.id);
+    const start = o.range?.start ?? null;
+    const end = o.range?.end ?? null;
+    const inside = (date) => date && (!start || date >= start) && (!end || date <= end);
+    const edits = [
+      ...model.edits
+        .filter(
+          (e) => e.page === o.page && (e.kind === 'edit' || (e.kind === 'manual' && /^\s*edit:/i.test(e.subject ?? '')))
+        )
+        .map((e) => e.date),
+      ...(deliberate.get(o.page) ?? []),
+    ].filter(inside);
+    out.set(o.id, {
+      dropKindLabel: d?.dropKindLabel ?? null,
+      dropKindWhy: d?.dropKindWhy ?? null,
+      recommendation: d?.recommendation ?? null,
+      updates: start && end ? updatesIn(model, start, end) : [],
+      lastEdit: edits.sort().pop() ?? null,
+    });
+  }
+  return out;
+}
 
 // ---------------------------------------------------------------- the timeline
 
@@ -199,10 +299,84 @@ function verdictSentence({ verdict, changeDate, subject, before, after, controlP
   return s;
 }
 
+// The sentence Did it work shows on a verdict another change overlaps.
+export const OVERLAP_NOTE = 'Other edits landed in the same window, so this cannot be read.';
+
+// One id per distinct change: verdict rows that share a commit (a batch commit and its pages) are one
+// change. A row with no commit is a change of its own. rows: change-log-verdicts.jsonl rows.
+// Returns an array of change ids in the order of `rows`.
+export function changeIdsOf(rows) {
+  const parent = new Map();
+  const find = (x) => {
+    while (parent.get(x) !== x) {
+      parent.set(x, parent.get(parent.get(x)));
+      x = parent.get(x);
+    }
+    return x;
+  };
+  const join = (a, b) => {
+    for (const k of [a, b]) if (!parent.has(k)) parent.set(k, k);
+    parent.set(find(a), find(b));
+  };
+  const keys = rows.map((v, i) => {
+    const hashes = (v.commits ?? []).map((c) => c?.hash).filter(Boolean);
+    const own = `row:${v.slug}|${v.changeDate}|${i}`;
+    if (!parent.has(own)) parent.set(own, own);
+    for (const h of hashes) join(own, `commit:${h}`);
+    return own;
+  });
+  const names = new Map();
+  return keys.map((k) => {
+    const root = find(k);
+    if (!names.has(root)) names.set(root, `change-${names.size + 1}`);
+    return names.get(root);
+  });
+}
+
+const COUNT_WORDS = [
+  ['better', 'better'],
+  ['worse', 'worse'],
+  ['mixed', 'mixed'],
+  ['flat', 'no real change'],
+  ['insufficient-data', 'too small to tell'],
+  ['unreadable', 'cannot be read'],
+];
+
+// The verdicts so far, counted by distinct change (a batch commit and its pages are one; a money page
+// verdict is its own), with "too early" left out because it is not a verdict. A change reads as its
+// batch verdict when it has one, else as its pages when they agree (mixed when they do not), and as
+// "cannot be read" when another change overlaps it. {changes, pageResults, byWord, text}.
+export function verdictCounts(model) {
+  const rows = verdictRows(model);
+  const groups = new Map();
+  for (const r of rows) {
+    if (!groups.has(r.changeId)) groups.set(r.changeId, []);
+    groups.get(r.changeId).push(r);
+  }
+  const words = [];
+  for (const list of groups.values()) {
+    const batch = list.find((r) => r.batch);
+    const use = batch ? [batch] : list;
+    if (use.some((r) => r.overlapping)) words.push('unreadable');
+    else words.push(new Set(use.map((r) => r.verdict)).size === 1 ? use[0].verdict : 'mixed');
+  }
+  const money = moneyPageVerdicts(model).filter((m) => m.status === 'judged');
+  for (const m of money) words.push(m.verdict);
+  const byWord = Object.fromEntries(COUNT_WORDS.map(([k]) => [k, words.filter((w) => w === k).length]));
+  const text = COUNT_WORDS.filter(([k]) => byWord[k])
+    .map(([k, word]) => `${byWord[k]} ${word}`)
+    .join(', ');
+  return { changes: words.length, pageResults: rows.length + money.length, byWord, text: text || null };
+}
+
 // docs/seo/change-log-verdicts.jsonl, shaped for the page. A batch is several pages judged as one.
+// changeId names the distinct change a row belongs to (rows that share a commit share it). A row
+// another change overlaps cannot be read: readNote says so and its summary starts with it.
 export function verdictRows(model) {
   const local = model.data.local ?? {};
-  return (local.verdicts ?? []).map((v) => {
+  const raw = local.verdicts ?? [];
+  const ids = changeIdsOf(raw);
+  return raw.map((v, i) => {
     const batch = v.kind === 'batch' || (Array.isArray(v.pages) && !v.url);
     const near = updatesNear(model, v.changeDate);
     const pages = batch ? (v.pages ?? []).map((slug) => pageForSlug(slug, local)) : [];
@@ -226,17 +400,20 @@ export function verdictRows(model) {
       nearUpdates: near,
       nearUpdatesNote: near.length ? NEAR_UPDATE_NOTE : null,
       overlapping: Boolean(v.overlapping),
+      changeId: ids[i],
+      readable: !v.overlapping,
+      readNote: v.overlapping ? OVERLAP_NOTE : null,
       clicksTooSmall: Boolean(v.clicksTooSmall),
       dropType: v.dropType ?? null,
       signals: v.signals ?? [],
-      summary: verdictSentence({
+      summary: `${v.overlapping ? `${OVERLAP_NOTE} On the numbers alone: ` : ''}${verdictSentence({
         verdict: v.verdict,
         changeDate: v.changeDate,
         subject: batch ? `the ${pages.length} pages together` : 'the page',
         before: v.before,
         after: v.after,
         controlPct: v.siteImpPct,
-      }),
+      })}`,
     };
   });
 }
@@ -272,6 +449,18 @@ export function pendingEdits(model) {
   });
 }
 
+// The edits whose verdict is not ready yet, as [{page, judgeFrom}]: the content pages Did it work lists
+// as Still waiting, and the money pages that are too early to judge. The week's Next verdict tile and
+// its verdict card read their date from this list (with the frozen pages and the plan).
+export function verdictsWaiting(model) {
+  return [
+    ...pendingEdits(model).map((p) => ({ page: p.page, judgeFrom: p.judgeFrom })),
+    ...moneyPageVerdicts(model)
+      .filter((m) => m.status === 'too-early')
+      .map((m) => ({ page: m.page, judgeFrom: m.judgeFrom })),
+  ];
+}
+
 // Edits finished their wait and not judged yet (what change-log calls due).
 export function dueEdits(model) {
   const local = model.data.local ?? {};
@@ -297,6 +486,8 @@ export function moneyPageVerdicts(model) {
       const changeDate = dates[0];
       if (!(changeDate >= addDays(model.today, -120))) continue;
       const r = judgePage({ page, changeDate, pageDaily, today: model.today });
+      // The same Google update caution as the other verdicts (their own 28 days before and after).
+      const near = updatesNear(model, changeDate);
       out.push({
         page,
         changeDate,
@@ -310,6 +501,8 @@ export function moneyPageVerdicts(model) {
         impChange: r.before && r.after ? pct(r.after.impressions, r.before.impressions) : null,
         control: r.control ? { impPct: r.control.impPct, pages: r.control.pages } : null,
         partial: Boolean(r.partial),
+        nearUpdates: near,
+        nearUpdatesNote: near.length ? NEAR_UPDATE_NOTE : null,
         summary:
           r.status === 'judged'
             ? verdictSentence({
@@ -340,6 +533,7 @@ export function resultsView(model) {
   return {
     ...envelope(model, { need: ['local'] }),
     verdicts: verdictRows(model).sort((a, b) => String(b.judgedOn).localeCompare(String(a.judgedOn))),
+    verdictCounts: verdictCounts(model),
     due: dueEdits(model),
     pending: pendingEdits(model),
     frozen,
@@ -477,27 +671,29 @@ function cardOut(model, card) {
       links: { live: null, searchConsole: null },
     };
   }
-  const e = card.eligibility ?? { eligible: true, from: null };
+  // A card that only reports (this week's edit is done, a verdict) carries no eligibility at all.
   return {
     ...card,
     ...editPagesOf(model, card.oppId),
     typeLabel: cardLabel(model, card),
     ...termFields(model, card),
     score: (card.oppId ? model.oppById.get(card.oppId)?.score : null) ?? null,
-    eligibility: { ...e, text: e.text ?? (e.eligible ? 'Eligible now' : `Eligible from ${longDate(e.from)}`) },
+    eligibility:
+      card.eligibility === null ? null : withEligibilityText(card.eligibility ?? { eligible: true, from: null }),
     state: itemState(model, keyOfCard(card.id)),
     brief: brief(card, { frozen: model.frozen }),
     links: linksFor(card.page),
   };
 }
 
-// The worries, minus any the founder has ignored or snoozed. A competitor change marked Seen is
-// already left out by week.mjs: its id carries the events it covered, so a new event is a new card.
+// The worries, minus any the founder has finished, ignored or snoozed. A competitor change marked
+// Seen is already left out by week.mjs: its id carries the events it covered, so a new event is a new
+// card. (The Decay worries are filtered in week.mjs before the top three are taken.)
 function visibleWorries(model, all) {
   return all.filter((w) => {
     const it = itemOf(model, w.oppId ?? w.id);
     if (!it) return true;
-    if (it.status === 'ignored') return false;
+    if (it.status === 'ignored' || it.status === 'done') return false;
     if (it.status === 'snoozed' && it.snoozeUntil > model.today) return false;
     return true;
   });
@@ -508,6 +704,7 @@ function visibleWorries(model, all) {
 export function weekModel(model) {
   return memo(model, 'week', () => {
     const { today, items, frozen } = model;
+    const recent = model.recent ?? new Map();
     const local = model.data.local ?? {};
     const weekOf = mondayOf(today);
     const sources = sourcesOf(model);
@@ -521,8 +718,11 @@ export function weekModel(model) {
       prevSnaps: { gsc: { data: { index: model.prevIndex ?? [] } } },
       sources,
       frozen,
+      recent,
       opps: model.opps,
       items,
+      decay: decayNotes(model),
+      cautionsOf: (v) => verdictCautions(model, v),
       today,
     });
     const worryList = visibleWorries(model, allWorries);
@@ -531,44 +731,47 @@ export function weekModel(model) {
       plan: local.plan ?? null,
       ranked: activeOpps(model),
       due: local.due ?? [],
+      pending: verdictsWaiting(model),
       worries: worryList,
       openWork: local.openWork ?? [],
       frozen,
+      recent,
       items,
       today,
       size: planSizeOf(),
     });
+    const opts = { recent };
     const pool = new Map();
     for (const w of allWorries) {
-      const c = worryCard(w, frozen, today);
+      const c = worryCard(w, frozen, today, opts);
       pool.set(c.id, c);
     }
     for (const w of local.openWork ?? []) pool.set(openWorkCard(w).id, openWorkCard(w));
-    for (const o of model.opps) pool.set(`opp:${o.id}`, oppCard(o, 'other', frozen, today));
+    for (const o of model.opps) pool.set(`opp:${o.id}`, oppCard(o, 'other', frozen, today, opts));
     for (const c of proposed) pool.set(c.id, c);
     return { weekOf, proposed, pool, worries: worryList, allWorries };
   });
 }
 
-// A chosen or locked page edit card, brought up to date: the freeze and the this-week check are
-// worked out again from the current data (lifecycle eligibility and week.mjs editThisWeek), so a
-// week edit dated by another route (a plan row, an edit note, another card) shows on it. A card
-// whose own item is the week's edit, or a card that edits no live page, is left as it is.
+// A chosen or locked page edit card, brought up to date: the freeze, a git edit the freeze does not
+// know and the this-week check are worked out again from the current data (lifecycle eligibility, the
+// same function every list uses), so a week edit dated by another route (a plan row, an edit note,
+// another card) shows on it. A card whose own item is the week's edit is not held back by the week
+// rule, and a card that edits no live page is left as it is.
 function freshen(model, card) {
-  if (!card.isPageEdit || card.readOnly || !card.page) return card;
-  const e = eligibility({ isPageEdit: true, page: card.page }, model.frozen, model.today);
-  const week = editThisWeek(model.frozen, model.today);
+  // A card that only reports (this week's edit is done, a verdict) has no chip, even one locked before.
+  if (card.readOnly || card.source === 'verdict') return { ...card, eligibility: null, hypothesis: false };
+  if (!card.isPageEdit || !card.page) return card;
   const own = itemOf(model, keyOfCard(card.id))?.status === 'done';
-  if (!week || own || !e.eligible) return { ...card, eligibility: e, weekEditDone: null };
-  const next = addDays(mondayOf(model.today), 7);
+  const e = eligibility({ isPageEdit: true, page: card.page }, model.frozen, model.today, {
+    recent: model.recent,
+    week: !own,
+  });
+  const w = e.weekEdit;
   return {
     ...card,
-    eligibility: {
-      eligible: false,
-      from: next,
-      text: `This week's page edit is done (${week.page}, ${longDate(week.since)}). The next one can go in from ${longDate(next)}`,
-    },
-    weekEditDone: { page: week.page, date: week.since, dateText: longDate(week.since) },
+    eligibility: e,
+    weekEditDone: w ? { page: w.page, date: w.date, dateText: longDate(w.date) } : null,
   };
 }
 
@@ -595,14 +798,19 @@ export function currentTop5(model) {
 // What not to touch this week: pages inside their 28 days (the lifecycle freeze, so no new edit
 // restarts the measuring) and the pages of split searches the founder chose to leave alone.
 // [{page, reason, until}]; until is null for a choice, which has no end date.
+// A page git shows edited by 10 or more lines in the last 28 days, that the freeze does not know, is
+// listed too, with the same words as its chip.
 export function leaveAloneList(model) {
-  const frozen = [...model.frozen]
-    .sort((a, b) => a[1].until.localeCompare(b[1].until) || a[0].localeCompare(b[0]))
-    .map(([page, f]) => ({
-      page,
-      reason: `Edited on ${longDate(f.since)}, being measured until ${longDate(f.until)}.`,
-      until: f.until,
-    }));
+  const frozen = [...model.frozen].map(([page, f]) => ({
+    page,
+    reason: `Edited on ${longDate(f.since)}, being measured until ${longDate(f.until)}.`,
+    until: f.until,
+  }));
+  for (const [page, r] of model.recent ?? []) {
+    if (r.edit && r.edit.until > model.today && !model.frozen.has(page))
+      frozen.push({ page, reason: `${recentEditText(r.edit)}.`, until: r.edit.until, foundInGit: true });
+  }
+  frozen.sort((a, b) => a.until.localeCompare(b.until) || a.page.localeCompare(b.page));
   const chosen = [];
   for (const c of leftAloneSplits(model))
     for (const page of c.pages)
@@ -622,12 +830,18 @@ export function weekView(model) {
     .slice(0, 10)
     .map((o) => decorateOpp(model, o));
   const last = readJson('state/visit.json', null);
-  const waitingList = buildWaiting({
-    verdictsDue: [],
-    frozen: model.frozen,
-    plan: local.plan ?? null,
-    today: model.today,
-  }).map((w) => ({ ...w, dateText: longDate(w.date) }));
+  const waitingList = foldVerdictDays(
+    buildWaiting({
+      verdictsDue: verdictsWaiting(model),
+      frozen: model.frozen,
+      plan: local.plan ?? null,
+      today: model.today,
+    }).filter((w) => w.date >= model.today)
+  ).map((w) => ({ ...w, dateText: longDate(w.date) }));
+  const worryCards = wm.worries.map((w) =>
+    worryCard(w, model.frozen, model.today, { recent: model.recent, week: true })
+  );
+  const waitingWorries = wm.worries.filter((w) => w.waitUntil).length;
   return {
     ...envelope(model),
     weekOf,
@@ -639,11 +853,16 @@ export function weekView(model) {
     top5: cards.map((c) => cardOut(model, c)),
     top5Source,
     opportunities: topTen,
-    counts: { openOpportunities: activeOpps(model).filter(open).length },
-    worries: wm.worries.map((w) => {
+    counts: {
+      openOpportunities: activeOpps(model).filter(open).length,
+      // Every worry is listed; the ones whose own fix is to leave the page alone until a date do not
+      // need a look this week.
+      worries: { total: wm.worries.length, needLook: wm.worries.length - waitingWorries, waiting: waitingWorries },
+    },
+    worries: wm.worries.map((w, i) => {
       // The same card the five would show for it, so brief and test read like an opportunity's,
       // and the same id (a slipping page is its opportunity, opp:<id>), so every button works.
-      const c = worryCard(w, model.frozen, model.today);
+      const c = worryCards[i];
       if (c.competitor) {
         return {
           ...w,
@@ -660,12 +879,15 @@ export function weekView(model) {
         ...termFields(model, c),
         id: c.id,
         test: c.test,
+        eligibility: withEligibilityText(c.eligibility),
+        ...(w.waitUntil ? { waitUntilText: longDate(w.waitUntil) } : {}),
         brief: brief(c, { frozen: model.frozen }),
         links: linksFor(w.page),
         state: itemState(model, keyOfCard(c.id)),
       };
     }),
     waiting: waitingList,
+    nextVerdict: nextVerdictOf(model, waitingList),
     planSize: planSizeOf(),
     leaveAlone: leaveAloneList(model),
     blockedOnYou: blockedOnYou(local.openWork ?? []),
@@ -688,6 +910,55 @@ export function weekView(model) {
           doneCount: list.filter((c) => c.status === 'done').length,
         };
       }),
+  };
+}
+
+// The waiting list with the verdicts of one day folded into one row ("Verdicts on 4 page changes",
+// with the pages), so a commit that touched many pages is one line. Frozen pages stay one row each.
+export function foldVerdictDays(list) {
+  const out = [];
+  const byDate = new Map();
+  for (const w of list) {
+    if (w.kind !== 'verdict') {
+      out.push(w);
+      continue;
+    }
+    const page = w.title.replace(/^Verdict on /, '');
+    const row = byDate.get(w.date);
+    if (row) {
+      row.pages.push(page);
+      row.count = row.pages.length;
+      row.title = `Verdicts on ${row.count} page changes`;
+    } else {
+      const fresh = { ...w, pages: [page], count: 1 };
+      byDate.set(w.date, fresh);
+      out.push(fresh);
+    }
+  }
+  return out;
+}
+
+// The Next verdict tile: ready now when change-log has entries due (how many page changes from how
+// many commits), else the first verdict date in the waiting list. {ready, date, dateText, note}.
+function nextVerdictOf(model, waitingList) {
+  const due = model.data.local?.due ?? [];
+  if (due.length) {
+    const c = dueCounts(due);
+    const from = c.commits ? ` from ${c.commits} ${c.commits === 1 ? 'commit' : 'commits'}` : '';
+    return {
+      ready: true,
+      date: model.today,
+      dateText: 'Ready now',
+      note: `${c.changes} ${c.changes === 1 ? 'page change' : 'page changes'}${from} ready to judge`,
+    };
+  }
+  const next = waitingList.find((w) => w.kind === 'verdict');
+  if (!next) return null;
+  return {
+    ready: false,
+    date: next.date,
+    dateText: next.dateText,
+    note: (next.count ?? 1) > 1 ? `${next.count} page changes come due` : next.title.replace(/^Verdict on /, ''),
   };
 }
 

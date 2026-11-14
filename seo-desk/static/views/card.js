@@ -81,7 +81,8 @@ export function normalize(item, oppById) {
       test: item.test ?? opp?.test ?? null,
       page: item.page,
       isPageEdit: item.isPageEdit,
-      eligibility: opp?.eligibility ?? null,
+      eligibility: item.eligibility ?? opp?.eligibility ?? null,
+      waitUntilText: item.waitUntilText ?? null,
       opp,
       oppId: item.oppId ?? null,
       score: opp?.score ?? null,
@@ -117,6 +118,7 @@ export function normalize(item, oppById) {
       links: item.links,
       note: item.note ?? null,
       readOnly: Boolean(item.readOnly),
+      hypothesis: item.hypothesis !== false,
       editPages: item.editPages ?? null,
       competitor: item.competitor ?? null,
     };
@@ -159,12 +161,17 @@ function statusChip(state, fmt) {
 // edits no page (a setup task such as checking a page in Bing Webmaster Tools) shows none.
 export const showsEligibility = (n) => Boolean(n?.eligibility) && n.isPageEdit !== false;
 
+// The Hypothesis chip sits beside a recommendation. A card that only reports (this week's edit is
+// done, a verdict is due) has none, and neither has a competitor change.
+export const showsHypothesis = (n) => Boolean(n?.action) && !n.competitor && n.hypothesis !== false;
+
 function chips(n, fmt) {
   const out = [];
   const st = statusChip(n.state, fmt);
   if (st) out.push(ctxChip(st[0], st[1]));
   if (n.state?.pinnedWeek && n.state.pinnedWeek >= thisMonday())
     out.push(ctxChip('chip-accent', 'Pinned to this week'));
+  if (n.waitUntilText) out.push(ctxChip('chip-warn', `Leave alone until ${n.waitUntilText}`));
   if (showsEligibility(n)) {
     out.push(
       n.eligibility.eligible
@@ -174,6 +181,12 @@ function chips(n, fmt) {
   }
   return out;
 }
+
+// The line for smaller git edits on an eligible page ("Also touched on 9 November (3 lines)").
+const touchedLine = (n) =>
+  showsEligibility(n) && n.eligibility.touchedText
+    ? el('p', { class: 'small muted', style: { margin: '4px 0 0' } }, `${n.eligibility.touchedText}.`)
+    : null;
 
 const ctxChip = (cls, text) => el('span', { class: `chip ${cls}`.trim() }, text);
 
@@ -515,6 +528,7 @@ function fullCard(n, ctx, options) {
       chips(n, ctx.fmt),
       scoreBlock(n, ctx)
     ),
+    touchedLine(n),
     n.explain ? h('p', { class: 'card-explain' }, n.explain) : null,
     h('h3', { class: 'card-title' }, n.title),
     options.afterTitle ?? null,
@@ -533,11 +547,13 @@ function fullCard(n, ctx, options) {
                   {},
                   n.action,
                   ' ',
-                  h(
-                    'span',
-                    { class: 'chip chip-hyp', title: 'A suggestion, not a fact. The test below settles it.' },
-                    'Hypothesis'
-                  ),
+                  showsHypothesis(n)
+                    ? h(
+                        'span',
+                        { class: 'chip chip-hyp', title: 'A suggestion, not a fact. The test below settles it.' },
+                        'Hypothesis'
+                      )
+                    : null,
                   n.test ? h('span', { class: 'test' }, n.test) : null
                 ),
           ]
@@ -616,7 +632,8 @@ function rowCard(n, ctx, options) {
         h('span', { class: `chip ${n.chipClass}` }, n.label),
         chips(n, fmt),
         n.state?.notes?.length ? el('span', { class: 'chip' }, fmt.plural(n.state.notes.length, 'note', 'notes')) : null
-      )
+      ),
+      touchedLine(n)
     ),
     h(
       'div',

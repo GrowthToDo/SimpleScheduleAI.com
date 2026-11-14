@@ -140,6 +140,10 @@ const throughOf = (model) =>
     .pop() ??
   null;
 
+// What each keyword map status means, for the digest (the page shows the same words).
+export const KEYWORD_STATUS_NOTE =
+  'status: live = a target keyword whose page is live; ranks = no page targets this search, but a live page is already on page one for it; pending = no page yet.';
+
 // The sections every question gets, in order of importance (the last ones are left out first when
 // the digest is too long). Each is [title, route, view(model)].
 export const SECTIONS = [
@@ -155,6 +159,7 @@ export const SECTIONS = [
         'top5Source',
         'worries',
         'waiting',
+        'nextVerdict',
         'leaveAlone',
         'blockedOnYou',
         'locked',
@@ -191,7 +196,10 @@ export const SECTIONS = [
         'priorityNote',
         'count',
         'range',
+        'warnings',
         'items',
+        'together',
+        'togetherNote',
         'leftAlone',
         'clusterConflicts',
       ]),
@@ -199,17 +207,17 @@ export const SECTIONS = [
   [
     'Runner-up keywords',
     '/api/insights/runner-up',
-    (m) => pick(runnerUpView(m), ['term', 'explain', 'count', 'range', 'items']),
+    (m) => pick(runnerUpView(m), ['term', 'explain', 'count', 'range', 'warnings', 'items']),
   ],
   [
     'Secondary keywords',
     '/api/insights/secondary-keywords',
-    (m) => pick(secondaryView(m), ['term', 'explain', 'priorityNote', 'count', 'range', 'items']),
+    (m) => pick(secondaryView(m), ['term', 'explain', 'priorityNote', 'count', 'range', 'warnings', 'items']),
   ],
   [
     'Content gaps',
     '/api/insights/content-gaps',
-    (m) => pick(gapsView(m), ['term', 'explain', 'count', 'range', 'items']),
+    (m) => pick(gapsView(m), ['term', 'explain', 'count', 'range', 'warnings', 'items']),
   ],
   [
     'Decay (and growing)',
@@ -221,6 +229,7 @@ export const SECTIONS = [
         'priorityNote',
         'count',
         'range',
+        'warnings',
         'items',
         'totals',
         'pages',
@@ -228,6 +237,14 @@ export const SECTIONS = [
         'recentDropNote',
         'note',
       ]),
+  ],
+  [
+    'Keyword map counts',
+    '/api/keyword-map/table',
+    (m) => ({
+      statusNote: KEYWORD_STATUS_NOTE,
+      counters: keywordTable(m).counters,
+    }),
   ],
   [
     'Internal links',
@@ -245,7 +262,10 @@ export const SECTIONS = [
       const r = resultsView(m);
       return {
         counts: {
-          judged: (r.verdicts ?? []).length,
+          // Verdicts by distinct change (a batch commit and its pages are one), "too early" left out.
+          judgedChanges: r.verdictCounts?.changes ?? 0,
+          judgedPageResults: r.verdictCounts?.pageResults ?? 0,
+          byWord: r.verdictCounts?.byWord ?? null,
           readyToJudge: (r.due ?? []).length,
           stillWaiting: (r.pending ?? []).length,
         },

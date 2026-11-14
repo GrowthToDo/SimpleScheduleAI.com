@@ -100,11 +100,23 @@ export const planTickKey = (file, page) => `${file ?? ''}|${page}`;
 // Plan rows that are ticked but carry no "Done <date>" or "Judge from <date>" text.
 export const undatedPlanTicks = (plan) => (plan?.improve ?? []).filter((r) => r.done && !r.doneDate && !r.judgeFrom);
 
+// The latest git edit (not a hand note) of `page` on or before `day`, or null. edits: the git edits
+// the local snapshot carries ([{page, date, kind}], kind 'edit' or 'publish').
+function lastGitEditOn(edits, page, day) {
+  let best = null;
+  for (const e of edits ?? []) {
+    if (e.page !== page || e.kind === 'manual' || !e.date || e.date > day) continue;
+    if (!best || e.date > best) best = e.date;
+  }
+  return best;
+}
+
 // Every deliberate improvement, as [{page, date, why}]. This is the one place that decides
 // which edits count: a done page edit card, a plan row marked done (by its date, by its
-// "judged from" date counted back, or, ticked with no date, by the day the desk first saw it
-// ticked), or a manual note whose text starts with "Edit:". Notes about IndexNow, sitemap
-// resubmits or indexing requests, and routine git edits, never count.
+// "judged from" date counted back, or, ticked with no date, by the latest git edit of the page on or
+// before the day the desk first saw it ticked, else that day), or a manual note whose text starts
+// with "Edit:". Notes about IndexNow, sitemap resubmits or indexing requests, and routine git edits,
+// never count.
 // planTicks: {planTickKey: 'YYYY-MM-DD'} from state/plan-ticks.json. planSeenOn: the day the
 // plan was read, used for a ticked row the desk has no record of yet.
 export function deliberateEdits({ items = {}, opps = [], plan = null, edits = [], planTicks = {}, planSeenOn = null }) {
@@ -140,7 +152,14 @@ export function deliberateEdits({ items = {}, opps = [], plan = null, edits = []
       });
     } else {
       const seen = planTicks?.[planTickKey(plan.file, row.page)] ?? planSeenOn;
-      if (seen) {
+      const git = seen ? lastGitEditOn(edits, row.page, seen) : null;
+      if (git) {
+        out.push({
+          page: row.page,
+          date: git,
+          why: `The plan row is ticked with no date. The page's latest git edit before the desk saw the tick on ${longDate(seen)} is on ${longDate(git)}.`,
+        });
+      } else if (seen) {
         out.push({
           page: row.page,
           date: seen,
@@ -177,12 +196,121 @@ export function touchedOn(page, edits) {
   return [...new Set(dates)].sort();
 }
 
-// Only a live page edit is held back by the 28 day rule.
-export function eligibility(opp, frozen, today) {
+// ---------------------------------------------------------------- edits found in git
+
+// A git edit of this many changed lines (added plus removed) or more is a real edit; a smaller one
+// (a count fixed, a link added) only touches the page.
+export const RECENT_EDIT_MIN_LINES = 10;
+
+const sumBy = (rows) => {
+  const byDate = new Map();
+  for (const r of rows) {
+    const d = byDate.get(r.date) ?? { date: r.date, lines: 0, commits: [] };
+    d.lines += Number(r.lines) || 0;
+    if (r.commit && !d.commits.includes(r.commit)) d.commits.push(r.commit);
+    byDate.set(r.date, d);
+  }
+  return [...byDate.values()].sort((a, b) => a.date.localeCompare(b.date));
+};
+
+// The content edits git shows that the freeze does not know, per page: Map<page, {edit, touched}>.
+// contentEdits: [{page, date, commit, lines}] from the local snapshot (the page's own source file,
+// the last 35 days, renames and the commit that first published it left out). Only edits inside the
+// last 28 days count, and an edit is known when the page is frozen from a deliberate edit on that day
+// or later. Lines of one page on one day are added up. `edit` is the latest day with
+// RECENT_EDIT_MIN_LINES or more: {date, lines, commits, until} (until: 28 days on). `touched` lists
+// the smaller days, oldest first: [{date, lines}]. A page with neither is left out.
+export function recentEdits({ contentEdits = [], frozen = new Map(), today }) {
+  const byPage = new Map();
+  for (const e of contentEdits ?? []) {
+    if (!e?.page || !e.date || e.date > today || !(addDays(e.date, FREEZE_DAYS) > today)) continue;
+    const f = frozen?.get(e.page);
+    if (f && f.since >= e.date) continue;
+    if (!byPage.has(e.page)) byPage.set(e.page, []);
+    byPage.get(e.page).push(e);
+  }
+  const out = new Map();
+  for (const [page, rows] of byPage) {
+    const days = sumBy(rows);
+    const big = days.filter((d) => d.lines >= RECENT_EDIT_MIN_LINES).pop() ?? null;
+    const touched = days.filter((d) => d.lines < RECENT_EDIT_MIN_LINES).map((d) => ({ date: d.date, lines: d.lines }));
+    out.set(page, {
+      edit: big
+        ? { date: big.date, lines: big.lines, commits: big.commits, until: addDays(big.date, FREEZE_DAYS) }
+        : null,
+      touched,
+    });
+  }
+  return out;
+}
+
+const lineWord = (n) => `${n} ${n === 1 ? 'line' : 'lines'}`;
+
+// "Edited 9 November (found in git, 299 lines). Leave it until 7 December unless that edit was minor"
+export const recentEditText = (r) =>
+  `Edited ${longDate(r.date)} (found in git, ${lineWord(r.lines)}). Leave it until ${longDate(r.until)} unless that edit was minor`;
+
+// "Also touched on 9 November (3 lines) and 12 November (2 lines)"
+export function touchedText(touched) {
+  const parts = (touched ?? []).map((t) => `${longDate(t.date)} (${lineWord(t.lines)})`);
+  if (!parts.length) return null;
+  const list = parts.length > 1 ? `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}` : parts[0];
+  return `Also touched on ${list}`;
+}
+
+// ---------------------------------------------------------------- eligibility
+
+// The deliberate page edit dated inside the week of `today` (Monday to Sunday), or null.
+// frozen: Map<page, {since, until}>; since is the date of the page's latest deliberate edit.
+export function editThisWeek(frozen, today) {
+  const monday = mondayOf(today);
+  const sunday = addDays(monday, 6);
+  let found = null;
+  for (const [page, f] of frozen ?? []) {
+    if (f.since >= monday && f.since <= sunday && (!found || f.since > found.since)) found = { page, ...f };
+  }
+  return found;
+}
+
+// Whether a card may be this week's live page edit. The one function every list uses (the five,
+// the cards beside it, All opportunities, the insight pages built from opportunities, the worries):
+//   frozen           the page is inside the 28 days of a deliberate edit: {eligible: false, from}
+//   recently edited  git shows an edit of 10 or more lines in the last 28 days that the freeze does
+//                    not know (`recent`, from recentEdits): {eligible: false, from, recentEdit}
+//   week used        `week` is true and this week's one page edit is already made on another page:
+//                    {eligible: false, from: next Monday, weekEdit: {page, date}}
+//   eligible         {eligible: true, from: null}, plus `touched` when git shows smaller edits
+// Only a live page edit is held back. Without `recent` and `week` this is the freeze alone.
+export function eligibility(opp, frozen, today, { recent = null, week = false } = {}) {
   if (!opp.isPageEdit) return { eligible: true, from: null };
   const f = frozen?.get(opp.page);
   if (f && f.until > today) return { eligible: false, from: f.until };
-  return { eligible: true, from: null };
+  const r = recent?.get(opp.page);
+  if (r?.edit && r.edit.until > today) {
+    const { date, lines, until } = r.edit;
+    return { eligible: false, from: until, recentEdit: { page: opp.page, date, lines, until } };
+  }
+  const w = week ? editThisWeek(frozen, today) : null;
+  if (w && w.page !== opp.page) {
+    return { eligible: false, from: addDays(mondayOf(today), 7), weekEdit: { page: w.page, date: w.since } };
+  }
+  return r?.touched?.length ? { eligible: true, from: null, touched: r.touched } : { eligible: true, from: null };
+}
+
+// The words on the eligibility chip, and the extra line for smaller git edits.
+export function eligibilityText(e) {
+  if (!e) return null;
+  if (e.text) return e.text;
+  if (e.recentEdit) return recentEditText(e.recentEdit);
+  if (e.weekEdit) return `Next page edit from ${longDate(e.from)}`;
+  return e.eligible ? 'Eligible now' : `Eligible from ${longDate(e.from)}`;
+}
+
+// The eligibility with its words: {eligible, from, text, ...the state's own fields, touchedText}.
+export function withEligibilityText(e) {
+  if (!e) return null;
+  const touched = touchedText(e.touched);
+  return { ...e, text: eligibilityText(e), ...(touched ? { touchedText: touched } : {}) };
 }
 
 // ---------------------------------------------------------------- persistence

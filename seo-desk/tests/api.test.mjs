@@ -1803,7 +1803,8 @@ test('every worry carries a brief and a test, with or without an opportunity beh
       assert.ok(!/[\u2013\u2014]/.test(x.brief));
       continue;
     }
-    assert.match(x.test, /next daily refresh/, x.id);
+    // A verdict is judged once, so a worse verdict's test is the date the next verdict can be read.
+    assert.match(x.test, x.kind === 'verdict-worse' ? /verdict .*can be read/ : /next daily refresh/, x.id);
     assert.ok(!/[\u2013\u2014]/.test(x.brief + x.test));
   }
 });
@@ -2400,7 +2401,7 @@ test('a locked five refreshes its page edit card when the week edit was dated by
   assert.equal(after.locked, true);
   const same = after.top5.find((c) => c.id === card.id);
   assert.equal(same.eligibility.eligible, false);
-  assert.match(same.eligibility.text, /This week's page edit is done/);
+  assert.match(same.eligibility.text, /^Next page edit from /);
   assert.equal(same.weekEditDone.page, other);
   assert.equal(same.weekEditDone.dateText, '10 November');
 });

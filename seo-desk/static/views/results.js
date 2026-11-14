@@ -79,18 +79,11 @@ export async function render(el, ctx) {
     })),
   ].sort((a, b) => b.changeDate.localeCompare(a.changeDate));
 
-  const count = (k) => verdicts.filter((v) => v.verdict === k).length;
-  const splitLine = [
-    ['better', 'better'],
-    ['worse', 'worse'],
-    ['mixed', 'mixed'],
-    ['flat', 'no real change'],
-    ['insufficient-data', 'too small to tell'],
-    ['too-early', 'too early'],
-  ]
-    .filter(([k]) => count(k))
-    .map(([k, word]) => `${count(k)} ${word}`)
-    .join(', ');
+  // Counted on the server by distinct change (a batch commit and its pages are one), without "too early".
+  const counts = data.verdictCounts ?? null;
+  const splitLine = counts?.changes
+    ? `${fmt.plural(counts.changes, 'change', 'changes')}: ${counts.text}. From ${fmt.plural(counts.pageResults, 'page result', 'page results')}.`
+    : null;
 
   ctx.mount(
     el,
@@ -106,7 +99,7 @@ export async function render(el, ctx) {
       h(
         'div',
         { class: 'tiles' },
-        tile(h, 'Verdicts so far', fmt.num(verdicts.length), splitLine || 'none yet'),
+        tile(h, 'Verdicts so far', fmt.num(counts?.changes ?? 0), splitLine || 'none yet'),
         tile(
           h,
           'Ready to judge',
@@ -360,7 +353,13 @@ async function editNoteForm(ctx) {
 // One verdict as a card. Exported for the page drawer on the Pages page.
 export function verdictCard(v, ctx, { showPage = true } = {}) {
   const { h, fmt } = ctx;
-  const chip = h('span', { class: `chip ${VERDICT_CHIP[v.verdict] ?? ''}` }, v.verdictText);
+  // A verdict another change overlaps cannot be read: its word is what the numbers alone say.
+  const chip = v.overlapping
+    ? [
+        h('span', { class: 'chip chip-warn' }, 'Cannot be read'),
+        h('span', { class: 'chip' }, `On the numbers: ${v.verdictText}`),
+      ]
+    : h('span', { class: `chip ${VERDICT_CHIP[v.verdict] ?? ''}` }, v.verdictText);
   const when = v.judgedOn
     ? `Changed ${fmt.date(v.changeDate)}, judged ${fmt.date(v.judgedOn)}.`
     : v.verdict === 'too-early'
@@ -434,7 +433,7 @@ export function verdictCard(v, ctx, { showPage = true } = {}) {
   const care = careLine(v.nearUpdates, fmt.date);
   const notes = [
     v.clicksTooSmall ? 'Too few clicks to judge on clicks, so the verdict rests on times shown and place.' : null,
-    v.overlapping ? 'Another change landed inside the same 28 days, so part of the move may come from that one.' : null,
+    v.overlapping ? (v.readNote ?? 'Other edits landed in the same window, so this cannot be read.') : null,
     v.partial ? 'The 28 days after are not complete yet, so this is an early read.' : null,
   ].filter(Boolean);
 

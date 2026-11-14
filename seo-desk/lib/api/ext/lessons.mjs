@@ -25,18 +25,23 @@ const TERM = 'Lessons';
 const NUMBER_WORD = { 2: 'two', 3: 'three', 4: 'four', 5: 'five' };
 const agree = NUMBER_WORD[AGREE_TO_PROVE] ?? String(AGREE_TO_PROVE);
 // How a lesson becomes proven or dropped, in plain words, from the rule's own number.
-const RULE_NOTE = `A lesson is a trial until ${agree} results all read better, or all read worse (then it is proven); results that disagree drop it.`;
-const PROVEN_WHEN = `It becomes proven when ${agree} results all read better, or all read worse.`;
+const RULE_NOTE = `A lesson is a trial until ${agree} separate changes all read better, or all read worse (then it is proven); results that disagree drop it. Pages changed in one commit count as one change, and a result another change overlaps does not count.`;
+const PROVEN_WHEN = `It becomes proven when ${agree} separate changes all read better, or all read worse.`;
 const EXPLAIN = 'Things you learned from edits, and whether the results keep saying the same thing.';
 
 const notFound = (message) => Object.assign(new Error(message), { status: 404 });
 
-// What the desk knows about each verdict, by the id /api/results gives it.
+// What the desk knows about each verdict, by the id /api/results gives it. wordOf gives the reading
+// the lessons rule counts: the verdict word, the change it belongs to and whether another change
+// overlaps it (lib/lessons.mjs changeReadings).
 function verdictIndex(model) {
   const byId = new Map(verdictRows(model).map((v) => [v.id, v]));
   return {
     knows: (id) => byId.has(id),
-    wordOf: (id) => byId.get(id)?.verdict ?? null,
+    wordOf: (id) => {
+      const v = byId.get(id);
+      return v ? { verdict: v.verdict, change: v.changeId, overlapping: Boolean(v.overlapping) } : null;
+    },
     row: (id) => byId.get(id) ?? null,
   };
 }
@@ -65,6 +70,7 @@ function present(lesson, index) {
             verdict: v.verdict,
             verdictText: v.verdictText,
             judgedOn: v.judgedOn,
+            overlapping: Boolean(v.overlapping),
           }
         : { id, known: false, page: null, changeDate: null, verdict: null, verdictText: null, judgedOn: null };
     }),

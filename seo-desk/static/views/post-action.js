@@ -2,12 +2,14 @@
 // app.js, so node tests run it with a fake api and a fake confirm box.
 //
 //   postAction({api, confirmBox}, path, body)   sends one action. When Done is refused under the
-//       one edit a week rule (a 409 that carries `frozen`, `frozenPages` or `secondThisWeek`), it asks
+//       one edit a week rule (a 409 that carries `frozen`, `frozenPages`, `recentlyEdited` or
+//       `secondThisWeek`), it asks
 //       once per reason, plainly, then sends the same body again with override. Any other refusal
 //       (a 409 such as "this item is finished, press Reopen first", or any other error) is thrown as
 //       it is, so the page shows the server's sentence as a plain message. Resolves the reply, or
 //       null when the founder backed out.
 //   frozenBox(pages)                             the confirm for one or more frozen pages
+//   recentBox(pages)                             the confirm for pages git shows edited lately
 //   secondEditText(w, ask)                       the words when this week's page edit is made
 //   confirmSecondEdit(confirmBox, w, opts)       asks that question once
 //
@@ -42,13 +44,29 @@ export function frozenBox(pages) {
   };
 }
 
+// pages: [{page, text}] from the server's `recentlyEdited`: a page git shows edited by 10 or more lines
+// in the last 28 days that no card, plan row or edit note recorded. The same second confirm as a
+// frozen page.
+export function recentBox(pages) {
+  const one = pages.length === 1;
+  return {
+    title: one ? 'This page was edited lately' : 'These pages were edited lately',
+    body:
+      `${pages.map((r) => r.text).join('\n')}\n\n` +
+      `Marking this done starts a new 28 days from today, and the verdict on the earlier ${one ? 'edit' : 'edits'} will be muddied by this one.`,
+    confirmLabel: 'Mark it done anyway',
+    danger: true,
+  };
+}
+
 // The one-edit-a-week fields of a refusal, or null when it carries none.
 export function editRefusal(err) {
   if (err?.status !== 409) return null;
   const d = err.data ?? {};
   const frozen = Array.isArray(d.frozenPages) && d.frozenPages.length ? d.frozenPages : d.frozen ? [d.frozen] : [];
+  const recent = Array.isArray(d.recentlyEdited) ? d.recentlyEdited : [];
   const second = d.secondThisWeek ?? null;
-  return frozen.length || second ? { frozen, second } : null;
+  return frozen.length || recent.length || second ? { frozen, recent, second } : null;
 }
 
 export async function postAction({ api, confirmBox }, path, body) {
@@ -58,6 +76,7 @@ export async function postAction({ api, confirmBox }, path, body) {
     const why = body?.action === 'done' ? editRefusal(err) : null;
     if (!why) throw err;
     if (why.frozen.length && !(await confirmBox(frozenBox(why.frozen)))) return null;
+    if (why.recent?.length && !(await confirmBox(recentBox(why.recent)))) return null;
     if (why.second && !(await confirmSecondEdit(confirmBox, why.second))) return null;
     return api.post(path, { ...body, override: true });
   }

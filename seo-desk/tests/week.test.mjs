@@ -381,8 +381,11 @@ test('proposeTop5 follows the recipe and never returns two page edit cards', () 
   assert.equal(cards.filter((c) => c.isPageEdit).length, 1);
   assert.equal(new Set(cards.map((c) => c.id)).size, cards.length, 'ids are unique');
   for (const c of cards) {
+    // A verdict card reports, so it says it carries no Hypothesis chip (hypothesis: false).
     assert.deepEqual(
-      Object.keys(c).sort(),
+      Object.keys(c)
+        .filter((k) => !(k === 'hypothesis' && c.source === 'verdict'))
+        .sort(),
       [
         'action',
         'eligibility',

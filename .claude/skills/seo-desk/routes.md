@@ -18,15 +18,29 @@ All routes are GET, base `http://127.0.0.1:8766`. Every reply (except `/api/sour
 ## Plan
 
 `/api/week`: `weekOf`, `weekLabel`, `planSize` (3 or 5), `top5Source` (proposed, chosen or locked),
-`standingLine`, `top5[]`, `leaveAlone[]`, `worries[]`, `waiting[]`, `opportunities[]` (the next ten),
-`blockedOnYou[]`, `locked`, `pastWeeks[]`. A top-five card: `id`, `title`, `typeLabel`, `term`,
-`explain`, `measured`, `action`, `test`, `eligibility {eligible, from, text}`, `page`, `isPageEdit`,
-`slot` (new-post, page-edit, verdict, worry, other), `source`, `oppId`, `state`. A card on a chosen
-or locked week can also carry `weekEditDone {page, date, dateText}` (or null) when another page edit
-is already dated this week. `leaveAlone[]`: `{page, reason, until}`; `until` is null for a split
-he marked leave alone on the Cannibalization page (no end date). `worries[]`: `{id, kind, page, title, measured, fix, test, isPageEdit}`.
-`waiting[]`: `{title, date, dateText, kind: verdict|frozen}`. Ignore `sinceLastVisit`; it depends on
-a write.
+`standingLine`, `top5[]`, `leaveAlone[]`, `worries[]`, `waiting[]`, `nextVerdict`, `opportunities[]`
+(the next ten), `counts {openOpportunities, worries {total, needLook, waiting}}`, `blockedOnYou[]`,
+`locked`, `pastWeeks[]`. A top-five card: `id`, `title`, `typeLabel`, `term`, `explain`, `measured`,
+`action`, `test`, `eligibility`, `page`, `isPageEdit`, `slot` (new-post, page-edit, verdict, worry,
+other), `source`, `oppId`, `state`. A card that only reports (this week's edit is done, a verdict)
+has `eligibility: null` and `hypothesis: false`. A card on a chosen or locked week can also carry
+`weekEditDone {page, date, dateText}` (or null) when another page edit is already dated this week.
+`eligibility` (the same on every list: the five, the cards beside it, opportunities, insight cards
+built from opportunities, worries) is `{eligible, from, text}` plus one of: nothing (free, or
+frozen: "Eligible from 7 December"), `recentEdit {page, date, lines, until}` (git shows an edit of
+10 or more lines in the last 28 days that no card, plan row or edit note recorded: "Edited 9 November
+(found in git, 299 lines). Leave it until 7 December unless that edit was minor"), or `weekEdit {page,
+date}` (this week's one page edit is already made: "Next page edit from 16 November"). A free page
+with smaller git edits adds `touched[]` and `touchedText` ("Also touched on 9 November (3 lines)").
+`leaveAlone[]`: `{page, reason, until, foundInGit?}`; `until` is null for a split he marked leave
+alone on the Cannibalization page (no end date); `foundInGit` marks a page held by a git edit.
+`worries[]`: `{id, kind, page, title, measured, fix, test, isPageEdit, eligibility, waitUntil?,
+waitUntilText?}`. A worry with `waitUntil` is on a page edited lately: its fix is to leave it alone
+until that date, and it is not counted in `counts.worries.needLook`. A worse verdict that another
+change overlaps is never a worry. `waiting[]`: `{title, date, dateText, kind: verdict|frozen}`; a
+verdict row with `count` above 1 folds that day's page changes (`pages[]`). `nextVerdict`: `{ready,
+date, dateText, note}`; `ready` is true when change-log has edits due now ("12 page changes from 7
+commits ready to judge"). Ignore `sinceLastVisit`; it depends on a write.
 
 ## Search
 
@@ -207,18 +221,23 @@ links: request indexing), `not-indexed-excluded` (the page itself keeps it out; 
 ## Workspace
 
 `/api/results`: `verdicts[] {id, page, batch, pages, changeDate, judgedOn, verdict, verdictText,
-summary, before, after, control {impPct}, impChange, relImpPct, overlapping, clicksTooSmall,
-nearUpdates, nearUpdatesNote}`, `due[]`, `pending[]`, `frozen[]`, `moneyPageVerdicts[]`,
-`googleUpdatesNote`. `verdict` is better, worse, mixed, flat, insufficient-data (shown as "Too small
+summary, before, after, control {impPct}, impChange, relImpPct, overlapping, readable, readNote,
+changeId, clicksTooSmall, nearUpdates, nearUpdatesNote}`, `verdictCounts {changes, pageResults,
+byWord, text}`, `due[]`, `pending[]`, `frozen[]`, `moneyPageVerdicts[]` (with `nearUpdates` too),
+`googleUpdatesNote`. `verdictCounts` counts by distinct change: rows that share a commit (a batch and
+its pages) share a `changeId` and are one change; "too early" is not a verdict and is left out;
+`byWord.unreadable` counts changes another change overlaps. Quote its `text`. `verdict` is better, worse, mixed, flat, insufficient-data (shown as "Too small
 to tell"); a page not judged yet is pending or "Too early". `summary` is a ready-made sentence with
 both date ranges; quote it rather than rebuilding the ranges. `control.impPct` is how the median
 page moved over the same days (a fraction). `nearUpdates` (`[{label, date}]`) means a Google
 ranking update fell inside the judged window: mention it as a caution, never as the cause.
-`overlapping` means another change touched the page, so the verdict cannot be pinned on one edit.
+`overlapping` means other edits landed in the same window, so the verdict cannot be read (`readNote`
+says so, and `summary` starts with it).
 
 `/api/lessons`: `counts {trial, proven, dropped, all}`, `items[] {id, text, status, manual,
-statusNote, provenDirection, verdicts[{id, known, page, changeDate, verdict, verdictText}]}`.
-`proven` means three or more linked verdicts agree and are all better or all worse;
+statusNote, provenDirection, verdicts[{id, known, page, changeDate, verdict, verdictText,
+overlapping}]}`. `proven` means three or more distinct linked changes agree and are all better or
+all worse (pages changed in one commit are one change, and an overlapped verdict does not count);
 `provenDirection` is then `helps` or `hurts`. `dropped` means the linked verdicts disagree. Three
 "no real change" or three "mixed" stay a trial. `statusNote` is one plain sentence on why.
 
