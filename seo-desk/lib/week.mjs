@@ -10,6 +10,7 @@ import { SITE } from '../../scripts/lib/change-log-core.mjs';
 import { eligibility, editThisWeek, recentEditText } from './lifecycle.mjs';
 import { longDate, longRange, plain } from './text.mjs';
 import { groupChanges, competitorWorries } from './competitor-changes.mjs';
+import { readChanges, isBatchVerdict } from './changes.mjs';
 
 const OK_ELIGIBILITY = { eligible: true, from: null };
 
@@ -233,19 +234,22 @@ function registryFailures(snaps) {
   return out;
 }
 
-const isBatch = (v) => v.kind === 'batch' || (Array.isArray(v.pages) && !v.url);
+const isBatch = isBatchVerdict;
 
 // A worse verdict that is clean (no other change landed in its 28 days): an observation, never "made
-// things worse", with the cautions Did it work shows. A verdict flagged overlapping cannot be read, so
-// it is not a worry. cautionsOf(v) gives the caution sentences for one verdict row (the control, a
-// Google ranking update inside its dates, a one week spike in the before window).
+// things worse", with the cautions Did it work shows. Each change is read once, the way Did it work
+// reads it (lib/changes.mjs readChanges): only a change that reads worse is a worry, through the rows
+// its reading came from. A change that reads mixed, or cannot be read, raises none. cautionsOf(v)
+// gives the caution sentences for one verdict row (the control, a Google ranking update inside its
+// dates, a one week spike in the before window).
 function worseVerdicts(snaps, { frozen, recent, today, cautionsOf }) {
   const local = snaps?.local?.data ?? {};
-  return (local.verdicts ?? [])
-    .filter(
-      (v) =>
-        v.verdict === 'worse' && !v.overlapping && v.judgedOn && daysBetween(v.judgedOn, today) <= VERDICT_RECENT_DAYS
-    )
+  const rows = local.verdicts ?? [];
+  const used = readChanges(rows)
+    .changes.filter((c) => c.word === 'worse')
+    .flatMap((c) => c.used.map((i) => rows[i]));
+  return used
+    .filter((v) => v.judgedOn && daysBetween(v.judgedOn, today) <= VERDICT_RECENT_DAYS)
     .map((v) => {
       const numbers = (who, were) =>
         `In the 28 days before the change ${who} ${were} shown ${v.before?.impressions ?? 0} times at an average place of ${

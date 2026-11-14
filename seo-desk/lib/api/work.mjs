@@ -5,6 +5,7 @@
 import { readJson } from '../store.mjs';
 import { WINDOW_DAYS, GSC_LAG_DAYS, isDueDate, windowsFor } from '../../../scripts/lib/change-log-core.mjs';
 import { judgePage } from '../verdicts.mjs';
+import { changeIdsOf, readChanges, isBatchVerdict } from '../changes.mjs';
 import { addDays, mondayOf } from '../dates.mjs';
 import { deliberateEdits as lifecycleEdits, eligibility, withEligibilityText, recentEditText } from '../lifecycle.mjs';
 import {
@@ -302,36 +303,8 @@ function verdictSentence({ verdict, changeDate, subject, before, after, controlP
 // The sentence Did it work shows on a verdict another change overlaps.
 export const OVERLAP_NOTE = 'Other edits landed in the same window, so this cannot be read.';
 
-// One id per distinct change: verdict rows that share a commit (a batch commit and its pages) are one
-// change. A row with no commit is a change of its own. rows: change-log-verdicts.jsonl rows.
-// Returns an array of change ids in the order of `rows`.
-export function changeIdsOf(rows) {
-  const parent = new Map();
-  const find = (x) => {
-    while (parent.get(x) !== x) {
-      parent.set(x, parent.get(parent.get(x)));
-      x = parent.get(x);
-    }
-    return x;
-  };
-  const join = (a, b) => {
-    for (const k of [a, b]) if (!parent.has(k)) parent.set(k, k);
-    parent.set(find(a), find(b));
-  };
-  const keys = rows.map((v, i) => {
-    const hashes = (v.commits ?? []).map((c) => c?.hash).filter(Boolean);
-    const own = `row:${v.slug}|${v.changeDate}|${i}`;
-    if (!parent.has(own)) parent.set(own, own);
-    for (const h of hashes) join(own, `commit:${h}`);
-    return own;
-  });
-  const names = new Map();
-  return keys.map((k) => {
-    const root = find(k);
-    if (!names.has(root)) names.set(root, `change-${names.size + 1}`);
-    return names.get(root);
-  });
-}
+// One id per distinct change (lib/changes.mjs), kept here for the readers that import it from work.
+export { changeIdsOf };
 
 const COUNT_WORDS = [
   ['better', 'better'],
@@ -343,30 +316,39 @@ const COUNT_WORDS = [
 ];
 
 // The verdicts so far, counted by distinct change (a batch commit and its pages are one; a money page
-// verdict is its own), with "too early" left out because it is not a verdict. A change reads as its
-// batch verdict when it has one, else as its pages when they agree (mixed when they do not), and as
-// "cannot be read" when another change overlaps it. {changes, pageResults, byWord, text}.
+// verdict is its own), with "too early" left out because it is not a verdict. Each change is read
+// once, by readChanges (lib/changes.mjs): its batch verdict when no other change overlaps the batch,
+// else its page rows no other change overlaps (one word when they agree, mixed when they do not), and
+// "cannot be read" when none can be read. The list and the week's worries use the same reading.
+// {changes, pageResults, byWord, text}.
 export function verdictCounts(model) {
-  const rows = verdictRows(model);
-  const groups = new Map();
-  for (const r of rows) {
-    if (!groups.has(r.changeId)) groups.set(r.changeId, []);
-    groups.get(r.changeId).push(r);
-  }
-  const words = [];
-  for (const list of groups.values()) {
-    const batch = list.find((r) => r.batch);
-    const use = batch ? [batch] : list;
-    if (use.some((r) => r.overlapping)) words.push('unreadable');
-    else words.push(new Set(use.map((r) => r.verdict)).size === 1 ? use[0].verdict : 'mixed');
-  }
+  const raw = model.data.local?.verdicts ?? [];
+  const words = readChanges(raw).changes.map((c) => c.word);
   const money = moneyPageVerdicts(model).filter((m) => m.status === 'judged');
   for (const m of money) words.push(m.verdict);
   const byWord = Object.fromEntries(COUNT_WORDS.map(([k]) => [k, words.filter((w) => w === k).length]));
   const text = COUNT_WORDS.filter(([k]) => byWord[k])
     .map(([k, word]) => `${byWord[k]} ${word}`)
     .join(', ');
-  return { changes: words.length, pageResults: rows.length + money.length, byWord, text: text || null };
+  return { changes: words.length, pageResults: raw.length + money.length, byWord, text: text || null };
+}
+
+// The sentence a row of a change with more than one row carries, so the list says how the whole
+// change reads (the same reading the Verdicts so far tile counts). null for a change of one row.
+function changeNoteOf(change, raw) {
+  if (change.rows.length < 2) return null;
+  if (change.word === 'unreadable')
+    return 'No page of this change can be read on its own, because other edits landed in the same window, so the change cannot be read.';
+  const label = VERDICT_TEXT[change.word] ?? change.word;
+  const first = raw[change.used[0]];
+  if (change.used.length === 1 && isBatchVerdict(first))
+    return `This change reads as ${label}, from its pages judged together.`;
+  const n = change.used.length;
+  const words = COUNT_WORDS.map(([k, word]) => [word, change.used.filter((i) => raw[i].verdict === k).length])
+    .filter(([, c]) => c)
+    .map(([word, c]) => `${c} ${word}`);
+  const which = n === 1 ? 'its 1 page that no other edit overlaps' : `its ${n} pages that no other edit overlaps`;
+  return `This change reads as ${label}, from ${which}${change.word === 'mixed' ? ` (${words.join(', ')})` : ''}.`;
 }
 
 // docs/seo/change-log-verdicts.jsonl, shaped for the page. A batch is several pages judged as one.
@@ -375,9 +357,11 @@ export function verdictCounts(model) {
 export function verdictRows(model) {
   const local = model.data.local ?? {};
   const raw = local.verdicts ?? [];
-  const ids = changeIdsOf(raw);
+  const { ids, changes } = readChanges(raw);
+  const changeOf = new Map(changes.map((c) => [c.id, c]));
   return raw.map((v, i) => {
-    const batch = v.kind === 'batch' || (Array.isArray(v.pages) && !v.url);
+    const change = changeOf.get(ids[i]);
+    const batch = isBatchVerdict(v);
     const near = updatesNear(model, v.changeDate);
     const pages = batch ? (v.pages ?? []).map((slug) => pageForSlug(slug, local)) : [];
     return {
@@ -401,6 +385,10 @@ export function verdictRows(model) {
       nearUpdatesNote: near.length ? NEAR_UPDATE_NOTE : null,
       overlapping: Boolean(v.overlapping),
       changeId: ids[i],
+      // How the whole change this row belongs to reads (the word the Verdicts so far tile counts).
+      changeVerdict: change.word,
+      changeVerdictText: change.word === 'unreadable' ? 'Cannot be read' : (VERDICT_TEXT[change.word] ?? change.word),
+      changeNote: changeNoteOf(change, raw),
       readable: !v.overlapping,
       readNote: v.overlapping ? OVERLAP_NOTE : null,
       clicksTooSmall: Boolean(v.clicksTooSmall),

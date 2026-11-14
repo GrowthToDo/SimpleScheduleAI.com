@@ -543,13 +543,13 @@ test('C2, C3, C5: the week page agrees with the server on the freeze, the git ed
   assert.equal(doneCard.hypothesis, false);
 });
 
-test('C7, C6, L6: Did it work counts distinct changes, reads an overlapped verdict as unreadable, and cautions money pages', () => {
+test('C7, C6, L6, M1: Did it work counts distinct changes, reads an overlapped batch from its clean pages, and cautions money pages', () => {
   const model = weekFixture();
   const r = work.resultsView(model);
   assert.equal(r.verdictCounts.changes, 2, 'the batch commit and its pages are one change');
-  assert.equal(r.verdictCounts.byWord.unreadable, 1);
+  assert.equal(r.verdictCounts.byWord.unreadable, 0, 'the overlapped batch is read from its two clean pages');
   assert.equal(r.verdictCounts.byWord.better, 1);
-  assert.equal(r.verdictCounts.text, '1 better, 1 cannot be read');
+  assert.equal(r.verdictCounts.text, '1 better, 1 worse');
   const batch = r.verdicts.find((x) => x.batch);
   assert.equal(batch.readNote, 'Other edits landed in the same window, so this cannot be read.');
   assert.match(batch.summary, /^Other edits landed in the same window, so this cannot be read\./);

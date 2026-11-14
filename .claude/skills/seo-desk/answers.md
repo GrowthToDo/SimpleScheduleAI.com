@@ -78,6 +78,8 @@ Use the item's own `recommendation` and `test`. The Growing lists (`pages.growin
 - `insufficient-data` reads "Too small to tell". Pending or too early reads "too early to say" with
   the `judgeFromText` date.
 - If `overlapping` is true, say other edits landed in the same window, so the verdict cannot be read.
+- When rows share a `changeId`, they are one change: give the change's reading from `changeNote` (the same
+  reading the count uses), then the rows.
   Never present its word as a result. If `nearUpdates` is present (money pages too), add one line: a
   Google ranking update fell inside the window, so read it with care. Never call the update the cause.
 - A "Better" verdict is not a result for sales.

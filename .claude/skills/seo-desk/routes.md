@@ -36,8 +36,9 @@ with smaller git edits adds `touched[]` and `touchedText` ("Also touched on 9 No
 alone on the Cannibalization page (no end date); `foundInGit` marks a page held by a git edit.
 `worries[]`: `{id, kind, page, title, measured, fix, test, isPageEdit, eligibility, waitUntil?,
 waitUntilText?}`. A worry with `waitUntil` is on a page edited lately: its fix is to leave it alone
-until that date, and it is not counted in `counts.worries.needLook`. A worse verdict that another
-change overlaps is never a worry. `waiting[]`: `{title, date, dateText, kind: verdict|frozen}`; a
+until that date, and it is not counted in `counts.worries.needLook`. A worse verdict worry comes only
+from a change that reads worse the way Did it work reads it (`changeVerdict`); a verdict that another
+change overlaps, or a change that reads mixed, is never a worry. `waiting[]`: `{title, date, dateText, kind: verdict|frozen}`; a
 verdict row with `count` above 1 folds that day's page changes (`pages[]`). `nextVerdict`: `{ready,
 date, dateText, note}`; `ready` is true when change-log has edits due now ("12 page changes from 7
 commits ready to judge"). Ignore `sinceLastVisit`; it depends on a write.
@@ -222,11 +223,16 @@ links: request indexing), `not-indexed-excluded` (the page itself keeps it out; 
 
 `/api/results`: `verdicts[] {id, page, batch, pages, changeDate, judgedOn, verdict, verdictText,
 summary, before, after, control {impPct}, impChange, relImpPct, overlapping, readable, readNote,
-changeId, clicksTooSmall, nearUpdates, nearUpdatesNote}`, `verdictCounts {changes, pageResults,
+changeId, changeVerdict, changeVerdictText, changeNote, clicksTooSmall, nearUpdates, nearUpdatesNote}`,
+`verdictCounts {changes, pageResults,
 byWord, text}`, `due[]`, `pending[]`, `frozen[]`, `moneyPageVerdicts[]` (with `nearUpdates` too),
 `googleUpdatesNote`. `verdictCounts` counts by distinct change: rows that share a commit (a batch and
 its pages) share a `changeId` and are one change; "too early" is not a verdict and is left out;
-`byWord.unreadable` counts changes another change overlaps. Quote its `text`. `verdict` is better, worse, mixed, flat, insufficient-data (shown as "Too small
+each change is read once: its batch verdict when no other change overlaps the batch, else its page
+rows no other change overlaps (one word when they agree, mixed when they do not); `byWord.unreadable`
+counts changes with no row that can be read. Every row carries that reading as `changeVerdict`
+(`changeVerdictText`), and a row of a change with more than one row has `changeNote`, one sentence on
+how the whole change reads. Quote its `text`. `verdict` is better, worse, mixed, flat, insufficient-data (shown as "Too small
 to tell"); a page not judged yet is pending or "Too early". `summary` is a ready-made sentence with
 both date ranges; quote it rather than rebuilding the ranges. `control.impPct` is how the median
 page moved over the same days (a fraction). `nearUpdates` (`[{label, date}]`) means a Google

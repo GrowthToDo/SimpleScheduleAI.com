@@ -434,6 +434,8 @@ export function verdictCard(v, ctx, { showPage = true } = {}) {
   const notes = [
     v.clicksTooSmall ? 'Too few clicks to judge on clicks, so the verdict rests on times shown and place.' : null,
     v.overlapping ? (v.readNote ?? 'Other edits landed in the same window, so this cannot be read.') : null,
+    // How the whole change reads, the same reading the Verdicts so far tile counts.
+    v.changeNote ?? null,
     v.partial ? 'The 28 days after are not complete yet, so this is an early read.' : null,
   ].filter(Boolean);
 
