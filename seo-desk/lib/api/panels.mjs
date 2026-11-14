@@ -31,9 +31,10 @@ import {
   classifyChange,
   competitorItemId,
   eventLine,
-  safeHttps,
+  summaryLine,
+  pageLinks,
   hostOf,
-  dossierEntryAfter,
+  dossierNoteFor,
   STALE_CHECK_DAYS,
 } from '../competitor-changes.mjs';
 
@@ -499,18 +500,13 @@ export function competitorsView(model) {
   const hosts = [...byHost.values()].map((g) => {
     const counts = countChanges(g);
     const material = g.events.filter((e) => e.material);
-    const itemId = material.length ? competitorItemId(g.host, g.events) : null;
-    const it = itemId ? itemOf(model, itemId) : null;
     const checkedOn = g.checkedOn ?? c.lastRun;
     const age = checkedOn ? daysBetween(checkedOn, model.today) : null;
-    const noted = dossierEntryAfter(c.dossierLogDates ?? [], checkedOn);
-    const links = [];
-    for (const e of material)
-      for (const p of e.pages) {
-        const url = safeHttps(p);
-        if (url && !links.some((x) => x.url === url))
-          links.push({ url, label: new URL(url).pathname.replace(/\/+$/, '') || 'home page' });
-      }
+    // A log row dated on or after the check that names this competitor: the dossier already has it.
+    const noted = dossierNoteFor(g.host, c.dossierLog ?? [], checkedOn);
+    // A material change the dossier already notes is shown here but is not a worry or a card.
+    const itemId = material.length && !noted ? competitorItemId(g.host, g.events) : null;
+    const it = itemId ? itemOf(model, itemId) : null;
     return {
       host: g.host,
       itemId,
@@ -524,24 +520,21 @@ export function competitorsView(model) {
       watchedPages: watchedPages.get(g.host) ?? 0,
       counts,
       countText: countText(counts),
-      summary: !counts.events
-        ? 'Nothing changed on the pages we watch.'
-        : material.length
-          ? `${material.length === 1 ? 'One change' : `${material.length} changes`} worth reading.`
-          : 'Only headings or small text changes. Nothing on price, title, description, headline or buttons.',
+      materialNoted: Boolean(material.length && noted),
+      summary: summaryLine(g.events),
       events: g.events.map((e) => ({
         kind: e.kind,
         plain: e.plain,
         line: material.includes(e) ? eventLine(g.host, e).sentence : e.plain,
-        pages: e.pages.map(safeHttps).filter(Boolean),
+        pages: pageLinks([e]).map((p) => p.url),
         pageNames: e.pageNames,
         onText: e.onText,
         material: e.material,
       })),
       sentinels: g.sentinels,
-      pageLinks: links,
+      pageLinks: pageLinks(material),
       loggedInDossier: Boolean(noted),
-      dossierLoggedOn: noted,
+      dossierNotedOn: noted,
       dossierText: noted ? `Already noted in the competitor dossier on ${longDate(noted)}.` : null,
     };
   });

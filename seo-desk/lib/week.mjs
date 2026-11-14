@@ -145,13 +145,18 @@ function crawlIssues(snaps) {
 }
 
 // One worry per competitor that made a change worth reading (a price, a headline, a title, a
-// description, a button, a pricing page that appeared) and that the founder has not marked Seen.
+// description, a button, a pricing page that appeared) that the founder has not marked Seen and the
+// competitor dossier does not already note for that host.
 // Lists that repeat on several pages, small text changes and pricing sentinels answering 404 are
 // not worries; they show on the Competitors page only (see lib/competitor-changes.mjs).
 function competitorChanges(snaps, today, items) {
   const c = snaps?.local?.data?.competitors;
   const snapshots = c?.snapshots ? new Set(c.snapshots.map((s) => s.url)) : null;
-  return competitorWorries(groupChanges(c?.watch ?? [], snapshots), { items, today });
+  return competitorWorries(groupChanges(c?.watch ?? [], snapshots), {
+    items,
+    today,
+    dossierLog: c?.dossierLog ?? [],
+  });
 }
 
 function registryFailures(snaps) {

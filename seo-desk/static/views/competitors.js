@@ -63,7 +63,11 @@ export async function render(el, ctx) {
     : 'The desk has never checked competitors. Press Check competitors now.';
   const second = data.lastRun
     ? unseen.length || added
-      ? `${fmt.plural(unseen.length, 'competitor has', 'competitors have')} a change worth reading that you have not marked as seen, and ${fmt.plural(added, 'new page has', 'new pages have')} appeared on their sitemaps.`
+      ? `${
+          unseen.length
+            ? `${fmt.plural(unseen.length, 'competitor has', 'competitors have')} a change worth reading that you have not marked as seen`
+            : 'No competitor has a change you still need to read'
+        }, and ${fmt.plural(added, 'new page has', 'new pages have')} appeared on their sitemaps.`
       : 'Nothing needs reading right now. Small changes and lists are shown below, but they are not worries.'
     : '';
 
@@ -204,6 +208,18 @@ function changesSection(hosts, data, ctx) {
     );
   };
 
+  // One link per changed page, from the desk's own watch data and https only.
+  const openLinks = (g) =>
+    g.pageLinks
+      .filter((p) => /^https:\/\//.test(p.url))
+      .map((p) =>
+        h(
+          'a',
+          { class: 'btn btn-small', href: p.url, target: '_blank', rel: 'noopener noreferrer', title: p.url },
+          g.pageLinks.length === 1 ? 'Open their page' : `Open ${p.label}`
+        )
+      );
+
   const hostCard = (g) => {
     const material = g.events.filter((e) => e.material);
     const other = g.events.filter((e) => !e.material);
@@ -214,9 +230,11 @@ function changesSection(hosts, data, ctx) {
       ? h('span', { class: 'chip chip-accent' }, 'Seen')
       : g.worry
         ? h('span', { class: 'chip chip-warn' }, 'Worth reading')
-        : g.events.length
-          ? h('span', { class: 'chip' }, 'Nothing to act on')
-          : h('span', { class: 'chip' }, 'No change');
+        : g.materialNoted
+          ? h('span', { class: 'chip chip-accent' }, 'Already noted')
+          : g.events.length
+            ? h('span', { class: 'chip' }, 'Nothing to act on')
+            : h('span', { class: 'chip' }, 'No change');
     return h(
       'div',
       { class: `cp-change${g.seen ? ' is-seen' : ''}`, dataset: { host: g.host } },
@@ -290,21 +308,7 @@ function changesSection(hosts, data, ctx) {
                   'Mark as not seen'
                 )
               : [
-                  g.pageLinks
-                    .filter((p) => /^https:\/\//.test(p.url))
-                    .map((p) =>
-                      h(
-                        'a',
-                        {
-                          class: 'btn btn-small',
-                          href: p.url,
-                          target: '_blank',
-                          rel: 'noopener noreferrer',
-                          title: p.url,
-                        },
-                        g.pageLinks.length === 1 ? 'Open their page' : `Open ${p.label}`
-                      )
-                    ),
+                  openLinks(g),
                   h('button', { type: 'button', class: 'btn btn-small', onclick: () => markSeen(g, 'done') }, 'Seen'),
                   h(
                     'button',
@@ -313,7 +317,9 @@ function changesSection(hosts, data, ctx) {
                   ),
                 ]
           )
-        : null
+        : g.materialNoted
+          ? h('div', { class: 'row', style: { marginTop: '14px' } }, openLinks(g))
+          : null
     );
   };
 
@@ -327,7 +333,7 @@ function changesSection(hosts, data, ctx) {
       h(
         'span',
         { class: 'section-note' },
-        'A price, title, description, headline, button or pricing page is worth reading. Lists and small text changes are shown but are not worries.'
+        'A price, title, description, headline, button or pricing page is worth reading, unless the competitor dossier already notes it. Lists and small text changes are shown but are not worries.'
       )
     ),
     changed.length

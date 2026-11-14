@@ -285,14 +285,20 @@ function localData(overrides = {}) {
         { url: 'https://rival.example/', fetchedAt: '2026-11-01', changes: ['h2s added: "A new post"'] },
         { url: 'https://rival.example/about', fetchedAt: '2026-11-01', changes: ['h2s added: "A new post"'] },
         { url: 'quiet.example__pricing', fetchedAt: '2026-11-01', changes: ['unreachable (HTTP 404)'] },
+        { url: 'https://noted.example/', fetchedAt: '2026-11-01', changes: ['title: "Old" -> "New"'] },
       ],
       snapshots: [
         { key: 'rival.example__pricing', url: 'https://rival.example/pricing', fetchedAt: '2026-11-01' },
         { key: 'rival.example__home', url: 'https://rival.example/', fetchedAt: '2026-11-01' },
         { key: 'rival.example__about', url: 'https://rival.example/about', fetchedAt: '2026-11-01' },
         { key: 'quiet.example__home', url: 'https://quiet.example/', fetchedAt: '2026-11-01' },
+        { key: 'noted.example__home', url: 'https://noted.example/', fetchedAt: '2026-11-01' },
       ],
-      dossierLogDates: ['2026-11-03', '2026-10-20'],
+      dossierLog: [
+        { date: '2026-11-03', text: ' Refreshed ratings for an unrelated vendor, Plainco Staffing.' },
+        { date: '2026-11-01', text: ' Monthly check. Noted Example changed the page title on its home page.' },
+        { date: '2026-10-20', text: ' Rival Example, older note before the check.' },
+      ],
       lastRun: '2026-11-01',
     },
     edits: [
@@ -1277,9 +1283,23 @@ test('competitors: grouped events, sentinels, the dossier note, and Seen that re
   assert.equal(heading.material, false);
   assert.equal(rival.events.find((e) => e.kind === 'price').material, true);
   assert.equal(/h2s/.test(JSON.stringify(c.hosts)), false, 'never the raw wording');
-  assert.equal(rival.loggedInDossier, true);
-  assert.equal(rival.dossierLoggedOn, '2026-11-03');
-  assert.equal(rival.dossierText, 'Already noted in the competitor dossier on 3 November.');
+  // The unrelated 3 November row does not mark this host; the older Rival row is before the check.
+  assert.equal(rival.loggedInDossier, false);
+  assert.equal(rival.dossierNotedOn, null);
+  assert.equal(rival.dossierText, null);
+  assert.equal(rival.materialNoted, false);
+  assert.equal(rival.summary, 'One change worth reading.');
+  // A material change the dossier already notes for that host: shown, marked, but no worry and no card.
+  const noted = c.hosts.find((h) => h.host === 'noted.example');
+  assert.equal(noted.loggedInDossier, true);
+  assert.equal(noted.dossierNotedOn, '2026-11-01');
+  assert.equal(noted.dossierText, 'Already noted in the competitor dossier on 1 November.');
+  assert.equal(noted.materialNoted, true);
+  assert.equal(noted.worry, false);
+  assert.equal(noted.itemId, null);
+  assert.equal(noted.counts.material, 1);
+  assert.deepEqual(noted.pageLinks, [{ url: 'https://noted.example/', label: 'home page' }]);
+  assert.equal(c.hosts.find((h) => h.host === 'quiet.example').loggedInDossier, false);
   assert.deepEqual(rival.pageLinks, [{ url: 'https://rival.example/pricing', label: '/pricing' }]);
   assert.match(rival.itemId, /^competitor-change:rival\.example:[0-9a-f]{10}$/);
   // A pricing address that never answered is a sentinel: no event, never counted.
@@ -1287,11 +1307,16 @@ test('competitors: grouped events, sentinels, the dossier note, and Seen that re
   assert.deepEqual(quiet.counts, { events: 0, pages: 0, material: 0 });
   assert.deepEqual(quiet.sentinels, [{ url: null, state: 'still-missing', plain: 'Still no pricing page' }]);
   assert.equal(quiet.worry, false);
-  assert.equal(c.totals.events, 2);
+  assert.equal(c.totals.events, 3);
   assert.equal(c.worries, 1);
 
   // The card in the week: no test, no hypothesis, no eligibility, no Search Console, pages to open.
   const w = (await get('/api/week')).json;
+  assert.deepEqual(
+    w.worries.filter((x) => x.kind === 'competitor-change').map((x) => x.competitor.host),
+    ['rival.example'],
+    'the change the dossier already notes is not a worry'
+  );
   const worry = w.worries.find((x) => x.kind === 'competitor-change');
   assert.equal(worry.id, rival.itemId);
   assert.equal(worry.test, undefined);

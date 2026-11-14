@@ -168,19 +168,28 @@ test('groupChanges: a page that used to answer and now gives an error is materia
 });
 
 test('groupChanges: material kinds and non-material kinds', () => {
-  const rows = rowsFor(
-    'rival.example',
-    ['/'],
-    [
-      'prices added: "$9"',
-      'ctas added: "Try it free"',
-      'title: "A" -> "B"',
-      'description: "C" -> "D"',
-      'h1: "E" -> "F"',
-      'h2s added: "G"',
-      'body text changed with no heading/CTA/price move (+2 words)',
-    ]
-  );
+  const rows = [
+    ...rowsFor(
+      'rival.example',
+      ['/plans'],
+      [
+        'prices added: "$9"',
+        'ctas added: "Try it free"',
+        'title: "A" -> "B"',
+        'description: "C" -> "D"',
+        'h1: "E" -> "F"',
+      ]
+    ),
+    ...rowsFor(
+      'rival.example',
+      ['/'],
+      [
+        'h2s added: "G"',
+        'body text changed with no heading/CTA/price move (+2 words)',
+        'something the log never said before',
+      ]
+    ),
+  ];
   const [g] = cc.groupChanges(rows);
   const byKind = Object.fromEntries(g.events.map((e) => [e.kind, e.material]));
   assert.deepEqual(byKind, {
@@ -191,6 +200,7 @@ test('groupChanges: material kinds and non-material kinds', () => {
     h1: true,
     headings: false,
     body: false,
+    other: false,
   });
 });
 
@@ -322,23 +332,69 @@ test('week.worries: seen state comes from the items passed in', () => {
 
 // ---------------------------------------------------------------- the dossier's log
 
-test('the dossier maintenance log is read from its table rows', () => {
-  const md = [
-    '| 2026-01-01 | not in the log, above the heading |',
-    '## Maintenance Log',
-    '',
-    '| Date | Action |',
-    '| --- | --- |',
-    '| 2026-11-03 | **later** note |',
-    '| 2026-11-01 | the check note |',
-    '| 2026-10-20 | older |',
-    'some prose that is not a row',
-  ].join('\n');
-  assert.deepEqual(cc.parseDossierLogDates(md), ['2026-11-03', '2026-11-01', '2026-10-20']);
-  assert.equal(cc.dossierEntryAfter(['2026-11-03', '2026-11-01', '2026-10-20'], '2026-11-01'), '2026-11-01');
-  assert.equal(cc.dossierEntryAfter(['2026-11-03', '2026-10-20'], '2026-11-01'), '2026-11-03');
-  assert.equal(cc.dossierEntryAfter(['2026-10-20'], '2026-11-01'), null);
-  assert.deepEqual(cc.parseDossierLogDates('nothing here'), []);
+const LOG = [
+  '| 2026-01-01 | Rival Example before the heading, not in the log |',
+  '## Maintenance Log',
+  '',
+  '| Date | Action |',
+  '| --- | --- |',
+  '| 2026-11-03 | **Later** note about an unrelated vendor, Plainco Staffing |',
+  '| 2026-11-01 | Monthly check. **Rival Example homepage headline moved.** Northwind-Health sentinels still 404 |',
+  '| 2026-10-20 | older note about rival.example |',
+  'some prose that is not a row',
+].join('\n');
+
+test('the dossier maintenance log is read as rows with their text', () => {
+  const rows = cc.parseDossierLog(LOG);
+  assert.deepEqual(
+    rows.map((r) => r.date),
+    ['2026-11-03', '2026-11-01', '2026-10-20']
+  );
+  assert.match(rows[1].text, /Rival Example homepage headline moved/);
+  assert.deepEqual(cc.parseDossierLog('nothing here'), []);
+});
+
+test('a dossier note counts for a host only when a row on or after the check names that host', () => {
+  const rows = cc.parseDossierLog(LOG);
+  // The row dated 1 November names the company in words ("Rival Example"), matched on the label with
+  // punctuation and spaces ignored.
+  assert.equal(cc.dossierNoteFor('rival.example', rows, '2026-11-01'), '2026-11-01');
+  // "Northwind-Health" matches the label northwind, case and hyphens ignored.
+  assert.equal(cc.dossierNoteFor('northwind.example', rows, '2026-11-01'), '2026-11-01');
+  // The 3 November row is about Plainco only: an unrelated later row does not mark other hosts.
+  assert.equal(cc.dossierNoteFor('plainco.example', rows, '2026-11-01'), '2026-11-03');
+  assert.equal(cc.dossierNoteFor('elsewhere.example', rows, '2026-11-01'), null);
+  assert.equal(cc.dossierNoteFor('rival.example', rows, '2026-11-02'), null, 'the older row is before the check');
+  assert.equal(cc.dossierNoteFor('rival.example', rows, null), null);
+  // "In-House Health" in a row matches the label inhouse from inhouse.health.
+  const inhouse = [{ date: '2026-11-01', text: ' In-House Health published a post' }];
+  assert.equal(cc.dossierNoteFor('inhouse.health', inhouse, '2026-11-01'), '2026-11-01');
+  assert.deepEqual(cc.hostLabels('www.smartlinx.com'), ['smartlinxcom', 'smartlinx']);
+  assert.deepEqual(cc.hostLabels('a.io'), [], 'a label under four letters is too loose');
+});
+
+test('a material change the dossier already notes for that host is no worry; an unrelated row changes nothing', () => {
+  const rows = [
+    ...rowsFor('rival.example', ['/'], ['title: "A" -> "B"'], { fetchedAt: '2026-11-01' }),
+    ...rowsFor('northwind.example', ['/'], ['title: "C" -> "D"'], { fetchedAt: '2026-11-01' }),
+  ];
+  const hosts = cc.groupChanges(rows);
+  const log = cc.parseDossierLog(LOG);
+  // Both hosts are named in the 1 November row, so neither raises a worry.
+  assert.deepEqual(cc.competitorWorries(hosts, { today: TODAY, dossierLog: log }), []);
+  // Only a row about Rival Example exists: Northwind is still a worry, and is not hidden by it.
+  const onlyRival = [{ date: '2026-11-03', text: ' Rival Example moved' }];
+  const out = cc.competitorWorries(hosts, { today: TODAY, dossierLog: onlyRival });
+  assert.deepEqual(
+    out.map((w) => w.competitor.host),
+    ['northwind.example']
+  );
+  // An unrelated later row marks no one.
+  const unrelated = [{ date: '2026-11-12', text: ' Plainco Staffing refreshed' }];
+  assert.equal(cc.competitorWorries(hosts, { today: TODAY, dossierLog: unrelated }).length, 2);
+  // A row older than the check does not count.
+  const old = [{ date: '2026-10-01', text: ' Rival Example and Northwind moved' }];
+  assert.equal(cc.competitorWorries(hosts, { today: TODAY, dossierLog: old }).length, 2);
 });
 
 // ---------------------------------------------------------------- the log reader
@@ -355,7 +411,7 @@ test('parseWatchLog: rows say whether the page has a snapshot and whether it was
     '- rival.example__pricing: baseline stored — h1 "Plans"',
     '- rival.example__home: 1 change(s) since 2026-10-01',
     '  - h1: "Hello" -> "Hi"',
-    '- other.example__home: unreachable (HTTP 404)',
+    '- other.example__pricing: unreachable (HTTP 404)',
   ].join('\n');
   const known = {
     'rival.example__pricing': 'https://www.rival.example/pricing',
@@ -366,12 +422,171 @@ test('parseWatchLog: rows say whether the page has a snapshot and whether it was
   assert.equal(by['rival.example__pricing'].previouslyUnreachable, true);
   assert.equal(by['rival.example__pricing'].hasSnapshot, true);
   assert.equal(by['rival.example__home'].previouslyUnreachable, false);
-  assert.equal(by['other.example__home'].hasSnapshot, false);
-  assert.equal(by['other.example__home'].url, 'other.example__home');
+  assert.equal(by['other.example__pricing'].hasSnapshot, false);
+  assert.equal(by['rival.example__pricing'].answeredBefore, false, 'only ever unreachable before');
+  assert.equal(by['rival.example__pricing'].unreachableLastCheck, true);
+  assert.equal(by['rival.example__home'].answeredBefore, true);
+  assert.equal(by['rival.example__home'].unreachableLastCheck, false);
+  assert.equal(by['other.example__pricing'].url, 'other.example__pricing');
   assert.deepEqual(by['rival.example__home'].changes, ['h1: "Hello" -> "Hi"']);
   // End to end: the pricing page that started answering is an event, the unanswering stranger a sentinel.
   const [a, b] = cc.groupChanges(rows);
   assert.equal(a.host, 'other.example');
   assert.equal(a.sentinels.length, 1);
   assert.deepEqual(b.events.map((e) => e.kind).sort(), ['h1', 'pricing-page-appeared']);
+});
+
+// ---------------------------------------------------------------- sentinels are pricing addresses only
+
+test('a non-pricing page that failed before its first snapshot is an ordinary event, never a pricing sentinel', () => {
+  const rows = [
+    {
+      url: 'rival.example__products',
+      key: 'rival.example__products',
+      fetchedAt: '2026-11-10',
+      changes: ['unreachable (HTTP 404)'],
+    },
+  ];
+  const [g] = cc.groupChanges(rows);
+  assert.deepEqual(g.sentinels, []);
+  assert.equal(g.events.length, 1);
+  assert.equal(g.events[0].kind, 'unreachable');
+  assert.equal(g.events[0].plain, 'The page did not answer and the desk has no earlier copy of it');
+  assert.equal(g.events[0].material, false, 'with no earlier copy it cannot be said to have stopped answering');
+  assert.deepEqual(cc.competitorWorries([g], { today: TODAY }), []);
+  assert.equal(JSON.stringify(g).includes('pricing page'), false);
+});
+
+test('a pricing address that an earlier check shows answering is not a sentinel', () => {
+  const rows = [
+    {
+      url: 'rival.example__pricing',
+      key: 'rival.example__pricing',
+      fetchedAt: '2026-11-10',
+      changes: ['unreachable (HTTP 404)'],
+      answeredBefore: true,
+    },
+  ];
+  const [g] = cc.groupChanges(rows);
+  assert.deepEqual(g.sentinels, []);
+  assert.equal(g.events[0].kind, 'unreachable');
+  assert.equal(g.events[0].plain, 'The page did not answer (404)');
+  assert.equal(g.events[0].material, true, 'a pricing page that used to answer and now gives an error');
+});
+
+// ---------------------------------------------------------------- a list cannot raise a false alarm
+
+test('a price or button inside new text on a page with a changed list is not material, unless it is a pricing or product page', () => {
+  const changes = ['h2s added: "Part 4: What it costs"', 'prices added: "$ 270"', 'ctas added: "Get started"'];
+  const [g] = cc.groupChanges(rowsFor('rival.example', ['/', '/blog'], changes));
+  const soft = g.events.filter((e) => e.kind === 'price' || e.kind === 'cta');
+  assert.deepEqual(soft.map((e) => e.plain).sort(), [
+    'A button label appears in new text on this page',
+    'A price figure appears in new text on this page',
+  ]);
+  assert.equal(
+    soft.every((e) => e.material === false),
+    true
+  );
+  assert.equal(
+    soft.every((e) => e.pages.length === 2),
+    true,
+    'kept on the page, merged across pages'
+  );
+  assert.deepEqual(cc.competitorWorries([g], { today: TODAY }), []);
+  assert.equal(cc.summaryLine(g.events).includes('Nothing on price'), false, 'it does not claim there was no price');
+  // The same text on a pricing or product page is a real signal.
+  for (const path of ['/pricing', '/plans/team', '/product']) {
+    const [p] = cc.groupChanges(rowsFor('rival.example', [path], changes));
+    assert.equal(p.events.find((e) => e.kind === 'price').material, true, path);
+    assert.equal(p.events.find((e) => e.kind === 'price').plain, 'A price appeared: "$ 270"');
+  }
+  // Without a list change on the page, a price is material anywhere.
+  const [alone] = cc.groupChanges(rowsFor('rival.example', ['/'], ['prices added: "$9"']));
+  assert.equal(alone.events[0].material, true);
+});
+
+// ---------------------------------------------------------------- a failed request is a blip until it repeats
+
+test('unreachable (fetch failed) on a page that used to answer is material only on two checks in a row', () => {
+  const once = rowsFor('rival.example', ['/'], ['unreachable (fetch failed)']);
+  const [a] = cc.groupChanges(once);
+  assert.equal(a.events[0].material, false);
+  assert.equal(a.events[0].plain, 'The page did not answer (the request failed)');
+  const twice = rowsFor('rival.example', ['/'], ['unreachable (fetch failed)'], { unreachableLastCheck: true });
+  const [b] = cc.groupChanges(twice);
+  assert.equal(b.events[0].material, true);
+  assert.equal(b.events[0].plain, 'The page did not answer (the request failed) on two checks in a row');
+  const [w] = cc.competitorWorries([b], { today: TODAY });
+  assert.match(w.title, /stopped answering on its home page/);
+  // An HTTP error is material on the first check, as before.
+  assert.equal(
+    cc.groupChanges(rowsFor('rival.example', ['/'], ['unreachable (HTTP 500)']))[0].events[0].material,
+    true
+  );
+});
+
+// ---------------------------------------------------------------- the host summary line
+
+test('the host summary line is built from the kinds of event', () => {
+  const sum = (changes, path = '/') =>
+    cc.summaryLine(cc.groupChanges(rowsFor('rival.example', [path], changes))[0].events);
+  assert.equal(
+    sum([`h2s added: "G"`, 'body text changed with no heading/CTA/price move (+2 words)']),
+    'Only heading changes and small text changes. Nothing on price, title, description, headline or buttons.'
+  );
+  assert.equal(
+    sum(['unreachable (fetch failed)']),
+    'Only a page that did not answer. Nothing on price, title, description, headline or buttons.'
+  );
+  assert.equal(
+    sum(['something odd']),
+    'Only changes the desk does not recognise. Nothing on price, title, description, headline or buttons.'
+  );
+  assert.equal(
+    sum([`h2s added: "G"`, 'prices added: "$9"']),
+    'Only heading changes and a price figure in new text. Nothing on the title, description or headline.'
+  );
+  assert.equal(sum(['title: "A" -> "B"']), 'One change worth reading.');
+  assert.equal(sum(['title: "A" -> "B"', 'h1: "C" -> "D"']), '2 changes worth reading.');
+  assert.equal(cc.summaryLine([]), 'Nothing changed on the pages we watch.');
+  const text = sum(['unreachable (fetch failed)']);
+  assert.equal(/headings or small text/i.test(text), false);
+});
+
+// ---------------------------------------------------------------- what Seen remembers
+
+test('Seen covers the pages of a page that stopped answering, so a second page going away brings the card back', () => {
+  const one = cc.groupChanges(rowsFor('rival.example', ['/a'], ['unreachable (HTTP 404)']));
+  const two = cc.groupChanges(rowsFor('rival.example', ['/a', '/b'], ['unreachable (HTTP 404)']));
+  const [w1] = cc.competitorWorries(one, { today: TODAY });
+  const [w2] = cc.competitorWorries(two, { today: TODAY });
+  assert.notEqual(w1.id, w2.id);
+  const seen = { [w1.id]: { status: 'done' } };
+  assert.equal(cc.competitorWorries(one, { items: seen, today: TODAY }).length, 0);
+  assert.equal(cc.competitorWorries(two, { items: seen, today: TODAY }).length, 1);
+  // Other kinds keep ignoring pages: a title change on one more page is still the same event set.
+  const t1 = cc.groupChanges(rowsFor('rival.example', ['/a'], ['title: "A" -> "B"']));
+  const t2 = cc.groupChanges(rowsFor('rival.example', ['/a', '/b'], ['title: "A" -> "B"']));
+  assert.equal(cc.competitorItemId('rival.example', t1[0].events), cc.competitorItemId('rival.example', t2[0].events));
+});
+
+// ---------------------------------------------------------------- one list of links
+
+test('pageLinks is the one place that picks the pages to open', () => {
+  const events = [
+    { pages: ['https://a.example/x', 'http://a.example/insecure', 'a.example__pricing'] },
+    { pages: ['https://a.example/x', 'https://a.example/'] },
+  ];
+  assert.deepEqual(cc.pageLinks(events), [
+    { url: 'https://a.example/x', label: '/x' },
+    { url: 'https://a.example/', label: 'home page' },
+  ]);
+});
+
+test('the printed plan leaves "(a hypothesis)" off a competitor card and any card that says it is not one', async () => {
+  const print = await import('../static/views/print-week.js');
+  assert.equal(print.isHypothesis({ measured: 'x', action: 'y' }), true);
+  assert.equal(print.isHypothesis({ hypothesis: false }), false);
+  assert.equal(print.isHypothesis({ competitor: { host: 'rival.example' } }), false);
 });

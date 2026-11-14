@@ -11,11 +11,12 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { readJson } from '../store.mjs';
+import { addDays } from '../dates.mjs';
 import { SITE } from '../config.mjs';
 import { parsePlan, findPlanFile } from './plan-parser.mjs';
 import { AI_CRAWLERS, robotsAllows } from '../robots.mjs';
 import { refreshGoogleUpdates } from '../google-updates.mjs';
-import { parseDossierLogDates } from '../competitor-changes.mjs';
+import { parseDossierLog } from '../competitor-changes.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const DEFAULT_REPO_ROOT = path.resolve(HERE, '../../..');
@@ -184,19 +185,34 @@ export function parseSitemapDiff(md) {
   });
 }
 
-// WATCHLOG.md latest block to [{url, key, fetchedAt, changes, hasSnapshot, previouslyUnreachable}].
+// WATCHLOG.md latest block to
+// [{url, key, fetchedAt, changes, hasSnapshot, previouslyUnreachable, answeredBefore, unreachableLastCheck}].
 // Entries without a recognised "N change(s)" line keep their whole summary as one changes string.
 // key is the log's own label for the page (host__path). hasSnapshot says the desk holds a saved
 // snapshot for it (a page that never answered has none, and its url stays the key).
-// previouslyUnreachable says an earlier check of that page could not load it, which is how a
-// pricing address that has just started answering is told from a page watched for the first time.
+// previouslyUnreachable: the page's most recent earlier entry could not load it (how a pricing
+// address that has just started answering is told from a page watched for the first time).
+// answeredBefore: some earlier check shows the page answering. unreachableLastCheck: the check just
+// before this one could not load it (two failures in a row).
 export function parseWatchLog(md, snapshotUrl = () => null) {
   const block = latestBlock(md);
   if (!block) return [];
   const before = new Map();
-  for (const b of blocksOf(md)) {
-    if (b.date >= block.date) continue;
-    for (const e of entriesOf(b.lines)) before.set(e.key, /^unreachable/.test(e.summary) ? 'unreachable' : 'answered');
+  const everAnswered = new Set();
+  const earlier = blocksOf(md).filter((b) => b.date < block.date);
+  const lastDate =
+    earlier
+      .map((b) => b.date)
+      .sort()
+      .pop() ?? null;
+  const lastCheck = new Map();
+  for (const b of earlier) {
+    for (const e of entriesOf(b.lines)) {
+      const down = /^unreachable/.test(e.summary);
+      before.set(e.key, down ? 'unreachable' : 'answered');
+      if (!down) everAnswered.add(e.key);
+      if (b.date === lastDate) lastCheck.set(e.key, down ? 'unreachable' : 'answered');
+    }
   }
   return entriesOf(block.lines).map((e) => {
     const many = /^\d+ change\(s\)/.test(e.summary);
@@ -209,6 +225,8 @@ export function parseWatchLog(md, snapshotUrl = () => null) {
       changes,
       hasSnapshot: Boolean(snap),
       previouslyUnreachable: before.get(e.key) === 'unreachable',
+      answeredBefore: everAnswered.has(e.key),
+      unreachableLastCheck: lastCheck.get(e.key) === 'unreachable',
     };
   });
 }
@@ -509,8 +527,10 @@ export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl
   const watch = parseWatchLog(watchLog, snapshotUrl);
   const lastRun = [...sitemap.map((s) => s.fetchedAt), ...watch.map((w) => w.fetchedAt)].sort().pop() ?? null;
   const snapshots = listSnapshots(snapDir);
-  // Only the dates of the dossier's maintenance log: the page says whether a note already exists.
-  const dossierLogDates = parseDossierLogDates(readText(seo('competitor-dossier.md')));
+  // The dossier's maintenance log rows of the last 120 days (date and text), so the page can say
+  // whether a note about a given competitor already exists.
+  const dossierFrom = addDays(today, -120);
+  const dossierLog = parseDossierLog(readText(seo('competitor-dossier.md'))).filter((r) => r.date >= dossierFrom);
 
   const due = attempt('due', () => dueEntries(repoRoot, today), []);
   const edits = attempt('edits', () => gitEdits(repoRoot), []).concat(
@@ -560,7 +580,7 @@ export async function pullLocal({ today, repoRoot = DEFAULT_REPO_ROOT, fetchImpl
       registry,
       plan,
       openWork,
-      competitors: { sitemap, watch, lastRun, snapshots, dossierLogDates },
+      competitors: { sitemap, watch, lastRun, snapshots, dossierLog },
       edits,
       livePages,
       inbound,

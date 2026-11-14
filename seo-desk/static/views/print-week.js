@@ -18,6 +18,10 @@ export function cardLines(card) {
   };
 }
 
+// A recommendation is a hypothesis unless the card says it is not (a competitor change is only
+// something to read).
+export const isHypothesis = (card) => card?.hypothesis !== false && !card?.competitor;
+
 // The browser tab's title for this page (app.js reads it; the page is not in the sidebar).
 export const PRINT_TITLE = "This week's plan";
 
@@ -57,7 +61,12 @@ export async function render(el, ctx) {
       l.recommendation
         ? [
             h('dt', {}, 'Recommendation'),
-            h('dd', {}, l.recommendation, h('span', { class: 'pw-hyp' }, ' (a hypothesis)')),
+            h(
+              'dd',
+              {},
+              l.recommendation,
+              isHypothesis(card) ? h('span', { class: 'pw-hyp' }, ' (a hypothesis)') : null
+            ),
           ]
         : null,
       l.test ? [h('dt', {}, 'How we will know'), h('dd', {}, l.test)] : null

@@ -515,6 +515,8 @@ some stray text
     changes: ['h2s added: "New"', 'h1: "A" -> "B"'],
     hasSnapshot: true,
     previouslyUnreachable: false,
+    answeredBefore: false,
+    unreachableLastCheck: false,
   });
   assert.equal(w[1].hasSnapshot, false, 'a page with no saved snapshot has never answered');
   assert.deepEqual(w[1].changes, ['unreachable (HTTP 404)']);

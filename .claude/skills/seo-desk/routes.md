@@ -174,7 +174,15 @@ statusNote, provenDirection, verdicts[{id, known, page, changeDate, verdict, ver
 `provenDirection` is then `helps` or `hurts`. `dropped` means the linked verdicts disagree. Three
 "no real change" or three "mixed" stay a trial. `statusNote` is one plain sentence on why.
 
-`/api/competitors`: `lastRunText`, `daysSinceCheck`, `stale`, `sitemap[]`, `watch[]`, `linksPulse`.
+`/api/competitors`: `lastRunText`, `daysSinceCheck`, `stale`, `sitemap[]`, `watch[]` (one row per
+changed page, in plain words), `linksPulse`, `totals {events, pages, material}` (a repeated list on
+several pages is one event; pricing sentinels are never counted), `worries` (competitors with an
+unseen change worth reading) and `hosts[]`, one per watched competitor: `events[] {kind, plain,
+line, pages, pageNames, onText, material}`, `sentinels[] {url, state, plain}`, `counts`,
+`summary`, `worry`, `seen`, `materialNoted`, `loggedInDossier`, `dossierNotedOn`, `dossierText`.
+A change the dossier already notes for that competitor is shown but is not a worry. A competitor
+worry on `/api/week` has no test, no hypothesis flag and no Search Console link; its card id carries
+the events it covers, so Seen holds until a new event appears.
 `/api/settings`: weights, money pages, brand words, `strategicKeywords`, switches (`paused`,
 `weeklyAudit`, `showGoogleUpdates`), `schedule`, `planSize` (3 or 5). `/api/targets`: target
 keywords and their positions. `/api/nav`: `counts {keywordMap, cannibalization, runnerUp,

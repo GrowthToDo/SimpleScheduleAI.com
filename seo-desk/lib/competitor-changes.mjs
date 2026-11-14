@@ -176,8 +176,38 @@ export function safeHttps(url) {
   }
 }
 
-export const isMaterial = (event) =>
-  MATERIAL_KINDS.has(event.kind) || (event.kind === 'unreachable' && Number.isFinite(event.status));
+// A page that gave an error code and used to answer is material. A failed request is a blip until
+// two checks in a row record it. A page the desk has no earlier copy of, and a price or button that
+// only shows up inside new text on a page with a changed list (soft), are never material.
+export function isMaterial(event) {
+  if (event.soft || event.noCopy) return false;
+  if (event.kind === 'unreachable') return Number.isFinite(event.status) || Boolean(event.repeat);
+  return MATERIAL_KINDS.has(event.kind);
+}
+
+const NO_COPY_TEXT = 'The page did not answer and the desk has no earlier copy of it';
+const PRODUCT_PAGE_RE = /pricing|plans|product/i;
+const isProductPage = (url) => {
+  try {
+    return PRODUCT_PAGE_RE.test(new URL(String(url)).pathname);
+  } catch {
+    return PRODUCT_PAGE_RE.test(String(url));
+  }
+};
+
+// A price or button seen on a page whose same check also recorded a list change, away from a pricing
+// or product page, is most likely just text inside the new item. Said so, and kept off the worries.
+function soften(c) {
+  const what = c.kind === 'price' ? 'A price figure' : 'A button label';
+  return {
+    ...c,
+    soft: true,
+    plain:
+      c.direction === 'removed'
+        ? `${what} went with text removed from this page`
+        : `${what} appears in new text on this page`,
+  };
+}
 
 const onText = (pages) => {
   if (pages.length !== 1) return `on ${pages.length} pages`;
@@ -193,8 +223,10 @@ const onText = (pages) => {
 //   [{host, events: [{kind, plain, pages, pageNames, onText, material, ...}],
 //     sentinels: [{url, state: 'still-missing' | 'appeared', plain}], checkedOn}]
 // one event per distinct change per host, listing every page it showed on. watchRows are the
-// rows parseWatchLog returns: {url, key?, fetchedAt, changes, hasSnapshot?, previouslyUnreachable?}.
-// A row whose url is not a web address (or hasSnapshot false) has never been saved as a snapshot.
+// rows parseWatchLog returns: {url, key?, fetchedAt, changes, hasSnapshot?, previouslyUnreachable?,
+// answeredBefore?, unreachableLastCheck?}. A row whose url is not a web address (or hasSnapshot
+// false) has no saved snapshot. A sentinel is a pricing address with no snapshot that no earlier
+// check shows answering; any other page that is unreachable with no copy is an ordinary event.
 export function groupChanges(watchRows, snapshotsByUrl = null) {
   const hosts = new Map();
   const hostEntry = (host) => {
@@ -211,8 +243,8 @@ export function groupChanges(watchRows, snapshotsByUrl = null) {
     const pricing = isPricingAddress(row.url, row.key);
     const first = classifyChange(changes[0]);
 
-    const addEvent = (c) => {
-      const base = { kind: c.kind, plain: c.plain };
+    const addEvent = (c, extra = {}) => {
+      const base = { kind: c.kind, plain: c.plain, ...extra };
       const key = `${c.kind}|${c.direction ?? ''}|${c.plain}`;
       const cur = h.events.get(key) ?? {
         ...base,
@@ -237,8 +269,13 @@ export function groupChanges(watchRows, snapshotsByUrl = null) {
     // A page the watch could not load.
     if (changes.length === 1 && first.kind === 'unreachable') {
       const noSnapshot = row.hasSnapshot === false ? true : isSentinel(row.url, snapshotsByUrl);
-      if (noSnapshot) addSentinel('still-missing');
-      else addEvent(first);
+      if (noSnapshot && !row.answeredBefore) {
+        if (pricing) addSentinel('still-missing');
+        else addEvent({ ...first, plain: NO_COPY_TEXT }, { noCopy: true });
+        continue;
+      }
+      const repeat = first.status === null && Boolean(row.unreachableLastCheck);
+      addEvent(repeat ? { ...first, plain: `${first.plain} on two checks in a row` } : first, repeat ? { repeat } : {});
       continue;
     }
 
@@ -254,10 +291,15 @@ export function groupChanges(watchRows, snapshotsByUrl = null) {
       continue;
     }
 
+    const listChanged = changes.some((t) => classifyChange(t).kind === 'headings');
+    const soft = listChanged && !isProductPage(row.url);
     for (const text of changes) {
       const c = classifyChange(text);
       if (c.kind === 'baseline') continue;
-      for (const part of c.parts ?? [c]) addEvent(part);
+      for (const part of c.parts ?? [c]) {
+        const priceOrButton = part.kind === 'price' || part.kind === 'cta';
+        addEvent(soft && priceOrButton ? soften(part) : part, soft && priceOrButton ? { soft: true } : {});
+      }
     }
   }
 
@@ -337,10 +379,14 @@ export function eventLine(host, e) {
 
 // The signature of the events a Seen covers: material events only, so a new blog post in a list
 // never brings a seen card back, and a new price or headline always does.
+// A page that stops answering also carries its pages, so a second page going away is a new event.
+const eventKey = (e) =>
+  `${e.kind}|${e.direction ?? ''}|${e.plain}${e.kind === 'unreachable' ? `|${[...e.pages].sort().join(',')}` : ''}`;
+
 export function eventSignature(events) {
   const keys = (events ?? [])
     .filter((e) => e.material)
-    .map((e) => `${e.kind}|${e.direction ?? ''}|${e.plain}`)
+    .map(eventKey)
     .sort();
   return crypto.createHash('sha1').update(keys.join('\n')).digest('hex').slice(0, 10);
 }
@@ -349,23 +395,58 @@ export const competitorItemId = (host, events) => `competitor-change:${host}:${e
 
 const MORE_EVENTS = 3;
 
-// Worries from grouped events: one per host with at least one material event the founder has not
-// marked Seen. items is the saved item state by id (a Seen is status "done" on the card's id, and the
-// id carries the signature of the events, so a new material event is a new id and the card returns).
-export function competitorWorries(hosts, { items = {}, today } = {}) {
+// The pages to open for a set of events: https addresses from the watch data only, each once.
+export function pageLinks(events) {
+  const out = [];
+  for (const e of events ?? [])
+    for (const p of e.pages) {
+      const url = safeHttps(p);
+      if (url && !out.some((x) => x.url === url)) out.push({ url, label: pageNameOf(url) });
+    }
+  return out;
+}
+
+// What the events add up to when none is worth reading, built from their kinds.
+const QUIET_PHRASE = {
+  headings: 'heading changes',
+  body: 'small text changes',
+  unreachable: 'a page that did not answer',
+  'reachable-again': 'a page that answers again',
+  other: 'changes the desk does not recognise',
+  price: 'a price figure in new text',
+  cta: 'a button label in new text',
+};
+const joinWords = (list) => (list.length < 2 ? (list[0] ?? '') : `${list.slice(0, -1).join(', ')} and ${list.at(-1)}`);
+
+export function summaryLine(events) {
+  const all = events ?? [];
+  if (!all.length) return 'Nothing changed on the pages we watch.';
+  const material = all.filter((e) => e.material).length;
+  if (material) return material === 1 ? 'One change worth reading.' : `${material} changes worth reading.`;
+  const kinds = [...new Set(all.map((e) => e.kind))];
+  const phrases = kinds.map((k) => QUIET_PHRASE[k] ?? 'other changes');
+  const priceish = kinds.includes('price') || kinds.includes('cta');
+  const tail = priceish
+    ? 'Nothing on the title, description or headline.'
+    : 'Nothing on price, title, description, headline or buttons.';
+  const lead = joinWords(phrases);
+  return `Only ${lead}. ${tail}`;
+}
+
+// Worries from grouped events: one per host with at least one material event that the founder has not
+// marked Seen and the dossier does not already note for that host. items is the saved item state by
+// id (a Seen is status "done" on the card's id, and the id carries the signature of the events, so a
+// new material event is a new id and the card returns). dossierLog is parseDossierLog's rows.
+export function competitorWorries(hosts, { items = {}, today, dossierLog = [] } = {}) {
   const out = [];
   for (const g of hosts ?? []) {
     const material = g.events.filter((e) => e.material);
     if (!material.length) continue;
+    if (dossierNoteFor(g.host, dossierLog, g.checkedOn)) continue;
     const id = competitorItemId(g.host, g.events);
     if (items?.[id]?.status === 'done') continue;
     const lines = material.map((e) => eventLine(g.host, e));
-    const pages = [];
-    for (const e of material)
-      for (const p of e.pages) {
-        const url = safeHttps(p);
-        if (url && !pages.some((x) => x.url === url)) pages.push({ url, label: pageNameOf(url) });
-      }
+    const pages = pageLinks(material);
     const age = g.checkedOn && today ? daysBetween(g.checkedOn, today) : 0;
     const shown = lines.slice(0, MORE_EVENTS).map((l) => l.sentence);
     const extra = lines.length - shown.length;
@@ -429,22 +510,43 @@ export function competitorBrief(card) {
 
 // ---------------------------------------------------------------- the dossier's maintenance log
 
-// The dates of the maintenance log rows at the end of docs/seo/competitor-dossier.md, newest first.
-// Rows are table lines that start with a date, after the "Maintenance Log" heading.
-export function parseDossierLogDates(md) {
+// The rows of the maintenance log at the end of docs/seo/competitor-dossier.md, newest first, as
+// [{date, text}]. Rows are table lines that start with a date, after the "Maintenance Log" heading.
+export function parseDossierLog(md) {
   const text = String(md ?? '');
   const at = text.search(/^#{1,6}\s+Maintenance Log\b/im);
-  const dates = new Set();
+  const rows = [];
   for (const line of (at >= 0 ? text.slice(at) : '').split(/\r?\n/)) {
-    const m = /^\|\s*(\d{4}-\d{2}-\d{2})\s*\|/.exec(line);
-    if (m) dates.add(m[1]);
+    const m = /^\|\s*(\d{4}-\d{2}-\d{2})\s*\|(.*)$/.exec(line);
+    if (m) rows.push({ date: m[1], text: m[2] });
   }
-  return [...dates].sort().reverse();
+  return rows.sort((a, b) => b.date.localeCompare(a.date));
 }
 
-// The earliest log entry dated on or after the check, or null: the dossier already holds a note
-// written once that check had run.
-export function dossierEntryAfter(dates, checkedOn) {
+const squash = (v) =>
+  String(v ?? '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
+
+// What a log row can call a competitor: its main label ("smartlinx" from smartlinx.com, "inhouse"
+// from inhouse.health), found inside the row with punctuation and spaces ignored, so "In-House
+// Health" matches. A label under four letters is too loose to match on.
+export function hostLabels(host) {
+  const h = String(host ?? '').replace(/^www\./, '');
+  const label = squash(h.split('.')[0]);
+  return [squash(h), label].filter((x, i, a) => x.length >= 4 && a.indexOf(x) === i);
+}
+
+// The earliest log row dated on or after the check that names this host, or null: a note about
+// this competitor written once that check had run. A row about someone else does not count.
+export function dossierNoteFor(host, log, checkedOn) {
   if (!checkedOn) return null;
-  return [...(dates ?? [])].filter((d) => d >= checkedOn).sort()[0] ?? null;
+  const labels = hostLabels(host);
+  if (!labels.length) return null;
+  return (
+    (log ?? [])
+      .filter((r) => r.date >= checkedOn && labels.some((l) => squash(r.text).includes(l)))
+      .map((r) => r.date)
+      .sort()[0] ?? null
+  );
 }
