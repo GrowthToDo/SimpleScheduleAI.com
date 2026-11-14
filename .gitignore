@@ -44,3 +44,6 @@ pool-originals/
 
 # GSC diagnostic raw pulls (reproducibility copies; the report itself is committed)
 docs/seo/diagnostics/raw/
+
+# SEO Desk local data (pulled analytics, never committed)
+seo-desk/data/

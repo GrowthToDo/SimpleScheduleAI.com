@@ -1,0 +1,25 @@
+{
+  "indexed": {
+    "url": "https://simplescheduleai.com/pricing",
+    "verdict": "PASS",
+    "coverage_state": "Submitted and indexed",
+    "last_crawled": "2026-11-09 02:17",
+    "rich_results": ""
+  },
+  "crawled": {
+    "url": "https://simplescheduleai.com/blog/x",
+    "verdict": "NEUTRAL",
+    "coverage_state": "Crawled - currently not indexed",
+    "last_crawled": "2026-10-20",
+    "rich_results": ""
+  },
+  "unknownToGoogle": {
+    "url": "https://simplescheduleai.com/blog/new",
+    "verdict": "NEUTRAL",
+    "coverage_state": "URL is unknown to Google",
+    "last_crawled": "",
+    "rich_results": ""
+  },
+  "errored": { "url": "https://simplescheduleai.com/blog/boom", "error": "Quota exceeded for quota metric" },
+  "bare": { "url": "https://simplescheduleai.com/blog/bare", "verdict": "" }
+}

@@ -1,0 +1,134 @@
+{
+  "channels": {
+    "dimension_headers": [{ "name": "date" }, { "name": "sessionDefaultChannelGroup" }],
+    "metric_headers": [{ "name": "sessions", "type_": "TYPE_INTEGER" }],
+    "rows": [
+      {
+        "dimension_values": [{ "value": "20261102" }, { "value": "Organic Search" }],
+        "metric_values": [{ "value": "23" }]
+      },
+      { "dimension_values": [{ "value": "20261102" }, { "value": "Direct" }], "metric_values": [{ "value": "7" }] },
+      {
+        "dimension_values": [{ "value": "20261103" }, { "value": "Organic Search" }],
+        "metric_values": [{ "value": "17" }]
+      }
+    ],
+    "row_count": 3,
+    "metadata": { "currency_code": "USD", "time_zone": "America/Los_Angeles" },
+    "kind": "analyticsData#runReport"
+  },
+  "landingCur": {
+    "rows": [
+      {
+        "dimension_values": [{ "value": "/blog/example-post" }],
+        "metric_values": [{ "value": "48" }, { "value": "7" }]
+      },
+      { "dimension_values": [{ "value": "/" }], "metric_values": [{ "value": "30" }, { "value": "12" }] },
+      {
+        "dimension_values": [{ "value": "/blog/example-post/" }],
+        "metric_values": [{ "value": "2" }, { "value": "1" }]
+      },
+      { "dimension_values": [{ "value": "(not set)" }], "metric_values": [{ "value": "5" }, { "value": "0" }] }
+    ],
+    "row_count": 4
+  },
+  "landingPrev": {
+    "rows": [
+      {
+        "dimension_values": [{ "value": "/blog/example-post" }],
+        "metric_values": [{ "value": "40" }, { "value": "9" }]
+      },
+      { "dimension_values": [{ "value": "/blog/old-page" }], "metric_values": [{ "value": "11" }, { "value": "3" }] }
+    ],
+    "row_count": 2
+  },
+  "eventsCur": {
+    "rows": [
+      { "dimension_values": [{ "value": "page_view" }], "metric_values": [{ "value": "900" }] },
+      { "dimension_values": [{ "value": "form_start" }], "metric_values": [{ "value": "15" }] },
+      { "dimension_values": [{ "value": "template_download" }], "metric_values": [{ "value": "4" }] }
+    ],
+    "row_count": 3
+  },
+  "eventsPrev": {
+    "rows": [
+      { "dimension_values": [{ "value": "form_start" }], "metric_values": [{ "value": "9" }] },
+      { "dimension_values": [{ "value": "roi_calculator_used" }], "metric_values": [{ "value": "2" }] },
+      { "dimension_values": [{ "value": "scroll" }], "metric_values": [{ "value": "50" }] }
+    ],
+    "row_count": 3
+  },
+  "ai": {
+    "rows": [
+      {
+        "dimension_values": [{ "value": "20261104" }, { "value": "chatgpt.com" }],
+        "metric_values": [{ "value": "2" }]
+      },
+      {
+        "dimension_values": [{ "value": "20261105" }, { "value": "perplexity.ai" }],
+        "metric_values": [{ "value": "1" }]
+      }
+    ],
+    "row_count": 2
+  },
+  "outcomeEvents": {
+    "rows": [
+      {
+        "dimension_values": [{ "value": "/blog/example-post" }, { "value": "form_start" }],
+        "metric_values": [{ "value": "3" }]
+      },
+      {
+        "dimension_values": [{ "value": "/blog/example-post/?utm_source=email" }, { "value": "template_download" }],
+        "metric_values": [{ "value": "2" }]
+      },
+      {
+        "dimension_values": [{ "value": "/" }, { "value": "roi_calculator_used" }],
+        "metric_values": [{ "value": "1" }]
+      },
+      { "dimension_values": [{ "value": "/" }, { "value": "scroll" }], "metric_values": [{ "value": "40" }] },
+      { "dimension_values": [{ "value": "(not set)" }, { "value": "form_start" }], "metric_values": [{ "value": "9" }] }
+    ],
+    "row_count": 5
+  },
+  "sourceCur": {
+    "rows": [
+      { "dimension_values": [{ "value": "google / organic" }], "metric_values": [{ "value": "60" }] },
+      { "dimension_values": [{ "value": "(direct) / (none)" }], "metric_values": [{ "value": "20" }] },
+      { "dimension_values": [{ "value": "linkedin.com / referral" }], "metric_values": [{ "value": "4" }] }
+    ],
+    "row_count": 3
+  },
+  "sourcePrev": {
+    "rows": [
+      { "dimension_values": [{ "value": "google / organic" }], "metric_values": [{ "value": "50" }] },
+      { "dimension_values": [{ "value": "bing / organic" }], "metric_values": [{ "value": "7" }] }
+    ],
+    "row_count": 2
+  },
+  "countryCur": {
+    "rows": [
+      { "dimension_values": [{ "value": "United States" }], "metric_values": [{ "value": "70" }] },
+      { "dimension_values": [{ "value": "India" }], "metric_values": [{ "value": "14" }] }
+    ],
+    "row_count": 2
+  },
+  "countryPrev": {
+    "rows": [{ "dimension_values": [{ "value": "United States" }], "metric_values": [{ "value": "55" }] }],
+    "row_count": 1
+  },
+  "deviceCur": {
+    "rows": [
+      { "dimension_values": [{ "value": "desktop" }], "metric_values": [{ "value": "55" }] },
+      { "dimension_values": [{ "value": "mobile" }], "metric_values": [{ "value": "29" }] }
+    ],
+    "row_count": 2
+  },
+  "devicePrev": {
+    "rows": [
+      { "dimension_values": [{ "value": "desktop" }], "metric_values": [{ "value": "40" }] },
+      { "dimension_values": [{ "value": "mobile" }], "metric_values": [{ "value": "22" }] }
+    ],
+    "row_count": 2
+  },
+  "empty": { "rows": [], "totals": [], "row_count": 0 }
+}

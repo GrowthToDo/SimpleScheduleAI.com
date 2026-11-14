@@ -1,0 +1,68 @@
+{
+  "daily": [
+    {
+      "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+      "Clicks": 1,
+      "Date": "2026-10-01T00:00:00Z",
+      "Impressions": 20
+    },
+    {
+      "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+      "Clicks": 0,
+      "Date": "/Date(1730505600000)/",
+      "Impressions": 15
+    }
+  ],
+  "queries": [
+    {
+      "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+      "AvgClickPosition": 3,
+      "AvgImpressionPosition": 4,
+      "Clicks": 1,
+      "Date": "2026-10-01T00:00:00Z",
+      "Impressions": 10,
+      "Query": "example query one"
+    },
+    {
+      "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+      "AvgClickPosition": -1,
+      "AvgImpressionPosition": 10,
+      "Clicks": 0,
+      "Date": "2026-10-08T00:00:00Z",
+      "Impressions": 30,
+      "Query": "example query one"
+    },
+    {
+      "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+      "AvgClickPosition": -1,
+      "AvgImpressionPosition": -1,
+      "Clicks": 0,
+      "Date": "2026-10-08T00:00:00Z",
+      "Impressions": 5,
+      "Query": "example query two"
+    }
+  ],
+  "pages": [
+    {
+      "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+      "Clicks": 2,
+      "Date": "2026-10-01T00:00:00Z",
+      "Impressions": 12,
+      "Query": "https://simplescheduleai.com/blog/x/"
+    },
+    {
+      "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+      "Clicks": 1,
+      "Date": "2026-10-08T00:00:00Z",
+      "Impressions": 8,
+      "Query": "https://simplescheduleai.com/blog/x"
+    }
+  ],
+  "links": {
+    "Links": [
+      { "Url": "https://example.org/a", "Count": 3 },
+      { "Url": "https://example.org/b", "Count": 2 }
+    ],
+    "TotalPages": 1
+  }
+}

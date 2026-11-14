@@ -1,0 +1,37 @@
+{
+  "sessions": {
+    "query": "Invented sessions question, 2026/10/05 whole day",
+    "data": [{ "uniq(SessionId, UserId)": 37 }],
+    "dataErrorType": 0
+  },
+  "rage": {
+    "query": "Invented rage click question for 2026/10/05",
+    "data": [
+      { "VisitedUrl": "https://example.test/blog/a/", "RageClickCount": 3 },
+      { "VisitedUrl": "https://example.test/pricing?x=1", "RageClickCount": 9 }
+    ],
+    "dataErrorType": 0
+  },
+  "dead": {
+    "query": "Invented dead click question for 2026/10/05",
+    "data": [],
+    "dataErrorType": 0
+  },
+  "quickBack": { "query": "quick backs", "data": [], "dataErrorType": 0 },
+  "scroll": {
+    "query": "Average scroll depth percentage grouped by visited URL",
+    "data": [
+      { "VisitedUrl": "https://example.test/contact", "AvgScrollDepthPercent": 48.25 },
+      { "VisitedUrl": "https://example.test/", "AvgScrollDepthPercent": 7.9 }
+    ],
+    "dataErrorType": 0
+  },
+  "jsErrors": {
+    "query": "Top 10 JavaScript errors",
+    "data": [
+      { "ErrorMessage": "Invented error: x is not a function", "Sessions": 2 },
+      { "ErrorMessage": "Invented error: y is undefined", "Sessions": 5 }
+    ],
+    "dataErrorType": 0
+  }
+}
