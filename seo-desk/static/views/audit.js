@@ -302,7 +302,8 @@ function scores(ctx, a) {
           { class: 'p2-group' },
           h('span', { class: 'tile-label' }, g.label),
           h('span', { class: 'p2-group-value' }, typeof g.score === 'number' ? String(g.score) : 'not scored'),
-          meter(h, g.score)
+          meter(h, g.score),
+          g.note ? h('span', { class: 'small muted' }, g.note) : null
         )
       )
     )
@@ -367,7 +368,20 @@ function changes(ctx, comparison) {
       { class: 'cols' },
       list('New since last audit', comparison.added, 'Nothing new went wrong.', 'chip-bad'),
       list('Fixed since last audit', comparison.fixed, 'Nothing was fixed since then.', 'chip-accent')
-    )
+    ),
+    // Pages a check found that the last audit did not have: not new problems, so on their own line.
+    comparison.byNewCheck?.length
+      ? h(
+          'div',
+          { style: { marginTop: '14px' } },
+          list(
+            comparison.byNewCheckText ?? 'Found by a check added since the last audit',
+            comparison.byNewCheck,
+            '',
+            ''
+          )
+        )
+      : null
   );
 }
 
@@ -435,7 +449,7 @@ function issueList(ctx, a, hasPrev) {
                 h('span', { class: `chip ${g.chip}`.trim() }, `${g.label} ${g.issues.length}`),
                 h('span', { class: 'small muted' }, g.note)
               ),
-              g.issues.map((i) => issueCard(ctx, i, groupLabel.get(i.group), hasPrev))
+              g.issues.map((i) => issueCard(ctx, i, groupLabel.get(i.group), hasPrev, a.clicksRange))
             )
           )
         : [
@@ -448,11 +462,20 @@ function issueList(ctx, a, hasPrev) {
     );
   };
   draw();
-  return h('div', { style: { marginTop: '26px' } }, h('h3', { class: 'p2-h3' }, 'What the audit found'), bar, box);
+  return h(
+    'div',
+    { style: { marginTop: '26px' } },
+    h('h3', { class: 'p2-h3' }, 'What the audit found'),
+    a.clicksNote ? h('p', { class: 'small muted' }, a.clicksNote) : null,
+    bar,
+    box
+  );
 }
 
-function issueCard(ctx, i, groupLabel, hasPrev) {
+function issueCard(ctx, i, groupLabel, hasPrev, clicksRange = null) {
   const { h, fmt } = ctx;
+  // The clicks are Search Console's days, not the audit's: named when the run kept them.
+  const clicksWhen = clicksRange?.text ? `, ${clicksRange.text}` : '';
   const fresh = hasPrev ? i.pages.filter((p) => p.isNew).length : 0;
   const pagesBox = h('ul', { class: 'plain-list p2-pages' });
   let shown = PAGES_SHOWN;
@@ -504,7 +527,7 @@ function issueCard(ctx, i, groupLabel, hasPrev) {
           : null,
         i.impact ? h('span', { class: 'chip' }, IMPACT_WORD[i.impact] ?? i.impact) : null,
         plural(i.pages.length, 'page', 'pages'),
-        i.clicks ? `, ${fmt.plural(i.clicks, 'click', 'clicks')} in 28 days` : '',
+        i.clicks ? `, ${fmt.plural(i.clicks, 'click', 'clicks')}${clicksWhen}` : '',
         fresh && fresh < i.pages.length ? h('span', { class: 'chip chip-warn' }, `${fresh} new`) : null
       )
     ),

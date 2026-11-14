@@ -11,7 +11,17 @@ import { readJson, writeJson, dataDir } from '../store.mjs';
 import { todayIso, windows, addDays } from '../dates.mjs';
 import { plain, plainError } from '../text.mjs';
 import { fetchPage, checkLink, SITE_ORIGIN, HTTP_HOME, pathOfUrl } from './crawl.mjs';
-import { GROUPS, buildPage, buildSite, evaluate, scoreOf, normPath, severityOf } from './checks.mjs';
+import {
+  CHECKS,
+  GROUPS,
+  SPLIT_FROM,
+  buildPage,
+  buildSite,
+  evaluate,
+  scoreOf,
+  normPath,
+  severityOf,
+} from './checks.mjs';
 
 export const HISTORY_LIMIT = 26;
 export const MAX_LINK_TARGETS = 600;
@@ -46,6 +56,7 @@ export async function runAudit({
   timeoutMs,
   sleep,
   now = () => new Date(),
+  clicksRange = null,
 } = {}) {
   const startedAt = now().toISOString();
   const opts = {
@@ -137,9 +148,11 @@ export async function runAudit({
     linkTargetsSkipped: Math.max(0, wanted.length - targets.length),
     stopped,
     stoppedEarly: stopped,
+    // The Search Console days the page clicks cover, so a reader never takes them for the audit's.
+    ...(clicksRange ? { clicksRange } : {}),
     ...extra,
   });
-  if (!built.length) return finish({ score: stopped ? null : 100, groups: [], issues: [] });
+  if (!built.length) return finish({ score: stopped ? null : 100, groups: [], issues: [], checksRun: [] });
 
   // A run that was stopped has not read every page or checked every link, so the checks that need
   // the whole picture (which pages nothing links to) are left out.
@@ -148,6 +161,7 @@ export async function runAudit({
   progress({ phase: 'checks', done: 1, total: 1 });
   const audited = new Set(built.map((p) => p.path));
   return finish({
+    checksRun: checksRunOf(site),
     score: scoreOf(issues, built.length, null, audited),
     groups: GROUPS.map((g) => ({
       group: g.group,
@@ -155,6 +169,17 @@ export async function runAudit({
       score: scoreOf(issues, built.length, g.group, audited),
     })),
     issues,
+  });
+}
+
+// The ids of the checks that really looked at this run. Orphan pages need the whole site, and the
+// http check needs an answer from the http address; without those, the check did not run.
+export function checksRunOf(site) {
+  const h = site?.httpHome;
+  return CHECKS.map((c) => c.id).filter((id) => {
+    if (id === 'sitemap-not-linked') return site?.complete !== false;
+    if (id === 'http-not-redirecting') return Boolean(h && !h.error && h.status);
+    return true;
   });
 }
 
@@ -218,25 +243,54 @@ export function saveAudit(run) {
   return keep;
 }
 
-// What changed between two runs, by issue and page: {added, fixed, unchanged}. Null without a previous run.
+// The checks known to have run in a saved run: its checksRun, or for a run saved before that was
+// kept, only the checks that found something in it (of any other, nobody can tell).
+const ranIn = (run) => new Set(Array.isArray(run?.checksRun) ? run.checksRun : (run?.issues ?? []).map((i) => i.id));
+
+// What changed between two runs, by issue and page: {added, fixed, unchanged, byNewCheck}. Null
+// without a previous run. Only a check that ran in both runs can say new or fixed. byNewCheck: the
+// pages found by a check the earlier run did not have (or cannot be shown to have run); they are
+// not new problems. A check that did not run in the later run never reports anything as fixed.
 export function compareAudits(prev, cur) {
   if (!prev || !cur) return null;
   const pagesOf = (run) => new Map((run.issues ?? []).map((i) => [i.id, new Map(i.pages.map((p) => [p.page, p]))]));
   const before = pagesOf(prev);
   const after = pagesOf(cur);
+  const ranBefore = ranIn(prev);
+  const ranAfter = ranIn(cur);
+  const both = (id) => ranBefore.has(id) && ranAfter.has(id);
   // A run that stopped early only knows about the pages it read: a page it never reached is neither
   // new nor fixed in it.
   const reads = (run) => {
     const set = run.stoppedEarly && Array.isArray(run.auditedPages) ? new Set(run.auditedPages) : null;
     return (page) => !set || set.has(page);
   };
-  const pick = (run, other, knownByOther) =>
+  // A page that moved from a check to the one split off it (see SPLIT_FROM) is not fixed.
+  const movedFrom = new Map();
+  for (const [id, pages] of after) {
+    const from = SPLIT_FROM[id];
+    if (!from) continue;
+    if (!movedFrom.has(from)) movedFrom.set(from, new Set());
+    for (const page of pages.keys()) movedFrom.get(from).add(page);
+  }
+  const pick = (run, other, knownByOther, keep) =>
     (run.issues ?? [])
-      .map((i) => ({ ...i, pages: i.pages.filter((p) => !other.get(i.id)?.has(p.page) && knownByOther(p.page)) }))
+      .filter((i) => both(i.id))
+      .map((i) => ({
+        ...i,
+        pages: i.pages.filter((p) => !other.get(i.id)?.has(p.page) && knownByOther(p.page) && keep(i.id, p.page)),
+      }))
       .filter((i) => i.pages.length);
   let unchanged = 0;
   for (const [id, pages] of after) for (const page of pages.keys()) if (before.get(id)?.has(page)) unchanged++;
-  return { added: pick(cur, before, reads(prev)), fixed: pick(prev, after, reads(cur)), unchanged };
+  const readBefore = reads(prev);
+  const byNewCheck = (cur.issues ?? []).filter((i) => !ranBefore.has(i.id) && i.pages.length);
+  return {
+    added: pick(cur, before, readBefore, () => true),
+    fixed: pick(prev, after, reads(cur), (id, page) => !movedFrom.get(id)?.has(page)),
+    unchanged,
+    byNewCheck,
+  };
 }
 
 // ---------------------------------------------------------------- the job and the weekly option
@@ -253,6 +307,12 @@ export function clicksFromGsc(snap, today = process.env.SEO_DESK_TODAY || todayI
     out[key] = (out[key] ?? 0) + (r.clicks || 0);
   }
   return out;
+}
+
+// The Search Console window clicksFromGsc adds up: {start, end}.
+export function clicksRangeOf(snap, today = process.env.SEO_DESK_TODAY || todayIso()) {
+  const { start, end } = snap?.data?.windows?.cur ?? windows(today).cur;
+  return { start, end };
 }
 
 const lengthText = (sec) => (sec >= 90 ? `${Math.round(sec / 60)} minutes` : `${sec} seconds`);
@@ -285,10 +345,12 @@ export async function runAuditJob({
     const stop = signal ? AbortSignal.any([signal, limit]) : limit;
     log(`Reading ${live.length} pages from the live site, one at a time. This takes a few minutes.`);
     const steps = { pages: 10, links: 50 };
+    const gsc = readJson('snap/gsc.json', null);
     const result = await runAudit({
       pages: live.map((p) => p.page),
       fetchImpl,
-      clicksByPage: clicksFromGsc(readJson('snap/gsc.json', null)),
+      clicksByPage: clicksFromGsc(gsc),
+      clicksRange: clicksRangeOf(gsc),
       signal: stop,
       ...(pauseMs !== undefined ? { pauseMs } : {}),
       ...(timeoutMs !== undefined ? { timeoutMs } : {}),

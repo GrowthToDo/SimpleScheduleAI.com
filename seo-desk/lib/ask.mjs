@@ -268,8 +268,17 @@ export const SECTIONS = [
         ...pick(v, ['health', 'scoreNote', 'ruleLine', 'weeklyAudit']),
         latest: a
           ? {
-              ...pick(a, ['startedText', 'pagesChecked', 'pagesPlanned', 'score', 'counts', 'stoppedNote', 'issues']),
-              clicksNote: `Clicks on each page are Google clicks over the 28 days before the audit ran (${a.startedText}).`,
+              ...pick(a, [
+                'startedText',
+                'pagesChecked',
+                'pagesPlanned',
+                'score',
+                'counts',
+                'stoppedNote',
+                'issues',
+                'clicksNote',
+                'groups',
+              ]),
             }
           : null,
       };

@@ -322,6 +322,9 @@ export function extract(htmlInput, url = `${SITE_ORIGIN}/`) {
     jsonLd: [],
     scripts: { count: 0, blocking: 0 },
     stylesheets: 0,
+    // Bytes of the text inside inline <style> and inline <script> elements (before compression).
+    inlineStyleBytes: 0,
+    inlineScriptBytes: 0,
     wordCount: 0,
     lang: '',
     viewport: '',
@@ -486,6 +489,8 @@ export function extract(htmlInput, url = `${SITE_ORIGIN}/`) {
             src: imgSrc,
             alt: 'alt' in a ? a.alt : null,
             hasSize: Boolean(String(a.width ?? '').trim() && String(a.height ?? '').trim()),
+            // A class or a style can give the image its size from the stylesheet.
+            styled: Boolean(String(a.class ?? '').trim() || String(a.style ?? '').trim()),
           });
         }
         noteMixed(imgSrc);
@@ -535,6 +540,7 @@ export function extract(htmlInput, url = `${SITE_ORIGIN}/`) {
   const onScript = (attrSource, content) => {
     const a = attrsOf(attrSource);
     if (a.src) noteMixed(a.src);
+    else out.inlineScriptBytes += Buffer.byteLength(content);
     const type = a.type ?? '';
     if (/ld\+json/i.test(type)) {
       const text = content.trim();
@@ -644,6 +650,7 @@ export function extract(htmlInput, url = `${SITE_ORIGIN}/`) {
         contentEnd = nx === -1 ? n : nx;
       }
       if (name === 'script') onScript(attrSource, src.slice(i, contentEnd));
+      else out.inlineStyleBytes += Buffer.byteLength(src.slice(i, contentEnd));
       i = textFrom = contentEnd;
       continue;
     }

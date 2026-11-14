@@ -137,11 +137,17 @@ unserved, question, needs-links, ai-gap, engine-gap, not-indexed.
 ## Health and AI
 
 `/api/audit`: `health {pagesAudited, pagesKnown, openIssues, toFix, bySeverity, score,
-lastAuditText, nextAuditText}` (`toFix` is the open critical and high issues, the ones to do first), `audit {score, counts, issues[], stoppedEarly}`, `comparison` (null on a first run;
-`added[]`, `fixed[]`), `weeklyAudit`. Issue: `{id, name, severity (critical|high|medium|low),
+lastAuditText, nextAuditText}` (`toFix` is the open critical and high issues, the ones to do first), `audit {score, counts, issues[], stoppedEarly, groups[{group, label, score, note}], clicksRange, clicksNote}`, `comparison` (null on a first run;
+`added[]`, `fixed[]`, `byNewCheck[]`, `byNewCheckText`), `weeklyAudit`. Issue: `{id, name, severity (critical|high|medium|low),
 effort (quick win|moderate|larger job), impact, what, why, fix, steps[], pages[{page, clicks,
-frozenUntilText, isNew}], editsPage, siteWide, clicks}`. `editsPage` false means it is a change to
-the site's setup, not to a page, so it does not use the week's edit.
+frozenUntilText, isNew, newCheck}], editsPage, siteWide, clicks}`. `editsPage` false means it is a change to
+the site's setup, not to a page, so it does not use the week's edit. New and fixed compare only
+checks that ran in both audits; `byNewCheck` lists pages found by a check the earlier audit did not
+have: never call those new problems (their pages have `newCheck` true, `isNew` false). Page clicks
+are Search Console's days, quote `clicksNote`. A score of 100 means nothing is open; a group's `note`
+says what its score covers. Two site setup findings: `title-template-long` (titles long only because
+of the shared ending) and `inline-css-heavy`; page weight (`page-code-large`) leaves out inline
+styles and scripts, and every size is before compression.
 
 `/api/ai-visibility`: `byKind[]` (brand, alternatives, category, other) and `byAssistant[]`
 (ChatGPT, Google AI answers). Counts: `listed`, `listedLinked`, `keywordChecked`, `keywordNamed`,

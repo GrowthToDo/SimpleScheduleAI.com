@@ -18,6 +18,12 @@ export const GROUPS = [
   { group: 'speed', label: 'Speed hints' },
 ];
 
+// What a group's score covers, where its name could promise more than the checks look at.
+export const GROUP_NOTE = {
+  structured:
+    "Covers only what the audit checks: posts carry article and breadcrumb data with a headline, date and author, the data can be read, question lists have questions, and the home page names the business. It is not Google's rich results test.",
+};
+
 // Critical: the page cannot be reached or read, or is blocked from Google. High: a problem that
 // can cost clicks on a page that earns them, or a gap across the whole site in how Google finds
 // pages. Medium: on-page and structured-data gaps. Low: tidy-ups such as long titles.
@@ -31,13 +37,15 @@ export const IMPACTS = ['high', 'medium', 'low'];
 const LEGACY_SEVERITY = { warning: 'medium', notice: 'low' };
 export const normSeverity = (s) => (Object.hasOwn(SEVERITY_RANK, s) ? s : (LEGACY_SEVERITY[s] ?? 'low'));
 export const SCORE_NOTE =
-  'The score is 100 minus the share of pages with problems. Critical problems count most; low priority ones barely move it. A problem that affects the whole site counts once, against the home page.';
+  'The score is 100 minus the share of pages with problems. Each page counts once, at its worst problem: critical counts 3, high 2, medium 1 and low a tenth, so many low priority problems still add up. A problem that affects the whole site counts once, against the home page. A score shows 100 only when nothing is open.';
 
 const POST_RE = /^\/(blog|articles)\/[^/]+$/;
 const ARCHIVE_RE = /^\/(tag|category)\/|^\/(blog|articles)\/\d+$/;
 // Where Cloudflare sends an email link it has scrambled (Email Address Obfuscation).
 const EMAIL_PROTECTION_RE = /^\/cdn-cgi\/l\/email-protection(\/|$)/;
 const KB = 1024;
+const INLINE_CSS_LIMIT = 100 * KB;
+const SIZE_NOTE = ' The sizes are before compression; pages travel compressed, several times smaller.';
 const HINT = " This is a hint from the page's weight, not measured speed.";
 
 // ---------------------------------------------------------------- pages and the site around them
@@ -97,10 +105,12 @@ export function buildSite({ pages, sitemap, linkStatus = new Map(), httpHome = n
       inbound.get(key).add(p.path);
     }
   }
+  // A page reached through a redirect shows the target's title and description, so it is left out
+  // of the shared title and description groups (its own check says it redirects).
   const group = (read) => {
     const m = new Map();
     for (const p of pages) {
-      const v = p.hasDoc ? read(p.doc).trim().toLowerCase().replace(/\s+/g, ' ') : '';
+      const v = p.hasDoc && !p.redirects?.length ? read(p.doc).trim().toLowerCase().replace(/\s+/g, ' ') : '';
       if (!v) continue;
       if (!m.has(v)) m.set(v, []);
       m.get(v).push(p.path);
@@ -117,8 +127,53 @@ export function buildSite({ pages, sitemap, linkStatus = new Map(), httpHome = n
     titles: group((d) => d.title),
     descriptions: group((d) => d.description),
     home: byPath.get('/') ?? null,
+    titleEnding: sharedTitleEnding(pages.filter((p) => p.hasDoc).map((p) => p.doc.title)),
+    inlineCss: typicalInlineCss(pages),
   };
 }
+
+// The same trailing text on at least `share` of the titles, such as the site name a title template
+// adds to every title: the longest such ending that starts after a space, or null. Needs 4 titles.
+export function sharedTitleEnding(titles, share = 0.8) {
+  const list = (titles ?? []).map((t) => String(t ?? '')).filter(Boolean);
+  if (list.length < 4) return null;
+  const counts = new Map();
+  for (const t of list) {
+    const seen = new Set();
+    for (let i = 1; i < t.length; i++) {
+      if (!/\s/.test(t[i])) continue;
+      const end = t.slice(i);
+      if (seen.has(end) || !/\p{L}/u.test(end) || end.trim().length < 4) continue;
+      seen.add(end);
+      counts.set(end, (counts.get(end) ?? 0) + 1);
+    }
+  }
+  const need = Math.ceil(list.length * share);
+  let best = null;
+  for (const [end, n] of counts) if (n >= need && (!best || end.length > best.length)) best = end;
+  return best;
+}
+
+// The ending as a person reads it: no leading space or separator.
+const endingWords = (ending) => String(ending ?? '').replace(/^[\s\p{P}\p{S}]+/u, '');
+
+// The inline stylesheet the typical page carries: {bytes (the median), over (pages above 100 KB), pages}.
+function typicalInlineCss(pages) {
+  const sizes = pages
+    .filter((p) => p.hasDoc)
+    .map((p) => p.doc.inlineStyleBytes ?? 0)
+    .sort((a, b) => a - b);
+  if (!sizes.length) return { bytes: 0, over: 0, pages: 0 };
+  return {
+    bytes: sizes[Math.floor((sizes.length - 1) / 2)],
+    over: sizes.filter((b) => b > INLINE_CSS_LIMIT).length,
+    pages: sizes.length,
+  };
+}
+
+// The page's own code: what it weighs without the text of inline styles and scripts.
+const pageCodeBytes = (p) =>
+  Math.max(0, (p.bytes ?? 0) - (p.doc?.inlineStyleBytes ?? 0) - (p.doc?.inlineScriptBytes ?? 0));
 
 // ---------------------------------------------------------------- helpers for the checks
 
@@ -198,9 +253,15 @@ const PAGE_EDIT_CHECKS = new Set([
   'faq-empty',
   'link-empty-text',
   'too-many-links',
+  'page-code-large',
+  // The page weight check before it left inline styles and scripts out; kept for saved runs.
   'html-over-200kb',
   'img-no-alt',
 ]);
+
+// A check that takes over part of another one's pages. A page that moved from the older check to
+// this one between two audits is not "fixed".
+export const SPLIT_FROM = { 'title-template-long': 'title-long' };
 
 // What a saved run lacks: the effort, impact and steps of a check, by id. Null for an id that is no
 // longer a check.
@@ -280,6 +341,15 @@ const GUIDE = {
       'Change any links that use the old address to use the final one.',
     ],
   },
+  'sitemap-redirects': {
+    effort: 'quick win',
+    impact: 'medium',
+    setup: true,
+    steps: [
+      'Open the address listed here and note the address it lands on.',
+      'Ask Claude to make the sitemap list the address the page lands on (the site builds the sitemap itself), and to change links that use the old address.',
+    ],
+  },
   'redirect-off-host': {
     effort: 'moderate',
     impact: 'high',
@@ -344,6 +414,14 @@ const GUIDE = {
       'Or ask Claude to add a permanent redirect from http to https in netlify.toml in the repository. Use one of the two, not both, then run the audit again.',
     ],
   },
+  'http-not-checked': {
+    effort: 'quick win',
+    impact: 'low',
+    steps: [
+      'Type the plain http address of the site into your browser and see whether it lands on the https address.',
+      'Run the audit again later. If the http address still does not answer, tell Claude what your browser showed.',
+    ],
+  },
   'trailing-slash-duplicate': {
     effort: 'moderate',
     impact: 'low',
@@ -366,6 +444,16 @@ const GUIDE = {
     steps: [
       'Open the pages listed here and read each title in the browser tab.',
       'Shorten each to about 60 characters, with the words that matter first.',
+    ],
+  },
+  'title-template-long': {
+    effort: 'moderate',
+    impact: 'low',
+    setup: true,
+    steps: [
+      'Open src/config.yaml in the repository and find the title template, the line that adds the same ending to every page title.',
+      'Decide whether to shorten that ending or leave it off long titles, and ask Claude to make the change once in the template. One change covers every page listed.',
+      'Run the audit again to see how many titles are still over 60 characters.',
     ],
   },
   'title-short': {
@@ -638,12 +726,22 @@ const GUIDE = {
       "Check what sets each cookie. If it comes from a tool on the page, such as analytics, look in that tool's settings for a Secure option; if it comes from the site's own code, ask Claude to add the Secure flag. The Secure flag is a mark on a cookie that tells the browser to send it only over a secure https connection.",
     ],
   },
-  'html-over-200kb': {
+  'page-code-large': {
     effort: 'larger job',
     impact: 'low',
     steps: [
       'Open the page listed here and look at what it carries, such as long inline data or unused sections.',
       'Cut down or move out whatever is not needed.',
+    ],
+  },
+  'inline-css-heavy': {
+    effort: 'moderate',
+    impact: 'low',
+    setup: true,
+    steps: [
+      'Open astro.config.ts in the repository and find the setting build.inlineStylesheets.',
+      'Ask Claude to change it so the shared styles load as one separate file the browser keeps between pages, instead of sitting inside every page. One change covers every page.',
+      'Run the audit again and compare the page sizes. They are before compression; pages travel compressed, several times smaller.',
     ],
   },
   'blocking-scripts': {
@@ -660,7 +758,7 @@ const GUIDE = {
     impact: 'low',
     steps: [
       'Open the page listed here and look at its images in the page code.',
-      'Add the width and height to each image.',
+      'Add the width and height to each image that has none and no class giving it a size.',
     ],
   },
   'img-no-alt': {
@@ -730,6 +828,24 @@ export const CHECKS = [
     (p) => (p.redirects.length > 1 ? `Goes through ${p.redirects.length} redirects before the page opens.` : false)
   ),
   def(
+    'sitemap-redirects',
+    'reachability',
+    'medium',
+    'Sitemap address redirects',
+    (n) =>
+      these(
+        n,
+        'is listed in the sitemap at an address that moves on to another one',
+        'are listed in the sitemap at addresses that move on to other ones'
+      ),
+    'The sitemap should list the address a page really lives at. An address that redirects is one Google has to follow before it reaches the page, and it may treat the other address as the main one.',
+    'List the address the page lands on in the sitemap, and use it in links.',
+    (p, site) =>
+      p.redirects.length === 1 && !p.offHost && site.sitemap.has(p.path)
+        ? `It moves on to ${pathOfUrl(p.finalUrl)}.`
+        : false
+  ),
+  def(
     'redirect-off-host',
     'reachability',
     'critical',
@@ -787,6 +903,7 @@ export const CHECKS = [
       }
       if (!d.canonical) return false;
       if (c.hostname !== SITE_HOST) return `It points at another website, ${c.hostname}.`;
+      if (c.protocol === 'http:') return `It points at the plain http address ${c.href}, not the secure one.`;
       const target = normPath(c.pathname);
       if (target === p.path || target === normPath(pathOfUrl(p.finalUrl || p.url))) return false;
       return `It points at ${target}.`;
@@ -808,9 +925,7 @@ export const CHECKS = [
       site.sitemap.has(p.path) &&
       !(site.inbound.get(p.path)?.size > 0)
         ? 'No other page links to it.'
-        : false,
-    'page',
-    true
+        : false
   ),
   def(
     'linked-not-in-sitemap',
@@ -849,12 +964,28 @@ export const CHECKS = [
     "Turn on Always Use HTTPS in Cloudflare, or add a permanent redirect from http to https in the site's netlify.toml.",
     (_, site) => {
       const h = site.httpHome;
-      if (!h || h.error) return [];
+      if (!h || h.error || !h.status) return [];
       const moves =
         [301, 302, 307, 308].includes(h.status) && /^https:\/\/simplescheduleai\.com\//.test(h.location ?? '');
       return moves
         ? []
         : [{ page: '/', detail: `The http address did not move visitors to https (it answered ${h.status}).` }];
+    },
+    'site'
+  ),
+  def(
+    'http-not-checked',
+    'reachability',
+    'low',
+    'Plain http address could not be checked',
+    () =>
+      'The plain http address of the site did not answer this time, so the audit could not see whether it moves to https.',
+    'Whether old http links land on the secure site was not checked in this run. That is often a passing problem.',
+    'Run the audit again later, or type the http address into your browser and see where it lands.',
+    (_, site) => {
+      const h = site.httpHome;
+      if (!h || (!h.error && h.status)) return [];
+      return [{ page: '/', detail: `No answer from the http address${h.error ? `: ${h.error}` : '.'}` }];
     },
     'site'
   ),
@@ -913,7 +1044,44 @@ export const CHECKS = [
     (n) => these(n, 'has a title longer than 60 characters', 'have titles longer than 60 characters'),
     'Google may cut a title longer than about 60 characters short in search results, so the end of it may not show.',
     'Shorten the title so the words that matter come first.',
-    onPage((p, d) => ([...d.title].length > 60 ? chars(d.title) : false))
+    // A title that is long only because of the ending every title shares belongs to the template
+    // finding below, not to this page.
+    onPage((p, d, site) => {
+      const len = [...d.title].length;
+      if (len <= 60) return false;
+      const end = site.titleEnding;
+      if (!end || !d.title.endsWith(end)) return chars(d.title);
+      const without = len - [...end].length;
+      return without <= 60 ? false : `${chars(d.title)}, ${without} without the ending every title shares.`;
+    })
+  ),
+  def(
+    'title-template-long',
+    'onpage',
+    'low',
+    'Titles long because of the shared ending',
+    (n, site) => {
+      const end = site?.titleEnding ? `"${endingWords(site.titleEnding)}"` : 'that every title shares';
+      return n === 1
+        ? `1 page has a title over 60 characters only because of the ending ${end} that the title template adds.`
+        : `${n} pages have titles over 60 characters only because of the ending ${end} that the title template adds.`;
+    },
+    'Google may cut a title longer than about 60 characters short in search results, so the shared ending may not show. One change to the template covers every one of these pages.',
+    'Shorten the shared ending in the title template in src/config.yaml, or leave it off long titles. It is one setup change, not a page edit.',
+    (_, site) => {
+      const end = site.titleEnding;
+      if (!end) return [];
+      const endLen = [...end].length;
+      const out = [];
+      for (const p of site.pages.values()) {
+        if (!p.hasDoc || !p.doc.title.endsWith(end)) continue;
+        const len = [...p.doc.title].length;
+        if (len > 60 && len - endLen <= 60)
+          out.push({ page: p.path, detail: `${len} characters, ${len - endLen} without the shared ending.` });
+      }
+      return out;
+    },
+    'site'
   ),
   def(
     'title-short',
@@ -945,6 +1113,8 @@ export const CHECKS = [
     'Two pages with the same title may compete for the same searches, and Google may show the wrong one.',
     'Give each page a title that says what that page alone is about.',
     onPage((p, d, site) => {
+      // A redirected address shows its target's title; it has its own finding.
+      if (p.redirects?.length) return false;
       const others = (site.titles.get(d.title.trim().toLowerCase().replace(/\s+/g, ' ')) ?? []).filter(
         (x) => x !== p.path
       );
@@ -990,6 +1160,8 @@ export const CHECKS = [
     'A copied description may tell searchers nothing new about this page.',
     'Write a description for each page that matches what that page says.',
     onPage((p, d, site) => {
+      // A redirected address shows its target's description; it has its own finding.
+      if (p.redirects?.length) return false;
       const others = (site.descriptions.get(d.description.trim().toLowerCase().replace(/\s+/g, ' ')) ?? []).filter(
         (x) => x !== p.path
       );
@@ -1335,14 +1507,42 @@ export const CHECKS = [
 
   // ------------------------------------------------ speed hints (the weight of the page, not measured speed)
   def(
-    'html-over-200kb',
+    'page-code-large',
     'speed',
     'low',
     'Page code is large',
-    (n) => these(n, 'has more than 200 KB of page code', 'have more than 200 KB of page code'),
-    `Heavy pages take longer to arrive on a slow phone connection.${HINT}`,
+    (n) =>
+      these(
+        n,
+        'has more than 200 KB of page code, not counting inline styles and scripts',
+        'have more than 200 KB of page code, not counting inline styles and scripts'
+      ),
+    `A heavy page can take longer to arrive on a slow phone connection.${SIZE_NOTE}${HINT}`,
     'Trim what the page carries, such as unused sections or long inline data.',
-    (p) => (p.bytes > 200 * KB ? `${Math.round(p.bytes / KB)} KB of page code.` : false)
+    (p) => {
+      const code = pageCodeBytes(p);
+      return code > 200 * KB ? `${Math.round(code / KB)} KB of page code before compression.` : false;
+    }
+  ),
+  def(
+    'inline-css-heavy',
+    'speed',
+    'low',
+    'Every page carries a large inline stylesheet',
+    () => 'The typical page carries more than 100 KB of inline stylesheet, set by one site setting.',
+    `The same styles are sent inside every page instead of once in a file the browser keeps, so each page weighs more than it needs to.${SIZE_NOTE}${HINT}`,
+    'Change build.inlineStylesheets in astro.config.ts so the shared styles load as one separate file. It is one setup change, not a page edit.',
+    (_, site) => {
+      const c = site.inlineCss;
+      if (!c || c.bytes <= INLINE_CSS_LIMIT) return [];
+      return [
+        {
+          page: '/',
+          detail: `The typical page carries ${Math.round(c.bytes / KB)} KB of inline stylesheet before compression; ${c.over} of ${c.pages} pages carry more than 100 KB.`,
+        },
+      ];
+    },
+    'site'
   ),
   def(
     'blocking-scripts',
@@ -1364,12 +1564,18 @@ export const CHECKS = [
     'speed',
     'low',
     'Images without a set size',
-    (n) => these(n, 'has images without a width and height', 'have images without a width and height'),
-    `Without a set size, the page jumps around while pictures load.${HINT}`,
-    'Add the width and height to each image.',
+    (n) =>
+      these(
+        n,
+        'has images with no width, no height and no class to size them',
+        'have images with no width, no height and no class to size them'
+      ),
+    `Without a set size, the page may jump around while pictures load.${HINT}`,
+    'Add the width and height to each image, or a class that sizes it.',
+    // An image with a class or a style may get its size from the stylesheet, so it is not counted.
     onPage((p, d) => {
-      const n = d.images.filter((i) => !i.hasSize).length;
-      return n ? `${n} of ${d.images.length} images have no width and height.` : false;
+      const n = d.images.filter((i) => !i.hasSize && !i.styled).length;
+      return n ? `${n} of ${d.images.length} images have no width, no height and no class.` : false;
     })
   ),
   def(
@@ -1448,7 +1654,7 @@ export function evaluate({ pages, site, clicksOf = () => 0 }) {
       severity: c.severity,
       siteWide: c.siteWide,
       editsPage: c.editsPage,
-      what: plain(typeof c.what === 'function' ? c.what(rows.length) : c.what),
+      what: plain(typeof c.what === 'function' ? c.what(rows.length, site) : c.what),
       why: plain(c.why),
       fix: plain(c.fix),
       effort: c.effort,
@@ -1490,5 +1696,7 @@ export function scoreOf(issues, pagesChecked, group = null, audited = null) {
   }
   let weighted = 0;
   for (const sev of worst.values()) weighted += SEVERITY_WEIGHT[sev];
-  return Math.max(0, Math.round(100 - (100 * weighted) / pagesChecked));
+  const score = Math.max(0, Math.round(100 - (100 * weighted) / pagesChecked));
+  // 100 means nothing is open: one low finding that rounds away still leaves it at 99.
+  return worst.size && score === 100 ? 99 : score;
 }

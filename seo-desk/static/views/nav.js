@@ -175,6 +175,8 @@ export function countTitle(entry, value, counts = null) {
   }
   if (entry.count === 'auditToFix') {
     if (!isNum(value)) return 'No technical audit has run yet.';
+    const doubt = auditDoubt(counts);
+    if (doubt && Number(value) === 0) return `Nothing critical or high was found, but ${doubt}`;
     const open = isNum(counts?.auditOpen) ? Number(counts.auditOpen) : null;
     const rest = open === null ? 0 : open - Number(value);
     const lower =
@@ -186,6 +188,14 @@ export function countTitle(entry, value, counts = null) {
   if (!isNum(value)) return `Not counted yet: ${NEEDS[entry.count] ?? 'its source'} has not been pulled on this Mac.`;
   const [one, many] = entry.unit ?? ['item', 'items'];
   return `${countText(value)} ${Number(value) === 1 ? one : many}`;
+}
+
+// Why the latest audit cannot vouch for "nothing to fix": it stopped early, or it is old. Null when
+// it can. Reads auditStoppedEarly and auditOld from /api/nav when the reply carries them.
+export function auditDoubt(counts) {
+  if (counts?.auditStoppedEarly === true) return 'the last audit stopped early, so some pages were not read.';
+  if (counts?.auditOld === true) return 'the last audit is more than two weeks old. Run it again.';
+  return null;
 }
 
 // What a count slot shows, from the whole counts object of GET /api/nav:
@@ -202,12 +212,15 @@ export function countView(entry, counts) {
   if (!Object.hasOwn(counts, entry.count)) return { text: DASH, title: NOT_AVAILABLE, tone: '', label: NOT_AVAILABLE };
   const value = counts[entry.count];
   const title = countTitle(entry, value, counts);
-  // The audit shows "2 to fix", or a tick when nothing critical or high is open.
+  // The audit shows "2 to fix", or a tick when nothing critical or high is open and the audit is
+  // recent and whole; otherwise a dash, with the reason in the title.
   const text =
     entry.count === 'auditToFix' && isNum(value)
       ? Number(value) > 0
         ? `${countText(value)} to fix`
-        : TICK
+        : auditDoubt(counts)
+          ? DASH
+          : TICK
       : countText(value);
   return { text, title, tone: countTone(entry, value), label: title };
 }

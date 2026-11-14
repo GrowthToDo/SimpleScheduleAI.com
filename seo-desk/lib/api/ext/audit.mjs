@@ -5,6 +5,7 @@
 import { listAudits, loadAudit, compareAudits, countsOf, isRunTime, nextWeeklyAuditDate } from '../../audit/run.mjs';
 import {
   GROUPS,
+  GROUP_NOTE,
   SCORE_NOTE,
   SEVERITY_LABEL,
   normSeverity,
@@ -13,8 +14,8 @@ import {
   editsPageOf,
   guideOf,
 } from '../../audit/checks.mjs';
-import { todayIso } from '../../dates.mjs';
-import { longDate } from '../../text.mjs';
+import { todayIso, daysBetween } from '../../dates.mjs';
+import { longDate, longRange } from '../../text.mjs';
 import { changeSettings } from '../actions.mjs';
 import { buildModel, envelope } from '../model.mjs';
 import { toCsv } from '../csv.mjs';
@@ -71,30 +72,58 @@ const marked = (model, i) => ({
 const liveCount = (model) => (model.data.local?.livePages ?? []).length || null;
 
 // One run as the page reads it: issues worst first, each page marked new or not since the run before.
+// A group with what its score covers (GROUP_NOTE), for runs saved before the note existed too.
+const withNote = (g) => ({ ...g, note: GROUP_NOTE[g.group] ?? null });
+
+// A score reads 100 only when nothing is open. Runs saved before scoreOf held to that can carry a
+// 100 next to an open low finding, so the cap is applied here too.
+const capped = (score, open) => (open && score === 100 ? 99 : score);
+
 function present(model, run, prev) {
   const comparison = compareAudits(prev, run);
   const added = new Map((comparison?.added ?? []).map((i) => [i.id, new Set(i.pages.map((p) => p.page))]));
+  const byNewCheck = new Set((comparison?.byNewCheck ?? []).map((i) => i.id));
+  // isNew: a new problem found by a check that also ran last time. newCheck: found by a check the
+  // last audit did not have, so it cannot be called new.
   const issues = sortIssues(run.issues ?? []).map((i) =>
     marked(model, {
       ...i,
       clicks: i.pages.reduce((s, p) => s + (p.clicks || 0), 0),
-      pages: i.pages.map((p) => ({ ...p, isNew: comparison ? added.get(i.id)?.has(p.page) === true : true })),
+      pages: i.pages.map((p) => ({
+        ...p,
+        isNew: comparison ? added.get(i.id)?.has(p.page) === true : true,
+        newCheck: byNewCheck.has(i.id),
+      })),
     })
   );
+  const clicks = run.clicksRange?.start && run.clicksRange?.end ? run.clicksRange : null;
   return {
     audit: {
       startedAt: run.startedAt,
       startedText: dayText(run.startedAt),
       finishedAt: run.finishedAt ?? null,
       pagesChecked: run.pagesChecked ?? 0,
-      score: run.score ?? null,
+      score: capped(run.score ?? null, issues.length > 0),
       scoreNote: SCORE_NOTE,
       stoppedEarly: run.stoppedEarly === true,
       pagesPlanned: run.pagesPlanned ?? null,
       stoppedNote: stoppedNote(run, liveCount(model)),
       counts: countsOf(issues),
-      groups: run.groups?.length ? run.groups : GROUPS.map((g) => ({ ...g, score: null })),
+      groups: (run.groups?.length ? run.groups : GROUPS.map((g) => ({ ...g, score: null }))).map((g) =>
+        withNote({
+          ...g,
+          score: capped(
+            g.score,
+            issues.some((i) => i.group === g.group)
+          ),
+        })
+      ),
       issues,
+      // The Search Console days each page's clicks cover; null for a run saved before it was kept.
+      clicksRange: clicks ? { ...clicks, text: longRange(clicks.start, clicks.end) } : null,
+      clicksNote: clicks
+        ? `Clicks on each page are Google clicks from Search Console, ${longRange(clicks.start, clicks.end)}.`
+        : 'Clicks on each page are Google clicks from Search Console over the 28 days the desk had when the audit ran.',
       linkTargetsChecked: run.linkTargetsChecked ?? 0,
       linkTargetsSkipped: run.linkTargetsSkipped ?? 0,
     },
@@ -104,6 +133,8 @@ function present(model, run, prev) {
           sinceText: dayText(prev.startedAt),
           added: comparison.added.map((i) => marked(model, i)),
           fixed: comparison.fixed.map((i) => marked(model, i)),
+          byNewCheck: comparison.byNewCheck.map((i) => marked(model, i)),
+          byNewCheckText: 'Found by a check added since the last audit',
           unchanged: comparison.unchanged,
         }
       : null,
@@ -140,7 +171,7 @@ function healthOf(model, run, audit) {
     lastAuditText: run ? dayText(run.startedAt) : null,
     nextAuditAt: next,
     nextAuditText: next ? longDate(next) : null,
-    score: run?.score ?? null,
+    score: audit?.score ?? run?.score ?? null,
   };
 }
 
@@ -153,7 +184,7 @@ export function view(model, run) {
     scoreNote: SCORE_NOTE,
     ruleLine: RULE_LINE,
     ...body,
-    groups: body.audit?.groups ?? GROUPS.map((g) => ({ ...g, score: null })),
+    groups: body.audit?.groups ?? GROUPS.map((g) => withNote({ ...g, score: null })),
     history: historyOf(model),
   };
 }
@@ -165,13 +196,27 @@ export const latestRun = () => {
 
 const toFixOf = (counts) => (counts ? (counts.critical ?? 0) + (counts.high ?? 0) : 0);
 
+// After this many days the sidebar no longer shows a tick for "nothing to fix".
+export const AUDIT_OLD_DAYS = 14;
+
 // The latest audit's open issues for the sidebar, counted the way the page counts them (each issue at
-// its level as the checks read today): {open, toFix, bySeverity, score}, or null before any audit.
-export function latestAuditCounts() {
+// its level as the checks read today): {open, toFix, bySeverity, score, at, stoppedEarly, old}, or
+// null before any audit. A stopped or old audit cannot vouch for "nothing to fix".
+export function latestAuditCounts(today = process.env.SEO_DESK_TODAY || todayIso()) {
   const run = latestRun();
   if (!run) return null;
   const bySeverity = countsOf((run.issues ?? []).map((i) => ({ ...i, severity: severityOf(i.id, i.severity) })));
-  return { open: (run.issues ?? []).length, toFix: toFixOf(bySeverity), bySeverity, score: run.score ?? null };
+  const day = isRunTime(run.startedAt) ? todayIso(new Date(run.startedAt)) : null;
+  const age = day ? daysBetween(day, today) : null;
+  return {
+    open: (run.issues ?? []).length,
+    toFix: toFixOf(bySeverity),
+    bySeverity,
+    score: capped(run.score ?? null, (run.issues ?? []).length > 0),
+    at: run.startedAt ?? null,
+    stoppedEarly: run.stoppedEarly === true,
+    old: age === null || age > AUDIT_OLD_DAYS,
+  };
 }
 
 const COLUMNS = [
@@ -186,7 +231,7 @@ const COLUMNS = [
   ['Impact', (r) => r.impact],
 ];
 
-function csvOf(model, run) {
+export function csvOf(model, run) {
   if (!run) return toCsv(COLUMNS, []);
   const { audit } = present(model, run, previousOf(run.startedAt));
   const rows = audit.issues.flatMap((i) =>
@@ -197,7 +242,7 @@ function csvOf(model, run) {
       page: p.page,
       detail: p.detail,
       clicks: p.clicks,
-      status: p.isNew ? 'new' : 'unchanged',
+      status: p.isNew ? 'new' : p.newCheck ? 'new-check' : 'unchanged',
       effort: i.effort,
       impact: i.impact,
     }))

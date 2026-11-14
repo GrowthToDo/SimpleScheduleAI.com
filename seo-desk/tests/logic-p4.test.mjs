@@ -214,3 +214,248 @@ test('W3 and suspicion 1: a well linked page gets "request indexing", and a page
   assert.doesNotMatch(`${kept.fix} ${kept.why}`, /Link to/);
   assert.match(kept.urls.find((u) => u.page === '/blog/hidden-on-purpose').detail, /noindex/);
 });
+
+// ---------------------------------------------------------------- the technical audit
+
+const checks = await import('../lib/audit/checks.mjs');
+const auditRun = await import('../lib/audit/run.mjs');
+const auditExt = await import('../lib/api/ext/audit.mjs');
+const nav = await import('../static/views/nav.js');
+
+const ORIGIN = 'https://simplescheduleai.com';
+
+// One fetched page with the given title, extra head and body.
+function built(path, { title = `A page about ${path}`, head = '', body = '', bytes, redirects = [], finalUrl } = {}) {
+  const html = `<!doctype html><html lang="en"><head><title>${title}</title><meta name="description" content="A description that is long enough to pass the length check for this sample page."><link rel="canonical" href="${ORIGIN}${path}">${head}</head><body><main><h1>Heading for ${path}</h1><a href="/">Home</a>${body}</main></body></html>`;
+  return checks.buildPage(
+    {
+      url: `${ORIGIN}${path}`,
+      status: 200,
+      finalUrl: finalUrl ?? `${ORIGIN}${path}`,
+      redirects,
+      headers: { 'content-type': 'text/html', 'content-encoding': 'gzip' },
+      html,
+      ms: 1,
+      bytes: bytes ?? Buffer.byteLength(html),
+      error: null,
+    },
+    path
+  );
+}
+
+function auditOf(pages, extra = {}) {
+  const site = checks.buildSite({
+    pages,
+    sitemap: new Set(pages.map((p) => p.path)),
+    httpHome: { status: 301, location: `${ORIGIN}/`, error: null },
+    ...extra,
+  });
+  return { site, issues: checks.evaluate({ pages, site }) };
+}
+const issueOf = (issues, id) => issues.find((i) => i.id === id);
+
+test('N3: titles long only because of the shared ending become one setup finding, and the counts add up', () => {
+  const end = ' | Sample Brand Name';
+  const pages = [
+    built('/', { title: `Short home title${end}` }),
+    built('/a', { title: `${'Fifty characters of a title about rotas and shifts'}${end}` }), // long only by the ending
+    built('/b', { title: `${'A much longer title that runs well past sixty characters on its own'}${end}` }),
+    built('/c', { title: `Another short one${end}` }),
+    built('/d', { title: 'A page with no shared ending at all, and long enough to be flagged' }),
+  ];
+  assert.equal(checks.sharedTitleEnding(pages.map((p) => p.doc.title)), end);
+  const { issues } = auditOf(pages);
+  const pageLevel = issueOf(issues, 'title-long');
+  const setup = issueOf(issues, 'title-template-long');
+  assert.deepEqual(pageLevel.pages.map((p) => p.page).sort(), ['/b', '/d']);
+  assert.deepEqual(
+    setup.pages.map((p) => p.page),
+    ['/a']
+  );
+  assert.equal(setup.severity, 'low');
+  assert.equal(setup.editsPage, false);
+  assert.equal(setup.siteWide, true, 'one finding, counted once');
+  assert.match(setup.what, /Sample Brand Name/);
+  assert.match(setup.steps.join(' '), /src\/config\.yaml/);
+  assert.doesNotMatch(setup.steps.join(' '), /counts as that week's one page edit/);
+  // Without the split, the same pages would all be long: the two counts add up to the old one.
+  const long = pages.filter((p) => [...p.doc.title].length > 60).length;
+  assert.equal(pageLevel.pages.length + setup.pages.length, long);
+});
+
+test('N3: page weight leaves out inline styles and scripts, and a heavy inline stylesheet is one setup finding', () => {
+  const css = `<style>${'b{}'.repeat(45000)}</style>`; // 135 KB of inline stylesheet
+  const script = `<script>${'var x=1;'.repeat(2000)}</script>`;
+  const pages = ['/', '/a', '/b', '/c'].map((p) => built(p, { head: css, body: script }));
+  for (const p of pages) assert.equal(p.doc.inlineStyleBytes, 135000);
+  // A page over 200 KB in all, under it without the inline text.
+  const heavy = built('/d', { head: `<style>${'c{}'.repeat(70000)}</style>` });
+  assert.ok(heavy.bytes > 200 * 1024);
+  const { issues } = auditOf([...pages, built('/e', { body: 'x'.repeat(210 * 1024) }), heavy]);
+  assert.deepEqual(
+    issueOf(issues, 'page-code-large').pages.map((p) => p.page),
+    ['/e']
+  );
+  assert.match(issueOf(issues, 'page-code-large').why, /before compression/);
+  const setup = issueOf(issues, 'inline-css-heavy');
+  assert.equal(setup.editsPage, false);
+  assert.match(setup.pages[0].detail, /The typical page carries 132 KB of inline stylesheet before compression/);
+  assert.match(setup.fix, /build\.inlineStylesheets/);
+  assert.match(setup.fix, /astro\.config\.ts/);
+  assert.match(setup.why, /several times smaller/);
+  assert.equal(checks.editsPageOf('inline-css-heavy'), false);
+  assert.equal(checks.editsPageOf('title-template-long'), false);
+});
+
+test('L1: a sitemap address that redirects once is reported, and stays out of the shared title groups', () => {
+  const moved = built('/old-name', {
+    title: 'The title of the renamed page on rotas',
+    redirects: [{ from: `${ORIGIN}/old-name`, to: `${ORIGIN}/new-name`, status: 301 }],
+    finalUrl: `${ORIGIN}/new-name`,
+  });
+  const target = built('/new-name', { title: 'The title of the renamed page on rotas' });
+  const { issues } = auditOf([built('/'), moved, target]);
+  assert.deepEqual(
+    issueOf(issues, 'sitemap-redirects').pages.map((p) => [p.page, p.detail]),
+    [['/old-name', 'It moves on to /new-name.']]
+  );
+  assert.equal(issueOf(issues, 'title-duplicate'), undefined, 'the target is not a duplicate of its own old address');
+});
+
+test('L11 and L12: an http canonical is flagged, and an http address that does not answer is a low finding', () => {
+  const page = built('/a');
+  page.doc.canonical = 'http://simplescheduleai.com/a';
+  const { issues } = auditOf([built('/'), page], { httpHome: { status: 0, location: null, error: 'It timed out.' } });
+  assert.match(issueOf(issues, 'canonical-elsewhere').pages[0].detail, /plain http address/);
+  const open = issueOf(issues, 'http-not-checked');
+  assert.equal(open.severity, 'low');
+  assert.equal(issueOf(issues, 'http-not-redirecting'), undefined);
+  assert.equal(
+    auditRun.checksRunOf({ complete: true, httpHome: { status: 0, error: 'x' } }).includes('http-not-redirecting'),
+    false
+  );
+});
+
+test('W4: an image without size attributes but with a class is not called a layout shift, and the text says may', () => {
+  const pages = [
+    built('/'),
+    built('/a', { body: '<img src="/x.webp" alt="A chart" class="w-full h-auto">' }),
+    built('/b', { body: '<img src="/y.webp" alt="A chart">' }),
+  ];
+  const { issues } = auditOf(pages);
+  const i = issueOf(issues, 'img-no-size');
+  assert.deepEqual(
+    i.pages.map((p) => p.page),
+    ['/b']
+  );
+  assert.match(i.why, /may jump around/);
+});
+
+test('W5: a score shows 100 only when nothing is open', () => {
+  const low = { id: 'x', group: 'speed', severity: 'low', pages: [{ page: '/a' }] };
+  assert.equal(checks.scoreOf([low], 200), 99);
+  assert.equal(checks.scoreOf([low], 200, 'speed'), 99);
+  assert.equal(checks.scoreOf([low], 200, 'links'), 100);
+  assert.equal(checks.scoreOf([], 200), 100);
+  assert.match(checks.GROUP_NOTE.structured, /not Google's rich results test/);
+});
+
+test('N2: only checks that ran in both audits say new or fixed; a new check has its own line', () => {
+  const issue = (id, pages) => ({
+    id,
+    group: 'onpage',
+    severity: 'low',
+    what: 'W',
+    why: 'Y',
+    fix: 'F',
+    pages: pages.map((page) => ({ page, detail: '', clicks: 0 })),
+  });
+  // An earlier run saved before checksRun: only the ids in its issues are known to have run.
+  const prev = {
+    startedAt: '2026-11-01T06:00:00.000Z',
+    issues: [issue('title-long', ['/a', '/b']), issue('retired-check', ['/r'])],
+  };
+  const cur = {
+    startedAt: '2026-11-08T06:00:00.000Z',
+    checksRun: ['title-long', 'title-template-long', 'title-repeats-name', 'h1-missing'],
+    issues: [
+      issue('title-long', ['/c']),
+      issue('title-template-long', ['/a']),
+      issue('title-repeats-name', ['/a', '/x']),
+    ],
+  };
+  const cmp = auditRun.compareAudits(prev, cur);
+  assert.deepEqual(
+    cmp.added.map((i) => [i.id, i.pages.map((p) => p.page)]),
+    [['title-long', ['/c']]]
+  );
+  assert.deepEqual(
+    cmp.fixed.map((i) => [i.id, i.pages.map((p) => p.page)]),
+    [['title-long', ['/b']]],
+    '/a moved to the template finding, and the retired check fixes nothing'
+  );
+  assert.deepEqual(cmp.byNewCheck.map((i) => i.id).sort(), ['title-repeats-name', 'title-template-long']);
+});
+
+test('N2 and W9: the audit route marks new-check pages without "New", the CSV says new-check, and clicks name their days', async () => {
+  fs.rmSync(DATA, { recursive: true, force: true });
+  const issue = (id, pages) => ({
+    id,
+    group: 'onpage',
+    severity: 'low',
+    what: 'W',
+    why: 'Y',
+    fix: 'F',
+    pages: pages.map((page) => ({ page, detail: '', clicks: 2 })),
+  });
+  auditRun.saveAudit({
+    startedAt: '2026-11-01T06:00:00.000Z',
+    pagesChecked: 3,
+    score: 99,
+    issues: [issue('title-long', ['/a'])],
+  });
+  auditRun.saveAudit({
+    startedAt: '2026-11-08T06:00:00.000Z',
+    pagesChecked: 3,
+    score: 98,
+    checksRun: ['title-long', 'title-repeats-name'],
+    clicksRange: { start: '2026-10-08', end: '2026-11-04' },
+    issues: [issue('title-long', ['/a', '/b']), issue('title-repeats-name', ['/c'])],
+  });
+  invalidate();
+  const v = auditExt.view(buildModel(), auditExt.latestRun());
+  const rep = v.audit.issues.find((i) => i.id === 'title-repeats-name');
+  assert.equal(rep.pages[0].isNew, false);
+  assert.equal(rep.pages[0].newCheck, true);
+  assert.deepEqual(
+    v.comparison.byNewCheck.map((i) => i.id),
+    ['title-repeats-name']
+  );
+  assert.deepEqual(
+    v.comparison.added.map((i) => [i.id, i.pages.map((p) => p.page)]),
+    [['title-long', ['/b']]]
+  );
+  assert.match(v.audit.clicksNote, /8 October to 4 November|8 Oct/);
+  assert.doesNotMatch(v.audit.clicksNote, /before the audit ran/);
+  const csv = auditExt.csvOf(buildModel(), auditExt.latestRun());
+  assert.match(csv, /\/c,[^\r\n]*,new-check,/);
+  assert.match(csv, /\/b,[^\r\n]*,new,/);
+});
+
+test('L3: the sidebar shows no tick for a stopped or old audit', () => {
+  const entry = { count: 'auditToFix' };
+  assert.equal(nav.countView(entry, { auditToFix: 0, auditOpen: 3 }).text, nav.TICK);
+  const stopped = nav.countView(entry, { auditToFix: 0, auditOpen: 3, auditStoppedEarly: true });
+  assert.equal(stopped.text, nav.DASH);
+  assert.match(stopped.title, /stopped early/);
+  const old = nav.countView(entry, { auditToFix: 0, auditOpen: 3, auditOld: true });
+  assert.equal(old.text, nav.DASH);
+  assert.match(old.title, /more than two weeks old/);
+  assert.equal(nav.countView(entry, { auditToFix: 2, auditStoppedEarly: true }).text, '2 to fix');
+  fs.rmSync(DATA, { recursive: true, force: true });
+  auditRun.saveAudit({ startedAt: '2026-10-01T06:00:00.000Z', pagesChecked: 3, score: 99, issues: [] });
+  const c = auditExt.latestAuditCounts('2026-11-10');
+  assert.equal(c.old, true);
+  assert.equal(c.stoppedEarly, false);
+  assert.equal(c.at, '2026-10-01T06:00:00.000Z');
+});

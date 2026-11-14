@@ -360,7 +360,25 @@ const BAD = {
     }),
   'nosniff-missing': (s) => (s.headers['/'] = { 'x-content-type-options': undefined }),
   'cookie-no-secure': (s) => (s.headers['/about'] = { 'set-cookie': ['visit=1; Path=/; HttpOnly'] }),
-  'html-over-200kb': (s) => (s.fetched['/about'] = { bytes: 230 * 1024 }),
+  'page-code-large': (s) => (s.fetched['/about'] = { bytes: 230 * 1024 }),
+  'inline-css-heavy': (s) => {
+    for (const p of s.paths) s.over[p] = { extraHead: `<style>${'a{}'.repeat(40000)}</style>` };
+  },
+  'sitemap-redirects': (s) =>
+    (s.fetched['/about'] = {
+      redirects: [{ from: `${SITE_ORIGIN}/about`, to: `${SITE_ORIGIN}/about-us`, status: 301 }],
+      finalUrl: `${SITE_ORIGIN}/about-us`,
+    }),
+  'http-not-checked': (s) => (s.httpHome = { status: 0, location: null, error: 'The request timed out.' }),
+  'title-template-long': (s) => {
+    const base = {
+      '/': 'Home of the rota guide',
+      '/blog/alpha': 'Alpha post on shifts',
+      '/blog/beta': 'Beta post on rotas',
+    };
+    for (const [p, t] of Object.entries(base)) s.over[p] = { title: `${t} | Example Brand` };
+    s.over['/about'] = { title: `${'About the people who write these scheduling guides'} | Example Brand` };
+  },
   'blocking-scripts': (s) =>
     (s.over['/about'] = {
       headScripts: Array.from({ length: 4 }, (_, i) => `<script src="/a${i}.js"></script>`),
@@ -1012,19 +1030,14 @@ test('a site wide problem counts once against the home page, and pages that were
   assert.equal(scoreOf([{ ...out, pages: [{ page: '/linked-only' }] }], 10, null, audited), 100);
 });
 
-test('the real checks mark the site wide ones, and a run says in words what the score counts', async () => {
+test('the real checks mark the site wide ones, orphan pages each count, and a run says in words what the score counts', async () => {
   const wide = CHECKS.filter((c) => c.siteWide).map((c) => c.id);
-  for (const id of [
-    'hsts-missing',
-    'nosniff-missing',
-    'http-not-redirecting',
-    'linked-not-in-sitemap',
-    'sitemap-not-linked',
-  ]) {
+  for (const id of ['hsts-missing', 'nosniff-missing', 'http-not-redirecting', 'linked-not-in-sitemap']) {
     assert.ok(wide.includes(id), id);
   }
-  assert.match(checks.SCORE_NOTE, /Critical problems count most; low priority ones barely move it\./);
-  // five orphans in a good site of 4 pages would be one weight, not five
+  assert.ok(!wide.includes('sitemap-not-linked'), 'each page nothing links to is its own problem');
+  assert.match(checks.SCORE_NOTE, /so many low priority problems still add up\./);
+  // five orphans in a site of 6 pages: five high weights, not one
   const sc = scenario((s) => {
     s.paths = ['/', '/a1', '/a2', '/a3', '/a4', '/a5'];
     for (const p of s.paths) s.over[p] = { links: [['/', 'Home']] };
@@ -1032,10 +1045,10 @@ test('the real checks mark the site wide ones, and a run says in words what the 
   const { issues, pages } = evaluateScenario(sc);
   const orphans = issues.find((i) => i.id === 'sitemap-not-linked');
   assert.equal(orphans.pages.length, 5);
-  assert.equal(orphans.siteWide, true);
+  assert.equal(orphans.siteWide, false);
   assert.equal(
     scoreOf(issues, pages.length, null, new Set(pages.map((p) => p.path))),
-    67, // one high weight (2) against 6 pages
+    0, // five high weights (2 each) against 6 pages, floored at 0
     issues.map((i) => i.id).join(', ')
   );
 });
@@ -1103,6 +1116,7 @@ test('a link check with no answer is asked again once; a second failure is low p
 
 // ---------------------------------------------------------------- comparing and history
 
+// A run as it is saved today: every check ran (checksRun), unless `over` says otherwise.
 const mkRun = (startedAt, issues, over = {}) => ({
   startedAt,
   finishedAt: startedAt,
@@ -1110,6 +1124,7 @@ const mkRun = (startedAt, issues, over = {}) => ({
   score: 80,
   groups: [],
   issues,
+  checksRun: CHECKS.map((c) => c.id),
   ...over,
 });
 const mkIssue = (id, pages, severity = 'warning') => ({
@@ -1145,7 +1160,7 @@ test('compareAudits finds what is new, what was fixed and how much is unchanged'
   );
   assert.equal(cmp.unchanged, 1);
   assert.equal(compareAudits(null, cur), null);
-  assert.deepEqual(compareAudits(cur, cur), { added: [], fixed: [], unchanged: 3 });
+  assert.deepEqual(compareAudits(cur, cur), { added: [], fixed: [], unchanged: 3, byNewCheck: [] });
 });
 
 test('a run that stopped early leaves the pages it never reached out of new and fixed', () => {
@@ -1421,7 +1436,7 @@ test('GET /api/audit returns the latest run, its comparison with the one before 
   assert.equal(r.json.empty, false);
   assert.equal(r.json.audit.startedAt, newer.startedAt);
   assert.equal(r.json.audit.score, 75);
-  assert.match(r.json.audit.scoreNote, /Critical problems count most; low priority ones barely move it\./);
+  assert.match(r.json.audit.scoreNote, /so many low priority problems still add up\./);
   assert.equal(r.json.scoreNote, r.json.audit.scoreNote);
   assert.equal(r.json.audit.stoppedEarly, false);
   assert.deepEqual(r.json.audit.counts, { critical: 1, high: 0, medium: 0, low: 1 });
