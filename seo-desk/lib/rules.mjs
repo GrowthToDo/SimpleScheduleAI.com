@@ -312,7 +312,8 @@ export function detectNearPageOne(snaps, cfg) {
 // rows count one search once per page shown, so their sum is never used for the minimum), at least two
 // pages had PAGE_MIN_VIEWS views or more for it, and the top page holds under SPLIT_MAX_TOP_SHARE of
 // our pages' views. kind:
-//   'no-rank'   no page placed better than position 20: nothing ranks yet, so nothing is split
+//   'no-rank'   no counted page (PAGE_MIN_VIEWS views or more) placed better than position 20: nothing
+//               ranks yet, so nothing is split
 //   'together'  our pages' views are TOGETHER_RATIO times the searches or more: the pages showed in the
 //               same results, side by side, so they are not competing
 //   'split'     the pages took turns: cannibalization
@@ -339,7 +340,9 @@ function splitsOf(ctx) {
     const pageViews = pages.reduce((a, p) => a + p.impressions, 0);
     const topShare = pages[0].impressions / pageViews;
     if (!(topShare < t.SPLIT_MAX_TOP_SHARE)) continue;
-    const bestPosition = Math.min(...pages.map((p) => p.position));
+    // The best place among the pages that count (PAGE_MIN_VIEWS views or more for this search): a page
+    // shown twice at a good place does not make the search one where our pages rank.
+    const bestPosition = Math.min(...competing.map((p) => p.position));
     const ratio = Math.round((pageViews / searches) * 100) / 100;
     const kind =
       bestPosition > t.UNSERVED_MIN_POS ? 'no-rank' : pageViews / searches >= t.TOGETHER_RATIO ? 'together' : 'split';

@@ -719,6 +719,20 @@ test('B3: a split where no page ranks better than position 20 is not cannibaliza
   assert.equal(rules.splitSearches(snaps, cfg)[0].kind, 'no-rank');
 });
 
+test('M4: the best place for the no-rank test is taken over pages with 10 or more views for the search', () => {
+  // Two counted pages sit at 26 and 37; a third page with 2 views sits at 16. Nothing that counts ranks.
+  const qpCur = [
+    qp('rota for a made up ward', '/blog/a', 30, 26.4),
+    qp('rota for a made up ward', '/blog/b', 25, 37.5),
+    qp('rota for a made up ward', '/blog/c', 2, 16),
+  ];
+  const snaps = withGsc({ qpCur, queryCur: [{ query: 'rota for a made up ward', impressions: 50, clicks: 0, position: 30 }] });
+  const [s] = rules.splitSearches(snaps, cfg);
+  assert.equal(s.kind, 'no-rank');
+  assert.equal(s.bestPosition, 26.4);
+  assert.deepEqual(rules.detectCompetingPages(snaps, cfg), []);
+});
+
 test('W3 and W1: only pages with 10 or more views for the search count as competing', () => {
   const qpCur = [
     qp('shift bidding rules', '/blog/a', 30, 6),
