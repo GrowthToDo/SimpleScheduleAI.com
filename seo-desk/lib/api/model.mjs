@@ -14,6 +14,7 @@ import { reconcile, loadItems, frozenPages, touchedOn, eligibility } from '../li
 import { windows, todayIso } from '../dates.mjs';
 import { sourceStatus } from '../refresh.mjs';
 import { DEFAULT_REPO_ROOT, readJsonl } from '../sources/local.mjs';
+import { capSnapshot } from '../sources/gsc.mjs';
 import { brief } from '../brief.mjs';
 import { loadTargets, allTargets, applySignals } from '../targets.mjs';
 import { longDate, longRange, plain } from '../text.mjs';
@@ -175,6 +176,8 @@ export function buildModel() {
   if (cache && cache.key === keyOf(today)) return cache.model;
 
   const snapObjs = Object.fromEntries(SOURCES.map((s) => [s, readJson(`snap/${s}.json`, null)]));
+  // The Search Console end date is never later than the newest day its daily rows hold.
+  snapObjs.gsc = capSnapshot(snapObjs.gsc);
   const data = Object.fromEntries(SOURCES.map((s) => [s, snapObjs[s]?.data ?? null]));
   const settings = loadSettings();
   const brands = (() => {

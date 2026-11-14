@@ -4,6 +4,7 @@
 
 import { groupByQuery, isBrand, targetKeywords } from '../../../scripts/lib/gsc-diagnose-core.mjs';
 import { addDays, todayIso } from '../dates.mjs';
+import { gscEnd } from '../sources/gsc.mjs';
 import { longDate, longRange } from '../text.mjs';
 import { POST_PAGE_RE, envelope, memo, linksFor, pagePath, rangeOf, lowCtrMin, checkedText } from './model.mjs';
 import { deliberateEdits, timelineEvents, verdictRows, moneyPageVerdicts, opportunitiesList } from './work.mjs';
@@ -18,8 +19,10 @@ const QUERY_ROW_LIMITS = [1000, 5000];
 
 // ---------------------------------------------------------------- windows
 
+// The period of `days` days ending on the last day Search Console data really reaches (the stored
+// end date, held back to the newest daily row), and the same number of days before it.
 export function windowsFor(model, days) {
-  const end = model.snapObjs.gsc?.through ?? model.range.end;
+  const end = gscEnd(model.data?.gsc, model.snapObjs.gsc?.through ?? model.range.end);
   const cur = { start: addDays(end, -(days - 1)), end };
   const prev = { start: addDays(cur.start, -days), end: addDays(cur.start, -1) };
   return { cur, prev };

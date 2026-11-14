@@ -139,14 +139,15 @@ const fakeGsc = ({ failInspectAfter } = {}) => {
 test('pullGsc builds the snapshot and merges history, and never inspects pages', async () => {
   const s = fakeGsc();
   const live = [{ page: '/pricing', lastmod: '2026-10-01' }];
-  const snap = await pullGsc({ today: '2026-11-10', livePages: live, session: s });
+  // The fixture's newest daily row is 2 October, so "today" is 5 October (today minus 3).
+  const snap = await pullGsc({ today: '2026-10-05', livePages: live, session: s });
   assert.equal(snap.source, 'gsc');
   assert.equal(snap.ok, true);
   assert.equal(snap.status, 'fresh');
-  assert.equal(snap.through, '2026-11-07');
+  assert.equal(snap.through, '2026-10-02');
   assert.equal(snap.error, null);
   assert.equal('index' in snap.data, false, 'index checks are their own source now');
-  assert.equal(snap.data.windows.cur.end, '2026-11-07');
+  assert.equal(snap.data.windows.cur.end, '2026-10-02');
   assert.deepEqual(Object.keys(snap.data.windows), ['cur', 'prev', 'd90']);
   assert.deepEqual(snap.data.countries[0], { country: 'usa', clicks: 4, impressions: 150 });
   assert.deepEqual(snap.data.devices[0], { device: 'DESKTOP', clicks: 3, impressions: 100 });
@@ -159,13 +160,15 @@ test('pullGsc builds the snapshot and merges history, and never inspects pages',
   assert.equal(first.search_type, 'WEB');
   assert.equal(first.data_state, 'final');
   assert.equal(s.calls.find((c) => c.args.dimensions === 'page,date').args.row_limit, 25000);
-  // Both query pulls ask for 5000 rows (1000 was reached live, which made the search count a floor).
+  // The three query pulls (28 days, the 28 before, 90 days) ask for 5000 rows (1000 was reached
+  // live, which made the search count a floor).
   const queryPulls = s.calls.filter((c) => c.args.dimensions === 'query');
-  assert.equal(queryPulls.length, 2);
+  assert.equal(queryPulls.length, 3);
   assert.deepEqual(
     queryPulls.map((c) => c.args.row_limit),
-    [5000, 5000]
+    [5000, 5000, 5000]
   );
+  assert.equal(snap.data.query90.length, 2);
   assert.equal(readJson('history/gsc-site.json', []).length, 2);
   assert.equal(readJson('history/gsc-page.json', []).length, 2);
 });

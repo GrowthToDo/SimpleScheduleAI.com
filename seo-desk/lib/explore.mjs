@@ -13,7 +13,7 @@ import { dataDir, readJson, writeJson } from './store.mjs';
 import { addDays, daysBetween, END_LAG_DAYS } from './dates.mjs';
 import { longRange } from './text.mjs';
 import { THRESHOLDS, SITE } from './config.mjs';
-import { GSC_SITE_URL, normGscRows } from './sources/gsc.mjs';
+import { GSC_SITE_URL, normGscRows, gscEnd } from './sources/gsc.mjs';
 import { bad } from './api/kit.mjs';
 import { movementOf } from './api/search.mjs';
 import { coversFrom, pct } from './api/fmt.mjs';
@@ -73,17 +73,20 @@ const firstOf = (y, m0) => new Date(Date.UTC(y, m0, 1)).toISOString().slice(0, 1
 
 // spec: '7' | 7 | '28' ... | 'this-month' | 'last-month' | 'last-quarter' | 'custom', or an object
 // {range: 'custom', start, end}. Returns {start, end, prevStart, prevEnd, label, prevAvailable}.
-// Every end is at most today minus 3 (Search Console runs behind). The period before is the same
-// number of days directly before the start. prevAvailable is false when that period reaches back
-// past the 16 months Search Console keeps.
-export function resolveRange(spec, today) {
+// Every end is at most the stored Search Console end date (`through`, the last day the stored
+// data reaches), or today minus 3 when there is none (Search Console runs behind), so a live view
+// and the stored lists end on the same day. The period before is the same number of days directly
+// before the start. prevAvailable is false when that period reaches back past the 16 months Search
+// Console keeps.
+export function resolveRange(spec, today, { through = null } = {}) {
   const obj = spec && typeof spec === 'object' ? spec : { range: spec };
   const name = String(obj.range ?? obj.spec ?? '28').trim() || '28';
   if (!RANGE_SPECS.includes(name))
     throw bad(
       'Pick a range of 7, 14, 28 or 90 days, 16 months, this month, last month, last quarter, or a custom range.'
     );
-  const latest = addDays(today, -END_LAG_DAYS);
+  const lag = addDays(today, -END_LAG_DAYS);
+  const latest = through && through < lag ? through : lag;
   const y = Number(today.slice(0, 4));
   const m0 = Number(today.slice(5, 7)) - 1;
   let start;
@@ -463,10 +466,13 @@ function pagesFromDaily(pageDaily, start, end) {
 // views with no filters: searches for the last 28 or 90 days, pages for the last 7, 14, 28 or 90
 // days. Null when the stored data cannot answer. The range is the stored period, so its dates
 // are the pull's, not necessarily "today minus 3".
-export function storedExplore(gsc, { through, dim, days, limit = 1000, ctrMin } = {}) {
+export function storedExplore(gsc, { through: asked, dim, days, limit = 1000, ctrMin } = {}) {
   if (!gsc || !STORED_LABEL[days]) return null;
   const gate = ctrMin ?? THRESHOLDS.LOW_CTR_MIN_IMP;
   const label = STORED_LABEL[days];
+  // Never later than the newest daily row: an older snapshot can name a day with no data.
+  const through = asked ? gscEnd(gsc, asked) : asked;
+  const capEnd = (end) => (through && end > through ? through : end);
   const w = gsc.windows;
   let cur;
   let prev = [];
@@ -476,7 +482,7 @@ export function storedExplore(gsc, { through, dim, days, limit = 1000, ctrMin } 
     cur = gsc.queryCur;
     prev = gsc.queryPrev ?? [];
     comparable = Array.isArray(gsc.queryPrev);
-    range = { start: w.cur.start, end: w.cur.end, prevStart: w.prev.start, prevEnd: w.prev.end };
+    range = { start: w.cur.start, end: capEnd(w.cur.end), prevStart: w.prev.start, prevEnd: w.prev.end };
   } else if (dim === 'query' && days === 90 && w?.d90 && Array.isArray(gsc.qp90)) {
     cur = groupByQuery(gsc.qp90).map((q) => ({
       query: q.query,
@@ -484,7 +490,7 @@ export function storedExplore(gsc, { through, dim, days, limit = 1000, ctrMin } 
       impressions: q.impressions,
       position: q.position,
     }));
-    range = { start: w.d90.start, end: w.d90.end, prevStart: null, prevEnd: null };
+    range = { start: w.d90.start, end: capEnd(w.d90.end), prevStart: null, prevEnd: null };
   } else if (dim === 'page' && Array.isArray(gsc.pageDaily) && gsc.pageDaily.length && through) {
     const start = addDays(through, -(days - 1));
     const prevStart = addDays(start, -days);

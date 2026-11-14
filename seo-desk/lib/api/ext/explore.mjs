@@ -112,9 +112,10 @@ export function liveSession({ open = openServer, totalMs = LIVE_LIMIT_MS, lock =
 
 const rangeSpecOf = (ctx) => ({ range: q(ctx, 'range') || '28', start: q(ctx, 'start'), end: q(ctx, 'end') });
 
-// The range for the reply: the dates, the label, and the same dates as words.
-function rangeFor(ctx, today) {
-  const r = resolveRange(rangeSpecOf(ctx), today);
+// The range for the reply: the dates, the label, and the same dates as words. It ends on the
+// stored Search Console end date, the same day the stored lists end on.
+function rangeFor(ctx, today, model) {
+  const r = resolveRange(rangeSpecOf(ctx), today, { through: model?.snapObjs.gsc?.through ?? null });
   return { ...r, text: longRange(r.start, r.end) };
 }
 
@@ -149,7 +150,7 @@ export function makeRoutes({ open = openServer, now, waitMs = WAIT_MS, totalMs =
       const dim = q(ctx, 'dim') || 'query';
       if (dim !== 'query' && dim !== 'page') throw bad('The list must be by search (query) or by page.');
       const spec = rangeSpecOf(ctx);
-      const range = rangeFor(ctx, deskToday());
+      const range = rangeFor(ctx, deskToday(), model);
       const params = filterParamsOf(ctx);
       const filters = buildFilters(params);
       const chips = filterChips(params);
@@ -200,7 +201,7 @@ export function makeRoutes({ open = openServer, now, waitMs = WAIT_MS, totalMs =
     get('/api/distribution', async (ctx) => {
       const model = buildModel();
       const spec = rangeSpecOf(ctx);
-      const range = rangeFor(ctx, deskToday());
+      const range = rangeFor(ctx, deskToday(), model);
       const ctrMin = lowCtrMin(model);
       let result = null;
       if (spec.range === '28' || spec.range === '90') {
@@ -236,7 +237,7 @@ export function makeRoutes({ open = openServer, now, waitMs = WAIT_MS, totalMs =
       const model = buildModel();
       const query = q(ctx, 'query').trim();
       if (!query) throw bad('Give the search to look at, for example ?query=nurse scheduling.');
-      const range = rangeFor(ctx, deskToday());
+      const range = rangeFor(ctx, deskToday(), model);
       const r = await withLive((call) => searchDetail(query, range, { call, now }));
       return {
         ...envelope(model, { need: ['gsc'], range }),

@@ -7,7 +7,7 @@
 
 import { openServer, McpError } from '../mcp-client.mjs';
 import { mergeDaily } from '../store.mjs';
-import { windows } from '../dates.mjs';
+import { windows, windowsEnding } from '../dates.mjs';
 import { pathOf } from '../../../scripts/lib/gsc-diagnose-core.mjs';
 
 export const GSC_SITE_URL = 'https://simplescheduleai.com/';
@@ -89,25 +89,74 @@ async function rowsFor(session, { dimensions, start, end, rowLimit }) {
   return normGscRows(rows, dimensions);
 }
 
+// ---------------------------------------------------------------- the end date
+
+// The newest date that has a row, never later than `max`; null when no row qualifies.
+export function newestDate(rows, max = null) {
+  let out = null;
+  for (const r of rows || []) {
+    const d = r?.date;
+    if (!d || (max && d > max)) continue;
+    if (out === null || d > out) out = d;
+  }
+  return out;
+}
+
+// The last day the stored Search Console numbers really reach: `through`, held back to the newest
+// day the site's daily rows hold. A snapshot pulled before the pull checked this can say a day
+// that Search Console had not finished yet; the windows built from it would then count an empty
+// day. With no daily rows, `through` stands.
+export function gscEnd(gsc, through) {
+  const newest = newestDate(gsc?.siteDaily, through ?? null);
+  if (!through) return newest;
+  return newest && newest < through ? newest : through;
+}
+
+// A Search Console snapshot read from disk, with `through` and the ends of the stored windows held
+// to gscEnd. The stored aggregates of an older snapshot were pulled up to the old end; the day cut
+// off has no daily row, so it held nothing and the shorter label is the true one.
+export function capSnapshot(snap) {
+  const data = snap?.data;
+  if (!data || !snap.through) return snap;
+  const end = gscEnd(data, snap.through);
+  if (!end || end >= snap.through) return snap;
+  const cap = (w) => (w?.end && w.end > end && w.start <= end ? { ...w, end } : w);
+  const win = data.windows;
+  return {
+    ...snap,
+    through: end,
+    data: { ...data, ...(win ? { windows: { ...win, cur: cap(win.cur), d90: cap(win.d90) } } : {}) },
+  };
+}
+
 // {today, session?, signal?} -> snapshot of the performance numbers only; index checks are
 // their own source (sources/index.mjs). An McpError propagates. A session passed in is left
 // open for the caller; otherwise one is opened here, closed at the end, and killed if the
 // refresh engine aborts the signal.
+//
+// The site's daily rows are pulled first. Only finished days come back, and "today minus 3" on
+// this machine can be a day Search Console has not finished, so the end of everything is the newest
+// day with a row. Every other pull asks for windows built from that day, so a date label and the
+// numbers under it always cover the same days.
 export async function pullGsc({ today, session, signal, open = openServer } = {}) {
   const own = !session;
   const s = session || (await open('google-search-console', { signal }));
   try {
-    const w = windows(today);
+    const asked = windows(today);
     const pull = (dimensions, range, rowLimit) =>
       rowsFor(s, { dimensions, start: range.start, end: range.end, rowLimit });
 
-    const siteDaily = await pull('date', w.d480, 1000);
+    const siteDaily = await pull('date', asked.d480, 1000);
+    const w = windowsEnding(newestDate(siteDaily, asked.cur.end) ?? asked.cur.end);
     const pageDaily = await pull('page,date', w.d120, 25000);
     const qpCur = await pull('query,page', w.cur, 5000);
     const qpPrev = await pull('query,page', w.prev, 5000);
     const qp90 = await pull('query,page', w.d90, 5000);
     const queryCur = await pull('query', w.cur, 5000);
     const queryPrev = await pull('query', w.prev, 5000);
+    // Searches alone over 90 days: the real number of times each search showed the site. The query
+    // and page rows count a search once for every page it showed, so their sum is not that number.
+    const query90 = await pull('query', w.d90, 5000);
     const countries = (await pull('country', w.cur, 250)).map(({ country, clicks, impressions }) => ({
       country,
       clicks,
@@ -137,6 +186,7 @@ export async function pullGsc({ today, session, signal, open = openServer } = {}
         qp90,
         queryCur,
         queryPrev,
+        query90,
         countries,
         devices,
         windows: { cur: w.cur, prev: w.prev, d90: w.d90 },

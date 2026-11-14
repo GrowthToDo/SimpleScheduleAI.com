@@ -31,14 +31,19 @@ export function mondayOf(iso) {
   return addDays(iso, -((dow + 6) % 7));
 }
 
-// Reporting windows. Every end is today - 3. cur and prev are 28 days each and
-// touch (prev ends the day before cur starts). d90, d120 and d480 end with cur.
-export function windows(today) {
-  const end = addDays(today, -END_LAG_DAYS);
+// Reporting windows that end on `end`. cur and prev are 28 days each and touch (prev ends the
+// day before cur starts). d90, d120 and d480 end with cur.
+export function windowsEnding(end) {
   const span = (days, endIso = end) => ({ start: addDays(endIso, -(days - 1)), end: endIso });
   const cur = span(28);
   const prev = span(28, addDays(cur.start, -1));
   return { cur, prev, d90: span(90), d120: span(120), d480: span(480) };
+}
+
+// The windows to ask Search Console for: every end is today - 3. The pull then moves them back to
+// the newest day that really has data (sources/gsc.mjs).
+export function windows(today) {
+  return windowsEnding(addDays(today, -END_LAG_DAYS));
 }
 
 // Percent change from prev to cur, rounded to one decimal place. Null when the
