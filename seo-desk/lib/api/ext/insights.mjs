@@ -16,6 +16,8 @@ import {
   deskToday,
   rangeOf,
   invalidate,
+  pageHold,
+  holdFields,
 } from '../model.mjs';
 import { competingList, competingId, splitEdit, splitGroups, activeOpps } from '../work.mjs';
 import { itemAction, editGuards, editRefused } from '../actions.mjs';
@@ -24,7 +26,7 @@ import { n0, round1 } from '../fmt.mjs';
 import { toCsv } from '../csv.mjs';
 import { targetRows, discoveredList } from './targets.mjs';
 import { readJson, writeJson } from '../../store.mjs';
-import { eligibility, transition, loadItems, saveItems, FREEZE_DAYS } from '../../lifecycle.mjs';
+import { transition, loadItems, saveItems, FREEZE_DAYS } from '../../lifecycle.mjs';
 import { addDays } from '../../dates.mjs';
 import { longDate } from '../../text.mjs';
 import { brief } from '../../brief.mjs';
@@ -68,30 +70,35 @@ const LINK_FROM_MAX = 5;
 const GAP_PAGE = '/__content-gap__'; // a page that does not exist, so no live page is skipped as the target
 
 const notFound = (message) => Object.assign(new Error(message), { status: 404 });
-// The freeze on a page from the lifecycle module (model.frozen), only while it still holds. Never worked
-// out here: the same test eligibility() uses.
-function freezeOf(model, page) {
-  const f = model.frozen.get(page);
-  const until = f && f.until > model.today ? f.until : null;
-  return { frozenUntil: until, frozenUntilText: until ? longDate(until) : null };
-}
+// Whether a page may be changed yet, from the one eligibility function (model.mjs holdFields: the
+// freeze and a git edit; a routine change such as a link does not use the week's edit).
+const freezeOf = (model, page) => holdFields(model, page);
 
-// Whether editing every one of `pages` is allowed today: the item is eligible only when all are, and
-// otherwise it carries the latest date and the page that date belongs to.
+// Whether editing every one of `pages` is allowed today, from the one eligibility function (the
+// freeze, a git edit, and this week's page edit already made): the item is eligible only when all
+// are, and otherwise it carries the latest date, the page that date belongs to and the function's own
+// words for that page.
 function eligibilityOfPages(model, pages) {
   let worst = null;
   for (const page of pages) {
-    const e = eligibility({ isPageEdit: true, page }, model.frozen, model.today);
-    if (!e.eligible && (!worst || e.from > worst.from)) worst = { from: e.from, page };
+    const e = pageHold(model, page);
+    if (!e.eligible && (!worst || e.from > worst.e.from)) worst = { e, page };
   }
-  return worst
-    ? {
-        eligible: false,
-        from: worst.from,
-        page: worst.page,
-        text: `Eligible from ${longDate(worst.from)}, when ${worst.page} is out of its 28 days`,
-      }
-    : { eligible: true, from: null, page: null, text: 'Eligible now' };
+  if (!worst) {
+    const first = pages.length ? pageHold(model, pages[0]) : null;
+    return {
+      eligible: true,
+      from: null,
+      page: null,
+      text: 'Eligible now',
+      ...(first?.touchedText ? { touchedText: first.touchedText } : {}),
+    };
+  }
+  return {
+    ...worst.e,
+    page: worst.page,
+    text: pages.length > 1 && !worst.e.weekEdit ? `${worst.page}: ${worst.e.text}` : worst.e.text,
+  };
 }
 
 const heading = (type) => ({ term: TERMS[type].term, explain: TERMS[type].explain });
@@ -324,6 +331,9 @@ function cannibalizationAll(model) {
       const test = cannibalizationTest(c.query);
       const measured =
         `"${c.query}" showed our site ${n0(c.impressions)} ${c.impressions === 1 ? 'time' : 'times'} from ${model.range.text}, and its views were split across ${c.pages.length} of our pages with 10 or more views each. ${c.note ?? ''}`.trim();
+      const elig = editPages.length
+        ? eligibilityOfPages(model, editPages)
+        : { eligible: true, from: null, page: null, text: 'Records no page edit' };
       return {
         ...c,
         choice,
@@ -333,9 +343,7 @@ function cannibalizationAll(model) {
         state: itemState(model, c.id),
         editPages,
         // Every page the chosen action edits must be free; a choice that edits no page is always eligible.
-        eligibility: editPages.length
-          ? eligibilityOfPages(model, editPages)
-          : { eligible: true, from: null, page: null, text: 'Records no page edit' },
+        eligibility: elig,
         brief: brief(
           {
             title: `"${c.query}" is split between our pages`,
@@ -345,7 +353,7 @@ function cannibalizationAll(model) {
             test,
             isPageEdit: editPages.length > 0,
           },
-          { frozen: model.frozen }
+          { frozen: model.frozen, hold: editPages.length ? elig : null }
         ),
         ...heading('competing-pages'),
       };
@@ -994,6 +1002,7 @@ function secondaryAll(model) {
   return secondaryCandidates(model).map((c) => {
     const id = secondaryId(c.page, c.query);
     const f = freezeOf(model, c.page);
+    const elig = eligibilityOfPages(model, [c.page]);
     const evidence = `${c.page} is already shown ${n0(c.impressions)} times for "${c.query}" at an average place of ${c.position}, but the page does not target it.`;
     const recommendation = `Hypothesis: working "${c.query}" into a heading and the opening of ${c.page} may help the page answer it, and may help it show for that search more often.`;
     const test = `Wait 28 days after the change, then check in Search Console whether ${c.page} is shown more often for "${c.query}" and at a better place.`;
@@ -1016,12 +1025,13 @@ function secondaryAll(model) {
           test,
           isPageEdit: true,
         },
-        { frozen: model.frozen }
+        { frozen: model.frozen, hold: elig }
       ),
       state: secondaryState(model, id, c),
-      eligibility: eligibilityOfPages(model, [c.page]),
+      eligibility: elig,
       frozenUntil: f.frozenUntil,
       frozenUntilText: f.frozenUntilText,
+      holdText: f.holdText,
       adopted: adopted.has(`${c.page}\u0000${norm(c.query)}`),
       ...SECONDARY,
     };

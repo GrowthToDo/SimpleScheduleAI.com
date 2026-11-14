@@ -65,15 +65,17 @@ function pageLink(h, page) {
   return h('a', { class: 'page-path', href: `#/pages?page=${encodeURIComponent(page)}` }, page);
 }
 
-function frozenChip(h, text, page) {
+// The hold on a page in the server's own words (holdText, from the one eligibility function: the
+// freeze or a git edit), else "Frozen until" its date.
+function frozenChip(h, text, page, holdText = null) {
   return text
     ? h(
         'span',
         {
           class: 'chip chip-hyp',
-          title: `${page} was changed on purpose and is being measured. Editing it now would blur that verdict.`,
+          title: `${page} was changed lately and is being measured. Editing it now would blur that verdict.`,
         },
-        `Frozen until ${text}`
+        holdText ?? `Frozen until ${text}`
       )
     : null;
 }
@@ -263,7 +265,7 @@ function shareRows(ctx, it) {
                   'Should win'
                 )
               : null,
-            frozenChip(h, p.frozenUntilText, p.page)
+            frozenChip(h, p.frozenUntilText, p.page, p.holdText)
           ),
           h('span', { class: 'num muted' }, text)
         ),
@@ -658,7 +660,7 @@ function secondaryCard(ctx, it, data) {
     chips: [
       h('span', { class: 'chip', title: "The page's own target keyword" }, `Target: ${it.targetKeyword}`),
       it.adopted ? h('span', { class: 'chip chip-accent' }, 'Adopted as secondary') : null,
-      frozenChip(h, it.frozenUntilText, it.page),
+      frozenChip(h, it.frozenUntilText, it.page, it.holdText),
     ],
     endpoint: path,
     only: ['done', 'ignore', 'reopen'],
@@ -801,7 +803,7 @@ function gapCard(ctx, g) {
           h(
             'li',
             {},
-            h('span', {}, pageLink(h, l.page), frozenChip(h, l.frozenUntilText, l.page)),
+            h('span', {}, pageLink(h, l.page), frozenChip(h, l.frozenUntilText, l.page, l.holdText)),
             l.reasonText ? h('span', { class: 'ins-reason' }, l.reasonText) : null
           )
         )

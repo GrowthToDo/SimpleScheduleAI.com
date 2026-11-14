@@ -12,9 +12,9 @@ import {
   TYPE_LABEL,
   memo,
   invalidate,
+  holdFields,
 } from '../model.mjs';
 import { readJson, writeJson } from '../../store.mjs';
-import { longDate } from '../../text.mjs';
 import { toCsv } from '../csv.mjs';
 import { isBrand } from '../../../../scripts/lib/gsc-diagnose-core.mjs';
 import { groupTopics, keywordMap, TOPICS_NOTE, COMPETING_NOTE } from '../../topics.mjs';
@@ -163,11 +163,12 @@ function keywordsFor(model, page, opps, rows, targets) {
   return out.slice(0, MAX_KEYWORDS_TRIED);
 }
 
-// The freeze on the page a link would be added on, from the lifecycle module (model.frozen).
-// Editing it inside its 28 days makes its verdict overlap with this change.
+// Whether the page a link would be added on may be changed yet, from the one eligibility function
+// (model.mjs holdFields: its freeze or a git edit; a link is a routine change, so the week's one page
+// edit does not hold it). Changing it inside those 28 days makes its verdict overlap with this change.
 function frozenFrom(model, from) {
-  const f = model.frozen.get(from);
-  return { fromFrozenUntil: f?.until ?? null, fromFrozenUntilText: f ? longDate(f.until) : null };
+  const h = holdFields(model, from);
+  return { fromFrozenUntil: h.frozenUntil, fromFrozenUntilText: h.frozenUntilText, fromHoldText: h.holdText };
 }
 
 // The suggestions still to do: the ones listed (dismissed ones are never listed) that are not marked

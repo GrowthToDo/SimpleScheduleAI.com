@@ -48,7 +48,7 @@ const isDate = (s) => /^\d{4}-\d{2}-\d{2}$/.test(String(s)) && !Number.isNaN(Dat
 // edits the freeze does not know (model.recent) and the this-week check (editThisWeek), never worked
 // out here:
 //   frozen         the page itself is inside the 28 days of an earlier deliberate edit
-//   recentlyEdited git shows an edit of 10 or more lines on the page in the last 28 days that the
+//   recentlyEdited git shows a commit of 15 or more lines on the page in the last 28 days that the
 //                  freeze does not know: [{page, date, lines, until, dateText, untilText, text}]
 //   secondThisWeek a deliberate page edit is already dated this week (on any page)
 // Null when none holds. `page` is the page about to be edited, or a list when one Done edits

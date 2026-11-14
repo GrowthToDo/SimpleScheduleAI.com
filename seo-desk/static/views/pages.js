@@ -256,8 +256,8 @@ export async function render(el, ctx) {
       },
       {
         key: 'frozenUntil',
-        label: 'Frozen until',
-        title: 'Changed on purpose, so left alone until this date for a clean verdict',
+        label: 'Leave alone until',
+        title: 'Changed on purpose, or edited lately (found in git), so left alone until this date for a clean verdict',
         format: (v) => (v ? fmt.dateShort(v) : ''),
       },
       { key: 'indexLabel', label: 'On Google' },
@@ -615,7 +615,9 @@ function pageDetail(p, ctx) {
     buttons,
     p.frozen
       ? h('p', { class: 'banner banner-accent' }, h('strong', {}, `Frozen until ${p.frozen.untilText}. `), p.frozen.why)
-      : null,
+      : p.eligibility && !p.eligibility.eligible
+        ? h('p', { class: 'banner banner-accent' }, p.eligibility.text)
+        : null,
     section(
       'In numbers',
       `${fmt.range(p.range)}. Lower places are better.`,

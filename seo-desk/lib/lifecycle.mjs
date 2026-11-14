@@ -198,15 +198,19 @@ export function touchedOn(page, edits) {
 
 // ---------------------------------------------------------------- edits found in git
 
-// A git edit of this many changed lines (added plus removed) or more is a real edit; a smaller one
-// (a count fixed, a link added) only touches the page.
-export const RECENT_EDIT_MIN_LINES = 10;
+// A git commit that changes this many lines (added plus removed) of a page or more is a real edit; a
+// smaller one (a count fixed, a link added) only touches the page, even when several land on one day.
+export const RECENT_EDIT_MIN_LINES = 15;
+// An edit this many days after the commit that published a page or fewer is part of publishing it.
+export const AFTER_PUBLISH_DAYS = 2;
 
 const sumBy = (rows) => {
   const byDate = new Map();
   for (const r of rows) {
-    const d = byDate.get(r.date) ?? { date: r.date, lines: 0, commits: [] };
-    d.lines += Number(r.lines) || 0;
+    const d = byDate.get(r.date) ?? { date: r.date, lines: 0, commits: [], big: false };
+    const n = Number(r.lines) || 0;
+    d.lines += n;
+    if (n >= RECENT_EDIT_MIN_LINES) d.big = true;
     if (r.commit && !d.commits.includes(r.commit)) d.commits.push(r.commit);
     byDate.set(r.date, d);
   }
@@ -217,23 +221,27 @@ const sumBy = (rows) => {
 // contentEdits: [{page, date, commit, lines}] from the local snapshot (the page's own source file,
 // the last 35 days, renames and the commit that first published it left out). Only edits inside the
 // last 28 days count, and an edit is known when the page is frozen from a deliberate edit on that day
-// or later. Lines of one page on one day are added up. `edit` is the latest day with
-// RECENT_EDIT_MIN_LINES or more: {date, lines, commits, until} (until: 28 days on). `touched` lists
-// the smaller days, oldest first: [{date, lines}]. A page with neither is left out.
-export function recentEdits({ contentEdits = [], frozen = new Map(), today }) {
+// or later. An edit within AFTER_PUBLISH_DAYS after a publish commit of the page is part of publishing
+// it and is left out (published: Map<page, [publish dates]>). `edit` is the latest day with one commit
+// of RECENT_EDIT_MIN_LINES or more: {date, lines, commits, until} (until: 28 days on; lines: that
+// day's lines added up). `touched` lists the other days, oldest first: [{date, lines}]. A page with
+// neither is left out.
+export function recentEdits({ contentEdits = [], frozen = new Map(), today, published = new Map() }) {
   const byPage = new Map();
   for (const e of contentEdits ?? []) {
     if (!e?.page || !e.date || e.date > today || !(addDays(e.date, FREEZE_DAYS) > today)) continue;
     const f = frozen?.get(e.page);
     if (f && f.since >= e.date) continue;
+    const pub = published?.get(e.page) ?? [];
+    if (pub.some((p) => p <= e.date && e.date <= addDays(p, AFTER_PUBLISH_DAYS))) continue;
     if (!byPage.has(e.page)) byPage.set(e.page, []);
     byPage.get(e.page).push(e);
   }
   const out = new Map();
   for (const [page, rows] of byPage) {
     const days = sumBy(rows);
-    const big = days.filter((d) => d.lines >= RECENT_EDIT_MIN_LINES).pop() ?? null;
-    const touched = days.filter((d) => d.lines < RECENT_EDIT_MIN_LINES).map((d) => ({ date: d.date, lines: d.lines }));
+    const big = days.filter((d) => d.big).pop() ?? null;
+    const touched = days.filter((d) => !d.big).map((d) => ({ date: d.date, lines: d.lines }));
     out.set(page, {
       edit: big
         ? { date: big.date, lines: big.lines, commits: big.commits, until: addDays(big.date, FREEZE_DAYS) }
@@ -275,7 +283,7 @@ export function editThisWeek(frozen, today) {
 // Whether a card may be this week's live page edit. The one function every list uses (the five,
 // the cards beside it, All opportunities, the insight pages built from opportunities, the worries):
 //   frozen           the page is inside the 28 days of a deliberate edit: {eligible: false, from}
-//   recently edited  git shows an edit of 10 or more lines in the last 28 days that the freeze does
+//   recently edited  git shows a commit of 15 or more lines in the last 28 days that the freeze does
 //                    not know (`recent`, from recentEdits): {eligible: false, from, recentEdit}
 //   week used        `week` is true and this week's one page edit is already made on another page:
 //                    {eligible: false, from: next Monday, weekEdit: {page, date}}

@@ -8,7 +8,18 @@ import { gscEnd } from '../sources/gsc.mjs';
 import { realQueryCounts } from '../query-counts.mjs';
 import { THRESHOLDS } from '../config.mjs';
 import { longDate, longRange } from '../text.mjs';
-import { POST_PAGE_RE, envelope, memo, linksFor, pagePath, rangeOf, lowCtrMin, checkedText } from './model.mjs';
+import {
+  POST_PAGE_RE,
+  envelope,
+  memo,
+  linksFor,
+  pagePath,
+  rangeOf,
+  lowCtrMin,
+  checkedText,
+  holdFields,
+  pageHold,
+} from './model.mjs';
 import { deliberateEdits, timelineEvents, verdictRows, moneyPageVerdicts, opportunitiesList } from './work.mjs';
 import { n0, round1, pct, sumRange, coversFrom, lower } from './fmt.mjs';
 
@@ -432,7 +443,8 @@ export function pageRows(model) {
       const reg = registryByUrl.get(page);
       const t = reg?.primaryKeyword ? targetByKey.get(`${reg.url}|${lower(reg.primaryKeyword)}`) : null;
       const sources = (local.inbound?.[page] ?? []).filter((s) => String(s).startsWith('/') && s !== page);
-      const f = model.frozen.get(page);
+      // The freeze or a git edit, from the one eligibility function.
+      const hold = holdFields(model, page);
       const ix = indexBy.get(page);
       return {
         page,
@@ -449,7 +461,8 @@ export function pageRows(model) {
         queryCount: queryCount.get(page)?.size ?? 0,
         inbound: new Set(sources).size,
         lastEdit: deliberate.get(page)?.[0] ?? null,
-        frozenUntil: f?.until ?? null,
+        frozenUntil: hold.frozenUntil,
+        holdText: hold.holdText,
         index: ix?.verdict ?? null,
         lastCrawl: ix?.lastCrawl ?? null,
         indexCheckedOn: ix?.checkedAt ? todayIso(new Date(ix.checkedAt)) : null,
@@ -514,6 +527,9 @@ export function pageView(model, path) {
     inboundFrom: sourcesIn.filter((s) => String(s).startsWith('/')),
     inboundSiteWide: sourcesIn.some((s) => String(s).startsWith('src/components/')),
     frozen: f ? { since: f.since, until: f.until, untilText: longDate(f.until), why: f.why } : null,
+    // Whether the page may be edited now, from the one eligibility function (the freeze, a git edit,
+    // this week's page edit already made), with its words.
+    eligibility: pageHold(model, page),
     isPost: POST_PAGE_RE.test(page),
     links: linksFor(page),
   };

@@ -9,7 +9,9 @@ const slugOfPage = (page) => (page && /^\/(blog|articles)\/[^/]+$/.test(page) ? 
 
 // card: a Card from proposeTop5 or an Opportunity. Both carry title, measured,
 // action, test, page and isPageEdit; only a card carries source.
-export function brief(card, { frozen = new Map() } = {}) {
+// hold: the card's eligibility from the one function (model.mjs eligibilityOf), with its words; when
+// it is missing, the freeze alone is read from `frozen`.
+export function brief(card, { frozen = new Map(), hold = null } = {}) {
   const page = card.page || null;
   const slug = slugOfPage(page);
   const lines = [];
@@ -40,8 +42,12 @@ export function brief(card, { frozen = new Map() } = {}) {
   }
   if (card.isPageEdit || card.slot === 'page-edit') {
     rules.push('One live page edit a week, and never the same page inside 28 days.');
-    const f = page ? frozen.get(page) : null;
-    if (f) rules.push(`This page is frozen until ${longDate(f.until)}. Do not edit it before then.`);
+    if (hold && !hold.eligible && hold.from) {
+      rules.push(`${plain(hold.text)}. Do not edit this page before ${longDate(hold.from)}.`.replace(/\.\. /, '. '));
+    } else if (!hold) {
+      const f = page ? frozen.get(page) : null;
+      if (f) rules.push(`This page is frozen until ${longDate(f.until)}. Do not edit it before then.`);
+    }
   }
   if (card.source === 'plan') {
     rules.push(

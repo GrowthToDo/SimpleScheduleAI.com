@@ -129,7 +129,7 @@ test('C3: a failed git read is reported, and the desk falls back to the freeze a
   assert.equal(eligibilityOf(model, { isPageEdit: true, page: '/blog/sample-guide' }).eligible, true);
 });
 
-test('C3: a git edit of 10 lines or more the freeze does not know holds the page, a smaller one only touches it', () => {
+test('C3: a git edit of 15 lines or more the freeze does not know holds the page, a smaller one only touches it', () => {
   const contentEdits = [
     { page: '/blog/sample-guide', date: '2026-11-09', commit: 'aaaa111', lines: 299 },
     { page: '/blog/other-guide', date: '2026-11-09', commit: 'aaaa111', lines: 3 },

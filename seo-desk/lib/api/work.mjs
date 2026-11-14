@@ -669,7 +669,10 @@ function cardOut(model, card) {
     eligibility:
       card.eligibility === null ? null : withEligibilityText(card.eligibility ?? { eligible: true, from: null }),
     state: itemState(model, keyOfCard(card.id)),
-    brief: brief(card, { frozen: model.frozen }),
+    brief: brief(card, {
+      frozen: model.frozen,
+      hold: card.eligibility === null ? null : withEligibilityText(card.eligibility ?? { eligible: true, from: null }),
+    }),
     links: linksFor(card.page),
   };
 }
@@ -786,7 +789,7 @@ export function currentTop5(model) {
 // What not to touch this week: pages inside their 28 days (the lifecycle freeze, so no new edit
 // restarts the measuring) and the pages of split searches the founder chose to leave alone.
 // [{page, reason, until}]; until is null for a choice, which has no end date.
-// A page git shows edited by 10 or more lines in the last 28 days, that the freeze does not know, is
+// A page git shows edited by 15 or more lines in one commit in the last 28 days, that the freeze does not know, is
 // listed too, with the same words as its chip.
 export function leaveAloneList(model) {
   const frozen = [...model.frozen].map(([page, f]) => ({
@@ -869,7 +872,7 @@ export function weekView(model) {
         test: c.test,
         eligibility: withEligibilityText(c.eligibility),
         ...(w.waitUntil ? { waitUntilText: longDate(w.waitUntil) } : {}),
-        brief: brief(c, { frozen: model.frozen }),
+        brief: brief(c, { frozen: model.frozen, hold: withEligibilityText(c.eligibility) }),
         links: linksFor(w.page),
         state: itemState(model, keyOfCard(c.id)),
       };

@@ -25,7 +25,7 @@ import { DEFAULT_REPO_ROOT, readJsonl, pageOfNote } from '../sources/local.mjs';
 import { capSnapshot } from '../sources/gsc.mjs';
 import { brief } from '../brief.mjs';
 import { loadTargets, allTargets, applySignals } from '../targets.mjs';
-import { longRange, plain } from '../text.mjs';
+import { longDate, longRange, plain } from '../text.mjs';
 import { TERMS, termOf } from '../insights.mjs';
 
 export const SOURCES = ['gsc', 'bing', 'ga4', 'clarity', 'local', 'index'];
@@ -242,7 +242,10 @@ export function buildModel() {
   const frozen = frozenPages({ items, opps, plan: local.plan ?? null, edits, planTicks, planSeenOn, today });
   // Content edits git shows that the freeze does not know. A snapshot from before the desk read them
   // has no list; a failed read says so on every page.
-  const recent = recentEdits({ contentEdits: local.contentEdits ?? [], frozen, today });
+  // The commits that published each page: an edit within two days after one is part of publishing it.
+  const published = new Map();
+  for (const e of edits) if (e.kind === 'publish') published.set(e.page, [...(published.get(e.page) ?? []), e.date]);
+  const recent = recentEdits({ contentEdits: local.contentEdits ?? [], frozen, today, published });
   if (local.contentEditsError) warnings.push(GIT_UNREAD);
 
   const prevIndex = readJson('state/index-prev.json', null)?.index ?? null;
@@ -335,6 +338,23 @@ export function eligibilityOf(model, opp) {
   return withEligibilityText(eligibility(opp, model.frozen, model.today, { recent: model.recent ?? null, week: true }));
 }
 
+// The same function for one page edit on `page`, with its words. week: false for a routine change
+// (a link added, a file address swapped) that does not use the week's one page edit; the freeze and a
+// git edit still hold it, because a change inside those 28 days blurs that page's verdict.
+export const pageHold = (model, page, { week = true } = {}) =>
+  withEligibilityText(
+    eligibility({ isPageEdit: true, page }, model.frozen, model.today, { recent: model.recent ?? null, week })
+  );
+
+// The fields a list row carries for a page that may not be changed yet, from pageHold: frozenUntil
+// (the date the freeze or a git edit lets go), frozenUntilText, and holdText (the function's own
+// words, which say which of the two it is). All null for a page that is free.
+export function holdFields(model, page, { week = false } = {}) {
+  const e = page ? pageHold(model, page, { week }) : null;
+  const until = e && !e.eligible ? e.from : null;
+  return { frozenUntil: until, frozenUntilText: until ? longDate(until) : null, holdText: until ? e.text : null };
+}
+
 // An opportunity as the pages see it: plain text, score, lifecycle state, freeze, brief, links.
 export function decorateOpp(model, o) {
   const state = itemState(model, o.id);
@@ -367,7 +387,7 @@ export function decorateOpp(model, o) {
     eligibility: eligibilityOf(model, o),
     touchedOn: o.page ? touchedOn(o.page, model.edits) : [],
     links: linksFor(o.page),
-    brief: brief(clean, { frozen: model.frozen }),
+    brief: brief(clean, { frozen: model.frozen, hold: eligibilityOf(model, o) }),
     detected: true,
   };
 }

@@ -44,7 +44,7 @@ export function frozenBox(pages) {
   };
 }
 
-// pages: [{page, text}] from the server's `recentlyEdited`: a page git shows edited by 10 or more lines
+// pages: [{page, text}] from the server's `recentlyEdited`: a page git shows edited by 15 or more lines in one commit
 // in the last 28 days that no card, plan row or edit note recorded. The same second confirm as a
 // frozen page.
 export function recentBox(pages) {

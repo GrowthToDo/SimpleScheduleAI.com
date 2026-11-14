@@ -559,7 +559,8 @@ function issueCard(ctx, i, groupLabel, hasPrev, clicksRange = null) {
 
 // "Frozen until 7 December" on a page being measured. The date comes from the server's lifecycle
 // rule; the page never works the freeze out itself.
-export const frozenText = (p) => (p?.frozenUntilText ? `Frozen until ${p.frozenUntilText}` : null);
+// The server's own words for the hold (the freeze or a git edit) when it gives them.
+export const frozenText = (p) => (p?.frozenUntilText ? (p.holdText ?? `Frozen until ${p.frozenUntilText}`) : null);
 
 function frozenChip(h, p) {
   const text = frozenText(p);

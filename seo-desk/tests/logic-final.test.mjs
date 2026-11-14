@@ -340,3 +340,79 @@ test("M6: a search with the page's own target words, joined or ordered different
   const items = secondaryView(buildModel()).items.map((x) => x.query);
   assert.deepEqual(items, ['made up rota pay rules']);
 });
+
+// ---------------------------------------------------------------- K2: one eligibility function
+
+test('K2: every list asks the one eligibility function and prints its words', async () => {
+  const { secondaryView } = await import('../lib/api/ext/insights.mjs');
+  const { pageRows } = await import('../lib/api/search.mjs');
+  const { view } = await import('../lib/api/ext/audit.mjs');
+  const { pageHold, holdFields } = await import('../lib/api/model.mjs');
+  writeJson('state/items.json', {});
+  writeJson('state/targets.json', { adopted: [], ignored: [], priorities: {} });
+  const qp = (query, impressions, position) => ({ query, page: '/blog/held-guide', impressions, clicks: 0, position });
+  const qpCur = [qp('held guide rota', 20, 5), qp('held guide rota pay', 40, 11)];
+  snap('gsc', {
+    pageDaily: [],
+    siteDaily: [],
+    qpCur,
+    queryCur: qpCur.map(({ query, impressions, clicks, position }) => ({ query, impressions, clicks, position })),
+    queryPrev: [],
+  });
+  snap('local', {
+    livePages: [{ page: '/blog/held-guide' }, { page: '/blog/free-guide' }],
+    registry: [{ slug: 'held-guide', type: 'post', url: '/blog/held-guide', primaryKeyword: 'held guide rota' }],
+    contentEdits: [{ page: '/blog/held-guide', date: '2026-11-09', commit: 'h1', lines: 40 }],
+    verdicts: [],
+    due: [],
+    edits: [],
+  });
+  invalidate();
+  const model = buildModel();
+  const held = pageHold(model, '/blog/held-guide');
+  assert.equal(held.eligible, false);
+  assert.match(held.text, /^Edited 9 November \(found in git, 40 lines\)\. Leave it until 7 December/);
+  const sec = secondaryView(model).items.find((x) => x.query === 'held guide rota pay');
+  assert.equal(sec.eligibility.text, held.text, 'not "Eligible now" and not "out of its 28 days"');
+  assert.equal(sec.holdText, held.text);
+  assert.match(sec.brief, /Leave it until 7 December/);
+  const row = pageRows(model).find((r) => r.page === '/blog/held-guide');
+  assert.equal(row.frozenUntil, '2026-12-07');
+  assert.equal(row.holdText, held.text);
+  const a = view(model, {
+    startedAt: '2026-11-13T00:00:00.000Z',
+    rulesVersion: 2,
+    issues: [
+      { id: 'heading-skip', group: 'content', severity: 'low', pages: [{ page: '/blog/held-guide', clicks: 0 }] },
+    ],
+  }).audit;
+  assert.equal(a.issues[0].pages[0].holdText, held.text);
+  assert.deepEqual(holdFields(model, '/blog/free-guide'), { frozenUntil: null, frozenUntilText: null, holdText: null });
+});
+
+// ---------------------------------------------------------------- K3: what counts as recently edited
+
+test('K3: a git edit holds a page only from 15 changed lines in one commit, and not within 2 days after it was published', async () => {
+  const life = await import('../lib/lifecycle.mjs');
+  assert.equal(life.RECENT_EDIT_MIN_LINES, 15);
+  const contentEdits = [
+    // Two small commits on one day add up to 18 lines, but no one commit reaches 15.
+    { page: '/blog/split-guide', date: '2026-11-09', commit: 's1', lines: 9 },
+    { page: '/blog/split-guide', date: '2026-11-09', commit: 's2', lines: 9 },
+    { page: '/blog/one-guide', date: '2026-11-09', commit: 'o1', lines: 15 },
+    // A fix two days after the publish commit is part of publishing it.
+    { page: '/blog/new-guide', date: '2026-11-06', commit: 'n1', lines: 60 },
+    { page: '/blog/new-guide', date: '2026-11-08', commit: 'n2', lines: 70 },
+    { page: '/blog/later-guide', date: '2026-11-08', commit: 'l1', lines: 70 },
+  ];
+  const published = new Map([
+    ['/blog/new-guide', ['2026-11-06']],
+    ['/blog/later-guide', ['2026-11-05']],
+  ]);
+  const recent = life.recentEdits({ contentEdits, today: TODAY, published });
+  assert.equal(recent.get('/blog/split-guide').edit, null);
+  assert.deepEqual(recent.get('/blog/split-guide').touched, [{ date: '2026-11-09', lines: 18 }]);
+  assert.equal(recent.get('/blog/one-guide').edit.date, '2026-11-09');
+  assert.equal(recent.has('/blog/new-guide'), false);
+  assert.equal(recent.get('/blog/later-guide').edit.date, '2026-11-08', 'three days after publish counts');
+});

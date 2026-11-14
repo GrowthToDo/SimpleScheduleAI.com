@@ -25,13 +25,18 @@ All routes are GET, base `http://127.0.0.1:8766`. Every reply (except `/api/sour
 other), `source`, `oppId`, `state`. A card that only reports (this week's edit is done, a verdict)
 has `eligibility: null` and `hypothesis: false`. A card on a chosen or locked week can also carry
 `weekEditDone {page, date, dateText}` (or null) when another page edit is already dated this week.
-`eligibility` (the same on every list: the five, the cards beside it, opportunities, insight cards
-built from opportunities, worries) is `{eligible, from, text}` plus one of: nothing (free, or
-frozen: "Eligible from 7 December"), `recentEdit {page, date, lines, until}` (git shows an edit of
-10 or more lines in the last 28 days that no card, plan row or edit note recorded: "Edited 9 November
+`eligibility` (the same on every list: the five, the cards beside it, opportunities, insight cards,
+Cannibalization, Secondary keywords, the page drawer, worries; one function) is `{eligible, from, text}` plus one of: nothing (free, or
+frozen: "Eligible from 7 December"), `recentEdit {page, date, lines, until}` (git shows a commit of
+15 or more changed lines in the last 28 days that no card, plan row or edit note recorded, not
+counting edits within 2 days after the page was published: "Edited 9 November
 (found in git, 299 lines). Leave it until 7 December unless that edit was minor"), or `weekEdit {page,
 date}` (this week's one page edit is already made: "Next page edit from 16 November"). A free page
 with smaller git edits adds `touched[]` and `touchedText` ("Also touched on 9 November (3 lines)").
+List rows that name a page (Cannibalization pages, Secondary keywords, content gap link pages, the
+Pages list, audit pages, and `fromHoldText` on link suggestions) carry `frozenUntil`,
+`frozenUntilText` and `holdText`: the same function's date and words for the freeze or a git edit
+(a routine link does not use the week's edit). Quote `holdText`.
 `leaveAlone[]`: `{page, reason, until, foundInGit?}`; `until` is null for a split he marked leave
 alone on the Cannibalization page (no end date); `foundInGit` marks a page held by a git edit.
 `worries[]`: `{id, kind, page, title, measured, fix, test, isPageEdit, eligibility, waitUntil?,

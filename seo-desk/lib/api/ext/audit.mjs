@@ -18,7 +18,7 @@ import {
 import { todayIso, daysBetween } from '../../dates.mjs';
 import { longDate, longRange } from '../../text.mjs';
 import { changeSettings } from '../actions.mjs';
-import { buildModel, envelope } from '../model.mjs';
+import { buildModel, envelope, holdFields } from '../model.mjs';
 import { toCsv } from '../csv.mjs';
 import { bad, get, post, bodyOf, sendText } from '../kit.mjs';
 
@@ -50,11 +50,9 @@ function stoppedNote(run, livePages) {
     : `This run was stopped early. Only ${n} ${n === 1 ? 'page was' : 'pages were'} checked.`;
 }
 
-// A page row with the freeze from the lifecycle module (model.frozen), never worked out here.
-const withFreeze = (model, p) => {
-  const f = model.frozen.get(p.page);
-  return { ...p, frozenUntil: f?.until ?? null, frozenUntilText: f ? longDate(f.until) : null };
-};
+// A page row with its hold from the one eligibility function (model.mjs holdFields: the freeze or a
+// git edit), never worked out here. The week's one page edit is the issue's own line (editsPage).
+const withFreeze = (model, p) => ({ ...p, ...holdFields(model, p.page) });
 
 // Said once at the top of a run made before a check's rule changed (checks.mjs RULE_CHANGED).
 export const olderRulesNote = (n) =>

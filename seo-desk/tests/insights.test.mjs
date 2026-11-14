@@ -452,6 +452,7 @@ test('cannibalization lists a split search with shares, a hypothesis and a test,
   assert.deepEqual(Object.keys(it.pages[0]).sort(), [
     'frozenUntil',
     'frozenUntilText',
+    'holdText',
     'impressions',
     'page',
     'position',
@@ -1428,6 +1429,7 @@ test('secondary keywords: the shape, the heading and one item per search a page 
     'explain',
     'frozenUntil',
     'frozenUntilText',
+    'holdText',
     'id',
     'impressions',
     'page',
@@ -1560,8 +1562,9 @@ test('secondary keywords: done is a page edit, so it freezes the page and a froz
   assert.match(other.eligibility.text, /^Eligible from 8 December/);
   assert.equal(other.frozenUntil, '2026-12-08');
   assert.equal(other.frozenUntilText, '8 December');
-  // A page that is not frozen is eligible.
-  assert.equal(secOf(after, 'overtime pay rules').eligibility.eligible, true);
+  // A page that is not frozen still waits for next week: this week's one page edit is made (K2).
+  assert.equal(secOf(after, 'overtime pay rules').eligibility.eligible, false);
+  assert.match(secOf(after, 'overtime pay rules').eligibility.text, /^Next page edit from /);
   // Another page edit this week needs an override: the rule is one a week.
   const second = secOf(after, 'overtime pay rules');
   const refused = await post_(`/api/insights/secondary-keywords/${second.id}`, { action: 'done' });

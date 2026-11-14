@@ -87,7 +87,7 @@ function droppedFromIndex(snaps, prevSnaps) {
 }
 
 // The edit that holds a page back from a new change: a deliberate edit (the freeze) or a git edit of
-// 10 or more lines the freeze does not know (recent, from lifecycle recentEdits). {since, until} or null.
+// 15 or more lines in one commit the freeze does not know (recent, from lifecycle recentEdits). {since, until} or null.
 export function holdOf(page, frozen, recent, today) {
   const f = page ? frozen?.get(page) : null;
   if (f && f.until > today) return { since: f.since, until: f.until, found: 'freeze' };

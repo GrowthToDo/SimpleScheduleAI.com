@@ -19,7 +19,9 @@ export const frozenWarning = (s) =>
     ? `This page is being measured until ${s.fromFrozenUntilText}. Adding the link now will blur that verdict; wait if you can.`
     : null;
 
-export const frozenChipText = (s) => (s?.fromFrozenUntilText ? `Frozen until ${s.fromFrozenUntilText}` : null);
+// The server's own words for the hold (the freeze or a git edit), else "Frozen until" its date.
+export const frozenChipText = (s) =>
+  s?.fromFrozenUntilText ? (s.fromHoldText ?? `Frozen until ${s.fromFrozenUntilText}`) : null;
 
 // A ready instruction for Claude: both pages, the exact words, the sentence, and the freeze
 // warning when the page to edit is being measured.
