@@ -181,6 +181,19 @@ export function openLinkSuggestions(model) {
   return suggestionsView(model, { page: '' }).open;
 }
 
+// How many other pages of the site link to `page` now, from the repo link count (local.inbound): real
+// pages only (a src/... entry is a shared component or a listing template, not a page that links), never
+// the page itself. null when the page was never counted, which is not zero.
+function linkedFromOf(inbound, page) {
+  const sources = inbound?.[page];
+  if (!Array.isArray(sources)) return null;
+  return new Set(sources.map(String).filter((src) => src.startsWith('/') && src !== page)).size;
+}
+const linkedFromText = (n) =>
+  n === null
+    ? 'How many pages link here has not been counted yet.'
+    : `${n} other ${n === 1 ? 'page links' : 'pages link'} here now.`;
+
 // A page's title for the cards: the post's front matter title, else null (the page shows the path).
 // The audit saves no titles, so the post files are the only source the desk has.
 const titlesOf = (posts) => new Map(posts.filter((p) => p.title).map((p) => [p.page, p.title]));
@@ -246,9 +259,12 @@ function buildSuggestions(model, { page }) {
       }
     }
     const types = [...new Set(opps.map((o) => TYPE_LABEL[o.type] ?? o.type))];
+    const linkedFrom = linkedFromOf(inbound, target);
     return {
       page: target,
       title: titles.get(target) ?? null,
+      linkedFrom,
+      linkedFromText: linkedFromText(linkedFrom),
       keyword: used?.keyword ?? null,
       keywordSource: used?.source ?? null,
       reasons: types,

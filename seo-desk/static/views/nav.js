@@ -85,7 +85,7 @@ export const NAV = [
       {
         route: 'links',
         label: 'Internal links',
-        explain: 'Pages that few of your other pages link to.',
+        explain: 'Pages that would gain from more links, with how many pages link to each now.',
         count: 'internalLinks',
         unit: ['link to add', 'links to add'],
       },

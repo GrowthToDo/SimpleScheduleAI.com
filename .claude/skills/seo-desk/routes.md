@@ -142,9 +142,11 @@ clusterConflict}`. `status` is live when the keyword is mapped to a live page; r
 targets it but a live page already shows at position 10 or better; otherwise pending. `clusterConflict` (`{page, keyword, recommendation, test}`) says an existing page may
 already cover a pending keyword, so add a section there instead of a new page.
 
-`/api/link-suggestions?page=/blog/x`: `total`, `open` and `pages[] {page, title, keyword,
-keywordSource, reasons, suggestions[{to, toTitle, from, fromTitle, anchor, context, status,
-fromFrozenUntil, fromFrozenUntilText}], dismissed}`. The number of links still to add is `open`;
+`/api/link-suggestions?page=/blog/x`: `total`, `open` and `pages[] {page, title, linkedFrom,
+linkedFromText, keyword, keywordSource, reasons, suggestions[{to, toTitle, from, fromTitle, anchor,
+context, status, fromFrozenUntil, fromFrozenUntilText}], dismissed}`. `pages` are the pages that
+would gain from more links; `linkedFrom` is how many other pages link to each now (null when never
+counted, which is not zero) and `linkedFromText` says it in a sentence. The number of links still to add is `open`;
 `total` also counts ones already done. The titles are the pages' own titles (null when unknown).
 Without `page` it lists every page with a needs-links or runner-up opportunity. A suggestion on a
 frozen `from` page would edit that page, so check `fromFrozenUntilText`.

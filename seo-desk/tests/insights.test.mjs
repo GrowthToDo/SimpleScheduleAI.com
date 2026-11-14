@@ -2503,3 +2503,37 @@ test('B1: a card that edits no page (the Bing page check) carries no page-edit e
   assert.equal(showsEligibility({ isPageEdit: true, eligibility: eligible }), true);
   assert.equal(showsEligibility({ isPageEdit: true, eligibility: null }), false);
 });
+
+test('B11: each page on the Internal links list says how many pages link to it now, and the page says what the list is', async () => {
+  const dir = path.join(root, 'links-b11');
+  fs.mkdirSync(dir, { recursive: true });
+  writeSnap(dir, 'gsc', gscData());
+  writeSnap(dir, 'local', {
+    ...localData(),
+    inbound: { '/pricing': ['/blog/alpha-guide', '/blog/beta-notes', '/pricing', 'src/components/Footer.astro'] },
+  });
+  use(dir);
+  const r = (await get('/api/link-suggestions')).json;
+  const pricing = r.pages.find((p) => p.page === '/pricing');
+  assert.ok(pricing, 'the runner-up page is on the list');
+  assert.equal(pricing.linkedFrom, 2, 'other pages only: not itself, not a shared component');
+  assert.equal(pricing.linkedFromText, '2 other pages link here now.');
+  const other = r.pages.find((p) => p.page !== '/pricing');
+  if (other) {
+    assert.equal(other.linkedFrom, null, 'never counted is not zero');
+    assert.match(other.linkedFromText, /not been counted/);
+  }
+  use(FULL);
+  const src = fs.readFileSync(new URL('../static/views/internal-links.js', import.meta.url), 'utf8');
+  assert.match(src, /Pages that would gain from more links/);
+  assert.doesNotMatch(src, /type=needs-links/, 'the tile opens the list on this page, not an empty filter');
+  assert.doesNotMatch(src, /Pages that could use links/);
+});
+
+test('B11: the sidebar entry for Internal links says what its page lists', async () => {
+  const { entryFor } = await import('../static/views/nav.js');
+  assert.equal(
+    entryFor('links').explain,
+    'Pages that would gain from more links, with how many pages link to each now.'
+  );
+});
