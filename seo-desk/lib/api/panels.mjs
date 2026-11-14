@@ -35,6 +35,7 @@ import {
   pageLinks,
   hostOf,
   dossierNoteFor,
+  raisesWorry,
   STALE_CHECK_DAYS,
 } from '../competitor-changes.mjs';
 
@@ -504,8 +505,9 @@ export function competitorsView(model) {
     const age = checkedOn ? daysBetween(checkedOn, model.today) : null;
     // A log row dated on or after the check that names this competitor: the dossier already has it.
     const noted = dossierNoteFor(g.host, c.dossierLog ?? [], checkedOn);
-    // A material change the dossier already notes is shown here but is not a worry or a card.
-    const itemId = material.length && !noted ? competitorItemId(g.host, g.events) : null;
+    // A material change the dossier already notes is shown here but is not a worry or a card
+    // (a pricing page that has appeared always is: see raisesWorry).
+    const itemId = raisesWorry(material, noted) ? competitorItemId(g.host, g.events) : null;
     const it = itemId ? itemOf(model, itemId) : null;
     return {
       host: g.host,

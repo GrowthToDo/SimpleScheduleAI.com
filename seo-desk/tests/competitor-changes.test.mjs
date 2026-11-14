@@ -366,11 +366,33 @@ test('a dossier note counts for a host only when a row on or after the check nam
   assert.equal(cc.dossierNoteFor('elsewhere.example', rows, '2026-11-01'), null);
   assert.equal(cc.dossierNoteFor('rival.example', rows, '2026-11-02'), null, 'the older row is before the check');
   assert.equal(cc.dossierNoteFor('rival.example', rows, null), null);
-  // "In-House Health" in a row matches the label inhouse from inhouse.health.
+  // "In-House Health" in a row matches inhouse.health, whose name is spelled across the dot.
   const inhouse = [{ date: '2026-11-01', text: ' In-House Health published a post' }];
   assert.equal(cc.dossierNoteFor('inhouse.health', inhouse, '2026-11-01'), '2026-11-01');
+  assert.equal(
+    cc.dossierNoteFor(
+      'inhouse.health',
+      [{ date: '2026-11-01', text: ' the address inhouse.health/pricing' }],
+      '2026-11-01'
+    ),
+    '2026-11-01'
+  );
+  // The everyday phrase "in-house" in a row about someone else does not mark inhouse.health.
+  const phrase = [{ date: '2026-11-05', text: ' Plainco Staffing now sells to in-house float pools' }];
+  assert.equal(cc.dossierNoteFor('inhouse.health', phrase, '2026-11-01'), null);
   assert.deepEqual(cc.hostLabels('www.smartlinx.com'), ['smartlinxcom', 'smartlinx']);
+  assert.deepEqual(cc.hostLabels('inhouse.health'), ['inhousehealth']);
   assert.deepEqual(cc.hostLabels('a.io'), [], 'a label under four letters is too loose');
+});
+
+test('a pricing page that has appeared stays a worry even when the dossier names that host', () => {
+  const appeared = [{ kind: 'pricing-page-appeared', material: true }];
+  const title = [{ kind: 'title', material: true }];
+  assert.equal(cc.raisesWorry(appeared, '2026-11-01'), true);
+  assert.equal(cc.raisesWorry([...title, ...appeared], '2026-11-01'), true);
+  assert.equal(cc.raisesWorry(title, '2026-11-01'), false);
+  assert.equal(cc.raisesWorry(title, null), true);
+  assert.equal(cc.raisesWorry([], null), false);
 });
 
 test('a material change the dossier already notes for that host is no worry; an unrelated row changes nothing', () => {

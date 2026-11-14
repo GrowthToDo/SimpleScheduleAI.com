@@ -434,15 +434,15 @@ export function summaryLine(events) {
 }
 
 // Worries from grouped events: one per host with at least one material event that the founder has not
-// marked Seen and the dossier does not already note for that host. items is the saved item state by
+// marked Seen and the dossier does not already note for that host (see raisesWorry for the one
+// exception, a pricing page that has appeared). items is the saved item state by
 // id (a Seen is status "done" on the card's id, and the id carries the signature of the events, so a
 // new material event is a new id and the card returns). dossierLog is parseDossierLog's rows.
 export function competitorWorries(hosts, { items = {}, today, dossierLog = [] } = {}) {
   const out = [];
   for (const g of hosts ?? []) {
     const material = g.events.filter((e) => e.material);
-    if (!material.length) continue;
-    if (dossierNoteFor(g.host, dossierLog, g.checkedOn)) continue;
+    if (!raisesWorry(material, dossierNoteFor(g.host, dossierLog, g.checkedOn))) continue;
     const id = competitorItemId(g.host, g.events);
     if (items?.[id]?.status === 'done') continue;
     const lines = material.map((e) => eventLine(g.host, e));
@@ -528,13 +528,31 @@ const squash = (v) =>
     .toLowerCase()
     .replace(/[^a-z0-9]/g, '');
 
-// What a log row can call a competitor: its main label ("smartlinx" from smartlinx.com, "inhouse"
-// from inhouse.health), found inside the row with punctuation and spaces ignored, so "In-House
-// Health" matches. A label under four letters is too loose to match on.
+// Endings that are only an ending. On any other ending the name is spelled across the dot
+// (inhouse.health is "In-House Health"), and the first part alone can be an everyday word.
+// "example" is the ending reserved for made-up addresses.
+const PLAIN_ENDINGS = new Set(['com', 'net', 'org', 'io', 'co', 'ai', 'app', 'us', 'example']);
+
+// What a log row can call a competitor, found inside the row with punctuation and spaces ignored:
+// the whole address ("inhousehealth" from inhouse.health, so "In-House Health" matches and
+// "in-house staff" in a row about someone else does not), and, when the ending is only an ending,
+// the main label ("smartlinx" from smartlinx.com). A name under four letters is too loose to match on.
 export function hostLabels(host) {
-  const h = String(host ?? '').replace(/^www\./, '');
-  const label = squash(h.split('.')[0]);
-  return [squash(h), label].filter((x, i, a) => x.length >= 4 && a.indexOf(x) === i);
+  const h = String(host ?? '')
+    .toLowerCase()
+    .replace(/^www\./, '');
+  const parts = h.split('.');
+  const names = [squash(h)];
+  if (PLAIN_ENDINGS.has(parts[parts.length - 1])) names.push(squash(parts[0]));
+  return names.filter((x, i, a) => x.length >= 4 && a.indexOf(x) === i);
+}
+
+// Whether a host's material events raise a worry given the dossier note for it (a date or null).
+// A noted change raises none, with one exception: a pricing page that has appeared is the event the
+// watch exists to catch, so only the founder pressing Seen hides it.
+export function raisesWorry(material, noted) {
+  if (!material?.length) return false;
+  return !noted || material.some((e) => e.kind === 'pricing-page-appeared');
 }
 
 // The earliest log row dated on or after the check that names this host, or null: a note about
