@@ -336,10 +336,11 @@ test('explore: a period before that Search Console no longer keeps is not pulled
 });
 
 test('explore: a cut list does not call missing searches gone', () => {
-  const cur = [{ query: 'a', clicks: 0, impressions: 10, position: 3 }];
+  // Gone needs the minimum of 20 views before, so the numbers sit above it.
+  const cur = [{ query: 'a', clicks: 0, impressions: 30, position: 3 }];
   const prev = [
-    { query: 'a', clicks: 0, impressions: 10, position: 3 },
-    { query: 'b', clicks: 0, impressions: 5, position: 3 },
+    { query: 'a', clicks: 0, impressions: 30, position: 3 },
+    { query: 'b', clicks: 0, impressions: 25, position: 3 },
   ];
   const cut = assemble({ dim: 'query', cur, prev, comparable: true, truncated: true, limit: 1, ctrMin: 200 });
   assert.deepEqual(

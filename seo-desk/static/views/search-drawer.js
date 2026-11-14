@@ -1,9 +1,11 @@
 // The search drawer, and the pieces the Keywords page shares with it.
 //
-//   openSearchDrawer(query, ctx, {range, row, filtered})  the search's trend (live from Search Console), the
-//        pages that show for it with their shares, and Target or Ignore. `range` is the query
-//        string for the period ('range=28', or a custom range); `row` is the list row, whose
-//        numbers show at once while the trend loads.
+//   openSearchDrawer(query, ctx, {range, row, rowRange, filtered})  the search's trend (live from
+//        Search Console), the pages that show for it with their shares, and Target or Ignore.
+//        `range` is the query string for the period ('range=28', or a custom range); `row` is the
+//        list row and `rowRange` the dates of the list it comes from: with both, the row's numbers
+//        show at once under the list's dates. Otherwise every number is the pull's own total.
+//   drawerNumbers({own, rowRange, detail})  the numbers the drawer prints, and their dates.
 //   followRows(table, row, open)  while the drawer opened from `row` is open, Up and Down open the
 //        previous or next row of `table` (a dataTable) with `open(row)`. Esc still closes.
 //   askTarget(ctx, {keywords, page})  the "Target" form: the page meant to win it, Priority
@@ -299,13 +301,33 @@ if (typeof document !== 'undefined') document.addEventListener('keydown', onArro
 
 // ------------------------------------------------------------------ the drawer
 
+// The numbers at the top of the drawer: the list row's, under the list's own dates, when the drawer
+// opened from a list row with clicks and the list's dates are known; otherwise the totals of the
+// drawer's own pull (/api/search-detail), under its dates. The page never adds rows up itself.
+// Null when there is nothing to show yet.
+export function drawerNumbers({ own = null, rowRange = null, detail = null } = {}) {
+  if (own && own.clicks !== undefined && rowRange)
+    return { impressions: own.impressions, clicks: own.clicks, position: own.position, rangeText: fmt.range(rowRange) };
+  if (!detail?.totals) return null;
+  return {
+    impressions: detail.totals.impressions,
+    clicks: detail.totals.clicks,
+    position: detail.totals.position,
+    rangeText: fmt.range(detail.range),
+  };
+}
+
 const METRICS = [
   { key: 'impressions', label: 'Times shown' },
   { key: 'clicks', label: 'Clicks' },
   { key: 'position', label: 'Average place', invert: true },
 ];
 
-export function openSearchDrawer(query, ctx, { range = 'range=28', row = null, filtered = false } = {}) {
+export function openSearchDrawer(
+  query,
+  ctx,
+  { range = 'range=28', row = null, rowRange = null, filtered = false } = {}
+) {
   // The trend has no filters, so a filtered list row's numbers would not match it: with filters on,
   // every number in the drawer comes from the trend's own pull.
   const own = filtered ? null : row;
@@ -367,8 +389,10 @@ export function openSearchDrawer(query, ctx, { range = 'range=28', row = null, f
         numbers.rangeText ? [h('dt', {}, 'Dates'), h('dd', {}, numbers.rangeText)] : null
       )
     );
-  // Keyword rows carry no clicks; their numbers wait for the trend.
-  if (own && own.clicks !== undefined) showFacts(own);
+  // Keyword rows carry no clicks, and a row without its list's dates cannot be dated: their numbers
+  // wait for the trend's own pull.
+  const first = drawerNumbers({ own, rowRange });
+  if (first) showFacts(first);
 
   let topPage = row?.topPage ?? null;
 
@@ -464,16 +488,8 @@ export function openSearchDrawer(query, ctx, { range = 'range=28', row = null, f
       return;
     }
     if (!box.isConnected) return;
-    const imp = d.pages.reduce((a, p) => a + (p.impressions || 0), 0);
-    const placed = d.pages.filter((p) => !blank(p.position) && p.impressions);
-    const weighted = placed.reduce((a, p) => a + p.position * p.impressions, 0);
-    const weight = placed.reduce((a, p) => a + p.impressions, 0);
-    showFacts({
-      impressions: own?.impressions ?? imp,
-      clicks: own?.clicks ?? d.pages.reduce((a, p) => a + (p.clicks || 0), 0),
-      position: own?.position ?? (weight ? weighted / weight : null),
-      rangeText: fmt.range(d.range),
-    });
+    const numbers = drawerNumbers({ own, rowRange, detail: d });
+    if (numbers) showFacts(numbers);
     topPage = d.pages[0]?.page ?? topPage;
     drawTrend(d);
     drawPages(d);

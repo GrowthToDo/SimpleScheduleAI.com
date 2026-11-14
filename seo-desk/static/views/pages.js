@@ -13,6 +13,7 @@ import { renderCard } from './card.js';
 import { verdictCard } from './results.js';
 import { lineChart } from '../chart.js';
 import { markerText } from './markers.js';
+import { fmt as fmtApp } from '../app.js';
 
 export const MOVEMENT_LABEL = {
   growing: 'Growing',
@@ -31,6 +32,38 @@ const INDEX_LABEL = {
 const KIND_LABEL = { post: 'Blog post', article: 'Article', page: 'Site page' };
 
 const blank = (v) => v === null || v === undefined;
+
+// The Growing and Decaying tiles for the list on screen: counted from its rows, and naming the period
+// the rows cover (the stored 28 days, or the dates the filter bar picked).
+export function movementTiles(items, range) {
+  const count = (m) => items.filter((r) => r.movement === m).length;
+  const when = range ? `in ${fmtApp.range(range)}` : 'in this period';
+  return {
+    growing: { value: count('growing'), sub: `shown more ${when} than the same number of days before` },
+    decaying: { value: count('slipping'), sub: `shown less ${when} than the same number of days before` },
+  };
+}
+
+// The line above a filtered or re-dated Pages list. Page impressions add up each page, so they can
+// be more than the times the site was shown; the site's own total for the same dates sits beside
+// them when the server sends it (no filter on). [bold head, the rest].
+export function summaryParts(r) {
+  const head = `${fmtApp.plural(r.totals?.count ?? r.rows.length, 'page', 'pages')}, ${fmtApp.num(r.totals?.impressions)} page impressions, ${fmtApp.plural(r.totals?.clicks ?? 0, 'click', 'clicks')}`;
+  const site = r.siteTotals
+    ? ` A search that showed two pages counts once for each, so page impressions can be more than the times Google showed the site, which was ${fmtApp.num(r.siteTotals.impressions)} times on the same dates.`
+    : '';
+  const source =
+    r.source === 'stored'
+      ? 'From the stored Search Console pull.'
+      : r.source === 'cache'
+        ? `Pulled from Search Console${r.fetchedOn ? ` on ${r.fetchedOn}` : ''} and kept for 12 hours.`
+        : 'Pulled from Search Console just now.';
+  return [
+    head,
+    `, ${fmtApp.range(r.range)}.${site} ${source} Times shown, clicks, click rate, average place and movement follow your dates and filters; the target keyword place, searches and links in stay on the last 28 days.`,
+  ];
+}
+export const summaryText = (r) => summaryParts(r).join('');
 
 export async function render(el, ctx) {
   const { api, h, fmt, params } = ctx;
@@ -286,18 +319,9 @@ export async function render(el, ctx) {
       }
     }
     table.update(filtered());
-    status.replaceChildren(
-      h(
-        'p',
-        { class: 'section-note fb-summary' },
-        h(
-          'strong',
-          {},
-          `${fmt.plural(r.totals?.count ?? r.rows.length, 'page', 'pages')} shown ${fmt.num(r.totals?.impressions)} times, ${fmt.plural(r.totals?.clicks ?? 0, 'click', 'clicks')}`
-        ),
-        `, ${fmt.range(r.range)}. ${r.source === 'stored' ? 'From the stored Search Console pull.' : r.source === 'cache' ? `Pulled from Search Console${r.fetchedOn ? ` on ${r.fetchedOn}` : ''} and kept for 12 hours.` : 'Pulled from Search Console just now.'} Times shown, clicks, click rate, average place and movement follow your dates and filters; the target keyword place, searches and links in stay on the last 28 days.`
-      )
-    );
+    drawMovementTiles(r.range);
+    const [head, rest] = summaryParts(r);
+    status.replaceChildren(h('p', { class: 'section-note fb-summary' }, h('strong', {}, head), rest));
   }
 
   const frozenNow = count(isFrozen);
@@ -315,6 +339,16 @@ export async function render(el, ctx) {
       h('span', { class: 'tile-value' }, fmt.num(value)),
       h('div', { class: 'tile-change' }, sub)
     );
+
+  // Growing and Decaying follow the list on screen and name its period.
+  const growingBox = h('div', { style: { display: 'contents' } });
+  const decayingBox = h('div', { style: { display: 'contents' } });
+  function drawMovementTiles(range) {
+    const t = movementTiles(items, range);
+    growingBox.replaceChildren(tileBtn('Growing', t.growing.value, t.growing.sub, 'growing'));
+    decayingBox.replaceChildren(tileBtn('Decaying', t.decaying.value, t.decaying.sub, 'slipping'));
+  }
+  drawMovementTiles(data.range);
 
   ctx.mount(
     el,
@@ -348,18 +382,8 @@ export async function render(el, ctx) {
           items.length,
           notOnGoogle ? `${fmt.plural(notOnGoogle, 'is', 'are')} not on Google` : 'none known to be missing from Google'
         ),
-        tileBtn(
-          'Growing',
-          count((r) => r.movement === 'growing'),
-          'shown more than the 28 days before',
-          'growing'
-        ),
-        tileBtn(
-          'Decaying',
-          count((r) => r.movement === 'slipping'),
-          'shown less than the 28 days before',
-          'slipping'
-        ),
+        growingBox,
+        decayingBox,
         tileBtn('Frozen now', frozenNow, frozenNow ? 'not to be edited yet' : 'every page is free to edit')
       )
     ),

@@ -442,3 +442,172 @@ test('a priority set on a target reaches an opportunity about another form of it
   );
   assert.equal(o.signals.importance, 0.2);
 });
+
+// ---------------------------------------------------------------- A3 to A12
+
+const { movementOf, pageRows } = await import('../lib/api/search.mjs');
+const { makeRoutes } = await import('../lib/api/ext/explore.mjs');
+
+test('A8 and A12: new and gone need 20 views in the bigger period; nothing in either period has no word', () => {
+  assert.equal(movementOf(25, 0), 'new');
+  assert.equal(movementOf(5, 0), null);
+  assert.equal(movementOf(0, 25), 'gone');
+  assert.equal(movementOf(0, 3), null);
+  assert.equal(movementOf(0, 0), null);
+  assert.equal(movementOf(40, 30), 'growing');
+  assert.equal(movementOf(20, 30), 'slipping');
+  assert.equal(movementOf(31, 30), 'steady');
+  // Under 20 views before, a change cannot be judged, so no word either.
+  assert.equal(movementOf(300, 10), null);
+  assert.equal(movementOf(5, 0, false), null);
+});
+
+test('A12: a live page Google never showed in either period has no movement word', () => {
+  writeSnap('gsc', snapWith({}));
+  writeSnap('local', {
+    source: 'local',
+    ok: true,
+    status: 'fresh',
+    pulledAt: '2026-11-14T00:30:00.000Z',
+    through: '2026-11-14',
+    error: null,
+    data: { livePages: [{ page: '/blog/x' }, { page: '/blog/quiet' }], registry: [] },
+  });
+  const rows = pageRows(buildModel());
+  assert.equal(rows.find((r) => r.page === '/blog/quiet').movement, null);
+  assert.equal(rows.find((r) => r.page === '/blog/x').movement, 'steady');
+  fs.rmSync(path.join(DATA, 'snap', 'local.json'));
+  invalidate();
+});
+
+test('A4: the click rate change subtracts the unrounded rates, then rounds', () => {
+  // This week 749 clicks from 100,000 (0.749%), the week before 651 from 100,000 (0.651%). Both
+  // round to 0.7%, but the change is +0.1 points, not 0.
+  const siteDaily = dates('2026-10-01', '2026-11-10').map((date) => ({
+    date,
+    clicks: date === '2026-11-10' ? 749 : date === '2026-11-03' ? 651 : 0,
+    impressions: date === '2026-11-10' || date === '2026-11-03' ? 100000 : 0,
+    position: 9,
+  }));
+  writeSnap('gsc', snapWith({ siteDaily }));
+  const tile = overviewView(buildModel(), 7).tiles.find((t) => t.key === 'clickRate');
+  assert.equal(tile.valueText, '0.7%');
+  assert.equal(tile.change, 0.1);
+});
+
+// A fake Search Console server for the live routes: the search's days and its pages.
+function fakeOpen(calls = []) {
+  return async () => ({
+    async call(tool, args) {
+      calls.push(args);
+      if (args.dimensions === 'date')
+        return {
+          rows: [
+            { date: '2026-11-08', clicks: 1, impressions: 30, position: 4 },
+            { date: '2026-11-09', clicks: 0, impressions: 10, position: 8 },
+          ],
+        };
+      return {
+        rows: [
+          { page: 'https://simplescheduleai.com/blog/a', clicks: 1, impressions: 30, position: 4 },
+          { page: 'https://simplescheduleai.com/blog/b', clicks: 0, impressions: 25, position: 9 },
+        ],
+      };
+    },
+    close() {},
+  });
+}
+const routeOf = (rs, p) => (query) => rs.find((r) => r.path === p).handler({ url: new URL(`http://x${p}?${query}`) });
+
+test('A5: the search detail returns its own totals from its dated pull, not a sum of its page rows', async () => {
+  writeSnap('gsc', snapWith({}));
+  const calls = [];
+  const detail = routeOf(makeRoutes({ open: fakeOpen(calls) }), '/api/search-detail');
+  const d = await detail('query=made%20up%20search&range=7');
+  assert.deepEqual(d.totals, { impressions: 40, clicks: 1, position: 5 });
+  // The live range ends on the stored end date.
+  assert.equal(d.range.end, '2026-11-10');
+  assert.ok(calls.every((c) => c.end_date === '2026-11-10'));
+});
+
+test('A10: the stored Pages explorer gives the site total for the same dates beside the page impressions', async () => {
+  writeSnap('gsc', snapWith({}));
+  const explore = routeOf(makeRoutes({ open: fakeOpen() }), '/api/explore');
+  const r = await explore('dim=page&range=7');
+  assert.equal(r.source, 'stored');
+  assert.equal(r.totals.impressions, 140);
+  const site = dates('2026-11-04', '2026-11-10').reduce((a, d) => a + dayImp(d), 0);
+  assert.deepEqual(r.siteTotals, {
+    impressions: site,
+    clicks: dates('2026-11-04', '2026-11-10').reduce((a, d) => a + dayClicks(d), 0),
+  });
+  // With a filter the site total is not for the same rows, so none is given.
+  const f = await explore('dim=page&range=7&country=usa');
+  assert.equal(f.siteTotals, null);
+  // Searches have no site total beside them.
+  assert.equal((await explore('dim=query&range=28')).siteTotals, null);
+});
+
+// ---------------------------------------------------------------- the pages' own helpers
+
+const drawer = await import('../static/views/search-drawer.js');
+const overviewPage = await import('../static/views/overview.js');
+const pagesPage = await import('../static/views/pages.js');
+
+test('A5 and A6: the search drawer prints the list row with the list dates, else the pull totals with its dates', () => {
+  const listRange = { start: '2026-10-14', end: '2026-11-10', text: '14 October to 10 November' };
+  const detail = {
+    range: { start: '2026-11-04', end: '2026-11-10', text: '4 to 10 November' },
+    totals: { impressions: 40, clicks: 1, position: 5 },
+    pages: [{ impressions: 30 }, { impressions: 25 }],
+  };
+  const row = { impressions: 35, clicks: 3, position: 5.5 };
+  assert.deepEqual(drawer.drawerNumbers({ own: row, rowRange: listRange, detail }), {
+    impressions: 35,
+    clicks: 3,
+    position: 5.5,
+    rangeText: '14 October to 10 November',
+  });
+  // No list dates (a keyword row, or a filtered list): every number is the pull's, under its dates.
+  assert.deepEqual(drawer.drawerNumbers({ own: row, rowRange: null, detail }), {
+    impressions: 40,
+    clicks: 1,
+    position: 5,
+    rangeText: '4 to 10 November',
+  });
+  assert.equal(drawer.drawerNumbers({ own: null, rowRange: null, detail: null }), null);
+});
+
+test('A3: the target position tile prints its own dates when the range is not 28 days', () => {
+  const t = {
+    key: 'targetPosition',
+    range: { start: '2026-10-14', end: '2026-11-10', text: '14 October to 10 November' },
+  };
+  assert.match(overviewPage.tileRangeLine(t, 7), /14 October to 10 November/);
+  assert.match(overviewPage.tileRangeLine(t, 90), /14 October to 10 November/);
+  assert.equal(overviewPage.tileRangeLine(t, 28), null);
+  assert.equal(overviewPage.tileRangeLine({ ...t, key: 'clicks' }, 7), null);
+});
+
+test('A9 and A10: the Pages tiles count the list shown and name its period; the summary says page impressions', () => {
+  const items = [{ movement: 'growing' }, { movement: 'slipping' }, { movement: 'slipping' }, { movement: null }];
+  const range = { start: '2026-11-04', end: '2026-11-10', text: '4 to 10 November' };
+  const tiles = pagesPage.movementTiles(items, range);
+  assert.equal(tiles.growing.value, 1);
+  assert.equal(tiles.decaying.value, 2);
+  assert.match(tiles.growing.sub, /4 to 10 November/);
+  assert.match(tiles.decaying.sub, /4 to 10 November/);
+  const text = pagesPage.summaryText({
+    totals: { count: 2, impressions: 140, clicks: 3 },
+    rows: [],
+    range,
+    siteTotals: { impressions: 700, clicks: 9 },
+  });
+  assert.match(text, /140 page impressions/);
+  assert.match(text, /700 times/);
+  assert.doesNotMatch(text, /[–—]/);
+  assert.doesNotMatch(
+    pagesPage.summaryText({ totals: { count: 2, impressions: 140, clicks: 3 }, rows: [], range }),
+    /site/
+  );
+});

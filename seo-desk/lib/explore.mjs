@@ -363,7 +363,8 @@ export function assemble({ dim, cur, prev, comparable, truncated, limit, ctrMin 
         position: null,
         ...(dim === 'page' ? { ctr: null } : {}),
         prev: prevOf(p),
-        movement: 'gone',
+        // Gone only from 20 views or more; under that, no word.
+        movement: movementOf(0, p.impressions, true),
       });
     }
   }
@@ -568,9 +569,15 @@ export async function searchDetail(query, range, { call, now } = {}) {
     pull(call, { dimensions: 'date', start: range.start, end: range.end, filters, rowLimit: 1000 }),
     pull(call, { dimensions: 'page', start: range.start, end: range.end, filters, rowLimit: 1000 }),
   ]);
+  // The search's own totals, from the pull by date (held to this search alone). Adding up its page
+  // rows would count a search that showed two pages twice.
+  const sum = (f) => days.reduce((s, r) => s + (Number(r[f]) || 0), 0);
+  const impressions = sum('impressions');
+  const weighted = days.reduce((s, r) => s + (Number(r.position) || 0) * (Number(r.impressions) || 0), 0);
   const result = {
     query: text,
     range,
+    totals: { impressions, clicks: sum('clicks'), position: impressions ? round2(weighted / impressions) : null },
     series: days
       .map((r) => ({
         date: r.date,

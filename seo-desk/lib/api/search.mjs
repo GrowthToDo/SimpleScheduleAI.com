@@ -6,6 +6,7 @@ import { groupByQuery, isBrand, targetKeywords } from '../../../scripts/lib/gsc-
 import { addDays, todayIso } from '../dates.mjs';
 import { gscEnd } from '../sources/gsc.mjs';
 import { realQueryCounts } from '../query-counts.mjs';
+import { THRESHOLDS } from '../config.mjs';
 import { longDate, longRange } from '../text.mjs';
 import { POST_PAGE_RE, envelope, memo, linksFor, pagePath, rangeOf, lowCtrMin, checkedText } from './model.mjs';
 import { deliberateEdits, timelineEvents, verdictRows, moneyPageVerdicts, opportunitiesList } from './work.mjs';
@@ -34,14 +35,19 @@ export function windowsFor(model, days) {
 
 // ---------------------------------------------------------------- movement
 
-// growing / slipping / new / gone / steady, or null when there is no earlier period to compare with.
+// growing / slipping / new / gone / steady, or null (no word) when there is no earlier period to
+// compare with, or too few views to judge. New and gone need the minimum base (20 views) in the
+// period that has them, so one or two views never read as "new" or "gone"; a change needs it in the
+// earlier period (pct); nothing in either period is no movement at all.
 export function movementOf(cur, prev, comparable = true) {
   if (!comparable) return null;
-  if (prev === 0 && cur > 0) return 'new';
-  if (cur === 0 && prev > 0) return 'gone';
+  if (!(cur > 0) && !(prev > 0)) return null;
+  if (!(prev > 0)) return cur >= THRESHOLDS.PCT_MIN_BASE ? 'new' : null;
+  if (!(cur > 0)) return prev >= THRESHOLDS.PCT_MIN_BASE ? 'gone' : null;
   const p = pct(cur, prev);
-  if (p !== null && p >= MOVE_PCT) return 'growing';
-  if (p !== null && p <= -MOVE_PCT) return 'slipping';
+  if (p === null) return null;
+  if (p >= MOVE_PCT) return 'growing';
+  if (p <= -MOVE_PCT) return 'slipping';
   return 'steady';
 }
 
@@ -154,7 +160,8 @@ export function queriesTable(model, days) {
           impressions: 0,
           position: null,
           change: pct(0, p.impressions),
-          movement: 'gone',
+          // Gone only from 20 views or more; under that, no word.
+          movement: movementOf(0, p.impressions),
           brand: isBrand(p.query, model.brands),
           topPage: null,
           bingImpressions: bing.get(lower(p.query).trim())?.impressions ?? 0,
@@ -390,7 +397,7 @@ export function pageRows(model) {
   return memo(model, 'pageRows', () => {
     const local = model.data.local ?? {};
     const gsc = model.data.gsc;
-    const { rows: pt, comparable } = pagesTable(model, 28);
+    const { rows: pt } = pagesTable(model, 28);
     const byPage = new Map(pt.map((r) => [r.page, r]));
     const live = (local.livePages ?? []).map((p) => p.page);
     const pages = live.length ? live : pt.map((r) => r.page);
@@ -421,7 +428,8 @@ export function pageRows(model) {
         clicks: g?.clicks ?? 0,
         ctr: g?.ctr ?? null,
         change: g?.change ?? null,
-        movement: g ? g.movement : comparable ? 'steady' : null,
+        // A live page Google did not show in either period has no movement word.
+        movement: g ? g.movement : null,
         queryCount: queryCount.get(page)?.size ?? 0,
         inbound: new Set(sources).size,
         lastEdit: deliberate.get(page)?.[0] ?? null,
@@ -435,8 +443,10 @@ export function pageRows(model) {
   });
 }
 
+// range: the 28 days the rows cover (windowsFor), which the page names on its tiles.
 export function pagesView(model) {
-  return { ...envelope(model, { need: ['gsc', 'local'] }), items: pageRows(model) };
+  const range = rangeOf(pagesTable(model, 28).range) ?? undefined;
+  return { ...envelope(model, { need: ['gsc', 'local'], range }), items: pageRows(model) };
 }
 
 // ---------------------------------------------------------------- one page

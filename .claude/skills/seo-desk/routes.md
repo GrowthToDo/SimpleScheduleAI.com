@@ -48,16 +48,23 @@ prevMean, n, targetsTotal, enough, range, prevRange}`, `targets[]` (keyword, pag
 change, alignment) and `brandSplit`.
 
 `/api/explore?dim=query|page&range=…`: `rows[] {key, clicks, impressions, position, ctr (pages
-only, gated), prev, change, movement, brand}`, `totals`, `comparable`, `truncated`, `source`
-(stored, live or cache), `fetchedOn`, `notes[]`, `chips[]`. `movement` is growing, slipping, new,
-gone, steady or null. Stored with no filter for searches at 28 and 90 days (90 only once the
-snapshot holds the query-only 90-day pull) and pages at 7, 14, 28 and 90. Live ranges end on
-`through`, the same day as the stored lists. Everything else is a live Search Console pull (two calls, cached 12 hours; 429 when busy,
-502 when it fails). Same for `/api/distribution` (stored for 28 and 90) and `/api/search-detail?query=`
-(always live). Stay on stored ranges unless he asks for a filtered view.
+only, gated), prev, change, movement, brand}`, `totals`, `siteTotals`, `comparable`, `truncated`,
+`source` (stored, live or cache), `fetchedOn`, `notes[]`, `chips[]`. `totals.impressions` for pages
+adds up each page (page impressions: a search that showed two pages counts twice); `siteTotals
+{impressions, clicks}` is the site's own total for the same dates, given for pages with no filter
+and null otherwise. `movement` is growing, slipping, new, gone, steady or null; null means no
+earlier period, nothing in either period, or too few views to judge (new and gone need 20 views in
+the period that has them, a change needs 20 in the earlier one). Stored with no filter for searches
+at 28 and 90 days (90 only once the snapshot holds the query-only 90-day pull) and pages at 7, 14,
+28 and 90. Live ranges end on `through`, the same day as the stored lists. Everything else is a
+live Search Console pull (two calls, cached 12 hours; 429 when busy, 502 when it fails). Same for
+`/api/distribution` (stored for 28 and 90) and `/api/search-detail?query=` (always live; its
+`totals {impressions, clicks, position}` are the search's own, from its pull by date). Stay on
+stored ranges unless he asks for a filtered view.
 
 `/api/pages`: `items[] {page, kind, keyword, position, impressions, clicks, ctr, change,
-movement, queryCount, inbound, lastEdit, frozenUntil, index (indexed|not-indexed|unknown)}`.
+movement, queryCount, inbound, lastEdit, frozenUntil, index (indexed|not-indexed|unknown)}`;
+`range` is the 28 days the numbers cover.
 `/api/page?path=/blog/x` (path must start with a slash; 404 for an unknown page): the same row plus
 `queries[]` (each `impressions` is the times THIS page was shown for that search, not the times the
 search was made; a search that showed two pages counts on both), `opportunities[]`, `verdicts[]`, `inboundFrom[]`, `frozen {since, until, untilText,

@@ -9,6 +9,8 @@ import { buildModel, envelope, deskToday, lowCtrMin } from '../model.mjs';
 import { openServer, SERVER_KEYS, McpError } from '../../mcp-client.mjs';
 import { isBrand } from '../../../../scripts/lib/gsc-diagnose-core.mjs';
 import { longDate, longRange } from '../../text.mjs';
+import { coversFrom, sumRange } from '../fmt.mjs';
+import { newestDate } from '../../sources/gsc.mjs';
 import {
   RANGE_OPTIONS,
   resolveRange,
@@ -171,6 +173,21 @@ export function makeRoutes({ open = openServer, now, waitMs = WAIT_MS, totalMs =
         result = { ...r, source: r.cached ? 'cache' : 'live' };
       }
       const shown = withText(result.range);
+      // Beside the page impressions, the site's own total for the same dates: page impressions add up
+      // each page, so a search that showed two pages counts twice there and once here. Only with no
+      // filter (the site total is unfiltered) and when the daily rows cover the dates.
+      const site = model.data.gsc?.siteDaily ?? [];
+      const covered =
+        dim === 'page' &&
+        !filters.length &&
+        coversFrom(site, result.range.start) &&
+        result.range.end <= (newestDate(site) ?? '');
+      const siteTotals = covered
+        ? {
+            impressions: sumRange(site, result.range.start, result.range.end, 'impressions'),
+            clicks: sumRange(site, result.range.start, result.range.end, 'clicks'),
+          }
+        : null;
       const rows =
         dim === 'query' ? result.rows.map((r) => ({ ...r, brand: isBrand(r.key, model.brands) })) : result.rows;
       return {
@@ -180,6 +197,7 @@ export function makeRoutes({ open = openServer, now, waitMs = WAIT_MS, totalMs =
         chips,
         rows,
         totals: result.totals,
+        siteTotals,
         comparable: result.comparable,
         truncated: result.truncated,
         source: result.source,

@@ -310,7 +310,13 @@ function queriesTable(box, data, ctx, view) {
     emptyText: 'Google has not shown the site for any search in this period.',
     onRowClick: (r) =>
       followRows(table, r, (x) =>
-        openSearchDrawer(x.query, ctx, { range: drawerRange, row: x, filtered: hasFilters(state) })
+        openSearchDrawer(x.query, ctx, {
+          range: drawerRange,
+          row: x,
+          // The stored list's dates; a live (exploring) list leaves the numbers to the drawer's pull.
+          rowRange: exploring ? null : data.queriesRange,
+          filtered: hasFilters(state),
+        })
       ),
     columns: [
       { key: 'query', label: 'Search', wrap: true },

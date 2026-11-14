@@ -24,6 +24,13 @@ export const RANGES = [
 const rangeLabel = (days) => RANGES.find((r) => r.days === Number(days))?.label ?? `${days} days`;
 const blank = (v) => v === null || v === undefined || !Number.isFinite(Number(v));
 
+// The target keyword position always covers its own 28 days. On any other range its tile says
+// which dates, so it is never read as the range chosen. Null when nothing needs saying.
+export function tileRangeLine(tile, days) {
+  if (tile?.key !== 'targetPosition' || Number(days) === 28 || !tile.range) return null;
+  return `Covers ${fmt.range(tile.range)}, the target keywords' own 28 days.`;
+}
+
 export function changeLine(tile, days) {
   if (blank(tile?.change)) return fmt.NOT_ENOUGH;
   const c = Number(tile.change);
@@ -114,7 +121,8 @@ export async function render(el, ctx) {
         },
         h('span', { class: 'tile-label' }, t.label),
         h('span', { class: `tile-value${value === null ? ' is-text' : ''}` }, value ?? fmt.NOT_ENOUGH),
-        compare ? h('div', { class: `tile-change ${fmt.direction(t.change)}` }, changeLine(t, days)) : null
+        compare ? h('div', { class: `tile-change ${fmt.direction(t.change)}` }, changeLine(t, days)) : null,
+        tileRangeLine(t, days) ? h('div', { class: 'tile-change' }, tileRangeLine(t, days)) : null
       );
     })
   );

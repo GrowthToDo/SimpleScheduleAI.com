@@ -81,11 +81,13 @@ export function overviewView(model, days) {
   // behind it. The change is in percentage points, and only when both periods have enough.
   const rate = site.length ? clickRateOf(clicks, impressions) : null;
   const prevRate = comparable ? clickRateOf(prevClicks, prevImpressions) : null;
+  // The change subtracts the unrounded rates, then rounds: two rates that both round to 0.7% can
+  // still be 0.1 points apart.
   const rateTile = tile(
     'clickRate',
     'Click rate',
     rate,
-    rate !== null && prevRate !== null ? round1((rate - prevRate) * 100) : null,
+    rate !== null && prevRate !== null ? round1((clicks / impressions - prevClicks / prevImpressions) * 100) : null,
     'points',
     rate === null
       ? `Not enough data yet: a click rate needs at least ${n0(CLICK_RATE_MIN_IMPRESSIONS)} impressions in the period, and this one had ${n0(impressions)}.`
