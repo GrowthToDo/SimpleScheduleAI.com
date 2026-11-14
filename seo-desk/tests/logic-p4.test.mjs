@@ -442,7 +442,7 @@ test('N2 and W9: the audit route marks new-check pages without "New", the CSV sa
   assert.match(csv, /\/b,[^\r\n]*,new,/);
 });
 
-test('L3: the sidebar shows no tick for a stopped or old audit', () => {
+test('L3: the sidebar shows no tick for a stopped or old audit', async () => {
   const entry = { count: 'auditToFix' };
   assert.equal(nav.countView(entry, { auditToFix: 0, auditOpen: 3 }).text, nav.TICK);
   const stopped = nav.countView(entry, { auditToFix: 0, auditOpen: 3, auditStoppedEarly: true });
@@ -458,6 +458,12 @@ test('L3: the sidebar shows no tick for a stopped or old audit', () => {
   assert.equal(c.old, true);
   assert.equal(c.stoppedEarly, false);
   assert.equal(c.at, '2026-10-01T06:00:00.000Z');
+  // The sidebar route carries both flags, so the page can drop the tick.
+  const { navCounts } = await import('../lib/api/ext/overview.mjs');
+  invalidate();
+  const counts = navCounts(buildModel());
+  assert.equal(counts.auditOld, true, 'a run from 1 October is old by any later date');
+  assert.equal(counts.auditStoppedEarly, false);
 });
 
 // ---------------------------------------------------------------- AI visibility

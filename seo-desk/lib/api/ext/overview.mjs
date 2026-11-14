@@ -211,6 +211,9 @@ export function navCounts(model) {
     auditToFix: audit?.toFix ?? null,
     auditOpen: audit?.open ?? null,
     auditScore: audit?.score ?? null,
+    // The sidebar shows no tick for an audit that stopped early or is more than two weeks old.
+    auditStoppedEarly: audit?.stoppedEarly ?? null,
+    auditOld: audit?.old ?? null,
   };
 }
 
