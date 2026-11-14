@@ -153,8 +153,13 @@ skips that gate.
 
 `/api/visitors`: `channels {range, total, rows[], series[]}`, `landing[]`, `interestSignals[]`,
 `clarity`, `standingLine`. `/api/health`: `indexSummary {indexed, notIndexed, unknown, checked,
-live, text}`, `index[] {page, verdict, reason, lastCrawl, checkedOn, clicks, changedSinceLast}`,
-`newSinceLast[]`, `fixedSinceLast[]`, `bingCrawlIssues[]`, `issues[]`, `aiCrawlers`.
+live, notChecked, oldestCheckedOn, answersText, lastRun, text}`, `index[] {page, verdict, reason,
+lastCrawl, checkedOn, clicks, changedSinceLast}`, `newSinceLast[]`, `fixedSinceLast[]`,
+`comparedPages`, `comparedText`, `bingCrawlIssues[]`, `issues[]`, `aiCrawlers`. `checked` is the
+live pages that have an answer, not pages asked today: quote `answersText`, which gives the oldest
+answer's date. An empty `newSinceLast` covers only the `comparedPages` asked again since the
+previous refresh. Not-on-Google issues: `not-indexed` (few links), `not-indexed-linked` (3 or more
+links: request indexing), `not-indexed-excluded` (the page itself keeps it out; links do not help).
 
 ## Workspace
 

@@ -295,10 +295,12 @@ export const SECTIONS = [
     (m) => {
       const v = healthView(m);
       return {
-        ...pick(v, ['indexSummary', 'issues']),
+        ...pick(v, ['indexSummary', 'issues', 'comparedText']),
         notIndexed: (v.index ?? [])
-          .filter((r) => r.verdict !== 'indexed')
+          .filter((r) => r.verdict === 'not-indexed')
           .map((r) => pick(r, ['page', 'verdict', 'reason', 'checkedOn', 'clicks'])),
+        // Pages Search Console has not answered for yet: not known to be off Google.
+        noAnswerYet: (v.index ?? []).filter((r) => r.verdict === 'unknown').map((r) => r.page),
       };
     },
   ],

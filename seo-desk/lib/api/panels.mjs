@@ -5,17 +5,7 @@ import { PRESETS, THRESHOLDS, STALE_HOURS, DAILY_HOUR } from '../config.mjs';
 import { LABEL as SIGNAL_LABEL, MEANING as SIGNAL_MEANING, SIGNAL_ORDER } from '../score.mjs';
 import { addDays, daysBetween, todayIso } from '../dates.mjs';
 import { longDate, plain } from '../text.mjs';
-import {
-  envelope,
-  rangeOf,
-  linksFor,
-  pagePath,
-  itemState,
-  itemOf,
-  SOURCES,
-  ADJUSTABLE_THRESHOLDS,
-  checkedText,
-} from './model.mjs';
+import { envelope, rangeOf, linksFor, pagePath, itemState, itemOf, SOURCES, ADJUSTABLE_THRESHOLDS } from './model.mjs';
 import { INDEX_PER_RUN } from '../sources/index.mjs';
 import { pagesTable } from './search.mjs';
 import { outcomeSignal, OUTCOME_MIN_SESSIONS } from '../targets.mjs';
@@ -323,9 +313,35 @@ export function visitorsView(model) {
 
 const lastJob = (key) => readJson('state/jobs.json', {})?.last?.[key] ?? null;
 
+// Why Search Console left a page out, as one of a few kinds. 'excluded': the page itself keeps it
+// out (a noindex instruction, a redirect, another page named as the main version), so links do not
+// help. 'unknown': Google has not met the address. 'waiting': Google knows it and has not added it.
+export function notIndexedKind(reason) {
+  const r = String(reason ?? '');
+  if (/noindex|redirect|canonical|alternate|duplicate/i.test(r)) return 'excluded';
+  if (/unknown to google/i.test(r)) return 'unknown';
+  return 'waiting';
+}
+
+// The plain words for a page the page itself keeps out of Google.
+function excludedText(reason) {
+  const r = String(reason ?? '');
+  if (/noindex/i.test(r)) return 'The page tells Google not to index it (a noindex instruction).';
+  if (/redirect/i.test(r)) return 'The address sends visitors on to another page, so Google indexes that page instead.';
+  return 'Google treats another page as the main version of this one.';
+}
+
+// A page needs this many inbound links before more links stop being the first thing to try.
+export const LINKED_ENOUGH = 3;
+
 export function healthView(model) {
   const clicksBy = new Map(pagesTable(model, 28).rows.map((r) => [r.page, r.clicks]));
   const prevVerdict = new Map((model.prevIndex ?? []).map((r) => [pagePath(r.page), r.verdict]));
+  // When the compared copy was taken: only pages asked again after it can show a change.
+  const prevPulledAt = model.prevIndex ? (readJson('state/index-prev.json', null)?.pulledAt ?? null) : null;
+  const indexSnap = model.snapObjs?.index ?? null;
+  const inbound = model.data.local?.inbound ?? {};
+  const inboundOf = (page) => (Array.isArray(inbound[page]) ? inbound[page].length : null);
   const index = (model.index.rows ?? []).map((r) => {
     const page = pagePath(r.page);
     const before = prevVerdict.get(page);
@@ -361,13 +377,48 @@ export function healthView(model) {
   // Each issue: what was found, why it matters, the fix, the pages, sorted by the clicks they get.
   const issues = [];
   const notIndexed = index.filter((r) => r.verdict === 'not-indexed');
-  if (notIndexed.length) {
+  const excluded = notIndexed.filter((r) => notIndexedKind(r.reason) === 'excluded');
+  const missing = notIndexed.filter((r) => notIndexedKind(r.reason) !== 'excluded');
+  const linked = missing.filter((r) => (inboundOf(r.page) ?? 0) >= LINKED_ENOUGH);
+  const thin = missing.filter((r) => (inboundOf(r.page) ?? 0) < LINKED_ENOUGH);
+  const linkDetail = (r) => {
+    const n = inboundOf(r.page);
+    return n === null ? '' : `${n} ${n === 1 ? 'page links' : 'pages link'} to it.`;
+  };
+  const pagesAre = (n) => `${n} live ${n === 1 ? 'page is' : 'pages are'}`;
+  if (thin.length) {
     issues.push({
       id: 'not-indexed',
-      what: `${notIndexed.length} live ${notIndexed.length === 1 ? 'page is' : 'pages are'} not on Google.`,
+      what: `${pagesAre(thin.length)} not on Google, with fewer than ${LINKED_ENOUGH} pages linking to ${thin.length === 1 ? 'it' : 'each'}.`,
       why: 'A page that is not on Google cannot be found by anyone searching.',
-      fix: 'Link to each page from two related pages Google already crawls, then request indexing in Search Console.',
-      urls: notIndexed.map((r) => ({ page: r.page, clicks: r.clicks })),
+      fix: `A guess worth testing: link to each page from two related pages Google already crawls, then request indexing in Search Console. The test is the next index checks: the page should show as on Google within a few weeks.`,
+      urls: thin.map((r) => ({
+        page: r.page,
+        clicks: r.clicks,
+        detail: [plain(r.reason), linkDetail(r)].filter(Boolean).join(' '),
+      })),
+    });
+  }
+  if (linked.length) {
+    issues.push({
+      id: 'not-indexed-linked',
+      what: `${pagesAre(linked.length)} not on Google although ${LINKED_ENOUGH} or more pages link to ${linked.length === 1 ? 'it' : 'each'}.`,
+      why: 'A page that is not on Google cannot be found by anyone searching. More links are not the likely gap here.',
+      fix: 'A guess worth testing: ask Google to index it in Search Console (URL inspection, then Request indexing). The test is the next index checks: the page should show as on Google within a few weeks. If it does not, the page itself may need work.',
+      urls: linked.map((r) => ({
+        page: r.page,
+        clicks: r.clicks,
+        detail: [plain(r.reason), linkDetail(r)].filter(Boolean).join(' '),
+      })),
+    });
+  }
+  if (excluded.length) {
+    issues.push({
+      id: 'not-indexed-excluded',
+      what: `${pagesAre(excluded.length)} kept out of Google by the page itself.`,
+      why: 'Google read the page and was told to leave it out, or sent on to another page. Links do not change that.',
+      fix: 'Decide whether each page should be found. If it should, remove what keeps it out. If not, ask Claude to take it out of the sitemap.',
+      urls: excluded.map((r) => ({ page: r.page, clicks: r.clicks, detail: excludedText(r.reason) })),
     });
   }
   const groups = new Map();
@@ -420,20 +471,57 @@ export function healthView(model) {
   const keywordCheck = lastJob('keyword-check');
   const robots = model.data.local?.robots ?? null;
   const allowedBy = new Map((robots?.crawlers ?? []).map((c) => [c.agent, c.allowed]));
+
+  // Every sentence about the index checks says how many live pages have an answer and how old the
+  // oldest answer is.
+  const checked = model.index.checked;
+  const live = model.index.live;
+  const oldest = index
+    .map((r) => r.checkedOn)
+    .filter(Boolean)
+    .sort()[0];
+  const answersText = checked
+    ? `${live ? `${checked} of ${live} live pages` : `${checked} ${checked === 1 ? 'page' : 'pages'}`} ${checked === 1 && !live ? 'has' : 'have'} an answer from Search Console, the oldest from ${longDate(oldest)}.`
+    : 'No page has an answer from Search Console yet.';
+  const runChecked = indexSnap?.data?.checkedThisRun;
+  const runError = indexSnap?.error ? plain(indexSnap.error) : null;
+  const lastRunText = Number.isFinite(runChecked)
+    ? `The last check asked about ${runChecked} ${runChecked === 1 ? 'page' : 'pages'}${runError ? ` and stopped early: ${runError.replace(/\.$/, '')}` : ''}.`
+    : '';
+  const askedAgain = prevPulledAt ? index.filter((r) => r.checkedAt && r.checkedAt > prevPulledAt).length : null;
+  const comparedText =
+    askedAgain === null
+      ? null
+      : `${askedAgain} of ${live ?? index.length} live pages were asked again since the previous refresh; only those can show a change.`;
   return {
     ...envelope(model, { need: ['gsc', 'bing', 'local', 'index'] }),
     indexSummary: {
       indexed: count('indexed'),
       notIndexed: count('not-indexed'),
       unknown: count('unknown'),
-      checked: model.index.checked,
-      live: model.index.live,
-      text: `${checkedText(model)}. Search Console answers for ${INDEX_PER_RUN} pages each morning, oldest check first, so every page is checked again every few days.`,
+      checked,
+      live,
+      notChecked: live ? Math.max(0, live - checked) : 0,
+      oldestCheckedOn: oldest ?? null,
+      oldestCheckedText: oldest ? longDate(oldest) : null,
+      answersText,
+      lastRun: Number.isFinite(runChecked)
+        ? { checked: runChecked, stoppedEarly: Boolean(runError), note: runError }
+        : null,
+      text: [
+        answersText,
+        lastRunText,
+        `Each morning the desk asks Search Console about up to ${INDEX_PER_RUN} pages, oldest answer first.`,
+      ]
+        .filter(Boolean)
+        .join(' '),
     },
     index,
     newSinceLast: index.filter((r) => r.changedSinceLast === 'new-problem').map((r) => r.page),
     fixedSinceLast: index.filter((r) => r.changedSinceLast === 'fixed').map((r) => r.page),
     comparedWith: model.prevIndex ? 'the previous refresh' : null,
+    comparedPages: askedAgain,
+    comparedText,
     bingCrawlIssues: bingIssues,
     issues,
     siteCheck: {

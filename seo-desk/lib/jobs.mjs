@@ -13,6 +13,7 @@ import { DEFAULT_REPO_ROOT } from './sources/local.mjs';
 import { refreshAll } from './refresh.mjs';
 import { plain, plainError } from './text.mjs';
 import { runAuditJob, registerAuditStarter } from './audit/run.mjs';
+import { pagePathOf } from './sources/index.mjs';
 
 export const JOB_TIMEOUT_MS = 15 * 60 * 1000;
 export const TAIL_LINES = 80;
@@ -102,11 +103,16 @@ export const JOBS = [
 // The index-all job: runs the index checks source again and again (40 pages a round, oldest
 // check first) until every live page was checked after the job started. Stops on a failed
 // round, on a quota message, on the stop signal, or after maxRounds.
+// "Every page" means every page on the live list (the local snapshot), so a page the index rows
+// leave out still counts as not done.
+const liveList = () => (readJson('snap/local.json', null)?.data?.livePages ?? []).map((p) => p?.page ?? p);
+
 export async function runIndexAll({
   log,
   signal,
   refresh = (opts) => refreshAll(opts),
   readSnap = () => readJson('snap/index.json', null),
+  readLive = liveList,
   maxRounds = 12,
 }) {
   const startedAt = new Date().toISOString();
@@ -121,9 +127,12 @@ export async function runIndexAll({
       continue;
     }
     const snap = readSnap();
-    const pages = snap?.data?.pages ?? [];
-    const done = pages.filter((r) => r.checkedAt && r.checkedAt >= startedAt).length;
-    log(`Round ${round}: ${done} of ${pages.length} pages checked since this started.`);
+    const rows = snap?.data?.pages ?? [];
+    const freshAt = new Map(rows.map((r) => [pagePathOf(r.page), r.checkedAt ?? null]));
+    const listed = [...new Set((readLive() ?? []).map(pagePathOf).filter(Boolean))];
+    const pages = listed.length ? listed : [...freshAt.keys()];
+    const done = pages.filter((p) => freshAt.get(p) && freshAt.get(p) >= startedAt).length;
+    log(`Round ${round}: ${done} of ${pages.length} live pages checked since this started.`);
     if (status !== 'fresh') {
       return {
         ok: false,

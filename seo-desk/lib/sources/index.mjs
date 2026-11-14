@@ -20,6 +20,22 @@ const QUOTA_RE = /quota|rate.?limit|\b429\b|resource.?exhausted/i;
 
 const urlFor = (page) => GSC_SITE_URL.replace(/\/$/, '') + (page.startsWith('/') ? page : `/${page}`);
 
+// pathOf (shared with the scripts) turns the home page path '/' into '', which a filter would then
+// drop. Here the home page stays '/'; only an empty value stays empty.
+export const pagePathOf = (p) => {
+  const raw = String(p ?? '').trim();
+  return pathOf(raw) || (raw ? '/' : '');
+};
+
+// The day of the oldest answer among the pages that have one, 'YYYY-MM-DD', or null.
+export function oldestAnswerDay(rows) {
+  const at = (rows ?? [])
+    .map((r) => r?.checkedAt)
+    .filter(Boolean)
+    .sort();
+  return at.length ? String(at[0]).slice(0, 10) : null;
+}
+
 // The pages to check next: never checked first, then the oldest check, then by path.
 export function pickPages(livePaths, rows, cap = INDEX_PER_RUN) {
   const at = new Map((rows ?? []).map((r) => [r.page, r.checkedAt ?? '']));
@@ -53,12 +69,14 @@ export async function pullIndex({
   open = openServer,
 } = {}) {
   const started = Date.now();
-  const live = [...new Set((livePages ?? []).map((p) => pathOf(typeof p === 'string' ? p : p?.page)).filter(Boolean))];
+  const live = [
+    ...new Set((livePages ?? []).map((p) => pagePathOf(typeof p === 'string' ? p : p?.page)).filter(Boolean)),
+  ];
   if (!live.length) throw new McpError('The live page list is empty, so there is nothing to check.');
 
   const earlier = Array.isArray(prev?.data?.pages)
     ? prev.data.pages
-    : (seed ?? []).map((r) => ({ ...r, page: pathOf(r.page), checkedAt: r.checkedAt ?? seedCheckedAt ?? null }));
+    : (seed ?? []).map((r) => ({ ...r, page: pagePathOf(r.page), checkedAt: r.checkedAt ?? seedCheckedAt ?? null }));
   const byPage = new Map(earlier.map((r) => [r.page, r]));
   const todo = pickPages(live, earlier, cap);
 
@@ -83,7 +101,7 @@ export async function pullIndex({
           urls: chunk.map(urlFor).join('\n'),
         });
         const results = Array.isArray(res?.results) ? res.results : [];
-        const byUrl = new Map(results.map((r) => [pathOf(r.url ?? r.page_url ?? ''), r]));
+        const byUrl = new Map(results.map((r) => [pagePathOf(r.url ?? r.page_url ?? ''), r]));
         const at = new Date().toISOString();
         for (const page of chunk) {
           const r = normIndex({ ...(byUrl.get(page) || { error: 'No result returned' }), url: urlFor(page) });
@@ -105,12 +123,14 @@ export async function pullIndex({
     return { source: 'index', ok: false, status: 'failed', pulledAt: null, through: null, error, data: {} };
   }
   const pages = live.map((page) => fresh.get(page) ?? byPage.get(page) ?? notChecked(page));
+  // "Data through" is the day of the oldest answer: every answer shown is at least that recent. A
+  // run that stopped early keeps its reason in `error`, so the source line never reads clean.
   return {
     source: 'index',
     ok: true,
     status: 'fresh',
     pulledAt: new Date().toISOString(),
-    through: today,
+    through: oldestAnswerDay(pages) ?? today,
     error,
     data: {
       pages,

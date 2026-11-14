@@ -1234,7 +1234,7 @@ test('index checks: the health page and the Pages on Google tile say how many of
   const h = (await get('/api/health')).json;
   assert.equal(h.indexSummary.checked, 2);
   assert.equal(h.indexSummary.live, 8);
-  assert.match(h.indexSummary.text, /2 of 8 live pages checked/);
+  assert.match(h.indexSummary.text, /2 of 8 live pages have an answer from Search Console, the oldest from 8 November/);
   const pricing = h.index.find((r) => r.page === '/pricing');
   assert.equal(pricing.checkedAt, '2026-11-08T06:01:00.000Z');
   assert.equal(pricing.checkedOn, '2026-11-08');
@@ -2227,6 +2227,7 @@ test('the index-all job runs the index checks again and again until every page h
       return { results: { index: 'fresh' } };
     },
     readSnap: () => ({ error: null, data: { pages: pages(Math.min(100, checkedRounds * 40)) } }),
+    readLive: () => pages(0).map((p) => p.page),
   });
   assert.equal(out.ok, true);
   assert.equal(checkedRounds, 3);
@@ -2241,6 +2242,7 @@ test('the index-all job runs the index checks again and again until every page h
       error: 'Search Console said its daily inspection quota is used up after 10 pages.',
       data: { pages: pages(0) },
     }),
+    readLive: () => [],
   });
   assert.equal(stopped.ok, false);
   assert.match(stopped.note, /quota/);

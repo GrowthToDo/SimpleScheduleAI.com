@@ -65,7 +65,7 @@ export async function render(el, ctx) {
       };
 
   const sum = data.indexSummary;
-  const notChecked = Math.max(0, (sum.live ?? 0) - sum.checked);
+  const notChecked = sum.notChecked ?? 0;
   const live = new Map(data.index.map((r) => [r.page, r.links?.live]));
 
   const siteCheck = jobBlock(ctx, jobs, 'site-check', {
@@ -106,11 +106,12 @@ export async function render(el, ctx) {
         ' '
       );
   } else if (sum.notIndexed === 0) {
-    headline = `All ${sum.checked} pages the desk checked are on Google.`;
+    headline = `All ${sum.checked} pages with an answer from Search Console are on Google.`;
   } else {
-    headline = `${sum.indexed} of the ${sum.checked} pages the desk checked are on Google, and ${sum.notIndexed} ${sum.notIndexed === 1 ? 'is' : 'are'} not.`;
+    headline = `${sum.indexed} of the ${sum.checked} pages with an answer from Search Console are on Google, and ${sum.notIndexed} ${sum.notIndexed === 1 ? 'is' : 'are'} not.`;
   }
-  if (sum.checked && notChecked) headline += ` ${notChecked} of the ${sum.live} live pages have not been checked yet.`;
+  // How many live pages have an answer, and the date of the oldest one.
+  if (sum.checked && sum.answersText) headline += ` ${sum.answersText}`;
 
   ctx.mount(
     el,
@@ -150,11 +151,18 @@ export async function render(el, ctx) {
       h(
         'div',
         { class: 'tiles' },
-        tile(h, 'On Google', fmt.num(sum.indexed), `of ${fmt.num(sum.checked)} checked`),
+        tile(
+          h,
+          'On Google',
+          fmt.num(sum.indexed),
+          sum.oldestCheckedOn
+            ? `of ${fmt.num(sum.checked)} with an answer, the oldest from ${fmt.date(sum.oldestCheckedOn)}`
+            : `of ${fmt.num(sum.checked)} with an answer`
+        ),
         tile(h, 'Not on Google', fmt.num(sum.notIndexed), sum.notIndexed ? 'see the list below' : 'none', {
           dir: sum.notIndexed ? 'down' : '',
         }),
-        tile(h, 'Not checked yet', fmt.num(notChecked), `of ${fmt.num(sum.live)} live pages`),
+        tile(h, 'No answer yet', fmt.num(notChecked), `of ${fmt.num(sum.live)} live pages`),
         tile(
           h,
           'Bing crawl problems',
@@ -350,7 +358,7 @@ function changesSection(data, ctx, live) {
         'span',
         { class: 'section-note' },
         data.comparedWith
-          ? `Compared with ${data.comparedWith}.`
+          ? `Compared with ${data.comparedWith}.${data.comparedText ? ` ${data.comparedText}` : ''}`
           : 'There is nothing to compare with yet. The first comparison appears after the next refresh.'
       )
     ),
@@ -360,12 +368,20 @@ function changesSection(data, ctx, live) {
       list(
         'New since last check',
         data.newSinceLast,
-        data.comparedWith ? 'No page has dropped off Google.' : 'Nothing to compare with yet.'
+        data.comparedWith
+          ? data.comparedPages === 0
+            ? 'No page was asked again since then, so nothing can show as dropped yet.'
+            : 'No page that was asked again has dropped off Google.'
+          : 'Nothing to compare with yet.'
       ),
       list(
         'Fixed since last check',
         data.fixedSinceLast,
-        data.comparedWith ? 'No page has come back on Google.' : 'Nothing to compare with yet.'
+        data.comparedWith
+          ? data.comparedPages === 0
+            ? 'No page was asked again since then, so nothing can show as fixed yet.'
+            : 'No page that was asked again has come back on Google.'
+          : 'Nothing to compare with yet.'
       )
     )
   );
