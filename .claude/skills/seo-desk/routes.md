@@ -47,8 +47,10 @@ until that date, and it is not counted in `counts.worries.needLook`. A worse ver
 from a change that reads worse the way Did it work reads it (`changeVerdict`); a verdict that another
 change overlaps, or a change that reads mixed, is never a worry. `waiting[]`: `{title, date, dateText, kind: verdict|frozen}`; a
 verdict row with `count` above 1 folds that day's page changes (`pages[]`). `nextVerdict`: `{ready,
-date, dateText, note}`; `ready` is true when change-log has edits due now ("12 page changes from 7
-commits ready to judge"). Ignore `sinceLastVisit`; it depends on a write.
+date, dateText, note}`; `ready` is true when change-log has edits due now that the Search Console
+data fully covers (the 28 days after each change): "12 page changes from 7 commits ready to judge; 2
+more wait for data through 11 November". With none covered yet, `ready` is false and `dateText` reads
+"Waiting for data through <date>". Ignore `sinceLastVisit`; it depends on a write.
 
 ## Search
 
@@ -246,7 +248,9 @@ can read 0. Each Not indexed card gives the same advice Site health gives its pa
 
 ## Workspace
 
-`/api/results`: `verdicts[] {id, page, batch, pages, changeDate, judgedOn, verdict, verdictText,
+`/api/results`: `due[]` rows carry `dataReady`, `dataThrough` and `waitingText` ("Waiting for data
+through 11 November" when the Search Console data does not cover the 28 days after yet), and
+`dueReady {ready, waiting, waitThrough, waitingText}` counts both. `verdicts[] {id, page, batch, pages, changeDate, judgedOn, verdict, verdictText,
 summary, before, after, control {impPct}, impChange, relImpPct, overlapping, readable, readNote,
 changeId, changeVerdict, changeVerdictText, changeNote, clicksTooSmall, nearUpdates, nearUpdatesNote}`,
 `verdictCounts {changes, pageResults,

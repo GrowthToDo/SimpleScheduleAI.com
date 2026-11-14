@@ -21,6 +21,7 @@ import {
   pageForSlug,
   planSizeOf,
   dueCounts,
+  splitDue,
 } from '../week.mjs';
 import { brief } from '../brief.mjs';
 import { competitorBrief } from '../competitor-changes.mjs';
@@ -457,14 +458,23 @@ export function verdictsWaiting(model) {
 // Edits finished their wait and not judged yet (what change-log calls due).
 export function dueEdits(model) {
   const local = model.data.local ?? {};
-  return (local.due ?? []).map((d) => ({
-    page: d.url ?? pageForSlug(d.slug, local),
-    changeDate: d.date,
-    judgeFrom: addDays(d.date, WINDOW_DAYS + GSC_LAG_DAYS),
-    kind: d.kind,
-    subject: plain(d.commits?.[0]?.subject ?? d.notes?.[0] ?? ''),
-    overlapping: Boolean(d.overlapping),
-  }));
+  const through = model.snapObjs.gsc?.through ?? null;
+  return (local.due ?? []).map((d) => {
+    // Ready only when the Search Console data covers the 28 days after the change.
+    const needs = addDays(d.date, WINDOW_DAYS);
+    const dataReady = !through || needs <= through;
+    return {
+      page: d.url ?? pageForSlug(d.slug, local),
+      changeDate: d.date,
+      judgeFrom: addDays(d.date, WINDOW_DAYS + GSC_LAG_DAYS),
+      kind: d.kind,
+      subject: plain(d.commits?.[0]?.subject ?? d.notes?.[0] ?? ''),
+      overlapping: Boolean(d.overlapping),
+      dataReady,
+      dataThrough: needs,
+      waitingText: dataReady ? null : `Waiting for data through ${longDate(needs)}`,
+    };
+  });
 }
 
 // Money pages and other pages outside src/data cannot be judged by change-log, so the desk
@@ -528,6 +538,18 @@ export function resultsView(model) {
     verdicts: verdictRows(model).sort((a, b) => String(b.judgedOn).localeCompare(String(a.judgedOn))),
     verdictCounts: verdictCounts(model),
     due: dueEdits(model),
+    // How many due edits Search Console data fully covers (ready to judge), and how many wait for it.
+    dueReady: (() => {
+      const s = splitDue(model.data.local?.due ?? [], model.snapObjs.gsc?.through ?? null);
+      return {
+        ready: s.ready.length,
+        waiting: s.waiting.length,
+        waitThrough: s.waitThrough,
+        waitingText: s.waiting.length
+          ? `${s.waiting.length === 1 ? '1 more waits' : `${s.waiting.length} more wait`} for Search Console data through ${longDate(s.waitThrough)}.`
+          : null,
+      };
+    })(),
     pending: pendingEdits(model),
     frozen,
     moneyPageVerdicts: moneyPageVerdicts(model),
@@ -735,6 +757,8 @@ export function weekModel(model) {
       items,
       today,
       size: planSizeOf(),
+      // A due edit is ready only when the Search Console data covers its 28 days after.
+      through: model.snapObjs.gsc?.through ?? null,
     });
     const opts = { recent };
     const pool = new Map();
@@ -944,7 +968,12 @@ export function foldVerdictDays(list) {
 // The Next verdict tile: ready now when change-log has entries due (how many page changes from how
 // many commits), else the first verdict date in the waiting list. {ready, date, dateText, note}.
 function nextVerdictOf(model, waitingList) {
-  const due = model.data.local?.due ?? [];
+  const all = model.data.local?.due ?? [];
+  // Ready only when the Search Console data covers the 28 days after; the tile gives both counts.
+  const { ready: due, waiting, waitThrough } = splitDue(all, model.snapObjs.gsc?.through ?? null);
+  const waitText = waiting.length
+    ? `${waiting.length === 1 ? '1 more waits' : `${waiting.length} more wait`} for data through ${longDate(waitThrough)}`
+    : '';
   if (due.length) {
     const c = dueCounts(due);
     const from = c.commits ? ` from ${c.commits} ${c.commits === 1 ? 'commit' : 'commits'}` : '';
@@ -952,7 +981,15 @@ function nextVerdictOf(model, waitingList) {
       ready: true,
       date: model.today,
       dateText: 'Ready now',
-      note: `${c.changes} ${c.changes === 1 ? 'page change' : 'page changes'}${from} ready to judge`,
+      note: `${c.changes} ${c.changes === 1 ? 'page change' : 'page changes'}${from} ready to judge${waitText ? `; ${waitText}` : ''}`,
+    };
+  }
+  if (waiting.length) {
+    return {
+      ready: false,
+      date: waitThrough,
+      dateText: `Waiting for data through ${longDate(waitThrough)}`,
+      note: `${waiting.length} ${waiting.length === 1 ? 'page change has' : 'page changes have'} finished the 28 day wait; Search Console data does not cover the 28 days after yet`,
     };
   }
   const next = waitingList.find((w) => w.kind === 'verdict');

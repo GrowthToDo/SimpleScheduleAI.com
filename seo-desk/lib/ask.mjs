@@ -266,7 +266,10 @@ export const SECTIONS = [
           judgedChanges: r.verdictCounts?.changes ?? 0,
           judgedPageResults: r.verdictCounts?.pageResults ?? 0,
           byWord: r.verdictCounts?.byWord ?? null,
-          readyToJudge: (r.due ?? []).length,
+          // Ready only when the Search Console data covers the 28 days after the change.
+          readyToJudge: r.dueReady?.ready ?? (r.due ?? []).length,
+          waitingForData: r.dueReady?.waiting ?? 0,
+          waitingForDataText: r.dueReady?.waitingText ?? null,
           stillWaiting: (r.pending ?? []).length,
         },
         ...pick(r, ['verdicts', 'due', 'pending', 'frozen', 'moneyPageVerdicts', 'googleUpdatesNote']),

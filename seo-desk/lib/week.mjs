@@ -409,6 +409,19 @@ function improveCard(row, frozen, today, opts = {}) {
   };
 }
 
+// The due entries split by whether Search Console data covers each one's 28 days after the change: an
+// entry is ready to judge only when `through` (the last day the data reaches) is on or after the last
+// of those days. {ready, waiting, waitThrough}: waitThrough is the latest day the waiting ones need.
+// Without `through` every entry is ready.
+export function splitDue(due = [], through = null) {
+  const endOf = (d) => addDays(d.date ?? d.changeDate, 28);
+  const ready = [];
+  const waiting = [];
+  for (const d of due ?? []) (!through || endOf(d) <= through ? ready : waiting).push(d);
+  const waitThrough = waiting.map(endOf).sort().pop() ?? null;
+  return { ready, waiting, waitThrough };
+}
+
 // What the due entries are: page changes, how many commits made them (a commit that touched several
 // pages is one), how many were logged by hand, and how many other edits overlap.
 // due: change-log entries ({date, commits: [{hash}], notes, overlapping}).
@@ -449,7 +462,7 @@ export function dueSentence(due = []) {
 // The verdict slot. With entries due: how many page changes from how many commits. Otherwise the next
 // date a verdict is ready, from the pending edits (Did it work's Still waiting), the frozen pages and
 // the plan. A verdict card reports, so it has no eligibility chip and no Hypothesis chip.
-function verdictCard(due, frozen, plan, today, pending = []) {
+function verdictCard(due, frozen, plan, today, pending = [], through = null) {
   const base = {
     page: null,
     isPageEdit: false,
@@ -458,15 +471,32 @@ function verdictCard(due, frozen, plan, today, pending = []) {
     eligibility: null,
     hypothesis: false,
   };
-  if (due?.length) {
-    const n = due.length;
+  // Only the entries Search Console data fully covers are ready; the others say what date they wait for.
+  const { ready, waiting: short, waitThrough } = splitDue(due, through);
+  const waitLine = short.length
+    ? `${short.length === 1 ? '1 more is' : `${short.length} more are`} waiting for Search Console data through ${longDate(waitThrough)}.`
+    : '';
+  if (ready.length) {
+    const n = ready.length;
     return {
       id: 'verdict-due',
       slot: 'verdict',
       title: n === 1 ? 'Check whether one past page change worked' : `Check whether ${n} past page changes worked`,
-      measured: dueSentence(due),
+      measured: [dueSentence(ready), waitLine].filter(Boolean).join(' '),
       action: 'Open Did it work and press Judge now. It shows the result before anything is saved.',
       test: 'Each verdict compares the 28 days before and after the edit, against how the typical page moved.',
+      ...base,
+    };
+  }
+  if (short.length) {
+    const n = short.length;
+    return {
+      id: `verdict-next-${waitThrough}`,
+      slot: 'verdict',
+      title: `The next verdict waits for data through ${longDate(waitThrough)}`,
+      measured: `${dueSentence(short)} Search Console data does not cover the 28 days after yet: ${n === 1 ? 'it waits' : 'they wait'} for data through ${longDate(waitThrough)}.`,
+      action: 'Nothing to do now. Leave the changed pages alone until then.',
+      test: 'The verdict compares the 28 days before and after the edit, against how the typical page moved.',
       ...base,
     };
   }
@@ -599,6 +629,7 @@ export function proposeTop5({
   items = {},
   today,
   size = DEFAULT_PLAN_SIZE,
+  through = null,
 }) {
   const opts = { recent };
   const ok = (o) => eligibility(o, frozen, today, opts).eligible;
@@ -652,7 +683,7 @@ export function proposeTop5({
   }
 
   // 3. A verdict that is due, or the next verdict date.
-  const v = verdictCard(due, frozen, plan, today, pending);
+  const v = verdictCard(due, frozen, plan, today, pending, through);
   if (v) cards.push(v);
 
   // 4. The most serious worry that has a fix and respects the one edit a week rule. A worry whose own

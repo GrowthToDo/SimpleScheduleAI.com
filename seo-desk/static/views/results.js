@@ -100,11 +100,19 @@ export async function render(el, ctx) {
         'div',
         { class: 'tiles' },
         tile(h, 'Verdicts so far', fmt.num(counts?.changes ?? 0), splitLine || 'none yet'),
+        // Ready only when the Search Console data covers the 28 days after; the server counts both.
         tile(
           h,
           'Ready to judge',
-          fmt.num(dueGroups.reduce((s, g) => s + g.pages.length, 0)),
-          data.due.length ? 'finished the 28 day wait. Press Judge now' : 'nothing has finished its wait'
+          fmt.num(data.dueReady?.ready ?? dueGroups.reduce((s, g) => s + g.pages.length, 0)),
+          [
+            (data.dueReady?.ready ?? data.due.length)
+              ? 'finished the 28 day wait. Press Judge now.'
+              : 'nothing is ready yet.',
+            data.dueReady?.waitingText ?? '',
+          ]
+            .filter(Boolean)
+            .join(' ')
         ),
         tile(
           h,
@@ -792,7 +800,8 @@ function dueSection(groups, ctx) {
     h(
       'ul',
       { class: 'side-list' },
-      groups.map((g) => changeRow(g, ctx, { dateText: 'Ready now' }))
+      // A change the Search Console data does not cover yet says what date it waits for.
+      groups.map((g) => changeRow(g, ctx, { dateText: g.waitingText ?? 'Ready now' }))
     )
   );
 }

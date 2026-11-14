@@ -555,3 +555,49 @@ test('S7: choosing a page git shows edited lately for the five is refused with 4
   const ok = chooseTop5([`opp:${opp.id}`], { override: true });
   assert.ok(ok.top5.some((c) => c.oppId === opp.id));
 });
+
+// ---------------------------------------------------------------- S10: ready only when the data covers the after window
+
+test('S10: an edit is ready to judge only when Search Console covers its 28 days after; the rest wait for a date', () => {
+  // Search Console runs through 10 November. The 12 October change needs data through 9 November (ready);
+  // the 14 October change needs it through 11 November (waiting).
+  const due = [
+    { slug: 'early-guide', url: '/blog/early-guide', date: '2026-10-12', commits: [{ hash: 'e1' }] },
+    { slug: 'late-guide', url: '/blog/late-guide', date: '2026-10-14', commits: [{ hash: 'l1' }] },
+  ];
+  const split = week.splitDue(due, '2026-11-10');
+  assert.deepEqual(
+    split.ready.map((d) => d.slug),
+    ['early-guide']
+  );
+  assert.deepEqual(
+    split.waiting.map((d) => d.slug),
+    ['late-guide']
+  );
+  assert.equal(split.waitThrough, '2026-11-11');
+  const [card] = week
+    .proposeTop5({ plan: null, due, through: '2026-11-10', today: TODAY })
+    .filter((c) => c.slot === 'verdict');
+  assert.equal(card.title, 'Check whether one past page change worked');
+  assert.match(card.measured, /^1 page change from 1 commit/);
+  assert.match(card.measured, /1 more is waiting for Search Console data through 11 November\.$/);
+
+  writeJson('state/items.json', {});
+  snap(
+    'gsc',
+    { pageDaily: [], siteDaily: [{ date: '2026-11-10', impressions: 1, clicks: 0 }] },
+    { through: '2026-11-10' }
+  );
+  snap('local', { livePages: [], verdicts: [], due, edits: [], contentEdits: [] });
+  invalidate();
+  const model = buildModel();
+  const v = work.weekView(model).nextVerdict;
+  assert.equal(v.ready, true);
+  assert.equal(v.note, '1 page change from 1 commit ready to judge; 1 more waits for data through 11 November');
+  const r = work.resultsView(model);
+  assert.deepEqual(
+    r.due.map((d) => d.dataReady),
+    [true, false]
+  );
+  assert.equal(r.due[1].waitingText, 'Waiting for data through 11 November');
+});
