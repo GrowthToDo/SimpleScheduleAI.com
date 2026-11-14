@@ -131,8 +131,8 @@ test('low-click-rate at position 15 compares with the position 15 expected rate'
 test('competing-pages fires for a split query and skips lopsided, thin and brand ones', () => {
   const snaps = withGsc({
     qpCur: [
-      qp('float pool nurses', '/blog/a', 60, 9),
-      qp('float pool nurses', '/blog/b', 40, 11),
+      qp('float pool medics', '/blog/a', 60, 9),
+      qp('float pool medics', '/blog/b', 40, 11),
       qp('lopsided', '/blog/a', 75, 9),
       qp('lopsided', '/blog/b', 25, 11),
       qp('thin split', '/blog/a', 15, 9),
@@ -144,7 +144,7 @@ test('competing-pages fires for a split query and skips lopsided, thin and brand
   const out = rules.detectCompetingPages(snaps, cfg);
   assert.equal(out.length, 1);
   assert.equal(out[0].type, 'competing-pages');
-  assert.equal(out[0].query, 'float pool nurses');
+  assert.equal(out[0].query, 'float pool medics');
   assert.equal(out[0].page, '/blog/a');
   assert.equal(out[0].isPageEdit, true);
   assert.equal(out[0].evidence.length, 2);
@@ -246,7 +246,7 @@ test('question fires for a long weakly answered question and skips the rest', ()
       qp('how do critical access hospitals schedule night nurses', '/blog/a', 10, 18),
       qp('how do critical access hospitals fund nurses', '/blog/a', 10, 15), // not above 15
       qp('how do critical access hospitals pay nurses', '/blog/a', 9, 30), // under 10 impressions
-      qp('nurse schedule app', '/blog/a', 50, 30), // short and not a question
+      qp('ward rota app', '/blog/a', 50, 30), // short and not a question
       qp('what is simplescheduleai', '/', 40, 30), // brand
     ],
   });
@@ -412,8 +412,8 @@ function everythingSnaps() {
   const snaps = withGsc({
     qpCur: [
       qp('nurse shift swap rules', '/blog/a', 40, 12),
-      qp('float pool nurses', '/blog/a', 60, 9),
-      qp('float pool nurses', '/blog/b', 40, 11),
+      qp('float pool medics', '/blog/a', 60, 9),
+      qp('float pool medics', '/blog/b', 40, 11),
       qp('kw mismatch', '/blog/b', 50, 6),
       qp('rural hospital float rules', '/blog/a', 30, 25),
       qp('how do critical access hospitals schedule night nurses', '/blog/a', 10, 18),
@@ -512,14 +512,14 @@ test('ids are sha1(type|page|query) cut to 12 and stable across two runs', () =>
 
 test('competing-pages id is built from the type and the query only, so a swapped top page keeps it', () => {
   const rows = (topPage, otherPage) => [
-    qp('float pool nurses', topPage, 60, 9),
-    qp('float pool nurses', otherPage, 40, 11),
+    qp('float pool medics', topPage, 60, 9),
+    qp('float pool medics', otherPage, 40, 11),
   ];
   const first = rules.detectCompetingPages(withGsc({ qpCur: rows('/blog/a', '/blog/b') }), cfg)[0];
   const swapped = rules.detectCompetingPages(withGsc({ qpCur: rows('/blog/b', '/blog/a') }), cfg)[0];
   assert.notEqual(first.page, swapped.page);
   assert.equal(first.id, swapped.id);
-  const want = crypto.createHash('sha1').update('competing-pages||float pool nurses').digest('hex').slice(0, 12);
+  const want = crypto.createHash('sha1').update('competing-pages||float pool medics').digest('hex').slice(0, 12);
   assert.equal(first.id, want);
 });
 
@@ -616,9 +616,9 @@ test('importance is 1 for a money page, 0.7 for a pillar, 0.5 for a registry tar
 
 test('B2: a split needs its real searches over the minimum, never the sum of page rows', () => {
   // Two pages each shown 20 times: the page rows add up to 40, but the search was made 26 times.
-  const qpCur = [qp('float pool nurses', '/blog/a', 20, 6), qp('float pool nurses', '/blog/b', 20, 7)];
+  const qpCur = [qp('float pool medics', '/blog/a', 20, 6), qp('float pool medics', '/blog/b', 20, 7)];
   const out = rules.detectCompetingPages(
-    withGsc({ qpCur, queryCur: [{ query: 'float pool nurses', clicks: 0, impressions: 26, position: 6 }] }),
+    withGsc({ qpCur, queryCur: [{ query: 'float pool medics', clicks: 0, impressions: 26, position: 6 }] }),
     cfg
   );
   assert.deepEqual(out, []);

@@ -61,8 +61,8 @@ test('classifyQuestion: a competitor name matches only as a whole word or phrase
 
 test('classifyQuestion: the kind of product without a brand is a category question', () => {
   assert.equal(classifyQuestion('best nurse scheduling software for a small hospital', cfg), 'category');
-  assert.equal(classifyQuestion('nursing roster software', cfg), 'category');
-  assert.equal(classifyQuestion('nurse staff scheduling', cfg), 'category');
+  assert.equal(classifyQuestion('ward roster software', cfg), 'category');
+  assert.equal(classifyQuestion('ward staff scheduling', cfg), 'category');
   assert.equal(classifyQuestion('free scheduling tool for clinics', cfg), 'category');
 });
 

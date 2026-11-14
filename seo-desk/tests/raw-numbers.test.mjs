@@ -377,9 +377,9 @@ test('matchKey folds an article, a year, hyphens, word order and word endings, a
   same('invented rota schedules', 'invented rota scheduling');
   same('invented nurse rota', 'invented nurses rota');
   same('Invented, Rota!', 'invented rota');
-  differ('8 hour shifts', '12 hour shifts');
+  differ('8 hour rota blocks', '12 hour rota blocks');
   differ('rota 2019', 'rota');
-  assert.match(T.matchKey('8 hour shifts'), /\b8\b/);
+  assert.match(T.matchKey('8 hour rota blocks'), /\b8\b/);
   assert.equal(T.matchKey('the a an'), '');
 });
 

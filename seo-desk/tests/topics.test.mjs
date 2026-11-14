@@ -151,11 +151,11 @@ test('topicsOf: Review Focus 4, searches in other languages group and never thro
 test('topicsOf: Review Focus 4, brand searches stay together and apart from everything else', () => {
   const rows = [
     row('simplescheduleai pricing', '/pricing', 40),
-    row('m7 health reviews', '/b', 25),
+    row('rivalcare reviews', '/b', 25),
     row('nurse scheduling software', '/pricing', 400),
     row('simplescheduleai nurse scheduling software', '/pricing', 30),
   ];
-  const topics = topicsOf(rows, { brands: ['simplescheduleai', 'm7 health'] });
+  const topics = topicsOf(rows, { brands: ['simplescheduleai', 'rivalcare'] });
   const brand = topics.filter((t) => t.label === BRAND_LABEL);
   assert.equal(BRAND_LABEL, 'Searches for a brand name');
   assert.equal(brand.length, 1);

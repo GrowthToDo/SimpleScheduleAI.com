@@ -94,7 +94,7 @@ test('apiQuery: the explorer names, defaults left out, custom dates in', () => {
     range: 'custom',
     start: '2026-08-01',
     end: '2026-08-31',
-    q: 'float pool',
+    q: 'pool float',
     qmode: 'excludes',
     pagefilter: '/blog/x',
     pagemode: 'exact',
@@ -105,7 +105,7 @@ test('apiQuery: the explorer names, defaults left out, custom dates in', () => {
   assert.equal(q.get('range'), 'custom');
   assert.equal(q.get('start'), '2026-08-01');
   assert.equal(q.get('end'), '2026-08-31');
-  assert.equal(q.get('q'), 'float pool');
+  assert.equal(q.get('q'), 'pool float');
   assert.equal(q.get('qmode'), 'excludes');
   assert.equal(q.get('page'), '/blog/x');
   assert.equal(q.get('pmode'), 'exact');

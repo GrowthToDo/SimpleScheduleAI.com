@@ -150,7 +150,7 @@ const QP_CUR = [
   qp('shared topic phrase', '/blog/beta-notes', 40, 12),
   qp('float pool staffing policy', '/blog/epsilon-old', 50, 31),
   qp('float pool staffing rules', '/blog/epsilon-old', 40, 28),
-  qp('how long is a nurse shift', '/blog/delta-new', 45, 33),
+  qp('how long is a rota shift', '/blog/delta-new', 45, 33),
   qp('on-call pay rules', '/blog/epsilon-old', 35, 40),
   qp('simplescheduleai login', '/', 30, 1),
 ];
@@ -167,7 +167,7 @@ const QUERY_CUR = [
   // Every search in the query and page rows is also in the query-only rows, as in a real pull.
   queryRow('float pool staffing policy', 50, 31),
   queryRow('float pool staffing rules', 40, 28),
-  queryRow('how long is a nurse shift', 45, 33),
+  queryRow('how long is a rota shift', 45, 33),
   queryRow('on-call pay rules', 35, 40),
 ];
 const QUERY_PREV = [
@@ -536,8 +536,8 @@ test('decay: growing and decaying pages and searches with gated change and both 
 test('content gap titles are plain words, with no dash and no jargon', () => {
   assert.equal(I.gapTitle('float pool staffing policy'), 'Float pool staffing policy');
   assert.equal(I.gapTitle('on-call pay rules'), 'On call pay rules');
-  assert.equal(I.gapTitle('how long is a nurse shift'), 'How long is a nurse shift');
-  assert.equal(I.gapTitle('how long is a nurse shift?'), 'How long is a nurse shift?', 'a question stays a question');
+  assert.equal(I.gapTitle('how long is a rota shift'), 'How long is a rota shift');
+  assert.equal(I.gapTitle('how long is a rota shift?'), 'How long is a rota shift?', 'a question stays a question');
   assert.equal(I.gapTitle('nurse ratio law?'), 'Nurse ratio law', 'a stray question mark on a statement goes');
   assert.equal(I.gapTitle('  Overtime   rules — hospitals '), 'Overtime rules hospitals');
 });
@@ -1359,7 +1359,7 @@ const SEC_QP = [
   qp('float pool cost', '/blog/alpha-guide', 35, 31, 0), // a fourth: over the limit of three, and past page two
   qp('float pool coverage cost', '/blog/alpha-guide', 34, 31, 0), // a more specific variant of the target
   qp('coverage float pool', '/blog/alpha-guide', 31, 33, 0), // the target's words in another order
-  qp('float pool', '/blog/alpha-guide', 40, 25, 0), // a broader head term
+  qp('pool float', '/blog/alpha-guide', 40, 25, 0), // a broader head term
   qp('night swap rota guide', '/blog/epsilon-old', 40, 30, 0), // a variant of a target on a page that is not live
   qp('float pool template', '/blog/alpha-guide', 29, 14, 1), // under 30 views
   qp('simplescheduleai float pool', '/blog/alpha-guide', 70, 3, 9), // a brand search
@@ -1486,7 +1486,7 @@ test('secondary keywords: at most three a page, busiest first', async () => {
   const alpha = r.items.filter((x) => x.page === '/blog/alpha-guide');
   assert.deepEqual(
     alpha.map((x) => x.query),
-    ['float pool staffing policy', 'float pool nurse pay', 'float pool']
+    ['float pool staffing policy', 'float pool nurse pay', 'pool float']
   );
   assert.ok(!alpha.some((x) => x.query === 'float pool cost'), 'the fourth is cut');
   const impressions = r.items.map((x) => x.impressions);
@@ -1672,7 +1672,7 @@ test('cluster conflict: the same or a more specific variant of a live page targe
   // The same words in another order are the target's own search (matchKey), so they are not a
   // discovered row of their own.
   assert.equal(by('coverage float pool'), undefined, 'the same words in another order');
-  assert.equal(by('float pool').clusterConflict, null, 'a broader head term is not absorbed');
+  assert.equal(by('pool float').clusterConflict, null, 'a broader head term is not absorbed');
   assert.equal(by('float pool staffing policy').clusterConflict, null, 'same topic, but not a variant of the target');
   assert.equal(by('staffing policy rules').clusterConflict, null);
   assert.equal(by('float pool cost').clusterConflict, null, 'it lacks a word of the target');
@@ -1696,7 +1696,7 @@ test('content gaps leave out a conflict, keep a broader search and a search on a
   useSec();
   const model = buildModel();
   const unserved = (q) => model.opps.some((o) => o.type === 'unserved' && o.query === q);
-  for (const q of ['float pool coverage cost', 'float pool', 'night swap rota guide', 'guitar chord charts'])
+  for (const q of ['float pool coverage cost', 'pool float', 'night swap rota guide', 'guitar chord charts'])
     assert.ok(unserved(q), `${q} is a gap candidate for the rules`);
   // The page's own target in another word order is that target, not a gap (matchKey).
   assert.equal(unserved('coverage float pool'), false);
@@ -1705,7 +1705,7 @@ test('content gaps leave out a conflict, keep a broader search and a search on a
   assert.equal(inGaps('float pool coverage cost'), false, 'a section of the existing page');
   assert.equal(inGaps('coverage float pool'), false);
   // Audit B5: one owner per search. The page shows for this broader search and secondary keywords owns it.
-  assert.equal(inGaps('float pool'), false, 'a secondary keyword of the page, not a gap');
+  assert.equal(inGaps('pool float'), false, 'a secondary keyword of the page, not a gap');
   assert.equal(inGaps('float pool cost'), true, 'it lacks a word of the target');
   assert.equal(inGaps('night swap rota guide'), true, 'the draft page covers nothing yet');
   assert.equal(inGaps('guitar chord charts'), true);
