@@ -14,6 +14,8 @@ import {
   saveTargets,
   norm,
   foldPage,
+  searchIndex,
+  rowsForKeyword,
 } from '../../targets.mjs';
 import { buildModel, envelope, invalidate, linksFor } from '../model.mjs';
 import { toCsv } from '../csv.mjs';
@@ -35,21 +37,26 @@ const skip = (keyword, text) => ({ keyword, why: why(text) });
 
 const round1 = (n) => Math.round(n * 10) / 10;
 
-// Position and impressions for a search: the Search Console query table first (as the Search page
-// does), then the query and page rows.
+// Position and impressions for a keyword: the Search Console query table first (as the Search page
+// does), then the query and page rows. The keyword matches its exact search first, then another
+// form of it (matchKey), so "the x" finds the "x" Google returns. stats.get(keyword) -> {position,
+// impressions} or undefined.
 function statsMap(gsc) {
-  const m = new Map();
-  for (const r of gsc?.queryCur ?? [])
-    m.set(norm(r.query), { position: round1(r.position), impressions: r.impressions });
-  for (const g of groupByQuery(gsc?.qpCur ?? []))
-    if (!m.has(norm(g.query))) m.set(norm(g.query), { position: round1(g.position), impressions: g.impressions });
-  return m;
+  const rows = [...(gsc?.queryCur ?? [])];
+  const have = new Set(rows.map((r) => norm(r.query)));
+  for (const g of groupByQuery(gsc?.qpCur ?? [])) if (!have.has(norm(g.query))) rows.push(g);
+  const find = searchIndex(rows);
+  return {
+    get(keyword) {
+      const r = find(keyword);
+      return r ? { position: round1(r.position), impressions: r.impressions } : undefined;
+    },
+  };
 }
 
 function rankingPageOf(keyword, qpCur) {
   const byPage = new Map();
-  for (const r of qpCur) {
-    if (norm(r.query) !== norm(keyword)) continue;
+  for (const r of rowsForKeyword(keyword, qpCur)) {
     const p = foldPage(r.page);
     byPage.set(p, (byPage.get(p) ?? 0) + (r.impressions || 0));
   }
@@ -60,7 +67,7 @@ function rankingPageOf(keyword, qpCur) {
 const liveSet = (model) => new Set((model.data.local?.livePages ?? []).map((p) => foldPage(p.page)));
 
 function rowOf(t, { stats, qpCur, label = true }) {
-  const s = stats.get(norm(t.keyword));
+  const s = stats.get(t.keyword);
   return {
     keyword: t.keyword,
     page: t.page ?? null,

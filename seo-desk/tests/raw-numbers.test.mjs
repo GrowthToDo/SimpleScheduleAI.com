@@ -360,3 +360,85 @@ test('discovered searches carry the real count, the same unit as targeted rows',
   });
   assert.equal(under.length, 0);
 });
+
+// ---------------------------------------------------------------- B4: matching a search to a target
+
+const T = await import('../lib/targets.mjs');
+const { targetRows } = await import('../lib/api/ext/targets.mjs');
+
+test('matchKey folds an article, a year, hyphens, word order and word endings, and keeps digits', () => {
+  const same = (a, b) => assert.equal(T.matchKey(a), T.matchKey(b), `${a} | ${b}`);
+  const differ = (a, b) => assert.notEqual(T.matchKey(a), T.matchKey(b), `${a} | ${b}`);
+  same('the made-up ward rota', 'made up ward rota');
+  same('made up ward rota 2026', 'made up ward rota');
+  same('an invented rota', 'invented rota');
+  same('rota for weekends', 'weekends rota for');
+  same('invented rota schedule', 'invented rota scheduling');
+  same('invented rota schedules', 'invented rota scheduling');
+  same('invented nurse rota', 'invented nurses rota');
+  same('Invented, Rota!', 'invented rota');
+  differ('8 hour shifts', '12 hour shifts');
+  differ('rota 2019', 'rota');
+  assert.match(T.matchKey('8 hour shifts'), /\b8\b/);
+  assert.equal(T.matchKey('the a an'), '');
+});
+
+const VARIANT_QP = [
+  { query: 'made up ward rota', page: '/blog/a', clicks: 2, impressions: 41, position: 8 },
+  { query: 'made up ward rota 2026', page: '/blog/a', clicks: 0, impressions: 22, position: 11 },
+];
+const VARIANT_Q = [
+  { query: 'made up ward rota', clicks: 2, impressions: 41, position: 8 },
+  { query: 'made up ward rota 2026', clicks: 0, impressions: 22, position: 11 },
+];
+
+test('a target written with "the" matches the search Google returns without it', () => {
+  const target = { keyword: 'the made up ward rota', page: '/blog/a' };
+  assert.equal(T.labelTarget(target, VARIANT_QP), 'right page');
+  // Its other forms are the target's own, so they are not offered as new searches.
+  assert.deepEqual(T.discovered({ qpCur: VARIANT_QP, queryCur: VARIANT_Q, targets: [target], minImpressions: 20 }), []);
+  const model = {
+    data: { gsc: { qpCur: VARIANT_QP, queryCur: VARIANT_Q } },
+    targetState: T.emptyState(),
+    targets: [{ ...target, origin: 'registry', priority: null, intentGroup: null }],
+  };
+  const row = targetRows(model).rows[0];
+  assert.equal(row.impressions, 41);
+  assert.equal(row.position, 8);
+  assert.equal(row.rankingPage, '/blog/a');
+});
+
+test('an exact match wins over a folded one', () => {
+  const qp = [
+    { query: 'invented rota', page: '/blog/a', clicks: 0, impressions: 12, position: 9 },
+    { query: 'invented rotas', page: '/blog/b', clicks: 0, impressions: 80, position: 5 },
+  ];
+  const q = [
+    { query: 'invented rota', clicks: 0, impressions: 12, position: 9 },
+    { query: 'invented rotas', clicks: 0, impressions: 80, position: 5 },
+  ];
+  const model = {
+    data: { gsc: { qpCur: qp, queryCur: q } },
+    targetState: T.emptyState(),
+    targets: [{ keyword: 'invented rota', page: '/blog/a', origin: 'registry', priority: null, intentGroup: null }],
+  };
+  const row = targetRows(model).rows[0];
+  assert.equal(row.impressions, 12);
+  assert.equal(row.rankingPage, '/blog/a');
+  assert.equal(T.labelTarget({ keyword: 'invented rota', page: '/blog/a' }, qp), 'right page');
+  // 8 hour shifts is never 12 hour shifts.
+  assert.equal(
+    T.labelTarget({ keyword: '8 hour made up shifts', page: '/blog/a' }, [
+      { query: '12 hour made up shifts', page: '/blog/a', clicks: 0, impressions: 40, position: 5 },
+    ]),
+    'not returned'
+  );
+});
+
+test('a priority set on a target reaches an opportunity about another form of its search', () => {
+  const [o] = T.applySignals(
+    [{ id: 'x', page: '/blog/z', query: 'made up ward rota 2026', signals: { importance: 0.4 }, signalNotes: {} }],
+    { targets: [{ keyword: 'the made up ward rota', page: '/blog/a', priority: 'low' }] }
+  );
+  assert.equal(o.signals.importance, 0.2);
+});

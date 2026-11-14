@@ -29,6 +29,82 @@ export const norm = (s) =>
     .trim()
     .toLowerCase();
 
+// ---------------------------------------------------------------- matching a search to a target
+
+const ARTICLES = new Set(['the', 'a', 'an']);
+const MIN_STEM = 4;
+
+// One word with its ending folded: "schedule", "schedules" and "scheduling" all give "schedul",
+// "nurse" and "nurses" give "nurs". At most one of ing, es, s comes off, then a final e, and only
+// while at least four letters stay, so short words such as "rate" or "time" keep their form.
+// Numbers are never changed.
+function foldWord(w) {
+  if (/^\d+$/.test(w)) return w;
+  let out = w;
+  for (const end of ['ing', 'es', 's']) {
+    if (out.endsWith(end) && out.length - end.length >= MIN_STEM) {
+      out = out.slice(0, -end.length);
+      break;
+    }
+  }
+  if (out.endsWith('e') && out.length - 1 >= MIN_STEM) out = out.slice(0, -1);
+  return out;
+}
+
+// The key two forms of one search share: lower case, apostrophes dropped, hyphens and other
+// punctuation turned into spaces, "the", "a" and "an" dropped, a year from 2020 to 2035 dropped,
+// word endings folded (foldWord), and the words sorted. Digits stay, so "8 hour shifts" never
+// matches "12 hour shifts". An empty string means nothing is left to match on.
+export function matchKey(text) {
+  return norm(text)
+    .replace(/['\u2019]/g, '')
+    .split(/[^\p{L}\p{N}]+/u)
+    .filter((t) => t && !ARTICLES.has(t) && !(/^\d{4}$/.test(t) && Number(t) >= 2020 && Number(t) <= 2035))
+    .map(foldWord)
+    .sort()
+    .join(' ');
+}
+
+// A finder over rows that each name a search: find(keyword) gives the row whose search is the
+// keyword exactly (lower-cased and trimmed), else the biggest row (by sizeOf) with the same
+// matchKey, else null. The exact text always wins when both exist.
+export function searchIndex(rows, { textOf = (r) => r.query, sizeOf = (r) => Number(r.impressions) || 0 } = {}) {
+  const exact = new Map();
+  const folded = new Map();
+  for (const r of rows ?? []) {
+    const t = norm(textOf(r));
+    if (!t) continue;
+    if (!exact.has(t)) exact.set(t, r);
+    const k = matchKey(t);
+    if (!k) continue;
+    const had = folded.get(k);
+    if (!had || sizeOf(r) > sizeOf(had)) folded.set(k, r);
+  }
+  return (keyword) => {
+    const t = norm(keyword);
+    if (exact.has(t)) return exact.get(t);
+    const k = matchKey(t);
+    return (k && folded.get(k)) || null;
+  };
+}
+
+// The searches in a set of query and page rows, as a finder (searchIndex over groupByQuery), built
+// once per list of rows.
+const qpIndexes = new WeakMap();
+function qpFinder(qpRows) {
+  if (!Array.isArray(qpRows)) return () => null;
+  if (!qpIndexes.has(qpRows)) qpIndexes.set(qpRows, searchIndex(groupByQuery(qpRows)));
+  return qpIndexes.get(qpRows);
+}
+
+// The query and page rows of the search a keyword stands for (see searchIndex).
+export function rowsForKeyword(keyword, qpRows = []) {
+  const found = qpFinder(qpRows)(keyword);
+  if (!found) return [];
+  const key = norm(found.query);
+  return qpRows.filter((r) => norm(r.query) === key);
+}
+
 // A page as a path: no site name, no query string or heading, no trailing slash; the home page is '/'.
 export function foldPage(p) {
   const s = String(p ?? '')
@@ -137,10 +213,14 @@ export function discovered({
   minImpressions = MIN_DISCOVERED_IMPRESSIONS,
 } = {}) {
   const taken = new Set([...targets.map((t) => norm(t.keyword)), ...ignored.map(norm)]);
+  // Another form of a target's search (with or without "the", a year, a hyphen, another word
+  // ending) is that target's, not a new search.
+  const targetKeys = new Set(targets.map((t) => matchKey(t.keyword)).filter(Boolean));
+  const isTaken = (query) => taken.has(norm(query)) || targetKeys.has(matchKey(query));
   const byPage = new Map(groupByQuery(qpCur).map((q) => [norm(q.query), q]));
   const counts = Array.isArray(queryCur) && queryCur.length ? queryCur : [...byPage.values()];
   return counts
-    .filter((q) => q.impressions >= minImpressions && !taken.has(norm(q.query)) && !isBrand(q.query, brands))
+    .filter((q) => q.impressions >= minImpressions && !isTaken(q.query) && !isBrand(q.query, brands))
     .map((q) => {
       const top = byPage.get(norm(q.query))?.pages[0];
       return {
@@ -154,13 +234,12 @@ export function discovered({
 }
 
 // Does the search come back, and does the page we chose rank for it? Fewer than 10 impressions is
-// too little to say where it ranks.
+// too little to say where it ranks. The search is the keyword itself, or another form of it
+// (matchKey) when Google returns only that.
 export function labelTarget(target, qpCur = []) {
-  const key = norm(target.keyword);
   const byPage = new Map();
   let total = 0;
-  for (const r of qpCur) {
-    if (norm(r.query) !== key) continue;
+  for (const r of rowsForKeyword(target.keyword, qpCur)) {
     const page = foldPage(r.page);
     byPage.set(page, (byPage.get(page) ?? 0) + (r.impressions || 0));
     total += r.impressions || 0;
@@ -286,18 +365,23 @@ const round3 = (n) => Math.round(n * 1000) / 1000;
 export function applySignals(opps, { targets = [], strategic = [], outcomes = [] } = {}) {
   const byPage = new Map();
   const byKeyword = new Map();
+  const byKey = new Map();
   for (const t of targets) {
     if (t.page) {
       const k = foldPage(t.page);
       byPage.set(k, [...(byPage.get(k) ?? []), t]);
     }
     byKeyword.set(norm(t.keyword), t);
+    const mk = matchKey(t.keyword);
+    if (mk && !byKey.has(mk)) byKey.set(mk, t);
   }
+  // The exact keyword first, then another form of it.
+  const targetOf = (query) => byKeyword.get(norm(query)) ?? byKey.get(matchKey(query)) ?? null;
   const strategicSet = new Set(strategic.map(norm).filter(Boolean));
   return opps.map((o) => {
     const matches = [];
     if (o.page) matches.push(...(byPage.get(foldPage(o.page)) ?? []));
-    const byKw = o.query ? byKeyword.get(norm(o.query)) : null;
+    const byKw = o.query ? targetOf(o.query) : null;
     if (byKw && !matches.includes(byKw)) matches.push(byKw);
 
     const signals = { ...o.signals };

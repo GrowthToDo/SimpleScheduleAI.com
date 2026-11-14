@@ -1647,7 +1647,9 @@ test('cluster conflict: the same or a more specific variant of a live page targe
     recommendation: hint,
     test: 'Judged by the 28-day before and after verdict if you add the section.',
   });
-  assert.equal(by('coverage float pool').clusterConflict.page, '/blog/alpha-guide', 'the same words in another order');
+  // The same words in another order are the target's own search (matchKey), so they are not a
+  // discovered row of their own.
+  assert.equal(by('coverage float pool'), undefined, 'the same words in another order');
   assert.equal(by('float pool').clusterConflict, null, 'a broader head term is not absorbed');
   assert.equal(by('float pool staffing policy').clusterConflict, null, 'same topic, but not a variant of the target');
   assert.equal(by('staffing policy rules').clusterConflict, null);
@@ -1656,10 +1658,10 @@ test('cluster conflict: the same or a more specific variant of a live page targe
   assert.equal(by('night swap rota guide').clusterConflict, null, 'the target page is not live');
   assert.equal(by('overtime pay rules').clusterConflict, null);
   assert.equal(by('float pool coverage').clusterConflict, null, 'a mapped keyword has none');
-  assert.equal(r.counters.clusterConflicts, 2);
+  assert.equal(r.counters.clusterConflicts, 1);
   // The list the Cannibalization page shows as "Planned keyword may already be covered".
   const cann = (await get('/api/insights/cannibalization')).json;
-  assert.equal(cann.clusterConflicts.length, 2);
+  assert.equal(cann.clusterConflicts.length, 1);
   const one = cann.clusterConflicts.find((x) => x.keyword === 'float pool coverage cost');
   assert.equal(one.page, '/blog/alpha-guide');
   assert.equal(one.targetKeyword, 'float pool coverage');
