@@ -1574,7 +1574,7 @@ test('CSV: a header row, quoted commas, one row per item, and no formula can run
   const lines = q.text.split('\r\n');
   assert.equal(
     lines[0],
-    'search,impressions,clicks,position,change_percent,movement,brand,top_page,bing_impressions,date_range'
+    'search,impressions,clicks,position,change_percent,movement,brand,top_page,bing_impressions,date_range,note'
   );
   const row = lines.find((l) => l.startsWith('"dosing, timing and cost"'));
   assert.ok(row, 'a comma in the text is quoted');

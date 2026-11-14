@@ -765,4 +765,8 @@ test('B14: a runner-up at position 10 or better is low on page one; 11 to 20 is 
   assert.match(by['on page one already'].title, /is low on page one/);
   assert.doesNotMatch(by['on page one already'].title, /close to page one/);
   assert.match(by['just off page one'].title, /is close to page one/);
+  // S12: an average of 10.2 is page two, never "low on page one".
+  const [two] = rules.detectNearPageOne(withGsc({ qpCur: [qp('a made up ten', '/blog/a', 40, 10.2)] }), cfg);
+  assert.match(two.title, /is close to page one/);
+  assert.doesNotMatch(two.measured, /low on it/);
 });

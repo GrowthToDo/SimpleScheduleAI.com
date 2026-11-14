@@ -369,7 +369,7 @@ function togetherItems(model) {
     pageViews: c.pageViews,
     ratio: c.ratio,
     pages: c.pages.map((p) => ({ page: p.page, impressions: p.impressions, position: round1(p.position) })),
-    note: `"${c.query}" showed our site ${n0(c.impressions)} times from ${model.range.text}, and our pages were shown ${n0(c.pageViews)} times between them, ${c.ratio} times the searches. So they mostly appeared together in the same results.`,
+    note: `"${c.query}" showed our site ${n0(c.impressions)} times from ${model.range.text}, and our pages were shown ${n0(c.pageViews)} times between them, ${c.ratio} times the searches. So they ${c.ratio >= MOSTLY_TOGETHER_RATIO ? 'mostly' : 'often'} appeared together in the same results.`,
   }));
 }
 
@@ -808,10 +808,7 @@ export function keywordTable(model) {
       kind: 'discovered',
       // A live page already on page one for it: no page targets it, but one ranks (audit W4).
       status:
-        d.rankingPage &&
-        live.has(foldPage(d.rankingPage)) &&
-        Number.isFinite(d.position) &&
-        Math.round(d.position) <= 10
+        d.rankingPage && live.has(foldPage(d.rankingPage)) && Number.isFinite(d.position) && d.position <= 10
           ? 'ranks'
           : 'pending',
       mappedTo: null,
@@ -910,6 +907,9 @@ const sharedWords = (a, b) => {
   return tokens(b).filter((w) => words.has(w)).length;
 };
 const SECONDARY_MIN_SHARED = 2;
+// Our pages' views at this many times the searches or more read "mostly" shown together; from the
+// together line (1.3) up to here they read "often".
+const MOSTLY_TOGETHER_RATIO = 1.6;
 // A phrase's meaningful words as one key, in any order: "scheduling for nurses" and "nurse scheduling"
 // are one key. Empty for a phrase with no meaningful word.
 const wordSetKey = (s) => [...tokens(s)].sort().join(' ');

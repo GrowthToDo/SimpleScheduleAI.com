@@ -5,7 +5,8 @@
 import { longRange } from '../text.mjs';
 import { readCsv } from '../csv-read.mjs';
 import { opportunitiesList, competingList, verdictRows } from './work.mjs';
-import { pageRows, queriesTable, targetsView, RANGES } from './search.mjs';
+import { pageRows, queriesTable, targetsView, RANGES, SUMMED_NOTE } from './search.mjs';
+import { COUNTS_MISSING_NOTE } from '../query-counts.mjs';
 import { healthView } from './panels.mjs';
 
 export const LISTS = ['opportunities', 'competing', 'pages', 'queries', 'targets', 'verdicts', 'health'];
@@ -91,6 +92,11 @@ export function csvFor(model, list, params = {}) {
     case 'queries': {
       const days = RANGES.includes(Number(params.range)) ? Number(params.range) : 28;
       const t = queriesTable(model, days);
+      // The notes the Queries list prints, as a column like the date range: counts added up across
+      // pages (a snapshot without the 90-day query-only pull), a comparison that waits, missing counts.
+      const note = [t.summed ? SUMMED_NOTE : null, t.waitNote, t.countsMissing ? COUNTS_MISSING_NOTE : null]
+        .filter(Boolean)
+        .join(' ');
       return toCsv(
         [
           ['search', (r) => r.query],
@@ -103,6 +109,7 @@ export function csvFor(model, list, params = {}) {
           ['top_page', (r) => r.topPage],
           ['bing_impressions', (r) => r.bingImpressions],
           ['date_range', () => (t.range ? longRange(t.range.start, t.range.end) : '')],
+          ['note', () => note],
         ],
         t.rows
       );

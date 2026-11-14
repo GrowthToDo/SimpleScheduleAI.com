@@ -601,3 +601,44 @@ test('S10: an edit is ready to judge only when Search Console covers its 28 days
   );
   assert.equal(r.due[1].waitingText, 'Waiting for data through 11 November');
 });
+
+// ---------------------------------------------------------------- S11, S12
+
+test('S11: the 90-day Queries CSV carries the added-up note in a column when the 90-day pull is missing', async () => {
+  const { csvFor } = await import('../lib/api/csv.mjs');
+  const { SUMMED_NOTE } = await import('../lib/api/search.mjs');
+  const qp90 = [
+    { query: 'made up ninety', page: '/blog/a', impressions: 30, clicks: 0, position: 8 },
+    { query: 'made up ninety', page: '/blog/b', impressions: 20, clicks: 0, position: 9 },
+  ];
+  snap('gsc', { pageDaily: [], siteDaily: [], qpCur: [], qp90, queryCur: [], queryPrev: [] });
+  invalidate();
+  const lines = csvFor(buildModel(), 'queries', { range: '90' }).trim().split('\r\n');
+  assert.match(lines[0], /,note$/);
+  assert.ok(lines[1].endsWith(`,${SUMMED_NOTE}`) || lines[1].endsWith(`,"${SUMMED_NOTE}"`), lines[1]);
+});
+
+test('S12: pages shown together read "mostly" only from 1.6 times the searches', async () => {
+  const { cannibalizationView } = await import('../lib/api/ext/insights.mjs').then((m) => ({
+    cannibalizationView: m.routes.find((r) => r.path === '/api/insights/cannibalization').handler,
+  }));
+  const qp = (page, impressions) => ({ query: 'made up together search', page, impressions, clicks: 0, position: 5 });
+  const qpCur = [qp('/blog/a-guide', 40), qp('/blog/b-guide', 30)];
+  const real = (n) => [{ query: 'made up together search', impressions: n, clicks: 0, position: 5 }];
+  snap('local', {
+    livePages: [{ page: '/blog/a-guide' }, { page: '/blog/b-guide' }],
+    verdicts: [],
+    due: [],
+    edits: [],
+  });
+  // 70 views over 50 searches is 1.4: often. Over 40 it is 1.75: mostly.
+  for (const [n, word] of [
+    [50, 'often'],
+    [40, 'mostly'],
+  ]) {
+    snap('gsc', { pageDaily: [], siteDaily: [], qpCur, queryCur: real(n), queryPrev: [] });
+    invalidate();
+    const v = cannibalizationView({ url: new URL('http://127.0.0.1/api/insights/cannibalization') });
+    assert.match(v.together[0].note, new RegExp(`So they ${word} appeared together`));
+  }
+});

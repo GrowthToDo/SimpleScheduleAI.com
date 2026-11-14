@@ -278,7 +278,8 @@ function build(ctx, spec) {
 
 // ---------------------------------------------------------------- Google query rules
 
-const onPageOne = (position) => Math.round(position) <= 10;
+// Page one ends at position 10.0: an average of 10.2 is on page two, so nothing is rounded.
+const onPageOne = (position) => Number(position) <= 10;
 
 export function detectNearPageOne(snaps, cfg) {
   const ctx = contextOf(snaps, cfg);
