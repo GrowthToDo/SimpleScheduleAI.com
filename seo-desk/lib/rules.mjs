@@ -804,7 +804,6 @@ export function detectEngineGap(snaps, cfg) {
           ],
           impressions: p.impressions,
           distance: 0.5,
-          effort: 0.9,
         })
       );
     }

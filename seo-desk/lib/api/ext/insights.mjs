@@ -100,7 +100,13 @@ const heading = (type) => ({ term: TERMS[type].term, explain: TERMS[type].explai
 // that needs a minimum number of searches is empty. The envelope then says so in its warnings.
 export const COUNTS_MISSING =
   'This Search Console snapshot has no per-search counts (the pull of searches without pages), so the lists that need a minimum number of searches are empty until the next pull.';
-export const countsMissing = (model) => Boolean(model.data.gsc) && !realQueryCounts(model.data.gsc, 'cur');
+// An empty query-only list beside query and page rows is a pull that failed, not a site no one searched.
+export function countsMissing(model) {
+  const gsc = model.data.gsc;
+  if (!gsc) return false;
+  const real = realQueryCounts(gsc, 'cur');
+  return !real || (real.size === 0 && (gsc.qpCur ?? []).length > 0);
+}
 function insightEnvelope(model, opts) {
   const env = envelope(model, opts);
   if (!countsMissing(model)) return env;

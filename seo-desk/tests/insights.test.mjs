@@ -2537,3 +2537,16 @@ test('B11: the sidebar entry for Internal links says what its page lists', async
     'Pages that would gain from more links, with how many pages link to each now.'
   );
 });
+
+test('an empty query-only list beside query and page rows counts as missing, never as page rows added up', async () => {
+  const dir = path.join(root, 'emptyquery');
+  fs.mkdirSync(dir, { recursive: true });
+  writeSnap(dir, 'gsc', { ...gscData(), queryCur: [] });
+  writeSnap(dir, 'local', localData());
+  use(dir);
+  const km = (await get('/api/keyword-map/table')).json;
+  assert.equal(km.counters.unmapped, 0, 'no search is discovered from page rows added up');
+  assert.ok(km.rows.every((r) => r.impressions === null));
+  assert.ok((km.warnings ?? []).some((w) => /per-search counts/.test(w)));
+  use(FULL);
+});
