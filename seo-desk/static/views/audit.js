@@ -156,6 +156,7 @@ export function auditSection(ctx, data, jobs) {
           : ''
       ),
       a.stoppedNote ? h('p', { class: 'banner banner-warn', role: 'status' }, a.stoppedNote) : null,
+      a.olderRulesNote ? h('p', { class: 'banner banner-warn', role: 'status' }, a.olderRulesNote) : null,
       run.ruleLine ? h('p', { class: 'p2-rule-line small' }, run.ruleLine) : null,
       older ? null : healthCard(ctx, data.health, data.weeklyAudit),
       scores(ctx, a),
@@ -578,6 +579,8 @@ function frozenChip(h, p) {
 // Whether the fix is a page edit (the week's one) or a site or server change, and which of its
 // pages are frozen.
 export function editLineText(i) {
+  // A finding of a check whose rule changed after the run says nothing about the week's edit.
+  if (i.olderRule) return 'This was found with an older rule. Run the audit again before acting on it.';
   const frozen = (i.pages ?? []).filter((p) => p.frozenUntilText).length;
   const first = i.editsPage
     ? "This fix edits the page, so it counts as that week's one page edit."

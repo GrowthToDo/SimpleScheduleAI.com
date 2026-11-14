@@ -15,7 +15,8 @@ import {
   CHECKS,
   GROUPS,
   SPLIT_FROM,
-  RULE_CHANGED,
+  ranOlderRule,
+  RULES_VERSION,
   buildPage,
   buildSite,
   evaluate,
@@ -149,6 +150,8 @@ export async function runAudit({
     linkTargetsSkipped: Math.max(0, wanted.length - targets.length),
     stopped,
     stoppedEarly: stopped,
+    // The rules this run used (checks.mjs RULES_VERSION), so a later reader knows it used today's.
+    rulesVersion: RULES_VERSION,
     // The Search Console days the page clicks cover, so a reader never takes them for the audit's.
     ...(clicksRange ? { clicksRange } : {}),
     ...extra,
@@ -250,7 +253,7 @@ export function saveAudit(run) {
 const ranIn = (run) =>
   new Set(
     (Array.isArray(run?.checksRun) ? run.checksRun : (run?.issues ?? []).map((i) => i.id)).filter(
-      (id) => !(RULE_CHANGED[id] && String(run?.startedAt ?? '') < RULE_CHANGED[id])
+      (id) => !ranOlderRule(run, id)
     )
   );
 

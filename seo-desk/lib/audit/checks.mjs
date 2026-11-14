@@ -271,6 +271,27 @@ export const RULE_CHANGED = {
   'title-duplicate': '2026-11-15T00:00:00.000Z',
   'description-duplicate': '2026-11-15T00:00:00.000Z',
 };
+// Checks whose rule changed in a way the comparison already handles (a check split in two, see
+// SPLIT_FROM, or a check retired under a new id), with the same time. A run saved before then still
+// shows their findings by the older rule, so the audit page says so; the comparison is left as it is.
+export const RULE_REWRITTEN = {
+  // Long titles now leave the site-wide title ending to its own setup finding (title-template-long).
+  'title-long': '2026-11-15T00:00:00.000Z',
+  // The page weight check before it left inline styles and scripts out (now page-code-large).
+  'html-over-200kb': '2026-11-15T00:00:00.000Z',
+};
+// The rules every run saved from now on uses. A run saved with this version (or a later one) used
+// every rule as it reads today, whatever its date; a run with no version, saved before a check's
+// change time, ran that check under its older rule. Raise it with the next change to a rule.
+export const RULES_VERSION = 2;
+const isOld = (run, at) =>
+  Boolean(at) && !(Number(run?.rulesVersion) >= RULES_VERSION) && String(run?.startedAt ?? '') < at;
+// True when the run ran check `id` under a rule that has changed since (RULE_CHANGED): it cannot
+// say what is new or fixed for that check.
+export const ranOlderRule = (run, id) => isOld(run, RULE_CHANGED[id]);
+// True when the run's findings for check `id` were found by an older rule (RULE_CHANGED or
+// RULE_REWRITTEN): the audit page says the run should be made again.
+export const olderRuleIn = (run, id) => isOld(run, RULE_CHANGED[id] ?? RULE_REWRITTEN[id]);
 
 // What a saved run lacks: the effort, impact and steps of a check, by id. Null for an id that is no
 // longer a check.

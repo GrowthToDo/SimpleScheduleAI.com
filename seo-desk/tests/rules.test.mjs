@@ -726,7 +726,10 @@ test('M4: the best place for the no-rank test is taken over pages with 10 or mor
     qp('rota for a made up ward', '/blog/b', 25, 37.5),
     qp('rota for a made up ward', '/blog/c', 2, 16),
   ];
-  const snaps = withGsc({ qpCur, queryCur: [{ query: 'rota for a made up ward', impressions: 50, clicks: 0, position: 30 }] });
+  const snaps = withGsc({
+    qpCur,
+    queryCur: [{ query: 'rota for a made up ward', impressions: 50, clicks: 0, position: 30 }],
+  });
   const [s] = rules.splitSearches(snaps, cfg);
   assert.equal(s.kind, 'no-rank');
   assert.equal(s.bestPosition, 26.4);

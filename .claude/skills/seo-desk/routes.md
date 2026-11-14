@@ -104,7 +104,7 @@ test, editPages[], eligibility, atRisk {page, impressions, clicks}, likelyFalseA
 falseAlarmReason, priority, brief}`. `choice` is consolidate, differentiate, leave-alone or null.
 `impressions` is the real number of times the search showed the site; `pages` are only the pages
 with 10 or more views for it, and `share` is each page's part of our pages' views. A search is a
-split only when its real searches are 30 or more, a page is better than position 20 and our pages'
+split only when its real searches are 30 or more, a page with 10 or more views for it is better than position 20 and our pages'
 views are under 1.3 times the searches. `atRisk` is the weaker page of the split. `editPages` are the pages the current choice would
 edit (a leave-alone choice edits none), and `eligibility` covers those pages only. `likelyFalseAlarm`
 is true when one page is the pillar page and the other is one of its own posts, both with 10 or more
@@ -196,7 +196,11 @@ have: never call those new problems (their pages have `newCheck` true, `isNew` f
 are Search Console's days, quote `clicksNote`. A score of 100 means nothing is open; a group's `note`
 says what its score covers. Two site setup findings: `title-template-long` (titles long only because
 of the shared ending) and `inline-css-heavy`; page weight (`page-code-large`) leaves out inline
-styles and scripts, and every size is before compression.
+styles and scripts, and every size is before compression. `audit.olderRules` counts the checks whose
+rule changed after the run was made, and `audit.olderRulesNote` says once "This run used older rules
+for N checks. Run the audit again."; those issues have `olderRule` true and `editsPage` false, and their
+last step says to run the audit again before acting on them. Never say such a finding counts as the
+week's page edit.
 
 `/api/ai-visibility`: `byKind[]` (brand, alternatives, category, other) and `byAssistant[]`
 (ChatGPT, Google AI answers). Counts: `listed`, `listedLinked`, `keywordChecked`,

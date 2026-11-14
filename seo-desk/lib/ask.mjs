@@ -295,6 +295,7 @@ export const SECTIONS = [
                 'score',
                 'counts',
                 'stoppedNote',
+                'olderRulesNote',
                 'issues',
                 'clicksNote',
                 'groups',

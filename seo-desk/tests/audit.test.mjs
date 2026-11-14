@@ -22,7 +22,7 @@ const { createServer } = await import('../server.mjs');
 const { invalidate } = await import('../lib/api/model.mjs');
 
 const { fetchPage, extract, checkLink, isAllowedUrl, SITE_ORIGIN } = crawl;
-const { CHECKS, GROUPS, buildPage, buildSite, evaluate, scoreOf } = checks;
+const { CHECKS, GROUPS, RULES_VERSION, buildPage, buildSite, evaluate, scoreOf } = checks;
 const { runAudit, compareAudits, saveAudit, listAudits, loadAudit, shouldRunWeeklyAudit, HISTORY_LIMIT } = run;
 
 after(() => fs.rmSync(root, { recursive: true, force: true }));
@@ -1125,6 +1125,7 @@ const mkRun = (startedAt, issues, over = {}) => ({
   groups: [],
   issues,
   checksRun: CHECKS.map((c) => c.id),
+  rulesVersion: RULES_VERSION,
   ...over,
 });
 const mkIssue = (id, pages, severity = 'warning') => ({

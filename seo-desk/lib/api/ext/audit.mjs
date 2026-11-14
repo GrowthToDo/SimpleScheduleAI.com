@@ -13,6 +13,7 @@ import {
   sortIssues,
   editsPageOf,
   guideOf,
+  olderRuleIn,
 } from '../../audit/checks.mjs';
 import { todayIso, daysBetween } from '../../dates.mjs';
 import { longDate, longRange } from '../../text.mjs';
@@ -55,19 +56,34 @@ const withFreeze = (model, p) => {
   return { ...p, frozenUntil: f?.until ?? null, frozenUntilText: f ? longDate(f.until) : null };
 };
 
-// An issue as the page reads it: whether its fix edits a live page, and each page's freeze.
-const marked = (model, i) => ({
-  ...i,
-  severity: severityOf(i.id, i.severity),
-  editsPage: editsPageOf(i.id),
-  // The effort, impact and steps come from the check as it reads today; a run saved before they
-  // existed has none of its own.
-  effort: i.effort ?? null,
-  impact: i.impact ?? null,
-  steps: i.steps ?? [],
-  ...(guideOf(i.id) ?? {}),
-  pages: i.pages.map((p) => withFreeze(model, p)),
-});
+// Said once at the top of a run made before a check's rule changed (checks.mjs RULE_CHANGED).
+export const olderRulesNote = (n) =>
+  `This run used older rules for ${n} ${n === 1 ? 'check' : 'checks'}. Run the audit again.`;
+// Said on a finding of such a check, in place of whether it counts as the week's page edit.
+export const OLDER_RULE_LINE = 'This was found with an older rule. Run the audit again before acting on it.';
+const EDIT_WORDS = / ?This counts as that week's one page edit\.| ?This does not count as a page edit\./g;
+
+// An issue as the page reads it: whether its fix edits a live page, and each page's freeze. A finding
+// of a check whose rule changed after the run (olderRule) does not say it counts as the week's page
+// edit: the run must be made again first.
+const marked = (model, i, run = null) => {
+  const out = {
+    ...i,
+    severity: severityOf(i.id, i.severity),
+    editsPage: editsPageOf(i.id),
+    // The effort, impact and steps come from the check as it reads today; a run saved before they
+    // existed has none of its own.
+    effort: i.effort ?? null,
+    impact: i.impact ?? null,
+    steps: i.steps ?? [],
+    ...(guideOf(i.id) ?? {}),
+    olderRule: run ? olderRuleIn(run, i.id) : false,
+    pages: i.pages.map((p) => withFreeze(model, p)),
+  };
+  if (!out.olderRule) return out;
+  const steps = out.steps.map((t) => String(t).replace(EDIT_WORDS, '').trim()).filter(Boolean);
+  return { ...out, editsPage: false, steps: [...steps, OLDER_RULE_LINE] };
+};
 
 const liveCount = (model) => (model.data.local?.livePages ?? []).length || null;
 
@@ -86,16 +102,21 @@ function present(model, run, prev) {
   // isNew: a new problem found by a check that also ran last time. newCheck: found by a check the
   // last audit did not have, so it cannot be called new.
   const issues = sortIssues(run.issues ?? []).map((i) =>
-    marked(model, {
-      ...i,
-      clicks: i.pages.reduce((s, p) => s + (p.clicks || 0), 0),
-      pages: i.pages.map((p) => ({
-        ...p,
-        isNew: comparison ? added.get(i.id)?.has(p.page) === true : true,
-        newCheck: byNewCheck.has(i.id),
-      })),
-    })
+    marked(
+      model,
+      {
+        ...i,
+        clicks: i.pages.reduce((s, p) => s + (p.clicks || 0), 0),
+        pages: i.pages.map((p) => ({
+          ...p,
+          isNew: comparison ? added.get(i.id)?.has(p.page) === true : true,
+          newCheck: byNewCheck.has(i.id),
+        })),
+      },
+      run
+    )
   );
+  const older = issues.filter((i) => i.olderRule).length;
   const clicks = run.clicksRange?.start && run.clicksRange?.end ? run.clicksRange : null;
   return {
     audit: {
@@ -108,6 +129,9 @@ function present(model, run, prev) {
       stoppedEarly: run.stoppedEarly === true,
       pagesPlanned: run.pagesPlanned ?? null,
       stoppedNote: stoppedNote(run, liveCount(model)),
+      // Once, at the top: the findings of checks whose rule changed after this run.
+      olderRules: older,
+      olderRulesNote: older ? olderRulesNote(older) : null,
       counts: countsOf(issues),
       groups: (run.groups?.length ? run.groups : GROUPS.map((g) => ({ ...g, score: null }))).map((g) =>
         withNote({
@@ -131,9 +155,9 @@ function present(model, run, prev) {
       ? {
           since: prev.startedAt,
           sinceText: dayText(prev.startedAt),
-          added: comparison.added.map((i) => marked(model, i)),
-          fixed: comparison.fixed.map((i) => marked(model, i)),
-          byNewCheck: comparison.byNewCheck.map((i) => marked(model, i)),
+          added: comparison.added.map((i) => marked(model, i, run)),
+          fixed: comparison.fixed.map((i) => marked(model, i, run)),
+          byNewCheck: comparison.byNewCheck.map((i) => marked(model, i, run)),
           byNewCheckText: 'Found by a check added since the last audit',
           unchanged: comparison.unchanged,
         }

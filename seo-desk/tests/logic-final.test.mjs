@@ -270,3 +270,36 @@ test('M3: Site health and the Not indexed card give one page the same advice, an
     'Crawled - currently not indexed. 1 page links to it in their page text (menu and footer links are not counted).'
   );
 });
+
+// ---------------------------------------------------------------- M5: a run made with older rules
+
+test("M5: a run made before a check changed says so once at the top, and its findings do not claim the week's edit", async () => {
+  const { view } = await import('../lib/api/ext/audit.mjs');
+  invalidate();
+  const model = buildModel();
+  const issue = (id, group, severity) => ({ id, group, severity, pages: [{ page: '/blog/sample-guide', clicks: 0 }] });
+  const run = {
+    startedAt: '2026-11-14T10:00:00.000Z',
+    pagesChecked: 3,
+    issues: [
+      issue('title-long', 'content', 'low'),
+      issue('html-over-200kb', 'performance', 'low'),
+      issue('heading-skip', 'content', 'low'),
+    ],
+  };
+  const a = view(model, run).audit;
+  assert.equal(a.olderRules, 2);
+  assert.equal(a.olderRulesNote, 'This run used older rules for 2 checks. Run the audit again.');
+  const title = a.issues.find((i) => i.id === 'title-long');
+  assert.equal(title.olderRule, true);
+  assert.equal(title.editsPage, false);
+  assert.ok(!/one page edit/.test(JSON.stringify(title)));
+  assert.match(title.steps.at(-1), /Run the audit again before acting on it/);
+  const heading = a.issues.find((i) => i.id === 'heading-skip');
+  assert.equal(heading.olderRule, false);
+  assert.match(heading.steps.at(-1), /This counts as that week's one page edit\./);
+  // A run saved by today's rules says nothing, whatever its date.
+  const fresh = view(model, { ...run, rulesVersion: 2 }).audit;
+  assert.equal(fresh.olderRules, 0);
+  assert.equal(fresh.olderRulesNote, null);
+});
