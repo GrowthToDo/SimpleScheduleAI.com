@@ -274,19 +274,28 @@ function writeEntry(key, final, entry, at) {
   }
 }
 
+// The cached rows for one range, read only (no pull, nothing written), or null: the same answer as
+// periodRows when it has them.
+export function cachedRows({ dim, start, end }, { now, newest } = {}) {
+  if (dim !== 'query' && dim !== 'page') throw new Error('periodRows dim must be query or page.');
+  const at = nowMs(now);
+  const finished = isFinished({ start, end }, newest);
+  const key = keyOf({ k: 'period', dim, start, end, limit: ROW_LIMIT });
+  const hit = readEntry(key, true, at) ?? readEntry(key, false, at);
+  return hit ? { rows: hit.rows, fetchedAt: hit.fetchedAt, cached: true, finished } : null;
+}
+
 // The Search Console rows for one range by search ('query', a query-only pull) or by page ('page'),
 // from the cache, else pulled once and cached: for good when the range is finished (isFinished), for
 // the day otherwise. cacheOnly: return null instead of pulling (the Ask digest never pulls).
 // Returns {rows, fetchedAt, cached, finished} or null (cacheOnly and not cached). A failed pull throws
 // the explorer's plain sentence (status 502) and caches nothing.
 export async function periodRows({ dim, start, end }, { call, now, newest, cacheOnly = false } = {}) {
-  if (dim !== 'query' && dim !== 'page') throw new Error('periodRows dim must be query or page.');
+  const hit = cachedRows({ dim, start, end }, { now, newest });
+  if (hit || cacheOnly) return hit;
   const at = nowMs(now);
   const finished = isFinished({ start, end }, newest);
   const key = keyOf({ k: 'period', dim, start, end, limit: ROW_LIMIT });
-  const hit = readEntry(key, true, at) ?? readEntry(key, false, at);
-  if (hit) return { rows: hit.rows, fetchedAt: hit.fetchedAt, cached: true, finished };
-  if (cacheOnly) return null;
   const rows = await pullRows(call, { dimensions: dim, start, end, filters: [], rowLimit: ROW_LIMIT });
   const fetchedAt = new Date(at).toISOString();
   writeEntry(key, finished, { fetchedAt, dim, start, end, rows }, at);

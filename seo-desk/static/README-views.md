@@ -13,6 +13,7 @@ except the desk's own `/api/...`.
 | -------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `ask`                | `ask` (a question answered by Claude from the desk's data; `q=` only fills the field)                    | Above the groups: Ask, with the compact ask field under it                                   |
 | `week`               | `week`                                                                                                   | Plan: This week (count: worries, red above zero)                                             |
+| `month`              | `month` (one calendar month on one printable page; `m=2026-10` picks the month)                          | Plan: Monthly report                                                                         |
 | `performance`        | `overview`                                                                                               | Search: Performance                                                                          |
 | `queries`            | `search` (the Searches list, its filter bar and where searches sit; `tab=targets` opens Target keywords) | Search: Queries                                                                              |
 | `pages`              | `pages`                                                                                                  | Search: Pages                                                                                |
@@ -213,7 +214,8 @@ markers: [{date, kind: 'edit' | 'google-update', label}], label})`: two lines on
 
 ## Filters, the search drawer and Up and Down (phase 2)
 
-- `views/filters.js`: the filter bar for Search and Pages. `readFilters(ctx.params)` gives the state
+- `views/filters.js`: the filter bar for Search, Pages and Performance (Performance passes
+  `filters: false` for the dates alone). `readFilters(ctx.params)` gives the state
   (`range` 7, 14, 28, 90, 480, this-month, last-month, last-quarter or custom with `start`/`end`;
   `q`/`qmode`, `pagefilter`/`pagemode` with contains, exact or excludes; `country`; `device`).
   `filterBar(ctx, {route, state, countries, today})` draws the range buttons (Custom opens two date

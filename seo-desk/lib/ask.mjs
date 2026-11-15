@@ -28,6 +28,7 @@ import { weekView, resultsView } from './api/work.mjs';
 import { pageView, windowsFor } from './api/search.mjs';
 import { aiView, healthView } from './api/panels.mjs';
 import { navCounts, overviewView } from './api/ext/overview.mjs';
+import { lastMonthBrief } from './api/ext/month.mjs';
 import {
   cannibalizationView,
   runnerUpView,
@@ -190,6 +191,10 @@ export const SECTIONS = [
         'devices',
       ]),
   ],
+  // The last complete calendar month against the month before (per day), from the Monthly report.
+  // Its target keyword counts are there once that month's report has been opened (the digest never
+  // pulls from Search Console).
+  ['Last complete month (Monthly report)', '/api/month', (m) => lastMonthBrief(m)],
   [
     'Cannibalization',
     '/api/insights/cannibalization',

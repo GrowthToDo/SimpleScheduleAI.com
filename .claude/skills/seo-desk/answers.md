@@ -125,6 +125,19 @@ by clicks with their `effort` and the first of their `steps`. If `editsPage` is 
 to the site's setup, not a page, so it does not use the week's edit. Lead with what is `critical`
 or `high`; do not make low issues sound urgent.
 
+## How did last month go
+
+Read `/api/month` (no `m`: the last complete month; the Ask digest carries it as "Last complete month").
+Say the month and its dates, then the four tiles with the tile's own `against` words: every change is
+per day against the month before, because months differ in length ("100 times a day against 90 a day
+in September, up 11.1 percent per day"). Totals stay totals. Then quote `summary` as it is; it says
+what moved, never why, so add no cause. Then target keywords improved, held and slipped (one place or
+more) and how many had no data in one month, then what was done (`done`). A source with no numbers for
+the month (`bingText`, `ga4Text`, `aiText`) is said as that line, never as zero. For the month so far,
+say it is compared with the same days at the start of the month before. If `targets` is a sentence
+instead of counts, the month's searches have not been pulled yet: say the Monthly report pulls them
+when it is opened. End with the standing line.
+
 ## Worked examples (invented figures, shape only)
 
 **1. "What should I work on this week?"** Read `/api/week`. Say the week and the data date. Name

@@ -686,3 +686,15 @@ test('queries: the target keywords CSV names its dates in every row and in the f
     /8\.7 for 1 October to 31 October, over 3 keywords of 4, against 9\.1 for 1 September to 30 September/
   );
 });
+
+test('ask: the digest carries the last complete month, with its target counts once the report was opened', async () => {
+  writeFixture();
+  await routesWith(liveFake([]))('/api/month', 'm=2026-10');
+  const { buildDeskBrief } = await import('../lib/ask.mjs');
+  const { buildModel } = await import('../lib/api/model.mjs');
+  const brief = buildDeskBrief(buildModel(), 'how did last month go?');
+  assert.ok(brief.included.includes('/api/month'));
+  assert.match(brief.text, /Last complete month \(Monthly report\)/);
+  assert.match(brief.text, /October 2026/);
+  assert.match(brief.text, /"improved":1,"held":1,"slipped":1/);
+});

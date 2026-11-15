@@ -25,6 +25,7 @@ import {
   coversRange,
   pagesFromDaily,
   periodRows,
+  cachedRows,
   fetchedText,
 } from '../../month.mjs';
 import { targetsCompare, TARGET_MOVE_PLACES } from '../search.mjs';
@@ -59,10 +60,22 @@ export const newestDay = (model) => gscEnd(model.data.gsc, model.snapObjs.gsc?.t
 // a pull by page. The month before is read only when the site's daily rows hold all of it, so there
 // is something to compare with. cacheOnly: never pull (a missing range is null).
 // {query: {cur, prev}, page: {cur, prev}, pageStored: {cur, prev}, fetched: [..], pulls}.
-export async function rowsFor(model, win, { call, now, cacheOnly = false, comparable }) {
-  const gsc = model.data.gsc;
-  const newest = newestDay(model);
-  const pageDaily = gsc?.pageDaily ?? [];
+// The ranges a month needs from Search Console: its searches (and the month before's when there is
+// something to compare with), and its page rows when the stored daily page rows do not hold every day.
+function needsOf(model, win, comparable) {
+  const pageDaily = model.data.gsc?.pageDaily ?? [];
+  const out = [];
+  for (const side of comparable ? ['cur', 'prev'] : ['cur']) {
+    const r = win[side];
+    out.push({ side, dim: 'query', start: r.start, end: r.end });
+    if (!coversRange(pageDaily, r.start, r.end)) out.push({ side, dim: 'page', start: r.start, end: r.end });
+  }
+  return out;
+}
+
+// got: the answer for each need (periodRows' shape, or null), in needsOf's order.
+function assembleRows(model, win, needs, got) {
+  const pageDaily = model.data.gsc?.pageDaily ?? [];
   const out = {
     query: { cur: null, prev: null },
     page: { cur: null, prev: null },
@@ -70,28 +83,52 @@ export async function rowsFor(model, win, { call, now, cacheOnly = false, compar
     fetched: [],
     pulls: 0,
   };
-  const sides = comparable ? ['cur', 'prev'] : ['cur'];
-  for (const side of sides) {
+  for (const side of ['cur', 'prev']) {
     const r = win[side];
-    const got = await periodRows({ dim: 'query', start: r.start, end: r.end }, { call, now, newest, cacheOnly });
-    if (got) {
-      out.query[side] = got.rows;
-      out.fetched.push({ what: 'searches', ...r, fetchedAt: got.fetchedAt, finished: got.finished });
-      if (!got.cached) out.pulls += 1;
-    }
-    if (coversRange(pageDaily, r.start, r.end)) {
+    if (needs.some((n) => n.side === side) && coversRange(pageDaily, r.start, r.end)) {
       out.page[side] = pagesFromDaily(pageDaily, r.start, r.end);
       out.pageStored[side] = true;
-    } else {
-      const p = await periodRows({ dim: 'page', start: r.start, end: r.end }, { call, now, newest, cacheOnly });
-      if (p) {
-        out.page[side] = p.rows;
-        out.fetched.push({ what: 'pages', ...r, fetchedAt: p.fetchedAt, finished: p.finished });
-        if (!p.cached) out.pulls += 1;
-      }
     }
   }
+  needs.forEach((n, i) => {
+    const g = got[i];
+    if (!g) return;
+    out[n.dim][n.side] = g.rows;
+    out.fetched.push({
+      what: n.dim === 'page' ? 'pages' : 'searches',
+      start: n.start,
+      end: n.end,
+      fetchedAt: g.fetchedAt,
+      finished: g.finished,
+    });
+    if (!g.cached) out.pulls += 1;
+  });
   return out;
+}
+
+// The month's (and the month before's) rows by search and by page. Per-search rows are always a
+// query-only pull; page rows come from the stored daily page rows when they hold every day, else from
+// a pull by page. The month before is read only when the site's daily rows hold all of it, so there
+// is something to compare with. cacheOnly: never pull (a missing range is null).
+// {query: {cur, prev}, page: {cur, prev}, pageStored: {cur, prev}, fetched: [..], pulls}.
+export async function rowsFor(model, win, { call, now, cacheOnly = false, comparable }) {
+  const newest = newestDay(model);
+  const needs = needsOf(model, win, comparable);
+  const got = [];
+  for (const n of needs) got.push(await periodRows(n, { call, now, newest, cacheOnly }));
+  return assembleRows(model, win, needs, got);
+}
+
+// The same from the cache and the store only, synchronously (the Ask digest never pulls).
+export function cachedRowsFor(model, win, { now, comparable }) {
+  const newest = newestDay(model);
+  const needs = needsOf(model, win, comparable);
+  return assembleRows(
+    model,
+    win,
+    needs,
+    needs.map((n) => cachedRows(n, { now, newest }))
+  );
 }
 
 // ---------------------------------------------------------------- the pieces
@@ -548,13 +585,13 @@ export function pickMonth(model, asked) {
 
 // The Ask digest's view of the last complete month: tiles from the stored daily rows, and the target
 // keywords only when the month's searches are already cached (the digest never pulls).
-export async function lastMonthBrief(model) {
+export function lastMonthBrief(model) {
   const months = monthsAvailable(model.data.gsc?.siteDaily ?? [], newestDay(model));
   const month = months.find((m) => !m.soFar)?.month;
   if (!month) return null;
   const win = monthWindows(month, newestDay(model));
   const comparable = coversRange(model.data.gsc?.siteDaily ?? [], win.prev.start, win.prev.end);
-  const rows = await rowsFor(model, win, { cacheOnly: true, comparable });
+  const rows = cachedRowsFor(model, win, { comparable });
   const v = monthView(model, month, rows.query.cur ? rows : null, {
     searchError: 'The searches for this month are pulled when its Monthly report is first opened.',
   });
@@ -595,7 +632,7 @@ export function makeMonthRoutes({ open = openServer, now, lock = SHARED_LOCK, wa
       return { rows, error: null };
     } catch (e) {
       if (e?.status !== 502 && e?.status !== 429) throw e;
-      const rows = await rowsFor(model, win, { cacheOnly: true, comparable });
+      const rows = cachedRowsFor(model, win, { now, comparable });
       return { rows, error: e.message };
     }
   };

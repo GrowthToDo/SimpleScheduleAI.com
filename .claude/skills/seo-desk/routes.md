@@ -86,11 +86,34 @@ waiting change no other edit overlaps so far ("18 November", note "4 page change
 else "None in sight" (`date` null). When due changes overlap other edits the note ends "12 due changes
 overlap other edits and cannot be read". Ignore `sinceLastVisit`; it depends on a write.
 
+`/api/month?m=2026-10` (the Monthly report; no `m` gives the last complete month): `month`, `label`
+("October 2026", or "November 2026 so far"), `soFar`, `months[] {month, label, soFar}` (every complete
+month the daily rows hold, newest first), `cur` and `prev` `{start, end, days, text}`, `comparable`,
+`compareText`, `standingLine`, `tiles[]` (clicks, impressions, clickRate, targetPosition; each `value`,
+`change`, `changeKind`, `against`, `note`; counts also `perDay`, `prevValue`, `prevPerDay`), `series[]`,
+`markers[]`, `summary[]` (three to five sentences built from the numbers; quote them, never add a
+cause), `topPages[]` and `topSearches[]` (top ten: `clicks, impressions, position, prevImpressions,
+change`), `targets {available, improved, held, slipped, noData, total, rows[], note}`, `done {posts[],
+edits[], verdicts[], verdictsUnreadable, audit, auditText, postsNote, editsNote}`, `other {bing, ga4,
+ai[], bingText, ga4Text, aiText}`, `footer[]`, `searchError`, `pulls`. Every month-on-month `change`
+is on per-day averages (months differ in length) and null under 20 in the earlier month's total; the
+month so far is compared with the same days at the start of the month before. A month counts only
+once Search Console has data for its last day. A target improved or slipped when it moved one place or
+more. A source with no numbers for the whole month is null with a plain line (`bingText`, `ga4Text`),
+never zero. The month's searches come from a query-only Search Console pull, cached for good once the
+month is finished (opening a month the first time can take a few seconds; 502 or 429 leaves
+`searchError` and the stored numbers). `/api/month.csv?m=` is the full lists in one file, each row
+with the month and its dates.
+
 ## Search
 
-`/api/overview?range=7|28|90|480`: `tiles[]` in the order clicks, impressions, clickRate,
+`/api/overview?range=7|14|28|90|480|this-month|last-month|last-quarter|custom` (custom with `start` and
+`end`): `tiles[]` in the order clicks, impressions, clickRate,
 targetPosition; each has `key, label, value, change, changeKind, note, enoughData, range`. Quote
-the tile's own `range`. `clickRate` also has `valueText` ("3.1%") and is null under 500
+the tile's own `range`. This month and last month are compared with the month before, last quarter
+with the quarter before: on per-day averages when the lengths differ, and then the tile's `against`
+says so ("per day, against September's 30 days") and `compareText` names both periods.
+`targetPosition` always covers its own stored 28 days; its `rangeLine` says so on any other dates. `clickRate` also has `valueText` ("3.1%") and is null under 500
 impressions. `targetPosition` is the like-for-like mean for the keywords we target; `detail` says
 how many. `topQueries[]` (`query, clicks, impressions, position, brand`) use `queriesRange` and
 `queriesNote` (7 and 480 read the 28 or 90 day list; it also says so when an older snapshot
@@ -99,12 +122,16 @@ search once per page it showed). `topPages[]` (`page, clicks, impressions,
 position, clickRate`) use `pagesRange`, which can be shorter than `range` when the desk holds
 less page history. `short` is true, and `coverageNote` says so, when the desk holds less daily
 history than the range asks for (then the big numbers make no comparison with an earlier period). `countries[]`, `devices[]` are the latest
-stored 28 days whatever range you ask for. `series[]` is clicks and impressions by day.
+stored 28 days whatever range you ask for (`breakdownNote` names those dates). `series[]` is clicks and impressions by day.
 
 `/api/search?range=…&metric=…`: the older Performance data. Use it for `likeForLike {mean,
 prevMean, n, targetsTotal, enough, range, prevRange}`, `targets[]` (keyword, page, position,
 change, alignment: right page, wrong page, too few views or no data yet, the Keywords page's own
-reading of each keyword-file target, so "right page" is the same set on both pages) and `brandSplit` (null when the per-search counts are missing). When the stored search totals for the latest 28 days are a day
+reading of each keyword-file target, so "right page" is the same set on both pages) and `brandSplit` (null when the per-search counts are missing).
+`/api/targets/range?range=…` is the same target list for any date-bar choice (the chosen dates against
+the dates before, from query-only pulls, cached): `rows[]` with `move` (improved, held or slipped by one
+place or more), `likeForLike`, `moves {improved, held, slipped, noData}`, `range`, `prevRange`; its rows
+carry no `alignment` (that is worked out for the stored 28 days only). When the stored search totals for the latest 28 days are a day
 short of the 28 before, `notes[]` says the comparison of searches waits for the next refresh, and the
 searches list and tile carry no change.
 
