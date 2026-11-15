@@ -1273,13 +1273,17 @@ export function opportunitiesView(model, filters, { insightCounts = null } = {})
 export function heldNoteOf(model, items) {
   const page = items.filter((o) => o.held && o.heldKind === 'page').length;
   const week = items.filter((o) => o.held && o.heldKind === 'week').length;
+  // Only the items on pages to leave alone are hidden. The ones that wait for next week's page edit
+  // stay in the list, after the ones that can be worked on now, so next week can be planned.
   const parts = [
-    page ? `${count(page, 'more is', 'more are')} on pages to leave alone` : null,
+    page
+      ? `${count(page, 'more is', 'more are')} on pages to leave alone and ${page === 1 ? 'is' : 'are'} hidden.`
+      : null,
     week
-      ? `${count(week, 'more waits', 'more wait')} for next week's page edit, from ${longDate(addDays(mondayOf(model.today), 7))}`
+      ? `${count(week, 'item in this list waits', 'items in this list wait')} for next week's page edit, from ${longDate(addDays(mondayOf(model.today), 7))}.`
       : null,
   ].filter(Boolean);
-  return { page, week, text: parts.length ? `${parts.join(', and ')}.` : null };
+  return { page, week, text: parts.length ? parts.join(' ') : null };
 }
 
 // ---------------------------------------------------------------- two pages competing

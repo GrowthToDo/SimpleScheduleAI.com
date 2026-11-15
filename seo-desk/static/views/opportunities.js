@@ -172,7 +172,9 @@ async function renderList(el, ctx) {
     const sorter = SORTS.find((s) => s.key === state.sort) ?? SORTS[0];
     return (
       data.items
-        .filter((o) => !state.free || !o.held)
+        // Only pages to leave alone are hidden. An item that merely waits for next week's page edit
+        // stays in the list (after the ones that can be worked on now), for planning the next week.
+        .filter((o) => !state.free || !(o.held && o.heldKind === 'page'))
         .filter(
           (o) =>
             !needle ||

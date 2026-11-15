@@ -257,8 +257,8 @@ frozen `from` page would edit that page, so check `fromFrozenUntilText`.
 
 `/api/opportunities?type=&status=open&page=`: `counts {byType, byStatus}`, `items[]` as the
 cards above (the ones whose page can be edited now first), `held {page, week, text}`: how many of these
-items the page's "Free to edit" filter (on by default) hides, and the line it shows ("27 more are on
-pages to leave alone, and 37 more wait for next week's page edit, from 16 November."). `status=open` means new, in progress or came back: it is what the Open view and the
+items are on pages to leave alone (the page's "Free to edit" filter, on by default, hides those) and
+how many only wait for next week's page edit (those stay in the list), with the line the page shows. `status=open` means new, in progress or came back: it is what the Open view and the
 sidebar count use, and `counts.byStatus.open` is its size. `status=attention` is new only. Other
 values are one status each (done, ignored, snoozed) or `all`. Types: near-page-one, low-click-rate, competing-pages, slipping, wrong-page,
 unserved, question, needs-links, ai-gap, not-indexed. The Google and Bing cards (engine-gap) are

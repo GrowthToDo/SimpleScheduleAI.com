@@ -400,7 +400,7 @@ test('C4: an item on a held page is marked held, never pushed, and comes after t
   assert.ok(heldIds.includes('held1'));
   assert.ok(list.items.filter((o) => o.held).every((o) => o.page === '/blog/steady-3'));
   assert.equal(list.held.page, heldIds.length);
-  assert.equal(list.held.text, `${heldIds.length} more are on pages to leave alone.`);
+  assert.equal(list.held.text, `${heldIds.length} more are on pages to leave alone and are hidden.`);
   const ru = insights.runnerUpView(m);
   assert.deepEqual(
     ru.items.map((o) => o.id),
@@ -429,7 +429,8 @@ test("C4: once this week's page edit is used, page edits are held for the week, 
   const it = list.items.find((o) => o.id === 'wk1');
   assert.equal(it.held, true);
   assert.equal(it.heldKind, 'week');
-  assert.match(list.held.text, /more waits? for next week's page edit, from 23 November\.$/);
+  // It stays in the list (only pages to leave alone are hidden) and the line says why it waits.
+  assert.match(list.held.text, /in this list waits? for next week's page edit, from 23 November\.$/);
 });
 
 // ---------------------------------------------------------------- B7: the same label gives the same number
