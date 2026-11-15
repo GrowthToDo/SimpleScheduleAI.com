@@ -10,6 +10,7 @@ Say the sentence the first time you use the term.
 - **Runner-up keywords.** Searches where you sit just off page one.
 - **Secondary keywords.** Searches a page already appears for but does not target.
 - **Content gaps.** Searches you already appear for that no page is written for.
+- **Strengthen a page.** Searches one of your pages already shows for, or targets, without ranking yet. A new post would compete with that page.
 - **Decay.** Pages that are being shown less than before.
 - **Keyword map.** Which keyword belongs to which page.
 - **Internal links.** Links from one of our pages to another.
@@ -50,6 +51,11 @@ against the 28 before), never from site-wide searches.
 Use the item's own `recommendation` and `test`. The Growing lists (`pages.growing`,
 `queries.growing`) are good news, not tasks.
 
+A page in `busyWeek[]` is not decaying: one week of its earlier period was unusually busy, and
+without it the drop is too small. Quote its `text`, and its `caution` when set, and say there is
+nothing to fix. Never call it a drop or a worry. A watched page or a lost demand item has Leave it as
+its main button: it puts the item away until `leaveIt.untilText` without using the week's page edit.
+
 ## Runner-up, secondary keywords, content gaps
 
 - Every insight item carries a `brief`, a ready-to-paste task for Claude, written with the
@@ -63,7 +69,14 @@ Use the item's own `recommendation` and `test`. The Growing lists (`pages.growin
   `eligibility`. `finished[]` lists the ones marked done or dismissed; Reopen is a write, so offer
   it only if he asks.
 - Content gaps: lead with `title` and `why`, then the pages in `linkFrom` that could link to it on
-  day one (skip frozen ones or give their date). A new post is not a page edit.
+  day one (skip frozen ones or give their date). A new post is not a page edit. A gap is something to
+  consider adding to the plan, never a post to write this week: the plan file decides which posts are
+  written. Quote `coveredNote` when set. A search a live page already shows for (10 views or more) or
+  targets is not a gap: it is a "Strengthen a page" card on All opportunities, a page edit for that
+  page, because a new post would compete with it.
+- The week's priorities (`top5`): quote each card's `why`. Fewer than `planSize` is normal; never
+  fill the list from elsewhere. When `editStatus` is set, say this week's page edit is used and when
+  the next can go in.
 - A search sits in one list only, so never add one list's count to another's for "how many
   searches need work". There are no Google and Bing cards any more: a row missing from a Bing report
   shows nothing, so never present one as a gap.

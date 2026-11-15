@@ -28,6 +28,11 @@ export const TERMS = {
     explain: 'Searches where a different page from the one you wrote for it is the one showing.',
   },
   unserved: { term: 'Content gaps', explain: 'Searches you already appear for that no page is written for.' },
+  'strengthen-page': {
+    term: 'Strengthen a page',
+    explain:
+      'Searches one of your pages already shows for, or targets, without ranking yet. A new post would compete with that page.',
+  },
   question: {
     term: 'Unanswered questions',
     explain: 'Questions people search for that none of your pages answers well.',
@@ -65,6 +70,8 @@ const CARD_EXPLAIN = {
   'Live page improvement': 'A change to a page that is already live.',
   Verdict: 'The before and after result for a change you made.',
   'Open work': 'Something from your open work list.',
+  'Technical audit': 'Something the technical audit found on the site.',
+  'Not indexed': 'Pages Google has not added to its search results.',
 };
 export const cardExplain = (label) => CARD_EXPLAIN[label] ?? 'Something that needs your attention.';
 

@@ -145,15 +145,19 @@ test('AI keyword line: "N of M" only when there are enough keyword checks', () =
 
 test('print view: each card gives its evidence, recommendation and test, from any of the three shapes', () => {
   assert.deepEqual(print.cardLines({ measured: 'Shown 40 times.', action: 'Add a heading.', test: 'In 28 days.' }), {
+    why: null,
     evidence: 'Shown 40 times.',
     recommendation: 'Add a heading.',
     test: 'In 28 days.',
   });
   assert.deepEqual(print.cardLines({ measured: 'Fell 30%.', fix: 'Look at the title.' }), {
+    why: null,
     evidence: 'Fell 30%.',
     recommendation: 'Look at the title.',
     test: null,
   });
+  // A week card says why it is in this week's list (package 5).
+  assert.equal(print.cardLines({ why: 'It is the next post in your plan.' }).why, 'It is the next post in your plan.');
 });
 
 test('print view: with no range text the heading builds it from the start and end dates', () => {

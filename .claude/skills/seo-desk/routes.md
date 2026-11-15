@@ -20,12 +20,24 @@ repo files were read before the desk read git: then a page edited lately may be 
 ## Plan
 
 `/api/week`: `weekOf`, `weekLabel`, `planSize` (3 or 5), `top5Source` (proposed, chosen or locked),
-`standingLine`, `top5[]`, `leaveAlone[]`, `worries[]`, `watching[]`, `waiting[]`, `nextVerdict`, `opportunities[]`
+`standingLine`, `editStatus`, `top5[]`, `leaveAlone[]`, `worries[]`, `watching[]`, `waiting[]`, `nextVerdict`, `opportunities[]`
 (the next ten), `counts {openOpportunities, worries {total, needLook, waiting}, watching}`, `blockedOnYou[]`,
-`locked`, `pastWeeks[]`. A top-five card: `id`, `title`, `typeLabel`, `term`, `explain`, `measured`,
-`action`, `test`, `eligibility`, `page`, `isPageEdit`, `slot` (new-post, page-edit, verdict, worry,
-other), `source`, `oppId`, `state`. A card that only reports (this week's edit is done, a verdict)
-has `eligibility: null` and `hypothesis: false`. A card on a chosen or locked week can also carry
+`locked`, `pastWeeks[]`. `top5[]` is the week's priorities, most important first, and holds at most
+`planSize` cards: a ceiling, never padded, so fewer is normal. Order: broken things (a dropped page, a
+failed source, a keyword file problem, a Bing crawl problem, a competitor change, or one card for the
+technical audit's critical and high findings), two at most; the plan's next post; the week's one page
+edit while it is unused (a pinned one, else the plan's first open improve row, else the best eligible
+page edit; a slipping page only when it is a worry); a verdict card only when a change is ready to
+judge now; then tasks that are not page edits (one card asking Google to index pages that already
+have 3 or more links, the best page that needs links, open work rows that are real tasks this week,
+technical audit setup findings at medium or more). A content gap, question or AI card is never in it:
+the plan file decides which posts are written. `editStatus` is null while the week's edit is unused;
+once used it is the line "This week's page edit is used (/page, 9 November). The next one can go in
+from 16 November." and there is no card for it. A top-five card: `id`, `title`, `typeLabel`, `term`,
+`explain`, `why` (one plain sentence on why it is in this week's list; quote it), `measured`,
+`action`, `test`, `eligibility`, `page`, `isPageEdit`, `slot` (broken, new-post, page-edit, verdict,
+other), `source`, `oppId`, `state`. A verdict card reports, so it has `eligibility: null` and
+`hypothesis: false`. A card on a chosen or locked week can also carry
 `weekEditDone {page, date, dateText}` (or null) when another page edit is already dated this week.
 `eligibility` (the same on every list: the five, the cards beside it, opportunities, insight cards,
 Cannibalization, Secondary keywords, the page drawer, worries; one function) is `{eligible, from, text}` plus one of: nothing (free, or
@@ -43,9 +55,12 @@ Pages list, audit pages, and `fromHoldText` on link suggestions) carry `frozenUn
 alone on the Cannibalization page (no end date); `foundInGit` marks a page held by a git edit.
 `worries[]`: `{id, kind, page, title, measured, fix, test, isPageEdit, eligibility, waitUntil?,
 waitUntilText?}`. A worry is something that needs a look this week (`total` and `needLook` are the same number).
-`watching[]` has the same fields plus `watch` (the reason in plain words): a page that slipped or
-reads worse but is best left alone for now, because it was edited lately (`waitUntil`) or because
-fewer people may be searching for it. A watched page is never counted or proposed as a worry. A worse verdict worry comes only
+`watching[]` has the same fields plus `watch` (the reason in plain words) and `leaveIt {until,
+untilText}`: a page that slipped or reads worse but is best left alone for now, because it was edited
+lately (`waitUntil`), because a change on it waits for its Did it work verdict (`waitUntil` is that
+date), or because fewer people may be searching for it. A watched page is never counted or proposed as
+a worry. Leave it (its main button) snoozes it until `leaveIt.until` and records no page edit and no
+freeze. A slipping page counts only when its drop survives the spike check (see Decay). A worse verdict worry comes only
 from a change that reads worse the way Did it work reads it (`changeVerdict`); a verdict that another
 change overlaps, or a change that reads mixed, is never a worry. `waiting[]`: `{title, date, dateText, kind: verdict|frozen}`; a
 verdict row with `count` above 1 folds that day's page changes (`pages[]`). `nextVerdict`: `{ready,
@@ -154,10 +169,16 @@ reasonText}], priority (high|medium|low), brief, state}`. `linkFrom` is always a
 empty). `reason` is mentions (the page already says these words), shown (Google already shows the
 page for these searches) or topic (same topic); `reasonText` says it in a sentence.
 Searches that an existing page may already cover are left out (they are secondary keywords or
-sections, not new pages).
+sections, not new pages). A search is a gap only when no live page has 10 views for it, no unwritten
+plan post covers it (same words in any spelling, or two shared meaningful words) and no live page
+targets it: a page with 10 views, or a page that targets it, makes it a `strengthen-page` opportunity
+for that page (a page edit, on All opportunities: "Google already shows /page for this search" or
+"does not rank yet for it"). `covered` counts the searches a planned post already covers and
+`coveredNote` says it ("2 searches are already covered by planned posts."; null for none). A gap's
+recommendation is "Consider adding a post on this to the plan".
 
 `/api/insights/decay`: `items[]` (the slipping page cards: `page, measured, action, test,
-eligibility, evidence {prev, cur, ...}, priority, brief`), `pages {decaying[], growing[]}`,
+eligibility, evidence {prev, cur, ...}, priority, brief, leaveIt`), `busyWeek[]`, `busyWeekNote`, `pages {decaying[], growing[]}`,
 `queries {decaying[], growing[]}`, `note`. Each of the four lists stops at `shownMax` (50) rows.
 The true sizes are in `totals {pages {growing, decaying}, queries {growing, decaying}}` and
 `shownText` says "Showing the first 50 of N" when one was cut. Quote `totals`, not the length of
@@ -171,6 +192,15 @@ window is fixed: the last 28 days against the 28 before, two periods of equal le
 page rows. Brand searches are left out of `queries`. `queriesNote` is set (and the searches lists are
 empty) when the stored search totals for the latest period are a day short of the period before;
 the comparison of searches then waits for the next Search Console refresh. Say so; do not compare.
+The decay cards pass a spike check: each period is split into four 7-day weeks, and a page is decaying
+only when its drop passes the threshold on the plain totals and again with the earlier period's
+busiest week counted as the middle of its other three. An item's `measured` adds the week-by-week
+views of both periods; its percentage stays the plain one. `busyWeek[] {page, prev, adjusted, cur,
+week {start, end, views, text}, prevWeeks, curWeeks, text, caution}` lists the pages that passed only
+on the plain totals ("one busy week, not a real drop"): never decaying, never a worry or a card.
+Quote `text`; `caution` (or null) names a Google ranking update inside that week, never as the cause.
+The Growing list and the `pages.decaying` table are not spike-checked. A lost demand item carries
+`leaveIt {until, untilText}` (28 days on): Leave it records no page edit.
 
 `/api/keyword-map/table`: `counters {all, live, ranks, pending, mapped, unmapped, opportunities,
 runnerUp, cannibalized, clusterConflicts}`, `rows[] {keyword, kind (targeted|discovered), status

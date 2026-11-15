@@ -1,6 +1,8 @@
-// This week: the Monday page. Since you last looked, the priorities (three or five, from
-// Settings; reorder, remove, swap in, lock, copy, save as a PDF through #/print/week), the biggest
-// opportunities, worries, the pages to leave alone this week, what is waiting, and past weeks.
+// This week: the Monday page. Since you last looked, the tiles, the worries (with the pages only
+// being watched folded under them), the priorities (at most three or five, from Settings, and never
+// padded; each says why it is there; reorder, remove, swap in, lock, copy, save as a PDF through
+// #/print/week), with the line saying this week's page edit is used above them when it is, the
+// biggest opportunities, the pages to leave alone this week, what is waiting, and past weeks.
 
 import { renderCard } from './card.js';
 
@@ -11,6 +13,7 @@ let visitRecorded = false;
 let firstSince = null;
 
 const SLOT_NOTE = {
+  broken: 'Broken',
   'new-post': 'New post',
   'page-edit': 'Live page change',
   verdict: 'Verdict',
@@ -185,8 +188,10 @@ function planText(week, ctx) {
   const lines = [`SEO plan for the ${week.weekLabel.replace(/^Week/, 'week')}`];
   if (week.through) lines[0] += ` (data through ${ctx.fmt.date(week.through)})`;
   lines.push('');
+  if (week.editStatus) lines.push(week.editStatus, '');
   week.top5.forEach((c, i) => {
     lines.push(`${i + 1}. ${c.title}`);
+    if (c.why) lines.push(`   Why this week: ${c.why}`);
     if (c.action) lines.push(`   Do: ${c.action}`);
     if (c.test) lines.push(`   How we will know: ${c.test}`);
     if (c.state?.status && c.state.status !== 'new') lines.push(`   Status: ${c.state.status.replace('-', ' ')}`);
@@ -200,8 +205,8 @@ function head(week, ctx, locked) {
     week.top5Source === 'locked'
       ? `Locked${week.lockedAt ? ` on ${fmt.date(week.lockedAt.slice(0, 10))}` : ''}.`
       : week.top5Source === 'chosen'
-        ? 'You chose these five.'
-        : 'The desk proposed these five. Reorder, remove or swap them, then lock the plan.';
+        ? 'You chose these.'
+        : 'The desk proposed these. Reorder, remove or swap them, then lock the plan.';
 
   const lock = h(
     'button',
@@ -211,7 +216,7 @@ function head(week, ctx, locked) {
       onclick: async (e) => {
         const ok = await confirmBox({
           title: "Lock this week's plan?",
-          body: `This saves the five below as the plan of record for the ${week.weekLabel.toLowerCase()}. Past weeks keep it with what got done. You can unlock it later.`,
+          body: `This saves the priorities below as the plan of record for the ${week.weekLabel.toLowerCase()}. Past weeks keep it with what got done. You can unlock it later.`,
           confirmLabel: 'Lock the plan',
         });
         if (!ok) return;
@@ -380,13 +385,13 @@ function topFive(week, ctx, { ids, locked, saveFive }) {
       ? []
       : [
           {
-            label: 'Remove from the five',
+            label: 'Remove from this week',
             onClick: () =>
               saveFive(
                 ids.filter((x) => x !== card.id),
                 ids.length === 1
-                  ? 'Removed. With no cards left, the desk proposes five again.'
-                  : 'Removed from the five. Swap another one in from Biggest opportunities.'
+                  ? 'Removed. With no cards left, the desk proposes the priorities again.'
+                  : "Removed from this week's priorities. Swap another one in from Biggest opportunities."
               ),
           },
         ];
@@ -413,7 +418,7 @@ function topFive(week, ctx, { ids, locked, saveFive }) {
     h(
       'div',
       { class: 'section-head' },
-      h('h2', { class: 'section-title' }, `Top ${week.top5.length || (week.planSize ?? 5)} this week`),
+      h('h2', { class: 'section-title' }, `This week's priorities (${week.top5.length})`),
       h(
         'span',
         { class: 'section-note' },
@@ -421,9 +426,17 @@ function topFive(week, ctx, { ids, locked, saveFive }) {
         reset
       )
     ),
+    // Once this week's page edit is used, one line says so (and when the next can go in) instead of a card.
+    week.editStatus ? h('p', { class: 'section-note', style: { margin: '0 0 10px' } }, week.editStatus) : null,
     week.top5.length
       ? list
-      : h('p', { class: 'empty' }, 'Nothing to propose yet. The five appear once the data and the plan file are read.')
+      : h(
+          'p',
+          { class: 'empty' },
+          week.empty
+            ? 'Nothing to propose yet. The priorities appear once the data and the plan file are read.'
+            : 'Nothing else needs doing this week. The desk lists only what passes the bar, and never pads the list.'
+        )
   );
 }
 
@@ -572,6 +585,7 @@ function worries(week, ctx, { locked, swapIn }) {
                 h(
                   'div',
                   { class: 'row', style: { marginTop: '8px' } },
+                  w.leaveIt ? leaveItButton(w, ctx) : null,
                   h(
                     'button',
                     { type: 'button', class: 'btn btn-quiet btn-small', onclick: details(w, 'Watching') },
@@ -583,6 +597,33 @@ function worries(week, ctx, { locked, swapIn }) {
           )
         )
       : null
+  );
+}
+
+// Leave it on a watched page: snoozes it until the date to look again. It records no page edit and
+// freezes nothing, so this week's page edit stays free.
+function leaveItButton(w, ctx) {
+  const { h, api, toast } = ctx;
+  return h(
+    'button',
+    {
+      type: 'button',
+      class: 'btn btn-primary btn-small',
+      title: `Put it away until ${w.leaveIt.untilText}. No page edit is recorded and nothing is frozen.`,
+      onclick: async (e) => {
+        const button = e.currentTarget;
+        button.disabled = true;
+        try {
+          await api.post(`/api/item/${encodeURIComponent(w.id)}`, { action: 'snooze', until: w.leaveIt.until });
+          toast(`Left alone until ${w.leaveIt.untilText}. No page edit is recorded and nothing is frozen.`, 'success');
+          await ctx.reload();
+        } catch (err) {
+          toast(err.message, 'error');
+          if (document.contains(button)) button.disabled = false;
+        }
+      },
+    },
+    'Leave it'
   );
 }
 

@@ -22,6 +22,7 @@ import {
   planSizeOf,
   dueCounts,
   splitDue,
+  editStatusOf,
 } from '../week.mjs';
 import { brief } from '../brief.mjs';
 import { competitorBrief } from '../competitor-changes.mjs';
@@ -55,7 +56,10 @@ import {
   slugOf,
   loadSettings,
   withCountsWarning,
+  leaveItOf,
 } from './model.mjs';
+import { listAudits, loadAudit } from '../audit/run.mjs';
+import { CHECKS, severityOf, sortIssues } from '../audit/checks.mjs';
 import { n0, pct, sumRange } from './fmt.mjs';
 import { ownership, decayItems } from './ext/insights.mjs';
 
@@ -650,13 +654,15 @@ const SLOT_LABEL = {
   verdict: 'Verdict',
   other: 'Open work',
 };
+// The label of a card that is neither an opportunity nor a worry, by where it came from.
+const SOURCE_LABEL = { audit: 'Technical audit', index: 'Not indexed' };
 
 // The plain label of what a card is: the opportunity type when it came from one, else its kind.
 function cardLabel(model, card) {
   const opp = card.oppId ? model.oppById.get(card.oppId) : null;
   if (opp) return typeLabelOf(opp.type, opp.source);
   if (card.source === 'worry') return WORRY_LABEL[String(card.id).split(':')[0]] ?? 'Worry';
-  return SLOT_LABEL[card.slot] ?? 'Task';
+  return SOURCE_LABEL[card.source] ?? SLOT_LABEL[card.slot] ?? 'Task';
 }
 
 // The standard term and its one sentence for a card: an opportunity's from its type, any other card's
@@ -688,7 +694,7 @@ function cardOut(model, card) {
       links: { live: null, searchConsole: null },
     };
   }
-  // A card that only reports (this week's edit is done, a verdict) carries no eligibility at all.
+  // A card that only reports (a verdict) carries no eligibility at all.
   return {
     ...card,
     ...editPagesOf(model, card.oppId),
@@ -719,6 +725,43 @@ function visibleWorries(model, all) {
   });
 }
 
+// The changes Did it work has not judged yet, by page: Map<page, [{changeDate, judgeFrom}]>. A slipping
+// page with one is watched until that verdict can be read (week.mjs slippingPages).
+function pendingByPage(model) {
+  const out = new Map();
+  const add = (page, changeDate, judgeFrom) => {
+    if (!page || !changeDate || !judgeFrom) return;
+    out.set(page, [...(out.get(page) ?? []), { changeDate, judgeFrom }]);
+  };
+  for (const p of pendingEdits(model)) add(p.page, p.changeDate, p.judgeFrom);
+  for (const m of moneyPageVerdicts(model)) if (m.status === 'too-early') add(m.page, m.changeDate, m.judgeFrom);
+  return out;
+}
+
+// The latest technical audit for the five: {startedAt, issues: [{id, name, severity, setup, pages}]},
+// worst first, each at its level as the checks read today. Null before any audit, or when it cannot be
+// read.
+function auditSummary() {
+  try {
+    const first = listAudits()[0];
+    const run = first ? loadAudit(first.startedAt) : null;
+    if (!run) return null;
+    const setup = new Map(CHECKS.map((c) => [c.id, c.setup === true]));
+    return {
+      startedAt: run.startedAt,
+      issues: sortIssues(run.issues ?? []).map((i) => ({
+        id: i.id,
+        name: plain(i.name ?? i.what ?? i.id),
+        severity: severityOf(i.id, i.severity),
+        setup: setup.get(i.id) ?? false,
+        pages: (i.pages ?? []).length,
+      })),
+    };
+  } catch {
+    return null;
+  }
+}
+
 // Everything the week page can show as a card, by id: the proposal, every opportunity,
 // every worry and the open work rows. The founder's chosen five come from here.
 export function weekModel(model) {
@@ -743,6 +786,8 @@ export function weekModel(model) {
       items,
       decay: decayNotes(model),
       cautionsOf: (v) => verdictCautions(model, v),
+      pending: pendingByPage(model),
+      plan: local.plan ?? null,
       today,
     });
     // A worry needs a look this week. One whose own advice is to leave the page (watch) is shown
@@ -755,7 +800,6 @@ export function weekModel(model) {
       plan: local.plan ?? null,
       ranked: activeOpps(model),
       due: local.due ?? [],
-      pending: verdictsWaiting(model),
       worries: worryList,
       openWork: local.openWork ?? [],
       frozen,
@@ -765,6 +809,7 @@ export function weekModel(model) {
       size: planSizeOf(),
       // A due edit is ready only when the Search Console data covers its 28 days after.
       through: model.snapObjs.gsc?.through ?? null,
+      audit: auditSummary(),
     });
     const opts = { recent };
     const pool = new Map();
@@ -785,8 +830,8 @@ export function weekModel(model) {
 // another card) shows on it. A card whose own item is the week's edit is not held back by the week
 // rule, and a card that edits no live page is left as it is.
 function freshen(model, card) {
-  // A card that only reports (this week's edit is done, a verdict) has no chip, even one locked before.
-  if (card.readOnly || card.source === 'verdict') return { ...card, eligibility: null, hypothesis: false };
+  // A card that only reports (a verdict) has no chip, even one locked before.
+  if (card.source === 'verdict') return { ...card, eligibility: null, hypothesis: false };
   if (!card.isPageEdit || !card.page) return card;
   const own = itemOf(model, keyOfCard(card.id))?.status === 'done';
   const e = eligibility({ isPageEdit: true, page: card.page }, model.frozen, model.today, {
@@ -803,17 +848,26 @@ function freshen(model, card) {
 
 // The five cards the week page shows: the locked plan, else the founder's chosen five, else
 // the proposal. Raw cards (no state, brief or links). Stored cards are freshened first.
+// The old "This week's page edit is done" card (retired 2026-11-15: the week says so in editStatus) is
+// left out of a week saved or locked with it, without an error.
+const RETIRED_CARD = /^page-edit-done-/;
+const CHOSEN_WHY = 'You chose it for this week.';
+
 export function currentTop5(model) {
   const { weekOf, proposed, pool } = weekModel(model);
   const stored = getWeek(weekOf);
-  if (stored?.locked && stored.cards?.length)
-    return { cards: stored.cards.map((c) => freshen(model, c)), source: 'locked', stored };
+  const kept = (c) => !RETIRED_CARD.test(String(c?.id ?? ''));
+  // A card the founder chose or locked keeps its own why when it has one, else says it was chosen.
+  const why = (c) => (c.why ? c : { ...c, why: CHOSEN_WHY });
+  if (stored?.locked && stored.cards?.filter(kept).length)
+    return { cards: stored.cards.filter(kept).map((c) => why(freshen(model, c))), source: 'locked', stored };
   if (stored?.top5?.length) {
     return {
       cards: stored.top5
+        .filter((id) => !RETIRED_CARD.test(String(id)))
         .map((id) => pool.get(id))
         .filter(Boolean)
-        .map((c) => freshen(model, c)),
+        .map((c) => why(freshen(model, c))),
       source: 'chosen',
       stored,
     };
@@ -887,6 +941,9 @@ export function weekView(model) {
       test: c.test,
       eligibility: withEligibilityText(c.eligibility),
       ...(w.waitUntil ? { waitUntilText: longDate(w.waitUntil) } : {}),
+      // A watched card's own advice is to leave the page alone: Leave it snoozes it until the date to
+      // look again (or 28 days) and records no page edit and no freeze.
+      ...(w.watch ? { leaveIt: leaveItOf(model, w.waitUntil ?? null) } : {}),
       brief: brief(c, { frozen: model.frozen, hold: withEligibilityText(c.eligibility) }),
       links: linksFor(w.page),
       state: itemState(model, keyOfCard(c.id)),
@@ -903,6 +960,8 @@ export function weekView(model) {
     ...(warnings.length ? { warnings } : {}),
     weekOf,
     weekLabel: `Week of ${longDate(weekOf)}`,
+    // Once this week's page edit is used, one line says so (and when the next can go in) instead of a card.
+    editStatus: editStatusOf(model.frozen, model.today),
     standingLine:
       'Rankings, impressions and visits are not sales. Customers come through personal contacts. This page tracks how easy we are to find.',
     sinceLastVisit: sinceLastVisit(model, last),

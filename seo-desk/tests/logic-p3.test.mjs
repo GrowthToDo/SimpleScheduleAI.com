@@ -200,8 +200,10 @@ test('L1: the five never offer a page git shows edited lately, and C4: never the
   const cards = week.proposeTop5({ plan, ranked, frozen: new Map(), recent, today: '2026-11-16', size: 5 });
   const edit = cards.find((c) => c.isPageEdit);
   assert.equal(edit.page, '/blog/free-guide', 'the plan row and the opportunity on the edited page are skipped');
+  // Package 5: the tasks are one card for the best page that needs links (never a second one), and a
+  // "write a post" idea (the unserved items) is never proposed.
   const others = cards.filter((c) => c.slot === 'other').map((c) => c.oppId);
-  assert.deepEqual(others, ['gap-1', 'same-1', 'other']);
+  assert.deepEqual(others, ['gap-1']);
   const keys = cards.map((c) => `${c.page}|${c.action}`);
   assert.equal(new Set(keys).size, keys.length);
 });
@@ -225,19 +227,13 @@ test('W2, L5, W6: the verdict slot counts page changes and commits, reads the ne
     { page: '/blog/c-guide', judgeFrom: '2026-11-18' },
   ];
   const frozen = new Map([['/blog/d-guide', { since: '2026-11-01', until: '2026-11-29' }]]);
-  const [next] = week.proposeTop5({ plan: null, pending, frozen, today: TODAY }).filter((c) => c.slot === 'verdict');
-  assert.equal(next.title, 'The next verdict is ready on 15 November');
-  assert.match(next.measured, /2 page changes come due on 15 November/);
-
-  const [done] = week
-    .proposeTop5({
-      plan: null,
-      frozen: new Map([['/blog/e-guide', { since: '2026-11-10', until: '2026-12-08' }]]),
-      today: TODAY,
-    })
-    .filter((c) => c.readOnly);
-  assert.equal(done.eligibility, null);
-  assert.equal(done.hypothesis, false);
+  // Package 5: with nothing ready to judge there is no verdict card (the Next verdict tile has the date),
+  // and a used page edit is a line (editStatus), not a card.
+  const next = week.proposeTop5({ plan: null, pending, frozen, today: TODAY }).filter((c) => c.slot === 'verdict');
+  assert.deepEqual(next, []);
+  const used = new Map([['/blog/e-guide', { since: '2026-11-10', until: '2026-12-08' }]]);
+  assert.deepEqual(week.proposeTop5({ plan: null, frozen: used, today: TODAY }), []);
+  assert.match(week.editStatusOf(used, TODAY), /^This week's page edit is used \(\/blog\/e-guide, 10 November\)\./);
 });
 
 test('the week page folds the verdicts of one day into one waiting row', () => {
@@ -553,9 +549,12 @@ test('C2, C3, C5: the week page agrees with the server on the freeze, the git ed
   assert.ok(alone?.foundInGit);
   assert.equal(alone.until, '2026-12-07');
   assert.deepEqual(v.counts.worries, { total: v.worries.length, needLook: v.worries.length, waiting: 0 });
-  const doneCard = v.top5.find((c) => c.readOnly);
-  assert.equal(doneCard.eligibility, null);
-  assert.equal(doneCard.hypothesis, false);
+  // Package 5: the used week edit is one line, not a card.
+  assert.equal(
+    v.top5.some((c) => /^page-edit-done-/.test(c.id)),
+    false
+  );
+  assert.match(v.editStatus, /^This week's page edit is used \(/);
 });
 
 test('C7, C6, L6, M1: Did it work counts distinct changes, reads an overlapped batch from its clean pages, and cautions money pages', () => {

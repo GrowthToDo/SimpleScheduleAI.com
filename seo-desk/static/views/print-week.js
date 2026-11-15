@@ -1,5 +1,6 @@
-// The week's plan as a clean page to print or save as a PDF (#/print/week). The priorities with
-// the evidence, the recommendation and the test for each, the worries, the pages to leave alone
+// The week's plan as a clean page to print or save as a PDF (#/print/week). The line saying this
+// week's page edit is used (when it is), the priorities with why each is there, the evidence, the
+// recommendation and the test for each, the worries, the pages to leave alone
 // this week and what is waiting. "Save as PDF" opens the browser's print dialog, where Save as PDF
 // is one of the printers. The print styles in app.css hide the sidebar, the top bar and the
 // buttons, and print black on white from either theme.
@@ -9,9 +10,11 @@
 
 const STANDING = 'Search numbers show findability and credibility. They are not sales.';
 
-// The three lines of a week card, a worry or an opportunity, whatever its shape.
+// The lines of a week card, a worry or an opportunity, whatever its shape: why it is in this week's
+// list (week cards only), the evidence, the recommendation and the test.
 export function cardLines(card) {
   return {
+    why: card?.why ?? null,
     evidence: card?.measured ?? null,
     recommendation: card?.action ?? card?.fix ?? null,
     test: card?.test ?? null,
@@ -57,6 +60,7 @@ export async function render(el, ctx) {
     return h(
       'dl',
       { class: 'pw-facts' },
+      l.why ? [h('dt', {}, 'Why this week'), h('dd', {}, l.why)] : null,
       l.evidence ? [h('dt', {}, 'Evidence'), h('dd', {}, l.evidence)] : null,
       l.recommendation
         ? [
@@ -130,8 +134,13 @@ export async function render(el, ctx) {
         h('p', { class: 'pw-sub' }, STANDING)
       ),
       section(
-        `This week's ${week.top5.length === 1 ? 'priority' : `${week.top5.length} priorities`}`,
-        week.top5.length ? priorities : h('p', {}, 'Nothing proposed yet.'),
+        `This week's priorities (${week.top5.length})`,
+        h(
+          'div',
+          {},
+          week.editStatus ? h('p', { class: 'pw-note' }, week.editStatus) : null,
+          week.top5.length ? priorities : h('p', {}, 'Nothing needs doing this week.')
+        ),
         week.locked ? 'The plan is locked.' : 'The desk proposed these. The plan is not locked yet.'
       ),
       section(

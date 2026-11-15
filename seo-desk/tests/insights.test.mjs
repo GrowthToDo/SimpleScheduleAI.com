@@ -31,7 +31,8 @@ process.env.SEO_DESK_DATA = FULL;
 
 const store = await import('../lib/store.mjs');
 const { buildModel, invalidate, decorateOpp, loadSettings, TYPE_LABEL } = await import('../lib/api/model.mjs');
-const { weekView, weekModel, opportunitiesList } = await import('../lib/api/work.mjs');
+const { weekView, weekModel, opportunitiesList, activeOpps } = await import('../lib/api/work.mjs');
+const activeIds = (model) => new Set(activeOpps(model).map((o) => o.id));
 const { targetsView, searchView } = await import('../lib/api/search.mjs');
 const { changeSettings } = await import('../lib/api/actions.mjs');
 const { addDays } = await import('../lib/dates.mjs');
@@ -148,10 +149,12 @@ const QP_CUR = [
   qp('pricing target phrase', '/pricing', 50, 12),
   qp('shared topic phrase', '/blog/alpha-guide', 40, 11),
   qp('shared topic phrase', '/blog/beta-notes', 40, 12),
-  qp('float pool staffing policy', '/blog/epsilon-old', 50, 31),
-  qp('float pool staffing rules', '/blog/epsilon-old', 40, 28),
-  qp('how long is a rota shift', '/blog/delta-new', 45, 33),
-  qp('on-call pay rules', '/blog/epsilon-old', 35, 40),
+  // The gap searches: the query-only rows below say how often each showed the site; no page had the
+  // 10 views that would make the search that page's job instead of a gap (rules.mjs unservedSplit).
+  qp('float pool staffing policy', '/blog/epsilon-old', 9, 31),
+  qp('float pool staffing rules', '/blog/epsilon-old', 9, 28),
+  qp('how long is a rota shift', '/blog/delta-new', 9, 33),
+  qp('on-call pay rules', '/blog/epsilon-old', 9, 40),
   qp('simplescheduleai login', '/', 30, 1),
 ];
 const queryRow = (query, impressions, position, clicks = 50) => ({ query, clicks, impressions, position });
@@ -1281,13 +1284,14 @@ test('planSize 3 gives three cards in the recipe order and never two page edits;
   use(FULL);
   const five = weekView(buildModel());
   assert.equal(five.planSize, 5);
-  assert.equal(five.top5.length, 5);
+  // The size is a ceiling, never a target: the list is not padded (package 5).
+  assert.ok(five.top5.length >= 1 && five.top5.length <= 5);
   const saved = changeSettings({ planSize: 3 });
   assert.equal(saved.planSize, 3);
   try {
     const three = weekView(buildModel());
     assert.equal(three.planSize, 3);
-    assert.equal(three.top5.length, 3);
+    assert.equal(three.top5.length, Math.min(3, five.top5.length));
     assert.deepEqual(
       three.top5.map((c) => c.id),
       five.top5.slice(0, 3).map((c) => c.id),
@@ -1301,7 +1305,7 @@ test('planSize 3 gives three cards in the recipe order and never two page edits;
   } finally {
     changeSettings({ planSize: 5 });
   }
-  assert.equal(weekView(buildModel()).top5.length, 5);
+  assert.equal(weekView(buildModel()).top5.length, five.top5.length);
   assert.throws(() => changeSettings({ planSize: 4 }), /3 or 5/);
   assert.throws(() => changeSettings({ planSize: '3' }), /3 or 5/);
 });
@@ -1321,11 +1325,17 @@ test('proposeTop5 with a size fills that many slots and never two page edits', a
   const ranked = [
     opp('e1', true, 9),
     opp('e2', true, 8),
-    opp('o1', false, 7),
+    { ...opp('o1', false, 7), type: 'needs-links' },
     opp('o2', false, 6),
     opp('o3', false, 5),
   ];
-  const args = { ranked, frozen: new Map(), items: {}, today: '2026-11-10', due: [], worries: [], openWork: [] };
+  // Open work rows that are tasks this week fill the places after the page that needs links.
+  const openWork = ['First', 'Second', 'Third'].map((w) => ({
+    section: 'Open after the last session',
+    text: `${w} invented tidy-up in the repo.`,
+    blockedOnFounder: false,
+  }));
+  const args = { ranked, frozen: new Map(), items: {}, today: '2026-11-10', due: [], worries: [], openWork };
   const full = proposeTop5(args);
   const three = proposeTop5({ ...args, size: 3 });
   assert.equal(three.length, 3);
@@ -1334,6 +1344,7 @@ test('proposeTop5 with a size fills that many slots and never two page edits', a
     full.slice(0, 3).map((c) => c.id)
   );
   assert.ok(three.filter((c) => c.isPageEdit).length <= 1);
+  assert.equal(full.length, 5);
   assert.equal(proposeTop5({ ...args, size: 5 }).length, full.length);
 });
 
@@ -1692,31 +1703,34 @@ test('cluster conflict: the same or a more specific variant of a live page targe
   for (const x of cann.clusterConflicts) assert.doesNotMatch(JSON.stringify(x), /[–—]/);
 });
 
-test('content gaps leave out a conflict, keep a broader search and a search on a draft page target', async () => {
+test('content gaps leave out a conflict; a search a live page already shows for is that page job', async () => {
   useSec();
   const model = buildModel();
   const unserved = (q) => model.opps.some((o) => o.type === 'unserved' && o.query === q);
-  for (const q of ['float pool coverage cost', 'pool float', 'night swap rota guide', 'guitar chord charts'])
-    assert.ok(unserved(q), `${q} is a gap candidate for the rules`);
+  const strengthen = (q) => model.opps.find((o) => o.type === 'strengthen-page' && o.query === q) ?? null;
+  // Every one of these shows a live page 10 times or more, so none is a gap (package 5): each is that
+  // page's job, a page edit, and a new post would compete with it.
+  for (const q of ['float pool coverage cost', 'pool float', 'float pool cost', 'guitar chord charts']) {
+    assert.equal(unserved(q), false, `${q} is not a gap`);
+    assert.equal(strengthen(q)?.page, '/blog/alpha-guide', `${q} is /blog/alpha-guide's job`);
+    assert.match(strengthen(q).measured, /Google already shows \/blog\/alpha-guide for this search/);
+  }
+  // The page that is not live counts for nothing; the draft's target is not live either, so the
+  // search shows only the page that is not live and is left out.
+  assert.equal(unserved('night swap rota guide'), false);
   // The page's own target in another word order is that target, not a gap (matchKey).
   assert.equal(unserved('coverage float pool'), false);
+  // One owner per search: a cluster conflict and a secondary keyword keep theirs.
+  const active = activeIds(model);
+  assert.equal(active.has(strengthen('float pool coverage cost').id), false, 'the cluster conflict list owns it');
+  assert.equal(active.has(strengthen('pool float').id), false, 'secondary keywords own it');
+  assert.equal(active.has(strengthen('float pool cost').id), true);
   const gaps = (await get('/api/insights/content-gaps')).json;
-  const inGaps = (q) => gaps.items.some((g) => g.searches.some((s) => s.query === q));
-  assert.equal(inGaps('float pool coverage cost'), false, 'a section of the existing page');
-  assert.equal(inGaps('coverage float pool'), false);
-  // Audit B5: one owner per search. The page shows for this broader search and secondary keywords owns it.
-  assert.equal(inGaps('pool float'), false, 'a secondary keyword of the page, not a gap');
-  assert.equal(inGaps('float pool cost'), true, 'it lacks a word of the target');
-  assert.equal(inGaps('night swap rota guide'), true, 'the draft page covers nothing yet');
-  assert.equal(inGaps('guitar chord charts'), true);
   assert.equal(gaps.count, gaps.items.length);
   assert.equal((await get('/api/nav')).json.counts.contentGaps, gaps.count);
-  const guitar = gaps.items.find((g) => g.searches.some((s) => s.query === 'guitar chord charts'));
-  assert.equal(
-    (await post_(`/api/insights/content-gaps/${guitar.id}`, { action: 'ignore', reason: 'not ours' })).status,
-    200
-  );
-  assert.equal((await post_(`/api/insights/content-gaps/${guitar.id}`, { action: 'reopen' })).status, 200);
+  const inGaps = (q) => gaps.items.some((g) => g.searches.some((s) => s.query === q));
+  for (const q of ['float pool coverage cost', 'pool float', 'float pool cost', 'guitar chord charts'])
+    assert.equal(inGaps(q), false);
 });
 
 test('the keyword map CSV keeps its columns and adds the new ones at the end', async () => {
@@ -1919,8 +1933,12 @@ test('content gaps: each card carries its recommendation, test and brief from th
   );
   assert.match(gap.recommendation, /^Hypothesis: .* may /);
   assert.ok(gap.test);
-  assert.match(gap.brief, /^Task for the SimpleScheduleAI website: Write a new post: Float pool staffing policy/);
-  assert.match(gap.brief, /Recommendation \(a hypothesis\): A new page/);
+  assert.match(
+    gap.brief,
+    /^Task for the SimpleScheduleAI website: Consider adding this to the plan: Float pool staffing policy/
+  );
+  assert.match(gap.brief, /Recommendation \(a hypothesis\): A post written for/);
+  assert.match(gap.brief, /Consider adding it to the plan; the plan decides which posts are written\./);
   assert.match(gap.brief, /publish-pipeline\.md/);
   assert.match(gap.brief, /draft: true/);
   assert.doesNotMatch(gap.brief, /Hypothesis:/);
@@ -2307,13 +2325,14 @@ const OWN_QP = [
   qp('weekend night cover plan', '/blog/beta-notes', 40, 14),
   qp('weekend night cover plan', '/blog/gamma-tips', 35, 9),
   // S6 no page ranks and nothing else covers it: a content gap
-  qp('pricing tiers for wards', '/pricing', 40, 35),
+  // 9 views on the page: under the 10 that would make it /pricing's job (package 5), so still a gap.
+  qp('pricing tiers for wards', '/pricing', 9, 35),
   // S7 a question, a gap and a secondary keyword at once: secondary keywords owns it
   qp('how do wards plan weekend cover each month', '/blog/gamma-tips', 40, 33),
   // S8 a question searched 25 times: under the content gap minimum of 30, so the question owns it
   qp('how do small wards share one rota nurse', '/pricing', 25, 34),
   // S9 a question and a content gap at once: the content gap owns it
-  qp('how many nurses cover a small ward overnight', '/pricing', 45, 38),
+  qp('how many nurses cover a small ward overnight', '/pricing', 9, 38),
 ];
 writeSnap(OWN, 'gsc', {
   ...gscData(),

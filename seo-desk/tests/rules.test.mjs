@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 const rules = await import('../lib/rules.mjs');
 const { score, rank } = await import('../lib/score.mjs');
 const { THRESHOLDS, PRESETS, DEFAULT_MONEY_PAGES } = await import('../lib/config.mjs');
-const { windows } = await import('../lib/dates.mjs');
+const { windows, addDays } = await import('../lib/dates.mjs');
 
 const today = '2026-11-10';
 const W = windows(today); // cur 2026-10-11..2026-11-07, prev 2026-09-13..2026-10-10
@@ -153,22 +153,20 @@ test('competing-pages fires for a split query and skips lopsided, thin and brand
 
 // ---------------------------------------------------------------- slipping
 
-const steadyPages = (n, prev, cur) =>
-  Array.from({ length: n }, (_, i) => [
-    pd(`/blog/steady-${i}`, PREV_DAY, 0, prev, 8),
-    pd(`/blog/steady-${i}`, CUR_DAY, 0, cur, 8),
-  ]).flat();
+// A page's views for one 28 day period, a quarter in each of its four weeks, so no week is busier than
+// the others (the slipping rule's spike check replaces a busy week; see logic-p5.test.mjs).
+const fourWeeks = (page, start, total, position = 8) =>
+  [0, 7, 14, 21].map((d) => pd(page, addDays(start, d), 0, total / 4, position));
+const both = (page, prev, cur) => [...fourWeeks(page, W.prev.start, prev), ...fourWeeks(page, W.cur.start, cur)];
+const steadyPages = (n, prev, cur) => Array.from({ length: n }, (_, i) => both(`/blog/steady-${i}`, prev, cur)).flat();
 
 test('slipping fires on a drop of 30 percent or more that also trails the median page by 30 points', () => {
   const snaps = withGsc({
     pageDaily: [
       ...steadyPages(6, 100, 100),
-      pd('/blog/slip', PREV_DAY, 0, 100, 8),
-      pd('/blog/slip', CUR_DAY, 0, 69, 8), // -31% -> fires
-      pd('/blog/almost', PREV_DAY, 0, 100, 8),
-      pd('/blog/almost', CUR_DAY, 0, 71, 8), // -29% -> no
-      pd('/blog/small', PREV_DAY, 0, 49, 8),
-      pd('/blog/small', CUR_DAY, 0, 0, 8), // prev under 50 -> no
+      ...both('/blog/slip', 100, 69), // -31% -> fires
+      ...both('/blog/almost', 100, 71), // -29% -> no
+      ...both('/blog/small', 49, 0), // prev under 50 -> no
     ],
   });
   const out = rules.detectSlipping(snaps, cfg);
@@ -185,8 +183,7 @@ test('slipping stays quiet when every page fell about the same (the whole site m
   const snaps = withGsc({
     pageDaily: [
       ...steadyPages(6, 100, 65),
-      pd('/blog/slip', PREV_DAY, 0, 100, 8),
-      pd('/blog/slip', CUR_DAY, 0, 60, 8), // -40% but only 5 points behind the median of -35%
+      ...both('/blog/slip', 100, 60), // -40% but only 5 points behind the median of -35%
     ],
   });
   assert.equal(rules.detectSlipping(snaps, cfg).length, 0);
@@ -216,10 +213,11 @@ test('wrong-page fires when another page takes the registry keyword', () => {
 
 // ---------------------------------------------------------------- unserved
 
-test('unserved fires for demand with no page in the top 20, unless the registry already targets it', () => {
+test('unserved fires for demand with no page in the top 20; a page with 10 views or a target makes it that page job', () => {
   const snaps = withGsc({
     qpCur: [
-      qp('rural hospital float rules', '/blog/a', 30, 25),
+      // Four pages 8 times each: no page has the 10 views that would make the search its job.
+      ...['a', 'b', 'c', 'd'].map((x) => qp('rural hospital float rules', `/blog/${x}`, 8, 25)),
       qp('exactly twenty', '/blog/a', 60, 20),
       qp('too thin', '/blog/a', 29, 40),
       qp('targeted keyword', '/blog/a', 50, 30),
@@ -236,6 +234,12 @@ test('unserved fires for demand with no page in the top 20, unless the registry 
   assert.equal(out[0].isPageEdit, false);
   assert.equal(out[0].page, null);
   assert.equal(out[0].signals.importance, 0.3);
+  // The targeted search and the one /blog/a shows 60 times at 20 are not gaps; the targeted one has a
+  // page with 10 views (/blog/a), so it is that page's job.
+  assert.deepEqual(
+    rules.detectStrengthenPage(snaps, cfg).map((o) => [o.page, o.query]),
+    [['/blog/a', 'targeted keyword']]
+  );
 });
 
 // ---------------------------------------------------------------- question
@@ -724,9 +728,11 @@ test('B2 and B8: an unserved card counts real searches and names the best placed
       qp('rural ward cover', '/blog/placed', 12, 35),
     ],
   });
-  const [o] = rules.detectUnserved(snaps, cfg);
+  // A live page with 10 views makes the search that page's job, not a gap (rules.mjs unservedSplit).
+  assert.deepEqual(rules.detectUnserved(snaps, cfg), []);
+  const [o] = rules.detectStrengthenPage(snaps, cfg);
   assert.match(o.measured, /showed our site 54 times/);
-  assert.match(o.measured, /\/blog\/placed, at position 35\.0/);
+  assert.match(o.measured, /Google already shows \/blog\/placed for this search, at position 35\.0/);
   assert.doesNotMatch(o.measured, /\/blog\/busy/);
 });
 
@@ -734,10 +740,13 @@ test('B5: a content gap needs no live page at position 20 or better; a page that
   const rows = [qp('weekend cover plan', '/blog/old', 30, 5), qp('weekend cover plan', '/blog/live', 30, 33)];
   const snaps = withGsc({ qpCur: rows });
   snaps.local = localData({ livePages: [{ page: '/blog/live' }] });
-  const [o] = rules.detectUnserved(snaps, cfg);
+  // /blog/live has 30 views at 33, so the search is its job; the page at 5 is not live and counts for nothing.
+  const [o] = rules.detectStrengthenPage(snaps, cfg);
   assert.equal(o.query, 'weekend cover plan');
+  assert.equal(o.page, '/blog/live');
   snaps.local = localData({ livePages: [{ page: '/blog/live' }, { page: '/blog/old' }] });
   assert.deepEqual(rules.detectUnserved(snaps, cfg), []);
+  assert.deepEqual(rules.detectStrengthenPage(snaps, cfg), []);
 });
 
 test('B2: a question card needs 10 real searches, and says how often the search showed our site', () => {

@@ -366,17 +366,19 @@ test('proposeTop5 follows the recipe and never returns two page edit cards', () 
     items: {},
     today: TODAY,
   });
+  // Broken first, then the next post, the page edit, a ready verdict and the tasks (package 5). The AI
+  // card and the question are never proposed: they are not tasks for this week.
   assert.equal(cards.length, 5);
   assert.deepEqual(
     cards.map((c) => c.slot),
-    ['new-post', 'page-edit', 'verdict', 'worry', 'other']
+    ['broken', 'new-post', 'page-edit', 'verdict', 'other']
   );
-  assert.equal(cards[0].title, 'Safe harbor nursing in Texas');
-  assert.equal(cards[0].source, 'plan');
-  assert.equal(cards[1].page, '/blog/open-row', 'first unticked row that is not frozen');
-  assert.equal(cards[1].isPageEdit, true);
-  assert.equal(cards[2].source, 'verdict');
-  assert.equal(cards[3].id, 'crawl-issue:x');
+  assert.equal(cards[0].id, 'crawl-issue:x');
+  assert.equal(cards[1].title, 'Safe harbor nursing in Texas');
+  assert.equal(cards[1].source, 'plan');
+  assert.equal(cards[2].page, '/blog/open-row', 'first unticked row that is not frozen');
+  assert.equal(cards[2].isPageEdit, true);
+  assert.equal(cards[3].source, 'verdict');
   assert.equal(cards[4].oppId, 'link1');
   assert.equal(cards.filter((c) => c.isPageEdit).length, 1);
   assert.equal(new Set(cards.map((c) => c.id)).size, cards.length, 'ids are unique');
@@ -398,6 +400,7 @@ test('proposeTop5 follows the recipe and never returns two page edit cards', () 
         'source',
         'test',
         'title',
+        'why',
       ].sort()
     );
     assert.equal(/[–—]/.test(JSON.stringify(c)), false);
@@ -422,7 +425,11 @@ test('proposeTop5 ids are stable across calls', () => {
 });
 
 test('proposeTop5 still returns cards when the plan failed to load', () => {
-  const ranked = [rankedOpp('edit1', 90), rankedOpp('edit2', 80), rankedOpp('link1', 70, { isPageEdit: false })];
+  const ranked = [
+    rankedOpp('edit1', 90),
+    rankedOpp('edit2', 80),
+    rankedOpp('link1', 70, { isPageEdit: false, type: 'needs-links' }),
+  ];
   const cards = week.proposeTop5({
     plan: { file: null, error: 'No plan file found.', posts: [], improve: [] },
     ranked,
@@ -460,7 +467,7 @@ test('page edit fallback skips frozen pages and opportunities the founder ignore
   assert.deepEqual(cards[0].eligibility, { eligible: true, from: null });
 });
 
-test('with nothing due, the verdict slot names the next verdict date from the frozen pages', () => {
+test('with nothing ready to judge there is no verdict card (the Next verdict tile has the date)', () => {
   const frozen = new Map([['/a', { until: '2026-11-29', since: '2026-11-01', why: 'x' }]]);
   const cards = week.proposeTop5({
     plan: emptyPlan,
@@ -472,13 +479,17 @@ test('with nothing due, the verdict slot names the next verdict date from the fr
     items: {},
     today: TODAY,
   });
-  const v = cards.find((c) => c.slot === 'verdict');
-  assert.ok(v);
-  assert.match(v.title + v.measured, /1 December/);
+  assert.equal(
+    cards.find((c) => c.slot === 'verdict'),
+    undefined
+  );
 });
 
 test('a pinned opportunity goes ahead of better scored ones in the open slot', () => {
-  const ranked = [rankedOpp('l1', 70, { isPageEdit: false }), rankedOpp('l2', 60, { isPageEdit: false })];
+  const ranked = [
+    rankedOpp('l1', 70, { isPageEdit: false, type: 'needs-links' }),
+    rankedOpp('l2', 60, { isPageEdit: false, type: 'needs-links' }),
+  ];
   const items = { l2: { status: 'new', pinnedWeek: '2026-11-09', notes: [] } };
   const cards = week.proposeTop5({
     plan: emptyPlan,
@@ -872,7 +883,7 @@ test('a pinned page edit from last week is not pinned this week', () => {
   assert.equal(edit.page, '/blog/frozen-row', 'the plan row leads');
 });
 
-test('a page edit worry is skipped when a page edit card already exists', () => {
+test('a slipping worry is not a second page edit, and a broken worry comes first', () => {
   const editWorry = {
     id: 'slipping-page:/blog/w',
     kind: 'slipping-page',
@@ -892,8 +903,12 @@ test('a page edit worry is skipped when a page edit card already exists', () => 
     fix: 'f',
   };
   const cards = top({ worries: [editWorry, crawl] });
-  const w = cards.find((c) => c.slot === 'worry');
-  assert.equal(w.id, 'crawl-issue:y');
+  assert.equal(cards[0].id, 'crawl-issue:y');
+  assert.equal(cards[0].slot, 'broken');
+  assert.equal(
+    cards.some((c) => c.id === 'slipping-page:/blog/w'),
+    false
+  );
   assert.equal(cards.filter((c) => c.isPageEdit).length, 1);
 });
 
@@ -974,14 +989,18 @@ test('blockedOnYou lists founder blocked open work, and the fifth card falls bac
     ['Ship the weekend mechanism.'],
     'a blocked row is shown under Waiting on you, not as a card'
   );
-  const withOpp = top({ plan: emptyPlan, ranked: [rankedOpp('l1', 70, { isPageEdit: false })], openWork });
+  const withOpp = top({
+    plan: emptyPlan,
+    ranked: [rankedOpp('l1', 70, { isPageEdit: false, type: 'needs-links' })],
+    openWork,
+  });
   assert.equal(withOpp.find((c) => c.slot === 'other').oppId, 'l1');
   assert.deepEqual(week.blockedOnYou([]), []);
 });
 
 // ---------------------------------------------------------------- final fix wave
 
-test('once a page edit is dated inside this week, the slot says so and no other page edit is offered', () => {
+test('once a page edit is dated inside this week, no page edit card is offered and editStatus says so', () => {
   // Monday 9 November is inside the week of 9 November (today is the 10th).
   const frozen = new Map([['/blog/edited', { until: '2026-12-07', since: '2026-11-09', why: 'x' }]]);
   const worryList = [
@@ -997,13 +1016,15 @@ test('once a page edit is dated inside this week, the slot says so and no other 
     },
   ];
   const cards = top({ frozen, ranked: [rankedOpp('edit1', 90)], worries: worryList });
-  const slot = cards.find((c) => c.slot === 'page-edit');
-  assert.equal(slot.title, "This week's page edit is done");
-  assert.equal(slot.readOnly, true);
-  assert.equal(slot.isPageEdit, false);
-  assert.equal(slot.page, '/blog/edited');
-  assert.match(slot.measured, /9 November/);
-  assert.match(slot.action, /16 November/, 'the next page edit can go in next Monday');
+  assert.equal(
+    cards.find((c) => c.slot === 'page-edit'),
+    undefined,
+    'no card for a used edit'
+  );
+  assert.equal(
+    week.editStatusOf(frozen, TODAY),
+    "This week's page edit is used (/blog/edited, 9 November). The next one can go in from 16 November."
+  );
   assert.equal(cards.filter((c) => c.isPageEdit).length, 0, 'no page edit card at all');
   assert.equal(
     cards.some((c) => c.slot === 'worry'),

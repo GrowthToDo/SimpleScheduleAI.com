@@ -20,6 +20,7 @@ import { realQueryCounts } from './query-counts.mjs';
 import { dropKindOf, dropAction } from './decay.mjs';
 import { inboundCount, linksInText, notIndexedAdvice } from './inbound.mjs';
 import { matchKey } from './targets.mjs';
+import { tokens } from './topics.mjs';
 import { THRESHOLDS, DEFAULT_MONEY_PAGES, EXPECTED_CTR } from './config.mjs';
 import { windows as reportingWindows, daysBetween, todayIso, addDays } from './dates.mjs';
 import { longDate, longRange } from './text.mjs';
@@ -31,6 +32,7 @@ export const RULE_TYPES = [
   'slipping',
   'wrong-page',
   'unserved',
+  'strengthen-page',
   'question',
   'needs-links',
   'ai-gap',
@@ -63,6 +65,7 @@ const EFFORT = {
   slipping: 0.6,
   'wrong-page': 0.6,
   unserved: 0.2,
+  'strengthen-page': 0.6,
   question: 0.6,
   'needs-links': 0.9,
   'ai-gap': 0.6,
@@ -231,6 +234,7 @@ function gateFor(ctx, type) {
       'competing-pages': t.SPLIT_MIN_IMP,
       slipping: t.SLIP_MIN_PREV_IMP,
       unserved: t.UNSERVED_MIN_IMP,
+      'strengthen-page': t.UNSERVED_MIN_IMP,
       question: t.QUESTION_MIN_IMP,
     }[type] ?? 0
   );
@@ -409,24 +413,59 @@ export function detectWrongPage(snaps, cfg) {
     );
 }
 
-// A search that showed the site UNSERVED_MIN_IMP times or more (the query-only count) while no live page
-// placed at position 20 or better. The page named as closest is the best placed one among the pages
-// with PAGE_MIN_VIEWS views or more for it, never the busiest page and never one with a handful of views.
-export function detectUnserved(snaps, cfg) {
-  const ctx = contextOf(snaps, cfg);
-  if (!isArr(ctx.gsc?.qpCur)) return [];
+// The meaningful words two phrases share (topics.mjs tokens: stop words dropped, plurals trimmed,
+// digits kept).
+const sharedWords = (a, b) => {
+  const words = new Set(tokens(a));
+  return tokens(b).filter((w) => words.has(w)).length;
+};
+// A phrase covers a search when both have the same words in any spelling (matchKey), or when they
+// share this many meaningful words.
+const COVER_MIN_SHARED = 2;
+const covers = (phrase, query) =>
+  Boolean(matchKey(phrase)) && (matchKey(phrase) === matchKey(query) || sharedWords(phrase, query) >= COVER_MIN_SHARED);
+
+// The target keywords with their pages: the ones the model passes (cfg.targets: the keyword file and
+// the adopted targets), else the keyword file's rows.
+const targetsOf = (ctx, cfg) =>
+  isArr(cfg?.targets)
+    ? cfg.targets.filter((t) => t?.keyword).map((t) => ({ keyword: String(t.keyword), page: t.page ?? null }))
+    : ctx.registry.filter((r) => r.primaryKeyword).map((r) => ({ keyword: String(r.primaryKeyword), page: r.url }));
+
+const STRENGTHEN_TAIL = 'A new post would compete with it. If the search matters, strengthen that page.';
+
+// Every search that showed the site UNSERVED_MIN_IMP times or more (the query-only count) while no live
+// page placed at position 20 or better, sorted out before any of it is called a gap:
+//   1. a live page already has PAGE_MIN_VIEWS views for it (the best placed such page): that page's job,
+//      a page edit ("Google already shows /page for this search"), never a new post;
+//   2. an unwritten post in the plan covers it (same words in any spelling, or two shared meaningful
+//      words): left out and counted, the plan already decides it;
+//   3. a live page targets it in the keyword file or the adopted targets (the same test): that page's
+//      job ("does not rank yet for it"); a page that is not live yet that targets it in any spelling
+//      leaves it out, as before;
+//   4. only what is left is a gap: "Consider adding a post on this to the plan".
+// {gaps, pages, planned}: gaps are 'unserved' opportunities, pages are 'strengthen-page' ones, planned
+// is [{query, impressions, post: {n, title, keyword}}]. Busiest first.
+export function unservedSplit(snaps, cfg) {
+  return unservedOf(contextOf(snaps, cfg), cfg);
+}
+
+function unservedOf(ctx, cfg) {
+  const out = { gaps: [], pages: [], planned: [] };
+  if (!isArr(ctx.gsc?.qpCur)) return out;
   const real = realOf(ctx);
-  if (!real) return [];
+  if (!real) return out;
   const range = ctx.cur;
   const t = ctx.t;
   const live = liveOf(ctx);
-  const targeted = new Set(ctx.registry.map((r) => matchKey(r.primaryKeyword)).filter(Boolean));
-  const out = [];
+  const isLive = (p) => Boolean(p) && (!live || live.has(normPath(p)));
+  const targets = targetsOf(ctx, cfg);
+  const posts = (isArr(ctx.local?.plan?.posts) ? ctx.local.plan.posts : []).filter((p) => p && !p.done && p.keyword);
   for (const q of groupByQuery(ctx.gsc.qpCur)) {
-    if (isBrand(q.query, ctx.brands) || targeted.has(matchKey(q.query))) continue;
+    if (isBrand(q.query, ctx.brands)) continue;
     const searches = realCount(real, q.query);
     if (!(searches >= t.UNSERVED_MIN_IMP)) continue;
-    const pages = q.pages.filter((p) => p.impressions > 0 && (!live || live.has(normPath(p.page))));
+    const pages = q.pages.filter((p) => p.impressions > 0 && isLive(p.page));
     const best = pages.length ? Math.min(...pages.map((p) => p.position)) : null;
     if (best !== null && best <= t.UNSERVED_MIN_POS) continue;
     const closest = pages
@@ -434,33 +473,97 @@ export function detectUnserved(snaps, cfg) {
       .sort((a, b) => a.position - b.position || b.impressions - a.impressions)[0];
     const placed =
       best === null ? 'none of our live pages showed for it' : `our best position was ${pos1(best)}, past page two`;
-    out.push(
+    const head = `From ${rangeText(range)}, "${q.query}" showed our site ${n0(searches)} times, but ${placed}.`;
+    const evidence = [
+      {
+        query: q.query,
+        impressions: searches,
+        bestPosition: best,
+        closestPage: closest?.page ?? null,
+        pages: [...pages].sort((a, b) => b.impressions - a.impressions).slice(0, EVIDENCE_CAP),
+      },
+    ];
+    const strengthen = (page, why) =>
+      build(ctx, {
+        type: 'strengthen-page',
+        page: normPath(page),
+        query: q.query,
+        title: `Strengthen ${normPath(page)} for "${q.query}"`,
+        measured: `${head} ${why} ${STRENGTHEN_TAIL}`,
+        action: `If "${q.query}" matters, strengthen ${normPath(page)} for it: answer it near the top and use the phrase in a heading. Do not write a new post for it.`,
+        test: `Judged by the 28-day before and after verdict on ${normPath(page)}, and by whether it shows higher for "${q.query}".`,
+        isPageEdit: true,
+        range,
+        source: 'gsc',
+        evidence,
+        impressions: searches,
+        distance: 0.5,
+      });
+    if (closest) {
+      out.pages.push(
+        strengthen(
+          closest.page,
+          `Google already shows ${normPath(closest.page)} for this search, at position ${pos1(closest.position)}.`
+        )
+      );
+      continue;
+    }
+    const post = posts.find((p) => covers(p.keyword, q.query));
+    if (post) {
+      out.planned.push({
+        query: q.query,
+        impressions: searches,
+        post: { n: post.n ?? null, title: post.title ?? null, keyword: post.keyword },
+      });
+      continue;
+    }
+    const target = targets
+      .filter((x) => x.page && isLive(x.page) && covers(x.keyword, q.query))
+      .map((x) => ({ ...x, n: matchKey(x.keyword) === matchKey(q.query) ? Infinity : sharedWords(x.keyword, q.query) }))
+      .sort((a, b) => b.n - a.n)[0];
+    if (target) {
+      out.pages.push(
+        strengthen(
+          target.page,
+          `${normPath(target.page)} targets "${target.keyword}", and it does not rank yet for it.`
+        )
+      );
+      continue;
+    }
+    if (targets.some((x) => matchKey(x.keyword) && matchKey(x.keyword) === matchKey(q.query))) continue;
+    out.gaps.push(
       build(ctx, {
         type: 'unserved',
         page: null,
         query: q.query,
         title: `People search "${q.query}" and none of our pages rank for it`,
-        measured: `From ${rangeText(range)}, "${q.query}" showed our site ${n0(searches)} times, but ${placed}.${closest ? ` The best placed page with ${t.PAGE_MIN_VIEWS} or more views for it is ${closest.page}, at position ${pos1(closest.position)}.` : ''}`,
-        action: `Write a post that answers "${q.query}" directly. Check first that it is not already a section of an existing page.`,
+        measured: head,
+        action: `Consider adding a post on "${q.query}" to the plan. Check first that it is not already a section of an existing page.`,
         test: 'Judged by whether the new post shows up in Search Console for this phrase within 28 days of going live.',
         isPageEdit: false,
         range,
         source: 'gsc',
-        evidence: [
-          {
-            query: q.query,
-            impressions: searches,
-            bestPosition: best,
-            closestPage: closest?.page ?? null,
-            pages: [...pages].sort((a, b) => b.impressions - a.impressions).slice(0, EVIDENCE_CAP),
-          },
-        ],
+        evidence,
         impressions: searches,
         distance: 0.5,
       })
     );
   }
-  return out.sort((a, b) => b.evidence[0].impressions - a.evidence[0].impressions || a.query.localeCompare(b.query));
+  const busiest = (a, b) => b.evidence[0].impressions - a.evidence[0].impressions || a.query.localeCompare(b.query);
+  out.gaps.sort(busiest);
+  out.pages.sort(busiest);
+  out.planned.sort((a, b) => b.impressions - a.impressions || a.query.localeCompare(b.query));
+  return out;
+}
+
+// The searches no live page has 10 views for and nothing plans or targets: content gaps.
+export function detectUnserved(snaps, cfg) {
+  return unservedOf(contextOf(snaps, cfg), cfg).gaps;
+}
+
+// The searches a live page already shows for or targets, past page two: that page's job.
+export function detectStrengthenPage(snaps, cfg) {
+  return unservedOf(contextOf(snaps, cfg), cfg).pages;
 }
 
 export function detectQuestion(snaps, cfg) {
@@ -543,51 +646,145 @@ export function pageWindowsOf(ctx) {
   return { cur, prev: { start: addDays(cur.start, -days), end: addDays(cur.start, -1) } };
 }
 
-export function detectSlipping(snaps, cfg) {
+// The four weeks of a period: 7 days each from its start. A period that is not 28 days long is cut into
+// four parts as even as the days allow, the last part taking what is left. [] for a period under 4 days.
+export function weeksOfRange(range) {
+  const days = daysBetween(range.start, range.end) + 1;
+  if (!(days >= 4)) return [];
+  const len = days === 28 ? 7 : Math.floor(days / 4);
+  return [0, 1, 2, 3].map((i) => {
+    const start = addDays(range.start, i * len);
+    return { start, end: i === 3 ? range.end : addDays(start, len - 1) };
+  });
+}
+
+// page -> the views of each of the four weeks of `range`, from the daily page rows.
+function weeklyViews(pageDaily, range) {
+  const weeks = weeksOfRange(range);
+  const out = new Map();
+  for (const r of pageDaily || []) {
+    if (!r.page || r.date < range.start || r.date > range.end) continue;
+    const i = weeks.findIndex((w) => r.date >= w.start && r.date <= w.end);
+    if (i < 0) continue;
+    const key = normPath(r.page);
+    if (!out.has(key)) out.set(key, [0, 0, 0, 0]);
+    out.get(key)[i] += r.impressions || 0;
+  }
+  return out;
+}
+
+// The spike check on four weeks of views: the total with its busiest week replaced by the middle of the
+// other three. {total, adjusted, top (the busiest week's index), median (the other weeks' middle)}.
+export function spikeAdjusted(views) {
+  const v = (views ?? []).map((x) => Number(x) || 0);
+  if (v.length !== 4) return null;
+  let top = 0;
+  for (let i = 1; i < 4; i++) if (v[i] > v[top]) top = i;
+  const others = v.filter((_, i) => i !== top).sort((a, b) => a - b);
+  const median = others[1];
+  const total = v.reduce((a, b) => a + b, 0);
+  return { total, adjusted: total - v[top] + median, top, median };
+}
+
+const weekList = (v) => listText(v.map((x) => n0(x)));
+
+// The slipping rule with the spike check. A page is decaying only when its drop passes the threshold
+// (SLIP_MIN_PREV_IMP views before, down SLIP_DROP or more, and SLIP_DROP or more behind the middle page)
+// on the plain totals AND on the earlier total with its busiest week replaced by the middle of its other
+// three weeks. A page that passes only on the plain totals had one busy week, not a real drop: it is
+// listed in busy, never as decaying. {slipping, busy}.
+function slippingOf(snaps, cfg) {
   const base = contextOf(snaps, cfg);
-  if (!isArr(base.gsc?.pageDaily)) return [];
+  const none = { slipping: [], busy: [] };
+  if (!isArr(base.gsc?.pageDaily)) return none;
   const ctx = { ...base, ...pageWindowsOf(base) };
   const cur = aggregatePages(ctx.gsc.pageDaily, ctx.cur);
   const prev = aggregatePages(ctx.gsc.pageDaily, ctx.prev);
   const move = pageMovement([...prev.values()], [...cur.values()]);
-  if (!move.control) return []; // no median page to compare with yet
+  if (!move.control) return none; // no median page to compare with yet
   const median = move.control.impPct;
   const range = { start: ctx.prev.start, end: ctx.cur.end };
-  return [...move.worse, ...move.better]
-    .filter(
-      (i) =>
-        i.prev.impressions >= ctx.t.SLIP_MIN_PREV_IMP &&
+  const t = ctx.t;
+  const passes = (before, after) => {
+    if (!(before >= t.SLIP_MIN_PREV_IMP) || !(before > 0)) return false;
+    const p = (after - before) / before;
+    return p <= -t.SLIP_DROP && p - median <= -t.SLIP_DROP;
+  };
+  const prevWeeks = weeklyViews(ctx.gsc.pageDaily, ctx.prev);
+  const curWeeks = weeklyViews(ctx.gsc.pageDaily, ctx.cur);
+  const prevRanges = weeksOfRange(ctx.prev);
+  const out = { slipping: [], busy: [] };
+  for (const i of [...move.worse, ...move.better]) {
+    if (
+      !(
+        i.prev.impressions >= t.SLIP_MIN_PREV_IMP &&
         i.impPct !== null &&
-        i.impPct <= -ctx.t.SLIP_DROP &&
-        i.impPct - median <= -ctx.t.SLIP_DROP
+        i.impPct <= -t.SLIP_DROP &&
+        i.impPct - median <= -t.SLIP_DROP
+      )
     )
-    .map((i) => {
-      // The kind of drop gives the card its recommendation and its test (lib/decay.mjs), the same
-      // words the Decay page, the brief and the week's worry use.
-      const drop = dropKindOf(i.prev, i.cur);
-      const card = build(ctx, {
-        type: 'slipping',
+      continue;
+    const pw = prevWeeks.get(normPath(i.page)) ?? null;
+    const cw = curWeeks.get(normPath(i.page)) ?? [0, 0, 0, 0];
+    const spike = pw ? spikeAdjusted(pw) : null;
+    if (spike && !passes(spike.adjusted, i.cur.impressions)) {
+      const w = prevRanges[spike.top];
+      out.busy.push({
         page: i.page,
-        query: '',
-        title: `${i.page} lost ${pct0(-i.impPct)} of its search views`,
-        measured: `${i.page} showed up ${n0(i.prev.impressions)} times from ${rangeText(ctx.prev)} and ${n0(i.cur.impressions)} times from ${rangeText(ctx.cur)}, a drop of ${pct0(-i.impPct)}. The middle page on our site ${changeWords(median)} over the same dates.`,
-        action: dropAction(drop),
-        test: drop.test,
-        isPageEdit: true,
-        range,
-        source: 'gsc',
-        evidence: [i],
-        impressions: i.prev.impressions,
-        distance: Math.min(1, -i.impPct),
+        prev: i.prev.impressions,
+        adjusted: spike.adjusted,
+        cur: i.cur.impressions,
+        median: spike.median,
+        week: { start: w.start, end: w.end, views: pw[spike.top] },
+        prevWeeks: pw,
+        curWeeks: cw,
+        impPct: i.impPct,
+        range: { prev: ctx.prev, cur: ctx.cur },
       });
-      return {
-        ...card,
-        dropKind: drop.kind,
-        dropKindLabel: drop.label,
-        dropKindWhy: drop.why,
-        recommendation: drop.recommendation,
-      };
+      continue;
+    }
+    // The kind of drop gives the card its recommendation and its test (lib/decay.mjs), the same
+    // words the Decay page, the brief and the week's worry use.
+    const drop = dropKindOf(i.prev, i.cur);
+    const weeks = pw
+      ? ` Week by week, it showed up ${weekList(pw)} times in the earlier weeks, and ${weekList(cw)} in the latest.`
+      : '';
+    const card = build(ctx, {
+      type: 'slipping',
+      page: i.page,
+      query: '',
+      title: `${i.page} lost ${pct0(-i.impPct)} of its search views`,
+      measured: `${i.page} showed up ${n0(i.prev.impressions)} times from ${rangeText(ctx.prev)} and ${n0(i.cur.impressions)} times from ${rangeText(ctx.cur)}, a drop of ${pct0(-i.impPct)}.${weeks} The middle page on our site ${changeWords(median)} over the same dates.`,
+      action: dropAction(drop),
+      test: drop.test,
+      isPageEdit: true,
+      range,
+      source: 'gsc',
+      evidence: [i],
+      impressions: i.prev.impressions,
+      distance: Math.min(1, -i.impPct),
     });
+    out.slipping.push({
+      ...card,
+      dropKind: drop.kind,
+      dropKindLabel: drop.label,
+      dropKindWhy: drop.why,
+      recommendation: drop.recommendation,
+    });
+  }
+  out.busy.sort((a, b) => b.prev - a.prev || a.page.localeCompare(b.page));
+  return out;
+}
+
+export function detectSlipping(snaps, cfg) {
+  return slippingOf(snaps, cfg).slipping;
+}
+
+// The pages whose drop passed the slipping threshold only because the earlier period held one busy
+// week: [{page, prev, adjusted, cur, median, week: {start, end, views}, prevWeeks, curWeeks, impPct,
+// range}], biggest earlier period first. Never a decaying page, never a worry.
+export function busyWeekPages(snaps, cfg) {
+  return slippingOf(snaps, cfg).busy;
 }
 
 // ---------------------------------------------------------------- local rules
@@ -722,8 +919,10 @@ export function detectNotIndexed(snaps, cfg) {
     const inbound = inboundCount(ctx.local.inbound, page);
     const advice = notIndexedAdvice({ page, reason: row.reason, inbound });
     const linksLine = linksInText(inbound);
-    out.push(
-      build(ctx, {
+    // The link count and the advice's group ride along, so the week can ask Google to index the pages
+    // whose links are already enough (lib/week.mjs).
+    out.push({
+      ...build(ctx, {
         type: 'not-indexed',
         page,
         query: '',
@@ -737,8 +936,10 @@ export function detectNotIndexed(snaps, cfg) {
         evidence: [row],
         impressions: pageImpressions(ctx, page),
         distance: 0.5,
-      })
-    );
+      }),
+      inbound,
+      adviceGroup: advice.group,
+    });
   }
   return out;
 }
@@ -761,6 +962,7 @@ export const DETECTORS = [
   detectSlipping,
   detectWrongPage,
   detectUnserved,
+  detectStrengthenPage,
   detectQuestion,
   detectNeedsLinks,
   detectAiGap,

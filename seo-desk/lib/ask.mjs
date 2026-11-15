@@ -155,6 +155,7 @@ export const SECTIONS = [
         'weekLabel',
         'standingLine',
         'planSize',
+        'editStatus',
         'top5',
         'top5Source',
         'worries',
@@ -218,7 +219,7 @@ export const SECTIONS = [
   [
     'Content gaps',
     '/api/insights/content-gaps',
-    (m) => pick(gapsView(m), ['term', 'explain', 'count', 'range', 'warnings', 'items']),
+    (m) => pick(gapsView(m), ['term', 'explain', 'count', 'coveredNote', 'range', 'warnings', 'items']),
   ],
   [
     'Decay (and growing)',
@@ -236,6 +237,8 @@ export const SECTIONS = [
         'pages',
         'queries',
         'recentDropNote',
+        'busyWeek',
+        'busyWeekNote',
         'note',
       ]),
   ],

@@ -18,6 +18,7 @@ import {
   invalidate,
   pageHold,
   holdFields,
+  leaveItFor,
 } from '../model.mjs';
 import { competingList, competingId, splitEdit, splitGroups, activeOpps } from '../work.mjs';
 import { itemAction, editGuards, editRefused } from '../actions.mjs';
@@ -28,7 +29,7 @@ import { targetRows, discoveredList } from './targets.mjs';
 import { readJson, writeJson } from '../../store.mjs';
 import { transition, loadItems, saveItems, FREEZE_DAYS } from '../../lifecycle.mjs';
 import { addDays } from '../../dates.mjs';
-import { longDate } from '../../text.mjs';
+import { longDate, longRange, plain } from '../../text.mjs';
 import { brief } from '../../brief.mjs';
 import { loadPosts, linkSuggestions } from '../../links.mjs';
 import {
@@ -40,7 +41,7 @@ import {
   MAX_SECONDARY,
   MIN_DISCOVERED_IMPRESSIONS,
 } from '../../targets.mjs';
-import { opportunityId } from '../../rules.mjs';
+import { opportunityId, busyWeekPages, unservedSplit } from '../../rules.mjs';
 import { groupTopics, tokens } from '../../topics.mjs';
 import { isBrand } from '../../../../scripts/lib/gsc-diagnose-core.mjs';
 import { COUNTS_MISSING_NOTE, countsMissingIn } from '../../query-counts.mjs';
@@ -204,10 +205,12 @@ const openOfType = (model, type) => activeOpps(model).filter((o) => o.type === t
 //   3. for a page and a search: a runner-up when the search is that page's target (by matchKey),
 //      otherwise the secondary keyword (secondary keywords never hold a target, and one search is a
 //      secondary keyword of one page only), never both;
-//   4. then a content gap, when the rule found no live page at position 20 or better, unless the search
+//   4. then a search a live page already shows for or targets, past page two (strengthen-page: that
+//      page's job, never a new post), unless it is a cluster conflict (see 5);
+//   5. then a content gap, when the rule found no live page at position 20 or better, unless the search
 //      sits close to a live page's target (a cluster conflict: a section of that page, not a new post);
-//   5. then a weakly answered question;
-//   6. the cluster conflict list keeps only the searches nothing above holds.
+//   6. then a weakly answered question;
+//   7. the cluster conflict list keeps only the searches nothing above holds.
 // A runner-up whose page and search carry a finished or dismissed secondary keyword stays closed too.
 // Returns {drop: Set of opportunity ids another list owns, owner: Map(search -> owning kind)}.
 export function ownership(model) {
@@ -235,6 +238,13 @@ export function ownership(model) {
       if ((held && held !== 'near-page-one') || closedSecondary(o)) drop.add(o.id);
     }
     for (const o of ofType('near-page-one')) if (!drop.has(o.id)) take(o.query, 'near-page-one');
+    // A search a live page already shows for or targets is that page's job (rules.mjs unservedSplit);
+    // a secondary keyword or anything above that holds the same search keeps it, and so does the cluster
+    // conflict list (a section of a live page's target), as for a content gap.
+    for (const o of ofType('strengthen-page')) {
+      if (owner.has(k(o.query)) || clusterConflictOf(model, o.query)) drop.add(o.id);
+      else take(o.query, 'strengthen-page');
+    }
     for (const o of ofType('unserved')) {
       if (owner.has(k(o.query)) || clusterConflictOf(model, o.query)) drop.add(o.id);
       else take(o.query, 'unserved');
@@ -458,7 +468,7 @@ export function gapItems(model) {
       const leadOpp = byQuery.get(norm(lead.query));
       const title = gapTitle(lead.query);
       const why = `You already appear ${n0(g.impressions)} times for these searches with no page written for them.`;
-      const recommendation = `Hypothesis: a new page written for "${lead.query}" may let the site show higher for these searches.`;
+      const recommendation = `Hypothesis: a post written for "${lead.query}" may let the site show higher for these searches. Consider adding it to the plan; the plan decides which posts are written.`;
       const test =
         'Check in Search Console about four weeks after it goes live whether the new page shows for these searches.';
       return {
@@ -474,7 +484,7 @@ export function gapItems(model) {
         test,
         brief: brief(
           {
-            title: `Write a new post: ${title}`,
+            title: `Consider adding this to the plan: ${title}`,
             measured: `${why} The searches: ${g.searches.map((x) => `"${x.query}"`).join(', ')}.`,
             action: unlabelled(recommendation),
             test,
@@ -583,9 +593,29 @@ function gapAction(id, body) {
   return { ok: true, id, action, applied, skipped: ids.length - applied.length };
 }
 
+// The searches the gap rule left out because an unwritten post in the plan already covers them
+// (rules.mjs unservedSplit), once per model.
+const plannedSearches = (model) =>
+  memo(
+    model,
+    'insights:planned',
+    () => unservedSplit({ gsc: model.data.gsc, local: model.data.local }, model.cfg).planned
+  );
+
 export function gapsView(model) {
   const items = gapItems(model);
-  return { ...insightEnvelope(model, { need: ['gsc'] }), ...heading('unserved'), count: items.length, items };
+  const covered = plannedSearches(model).length;
+  return {
+    ...insightEnvelope(model, { need: ['gsc'] }),
+    ...heading('unserved'),
+    count: items.length,
+    items,
+    // How many searches would have been gaps but a planned post already covers them.
+    covered,
+    coveredNote: covered
+      ? `${covered === 1 ? '1 search is' : `${n0(covered)} searches are`} already covered by ${covered === 1 ? 'a planned post' : 'planned posts'}.`
+      : null,
+  };
 }
 
 // ---------------------------------------------------------------- decay
@@ -706,7 +736,8 @@ export const decayItems = (model) =>
             recentDrop: own.recentDrop,
           }
         : own;
-      return { ...d, ...drop };
+      // A lost demand card advises leaving the page alone, so it offers Leave it (model.mjs leaveItFor).
+      return { ...d, ...drop, leaveIt: leaveItFor(model, o, drop.dropKind).leaveIt ?? null };
     })
   );
 
@@ -716,6 +747,43 @@ const withDrop = (model, { growing, decaying, totals }) => ({
   decaying: decaying.map((r) => ({ ...r, ...dropInfo(model, r.page) })),
   totals,
 });
+
+// Google's ranking updates that touch start..end, as a caution (never the cause).
+const rankingUpdatesIn = (model, start, end) =>
+  (model.data.local?.googleUpdates ?? [])
+    .filter((u) => u?.kind === 'ranking' && u.start && u.start <= end && (u.end ?? model.today) >= start)
+    .sort((a, b) => a.start.localeCompare(b.start));
+
+export const BUSY_WEEK_NOTE =
+  'These pages passed the decay rule only because one week of the earlier period was unusually busy. With that week counted as the middle of the other three, the drop is not big enough, so they are not decaying, not worries and not cards. The Growing list is not checked this way.';
+
+// The pages whose drop came from one busy week (rules.mjs busyWeekPages), with the week's dates and
+// both numbers in one sentence, and a Google ranking update inside that week named as a caution.
+function busyWeekItems(model) {
+  let list = [];
+  try {
+    list = busyWeekPages({ gsc: model.data.gsc, local: model.data.local }, model.cfg);
+  } catch {
+    list = [];
+  }
+  return list.map((b) => {
+    const updates = rankingUpdatesIn(model, b.week.start, b.week.end);
+    const names = updates.map((u) => `${plain(u.title)} (from ${longDate(u.start)})`);
+    return {
+      page: b.page,
+      prev: b.prev,
+      adjusted: b.adjusted,
+      cur: b.cur,
+      week: { ...b.week, text: longRange(b.week.start, b.week.end) },
+      prevWeeks: b.prevWeeks,
+      curWeeks: b.curWeeks,
+      text: `${b.page} showed up ${n0(b.prev)} times from ${longRange(b.range.prev.start, b.range.prev.end)}, and ${n0(b.week.views)} of the ${n0(b.prev)} times came in one week, ${longRange(b.week.start, b.week.end)}. Counting that week as ${n0(b.median)}, the middle of the other three weeks, the earlier period is ${n0(b.adjusted)}, against ${n0(b.cur)} times from ${longRange(b.range.cur.start, b.range.cur.end)}.`,
+      caution: names.length
+        ? `Google's ${names.join(' and ')} fell inside that busy week, so read it with care. That does not show the update caused it.`
+        : null,
+    };
+  });
+}
 
 export function decayView(model) {
   const { pages, queries } = decayRows(model);
@@ -746,6 +814,9 @@ export function decayView(model) {
       },
     },
     recentDropNote: RECENT_DROP_NOTE,
+    // Pages whose drop came from one busy week: folded on the page, never decaying, never a worry.
+    busyWeek: busyWeekItems(model),
+    busyWeekNote: BUSY_WEEK_NOTE,
     note: 'Change is the last 28 days against the 28 days before. It is left out when the earlier period had too few views to compare.',
     // The searches lists stay empty on a snapshot whose stored search totals are a day short.
     queriesNote: queryPeriodsEven(model.data.gsc) ? null : QUERY_WAIT_NOTE,

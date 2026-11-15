@@ -845,7 +845,10 @@ function gapsPage(el, ctx, data, nav) {
   ctx.mount(
     el,
     head(ctx, 'content-gaps', data, nav, {
-      note: `${rangeNote(ctx, data) ?? ''} Done, Snooze and Dismiss act on every search in the gap.`.trim(),
+      // How many searches a planned post already covers, from the server (they are not gaps).
+      note: [rangeNote(ctx, data), 'Done, Snooze and Dismiss act on every search in the gap.', data.coveredNote]
+        .filter(Boolean)
+        .join(' '),
       tiles: [
         { label: 'Gaps', value: countText(data.count), note: 'topics with no page written for them' },
         { label: 'Times shown', value: fmt.num(shown), note: 'across the searches in these gaps' },
@@ -857,7 +860,11 @@ function gapsPage(el, ctx, data, nav) {
       cardList(
         ctx,
         items.map((g) => gapCard(ctx, g)),
-        { first: 20, emptyText: 'Every search you appear for has a page written for it.' }
+        {
+          first: 20,
+          emptyText:
+            'No gap right now. A search one of your pages already shows for, or targets, is that page’s job: it is on All opportunities as Strengthen a page.',
+        }
       )
     )
   );
@@ -1036,8 +1043,37 @@ function decayPage(el, ctx, data, nav) {
         ctx,
         items.map((o) => decayCard(ctx, o, data)),
         { first: 12, emptyText: 'No page has lost enough views to look at.' }
-      )
+      ),
+      busyWeekGroup(ctx, data)
     ),
     decayTables(ctx, data)
+  );
+}
+
+// The pages whose drop came from one busy week in the earlier period: folded, never decaying, never a
+// worry. Each row is the server's own sentence (the week's dates and both numbers) and, when a Google
+// ranking update fell in that week, its caution.
+function busyWeekGroup(ctx, data) {
+  const { h } = ctx;
+  const list = data.busyWeek ?? [];
+  if (!list.length) return null;
+  return h(
+    'details',
+    { style: { marginTop: '14px' } },
+    h('summary', {}, `One busy week, not a real drop (${list.length})`),
+    data.busyWeekNote ? h('p', { class: 'small muted', style: { margin: '6px 0 10px' } }, data.busyWeekNote) : null,
+    h(
+      'ul',
+      { class: 'side-list' },
+      list.map((b) =>
+        h(
+          'li',
+          {},
+          h('div', {}, pageLink(h, b.page)),
+          h('p', { class: 'small', style: { margin: '4px 0 0' } }, b.text),
+          b.caution ? h('p', { class: 'small muted', style: { margin: '4px 0 0' } }, b.caution) : null
+        )
+      )
+    )
   );
 }

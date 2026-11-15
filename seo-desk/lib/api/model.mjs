@@ -19,7 +19,7 @@ import {
   recentEdits,
   withEligibilityText,
 } from '../lifecycle.mjs';
-import { windows, todayIso } from '../dates.mjs';
+import { windows, todayIso, addDays } from '../dates.mjs';
 import { sourceStatus } from '../refresh.mjs';
 import { DEFAULT_REPO_ROOT, readJsonl, pageOfNote } from '../sources/local.mjs';
 import { capSnapshot } from '../sources/gsc.mjs';
@@ -201,7 +201,18 @@ export function buildModel() {
     }
   })();
   const warnings = [];
-  const cfg = { thresholds: settings.thresholds, moneyPages: settings.moneyPages, brands, today };
+  // Target priorities, strategic keywords and the interest from visitors adjust each opportunity's
+  // signals before it is scored. The targets (the keyword file and the adopted ones) also tell the
+  // gap rule which page a search already belongs to (rules.mjs unservedSplit).
+  const targetState = loadTargets();
+  const targets = allTargets({ registry: data.local?.registry ?? [], state: targetState });
+  const cfg = {
+    thresholds: settings.thresholds,
+    moneyPages: settings.moneyPages,
+    brands,
+    today,
+    targets: targets.map((t) => ({ keyword: t.keyword, page: t.page })),
+  };
 
   // The rules read the index table from wherever it lives today (see indexOf).
   const index = indexOf(snapObjs, data.local);
@@ -211,10 +222,6 @@ export function buildModel() {
   } catch (e) {
     warnings.push(`The opportunity rules failed: ${String(e?.message ?? e).slice(0, 120)}`);
   }
-  // Target priorities, strategic keywords and the interest from visitors adjust each opportunity's
-  // signals before it is scored.
-  const targetState = loadTargets();
-  const targets = allTargets({ registry: data.local?.registry ?? [], state: targetState });
   const opps = rank(
     applySignals(detected, {
       targets,
@@ -370,6 +377,18 @@ export function holdFields(model, page, { week = false } = {}) {
   return { frozenUntil: until, frozenUntilText: until ? longDate(until) : null, holdText: until ? e.text : null };
 }
 
+// How long Leave it puts a card away when its advice gives no date of its own.
+export const LEAVE_IT_DAYS = 28;
+// {until, untilText} for a card whose own advice is to leave its page alone: Leave it snoozes it until
+// then and records no page edit and no freeze. `until` defaults to 28 days from today.
+export const leaveItOf = (model, until = null) => {
+  const day = until ?? addDays(model.today, LEAVE_IT_DAYS);
+  return { until: day, untilText: longDate(day) };
+};
+// A Decay card of the lost demand kind advises leaving the page alone, so it offers Leave it.
+export const leaveItFor = (model, o, dropKind = o?.dropKind) =>
+  o?.type === 'slipping' && dropKind === 'lost-demand' ? { leaveIt: leaveItOf(model) } : {};
+
 // An opportunity as the pages see it: plain text, score, lifecycle state, freeze, brief, links.
 export function decorateOpp(model, o) {
   const state = itemState(model, o.id);
@@ -404,6 +423,7 @@ export function decorateOpp(model, o) {
     links: linksFor(o.page),
     brief: brief(clean, { frozen: model.frozen, hold: eligibilityOf(model, o) }),
     detected: true,
+    ...leaveItFor(model, o),
   };
 }
 

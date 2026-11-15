@@ -75,7 +75,9 @@ const QP_CUR = [
   qp('pricing target phrase', '/pricing', 50, 12),
   qp('shared topic phrase', '/blog/alpha-guide', 40, 11),
   qp('shared topic phrase', '/blog/beta-notes', 40, 12),
-  qp('orphan search phrase', '/blog/epsilon-old', 90, 31),
+  // 9 views on the page, under the 10 that would make it that page's job (package 5); the query-only
+  // row below says it showed the site 90 times, so it is a content gap.
+  qp('orphan search phrase', '/blog/epsilon-old', 9, 31),
   qp('dosing, timing and cost', '/blog/alpha-guide', 35, 9),
   qp('simplescheduleai login', '/', 30, 1),
 ];
@@ -124,7 +126,9 @@ function gscData(overrides = {}) {
     qpCur: QP_CUR,
     qpPrev: QP_PREV,
     qp90: QP_CUR,
-    queryCur: byQuery(QP_CUR),
+    queryCur: byQuery(QP_CUR).map((q) =>
+      q.query === 'orphan search phrase' ? { ...q, clicks: 1, impressions: 90, position: 31 } : q
+    ),
     queryPrev: byQuery(QP_PREV),
     countries: [{ country: 'usa', clicks: 40, impressions: 1000 }],
     devices: [{ device: 'DESKTOP', clicks: 30, impressions: 800 }],
@@ -562,19 +566,28 @@ test('GET replies carry no em or en dashes and every date range is spelled out',
 test('the week: the five follow the recipe, and every card carries a brief and links', async () => {
   useFull();
   const w = (await get('/api/week')).json;
+  // Broken things first (two at most: the Bing crawl problem and the competitor change), then the next
+  // post, the page edit and the ready verdict (package 5). Each says why it is there.
   assert.equal(w.top5.length, 5);
-  assert.equal(w.top5[0].slot, 'new-post');
-  assert.equal(w.top5[0].title, 'Fixture post title');
-  assert.equal(w.top5[1].slot, 'page-edit');
-  assert.equal(w.top5[1].page, '/critical-access-hospital-scheduling');
-  assert.equal(w.top5[2].slot, 'verdict');
+  assert.deepEqual(
+    w.top5.map((c) => c.slot),
+    ['broken', 'broken', 'new-post', 'page-edit', 'verdict']
+  );
+  assert.match(w.top5[0].id, /^crawl-issue:/);
+  assert.match(w.top5[1].id, /^competitor-change:/);
+  assert.equal(w.top5[2].title, 'Fixture post title');
+  assert.equal(w.top5[3].page, '/critical-access-hospital-scheduling');
+  assert.ok(w.top5.every((c) => c.why));
+  assert.equal(w.editStatus, null, "this week's page edit is unused");
   assert.equal(w.top5.filter((c) => c.isPageEdit).length, 1, 'one live page edit a week');
   for (const c of [...w.top5, ...w.opportunities]) {
     assert.ok(c.brief.startsWith('Task for the SimpleScheduleAI website:'), c.id);
+    // A competitor change is read on their site: it has no page of ours and no Search Console link.
+    if (c.competitor) continue;
     assert.ok(c.links.searchConsole.includes('resource_id=https%3A%2F%2Fsimplescheduleai.com%2F'), c.id);
     assert.ok('live' in c.links);
   }
-  const edit = w.top5[1];
+  const edit = w.top5[3];
   assert.equal(edit.links.live, 'https://simplescheduleai.com/critical-access-hospital-scheduling');
   assert.ok(edit.links.searchConsole.includes('&page=!'));
   assert.equal(w.opportunities.length, 10);
@@ -1831,7 +1844,7 @@ test('top five cards carry a score and a plain type label', async () => {
   assert.equal(bySlot.verdict.typeLabel, 'Verdict');
   assert.equal(bySlot.verdict.score, null);
   assert.equal(bySlot['page-edit'].typeLabel, 'Live page improvement');
-  const worry = w.top5.find((c) => c.slot === 'worry');
+  const worry = w.top5.find((c) => c.slot === 'broken');
   assert.equal(worry.typeLabel, 'Bing crawl problem');
   assert.equal(worry.score, null);
   // A card made from an opportunity carries that opportunity's own score and label.
@@ -1856,7 +1869,7 @@ test('the top five cannot hold more than one live page edit', async () => {
   const w = (await get('/api/week')).json;
   const other = items.find((o) => !o.isPageEdit);
   const ok = await post('/api/week/top5', {
-    ids: [`opp:${edits[0].id}`, `opp:${other.id}`, w.top5[0].id, w.top5[3].id],
+    ids: [`opp:${edits[0].id}`, `opp:${other.id}`, w.top5[0].id, w.top5.find((c) => c.slot === 'new-post').id],
   });
   assert.equal(ok.status, 200);
   assert.equal((await post('/api/week/top5', { ids: [`opp:${other.id}`, `opp:${other.id}`] })).status, 400, 'twice');
@@ -1950,14 +1963,19 @@ test('S7: a frozen page edit is refused by the five with the same 409 as Done, u
   await post('/api/week/top5', { ids: [] });
 });
 
-test('once a page edit is dated this week, the slot says so and no page edit can be chosen', async () => {
+test('once a page edit is dated this week, editStatus says so, there is no card, and no page edit can be chosen', async () => {
   useFull();
   addNote({ date: '2026-11-09', slug: '/pricing', text: 'Edit: new pricing table' });
   invalidate();
   const w = (await get('/api/week')).json;
-  const slot = w.top5.find((c) => c.slot === 'page-edit');
-  assert.equal(slot.title, "This week's page edit is done");
-  assert.equal(slot.readOnly, true);
+  assert.equal(
+    w.top5.find((c) => c.slot === 'page-edit'),
+    undefined
+  );
+  assert.equal(
+    w.editStatus,
+    "This week's page edit is used (/pricing, 9 November). The next one can go in from 16 November."
+  );
   assert.equal(w.top5.filter((c) => c.isPageEdit).length, 0);
   const edit = (await get('/api/opportunities')).json.items.find((o) => o.isPageEdit && o.page !== '/pricing');
   const r = await post('/api/week/top5', { ids: [`opp:${edit.id}`] });
