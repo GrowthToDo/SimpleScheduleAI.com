@@ -94,7 +94,12 @@ export function makeRoutes({ jobs = createJobs() } = {}) {
         throw Object.assign(new Error(`There is no list called ${list}. Use: ${LISTS.join(', ')}.`), { status: 404 });
       const model = buildModel();
       const params = { type: q(ctx, 'type'), status: q(ctx, 'status'), page: q(ctx, 'page'), range: q(ctx, 'range') };
-      sendText(ctx, 'text/csv; charset=utf-8', csvFor(model, list, params), `seo-desk-${list}-${model.today}.csv`);
+      // The target keywords file is named after the dates its rows cover.
+      const name =
+        list === 'targets' && model.range?.start
+          ? `seo-desk-targets-${model.range.start}-to-${model.range.end}.csv`
+          : `seo-desk-${list}-${model.today}.csv`;
+      sendText(ctx, 'text/csv; charset=utf-8', csvFor(model, list, params), name);
     }),
 
     get('/api/jobs', () => {

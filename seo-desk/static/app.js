@@ -17,6 +17,8 @@ export const ROUTES = {
   // Above the groups in the sidebar: a question answered by Claude from the desk's data.
   ask: 'ask',
   week: 'week',
+  // One calendar month on one printable page (#/month?m=2026-10).
+  month: 'month',
   performance: 'overview',
   queries: 'search',
   pages: 'pages',

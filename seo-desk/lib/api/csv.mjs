@@ -125,6 +125,7 @@ export function csvFor(model, list, params = {}) {
           ['page_that_ranks', (r) => r.rankingPage],
           ['alignment', (r) => r.alignment],
           ['date_range', () => rangeText(model.range)],
+          ['compared_with', () => rangeText(targetsView(model).likeForLike.prevRange)],
         ],
         targetsView(model).rows
       );

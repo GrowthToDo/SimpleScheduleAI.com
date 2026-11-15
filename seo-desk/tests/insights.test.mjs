@@ -431,7 +431,10 @@ test('overview: the click rate is null under 500 impressions, and the range is c
   assert.match(rate.note, /500/);
   assert.equal(r.tiles.find((x) => x.key === 'impressions').value, 280);
   for (const days of [7, 28, 90, 480]) assert.equal((await get(`/api/overview?range=${days}`)).status, 200, `${days}`);
-  assert.equal((await get('/api/overview?range=14')).status, 400);
+  // The date bar's other choices are accepted too (package 7); anything else is refused.
+  assert.equal((await get('/api/overview?range=14')).status, 200);
+  assert.equal((await get('/api/overview?range=15')).status, 400);
+  assert.equal((await get('/api/overview?range=custom&start=2026-13-01&end=2026-10-02')).status, 400);
   // A shorter range has its own totals and its own series.
   use(FULL);
   const seven = (await get('/api/overview?range=7')).json;

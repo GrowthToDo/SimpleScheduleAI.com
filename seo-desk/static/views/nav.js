@@ -25,6 +25,11 @@ export const NAV = [
         tone: 'danger',
         unit: ['worry', 'worries'],
       },
+      {
+        route: 'month',
+        label: 'Monthly report',
+        explain: 'One calendar month on one page, against the month before, to save as a PDF.',
+      },
     ],
   },
   {

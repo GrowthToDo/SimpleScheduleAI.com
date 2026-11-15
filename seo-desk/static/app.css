@@ -3521,6 +3521,110 @@ a.tile.lk-tile:hover {
   }
 }
 
+/* ------------------------------------------------------------------ the monthly report (views/month.js) */
+
+.mr-tools {
+  align-items: flex-end;
+  gap: 10px 12px;
+  margin-bottom: 16px;
+}
+
+.mr-pick {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mr-sheet {
+  max-width: 980px;
+}
+
+.mr-head {
+  margin-bottom: 8px;
+}
+
+.mr-sub {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.mr-section {
+  margin-top: 28px;
+  min-width: 0;
+}
+
+.mr-h2 {
+  font-size: 17px;
+  font-weight: 650;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.mr-h3 {
+  font-size: 14.5px;
+  font-weight: 650;
+  margin-top: 14px;
+}
+
+.mr-note {
+  margin: 4px 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.mr-tile-note {
+  color: var(--faint);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.mr-list {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  overflow-wrap: anywhere;
+}
+
+.mr-list li + li {
+  margin-top: 4px;
+}
+
+.mr-summary li {
+  line-height: 1.5;
+}
+
+.mr-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 6px 0 12px;
+}
+
+.mr-count {
+  display: flex;
+  flex-direction: column;
+}
+
+.mr-count strong {
+  font-size: 22px;
+}
+
+.mr-foot {
+  margin-top: 28px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12.5px;
+  overflow-wrap: anywhere;
+}
+
+.mr-foot p + p {
+  margin-top: 2px;
+}
+
 /* Printing, from either theme: black text on white, no sidebar, no top bar, no buttons. The
    system colours Canvas (paper) and CanvasText (ink) under a light colour scheme keep every
    colour a variable. */
@@ -3575,6 +3679,53 @@ a.tile.lk-tile:hover {
 
   .pw-section {
     break-inside: auto;
+  }
+
+  .mr-tools,
+  .banner,
+  .chart-tools {
+    display: none !important;
+  }
+
+  /* The chart's legend says which line is which, so it prints (its items are buttons on screen). */
+  .mr-sheet .legend button.legend-item {
+    display: inline-flex !important;
+  }
+
+  /* One section never splits across two pages; a long table may, with its heading kept on it. */
+  .mr-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .mr-section:has(tbody tr:nth-child(15)) {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .mr-h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .mr-sheet {
+    max-width: none;
+  }
+
+  .mr-sheet .tiles-four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .mr-sheet .tile {
+    border-color: GrayText;
+  }
+
+  .mr-sheet .table-wrap {
+    overflow: visible;
+  }
+
+  .mr-sheet .table {
+    font-size: 11.5px;
   }
 
   .pw-h2 {

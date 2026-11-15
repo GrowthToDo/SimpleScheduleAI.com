@@ -70,7 +70,11 @@ export async function render(el, ctx) {
       count: data.queries.length,
       build: (box) => queriesTable(box, data, ctx, view),
     },
-    targets: { label: 'Target keywords', count: data.targets.length, build: (box) => targetsTable(box, data, ctx) },
+    targets: {
+      label: 'Target keywords',
+      count: data.targets.length,
+      build: (box) => targetsTable(box, data, ctx, view),
+    },
   };
   const panelBox = h('div', {});
   const built = new Map();
@@ -485,17 +489,59 @@ function distributionSection(ctx, state) {
   );
 }
 
-function targetsTable(box, data, ctx) {
+// The like for like line over the target table, for the stored 28 days or the chosen dates.
+export function likeSummary(like, fmt, { range = null } = {}) {
+  if (!like || !like.enough || blank(like.mean))
+    return `Not enough data yet for a like for like average${range ? `, ${fmt.range(range)}` : ''}: only ${fmt.plural(like?.n ?? 0, 'target keyword has', 'target keywords have')} a place in both periods.`;
+  return `Like for like: the target keywords with a place in both periods sit at an average place of ${fmt.position(like.mean)}${range ? ` for ${fmt.range(range)}` : ''}, over ${fmt.plural(like.n, 'keyword', 'keywords')} of ${like.targetsTotal}${blank(like.prevMean) ? '' : `, against ${fmt.position(like.prevMean)} for ${fmt.range(like.prevRange)}`}. Lower is better. This is the only average place on the desk, because a site-wide average drifts every time a new post starts ranking.`;
+}
+
+// The CSV of the Target keywords list: every row carries its dates and the dates it is compared with,
+// and so does the file name.
+export function targetsCsv(rows, { range, prevRange }) {
+  const name = `seo-desk-target-keywords-${range.start}-to-${range.end}.csv`;
+  const header = [
+    'Keyword',
+    'Target page',
+    'Place',
+    'Place before',
+    'Places gained',
+    'Times shown',
+    'Dates',
+    'Compared with',
+  ];
+  const text = (r) => r?.text ?? `${r?.start} to ${r?.end}`;
+  const body = rows.map((r) => [
+    r.keyword,
+    r.page ?? '',
+    r.position ?? '',
+    r.prevPosition ?? '',
+    r.change ?? '',
+    r.impressions,
+    text(range),
+    prevRange ? text(prevRange) : '',
+  ]);
+  return { name, header, body };
+}
+
+function targetsTable(box, data, ctx, view) {
   const { h, fmt } = ctx;
+  const { state } = view;
+  // The stored list covers the latest 28 days; any other choice pulls the chosen dates (cached).
+  const ranged = state.range !== '28';
   const like = data.likeForLike;
-  const summary =
-    like && like.enough && !blank(like.mean)
-      ? `Like for like: the target keywords with a place in both periods sit at an average place of ${fmt.position(like.mean)}, over ${fmt.plural(like.n, 'keyword', 'keywords')} of ${like.targetsTotal}${blank(like.prevMean) ? '' : `, against ${fmt.position(like.prevMean)} for ${fmt.range(like.prevRange)}`}. Lower is better. This is the only average place on the desk, because a site-wide average drifts every time a new post starts ranking.`
-      : `Not enough data yet for a like for like average: only ${fmt.plural(like?.n ?? 0, 'target keyword has', 'target keywords have')} a place in both periods.`;
+  let current = { range: like?.range ?? data.range, prevRange: like?.prevRange ?? null, rows: data.targets };
+  const summary = h('p', { class: 'banner banner-accent', style: { margin: '10px 0' } }, likeSummary(like, fmt));
+  const status = h('div', {});
+  const datesNote = h(
+    'p',
+    { class: 'section-note', style: { marginBottom: '8px' } },
+    `Every keyword in your keyword file with the page meant to win it, ${fmt.range(like?.range ?? data.range)}. The average above uses only these, so it stays comparable over time; searches targeted on the Keywords page are not mixed in. Click one to open its page.`
+  );
   const tableBox = h('div', {});
   ctx.mount(
     box,
-    h('p', { class: 'banner banner-accent', style: { margin: '10px 0' } }, summary),
+    summary,
     h(
       'p',
       { class: 'row', style: { marginBottom: '10px' } },
@@ -506,28 +552,12 @@ function targetsTable(box, data, ctx) {
         'Target more searches, set priorities and see what Google shows the site for that no target covers.'
       )
     ),
-    h(
-      'p',
-      { class: 'section-note', style: { marginBottom: '8px' } },
-      `Every keyword in your keyword file with the page meant to win it, ${fmt.range(like?.range ?? data.range)}. The average above uses only these, so it stays comparable over time; searches targeted on the Keywords page are not mixed in. Click one to open its page.`
-    ),
+    status,
+    datesNote,
     tableBox
   );
-  dataTable(tableBox, {
-    label: 'Target keywords',
-    rows: data.targets,
-    searchKeys: ['keyword', 'page', 'rankingPage'],
-    filters: [
-      { key: 'right', label: 'Right page', test: (r) => r.alignment === 'right page' },
-      { key: 'wrong', label: 'Wrong page', test: (r) => r.alignment === 'wrong page' },
-      { key: 'few', label: 'Too few views to tell', test: (r) => r.alignment === 'too few views' },
-      { key: 'none', label: 'No data yet', test: (r) => r.alignment === 'no data yet' },
-    ],
-    csvHref: '/api/export/targets.csv',
-    sort: { key: 'impressions', dir: 'desc' },
-    emptyText: 'Your keyword file has no keywords yet.',
-    onRowClick: (r) => openPageDrawer(r.page, ctx),
-    columns: [
+  const columns = (withAlignment) =>
+    [
       { key: 'keyword', label: 'Keyword', wrap: true },
       { key: 'page', label: 'Target page', wrap: true },
       {
@@ -551,12 +581,76 @@ function targetsTable(box, data, ctx) {
         format: (v) => (blank(v) ? '' : fmt.change(v, 'positions')),
       },
       { key: 'impressions', label: 'Times shown', align: 'right', format: (v) => fmt.num(v) },
-      { key: 'rankingPage', label: 'Page Google shows', wrap: true, format: (v) => v ?? '' },
-      {
-        key: 'alignment',
-        label: 'Right page?',
-        format: (v) => h('span', { class: `chip ${ALIGNMENT_CHIP[v] ?? ''}` }, v),
+      withAlignment ? { key: 'rankingPage', label: 'Page Google shows', wrap: true, format: (v) => v ?? '' } : null,
+      withAlignment
+        ? {
+            key: 'alignment',
+            label: 'Right page?',
+            format: (v) => h('span', { class: `chip ${ALIGNMENT_CHIP[v] ?? ''}` }, v),
+          }
+        : null,
+    ].filter(Boolean);
+  const draw = (rows, withAlignment) => {
+    tableBox.replaceChildren();
+    dataTable(tableBox, {
+      label: 'Target keywords',
+      rows,
+      searchKeys: withAlignment ? ['keyword', 'page', 'rankingPage'] : ['keyword', 'page'],
+      filters: withAlignment
+        ? [
+            { key: 'right', label: 'Right page', test: (r) => r.alignment === 'right page' },
+            { key: 'wrong', label: 'Wrong page', test: (r) => r.alignment === 'wrong page' },
+            { key: 'few', label: 'Too few views to tell', test: (r) => r.alignment === 'too few views' },
+            { key: 'none', label: 'No data yet', test: (r) => r.alignment === 'no data yet' },
+          ]
+        : [
+            { key: 'improved', label: 'Improved', test: (r) => r.move === 'improved' },
+            { key: 'held', label: 'Held', test: (r) => r.move === 'held' },
+            { key: 'slipped', label: 'Slipped', test: (r) => r.move === 'slipped' },
+          ],
+      onCsv: () => {
+        const c = targetsCsv(current.rows, current);
+        downloadCsv(c.name, c.header, c.body);
       },
-    ],
-  });
+      sort: { key: 'impressions', dir: 'desc' },
+      emptyText: 'Your keyword file has no keywords yet.',
+      onRowClick: (r) => openPageDrawer(r.page, ctx),
+      columns: columns(withAlignment),
+    });
+  };
+  draw(data.targets, true);
+  if (!ranged) return;
+
+  const run = () => {
+    status.replaceChildren(
+      h(
+        'p',
+        { class: 'banner banner-accent fb-loading', role: 'status' },
+        'Loading the target keywords for these dates from Search Console. It takes a few seconds the first time.'
+      )
+    );
+    const dates = apiQuery({ ...state, q: '', pagefilter: '', country: '', device: '' });
+    return oneAtATime(() => ctx.api.get(`/api/targets/range?${dates}`)).then(
+      (r) => {
+        current = { range: r.range, prevRange: r.prevRange, rows: r.rows };
+        summary.textContent = likeSummary(r.likeForLike, fmt, { range: r.range });
+        datesNote.textContent = `Every keyword in your keyword file, ${fmt.range(r.range)}, against ${fmt.range(r.prevRange)}: ${r.moves.improved} improved, ${r.moves.held} held and ${r.moves.slipped} slipped by one place or more; ${fmt.plural(r.moves.noData, 'has', 'have')} no place in one of the two periods. ${r.note}${hasFilters(state) ? ' Your filters do not change this list.' : ''}`;
+        status.replaceChildren(h('p', { class: 'small muted fb-summary' }, `Searches ${r.fetchedText}.`));
+        draw(r.rows, false);
+        view.setCount('targets', r.rows.length);
+      },
+      (e) => {
+        status.replaceChildren(
+          h(
+            'div',
+            { class: 'banner banner-bad', role: 'alert' },
+            h('strong', {}, e.message),
+            ' The list below is still the one for the stored 28 days. ',
+            h('button', { type: 'button', class: 'btn btn-small', onclick: run }, 'Try again')
+          )
+        );
+      }
+    );
+  };
+  run();
 }

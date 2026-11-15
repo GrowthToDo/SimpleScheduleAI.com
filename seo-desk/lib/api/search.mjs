@@ -4,7 +4,8 @@
 
 import { groupByQuery, isBrand } from '../../../scripts/lib/gsc-diagnose-core.mjs';
 import { targetRows } from './ext/targets.mjs';
-import { addDays, todayIso } from '../dates.mjs';
+import { addDays, todayIso, daysBetween } from '../dates.mjs';
+import { perDayChange } from '../month.mjs';
 import { gscEnd } from '../sources/gsc.mjs';
 import { realQueryCounts, QUERY_WAIT_NOTE, queryPeriodsEven, countsMissingIn } from '../query-counts.mjs';
 import { THRESHOLDS } from '../config.mjs';
@@ -95,9 +96,20 @@ const positionOf = (a) => (a && a.impressions ? round1(a.posW / a.impressions) :
 
 export function pagesTable(model, days) {
   return memo(model, `pages:${days}`, () => {
+    const { cur, prev } = windowsFor(model, days);
+    return pagesTableFor(model, cur, prev);
+  });
+}
+
+// The pages table for any two periods ({start, end} each). The change in times shown is on totals
+// when the periods are the same length, else on per-day averages (a month against the month before).
+export function pagesTableFor(model, cur, prev) {
+  return memo(model, `pages:${cur.start}:${cur.end}:${prev.start}:${prev.end}`, () => {
     const pageDaily = model.data.gsc?.pageDaily;
     if (!Array.isArray(pageDaily)) return { rows: [], range: null, comparable: false };
-    const { cur, prev } = windowsFor(model, days);
+    const curDays = daysBetween(cur.start, cur.end) + 1;
+    const prevDays = daysBetween(prev.start, prev.end) + 1;
+    const change = (a, b) => (curDays === prevDays ? pct(a, b) : perDayChange(a, curDays, b, prevDays));
     const comparable = coversFrom(pageDaily, prev.start);
     const a = aggregatePages(pageDaily, cur.start, cur.end);
     const b = aggregatePages(pageDaily, prev.start, prev.end);
@@ -111,7 +123,7 @@ export function pagesTable(model, days) {
         position: positionOf(c),
         // Click rate only above the minimum number of impressions, and only for whole pages.
         ctr: c.impressions >= lowCtrMin(model) ? Math.round((c.clicks / c.impressions) * 1000) / 1000 : null,
-        change: comparable ? pct(c.impressions, p?.impressions ?? 0) : null,
+        change: comparable ? change(c.impressions, p?.impressions ?? 0) : null,
         movement: movementOf(c.impressions, p?.impressions ?? 0, comparable),
       };
     });
@@ -125,7 +137,7 @@ export function pagesTable(model, days) {
         position: null,
         ctr: null,
         // Gone from a handful of views is not "-100%": the same minimum base applies.
-        change: comparable ? pct(0, p.impressions) : null,
+        change: comparable ? change(0, p.impressions) : null,
         movement: movementOf(0, p.impressions, comparable),
       });
     }

@@ -11,6 +11,7 @@ const theme = await import('../static/theme.js');
 
 const EVERY_ROUTE = [
   'week',
+  'month',
   'performance',
   'queries',
   'pages',

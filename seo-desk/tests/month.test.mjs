@@ -262,7 +262,12 @@ function writeFixture() {
     queryPrev: [],
     qpCur: [],
     qpPrev: [],
-    windows: { cur: { start: '2026-10-16', end: '2026-11-12' }, prev: { start: '2026-09-18', end: '2026-10-15' } },
+    query90: [],
+    windows: {
+      cur: { start: '2026-10-16', end: '2026-11-12' },
+      prev: { start: '2026-09-18', end: '2026-10-15' },
+      d90: { start: '2026-08-15', end: '2026-11-12' },
+    },
   });
   snap('bing', { siteDaily: perDayRows('2026-08-01', '2026-11-12', () => ({ clicks: 1, impressions: 30 })) });
   // GA4 visits start mid October: it cannot answer for October, and must say so rather than show 0.
@@ -586,4 +591,98 @@ test('report view: with no searches pulled the page still has its stored numbers
   assert.equal(v.topPages, null);
   assert.equal(v.targets.available, false);
   assert.match(v.tiles[3].note, /not been pulled yet/);
+});
+
+// ---------------------------------------------------------------- the page
+
+test('page: the change line says per day and against what; the plain text copy carries every section', async () => {
+  const page = await import('../static/views/month.js');
+  const { fmt } = await import('../static/app.js');
+  assert.equal(
+    page.tileChangeText({ change: 11.1, changeKind: 'percent', against: "per day, against September's 30 days" }, fmt),
+    "+11.1% per day, against September's 30 days"
+  );
+  assert.equal(
+    page.tileChangeText({ change: 0.4, changeKind: 'positions', against: 'against 1 September to 30 September' }, fmt),
+    '0.4 places better against 1 September to 30 September'
+  );
+  assert.equal(page.tileChangeText({ change: null, changeKind: 'percent' }, fmt), 'not enough data yet');
+  writeFixture();
+  const v = await routesWith(liveFake([]))('/api/month', 'm=2026-10');
+  const text = page.monthText(v, fmt);
+  for (const s of [
+    'SEO report: October 2026',
+    'In numbers',
+    'What changed, in plain words',
+    'Top pages',
+    'Top searches',
+    'Target keywords',
+    'What was done in the month',
+    'Other sources',
+    'Search Console data runs through',
+  ])
+    assert.ok(text.includes(s), s);
+  assert.match(text, /Google impressions: 3,100 \(\+11\.1% per day, against September's 30 days\)/);
+  assert.match(text, /no GA4 visits by channel/);
+  assert.equal(/[–—]/.test(text), false);
+});
+
+// ---------------------------------------------------------------- Performance gets the date bar (A2)
+
+test('performance: last month is October against September per day; every block says which dates it shows', async () => {
+  writeFixture();
+  const { overviewView } = await import('../lib/api/ext/overview.mjs');
+  const { buildModel } = await import('../lib/api/model.mjs');
+  const v = overviewView(buildModel(), { range: 'last-month' });
+  assert.deepEqual([v.range.start, v.range.end], ['2026-10-01', '2026-10-31']);
+  const imps = v.tiles.find((t) => t.key === 'impressions');
+  assert.equal(imps.value, 3100);
+  // Per day (100 against 90), not totals (3100 against 2700 would be +14.8%).
+  assert.equal(imps.change, 11.1);
+  assert.equal(imps.against, "per day, against September's 30 days");
+  assert.match(v.compareText, /per day, against September's 30 days/);
+  assert.equal(v.series.length, 31);
+  // Top pages follow the dates, per day.
+  assert.equal(v.topPages[0].page, '/blog/alpha');
+  assert.equal(v.topPages[0].impressions, 1550);
+  assert.deepEqual([v.pagesRange.start, v.pagesRange.end], ['2026-10-01', '2026-10-31']);
+  // The target tile, the searches list, countries and devices each say their own dates.
+  const pos = v.tiles.find((t) => t.key === 'targetPosition');
+  assert.match(pos.rangeLine, /16 October to 12 November, the target keywords' own 28 days/);
+  assert.match(pos.rangeLine, /Monthly report/);
+  assert.match(v.queriesNote, /latest 28 and 90 days only/);
+  assert.match(v.breakdownNote, /16 October to 12 November, the latest 28 days/);
+  // The same length compares totals, as before.
+  const d28 = overviewView(buildModel(), 28);
+  assert.equal(d28.tiles.find((t) => t.key === 'impressions').against, null);
+  assert.equal(d28.tiles.find((t) => t.key === 'targetPosition').rangeLine, null);
+  const d90 = overviewView(buildModel(), 90);
+  assert.match(d90.tiles.find((t) => t.key === 'targetPosition').rangeLine, /own 28 days\.$/);
+  // Last quarter is July to September against April to June.
+  const lq = overviewView(buildModel(), { range: 'last-quarter' });
+  assert.deepEqual([lq.range.start, lq.range.end], ['2026-07-01', '2026-09-30']);
+  assert.match(lq.compareText, /per day/);
+});
+
+// ---------------------------------------------------------------- the target keywords follow the dates (A3)
+
+test('queries: the target keywords CSV names its dates in every row and in the file name', async () => {
+  const page = await import('../static/views/search.js');
+  const range = { start: '2026-10-01', end: '2026-10-31', text: '1 October to 31 October' };
+  const prevRange = { start: '2026-09-01', end: '2026-09-30', text: '1 September to 30 September' };
+  const c = page.targetsCsv(
+    [
+      { keyword: 'alpha rota', page: '/blog/alpha', position: 5, prevPosition: 8, change: 3, impressions: 400 },
+      { keyword: 'delta rota', page: '/blog/delta', position: 20, prevPosition: null, change: null, impressions: 30 },
+    ],
+    { range, prevRange }
+  );
+  assert.equal(c.name, 'seo-desk-target-keywords-2026-10-01-to-2026-10-31.csv');
+  assert.deepEqual(c.header.slice(-2), ['Dates', 'Compared with']);
+  for (const row of c.body) assert.deepEqual(row.slice(-2), ['1 October to 31 October', '1 September to 30 September']);
+  const { fmt } = await import('../static/app.js');
+  assert.match(
+    page.likeSummary({ enough: true, mean: 8.7, prevMean: 9.1, n: 3, targetsTotal: 4, prevRange }, fmt, { range }),
+    /8\.7 for 1 October to 31 October, over 3 keywords of 4, against 9\.1 for 1 September to 30 September/
+  );
 });

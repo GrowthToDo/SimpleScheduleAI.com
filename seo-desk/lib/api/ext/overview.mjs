@@ -3,8 +3,11 @@
 // number is the whole-site click rate, which comes from the site totals and never from search rows.
 
 import { get, bad, q } from '../kit.mjs';
-import { buildModel, envelope, rangeOf, memo } from '../model.mjs';
-import { windowsFor, pagesTable, queriesTable, targetsView, RANGES, SUMMED_NOTE } from '../search.mjs';
+import { buildModel, envelope, rangeOf, memo, deskToday } from '../model.mjs';
+import { windowsFor, pagesTable, pagesTableFor, queriesTable, targetsView, RANGES, SUMMED_NOTE } from '../search.mjs';
+import { periodFor, perDayChange } from '../../month.mjs';
+import { RANGE_OPTIONS } from '../../explore.mjs';
+import { gscEnd } from '../../sources/gsc.mjs';
 import { timelineEvents, weekModel, openOpportunityCount } from '../work.mjs';
 import { n0, round1, pct, sumRange, coversFrom } from '../fmt.mjs';
 import { longRange, spanText } from '../../text.mjs';
@@ -41,9 +44,38 @@ function coveredRange(rows, win) {
   return { start, end: win.end, text: spanText(start, win.end), short };
 }
 
-export function overviewView(model, days) {
+// The choices the date bar offers on Performance (the explorer's, so Queries and Pages read the same).
+export const RANGE_SPECS = RANGE_OPTIONS.map((o) => o.value);
+const MONTH_SPECS = new Set(['this-month', 'last-month']);
+
+// The period a choice covers and the one it is compared with. 7, 28, 90 days and 16 months end on the
+// stored end date and compare with the same number of days before (windowsFor). Any other choice
+// (14 days, this month, last month, last quarter, a custom range) comes from periodFor: months and
+// quarters are compared with the month or quarter before, on per-day averages when the lengths differ.
+function periodOf(model, spec) {
+  if (typeof spec === 'number') {
+    const { cur, prev } = windowsFor(model, spec);
+    return { cur, prev, days: spec, sameLength: true, againstText: null, compareText: null, spec: String(spec) };
+  }
+  const end = gscEnd(model.data?.gsc, model.snapObjs.gsc?.through ?? model.range.end);
+  const p = periodFor(spec, deskToday(), end);
+  return {
+    cur: { start: p.cur.start, end: p.cur.end },
+    prev: { start: p.prev.start, end: p.prev.end },
+    days: p.cur.days,
+    prevDays: p.prev.days,
+    sameLength: p.sameLength,
+    againstText: p.againstText,
+    compareText: p.compareText,
+    spec: String(spec.range),
+  };
+}
+
+// spec: a number of days (7, 28, 90, 480), or {range, start, end} for any other date-bar choice.
+export function overviewView(model, spec = 28) {
   const gsc = model.data.gsc;
-  const { cur, prev } = windowsFor(model, days);
+  const period = periodOf(model, spec);
+  const { cur, prev, days } = period;
   const site = gsc?.siteDaily ?? [];
   // The range the numbers and the chart really cover, never more than the desk holds.
   const covered = coveredRange(site, cur);
@@ -55,6 +87,7 @@ export function overviewView(model, days) {
   const impressions = sum(cur.start, cur.end, 'impressions');
   const prevClicks = sum(prev.start, prev.end, 'clicks');
   const prevImpressions = sum(prev.start, prev.end, 'impressions');
+  const before = period.sameLength ? `the ${days} days before` : 'the period before';
 
   const tile = (key, label, value, change, changeKind, note, extra = {}) => ({
     key,
@@ -67,16 +100,26 @@ export function overviewView(model, days) {
     range,
     ...extra,
   });
-  const countTile = (key, label, now, before) => {
-    const change = comparable ? pct(now, before) : null;
+  // Periods of the same length compare totals; periods of different lengths (a month against the
+  // month before) compare per-day averages, and the tile says so (against).
+  const countTile = (key, label, now, earlier) => {
+    const change = !comparable
+      ? null
+      : period.sameLength
+        ? pct(now, earlier)
+        : perDayChange(now, period.days, earlier, period.prevDays);
     const note = !site.length
       ? 'Not enough data yet.'
       : !comparable
-        ? `Not enough history yet to compare with the ${days} days before.`
+        ? `Not enough history yet to compare with ${before}.`
         : change === null
-          ? `Not enough data yet for a percentage (the earlier period had ${n0(before)}).`
-          : `Compared with ${n0(before)} in the ${days} days before (${longRange(prev.start, prev.end)}).`;
-    return tile(key, label, site.length ? now : null, change, 'percent', note);
+          ? `Not enough data yet for a percentage (the earlier period had ${n0(earlier)}).`
+          : period.sameLength
+            ? `Compared with ${n0(earlier)} in ${before} (${longRange(prev.start, prev.end)}).`
+            : `${n0(now)} in ${period.days} days against ${n0(earlier)} in ${period.prevDays} days (${longRange(prev.start, prev.end)}), compared per day.`;
+    return tile(key, label, site.length ? now : null, change, 'percent', note, {
+      against: change === null ? null : period.againstText,
+    });
   };
 
   // The whole-site click rate: clicks over impressions from the site totals, with 500 impressions
@@ -94,10 +137,16 @@ export function overviewView(model, days) {
     rate === null
       ? `Not enough data yet: a click rate needs at least ${n0(CLICK_RATE_MIN_IMPRESSIONS)} impressions in the period, and this one had ${n0(impressions)}.`
       : 'Clicks divided by times shown, for the whole site.',
-    { valueText: rate === null ? null : `${round1(rate * 100)}%` }
+    {
+      valueText: rate === null ? null : `${round1(rate * 100)}%`,
+      against: period.sameLength ? null : `against ${longRange(prev.start, prev.end)}`,
+    }
   );
 
   const like = targetsView(model).likeForLike;
+  const likeRange = like.range ?? range;
+  // The target keyword position covers its own stored 28 days; on any other dates its tile says so.
+  const ownDates = likeRange && (likeRange.start !== range.start || likeRange.end !== range.end);
   const positionTile = tile(
     'targetPosition',
     'Target keyword position',
@@ -107,24 +156,36 @@ export function overviewView(model, days) {
     TARGET_NOTE,
     {
       enoughData: like.enough,
-      range: like.range ?? range,
+      range: likeRange,
+      rangeLine: ownDates
+        ? `Covers ${likeRange.text}, the target keywords' own 28 days.${MONTH_SPECS.has(period.spec) ? ' The Monthly report has this number for the month itself.' : ''}`
+        : null,
       detail: like.enough
         ? `Mean over the ${like.n} of ${like.targetsTotal} target keywords that have data in both periods. A lower place is better.`
         : `Not enough data yet: only ${like.n} of ${like.targetsTotal} target keywords have data in both periods.`,
     }
   );
 
-  const queriesT = queriesTable(model, days);
-  const pagesT = pagesTable(model, days);
+  // The searches list is stored for the latest 28 and 90 days only: the nearer of the two, with its
+  // own dates. Pages come from the daily page rows for the chosen dates.
+  const listDays = Math.abs(days - 28) <= Math.abs(days - 90) ? 28 : 90;
+  const queriesT = queriesTable(model, typeof spec === 'number' ? days : listDays);
+  const pagesT = typeof spec === 'number' ? pagesTable(model, days) : pagesTableFor(model, cur, prev);
   const countries = [...(gsc?.countries ?? [])]
     .sort((a, b) => b.impressions - a.impressions)
     .slice(0, COUNTRIES)
     .map((c) => ({ country: c.country, clicks: c.clicks, impressions: c.impressions }));
+  const queriesRange = rangeOf(queriesT.range);
+  const listOwnDates = queriesRange && (queriesRange.start !== range.start || queriesRange.end !== range.end);
 
   return {
     ...envelope(model, { need: ['gsc'], range }),
     days,
+    spec: period.spec,
     ranges: RANGES,
+    rangeSpecs: RANGE_SPECS,
+    // How the numbers are compared, when it is not simply "the same number of days before".
+    compareText: period.compareText,
     // True when the desk holds less daily history than the range asks for: the range is then what it
     // holds, and the big numbers make no comparison with a period before.
     short: covered.short,
@@ -150,14 +211,16 @@ export function overviewView(model, days) {
         position: r.position,
         brand: r.brand,
       })),
-    queriesRange: rangeOf(queriesT.range),
+    queriesRange,
     queriesNote:
       [
-        days < 28
-          ? 'The searches list covers the last 28 days, because Search Console is pulled in 28 day periods.'
-          : days > 28
-            ? 'The searches list covers the last 90 days, the longest period the desk pulls searches for.'
-            : null,
+        typeof spec !== 'number' && listOwnDates
+          ? `The searches list is stored for the latest 28 and 90 days only, so it shows ${queriesRange.text}. The Queries page pulls the exact dates.`
+          : days < 28
+            ? 'The searches list covers the last 28 days, because Search Console is pulled in 28 day periods.'
+            : days > 28 && typeof spec === 'number'
+              ? 'The searches list covers the last 90 days, the longest period the desk pulls searches for.'
+              : null,
         queriesT.summed ? SUMMED_NOTE : null,
         queriesT.countsMissing ? COUNTS_MISSING_NOTE : null,
         queriesT.waitNote,
@@ -178,6 +241,11 @@ export function overviewView(model, days) {
       })),
     countries,
     devices: (gsc?.devices ?? []).map((d) => ({ device: d.device, clicks: d.clicks, impressions: d.impressions })),
+    // Countries and devices are stored for the latest 28 days only, whatever the dates chosen.
+    breakdownRange: rangeOf(gsc?.windows?.cur),
+    breakdownNote: gsc?.windows?.cur
+      ? `${longRange(gsc.windows.cur.start, gsc.windows.cur.end)}, the latest 28 days: countries and devices are stored for those dates only.`
+      : null,
   };
 }
 
@@ -227,9 +295,10 @@ export function navCounts(model) {
 
 export const routes = [
   get('/api/overview', (ctx) => {
-    const days = q(ctx, 'range') === '' ? 28 : Number(q(ctx, 'range'));
-    if (!RANGES.includes(days)) throw bad(`range must be one of: ${RANGES.join(', ')}.`);
-    return overviewView(buildModel(), days);
+    const asked = q(ctx, 'range') === '' ? '28' : q(ctx, 'range');
+    if (RANGES.includes(Number(asked)) && /^\d+$/.test(asked)) return overviewView(buildModel(), Number(asked));
+    if (!RANGE_SPECS.includes(asked)) throw bad(`range must be one of: ${RANGE_SPECS.join(', ')}.`);
+    return overviewView(buildModel(), { range: asked, start: q(ctx, 'start'), end: q(ctx, 'end') });
   }),
   get('/api/nav', () => {
     const model = buildModel();

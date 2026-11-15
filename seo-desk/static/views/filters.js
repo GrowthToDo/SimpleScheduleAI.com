@@ -200,7 +200,8 @@ export function checkCustom(start, end, today) {
 // ------------------------------------------------------------------ the bar
 
 // countries: [{code, name}] from /api/explore/options (most seen first). today: 'YYYY-MM-DD'.
-export function filterBar(ctx, { route, state, countries = [], today, ranges = RANGES }) {
+// filters: false draws the dates only (Performance has no search, page, country or device filter).
+export function filterBar(ctx, { route, state, countries = [], today, ranges = RANGES, filters = true }) {
   const { h } = ctx;
   const countryName = (c) => countries.find((x) => x.code === c)?.name ?? c.toUpperCase();
   const go = (next) => ctx.navigate(hashWith(location.hash, route, next));
@@ -306,7 +307,7 @@ export function filterBar(ctx, { route, state, countries = [], today, ranges = R
   );
   device.value = state.device;
 
-  const chips = chipsOf(state, { countryName, today });
+  const chips = chipsOf(state, { countryName, today }).filter((c) => filters || c.key === 'range');
   const filterCount = chips.filter((c) => c.key !== 'range').length;
   const more = h(
     'details',
@@ -387,10 +388,12 @@ export function filterBar(ctx, { route, state, countries = [], today, ranges = R
 
   return h(
     'div',
-    { class: 'fb', role: 'search', 'aria-label': 'Dates and filters' },
+    filters
+      ? { class: 'fb', role: 'search', 'aria-label': 'Dates and filters' }
+      : { class: 'fb', 'aria-label': 'Dates' },
     rangeRow,
     customBox,
-    more,
+    filters ? more : null,
     chipRow
   );
 }

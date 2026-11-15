@@ -11,6 +11,7 @@
 
 import { fmt } from '../app.js';
 import { twoLineChart } from '../chart.js';
+import { filterBar, readFilters, apiQuery } from './filters.js';
 import { markerText } from './markers.js';
 import { countryName } from './countries.js';
 
@@ -25,8 +26,10 @@ const rangeLabel = (days) => RANGES.find((r) => r.days === Number(days))?.label 
 const blank = (v) => v === null || v === undefined || !Number.isFinite(Number(v));
 
 // The target keyword position always covers its own 28 days. On any other range its tile says
-// which dates, so it is never read as the range chosen. Null when nothing needs saying.
+// which dates, so it is never read as the range chosen. Null when nothing needs saying. The server
+// sends the line itself (rangeLine) for every date-bar choice.
 export function tileRangeLine(tile, days) {
+  if (tile && tile.rangeLine !== undefined) return tile.rangeLine;
   if (tile?.key !== 'targetPosition' || Number(days) === 28 || !tile.range) return null;
   return `Covers ${fmt.range(tile.range)}, the target keywords' own 28 days.`;
 }
@@ -35,7 +38,8 @@ export function changeLine(tile, days) {
   if (blank(tile?.change)) return fmt.NOT_ENOUGH;
   const c = Number(tile.change);
   if (tile.changeKind === 'positions') return fmt.change(c, 'positions');
-  const before = `on the ${rangeLabel(days)} before`;
+  // A month or a quarter is compared per day with the one before; the server says so (against).
+  const before = tile.against ?? `on the ${rangeLabel(days)} before`;
   if (tile.changeKind === 'points') {
     const a = Math.abs(c).toLocaleString('en-US', { maximumFractionDigits: 1 });
     return `${c > 0 ? '+' : c < 0 ? '-' : ''}${a} ${a === '1' ? 'point' : 'points'} ${before}`;
@@ -74,30 +78,19 @@ const tileValue = (t) => {
 
 export async function render(el, ctx) {
   const { api, h, params } = ctx;
-  const asked = Number(params.get('range'));
-  const days = RANGES.some((r) => r.days === asked) ? asked : 28;
-  const data = await api.get(`/api/overview?range=${days}`);
+  const today = fmt.isoPlus(0);
+  // The date bar Queries and Pages use, dates only; the choice lives in the address.
+  const state = readFilters(params, { today });
+  const dates = { ...state, q: '', pagefilter: '', country: '', device: '' };
+  const data = await api.get(`/api/overview?${apiQuery(dates)}`);
   ctx.envelope(data);
+  const days = data.days;
   // The server says when it holds less history than the range asks for (data.short): data.range is
   // then what it holds, coverageNote says so, and there is no period before to compare with.
   const short = data.short === true;
 
   // ---------------------------------------------------------------- the head and the range
-  const rangeButtons = h(
-    'div',
-    { class: 'seg seg-range', role: 'group', 'aria-label': 'Dates' },
-    RANGES.map((r) =>
-      h(
-        'button',
-        {
-          type: 'button',
-          'aria-pressed': String(r.days === days),
-          onclick: () => ctx.navigate(`#/performance${r.days === 28 ? '' : `?range=${r.days}`}`),
-        },
-        r.label
-      )
-    )
-  );
+  const rangeButtons = filterBar(ctx, { route: 'performance', state: dates, today, filters: false });
 
   // ---------------------------------------------------------------- four big numbers
   const position = data.tiles.find((t) => t.key === 'targetPosition');
@@ -156,11 +149,13 @@ export async function render(el, ctx) {
           { class: 'page-sub' },
           short
             ? `How Google shows the site. ${data.coverageNote ?? ''}`.trim()
-            : `How Google shows the site, ${fmt.range(data.range)}${days === 480 ? '' : ', against the same number of days before'}.`
+            : data.compareText
+              ? `How Google shows the site, ${fmt.range(data.range)}. ${data.compareText}`
+              : `How Google shows the site, ${fmt.range(data.range)}${data.spec === '480' ? '' : ', against the same number of days before'}.`
         )
-      ),
-      rangeButtons
+      )
     ),
+    rangeButtons,
     data.empty
       ? h('p', { class: 'banner banner-warn' }, 'No search data has been pulled yet. Press Refresh now at the top.')
       : null,
@@ -218,12 +213,14 @@ export async function render(el, ctx) {
       breakdown(ctx, {
         title: 'Countries',
         note: 'Top countries by impressions.',
+        dates: data.breakdownNote,
         rows: data.countries,
         name: (r) => countryName(r.country),
       }),
       breakdown(ctx, {
         title: 'Devices',
         note: 'Impressions by device.',
+        dates: data.breakdownNote,
         rows: [...data.devices].sort((a, b) => b.impressions - a.impressions),
         name: (r) => DEVICE[String(r.device).toLowerCase()] ?? String(r.device),
       })
@@ -283,14 +280,14 @@ function topList(ctx, { title, href, seeAll, note, rows, name, nameLabel, empty 
   );
 }
 
-function breakdown(ctx, { title, note, rows, name }) {
+function breakdown(ctx, { title, note, rows, name, dates }) {
   const { h } = ctx;
   const max = Math.max(1, ...rows.map((r) => r.impressions));
   return h(
     'section',
     { class: 'section panel' },
     h('div', { class: 'section-head' }, h('h2', { class: 'section-title' }, title)),
-    h('p', { class: 'section-note' }, `${note} The latest 28 days of Search Console data.`),
+    h('p', { class: 'section-note' }, `${note} ${dates ?? 'The latest 28 days of Search Console data.'}`),
     rows.length
       ? h(
           'ul',
