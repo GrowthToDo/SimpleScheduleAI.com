@@ -153,13 +153,16 @@ export async function render(el, ctx) {
         )
       )
     ),
-    worries(week, ctx, { locked, swapIn }),
+    // The page's order: the priorities, then what only the founder can do, then the worries (the
+    // Worries tile jumps there), then everything else.
     topFive(week, ctx, { ids, locked, saveFive }),
+    blocked(week, ctx, { locked, swapIn }),
+    worries(week, ctx, { locked, swapIn }),
     h(
       'div',
       { class: 'cols' },
       h('div', {}, biggest(week, ctx, { locked, swapIn })),
-      h('div', {}, leaveAlone(week, ctx), waiting(week, ctx), blocked(week, ctx, { locked, swapIn }))
+      h('div', {}, leaveAlone(week, ctx), waiting(week, ctx))
     ),
     pastWeeks(week, ctx)
   );
