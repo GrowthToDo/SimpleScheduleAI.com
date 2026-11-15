@@ -145,7 +145,7 @@ function countTile(key, label, site, win, comparable, field) {
       ? 'The desk holds no daily numbers for the month before, so there is nothing to compare with.'
       : change === null
         ? `Not enough data yet for a percentage: ${n0(before)} in ${win.prev.text}, and a change needs at least ${THRESHOLDS.PCT_MIN_BASE}.`
-        : `${n0(total)} in ${plural(win.cur.days, 'day', 'days')} is ${a} a day, against ${b} a day in ${win.prev.text} (${n0(before)} in ${plural(win.prev.days, 'day', 'days')}).`;
+        : `${n0(total)} in ${plural(win.cur.days, 'day', 'days')} is ${a} a day, against ${b} a day from ${win.prev.text} (${n0(before)} in ${plural(win.prev.days, 'day', 'days')}).`;
   return {
     key,
     label,
@@ -377,10 +377,10 @@ function whatChanged({ win, tiles, movers, targets, done, comparable }) {
   const out = [];
   const [clicks, imps] = tiles;
   if (imps.value !== null) {
-    let s = `Google showed the site ${n0(imps.value)} times in ${win.cur.text} and sent ${plural(clicks.value, 'click', 'clicks')}`;
+    let s = `Google showed the site ${n0(imps.value)} times from ${win.cur.text} and sent ${plural(clicks.value, 'click', 'clicks')}`;
     s +=
       comparable && imps.change !== null
-        ? `: ${imps.perDay} times a day, against ${imps.prevPerDay} a day in ${win.prev.text} (${pctWords(imps.change)}).`
+        ? `: ${imps.perDay} times a day, against ${imps.prevPerDay} a day from ${win.prev.text} (${pctWords(imps.change)}).`
         : '.';
     out.push(s);
   }
@@ -394,7 +394,7 @@ function whatChanged({ win, tiles, movers, targets, done, comparable }) {
       parts.push(
         `${movers.faller.page} fell most, from ${n0(movers.faller.before)} to ${n0(movers.faller.after)} (${pctWords(movers.faller.change)})`
       );
-    out.push(`Among pages shown at least ${THRESHOLDS.PCT_MIN_BASE} times in ${win.prev.text}, ${parts.join('; ')}.`);
+    out.push(`Among pages shown at least ${THRESHOLDS.PCT_MIN_BASE} times from ${win.prev.text}, ${parts.join('; ')}.`);
   }
   if (targets.available && targets.rows.length) {
     let s = `Of the ${plural(targets.rows.length, 'target keyword', 'target keywords')} with a place in both months, ${targets.improved} improved, ${targets.held} held and ${targets.slipped} slipped.`;
@@ -411,7 +411,7 @@ function whatChanged({ win, tiles, movers, targets, done, comparable }) {
     out.push(s);
   }
   out.push(
-    `${plural(done.posts.length, 'post was', 'posts were')} published and ${plural(done.edits.length, 'deliberate page edit was', 'deliberate page edits were')} recorded in ${win.cur.text}.`
+    `${plural(done.posts.length, 'post was', 'posts were')} published and ${plural(done.edits.length, 'deliberate page edit was', 'deliberate page edits were')} recorded from ${win.cur.text}.`
   );
   return out.slice(0, SUMMARY_MAX);
 }

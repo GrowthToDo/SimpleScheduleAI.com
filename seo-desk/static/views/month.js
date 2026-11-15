@@ -41,6 +41,18 @@ export const tileValueText = (t, fmt) => {
   return fmt.num(t.value);
 };
 
+// Edits grouped by day, one line a day: "19 October (3 pages): /a, /b, /c".
+export function editsByDay(edits) {
+  const days = new Map();
+  for (const e of edits ?? []) {
+    if (!days.has(e.dateText)) days.set(e.dateText, []);
+    days.get(e.dateText).push(e.page);
+  }
+  return [...days].map(
+    ([day, pages]) => `${day}${pages.length > 1 ? ` (${pages.length} pages)` : ''}: ${pages.join(', ')}`
+  );
+}
+
 const changeCell = (v, fmt) => (blank(v) ? fmt.NOT_ENOUGH : fmt.change(v, 'percent'));
 const placeCell = (v, fmt) => (blank(v) ? '' : fmt.position(v));
 
@@ -89,7 +101,7 @@ export function monthText(d, fmt) {
     `- Posts published: ${d.done.posts.length ? d.done.posts.map((p) => `${p.page} (${p.dateText})`).join(', ') : 'none'}`
   );
   line(
-    `- Deliberate page edits: ${d.done.edits.length ? d.done.edits.map((e) => `${e.page} (${e.dateText})`).join(', ') : 'none'}`
+    `- Deliberate page edits (${d.done.edits.length}): ${d.done.edits.length ? editsByDay(d.done.edits).join('; ') : 'none'}`
   );
   line(
     `- Verdicts read: ${d.done.verdicts.length ? d.done.verdicts.map((v) => `${v.pages.join(' and ')}, changed ${v.changeDateText}: ${v.reads}`).join('; ') : 'none'}${d.done.verdictsUnreadable ? ` (${d.done.verdictsUnreadable} more could not be read)` : ''}`
@@ -324,10 +336,7 @@ export async function render(el, ctx) {
     ),
     done.postsNote ? h('p', { class: 'mr-note' }, done.postsNote) : null,
     h('h3', { class: 'mr-h3' }, `Deliberate page edits (${done.edits.length})`),
-    listOr(
-      done.edits.map((e) => `${e.dateText}: ${e.page}`),
-      'No deliberate page edit is on record for this month.'
-    ),
+    listOr(editsByDay(done.edits), 'No deliberate page edit is on record for this month.'),
     done.editsNote ? h('p', { class: 'mr-note' }, done.editsNote) : null,
     h('h3', { class: 'mr-h3' }, `Verdicts read in the month (${done.verdicts.length})`),
     listOr(

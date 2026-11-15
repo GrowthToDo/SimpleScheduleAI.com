@@ -391,7 +391,7 @@ test('report: October against September, per day, totals as totals; the searches
   assert.equal(imps.change, 11.1);
   assert.equal(clicks.change, 33.3);
   assert.equal(imps.against, "per day, against September's 30 days");
-  assert.match(imps.note, /100 a day, against 90 a day/);
+  assert.match(imps.note, /100 a day, against 90 a day from 1 September/);
   assert.equal(rate.valueText, '4%');
   assert.equal(rate.change, 0.7);
   // Like for like over alpha, beta and gamma (delta has no September place).
@@ -437,7 +437,7 @@ test('report: the series, top pages and searches, the target keywords and the pl
   assert.match(t.note, /1 target keyword has no place in one of the two months/);
   assert.ok(v.summary.length >= 3 && v.summary.length <= 5);
   for (const s of v.summary) assert.match(s, /\d/, `every sentence carries its numbers: ${s}`);
-  assert.match(v.summary[0], /3,100 times in 1 October to 31 October/);
+  assert.match(v.summary[0], /3,100 times from 1 October to 31 October/);
   assert.match(v.summary[1], /\/blog\/alpha rose most, from 600 to 1,550/);
   assert.match(v.summary[1], /\/blog\/beta fell most/);
   assert.match(v.summary[2], /1 improved, 1 held and 1 slipped/);
@@ -697,4 +697,16 @@ test('ask: the digest carries the last complete month, with its target counts on
   assert.match(brief.text, /Last complete month \(Monthly report\)/);
   assert.match(brief.text, /October 2026/);
   assert.match(brief.text, /"improved":1,"held":1,"slipped":1/);
+});
+
+test('page: deliberate edits are listed one line a day', async () => {
+  const page = await import('../static/views/month.js');
+  assert.deepEqual(
+    page.editsByDay([
+      { page: '/blog/a', dateText: '19 October' },
+      { page: '/blog/b', dateText: '19 October' },
+      { page: '/blog/c', dateText: '16 October' },
+    ]),
+    ['19 October (2 pages): /blog/a, /blog/b', '16 October: /blog/c']
+  );
 });
