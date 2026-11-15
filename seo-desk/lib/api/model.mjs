@@ -461,6 +461,33 @@ export function pageEdits(model, page) {
   };
 }
 
+// Every deliberate edit dated inside [start, end], across all pages, from pageEdits (the definition
+// "last edited" uses): [{page, date, kind, why, lines}], newest first. gitFrom: the first day git is
+// read for (the local snapshot carries the last 35 days of content edits), or null when it carries
+// none; an edit found in git before that day cannot be on the list, so the reader says so.
+export function deliberateEditsIn(model, start, end) {
+  const pages = new Set();
+  for (const d of lifecycleDeliberate({
+    items: model.items,
+    opps: model.opps,
+    plan: model.data.local?.plan ?? null,
+    edits: model.edits,
+    planTicks: model.planTicks,
+    planSeenOn: model.planSeenOn,
+  }))
+    if (d.page) pages.add(d.page);
+  let gitFrom = null;
+  for (const e of model.data.local?.contentEdits ?? []) {
+    if (e?.page) pages.add(e.page);
+    if (e?.date && (gitFrom === null || e.date < gitFrom)) gitFrom = e.date;
+  }
+  const list = [];
+  for (const page of pages)
+    for (const d of pageEdits(model, page).deliberate) if (d.date >= start && d.date <= end) list.push({ page, ...d });
+  list.sort((a, b) => b.date.localeCompare(a.date) || a.page.localeCompare(b.page));
+  return { list, gitFrom };
+}
+
 // The sentence a worry says about the page's edits inside its compared dates (start..end), or null:
 // "The page was last edited on 9 November, inside these dates." for a deliberate edit, and
 // "The page had a small change on 3 November (1 line), inside these dates." for a smaller one.

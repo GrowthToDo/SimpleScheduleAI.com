@@ -158,6 +158,32 @@ function tally(checks) {
   };
 }
 
+// The saved check lines dated inside [start, end], oldest first, each with its own totals in the
+// words the AI visibility page uses: [{date, dateText, listed, listedLinked, keywordChecked,
+// keywordCited, keywordEnough, text}]. A date saved twice keeps its last line.
+export function checkLinesIn(aeoLines, start, end) {
+  const byDate = new Map();
+  for (const l of Array.isArray(aeoLines) ? aeoLines : []) {
+    if (!l || typeof l.date !== 'string' || l.date < start || l.date > end) continue;
+    byDate.set(l.date, l);
+  }
+  return [...byDate.values()]
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .map((l) => {
+      const t = tally((l.rows ?? []).map(checkOf).filter(Boolean));
+      return {
+        date: l.date,
+        dateText: longDate(l.date),
+        listed: t.listed,
+        listedLinked: t.listedLinked,
+        keywordChecked: t.keywordChecked,
+        keywordCited: t.keywordCited,
+        keywordEnough: t.keywordEnough,
+        text: t.text,
+      };
+    });
+}
+
 // aeoLines: the saved lines of docs/seo/aeo-trend.jsonl ({date, engines, rows}).
 // cfg: {brands, competitors, today}. Competitor names in the keyword rows are added to cfg.competitors.
 export function visibility(aeoLines, cfg = {}) {

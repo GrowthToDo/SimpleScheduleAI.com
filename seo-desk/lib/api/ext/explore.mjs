@@ -134,8 +134,17 @@ const filterParamsOf = (ctx) => ({
 
 const fetchedOn = (iso) => (iso ? longDate(iso.slice(0, 10)) : null);
 
-export function makeRoutes({ open = openServer, now, waitMs = WAIT_MS, totalMs = LIVE_LIMIT_MS } = {}) {
-  const lock = makeLock();
+// One lock for every live Search Console session the desk's own routes open (the explorer and the
+// monthly report), so two pages never run two sessions at once.
+export const SHARED_LOCK = makeLock();
+
+export function makeRoutes({
+  open = openServer,
+  now,
+  waitMs = WAIT_MS,
+  totalMs = LIVE_LIMIT_MS,
+  lock = makeLock(),
+} = {}) {
   // Runs `fn(call)` with a live call and always closes the session afterwards.
   const withLive = async (fn) => {
     const live = liveSession({ open, lock, waitMs, totalMs });
@@ -291,4 +300,4 @@ export function makeRoutes({ open = openServer, now, waitMs = WAIT_MS, totalMs =
   ];
 }
 
-export const routes = makeRoutes();
+export const routes = makeRoutes({ lock: SHARED_LOCK });

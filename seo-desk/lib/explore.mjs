@@ -291,6 +291,11 @@ function cacheWrite(key, result, now) {
 
 // ---------------------------------------------------------------- pulls
 
+// One live pull. Also used by the monthly report's pulls (lib/month.mjs periodRows).
+export async function pullRows(call, args) {
+  return pull(call, args);
+}
+
 async function pull(call, { dimensions, start, end, filters, rowLimit }) {
   let data;
   try {

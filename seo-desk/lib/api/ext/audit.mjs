@@ -218,6 +218,27 @@ export const latestRun = () => {
 
 const toFixOf = (counts) => (counts ? (counts.critical ?? 0) + (counts.high ?? 0) : 0);
 
+// The last audit run that started inside [start, end] (days on this computer's calendar), with the
+// score the audit page shows for it, or null when no run started in those dates:
+// {startedAt, dateText, score, pagesChecked, stoppedEarly}.
+export function auditInRange(start, end) {
+  for (const r of listAudits()) {
+    if (!isRunTime(r.startedAt)) continue;
+    const day = todayIso(new Date(r.startedAt));
+    if (day < start || day > end) continue;
+    const open = Object.values(r.counts ?? {}).reduce((s, n) => s + (Number(n) || 0), 0);
+    return {
+      startedAt: r.startedAt,
+      date: day,
+      dateText: longDate(day),
+      score: capped(r.score ?? null, open > 0),
+      pagesChecked: r.pagesChecked ?? null,
+      stoppedEarly: r.stoppedEarly === true,
+    };
+  }
+  return null;
+}
+
 // After this many days the sidebar no longer shows a tick for "nothing to fix".
 export const AUDIT_OLD_DAYS = 14;
 

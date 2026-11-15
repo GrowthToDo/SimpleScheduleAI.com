@@ -221,60 +221,103 @@ const ALIGNMENT_OF = {
 export function targetsView(model) {
   return memo(model, 'targets', () => {
     const gsc = model.data.gsc;
-    const registry = (model.data.local?.registry ?? []).filter((e) => e.primaryKeyword);
-    if (!gsc || !registry.length) {
-      return {
-        rows: [],
-        likeForLike: { mean: null, prevMean: null, n: 0, targetsTotal: registry.length, enough: false },
-      };
-    }
-    const mapFor = (rows, qpRows) => {
-      const m = new Map((rows ?? []).map((r) => [lower(r.query).trim(), r]));
-      for (const q of groupByQuery(qpRows ?? [])) if (!m.has(lower(q.query).trim())) m.set(lower(q.query).trim(), q);
-      return m;
-    };
-    const curMap = mapFor(gsc.queryCur, gsc.qpCur);
-    const prevMap = mapFor(gsc.queryPrev, gsc.qpPrev);
-    // Whether the right page ranks: the Keywords page's own reading of each target (ext/targets.mjs
-    // targetRows: the keyword or another form of it, and too few views to tell under 10), so "Right page"
-    // means the same set on both pages. This list holds the keyword file's targets only.
-    const byTarget = new Map(
-      targetRows(model).rows.map((r) => [`${lower(r.keyword).trim()}\u0000${r.page ? pagePath(r.page) : ''}`, r])
-    );
-    const rows = registry.map((e) => {
-      const key = lower(e.primaryKeyword).trim();
-      const c = curMap.get(key);
-      const p = prevMap.get(key);
-      const t = byTarget.get(`${key}\u0000${e.url ? pagePath(e.url) : ''}`) ?? null;
-      return {
-        keyword: e.primaryKeyword,
-        page: e.url ?? null,
-        slug: e.slug ?? null,
-        position: c ? Number(Number(c.position).toFixed(1)) : null,
-        prevPosition: p ? Number(Number(p.position).toFixed(1)) : null,
-        impressions: c?.impressions ?? 0,
-        rankingPage: t?.rankingPage ?? null,
-        alignment: ALIGNMENT_OF[t?.label] ?? 'no data yet',
-      };
+    if (!gsc) return targetsCompare(model, null);
+    return targetsCompare(model, {
+      cur: gsc.queryCur,
+      curQp: gsc.qpCur,
+      prev: gsc.queryPrev,
+      prevQp: gsc.qpPrev,
+      range: gsc.windows?.cur,
+      prevRange: gsc.windows?.prev,
     });
-    for (const r of rows)
-      r.change = r.position !== null && r.prevPosition !== null ? round1(r.prevPosition - r.position) : null;
-    const shared = rows.filter((r) => r.position !== null && r.prevPosition !== null);
-    const mean = (list, f) => round1(list.reduce((s, r) => s + f(r), 0) / list.length);
-    const enough = shared.length >= LIKE_MIN_N;
+  });
+}
+
+// A target moved when its place changed by one place or more (scripts/target-positions.mjs: a move
+// of at least 1 is improved or worsened, anything smaller is flat).
+export const TARGET_MOVE_PLACES = 1;
+// 'improved' | 'slipped' | 'held' | null (no place in one of the two periods).
+export const targetMoveOf = (change) =>
+  change === null || change === undefined
+    ? null
+    : change >= TARGET_MOVE_PLACES
+      ? 'improved'
+      : change <= -TARGET_MOVE_PLACES
+        ? 'slipped'
+        : 'held';
+
+// The one like for like method, on any two periods' search rows. rows: {cur, prev} query-only rows
+// ({query, clicks, impressions, position}) and, optionally, the query and page rows of the same periods
+// (curQp, prevQp) for a keyword the query pull lacks; range and prevRange: the dates they cover.
+// alignment: false leaves out which page Google shows (the Keywords page works that out for the
+// stored 28 days only, so a row for other dates must not borrow it). null rows: no data.
+// {rows, likeForLike, moves: {improved, held, slipped, noData}}.
+export function targetsCompare(model, rows, { alignment = true } = {}) {
+  const registry = (model.data.local?.registry ?? []).filter((e) => e.primaryKeyword);
+  if (!rows || !registry.length) {
     return {
-      rows,
-      likeForLike: {
-        mean: enough ? mean(shared, (r) => r.position) : null,
-        prevMean: enough ? mean(shared, (r) => r.prevPosition) : null,
-        n: shared.length,
-        targetsTotal: registry.length,
-        enough,
-        range: rangeOf(gsc.windows?.cur),
-        prevRange: rangeOf(gsc.windows?.prev),
-      },
+      rows: [],
+      likeForLike: { mean: null, prevMean: null, n: 0, targetsTotal: registry.length, enough: false },
+      moves: { improved: 0, held: 0, slipped: 0, noData: registry.length },
+    };
+  }
+  const mapFor = (list, qpRows) => {
+    const m = new Map((list ?? []).map((r) => [lower(r.query).trim(), r]));
+    for (const q of groupByQuery(qpRows ?? [])) if (!m.has(lower(q.query).trim())) m.set(lower(q.query).trim(), q);
+    return m;
+  };
+  const curMap = mapFor(rows.cur, rows.curQp);
+  const prevMap = mapFor(rows.prev, rows.prevQp);
+  // Whether the right page ranks: the Keywords page's own reading of each target (ext/targets.mjs
+  // targetRows: the keyword or another form of it, and too few views to tell under 10), so "Right page"
+  // means the same set on both pages. This list holds the keyword file's targets only.
+  const byTarget = alignment
+    ? new Map(
+        targetRows(model).rows.map((r) => [`${lower(r.keyword).trim()}\u0000${r.page ? pagePath(r.page) : ''}`, r])
+      )
+    : new Map();
+  const out = registry.map((e) => {
+    const key = lower(e.primaryKeyword).trim();
+    const c = curMap.get(key);
+    const p = prevMap.get(key);
+    const t = byTarget.get(`${key}\u0000${e.url ? pagePath(e.url) : ''}`) ?? null;
+    return {
+      keyword: e.primaryKeyword,
+      page: e.url ?? null,
+      slug: e.slug ?? null,
+      position: c ? Number(Number(c.position).toFixed(1)) : null,
+      prevPosition: p ? Number(Number(p.position).toFixed(1)) : null,
+      impressions: c?.impressions ?? 0,
+      rankingPage: alignment ? (t?.rankingPage ?? null) : null,
+      alignment: alignment ? (ALIGNMENT_OF[t?.label] ?? 'no data yet') : null,
     };
   });
+  for (const r of out) {
+    r.change = r.position !== null && r.prevPosition !== null ? round1(r.prevPosition - r.position) : null;
+    r.move = targetMoveOf(r.change);
+  }
+  const shared = out.filter((r) => r.position !== null && r.prevPosition !== null);
+  const mean = (list, f) => round1(list.reduce((s, r) => s + f(r), 0) / list.length);
+  const enough = shared.length >= LIKE_MIN_N;
+  const count = (m) => out.filter((r) => r.move === m).length;
+  return {
+    rows: out,
+    likeForLike: {
+      mean: enough ? mean(shared, (r) => r.position) : null,
+      prevMean: enough ? mean(shared, (r) => r.prevPosition) : null,
+      n: shared.length,
+      targetsTotal: registry.length,
+      enough,
+      range: rangeOf(rows.range),
+      prevRange: rangeOf(rows.prevRange),
+    },
+    moves: {
+      improved: count('improved'),
+      held: count('held'),
+      slipped: count('slipped'),
+      noData: out.length - shared.length,
+    },
+  };
 }
 
 // ---------------------------------------------------------------- the Search page
