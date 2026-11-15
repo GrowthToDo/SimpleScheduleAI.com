@@ -104,18 +104,6 @@ const holdFix = (h) =>
 const holdTest = (h) =>
   `Look again on ${longDate(h.until)}, when the 28 days after the ${longDate(h.since)} edit are over.`;
 
-// The change on `page` that Did it work has not judged yet and judges last: {changeDate, judgeFrom} with
-// judgeFrom after today, or null. pending: Map<page, [{changeDate, judgeFrom}]> or Map<page, one entry>.
-function pendingOf(page, pending, today) {
-  const v = page ? pending?.get(page) : null;
-  const list = (Array.isArray(v) ? v : v ? [v] : []).filter((x) => x?.judgeFrom > today && x.changeDate);
-  return list.sort((a, b) => a.judgeFrom.localeCompare(b.judgeFrom)).pop() ?? null;
-}
-const pendingFix = (p) =>
-  `This page changed on ${longDate(p.changeDate)} and that change is judged from ${longDate(p.judgeFrom)}. Leave it alone until then.`;
-const pendingTest = (p) =>
-  `Look again on ${longDate(p.judgeFrom)}, when the verdict on the ${longDate(p.changeDate)} change can be read.`;
-
 // The recommendation without its leading "Hypothesis:" label.
 const unlabelled = (s) => {
   const t = plain(s).replace(/^Hypothesis:\s*/i, '');
@@ -141,11 +129,11 @@ const updatesText = (list) => {
 // three that need a look are the worries; up to WATCH_MAX others are watched.
 const WATCH_MAX = 5;
 //
-// A page with a change that Did it work has not judged yet (pending: Map<page, {changeDate, judgeFrom}>,
-// the latest such change) is watched too: the repo's own records already answer it, because a new
-// edit before that verdict would muddy it. So is a page the plan already has an open improvement for
-// (plan.improve): the plan decides what happens to it, and it comes up as the week's page edit in turn.
-function slippingPages(opps, { frozen, recent, today, items, decay, pending, plan }) {
+// A page the plan already has an open improvement for (plan.improve) is watched too: the plan decides
+// what happens to it, and it comes up as the week's page edit in turn. Only a real edit holds a page
+// (hold: frozen, or 15 changed lines or more found in git): a one-line change that is merely waiting
+// for its verdict must not hide a real drop.
+function slippingPages(opps, { frozen, recent, today, items, decay, plan }) {
   const planned = new Map((plan?.improve ?? []).filter((r) => !r.done && r.page).map((r) => [r.page, r]));
   let need = 0;
   let watched = 0;
@@ -154,17 +142,14 @@ function slippingPages(opps, { frozen, recent, today, items, decay, pending, pla
     .map((o) => {
       const d = decay?.get(o.id) ?? null;
       const hold = holdOf(o.page, frozen, recent, today);
-      const p = !hold ? pendingOf(o.page, pending, today) : null;
-      const row = !hold && !p ? planned.get(o.page) : null;
+      const row = !hold ? planned.get(o.page) : null;
       const watch = hold
         ? `Edited on ${longDate(hold.since)}, so it is too early to judge. Look again on ${longDate(hold.until)}.`
-        : p
-          ? `Changed on ${longDate(p.changeDate)}, and Did it work judges that change from ${longDate(p.judgeFrom)}. A new edit before then would muddy that verdict, so look again on ${longDate(p.judgeFrom)}.`
-          : row
-            ? `Your plan already lists a change for this page${plain(row.todo) ? ` (${plain(row.todo).replace(/[.\s]+$/, '')})` : ''}, so it comes up as the week's page edit in its turn.`
-            : d?.dropKind === 'lost-demand'
-              ? 'Its place held while its views fell, so fewer people may be searching for this. There may be nothing to fix.'
-              : null;
+        : row
+          ? `Your plan already lists a change for this page${plain(row.todo) ? ` (${plain(row.todo).replace(/[.\s]+$/, '')})` : ''}, so it comes up as the week's page edit in its turn.`
+          : d?.dropKind === 'lost-demand'
+            ? 'Its place held while its views fell, so fewer people may be searching for this. There may be nothing to fix.'
+            : null;
       if (watch ? watched >= WATCH_MAX : need >= 3) return null;
       if (watch) watched += 1;
       else need += 1;
@@ -185,19 +170,15 @@ function slippingPages(opps, { frozen, recent, today, items, decay, pending, pla
         measured: [plain(o.measured), ...notes].join(' '),
         fix: hold
           ? holdFix(hold)
-          : p
-            ? pendingFix(p)
-            : row
-              ? 'Leave it to the plan: its improvement for this page is the page edit to make.'
-              : unlabelled(d?.recommendation) || plain(o.action),
+          : row
+            ? 'Leave it to the plan: its improvement for this page is the page edit to make.'
+            : unlabelled(d?.recommendation) || plain(o.action),
         // The test is the Decay card's own, so the worry and the card ask for the same check.
         ...(hold
           ? { test: holdTest(hold), waitUntil: hold.until }
-          : p
-            ? { test: pendingTest(p), waitUntil: p.judgeFrom }
-            : plain(d?.test) || plain(o.test)
-              ? { test: plain(d?.test) || plain(o.test) }
-              : {}),
+          : plain(d?.test) || plain(o.test)
+            ? { test: plain(d?.test) || plain(o.test) }
+            : {}),
         ...(watch ? { watch } : {}),
       };
     })
@@ -358,8 +339,8 @@ function worseVerdicts(snaps, { frozen, recent, today, cautionsOf }) {
 // (the slipping worries are its first three of type slipping). Missing inputs are fine.
 // recent: the git edits the freeze does not know (lifecycle recentEdits); a worry on such a page, or
 // on a frozen one, says to leave it alone until a date (waitUntil) instead of a fix. decay and
-// cautionsOf: see slippingPages and worseVerdicts. pending: the changes Did it work has not judged yet,
-// by page, and plan: the plan file (its open improve rows); see slippingPages.
+// cautionsOf: see slippingPages and worseVerdicts. plan: the plan file (its open improve rows); see
+// slippingPages.
 export function worries({
   snaps = {},
   prevSnaps = {},
@@ -370,13 +351,12 @@ export function worries({
   items = {},
   decay = new Map(),
   cautionsOf = () => [],
-  pending = new Map(),
   plan = null,
   today = todayIso(),
 } = {}) {
   const all = [
     ...droppedFromIndex(snaps, prevSnaps),
-    ...slippingPages(opps, { frozen, recent, today, items, decay, pending, plan }),
+    ...slippingPages(opps, { frozen, recent, today, items, decay, plan }),
     ...worseVerdicts(snaps, { frozen, recent, today, cautionsOf }),
     ...crawlIssues(snaps),
     ...registryFailures(snaps),
@@ -529,7 +509,9 @@ export function dueSentence(due = []) {
 // eligibility chip and no Hypothesis chip.
 function verdictCard(due, through = null) {
   const { ready, waiting: short, waitThrough } = splitDue(due, through);
-  if (!ready.length) return null;
+  // Judging is worth a place in the week only when at least one ready change can be read: a change
+  // that another edit overlaps reads "cannot be read" (see verdictStatusOf for that case).
+  if (!ready.some((d) => !d.overlapping)) return null;
   const waitLine = short.length
     ? `${short.length === 1 ? '1 more is' : `${short.length} more are`} waiting for Search Console data through ${longDate(waitThrough)}.`
     : '';
@@ -549,6 +531,40 @@ function verdictCard(due, through = null) {
     hypothesis: false,
   };
 }
+
+// The line the week prints when changes are due but none can be read, so there is no verdict card:
+// nothing can be learned from judging them, they only need closing. Null otherwise.
+export function verdictStatusOf(due = [], through = null) {
+  const { ready } = splitDue(due, through);
+  if (!ready.length || ready.some((d) => !d.overlapping)) return null;
+  const n = ready.length;
+  return `${count(n, 'past page change is', 'past page changes are')} due for a verdict, but ${n === 1 ? 'it overlaps' : 'each one overlaps'} another edit in the same 28 days, so ${n === 1 ? 'it' : 'none'} can be read as the result of one edit. There is nothing to learn from ${n === 1 ? 'it' : 'them'}: close ${n === 1 ? 'it' : 'them'} on Did it work when convenient.`;
+}
+
+// How long after asking Google to index a page the desk waits before raising it again.
+export const INDEX_REQUEST_WAIT_DAYS = 28;
+
+// The lines the week prints for pages Google has left out that the founder already asked it to index
+// (a note in the change log that says so): asked on a date, still not indexed, look again on a date.
+// notIndexed: [page]. requests: Map<page, date> (the latest request). Asking again is not a task
+// until INDEX_REQUEST_WAIT_DAYS have passed.
+export function indexRequestLines(notIndexed = [], requests = new Map(), today) {
+  const out = [];
+  for (const page of notIndexed) {
+    const asked = requests.get(page);
+    if (!asked) continue;
+    const again = addDays(asked, INDEX_REQUEST_WAIT_DAYS);
+    if (again <= today) continue;
+    out.push(
+      `You asked Google to index ${page} on ${longDate(asked)}. It is still not indexed. Nothing to do until ${longDate(again)}.`
+    );
+  }
+  return out;
+}
+const askedLately = (page, requests, today) => {
+  const asked = requests?.get(page);
+  return Boolean(asked) && addDays(asked, INDEX_REQUEST_WAIT_DAYS) > today;
+};
 
 // opts: {recent, week} for the eligibility of a worry on a page (see oppCard).
 export function worryCard(w, frozen, today, opts = {}) {
@@ -790,6 +806,7 @@ export function proposeTop5({
   size = DEFAULT_PLAN_SIZE,
   through = null,
   audit = null,
+  indexRequests = new Map(),
 }) {
   const opts = { recent };
   const ok = (o) => eligibility(o, frozen, today, opts).eligible;
@@ -864,8 +881,13 @@ export function proposeTop5({
 
   // 5. Tasks that are not page edits, best first.
   const tasks = [];
+  // A page the founder already asked Google about in the last 28 days is not asked about again.
   const linked = ordered.filter(
-    (o) => o.type === 'not-indexed' && o.adviceGroup === 'not-indexed-linked' && (o.inbound ?? 0) >= LINKED_ENOUGH
+    (o) =>
+      o.type === 'not-indexed' &&
+      o.adviceGroup === 'not-indexed-linked' &&
+      (o.inbound ?? 0) >= LINKED_ENOUGH &&
+      !askedLately(o.page, indexRequests, today)
   );
   if (linked.length) tasks.push([askIndexCard(linked), WHY.index(linked.length)]);
   const links = ordered.find((o) => o.type === 'needs-links' && !o.isPageEdit);

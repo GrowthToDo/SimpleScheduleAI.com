@@ -156,6 +156,7 @@ export const SECTIONS = [
         'standingLine',
         'planSize',
         'editStatus',
+        'statusLines',
         'top5',
         'top5Source',
         'worries',

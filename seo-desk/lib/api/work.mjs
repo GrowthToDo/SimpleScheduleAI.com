@@ -23,6 +23,8 @@ import {
   dueCounts,
   splitDue,
   editStatusOf,
+  verdictStatusOf,
+  indexRequestLines,
 } from '../week.mjs';
 import { brief } from '../brief.mjs';
 import { competitorBrief } from '../competitor-changes.mjs';
@@ -762,6 +764,18 @@ function auditSummary() {
   }
 }
 
+// The pages the founder has already asked Google to index, from his own notes in the change log (a
+// note that says he requested indexing): Map<page, the latest date>.
+const INDEX_REQUEST_NOTE = /request(ed|ing)?\s+(google\s+)?(to\s+)?index|index(ing)?\s+request/i;
+export function indexRequestsOf(model) {
+  const out = new Map();
+  for (const e of model.edits ?? []) {
+    if (e.kind !== 'manual' || !e.page || !e.date || !INDEX_REQUEST_NOTE.test(String(e.subject ?? ''))) continue;
+    if (!out.has(e.page) || out.get(e.page) < e.date) out.set(e.page, e.date);
+  }
+  return out;
+}
+
 // Everything the week page can show as a card, by id: the proposal, every opportunity,
 // every worry and the open work rows. The founder's chosen five come from here.
 export function weekModel(model) {
@@ -807,6 +821,7 @@ export function weekModel(model) {
       items,
       today,
       size: planSizeOf(),
+      indexRequests: indexRequestsOf(model),
       // A due edit is ready only when the Search Console data covers its 28 days after.
       through: model.snapObjs.gsc?.through ?? null,
       audit: auditSummary(),
@@ -962,6 +977,16 @@ export function weekView(model) {
     weekLabel: `Week of ${longDate(weekOf)}`,
     // Once this week's page edit is used, one line says so (and when the next can go in) instead of a card.
     editStatus: editStatusOf(model.frozen, model.today),
+    // Things already handled or with nothing to learn, said once in plain words instead of as cards:
+    // changes due for a verdict that cannot be read, and pages Google was already asked to index.
+    statusLines: [
+      verdictStatusOf(model.data.local?.due ?? [], model.snapObjs.gsc?.through ?? null),
+      ...indexRequestLines(
+        model.opps.filter((o) => o.type === 'not-indexed').map((o) => o.page),
+        indexRequestsOf(model),
+        model.today
+      ),
+    ].filter(Boolean),
     standingLine:
       'Rankings, impressions and visits are not sales. Customers come through personal contacts. This page tracks how easy we are to find.',
     sinceLastVisit: sinceLastVisit(model, last),

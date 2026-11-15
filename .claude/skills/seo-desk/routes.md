@@ -20,7 +20,7 @@ repo files were read before the desk read git: then a page edited lately may be 
 ## Plan
 
 `/api/week`: `weekOf`, `weekLabel`, `planSize` (3 or 5), `top5Source` (proposed, chosen or locked),
-`standingLine`, `editStatus`, `top5[]`, `leaveAlone[]`, `worries[]`, `watching[]`, `waiting[]`, `nextVerdict`, `opportunities[]`
+`standingLine`, `editStatus`, `statusLines[]`, `top5[]`, `leaveAlone[]`, `worries[]`, `watching[]`, `waiting[]`, `nextVerdict`, `opportunities[]`
 (the next ten), `counts {openOpportunities, worries {total, needLook, waiting}, watching}`, `blockedOnYou[]`,
 `locked`, `pastWeeks[]`. `top5[]` is the week's priorities, most important first, and holds at most
 `planSize` cards: a ceiling, never padded, so fewer is normal. Order: broken things (a dropped page, a
@@ -31,7 +31,9 @@ page edit; a slipping page only when it is a worry); a verdict card only when a 
 judge now; then tasks that are not page edits (one card asking Google to index pages that already
 have 3 or more links, the best page that needs links, open work rows that are real tasks this week,
 technical audit setup findings at medium or more). A content gap, question or AI card is never in it:
-the plan file decides which posts are written. `editStatus` is null while the week's edit is unused;
+the plan file decides which posts are written. `statusLines` are plain sentences for things already handled or with nothing to learn (changes due
+for a verdict that all overlap another edit, pages Google was already asked to index in the last 28
+days): say them, never turn them into tasks. `editStatus` is null while the week's edit is unused;
 once used it is the line "This week's page edit is used (/page, 9 November). The next one can go in
 from 16 November." and there is no card for it. A top-five card: `id`, `title`, `typeLabel`, `term`,
 `explain`, `why` (one plain sentence on why it is in this week's list; quote it), `measured`,

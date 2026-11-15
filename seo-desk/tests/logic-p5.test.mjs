@@ -457,7 +457,7 @@ test('P3: the Decay page folds a one busy week page under its own group, with th
   assert.ok(![...w.worries, ...w.watching].some((x) => x.page === '/blog/one-busy-week'), 'never a worry');
 });
 
-test('P3: a slipping page with a change Did it work has not judged yet is watched, not a worry', () => {
+test('a one-line change that only waits for its verdict does not hide a real drop: the page stays a worry', () => {
   const m = modelFixture({
     local: {
       edits: [{ page: '/blog/steady-fall', date: '2026-11-03', kind: 'edit', subject: 'fix: a count' }],
@@ -467,13 +467,29 @@ test('P3: a slipping page with a change Did it work has not judged yet is watche
     },
   });
   const w = weekView(m);
+  // Two changed lines are not an edit that holds a page (15 lines or more is), so the drop is shown.
+  assert.ok(
+    w.worries.some((x) => x.page === '/blog/steady-fall'),
+    'it needs a look'
+  );
+  assert.ok(!w.watching.some((x) => x.page === '/blog/steady-fall'));
+});
+
+test('P3: a slipping page with a real edit found in git is watched until its 28 days are over', () => {
+  const m = modelFixture({
+    local: {
+      contentEdits: [
+        { page: '/blog/steady-fall', date: '2026-11-03', commit: 'abc', lines: 40, subject: 'content: a rewrite' },
+      ],
+    },
+  });
+  const w = weekView(m);
   assert.ok(!w.worries.some((x) => x.page === '/blog/steady-fall'));
   const watched = w.watching.find((x) => x.page === '/blog/steady-fall');
   assert.ok(watched, 'it is watched');
-  assert.match(watched.watch, /3 November/);
-  assert.match(watched.watch, /3 December/);
+  assert.match(watched.watch, /Edited on 3 November, so it is too early to judge\. Look again on 1 December\./);
   // Part 4: its main button is Leave it, until the look-again date.
-  assert.deepEqual(watched.leaveIt, { until: '2026-12-03', untilText: '3 December' });
+  assert.deepEqual(watched.leaveIt, { until: '2026-12-01', untilText: '1 December' });
 });
 
 test('P3: a slipping page the plan already has an open improvement for is watched, not a worry', () => {
@@ -503,7 +519,9 @@ test('P3: a slipping page the plan already has an open improvement for is watche
 test('P4: Leave it snoozes a watched card until its date and records no page edit and no freeze', () => {
   const m0 = modelFixture({
     local: {
-      edits: [{ page: '/blog/steady-fall', date: '2026-11-03', kind: 'edit', subject: 'fix: a count' }],
+      contentEdits: [
+        { page: '/blog/steady-fall', date: '2026-11-03', commit: 'abc', lines: 40, subject: 'content: a rewrite' },
+      ],
     },
   });
   const watched = weekView(m0).watching.find((x) => x.page === '/blog/steady-fall');
@@ -577,4 +595,62 @@ test('P2: the Content gaps page says how many searches planned posts already cov
   assert.equal(g.count, 0);
   assert.equal(g.covered, 1);
   assert.equal(g.coveredNote, '1 search is already covered by a planned post.');
+});
+
+// ---------------------------------------------------------------- nothing moot in the five
+
+test('a verdict card needs a change that can be read; otherwise the week says so in one line', () => {
+  const through = '2026-11-16';
+  const overlapped = [
+    { date: '2026-10-01', commits: [{ hash: 'a1' }], overlapping: true },
+    { date: '2026-10-02', commits: [{ hash: 'a2' }], overlapping: true },
+  ];
+  const none = week.proposeTop5({ plan: null, due: overlapped, today: TODAY, through });
+  assert.ok(!none.some((c) => c.id === 'verdict-due'), 'nothing to learn, so no card');
+  assert.match(
+    week.verdictStatusOf(overlapped, through),
+    /^2 past page changes are due for a verdict, but each one overlaps another edit in the same 28 days, so none can be read/
+  );
+  const readable = [...overlapped, { date: '2026-10-03', commits: [{ hash: 'a3' }], overlapping: false }];
+  assert.ok(week.proposeTop5({ plan: null, due: readable, today: TODAY, through }).some((c) => c.id === 'verdict-due'));
+  assert.equal(week.verdictStatusOf(readable, through), null);
+  assert.equal(week.verdictStatusOf([], through), null);
+});
+
+test('a page Google was already asked to index in the last 28 days is a line, not a task', () => {
+  const opp = (page) => ({
+    id: `ni-${page}`,
+    type: 'not-indexed',
+    adviceGroup: 'not-indexed-linked',
+    inbound: 8,
+    page,
+    isPageEdit: false,
+    score: 50,
+    title: `${page} is not on Google`,
+    measured: 'Search Console says it is not indexed.',
+    action: 'Ask Google to index it.',
+  });
+  const ranked = [opp('/blog/asked'), opp('/blog/long-ago')];
+  const requests = new Map([
+    ['/blog/asked', '2026-11-01'],
+    ['/blog/long-ago', '2026-09-01'],
+  ]);
+  const cards = week.proposeTop5({ plan: null, ranked, today: TODAY, indexRequests: requests });
+  const ask = cards.find((c) => /^ask-to-index:/.test(c.id));
+  assert.ok(ask, 'the page asked about long ago is asked about again');
+  assert.equal(ask.page, '/blog/long-ago');
+  assert.ok(!ask.measured.includes('/blog/asked'));
+  assert.deepEqual(week.indexRequestLines(['/blog/asked', '/blog/long-ago', '/blog/never'], requests, TODAY), [
+    'You asked Google to index /blog/asked on 1 November. It is still not indexed. Nothing to do until 29 November.',
+  ]);
+  // With both asked lately there is no card at all.
+  const both = new Map([
+    ['/blog/asked', '2026-11-01'],
+    ['/blog/long-ago', '2026-11-10'],
+  ]);
+  assert.ok(
+    !week
+      .proposeTop5({ plan: null, ranked, today: TODAY, indexRequests: both })
+      .some((c) => /^ask-to-index:/.test(c.id))
+  );
 });

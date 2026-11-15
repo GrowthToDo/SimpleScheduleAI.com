@@ -139,6 +139,7 @@ export async function render(el, ctx) {
           'div',
           {},
           week.editStatus ? h('p', { class: 'pw-note' }, week.editStatus) : null,
+          ...(week.statusLines ?? []).map((line) => h('p', { class: 'pw-note' }, line)),
           week.top5.length ? priorities : h('p', {}, 'Nothing needs doing this week.')
         ),
         week.locked ? 'The plan is locked.' : 'The desk proposed these. The plan is not locked yet.'

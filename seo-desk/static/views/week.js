@@ -189,6 +189,7 @@ function planText(week, ctx) {
   if (week.through) lines[0] += ` (data through ${ctx.fmt.date(week.through)})`;
   lines.push('');
   if (week.editStatus) lines.push(week.editStatus, '');
+  for (const line of week.statusLines ?? []) lines.push(line, '');
   week.top5.forEach((c, i) => {
     lines.push(`${i + 1}. ${c.title}`);
     if (c.why) lines.push(`   Why this week: ${c.why}`);
@@ -428,6 +429,7 @@ function topFive(week, ctx, { ids, locked, saveFive }) {
     ),
     // Once this week's page edit is used, one line says so (and when the next can go in) instead of a card.
     week.editStatus ? h('p', { class: 'section-note', style: { margin: '0 0 10px' } }, week.editStatus) : null,
+    ...(week.statusLines ?? []).map((line) => h('p', { class: 'section-note', style: { margin: '0 0 10px' } }, line)),
     week.top5.length
       ? list
       : h(
