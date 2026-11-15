@@ -173,8 +173,12 @@ test('M2, K4: one Decay card says the kind-of-drop recommendation and test every
   assert.equal(card.action, action);
   assert.match(card.brief, /Recommendation \(a hypothesis\): Fewer people may be searching/);
   assert.ok(!/stale/.test(JSON.stringify(card)));
-  const w = work.weekView(model).worries.find((x) => x.kind === 'slipping-page');
+  // Lost demand means there may be nothing to fix, so the page is watched and is not a worry.
+  const view = work.weekView(model);
+  assert.ok(!view.worries.some((x) => x.kind === 'slipping-page' && x.oppId === opp.id));
+  const w = view.watching.find((x) => x.kind === 'slipping-page');
   assert.equal(w.fix, action);
+  assert.match(w.watch, /fewer people may be searching for this\. There may be nothing to fix\./);
   const digest = buildDeskBrief(model, 'Which pages are slipping, and why?').text;
   assert.ok(digest.includes(action));
   assert.ok(!/gone stale/.test(digest));

@@ -201,6 +201,7 @@ function decayNotes(model) {
       ...(deliberate.get(o.page) ?? []),
     ].filter(inside);
     out.set(o.id, {
+      dropKind: d?.dropKind ?? null,
       dropKindLabel: d?.dropKindLabel ?? null,
       dropKindWhy: d?.dropKindWhy ?? null,
       recommendation: d?.recommendation ?? null,
@@ -744,7 +745,11 @@ export function weekModel(model) {
       cautionsOf: (v) => verdictCautions(model, v),
       today,
     });
-    const worryList = visibleWorries(model, allWorries);
+    // A worry needs a look this week. One whose own advice is to leave the page (watch) is shown
+    // under "Watching" and is never counted or proposed as a worry.
+    const visible = visibleWorries(model, allWorries);
+    const worryList = visible.filter((w) => !w.watch);
+    const watching = visible.filter((w) => w.watch);
     // A split search the founder chose to leave alone is not proposed for the week.
     const proposed = proposeTop5({
       plan: local.plan ?? null,
@@ -770,7 +775,7 @@ export function weekModel(model) {
     for (const w of local.openWork ?? []) pool.set(openWorkCard(w).id, openWorkCard(w));
     for (const o of model.opps) pool.set(`opp:${o.id}`, oppCard(o, 'other', frozen, today, opts));
     for (const c of proposed) pool.set(c.id, c);
-    return { weekOf, proposed, pool, worries: worryList, allWorries };
+    return { weekOf, proposed, pool, worries: worryList, watching, allWorries };
   });
 }
 
@@ -859,10 +864,34 @@ export function weekView(model) {
       today: model.today,
     }).filter((w) => w.date >= model.today)
   ).map((w) => ({ ...w, dateText: longDate(w.date) }));
-  const worryCards = wm.worries.map((w) =>
-    worryCard(w, model.frozen, model.today, { recent: model.recent, week: true })
-  );
-  const waitingWorries = wm.worries.filter((w) => w.waitUntil).length;
+  // One worry as the page reads it: the same card the five would show for it, so brief and test read
+  // like an opportunity's, and the same id (a slipping page is its opportunity, opp:<id>), so every
+  // button works.
+  const worryOut = (w) => {
+    const c = worryCard(w, model.frozen, model.today, { recent: model.recent, week: true });
+    if (c.competitor) {
+      return {
+        ...w,
+        ...termFields(model, c),
+        id: c.id,
+        hypothesis: false,
+        brief: competitorBrief(c),
+        links: { live: null, searchConsole: null },
+        state: itemState(model, keyOfCard(c.id)),
+      };
+    }
+    return {
+      ...w,
+      ...termFields(model, c),
+      id: c.id,
+      test: c.test,
+      eligibility: withEligibilityText(c.eligibility),
+      ...(w.waitUntil ? { waitUntilText: longDate(w.waitUntil) } : {}),
+      brief: brief(c, { frozen: model.frozen, hold: withEligibilityText(c.eligibility) }),
+      links: linksFor(w.page),
+      state: itemState(model, keyOfCard(c.id)),
+    };
+  };
   // The cards that need the per-search counts are missing when the counts are, and a local snapshot
   // from before the desk read git holds no recent edits, so the week says both.
   const env = withCountsWarning(model, envelope(model));
@@ -883,37 +912,14 @@ export function weekView(model) {
     opportunities: topTen,
     counts: {
       openOpportunities: activeOpps(model).filter(open).length,
-      // Every worry is listed; the ones whose own fix is to leave the page alone until a date do not
-      // need a look this week.
-      worries: { total: wm.worries.length, needLook: wm.worries.length - waitingWorries, waiting: waitingWorries },
+      // A worry needs a look this week, so total and needLook are the same number. Pages whose own
+      // advice is to leave them are under watching, never counted as worries.
+      worries: { total: wm.worries.length, needLook: wm.worries.length, waiting: 0 },
+      watching: wm.watching.length,
     },
-    worries: wm.worries.map((w, i) => {
-      // The same card the five would show for it, so brief and test read like an opportunity's,
-      // and the same id (a slipping page is its opportunity, opp:<id>), so every button works.
-      const c = worryCards[i];
-      if (c.competitor) {
-        return {
-          ...w,
-          ...termFields(model, c),
-          id: c.id,
-          hypothesis: false,
-          brief: competitorBrief(c),
-          links: { live: null, searchConsole: null },
-          state: itemState(model, keyOfCard(c.id)),
-        };
-      }
-      return {
-        ...w,
-        ...termFields(model, c),
-        id: c.id,
-        test: c.test,
-        eligibility: withEligibilityText(c.eligibility),
-        ...(w.waitUntil ? { waitUntilText: longDate(w.waitUntil) } : {}),
-        brief: brief(c, { frozen: model.frozen, hold: withEligibilityText(c.eligibility) }),
-        links: linksFor(w.page),
-        state: itemState(model, keyOfCard(c.id)),
-      };
-    }),
+    worries: wm.worries.map(worryOut),
+    // Slipped or read worse, but nothing to do this week: each says why in watch.
+    watching: wm.watching.map(worryOut),
     waiting: waitingList,
     nextVerdict: nextVerdictOf(model, waitingList),
     planSize: planSizeOf(),

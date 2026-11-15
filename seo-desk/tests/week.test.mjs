@@ -606,11 +606,19 @@ test('worries: dropped from index, slipping top three, failed source, crawl, com
 
   assert.equal(kinds('dropped-from-index').length, 1);
   assert.match(kinds('dropped-from-index')[0].title, /\/gone/);
-  assert.equal(kinds('slipping-page').length, 3, 'top three only');
+  // /slip-a is frozen, so it is watched and not a worry; the next three need a look.
+  const watched = kinds('slipping-page').filter((w) => w.watch);
+  const needLook = kinds('slipping-page').filter((w) => !w.watch);
+  assert.deepEqual(
+    watched.map((w) => w.oppId),
+    ['s1']
+  );
+  assert.match(watched[0].watch, /Edited on 1 November, so it is too early to judge\. Look again on 29 November\./);
+  assert.equal(needLook.length, 3, 'three that need a look');
   assert.match(kinds('slipping-page')[0].title, /slip-a/, 'ranked order is kept');
   assert.deepEqual(
-    kinds('slipping-page').map((w) => w.oppId),
-    ['s1', 's2', 's3'],
+    needLook.map((w) => w.oppId),
+    ['s2', 's3', 's4'],
     'built from the opportunities, which are linked back by oppId'
   );
   assert.match(kinds('slipping-page')[1].measured, /showed up 100 times/, 'reuses the opportunity text');

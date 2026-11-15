@@ -121,13 +121,28 @@ const updatesText = (list) => {
 // next one moves up. decay: Map<oppId, {dropKindLabel, dropKindWhy, recommendation, updates, lastEdit}>
 // from the Decay page (the same kind of drop and recommendation its card shows, the Google ranking
 // updates inside the compared dates and the page's last edit inside them).
+//
+// A worry is something that needs a look this week. A slipping page whose own advice is to leave it
+// (it was just edited, or fewer people are searching and there may be nothing to fix) is not one: it
+// is marked watch, with the reason in plain words, and the week shows it under "Watching". The first
+// three that need a look are the worries; up to WATCH_MAX others are watched.
+const WATCH_MAX = 5;
 function slippingPages(opps, { frozen, recent, today, items, decay }) {
+  let need = 0;
+  let watched = 0;
   return (opps ?? [])
     .filter((o) => o.type === 'slipping' && available(o.id, items, today))
-    .slice(0, 3)
     .map((o) => {
       const d = decay?.get(o.id) ?? null;
       const hold = holdOf(o.page, frozen, recent, today);
+      const watch = hold
+        ? `Edited on ${longDate(hold.since)}, so it is too early to judge. Look again on ${longDate(hold.until)}.`
+        : d?.dropKind === 'lost-demand'
+          ? 'Its place held while its views fell, so fewer people may be searching for this. There may be nothing to fix.'
+          : null;
+      if (watch ? watched >= WATCH_MAX : need >= 3) return null;
+      if (watch) watched += 1;
+      else need += 1;
       const notes = [];
       if (d?.dropKindLabel) notes.push(`Kind of drop: ${plain(d.dropKindLabel)}. ${plain(d.dropKindWhy)}`.trim());
       if (d?.lastEdit) notes.push(`The page was last edited on ${longDate(d.lastEdit)}, inside these dates.`);
@@ -150,8 +165,10 @@ function slippingPages(opps, { frozen, recent, today, items, decay }) {
           : plain(d?.test) || plain(o.test)
             ? { test: plain(d?.test) || plain(o.test) }
             : {}),
+        ...(watch ? { watch } : {}),
       };
-    });
+    })
+    .filter(Boolean);
 }
 
 function failedSources(sources) {
@@ -292,7 +309,13 @@ function worseVerdicts(snaps, { frozen, recent, today, cautionsOf }) {
         test: hold
           ? `The next verdict on this page can be read on ${longDate(addDays(hold.since, 30))}.`
           : 'A new verdict on this page can be read about 30 days after its next change.',
-        ...(hold ? { waitUntil: hold.until } : {}),
+        ...(hold
+          ? {
+              waitUntil: hold.until,
+              // Nothing to do this week: the week shows it under "Watching", not as a worry.
+              watch: `Edited on ${longDate(hold.since)}, so it is too early to judge. Look again on ${longDate(hold.until)}.`,
+            }
+          : {}),
       };
     });
 }

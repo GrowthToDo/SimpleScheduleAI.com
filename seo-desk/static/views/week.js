@@ -91,6 +91,7 @@ export async function render(el, ctx) {
   const doneCount = week.top5.filter((c) => c.state?.status === 'done').length;
   const nextVerdict = week.nextVerdict ?? null;
   const worryCounts = week.counts?.worries ?? { total: week.worries.length, needLook: week.worries.length, waiting: 0 };
+  const watchingCount = (week.watching ?? []).length;
 
   ctx.mount(
     el,
@@ -120,15 +121,19 @@ export async function render(el, ctx) {
         'div',
         { class: 'tiles' },
         tile(h, 'Done this week', `${doneCount} of ${week.top5.length}`, "of this week's priorities"),
-        tile(
-          h,
-          'Worries',
-          fmt.num(worryCounts.total),
-          !worryCounts.total
-            ? 'nothing is wrong'
-            : worryCounts.waiting
-              ? `${fmt.num(worryCounts.needLook)} need a look, ${fmt.num(worryCounts.waiting)} to leave alone for now`
-              : 'need a look'
+        // The tile is a button: it takes you to the worries, which sit right under these tiles.
+        h(
+          'button',
+          {
+            type: 'button',
+            class: 'tile',
+            title: 'Show the worries',
+            onclick: () =>
+              document.getElementById('week-worries')?.scrollIntoView({ behavior: 'smooth', block: 'start' }),
+          },
+          h('span', { class: 'tile-label' }, 'Worries'),
+          h('span', { class: 'tile-value' }, fmt.num(worryCounts.total)),
+          h('div', { class: 'tile-change' }, worryTileNote(worryCounts.total, watchingCount, fmt))
         ),
         tile(
           h,
@@ -145,19 +150,13 @@ export async function render(el, ctx) {
         )
       )
     ),
+    worries(week, ctx, { locked, swapIn }),
     topFive(week, ctx, { ids, locked, saveFive }),
     h(
       'div',
       { class: 'cols' },
       h('div', {}, biggest(week, ctx, { locked, swapIn })),
-      h(
-        'div',
-        {},
-        worries(week, ctx, { locked, swapIn }),
-        leaveAlone(week, ctx),
-        waiting(week, ctx),
-        blocked(week, ctx, { locked, swapIn })
-      )
+      h('div', {}, leaveAlone(week, ctx), waiting(week, ctx), blocked(week, ctx, { locked, swapIn }))
     ),
     pastWeeks(week, ctx)
   );
@@ -477,38 +476,60 @@ function sideHead(h, title, note) {
   );
 }
 
+// The line under the Worries number: what the number means, and how many pages are only being watched.
+export function worryTileNote(total, watching, fmt) {
+  const lead = total
+    ? total === 1
+      ? 'needs a look this week'
+      : 'need a look this week'
+    : 'nothing needs you this week';
+  if (!watching) return lead;
+  return `${lead}; ${fmt.num(watching)} more ${watching === 1 ? 'is' : 'are'} only being watched`;
+}
+
+// A worry is something that needs a look this week. It sits right under the tiles, with what
+// happened and what to do. Pages that slipped but need nothing yet are folded under "Watching".
 function worries(week, ctx, { locked, swapIn }) {
   const { h, openDrawer, closeDrawer } = ctx;
   const items = week.worries;
+  const watched = week.watching ?? [];
+  const details = (w, title) => () =>
+    openDrawer(
+      renderCard(w, ctx, {
+        onChange: async () => {
+          closeDrawer();
+          await ctx.reload();
+        },
+      }),
+      { title }
+    );
   return h(
     'section',
-    { class: 'section' },
-    sideHead(h, 'Worries', items.length ? `${items.length}` : null),
+    { class: 'section', id: 'week-worries' },
+    sideHead(
+      h,
+      'Worries',
+      items.length ? `${items.length} ${items.length === 1 ? 'needs' : 'need'} a look this week` : null
+    ),
     items.length
       ? h(
           'ul',
           { class: 'side-list' },
-          items.map((w) => {
-            const details = () =>
-              openDrawer(
-                renderCard(w, ctx, {
-                  onChange: async () => {
-                    closeDrawer();
-                    await ctx.reload();
-                  },
-                }),
-                { title: 'Worry' }
-              );
-            return h(
+          items.map((w) =>
+            h(
               'li',
               { class: 'worry' },
               h('div', { style: { fontWeight: 600, overflowWrap: 'anywhere' } }, w.title),
-              w.waitUntilText ? h('span', { class: 'chip chip-warn' }, `Leave alone until ${w.waitUntilText}`) : null,
               h('p', { class: 'item-row-line' }, w.measured),
+              w.fix ? h('p', { class: 'item-row-line' }, h('strong', {}, 'What to do: '), w.fix) : null,
               h(
                 'div',
                 { class: 'row', style: { marginTop: '8px' } },
-                h('button', { type: 'button', class: 'btn btn-small', onclick: details }, 'Details and buttons'),
+                h(
+                  'button',
+                  { type: 'button', class: 'btn btn-small', onclick: details(w, 'Worry') },
+                  'Details and buttons'
+                ),
                 locked
                   ? null
                   : h(
@@ -521,10 +542,47 @@ function worries(week, ctx, { locked, swapIn }) {
                       'Add to this week'
                     )
               )
-            );
-          })
+            )
+          )
         )
-      : h('p', { class: 'empty' }, 'Nothing has broken or got worse.')
+      : h(
+          'p',
+          { class: 'empty' },
+          'Nothing needs you this week. Nothing has broken or got worse in a way you can act on.'
+        ),
+    watched.length
+      ? h(
+          'details',
+          { style: { marginTop: '12px' } },
+          h(
+            'summary',
+            {},
+            `Watching, nothing to do yet (${watched.length}): pages that slipped but are best left alone for now`
+          ),
+          h(
+            'ul',
+            { class: 'side-list', style: { marginTop: '8px' } },
+            watched.map((w) =>
+              h(
+                'li',
+                {},
+                h('div', { style: { fontWeight: 600, overflowWrap: 'anywhere' } }, w.title),
+                h('p', { class: 'item-row-line' }, h('strong', {}, 'Why nothing to do: '), w.watch),
+                h('p', { class: 'item-row-line' }, w.measured),
+                h(
+                  'div',
+                  { class: 'row', style: { marginTop: '8px' } },
+                  h(
+                    'button',
+                    { type: 'button', class: 'btn btn-quiet btn-small', onclick: details(w, 'Watching') },
+                    'Details'
+                  )
+                )
+              )
+            )
+          )
+        )
+      : null
   );
 }
 

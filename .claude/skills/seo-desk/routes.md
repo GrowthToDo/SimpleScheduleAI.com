@@ -20,8 +20,8 @@ repo files were read before the desk read git: then a page edited lately may be 
 ## Plan
 
 `/api/week`: `weekOf`, `weekLabel`, `planSize` (3 or 5), `top5Source` (proposed, chosen or locked),
-`standingLine`, `top5[]`, `leaveAlone[]`, `worries[]`, `waiting[]`, `nextVerdict`, `opportunities[]`
-(the next ten), `counts {openOpportunities, worries {total, needLook, waiting}}`, `blockedOnYou[]`,
+`standingLine`, `top5[]`, `leaveAlone[]`, `worries[]`, `watching[]`, `waiting[]`, `nextVerdict`, `opportunities[]`
+(the next ten), `counts {openOpportunities, worries {total, needLook, waiting}, watching}`, `blockedOnYou[]`,
 `locked`, `pastWeeks[]`. A top-five card: `id`, `title`, `typeLabel`, `term`, `explain`, `measured`,
 `action`, `test`, `eligibility`, `page`, `isPageEdit`, `slot` (new-post, page-edit, verdict, worry,
 other), `source`, `oppId`, `state`. A card that only reports (this week's edit is done, a verdict)
@@ -42,8 +42,10 @@ Pages list, audit pages, and `fromHoldText` on link suggestions) carry `frozenUn
 `leaveAlone[]`: `{page, reason, until, foundInGit?}`; `until` is null for a split he marked leave
 alone on the Cannibalization page (no end date); `foundInGit` marks a page held by a git edit.
 `worries[]`: `{id, kind, page, title, measured, fix, test, isPageEdit, eligibility, waitUntil?,
-waitUntilText?}`. A worry with `waitUntil` is on a page edited lately: its fix is to leave it alone
-until that date, and it is not counted in `counts.worries.needLook`. A worse verdict worry comes only
+waitUntilText?}`. A worry is something that needs a look this week (`total` and `needLook` are the same number).
+`watching[]` has the same fields plus `watch` (the reason in plain words): a page that slipped or
+reads worse but is best left alone for now, because it was edited lately (`waitUntil`) or because
+fewer people may be searching for it. A watched page is never counted or proposed as a worry. A worse verdict worry comes only
 from a change that reads worse the way Did it work reads it (`changeVerdict`); a verdict that another
 change overlaps, or a change that reads mixed, is never a worry. `waiting[]`: `{title, date, dateText, kind: verdict|frozen}`; a
 verdict row with `count` above 1 folds that day's page changes (`pages[]`). `nextVerdict`: `{ready,

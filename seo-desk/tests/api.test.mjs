@@ -1788,16 +1788,21 @@ test('the desk day is the local calendar date', async () => {
 test('every worry carries a brief and a test, with or without an opportunity behind it', async () => {
   useFull();
   const w = (await get('/api/week')).json;
-  assert.ok(w.worries.length >= 2);
+  // Worries need a look this week; watched pages are the same cards with a reason to leave them.
+  const all = [...w.worries, ...w.watching];
+  assert.ok(all.length >= 2);
   assert.ok(
-    w.worries.some((x) => x.oppId),
+    all.some((x) => x.oppId),
     'one backed by an opportunity'
   );
   assert.ok(
-    w.worries.some((x) => !x.oppId),
+    all.some((x) => !x.oppId),
     'one with none'
   );
-  for (const x of w.worries) {
+  assert.ok(w.worries.every((x) => !x.watch) && w.watching.every((x) => x.watch), 'the two lists never mix');
+  assert.equal(w.counts.worries.total, w.worries.length);
+  assert.equal(w.counts.watching, w.watching.length);
+  for (const x of all) {
     assert.match(x.brief, /^Task for the SimpleScheduleAI website:/, x.id);
     assert.ok(x.brief.includes(x.measured), x.id);
     if (x.kind === 'competitor-change') {
@@ -1909,9 +1914,10 @@ const addNote = (note) =>
 test('every id on the week page is accepted by the item route and by the five', async () => {
   useFull();
   const w = (await get('/api/week')).json;
-  const ids = [...w.top5.map((c) => c.id), ...w.opportunities.map((o) => o.id), ...w.worries.map((x) => x.id)];
+  const shown = [...w.worries, ...w.watching];
+  const ids = [...w.top5.map((c) => c.id), ...w.opportunities.map((o) => o.id), ...shown.map((x) => x.id)];
   assert.ok(
-    w.worries.some((x) => x.kind === 'slipping-page'),
+    shown.some((x) => x.kind === 'slipping-page'),
     'the fixture has a slipping worry'
   );
   for (const id of ids) {
@@ -1921,7 +1927,8 @@ test('every id on the week page is accepted by the item route and by the five', 
     assert.equal(t.status, 200, `five with ${id}: ${t.json?.error}`);
   }
   // A slipping worry is the same card as its opportunity, so its state is read under that id.
-  const slip = (await get('/api/week')).json.worries.find((x) => x.kind === 'slipping-page');
+  const after = (await get('/api/week')).json;
+  const slip = [...after.worries, ...after.watching].find((x) => x.kind === 'slipping-page');
   assert.match(slip.id, /^opp:/);
   assert.ok(slip.state.notes.length >= 1 && slip.state.notes.every((n) => n.text === 'checked'));
 });

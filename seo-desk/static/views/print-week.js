@@ -142,8 +142,20 @@ export async function render(el, ctx) {
               { class: 'pw-list pw-plain' },
               week.worries.map((w) => h('li', { class: 'pw-item' }, h('h3', { class: 'pw-title' }, w.title), lines(w)))
             )
-          : h('p', {}, 'Nothing has broken or got worse.')
+          : h('p', {}, 'Nothing needs you this week.')
       ),
+      (week.watching ?? []).length
+        ? section(
+            'Watching, nothing to do yet',
+            h(
+              'ul',
+              { class: 'pw-list pw-plain' },
+              week.watching.map((w) =>
+                h('li', { class: 'pw-item' }, h('h3', { class: 'pw-title' }, w.title), h('p', {}, w.watch))
+              )
+            )
+          )
+        : null,
       section(
         'Leave these alone this week',
         week.leaveAlone?.length

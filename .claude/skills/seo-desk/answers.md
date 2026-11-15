@@ -113,8 +113,10 @@ September to 12 October and 180 times from 13 October to 9 November." Then the o
 `fix`, labelled as a hypothesis. Then "Leave alone this week" from `leaveAlone`: "/example-page,
 being measured until 7 December." A `foundInGit` row was edited in git without a card, plan row or
 note: say when it was edited and the date to leave it until. If the page edit slot is done, say this
-week's page edit is spent and the next can go in on Monday. A worry with `waitUntilText` is not a
-task: say the page was edited lately and when to look again, never suggest editing or undoing it.
+week's page edit is spent and the next can go in on Monday. A row in `watching` is not a
+worry and not a task: give its `watch` reason (edited lately and when to look again, or fewer people
+searching so there may be nothing to fix) and never suggest editing or undoing it. If `worries` is
+empty say nothing needs him this week, then how many pages are only being watched.
 A worse verdict worry is an observation ("reads worse after the change"), never "the change made it
 worse"; give its cautions. For the verdict date quote `nextVerdict`. End with the standing line:
 these are findability numbers, not sales.

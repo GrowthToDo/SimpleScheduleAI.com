@@ -621,3 +621,12 @@ test('C3: Done on a recently edited page asks the same second confirm a frozen p
   assert.equal(asked[0].title, recentBox(err.data.recentlyEdited).title);
   assert.equal(sent[1].override, true);
 });
+
+test('the Worries tile says what its number means and how many pages are only watched', async () => {
+  const { worryTileNote } = await import('../static/views/week.js');
+  const fmt = { num: (n) => String(n) };
+  assert.equal(worryTileNote(0, 0, fmt), 'nothing needs you this week');
+  assert.equal(worryTileNote(1, 0, fmt), 'needs a look this week');
+  assert.equal(worryTileNote(2, 1, fmt), 'need a look this week; 1 more is only being watched');
+  assert.equal(worryTileNote(0, 3, fmt), 'nothing needs you this week; 3 more are only being watched');
+});

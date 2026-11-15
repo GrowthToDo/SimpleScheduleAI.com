@@ -158,6 +158,7 @@ export const SECTIONS = [
         'top5',
         'top5Source',
         'worries',
+        'watching',
         'waiting',
         'nextVerdict',
         'leaveAlone',
