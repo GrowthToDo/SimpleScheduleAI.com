@@ -144,7 +144,12 @@ function slippingPages(opps, { frozen, recent, today, items, decay }) {
         title: plain(o.title),
         measured: [plain(o.measured), ...notes].join(' '),
         fix: hold ? holdFix(hold) : unlabelled(d?.recommendation) || plain(o.action),
-        ...(hold ? { test: holdTest(hold), waitUntil: hold.until } : {}),
+        // The test is the Decay card's own, so the worry and the card ask for the same check.
+        ...(hold
+          ? { test: holdTest(hold), waitUntil: hold.until }
+          : plain(d?.test) || plain(o.test)
+            ? { test: plain(d?.test) || plain(o.test) }
+            : {}),
       };
     });
 }

@@ -204,6 +204,7 @@ function decayNotes(model) {
       dropKindLabel: d?.dropKindLabel ?? null,
       dropKindWhy: d?.dropKindWhy ?? null,
       recommendation: d?.recommendation ?? null,
+      test: d?.test ?? o.test ?? null,
       updates: start && end ? updatesIn(model, start, end) : [],
       lastEdit: edits.sort().pop() ?? null,
     });

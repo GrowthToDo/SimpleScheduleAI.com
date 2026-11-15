@@ -1807,7 +1807,12 @@ test('every worry carries a brief and a test, with or without an opportunity beh
       continue;
     }
     // A verdict is judged once, so a worse verdict's test is the date the next verdict can be read.
-    assert.match(x.test, x.kind === 'verdict-worse' ? /verdict .*can be read/ : /next daily refresh/, x.id);
+    // A slipping page carries its Decay card's own test, never the generic line.
+    if (x.kind === 'slipping-page') {
+      assert.ok(x.test && !/next daily refresh/.test(x.test), x.id);
+    } else {
+      assert.match(x.test, x.kind === 'verdict-worse' ? /verdict .*can be read/ : /next daily refresh/, x.id);
+    }
     assert.ok(!/[\u2013\u2014]/.test(x.brief + x.test));
   }
 });

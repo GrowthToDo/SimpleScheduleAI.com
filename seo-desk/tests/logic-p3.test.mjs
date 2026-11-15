@@ -379,6 +379,22 @@ test('B12, W3, W4, W5: a Decay worry uses the kind of drop and its recommendatio
   assert.match(w.measured, /does not show the update caused it/);
 });
 
+test('a Decay worry carries the Decay card test, not the generic one', () => {
+  const decayTest = 'Compare how often the search itself was made in both periods.';
+  const [fromDecay] = week.worries({
+    opps: [opp('slip', { type: 'slipping', page: '/blog/slip-guide', isPageEdit: true, test: 'The card test.' })],
+    decay: new Map([['slip', { recommendation: 'Hypothesis: leave it.', test: decayTest, updates: [] }]]),
+    today: TODAY,
+  });
+  assert.equal(week.worryCard(fromDecay, new Map(), TODAY).test, decayTest);
+  // With no Decay detail the opportunity card's own test is used.
+  const [fromCard] = week.worries({
+    opps: [opp('slip', { type: 'slipping', page: '/blog/slip-guide', isPageEdit: true, test: 'The card test.' })],
+    today: TODAY,
+  });
+  assert.equal(week.worryCard(fromCard, new Map(), TODAY).test, 'The card test.');
+});
+
 test('B L2: a Decay worry marked done is cleared, and the next one moves up into the three', () => {
   const opps = ['s1', 's2', 's3', 's4'].map((id) =>
     opp(id, { type: 'slipping', page: `/blog/${id}`, isPageEdit: true })
