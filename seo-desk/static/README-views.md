@@ -315,7 +315,12 @@ For pages that run a confirmed job or show big numbers. Import what you need:
 
 ## Card rules worth knowing
 
-- A card with `readOnly: true` (the week's "This week's page edit is done" card) shows no buttons.
+- A week card's `why` (why it is in this week's list) is the first fact, "Why this week". There is no
+  card for a used week edit: the week page prints the server's `editStatus` line above the priorities.
+- A card with `leaveIt: {until, untilText}` (a watched worry, or a Decay card of the lost demand kind)
+  has Leave it as its main button: it sends `snooze` with that date, records no page edit and freezes
+  nothing. Done stays, not as the main button, and its confirm adds that it counts as this week's one
+  page edit. The watched list on This week carries the same Leave it button.
 - Done on a page that is still frozen: the server answers 409 with `frozen: {page, since, until,
 sinceText, untilText}` (and `frozenPages`, every frozen page when one Done edits several, as a split
   search folded into one does); `card.js` then asks a second time, plainly, naming each, and resends with

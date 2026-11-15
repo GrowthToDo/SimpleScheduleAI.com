@@ -30,6 +30,11 @@
 //   donePick      [{label, page}]: Done first asks which page was changed (a menu); the chosen page
 //                 is sent as `page` and named in the confirm, null sends no page
 //
+// From the item itself: `why` (a week card: why it is in this week's list) shows first in the facts,
+// and `leaveIt` ({until, untilText}: a card whose own advice is to leave its page alone) makes Leave it
+// the main button. Leave it snoozes the item until that date and records no page edit and no freeze;
+// Done stays, not as the main button, and its confirm says it counts as this week's page edit.
+//
 // postAction(ctx, path, body) sends one action with the one-edit-a-week checks (post-action.js): a
 // 409 with `frozen`, `frozenPages` or `secondThisWeek` asks again, plainly, then resends with
 // override; any other refusal shows the server's sentence. Any page that marks a page edit done
@@ -40,6 +45,7 @@ import { evidenceView } from './drawer.js';
 import { postAction as sendAction, secondEditText, confirmSecondEdit, frozenBox } from './post-action.js';
 
 const SLOT_LABEL = {
+  broken: 'Broken',
   'new-post': 'New post',
   'page-edit': 'Live page change',
   verdict: 'Verdict',
@@ -83,6 +89,7 @@ export function normalize(item, oppById) {
       isPageEdit: item.isPageEdit,
       eligibility: item.eligibility ?? opp?.eligibility ?? null,
       waitUntilText: item.waitUntilText ?? null,
+      leaveIt: item.leaveIt ?? null,
       opp,
       oppId: item.oppId ?? null,
       score: opp?.score ?? null,
@@ -117,7 +124,8 @@ export function normalize(item, oppById) {
       brief: item.brief,
       links: item.links,
       note: item.note ?? null,
-      readOnly: Boolean(item.readOnly),
+      why: item.why ?? null,
+      leaveIt: item.leaveIt ?? null,
       hypothesis: item.hypothesis !== false,
       editPages: item.editPages ?? null,
       competitor: item.competitor ?? null,
@@ -144,6 +152,7 @@ export function normalize(item, oppById) {
     brief: item.brief,
     links: item.links,
     note: item.detected === false ? 'The desk no longer finds this in the latest data.' : null,
+    leaveIt: item.leaveIt ?? null,
   };
 }
 
@@ -161,8 +170,8 @@ function statusChip(state, fmt) {
 // edits no page (a setup task such as checking a page in Bing Webmaster Tools) shows none.
 export const showsEligibility = (n) => Boolean(n?.eligibility) && n.isPageEdit !== false;
 
-// The Hypothesis chip sits beside a recommendation. A card that only reports (this week's edit is
-// done, a verdict is due) has none, and neither has a competitor change.
+// The Hypothesis chip sits beside a recommendation. A card that only reports (a verdict is due) has
+// none, and neither has a competitor change.
 export const showsHypothesis = (n) => Boolean(n?.action) && !n.competitor && n.hypothesis !== false;
 
 function chips(n, fmt) {
@@ -256,7 +265,9 @@ const donePagesOf = (n, options) =>
   options.editPages ?? n.opp?.editPages ?? n.editPages ?? (n.isPageEdit && n.page ? [n.page] : []);
 
 // The confirm before Done: it names every page the Done edits, or says no page edit is recorded.
-export function doneConfirmText(pages, { frozenUntil, verdictAbout, isPageEdit = true }) {
+// weekEdit: true adds that the Done counts as this week's one page edit (a card whose own advice is to
+// leave the page alone, where Leave it is the main button).
+export function doneConfirmText(pages, { frozenUntil, verdictAbout, isPageEdit = true, weekEdit = false }) {
   if (!pages.length) {
     return {
       title: 'Mark this done?',
@@ -274,6 +285,9 @@ export function doneConfirmText(pages, { frozenUntil, verdictAbout, isPageEdit =
       `This records today as the day ${list} changed.\n\n` +
       `${one ? 'The page is' : 'Each of these pages is'} then frozen for 28 days, until ${frozenUntil}, so no other change goes on ${one ? 'it' : 'them'}. ` +
       `${one ? 'Its' : 'Their'} before and after verdict is scheduled for about ${verdictAbout}.\n\n` +
+      (weekEdit
+        ? "This counts as this week's one page edit. To leave the page alone instead, press Leave it.\n\n"
+        : '') +
       'Only press this once the change is live on the site.',
     confirmLabel: 'Yes, mark it done',
   };
@@ -300,11 +314,23 @@ async function doDone(n, ctx, options, anchor = null, picked = undefined) {
         frozenUntil: fmt.date(fmt.isoPlus(28)),
         verdictAbout: fmt.date(fmt.isoPlus(30)),
         isPageEdit: Boolean(n.isPageEdit),
+        weekEdit: Boolean(n.leaveIt),
       })
     );
     if (!ok) return;
   }
   await runAction(n, ctx, options, 'done', picked ? { page: picked } : {});
+}
+
+// Leave it: snoozes the item until its look-again date. It records no page edit and freezes nothing.
+async function doLeave(n, ctx, options) {
+  const res = await postAction(ctx, (options.endpoint ?? itemPath)(n.id), { action: 'snooze', until: n.leaveIt.until });
+  if (res === null) return;
+  ctx.toast(
+    `Left alone until ${n.leaveIt.untilText}. No page edit is recorded and nothing is frozen. It comes back on its own then.`,
+    'success'
+  );
+  await (options.onChange ? options.onChange('snooze', res) : ctx.reload());
 }
 
 // Reopening a finished page change ends its freeze, so the page asks first.
@@ -374,8 +400,6 @@ function snoozeMenu(n, ctx, options, anchor) {
 
 function actionButtons(n, ctx, options) {
   const { h } = ctx;
-  // A card that only reports (this week's page edit is done) has nothing to press.
-  if (n.readOnly) return [];
   const s = n.state?.status ?? 'new';
   const btn = (label, fn, cls = '') =>
     h('button', { type: 'button', class: `btn btn-small ${cls}`.trim(), onclick: guard(fn, ctx) }, label);
@@ -399,15 +423,18 @@ function actionButtons(n, ctx, options) {
     if (s !== 'new') out.push(btn('Reopen', () => doReopen(n, ctx, options)));
     return out;
   }
+  // A card whose own advice is to leave the page alone: Leave it is the main button, and no other is.
+  const leave = Boolean(n.leaveIt) && s !== 'done' && s !== 'ignored' && s !== 'snoozed';
+  if (leave) out.push(btn('Leave it', () => doLeave(n, ctx, options), 'btn-primary'));
   if ((s === 'new' || s === 'came-back') && offer('start'))
-    out.push(btn('Start', () => runAction(n, ctx, options, 'start'), 'btn-primary'));
+    out.push(btn('Start', () => runAction(n, ctx, options, 'start'), leave ? '' : 'btn-primary'));
   if (s !== 'done' && s !== 'ignored') {
     if (offer('done'))
       out.push(
         btn(
           'Done',
           (e) => doDone(n, ctx, options, e?.currentTarget ?? null),
-          s === 'in-progress' || !offer('start') ? 'btn-primary' : ''
+          !leave && (s === 'in-progress' || !offer('start')) ? 'btn-primary' : ''
         )
       );
     if (s !== 'snoozed' && offer('snooze')) {
@@ -437,7 +464,6 @@ function linkButtons(n, ctx, options) {
   const quiet = (label, fn) =>
     h('button', { type: 'button', class: 'btn btn-quiet btn-small', onclick: guard(fn, ctx) }, label);
   const out = [];
-  if (n.readOnly) return out;
   const pinned = n.state?.pinnedWeek && n.state.pinnedWeek >= thisMonday();
   if (!n.competitor && !options.noPinNote && n.state?.status !== 'ignored' && n.state?.status !== 'done') {
     out.push(quiet(pinned ? 'Unpin' : 'Pin to this week', () => runAction(n, ctx, options, pinned ? 'unpin' : 'pin')));
@@ -535,6 +561,7 @@ function fullCard(n, ctx, options) {
     h(
       'dl',
       { class: 'facts' },
+      n.why ? [h('dt', {}, 'Why this week'), h('dd', {}, n.why)] : null,
       n.measured ? [h('dt', {}, 'Evidence'), h('dd', {}, n.measured)] : null,
       (options.facts ?? []).map(([label, node]) => [h('dt', {}, label), h('dd', {}, node)]),
       n.action
