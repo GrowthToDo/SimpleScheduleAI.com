@@ -305,13 +305,24 @@ export function eligibility(opp, frozen, today, { recent = null, week = false } 
   return r?.touched?.length ? { eligible: true, from: null, touched: r.touched } : { eligible: true, from: null };
 }
 
-// The words on the eligibility chip, and the extra line for smaller git edits.
+// When a page may be edited, in the words every chip, worry and page detail uses: a page held by its
+// own edit (the freeze, or an edit found in git) reads "Leave it until <date>"; a page held only because
+// this week's one page edit is used reads "Can be edited from <next Monday>"; a free page reads "Can be
+// edited now".
+export function editWhenText(e) {
+  if (!e) return null;
+  if (e.eligible) return 'Can be edited now';
+  if (e.weekEdit) return `Can be edited from ${longDate(e.from)}`;
+  return `Leave it until ${longDate(e.from)}`;
+}
+
+// The words on the eligibility chip (editWhenText; an edit found in git also says when and how big),
+// and the extra line for smaller git edits.
 export function eligibilityText(e) {
   if (!e) return null;
   if (e.text) return e.text;
   if (e.recentEdit) return recentEditText(e.recentEdit);
-  if (e.weekEdit) return `Next page edit from ${longDate(e.from)}`;
-  return e.eligible ? 'Eligible now' : `Eligible from ${longDate(e.from)}`;
+  return editWhenText(e);
 }
 
 // The eligibility with its words: {eligible, from, text, ...the state's own fields, touchedText}.

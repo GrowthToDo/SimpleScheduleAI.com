@@ -170,8 +170,15 @@ export async function render(el, ctx) {
 function planSizeSection(data, ctx, save) {
   const { h } = ctx;
   const OPTIONS = [
-    { size: 3, sentence: 'A lighter week: the top three. Still never two page edits.' },
-    { size: 5, sentence: 'The full five: a new post, a page edit, a verdict, a worry and the next best.' },
+    {
+      size: 3,
+      sentence: 'Up to three: the most important real tasks of the week. Fewer when fewer qualify; never padded.',
+    },
+    {
+      size: 5,
+      sentence:
+        "Up to five: anything broken, the next post in your plan, the week's one page edit while it is free, a verdict once one can be read, then tasks that are not page edits. Fewer when fewer qualify; never padded.",
+    },
   ];
   return h(
     'section',

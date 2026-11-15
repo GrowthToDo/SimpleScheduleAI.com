@@ -49,7 +49,11 @@ against the 28 before), never from site-wide searches.
   Say the drop is recent.
 
 Use the item's own `recommendation` and `test`. The Growing lists (`pages.growing`,
-`queries.growing`) are good news, not tasks.
+`queries.growing`) are good news, not tasks. Call a page "decaying" only when it is a card on the Decay
+list; the tables are any fall or rise ("shown less than before", "shown more"). A card with `watch` set
+is only watched: give its reason, never a priority, and count it apart from `lookCount` (the pages that
+need a look). An item with `held` true edits a page that may not be edited now: never recommend it for
+this week; give its `eligibility.text`.
 
 A page in `busyWeek[]` is not decaying: one week of its earlier period was unusually busy, and
 without it the drop is too small. Quote its `text`, and its `caution` when set, and say there is
@@ -84,7 +88,12 @@ its main button: it puts the item away until `leaveIt.untilText` without using t
 ## Did it work, and what we have learned
 
 - Start with counts: `verdictCounts.text` (judged changes, a batch commit and its pages being one;
-  "too early" is not a verdict), due (28 days up, not judged yet) and pending.
+  "too early" is not a verdict), then the due changes in the desk's own reading: `dueReady.readable`
+  can be read, `dueReady.unreadable` are due but cannot be read (another edit overlaps them), and
+  pending. Never say due changes are "ready to judge" when `readable` is 0; quote `judgeText` for what
+  Judge now will do, and `nextVerdict` on the week for the next date one can be read.
+- "Last edited" is said only of a deliberate edit (`lastEdit`); a smaller git change is "a small change
+  on <date>". When a page may be edited is its `editWhen` line; quote it.
 - For each judged edit give `verdictText` and quote `summary`, which already carries both date
   ranges and how the median page moved. Do not rebuild the ranges.
 - `insufficient-data` reads "Too small to tell". Pending or too early reads "too early to say" with

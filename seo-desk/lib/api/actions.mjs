@@ -227,7 +227,7 @@ export function chooseTop5(input, { override = false } = {}) {
     if (g) throw editRefused(g, 'Editing it now');
   }
   if (currentTop5(model).stored?.locked)
-    throw fail(409, "This week's plan is locked. Unlock it before changing the five.");
+    throw fail(409, "This week's plan is locked. Unlock it before changing this week's priorities.");
   setTop5(weekOf, ids);
   invalidate();
   return weekView(buildModel());

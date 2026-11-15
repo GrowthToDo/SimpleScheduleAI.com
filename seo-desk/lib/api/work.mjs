@@ -23,7 +23,7 @@ import {
   dueCounts,
   splitDue,
   editStatusOf,
-  verdictStatusOf,
+  verdictStateOf,
   indexRequestLines,
 } from '../week.mjs';
 import { brief } from '../brief.mjs';
@@ -59,11 +59,17 @@ import {
   loadSettings,
   withCountsWarning,
   leaveItOf,
+  pageEdits,
+  editNoteIn,
+  workableFirst,
+  heldOf,
 } from './model.mjs';
 import { listAudits, loadAudit } from '../audit/run.mjs';
 import { CHECKS, severityOf, sortIssues } from '../audit/checks.mjs';
 import { n0, pct, sumRange } from './fmt.mjs';
 import { ownership, decayItems } from './ext/insights.mjs';
+
+const count = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
 // Said on the week when the local snapshot has no list of git edits yet (one pulled before the desk read
 // git): a page edited lately could be proposed.
@@ -180,8 +186,10 @@ export function verdictCautions(model, v) {
 
 // What the Decay page says about each open decaying page, for its worry: the kind of drop and its
 // recommendation (the same the Decay card shows), the Google ranking updates inside the two compared
-// windows (a caution, never the cause) and the page's last edit inside them.
-// Map<oppId, {dropKindLabel, dropKindWhy, recommendation, updates, lastEdit}>.
+// windows (a caution, never the cause) and the page's edits inside them, in the words of the one
+// function for a page's edits (model.mjs pageEdits, editNoteIn): "last edited" only for a deliberate
+// edit, "a small change" for a smaller one.
+// Map<oppId, {dropKind, dropKindLabel, dropKindWhy, recommendation, test, updates, editNote}>.
 function decayNotes(model) {
   const out = new Map();
   let items = [];
@@ -191,21 +199,11 @@ function decayNotes(model) {
     items = [];
   }
   const byId = new Map(items.map((d) => [d.id, d]));
-  const deliberate = deliberateEdits(model);
   for (const o of model.opps) {
     if (o.type !== 'slipping') continue;
     const d = byId.get(o.id);
     const start = o.range?.start ?? null;
     const end = o.range?.end ?? null;
-    const inside = (date) => date && (!start || date >= start) && (!end || date <= end);
-    const edits = [
-      ...model.edits
-        .filter(
-          (e) => e.page === o.page && (e.kind === 'edit' || (e.kind === 'manual' && /^\s*edit:/i.test(e.subject ?? '')))
-        )
-        .map((e) => e.date),
-      ...(deliberate.get(o.page) ?? []),
-    ].filter(inside);
     out.set(o.id, {
       dropKind: d?.dropKind ?? null,
       dropKindLabel: d?.dropKindLabel ?? null,
@@ -213,7 +211,7 @@ function decayNotes(model) {
       recommendation: d?.recommendation ?? null,
       test: d?.test ?? o.test ?? null,
       updates: start && end ? updatesIn(model, start, end) : [],
-      lastEdit: edits.sort().pop() ?? null,
+      editNote: editNoteIn(pageEdits(model, o.page), start, end),
     });
   }
   return out;
@@ -546,20 +544,30 @@ export function resultsView(model) {
     verdicts: verdictRows(model).sort((a, b) => String(b.judgedOn).localeCompare(String(a.judgedOn))),
     verdictCounts: verdictCounts(model),
     due: dueEdits(model),
-    // How many due edits Search Console data fully covers (ready to judge), and how many wait for it.
+    // The changes due for a verdict, from the one reading (verdictState): how many can be read, how many
+    // are due but cannot be read (another edit overlaps them), how many wait for Search Console data, and
+    // what pressing Judge now will do today. ready = readable + unreadable.
     dueReady: (() => {
-      const s = splitDue(model.data.local?.due ?? [], model.snapObjs.gsc?.through ?? null);
+      const s = verdictState(model);
       return {
-        ready: s.ready.length,
-        waiting: s.waiting.length,
+        ready: s.readable + s.unreadable,
+        readable: s.readable,
+        unreadable: s.unreadable,
+        waiting: s.waitingForData,
         waitThrough: s.waitThrough,
-        waitingText: s.waiting.length
-          ? `${s.waiting.length === 1 ? '1 more waits' : `${s.waiting.length} more wait`} for Search Console data through ${longDate(s.waitThrough)}.`
+        waitingText: s.waitingForData
+          ? `${s.waitingForData === 1 ? '1 more waits' : `${s.waitingForData} more wait`} for Search Console data through ${longDate(s.waitThrough)}.`
           : null,
+        unreadableText: s.unreadableText,
+        judgeText: s.judgeText,
       };
     })(),
     pending: pendingEdits(model),
+    // The deliberate edits on record (each freezes its page for 28 days); the full list of pages to
+    // leave alone, with the edits found in git and the splits kept, is leaveAlone.
     frozen,
+    leaveAlone: leaveAloneList(model),
+    leaveAloneSummary: summaryOut(model),
     moneyPageVerdicts: moneyPageVerdicts(model),
     annotations: loadAnnotations().filter((a) => !a.archived),
     timeline: timelineEvents(model, { start: addDays(model.today, -120) }),
@@ -895,22 +903,63 @@ export function currentTop5(model) {
 // [{page, reason, until}]; until is null for a choice, which has no end date.
 // A page git shows edited by 15 or more lines in one commit in the last 28 days, that the freeze does not know, is
 // listed too, with the same words as its chip.
+// This is the one function that says which pages to leave alone: the week's "Pages to leave alone",
+// the Pages tile and its "Free to edit" filter, and Did it work all read it (or leaveAloneSummary).
+// kind: 'logged' (a deliberate edit the desk has on record: a Done, a plan row, an "Edit:" note),
+// 'git' (an edit of 15 or more lines found in git) or 'split' (a split the founder chose to keep).
+// A page left alone for two reasons is listed once, under the first that applies.
 export function leaveAloneList(model) {
-  const frozen = [...model.frozen].map(([page, f]) => ({
-    page,
-    reason: `Edited on ${longDate(f.since)}, being measured until ${longDate(f.until)}.`,
-    until: f.until,
-  }));
-  for (const [page, r] of model.recent ?? []) {
-    if (r.edit && r.edit.until > model.today && !model.frozen.has(page))
-      frozen.push({ page, reason: `${recentEditText(r.edit)}.`, until: r.edit.until, foundInGit: true });
-  }
-  frozen.sort((a, b) => a.until.localeCompare(b.until) || a.page.localeCompare(b.page));
-  const chosen = [];
-  for (const c of leftAloneSplits(model))
-    for (const page of c.pages)
-      chosen.push({ page, reason: `You marked the split over "${c.query}" as leave alone.`, until: null });
-  return [...frozen, ...chosen];
+  return memo(model, 'leave-alone', () => {
+    const frozen = [...model.frozen]
+      .filter(([, f]) => f.until > model.today)
+      .map(([page, f]) => ({
+        page,
+        reason: `Edited on ${longDate(f.since)}, being measured until ${longDate(f.until)}.`,
+        until: f.until,
+        kind: 'logged',
+      }));
+    for (const [page, r] of model.recent ?? []) {
+      if (r.edit && r.edit.until > model.today && !model.frozen.has(page))
+        frozen.push({ page, reason: `${recentEditText(r.edit)}.`, until: r.edit.until, foundInGit: true, kind: 'git' });
+    }
+    frozen.sort((a, b) => a.until.localeCompare(b.until) || a.page.localeCompare(b.page));
+    const seen = new Set(frozen.map((x) => x.page));
+    const chosen = [];
+    for (const c of leftAloneSplits(model))
+      for (const page of c.pages) {
+        if (seen.has(page)) continue;
+        seen.add(page);
+        chosen.push({
+          page,
+          reason: `You marked the split over "${c.query}" as leave alone.`,
+          until: null,
+          kind: 'split',
+        });
+      }
+    return [...frozen, ...chosen];
+  });
+}
+
+// The pages to leave alone in numbers, with the same name everywhere: {count, logged, git, split,
+// pages, text}. text says which kinds make up the count ("2 with a logged edit, 33 found in git").
+export const LEAVE_ALONE_NAME = 'Pages to leave alone';
+// The summary as a reply carries it (no page list: the reply has the list itself).
+const summaryOut = (model) => {
+  const s = leaveAloneSummary(model);
+  return { name: LEAVE_ALONE_NAME, count: s.count, logged: s.logged, git: s.git, split: s.split, text: s.text };
+};
+export function leaveAloneSummary(model) {
+  const list = leaveAloneList(model);
+  const n = (k) => list.filter((x) => x.kind === k).length;
+  const logged = n('logged');
+  const git = n('git');
+  const split = n('split');
+  const parts = [
+    logged ? `${logged} with a logged edit` : null,
+    git ? `${git} found in git` : null,
+    split ? `${split} from a split you chose to keep` : null,
+  ].filter(Boolean);
+  return { count: list.length, logged, git, split, pages: list.map((x) => x.page), text: parts.join(', ') || null };
 }
 
 export function weekView(model) {
@@ -920,10 +969,13 @@ export function weekView(model) {
   const { cards, source: top5Source, stored } = currentTop5(model);
   const inFive = new Set(cards.map((c) => c.oppId).filter(Boolean));
   const open = (o) => OPEN_STATUSES.includes(itemOf(model, o.id)?.status ?? 'new');
-  const topTen = activeOpps(model)
-    .filter((o) => !inFive.has(o.id) && open(o))
-    .slice(0, 10)
-    .map((o) => decorateOpp(model, o));
+  // The next ten by score not in this week's priorities, the ones that can be worked on now first: an item
+  // on a page that may not be edited now is never pushed (no Swap in), so it comes after them.
+  const topTen = workableFirst(
+    activeOpps(model)
+      .filter((o) => !inFive.has(o.id) && open(o))
+      .map((o) => decorateOpp(model, o))
+  ).slice(0, 10);
   const last = readJson('state/visit.json', null);
   const waitingList = foldVerdictDays(
     buildWaiting({
@@ -949,12 +1001,19 @@ export function weekView(model) {
         state: itemState(model, keyOfCard(c.id)),
       };
     }
+    // When the page may be edited, in the words the page's own detail uses (pageEdits editWhen). A watched
+    // card's advice is to leave the page, so it carries no eligibility chip ("Eligible", "Next page
+    // edit"), and its line is only the date its own edit holds it until.
+    const when = w.page && w.isPageEdit ? pageEdits(model, w.page).editWhen : null;
     return {
       ...w,
       ...termFields(model, c),
       id: c.id,
       test: c.test,
-      eligibility: withEligibilityText(c.eligibility),
+      eligibility: w.watch ? null : withEligibilityText(c.eligibility),
+      // A worry on a page that may not be edited now is not offered for the week (no Add to this week).
+      ...heldOf(Boolean(w.isPageEdit) && !w.watch, c.eligibility),
+      editWhen: w.watch ? (/^Leave it until/.test(when ?? '') ? when : null) : when,
       ...(w.waitUntil ? { waitUntilText: longDate(w.waitUntil) } : {}),
       // A watched card's own advice is to leave the page alone: Leave it snoozes it until the date to
       // look again (or 28 days) and records no page edit and no freeze.
@@ -980,7 +1039,7 @@ export function weekView(model) {
     // Things already handled or with nothing to learn, said once in plain words instead of as cards:
     // changes due for a verdict that cannot be read, and pages Google was already asked to index.
     statusLines: [
-      verdictStatusOf(model.data.local?.due ?? [], model.snapObjs.gsc?.through ?? null),
+      verdictState(model).statusLine,
       ...indexRequestLines(
         model.opps.filter((o) => o.type === 'not-indexed').map((o) => o.page),
         indexRequestsOf(model),
@@ -1005,9 +1064,11 @@ export function weekView(model) {
     // Slipped or read worse, but nothing to do this week: each says why in watch.
     watching: wm.watching.map(worryOut),
     waiting: waitingList,
-    nextVerdict: nextVerdictOf(model, waitingList),
+    nextVerdict: nextVerdictOf(model),
     planSize: planSizeOf(),
     leaveAlone: leaveAloneList(model),
+    // The same count under the same name as the Pages tile and Did it work, and what it is made of.
+    leaveAloneSummary: summaryOut(model),
     blockedOnYou: blockedOnYou(local.openWork ?? []),
     locked: Boolean(stored?.locked),
     lockedAt: stored?.lockedAt ?? null,
@@ -1056,41 +1117,60 @@ export function foldVerdictDays(list) {
   return out;
 }
 
-// The Next verdict tile: ready now when change-log has entries due (how many page changes from how
-// many commits), else the first verdict date in the waiting list. {ready, date, dateText, note}.
-function nextVerdictOf(model, waitingList) {
+// The one reading of the changes waiting for a verdict (week.mjs verdictStateOf), once per model: the
+// week, the Next verdict tile, Did it work and the Ask digest all read it.
+export function verdictState(model) {
+  return memo(model, 'verdict-state', () =>
+    verdictStateOf({
+      due: model.data.local?.due ?? [],
+      through: model.snapObjs.gsc?.through ?? null,
+      pending: [
+        ...pendingEdits(model).map((p) => ({ page: p.page, changeDate: p.changeDate, judgeFrom: p.judgeFrom })),
+        ...moneyPageVerdicts(model)
+          .filter((m) => m.status === 'too-early')
+          .map((m) => ({ page: m.page, changeDate: m.changeDate, judgeFrom: m.judgeFrom })),
+      ],
+      edits: model.edits,
+      today: model.today,
+    })
+  );
+}
+
+// The Next verdict tile: the next date a verdict can actually be READ (verdictState): today when a due
+// change can be read, else the day the data covers a due change no other edit overlaps, else the
+// earliest waiting change no other edit overlaps so far, else "None in sight". The note says, when due
+// changes overlap other edits, that they cannot be read. {ready, date, dateText, note}.
+function nextVerdictOf(model) {
+  const s = verdictState(model);
   const all = model.data.local?.due ?? [];
-  // Ready only when the Search Console data covers the 28 days after; the tile gives both counts.
-  const { ready: due, waiting, waitThrough } = splitDue(all, model.snapObjs.gsc?.through ?? null);
-  const waitText = waiting.length
-    ? `${waiting.length === 1 ? '1 more waits' : `${waiting.length} more wait`} for data through ${longDate(waitThrough)}`
-    : '';
-  if (due.length) {
-    const c = dueCounts(due);
+  const { ready } = splitDue(all, model.snapObjs.gsc?.through ?? null);
+  const parts = [];
+  let head;
+  if (s.next?.kind === 'now') {
+    const c = dueCounts(ready.filter((d) => !d.overlapping));
     const from = c.commits ? ` from ${c.commits} ${c.commits === 1 ? 'commit' : 'commits'}` : '';
-    return {
-      ready: true,
-      date: model.today,
-      dateText: 'Ready now',
-      note: `${c.changes} ${c.changes === 1 ? 'page change' : 'page changes'}${from} ready to judge${waitText ? `; ${waitText}` : ''}`,
-    };
+    head = { ready: true, date: model.today, dateText: 'Ready now' };
+    parts.push(`${c.changes} ${c.changes === 1 ? 'page change' : 'page changes'}${from} can be read`);
+  } else if (s.next?.kind === 'data') {
+    head = { ready: false, date: s.next.date, dateText: `Waiting for data through ${longDate(s.next.date)}` };
+    parts.push(
+      `${count(s.next.pages.length || 1, 'page change has', 'page changes have')} finished the 28 day wait; Search Console data does not cover the 28 days after yet`
+    );
+  } else if (s.next?.kind === 'pending') {
+    const n = s.next.pages.length;
+    head = { ready: false, date: s.next.date, dateText: longDate(s.next.date) };
+    parts.push(n > 1 ? `${n} page changes can be read then` : `${s.next.pages[0]} can be read then`);
+  } else {
+    if (!s.unreadable && !s.waitingForData && !verdictsWaiting(model).length) return null;
+    head = { ready: false, date: null, dateText: 'None in sight' };
+    parts.push('every change waiting for a verdict overlaps another edit so far');
   }
-  if (waiting.length) {
-    return {
-      ready: false,
-      date: waitThrough,
-      dateText: `Waiting for data through ${longDate(waitThrough)}`,
-      note: `${waiting.length} ${waiting.length === 1 ? 'page change has' : 'page changes have'} finished the 28 day wait; Search Console data does not cover the 28 days after yet`,
-    };
-  }
-  const next = waitingList.find((w) => w.kind === 'verdict');
-  if (!next) return null;
-  return {
-    ready: false,
-    date: next.date,
-    dateText: next.dateText,
-    note: (next.count ?? 1) > 1 ? `${next.count} page changes come due` : next.title.replace(/^Verdict on /, ''),
-  };
+  if (s.waitingForData && s.next?.kind === 'now')
+    parts.push(
+      `${s.waitingForData === 1 ? '1 more waits' : `${s.waitingForData} more wait`} for data through ${longDate(s.waitThrough)}`
+    );
+  if (s.unreadableText) parts.push(s.unreadableText);
+  return { ...head, note: parts.join('; ') };
 }
 
 // ---------------------------------------------------------------- opportunities
@@ -1106,7 +1186,8 @@ export function opportunitiesList(model, { type = '', status = '', page = '' } =
     ...activeOpps(model).map((o) => ({ ...decorateOpp(model, o), ...editPagesOf(model, o.id) })),
     ...goneOpps(model),
   ];
-  const byPage = all.filter((o) => !wantPage || o.page === wantPage);
+  // Workable first: an item on a page that may not be edited now comes after the others.
+  const byPage = workableFirst(all.filter((o) => !wantPage || o.page === wantPage));
   const matchType = (o) => !type || type === 'all' || o.type === type;
   const matchStatus = (o) =>
     !wantStatus ||
@@ -1181,7 +1262,24 @@ export function opportunitiesView(model, filters, { insightCounts = null } = {})
     statuses: STATUSES,
     counts,
     items,
+    // What the "Free to edit" filter (on by default) hides from these items: items on pages to leave
+    // alone, and items held only because this week's one page edit is used. {page, week, text}.
+    held: heldNoteOf(model, items),
   };
+}
+
+// The line under the Free to edit filter: "34 more are on pages to leave alone, and 20 more wait for
+// next week's page edit, from 23 November." null when nothing is held.
+export function heldNoteOf(model, items) {
+  const page = items.filter((o) => o.held && o.heldKind === 'page').length;
+  const week = items.filter((o) => o.held && o.heldKind === 'week').length;
+  const parts = [
+    page ? `${count(page, 'more is', 'more are')} on pages to leave alone` : null,
+    week
+      ? `${count(week, 'more waits', 'more wait')} for next week's page edit, from ${longDate(addDays(mondayOf(model.today), 7))}`
+      : null,
+  ].filter(Boolean);
+  return { page, week, text: parts.length ? `${parts.join(', and ')}.` : null };
 }
 
 // ---------------------------------------------------------------- two pages competing

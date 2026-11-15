@@ -850,7 +850,7 @@ test('a frozen page in linkFrom says so, with the date from the lifecycle freeze
 test('a cannibalization item is eligible only when every page the action edits is free', async () => {
   use(FULL);
   const free = (await get('/api/insights/cannibalization')).json.items.find((x) => x.query === 'shared topic phrase');
-  assert.deepEqual(free.eligibility, { eligible: true, from: null, page: null, text: 'Eligible now' });
+  assert.deepEqual(free.eligibility, { eligible: true, from: null, page: null, text: 'Can be edited now' });
   assert.ok(free.pages.every((p) => p.frozenUntil === null));
 
   freezeAlpha(); // alpha-guide is the page that should win
@@ -860,7 +860,7 @@ test('a cannibalization item is eligible only when every page the action edits i
     assert.equal(it.eligibility.eligible, false);
     assert.equal(it.eligibility.from, '2026-12-03');
     assert.equal(it.eligibility.page, '/blog/alpha-guide');
-    assert.match(it.eligibility.text, /^Eligible from 3 December/);
+    assert.match(it.eligibility.text, /^Leave it until 3 December/);
     assert.equal(it.pages.find((p) => p.page === '/blog/alpha-guide').frozenUntil, '2026-12-03');
     assert.equal(it.pages.find((p) => p.page === '/blog/beta-notes').frozenUntil, null);
   } finally {
@@ -1263,15 +1263,22 @@ test('the week lists what to leave alone: frozen pages and searches marked leave
   await post_(`/api/insights/cannibalization/${it.id}/choice`, { choice: 'leave-alone' });
   try {
     const rows = weekView(buildModel()).leaveAlone;
-    assert.deepEqual(Object.keys(rows[0]).sort(), ['page', 'reason', 'until']);
+    assert.deepEqual(Object.keys(rows[0]).sort(), ['kind', 'page', 'reason', 'until']);
     const frozen = rows.find((r) => r.reason.startsWith('Edited on'));
     assert.deepEqual(frozen, {
       page: '/blog/alpha-guide',
       reason: 'Edited on 5 November, being measured until 3 December.',
       until: '2026-12-03',
+      kind: 'logged',
     });
+    // Package 6 (B3): a page is listed once, so the count is the same everywhere; the frozen page of the
+    // split keeps its freeze reason, and the other page of the split is listed for the choice.
     const split = rows.filter((r) => /shared topic phrase/.test(r.reason));
-    assert.deepEqual(split.map((r) => r.page).sort(), ['/blog/alpha-guide', '/blog/beta-notes']);
+    assert.deepEqual(
+      split.map((r) => r.page),
+      ['/blog/beta-notes']
+    );
+    assert.equal(new Set(rows.map((r) => r.page)).size, rows.length);
     assert.ok(split.every((r) => r.until === null && /leave alone/i.test(r.reason)));
     for (const r of rows) assert.doesNotMatch(r.reason, /[–—]/);
   } finally {
@@ -1440,6 +1447,8 @@ test('secondary keywords: the shape, the heading and one item per search a page 
     'explain',
     'frozenUntil',
     'frozenUntilText',
+    'held',
+    'heldKind',
     'holdText',
     'id',
     'impressions',
@@ -1466,7 +1475,7 @@ test('secondary keywords: the shape, the heading and one item per search a page 
   assert.doesNotMatch(it.recommendation, /\bwill\b/);
   assert.ok(it.test.length > 20);
   assert.equal(it.state.status, 'new');
-  assert.deepEqual(it.eligibility, { eligible: true, from: null, page: null, text: 'Eligible now' });
+  assert.deepEqual(it.eligibility, { eligible: true, from: null, page: null, text: 'Can be edited now' });
   assert.equal(it.frozenUntil, null);
   assert.equal(it.adopted, false);
   assert.ok(it.id);
@@ -1570,12 +1579,12 @@ test('secondary keywords: done is a page edit, so it freezes the page and a froz
   assert.equal(other.eligibility.eligible, false);
   assert.equal(other.eligibility.from, '2026-12-08');
   assert.equal(other.eligibility.page, '/blog/alpha-guide');
-  assert.match(other.eligibility.text, /^Eligible from 8 December/);
+  assert.match(other.eligibility.text, /^Leave it until 8 December/);
   assert.equal(other.frozenUntil, '2026-12-08');
   assert.equal(other.frozenUntilText, '8 December');
   // A page that is not frozen still waits for next week: this week's one page edit is made (K2).
   assert.equal(secOf(after, 'overtime pay rules').eligibility.eligible, false);
-  assert.match(secOf(after, 'overtime pay rules').eligibility.text, /^Next page edit from /);
+  assert.match(secOf(after, 'overtime pay rules').eligibility.text, /^Can be edited from /);
   // Another page edit this week needs an override: the rule is one a week.
   const second = secOf(after, 'overtime pay rules');
   const refused = await post_(`/api/insights/secondary-keywords/${second.id}`, { action: 'done' });
@@ -1959,8 +1968,13 @@ test('priorities and briefs come from the server on every insight list', async (
   assert.match(it.brief, /Page: \/blog\/alpha-guide/);
   for (const c of can.clusterConflicts) assert.ok(['high', 'medium', 'low'].includes(c.priority));
   const decay = (await get('/api/insights/decay')).json;
+  // Package 6 (B4): a watched card (its advice is to leave the page) has "Watching", not a priority.
   assert.ok(
-    decay.items.every((o) => o.priority && o.brief.includes(o.recommendation.replace(/^Hypothesis: /, '').slice(1, 30)))
+    decay.items.every(
+      (o) =>
+        (o.watch ? o.priority === null : o.priority) &&
+        o.brief.includes(o.recommendation.replace(/^Hypothesis: /, '').slice(1, 30))
+    )
   );
   assert.match(decay.recentDropNote, /14 days .*30%.*50 views/);
   useSec();
@@ -1984,7 +1998,7 @@ test('decay sends the true totals behind lists that stop at 50, and says so', as
   assert.equal(r.pages.decaying.length, 50);
   assert.ok(r.totals.pages.decaying > 50);
   assert.equal(r.shownMax, 50);
-  assert.equal(r.shownText.pages.decaying, `Showing the first 50 of ${r.totals.pages.decaying} decaying pages.`);
+  assert.equal(r.shownText.pages.decaying, `Showing the first 50 of ${r.totals.pages.decaying} pages shown less.`);
   assert.equal(r.shownText.pages.growing, null);
   assert.equal(r.totals.pages.growing, r.pages.growing.length);
   use(FULL);
@@ -2515,7 +2529,7 @@ test('B6: the section names what its rows are: Search Console searches close to 
 
 test('B1: a card that edits no page (the Bing page check) carries no page-edit eligibility chip', async () => {
   const { showsEligibility } = await import('../static/views/card.js');
-  const eligible = { eligible: true, from: null, text: 'Eligible now' };
+  const eligible = { eligible: true, from: null, text: 'Can be edited now' };
   assert.equal(showsEligibility({ isPageEdit: false, eligibility: eligible }), false);
   assert.equal(showsEligibility({ isPageEdit: true, eligibility: eligible }), true);
   assert.equal(showsEligibility({ isPageEdit: true, eligibility: null }), false);

@@ -15,9 +15,11 @@ import { lineChart } from '../chart.js';
 import { markerText } from './markers.js';
 import { fmt as fmtApp } from '../app.js';
 
+// "Decaying" means only a page on the Decay list (it passed the drop rule and the spike check), so a
+// page shown less than before for any reason reads "Shown less" here.
 export const MOVEMENT_LABEL = {
-  growing: 'Growing',
-  slipping: 'Decaying',
+  growing: 'Shown more',
+  slipping: 'Shown less',
   new: 'New',
   gone: 'Gone',
   steady: 'Steady',
@@ -33,7 +35,7 @@ const KIND_LABEL = { post: 'Blog post', article: 'Article', page: 'Site page' };
 
 const blank = (v) => v === null || v === undefined;
 
-// The Growing and Decaying tiles for the list on screen: counted from its rows, and naming the period
+// The Shown more and Shown less tiles for the list on screen: counted from its rows, and naming the period
 // the rows cover (the stored 28 days, or the dates the filter bar picked).
 export function movementTiles(items, range) {
   const count = (m) => items.filter((r) => r.movement === m).length;
@@ -82,7 +84,8 @@ export async function render(el, ctx) {
 
   const count = (test) => items.filter(test).length;
   const today = fmt.isoPlus(0);
-  const isFrozen = (r) => Boolean(r.frozenUntil) && r.frozenUntil >= today;
+  // On the list of pages to leave alone, from the server (the one list This week and Did it work show).
+  const isFrozen = (r) => Boolean(r.leaveAlone) || (Boolean(r.frozenUntil) && r.frozenUntil >= today);
 
   // Filters beyond the movement chips: kind, frozen and whether the page is on Google.
   const selects = [
@@ -99,10 +102,10 @@ export async function render(el, ctx) {
     },
     {
       key: 'frozen',
-      label: 'Frozen',
+      label: 'Leave alone or free to edit',
       options: [
-        ['', 'Frozen or not'],
-        ['yes', 'Frozen now'],
+        ['', 'Leave alone or free'],
+        ['yes', 'Pages to leave alone'],
         ['no', 'Free to edit'],
       ],
       test: (r, v) => (v === 'yes' ? isFrozen(r) : !isFrozen(r)),
@@ -332,7 +335,7 @@ export async function render(el, ctx) {
       {
         type: filterKey ? 'button' : null,
         class: 'tile',
-        title: filterKey ? `Show only ${label.toLowerCase()} pages` : null,
+        title: filterKey ? `Show only the pages ${label.toLowerCase()}` : null,
         onclick: filterKey ? () => table.setFilter(filterKey) : null,
       },
       h('span', { class: 'tile-label' }, label),
@@ -340,13 +343,13 @@ export async function render(el, ctx) {
       h('div', { class: 'tile-change' }, sub)
     );
 
-  // Growing and Decaying follow the list on screen and name its period.
+  // Shown more and Shown less follow the list on screen and name its period.
   const growingBox = h('div', { style: { display: 'contents' } });
   const decayingBox = h('div', { style: { display: 'contents' } });
   function drawMovementTiles(range) {
     const t = movementTiles(items, range);
-    growingBox.replaceChildren(tileBtn('Growing', t.growing.value, t.growing.sub, 'growing'));
-    decayingBox.replaceChildren(tileBtn('Decaying', t.decaying.value, t.decaying.sub, 'slipping'));
+    growingBox.replaceChildren(tileBtn(MOVEMENT_LABEL.growing, t.growing.value, t.growing.sub, 'growing'));
+    decayingBox.replaceChildren(tileBtn(MOVEMENT_LABEL.slipping, t.decaying.value, t.decaying.sub, 'slipping'));
   }
   drawMovementTiles(data.range);
 
@@ -384,7 +387,19 @@ export async function render(el, ctx) {
         ),
         growingBox,
         decayingBox,
-        tileBtn('Frozen now', frozenNow, frozenNow ? 'not to be edited yet' : 'every page is free to edit')
+        // The server's count, the same as This week and Did it work; it says which pages the list leaves out.
+        tileBtn(
+          data.leaveAlone?.name ?? 'Pages to leave alone',
+          data.leaveAlone?.count ?? frozenNow,
+          [
+            data.leaveAlone?.text ?? (frozenNow ? 'not to be edited yet' : 'every page is free to edit'),
+            data.leaveAlone?.notListed?.length
+              ? `${data.leaveAlone.notListed.join(', ')} ${data.leaveAlone.notListed.length === 1 ? 'is' : 'are'} not a live page in this list`
+              : '',
+          ]
+            .filter(Boolean)
+            .join('. ')
+        )
       )
     ),
     h('section', { class: 'section' }, bar, status, selectRow, tableBox)
@@ -433,6 +448,8 @@ function briefText(p, fmt) {
       `Google index: ${INDEX_LABEL[p.index] ?? p.index}${p.lastCrawl ? `, last crawled ${p.lastCrawl}` : ''}.`
     );
   if (p.lastEdit) lines.push(`Last deliberate edit: ${p.lastEdit}.`);
+  if (p.smallChange) lines.push(`Also ${p.smallChange}.`);
+  if (p.editWhen) lines.push(`${p.editWhen}.`);
   if (p.frozen) lines.push(`Frozen until ${p.frozen.until}: ${p.frozen.why}`);
   lines.push(
     `Links in from ${fmt.plural(p.inbound ?? 0, 'page', 'pages')}, in their page text (menu and footer links are not counted).`
@@ -530,7 +547,12 @@ function pageDetail(p, ctx) {
       'On Google',
       `${p.index ? INDEX_LABEL[p.index] : 'not checked yet'}${p.lastCrawl ? `, last crawled ${fmt.date(p.lastCrawl)}` : ''}`,
     ],
-    ['Last edit', p.lastEdit ? fmt.date(p.lastEdit) : 'no deliberate edit on record'],
+    [
+      'Last edit',
+      `${p.lastEdit ? fmt.date(p.lastEdit) : 'no deliberate edit on record'}${p.smallChange ? `; ${p.smallChange}` : ''}`,
+    ],
+    // The same line every worry on this page carries.
+    p.editWhen ? ['Page edits', p.editWhen] : null,
   ].filter(Boolean);
 
   const chartBox = h('div', {});

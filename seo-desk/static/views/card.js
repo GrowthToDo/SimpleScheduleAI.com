@@ -90,6 +90,8 @@ export function normalize(item, oppById) {
       eligibility: item.eligibility ?? opp?.eligibility ?? null,
       waitUntilText: item.waitUntilText ?? null,
       leaveIt: item.leaveIt ?? null,
+      editWhen: item.editWhen ?? null,
+      held: Boolean(item.held),
       opp,
       oppId: item.oppId ?? null,
       score: opp?.score ?? null,
@@ -129,6 +131,7 @@ export function normalize(item, oppById) {
       hypothesis: item.hypothesis !== false,
       editPages: item.editPages ?? null,
       competitor: item.competitor ?? null,
+      held: Boolean(item.held),
     };
   }
   return {
@@ -153,6 +156,7 @@ export function normalize(item, oppById) {
     links: item.links,
     note: item.detected === false ? 'The desk no longer finds this in the latest data.' : null,
     leaveIt: item.leaveIt ?? null,
+    held: Boolean(item.held),
   };
 }
 
@@ -184,8 +188,8 @@ function chips(n, fmt) {
   if (showsEligibility(n)) {
     out.push(
       n.eligibility.eligible
-        ? ctxChip('', n.eligibility.text ?? 'Eligible now')
-        : ctxChip('chip-warn', n.eligibility.text ?? `Eligible from ${fmt.date(n.eligibility.from)}`)
+        ? ctxChip('', n.eligibility.text ?? 'Can be edited now')
+        : ctxChip('chip-warn', n.eligibility.text ?? `Leave it until ${fmt.date(n.eligibility.from)}`)
     );
   }
   return out;
@@ -198,6 +202,13 @@ const touchedLine = (n) =>
     : null;
 
 const ctxChip = (cls, text) => el('span', { class: `chip ${cls}`.trim() }, text);
+
+// When the page may be edited (a worry's editWhen, the same words the page's own detail shows), unless
+// the eligibility chip already says exactly that.
+const editWhenLine = (n) =>
+  n.editWhen && !(showsEligibility(n) && n.eligibility.text === n.editWhen)
+    ? el('p', { class: 'small muted', style: { margin: '4px 0 0' } }, `${n.editWhen}.`)
+    : null;
 
 const PRIORITY_WORD = { high: 'High priority', medium: 'Medium priority', low: 'Low priority' };
 
@@ -233,7 +244,7 @@ async function runAction(n, ctx, options, action, extra = {}) {
     dismiss: 'Dismissed. It stays out of this list until you reopen it.',
     reopen: 'Reopened. It is back in Needs attention.',
     note: 'Note added.',
-    pin: 'Pinned to this week. When the desk proposes the five, pinned items come first.',
+    pin: "Pinned to this week. When the desk proposes this week's priorities, pinned items come first.",
     unpin: 'Unpinned.',
   };
   // A card that says Dismiss says it in its message too, whatever the route calls the action.
@@ -426,7 +437,8 @@ function actionButtons(n, ctx, options) {
   // A card whose own advice is to leave the page alone: Leave it is the main button, and no other is.
   const leave = Boolean(n.leaveIt) && s !== 'done' && s !== 'ignored' && s !== 'snoozed';
   if (leave) out.push(btn('Leave it', () => doLeave(n, ctx, options), 'btn-primary'));
-  if ((s === 'new' || s === 'came-back') && offer('start'))
+  // A held item (its page may not be edited now) is never pushed: no Start and no main button.
+  if ((s === 'new' || s === 'came-back') && offer('start') && !n.held)
     out.push(btn('Start', () => runAction(n, ctx, options, 'start'), leave ? '' : 'btn-primary'));
   if (s !== 'done' && s !== 'ignored') {
     if (offer('done'))
@@ -434,7 +446,7 @@ function actionButtons(n, ctx, options) {
         btn(
           'Done',
           (e) => doDone(n, ctx, options, e?.currentTarget ?? null),
-          !leave && (s === 'in-progress' || !offer('start')) ? 'btn-primary' : ''
+          !leave && !n.held && (s === 'in-progress' || !offer('start')) ? 'btn-primary' : ''
         )
       );
     if (s !== 'snoozed' && offer('snooze')) {
@@ -548,13 +560,14 @@ function fullCard(n, ctx, options) {
     h(
       'div',
       { class: 'card-top' },
-      options.priority ? priorityChip(h, options.priority, options.priorityTitle) : null,
+      options.priority && !n.held ? priorityChip(h, options.priority, options.priorityTitle) : null,
       h('span', { class: `chip ${n.chipClass}` }, n.label),
       options.chips ?? null,
       chips(n, ctx.fmt),
       scoreBlock(n, ctx)
     ),
     touchedLine(n),
+    editWhenLine(n),
     n.explain ? h('p', { class: 'card-explain' }, n.explain) : null,
     h('h3', { class: 'card-title' }, n.title),
     options.afterTitle ?? null,

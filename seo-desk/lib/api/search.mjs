@@ -2,7 +2,8 @@
 // method of scripts/target-positions.mjs (see targetsView). A site wide average position is
 // never produced here.
 
-import { groupByQuery, isBrand, targetKeywords } from '../../../scripts/lib/gsc-diagnose-core.mjs';
+import { groupByQuery, isBrand } from '../../../scripts/lib/gsc-diagnose-core.mjs';
+import { targetRows } from './ext/targets.mjs';
 import { addDays, todayIso } from '../dates.mjs';
 import { gscEnd } from '../sources/gsc.mjs';
 import { realQueryCounts, QUERY_WAIT_NOTE, queryPeriodsEven, countsMissingIn } from '../query-counts.mjs';
@@ -20,8 +21,18 @@ import {
   holdFields,
   pageHold,
   withCountsWarning,
+  pageEdits,
+  smallChangeText,
 } from './model.mjs';
-import { deliberateEdits, timelineEvents, verdictRows, moneyPageVerdicts, opportunitiesList } from './work.mjs';
+import {
+  timelineEvents,
+  verdictRows,
+  moneyPageVerdicts,
+  opportunitiesList,
+  leaveAloneList,
+  leaveAloneSummary,
+  LEAVE_ALONE_NAME,
+} from './work.mjs';
 import { n0, round1, pct, sumRange, coversFrom, lower } from './fmt.mjs';
 
 export const RANGES = [7, 28, 90, 480];
@@ -199,6 +210,14 @@ export function queriesTable(model, days) {
 // keyword rules, positions rounded to one decimal, duplicate registry keywords counted once
 // per registry row). Query rows come from the query pull; a keyword missing there is taken
 // from the query and page pull for the same period.
+// The Keywords page's labels in the words the Queries list uses.
+const ALIGNMENT_OF = {
+  'right page': 'right page',
+  'ranks elsewhere': 'wrong page',
+  'partial evidence': 'too few views',
+  'not returned': 'no data yet',
+};
+
 export function targetsView(model) {
   return memo(model, 'targets', () => {
     const gsc = model.data.gsc;
@@ -216,12 +235,17 @@ export function targetsView(model) {
     };
     const curMap = mapFor(gsc.queryCur, gsc.qpCur);
     const prevMap = mapFor(gsc.queryPrev, gsc.qpPrev);
-    const align = targetKeywords(registry, gsc.qpCur ?? []);
-    const rows = registry.map((e, i) => {
+    // Whether the right page ranks: the Keywords page's own reading of each target (ext/targets.mjs
+    // targetRows: the keyword or another form of it, and too few views to tell under 10), so "Right page"
+    // means the same set on both pages. This list holds the keyword file's targets only.
+    const byTarget = new Map(
+      targetRows(model).rows.map((r) => [`${lower(r.keyword).trim()}\u0000${r.page ? pagePath(r.page) : ''}`, r])
+    );
+    const rows = registry.map((e) => {
       const key = lower(e.primaryKeyword).trim();
       const c = curMap.get(key);
       const p = prevMap.get(key);
-      const a = align[i];
+      const t = byTarget.get(`${key}\u0000${e.url ? pagePath(e.url) : ''}`) ?? null;
       return {
         keyword: e.primaryKeyword,
         page: e.url ?? null,
@@ -229,8 +253,8 @@ export function targetsView(model) {
         position: c ? Number(Number(c.position).toFixed(1)) : null,
         prevPosition: p ? Number(Number(p.position).toFixed(1)) : null,
         impressions: c?.impressions ?? 0,
-        rankingPage: a?.topPage ?? null,
-        alignment: a?.status === 'ok' ? 'right page' : a?.status === 'mismatch' ? 'wrong page' : 'no data yet',
+        rankingPage: t?.rankingPage ?? null,
+        alignment: ALIGNMENT_OF[t?.label] ?? 'no data yet',
       };
     });
     for (const r of rows)
@@ -436,7 +460,8 @@ export function pageRows(model) {
     }
     const indexBy = new Map((model.index.rows ?? []).map((r) => [pagePath(r.page), r]));
     const bing = new Map((model.data.bing?.pages ?? []).map((r) => [pagePath(r.page), r.impressions]));
-    const deliberate = deliberateEdits(model);
+    // The pages to leave alone (work.mjs leaveAloneList, the one list the week and Did it work show).
+    const held = new Map(leaveAloneList(model).map((x) => [x.page, x]));
     return pages.map((page) => {
       const g = byPage.get(page);
       const reg = registryByUrl.get(page);
@@ -459,9 +484,14 @@ export function pageRows(model) {
         movement: g ? g.movement : null,
         queryCount: queryCount.get(page)?.size ?? 0,
         inbound: new Set(sources).size,
-        lastEdit: deliberate.get(page)?.[0] ?? null,
+        // The newest deliberate edit (a logged one, or 15 changed lines or more found in git), from the
+        // one function for a page's edits; a smaller change is never called an edit.
+        lastEdit: pageEdits(model, page).last,
         frozenUntil: hold.frozenUntil,
         holdText: hold.holdText,
+        // On the list of pages to leave alone (the Pages filter and tile use this, never a count of its own).
+        leaveAlone: held.has(page),
+        leaveAloneReason: held.get(page)?.reason ?? null,
         index: ix?.verdict ?? null,
         lastCrawl: ix?.lastCrawl ?? null,
         indexCheckedOn: ix?.checkedAt ? todayIso(new Date(ix.checkedAt)) : null,
@@ -474,7 +504,22 @@ export function pageRows(model) {
 // range: the 28 days the rows cover (windowsFor), which the page names on its tiles.
 export function pagesView(model) {
   const range = rangeOf(pagesTable(model, 28).range) ?? undefined;
-  return { ...envelope(model, { need: ['gsc', 'local'], range }), items: pageRows(model) };
+  const items = pageRows(model);
+  const s = leaveAloneSummary(model);
+  const listed = new Set(items.map((r) => r.page));
+  const notListed = s.pages.filter((p) => !listed.has(p));
+  return {
+    ...envelope(model, { need: ['gsc', 'local'], range }),
+    items,
+    // The same count under the same name as This week and Did it work. notListed names the pages to
+    // leave alone that are not live pages in this list, so the tile can say why the filter shows fewer.
+    leaveAlone: {
+      name: LEAVE_ALONE_NAME,
+      count: s.count,
+      text: s.text,
+      notListed,
+    },
+  };
 }
 
 // ---------------------------------------------------------------- one page
@@ -512,6 +557,7 @@ export function pageView(model, path) {
   const verdicts = verdictRows(model).filter((v) => v.page === page || v.pages.includes(page));
   const money = moneyPageVerdicts(model).filter((v) => v.page === page);
   const f = model.frozen.get(page);
+  const pe = pageEdits(model, page);
   const sourcesIn = (local.inbound?.[page] ?? []).filter((s) => s !== page);
   const { byPage } = opportunitiesList(model, { page });
   return {
@@ -526,6 +572,10 @@ export function pageView(model, path) {
     inboundFrom: sourcesIn.filter((s) => String(s).startsWith('/')),
     inboundSiteWide: sourcesIn.some((s) => String(s).startsWith('src/components/')),
     frozen: f ? { since: f.since, until: f.until, untilText: longDate(f.until), why: f.why } : null,
+    // The page's edits as the desk understands them (pageEdits): the newest deliberate edit, the newest
+    // smaller change in words, and when the page may be edited, the same line every worry carries.
+    smallChange: pe.lastSmall && (!pe.last || pe.lastSmall.date > pe.last) ? smallChangeText(pe.lastSmall) : null,
+    editWhen: pe.editWhen,
     // Whether the page may be edited now, from the one eligibility function (the freeze, a git edit,
     // this week's page edit already made), with its words.
     eligibility: pageHold(model, page),

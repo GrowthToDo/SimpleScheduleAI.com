@@ -2443,7 +2443,7 @@ test('a locked five refreshes its page edit card when the week edit was dated by
   assert.equal(after.locked, true);
   const same = after.top5.find((c) => c.id === card.id);
   assert.equal(same.eligibility.eligible, false);
-  assert.match(same.eligibility.text, /^Next page edit from /);
+  assert.match(same.eligibility.text, /^Can be edited from /);
   assert.equal(same.weekEditDone.page, other);
   assert.equal(same.weekEditDone.dateText, '10 November');
 });

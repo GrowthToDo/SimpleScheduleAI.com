@@ -520,6 +520,7 @@ function targetsTable(box, data, ctx) {
     filters: [
       { key: 'right', label: 'Right page', test: (r) => r.alignment === 'right page' },
       { key: 'wrong', label: 'Wrong page', test: (r) => r.alignment === 'wrong page' },
+      { key: 'few', label: 'Too few views to tell', test: (r) => r.alignment === 'too few views' },
       { key: 'none', label: 'No data yet', test: (r) => r.alignment === 'no data yet' },
     ],
     csvHref: '/api/export/targets.csv',

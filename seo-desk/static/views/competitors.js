@@ -178,12 +178,12 @@ function changesSection(hosts, data, ctx) {
       return;
     }
     if (week.locked) {
-      ctx.toast("This week's plan is locked. Unlock it on This week to change the five.", 'error');
+      ctx.toast("This week's plan is locked. Unlock it on This week to change this week's priorities.", 'error');
       return;
     }
     const ids = week.top5.map((c) => c.id);
     if (ids.includes(g.itemId)) {
-      ctx.toast("It is already in this week's five.");
+      ctx.toast("It is already in this week's priorities.");
       return;
     }
     const save = async (next, message) => {

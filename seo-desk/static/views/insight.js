@@ -594,7 +594,13 @@ function runnerUpPage(el, ctx, data, nav) {
     rows,
     rowKey: (r) => r.id,
     searchKeys: ['query', 'page'],
-    sort: { key: 'impressions', dir: 'desc' },
+    // The server's order: the ones whose page can be edited now first.
+    sort: null,
+    // The same filter Pages has: only the searches whose page may be edited now.
+    filters: [
+      { key: 'free', label: 'Free to edit', test: (r) => !r.opp.held },
+      { key: 'held', label: 'Pages to leave alone', test: (r) => Boolean(r.opp.held) },
+    ],
     emptyText: 'No search sits just off page one right now.',
     onRowClick: push,
     columns: [
@@ -608,14 +614,26 @@ function runnerUpPage(el, ctx, data, nav) {
       { key: 'position', label: 'Place', align: 'right', format: (v) => fmt.position(v) },
       { key: 'impressions', label: 'Times shown', align: 'right', format: (v) => fmt.num(v) },
       {
+        key: 'editWhen',
+        label: 'Page edits',
+        wrap: true,
+        sortable: false,
+        format: (v, r) => h('span', { class: r.opp.held ? 'muted' : '' }, r.opp.eligibility?.text ?? ''),
+      },
+      {
         key: 'id',
         label: '',
         sortable: false,
         format: (v, r) =>
           h(
             'button',
-            { type: 'button', class: 'btn btn-small', 'aria-label': `Push "${r.query}"`, onclick: () => push(r) },
-            'Push'
+            {
+              type: 'button',
+              class: 'btn btn-small',
+              'aria-label': `Details for "${r.query}"`,
+              onclick: () => push(r),
+            },
+            'Details'
           ),
       },
     ],
@@ -764,14 +782,57 @@ function secondaryPage(el, ctx, data, nav) {
     ctx.h(
       'section',
       { class: 'section ins-first' },
-      cardList(
-        ctx,
-        items.map((it) => secondaryCard(ctx, it, data)),
-        { first: 15, emptyText: 'No page is shown often for a search it does not target.' }
+      freeFilter(ctx, items, (list) =>
+        cardList(
+          ctx,
+          list.map((it) => secondaryCard(ctx, it, data)),
+          { first: 15, emptyText: 'No page is shown often for a search it does not target.' }
+        )
       )
     ),
     finishedSection(ctx, data.finished)
   );
+}
+
+// The "Free to edit" filter Pages has, for a list of items that carry `held` (from the server: the
+// page may not be edited now): All, Free to edit, Pages to leave alone, each with its count. draw(list)
+// returns the list's node. The server already puts the held items last.
+function freeFilter(ctx, items, draw) {
+  const { h, fmt } = ctx;
+  const views = [
+    { key: 'all', label: 'All', test: () => true },
+    { key: 'free', label: 'Free to edit', test: (it) => !it.held },
+    { key: 'held', label: 'Pages to leave alone', test: (it) => Boolean(it.held) },
+  ];
+  let current = 'all';
+  const chips = h('div', { class: 'chips', role: 'group', 'aria-label': 'Free to edit or not' });
+  const box = h('div', {});
+  const redraw = () => {
+    const f = views.find((v) => v.key === current);
+    chips.replaceChildren(
+      ...views
+        .filter((v) => v.key === 'all' || v.key === current || items.some(v.test))
+        .map((v) =>
+          h(
+            'button',
+            {
+              type: 'button',
+              class: 'chip chip-btn',
+              'aria-pressed': String(v.key === current),
+              onclick: () => {
+                current = v.key;
+                redraw();
+              },
+            },
+            `${v.label} `,
+            h('span', { class: 'count' }, fmt.num(items.filter(v.test).length))
+          )
+        )
+    );
+    box.replaceChildren(draw(items.filter(f.test)));
+  };
+  redraw();
+  return h('div', {}, items.length ? h('div', { class: 'toolbar' }, chips) : null, box);
 }
 
 // ------------------------------------------------------------------ Content gaps
@@ -872,13 +933,16 @@ function gapsPage(el, ctx, data, nav) {
 
 // ------------------------------------------------------------------ Decay
 
+// A card whose advice is to leave the page (o.watch, from the server) shows "Watching" instead of a
+// priority, says why, and carries no eligibility chip.
 function decayCard(ctx, o, data) {
   const { h } = ctx;
   const action = stripHypothesis(o.recommendation) || o.action;
   return renderCard({ ...o, action }, ctx, {
-    priority: o.priority,
+    priority: o.watch ? null : o.priority,
     priorityTitle: data.priorityNote,
     chips: [
+      o.watch ? h('span', { class: 'chip', title: o.watch }, 'Watching') : null,
       h(
         'span',
         {
@@ -889,7 +953,9 @@ function decayCard(ctx, o, data) {
       ),
       o.recentDrop ? h('span', { class: 'chip chip-bad', title: data.recentDropNote ?? null }, 'Recent drop') : null,
     ],
-    facts: o.dropKindWhy ? [['Kind of drop', o.dropKindWhy]] : [],
+    facts: [o.watch ? ['Why watching', o.watch] : null, o.dropKindWhy ? ['Kind of drop', o.dropKindWhy] : null].filter(
+      Boolean
+    ),
     only: ONLY,
     ignoreLabel: 'Dismiss',
     noPinNote: true,
@@ -900,9 +966,12 @@ const DECAY_VIEWS = [
   { key: 'pages', label: 'Pages' },
   { key: 'queries', label: 'Searches' },
 ];
+// Any fall or rise in views, every page Google showed. "Decaying" means only a card on the Decay list
+// above (past the drop rule and the spike check), so these tabs say "Shown less" and "Shown more", the
+// words the Pages page uses.
 const DECAY_DIRS = [
-  { key: 'decaying', label: 'Decaying' },
-  { key: 'growing', label: 'Growing' },
+  { key: 'decaying', label: 'Shown less' },
+  { key: 'growing', label: 'Shown more' },
 ];
 
 function decayTables(ctx, data) {
@@ -945,7 +1014,7 @@ function decayTables(ctx, data) {
       );
     tabs.replaceChildren(
       group(DECAY_VIEWS, view, (k) => (view = k), 'Pages or searches'),
-      group(DECAY_DIRS, dir, (k) => (dir = k), 'Decaying or growing')
+      group(DECAY_DIRS, dir, (k) => (dir = k), 'Shown less or shown more')
     );
     const key = view === 'pages' ? 'page' : 'query';
     const columns = [
@@ -982,7 +1051,7 @@ function decayTables(ctx, data) {
       ...[table, shown ? h('p', { class: 'small muted', style: { marginTop: '8px' } }, shown) : null].filter(Boolean)
     );
     dataTable(table, {
-      label: `${dir === 'decaying' ? 'Decaying' : 'Growing'} ${view === 'pages' ? 'pages' : 'searches'}`,
+      label: `${view === 'pages' ? 'Pages' : 'Searches'} ${dir === 'decaying' ? 'shown less' : 'shown more'}`,
       rows: data[view]?.[dir] ?? [],
       columns,
       searchKeys: [key],
@@ -992,7 +1061,7 @@ function decayTables(ctx, data) {
           ? data.queriesNote
           : dir === 'decaying'
             ? 'Nothing is being shown much less than before.'
-            : 'Nothing is growing yet.',
+            : 'Nothing is being shown more than before yet.',
     });
   };
   draw();
@@ -1018,21 +1087,28 @@ function decayPage(el, ctx, data, nav) {
     head(ctx, 'decay', data, nav, {
       note: 'Each card names the kind of drop the numbers point to, as a hypothesis, with the fix that goes with it.',
       tiles: [
-        { label: 'Pages to look at', value: countText(data.count), warn: data.count > 0, note: 'open decay cards' },
+        {
+          label: 'Pages to look at',
+          value: countText(data.lookCount ?? data.count),
+          warn: (data.lookCount ?? data.count) > 0,
+          note: data.watchCount
+            ? `decay cards that need a look; ${fmt.num(data.watchCount)} more ${data.watchCount === 1 ? 'is' : 'are'} only watched`
+            : 'decay cards that need a look',
+        },
         {
           label: 'Recent drops',
           value: fmt.num(items.filter((o) => o.recentDrop).length),
           note: 'in the last 14 days',
         },
         {
-          label: 'Pages decaying',
+          label: 'Shown less than before',
           value: fmt.num(data.totals?.pages?.decaying ?? data.pages?.decaying?.length ?? 0),
-          note: 'last 28 days',
+          note: 'pages, any fall, last 28 days',
         },
         {
-          label: 'Pages growing',
+          label: 'Shown more',
           value: fmt.num(data.totals?.pages?.growing ?? data.pages?.growing?.length ?? 0),
-          note: 'last 28 days',
+          note: 'pages, any rise, last 28 days',
         },
       ],
     }),

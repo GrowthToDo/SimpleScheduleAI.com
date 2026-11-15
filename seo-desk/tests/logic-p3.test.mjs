@@ -151,7 +151,7 @@ test('C3: a git edit of 15 lines or more the freeze does not know holds the page
     life.eligibility({ isPageEdit: true, page: '/blog/other-guide' }, frozen, TODAY, { recent })
   );
   assert.equal(touched.eligible, true);
-  assert.equal(touched.text, 'Eligible now');
+  assert.equal(touched.text, 'Can be edited now');
   assert.equal(touched.touchedText, 'Also touched on 9 November (3 lines)');
   // Without `recent` the function is the freeze alone, as before.
   assert.deepEqual(life.eligibility({ isPageEdit: true, page: '/blog/sample-guide' }, frozen, TODAY), {
@@ -160,18 +160,18 @@ test('C3: a git edit of 15 lines or more the freeze does not know holds the page
   });
 });
 
-test('C2: once this week\'s page edit is made, every other page edit says "Next page edit from" the next Monday', () => {
+test('C2: once this week\'s page edit is made, every other page edit says "Can be edited from" the next Monday', () => {
   const frozen = new Map([['/blog/edited-guide', { since: '2026-11-10', until: '2026-12-08' }]]);
   const e = life.eligibility({ isPageEdit: true, page: '/blog/free-guide' }, frozen, TODAY, { week: true });
   assert.equal(e.eligible, false);
-  assert.equal(life.eligibilityText(e), 'Next page edit from 16 November');
+  assert.equal(life.eligibilityText(e), 'Can be edited from 16 November');
   assert.deepEqual(e.weekEdit, { page: '/blog/edited-guide', date: '2026-11-10' });
   // The edited page itself says it is frozen; a card that edits no page is never held back.
   assert.equal(
     life.eligibilityText(
       life.eligibility({ isPageEdit: true, page: '/blog/edited-guide' }, frozen, TODAY, { week: true })
     ),
-    'Eligible from 8 December'
+    'Leave it until 8 December'
   );
   assert.equal(life.eligibility({ isPageEdit: false }, frozen, TODAY, { week: true }).eligible, true);
 });
@@ -532,18 +532,20 @@ test('C2, C3, C5: the week page agrees with the server on the freeze, the git ed
   // The plan row dated 10 November is this week's page edit.
   assert.equal(
     eligibilityOf(model, { isPageEdit: true, page: '/blog/free-guide' }).text,
-    'Next page edit from 16 November'
+    'Can be edited from 16 November'
   );
   const held = eligibilityOf(model, { isPageEdit: true, page: '/blog/sample-guide' });
   assert.equal(held.eligible, false);
   assert.match(held.text, /^Edited 9 November \(found in git, 299 lines\)\. Leave it until 7 December/);
 
   const v = work.weekView(model);
+  // Package 6: the one due change overlaps another edit, so it cannot be read; the next verdict that can
+  // be read is the money page edit no other edit overlaps (B1).
   assert.deepEqual(v.nextVerdict, {
-    ready: true,
-    date: TODAY,
-    dateText: 'Ready now',
-    note: '1 page change from 1 commit ready to judge',
+    ready: false,
+    date: '2026-12-10',
+    dateText: '10 December',
+    note: '/pricing can be read then; 1 due change overlaps another edit and cannot be read',
   });
   const alone = v.leaveAlone.find((x) => x.page === '/blog/sample-guide');
   assert.ok(alone?.foundInGit);
@@ -589,7 +591,7 @@ test('W1: the cautions on a worse verdict name the control and a one week spike 
 test('the Ask digest carries the next verdict, the worry counts, the change counts, the split lists and the keyword statuses', () => {
   const model = weekFixture();
   const brief = buildDeskBrief(model, 'What should I work on this week?');
-  assert.match(brief.text, /"nextVerdict":\{"ready":true/);
+  assert.match(brief.text, /"nextVerdict":\{"ready":false,"date":"2026-12-10"/);
   assert.match(brief.text, /"worries":\{"total":/);
   assert.match(brief.text, /"judgedChanges":2/);
   assert.match(brief.text, /Keyword map counts/);

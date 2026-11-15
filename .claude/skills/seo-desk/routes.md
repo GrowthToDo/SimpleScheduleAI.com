@@ -1,4 +1,4 @@
-<!-- Reference file for .claude/skills/seo-desk.md. Field notes checked against the route code in seo-desk/lib/api/ and seo-desk/lib/api/ext/ on 2026-11-14. The code is the authority; if a field here is missing from a reply, trust the reply. -->
+<!-- Reference file for .claude/skills/seo-desk.md. Field notes checked against the route code in seo-desk/lib/api/ and seo-desk/lib/api/ext/ on 2026-11-15. The code is the authority; if a field here is missing from a reply, trust the reply. -->
 
 # SEO Desk routes: fields and units
 
@@ -20,20 +20,22 @@ repo files were read before the desk read git: then a page edited lately may be 
 ## Plan
 
 `/api/week`: `weekOf`, `weekLabel`, `planSize` (3 or 5), `top5Source` (proposed, chosen or locked),
-`standingLine`, `editStatus`, `statusLines[]`, `top5[]`, `leaveAlone[]`, `worries[]`, `watching[]`, `waiting[]`, `nextVerdict`, `opportunities[]`
-(the next ten), `counts {openOpportunities, worries {total, needLook, waiting}, watching}`, `blockedOnYou[]`,
+`standingLine`, `editStatus`, `statusLines[]`, `top5[]`, `leaveAlone[]`, `leaveAloneSummary`, `worries[]`, `watching[]`, `waiting[]`, `nextVerdict`, `opportunities[]`
+(the next ten, the ones whose page can be edited now first; each carries `held`), `counts {openOpportunities, worries {total, needLook, waiting}, watching}`, `blockedOnYou[]`,
 `locked`, `pastWeeks[]`. `top5[]` is the week's priorities, most important first, and holds at most
 `planSize` cards: a ceiling, never padded, so fewer is normal. Order: broken things (a dropped page, a
 failed source, a keyword file problem, a Bing crawl problem, a competitor change, or one card for the
 technical audit's critical and high findings), two at most; the plan's next post; the week's one page
 edit while it is unused (a pinned one, else the plan's first open improve row, else the best eligible
-page edit; a slipping page only when it is a worry); a verdict card only when a change is ready to
-judge now; then tasks that are not page edits (one card asking Google to index pages that already
+page edit; a slipping page only when it is a worry); a verdict card only when a due change can be
+read now; then tasks that are not page edits (one card asking Google to index pages that already
 have 3 or more links, the best page that needs links, open work rows that are real tasks this week,
 technical audit setup findings at medium or more). A content gap, question or AI card is never in it:
 the plan file decides which posts are written. `statusLines` are plain sentences for things already handled or with nothing to learn (changes due
-for a verdict that all overlap another edit, pages Google was already asked to index in the last 28
-days): say them, never turn them into tasks. `editStatus` is null while the week's edit is unused;
+for a verdict that all overlap another edit: "12 due changes overlap other edits and cannot be read, so
+there is nothing to learn from them. To clear them, open Did it work, press Judge now, then Save these
+verdicts."; pages Google was already asked to index in the last 28 days): say them, never turn them
+into tasks. `editStatus` is null while the week's edit is unused;
 once used it is the line "This week's page edit is used (/page, 9 November). The next one can go in
 from 16 November." and there is no card for it. A top-five card: `id`, `title`, `typeLabel`, `term`,
 `explain`, `why` (one plain sentence on why it is in this week's list; quote it), `measured`,
@@ -41,35 +43,48 @@ from 16 November." and there is no card for it. A top-five card: `id`, `title`, 
 other), `source`, `oppId`, `state`. A verdict card reports, so it has `eligibility: null` and
 `hypothesis: false`. A card on a chosen or locked week can also carry
 `weekEditDone {page, date, dateText}` (or null) when another page edit is already dated this week.
-`eligibility` (the same on every list: the five, the cards beside it, opportunities, insight cards,
-Cannibalization, Secondary keywords, the page drawer, worries; one function) is `{eligible, from, text}` plus one of: nothing (free, or
-frozen: "Eligible from 7 December"), `recentEdit {page, date, lines, until}` (git shows a commit of
+`eligibility` (the same on every list: this week's priorities, the cards beside it, opportunities, insight cards,
+Cannibalization, Secondary keywords, the page drawer, worries; one function) is `{eligible, from, text}` plus one of: nothing (free:
+"Can be edited now", or frozen: "Leave it until 7 December"), `recentEdit {page, date, lines, until}` (git shows a commit of
 15 or more changed lines in the last 28 days that no card, plan row or edit note recorded, not
 counting edits within 2 days after the page was published: "Edited 9 November
 (found in git, 299 lines). Leave it until 7 December unless that edit was minor"), or `weekEdit {page,
-date}` (this week's one page edit is already made: "Next page edit from 16 November"). A free page
+date}` (this week's one page edit is already made: "Can be edited from 16 November"). A free page
 with smaller git edits adds `touched[]` and `touchedText` ("Also touched on 9 November (3 lines)").
 List rows that name a page (Cannibalization pages, Secondary keywords, content gap link pages, the
 Pages list, audit pages, and `fromHoldText` on link suggestions) carry `frozenUntil`,
 `frozenUntilText` and `holdText`: the same function's date and words for the freeze or a git edit
 (a routine link does not use the week's edit). Quote `holdText`.
-`leaveAlone[]`: `{page, reason, until, foundInGit?}`; `until` is null for a split he marked leave
-alone on the Cannibalization page (no end date); `foundInGit` marks a page held by a git edit.
-`worries[]`: `{id, kind, page, title, measured, fix, test, isPageEdit, eligibility, waitUntil?,
-waitUntilText?}`. A worry is something that needs a look this week (`total` and `needLook` are the same number).
+`leaveAlone[]` (the pages to leave alone, one list: the Pages tile and filter and Did it work read the
+same): `{page, reason, until, kind, foundInGit?}`; `kind` is logged (a Done, a plan row or an "Edit:"
+note), git (15 or more changed lines found in git) or split (a split he marked leave alone on the
+Cannibalization page; `until` is null, no end date). A page is listed once. `leaveAloneSummary`
+`{name: "Pages to leave alone", count, logged, git, split, text}`: `text` says what makes up the count
+("2 with a logged edit, 33 found in git"); quote the count under that name.
+`worries[]`: `{id, kind, page, title, measured, fix, test, isPageEdit, eligibility, editWhen, held,
+waitUntil?, waitUntilText?}`. A worry is something that needs a look this week (`total` and `needLook` are the same number).
+`editWhen` is when the page may be edited, the same line its page detail shows: "Can be edited now",
+"Can be edited from 16 November" (this week's edit is used) or "Leave it until 7 December" (its own
+edit holds it). `held` is true when the page may not be edited now (no "Add to this week"). A worry's
+`measured` says "last edited" only of a deliberate edit; a smaller git change reads "a small change on
+3 November (1 line)".
 `watching[]` has the same fields plus `watch` (the reason in plain words) and `leaveIt {until,
-untilText}`: a page that slipped or reads worse but is best left alone for now, because it was edited
-lately (`waitUntil`), because a change on it waits for its Did it work verdict (`waitUntil` is that
-date), or because fewer people may be searching for it. A watched page is never counted or proposed as
+untilText}`, and no eligibility chip (`eligibility` is null; `editWhen` only when its own edit holds
+it): a page that slipped or reads worse but is best left alone for now, because it was edited
+lately (`waitUntil`), because the plan already lists its change, or because fewer people may be
+searching for it. A watched page is never counted or proposed as
 a worry. Leave it (its main button) snoozes it until `leaveIt.until` and records no page edit and no
 freeze. A slipping page counts only when its drop survives the spike check (see Decay). A worse verdict worry comes only
 from a change that reads worse the way Did it work reads it (`changeVerdict`); a verdict that another
 change overlaps, or a change that reads mixed, is never a worry. `waiting[]`: `{title, date, dateText, kind: verdict|frozen}`; a
 verdict row with `count` above 1 folds that day's page changes (`pages[]`). `nextVerdict`: `{ready,
-date, dateText, note}`; `ready` is true when change-log has edits due now that the Search Console
-data fully covers (the 28 days after each change): "12 page changes from 7 commits ready to judge; 2
-more wait for data through 11 November". With none covered yet, `ready` is false and `dateText` reads
-"Waiting for data through <date>". Ignore `sinceLastVisit`; it depends on a write.
+date, dateText, note}`, the next date a verdict can actually be read (one function with Did it work):
+`ready` is true only when a due change can be read now (the data covers its 28 days after and no other
+edit overlaps it): "Ready now", note "2 page changes from 2 commits can be read". Else the day the data
+covers a due change no other edit overlaps ("Waiting for data through <date>"), else the earliest
+waiting change no other edit overlaps so far ("18 November", note "4 page changes can be read then"),
+else "None in sight" (`date` null). When due changes overlap other edits the note ends "12 due changes
+overlap other edits and cannot be read". Ignore `sinceLastVisit`; it depends on a write.
 
 ## Search
 
@@ -88,7 +103,8 @@ stored 28 days whatever range you ask for. `series[]` is clicks and impressions 
 
 `/api/search?range=…&metric=…`: the older Performance data. Use it for `likeForLike {mean,
 prevMean, n, targetsTotal, enough, range, prevRange}`, `targets[]` (keyword, page, position,
-change, alignment) and `brandSplit` (null when the per-search counts are missing). When the stored search totals for the latest 28 days are a day
+change, alignment: right page, wrong page, too few views or no data yet, the Keywords page's own
+reading of each keyword-file target, so "right page" is the same set on both pages) and `brandSplit` (null when the per-search counts are missing). When the stored search totals for the latest 28 days are a day
 short of the 28 before, `notes[]` says the comparison of searches waits for the next refresh, and the
 searches list and tile carry no change.
 
@@ -108,13 +124,18 @@ live Search Console pull (two calls, cached 12 hours; 429 when busy, 502 when it
 stored ranges unless he asks for a filtered view.
 
 `/api/pages`: `items[] {page, kind, keyword, position, impressions, clicks, ctr, change,
-movement, queryCount, inbound, lastEdit, frozenUntil, index (indexed|not-indexed|unknown)}`
-(`inbound` counts links in other pages' text; menu and footer links are not counted, so say so);
-`range` is the 28 days the numbers cover.
+movement, queryCount, inbound, lastEdit, frozenUntil, leaveAlone, leaveAloneReason, index
+(indexed|not-indexed|unknown)}` (`inbound` counts links in other pages' text; menu and footer links are
+not counted, so say so); `range` is the 28 days the numbers cover. `movement` growing reads "Shown
+more" and slipping "Shown less" (any rise or fall); only a page on the Decay list is "decaying".
+`lastEdit` is the newest deliberate edit (logged, or 15 or more changed lines found in git).
+`leaveAlone {name, count, text, notListed[]}` is the same count as This week's `leaveAloneSummary`;
+`notListed` names pages to leave alone that are not live pages in the list.
 `/api/page?path=/blog/x` (path must start with a slash; 404 for an unknown page): the same row plus
 `queries[]` (each `impressions` is the times THIS page was shown for that search, not the times the
 search was made; a search that showed two pages counts on both), `opportunities[]`, `verdicts[]`, `inboundFrom[]`, `frozen {since, until, untilText,
-why}`.
+why}`, `smallChange` ("a small change on 3 November (1 line)", newer than the last deliberate edit, or
+null) and `editWhen` (the same line its worry carries).
 
 ## Insights
 
@@ -151,12 +172,18 @@ impressions, position, recommendation, test}`: a Search Console search no page t
 every word of a live page's target keyword, so that page may already cover it).
 
 `/api/insights/runner-up`: `items[]` are opportunity cards: `id, page, query, title, measured,
-action, test, eligibility, evidence[], score, status, brief`. Their `priority` is null (they rank by
-`score`).
+action, test, eligibility, held, heldKind, evidence[], score, status, brief`. Their `priority` is null
+(they rank by `score`). The ones whose page can be edited now come first.
+
+Held items, on every list (All opportunities, the week's next ten, Runner-up, Secondary keywords,
+Cannibalization, Decay): `held` is true when the item edits a page that may not be edited now, and
+`heldKind` says why: page (the freeze or an edit found in git: a page to leave alone) or week (this
+week's one page edit is used). A held item is never pushed: no priority (`priority` null), no Swap in,
+no Start, and it comes after the items that can be worked on now. Never recommend one for this week.
 
 `/api/insights/secondary-keywords`: `items[] {id, page, query, impressions, position,
-targetKeyword, evidence, recommendation, test, eligibility, frozenUntilText, adopted, state,
-priority, brief}`. `finished[]` (same shape, up to 50, newest first) holds the ones marked done or
+targetKeyword, evidence, recommendation, test, eligibility, held, heldKind, frozenUntilText, adopted,
+state, priority, brief}`. `finished[]` (same shape, up to 50, newest first) holds the ones marked done or
 dismissed. A mistaken Done froze the page and used the week's edit, so Reopen on a finished one is
 a write: only when he asks, in his own words. A
 search a page already shows for (30 or more views in 28 days) that no page targets in any spelling
@@ -180,8 +207,14 @@ for that page (a page edit, on All opportunities: "Google already shows /page fo
 recommendation is "Consider adding a post on this to the plan".
 
 `/api/insights/decay`: `items[]` (the slipping page cards: `page, measured, action, test,
-eligibility, evidence {prev, cur, ...}, priority, brief, leaveIt`), `busyWeek[]`, `busyWeekNote`, `pages {decaying[], growing[]}`,
-`queries {decaying[], growing[]}`, `note`. Each of the four lists stops at `shownMax` (50) rows.
+eligibility, evidence {prev, cur, ...}, priority, brief, leaveIt, watch`), `count` (every card: the
+sidebar's number), `lookCount` (the cards that need a look: the "Pages to look at" tile), `watchCount`,
+`busyWeek[]`, `busyWeekNote`, `pages {decaying[], growing[]}`, `queries {decaying[], growing[]}`, `note`.
+`watch` is the plain reason a card is only watched (lost demand, its own edit holds it, or the plan
+already lists its change; the same function as the week's `watching[]`), else null: a watched card has
+no priority, no eligibility chip (`eligibility` null), offers Leave it and comes after the others.
+"Decaying" means a card on this list only. The `pages` and `queries` tables are any fall or rise in
+views ("Shown less than before" and "Shown more", every page Google showed), not the Decay list. Each of the four lists stops at `shownMax` (50) rows.
 The true sizes are in `totals {pages {growing, decaying}, queries {growing, decaying}}` and
 `shownText` says "Showing the first 50 of N" when one was cut. Quote `totals`, not the length of
 a list. Each page row: `{page, impressions, prevImpressions, position, change,
@@ -205,7 +238,8 @@ The Growing list and the `pages.decaying` table are not spike-checked. A lost de
 `leaveIt {until, untilText}` (28 days on): Leave it records no page edit.
 
 `/api/keyword-map/table`: `counters {all, live, ranks, pending, mapped, unmapped, opportunities,
-runnerUp, cannibalized, clusterConflicts}`, `rows[] {keyword, kind (targeted|discovered), status
+runnerUp, cannibalized, clusterConflicts}` (`runnerUp` is the Runner-up list's number: a target row
+spelled another way than the runner-up search is flagged too), `rows[] {keyword, kind (targeted|discovered), status
 (live|ranks|pending), mappedTo, origin, source, volume, position, impressions, rankingPage, flags,
 clusterConflict}`. `status` is live when the keyword is mapped to a live page; ranks when no page
 targets it but a live page already shows at position 10 or better; otherwise pending. `clusterConflict` (`{page, keyword, recommendation, test}`) says an existing page may
@@ -222,7 +256,9 @@ Without `page` it lists every page with a needs-links or runner-up opportunity. 
 frozen `from` page would edit that page, so check `fromFrozenUntilText`.
 
 `/api/opportunities?type=&status=open&page=`: `counts {byType, byStatus}`, `items[]` as the
-cards above. `status=open` means new, in progress or came back: it is what the Open view and the
+cards above (the ones whose page can be edited now first), `held {page, week, text}`: how many of these
+items the page's "Free to edit" filter (on by default) hides, and the line it shows ("27 more are on
+pages to leave alone, and 37 more wait for next week's page edit, from 16 November."). `status=open` means new, in progress or came back: it is what the Open view and the
 sidebar count use, and `counts.byStatus.open` is its size. `status=attention` is new only. Other
 values are one status each (done, ignored, snoozed) or `all`. Types: near-page-one, low-click-rate, competing-pages, slipping, wrong-page,
 unserved, question, needs-links, ai-gap, not-indexed. The Google and Bing cards (engine-gap) are
@@ -284,11 +320,17 @@ can read 0. Each Not indexed card gives the same advice Site health gives its pa
 
 `/api/results`: `due[]` rows carry `dataReady`, `dataThrough` and `waitingText` ("Waiting for data
 through 11 November" when the Search Console data does not cover the 28 days after yet), and
-`dueReady {ready, waiting, waitThrough, waitingText}` counts both. `verdicts[] {id, page, batch, pages, changeDate, judgedOn, verdict, verdictText,
+`dueReady {ready, readable, unreadable, waiting, waitThrough, waitingText, unreadableText, judgeText}`
+counts them with the same reading as the week's `nextVerdict` and status line: `readable` can be read
+now ("Can be read"), `unreadable` is due but another edit overlaps it ("Due but cannot be read"),
+`ready` is the two together, and `judgeText` is what pressing Judge now does today ("It will mark those
+12 as cannot be read and clear them from this list. Nothing is saved until you press Save these
+verdicts."). Quote `judgeText`. `verdicts[] {id, page, batch, pages, changeDate, judgedOn, verdict, verdictText,
 summary, before, after, control {impPct}, impChange, relImpPct, overlapping, readable, readNote,
 changeId, changeVerdict, changeVerdictText, changeNote, clicksTooSmall, nearUpdates, nearUpdatesNote}`,
 `verdictCounts {changes, pageResults,
-byWord, text}`, `due[]`, `pending[]`, `frozen[]`, `moneyPageVerdicts[]` (with `nearUpdates` too),
+byWord, text}`, `due[]`, `pending[]`, `frozen[]` (the logged edits only), `leaveAlone[]` and
+`leaveAloneSummary` (the same pages to leave alone, and count, as the week), `moneyPageVerdicts[]` (with `nearUpdates` too),
 `googleUpdatesNote`. `verdictCounts` counts by distinct change: rows that share a commit (a batch and
 its pages) share a `changeId` and are one change; "too early" is not a verdict and is left out;
 each change is read once: its batch verdict when no other change overlaps the batch, else its page
@@ -296,7 +338,9 @@ rows no other change overlaps (one word when they agree, mixed when they do not)
 counts changes with no row that can be read. Every row carries that reading as `changeVerdict`
 (`changeVerdictText`), and a row of a change with more than one row has `changeNote`, one sentence on
 how the whole change reads. Quote its `text`. `verdict` is better, worse, mixed, flat, insufficient-data (shown as "Too small
-to tell"); a page not judged yet is pending or "Too early". `summary` is a ready-made sentence with
+to tell"); a page not judged yet is pending or "Too early". The page's tabs are page results
+("Page results: All 6, Better 2, ..."), adding up to `pageResults`; a change too early to judge is not
+one of them and has its own Waiting count. `summary` is a ready-made sentence with
 both date ranges; quote it rather than rebuilding the ranges. `control.impPct` is how the median
 page moved over the same days (a fraction). `nearUpdates` (`[{label, date}]`) means a Google
 ranking update fell inside the judged window: mention it as a caution, never as the cause.

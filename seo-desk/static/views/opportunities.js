@@ -70,6 +70,18 @@ async function renderList(el, ctx) {
   };
 
   const linkCount = h('span', { class: 'count', 'aria-live': 'polite' });
+  const linksTab = h(
+    'button',
+    {
+      type: 'button',
+      class: 'tab',
+      'aria-pressed': String(onLinks),
+      title: 'Sentences already on the site that could link to a page that needs links',
+      onclick: () => go({ type: 'links' }),
+    },
+    'Internal links',
+    linkCount
+  );
   const byType = data.counts.byType;
   const typeTotal = Object.values(byType).reduce((s, n) => s + n, 0);
   // On the Open view a type with its own insight page shows that page's number, in its unit, so it
@@ -82,10 +94,13 @@ async function renderList(el, ctx) {
     status === 'open' && t.insightCount !== null && t.insightCount !== undefined
       ? (t.countNote ?? `${fmt.plural(t.insightCount, t.unit[0], t.unit[1])}, as on the ${t.label} page.`)
       : t.explain || null;
+  // One tab per type that has something in it (the one picked always shows). Internal links is one tab,
+  // the link suggestions below: the "needs links" type is not a second tab with the same name.
+  const shownTypes = data.types.filter((t) => t.type === type || (t.type !== 'needs-links' && tabCount(t) > 0));
   const tabs = h(
     'div',
     { class: 'tabs', role: 'group', 'aria-label': 'Opportunity types' },
-    [{ type: 'all', label: 'All' }, ...data.types].map((t) =>
+    [{ type: 'all', label: 'All' }, ...shownTypes].map((t) =>
       h(
         'button',
         {
@@ -99,24 +114,14 @@ async function renderList(el, ctx) {
         h('span', { class: 'count' }, fmt.num(t.type === 'all' ? typeTotal : tabCount(t)))
       )
     ),
-    h(
-      'button',
-      {
-        type: 'button',
-        class: 'tab',
-        'aria-pressed': String(onLinks),
-        title: 'Sentences already on the site that could link to a page that needs links',
-        onclick: () => go({ type: 'links' }),
-      },
-      'Internal links',
-      linkCount
-    )
+    linksTab
   );
 
+  // A status with nothing in it is not shown (the one picked always is).
   const statusChips = h(
     'div',
     { class: 'chips', role: 'group', 'aria-label': 'Status' },
-    STATUS_VIEWS.map((s) =>
+    STATUS_VIEWS.filter((s) => s.key === status || s.count(data.counts.byStatus) > 0).map((s) =>
       h(
         'button',
         {
@@ -137,6 +142,9 @@ async function renderList(el, ctx) {
     sort: params.get('sort') ?? 'score',
     shown: PAGE_SIZE,
     selected: new Set(),
+    // Free to edit is on unless the address says to show held items too: an item on a page that may
+    // not be edited now (data.items[].held, from the server) is hidden, and the line says how many.
+    free: params.get('held') !== 'show',
   };
 
   const search = h('input', {
@@ -162,17 +170,47 @@ async function renderList(el, ctx) {
   const visible = () => {
     const needle = state.q.trim().toLowerCase();
     const sorter = SORTS.find((s) => s.key === state.sort) ?? SORTS[0];
-    return data.items
-      .filter(
-        (o) =>
-          !needle ||
-          [o.title, o.page, o.query, o.measured, o.typeLabel].some((v) =>
-            String(v ?? '')
-              .toLowerCase()
-              .includes(needle)
-          )
+    return (
+      data.items
+        .filter((o) => !state.free || !o.held)
+        .filter(
+          (o) =>
+            !needle ||
+            [o.title, o.page, o.query, o.measured, o.typeLabel].some((v) =>
+              String(v ?? '')
+                .toLowerCase()
+                .includes(needle)
+            )
+        )
+        // Items that can be worked on now first, whatever the sort.
+        .sort((a, b) => Number(Boolean(a.held)) - Number(Boolean(b.held)) || sorter.fn(a, b))
+    );
+  };
+
+  // Free to edit: the toggle and the line saying how many items it hides, in the server's words.
+  const freeBox = h('div', { class: 'toolbar small', style: { marginBottom: '8px' } });
+  const drawFree = () => {
+    const note = data.held?.text ?? null;
+    if (!note) {
+      freeBox.replaceChildren();
+      return;
+    }
+    const toggle = (on) => () => {
+      state.free = on;
+      state.shown = PAGE_SIZE;
+      ctx.setParams({ held: on ? null : 'show' });
+      drawFree();
+      drawList();
+    };
+    freeBox.replaceChildren(
+      h('span', { class: 'chip chip-accent' }, state.free ? 'Free to edit' : 'Every item'),
+      h('span', { class: 'muted' }, state.free ? note : 'Showing the items on pages that may not be edited now too.'),
+      h(
+        'button',
+        { type: 'button', class: 'btn btn-small', onclick: toggle(!state.free) },
+        state.free ? 'Show them' : 'Hide them'
       )
-      .sort(sorter.fn);
+    );
   };
 
   // The bulk bar is built once; ticking a box only updates it, so keyboard focus stays put.
@@ -389,8 +427,7 @@ async function renderList(el, ctx) {
         h('h1', { class: 'page-title' }, 'All opportunities'),
         h('p', { class: 'page-sub' }, 'Every open opportunity of every kind, in one list, ranked by score.'),
         data.range ? h('p', { class: 'page-sub ins-note' }, `Numbers cover ${fmt.range(data.range)}.`) : null
-      ),
-      h('a', { class: 'btn', href: '#/cannibalization' }, 'Open Cannibalization')
+      )
     ),
     data.empty
       ? h('p', { class: 'banner banner-warn' }, 'No search data has been pulled yet. Press Refresh now at the top.')
@@ -402,7 +439,10 @@ async function renderList(el, ctx) {
   );
   linksRequest.then(
     (linkData) => {
-      linkCount.textContent = fmt.num(linkData.open ?? openCount(linkData.pages));
+      const open = linkData.open ?? openCount(linkData.pages);
+      linkCount.textContent = fmt.num(open);
+      // A tab with nothing in it is not shown, unless it is the one open.
+      if (!open && !onLinks) linksTab.hidden = true;
       if (linksBox) linksBox.replaceChildren(linksPanel(ctx, linkData));
     },
     () => {
@@ -431,8 +471,10 @@ async function renderList(el, ctx) {
           '.'
         )
       : null,
+    freeBox,
     bulkBar,
     listBox
   );
+  drawFree();
   drawList();
 }

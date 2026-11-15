@@ -34,7 +34,7 @@ export async function render(el, ctx) {
   // page edit this week (409, with the reasons). The founder is asked once, and a yes sends override.
   async function saveFive(next, message, { override = false } = {}) {
     if (locked) {
-      ctx.toast("This week's plan is locked. Unlock it to change the five.", 'error');
+      ctx.toast("This week's plan is locked. Unlock it to change this week's priorities.", 'error');
       return;
     }
     try {
@@ -61,7 +61,7 @@ export async function render(el, ctx) {
   // confirm a frozen page gets on Done. `recent` is the card's eligibility.recentEdit, when it has one.
   async function swapIn(cardId, title, anchor, recent = null) {
     if (ids.includes(cardId)) {
-      ctx.toast("It is already in this week's five.");
+      ctx.toast("It is already in this week's priorities.");
       return;
     }
     if (recent) {
@@ -245,7 +245,7 @@ function head(week, ctx, locked) {
       onclick: async () => {
         try {
           await api.post('/api/week/unlock');
-          toast('Unlocked. You can change the five again.', 'success');
+          toast("Unlocked. You can change this week's priorities again.", 'success');
           await ctx.reload();
         } catch (err) {
           toast(err.message, 'error');
@@ -426,7 +426,9 @@ function topFive(week, ctx, { ids, locked, saveFive }) {
       h(
         'span',
         { class: 'section-note' },
-        locked ? 'Locked. Unlock the plan to change the five.' : 'Drag the handle or use the arrows to reorder. ',
+        locked
+          ? "Locked. Unlock the plan to change this week's priorities."
+          : 'Drag the handle or use the arrows to reorder. ',
         reset
       )
     ),
@@ -461,7 +463,7 @@ function biggest(week, ctx, { locked, swapIn }) {
     h(
       'p',
       { class: 'section-note', style: { marginBottom: '10px' } },
-      'The next ten by score that are not in the five. Live page changes say when the 28 day rule lets you edit them.'
+      "The next ten by score that are not in this week's priorities, the ones you can work on now first. Live page changes say when they can be edited."
     ),
     week.opportunities.length
       ? h(
@@ -470,14 +472,16 @@ function biggest(week, ctx, { locked, swapIn }) {
           week.opportunities.map((o) =>
             renderCard(o, ctx, {
               variant: 'row',
-              rowActions: locked
-                ? []
-                : [
-                    {
-                      label: 'Swap in',
-                      onClick: (e) => swapIn(`opp:${o.id}`, o.title, e.currentTarget, recentOf(o.eligibility)),
-                    },
-                  ],
+              // An item on a page that may not be edited now is never pushed: no Swap in.
+              rowActions:
+                locked || o.held
+                  ? []
+                  : [
+                      {
+                        label: 'Swap in',
+                        onClick: (e) => swapIn(`opp:${o.id}`, o.title, e.currentTarget, recentOf(o.eligibility)),
+                      },
+                    ],
             })
           )
         )
@@ -540,6 +544,7 @@ function worries(week, ctx, { locked, swapIn }) {
               h('div', { style: { fontWeight: 600, overflowWrap: 'anywhere' } }, w.title),
               h('p', { class: 'item-row-line' }, w.measured),
               w.fix ? h('p', { class: 'item-row-line' }, h('strong', {}, 'What to do: '), w.fix) : null,
+              w.editWhen ? h('p', { class: 'item-row-line' }, h('strong', {}, 'Page edits: '), `${w.editWhen}.`) : null,
               h(
                 'div',
                 { class: 'row', style: { marginTop: '8px' } },
@@ -548,7 +553,7 @@ function worries(week, ctx, { locked, swapIn }) {
                   { type: 'button', class: 'btn btn-small', onclick: details(w, 'Worry') },
                   'Details and buttons'
                 ),
-                locked
+                locked || w.held
                   ? null
                   : h(
                       'button',
@@ -587,6 +592,9 @@ function worries(week, ctx, { locked, swapIn }) {
                 h('div', { style: { fontWeight: 600, overflowWrap: 'anywhere' } }, w.title),
                 h('p', { class: 'item-row-line' }, h('strong', {}, 'Why nothing to do: '), w.watch),
                 h('p', { class: 'item-row-line' }, w.measured),
+                w.editWhen
+                  ? h('p', { class: 'item-row-line' }, h('strong', {}, 'Page edits: '), `${w.editWhen}.`)
+                  : null,
                 h(
                   'div',
                   { class: 'row', style: { marginTop: '8px' } },
@@ -632,15 +640,18 @@ function leaveItButton(w, ctx) {
   );
 }
 
-// Pages not to touch this week, each with its reason: frozen pages being measured, and pages of a
-// split you marked leave alone.
+// Pages not to touch this week, each with its reason: pages with a logged edit, edits found in git, and
+// pages of a split you marked leave alone. The same count, under the same name, as the Pages tile and
+// Did it work, with what makes it up.
 function leaveAlone(week, ctx) {
   const { h } = ctx;
   const list = week.leaveAlone ?? [];
+  const summary = week.leaveAloneSummary ?? null;
   return h(
     'section',
     { class: 'section' },
-    sideHead(h, 'Leave these alone this week', list.length ? `${list.length}` : null),
+    sideHead(h, summary?.name ?? 'Pages to leave alone', list.length ? `${list.length}` : null),
+    summary?.text ? h('p', { class: 'section-note', style: { marginBottom: '8px' } }, `${summary.text}.`) : null,
     list.length
       ? h(
           'ul',

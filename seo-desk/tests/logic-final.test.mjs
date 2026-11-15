@@ -597,7 +597,7 @@ test('S10: an edit is ready to judge only when Search Console covers its 28 days
   const model = buildModel();
   const v = work.weekView(model).nextVerdict;
   assert.equal(v.ready, true);
-  assert.equal(v.note, '1 page change from 1 commit ready to judge; 1 more waits for data through 11 November');
+  assert.equal(v.note, '1 page change from 1 commit can be read; 1 more waits for data through 11 November');
   const r = work.resultsView(model);
   assert.deepEqual(
     r.due.map((d) => d.dataReady),

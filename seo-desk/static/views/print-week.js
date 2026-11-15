@@ -167,7 +167,7 @@ export async function render(el, ctx) {
           )
         : null,
       section(
-        'Leave these alone this week',
+        `${week.leaveAloneSummary?.name ?? 'Pages to leave alone'} (${week.leaveAlone?.length ?? 0})`,
         week.leaveAlone?.length
           ? h(
               'ul',

@@ -164,6 +164,7 @@ export const SECTIONS = [
         'waiting',
         'nextVerdict',
         'leaveAlone',
+        'leaveAloneSummary',
         'blockedOnYou',
         'locked',
         'counts',
@@ -271,13 +272,25 @@ export const SECTIONS = [
           judgedChanges: r.verdictCounts?.changes ?? 0,
           judgedPageResults: r.verdictCounts?.pageResults ?? 0,
           byWord: r.verdictCounts?.byWord ?? null,
-          // Ready only when the Search Console data covers the 28 days after the change.
-          readyToJudge: r.dueReady?.ready ?? (r.due ?? []).length,
+          // The one reading of the due changes (work.mjs verdictState): a due change can be read only when
+          // the Search Console data covers its 28 days after and no other edit overlaps it.
+          canBeRead: r.dueReady?.readable ?? 0,
+          dueButCannotBeRead: r.dueReady?.unreadable ?? 0,
+          cannotBeReadText: r.dueReady?.unreadableText ?? null,
+          judgeNowWill: r.dueReady?.judgeText ?? null,
           waitingForData: r.dueReady?.waiting ?? 0,
           waitingForDataText: r.dueReady?.waitingText ?? null,
           stillWaiting: (r.pending ?? []).length,
         },
-        ...pick(r, ['verdicts', 'due', 'pending', 'frozen', 'moneyPageVerdicts', 'googleUpdatesNote']),
+        ...pick(r, [
+          'verdicts',
+          'due',
+          'pending',
+          'leaveAloneSummary',
+          'leaveAlone',
+          'moneyPageVerdicts',
+          'googleUpdatesNote',
+        ]),
       };
     },
   ],

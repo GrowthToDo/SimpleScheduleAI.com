@@ -100,19 +100,24 @@ export async function render(el, ctx) {
         'div',
         { class: 'tiles' },
         tile(h, 'Verdicts so far', fmt.num(counts?.changes ?? 0), splitLine || 'none yet'),
-        // Ready only when the Search Console data covers the 28 days after; the server counts both.
+        // The due changes, from the server's one reading of them: a change can be read only when the data
+        // covers its 28 days after and no other edit overlaps it.
         tile(
           h,
-          'Ready to judge',
-          fmt.num(data.dueReady?.ready ?? dueGroups.reduce((s, g) => s + g.pages.length, 0)),
+          'Can be read',
+          fmt.num(data.dueReady?.readable ?? 0),
           [
-            (data.dueReady?.ready ?? data.due.length)
-              ? 'finished the 28 day wait. Press Judge now.'
-              : 'nothing is ready yet.',
+            data.dueReady?.readable ? 'finished the 28 day wait. Press Judge now.' : 'no due change can be read yet.',
             data.dueReady?.waitingText ?? '',
           ]
             .filter(Boolean)
             .join(' ')
+        ),
+        tile(
+          h,
+          'Due but cannot be read',
+          fmt.num(data.dueReady?.unreadable ?? 0),
+          data.dueReady?.unreadable ? 'another edit overlaps each one' : 'none'
         ),
         tile(
           h,
@@ -122,11 +127,12 @@ export async function render(el, ctx) {
             ? `page changes, grouped into ${fmt.plural(pendingGroups.length, 'change', 'changes')}`
             : 'no change is waiting'
         ),
+        // The same count under the same name as This week and the Pages tile.
         tile(
           h,
-          'Frozen pages',
-          fmt.num(data.frozen.length),
-          data.frozen.length ? 'may not be edited yet' : 'every page is free to edit'
+          data.leaveAloneSummary?.name ?? 'Pages to leave alone',
+          fmt.num(data.leaveAloneSummary?.count ?? 0),
+          data.leaveAloneSummary?.text ?? 'every page is free to edit'
         )
       )
     ),
@@ -137,10 +143,10 @@ export async function render(el, ctx) {
         'div',
         {},
         verdictSection(verdicts, ctx, lessons),
-        dueSection(dueGroups, ctx),
+        dueSection(dueGroups, ctx, data.dueReady),
         pendingSection(pendingGroups, ctx)
       ),
-      h('div', {}, frozenSection(data, ctx), annotationsSection(data, ctx))
+      h('div', {}, leaveAloneSection(data, ctx), annotationsSection(data, ctx))
     ),
     lessonsSection(lessons, data.verdicts, ctx),
     timelineSection(data, chartData, ctx)
@@ -199,10 +205,16 @@ function head(data, ctx, judge) {
     ),
     h(
       'div',
-      { class: 'row' },
-      judge.preview.button,
-      judge.showSave ? judge.save.button : null,
-      h('button', { type: 'button', class: 'btn', onclick: () => editNoteForm(ctx) }, 'I edited a page')
+      { class: 'stack', style: { gap: '6px' } },
+      h(
+        'div',
+        { class: 'row' },
+        judge.preview.button,
+        judge.showSave ? judge.save.button : null,
+        h('button', { type: 'button', class: 'btn', onclick: () => editNoteForm(ctx) }, 'I edited a page')
+      ),
+      // What pressing Judge now will do today, in the server's words.
+      data.dueReady?.judgeText ? h('p', { class: 'small muted', style: { margin: 0 } }, data.dueReady.judgeText) : null
     )
   );
 }
@@ -210,14 +222,13 @@ function head(data, ctx, judge) {
 // Judge now, through the shared job panel: a preview first (nothing saved), then, once a
 // preview has finished cleanly and is newer than the last save, the button that saves.
 function judgeBlocks(data, jobs, ctx) {
-  const { fmt } = ctx;
   const last = (key) => jobs.jobs.find((j) => j.key === key)?.last ?? null;
   const preview = jobBlock(ctx, jobs, 'judge-preview', {
     label: 'Judge now',
     primary: true,
     confirm: {
       title: 'Preview the verdicts?',
-      body: `The desk pulls fresh numbers from Search Console and works out a verdict for every change that has finished its 28 day wait (${fmt.plural(data.due.length, 'page change is', 'page changes are')} ready now).\n\nNothing is saved. It can take a minute or two.`,
+      body: `The desk pulls fresh numbers from Search Console and works out a verdict for every change that has finished its 28 day wait. ${data.dueReady?.judgeText ?? 'No change is due yet.'}\n\nIt can take a minute or two.`,
       confirmLabel: 'Start the preview',
     },
   });
@@ -487,8 +498,13 @@ export function verdictCard(v, ctx, { showPage = true } = {}) {
   );
 }
 
+// The tabs count page results (one row per page judged, as the Verdicts so far tile's "From N page
+// results" counts them), so they add up to that number. A change too early to judge is not a page result:
+// it has its own Waiting count beside the tabs.
 function verdictSection(verdicts, ctx, lessons) {
   const { h } = ctx;
+  const results = verdicts.filter((v) => v.verdict !== 'too-early');
+  const waitingRows = verdicts.filter((v) => v.verdict === 'too-early');
   const FILTERS = [
     { key: 'all', label: 'All', test: () => true },
     { key: 'better', label: 'Better', test: (v) => v.verdict === 'better' },
@@ -499,33 +515,38 @@ function verdictSection(verdicts, ctx, lessons) {
       label: 'No real change or too small',
       test: (v) => v.verdict === 'flat' || v.verdict === 'insufficient-data',
     },
-    { key: 'too-early', label: 'Too early', test: (v) => v.verdict === 'too-early' },
-  ].filter((f) => f.key === 'all' || verdicts.some(f.test));
+  ].filter((f) => f.key === 'all' || results.some(f.test));
   let current = 'all';
   const list = h('div', { class: 'stack' });
   const chips = h('div', { class: 'chips', role: 'group', 'aria-label': 'Show verdicts' });
+  const chip = (key, label, n) =>
+    h(
+      'button',
+      {
+        type: 'button',
+        class: 'chip chip-btn',
+        'aria-pressed': String(key === current),
+        onclick: () => {
+          current = key;
+          draw();
+        },
+      },
+      `${label} `,
+      h('span', { class: 'count' }, String(n))
+    );
   const draw = () => {
     const f = FILTERS.find((x) => x.key === current);
+    const shown = current === 'waiting' ? waitingRows : results.filter(f.test);
     chips.replaceChildren(
-      ...FILTERS.map((x) =>
-        h(
-          'button',
-          {
-            type: 'button',
-            class: 'chip chip-btn',
-            'aria-pressed': String(x.key === current),
-            onclick: () => {
-              current = x.key;
-              draw();
-            },
-          },
-          `${x.label} `,
-          h('span', { class: 'count' }, String(verdicts.filter(x.test).length))
-        )
-      )
+      h('span', { class: 'small muted', style: { alignSelf: 'center' } }, 'Page results:'),
+      ...FILTERS.map((x) => chip(x.key, x.label, results.filter(x.test).length)),
+      waitingRows.length
+        ? h('span', { class: 'small muted', style: { alignSelf: 'center', marginLeft: '12px' } }, 'Not judged yet:')
+        : '',
+      waitingRows.length ? chip('waiting', 'Waiting', waitingRows.length) : ''
     );
     list.replaceChildren(
-      ...verdicts.filter(f.test).map((v) => {
+      ...shown.map((v) => {
         const card = verdictCard(v, ctx);
         // A lesson can start from any judged verdict the desk keeps (not the money page reads).
         if (lessons && !v.money && v.judgedOn) {
@@ -784,24 +805,26 @@ function changeRow(g, ctx, { dateText }) {
   );
 }
 
-function dueSection(groups, ctx) {
-  const { h, fmt } = ctx;
+function dueSection(groups, ctx, dueReady) {
+  const { h } = ctx;
   if (!groups.length) return null;
-  const total = groups.reduce((s, g) => s + g.pages.length, 0);
   return h(
     'section',
     { class: 'section' },
     h(
       'div',
       { class: 'section-head' },
-      h('h2', { class: 'section-title' }, 'Ready to judge'),
-      h('span', { class: 'section-note' }, `${fmt.plural(total, 'page change', 'page changes')}. Press Judge now.`)
+      h('h2', { class: 'section-title' }, 'Due for a verdict'),
+      dueReady?.judgeText ? h('span', { class: 'section-note' }, `Press Judge now. ${dueReady.judgeText}`) : null
     ),
     h(
       'ul',
       { class: 'side-list' },
-      // A change the Search Console data does not cover yet says what date it waits for.
-      groups.map((g) => changeRow(g, ctx, { dateText: g.waitingText ?? 'Ready now' }))
+      // A change the Search Console data does not cover yet says what date it waits for; one another edit
+      // overlaps says it cannot be read.
+      groups.map((g) =>
+        changeRow(g, ctx, { dateText: g.waitingText ?? (g.overlapping ? 'Cannot be read' : 'Can be read now') })
+      )
     )
   );
 }
@@ -859,40 +882,44 @@ function pendingSection(groups, ctx) {
 
 // ------------------------------------------------------------------ the side column
 
-function frozenSection(data, ctx) {
-  const { h } = ctx;
+// The pages to leave alone, each with its reason: the same list and count as This week and the Pages
+// tile (logged edits, edits found in git, splits kept).
+function leaveAloneSection(data, ctx) {
+  const { h, fmt } = ctx;
+  const list = data.leaveAlone ?? [];
   return h(
     'section',
     { class: 'section' },
     h(
       'div',
       { class: 'section-head', style: { marginBottom: '4px' } },
-      h('h2', { class: 'section-title' }, 'Frozen pages')
+      h('h2', { class: 'section-title' }, data.leaveAloneSummary?.name ?? 'Pages to leave alone'),
+      list.length ? h('span', { class: 'section-note' }, fmt.num(list.length)) : null
     ),
     h(
       'p',
       { class: 'section-note', style: { marginBottom: '8px' } },
-      'A page changed on purpose is left alone for 28 days, so its verdict is clean.'
+      `A page changed lately is left alone for 28 days, so its verdict is clean.${data.leaveAloneSummary?.text ? ` ${data.leaveAloneSummary.text}.` : ''}`
     ),
-    data.frozen.length
+    list.length
       ? h(
           'ul',
           { class: 'side-list' },
-          data.frozen.map((f) =>
+          list.map((f) =>
             h(
               'li',
               {},
-              h('span', { class: 'side-date' }, `Until ${f.untilText}`),
+              f.until ? h('span', { class: 'side-date' }, `Until ${fmt.date(f.until)}`) : null,
               h(
                 'div',
                 { style: { overflowWrap: 'anywhere' } },
                 h('a', { href: `#/pages?page=${encodeURIComponent(f.page)}` }, f.page)
               ),
-              h('div', { class: 'small muted' }, f.why)
+              h('div', { class: 'small muted', style: { overflowWrap: 'anywhere' } }, f.reason)
             )
           )
         )
-      : h('p', { class: 'empty' }, 'No page is frozen. Any page may be edited.')
+      : h('p', { class: 'empty' }, 'No page needs leaving alone. Any page may be edited.')
   );
 }
 

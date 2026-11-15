@@ -18,6 +18,10 @@ import {
   eligibility,
   recentEdits,
   withEligibilityText,
+  deliberateEdits as lifecycleDeliberate,
+  editWhenText,
+  RECENT_EDIT_MIN_LINES,
+  AFTER_PUBLISH_DAYS,
 } from '../lifecycle.mjs';
 import { windows, todayIso, addDays } from '../dates.mjs';
 import { sourceStatus } from '../refresh.mjs';
@@ -377,6 +381,100 @@ export function holdFields(model, page, { week = false } = {}) {
   return { frozenUntil: until, frozenUntilText: until ? longDate(until) : null, holdText: until ? e.text : null };
 }
 
+// ---------------------------------------------------------------- a page's edits
+
+// When a page may be edited (lifecycle editWhenText, the words every chip uses), re-exported here.
+export { editWhenText };
+
+const lineWord = (n) => `${n} ${n === 1 ? 'line' : 'lines'}`;
+// "a small change on 3 November (1 line)"
+export const smallChangeText = (s) => `a small change on ${longDate(s.date)} (${lineWord(s.lines)})`;
+
+// The one function for a page's edits as the desk understands them. Every sentence about when a page
+// was edited reads it, so "last edited" is only ever said of a deliberate edit:
+//   deliberate  [{date, kind, why, lines}] newest first: a desk Done, a plan row, an "Edit:" note
+//               (kind 'logged'), or a git commit of RECENT_EDIT_MIN_LINES changed lines or more
+//               (kind 'git', with the day's lines added up)
+//   small       [{date, lines}] newest first: git changes under that size (a link added, a count fixed)
+//   last        the newest deliberate edit's date, or null
+//   editWhen    when the page may be edited (editWhenText)
+// Git is read from the local snapshot's content edits (the page's own source file, the last 35 days);
+// an edit within AFTER_PUBLISH_DAYS after the page was published is part of publishing it.
+export function pageEdits(model, page) {
+  const all = memo(model, 'page-edits', () => {
+    const byPage = new Map();
+    const get = (p) => {
+      if (!byPage.has(p)) byPage.set(p, { logged: [], git: new Map() });
+      return byPage.get(p);
+    };
+    const list = lifecycleDeliberate({
+      items: model.items,
+      opps: model.opps,
+      plan: model.data.local?.plan ?? null,
+      edits: model.edits,
+      planTicks: model.planTicks,
+      planSeenOn: model.planSeenOn,
+    });
+    for (const d of list) if (d.page && d.date) get(d.page).logged.push(d);
+    const published = new Map();
+    for (const e of model.edits ?? [])
+      if (e.kind === 'publish') published.set(e.page, [...(published.get(e.page) ?? []), e.date]);
+    for (const e of model.data.local?.contentEdits ?? []) {
+      if (!e?.page || !e.date || e.date > model.today) continue;
+      const pub = published.get(e.page) ?? [];
+      if (pub.some((p) => p <= e.date && e.date <= addDays(p, AFTER_PUBLISH_DAYS))) continue;
+      const day = get(e.page).git.get(e.date) ?? { date: e.date, lines: 0, big: false };
+      const n = Number(e.lines) || 0;
+      day.lines += n;
+      if (n >= RECENT_EDIT_MIN_LINES) day.big = true;
+      get(e.page).git.set(e.date, day);
+    }
+    return byPage;
+  });
+  const own = all.get(page) ?? { logged: [], git: new Map() };
+  const loggedDates = new Set(own.logged.map((d) => d.date));
+  const deliberate = [
+    ...own.logged.map((d) => ({ date: d.date, kind: 'logged', why: d.why, lines: null })),
+    ...[...own.git.values()]
+      .filter((g) => g.big && !loggedDates.has(g.date))
+      .map((g) => ({
+        date: g.date,
+        kind: 'git',
+        why: `An edit of ${lineWord(g.lines)} was found in git on ${longDate(g.date)}.`,
+        lines: g.lines,
+      })),
+  ];
+  // One row per day, newest first; a logged edit wins over git on the same day.
+  const byDay = new Map();
+  for (const d of deliberate) if (!byDay.has(d.date) || d.kind === 'logged') byDay.set(d.date, d);
+  const sorted = [...byDay.values()].sort((a, b) => b.date.localeCompare(a.date));
+  const small = [...own.git.values()]
+    .filter((g) => !g.big && !byDay.has(g.date))
+    .map((g) => ({ date: g.date, lines: g.lines }))
+    .sort((a, b) => b.date.localeCompare(a.date));
+  return {
+    deliberate: sorted,
+    small,
+    last: sorted[0]?.date ?? null,
+    lastSmall: small[0] ?? null,
+    editWhen: page ? editWhenText(pageHold(model, page)) : null,
+  };
+}
+
+// The sentence a worry says about the page's edits inside its compared dates (start..end), or null:
+// "The page was last edited on 9 November, inside these dates." for a deliberate edit, and
+// "The page had a small change on 3 November (1 line), inside these dates." for a smaller one.
+export function editNoteIn(pe, start, end) {
+  const inside = (d) => d && (!start || d >= start) && (!end || d <= end);
+  const big = pe?.deliberate?.find((d) => inside(d.date)) ?? null;
+  const small = pe?.small?.find((s) => inside(s.date) && (!big || s.date > big.date)) ?? null;
+  if (big && small)
+    return `The page was last edited on ${longDate(big.date)}, and had ${smallChangeText(small)}, inside these dates.`;
+  if (big) return `The page was last edited on ${longDate(big.date)}, inside these dates.`;
+  if (small) return `The page had ${smallChangeText(small)}, inside these dates.`;
+  return null;
+}
+
 // How long Leave it puts a card away when its advice gives no date of its own.
 export const LEAVE_IT_DAYS = 28;
 // {until, untilText} for a card whose own advice is to leave its page alone: Leave it snoozes it until
@@ -389,9 +487,23 @@ export const leaveItOf = (model, until = null) => {
 export const leaveItFor = (model, o, dropKind = o?.dropKind) =>
   o?.type === 'slipping' && dropKind === 'lost-demand' ? { leaveIt: leaveItOf(model) } : {};
 
+// Whether an item is held: it edits a live page that may not be edited now (the page's own edit holds
+// it, or this week's one page edit is used). A held item is never pushed: no Swap in, no green Start,
+// no priority, and it sorts after the items that can be worked on now. heldKind: 'page' (the freeze or
+// an edit found in git: a page to leave alone) or 'week' (only this week's edit is used). From the
+// eligibility the item already carries (the one eligibility function).
+export const heldOf = (isPageEdit, e) =>
+  isPageEdit && e && !e.eligible
+    ? { held: true, heldKind: e.weekEdit ? 'week' : 'page' }
+    : { held: false, heldKind: null };
+
+// Workable items first, held ones after, each group in its own order (a stable sort).
+export const workableFirst = (items) => [...items.filter((x) => !x.held), ...items.filter((x) => x.held)];
+
 // An opportunity as the pages see it: plain text, score, lifecycle state, freeze, brief, links.
 export function decorateOpp(model, o) {
   const state = itemState(model, o.id);
+  const elig = eligibilityOf(model, o);
   const clean = {
     ...o,
     title: plain(o.title),
@@ -418,10 +530,11 @@ export function decorateOpp(model, o) {
     score: o.score ?? null,
     status: state.status,
     item: state,
-    eligibility: eligibilityOf(model, o),
+    eligibility: elig,
+    ...heldOf(Boolean(o.isPageEdit), elig),
     touchedOn: o.page ? touchedOn(o.page, model.edits) : [],
     links: linksFor(o.page),
-    brief: brief(clean, { frozen: model.frozen, hold: eligibilityOf(model, o) }),
+    brief: brief(clean, { frozen: model.frozen, hold: elig }),
     detected: true,
     ...leaveItFor(model, o),
   };

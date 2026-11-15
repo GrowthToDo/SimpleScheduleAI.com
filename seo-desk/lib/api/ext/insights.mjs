@@ -19,6 +19,9 @@ import {
   pageHold,
   holdFields,
   leaveItFor,
+  leaveItOf,
+  heldOf,
+  workableFirst,
 } from '../model.mjs';
 import { competingList, competingId, splitEdit, splitGroups, activeOpps } from '../work.mjs';
 import { itemAction, editGuards, editRefused } from '../actions.mjs';
@@ -42,6 +45,7 @@ import {
   MIN_DISCOVERED_IMPRESSIONS,
 } from '../../targets.mjs';
 import { opportunityId, busyWeekPages, unservedSplit } from '../../rules.mjs';
+import { slipWatchOf } from '../../week.mjs';
 import { groupTopics, tokens } from '../../topics.mjs';
 import { isBrand } from '../../../../scripts/lib/gsc-diagnose-core.mjs';
 import { COUNTS_MISSING_NOTE, countsMissingIn } from '../../query-counts.mjs';
@@ -91,7 +95,7 @@ function eligibilityOfPages(model, pages) {
       eligible: true,
       from: null,
       page: null,
-      text: 'Eligible now',
+      text: 'Can be edited now',
       ...(first?.touchedText ? { touchedText: first.touchedText } : {}),
     };
   }
@@ -124,10 +128,16 @@ const unlabelled = (text) => {
 };
 
 // Each item's priority badge: the busiest third of the list (by `valueOf`) is high, the next third
-// medium. Decided here once, so a page only draws it.
+// medium. Decided here once, so a page only draws it. A held item (its page may not be edited now:
+// model.mjs heldOf) is never pushed: it has no priority, is left out of the thirds, and comes after the
+// items that can be worked on now.
 function withPriority(items, valueOf) {
-  const bands = priorityBands(items.map((it) => Number(valueOf(it)) || 0));
-  return items.map((it, i) => ({ ...it, priority: bands[i] }));
+  const free = items.filter((it) => !it.held);
+  const bands = priorityBands(free.map((it) => Number(valueOf(it)) || 0));
+  return workableFirst([
+    ...free.map((it, i) => ({ ...it, priority: bands[i] })),
+    ...items.filter((it) => it.held).map((it) => ({ ...it, priority: null })),
+  ]);
 }
 const PRIORITY_NOTE = 'Priority by how often it is shown, against the others in this list. The busiest third is high.';
 
@@ -348,6 +358,7 @@ function cannibalizationAll(model) {
         editPages,
         // Every page the chosen action edits must be free; a choice that edits no page is always eligible.
         eligibility: elig,
+        ...heldOf(editPages.length > 0, elig),
         brief: brief(
           {
             title: `"${c.query}" is split between our pages`,
@@ -419,8 +430,11 @@ async function saveChoice(id, body) {
 
 // ---------------------------------------------------------------- runner-up keywords
 
+// Workable first: a runner-up on a page that may not be edited now comes after the others.
 export const runnerUpItems = (model) =>
-  memo(model, 'insights:runner-up', () => openOfType(model, 'near-page-one').map((o) => decorateOpp(model, o)));
+  memo(model, 'insights:runner-up', () =>
+    workableFirst(openOfType(model, 'near-page-one').map((o) => decorateOpp(model, o)))
+  );
 
 export function runnerUpView(model) {
   const items = runnerUpItems(model);
@@ -736,8 +750,20 @@ export const decayItems = (model) =>
             recentDrop: own.recentDrop,
           }
         : own;
-      // A lost demand card advises leaving the page alone, so it offers Leave it (model.mjs leaveItFor).
-      return { ...d, ...drop, leaveIt: leaveItFor(model, o, drop.dropKind).leaveIt ?? null };
+      // A card whose advice is to leave the page (lost demand, the page's own edit holds it, or the plan
+      // already has its change) is only watched: the same reason the week shows (week.mjs slipWatchOf).
+      // It carries no eligibility chip ("Eligible", "Next page edit") and offers Leave it.
+      const { watch, hold } = slipWatchOf(o.page, {
+        frozen: model.frozen,
+        recent: model.recent,
+        today: model.today,
+        plan: model.data.local?.plan ?? null,
+        dropKind: drop.dropKind,
+      });
+      const leaveIt = watch
+        ? leaveItOf(model, hold?.until ?? null)
+        : (leaveItFor(model, o, drop.dropKind).leaveIt ?? null);
+      return { ...d, ...drop, watch, ...(watch ? { eligibility: null } : {}), leaveIt };
     })
   );
 
@@ -787,8 +813,15 @@ function busyWeekItems(model) {
 
 export function decayView(model) {
   const { pages, queries } = decayRows(model);
-  // Priority by how often the page was shown before the drop.
-  const items = withPriority(decayItems(model), (o) => o.evidence?.[0]?.prev?.impressions);
+  // Priority by how often the page was shown before the drop, among the cards that need a look. A watched
+  // card (its advice is to leave the page) carries "Watching" instead of a priority and comes after them.
+  const all = decayItems(model);
+  const look = withPriority(
+    all.filter((o) => !o.watch),
+    (o) => o.evidence?.[0]?.prev?.impressions
+  );
+  const watched = all.filter((o) => o.watch).map((o) => ({ ...o, priority: null }));
+  const items = [...look, ...watched];
   const p = withDrop(model, split(pages));
   const q = split(queries);
   const shownText = (n, total, what) => (total > n ? `Showing the first ${n} of ${n0(total)} ${what}.` : null);
@@ -796,7 +829,11 @@ export function decayView(model) {
     ...envelope(model, { need: ['gsc'], range: rangeOf(windowsFor(model, DECAY_DAYS).cur) }),
     ...heading('slipping'),
     priorityNote: 'Priority by how often the page was shown before the drop, against the others in this list.',
+    // count is every card on the Decay list (the sidebar's number); lookCount the ones that need a look
+    // (the "Pages to look at" tile), watchCount the ones only watched.
     count: items.length,
+    lookCount: look.length,
+    watchCount: watched.length,
     items,
     pages: { growing: p.growing, decaying: p.decaying },
     queries: { growing: q.growing, decaying: q.decaying },
@@ -805,12 +842,12 @@ export function decayView(model) {
     shownMax: DECAY_ROWS,
     shownText: {
       pages: {
-        growing: shownText(DECAY_ROWS, p.totals.growing, 'growing pages'),
-        decaying: shownText(DECAY_ROWS, p.totals.decaying, 'decaying pages'),
+        growing: shownText(DECAY_ROWS, p.totals.growing, 'pages shown more'),
+        decaying: shownText(DECAY_ROWS, p.totals.decaying, 'pages shown less'),
       },
       queries: {
-        growing: shownText(DECAY_ROWS, q.totals.growing, 'growing searches'),
-        decaying: shownText(DECAY_ROWS, q.totals.decaying, 'decaying searches'),
+        growing: shownText(DECAY_ROWS, q.totals.growing, 'searches shown more'),
+        decaying: shownText(DECAY_ROWS, q.totals.decaying, 'searches shown less'),
       },
     },
     recentDropNote: RECENT_DROP_NOTE,
@@ -832,6 +869,10 @@ export function keywordTable(model) {
   return memo(model, 'insights:keyword-table', () => {
     const queriesOf = (type) => new Set(openOfType(model, type).map((o) => norm(o.query)));
     const near = queriesOf('near-page-one');
+    // A runner-up is a page's own target found by matchKey (rules.mjs: "the search is that page's target"),
+    // so a target row spelled another way ("the nurse rota problem" for the search "nurse rota problem")
+    // is the same runner-up. The map then flags the same searches the Runner-up page lists.
+    const nearKeys = new Set(openOfType(model, 'near-page-one').map((o) => matchKey(o.query)));
     const split_ = queriesOf('competing-pages');
     const wrong = queriesOf('wrong-page');
     const live = liveSet(model);
@@ -870,7 +911,10 @@ export function keywordTable(model) {
       position: r.position,
       impressions: missing ? null : r.impressions,
       rankingPage: r.rankingPage,
-      flags: flagsOf(r.keyword, r.label === 'ranks elsewhere' ? ['wrong-page'] : []),
+      flags: flagsOf(r.keyword, [
+        ...(r.label === 'ranks elsewhere' ? ['wrong-page'] : []),
+        ...(nearKeys.has(matchKey(r.keyword)) ? ['runner-up'] : []),
+      ]),
       clusterConflict: null,
     }));
     const { owner } = ownership(model);
@@ -1094,6 +1138,7 @@ function secondaryAll(model) {
       ),
       state: secondaryState(model, id, c),
       eligibility: elig,
+      ...heldOf(true, elig),
       frozenUntil: f.frozenUntil,
       frozenUntilText: f.frozenUntilText,
       holdText: f.holdText,

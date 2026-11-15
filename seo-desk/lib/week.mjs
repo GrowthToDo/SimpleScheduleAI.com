@@ -133,29 +133,40 @@ const WATCH_MAX = 5;
 // what happens to it, and it comes up as the week's page edit in turn. Only a real edit holds a page
 // (hold: frozen, or 15 changed lines or more found in git): a one-line change that is merely waiting
 // for its verdict must not hide a real drop.
+// Whether a decaying page is only watched, and why, in plain words; null when it needs a look. The one
+// function the week's worries and the Decay page's cards both read, so a card whose advice is to leave
+// the page is "Watching" on both. {watch, hold, row}: hold is the edit that holds it (holdOf), row the
+// plan's open improvement for it.
+export function slipWatchOf(page, { frozen, recent, today, plan, dropKind = null }) {
+  const hold = holdOf(page, frozen, recent, today);
+  const row = !hold ? ((plan?.improve ?? []).find((r) => !r.done && r.page === page) ?? null) : null;
+  const watch = hold
+    ? `Edited on ${longDate(hold.since)}, so it is too early to judge. Look again on ${longDate(hold.until)}.`
+    : row
+      ? `Your plan already lists a change for this page${plain(row.todo) ? ` (${plain(row.todo).replace(/[.\s]+$/, '')})` : ''}, so it comes up as the week's page edit in its turn.`
+      : dropKind === 'lost-demand'
+        ? 'Its place held while its views fell, so fewer people may be searching for this. There may be nothing to fix.'
+        : null;
+  return { watch, hold, row };
+}
+
 function slippingPages(opps, { frozen, recent, today, items, decay, plan }) {
-  const planned = new Map((plan?.improve ?? []).filter((r) => !r.done && r.page).map((r) => [r.page, r]));
   let need = 0;
   let watched = 0;
   return (opps ?? [])
     .filter((o) => o.type === 'slipping' && available(o.id, items, today))
     .map((o) => {
       const d = decay?.get(o.id) ?? null;
-      const hold = holdOf(o.page, frozen, recent, today);
-      const row = !hold ? planned.get(o.page) : null;
-      const watch = hold
-        ? `Edited on ${longDate(hold.since)}, so it is too early to judge. Look again on ${longDate(hold.until)}.`
-        : row
-          ? `Your plan already lists a change for this page${plain(row.todo) ? ` (${plain(row.todo).replace(/[.\s]+$/, '')})` : ''}, so it comes up as the week's page edit in its turn.`
-          : d?.dropKind === 'lost-demand'
-            ? 'Its place held while its views fell, so fewer people may be searching for this. There may be nothing to fix.'
-            : null;
+      const { watch, hold, row } = slipWatchOf(o.page, { frozen, recent, today, plan, dropKind: d?.dropKind ?? null });
       if (watch ? watched >= WATCH_MAX : need >= 3) return null;
       if (watch) watched += 1;
       else need += 1;
       const notes = [];
       if (d?.dropKindLabel) notes.push(`Kind of drop: ${plain(d.dropKindLabel)}. ${plain(d.dropKindWhy)}`.trim());
-      if (d?.lastEdit) notes.push(`The page was last edited on ${longDate(d.lastEdit)}, inside these dates.`);
+      // The page's edits inside these dates, in the words of the one function for a page's edits
+      // (model.mjs editNoteIn). lastEdit, a deliberate edit's date, is the older shape of the same.
+      if (d?.editNote) notes.push(plain(d.editNote));
+      else if (d?.lastEdit) notes.push(`The page was last edited on ${longDate(d.lastEdit)}, inside these dates.`);
       if (d?.updates?.length)
         notes.push(
           `Google's ${updatesText(d.updates)} fell inside these dates, so read this drop with care. That does not show the update caused it.`
@@ -503,6 +514,87 @@ export function dueSentence(due = []) {
   return `${head} ${which} another change in the same 28 days, so ${c.overlapping === 1 ? 'that verdict' : 'those verdicts'} cannot be read as the result of one edit.`;
 }
 
+// Whether another edit or publish of `page` on another day lands within 28 days either side of
+// `changeDate`, the way change-log flags an overlap (scripts/lib/change-log-core.mjs flagOverlaps).
+// "So far": a later edit can still overlap a change that is waiting. edits: [{page, date, kind}].
+export function overlapsSoFar(page, changeDate, edits = []) {
+  return (edits ?? []).some(
+    (e) =>
+      e?.page === page &&
+      e.date &&
+      e.date !== changeDate &&
+      (e.kind === 'edit' || e.kind === 'publish') &&
+      Math.abs(daysBetween(changeDate, e.date)) <= 28
+  );
+}
+
+const dueWord = (n) => (n === 1 ? '1 due change overlaps another edit' : `${n} due changes overlap other edits`);
+
+// The one reading of the changes waiting for a verdict. Every place that talks about verdicts (the
+// week's status line and verdict card, the Next verdict tile, Did it work's counts and the sentence
+// beside Judge now, the Ask digest) reads this, so they say one thing.
+//   due      change-log entries that finished the 28 day wait ({date, overlapping})
+//   through  the last day the Search Console data reaches
+//   pending  [{page, changeDate, judgeFrom}] changes still inside their wait
+//   edits    every known edit ([{page, date, kind}]), for "no other edit overlaps it so far"
+// Returns {readable, unreadable, waitingForData, waitThrough, nextReadableDate, next, unreadableText,
+// judgeText, statusLine}:
+//   readable          due, the data covers its 28 days after, and no other edit overlaps it
+//   unreadable        due and data ready, but another edit overlaps it, so it cannot be read
+//   waitingForData    due, but the data does not cover its 28 days after yet
+//   nextReadableDate  today when readable > 0; else the day the data covers a due change no edit
+//                     overlaps; else the earliest pending change no other edit overlaps so far; else null
+//   next              {date, kind: 'now' | 'data' | 'pending', pages} behind that date, or null
+export function verdictStateOf({ due = [], through = null, pending = [], edits = [], today } = {}) {
+  const { ready, waiting, waitThrough } = splitDue(due, through);
+  const readable = ready.filter((d) => !d.overlapping).length;
+  const unreadable = ready.length - readable;
+  const cleanWaiting = waiting.filter((d) => !d.overlapping);
+  let next = null;
+  if (readable) next = { date: today, kind: 'now', pages: [] };
+  else if (cleanWaiting.length) {
+    const date = cleanWaiting.map((d) => addDays(d.date ?? d.changeDate, 28)).sort()[0];
+    next = { date, kind: 'data', pages: cleanWaiting.map((d) => d.url ?? d.page ?? d.slug).filter(Boolean) };
+  } else {
+    const open = (pending ?? [])
+      .filter((p) => p?.judgeFrom && p.judgeFrom >= today && !overlapsSoFar(p.page, p.changeDate, edits))
+      .sort((a, b) => a.judgeFrom.localeCompare(b.judgeFrom));
+    if (open.length) {
+      const date = open[0].judgeFrom;
+      next = {
+        date,
+        kind: 'pending',
+        pages: [...new Set(open.filter((p) => p.judgeFrom === date).map((p) => p.page))],
+      };
+    }
+  }
+  const unreadableText = unreadable ? `${dueWord(unreadable)} and cannot be read` : null;
+  const them = unreadable === 1 ? 'it' : 'them';
+  const those = unreadable === 1 ? 'that one' : `those ${unreadable}`;
+  const judgeText = readable
+    ? `It will work out a verdict for the ${count(readable, 'change that can be read', 'changes that can be read')}${
+        unreadable ? ` and mark the ${count(unreadable, 'other', 'others')} as cannot be read` : ''
+      }. Nothing is saved until you press Save these verdicts.`
+    : unreadable
+      ? `It will mark ${those} as cannot be read and clear ${them} from this list. Nothing is saved until you press Save these verdicts.`
+      : null;
+  const statusLine =
+    !readable && unreadable
+      ? `${unreadableText}, so there is nothing to learn from ${them}. To clear ${them}, open Did it work, press Judge now, then Save these verdicts.`
+      : null;
+  return {
+    readable,
+    unreadable,
+    waitingForData: waiting.length,
+    waitThrough,
+    nextReadableDate: next?.date ?? null,
+    next,
+    unreadableText,
+    judgeText,
+    statusLine,
+  };
+}
+
 // The verdict card: only when at least one page change is ready to judge now (Search Console data
 // covers its 28 days after). How many page changes from how many commits, and how many more wait for
 // data. Otherwise null: the Next verdict tile carries the date. A verdict card reports, so it has no
@@ -510,7 +602,7 @@ export function dueSentence(due = []) {
 function verdictCard(due, through = null) {
   const { ready, waiting: short, waitThrough } = splitDue(due, through);
   // Judging is worth a place in the week only when at least one ready change can be read: a change
-  // that another edit overlaps reads "cannot be read" (see verdictStatusOf for that case).
+  // that another edit overlaps reads "cannot be read" (see verdictStateOf for that case).
   if (!ready.some((d) => !d.overlapping)) return null;
   const waitLine = short.length
     ? `${short.length === 1 ? '1 more is' : `${short.length} more are`} waiting for Search Console data through ${longDate(waitThrough)}.`
@@ -533,12 +625,10 @@ function verdictCard(due, through = null) {
 }
 
 // The line the week prints when changes are due but none can be read, so there is no verdict card:
-// nothing can be learned from judging them, they only need closing. Null otherwise.
+// nothing can be learned from judging them, they only need clearing. Null otherwise. The words are
+// verdictStateOf's own, so the week, the Next verdict tile and Did it work say the same.
 export function verdictStatusOf(due = [], through = null) {
-  const { ready } = splitDue(due, through);
-  if (!ready.length || ready.some((d) => !d.overlapping)) return null;
-  const n = ready.length;
-  return `${count(n, 'past page change is', 'past page changes are')} due for a verdict, but ${n === 1 ? 'it overlaps' : 'each one overlaps'} another edit in the same 28 days, so ${n === 1 ? 'it' : 'none'} can be read as the result of one edit. There is nothing to learn from ${n === 1 ? 'it' : 'them'}: close ${n === 1 ? 'it' : 'them'} on Did it work when convenient.`;
+  return verdictStateOf({ due, through }).statusLine;
 }
 
 // How long after asking Google to index a page the desk waits before raising it again.
@@ -698,7 +788,7 @@ export const WHY = {
   pinned: 'You pinned it for this week, and its page can be edited now.',
   planRow: 'It is the first open page improvement in your plan, and its page can be edited now.',
   bestEdit: (measured) => `It is the best page edit that can go in this week: ${firstSentence(measured)}`,
-  verdict: (n) => `${n === 1 ? 'A past change is' : `${n} past changes are`} ready to judge now.`,
+  verdict: (n) => `${n === 1 ? 'A past change can' : `${n} past changes can`} be read now.`,
   index: (n) =>
     `${n === 1 ? 'This page already has' : 'These pages already have'} enough links, so asking Google is the step left, and it is not a page edit.`,
   links: "It is the best ranked page that needs links, and adding a link does not count as this week's page edit.",
@@ -877,7 +967,7 @@ export function proposeTop5({
 
   // 4. A verdict card, only when a change is ready to judge now.
   const v = verdictCard(due, through);
-  if (v && open(v.id)) add(v, WHY.verdict(splitDue(due, through).ready.length));
+  if (v && open(v.id)) add(v, WHY.verdict(verdictStateOf({ due, through, today }).readable));
 
   // 5. Tasks that are not page edits, best first.
   const tasks = [];

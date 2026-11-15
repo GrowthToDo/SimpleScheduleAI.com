@@ -609,7 +609,7 @@ test('a verdict card needs a change that can be read; otherwise the week says so
   assert.ok(!none.some((c) => c.id === 'verdict-due'), 'nothing to learn, so no card');
   assert.match(
     week.verdictStatusOf(overlapped, through),
-    /^2 past page changes are due for a verdict, but each one overlaps another edit in the same 28 days, so none can be read/
+    /^2 due changes overlap other edits and cannot be read, so there is nothing to learn from them\. To clear them, open Did it work, press Judge now, then Save these verdicts\.$/
   );
   const readable = [...overlapped, { date: '2026-10-03', commits: [{ hash: 'a3' }], overlapping: false }];
   assert.ok(week.proposeTop5({ plan: null, due: readable, today: TODAY, through }).some((c) => c.id === 'verdict-due'));
