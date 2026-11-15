@@ -392,7 +392,7 @@ test('report: October against September, per day, totals as totals; the searches
   assert.equal(clicks.change, 33.3);
   assert.equal(imps.against, "per day, against September's 30 days");
   assert.match(imps.note, /100 a day, against 90 a day from 1 September/);
-  assert.equal(rate.valueText, '4%');
+  assert.equal(rate.valueText, '4.0%');
   assert.equal(rate.change, 0.7);
   // Like for like over alpha, beta and gamma (delta has no September place).
   assert.equal(pos.value, 8.7);
@@ -709,4 +709,24 @@ test('page: deliberate edits are listed one line a day', async () => {
     ]),
     ['19 October (2 pages): /blog/a, /blog/b', '16 October: /blog/c']
   );
+});
+
+test('the riser and faller are the biggest moves in views a day, not in percent', async () => {
+  const { pageMoversForTest } = await import('../lib/api/ext/month.mjs');
+  const win = { cur: { days: 31 }, prev: { days: 30 } };
+  const prev = [
+    { page: '/blog/tiny', impressions: 21 },
+    { page: '/blog/big-fall', impressions: 900 },
+    { page: '/blog/big-rise', impressions: 600 },
+    { page: '/blog/tiny-rise', impressions: 20 },
+  ];
+  const cur = [
+    { page: '/blog/big-fall', impressions: 500 },
+    { page: '/blog/big-rise', impressions: 1500 },
+    { page: '/blog/tiny-rise', impressions: 300 },
+  ];
+  const m = pageMoversForTest(cur, prev, win);
+  // /blog/tiny fell 100% (21 to 0) and /blog/tiny-rise rose most in percent, but the views say otherwise.
+  assert.equal(m.faller.page, '/blog/big-fall');
+  assert.equal(m.riser.page, '/blog/big-rise');
 });

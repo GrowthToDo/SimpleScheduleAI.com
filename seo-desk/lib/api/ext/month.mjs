@@ -47,6 +47,10 @@ const SUMMARY_MAX = 5;
 
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 const perDay = (total, days) => (days > 0 ? round1(total / days) : null);
+// A per-day figure as words: one decimal while it is small, a whole number with separators from 100.
+const dayText = (v) => (v === null || v === undefined ? '' : v >= 100 ? n0(Math.round(v)) : String(v));
+// A click rate as words, always with one decimal so 1.0% and 0.7% read alike.
+const rateText = (rate) => `${(Math.round(rate * 1000) / 10).toFixed(1)}%`;
 const pctWords = (p) => (p === null ? null : `${p > 0 ? '+' : ''}${p}% per day`);
 const placeWords = (v) => (v === null || v === undefined ? 'no place' : Number(v).toFixed(1));
 
@@ -145,7 +149,7 @@ function countTile(key, label, site, win, comparable, field) {
       ? 'The desk holds no daily numbers for the month before, so there is nothing to compare with.'
       : change === null
         ? `Not enough data yet for a percentage: ${n0(before)} in ${win.prev.text}, and a change needs at least ${THRESHOLDS.PCT_MIN_BASE}.`
-        : `${n0(total)} in ${plural(win.cur.days, 'day', 'days')} is ${a} a day, against ${b} a day from ${win.prev.text} (${n0(before)} in ${plural(win.prev.days, 'day', 'days')}).`;
+        : `${n0(total)} in ${plural(win.cur.days, 'day', 'days')} is ${dayText(a)} a day, against ${dayText(b)} a day from ${win.prev.text} (${n0(before)} in ${plural(win.prev.days, 'day', 'days')}).`;
   return {
     key,
     label,
@@ -171,14 +175,14 @@ function rateTile(site, win, comparable) {
     key: 'clickRate',
     label: 'Click rate',
     value: rate,
-    valueText: rate === null ? null : `${round1(rate * 100)}%`,
+    valueText: rate === null ? null : rateText(rate),
     change: rate !== null && prevRate !== null ? round1((c / i - pc / pi) * 100) : null,
     changeKind: 'points',
     against: rate !== null && prevRate !== null ? `against ${win.prev.text}` : null,
     note:
       rate === null
         ? `Not enough data yet: a click rate needs at least ${n0(CLICK_RATE_MIN_IMPRESSIONS)} impressions, and this month had ${n0(i)}.`
-        : `Clicks divided by times shown, for the whole site.${prevRate === null ? '' : ` ${round1(prevRate * 100)}% in ${win.prev.text}.`}`,
+        : `Clicks divided by times shown, for the whole site.${prevRate === null ? '' : ` ${rateText(prevRate)} in ${win.prev.text}.`}`,
   };
 }
 
@@ -224,7 +228,9 @@ function topRows(cur, prev, win, comparable, { key, sortBy }) {
     });
 }
 
-// The biggest rise and fall in per-day times shown among pages shown at least 20 times the month before.
+// The biggest rise and fall in times shown per day, measured in views and not in percent, among pages
+// shown at least 20 times the month before: a page that went from 21 views to none is a 100% fall but
+// tells the reader nothing, while a page that lost a few hundred views does.
 function pageMovers(cur, prev, win) {
   if (!cur || !prev) return { riser: null, faller: null };
   const now = new Map(cur.map((r) => [r.page, r]));
@@ -237,15 +243,19 @@ function pageMovers(cur, prev, win) {
         before: p.impressions,
         after: c,
         change: perDayChange(c, win.cur.days, p.impressions, win.prev.days),
+        gain: c / win.cur.days - p.impressions / win.prev.days,
       };
     })
     .filter((x) => x.change !== null);
   const riser =
-    list.filter((x) => x.change > 0).sort((a, b) => b.change - a.change || a.page.localeCompare(b.page))[0] ?? null;
+    list.filter((x) => x.gain > 0).sort((a, b) => b.gain - a.gain || a.page.localeCompare(b.page))[0] ?? null;
   const faller =
-    list.filter((x) => x.change < 0).sort((a, b) => a.change - b.change || a.page.localeCompare(b.page))[0] ?? null;
+    list.filter((x) => x.gain < 0).sort((a, b) => a.gain - b.gain || a.page.localeCompare(b.page))[0] ?? null;
   return { riser, faller };
 }
+
+// Exported for its test only.
+export const pageMoversForTest = pageMovers;
 
 function targetsBlock(compare, searchError) {
   if (!compare)
@@ -380,7 +390,7 @@ function whatChanged({ win, tiles, movers, targets, done, comparable }) {
     let s = `Google showed the site ${n0(imps.value)} times from ${win.cur.text} and sent ${plural(clicks.value, 'click', 'clicks')}`;
     s +=
       comparable && imps.change !== null
-        ? `: ${imps.perDay} times a day, against ${imps.prevPerDay} a day from ${win.prev.text} (${pctWords(imps.change)}).`
+        ? `: ${dayText(imps.perDay)} times a day, against ${dayText(imps.prevPerDay)} a day from ${win.prev.text} (${pctWords(imps.change)}).`
         : '.';
     out.push(s);
   }
