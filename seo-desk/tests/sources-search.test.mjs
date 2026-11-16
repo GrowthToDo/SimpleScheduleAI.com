@@ -11,7 +11,7 @@ const fx = (name) => JSON.parse(fs.readFileSync(path.join(HERE, 'fixtures', name
 process.env.SEO_DESK_DATA = fs.mkdtempSync(path.join(os.tmpdir(), 'seo-desk-search-'));
 
 const { normGscRows, normIndex, pullGsc } = await import('../lib/sources/gsc.mjs');
-const { pullIndex, INDEX_PER_RUN, pickPages } = await import('../lib/sources/index.mjs');
+const { pullIndex, INDEX_PER_RUN, INDEX_BATCH, pickPages } = await import('../lib/sources/index.mjs');
 const { parseBingDate, normBingDaily, normBingQueries, normBingPages, normBingLinkTotal, pullBing } = await import(
   '../lib/sources/bing.mjs'
 );
@@ -297,10 +297,10 @@ test('index checks: a quota error keeps what was checked, and nothing checked is
   const snap = await pullIndex({
     today: '2026-11-10',
     livePages: live(30),
-    session: fakeGsc({ failInspectAfter: 10 }),
+    session: fakeGsc({ failInspectAfter: 2 * INDEX_BATCH }),
   });
   assert.equal(snap.ok, true);
-  assert.equal(snap.data.checkedThisRun, 10);
+  assert.equal(snap.data.checkedThisRun, 2 * INDEX_BATCH);
   assert.match(snap.error, /quota/i);
   const none = await pullIndex({ today: '2026-11-10', livePages: live(30), session: fakeGsc({ failInspectAfter: 0 }) });
   assert.equal(none.ok, false);
@@ -332,7 +332,7 @@ test('index checks: an abort stops before the next batch and a sign-in error pro
   };
   const snap = await pullIndex({ today: '2026-11-10', livePages: live(40), session: s, signal: ctrl.signal });
   assert.equal(s.calls.length, 1);
-  assert.equal(snap.data.checkedThisRun, 10);
+  assert.equal(snap.data.checkedThisRun, INDEX_BATCH);
   const bad = fakeGsc();
   bad.call = async () => {
     throw new McpError('401 unauthorized');

@@ -32,7 +32,17 @@ const SOURCE_NAME = {
   clarity: 'Clarity',
   local: 'The repo files',
   dfs: 'DataForSEO',
+  index: 'The "Is each page on Google?" check',
 };
+
+// The plain reason a source failed, without the technical error text (Settings keeps that).
+function failedText(s, name) {
+  const err = String(s.error ?? '');
+  if (s.source === 'index' && /timed out/i.test(err))
+    return `${name} asks Search Console about each page. Search Console was too slow to answer, so the check stopped before any page got an answer. The search numbers from Search Console are not affected: they refreshed normally.`;
+  if (/timed out/i.test(err)) return `${name} was too slow to answer, so the last pull stopped.`;
+  return plain(err) || 'The last pull failed.';
+}
 
 const hash = (s) => crypto.createHash('sha1').update(s).digest('hex').slice(0, 10);
 const count = (n, one, many) => `${n} ${n === 1 ? one : many}`;
@@ -207,11 +217,17 @@ function failedSources(sources) {
         kind: 'source-failed',
         page: null,
         isPageEdit: false,
-        title: signIn ? `${name} needs you to sign in again` : `${name} did not refresh`,
-        measured: plain(s.error) || (signIn ? 'The sign in has expired.' : 'The last pull failed.'),
+        title: signIn
+          ? `${name} needs you to sign in again`
+          : s.source === 'index'
+            ? `${name} did not run`
+            : `${name} did not refresh`,
+        measured: signIn ? plain(s.error) || 'The sign in has expired.' : failedText(s, name),
         fix: signIn
           ? `Sign in to ${name} again, then press Refresh now.`
-          : 'Press Refresh now. If it fails again, the Settings page shows the error.',
+          : 'Nothing to do yourself. The desk tries again at the next morning refresh, or press Refresh now. If it fails again, the Settings page shows the full error.',
+        test: 'Its dot at the top of the page turns green after the next refresh.',
+        hypothesis: false,
       };
     });
 }
@@ -683,6 +699,7 @@ export function worryCard(w, frozen, today, opts = {}) {
     measured: plain(w.measured),
     action: plain(w.fix),
     test: plain(w.test) || 'Check the same number again after the next daily refresh.',
+    ...(w.hypothesis === false ? { hypothesis: false } : {}),
     page: w.page ?? null,
     isPageEdit: Boolean(w.isPageEdit),
     source: 'worry',

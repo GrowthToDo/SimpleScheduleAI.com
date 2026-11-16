@@ -654,3 +654,25 @@ test('a page Google was already asked to index in the last 28 days is a line, no
       .some((c) => /^ask-to-index:/.test(c.id))
   );
 });
+
+test('a failed index check reads plainly: what stopped, that search numbers are fine, nothing to do, no hypothesis', () => {
+  const [w] = week.worries({
+    sources: [
+      {
+        source: 'index',
+        status: 'failed',
+        error:
+          'Search Console stopped answering after 0 pages: google-search-console tools/call timed out after 180000ms.',
+      },
+    ],
+    today: TODAY,
+  });
+  assert.equal(w.title, 'The "Is each page on Google?" check did not run');
+  assert.match(w.measured, /too slow to answer/);
+  assert.match(w.measured, /search numbers from Search Console are not affected/);
+  assert.ok(!/180000ms|tools\/call/.test(w.measured), 'no technical error text');
+  assert.match(w.fix, /^Nothing to do yourself\./);
+  const card = week.worryCard(w, new Map(), TODAY);
+  assert.equal(card.hypothesis, false);
+  assert.match(card.test, /dot at the top of the page turns green/);
+});

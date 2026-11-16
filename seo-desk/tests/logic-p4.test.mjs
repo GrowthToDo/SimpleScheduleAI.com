@@ -96,8 +96,9 @@ test('W2: data through is the day of the oldest answer, and a stopped run keeps 
     return call(tool, args);
   };
   const out = await pullIndex({ today: '2026-11-10', livePages: live, prev, session: s });
-  assert.equal(out.data.checkedThisRun, 10);
-  assert.match(out.error, /stopped answering after 10 pages/);
+  const { INDEX_BATCH } = await import('../lib/sources/index.mjs');
+  assert.equal(out.data.checkedThisRun, INDEX_BATCH);
+  assert.match(out.error, new RegExp(`stopped answering after ${INDEX_BATCH} pages`));
   assert.equal(out.through, '2026-11-03', 'never "through today" while older answers are shown');
 });
 

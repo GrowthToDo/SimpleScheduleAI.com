@@ -12,7 +12,10 @@ import { GSC_SITE_URL, normIndex } from './gsc.mjs';
 import { plainError } from '../text.mjs';
 
 export const INDEX_PER_RUN = 40;
-const CHUNK = 10;
+// Pages per Search Console call. Ten took 73 seconds on a good day (16 November 2026) and ran past the
+// call's 3 minute limit on two slow mornings, so a run checked nothing. Three keep each call well inside.
+export const INDEX_BATCH = 3;
+const CHUNK = INDEX_BATCH;
 // The engine stops the source at 15 minutes; the puller stops starting new batches a little
 // before that, so what it checked is saved instead of thrown away.
 export const INDEX_DEADLINE_MS = 12 * 60 * 1000;
