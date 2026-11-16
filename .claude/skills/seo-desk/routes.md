@@ -24,7 +24,7 @@ repo files were read before the desk read git: then a page edited lately may be 
 (the next ten, the ones whose page can be edited now first; each carries `held`), `counts {openOpportunities, worries {total, needLook, waiting}, watching}`, `blockedOnYou[]`,
 `locked`, `pastWeeks[]`. `top5[]` is the week's priorities, most important first, and holds at most
 `planSize` cards: a ceiling, never padded, so fewer is normal. Order: broken things (a dropped page, a
-failed source, a keyword file problem, a Bing crawl problem, a competitor change, or one card for the
+failed source other than the news feeds, a keyword file problem, a Bing crawl problem, a competitor change, or one card for the
 technical audit's critical and high findings), two at most; the plan's next post; the Newsroom
 pieces he picked on the Newsroom page (two at most; `slot` newsroom, `typeLabel` "Newsroom piece",
 `source` news, `isPageEdit` false and `eligibility` null, so they never use the week's edit; `why` is
