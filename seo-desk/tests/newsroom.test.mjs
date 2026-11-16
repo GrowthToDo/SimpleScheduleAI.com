@@ -918,3 +918,27 @@ test('8b page: when Claude was asked, how long it took, and the would-drop line'
   assert.equal(viewMod.dropLine('Topic 1: x\n\nWould drop: the chef story.'), 'Would drop: the chef story.');
   assert.equal(viewMod.dropLine('no line'), null);
 });
+
+test('a grouped story leads with its Texas headline when it has one', () => {
+  const topics = news.buildTopics(P8B);
+  const items = [
+    item('Hill State to receive $202 million in second-year Rural Health Transformation Program funding', {
+      publisher: 'A',
+      date: '2026-11-14',
+    }),
+    item('Admin unveils $10B in second-year rural health awards', { publisher: 'B', date: '2026-11-13' }),
+    item('Rural health awards: $70 per resident in Texas, $6,390 in Island', { publisher: 'C', date: '2026-11-12' }),
+  ];
+  const [card] = news.storyCards(items, { today: '2026-11-16', topics });
+  assert.equal(card.outlets.length, 3);
+  assert.match(card.title, /Texas/);
+  // A single story keeps its own headline whatever it says.
+  const [one] = news.storyCards(
+    [item('Hill State rural hospital cuts nurse staffing', { publisher: 'A', date: '2026-11-14' })],
+    {
+      today: '2026-11-16',
+      topics,
+    }
+  );
+  assert.equal(one.title, 'Hill State rural hospital cuts nurse staffing');
+});

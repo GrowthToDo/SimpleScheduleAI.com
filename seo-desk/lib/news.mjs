@@ -648,7 +648,8 @@ export const TO_CHECK = [
 ];
 
 const titleOf = (group) => {
-  // The title that shares the most words with the others; a trade press title before a news search one.
+  // A Texas headline first; then the title that shares the most words with the others; a trade press
+  // title before a news search one.
   const ws = group.map((it) => new Set(storyWords(it.title).all));
   let best = 0;
   let bestScore = -1;
@@ -658,6 +659,9 @@ const titleOf = (group) => {
       if (i !== j) for (const x of ws[i]) if (w.has(x)) s++;
     });
     if (!it.google) s += 0.5;
+    // Texas is the founder's market: when a grouped story has a Texas headline, the card leads with it
+    // (the Rural Health Transformation awards read as a West Virginia story otherwise).
+    if (group.length > 1 && /\btexas\b/i.test(String(it.title))) s += 1000;
     // A social post or a long teaser pasted in as a title is never the card's title when another will do.
     if (String(it.title).length > 140 || /^facebook$|^x$|^instagram$/i.test(String(it.publisher ?? ''))) s -= 1000;
     if (s > bestScore) {
