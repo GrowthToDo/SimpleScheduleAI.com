@@ -38,7 +38,7 @@ const MIN_STEM = 4;
 // "nurse" and "nurses" give "nurs". At most one of ing, es, s comes off, then a final e, and only
 // while at least four letters stay, so short words such as "rate" or "time" keep their form.
 // Numbers are never changed.
-function foldWord(w) {
+export function foldWord(w) {
   if (/^\d+$/.test(w)) return w;
   let out = w;
   for (const end of ['ing', 'es', 's']) {

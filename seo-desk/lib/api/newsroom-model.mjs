@@ -4,11 +4,51 @@
 // Drop and Pick (state/items.json, meta.story), and the repo's own posts, plan and topic log (the local
 // snapshot). Reads only; nothing here writes a file.
 
+import fs from 'node:fs';
+import path from 'node:path';
 import { readJson } from '../store.mjs';
 import { mondayOf } from '../dates.mjs';
 import { longDate, plain } from '../text.mjs';
-import { storyCards, storyCard, matchHave, newsBrief, byScore, TO_CHECK, PAID_LABEL } from '../news.mjs';
-import { memo, itemOf, itemState } from './model.mjs';
+import {
+  storyCards,
+  storyCard,
+  matchHave,
+  newsBrief,
+  byScore,
+  buildTopics,
+  parseTopicLog,
+  TO_CHECK,
+  PAID_LABEL,
+} from '../news.mjs';
+import { readContent } from '../sources/local.mjs';
+import { memo, itemOf, itemState, repoRoot } from './model.mjs';
+
+// What the site has already written and decided: from the local snapshot, or, when that snapshot was
+// read before the desk kept these (a desk just updated), straight from the repo files, so the matching
+// never runs against nothing.
+export function haveOf(model) {
+  return memo(model, 'newsroom:have', () => {
+    const local = model.data.local ?? {};
+    let content = local.content;
+    let log = local.newsroomLog;
+    if (!Array.isArray(content)) {
+      try {
+        content = readContent(repoRoot(), model.today);
+      } catch {
+        content = [];
+      }
+    }
+    if (!Array.isArray(log)) {
+      try {
+        log = parseTopicLog(fs.readFileSync(path.join(repoRoot(), 'docs/seo/articles-trendjacking-plan.md'), 'utf8'));
+      } catch {
+        log = [];
+      }
+    }
+    const have = { content, registry: local.registry ?? [], log, plan: local.plan ?? null, today: model.today };
+    return { ...have, topics: buildTopics(have) };
+  });
+}
 
 export const PASTED_FILE = 'state/news-pasted.json';
 export const PASTED_MAX = 50;
@@ -127,13 +167,7 @@ export function newsroomCards(model) {
   return memo(model, 'newsroom', () => {
     const today = model.today;
     const weekOf = mondayOf(today);
-    const local = model.data.local ?? {};
-    const have = {
-      content: local.content ?? [],
-      registry: local.registry ?? [],
-      log: local.newsroomLog ?? [],
-      plan: local.plan ?? null,
-    };
+    const have = haveOf(model);
 
     // Stories the founder already acted on, by id, and each of their links, so a story keeps its id (and
     // so its Hold, Drop or Pick) when a new outlet joins it or its first outlet ages out of the window.
@@ -145,7 +179,7 @@ export function newsroomCards(model) {
     const add = (c) => {
       if (!byId.has(c.id)) byId.set(c.id, c);
     };
-    for (const c of storyCards(model.data.news?.items ?? [], { today })) {
+    for (const c of storyCards(model.data.news?.items ?? [], { today, topics: have.topics })) {
       const known = c.outlets.map((o) => idOfLink.get(normUrl(o.url))).find(Boolean);
       add(known && !byId.has(known) ? { ...c, id: known } : c);
     }

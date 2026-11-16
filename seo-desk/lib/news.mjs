@@ -11,7 +11,8 @@
 //   newsBrief(card)                  the "Copy brief for Claude" text
 
 import crypto from 'node:crypto';
-import { tokens, wordsOf, stem } from './topics.mjs';
+import { wordsOf, STOP_WORDS } from './topics.mjs';
+import { foldWord } from './targets.mjs';
 import { addDays, daysBetween } from './dates.mjs';
 import { longDate, plain } from './text.mjs';
 
@@ -197,6 +198,8 @@ const DOMAIN = new Set([
   'shortage',
   'strike',
   'worker',
+  'union',
+  'contract',
 ]);
 
 // Everyday words a headline and a page title share by chance. They never make two stories one, and
@@ -251,16 +254,58 @@ const GENERIC = new Set(
     'other',
     'million',
     'billion',
+    'program',
+    'fund',
+    'funding',
+    'new',
   ].map((w) => w.toLowerCase())
 );
 
-const meaningful = (text) => tokens(text).filter((w) => !NEWS_STOP.has(w));
+// One word folded to the form its relatives share: foldWord (lib/targets.mjs: "awards" and "award",
+// "expands" and "expand", "nurses" and "nurse") and three endings it leaves alone, so "expansion" meets
+// "expand", "extension" meets "extend" and "transformation" meets "transform".
+export function fold(word) {
+  let w = foldWord(String(word ?? '').toLowerCase());
+  if (/ansion$/.test(w)) w = w.replace(/ansion$/, 'and');
+  else if (/ension$/.test(w)) w = w.replace(/ension$/, 'end');
+  else if (/ation$/.test(w) && w.length - 5 >= 5) w = w.slice(0, -5);
+  return w;
+}
 
-// {all, distinctive}: the meaningful words of a text, and those not in DOMAIN.
+const FOLDED = (set) => new Set([...set].map(fold));
+const STOP = FOLDED(STOP_WORDS);
+const NEWS_STOP_F = FOLDED(NEWS_STOP);
+const DOMAIN_F = FOLDED(DOMAIN);
+const GENERIC_F = FOLDED(GENERIC);
+
+// The meaningful words of a text in order, folded, repeats kept (for phrases).
+function sequence(text) {
+  const out = [];
+  for (const raw of wordsOf(text)) {
+    if (STOP_WORDS.has(raw) || NEWS_STOP.has(raw)) continue;
+    if ([...raw].length < 2 && !/^\p{N}$/u.test(raw)) continue;
+    const w = fold(raw);
+    if (STOP.has(w) || NEWS_STOP_F.has(w)) continue;
+    out.push(w);
+  }
+  return out;
+}
+
+const meaningful = (text) => [...new Set(sequence(text))];
+const isDistinctive = (w) => !DOMAIN_F.has(w) && !GENERIC_F.has(w) && !/\p{N}/u.test(w);
+
+// {all, distinctive}: the meaningful words of a text (folded), and those not in DOMAIN or GENERIC.
 export function storyWords(text) {
   const all = meaningful(text);
   // A word with a digit in it ("2027", "12", "$8M") is never a distinctive word: it matches by chance.
-  return { all, distinctive: all.filter((w) => !DOMAIN.has(w) && !GENERIC.has(w) && !/\p{N}/u.test(w)) };
+  return { all, distinctive: all.filter(isDistinctive) };
+}
+
+// The way each folded word was written in `text`, to show matched words as the story wrote them.
+function surfaceOf(text) {
+  const m = new Map();
+  for (const w of wordsOf(text)) if (!m.has(fold(w))) m.set(fold(w), w);
+  return m;
 }
 
 const sharedOf = (a, b) => {
@@ -402,20 +447,117 @@ export function isPaid(it) {
 const hash = (s) => crypto.createHash('sha1').update(s).digest('hex').slice(0, 12);
 const pluralOf = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
-// Items that are the same story (sameStory, joined through any member), each group oldest first.
-// The same link twice is one item.
-export function groupStories(items) {
+// ---------------------------------------------------------------- topic phrases
+
+// Names the news uses for a topic our pages call something else. Each alias (its words, in any order)
+// stands for the topic phrase it names. Kept in one list so it is easy to change.
+export const TOPIC_ALIASES = [
+  { topic: 'rural health transformation', words: ['rural', 'health', 'awards'] },
+  { topic: 'rural health transformation', words: ['rural', 'health', 'fund'] },
+  { topic: 'rural health transformation', words: ['rural', 'health', '10b'] },
+  { topic: 'rural health transformation', words: ['rhtp'] },
+];
+
+// A phrase our pages share with more pages than this is a theme of the whole site, not a topic.
+export const TOPIC_MAX_PAGES = 4;
+// Stories sharing a topic phrase are one card when they ran within this many days of each other.
+export const TOPIC_GROUP_DAYS = 10;
+// A topic made only of these words matches a page ("Close to") but never makes two stories one card:
+// "Texas Medicaid" alone covers a backlog, a lawsuit and an expansion.
+const BROAD = new Set([
+  ...DOMAIN_F,
+  ...[
+    'texas',
+    'medicaid',
+    'medicare',
+    'cms',
+    'state',
+    'federal',
+    'rule',
+    'law',
+    'bill',
+    'policy',
+    'county',
+    'hospital',
+  ].map(fold),
+]);
+
+const keyOf = (words) => [...new Set(words)].sort().join(' ');
+
+// The topic phrases of our own pages and topic log: every run of two or three meaningful words in a
+// title or a page address, folded and taken in any order, that has a distinctive word, no number, and
+// is on at most TOPIC_MAX_PAGES pages; plus the aliases. Map<key, {key, words, aliases, pages, logs,
+// groups}>: pages are page paths, logs are log entry titles, groups says whether it can join stories.
+export function buildTopics({ content = [], log = [] } = {}) {
+  const found = new Map();
+  const add = (words, src, kind) => {
+    const uniq = [...new Set(words)];
+    if (uniq.length < 2 || uniq.some((w) => /\p{N}/u.test(w)) || !uniq.some(isDistinctive)) return;
+    const key = keyOf(uniq);
+    const t = found.get(key) ?? { key, words: uniq.sort(), aliases: [], pages: new Set(), logs: new Set() };
+    t[kind].add(src);
+    found.set(key, t);
+  };
+  const runs = (text, src, kind) => {
+    const seq = sequence(text);
+    for (let i = 0; i < seq.length; i++) {
+      if (i + 1 < seq.length) add(seq.slice(i, i + 2), src, kind);
+      if (i + 2 < seq.length) add(seq.slice(i, i + 3), src, kind);
+    }
+  };
+  for (const c of content ?? []) {
+    runs(c.title, c.page, 'pages');
+    runs(slugWords(c.page), c.page, 'pages');
+  }
+  for (const e of log ?? []) runs(e.title, e.title, 'logs');
+  const out = new Map();
+  for (const t of found.values()) {
+    if (t.pages.size > TOPIC_MAX_PAGES) continue;
+    out.set(t.key, { ...t, groups: t.words.some((w) => !BROAD.has(w)) });
+  }
+  for (const a of TOPIC_ALIASES) {
+    const key = keyOf(sequence(a.topic));
+    const t = out.get(key) ?? {
+      key,
+      words: sequence(a.topic).sort(),
+      aliases: [],
+      pages: new Set(),
+      logs: new Set(),
+      groups: true,
+    };
+    t.aliases = [...t.aliases, [...new Set(sequence(a.words.join(' ')))]];
+    out.set(key, t);
+  }
+  return out;
+}
+
+// The topic keys a text holds: all of a topic's words, or all of one alias's words, anywhere in it.
+export function topicsIn(text, topics) {
+  if (!topics?.size) return [];
+  const have = new Set(sequence(text));
+  const all = (ws) => ws.length && ws.every((w) => have.has(w));
+  return [...topics.values()].filter((t) => all(t.words) || t.aliases.some(all)).map((t) => t.key);
+}
+
+// Items that are the same story, each group oldest first: their titles overlap strongly (sameStory),
+// or they share one of our topic phrases that can join stories and ran within TOPIC_GROUP_DAYS of each
+// other; joined through any member. The same link twice is one item.
+export function groupStories(items, { topics = null } = {}) {
   const seen = new Set();
   const list = [];
   for (const it of items ?? []) {
     if (!it?.link || seen.has(it.link)) continue;
     seen.add(it.link);
-    list.push({ it, w: storyWords(it.title) });
+    list.push({ it, w: storyWords(it.title), t: topics ? topicsIn(it.title, topics) : [] });
   }
   const parent = list.map((_, i) => i);
   const find = (i) => (parent[i] === i ? i : (parent[i] = find(parent[i])));
+  const near = (a, b) => a.it.date && b.it.date && Math.abs(daysBetween(a.it.date, b.it.date)) <= TOPIC_GROUP_DAYS;
+  const sharesTopic = (a, b) => a.t.some((k) => topics.get(k)?.groups && b.t.includes(k));
   for (let i = 0; i < list.length; i++)
-    for (let j = i + 1; j < list.length; j++) if (sameStory(list[i].w, list[j].w)) parent[find(j)] = find(i);
+    for (let j = i + 1; j < list.length; j++)
+      if (sameStory(list[i].w, list[j].w) || (sharesTopic(list[i], list[j]) && near(list[i], list[j])))
+        parent[find(j)] = find(i);
   const groups = new Map();
   list.forEach((x, i) => {
     const r = find(i);
@@ -542,10 +684,10 @@ export const byScore = (a, b) =>
   a.title.localeCompare(b.title);
 
 // Tier 1 and 2 cards from the items of the last 14 days, best draft score first, newest first on ties.
-export function storyCards(items, { today }) {
+export function storyCards(items, { today, topics = null }) {
   const from = addDays(today, -NEWS_DAYS);
   const recent = (items ?? []).filter((it) => it?.date && it.date >= from && it.date <= today);
-  return groupStories(recent)
+  return groupStories(recent, { topics })
     .map((g) => storyCard(g, { today }))
     .filter((c) => c.tier !== 3)
     .sort(byScore);
@@ -670,7 +812,11 @@ const logText = (e) =>
 // A match is strong at three shared distinctive words and close at two. Only a strong match (or an outlet
 // link in the log) moves a card off Fresh, so a short title sharing two words never hides a story.
 export const HAVE_MATCH = { strong: 3, close: 2 };
+// A piece older than this never "covers" a story: the story can still be a new angle on it.
+export const COVERED_DAYS = 60;
 export const HAVE_MAX = 4;
+
+const topicStrength = (words) => (words.length >= 3 && words.filter(isDistinctive).length >= 2 ? 'strong' : 'close');
 
 const strengthOf = (shared) =>
   shared.length >= HAVE_MATCH.strong ? 'strong' : shared.length >= HAVE_MATCH.close ? 'close' : null;
@@ -695,23 +841,48 @@ const slugWords = (page) =>
 // /articles piece: "Covered by" when strong), post (a live /blog post: always "Close to"), log (an entry
 // of the topic log: strong, or exact when an outlet's link is in it), plan (a post the plan has not
 // written yet). have: {content: [{page, kind, title, publishDate}], registry, log, plan}.
-export function matchHave(card, { content = [], registry = [], log = [], plan = null } = {}) {
+export function matchHave(
+  card,
+  { content = [], registry = [], log = [], plan = null, topics = null, today = null } = {}
+) {
   // The card's own title only: the titles of thirty outlets together share a word with almost anything.
   const text = String(card.title ?? '');
   const mine = storyWords(text).distinctive;
   const out = [];
-  // Words are matched folded ("texas" and "texa"), and shown as the story wrote them.
-  const surface = new Map();
-  for (const w of wordsOf(text)) if (!surface.has(stem(w))) surface.set(stem(w), w);
+  // Words are matched folded ("expansion" and "expand"), and shown as the story wrote them.
+  const titles = [text, ...(card.outlets ?? []).map((o) => o.title ?? '')];
+  const surface = surfaceOf(titles.join(' '));
   const shown = (words) => words.map((w) => surface.get(w) ?? w).sort();
+  // The story's topics: in its own title, or in the titles of two of its outlets.
+  const count = new Map();
+  for (const t of titles.slice(1)) for (const k of topicsIn(t, topics)) count.set(k, (count.get(k) ?? 0) + 1);
+  const mineTopics = new Set([...topicsIn(text, topics), ...[...count].filter(([, n]) => n >= 2).map(([k]) => k)]);
+  // The longest topic a page or log entry shares with the story, and its words.
+  const topicWith = (has) => {
+    let best = null;
+    for (const k of mineTopics) {
+      const t = topics?.get(k);
+      if (t && has(t) && (!best || t.words.length > best.words.length)) best = t;
+    }
+    return best;
+  };
+  const recent = (date) => !today || !date || daysBetween(date, today) <= COVERED_DAYS;
   const keyword = new Map((registry ?? []).map((r) => [r.url, r.primaryKeyword ?? '']));
   for (const c of content ?? []) {
     const theirs = storyWords(`${c.title} ${slugWords(c.page)} ${keyword.get(c.page) ?? ''}`).distinctive;
-    const words = sharedOf(mine, theirs).sort();
-    const strength = strengthOf(words);
+    const topic = topicWith((t) => t.pages.has(c.page));
+    let words = sharedOf(mine, theirs).sort();
+    let strength = strengthOf(words);
+    if (topic) {
+      // A shared topic is close; the topic with a second distinctive word (three words in all, two of them
+      // distinctive) is strong.
+      words = [...new Set([...topic.words, ...words])];
+      strength = topicStrength(words);
+    }
     if (!strength) continue;
     const when = c.publishDate ? ` (published ${longDate(c.publishDate)})` : '';
-    const covered = c.kind === 'article' && strength === 'strong';
+    // Only a recent article covers a story: an older piece leaves room for the new angle.
+    const covered = c.kind === 'article' && strength === 'strong' && recent(c.publishDate);
     out.push({
       kind: c.kind,
       page: c.page,
@@ -720,14 +891,21 @@ export function matchHave(card, { content = [], registry = [], log = [], plan = 
       strength,
       covered,
       decided: false,
+      ...(topic ? { topic: topic.key } : {}),
+      publishDate: c.publishDate ?? null,
     });
   }
   const links = new Set((card.outlets ?? []).map((o) => normUrl(o.url)));
   for (const e of log ?? []) {
     const exact = (e.links ?? []).some((l) => links.has(normUrl(l)));
     const theirs = storyWords(e.title).distinctive;
-    const words = sharedOf(mine, theirs).sort();
-    const strength = strengthOf(words);
+    let words = sharedOf(mine, theirs).sort();
+    let strength = strengthOf(words);
+    const topic = topicWith((t) => t.logs.has(e.title));
+    if (topic) {
+      words = [...new Set([...topic.words, ...words])];
+      if (topicStrength(words) === 'strong') strength = 'strong';
+    }
     if (!exact && strength !== 'strong') continue;
     out.push({
       kind: 'log',

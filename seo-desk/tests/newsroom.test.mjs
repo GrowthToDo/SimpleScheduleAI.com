@@ -710,3 +710,142 @@ test('real-data fixes: numbers and everyday words never match, words show as wri
   const two = news.matchHave({ title: 'CMS finalizes provider enrollment changes', outlets: [] }, { log });
   assert.deepEqual(two, []);
 });
+
+// ---------------------------------------------------------------- package 8b: headlines that match
+
+const P8B = {
+  content: [
+    {
+      page: '/articles/texas-medicaid-expansion-earliest-date',
+      kind: 'article',
+      title: 'When could Texas expand Medicaid? Not before 2028',
+      publishDate: '2026-11-09',
+    },
+    {
+      page: '/articles/texas-medicaid-freeze-small-hospitals',
+      kind: 'article',
+      title: 'What the Texas Medicaid freeze means for small hospitals',
+      publishDate: '2026-09-18',
+    },
+    {
+      page: '/articles/rural-health-transformation-deadline-nurse-pay',
+      kind: 'article',
+      title: 'The Rural Health Transformation deadline and nurse pay',
+      publishDate: '2026-09-21',
+    },
+    {
+      page: '/articles/valley-rural-health-transformation-signed-contracts',
+      kind: 'article',
+      title: 'Valley signs its first Rural Health Transformation contracts',
+      publishDate: '2026-10-24',
+    },
+  ],
+};
+
+test('8b fold: expand, expands, expanding and expansion meet; award and awards; transformation', () => {
+  assert.equal(news.fold('expansion'), news.fold('expand'));
+  assert.equal(news.fold('expanding'), news.fold('expands'));
+  assert.equal(news.fold('awards'), news.fold('award'));
+  assert.equal(news.fold('transformation'), news.fold('transform'));
+  assert.equal(news.fold('texas'), news.fold('Texas'));
+});
+
+test('8b topics: phrases from our titles and addresses, the aliases, and a site-wide theme left out', () => {
+  const topics = news.buildTopics(P8B);
+  assert.ok(topics.has('expand medicaid'));
+  assert.ok(topics.has('health rural transform'));
+  assert.equal(topics.get('health rural transform').groups, true);
+  assert.equal(topics.get('medicaid texa').groups, false, 'Texas and Medicaid alone never join stories');
+  assert.deepEqual(news.topicsIn('Trump admin unveils $10B in second-year rural health awards', topics), [
+    'health rural transform',
+  ]);
+  const many = news.buildTopics({
+    content: ['a', 'b', 'c', 'd', 'e'].map((x) => ({
+      page: `/blog/winter-census-${x}`,
+      kind: 'post',
+      title: 'Winter census',
+    })),
+  });
+  assert.ok(!many.has('census winter'), 'a phrase on five pages is a theme, not a topic');
+  assert.equal(news.TOPIC_MAX_PAGES, 4);
+  assert.equal(news.TOPIC_GROUP_DAYS, 10);
+});
+
+test('8b grouping: one event under different headlines is one card, within 10 days', () => {
+  const topics = news.buildTopics(P8B);
+  const today = '2026-11-16';
+  const items = [
+    item('Hill State to receive $202 million in second-year Rural Health Transformation Program funding', {
+      publisher: 'A',
+      date: '2026-11-14',
+    }),
+    item('Admin unveils $10B in second-year rural health awards', { publisher: 'B', date: '2026-11-13' }),
+    item('Rural health awards: $70 per resident in Valley, $6,390 in Island', { publisher: 'C', date: '2026-11-12' }),
+    item('Medicaid expansion in Texas back in focus', { publisher: 'D', date: '2026-11-11' }),
+    item('Could Texas Medicaid expansion finally happen after the election?', { publisher: 'E', date: '2026-11-10' }),
+    item('Will Texas lawmakers expand Medicaid? Advocates are hopeful', { publisher: 'F', date: '2026-11-09' }),
+    item('Texas Medicaid backlog surges, leaving families waiting', { publisher: 'G', date: '2026-11-12' }),
+  ];
+  const cards = news.storyCards(items, { today, topics });
+  const of = (t) => cards.find((c) => c.outlets.some((o) => o.title.startsWith(t)));
+  assert.equal(of('Hill State').id, of('Admin unveils').id);
+  assert.equal(of('Hill State').id, of('Rural health awards').id);
+  assert.equal(of('Hill State').outlets.length, 3, 'every outlet is kept');
+  assert.equal(of('Medicaid expansion').id, of('Could Texas').id);
+  assert.equal(of('Medicaid expansion').id, of('Will Texas').id);
+  assert.notEqual(of('Texas Medicaid backlog').id, of('Medicaid expansion').id, 'a broad topic never joins stories');
+  // Too far apart in time: two cards.
+  const apart = news.storyCards(
+    [
+      item('Admin unveils second-year rural health awards', { publisher: 'B', date: '2026-11-15' }),
+      item('Hill State gets Rural Health Transformation money', { publisher: 'A', date: '2026-11-03' }),
+    ],
+    { today, topics }
+  );
+  assert.equal(apart.length, 2);
+});
+
+test('8b have: a shared topic is close; the topic and another word from a recent piece covers it', () => {
+  const topics = news.buildTopics(P8B);
+  const today = '2026-11-16';
+  const have = { ...P8B, topics, today };
+  const exp = news.matchHave(
+    { title: 'Will Texas lawmakers expand Medicaid? Advocates are hopeful', outlets: [] },
+    have
+  );
+  const line = exp.find((x) => x.page === '/articles/texas-medicaid-expansion-earliest-date');
+  assert.equal(line.covered, true, 'expand + Medicaid is the topic, Texas the second word, 9 November is recent');
+  assert.equal(line.text, 'Covered by /articles/texas-medicaid-expansion-earliest-date (published 9 November)');
+  assert.deepEqual(line.words, ['expand', 'medicaid', 'texas']);
+  const rh = news.matchHave({ title: 'Admin unveils $10B in second-year rural health awards', outlets: [] }, have);
+  const first = rh.find((x) => x.page === '/articles/valley-rural-health-transformation-signed-contracts');
+  assert.equal(
+    first.text,
+    'Close to /articles/valley-rural-health-transformation-signed-contracts (published 24 October)'
+  );
+  assert.equal(first.covered, false);
+  // An older piece never covers: 21 September is more than 60 days before 25 November.
+  const later = news.matchHave(
+    { title: 'Hill State Rural Health Transformation deadline for nurse pay', outlets: [] },
+    { ...have, today: '2026-11-25' }
+  );
+  const old = later.find((x) => x.page === '/articles/rural-health-transformation-deadline-nurse-pay');
+  assert.equal(old.covered, false);
+  assert.equal(news.COVERED_DAYS, 60);
+});
+
+test('8b grouping: a topic of nurse words (a union, a strike) never joins stories at different hospitals', () => {
+  const topics = news.buildTopics({
+    log: news.parseTopicLog(
+      '### Detection pass 2026-11-06\n\n- **DROPPED - Juniper nurses union complaint** (x). Score 0: no.\n'
+    ),
+  });
+  const cards = news.storyCards(
+    [
+      item('Quarry nurses union signs a deal', { publisher: 'A', date: '2026-11-11' }),
+      item('Oakdale nurses union vote set for Friday', { publisher: 'B', date: '2026-11-10' }),
+    ],
+    { today: '2026-11-16', topics }
+  );
+  assert.equal(cards.length, 2);
+});
