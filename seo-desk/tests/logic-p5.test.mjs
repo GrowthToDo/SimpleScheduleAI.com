@@ -676,3 +676,23 @@ test('a failed index check reads plainly: what stopped, that search numbers are 
   assert.equal(card.hypothesis, false);
   assert.match(card.test, /dot at the top of the page turns green/);
 });
+
+test('a card done this week stays in the week, shown done; one done last week does not', () => {
+  const plan = {
+    posts: [
+      { n: 1, done: true, title: 'An invented first post', keyword: 'invented one' },
+      { n: 2, done: false, title: 'An invented second post', keyword: 'invented two' },
+    ],
+    improve: [],
+  };
+  // Done on Monday of this week (TODAY is Wednesday 18 November; the week began on 16 November).
+  const thisWeek = { 'plan-post-1': { status: 'done', doneAt: '2026-11-16' } };
+  const a = week.proposeTop5({ plan, items: thisWeek, today: TODAY });
+  const posts = a.filter((c) => c.slot === 'new-post');
+  assert.equal(posts.length, 1, 'one post a week');
+  assert.equal(posts[0].id, 'plan-post-1', 'the done post holds its place');
+  // Done last week: this week proposes the next post.
+  const lastWeek = { 'plan-post-1': { status: 'done', doneAt: '2026-11-11' } };
+  const b = week.proposeTop5({ plan, items: lastWeek, today: TODAY });
+  assert.equal(b.find((c) => c.slot === 'new-post').id, 'plan-post-2');
+});

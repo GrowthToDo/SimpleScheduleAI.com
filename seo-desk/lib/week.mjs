@@ -927,6 +927,12 @@ export function proposeTop5({
   const ok = (o) => eligibility(o, frozen, today, opts).eligible;
   const open = (id) => available(id, items, today);
   const cards = [];
+  // A card marked Done during this week stays in this week's list, shown done, so the week reads "1 of
+  // 4" and not "0 of 3". It holds its place: a done post is this week's post, a done page edit is this
+  // week's page edit.
+  const weekStart = mondayOf(today);
+  const doneThisWeek = (id) => items?.[id]?.status === 'done' && String(items[id].doneAt ?? '') >= weekStart;
+  const keep = (id) => open(id) || doneThisWeek(id);
   const add = (card, why) => cards.push({ ...card, why });
   const week = mondayOf(today);
   const pinned = (o) => items?.[o.id]?.pinnedWeek === week;
@@ -942,8 +948,9 @@ export function proposeTop5({
   for (const c of brokenCards.slice(0, BROKEN_MAX)) add(c, WHY.broken);
 
   // 2. The plan's next unwritten post.
-  const post = (plan?.posts ?? []).find((p) => !p.done);
-  if (post && open(`plan-post-${post.n}`)) add(postCard(post), WHY.post);
+  const donePost = (plan?.posts ?? []).find((p) => doneThisWeek(`plan-post-${p.n}`));
+  const post = donePost ?? (plan?.posts ?? []).find((p) => !p.done);
+  if (post && keep(`plan-post-${post.n}`)) add(postCard(post), WHY.post);
   // 2b. The Newsroom pieces picked for this week: their own kind, after the new post and before the page
   //     edit. A pick marked Done (published) stays, so the week shows it done.
   for (const c of newsPicks.slice(0, 2)) add({ ...c, slot: 'newsroom', isPageEdit: false }, WHY.news);
@@ -954,7 +961,10 @@ export function proposeTop5({
     worryList.filter((w) => w.kind === 'slipping-page' && w.oppId && !w.watch).map((w) => [w.oppId, w])
   );
   const qualifies = (o) => o.type !== 'slipping' || slipWorry.has(o.id);
-  if (!editThisWeek(frozen, today)) {
+  // A plan page improvement marked Done this week stays as this week's page edit, shown done.
+  const doneRow = (plan?.improve ?? []).find((r) => doneThisWeek(`plan-improve-${r.page}`));
+  if (doneRow) add(improveCard(doneRow, frozen, today, opts), WHY.planRow);
+  else if (!editThisWeek(frozen, today)) {
     const pinnedEdits = ordered.filter((o) => o.isPageEdit && pinned(o) && qualifies(o));
     const pinnedOk = pinnedEdits.find(ok);
     const pinnedBlocked = pinnedEdits.find((o) => !ok(o));
@@ -995,7 +1005,7 @@ export function proposeTop5({
 
   // 4. A verdict card, only when a change is ready to judge now.
   const v = verdictCard(due, through);
-  if (v && open(v.id)) add(v, WHY.verdict(verdictStateOf({ due, through, today }).readable));
+  if (v && keep(v.id)) add(v, WHY.verdict(verdictStateOf({ due, through, today }).readable));
 
   // 5. Tasks that are not page edits, best first.
   const tasks = [];
@@ -1017,7 +1027,7 @@ export function proposeTop5({
   const done = new Set(cards.filter((c) => c.action).map(sameTask));
   for (const [c, why] of tasks) {
     if (cards.length >= size) break;
-    if (seen.has(c.id) || !open(c.id)) continue;
+    if (seen.has(c.id) || !keep(c.id)) continue;
     if (c.action && done.has(sameTask(c))) continue;
     seen.add(c.id);
     if (c.action) done.add(sameTask(c));

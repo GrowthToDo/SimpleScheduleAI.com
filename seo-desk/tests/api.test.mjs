@@ -791,8 +791,15 @@ test('a plan card marked done reminds the founder to tick the plan row', async (
   const improve = w.top5.find((c) => c.slot === 'page-edit');
   const d = await post(`/api/item/${encodeURIComponent(improve.id)}`, { action: 'done' });
   assert.equal(d.json.freeze.page, '/critical-access-hospital-scheduling');
+  // A card finished this week stays in this week's list, shown done, and counts as done.
   const next = (await get('/api/week')).json;
-  assert.ok(!next.top5.some((c) => c.id === improve.id), 'a finished card leaves the proposal');
+  const kept = next.top5.find((c) => c.id === improve.id);
+  assert.ok(kept, 'a card finished this week stays in the week');
+  assert.equal(kept.state.status, 'done');
+  const postKept = next.top5.find((c) => c.id === card.id);
+  assert.equal(postKept?.state.status, 'done', 'the done post holds the post place');
+  assert.equal(next.top5.filter((c) => c.slot === 'new-post').length, 1, 'never a second post in the week');
+  assert.equal(next.top5.length, w.top5.length, 'the week keeps its size');
 });
 
 test('pinning an item survives a refresh', async () => {
