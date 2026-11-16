@@ -249,6 +249,41 @@ Dropped, with reasons:
   2026 nurse staffing, CAH/CMS and Texas staffing news found no dated November peg; a full
   detection pass is the next step.
 
+### Detection pass 2026-11-16 (SEO Desk Newsroom, five suggestions)
+
+- **WRITING - Texas Medicaid backlog meets a shorter retroactive window on January 1, 2027**
+  (picked 2026-11-16 for publication 2026-11-17). Score 64: Relevance 4 x Rising 4 x First
+  4 x Hook 1. Peg: 11 Texas House Democrats' November 10 release on the Medicaid
+  application backlog (1,671 pending at the start of 2026 to 237,505 by early September,
+  as reported by Becker's Payer; HHSC on-time processing 65% in July per the same
+  coverage), plus P.L. 119-21 section 71112, which cuts retroactive Medicaid coverage to
+  two months for non-expansion enrollees from January 1, 2027 (Texas today: three months,
+  Texas Works Handbook A-830/A-831 and 1 TAC 366.325). Hook: for a small hospital the two
+  together decide how much of an uninsured patient's stay can still be billed to Medicaid,
+  so the month the application goes in matters more after January 1. SERP for "texas
+  medicaid retroactive coverage 2027" (DataForSEO 2026-11-16): one consumer explainer
+  (MediPrimer), the TAC rule, insurer pages; nothing written from the hospital side.
+  Verify at source before drafting: section 71112 text, Texas handbook pages, the 237,505
+  figure (lawmakers' release, not HHSC), HHSC's current backlog data. No product section:
+  footer note only (nothing we sell touches Medicaid eligibility).
+- **DROPPED - Rural health awards: $70 per resident in Texas, $6,390 in Rhode Island**
+  (Becker's, 2026-11-13; 87 outlets). Covered: `rural-hospital-losses-nurse-staffing-cost`
+  already carries the per-rural-resident figure (KFF's January analysis put it at $66),
+  and `rural-health-transformation-deadline-nurse-salaries` carries the missed second-year
+  deadline (edited 2026-11-09, frozen to about 2026-12-09). A new piece would compete with
+  our own pages. Revisit when CMS announces second-year awards.
+- **DROPPED - Brigham and Women's nurses' tentative deal averts strike** (30 outlets).
+  Boston labor news; the deal's terms are not public, so there is no citable staffing
+  hook, and big publishers own the head query.
+- **DROPPED - CMS final CY 2027 Physician Fee Schedule and OPPS rules.** Critical Access
+  Hospitals are exempt from OPPS; trade groups (AHA, Fierce, HFMA) own the coverage. No
+  hook for our reader.
+- **DROPPED - New data shows 44 Oklahoma rural hospitals face closure** (KFOR, Oklahoma
+  Voice). Covered: our July article "Texas Has the Most At-Risk Rural Hospitals in the
+  Country" already gives the Texas count (Chartis, 50).
+- **DROPPED - Operating margins shrink at rural hospitals while bad debt grows** (2 outlets).
+  Not rising, and the Texas finance angle is covered by `rural-hospital-losses-nurse-staffing-cost`.
+
 ### DROPPED - "Physician Scheduling Software Market" (openPR / Worldwide Market Reports)
 
 - **Dropped on:** 2026-09-18. **Reason:** citable-hook score 0, an automatic fail.
