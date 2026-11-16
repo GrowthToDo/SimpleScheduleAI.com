@@ -718,3 +718,17 @@ test('an open-work row marked DONE in the file is not offered as a task', () => 
     'the open row stays'
   );
 });
+
+test('a "waiting on you" row marked DONE in the file leaves that list', () => {
+  const rows = [
+    {
+      section: 'Blocked on the founder',
+      text: 'Request indexing for a page. DONE: the page is indexed.',
+      blockedOnFounder: true,
+    },
+    { section: 'Blocked on the founder', text: 'Fix the analytics filter.', blockedOnFounder: true },
+  ];
+  const list = week.blockedOnYou(rows);
+  assert.equal(list.length, 1);
+  assert.match(list[0].title, /analytics filter/);
+});

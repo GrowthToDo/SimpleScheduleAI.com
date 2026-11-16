@@ -770,9 +770,12 @@ export function isOpenWorkTask(row, today) {
 
 // Open work rows that wait on the founder, for the page's "Waiting on you" list.
 export function blockedOnYou(openWork = []) {
-  return openWork
-    .filter((w) => w.blockedOnFounder)
-    .map((w) => ({ id: openWorkId(w), title: openWorkTitle(w), section: plain(w.section) }));
+  return (
+    openWork
+      // A row marked finished in the file (struck through, or DONE) no longer waits on the founder.
+      .filter((w) => w.blockedOnFounder && !DONE_ROW.test(String(w.text ?? '')))
+      .map((w) => ({ id: openWorkId(w), title: openWorkTitle(w), section: plain(w.section) }))
+  );
 }
 
 export function openWorkCard(w) {

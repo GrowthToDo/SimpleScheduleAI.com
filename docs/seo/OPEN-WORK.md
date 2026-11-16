@@ -76,7 +76,7 @@ removal before any of them publish.
 | Item | Why it matters |
 | --- | --- |
 | **GA4 internal-traffic filter is still not working** | Highest priority of these. Every AI-referral number is untrustworthy until it is fixed. Hyderabad is still the largest city in the property (43 sessions in August, and the user count held at 8 across June, July and August, so the session drop was less activity rather than a filter). Ruled out Testing mode: `testDataFilterName` returns `(not set)` for all 332 August sessions. So it is either never activated (GA4 creates data filters INACTIVE by default) or active with a non-matching IP, most often an IPv4/IPv6 mismatch. Gautham was never added, and 8 users in Hyderabad is more than one person. |
-| **Manual Request Indexing** for `/blog/managed-service-vs-scheduling-software` | GSC URL Inspection, two minutes. The page is "Crawled, currently not indexed" and was just retargeted, so it needs a fresh signal. Google has no indexing API; sitemap resubmission (done 2026-09-01) is the only programmatic lever. |
+| ~~**Manual Request Indexing** for `/blog/managed-service-vs-scheduling-software`~~ | **DONE**: the page is indexed (URL Inspection "URL is on Google", founder screenshot 2026-11-16; the SEO Desk index check agrees, last crawl 2026-10-29). Nothing left to request. |
 
 **Decisions waiting on the founder:**
 
