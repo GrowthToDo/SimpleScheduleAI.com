@@ -260,7 +260,7 @@ export function newsroomCards(model) {
         filter,
         repeat,
         checks: chk,
-        score: scoreOf(c.score, repeat, chk),
+        score: scoreOf(c.score, repeat, chk, bonusOf(withHave)),
         state: itemState(model, c.id),
         picked: isPicked(it, weekOf),
       };
@@ -306,10 +306,25 @@ export function checksOf(saved, card) {
   };
 }
 
+// Texas or critical access in the story: one more for relevance (Texas is the founder's market).
+export function bonusOf(c) {
+  const text = [c.title, c.description ?? '', ...(c.outlets ?? []).map((o) => o.title ?? '')].join(' ');
+  return [TEXAS.test(text) ? 'Texas' : null, CAH.test(text) ? 'critical access' : null].filter(Boolean);
+}
+
 // The score as the card shows it: the draft (Relevance x Freshness) until both person's checks are
-// set, then all four parts; less the repetition penalty. value never goes below zero.
-export function scoreOf(score, repeat, chk) {
-  const second = score.freshness ?? score.rising;
+// set, then all four parts; less the repetition penalty. value never goes below zero. Relevance
+// includes the one extra for Texas or critical access (relevanceBonus), so the card and the Suggested
+// order use the same number.
+export function scoreOf(score0, repeat, chk, bonus = []) {
+  const relevance = Math.min(5, score0.relevance + (bonus.length ? 1 : 0));
+  const second = score0.freshness ?? score0.rising;
+  const score = {
+    ...score0,
+    relevance,
+    relevanceBonus: bonus,
+    product: score0.freshness !== undefined ? relevance * score0.freshness : score0.product,
+  };
   const set = chk.first !== null && chk.hook !== null;
   const full = set ? score.relevance * second * chk.first * chk.hook : null;
   const penalty = repeat?.penalty ?? 0;
@@ -344,9 +359,11 @@ export function suggestionsOf(cards) {
     if (c.tab !== 'fresh' || c.tier === 3 || c.paid) continue;
     if (c.filter && !c.filter.passed) continue;
     if (c.score.hook === 0) continue;
-    const text = [c.title, c.description ?? '', ...(c.outlets ?? []).map((o) => o.title ?? '')].join(' ');
-    const extra = [TEXAS.test(text) ? 'Texas' : null, CAH.test(text) ? 'critical access' : null].filter(Boolean);
-    const relevance = Math.min(5, c.score.relevance + (extra.length ? 1 : 0));
+    // A card built by newsroomCards already counts the extra in its relevance (relevanceBonus).
+    const extra = c.score.relevanceBonus ?? bonusOf(c);
+    const relevance = c.score.relevanceBonus
+      ? c.score.relevance
+      : Math.min(5, c.score.relevance + (extra.length ? 1 : 0));
     const second = c.score.freshness ?? c.score.rising;
     const person = c.score.complete ? c.score.first * c.score.hook : 1;
     const score = Math.max(0, relevance * second * person - (c.repeat?.penalty ?? 0));

@@ -753,6 +753,8 @@ test('score: Can we be first and the hook are set on the card; a hook of 0 takes
   const both = await post('/api/newsroom/score', { id: card.id, hook: 1 });
   assert.equal(both.json.score.complete, true);
   assert.equal(both.json.score.full, card.score.relevance * card.score.freshness * 4);
+  // The card's draft and the Suggested order use the same number.
+  assert.equal(card.suggestScore, card.score.value);
   await post('/api/newsroom/score', { id: card.id, hook: 0 });
   assert.ok(!(await view()).suggested.some((c) => c.id === card.id), 'no hook, no suggestion');
 });

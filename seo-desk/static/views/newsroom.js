@@ -59,8 +59,9 @@ export function scoreLines(card) {
     const total = s.complete
       ? `Score ${s.full}: Relevance x Freshness x Can we be first x Citable hook.`
       : `Draft score ${s.product}: Relevance x Freshness. The other two are your checks.`;
+    const plus = (s.relevanceBonus ?? []).length ? `, plus one for ${s.relevanceBonus.join(' and ')}` : '';
     return [
-      `Relevance ${s.relevance} of 5: ${String(card?.tierText ?? '').replace(/\.$/, '')}.`,
+      `Relevance ${s.relevance} of 5: ${String(card?.tierText ?? '').replace(/\.$/, '')}${plus}.`,
       `Freshness ${s.freshness} of 5: ${s.freshnessWhy ?? ''}`.trim(),
       `Reporting: ${s.risingWhy ?? ''}`.trim(),
       s.first !== null && s.first !== undefined

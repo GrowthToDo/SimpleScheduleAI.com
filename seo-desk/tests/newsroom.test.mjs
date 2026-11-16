@@ -629,6 +629,10 @@ test("page (8c): Freshness, reporting, the two person's checks, and the repetiti
     lines[5],
     'Draft score 20: Relevance x Freshness. The other two are your checks. Less 4 for repetition: 16.'
   );
+  assert.equal(
+    viewMod.scoreLines({ tierText: 'Tier 1: x', score: { ...base, relevanceBonus: ['Texas'] } })[0],
+    'Relevance 4 of 5: Tier 1: x, plus one for Texas.'
+  );
   const set = viewMod.scoreLines({
     tierText: 'Tier 1',
     score: { ...base, first: 3, hook: 1, complete: true, full: 60, repeatPenalty: 0, value: 60 },
