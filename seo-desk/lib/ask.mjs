@@ -590,7 +590,7 @@ Rules:
 Write plain text: paragraphs separated by a blank line, lists as lines starting with "- " or "1. ", and **bold** only for a few words. No headings, no tables, no links.`;
 
 // Marker-looking text inside the data or the question cannot close the data block early.
-const unmark = (s) => String(s).replace(/<(\s*\/?\s*)desk[\s_-]*data/gi, '[$1desk-data');
+export const unmark = (s) => String(s).replace(/<(\s*\/?\s*)desk[\s_-]*data/gi, '[$1desk-data');
 
 export function askPrompt({ question, brief, today }) {
   const user = [

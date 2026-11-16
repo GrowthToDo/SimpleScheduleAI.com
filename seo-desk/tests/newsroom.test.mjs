@@ -849,3 +849,61 @@ test('8b grouping: a topic of nurse words (a union, a strike) never joins storie
   );
   assert.equal(cards.length, 2);
 });
+
+test('8b feeds: a news search title loses its publisher even when the name has a dash in it', () => {
+  const gn = `<rss><channel><item><title>Valley strike averted - Ledger News - Ledger News - Breaking News, Video</title>
+    <link>https://news.google.com/rss/articles/q</link><pubDate>Thu, 12 Nov 2026 08:00:00 GMT</pubDate>
+    <source url="https://ledger.example">Ledger News - Breaking News, Video</source></item></channel></rss>`;
+  const [g] = news.parseFeed(gn, { name: 'Google News', google: true });
+  assert.equal(g.title, 'Valley strike averted');
+  assert.equal(g.publisher, 'Ledger News - Breaking News, Video');
+});
+
+// ---------------------------------------------------------------- package 8b: the topic question
+
+const na = await import('../lib/newsroom-ask.mjs');
+
+test('ask topic: the method is read from the skill (score, write, one-line test), with a fallback', () => {
+  const repo = path.join(root, 'skill-repo');
+  fs.mkdirSync(path.join(repo, '.claude/skills'), { recursive: true });
+  fs.writeFileSync(
+    path.join(repo, '.claude/skills/trendjacking-articles.md'),
+    '# T\n\n## Step 1 - Detect\n\nscan\n\n## Step 2 - Score and pick\n\nRelevance x Rising.\n\n## Step 3 - Write\n\nOne citable hook.\n\n## Step 4 - Gate\n\ngate\n\n## The one-line test before you ship\n\nRising? Hook?\n'
+  );
+  const m = na.readMethod(repo);
+  assert.match(m, /Step 2 - Score and pick/);
+  assert.match(m, /One citable hook/);
+  assert.match(m, /The one-line test/);
+  assert.doesNotMatch(m, /Step 1|Step 4/);
+  assert.match(na.readMethod(path.join(root, 'nowhere')), /Can we be first/);
+});
+
+test('ask topic: the answer splits into its topics, each with a brief built on the matching card', () => {
+  const text =
+    'Topic 1: Mesa valley clinic grant draws praise\n- Outlets: One\n- Possible citable hook (to verify): x\n\nTopic 2: Something the data does not have\n- Outlets: none\n\nWould drop: the chef story, Tier 3.';
+  const topics = na.parseTopics(text);
+  assert.deepEqual(
+    topics.map((t) => [t.n, t.title]),
+    [
+      [1, 'Mesa valley clinic grant draws praise'],
+      [2, 'Something the data does not have'],
+    ]
+  );
+  assert.doesNotMatch(topics[1].text, /Would drop/);
+  const card = {
+    id: 'news:aaaaaaaaaaaa',
+    title: 'State grant to Mesa valley clinic draws praise',
+    outlets: [{ name: 'One', url: 'https://one.example/a', date: '2026-11-14' }],
+    firstDate: '2026-11-14',
+    latestDate: '2026-11-14',
+    tierText: 'Tier 1: Texas health policy',
+    score: { relevance: 3, rising: 1, risingWhy: '1 outlet ran it.' },
+    have: [],
+  };
+  const out = na.topicsWithBriefs(topics, [card]);
+  assert.equal(out[0].cardId, card.id);
+  assert.match(out[0].brief, /https:\/\/one\.example\/a/);
+  assert.match(out[0].brief, /Claude's reasoning \(these are hypotheses until the live checks are done/);
+  assert.equal(out[1].cardId, null);
+  assert.match(out[1].brief, /Load \.claude\/skills\/trendjacking-articles\.md/);
+});

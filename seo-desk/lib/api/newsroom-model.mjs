@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { readJson } from '../store.mjs';
-import { mondayOf } from '../dates.mjs';
+import { mondayOf, daysBetween } from '../dates.mjs';
 import { longDate, plain } from '../text.mjs';
 import {
   storyCards,
@@ -228,8 +228,69 @@ export function newsroomCards(model) {
     }
     const order = Object.fromEntries(TABS.map((t, i) => [t.key, i]));
     cards.sort((a, b) => order[a.tab] - order[b.tab] || byScore(a, b));
-    return { cards, byId: new Map([...cards, ...pastedOther].map((c) => [c.id, c])), weekOf, pastedOther };
+    const suggested = suggestionsOf(cards);
+    const rank = new Map(suggested.map((x) => [x.id, x]));
+    for (const c of cards) {
+      const x = rank.get(c.id);
+      if (x) Object.assign(c, { suggested: true, suggestRank: x.rank, suggestWhy: x.why, suggestScore: x.score });
+    }
+    return {
+      cards,
+      suggested: suggested.map((x) => cards.find((c) => c.id === x.id)),
+      byId: new Map([...cards, ...pastedOther].map((c) => [c.id, c])),
+      weekOf,
+      pastedOther,
+    };
   });
+}
+
+// ---------------------------------------------------------------- suggested for this week
+
+export const SUGGEST_MAX = 5;
+const TEXAS = /\btexas\b/i;
+const CAH = /\bcritical access\b/i;
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+
+// At most five: the best by draft score among Fresh Tier 1 and 2 cards (Fresh already leaves out what a
+// recent piece covers, what is decided, held, dropped or picked) that are not a paid placement only.
+// Texas or critical access in the story adds one to relevance (Texas is the founder's market). Each
+// says in one line why: "Tier 1, Texas, 6 outlets in 5 days, nothing on our site yet".
+export function suggestionsOf(cards) {
+  const scored = [];
+  for (const c of cards) {
+    if (c.tab !== 'fresh' || c.tier === 3 || c.paid) continue;
+    const text = [c.title, c.description ?? '', ...(c.outlets ?? []).map((o) => o.title ?? '')].join(' ');
+    const extra = [TEXAS.test(text) ? 'Texas' : null, CAH.test(text) ? 'critical access' : null].filter(Boolean);
+    const relevance = Math.min(5, c.score.relevance + (extra.length ? 1 : 0));
+    scored.push({ c, extra, score: relevance * c.score.rising });
+  }
+  scored.sort(
+    (a, b) =>
+      b.score - a.score ||
+      String(b.c.latestDate).localeCompare(String(a.c.latestDate)) ||
+      a.c.title.localeCompare(b.c.title)
+  );
+  return scored.slice(0, SUGGEST_MAX).map(({ c, extra, score }, i) => ({
+    id: c.id,
+    rank: i + 1,
+    score,
+    why: suggestWhy(c, extra),
+  }));
+}
+
+function suggestWhy(c, extra) {
+  const n = (c.outlets ?? []).length;
+  const span = c.firstDate && c.latestDate ? daysBetween(c.firstDate, c.latestDate) + 1 : null;
+  const ran =
+    n > 1 && span
+      ? `${plural(n, 'outlet', 'outlets')} in ${plural(span, 'day', 'days')}`
+      : `${plural(n, 'outlet', 'outlets')}${c.latestDate ? `, on ${longDate(c.latestDate)}` : ''}`;
+  // The have lines are ordered closest first (a shared topic before shared words).
+  const close = (c.have ?? []).find((x) => x.kind === 'article' || x.kind === 'post');
+  const site = close
+    ? `close to ${close.page}${close.publishDate ? ` (${longDate(close.publishDate)})` : ''}: it needs an angle that piece does not have`
+    : 'nothing on our site yet';
+  return [`Tier ${c.tier}`, ...extra, ran, site].join(', ');
 }
 
 // This week's picks, as week cards, best draft score first.
@@ -238,10 +299,10 @@ export function newsPicks(model) {
   return cards.filter((c) => c.picked).map((c) => weekCardOf(c, { picked: true }));
 }
 
-// The sidebar count: fresh Tier 1 and 2 cards not covered, held, dropped or picked. Null when the news
+// The sidebar count: the suggested stories (at most five), not every fresh one. Null when the news
 // feeds were never read and nothing was pasted.
 export function freshNewsCount(model) {
   const nr = newsroomCards(model);
   if (!model.snapObjs.news && !nr.cards.length) return null;
-  return nr.cards.filter((c) => c.tab === 'fresh').length;
+  return nr.suggested.length;
 }

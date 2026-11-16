@@ -20,6 +20,7 @@ import {
   QUESTION_MAX,
   HISTORY_MAX,
 } from '../../ask.mjs';
+import { takeClaude, releaseClaude } from '../../claude-lock.mjs';
 
 export const QUESTION_RULE = `Type a question of ${QUESTION_MIN} to ${QUESTION_MAX} characters.`;
 export const BUSY = 'Claude is still answering the last question. Wait for that answer, then ask again.';
@@ -35,7 +36,7 @@ const shown = (e) => ({
 
 // run, find and now are injected by the tests (no real Claude there).
 export function makeAskRoutes({ run = runClaude, find = findClaude, now = () => Date.now() } = {}) {
-  let busy = false;
+  // One run at a time for the whole desk (lib/claude-lock.mjs): the Newsroom's topic question shares it.
   return [
     get('/api/ask', () => {
       const model = buildModel();
@@ -52,8 +53,7 @@ export function makeAskRoutes({ run = runClaude, find = findClaude, now = () => 
       const body = await bodyOf(ctx);
       const question = typeof body.question === 'string' ? body.question.trim() : '';
       if (question.length < QUESTION_MIN || question.length > QUESTION_MAX) throw bad(QUESTION_RULE);
-      if (busy) throw Object.assign(new Error(BUSY), { status: 429 });
-      busy = true;
+      if (!takeClaude()) throw Object.assign(new Error(BUSY), { status: 429 });
       const started = now();
       try {
         const model = buildModel();
@@ -76,7 +76,7 @@ export function makeAskRoutes({ run = runClaude, find = findClaude, now = () => 
         if (e?.askError) throw Object.assign(new Error(e.message), { status: 502 });
         throw e;
       } finally {
-        busy = false;
+        releaseClaude();
       }
     }),
     del('/api/ask', () => {

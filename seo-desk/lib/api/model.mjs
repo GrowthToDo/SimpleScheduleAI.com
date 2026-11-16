@@ -50,6 +50,7 @@ const STATE_FILES = [
   'link-suggestions',
   'insight-choices',
   'news-pasted',
+  'newsroom-ask',
 ].map((n) => `state/${n}.json`);
 
 // The label for one item. The standard terms live in insights.mjs. Callers may still pass the item's

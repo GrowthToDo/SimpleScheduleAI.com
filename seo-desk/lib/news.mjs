@@ -70,6 +70,30 @@ export function splitGoogleTitle(title) {
   return { title: t.slice(0, at).trim(), publisher: t.slice(at + 3).trim() || null };
 }
 
+// A news search title without its publisher: it ends in " - Publisher", sometimes twice, and a long name
+// may be cut short there ("Story - ABC News" for "ABC News - Breaking News").
+export function cleanGoogleTitle(title, publisher) {
+  let t = String(title ?? '').trim();
+  const pub = String(publisher ?? '').toLowerCase();
+  if (!pub) return t;
+  for (;;) {
+    if (t.toLowerCase().endsWith(` - ${pub}`)) {
+      t = t.slice(0, -(pub.length + 3)).trim();
+      continue;
+    }
+    const at = t.lastIndexOf(' - ');
+    const tail =
+      at > 0
+        ? t
+            .slice(at + 3)
+            .trim()
+            .toLowerCase()
+        : '';
+    if (!tail || !pub.startsWith(tail)) return t;
+    t = t.slice(0, at).trim();
+  }
+}
+
 const httpsOnly = (u) => {
   try {
     const url = new URL(String(u ?? '').trim());
@@ -98,9 +122,15 @@ export function parseFeed(xml, { name = '', google = false } = {}) {
     const link = httpsOnly(decodeEntities(unCdata(linkTag ?? '').trim()) || decodeEntities(altHref ?? ''));
     let publisher = stripHtml(tagText(block, 'source')) || null;
     if (google) {
-      const split = splitGoogleTitle(title);
-      title = split.title;
-      publisher = publisher || split.publisher;
+      // The <source> name is the publisher; the title ends in " - Publisher", sometimes twice, and a long
+      // publisher name may be cut short there ("Story - ABC News" for "ABC News - Breaking News").
+      if (publisher) {
+        title = cleanGoogleTitle(title, publisher);
+      } else {
+        const split = splitGoogleTitle(title);
+        title = split.title;
+        publisher = split.publisher;
+      }
     }
     if (!title || !link) continue;
     const date = feedDate(
@@ -200,6 +230,8 @@ const DOMAIN = new Set([
   'worker',
   'union',
   'contract',
+  'schedule',
+  'scheduling',
 ]);
 
 // Everyday words a headline and a page title share by chance. They never make two stories one, and
@@ -258,6 +290,13 @@ const GENERIC = new Set(
     'fund',
     'funding',
     'new',
+    'home',
+    'center',
+    'memorial',
+    'regional',
+    'community',
+    'university',
+    'system',
   ].map((w) => w.toLowerCase())
 );
 
@@ -509,11 +548,16 @@ export function buildTopics({ content = [], log = [] } = {}) {
     runs(c.title, c.page, 'pages');
     runs(slugWords(c.page), c.page, 'pages');
   }
+  // Only a topic from a Newsroom piece or an alias joins stories: those are events. A blog post's phrase
+  // ("nursing home", "float pool") or a dropped peg's ("group health insurance") is a subject many
+  // unrelated stories share.
+  const articles = new Set((content ?? []).filter((c) => c.kind === 'article').map((c) => c.page));
   for (const e of log ?? []) runs(e.title, e.title, 'logs');
   const out = new Map();
   for (const t of found.values()) {
     if (t.pages.size > TOPIC_MAX_PAGES) continue;
-    out.set(t.key, { ...t, groups: t.words.some((w) => !BROAD.has(w)) });
+    const event = [...t.pages].some((p) => articles.has(p));
+    out.set(t.key, { ...t, groups: event && t.words.some((w) => !BROAD.has(w)) });
   }
   for (const a of TOPIC_ALIASES) {
     const key = keyOf(sequence(a.topic));
@@ -614,6 +658,8 @@ const titleOf = (group) => {
       if (i !== j) for (const x of ws[i]) if (w.has(x)) s++;
     });
     if (!it.google) s += 0.5;
+    // A social post or a long teaser pasted in as a title is never the card's title when another will do.
+    if (String(it.title).length > 140 || /^facebook$|^x$|^instagram$/i.test(String(it.publisher ?? ''))) s -= 1000;
     if (s > bestScore) {
       bestScore = s;
       best = i;
@@ -686,7 +732,10 @@ export const byScore = (a, b) =>
 // Tier 1 and 2 cards from the items of the last 14 days, best draft score first, newest first on ties.
 export function storyCards(items, { today, topics = null }) {
   const from = addDays(today, -NEWS_DAYS);
-  const recent = (items ?? []).filter((it) => it?.date && it.date >= from && it.date <= today);
+  const recent = (items ?? [])
+    .filter((it) => it?.date && it.date >= from && it.date <= today)
+    // Items read before the title fix still carry the publisher's name at the end.
+    .map((it) => (it.google && it.publisher ? { ...it, title: cleanGoogleTitle(it.title, it.publisher) } : it));
   return groupStories(recent, { topics })
     .map((g) => storyCard(g, { today }))
     .filter((c) => c.tier !== 3)
@@ -853,10 +902,8 @@ export function matchHave(
   const titles = [text, ...(card.outlets ?? []).map((o) => o.title ?? '')];
   const surface = surfaceOf(titles.join(' '));
   const shown = (words) => words.map((w) => surface.get(w) ?? w).sort();
-  // The story's topics: in its own title, or in the titles of two of its outlets.
-  const count = new Map();
-  for (const t of titles.slice(1)) for (const k of topicsIn(t, topics)) count.set(k, (count.get(k) ?? 0) + 1);
-  const mineTopics = new Set([...topicsIn(text, topics), ...[...count].filter(([, n]) => n >= 2).map(([k]) => k)]);
+  // The story's topics, from its own title.
+  const mineTopics = new Set(topicsIn(text, topics));
   // The longest topic a page or log entry shares with the story, and its words.
   const topicWith = (has) => {
     let best = null;
@@ -934,7 +981,7 @@ export function matchHave(
     });
   }
   // At most HAVE_MAX lines: what covers or decides it first, then the closest by shared words.
-  const rank = (x) => (x.covered ? 0 : x.decided ? 1 : x.kind === 'plan' ? 2 : 3);
+  const rank = (x) => (x.covered ? 0 : x.decided ? 1 : x.topic ? 2 : x.kind === 'plan' ? 3 : 4);
   return out
     .map((x, i) => ({ x, i }))
     .sort((a, b) => rank(a.x) - rank(b.x) || b.x.words.length - a.x.words.length || a.i - b.i)
