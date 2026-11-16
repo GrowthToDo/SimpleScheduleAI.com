@@ -145,6 +145,10 @@ const fetchImpl = async (href, opts) => {
 
 // The Claude runner the routes use: tests swap it (no real Claude here).
 let runImpl = async () => ({ text: 'nothing' });
+// The DataForSEO client Check the results page opens: tests swap it (no real DataForSEO here).
+let serpImpl = async () => {
+  throw new Error('no results page client in this test');
+};
 
 let server;
 let port;
@@ -154,6 +158,7 @@ before(async () => {
       fetchPage: (u) => fetchPublicPage(u, { fetchImpl, lookup }),
       run: (prompt) => runImpl(prompt),
       find: () => '/fake/bin/claude',
+      openSerp: () => serpImpl(),
     }),
     autoRefresh: false,
     staticDir: root,
@@ -515,7 +520,7 @@ test('suggested: at most five fresh stories, Texas counts extra, never paid only
   assert.ok(!v.suggested.some((c) => c.title.startsWith('Mesa valley')), 'a covered story is never suggested');
   // Mesa (Texas) would rank by its Texas bonus, but it is covered; Pine is the top Tier 1 story.
   const pine = v.suggested.find((c) => c.title.includes('Pine county'));
-  assert.equal(pine.suggestWhy, 'Tier 1, 2 outlets in 2 days, nothing on our site yet');
+  assert.equal(pine.suggestWhy, 'Tier 1, 2 reports in 2 days, nothing on our site yet');
   // Held stories leave the list.
   await itemPost(pine.id, { action: 'snooze', until: '2026-11-23' });
   assert.ok(!(await view()).suggested.some((c) => c.id === pine.id));
@@ -602,4 +607,171 @@ test('ask topic: a second press while one runs is refused, and the Ask box waits
   releaseClaude();
   const cross = await call('POST', '/api/newsroom/ask-topic', {}, { 'sec-fetch-site': 'cross-site' });
   assert.equal(cross.status, 403);
+});
+
+// ---------------------------------------------------------------- package 8c: the hard filters
+
+const { pageFacts, CAH_REASON } = await import('../lib/news-filters.mjs');
+const { SERP_PATH } = await import('../lib/api/newsroom-actions.mjs');
+
+// The seed plus four stories that fail a filter, and a page whose facts cover one of them.
+function seedFilters() {
+  seed();
+  const snap = JSON.parse(fs.readFileSync(path.join(DATA, 'snap/news.json'), 'utf8'));
+  snap.data.items.push(
+    it('CMS final OPPS rule raises outpatient rates', 'Trade Daily', '2026-11-14', 31),
+    it("Lakeside nurses' union reach tentative deal", 'Herald', '2026-11-15', 32),
+    it('Idaho county board weighs nurse staffing ratios', 'Gazette', '2026-11-15', 33),
+    it('New data shows 27 Idaho rural hospitals face closure', 'Courier', '2026-11-15', 34)
+  );
+  write('snap/news.json', snap);
+  const local = JSON.parse(fs.readFileSync(path.join(DATA, 'snap/local.json'), 'utf8'));
+  local.data.content[0].facts = pageFacts('Texas has 61 rural hospitals vulnerable to closure.');
+  write('snap/local.json', local);
+  invalidate();
+}
+
+test('filters: only stories that pass every hard filter are suggested; the rest are grouped with reasons', async () => {
+  seedFilters();
+  const v = await view();
+  for (const c of v.suggested) assert.equal(c.filter.passed, true, c.title);
+  const stopped = ['CMS final OPPS', 'Lakeside nurses', 'Idaho county board', '27 Idaho rural'];
+  for (const t of stopped) assert.ok(!v.suggested.some((c) => c.title.includes(t)), t);
+  const opps = v.filtered.find((c) => c.title.includes('CMS final OPPS'));
+  assert.deepEqual(opps.filter.reasons[0], {
+    filter: 'a',
+    name: 'Applies to a Critical Access Hospital',
+    text: CAH_REASON,
+    covered: false,
+  });
+  assert.equal(v.filtered.find((c) => c.title.includes('Lakeside')).filter.reasons[0].filter, 'd');
+  assert.equal(v.filtered.find((c) => c.title.includes('Idaho county board')).filter.reasons[0].filter, 'c');
+  const upd = v.updates.find((c) => c.title.includes('27 Idaho rural'));
+  assert.equal(
+    upd.filter.update.text,
+    'Update an existing page: /articles/mesa-valley-clinic-grant. Can be edited now.'
+  );
+  const counts = Object.fromEntries(v.filterCounts.map((f) => [f.filter, f.count]));
+  assert.ok(counts.a >= 1 && counts.b >= 1 && counts.c >= 2 && counts.d >= 1, JSON.stringify(counts));
+  assert.deepEqual(
+    v.filters.map((f) => f.name),
+    [
+      'Applies to a Critical Access Hospital',
+      'Not already covered',
+      'A Texas angle exists',
+      'A quotable primary source can exist',
+    ]
+  );
+  // A passing story says its primary source is still to check, and the sidebar counts suggested only.
+  assert.match(v.suggested[0].filter.primary, /^Primary source: to check/);
+  assert.equal((await get('/api/nav')).json.counts.newsroom, v.suggested.length);
+  // The digest carries the counts by filter and the filtered stories with their reasons.
+  const { buildModel } = await import('../lib/api/model.mjs');
+  const { newsroomDigest } = await import('../lib/api/ext/newsroom.mjs');
+  const d = newsroomDigest(buildModel());
+  assert.equal(d.filterCounts.length, 4);
+  assert.ok(d.filtered.some((x) => x.reasons.some((r) => r.startsWith('Applies to a Critical Access Hospital: '))));
+});
+
+test('check the results page: refused without confirm, with its cost; the confirmed run keeps the top ten', async () => {
+  seedFilters();
+  const v = await view();
+  const card = v.suggested[0];
+  assert.equal(card.checks.query, card.subject.query);
+  let opened = 0;
+  const calls = [];
+  let closed = 0;
+  serpImpl = async () => {
+    opened++;
+    return {
+      call: async (tool, args) => {
+        calls.push([tool, args]);
+        return {
+          tasks: [
+            {
+              result: [
+                {
+                  items: [
+                    { type: 'paid', title: 'An ad', url: 'https://ad.example/' },
+                    { type: 'organic', rank_group: 2, title: 'Second result', url: 'https://two.example/b' },
+                    { type: 'organic', rank_group: 1, title: 'First result', url: 'https://www.one.example/a' },
+                  ],
+                },
+              ],
+            },
+          ],
+        };
+      },
+      close: () => closed++,
+    };
+  };
+  const ask = await post('/api/newsroom/check-serp', { id: card.id, query: 'pine county staffing hospital' });
+  assert.equal(ask.status, 400);
+  assert.match(ask.json.error, /^Confirm first: .*about \$0\.002/);
+  assert.equal(opened, 0, 'nothing is asked before the founder confirms');
+  const r = await post('/api/newsroom/check-serp', {
+    id: card.id,
+    query: 'pine county staffing hospital',
+    confirm: true,
+  });
+  assert.equal(r.status, 200, JSON.stringify(r.json));
+  assert.equal(opened, 1);
+  assert.equal(closed, 1);
+  assert.equal(calls[0][0], 'api_request');
+  assert.equal(calls[0][1].path, SERP_PATH);
+  assert.equal(calls[0][1].data[0].keyword, 'pine county staffing hospital');
+  const after = (await view()).cards.find((c) => c.id === card.id);
+  assert.deepEqual(
+    after.checks.serp.items.map((x) => [x.rank, x.title, x.domain]),
+    [
+      [1, 'First result', 'one.example'],
+      [2, 'Second result', 'two.example'],
+    ]
+  );
+  assert.equal(after.checks.serp.date, '2026-11-16');
+  assert.equal(after.checks.query, 'pine county staffing hospital');
+  assert.equal(after.score.complete, false, 'the desk does not judge the list');
+  serpImpl = async () => {
+    throw Object.assign(new Error('needs oauth'), { kind: 'needs-sign-in' });
+  };
+  const failed = await post('/api/newsroom/check-serp', { id: card.id, query: 'x y', confirm: true });
+  assert.equal(failed.status, 502);
+  assert.match(failed.json.error, /needs sign in/);
+});
+
+test('score: Can we be first and the hook are set on the card; a hook of 0 takes it off suggested', async () => {
+  seedFilters();
+  fs.rmSync(path.join(DATA, 'state/news-checks.json'), { force: true });
+  invalidate();
+  const card = (await view()).suggested[0];
+  assert.equal(card.score.complete, false);
+  assert.equal(card.score.value, card.score.product, 'the draft until both are set');
+  assert.equal((await post('/api/newsroom/score', { id: card.id, first: 6 })).status, 400);
+  assert.equal((await post('/api/newsroom/score', { id: card.id, hook: 2 })).status, 400);
+  const one = await post('/api/newsroom/score', { id: card.id, first: 4 });
+  assert.equal(one.json.score.complete, false);
+  const both = await post('/api/newsroom/score', { id: card.id, hook: 1 });
+  assert.equal(both.json.score.complete, true);
+  assert.equal(both.json.score.full, card.score.relevance * card.score.freshness * 4);
+  await post('/api/newsroom/score', { id: card.id, hook: 0 });
+  assert.ok(!(await view()).suggested.some((c) => c.id === card.id), 'no hook, no suggestion');
+});
+
+test('ask topic: Claude gets the passing stories, each filtered story with its reason, and the filters', async () => {
+  seedFilters();
+  let seen = null;
+  runImpl = async (prompt) => {
+    seen = prompt;
+    return { text: 'Topic 1: Pine county rural hospital nurse staffing review begins\n\nWould drop: nothing.' };
+  };
+  const r = await post('/api/newsroom/ask-topic', {});
+  assert.equal(r.status, 200, JSON.stringify(r.json));
+  assert.match(seen.system, /four hard filters/);
+  assert.match(seen.system, /exempt from OPPS and IPPS/);
+  const inside = seen.user.slice(seen.user.indexOf('<desk-data>\n'));
+  const passing = inside.slice(0, inside.indexOf("Filtered out by the desk's hard filters"));
+  assert.ok(!passing.includes('CMS final OPPS'), 'a filtered story is not among the passing ones');
+  assert.match(inside, /Filtered out by the desk's hard filters \(\d+\)\. Never suggest these:/);
+  assert.match(inside, /- CMS final OPPS rule raises outpatient rates\n {3}Applies to a Critical Access Hospital: /);
+  assert.match(inside, /Update an existing page: \/articles\/mesa-valley-clinic-grant/);
 });

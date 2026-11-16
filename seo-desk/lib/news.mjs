@@ -15,6 +15,7 @@ import { wordsOf, STOP_WORDS } from './topics.mjs';
 import { foldWord } from './targets.mjs';
 import { addDays, daysBetween } from './dates.mjs';
 import { longDate, plain } from './text.mjs';
+import { subjectOf, reportsOf, freshnessOf } from './news-filters.mjs';
 
 // Items from the last 14 days only.
 export const NEWS_DAYS = 14;
@@ -586,24 +587,39 @@ export function topicsIn(text, topics) {
   return [...topics.values()].filter((t) => all(t.words) || t.aliases.some(all)).map((t) => t.key);
 }
 
+// Stories with the same subject key (place, main entity and topic noun: lib/news-filters.mjs) are one
+// story when they ran within this many days of each other.
+export const SUBJECT_GROUP_DAYS = 14;
+
 // Items that are the same story, each group oldest first: their titles overlap strongly (sameStory),
-// or they share one of our topic phrases that can join stories and ran within TOPIC_GROUP_DAYS of each
-// other; joined through any member. The same link twice is one item.
+// they share one of our topic phrases that can join stories and ran within TOPIC_GROUP_DAYS of each
+// other, or their titles have the same subject key and ran within SUBJECT_GROUP_DAYS; joined through
+// any member. The same link twice is one item.
 export function groupStories(items, { topics = null } = {}) {
   const seen = new Set();
   const list = [];
   for (const it of items ?? []) {
     if (!it?.link || seen.has(it.link)) continue;
     seen.add(it.link);
-    list.push({ it, w: storyWords(it.title), t: topics ? topicsIn(it.title, topics) : [] });
+    list.push({
+      it,
+      w: storyWords(it.title),
+      t: topics ? topicsIn(it.title, topics) : [],
+      s: subjectOf(it.title).key,
+    });
   }
   const parent = list.map((_, i) => i);
   const find = (i) => (parent[i] === i ? i : (parent[i] = find(parent[i])));
-  const near = (a, b) => a.it.date && b.it.date && Math.abs(daysBetween(a.it.date, b.it.date)) <= TOPIC_GROUP_DAYS;
+  const within = (a, b, days) => a.it.date && b.it.date && Math.abs(daysBetween(a.it.date, b.it.date)) <= days;
   const sharesTopic = (a, b) => a.t.some((k) => topics.get(k)?.groups && b.t.includes(k));
+  const sameSubject = (a, b) => a.s && a.s === b.s && within(a, b, SUBJECT_GROUP_DAYS);
   for (let i = 0; i < list.length; i++)
     for (let j = i + 1; j < list.length; j++)
-      if (sameStory(list[i].w, list[j].w) || (sharesTopic(list[i], list[j]) && near(list[i], list[j])))
+      if (
+        sameStory(list[i].w, list[j].w) ||
+        (sharesTopic(list[i], list[j]) && within(list[i], list[j], TOPIC_GROUP_DAYS)) ||
+        sameSubject(list[i], list[j])
+      )
         parent[find(j)] = find(i);
   const groups = new Map();
   list.forEach((x, i) => {
@@ -615,26 +631,30 @@ export function groupStories(items, { topics = null } = {}) {
 
 const RISING_BY_OUTLETS = (n) => (n >= 8 ? 5 : n >= 5 ? 4 : n >= 3 ? 3 : n);
 
-// The two parts of the method's score the desk can draft. Relevance (1 to 5) from the tier and how many
-// of its words the story has; Rising (1 to 5) from how many outlets ran it, less one when the latest is
-// three to six days old and two when it is a week or older.
-export function draftScore(tierInfo, outlets, latestDate, today) {
+// The parts of the method's score the desk can draft. Relevance (1 to 5) from the tier and how many of
+// its words the story has; Rising (1 to 5) from how much reporting there is, less one when the latest is
+// three to six days old and two when it is a week or older. Given {reports, fresh} (a story card), Rising
+// counts distinct reports, not reprints, and the draft score is Relevance x Freshness (package 8c);
+// without them it counts outlets and the draft is Relevance x Rising.
+export function draftScore(tierInfo, outlets, latestDate, today, { reports = null, fresh = null } = {}) {
   const n = tierInfo.words.length;
   const relevance = tierInfo.tier === 1 ? Math.min(5, 2 + n) : tierInfo.tier === 2 ? Math.min(3, 1 + n) : 1;
-  const count = outlets.length;
+  const count = reports ? reports.reports : outlets.length;
   // A page with no date of its own is treated as a week old or more.
   const age = latestDate ? daysBetween(latestDate, today) : NEWS_DAYS;
   const less = age >= 7 ? 2 : age >= 3 ? 1 : 0;
   const rising = Math.max(1, Math.min(5, RISING_BY_OUTLETS(count)) - less);
+  const ran = reports
+    ? `${pluralOf(outlets.length, 'outlet', 'outlets')} ran it: ${reports.text}`
+    : `${pluralOf(count, 'outlet', 'outlets')} ran it`;
   return {
     relevance,
     rising,
-    product: relevance * rising,
+    ...(fresh ? { freshness: fresh.freshness, freshnessWhy: fresh.why } : {}),
+    product: relevance * (fresh ? fresh.freshness : rising),
     draft: true,
     relevanceWhy: `${tierText(tierInfo)}.`,
-    risingWhy: latestDate
-      ? `${pluralOf(count, 'outlet', 'outlets')} ran it, the latest on ${longDate(latestDate)}.`
-      : `${pluralOf(count, 'outlet', 'outlets')} ran it, with no date given.`,
+    risingWhy: latestDate ? `${ran}, the latest on ${longDate(latestDate)}.` : `${ran}, with no date given.`,
   };
 }
 
@@ -712,10 +732,26 @@ export function storyCard(group, { today, pasted = false } = {}) {
   // A story is a paid placement only when every outlet is one: a press release copy among real reports
   // is marked on its own outlet line instead.
   const paid = group.every(isPaid);
+  const description = plain(group.find((it) => it.description)?.description ?? '');
+  const lead = `${title} ${description}`;
+  // Distinct reporting (reprints collapse into their source), and the latest report, not reprint.
+  const reports = reportsOf(group);
+  const reportDates = reports.units
+    .map((u) => u.date)
+    .filter(Boolean)
+    .sort();
+  const fresh = freshnessOf({
+    lead,
+    items: group,
+    reports: reports.reports,
+    today,
+    firstDate,
+    latestDate: reportDates[reportDates.length - 1] ?? latestDate,
+  });
   return {
     id: `news:${hash(group[0].link)}`,
     title,
-    description: plain(group.find((it) => it.description)?.description ?? ''),
+    description,
     outlets,
     firstDate,
     latestDate,
@@ -724,7 +760,11 @@ export function storyCard(group, { today, pasted = false } = {}) {
     tier: t.tier,
     tierWords: t.words,
     tierText: tierText(t),
-    score: draftScore(t, outlets, latestDate, today),
+    subject: subjectOf(lead),
+    reports: { reports: reports.reports, reprints: reports.reprints, source: reports.source, text: reports.text },
+    factDate: fresh.factDate,
+    upcoming: fresh.upcoming,
+    score: draftScore(t, outlets, latestDate, today, { reports, fresh }),
     paid,
     ...(paid ? { paidText: PAID_LABEL } : {}),
     pasted,

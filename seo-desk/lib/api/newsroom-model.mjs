@@ -6,7 +6,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { readJson } from '../store.mjs';
+import { readJson, writeJson } from '../store.mjs';
 import { mondayOf, daysBetween } from '../dates.mjs';
 import { longDate, plain } from '../text.mjs';
 import {
@@ -20,8 +20,9 @@ import {
   TO_CHECK,
   PAID_LABEL,
 } from '../news.mjs';
-import { readContent } from '../sources/local.mjs';
-import { memo, itemOf, itemState, repoRoot } from './model.mjs';
+import { hardFilters, repetitionOf, FILTERS } from '../news-filters.mjs';
+import { readContent, readDossierFacts } from '../sources/local.mjs';
+import { memo, itemOf, itemState, repoRoot, pageHold } from './model.mjs';
 
 // What the site has already written and decided: from the local snapshot, or, when that snapshot was
 // read before the desk kept these (a desk just updated), straight from the repo files, so the matching
@@ -31,11 +32,29 @@ export function haveOf(model) {
     const local = model.data.local ?? {};
     let content = local.content;
     let log = local.newsroomLog;
+    let dossier = local.dossierFacts;
+    // A snapshot read before the desk kept each page's facts (package 8c) is read again from the repo,
+    // when the repo gives anything back.
+    if (Array.isArray(content) && content.some((c) => !c?.facts)) {
+      try {
+        const fresh = readContent(repoRoot(), model.today);
+        if (fresh.length) content = fresh;
+      } catch {
+        // keep the snapshot's list
+      }
+    }
     if (!Array.isArray(content)) {
       try {
         content = readContent(repoRoot(), model.today);
       } catch {
         content = [];
+      }
+    }
+    if (dossier === undefined) {
+      try {
+        dossier = readDossierFacts(repoRoot());
+      } catch {
+        dossier = null;
       }
     }
     if (!Array.isArray(log)) {
@@ -45,12 +64,27 @@ export function haveOf(model) {
         log = [];
       }
     }
-    const have = { content, registry: local.registry ?? [], log, plan: local.plan ?? null, today: model.today };
+    const have = {
+      content,
+      registry: local.registry ?? [],
+      log,
+      plan: local.plan ?? null,
+      today: model.today,
+      dossier: dossier ?? null,
+    };
     return { ...have, topics: buildTopics(have) };
   });
 }
 
 export const PASTED_FILE = 'state/news-pasted.json';
+// The person's checks on a card: the results page the founder chose to pay for, and his Can we be
+// first (1 to 5) and Citable hook (0 or 1). {[cardId]: {serp, first, hook, setAt}}.
+export const CHECKS_FILE = 'state/news-checks.json';
+export const loadChecks = () => {
+  const v = readJson(CHECKS_FILE, {});
+  return v && typeof v === 'object' && !Array.isArray(v) ? v : {};
+};
+export const saveChecks = (v) => writeJson(CHECKS_FILE, v);
 export const PASTED_MAX = 50;
 export const MAX_PICKS = 2;
 export const HOLD_DAYS = 7;
@@ -209,15 +243,24 @@ export function newsroomCards(model) {
 
     const cards = [];
     const pastedOther = [];
+    const checks = loadChecks();
+    const holdOf = (page) => pageHold(model, page);
     for (const c of byId.values()) {
       const it = itemOf(model, c.id);
       // A pasted link that is already in the feeds is the feed's card, marked as pasted.
       const withHave = { ...c, pasted: c.pasted || pastedIds.has(c.id), have: matchHave(c, have) };
       const place = placeOf(withHave, it, today, weekOf);
+      // Package 8c: the hard filters, the repetition penalty and the person's checks.
+      const filter = hardFilters(withHave, { pages: have.content, dossier: have.dossier, holdOf });
+      const repeat = repetitionOf(c.subject, { content: have.content, today });
+      const chk = checksOf(checks[c.id], c);
       const card = {
         ...withHave,
         ...place,
-        score: { ...c.score, toCheck: TO_CHECK },
+        filter,
+        repeat,
+        checks: chk,
+        score: scoreOf(c.score, repeat, chk),
         state: itemState(model, c.id),
         picked: isPicked(it, weekOf),
       };
@@ -234,14 +277,52 @@ export function newsroomCards(model) {
       const x = rank.get(c.id);
       if (x) Object.assign(c, { suggested: true, suggestRank: x.rank, suggestWhy: x.why, suggestScore: x.score });
     }
+    // Fresh stories that failed a hard filter: an existing page to update, or filtered out.
+    const fresh = cards.filter((c) => c.tab === 'fresh');
     return {
       cards,
       suggested: suggested.map((x) => cards.find((c) => c.id === x.id)),
+      updates: fresh.filter((c) => c.filter?.group === 'update'),
+      filtered: fresh.filter((c) => c.filter?.group === 'filtered'),
       byId: new Map([...cards, ...pastedOther].map((c) => [c.id, c])),
       weekOf,
       pastedOther,
     };
   });
+}
+
+// The person's checks on one card: the results page list (when the founder paid for one), the query
+// it was run with or the one the subject key suggests, and his two scores (null until he sets them).
+export function checksOf(saved, card) {
+  const s = saved && typeof saved === 'object' ? saved : {};
+  const first = Number.isInteger(s.first) && s.first >= 1 && s.first <= 5 ? s.first : null;
+  const hook = s.hook === 0 || s.hook === 1 ? s.hook : null;
+  return {
+    query: s.serp?.query ?? card.subject?.query ?? '',
+    serp: s.serp ?? null,
+    first,
+    hook,
+    setAt: s.setAt ?? null,
+  };
+}
+
+// The score as the card shows it: the draft (Relevance x Freshness) until both person's checks are
+// set, then all four parts; less the repetition penalty. value never goes below zero.
+export function scoreOf(score, repeat, chk) {
+  const second = score.freshness ?? score.rising;
+  const set = chk.first !== null && chk.hook !== null;
+  const full = set ? score.relevance * second * chk.first * chk.hook : null;
+  const penalty = repeat?.penalty ?? 0;
+  return {
+    ...score,
+    toCheck: TO_CHECK,
+    first: chk.first,
+    hook: chk.hook,
+    full,
+    complete: set,
+    repeatPenalty: penalty,
+    value: Math.max(0, (full ?? score.product) - penalty),
+  };
 }
 
 // ---------------------------------------------------------------- suggested for this week
@@ -251,18 +332,25 @@ const TEXAS = /\btexas\b/i;
 const CAH = /\bcritical access\b/i;
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
-// At most five: the best by draft score among Fresh Tier 1 and 2 cards (Fresh already leaves out what a
-// recent piece covers, what is decided, held, dropped or picked) that are not a paid placement only.
-// Texas or critical access in the story adds one to relevance (Texas is the founder's market). Each
-// says in one line why: "Tier 1, Texas, 6 outlets in 5 days, nothing on our site yet".
+// At most five, never padded: the best among Fresh Tier 1 and 2 cards (Fresh already leaves out what a
+// recent piece covers, what is decided, held, dropped or picked) that pass every hard filter
+// (lib/news-filters.mjs), are not a paid placement only and have not been given a hook of 0. The score
+// is Relevance x Freshness (x Can we be first x Hook once the founder set both), less the repetition
+// penalty; Texas or critical access in the story adds one to relevance (Texas is the founder's market).
+// Each says in one line why: "Tier 1, Texas, 6 reports in 5 days, nothing on our site yet".
 export function suggestionsOf(cards) {
   const scored = [];
   for (const c of cards) {
     if (c.tab !== 'fresh' || c.tier === 3 || c.paid) continue;
+    if (c.filter && !c.filter.passed) continue;
+    if (c.score.hook === 0) continue;
     const text = [c.title, c.description ?? '', ...(c.outlets ?? []).map((o) => o.title ?? '')].join(' ');
     const extra = [TEXAS.test(text) ? 'Texas' : null, CAH.test(text) ? 'critical access' : null].filter(Boolean);
     const relevance = Math.min(5, c.score.relevance + (extra.length ? 1 : 0));
-    scored.push({ c, extra, score: relevance * c.score.rising });
+    const second = c.score.freshness ?? c.score.rising;
+    const person = c.score.complete ? c.score.first * c.score.hook : 1;
+    const score = Math.max(0, relevance * second * person - (c.repeat?.penalty ?? 0));
+    scored.push({ c, extra, score });
   }
   scored.sort(
     (a, b) =>
@@ -279,18 +367,31 @@ export function suggestionsOf(cards) {
 }
 
 function suggestWhy(c, extra) {
-  const n = (c.outlets ?? []).length;
+  // Distinct reports when the card counted them (reprints are not reporting), else outlets.
+  const n = c.reports ? c.reports.reports : (c.outlets ?? []).length;
+  const [one, many] = c.reports ? ['report', 'reports'] : ['outlet', 'outlets'];
   const span = c.firstDate && c.latestDate ? daysBetween(c.firstDate, c.latestDate) + 1 : null;
   const ran =
     n > 1 && span
-      ? `${plural(n, 'outlet', 'outlets')} in ${plural(span, 'day', 'days')}`
-      : `${plural(n, 'outlet', 'outlets')}${c.latestDate ? `, on ${longDate(c.latestDate)}` : ''}`;
+      ? `${plural(n, one, many)} in ${plural(span, 'day', 'days')}`
+      : `${plural(n, one, many)}${c.latestDate ? `, on ${longDate(c.latestDate)}` : ''}`;
   // The have lines are ordered closest first (a shared topic before shared words).
   const close = (c.have ?? []).find((x) => x.kind === 'article' || x.kind === 'post');
   const site = close
     ? `close to ${close.page}${close.publishDate ? ` (${longDate(close.publishDate)})` : ''}: it needs an angle that piece does not have`
     : 'nothing on our site yet';
   return [`Tier ${c.tier}`, ...extra, ran, site].join(', ');
+}
+
+// How many fresh stories each hard filter stopped (a story can fail more than one), in the filters'
+// order: [{filter, name, count}]. Stories sent to "Update an existing page" count under theirs too.
+export function filterCounts(nr) {
+  const failed = [...nr.updates, ...nr.filtered];
+  return Object.entries(FILTERS).map(([filter, name]) => ({
+    filter,
+    name,
+    count: failed.filter((c) => c.filter.reasons.some((r) => r.filter === filter)).length,
+  }));
 }
 
 // This week's picks, as week cards, best draft score first.

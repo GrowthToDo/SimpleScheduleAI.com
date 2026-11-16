@@ -153,7 +153,7 @@ test('scores: relevance from the tier and its words, rising from outlets and how
   );
 });
 
-test('cards: tier 3 is never a card; cards sort by relevance times rising, newest first on ties', () => {
+test('cards: tier 3 is never a card; cards sort by relevance times freshness, newest first on ties', () => {
   const today = '2026-11-16';
   const cards = news.storyCards(
     [
@@ -168,8 +168,10 @@ test('cards: tier 3 is never a card; cards sort by relevance times rising, newes
     cards.map((c) => c.title),
     [
       'Pine county rural hospital nurse staffing review',
-      'Quarry valley rural hospital nurse staffing plan',
+      // Package 8c: a story with no new fact fades after two days, so the six day old Quarry story ties
+      // with the Tier 2 City story, and the newer one goes first.
       'City hospital to close maternity unit',
+      'Quarry valley rural hospital nurse staffing plan',
     ]
   );
   assert.ok(cards.every((c) => /^news:[0-9a-f]{12}$/.test(c.id)));
@@ -431,9 +433,16 @@ test('local: live posts and articles with their titles and dates; drafts and fut
   write('src/data/post/night-shift.md', 'draft: false\npublishDate: 2026-05-01T00:00:00Z\ntitle: "Night shift math"');
   write('src/data/post/draft-one.md', 'draft: true\npublishDate: 2026-11-01T00:00:00Z\ntitle: Draft');
   write('src/data/post/later.md', 'draft: false\npublishDate: 2026-12-01T00:00:00Z\ntitle: Later');
+  const none = { pairs: [], tx: [], numbers: [], sections: [] };
   assert.deepEqual(local.readContent(repo, '2026-11-16'), [
-    { page: '/articles/mesa-grant', kind: 'article', title: "Mesa's grant, explained", publishDate: '2026-11-09' },
-    { page: '/blog/night-shift', kind: 'post', title: 'Night shift math', publishDate: '2026-05-01' },
+    {
+      page: '/articles/mesa-grant',
+      kind: 'article',
+      title: "Mesa's grant, explained",
+      publishDate: '2026-11-09',
+      facts: none,
+    },
+    { page: '/blog/night-shift', kind: 'post', title: 'Night shift math', publishDate: '2026-05-01', facts: none },
   ]);
   assert.deepEqual(local.parseFrontMatter('no front matter'), { title: null, publishDate: null, draft: false });
 });

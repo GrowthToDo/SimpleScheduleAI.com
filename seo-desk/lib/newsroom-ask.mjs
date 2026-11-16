@@ -64,7 +64,8 @@ Rules:
 2. "Rising" means only how many outlets ran a story and on which dates. Never call a story trending, viral or big beyond that.
 3. Every topic is a hypothesis. Mark any citable hook "to verify". Say what must be checked before writing: the live results page for "can we be first", and the primary sources.
 4. When a topic overlaps something already published (an article in the data), name that piece and its date, and say how the new piece would differ. Never suggest a topic the topic log already dropped unless the data shows something new, and say what.
-5. Plain spoken words, short sentences, no em dashes and no en dashes, no headings, no tables, no links, no markdown except "- " list lines.
+5. The desk has already run four hard filters on every story. A story that fails one is never suggested; it is listed under "Filtered out" with its reason, and you never suggest it. The filters: (a) it must apply to a Critical Access Hospital (they are paid on cost and exempt from OPPS and IPPS, so OPPS, IPPS, Physician Fee Schedule, nursing home and PBJ stories fail unless they name critical access hospitals); (b) it must not already be covered (a live page of ours carrying its number, rule section, or program and measure means it is an update to that page, not a new article); (c) a Texas angle must exist (a story about another state and not Texas fails, unless our pages hold the Texas figure); (d) a quotable primary source must be able to exist (a contract still in talks or a tentative deal with no public terms fails, as does a story only paywalled outlets ran).
+6. Plain spoken words, short sentences, no em dashes and no en dashes, no headings, no tables, no links, no markdown except "- " list lines.
 
 Answer in this shape, at most three topics, best first:
 Topic 1: <the story's title exactly as the data gives it>
@@ -80,13 +81,17 @@ Would drop: <one line on anything in the data you would drop this week, and why>
 const line = (s) => plain(String(s ?? '').replace(/\s+/g, ' '));
 
 // The data block: the top fresh cards, our articles, the topic log of the last 90 days, the plan.
+// Stories stopped by a hard filter that are listed with their reason (the best scored first).
+export const TOPIC_FILTERED = 30;
+
 export function topicData({ cards = [], suggested = [], content = [], log = [], plan = null, today }) {
   const L = [];
+  const passes = (c) => !c.filter || c.filter.passed;
   const fresh = [
     ...suggested,
-    ...cards.filter((c) => c.tab === 'fresh' && !suggested.some((s) => s.id === c.id)),
+    ...cards.filter((c) => c.tab === 'fresh' && passes(c) && !suggested.some((s) => s.id === c.id)),
   ].slice(0, TOPIC_CARDS);
-  L.push(`Fresh stories from the last 14 days, best draft score first (${fresh.length}):`);
+  L.push(`Fresh stories from the last 14 days that pass every hard filter, best draft score first (${fresh.length}):`);
   fresh.forEach((c, i) => {
     const outlets = (c.outlets ?? [])
       .slice(0, 8)
@@ -97,11 +102,24 @@ export function topicData({ cards = [], suggested = [], content = [], log = [], 
     L.push(`${i + 1}. ${line(c.title)}`);
     L.push(`   ${line(c.tierText)}. ${(c.outlets ?? []).length} outlets, ${dates}: ${outlets.join('; ')}${more}.`);
     if (c.suggestWhy) L.push(`   The desk suggests it: ${line(c.suggestWhy)}.`);
+    if (c.reports?.text) L.push(`   Reporting: ${line(c.reports.text)}.`);
+    if (c.score?.freshnessWhy) L.push(`   Freshness ${c.score.freshness} of 5: ${line(c.score.freshnessWhy)}`);
+    if (c.repeat?.text) L.push(`   ${line(c.repeat.text)}`);
     if (c.paid) L.push('   A press release or paid placement: not citable as a peg.');
     L.push(
       `   We have: ${(c.have ?? []).length ? c.have.map((x) => line(x.text)).join('; ') : 'nothing the desk could match'}.`
     );
   });
+  L.push('');
+  const stopped = cards.filter((c) => c.tab === 'fresh' && !passes(c));
+  L.push(
+    `Filtered out by the desk's hard filters (${stopped.length}${stopped.length > TOPIC_FILTERED ? `, the first ${TOPIC_FILTERED} shown` : ''}). Never suggest these:`
+  );
+  for (const c of stopped.slice(0, TOPIC_FILTERED)) {
+    L.push(`- ${line(c.title)}`);
+    for (const r of c.filter.reasons) L.push(`   ${line(r.name)}: ${line(r.text)}`);
+    if (c.filter.update) L.push(`   ${line(c.filter.update.text)}`);
+  }
   L.push('');
   const articles = content.filter((c) => c.kind === 'article');
   L.push(`Our published Newsroom articles (${articles.length}):`);

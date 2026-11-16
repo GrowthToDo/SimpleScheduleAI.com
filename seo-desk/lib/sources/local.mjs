@@ -19,6 +19,7 @@ import { AI_CRAWLERS, robotsAllows } from '../robots.mjs';
 import { refreshGoogleUpdates } from '../google-updates.mjs';
 import { parseDossierLog } from '../competitor-changes.mjs';
 import { parseTopicLog } from '../news.mjs';
+import { pageFacts } from '../news-filters.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const DEFAULT_REPO_ROOT = path.resolve(HERE, '../../..');
@@ -288,7 +289,9 @@ export function parseFrontMatter(text) {
 }
 
 // Every live post and article in the repo (draft: false, published on or before today):
-// [{page, kind: 'post' | 'article', title, publishDate}], newest first.
+// [{page, kind: 'post' | 'article', title, publishDate, facts}], newest first. facts: the numbers, rule
+// sections and program and measure pairs the page carries (lib/news-filters.mjs pageFacts), for the
+// Newsroom's "not already covered" check.
 export function readContent(repoRoot, today) {
   const out = [];
   for (const [dir, kind] of [
@@ -302,12 +305,25 @@ export function readContent(repoRoot, today) {
       continue;
     }
     for (const n of names) {
-      const fm = parseFrontMatter(readText(path.join(repoRoot, dir, n)));
+      const text = readText(path.join(repoRoot, dir, n));
+      const fm = parseFrontMatter(text);
       if (fm.draft || !fm.title || (fm.publishDate && today && fm.publishDate > today)) continue;
-      out.push({ page: pageOfFile(`${dir}/${n}`), kind, title: fm.title, publishDate: fm.publishDate });
+      out.push({
+        page: pageOfFile(`${dir}/${n}`),
+        kind,
+        title: fm.title,
+        publishDate: fm.publishDate,
+        facts: pageFacts(text),
+      });
     }
   }
   return out.sort((a, b) => String(b.publishDate).localeCompare(String(a.publishDate)) || a.page.localeCompare(b.page));
+}
+
+// The facts the facts dossier holds, in the same shape as a page's, or null when it cannot be read.
+export function readDossierFacts(repoRoot) {
+  const text = readText(path.join(repoRoot, 'docs/seo/facts-dossier.md'));
+  return text === null ? null : pageFacts(text);
 }
 
 const SITE_HOST_RE = /^https?:\/\/(?:www\.)?simplescheduleai\.com/i;
@@ -698,6 +714,7 @@ export async function pullLocal({
     () => parseTopicLog(readText(seo('articles-trendjacking-plan.md')) ?? ''),
     []
   );
+  const dossierFacts = attempt('dossierFacts', () => readDossierFacts(repoRoot), null);
 
   const snapDir = seo('competitor-snapshots');
   const snapshotUrl = (key) => {
@@ -791,6 +808,7 @@ export async function pullLocal({
       openWork,
       content,
       newsroomLog,
+      dossierFacts,
       competitors: { sitemap, watch, lastRun, snapshots, dossierLog },
       edits,
       contentEdits,
