@@ -254,9 +254,13 @@ export function readPage(html, url) {
   } catch {
     // no host
   }
+  const publisher = metaOf(h, ['og:site_name']) ?? (host || null);
+  // "Story title | The Ledger": the site's own name at the end of the title is the publisher, not the title.
+  const esc = String(publisher ?? '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const clean = title && publisher ? title.replace(new RegExp(`\\s+[|\\-:]\\s+${esc}\\s*$`, 'i'), '').trim() : title;
   return {
-    title: title || null,
-    publisher: metaOf(h, ['og:site_name']) ?? (host || null),
+    title: clean || title || null,
+    publisher,
     date: feedDate(metaOf(h, ['article:published_time', 'datePublished', 'pubdate', 'date']) ?? ''),
     description: metaOf(h, ['og:description', 'description', 'twitter:description']) ?? '',
   };

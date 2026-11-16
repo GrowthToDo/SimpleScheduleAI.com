@@ -559,6 +559,11 @@ test('paste: the title, publisher and date come from the page', () => {
     date: '2026-11-13',
     description: 'A county clinic story.',
   });
+  const suffixed = pf.readPage(
+    '<meta property="og:title" content="Clinic adds beds | The Valley Ledger"><meta property="og:site_name" content="The Valley Ledger">',
+    'https://ledger.example/a'
+  );
+  assert.equal(suffixed.title, 'Clinic adds beds', "the site's own name at the end of a title is the publisher");
   const bare = pf.readPage('<title>Only a title</title>', 'https://www.ledger.example/story');
   assert.deepEqual(bare, { title: 'Only a title', publisher: 'ledger.example', date: null, description: '' });
 });

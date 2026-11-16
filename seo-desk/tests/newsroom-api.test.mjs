@@ -393,6 +393,18 @@ test('paste: a public page becomes a card with the same tier, checks and labels'
   assert.equal(v.cards.find((c) => c.id === r.json.card.id).tab, 'fresh');
 });
 
+test('paste: a link that is already in the feeds is the feed card, marked as pasted', async () => {
+  seed();
+  answer = '93.184.216.34';
+  const id = byTitle(await view(), 'Harbor county').id;
+  const link = ITEMS.find((x) => x.title.startsWith('Harbor county')).link;
+  const r = await post('/api/newsroom/paste', { url: link });
+  assert.equal(r.status, 200);
+  assert.equal(r.json.card.id, id);
+  assert.equal(r.json.card.pasted, true);
+  assert.equal((await view()).cards.filter((c) => c.id === id).length, 1);
+});
+
 test('paste: a private address is refused after the lookup, and no request is made', async () => {
   seed();
   answer = '10.0.0.7';

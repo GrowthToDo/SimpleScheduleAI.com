@@ -149,6 +149,7 @@ export function newsroomCards(model) {
       const known = c.outlets.map((o) => idOfLink.get(normUrl(o.url))).find(Boolean);
       add(known && !byId.has(known) ? { ...c, id: known } : c);
     }
+    const pastedIds = new Set(loadPasted().map((p) => p.id));
     for (const p of loadPasted()) {
       const items = [
         { title: p.title, link: p.url, date: p.date ?? null, publisher: p.publisher, description: p.description ?? '' },
@@ -176,7 +177,8 @@ export function newsroomCards(model) {
     const pastedOther = [];
     for (const c of byId.values()) {
       const it = itemOf(model, c.id);
-      const withHave = { ...c, have: matchHave(c, have) };
+      // A pasted link that is already in the feeds is the feed's card, marked as pasted.
+      const withHave = { ...c, pasted: c.pasted || pastedIds.has(c.id), have: matchHave(c, have) };
       const place = placeOf(withHave, it, today, weekOf);
       const card = {
         ...withHave,
