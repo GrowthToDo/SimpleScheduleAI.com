@@ -82,7 +82,7 @@ Four names come up in every nursing curriculum. The table compares what each nee
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Functional nursing</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">By task. One person does the medication pass for everyone, another does the dressings.</td>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Enough staff on the floor to specialize, and a mix of license types to delegate across.</td>
-        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Not available. Two people cannot each own a separate task line and still cover the floor.</td>
+        <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800">Not available. Two people cannot each take a separate set of tasks for every patient and still cover the floor.</td>
       </tr>
       <tr>
         <td class="px-3 py-2 border-b border-slate-100 dark:border-slate-800 font-medium">Team nursing</td>
@@ -126,7 +126,7 @@ The review found that studies comparing team nursing with the other models saw n
 
 ## What Is Total Patient Care Nursing?
 
-Total patient care gives one nurse all of the care for a few patients for one shift. The Beckett review calls it the patient allocation model: "an individual nurse cares for a small number of patients for one shift."
+Total patient care gives one nurse all of the care for a few patients for one shift. The Beckett review calls it the patient allocation model, which is another name for the same thing: "an individual nurse cares for a small number of patients for one shift."
 
 At a small hospital, total patient care is the usual pattern on a night when only two licensed nurses are on. Each nurse has to be able to do everything their patients need, from medications to assessments, since there is nobody to hand a task to. Cross-training and current competency records matter a great deal under total patient care for that reason.
 
@@ -140,7 +140,7 @@ Running primary nursing takes a written assignment that names the accountable nu
 
 On nights, most likely total patient care, and not because anyone chose it.
 
-Take a night shift at a 25-bed hospital with a census of nine. Two licensed nurses cover the inpatient floor, the emergency department and the swing beds. Put one of them on medications for everybody and a single nurse is left covering the building. Call them a team and they are still two people in two places. So each nurse takes their own patients and does everything for them, which is total patient care reached by ruling out the other three.
+Take a night shift at a 25-bed hospital with a census of nine. Two licensed nurses cover the inpatient floor, the emergency department and the swing beds. If one nurse gives the medications to every patient, the other nurse is left covering the rest of the building alone. Calling the two of them a team does not change that they are two people in two places. So each nurse takes their own patients and does everything for them, which is total patient care reached by ruling out the other three.
 
 A model adopted on paper still needs the conditions it assumed. Naming your model "team nursing" does not create a team, and the benefits described in the literature have nothing to work with if the staff those benefits depend on are not on the floor.
 
@@ -152,15 +152,15 @@ Three rules survive every model choice. Two are federal and sit in neighboring s
 
 **Who must be on duty: an RN is not federally required.** [42 CFR 485.631(a)(5)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.631) requires that "a registered nurse, clinical nurse specialist, or licensed practical nurse is on duty whenever the CAH has one or more inpatients." Read alone, that permits a licensed practical nurse to be the one on duty overnight.
 
-**What the RN must do: assign and supervise, always.** [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) says a registered nurse must "provide (or assign to other personnel) the nursing care of each patient," and that "a registered nurse or, where permitted by State law, a physician assistant, must supervise and evaluate the nursing care for each patient." The rule names swing-bed patients specifically, so a quiet swing bed does not fall outside it. This is the answer to a question worth settling: the delegation that functional and team nursing rely on is not something a model grants you. It is already required.
+**What the RN must do: provide or assign, and supervise, always.** [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635) says a registered nurse must "provide (or assign to other personnel) the nursing care of each patient," and that "a registered nurse or, where permitted by State law, a physician assistant, must supervise and evaluate the nursing care for each patient." The rule names swing-bed patients specifically, so a quiet swing bed does not fall outside it. So the delegation that functional and team nursing rely on is not something a model grants you. Federal rules already require the RN to provide the care or assign it to others, and to supervise it.
 
 **Texas then requires the RN on site.** [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) says: "An RN shall be on duty in each building of a licensed hospital that contains at least one nursing unit where patients are present."
 
 **Meeting the federal on-duty rule with a licensed practical nurse alone does not meet the Texas rule** when a building holds patients. That is the practical finding, and it is worth checking against your own schedule. Our guide to [staying CMS compliant through the schedule](/blog/how-to-stay-cms-compliant-nurse-scheduling) covers the records a surveyor asks for alongside it.
 
-There is a limit to how far an article can take this, and it is worth being straight about where it stops. The rule depends on which parts of your hospital count as a nursing unit, and that depends on how your buildings are licensed and laid out. An emergency department is the case where hospitals differ most.
+This article cannot settle one part of the Texas rule for you. The rule depends on which parts of your hospital count as a nursing unit, and that depends on how your buildings are licensed and laid out. An emergency department is the case where hospitals differ most.
 
-At a hospital this size there is often nobody to refer that upward to. So rather than telling you to check with compliance, here is the question to ask, whether you put it to your CNO, your licensing file, or Texas HHSC directly: **which areas of our licensed premises count as nursing units under 505.41(o)(2)(D), and does an RN have to be physically present in each of those buildings overnight?** That question has an answer. "Are we compliant?" does not.
+At a hospital this size there is often nobody to refer that upward to. So rather than telling you to check with compliance, here is the question to ask, whether you put it to your CNO, your licensing file, or the Texas Health and Human Services Commission (HHSC) directly: **which areas of our licensed premises count as nursing units under 505.41(o)(2)(D), and does an RN have to be physically present in each of those buildings overnight?** That question has an answer. "Are we compliant?" does not.
 
 **Texas also spells out how assignments must be made.** The same subsection continues: "The RN shall supervise and evaluate the nursing care for each patient and assign the nursing care to other nursing personnel in accordance with the patient's needs and the specialized qualifications and competence of the nursing staff available."
 
@@ -172,7 +172,7 @@ No, and the handbook that catalogues the models says so itself: "What is glaring
 
 What research there is points at resourcing rather than labels. [Thériault and colleagues](https://pmc.ncbi.nlm.nih.gov/articles/PMC6650648/) grouped 40 acute care units in Quebec by how well staffed they were rather than by which model they claimed, and the least resourced group "relied mainly on less qualified personnel and agency staff." That study is Canadian and describes resourcing, not care models, so read it as a picture of how staffing varies rather than a ranking to copy.
 
-The practical use of all this is defensive. If anyone proposes moving your unit onto a named model, no published evidence says it will help, and you are entitled to ask what the proposal puts on the floor that is not there now.
+What you can do with this research is push back. If anyone proposes moving your unit onto a named model, no published evidence says it will help, and you are entitled to ask what the proposal puts on the floor that is not there now.
 
 ## How Does SimpleScheduleAI Handle Skill Mix?
 
@@ -220,7 +220,7 @@ Total patient care is usually the only one left standing, because the other thre
 
 **Q: What is the difference between a staffing model and a nurse-to-patient ratio?**
 
-A ratio says how many patients one nurse carries. A staffing model says how the work for those patients is divided among the people on shift. You can run any of the four models at any ratio, and a ratio mandate does not tell you which model to use.
+A ratio says how many patients one nurse carries. A staffing model says how the work for those patients is divided among the people on shift. You can run any of the four models at any ratio, and a law that sets a ratio does not tell you which model to use.
 
 **Q: Can a licensed practical nurse cover a night shift on their own?**
 

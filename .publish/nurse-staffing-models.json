@@ -5,57 +5,57 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:50:13.589Z",
-      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
+      "checkedAt": "2026-11-16T11:54:54.007Z",
+      "contentHash": "733dee79efc1305bdd246bc18a7eb837b570d051baf729d7f649d403e8748378"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:50:13.966Z",
-      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
+      "checkedAt": "2026-11-16T11:54:54.386Z",
+      "contentHash": "733dee79efc1305bdd246bc18a7eb837b570d051baf729d7f649d403e8748378"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:50:14.950Z",
-      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
+      "checkedAt": "2026-11-16T11:54:55.404Z",
+      "contentHash": "733dee79efc1305bdd246bc18a7eb837b570d051baf729d7f649d403e8748378"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:50:14.967Z",
-      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
+      "checkedAt": "2026-11-16T11:54:55.427Z",
+      "contentHash": "733dee79efc1305bdd246bc18a7eb837b570d051baf729d7f649d403e8748378"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:50:14.974Z",
-      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
+      "checkedAt": "2026-11-16T11:54:55.437Z",
+      "contentHash": "733dee79efc1305bdd246bc18a7eb837b570d051baf729d7f649d403e8748378"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:50:14.974Z",
-      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
+      "checkedAt": "2026-11-16T11:54:55.437Z",
+      "contentHash": "733dee79efc1305bdd246bc18a7eb837b570d051baf729d7f649d403e8748378"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:50:14.975Z",
-      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
+      "checkedAt": "2026-11-16T11:54:55.438Z",
+      "contentHash": "733dee79efc1305bdd246bc18a7eb837b570d051baf729d7f649d403e8748378"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:50:14.976Z",
-      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
+      "checkedAt": "2026-11-16T11:54:55.439Z",
+      "contentHash": "733dee79efc1305bdd246bc18a7eb837b570d051baf729d7f649d403e8748378"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer (re-check 2026-11-16: READY-TO-PUBLISH)",
-      "setAt": "2026-11-16T11:45:48.000Z",
-      "contentHash": "fc1fd8c135064c0c363a904073bb4171619db552ed803c65663387617f5d29c0"
+      "setBy": "feature-dev:code-reviewer (after cold-read fixes 2026-11-16: READY-TO-PUBLISH)",
+      "setAt": "2026-11-16T11:54:53.638Z",
+      "contentHash": "a02e6d7fe742dbe86b493b633b23f6dda067b40c626a2d4b5a6bc9a1d2c64238"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "feature-dev:code-reviewer (FACTS PASS vs dossier; quotes read at PMC8450812 by main session)",
-      "setAt": "2026-11-16T11:45:48.129Z",
-      "contentHash": "fc1fd8c135064c0c363a904073bb4171619db552ed803c65663387617f5d29c0"
+      "setBy": "feature-dev:code-reviewer (FACTS PASS after 485.635(d) wording fix)",
+      "setAt": "2026-11-16T11:54:53.771Z",
+      "contentHash": "a02e6d7fe742dbe86b493b633b23f6dda067b40c626a2d4b5a6bc9a1d2c64238"
     },
     "founderApproval": {
       "value": "YES",
@@ -82,5 +82,141 @@
       "contentHash": "fc1fd8c135064c0c363a904073bb4171619db552ed803c65663387617f5d29c0"
     }
   },
-  "overrides": []
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 62.8,
+        "headings": 92.3,
+        "actionability": 50,
+        "attention": 84.6
+      },
+      "overall": 66.9,
+      "counts": {
+        "sections": 13,
+        "rereads": 16,
+        "undefinedTerms": 13,
+        "headingsAnswered": 12,
+        "mondayActions": 4,
+        "blockedActions": 4,
+        "quitPoints": 2
+      },
+      "icp": "Nurse manager at a 25-bed rural hospital, reading once on a phone between shifts",
+      "publishDate": "2026-08-28T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "nursing unit (the whole Texas rule turns on it, and the post says it depends on licensing and layout without saying what counts)",
+          "building / licensed premises (is the ED its own building, is the swing-bed wing)",
+          "HHSC (named as someone to ask, never spelled out or given a contact)",
+          "licensed nurse on duty (versus 'on duty in each building' - used as if the same thing)",
+          "patient allocation model",
+          "continuity by coincidence",
+          "task line (table, functional nursing row)",
+          "ratio mandate (FAQ)",
+          "the Beckett review (what it is, who, why it counts)",
+          "485.631 and 485.635 and 505.41(o)(2)(D) used as names for ideas before they are explained",
+          "what skill mix is 'rated' on (SimpleScheduleAI section)",
+          "competency sign-off / 'current enough' (no standard)",
+          "charge-qualified versus approved for charge"
+        ],
+        "mondayActions": [
+          "pull the last published schedule and check each overnight for an RN on duty",
+          "write down who is approved to take charge and see whether the list is longer than two",
+          "look up the date of the last competency sign-off in the file",
+          "if anyone proposes a named staffing model, ask which additional people will be on the floor"
+        ],
+        "blockedActions": [
+          "decide which areas count as nursing units and whether the ED needs its own RN overnight (post says it depends, gives a question to ask but no person to ask and no answer)",
+          "count nights, weekends and holidays per person for three months (no source named for that data, no how-to, and no way to pull it on a Monday)",
+          "expand the charge-eligible list past two names (a training decision, no steps, no timeline)",
+          "judge whether competency records are 'current enough' (no standard, one year-old example only)"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is a Nurse Staffing Model?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Are the Four Traditional Nursing Care Models?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Functional Nursing?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Team Nursing?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Total Patient Care Nursing?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Primary Nursing?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Which Model Does a Small Hospital Actually Run?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Do the Rules Require Whichever Model You Pick?",
+            "rereadCount": 4,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Does the Research Say One Model Is Better?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Handle Skill Mix?",
+            "rereadCount": 2,
+            "answeredItsQuestion": false,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-11-16T11:53:45.643Z",
+      "contentHash": "fc1fd8c135064c0c363a904073bb4171619db552ed803c65663387617f5d29c0"
+    }
+  }
 }
