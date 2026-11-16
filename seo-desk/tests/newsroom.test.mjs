@@ -614,3 +614,43 @@ test('page: the draft score reads as four lines, two of them to check', () => {
     'Feeds read D(2026-11-16), 2 hours ago. 17 of 18 feeds answered. Did not answer: Broken.'
   );
 });
+
+test('log: a pass whose dropped list sits under the next HELD heading, a two-line bold title, a WRITING note', () => {
+  const md = `### Detection pass 2026-10-07 (links)
+
+### HELD - Pine valley nurse resignations
+
+- **Held on:** 2026-10-07, founder.
+- **Guardrails:** stay neutral.
+
+Dropped, with reasons:
+
+- **Harbor clinic data breach** (Journal 2026-09-28):
+  score 0. Breach was old data theft with no outage.
+
+### Detection pass 2026-11-06 (link)
+
+- **DROPPED - Gadget Weekly "rural clinics can excel at security
+  recruitment"** (Gadget Weekly, November 2026). Score 0: Relevance 2 x Hook 0. The piece is about IT
+  staff (a $3.9M average cost, October 2025). Another sentence.
+- **WRITING (founder go 2026-11-06) - \`/articles/mesa-valley-clinic-grant\`.** The research said so.
+
+### DROPPED - Market report on clinic software
+
+- **Dropped on:** 2026-09-18. **Reason:** citable-hook score 0, an automatic fail. More text.
+`;
+  const log = news.parseTopicLog(md);
+  assert.deepEqual(
+    log.map((e) => [e.status, e.date, e.title]),
+    [
+      ['HELD', '2026-10-07', 'Pine valley nurse resignations'],
+      ['DROPPED', '2026-10-07', 'Harbor clinic data breach'],
+      ['DROPPED', '2026-11-06', 'Gadget Weekly "rural clinics can excel at security recruitment"'],
+      ['WRITING', '2026-11-06', '/articles/mesa-valley-clinic-grant.'],
+      ['DROPPED', '2026-09-18', 'Market report on clinic software'],
+    ]
+  );
+  assert.equal(log[4].reason, 'Citable-hook score 0, an automatic fail.');
+  assert.equal(log[1].reason, 'Breach was old data theft with no outage.');
+  assert.equal(log[2].reason, 'The piece is about IT staff (a $3.9M average cost, October 2025).');
+});

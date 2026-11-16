@@ -494,7 +494,8 @@ export function storyCards(items, { today }) {
 
 // ---------------------------------------------------------------- the topic log
 
-const STATUS_RE = /^(HELD|PARKED|DROPPED|WRITING)\s*-\s*/;
+// "HELD - title", and "WRITING (founder go 2026-10-29) - title".
+const STATUS_RE = /^(HELD|PARKED|DROPPED|WRITING)\b(?:\s*\([^)]*\))?\s*-\s*/;
 const URL_RE = /https:\/\/[^\s)>\]"']+/g;
 const STATUS_DATE = {
   HELD: /\*\*Held on:\*\*\s*(\d{4}-\d{2}-\d{2})/,
@@ -511,28 +512,58 @@ const cleanMd = (s) =>
   );
 const linksIn = (s) => [...new Set((String(s).match(URL_RE) ?? []).map((u) => u.replace(/[.,;:]+$/, '')))];
 
-// The reason after a log bullet's bold title: a leading "(outlet, date)" and "score 0 ..." go.
+// The reason after a log bullet's bold title: a leading "(outlet, date)" and "score 0 ..." go, then the
+// first sentence (a sentence ends at a stop followed by a space and a capital, so "$3.9M" stays whole).
 function reasonOf(rest) {
   let r = cleanMd(rest)
     .replace(/^\s*\([^)]*\)\s*/, '')
     .replace(/^[:.\s]*score\s+\d+\b[^.]*\.\s*/i, '')
     .replace(/^[:.\s]+/, '');
-  const sentences = r.match(/[^.!?]+[.!?]+(\s|$)/g) ?? [r];
-  r = sentences[0]?.trim() ?? '';
+  r = r.split(/(?<=[.!?])\s+(?=[A-Z0-9"'(])/)[0]?.trim() ?? '';
   if (r.length > 220) r = `${r.slice(0, 217).replace(/\s+\S*$/, '')}...`;
-  return r || null;
+  return r ? `${r[0].toUpperCase()}${r.slice(1)}` : null;
+}
+
+// The bullets of a section, each with its indented continuation lines joined on.
+function bulletsOf(lines) {
+  const out = [];
+  for (const line of lines) {
+    if (/^- /.test(line)) out.push(line.slice(2));
+    else if (/^\s+\S/.test(line) && out.length && out[out.length - 1] !== null)
+      out[out.length - 1] += ` ${line.trim()}`;
+    else if (line.trim()) out.push(null);
+  }
+  return out.filter(Boolean);
+}
+
+// A bullet that records a decision: its bold title starts with a status, or the bullet scores 0 (dropped).
+function bulletEntry(b, date) {
+  const m = /^\*\*(.+?)\*\*(.*)$/.exec(b);
+  if (!m) return null;
+  const head = m[1].trim();
+  // A label such as "**Dropped on:**" or "**Reason:**" is a field of its heading's entry, not an entry.
+  if (head.endsWith(':')) return null;
+  const status = STATUS_RE.exec(head)?.[1] ?? (/\bscore\s+0\b/i.test(m[2]) ? 'DROPPED' : null);
+  if (!status) return null;
+  return {
+    status,
+    title: cleanMd(head.replace(STATUS_RE, '')),
+    date,
+    reason: status === 'DROPPED' ? reasonOf(m[2]) : null,
+    links: linksIn(b),
+  };
 }
 
 // Every decision the log records: [{status, title, date, reason, links}]. Status is HELD, PARKED,
 // DROPPED or WRITING. A "### STATUS - title" heading is one entry (its date from "Held on" and the
-// like, its reason from "Reason:"); inside a "### Detection pass YYYY-MM-DD" heading, each bullet with
-// a bold title is one entry when the title starts with a status or the bullet scores 0 (dropped).
+// like, its reason from "Reason:"). Under a "### Detection pass YYYY-MM-DD" heading, and under any heading
+// after one (a pass's dropped list can sit under the next HELD heading), each bullet with a bold title is
+// one entry, dated by that pass, when the title starts with a status or the bullet scores 0 (dropped).
 export function parseTopicLog(md) {
   const out = [];
-  const lines = String(md ?? '').split(/\r?\n/);
   const sections = [];
   let cur = null;
-  for (const line of lines) {
+  for (const line of String(md ?? '').split(/\r?\n/)) {
     const h = /^###\s+(.*)$/.exec(line);
     if (h) {
       cur = { head: h[1].trim(), lines: [] };
@@ -541,44 +572,26 @@ export function parseTopicLog(md) {
       cur = null;
     } else if (cur) cur.lines.push(line);
   }
+  let pass = null;
   for (const s of sections) {
     const body = s.lines.join('\n');
     const status = STATUS_RE.exec(s.head)?.[1];
+    const passDate = /^Detection pass\s+(\d{4}-\d{2}-\d{2})/i.exec(s.head)?.[1];
+    if (passDate) pass = passDate;
     if (status) {
-      const date = STATUS_DATE[status]?.exec(body)?.[1] ?? null;
       const reason = /\*\*Reason:\*\*\s*([^\n]+(?:\n\s+[^\n-][^\n]*)*)/.exec(body)?.[1];
       out.push({
         status,
         title: cleanMd(s.head.replace(STATUS_RE, '')),
-        date,
+        date: STATUS_DATE[status]?.exec(body)?.[1] ?? null,
         reason: reason ? reasonOf(reason) : null,
         links: linksIn(body),
       });
-      continue;
     }
-    const pass = /^Detection pass\s+(\d{4}-\d{2}-\d{2})/i.exec(s.head);
     if (!pass) continue;
-    // Bullets with their indented continuation lines.
-    const bullets = [];
-    for (const line of s.lines) {
-      if (/^- /.test(line)) bullets.push(line.slice(2));
-      else if (/^\s+\S/.test(line) && bullets.length) bullets[bullets.length - 1] += ` ${line.trim()}`;
-      else if (!line.trim()) continue;
-      else bullets.push(null);
-    }
-    for (const b of bullets.filter(Boolean)) {
-      const m = /^\*\*(.+?)\*\*(.*)$/.exec(b);
-      if (!m) continue;
-      const head = m[1].trim();
-      const st = STATUS_RE.exec(head)?.[1] ?? (/\bscore\s+0\b/i.test(m[2]) ? 'DROPPED' : null);
-      if (!st) continue;
-      out.push({
-        status: st,
-        title: cleanMd(head.replace(STATUS_RE, '')),
-        date: pass[1],
-        reason: st === 'DROPPED' ? reasonOf(m[2]) : null,
-        links: linksIn(b),
-      });
+    for (const b of bulletsOf(s.lines)) {
+      const e = bulletEntry(b, pass);
+      if (e) out.push(e);
     }
   }
   return out;
