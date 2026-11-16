@@ -13,7 +13,9 @@
 // Pure parts, tested in tests/newsroom.test.mjs (no browser needed):
 //   tabOf(params)            the tab the address asks for (Fresh when none or an unknown one)
 //   safeHref(url)            the address when it is https, else null (the outlet is then plain text)
-//   scoreLines(card)         the draft score as four lines
+//   scoreLines(card)         the score as lines: four for an old card, five or six with Freshness
+//   filterLines(card)        why a story was stopped by a hard filter, one line per filter
+//   filterCountsLine(list)   how many fresh stories each hard filter stopped
 //   actionsFor(card)         which buttons a card offers, main one first
 //   feedsLine(feeds, fmt)    when the feeds were read and how many answered
 //   askedLine(latest, fmt)   when Claude was asked for this week's topic and how long it took
@@ -21,6 +23,12 @@
 //
 // Package 8b: "Suggested for this week" (at most five, each with why) sits at the top, "Ask Claude for
 // this week's topic" under it, and every story of the last 14 days is folded below, in its tabs.
+//
+// Package 8c: only stories that pass the four hard filters are suggested. "Update an existing page" and
+// "Filtered out" (folded, with counts by filter) come next. Each card shows its subject, its reporting
+// (reprints are not reports), Freshness, the filters' verdict, any repetition, and "Your checks": Check
+// the results page (it costs money: it asks first with the cost, never runs on its own) and the
+// founder's Can we be first and Citable hook.
 
 import { renderAnswer } from './ask.js';
 
@@ -46,11 +54,36 @@ export const safeHref = (url) => (/^https:\/\/[^\s]+$/i.test(String(url ?? '')) 
 
 export function scoreLines(card) {
   const s = card?.score ?? {};
+  if (s.freshness !== undefined && s.freshness !== null) {
+    const how = Object.fromEntries((s.toCheck ?? []).map((t) => [t.name, t.how]));
+    const total = s.complete
+      ? `Score ${s.full}: Relevance x Freshness x Can we be first x Citable hook.`
+      : `Draft score ${s.product}: Relevance x Freshness. The other two are your checks.`;
+    return [
+      `Relevance ${s.relevance} of 5: ${String(card?.tierText ?? '').replace(/\.$/, '')}.`,
+      `Freshness ${s.freshness} of 5: ${s.freshnessWhy ?? ''}`.trim(),
+      `Reporting: ${s.risingWhy ?? ''}`.trim(),
+      s.first !== null && s.first !== undefined
+        ? `Can we be first ${s.first} of 5: your check.`
+        : `Can we be first: a person's check. ${how['Can we be first'] ?? ''}`.trim(),
+      s.hook !== null && s.hook !== undefined
+        ? `Citable hook ${s.hook}: your check.`
+        : `Citable hook: a person's check. ${how['Citable hook'] ?? ''}`.trim(),
+      s.repeatPenalty ? `${total} Less ${s.repeatPenalty} for repetition: ${s.value}.` : total,
+    ];
+  }
   return [
     `Relevance ${s.relevance} of 5: ${String(card?.tierText ?? '').replace(/\.$/, '')}.`,
     `Rising ${s.rising} of 5: ${s.risingWhy ?? ''}`.trim(),
     ...(s.toCheck ?? []).map((t) => `${t.name}: to check. ${t.how}`),
   ];
+}
+
+export const filterLines = (card) => (card?.filter?.reasons ?? []).map((r) => `${r.name}: ${r.text}`);
+
+export function filterCountsLine(list) {
+  const parts = (list ?? []).filter((f) => f.count).map((f) => `${f.name}: ${f.count}`);
+  return parts.length ? `Stopped by each filter (a story can fail more than one): ${parts.join('. ')}.` : null;
 }
 
 // The buttons a card offers, main one first: brief, pick, unpick, published, hold, drop, reopen.
@@ -90,6 +123,15 @@ const CSS = `
 .nr-answer { margin-top: 12px; }
 .nr-picks { margin: 12px 0 4px; }
 .nr-card details summary { cursor: pointer; color: var(--muted); margin: 4px 0; }
+.nr-checks { margin-top: 10px; display: grid; gap: 8px; }
+.nr-checks label { display: grid; gap: 4px; font-size: 14px; min-width: 0; }
+.nr-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
+.nr-row label { flex: 1 1 220px; }
+.nr-row .nr-small { flex: 0 1 150px; }
+.nr-checks input, .nr-checks select { width: 100%; min-width: 0; box-sizing: border-box; }
+.nr-serp { margin: 0; padding-left: 22px; }
+.nr-serp li { margin: 2px 0; overflow-wrap: anywhere; }
+.nr-group > summary { cursor: pointer; margin-bottom: 12px; }
 `;
 
 const EMPTY = {
@@ -228,6 +270,109 @@ export async function render(el, ctx) {
 
   const chip = (cls, text) => h('span', { class: `chip ${cls}`.trim() }, text);
 
+  // "Your checks": the results page (paid, asks first) and the founder's two scores.
+  function checksBlock(c) {
+    const k = c.checks;
+    const query = h('input', { class: 'input', type: 'text', value: k.query ?? '', maxlength: 120 });
+    const serpButton = h(
+      'button',
+      {
+        type: 'button',
+        class: 'btn btn-small',
+        onclick: guard(async () => {
+          const q = query.value.trim();
+          if (!q) return ctx.toast('Type the question to search first.', 'error');
+          const ok = await ctx.confirmBox({
+            title: 'Check the results page?',
+            body: `Search: ${q}\n\n${data.serp?.what ?? ''}`,
+            confirmLabel: `Yes, check it (${data.serp?.cost ?? 'it costs money'})`,
+          });
+          if (!ok) return;
+          const res = await api.post('/api/newsroom/check-serp', { id: c.id, query: q, confirm: true });
+          await done(res.message ?? 'The results page is kept with the card.');
+        }),
+      },
+      'Check the results page'
+    );
+    const select = (options, value) =>
+      h(
+        'select',
+        { class: 'input' },
+        options.map(([v, label]) => h('option', { value: v, selected: String(value ?? '') === v || null }, label))
+      );
+    const first = select([['', 'Not set yet'], ...['1', '2', '3', '4', '5'].map((v) => [v, v])], k.first);
+    const hook = select(
+      [
+        ['', 'Not set yet'],
+        ['1', '1: there is one'],
+        ['0', '0: none'],
+      ],
+      k.hook
+    );
+    const save = h(
+      'button',
+      {
+        type: 'button',
+        class: 'btn btn-small',
+        onclick: guard(async () => {
+          const num = (el) => (el.value === '' ? null : Number(el.value));
+          const res = await api.post('/api/newsroom/score', { id: c.id, first: num(first), hook: num(hook) });
+          await done(res.message ?? 'Saved.');
+        }),
+      },
+      'Save my checks'
+    );
+    const serp = k.serp
+      ? h(
+          'div',
+          {},
+          h(
+            'p',
+            { class: 'muted small nr-note' },
+            `Results page for "${k.serp.query}", checked ${fmt.date(k.serp.date)}. The desk does not judge it: read who owns it.`
+          ),
+          h(
+            'ol',
+            { class: 'nr-serp' },
+            k.serp.items.map((x) => {
+              const href = safeHref(x.url);
+              return h(
+                'li',
+                {},
+                href ? h('a', { href, target: '_blank', rel: 'noopener noreferrer' }, x.title || x.domain) : x.title,
+                h('span', { class: 'nr-words' }, ` (${x.domain})`)
+              );
+            })
+          )
+        )
+      : null;
+    const state = [
+      k.serp ? 'results page checked' : 'results page not checked',
+      k.first !== null ? `Can we be first ${k.first}` : 'Can we be first not set',
+      k.hook !== null ? `hook ${k.hook}` : 'hook not set',
+    ].join(', ');
+    return h(
+      'details',
+      { class: 'nr-checks', open: k.serp ? true : null },
+      h('summary', { class: 'small' }, `Your checks: ${state}`),
+      h(
+        'div',
+        { class: 'nr-row' },
+        h('label', {}, "Search to check (the reader's question, not the headline)", query),
+        serpButton
+      ),
+      h('p', { class: 'muted small nr-note' }, data.serp?.what ?? ''),
+      serp,
+      h(
+        'div',
+        { class: 'nr-row' },
+        h('label', { class: 'nr-small' }, 'Can we be first (1 to 5)', first),
+        h('label', { class: 'nr-small' }, 'Citable hook', hook),
+        save
+      )
+    );
+  }
+
   function card(c) {
     const list = actionsFor(c);
     const main = list[0];
@@ -282,6 +427,20 @@ export async function render(el, ctx) {
           )
         )
       : h('span', { class: 'muted' }, 'Nothing the desk could match by title words.');
+    const verdict = c.filter
+      ? c.filter.passed
+        ? h('span', {}, c.filter.primary)
+        : h(
+            'div',
+            {},
+            h(
+              'ul',
+              { class: 'nr-have' },
+              filterLines(c).map((line) => h('li', {}, line))
+            ),
+            c.filter.update ? h('p', { class: 'nr-note' }, c.filter.update.text) : null
+          )
+      : null;
     return h(
       'article',
       { class: 'card nr-card', dataset: { id: c.id } },
@@ -299,6 +458,7 @@ export async function render(el, ctx) {
         : null,
       c.topLine ? h('p', { class: 'banner banner-accent nr-note' }, c.topLine) : null,
       h('h3', { class: 'card-title' }, c.title),
+      c.repeat?.text ? h('p', { class: 'banner banner-warn nr-note' }, c.repeat.text) : null,
       c.paid ? h('p', { class: 'banner banner-warn nr-note' }, c.paidText ?? data.paidLabel) : null,
       h(
         'dl',
@@ -317,8 +477,13 @@ export async function render(el, ctx) {
           h('span', { class: 'chip chip-hyp', title: data.scoreNote }, 'Draft')
         ),
         h('dt', {}, 'What we already have'),
-        h('dd', {}, have)
+        h('dd', {}, have),
+        c.subject?.text ? h('dt', {}, 'Subject') : null,
+        c.subject?.text ? h('dd', {}, c.subject.text) : null,
+        verdict ? h('dt', {}, c.filter.passed ? 'Hard filters: all four pass' : 'Hard filters') : null,
+        verdict ? h('dd', {}, verdict) : null
       ),
+      c.checks && c.tab !== 'dropped' ? checksBlock(c) : null,
       h('div', { class: 'card-actions' }, buttons),
       main === 'brief' ? h('p', { class: 'muted small', style: { margin: '6px 0 0' } }, BRIEF_HINT) : null
     );
@@ -447,8 +612,68 @@ export async function render(el, ctx) {
       : h(
           'p',
           { class: 'empty' },
-          'Nothing to suggest: no fresh Tier 1 or 2 story is left that a recent piece of ours does not cover.'
+          'Nothing to suggest: no fresh Tier 1 or 2 story passes all four hard filters. The stories they stopped are below, each with its reason.'
         )
+  );
+
+  // Stories a hard filter stopped, folded: an existing page to update, then everything filtered out.
+  const pagedCards = (list) => {
+    const box = h('div', { class: 'nr-cards' }, list.slice(0, CARDS_SHOWN).map(card));
+    let shown = Math.min(CARDS_SHOWN, list.length);
+    const btn = h('button', { type: 'button', class: 'btn' });
+    const label = () => {
+      const left = list.length - shown;
+      btn.textContent = `Show ${Math.min(CARDS_SHOWN, left)} more (${left} not shown yet)`;
+      btn.hidden = left <= 0;
+    };
+    btn.addEventListener('click', () => {
+      box.append(...list.slice(shown, shown + CARDS_SHOWN).map(card));
+      shown = Math.min(shown + CARDS_SHOWN, list.length);
+      label();
+    });
+    label();
+    return [box, h('div', { class: 'nr-more' }, btn)];
+  };
+  const updates = data.updates ?? [];
+  const filtered = data.filtered ?? [];
+  const filterNames = h(
+    'ul',
+    { class: 'nr-have' },
+    (data.filters ?? []).map((f) => h('li', {}, `${f.name}: ${f.what}`))
+  );
+  const updatesSection = h(
+    'section',
+    { class: 'section' },
+    h(
+      'details',
+      { class: 'nr-group' },
+      h('summary', { class: 'section-title' }, `Update an existing page (${updates.length})`),
+      h(
+        'p',
+        { class: 'section-note' },
+        'A live page of ours already carries these facts, so each is an edit to that page, not a new article. The edit date comes from the one page edit a week and the 28 day freeze.'
+      ),
+      updates.length ? pagedCards(updates) : h('p', { class: 'empty' }, 'No fresh story is already covered by a page.')
+    )
+  );
+  const filteredSection = h(
+    'section',
+    { class: 'section' },
+    h(
+      'details',
+      { class: 'nr-group', open: ctx.params?.get?.('open') === 'filtered' || null },
+      h('summary', { class: 'section-title' }, `Filtered out (${filtered.length})`),
+      h(
+        'p',
+        { class: 'section-note' },
+        'Each fresh story is checked against four hard filters before it can be suggested:'
+      ),
+      filterNames,
+      filterCountsLine(data.filterCounts)
+        ? h('p', { class: 'muted small' }, filterCountsLine(data.filterCounts))
+        : null,
+      filtered.length ? pagedCards(filtered) : h('p', { class: 'empty' }, 'No fresh story failed a filter.')
+    )
   );
 
   const ta = data.topicAsk ?? {};
@@ -557,6 +782,8 @@ export async function render(el, ctx) {
       h('div', { class: 'row' }, refresh)
     ),
     suggestSection,
+    updatesSection,
+    filteredSection,
     askSection,
     h('section', { class: 'section' }, paste),
     other.length

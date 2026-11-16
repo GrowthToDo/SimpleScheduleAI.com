@@ -91,7 +91,7 @@ in `.claude/skills/seo-desk/routes.md`.
 | Question | Route |
 | --- | --- |
 | What should I work on this week? | `/api/week` |
-| What should I write for the Newsroom this week? | `/api/newsroom` (`suggested`, `topicAsk.latest`) |
+| What should I write for the Newsroom this week? | `/api/newsroom` (`suggested`, `updates`, `filtered`, `topicAsk.latest`) |
 | How is search doing? | `/api/overview?range=28` (7, 28, 90, 480) |
 | Which searches or pages grow or slip? | `/api/explore?dim=query` or `dim=page` |
 | One page in full, or every page | `/api/page?path=/blog/x`, `/api/pages` |

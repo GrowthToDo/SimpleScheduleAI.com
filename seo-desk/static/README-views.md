@@ -319,21 +319,28 @@ For pages that run a confirmed job or show big numbers. Import what you need:
 ## The Newsroom page
 
 `views/newsroom.js` reads `GET /api/newsroom`. From the top: Suggested for this week (`suggested`, at
-most five cards, each with its `suggestWhy` as the first line), Ask Claude for this week's topic
+most five cards, each with its `suggestWhy` as the first line), Update an existing page (`updates`,
+folded) and Filtered out (`filtered`, folded, with `filters` and `filterCounts`), Ask Claude for this week's topic
 (`topicAsk`: the button sends `POST /api/newsroom/ask-topic` `{}`, waits up to two minutes, and the
 answer's topics are drawn with `renderAnswer` from `views/ask.js`, text nodes only, each with its own
 Copy brief for Claude), Paste a link, then every story folded under "All stories from the last 14
 days" (`allCount`; open when the address names a tab). It also reads `line`, `feeds` (`readAt`, `answered`, `total`, `failed`,
 `text`), `tabs` (`key`, `label`, `count`), `cards` (each with its `tab`), `pastedOther` (pasted links that
 fit no topic), `picks` (`count`, `max`), `holdDays`, `paidLabel` and `scoreNote`. A card carries `title`,
-`outlets` (`name`, `url`, `dateText`), `tierText`, `score` (`relevance`, `rising`, `risingWhy`, `toCheck`),
+`outlets` (`name`, `url`, `dateText`), `tierText`, `score` (`relevance`, `rising`, `risingWhy`, `toCheck`, and
+from package 8c `freshness`, `freshnessWhy`, `product`, `first`, `hook`, `complete`, `full`, `repeatPenalty`,
+`value`), `subject` (`text`), `filter` (`passed`, `reasons`, `update`, `primary`), `repeat` (`text`), `checks`
+(`query`, `serp`, `first`, `hook`),
 `paid` and `paidText`, `have` (`text`, `words`), `topLine` (why it is not fresh), `state` and `brief`. The
 page draws its own cards with the card classes (not `card.js`): Copy brief for Claude is the main button on
 a story not acted on; Pick for this week and Unpick send `POST /api/newsroom/pick` and `/unpick`; Hold and
 Drop are the item actions `snooze` (a date, 7 days by default) and `ignore` (a reason, required); Published
 is `done`; Reopen is `reopen`. Refresh now sends `POST /api/refresh` with `{only: ['news']}` and waits for
 `GET /api/refresh`. Paste a link sends `POST /api/newsroom/paste` `{url}`. Outlet links are drawn only when
-they are https (`safeHref`), with `target="_blank"` and `rel="noopener noreferrer"`. On This week a picked
+they are https (`safeHref`), with `target="_blank"` and `rel="noopener noreferrer"`. Your checks: Check the
+results page asks first with `ctx.confirmBox` (the search and `serp.cost`) and only then sends `POST
+/api/newsroom/check-serp` `{id, query, confirm: true}`; Save my checks sends `POST /api/newsroom/score`
+`{id, first, hook}`. On This week a picked
 story is a card of slot `newsroom` ("Newsroom piece"); its Remove from this week sends Unpick.
 
 ## Card rules worth knowing

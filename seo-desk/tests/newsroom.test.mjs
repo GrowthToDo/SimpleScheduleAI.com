@@ -604,6 +604,51 @@ test('page: Copy brief for Claude is the main button on a story not yet acted on
   assert.deepEqual(viewMod.actionsFor(c('fresh', 'new', 3)), ['brief', 'hold', 'drop']);
 });
 
+test("page (8c): Freshness, reporting, the two person's checks, and the repetition penalty read as lines", () => {
+  const base = {
+    relevance: 4,
+    freshness: 5,
+    freshnessWhy: 'Its main fact (9,412) first ran on 14 November, within the last 7 days, in 3 reports.',
+    rising: 3,
+    risingWhy: '5 outlets ran it: 3 reports, 2 reprints, of Plains Desk, the latest on 15 November.',
+    product: 20,
+    toCheck: news.TO_CHECK,
+    first: null,
+    hook: null,
+    complete: false,
+    repeatPenalty: 4,
+    value: 16,
+  };
+  const lines = viewMod.scoreLines({ tierText: 'Tier 1: nurse staffing', score: base });
+  assert.equal(lines.length, 6);
+  assert.equal(lines[1], `Freshness 5 of 5: ${base.freshnessWhy}`);
+  assert.equal(lines[2], `Reporting: ${base.risingWhy}`);
+  assert.match(lines[3], /^Can we be first: a person's check\. /);
+  assert.match(lines[4], /^Citable hook: a person's check\. /);
+  assert.equal(
+    lines[5],
+    'Draft score 20: Relevance x Freshness. The other two are your checks. Less 4 for repetition: 16.'
+  );
+  const set = viewMod.scoreLines({
+    tierText: 'Tier 1',
+    score: { ...base, first: 3, hook: 1, complete: true, full: 60, repeatPenalty: 0, value: 60 },
+  });
+  assert.equal(set[3], 'Can we be first 3 of 5: your check.');
+  assert.equal(set[5], 'Score 60: Relevance x Freshness x Can we be first x Citable hook.');
+  const card = {
+    filter: { reasons: [{ filter: 'd', name: 'A quotable primary source can exist', text: 'No terms.' }] },
+  };
+  assert.deepEqual(viewMod.filterLines(card), ['A quotable primary source can exist: No terms.']);
+  assert.equal(
+    viewMod.filterCountsLine([
+      { name: 'One', count: 2 },
+      { name: 'Two', count: 0 },
+      { name: 'Three', count: 1 },
+    ]),
+    'Stopped by each filter (a story can fail more than one): One: 2. Three: 1.'
+  );
+});
+
 test('page: the draft score reads as four lines, two of them to check', () => {
   const lines = viewMod.scoreLines({
     tierText: 'Tier 1: nurse staffing',

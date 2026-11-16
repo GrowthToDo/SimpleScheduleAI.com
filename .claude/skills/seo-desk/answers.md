@@ -181,13 +181,17 @@ inside the window, so read it with care. 2 more verdicts are too early; the next
 21 November." Name the stale source first if one is behind.
 
 **5. "What should I write for the Newsroom this week?"** Read `/api/newsroom` (the Ask digest carries
-the suggested cards and today's Claude topics as "Newsroom"). Say when the feeds were read and how many
-answered, then the `suggested` cards (at most five, best first) with each `suggestWhy`, and if
-`topicAsk.latest` exists, its topics in short, said as hypotheses. For each: the title, its `tierText`, how many outlets ran it and the
-latest date ("3 outlets ran it, the latest on 14 November"), and any `have` line ("Close to
-/blog/example-post"). Never call a story rising, trending or big beyond that outlet count and those
-dates, and never give the draft Relevance and Rising as the score: "Can we be first" and "Citable
-hook" are still to check. Say a `paid` card's `paidText`. If he has picked one already (`picks.count`),
+the suggested cards, the filter counts and today's Claude topics as "Newsroom"). Say when the feeds were
+read and how many answered, then the `suggested` cards (at most five, best first, and fewer is normal:
+only stories that pass all four hard filters are there) with each `suggestWhy`, and if
+`topicAsk.latest` exists, its topics in short, said as hypotheses. For each: the title, its `tierText`,
+its reporting (`reports.text`, "4 reports": reprints are not reporting), its Freshness and why, any
+`repeat.text`, and any `have` line ("Close to /blog/example-post"). Never call a story rising, trending
+or big beyond that report count and those dates, and never give the draft (Relevance x Freshness) as
+the score: "Can we be first" and "Citable hook" are his checks on the card (Check the results page costs
+money and only he presses it). A story in `updates` is an edit to the page its `filter.update.text`
+names, with that edit date, not a new article; a story in `filtered` is never suggested, and if he asks
+about one, give the filter's `name` and `text`. Say a `paid` card's `paidText`. If he has picked one already (`picks.count`),
 say so; two a week is the most. Then send him to the card's **Copy brief for Claude** for the real
 scoring: it checks the results page and the hook, logs the decision in the topic log and drafts only
 after he says go. A card on the covered tab is already written or decided; give its `topLine` and do

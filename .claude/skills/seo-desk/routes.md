@@ -112,21 +112,41 @@ with the month and its dates.
 read each morning from 14 Google News searches and four trade press feeds; source `news` in
 `sources`): `line`, `weekOf`, `feeds {readAt, status, answered, total, failed[] {name, error}, items,
 window {start, end, text}, text}`, `tabs[] {key, label, count}` (fresh, covered = "Already covered or
-decided", held, dropped, picked), `suggested[]` (at most five cards, best first: the best by draft
-score among fresh Tier 1 and 2 cards that no piece of ours from the last 60 days covers, not held,
-dropped or a paid placement only, with Texas or critical access adding one to relevance; each card
-carries `suggested`, `suggestRank` and `suggestWhy`, "Tier 1, Texas, 6 outlets in 5 days, nothing on
-our site yet"; the sidebar's `newsroom` count in `/api/nav` is this list's length), `suggestNote`,
+decided", held, dropped, picked), `suggested[]` (at most five cards, never padded, best first: fresh
+Tier 1 and 2 cards that pass all four hard filters, not held, dropped, a paid placement only or given a
+hook of 0, scored Relevance x Freshness (x Can we be first x Hook once he set both) less the
+repetition penalty, with Texas or critical access adding one to relevance; each card carries
+`suggested`, `suggestRank`, `suggestScore` and `suggestWhy`, "Tier 1, Texas, 4 reports in 5 days,
+nothing on our site yet"; the sidebar's `newsroom` count in `/api/nav` is this list's length),
+`updates[]` (fresh cards a live page of ours already covers: an edit to that page), `filtered[]` (fresh
+cards a hard filter stopped), `filters[] {filter: a|b|c|d, name, what}`, `filterCounts[] {filter, name,
+count}` (a card can fail more than one), `serp {cost, what}` (Check the results page), `suggestNote`,
 `allCount`, `topicAsk {available, reason, latest, note, what}` (`latest` is today's answer to "Ask
 Claude for this week's topic": `{date, at, tookMs, text, topics[] {n, title, text, cardId, brief}}`,
 a hypothesis until the live checks are done), `cards[]`, `pastedOther[]` (pasted links that fit no topic), `picks {count, max: 2}`, `holdDays`,
 `toCheck[]`, `paidLabel`, `scoreNote`. A card: `id` (news:...), `title`, `outlets[] {name, url, date,
 dateText, title, google}` (one per publisher; Google News links are redirect addresses), `firstDate`,
 `latestDate`, `tier` (1 or 2), `tierWords[]`, `tierText` ("Tier 1: nurse staffing, rural hospital"),
-`score {relevance, rising, product, relevanceWhy, risingWhy, draft: true, toCheck[] {name, how}}`
-(Relevance 1 to 5 from the tier and how many tier words; Rising 1 to 5 from how many outlets ran it,
-less one when the latest is 3 to 6 days old and two at a week or more; "Can we be first" and "Citable
-hook" are always to check), `paid` and `paidText` (a press release or paid placement: not citable as a
+`score {relevance, rising, freshness, freshnessWhy, product, relevanceWhy, risingWhy, draft: true,
+toCheck[] {name, how}, first, hook, complete, full, repeatPenalty, value}` (Relevance 1 to 5 from the
+tier and how many tier words; Rising 1 to 5 from how many distinct reports ran it, reprints not
+counted, less one when the latest is 3 to 6 days old and two at a week or more; Freshness 1 to 5: a new
+main fact (a number or rule section) in the last 7 days is 3, 4 or 5 by one, two or three reports, an
+older one 2, a dated change still ahead keeps it at 4 or 5, a story with no fact fades to 1 after two
+days; `product` is Relevance x Freshness, the draft; `first` (1 to 5) and `hook` (0 or 1) are the
+founder's checks, null until set, and `full` is all four once both are set; `value` is the score less
+`repeatPenalty`), `subject {place, entity, topic, key, text, query}` (stories with one `key` within 14
+days are one card), `reports {reports, reprints, source, text}` ("3 reports, 4 reprints, most of
+Plains Desk": copies that name their original, carry the same headline or the same first sentence
+collapse into it), `factDate` (the first appearance of its main fact), `upcoming`, `filter {passed,
+group: pass|update|filtered, reasons[] {filter, name, text, covered}, update {page, eligibleFrom, text}
+, primary}` (a: applies to a Critical Access Hospital; b: not already covered by a live page's number,
+rule section, or program and measure in one paragraph, or the facts dossier; c: a Texas angle exists;
+d: a quotable primary source can exist; `update.text` gives the page's edit date from the one
+eligibility function; `primary` is "Primary source: to check" on a passing card), `repeat {count,
+penalty, text, pieces[]}` (our pieces on the same place and entity in the last 45 days), `checks
+{query, serp {query, checkedAt, date, items[] {rank, title, domain, url}, cost}, first, hook, setAt}`,
+`paid` and `paidText` (a press release or paid placement: not citable as a
 peg; when only some outlets are one, those outlets carry `paid`), `have[] {kind: article|post|log|plan,
 text, words[], strength, covered, decided, exact, topic, publishDate}` (at most four; words are folded,
 so expand and expansion meet; a topic phrase from our titles, addresses or topic log, or an alias such
@@ -139,8 +159,13 @@ phrase from one of our articles within 10 days are one card),
 the feeds, kept because he acted on it), `brief`. Hold and Drop are the item actions `snooze` and
 `ignore`; Pick is `POST /api/newsroom/pick` (also the card's Pin), refused at a third pick a week;
 `POST /api/newsroom/paste {url}` reads one public https page; `POST /api/newsroom/ask-topic {}` asks
-Claude once (the founder's press only; 429 while a Claude run is going, from here or the Ask box). None
-of these write a tracked file.
+Claude once (the founder's press only; 429 while a Claude run is going, from here or the Ask box; the
+prompt carries the passing cards, each filtered card with its reasons, and the four filters).
+`POST /api/newsroom/check-serp {id, query, confirm: true}` asks DataForSEO for one live Google results
+page (it costs money: without `confirm` it is refused with the cost; only the founder's press, never
+Claude) and keeps the top ten with the card; `POST /api/newsroom/score {id, first, hook}` saves his two
+checks (null clears one). These write only the desk's state (`state/news-checks.json`), never a
+tracked file.
 
 ## Search
 
