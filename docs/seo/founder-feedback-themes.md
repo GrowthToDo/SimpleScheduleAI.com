@@ -139,6 +139,20 @@ like Our Take. Comparison posts must still carry "nurse scheduling software" in
 the sentence introducing the product (seo-aeo skill, category-line rule 3).
 ("Should we talk about it in first person? That's not the standard.")
 
+_Sharpened 2026-11-16:_ a verb or noun that points at the post's subject must
+name it, even when the subject feels obvious. In a post about one process, the
+author drops the object: "if the nurse asked out loud" (asked what?), "14
+calendar days from the moment the nurse asked" (14 days to do what?), "does not
+cancel the request" (which request?), "the nurse asks before starting" (asks
+what?). Check: read every "ask", "asked", "request", "clock" and "deadline" and
+confirm the sentence itself says for what. Fixed by writing "asks for safe
+harbor", "the safe harbor request", "14 calendar days to review the assignment".
+Also name roles the way the reader's unit does: "the supervisor who made the
+assignment" read as if only supervisors assign work; say "the person who made the
+assignment (the rule calls that person the supervisor; it may be the charge
+nurse)".
+(Founder 2026-11-16, safe-harbor-nursing-texas, five lines in one review.)
+
 ## Structure
 
 **T7. H2s are real standalone queries.**

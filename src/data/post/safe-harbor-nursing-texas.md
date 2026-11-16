@@ -7,7 +7,7 @@ excerpt: >
   A nurse looks at tonight's assignment and asks for safe harbor. Texas rules set what must be
   written down before the shift ends, who reviews it, and a 14-day clock that starts the moment the
   nurse asks.
-image: https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1758654860020-36fa3fd0dd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:
@@ -22,11 +22,11 @@ metadata:
 
 ## Key Takeaways
 
-- **Safe harbor lets a Texas nurse question an assignment before taking it.** The nurse asks a committee of nurses to decide whether the assignment would break the nurse's duty to a patient. [Texas Board of Nursing rule 217.20](https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-217-20) sets the process. A nurse who asks in good faith is protected from retaliation by the hospital, and from Board discipline until 48 hours after hearing the committee's answer.
+- **Safe harbor lets a Texas nurse question an assignment before taking it.** The nurse asks a committee of nurses to decide whether the assignment would break the nurse's duty to a patient. [Texas Board of Nursing rule 217.20](https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-217-20) sets the process. A nurse who asks for safe harbor in good faith is protected from retaliation by the hospital, and from Board discipline until 48 hours after hearing the committee's answer.
 - **A Critical Access Hospital gets no exception.** [Texas Occupations Code 303.0015](https://texas.public.law/statutes/tex._occ._code_section_303.0015) requires a peer review committee once a hospital regularly employs, hires or contracts eight or more nurses. To review a registered nurse, at least four of those eight must be RNs. A 25-bed hospital with 20 nurses is over that line.
-- **Your first job is paperwork.** If the nurse asked out loud, write the request down and sign it together. Then get the paperwork to your peer review committee chair, the way your hospital's policy says. The committee has 14 calendar days from the moment the nurse asked.
-- **The nurse may keep working the assignment while the committee decides, unless one of two exceptions applies.** The exceptions are an assignment beyond the nurse's skills, and one that would be unprofessional or criminal. Adding staff mid-shift does not cancel the request; only the nurse can drop it.
-- **The DON who made the assignment can speak to the committee but cannot sit on it.** Afterward, the chief nursing officer has 48 hours to tell the nurse the result. That is the registered nurse who runs nursing services, which may be the DON. Punishing a nurse for a good-faith request can bring an administrative penalty of up to $25,000, plus damages to the nurse.
+- **Your first job is paperwork.** If the nurse asked for safe harbor out loud instead of in writing, write that safe harbor request down, and you and the nurse both sign it. Then get the paperwork to your peer review committee chair, the way your hospital's policy says. The committee then has 14 calendar days to review the assignment and report its finding, counted from the moment the nurse asked for safe harbor.
+- **The nurse may keep working the assignment while the committee decides, unless one of two exceptions applies.** The exceptions are an assignment beyond the nurse's skills, and one that would be unprofessional or criminal. If you add staff mid-shift, the nurse's safe harbor request still stands; only the nurse can withdraw it.
+- **The DON who made the assignment can speak to the committee but cannot sit on it.** Afterward, the chief nursing officer has 48 hours to tell the nurse the result. That is the registered nurse who runs nursing services, which may be the DON. Punishing a nurse for a good-faith safe harbor request can bring an administrative penalty of up to $25,000, plus damages to the nurse.
 
 ## Table of Contents
 
@@ -46,11 +46,11 @@ Safe harbor nursing is a Texas process that lets a nurse ask for peer review of 
 
 ## What Is Safe Harbor Nursing in Texas?
 
-Safe harbor is a request a nurse makes for a ruling on an assignment the nurse believes is unsafe. A committee of nurses, called the nursing peer review committee, gives the ruling. A nurse who asks in good faith is protected from retaliation by the hospital, and from license discipline until 48 hours after the nurse is told the committee's finding. Good faith here means the nurse has a reasonable factual or legal basis for asking.
+Safe harbor is a request a nurse makes for a ruling on an assignment the nurse believes is unsafe. A committee of nurses, called the nursing peer review committee, gives the ruling. A nurse who asks for safe harbor in good faith is protected from retaliation by the hospital, and from license discipline until 48 hours after the nurse is told the committee's finding. Good faith here means the nurse has a reasonable factual or legal basis for the safe harbor request.
 
-The nurse asks before starting the assignment. If the assignment changes during the shift, the nurse can ask again at that point, before taking on the changed assignment.
+The nurse must ask for safe harbor before starting the assignment in question. If the assignment changes during the shift, the nurse can ask for safe harbor again at that point, before taking on the changed assignment.
 
-[Rule 217.20](https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-217-20) says a nurse's duty to a patient includes "administrative decisions directly affecting a nurse's ability to comply with that duty." Staffing is one of those decisions. The [Board's peer review FAQ](https://www.bon.texas.gov/faq_peer_review.asp.html) names "clinical assignments related to staffing and/or acuity of patients" as examples of safe harbor situations. So a request about how many patients a nurse has, or how sick they are, is what the process was built for.
+[Rule 217.20](https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-217-20) says a nurse's duty to a patient includes "administrative decisions directly affecting a nurse's ability to comply with that duty." Staffing is one of those decisions. The [Board's peer review FAQ](https://www.bon.texas.gov/faq_peer_review.asp.html) names "clinical assignments related to staffing and/or acuity of patients" as examples of safe harbor situations. So a safe harbor request about how many patients a nurse has, or how sick they are, is what the process was built for.
 
 Texas has a second kind of peer review, and the two are easy to confuse. [Incident-based peer review, under rule 217.19](https://www.law.cornell.edu/regulations/texas/22-Tex-Admin-Code-SS-217-19), looks back at something a nurse already did and decides whether it must be reported to the Board. Safe harbor looks forward, at an assignment that has not been carried out yet.
 
@@ -64,7 +64,7 @@ Below eight nurses, the statute and the rule set no committee duty. The statute 
 
 ## What Should a DON Do When a Nurse Invokes Safe Harbor?
 
-Take the request seriously, get it in writing, and get it to your peer review committee chair quickly. The rule's 14-day clock starts when the nurse asks, so every day the paperwork waits comes out of the committee's time. The chief nursing officer is the registered nurse who runs nursing services, by any title, and at a small hospital that may be the DON. In the table below, rows 2 and 4 are the manager's job, and row 6 is too if the DON is also the chief nursing officer. Row 4's timing is our advice; every other row comes from rule 217.20.
+Take the nurse's safe harbor request seriously, get it in writing, and get it to your peer review committee chair quickly. The committee's 14 days to review the assignment start when the nurse asks for safe harbor, so every day the paperwork waits comes out of the committee's time. The chief nursing officer is the registered nurse who runs nursing services, by any title, and at a small hospital that may be the DON. In the table below, rows 2 and 4 are the manager's job, and row 6 is too if the DON is also the chief nursing officer. Row 4's timing is our advice; every other row comes from rule 217.20.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="w-full text-sm border-collapse table-fixed break-words align-top">
@@ -78,17 +78,17 @@ Take the request seriously, get it in writing, and get it to your peer review co
     <tbody>
       <tr>
         <td class="p-3 border border-slate-200">1. When the assignment is made</td>
-        <td class="p-3 border border-slate-200">The nurse tells the supervisor who made the assignment, in writing, before accepting it. If patient care leaves no time to write, the nurse may say it out loud.</td>
+        <td class="p-3 border border-slate-200">Before accepting the assignment, the nurse tells the person who made it, in writing, that the nurse is invoking safe harbor. The rule calls that person the supervisor; on your unit it may be the charge nurse, a house supervisor or the DON. If patient care leaves no time to write, the nurse may tell that person out loud.</td>
         <td class="p-3 border border-slate-200">The nurse</td>
       </tr>
       <tr>
-        <td class="p-3 border border-slate-200">2. After a spoken request</td>
-        <td class="p-3 border border-slate-200">The supervisor writes the request down. The nurse and the supervisor both sign the written record.</td>
-        <td class="p-3 border border-slate-200">The charge nurse or DON who heard the request</td>
+        <td class="p-3 border border-slate-200">2. After a spoken safe harbor request</td>
+        <td class="p-3 border border-slate-200">The person who heard the spoken request writes the safe harbor request down. The nurse and that person both sign the written record.</td>
+        <td class="p-3 border border-slate-200">The charge nurse, house supervisor or DON who heard the request</td>
       </tr>
       <tr>
         <td class="p-3 border border-slate-200">3. Before the nurse leaves at the end of the shift</td>
-        <td class="p-3 border border-slate-200">The nurse completes the detailed written request and keeps a copy.</td>
+        <td class="p-3 border border-slate-200">The nurse completes the detailed written safe harbor request and keeps a copy.</td>
         <td class="p-3 border border-slate-200">The nurse</td>
       </tr>
       <tr>
@@ -97,7 +97,7 @@ Take the request seriously, get it in writing, and get it to your peer review co
         <td class="p-3 border border-slate-200">The DON</td>
       </tr>
       <tr>
-        <td class="p-3 border border-slate-200">5. Within 14 calendar days of the nurse's request</td>
+        <td class="p-3 border border-slate-200">5. Within 14 calendar days of the nurse's safe harbor request</td>
         <td class="p-3 border border-slate-200">The committee reviews the assignment and tells the chief nursing officer what it found.</td>
         <td class="p-3 border border-slate-200">The peer review committee</td>
       </tr>
@@ -116,19 +116,19 @@ The Board publishes two optional forms for steps 1 and 3: a Safe Harbor Quick Re
 
 Yes, unless one of two exceptions applies. Rule 217.20 says the nurse "may engage in the requested conduct or assignment while awaiting nursing peer review determination." The first exception is an assignment the nurse lacks the knowledge or skills to do safely. The second is an assignment that would be unprofessional conduct, or criminal conduct such as fraud, theft or patient abuse.
 
-For a request about unsafe staffing levels, the Board's FAQ says accepting the assignment "would be conduct a nurse normally would engage in pending nursing peer review's determination." The reason it gives is that the supervisor "normally would have some reasonable legal or factual basis" for the assignment.
+For a safe harbor request about unsafe staffing levels, the Board's FAQ says accepting the assignment "would be conduct a nurse normally would engage in pending nursing peer review's determination." The reason it gives is that the supervisor "normally would have some reasonable legal or factual basis" for the assignment.
 
 Sometimes the nurse refuses because the assignment is beyond the nurse's skills. The rule then says the nurse and the supervisor "must collaborate in an attempt to identify an acceptable assignment." In practice that means working out a version of the shift the nurse can do. On a small night shift, that might be swapping patients with another nurse or calling someone in, the same moves you would make for a [nurse callout](/blog/how-to-handle-nurse-callouts) or a [short night shift](/blog/night-shift-nurse-schedule-coverage). Write down what you agreed. The rule has the committee chair keep that written result with the peer review records.
 
-You can also fix the problem mid-shift by adding a nurse. The safe harbor request still stands. The Board's FAQ says the request "does not become invalid" when the supervisor responds with adequate staff, and "it is the nurse's decision" whether to keep it.
+You can also fix the problem mid-shift by adding a nurse. The safe harbor request still stands. The Board's FAQ says the safe harbor request "does not become invalid" when the supervisor responds with adequate staff, and "it is the nurse's decision" whether to keep it.
 
 ## Who Sits on a Safe Harbor Peer Review Committee at a Small Hospital?
 
-Nurses who have no authority over the nurse who asked. Rule 217.20 keeps anyone who makes personnel decisions about the nurse off the committee. The chief nursing officer, the nurse administrator and "the individual who requested the conduct or made the assignment" may appear only as a fact witness. A fact witness answers questions about what happened but does not vote.
+Nurses who have no authority over the nurse who asked for safe harbor. Rule 217.20 keeps anyone who makes personnel decisions about the nurse off the committee. The chief nursing officer, the nurse administrator and "the individual who requested the conduct or made the assignment" may appear only as a fact witness. A fact witness answers questions about what happened but does not vote.
 
 [Texas Occupations Code 303.003](https://texas.public.law/statutes/tex._occ._code_section_303.003) sets who is left. At least three-fourths of the committee must be nurses. To review a registered nurse, two-thirds must be RNs, and only RNs vote. Where possible, the committee includes a nurse who knows the area of practice being reviewed.
 
-At a 25-bed hospital, the DON may be the only nurse leader. Then the committee needs nurses who do not supervise the nurse who asked. If you cannot fill it that way, the hospital may "contract with another entity to conduct the peer review" under section 303.0015. The statute does not say what kind of entity, so ask your counsel what fits.
+At a 25-bed hospital, the DON may be the only nurse leader. Then the committee needs nurses who do not supervise the nurse who asked for safe harbor. If you cannot fill it that way, the hospital may "contract with another entity to conduct the peer review" under section 303.0015. The statute does not say what kind of entity, so ask your counsel what fits.
 
 Two more rules shape the meeting. The nurse may appear before the committee, answer its questions, and make a written or spoken statement. The hospital may also use a smaller informal workgroup of the committee, but only if the nurse agrees in writing. The nurse can reject the workgroup's decision and ask for the full committee.
 
@@ -142,7 +142,7 @@ The nurse's two protections end differently. Protection from Board discipline la
 
 ## What Does Safe Harbor Protect a Nurse From?
 
-A nurse who asks in good faith cannot be suspended, fired, disciplined or discriminated against for asking. The same protection covers anyone who tells a nurse about the right to ask. [Texas Occupations Code 303.005](https://texas.public.law/statutes/tex._occ._code_section_303.005) adds that "a nurse's rights under this section may not be nullified by a contract."
+A nurse who asks for safe harbor in good faith cannot be suspended, fired, disciplined or discriminated against for making that request. The same protection covers anyone who tells a nurse about the right to ask for safe harbor. [Texas Occupations Code 303.005](https://texas.public.law/statutes/tex._occ._code_section_303.005) adds that "a nurse's rights under this section may not be nullified by a contract."
 
 The cost of retaliating is set in [Texas Occupations Code 301.413](https://texas.public.law/statutes/tex._occ._code_section_301.413). Whoever retaliates may be reported to the appropriate licensing agency, which may impose an administrative penalty of up to $25,000. The nurse may also recover actual damages or $5,000, whichever is greater, plus exemplary damages, court costs and attorney's fees. A nurse fired in violation may recover the job, or severance equal to three months of salary.
 
@@ -152,7 +152,7 @@ Rule 217.20 names the limits:
 
 - It does not apply to a civil lawsuit over a patient injury.
 - Board protection does not cover a nurse who invokes safe harbor in bad faith. The rule defines bad faith as knowingly or recklessly acting without a reasonable factual or legal basis.
-- Board protection does not cover anything the nurse did before asking, or anything unrelated to what the nurse asked about.
+- Board protection does not cover anything the nurse did before asking for safe harbor, or anything unrelated to the assignment the nurse asked about.
 
 Safe harbor is also separate from two other Texas laws that a DON deals with. Health and Safety Code chapter 257 covers your [nurse staffing committee and staffing plan](/blog/nurse-staffing-ratios-critical-access-hospital), and [acuity-based staffing](/blog/acuity-based-staffing-small-hospital) is one way to build that plan. Chapter 258 covers a nurse's right to refuse [mandatory overtime](/blog/mandatory-nurse-overtime-by-state). Sections 257.003 and 257.004 and chapter 258 contain no safe harbor text.
 
@@ -167,7 +167,7 @@ SimpleScheduleAI is [nurse scheduling software](/nurse-scheduling-software) deli
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
   <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">
-    A safe harbor request tells you something about tonight's assignment, and it starts a 14-calendar-day clock. That clock runs from the moment the nurse asks. So the time to decide who chairs your committee, and how to reach that person on a weekend night, is before the first request arrives.
+    A safe harbor request tells you something about tonight's assignment, and it starts a 14-calendar-day clock. That clock runs from the moment the nurse asks for safe harbor. So the time to decide who chairs your committee, and how to reach that person on a weekend night, is before the first safe harbor request arrives.
   </p>
 </div>
 
@@ -176,7 +176,7 @@ SimpleScheduleAI is [nurse scheduling software](/nurse-scheduling-software) deli
 1. **Find your written safe harbor policy and read it.** Rule 217.20 requires a policy that tells nurses how to request safe harbor. The Board's forms page says its forms do not replace that policy. If you cannot find one, that is the first thing to fix, with your counsel.
 2. **Confirm you have a peer review committee, and name its chair.** Put the chair's name and phone number where every charge nurse can find them at 2 AM, next to the Quick Request forms.
 3. **Count your nurses against the eight-nurse threshold.** Count agency and contract nurses too, to be safe. If your leadership is too small to fill a committee without the nurse's own managers, look at contracting the review out.
-4. **Brief your charge nurses on what to do with a spoken request.** Teach them to write the request down and have the nurse sign it with them. Disciplining or treating a nurse worse for asking in good faith is what Texas prohibits.
+4. **Brief your charge nurses on what to do with a spoken safe harbor request.** Teach them to write that request down and have the nurse sign it with them. Disciplining or treating a nurse worse for asking for safe harbor in good faith is what Texas prohibits.
 5. **Plan whom to call in if a nurse refuses an assignment on skill grounds.** The rule requires you and the nurse to work out an acceptable assignment. Names already on a list make that faster.
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
@@ -192,21 +192,21 @@ SimpleScheduleAI is [nurse scheduling software](/nurse-scheduling-software) deli
 
 **What is the safe harbor rule for nurses in Texas?**
 
-The safe harbor rule, Texas Board of Nursing rule 217.20, lets a nurse ask a nursing peer review committee whether an assignment would break the nurse's duty to a patient. The nurse must ask before doing the assignment. A nurse who asks in good faith is protected from retaliation by the employer, and from Board discipline until 48 hours after hearing the committee's finding.
+The safe harbor rule, Texas Board of Nursing rule 217.20, lets a nurse ask a nursing peer review committee whether an assignment would break the nurse's duty to a patient. The nurse must ask for safe harbor before doing the assignment. A nurse who asks for safe harbor in good faith is protected from retaliation by the employer, and from Board discipline until 48 hours after hearing the committee's finding.
 
 **Can a nurse invoke safe harbor verbally?**
 
-Yes, when immediate patient care leaves no time to fill in a form. The supervisor must then write the request down, and the nurse and the supervisor both sign it. The nurse still has to complete the detailed written request before leaving at the end of the shift.
+Yes, when immediate patient care leaves no time to fill in a form. The person who made the assignment must then write the safe harbor request down, and the nurse and that person both sign it. The nurse still has to complete the detailed written request before leaving at the end of the shift.
 
 **Do safe harbor forms go to the Texas Board of Nursing?**
 
-No. The Board's forms page says safe harbor is a process between the nurse and the employer, and tells nurses not to send the forms to the Board. The nurse gives the request to the supervisor who made the assignment, and the hospital's peer review policy sends it to the committee.
+No. The Board's forms page says safe harbor is a process between the nurse and the employer, and tells nurses not to send the forms to the Board. The nurse gives the safe harbor request to the person who made the assignment, and the hospital's peer review policy sends it to the committee.
 
 ### For the DON and the hospital
 
 **Can a DON turn down a safe harbor request?**
 
-No. Rule 217.20 tells the supervisor to write down a spoken request, and it gives the supervisor no power to deny one. Disciplining or discriminating against a nurse for a good-faith request is prohibited under Texas Occupations Code 301.413.
+No. Rule 217.20 tells the person who made the assignment to write down a spoken safe harbor request, and it gives the supervisor no power to deny one. Disciplining or discriminating against a nurse for a good-faith request is prohibited under Texas Occupations Code 301.413.
 
 **Does safe harbor protect a nurse from a lawsuit?**
 
