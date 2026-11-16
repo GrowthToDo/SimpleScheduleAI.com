@@ -9,7 +9,7 @@ excerpt: >
   big-hospital playbook is how night rotations break. This guide covers the night shift
   patterns critical access hospitals actually use, the CMS rules that govern overnight
   staffing, and how to spread coverage without burning out the few nurses who say yes.
-image: https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1669413453894-db3901ffdbc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:

@@ -8,7 +8,7 @@ excerpt: >
   TCP TimeClock+ is a time and attendance platform with basic scheduling built in. For Critical
   Access Hospitals where the nurse manager builds schedules on top of clinical duties, the best
   alternative is one that reduces operating burden, not just changes the interface.
-image: https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: bofu
 tags:

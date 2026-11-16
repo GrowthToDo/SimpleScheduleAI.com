@@ -8,7 +8,7 @@ excerpt: >
   Small rural hospitals are banding into networks to survive, and a July 2026 Commonwealth Fund report
   shows why. A network can share people, but for a single hospital that only becomes real coverage if the
   schedule can reach across facilities, and the compliance never pools.
-image: https://images.unsplash.com/photo-1601933470096-0e34634ffcde?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1626315869436-d6781ba69d6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:

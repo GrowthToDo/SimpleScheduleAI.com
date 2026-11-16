@@ -8,7 +8,7 @@ excerpt: >
   A nurse manager can have a clean four-week rotation out of Copilot before her coffee gets cold.
   Whether it can go on the wall is a different question, and answering it is still entirely her job.
   Here is where the draft stops and what has to happen between its output and a posted schedule.
-image: https://images.unsplash.com/photo-1504813184591-01572f98c85f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:

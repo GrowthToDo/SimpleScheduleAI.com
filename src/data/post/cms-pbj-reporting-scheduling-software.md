@@ -8,7 +8,7 @@ excerpt: >
   Most Critical Access Hospitals do not file CMS Payroll-Based Journal data, because swing beds are
   exempt from PBJ. This guide gives the one-question test for whether you owe a filing, and shows what
   nurse scheduling software hands off when a hospital does.
-image: https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Compliance
 postType: mofu
 tags:

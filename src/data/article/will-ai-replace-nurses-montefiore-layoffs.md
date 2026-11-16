@@ -8,7 +8,7 @@ excerpt: >
   The viral version of the Montefiore story is feeding a fear the facts do not support. Sorted
   by which job each tool actually touches, hospital AI splits cleanly: chart-facing
   administrative work is exposed now, and federal law keeps software out of the bedside role.
-image: https://images.unsplash.com/photo-1669413453505-2582fb5083b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1749065312519-1902cb8431ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:

@@ -7,7 +7,7 @@ title: 'CMS Proposes Dropping the Critical Access Hospital Emergency Training Ru
 excerpt: >
   Critical access hospitals hold 2.7 percent of hospital beds but would get 17 percent of the
   savings from dropping CMS's emergency training rule. CMS's reason: their staff work across units.
-image: https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1632833239869-a37e3a5806d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: mofu
 tags:

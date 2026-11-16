@@ -10,7 +10,7 @@ excerpt: >
   Traditional methods, Excel, paper grids, and manual rule-checking, put that entire burden on the
   nurse manager. This guide explains what AI scheduling actually changes, where it still falls
   short, and which hospitals gain the most from the switch.
-image: https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://images.unsplash.com/photo-1740479050122-54a65ebc22f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Healthcare Operations
 postType: comparison
 tags:
