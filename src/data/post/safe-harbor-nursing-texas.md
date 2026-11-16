@@ -78,7 +78,7 @@ Take the nurse's safe harbor request seriously, get it in writing, and get it to
     <tbody>
       <tr>
         <td class="p-3 border border-slate-200">1. When the assignment is made</td>
-        <td class="p-3 border border-slate-200">Before accepting the assignment, the nurse tells the person who made it, in writing, that the nurse is invoking safe harbor. The rule calls that person the supervisor; on your unit it may be the charge nurse, a house supervisor or the DON. If patient care leaves no time to write, the nurse may tell that person out loud.</td>
+        <td class="p-3 border border-slate-200">Before accepting the assignment, the nurse tells the person who made it, in writing, that he or she is invoking safe harbor. The rule calls that person the supervisor; on your unit it may be the charge nurse, a house supervisor or the DON. If patient care leaves no time to write, the nurse may tell that person out loud.</td>
         <td class="p-3 border border-slate-200">The nurse</td>
       </tr>
       <tr>
