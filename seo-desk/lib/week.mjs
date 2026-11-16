@@ -737,6 +737,8 @@ const openWorkTitle = (w) =>
 const NOT_NOW =
   /\b(stays? held|is held|held until|on hold|settled|deferred|leave (it|for now)|left alone|until|do not run early|no live copy depends)\b/i;
 const SCHEDULED = /scheduled|do not run early/i;
+// A finished open-work row: struck through with ~~, or marked DONE in capitals.
+const DONE_ROW = /^\s*~~|\*\*DONE\*\*|\bDONE\b/;
 // Sections that hold notes rather than tasks: known gaps in the strategy files and housekeeping notes.
 const NOTES = /known gaps|housekeeping/i;
 // A row about posts or drafts: the plan file decides which posts are written, so it is never a task
@@ -753,6 +755,8 @@ export function isOpenWorkTask(row, today) {
   const text = plain(row?.text);
   const section = plain(row?.section);
   if (!text || row.blockedOnFounder) return false;
+  // A row marked finished in the file (struck through, or **DONE**) is not a task.
+  if (DONE_ROW.test(String(row?.text ?? ''))) return false;
   if (NOT_NOW.test(text)) return false;
   if (/^[^.:]*\?/.test(text)) return false;
   if (NOTES.test(section) || POSTS.test(section) || DRAFTS.test(text)) return false;

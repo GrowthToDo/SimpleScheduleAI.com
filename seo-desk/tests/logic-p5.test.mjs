@@ -696,3 +696,25 @@ test('a card done this week stays in the week, shown done; one done last week do
   const b = week.proposeTop5({ plan, items: lastWeek, today: TODAY });
   assert.equal(b.find((c) => c.slot === 'new-post').id, 'plan-post-2');
 });
+
+test('an open-work row marked DONE in the file is not offered as a task', () => {
+  const openWork = [
+    {
+      section: 'Open after the last session',
+      text: 'Set up alerts for the rival names. DONE (founder confirmed).',
+      blockedOnFounder: false,
+    },
+    {
+      section: 'Open after the last session',
+      text: 'Submit the site to two more directories.',
+      blockedOnFounder: false,
+    },
+  ];
+  const cards = week.proposeTop5({ plan: null, openWork, today: TODAY, size: 5 });
+  const titles = cards.map((c) => c.title);
+  assert.ok(!titles.some((t) => /alerts for the rival/.test(t)), 'the finished row is gone');
+  assert.ok(
+    titles.some((t) => /two more directories/.test(t)),
+    'the open row stays'
+  );
+});

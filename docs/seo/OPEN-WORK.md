@@ -87,8 +87,8 @@ removal before any of them publish.
 
 **Unblocked, not yet done:**
 
-- **Google Alerts** on the eight competitor names plus the three event queries (acquisition/retirement/price-rise, and the `site:linkedin.com/posts` one). Step-by-step was given to the founder 2026-09-01. Covers the social and news half; `competitor-watch` already covers the website half.
-- **Software directory submissions.** Cheap, and the product-mode wording rules already exist. See the backlink-directories memory: software self-label, per-user pricing, never the flat service price.
+- ~~**Google Alerts** on the eight competitor names plus the three event queries.~~ **DONE** (founder confirmed 2026-11-16: set up during the Windows sessions; no repo record of the alert list).
+- ~~**Software directory submissions.**~~ **DONE** (founder confirmed 2026-11-16). Batch 1 ran July to August 2026 and batch 2 on 2026-11-06 (`5a974224`); every row and its status is in `backlink-ledger.md`, and `outreach/directory-batch-2-2026-11.md` lists the five batch-2 directories not done.
 
 ## 5. Scheduled, do not run early
 
