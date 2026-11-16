@@ -11,7 +11,7 @@
 //   newsBrief(card)                  the "Copy brief for Claude" text
 
 import crypto from 'node:crypto';
-import { tokens } from './topics.mjs';
+import { tokens, wordsOf, stem } from './topics.mjs';
 import { addDays, daysBetween } from './dates.mjs';
 import { longDate, plain } from './text.mjs';
 
@@ -199,12 +199,68 @@ const DOMAIN = new Set([
   'worker',
 ]);
 
+// Everyday words a headline and a page title share by chance. They never make two stories one, and
+// never make a story covered.
+const GENERIC = new Set(
+  [
+    'work',
+    'best',
+    'strong',
+    'general',
+    'don',
+    'top',
+    'big',
+    'help',
+    'need',
+    'use',
+    'way',
+    'time',
+    'hour',
+    'change',
+    'want',
+    'start',
+    'end',
+    'high',
+    'low',
+    'late',
+    'early',
+    'open',
+    'full',
+    'part',
+    'find',
+    'show',
+    'look',
+    'lead',
+    'set',
+    'put',
+    'keep',
+    'give',
+    'go',
+    'come',
+    'see',
+    'call',
+    'face',
+    'hold',
+    'reach',
+    'move',
+    'push',
+    'watch',
+    'join',
+    'guide',
+    'what',
+    'other',
+    'million',
+    'billion',
+  ].map((w) => w.toLowerCase())
+);
+
 const meaningful = (text) => tokens(text).filter((w) => !NEWS_STOP.has(w));
 
 // {all, distinctive}: the meaningful words of a text, and those not in DOMAIN.
 export function storyWords(text) {
   const all = meaningful(text);
-  return { all, distinctive: all.filter((w) => !DOMAIN.has(w)) };
+  // A word with a digit in it ("2027", "12", "$8M") is never a distinctive word: it matches by chance.
+  return { all, distinctive: all.filter((w) => !DOMAIN.has(w) && !GENERIC.has(w) && !/\p{N}/u.test(w)) };
 }
 
 const sharedOf = (a, b) => {
@@ -441,6 +497,7 @@ function outletsOf(group) {
       dateText: it.date ? longDate(it.date) : null,
       title: it.title,
       google: Boolean(it.google),
+      ...(isPaid(it) ? { paid: true } : {}),
     }))
     .sort((a, b) => String(b.date).localeCompare(String(a.date)) || a.name.localeCompare(b.name));
 }
@@ -457,7 +514,9 @@ export function storyCard(group, { today, pasted = false } = {}) {
     .sort();
   const firstDate = dates[0] ?? null;
   const latestDate = dates[dates.length - 1] ?? null;
-  const paid = group.some(isPaid);
+  // A story is a paid placement only when every outlet is one: a press release copy among real reports
+  // is marked on its own outlet line instead.
+  const paid = group.every(isPaid);
   return {
     id: `news:${hash(group[0].link)}`,
     title,
@@ -608,16 +667,13 @@ const logText = (e) =>
 
 // ---------------------------------------------------------------- what we already have
 
-// A match is strong at three shared distinctive words, or at two that are half the smaller list; it is
-// close at two.
-export const HAVE_MATCH = { strong: 3, close: 2, ratio: 0.5 };
+// A match is strong at three shared distinctive words and close at two. Only a strong match (or an outlet
+// link in the log) moves a card off Fresh, so a short title sharing two words never hides a story.
+export const HAVE_MATCH = { strong: 3, close: 2 };
+export const HAVE_MAX = 4;
 
-const strengthOf = (shared, a, b) => {
-  const n = shared.length;
-  const small = Math.min(new Set(a).size, new Set(b).size) || 1;
-  if (n >= HAVE_MATCH.strong || (n >= HAVE_MATCH.close && n / small >= HAVE_MATCH.ratio)) return 'strong';
-  return n >= HAVE_MATCH.close ? 'close' : null;
-};
+const strengthOf = (shared) =>
+  shared.length >= HAVE_MATCH.strong ? 'strong' : shared.length >= HAVE_MATCH.close ? 'close' : null;
 
 const normUrl = (u) => {
   try {
@@ -640,14 +696,19 @@ const slugWords = (page) =>
 // of the topic log: strong, or exact when an outlet's link is in it), plan (a post the plan has not
 // written yet). have: {content: [{page, kind, title, publishDate}], registry, log, plan}.
 export function matchHave(card, { content = [], registry = [], log = [], plan = null } = {}) {
-  const text = [card.title, ...(card.outlets ?? []).map((o) => o.title).filter(Boolean)].join(' ');
+  // The card's own title only: the titles of thirty outlets together share a word with almost anything.
+  const text = String(card.title ?? '');
   const mine = storyWords(text).distinctive;
   const out = [];
+  // Words are matched folded ("texas" and "texa"), and shown as the story wrote them.
+  const surface = new Map();
+  for (const w of wordsOf(text)) if (!surface.has(stem(w))) surface.set(stem(w), w);
+  const shown = (words) => words.map((w) => surface.get(w) ?? w).sort();
   const keyword = new Map((registry ?? []).map((r) => [r.url, r.primaryKeyword ?? '']));
   for (const c of content ?? []) {
     const theirs = storyWords(`${c.title} ${slugWords(c.page)} ${keyword.get(c.page) ?? ''}`).distinctive;
     const words = sharedOf(mine, theirs).sort();
-    const strength = strengthOf(words, mine, theirs);
+    const strength = strengthOf(words);
     if (!strength) continue;
     const when = c.publishDate ? ` (published ${longDate(c.publishDate)})` : '';
     const covered = c.kind === 'article' && strength === 'strong';
@@ -655,7 +716,7 @@ export function matchHave(card, { content = [], registry = [], log = [], plan = 
       kind: c.kind,
       page: c.page,
       text: `${covered ? 'Covered by' : 'Close to'} ${c.page}${c.kind === 'article' ? when : ''}`,
-      words,
+      words: shown(words),
       strength,
       covered,
       decided: false,
@@ -666,12 +727,12 @@ export function matchHave(card, { content = [], registry = [], log = [], plan = 
     const exact = (e.links ?? []).some((l) => links.has(normUrl(l)));
     const theirs = storyWords(e.title).distinctive;
     const words = sharedOf(mine, theirs).sort();
-    const strength = strengthOf(words, mine, theirs);
+    const strength = strengthOf(words);
     if (!exact && strength !== 'strong') continue;
     out.push({
       kind: 'log',
       text: logText(e),
-      words,
+      words: shown(words),
       strength: 'strong',
       covered: false,
       decided: true,
@@ -683,18 +744,24 @@ export function matchHave(card, { content = [], registry = [], log = [], plan = 
     if (p.done) continue;
     const theirs = storyWords(`${p.title} ${p.keyword ?? ''}`).distinctive;
     const words = sharedOf(mine, theirs).sort();
-    const strength = strengthOf(words, mine, theirs);
+    const strength = strengthOf(words);
     if (!strength) continue;
     out.push({
       kind: 'plan',
       text: `In your post plan as #${p.n}: ${plain(p.title)}`,
-      words,
+      words: shown(words),
       strength,
       covered: false,
       decided: false,
     });
   }
-  return out;
+  // At most HAVE_MAX lines: what covers or decides it first, then the closest by shared words.
+  const rank = (x) => (x.covered ? 0 : x.decided ? 1 : x.kind === 'plan' ? 2 : 3);
+  return out
+    .map((x, i) => ({ x, i }))
+    .sort((a, b) => rank(a.x) - rank(b.x) || b.x.words.length - a.x.words.length || a.i - b.i)
+    .slice(0, HAVE_MAX)
+    .map(({ x }) => x);
 }
 
 // ---------------------------------------------------------------- the brief
@@ -710,7 +777,10 @@ export function newsBrief(card) {
   L.push(`The story: ${plain(card.title)}`);
   const outlets = card.outlets ?? [];
   L.push(`Outlets (${outlets.length}):`);
-  for (const o of outlets) L.push(`- ${plain(o.name)}, ${o.date ? longDate(o.date) : 'no date given'}: ${o.url}`);
+  for (const o of outlets)
+    L.push(
+      `- ${plain(o.name)}, ${o.date ? longDate(o.date) : 'no date given'}: ${o.url}${o.paid ? ' (a press release or paid placement: not citable as a peg)' : ''}`
+    );
   if (card.firstDate && card.latestDate)
     L.push(
       card.firstDate === card.latestDate

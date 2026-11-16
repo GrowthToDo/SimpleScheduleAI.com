@@ -121,10 +121,11 @@ dateText, title, google}` (one per publisher; Google News links are redirect add
 (Relevance 1 to 5 from the tier and how many tier words; Rising 1 to 5 from how many outlets ran it,
 less one when the latest is 3 to 6 days old and two at a week or more; "Can we be first" and "Citable
 hook" are always to check), `paid` and `paidText` (a press release or paid placement: not citable as a
-peg), `have[] {kind: article|post|log|plan, text, words[], strength, covered, decided, exact}` (an
-article sharing three distinctive title words, or two that are half the shorter list, "covers" it; a
-blog post is only ever "Close to"; a topic log entry is matched by three such words or exactly by an
-outlet link), `tab`, `topLine` (why it is not fresh), `state`, `picked`, `pasted`, `aged` (no longer in
+peg; when only some outlets are one, those outlets carry `paid`), `have[] {kind: article|post|log|plan,
+text, words[], strength, covered, decided, exact}` (at most four; an article sharing three distinctive
+words with the card's title "covers" it, two is "Close to"; a blog post is only ever "Close to"; a
+topic log entry is matched by three such words or exactly by an outlet link; numbers never count),
+`tab`, `topLine` (why it is not fresh), `state`, `picked`, `pasted`, `aged` (no longer in
 the feeds, kept because he acted on it), `brief`. Hold and Drop are the item actions `snooze` and
 `ignore`; Pick is `POST /api/newsroom/pick` (also the card's Pin), refused at a third pick a week;
 `POST /api/newsroom/paste {url}` reads one public https page. None of these write a tracked file.

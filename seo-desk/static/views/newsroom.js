@@ -220,7 +220,13 @@ export async function render(el, ctx) {
       (c.outlets ?? []).map((o) => {
         const href = safeHref(o.url);
         const name = href ? h('a', { href, target: '_blank', rel: 'noopener noreferrer' }, o.name) : o.name;
-        return h('li', {}, name, o.dateText ? `, ${o.dateText}` : ', no date given');
+        return h(
+          'li',
+          {},
+          name,
+          o.dateText ? `, ${o.dateText}` : ', no date given',
+          o.paid ? h('span', { class: 'nr-words' }, ' (a press release or paid placement: not citable as a peg)') : null
+        );
       })
     );
     const have = (c.have ?? []).length

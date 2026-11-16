@@ -272,7 +272,7 @@ test('have: a blog post is only ever close, a plan row names its number, and two
   assert.equal(blog.covered, false);
   const plan = lines.find((l) => l.kind === 'plan');
   assert.equal(plan.text, 'In your post plan as #7: Winter census planning');
-  assert.deepEqual(news.HAVE_MATCH, { strong: 3, close: 2, ratio: 0.5 });
+  assert.deepEqual(news.HAVE_MATCH, { strong: 3, close: 2 });
 });
 
 test('have: a story whose outlet link is in the log is matched exactly, with the reason', () => {
@@ -653,4 +653,55 @@ Dropped, with reasons:
   assert.equal(log[4].reason, 'Citable-hook score 0, an automatic fail.');
   assert.equal(log[1].reason, 'Breach was old data theft with no outage.');
   assert.equal(log[2].reason, 'The piece is about IT staff (a $3.9M average cost, October 2025).');
+});
+
+test('real-data fixes: one press release among real outlets is marked on its line, not on the story', () => {
+  const today = '2026-11-16';
+  const real = item('Lakeshore nurses reach tentative contract deal averting strike', { publisher: 'Gazette' });
+  const wire = item('Lakeshore nurses reach tentative contract deal averting strike today', {
+    publisher: 'PR Newswire',
+    link: 'https://www.prnewswire.example/a',
+  });
+  const [card] = news.storyCards([real, wire], { today });
+  assert.equal(card.outlets.length, 2);
+  assert.equal(card.paid, false);
+  assert.equal(card.outlets.find((o) => o.name === 'PR Newswire').paid, true);
+  assert.equal(card.outlets.find((o) => o.name === 'Gazette').paid, undefined);
+  const [alone] = news.storyCards([wire], { today });
+  assert.equal(alone.paid, true);
+  assert.match(news.newsBrief({ ...card, have: [] }), /PR Newswire.*press release or paid placement/);
+});
+
+test('real-data fixes: numbers and everyday words never match, words show as written, four lines at most', () => {
+  const have = {
+    content: [
+      {
+        page: '/articles/state-medicaid-expansion-date',
+        kind: 'article',
+        title: 'When could the state expand Medicaid? 2027 at the earliest',
+        publishDate: '2026-11-09',
+      },
+      ...['a', 'b', 'c', 'd', 'e'].map((x) => ({
+        page: `/blog/texas-medicaid-${x}`,
+        kind: 'post',
+        title: `Texas Medicaid notes ${x}`,
+        publishDate: '2026-05-01',
+      })),
+    ],
+  };
+  const beds = news.matchHave({ title: 'Allen clinic adding 25 beds in expansion by late 2027', outlets: [] }, have);
+  assert.ok(!beds.some((x) => x.covered), 'a year and an everyday word do not make a story covered');
+  const tx = news.matchHave({ title: 'Texas Medicaid backlog grows', outlets: [] }, have);
+  assert.ok(
+    tx.every((x) => x.words.includes('texas')),
+    'shown as written, not folded'
+  );
+  assert.equal(tx.length, news.HAVE_MAX);
+  assert.equal(news.HAVE_MAX, 4);
+  // A short log title sharing two words is not a decision about this story.
+  const log = news.parseTopicLog(
+    '### Detection pass 2026-10-24\n\n- **WRITING - CMS: $8M to rural Mesa providers** go.\n'
+  );
+  const two = news.matchHave({ title: 'CMS finalizes provider enrollment changes', outlets: [] }, { log });
+  assert.deepEqual(two, []);
 });
