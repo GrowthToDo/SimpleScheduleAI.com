@@ -5,43 +5,43 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:22:17.808Z",
-      "contentHash": "8958297d65d707e421c7d2115b800440ea2f9a57b170a2bf93827bacd7bdc867"
+      "checkedAt": "2026-11-16T11:33:47.606Z",
+      "contentHash": "af35d0e616c51c2d31b980b3acf16e04a5e98301d5b5d3c02bbb9cb331b2528f"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:22:18.099Z",
-      "contentHash": "8958297d65d707e421c7d2115b800440ea2f9a57b170a2bf93827bacd7bdc867"
+      "checkedAt": "2026-11-16T11:33:48.005Z",
+      "contentHash": "af35d0e616c51c2d31b980b3acf16e04a5e98301d5b5d3c02bbb9cb331b2528f"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:22:24.891Z",
-      "contentHash": "8958297d65d707e421c7d2115b800440ea2f9a57b170a2bf93827bacd7bdc867"
+      "checkedAt": "2026-11-16T11:33:53.921Z",
+      "contentHash": "af35d0e616c51c2d31b980b3acf16e04a5e98301d5b5d3c02bbb9cb331b2528f"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:22:24.914Z",
-      "contentHash": "8958297d65d707e421c7d2115b800440ea2f9a57b170a2bf93827bacd7bdc867"
+      "checkedAt": "2026-11-16T11:33:53.937Z",
+      "contentHash": "af35d0e616c51c2d31b980b3acf16e04a5e98301d5b5d3c02bbb9cb331b2528f"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:22:25.512Z",
-      "contentHash": "8958297d65d707e421c7d2115b800440ea2f9a57b170a2bf93827bacd7bdc867"
+      "checkedAt": "2026-11-16T11:33:53.996Z",
+      "contentHash": "af35d0e616c51c2d31b980b3acf16e04a5e98301d5b5d3c02bbb9cb331b2528f"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:22:25.512Z",
-      "contentHash": "8958297d65d707e421c7d2115b800440ea2f9a57b170a2bf93827bacd7bdc867"
+      "checkedAt": "2026-11-16T11:33:53.996Z",
+      "contentHash": "af35d0e616c51c2d31b980b3acf16e04a5e98301d5b5d3c02bbb9cb331b2528f"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:22:25.513Z",
-      "contentHash": "8958297d65d707e421c7d2115b800440ea2f9a57b170a2bf93827bacd7bdc867"
+      "checkedAt": "2026-11-16T11:33:53.997Z",
+      "contentHash": "af35d0e616c51c2d31b980b3acf16e04a5e98301d5b5d3c02bbb9cb331b2528f"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:22:25.515Z",
-      "contentHash": "8958297d65d707e421c7d2115b800440ea2f9a57b170a2bf93827bacd7bdc867"
+      "checkedAt": "2026-11-16T11:33:54.001Z",
+      "contentHash": "af35d0e616c51c2d31b980b3acf16e04a5e98301d5b5d3c02bbb9cb331b2528f"
     }
   },
   "recorded": {
@@ -62,6 +62,24 @@
       "setBy": "founder",
       "setAt": "2026-11-16T09:24:56.427Z",
       "contentHash": "d9a95f72f13530ee25a1c7167391dd48da413f8582e6778007b5e35288772ea7"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder (2026-11-16: 'Rest is ok' after the hero swap)",
+      "setAt": "2026-11-16T11:33:47.099Z",
+      "contentHash": "02e571caacb9b1a8a921cc197f5b8d0f4c3d1d11ca9de22395554ed0e89576b0"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "main session, npm run indexnow 2026-11-16 (150 URLs, HTTP 200)",
+      "setAt": "2026-11-16T11:33:47.237Z",
+      "contentHash": "02e571caacb9b1a8a921cc197f5b8d0f4c3d1d11ca9de22395554ed0e89576b0"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "main session, GSC sitemap-index.xml submitted 2026-11-16",
+      "setAt": "2026-11-16T11:33:47.370Z",
+      "contentHash": "02e571caacb9b1a8a921cc197f5b8d0f4c3d1d11ca9de22395554ed0e89576b0"
     }
   },
   "overrides": [],
