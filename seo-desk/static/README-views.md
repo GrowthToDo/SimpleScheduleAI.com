@@ -14,7 +14,7 @@ except the desk's own `/api/...`.
 | `ask`                | `ask` (a question answered by Claude from the desk's data; `q=` only fills the field)                     | Above the groups: Ask, with the compact ask field under it                                   |
 | `week`               | `week`                                                                                                    | Plan: This week (count: worries, red above zero)                                             |
 | `month`              | `month` (one calendar month on one printable page; `m=2026-10` picks the month)                           | Plan: Monthly report                                                                         |
-| `newsroom`           | `newsroom` (news that fits the Newsroom method; `tab=covered`, `held`, `dropped` or `picked` opens a tab) | Plan: Newsroom (count: fresh Tier 1 and 2 stories not covered, held, dropped or picked)      |
+| `newsroom`           | `newsroom` (news that fits the Newsroom method; `tab=covered`, `held`, `dropped` or `picked` opens a tab) | Plan: Newsroom (count: the suggested stories, at most five)                                  |
 | `performance`        | `overview`                                                                                                | Search: Performance                                                                          |
 | `queries`            | `search` (the Searches list, its filter bar and where searches sit; `tab=targets` opens Target keywords)  | Search: Queries                                                                              |
 | `pages`              | `pages`                                                                                                   | Search: Pages                                                                                |
@@ -318,7 +318,12 @@ For pages that run a confirmed job or show big numbers. Import what you need:
 
 ## The Newsroom page
 
-`views/newsroom.js` reads `GET /api/newsroom`: `line`, `feeds` (`readAt`, `answered`, `total`, `failed`,
+`views/newsroom.js` reads `GET /api/newsroom`. From the top: Suggested for this week (`suggested`, at
+most five cards, each with its `suggestWhy` as the first line), Ask Claude for this week's topic
+(`topicAsk`: the button sends `POST /api/newsroom/ask-topic` `{}`, waits up to two minutes, and the
+answer's topics are drawn with `renderAnswer` from `views/ask.js`, text nodes only, each with its own
+Copy brief for Claude), Paste a link, then every story folded under "All stories from the last 14
+days" (`allCount`; open when the address names a tab). It also reads `line`, `feeds` (`readAt`, `answered`, `total`, `failed`,
 `text`), `tabs` (`key`, `label`, `count`), `cards` (each with its `tab`), `pastedOther` (pasted links that
 fit no topic), `picks` (`count`, `max`), `holdDays`, `paidLabel` and `scoreNote`. A card carries `title`,
 `outlets` (`name`, `url`, `dateText`), `tierText`, `score` (`relevance`, `rising`, `risingWhy`, `toCheck`),

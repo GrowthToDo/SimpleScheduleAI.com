@@ -907,3 +907,14 @@ test('ask topic: the answer splits into its topics, each with a brief built on t
   assert.equal(out[1].cardId, null);
   assert.match(out[1].brief, /Load \.claude\/skills\/trendjacking-articles\.md/);
 });
+
+test('8b page: when Claude was asked, how long it took, and the would-drop line', () => {
+  const fmt = { date: (d) => `D(${d})`, ago: () => '3 minutes ago' };
+  assert.equal(
+    viewMod.askedLine({ date: '2026-11-16', at: '2026-11-16T06:30:00Z', tookMs: 41200 }, fmt),
+    'Asked D(2026-11-16), 3 minutes ago. Claude took 41 seconds.'
+  );
+  assert.equal(viewMod.askedLine(null, fmt), null);
+  assert.equal(viewMod.dropLine('Topic 1: x\n\nWould drop: the chef story.'), 'Would drop: the chef story.');
+  assert.equal(viewMod.dropLine('no line'), null);
+});

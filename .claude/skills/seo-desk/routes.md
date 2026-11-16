@@ -112,8 +112,14 @@ with the month and its dates.
 read each morning from 14 Google News searches and four trade press feeds; source `news` in
 `sources`): `line`, `weekOf`, `feeds {readAt, status, answered, total, failed[] {name, error}, items,
 window {start, end, text}, text}`, `tabs[] {key, label, count}` (fresh, covered = "Already covered or
-decided", held, dropped, picked; the sidebar's `newsroom` count in `/api/nav` is the fresh count),
-`cards[]`, `pastedOther[]` (pasted links that fit no topic), `picks {count, max: 2}`, `holdDays`,
+decided", held, dropped, picked), `suggested[]` (at most five cards, best first: the best by draft
+score among fresh Tier 1 and 2 cards that no piece of ours from the last 60 days covers, not held,
+dropped or a paid placement only, with Texas or critical access adding one to relevance; each card
+carries `suggested`, `suggestRank` and `suggestWhy`, "Tier 1, Texas, 6 outlets in 5 days, nothing on
+our site yet"; the sidebar's `newsroom` count in `/api/nav` is this list's length), `suggestNote`,
+`allCount`, `topicAsk {available, reason, latest, note, what}` (`latest` is today's answer to "Ask
+Claude for this week's topic": `{date, at, tookMs, text, topics[] {n, title, text, cardId, brief}}`,
+a hypothesis until the live checks are done), `cards[]`, `pastedOther[]` (pasted links that fit no topic), `picks {count, max: 2}`, `holdDays`,
 `toCheck[]`, `paidLabel`, `scoreNote`. A card: `id` (news:...), `title`, `outlets[] {name, url, date,
 dateText, title, google}` (one per publisher; Google News links are redirect addresses), `firstDate`,
 `latestDate`, `tier` (1 or 2), `tierWords[]`, `tierText` ("Tier 1: nurse staffing, rural hospital"),
@@ -122,13 +128,19 @@ dateText, title, google}` (one per publisher; Google News links are redirect add
 less one when the latest is 3 to 6 days old and two at a week or more; "Can we be first" and "Citable
 hook" are always to check), `paid` and `paidText` (a press release or paid placement: not citable as a
 peg; when only some outlets are one, those outlets carry `paid`), `have[] {kind: article|post|log|plan,
-text, words[], strength, covered, decided, exact}` (at most four; an article sharing three distinctive
-words with the card's title "covers" it, two is "Close to"; a blog post is only ever "Close to"; a
-topic log entry is matched by three such words or exactly by an outlet link; numbers never count),
+text, words[], strength, covered, decided, exact, topic, publishDate}` (at most four; words are folded,
+so expand and expansion meet; a topic phrase from our titles, addresses or topic log, or an alias such
+as "rural health awards" for the Rural Health Transformation Program, makes a page "Close to", and the
+phrase with a second distinctive word, or three shared words, makes a piece from the last 60 days
+"Cover" it; a blog post is only ever "Close to"; a topic log entry is matched by the phrase and a
+second word, three words, or exactly by an outlet link; numbers never count; stories sharing a topic
+phrase from one of our articles within 10 days are one card),
 `tab`, `topLine` (why it is not fresh), `state`, `picked`, `pasted`, `aged` (no longer in
 the feeds, kept because he acted on it), `brief`. Hold and Drop are the item actions `snooze` and
 `ignore`; Pick is `POST /api/newsroom/pick` (also the card's Pin), refused at a third pick a week;
-`POST /api/newsroom/paste {url}` reads one public https page. None of these write a tracked file.
+`POST /api/newsroom/paste {url}` reads one public https page; `POST /api/newsroom/ask-topic {}` asks
+Claude once (the founder's press only; 429 while a Claude run is going, from here or the Ask box). None
+of these write a tracked file.
 
 ## Search
 

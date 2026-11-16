@@ -33,9 +33,9 @@ export const NAV = [
       {
         route: 'newsroom',
         label: 'Newsroom',
-        explain: 'News from the last 14 days that fits your Newsroom method, checked against what you have written.',
+        explain: 'Up to five news stories suggested for this week, checked against what you have written.',
         count: 'newsroom',
-        unit: ['fresh story', 'fresh stories'],
+        unit: ['suggested story', 'suggested stories'],
       },
     ],
   },

@@ -196,9 +196,9 @@ export const SECTIONS = [
   // Its target keyword counts are there once that month's report has been opened (the digest never
   // pulls from Search Console).
   ['Last complete month (Monthly report)', '/api/month', (m) => lastMonthBrief(m)],
-  // The top five fresh Newsroom stories (news that fits the trendjacking method), with their tier, outlet
-  // count and what the site already has; the draft score is never the real one.
-  ['Newsroom (fresh news stories for an /articles piece)', '/api/newsroom', (m) => newsroomDigest(m)],
+  // The Newsroom: the suggested stories (at most five) with why each, today's Claude topics if any, and
+  // the top five fresh cards; the draft score is never the real one.
+  ['Newsroom (suggested stories for an /articles piece)', '/api/newsroom', (m) => newsroomDigest(m)],
   [
     'Cannibalization',
     '/api/insights/cannibalization',

@@ -93,7 +93,7 @@ test('Newsroom sits in the Plan group under Monthly report, counting fresh stori
   );
   const e = nav.entryFor('newsroom');
   assert.equal(e.count, 'newsroom');
-  assert.equal(nav.countTitle(e, 3), '3 fresh stories');
+  assert.equal(nav.countTitle(e, 3), '3 suggested stories');
   assert.equal(nav.countTitle(e, null), 'Not counted yet: the news feed source has not been pulled on this Mac.');
   assert.equal(app.SOURCE_NAMES.news, 'News feeds');
 });

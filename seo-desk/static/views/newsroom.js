@@ -16,8 +16,26 @@
 //   scoreLines(card)         the draft score as four lines
 //   actionsFor(card)         which buttons a card offers, main one first
 //   feedsLine(feeds, fmt)    when the feeds were read and how many answered
+//   askedLine(latest, fmt)   when Claude was asked for this week's topic and how long it took
+//   dropLine(text)           the "Would drop:" line of Claude's answer
+//
+// Package 8b: "Suggested for this week" (at most five, each with why) sits at the top, "Ask Claude for
+// this week's topic" under it, and every story of the last 14 days is folded below, in its tabs.
+
+import { renderAnswer } from './ask.js';
 
 export const TAB_KEYS = ['fresh', 'covered', 'held', 'dropped', 'picked'];
+
+export function askedLine(latest, fmt) {
+  if (!latest?.at) return null;
+  const secs = Math.max(1, Math.round((latest.tookMs ?? 0) / 1000));
+  return `Asked ${fmt.date(latest.date)}, ${fmt.ago(latest.at)}. Claude took ${plural(secs, 'second', 'seconds')}.`;
+}
+
+export function dropLine(text) {
+  const m = /^Would drop:\s*(.+)$/m.exec(String(text ?? ''));
+  return m ? `Would drop: ${m[1].trim()}` : null;
+}
 
 export const tabOf = (params) => {
   const t = params?.get?.('tab');
@@ -67,6 +85,9 @@ const CSS = `
 .nr-words { color: var(--muted); }
 .nr-note { margin: 8px 0 0; }
 .nr-more { margin-top: 14px; }
+.nr-all > summary { cursor: pointer; margin-bottom: 12px; }
+.nr-topic { overflow-wrap: anywhere; }
+.nr-answer { margin-top: 12px; }
 .nr-picks { margin: 12px 0 4px; }
 .nr-card details summary { cursor: pointer; color: var(--muted); margin: 4px 0; }
 `;
@@ -273,6 +294,9 @@ export async function render(el, ctx) {
         c.aged ? chip('', 'No longer in the feeds') : null,
         c.state?.status === 'in-progress' ? chip('chip-accent', 'Started') : null
       ),
+      c.suggested && c.suggestWhy
+        ? h('p', { class: 'banner banner-accent nr-note' }, `Suggested: ${c.suggestWhy}.`)
+        : null,
       c.topLine ? h('p', { class: 'banner banner-accent nr-note' }, c.topLine) : null,
       h('h3', { class: 'card-title' }, c.title),
       c.paid ? h('p', { class: 'banner banner-warn nr-note' }, c.paidText ?? data.paidLabel) : null,
@@ -410,7 +434,113 @@ export async function render(el, ctx) {
     if (sel && tabs.scrollWidth > tabs.clientWidth) tabs.scrollLeft = Math.max(0, sel.offsetLeft - 16);
   }, 0);
 
+  // ---------------------------------------------------------------- suggested and Ask Claude
+
+  const suggested = data.suggested ?? [];
+  const suggestSection = h(
+    'section',
+    { class: 'section' },
+    h('h2', { class: 'section-title' }, `Suggested for this week (${suggested.length})`),
+    h('p', { class: 'section-note' }, data.suggestNote),
+    suggested.length
+      ? h('div', { class: 'nr-cards' }, suggested.map(card))
+      : h(
+          'p',
+          { class: 'empty' },
+          'Nothing to suggest: no fresh Tier 1 or 2 story is left that a recent piece of ours does not cover.'
+        )
+  );
+
+  const ta = data.topicAsk ?? {};
+  const askButton = h(
+    'button',
+    { type: 'button', class: 'btn', disabled: !ta.available },
+    "Ask Claude for this week's topic"
+  );
+  const askStatus = h('p', { class: 'muted small', role: 'status' }, ta.available ? '' : (ta.reason ?? ''));
+  askButton.addEventListener('click', async () => {
+    askButton.disabled = true;
+    askStatus.textContent = 'Asking Claude. This takes up to two minutes.';
+    try {
+      await api.post('/api/newsroom/ask-topic', {});
+      ctx.toast("Claude answered. The topics are under Ask Claude for this week's topic.", 'success');
+      await ctx.reload();
+    } catch (err) {
+      askStatus.textContent = err.message;
+      ctx.toast(err.message, 'error');
+      if (document.contains(askButton)) askButton.disabled = false;
+    }
+  });
+  const latest = ta.latest;
+  const topicBlock = (t) =>
+    h(
+      'div',
+      { class: 'card nr-topic' },
+      renderAnswer(h, t.text),
+      h(
+        'div',
+        { class: 'card-actions' },
+        h(
+          'button',
+          {
+            type: 'button',
+            class: 'btn btn-small btn-primary',
+            onclick: guard(async () => {
+              const ok = await ctx.copyText(t.brief);
+              ctx.toast(
+                ok
+                  ? 'Brief copied. Paste it into Claude Code; it checks the results page and the sources before any draft.'
+                  : 'The browser blocked copying. Click the page once, then try again.',
+                ok ? 'success' : 'error'
+              );
+            }),
+          },
+          'Copy brief for Claude'
+        )
+      )
+    );
+  const askSection = h(
+    'section',
+    { class: 'section' },
+    h('h2', { class: 'section-title' }, "Ask Claude for this week's topic"),
+    h('p', { class: 'section-note' }, ta.what ?? ''),
+    h('div', { class: 'row' }, askButton),
+    askStatus,
+    latest
+      ? h(
+          'div',
+          { class: 'nr-cards nr-answer' },
+          h('p', { class: 'muted small' }, askedLine(latest, fmt)),
+          h('p', { class: 'banner banner-warn nr-note' }, ta.note),
+          (latest.topics ?? []).length ? latest.topics.map(topicBlock) : renderAnswer(h, latest.text),
+          dropLine(latest.text) && (latest.topics ?? []).length ? h('p', {}, dropLine(latest.text)) : null
+        )
+      : null
+  );
+
   const other = data.pastedOther ?? [];
+  const all = h(
+    'details',
+    { class: 'nr-all', open: ctx.params?.has?.('tab') || null },
+    h(
+      'summary',
+      { class: 'section-title' },
+      `All stories from the last 14 days (${data.allCount ?? (data.cards ?? []).length})`
+    ),
+    h(
+      'p',
+      { class: 'muted small nr-picks' },
+      `Picked this week: ${data.picks?.count ?? 0} of ${data.picks?.max ?? 2}. ${plural(
+        data.picks?.max ?? 2,
+        'pick',
+        'picks'
+      )} a week at most, the method's maximum. A pick goes into This week's priorities and is not a page edit.`
+    ),
+    tabs,
+    panel,
+    h('p', { class: 'muted small' }, data.scoreNote)
+  );
+
   ctx.mount(
     el,
     h('style', {}, CSS),
@@ -426,6 +556,8 @@ export async function render(el, ctx) {
       ),
       h('div', { class: 'row' }, refresh)
     ),
+    suggestSection,
+    askSection,
     h('section', { class: 'section' }, paste),
     other.length
       ? h(
@@ -440,17 +572,6 @@ export async function render(el, ctx) {
           h('div', { class: 'nr-cards' }, other.map(card))
         )
       : null,
-    h(
-      'p',
-      { class: 'muted small nr-picks' },
-      `Picked this week: ${data.picks?.count ?? 0} of ${data.picks?.max ?? 2}. ${plural(
-        data.picks?.max ?? 2,
-        'pick',
-        'picks'
-      )} a week at most, the method's maximum. A pick goes into This week's priorities and is not a page edit.`
-    ),
-    tabs,
-    panel,
-    h('p', { class: 'muted small' }, data.scoreNote)
+    h('section', { class: 'section' }, all)
   );
 }
