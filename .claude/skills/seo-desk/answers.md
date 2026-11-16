@@ -1,4 +1,4 @@
-<!-- Reference file for .claude/skills/seo-desk.md. Rules for answering each kind of question and four worked examples. Every figure and search phrase in the examples is INVENTED and shows shape only; never reuse them as real data. The desk's routes are the authority for what a field means. -->
+<!-- Reference file for .claude/skills/seo-desk.md. Rules for answering each kind of question and five worked examples. Every figure and search phrase in the examples is INVENTED and shows shape only; never reuse them as real data. The desk's routes are the authority for what a field means. -->
 
 # Answering from the desk
 
@@ -15,6 +15,7 @@ Say the sentence the first time you use the term.
 - **Keyword map.** Which keyword belongs to which page.
 - **Internal links.** Links from one of our pages to another.
 - **Impressions** are times shown on Google. **Click rate** is clicks divided by times shown.
+- **Newsroom.** News stories from the last 14 days that fit the trendjacking method, for a `/articles` piece.
 
 ## Cannibalization
 
@@ -178,3 +179,15 @@ read), 1 is ready to judge, 2 are still waiting. The 2 October change: quoted fr
 <summary sentence>. Other edits landed in the same window, so it cannot be read. A Google ranking update fell
 inside the window, so read it with care. 2 more verdicts are too early; the next can be judged on
 21 November." Name the stale source first if one is behind.
+
+**5. "What should I write for the Newsroom this week?"** Read `/api/newsroom` (the Ask digest carries
+the top five fresh cards as "Newsroom"). Say when the feeds were read and how many answered, then up to
+three fresh cards, best draft score first: the title, its `tierText`, how many outlets ran it and the
+latest date ("3 outlets ran it, the latest on 14 November"), and any `have` line ("Close to
+/blog/example-post"). Never call a story rising, trending or big beyond that outlet count and those
+dates, and never give the draft Relevance and Rising as the score: "Can we be first" and "Citable
+hook" are still to check. Say a `paid` card's `paidText`. If he has picked one already (`picks.count`),
+say so; two a week is the most. Then send him to the card's **Copy brief for Claude** for the real
+scoring: it checks the results page and the hook, logs the decision in the topic log and drafts only
+after he says go. A card on the covered tab is already written or decided; give its `topLine` and do
+not suggest it again.

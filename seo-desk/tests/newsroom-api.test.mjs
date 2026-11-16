@@ -439,3 +439,28 @@ test('paste: at most 50 pasted links are kept, newest first', async () => {
   assert.equal(kept.length, PASTED_MAX);
   assert.equal(kept[0].url, `https://valley.example/news/p${PASTED_MAX + 1}`);
 });
+
+// ---------------------------------------------------------------- the Ask digest
+
+test('ask: the digest carries the top five fresh stories with tier, outlets and what we have', async () => {
+  seed();
+  const { SECTIONS } = await import('../lib/ask.mjs');
+  const { buildModel } = await import('../lib/api/model.mjs');
+  const sec = SECTIONS.find(([title]) => title.startsWith('Newsroom'));
+  assert.ok(sec, 'the digest has a Newsroom section');
+  assert.equal(sec[1], '/api/newsroom');
+  const d = sec[2](buildModel());
+  const v = await view();
+  const fresh = v.cards.filter((c) => c.tab === 'fresh');
+  assert.equal(d.freshCount, fresh.length);
+  assert.deepEqual(
+    d.fresh.map((c) => c.title),
+    fresh.slice(0, 5).map((c) => c.title)
+  );
+  const pine = d.fresh.find((c) => c.title.includes('Pine county'));
+  assert.equal(pine.outlets, 2);
+  assert.equal(pine.tierText, 'Tier 1: nurse staffing, rural hospital');
+  assert.deepEqual(pine.toCheck, ['Can we be first', 'Citable hook']);
+  assert.ok(Array.isArray(pine.have));
+  assert.match(d.rule, /Never call a story rising beyond its outlet count and dates/);
+});

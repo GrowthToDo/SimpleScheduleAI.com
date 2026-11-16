@@ -58,6 +58,36 @@ export function newsroomView(model) {
   };
 }
 
+// What the Ask digest carries: the feeds line, this week's picks and the top five fresh cards with their
+// tier, how many outlets ran each, the draft score with its two parts to check, and what we already have.
+export function newsroomDigest(model) {
+  const nr = newsroomCards(model);
+  const f = feedsOf(model);
+  const fresh = nr.cards.filter((c) => c.tab === 'fresh');
+  return {
+    line: NEWSROOM_LINE,
+    feeds: { readAt: f.readAt, answered: f.answered, total: f.total, text: f.text },
+    freshCount: fresh.length,
+    picks: {
+      count: nr.cards.filter((c) => c.picked).length,
+      max: MAX_PICKS,
+      titles: nr.cards.filter((c) => c.picked).map((c) => c.title),
+    },
+    rule: "Relevance and Rising are drafts; Can we be first and Citable hook are to check. Never call a story rising beyond its outlet count and dates. The real scoring is the card's Copy brief for Claude.",
+    fresh: fresh.slice(0, 5).map((c) => ({
+      title: c.title,
+      tierText: c.tierText,
+      outlets: c.outlets.length,
+      outletNames: c.outlets.map((o) => o.name),
+      latest: c.latestText,
+      draftScore: { relevance: c.score.relevance, rising: c.score.rising, risingWhy: c.score.risingWhy },
+      toCheck: TO_CHECK.map((t) => t.name),
+      ...(c.paid ? { paidText: c.paidText } : {}),
+      have: c.have.map((x) => x.text),
+    })),
+  };
+}
+
 const idOf = (body) => {
   const id = String(body?.id ?? '');
   if (!/^news:[0-9a-f]{12}$/.test(id)) throw bad('id must be a Newsroom card id, such as news:0123456789ab.');

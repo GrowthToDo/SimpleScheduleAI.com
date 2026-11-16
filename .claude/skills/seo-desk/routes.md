@@ -25,7 +25,10 @@ repo files were read before the desk read git: then a page edited lately may be 
 `locked`, `pastWeeks[]`. `top5[]` is the week's priorities, most important first, and holds at most
 `planSize` cards: a ceiling, never padded, so fewer is normal. Order: broken things (a dropped page, a
 failed source, a keyword file problem, a Bing crawl problem, a competitor change, or one card for the
-technical audit's critical and high findings), two at most; the plan's next post; the week's one page
+technical audit's critical and high findings), two at most; the plan's next post; the Newsroom
+pieces he picked on the Newsroom page (two at most; `slot` newsroom, `typeLabel` "Newsroom piece",
+`source` news, `isPageEdit` false and `eligibility` null, so they never use the week's edit; `why` is
+"You picked it for this week's Newsroom piece."; Done means the piece is published); the week's one page
 edit while it is unused (a pinned one, else the plan's first open improve row, else the best eligible
 page edit; a slipping page only when it is a worry); a verdict card only when a due change can be
 read now; then tasks that are not page edits (one card asking Google to index pages that already
@@ -39,8 +42,8 @@ into tasks. `editStatus` is null while the week's edit is unused;
 once used it is the line "This week's page edit is used (/page, 9 November). The next one can go in
 from 16 November." and there is no card for it. A top-five card: `id`, `title`, `typeLabel`, `term`,
 `explain`, `why` (one plain sentence on why it is in this week's list; quote it), `measured`,
-`action`, `test`, `eligibility`, `page`, `isPageEdit`, `slot` (broken, new-post, page-edit, verdict,
-other), `source`, `oppId`, `state`. A verdict card reports, so it has `eligibility: null` and
+`action`, `test`, `eligibility`, `page`, `isPageEdit`, `slot` (broken, new-post, newsroom, page-edit,
+verdict, other), `source`, `oppId`, `state`. A verdict card reports, so it has `eligibility: null` and
 `hypothesis: false`. A card on a chosen or locked week can also carry
 `weekEditDone {page, date, dateText}` (or null) when another page edit is already dated this week.
 `eligibility` (the same on every list: this week's priorities, the cards beside it, opportunities, insight cards,
@@ -104,6 +107,27 @@ never zero. The month's searches come from a query-only Search Console pull, cac
 month is finished (opening a month the first time can take a few seconds; 502 or 429 leaves
 `searchError` and the stored numbers). `/api/month.csv?m=` is the full lists in one file, each row
 with the month and its dates.
+
+`/api/newsroom` (the Newsroom page: news from the last 14 days that fits the trendjacking method,
+read each morning from 14 Google News searches and four trade press feeds; source `news` in
+`sources`): `line`, `weekOf`, `feeds {readAt, status, answered, total, failed[] {name, error}, items,
+window {start, end, text}, text}`, `tabs[] {key, label, count}` (fresh, covered = "Already covered or
+decided", held, dropped, picked; the sidebar's `newsroom` count in `/api/nav` is the fresh count),
+`cards[]`, `pastedOther[]` (pasted links that fit no topic), `picks {count, max: 2}`, `holdDays`,
+`toCheck[]`, `paidLabel`, `scoreNote`. A card: `id` (news:...), `title`, `outlets[] {name, url, date,
+dateText, title, google}` (one per publisher; Google News links are redirect addresses), `firstDate`,
+`latestDate`, `tier` (1 or 2), `tierWords[]`, `tierText` ("Tier 1: nurse staffing, rural hospital"),
+`score {relevance, rising, product, relevanceWhy, risingWhy, draft: true, toCheck[] {name, how}}`
+(Relevance 1 to 5 from the tier and how many tier words; Rising 1 to 5 from how many outlets ran it,
+less one when the latest is 3 to 6 days old and two at a week or more; "Can we be first" and "Citable
+hook" are always to check), `paid` and `paidText` (a press release or paid placement: not citable as a
+peg), `have[] {kind: article|post|log|plan, text, words[], strength, covered, decided, exact}` (an
+article sharing three distinctive title words, or two that are half the shorter list, "covers" it; a
+blog post is only ever "Close to"; a topic log entry is matched by three such words or exactly by an
+outlet link), `tab`, `topLine` (why it is not fresh), `state`, `picked`, `pasted`, `aged` (no longer in
+the feeds, kept because he acted on it), `brief`. Hold and Drop are the item actions `snooze` and
+`ignore`; Pick is `POST /api/newsroom/pick` (also the card's Pin), refused at a third pick a week;
+`POST /api/newsroom/paste {url}` reads one public https page. None of these write a tracked file.
 
 ## Search
 

@@ -29,6 +29,7 @@ import { pageView, windowsFor } from './api/search.mjs';
 import { aiView, healthView } from './api/panels.mjs';
 import { navCounts, overviewView } from './api/ext/overview.mjs';
 import { lastMonthBrief } from './api/ext/month.mjs';
+import { newsroomDigest } from './api/ext/newsroom.mjs';
 import {
   cannibalizationView,
   runnerUpView,
@@ -195,6 +196,9 @@ export const SECTIONS = [
   // Its target keyword counts are there once that month's report has been opened (the digest never
   // pulls from Search Console).
   ['Last complete month (Monthly report)', '/api/month', (m) => lastMonthBrief(m)],
+  // The top five fresh Newsroom stories (news that fits the trendjacking method), with their tier, outlet
+  // count and what the site already has; the draft score is never the real one.
+  ['Newsroom (fresh news stories for an /articles piece)', '/api/newsroom', (m) => newsroomDigest(m)],
   [
     'Cannibalization',
     '/api/insights/cannibalization',
@@ -580,7 +584,7 @@ Rules:
 6. When a source is stale or failed, or the data carries a warning, and it affects the answer, say so first in one line with the date the data runs through.
 7. Plain spoken words for a hospital-software founder, short sentences, no em dashes and no en dashes. Use the standard SEO terms (cannibalization, runner-up keywords, secondary keywords, content gaps, decay, keyword map, internal links, click rate, position) with a few words of meaning the first time.
 8. Keep it under 180 words. A list of up to five short items is fine.
-9. You cannot take any action and you have no tools. When he asks for an action, tell him which desk page and which button does it. The desk pages are: This week; Performance, Queries, Pages; Keyword map, Cannibalization, Runner-up keywords, Secondary keywords, Content gaps, Decay, Internal links, All opportunities; Technical audit, AI visibility, Visitors; Did it work?, Keywords, Competitors, Settings.
+9. You cannot take any action and you have no tools. When he asks for an action, tell him which desk page and which button does it. The desk pages are: This week, Newsroom; Performance, Queries, Pages; Keyword map, Cannibalization, Runner-up keywords, Secondary keywords, Content gaps, Decay, Internal links, All opportunities; Technical audit, AI visibility, Visitors; Did it work?, Keywords, Competitors, Settings.
 10. Lead with the answer, then the evidence with its dates, then any hypothesis and its test.
 
 Write plain text: paragraphs separated by a blank line, lists as lines starting with "- " or "1. ", and **bold** only for a few words. No headings, no tables, no links.`;
