@@ -18,6 +18,7 @@ import { parsePlan, findPlanFile } from './plan-parser.mjs';
 import { AI_CRAWLERS, robotsAllows } from '../robots.mjs';
 import { refreshGoogleUpdates } from '../google-updates.mjs';
 import { parseDossierLog } from '../competitor-changes.mjs';
+import { parseTopicLog } from '../news.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const DEFAULT_REPO_ROOT = path.resolve(HERE, '../../..');
@@ -269,6 +270,44 @@ export function pageOfFile(file) {
     return route ? `/${route}` : '/';
   }
   return null;
+}
+
+// ---------------------------------------------------------------- posts and articles
+
+// The fields of a post's front matter the Newsroom page needs: {title, publishDate, draft}. A quoted
+// title loses its quotes ('' inside single quotes is one quote). Missing fields are null.
+export function parseFrontMatter(text) {
+  const m = /^---\r?\n([\s\S]*?)\r?\n---/.exec(String(text ?? ''));
+  const fm = m ? m[1] : '';
+  const field = (name) => new RegExp(`^${name}:\\s*(.*)$`, 'm').exec(fm)?.[1]?.trim() ?? null;
+  let title = field('title');
+  if (title && /^'.*'$/.test(title)) title = title.slice(1, -1).replace(/''/g, "'");
+  else if (title && /^".*"$/.test(title)) title = title.slice(1, -1).replace(/\\"/g, '"');
+  const date = /^(\d{4}-\d{2}-\d{2})/.exec(field('publishDate') ?? '')?.[1] ?? null;
+  return { title: title || null, publishDate: date, draft: /^true$/i.test(field('draft') ?? '') };
+}
+
+// Every live post and article in the repo (draft: false, published on or before today):
+// [{page, kind: 'post' | 'article', title, publishDate}], newest first.
+export function readContent(repoRoot, today) {
+  const out = [];
+  for (const [dir, kind] of [
+    ['src/data/article', 'article'],
+    ['src/data/post', 'post'],
+  ]) {
+    let names = [];
+    try {
+      names = fs.readdirSync(path.join(repoRoot, dir)).filter((n) => /\.(md|mdx)$/i.test(n));
+    } catch {
+      continue;
+    }
+    for (const n of names) {
+      const fm = parseFrontMatter(readText(path.join(repoRoot, dir, n)));
+      if (fm.draft || !fm.title || (fm.publishDate && today && fm.publishDate > today)) continue;
+      out.push({ page: pageOfFile(`${dir}/${n}`), kind, title: fm.title, publishDate: fm.publishDate });
+    }
+  }
+  return out.sort((a, b) => String(b.publishDate).localeCompare(String(a.publishDate)) || a.page.localeCompare(b.page));
 }
 
 const SITE_HOST_RE = /^https?:\/\/(?:www\.)?simplescheduleai\.com/i;
@@ -652,6 +691,13 @@ export async function pullLocal({
     : { file: null, error: 'No docs/seo/next-*-blogs-*.md plan file found.', posts: [], improve: [] };
 
   const openWork = parseOpenWork(readText(seo('OPEN-WORK.md')) ?? '');
+  // For the Newsroom page: what the site has already written, and the topic log of what was decided.
+  const content = attempt('content', () => readContent(repoRoot, today), []);
+  const newsroomLog = attempt(
+    'newsroomLog',
+    () => parseTopicLog(readText(seo('articles-trendjacking-plan.md')) ?? ''),
+    []
+  );
 
   const snapDir = seo('competitor-snapshots');
   const snapshotUrl = (key) => {
@@ -743,6 +789,8 @@ export async function pullLocal({
       registry,
       plan,
       openWork,
+      content,
+      newsroomLog,
       competitors: { sitemap, watch, lastRun, snapshots, dossierLog },
       edits,
       contentEdits,

@@ -345,6 +345,7 @@ test('/api/nav gives null counts (never 0) on an empty data folder', async () =>
     'decay',
     'internalLinks',
     'keywordMap',
+    'newsroom',
     'opportunities',
     'runnerUp',
     'secondaryKeywords',

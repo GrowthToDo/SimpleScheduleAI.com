@@ -72,6 +72,7 @@ test('a failing puller keeps its old data and the others stay fresh', async () =
     ga4: 'fresh',
     clarity: 'fresh',
     index: 'fresh',
+    news: 'fresh',
   });
   const kept = store.readJson('snap/gsc.json');
   assert.equal(kept.ok, false);
@@ -81,13 +82,13 @@ test('a failing puller keeps its old data and the others stay fresh', async () =
   assert.equal(kept.through, '2026-11-06');
   assert.equal(kept.error, 'GSC fell over.');
   assert.match(kept.failedAt, /^\d{4}-\d{2}-\d{2}T/);
-  for (const s of ['local', 'bing', 'ga4', 'clarity', 'index'])
+  for (const s of ['local', 'bing', 'ga4', 'clarity', 'index', 'news'])
     assert.equal(store.readJson(`snap/${s}.json`).status, 'fresh');
-  // Local first, then the rest in order, one at a time, index checks last.
-  assert.deepEqual(Object.keys(run.results), ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index']);
+  // Local first, then the rest in order, one at a time, index checks and then the news feeds last.
+  assert.deepEqual(Object.keys(run.results), ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index', 'news']);
   assert.deepEqual(
     calls.map((c) => c.source),
-    ['local', 'bing', 'ga4', 'clarity', 'index']
+    ['local', 'bing', 'ga4', 'clarity', 'index', 'news']
   );
   assert.equal(maxActive(), 1);
 });
@@ -164,11 +165,11 @@ test('two overlapping refreshAll calls run each puller once', async () => {
   const b = refreshAll({ pullers });
   assert.equal(a, b);
   await a;
-  assert.equal(calls.length, 6);
+  assert.equal(calls.length, 7);
   assert.equal(refreshProgress().running, false);
   // After it finishes, a new call starts a new run.
   await refreshAll({ pullers });
-  assert.equal(calls.length, 12);
+  assert.equal(calls.length, 14);
 });
 
 test('refreshAll reports which source is running', async () => {
@@ -239,13 +240,14 @@ test('after a timeout the source is stopped and the run goes on with the next on
     ga4: 'fresh',
     clarity: 'fresh',
     index: 'fresh',
+    news: 'fresh',
   });
   assert.equal(signal.aborted, true, 'the timed out source is told to stop');
   assert.equal(closed, 1, 'its session is closed');
   assert.match(store.readJson('snap/gsc.json').error, /timed out/);
   assert.deepEqual(
     calls.map((c) => c.source),
-    ['local', 'bing', 'ga4', 'clarity', 'index']
+    ['local', 'bing', 'ga4', 'clarity', 'index', 'news']
   );
   assert.equal(store.readJson('state/refresh.json').lastFullRunAt, run.startedAt, 'every source was tried');
 });
@@ -253,7 +255,9 @@ test('after a timeout the source is stopped and the run goes on with the next on
 test('each source has its own time limit: index checks get 15 minutes, the others 10', () => {
   assert.equal(refresh.SOURCE_TIMEOUT_MS.index, 15 * 60 * 1000);
   assert.equal(refresh.PULL_TIMEOUT_MS, 10 * 60 * 1000);
-  assert.deepEqual(refresh.ORDER, ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index']);
+  assert.deepEqual(refresh.ORDER, ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index', 'news']);
+  assert.equal(refresh.SOURCE_TIMEOUT_MS.news, 3 * 60 * 1000);
+  assert.equal(refresh.retryCap('news'), 1, 'the news feeds are retried at most once a day');
 });
 
 test('the first index run starts from the old Search Console table and rotates the index copy', async () => {
@@ -336,16 +340,16 @@ test('a partial run today does not stop the daily full run', async () => {
   stop();
   assert.deepEqual(
     calls.map((c) => c.source),
-    ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index']
+    ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index', 'news']
   );
 });
 
-test('sourceStatus on an empty data dir lists seven sources as never', () => {
+test('sourceStatus on an empty data dir lists eight sources as never', () => {
   freshDir();
   const rows = sourceStatus();
   assert.deepEqual(
     rows.map((r) => r.source),
-    ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index', 'dfs']
+    ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index', 'news', 'dfs']
   );
   for (const r of rows) {
     assert.equal(r.status, 'never');
@@ -425,7 +429,7 @@ test('a failed local pull is retried only after a short back-off', () => {
       'snap/local.json',
       snap('local', { ok: false, status: 'failed', failedAt: new Date(Date.now() - minsAgo * 60000).toISOString() })
     );
-  for (const s of ['gsc', 'bing', 'ga4', 'clarity', 'index']) store.writeJson(`snap/${s}.json`, snap(s));
+  for (const s of ['gsc', 'bing', 'ga4', 'clarity', 'index', 'news']) store.writeJson(`snap/${s}.json`, snap(s));
   failedLocal(1);
   assert.deepEqual(ensureFresh({ pullers }), []);
   failedLocal(15);
@@ -455,7 +459,7 @@ test('startSchedule runs the refresh once in the daily hour', async () => {
   await new Promise((r) => setTimeout(r, 120));
   await refreshAll({ pullers: {} }); // wait for any run still going (no sources to pull)
   stop();
-  assert.equal(calls.length, 6, 'ran once, not on every tick');
+  assert.equal(calls.length, 7, 'ran once, not on every tick');
   assert.ok(store.readJson('state/refresh.json').startedAt);
 
   const { pullers: other, calls: otherCalls } = fakePullers();
@@ -778,7 +782,7 @@ test('a paused desk starts no refresh on a page load or on the morning schedule,
 
   // The same call from the Refresh now button runs.
   await refreshAll({ pullers });
-  assert.equal(calls.length, 6);
+  assert.equal(calls.length, 7);
 
   // Switched off again, the schedule starts its morning run as before.
   store.writeJson('state/settings.json', { paused: false });
@@ -788,7 +792,7 @@ test('a paused desk starts no refresh on a page load or on the morning schedule,
   const stop2 = startSchedule({ pullers: again.pullers, intervalMs: 1000, now: () => atHour(7) });
   await refreshAll({ pullers: {} }); // join the run the schedule started
   stop2();
-  assert.equal(again.calls.length, 6);
+  assert.equal(again.calls.length, 7);
 });
 
 test('GET /api/sources carries paused on every row', async () => {

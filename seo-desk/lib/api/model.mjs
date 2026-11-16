@@ -33,7 +33,8 @@ import { loadTargets, allTargets, applySignals } from '../targets.mjs';
 import { longDate, longRange, plain } from '../text.mjs';
 import { TERMS, termOf } from '../insights.mjs';
 
-export const SOURCES = ['gsc', 'bing', 'ga4', 'clarity', 'local', 'index'];
+// news: the feeds the Newsroom page reads (lib/sources/news.mjs). It never sets a page's "Data through".
+export const SOURCES = ['gsc', 'bing', 'ga4', 'clarity', 'local', 'index', 'news'];
 export const POST_PAGE_RE = /^\/(blog|articles)\/[^/]+$/;
 const STATE_FILES = [
   'items',
@@ -48,6 +49,7 @@ const STATE_FILES = [
   'targets',
   'link-suggestions',
   'insight-choices',
+  'news-pasted',
 ].map((n) => `state/${n}.json`);
 
 // The label for one item. The standard terms live in insights.mjs. Callers may still pass the item's
@@ -317,7 +319,8 @@ export function sourcesOf(model) {
 export function envelope(model, { need = [], range = null, ...extra } = {}) {
   const through =
     model.snapObjs.gsc?.through ??
-    SOURCES.map((s) => model.snapObjs[s]?.through)
+    SOURCES.filter((s) => s !== 'news')
+      .map((s) => model.snapObjs[s]?.through)
       .filter(Boolean)
       .sort()
       .pop() ??

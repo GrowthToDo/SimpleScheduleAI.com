@@ -38,6 +38,7 @@ import {
 } from './work.mjs';
 import { AI_IMPORTS_FILE, loadAiImports } from './panels.mjs';
 import { parseCsv } from './csv.mjs';
+import { pickNews, unpickNews } from './newsroom-actions.mjs';
 
 const fail = (status, message) => Object.assign(new Error(message), { status });
 const isDate = (s) => /^\d{4}-\d{2}-\d{2}$/.test(String(s)) && !Number.isNaN(Date.parse(`${s}T00:00:00Z`));
@@ -112,6 +113,9 @@ export function editRefused(g, what) {
 // ---------------------------------------------------------------- item actions
 
 export function itemAction(id, body) {
+  // A Newsroom story's pin is its Pick for this week, with the two-a-week rule (newsroom-actions.mjs).
+  if (String(id).startsWith('news:') && body.action === 'pin') return pickNews(String(id));
+  if (String(id).startsWith('news:') && body.action === 'unpin') return unpickNews(String(id));
   const model = buildModel();
   const key = itemKey(id);
   const opp = model.oppById.get(key);
@@ -177,7 +181,10 @@ export function itemAction(id, body) {
           title: plain(opp.title),
           isPageEdit: split ? isPageEdit : opp.isPageEdit,
         }
-      : { kind: 'card', title: plain(card?.title ?? next.meta?.title ?? key), isPageEdit: Boolean(isPageEdit) },
+      : card?.source === 'news'
+        ? // A Newsroom story keeps the story itself, so a held or dropped card outlives the 14 day window.
+          { kind: 'news', title: plain(card.title), isPageEdit: false, story: card.story ?? next.meta?.story ?? null }
+        : { kind: 'card', title: plain(card?.title ?? next.meta?.title ?? key), isPageEdit: Boolean(isPageEdit) },
   };
   saveItems({ ...loadItems(), [key]: next });
   invalidate();

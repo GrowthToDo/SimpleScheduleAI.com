@@ -13,6 +13,7 @@ import { n0, round1, pct, sumRange, coversFrom } from '../fmt.mjs';
 import { longRange, spanText } from '../../text.mjs';
 import { latestAuditCounts } from './audit.mjs';
 import { openLinkSuggestions } from './topics.mjs';
+import { freshNewsCount } from '../newsroom-model.mjs';
 import { clickRateOf, CLICK_RATE_MIN_IMPRESSIONS } from '../../insights.mjs';
 import {
   cannibalizationItems,
@@ -276,6 +277,8 @@ export function navCounts(model) {
       internalLinks: openLinkSuggestions(model),
       opportunities: anyData ? openOpportunityCount(model) : null,
       worries: anyData ? weekModel(model).worries.length : null,
+      // Fresh Tier 1 and 2 Newsroom cards not covered, held, dropped or picked (the Fresh tab).
+      newsroom: freshNewsCount(model),
     };
   });
   // The audit is read fresh: a run that just finished does not change the model.

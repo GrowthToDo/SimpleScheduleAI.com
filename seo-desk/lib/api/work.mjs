@@ -68,6 +68,7 @@ import { listAudits, loadAudit } from '../audit/run.mjs';
 import { CHECKS, severityOf, sortIssues } from '../audit/checks.mjs';
 import { n0, pct, sumRange } from './fmt.mjs';
 import { ownership, decayItems } from './ext/insights.mjs';
+import { newsroomCards, newsPicks, weekCardOf } from './newsroom-model.mjs';
 
 const count = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
@@ -665,7 +666,7 @@ const SLOT_LABEL = {
   other: 'Open work',
 };
 // The label of a card that is neither an opportunity nor a worry, by where it came from.
-const SOURCE_LABEL = { audit: 'Technical audit', index: 'Not indexed' };
+const SOURCE_LABEL = { audit: 'Technical audit', index: 'Not indexed', news: 'Newsroom piece' };
 
 // The plain label of what a card is: the opportunity type when it came from one, else its kind.
 function cardLabel(model, card) {
@@ -701,6 +702,19 @@ function cardOut(model, card) {
       score: null,
       state: itemState(model, keyOfCard(card.id)),
       brief: competitorBrief(card),
+      links: { live: null, searchConsole: null },
+    };
+  }
+  // A Newsroom piece carries its own brief (the trendjacking method) and no page links.
+  if (card.source === 'news') {
+    return {
+      ...card,
+      typeLabel: cardLabel(model, card),
+      ...termFields(model, card),
+      score: null,
+      eligibility: null,
+      state: itemState(model, keyOfCard(card.id)),
+      brief: card.brief,
       links: { live: null, searchConsole: null },
     };
   }
@@ -833,6 +847,7 @@ export function weekModel(model) {
       // A due edit is ready only when the Search Console data covers its 28 days after.
       through: model.snapObjs.gsc?.through ?? null,
       audit: auditSummary(),
+      newsPicks: newsPicks(model),
     });
     const opts = { recent };
     const pool = new Map();
@@ -842,6 +857,8 @@ export function weekModel(model) {
     }
     for (const w of local.openWork ?? []) pool.set(openWorkCard(w).id, openWorkCard(w));
     for (const o of model.opps) pool.set(`opp:${o.id}`, oppCard(o, 'other', frozen, today, opts));
+    // Every Newsroom card, so its Hold, Drop, Pick and Done are known; a picked one says why it is there.
+    for (const c of newsroomCards(model).byId.values()) pool.set(c.id, weekCardOf(c, { picked: c.picked }));
     for (const c of proposed) pool.set(c.id, c);
     return { weekOf, proposed, pool, worries: worryList, watching, allWorries };
   });

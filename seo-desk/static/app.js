@@ -84,6 +84,7 @@ export const SOURCE_NAMES = {
   clarity: 'Clarity',
   local: 'Repo files',
   index: 'Index checks',
+  news: 'News feeds',
   dfs: 'AI citation check',
 };
 

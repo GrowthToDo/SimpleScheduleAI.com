@@ -14,6 +14,7 @@ import { pullBing } from './sources/bing.mjs';
 import { pullGa4 } from './sources/ga4.mjs';
 import { pullClarity } from './sources/clarity.mjs';
 import { pullIndex } from './sources/index.mjs';
+import { pullNews } from './sources/news.mjs';
 import { readJson, writeJson, dataDir } from './store.mjs';
 import { todayIso } from './dates.mjs';
 import { plainError } from './text.mjs';
@@ -22,14 +23,16 @@ import { STALE_HOURS, DAILY_HOUR } from './config.mjs';
 import { maybeRunWeeklyAudit } from './audit/run.mjs';
 
 // One MCP process at a time, local first (index checks need its live page list). Index checks
-// run last, so a slow inspection never holds up the other sources.
-export const ORDER = ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index'];
+// run after the search sources, so a slow inspection never holds up the others. The news feeds for the
+// Newsroom page come last: they are free public feeds, and a failure there never blocks the others.
+export const ORDER = ['local', 'gsc', 'bing', 'ga4', 'clarity', 'index', 'news'];
 // Reported by sourceStatus() but with no puller of its own.
 export const STATUS_SOURCES = [...ORDER, 'dfs'];
 
 // How long a source may take before the engine stops it and kills its connection.
 export const PULL_TIMEOUT_MS = 10 * 60 * 1000;
-export const SOURCE_TIMEOUT_MS = { index: 15 * 60 * 1000 };
+// The news feeds each stop at 20 seconds and run four at a time, so three minutes is plenty.
+export const SOURCE_TIMEOUT_MS = { index: 15 * 60 * 1000, news: 3 * 60 * 1000 };
 export const SCHEDULE_CHECK_MS = 10 * 60 * 1000;
 // The local pull reads files and one sitemap, so a page load may redo it often.
 export const LOCAL_MAX_AGE_MIN = 2;
@@ -42,8 +45,9 @@ export const DFS_STALE_DAYS = 35;
 export const RETRY_AFTER_MS = 20 * 60 * 1000;
 export const MAX_RETRIES_PER_DAY = 3;
 // Clarity is rate limited, so a failed pull is never retried; index checks are bound by a daily
-// quota, so they get one retry a day. Every other source gets MAX_RETRIES_PER_DAY.
-export const RETRY_CAPS = { clarity: 0, index: 1 };
+// quota, so they get one retry a day, and so do the news feeds (they are read once each morning). Every
+// other source gets MAX_RETRIES_PER_DAY.
+export const RETRY_CAPS = { clarity: 0, index: 1, news: 1 };
 export const retryCap = (source) => RETRY_CAPS[source] ?? MAX_RETRIES_PER_DAY;
 // A schedule tick that fires this much later than it should means the Mac was asleep.
 export const WAKE_LATE_MS = 20 * 60 * 1000;
@@ -71,6 +75,7 @@ export const DEFAULT_PULLERS = {
       seedCheckedAt: old?.pulledAt ?? null,
     });
   },
+  news: ({ today, signal }) => pullNews({ today, signal }),
 };
 
 const snapFile = (source) => `snap/${source}.json`;

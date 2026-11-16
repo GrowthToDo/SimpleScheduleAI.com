@@ -72,6 +72,7 @@ const CARD_EXPLAIN = {
   'Open work': 'Something from your open work list.',
   'Technical audit': 'Something the technical audit found on the site.',
   'Not indexed': 'Pages Google has not added to its search results.',
+  'Newsroom piece': 'A news story you picked to write up for the Newsroom this week. It is not a page edit.',
 };
 export const cardExplain = (label) => CARD_EXPLAIN[label] ?? 'Something that needs your attention.';
 

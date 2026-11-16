@@ -33,6 +33,7 @@ const SOURCE_NAME = {
   local: 'The repo files',
   dfs: 'DataForSEO',
   index: 'The "Is each page on Google?" check',
+  news: 'The news feeds for the Newsroom page',
 };
 
 // The plain reason a source failed, without the technical error text (Settings keeps that).
@@ -802,6 +803,7 @@ const firstSentence = (s) => plain(s).split(/(?<=[.!?])\s/)[0] ?? '';
 export const WHY = {
   broken: 'It is broken, so it comes first.',
   post: 'It is the next post in your plan.',
+  news: "You picked it for this week's Newsroom piece.",
   pinned: 'You pinned it for this week, and its page can be edited now.',
   planRow: 'It is the first open page improvement in your plan, and its page can be edited now.',
   bestEdit: (measured) => `It is the best page edit that can go in this week: ${firstSentence(measured)}`,
@@ -885,7 +887,8 @@ function auditSetupCards(audit) {
 // the repo's own records do not already answer it. Most important first:
 //   1. broken things (BROKEN_KINDS worries, and one card for the technical audit's critical and high
 //      findings), two at most;
-//   2. the plan's next unwritten post;
+//   2. the plan's next unwritten post, then the Newsroom pieces the founder picked (at most two, never a
+//      page edit, so they never use the week's edit);
 //   3. the week's one live page edit, only while it is unused: a pinned one, else the plan's first open
 //      improve row, else the best eligible page edit opportunity. A slipping page qualifies only when it
 //      is a real worry (in `worries`, which holds no watched page). When the week's edit is used there
@@ -900,6 +903,7 @@ function auditSetupCards(audit) {
 // edits the freeze does not know (lifecycle recentEdits): such a page is not offered. audit: the latest
 // technical audit ({startedAt, issues: [{id, name, severity, setup, pages}]}, worst first) or null.
 // pending is kept for the callers that still pass it; the next verdict date lives on the tile.
+// newsPicks: this week's picked Newsroom stories as cards (api/newsroom-model.mjs newsPicks).
 export function proposeTop5({
   plan,
   ranked = [],
@@ -914,6 +918,7 @@ export function proposeTop5({
   through = null,
   audit = null,
   indexRequests = new Map(),
+  newsPicks = [],
 }) {
   const opts = { recent };
   const ok = (o) => eligibility(o, frozen, today, opts).eligible;
@@ -936,6 +941,9 @@ export function proposeTop5({
   // 2. The plan's next unwritten post.
   const post = (plan?.posts ?? []).find((p) => !p.done);
   if (post && open(`plan-post-${post.n}`)) add(postCard(post), WHY.post);
+  // 2b. The Newsroom pieces picked for this week: their own kind, after the new post and before the page
+  //     edit. A pick marked Done (published) stays, so the week shows it done.
+  for (const c of newsPicks.slice(0, 2)) add({ ...c, slot: 'newsroom', isPageEdit: false }, WHY.news);
 
   // 3. The week's one live page edit, only while it is unused. A slipping page qualifies only when it
   //    is a real worry; it then comes as that worry's card (the same id as its opportunity).
