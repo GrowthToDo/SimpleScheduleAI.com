@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "slug": "safe-harbor-nursing-texas",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-16T09:24:56.658Z",
+      "contentHash": "d726dec6332869c90b6a4a213417902a38d6f22559deea051eebef77f3aa2432"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-16T09:24:56.938Z",
+      "contentHash": "d726dec6332869c90b6a4a213417902a38d6f22559deea051eebef77f3aa2432"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-16T09:25:03.297Z",
+      "contentHash": "d726dec6332869c90b6a4a213417902a38d6f22559deea051eebef77f3aa2432"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-16T09:25:03.320Z",
+      "contentHash": "d726dec6332869c90b6a4a213417902a38d6f22559deea051eebef77f3aa2432"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-16T09:25:03.466Z",
+      "contentHash": "d726dec6332869c90b6a4a213417902a38d6f22559deea051eebef77f3aa2432"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-16T09:25:03.466Z",
+      "contentHash": "d726dec6332869c90b6a4a213417902a38d6f22559deea051eebef77f3aa2432"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-16T09:25:03.467Z",
+      "contentHash": "d726dec6332869c90b6a4a213417902a38d6f22559deea051eebef77f3aa2432"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-16T09:25:03.472Z",
+      "contentHash": "d726dec6332869c90b6a4a213417902a38d6f22559deea051eebef77f3aa2432"
+    }
+  },
+  "recorded": {
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer (final pass 2026-11-16: READY-TO-PUBLISH)",
+      "setAt": "2026-11-16T09:24:56.167Z",
+      "contentHash": "d9a95f72f13530ee25a1c7167391dd48da413f8582e6778007b5e35288772ea7"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "feature-dev:code-reviewer final pass (FACTS: PASS) after general-purpose fact-check",
+      "setAt": "2026-11-16T09:24:56.295Z",
+      "contentHash": "d9a95f72f13530ee25a1c7167391dd48da413f8582e6778007b5e35288772ea7"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-11-16T09:24:56.427Z",
+      "contentHash": "d9a95f72f13530ee25a1c7167391dd48da413f8582e6778007b5e35288772ea7"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 48.5,
+        "headings": 90.9,
+        "actionability": 54.5,
+        "attention": 90.9
+      },
+      "overall": 65.8,
+      "counts": {
+        "sections": 11,
+        "rereads": 18,
+        "undefinedTerms": 16,
+        "headingsAnswered": 10,
+        "mondayActions": 6,
+        "blockedActions": 5,
+        "quitPoints": 1
+      },
+      "icp": "Nurse manager / DON at a 25-bed rural hospital, reading once on a phone between shifts",
+      "publishDate": "2026-11-16T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "peer review committee (who sits on it, how it is formed, who is the chair at a small hospital)",
+          "chief nursing officer (used in Key Takeaways and the table before it is defined in the After section)",
+          "nurse administrator",
+          "fact witness",
+          "incident-based peer review / rule 217.19",
+          "informal workgroup of the committee",
+          "good faith vs bad faith (bad faith defined only partly)",
+          "Quick Request form / Comprehensive Written Request form (named before explained)",
+          "licensing agency (which one imposes the $25,000 penalty)",
+          "administrative penalty",
+          "Health and Safety Code chapters 257 and 258",
+          "Nursing Practice Act",
+          "regularly employs (how regular counts for agency or contract nurses)",
+          "unprofessional or criminal conduct (what counts as that on a unit)",
+          "peer review records (where kept, who sees them)",
+          "supervisor vs charge nurse vs DON vs CNO (which role the rule means at each step)"
+        ],
+        "mondayActions": [
+          "find our written safe harbor policy and read it",
+          "name the committee chair and post the phone number next to the Quick Request forms",
+          "count our nurses against the eight-nurse threshold, including agency and contract",
+          "brief charge nurses that a spoken request is written down and signed by both people on the spot",
+          "look at the next schedule for shifts that are already short",
+          "tell charge nurses the forms go to the chair the next working day, not the Board"
+        ],
+        "blockedActions": [
+          "look at contracting the review out to another entity (no example of who qualifies, what it costs, or how to start)",
+          "staff a committee that excludes the DON/CNO at a small hospital (post says leadership is ruled out, never says who is eligible instead)",
+          "name the committee chair when our hospital may have no standing committee (no step for 'we have none')",
+          "find the written policy when we may not have one (not addressed)",
+          "collaborate with a nurse who refuses on skill grounds to find an acceptable assignment (no how, and unclear whether to add staff or keep the request open)"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Safe Harbor Nursing in Texas?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Does Safe Harbor Apply at a Small or Critical Access Hospital?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should a DON Do When a Nurse Invokes Safe Harbor?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Can a Nurse Keep Working an Assignment While Safe Harbor Is Pending?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Can the DON Sit on the Safe Harbor Peer Review Committee?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Happens After the Safe Harbor Committee Decides?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does Safe Harbor Protect, and What Does It Not Cover?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Relate to Safe Harbor?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-11-16T09:14:03.049Z",
+      "contentHash": "cfd21a30143c171e00c03d825f8cb9d4e2e8e4116c2608749b90804cdc7df87e"
+    }
+  }
+}
