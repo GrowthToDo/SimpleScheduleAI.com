@@ -206,7 +206,7 @@ Held items, on every list (All opportunities, the week's next ten, Runner-up, Se
 Cannibalization, Decay): `held` is true when the item edits a page that may not be edited now, and
 `heldKind` says why: page (the freeze or an edit found in git: a page to leave alone) or week (this
 week's one page edit is used). A held item is never pushed: no priority (`priority` null), no Swap in,
-no Start, and it comes after the items that can be worked on now. Never recommend one for this week.
+no "Mark as started", and it comes after the items that can be worked on now. Never recommend one for this week.
 
 `/api/insights/secondary-keywords`: `items[] {id, page, query, impressions, position,
 targetKeyword, evidence, recommendation, test, eligibility, held, heldKind, frozenUntilText, adopted,

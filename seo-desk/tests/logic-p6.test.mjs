@@ -492,3 +492,19 @@ test('B8, D6: no text a person reads still says "the five" or describes the old 
     }
   }
 });
+
+test('the work on a card starts with its brief: Copy brief for Claude is the main button until it is started', async () => {
+  const { briefIsMain, BRIEF_HINT } = await import('../static/views/card.js');
+  const card = (extra = {}) => ({ brief: 'Task for the site', state: { status: 'new' }, ...extra });
+  assert.equal(briefIsMain(card()), true);
+  assert.equal(briefIsMain(card({ state: { status: 'came-back' } })), true);
+  assert.equal(briefIsMain(card({ state: { status: 'in-progress' } })), false, 'once started, Done leads');
+  assert.equal(briefIsMain(card({ state: { status: 'done' } })), false);
+  assert.equal(briefIsMain(card({ held: true })), false, 'a held page is never pushed');
+  assert.equal(briefIsMain(card({ leaveIt: { until: '2026-12-01' } })), false, 'Leave it leads');
+  assert.equal(briefIsMain(card({ competitor: { host: 'rival.example' } })), false);
+  assert.equal(briefIsMain(card({ brief: null })), false);
+  assert.equal(briefIsMain(card(), { only: ['done'] }), false);
+  assert.match(BRIEF_HINT, /paste it into Claude Code/);
+  assert.match(BRIEF_HINT, /never changes the site/);
+});

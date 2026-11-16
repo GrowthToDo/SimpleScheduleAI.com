@@ -162,7 +162,7 @@ export function normalize(item, oppById) {
 
 function statusChip(state, fmt) {
   const s = state?.status ?? 'new';
-  if (s === 'in-progress') return ['chip-accent', `In progress since ${fmt.dateShort(state.since)}`];
+  if (s === 'in-progress') return ['chip-accent', `Started ${fmt.dateShort(state.since)}`];
   if (s === 'snoozed') return ['chip', `Snoozed until ${fmt.dateShort(state.snoozeUntil)}`];
   if (s === 'done') return ['chip-accent', `Done on ${fmt.dateShort(state.doneAt ?? state.since)}`];
   if (s === 'ignored') return ['chip', state.reason ? `Ignored: ${state.reason}` : 'Ignored'];
@@ -237,7 +237,7 @@ async function runAction(n, ctx, options, action, extra = {}) {
   const res = await postAction(ctx, path, { action, ...extra });
   if (res === null) return;
   const messages = {
-    start: 'Marked as in progress.',
+    start: 'Marked as started. Press Done when the change is live.',
     done: n.competitor ? 'Marked as seen. It comes back if something new changes.' : 'Marked done.',
     snooze: `Snoozed until ${fmt.date(res?.item?.snoozeUntil ?? extra.until)}. It comes back on its own then.`,
     ignore: 'Ignored. It stays out of your lists until you reopen it.',
@@ -409,6 +409,30 @@ function snoozeMenu(n, ctx, options, anchor) {
   ]);
 }
 
+// The desk never changes the site, so the work on a card starts with its brief: copied here, pasted
+// into Claude Code. On a card not started yet (and not one to leave alone, held or finished) Copy
+// brief for Claude is the main button; once started, Done is.
+export function briefIsMain(n, options = {}) {
+  const s = n?.state?.status ?? 'new';
+  if (!n?.brief || n.competitor || n.held) return false;
+  if (options.only && !options.only.includes('start')) return false;
+  const leave = Boolean(n.leaveIt) && s !== 'done' && s !== 'ignored' && s !== 'snoozed';
+  return !leave && (s === 'new' || s === 'came-back');
+}
+
+export const BRIEF_HINT =
+  'Copy the brief and paste it into Claude Code to do the work. The desk never changes the site itself.';
+
+async function copyBrief(n, ctx) {
+  const ok = await ctx.copyText(n.brief);
+  ctx.toast(
+    ok
+      ? 'Brief copied. Paste it into Claude Code to start the work, then press Mark as started here.'
+      : 'The browser blocked copying. Click the page once, then try again.',
+    ok ? 'success' : 'error'
+  );
+}
+
 function actionButtons(n, ctx, options) {
   const { h } = ctx;
   const s = n.state?.status ?? 'new';
@@ -437,16 +461,18 @@ function actionButtons(n, ctx, options) {
   // A card whose own advice is to leave the page alone: Leave it is the main button, and no other is.
   const leave = Boolean(n.leaveIt) && s !== 'done' && s !== 'ignored' && s !== 'snoozed';
   if (leave) out.push(btn('Leave it', () => doLeave(n, ctx, options), 'btn-primary'));
-  // A held item (its page may not be edited now) is never pushed: no Start and no main button.
+  // A held item (its page may not be edited now) is never pushed: no start and no main button.
+  const briefMain = briefIsMain(n, options);
+  if (briefMain) out.push(btn('Copy brief for Claude', () => copyBrief(n, ctx), 'btn-primary'));
   if ((s === 'new' || s === 'came-back') && offer('start') && !n.held)
-    out.push(btn('Start', () => runAction(n, ctx, options, 'start'), leave ? '' : 'btn-primary'));
+    out.push(btn('Mark as started', () => runAction(n, ctx, options, 'start')));
   if (s !== 'done' && s !== 'ignored') {
     if (offer('done'))
       out.push(
         btn(
           'Done',
           (e) => doDone(n, ctx, options, e?.currentTarget ?? null),
-          !leave && !n.held && (s === 'in-progress' || !offer('start')) ? 'btn-primary' : ''
+          !leave && !n.held && !briefMain && (s === 'in-progress' || !offer('start')) ? 'btn-primary' : ''
         )
       );
     if (s !== 'snoozed' && offer('snooze')) {
@@ -472,7 +498,7 @@ function actionButtons(n, ctx, options) {
 }
 
 function linkButtons(n, ctx, options) {
-  const { h, copyText, toast } = ctx;
+  const { h } = ctx;
   const quiet = (label, fn) =>
     h('button', { type: 'button', class: 'btn btn-quiet btn-small', onclick: guard(fn, ctx) }, label);
   const out = [];
@@ -481,18 +507,9 @@ function linkButtons(n, ctx, options) {
     out.push(quiet(pinned ? 'Unpin' : 'Pin to this week', () => runAction(n, ctx, options, pinned ? 'unpin' : 'pin')));
   }
   if (!options.noPinNote) out.push(quiet('Add note', () => doNote(n, ctx, options)));
-  if (n.brief) {
-    out.push(
-      quiet('Copy brief for Claude', async () => {
-        const ok = await copyText(n.brief);
-        toast(
-          ok
-            ? 'Brief copied. Paste it into Claude to start the work.'
-            : 'The browser blocked copying. Click the page once, then try again.',
-          ok ? 'success' : 'error'
-        );
-      })
-    );
+  // When the brief is the card's main button it is not repeated here.
+  if (n.brief && !briefIsMain(n, options)) {
+    out.push(quiet('Copy brief for Claude', () => copyBrief(n, ctx)));
   }
   const link = (label, href) =>
     h('a', { class: 'btn btn-quiet btn-small', href, target: '_blank', rel: 'noopener noreferrer' }, label);
@@ -609,6 +626,7 @@ function fullCard(n, ctx, options) {
         )
       : null,
     h('div', { class: 'card-actions' }, actionButtons(n, ctx, options)),
+    briefIsMain(n, options) ? h('p', { class: 'muted small', style: { margin: '6px 0 0' } }, BRIEF_HINT) : null,
     h('div', { class: 'card-links' }, linkButtons(n, ctx, options))
   );
 }
