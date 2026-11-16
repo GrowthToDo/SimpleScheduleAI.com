@@ -380,6 +380,8 @@ const has = (re) => (t) => re.test(t);
 const both = (a, b) => (t) => a.test(t) && b.test(t);
 const NURSE = /\bnurs(e|es|ing)\b/;
 const HEALTH = /\b(health|hospitals?|nurs\w*|medical|clinics?|patients?|medicaid|medicare|rural)\b/;
+const TX_POLICY =
+  /\b(laws?|bills?|legislat\w*|lawmakers?|legislature|governor|abbott|hhsc|medicaid|medicare|budgets?|funding|funds?|rules?|regulat\w*|polic\w*|grants?|programs?|awards?|waivers?|expansion|cuts?|payments?|reimburs\w*|staffing|shortage|workforce)\b/;
 
 // The skill's relevance gradient, in the order the words are shown.
 const TIER1 = [
@@ -398,7 +400,8 @@ const TIER1 = [
     'Medicare or Medicaid rule',
     both(/\b(medicare|medicaid)\b/, /\b(rules?|cuts?|payments?|reimbursement|funding|freeze|policy|waiver)\b/),
   ],
-  ['Texas health policy', both(/\btexas\b/, HEALTH)],
+  // Texas and a health word is not enough (a helicopter crash near a Texas hospital is not policy).
+  ['Texas health policy', (t) => /\btexas\b/.test(t) && HEALTH.test(t) && TX_POLICY.test(t)],
   [
     'nurse labor or unions',
     has(/\bnurses?'? unions?\b|\bunion nurses\b|\bnurses association\b|\bcollective bargaining\b|\bnurse contracts?\b/),
@@ -867,6 +870,8 @@ const logText = (e) =>
 export const HAVE_MATCH = { strong: 3, close: 2 };
 // A piece older than this never "covers" a story: the story can still be a new angle on it.
 export const COVERED_DAYS = 60;
+// How many days after a topic log decision a story counts as a later event, not the one decided on.
+export const LOG_LATER_DAYS = 3;
 export const HAVE_MAX = 4;
 
 const topicStrength = (words) => (words.length >= 3 && words.filter(isDistinctive).length >= 2 ? 'strong' : 'close');
@@ -958,13 +963,17 @@ export function matchHave(
       if (topicStrength(words) === 'strong') strength = 'strong';
     }
     if (!exact && strength !== 'strong') continue;
+    // A decision answers the stories it was made about. A story that first ran well after it (more
+    // than LOG_LATER_DAYS) is a later event on the same topic: the old decision is shown as a note,
+    // and the card stays Fresh.
+    const later = !exact && e.date && card.firstDate && daysBetween(e.date, card.firstDate) > LOG_LATER_DAYS;
     out.push({
       kind: 'log',
-      text: logText(e),
+      text: later ? `An earlier decision on this topic: ${logText(e)}` : logText(e),
       words: shown(words),
       strength: 'strong',
       covered: false,
-      decided: true,
+      decided: !later,
       exact,
       status: e.status,
     });

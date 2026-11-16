@@ -942,3 +942,33 @@ test('a grouped story leads with its Texas headline when it has one', () => {
   );
   assert.equal(one.title, 'Hill State rural hospital cuts nurse staffing');
 });
+
+test('an older topic log decision is a note on a later story, which stays Fresh', () => {
+  const log = [
+    {
+      status: 'DROPPED',
+      title: 'Valley rural health transformation award',
+      date: '2026-10-07',
+      reason: 'No districts named.',
+      links: [],
+    },
+  ];
+  const card = {
+    title: 'Valley rural health transformation award, second year',
+    firstDate: '2026-11-12',
+    outlets: [{ url: 'https://news.example/a' }],
+  };
+  const have = news.matchHave(card, { log, today: '2026-11-16' });
+  const line = have.find((x) => x.kind === 'log');
+  assert.ok(line, 'the old decision is still shown');
+  assert.equal(line.decided, false);
+  assert.match(line.text, /^An earlier decision on this topic:/);
+  // The same story dated before the decision is the one that was decided on.
+  const before = news.matchHave({ ...card, firstDate: '2026-10-06' }, { log, today: '2026-11-16' });
+  assert.equal(before.find((x) => x.kind === 'log').decided, true);
+});
+
+test('Texas and a hospital word is not Texas health policy without a policy word', () => {
+  assert.notEqual(news.tierOf('Texas air ambulance crew released from hospital after a crash').tier, 1);
+  assert.equal(news.tierOf('Texas lawmakers weigh Medicaid funding for hospitals').tier, 1);
+});
