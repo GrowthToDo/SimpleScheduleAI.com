@@ -61,7 +61,7 @@ their verdicts come due around 2026-12-09.
 | ---- | --------- | ------------- | ---------- |
 | [x]  | `/blog/nurse-rostering-vs-scheduling-software` | 354 impressions at 12.4 (210/mo) | Already live: the R1 title shipped 2026-11-01 (88e6cc2d). Judge from 2026-12-01; no edits before then |
 | [ ]  | `/blog/12-hour-hospital-shifts-scheduling` | "how many hours do nurses work" cluster: about 1,790/mo, GSC 225 at 20.2 (211 on this post); Bing 272 | Add a section; a new page would split the post that carries a third of site growth |
-| [ ]  | `/blog/nurse-staffing-models` | "team nursing" 720, functional 480, primary 320, all with 0 GSC; ChatGPT already names us for "4 models of nursing care" | Add model-name sections or retitle |
+| [x]  | `/blog/nurse-staffing-models` | "team nursing" 720, functional 480, primary 320, all with 0 GSC; ChatGPT already names us for "4 models of nursing care" | Add model-name sections or retitle. Done 2026-11-16: retitled with all four model names and one H2 per model. Judge from about 2026-12-16 |
 | [ ]  | `/blog/what-is-a-float-pool-nurse` | "float nurse" 720/mo; GSC 19 at 49 | Check overlap with the other float post first |
 | [ ]  | `/blog/acuity-based-staffing-small-hospital` | 159 impressions at 17.5 (110/mo) | Strengthen |
 | [ ]  | `/blog/what-is-symplr-smart-square` | "best alternative to avantas" 50 at 3.2 | Add an Avantas-history section from the dossier |

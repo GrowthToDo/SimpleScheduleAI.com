@@ -5,52 +5,57 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T05:19:16.327Z",
-      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
+      "checkedAt": "2026-11-16T11:45:48.332Z",
+      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T05:19:18.987Z",
-      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
+      "checkedAt": "2026-11-16T11:45:48.611Z",
+      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T05:19:21.556Z",
-      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
+      "checkedAt": "2026-11-16T11:45:49.621Z",
+      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T05:19:21.661Z",
-      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
+      "checkedAt": "2026-11-16T11:45:49.639Z",
+      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T05:19:21.724Z",
-      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
+      "checkedAt": "2026-11-16T11:45:49.646Z",
+      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T05:19:21.725Z",
-      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
+      "checkedAt": "2026-11-16T11:45:49.646Z",
+      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-31T05:19:21.728Z",
-      "contentHash": "54620101b7c183c6f8397053fc9961cfa35158a7977165332568c7440a8ec46e"
+      "checkedAt": "2026-11-16T11:45:49.647Z",
+      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-16T11:45:49.647Z",
+      "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "fact-check correction: RN/PA supervision duty",
-      "setAt": "2026-08-31T05:19:12.123Z",
-      "contentHash": "fb64b8dc657a327dc7879fed4ce3dd8859e4cc30bdce422e89e3816cfb0d99ff"
+      "setBy": "feature-dev:code-reviewer (re-check 2026-11-16: READY-TO-PUBLISH)",
+      "setAt": "2026-11-16T11:45:48.000Z",
+      "contentHash": "fc1fd8c135064c0c363a904073bb4171619db552ed803c65663387617f5d29c0"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "485.635(d)(2) PA carve-out restored",
-      "setAt": "2026-08-31T05:19:13.146Z",
-      "contentHash": "fb64b8dc657a327dc7879fed4ce3dd8859e4cc30bdce422e89e3816cfb0d99ff"
+      "setBy": "feature-dev:code-reviewer (FACTS PASS vs dossier; quotes read at PMC8450812 by main session)",
+      "setAt": "2026-11-16T11:45:48.129Z",
+      "contentHash": "fc1fd8c135064c0c363a904073bb4171619db552ed803c65663387617f5d29c0"
     },
     "founderApproval": {
       "value": "YES",

@@ -1,8 +1,9 @@
 ---
 draft: false
 publishDate: 2026-08-28T00:00:00Z
+updateDate: 2026-11-16T00:00:00Z
 author: 'Pradeep Pandey'
-title: 'Nurse Staffing Models Explained: Which One Fits a Small Hospital?'
+title: 'Functional, Team, Total Patient Care and Primary Nursing: Which Fits a Critical Access Hospital?'
 excerpt: >
   Nursing textbooks teach four care models, and three of them need more people on the floor than a small
   hospital has at 3 a.m. Which one you run was mostly settled by your roster. The skill mix on each
@@ -25,7 +26,7 @@ metadata:
 
 - A nurse staffing model describes who delivers care to which patients on a shift. That is a different question from how many nurses you need, which is a ratio, and from how sick the patients are, which is acuity.
 - Nursing tradition names four: functional, team, total patient care, and primary nursing. The [federal patient-safety handbook](https://www.ncbi.nlm.nih.gov/books/NBK2635/) sorts them in one sentence: "Functional and team nursing are task-oriented and use a mix of nursing personnel; total patient care and primary nursing are patient-oriented and rely on registered nurses (RNs) to deliver care."
-- With two or three licensed nurses covering a whole building, functional and team nursing have nobody to divide the work among. Total patient care is the only one of the four that still works at that size.
+- With two or three licensed nurses covering a whole building overnight, functional and team nursing have nobody to divide the work among. Total patient care is the only one of the four that still works at that size.
 - The one thing here worth checking tonight: federal rules let a licensed practical nurse be the licensed nurse on duty at a critical access hospital, but [Texas separately requires](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) an RN on duty in each building holding patients. Staff a Texas overnight on an LPN alone and the federal rule is met while the state rule is not.
 - No published evidence says one model outperforms another, and the author of the federal patient-safety handbook chapter calls the research on care models "glaring in its absence."
 
@@ -33,6 +34,10 @@ metadata:
 
 - [What Is a Nurse Staffing Model?](#what-is-a-nurse-staffing-model)
 - [What Are the Four Traditional Nursing Care Models?](#what-are-the-four-traditional-nursing-care-models)
+- [What Is Functional Nursing?](#what-is-functional-nursing)
+- [What Is Team Nursing?](#what-is-team-nursing)
+- [What Is Total Patient Care Nursing?](#what-is-total-patient-care-nursing)
+- [What Is Primary Nursing?](#what-is-primary-nursing)
 - [Which Model Does a Small Hospital Actually Run?](#which-model-does-a-small-hospital-actually-run)
 - [What Do the Rules Require Whichever Model You Pick?](#what-do-the-rules-require-whichever-model-you-pick)
 - [Does the Research Say One Model Is Better?](#does-the-research-say-one-model-is-better)
@@ -42,7 +47,7 @@ metadata:
 
 Two licensed nurses are on tonight. Between them they cover the inpatient floor, whatever comes through the emergency department, and the swing beds. Nursing literature has a name for how they divide that work: a care delivery model, or staffing model. It offers four to choose from.
 
-Three of those four need more people on the floor than you have. The choice was mostly made for you. The question that is still yours is which licenses are on the floor each night, and what that lets you ask each person to do.
+Three of those four need more people on the floor than you have at night. The choice was mostly made for you. The question that is still yours is which licenses are on the floor each night, and what that lets you ask each person to do.
 
 ## What Is a Nurse Staffing Model?
 
@@ -60,7 +65,7 @@ Two terms come up throughout, so here they are up front. **Skill mix**, sometime
 
 ## What Are the Four Traditional Nursing Care Models?
 
-Four names come up in every nursing curriculum. What follows is what each needs in order to function, which is the part usually left out.
+Four names come up in every nursing curriculum. The table compares what each needs in order to function, which is the part usually left out, and the four sections after it take each model in turn.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="min-w-full table-fixed break-words align-top text-sm border border-slate-200 dark:border-slate-700">
@@ -95,7 +100,7 @@ Four names come up in every nursing curriculum. What follows is what each needs 
         <td class="px-3 py-2 font-medium">Primary nursing</td>
         <td class="px-3 py-2">One named nurse holds accountability for a patient's plan of care from admission to discharge. Other nurses carry that plan out on shifts the primary nurse is off.</td>
         <td class="px-3 py-2">A mostly registered-nurse staff, and an assignment system that names an accountable nurse per patient and records it.</td>
-        <td class="px-3 py-2">Possible on paper, and rarely done. A patient often does see the same nurse throughout, but continuity by coincidence is not the model: without a named accountable nurse, this is still total patient care.</td>
+        <td class="px-3 py-2">Possible on paper, but it needs a mostly registered-nurse staff. A patient may see the same nurse throughout, but continuity by coincidence is not the model: without a named accountable nurse, this is still total patient care.</td>
       </tr>
     </tbody>
   </table>
@@ -105,9 +110,35 @@ The handbook published by AHRQ, the federal Agency for Healthcare Research and Q
 
 That split is really a statement about staffing levels. Task-oriented means the work is broken into jobs and shared out among people of different license types. The point of doing that is to stretch scarce registered nurses across more patients by handing the lower-license work to somebody else. It only pays off when there is somebody else on the floor to hand it to.
 
+## What Is Functional Nursing?
+
+Functional nursing divides the work by task. A 2021 review in _Worldviews on Evidence-Based Nursing_, by [Beckett and colleagues](https://pmc.ncbi.nlm.nih.gov/articles/PMC8450812/), describes it this way: "the charge nurse or manager divides nursing work and assigns each staff member various tasks." In the review's example, nursing assistants give personal care, the licensed practical nurse gives medications, and the registered nurse handles the plan of care, the assessment and the charting.
+
+A small hospital can use part of this approach on a day shift. For example, one nurse does the morning medication pass for the whole floor while another takes the admissions.
+
+## What Is Team Nursing?
+
+Team nursing gives a mixed-license group shared care of a set of patients for one shift. The Beckett review says "a group of nursing staff cares for a large number of patients for a single shift," and "together they plan the nursing care for the shift." The team "may include numerous unlicensed assistive personnel (UAP) and licensed practical nurses (LPNs) to reduce the number of registered nurses (RNs) required." In Texas, a registered nurse still assigns and supervises the team's work, under the rules covered below.
+
+A small hospital may be able to run team nursing on a day shift. Take an illustrative day with two registered nurses, one licensed practical nurse and two nursing assistants. Each RN leads a team with one assistant, and one of the two teams also has the LPN. Each team covers half the floor. At night, the two-nurse case in the table applies instead.
+
+The review found that studies comparing team nursing with the other models saw no difference in how many nurses left their jobs. It judged the results not consistent enough to recommend team nursing as a model of care. Its authors still called team nursing "a reasonable option" during the staff shortages of the COVID-19 pandemic, provided the delegation behind it is done well.
+
+## What Is Total Patient Care Nursing?
+
+Total patient care gives one nurse all of the care for a few patients for one shift. The Beckett review calls it the patient allocation model: "an individual nurse cares for a small number of patients for one shift."
+
+At a small hospital, total patient care is the usual pattern on a night when only two licensed nurses are on. Each nurse has to be able to do everything their patients need, from medications to assessments, since there is nobody to hand a task to. Cross-training and current competency records matter a great deal under total patient care for that reason.
+
+## What Is Primary Nursing?
+
+Primary nursing makes one named nurse accountable for a patient's care from admission to discharge. In the Beckett review, the primary nurse "has 24-hour nursing responsibility for patients throughout their hospital stay, from admission to discharge."
+
+Running primary nursing takes a written assignment that names the accountable nurse for each patient, and enough registered nurses to fill that role. A night with two licensed nurses has little to build it from.
+
 ## Which Model Does a Small Hospital Actually Run?
 
-Most likely total patient care, and not because anyone chose it.
+On nights, most likely total patient care, and not because anyone chose it.
 
 Take a night shift at a 25-bed hospital with a census of nine. Two licensed nurses cover the inpatient floor, the emergency department and the swing beds. Put one of them on medications for everybody and a single nurse is left covering the building. Call them a team and they are still two people in two places. So each nurse takes their own patients and does everything for them, which is total patient care reached by ruling out the other three.
 
@@ -137,7 +168,7 @@ That final clause is the skill-mix requirement written into state law. Assignmen
 
 ## Does the Research Say One Model Is Better?
 
-No, and the handbook that catalogues the models says so itself: "What is glaring in its absence, however, is the limited research related to care models." That is [Jennings, in the AHRQ handbook quoted above](https://www.ncbi.nlm.nih.gov/books/NBK2635/), and we found nothing published since that overturns it.
+No, and the handbook that catalogues the models says so itself: "What is glaring in its absence, however, is the limited research related to care models." That is [Jennings, in the AHRQ handbook quoted above](https://www.ncbi.nlm.nih.gov/books/NBK2635/), and we found nothing published since that overturns it. The 2021 Beckett review of team nursing, covered above, reached a similar place: its results were not consistent enough to recommend team nursing as a model of care.
 
 What research there is points at resourcing rather than labels. [Thériault and colleagues](https://pmc.ncbi.nlm.nih.gov/articles/PMC6650648/) grouped 40 acute care units in Quebec by how well staffed they were rather than by which model they claimed, and the least resourced group "relied mainly on less qualified personnel and agency staff." That study is Canadian and describes resourcing, not care models, so read it as a picture of how staffing varies rather than a ranking to copy.
 
@@ -210,6 +241,8 @@ No. Neither names functional, team, total patient care or primary nursing, and n
 [4] [42 CFR 485.635(d)](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.635): the federal requirement that a registered nurse provide or assign the nursing care of each patient, and that a registered nurse, or a physician assistant where State law permits, supervise and evaluate it. This duty is federal, not a Texas addition.
 
 [5] [26 TAC 505.41(o)(2)(D)](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41), Texas hospital licensing. Two sentences in one subsection: the RN on duty in each building containing a nursing unit with patients present, which is genuinely stricter than source [3]; and a restatement of the supervise-and-assign duty from source [4], with the added clause requiring assignments to match staff qualifications and competence. Verified 2026-08-28.
+
+[6] Beckett CD and colleagues. "An Integrative Review of Team Nursing and Delegation: Implications for Nurse Staffing during COVID-19." _Worldviews on Evidence-Based Nursing_ 2021;18(4):251-260. [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC8450812/). Definitions of team nursing, primary nursing, patient allocation (total patient care) and functional nursing, and the review's findings on team nursing.
 
 ---
 
