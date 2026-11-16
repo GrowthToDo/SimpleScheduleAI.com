@@ -194,9 +194,10 @@ const PAGES = [
   page('/blog/night-shift', 'Night shift coverage', 'Section 99001 of the made-up act is on this page.'),
 ];
 const NO_HOLD = () => ({ eligible: true, from: null });
+// Each filter a to d is tested on its own, so the card counts as two reports (filter e has its own tests).
 const cardOf = (title, extra = {}) => {
   const c = news.storyCard([item(title, extra)], { today: TODAY });
-  return { ...c, ...extra.card };
+  return { ...c, reports: { reports: 2, reprints: 0, source: null, text: '2 reports' }, ...extra.card };
 };
 const check = (c, opts = {}) => f.hardFilters(c, { pages: PAGES, dossier: null, holdOf: NO_HOLD, ...opts });
 
@@ -259,7 +260,7 @@ test('filter d: a deal whose terms are not public, and a story only paywalled ou
   const deal = check(cardOf("Lakeside nurses' union reach tentative deal, averting strike"));
   assert.equal(deal.reasons[0].filter, 'd');
   assert.equal(deal.reasons[0].name, 'A quotable primary source can exist');
-  assert.equal(check(cardOf('Lakeside nurses ratify contract with 4.5% raises')).passed, true);
+  assert.equal(check(cardOf('Lakeside, Texas nurses ratify contract with 4.5% raises')).passed, true);
   const pay = check(cardOf('Nurse pay study lands', { publisher: f.PAYWALLED[0] }));
   assert.equal(pay.reasons[0].filter, 'd');
   assert.match(pay.reasons[0].text, /paywall/);
@@ -297,4 +298,75 @@ test('repetition: pieces on the same place and entity in the last 45 days lower 
     'Third Texas Medicaid piece in six weeks: /articles/texas-medicaid-calendar (9 November), /articles/texas-medicaid-pause (20 October).'
   );
   assert.equal(f.repetitionOf({ place: 'Utah', entity: 'Medicaid' }, { content, today: TODAY }).count, 0);
+});
+
+test('filter a: Medicare 340B payment cuts and residency slots do not reach a Critical Access Hospital', async () => {
+  const f = await import('../lib/news-filters.mjs');
+  const card = (title) => ({
+    title,
+    description: '',
+    outlets: [
+      { name: 'A', title },
+      { name: 'B', title },
+    ],
+    reports: { reports: 2 },
+  });
+  const cut = f.hardFilters(card('Medicare cuts to 340B drug payments will hit safety-net hospitals'));
+  assert.ok(cut.reasons.some((r) => r.filter === 'a' && /340B payment rate/.test(r.text)));
+  const gme = f.hardFilters(card('CMS allocates 200 Medicare-funded residency slots to teaching hospitals'));
+  assert.ok(gme.reasons.some((r) => r.filter === 'a' && /residency slots/.test(r.text)));
+  const cah = f.hardFilters(card('Critical access hospitals and the 340B program after Medicare cuts'));
+  assert.ok(!cah.reasons.some((r) => r.filter === 'a'), 'naming critical access lets it through');
+});
+
+test('filter e: one report and no dated change is not rising yet; a date ahead or a Texas rural story passes', async () => {
+  const f = await import('../lib/news-filters.mjs');
+  const one = (title) => ({ title, description: '', outlets: [{ name: 'A', title }], reports: { reports: 1 } });
+  const today = '2026-11-16';
+  const plain = f.hardFilters(one('A national startup raises money to open a nurse practitioner clinic network'), {
+    today,
+  });
+  assert.deepEqual(
+    plain.reasons.map((r) => r.filter),
+    ['e']
+  );
+  assert.equal(plain.reasons[0].text, f.ONE_REPORT_REASON);
+  const dated = f.hardFilters(one('New nurse staffing rule takes effect January 1, 2027'), { today });
+  assert.ok(!dated.reasons.some((r) => r.filter === 'e'), 'a dated change ahead passes');
+  const txRural = f.hardFilters(one('Texas rural hospital closes its labor and delivery unit'), { today });
+  assert.ok(!txRural.reasons.some((r) => r.filter === 'e'), 'a Texas rural story passes on one report');
+  const two = f.hardFilters({ ...one('A national startup raises money'), reports: { reports: 2 } }, { today });
+  assert.ok(!two.reasons.some((r) => r.filter === 'e'));
+});
+
+test('a hospital building expansion in Texas is not Texas health policy', async () => {
+  const news = await import('../lib/news.mjs');
+  assert.notEqual(news.tierOf('Texas Health Allen adding 25 beds in third-floor expansion').tier, 1);
+  assert.equal(news.tierOf('Texas lawmakers file Medicaid expansion bills').tier, 1);
+});
+
+test('filter c: no state and no federal signal is no Texas angle; filter a: school nurses do not reach a hospital', async () => {
+  const f = await import('../lib/news-filters.mjs');
+  const two = (title) => ({
+    title,
+    description: '',
+    outlets: [
+      { name: 'A', title },
+      { name: 'B', title },
+    ],
+    reports: { reports: 2 },
+  });
+  const abroad = f.hardFilters(two('Island health workers seek better pay as nurse shortage looms'));
+  assert.ok(abroad.reasons.some((r) => r.filter === 'c' && /names no US state/.test(r.text)));
+  const federal = f.hardFilters(two('Federal report finds a national nurse shortage'));
+  assert.ok(!federal.reasons.some((r) => r.filter === 'c'), 'a federal signal makes it national');
+  const school = f.hardFilters(two('No nurse at your child’s school? A Texas bill would tell parents'));
+  assert.ok(school.reasons.some((r) => r.filter === 'a' && /school nurses/.test(r.text)));
+});
+
+test('police and rural politics are not Texas health policy', async () => {
+  const news = await import('../lib/news.mjs');
+  assert.notEqual(news.tierOf('North Texas hospital worker accused; police say more victims possible').tier, 1);
+  assert.notEqual(news.tierOf('Rural voters fuel election gains across Texas').tier, 1);
+  assert.equal(news.tierOf('Texas lawmakers change hospital staffing policy').tier, 1);
 });

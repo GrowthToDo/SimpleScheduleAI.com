@@ -24,7 +24,7 @@
 // Package 8b: "Suggested for this week" (at most five, each with why) sits at the top, "Ask Claude for
 // this week's topic" under it, and every story of the last 14 days is folded below, in its tabs.
 //
-// Package 8c: only stories that pass the four hard filters are suggested. "Update an existing page" and
+// Package 8c: only stories that pass the five hard filters are suggested. "Update an existing page" and
 // "Filtered out" (folded, with counts by filter) come next. Each card shows its subject, its reporting
 // (reprints are not reports), Freshness, the filters' verdict, any repetition, and "Your checks": Check
 // the results page (it costs money: it asks first with the cost, never runs on its own) and the
@@ -481,7 +481,7 @@ export async function render(el, ctx) {
         h('dd', {}, have),
         c.subject?.text ? h('dt', {}, 'Subject') : null,
         c.subject?.text ? h('dd', {}, c.subject.text) : null,
-        verdict ? h('dt', {}, c.filter.passed ? 'Hard filters: all four pass' : 'Hard filters') : null,
+        verdict ? h('dt', {}, c.filter.passed ? 'Hard filters: all five pass' : 'Hard filters') : null,
         verdict ? h('dd', {}, verdict) : null
       ),
       c.checks && c.tab !== 'dropped' ? checksBlock(c) : null,
@@ -613,7 +613,7 @@ export async function render(el, ctx) {
       : h(
           'p',
           { class: 'empty' },
-          'Nothing to suggest: no fresh Tier 1 or 2 story passes all four hard filters. The stories they stopped are below, each with its reason.'
+          'Nothing to suggest: no fresh Tier 1 or 2 story passes all five hard filters. The stories they stopped are below, each with its reason.'
         )
   );
 
@@ -667,7 +667,7 @@ export async function render(el, ctx) {
       h(
         'p',
         { class: 'section-note' },
-        'Each fresh story is checked against four hard filters before it can be suggested:'
+        'Each fresh story is checked against five hard filters before it can be suggested:'
       ),
       filterNames,
       filterCountsLine(data.filterCounts)

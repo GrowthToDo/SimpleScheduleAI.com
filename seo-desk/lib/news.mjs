@@ -380,9 +380,10 @@ export function sameStory(a, b) {
 const has = (re) => (t) => re.test(t);
 const both = (a, b) => (t) => a.test(t) && b.test(t);
 const NURSE = /\bnurs(e|es|ing)\b/;
-const HEALTH = /\b(health|hospitals?|nurs\w*|medical|clinics?|patients?|medicaid|medicare|rural)\b/;
+// "rural" alone is not a health word (rural voters are politics); rural hospitals are their own tier word.
+const HEALTH = /\b(health|hospitals?|nurs\w*|medical|clinics?|patients?|medicaid|medicare)\b/;
 const TX_POLICY =
-  /\b(laws?|bills?|legislat\w*|lawmakers?|legislature|governor|abbott|hhsc|medicaid|medicare|budgets?|funding|funds?|rules?|regulat\w*|polic\w*|grants?|programs?|awards?|waivers?|expansion|cuts?|payments?|reimburs\w*|staffing|shortage|workforce)\b/;
+  /\b(laws?|bills?|legislat\w*|lawmakers?|legislature|governor|abbott|hhsc|medicaid|medicare|budgets?|funding|funds?|rules?|regulat\w*|policy|policies|grants?|programs?|awards?|waivers?|cuts?|payments?|reimburs\w*|staffing|shortage|workforce)\b/;
 
 // The skill's relevance gradient, in the order the words are shown.
 const TIER1 = [

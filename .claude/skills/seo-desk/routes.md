@@ -113,7 +113,7 @@ read each morning from 14 Google News searches and four trade press feeds; sourc
 `sources`): `line`, `weekOf`, `feeds {readAt, status, answered, total, failed[] {name, error}, items,
 window {start, end, text}, text}`, `tabs[] {key, label, count}` (fresh, covered = "Already covered or
 decided", held, dropped, picked), `suggested[]` (at most five cards, never padded, best first: fresh
-Tier 1 and 2 cards that pass all four hard filters, not held, dropped, a paid placement only or given a
+Tier 1 and 2 cards that pass all five hard filters, not held, dropped, a paid placement only or given a
 hook of 0, scored Relevance x Freshness (x Can we be first x Hook once he set both) less the
 repetition penalty, with Texas or critical access adding one to relevance; each card carries
 `suggested`, `suggestRank`, `suggestScore` and `suggestWhy`, "Tier 1, Texas, 4 reports in 5 days,
@@ -160,7 +160,7 @@ the feeds, kept because he acted on it), `brief`. Hold and Drop are the item act
 `ignore`; Pick is `POST /api/newsroom/pick` (also the card's Pin), refused at a third pick a week;
 `POST /api/newsroom/paste {url}` reads one public https page; `POST /api/newsroom/ask-topic {}` asks
 Claude once (the founder's press only; 429 while a Claude run is going, from here or the Ask box; the
-prompt carries the passing cards, each filtered card with its reasons, and the four filters).
+prompt carries the passing cards, each filtered card with its reasons, and the five filters).
 `POST /api/newsroom/check-serp {id, query, confirm: true}` asks DataForSEO for one live Google results
 page (it costs money: without `confirm` it is refused with the cost; only the founder's press, never
 Claude) and keeps the top ten with the card; `POST /api/newsroom/score {id, first, hook}` saves his two

@@ -183,7 +183,7 @@ inside the window, so read it with care. 2 more verdicts are too early; the next
 **5. "What should I write for the Newsroom this week?"** Read `/api/newsroom` (the Ask digest carries
 the suggested cards, the filter counts and today's Claude topics as "Newsroom"). Say when the feeds were
 read and how many answered, then the `suggested` cards (at most five, best first, and fewer is normal:
-only stories that pass all four hard filters are there) with each `suggestWhy`, and if
+only stories that pass all five hard filters are there) with each `suggestWhy`, and if
 `topicAsk.latest` exists, its topics in short, said as hypotheses. For each: the title, its `tierText`,
 its reporting (`reports.text`, "4 reports": reprints are not reporting), its Freshness and why, any
 `repeat.text`, and any `have` line ("Close to /blog/example-post"). Never call a story rising, trending

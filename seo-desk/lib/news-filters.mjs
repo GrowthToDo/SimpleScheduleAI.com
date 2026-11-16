@@ -6,7 +6,7 @@
 //   factsOf(text), pageFacts(md)    numbers, rule sections, programs and measure phrases
 //   upcomingDateIn(text, today)     a dated change still ahead ("January 1, 2027")
 //   freshnessOf(...)                Freshness (1 to 5)
-//   hardFilters(card, have)         the four hard filters (a to d), each failure with a plain reason
+//   hardFilters(card, have)         the five hard filters (a to e), each failure with a plain reason
 //   repetitionOf(subject, ...)      our pieces on the same place and entity in the last 45 days
 
 import { daysBetween } from './dates.mjs';
@@ -583,9 +583,33 @@ export const FILTERS = {
   b: 'Not already covered',
   c: 'A Texas angle exists',
   d: 'A quotable primary source can exist',
+  e: 'Enough reporting, or a dated change ahead',
 };
 
+// The one-report bar (filter e): a story only one outlet reported, with no dated change ahead, is not rising
+// yet. A Texas story about rural hospitals or critical access is let through on one report.
+export const ONE_REPORT_REASON =
+  'Only one outlet reported it and it names no dated change ahead, so it is not rising yet. It comes back if more outlets report it.';
+
 const PAYMENT_RULES = /\bopps\b|\bipps\b|\b(out|in)patient prospective payment\b|\bphysician fee schedule\b/;
+// Medicare's 340B payment cut is an OPPS rate, and Critical Access Hospitals are paid on cost.
+const MEDICARE_340B = (t) => /\b340b\b/.test(t) && /\b(medicare|payments?|cuts?|reimburs\w*)\b/.test(t);
+const MEDICARE_340B_REASON =
+  "It is about Medicare's 340B payment rate, which is set under OPPS. Critical Access Hospitals are paid on cost, so this does not reach our reader.";
+// Medicare-funded residency slots go to teaching hospitals; Critical Access Hospitals rarely train residents.
+// School nurses work for school districts, not hospitals.
+const SCHOOL_NURSE =
+  /\bschool nurses?\b|\bnurse at (your|their|a) (child'?s|kid'?s) school\b|\bno nurse at\b[^.]*\bschool\b/;
+const SCHOOL_NURSE_REASON = 'It is about school nurses, not a hospital, so this does not reach our reader.';
+// A story with no US state and no federal signal may not be about the US at all (Mindanao) or names only a
+// city (Kenosha): either way there is no Texas angle to write.
+const FEDERAL =
+  /\b(cms|hhs|federal|congress|senate|congressional|medicare|medicaid|nationwide|national|across the country|countrywide|u\.?s\.?|united states|america'?s?|american|states|trump|biden|white house|kff|aha|hrsa|bls|nsi|opps|ipps|340b|critical access|conditions of participation|physician fee schedule)\b/;
+const NO_PLACE_REASON =
+  'It names no US state and no federal rule or program, so it may not be about Texas or the US at all: there is no Texas angle to write.';
+const RESIDENCY = /\bresidency (slots?|positions?)\b|\bgraduate medical education\b|\bgme\b/;
+const RESIDENCY_REASON =
+  "It is about teaching hospitals' residency slots. Critical Access Hospitals rarely train residents, so this does not reach our reader.";
 const NURSING_HOMES =
   /\bnursing (homes?|facilit(y|ies))\b|\bskilled nursing\b|\bsnfs?\b|\bpbj\b|\bpayroll[- ]based journal\b|\blong[- ]term care facilit/;
 export const CAH_REASON =
@@ -672,7 +696,10 @@ function bestPage(pages, test) {
 // function, holdOf) or 'filtered'. Each reason: {filter, name, text, covered}.
 //   card    a story card (title, description, outlets)
 //   have    {pages: [{page, kind, title, publishDate, facts}], dossier: facts or null, holdOf(page)}
-export function hardFilters(card, { pages = [], dossier = null, holdOf = () => ({ eligible: true }) } = {}) {
+export function hardFilters(
+  card,
+  { pages = [], dossier = null, holdOf = () => ({ eligible: true }), today = null } = {}
+) {
   const lead = `${card.title ?? ''} ${card.description ?? ''}`;
   const all = [lead, ...(card.outlets ?? []).map((o) => o.title ?? '')].join(' . ');
   const facts = factsOf(lead);
@@ -682,6 +709,9 @@ export function hardFilters(card, { pages = [], dossier = null, holdOf = () => (
   // a. Applies to a Critical Access Hospital.
   if (!/\bcritical access\b/i.test(all)) {
     if (PAYMENT_RULES.test(lower(lead))) reasons.push(reason('a', CAH_REASON));
+    else if (MEDICARE_340B(lower(lead))) reasons.push(reason('a', MEDICARE_340B_REASON));
+    else if (RESIDENCY.test(lower(lead))) reasons.push(reason('a', RESIDENCY_REASON));
+    else if (SCHOOL_NURSE.test(lower(lead))) reasons.push(reason('a', SCHOOL_NURSE_REASON));
     else if (NURSING_HOMES.test(lower(lead))) reasons.push(reason('a', NURSING_HOME_REASON));
   }
 
@@ -708,8 +738,10 @@ export function hardFilters(card, { pages = [], dossier = null, holdOf = () => (
       );
   }
 
-  // c. A Texas angle exists. National stories pass.
+  // c. A Texas angle exists. National stories pass when they carry a federal signal.
   const places = facts.places;
+  // A story with no US state and no federal signal is told last, after the more specific reasons.
+  const noPlace = !places.length && !FEDERAL.test(lower(all));
   if (places.length && !places.includes('Texas')) {
     const named = places.slice(0, 3).join(' and ');
     const tx = bestPage(pages, (pf) => sharedWith({ ...facts, numbers: [], sections: [] }, pf, { texas: true }));
@@ -755,6 +787,16 @@ export function hardFilters(card, { pages = [], dossier = null, holdOf = () => (
         )
       );
   }
+
+  // e. Enough reporting, or a dated change ahead (skipped when the card does not say how many reported it).
+  const reported = card.reports?.reports ?? null;
+  if (reported !== null && reported < 2 && !reasons.length && !noPlace) {
+    const texasRural = facts.places.includes('Texas') && /\b(rural|critical access)\b/i.test(all);
+    const dated = today ? Boolean(upcomingDateIn(all, today)) : false;
+    if (!texasRural && !dated) reasons.push(reason('e', ONE_REPORT_REASON));
+  }
+
+  if (noPlace && !reasons.some((r) => r.filter === 'c')) reasons.push(reason('c', NO_PLACE_REASON));
 
   let update = null;
   if (cover) {

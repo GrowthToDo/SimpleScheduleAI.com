@@ -251,7 +251,7 @@ export function newsroomCards(model) {
       const withHave = { ...c, pasted: c.pasted || pastedIds.has(c.id), have: matchHave(c, have) };
       const place = placeOf(withHave, it, today, weekOf);
       // Package 8c: the hard filters, the repetition penalty and the person's checks.
-      const filter = hardFilters(withHave, { pages: have.content, dossier: have.dossier, holdOf });
+      const filter = hardFilters(withHave, { pages: have.content, dossier: have.dossier, holdOf, today });
       const repeat = repetitionOf(c.subject, { content: have.content, today });
       const chk = checksOf(checks[c.id], c);
       const card = {

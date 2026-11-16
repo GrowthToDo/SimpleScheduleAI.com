@@ -93,7 +93,7 @@ export function newsroomView(model, { find = findClaude } = {}) {
     feeds: feedsOf(model),
     tabs: TABS.map((t) => ({ ...t, count: counts[t.key] })),
     suggested: nr.suggested,
-    suggestNote: `At most ${SUGGEST_MAX}, never padded: the best fresh Tier 1 and 2 stories that pass all four hard filters below, that you have not held or dropped, and that are not a paid placement only. The draft score is Relevance x Freshness; Texas or critical access in the story counts one extra for relevance, and a piece of ours on the same place and subject in the last ${REPEAT_DAYS} days takes some off.`,
+    suggestNote: `At most ${SUGGEST_MAX}, never padded: the best fresh Tier 1 and 2 stories that pass all five hard filters below, that you have not held or dropped, and that are not a paid placement only. The draft score is Relevance x Freshness; Texas or critical access in the story counts one extra for relevance, and a piece of ours on the same place and subject in the last ${REPEAT_DAYS} days takes some off.`,
     filters: Object.entries(FILTERS).map(([filter, name]) => ({ filter, name, what: FILTER_WHAT[filter] })),
     filterCounts: filterCounts(nr),
     updates: nr.updates,

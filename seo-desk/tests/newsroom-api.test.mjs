@@ -42,8 +42,8 @@ const it = (title, publisher, date, n, extra = {}) => ({
 });
 
 const ITEMS = [
-  it('Pine county rural hospital nurse staffing review begins', 'Ledger', '2026-11-15', 1),
-  it('Rural hospital nurse staffing review begins in Pine county', 'Courier', '2026-11-14', 2),
+  it('Pine county, Texas rural hospital nurse staffing review begins', 'Ledger', '2026-11-15', 1),
+  it('Rural hospital nurse staffing review begins in Pine county, Texas', 'Courier', '2026-11-14', 2),
   it('Mesa valley clinic grant draws Texas hospital praise', 'Ledger', '2026-11-13', 3),
   it('Harbor county hospital to close maternity unit', 'Gazette', '2026-11-12', 4),
   it('Quarry nurses union signs new contract', 'Courier', '2026-11-11', 5),
@@ -227,7 +227,7 @@ test('newsroom: one card per story, tabs with counts, and the sidebar count is t
   const pine = byTitle(v, 'Pine county');
   assert.equal(pine.outlets.length, 2);
   assert.equal(pine.tab, 'fresh');
-  assert.equal(pine.tierText, 'Tier 1: nurse staffing, rural hospital');
+  assert.equal(pine.tierText, 'Tier 1: nurse staffing, rural hospital, Texas health policy');
   assert.deepEqual(
     pine.score.toCheck.map((t) => t.name),
     ['Can we be first', 'Citable hook']
@@ -486,7 +486,7 @@ test('ask: the digest carries the top five fresh stories with tier, outlets and 
   );
   const pine = d.fresh.find((c) => c.title.includes('Pine county'));
   assert.equal(pine.outlets, 2);
-  assert.equal(pine.tierText, 'Tier 1: nurse staffing, rural hospital');
+  assert.equal(pine.tierText, 'Tier 1: nurse staffing, rural hospital, Texas health policy');
   assert.deepEqual(pine.toCheck, ['Can we be first', 'Citable hook']);
   assert.ok(Array.isArray(pine.have));
   assert.match(d.rule, /Never call a story rising beyond its outlet count and dates/);
@@ -520,7 +520,7 @@ test('suggested: at most five fresh stories, Texas counts extra, never paid only
   assert.ok(!v.suggested.some((c) => c.title.startsWith('Mesa valley')), 'a covered story is never suggested');
   // Mesa (Texas) would rank by its Texas bonus, but it is covered; Pine is the top Tier 1 story.
   const pine = v.suggested.find((c) => c.title.includes('Pine county'));
-  assert.equal(pine.suggestWhy, 'Tier 1, 2 reports in 2 days, nothing on our site yet');
+  assert.equal(pine.suggestWhy, 'Tier 1, Texas, 2 reports in 2 days, nothing on our site yet');
   // Held stories leave the list.
   await itemPost(pine.id, { action: 'snooze', until: '2026-11-23' });
   assert.ok(!(await view()).suggested.some((c) => c.id === pine.id));
@@ -660,16 +660,17 @@ test('filters: only stories that pass every hard filter are suggested; the rest 
       'Not already covered',
       'A Texas angle exists',
       'A quotable primary source can exist',
+      'Enough reporting, or a dated change ahead',
     ]
   );
   // A passing story says its primary source is still to check, and the sidebar counts suggested only.
-  assert.match(v.suggested[0].filter.primary, /^Primary source: to check/);
+  for (const c of v.suggested) assert.match(c.filter.primary, /^Primary source: to check/);
   assert.equal((await get('/api/nav')).json.counts.newsroom, v.suggested.length);
   // The digest carries the counts by filter and the filtered stories with their reasons.
   const { buildModel } = await import('../lib/api/model.mjs');
   const { newsroomDigest } = await import('../lib/api/ext/newsroom.mjs');
   const d = newsroomDigest(buildModel());
-  assert.equal(d.filterCounts.length, 4);
+  assert.equal(d.filterCounts.length, 5);
   assert.ok(d.filtered.some((x) => x.reasons.some((r) => r.startsWith('Applies to a Critical Access Hospital: '))));
 });
 
@@ -768,7 +769,7 @@ test('ask topic: Claude gets the passing stories, each filtered story with its r
   };
   const r = await post('/api/newsroom/ask-topic', {});
   assert.equal(r.status, 200, JSON.stringify(r.json));
-  assert.match(seen.system, /four hard filters/);
+  assert.match(seen.system, /five hard filters/);
   assert.match(seen.system, /exempt from OPPS and IPPS/);
   const inside = seen.user.slice(seen.user.indexOf('<desk-data>\n'));
   const passing = inside.slice(0, inside.indexOf("Filtered out by the desk's hard filters"));
