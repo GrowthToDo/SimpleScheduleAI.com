@@ -66,6 +66,9 @@ const CSS = `
 .nr-card .card-title, .nr-card dd { overflow-wrap: anywhere; }
 .nr-words { color: var(--muted); }
 .nr-note { margin: 8px 0 0; }
+.nr-more { margin-top: 14px; }
+.nr-picks { margin: 12px 0 4px; }
+.nr-card details summary { cursor: pointer; color: var(--muted); margin: 4px 0; }
 `;
 
 const EMPTY = {
@@ -76,6 +79,10 @@ const EMPTY = {
   dropped: 'No story is dropped.',
   picked: "No story is picked for this week. Pick one or two from Fresh; they go into This week's priorities.",
 };
+
+// How many outlets a card lists before the rest fold away, and how many cards a tab shows at a time.
+export const OUTLETS_SHOWN = 6;
+export const CARDS_SHOWN = 25;
 
 const BRIEF_HINT =
   'Copy the brief and paste it into Claude Code. It checks who owns the results page and the citable hook before any writing.';
@@ -214,20 +221,31 @@ export async function render(el, ctx) {
         ACTIONS[key].label
       )
     );
+    const outletLine = (o) => {
+      const href = safeHref(o.url);
+      const name = href ? h('a', { href, target: '_blank', rel: 'noopener noreferrer' }, o.name) : o.name;
+      return h(
+        'li',
+        {},
+        name,
+        o.dateText ? `, ${o.dateText}` : ', no date given',
+        o.paid ? h('span', { class: 'nr-words' }, ' (a press release or paid placement: not citable as a peg)') : null
+      );
+    };
+    // A story that ran in dozens of outlets shows the newest few; the rest fold away.
+    const all = c.outlets ?? [];
     const outlets = h(
-      'ul',
-      { class: 'nr-outlets' },
-      (c.outlets ?? []).map((o) => {
-        const href = safeHref(o.url);
-        const name = href ? h('a', { href, target: '_blank', rel: 'noopener noreferrer' }, o.name) : o.name;
-        return h(
-          'li',
-          {},
-          name,
-          o.dateText ? `, ${o.dateText}` : ', no date given',
-          o.paid ? h('span', { class: 'nr-words' }, ' (a press release or paid placement: not citable as a peg)') : null
-        );
-      })
+      'div',
+      {},
+      h('ul', { class: 'nr-outlets' }, all.slice(0, OUTLETS_SHOWN).map(outletLine)),
+      all.length > OUTLETS_SHOWN
+        ? h(
+            'details',
+            {},
+            h('summary', { class: 'small' }, `The other ${plural(all.length - OUTLETS_SHOWN, 'outlet', 'outlets')}`),
+            h('ul', { class: 'nr-outlets' }, all.slice(OUTLETS_SHOWN).map(outletLine))
+          )
+        : null
     );
     const have = (c.have ?? []).length
       ? h(
@@ -364,12 +382,33 @@ export async function render(el, ctx) {
     )
   );
 
-  const shown = (data.cards ?? []).filter((c) => c.tab === tab);
+  // The tab's cards, best first, 25 at a time.
+  const inTab = (data.cards ?? []).filter((c) => c.tab === tab);
+  const list = h('div', { class: 'nr-cards' }, inTab.slice(0, CARDS_SHOWN).map(card));
+  let drawn = Math.min(CARDS_SHOWN, inTab.length);
+  const more = h('button', { type: 'button', class: 'btn' });
+  const moreText = () => {
+    const left = inTab.length - drawn;
+    more.textContent = `Show ${Math.min(CARDS_SHOWN, left)} more (${left} not shown yet)`;
+    more.hidden = left <= 0;
+  };
+  more.addEventListener('click', () => {
+    list.append(...inTab.slice(drawn, drawn + CARDS_SHOWN).map(card));
+    drawn = Math.min(drawn + CARDS_SHOWN, inTab.length);
+    moreText();
+  });
+  moreText();
   const panel = h(
     'div',
     { role: 'tabpanel', 'aria-label': (data.tabs ?? []).find((t) => t.key === tab)?.label ?? 'Fresh' },
-    shown.length ? h('div', { class: 'nr-cards' }, shown.map(card)) : h('p', { class: 'empty' }, EMPTY[tab])
+    inTab.length ? [list, h('div', { class: 'nr-more' }, more)] : h('p', { class: 'empty' }, EMPTY[tab])
   );
+
+  // On a narrow screen the tab row scrolls sideways: bring the chosen tab into it once the page is shown.
+  setTimeout(() => {
+    const sel = tabs.querySelector('[aria-selected="true"]');
+    if (sel && tabs.scrollWidth > tabs.clientWidth) tabs.scrollLeft = Math.max(0, sel.offsetLeft - 16);
+  }, 0);
 
   const other = data.pastedOther ?? [];
   ctx.mount(
@@ -403,7 +442,7 @@ export async function render(el, ctx) {
       : null,
     h(
       'p',
-      { class: 'muted small' },
+      { class: 'muted small nr-picks' },
       `Picked this week: ${data.picks?.count ?? 0} of ${data.picks?.max ?? 2}. ${plural(
         data.picks?.max ?? 2,
         'pick',

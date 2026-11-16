@@ -476,3 +476,15 @@ test('ask: the digest carries the top five fresh stories with tier, outlets and 
   assert.ok(Array.isArray(pine.have));
   assert.match(d.rule, /Never call a story rising beyond its outlet count and dates/);
 });
+
+test('a failed news pull is said on the Newsroom page and its dot, never as a broken card on This week', async () => {
+  seed();
+  const snap = JSON.parse(fs.readFileSync(path.join(DATA, 'snap/news.json'), 'utf8'));
+  write('snap/news.json', { ...snap, ok: false, status: 'failed', error: 'None of the 18 news feeds answered.' });
+  invalidate();
+  const week = (await get('/api/week')).json;
+  assert.ok(!week.worries.some((w) => w.id === 'source-failed:news'));
+  assert.ok(!week.top5.some((c) => c.id === 'source-failed:news'));
+  assert.equal(week.sources.find((s) => s.source === 'news').status, 'failed');
+  assert.equal((await view()).feeds.status, 'failed');
+});

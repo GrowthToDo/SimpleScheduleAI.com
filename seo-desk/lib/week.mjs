@@ -207,8 +207,11 @@ function slippingPages(opps, { frozen, recent, today, items, decay, plan }) {
     .filter(Boolean);
 }
 
+// The news feeds are left out: they feed only the Newsroom page, which says when they did not answer, so
+// a feed outage never takes one of the week's places as a "broken" card.
 function failedSources(sources) {
   return (sources ?? [])
+    .filter((s) => s.source !== 'news')
     .filter((s) => s.status === 'failed' || s.status === 'needs-sign-in')
     .map((s) => {
       const name = SOURCE_NAME[s.source] ?? s.source;
