@@ -30,6 +30,13 @@ export const NAV = [
         label: 'Monthly report',
         explain: 'One calendar month on one page, against the month before, to save as a PDF.',
       },
+      {
+        route: 'newsroom',
+        label: 'Newsroom',
+        explain: 'News from the last 14 days that fits your Newsroom method, checked against what you have written.',
+        count: 'newsroom',
+        unit: ['fresh story', 'fresh stories'],
+      },
     ],
   },
   {
@@ -155,6 +162,7 @@ const NEEDS = {
   auditToFix: 'a technical audit',
   opportunities: 'any search source',
   worries: 'any search source',
+  newsroom: 'the news feed source',
 };
 
 export const DASH = '-';

@@ -19,6 +19,8 @@ export const ROUTES = {
   week: 'week',
   // One calendar month on one printable page (#/month?m=2026-10).
   month: 'month',
+  // News that fits the Newsroom method, checked against what the site has written and decided.
+  newsroom: 'newsroom',
   performance: 'overview',
   queries: 'search',
   pages: 'pages',

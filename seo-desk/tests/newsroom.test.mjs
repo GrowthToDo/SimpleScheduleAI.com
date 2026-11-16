@@ -562,3 +562,55 @@ test('paste: the title, publisher and date come from the page', () => {
   const bare = pf.readPage('<title>Only a title</title>', 'https://www.ledger.example/story');
   assert.deepEqual(bare, { title: 'Only a title', publisher: 'ledger.example', date: null, description: '' });
 });
+
+// ---------------------------------------------------------------- the page's pure parts
+
+const viewMod = await import('../static/views/newsroom.js');
+
+test('page: the tab comes from the address, links must be https, and text never goes in as HTML', async () => {
+  assert.equal(viewMod.tabOf(new URLSearchParams('tab=held')), 'held');
+  assert.equal(viewMod.tabOf(new URLSearchParams('tab=nope')), 'fresh');
+  assert.equal(viewMod.tabOf(new URLSearchParams('')), 'fresh');
+  assert.equal(viewMod.safeHref('https://one.example/a'), 'https://one.example/a');
+  assert.equal(viewMod.safeHref('javascript:alert(1)'), null);
+  assert.equal(viewMod.safeHref('http://one.example/a'), null);
+  const src = fs.readFileSync(new URL('../static/views/newsroom.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(src, /innerHTML|outerHTML|insertAdjacentHTML|DOMParser/);
+  assert.doesNotMatch(src, /[–—]/);
+});
+
+test('page: Copy brief for Claude is the main button on a story not yet acted on', () => {
+  const c = (tab, status = 'new', tier = 1) => ({ tab, tier, state: { status } });
+  assert.deepEqual(viewMod.actionsFor(c('fresh')), ['brief', 'pick', 'hold', 'drop']);
+  assert.deepEqual(viewMod.actionsFor(c('covered')), ['brief', 'pick', 'hold', 'drop']);
+  assert.deepEqual(viewMod.actionsFor(c('held', 'snoozed')), ['reopen', 'brief']);
+  assert.deepEqual(viewMod.actionsFor(c('dropped', 'ignored')), ['reopen', 'brief']);
+  assert.deepEqual(viewMod.actionsFor(c('picked')), ['brief', 'published', 'unpick']);
+  assert.deepEqual(viewMod.actionsFor(c('picked', 'done')), ['reopen', 'brief']);
+  assert.deepEqual(viewMod.actionsFor(c('fresh', 'new', 3)), ['brief', 'hold', 'drop']);
+});
+
+test('page: the draft score reads as four lines, two of them to check', () => {
+  const lines = viewMod.scoreLines({
+    tierText: 'Tier 1: nurse staffing',
+    score: {
+      relevance: 3,
+      rising: 2,
+      risingWhy: '2 outlets ran it, the latest on 15 November.',
+      toCheck: news.TO_CHECK,
+    },
+  });
+  assert.equal(lines.length, 4);
+  assert.equal(lines[0], 'Relevance 3 of 5: Tier 1: nurse staffing.');
+  assert.equal(lines[1], 'Rising 2 of 5: 2 outlets ran it, the latest on 15 November.');
+  assert.match(lines[2], /^Can we be first: to check\. /);
+  assert.match(lines[3], /^Citable hook: to check\. /);
+  const fmt = { date: (d) => `D(${d})`, ago: () => '2 hours ago' };
+  assert.equal(
+    viewMod.feedsLine(
+      { readAt: '2026-11-16T06:00:00Z', text: '17 of 18 feeds answered.', failed: [{ name: 'Broken' }] },
+      fmt
+    ),
+    'Feeds read D(2026-11-16), 2 hours ago. 17 of 18 feeds answered. Did not answer: Broken.'
+  );
+});

@@ -12,6 +12,7 @@ const theme = await import('../static/theme.js');
 const EVERY_ROUTE = [
   'week',
   'month',
+  'newsroom',
   'performance',
   'queries',
   'pages',
@@ -84,6 +85,19 @@ test('the sidebar lists every route once, in five groups, in the order of the de
   for (const e of nav.NAV_ENTRIES) assert.ok(e.explain && !/[\u2013\u2014]/.test(e.explain + e.label), e.route);
 });
 
+test('Newsroom sits in the Plan group under Monthly report, counting fresh stories', () => {
+  const plan = nav.NAV.find((g) => g.group === 'Plan').items;
+  assert.deepEqual(
+    plan.map((e) => e.label),
+    ['This week', 'Monthly report', 'Newsroom']
+  );
+  const e = nav.entryFor('newsroom');
+  assert.equal(e.count, 'newsroom');
+  assert.equal(nav.countTitle(e, 3), '3 fresh stories');
+  assert.equal(nav.countTitle(e, null), 'Not counted yet: the news feed source has not been pulled on this Mac.');
+  assert.equal(app.SOURCE_NAMES.news, 'News feeds');
+});
+
 test('every count key from /api/nav has a sidebar entry', () => {
   const keys = [
     'keywordMap',
@@ -96,6 +110,7 @@ test('every count key from /api/nav has a sidebar entry', () => {
     'opportunities',
     'auditToFix',
     'worries',
+    'newsroom',
   ];
   assert.deepEqual(
     nav.NAV_ENTRIES.filter((e) => e.count)

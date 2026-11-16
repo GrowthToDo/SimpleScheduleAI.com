@@ -9,30 +9,31 @@ except the desk's own `/api/...`.
 
 `ROUTES` in `app.js` maps each route to its module in `views/` (without `.js`):
 
-| Route                | Module                                                                                                   | Sidebar                                                                                      |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ask`                | `ask` (a question answered by Claude from the desk's data; `q=` only fills the field)                    | Above the groups: Ask, with the compact ask field under it                                   |
-| `week`               | `week`                                                                                                   | Plan: This week (count: worries, red above zero)                                             |
-| `month`              | `month` (one calendar month on one printable page; `m=2026-10` picks the month)                          | Plan: Monthly report                                                                         |
-| `performance`        | `overview`                                                                                               | Search: Performance                                                                          |
-| `queries`            | `search` (the Searches list, its filter bar and where searches sit; `tab=targets` opens Target keywords) | Search: Queries                                                                              |
-| `pages`              | `pages`                                                                                                  | Search: Pages                                                                                |
-| `keyword-map`        | `keyword-map` (one table, counters that filter it)                                                       | Insights: Keyword map                                                                        |
-| `cannibalization`    | `cannibalization` (drawn by `insight.js`)                                                                | Insights: Cannibalization (amber above zero)                                                 |
-| `runner-up`          | `runner-up` (drawn by `insight.js`)                                                                      | Insights: Runner-up keywords                                                                 |
-| `secondary-keywords` | `secondary-keywords` (drawn by `insight.js`)                                                             | Insights: Secondary keywords                                                                 |
-| `content-gaps`       | `content-gaps` (drawn by `insight.js`)                                                                   | Insights: Content gaps                                                                       |
-| `decay`              | `decay` (drawn by `insight.js`)                                                                          | Insights: Decay (amber above zero)                                                           |
-| `links`              | `internal-links` (wraps `links.js`)                                                                      | Insights: Internal links                                                                     |
-| `opportunities`      | `opportunities`                                                                                          | Insights: All opportunities                                                                  |
-| `audit`              | `health`                                                                                                 | Health and AI: Technical audit (count: open critical and high issues, "2 to fix", or a tick) |
-| `ai`                 | `ai`                                                                                                     | Health and AI: AI visibility                                                                 |
-| `visitors`           | `visitors`                                                                                               | Health and AI: Visitors                                                                      |
-| `results`            | `results`                                                                                                | Workspace: Did it work?                                                                      |
-| `keywords`           | `keywords`                                                                                               | Workspace: Keywords                                                                          |
-| `competitors`        | `competitors`                                                                                            | Workspace: Competitors                                                                       |
-| `settings`           | `settings`                                                                                               | Workspace: Settings                                                                          |
-| `print/week`         | `print-week` (the week's plan to print or save as a PDF; This week links to it)                          | not in the sidebar                                                                           |
+| Route                | Module                                                                                                    | Sidebar                                                                                      |
+| -------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ask`                | `ask` (a question answered by Claude from the desk's data; `q=` only fills the field)                     | Above the groups: Ask, with the compact ask field under it                                   |
+| `week`               | `week`                                                                                                    | Plan: This week (count: worries, red above zero)                                             |
+| `month`              | `month` (one calendar month on one printable page; `m=2026-10` picks the month)                           | Plan: Monthly report                                                                         |
+| `newsroom`           | `newsroom` (news that fits the Newsroom method; `tab=covered`, `held`, `dropped` or `picked` opens a tab) | Plan: Newsroom (count: fresh Tier 1 and 2 stories not covered, held, dropped or picked)      |
+| `performance`        | `overview`                                                                                                | Search: Performance                                                                          |
+| `queries`            | `search` (the Searches list, its filter bar and where searches sit; `tab=targets` opens Target keywords)  | Search: Queries                                                                              |
+| `pages`              | `pages`                                                                                                   | Search: Pages                                                                                |
+| `keyword-map`        | `keyword-map` (one table, counters that filter it)                                                        | Insights: Keyword map                                                                        |
+| `cannibalization`    | `cannibalization` (drawn by `insight.js`)                                                                 | Insights: Cannibalization (amber above zero)                                                 |
+| `runner-up`          | `runner-up` (drawn by `insight.js`)                                                                       | Insights: Runner-up keywords                                                                 |
+| `secondary-keywords` | `secondary-keywords` (drawn by `insight.js`)                                                              | Insights: Secondary keywords                                                                 |
+| `content-gaps`       | `content-gaps` (drawn by `insight.js`)                                                                    | Insights: Content gaps                                                                       |
+| `decay`              | `decay` (drawn by `insight.js`)                                                                           | Insights: Decay (amber above zero)                                                           |
+| `links`              | `internal-links` (wraps `links.js`)                                                                       | Insights: Internal links                                                                     |
+| `opportunities`      | `opportunities`                                                                                           | Insights: All opportunities                                                                  |
+| `audit`              | `health`                                                                                                  | Health and AI: Technical audit (count: open critical and high issues, "2 to fix", or a tick) |
+| `ai`                 | `ai`                                                                                                      | Health and AI: AI visibility                                                                 |
+| `visitors`           | `visitors`                                                                                                | Health and AI: Visitors                                                                      |
+| `results`            | `results`                                                                                                 | Workspace: Did it work?                                                                      |
+| `keywords`           | `keywords`                                                                                                | Workspace: Keywords                                                                          |
+| `competitors`        | `competitors`                                                                                             | Workspace: Competitors                                                                       |
+| `settings`           | `settings`                                                                                                | Workspace: Settings                                                                          |
+| `print/week`         | `print-week` (the week's plan to print or save as a PDF; This week links to it)                           | not in the sidebar                                                                           |
 
 Old addresses keep working (`OLD_ROUTES`, `resolveRoute`): `#/health` goes to `#/audit`, `#/search` to
 `#/performance`, a `#/search` link that names one of its lists or filters (`tab`, `q`, `pagefilter`,
@@ -314,6 +315,21 @@ For pages that run a confirmed job or show big numbers. Import what you need:
 - `tile(h, label, value, change, {text, dir, warn})` draws one big number. `text: true` for a word
   value, `dir: 'up' | 'down'` colours the small line, `warn: true` makes it amber.
 - `daysText(n)` gives `today`, `1 day ago` or `n days ago`.
+
+## The Newsroom page
+
+`views/newsroom.js` reads `GET /api/newsroom`: `line`, `feeds` (`readAt`, `answered`, `total`, `failed`,
+`text`), `tabs` (`key`, `label`, `count`), `cards` (each with its `tab`), `pastedOther` (pasted links that
+fit no topic), `picks` (`count`, `max`), `holdDays`, `paidLabel` and `scoreNote`. A card carries `title`,
+`outlets` (`name`, `url`, `dateText`), `tierText`, `score` (`relevance`, `rising`, `risingWhy`, `toCheck`),
+`paid` and `paidText`, `have` (`text`, `words`), `topLine` (why it is not fresh), `state` and `brief`. The
+page draws its own cards with the card classes (not `card.js`): Copy brief for Claude is the main button on
+a story not acted on; Pick for this week and Unpick send `POST /api/newsroom/pick` and `/unpick`; Hold and
+Drop are the item actions `snooze` (a date, 7 days by default) and `ignore` (a reason, required); Published
+is `done`; Reopen is `reopen`. Refresh now sends `POST /api/refresh` with `{only: ['news']}` and waits for
+`GET /api/refresh`. Paste a link sends `POST /api/newsroom/paste` `{url}`. Outlet links are drawn only when
+they are https (`safeHref`), with `target="_blank"` and `rel="noopener noreferrer"`. On This week a picked
+story is a card of slot `newsroom` ("Newsroom piece"); its Remove from this week sends Unpick.
 
 ## Card rules worth knowing
 

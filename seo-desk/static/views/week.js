@@ -16,6 +16,7 @@ const SLOT_NOTE = {
   broken: 'Broken',
   'new-post': 'New post',
   'page-edit': 'Live page change',
+  newsroom: 'Newsroom piece',
   verdict: 'Verdict',
   worry: 'Worry',
   other: 'Next best',
@@ -385,20 +386,31 @@ function topFive(week, ctx, { ids, locked, saveFive }) {
         if (from !== null) move(from, i);
       });
     }
+    // A picked Newsroom piece leaves the week by Unpick, so the Newsroom page and the week agree.
+    const unpick = {
+      label: 'Remove from this week',
+      onClick: async () => {
+        const res = await ctx.api.post('/api/newsroom/unpick', { id: card.id });
+        ctx.toast(res.message ?? 'Unpicked.', 'success');
+        await ctx.reload();
+      },
+    };
     const extra = locked
       ? []
-      : [
-          {
-            label: 'Remove from this week',
-            onClick: () =>
-              saveFive(
-                ids.filter((x) => x !== card.id),
-                ids.length === 1
-                  ? 'Removed. With no cards left, the desk proposes the priorities again.'
-                  : "Removed from this week's priorities. Swap another one in from Biggest opportunities."
-              ),
-          },
-        ];
+      : card.source === 'news'
+        ? [unpick]
+        : [
+            {
+              label: 'Remove from this week',
+              onClick: () =>
+                saveFive(
+                  ids.filter((x) => x !== card.id),
+                  ids.length === 1
+                    ? 'Removed. With no cards left, the desk proposes the priorities again.'
+                    : "Removed from this week's priorities. Swap another one in from Biggest opportunities."
+                ),
+            },
+          ];
     li.append(rank, renderCard(card, ctx, { extraActions: extra }));
     list.append(li);
   });
