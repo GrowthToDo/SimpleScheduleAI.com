@@ -73,27 +73,27 @@
   },
   {
     "id": "1551076805-e1869033e561",
-    "description": "Healthcare professional reviewing data on a laptop screen",
-    "family": "desk-admin",
-    "topics": ["scheduling software", "healthcare IT", "data review", "software"]
+    "description": "Empty white clinic procedure room with an exam chair and surgical light, no people (seen 2026-11-16; was listed as: Healthcare professional reviewing data on a laptop screen)",
+    "family": "ward-quiet",
+    "topics": ["clinic", "exam room", "empty room"]
   },
   {
     "id": "1504439468489-c8920d796a29",
-    "description": "Aerial view of a hospital building complex with parking",
-    "family": "facility-exterior",
-    "topics": ["hospital facility", "CAH", "rural hospital", "critical access hospital"]
+    "description": "Surgical team in gowns and masks working in a dark operating room full of monitors (seen 2026-11-16; was listed as: Aerial view of a hospital building complex with parking)",
+    "family": "ward-clinical",
+    "topics": ["surgery", "operating room", "clinical"]
   },
   {
     "id": "1519494026892-80bbd2d6fd0d",
-    "description": "Hospital corridor with staff walking in the background",
-    "family": "ward-clinical",
-    "topics": ["hospital corridor", "staff", "facility", "healthcare operations"]
+    "description": "Empty hospital reception desk and lobby with blue tiles, no people (seen 2026-11-16; was listed as: Hospital corridor with staff walking in the background)",
+    "family": "misc",
+    "topics": ["hospital lobby", "reception", "facility"]
   },
   {
     "id": "1559757148-5c350d0d3c56",
-    "description": "Nurse in scrubs working at a nursing station",
-    "family": "desk-admin",
-    "topics": ["nurse", "nursing station", "scheduling", "nurse manager", "CAH"]
+    "description": "Anatomical model of a human brain on a stand, close up (seen 2026-11-16; was listed as: Nurse in scrubs working at a nursing station)",
+    "family": "misc",
+    "topics": ["anatomy", "medical education"]
   },
   {
     "id": "1560472354-b33ff0c44a43",
@@ -103,27 +103,27 @@
   },
   {
     "id": "1601933470096-0e34634ffcde",
-    "description": "Nurse reviewing paperwork at a desk in a hospital setting",
-    "family": "desk-admin",
-    "topics": ["nurse manager", "compliance", "paperwork", "documentation", "CMS"]
+    "description": "Two people laughing over a laptop at a cafe table, not a hospital (seen 2026-11-16; was listed as: Nurse reviewing paperwork at a desk in a hospital setting)",
+    "family": "misc",
+    "topics": ["laptop", "cafe", "conversation"]
   },
   {
     "id": "1622253692010-333f2da6031d",
-    "description": "Nurse in blue scrubs working on a computer in a clinical setting",
-    "family": "desk-admin",
-    "topics": ["nurse", "scheduling software", "EHR", "computer", "clinical workflow"]
+    "description": "Smiling man in blue scrubs with a stethoscope, studio portrait, no computer (seen 2026-11-16; was listed as: Nurse in blue scrubs working on a computer in a clinical setting)",
+    "family": "nurse-portrait",
+    "topics": ["clinician", "portrait", "scrubs"]
   },
   {
     "id": "1584820927498-cfe5211fd8bf",
-    "description": "Healthcare professional using medical software on a desktop computer",
-    "family": "desk-admin",
-    "topics": ["scheduling software", "healthcare IT", "software", "EHR"]
+    "description": "Close-up of hands pulling on blue nitrile gloves, grey background (seen 2026-11-16; was listed as: Healthcare professional using medical software on a desktop computer)",
+    "family": "supplies-flat-lay",
+    "topics": ["gloves", "PPE", "infection control"]
   },
   {
     "id": "1579684385127-1ef15d508118",
-    "description": "Nurse manager reviewing a schedule or chart on a clipboard",
-    "family": "desk-admin",
-    "topics": ["nurse manager", "scheduling", "clipboard", "shift schedule", "roster"]
+    "description": "Surgical team in masks and caps looking down at the camera under an operating light, patient's-eye view (seen 2026-11-16; was listed as: Nurse manager reviewing a schedule or chart on a clipboard)",
+    "family": "ward-clinical",
+    "topics": ["surgery", "operating room", "surgical team"]
   },
   {
     "id": "1612349317150-e413f6a5b16d",
@@ -133,15 +133,15 @@
   },
   {
     "id": "1629909615184-74f495363b67",
-    "description": "Team of nurses huddled in discussion in a hospital hallway",
-    "family": "team-meeting",
-    "topics": ["nursing team", "staff coordination", "shift handoff", "hospital staff"]
+    "description": "Empty modern dental clinic with a dental chair, no people (seen 2026-11-16; was listed as: Team of nurses huddled in discussion in a hospital hallway)",
+    "family": "misc",
+    "topics": ["dental clinic", "empty room"]
   },
   {
     "id": "1603398938378-e54eab446dde",
-    "description": "Healthcare administrator working on a laptop reviewing reports",
-    "family": "desk-admin",
-    "topics": ["healthcare admin", "scheduling software", "administrator", "CAH CEO"]
+    "description": "Flat lay of a pill organizer, blister packs, thermometer and stethoscope on white (seen 2026-11-16; was listed as: Healthcare administrator working on a laptop reviewing reports)",
+    "family": "supplies-flat-lay",
+    "topics": ["medication", "pills", "thermometer", "stethoscope"]
   },
   {
     "id": "1551884170-09fb70a3a2ed",
@@ -439,7 +439,7 @@
   },
   {
     "id": "1578496781985-452d4a934d50",
-    "description": "Young patient in hospital bed smiling, showing resilience in care setting",
+    "description": "Smiling bald child in a hospital bed, likely an oncology patient; sensitive, avoid for staffing topics (seen 2026-11-16; was listed as: Young patient in hospital bed smiling, showing resilience in care setting)",
     "family": "ward-clinical",
     "topics": ["patient care", "hospital", "pediatric", "nursing care"]
   },
@@ -595,21 +595,21 @@
   },
   {
     "id": "1669413453505-2582fb5083b3",
-    "description": "Nurse leaning over patient in hospital bed with monitor in background",
+    "description": "Dim, dark scene of a caregiver bending over a man in a hospital bed who looks unwell; patient distress, avoid (seen 2026-11-16; was listed as: Nurse leaning over patient in hospital bed with monitor in background)",
     "family": "ward-clinical",
     "topics": ["nurse", "per diem", "patient care", "hospital"]
   },
   {
     "id": "1516841273335-e39b37888115",
-    "description": "Nurse in scrubs reviewing tablet at a nursing station",
-    "family": "desk-admin",
-    "topics": ["nurse", "AI scheduling", "trust", "clinical workflow", "nurse manager"]
+    "description": "Group of staff in scrubs and white coats walking away down a bright hospital corridor, seen from behind (seen 2026-11-16; was listed as: Nurse in scrubs reviewing tablet at a nursing station)",
+    "family": "ward-team",
+    "topics": ["hospital corridor", "staff", "team", "shift change"]
   },
   {
     "id": "1576091160399-112ba8d25d1d",
-    "description": "Healthcare professional reviewing a document at a hospital desk",
+    "description": "Close crop of a doctor in a white coat with a stethoscope holding a smartphone in both hands (seen 2026-11-16; was listed as: Healthcare professional reviewing a document at a hospital desk)",
     "family": "desk-admin",
-    "topics": ["healthcare admin", "scheduling crisis", "compliance", "nurse manager", "CAH"]
+    "topics": ["clinician", "smartphone", "mobile"]
   },
   {
     "id": "1460925895917-afdab827c52f",
@@ -625,9 +625,9 @@
   },
   {
     "id": "1666886573264-38075cc56104",
-    "description": "Multiracial doctors with modern gadgets examining an X-ray scan together",
-    "family": "team-meeting",
-    "topics": ["clinical team", "healthcare technology", "AI in healthcare", "screen review", "comparison"]
+    "description": "Close-up of a hand with a pen over a tablet, stethoscope on the desk (seen 2026-11-16; was listed as: Multiracial doctors with modern gadgets examining an X-ray scan together)",
+    "family": "desk-admin",
+    "topics": ["tablet", "stethoscope", "documentation"]
   },
   {
     "id": "1758574437877-68a1ec5fafc3",
@@ -643,9 +643,9 @@
   },
   {
     "id": "1526628953301-3e589a6a8b74",
-    "description": "Active patient-monitoring screen displaying clinical data",
+    "description": "Screen of a marketing analytics dashboard (CTR, cost per conversion, quality score), not clinical data (seen 2026-11-16; was listed as: Active patient-monitoring screen displaying clinical data)",
     "family": "data-analytics",
-    "topics": ["healthcare data dashboard", "monitoring", "clinical", "software", "analytics"]
+    "topics": ["analytics", "dashboard", "marketing metrics"]
   },
   {
     "id": "1666214280391-8ff5bd3c0bf0",
@@ -655,9 +655,9 @@
   },
   {
     "id": "1504813184591-01572f98c85f",
-    "description": "Open laptop on a desk with a notebook, ready for writing and analysis",
-    "family": "desk-admin",
-    "topics": ["newsroom", "news analysis", "writing", "workspace", "editorial"]
+    "description": "Surgical team in grey gowns, caps and masks around an instrument table in an operating room, desaturated (seen 2026-11-16; was listed as: Open laptop on a desk with a notebook, ready for writing and analysis)",
+    "family": "ward-clinical",
+    "topics": ["surgery", "operating room", "surgical team"]
   },
   {
     "id": "1512678080530-7760d81faba6",
@@ -698,7 +698,7 @@
   {
     "id": "1755995083683-50d08cd83d09",
     "description": "Well-lit hospital corridor with doors at the end",
-    "family": "facility-exterior",
+    "family": "misc",
     "topics": ["hospital", "facility", "institutional", "corridor"]
   },
   {
