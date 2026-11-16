@@ -5,42 +5,42 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:45:48.332Z",
+      "checkedAt": "2026-11-16T11:50:13.589Z",
       "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:45:48.611Z",
+      "checkedAt": "2026-11-16T11:50:13.966Z",
       "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:45:49.621Z",
+      "checkedAt": "2026-11-16T11:50:14.950Z",
       "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:45:49.639Z",
+      "checkedAt": "2026-11-16T11:50:14.967Z",
       "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:45:49.646Z",
+      "checkedAt": "2026-11-16T11:50:14.974Z",
       "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:45:49.646Z",
+      "checkedAt": "2026-11-16T11:50:14.974Z",
       "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:45:49.647Z",
+      "checkedAt": "2026-11-16T11:50:14.975Z",
       "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-11-16T11:45:49.647Z",
+      "checkedAt": "2026-11-16T11:50:14.976Z",
       "contentHash": "c6901c5ffc560cedb09d4a67258278a3f6db0dd93eb6555db4b8e383060f76fe"
     }
   },
@@ -59,9 +59,9 @@
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "correction to live post",
-      "setAt": "2026-08-31T05:19:14.621Z",
-      "contentHash": "fb64b8dc657a327dc7879fed4ce3dd8859e4cc30bdce422e89e3816cfb0d99ff"
+      "setBy": "founder",
+      "setAt": "2026-11-16T11:50:13.100Z",
+      "contentHash": "fc1fd8c135064c0c363a904073bb4171619db552ed803c65663387617f5d29c0"
     },
     "imageEyeball": {
       "value": "OK",
@@ -71,15 +71,15 @@
     },
     "indexNow": {
       "value": "DONE",
-      "setBy": "114 URLs, HTTP 200",
-      "setAt": "2026-08-28T05:27:24.693Z",
-      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
+      "setBy": "main session, npm run indexnow 2026-11-16 (150 URLs, HTTP 200)",
+      "setAt": "2026-11-16T11:50:13.231Z",
+      "contentHash": "fc1fd8c135064c0c363a904073bb4171619db552ed803c65663387617f5d29c0"
     },
     "gscSitemap": {
       "value": "DONE",
-      "setBy": "sitemap-index.xml submitted 2026-08-28",
-      "setAt": "2026-08-28T05:27:25.465Z",
-      "contentHash": "0a02481c48efdd010df3bce0361f59660eb29e368fdd52ee0a1e04b8d5037c84"
+      "setBy": "main session, GSC sitemap-index.xml submitted 2026-11-16",
+      "setAt": "2026-11-16T11:50:13.360Z",
+      "contentHash": "fc1fd8c135064c0c363a904073bb4171619db552ed803c65663387617f5d29c0"
     }
   },
   "overrides": []
