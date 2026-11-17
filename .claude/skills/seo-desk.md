@@ -6,7 +6,8 @@ description: Use when the founder asks what to work on this week, where cannibal
 # SEO Desk (answering from the desk)
 
 The SEO Desk is a local app on the founder's Mac. It already pulls Search Console, Bing, GA4,
-Clarity and the repo's own records, scores them and applies the one-edit-a-week rule. Ask the
+Clarity and the repo's own records, scores them and applies the weekly page change rule (one big
+and one small live page change a week, on different pages). Ask the
 desk; do not rebuild its numbers from raw sources. The founder's guide to it is
 `seo-desk/README.md`. Route code is in `seo-desk/lib/api/` and `seo-desk/lib/api/ext/`.
 
@@ -48,8 +49,10 @@ a gap. If the desk has no figure, say "the desk has no figure for that".
 7. **Traffic is not sales.** Customers come through personal contacts. Never call impressions,
    clicks, rankings, citations, visits, template downloads or form sends progress toward
    customers. Form sends and downloads are "interest signals".
-8. **Respect the edit rule** (section below). Never suggest a second page edit in a week where one
-   is done, or any edit to a frozen page.
+8. **Respect the edit rule** (section below). Each week allows one big page change (a new or
+   rewritten section) and one small one (a title, meta description, heading, single line or link),
+   on different pages. Never suggest a second change of a size whose slot is used this week, two
+   pages that compete for one search in the same week, or any edit to a frozen page.
 9. **Small numbers are not findings.** A `null` means the desk found too little data: say "not
    enough data yet". Never work out a percentage yourself from raw counts. Never state a search's
    0 clicks as fact (Search Console hides clicks on rare searches). Click rate is page level only.
@@ -90,7 +93,7 @@ in `.claude/skills/seo-desk/routes.md`.
 
 | Question | Route |
 | --- | --- |
-| What should I work on this week? | `/api/week` |
+| What should I work on this week? | `/api/week` (at most one big and one small page change in `top5`, each with `size`; `editStatus` says which slot is used) |
 | What should I write for the Newsroom this week? | `/api/newsroom` (`suggested`, `updates`, `filtered`, `topicAsk.latest`) |
 | How is search doing? | `/api/overview?range=28` (7, 28, 90, 480) |
 | Which searches or pages grow or slip? | `/api/explore?dim=query` or `dim=page` |
@@ -123,11 +126,14 @@ unless he asks for a filtered view, and quote `source` and `fetchedOn`.
   edited yet. Quote `text`. Frozen pages carry `frozenUntilText` (cannibalization pages, content gap
   `linkFrom`, secondary keywords, audit pages) or `fromFrozenUntilText` (link suggestions).
 - `/api/pages` `frozenUntil` and `/api/results` `frozen` list pages inside their 28 days.
-- When `/api/week` has a top-five card `page-edit-done-<weekOf>`, or a card with a `weekEditDone`
-  object, this week's page edit is spent. Say so and name the next Monday.
-- Settings, redirects, the sitemap, server headers and routine link swaps do not count as the
-  week's page edit; audit issues say so in `editsPage`. A new post is not a page edit. Marking a
-  secondary keyword done counts as a page edit.
+- `/api/week` `editStatus` says which of the week's two slots is used ("This week's big change is
+  used (/page, 23 November); the small one is still open."). A card with a `weekEditDone` object
+  (`{page, dateText, size}`) waits because the slot of its size is spent: say which and name the
+  next Monday. A page change card's `size` is big or small; `/api/settings` `editRule` is the rule
+  in one sentence.
+- Settings, redirects, the sitemap, server headers and routine link swaps do not count as one of
+  the week's page changes; audit issues say so in `editsPage`. A new post is not a page edit.
+  Marking a secondary keyword done counts as a page change (big unless the founder picks small).
 - Verdicts are judged 28 days after a change. A page that is pending or too early gets "too early
   to say" with its date, not a guess.
 

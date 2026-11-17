@@ -59,7 +59,7 @@ this week; give its `eligibility.text`.
 A page in `busyWeek[]` is not decaying: one week of its earlier period was unusually busy, and
 without it the drop is too small. Quote its `text`, and its `caution` when set, and say there is
 nothing to fix. Never call it a drop or a worry. A watched page or a lost demand item has Leave it as
-its main button: it puts the item away until `leaveIt.untilText` without using the week's page edit.
+its main button: it puts the item away until `leaveIt.untilText` without using the week's page changes.
 
 ## Runner-up, secondary keywords, content gaps
 
@@ -77,7 +77,7 @@ its main button: it puts the item away until `leaveIt.untilText` without using t
   the band rests on under 20 clicks: say that, never a number.
 - Secondary keywords: the page already shows for the search but does not target it. The
   hypothesis is to work the phrase into a heading and the opening of that page. Adopting one only
-  records it; it is never a target. Doing the edit counts as the week's page edit, so check
+  records it; it is never a target. Doing the edit counts as one of the week's page changes, so check
   `eligibility`. `finished[]` lists the ones marked done or dismissed; Reopen is a write, so offer
   it only if he asks.
 - Content gaps: lead with `title` and `why`, then the pages in `linkFrom` that could link to it on
@@ -87,8 +87,9 @@ its main button: it puts the item away until `leaveIt.untilText` without using t
   targets is not a gap: it is a "Strengthen a page" card on All opportunities, a page edit for that
   page, because a new post would compete with it.
 - The week's priorities (`top5`): quote each card's `why`. Fewer than `planSize` is normal; never
-  fill the list from elsewhere. When `editStatus` is set, say this week's page edit is used and when
-  the next can go in.
+  fill the list from elsewhere. Each page change card says in `why` whether it is the week's big or
+  small change (`size`); there is at most one of each. When `editStatus` is set, quote it: it says
+  which of the two is used and whether the other is still open.
 - A search sits in one list only, so never add one list's count to another's for "how many
   searches need work". There are no Google and Bing cards any more: a row missing from a Bing report
   shows nothing, so never present one as a gap.
@@ -130,7 +131,7 @@ its main button: it puts the item away until `leaveIt.untilText` without using t
 
 Give the score, the open issue count by severity (critical, high, medium, low), then the top issues
 by clicks with their `effort` and the first of their `steps`. If `editsPage` is false it is a change
-to the site's setup, not a page, so it does not use the week's edit. Lead with what is `critical`
+to the site's setup, not a page, so it does not use the week's page changes. Lead with what is `critical`
 or `high`; do not make low issues sound urgent.
 
 ## How did last month go
@@ -155,8 +156,8 @@ worked (their 28 days are up). 3. Look at the slipping page: it was shown 300 ti
 September to 12 October and 180 times from 13 October to 9 November." Then the one worry that has a
 `fix`, labelled as a hypothesis. Then "Leave alone this week" from `leaveAlone`: "/example-page,
 being measured until 7 December." A `foundInGit` row was edited in git without a card, plan row or
-note: say when it was edited and the date to leave it until. If the page edit slot is done, say this
-week's page edit is spent and the next can go in on Monday. A row in `watching` is not a
+note: say when it was edited and the date to leave it until. If a page change slot is done, quote
+`editStatus`: which of the big and small changes is spent, and that the next can go in on Monday. A row in `watching` is not a
 worry and not a task: give its `watch` reason (edited lately and when to look again, or fewer people
 searching so there may be nothing to fix) and never suggest editing or undoing it. If `worries` is
 empty say nothing needs him this week, then how many pages are only being watched.

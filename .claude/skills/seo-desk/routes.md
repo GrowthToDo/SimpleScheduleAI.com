@@ -27,10 +27,14 @@ repo files were read before the desk read git: then a page edited lately may be 
 failed source other than the news feeds, a keyword file problem, a Bing crawl problem, a competitor change, or one card for the
 technical audit's critical and high findings), two at most; the plan's next post; the Newsroom
 pieces he picked on the Newsroom page (two at most; `slot` newsroom, `typeLabel` "Newsroom piece",
-`source` news, `isPageEdit` false and `eligibility` null, so they never use the week's edit; `why` is
-"You picked it for this week's Newsroom piece."; Done means the piece is published); the week's one page
-edit while it is unused (a pinned one, else the plan's first open improve row, else the best eligible
-page edit; a slipping page only when it is a worry); a verdict card only when a due change can be
+`source` news, `isPageEdit` false and `eligibility` null, so they never use the week's page changes; `why` is
+"You picked it for this week's Newsroom piece."; Done means the piece is published); the week's big
+page change and its small page change, each while its slot is unused (a pinned one of that size, else
+the plan's first open improve row of that size, BIG or SMALL by its tag, else the best eligible page
+edit of that size: a low click rate card is small, every other kind big; a slipping page only when it
+is a worry; never the same page twice, never two pages that compete for one search (a split or a
+cluster conflict), never a page edited within 28 days; `size` says which, and `why` starts "It is this
+week's big page change:" or "It is this week's small page change:"); a verdict card only when a due change can be
 read now; then tasks that are not page edits (one card asking Google to index pages that already
 have 3 or more links, the best page that needs links, open work rows that are real tasks this week,
 technical audit setup findings at medium or more). A content gap, question or AI card is never in it:
@@ -38,11 +42,13 @@ the plan file decides which posts are written. `statusLines` are plain sentences
 for a verdict that all overlap another edit: "12 due changes overlap other edits and cannot be read, so
 there is nothing to learn from them. To clear them, open Did it work, press Judge now, then Save these
 verdicts."; pages Google was already asked to index in the last 28 days): say them, never turn them
-into tasks. `editStatus` is null while the week's edit is unused;
-once used it is the line "This week's page edit is used (/page, 9 November). The next one can go in
-from 16 November." and there is no card for it. A top-five card: `id`, `title`, `typeLabel`, `term`,
+into tasks. `editStatus` is null while both page change slots are unused; once one is used it says
+which ("This week's big change is used (/page, 23 November); the small one is still open.", or with
+both used "... are both used. The next ones can go in from 30 November."), and a used slot has no card.
+A git edit of 15 or more lines this week that no Done, plan row or note recorded uses the big slot
+("found in git"). A top-five card: `id`, `title`, `typeLabel`, `term`,
 `explain`, `why` (one plain sentence on why it is in this week's list; quote it), `measured`,
-`action`, `test`, `eligibility`, `page`, `isPageEdit`, `slot` (broken, new-post, newsroom, page-edit,
+`action`, `test`, `eligibility`, `page`, `isPageEdit`, `size` (big or small, on a page change only), `slot` (broken, new-post, newsroom, page-edit,
 verdict, other), `source`, `oppId`, `state`, `upside`. A verdict card reports, so it has `eligibility: null` and
 `hypothesis: false`.
 `upside` (on every card, opportunity, worry and insight item) is the extra Google clicks a month the
@@ -63,19 +69,20 @@ rounded); brand searches and searches under 20 views are left out; a pool under 
 rests on. A low click rate card is a page at position 10 or better, shown 200 times or more in the
 latest 28 days, whose click rate is under half the site's own pooled page rate (no rate, no cards).
 Its `measured` gives the page's numbers and that rate with its days; it never quotes an industry figure. A card on a chosen or locked week can also carry
-`weekEditDone {page, date, dateText}` (or null) when another page edit is already dated this week.
+`weekEditDone {page, date, dateText, size}` (or null) when this week's page change of the card's size is already dated on another page.
 `eligibility` (the same on every list: this week's priorities, the cards beside it, opportunities, insight cards,
 Cannibalization, Secondary keywords, the page drawer, worries; one function) is `{eligible, from, text}` plus one of: nothing (free:
 "Can be edited now", or frozen: "Leave it until 7 December"), `recentEdit {page, date, lines, until}` (git shows a commit of
 15 or more changed lines in the last 28 days that no card, plan row or edit note recorded, not
 counting edits within 2 days after the page was published: "Edited 9 November
 (found in git, 299 lines). Leave it until 7 December unless that edit was minor"), or `weekEdit {page,
-date}` (this week's one page edit is already made: "Can be edited from 16 November"). A free page
+date, size}` (this week's change of the item's size is already made: "Next big page change from 16
+November", or small). A free page
 with smaller git edits adds `touched[]` and `touchedText` ("Also touched on 9 November (3 lines)").
 List rows that name a page (Cannibalization pages, Secondary keywords, content gap link pages, the
 Pages list, audit pages, and `fromHoldText` on link suggestions) carry `frozenUntil`,
 `frozenUntilText` and `holdText`: the same function's date and words for the freeze or a git edit
-(a routine link does not use the week's edit). Quote `holdText`.
+(a routine link does not use the week's page changes). Quote `holdText`.
 `leaveAlone[]` (the pages to leave alone, one list: the Pages tile and filter and Did it work read the
 same): `{page, reason, until, kind, foundInGit?}`; `kind` is logged (a Done, a plan row or an "Edit:"
 note), git (15 or more changed lines found in git) or split (a split he marked leave alone on the
@@ -85,7 +92,7 @@ Cannibalization page; `until` is null, no end date). A page is listed once. `lea
 `worries[]`: `{id, kind, page, title, measured, fix, test, isPageEdit, eligibility, editWhen, held,
 waitUntil?, waitUntilText?}`. A worry is something that needs a look this week (`total` and `needLook` are the same number).
 `editWhen` is when the page may be edited, the same line its page detail shows: "Can be edited now",
-"Can be edited from 16 November" (this week's edit is used) or "Leave it until 7 December" (its own
+"Next big page change from 16 November" (this week's big change is used) or "Leave it until 7 December" (its own
 edit holds it). `held` is true when the page may not be edited now (no "Add to this week"). A worry's
 `measured` says "last edited" only of a deliberate edit; a smaller git change reads "a small change on
 3 November (1 line)".
@@ -289,19 +296,19 @@ action, test, eligibility, held, heldKind, evidence[], score, status, brief`. Th
 Held items, on every list (All opportunities, the week's next ten, Runner-up, Secondary keywords,
 Cannibalization, Decay): `held` is true when the item edits a page that may not be edited now, and
 `heldKind` says why: page (the freeze or an edit found in git: a page to leave alone) or week (this
-week's one page edit is used). A held item is never pushed: no priority (`priority` null), no Swap in,
+week's page change of the item's size, big or small, is used). A held item is never pushed: no priority (`priority` null), no Swap in,
 no "Mark as started", and it comes after the items that can be worked on now. Never recommend one for this week.
 
 `/api/insights/secondary-keywords`: `items[] {id, page, query, impressions, position,
 targetKeyword, evidence, recommendation, test, eligibility, held, heldKind, frozenUntilText, adopted,
 state, priority, brief}`. `finished[]` (same shape, up to 50, newest first) holds the ones marked done or
-dismissed. A mistaken Done froze the page and used the week's edit, so Reopen on a finished one is
+dismissed. A mistaken Done froze the page and used one of the week's page changes, so Reopen on a finished one is
 a write: only when he asks, in his own words. A
 search a page already shows for (30 or more views in 28 days) that no page targets in any spelling
 (nor with the same meaningful words joined or ordered differently),
 sharing two or more meaningful words with that page's target. One search goes to one page only, the
 best placed. At most three per page. A Done runner-up for the same page and search closes it too. Adopting one only records it; it never becomes a target. Marking one done
-counts as the week's page edit.
+counts as one of the week's page changes (big unless the founder picks small at Done).
 
 `/api/insights/content-gaps`: `items[] {id, title, topic, searches[{query, impressions, position}],
 impressions, why, recommendation, test, linkFrom[{page, frozenUntil, frozenUntilText, reason,
@@ -373,7 +380,7 @@ cards above (the ones whose page can be edited now first; each carries `upside`)
 impressions, searches, rate}]`, `top5`, `site`, `pages {clicks, impressions, pages, rate}`; a null
 `rate` means under 20 clicks), `held {page, week, text}`: how many of these
 items are on pages to leave alone (the page's "Free to edit" filter, on by default, hides those) and
-how many only wait for next week's page edit (those stay in the list), with the line the page shows. `status=open` means new, in progress or came back: it is what the Open view and the
+how many only wait for next week's page changes (those stay in the list), with the line the page shows. `status=open` means new, in progress or came back: it is what the Open view and the
 sidebar count use, and `counts.byStatus.open` is its size. `status=attention` is new only. Other
 values are one status each (done, ignored, snoozed) or `all`. Types: near-page-one, low-click-rate, competing-pages, slipping, wrong-page,
 unserved, question, needs-links, ai-gap, not-indexed. The Google and Bing cards (engine-gap) are
@@ -388,7 +395,7 @@ lastAuditText, nextAuditText}` (`toFix` is the open critical and high issues, th
 `added[]`, `fixed[]`, `byNewCheck[]`, `byNewCheckText`), `weeklyAudit`. Issue: `{id, name, severity (critical|high|medium|low),
 effort (quick win|moderate|larger job), impact, what, why, fix, steps[], pages[{page, clicks,
 frozenUntilText, isNew, newCheck}], editsPage, siteWide, clicks}`. `editsPage` false means it is a change to
-the site's setup, not to a page, so it does not use the week's edit. New and fixed compare only
+the site's setup, not to a page, so it does not use the week's page changes. New and fixed compare only
 checks that ran in both audits; `byNewCheck` lists pages found by a check the earlier audit did not
 have: never call those new problems (their pages have `newCheck` true, `isNew` false). Page clicks
 are Search Console's days, quote `clicksNote`. A score of 100 means nothing is open; a group's `note`
@@ -397,8 +404,8 @@ of the shared ending) and `inline-css-heavy`; page weight (`page-code-large`) le
 styles and scripts, and every size is before compression. `audit.olderRules` counts the checks whose
 rule changed after the run was made, and `audit.olderRulesNote` says once "This run used older rules
 for N checks. Run the audit again."; those issues have `olderRule` true and `editsPage` false, and their
-last step says to run the audit again before acting on them. Never say such a finding counts as the
-week's page edit.
+last step says to run the audit again before acting on them. Never say such a finding uses one of the
+week's page changes.
 
 `/api/ai-visibility`: `byKind[]` (brand, alternatives, category, other) and `byAssistant[]`
 (ChatGPT, Google AI answers). Counts: `listed`, `listedLinked`, `keywordChecked`,
@@ -480,7 +487,9 @@ worry on `/api/week` has no test, no hypothesis flag and no Search Console link;
 the events it covers, so Seen holds until a new event appears.
 `/api/settings`: weights (eight signals; Upside is the extra clicks estimate on a log scale, 1,000 a
 month at the top, and every preset gives it 0.21, taken evenly from the other seven), `clickRates`, money pages, brand words, `strategicKeywords`, switches (`paused`,
-`weeklyAudit`, `showGoogleUpdates`), `schedule`, `planSize` (3 or 5). `/api/targets`: target
+`weeklyAudit`, `showGoogleUpdates`), `schedule`, `planSize` (3 or 5), `editRule` (the weekly page
+change rule in one sentence: one big and one small change a week, on different pages, 28 days per
+page; fixed, not a setting). `/api/targets`: target
 keywords and their positions, from the query-only pull only. A keyword the page rows hold but that
 pull does not has `impressions` and `position` null and `noTotalNote` (never page rows added up), and
 `warnings` counts them; 0 means Google did not show the search at all. `/api/nav`: `counts {keywordMap, cannibalization, runnerUp,
