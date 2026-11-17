@@ -71,12 +71,12 @@ ranking work lives in the dofollow lane (see `backlink-plan-2026-07.md`).
   > and your manager approves before anything reaches nurses.
   >
   > A cycle works like this. Your roster lives in the system, and the AI builds draft
-  > schedules against real constraints: coverage and skill mix, credential matching,
-  > rest requirements, fairness across nights, weekends, and holidays, and the 40-hour
+  > schedules against real constraints: coverage and skill mix, competency levels for ICU and ER shifts,
+  > charge qualification for charge slots, rest requirements, fairness across nights, weekends, and holidays, and the 40-hour
   > weekly FLSA overtime threshold. It produces three scored draft options so tradeoffs are
   > visible instead of hidden. The built-in quality checks flag any rule violation with
-  > a documented reason before the manager reviews. You export a post-ready PDF and a
-  > full Excel workbook every cycle.
+  > a documented reason before the manager reviews. You can export the schedule and
+  > the roster to Excel and the audit trail to CSV.
   >
   > When a nurse calls out, log the callout and the system ranks the top three
   > replacement candidates with reasons: skills, role, charge coverage, and overtime
@@ -100,7 +100,7 @@ ranking work lives in the dofollow lane (see `backlink-plan-2026-07.md`).
   | Ranked Callout Coverage | Log a callout and the system ranks the top three replacement candidates with reasons: skills, role, charge coverage, overtime risk. |
   | FLSA Overtime Tracking | Tracks each nurse's running hours against the 40-hour weekly FLSA overtime threshold and flags a draft before it breaches it. |
   | Full Audit Trail | Every schedule change is logged with a timestamp, giving a clear record for CMS documentation and survey readiness. |
-  | Post-Ready Exports | Export a post-ready PDF and a full Excel workbook every cycle. |
+  | Exports | Export the schedule and the full roster to Excel, and the audit trail to CSV. |
   | Runs in the Browser | No installation, no integration project, no IT department required. Nurses need no accounts. |
   | Built for Small Rural Hospitals | Purpose-built for Critical Access Hospitals of 25 beds and under. No employee minimums. |
 
@@ -131,8 +131,11 @@ Never, in any product-mode listing:
 - **Service timelines** ("first schedule in under two weeks", "3 to 5 day
   onboarding"). Product setup is about four weeks.
 - **"No per-nurse fees."** Product pricing IS per-user; that phrase is service-only.
-- **Credential/licence EXPIRY tracking.** We do credential MATCHING for assignment.
-  Expiry tracking is not a feature.
+- **Credentials in any form.** No scheduling rule reads nurses' certifications (they are a plain
+  list with no dates), so neither credential matching nor expiry tracking is a feature. What the
+  scheduler checks is competency level (ICU and ER shifts) and charge qualification.
+- **PDF exports.** The software exports Excel and CSV only; a PDF is a service deliverable
+  (`product-capability-inventory-2026-08.md`, PDF note). Corrected 2026-11-17.
 - **Any customer, pilot, cohort, or outcome claim.** Pre-launch, zero customers.
 - **The FLSA calculation method / "8-and-80".** Say "the 40-hour weekly FLSA overtime threshold" (founder 2026-10-26), never "applicable FLSA overtime thresholds".
 - Em-dashes or en-dashes anywhere.

@@ -22,7 +22,7 @@ against `docs/seo/product-capability-inventory-2026-08.md`:
 - "post-ready PDF" is out of product copy. The software exports Excel and CSV only; the PDF is a
   service deliverable (inventory, PDF note).
 
-The tier0 kit still carries both old phrases; fix it before reusing it anywhere else.
+The tier0 kit was corrected the same day.
 
 - **Product name:** SimpleScheduleAI
 - **Website:** https://simplescheduleai.com (homepage; same on every listing for consistency)
