@@ -15,6 +15,8 @@ import {
 } from './lib/manifest.mjs';
 
 const FIELD_ALIASES = {
+  'founder-questions': 'founderQuestions',
+  founderquestions: 'founderQuestions',
   proofread: 'proofread',
   factcheck: 'factCheck',
   'fact-check': 'factCheck',
@@ -202,7 +204,7 @@ export function printStatus(manifest, hashes) {
   for (const r of rows) {
     const freshness = r.status === 'MISSING' ? '' : r.fresh ? '' : '  <- STALE (post edited since)';
     const mark =
-      r.status === 'PASS' || ['READY', 'NOT_REQUIRED', 'OK', 'YES', 'DONE'].includes(r.status)
+      r.status === 'PASS' || ['ANSWERED', 'WAIVED', 'READY', 'NOT_REQUIRED', 'OK', 'YES', 'DONE'].includes(r.status)
         ? r.fresh
           ? 'PASS '
           : 'STALE'

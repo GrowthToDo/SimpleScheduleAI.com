@@ -59,6 +59,7 @@ test('mechanical run fills manifest; not green without recorded fields', () => {
 test('--set records verdicts; full green exits 0', () => {
   const root = makeRepo();
   gate(root, ['subject']);
+  gate(root, ['subject', '--set', 'founder-questions=ANSWERED', '--by', 'founder']);
   gate(root, ['subject', '--set', 'proofread=READY', '--by', 'code-reviewer']);
   gate(root, ['subject', '--set', 'factcheck=NOT_REQUIRED']);
   gate(root, ['subject', '--set', 'image-eyeball=OK']);
@@ -134,4 +135,18 @@ test('missing or clashing keyword-registry entry fails', () => {
   gate(root, ['subject']);
   m = JSON.parse(fs.readFileSync(path.join(root, '.publish', 'subject.json'), 'utf8'));
   assert.equal(m.mechanical.keywordRegistry.status, 'FAIL');
+});
+
+test('founder-questions row: TODO blocks the gate; WAIVED shows PASS and survives a post edit', () => {
+  const root = makeRepo();
+  gate(root, ['subject']);
+  gate(root, ['subject', '--set', 'proofread=READY', '--by', 'code-reviewer']);
+  gate(root, ['subject', '--set', 'factcheck=NOT_REQUIRED']);
+  let r = gate(root, ['subject', '--set', 'founder-approval=YES']);
+  assert.equal(r.code, 1);
+  assert.match(r.out, /\[TODO \] founderQuestions/);
+  gate(root, ['subject', '--set', 'founder-questions=WAIVED', '--by', 'founder']);
+  fs.appendFileSync(path.join(root, 'src', 'data', 'post', 'subject.md'), '\nEdited.\n');
+  r = gate(root, ['subject', '--status']);
+  assert.match(r.out, /\[PASS \] founderQuestions\n/);
 });

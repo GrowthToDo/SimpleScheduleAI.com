@@ -27,6 +27,7 @@ test('status: all green only when every blocking field is fresh PASS', () => {
   const h = 'hash1';
   for (const f of MECHANICAL_FIELDS) setMechanical(m, f, 'PASS', h);
   assert.equal(manifestStatus(m, h).green, false); // recorded still missing
+  setRecorded(m, 'founderQuestions', 'ANSWERED', 'founder', h);
   setRecorded(m, 'proofread', 'READY', 'code-reviewer', h);
   setRecorded(m, 'factCheck', 'NOT_REQUIRED', 'orchestrator', h);
   setRecorded(m, 'imageEyeball', 'OK', 'founder', h);
@@ -47,7 +48,15 @@ test('non-blocking recorded fields do not affect green', () => {
     setRecorded(
       m,
       f,
-      f === 'proofread' ? 'READY' : f === 'factCheck' ? 'PASS' : f === 'imageEyeball' ? 'OK' : 'YES',
+      f === 'founderQuestions'
+        ? 'WAIVED'
+        : f === 'proofread'
+          ? 'READY'
+          : f === 'factCheck'
+            ? 'PASS'
+            : f === 'imageEyeball'
+              ? 'OK'
+              : 'YES',
       'x',
       h
     );
@@ -67,6 +76,7 @@ test('manifestStatus accepts a {mechanicalHash, verdictHash} object: mechanical 
   const mHash = 'mech-hash-1';
   const vHash = 'verdict-hash-1';
   for (const f of MECHANICAL_FIELDS) setMechanical(m, f, 'PASS', mHash);
+  setRecorded(m, 'founderQuestions', 'ANSWERED', 'founder', vHash);
   setRecorded(m, 'proofread', 'READY', 'code-reviewer', vHash);
   setRecorded(m, 'factCheck', 'NOT_REQUIRED', 'orchestrator', vHash);
   setRecorded(m, 'imageEyeball', 'OK', 'founder', vHash);
@@ -80,4 +90,24 @@ test('manifestStatus accepts a {mechanicalHash, verdictHash} object: mechanical 
 
   // Verdict hash changed (e.g. reviewed content actually changed) -> recorded fields stale -> not green.
   assert.equal(manifestStatus(m, { mechanicalHash: mHash, verdictHash: 'verdict-hash-2' }).green, false);
+});
+
+test('founderQuestions: blocks until ANSWERED or WAIVED, and a post edit does not stale it', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'mf-'));
+  const m = loadManifest('p', root);
+  const h = 'h1';
+  for (const f of MECHANICAL_FIELDS) setMechanical(m, f, 'PASS', h);
+  setRecorded(m, 'proofread', 'READY', 'code-reviewer', h);
+  setRecorded(m, 'factCheck', 'NOT_REQUIRED', 'orchestrator', h);
+  setRecorded(m, 'founderApproval', 'YES', 'founder', h);
+  assert.equal(manifestStatus(m, h).green, false); // founderQuestions missing
+  setRecorded(m, 'founderQuestions', 'MAYBE', 'founder', h);
+  assert.equal(manifestStatus(m, h).green, false); // not an accepted value
+  // Recorded before drafting, against an earlier text: still fresh later.
+  setRecorded(m, 'founderQuestions', 'WAIVED', 'founder', 'hash-of-the-stub');
+  const row = manifestStatus(m, h).rows.find((r) => r.field === 'founderQuestions');
+  assert.equal(row.fresh, true);
+  assert.equal(manifestStatus(m, h).green, true);
+  setRecorded(m, 'founderQuestions', 'ANSWERED', 'founder', 'hash-of-the-stub');
+  assert.equal(manifestStatus(m, h).green, true);
 });

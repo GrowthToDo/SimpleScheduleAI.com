@@ -11,7 +11,9 @@
  * is the single authoritative home of every mechanical rule — the checklist is
  * judgment-only and points here. A new greppable rule gets added HERE (with a
  * test), never to a doc. Works on drafts and live posts equally — frontmatter
- * draft: status is reported but does not affect rule application.
+ * draft: status is reported but does not affect rule application, with one
+ * exception: the [ADD: ...] / [NEED SOURCE: ...] marker rule (13b) FAILS a live
+ * file and only WARNS on a draft, because drafts are expected to carry markers.
  *
  * Usage:
  *   npm run check-blog src/data/post/<slug>.md   — check one file
@@ -1445,6 +1447,32 @@ function check(file) {
   }
   if (!/_\[Pradeep Pandey\]\(\/about\/pradeep-pandey\)/.test(bodyText)) {
     fail('Italic-linked author bio not found at end', 0, '');
+  }
+
+  // 13b. Unfilled drafting markers (added 2026-11-17, founder-questions step in
+  //      publish-pipeline.md phase 1). A draft marks missing founder input with
+  //      [ADD: what is needed] and an unsourced claim with [NEED SOURCE: the
+  //      claim]. Each one is filled from a real answer or source, or its sentence
+  //      is cut; it is never filled by inference. FAIL on a live file (anything
+  //      not `draft: true`, matching the pre-commit hook, which treats a missing
+  //      draft key as live), WARN on a draft. Whole file, frontmatter included,
+  //      because an excerpt can carry a marker too. Case-sensitive, and `\b`
+  //      after ADD so "[ADDENDUM]" or a template's "[Add ...]" do not trip it.
+  {
+    const isDraft = !!fm && unquote(fm.draft || '') === 'true';
+    const MARKER_RE = /\[(ADD\b|NEED SOURCE\b)[^\]]*\]?/g;
+    lines.forEach((line, i) => {
+      for (const m of line.matchAll(MARKER_RE)) {
+        const kind = m[1] === 'ADD' ? 'ADD' : 'NEED SOURCE';
+        const todo =
+          kind === 'ADD'
+            ? "fill it with the founder's answer or cut the sentence"
+            : 'add a source for the claim or cut the sentence';
+        const snippet = m[0].slice(0, 100);
+        if (isDraft) warn(`Unfilled [${kind}] marker in a draft: ${todo} before publishing`, i + 1, snippet);
+        else fail(`Unfilled [${kind}] marker in a live file: ${todo}`, i + 1, snippet);
+      }
+    });
   }
 
   // A. Canonical matches slug.

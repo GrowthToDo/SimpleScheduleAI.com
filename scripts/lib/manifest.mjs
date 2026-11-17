@@ -11,14 +11,30 @@ export const MECHANICAL_FIELDS = [
   'factsDossier',
   'keywordRegistry',
 ];
-export const RECORDED_FIELDS = ['proofread', 'factCheck', 'imageEyeball', 'founderApproval', 'indexNow', 'gscSitemap'];
+export const RECORDED_FIELDS = [
+  'founderQuestions',
+  'proofread',
+  'factCheck',
+  'imageEyeball',
+  'founderApproval',
+  'indexNow',
+  'gscSitemap',
+];
 // imageEyeball moved out of the commit-blocking set 2026-08-24 (founder workflow
 // change): blogs go live without a localhost preview, the founder reviews the
 // LIVE page, and imageEyeball is recorded from that review. It gates
 // IndexNow/GSC submission (process rule in publish-pipeline.md), not the commit.
-export const BLOCKING_RECORDED = ['proofread', 'factCheck', 'founderApproval'];
+export const BLOCKING_RECORDED = ['founderQuestions', 'proofread', 'factCheck', 'founderApproval'];
+
+// founderQuestions (added 2026-11-17) records that the brief's founder questions
+// were answered or waived. It is set BEFORE drafting, so it is a verdict on the
+// brief, not on the post's text: tying it to the content hash would stale it on
+// every drafting edit. Unfilled answers in the text are caught separately, by
+// check-blog's [ADD: ...] / [NEED SOURCE: ...] marker rule (part of checkBlog).
+const NOT_TIED_TO_TEXT = ['founderQuestions'];
 
 const ACCEPTED = {
+  founderQuestions: ['ANSWERED', 'WAIVED'],
   proofread: ['READY'],
   factCheck: ['PASS', 'NOT_REQUIRED'],
   imageEyeball: ['OK'],
@@ -91,7 +107,7 @@ export function manifestStatus(manifest, hashes) {
   }
   for (const f of RECORDED_FIELDS) {
     const e = manifest.recorded[f];
-    const fresh = !!e && e.contentHash === verdictHash;
+    const fresh = !!e && (NOT_TIED_TO_TEXT.includes(f) || e.contentHash === verdictHash);
     const ok = !!e && ACCEPTED[f].includes(e.value) && fresh;
     rows.push({ field: f, kind: 'recorded', status: e ? e.value : 'MISSING', fresh });
     if (BLOCKING_RECORDED.includes(f) && !ok) green = false;
