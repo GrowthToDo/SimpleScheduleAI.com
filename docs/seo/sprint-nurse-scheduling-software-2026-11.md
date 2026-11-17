@@ -65,3 +65,10 @@ marketplaces; listing kit exists from July if wanted).
 
 Not checked yet: whether each directory link is dofollow (measure after listing, as done for SaaSHub in
 August), and the GetApp listing's outbound link target.
+
+## Week 1 status (2026-11-17, end of day)
+
+Done by the founder: GetApp listing checked (all OK), SoftwareSuggest, Exafol, SourceForge/Slashdot
+and ebool (free tier) submitted. Held: the Gitnux email (founder: not ready to pitch an editor with
+no proof, only the concept). Next: week 2, the one proof upgrade on the page (a worked example on a
+made-up 25-bed roster, labelled illustrative), which is also what an editor pitch would need later.
