@@ -130,3 +130,60 @@ open-tracking pixel. The Gmail signature carries the postal address.
 > Co-founder, SimpleScheduleAI
 
 If they quote a fee, decline: the sprint is free placements only.
+
+## 4. Exafol extra fields (added 2026-11-17, founder asked)
+
+Exafol's form asks for "Use cases" and "Made for" in an outline. Same product-mode rules as section 1.
+
+**Use cases**
+
+```
+Use case: Building the monthly nurse schedule
+
+Description:
+The AI builds three scored draft schedules each cycle against coverage, skill mix, rest requirements, fairness across nights, weekends and holidays, and the 40-hour weekly FLSA overtime threshold. 22 automated rule checks validate every draft. The nurse manager picks one draft and approves it before anything reaches nurses.
+
+Benefits:
+• Three options side by side, so the trade-offs between coverage, fairness and cost are visible
+• Rule violations are flagged with a documented reason before the manager reviews
+• Runs in the browser: no installation, no integration project, no IT department required
+
+Use case: Covering a nurse callout
+
+Description:
+Log the callout and the system ranks the top three replacement candidates with reasons: skills, role, charge coverage and overtime risk. Straight-time candidates rank above overtime, and agency comes last. The manager picks one and reaches out.
+
+Benefits:
+• A ranked shortlist instead of calling down the whole roster
+• Each nurse who cannot take the shift is shown with the reason
+• Every schedule change is logged with a timestamp
+
+Use case: Keeping the load fair and overtime in view
+
+Description:
+The software counts overtime and rule violations for each nurse over a period, so the manager can see when the same nurse keeps getting extra shifts and spread the load.
+
+Benefits:
+• Nights, weekends and holidays tracked per nurse
+• Running hours tracked against the 40-hour weekly FLSA overtime threshold
+• Schedule and roster export to Excel, audit trail to CSV
+```
+
+**Made for**
+
+```
+Target role: Director of Nursing, nurse manager or administrator at a Critical Access Hospital or small rural hospital with 25 or fewer beds
+
+Challenges:
+• Building the nurse schedule by hand in a spreadsheet every cycle
+• Covering callouts with a small roster, often at night
+• Keeping nights, weekends and holidays fair across a small staff
+• Watching overtime against the 40-hour weekly FLSA threshold
+• No IT department to run an installation or integration project
+
+Benefits:
+• The AI builds the schedule, 22 automated rule checks validate every draft, the manager approves
+• Built for small hospitals, with no employee minimums
+• A guided setup session maps your unit rules once
+• $10 per user per month, or $100 per user per year, no setup fees
+```
