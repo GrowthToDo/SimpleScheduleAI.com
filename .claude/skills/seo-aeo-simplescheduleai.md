@@ -141,3 +141,7 @@ judgment it cannot check; the gate decides whether a file passes.
    sentence. Question H2s that read like something a person would type.
 5. **Publishing is founder-gated.** Drafts stay `draft: true` until an explicit,
    standalone instruction to publish. The publish-gate manifest must be green.
+6. **Missing input gets a marker, never a guess.** Where the draft needs the
+   founder's answer, write `[ADD: what is needed]`; where a claim has no source,
+   write `[NEED SOURCE: the claim]`. Fill it from a real answer or source, or cut
+   the sentence. The founder questions that feed these markers: `publish-pipeline.md` phase 1.
