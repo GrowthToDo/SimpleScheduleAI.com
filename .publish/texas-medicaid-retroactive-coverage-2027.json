@@ -5,42 +5,42 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:27:18.592Z",
+      "checkedAt": "2026-11-17T05:28:00.177Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:27:18.857Z",
+      "checkedAt": "2026-11-17T05:28:00.569Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:27:20.109Z",
+      "checkedAt": "2026-11-17T05:28:01.626Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:27:20.133Z",
+      "checkedAt": "2026-11-17T05:28:01.642Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:27:20.204Z",
+      "checkedAt": "2026-11-17T05:28:01.718Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:27:20.204Z",
+      "checkedAt": "2026-11-17T05:28:01.718Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:27:20.205Z",
+      "checkedAt": "2026-11-17T05:28:01.719Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:27:20.205Z",
+      "checkedAt": "2026-11-17T05:28:01.719Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     }
   },
