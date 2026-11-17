@@ -3770,13 +3770,16 @@ a.tile.lk-tile:hover {
   margin: 0;
 }
 
-/* Long chips on a card (an eligibility date with a page path, a target keyword) wrap on a phone. */
-.card-top .chip {
+/* Long chips on a card or a list row (an eligibility date with a page path, a hold such as "Edited 1
+   November (found in git, 32 lines)", a target keyword) wrap on a phone. */
+.card-top .chip,
+.item-row-meta .chip {
   max-width: 100%;
 }
 
 @media (max-width: 640px) {
-  .card-top .chip {
+  .card-top .chip,
+  .item-row-meta .chip {
     white-space: normal;
     overflow-wrap: anywhere;
     border-radius: 10px;
