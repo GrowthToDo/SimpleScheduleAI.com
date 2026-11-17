@@ -68,6 +68,12 @@ its main button: it puts the item away until `leaveIt.untilText` without using t
 - Quote counts the desk gives: `totals` on Decay (its lists stop at 50 rows), `open` on link
   suggestions (`total` includes done ones), `counts.byStatus.open` on opportunities.
 - Runner-up: a small push may matter. Give `measured`, then `action` as a hypothesis, then `test`.
+- Extra clicks (`upside`): quote `text` as it is, a hypothesis ("about 32 extra clicks a month if
+  the page reaches the top 5"), with its date range. Never add estimates together and never work one
+  out yourself; a card with `state` none, zero or not-enough has no number to give, so say its `text`.
+  For "which change could bring the most clicks", read the digest's "Most extra clicks" section (the
+  All opportunities sort of the same name), and say the estimates rest on the site's own click rates
+  (`clickRates.text`).
 - Secondary keywords: the page already shows for the search but does not target it. The
   hypothesis is to work the phrase into a heading and the opening of that page. Adopting one only
   records it; it is never a target. Doing the edit counts as the week's page edit, so check

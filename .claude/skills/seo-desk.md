@@ -102,7 +102,7 @@ in `.claude/skills/seo-desk/routes.md`.
 | Decay (and growing) | `/api/insights/decay` |
 | Keyword map | `/api/keyword-map/table` |
 | Internal links to add | `/api/link-suggestions?page=/blog/x` |
-| Everything open, ranked | `/api/opportunities?status=open` (`attention` is new only) |
+| Everything open, ranked | `/api/opportunities?status=open` (`attention` is new only; each item's `upside` is the extra clicks a month it could bring) |
 | Technical audit | `/api/audit` |
 | Do AI assistants name us? | `/api/ai-visibility` (counts), `/api/ai` (trend, `moneyCitations`, visits) |
 | What do visitors do? | `/api/visitors` |

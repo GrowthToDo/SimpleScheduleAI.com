@@ -43,8 +43,22 @@ once used it is the line "This week's page edit is used (/page, 9 November). The
 from 16 November." and there is no card for it. A top-five card: `id`, `title`, `typeLabel`, `term`,
 `explain`, `why` (one plain sentence on why it is in this week's list; quote it), `measured`,
 `action`, `test`, `eligibility`, `page`, `isPageEdit`, `slot` (broken, new-post, newsroom, page-edit,
-verdict, other), `source`, `oppId`, `state`. A verdict card reports, so it has `eligibility: null` and
-`hypothesis: false`. A card on a chosen or locked week can also carry
+verdict, other), `source`, `oppId`, `state`, `upside`. A verdict card reports, so it has `eligibility: null` and
+`hypothesis: false`.
+`upside` (on every card, opportunity, worry and insight item) is the extra Google clicks a month the
+change could bring, from the site's own click rates (`lib/upside.mjs`): `{state, clicks, text, how,
+short}`. `state` is estimate (then `clicks` is whole clicks a month), zero (the estimate is zero or
+below), not-enough (under 20 times shown) or none (no estimate for this kind: cannibalization,
+internal links, not indexed, wrong page, content gaps, strengthen a page, AI, secondary keywords,
+Newsroom, verdicts, lost demand and the other decay kinds). Quote `text` ("About 32 extra clicks a
+month if the page reaches the top 5 (an estimate from your own click rates, 18 October to 14
+November)."): it is a hypothesis, never a promise, and `how` is its arithmetic. Runner-ups read the
+median click rate at positions 3 to 5, low click rate pages the median at their position (top 5) or
+the median page rate, unanswered questions the site median, lost-rankings decay the clicks lost. The
+medians are the site's own (brand searches left out, searches shown 100 times or more, 20 when fewer
+than 20 reach 100; a rounded position with under five searches reads its pool 1 to 3, 4 to 5, 6 to 10
+or 11 to 20), from the query-only counts; `clickRates` on `/api/opportunities` and `/api/settings`
+holds them, with `text` saying what they rest on. A card on a chosen or locked week can also carry
 `weekEditDone {page, date, dateText}` (or null) when another page edit is already dated this week.
 `eligibility` (the same on every list: this week's priorities, the cards beside it, opportunities, insight cards,
 Cannibalization, Secondary keywords, the page drawer, worries; one function) is `{eligible, from, text}` plus one of: nothing (free:
@@ -98,7 +112,10 @@ month the daily rows hold, newest first), `cur` and `prev` `{start, end, days, t
 cause), `topPages[]` and `topSearches[]` (top ten: `clicks, impressions, position, prevImpressions,
 change`), `targets {available, improved, held, slipped, noData, total, rows[], note}`, `done {posts[],
 edits[], verdicts[], verdictsUnreadable, audit, auditText, postsNote, editsNote}`, `other {bing, ga4,
-ai[], bingText, ga4Text, aiText}`, `footer[]`, `searchError`, `pulls`. Every month-on-month `change`
+ai[], bingText, ga4Text, aiText}`, `upside {title, sectionNote, items[{title, term, page, query,
+clicks, text}], count, without, basis, range, note, empty}` (the open opportunities with the most
+extra clicks a month, from the latest stored 28 days, not the month; the Ask digest carries the same
+list as "Most extra clicks"), `footer[]`, `searchError`, `pulls`. Every month-on-month `change`
 is on per-day averages (months differ in length) and null under 20 in the earlier month's total; the
 month so far is compared with the same days at the start of the month before. A month counts only
 once Search Console has data for its last day. A target improved or slipped when it moved one place or
@@ -345,7 +362,9 @@ Without `page` it lists every page with a needs-links or runner-up opportunity. 
 frozen `from` page would edit that page, so check `fromFrozenUntilText`.
 
 `/api/opportunities?type=&status=open&page=`: `counts {byType, byStatus}`, `items[]` as the
-cards above (the ones whose page can be edited now first), `held {page, week, text}`: how many of these
+cards above (the ones whose page can be edited now first; each carries `upside`), `clickRates`
+(the site's own click rates the estimates rest on: `text`, `range`, `minImpressions`, `searches`,
+`positions[]`, `bands[]`, `top5`, `site`, `pages`), `held {page, week, text}`: how many of these
 items are on pages to leave alone (the page's "Free to edit" filter, on by default, hides those) and
 how many only wait for next week's page edit (those stay in the list), with the line the page shows. `status=open` means new, in progress or came back: it is what the Open view and the
 sidebar count use, and `counts.byStatus.open` is its size. `status=attention` is new only. Other
@@ -452,7 +471,8 @@ line, pages, pageNames, onText, material}`, `sentinels[] {url, state, plain}`, `
 A change the dossier already notes for that competitor is shown but is not a worry. A competitor
 worry on `/api/week` has no test, no hypothesis flag and no Search Console link; its card id carries
 the events it covers, so Seen holds until a new event appears.
-`/api/settings`: weights, money pages, brand words, `strategicKeywords`, switches (`paused`,
+`/api/settings`: weights (eight signals; Upside is the extra clicks estimate on a log scale, 1,000 a
+month at the top, and every preset gives it 0.21, taken evenly from the other seven), `clickRates`, money pages, brand words, `strategicKeywords`, switches (`paused`,
 `weeklyAudit`, `showGoogleUpdates`), `schedule`, `planSize` (3 or 5). `/api/targets`: target
 keywords and their positions, from the query-only pull only. A keyword the page rows hold but that
 pull does not has `impressions` and `position` null and `noTotalNote` (never page rows added up), and
