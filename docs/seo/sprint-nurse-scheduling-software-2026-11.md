@@ -1,6 +1,6 @@
 # 30-day sprint: /nurse-scheduling-software (proposal, 2026-11-17)
 
-Status: PROPOSAL, nothing started. Founder go needed for each step that sends something or edits the live page.
+Status: WEEK 1 DONE 2026-11-17 (target list below); weeks 2 to 4 not started. Founder go needed for each step that sends something or edits the live page.
 Idea source: Ilias Ism's "blitz-seo" skill (one money page, one money keyword, 30 days of concentrated work),
 adapted to this site's rules (one live-page edit a week, 28 days before a page is judged, no paid links).
 
@@ -37,3 +37,31 @@ On 2026-12-21 (28 days after the week 2 edit, plus 2 days of data lag), compare 
 the head term's position, the page's impressions and clicks, and which roundups now name us. The SEO Desk's
 "Did it work?" page judges the edit against a typical page. A roundup link that lands after the edit muddies the
 reading, so the result will be stated as "the page and its links together", not as the edit alone.
+
+## Week 1 result (2026-11-17): the "roundups" are mostly directories
+
+Pulled the top 20 Google results for "best nurse scheduling software" and "nurse scheduling software"
+(DataForSEO, US, 2026-11-17), plus the AI Overview sources for the second term. A research agent then
+read each list page (real browser where curl was blocked). No list names SimpleScheduleAI except GetApp.
+
+What changed the plan: the results are almost all software DIRECTORIES that vendors join through a form,
+not editors' roundups. The two AI Overview sources that looked like roundups (VarsHealth, Apiko) are a
+competitor's blog and a dev shop's blog. So weeks 1 to 2 become directory submissions (founder fills the
+forms; product-mode copy per the directory rule in memory) plus at most one editor email (Gitnux).
+
+| Priority | Site | Ranks for | Type | Names us? | How to get added | Cost |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | GetApp (Gartner; shares the vendor account with Capterra and Software Advice) | both terms, positions 9 to 18 | Directory | Yes, page 3 of the Nurse Scheduling category | Already listed: getapp.com/all-software/a/simplescheduleai/. Check the listing's website link points to /nurse-scheduling-software; reviews move the rank | Free |
+| 2 | SoftwareSuggest | "best ..." position 15, "nurse ..." 20 | Directory | No | softwaresuggest.com/vendors ("List Your Product For Free") | Free listing; pay per lead later, optional |
+| 3 | Exafol | "best ..." position 10 | Directory | No | exafol.com/add-your-product | Free |
+| 4 | SourceForge + Slashdot (one vendor database) | "best ..." 16 and 19 | Directory | No | sourceforge.net/software/vendors/new | Free listing; sponsored slots sold separately, decline |
+| 5 | Gitnux | "nurse ..." position 8 | Editorial, "co-funded by several of the vendors" | No | info@gitnux.org ("Apply for a Listing") | Not stated; ask before agreeing, decline if paid |
+| 6 | ebool | "best ..." 5, "nurse ..." 9 | Directory | No | ebool.com/submit | Free tier: about 6-month queue, nofollow. Paid $47 buys a top-5 slot (decline) |
+
+Skipped, with reasons: SoftwareWorld (a new listing costs $99), VarsHealth (competitor's own blog),
+Apiko and Cal.com (vendor blogs), techyeyes and the DevOpsSchool/DevOpsFreelancer/MyHospitalNow copies
+(thin copied listicles), RevenueBase (a contact-data page, not a software list), F6S (mostly shift
+marketplaces; listing kit exists from July if wanted).
+
+Not checked yet: whether each directory link is dofollow (measure after listing, as done for SaaSHub in
+August), and the GetApp listing's outbound link target.
