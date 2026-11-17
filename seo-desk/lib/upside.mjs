@@ -61,6 +61,21 @@ const poolWords = (p, label) =>
     ? `${label}: not enough clicks yet (${clicksWord(p.clicks)} from ${n0(p.impressions)} views)`
     : `${label}: ${rateText(p.rate)} (${clicksWord(p.clicks)} from ${n0(p.impressions)} views)`;
 
+// The pooled page rate over `win`: each page's own views and clicks from the daily page rows, the pages
+// shown SEARCH_MIN_IMP times or more, total clicks over total views. {clicks, impressions, pages, rate}.
+function pageRateOf(gsc, win) {
+  const pageMap = new Map();
+  for (const p of gsc?.pageDaily ?? []) {
+    if (!p?.page || p.date < win.start || p.date > win.end) continue;
+    const a = pageMap.get(p.page) ?? { clicks: 0, impressions: 0 };
+    a.clicks += Number(p.clicks) || 0;
+    a.impressions += Number(p.impressions) || 0;
+    pageMap.set(p.page, a);
+  }
+  const counted = pool([...pageMap.values()].filter((p) => p.impressions >= SEARCH_MIN_IMP));
+  return { clicks: counted.clicks, impressions: counted.impressions, pages: counted.searches, rate: counted.rate };
+}
+
 // The site's own pooled click rates. gsc: the Search Console snapshot data; range: the stored latest
 // 28 days, the period the cards' own numbers come from. {available, window ('90-day' | '28-day'),
 // range and days (the days the rates cover), cardRange and cardDays (the cards' period),
@@ -84,6 +99,8 @@ export function clickRates(gsc, { brands = [], range = null } = {}) {
     minClicks: RATE_MIN_CLICKS,
   };
   const empty = { clicks: 0, impressions: 0, searches: 0, rate: null };
+  // The page rate needs only the daily page rows, so it is there even without the per-search counts.
+  const pages = base.days ? pageRateOf(gsc, win) : { clicks: 0, impressions: 0, pages: 0, rate: null };
   if (!real || !base.days || !base.cardDays)
     return {
       ...base,
@@ -92,7 +109,7 @@ export function clickRates(gsc, { brands = [], range = null } = {}) {
       bands: [],
       top5: { ...empty, label: 'positions 3 to 5' },
       site: { ...empty, label: 'all your searches' },
-      pages: { clicks: 0, impressions: 0, pages: 0, rate: null },
+      pages,
       text: 'Not enough data for click estimates: the per-search counts from Search Console are missing.',
     };
   const rows = [...real.values()]
@@ -105,23 +122,6 @@ export function clickRates(gsc, { brands = [], range = null } = {}) {
     label: `positions ${from} to ${to}`,
     ...pool(inBand(from, to)),
   }));
-
-  // Pages: each page's own views and clicks over the same days, from the daily page rows.
-  const pageMap = new Map();
-  for (const p of gsc?.pageDaily ?? []) {
-    if (!p?.page || p.date < win.start || p.date > win.end) continue;
-    const a = pageMap.get(p.page) ?? { clicks: 0, impressions: 0 };
-    a.clicks += Number(p.clicks) || 0;
-    a.impressions += Number(p.impressions) || 0;
-    pageMap.set(p.page, a);
-  }
-  const counted = pool([...pageMap.values()].filter((p) => p.impressions >= SEARCH_MIN_IMP));
-  const pages = {
-    clicks: counted.clicks,
-    impressions: counted.impressions,
-    pages: counted.searches,
-    rate: counted.rate,
-  };
 
   const out = {
     ...base,
@@ -254,7 +254,7 @@ export function upsideOf(opp, { rates, real } = {}) {
   }
 
   if (type === 'low-click-rate') {
-    if (!rates?.available) return notEnough('your own click rates could not be worked out.');
+    if (!rates) return notEnough('your own click rates could not be worked out.');
     const e = opp.evidence?.[0];
     if (!e || !(e.impressions >= MIN_BASE())) return notEnough(`the page was shown fewer than ${MIN_BASE()} times.`);
     const rate = (e.clicks || 0) / e.impressions;

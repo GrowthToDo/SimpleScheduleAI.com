@@ -16,7 +16,7 @@ export const TERMS = {
   'near-page-one': { term: 'Runner-up keywords', explain: 'Searches where you sit just off page one.' },
   'low-click-rate': {
     term: 'Low click rate',
-    explain: 'Pages that show up in search but get fewer clicks than their place would suggest.',
+    explain: 'Pages on page one of Google that get under half the click rate your pages average.',
   },
   'competing-pages': {
     term: 'Cannibalization',

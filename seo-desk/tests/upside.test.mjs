@@ -221,22 +221,31 @@ test('every other kind says there is no click estimate for it', () => {
   assert.equal(U.NO_ESTIMATE.text, 'No click estimate for this kind.');
 });
 
-test('the low click rate card compares with the site own pooled rate, never an industry figure', () => {
+test('the low click rate card is judged on the pooled 90-day page rate and says only that', () => {
   const pages = [
+    { date: '2026-08-05', page: '/blog/one', clicks: 10, impressions: 1000, position: 30 },
+    { date: '2026-10-05', page: '/blog/two', clicks: 12, impressions: 1000, position: 30 },
     { date: '2026-10-05', page: '/blog/four', clicks: 2, impressions: 1000, position: 4.2 },
-    { date: '2026-10-05', page: '/blog/twelve', clicks: 0, impressions: 500, position: 12 },
+    { date: '2026-10-05', page: '/blog/nine', clicks: 2, impressions: 300, position: 9 },
+    { date: '2026-10-05', page: '/blog/small', clicks: 0, impressions: 150, position: 5 },
+    { date: '2026-10-05', page: '/blog/ten', clicks: 0, impressions: 400, position: 10.4 },
   ];
-  const snaps = { gsc: gscWith({ pageDaily: pages }) };
-  const cards = rules.detectLowClickRate(snaps, { brands: BRANDS, today: '2026-11-02' });
-  const four = cards.find((c) => c.page === '/blog/four');
-  const twelve = cards.find((c) => c.page === '/blog/twelve');
-  assert.ok(four && twelve);
-  for (const c of cards) assert.doesNotMatch(c.measured, /usually|2\.5%|7\.0%/);
-  assert.match(
-    four.measured,
-    /Your own searches at positions 4 to 5 got a click rate of 1\.4% over the 90 days from 31 July to 28 October \(36 clicks from 2,600 views\)\./
+  // The pool: 26 clicks from 3,850 views = 0.675%; half of it is 0.338%.
+  const cards = rules.detectLowClickRate(
+    { gsc: gscWith({ pageDaily: pages }) },
+    { brands: BRANDS, today: '2026-11-02' }
   );
-  assert.match(twelve.measured, /positions 11 to 20 had too few clicks over the 90 days from 31 July to 28 October/);
+  assert.deepEqual(
+    cards.map((c) => c.page),
+    ['/blog/four']
+  );
+  const [four] = cards;
+  assert.equal(four.title, '/blog/four gets fewer clicks than your other pages');
+  assert.equal(
+    four.measured,
+    'Shown 1,000 times at position 4.2 from 1 October to 28 October, with 2 clicks, a click rate of 0.20%. Your pages average 0.68% over the 90 days from 31 July to 28 October.'
+  );
+  assert.doesNotMatch(four.measured + four.title, /usually|suggests|[\u2013\u2014]/);
 });
 
 test('the Upside signal: log scale, 1,000 a month at the top, null with its own reason otherwise', () => {
@@ -337,10 +346,11 @@ test('the model carries the estimate to every list, the week, the Monthly report
   assert.equal(near.upside.clicks, 9);
   assert.ok(near.signals.upside > 0);
   assert.ok(near.score.parts.find((p) => p.signal === 'upside').points > 0);
-  const low = model.opps.find((o) => o.type === 'low-click-rate' && o.page === '/blog/november');
-  assert.ok(low, 'the page with no clicks is found');
-  // 500 x the pooled 90-day page rate (24/3,500) = 3.43, x 30/28 = 4.
-  assert.equal(low.upside.clicks, 4);
+  // Position 12 is past page one, so only /blog/four is a low click rate card now.
+  assert.deepEqual(
+    model.opps.filter((o) => o.type === 'low-click-rate').map((o) => o.page),
+    ['/blog/four']
+  );
   assert.equal(model.clickRates.searches, 24);
 
   const view = work.opportunitiesView(model, { status: 'open' });
@@ -356,7 +366,7 @@ test('the model carries the estimate to every list, the week, the Monthly report
   const ranking = work.upsideRanking(model, 5);
   assert.deepEqual(
     ranking.items.map((i) => i.clicks),
-    [13, 9, 4] // the first: /blog/four, 1,000 x (36/2,600 - 0.2%) = 11.85, x 30/28 = 13
+    [13, 9] // /blog/four: 1,000 x (36/2,600 - 0.2%) = 11.85, x 30/28 = 13
   );
   assert.match(ranking.note, /hypothesis/);
   assert.equal(monthView(model, '2026-10', null).upside.items[0].clicks, 13);

@@ -60,8 +60,9 @@ pages their band's rate (top 5) or the page rate, unanswered questions the rate 
 lost-rankings decay the clicks lost. Bands are 1 to 3, 4 to 5, 6 to 10 and 11 to 20 (average place
 rounded); brand searches and searches under 20 views are left out; a pool under 20 clicks has no rate.
 `clickRates` on `/api/opportunities` and `/api/settings` holds them, with `text` saying what each
-rests on. A low click rate card's `measured` compares the page with its band's own rate (or says the
-band has too few clicks yet); it never quotes an industry figure. A card on a chosen or locked week can also carry
+rests on. A low click rate card is a page at position 10 or better, shown 200 times or more in the
+latest 28 days, whose click rate is under half the site's own pooled page rate (no rate, no cards).
+Its `measured` gives the page's numbers and that rate with its days; it never quotes an industry figure. A card on a chosen or locked week can also carry
 `weekEditDone {page, date, dateText}` (or null) when another page edit is already dated this week.
 `eligibility` (the same on every list: this week's priorities, the cards beside it, opportunities, insight cards,
 Cannibalization, Secondary keywords, the page drawer, worries; one function) is `{eligible, from, text}` plus one of: nothing (free:

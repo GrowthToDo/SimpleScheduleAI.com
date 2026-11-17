@@ -120,18 +120,3 @@ export const DEFAULT_MONEY_PAGES = [
   '/critical-access-hospital-scheduling',
   '/how-it-works',
 ];
-
-// Expected click rate by Google position, 1 to 20.
-export const EXPECTED_CTR = {
-  1: 0.28,
-  2: 0.15,
-  3: 0.1,
-  4: 0.07,
-  5: 0.05,
-  6: 0.04,
-  7: 0.03,
-  8: 0.025,
-  9: 0.02,
-  10: 0.018,
-  ...Object.fromEntries(Array.from({ length: 10 }, (_, i) => [11 + i, 0.01])),
-};

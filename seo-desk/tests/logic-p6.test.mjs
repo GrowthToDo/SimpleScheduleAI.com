@@ -400,7 +400,8 @@ test('C4: an item on a held page is marked held, never pushed, and comes after t
   assert.ok(heldIds.includes('held1'));
   assert.ok(list.items.filter((o) => o.held).every((o) => o.page === '/blog/steady-3'));
   assert.equal(list.held.page, heldIds.length);
-  assert.equal(list.held.text, `${heldIds.length} more are on pages to leave alone and are hidden.`);
+  const verb = heldIds.length === 1 ? 'is' : 'are';
+  assert.equal(list.held.text, `${heldIds.length} more ${verb} on pages to leave alone and ${verb} hidden.`);
   const ru = insights.runnerUpView(m);
   assert.deepEqual(
     ru.items.map((o) => o.id),

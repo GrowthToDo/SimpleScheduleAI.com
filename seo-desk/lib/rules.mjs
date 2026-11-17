@@ -21,10 +21,10 @@ import { dropKindOf, dropAction } from './decay.mjs';
 import { inboundCount, linksInText, notIndexedAdvice } from './inbound.mjs';
 import { matchKey } from './targets.mjs';
 import { tokens } from './topics.mjs';
-import { THRESHOLDS, DEFAULT_MONEY_PAGES, EXPECTED_CTR } from './config.mjs';
+import { THRESHOLDS, DEFAULT_MONEY_PAGES } from './config.mjs';
 import { windows as reportingWindows, daysBetween, todayIso, addDays } from './dates.mjs';
 import { longDate, longRange } from './text.mjs';
-import { clickRates, bandAt, rateText } from './upside.mjs';
+import { clickRates, rateText } from './upside.mjs';
 
 export const RULE_TYPES = [
   'near-page-one',
@@ -84,7 +84,6 @@ export function rangeText(range) {
 const n0 = (v) => Math.round(v).toLocaleString('en-US');
 const pos1 = (v) => Number(v).toFixed(1);
 const pct0 = (frac) => `${Math.round(frac * 100)}%`;
-const pct1 = (frac) => `${(frac * 100).toFixed(1)}%`;
 const plural = (n, one, many) => (n === 1 ? one : many);
 
 function listText(items) {
@@ -604,42 +603,36 @@ export function detectQuestion(snaps, cfg) {
 
 // ---------------------------------------------------------------- Google page rules
 
+// A page on page one (position 10 or better) shown LOW_CTR_MIN_IMP times or more in the latest 28 days
+// whose click rate is under half the site's own pooled page rate (lib/upside.mjs: total page clicks over
+// total page views, 90 days when the 90-day search rows are there, else 28). No rate (under 20 clicks):
+// nothing is flagged, because there is nothing of our own to compare with.
 export function detectLowClickRate(snaps, cfg) {
   const ctx = contextOf(snaps, cfg);
   const pages = pageCurOf(ctx);
   if (!pages) return [];
   const range = ctx.cur;
-  // The site's own pooled click rate for the page's band (lib/upside.mjs), the only usual rate a card
-  // says. The industry table (EXPECTED_CTR) still decides which pages are flagged, and is never shown.
   const rates = clickRates(ctx.gsc, { brands: ctx.brands, range });
-  const ownRate = (p) => {
-    const b = bandAt(rates, p.position);
-    if (!rates.available || !b) return '';
-    const totals = `${n0(b.clicks)} ${plural(b.clicks, 'click', 'clicks')} from ${n0(b.impressions)} views`;
-    const days = `the ${rates.days} days from ${rates.range.text}`;
-    return b.rate === null
-      ? ` Your own searches at ${b.label} had too few clicks over ${days} (${totals}) to give a usual click rate yet.`
-      : ` Your own searches at ${b.label} got a click rate of ${rateText(b.rate)} over ${days} (${totals}).`;
-  };
+  const site = rates.pages.rate;
+  if (!(site > 0)) return [];
   const out = [];
   for (const p of pages.values()) {
-    if (p.impressions < ctx.t.LOW_CTR_MIN_IMP || !(p.position > 0) || p.position > 15) continue;
-    const expected = EXPECTED_CTR[Math.min(20, Math.max(1, Math.round(p.position)))];
-    if (!(p.ctr < 0.5 * expected)) continue;
+    if (p.impressions < ctx.t.LOW_CTR_MIN_IMP || !(p.position > 0) || !onPageOne(p.position)) continue;
+    if (!(p.ctr < 0.5 * site)) continue;
     out.push(
       build(ctx, {
         type: 'low-click-rate',
         page: p.page,
         query: '',
-        title: `${p.page} gets fewer clicks than its position suggests`,
-        measured: `From ${rangeText(range)}, ${p.page} appeared ${n0(p.impressions)} times in search results at an average position of ${pos1(p.position)}, but only ${n0(p.clicks)} ${plural(p.clicks, 'person', 'people')} clicked, a click rate of ${pct1(p.ctr)}.${ownRate(p)}`,
+        title: `${p.page} gets fewer clicks than your other pages`,
+        measured: `Shown ${n0(p.impressions)} times at position ${pos1(p.position)} from ${rangeText(range)}, with ${n0(p.clicks)} ${plural(p.clicks, 'click', 'clicks')}, a click rate of ${rateText(p.ctr)}. Your pages average ${rateText(site)} over the ${rates.days} days from ${rates.range.text}.`,
         action: `Rewrite the title and the short description shown in search results for ${p.page} so they promise what the page delivers.`,
         isPageEdit: true,
         range,
         source: 'gsc',
         evidence: [p],
         impressions: p.impressions,
-        distance: 1 - p.ctr / expected,
+        distance: 1 - p.ctr / site,
       })
     );
   }

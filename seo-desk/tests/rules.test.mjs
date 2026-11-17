@@ -97,14 +97,16 @@ test('near-page-one fires at the gate, not under it, and never for a brand query
 
 // ---------------------------------------------------------------- low-click-rate
 
-test('low-click-rate uses page numbers, fires under half the expected rate, and respects every gate', () => {
+test('low-click-rate is judged on the site own pooled page rate, page one only, and respects every gate', () => {
   const snaps = withGsc({
     pageDaily: [
-      pd('/blog/low', CUR_DAY, 3, 300, 5), // 1.0% vs expected 5% -> fires
-      pd('/blog/healthy', CUR_DAY, 8, 300, 5), // 2.7% >= 2.5% -> no
+      pd('/blog/low', CUR_DAY, 0, 300, 5), // 0% against half of 0.87% -> fires
+      pd('/blog/healthy', CUR_DAY, 8, 300, 5), // 2.7% -> no
       pd('/blog/thin', CUR_DAY, 0, 199, 5), // under 200 impressions -> no
-      pd('/blog/deep', CUR_DAY, 0, 400, 16), // position over 15 -> no
+      pd('/blog/deep', CUR_DAY, 0, 400, 10.4), // past position 10 -> no
+      pd('/blog/edge', CUR_DAY, 0, 250, 10), // position 10 is still page one -> fires
       pd('/blog/old', PREV_DAY, 0, 900, 4), // outside the current window -> no
+      pd('/blog/anchor', CUR_DAY, 22, 2000, 30), // past page one, but in the pool
     ],
     // query level clicks are suppressed and must never drive this rule
     qpCur: [qp('whatever', '/blog/healthy', 300, 5, 0)],
@@ -112,18 +114,26 @@ test('low-click-rate uses page numbers, fires under half the expected rate, and 
   const out = rules.detectLowClickRate(snaps, cfg);
   assert.deepEqual(
     out.map((o) => o.page),
-    ['/blog/low']
+    ['/blog/low', '/blog/edge']
   );
   const o = out[0];
   assert.equal(o.query, '');
   assert.equal(o.isPageEdit, true);
-  assert.ok(Math.abs(o.signals.distance - (1 - 0.01 / 0.05)) < 1e-9);
-  assert.match(o.measured, /1\.0%/);
+  // The pool: 30 clicks from 3,449 views (every page shown 20 times or more in the 28 days).
+  assert.equal(o.signals.distance, 1);
+  assert.equal(o.title, '/blog/low gets fewer clicks than your other pages');
+  assert.equal(
+    o.measured,
+    'Shown 300 times at position 5.0 from 11 October to 7 November, with 0 clicks, a click rate of 0.00%. Your pages average 0.87% over the 28 days from 11 October to 7 November.'
+  );
+  assert.doesNotMatch(o.measured, /usually|position suggests/);
 });
 
-test('low-click-rate at position 15 compares with the position 15 expected rate', () => {
-  const snaps = withGsc({ pageDaily: [pd('/blog/edge', CUR_DAY, 0, 250, 15)] });
-  assert.equal(rules.detectLowClickRate(snaps, cfg).length, 1);
+test('low-click-rate flags nothing while the pooled page rate rests on under 20 clicks', () => {
+  const snaps = withGsc({
+    pageDaily: [pd('/blog/low', CUR_DAY, 0, 300, 5), pd('/blog/healthy', CUR_DAY, 8, 300, 5)],
+  });
+  assert.deepEqual(rules.detectLowClickRate(snaps, cfg), []);
 });
 
 // ---------------------------------------------------------------- competing-pages
@@ -423,7 +433,8 @@ function everythingSnaps() {
       qp('how do critical access hospitals schedule night nurses', '/blog/a', 10, 18),
       qp('google only money', '/pricing', 30, 9),
     ],
-    pageDaily: [pd('/blog/low', CUR_DAY, 3, 300, 5)],
+    // The low page sits under half the site's own page rate; the anchor gives the pool its 20 clicks.
+    pageDaily: [pd('/blog/low', CUR_DAY, 1, 300, 5), pd('/blog/anchor', CUR_DAY, 40, 2000, 30)],
     index: [{ page: '/blog/old-mod', verdict: 'not-indexed', reason: '', lastCrawl: null }],
   });
   snaps.bing = {

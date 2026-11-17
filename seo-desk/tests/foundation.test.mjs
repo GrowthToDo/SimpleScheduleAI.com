@@ -104,10 +104,8 @@ test('config exposes the contract values', () => {
     assert.ok(Math.abs(sum - 1) < 1e-9, `${name} sums to ${sum}`);
   }
   assert.equal(config.DEFAULT_MONEY_PAGES.length, 6);
-  assert.equal(config.EXPECTED_CTR[1], 0.28);
-  assert.equal(config.EXPECTED_CTR[10], 0.018);
-  assert.equal(config.EXPECTED_CTR[20], 0.01);
-  assert.equal(Object.keys(config.EXPECTED_CTR).length, 20);
+  // The industry click-curve table is gone: the low click rate rule judges on the site's own rate.
+  assert.equal(config.EXPECTED_CTR, undefined);
 });
 
 test('writeJson then readJson round-trips inside SEO_DESK_DATA', () => {
