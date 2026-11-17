@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "slug": "texas-medicaid-retroactive-coverage-2027",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-17T05:27:18.592Z",
+      "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-17T05:27:18.857Z",
+      "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-17T05:27:20.109Z",
+      "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-17T05:27:20.133Z",
+      "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-17T05:27:20.204Z",
+      "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-17T05:27:20.204Z",
+      "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-17T05:27:20.205Z",
+      "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-17T05:27:20.205Z",
+      "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
+    }
+  },
+  "recorded": {
+    "founderQuestions": {
+      "value": "ANSWERED",
+      "setBy": "founder (chat 2026-11-17: Our Take states the file-before-discharge view; footer note, no product section)",
+      "setAt": "2026-11-17T05:22:46.933Z",
+      "contentHash": "38cc1b55a127e24ab91d619ecdad855731f17fccc73c2f05a5bc4ee3b8283e23"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer (third pass 2026-11-17: READY-TO-PUBLISH)",
+      "setAt": "2026-11-17T05:27:17.838Z",
+      "contentHash": "d5047e81330cd5a25283ab04c21bd3cb274179f1716e44fa1c2407ddfba2b359"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "feature-dev:code-reviewer (FACTS PASS vs dossier) + main session read sec. 71112, 1 TAC 366.325 and both KERA pieces at source",
+      "setAt": "2026-11-17T05:27:17.967Z",
+      "contentHash": "d5047e81330cd5a25283ab04c21bd3cb274179f1716e44fa1c2407ddfba2b359"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder (chat 2026-11-17: 'work on trendjacking article and take it live')",
+      "setAt": "2026-11-17T05:27:18.096Z",
+      "contentHash": "d5047e81330cd5a25283ab04c21bd3cb274179f1716e44fa1c2407ddfba2b359"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 54.2,
+        "headings": 100,
+        "actionability": 66.7,
+        "attention": 75
+      },
+      "overall": 71.5,
+      "counts": {
+        "sections": 8,
+        "rereads": 10,
+        "undefinedTerms": 12,
+        "headingsAnswered": 8,
+        "mondayActions": 4,
+        "blockedActions": 2,
+        "quitPoints": 2
+      },
+      "icp": "Administrator of a 25-bed rural Texas hospital, reading once on a phone between meetings",
+      "publishDate": "2026-11-17T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "section 71112",
+          "P.L. 119-21",
+          "1 TAC 366.325",
+          "KERA",
+          "Texans Care for Children",
+          "Medicaid expansion / expansion group",
+          "application month",
+          "the first day of the first quarter that begins after December 31, 2026",
+          "pending applications",
+          "eligibility workers",
+          "current state fiscal year (end date not given)",
+          "'covered' used where 'billable' is meant"
+        ],
+        "mondayActions": [
+          "ask the business office for the list of uninsured patients seen October to December 2026 with no application filed",
+          "ask patient access or the financial counselor to start applications during the stay",
+          "record the filing date on each account where billing staff can see it",
+          "tell admitting and emergency staff about the January 1 change"
+        ],
+        "blockedActions": [
+          "get already-discharged October to December patients to file by December 31 (no word on whether the hospital may file for them or how to reach them)",
+          "plan cash for slow Medicaid decisions (no length of delay or amount given, only 'months')"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Changes in Texas Medicaid Retroactive Coverage on January 1, 2027?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Does the Texas Medicaid Backlog Shorten the Retroactive Window?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Which Hospital Stays Can Still Be Billed to Medicaid After the Change?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Who in Texas Does the Shorter Medicaid Window Apply To?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Is Texas Doing About the Medicaid Application Backlog?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-11-17T05:24:20.332Z",
+      "contentHash": "38cc1b55a127e24ab91d619ecdad855731f17fccc73c2f05a5bc4ee3b8283e23"
+    }
+  }
+}

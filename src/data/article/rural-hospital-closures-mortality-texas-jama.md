@@ -113,7 +113,7 @@ You can rely on it as evidence of a pattern, but not as proof of cause. Here is 
 - **It does not say why.** The researchers could not measure why deaths were higher. They suggest possible reasons, such as delays getting patients to a hospital, crowding at nearby hospitals, local health services getting worse over time, and people going without care. Earlier studies they cite found that closures led to longer ambulance trips.
 - **It does not measure nurse staffing.** It mentions clinicians leaving after closures only in passing, citing earlier work.
 - **It gives no separate result for Critical Access Hospitals.**
-- **It ends in 2019.** The records stop before COVID, and before this year's [Texas Medicaid payment freeze](/articles/texas-medicaid-freeze-critical-access-hospitals).
+- **It ends in 2019.** The records stop before COVID, and before this year's [Texas Medicaid payment freeze](/articles/texas-medicaid-freeze-critical-access-hospitals). It also predates the [January 2027 cut in how far back Texas Medicaid pays](/articles/texas-medicaid-retroactive-coverage-2027) for care before an application.
 
 The researchers also say their numbers may be too low. Some of the other Texas counties may have been affected too, if the effects reached farther than the counties next door. If so, that would make the difference they measured smaller.
 
