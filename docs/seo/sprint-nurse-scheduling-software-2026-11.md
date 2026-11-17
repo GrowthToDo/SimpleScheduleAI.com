@@ -1,0 +1,39 @@
+# 30-day sprint: /nurse-scheduling-software (proposal, 2026-11-17)
+
+Status: PROPOSAL, nothing started. Founder go needed for each step that sends something or edits the live page.
+Idea source: Ilias Ism's "blitz-seo" skill (one money page, one money keyword, 30 days of concentrated work),
+adapted to this site's rules (one live-page edit a week, 28 days before a page is judged, no paid links).
+
+## Where the page stands (measured)
+
+- Search Console, 18 October to 14 November 2026: the page was shown 515 times and got 0 clicks
+  (627 times, 0 clicks, in the 28 days before).
+- Its own head term, "nurse scheduling software": 97 times shown, average position 23.8, 0 clicks.
+  The rest of its 54 searches sit between position 13 and 64: "best nurse scheduling software" 18.5,
+  "nurse scheduling system" 13.3, "scheduling software for nurses" 27.8.
+- Internal links are not the gap: 140 files in `src/` already link to it.
+- The keyword is easy on paper (memory: KD 1) and the page was already optimized in July, so the
+  standing finding is that it needs authority, not a rewrite.
+
+## The hypothesis
+
+Third-party "best nurse scheduling software" roundups are what Google's AI summaries and the top results cite
+(Ilias Ism's 98-result pull for a different keyword, 16 November 2026: 6 of 12 AI Overview citations were roundups).
+Getting this page named in two or three of them, plus one proof upgrade on the page, may move the head term from
+page 3 toward page 1. The test is below; nothing here claims it will work.
+
+## The 30 days
+
+| Week | What | Who | Uses the week's page edit? |
+| --- | --- | --- | --- |
+| 1 | List the roundups that rank or are cited for "best nurse scheduling software" and "nurse scheduling software" and name competitors but not us (the July plan's T1.3 targets: Connecteam, Shiftboard, SnapSchedule, HealthStream, Zoho, plus any new ones). One DataForSEO results pull, about $0.01, asked first. | Claude | No |
+| 1 to 2 | Draft one short, honest pitch per roundup editor (the missing category: scheduling run for you, for hospitals of 25 beds or fewer), with an edit-ready blurb. Free placements only; decline paid ones. Follows the cold email checklist (UTM per site, reply opt-out line, no attachment, no tracking pixel). | Claude drafts, founder sends | No |
+| 2 | One proof upgrade on the page: a worked example from the real scheduler on a made-up 25-bed roster, labelled illustrative, using the new founder-questions step. | Founder answers, Claude drafts, normal pipeline | Yes, one edit |
+| 3 to 4 | Follow up once on unanswered pitches. No further page edits (the 28-day window). | Founder | No |
+
+## The test
+
+On 2026-12-21 (28 days after the week 2 edit, plus 2 days of data lag), compare with the baseline above:
+the head term's position, the page's impressions and clicks, and which roundups now name us. The SEO Desk's
+"Did it work?" page judges the edit against a typical page. A roundup link that lands after the edit muddies the
+reading, so the result will be stated as "the page and its links together", not as the edit alone.
