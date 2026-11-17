@@ -5,42 +5,42 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:28:00.177Z",
+      "checkedAt": "2026-11-17T05:50:56.776Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:28:00.569Z",
+      "checkedAt": "2026-11-17T05:50:57.164Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:28:01.626Z",
+      "checkedAt": "2026-11-17T05:50:59.336Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:28:01.642Z",
+      "checkedAt": "2026-11-17T05:50:59.359Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:28:01.718Z",
+      "checkedAt": "2026-11-17T05:50:59.426Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:28:01.718Z",
+      "checkedAt": "2026-11-17T05:50:59.426Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:28:01.719Z",
+      "checkedAt": "2026-11-17T05:50:59.427Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-11-17T05:28:01.719Z",
+      "checkedAt": "2026-11-17T05:50:59.432Z",
       "contentHash": "999420087972ad844b21e614cea9b4b69cfa08a1653fc63b30af1d260f9981fe"
     }
   },
@@ -67,6 +67,24 @@
       "value": "YES",
       "setBy": "founder (chat 2026-11-17: 'work on trendjacking article and take it live')",
       "setAt": "2026-11-17T05:27:18.096Z",
+      "contentHash": "d5047e81330cd5a25283ab04c21bd3cb274179f1716e44fa1c2407ddfba2b359"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder (2026-11-17: 'article looks good')",
+      "setAt": "2026-11-17T05:50:56.331Z",
+      "contentHash": "d5047e81330cd5a25283ab04c21bd3cb274179f1716e44fa1c2407ddfba2b359"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "main session, npm run indexnow 2026-11-17 (151 URLs, HTTP 200)",
+      "setAt": "2026-11-17T05:50:56.453Z",
+      "contentHash": "d5047e81330cd5a25283ab04c21bd3cb274179f1716e44fa1c2407ddfba2b359"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "main session, GSC sitemap-index.xml submitted 2026-11-17",
+      "setAt": "2026-11-17T05:50:56.577Z",
       "contentHash": "d5047e81330cd5a25283ab04c21bd3cb274179f1716e44fa1c2407ddfba2b359"
     }
   },
