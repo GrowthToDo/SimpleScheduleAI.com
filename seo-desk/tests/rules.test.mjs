@@ -551,7 +551,7 @@ test('score parts add up to the total and a null signal adds zero with a plain r
   assert.ok(s.total >= 0 && s.total <= 100);
   assert.deepEqual(
     s.parts.map((p) => p.signal),
-    ['demand', 'distance', 'importance', 'confidence', 'effort', 'ai', 'outcome']
+    ['demand', 'distance', 'importance', 'confidence', 'effort', 'ai', 'outcome', 'upside']
   );
   const sum = Number(s.parts.reduce((t, p) => t + p.points, 0).toFixed(1));
   assert.equal(s.total, sum);
@@ -570,7 +570,9 @@ test('score parts add up to the total and a null signal adds zero with a plain r
 });
 
 test('score never exceeds 100 even with every signal at 1', () => {
-  const full = { signals: { demand: 1, distance: 1, importance: 1, confidence: 1, effort: 1, ai: 1, outcome: 1 } };
+  const full = {
+    signals: { demand: 1, distance: 1, importance: 1, confidence: 1, effort: 1, ai: 1, outcome: 1, upside: 1 },
+  };
   assert.equal(score(full, PRESETS.balanced).total, 100);
 });
 

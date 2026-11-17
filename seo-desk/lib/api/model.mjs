@@ -32,6 +32,8 @@ import { brief } from '../brief.mjs';
 import { loadTargets, allTargets, applySignals } from '../targets.mjs';
 import { longDate, longRange, plain } from '../text.mjs';
 import { TERMS, termOf } from '../insights.mjs';
+import { realQueryCounts } from '../query-counts.mjs';
+import { clickRates, upsideOf, upsideSignal, upsideNullWhy, NO_ESTIMATE } from '../upside.mjs';
 
 // news: the feeds the Newsroom page reads (lib/sources/news.mjs). It never sets a page's "Data through".
 export const SOURCES = ['gsc', 'bing', 'ga4', 'clarity', 'local', 'index', 'news'];
@@ -83,13 +85,15 @@ export const slugOf = (page) => String(page).split('/').pop();
 // ---------------------------------------------------------------- settings
 
 const SETTINGS_FILE = 'state/settings.json';
-const SIGNALS = ['demand', 'distance', 'importance', 'confidence', 'effort', 'ai', 'outcome'];
+const SIGNALS = ['demand', 'distance', 'importance', 'confidence', 'effort', 'ai', 'outcome', 'upside'];
 
 export function loadSettings() {
   const s = readJson(SETTINGS_FILE, {}) || {};
   const preset = Object.hasOwn(PRESETS, s.preset) ? s.preset : s.weights ? 'custom' : 'balanced';
-  // Custom weights saved before the visitor interest signal existed give it 0, so they still sum to 1.
-  const weights = preset === 'custom' ? { ...PRESETS.balanced, outcome: 0, ...s.weights } : { ...PRESETS[preset] };
+  // Custom weights saved before the visitor interest signal or the Upside signal existed give each of
+  // them 0, so they still sum to 1.
+  const weights =
+    preset === 'custom' ? { ...PRESETS.balanced, outcome: 0, upside: 0, ...s.weights } : { ...PRESETS[preset] };
   return {
     preset,
     weights,
@@ -229,8 +233,22 @@ export function buildModel() {
   } catch (e) {
     warnings.push(`The opportunity rules failed: ${String(e?.message ?? e).slice(0, 120)}`);
   }
+  // The extra clicks a month each opportunity could bring, from the site's own click rates
+  // (lib/upside.mjs). It rides on the opportunity and is the Upside signal.
+  const clickRateData = clickRates(data.gsc, { brands, range: data.gsc?.windows?.cur ?? null });
+  const realCur = data.gsc ? realQueryCounts(data.gsc, 'cur') : null;
+  const withUpside = detected.map((o) => {
+    const upside = upsideOf(o, { rates: clickRateData, real: realCur });
+    const value = upsideSignal(upside);
+    return {
+      ...o,
+      upside,
+      signals: { ...o.signals, upside: value },
+      ...(value === null ? { signalNull: { ...o.signalNull, upside: upsideNullWhy(upside) } } : {}),
+    };
+  });
   const opps = rank(
-    applySignals(detected, {
+    applySignals(withUpside, {
       targets,
       strategic: settings.strategicKeywords,
       outcomes: data.ga4?.outcomes ?? [],
@@ -287,6 +305,7 @@ export function buildModel() {
     cfg,
     opps,
     oppById: new Map(opps.map((o) => [o.id, o])),
+    clickRates: clickRateData,
     items,
     edits,
     frozen,
@@ -559,6 +578,8 @@ export function decorateOpp(model, o) {
     evidence: o.evidence ?? [],
     signals: o.signals,
     score: o.score ?? null,
+    // The extra clicks a month it could bring (lib/upside.mjs): {state, clicks, text, how}.
+    upside: o.upside ?? NO_ESTIMATE,
     status: state.status,
     item: state,
     eligibility: elig,
@@ -598,6 +619,7 @@ export function goneOpps(model) {
         evidence: [],
         signals: null,
         score: null,
+        upside: NO_ESTIMATE,
         status: it.status,
         item: itemState(model, id),
         eligibility: eligibilityOf(model, { isPageEdit: Boolean(it.meta.isPageEdit), page: it.meta.page ?? null }),

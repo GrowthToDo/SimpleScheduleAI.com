@@ -54,10 +54,27 @@ export const THRESHOLDS = {
 
 // Weight per scoring signal; each preset sums to 1. "outcome" is the interest from visitors
 // (form, calculator and template events per landing page); the older presets give it 0.05,
-// taken from demand.
+// taken from demand. "upside" is the extra clicks a month an opportunity could bring, from the
+// site's own click rates (lib/upside.mjs): every preset gives it 0.21, taken evenly (0.03 each)
+// from the other seven, so each preset keeps its own leaning.
+const UPSIDE_SHARE = 0.03;
+const withUpside = (w) => {
+  const out = {};
+  for (const [k, v] of Object.entries(w)) out[k] = Math.round((v - UPSIDE_SHARE) * 1000) / 1000;
+  out.upside = Math.round(UPSIDE_SHARE * Object.keys(w).length * 1000) / 1000;
+  return out;
+};
 export const PRESETS = {
-  balanced: { demand: 0.2, distance: 0.2, importance: 0.2, confidence: 0.15, effort: 0.1, ai: 0.1, outcome: 0.05 },
-  'money-pages-first': {
+  balanced: withUpside({
+    demand: 0.2,
+    distance: 0.2,
+    importance: 0.2,
+    confidence: 0.15,
+    effort: 0.1,
+    ai: 0.1,
+    outcome: 0.05,
+  }),
+  'money-pages-first': withUpside({
     demand: 0.1,
     distance: 0.15,
     importance: 0.4,
@@ -65,8 +82,8 @@ export const PRESETS = {
     effort: 0.1,
     ai: 0.05,
     outcome: 0.05,
-  },
-  'findability-first': {
+  }),
+  'findability-first': withUpside({
     demand: 0.3,
     distance: 0.3,
     importance: 0.1,
@@ -74,8 +91,8 @@ export const PRESETS = {
     effort: 0.1,
     ai: 0.05,
     outcome: 0.05,
-  },
-  'ai-citations-first': {
+  }),
+  'ai-citations-first': withUpside({
     demand: 0.1,
     distance: 0.1,
     importance: 0.15,
@@ -83,8 +100,8 @@ export const PRESETS = {
     effort: 0.1,
     ai: 0.35,
     outcome: 0.05,
-  },
-  'interest-signals-first': {
+  }),
+  'interest-signals-first': withUpside({
     demand: 0.15,
     distance: 0.15,
     importance: 0.15,
@@ -92,7 +109,7 @@ export const PRESETS = {
     effort: 0.1,
     ai: 0.05,
     outcome: 0.25,
-  },
+  }),
 };
 
 export const DEFAULT_MONEY_PAGES = [

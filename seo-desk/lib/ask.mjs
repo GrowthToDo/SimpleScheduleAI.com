@@ -24,7 +24,7 @@ import { dataDir, readJson, writeJson } from './store.mjs';
 import { longDate, longRange, plainError } from './text.mjs';
 import { addDays } from './dates.mjs';
 import { sourcesOf } from './api/model.mjs';
-import { weekView, resultsView } from './api/work.mjs';
+import { weekView, resultsView, upsideRanking } from './api/work.mjs';
 import { pageView, windowsFor } from './api/search.mjs';
 import { aiView, healthView } from './api/panels.mjs';
 import { navCounts, overviewView } from './api/ext/overview.mjs';
@@ -117,6 +117,8 @@ function compact(value, caps, inList = false) {
     if (k === 'eligibility' && v && typeof v === 'object') out[k] = v.text ?? null;
     else if (k === 'state' && v && typeof v === 'object') out.status = v.status ?? null;
     else if (k === 'score' && v && typeof v === 'object') out.score = compact(v.total ?? null, caps);
+    // The extra clicks a month an item could bring: the card's own sentence (lib/upside.mjs).
+    else if (k === 'upside' && v && typeof v === 'object' && 'text' in v) out.upside = v.text ?? null;
     else out[k] = compact(v, caps, inList);
   }
   return out;
@@ -174,6 +176,13 @@ export const SECTIONS = [
       ]),
   ],
   ['Sidebar counts (the number each desk page shows)', '/api/nav', (m) => navCounts(m)],
+  // The open opportunities with the most extra clicks a month they could bring, from the site's own
+  // click rates (lib/upside.mjs): the All opportunities sort "Most extra clicks".
+  [
+    'Most extra clicks (All opportunities, sorted by Most extra clicks)',
+    '/api/opportunities',
+    (m) => upsideRanking(m, 10),
+  ],
   [
     'Performance, last 28 days',
     '/api/overview?range=28',

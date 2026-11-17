@@ -803,6 +803,8 @@ export function settingsView(model) {
     presets: Object.entries(PRESETS).map(([key, weights]) => ({ key, label: PRESET_LABEL[key] ?? key, weights })),
     weights: s.weights,
     signals: SIGNAL_ORDER.map((key) => ({ key, label: SIGNAL_LABEL[key], meaning: SIGNAL_MEANING[key] })),
+    // The site's own click rates the Upside signal rests on (lib/upside.mjs clickRates).
+    clickRates: model.clickRates ?? null,
     moneyPages: s.moneyPages,
     strategicKeywords: s.strategicKeywords,
     paused: s.paused,

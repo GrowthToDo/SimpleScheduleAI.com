@@ -36,7 +36,8 @@ const CSS = `
 `;
 
 const PRESET_SENTENCE = {
-  balanced: 'Gives search demand, room to improve and page importance a fairly even say. A good place to start.',
+  balanced:
+    'Gives the extra clicks a change could bring the biggest single say, with search demand, room to improve and page importance close behind. A good place to start.',
   'money-pages-first':
     'Pushes the pages that matter most to the business to the top, even when other pages are seen more.',
   'findability-first': 'Favours what people already search for and pages close to ranking, so more people can find us.',
@@ -272,6 +273,8 @@ function slidersSection(data, ctx, save) {
         `Let go of a slider to save it. The desk shares out 100% across all ${COUNT_WORDS[data.signals.length] ?? data.signals.length}, so the others move a little.`
       )
     ),
+    // The click rates the Upside signal rests on, in the server's words.
+    data.clickRates?.text ? h('p', { class: 'small muted' }, `Upside: ${data.clickRates.text}`) : null,
     data.signals.map((s) => {
       const value = Math.round((data.weights[s.key] ?? 0) * 100);
       const out = h('output', {}, `${value}%`);

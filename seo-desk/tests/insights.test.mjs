@@ -1465,7 +1465,9 @@ test('secondary keywords: the shape, the heading and one item per search a page 
     'targetKeyword',
     'term',
     'test',
+    'upside',
   ]);
+  assert.equal(it.upside.text, 'No click estimate for this kind.');
   assert.equal(it.page, '/blog/alpha-guide');
   assert.equal(it.impressions, 80);
   assert.equal(it.position, 9);

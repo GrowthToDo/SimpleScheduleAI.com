@@ -22,8 +22,16 @@ const STATUS_VIEWS = [
   },
 ];
 
-const SORTS = [
+// Sorting only compares the numbers the server sent; the page works nothing out from them.
+export const SORTS = [
   { key: 'score', label: 'Highest score', fn: (a, b) => (b.score?.total ?? -1) - (a.score?.total ?? -1) },
+  {
+    // The extra clicks a month each could bring (the server's estimate); none last, then by score.
+    key: 'upside',
+    label: 'Most extra clicks',
+    fn: (a, b) =>
+      (b.upside?.clicks ?? -1) - (a.upside?.clicks ?? -1) || (b.score?.total ?? -1) - (a.score?.total ?? -1),
+  },
   { key: 'page', label: 'Page, A to Z', fn: (a, b) => String(a.page ?? '~').localeCompare(String(b.page ?? '~')) },
   { key: 'type', label: 'Type', fn: (a, b) => a.typeLabel.localeCompare(b.typeLabel) },
   {
@@ -428,7 +436,9 @@ async function renderList(el, ctx) {
         {},
         h('h1', { class: 'page-title' }, 'All opportunities'),
         h('p', { class: 'page-sub' }, 'Every open opportunity of every kind, in one list, ranked by score.'),
-        data.range ? h('p', { class: 'page-sub ins-note' }, `Numbers cover ${fmt.range(data.range)}.`) : null
+        data.range ? h('p', { class: 'page-sub ins-note' }, `Numbers cover ${fmt.range(data.range)}.`) : null,
+        // The click rates every extra clicks estimate rests on, in the server's words.
+        data.clickRates?.text ? h('p', { class: 'page-sub ins-note' }, data.clickRates.text) : null
       )
     ),
     data.empty

@@ -275,7 +275,7 @@ test('applySignals: priority scales importance, strategic keywords set it to 1, 
 });
 
 test('score: the new signal has a plain label, a meaning and a not enough data line', () => {
-  assert.equal(SIGNAL_ORDER.at(-1), 'outcome');
+  assert.equal(SIGNAL_ORDER.at(-2), 'outcome');
   const withValue = score(opp({ signals: { ...opp().signals, outcome: 0.6 } }), PRESETS['interest-signals-first']);
   const part = withValue.parts.find((p) => p.signal === 'outcome');
   assert.match(part.why, /^Interest from visitors: 0\.60 out of 1 \(/);
@@ -289,7 +289,7 @@ test('score: the new signal has a plain label, a meaning and a not enough data l
     PRESETS.balanced
   );
   assert.match(noted.parts.find((p) => p.signal === 'importance').why, /strategic/);
-  assert.equal(rank([opp()], PRESETS.balanced)[0].score.parts.length, 7);
+  assert.equal(rank([opp()], PRESETS.balanced)[0].score.parts.length, 8);
 });
 
 test('every preset sums to 1 and gives the new signal a weight', () => {
@@ -298,8 +298,9 @@ test('every preset sums to 1 and gives the new signal a weight', () => {
     assert.ok(Math.abs(sum - 1) < 1e-9, `${name} sums to ${sum}`);
     assert.ok(p.outcome > 0, `${name} has an outcome weight`);
   }
+  // 0.05 before the Upside signal took 0.03 from each of the other seven (lib/config.mjs).
   for (const name of ['balanced', 'money-pages-first', 'findability-first', 'ai-citations-first'])
-    assert.equal(PRESETS[name].outcome, 0.05);
+    assert.equal(PRESETS[name].outcome, 0.02);
   assert.ok(PRESETS['interest-signals-first'].outcome > PRESETS.balanced.outcome);
 });
 
@@ -679,7 +680,7 @@ test('ranking uses the target priority, strategic keywords and visitor interest'
   invalidate();
   const m = buildModel();
   assert.equal(m.targetState.priorities['alpha target'], 'low');
-  assert.ok(m.opps.every((o) => o.score.parts.length === 7));
+  assert.ok(m.opps.every((o) => o.score.parts.length === 8));
   const withPage = m.opps.filter((o) => o.page === '/blog/alpha');
   for (const o of withPage) {
     assert.equal(o.signals.outcome, 1, '7 events in 80 sessions');

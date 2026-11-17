@@ -100,6 +100,7 @@ export function normalize(item, oppById) {
       links: item.links,
       note: null,
       competitor: item.competitor ?? null,
+      upside: item.upside ?? opp?.upside ?? null,
     };
   }
   if (item.slot) {
@@ -132,6 +133,7 @@ export function normalize(item, oppById) {
       editPages: item.editPages ?? null,
       competitor: item.competitor ?? null,
       held: Boolean(item.held),
+      upside: item.upside ?? opp?.upside ?? null,
     };
   }
   return {
@@ -157,6 +159,7 @@ export function normalize(item, oppById) {
     note: item.detected === false ? 'The desk no longer finds this in the latest data.' : null,
     leaveIt: item.leaveIt ?? null,
     held: Boolean(item.held),
+    upside: item.upside ?? null,
   };
 }
 
@@ -568,6 +571,16 @@ function scoreBlock(n, ctx) {
 
 // ------------------------------------------------------------------ the card
 
+// The extra clicks a month the card could bring (the server's sentence, lib/upside.mjs), with the
+// arithmetic behind it when there is one. A card with no estimate says so in the server's words.
+export function upsideFact(n, h = el) {
+  if (!n?.upside?.text) return null;
+  return [
+    h('dt', {}, 'Extra clicks'),
+    h('dd', { class: 'upside-line' }, n.upside.text, n.upside.how ? h('span', { class: 'test' }, n.upside.how) : null),
+  ];
+}
+
 function fullCard(n, ctx, options) {
   const { h } = ctx;
   const notes = n.state?.notes ?? [];
@@ -593,6 +606,7 @@ function fullCard(n, ctx, options) {
       { class: 'facts' },
       n.why ? [h('dt', {}, 'Why this week'), h('dd', {}, n.why)] : null,
       n.measured ? [h('dt', {}, 'Evidence'), h('dd', {}, n.measured)] : null,
+      upsideFact(n, h),
       (options.facts ?? []).map(([label, node]) => [h('dt', {}, label), h('dd', {}, node)]),
       n.action
         ? [
@@ -684,6 +698,7 @@ function rowCard(n, ctx, options) {
       {},
       h('div', { class: 'item-row-title' }, n.title),
       n.measured ? h('div', { class: 'item-row-line' }, n.measured) : null,
+      n.upside?.text ? h('div', { class: 'item-row-line upside-line' }, n.upside.text) : null,
       h(
         'div',
         { class: 'item-row-meta' },

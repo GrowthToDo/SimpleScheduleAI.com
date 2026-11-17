@@ -49,6 +49,7 @@ import { slipWatchOf } from '../../week.mjs';
 import { groupTopics, tokens } from '../../topics.mjs';
 import { isBrand } from '../../../../scripts/lib/gsc-diagnose-core.mjs';
 import { COUNTS_MISSING_NOTE, countsMissingIn } from '../../query-counts.mjs';
+import { NO_ESTIMATE } from '../../upside.mjs';
 import {
   TERMS,
   SECONDARY,
@@ -371,6 +372,7 @@ function cannibalizationAll(model) {
           { frozen: model.frozen, hold: editPages.length ? elig : null }
         ),
         ...heading('competing-pages'),
+        upside: NO_ESTIMATE,
       };
     });
 }
@@ -509,6 +511,7 @@ export function gapItems(model) {
         state: itemState(model, leadOpp.id),
         oppIds: g.searches.map((x) => byQuery.get(norm(x.query))?.id).filter(Boolean),
         ...heading('unserved'),
+        upside: NO_ESTIMATE,
       };
     });
   });
@@ -1144,6 +1147,7 @@ function secondaryAll(model) {
       holdText: f.holdText,
       adopted: adopted.has(`${c.page}\u0000${norm(c.query)}`),
       ...SECONDARY,
+      upside: NO_ESTIMATE,
     };
   });
 }

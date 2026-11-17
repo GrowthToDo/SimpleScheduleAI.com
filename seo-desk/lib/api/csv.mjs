@@ -44,6 +44,8 @@ export function csvFor(model, list, params = {}) {
           ['title', (o) => o.title],
           ['status', (o) => o.status],
           ['score', (o) => o.score?.total],
+          // The estimate from the site's own click rates (lib/upside.mjs); empty when there is none.
+          ['extra_clicks_a_month_estimate', (o) => o.upside?.clicks ?? null],
           ['eligible', (o) => o.eligibility.eligible],
           ['eligible_from', (o) => o.eligibility.from],
           ['measured', (o) => o.measured],

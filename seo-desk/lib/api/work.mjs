@@ -42,6 +42,7 @@ import {
 } from '../insights.mjs';
 import { opportunityId, splitSearches } from '../rules.mjs';
 import { matchKey } from '../targets.mjs';
+import { NO_ESTIMATE } from '../upside.mjs';
 import {
   POST_PAGE_RE,
   TYPE_LABEL,
@@ -700,6 +701,7 @@ function cardOut(model, card) {
       typeLabel: cardLabel(model, card),
       ...termFields(model, card),
       score: null,
+      upside: NO_ESTIMATE,
       state: itemState(model, keyOfCard(card.id)),
       brief: competitorBrief(card),
       links: { live: null, searchConsole: null },
@@ -712,6 +714,7 @@ function cardOut(model, card) {
       typeLabel: cardLabel(model, card),
       ...termFields(model, card),
       score: null,
+      upside: NO_ESTIMATE,
       eligibility: null,
       state: itemState(model, keyOfCard(card.id)),
       brief: card.brief,
@@ -725,6 +728,8 @@ function cardOut(model, card) {
     typeLabel: cardLabel(model, card),
     ...termFields(model, card),
     score: (card.oppId ? model.oppById.get(card.oppId)?.score : null) ?? null,
+    // The extra clicks a month its opportunity could bring; any other card has no estimate.
+    upside: (card.oppId ? model.oppById.get(keyOfCard(card.oppId))?.upside : null) ?? NO_ESTIMATE,
     eligibility:
       card.eligibility === null ? null : withEligibilityText(card.eligibility ?? { eligible: true, from: null }),
     state: itemState(model, keyOfCard(card.id)),
@@ -1016,6 +1021,7 @@ export function weekView(model) {
         brief: competitorBrief(c),
         links: { live: null, searchConsole: null },
         state: itemState(model, keyOfCard(c.id)),
+        upside: NO_ESTIMATE,
       };
     }
     // When the page may be edited, in the words the page's own detail uses (pageEdits editWhen). A watched
@@ -1038,6 +1044,8 @@ export function weekView(model) {
       brief: brief(c, { frozen: model.frozen, hold: withEligibilityText(c.eligibility) }),
       links: linksFor(w.page),
       state: itemState(model, keyOfCard(c.id)),
+      // A Decay worry is its opportunity, so it carries that opportunity's click estimate.
+      upside: (w.oppId ? model.oppById.get(w.oppId)?.upside : null) ?? NO_ESTIMATE,
     };
   };
   // The cards that need the per-search counts are missing when the counts are, and a local snapshot
@@ -1226,6 +1234,39 @@ export function opportunitiesList(model, { type = '', status = '', page = '' } =
   };
 }
 
+// The open opportunities that carry a click estimate, most extra clicks a month first (lib/upside.mjs),
+// for the Monthly report and the Ask digest: {range, basis, count, items: [{title, term, page, query,
+// clicks, text}], without, note}. `count` is every open one with an estimate; `items` the first `limit`.
+export function upsideRanking(model, limit = 5) {
+  return memo(model, `upside-ranking:${limit}`, () => {
+    const open = activeOpps(model).filter((o) => OPEN_STATUSES.includes(itemState(model, o.id).status));
+    const withEstimate = open
+      .filter((o) => o.upside?.state === 'estimate')
+      .sort(
+        (a, b) =>
+          b.upside.clicks - a.upside.clicks ||
+          (b.score?.total ?? 0) - (a.score?.total ?? 0) ||
+          String(a.id).localeCompare(String(b.id))
+      );
+    const without = open.length - withEstimate.length;
+    return {
+      range: model.clickRates?.range ?? null,
+      basis: model.clickRates?.text ?? null,
+      count: withEstimate.length,
+      items: withEstimate.slice(0, limit).map((o) => ({
+        title: plain(o.title),
+        term: termOf(o.type).term,
+        page: o.page ?? null,
+        query: o.query || null,
+        clicks: o.upside.clicks,
+        text: o.upside.text,
+      })),
+      without,
+      note: `Each figure is a hypothesis: the extra clicks a month if the change works, estimated from your own click rates, and judged by the change's own test. ${count(without, 'open opportunity has', 'open opportunities have')} no estimate.`,
+    };
+  });
+}
+
 // The open opportunities: the sidebar's All opportunities count, and the Open view's All tab.
 export const openOpportunityCount = (model) => opportunitiesList(model, { status: 'open' }).items.length;
 
@@ -1279,6 +1320,8 @@ export function opportunitiesView(model, filters, { insightCounts = null } = {})
     statuses: STATUSES,
     counts,
     items,
+    // The site's own click rates the extra clicks estimates rest on (lib/upside.mjs clickRates).
+    clickRates: model.clickRates ?? null,
     // What the "Free to edit" filter (on by default) hides from these items: items on pages to leave
     // alone, and items held only because this week's one page edit is used. {page, week, text}.
     held: heldNoteOf(model, items),

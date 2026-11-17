@@ -1,7 +1,7 @@
 // Scoring for opportunities. Every point is explained, so the page can show
 // why one item sits above another. Pure functions, no clock, no files.
 
-export const SIGNAL_ORDER = ['demand', 'distance', 'importance', 'confidence', 'effort', 'ai', 'outcome'];
+export const SIGNAL_ORDER = ['demand', 'distance', 'importance', 'confidence', 'effort', 'ai', 'outcome', 'upside'];
 
 export const LABEL = {
   demand: 'Demand',
@@ -11,6 +11,7 @@ export const LABEL = {
   effort: 'Ease of the work',
   ai: 'AI answer value',
   outcome: 'Interest from visitors',
+  upside: 'Upside',
 };
 
 export const MEANING = {
@@ -22,12 +23,15 @@ export const MEANING = {
   ai: 'whether it helps us show up in AI answers',
   outcome:
     'how many visitors used a form, calculator or template after landing on the page; an interest signal, not a sale',
+  upside:
+    'how many extra clicks a month it could bring, estimated from your own click rates (log scale, 1,000 a month is the top)',
 };
 
 const round1 = (n) => Math.round(n * 10) / 10;
 
 // opp.signals values are 0..1 or null. A null signal contributes 0 points. opp.signalNotes
-// (optional, {signal: sentence}) adds one plain sentence to that signal's reason.
+// (optional, {signal: sentence}) adds one plain sentence to that signal's reason. opp.signalNull
+// (optional, {signal: words}) says why a null signal adds nothing (default "not enough data yet").
 // Parts are rounded to one decimal each and the total is their sum, so the
 // numbers on the page always add up.
 export function score(opp, weights) {
@@ -43,7 +47,7 @@ export function score(opp, weights) {
         weight,
         value: null,
         points: 0,
-        why: `${LABEL[signal]}: not enough data yet, so it adds 0 points.`,
+        why: `${LABEL[signal]}: ${opp.signalNull?.[signal] ?? 'not enough data yet'}, so it adds 0 points.`,
       };
     }
     const points = round1(weight * value * 100);

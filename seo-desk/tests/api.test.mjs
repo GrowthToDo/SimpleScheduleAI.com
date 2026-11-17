@@ -697,7 +697,8 @@ test('opportunities: counts by type and status, filters, and every item has what
     ]) {
       assert.ok(k in o, `${o.type} lacks ${k}`);
     }
-    assert.equal(o.score.parts.length, 7);
+    assert.equal(o.score.parts.length, 8);
+    assert.ok(typeof o.upside?.text === 'string' && o.upside.text, `${o.type} lacks its click estimate line`);
     assert.ok(o.range.text.includes(' to ') || o.range.start === o.range.end);
   }
   assert.equal(all.counts.byStatus.new, all.items.length);
@@ -1382,7 +1383,7 @@ test('settings: preset and weights change the ranking, thresholds change what is
   );
   assert.equal((await get('/api/settings')).json.preset, 'ai-citations-first');
   const custom = await post('/api/settings', {
-    weights: { demand: 1, distance: 0, importance: 0, confidence: 0, effort: 0, ai: 0, outcome: 0 },
+    weights: { demand: 1, distance: 0, importance: 0, confidence: 0, effort: 0, ai: 0, outcome: 0, upside: 0 },
   });
   assert.equal(custom.json.preset, 'custom');
   assert.equal(custom.json.weights.demand, 1);
@@ -1393,7 +1394,7 @@ test('settings: preset and weights change the ranking, thresholds change what is
   assert.equal(
     (
       await post('/api/settings', {
-        weights: { demand: 0, distance: 0, importance: 0, confidence: 0, effort: 0, ai: 0, outcome: 0 },
+        weights: { demand: 0, distance: 0, importance: 0, confidence: 0, effort: 0, ai: 0, outcome: 0, upside: 0 },
       })
     ).status,
     400
@@ -1860,7 +1861,8 @@ test('top five cards carry a score and a plain type label', async () => {
   const chosen = (await post('/api/week/top5', { ids })).json;
   assert.equal(chosen.top5[0].typeLabel, opp.typeLabel);
   assert.deepEqual(chosen.top5[0].score, opp.score);
-  assert.equal(chosen.top5[0].score.parts.length, 7);
+  assert.equal(chosen.top5[0].score.parts.length, 8);
+  assert.deepEqual(chosen.top5[0].upside, opp.upside);
   for (const c of w.top5) assert.ok('score' in c && typeof c.typeLabel === 'string' && c.typeLabel, c.id);
 });
 

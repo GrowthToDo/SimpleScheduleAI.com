@@ -48,6 +48,8 @@ export function runnerUpRows(items) {
       page: o.page ?? ev.page ?? null,
       position: typeof ev.position === 'number' ? ev.position : null,
       impressions: typeof ev.impressions === 'number' ? ev.impressions : null,
+      // The extra clicks a month if the page reaches the top 5 (the server's estimate), for sorting.
+      upside: Number.isFinite(o.upside?.clicks) ? o.upside.clicks : null,
       opp: o,
     };
   });
@@ -353,6 +355,7 @@ function cannibalCard(ctx, it, data) {
     item: it.state,
     links: it.shouldWin ? { live: `${SITE}${it.shouldWin}` } : null,
     brief: it.brief,
+    upside: it.upside ?? null,
   };
   // Differentiate edits the page whose angle changed, so Done asks which one; the others name the
   // pages the server says the Done edits (editPages), every one of them in the confirm.
@@ -614,6 +617,12 @@ function runnerUpPage(el, ctx, data, nav) {
       { key: 'position', label: 'Place', align: 'right', format: (v) => fmt.position(v) },
       { key: 'impressions', label: 'Times shown', align: 'right', format: (v) => fmt.num(v) },
       {
+        key: 'upside',
+        label: 'Extra clicks a month',
+        align: 'right',
+        format: (v, r) => h('span', { title: r.opp.upside?.text ?? null }, r.opp.upside?.short ?? ''),
+      },
+      {
         key: 'editWhen',
         label: 'Page edits',
         wrap: true,
@@ -662,6 +671,7 @@ function secondaryCard(ctx, it, data) {
     item: it.state,
     links: { live: `${SITE}${it.page}` },
     brief: it.brief,
+    upside: it.upside ?? null,
   };
   const adopt = async () => {
     const res = await postAction(ctx, path(it.id), { action: 'adopt' });
@@ -882,6 +892,7 @@ function gapCard(ctx, g) {
     isPageEdit: false,
     item: g.state,
     brief: g.brief,
+    upside: g.upside ?? null,
   };
   return renderCard(item, ctx, {
     priority: g.priority,

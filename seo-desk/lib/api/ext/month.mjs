@@ -29,7 +29,7 @@ import {
   fetchedText,
 } from '../../month.mjs';
 import { targetsCompare, TARGET_MOVE_PLACES } from '../search.mjs';
-import { timelineEvents, verdictRows } from '../work.mjs';
+import { timelineEvents, verdictRows, upsideRanking } from '../work.mjs';
 import { clickRateOf, CLICK_RATE_MIN_IMPRESSIONS } from '../../insights.mjs';
 import { auditInRange } from './audit.mjs';
 import { checkLinesIn } from '../../ai-visibility.mjs';
@@ -502,7 +502,23 @@ export function monthView(model, month, rows, { searchError = null } = {}) {
     targets,
     done,
     other: otherSources(model, win, comparable),
+    // The open opportunities with the most extra clicks a month they could bring, from the latest stored
+    // 28 days (not this month): the same estimate the cards show (lib/upside.mjs).
+    upside: upsideBlock(model),
     footer,
+  };
+}
+
+function upsideBlock(model) {
+  const r = upsideRanking(model, TOP_N);
+  const dates = r.range?.text
+    ? `from ${r.range.text}, the latest stored 28 days, not this month`
+    : 'from the latest stored days';
+  return {
+    ...r,
+    title: 'Most extra clicks it could bring, now',
+    sectionNote: `Open opportunities ranked by the extra clicks a month each could bring, estimated ${dates}. ${r.note}`,
+    empty: r.count ? null : 'No open opportunity has a click estimate right now.',
   };
 }
 

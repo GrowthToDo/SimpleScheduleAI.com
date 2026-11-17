@@ -108,6 +108,13 @@ export function monthText(d, fmt) {
   );
   line(`- ${d.done.auditText}`);
   line();
+  if (d.upside) {
+    line(d.upside.title);
+    line(d.upside.sectionNote);
+    if (d.upside.items?.length) for (const u of d.upside.items) line(`- ${u.title}: ${u.text}`);
+    else line(`- ${d.upside.empty}`);
+    line();
+  }
   line('Other sources');
   const o = d.other;
   line(
@@ -426,6 +433,19 @@ export async function render(el, ctx) {
       ),
       section('Target keywords', t.available ? t.note : null, targetsBody),
       section('What was done in the month', "From the desk's own records.", doneBody),
+      d.upside
+        ? section(
+            d.upside.title,
+            d.upside.sectionNote,
+            d.upside.items?.length
+              ? h(
+                  'ul',
+                  { class: 'plain-list mr-list' },
+                  d.upside.items.map((u) => h('li', {}, h('strong', {}, `${u.title}: `), u.text))
+                )
+              : h('p', { class: 'muted' }, d.upside.empty)
+          )
+        : null,
       section(
         'Other sources',
         'Each source is shown only when the desk holds its numbers for the whole month.',
