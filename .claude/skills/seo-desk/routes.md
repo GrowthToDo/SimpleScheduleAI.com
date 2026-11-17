@@ -48,17 +48,20 @@ verdict, other), `source`, `oppId`, `state`, `upside`. A verdict card reports, s
 `upside` (on every card, opportunity, worry and insight item) is the extra Google clicks a month the
 change could bring, from the site's own click rates (`lib/upside.mjs`): `{state, clicks, text, how,
 short}`. `state` is estimate (then `clicks` is whole clicks a month), zero (the estimate is zero or
-below), not-enough (under 20 times shown) or none (no estimate for this kind: cannibalization,
+below), not-enough (the card's own numbers under 20 times shown, or "Not enough clicks yet to
+estimate" when the rate it needs rests on fewer than 20 clicks) or none (no estimate for this kind: cannibalization,
 internal links, not indexed, wrong page, content gaps, strengthen a page, AI, secondary keywords,
-Newsroom, verdicts, lost demand and the other decay kinds). Quote `text` ("About 32 extra clicks a
-month if the page reaches the top 5 (an estimate from your own click rates, 18 October to 14
-November)."): it is a hypothesis, never a promise, and `how` is its arithmetic. Runner-ups read the
-median click rate at positions 3 to 5, low click rate pages the median at their position (top 5) or
-the median page rate, unanswered questions the site median, lost-rankings decay the clicks lost. The
-medians are the site's own (brand searches left out, searches shown 100 times or more, 20 when fewer
-than 20 reach 100; a rounded position with under five searches reads its pool 1 to 3, 4 to 5, 6 to 10
-or 11 to 20), from the query-only counts; `clickRates` on `/api/opportunities` and `/api/settings`
-holds them, with `text` saying what they rest on. A card on a chosen or locked week can also carry
+Newsroom, verdicts, lost demand and the other decay kinds). Quote `text` ("About 14 extra clicks a
+month if this works (an estimate from your own 90-day page click rate, 0.78%, 17 August to 14
+November)."): it is a hypothesis, never a promise, and `how` is its arithmetic. The card's own views
+and clicks are the latest 28 days; the rate is POOLED (total clicks over total views) over the 90-day
+query-only rows, else the 28-day ones. Runner-ups read the rate at positions 3 to 5, low click rate
+pages their band's rate (top 5) or the page rate, unanswered questions the rate across all searches,
+lost-rankings decay the clicks lost. Bands are 1 to 3, 4 to 5, 6 to 10 and 11 to 20 (average place
+rounded); brand searches and searches under 20 views are left out; a pool under 20 clicks has no rate.
+`clickRates` on `/api/opportunities` and `/api/settings` holds them, with `text` saying what each
+rests on. A low click rate card's `measured` compares the page with its band's own rate (or says the
+band has too few clicks yet); it never quotes an industry figure. A card on a chosen or locked week can also carry
 `weekEditDone {page, date, dateText}` (or null) when another page edit is already dated this week.
 `eligibility` (the same on every list: this week's priorities, the cards beside it, opportunities, insight cards,
 Cannibalization, Secondary keywords, the page drawer, worries; one function) is `{eligible, from, text}` plus one of: nothing (free:
@@ -113,8 +116,9 @@ cause), `topPages[]` and `topSearches[]` (top ten: `clicks, impressions, positio
 change`), `targets {available, improved, held, slipped, noData, total, rows[], note}`, `done {posts[],
 edits[], verdicts[], verdictsUnreadable, audit, auditText, postsNote, editsNote}`, `other {bing, ga4,
 ai[], bingText, ga4Text, aiText}`, `upside {title, sectionNote, items[{title, term, page, query,
-clicks, text}], count, without, basis, range, note, empty}` (the open opportunities with the most
-extra clicks a month, from the latest stored 28 days, not the month; the Ask digest carries the same
+clicks, text}], count, without, basis, range, rateRange, note, empty}` (the open opportunities with the most
+extra clicks a month: `range` is the cards' own latest 28 days, `rateRange` the days the click rates
+cover, never the month; the Ask digest carries the same
 list as "Most extra clicks"), `footer[]`, `searchError`, `pulls`. Every month-on-month `change`
 is on per-day averages (months differ in length) and null under 20 in the earlier month's total; the
 month so far is compared with the same days at the start of the month before. A month counts only
@@ -363,8 +367,10 @@ frozen `from` page would edit that page, so check `fromFrozenUntilText`.
 
 `/api/opportunities?type=&status=open&page=`: `counts {byType, byStatus}`, `items[]` as the
 cards above (the ones whose page can be edited now first; each carries `upside`), `clickRates`
-(the site's own click rates the estimates rest on: `text`, `range`, `minImpressions`, `searches`,
-`positions[]`, `bands[]`, `top5`, `site`, `pages`), `held {page, week, text}`: how many of these
+(the site's own pooled click rates the estimates rest on: `text`, `window` (90-day or 28-day),
+`range`, `cardRange`, `minImpressions`, `minClicks`, `searches`, `bands[{from, to, label, clicks,
+impressions, searches, rate}]`, `top5`, `site`, `pages {clicks, impressions, pages, rate}`; a null
+`rate` means under 20 clicks), `held {page, week, text}`: how many of these
 items are on pages to leave alone (the page's "Free to edit" filter, on by default, hides those) and
 how many only wait for next week's page edit (those stay in the list), with the line the page shows. `status=open` means new, in progress or came back: it is what the Open view and the
 sidebar count use, and `counts.byStatus.open` is its size. `status=attention` is new only. Other

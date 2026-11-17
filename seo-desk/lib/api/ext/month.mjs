@@ -512,7 +512,7 @@ export function monthView(model, month, rows, { searchError = null } = {}) {
 function upsideBlock(model) {
   const r = upsideRanking(model, TOP_N);
   const dates = r.range?.text
-    ? `from ${r.range.text}, the latest stored 28 days, not this month`
+    ? `from the cards' own numbers for ${r.range.text}, the latest stored 28 days, not this month`
     : 'from the latest stored days';
   return {
     ...r,

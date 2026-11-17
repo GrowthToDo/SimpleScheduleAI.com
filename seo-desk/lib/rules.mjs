@@ -24,6 +24,7 @@ import { tokens } from './topics.mjs';
 import { THRESHOLDS, DEFAULT_MONEY_PAGES, EXPECTED_CTR } from './config.mjs';
 import { windows as reportingWindows, daysBetween, todayIso, addDays } from './dates.mjs';
 import { longDate, longRange } from './text.mjs';
+import { clickRates, bandAt, rateText } from './upside.mjs';
 
 export const RULE_TYPES = [
   'near-page-one',
@@ -608,6 +609,18 @@ export function detectLowClickRate(snaps, cfg) {
   const pages = pageCurOf(ctx);
   if (!pages) return [];
   const range = ctx.cur;
+  // The site's own pooled click rate for the page's band (lib/upside.mjs), the only usual rate a card
+  // says. The industry table (EXPECTED_CTR) still decides which pages are flagged, and is never shown.
+  const rates = clickRates(ctx.gsc, { brands: ctx.brands, range });
+  const ownRate = (p) => {
+    const b = bandAt(rates, p.position);
+    if (!rates.available || !b) return '';
+    const totals = `${n0(b.clicks)} ${plural(b.clicks, 'click', 'clicks')} from ${n0(b.impressions)} views`;
+    const days = `the ${rates.days} days from ${rates.range.text}`;
+    return b.rate === null
+      ? ` Your own searches at ${b.label} had too few clicks over ${days} (${totals}) to give a usual click rate yet.`
+      : ` Your own searches at ${b.label} got a click rate of ${rateText(b.rate)} over ${days} (${totals}).`;
+  };
   const out = [];
   for (const p of pages.values()) {
     if (p.impressions < ctx.t.LOW_CTR_MIN_IMP || !(p.position > 0) || p.position > 15) continue;
@@ -619,7 +632,7 @@ export function detectLowClickRate(snaps, cfg) {
         page: p.page,
         query: '',
         title: `${p.page} gets fewer clicks than its position suggests`,
-        measured: `From ${rangeText(range)}, ${p.page} appeared ${n0(p.impressions)} times in search results at an average position of ${pos1(p.position)}, but only ${n0(p.clicks)} ${plural(p.clicks, 'person', 'people')} clicked, a click rate of ${pct1(p.ctr)}. Pages at that position usually get about ${pct1(expected)}.`,
+        measured: `From ${rangeText(range)}, ${p.page} appeared ${n0(p.impressions)} times in search results at an average position of ${pos1(p.position)}, but only ${n0(p.clicks)} ${plural(p.clicks, 'person', 'people')} clicked, a click rate of ${pct1(p.ctr)}.${ownRate(p)}`,
         action: `Rewrite the title and the short description shown in search results for ${p.page} so they promise what the page delivers.`,
         isPageEdit: true,
         range,

@@ -1250,7 +1250,9 @@ export function upsideRanking(model, limit = 5) {
       );
     const without = open.length - withEstimate.length;
     return {
-      range: model.clickRates?.range ?? null,
+      // The cards' own numbers cover `range` (the latest stored 28 days); the rates cover `rateRange`.
+      range: model.clickRates?.cardRange ?? null,
+      rateRange: model.clickRates?.range ?? null,
       basis: model.clickRates?.text ?? null,
       count: withEstimate.length,
       items: withEstimate.slice(0, limit).map((o) => ({
@@ -1262,7 +1264,7 @@ export function upsideRanking(model, limit = 5) {
         text: o.upside.text,
       })),
       without,
-      note: `Each figure is a hypothesis: the extra clicks a month if the change works, estimated from your own click rates, and judged by the change's own test. ${count(without, 'open opportunity has', 'open opportunities have')} no estimate.`,
+      note: `Each figure is a hypothesis: the extra clicks a month if the change works, estimated from your own ${model.clickRates?.window ? `${model.clickRates.window} ` : ''}click rates (total clicks over total views), and judged by the change's own test. ${count(without, 'open opportunity has', 'open opportunities have')} no estimate.`,
     };
   });
 }
