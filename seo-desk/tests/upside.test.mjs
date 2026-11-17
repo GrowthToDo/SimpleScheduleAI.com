@@ -126,6 +126,17 @@ test('a rate already at or above the median gives no estimate', () => {
   assert.equal(u.state, 'zero');
   assert.equal(u.clicks, null);
   assert.match(u.text, /^No click estimate/);
+  assert.equal(u.how, null, 'no negative sum is shown');
+  const kept = U.upsideOf(
+    {
+      type: 'slipping',
+      dropKind: 'lost-rankings',
+      range: { start: '2026-09-03', end: '2026-10-28' },
+      evidence: [{ prev: { clicks: 5, impressions: 300 }, cur: { clicks: 6, impressions: 100 } }],
+    },
+    { rates: rates(), real: new Map() }
+  );
+  assert.equal(kept.text, 'No click estimate: the page did not lose clicks.');
 });
 
 test('low click rate: top 5 reads the median at its position, below that the median page rate', () => {

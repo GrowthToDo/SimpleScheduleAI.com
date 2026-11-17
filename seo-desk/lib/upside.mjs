@@ -163,8 +163,8 @@ const key = (q) =>
     .toLowerCase();
 
 // gain: the extra clicks in `days` days; how: the arithmetic in words. A gain that rounds to zero or
-// below a month is no estimate.
-function monthly(gain, days, { lead, source, range }, how) {
+// below a month is no estimate, and shows no number (never a negative one).
+function monthly(gain, days, { lead, source, range, zero = null }, how) {
   const month = (gain * 30) / days;
   const clicks = Math.round(month);
   const howText = `${how} Over a month: ${gain.toFixed(1)} x 30 / ${days} = ${month.toFixed(1)}.`;
@@ -172,8 +172,8 @@ function monthly(gain, days, { lead, source, range }, how) {
     return {
       state: 'zero',
       clicks: null,
-      text: 'No click estimate: at your own click rates this would not add clicks.',
-      how: howText,
+      text: zero ?? 'No click estimate: at your own click rates this would not add clicks.',
+      how: null,
       short: 'None',
     };
   return estimate(
@@ -262,6 +262,7 @@ export function upsideOf(opp, { rates, real } = {}) {
       {
         lead: 'if this works',
         source: 'the clicks the page lost',
+        zero: 'No click estimate: the page did not lose clicks.',
         range: opp.range?.start ? longRange(opp.range.start, opp.range.end) : ratesRange,
       },
       `The page had ${n0(before.clicks || 0)} clicks in the earlier ${days} days and ${n0(after.clicks || 0)} in the latest, ${n0(lost)} fewer.`

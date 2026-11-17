@@ -70,6 +70,7 @@ const SIGNAL_NAMES = {
   effort: 'How cheap the fix is',
   ai: 'Value for AI answers',
   outcome: 'Interest from visitors',
+  upside: 'Extra clicks it could bring',
 };
 
 const FIELD_NAMES = {
