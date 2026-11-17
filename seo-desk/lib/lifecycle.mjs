@@ -5,8 +5,30 @@
 import { readJson, writeJson } from './store.mjs';
 import { addDays, daysBetween, mondayOf } from './dates.mjs';
 import { longDate } from './text.mjs';
+import { planRowSize } from './sources/plan-parser.mjs';
 
 export const FREEZE_DAYS = 28;
+
+// ---------------------------------------------------------------- the size of a page edit
+
+// Each week allows one big page change and one small one, on different pages (founder, 2026-11-17).
+// Small: a title, meta description, heading, a single line or a single link. Big: a new or rewritten
+// section. The one sentence every page and the Settings page say it in.
+export const EDIT_SIZES = ['big', 'small'];
+export const EDIT_RULE_TEXT =
+  'Each week allows one big page change (a new or rewritten section) and one small one (a title, meta description, heading, a single line or a single link), on different pages, and no page is changed again within 28 days.';
+// The opportunity types whose fix is a title or meta description change: a small change.
+export const SMALL_EDIT_TYPES = ['low-click-rate'];
+const isSize = (s) => EDIT_SIZES.includes(s);
+
+// The size of a page edit: its own `size` when it has one (the founder's pick at Done, a plan row's
+// tag), else 'small' for an opportunity whose fix is a title or description, else 'big'.
+export function editSizeOf(x) {
+  if (isSize(x?.size)) return x.size;
+  return SMALL_EDIT_TYPES.includes(x?.type) ? 'small' : 'big';
+}
+
+export { planRowSize };
 export const CAME_BACK_AFTER_DAYS = 30;
 const DEFAULT_SNOOZE_DAYS = 7;
 const ACTIONS = ['start', 'done', 'snooze', 'ignore', 'reopen', 'note', 'pin', 'unpin'];
@@ -22,7 +44,8 @@ export function newItem(today) {
 // For 'done', pass {page, isPageEdit} from the opportunity so the freeze still
 // holds after the opportunity stops being detected. `pages` lists every page one Done edits when
 // there is more than one (a split search folded into the page that should win); each is frozen.
-export function transition(item, action, { today, until, reason, text, page, pages, isPageEdit } = {}) {
+// `size` ('big' or 'small') is saved with a Done page edit, so the week's two slots can read it.
+export function transition(item, action, { today, until, reason, text, page, pages, isPageEdit, size } = {}) {
   if (!ACTIONS.includes(action)) throw new Error(`unknown action: ${action}`);
   const cur = { ...newItem(today), ...(item || {}), notes: [...(item?.notes || [])] };
 
@@ -44,6 +67,7 @@ export function transition(item, action, { today, until, reason, text, page, pag
         ...(page ? { page } : {}),
         ...(Array.isArray(pages) ? { pages: [...pages] } : {}),
         ...(isPageEdit !== undefined ? { isPageEdit: Boolean(isPageEdit) } : {}),
+        ...(isPageEdit && isSize(size) ? { size } : {}),
       });
     case 'snooze': {
       const when = until ?? addDays(today, DEFAULT_SNOOZE_DAYS);
@@ -119,9 +143,13 @@ function lastGitEditOn(edits, page, day) {
 // never count.
 // planTicks: {planTickKey: 'YYYY-MM-DD'} from state/plan-ticks.json. planSeenOn: the day the
 // plan was read, used for a ticked row the desk has no record of yet.
+// Each edit carries its `size` ('big' or 'small'): a Done saves the size the founder picked (else its
+// card's size: a plan row's tag, or editSizeOf for an opportunity); a plan row has its tag; an "Edit:"
+// note is big unless the line says small.
 export function deliberateEdits({ items = {}, opps = [], plan = null, edits = [], planTicks = {}, planSeenOn = null }) {
   const out = [];
   const oppById = new Map(opps.map((o) => [o.id, o]));
+  const rowOf = (page) => (plan?.improve ?? []).find((r) => r.page === page) ?? null;
   for (const [id, item] of Object.entries(items)) {
     if (item.status !== 'done') continue;
     const o = oppById.get(id);
@@ -130,24 +158,33 @@ export function deliberateEdits({ items = {}, opps = [], plan = null, edits = []
     const pages = Array.isArray(item.pages) ? item.pages : [item.page ?? o?.page];
     const isEdit = item.isPageEdit ?? o?.isPageEdit;
     const date = day(item.doneAt ?? item.since);
+    const planRow = id.startsWith('plan-improve-') ? rowOf(id.slice('plan-improve-'.length)) : null;
+    const size = isSize(item.size)
+      ? item.size
+      : planRow
+        ? planRowSize(planRow)
+        : editSizeOf({ type: o?.type ?? item.meta?.type });
     for (const page of pages) {
       if (isEdit && page && date) {
-        out.push({ page, date, why: `You marked this page's change done on ${longDate(date)}.` });
+        out.push({ page, date, size, why: `You marked this page's change done on ${longDate(date)}.` });
       }
     }
   }
   for (const row of plan?.improve ?? []) {
     if (!row.done) continue;
+    const size = planRowSize(row);
     if (row.doneDate) {
       out.push({
         page: row.page,
         date: row.doneDate,
+        size,
         why: `The plan says this page was improved on ${longDate(row.doneDate)}.`,
       });
     } else if (row.judgeFrom) {
       out.push({
         page: row.page,
         date: addDays(row.judgeFrom, -(FREEZE_DAYS + JUDGE_LAG_DAYS)),
+        size,
         why: `The plan says this change is live and is judged from ${longDate(row.judgeFrom)}.`,
       });
     } else {
@@ -157,12 +194,14 @@ export function deliberateEdits({ items = {}, opps = [], plan = null, edits = []
         out.push({
           page: row.page,
           date: git,
+          size,
           why: `The plan row is ticked with no date. The page's latest git edit before the desk saw the tick on ${longDate(seen)} is on ${longDate(git)}.`,
         });
       } else if (seen) {
         out.push({
           page: row.page,
           date: seen,
+          size,
           why: `The plan row is ticked with no date, and the desk first saw it ticked on ${longDate(seen)}.`,
         });
       }
@@ -170,21 +209,28 @@ export function deliberateEdits({ items = {}, opps = [], plan = null, edits = []
   }
   for (const e of edits) {
     if (e.kind === 'manual' && EDIT_NOTE.test(String(e.subject ?? ''))) {
-      out.push({ page: e.page, date: e.date, why: `A change was logged by hand on ${longDate(e.date)}.` });
+      out.push({
+        page: e.page,
+        date: e.date,
+        size: e.size === 'small' ? 'small' : 'big',
+        why: `A change was logged by hand on ${longDate(e.date)}.`,
+      });
     }
   }
   return out;
 }
 
-// Pages that may not be edited again, as Map<page, {until, since, why}>: each deliberate
-// edit freezes its page for 28 days; the latest end date wins.
+// Pages that may not be edited again, as Map<page, {until, since, why, size}>: each deliberate
+// edit freezes its page for 28 days; the latest end date wins (on the same day, a big edit wins).
 export function frozenPages({ items = {}, opps = [], plan = null, edits = [], planTicks, planSeenOn, today }) {
   const out = new Map();
-  for (const { page, date, why } of deliberateEdits({ items, opps, plan, edits, planTicks, planSeenOn })) {
+  for (const { page, date, why, size } of deliberateEdits({ items, opps, plan, edits, planTicks, planSeenOn })) {
     const until = addDays(date, FREEZE_DAYS);
     if (!page || !date || !(until > today)) continue;
     const have = out.get(page);
-    if (!have || until > have.until) out.set(page, { until, since: date, why });
+    const s = size === 'small' ? 'small' : 'big';
+    if (!have || until > have.until || (until === have.until && s === 'big' && have.size !== 'big'))
+      out.set(page, { until, since: date, why, size: s });
   }
   return out;
 }
@@ -268,25 +314,46 @@ export function touchedText(touched) {
 
 // ---------------------------------------------------------------- eligibility
 
-// The deliberate page edit dated inside the week of `today` (Monday to Sunday), or null.
-// frozen: Map<page, {since, until}>; since is the date of the page's latest deliberate edit.
-export function editThisWeek(frozen, today) {
+// This week's two page change slots (Monday to Sunday): {big, small}, each the edit that used it,
+// {page, since, until, size, found}, or null while it is free. found: 'desk' for a deliberate edit (a
+// Done, a plan row, an "Edit:" note; frozen: Map<page, {since, until, size}>, since is the date of the
+// page's latest deliberate edit, a missing size is big) or 'git' for an edit found in git that the desk
+// did not record: one commit of RECENT_EDIT_MIN_LINES lines or more uses the big slot, a smaller one
+// uses none (recent: Map<page, {edit}> from recentEdits). When two edits of one size land in a week, the
+// latest names the slot.
+export function editThisWeek(frozen, today, { recent = null } = {}) {
   const monday = mondayOf(today);
   const sunday = addDays(monday, 6);
-  let found = null;
-  for (const [page, f] of frozen ?? []) {
-    if (f.since >= monday && f.since <= sunday && (!found || f.since > found.since)) found = { page, ...f };
+  const inWeek = (d) => Boolean(d) && d >= monday && d <= sunday;
+  const out = { big: null, small: null };
+  const take = (e) => {
+    const have = out[e.size];
+    if (!have || e.since > have.since) out[e.size] = e;
+  };
+  for (const [page, f] of frozen ?? [])
+    if (inWeek(f.since))
+      take({ page, since: f.since, until: f.until, size: f.size === 'small' ? 'small' : 'big', found: 'desk' });
+  for (const [page, r] of recent ?? []) {
+    const g = r?.edit;
+    if (!g || !inWeek(g.date)) continue;
+    const f = frozen?.get(page);
+    if (f && f.since >= g.date) continue;
+    take({ page, since: g.date, until: g.until, size: 'big', found: 'git' });
   }
-  return found;
+  return out;
 }
 
-// Whether a card may be this week's live page edit. The one function every list uses (the five,
-// the cards beside it, All opportunities, the insight pages built from opportunities, the worries):
+// The first day of next week, when both slots are free again.
+export const nextMonday = (today) => addDays(mondayOf(today), 7);
+
+// Whether a card may be one of this week's live page changes. The one function every list uses (the
+// five, the cards beside it, All opportunities, the insight pages built from opportunities, the worries):
 //   frozen           the page is inside the 28 days of a deliberate edit: {eligible: false, from}
 //   recently edited  git shows a commit of 15 or more lines in the last 28 days that the freeze does
 //                    not know (`recent`, from recentEdits): {eligible: false, from, recentEdit}
-//   week used        `week` is true and this week's one page edit is already made on another page:
-//                    {eligible: false, from: next Monday, weekEdit: {page, date}}
+//   slot used        `week` is true and this week's slot of the card's size (editSizeOf: big or small)
+//                    is already used on another page:
+//                    {eligible: false, from: next Monday, weekEdit: {page, date, size}}
 //   eligible         {eligible: true, from: null}, plus `touched` when git shows smaller edits
 // Only a live page edit is held back. Without `recent` and `week` this is the freeze alone.
 export function eligibility(opp, frozen, today, { recent = null, week = false } = {}) {
@@ -298,21 +365,22 @@ export function eligibility(opp, frozen, today, { recent = null, week = false } 
     const { date, lines, until } = r.edit;
     return { eligible: false, from: until, recentEdit: { page: opp.page, date, lines, until } };
   }
-  const w = week ? editThisWeek(frozen, today) : null;
+  const size = editSizeOf(opp);
+  const w = week ? editThisWeek(frozen, today, { recent })[size] : null;
   if (w && w.page !== opp.page) {
-    return { eligible: false, from: addDays(mondayOf(today), 7), weekEdit: { page: w.page, date: w.since } };
+    return { eligible: false, from: nextMonday(today), weekEdit: { page: w.page, date: w.since, size } };
   }
   return r?.touched?.length ? { eligible: true, from: null, touched: r.touched } : { eligible: true, from: null };
 }
 
 // When a page may be edited, in the words every chip, worry and page detail uses: a page held by its
 // own edit (the freeze, or an edit found in git) reads "Leave it until <date>"; a page held only because
-// this week's one page edit is used reads "Can be edited from <next Monday>"; a free page reads "Can be
-// edited now".
+// this week's slot of its size is used reads "Next big page change from <next Monday>" (or small); a free
+// page reads "Can be edited now".
 export function editWhenText(e) {
   if (!e) return null;
   if (e.eligible) return 'Can be edited now';
-  if (e.weekEdit) return `Can be edited from ${longDate(e.from)}`;
+  if (e.weekEdit) return `Next ${e.weekEdit.size === 'small' ? 'small' : 'big'} page change from ${longDate(e.from)}`;
   return `Leave it until ${longDate(e.from)}`;
 }
 

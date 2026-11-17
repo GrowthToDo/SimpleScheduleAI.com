@@ -228,7 +228,7 @@ test('the system text carries every rule of the Claude skill', () => {
   assert.match(s, /A recommendation is a hypothesis/);
   assert.match(s, /how it would be tested/);
   assert.match(s, /never sales/);
-  assert.match(s, /one-edit-a-week rule/);
+  assert.match(s, /weekly page change rule: one big page change/);
   assert.match(s, /frozen page/);
   assert.match(s, /stale or failed/);
   assert.match(s, /no em dashes and no en dashes/);

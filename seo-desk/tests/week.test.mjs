@@ -344,7 +344,7 @@ const rankedOpp = (id, total, over = {}) => ({
 
 const frozenMap = new Map([['/blog/frozen-row', { until: '2026-12-01', since: '2026-11-03', why: 'Logged by hand' }]]);
 
-test('proposeTop5 follows the recipe and never returns two page edit cards', () => {
+test('proposeTop5 follows the recipe and never returns two page edit cards of one size', () => {
   const ranked = [
     rankedOpp('edit1', 90),
     rankedOpp('edit2', 80),
@@ -380,7 +380,8 @@ test('proposeTop5 follows the recipe and never returns two page edit cards', () 
   assert.equal(cards[2].isPageEdit, true);
   assert.equal(cards[3].source, 'verdict');
   assert.equal(cards[4].oppId, 'link1');
-  assert.equal(cards.filter((c) => c.isPageEdit).length, 1);
+  assert.equal(cards.filter((c) => c.isPageEdit).length, 1, 'no small candidate here, so one big change');
+  assert.equal(cards[2].size, 'big', 'an untagged plan row is a big change');
   assert.equal(new Set(cards.map((c) => c.id)).size, cards.length, 'ids are unique');
   for (const c of cards) {
     // A verdict card reports, so it says it carries no Hypothesis chip (hypothesis: false).
@@ -401,6 +402,8 @@ test('proposeTop5 follows the recipe and never returns two page edit cards', () 
         'test',
         'title',
         'why',
+        // A page change says which of the week's two slots it fills.
+        ...(c.isPageEdit ? ['size'] : []),
       ].sort()
     );
     assert.equal(/[–—]/.test(JSON.stringify(c)), false);
@@ -760,7 +763,7 @@ test('brief has the page, evidence, action, test and the repo rules, with no das
   assert.match(text, /28 day before and after/);
   assert.match(text, /\.claude\/skills\/seo-aeo-simplescheduleai\.md/);
   assert.match(text, /npm run publish-gate nurse-staffing-models -- --status/);
-  assert.match(text, /one live page edit a week/i);
+  assert.match(text, /One big page change \(a new or rewritten section\) and one small one/);
   assert.match(text, /28 days/);
   assert.match(text, /write "Done YYYY-MM-DD" in the row's last cell and tick it/);
   assert.match(text, /npm run change-log/);
@@ -1000,7 +1003,7 @@ test('blockedOnYou lists founder blocked open work, and the fifth card falls bac
 
 // ---------------------------------------------------------------- final fix wave
 
-test('once a page edit is dated inside this week, no page edit card is offered and editStatus says so', () => {
+test('once a big page change is dated inside this week, no big card is offered and editStatus says so', () => {
   // Monday 9 November is inside the week of 9 November (today is the 10th).
   const frozen = new Map([['/blog/edited', { until: '2026-12-07', since: '2026-11-09', why: 'x' }]]);
   const worryList = [
@@ -1023,9 +1026,9 @@ test('once a page edit is dated inside this week, no page edit card is offered a
   );
   assert.equal(
     week.editStatusOf(frozen, TODAY),
-    "This week's page edit is used (/blog/edited, 9 November). The next one can go in from 16 November."
+    "This week's big change is used (/blog/edited, 9 November); the small one is still open."
   );
-  assert.equal(cards.filter((c) => c.isPageEdit).length, 0, 'no page edit card at all');
+  assert.equal(cards.filter((c) => c.isPageEdit).length, 0, 'no small candidate either, so no page edit card');
   assert.equal(
     cards.some((c) => c.slot === 'worry'),
     false,

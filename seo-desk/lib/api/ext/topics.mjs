@@ -164,8 +164,8 @@ function keywordsFor(model, page, opps, rows, targets) {
 }
 
 // Whether the page a link would be added on may be changed yet, from the one eligibility function
-// (model.mjs holdFields: its freeze or a git edit; a link is a routine change, so the week's one page
-// edit does not hold it). Changing it inside those 28 days makes its verdict overlap with this change.
+// (model.mjs holdFields: its freeze or a git edit; a link is a routine change, so the week's page changes
+// do not hold it). Changing it inside those 28 days makes its verdict overlap with this change.
 function frozenFrom(model, from) {
   const h = holdFields(model, from);
   return { fromFrozenUntil: h.frozenUntil, fromFrozenUntilText: h.frozenUntilText, fromHoldText: h.holdText };

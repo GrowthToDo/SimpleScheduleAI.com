@@ -632,7 +632,7 @@ export function pageView(model, path) {
     smallChange: pe.lastSmall && (!pe.last || pe.lastSmall.date > pe.last) ? smallChangeText(pe.lastSmall) : null,
     editWhen: pe.editWhen,
     // Whether the page may be edited now, from the one eligibility function (the freeze, a git edit,
-    // this week's page edit already made), with its words.
+    // this week's big page change already made), with its words.
     eligibility: pageHold(model, page),
     isPost: POST_PAGE_RE.test(page),
     links: linksFor(page),

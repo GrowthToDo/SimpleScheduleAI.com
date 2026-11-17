@@ -699,7 +699,7 @@ function secondaryCard(ctx, it, data) {
 }
 
 // Searches marked done or dismissed, newest first, folded away like Left alone, so a mistaken Done
-// (which froze the page and used the week's one edit) can be found and reopened.
+// (which froze the page and used one of the week's page changes) can be found and reopened.
 function finishedSection(ctx, list) {
   const { h, fmt } = ctx;
   if (!list?.length) return null;

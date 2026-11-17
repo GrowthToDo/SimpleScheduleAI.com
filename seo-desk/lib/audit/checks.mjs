@@ -228,8 +228,8 @@ const onPage = (fn) => (p, site) => (p.hasDoc ? fn(p, p.doc, site) : false);
 // ---------------------------------------------------------------- the checks
 
 // Checks whose fix changes what a reader or Google reads on a live page: its words, title,
-// description, headings, image descriptions or how much it carries. Doing one counts as that
-// week's one page edit. Every other fix is a site setting, a redirect, the sitemap, a template, a
+// description, headings, image descriptions or how much it carries. Doing one uses one of that
+// week's two page changes (a title or description fix the small one, more text the big one). Every other fix is a site setting, a redirect, the sitemap, a template, a
 // server header, or a routine link or file address swap that leaves the words alone (routine
 // edits do not freeze a page; see lifecycle.mjs).
 const PAGE_EDIT_CHECKS = new Set([
@@ -308,8 +308,9 @@ export const severityOf = (id, saved) => CHECKS.find((x) => x.id === id)?.severi
 // which were written before issues carried the mark.
 export const editsPageOf = (id) => PAGE_EDIT_CHECKS.has(id);
 
-// The last step of every fix says whether it uses up the week's one page edit.
-const EDIT_NOTE = "This counts as that week's one page edit.";
+// The last step of every fix says whether it uses one of the week's page changes.
+const EDIT_NOTE =
+  "This uses one of that week's page changes: the small one for a title or description, the big one for more text.";
 const NO_EDIT_NOTE = 'This does not count as a page edit.';
 const SETUP_NOTE = "This is a change to the site's setup, not to a page, so it is safe to hand to Claude to make.";
 
@@ -340,7 +341,7 @@ function def(id, group, severity, name, what, why, fix, test, scope = 'page', si
 }
 
 // How big each fix is, how much it may help, and what to do, in plain steps. The first step says
-// where to look. def() adds the note about the week's one page edit to the last step.
+// where to look. def() adds the note about the week's page changes to the last step.
 // effort: 'quick win' (minutes), 'moderate' (an hour or two, or a template change), 'larger job'.
 // impact is a hypothesis about how much fixing it may help, not a measured gain.
 const GUIDE = {

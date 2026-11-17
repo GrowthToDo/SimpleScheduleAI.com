@@ -297,11 +297,11 @@ test("M5: a run made before a check changed says so once at the top, and its fin
   const title = a.issues.find((i) => i.id === 'title-long');
   assert.equal(title.olderRule, true);
   assert.equal(title.editsPage, false);
-  assert.ok(!/one page edit/.test(JSON.stringify(title)));
+  assert.ok(!/one page edit|one of that week's page changes/.test(JSON.stringify(title)));
   assert.match(title.steps.at(-1), /Run the audit again before acting on it/);
   const heading = a.issues.find((i) => i.id === 'heading-skip');
   assert.equal(heading.olderRule, false);
-  assert.match(heading.steps.at(-1), /This counts as that week's one page edit\./);
+  assert.match(heading.steps.at(-1), /This uses one of that week's page changes: /);
   // A run saved by today's rules says nothing, whatever its date.
   const fresh = view(model, { ...run, rulesVersion: 2 }).audit;
   assert.equal(fresh.olderRules, 0);

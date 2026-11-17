@@ -29,6 +29,7 @@ import { pagesTable } from './search.mjs';
 import { outcomeSignal, OUTCOME_MIN_SESSIONS } from '../targets.mjs';
 import { isInterestEvent } from '../sources/ga4.mjs';
 import { pct, sumRange } from './fmt.mjs';
+import { EDIT_RULE_TEXT } from '../lifecycle.mjs';
 import { parseHygiene } from './site-check.mjs';
 import { AI_CRAWLERS } from '../robots.mjs';
 import { MIN_CHECKS } from '../ai-visibility.mjs';
@@ -811,6 +812,8 @@ export function settingsView(model) {
     weeklyAudit: s.weeklyAudit,
     showGoogleUpdates: s.showGoogleUpdates,
     planSize: s.planSize,
+    // The weekly page change rule in one sentence (lifecycle EDIT_RULE_TEXT). It is fixed, not a setting.
+    editRule: EDIT_RULE_TEXT,
     thresholds: Object.entries(THRESHOLDS).map(([key, def]) => ({
       key,
       label: THRESHOLD_LABEL[key] ?? key,

@@ -1,8 +1,9 @@
-// What happens after an action is sent: the one-edit-a-week checks on Done. No DOM and no import of
+// What happens after an action is sent: the weekly page change checks on Done (one big and one small
+// page change a week, and the 28 day freeze). No DOM and no import of
 // app.js, so node tests run it with a fake api and a fake confirm box.
 //
 //   postAction({api, confirmBox}, path, body)   sends one action. When Done is refused under the
-//       one edit a week rule (a 409 that carries `frozen`, `frozenPages`, `recentlyEdited` or
+//       weekly page change rule (a 409 that carries `frozen`, `frozenPages`, `recentlyEdited` or
 //       `secondThisWeek`), it asks
 //       once per reason, plainly, then sends the same body again with override. Any other refusal
 //       (a 409 such as "this item is finished, press Reopen first", or any other error) is thrown as
@@ -10,13 +11,15 @@
 //       null when the founder backed out.
 //   frozenBox(pages)                             the confirm for one or more frozen pages
 //   recentBox(pages)                             the confirm for pages git shows edited lately
-//   secondEditText(w, ask)                       the words when this week's page edit is made
+//   secondEditText(w, ask)                       the words when this week's change of that size is made
 //   confirmSecondEdit(confirmBox, w, opts)       asks that question once
 //
 // Every page path and date comes from the server's reply and goes in as text.
 
+// w: {page, dateText, size}; size is 'big' or 'small' (an older reply without one means big).
+const sizeOf = (w) => (w?.size === 'small' ? 'small' : 'big');
 export const secondEditText = (w, ask = 'Mark this one done anyway?') =>
-  `You already made this week's page edit on ${w.dateText}. The rule is one a week. ${ask}`;
+  `You already made this week's ${sizeOf(w)} page change on ${w.dateText}. The rule is one big and one small page change a week. ${ask}`;
 
 export function confirmSecondEdit(
   confirmBox,
@@ -24,7 +27,7 @@ export function confirmSecondEdit(
   { ask = 'Mark this one done anyway?', confirmLabel = 'Mark it done anyway' } = {}
 ) {
   return confirmBox({
-    title: "This week's page edit is already made",
+    title: `This week's ${sizeOf(w)} page change is already made`,
     body: `${secondEditText(w, ask)}\n\n${w.page ? `That edit was on ${w.page}. ` : ''}Two edits in one week make both verdicts harder to read.`,
     confirmLabel,
     danger: true,
@@ -59,7 +62,7 @@ export function recentBox(pages) {
   };
 }
 
-// The one-edit-a-week fields of a refusal, or null when it carries none.
+// The weekly page change fields of a refusal, or null when it carries none.
 export function editRefusal(err) {
   if (err?.status !== 409) return null;
   const d = err.data ?? {};

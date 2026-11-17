@@ -1509,7 +1509,7 @@ test('GET /api/audit: each issue says whether its fix edits the page, page rows 
   assert.equal(r.status, 200);
   assert.equal(
     r.json.ruleLine,
-    "Fixing a title or the text of a page counts as that week's one page edit. Site-wide and server fixes do not."
+    "Fixing a page's title or description uses that week's small page change, and more text on a page uses the big one. Site-wide and server fixes use neither."
   );
   const long = r.json.audit.issues.find((i) => i.id === 'title-long');
   const down = r.json.audit.issues.find((i) => i.id === 'status-not-200');
@@ -1632,10 +1632,15 @@ test('title-long and description-long stay at the lowest level, and the levels f
     );
 });
 
-test("the last step of every fix says whether it counts as the week's page edit, and the first says where to look", () => {
+test("the last step of every fix says whether it uses one of the week's page changes, and the first says where to look", () => {
   for (const c of CHECKS) {
     const last = c.steps[c.steps.length - 1];
-    if (c.editsPage) assert.match(last, /counts as that week's one page edit\.$/, c.id);
+    if (c.editsPage)
+      assert.match(
+        last,
+        /This uses one of that week's page changes: the small one for a title or description, the big one for more text\.$/,
+        c.id
+      );
     else assert.match(last, /does not count as a page edit\./, c.id);
     // a setup change (a host, redirect, header or template fix) says it is safe to hand to Claude
     if (c.setup) {
@@ -1647,7 +1652,11 @@ test("the last step of every fix says whether it counts as the week's page edit,
       );
     } else assert.doesNotMatch(last, /safe to hand to Claude/, c.id);
     assert.match(c.steps[0], /^(Open|Look|Type|Check)/, `${c.id} first step`);
-    assert.equal(c.steps.slice(0, -1).filter((t) => /page edit/.test(t)).length, 0, `${c.id} says it only once`);
+    assert.equal(
+      c.steps.slice(0, -1).filter((t) => /page edit|page changes/.test(t)).length,
+      0,
+      `${c.id} says it only once`
+    );
   }
 });
 
@@ -1660,7 +1669,7 @@ test('an issue from a run carries effort, impact and steps', async () => {
   assert.equal(i.impact, 'high');
   assert.equal(i.severity, 'high');
   assert.ok(i.steps.length >= 2);
-  assert.match(i.steps.at(-1), /counts as that week's one page edit/);
+  assert.match(i.steps.at(-1), /uses one of that week's page changes/);
 });
 
 test('a saved run takes its severity from the check as it is today, and old names only for an unknown id', () => {

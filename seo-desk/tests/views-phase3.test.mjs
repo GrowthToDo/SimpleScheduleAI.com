@@ -239,7 +239,8 @@ test('postAction: a second edit this week asks once; backing out sends nothing m
   const c = asked();
   assert.equal(await postAct.postAction({ api, confirmBox: c.no }, '/p', { action: 'done', page: '/x' }), null);
   assert.equal(api.calls.length, 1);
-  assert.match(c.boxes[0].body, /already made this week's page edit on 9 November/);
+  assert.match(c.boxes[0].body, /already made this week's big page change on 9 November/);
+  assert.equal(c.boxes[0].title, "This week's big page change is already made");
   // Both reasons: two questions, then the override keeps the rest of the body.
   const both = fakeApi([
     refusal(409, 'held', {

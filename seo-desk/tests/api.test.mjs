@@ -567,19 +567,27 @@ test('the week: the five follow the recipe, and every card carries a brief and l
   useFull();
   const w = (await get('/api/week')).json;
   // Broken things first (two at most: the Bing crawl problem and the competitor change), then the next
-  // post, the page edit and the ready verdict (package 5). Each says why it is there.
+  // post, then the week's big and small page changes (the ready verdict comes after them, past the
+  // five). Each says why it is there.
   assert.equal(w.top5.length, 5);
   assert.deepEqual(
     w.top5.map((c) => c.slot),
-    ['broken', 'broken', 'new-post', 'page-edit', 'verdict']
+    ['broken', 'broken', 'new-post', 'page-edit', 'page-edit']
   );
   assert.match(w.top5[0].id, /^crawl-issue:/);
   assert.match(w.top5[1].id, /^competitor-change:/);
   assert.equal(w.top5[2].title, 'Fixture post title');
   assert.equal(w.top5[3].page, '/critical-access-hospital-scheduling');
+  assert.deepEqual(
+    w.top5.slice(3).map((c) => c.size),
+    ['big', 'small']
+  );
+  assert.match(w.top5[3].why, /^It is this week's big page change: /);
+  assert.match(w.top5[4].why, /^It is this week's small page change: /);
+  assert.notEqual(w.top5[3].page, w.top5[4].page);
   assert.ok(w.top5.every((c) => c.why));
-  assert.equal(w.editStatus, null, "this week's page edit is unused");
-  assert.equal(w.top5.filter((c) => c.isPageEdit).length, 1, 'one live page edit a week');
+  assert.equal(w.editStatus, null, "this week's two page changes are unused");
+  assert.equal(w.top5.filter((c) => c.isPageEdit).length, 2, 'one big and one small page change a week');
   for (const c of [...w.top5, ...w.opportunities]) {
     assert.ok(c.brief.startsWith('Task for the SimpleScheduleAI website:'), c.id);
     // A competitor change is read on their site: it has no page of ours and no Search Console link.
@@ -590,7 +598,8 @@ test('the week: the five follow the recipe, and every card carries a brief and l
   const edit = w.top5[3];
   assert.equal(edit.links.live, 'https://simplescheduleai.com/critical-access-hospital-scheduling');
   assert.ok(edit.links.searchConsole.includes('&page=!'));
-  assert.equal(w.opportunities.length, 10);
+  // The next best opportunities not in the five, ten at most: the small page change came from one, so nine are left.
+  assert.equal(w.opportunities.length, 9);
   assert.ok(w.opportunities.every((o) => o.eligibility && 'text' in o.eligibility));
   assert.equal(w.blockedOnYou.length, 1);
   assert.ok(w.waiting.every((x) => x.dateText));
@@ -1849,9 +1858,7 @@ test('top five cards carry a score and a plain type label', async () => {
   const bySlot = Object.fromEntries(w.top5.map((c) => [c.slot, c]));
   assert.equal(bySlot['new-post'].typeLabel, 'New post');
   assert.equal(bySlot['new-post'].score, null);
-  assert.equal(bySlot.verdict.typeLabel, 'Verdict');
-  assert.equal(bySlot.verdict.score, null);
-  assert.equal(bySlot['page-edit'].typeLabel, 'Live page improvement');
+  assert.equal(w.top5.find((c) => c.slot === 'page-edit').typeLabel, 'Live page improvement');
   const worry = w.top5.find((c) => c.slot === 'broken');
   assert.equal(worry.typeLabel, 'Bing crawl problem');
   assert.equal(worry.score, null);
@@ -1866,14 +1873,17 @@ test('top five cards carry a score and a plain type label', async () => {
   for (const c of w.top5) assert.ok('score' in c && typeof c.typeLabel === 'string' && c.typeLabel, c.id);
 });
 
-test('the top five cannot hold more than one live page edit', async () => {
+test('the top five cannot hold more than one big and one small live page change', async () => {
   useFull();
   const items = (await get('/api/opportunities')).json.items;
-  const edits = items.filter((o) => o.isPageEdit);
+  const edits = items.filter((o) => o.isPageEdit && o.size === 'big');
   assert.ok(edits.length >= 2);
   const two = await post('/api/week/top5', { ids: [`opp:${edits[0].id}`, `opp:${edits[1].id}`] });
   assert.equal(two.status, 400);
-  assert.match(two.json.error, /one live page edit a week/);
+  assert.match(
+    two.json.error,
+    /That plan has 2 big page changes\. The rule is one big and one small page change a week\./
+  );
   // A page edit together with a plan post, an opportunity that is not an edit, and a worry is fine.
   const w = (await get('/api/week')).json;
   const other = items.find((o) => !o.isPageEdit);
@@ -1972,25 +1982,26 @@ test('S7: a frozen page edit is refused by the five with the same 409 as Done, u
   await post('/api/week/top5', { ids: [] });
 });
 
-test('once a page edit is dated this week, editStatus says so, there is no card, and no page edit can be chosen', async () => {
+test('once a big page change is dated this week, editStatus says so, there is no big card, and no big change can be chosen', async () => {
   useFull();
   addNote({ date: '2026-11-09', slug: '/pricing', text: 'Edit: new pricing table' });
   invalidate();
   const w = (await get('/api/week')).json;
   assert.equal(
-    w.top5.find((c) => c.slot === 'page-edit'),
+    w.top5.find((c) => c.slot === 'page-edit' && c.size === 'big'),
     undefined
   );
-  assert.equal(
-    w.editStatus,
-    "This week's page edit is used (/pricing, 9 November). The next one can go in from 16 November."
+  assert.equal(w.editStatus, "This week's big change is used (/pricing, 9 November); the small one is still open.");
+  // The small slot is still open: any page change card left is a small one on another page.
+  assert.ok(w.top5.filter((c) => c.isPageEdit).every((c) => c.size === 'small' && c.page !== '/pricing'));
+  const edit = (await get('/api/opportunities')).json.items.find(
+    (o) => o.isPageEdit && o.size === 'big' && o.page !== '/pricing'
   );
-  assert.equal(w.top5.filter((c) => c.isPageEdit).length, 0);
-  const edit = (await get('/api/opportunities')).json.items.find((o) => o.isPageEdit && o.page !== '/pricing');
   const r = await post('/api/week/top5', { ids: [`opp:${edit.id}`] });
   assert.equal(r.status, 409);
   assert.match(r.json.error, /9 November/);
   assert.equal(r.json.secondThisWeek.page, '/pricing');
+  assert.equal(r.json.secondThisWeek.size, 'big');
 });
 
 test('Done on a frozen page needs an override, and the override restarts the 28 days', async () => {
@@ -2378,15 +2389,15 @@ test('chart markers: every kind the API can send has a label', async () => {
   assert.ok(s.markers.some((m) => m.kind === 'google-update'));
 });
 
-// ---------------------------------------------------------------- one page edit a week, by any route
+// ---------------------------------------------------------------- one big and one small page change a week, by any route
 
 test('a second page edit marked done in the same week needs an override, and says when the first one was', async () => {
   useFull();
   const list = (await get('/api/opportunities')).json.items;
-  const edits = list.filter((o) => o.isPageEdit && o.eligibility.eligible);
+  const edits = list.filter((o) => o.isPageEdit && o.eligibility.eligible && o.size === 'big');
   const first = edits[0];
   const second = edits.find((o) => o.page !== first.page);
-  assert.ok(first && second, 'two page edits on different pages');
+  assert.ok(first && second, 'two big page edits on different pages');
   const notEdit = list.find((o) => !o.isPageEdit);
 
   assert.equal((await post(`/api/item/${first.id}`, { action: 'done' })).status, 200);
@@ -2396,12 +2407,32 @@ test('a second page edit marked done in the same week needs an override, and say
     page: first.page,
     date: '2026-11-10',
     dateText: '10 November',
+    size: 'big',
   });
-  assert.match(refused.json.error, /You already made this week's page edit on 10 November/);
+  assert.match(
+    refused.json.error,
+    /You already made this week's big page change on 10 November \(.+\)\. The rule is one big and one small page change a week\./
+  );
   assert.equal((await get('/api/opportunities')).json.items.find((o) => o.id === second.id).status, 'new');
+  // The same card marked as a small change uses the small slot, which is still free.
+  const asSmall = await post(`/api/item/${second.id}`, { action: 'done', size: 'small' });
+  assert.equal(asSmall.status, 200);
+  assert.equal(asSmall.json.item.status, 'done');
+  // Now both slots are used: a third page change of either size needs an override.
+  const third = edits.find((o) => o.page !== first.page && o.page !== second.page);
+  assert.ok(third, 'a third page edit');
+  const bothUsed = await post(`/api/item/${third.id}`, { action: 'done', size: 'small' });
+  assert.equal(bothUsed.status, 409);
+  assert.equal(bothUsed.json.secondThisWeek.page, second.page);
+  assert.equal(bothUsed.json.secondThisWeek.size, 'small');
+  assert.equal(
+    (await get('/api/week')).json.editStatus,
+    `This week's big change (${first.page}, 10 November) and small change (${second.page}, 10 November) are both used. The next ones can go in from 16 November.`
+  );
+  assert.equal((await post(`/api/item/${third.id}`, { action: 'done', size: 'huge' })).status, 400);
   // Something that is not a page edit is never held back.
   if (notEdit) assert.equal((await post(`/api/item/${notEdit.id}`, { action: 'done' })).status, 200);
-  const forced = await post(`/api/item/${second.id}`, { action: 'done', override: true });
+  const forced = await post(`/api/item/${third.id}`, { action: 'done', override: true });
   assert.equal(forced.status, 200);
   assert.equal(forced.json.item.status, 'done');
 });
@@ -2422,12 +2453,27 @@ test('the edit note: a frozen page or a second edit this week needs an override;
   assert.equal(frozen.json.frozen.untilText, '8 December');
   assert.equal(lines(), start + 1, 'nothing written');
 
-  // Another page in the same week: the rule is one a week.
+  // Another page in the same week: a note is a big change, and this week's big change is used.
   const second = await post('/api/edit-note', { confirm: true, page: '/blog/gamma-tips', text: 'New section.' });
   assert.equal(second.status, 409);
   assert.equal(second.json.secondThisWeek.page, '/blog/beta-notes');
   assert.equal(second.json.secondThisWeek.dateText, '10 November');
+  assert.equal(second.json.secondThisWeek.size, 'big');
   assert.equal(lines(), start + 1, 'nothing written');
+  // A note that says it was a small change uses the small slot, and the line says so.
+  const small = await post('/api/edit-note', {
+    confirm: true,
+    page: '/blog/gamma-tips',
+    text: 'New title.',
+    size: 'small',
+  });
+  assert.equal(small.status, 200);
+  assert.equal(small.json.line.size, 'small');
+  assert.equal(lines(), start + 2);
+  assert.match(
+    (await get('/api/week')).json.editStatus,
+    /^This week's big change \(\/blog\/beta-notes, 10 November\) and small change \(\/blog\/gamma-tips, 10 November\) are both used\./
+  );
 
   const forced = await post('/api/edit-note', {
     confirm: true,
@@ -2436,7 +2482,7 @@ test('the edit note: a frozen page or a second edit this week needs an override;
     override: true,
   });
   assert.equal(forced.status, 200);
-  assert.equal(lines(), start + 2);
+  assert.equal(lines(), start + 3);
 });
 
 test('a locked five refreshes its page edit card when the week edit was dated by another route', async () => {
@@ -2445,14 +2491,16 @@ test('a locked five refreshes its page edit card when the week edit was dated by
   const card = w.top5.find((c) => c.slot === 'page-edit');
   assert.ok(card && card.eligibility.eligible);
   assert.equal((await post('/api/week/lock', {})).status, 200);
-  // The week's one edit goes in through the edit note on another page.
+  // The week's big change goes in through the edit note (a big change) on another page.
   const other = LIVE.map((p) => p.page).find((p) => p !== card.page && p.startsWith('/blog/'));
   assert.equal((await post('/api/edit-note', { confirm: true, page: other, text: 'Changed the title.' })).status, 200);
   const after = (await get('/api/week')).json;
   assert.equal(after.locked, true);
   const same = after.top5.find((c) => c.id === card.id);
   assert.equal(same.eligibility.eligible, false);
-  assert.match(same.eligibility.text, /^Can be edited from /);
+  assert.equal(card.size, 'big');
+  assert.match(same.eligibility.text, /^Next big page change from /);
+  assert.equal(same.weekEditDone.size, 'big');
   assert.equal(same.weekEditDone.page, other);
   assert.equal(same.weekEditDone.dateText, '10 November');
 });

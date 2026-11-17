@@ -238,7 +238,7 @@ test('B2: a page edits are deliberate (logged, or 15 lines or more in git) or sm
   noDash([worry, detail]);
 });
 
-test('B2: the edit-when line and the chip read the same words: "Can be edited from" after the week edit, "Leave it until" when held', () => {
+test('B2: the edit-when line and the chip read the same words: "Next big page change from" after the big change, "Leave it until" when held', () => {
   const m = modelFixture({
     local: {
       plan: {
@@ -251,7 +251,7 @@ test('B2: the edit-when line and the chip read the same words: "Can be edited fr
   });
   const w = work.weekView(m);
   const worry = w.worries.find((x) => x.page === '/blog/steady-fall');
-  assert.equal(worry.editWhen, 'Can be edited from 23 November');
+  assert.equal(worry.editWhen, 'Next big page change from 23 November');
   assert.equal(worry.eligibility.text, worry.editWhen);
   const held = search.pageView(m, '/blog/steady-1');
   assert.equal(held.editWhen, 'Leave it until 14 December');
@@ -412,7 +412,7 @@ test('C4: an item on a held page is marked held, never pushed, and comes after t
   assert.ok(top.indexOf('free1') < top.indexOf('held1'));
 });
 
-test("C4: once this week's page edit is used, page edits are held for the week, and the note says when they free up", () => {
+test("C4: once this week's big change is used, big page edits are held for the week, and the note says when they free up", () => {
   const m = modelFixture({
     local: {
       plan: {
@@ -431,7 +431,10 @@ test("C4: once this week's page edit is used, page edits are held for the week, 
   assert.equal(it.held, true);
   assert.equal(it.heldKind, 'week');
   // It stays in the list (only pages to leave alone are hidden) and the line says why it waits.
-  assert.match(list.held.text, /in this list waits? for next week's page edit, from 23 November\.$/);
+  assert.match(
+    list.held.text,
+    /in this list waits? for next week's page changes \(one big, one small\), from 23 November\.$/
+  );
 });
 
 // ---------------------------------------------------------------- B7: the same label gives the same number

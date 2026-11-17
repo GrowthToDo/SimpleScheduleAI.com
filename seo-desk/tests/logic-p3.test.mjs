@@ -160,12 +160,18 @@ test('C3: a git edit of 15 lines or more the freeze does not know holds the page
   });
 });
 
-test('C2: once this week\'s page edit is made, every other page edit says "Can be edited from" the next Monday', () => {
+test('C2: once this week\'s big page change is made, every other big one says "Next big page change from" the next Monday', () => {
   const frozen = new Map([['/blog/edited-guide', { since: '2026-11-10', until: '2026-12-08' }]]);
   const e = life.eligibility({ isPageEdit: true, page: '/blog/free-guide' }, frozen, TODAY, { week: true });
   assert.equal(e.eligible, false);
-  assert.equal(life.eligibilityText(e), 'Can be edited from 16 November');
-  assert.deepEqual(e.weekEdit, { page: '/blog/edited-guide', date: '2026-11-10' });
+  assert.equal(life.eligibilityText(e), 'Next big page change from 16 November');
+  assert.deepEqual(e.weekEdit, { page: '/blog/edited-guide', date: '2026-11-10', size: 'big' });
+  // The small slot is still free: a small change on another page can go in now.
+  assert.equal(
+    life.eligibility({ isPageEdit: true, page: '/blog/free-guide', size: 'small' }, frozen, TODAY, { week: true })
+      .eligible,
+    true
+  );
   // The edited page itself says it is frozen; a card that edits no page is never held back.
   assert.equal(
     life.eligibilityText(
@@ -228,12 +234,15 @@ test('W2, L5, W6: the verdict slot counts page changes and commits, reads the ne
   ];
   const frozen = new Map([['/blog/d-guide', { since: '2026-11-01', until: '2026-11-29' }]]);
   // Package 5: with nothing ready to judge there is no verdict card (the Next verdict tile has the date),
-  // and a used page edit is a line (editStatus), not a card.
+  // and a used page change is a line (editStatus), not a card.
   const next = week.proposeTop5({ plan: null, pending, frozen, today: TODAY }).filter((c) => c.slot === 'verdict');
   assert.deepEqual(next, []);
   const used = new Map([['/blog/e-guide', { since: '2026-11-10', until: '2026-12-08' }]]);
   assert.deepEqual(week.proposeTop5({ plan: null, frozen: used, today: TODAY }), []);
-  assert.match(week.editStatusOf(used, TODAY), /^This week's page edit is used \(\/blog\/e-guide, 10 November\)\./);
+  assert.equal(
+    week.editStatusOf(used, TODAY),
+    "This week's big change is used (/blog/e-guide, 10 November); the small one is still open."
+  );
 });
 
 test('the week page folds the verdicts of one day into one waiting row', () => {
@@ -529,10 +538,10 @@ function weekFixture() {
 
 test('C2, C3, C5: the week page agrees with the server on the freeze, the git edit, the week rule and the next verdict', () => {
   const model = weekFixture();
-  // The plan row dated 10 November is this week's page edit.
+  // The plan row dated 10 November is this week's big page change.
   assert.equal(
     eligibilityOf(model, { isPageEdit: true, page: '/blog/free-guide' }).text,
-    'Can be edited from 16 November'
+    'Next big page change from 16 November'
   );
   const held = eligibilityOf(model, { isPageEdit: true, page: '/blog/sample-guide' });
   assert.equal(held.eligible, false);
@@ -551,12 +560,12 @@ test('C2, C3, C5: the week page agrees with the server on the freeze, the git ed
   assert.ok(alone?.foundInGit);
   assert.equal(alone.until, '2026-12-07');
   assert.deepEqual(v.counts.worries, { total: v.worries.length, needLook: v.worries.length, waiting: 0 });
-  // Package 5: the used week edit is one line, not a card.
+  // Package 5: the used big change is one line, not a card.
   assert.equal(
     v.top5.some((c) => /^page-edit-done-/.test(c.id)),
     false
   );
-  assert.match(v.editStatus, /^This week's page edit is used \(/);
+  assert.match(v.editStatus, /^This week's big change is used \(.+\); the small one is still open\.$/);
 });
 
 test('C7, C6, L6, M1: Did it work counts distinct changes, reads an overlapped batch from its clean pages, and cautions money pages', () => {

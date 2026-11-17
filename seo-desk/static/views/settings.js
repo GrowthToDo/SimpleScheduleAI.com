@@ -178,7 +178,7 @@ function planSizeSection(data, ctx, save) {
     {
       size: 5,
       sentence:
-        "Up to five: anything broken, the next post in your plan, the week's one page edit while it is free, a verdict once one can be read, then tasks that are not page edits. Fewer when fewer qualify; never padded.",
+        "Up to five: anything broken, the next post in your plan, the week's big and small page changes while they are free, a verdict once one can be read, then tasks that are not page edits. Fewer when fewer qualify; never padded.",
     },
   ];
   return h(
@@ -208,7 +208,9 @@ function planSizeSection(data, ctx, save) {
           h('span', {}, o.sentence)
         )
       )
-    )
+    ),
+    // The weekly page change rule, in the server's one sentence. It is fixed, so there is nothing to set.
+    data.editRule ? h('p', { class: 'section-note', style: { marginTop: '10px' } }, data.editRule) : null
   );
 }
 

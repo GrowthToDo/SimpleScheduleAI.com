@@ -8,7 +8,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { readJson, writeJson, dataDir } from '../store.mjs';
 import { PRESETS, THRESHOLDS } from '../config.mjs';
-import { transition, loadItems, saveItems, FREEZE_DAYS, recentEditText } from '../lifecycle.mjs';
+import {
+  transition,
+  loadItems,
+  saveItems,
+  FREEZE_DAYS,
+  recentEditText,
+  editSizeOf,
+  EDIT_SIZES,
+} from '../lifecycle.mjs';
 import { setTop5, lockWeek, editThisWeek, PLAN_SIZES } from '../week.mjs';
 import { addDays } from '../dates.mjs';
 import { longDate, plain } from '../text.mjs';
@@ -43,7 +51,17 @@ import { pickNews, unpickNews } from './newsroom-actions.mjs';
 const fail = (status, message) => Object.assign(new Error(message), { status });
 const isDate = (s) => /^\d{4}-\d{2}-\d{2}$/.test(String(s)) && !Number.isNaN(Date.parse(`${s}T00:00:00Z`));
 
-// ---------------------------------------------------------------- the one edit a week rule
+// ---------------------------------------------------------------- the weekly page change rule
+
+// One big and one small page change a week, on different pages (lifecycle EDIT_RULE_TEXT).
+const RULE_WORDS = 'The rule is one big and one small page change a week.';
+
+// The size an action names ('big' or 'small'), or undefined when it names none. Anything else is a 400.
+function sizeFrom(body) {
+  if (body?.size === undefined || body.size === null || body.size === '') return undefined;
+  if (!EDIT_SIZES.includes(body.size)) throw fail(400, 'size must be big or small.');
+  return body.size;
+}
 
 // The things that hold back a new live page edit, from the lifecycle freeze (model.frozen), the git
 // edits the freeze does not know (model.recent) and the this-week check (editThisWeek), never worked
@@ -51,11 +69,12 @@ const isDate = (s) => /^\d{4}-\d{2}-\d{2}$/.test(String(s)) && !Number.isNaN(Dat
 //   frozen         the page itself is inside the 28 days of an earlier deliberate edit
 //   recentlyEdited git shows a commit of 15 or more lines on the page in the last 28 days that the
 //                  freeze does not know: [{page, date, lines, until, dateText, untilText, text}]
-//   secondThisWeek a deliberate page edit is already dated this week (on any page)
+//   secondThisWeek this week's slot of `size` (big, the default, or small) is already used, on any
+//                  page: {page, date, dateText, size}
 // Null when none holds. `page` is the page about to be edited, or a list when one Done edits
 // several: every frozen one is in `frozenPages`, and `frozen` is the first of them.
 // recent: false leaves the git edits out (an edit note is how such an edit gets logged).
-export function editGuards(model, page, { recent = true } = {}) {
+export function editGuards(model, page, { recent = true, size = 'big' } = {}) {
   const out = {};
   const pages = (Array.isArray(page) ? page : [page]).filter(Boolean);
   const frozenPages = [];
@@ -89,8 +108,9 @@ export function editGuards(model, page, { recent = true } = {}) {
     });
   }
   if (lately.length) out.recentlyEdited = lately;
-  const w = editThisWeek(model.frozen, model.today);
-  if (w) out.secondThisWeek = { page: w.page, date: w.since, dateText: longDate(w.since) };
+  const slot = size === 'small' ? 'small' : 'big';
+  const w = editThisWeek(model.frozen, model.today, { recent: model.recent })[slot];
+  if (w) out.secondThisWeek = { page: w.page, date: w.since, dateText: longDate(w.since), size: slot };
   return Object.keys(out).length ? out : null;
 }
 
@@ -105,7 +125,7 @@ export function editRefused(g, what) {
     parts.push(`${r.text} ${what} starts a new 28 days and muddies the verdict on that edit.`);
   if (g.secondThisWeek)
     parts.push(
-      `You already made this week's page edit on ${g.secondThisWeek.dateText} (${g.secondThisWeek.page}). The rule is one a week.`
+      `You already made this week's ${g.secondThisWeek.size ?? 'big'} page change on ${g.secondThisWeek.dateText} (${g.secondThisWeek.page}). ${RULE_WORDS}`
     );
   return Object.assign(fail(409, `${parts.join(' ')} Send override to do it anyway.`), { extra: g });
 }
@@ -134,6 +154,9 @@ export function itemAction(id, body) {
     page = pages[0] ?? null;
     isPageEdit = pages.length > 0;
   }
+  // The founder's pick at Done ("This was a small change"), else the card's own size.
+  const size =
+    isPageEdit && body.action === 'done' ? (sizeFrom(body) ?? card?.size ?? editSizeOf(opp ?? {})) : undefined;
   if (body.action === 'snooze' && body.until !== undefined && !isDate(body.until)) {
     throw fail(400, 'Snooze needs a date such as 2026-12-01.');
   }
@@ -147,6 +170,7 @@ export function itemAction(id, body) {
       page,
       ...(split ? { pages } : {}),
       isPageEdit,
+      size,
     });
   } catch (e) {
     if (e.message === 'conflict') {
@@ -155,7 +179,7 @@ export function itemAction(id, body) {
     throw fail(400, e.message.startsWith('unknown action') ? 'That is not an action the desk knows.' : e.message);
   }
   // Done on a page that is still frozen would restart its 28 days and spoil the verdict that is
-  // running, and a second page edit in one week breaks the one a week rule, so either needs an
+  // running, and a second page change of one size in one week breaks the weekly rule, so either needs an
   // explicit override. A second Done on a finished item changes nothing, and an ignored item is
   // refused above with its own plain reason (press Reopen first) before these are asked.
   if (
@@ -165,7 +189,7 @@ export function itemAction(id, body) {
     itemOf(model, key)?.status !== 'done' &&
     body.override !== true
   ) {
-    const g = editGuards(model, pages);
+    const g = editGuards(model, pages, { size });
     if (g) throw editRefused(g, 'Marking this done');
   }
   // Keep the few facts needed to list the item after the rules stop finding it.
@@ -205,7 +229,7 @@ export function itemAction(id, body) {
 // ---------------------------------------------------------------- the weekly plan
 
 // override: true chooses a page edit card that is held back (a frozen page, a page git shows edited
-// lately, or a second page edit this week) anyway, the same as Done with override.
+// lately, or a second page change of one size this week) anyway, the same as Done with override.
 export function chooseTop5(input, { override = false } = {}) {
   let ids = input;
   const model = buildModel();
@@ -217,20 +241,21 @@ export function chooseTop5(input, { override = false } = {}) {
   if (new Set(ids).size !== ids.length) throw fail(400, 'A card can be in the week only once.');
   const missing = ids.filter((i) => !pool.has(i));
   if (missing.length) throw fail(400, `The desk does not know these cards: ${missing.join(', ')}.`);
-  const edits = ids.filter((i) => pool.get(i)?.isPageEdit).length;
-  if (edits > 1) {
-    throw fail(
-      400,
-      `That plan has ${edits} live page edits. The rule is one live page edit a week, so keep one and move the others to a later week.`
-    );
+  for (const slot of EDIT_SIZES) {
+    const n = ids.filter((i) => pool.get(i)?.isPageEdit && editSizeOf(pool.get(i)) === slot).length;
+    if (n > 1)
+      throw fail(
+        400,
+        `That plan has ${n} ${slot} page changes. ${RULE_WORDS} Keep one ${slot} change and move the others to a later week.`
+      );
   }
-  // The 28 day rule, a git edit the freeze does not know, and one page edit a week: the same guards and
+  // The 28 day rule, a git edit the freeze does not know, and the week's two slots: the same guards and
   // the same 409 as Done, unless override. A page edit card that is itself done is the edit that froze
   // its page, so it may stay.
   for (const id of override ? [] : ids) {
     const card = pool.get(id);
     if (!card?.isPageEdit || !card.page || itemOf(model, itemKey(id))?.status === 'done') continue;
-    const g = editGuards(model, card.page);
+    const g = editGuards(model, card.page, { size: editSizeOf(card) });
     if (g) throw editRefused(g, 'Editing it now');
   }
   if (currentTop5(model).stored?.locked)
@@ -556,14 +581,23 @@ export function addEditNote(body) {
     .trim();
   if (!text) throw fail(400, 'The note needs some text saying what changed.');
   if (text.length > 500) throw fail(400, 'The note can be 500 characters at most.');
-  // The same two guards as marking a page edit done: a frozen page, or a second edit this week.
+  // A note logs a big change unless it says small ({"size": "small"}): a title, description, heading,
+  // a single line or link.
+  const size = sizeFrom(body) ?? 'big';
+  // The same two guards as marking a page edit done: a frozen page, or this week's slot of that size used.
   const model = buildModel();
   if (body.override !== true) {
-    const g = editGuards(model, page, { recent: false });
+    const g = editGuards(model, page, { recent: false, size });
     if (g) throw editRefused(g, 'Logging this edit');
   }
   const slug = POST_PAGE_RE.test(page) ? page.split('/').pop() : page;
-  const line = { date: model.today, slug, text: `Edit: ${text}`, source: 'manual' };
+  const line = {
+    date: model.today,
+    slug,
+    text: `Edit: ${text}`,
+    source: 'manual',
+    ...(size === 'small' ? { size } : {}),
+  };
   const file = notesFile();
   fs.mkdirSync(path.dirname(file), { recursive: true });
   let lead = '';

@@ -111,12 +111,15 @@ test('a frozen page to edit gets a chip and the same warning in the row and in t
 test('the audit marks frozen pages and says whether a fix is the week page edit', () => {
   assert.equal(audit.frozenText({ frozenUntilText: '7 December' }), 'Frozen until 7 December');
   assert.equal(audit.frozenText({ frozenUntilText: null }), null);
-  assert.match(audit.editLineText({ editsPage: true, pages: [] }), /counts as that week's one page edit/);
+  assert.match(
+    audit.editLineText({ editsPage: true, pages: [] }),
+    /uses one of that week's page changes: the small one for a title/
+  );
   assert.match(
     audit.editLineText({ editsPage: true, pages: [{ frozenUntilText: '7 December' }, { frozenUntilText: null }] }),
     /1 of these pages is frozen/
   );
-  assert.match(audit.editLineText({ editsPage: false, pages: [] }), /does not count as the week's page edit/);
+  assert.match(audit.editLineText({ editsPage: false, pages: [] }), /does not use the week's page changes/);
   assert.match(audit.editLineText({ editsPage: false, pages: [{ frozenUntilText: '7 December' }] }), /being measured/);
 });
 
@@ -179,7 +182,11 @@ test('the second page edit confirm uses the rule in plain words', async () => {
   const { secondEditText } = await import('../static/views/card.js');
   assert.equal(
     secondEditText({ page: '/blog/invented', date: '2026-11-09', dateText: '9 November' }),
-    "You already made this week's page edit on 9 November. The rule is one a week. Mark this one done anyway?"
+    "You already made this week's big page change on 9 November. The rule is one big and one small page change a week. Mark this one done anyway?"
+  );
+  assert.match(
+    secondEditText({ page: '/blog/invented', dateText: '9 November', size: 'small' }),
+    /^You already made this week's small page change on 9 November\./
   );
   assert.match(secondEditText({ dateText: '9 November' }, 'Log this one anyway?'), /Log this one anyway\?$/);
 });

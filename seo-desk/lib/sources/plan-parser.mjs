@@ -32,12 +32,26 @@ function pageFrom(cell) {
   return p || '/';
 }
 
+// The size tag a row's "What to do" starts with: "BIG:" (a new or rewritten section) or "SMALL:" (a title,
+// meta description, heading, a single line or link). An untagged row counts as big.
+const SIZE_TAG = /^(BIG|SMALL)\s*:\s*/i;
+
+// The size of a plan improve row: its own `size`, else the tag its text starts with, else 'big'. Reads an
+// older snapshot's rows too (parsed before the tag was split off).
+export function planRowSize(row) {
+  if (row?.size === 'big' || row?.size === 'small') return row.size;
+  const m = SIZE_TAG.exec(String(row?.todo ?? '').trim());
+  return m && m[1].toLowerCase() === 'small' ? 'small' : 'big';
+}
+
 function parseImproveRow(cells) {
   const box = boxOf(cells[0] ?? '');
   const page = pageFrom(cells[1] ?? '');
   if (!box || !page) return null;
   const search = plain(cells[2] ?? '');
-  const todo = plain(cells.slice(3).join(' | '));
+  const raw = plain(cells.slice(3).join(' | '));
+  const size = planRowSize({ todo: raw });
+  const todo = raw.replace(SIZE_TAG, '');
   const doneMatch = new RegExp(`^Done\\s+${DATE_RE}`, 'i').exec(todo);
   const alreadyLive = /^Already live/i.test(todo);
   const doneDate = doneMatch ? doneMatch[1] : null;
@@ -45,7 +59,7 @@ function parseImproveRow(cells) {
   const ticked = box[1].toLowerCase() === 'x';
   const done = ticked || Boolean(doneDate) || alreadyLive;
   const judgeFrom = explicit ? explicit[1] : doneDate ? addDays(doneDate, 30) : null;
-  return { page, done, doneDate, judgeFrom, search, todo };
+  return { page, done, doneDate, judgeFrom, search, todo, size };
 }
 
 function parsePostRow(cells) {

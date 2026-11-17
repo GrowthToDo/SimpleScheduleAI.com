@@ -1,7 +1,8 @@
 // This week: the Monday page. Since you last looked, the tiles, the worries (with the pages only
 // being watched folded under them), the priorities (at most three or five, from Settings, and never
 // padded; each says why it is there; reorder, remove, swap in, lock, copy, save as a PDF through
-// #/print/week), with the line saying this week's page edit is used above them when it is, the
+// #/print/week), with the line saying which of this week's two page changes (big, small) is used above
+// them when one is, the
 // biggest opportunities, the pages to leave alone this week, what is waiting, and past weeks.
 
 import { renderCard } from './card.js';
@@ -21,6 +22,14 @@ const SLOT_NOTE = {
   worry: 'Worry',
   other: 'Next best',
 };
+
+// A page change says which of the week's two slots it fills.
+const slotNote = (card) =>
+  card.slot === 'page-edit' && card.size
+    ? card.size === 'small'
+      ? 'Small page change'
+      : 'Big page change'
+    : (SLOT_NOTE[card.slot] ?? '');
 
 export async function render(el, ctx) {
   const { api, h, fmt } = ctx;
@@ -316,7 +325,7 @@ function topFive(week, ctx, { ids, locked, saveFive }) {
       'div',
       { class: 'rank' },
       h('span', { class: 'rank-num', 'aria-label': `Priority ${i + 1}` }, String(i + 1)),
-      h('span', { class: 'rank-slot' }, SLOT_NOTE[card.slot] ?? '')
+      h('span', { class: 'rank-slot' }, slotNote(card))
     );
     if (!locked) {
       const handle = h(
@@ -444,7 +453,7 @@ function topFive(week, ctx, { ids, locked, saveFive }) {
         reset
       )
     ),
-    // Once this week's page edit is used, one line says so (and when the next can go in) instead of a card.
+    // Once one of this week's two page changes is used, one line says which, instead of a card.
     week.editStatus ? h('p', { class: 'section-note', style: { margin: '0 0 10px' } }, week.editStatus) : null,
     ...(week.statusLines ?? []).map((line) => h('p', { class: 'section-note', style: { margin: '0 0 10px' } }, line)),
     week.top5.length
@@ -626,7 +635,7 @@ function worries(week, ctx, { locked, swapIn }) {
 }
 
 // Leave it on a watched page: snoozes it until the date to look again. It records no page edit and
-// freezes nothing, so this week's page edit stays free.
+// freezes nothing, so this week's page changes stay free.
 function leaveItButton(w, ctx) {
   const { h, api, toast } = ctx;
   return h(

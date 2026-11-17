@@ -217,7 +217,7 @@ export async function render(el, ctx) {
       run: async (c) => {
         const ok = await ctx.confirmBox({
           title: 'Mark this piece published?',
-          body: "Press this once the piece is live on /articles.\n\nIt is not a page edit, so nothing is frozen and this week's one page edit is not used.",
+          body: "Press this once the piece is live on /articles.\n\nIt is not a page edit, so nothing is frozen and neither of this week's page changes is used.",
           confirmLabel: 'Yes, it is published',
         });
         if (!ok) return;
@@ -652,7 +652,7 @@ export async function render(el, ctx) {
       h(
         'p',
         { class: 'section-note' },
-        'A live page of ours already carries these facts, so each is an edit to that page, not a new article. The edit date comes from the one page edit a week and the 28 day freeze.'
+        'A live page of ours already carries these facts, so each is an edit to that page, not a new article. The edit date comes from the weekly page changes (one big, one small) and the 28 day freeze.'
       ),
       updates.length ? pagedCards(updates) : h('p', { class: 'empty' }, 'No fresh story is already covered by a page.')
     )

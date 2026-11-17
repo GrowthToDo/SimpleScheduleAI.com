@@ -22,6 +22,7 @@ import {
   editWhenText,
   RECENT_EDIT_MIN_LINES,
   AFTER_PUBLISH_DAYS,
+  editSizeOf,
 } from '../lifecycle.mjs';
 import { windows, todayIso, addDays } from '../dates.mjs';
 import { sourceStatus } from '../refresh.mjs';
@@ -274,6 +275,8 @@ export function buildModel() {
       date: n.date,
       kind: 'manual',
       subject: String(n.text ?? ''),
+      // An "Edit:" note is a big change unless the line says small.
+      ...(n.size === 'small' ? { size: 'small' } : {}),
     }))
     .filter((e) => e.page);
   const edits = [...(local.edits ?? []).filter((e) => e.kind !== 'manual'), ...noteEdits].sort(
@@ -382,17 +385,19 @@ export function itemState(model, id) {
 }
 
 // The eligibility every list beside the five shows (lifecycle eligibility, the one function): the
-// freeze, a git edit the freeze does not know, and this week's page edit already made.
+// freeze, a git edit the freeze does not know, and this week's page change of the item's size (big or
+// small) already made.
 export function eligibilityOf(model, opp) {
   return withEligibilityText(eligibility(opp, model.frozen, model.today, { recent: model.recent ?? null, week: true }));
 }
 
 // The same function for one page edit on `page`, with its words. week: false for a routine change
-// (a link added, a file address swapped) that does not use the week's one page edit; the freeze and a
-// git edit still hold it, because a change inside those 28 days blurs that page's verdict.
-export const pageHold = (model, page, { week = true } = {}) =>
+// (a link added, a file address swapped) that does not use the week's page changes; the freeze and a
+// git edit still hold it, because a change inside those 28 days blurs that page's verdict. size: the
+// slot the edit would use ('big', the default, or 'small').
+export const pageHold = (model, page, { week = true, size = 'big' } = {}) =>
   withEligibilityText(
-    eligibility({ isPageEdit: true, page }, model.frozen, model.today, { recent: model.recent ?? null, week })
+    eligibility({ isPageEdit: true, page, size }, model.frozen, model.today, { recent: model.recent ?? null, week })
   );
 
 // The fields a list row carries for a page that may not be changed yet, from pageHold: frozenUntil
@@ -538,9 +543,9 @@ export const leaveItFor = (model, o, dropKind = o?.dropKind) =>
   o?.type === 'slipping' && dropKind === 'lost-demand' ? { leaveIt: leaveItOf(model) } : {};
 
 // Whether an item is held: it edits a live page that may not be edited now (the page's own edit holds
-// it, or this week's one page edit is used). A held item is never pushed: no Swap in, no green Start,
+// it, or this week's page change of its size is used). A held item is never pushed: no Swap in, no green Start,
 // no priority, and it sorts after the items that can be worked on now. heldKind: 'page' (the freeze or
-// an edit found in git: a page to leave alone) or 'week' (only this week's edit is used). From the
+// an edit found in git: a page to leave alone) or 'week' (only this week's slot of its size is used). From the
 // eligibility the item already carries (the one eligibility function).
 export const heldOf = (isPageEdit, e) =>
   isPageEdit && e && !e.eligible
@@ -573,6 +578,8 @@ export function decorateOpp(model, o) {
     action: clean.action,
     test: clean.test,
     isPageEdit: Boolean(o.isPageEdit),
+    // Big or small (lifecycle editSizeOf): the week's slot a Done uses, and the default of its size pick.
+    size: o.isPageEdit ? editSizeOf(o) : null,
     range: rangeOf(o.range),
     source: o.source,
     evidence: o.evidence ?? [],
@@ -614,6 +621,7 @@ export function goneOpps(model) {
         action: '',
         test: '',
         isPageEdit: Boolean(it.meta.isPageEdit),
+        size: it.meta.isPageEdit ? editSizeOf({ size: it.size, type: it.meta.type }) : null,
         range: null,
         source: null,
         evidence: [],
@@ -622,7 +630,12 @@ export function goneOpps(model) {
         upside: NO_ESTIMATE,
         status: it.status,
         item: itemState(model, id),
-        eligibility: eligibilityOf(model, { isPageEdit: Boolean(it.meta.isPageEdit), page: it.meta.page ?? null }),
+        eligibility: eligibilityOf(model, {
+          isPageEdit: Boolean(it.meta.isPageEdit),
+          page: it.meta.page ?? null,
+          type: it.meta.type,
+          size: it.size,
+        }),
         touchedOn: [],
         links: linksFor(it.meta.page ?? null),
         brief: '',

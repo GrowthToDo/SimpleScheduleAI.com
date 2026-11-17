@@ -1,5 +1,5 @@
 // The week's plan as a clean page to print or save as a PDF (#/print/week). The line saying this
-// week's page edit is used (when it is), the priorities with why each is there, the evidence, the
+// week's big or small page change is used (when one is), the priorities with why each is there, the evidence, the
 // recommendation and the test for each, the worries, the pages to leave alone
 // this week and what is waiting. "Save as PDF" opens the browser's print dialog, where Save as PDF
 // is one of the printers. The print styles in app.css hide the sidebar, the top bar and the

@@ -95,7 +95,10 @@ test('P1: the five run broken things (two at most), the next post, the page edit
   }
   assert.match(cards[0].why, /broken/);
   assert.match(cards[2].why, /next post in your plan/);
-  assert.match(cards[3].why, /best page edit that can go in this week: From 1 to 28 October/);
+  assert.match(
+    cards[3].why,
+    /^It is this week's big page change: the best big page edit that can go in now\. From 1 to 28 October/
+  );
   // The 3 or 5 setting is a ceiling: with room, the tasks come next, never a "write a post" idea.
   const more = week.proposeTop5({
     plan: null,
@@ -121,7 +124,7 @@ test('P1: the five run broken things (two at most), the next post, the page edit
   assert.ok(!more.some((c) => c.oppId === 'gap' || c.oppId === 'ask-ai'), 'no write-a-post idea, no AI card');
 });
 
-test('P1: when the week edit is used there is no card for it, only the editStatus line', () => {
+test("P1: when the week's big change is used there is no big card, only the editStatus line", () => {
   const frozen = new Map([['/blog/edited', { since: '2026-11-16', until: '2026-12-14', why: 'w' }]]);
   const cards = week.proposeTop5({
     plan,
@@ -137,7 +140,7 @@ test('P1: when the week edit is used there is no card for it, only the editStatu
   assert.equal(cards.filter((c) => c.slot === 'page-edit').length, 0);
   assert.equal(
     week.editStatusOf(frozen, TODAY),
-    "This week's page edit is used (/blog/edited, 16 November). The next one can go in from 23 November."
+    "This week's big change is used (/blog/edited, 16 November); the small one is still open."
   );
   assert.equal(week.editStatusOf(new Map(), TODAY), null);
 });
@@ -177,7 +180,10 @@ test('P1: a slipping page is the page edit only when it is a real worry', () => 
     real.map((c) => c.id),
     ['opp:slip']
   );
-  assert.match(real[0].why, /best page edit that can go in this week: It fell week by week\./);
+  assert.match(
+    real[0].why,
+    /^It is this week's big page change: the best big page edit that can go in now\. It fell week by week\./
+  );
 });
 
 test('P1: the technical audit gives one broken card for critical and high, and setup tasks of medium or more', () => {
@@ -566,7 +572,7 @@ test('P1: the week reply carries editStatus and why, and never the old "edit is 
   const w = weekView(buildModel());
   assert.equal(
     w.editStatus,
-    "This week's page edit is used (/blog/steady-0, 16 November). The next one can go in from 23 November."
+    "This week's big change is used (/blog/steady-0, 16 November); the small one is still open."
   );
   assert.deepEqual(
     w.top5.map((c) => c.id),

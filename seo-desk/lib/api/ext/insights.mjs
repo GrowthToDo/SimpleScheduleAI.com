@@ -77,11 +77,11 @@ const GAP_PAGE = '/__content-gap__'; // a page that does not exist, so no live p
 
 const notFound = (message) => Object.assign(new Error(message), { status: 404 });
 // Whether a page may be changed yet, from the one eligibility function (model.mjs holdFields: the
-// freeze and a git edit; a routine change such as a link does not use the week's edit).
+// freeze and a git edit; a routine change such as a link does not use the week's page changes).
 const freezeOf = (model, page) => holdFields(model, page);
 
 // Whether editing every one of `pages` is allowed today, from the one eligibility function (the
-// freeze, a git edit, and this week's page edit already made): the item is eligible only when all
+// freeze, a git edit, and this week's page change of its size already made): the item is eligible only when all
 // are, and otherwise it carries the latest date, the page that date belongs to and the function's own
 // words for that page.
 function eligibilityOfPages(model, pages) {
@@ -960,6 +960,38 @@ export function keywordTable(model) {
   });
 }
 
+// The pages the desk knows compete for the same search, as Map<page, Set<page>> (both ways), from
+// splits ([[page, ...]]: the pages of each real split, cannibalization) and conflicts ([[a, b]]: for a
+// cluster conflict, the page whose target covers the search and the page the search ranks on now). A
+// page never competes with itself.
+export function competingPairs(splits = [], conflicts = []) {
+  const out = new Map();
+  const pair = (a, b) => {
+    if (!a || !b || a === b) return;
+    for (const [x, y] of [
+      [a, b],
+      [b, a],
+    ]) {
+      if (!out.has(x)) out.set(x, new Set());
+      out.get(x).add(y);
+    }
+  };
+  for (const pages of splits) for (const a of pages) for (const b of pages) pair(a, b);
+  for (const [a, b] of conflicts) pair(a, b);
+  return out;
+}
+
+// competingPairs for this model: the week never proposes two of these pages together.
+export const competingPages = (model) =>
+  memo(model, 'insights:competing-pages', () =>
+    competingPairs(
+      competingList(model).map((c) => c.pages.map((p) => foldPage(p.page))),
+      keywordTable(model)
+        .rows.filter((r) => r.clusterConflict && r.rankingPage)
+        .map((r) => [foldPage(r.clusterConflict.page), foldPage(r.rankingPage)])
+    )
+  );
+
 // The "planned keyword may already be covered" list: unmapped searches that fall in a topic an
 // existing page already targets, each with the plain recommendation.
 function clusterConflictList(model) {
@@ -1163,7 +1195,7 @@ const finishedAt = (i) => String(i.state.doneAt ?? i.state.since ?? '');
 export function secondaryView(model) {
   const items = withPriority(secondaryKeywordItems(model), (it) => it.impressions);
   // Marked done or dismissed, newest first, so a mistaken Done (which froze the page and spent the
-  // week's edit) can be found and reopened.
+  // week's page change) can be found and reopened.
   const finished = secondaryAll(model)
     .filter((i) => i.state.status === 'done' || i.state.status === 'ignored')
     .sort((a, b) => finishedAt(b).localeCompare(finishedAt(a)) || a.id.localeCompare(b.id))
@@ -1222,7 +1254,7 @@ function secondaryAction(id, body) {
     );
   }
   // The same two guards, with the same reply, as marking any page edit done (a frozen page, or this
-  // week's one page edit already made), so the page asks the same question for both. A finished or
+  // week's page change of that size already made), so the page asks the same question for both. A finished or
   // dismissed item is refused above with its own plain reason, before these.
   if (action === 'done' && cur?.status !== 'done' && body.override !== true) {
     const g = editGuards(model, item.page);

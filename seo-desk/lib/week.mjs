@@ -7,7 +7,7 @@ import crypto from 'node:crypto';
 import { readJson, writeJson } from './store.mjs';
 import { addDays, daysBetween, mondayOf, todayIso } from './dates.mjs';
 import { SITE } from '../../scripts/lib/change-log-core.mjs';
-import { eligibility, editThisWeek, recentEditText } from './lifecycle.mjs';
+import { eligibility, editThisWeek, recentEditText, editSizeOf, planRowSize, nextMonday } from './lifecycle.mjs';
 import { longDate, longRange, plain } from './text.mjs';
 import { groupChanges, competitorWorries } from './competitor-changes.mjs';
 import { readChanges, isBatchVerdict } from './changes.mjs';
@@ -141,7 +141,7 @@ const updatesText = (list) => {
 const WATCH_MAX = 5;
 //
 // A page the plan already has an open improvement for (plan.improve) is watched too: the plan decides
-// what happens to it, and it comes up as the week's page edit in turn. Only a real edit holds a page
+// what happens to it, and it comes up as one of the week's page changes in turn. Only a real edit holds a page
 // (hold: frozen, or 15 changed lines or more found in git): a one-line change that is merely waiting
 // for its verdict must not hide a real drop.
 // Whether a decaying page is only watched, and why, in plain words; null when it needs a look. The one
@@ -154,7 +154,7 @@ export function slipWatchOf(page, { frozen, recent, today, plan, dropKind = null
   const watch = hold
     ? `Edited on ${longDate(hold.since)}, so it is too early to judge. Look again on ${longDate(hold.until)}.`
     : row
-      ? `Your plan already lists a change for this page${plain(row.todo) ? ` (${plain(row.todo).replace(/[.\s]+$/, '')})` : ''}, so it comes up as the week's page edit in its turn.`
+      ? `Your plan already lists a change for this page${plain(row.todo) ? ` (${plain(row.todo).replace(/[.\s]+$/, '')})` : ''}, so it comes up as one of the week's page changes in its turn.`
       : dropKind === 'lost-demand'
         ? 'Its place held while its views fell, so fewer people may be searching for this. There may be nothing to fix.'
         : null;
@@ -446,6 +446,8 @@ export function oppCard(o, slot, frozen, today, opts = {}) {
     test: plain(o.test) || DEFAULT_TEST,
     page: o.page ?? null,
     isPageEdit: Boolean(o.isPageEdit),
+    // A page edit is big or small (lifecycle editSizeOf): it uses that slot of the week.
+    ...(o.isPageEdit ? { size: editSizeOf(o) } : {}),
     source: 'opportunity',
     oppId: o.id,
     eligibility: eligibility(o, frozen, today, opts),
@@ -478,9 +480,11 @@ function improveCard(row, frozen, today, opts = {}) {
     test: DEFAULT_TEST,
     page: row.page,
     isPageEdit: true,
+    // The plan row's own tag: BIG or SMALL (an untagged row is big).
+    size: planRowSize(row),
     source: 'plan',
     oppId: null,
-    eligibility: eligibility({ isPageEdit: true, page: row.page }, frozen, today, opts),
+    eligibility: eligibility({ isPageEdit: true, page: row.page, size: planRowSize(row) }, frozen, today, opts),
   };
 }
 
@@ -706,9 +710,13 @@ export function worryCard(w, frozen, today, opts = {}) {
     ...(w.hypothesis === false ? { hypothesis: false } : {}),
     page: w.page ?? null,
     isPageEdit: Boolean(w.isPageEdit),
+    // A worry's fix on a page (a slipping page, a change that reads worse) rewrites it: a big change.
+    ...(w.isPageEdit ? { size: 'big' } : {}),
     source: 'worry',
     oppId: w.oppId ?? null,
-    eligibility: w.isPageEdit ? eligibility({ isPageEdit: true, page: w.page }, frozen, today, opts) : OK_ELIGIBILITY,
+    eligibility: w.isPageEdit
+      ? eligibility({ isPageEdit: true, page: w.page, size: 'big' }, frozen, today, opts)
+      : OK_ELIGIBILITY,
     ...(w.waitUntil ? { waitUntil: w.waitUntil } : {}),
   };
 }
@@ -717,13 +725,18 @@ export function worryCard(w, frozen, today, opts = {}) {
 // the freeze rule; it is exported here too for the modules that import it from this one.
 export { editThisWeek };
 
-// The one line the week shows above the five once this week's page edit is used, instead of a card:
-// "This week's page edit is used (/page, 9 November). The next one can go in from 16 November." Null
-// while the week's edit is still unused.
-export function editStatusOf(frozen, today) {
-  const edit = editThisWeek(frozen, today);
-  if (!edit) return null;
-  return `This week's page edit is used (${edit.page}, ${longDate(edit.since)}). The next one can go in from ${longDate(addDays(mondayOf(today), 7))}.`;
+// The one line the week shows above the five once one of this week's two page change slots is used,
+// instead of a card for it: "This week's big change is used (/page, 23 November); the small one is still
+// open." When both are used, it says when the next ones can go in. Null while both slots are free.
+// recent: the git edits the freeze does not know (an edit of 15 lines or more uses the big slot).
+export function editStatusOf(frozen, today, { recent = null } = {}) {
+  const { big, small } = editThisWeek(frozen, today, { recent });
+  const at = (e) => `${e.page}, ${longDate(e.since)}${e.found === 'git' ? ', found in git' : ''}`;
+  if (big && small)
+    return `This week's big change (${at(big)}) and small change (${at(small)}) are both used. The next ones can go in from ${longDate(nextMonday(today))}.`;
+  if (big) return `This week's big change is used (${at(big)}); the small one is still open.`;
+  if (small) return `This week's small change is used (${at(small)}); the big one is still open.`;
+  return null;
 }
 
 const openWorkId = (w) => `open-${hash(w.text)}`;
@@ -803,6 +816,8 @@ export const BROKEN_KINDS = [
   'competitor-change',
 ];
 const BROKEN_MAX = 2;
+// The week's two page change slots, in the order they are filled.
+const EDIT_SLOTS = ['big', 'small'];
 const AUDIT_URGENT = ['critical', 'high'];
 const AUDIT_SETUP = ['critical', 'high', 'medium'];
 const SEVERITY_WORD = { critical: 'critical', high: 'high', medium: 'medium', low: 'low' };
@@ -814,16 +829,20 @@ export const WHY = {
   broken: 'It is broken, so it comes first.',
   post: 'It is the next post in your plan.',
   news: "You picked it for this week's Newsroom piece.",
-  pinned: 'You pinned it for this week, and its page can be edited now.',
-  planRow: 'It is the first open page improvement in your plan, and its page can be edited now.',
-  bestEdit: (measured) => `It is the best page edit that can go in this week: ${firstSentence(measured)}`,
+  // The week's two page changes say which slot they fill: "It is this week's big page change: ...".
+  pinned: (size) =>
+    `It is this week's ${size} page change: you pinned it for this week, and its page can be edited now.`,
+  planRow: (size) =>
+    `It is this week's ${size} page change: the first open ${size} page improvement in your plan, and its page can be edited now.`,
+  bestEdit: (size, measured) =>
+    `It is this week's ${size} page change: the best ${size} page edit that can go in now. ${firstSentence(measured)}`,
   verdict: (n) => `${n === 1 ? 'A past change can' : `${n} past changes can`} be read now.`,
   index: (n) =>
     `${n === 1 ? 'This page already has' : 'These pages already have'} enough links, so asking Google is the step left, and it is not a page edit.`,
-  links: "It is the best ranked page that needs links, and adding a link does not count as this week's page edit.",
+  links: "It is the best ranked page that needs links, and adding a link does not use this week's page changes.",
   openWork:
     'It is an open item in docs/seo/OPEN-WORK.md that is not held, settled, scheduled for later or waiting on you.',
-  auditSetup: "It is a setup fix from the technical audit, so it does not count as this week's page edit.",
+  auditSetup: "It is a setup fix from the technical audit, so it does not use this week's page changes.",
 };
 
 const listOf = (items) =>
@@ -862,7 +881,7 @@ function auditUrgentCard(audit) {
     title: `${n} technical audit ${n === 1 ? 'finding needs' : 'findings need'} fixing first`,
     measured: `The technical audit of ${longDate(todayIso(new Date(audit.startedAt)))} found ${count(n, 'finding', 'findings')} at critical or high. The worst is "${plain(worst.name)}" (${SEVERITY_WORD[worst.severity]}), on ${count(worst.pages, 'page', 'pages')}.`,
     action:
-      "Open Technical audit and fix the worst one first. A fix that edits a page's title or text counts as that week's one page edit; site-wide and server fixes do not.",
+      "Open Technical audit and fix the worst one first. A fix to a page's title or description uses that week's small page change, and more text on a page uses the big one; site-wide and server fixes use neither.",
     test: 'Judged by the next technical audit run.',
     page: null,
     isPageEdit: false,
@@ -898,11 +917,14 @@ function auditSetupCards(audit) {
 //   1. broken things (BROKEN_KINDS worries, and one card for the technical audit's critical and high
 //      findings), two at most;
 //   2. the plan's next unwritten post, then the Newsroom pieces the founder picked (at most two, never a
-//      page edit, so they never use the week's edit);
-//   3. the week's one live page edit, only while it is unused: a pinned one, else the plan's first open
-//      improve row, else the best eligible page edit opportunity. A slipping page qualifies only when it
-//      is a real worry (in `worries`, which holds no watched page). When the week's edit is used there
-//      is no card: editStatusOf gives the line the page prints instead;
+//      page edit, so they never use the week's page changes);
+//   3. the week's two live page changes, one big and one small (lifecycle editSizeOf; a plan row by its
+//      BIG or SMALL tag), each only while its slot is unused: a pinned one of that size, else the plan's
+//      first open row of that size, else the best eligible page edit opportunity of that size. Never the
+//      same page twice, never two pages the desk knows compete for the same search (`competing`), and
+//      never a page edited within 28 days. A slipping page qualifies only when it is a real worry (in
+//      `worries`, which holds no watched page). A used slot has no card: editStatusOf gives the line the
+//      page prints instead;
 //   4. a verdict card, only when a change is ready to judge now;
 //   5. tasks that are not page edits: one card asking Google to index the pages not on Google that have
 //      enough links, the best page that needs links, open work rows that are real tasks this week, and
@@ -914,6 +936,8 @@ function auditSetupCards(audit) {
 // technical audit ({startedAt, issues: [{id, name, severity, setup, pages}]}, worst first) or null.
 // pending is kept for the callers that still pass it; the next verdict date lives on the tile.
 // newsPicks: this week's picked Newsroom stories as cards (api/newsroom-model.mjs newsPicks).
+// competing: Map<page, Set<page>>, the pages the desk knows compete for one search (a split search, a
+// cluster conflict), from api/ext/insights.mjs competingPages.
 export function proposeTop5({
   plan,
   ranked = [],
@@ -929,14 +953,15 @@ export function proposeTop5({
   audit = null,
   indexRequests = new Map(),
   newsPicks = [],
+  competing = new Map(),
 }) {
   const opts = { recent };
   const ok = (o) => eligibility(o, frozen, today, opts).eligible;
   const open = (id) => available(id, items, today);
   const cards = [];
   // A card marked Done during this week stays in this week's list, shown done, so the week reads "1 of
-  // 4" and not "0 of 3". It holds its place: a done post is this week's post, a done page edit is this
-  // week's page edit.
+  // 4" and not "0 of 3". It holds its place: a done post is this week's post, a done plan improvement is
+  // this week's page change of its size.
   const weekStart = mondayOf(today);
   const doneThisWeek = (id) => items?.[id]?.status === 'done' && String(items[id].doneAt ?? '') >= weekStart;
   const keep = (id) => open(id) || doneThisWeek(id);
@@ -962,52 +987,74 @@ export function proposeTop5({
   //     edit. A pick marked Done (published) stays, so the week shows it done.
   for (const c of newsPicks.slice(0, 2)) add({ ...c, slot: 'newsroom', isPageEdit: false }, WHY.news);
 
-  // 3. The week's one live page edit, only while it is unused. A slipping page qualifies only when it
-  //    is a real worry; it then comes as that worry's card (the same id as its opportunity).
+  // 3. The week's two live page changes, one big and one small, each only while its slot is unused. A
+  //    slipping page qualifies only when it is a real worry; it then comes as that worry's card (the same
+  //    id as its opportunity).
   const slipWorry = new Map(
     worryList.filter((w) => w.kind === 'slipping-page' && w.oppId && !w.watch).map((w) => [w.oppId, w])
   );
   const qualifies = (o) => o.type !== 'slipping' || slipWorry.has(o.id);
-  // A plan page improvement marked Done this week stays as this week's page edit, shown done.
-  const doneRow = (plan?.improve ?? []).find((r) => doneThisWeek(`plan-improve-${r.page}`));
-  if (doneRow) add(improveCard(doneRow, frozen, today, opts), WHY.planRow);
-  else if (!editThisWeek(frozen, today)) {
-    const pinnedEdits = ordered.filter((o) => o.isPageEdit && pinned(o) && qualifies(o));
+  const asCard = (o) => {
+    const w = slipWorry.get(o.id);
+    return w
+      ? { ...worryCard(w, frozen, today, opts), slot: 'page-edit' }
+      : oppCard(o, 'page-edit', frozen, today, opts);
+  };
+  // The pages this week already holds: the pages edited in a used slot and the pages proposed below. A
+  // candidate is never one of them, nor a page the desk knows competes with one for the same search.
+  const used = editThisWeek(frozen, today, { recent });
+  const held = [used.big?.page, used.small?.page].filter(Boolean);
+  const clashes = (page) =>
+    held.some((p) => p === page || competing?.get(p)?.has(page) || competing?.get(page)?.has(p));
+  const free = (page) => !page || !clashes(page);
+  // The size a plan improvement was marked Done as (the founder's pick), else its row's tag.
+  const doneSize = (r) => editSizeOf({ size: items?.[`plan-improve-${r.page}`]?.size ?? planRowSize(r) });
+  for (const slot of EDIT_SLOTS) {
+    // A plan page improvement of this size marked Done this week stays as this week's change, shown done.
+    const doneRow = (plan?.improve ?? []).find((r) => doneSize(r) === slot && doneThisWeek(`plan-improve-${r.page}`));
+    if (doneRow) {
+      add({ ...improveCard(doneRow, frozen, today, opts), size: slot }, WHY.planRow(slot));
+      held.push(doneRow.page);
+      continue;
+    }
+    if (used[slot]) continue;
+    const fits = (o) => o.isPageEdit && editSizeOf(o) === slot && qualifies(o) && free(o.page);
+    const pinnedEdits = ordered.filter((o) => pinned(o) && fits(o));
     const pinnedOk = pinnedEdits.find(ok);
     const pinnedBlocked = pinnedEdits.find((o) => !ok(o));
     const row = (plan?.improve ?? []).find(
-      (r) => !r.done && open(`plan-improve-${r.page}`) && ok({ isPageEdit: true, page: r.page })
+      (r) =>
+        !r.done &&
+        planRowSize(r) === slot &&
+        open(`plan-improve-${r.page}`) &&
+        free(r.page) &&
+        ok({ isPageEdit: true, page: r.page, size: slot })
     );
-    const asCard = (o) => {
-      const w = slipWorry.get(o.id);
-      return w
-        ? { ...worryCard(w, frozen, today, opts), slot: 'page-edit' }
-        : oppCard(o, 'page-edit', frozen, today, opts);
-    };
     let editCard = null;
     let why = null;
     if (pinnedOk) {
       editCard = asCard(pinnedOk);
-      why = WHY.pinned;
+      why = WHY.pinned(slot);
     } else if (row) {
       editCard = improveCard(row, frozen, today, opts);
-      why = WHY.planRow;
+      why = WHY.planRow(slot);
     } else {
-      const best = ordered.find((o) => o.isPageEdit && qualifies(o) && ok(o));
+      const best = ordered.find((o) => fits(o) && ok(o));
       if (best) {
         editCard = asCard(best);
-        why = WHY.bestEdit(editCard.measured);
+        why = WHY.bestEdit(slot, editCard.measured);
       }
     }
-    if (editCard) {
-      if (!pinnedOk && pinnedBlocked) {
-        const e = eligibility(pinnedBlocked, frozen, today, opts);
-        editCard.note = e.recentEdit
-          ? `Pinned item: ${recentEditText(e.recentEdit)}`
-          : `Pinned item is frozen until ${longDate(e.from)}`;
-      }
-      add(editCard, why);
+    if (!editCard) continue;
+    if (!pinnedOk && pinnedBlocked) {
+      const e = eligibility(pinnedBlocked, frozen, today, opts);
+      editCard.note = e.recentEdit
+        ? `Pinned item: ${recentEditText(e.recentEdit)}`
+        : `Pinned item is frozen until ${longDate(e.from)}`;
     }
+    // The card fills this slot, whatever size its source would give it.
+    add({ ...editCard, size: slot }, why);
+    if (editCard.page) held.push(editCard.page);
   }
 
   // 4. A verdict card, only when a change is ready to judge now.

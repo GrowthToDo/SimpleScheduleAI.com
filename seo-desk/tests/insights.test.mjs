@@ -1588,14 +1588,14 @@ test('secondary keywords: done is a page edit, so it freezes the page and a froz
   assert.match(other.eligibility.text, /^Leave it until 8 December/);
   assert.equal(other.frozenUntil, '2026-12-08');
   assert.equal(other.frozenUntilText, '8 December');
-  // A page that is not frozen still waits for next week: this week's one page edit is made (K2).
+  // A page that is not frozen still waits for next week: this week's big page change is made (K2).
   assert.equal(secOf(after, 'overtime pay rules').eligibility.eligible, false);
-  assert.match(secOf(after, 'overtime pay rules').eligibility.text, /^Can be edited from /);
-  // Another page edit this week needs an override: the rule is one a week.
+  assert.match(secOf(after, 'overtime pay rules').eligibility.text, /^Next big page change from /);
+  // Another big page change this week needs an override: the rule is one big and one small a week.
   const second = secOf(after, 'overtime pay rules');
   const refused = await post_(`/api/insights/secondary-keywords/${second.id}`, { action: 'done' });
   assert.equal(refused.status, 409);
-  assert.match(refused.error, /one a week/);
+  assert.match(refused.error, /one big and one small page change a week/);
   assert.equal(
     (await post_(`/api/insights/secondary-keywords/${second.id}`, { action: 'done', override: true })).status,
     200
@@ -2256,6 +2256,30 @@ test('B3: cannibalization lists real splits only; pages shown together sit in th
   // No page ranks: in neither list.
   assert.ok(!r.items.some((x) => x.query === 'nobody ranks search'));
   assert.ok(!r.together.some((x) => x.query === 'nobody ranks search'));
+});
+
+test('competingPages: the pages of a split search compete both ways; a page shown together does not', async () => {
+  useCan();
+  const { competingPages } = await import('../lib/api/ext/insights.mjs');
+  const m = competingPages(buildModel());
+  assert.ok(m.get('/blog/alpha-guide')?.has('/blog/beta-notes'));
+  assert.ok(m.get('/blog/beta-notes')?.has('/blog/alpha-guide'));
+  for (const [page, set] of m) assert.ok(!set.has(page), `${page} never competes with itself`);
+});
+
+test('competingPairs: a cluster conflict pairs the page whose target covers the search with the page it ranks on', async () => {
+  const { competingPairs } = await import('../lib/api/ext/insights.mjs');
+  const m = competingPairs(
+    [['/blog/one-guide', '/blog/two-notes', '/blog/three-tips']],
+    [
+      ['/blog/target-page', '/blog/ranking-page'],
+      ['/blog/same', '/blog/same'],
+    ]
+  );
+  assert.deepEqual([...m.get('/blog/one-guide')].sort(), ['/blog/three-tips', '/blog/two-notes']);
+  assert.ok(m.get('/blog/target-page').has('/blog/ranking-page'));
+  assert.ok(m.get('/blog/ranking-page').has('/blog/target-page'));
+  assert.equal(m.has('/blog/same'), false, 'a page never competes with itself');
 });
 
 test('B2 and W3: a split counts real searches, and only pages with 10 or more views compete', async () => {

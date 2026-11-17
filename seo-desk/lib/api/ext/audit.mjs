@@ -35,9 +35,9 @@ function previousOf(startedAt) {
   return next ? loadAudit(next.startedAt) : null;
 }
 
-// The standing line beside the audit: a fix that edits a live page uses up the week's one edit.
+// The standing line beside the audit: a fix that edits a live page uses one of the week's page changes.
 export const RULE_LINE =
-  "Fixing a title or the text of a page counts as that week's one page edit. Site-wide and server fixes do not.";
+  "Fixing a page's title or description uses that week's small page change, and more text on a page uses the big one. Site-wide and server fixes use neither.";
 
 // "This run was stopped early. 40 of 152 pages were checked." Null for a run that finished.
 // pagesPlanned is missing on runs saved before it was recorded; the live page count stands in.
@@ -51,15 +51,17 @@ function stoppedNote(run, livePages) {
 }
 
 // A page row with its hold from the one eligibility function (model.mjs holdFields: the freeze or a
-// git edit), never worked out here. The week's one page edit is the issue's own line (editsPage).
+// git edit), never worked out here. The week's page changes are the issue's own line (editsPage).
 const withFreeze = (model, p) => ({ ...p, ...holdFields(model, p.page) });
 
 // Said once at the top of a run made before a check's rule changed (checks.mjs RULE_CHANGED).
 export const olderRulesNote = (n) =>
   `This run used older rules for ${n} ${n === 1 ? 'check' : 'checks'}. Run the audit again.`;
-// Said on a finding of such a check, in place of whether it counts as the week's page edit.
+// Said on a finding of such a check, in place of whether it uses one of the week's page changes.
 export const OLDER_RULE_LINE = 'This was found with an older rule. Run the audit again before acting on it.';
-const EDIT_WORDS = / ?This counts as that week's one page edit\.| ?This does not count as a page edit\./g;
+// The old words (one page edit a week) are matched too, for runs saved before 2026-11-17.
+const EDIT_WORDS =
+  / ?This counts as that week's one page edit\.| ?This uses one of that week's page changes: the small one for a title or description, the big one for more text\.| ?This does not count as a page edit\./g;
 
 // An issue as the page reads it: whether its fix edits a live page, and each page's freeze. A finding
 // of a check whose rule changed after the run (olderRule) does not say it counts as the week's page

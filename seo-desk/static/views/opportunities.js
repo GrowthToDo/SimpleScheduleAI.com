@@ -180,7 +180,7 @@ async function renderList(el, ctx) {
     const sorter = SORTS.find((s) => s.key === state.sort) ?? SORTS[0];
     return (
       data.items
-        // Only pages to leave alone are hidden. An item that merely waits for next week's page edit
+        // Only pages to leave alone are hidden. An item that merely waits for next week's page changes
         // stays in the list (after the ones that can be worked on now), for planning the next week.
         .filter((o) => !state.free || !(o.held && o.heldKind === 'page'))
         .filter(
@@ -356,7 +356,7 @@ async function renderList(el, ctx) {
       const ok = await ctx.confirmBox({
         title: `Mark ${fmt.plural(chosen.length, 'item', 'items')} done?`,
         body: edits.length
-          ? `${fmt.plural(edits.length, 'of them is a live page change', 'of them are live page changes')}. Each of those pages is frozen for 28 days, until ${fmt.date(fmt.isoPlus(28))}, and gets its before and after verdict about ${fmt.date(fmt.isoPlus(30))}:\n${[...new Set(edits.map((o) => o.page))].join('\n')}\n\n${edits.length > 1 ? 'The rule is one live page edit a week, so the desk holds back any page edit after the first one this week, and any frozen page, and lists them. ' : ''}Only do this once the changes are live.`
+          ? `${fmt.plural(edits.length, 'of them is a live page change', 'of them are live page changes')}. Each of those pages is frozen for 28 days, until ${fmt.date(fmt.isoPlus(28))}, and gets its before and after verdict about ${fmt.date(fmt.isoPlus(30))}:\n${[...new Set(edits.map((o) => o.page))].join('\n')}\n\n${edits.length > 1 ? 'The rule is one big and one small page change a week, so the desk holds back any page edit past those two this week, and any frozen page, and lists them. ' : ''}Only do this once the changes are live.`
           : 'None of them changes a live page, so nothing gets frozen.',
         confirmLabel: 'Mark them done',
       });
@@ -364,8 +364,8 @@ async function renderList(el, ctx) {
     }
     let okCount = 0;
     const failed = [];
-    // Page edits the server held back under the one edit a week rule (a frozen page or a second
-    // edit this week). Each is checked on its own, in order, with no override.
+    // Page edits the server held back under the weekly page change rule (a frozen page, or this
+    // week's change of that size already made). Each is checked on its own, in order, with no override.
     const heldBack = [];
     for (const o of chosen) {
       try {
@@ -377,7 +377,7 @@ async function renderList(el, ctx) {
       }
     }
     const held = heldBack.length
-      ? ` ${fmt.plural(heldBack.length, 'page edit was', 'page edits were')} held back by the one edit a week rule: ${heldBack
+      ? ` ${fmt.plural(heldBack.length, 'page edit was', 'page edits were')} held back by the weekly page change rule: ${heldBack
           .slice(0, 3)
           .map((o) => o.page ?? o.title)
           .join(

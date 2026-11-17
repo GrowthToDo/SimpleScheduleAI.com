@@ -896,6 +896,14 @@ button.tile:hover {
   width: auto;
 }
 
+/* The big or small pick beside Done on a page edit card: the height of a small button. */
+.select.size-pick {
+  min-height: 30px;
+  padding: 4px 8px;
+  font-size: 13px;
+  max-width: 100%;
+}
+
 textarea.input {
   min-height: 96px;
   resize: vertical;

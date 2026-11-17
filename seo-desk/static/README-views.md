@@ -346,22 +346,27 @@ story is a card of slot `newsroom` ("Newsroom piece"); its Remove from this week
 ## Card rules worth knowing
 
 - A week card's `why` (why it is in this week's list) is the first fact, "Why this week". There is no
-  card for a used week edit: the week page prints the server's `editStatus` line above the priorities.
+  card for a used slot (big or small): the week page prints the server's `editStatus` line above the
+  priorities. A page change card carries `size` (big or small) and its rank note says "Big page change"
+  or "Small page change".
 - A card with `leaveIt: {until, untilText}` (a watched worry, or a Decay card of the lost demand kind)
   has Leave it as its main button: it sends `snooze` with that date, records no page edit and freezes
-  nothing. Done stays, not as the main button, and its confirm adds that it counts as this week's one
-  page edit. The watched list on This week carries the same Leave it button.
+  nothing. Done stays, not as the main button, and its confirm says which of this week's page changes
+  it uses. The watched list on This week carries the same Leave it button.
+- A page edit card shows a small pick beside Done, "This was a big change" or "This was a small change",
+  set to the card's `size`. Done sends the pick as `size`, and the week counts that slot.
 - Done on a page that is still frozen: the server answers 409 with `frozen: {page, since, until,
 sinceText, untilText}` (and `frozenPages`, every frozen page when one Done edits several, as a split
   search folded into one does); `card.js` then asks a second time, plainly, naming each, and resends with
   `override: true`. `ctx.api` errors carry the whole reply as `err.data` for this.
-- Done on a page edit when this week's page edit is already dated: 409 with `secondThisWeek:
-{page, date, dateText}`; `card.js` asks "You already made this week's page edit on 9 November.
-  The rule is one a week. Mark this one done anyway?" (`confirmSecondEdit`), then resends with
+- Done on a page edit when this week's change of that size is already dated: 409 with `secondThisWeek:
+{page, date, dateText, size}`; `card.js` asks "You already made this week's big page change on 9
+  November. The rule is one big and one small page change a week. Mark this one done anyway?"
+  (`confirmSecondEdit`), then resends with
   `override: true`. "I edited a page" on Did it work does the same for the edit note. Bulk Done on
   Opportunities sends each item without the override and lists the page edits that were held back.
 - The technical audit shows the server's `ruleLine`, a "Frozen until 7 December" chip on frozen
-  pages and, per issue, whether its fix is the week's page edit (`editsPage`). Link suggestions show
+  pages and, per issue, whether its fix uses one of the week's page changes (`editsPage`). Link suggestions show
   the same chip and warning when the page the link goes on is frozen (`fromFrozenUntil`).
 - Reopen on a finished page change asks first, because the page stops being frozen.
 - Charts: `lineChart` breaks the line at missing days only for a daily series (points usually one

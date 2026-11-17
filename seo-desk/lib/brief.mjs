@@ -41,7 +41,9 @@ export function brief(card, { frozen = new Map(), hold = null } = {}) {
     );
   }
   if (card.isPageEdit || card.slot === 'page-edit') {
-    rules.push('One live page edit a week, and never the same page inside 28 days.');
+    rules.push(
+      'One big page change (a new or rewritten section) and one small one (a title, meta description, heading, single line or link) a week, on different pages, and never the same page inside 28 days.'
+    );
     if (hold && !hold.eligible && hold.from) {
       rules.push(`${plain(hold.text)}. Do not edit this page before ${longDate(hold.from)}.`.replace(/\.\. /, '. '));
     } else if (!hold) {

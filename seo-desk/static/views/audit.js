@@ -577,15 +577,15 @@ function frozenChip(h, p) {
     : null;
 }
 
-// Whether the fix is a page edit (the week's one) or a site or server change, and which of its
+// Whether the fix is a page edit (one of the week's page changes) or a site or server change, and which of its
 // pages are frozen.
 export function editLineText(i) {
-  // A finding of a check whose rule changed after the run says nothing about the week's edit.
+  // A finding of a check whose rule changed after the run says nothing about the week's page changes.
   if (i.olderRule) return 'This was found with an older rule. Run the audit again before acting on it.';
   const frozen = (i.pages ?? []).filter((p) => p.frozenUntilText).length;
   const first = i.editsPage
-    ? "This fix edits the page, so it counts as that week's one page edit."
-    : "This fix does not count as the week's page edit.";
+    ? "This fix edits the page, so it uses one of that week's page changes: the small one for a title or description, the big one for more text."
+    : "This fix does not use the week's page changes.";
   if (!frozen) return first;
   const which = frozen === 1 ? '1 of these pages is' : `${frozen} of these pages are`;
   return i.editsPage

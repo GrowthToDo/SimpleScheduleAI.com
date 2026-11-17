@@ -68,7 +68,7 @@ import {
 import { listAudits, loadAudit } from '../audit/run.mjs';
 import { CHECKS, severityOf, sortIssues } from '../audit/checks.mjs';
 import { n0, pct, sumRange } from './fmt.mjs';
-import { ownership, decayItems } from './ext/insights.mjs';
+import { ownership, decayItems, competingPages } from './ext/insights.mjs';
 import { newsroomCards, newsPicks, weekCardOf } from './newsroom-model.mjs';
 
 const count = (n, one, many) => `${n} ${n === 1 ? one : many}`;
@@ -853,6 +853,8 @@ export function weekModel(model) {
       through: model.snapObjs.gsc?.through ?? null,
       audit: auditSummary(),
       newsPicks: newsPicks(model),
+      // Two pages that compete for one search are never this week's two page changes together.
+      competing: competingPages(model),
     });
     const opts = { recent };
     const pool = new Map();
@@ -870,16 +872,17 @@ export function weekModel(model) {
 }
 
 // A chosen or locked page edit card, brought up to date: the freeze, a git edit the freeze does not
-// know and the this-week check are worked out again from the current data (lifecycle eligibility, the
+// know and the this-week check (the slot of the card's size) are worked out again from the current data (lifecycle eligibility, the
 // same function every list uses), so a week edit dated by another route (a plan row, an edit note,
-// another card) shows on it. A card whose own item is the week's edit is not held back by the week
+// another card) shows on it. A card whose own item is one of the week's edits is not held back by the week
 // rule, and a card that edits no live page is left as it is.
 function freshen(model, card) {
   // A card that only reports (a verdict) has no chip, even one locked before.
   if (card.source === 'verdict') return { ...card, eligibility: null, hypothesis: false };
   if (!card.isPageEdit || !card.page) return card;
   const own = itemOf(model, keyOfCard(card.id))?.status === 'done';
-  const e = eligibility({ isPageEdit: true, page: card.page }, model.frozen, model.today, {
+  // The card's own size decides which of the week's two slots it waits for.
+  const e = eligibility({ isPageEdit: true, page: card.page, size: card.size }, model.frozen, model.today, {
     recent: model.recent,
     week: !own,
   });
@@ -887,7 +890,7 @@ function freshen(model, card) {
   return {
     ...card,
     eligibility: e,
-    weekEditDone: w ? { page: w.page, date: w.date, dateText: longDate(w.date) } : null,
+    weekEditDone: w ? { page: w.page, date: w.date, dateText: longDate(w.date), size: w.size } : null,
   };
 }
 
@@ -1059,8 +1062,9 @@ export function weekView(model) {
     ...(warnings.length ? { warnings } : {}),
     weekOf,
     weekLabel: `Week of ${longDate(weekOf)}`,
-    // Once this week's page edit is used, one line says so (and when the next can go in) instead of a card.
-    editStatus: editStatusOf(model.frozen, model.today),
+    // Once one of this week's two page change slots (big, small) is used, one line says which, instead
+    // of a card.
+    editStatus: editStatusOf(model.frozen, model.today, { recent: model.recent }),
     // Things already handled or with nothing to learn, said once in plain words instead of as cards:
     // changes due for a verdict that cannot be read, and pages Google was already asked to index.
     statusLines: [
@@ -1325,24 +1329,24 @@ export function opportunitiesView(model, filters, { insightCounts = null } = {})
     // The site's own click rates the extra clicks estimates rest on (lib/upside.mjs clickRates).
     clickRates: model.clickRates ?? null,
     // What the "Free to edit" filter (on by default) hides from these items: items on pages to leave
-    // alone, and items held only because this week's one page edit is used. {page, week, text}.
+    // alone, and items held only because this week's page change of their size is used. {page, week, text}.
     held: heldNoteOf(model, items),
   };
 }
 
 // The line under the Free to edit filter: "34 more are on pages to leave alone, and 20 more wait for
-// next week's page edit, from 23 November." null when nothing is held.
+// next week's page changes, from 23 November." null when nothing is held.
 export function heldNoteOf(model, items) {
   const page = items.filter((o) => o.held && o.heldKind === 'page').length;
   const week = items.filter((o) => o.held && o.heldKind === 'week').length;
-  // Only the items on pages to leave alone are hidden. The ones that wait for next week's page edit
+  // Only the items on pages to leave alone are hidden. The ones that wait for next week's page changes
   // stay in the list, after the ones that can be worked on now, so next week can be planned.
   const parts = [
     page
       ? `${count(page, 'more is', 'more are')} on pages to leave alone and ${page === 1 ? 'is' : 'are'} hidden.`
       : null,
     week
-      ? `${count(week, 'item in this list waits', 'items in this list wait')} for next week's page edit, from ${longDate(addDays(mondayOf(model.today), 7))}.`
+      ? `${count(week, 'item in this list waits', 'items in this list wait')} for next week's page changes (one big, one small), from ${longDate(addDays(mondayOf(model.today), 7))}.`
       : null,
   ].filter(Boolean);
   return { page, week, text: parts.length ? parts.join(' ') : null };

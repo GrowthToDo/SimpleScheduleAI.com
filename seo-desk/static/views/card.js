@@ -33,9 +33,11 @@
 // From the item itself: `why` (a week card: why it is in this week's list) shows first in the facts,
 // and `leaveIt` ({until, untilText}: a card whose own advice is to leave its page alone) makes Leave it
 // the main button. Leave it snoozes the item until that date and records no page edit and no freeze;
-// Done stays, not as the main button, and its confirm says it counts as this week's page edit.
+// Done stays, not as the main button, and its confirm says which of this week's page changes it uses.
+// A page edit card has a small pick beside Done, "This was a big change" or "This was a small change",
+// set to the card's own `size`; Done sends the pick as `size`, and the week counts that slot.
 //
-// postAction(ctx, path, body) sends one action with the one-edit-a-week checks (post-action.js): a
+// postAction(ctx, path, body) sends one action with the weekly page change checks (post-action.js): a
 // 409 with `frozen`, `frozenPages` or `secondThisWeek` asks again, plainly, then resends with
 // override; any other refusal shows the server's sentence. Any page that marks a page edit done
 // goes through it.
@@ -87,6 +89,7 @@ export function normalize(item, oppById) {
       test: item.test ?? opp?.test ?? null,
       page: item.page,
       isPageEdit: item.isPageEdit,
+      size: item.size ?? opp?.size ?? (item.isPageEdit ? 'big' : null),
       eligibility: item.eligibility ?? opp?.eligibility ?? null,
       waitUntilText: item.waitUntilText ?? null,
       leaveIt: item.leaveIt ?? null,
@@ -118,6 +121,7 @@ export function normalize(item, oppById) {
       test: item.test,
       page: item.page,
       isPageEdit: item.isPageEdit,
+      size: item.size ?? opp?.size ?? (item.isPageEdit ? 'big' : null),
       eligibility: item.eligibility,
       opp,
       oppId: item.oppId ?? null,
@@ -149,6 +153,7 @@ export function normalize(item, oppById) {
     test: item.test,
     page: item.page,
     isPageEdit: item.isPageEdit,
+    size: item.size ?? (item.isPageEdit ? 'big' : null),
     eligibility: item.eligibility,
     opp: item,
     oppId: item.id,
@@ -173,7 +178,8 @@ function statusChip(state, fmt) {
   return null;
 }
 
-// The eligibility chip is about the one live-page edit a week and the 28-day freeze, so a card that
+// The eligibility chip is about the week's two live page changes (one big, one small) and the 28-day
+// freeze, so a card that
 // edits no page (a setup task such as checking a page in Bing Webmaster Tools) shows none.
 export const showsEligibility = (n) => Boolean(n?.eligibility) && n.isPageEdit !== false;
 
@@ -227,7 +233,7 @@ export function priorityChip(h, priority, title = null) {
 // here for the pages that already import them from this module.
 export { secondEditText, confirmSecondEdit, frozenBox };
 
-// Sends one action through the one-edit-a-week checks (see post-action.js).
+// Sends one action through the weekly page change checks (see post-action.js).
 export const postAction = (ctx, path, body) => sendAction(ctx, path, body);
 
 const itemPath = (id) => `/api/item/${encodeURIComponent(id)}`;
@@ -279,14 +285,18 @@ const donePagesOf = (n, options) =>
   options.editPages ?? n.opp?.editPages ?? n.editPages ?? (n.isPageEdit && n.page ? [n.page] : []);
 
 // The confirm before Done: it names every page the Done edits, or says no page edit is recorded.
-// weekEdit: true adds that the Done counts as this week's one page edit (a card whose own advice is to
-// leave the page alone, where Leave it is the main button).
-export function doneConfirmText(pages, { frozenUntil, verdictAbout, isPageEdit = true, weekEdit = false }) {
+// size: 'big' or 'small', the slot of this week's page changes the Done uses (said when given).
+// weekEdit: true adds that the Done counts as one of this week's page changes (a card whose own advice is
+// to leave the page alone, where Leave it is the main button).
+export function doneConfirmText(
+  pages,
+  { frozenUntil, verdictAbout, isPageEdit = true, weekEdit = false, size = null }
+) {
   if (!pages.length) {
     return {
       title: 'Mark this done?',
       body: isPageEdit
-        ? 'This records no page edit, so no page is frozen and this week’s one page edit is not used.'
+        ? 'This records no page edit, so no page is frozen and neither of this week’s page changes is used.'
         : 'This changes no live page, so nothing is frozen.',
       confirmLabel: 'Yes, mark it done',
     };
@@ -299,12 +309,35 @@ export function doneConfirmText(pages, { frozenUntil, verdictAbout, isPageEdit =
       `This records today as the day ${list} changed.\n\n` +
       `${one ? 'The page is' : 'Each of these pages is'} then frozen for 28 days, until ${frozenUntil}, so no other change goes on ${one ? 'it' : 'them'}. ` +
       `${one ? 'Its' : 'Their'} before and after verdict is scheduled for about ${verdictAbout}.\n\n` +
-      (weekEdit
-        ? "This counts as this week's one page edit. To leave the page alone instead, press Leave it.\n\n"
-        : '') +
+      (size ? `It uses this week's ${size} page change.\n\n` : '') +
+      (weekEdit ? 'To leave the page alone instead, press Leave it.\n\n' : '') +
       'Only press this once the change is live on the site.',
     confirmLabel: 'Yes, mark it done',
   };
+}
+
+// The size of the change a Done records: the founder's pick beside Done, else the card's own size.
+export const sizePicked = (n) => (n?.sizePick === 'small' || n?.sizePick === 'big' ? n.sizePick : (n?.size ?? 'big'));
+
+// The pick beside Done: was this a big change (a new or rewritten section) or a small one (a title, meta
+// description, heading, a single line or link)? It starts at the card's own size.
+function sizePick(n, h) {
+  const current = sizePicked(n);
+  const opt = (value, label) => h('option', { value, selected: current === value }, label);
+  return h(
+    'select',
+    {
+      class: 'select size-pick',
+      'aria-label': 'Size of this change',
+      title:
+        'A small change is a title, meta description, heading, a single line or a link. A big change is a new or rewritten section.',
+      onchange: (e) => {
+        n.sizePick = e.currentTarget.value;
+      },
+    },
+    opt('big', 'This was a big change'),
+    opt('small', 'This was a small change')
+  );
 }
 
 async function doDone(n, ctx, options, anchor = null, picked = undefined) {
@@ -329,11 +362,13 @@ async function doDone(n, ctx, options, anchor = null, picked = undefined) {
         verdictAbout: fmt.date(fmt.isoPlus(30)),
         isPageEdit: Boolean(n.isPageEdit),
         weekEdit: Boolean(n.leaveIt),
+        size: pages.length ? sizePicked(n) : null,
       })
     );
     if (!ok) return;
   }
-  await runAction(n, ctx, options, 'done', picked ? { page: picked } : {});
+  const size = pages.length || n.isPageEdit ? sizePicked(n) : null;
+  await runAction(n, ctx, options, 'done', { ...(picked ? { page: picked } : {}), ...(size ? { size } : {}) });
 }
 
 // Leave it: snoozes the item until its look-again date. It records no page edit and freezes nothing.
@@ -470,6 +505,7 @@ function actionButtons(n, ctx, options) {
   if ((s === 'new' || s === 'came-back') && offer('start') && !n.held)
     out.push(btn('Mark as started', () => runAction(n, ctx, options, 'start')));
   if (s !== 'done' && s !== 'ignored') {
+    if (offer('done') && n.isPageEdit) out.push(sizePick(n, h));
     if (offer('done'))
       out.push(
         btn(
