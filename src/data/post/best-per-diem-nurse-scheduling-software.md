@@ -562,7 +562,7 @@ Competency requirements for the unit are applied before a per diem nurse is offe
 
 <div class="not-prose my-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 dark:border-amber-400 px-6 py-5">
   <p class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-2">Our Take</p>
-  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Per diem coverage at a Critical Access Hospital is structural, not supplemental, so the feature that decides fit is a callout list ranked by overtime risk, not just an availability calendar. That ranking, plus automatic CMS documentation of every per diem shift, is why SimpleScheduleAI is our pick for a per diem-heavy CAH roster. The self-serve tools here are not wrong choices, though: if your nurse manager has the protected time to keep availability data current and check overtime by hand, Aladtec covers similar ground. Ask TCP for a quote, since its price is not published. The honest deciding question is not which tool has the most features, it is how much unprotected admin time the manager actually has each week.</p>
+  <p class="text-sm text-slate-800 dark:text-slate-200 leading-relaxed m-0">Per diem coverage at a Critical Access Hospital is structural, not supplemental, so the feature that decides fit is a callout list ranked by overtime risk, not just an availability calendar. That ranking, plus an audit trail that records every per diem shift filled through a callout, is why SimpleScheduleAI is our pick for a per diem-heavy CAH roster. The self-serve tools here are not wrong choices, though: if your nurse manager has the protected time to keep availability data current and check overtime by hand, Aladtec covers similar ground. Ask TCP for a quote, since its price is not published. The honest deciding question is not which tool has the most features, it is how much unprotected admin time the manager actually has each week.</p>
 </div>
 
 ## What to Do This Week
@@ -579,7 +579,7 @@ Competency requirements for the unit are applied before a per diem nurse is offe
 
 <div class="not-prose my-12 rounded-xl bg-primary/5 border border-primary/20 px-8 py-10 text-center">
   <p class="text-lg font-semibold text-default mb-2">Per diem scheduling built for Critical Access Hospitals</p>
-  <p class="text-muted text-sm mb-6">SimpleScheduleAI generates replacement call lists that cross-reference per diem availability with real-time overtime tracking. CMS documentation captures every per diem shift automatically. Built for rosters where per diem nurses are essential, not supplemental.</p>
+  <p class="text-muted text-sm mb-6">SimpleScheduleAI ranks replacement call lists by per diem availability and each nurse's scheduled hours against the 40-hour overtime threshold. Every per diem shift filled through a callout goes into the audit trail. Built for rosters where per diem nurses are essential, not supplemental.</p>
   <a href="/how-it-works" class="inline-block bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
 </div>

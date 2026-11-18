@@ -134,7 +134,7 @@ For deeper coverage of any one option in the table, see our roundups on [nurse s
 
 ## Is Self-Serve Software or a Managed Service Right for Your Hospital?
 
-Self-serve software is right when the hospital has a dedicated scheduler or a nurse manager with protected administrative hours and IT support. A managed service is right when the nurse manager takes clinical shifts, the hospital has only limited IT, and CMS documentation is a manual pre-survey burden. The deciding variable is the operator's available time, not the feature list.
+Self-serve software is right when the hospital has a dedicated scheduler or a nurse manager with protected administrative hours and IT support. A managed service is right when the nurse manager takes clinical shifts and the hospital has only limited IT. The deciding variable is the operator's available time, not the feature list.
 
 This is the question that should be settled before any demo. Self-serve software, including the platforms in the table, reduces scheduling time but does not remove the work. The nurse manager still builds the schedule, still runs the overtime check during a callout, and still maintains the configuration as staff and policy change.
 
@@ -148,7 +148,7 @@ SimpleScheduleAI is an AI-native, human-verified nurse scheduling service built 
 
 It is not the right fit for every hospital, and the limitation matters. SimpleScheduleAI does not include a nurse-facing self-service mobile app for shift swaps or availability submission by default, and real-time direct schedule edits route through the service rather than happening instantly in a self-service interface. A hospital that requires nurse self-service or instant manager-side edits should evaluate self-serve platforms first.
 
-Where it fits is the specific case this guide describes: a 25-bed Texas CAH with only limited IT, no dedicated scheduler, and a nurse manager on clinical shifts who needs FLSA overtime and CMS documentation handled without configuration work. For how the automation produces the drafts, see [AI nurse scheduling](/ai-nurse-scheduling). Watch the AI build a schedule and generate a ranked callout replacement list in the [interactive simulator](/simulator).
+Where it fits is the specific case this guide describes: a 25-bed Texas CAH with only limited IT, no dedicated scheduler, and a nurse manager on clinical shifts who needs overtime checked and every schedule change recorded without configuration work. SimpleScheduleAI does not produce CMS-formatted reports; it keeps an audit trail of every change and sends it on request. For how the automation produces the drafts, see [AI nurse scheduling](/ai-nurse-scheduling). Watch the AI build a schedule and generate a ranked callout replacement list in the [interactive simulator](/simulator).
 
 Related operational guides: [How Small Rural Hospitals Without an IT Department Manage Nurse Scheduling](/blog/nurse-scheduling-no-it-department-rural-hospital) and [Self-Scheduling Problems at a Critical Access Hospital](/blog/self-scheduling-problems-critical-access-hospital).
 
@@ -190,7 +190,7 @@ Related operational guides: [How Small Rural Hospitals Without an IT Department 
 <div class="not-prose mt-10 rounded-xl bg-primary/5 border border-primary/20 px-8 py-7 flex flex-col gap-4">
   <div>
     <p class="text-lg font-bold text-default dark:text-blue-200">Hospital staff scheduling, run for you</p>
-    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI's AI builds your nurse schedules and our team checks them, maintains CMS §485.635 documentation, and delivers ranked callout replacement lists in under 2 minutes. Built for Texas Critical Access Hospitals with only limited IT and a nurse manager who also takes clinical shifts.</p>
+    <p class="text-muted dark:text-slate-300 mt-1">SimpleScheduleAI's AI builds your nurse schedules and our team checks them, records every schedule change in an audit trail, and delivers ranked callout replacement lists in under 2 minutes. Built for Texas Critical Access Hospitals with only limited IT and a nurse manager who also takes clinical shifts.</p>
   </div>
   <a href="/how-it-works" class="inline-block self-start rounded-lg bg-primary px-6 py-3 text-white font-semibold hover:bg-secondary transition-colors">See how it works →</a>
   <p class="mt-4 mb-0 text-sm"><a href="https://cal.com/gautham-8bdvdx/30min" class="text-primary underline">Book a call with our team →</a></p>
@@ -216,7 +216,7 @@ Scheduling software gives the nurse manager tools to build schedules herself. A 
 
 **Does SimpleScheduleAI replace our scheduling spreadsheets?**
 
-Yes. The nurse manager submits the current roster in Excel once, then receives three complete schedule drafts inside two weeks and selects one. The spreadsheet becomes the input, not the working tool. Callout replacement and CMS §485.635 documentation are handled by the service rather than in the spreadsheet.
+Yes. The nurse manager submits the current roster in Excel once, then receives three complete schedule drafts inside two weeks and selects one. The spreadsheet becomes the input, not the working tool. Callout replacement and the record of every schedule change are handled by the service rather than in the spreadsheet.
 
 _[Pradeep Pandey](/about/pradeep-pandey) is the co-founder of SimpleScheduleAI. He serves as Deputy General Manager of Operations at Apollo Hospitals and holds an MBA from IIM Trichy (Operations and Marketing). His work focuses on workforce optimization and scheduling operations for small and rural hospitals._
 [LinkedIn →](https://www.linkedin.com/in/pradeep-pandeyji/)

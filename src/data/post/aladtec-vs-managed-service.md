@@ -32,7 +32,7 @@ This guide compares the two models on the operational dimensions that decide the
 ## Key Takeaways
 
 - Aladtec is a scheduling software platform, and TCP now markets it to public safety agencies rather than hospitals. The nurse manager still builds every schedule, checks every callout for overtime risk, and maintains all configuration as staff changes. The software makes those tasks faster, but the tasks do not go away.
-- A managed scheduling service is a different product category. The vendor builds the schedule, manages callout ranking, and maintains compliance documentation. The nurse manager reviews and approves rather than builds.
+- A managed scheduling service is a different product category. The vendor builds the schedule, manages callout ranking, and keeps a record of every schedule change. The nurse manager reviews and approves rather than builds.
 - For a Critical Access Hospital (CAH) nurse manager covering 2-3 clinical shifts per week, spending 4-6 hours per week on scheduling versus 1-2 hours is a real operational gap. Those 3-4 recovered hours go directly to patient care.
 - Aladtec wins for organizations that want direct control over the scheduling process and have an administrator with bandwidth to manage it. SimpleScheduleAI wins for CAH nurse managers who need the scheduling overhead eliminated, not reduced.
 - The comparison is not about which software is better. It is about which model fits the operational reality of a 25-bed hospital.
@@ -357,12 +357,11 @@ A managed scheduling service is the right choice when the scheduling burden fall
 
 The typical CAH nurse manager at a 25-bed Texas hospital is responsible for: direct patient care (2-3 shifts per week), staff supervision, quality reporting, CMS survey readiness, budget tracking, hiring, and employee relations. Scheduling is one item on a long list, and it is not the highest-value item on that list.
 
-When a nurse manager is spending 5 hours per week on scheduling and 3 of those hours are on tasks that do not require clinical judgment (building a schedule draft, checking who is close to overtime, formatting a CMS documentation binder), those 3 hours are a recoverable cost.
+When a nurse manager is spending 5 hours per week on scheduling and 3 of those hours are on tasks that do not require clinical judgment (building a schedule draft, checking who is close to overtime), those 3 hours are a recoverable cost.
 
 Specifically, a managed service fits when:
 
 - The nurse manager is also on the clinical schedule and cannot protect 4-6 hours per week for administrative scheduling work.
-- The hospital has had a CMS survey finding related to staffing documentation and needs automatic documentation generation.
 - The hospital has a recurring overtime problem that manual OT tracking has not resolved.
 - The hospital is coming off spreadsheets and does not want to spend 6 weeks implementing software before it becomes useful.
 - The hospital has tried scheduling software before and found the ongoing configuration burden unsustainable after implementation.
@@ -390,18 +389,14 @@ Two variables drive the decision: how much unprotected time the nurse manager cu
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Aladtec may work</td>
       </tr>
       <tr class="align-top">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Hospital has a recent CMS survey finding on staffing documentation compliance</td>
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold text-green-700 dark:text-green-400">Managed Service only (automated CMS docs required)</td>
-      </tr>
-      <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Hospital is moving off spreadsheets and needs to go live in under one week</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold text-green-700 dark:text-green-400">Managed Service</td>
       </tr>
-      <tr class="align-top">
+      <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Hospital manages multiple departments and wants centralized scheduling control</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Aladtec</td>
       </tr>
-      <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
+      <tr class="align-top">
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Hospital has tried scheduling software before and found the ongoing configuration burden unsustainable after implementation</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold text-green-700 dark:text-green-400">Managed Service</td>
       </tr>
