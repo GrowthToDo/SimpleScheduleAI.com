@@ -33,6 +33,12 @@ title/meta/H1 rewrites after approval. First run under this runbook: 2026-08-01.
    reporting Band B — 2,003 of its impressions are M7 login searches, not demand.
 2. **AEO snapshot**: `npm run llm-citations` (dataset endpoints; ~$0.30-0.60 —
    SKIP with a note if DataForSEO balance is empty). Appends docs/seo/aeo-trend.jsonl.
+2a. **AI perception check** (added 2026-11-18): `npm run llm-citations -- --eval`
+   (3 evaluation prompts x 3 engines, ~$1.08; ask the founder first). Run
+   `-- --eval --dry-run` to list the prompts without spending. Full answers append
+   to docs/seo/llm-evaluation-log.md. Read each one against the inventory and the
+   positioning registry, fill in its Verdict line, and act only on a gap that repeats
+   across two runs or two engines (method at the top of that log).
 2b. **GA4 AI-referral pull** (google-analytics MCP, wired 2026-08-03): `run_report` on
    property 528589584, dims `sessionSource,landingPage` (landing page added
    2026-10-30), metrics `sessions,engagedSessions,keyEvents`, trailing 90 days,
