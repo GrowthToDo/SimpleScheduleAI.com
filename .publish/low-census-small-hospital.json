@@ -74,6 +74,18 @@
       "setBy": "founder (2026-11-18: 'Rest all ok' on live review)",
       "setAt": "2026-11-18T07:33:00.079Z",
       "contentHash": "1e9122003f2484c80856456c237fac552a68c9edde64f6934d04d18906e5d239"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "main session 2026-11-18 (152 URLs, HTTP 200)",
+      "setAt": "2026-11-18T07:34:38.348Z",
+      "contentHash": "1e9122003f2484c80856456c237fac552a68c9edde64f6934d04d18906e5d239"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "main session 2026-11-18 (sitemap-index.xml submitted)",
+      "setAt": "2026-11-18T07:34:38.481Z",
+      "contentHash": "1e9122003f2484c80856456c237fac552a68c9edde64f6934d04d18906e5d239"
     }
   },
   "overrides": [],
