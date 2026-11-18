@@ -25,7 +25,7 @@ metadata:
 - **Staffing can only go down to your minimums.** [Federal rules](https://www.law.cornell.edu/cfr/text/42/485.631) require a registered nurse, clinical nurse specialist or licensed practical nurse on duty whenever a Critical Access Hospital has inpatients. [Texas rules](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-505-41) add an RN on duty in each building where patients are present, and your written staffing plan sets the minimums for each unit.
 - **Who goes home first should be written down.** One small hospital's published policy asks for volunteers first, then rotates equally among the nurses on the unit. A practical order is overtime and agency hours first, then volunteers, then the rotation. Each pick is checked against the skills the remaining shift still needs.
 - **A running count keeps the rotation honest.** Track low-census hours for each nurse across the year. Send home the nurse with the lowest count whom the shift can spare, so the same people do not keep losing pay.
-- **Federal pay rules matter in two places.** A salaried nurse who is exempt from overtime cannot have pay docked for a day the hospital cancels. On-call time can count as paid working time depending on how restricted it is.
+- **Federal pay rules matter in two places.** A nurse on a fixed salary who is not paid overtime cannot have that salary cut for a day the hospital cancels. On-call time can count as hours worked depending on how restricted it is.
 
 ## Table of Contents
 
@@ -140,7 +140,7 @@ Policies still handle pay in different ways. The staffing company Cascade [lists
 
 ## Can You Dock a Salaried Nurse for a Low Census Day?
 
-Not for a day the hospital cancels, if the nurse is paid a salary and is exempt from overtime. The federal salary rule is [29 CFR 541.602](https://www.law.cornell.edu/cfr/text/29/541.602). It says an employee is not paid on a salary basis "if deductions from the employee's predetermined compensation are made for absences occasioned by the employer or by the operating requirements of the business." It adds: "If the employee is ready, willing and able to work, deductions may not be made for time when work is not available."
+It depends on how the nurse is paid. A nurse on a fixed salary who is not paid overtime cannot have that salary cut for a day the hospital itself cancels. The federal salary rule is [29 CFR 541.602](https://www.law.cornell.edu/cfr/text/29/541.602). It says an employee is not paid on a salary basis "if deductions from the employee's predetermined compensation are made for absences occasioned by the employer or by the operating requirements of the business." It adds: "If the employee is ready, willing and able to work, deductions may not be made for time when work is not available."
 
 The salary rule applies only to nurses who are exempt from overtime and paid a salary. Under [29 CFR 541.301](https://www.law.cornell.edu/cfr/text/29/541.301), registered nurses "generally meet the duties requirements for the learned professional exemption," the overtime exemption for professionals, while licensed practical nurses "generally do not qualify." If your hospital pays registered nurses by the hour, the overtime rules in our guides to [reducing nurse overtime](/blog/how-to-reduce-nurse-overtime) and [Texas nursing overtime](/blog/texas-nursing-overtime-compliance-cah) apply instead. Whether a salaried nurse's PTO can be used for the cancelled day is a question for your HR lead or counsel.
 
@@ -218,7 +218,7 @@ We found no Texas law requiring reporting-time pay for a worker sent home early,
 
 **Q: Can a hospital dock a salaried nurse for a low census day?**
 
-Not for a day the hospital cancels, if the nurse is paid a salary and is exempt from overtime. Federal rule 29 CFR 541.602 says deductions for absences caused by the employer's operating needs break the salary basis. Hourly nurses are paid for hours worked instead.
+A nurse on a fixed salary who is not paid overtime cannot have that salary cut for a day the hospital itself cancels. Federal rule 29 CFR 541.602 says deductions for absences caused by the employer's operating needs mean the nurse no longer counts as paid a true salary. Hourly nurses are paid for hours worked instead.
 
 **Q: Does on-call time during low census count as hours worked?**
 

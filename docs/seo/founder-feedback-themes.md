@@ -108,6 +108,14 @@ with a concrete instance. Symmetry phrasing reads as completeness and hides the
 carve-out.
 ("Indian Health Service and Tribal facilities are not counted against non-IHS facilities, and the exclusion runs both ways" — not clear, and it buried that two IHS facilities DO count against each other.)
 
+**T27. Answer a yes/no question with a whole sentence, not a fragment plus a trailing condition.**
+Check: any answer that opens "Not for ...", "Only if ...", "Yes, when ..." followed by an
+"if" clause. Name who the answer is about first, in plain words, then say what happens to
+them. Replace legal labels ("exempt") with what they mean ("not paid overtime").
+("Not for a day the hospital cancels, if the nurse is paid a salary and is exempt from
+overtime" — not very clear to understand. Fixed to "A nurse on a fixed salary who is not paid
+overtime cannot have that salary cut for a day the hospital itself cancels.")
+
 **T26. Never let advice to the reader become a claim about the product.**
 _Partly mechanical since 2026-09-02: check-blog 9a fails on product absences
 attributed to us and warns on the back-reference shape. The gate cannot resolve

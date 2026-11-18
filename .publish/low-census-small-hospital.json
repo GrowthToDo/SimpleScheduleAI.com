@@ -5,43 +5,43 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-11-18T05:29:16.687Z",
-      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+      "checkedAt": "2026-11-18T07:32:50.823Z",
+      "contentHash": "f4eb0aa3ab72594bfb8de6756802b8c6dee50215482e923845a26eb62a2755d1"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-11-18T05:29:16.955Z",
-      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+      "checkedAt": "2026-11-18T07:32:51.096Z",
+      "contentHash": "f4eb0aa3ab72594bfb8de6756802b8c6dee50215482e923845a26eb62a2755d1"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-18T05:29:18.126Z",
-      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+      "checkedAt": "2026-11-18T07:32:52.567Z",
+      "contentHash": "f4eb0aa3ab72594bfb8de6756802b8c6dee50215482e923845a26eb62a2755d1"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-18T05:29:18.146Z",
-      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+      "checkedAt": "2026-11-18T07:32:52.582Z",
+      "contentHash": "f4eb0aa3ab72594bfb8de6756802b8c6dee50215482e923845a26eb62a2755d1"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-11-18T05:29:18.218Z",
-      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+      "checkedAt": "2026-11-18T07:32:53.131Z",
+      "contentHash": "f4eb0aa3ab72594bfb8de6756802b8c6dee50215482e923845a26eb62a2755d1"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-11-18T05:29:18.218Z",
-      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+      "checkedAt": "2026-11-18T07:32:53.131Z",
+      "contentHash": "f4eb0aa3ab72594bfb8de6756802b8c6dee50215482e923845a26eb62a2755d1"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-11-18T05:29:18.219Z",
-      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+      "checkedAt": "2026-11-18T07:32:53.133Z",
+      "contentHash": "f4eb0aa3ab72594bfb8de6756802b8c6dee50215482e923845a26eb62a2755d1"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-11-18T05:29:18.223Z",
-      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+      "checkedAt": "2026-11-18T07:32:53.137Z",
+      "contentHash": "f4eb0aa3ab72594bfb8de6756802b8c6dee50215482e923845a26eb62a2755d1"
     }
   },
   "recorded": {
@@ -53,21 +53,27 @@
     },
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer (final pass 2026-11-18: READY-TO-PUBLISH after 3 rounds + cold read 75.5)",
-      "setAt": "2026-11-18T05:29:22.685Z",
-      "contentHash": "0a598f28dafdbd5dc2ca63e54dc284fdf72e5a269ac0620060032a99bd862830"
+      "setBy": "feature-dev:code-reviewer (re-confirm 2026-11-18 after founder fix: READY-TO-PUBLISH; its two optional wordings applied verbatim)",
+      "setAt": "2026-11-18T07:32:53.306Z",
+      "contentHash": "1e9122003f2484c80856456c237fac552a68c9edde64f6934d04d18906e5d239"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "feature-dev:code-reviewer final pass (FACTS: PASS)",
-      "setAt": "2026-11-18T05:29:26.975Z",
-      "contentHash": "0a598f28dafdbd5dc2ca63e54dc284fdf72e5a269ac0620060032a99bd862830"
+      "setBy": "feature-dev:code-reviewer re-confirm (FACTS: PASS)",
+      "setAt": "2026-11-18T07:32:53.433Z",
+      "contentHash": "1e9122003f2484c80856456c237fac552a68c9edde64f6934d04d18906e5d239"
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder (2026-11-18: take the next blog live)",
-      "setAt": "2026-11-18T05:29:27.102Z",
-      "contentHash": "0a598f28dafdbd5dc2ca63e54dc284fdf72e5a269ac0620060032a99bd862830"
+      "setBy": "founder (2026-11-18: 'Correct and send to GSC, indexnow')",
+      "setAt": "2026-11-18T07:32:53.564Z",
+      "contentHash": "1e9122003f2484c80856456c237fac552a68c9edde64f6934d04d18906e5d239"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder (2026-11-18: 'Rest all ok' on live review)",
+      "setAt": "2026-11-18T07:33:00.079Z",
+      "contentHash": "1e9122003f2484c80856456c237fac552a68c9edde64f6934d04d18906e5d239"
     }
   },
   "overrides": [],
