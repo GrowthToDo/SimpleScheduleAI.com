@@ -58,13 +58,31 @@ service customer receives the same information without logging in.
 
 ---
 
+## R2. Low census: revised schedule options
+
+**Status:** WRITTEN — claimable in published copy (founder-confirmed 2026-11-18).
+
+| Field | Value |
+| --- | --- |
+| Who tells us | The nurse manager, by email or their usual channel, telling us the census has changed. |
+| What we do | Change the schedule to match: options of which staff to add or remove on the affected shifts. |
+| What the hospital gets back | The revised schedule options, sent back to the nurse manager for approval. Nothing changes until the manager approves. |
+| How fast | **Same business day** from the message. This is deliberately NOT the 1-hour / 3-hour coverage-blocking promise: a low census is not coverage-blocking (founder, 2026-11-18). |
+| Owner | SimpleScheduleAI's scheduling team. |
+| Scope | The coming shifts. On the shift itself, the charge nurse sends someone home under the hospital's own low-census order (the hospital's policy, for example volunteers first, then rotation); we do not make on-the-spot send-home calls. |
+
+**Do not widen it.** Never write that we make the send-home decision, that we respond within an hour,
+or that the software keeps a low-census rotation count (the `flexHoursYearToDate` counter exists but
+nothing increments it; inventory §6). Also never write that the software flags overstaffed shifts or
+suggests who to send home: the founder said on 2026-11-18 that "we dont have an option to track low
+census currently". The low-census help we can claim is this team routine, not a software feature.
+
+---
+
 ## Routines still UNWRITTEN (not claimable in published copy)
 
 These are real things we do or intend to do, confirmed by the founder, that have
 no written routine yet. They are safe in a live sales conversation and must stay
 out of site copy until they are moved above with all four fields filled.
 
-- **Low census.** The founder confirms we change the census band and release
-  excess staff. The software detects and surfaces overstaffed shifts but has no
-  execution workflow (inventory §1b). Honest product-mode line meanwhile:
-  "flags overstaffed shifts and suggests who to flex."
+- **Low census.** Moved to R2 on 2026-11-18.

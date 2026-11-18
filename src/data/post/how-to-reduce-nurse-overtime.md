@@ -124,7 +124,7 @@ Beyond who gets called and what gets tracked, the schedule's own structure is a 
 
 **Build an overtime-minimized draft, not just a coverage-complete one.** A hand-built schedule optimizes for one goal: every shift filled. It is rarely compared against an alternative that meets the same coverage with fewer nurses pushed toward the threshold. Producing that second draft, then choosing deliberately, surfaces overtime the first draft locked in silently.
 
-**Use on-call coverage for predictably quiet windows.** On-call hours generally cost less than scheduled on-site hours. Placed on windows that are reliably low-census, on-call holds coverage available without loading scheduled hours into the period. It takes more configuration than a standard grid, which is why thin-staffed hospitals underuse it.
+**Use on-call coverage for predictably quiet windows.** On-call hours generally cost less than scheduled on-site hours. Placed on windows that are reliably [low-census](/blog/low-census-small-hospital), on-call holds coverage available without loading scheduled hours into the period. It takes more configuration than a standard grid, which is why thin-staffed hospitals underuse it.
 
 **Distribute the burden visibly.** Nurses who can see that callout shifts and heavy stretches fall evenly protect the system; nurses who suspect the schedule leans on them protect themselves. The fairness mechanics are the same ones in our [fair holiday rotation guide](/blog/fair-holiday-rotation-nurses-cah), applied year-round.
 

@@ -1084,5 +1084,13 @@
     "primaryKeyword": "texas medicaid retroactive coverage",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Newsroom piece 2026-11-17 (detection pass 2026-11-16, score 64; all five SEO Desk suggestions dropped). Peg: Texas Medicaid application backlog (about 1,600 in January to more than 210,000 in August 2026, HHSC data via KERA) plus P.L. 119-21 sec. 71112 cutting retroactive coverage to the second month before the application month for applications from January 1, 2027. Hook: the window counts from the filing month, so the backlog delays payment while the filing month decides coverage; an October 2026 stay is covered if filed in December, not January. SERP 2026-11-16: one consumer explainer, the TAC rule, insurer pages, nothing hospital-side. Brief docs/seo/briefs/2026-11-texas-medicaid-retroactive-coverage-2027.md. Siblings: texas-medicaid-expansion-earliest-date, texas-medicaid-freeze-critical-access-hospitals."
+  },
+  {
+    "slug": "low-census-small-hospital",
+    "type": "post",
+    "url": "/blog/low-census-small-hospital",
+    "primaryKeyword": "low census",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Next-15 #2, 2026-11-18. 1,600/mo ('what does low census mean' 260, 'low census hospital' 140, 'low census nursing' 70). SERP 2026-11-18: forums, Facebook, union PDFs, a few vendor pages; no hospital or regulator page, nothing for a 25-bed hospital. Gaps owned: staffing floors (485.631, 505.41, 257.003), worked rotation count, exempt salary rule (541.602), on-call (785.17). Service claim limited to runbook R2 (revised options, same business day). Brief docs/seo/briefs/2026-11-low-census-small-hospital.md."
   }
 ]

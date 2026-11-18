@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "slug": "low-census-small-hospital",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-18T05:29:16.687Z",
+      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-18T05:29:16.955Z",
+      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-18T05:29:18.126Z",
+      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-18T05:29:18.146Z",
+      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-18T05:29:18.218Z",
+      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-18T05:29:18.218Z",
+      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-18T05:29:18.219Z",
+      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-18T05:29:18.223Z",
+      "contentHash": "2e4461485e5fa6008baa73b1403e7bcf48360458f0d057062561fbf2f8f7a33c"
+    }
+  },
+  "recorded": {
+    "founderQuestions": {
+      "value": "ANSWERED",
+      "setBy": "founder (chat 2026-11-18: runbook R2 routine, same-business-day timing, volunteers-then-rotation Our Take)",
+      "setAt": "2026-11-18T05:23:41.295Z",
+      "contentHash": "60fd97ae2634faca24be58f1c4cca2f227483cad2c005955499f4c755b25e0ed"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer (final pass 2026-11-18: READY-TO-PUBLISH after 3 rounds + cold read 75.5)",
+      "setAt": "2026-11-18T05:29:22.685Z",
+      "contentHash": "0a598f28dafdbd5dc2ca63e54dc284fdf72e5a269ac0620060032a99bd862830"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "feature-dev:code-reviewer final pass (FACTS: PASS)",
+      "setAt": "2026-11-18T05:29:26.975Z",
+      "contentHash": "0a598f28dafdbd5dc2ca63e54dc284fdf72e5a269ac0620060032a99bd862830"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder (2026-11-18: take the next blog live)",
+      "setAt": "2026-11-18T05:29:27.102Z",
+      "contentHash": "0a598f28dafdbd5dc2ca63e54dc284fdf72e5a269ac0620060032a99bd862830"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 71.2,
+        "headings": 100,
+        "actionability": 63.6,
+        "attention": 81.8
+      },
+      "overall": 75.5,
+      "counts": {
+        "sections": 11,
+        "rereads": 9,
+        "undefinedTerms": 10,
+        "headingsAnswered": 11,
+        "mondayActions": 7,
+        "blockedActions": 4,
+        "quitPoints": 2
+      },
+      "icp": "Nurse manager at a 25-bed rural hospital, reading once on a phone between shifts",
+      "publishDate": "2026-11-18T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "floors (as the minimum staffing level)",
+          "exempt / salaried exempt",
+          "learned professional exemption",
+          "salary basis / predetermined compensation",
+          "reporting-time pay",
+          "hours worked (as a legal term)",
+          "standby rate / standby pay",
+          "call-back hours",
+          "overstaffing flag",
+          "qualified nurse (qualified for what)"
+        ],
+        "mondayActions": [
+          "write the send-home order on one page using the seven policy points",
+          "ask for volunteers first before anyone is picked",
+          "start the running count of low-census hours per nurse, zero for anyone I cannot reconstruct",
+          "read the minimums in our written staffing plan and confirm an RN stays in each building with patients",
+          "decide the pay question in writing (unpaid, PTO or minimum pay)",
+          "ask HR how salaried nurses are handled before the next cancellation",
+          "brief the charge nurses on the order, the count and the tie-break"
+        ],
+        "blockedActions": [
+          "decide whether volunteer hours count toward the total, the post lays out both outcomes and does not pick",
+          "set a standby rate for on-call, no range or benchmark given",
+          "keep the running count, no template or format given and the software does not do it",
+          "confirm the Texas no-reporting-pay point with counsel, no counsel or contact named"
+        ],
+        "sections": [
+          {
+            "heading": "What Does Low Census Mean at a Small Hospital?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Low Can Nurse Staffing Go When Census Drops?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Who Goes Home First When Census Drops?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Rotate Low Census Fairly on a Small Roster?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Do You Have to Pay a Nurse Sent Home for Low Census?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Can You Dock a Salaried Nurse for a Low Census Day?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Is On-Call During Low Census Paid Time?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should a Written Low Census Policy Say?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Help With Low Census?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          }
+        ]
+      },
+      "scoredAt": "2026-11-18T05:27:20.234Z",
+      "contentHash": "9bca06a37503f0072dac0d5a94ff95b493fc07caaf3632386fbeb14569f4107c"
+    }
+  }
+}

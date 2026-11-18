@@ -57,7 +57,7 @@ The size of the premium has no single federal benchmark, and it varies by region
 
 Whether per diem nursing is worth it depends on what a nurse values. The trade is flexibility and a higher hourly rate against the loss of benefits, guaranteed hours, and continuity. For a nurse who wants control over their calendar or supplemental income on top of another job, per diem can be a strong fit. For a nurse who needs predictable income and employer health coverage, it usually is not.
 
-The pros: per diem nurses choose when they work, often earn a higher hourly rate, and see different units and facilities. The cons: no health insurance or paid time off, no guaranteed hours, less continuity with patients, and being first to be floated or cancelled when census drops. Many nurses pair per diem work with a benefited part-time or full-time role to balance the trade.
+The pros: per diem nurses choose when they work, often earn a higher hourly rate, and see different units and facilities. The cons: no health insurance or paid time off, no guaranteed hours, less continuity with patients, and being first to be floated or cancelled when [census drops](/blog/low-census-small-hospital). Many nurses pair per diem work with a benefited part-time or full-time role to balance the trade.
 
 ## How Do You Become a Per Diem Nurse?
 
