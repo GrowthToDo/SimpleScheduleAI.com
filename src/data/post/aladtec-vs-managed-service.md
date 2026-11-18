@@ -389,7 +389,7 @@ Two variables drive the decision: how much unprotected time the nurse manager cu
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Aladtec may work</td>
       </tr>
       <tr class="align-top">
-        <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Hospital is moving off spreadsheets and needs to go live in under one week</td>
+        <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-700 dark:text-slate-300">Hospital is moving off spreadsheets and needs its first schedule inside two weeks</td>
         <td class="border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold text-green-700 dark:text-green-400">Managed Service</td>
       </tr>
       <tr class="bg-slate-50 dark:bg-slate-800/50 align-top">
@@ -422,7 +422,7 @@ The decision between self-serve scheduling software and a managed service become
 
 1. **Time-track your scheduling hours this week.** Keep a running note of every scheduling task and how long it takes. Most nurse managers underestimate their total scheduling time, because callout handling and configuration updates are not mentally logged as "scheduling time." The actual number, once tracked, usually makes the decision obvious.
 
-2. **Ask SimpleScheduleAI for a CAH scheduling audit.** The audit covers your current OT patterns, CMS documentation gaps, and callout coverage process. It is free and takes 45 minutes. Visit [SimpleScheduleAI.com](/) or [see how it works](/how-it-works).
+2. **Book a 30-minute call with SimpleScheduleAI.** Bring the weekly scheduling time from step 1 and ask how your overtime patterns and callout process would run through the service. [Book a call](https://cal.com/gautham-8bdvdx/30min) or [see how it works](/how-it-works).
 
 3. **Calculate your estimated labor cost for scheduling.** Multiply your hourly rate (or the hourly rate of whoever manages scheduling) by the weekly hours spent. Multiply by 50 weeks. Compare that number against the annual cost of a managed service. For most CAH nurse managers, the break-even is well inside year one. Use the [SimpleScheduleAI ROI calculator](/roi) to model the comparison automatically.
 
