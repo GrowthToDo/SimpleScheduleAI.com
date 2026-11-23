@@ -75,8 +75,9 @@ made-up 25-bed roster, labelled illustrative), which is also what an editor pitc
 
 ## Hold list (2026-11-23, founder-approved)
 
-To keep the week 2 test readable, no edits and no site-wide sweeps touch these pages until 30 days after
-the week 2 edit lands (28-day window plus 2 days of data lag). The test date moves with that edit; it
+To keep the week 2 test readable, no other edits and no site-wide sweeps touch these pages until 30 days after
+the week 2 edit lands. The week 2 edit itself (the worked example on /nurse-scheduling-software) is the planned
+exception: it is the change being tested, and the hold starts when it goes live (28-day window plus 2 days of data lag). The test date moves with that edit; it
 is 2026-12-21 only if the edit lands on 2026-11-21.
 
 | Page | Why it is held |
