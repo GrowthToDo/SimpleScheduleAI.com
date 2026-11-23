@@ -177,3 +177,24 @@ It measures whether the reader could follow and use the post. It says nothing
 about whether the post is true, differentiated, or worth writing. Those are the
 fact-check, the proofread, and the commodity grade above. A post can score 100
 here and still be worthless.
+
+### Trial: example posts before drafting (started 2026-11-23)
+
+Idea from Corey Haines' MicroConf Europe 2026 talk ("Run Marketing Like an Engineer"): examples
+steer a writing agent more than rules do. Until now the 3 canonical posts per type were read only at
+proofread (phase 5), after the draft existed. From 2026-11-23 the writing agent reads them before
+drafting a /blog post (`publish-pipeline.md` phase 2). /articles are not part of the trial.
+
+Baseline, the last 3 blog posts before the change (cold read on the draft, from `npm run cold-read trend`):
+
+| Post | Date | Overall | Rereads | Undefined terms |
+| --- | --- | --- | --- | --- |
+| safe-harbor-nursing-texas | 2026-11-16 | 65.8 | 18 | 16 |
+| low-census-small-hospital | 2026-11-18 | 75.5 | 9 | 10 |
+| what-is-a-swing-bed | 2026-11-23 | 73.2 | 11 | 11 |
+| **Mean** | | **71.5** | **12.7** | **12.3** |
+
+Judge it after the next 3 blog posts: same three numbers, same table. It is a hypothesis until then.
+Three posts against three is a small sample and post types differ, so read a gap under about 5 points
+overall as "no clear change", not as a result. Also note how many fixes the founder's live review
+asked for on each post, since voice is what the examples are meant to improve.
