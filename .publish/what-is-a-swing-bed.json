@@ -5,43 +5,43 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-11-23T05:18:29.899Z",
-      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+      "checkedAt": "2026-11-23T12:36:25.864Z",
+      "contentHash": "99cf681b707c7d3bf4a3765bb590bc3d0542b4f14e98aa6e4054c1245c3d86cf"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-11-23T05:18:30.174Z",
-      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+      "checkedAt": "2026-11-23T12:36:26.137Z",
+      "contentHash": "99cf681b707c7d3bf4a3765bb590bc3d0542b4f14e98aa6e4054c1245c3d86cf"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-23T05:18:31.401Z",
-      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+      "checkedAt": "2026-11-23T12:36:28.187Z",
+      "contentHash": "99cf681b707c7d3bf4a3765bb590bc3d0542b4f14e98aa6e4054c1245c3d86cf"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-11-23T05:18:31.424Z",
-      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+      "checkedAt": "2026-11-23T12:36:28.209Z",
+      "contentHash": "99cf681b707c7d3bf4a3765bb590bc3d0542b4f14e98aa6e4054c1245c3d86cf"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-11-23T05:18:31.490Z",
-      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+      "checkedAt": "2026-11-23T12:36:28.293Z",
+      "contentHash": "99cf681b707c7d3bf4a3765bb590bc3d0542b4f14e98aa6e4054c1245c3d86cf"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-11-23T05:18:31.490Z",
-      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+      "checkedAt": "2026-11-23T12:36:28.293Z",
+      "contentHash": "99cf681b707c7d3bf4a3765bb590bc3d0542b4f14e98aa6e4054c1245c3d86cf"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-11-23T05:18:31.491Z",
-      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+      "checkedAt": "2026-11-23T12:36:28.294Z",
+      "contentHash": "99cf681b707c7d3bf4a3765bb590bc3d0542b4f14e98aa6e4054c1245c3d86cf"
     },
     "keywordRegistry": {
       "status": "PASS",
-      "checkedAt": "2026-11-23T05:18:31.491Z",
-      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+      "checkedAt": "2026-11-23T12:36:28.299Z",
+      "contentHash": "99cf681b707c7d3bf4a3765bb590bc3d0542b4f14e98aa6e4054c1245c3d86cf"
     }
   },
   "recorded": {
@@ -53,21 +53,27 @@
     },
     "proofread": {
       "value": "READY",
-      "setBy": "feature-dev:code-reviewer (final pass 2026-11-23: READY-TO-PUBLISH after 3 rounds + cold read 73.2)",
-      "setAt": "2026-11-23T05:05:14.514Z",
-      "contentHash": "cdec8f6f877364753620a958c0ff494208707ac39103c6ccf421e6838bee6baf"
+      "setBy": "feature-dev:code-reviewer (re-confirm 2026-11-23 after founder fix; its optional 'can stay' wording applied)",
+      "setAt": "2026-11-23T12:36:28.456Z",
+      "contentHash": "7222fa68a1a022f3cd229027dd81d25ba9360b7ead93abe641e367f40fd27580"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "feature-dev:code-reviewer final pass (FACTS: PASS); key quotes re-verified at source by main session 2026-11-23",
-      "setAt": "2026-11-23T05:05:14.650Z",
-      "contentHash": "cdec8f6f877364753620a958c0ff494208707ac39103c6ccf421e6838bee6baf"
+      "setBy": "feature-dev:code-reviewer re-confirm (FACTS: PASS)",
+      "setAt": "2026-11-23T12:36:28.590Z",
+      "contentHash": "7222fa68a1a022f3cd229027dd81d25ba9360b7ead93abe641e367f40fd27580"
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder (2026-11-23: 'Publish without GSC, indexnow')",
-      "setAt": "2026-11-23T05:18:31.651Z",
-      "contentHash": "cdec8f6f877364753620a958c0ff494208707ac39103c6ccf421e6838bee6baf"
+      "setBy": "founder (2026-11-23: 'Once done, take to GSC, indexnow')",
+      "setAt": "2026-11-23T12:36:28.723Z",
+      "contentHash": "7222fa68a1a022f3cd229027dd81d25ba9360b7ead93abe641e367f40fd27580"
+    },
+    "imageEyeball": {
+      "value": "OK",
+      "setBy": "founder (2026-11-23 live review: one wording note only, then 'take to GSC, indexnow')",
+      "setAt": "2026-11-23T12:36:28.854Z",
+      "contentHash": "7222fa68a1a022f3cd229027dd81d25ba9360b7ead93abe641e367f40fd27580"
     }
   },
   "overrides": [],

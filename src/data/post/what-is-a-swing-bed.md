@@ -51,7 +51,7 @@ A swing bed is a hospital bed whose payment status changes from acute care to sk
 
 The patient does not have to move. The same manual says "The patient need not change locations in the facility merely because his/her status changes unless the facility requires it." It adds that "Swing-beds need not be located in a special section of the CAH."
 
-For example, a patient admitted for pneumonia may be stable but too weak to go home. The hospital changes that patient's status to swing bed for therapy, close to home.
+For example, a patient admitted for pneumonia may be stable but too weak to go home. Without a swing bed, that patient might transfer to a nursing home, which may be in another town. With one, the patient can stay in the same bed at the local hospital. The hospital changes the patient's status to swing bed, and therapy continues there, close to home.
 
 ## Which Hospitals Can Have Swing Beds?
 

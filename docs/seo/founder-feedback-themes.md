@@ -116,6 +116,13 @@ them. Replace legal labels ("exempt") with what they mean ("not paid overtime").
 overtime" — not very clear to understand. Fixed to "A nurse on a fixed salary who is not paid
 overtime cannot have that salary cut for a day the hospital itself cancels.")
 
+**T28. Spell out the comparison a benefit depends on.**
+A phrase like "close to home", "faster" or "cheaper" only makes sense next to what it beats. If the
+sentence leaves the alternative out, the reader invents one and gets it wrong.
+("The hospital changes that patient's status to swing bed for therapy, close to home" — founder: "How
+can a patient move close to home without changing beds?" The missing half was the alternative: a
+transfer to a nursing home that may be in another town. Fixed 2026-11-23.)
+
 **T26. Never let advice to the reader become a claim about the product.**
 _Partly mechanical since 2026-09-02: check-blog 9a fails on product absences
 attributed to us and warns on the back-reference shape. The gate cannot resolve
