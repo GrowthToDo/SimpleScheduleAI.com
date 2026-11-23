@@ -28,7 +28,7 @@ Swing beds are exempt from PBJ. The reporting requirement attaches to a specific
 ## Key Takeaways
 
 - Swing beds are exempt from CMS Payroll-Based Journal (PBJ) reporting. PBJ applies only to facilities certified under 42 CFR Part 483 Subpart B, and swing-bed care falls under the hospital's own certification, not that rule.
-- Because swing-bed care is how most Critical Access Hospitals deliver skilled nursing, the large majority file no PBJ data at all and carry no nursing-home Five-Star rating.
+- Because swing-bed care sits under the hospital's own certification, most Critical Access Hospitals file no PBJ data at all and carry no nursing-home Five-Star rating.
 - The one exception is a separately certified distinct-part skilled nursing unit, with its own CMS Certification Number and a Care Compare listing. That describes a small and shrinking minority of these hospitals.
 - The decision rule is one question. Are you listed on Nursing Home Care Compare with your own SNF CMS Certification Number? If no, you do not file PBJ.
 - For the rare hospital that does, PBJ is a downstream payroll-reporting task: the scheduling record hands off clean staffing-assignment data, and a payroll or PBJ vendor produces and files the XML.
@@ -55,9 +55,9 @@ PBJ submissions are due about 45 days after each quarter closes, on or about May
 
 ## Do Critical Access Hospitals Have to File PBJ Data?
 
-Most Critical Access Hospitals do not file CMS Payroll-Based Journal data. The requirement reaches only facilities certified under [42 CFR Part 483 Subpart B](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B), and swing beds operate under the hospital's own [42 CFR 482.58](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-482/subpart-E/section-482.58) certification instead. The [CMS PBJ Policy Manual](https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/nursinghomequalityinits/downloads/pbj-policy-manual-final-v25-11-19-2018.pdf) states plainly that the requirement does not apply to swing beds.
+Most Critical Access Hospitals do not file CMS Payroll-Based Journal data. The requirement reaches only facilities certified under [42 CFR Part 483 Subpart B](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B), and a Critical Access Hospital's swing beds operate under its own certification, with the swing-bed rules in [42 CFR 485.645](https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.645), instead. The [CMS PBJ Policy Manual](https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/nursinghomequalityinits/downloads/pbj-policy-manual-final-v25-11-19-2018.pdf) states plainly that the requirement does not apply to swing beds.
 
-This matters because swing-bed care is how the large majority of Critical Access Hospitals deliver skilled nursing, and the practice is common: 36.2% of Critical Access Hospitals had an active skilled-nursing (swing) census in 2021, per [CAHMPAS data reported by the Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/critical-access-hospitals). Those beds do not appear on [Nursing Home Care Compare](https://www.medicare.gov/care-compare/), carry no nursing-home Five-Star rating, and are exempt from the SNF Minimum Data Set requirement too.
+This matters for any Critical Access Hospital that delivers skilled nursing. Per [CAHMPAS data reported by the Rural Health Information Hub](https://www.ruralhealthinfo.org/topics/critical-access-hospitals), 36.2% of Critical Access Hospitals "provided skilled nursing care in 2021." Swing beds do not appear on [Nursing Home Care Compare](https://www.medicare.gov/care-compare/), carry no nursing-home Five-Star rating, and are exempt from the SNF Minimum Data Set requirement too.
 
 ## How Do You Know Whether You Owe PBJ?
 
@@ -186,7 +186,7 @@ Most do not. PBJ applies only to certified skilled nursing facilities under 42 C
 
 **Q: Are swing beds subject to PBJ reporting?**
 
-No. The CMS PBJ Policy Manual states the requirement does not apply to swing beds. Swing-bed care operates under the hospital's own certification at 42 CFR 482.58, not the long-term care rules at 42 CFR Part 483 that govern PBJ, so those beds also carry no Care Compare listing or Five-Star rating.
+No. The CMS PBJ Policy Manual states the requirement does not apply to swing beds. A Critical Access Hospital's swing-bed care operates under its own certification, with the swing-bed rules at 42 CFR 485.645, not the long-term care rules at 42 CFR Part 483 that govern PBJ, so those beds also carry no Care Compare listing or Five-Star rating.
 
 **Q: How do I know if my hospital owes PBJ?**
 
@@ -208,7 +208,7 @@ No. SimpleScheduleAI is nurse scheduling for acute-care staffing at Texas Critic
 
 1. eCFR, 42 CFR Part 483 Subpart B (Requirements for Long Term Care Facilities). https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B
 2. eCFR, 42 CFR 483.70 (Administration). https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-483/subpart-B/section-483.70
-3. eCFR, 42 CFR 482.58 (Special requirements for hospital providers of long-term care services, swing beds). https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-482/subpart-E/section-482.58
+3. eCFR, 42 CFR 485.645 (Special requirements for CAH providers of long-term care services, swing beds). https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-485/subpart-F/section-485.645
 4. CMS/QTSO, Payroll-Based Journal (PBJ) Reference and Manuals. https://qtso.cms.gov/vendors/payroll-based-journal-pbj-vendors/reference-manuals
 5. CMS, Staffing Data Submission (Payroll-Based Journal). https://www.cms.gov/medicare/quality/nursing-home-improvement/staffing-data-submission
 6. CMS, Care Compare. https://www.medicare.gov/care-compare/
