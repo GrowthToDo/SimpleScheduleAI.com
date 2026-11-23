@@ -50,7 +50,8 @@ lives in `docs/seo/change-log/`.
   - `mixed`: signals point both ways, such as a rank gain while impressions
     fall behind the control
   - `flat`
-  - `insufficient-data`: under 50 impressions in both windows
+  - `insufficient-data`: under 50 impressions in both windows, or none at all
+    before the change (a page that went live just before its edit)
 - `impPct` is the page's raw impression change.
 - `vsSite` (`relImpPct`) is that change minus the control. The control is the
   median page's change over pages with 50+ impressions, so one breakout page

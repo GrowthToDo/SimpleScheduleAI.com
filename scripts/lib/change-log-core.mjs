@@ -330,7 +330,9 @@ export function classify(before, after, site = null) {
     clicksTooSmall,
   };
 
-  if (before.impressions < 50 && after.impressions < 50) {
+  // No before window (the page went live just before the change, or had no
+  // impressions at all): there is nothing to compare, so no verdict.
+  if (before.impressions === 0 || (before.impressions < 50 && after.impressions < 50)) {
     out.verdict = 'insufficient-data';
     return out;
   }

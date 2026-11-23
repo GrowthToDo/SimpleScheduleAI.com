@@ -95,11 +95,19 @@ test('classify: ranking-down beats impressions-down for dropType', () => {
   assert.equal(r.dropType, 'lost-rankings');
 });
 
-test('classify: zero impressions on one side gives null deltas, not a crash', () => {
+test('classify: zero impressions before gives null deltas and no verdict', () => {
+  // A page that went live just before the edit has no before window to compare
+  // against; it must not read as a measured 'flat'.
   const r = classify(m(0, 0, 0), m(5, 80, 9));
   assert.equal(r.posDelta, null);
   assert.equal(r.impPct, null);
-  assert.equal(r.verdict, 'flat');
+  assert.equal(r.verdict, 'insufficient-data');
+});
+
+test('classify: impressions that fall to zero after still read as worse', () => {
+  const r = classify(m(5, 120, 9), m(0, 0, 0));
+  assert.equal(r.verdict, 'worse');
+  assert.equal(r.dropType, 'lost-demand');
 });
 
 test('collapse merges same slug and same date into one entry', () => {
