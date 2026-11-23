@@ -976,6 +976,56 @@ test('Clarity is never retried, and index checks get one retry a day', async () 
   assert.ok(!refresh.dueRetries({ now: at(100), pullers: bad.map }).includes('clarity'));
 });
 
+test('a hung Clarity pull gets one retry an hour later; a Clarity error still gets none', async () => {
+  freshDir();
+  // The engine's own time limit: the puller never answers.
+  const calls = [];
+  const map = {};
+  for (const s of refresh.ORDER) map[s] = async () => (calls.push(s), okSnap(s));
+  // It hangs the first time only, so the retry (which runs on the desk's real 10 minute limit) ends at once.
+  let hangs = 1;
+  map.clarity = () => {
+    calls.push('clarity');
+    if (hangs-- > 0) return new Promise(() => {});
+    throw new Error('microsoft-clarity tools/call timed out after 180000ms.');
+  };
+  await refreshAll({ pullers: map, now: () => at(0), timeoutMs: 20 });
+  let s = store.readJson('state/refresh.json');
+  assert.deepEqual(s.retries.clarity, { day: dayOf(T0), count: 0, nextAt: at(60).toISOString(), hung: true });
+  assert.equal(
+    refresh.sourceStatus({ now: at(1).getTime() }).find((x) => x.source === 'clarity').retryAt,
+    at(60).toISOString()
+  );
+  assert.deepEqual(refresh.retryFailed({ pullers: map, now: () => at(59) }), [], 'not before the hour');
+  assert.deepEqual(refresh.retryFailed({ pullers: map, now: () => at(60) }), ['clarity']);
+  await settle();
+  s = store.readJson('state/refresh.json');
+  assert.equal(s.retries.clarity.count, 1);
+  assert.equal(s.retries.clarity.nextAt, null, 'the one retry is used, even when it hangs again');
+  assert.deepEqual(refresh.dueRetries({ now: at(200), pullers: map }), []);
+
+  // A connection that timed out counts as a hang too.
+  freshDir();
+  const conn = pullers();
+  conn.map.clarity = async () => {
+    throw new Error('microsoft-clarity tools/call timed out after 180000ms.');
+  };
+  await refreshAll({ pullers: conn.map, now: () => at(0) });
+  assert.equal(store.readJson('state/refresh.json').retries.clarity.nextAt, at(60).toISOString());
+
+  // An answer that is an error (a rate limit) is never retried.
+  freshDir();
+  const limited = pullers();
+  limited.map.clarity = async () => {
+    throw new Error('Rate limit exceeded for this project.');
+  };
+  await refreshAll({ pullers: limited.map, now: () => at(0) });
+  assert.equal(store.readJson('state/refresh.json').retries.clarity, undefined);
+  assert.equal(refresh.retryCap('clarity'), 0);
+  assert.equal(refresh.retryCap('clarity', true), 1);
+  assert.equal(refresh.retryCap('gsc', true), refresh.MAX_RETRIES_PER_DAY, 'other sources keep their own retries');
+});
+
 test('a retry that starts before midnight and fails after it does not gain an extra retry', async () => {
   freshDir();
   const before = new Date(2026, 10, 12, 23, 50, 0);

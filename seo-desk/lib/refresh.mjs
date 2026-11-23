@@ -4,9 +4,9 @@
 // A puller returns a snapshot {source, ok, status, pulledAt, through, error, data}
 // and does not write it; this module writes data/snap/<source>.json. A puller that
 // throws leaves the previous snapshot's data in place and marks it failed. A failed pull is
-// tried again 20 minutes later, at most three times a local day (index checks once, Clarity never;
-// see the retry section below), never during a run and never while the desk is paused: Clarity is
-// rate limited and the others are slow, so there is no tighter loop than that.
+// tried again 20 minutes later, at most three times a local day (index checks once, Clarity only once
+// and only after a hang; see the retry section below), never during a run and never while the desk is
+// paused: Clarity is rate limited and the others are slow, so there is no tighter loop than that.
 
 import { pullLocal } from './sources/local.mjs';
 import { pullGsc } from './sources/gsc.mjs';
@@ -48,7 +48,15 @@ export const MAX_RETRIES_PER_DAY = 3;
 // quota, so they get one retry a day, and so do the news feeds (they are read once each morning). Every
 // other source gets MAX_RETRIES_PER_DAY.
 export const RETRY_CAPS = { clarity: 0, index: 1, news: 1 };
-export const retryCap = (source) => RETRY_CAPS[source] ?? MAX_RETRIES_PER_DAY;
+// A pull that hung (no answer before a time limit) is different: Clarity hung for 10 minutes on the
+// morning of 23 November 2026 and answered in 33 seconds when pressed again. So a hung Clarity pull gets
+// one retry, an hour later, so a slow spell can pass. A Clarity pull that answered with an error (a
+// limit, a bad answer) is still never retried.
+export const HANG_RETRY = { clarity: { cap: 1, afterMs: 60 * 60 * 1000 } };
+export const retryCap = (source, hung = false) =>
+  hung && HANG_RETRY[source] ? HANG_RETRY[source].cap : (RETRY_CAPS[source] ?? MAX_RETRIES_PER_DAY);
+// A failure with no answer at all: the engine's own time limit, or a connection that timed out.
+const isHang = (e) => e?.timedOut === true || /timed out/i.test(String(e?.message ?? ''));
 // A schedule tick that fires this much later than it should means the Mac was asleep.
 export const WAKE_LATE_MS = 20 * 60 * 1000;
 
@@ -206,7 +214,7 @@ async function pullOne(source, puller, timeoutMs, today) {
   } catch (e) {
     ctrl.abort();
     const status = e?.kind === 'needs-sign-in' ? 'needs-sign-in' : 'failed';
-    return { status: writeFailure(source, prev, status, plainError(e)), timedOut: e?.timedOut === true };
+    return { status: writeFailure(source, prev, status, plainError(e)), timedOut: isHang(e) };
   }
 }
 
@@ -219,11 +227,13 @@ async function run(names, pullers, timeoutMs, full, afterFull, now) {
   const today = todayIso();
   progress = { startedAt, finishedAt: null, current: null, queue: names, completed: {} };
   const results = {};
+  const hung = new Set();
   for (const name of names) {
     progress.current = name;
     const ms = timeoutMs ?? SOURCE_TIMEOUT_MS[name] ?? PULL_TIMEOUT_MS;
-    const { status } = await pullOne(name, pullers[name], ms, today);
+    const { status, timedOut } = await pullOne(name, pullers[name], ms, today);
     results[name] = status;
+    if (timedOut) hung.add(name);
     progress.completed[name] = status;
   }
   const finishedAt = new Date().toISOString();
@@ -231,7 +241,7 @@ async function run(names, pullers, timeoutMs, full, afterFull, now) {
   const complete = full && names.every((n) => results[n] !== undefined && results[n] !== 'skipped');
   // The retry book is kept in memory first, so a state file that cannot be written never makes a
   // retry come round again every tick; the file is a copy.
-  const retries = nextRetries(retryBook(), results, now(), began);
+  const retries = nextRetries(retryBook(), results, now(), began, hung);
   keepBook(retries, (all) => ({
     ...all,
     startedAt,
@@ -432,20 +442,26 @@ function keepBook(retries, build) {
 //
 // `began` is when the run started: the attempt counts for that day even when it fails after midnight,
 // so a retry that starts before midnight never earns an extra one. nextAt is counted from `now`, the end.
-export function nextRetries(prev, results, now = new Date(), began = now) {
+// `hung` names the sources that failed without any answer; a source in HANG_RETRY then gets that cap
+// and wait instead, and its entry says hung: true so dueRetries applies the same cap.
+export function nextRetries(prev, results, now = new Date(), began = now, hung = new Set()) {
   const out = { ...(prev && typeof prev === 'object' && !Array.isArray(prev) ? prev : {}) };
   const day = localDay(began);
   for (const [source, status] of Object.entries(results ?? {})) {
-    if (status !== 'failed' || retryCap(source) === 0) {
+    const onHang = hung.has(source) && Boolean(HANG_RETRY[source]);
+    const cap = retryCap(source, onHang);
+    if (status !== 'failed' || cap === 0) {
       delete out[source];
       continue;
     }
     const had = out[source];
     const count = had?.day === day ? Number(had.count) || 0 : 0;
+    const wait = onHang ? HANG_RETRY[source].afterMs : RETRY_AFTER_MS;
     out[source] = {
       day,
       count,
-      nextAt: count < retryCap(source) ? new Date(now.getTime() + RETRY_AFTER_MS).toISOString() : null,
+      nextAt: count < cap ? new Date(now.getTime() + wait).toISOString() : null,
+      ...(onHang ? { hung: true } : {}),
     };
   }
   return out;
@@ -460,7 +476,7 @@ export function dueRetries({ now = new Date(), pullers } = {}) {
     const r = book[source];
     if (!r?.nextAt || typeof map[source] !== 'function') return false;
     if (!(Date.parse(r.nextAt) <= now.getTime())) return false;
-    return (r.day === day ? Number(r.count) || 0 : 0) < retryCap(source);
+    return (r.day === day ? Number(r.count) || 0 : 0) < retryCap(source, r.hung === true);
   });
 }
 

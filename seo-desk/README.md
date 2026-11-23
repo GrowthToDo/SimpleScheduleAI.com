@@ -109,7 +109,7 @@ Each source of data has a dot next to its name.
 
 When a source fails, the desk tries it again 20 minutes later, up to three times that day. Some sources are treated differently:
 
-- Clarity is never tried again that day, because it limits how often it answers.
+- Clarity limits how often it answers, so a Clarity error is not tried again that day. The one exception is when Clarity does not answer at all (it hangs until the time limit). Then the desk tries it once more, an hour later.
 - The check that asks Google whether each page is indexed is tried once more, because Google limits how many pages it will answer for in a day.
 - The news feeds for the Newsroom page are tried once more, because they are read once each morning. One feed that does not answer never stops the others; the Newsroom page names it.
 - A source that needs sign-in is not tried again, because waiting does not fix it. You sign in (see below).
