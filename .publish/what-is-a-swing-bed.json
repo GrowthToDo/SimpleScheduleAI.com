@@ -74,6 +74,18 @@
       "setBy": "founder (2026-11-23 live review: one wording note only, then 'take to GSC, indexnow')",
       "setAt": "2026-11-23T12:36:28.854Z",
       "contentHash": "7222fa68a1a022f3cd229027dd81d25ba9360b7ead93abe641e367f40fd27580"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "main session 2026-11-23 (153 URLs, HTTP 200)",
+      "setAt": "2026-11-23T12:38:33.440Z",
+      "contentHash": "7222fa68a1a022f3cd229027dd81d25ba9360b7ead93abe641e367f40fd27580"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "main session 2026-11-23 (sitemap-index.xml submitted)",
+      "setAt": "2026-11-23T12:38:33.573Z",
+      "contentHash": "7222fa68a1a022f3cd229027dd81d25ba9360b7ead93abe641e367f40fd27580"
     }
   },
   "overrides": [],
