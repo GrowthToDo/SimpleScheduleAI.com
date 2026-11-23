@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "slug": "what-is-a-swing-bed",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-23T05:18:29.899Z",
+      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-23T05:18:30.174Z",
+      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-23T05:18:31.401Z",
+      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-23T05:18:31.424Z",
+      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-23T05:18:31.490Z",
+      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-23T05:18:31.490Z",
+      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-23T05:18:31.491Z",
+      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-23T05:18:31.491Z",
+      "contentHash": "b6971286f5cead78994dcf3cb7918d0a654001222064400983443228cc07503f"
+    }
+  },
+  "recorded": {
+    "founderQuestions": {
+      "value": "ANSWERED",
+      "setBy": "founder (2026-11-23: 4 answers recorded in the brief)",
+      "setAt": "2026-11-23T04:58:54.183Z",
+      "contentHash": "6bb976b7870347d1a43cd540f54c968b632dcddd25312d459226ba29c99848de"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer (final pass 2026-11-23: READY-TO-PUBLISH after 3 rounds + cold read 73.2)",
+      "setAt": "2026-11-23T05:05:14.514Z",
+      "contentHash": "cdec8f6f877364753620a958c0ff494208707ac39103c6ccf421e6838bee6baf"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "feature-dev:code-reviewer final pass (FACTS: PASS); key quotes re-verified at source by main session 2026-11-23",
+      "setAt": "2026-11-23T05:05:14.650Z",
+      "contentHash": "cdec8f6f877364753620a958c0ff494208707ac39103c6ccf421e6838bee6baf"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder (2026-11-23: 'Publish without GSC, indexnow')",
+      "setAt": "2026-11-23T05:18:31.651Z",
+      "contentHash": "cdec8f6f877364753620a958c0ff494208707ac39103c6ccf421e6838bee6baf"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 69.4,
+        "headings": 91.7,
+        "actionability": 62.5,
+        "attention": 83.3
+      },
+      "overall": 73.2,
+      "counts": {
+        "sections": 12,
+        "rereads": 11,
+        "undefinedTerms": 11,
+        "headingsAnswered": 11,
+        "mondayActions": 5,
+        "blockedActions": 3,
+        "quitPoints": 2
+      },
+      "icp": "Nurse manager / DON at a 25-bed rural hospital, reading once on a phone between shifts",
+      "publishDate": "2026-11-23T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "benefit period",
+          "SNF PPS / skilled nursing facility prospective payment system",
+          "reasonable cost (101% of)",
+          "96-hour average length of stay",
+          "provides or assigns the nursing care",
+          "interdisciplinary team",
+          "resident assessment instrument",
+          "comprehensive assessment (versus the MDS)",
+          "full Nursing Facility Requirements",
+          "Payroll-Based Journal",
+          "the census you staff to"
+        ],
+        "mondayActions": [
+          "check that my written staffing plan counts swing-bed patients with the acute census",
+          "name an owner for each swing-bed task: assessment, care plan meeting, social services, discharge planning",
+          "read the eight carried-over requirements in 485.645(d) with the quality lead",
+          "count residents with more than one 30-day swing-bed stay this year, if we are in the Texas Medicaid program",
+          "agree with the scheduler who reports a swing census change and by when"
+        ],
+        "blockedActions": [
+          "confirm with HHSC which nursing facility requirements apply to my beds, no office or contact named",
+          "staff the floor to every occupied bed, no nurse-to-patient figure or example headcount given, so a census of 10 cannot be turned into nurses",
+          "check the Texas 30-day rule, the post does not say how to tell whether my hospital is in the Medicaid Swing Bed Program or what the full nursing facility requirements contain"
+        ],
+        "sections": [
+          {
+            "heading": "What Is a Swing Bed?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Which Hospitals Can Have Swing Beds?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Who Qualifies for a Swing Bed, and How Long Can a Patient Stay?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does Medicare Pay for a Swing-Bed Stay?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "How Is a Swing Bed Different From a Nursing Home Bed?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Do Swing Beds Count Against the 25-Bed Limit?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Nursing Rules Apply to Swing-Bed Patients?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Extra Work Does a Swing-Bed Patient Add for Nurses?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Staff Swing Beds When the Census Changes?",
+            "rereadCount": 2,
+            "answeredItsQuestion": false,
+            "quitHere": true
+          },
+          {
+            "heading": "Does Texas Add Any Swing-Bed Rules?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-11-23T04:59:57.695Z",
+      "contentHash": "6bb976b7870347d1a43cd540f54c968b632dcddd25312d459226ba29c99848de"
+    }
+  }
+}

@@ -95,7 +95,7 @@ That nursing facility figure of 2.45 was the only federal aide number that has e
 
 No, and this is the question a Critical Access Hospital actually needs answered.
 
-A swing bed is a hospital bed used to deliver long term care, so it is fair to ask whether nursing home staffing rules come with it. The swing bed rule answers that directly. [42 CFR 485.645(d)](https://www.law.cornell.edu/cfr/text/42/485.645) lists the nursing home requirements a Critical Access Hospital has to meet for those beds, and staffing is not one of them.
+A [swing bed](/blog/what-is-a-swing-bed) is a hospital bed used to deliver long term care, so it is fair to ask whether nursing home staffing rules come with it. The swing bed rule answers that directly. [42 CFR 485.645(d)](https://www.law.cornell.edu/cfr/text/42/485.645) lists the nursing home requirements a Critical Access Hospital has to meet for those beds, and staffing is not one of them.
 
 <div class="not-prose overflow-x-auto my-8">
   <table class="min-w-full table-fixed break-words align-top text-sm border border-slate-200 dark:border-slate-700">
@@ -155,6 +155,8 @@ Texas sets no CNA ratio for hospitals. Texas licenses hospitals under 26 Texas A
 What Texas requires instead is a process. Under Health and Safety Code chapter 257 a hospital runs a nurse staffing committee and adopts a written staffing plan. The state tells you how to decide, not what number to hit. Our [nurse-to-patient ratios by state](/blog/nurse-to-patient-ratios-by-state) guide covers that committee model.
 
 Texas nursing facilities are a separate rulebook, and there the number is about licensed nurses, not aides. A Texas nursing facility must staff one licensed nurse per 20 residents, or 0.4 licensed care hours per resident day. That rule sets no aide number either.
+
+One Texas rule can bring nursing facility requirements into a hospital. Under [26 TAC 554.2326](https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-554-2326), a hospital in the Texas Medicaid Swing Bed Program whose swing beds are used for more than one 30-day stay a year, per resident, "must comply with the full Nursing Facility Requirements." Confirm with the Texas Health and Human Services Commission which requirements, including the licensed-nurse number, then apply to your beds.
 
 So a Texas Critical Access Hospital has no CNA ratio to meet from any direction. You decide aide staffing on skill and coverage, then write that decision into your staffing plan.
 

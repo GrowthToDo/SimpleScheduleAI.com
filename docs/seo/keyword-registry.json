@@ -1092,5 +1092,13 @@
     "primaryKeyword": "low census",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Next-15 #2, 2026-11-18. 1,600/mo ('what does low census mean' 260, 'low census hospital' 140, 'low census nursing' 70). SERP 2026-11-18: forums, Facebook, union PDFs, a few vendor pages; no hospital or regulator page, nothing for a 25-bed hospital. Gaps owned: staffing floors (485.631, 505.41, 257.003), worked rotation count, exempt salary rule (541.602), on-call (785.17). Service claim limited to runbook R2 (revised options, same business day). Brief docs/seo/briefs/2026-11-low-census-small-hospital.md."
+  },
+  {
+    "slug": "what-is-a-swing-bed",
+    "type": "post",
+    "url": "/blog/what-is-a-swing-bed",
+    "primaryKeyword": "what is a swing bed",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Next-15 #3, 2026-11-23. 1,000/mo ('swing bed program' 210; head terms 'swing bed' 5,400 and 'swing bed hospital' 2,900 not targeted). SERP 2026-11-23: all patient-facing hospital pages, volatile, dual-intent with porch swing beds; none written for a DON. Gaps owned: 485.645(d) eight carried-over items, nursing rules (485.631, 485.635(d)), 101% cost payment, no MDS, 25-bed pool and 96-hour exclusion, Texas Medicaid 30-day rule (26 TAC 554.2326(f)). Service claim limited to runbook R2. Brief docs/seo/briefs/2026-11-what-is-a-swing-bed.md."
   }
 ]
