@@ -72,3 +72,24 @@ Done by the founder: GetApp listing checked (all OK), SoftwareSuggest, Exafol, S
 and ebool (free tier) submitted. Held: the Gitnux email (founder: not ready to pitch an editor with
 no proof, only the concept). Next: week 2, the one proof upgrade on the page (a worked example on a
 made-up 25-bed roster, labelled illustrative), which is also what an editor pitch would need later.
+
+## Hold list (2026-11-23, founder-approved)
+
+To keep the week 2 test readable, no edits and no site-wide sweeps touch these pages until 30 days after
+the week 2 edit lands (28-day window plus 2 days of data lag). The test date moves with that edit; it
+is 2026-12-21 only if the edit lands on 2026-11-21.
+
+| Page | Why it is held |
+| --- | --- |
+| /nurse-scheduling-software | The sprint page |
+| /blog/best-nurse-scheduling-software-critical-access-hospitals | 110 impressions on "nurse scheduling software" searches, position 37.8 |
+| /blog/best-nurse-scheduling-software-2026 | 104 impressions, position 20.9 |
+| /blog/free-nurse-scheduling-software | 77 impressions, position 11.8 |
+
+Source: Search Console, queries containing "nurse scheduling software", 2026-10-24 to 2026-11-20, by page.
+Named queries only, since Google hides some. Every other page shows 13 impressions or fewer and is not
+held. The rest of the site follows the normal pacing rule.
+
+Queued for after the hold: refresh `/blog/best-nurse-scheduling-software-critical-access-hospitals`.
+It scored "worse" in all 3 October verdict windows (position 31.4 to 35.9 on the same searches, about
+500 impressions a month, 0 to 1 clicks).
