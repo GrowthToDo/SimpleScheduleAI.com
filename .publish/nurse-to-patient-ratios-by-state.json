@@ -71,15 +71,15 @@
     },
     "indexNow": {
       "value": "DONE",
-      "setBy": "2026-08-10",
-      "setAt": "2026-08-10T10:57:08.194Z",
-      "contentHash": "15af205d7d1160b8c171341c889fd3bc2af208f71545636a245173df8cfe6a4d"
+      "setBy": "main session 2026-11-25 (154 URLs, HTTP 200)",
+      "setAt": "2026-11-25T14:41:38.121Z",
+      "contentHash": "9ff32c1278dc77d40577382b99fd867384589ee0c057edde894c9969c46d790d"
     },
     "gscSitemap": {
       "value": "DONE",
-      "setBy": "2026-08-10",
-      "setAt": "2026-08-10T10:57:09.279Z",
-      "contentHash": "15af205d7d1160b8c171341c889fd3bc2af208f71545636a245173df8cfe6a4d"
+      "setBy": "main session 2026-11-25 (sitemap-index.xml submitted)",
+      "setAt": "2026-11-25T14:41:38.262Z",
+      "contentHash": "9ff32c1278dc77d40577382b99fd867384589ee0c057edde894c9969c46d790d"
     },
     "founderQuestions": {
       "value": "WAIVED",
