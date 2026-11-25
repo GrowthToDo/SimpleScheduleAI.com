@@ -5,64 +5,69 @@
   "mechanical": {
     "checkBlog": {
       "status": "PASS",
-      "checkedAt": "2026-08-17T07:54:18.791Z",
-      "contentHash": "049963d7a07227039379dd21f0f76dda577f6d2497dac9aba3db76f33c606540"
+      "checkedAt": "2026-11-25T10:27:28.603Z",
+      "contentHash": "0a31acb17b301a867b73edb4b87f2bd921ea3181f1f097c5db11f989a19f6c58"
     },
     "prettier": {
       "status": "PASS",
-      "checkedAt": "2026-08-17T07:54:22.084Z",
-      "contentHash": "049963d7a07227039379dd21f0f76dda577f6d2497dac9aba3db76f33c606540"
+      "checkedAt": "2026-11-25T10:27:28.891Z",
+      "contentHash": "0a31acb17b301a867b73edb4b87f2bd921ea3181f1f097c5db11f989a19f6c58"
     },
     "checkLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-17T07:54:23.777Z",
-      "contentHash": "049963d7a07227039379dd21f0f76dda577f6d2497dac9aba3db76f33c606540"
+      "checkedAt": "2026-11-25T10:27:39.480Z",
+      "contentHash": "0a31acb17b301a867b73edb4b87f2bd921ea3181f1f097c5db11f989a19f6c58"
     },
     "inboundLinks": {
       "status": "PASS",
-      "checkedAt": "2026-08-17T07:54:23.808Z",
-      "contentHash": "049963d7a07227039379dd21f0f76dda577f6d2497dac9aba3db76f33c606540"
+      "checkedAt": "2026-11-25T10:27:39.500Z",
+      "contentHash": "0a31acb17b301a867b73edb4b87f2bd921ea3181f1f097c5db11f989a19f6c58"
     },
     "image": {
       "status": "PASS",
-      "checkedAt": "2026-08-17T07:54:23.809Z",
-      "contentHash": "049963d7a07227039379dd21f0f76dda577f6d2497dac9aba3db76f33c606540"
+      "checkedAt": "2026-11-25T10:27:39.501Z",
+      "contentHash": "0a31acb17b301a867b73edb4b87f2bd921ea3181f1f097c5db11f989a19f6c58"
     },
     "dateSanity": {
       "status": "PASS",
-      "checkedAt": "2026-08-17T07:54:23.809Z",
-      "contentHash": "049963d7a07227039379dd21f0f76dda577f6d2497dac9aba3db76f33c606540"
+      "checkedAt": "2026-11-25T10:27:39.501Z",
+      "contentHash": "0a31acb17b301a867b73edb4b87f2bd921ea3181f1f097c5db11f989a19f6c58"
     },
     "factsDossier": {
       "status": "PASS",
-      "checkedAt": "2026-08-17T07:54:23.811Z",
-      "contentHash": "049963d7a07227039379dd21f0f76dda577f6d2497dac9aba3db76f33c606540"
+      "checkedAt": "2026-11-25T10:27:39.501Z",
+      "contentHash": "0a31acb17b301a867b73edb4b87f2bd921ea3181f1f097c5db11f989a19f6c58"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-25T10:27:39.503Z",
+      "contentHash": "0a31acb17b301a867b73edb4b87f2bd921ea3181f1f097c5db11f989a19f6c58"
     }
   },
   "recorded": {
     "proofread": {
       "value": "READY",
-      "setBy": "binary-contrast-sweep",
-      "setAt": "2026-08-10T10:57:04.017Z",
-      "contentHash": "15af205d7d1160b8c171341c889fd3bc2af208f71545636a245173df8cfe6a4d"
+      "setBy": "feature-dev:code-reviewer (2026-11-25 refresh: READY after 2 rounds; its optional items 1 and 3 applied verbatim)",
+      "setAt": "2026-11-25T10:27:39.636Z",
+      "contentHash": "9ff32c1278dc77d40577382b99fd867384589ee0c057edde894c9969c46d790d"
     },
     "factCheck": {
       "value": "PASS",
-      "setBy": "no-fact-changes",
-      "setAt": "2026-08-10T10:57:05.401Z",
-      "contentHash": "15af205d7d1160b8c171341c889fd3bc2af208f71545636a245173df8cfe6a4d"
+      "setBy": "feature-dev:code-reviewer (FACTS PASS); 7 state rows re-verified at source by main session",
+      "setAt": "2026-11-25T10:27:39.770Z",
+      "contentHash": "9ff32c1278dc77d40577382b99fd867384589ee0c057edde894c9969c46d790d"
     },
     "imageEyeball": {
       "value": "OK",
-      "setBy": "unchanged",
-      "setAt": "2026-08-10T10:57:06.292Z",
-      "contentHash": "15af205d7d1160b8c171341c889fd3bc2af208f71545636a245173df8cfe6a4d"
+      "setBy": "hero image unchanged since the founder's original review; refresh changed text only",
+      "setAt": "2026-11-25T10:27:40.037Z",
+      "contentHash": "9ff32c1278dc77d40577382b99fd867384589ee0c057edde894c9969c46d790d"
     },
     "founderApproval": {
       "value": "YES",
-      "setBy": "founder",
-      "setAt": "2026-08-10T10:57:07.222Z",
-      "contentHash": "15af205d7d1160b8c171341c889fd3bc2af208f71545636a245173df8cfe6a4d"
+      "setBy": "founder (2026-11-17 decay-fix go in the plan; 2026-11-25 'make this change')",
+      "setAt": "2026-11-25T10:27:39.905Z",
+      "contentHash": "9ff32c1278dc77d40577382b99fd867384589ee0c057edde894c9969c46d790d"
     },
     "indexNow": {
       "value": "DONE",
@@ -75,6 +80,12 @@
       "setBy": "2026-08-10",
       "setAt": "2026-08-10T10:57:09.279Z",
       "contentHash": "15af205d7d1160b8c171341c889fd3bc2af208f71545636a245173df8cfe6a4d"
+    },
+    "founderQuestions": {
+      "value": "WAIVED",
+      "setBy": "main session 2026-11-25: refresh of a live post on public statutes; no product or founder-view claim added",
+      "setAt": "2026-11-25T10:22:14.333Z",
+      "contentHash": "1193571c1ebcd9ac2f25456a6996c43a1cbde6591305a0e1c18c0d9e09e94385"
     }
   },
   "overrides": []
