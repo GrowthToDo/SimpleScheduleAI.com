@@ -47,7 +47,7 @@ This guide walks through those steps for a [critical access hospital](/critical-
 
 ## What Is a PRN Pool at a Critical Access Hospital?
 
-A PRN pool is a group of nurses who work as needed, with no guaranteed schedule and usually no benefits. PRN is short for the Latin pro re nata, "as the situation requires." PRN nurses cover callouts, leave and busy days. PRN and per diem describe the same arrangement; our guide to [what per diem nursing is](/blog/what-is-per-diem-nursing) explains the terms and the pay.
+A PRN pool is a group of nurses who work as needed, with no guaranteed schedule and usually no benefits. PRN is short for the Latin pro re nata, "as the situation requires." PRN nurses cover callouts, leave and busy days. They can also cover a position that stays open while a hire is pending, such as a [foreign-educated nurse waiting on a green card](/articles/dol-schedule-a-foreign-nurses-green-card). PRN and per diem describe the same arrangement; our guide to [what per diem nursing is](/blog/what-is-per-diem-nursing) explains the terms and the pay.
 
 At a 25-bed hospital, the PRN pool does the job a float pool does at a larger one. A small hospital rarely has enough nurses to keep a dedicated float team, so the PRN list becomes the bench. Our [float pool guide for small hospitals](/blog/float-pool-nursing-small-hospitals) covers why.
 

@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "slug": "dol-schedule-a-foreign-nurses-green-card",
+  "collection": "article",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-25T06:01:19.614Z",
+      "contentHash": "942e54ba3bc6aad14f02313975e7d73acbb48be459927542808c86add912f66e"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-25T06:01:19.886Z",
+      "contentHash": "942e54ba3bc6aad14f02313975e7d73acbb48be459927542808c86add912f66e"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-25T06:01:21.690Z",
+      "contentHash": "942e54ba3bc6aad14f02313975e7d73acbb48be459927542808c86add912f66e"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-25T06:01:21.714Z",
+      "contentHash": "942e54ba3bc6aad14f02313975e7d73acbb48be459927542808c86add912f66e"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-25T06:01:21.897Z",
+      "contentHash": "942e54ba3bc6aad14f02313975e7d73acbb48be459927542808c86add912f66e"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-25T06:01:21.897Z",
+      "contentHash": "942e54ba3bc6aad14f02313975e7d73acbb48be459927542808c86add912f66e"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-25T06:01:21.898Z",
+      "contentHash": "942e54ba3bc6aad14f02313975e7d73acbb48be459927542808c86add912f66e"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-25T06:01:21.899Z",
+      "contentHash": "942e54ba3bc6aad14f02313975e7d73acbb48be459927542808c86add912f66e"
+    }
+  },
+  "recorded": {
+    "founderQuestions": {
+      "value": "ANSWERED",
+      "setBy": "founder (2026-11-25: 3 answers recorded in the brief)",
+      "setAt": "2026-11-25T05:51:52.661Z",
+      "contentHash": "95a9666692fb37b0cec0b6995b44edabb6bddd856df6b6170e5f499a038b9426"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer (final pass 2026-11-25: READY-TO-PUBLISH after 3 rounds; its last one-word fix applied verbatim; cold read 60.8 before the plain-language rewrite)",
+      "setAt": "2026-11-25T06:01:22.068Z",
+      "contentHash": "f247a6aa763070ba46bacfc2185d8866b100fb131da7a53c8d867737708ef435"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "feature-dev:code-reviewer final pass (FACTS: PASS); key quotes re-verified at source by main session",
+      "setAt": "2026-11-25T06:01:22.197Z",
+      "contentHash": "f247a6aa763070ba46bacfc2185d8866b100fb131da7a53c8d867737708ef435"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder (2026-11-25: 'take it live without GSC, indexnow')",
+      "setAt": "2026-11-25T06:01:22.326Z",
+      "contentHash": "f247a6aa763070ba46bacfc2185d8866b100fb131da7a53c8d867737708ef435"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 43.3,
+        "headings": 90,
+        "actionability": 50,
+        "attention": 80
+      },
+      "overall": 60.8,
+      "counts": {
+        "sections": 10,
+        "rereads": 19,
+        "undefinedTerms": 15,
+        "headingsAnswered": 9,
+        "mondayActions": 3,
+        "blockedActions": 3,
+        "quitPoints": 2
+      },
+      "icp": "Nurse manager at a 25-bed rural hospital, reading once on a phone between shifts",
+      "publishDate": "2026-11-25T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "prevailing wage determination (PWD)",
+          "OFLC",
+          "ETA",
+          "DHS",
+          "USCIS",
+          "I-140",
+          "priority date",
+          "EB-3",
+          "Visa Bulletin final action dates",
+          "CGFNS (Commission on Graduates of Foreign Nursing Schools)",
+          "docket",
+          "job order with the state workforce agency",
+          "PERM analyst review",
+          "audit",
+          "AHCA/NCAL"
+        ],
+        "mondayActions": [
+          "list nurses in the sponsorship pipeline and ask the recruiter which step each case has reached",
+          "check whether nursing positions at this location were cut in the past two years",
+          "read the PRN pool and cost-of-losing-a-nurse guides to plan coverage for longer vacancies"
+        ],
+        "blockedActions": [
+          "ask the attorney how the proposal treats cases already underway, no attorney named and the post says the text is unclear",
+          "ask the attorney whether the layoff bar applies to us, no attorney named",
+          "comment on regulations.gov with concrete numbers, no hint which numbers or how"
+        ],
+        "sections": [
+          {
+            "heading": "Key Takeaways",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Did the Labor Department Propose for Nurse Green Cards?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Is the Rule Final, and When Could It Take Effect?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does a Hospital Sponsor a Foreign-Educated Nurse Today?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Would a Hospital Have to Do Instead?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Much Later Would a Sponsored Nurse Actually Arrive?",
+            "rereadCount": 5,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Many Texas Nurses Were Educated Abroad?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What Are Hospital and Nurse Groups Saying?",
+            "rereadCount": 0,
+            "answeredItsQuestion": false,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-11-25T05:53:05.657Z",
+      "contentHash": "95a9666692fb37b0cec0b6995b44edabb6bddd856df6b6170e5f499a038b9426"
+    }
+  }
+}

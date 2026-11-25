@@ -293,3 +293,26 @@ Dropped, with reasons:
 - **Salvage value (not an article):** it names ten vendors - QGenda, AMiON, Lightning
   Bolt, ShiftWizard, TigerConnect, symplr, Smart Square, Omnigo, Hospital IQ, Kronos
   Workforce Central. Worth diffing that list against `competitor-dossier.md` for gaps.
+
+### Detection pass 2026-11-25 (SEO Desk Newsroom, five fresh suggestions plus four updates)
+
+- **PUBLISHED 2026-11-25 - Labor Department proposes ending Schedule A for nurses**
+  (`/articles/dol-schedule-a-foreign-nurses-green-card`). Peg: DOL/ETA proposed rule, 91 FR
+  73916, November 17, 2026, docket ETA-2026-0133, comments to January 19, 2027. Relevance 4
+  (nurse supply, Texas data) x Rising 4 x First 4 (the SERP is law firms, recruiters and
+  social posts; big publishers own only the news head) x Hook 1. Hook: the priority date is
+  set when DOL accepts the PERM application (8 CFR 204.5(d)), so while EB-3 waits exceed the
+  review, the start date moves back by about the recruitment period (4 to 5 months), not the
+  14 to 17 months of added paperwork. The article labels this as our reading, with the
+  conditions stated. Founder: "Plan, don't panic", data only, footer note only.
+- **DROPPED - CMS reassigns the Gastric Alimetry test (OPPS).** Critical Access Hospitals are
+  exempt from OPPS. No nurse-staffing angle.
+- **DROPPED - CMS extends Medicare enrollment moratoria on home health and hospice.** No
+  nurse-scheduling angle for a 25-bed hospital.
+- **DROPPED - Medicare Shared Savings Program saved $2.5B.** ACO economics, with no staffing
+  angle.
+- **DROPPED - National Rural Health Day, "largest rural health investment".** A press
+  release on funding already covered by our Rural Texas Strong pieces; no new number.
+- **Updates, not new pieces:** four items (Medicaid work requirements twice, the Medicare
+  enrollment powers rule, a radiology group's rural expansion) map to
+  `/articles/texas-medicaid-expansion-earliest-date`. No edit was made this week.
