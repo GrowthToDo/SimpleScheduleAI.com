@@ -74,6 +74,18 @@
       "setBy": "founder (2026-11-25 live review: one wording note only, then submit)",
       "setAt": "2026-11-25T08:00:48.935Z",
       "contentHash": "1c2b715ef814d3890a0f36239d427a3b86e59cf6865ed2cef37b4eb5220324d9"
+    },
+    "indexNow": {
+      "value": "DONE",
+      "setBy": "main session 2026-11-25 (154 URLs, HTTP 200)",
+      "setAt": "2026-11-25T08:03:01.928Z",
+      "contentHash": "1c2b715ef814d3890a0f36239d427a3b86e59cf6865ed2cef37b4eb5220324d9"
+    },
+    "gscSitemap": {
+      "value": "DONE",
+      "setBy": "main session 2026-11-25 (sitemap-index.xml submitted)",
+      "setAt": "2026-11-25T08:03:02.061Z",
+      "contentHash": "1c2b715ef814d3890a0f36239d427a3b86e59cf6865ed2cef37b4eb5220324d9"
     }
   },
   "overrides": [],
