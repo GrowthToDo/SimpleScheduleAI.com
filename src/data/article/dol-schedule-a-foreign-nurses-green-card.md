@@ -25,7 +25,7 @@ metadata:
 - **It is a proposal, not law.** The Labor Department published a [proposed rule](https://www.federalregister.gov/documents/2026/11/17/2026-23370/modernizing-the-labor-market-test-and-improving-protections-for-us-workers-in-the-perm-immigrant) on November 17, 2026 that would end Schedule A. Schedule A lets a hospital sponsor a foreign-educated nurse for a green card without first advertising the job to U.S. workers. Comments are open until January 19, 2027.
 - **Hospitals could still sponsor foreign-educated nurses.** A hospital would first advertise the job for at least 90 days. A Labor Department review would follow, averaging 300 to 360 days as of October 31, 2026.
 - **The extra paperwork adds about 14 to 17 months.** The 14 to 17 months is our math: 120 to 150 days of recruiting (at least 90 days, plus 30 to 60 days before filing), plus the department's 300 to 360 days of review.
-- **By our reading, the nurse's start date moves back far less.** A nurse's place in the visa line is set when the Labor Department accepts the application, before its review. That place moves back about four to five months. Visa numbers are now going to nurses who joined the line about two and a half years ago, so the review runs while the nurse waits anyway.
+- **By our reading, the nurse's start date moves back far less.** A nurse's place in the visa line is set when the Labor Department accepts the application, before its review. That place moves back about four to five months. Right now, for most countries, nurses getting a visa joined the line about two and a half years earlier. The Labor Department's review takes 10 to 12 months, so while the line stays this long, the review finishes before the nurse's turn comes. The start date then moves back by about the same four to five months, if nothing goes wrong, not the full 14 to 17.
 - **The proposal would bar some hospitals from the process.** An employer that laid off U.S. workers in the same or a similar job at that location in the past two years could not use it.
 
 ## Table of Contents
@@ -82,7 +82,7 @@ The start date moves back less, because of how the visa line works. A sponsored 
 - **Schedule A today:** the date the green card petition "is properly filed with USCIS."
 - **The proposed path:** the date "the labor certification application was accepted for processing" by the Labor Department. The acceptance comes before the 300-to-360-day review starts.
 
-The line is long. In the [November 2026 Visa Bulletin](https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2027/visa-bulletin-for-november-2026.html), visas for professionals and skilled workers (the EB-3 category) were going to people whose priority date was June 15, 2024 or earlier, for most countries. So the newest place in line now getting a visa number was set about two years and five months ago. For nurses born in the Philippines, the date was August 15, 2023, about three years and three months back. The Labor Department review takes 10 to 12 months.
+The line is long. In the [November 2026 Visa Bulletin](https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2027/visa-bulletin-for-november-2026.html), visas for professionals and skilled workers (the EB-3 category) were going to people whose priority date was June 15, 2024 or earlier, for most countries. In other words, nurses getting a visa in November 2026 had joined the line about two years and five months earlier. For nurses born in the Philippines, the date was August 15, 2023, about three years and three months back. The Labor Department review takes 10 to 12 months.
 
 Here is how the steps compare for a hypothetical nurse. It is not a real hospital or a customer result.
 
@@ -125,7 +125,7 @@ Here is how the steps compare for a hypothetical nurse. It is not a real hospita
   </table>
 </div>
 
-So the nurse joins the line about four to five months later than under Schedule A, and the review runs while the nurse waits. The start date then moves back by about the same four to five months, under three conditions:
+So the nurse joins the line about four to five months later than under Schedule A, and the 10-to-12-month review finishes while the nurse is still waiting for a turn. The start date then moves back by about the same four to five months, under three conditions:
 
 - **The wait stays long.** It has to be longer than the 10-to-12-month Labor Department review plus the immigration agency's decision on the green card petition.
 - **The line keeps moving at roughly its recent pace.** If the line slowed, a later place in it would cost more than four to five months.

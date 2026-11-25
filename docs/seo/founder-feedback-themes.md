@@ -116,6 +116,9 @@ them. Replace legal labels ("exempt") with what they mean ("not paid overtime").
 overtime" — not very clear to understand. Fixed to "A nurse on a fixed salary who is not paid
 overtime cannot have that salary cut for a day the hospital itself cancels.")
 
+**T29. State the step that makes a conclusion follow.** When a conclusion rests on two numbers, put both numbers in the sentence and say how they compare. A "so" that joins a fact to a conclusion with the middle step missing makes the reader stop and reconstruct it.
+("Visa numbers are now going to nurses who joined the line about two and a half years ago, so the review runs while the nurse waits anyway." Founder: "Didnt understand this line in the context." The missing step: the wait is about two and a half years, the review takes 10 to 12 months, so the review finishes long before the nurse's turn. Fixed 2026-11-25.)
+
 **T28. Spell out the comparison a benefit depends on.**
 A phrase like "close to home", "faster" or "cheaper" only makes sense next to what it beats. If the
 sentence leaves the alternative out, the reader invents one and gets it wrong.
