@@ -2,7 +2,7 @@
 draft: false
 publishDate: 2026-07-23T00:00:00Z
 author: 'Pradeep Pandey'
-title: '8-Hour vs 12-Hour Nursing Shifts: Which Fits a 25-Bed Hospital?'
+title: '8-Hour vs 12-Hour Nursing Shifts: Safety, Overtime, Coverage'
 excerpt: >
   The 8 hour vs 12 hour nursing shifts debate reads differently when your whole
   roster is 18 people. A thin bench makes 12s easier to cover but concentrates the
@@ -17,6 +17,7 @@ tags:
   - nurse-scheduling
 metadata:
   canonical: 'https://simplescheduleai.com/blog/8-hour-vs-12-hour-nursing-shifts'
+  description: '12-hour shifts mean two handoffs a day and fewer slots to fill. 8-hour shifts spread fatigue and overtime. How each one plays out on a small hospital roster.'
 ---
 
 Your nurses want 12-hour shifts. Your patient-safety data quietly argues for shorter ones. Both can be true at the same facility, and at a 25-bed hospital you cannot split the difference the way a 300-bed system can.
@@ -112,7 +113,7 @@ A [Health Affairs study](https://pubmed.ncbi.nlm.nih.gov/15318582/) found the ri
 
 12-hour patterns hit overtime faster. A nurse on three 12-hour shifts sits at 36 hours, under the standard 40-hour FLSA threshold. Pick up one extra half-shift for a callout and they cross 40, so overtime applies. An 8-hour pattern reaches 40 at five shifts, with more room to add a partial shift first.
 
-That difference compounds on a thin roster, where the same few people absorb most callout pickups. Hospitals can elect the [FLSA 8-and-80 system](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), which pays overtime for hours over 8 in a day or over 80 in a 14-day period instead of over 40 in a week; it requires a prior written agreement. Whether a scheduling vendor supports 8-and-80 is an evaluation question, not something to assume. To put a dollar figure on the overtime each pattern costs, our [ROI calculator](/roi) walks through the inputs.
+That difference compounds on a thin roster, where the same few people absorb most callout pickups. Hospitals can elect the [FLSA 8-and-80 system](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime), which pays overtime for hours over 8 in a day or over 80 in a 14-day period instead of over 40 in a week. The hospital and its nurses must agree to it before the work is done; the agreement does not have to be in writing, but if it is not, the hospital must keep a special record of it ([29 CFR 778.601](https://www.law.cornell.edu/cfr/text/29/778.601)). Whether a scheduling vendor supports 8-and-80 is an evaluation question, not something to assume. To put a dollar figure on the overtime each pattern costs, our [ROI calculator](/roi) walks through the inputs.
 
 ## Which pattern do nurses prefer, and what does it mean for retention?
 
@@ -199,7 +200,7 @@ The [AI nurse scheduling](/ai-nurse-scheduling) engine handles the constraint ma
 
 1. **Count your true backfill bench.** List how many nurses can actually cover a day and a night shift on short notice, after health, family, and per-diem constraints. That number, not your headcount, tells you whether a 12-hour pattern is safe.
 2. **Pull your last eight weeks and count callout gaps.** If they cluster and each costs a half-day of coverage, your 12-hour pattern is concentrating risk on a small group.
-3. **Confirm your FLSA model in writing.** Decide whether you run the standard 40-hour workweek or the 8-and-80 healthcare option, make sure any 8-and-80 written agreements are on file, and check whether your scheduling tool tracks the threshold you actually use.
+3. **Confirm your FLSA overtime model.** Decide whether you run the standard 40-hour workweek or the 8-and-80 healthcare option. If you use 8-and-80, make sure the agreement was made before the work and is on record. Then check whether your scheduling tool tracks the threshold you actually use.
 4. **Set fatigue caps as hard rules, not guidelines.** Whatever pattern you run, cap consecutive shifts and require a recovery gap between night and day blocks, applied before posting rather than after a grievance.
 5. **Book a call with our team** to see how an automated draft would staff your roster on either pattern, with the coverage, fairness, and overtime guards already applied.
 
@@ -257,6 +258,7 @@ Yes. Many small hospitals run 12-hour shifts as the backbone and add 8-hour slot
 4. American Nurses Association, [Addressing Nurse Fatigue to Promote Safety and Health](https://www.nursingworld.org/practice-policy/nursing-excellence/official-position-statements/id/addressing-nurse-fatigue-to-promote-safety-and-health/)
 5. U.S. Department of Labor, [Fact Sheet #54: The Health Care Industry and Calculating Overtime Pay](https://www.dol.gov/agencies/whd/fact-sheets/54-healthcare-overtime)
 6. NSI Nursing Solutions, [2026 National Health Care Retention and RN Staffing Report](https://www.nsinursingsolutions.com/documents/library/nsi_national_health_care_retention_report.pdf)
+7. Legal Information Institute, Cornell Law School, [29 CFR 778.601](https://www.law.cornell.edu/cfr/text/29/778.601)
 
 ---
 
