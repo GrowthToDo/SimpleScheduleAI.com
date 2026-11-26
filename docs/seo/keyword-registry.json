@@ -1108,5 +1108,13 @@
     "primaryKeyword": "schedule a nurses green card",
     "pillar": "/critical-access-hospital-scheduling",
     "note": "Newsroom 2026-11-25. DOL NPRM 91 FR 73916 (Nov 17, 2026), docket ETA-2026-0133, comments to Jan 19, 2027, proposes ending Schedule A for nurses. SERP 2026-11-25: law firms, recruiters, social posts; big publishers own only the news head. Hook: priority date is set at PERM acceptance (8 CFR 204.5(d)), so while EB-3 waits are years long the arrival delay is about the recruitment period (4 to 5 months), not the 14 to 17 months of added paperwork. Brief docs/seo/briefs/2026-11-dol-schedule-a-nurses.md."
+  },
+  {
+    "slug": "nurse-on-call-schedule",
+    "type": "post",
+    "url": "/blog/nurse-on-call-schedule",
+    "primaryKeyword": "on call schedule",
+    "pillar": "/critical-access-hospital-scheduling",
+    "note": "Next-15 #4, 2026-11-26. 480/mo ('on call schedule template' 140; 'on-call scheduling software' 170 is all IT tools, not targeted). SERP 2026-11-26: IT/DevOps on-call tools and template galleries; healthcare only via symplr glossary in the AI Overview. Realistic wins: nurse long tail and LLM citation (hypothesis). Gaps owned: 785.17 + FS#53, standby pay in the regular rate (778.223), Texas HSC 258 + 505.41 staffing-plan line, no CMS nurse response time, 12-nurse rotation math. Owns the PLANNED on-call rotation; the 2 AM callout stays with after-hours-callout-coverage-small-hospitals. Brief docs/seo/briefs/2026-11-nurse-on-call-schedule.md."
   }
 ]

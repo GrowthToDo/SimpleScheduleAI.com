@@ -205,7 +205,8 @@ arrangements, the documentation of callback events, when a nurse was called in, 
 long they worked, whether it triggered overtime, is often incomplete. If the
 determination of whether callback time is compensable hours worked is unclear under
 your specific on-call policy, that ambiguity should be resolved by counsel before a
-DOL audit surfaces it.
+DOL audit surfaces it. Our guide to the [nurse on-call schedule](/blog/nurse-on-call-schedule) covers
+when on-call time is paid and the fields an on-call record should hold.
 
 ## What documentation must a Texas Critical Access Hospital maintain for CMS compliance?
 

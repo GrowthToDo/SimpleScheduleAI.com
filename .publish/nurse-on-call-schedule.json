@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "slug": "nurse-on-call-schedule",
+  "collection": "post",
+  "mechanical": {
+    "checkBlog": {
+      "status": "PASS",
+      "checkedAt": "2026-11-26T06:00:46.997Z",
+      "contentHash": "5b0b003ccff16eb0cb2a748a470f2dbfc92208a0eb2ea1a7b39d1eccfc23e8c1"
+    },
+    "prettier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-26T06:00:47.286Z",
+      "contentHash": "5b0b003ccff16eb0cb2a748a470f2dbfc92208a0eb2ea1a7b39d1eccfc23e8c1"
+    },
+    "checkLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-26T06:00:54.745Z",
+      "contentHash": "5b0b003ccff16eb0cb2a748a470f2dbfc92208a0eb2ea1a7b39d1eccfc23e8c1"
+    },
+    "inboundLinks": {
+      "status": "PASS",
+      "checkedAt": "2026-11-26T06:00:54.763Z",
+      "contentHash": "5b0b003ccff16eb0cb2a748a470f2dbfc92208a0eb2ea1a7b39d1eccfc23e8c1"
+    },
+    "image": {
+      "status": "PASS",
+      "checkedAt": "2026-11-26T06:00:54.772Z",
+      "contentHash": "5b0b003ccff16eb0cb2a748a470f2dbfc92208a0eb2ea1a7b39d1eccfc23e8c1"
+    },
+    "dateSanity": {
+      "status": "PASS",
+      "checkedAt": "2026-11-26T06:00:54.772Z",
+      "contentHash": "5b0b003ccff16eb0cb2a748a470f2dbfc92208a0eb2ea1a7b39d1eccfc23e8c1"
+    },
+    "factsDossier": {
+      "status": "PASS",
+      "checkedAt": "2026-11-26T06:00:54.774Z",
+      "contentHash": "5b0b003ccff16eb0cb2a748a470f2dbfc92208a0eb2ea1a7b39d1eccfc23e8c1"
+    },
+    "keywordRegistry": {
+      "status": "PASS",
+      "checkedAt": "2026-11-26T06:00:54.774Z",
+      "contentHash": "5b0b003ccff16eb0cb2a748a470f2dbfc92208a0eb2ea1a7b39d1eccfc23e8c1"
+    }
+  },
+  "recorded": {
+    "founderQuestions": {
+      "value": "ANSWERED",
+      "setBy": "founder",
+      "setAt": "2026-11-26T05:52:11.983Z",
+      "contentHash": "d720618399717e878ebe3cf5004c55bdd4b0a38bc5fdab5199a7a557eb8aaca4"
+    },
+    "proofread": {
+      "value": "READY",
+      "setBy": "feature-dev:code-reviewer",
+      "setAt": "2026-11-26T06:00:33.507Z",
+      "contentHash": "9c7529864d80f5a01036e8948746a8a1ca8584fd758f5b2a20e04d430cb48e4c"
+    },
+    "factCheck": {
+      "value": "PASS",
+      "setBy": "general-purpose-factcheck",
+      "setAt": "2026-11-26T06:00:33.637Z",
+      "contentHash": "9c7529864d80f5a01036e8948746a8a1ca8584fd758f5b2a20e04d430cb48e4c"
+    },
+    "founderApproval": {
+      "value": "YES",
+      "setBy": "founder",
+      "setAt": "2026-11-26T06:00:33.767Z",
+      "contentHash": "9c7529864d80f5a01036e8948746a8a1ca8584fd758f5b2a20e04d430cb48e4c"
+    }
+  },
+  "overrides": [],
+  "scores": {
+    "coldRead": {
+      "version": 1,
+      "intent": "act",
+      "parts": {
+        "comprehension": 51.5,
+        "headings": 63.6,
+        "actionability": 38.5,
+        "attention": 90.9
+      },
+      "overall": 54.6,
+      "counts": {
+        "sections": 11,
+        "rereads": 12,
+        "undefinedTerms": 20,
+        "headingsAnswered": 7,
+        "mondayActions": 5,
+        "blockedActions": 8,
+        "quitPoints": 1
+      },
+      "icp": "Nurse manager at a 25-bed rural hospital, reading once on a phone between shifts",
+      "publishDate": "2026-11-26T00:00:00Z",
+      "postType": "mofu",
+      "observations": {
+        "undefinedTerms": [
+          "hours worked (legal sense)",
+          "prearranged",
+          "straight-time pay",
+          "overtime premium",
+          "eligible nurses",
+          "weekend night (which nights)",
+          "permanent nights",
+          "backup nurse (on call? paid?)",
+          "official nurse staffing plan (who approves it)",
+          "Texas Health and Safety Code chapter 258",
+          "licensing rule",
+          "29 CFR / 42 CFR section numbers",
+          "Fact Sheet #53",
+          "frontier and remote areas",
+          "Board of Nursing rules",
+          "prescheduled on-call time",
+          "compliance rules",
+          "AI-native",
+          "onboarding",
+          "unit's regular staffing numbers"
+        ],
+        "mondayActions": [
+          "Count last quarter's on-call nights per nurse, with weekend nights in a separate column",
+          "Ask payroll whether standby pay is included in the overtime rate",
+          "Check whether the staffing plan says how on-call time is used",
+          "Add backup nurse, phone numbers and next scheduled shift to the on-call sheet",
+          "Write a response time into the on-call policy"
+        ],
+        "blockedActions": [
+          "Set a response time without knowing how short is too short for the hours-worked test",
+          "Pick a weekly and monthly weekend limit with no guidance beyond the example of one",
+          "Decide a morning-after rule with no recommended rest hours",
+          "Add on-call language to the Texas staffing plan with no sample wording and no mention of who approves the plan",
+          "Ask counsel about prearranged call-back and chapter 258 when a nurse manager does not have direct access to counsel",
+          "Use an on-call template when only a general schedule template is linked",
+          "Start the running count without knowing whether to start everyone at zero or carry over last quarter's imbalance",
+          "Have payroll fix the regular rate with no wording to hand them"
+        ],
+        "sections": [
+          {
+            "heading": "What Is a Nurse On-Call Schedule at a Small Hospital?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Does On-Call Time Count as Hours Worked for Nurses?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Should On-Call Nurses Be Paid When They Are Called In?",
+            "rereadCount": 1,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "What Does Texas Law Say About Nurse On-Call Time?",
+            "rereadCount": 3,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Does CMS Set a Response Time for On-Call Nurses?",
+            "rereadCount": 1,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "How Many On-Call Nights Should Each Nurse Carry on a 12-Nurse Unit?",
+            "rereadCount": 2,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "How Do You Spread On-Call Fairly Across a Small Nursing Staff?",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "What Should an On-Call Schedule Template Include?",
+            "rereadCount": 0,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          },
+          {
+            "heading": "How Does SimpleScheduleAI Handle On-Call Shifts?",
+            "rereadCount": 2,
+            "answeredItsQuestion": true,
+            "quitHere": true
+          },
+          {
+            "heading": "What to Do This Week",
+            "rereadCount": 0,
+            "answeredItsQuestion": true,
+            "quitHere": false
+          },
+          {
+            "heading": "Frequently Asked Questions",
+            "rereadCount": 0,
+            "answeredItsQuestion": false,
+            "quitHere": false
+          }
+        ]
+      },
+      "scoredAt": "2026-11-26T05:55:24.749Z",
+      "contentHash": "09061352cbde21a187e57c0d1440750536d181c0d14b6d545db83dcd6d391b93"
+    }
+  }
+}

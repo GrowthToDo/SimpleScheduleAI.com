@@ -41,7 +41,7 @@ metadata:
 - [What to Do This Week](#what-to-do-this-week)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-A nurse calls in sick at 2:40 AM for a shift that starts at 6:45 AM. There is no float pool, no staffing coordinator on duty, and no agency desk that answers before business hours. The person solving this is usually the on-call charge nurse or the nurse manager, working a phone list from memory while the unit runs short. This post is the operational playbook for that exact moment, written for Critical Access Hospitals.
+A nurse calls in sick at 2:40 AM for a shift that starts at 6:45 AM. There is no float pool, no staffing coordinator on duty, and no agency desk that answers before business hours. The person solving this is usually the on-call charge nurse or the nurse manager, working a phone list from memory while the unit runs short. This post is the operational playbook for that exact moment, written for Critical Access Hospitals. The planned on-call rotation, who is on call each night and how that time is paid, is covered in our guide to the [nurse on-call schedule](/blog/nurse-on-call-schedule).
 
 ## Why Is an After-Hours Nurse Callout the Hardest Coverage Problem at a Critical Access Hospital?
 
